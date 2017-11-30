@@ -1,75 +1,77 @@
 ---
-title: "Элемент &lt;appDomainManagerAssembly&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<appDomainManagerAssembly> - элемент"
-  - "appDomainManagerAssembly - элемент"
+title: "&lt;appDomainManagerAssembly&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <appDomainManagerAssembly> element
+- appDomainManagerAssembly element
 ms.assetid: c7c56e39-a700-44f5-b94e-411bfce339d9
-caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 0e07b7bd18f19439f64ed8eaef5bda3bad5cef77
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;appDomainManagerAssembly&gt;
-Задает сборку, предоставляющую диспетчер домена приложения для домена приложения по умолчанию в процессе.  
+# <a name="ltappdomainmanagerassemblygt-element"></a><span data-ttu-id="9e7b4-102">&lt;appDomainManagerAssembly&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="9e7b4-102">&lt;appDomainManagerAssembly&gt; Element</span></span>
+<span data-ttu-id="9e7b4-103">Указывает сборку, предоставляющую диспетчер домена приложения для домена приложения, по умолчанию используемого в процессе.</span><span class="sxs-lookup"><span data-stu-id="9e7b4-103">Specifies the assembly that provides the application domain manager for the default application domain in the process.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="9e7b4-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="9e7b4-104">\<configuration></span></span>  
+<span data-ttu-id="9e7b4-105">\<Среда выполнения ></span><span class="sxs-lookup"><span data-stu-id="9e7b4-105">\<runtime></span></span>  
+<span data-ttu-id="9e7b4-106">\<appDomainManagerAssembly ></span><span class="sxs-lookup"><span data-stu-id="9e7b4-106">\<appDomainManagerAssembly></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="9e7b4-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9e7b4-107">Syntax</span></span>  
+  
+```xml  
 <appDomainManagerAssembly   
    value="assembly display name" />  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="9e7b4-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="9e7b4-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="9e7b4-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="9e7b4-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="9e7b4-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="9e7b4-110">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|`value`|Обязательный атрибут.  Задает отображаемое имя сборки, предоставляющей диспетчер домена приложения для домена приложения по умолчанию в процессе.|  
+|<span data-ttu-id="9e7b4-111">Атрибут</span><span class="sxs-lookup"><span data-stu-id="9e7b4-111">Attribute</span></span>|<span data-ttu-id="9e7b4-112">Описание</span><span class="sxs-lookup"><span data-stu-id="9e7b4-112">Description</span></span>|  
+|---------------|-----------------|  
+|`value`|<span data-ttu-id="9e7b4-113">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="9e7b4-113">Required attribute.</span></span> <span data-ttu-id="9e7b4-114">Указывает отображаемое имя сборки, предоставляющей диспетчер домена приложения для домена приложения по умолчанию в процессе.</span><span class="sxs-lookup"><span data-stu-id="9e7b4-114">Specifies the display name of the assembly that provides the application domain manager for the default application domain in the process.</span></span>|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a><span data-ttu-id="9e7b4-115">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="9e7b4-115">Child Elements</span></span>  
+ <span data-ttu-id="9e7b4-116">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="9e7b4-116">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="9e7b4-117">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="9e7b4-117">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`runtime`|Элемент, содержащий сведения о привязке сборок и сборке мусора.|  
+|<span data-ttu-id="9e7b4-118">Элемент</span><span class="sxs-lookup"><span data-stu-id="9e7b4-118">Element</span></span>|<span data-ttu-id="9e7b4-119">Описание</span><span class="sxs-lookup"><span data-stu-id="9e7b4-119">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="9e7b4-120">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="9e7b4-120">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="9e7b4-121">Содержит сведения о привязке сборок и сборке мусора.</span><span class="sxs-lookup"><span data-stu-id="9e7b4-121">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## Заметки  
- Чтобы задать тип диспетчера домена приложения, необходимо задать как этот элемент, так и элемент [\<appDomainManagerType\>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md).  Если один из этих элементов не задан, другой игнорируется.  
+## <a name="remarks"></a><span data-ttu-id="9e7b4-122">Примечания</span><span class="sxs-lookup"><span data-stu-id="9e7b4-122">Remarks</span></span>  
+ <span data-ttu-id="9e7b4-123">Чтобы задать тип диспетчера домена приложения, необходимо задать как этот элемент и [ \<appDomainManagerType >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md) элемента.</span><span class="sxs-lookup"><span data-stu-id="9e7b4-123">To specify the type of the application domain manager, you must specify both this element and the [\<appDomainManagerType>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md) element.</span></span> <span data-ttu-id="9e7b4-124">Если один из этих элементов не задан, другой игнорируется.</span><span class="sxs-lookup"><span data-stu-id="9e7b4-124">If either of these elements is not specified, the other is ignored.</span></span>  
   
- При загрузке домена приложения по умолчанию исключение <xref:System.TypeLoadException> создается, если указанная сборка не существует или не содержит тип, заданный элементом [\<appDomainManagerType\>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md), и происходит сбой запуска процесса.  Если сборка найдена, но имеет несоответствующие сведения о версии, возникает исключение <xref:System.IO.FileLoadException>.  
+ <span data-ttu-id="9e7b4-125">При загрузке домена приложения по умолчанию <xref:System.TypeLoadException> выдается, если указанная сборка не существует или если сборка не содержит тип, заданный параметром [ \<appDomainManagerType >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md) элементу; и не удается запустить процесс.</span><span class="sxs-lookup"><span data-stu-id="9e7b4-125">When the default application domain is loaded, <xref:System.TypeLoadException> is thrown if the specified assembly does not exist or if the assembly does not contain the type specified by the [\<appDomainManagerType>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md) element; and the process fails to start.</span></span> <span data-ttu-id="9e7b4-126">Если сборка найдена, но сведения о версии не совпадают, <xref:System.IO.FileLoadException> возникает исключение.</span><span class="sxs-lookup"><span data-stu-id="9e7b4-126">If the assembly is found but the version information does not match, a <xref:System.IO.FileLoadException> is thrown.</span></span>  
   
- Если для домена приложения по умолчанию задан тип диспетчера домена приложения, другие домены приложений, созданные из домена приложения по умолчанию, наследуют тип диспетчера домена приложения.  Чтобы задать для нового домена приложения другой тип диспетчера домена приложения, используйте свойства <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=fullName> и <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=fullName>.  
+ <span data-ttu-id="9e7b4-127">Если указать тип диспетчера домена приложения для домена приложения по умолчанию, другие домены приложений, созданные на основе домена приложения по умолчанию наследуют тип диспетчера домена приложения.</span><span class="sxs-lookup"><span data-stu-id="9e7b4-127">When you specify the application domain manager type for the default application domain, other application domains created from the default application domain inherit the application domain manager type.</span></span> <span data-ttu-id="9e7b4-128">Используйте <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> и <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> свойства, чтобы указать тип диспетчера домена приложения в новом домене приложения.</span><span class="sxs-lookup"><span data-stu-id="9e7b4-128">Use the <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> and <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> properties to specify a different application domain manager type for a new application domain.</span></span>  
   
- Для задания типа диспетчера домена приложения требуется, чтобы приложение было полностью доверенным. \(Например, приложение, выполняемое на рабочем столе, имеет полное доверие.\) Если приложение не обладает полным доверием, создается исключение <xref:System.TypeLoadException>.  
+ <span data-ttu-id="9e7b4-129">Определяющее тип диспетчера домена приложения требует полного доверия приложения.</span><span class="sxs-lookup"><span data-stu-id="9e7b4-129">Specifying the application domain manager type requires the application to have full trust.</span></span> <span data-ttu-id="9e7b4-130">(Например, приложения, работающего на рабочем столе имеет полное доверие). Если приложение не имеет полного доверия <xref:System.TypeLoadException> возникает исключение.</span><span class="sxs-lookup"><span data-stu-id="9e7b4-130">(For example, an application running on the desktop has full trust.) If the application does not have full trust, a <xref:System.TypeLoadException> is thrown.</span></span>  
   
- Описание формата отображаемого имени сборки см. в описании свойства <xref:System.Reflection.Assembly.FullName%2A?displayProperty=fullName>.  
+ <span data-ttu-id="9e7b4-131">Формат выводимого имени сборки, в разделе <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> свойство.</span><span class="sxs-lookup"><span data-stu-id="9e7b4-131">For the format of the assembly display name, see the <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> property.</span></span>  
   
- Этот элемент конфигурации доступен только в [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] или более поздних версиях.  
+ <span data-ttu-id="9e7b4-132">Этот элемент конфигурации доступен только в [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] и более поздних версий.</span><span class="sxs-lookup"><span data-stu-id="9e7b4-132">This configuration element is available only in the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] and later.</span></span>  
   
-## Пример  
- Следующий пример показывает, как задать, что диспетчер домена приложения для домена приложения по умолчанию процесса имеет тип `MyMgr` в сборке `AdMgrExample`.  
+## <a name="example"></a><span data-ttu-id="9e7b4-133">Пример</span><span class="sxs-lookup"><span data-stu-id="9e7b4-133">Example</span></span>  
+ <span data-ttu-id="9e7b4-134">В следующем примере показано, как указать, что диспетчер домена приложения для домена приложения по умолчанию процесса `MyMgr` введите `AdMgrExample` сборки.</span><span class="sxs-lookup"><span data-stu-id="9e7b4-134">The following example shows how to specify that the application domain manager for the default application domain of a process is the `MyMgr` type in the `AdMgrExample` assembly.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <appDomainManagerType value="MyMgr" />  
@@ -79,10 +81,10 @@ caps.handback.revision: 7
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=fullName>   
- <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=fullName>   
- [Элемент \<appDomainManagerType\>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)   
- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Метод SetAppDomainManagerType](../Topic/ICLRControl::SetAppDomainManagerType%20Method.md)
+## <a name="see-also"></a><span data-ttu-id="9e7b4-135">См. также</span><span class="sxs-lookup"><span data-stu-id="9e7b4-135">See Also</span></span>  
+ <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>  
+ <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="9e7b4-136">\<appDomainManagerType > элемент</span><span class="sxs-lookup"><span data-stu-id="9e7b4-136">\<appDomainManagerType> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)  
+ [<span data-ttu-id="9e7b4-137">Схема параметров среды выполнения</span><span class="sxs-lookup"><span data-stu-id="9e7b4-137">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="9e7b4-138">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="9e7b4-138">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="9e7b4-139">Метод SetAppDomainManagerType</span><span class="sxs-lookup"><span data-stu-id="9e7b4-139">SetAppDomainManagerType Method</span></span>](../../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

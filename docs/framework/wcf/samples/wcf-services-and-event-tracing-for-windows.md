@@ -1,98 +1,101 @@
 ---
-title: "Службы WCF и средство отслеживания событий для Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Службы WCF и средство отслеживания событий для Windows"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 809b48a27e5923db585d6125df0d2f55c96a4765
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Службы WCF и средство отслеживания событий для Windows
-Этот образец демонстрирует использование аналитического отслеживания в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] для передачи событий в средство отслеживания событий для Windows \(ETW\).  Аналитические трассировки представляют собой события, возникающие в ключевых точках стека [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и позволяющие отлаживать службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в рабочей среде.  
+# <a name="wcf-services-and-event-tracing-for-windows"></a><span data-ttu-id="3b77a-102">Службы WCF и средство отслеживания событий для Windows</span><span class="sxs-lookup"><span data-stu-id="3b77a-102">WCF Services and Event Tracing for Windows</span></span>
+<span data-ttu-id="3b77a-103">Этот образец демонстрирует использование аналитического отслеживания в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] для передачи событий в средство отслеживания событий для Windows (ETW).</span><span class="sxs-lookup"><span data-stu-id="3b77a-103">This sample demonstrates how to use the analytic tracing in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] to emit events in Event Tracing for Windows (ETW).</span></span> <span data-ttu-id="3b77a-104">Аналитические трассировки представляют собой события, возникающие в ключевых точках стека [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и позволяющие отлаживать службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в рабочей среде.</span><span class="sxs-lookup"><span data-stu-id="3b77a-104">The analytic traces are events emitted at key points in the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] stack that allow troubleshooting of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services in production environment.</span></span>  
   
- Аналитическое отслеживание служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] можно включить в рабочей среде, оказывая минимальное воздействие на производительность.  Отслеживаемые события передаются в сеанс трассировки событий Windows.  
+ <span data-ttu-id="3b77a-105">Аналитическое отслеживание служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] можно включить в рабочей среде, оказывая минимальное воздействие на производительность.</span><span class="sxs-lookup"><span data-stu-id="3b77a-105">Analytic trace in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services is tracing that can be turned on in a production environment with minimal impact on performance.</span></span> <span data-ttu-id="3b77a-106">Отслеживаемые события передаются в сеанс трассировки событий Windows.</span><span class="sxs-lookup"><span data-stu-id="3b77a-106">These traces are emitted as events to an ETW session.</span></span>  
   
- Данный образец включает базовую службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], события из которой передаются в журнал событий, который можно просмотреть с помощью средства просмотра событий.  Можно также запустить выделенный сеанс трассировки событий Windows, который будет прослушивать события от этой службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  Данный образец включает скрипт для создания выделенного сеанса трассировки событий Windows, хранящего события в двоичном файле, который можно прочесть с помощью средства просмотра событий.  
+ <span data-ttu-id="3b77a-107">Данный образец включает базовую службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], события из которой передаются в журнал событий, который можно просмотреть с помощью средства просмотра событий.</span><span class="sxs-lookup"><span data-stu-id="3b77a-107">This sample includes a basic [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service in which events are emitted from the service to the event log, which can be viewed using Event Viewer.</span></span> <span data-ttu-id="3b77a-108">Можно также запустить выделенный сеанс трассировки событий Windows, который будет прослушивать события от этой службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3b77a-108">It is also possible to start a dedicated ETW session that listens for events from the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="3b77a-109">Данный образец включает скрипт для создания выделенного сеанса трассировки событий Windows, хранящего события в двоичном файле, который можно прочесть с помощью средства просмотра событий.</span><span class="sxs-lookup"><span data-stu-id="3b77a-109">The sample includes a script to create a dedicated ETW session that stores events in a binary file that can be read using Event Viewer.</span></span>  
   
-#### Использование этого образца  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="3b77a-110">Использование этого образца</span><span class="sxs-lookup"><span data-stu-id="3b77a-110">To use this sample</span></span>  
   
-1.  Откройте в среде [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] файл решения EtwAnalyticTraceSample.sln.  
+1.  <span data-ttu-id="3b77a-111">Откройте в среде [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] файл решения EtwAnalyticTraceSample.sln.</span><span class="sxs-lookup"><span data-stu-id="3b77a-111">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the EtwAnalyticTraceSample.sln solution file.</span></span>  
   
-2.  Для построения решения нажмите CTRL\+SHIFT\+B.  
+2.  <span data-ttu-id="3b77a-112">Для построения решения нажмите CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="3b77a-112">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Чтобы запустить решение, нажмите клавиши CTRL\+F5.  
+3.  <span data-ttu-id="3b77a-113">Чтобы запустить решение, нажмите клавиши CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="3b77a-113">To run the solution, press CTRL+F5.</span></span>  
   
-     В веб\-браузере щелкните файл **Calculator.svc**.  В браузере должен появиться URI WSDL\-документа для службы.  Скопируйте этот URI.  
+     <span data-ttu-id="3b77a-114">В веб-браузере, щелкните **Calculator.svc**.</span><span class="sxs-lookup"><span data-stu-id="3b77a-114">In the Web browser, click **Calculator.svc**.</span></span> <span data-ttu-id="3b77a-115">В браузере должен появиться URI WSDL-документа для службы.</span><span class="sxs-lookup"><span data-stu-id="3b77a-115">The URI of the WSDL document for the service should appear in the browser.</span></span> <span data-ttu-id="3b77a-116">Скопируйте этот URI.</span><span class="sxs-lookup"><span data-stu-id="3b77a-116">Copy that URI.</span></span>  
   
-     По умолчанию служба начинает прослушивание запросов на порту 1378 \(http:\/\/localhost:1378\/Calculator.svc\).  
+     <span data-ttu-id="3b77a-117">По умолчанию служба начинает прослушивание запросов на порту 1378 (http://localhost:1378/Calculator.svc).</span><span class="sxs-lookup"><span data-stu-id="3b77a-117">By default, the service starts listening for requests on port 1378 (http://localhost:1378/Calculator.svc).</span></span>  
   
-4.  Запустите тестовый клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] \(WcfTestClient.exe\).  
+4.  <span data-ttu-id="3b77a-118">Запустите тестовый клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (WcfTestClient.exe).</span><span class="sxs-lookup"><span data-stu-id="3b77a-118">Run the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] test client (WcfTestClient.exe).</span></span>  
   
-     Тестовый клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] \(WcfTestClient.exe\) расположен по адресу \<[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]каталог\_установки\>\\Common7\\IDE\\ WcfTestClient.exe \(по умолчанию каталог установки [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] имеет вид C:\\Program Files\\Microsoft Visual Studio 10.0\).  
+     <span data-ttu-id="3b77a-119">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Тестовый клиент (WcfTestClient.exe) расположен в \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] каталог установки > \Common7\IDE\ WcfTestClient.exe (по умолчанию [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] каталог установки — C:\Program Files\Microsoft Visual Studio 10.0).</span><span class="sxs-lookup"><span data-stu-id="3b77a-119">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] test client (WcfTestClient.exe) is located in the \<[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Install Dir>\Common7\IDE\ WcfTestClient.exe (default [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] install dir is C:\Program Files\Microsoft Visual Studio 10.0).</span></span>  
   
-5.  В тестовом клиенте [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] добавьте службу, выбрав в меню **Файл** команду **Добавить службу**.  
+5.  <span data-ttu-id="3b77a-120">В пределах [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] тестовый клиент, добавить службу, указав **файл**, а затем **добавить службу**.</span><span class="sxs-lookup"><span data-stu-id="3b77a-120">Within the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] test client, add the service by selecting **File**, and then **Add Service**.</span></span>  
   
-     Добавьте адрес конечной точки в поле ввода.  Значение по умолчанию равно http:\/\/localhost:1378\/Calculator.svc.  
+     <span data-ttu-id="3b77a-121">Добавьте адрес конечной точки в поле ввода.</span><span class="sxs-lookup"><span data-stu-id="3b77a-121">Add the endpoint address in the input box.</span></span> <span data-ttu-id="3b77a-122">Значение по умолчанию равно http://localhost:1378/Calculator.svc.</span><span class="sxs-lookup"><span data-stu-id="3b77a-122">The default is http://localhost:1378/Calculator.svc.</span></span>  
   
-6.  Откройте приложение просмотра событий.  
+6.  <span data-ttu-id="3b77a-123">Откройте приложение просмотра событий.</span><span class="sxs-lookup"><span data-stu-id="3b77a-123">Open the Event Viewer application.</span></span>  
   
-     Перед запуском службы запустите средство просмотра событий и убедитесь, что журнал событий прослушивает события отслеживания, создаваемые в службе [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+     <span data-ttu-id="3b77a-124">Перед запуском службы запустите средство просмотра событий и убедитесь, что журнал событий прослушивает события отслеживания, создаваемые в службе [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3b77a-124">Before invoking the service, start Event Viewer and ensure that the event log is listening for tracking events emitted from the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
-7.  В меню **Пуск** выберите пункт **Администрирование**, а затем пункт **Просмотр событий**.  Включите **Аналитический** и **Отладочный** журналы.  
+7.  <span data-ttu-id="3b77a-125">Из **запустить** последовательно выберите пункты **Администрирование**, а затем **средство просмотра событий**.</span><span class="sxs-lookup"><span data-stu-id="3b77a-125">From the **Start** menu, select **Administrative Tools**, and then **Event Viewer**.</span></span>  <span data-ttu-id="3b77a-126">Включить **аналитический** и **отладки** журналы.</span><span class="sxs-lookup"><span data-stu-id="3b77a-126">Enable the **Analytic** and **Debug** logs.</span></span>  
   
-8.  В древовидном представлении средства просмотра событий перейдите последовательно к узлам **Средство просмотра событий**, **Журналы приложений и служб**, **Microsoft**, **Windows** и **Сервер приложений \- приложения**.  Щелкните правой кнопкой мыши пункт **Сервер приложений \- приложения**, выберите пункт **Вид** и пункт **Отобразить аналитический и отладочный журналы**.  
+8.  <span data-ttu-id="3b77a-127">В представлении дерева в средстве просмотра событий перейдите к **средство просмотра событий**, **журналы приложений и служб**, **Microsoft**, **Windows**, а затем **Сервер приложений-приложения**.</span><span class="sxs-lookup"><span data-stu-id="3b77a-127">In the tree view in Event Viewer, navigate to **Event Viewer**, **Applications and Services Logs**, **Microsoft**, **Windows**, and then **Application Server-Applications**.</span></span> <span data-ttu-id="3b77a-128">Щелкните правой кнопкой мыши **сервер приложений-приложения**выберите **представление**, а затем **Отобразить аналитический и отладочный журналы**.</span><span class="sxs-lookup"><span data-stu-id="3b77a-128">Right-click **Application Server-Applications**, select **View**, and then **Show Analytic and Debug Logs**.</span></span>  
   
-     Установите флажок **Отобразить аналитический и отладочный журналы**.  
+     <span data-ttu-id="3b77a-129">Убедитесь, что **Отобразить аналитический и отладочный журналы** флажок.</span><span class="sxs-lookup"><span data-stu-id="3b77a-129">Ensure that the **Show Analytic and Debug Logs** option is checked.</span></span>  
   
-9. Включите **Аналитический** журнал.  
+9. <span data-ttu-id="3b77a-130">Включить **аналитический** журнала.</span><span class="sxs-lookup"><span data-stu-id="3b77a-130">Enable the **Analytic** log.</span></span>  
   
-     В древовидном представлении средства просмотра событий перейдите последовательно к узлам **Средство просмотра событий**, **Журналы приложений и служб**, **Microsoft**, **Windows** и **Сервер приложений \- приложения**.  Щелкните правой кнопкой мыши пункт **Аналитический** и выберите команду **Включить журнал**.  
+     <span data-ttu-id="3b77a-131">В представлении дерева в средстве просмотра событий перейдите к **средство просмотра событий**, **журналы приложений и служб**, **Microsoft**, **Windows**, а затем **Сервер приложений-приложения**.</span><span class="sxs-lookup"><span data-stu-id="3b77a-131">In the tree view in Event Viewer, navigate to **Event Viewer**, **Applications and Services Logs**, **Microsoft**, **Windows**, and then **Application Server-Applications**.</span></span> <span data-ttu-id="3b77a-132">Щелкните правой кнопкой мыши **аналитический** и выберите **включить журнал**.</span><span class="sxs-lookup"><span data-stu-id="3b77a-132">Right-click **Analytic** and select **Enable Log**.</span></span>  
   
-#### Проверка службы  
+#### <a name="to-test-the-service"></a><span data-ttu-id="3b77a-133">Проверка службы</span><span class="sxs-lookup"><span data-stu-id="3b77a-133">To test the service</span></span>  
   
-1.  Переключитесь в тестовый клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], дважды щелкните `Divide` и сохраните значения по умолчанию, в которых задано нулевое значение знаменателя.  
+1.  <span data-ttu-id="3b77a-134">Переключитесь в тестовый клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], дважды щелкните `Divide` и сохраните значения по умолчанию, в которых задано нулевое значение знаменателя.</span><span class="sxs-lookup"><span data-stu-id="3b77a-134">Switch back to [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] test client and double-click `Divide` and keep the default values, which specify a denominator of 0.</span></span>  
   
-     Если знаменатель равен 0, служба выдает ошибку.  
+     <span data-ttu-id="3b77a-135">Если знаменатель равен 0, служба выдает ошибку.</span><span class="sxs-lookup"><span data-stu-id="3b77a-135">If the denominator is 0, then the service throws a fault.</span></span>  
   
-2.  Просмотрите события, переданные из службы.  
+2.  <span data-ttu-id="3b77a-136">Просмотрите события, переданные из службы.</span><span class="sxs-lookup"><span data-stu-id="3b77a-136">Observe the events emitted from the service.</span></span>  
   
-     Вернитесь в средство просмотра событий и перейдите в окно **Средство просмотра событий**, **Журналы приложений и служб**, **Microsoft**, **Windows**, **Сервер приложений \- приложения**.  Щелкните правой кнопкой мыши пункт **Аналитический** и выберите команду **Обновить**.  
+     <span data-ttu-id="3b77a-137">Вернитесь в средство просмотра событий и перейдите к **средство просмотра событий**, **журналы приложений и служб**, **Microsoft**, **Windows**, а затем **Сервер приложений-приложения**.</span><span class="sxs-lookup"><span data-stu-id="3b77a-137">Switch back to Event Viewer and navigate to **Event Viewer**, **Applications and Services Logs**, **Microsoft**, **Windows**, and then **Application Server-Applications**.</span></span> <span data-ttu-id="3b77a-138">Щелкните правой кнопкой мыши **аналитический** и выберите **обновление**.</span><span class="sxs-lookup"><span data-stu-id="3b77a-138">Right-click **Analytic** and select **Refresh**.</span></span>  
   
-     События аналитического отслеживания WCF отображаются в средстве просмотра событий.  Обратите внимание, что для возникшей ошибки в средстве просмотра событий отображается событие аналитического отслеживания.  
+     <span data-ttu-id="3b77a-139">События аналитического отслеживания WCF отображаются в средстве просмотра событий.</span><span class="sxs-lookup"><span data-stu-id="3b77a-139">The WCF analytic trace events are displayed in the event viewer.</span></span> <span data-ttu-id="3b77a-140">Обратите внимание, что для возникшей ошибки в средстве просмотра событий отображается событие аналитического отслеживания.</span><span class="sxs-lookup"><span data-stu-id="3b77a-140">Notice that because a fault was thrown by the service an error trace event is displayed in the event viewer.</span></span>  
   
-3.  Повторите шаги 1 и 2, используя уже допустимые входные значения.  Значением параметра `N2` может быть любое число, отличное от 0.  
+3.  <span data-ttu-id="3b77a-141">Повторите шаги 1 и 2, используя уже допустимые входные значения.</span><span class="sxs-lookup"><span data-stu-id="3b77a-141">Repeat steps 1 and 2, but with valid inputs.</span></span> <span data-ttu-id="3b77a-142">Значением параметра `N2` может быть любое число, отличное от 0.</span><span class="sxs-lookup"><span data-stu-id="3b77a-142">The value of the `N2` parameter can be any number other than 0.</span></span>  
   
-     Обновите канал аналитики, чтобы убедиться, что события WCF не включают событий, связанных с ошибкой.  
+     <span data-ttu-id="3b77a-143">Обновите канал аналитики, чтобы убедиться, что события WCF не включают событий, связанных с ошибкой.</span><span class="sxs-lookup"><span data-stu-id="3b77a-143">Refresh the analytic channel to view the WCF events do not include any error events.</span></span>  
   
- Образец иллюстрирует передачу событий аналитического отслеживания из службы WCF.  
+ <span data-ttu-id="3b77a-144">Образец иллюстрирует передачу событий аналитического отслеживания из службы WCF.</span><span class="sxs-lookup"><span data-stu-id="3b77a-144">The sample demonstrates the analytic trace events emitted from a WCF service.</span></span>  
   
-#### Очистка \(необязательно\)  
+#### <a name="to-cleanup-optional"></a><span data-ttu-id="3b77a-145">Очистка (необязательно)</span><span class="sxs-lookup"><span data-stu-id="3b77a-145">To cleanup (Optional)</span></span>  
   
-1.  Откройте средство просмотра событий.  
+1.  <span data-ttu-id="3b77a-146">Откройте средство просмотра событий.</span><span class="sxs-lookup"><span data-stu-id="3b77a-146">Open Event Viewer.</span></span>  
   
-2.  Перейдите последовательно к узлам **Средство просмотра событий**, **Журналы приложений и служб**, **Microsoft**, **Windows** и **Сервер приложений \- приложения**.  Щелкните правой кнопкой мыши пункт **Аналитический** и выберите команду **Отключить журнал**.  
+2.  <span data-ttu-id="3b77a-147">Перейдите к **средство просмотра событий**, **журналы приложений и служб**, **Microsoft**, **Windows**, а затем  **Сервер приложений приложения**.</span><span class="sxs-lookup"><span data-stu-id="3b77a-147">Navigate to **Event Viewer**, **Applications and Services Logs**, **Microsoft**, **Windows**, and then **Application-Server-Applications**.</span></span> <span data-ttu-id="3b77a-148">Щелкните правой кнопкой мыши **аналитический** и выберите **отключить журнал**.</span><span class="sxs-lookup"><span data-stu-id="3b77a-148">Right-click **Analytic** and select **Disable Log**.</span></span>  
   
-3.  Перейдите последовательно к узлам **Средство просмотра событий**, **Журналы приложений и служб**, **Microsoft**, **Windows** и **Сервер приложений \- приложения**.  Щелкните правой кнопкой мыши пункт **Аналитический** и выберите команду **Очистить журнал**.  
+3.  <span data-ttu-id="3b77a-149">Перейдите к **средство просмотра событий**, **журналы приложений и служб**, **Microsoft**, **Windows**, а затем  **Сервер приложений приложения**.</span><span class="sxs-lookup"><span data-stu-id="3b77a-149">Navigate to **Event Viewer**, **Applications and Services Logs**, **Microsoft**, **Windows**, and then **Application-Server-Applications**.</span></span> <span data-ttu-id="3b77a-150">Щелкните правой кнопкой мыши **аналитический** и выберите **очистить журнал**.</span><span class="sxs-lookup"><span data-stu-id="3b77a-150">Right-click **Analytic** and select **Clear Log**.</span></span>  
   
-4.  Установите флажок **Очистить**, чтобы очистить события.  
+4.  <span data-ttu-id="3b77a-151">Выберите **снимите** параметр, чтобы очистить события.</span><span class="sxs-lookup"><span data-stu-id="3b77a-151">Choose the **Clear** option to clear the events.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.  Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="3b77a-152">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="3b77a-152">The samples may already be installed on your computer.</span></span> <span data-ttu-id="3b77a-153">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="3b77a-153">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="3b77a-154">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="3b77a-154">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="3b77a-155">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="3b77a-155">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
   
-## См. также  
- [Образцы наблюдения за AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a><span data-ttu-id="3b77a-156">См. также</span><span class="sxs-lookup"><span data-stu-id="3b77a-156">See Also</span></span>  
+ [<span data-ttu-id="3b77a-157">Примеры мониторинга AppFabric</span><span class="sxs-lookup"><span data-stu-id="3b77a-157">AppFabric Monitoring Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193959)

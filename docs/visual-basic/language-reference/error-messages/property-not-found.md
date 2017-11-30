@@ -1,32 +1,30 @@
 ---
-title: "Свойство не найдено | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID422"
-dev_langs: 
-  - "VB"
+title: "Свойство не найдено"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID422
 ms.assetid: 127e0f5f-0997-4ac5-b9af-2e6a2eb513a2
-caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d1af420bcd10ecc19a1cf537ded603d74af8e4e5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Свойство не найдено
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Данный объект не поддерживает указанное свойство.  
+# <a name="property-not-found"></a><span data-ttu-id="28eeb-102">Свойство не найдено</span><span class="sxs-lookup"><span data-stu-id="28eeb-102">Property not found</span></span>
+<span data-ttu-id="28eeb-103">Этот объект не поддерживает указанное свойство.</span><span class="sxs-lookup"><span data-stu-id="28eeb-103">This object does not support the specified property.</span></span>  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a><span data-ttu-id="28eeb-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="28eeb-104">To correct this error</span></span>  
   
-1.  Проверьте правильность написания имени свойства.  
+1.  <span data-ttu-id="28eeb-105">Проверьте правильность написания имени свойства.</span><span class="sxs-lookup"><span data-stu-id="28eeb-105">Check the spelling of the property's name.</span></span>  
   
-2.  Просмотрите документацию объекта и убедитесь, что не предпринимается попытка доступа к свойству "Text", если объект фактически поддерживает свойство "Caption" или свойство с похожим именем.  
+2.  <span data-ttu-id="28eeb-106">Проверьте документацию объекта и убедитесь, что вы не пытаетесь получить доступ примерно свойством «text», если объект фактически поддерживает «заголовок» или свойство с похожим именем.</span><span class="sxs-lookup"><span data-stu-id="28eeb-106">Check the object's documentation to make sure you are not trying to access something like a "text" property when the object actually supports a "caption" or similarly named property.</span></span>  
   
-## См. также  
- [Типы ошибок](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="28eeb-107">См. также</span><span class="sxs-lookup"><span data-stu-id="28eeb-107">See Also</span></span>  
+ [<span data-ttu-id="28eeb-108">Типы ошибок</span><span class="sxs-lookup"><span data-stu-id="28eeb-108">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)

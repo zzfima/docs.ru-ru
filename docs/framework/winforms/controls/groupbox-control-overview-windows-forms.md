@@ -1,35 +1,35 @@
 ---
-title: "Общие сведения об элементе управления GroupBox (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GroupBox"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "GroupBox - элемент управления [Windows Forms], об элементе управления GroupBox"
-  - "группирование элементов управления, Windows Forms"
+title: "Общие сведения об элементе управления GroupBox (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: GroupBox
+helpviewer_keywords:
+- GroupBox control [Windows Forms], about GroupBox control
+- grouping controls [Windows Forms], Windows Forms
 ms.assetid: 03bd8ff9-c905-4f01-9bc6-8438b11d0881
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ceb77b12fc8c946eea03d865509db20d72a1900a
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Общие сведения об элементе управления GroupBox (Windows Forms)
-Элементы управления Windows Forms <xref:System.Windows.Forms.GroupBox> предназначены для объединения в идентифицируемые группы других элементов управления.  Обычно для разделения формы по функциям используются области группы.  Например, это может быть бланк заказа, в котором указаны параметры доставки почты, которые используются при доставке в ночное время.  Объединение всех параметров в области группы обеспечивает пользователю логическую визуальную подсказку. Во время разработки все элементы управления легко можно переместить — при перемещении одного элемента управления <xref:System.Windows.Forms.GroupBox> перемещаются также все входящие в него элементы управления.  
+# <a name="groupbox-control-overview-windows-forms"></a><span data-ttu-id="cf89d-102">Общие сведения об элементе управления GroupBox (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="cf89d-102">GroupBox Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="cf89d-103">Windows Forms <xref:System.Windows.Forms.GroupBox> элементы управления используются для предоставления возможность группировки других элементов управления.</span><span class="sxs-lookup"><span data-stu-id="cf89d-103">Windows Forms <xref:System.Windows.Forms.GroupBox> controls are used to provide an identifiable grouping for other controls.</span></span> <span data-ttu-id="cf89d-104">Как правило группы используются для разделения формы по функциям.</span><span class="sxs-lookup"><span data-stu-id="cf89d-104">Typically, you use group boxes to subdivide a form by function.</span></span> <span data-ttu-id="cf89d-105">Например имеется формой заказа, указаны параметры доставки почты ночное для использования.</span><span class="sxs-lookup"><span data-stu-id="cf89d-105">For example, you may have an order form that specifies mailing options such as which overnight carrier to use.</span></span> <span data-ttu-id="cf89d-106">Объединение всех параметров в области группы обеспечивает пользователю логическую визуальную подсказку, а во время разработки все элементы управления можно легко переместить — при перемещении одного <xref:System.Windows.Forms.GroupBox> управления, все содержащиеся в нем элементы перемещаются также.</span><span class="sxs-lookup"><span data-stu-id="cf89d-106">Grouping all options in a group box gives the user a logical visual cue, and at design time all the controls can be moved easily — when you move the single <xref:System.Windows.Forms.GroupBox> control, all its contained controls move, too.</span></span>  
   
- Заголовок области группы определяется свойством <xref:System.Windows.Forms.GroupBox.Text%2A>.  Дополнительные сведения см. в разделе [Практическое руководство. Определение текста, отображаемого элементом управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
+ <span data-ttu-id="cf89d-107">Заголовок области группы определяется <xref:System.Windows.Forms.GroupBox.Text%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="cf89d-107">The group box's caption is defined by the <xref:System.Windows.Forms.GroupBox.Text%2A> property.</span></span> <span data-ttu-id="cf89d-108">Дополнительные сведения см. в разделе [как: значение текста, отображаемого элементом управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).</span><span class="sxs-lookup"><span data-stu-id="cf89d-108">For more information, see [How to: Set the Text Displayed by a Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).</span></span>  
   
-## Элементы управления GroupBox и Panel  
- Элемент управления <xref:System.Windows.Forms.GroupBox> имеет некоторое сходство с элементом управления <xref:System.Windows.Forms.Panel>, однако только у элемента управления <xref:System.Windows.Forms.Panel> могут быть полосы прокрутки, и только элемент управления <xref:System.Windows.Forms.GroupBox> отображает заголовок.  
+## <a name="groupbox-and-panel"></a><span data-ttu-id="cf89d-109">GroupBox и панели</span><span class="sxs-lookup"><span data-stu-id="cf89d-109">GroupBox and Panel</span></span>  
+ <span data-ttu-id="cf89d-110"><xref:System.Windows.Forms.GroupBox> Управления аналогичен <xref:System.Windows.Forms.Panel> управления; Однако только <xref:System.Windows.Forms.GroupBox> управления отображается заголовок и только <xref:System.Windows.Forms.Panel> управления можно использовать полосы прокрутки.</span><span class="sxs-lookup"><span data-stu-id="cf89d-110">The <xref:System.Windows.Forms.GroupBox> control is similar to the <xref:System.Windows.Forms.Panel> control; however, only the <xref:System.Windows.Forms.GroupBox> control displays a caption, and only the <xref:System.Windows.Forms.Panel> control can have scroll bars.</span></span>  
   
-## См. также  
- [Элемент управления GroupBox](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="cf89d-111">См. также</span><span class="sxs-lookup"><span data-stu-id="cf89d-111">See Also</span></span>  
+ [<span data-ttu-id="cf89d-112">Элемент управления GroupBox</span><span class="sxs-lookup"><span data-stu-id="cf89d-112">GroupBox Control</span></span>](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)

@@ -1,41 +1,45 @@
 ---
-title: "Добавление данных в DataTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Добавление данных в таблицу данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 6e05e8cb0c7de638e0c4efe74ffd27ab0dc45508
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Добавление данных в DataTable
-После создания объекта <xref:System.Data.DataTable> и определения его структуры с использованием столбцов и ограничений к созданной таблице можно добавлять новые строки данных.  Чтобы добавить новую строку, объявите новую переменную типа <xref:System.Data.DataRow>.  При вызове метода <xref:System.Data.DataTable.NewRow%2A> будет возвращен новый объект **DataRow**.  Затем объект **DataTable** создает объект **DataRow** на основе структуры таблицы, определенной в <xref:System.Data.DataColumnCollection>.  
+# <a name="adding-data-to-a-datatable"></a><span data-ttu-id="52efd-102">Добавление данных в таблицу данных</span><span class="sxs-lookup"><span data-stu-id="52efd-102">Adding Data to a DataTable</span></span>
+<span data-ttu-id="52efd-103">После создания объекта <xref:System.Data.DataTable> и определения его структуры с использованием столбцов и ограничений к созданной таблице можно добавлять новые строки данных.</span><span class="sxs-lookup"><span data-stu-id="52efd-103">After you create a <xref:System.Data.DataTable> and define its structure using columns and constraints, you can add new rows of data to the table.</span></span> <span data-ttu-id="52efd-104">Чтобы добавить новую строку, объявите новую переменную типа <xref:System.Data.DataRow>.</span><span class="sxs-lookup"><span data-stu-id="52efd-104">To add a new row, declare a new variable as type <xref:System.Data.DataRow>.</span></span> <span data-ttu-id="52efd-105">Новый **DataRow** объект возвращается при вызове <xref:System.Data.DataTable.NewRow%2A> метода.</span><span class="sxs-lookup"><span data-stu-id="52efd-105">A new **DataRow** object is returned when you call the <xref:System.Data.DataTable.NewRow%2A> method.</span></span> <span data-ttu-id="52efd-106">**DataTable** создает **DataRow** объекта на основе структуры таблицы, в соответствии с определением <xref:System.Data.DataColumnCollection>.</span><span class="sxs-lookup"><span data-stu-id="52efd-106">The **DataTable** then creates the **DataRow** object based on the structure of the table, as defined by the <xref:System.Data.DataColumnCollection>.</span></span>  
   
- В следующем примере показано, как создать новую строку путем вызова метода **NewRow**.  
+ <span data-ttu-id="52efd-107">Следующий пример демонстрирует создание новой строки путем вызова **NewRow** метод.</span><span class="sxs-lookup"><span data-stu-id="52efd-107">The following example demonstrates how to create a new row by calling the **NewRow** method.</span></span>  
   
 ```vb  
 Dim workRow As DataRow = workTable.NewRow()  
-  
 ```  
   
 ```csharp  
 DataRow workRow = workTable.NewRow();  
 ```  
   
- После этого можно манипулировать вновь добавленной строкой с помощью индекса или имени столбца, как показано в следующем примере.  
+ <span data-ttu-id="52efd-108">После этого можно манипулировать вновь добавленной строкой с помощью индекса или имени столбца, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="52efd-108">You then can manipulate the newly added row using an index or the column name, as shown in the following example.</span></span>  
   
 ```vb  
 workRow("CustLName") = "Smith"  
 workRow(1) = "Smith"  
-  
 ```  
   
 ```csharp  
@@ -43,31 +47,29 @@ workRow["CustLName"] = "Smith";
 workRow[1] = "Smith";  
 ```  
   
- После вставки данных в новую строку для добавления строки в объект <xref:System.Data.DataRowCollection> применяется метод **Add**, показанный в следующем коде.  
+ <span data-ttu-id="52efd-109">После вставки данных в новую строку, **добавить** метод используется для добавления строки в <xref:System.Data.DataRowCollection>, показанный в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="52efd-109">After data is inserted into the new row, the **Add** method is used to add the row to the <xref:System.Data.DataRowCollection>, shown in the following code.</span></span>  
   
 ```vb  
 workTable.Rows.Add(workRow)  
-  
 ```  
   
 ```csharp  
 workTable.Rows.Add(workRow);  
 ```  
   
- Также можно вызвать метод **Add** для добавления новой строки путем передачи массива значений с типом <xref:System.Object>, как показано в следующем примере.  
+ <span data-ttu-id="52efd-110">Можно также вызвать **добавить** метод, чтобы добавить новую строку, передавая массив значений, типизированного как <xref:System.Object>, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="52efd-110">You can also call the **Add** method to add a new row by passing in an array of values, typed as <xref:System.Object>, as shown in the following example.</span></span>  
   
 ```vb  
 workTable.Rows.Add(new Object() {1, "Smith"})  
-  
 ```  
   
 ```csharp  
 workTable.Rows.Add(new Object[] {1, "Smith"});  
 ```  
   
- Передача массива значений с типом **Object** в метод **Add** приводит к созданию новой строки в таблице и заданию значений столбцов этой строки, соответствующих значениям в массиве объектов.  Обратите внимание, что значения в массиве сопоставляются со столбцами последовательно, с учетом порядка этих столбцов в таблице.  
+ <span data-ttu-id="52efd-111">Передача массива значений с типом **объекта**в **добавить** метод создает новую строку в таблице и заданию значений столбцов со значениями в массиве объектов.</span><span class="sxs-lookup"><span data-stu-id="52efd-111">Passing an array of values, typed as **Object**, to the **Add** method creates a new row inside the table and sets its column values to the values in the object array.</span></span> <span data-ttu-id="52efd-112">Обратите внимание, что значения в массиве сопоставляются со столбцами последовательно, с учетом порядка этих столбцов в таблице.</span><span class="sxs-lookup"><span data-stu-id="52efd-112">Note that values in the array are matched sequentially to the columns, based on the order in which they appear in the table.</span></span>  
   
- В следующем примере происходит добавление 10 строк к вновь созданной таблице **Customers**.  
+ <span data-ttu-id="52efd-113">В следующем примере добавляется 10 строк к вновь созданной **клиентов** таблицы.</span><span class="sxs-lookup"><span data-stu-id="52efd-113">The following example adds 10 rows to the newly created **Customers** table.</span></span>  
   
 ```vb  
 Dim workRow As DataRow  
@@ -79,7 +81,6 @@ For i = 0 To 9
   workRow(1) = "CustName" & I.ToString()  
   workTable.Rows.Add(workRow)  
 Next  
-  
 ```  
   
 ```csharp  
@@ -94,10 +95,10 @@ for (int i = 0; i <= 9; i++)
 }  
 ```  
   
-## См. также  
- <xref:System.Data.DataColumnCollection>   
- <xref:System.Data.DataRow>   
- <xref:System.Data.DataRowCollection>   
- <xref:System.Data.DataTable>   
- [Обработка данных в DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="52efd-114">См. также</span><span class="sxs-lookup"><span data-stu-id="52efd-114">See Also</span></span>  
+ <xref:System.Data.DataColumnCollection>  
+ <xref:System.Data.DataRow>  
+ <xref:System.Data.DataRowCollection>  
+ <xref:System.Data.DataTable>  
+ [<span data-ttu-id="52efd-115">Обработка данных в объект DataTable</span><span class="sxs-lookup"><span data-stu-id="52efd-115">Manipulating Data in a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [<span data-ttu-id="52efd-116">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="52efd-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

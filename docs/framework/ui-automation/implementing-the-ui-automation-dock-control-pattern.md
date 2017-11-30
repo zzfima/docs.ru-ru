@@ -1,70 +1,73 @@
 ---
-title: "Implementing the UI Automation Dock Control Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control patterns, dock"
-  - "dock control pattern"
-  - "UI Automation, dock control pattern"
+title: "Реализация шаблона элемента управления модели автоматизации пользовательского интерфейса Dock"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control patterns, dock
+- dock control pattern
+- UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-caps.latest.revision: 23
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 68c3dcdb1d8f15f312dea40ae59a3b1a4736c484
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Implementing the UI Automation Dock Control Pattern
+# <a name="implementing-the-ui-automation-dock-control-pattern"></a><span data-ttu-id="446a0-102">Реализация шаблона элемента управления модели автоматизации пользовательского интерфейса Dock</span><span class="sxs-lookup"><span data-stu-id="446a0-102">Implementing the UI Automation Dock Control Pattern</span></span>
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], заданные в пространстве имен <xref:System.Windows.Automation>. Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="446a0-103">Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> .</span><span class="sxs-lookup"><span data-stu-id="446a0-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="446a0-104">Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="446a0-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.IDockProvider>, включая сведения о свойствах. Ссылки на дополнительные материалы перечислены в конце раздела.  
+ <span data-ttu-id="446a0-105">В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.IDockProvider>, включая сведения о свойствах.</span><span class="sxs-lookup"><span data-stu-id="446a0-105">This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.IDockProvider>, including information about properties.</span></span> <span data-ttu-id="446a0-106">Ссылки на дополнительные материалы перечислены в конце раздела.</span><span class="sxs-lookup"><span data-stu-id="446a0-106">Links to additional references are listed at the end of the topic.</span></span>  
   
- Шаблон элемента управления <xref:System.Windows.Automation.DockPattern> используется для предоставления свойств закрепления элемента управления в контейнере закрепления. Контейнер закрепления — это элемент управления, который позволяет упорядочить дочерние элементы по горизонтали и по вертикали друг относительно друга. Примеры элементов управления, реализующие данный шаблон элемента управления, см. в разделе [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ <span data-ttu-id="446a0-107">Шаблон элемента управления <xref:System.Windows.Automation.DockPattern> используется для предоставления свойств закрепления элемента управления в контейнере закрепления.</span><span class="sxs-lookup"><span data-stu-id="446a0-107">The <xref:System.Windows.Automation.DockPattern> control pattern is used to expose the dock properties of a control within a docking container.</span></span> <span data-ttu-id="446a0-108">Контейнер закрепления — это элемент управления, который позволяет упорядочить дочерние элементы по горизонтали и по вертикали друг относительно друга.</span><span class="sxs-lookup"><span data-stu-id="446a0-108">A docking container is a control that allows you to arrange child elements horizontally and vertically, relative to each other.</span></span> <span data-ttu-id="446a0-109">Примеры элементов управления, реализующих данный шаблон элемента управления, см. в разделе [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span><span class="sxs-lookup"><span data-stu-id="446a0-109">For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span></span>  
   
- ![Доковый контейнер с двумя доковыми дочерними элементами.](../../../docs/framework/ui-automation/media/uia-dockpattern-dockingexample.PNG "UIA\_DockPattern\_DockingExample")  
-Пример закрепления из Visual Studio, где окно "Представление классов" — DockPosition.Right, а окно "Список ошибок" — DockPosition.Bottom  
+ <span data-ttu-id="446a0-110">![Контейнер закрепления с двумя доковыми дочерними элементами. ] (../../../docs/framework/ui-automation/media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")</span><span class="sxs-lookup"><span data-stu-id="446a0-110">![Docking container with two docked children.](../../../docs/framework/ui-automation/media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")</span></span>  
+<span data-ttu-id="446a0-111">Пример закрепления из Visual Studio, где окно "Представление классов" — DockPosition.Right, а окно "Список ошибок" — DockPosition.Bottom</span><span class="sxs-lookup"><span data-stu-id="446a0-111">Docking Example from Visual Studio Where "Class View" Window Is DockPosition.Right and "Error List" Window Is DockPosition.Bottom</span></span>  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## Правила и соглашения реализации  
- При реализации шаблона элемента управления Dock обратите внимание на следующие правила и соглашения.  
+## <a name="implementation-guidelines-and-conventions"></a><span data-ttu-id="446a0-112">Правила и соглашения реализации</span><span class="sxs-lookup"><span data-stu-id="446a0-112">Implementation Guidelines and Conventions</span></span>  
+ <span data-ttu-id="446a0-113">При реализации шаблона элемента управления Dock обратите внимание на следующие правила и соглашения.</span><span class="sxs-lookup"><span data-stu-id="446a0-113">When implementing the Dock control pattern, note the following guidelines and conventions:</span></span>  
   
--   <xref:System.Windows.Automation.Provider.IDockProvider> не предоставляет какие\-либо свойства контейнера закрепления или какие\-либо свойства элементов управления, закрепленных рядом с текущим элементом управления в контейнере закрепления.  
+-   <span data-ttu-id="446a0-114"><xref:System.Windows.Automation.Provider.IDockProvider> не предоставляет какие-либо свойства контейнера закрепления или какие-либо свойства элементов управления, закрепленных рядом с текущим элементом управления в контейнере закрепления.</span><span class="sxs-lookup"><span data-stu-id="446a0-114"><xref:System.Windows.Automation.Provider.IDockProvider> does not expose any properties of the docking container or any properties of controls that are docked adjacent to the current control within the docking container.</span></span>  
   
--   Элементы управления закрепляются относительно друг друга в зависимости от их текущего z\-порядка; чем больше z\-порядок расположения, тем дальше они размещены от заданного края контейнера закрепления.  
+-   <span data-ttu-id="446a0-115">Элементы управления закрепляются относительно друг друга в зависимости от их текущего z-порядка; чем больше z-порядок расположения, тем дальше они размещены от заданного края контейнера закрепления.</span><span class="sxs-lookup"><span data-stu-id="446a0-115">Controls are docked relative to each other based on their current z-order; the higher their z-order placement, the farther they are placed from the specified edge of the docking container.</span></span>  
   
--   При изменении размеров контейнера закрепления все закрепленные элементы управления в контейнере будут перенесены с выравниванием по тому же краю, к которому они были первоначально прикреплены. Размеры закрепленных элементов управления также будут изменены для заполнения пробелов в контейнере согласно поведению закрепления их <xref:System.Windows.Automation.DockPosition>. Например, если указано <xref:System.Windows.Automation.DockPosition>, левая и правая стороны элемента управления будут расширены для заполнения всего доступного пространства. Если указано <xref:System.Windows.Automation.DockPosition>, все четыре стороны элемента управления будут расширены для заполнения всего доступного пространства.  
+-   <span data-ttu-id="446a0-116">При изменении размеров контейнера закрепления все закрепленные элементы управления в контейнере будут перенесены с выравниванием по тому же краю, к которому они были первоначально прикреплены.</span><span class="sxs-lookup"><span data-stu-id="446a0-116">If the docking container is resized, any docked controls within the container will be repositioned flush to the same edge to which they were originally docked.</span></span> <span data-ttu-id="446a0-117">Размеры закрепленных элементов управления также будут изменены для заполнения пробелов в контейнере согласно поведению закрепления их <xref:System.Windows.Automation.DockPosition>.</span><span class="sxs-lookup"><span data-stu-id="446a0-117">The docked controls will also resize to fill any space within the container according to the docking behavior of their <xref:System.Windows.Automation.DockPosition>.</span></span> <span data-ttu-id="446a0-118">Например, если указано <xref:System.Windows.Automation.DockPosition.Top> , левая и правая стороны элемента управления будут расширены для заполнения всего доступного пространства.</span><span class="sxs-lookup"><span data-stu-id="446a0-118">For example, if <xref:System.Windows.Automation.DockPosition.Top> is specified, the left and right sides of the control will expand to fill any available space.</span></span> <span data-ttu-id="446a0-119">Если указано <xref:System.Windows.Automation.DockPosition.Fill> , все четыре стороны элемента управления будут расширены для заполнения всего доступного пространства.</span><span class="sxs-lookup"><span data-stu-id="446a0-119">If <xref:System.Windows.Automation.DockPosition.Fill> is specified, all four sides of the control will expand to fill any available space.</span></span>  
   
--   На системах с несколькими мониторами элементы управления должны закрепляться с левой или правой стороны текущего монитора. Если это невозможно, они должны закрепляться с левой стороны крайнего левого монитора или с правой стороны крайнего правого монитора.  
+-   <span data-ttu-id="446a0-120">На системах с несколькими мониторами элементы управления должны закрепляться с левой или правой стороны текущего монитора.</span><span class="sxs-lookup"><span data-stu-id="446a0-120">On a multi-monitor system, controls should dock to the left or right side of the current monitor.</span></span> <span data-ttu-id="446a0-121">Если это невозможно, они должны закрепляться с левой стороны крайнего левого монитора или с правой стороны крайнего правого монитора.</span><span class="sxs-lookup"><span data-stu-id="446a0-121">If that is not possible, they should dock to the left side of the leftmost monitor or the right side of the rightmost monitor.</span></span>  
   
 <a name="Required_Members_for_IDockProvider"></a>   
-## Обязательные члены для IDockProvider  
- Следующие свойства и методы обязательны для реализации интерфейса IDockProvider.  
+## <a name="required-members-for-idockprovider"></a><span data-ttu-id="446a0-122">Обязательные члены для IDockProvider</span><span class="sxs-lookup"><span data-stu-id="446a0-122">Required Members for IDockProvider</span></span>  
+ <span data-ttu-id="446a0-123">Следующие свойства и методы обязательны для реализации интерфейса IDockProvider.</span><span class="sxs-lookup"><span data-stu-id="446a0-123">The following properties and methods are required for implementing the IDockProvider interface.</span></span>  
   
-|Обязательные члены|Тип члена|Примечания|  
-|------------------------|---------------|----------------|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|Метод|Нет|  
+|<span data-ttu-id="446a0-124">Обязательные члены</span><span class="sxs-lookup"><span data-stu-id="446a0-124">Required members</span></span>|<span data-ttu-id="446a0-125">Тип члена</span><span class="sxs-lookup"><span data-stu-id="446a0-125">Member type</span></span>|<span data-ttu-id="446a0-126">Примечания</span><span class="sxs-lookup"><span data-stu-id="446a0-126">Notes</span></span>|  
+|----------------------|-----------------|-----------|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|<span data-ttu-id="446a0-127">Свойство</span><span class="sxs-lookup"><span data-stu-id="446a0-127">Property</span></span>|<span data-ttu-id="446a0-128">Нет</span><span class="sxs-lookup"><span data-stu-id="446a0-128">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|<span data-ttu-id="446a0-129">Метод</span><span class="sxs-lookup"><span data-stu-id="446a0-129">Method</span></span>|<span data-ttu-id="446a0-130">Нет</span><span class="sxs-lookup"><span data-stu-id="446a0-130">None</span></span>|  
   
- Этот шаблон элемента управления не имеет связанных событий.  
+ <span data-ttu-id="446a0-131">Этот шаблон элемента управления не имеет связанных событий.</span><span class="sxs-lookup"><span data-stu-id="446a0-131">This control pattern has no associated events.</span></span>  
   
 <a name="Exceptions"></a>   
-## Исключения  
- Поставщики должны вызывать следующие исключения.  
+## <a name="exceptions"></a><span data-ttu-id="446a0-132">Исключения</span><span class="sxs-lookup"><span data-stu-id="446a0-132">Exceptions</span></span>  
+ <span data-ttu-id="446a0-133">Поставщики должны вызывать следующие исключения.</span><span class="sxs-lookup"><span data-stu-id="446a0-133">Providers must throw the following exceptions.</span></span>  
   
-|Тип исключения|Условие|  
-|--------------------|-------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> -   Когда элементу управления не удалось выполнить запрошенный стиль закрепления.|  
+|<span data-ttu-id="446a0-134">Тип исключения</span><span class="sxs-lookup"><span data-stu-id="446a0-134">Exception type</span></span>|<span data-ttu-id="446a0-135">Условие</span><span class="sxs-lookup"><span data-stu-id="446a0-135">Condition</span></span>|  
+|--------------------|---------------|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> <span data-ttu-id="446a0-136">-Если элемент управления не удалось выполнить запрошенный стиль закрепления.</span><span class="sxs-lookup"><span data-stu-id="446a0-136">-   When a control is not able to execute the requested dock style.</span></span>|  
   
-## См. также  
- [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)   
- [Support Control Patterns in a UI Automation Provider](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)   
- [UI Automation Control Patterns for Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)   
- [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)   
- [Use Caching in UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a><span data-ttu-id="446a0-137">См. также</span><span class="sxs-lookup"><span data-stu-id="446a0-137">See Also</span></span>  
+ [<span data-ttu-id="446a0-138">Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="446a0-138">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="446a0-139">Поддержка шаблонов элементов управления в поставщике модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="446a0-139">Support Control Patterns in a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [<span data-ttu-id="446a0-140">Шаблоны элементов управления модели автоматизации пользовательского интерфейса для клиентов</span><span class="sxs-lookup"><span data-stu-id="446a0-140">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="446a0-141">Общие сведения о дереве модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="446a0-141">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [<span data-ttu-id="446a0-142">Использование кэширования в модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="446a0-142">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

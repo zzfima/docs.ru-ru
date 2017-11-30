@@ -1,24 +1,28 @@
 ---
-title: "Использование контекста редактирования ModelItem | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Использование контекста редактирования ModelItem"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7f9f1ea5-0147-4079-8eca-be94f00d3aa1
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fde8bf45e01f8e3fede04c08d63177271a4a6faf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Использование контекста редактирования ModelItem
-Контекст редактирования <xref:System.Activities.Presentation.Model.ModelItem> является объектом, используемым ведущим приложением для взаимодействия с конструктором.<xref:System.Activities.Presentation.EditingContext> предоставляет два метода, <xref:System.Activities.Presentation.EditingContext.Items%2A> и <xref:System.Activities.Presentation.EditingContext.Services%2A>, которые могут использоваться  
+# <a name="using-the-modelitem-editing-context"></a><span data-ttu-id="a6a0c-102">Использование контекста редактирования ModelItem</span><span class="sxs-lookup"><span data-stu-id="a6a0c-102">Using the ModelItem Editing Context</span></span>
+<span data-ttu-id="a6a0c-103">Контекст редактирования <xref:System.Activities.Presentation.Model.ModelItem> является объектом, используемым ведущим приложением для взаимодействия с конструктором.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-103">The <xref:System.Activities.Presentation.Model.ModelItem> editing context is the object that the host application uses to communicate with the designer.</span></span> <span data-ttu-id="a6a0c-104"><xref:System.Activities.Presentation.EditingContext> предоставляет два метода, <xref:System.Activities.Presentation.EditingContext.Items%2A> и <xref:System.Activities.Presentation.EditingContext.Services%2A>, которые могут использоваться</span><span class="sxs-lookup"><span data-stu-id="a6a0c-104"><xref:System.Activities.Presentation.EditingContext> exposes two methods, <xref:System.Activities.Presentation.EditingContext.Items%2A> and <xref:System.Activities.Presentation.EditingContext.Services%2A>, which can be used</span></span>  
   
-## Коллекция элементов  
- Коллекция <xref:System.Activities.Presentation.EditingContext.Items%2A> служит для доступа к данным, совместно используемым основным приложением и конструктором, либо к данным, доступным для всех конструкторов.Эта коллекция имеет следующие возможности, доступ к которым осуществляется через класс <xref:System.Activities.Presentation.ContextItemManager>:  
+## <a name="the-items-collection"></a><span data-ttu-id="a6a0c-105">Коллекция элементов</span><span class="sxs-lookup"><span data-stu-id="a6a0c-105">The Items collection</span></span>  
+ <span data-ttu-id="a6a0c-106">Коллекция <xref:System.Activities.Presentation.EditingContext.Items%2A> служит для доступа к данным, совместно используемым основным приложением и конструктором, либо к данным, доступным для всех конструкторов.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-106">The <xref:System.Activities.Presentation.EditingContext.Items%2A> collection is used to access data that is shared between the host and the designer, or data that is available to all designers.</span></span> <span data-ttu-id="a6a0c-107">Эта коллекция имеет следующие возможности, доступ к которым осуществляется через класс <xref:System.Activities.Presentation.ContextItemManager>:</span><span class="sxs-lookup"><span data-stu-id="a6a0c-107">This collection has the following capabilities, accessed via the <xref:System.Activities.Presentation.ContextItemManager> class:</span></span>  
   
 1.  <xref:System.Activities.Presentation.ContextItemManager.GetValue%2A>  
   
@@ -28,8 +32,8 @@ caps.handback.revision: 2
   
 4.  <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A>  
   
-## Коллекция служб  
- Коллекция <xref:System.Activities.Presentation.EditingContext.Services%2A> предназначена для доступа к службам, используемым конструктором для взаимодействия с узлом, либо к службам, используемым всеми конструкторами.Эта коллекция содержит следующие методы, на которые нужно обратить внимание:  
+## <a name="the-services-collection"></a><span data-ttu-id="a6a0c-108">Коллекция служб</span><span class="sxs-lookup"><span data-stu-id="a6a0c-108">The Services collection</span></span>  
+ <span data-ttu-id="a6a0c-109">Коллекция <xref:System.Activities.Presentation.EditingContext.Services%2A> предназначена для доступа к службам, используемым конструктором для взаимодействия с узлом, либо к службам, используемым всеми конструкторами.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-109">The <xref:System.Activities.Presentation.EditingContext.Services%2A> collection is used to access services that the designer uses to interact with the host, or services that all designers use.</span></span> <span data-ttu-id="a6a0c-110">Эта коллекция содержит следующие методы, на которые нужно обратить внимание:</span><span class="sxs-lookup"><span data-stu-id="a6a0c-110">This collection has the following methods of note:</span></span>  
   
 1.  <xref:System.Activities.Presentation.ServiceManager.Publish%2A>  
   
@@ -39,18 +43,17 @@ caps.handback.revision: 2
   
 4.  <xref:System.Activities.Presentation.ServiceManager.GetService%2A>  
   
-## Назначение конструктора действию  
- Чтобы указать, какой конструктор используется действием, служит атрибут Designer.  
+## <a name="assigning-a-designer-an-activity"></a><span data-ttu-id="a6a0c-111">Назначение конструктора действию</span><span class="sxs-lookup"><span data-stu-id="a6a0c-111">Assigning a designer an activity</span></span>  
+ <span data-ttu-id="a6a0c-112">Чтобы указать, какой конструктор используется действием, служит атрибут Designer.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-112">To specify which designer an activity uses, the Designer attribute is used.</span></span>  
   
 ```  
 [Designer(typeof(MyClassDesigner))]  
 public sealed class MyClass : CodeActivity  
 {  
-  
 ```  
   
-## Создание службы  
- Чтобы создать службу, которая служит каналом передачи между конструктором и узлом, необходимо создать интерфейс и реализацию.Этот интерфейс используется методом <xref:System.Activities.Presentation.ServiceManager.Publish%2A> для определения элементов службы, и реализация содержит логику для этой службы.В следующем примере кода создаются интерфейс службы и реализация.  
+## <a name="creating-a-service"></a><span data-ttu-id="a6a0c-113">Создание службы</span><span class="sxs-lookup"><span data-stu-id="a6a0c-113">Creating a service</span></span>  
+ <span data-ttu-id="a6a0c-114">Чтобы создать службу, которая служит каналом передачи между конструктором и узлом, необходимо создать интерфейс и реализацию.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-114">To create a service that serves as a conduit of information between the designer and the host, an interface and an implementation must be created.</span></span> <span data-ttu-id="a6a0c-115">Этот интерфейс используется методом <xref:System.Activities.Presentation.ServiceManager.Publish%2A> для определения элементов службы, и реализация содержит логику для этой службы.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-115">The interface is used by the <xref:System.Activities.Presentation.ServiceManager.Publish%2A> method to define the members of the service, and the implementation contains the logic for the service.</span></span> <span data-ttu-id="a6a0c-116">В следующем примере кода создаются интерфейс службы и реализация.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-116">In the following code example, a service interface and implementation are created.</span></span>  
   
 ```  
 public interface IMyService  
@@ -69,18 +72,17 @@ public interface IMyService
             } ;  
         }  
     }  
-  
 ```  
   
-## Публикация службы  
- Чтобы конструктор мог использовать службу, ее сначала необходимо опубликовать на узле с помощью метода <xref:System.Activities.Presentation.ServiceManager.Publish%2A>.  
+## <a name="publishing-a-service"></a><span data-ttu-id="a6a0c-117">Публикация службы</span><span class="sxs-lookup"><span data-stu-id="a6a0c-117">Publishing a service</span></span>  
+ <span data-ttu-id="a6a0c-118">Чтобы конструктор мог использовать службу, ее сначала необходимо опубликовать на узле с помощью метода <xref:System.Activities.Presentation.ServiceManager.Publish%2A>.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-118">For a designer to consume a service, it must first be published by the host using the <xref:System.Activities.Presentation.ServiceManager.Publish%2A> method.</span></span>  
   
 ```  
 this.Context.Services.Publish<IMyService>(new MyServiceImpl);  
 ```  
   
-## Подписка на службу  
- Конструктор получает доступ к службе с помощью метода <xref:System.Activities.Presentation.ServiceManager.Subscribe%2A> в методе <xref:System.Activities.Presentation.WorkflowViewElement.OnModelItemChanged%2A>.В следующем фрагменте кода показана подписка на службу.  
+## <a name="subscribing-to-a-service"></a><span data-ttu-id="a6a0c-119">Подписка на службу</span><span class="sxs-lookup"><span data-stu-id="a6a0c-119">Subscribing to a service</span></span>  
+ <span data-ttu-id="a6a0c-120">Конструктор получает доступ к службе с помощью метода <xref:System.Activities.Presentation.ServiceManager.Subscribe%2A> в методе <xref:System.Activities.Presentation.WorkflowViewElement.OnModelItemChanged%2A>.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-120">The designer obtains access to the service using the <xref:System.Activities.Presentation.ServiceManager.Subscribe%2A> method in the <xref:System.Activities.Presentation.WorkflowViewElement.OnModelItemChanged%2A> method.</span></span> <span data-ttu-id="a6a0c-121">В следующем фрагменте кода показана подписка на службу.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-121">The following code snippet demonstrates how to subscribe to a service.</span></span>  
   
 ```  
 protected override void OnModelItemChanged(object newItem)  
@@ -96,59 +98,58 @@ protected override void OnModelItemChanged(object newItem)
         subscribed = true;   
     }  
 }  
-  
 ```  
   
-## Совместное использование данных с помощью коллекции элементов  
- Работа с коллекцией элементов похожа на работу с коллекцией служб, за исключением того, что вместо Publish вызывается <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A>.Эта коллекция больше подходит для обмена простыми данными между конструкторами и узлом, чем для выполнения сложных функций.  
+## <a name="sharing-data-using-the-items-collection"></a><span data-ttu-id="a6a0c-122">Совместное использование данных с помощью коллекции элементов</span><span class="sxs-lookup"><span data-stu-id="a6a0c-122">Sharing data using the Items collection</span></span>  
+ <span data-ttu-id="a6a0c-123">Работа с коллекцией элементов похожа на работу с коллекцией служб, за исключением того, что вместо Publish вызывается <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A>.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-123">Using the Items collection is similar to using the Services collection, except that <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A> is used instead of Publish.</span></span> <span data-ttu-id="a6a0c-124">Эта коллекция больше подходит для обмена простыми данными между конструкторами и узлом, чем для выполнения сложных функций.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-124">This collection is more appropriate for sharing simple data between the designers and the host, rather than complex functionality.</span></span>  
   
-## Ведущие элементы узла EditingContext и службы  
- Среда .Net Framework предусматривает несколько встроенных элементов и служб, доступ к которым осуществляется через контекст редактирования.  
+## <a name="editingcontext-host-items-and-services"></a><span data-ttu-id="a6a0c-125">Ведущие элементы узла EditingContext и службы</span><span class="sxs-lookup"><span data-stu-id="a6a0c-125">EditingContext host items and services</span></span>  
+ <span data-ttu-id="a6a0c-126">Среда .Net Framework предусматривает несколько встроенных элементов и служб, доступ к которым осуществляется через контекст редактирования.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-126">The .Net Framework provides a number of built-in items and services accessed through the editing context.</span></span>  
   
- Элементы:  
+ <span data-ttu-id="a6a0c-127">Элементы:</span><span class="sxs-lookup"><span data-stu-id="a6a0c-127">Items:</span></span>  
   
--   <xref:System.Activities.Presentation.Hosting.AssemblyContextControlItem> — управляет списком локальных сборок, на которые указывают ссылки и которые будут использоваться в рабочем процессе для элементов управления \(например, в редакторе выражений\).  
+-   <span data-ttu-id="a6a0c-128"><xref:System.Activities.Presentation.Hosting.AssemblyContextControlItem> - управляет списком локальных сборок, на которые указывают ссылки и которые будут использоваться в рабочем процессе для элементов управления (например, в редакторе выражений).</span><span class="sxs-lookup"><span data-stu-id="a6a0c-128"><xref:System.Activities.Presentation.Hosting.AssemblyContextControlItem>: Manages the list of referenced local assemblies that will be used inside the workflow for controls (such as the expression editor).</span></span>  
   
--   <xref:System.Activities.Presentation.Hosting.ReadOnlyState> — указывает, находится ли конструктор в режиме только для чтения.  
+-   <span data-ttu-id="a6a0c-129"><xref:System.Activities.Presentation.Hosting.ReadOnlyState> - указывает, находится ли конструктор в режиме только для чтения.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-129"><xref:System.Activities.Presentation.Hosting.ReadOnlyState>: Indicates whether the designer is in a read-only state.</span></span>  
   
--   <xref:System.Activities.Presentation.View.Selection> — определяет коллекцию выбранных в настоящий момент объектов.  
+-   <span data-ttu-id="a6a0c-130"><xref:System.Activities.Presentation.View.Selection> - определяет коллекцию выбранных в настоящий момент объектов.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-130"><xref:System.Activities.Presentation.View.Selection>: Defines the collection of objects that are currently selected.</span></span>  
   
--   <xref:System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem>:  
+-   <span data-ttu-id="a6a0c-131"><xref:System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem>:</span><span class="sxs-lookup"><span data-stu-id="a6a0c-131"><xref:System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem>:</span></span>  
   
--   <xref:System.Activities.Presentation.WorkflowFileItem> — предоставляет сведения о файле, на основе которого выполняется текущий сеанс редактирования.  
+-   <span data-ttu-id="a6a0c-132"><xref:System.Activities.Presentation.WorkflowFileItem> - предоставляет сведения о файле, на основе которого выполняется текущий сеанс редактирования.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-132"><xref:System.Activities.Presentation.WorkflowFileItem>: Provides information on the file that the current editing session is based on.</span></span>  
   
- Службы:  
+ <span data-ttu-id="a6a0c-133">Службы:</span><span class="sxs-lookup"><span data-stu-id="a6a0c-133">Services:</span></span>  
   
--   <xref:System.Activities.Presentation.Model.AttachedPropertiesService> — позволяет добавлять свойства в текущий экземпляр с помощью <xref:System.Activities.Presentation.Model.AttachedPropertiesService.AddProperty%2A>.  
+-   <span data-ttu-id="a6a0c-134"><xref:System.Activities.Presentation.Model.AttachedPropertiesService> - позволяет добавлять свойства в текущий экземпляр с помощью <xref:System.Activities.Presentation.Model.AttachedPropertiesService.AddProperty%2A>.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-134"><xref:System.Activities.Presentation.Model.AttachedPropertiesService>: Allows properties to be added to the current instance, using <xref:System.Activities.Presentation.Model.AttachedPropertiesService.AddProperty%2A>.</span></span>  
   
--   <xref:System.Activities.Presentation.View.DesignerView> — разрешает доступ к свойствам полотна конструктора.  
+-   <span data-ttu-id="a6a0c-135"><xref:System.Activities.Presentation.View.DesignerView> - разрешает доступ к свойствам полотна конструктора.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-135"><xref:System.Activities.Presentation.View.DesignerView>: Allows access to the properties of the designer canvas.</span></span>  
   
--   <xref:System.Activities.Presentation.IActivityToolboxService> — позволяет обновлять содержимое области элементов.  
+-   <span data-ttu-id="a6a0c-136"><xref:System.Activities.Presentation.IActivityToolboxService> - позволяет обновлять содержимое области элементов.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-136"><xref:System.Activities.Presentation.IActivityToolboxService>: Allows the contents of the toolbox to be updated.</span></span>  
   
--   <xref:System.Activities.Presentation.Hosting.ICommandService> — предназначен для интеграции команд конструктора \(например, пунктов контекстного меню\) с пользовательскими реализациями службы.  
+-   <span data-ttu-id="a6a0c-137"><xref:System.Activities.Presentation.Hosting.ICommandService> - предназначен для интеграции команд конструктора (например, пунктов контекстного меню) с пользовательскими реализациями службы.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-137"><xref:System.Activities.Presentation.Hosting.ICommandService>: Used to integrate designer commands (such as Context Menu) with custom-provided service implementations.</span></span>  
   
--   <xref:System.Activities.Presentation.Debug.IDesignerDebugView> — обеспечивает функциональность отладчика конструктора.  
+-   <span data-ttu-id="a6a0c-138"><xref:System.Activities.Presentation.Debug.IDesignerDebugView> - обеспечивает функциональность отладчика конструктора.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-138"><xref:System.Activities.Presentation.Debug.IDesignerDebugView>: Provides functionality for the designer debugger.</span></span>  
   
--   <xref:System.Activities.Presentation.View.IExpressionEditorService> — обеспечивает доступ к диалоговому окну редактора выражений.  
+-   <span data-ttu-id="a6a0c-139"><xref:System.Activities.Presentation.View.IExpressionEditorService> - обеспечивает доступ к диалоговому окну редактора выражений.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-139"><xref:System.Activities.Presentation.View.IExpressionEditorService>: Provides access to the Expression Editor dialog.</span></span>  
   
--   <xref:System.Activities.Presentation.IIntegratedHelpService> — реализует в конструкторе функциональность встроенной справки.  
+-   <span data-ttu-id="a6a0c-140"><xref:System.Activities.Presentation.IIntegratedHelpService> - реализует в конструкторе функциональность встроенной справки.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-140"><xref:System.Activities.Presentation.IIntegratedHelpService>: Provides the designer with integrated help functionality.</span></span>  
   
--   <xref:System.Activities.Presentation.Validation.IValidationErrorService> — обеспечивает доступ к ошибкам проверки через <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A>.  
+-   <span data-ttu-id="a6a0c-141"><xref:System.Activities.Presentation.Validation.IValidationErrorService> - обеспечивает доступ к ошибкам проверки через <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A>.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-141"><xref:System.Activities.Presentation.Validation.IValidationErrorService>: Provides access to validation errors using <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A>.</span></span>  
   
--   <xref:System.Activities.Presentation.IWorkflowDesignerStorageService> — реализует внутреннюю службу для хранения и извлечения данных.Эта служба используется внутри среды .Net Framework и не предназначена для внешнего использования.  
+-   <span data-ttu-id="a6a0c-142"><xref:System.Activities.Presentation.IWorkflowDesignerStorageService> - реализует внутреннюю службу для хранения и извлечения данных.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-142"><xref:System.Activities.Presentation.IWorkflowDesignerStorageService>: Provides an internal service to store and retrieve data.</span></span> <span data-ttu-id="a6a0c-143">Эта служба используется внутри среды .Net Framework и не предназначена для внешнего использования.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-143">This service is used internally by the .Net Framework, and is not intended for external use.</span></span>  
   
--   <xref:System.Activities.Presentation.IXamlLoadErrorService> — предоставляет доступ к коллекции ошибок загрузки XAML через <xref:System.Activities.Presentation.IXamlLoadErrorService.ShowXamlLoadErrors%2A>.  
+-   <span data-ttu-id="a6a0c-144"><xref:System.Activities.Presentation.IXamlLoadErrorService> - предоставляет доступ к коллекции ошибок загрузки XAML через <xref:System.Activities.Presentation.IXamlLoadErrorService.ShowXamlLoadErrors%2A>.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-144"><xref:System.Activities.Presentation.IXamlLoadErrorService>: Provides access to the XAML load error collection using <xref:System.Activities.Presentation.IXamlLoadErrorService.ShowXamlLoadErrors%2A>.</span></span>  
   
--   <xref:System.Activities.Presentation.Services.ModelService> — используется конструктором для взаимодействия с редактируемой моделью рабочего процесса.  
+-   <span data-ttu-id="a6a0c-145"><xref:System.Activities.Presentation.Services.ModelService> - используется конструктором для взаимодействия с редактируемой моделью рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-145"><xref:System.Activities.Presentation.Services.ModelService>: Used by the designer to interact with the model of the workflow being edited.</span></span>  
   
--   <xref:System.Activities.Presentation.Model.ModelTreeManager> — обеспечивает доступ к корневому элементу дерева элементов модели через <xref:System.Activities.Presentation.Model.ModelItem.Root%2A>.  
+-   <span data-ttu-id="a6a0c-146"><xref:System.Activities.Presentation.Model.ModelTreeManager> - обеспечивает доступ к корневому элементу дерева элементов модели через <xref:System.Activities.Presentation.Model.ModelItem.Root%2A>.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-146"><xref:System.Activities.Presentation.Model.ModelTreeManager>: Provides access to the root of the model item tree using <xref:System.Activities.Presentation.Model.ModelItem.Root%2A>.</span></span>  
   
--   <xref:System.Activities.Presentation.UndoEngine> — реализует функциональность отмены и повтора операций.  
+-   <span data-ttu-id="a6a0c-147"><xref:System.Activities.Presentation.UndoEngine> - реализует функциональность отмены и повтора операций.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-147"><xref:System.Activities.Presentation.UndoEngine>: Provides undo and redo functionality.</span></span>  
   
--   <xref:System.Activities.Presentation.Services.ViewService> — сопоставляет визуальные элементы с элементами базовой модели.  
+-   <span data-ttu-id="a6a0c-148"><xref:System.Activities.Presentation.Services.ViewService> - сопоставляет визуальные элементы с элементами базовой модели.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-148"><xref:System.Activities.Presentation.Services.ViewService>: Maps visual elements to underlying model items.</span></span>  
   
--   <xref:System.Activities.Presentation.View.ViewStateService> — сохраняет состояния представления для элементов модели.  
+-   <span data-ttu-id="a6a0c-149"><xref:System.Activities.Presentation.View.ViewStateService> - сохраняет состояния представления для элементов модели.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-149"><xref:System.Activities.Presentation.View.ViewStateService>: Stores view states for model items.</span></span>  
   
--   <xref:System.Activities.Presentation.View.VirtualizedContainerService> — используется для настройки поведения пользовательского интерфейса виртуального контейнера.  
+-   <span data-ttu-id="a6a0c-150"><xref:System.Activities.Presentation.View.VirtualizedContainerService> - используется для настройки поведения пользовательского интерфейса виртуального контейнера.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-150"><xref:System.Activities.Presentation.View.VirtualizedContainerService>: Used to customize the virtual container UI behavior.</span></span>  
   
--   <xref:System.Activities.Presentation.Hosting.WindowHelperService> — служит для регистрации и отмены регистрации делегатов для уведомления о событиях.Кроме того, позволяет задавать владельца окна.
+-   <span data-ttu-id="a6a0c-151"><xref:System.Activities.Presentation.Hosting.WindowHelperService> - служит для регистрации и отмены регистрации делегатов для уведомления о событиях.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-151"><xref:System.Activities.Presentation.Hosting.WindowHelperService>: Used to register and unregister delegates for event notifications.</span></span> <span data-ttu-id="a6a0c-152">Кроме того, позволяет задавать владельца окна.</span><span class="sxs-lookup"><span data-stu-id="a6a0c-152">Also allows a window owner to be set.</span></span>

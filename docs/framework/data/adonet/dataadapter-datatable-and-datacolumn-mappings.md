@@ -1,23 +1,29 @@
 ---
-title: "Сопоставления DataAdapter, DataTable и DataColumn | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Сопоставления DataAdapter DataTable и DataColumn"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e96eb8e48b5787db5296458af650133747687295
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Сопоставления DataAdapter, DataTable и DataColumn
-Сопоставление **DataAdapter** содержит коллекцию, имеющую от нуля или больше объектов <xref:System.Data.Common.DataTableMapping>, в своем свойстве **TableMappings**.  Класс **DataTableMapping** предоставляет главное сопоставление между данными, возвращенными запросом к источнику данных, и <xref:System.Data.DataTable>.  Имя **DataTableMapping** может быть передано вместо имени **DataTable** в метод **Fill** сопоставления **DataAdapter**.  В следующем примере создается экземпляр класса **DataTableMapping** с именем **AuthorsMapping** для таблицы **Authors**.  
+# <a name="dataadapter-datatable-and-datacolumn-mappings"></a><span data-ttu-id="f9882-102">Сопоставления DataAdapter DataTable и DataColumn</span><span class="sxs-lookup"><span data-stu-id="f9882-102">DataAdapter DataTable and DataColumn Mappings</span></span>
+<span data-ttu-id="f9882-103">Объект **DataAdapter** содержит коллекцию из нуля или более <xref:System.Data.Common.DataTableMapping> объекты в его **TableMappings** свойство.</span><span class="sxs-lookup"><span data-stu-id="f9882-103">A **DataAdapter** contains a collection of zero or more <xref:System.Data.Common.DataTableMapping> objects in its **TableMappings** property.</span></span> <span data-ttu-id="f9882-104">Объект **DataTableMapping** обеспечивает основное сопоставление между данными, возвращаемыми из запроса к источнику данных и <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="f9882-104">A **DataTableMapping** provides a master mapping between the data returned from a query against a data source, and a <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="f9882-105">**DataTableMapping** может быть передано вместо **DataTable** в **заполнения** метод **DataAdapter**.</span><span class="sxs-lookup"><span data-stu-id="f9882-105">The **DataTableMapping** name can be passed in place of the **DataTable** name to the **Fill** method of the **DataAdapter**.</span></span> <span data-ttu-id="f9882-106">В следующем примере создается **DataTableMapping** с именем **AuthorsMapping** для **авторы** таблицы.</span><span class="sxs-lookup"><span data-stu-id="f9882-106">The following example creates a **DataTableMapping** named **AuthorsMapping** for the **Authors** table.</span></span>  
   
 ```vb  
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors")  
@@ -27,11 +33,11 @@ workAdapter.TableMappings.Add("AuthorsMapping", "Authors")
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors");  
 ```  
   
- Класс **DataTableMapping** позволяет использовать имена столбцов в объекте **DataTable**, отличные от таковых в базе данных.  В сопоставлении **DataAdapter** это сопоставление используется для согласования столбцов при обновлении таблицы.  
+ <span data-ttu-id="f9882-107">Объект **DataTableMapping** позволяет использовать имена столбцов в **DataTable** , отличаются от таковых в базе данных.</span><span class="sxs-lookup"><span data-stu-id="f9882-107">A **DataTableMapping** enables you to use column names in a **DataTable** that are different from those in the database.</span></span> <span data-ttu-id="f9882-108">**DataAdapter** это сопоставление используется для согласования столбцов при обновлении таблицы.</span><span class="sxs-lookup"><span data-stu-id="f9882-108">The **DataAdapter** uses the mapping to match the columns when the table is updated.</span></span>  
   
- Если не указан объект **TableName** или имя **DataTableMapping** при вызове метода **Fill** или **Update** объекта **DataAdapter**, то в объекте **DataAdapter** выполняется поиск экземпляра **DataTableMapping** с именем «Table».  Если имя **DataTableMapping** не существует, то значением **TableName** для объекта **DataTable** является «Table».  Можно указать применяемый по умолчанию класс **DataTableMapping** при создании объекта **DataTableMapping** с именем «Table».  
+ <span data-ttu-id="f9882-109">Если вы не укажете **TableName** или **DataTableMapping** при вызове **заполнения** или **обновление** метод  **DataAdapter**, **DataAdapter** ищет **DataTableMapping** с именем «Table».</span><span class="sxs-lookup"><span data-stu-id="f9882-109">If you do not specify a **TableName** or a **DataTableMapping** name when calling the **Fill** or **Update** method of the **DataAdapter**, the **DataAdapter** looks for a **DataTableMapping** named "Table".</span></span> <span data-ttu-id="f9882-110">Если данный **DataTableMapping** не существует, **TableName** из **DataTable** является «Table».</span><span class="sxs-lookup"><span data-stu-id="f9882-110">If that **DataTableMapping** does not exist, the **TableName** of the **DataTable** is "Table".</span></span> <span data-ttu-id="f9882-111">Можно задать значение по умолчанию **DataTableMapping** путем создания **DataTableMapping** с именем «Table».</span><span class="sxs-lookup"><span data-stu-id="f9882-111">You can specify a default **DataTableMapping** by creating a **DataTableMapping** with the name of "Table".</span></span>  
   
- В следующем примере кода создается экземпляр **DataTableMapping** \(из пространства имен <xref:System.Data.Common>\) и задается в качестве применяемого по умолчанию отображения для указанного объекта **DataAdapter** путем присваивания ему имени «Table».  Затем в этом примере столбцы из первой таблицы в результатах запроса \(таблицы **Customers** базы данных **Northwind**\) сопоставляются с набором понятных для пользователя имен в таблице **Northwind Customers** в <xref:System.Data.DataSet>.  Для столбцов, к которым не применяется сопоставление, используются имена столбцов из источника данных.  
+ <span data-ttu-id="f9882-112">В следующем примере кода создается **DataTableMapping** (из <xref:System.Data.Common> пространство имен) и делает его сопоставление по умолчанию для указанного **DataAdapter** путем присваивания ему имени «Table».</span><span class="sxs-lookup"><span data-stu-id="f9882-112">The following code example creates a **DataTableMapping** (from the <xref:System.Data.Common> namespace) and makes it the default mapping for the specified **DataAdapter** by naming it "Table".</span></span> <span data-ttu-id="f9882-113">Этом примере производится сопоставление столбцов из первой таблицы, в результате запроса ( **клиентов** таблицу **Northwind** базы данных) в набор более понятные имена в **Northwind Customers**  в таблицу <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="f9882-113">The example then maps the columns from the first table in the query result (the **Customers** table of the **Northwind** database) to a set of more user-friendly names in the **Northwind Customers** table in the <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="f9882-114">Для столбцов, к которым не применяется сопоставление, используются имена столбцов из источника данных.</span><span class="sxs-lookup"><span data-stu-id="f9882-114">For columns that are not mapped, the name of the column from the data source is used.</span></span>  
   
 ```vb  
 Dim mapping As DataTableMapping = _  
@@ -41,7 +47,6 @@ mapping.ColumnMappings.Add("ContactName", "Contact")
 mapping.ColumnMappings.Add("PostalCode", "ZIPCode")  
   
 adapter.Fill(custDS)  
-  
 ```  
   
 ```csharp  
@@ -54,11 +59,11 @@ mapping.ColumnMappings.Add("PostalCode", "ZIPCode");
 adapter.Fill(custDS);  
 ```  
   
- В более сложных ситуациях может быть принято решение, что один и тот же экземпляр **DataAdapter** должен поддерживать загрузку разных таблиц с различными сопоставлениями.  Чтобы обеспечить реализацию такого решения, достаточно просто ввести дополнительные объекты **DataTableMapping**.  
+ <span data-ttu-id="f9882-115">В более сложных ситуациях может быть принято решение, то же **DataAdapter** должен поддерживать загрузку разных таблиц с различными сопоставлениями.</span><span class="sxs-lookup"><span data-stu-id="f9882-115">In more advanced situations, you may decide that you want the same **DataAdapter** to support loading different tables with different mappings.</span></span> <span data-ttu-id="f9882-116">Чтобы сделать это, просто добавьте дополнительные **DataTableMapping** объектов.</span><span class="sxs-lookup"><span data-stu-id="f9882-116">To do this, simply add additional **DataTableMapping** objects.</span></span>  
   
- Если методу **Fill** передается экземпляр **DataSet** и имя **DataTableMapping**, то при наличии сопоставления с этим именем используется это сопоставление; в противном случае используется объект **DataTable** с этим именем.  
+ <span data-ttu-id="f9882-117">Когда **заполнения** методу передается экземпляр **набора данных** и **DataTableMapping** имя, если сопоставление с таким именем существует, он используется, в противном случае —  **DataTable** с, используется имя.</span><span class="sxs-lookup"><span data-stu-id="f9882-117">When the **Fill** method is passed an instance of a **DataSet** and a **DataTableMapping** name, if a mapping with that name exists it is used; otherwise, a **DataTable** with that name is used.</span></span>  
   
- В следующих примерах создается экземпляр **DataTableMapping** с именем **Customers** и именем объекта **DataTable**, равным **BizTalkSchema**.  Затем в этом примере строки, возвращаемые инструкцией SELECT, сопоставляются с объектом **DataTable**, имеющим имя **BizTalkSchema**.  
+ <span data-ttu-id="f9882-118">В следующих примерах создаются **DataTableMapping** с именем **клиентов** и **DataTable** имя **BizTalkSchema**.</span><span class="sxs-lookup"><span data-stu-id="f9882-118">The following examples create a **DataTableMapping** with a name of **Customers** and a **DataTable** name of **BizTalkSchema**.</span></span> <span data-ttu-id="f9882-119">Пример сопоставляет строк, возвращаемых инструкцией SELECT для **BizTalkSchema** **DataTable**.</span><span class="sxs-lookup"><span data-stu-id="f9882-119">The example then maps the rows returned by the SELECT statement to the **BizTalkSchema** **DataTable**.</span></span>  
   
 ```vb  
 Dim mapping As ITableMapping = _  
@@ -69,7 +74,6 @@ mapping.ColumnMappings.Add("ContactName", "Contact")
 mapping.ColumnMappings.Add("PostalCode", "ZIP")  
   
 adapter.Fill(custDS, "Customers")  
-  
 ```  
   
 ```csharp  
@@ -84,26 +88,26 @@ adapter.Fill(custDS, "Customers");
 ```  
   
 > [!NOTE]
->  Если имя исходного столбца не задано для сопоставления столбцов, или имя исходной таблицы не задано для сопоставления таблиц, то автоматически создаются имена, применяемые по умолчанию.  Если ни один исходный столбец не предоставлен для сопоставления столбцов, то сопоставлению столбцов присваивается предусмотренное по умолчанию имя **ИсходныйСтолбец** *N* с автоматически увеличивающимся суффиксом, начиная с **ИсходныйСтолбец1**.  Если ни одно имя исходной таблицы не предоставлено для сопоставления таблиц, то сопоставлению таблиц присваивается предусмотренное по умолчанию имя **ИсходнаяТаблица** *N* с автоматически увеличивающимся суффиксом, начиная с **ИсходнаяТаблица1**.  
+>  <span data-ttu-id="f9882-120">Если имя исходного столбца не задано для сопоставления столбцов, или имя исходной таблицы не задано для сопоставления таблиц, то автоматически создаются имена, применяемые по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="f9882-120">If a source column name is not supplied for a column mapping or a source table name is not supplied for a table mapping, default names will be automatically generated.</span></span> <span data-ttu-id="f9882-121">Если ни один исходный столбец предоставляется для сопоставления столбцов, сопоставлению столбцов присваивается имя по умолчанию **SourceColumn** *N,* начиная с **Исходныйстолбец1**.</span><span class="sxs-lookup"><span data-stu-id="f9882-121">If no source column is supplied for a column mapping, the column mapping is given an incremental default name of **SourceColumn** *N,* starting with **SourceColumn1**.</span></span> <span data-ttu-id="f9882-122">Если для сопоставления таблиц не указано имя таблицы источника, сопоставлению таблиц присваивается имя по умолчанию **SourceTable** *N*, начиная с **Исходнаятаблица1**.</span><span class="sxs-lookup"><span data-stu-id="f9882-122">If no source table name is supplied for a table mapping, the table mapping is given an incremental default name of **SourceTable** *N*, starting with **SourceTable1**.</span></span>  
   
 > [!NOTE]
->  Рекомендуется избегать использования соглашения об именах **ИсходныйСтолбец** *N* для сопоставления столбцов или **ИсходнаяТаблица** *N* для сопоставления таблиц, поскольку заданное имя может конфликтовать с существующим именем заданного по умолчанию сопоставления столбцов в коллекции **ColumnMappingCollection** или с именем сопоставления таблиц в коллекции **DataTableMappingCollection**.  Если указанное имя уже существует, возникает исключение.  
+>  <span data-ttu-id="f9882-123">Мы рекомендуем избегать именования **SourceColumn** *N* для сопоставления столбцов, или **SourceTable** *N* для таблицы сопоставление, поскольку указывается имя может конфликтовать с существующим именем столбца сопоставление по умолчанию в **ColumnMappingCollection** или имя таблицы сопоставления в **DataTableMappingCollection** .</span><span class="sxs-lookup"><span data-stu-id="f9882-123">We recommend that you avoid the naming convention of **SourceColumn** *N* for a column mapping, or **SourceTable** *N* for a table mapping, because the name you supply may conflict with an existing default column mapping name in the **ColumnMappingCollection** or table mapping name in the **DataTableMappingCollection**.</span></span> <span data-ttu-id="f9882-124">Если указанное имя уже существует, возникает исключение.</span><span class="sxs-lookup"><span data-stu-id="f9882-124">If the supplied name already exists, an exception will be thrown.</span></span>  
   
-## Обработка нескольких результирующих наборов  
- Если команда **SelectCommand** возвращает несколько таблиц, то в методе **Fill** для таблиц в объекте **DataSet** автоматически формируются имена, которые в качестве суффиксов имеют автоматически увеличивающиеся значения. Значения начинаются с указанного имени таблицы и увеличиваются в форме **ИмяТаблицы** *N*, причем первым значением является **ИмяТаблицы1**.  Можно использовать сопоставления таблиц для сопоставления автоматически создаваемого имени таблицы с тем именем, которое требуется задать для таблицы в объекте **DataSet**.  Например, для к команды **SelectCommand**, которая возвращает две таблицы, **Customers** и **Orders**, можно выполнить следующий вызов метода **Fill**.  
+## <a name="handling-multiple-result-sets"></a><span data-ttu-id="f9882-125">Обработка нескольких результирующих наборов</span><span class="sxs-lookup"><span data-stu-id="f9882-125">Handling Multiple Result Sets</span></span>  
+ <span data-ttu-id="f9882-126">Если ваш **SelectCommand** возвращает несколько таблиц **заполнения** автоматически формирует имена таблиц с добавочные значения для таблиц в **набора данных**, начиная с Указанное имя таблицы и продолжение на в форме **TableName** *N*, начиная с **TableName1**.</span><span class="sxs-lookup"><span data-stu-id="f9882-126">If your **SelectCommand** returns multiple tables, **Fill** automatically generates table names with incremental values for the tables in the **DataSet**, starting with the specified table name and continuing on in the form **TableName** *N*, starting with **TableName1**.</span></span> <span data-ttu-id="f9882-127">Можно использовать сопоставления таблиц для сопоставления автоматически создаваемого имени таблицы с именем, которое требуется задать для таблицы в **набора данных**.</span><span class="sxs-lookup"><span data-stu-id="f9882-127">You can use table mappings to map the automatically generated table name to a name you want specified for the table in the **DataSet**.</span></span> <span data-ttu-id="f9882-128">Например, для **SelectCommand** , возвращает две таблицы **клиентов** и **заказов**, выполните следующий вызов **заполнения**.</span><span class="sxs-lookup"><span data-stu-id="f9882-128">For example, for a **SelectCommand** that returns two tables, **Customers** and **Orders**, issue the following call to **Fill**.</span></span>  
   
 ```  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
   
- В объекте **DataSet** будут созданы две таблицы: **Customers** и **Customers1**.  Можно использовать сопоставления таблиц для обеспечения того, чтобы вторая таблица получила имя **Orders** вместо **Customers1**.  Для этого необходимо сопоставить исходную таблицу **Customers1** с таблицей **Orders** из **DataSet**, как показано в следующем примере.  
+ <span data-ttu-id="f9882-129">Будут созданы две таблицы в **DataSet**: **клиентов** и **Customers1**.</span><span class="sxs-lookup"><span data-stu-id="f9882-129">Two tables are created in the **DataSet**: **Customers** and **Customers1**.</span></span> <span data-ttu-id="f9882-130">Можно использовать сопоставления таблиц, чтобы убедиться, что вторая таблица называется **заказов** вместо **Customers1**.</span><span class="sxs-lookup"><span data-stu-id="f9882-130">You can use table mappings to ensure that the second table is named **Orders** instead of **Customers1**.</span></span> <span data-ttu-id="f9882-131">Чтобы сделать это, сопоставить исходную таблицу из **Customers1** для **набора данных** таблицы **заказов**, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="f9882-131">To do this, map the source table of **Customers1** to the **DataSet** table **Orders**, as shown in the following example.</span></span>  
   
 ```  
 adapter.TableMappings.Add("Customers1", "Orders")  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
   
-## См. также  
- [Объекты DataAdapter и DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)   
- [Получение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="f9882-132">См. также</span><span class="sxs-lookup"><span data-stu-id="f9882-132">See Also</span></span>  
+ [<span data-ttu-id="f9882-133">Объекты DataAdapter и DataReader</span><span class="sxs-lookup"><span data-stu-id="f9882-133">DataAdapters and DataReaders</span></span>](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [<span data-ttu-id="f9882-134">Извлечение и изменение данных в ADO.NET</span><span class="sxs-lookup"><span data-stu-id="f9882-134">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [<span data-ttu-id="f9882-135">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="f9882-135">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

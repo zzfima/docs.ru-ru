@@ -1,44 +1,49 @@
 ---
-title: "Практическое руководство. Отображение списка шрифтов с помощью компонента FontDialog | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "диалоговое окно шрифтов, отображение"
-  - "Font - свойство, установка с помощью компонента FontDialog"
-  - "FontDialog - компонент [Windows Forms]"
-  - "шрифты, атрибуты"
-  - "шрифты, выбор"
-  - "шрифты, отображение списка"
+title: "Практическое руководство. Отображение списка шрифтов с помощью компонента FontDialog"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- fonts [Windows Forms], showing list
+- FontDialog component [Windows Forms]
+- fonts [Windows Forms], attributes
+- Font property [Windows Forms], setting with FontDialog component
+- Font dialog box [Windows Forms], displaying
+- fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 781daeb43a952ef25e73edd577fa17c61b02b426
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Отображение списка шрифтов с помощью компонента FontDialog
-Компонент [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) позволяет пользователям выбирать шрифт и менять параметры его отображения, такие как вес и размер.  
+# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a><span data-ttu-id="097b8-102">Практическое руководство. Отображение списка шрифтов с помощью компонента FontDialog</span><span class="sxs-lookup"><span data-stu-id="097b8-102">How to: Show a Font List with the FontDialog Component</span></span>
+<span data-ttu-id="097b8-103">[FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) компонент позволяет пользователям выбрать шрифт, а также менять параметры его отображения, такие как вес и размер.</span><span class="sxs-lookup"><span data-stu-id="097b8-103">The [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) component allows users to select a font, as well as change its display aspects, such as its weight and size.</span></span>  
   
- Шрифт, выбранный в диалоговом окне, возвращается в свойстве <xref:System.Windows.Forms.FontDialog.Font%2A>.  Таким образом, при выборе шрифта пользователем весь процесс сводится к чтению свойства.  
+ <span data-ttu-id="097b8-104">Шрифт, выбранный в диалоговом окне, возвращается в <xref:System.Windows.Forms.FontDialog.Font%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="097b8-104">The font selected in the dialog box is returned in the <xref:System.Windows.Forms.FontDialog.Font%2A> property.</span></span> <span data-ttu-id="097b8-105">Таким образом используя преимущества шрифта, выбранного пользователем так же легко, как и чтение свойство.</span><span class="sxs-lookup"><span data-stu-id="097b8-105">Thus, taking advantage of the font selected by the user is as easy as reading a property.</span></span>  
   
-### Чтобы выбрать свойства шрифта с помощью компонента FontDialog  
+### <a name="to-select-font-properties-using-the-fontdialog-component"></a><span data-ttu-id="097b8-106">Чтобы выбрать свойства шрифта с помощью компонента FontDialog</span><span class="sxs-lookup"><span data-stu-id="097b8-106">To select font properties using the FontDialog Component</span></span>  
   
-1.  Отобразите диалоговое окно с помощью метода <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>.  
+1.  <span data-ttu-id="097b8-107">Отобразить диалоговое окно с помощью <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="097b8-107">Display the dialog box using the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method.</span></span>  
   
-2.  С помощью свойства <xref:System.Windows.Forms.DialogResult> определите, как было закрыто диалоговое окно.  
+2.  <span data-ttu-id="097b8-108">Используйте <xref:System.Windows.Forms.DialogResult> свойство, чтобы определить, как окно было закрыто.</span><span class="sxs-lookup"><span data-stu-id="097b8-108">Use the <xref:System.Windows.Forms.DialogResult> property to determine how the dialog box was closed.</span></span>  
   
-3.  Для задания требуемого шрифта воспользуйтесь свойством <xref:System.Windows.Forms.FontDialog.Font%2A>.  
+3.  <span data-ttu-id="097b8-109">Используйте <xref:System.Windows.Forms.FontDialog.Font%2A> свойство, чтобы задать нужный шрифт.</span><span class="sxs-lookup"><span data-stu-id="097b8-109">Use the <xref:System.Windows.Forms.FontDialog.Font%2A> property to set the desired font.</span></span>  
   
-     В приведенном ниже примере обработчик события <xref:System.Windows.Forms.Control.Click> элемента управления <xref:System.Windows.Forms.Button> открывает компонент <xref:System.Windows.Forms.FontDialog>.  Когда шрифт выбран и пользователь нажимает кнопку **ОК**, свойство <xref:System.Windows.Forms.FontDialog.Font%2A> элемента управления <xref:System.Windows.Forms.TextBox> приобретает значение выбранного шрифта.  Пример предполагает, что в форме есть элемент управления <xref:System.Windows.Forms.Button>, элемент управления <xref:System.Windows.Forms.TextBox> и компонент <xref:System.Windows.Forms.FontDialog>.  
+     <span data-ttu-id="097b8-110">В следующем примере <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Click> обработчик событий открывает <xref:System.Windows.Forms.FontDialog> компонента.</span><span class="sxs-lookup"><span data-stu-id="097b8-110">In the example below, the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler opens a <xref:System.Windows.Forms.FontDialog> component.</span></span> <span data-ttu-id="097b8-111">Если шрифт является выбран и пользователь нажимает **ОК**, <xref:System.Windows.Forms.FontDialog.Font%2A> свойство <xref:System.Windows.Forms.TextBox> элемент управления на форме имеет значение выбранного шрифта.</span><span class="sxs-lookup"><span data-stu-id="097b8-111">When a font is chosen and the user clicks **OK**, the <xref:System.Windows.Forms.FontDialog.Font%2A> property of a <xref:System.Windows.Forms.TextBox> control that is on the form is set to the chosen font.</span></span> <span data-ttu-id="097b8-112">В этом примере предполагается, имеет форму <xref:System.Windows.Forms.Button> управления <xref:System.Windows.Forms.TextBox> управления и <xref:System.Windows.Forms.FontDialog> компонента.</span><span class="sxs-lookup"><span data-stu-id="097b8-112">The example assumes your form has a <xref:System.Windows.Forms.Button> control, a  <xref:System.Windows.Forms.TextBox> control, and a <xref:System.Windows.Forms.FontDialog> component.</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -47,7 +52,6 @@ caps.handback.revision: 15
           TextBox1.Font = FontDialog1.Font  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -58,7 +62,6 @@ caps.handback.revision: 15
           textBox1.Font = fontDialog1.Font;  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -73,17 +76,16 @@ caps.handback.revision: 15
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] и [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) Поместите в конструктор формы следующий код, чтобы зарегистрировать обработчик событий.  
+     <span data-ttu-id="097b8-113">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] и [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Поместите следующий код в конструктор формы для регистрации обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="097b8-113">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
-  
     ```  
   
     ```cpp  
     button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## См. также  
- <xref:System.Windows.Forms.FontDialog>   
- [Компонент FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="097b8-114">См. также</span><span class="sxs-lookup"><span data-stu-id="097b8-114">See Also</span></span>  
+ <xref:System.Windows.Forms.FontDialog>  
+ [<span data-ttu-id="097b8-115">Компонент FontDialog</span><span class="sxs-lookup"><span data-stu-id="097b8-115">FontDialog Component</span></span>](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)

@@ -1,45 +1,48 @@
 ---
-title: "Пользовательские модули форматирования сообщений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Пользовательские модули форматирования сообщений"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 01998d0ac732f63f6771c47bfc76a8207a5531f3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пользовательские модули форматирования сообщений
-Содержимое сообщения зачастую представлено в XML\-виде, который обычно является неудобным форматом для приложений.  Приложения управляют объектами, получая и устанавливая их свойства.  [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] использует *контракт данных* для преобразования объекта <xref:System.ServiceModel.Channels.Message> в объект, легко обрабатываемый приложением.  Эти действия называются сериализацией и десериализацией.  Обратите внимание, что данные термины также используются для описания сериализации и десериализации, выполненной транспортным слоем, в формат сообщений для передачи по линиям связи, что является несвязанным процессом.  
+# <a name="custom-message-formatters"></a><span data-ttu-id="20210-102">Пользовательские модули форматирования сообщений</span><span class="sxs-lookup"><span data-stu-id="20210-102">Custom Message Formatters</span></span>
+<span data-ttu-id="20210-103">Содержимое сообщения зачастую представлено в XML-виде, который обычно является неудобным форматом для приложений.</span><span class="sxs-lookup"><span data-stu-id="20210-103">The content in a message is often in the form of XML, which is usually not a convenient format for an application.</span></span> <span data-ttu-id="20210-104">Приложения управляют объектами, получая и устанавливая их свойства.</span><span class="sxs-lookup"><span data-stu-id="20210-104">Applications manipulate objects, getting and setting their properties.</span></span> [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="20210-105">использует *контракт данных* для преобразования <xref:System.ServiceModel.Channels.Message> объекта в объект, легко обрабатываемый приложением.</span><span class="sxs-lookup"><span data-stu-id="20210-105"> uses the *Data Contract* to convert a <xref:System.ServiceModel.Channels.Message> object into an object easily handled by an application.</span></span> <span data-ttu-id="20210-106">Эти действия называются сериализацией и десериализацией.</span><span class="sxs-lookup"><span data-stu-id="20210-106">These processes are called serialization and deserialization.</span></span> <span data-ttu-id="20210-107">Обратите внимание, что данные термины также используются для описания сериализации и десериализации, выполненной транспортным слоем, в формат сообщений для передачи по линиям связи, что является несвязанным процессом.</span><span class="sxs-lookup"><span data-stu-id="20210-107">Note that these same terms are used to describe the serialization and deserialization done by the transport layer to and from the message wire format, which is an unrelated process.</span></span>  
   
- Можно использовать пользовательский модуль форматирования сообщений, если требуется реализовать специализированное преобразование между сообщениями и объектами, которое не удается выполнить при помощи контракта данных.  Это можно сделать путем изменения или расширения поведения выполнения определенной операции контракта на стороне клиента или службы.  
+ <span data-ttu-id="20210-108">Можно использовать пользовательский модуль форматирования сообщений, если требуется реализовать специализированное преобразование между сообщениями и объектами, которое не удается выполнить при помощи контракта данных.</span><span class="sxs-lookup"><span data-stu-id="20210-108">You can use a custom message formatter if you need to implement a specialized conversion between messages and objects that you cannot accomplish by means of a Data Contract.</span></span> <span data-ttu-id="20210-109">Это можно сделать путем изменения или расширения поведения выполнения определенной операции контракта на стороне клиента или службы.</span><span class="sxs-lookup"><span data-stu-id="20210-109">Do this by modifying or extending the execution behavior of a specific contract operation on a client or a service.</span></span>  
   
-## Пользовательские модули форматирования сообщения на стороне клиента  
- Интерфейс <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> определяет методы, используемые для управления преобразованием сообщений в объекты и обратно для клиентских приложений.  
+## <a name="custom-message-formatters-on-the-client"></a><span data-ttu-id="20210-110">Пользовательские модули форматирования сообщения на стороне клиента</span><span class="sxs-lookup"><span data-stu-id="20210-110">Custom Message Formatters on the Client</span></span>  
+ <span data-ttu-id="20210-111">Интерфейс <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> определяет методы, используемые для управления преобразованием сообщений в объекты и обратно для клиентских приложений.</span><span class="sxs-lookup"><span data-stu-id="20210-111">The <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> interface defines methods that are used to control the conversion of messages into objects and objects into messages for client applications.</span></span>  
   
- Необходимо реализовать данный интерфейс.  Сначала требуется переопределить метод <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.DeserializeReply%2A> для десериализации сообщения.  Данный метод вызывается после получения входящего сообщения, но перед его отправкой операции клиента.  
+ <span data-ttu-id="20210-112">Необходимо реализовать данный интерфейс.</span><span class="sxs-lookup"><span data-stu-id="20210-112">You must implement this interface.</span></span> <span data-ttu-id="20210-113">Сначала требуется переопределить метод <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.DeserializeReply%2A> для десериализации сообщения.</span><span class="sxs-lookup"><span data-stu-id="20210-113">First override the <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.DeserializeReply%2A> method to deserialize a message.</span></span> <span data-ttu-id="20210-114">Данный метод вызывается после получения входящего сообщения, но перед его отправкой операции клиента.</span><span class="sxs-lookup"><span data-stu-id="20210-114">This method is called after an incoming message is received, but before it is dispatched to the client operation.</span></span>  
   
- Затем переопределите метод <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.SerializeRequest%2A> для сериализации объекта.  Данный метод вызывается перед отправкой исходящего сообщения.  
+ <span data-ttu-id="20210-115">Затем переопределите метод <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.SerializeRequest%2A> для сериализации объекта.</span><span class="sxs-lookup"><span data-stu-id="20210-115">Next, override the <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.SerializeRequest%2A> method to serialize an object.</span></span> <span data-ttu-id="20210-116">Данный метод вызывается перед отправкой исходящего сообщения.</span><span class="sxs-lookup"><span data-stu-id="20210-116">This method is called prior to sending an outgoing message.</span></span>  
   
- Чтобы вставить пользовательский модуль форматирования в службу, назначьте объект <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> свойству <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A> с помощью поведения операции.  Дополнительные сведения о повелениях см. в разделе [Настройка и расширение среды выполнения с помощью поведений](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ <span data-ttu-id="20210-117">Чтобы вставить пользовательский модуль форматирования в службу, назначьте объект <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> свойству <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A> с помощью поведения операции.</span><span class="sxs-lookup"><span data-stu-id="20210-117">To insert the custom formatter into the service application, assign the <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> object to the <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A> property using an operation behavior.</span></span> <span data-ttu-id="20210-118">Сведения о поведении см. в разделе [настройку и расширение среды выполнения с помощью поведений](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).</span><span class="sxs-lookup"><span data-stu-id="20210-118">For information about behaviors, see [Configuring and Extending the Runtime with Behaviors](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).</span></span>  
   
-## Пользовательские модули форматирования сообщения на стороне службы  
- Интерфейс <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> определяет методы, которые преобразовывают объект <xref:System.ServiceModel.Channels.Message> в параметры для операции и из параметров в объект <xref:System.ServiceModel.Channels.Message> в приложении службы.  
+## <a name="custom-message-formatters-on-the-service"></a><span data-ttu-id="20210-119">Пользовательские модули форматирования сообщения на стороне службы</span><span class="sxs-lookup"><span data-stu-id="20210-119">Custom Message Formatters on the Service</span></span>  
+ <span data-ttu-id="20210-120">Интерфейс <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> определяет методы, которые преобразовывают объект <xref:System.ServiceModel.Channels.Message> в параметры для операции и из параметров в объект <xref:System.ServiceModel.Channels.Message> в приложении службы.</span><span class="sxs-lookup"><span data-stu-id="20210-120">The <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> interface defines methods that convert a <xref:System.ServiceModel.Channels.Message> object into parameters for an operation and from parameters into a <xref:System.ServiceModel.Channels.Message> object in a service application.</span></span>  
   
- Необходимо реализовать данный интерфейс.  Сначала требуется переопределить метод <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.DeserializeReply%2A> для десериализации сообщения.  Данный метод вызывается после получения входящего сообщения, но перед его отправкой операции клиента.  
+ <span data-ttu-id="20210-121">Необходимо реализовать данный интерфейс.</span><span class="sxs-lookup"><span data-stu-id="20210-121">You must implement this interface.</span></span> <span data-ttu-id="20210-122">Сначала требуется переопределить метод <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.DeserializeReply%2A> для десериализации сообщения.</span><span class="sxs-lookup"><span data-stu-id="20210-122">First override the <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.DeserializeReply%2A> method to deserialize a message.</span></span> <span data-ttu-id="20210-123">Данный метод вызывается после получения входящего сообщения, но перед его отправкой операции клиента.</span><span class="sxs-lookup"><span data-stu-id="20210-123">This method is called after an incoming message is received, but before it is dispatched to the client operation.</span></span>  
   
- Затем переопределите метод <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.SerializeRequest%2A> для сериализации объекта.  Данный метод вызывается перед отправкой исходящего сообщения.  
+ <span data-ttu-id="20210-124">Затем переопределите метод <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.SerializeRequest%2A> для сериализации объекта.</span><span class="sxs-lookup"><span data-stu-id="20210-124">Next, override the <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.SerializeRequest%2A> method to serialize an object.</span></span> <span data-ttu-id="20210-125">Данный метод вызывается перед отправкой исходящего сообщения.</span><span class="sxs-lookup"><span data-stu-id="20210-125">This method is called prior to sending an outgoing message.</span></span>  
   
- Чтобы вставить пользовательский модуль форматирования в службу, назначьте объект <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> свойству <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> с помощью поведения операции.  Дополнительные сведения о повелениях см. в разделе [Настройка и расширение среды выполнения с помощью поведений](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ <span data-ttu-id="20210-126">Чтобы вставить пользовательский модуль форматирования в службу, назначьте объект <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> свойству <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> с помощью поведения операции.</span><span class="sxs-lookup"><span data-stu-id="20210-126">To insert the custom formatter into the service application, assign the <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> object to the <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> property using an operation behavior.</span></span> <span data-ttu-id="20210-127">Сведения о поведении см. в разделе [настройку и расширение среды выполнения с помощью поведений](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).</span><span class="sxs-lookup"><span data-stu-id="20210-127">For information about behaviors, see [Configuring and Extending the Runtime with Behaviors](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).</span></span>  
   
-## См. также  
- <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>   
- [Настройка и расширение среды выполнения с помощью поведений](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+## <a name="see-also"></a><span data-ttu-id="20210-128">См. также</span><span class="sxs-lookup"><span data-stu-id="20210-128">See Also</span></span>  
+ <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>  
+ [<span data-ttu-id="20210-129">Настройка и расширение среды выполнения с помощью поведений</span><span class="sxs-lookup"><span data-stu-id="20210-129">Configuring and Extending the Runtime with Behaviors</span></span>](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

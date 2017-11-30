@@ -1,170 +1,171 @@
 ---
-title: "Создание службы долго выполняющегося рабочего процесса | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание службы долго выполняющегося рабочего процесса"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f4204de8c113c2ff553afec934b68f0beeb89580
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Создание службы долго выполняющегося рабочего процесса
-В данном разделе описывается, как создать службу длительных рабочих процессов.  Службы длительных рабочих процессов могут работать в течение долгого времени.  В определенные моменты рабочий процесс может переходить в состояние бездействия в ожидании дополнительных данных.  В этом случае рабочий процесс сохраняется в базе данных SQL и удаляется из памяти.  При поступлении дополнительных данных экземпляр рабочего процесса снова загружается в память и его выполнение продолжается.  В этом сценарии реализуется очень упрощенная система обработки заказов.  Клиент отправляет первоначальное сообщение службе рабочего процесса с указанием начать заказ.  Служба возвращает клиенту идентификатор заказа.  С этого момента в ожидании нового сообщения от клиента служба рабочего процесса переходит в состояние бездействия и сохраняется в базе данных SQL Server.  Когда клиент отправит следующее сообщение, чтобы заказать товар, служба рабочего процесса будет снова загружена в память, после чего она завершит обработку заказа.  В приведенном образце кода служба возвращает строку, указывающую на то, что товар добавлен в заказ.  Этот образец кода не предполагает реализацию такого приложения в реальности, скорее это простой образец, иллюстрирующий работу служб длительных рабочих процессов. Предполагается, что читатели этого раздела знают, как создавать проекты и решения [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+# <a name="creating-a-long-running-workflow-service"></a><span data-ttu-id="59083-102">Создание службы долго выполняющегося рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="59083-102">Creating a Long-running Workflow Service</span></span>
+<span data-ttu-id="59083-103">В данном разделе описывается, как создать службу длительных рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="59083-103">This topic describes how to create a long-running workflow service.</span></span> <span data-ttu-id="59083-104">Службы длительных рабочих процессов могут работать в течение долгого времени.</span><span class="sxs-lookup"><span data-stu-id="59083-104">Long running workflow services may run for long periods of time.</span></span> <span data-ttu-id="59083-105">В определенные моменты рабочий процесс может переходить в состояние бездействия в ожидании дополнительных данных.</span><span class="sxs-lookup"><span data-stu-id="59083-105">At some point the workflow may go idle waiting for some additional information.</span></span> <span data-ttu-id="59083-106">В этом случае рабочий процесс сохраняется в базе данных SQL и удаляется из памяти.</span><span class="sxs-lookup"><span data-stu-id="59083-106">When this occurs the workflow is persisted to a SQL database and is removed from memory.</span></span> <span data-ttu-id="59083-107">При поступлении дополнительных данных экземпляр рабочего процесса снова загружается в память и его выполнение продолжается.</span><span class="sxs-lookup"><span data-stu-id="59083-107">When the additional information becomes available the workflow instance is loaded back into memory and continues executing.</span></span>  <span data-ttu-id="59083-108">В этом сценарии реализуется очень упрощенная система обработки заказов.</span><span class="sxs-lookup"><span data-stu-id="59083-108">In this scenario you are implementing a very simplified ordering system.</span></span>  <span data-ttu-id="59083-109">Клиент отправляет первоначальное сообщение службе рабочего процесса с указанием начать заказ.</span><span class="sxs-lookup"><span data-stu-id="59083-109">The client sends an initial message to the workflow service to start the order.</span></span> <span data-ttu-id="59083-110">Служба возвращает клиенту идентификатор заказа.</span><span class="sxs-lookup"><span data-stu-id="59083-110">It returns an order ID to the client.</span></span> <span data-ttu-id="59083-111">С этого момента в ожидании нового сообщения от клиента служба рабочего процесса переходит в состояние бездействия и сохраняется в базе данных SQL Server.</span><span class="sxs-lookup"><span data-stu-id="59083-111">At this point the workflow service is waiting for another message from the client and goes into the idle state and is persisted to a SQL Server database.</span></span>  <span data-ttu-id="59083-112">Когда клиент отправит следующее сообщение, чтобы заказать товар, служба рабочего процесса будет снова загружена в память, после чего она завершит обработку заказа.</span><span class="sxs-lookup"><span data-stu-id="59083-112">When the client sends the next message to order an item, the workflow service is loaded back into memory and finishes processing the order.</span></span> <span data-ttu-id="59083-113">В приведенном образце кода служба возвращает строку, указывающую на то, что товар добавлен в заказ.</span><span class="sxs-lookup"><span data-stu-id="59083-113">In the code sample it returns a string stating the item has been added to the order.</span></span> <span data-ttu-id="59083-114">Этот образец кода не предполагает реализацию такого приложения в реальности, скорее это простой образец, иллюстрирующий работу служб длительных рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="59083-114">The code sample is not meant to be a real world application of the technology, but rather a simple sample that illustrates long running workflow services.</span></span> <span data-ttu-id="59083-115">Предполагается, что читатели этого раздела знают, как создавать проекты и решения [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="59083-115">This topic assumes you know how to create [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] projects and solutions.</span></span>  
   
-## Обязательные компоненты  
- Чтобы воспользоваться этим пошаговым руководством, необходимо установить следующее программное обеспечение:  
+## <a name="prerequisites"></a><span data-ttu-id="59083-116">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="59083-116">Prerequisites</span></span>  
+ <span data-ttu-id="59083-117">Чтобы воспользоваться этим пошаговым руководством, необходимо установить следующее программное обеспечение:</span><span class="sxs-lookup"><span data-stu-id="59083-117">You must have the following software installed to use this walkthrough:</span></span>  
   
-1.  Microsoft SQL Server 2008  
+1.  <span data-ttu-id="59083-118">Microsoft SQL Server 2008</span><span class="sxs-lookup"><span data-stu-id="59083-118">Microsoft SQL Server 2008</span></span>  
   
 2.  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]  
   
-3.  Microsoft [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]  
+3.  <span data-ttu-id="59083-119">Microsoft [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]</span><span class="sxs-lookup"><span data-stu-id="59083-119">Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]</span></span>  
   
-4.  Требуются знания служб WCF, среды [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] и навыки создания проектов и решений.  
+4.  <span data-ttu-id="59083-120">Требуются знания служб WCF, среды [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] и навыки создания проектов и решений.</span><span class="sxs-lookup"><span data-stu-id="59083-120">You are familiar with WCF and [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] and know how to create projects/solutions.</span></span>  
   
-### Настройка базы данных SQL  
+### <a name="to-setup-the-sql-database"></a><span data-ttu-id="59083-121">Настройка базы данных SQL</span><span class="sxs-lookup"><span data-stu-id="59083-121">To Setup the SQL Database</span></span>  
   
-1.  Для сохранения экземпляров служб рабочих процессов требуется установленный Microsoft SQL Server, на котором необходимо настроить базу данных для хранения выгруженных из памяти экземпляров рабочих процессов.  Запустите среду Microsoft SQL Management Studio, для этого нажмите кнопку **Пуск** и последовательно выберите **Все программы**, **Microsoft SQL Server 2008** и **Microsoft SQL Management Studio**.  
+1.  <span data-ttu-id="59083-122">Для сохранения экземпляров служб рабочих процессов требуется установленный Microsoft SQL Server, на котором необходимо настроить базу данных для хранения выгруженных из памяти экземпляров рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="59083-122">In order for workflow service instances to be persisted you must have Microsoft SQL Server installed and you must configure a database to store the persisted workflow instances.</span></span> <span data-ttu-id="59083-123">Запустите Microsoft SQL Management Studio, нажав **запустить** кнопку выбора **все программы**, **Microsoft SQL Server 2008**, и **Microsoft SQL Среда Management Studio**.</span><span class="sxs-lookup"><span data-stu-id="59083-123">Run Microsoft SQL Management Studio by clicking the **Start** button, selecting **All Programs**, **Microsoft SQL Server 2008**, and **Microsoft SQL Management Studio**.</span></span>  
   
-2.  Нажмите кнопку **Подключить**, чтобы войти на экземпляр SQL Server.  
+2.  <span data-ttu-id="59083-124">Нажмите кнопку **Connect** кнопку, чтобы войти в экземпляр SQL Server</span><span class="sxs-lookup"><span data-stu-id="59083-124">Click the **Connect** button to log on to the SQL Server instance</span></span>  
   
-3.  В древовидном представлении щелкните правой кнопкой мыши **Базы данных** и выберите команду **Создать базу данных...**, чтобы создать новую базу данных с именем `SQLPersistenceStore`.  
+3.  <span data-ttu-id="59083-125">Щелкните правой кнопкой мыши **баз данных** в древовидном представлении и выберите **новую базу данных...**</span><span class="sxs-lookup"><span data-stu-id="59083-125">Right click **Databases** in the tree view and select **New Database..**</span></span> <span data-ttu-id="59083-126">Чтобы создать новую базу данных с именем `SQLPersistenceStore`.</span><span class="sxs-lookup"><span data-stu-id="59083-126">to create a new database called `SQLPersistenceStore`.</span></span>  
   
-4.  Выполните в базе данных SQLPersistenceStore файл скрипта SqlWorkflowInstanceStoreSchema.sql, расположенный в каталоге C:\\Windows\\Microsoft.NET\\Framework\\v4.0\\SQL\\en, чтобы настроить требуемые схемы базы данных.  
+4.  <span data-ttu-id="59083-127">Выполните в базе данных SQLPersistenceStore файл скрипта SqlWorkflowInstanceStoreSchema.sql, расположенный в каталоге C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en, чтобы настроить требуемые схемы базы данных.</span><span class="sxs-lookup"><span data-stu-id="59083-127">Run the SqlWorkflowInstanceStoreSchema.sql script file located in the C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en directory on the SQLPersistenceStore database to set up the needed database schemas.</span></span>  
   
-5.  Выполните в базе данных SQLPersistenceStore файл скрипта SqlWorkflowInstanceStoreLogic.sql, расположенный в каталоге C:\\Windows\\Microsoft.NET\\Framework\\v4.0\\SQL\\en, чтобы настроить требуемую логику базы данных.  
+5.  <span data-ttu-id="59083-128">Выполните в базе данных SQLPersistenceStore файл скрипта SqlWorkflowInstanceStoreLogic.sql, расположенный в каталоге C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en, чтобы настроить требуемую логику базы данных.</span><span class="sxs-lookup"><span data-stu-id="59083-128">Run the SqlWorkflowInstanceStoreLogic.sql script file located in the C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en directory on the SQLPersistenceStore database to set up the needed database logic.</span></span>  
   
-### Создание размещенной на веб\-узле службы рабочего процесса  
+### <a name="to-create-the-web-hosted-workflow-service"></a><span data-ttu-id="59083-129">Создание размещенной на веб-узле службы рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="59083-129">To Create the Web Hosted Workflow Service</span></span>  
   
-1.  Создайте в среде [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] пустое решение и присвойте ему имя `OrderProcessing`.  
+1.  <span data-ttu-id="59083-130">Создайте в среде [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] пустое решение и присвойте ему имя `OrderProcessing`.</span><span class="sxs-lookup"><span data-stu-id="59083-130">Create an empty [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] solution, name it `OrderProcessing`.</span></span>  
   
-2.  Добавьте в решение новый проект приложения службы рабочего процесса [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с именем `OrderService`.  
+2.  <span data-ttu-id="59083-131">Добавьте в решение новый проект приложения службы рабочего процесса [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с именем `OrderService`.</span><span class="sxs-lookup"><span data-stu-id="59083-131">Add a new [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Workflow Service Application project called `OrderService` to the solution.</span></span>  
   
-3.  В диалоговом окне свойств проекта перейдите на вкладку **Веб**.  
+3.  <span data-ttu-id="59083-132">В диалоговом окне свойств проекта выберите **Web** вкладки.</span><span class="sxs-lookup"><span data-stu-id="59083-132">In the project properties dialog, select the **Web** tab.</span></span>  
   
-    1.  В разделе **Действие при запуске** выберите **Указанная страница** и укажите `Service1.xamlx`.  
+    1.  <span data-ttu-id="59083-133">В разделе **действие при запуске** выберите **определенную страницу** и укажите `Service1.xamlx`.</span><span class="sxs-lookup"><span data-stu-id="59083-133">Under **Start Action** select **Specific Page** and specify `Service1.xamlx`.</span></span>  
   
-         ![Веб&#45;свойства проекта службы рабочего процесса](../../../../docs/framework/wcf/feature-details/media/startaction.png "StartAction")  
+         <span data-ttu-id="59083-134">![Веб-свойства проекта службы рабочего процесса](../../../../docs/framework/wcf/feature-details/media/startaction.png "StartAction")</span><span class="sxs-lookup"><span data-stu-id="59083-134">![Workflow Service Project Web Properties](../../../../docs/framework/wcf/feature-details/media/startaction.png "StartAction")</span></span>  
   
-    2.  Откройте узел **Серверы** и выберите **Использовать локальный веб\-сервер IIS**.  
+    2.  <span data-ttu-id="59083-135">В разделе **серверы** выберите **использовать локальный веб-сервер IIS**.</span><span class="sxs-lookup"><span data-stu-id="59083-135">Under **Servers** select **Use Local IIS Web server**.</span></span>  
   
-         ![Настройки локального веб&#45;сервера](../../../../docs/framework/wcf/feature-details/media/uselocalwebserver.png "UseLocalWebServer")  
+         <span data-ttu-id="59083-136">![Параметры локального веб-сервера](../../../../docs/framework/wcf/feature-details/media/uselocalwebserver.png "UseLocalWebServer")</span><span class="sxs-lookup"><span data-stu-id="59083-136">![Local Web Server Settings](../../../../docs/framework/wcf/feature-details/media/uselocalwebserver.png "UseLocalWebServer")</span></span>  
   
         > [!WARNING]
-        >  Чтобы установить этот параметр, необходимо запустить среду [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] в режиме администратора.  
+        >  <span data-ttu-id="59083-137">Чтобы установить этот параметр, необходимо запустить среду [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] в режиме администратора.</span><span class="sxs-lookup"><span data-stu-id="59083-137">You must run [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] in administrator mode to make this setting.</span></span>  
   
-         Эти шаги необходимы, чтобы настроить размещение проекта службы рабочего процесса в IIS.  
+         <span data-ttu-id="59083-138">Эти шаги необходимы, чтобы настроить размещение проекта службы рабочего процесса в IIS.</span><span class="sxs-lookup"><span data-stu-id="59083-138">These two steps configure the workflow service project to be hosted by IIS.</span></span>  
   
-4.  Если файл `Service1.xamlx` еще не открыт, то откройте его и удалите существующие действия **ReceiveRequest** и **SendResponse**.  
+4.  <span data-ttu-id="59083-139">Откройте `Service1.xamlx` если он не открыт и удалите существующие **ReceiveRequest** и **SendResponse** действия.</span><span class="sxs-lookup"><span data-stu-id="59083-139">Open `Service1.xamlx` if it is not open already and delete the existing **ReceiveRequest** and **SendResponse** activities.</span></span>  
   
-5.  Выберите действие **Последовательная служба**, щелкните ссылку **Переменные** и добавьте переменные, показанные на следующем рисунке.  Эти переменные будут в дальнейшем использоваться в службе рабочего процесса.  
+5.  <span data-ttu-id="59083-140">Выберите **последовательная служба** действие и нажмите кнопку **переменных** ссылку и добавьте переменные, показанные на следующем рисунке.</span><span class="sxs-lookup"><span data-stu-id="59083-140">Select the **Sequential Service** activity and click the **Variables** link and add the variables shown in the following illustration.</span></span> <span data-ttu-id="59083-141">Эти переменные будут в дальнейшем использоваться в службе рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="59083-141">Doing this adds some variables that will be used later on in the workflow service.</span></span>  
   
     > [!NOTE]
-    >  Если в раскрывающемся списке «Тип переменной» отсутствует тип CorrelationHandle, выберите в нем **Поиск типов**.  Введите CorrelationHandle в поле **Имя типа**, выберите CorrelationHandle из списка и нажмите кнопку **ОК**.  
+    >  <span data-ttu-id="59083-142">Если в раскрывающемся списке тип переменной отсутствует тип CorrelationHandle, выберите **поиск типов** из раскрывающегося списка.</span><span class="sxs-lookup"><span data-stu-id="59083-142">If CorrelationHandle is not in the Variable Type drop-down, select **Browse for types** from the drop-down.</span></span> <span data-ttu-id="59083-143">Введите CorrelationHandle в **имя типа** , выберите CorrelationHandle из списка и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="59083-143">Type CorrelationHandle in the **Type name** box, select CorrelationHandle from the listbox and click **OK**.</span></span>  
   
-     ![Добавление переменных](../../../../docs/framework/wcf/feature-details/media/addvariables.gif "AddVariables")  
+     <span data-ttu-id="59083-144">![Добавление переменных](../../../../docs/framework/wcf/feature-details/media/addvariables.gif "AddVariables")</span><span class="sxs-lookup"><span data-stu-id="59083-144">![Add Variables](../../../../docs/framework/wcf/feature-details/media/addvariables.gif "AddVariables")</span></span>  
   
-6.  Перетащите шаблон действия **ReceiveAndSendReply** в действие **Последовательная служба**.  Этот набор действий будет получать сообщение от клиента и возвращать ему ответ.  
+6.  <span data-ttu-id="59083-145">Перетаскивание **ReceiveAndSendReply** шаблон действия в **последовательная служба** действия.</span><span class="sxs-lookup"><span data-stu-id="59083-145">Drag and drop a **ReceiveAndSendReply** activity template into the **Sequential Service** activity.</span></span> <span data-ttu-id="59083-146">Этот набор действий будет получать сообщение от клиента и возвращать ему ответ.</span><span class="sxs-lookup"><span data-stu-id="59083-146">This set of activities will receive a message from a client and send a reply back.</span></span>  
   
-    1.  Выберите действие **Receive** и задайте свойства, отмеченные на следующем рисунке.  
+    1.  <span data-ttu-id="59083-147">Выберите **Receive** и задайте свойства, отмеченные на следующем рисунке.</span><span class="sxs-lookup"><span data-stu-id="59083-147">Select the **Receive** activity and set the properties highlighted in the following illustration.</span></span>  
   
-         ![Задание свойств действия Receive](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties.png "SetReceiveProperties")  
+         <span data-ttu-id="59083-148">![Задание свойств действия Receive](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties.png "SetReceiveProperties")</span><span class="sxs-lookup"><span data-stu-id="59083-148">![Set Receive Activity Properties](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties.png "SetReceiveProperties")</span></span>  
   
-         Свойство DisplayName задает имя, отображаемое для действия «Receive» в конструкторе.  Свойства ServiceContractName и OperationName задают имя контракта службы и операции, которые реализуются действием Receive.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] использовании контрактов в службах Workflow Services см. в разделе [Использование контрактов в рабочих процессах](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  
+         <span data-ttu-id="59083-149">Свойство DisplayName задает имя, отображаемое для действия «Receive» в конструкторе.</span><span class="sxs-lookup"><span data-stu-id="59083-149">The DisplayName property sets the name displayed for the Receive activity in the designer.</span></span> <span data-ttu-id="59083-150">Свойства ServiceContractName и OperationName задают имя контракта службы и операции, которые реализуются действием Receive.</span><span class="sxs-lookup"><span data-stu-id="59083-150">The ServiceContractName and OperationName properties specify the name of the service contract and operation that are implemented by the Receive activity.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="59083-151">Использование контрактов в рабочем процессе служб см. в разделе [использование контрактов в рабочем процессе](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="59083-151"> how contracts are used in Workflow services see [Using Contracts in Workflow](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).</span></span>  
   
-    2.  Щелкните ссылку **Определить...** в действии **ReceiveStartOrder** и задайте свойства, показанные на следующем рисунке.  Обратите внимание, что переключатель установлен в положение **Параметры**, а параметр `p_customerName` привязан к переменной `customerName`.  В результате действие **Receive** настроено на получение данных и привязку этих данных к локальным переменным.  
+    2.  <span data-ttu-id="59083-152">Нажмите кнопку **определить...**  ссылку в **ReceiveStartOrder** действия и задайте свойства, показанные на следующем рисунке.</span><span class="sxs-lookup"><span data-stu-id="59083-152">Click the **Define...** link in the **ReceiveStartOrder** activity and set the properties shown in the following illustration.</span></span>  <span data-ttu-id="59083-153">Обратите внимание, что **параметры** переключателя, параметр с именем `p_customerName` привязан к `customerName` переменной.</span><span class="sxs-lookup"><span data-stu-id="59083-153">Notice that the **Parameters** radio button is selected, a parameter named `p_customerName` is bound to the `customerName` variable.</span></span> <span data-ttu-id="59083-154">Это настраивает **Receive** действия на получение данных и привязку этих данных для локальных переменных.</span><span class="sxs-lookup"><span data-stu-id="59083-154">This configures the **Receive** activity to receive some data and bind that data to local variables.</span></span>  
   
-         ![Задание данных, получаемых действием Receive](../../../../docs/framework/wcf/feature-details/media/setreceivecontent.png "SetReceiveContent")  
+         <span data-ttu-id="59083-155">![Задание данных, получаемых действием Receive](../../../../docs/framework/wcf/feature-details/media/setreceivecontent.png "SetReceiveContent")</span><span class="sxs-lookup"><span data-stu-id="59083-155">![Setting the data received by the Receive activity](../../../../docs/framework/wcf/feature-details/media/setreceivecontent.png "SetReceiveContent")</span></span>  
   
-    3.  Выберите действие **SendReplyToReceive** и задайте свойство, отмеченное на следующем рисунке.  
+    3.  <span data-ttu-id="59083-156">Выберите **SendReplyToReceive** и задайте свойство, отмеченное на следующем рисунке.</span><span class="sxs-lookup"><span data-stu-id="59083-156">Select The **SendReplyToReceive** activity and set the highlighted property shown in the following illustration.</span></span>  
   
-         ![Задание свойств действия SendReply](../../../../docs/framework/wcf/feature-details/media/setreplyproperties.png "SetReplyProperties")  
+         <span data-ttu-id="59083-157">![Задание свойств действия SendReply](../../../../docs/framework/wcf/feature-details/media/setreplyproperties.png "SetReplyProperties")</span><span class="sxs-lookup"><span data-stu-id="59083-157">![Setting the properties of the SendReply activity](../../../../docs/framework/wcf/feature-details/media/setreplyproperties.png "SetReplyProperties")</span></span>  
   
-    4.  Щелкните ссылку **Определить...** в действии **SendReplyToStartOrder** и задайте свойства, показанные на следующем рисунке.  Обратите внимание, что переключатель установлен в положение **Параметры**, а параметр `p_orderId` привязан к переменной `orderId`.  Этот параметр указывает, что действие SendReplyToStartOrder возвратит вызывающему объекту значение типа String.  
+    4.  <span data-ttu-id="59083-158">Нажмите кнопку **определить...**  ссылку в **SendReplyToStartOrder** действия и задайте свойства, показанные на следующем рисунке.</span><span class="sxs-lookup"><span data-stu-id="59083-158">Click the **Define...** link in the **SendReplyToStartOrder** activity and set the properties shown in the following illustration.</span></span> <span data-ttu-id="59083-159">Обратите внимание, что **параметры** переключателя, а параметр `p_orderId` привязан к `orderId` переменной.</span><span class="sxs-lookup"><span data-stu-id="59083-159">Notice that the **Parameters** radio button is selected; a parameter named `p_orderId` is bound to the `orderId` variable.</span></span> <span data-ttu-id="59083-160">Этот параметр указывает, что действие SendReplyToStartOrder возвратит вызывающему объекту значение типа String.</span><span class="sxs-lookup"><span data-stu-id="59083-160">This setting specifies that the SendReplyToStartOrder activity will return a value of type string to the caller.</span></span>  
   
-         ![Настройка данных содержимого действия SendReply](../../../../docs/framework/wcf/feature-details/media/setreplycontent.png "SetReplyContent")  
+         <span data-ttu-id="59083-161">![Настройка данных содержимого действия SendReply](../../../../docs/framework/wcf/feature-details/media/setreplycontent.png "SetReplyContent")</span><span class="sxs-lookup"><span data-stu-id="59083-161">![Configuring the SendReply activity content data](../../../../docs/framework/wcf/feature-details/media/setreplycontent.png "SetReplyContent")</span></span>  
   
-        > [!NOTE]
-    5.  Перетащите действие Assign в область между действиями **Receive** и **SendReply** и задайте свойства в соответствии со следующим рисунком.  
+    5.  <span data-ttu-id="59083-162">Перетаскивание действия Assign между **Receive** и **SendReply** действия и задайте свойства, как показано на следующем рисунке:</span><span class="sxs-lookup"><span data-stu-id="59083-162">Drag and drop an Assign activity in between the **Receive** and **SendReply** activities and set the properties as shown in the following illustration:</span></span>  
   
-         ![Добавление действия Assign](../../../../docs/framework/wcf/feature-details/media/addassign.png "AddAssign")  
+         <span data-ttu-id="59083-163">![Добавление действия assign](../../../../docs/framework/wcf/feature-details/media/addassign.png "AddAssign")</span><span class="sxs-lookup"><span data-stu-id="59083-163">![Adding an assign activity](../../../../docs/framework/wcf/feature-details/media/addassign.png "AddAssign")</span></span>  
   
-         При этом будет создан новый идентификатор заказа, а его значение будет помещено в переменную orderId.  
+         <span data-ttu-id="59083-164">При этом будет создан новый идентификатор заказа, а его значение будет помещено в переменную orderId.</span><span class="sxs-lookup"><span data-stu-id="59083-164">This creates a new order ID and places the value in the orderId variable.</span></span>  
   
-    6.  Выберите действие **ReplyToStartOrder**.  В окне свойств нажмите кнопку с многоточием **CorrelationInitializers**.  Выберите ссылку **Добавить инициализатор**, введите `orderIdHandle` в текстовое поле «Инициализатор», выберите инициализатор корреляции запросов для типа Correlation, а в раскрывающемся списке «Запросы XPATH» выберите p\_orderId.  Эти параметры показаны на следующем рисунке.  Нажмите кнопку **ОК**.  При этом будет инициализирована новая корреляция между клиентом и этим экземпляром службы рабочего процесса.  При получении сообщения с этим идентификатором заказа оно будет направлено этому экземпляру службы рабочего процесса.  
+    6.  <span data-ttu-id="59083-165">Выберите **ReplyToStartOrder** действия.</span><span class="sxs-lookup"><span data-stu-id="59083-165">Select the **ReplyToStartOrder** activity.</span></span> <span data-ttu-id="59083-166">В окне свойств нажмите кнопку с многоточием для **CorrelationInitializers**.</span><span class="sxs-lookup"><span data-stu-id="59083-166">In the properties window click the ellipsis button for **CorrelationInitializers**.</span></span> <span data-ttu-id="59083-167">Выберите **добавить инициализатор** , введите `orderIdHandle` в текстовом поле инициализатор, выберите инициализатор корреляции запросов для типа Correlation, а в раскрывающемся списке «запросы XPATH» выберите p_orderId.</span><span class="sxs-lookup"><span data-stu-id="59083-167">Select the **Add initializer** link, enter `orderIdHandle` in the Initializer text box, select Query correlation initializer for the Correlation type, and select p_orderId under the XPATH Queries dropdown box.</span></span> <span data-ttu-id="59083-168">Эти параметры показаны на следующем рисунке.</span><span class="sxs-lookup"><span data-stu-id="59083-168">These settings are shown in the following illustration.</span></span> <span data-ttu-id="59083-169">Нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="59083-169">Click **OK**.</span></span>  <span data-ttu-id="59083-170">При этом будет инициализирована новая корреляция между клиентом и этим экземпляром службы рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="59083-170">This initializes a correlation between the client and this instance of the workflow service.</span></span> <span data-ttu-id="59083-171">При получении сообщения с этим идентификатором заказа оно будет направлено этому экземпляру службы рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="59083-171">When a message containing this order ID is received it is routed to this instance of the workflow service.</span></span>  
   
-         ![Добавление инициализатора корреляции](../../../../docs/framework/wcf/feature-details/media/addcorrelationinitializers.png "AddCorrelationInitializers")  
+         <span data-ttu-id="59083-172">![Добавление инициализатора корреляции](../../../../docs/framework/wcf/feature-details/media/addcorrelationinitializers.png "AddCorrelationInitializers")</span><span class="sxs-lookup"><span data-stu-id="59083-172">![Adding a correlation initializer](../../../../docs/framework/wcf/feature-details/media/addcorrelationinitializers.png "AddCorrelationInitializers")</span></span>  
   
-7.  Перетащите еще одно действие **ReceiveAndSendReply** в конец рабочего процесса \(за пределы **последовательности**, содержащей первые действия **Receive** и **SendReply**\).  Оно получит второе сообщение от клиента и ответит на него.  
+7.  <span data-ttu-id="59083-173">Перетаскивание другой **ReceiveAndSendReply** действие в конец рабочего процесса (за пределами **последовательности** содержащей первые **Receive** и  **SendReply** действий).</span><span class="sxs-lookup"><span data-stu-id="59083-173">Drag and drop another **ReceiveAndSendReply** activity to the end of the workflow (outside the **Sequence** containing the first **Receive** and **SendReply** activities).</span></span> <span data-ttu-id="59083-174">Оно получит второе сообщение от клиента и ответит на него.</span><span class="sxs-lookup"><span data-stu-id="59083-174">This will receive the second message sent by the client and respond to it.</span></span>  
   
-    1.  Выберите **последовательность**, содержащую вновь добавленные действия **Receive** и **SendReply**, и нажмите кнопку **Переменные**.  Добавьте переменную, отмеченную на следующем рисунке.  
+    1.  <span data-ttu-id="59083-175">Выберите **последовательности** , содержащий только что добавленном **Receive** и **SendReply** действия и нажмите кнопку **переменных** кнопки.</span><span class="sxs-lookup"><span data-stu-id="59083-175">Select the **Sequence** that contains the newly added **Receive** and **SendReply** activities and click the **Variables** button.</span></span> <span data-ttu-id="59083-176">Добавьте переменную, отмеченную на следующем рисунке.</span><span class="sxs-lookup"><span data-stu-id="59083-176">Add the variable highlighted in the following illustration:</span></span>  
   
-         ![Добавление новых переменных](../../../../docs/framework/wcf/feature-details/media/addorderitemidvariable.png "AddOrderItemIdVariable")  
+         <span data-ttu-id="59083-177">![Добавление новых переменных](../../../../docs/framework/wcf/feature-details/media/addorderitemidvariable.png "AddOrderItemIdVariable")</span><span class="sxs-lookup"><span data-stu-id="59083-177">![Adding new variables](../../../../docs/framework/wcf/feature-details/media/addorderitemidvariable.png "AddOrderItemIdVariable")</span></span>  
   
-    2.  Выберите действие **Receive** и задайте свойства, показанные на следующем рисунке.  
+    2.  <span data-ttu-id="59083-178">Выберите **Receive** действия и задайте свойства, показанные на следующем рисунке:</span><span class="sxs-lookup"><span data-stu-id="59083-178">Select the **Receive** activity and set the properties shown in the following illustration:</span></span>  
   
-         ![Задание свойств действия Receive](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties2.png "SetReceiveProperties2")  
+         <span data-ttu-id="59083-179">![Задание свойств действия receive](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties2.png "SetReceiveProperties2")</span><span class="sxs-lookup"><span data-stu-id="59083-179">![Set the Receive acitivity properties](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties2.png "SetReceiveProperties2")</span></span>  
   
-    3.  Щелкните ссылку **Определить...** в действии **ReceiveAddItem** и добавьте параметры, показанные на следующем рисунке. При этом действие «Receive» будет настроено на прием двух параметров: идентификатора заказа и идентификатора заказываемого товара.  
+    3.  <span data-ttu-id="59083-180">Нажмите кнопку **определить...**  ссылку в **ReceiveAddItem** действия и добавьте параметры, показанные на следующем рисунке: Это настраивает действия receive и принимать два параметра, идентификатор заказа и идентификатора заказываемого товара.</span><span class="sxs-lookup"><span data-stu-id="59083-180">Click the **Define...** link in the **ReceiveAddItem** activity and add the parameters shown in the following illustration:This configures the receive activity to accept two parameters, the order ID and the ID of the item being ordered.</span></span>  
   
-         ![Задание параметров для второго Receive](../../../../docs/framework/wcf/feature-details/media/addreceive2parameters.png "AddReceive2Parameters")  
+         <span data-ttu-id="59083-181">![Указание параметров для второго получения](../../../../docs/framework/wcf/feature-details/media/addreceive2parameters.png "AddReceive2Parameters")</span><span class="sxs-lookup"><span data-stu-id="59083-181">![Specifying parameters for the second receive](../../../../docs/framework/wcf/feature-details/media/addreceive2parameters.png "AddReceive2Parameters")</span></span>  
   
-    4.  Нажмите кнопку с многоточием **CorrelateOn** и введите `orderIdHandle`.  В области **Запросы XPath** нажмите стрелку раскрывающегося списка и выберите `p_orderId`.  При этом будет настроена корреляция второго действия Receive.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] использовании корреляции см. в разделе [Корреляция](../../../../docs/framework/wcf/feature-details/correlation.md).  
+    4.  <span data-ttu-id="59083-182">Нажмите кнопку **CorrelateOn** кнопку с многоточием и ввести `orderIdHandle`.</span><span class="sxs-lookup"><span data-stu-id="59083-182">Click the **CorrelateOn** ellipsis button and enter `orderIdHandle`.</span></span> <span data-ttu-id="59083-183">В разделе **запросы XPath**, щелкните стрелку раскрывающегося списка и выберите `p_orderId`.</span><span class="sxs-lookup"><span data-stu-id="59083-183">Under **XPath Queries**, click the drop down arrow and select `p_orderId`.</span></span> <span data-ttu-id="59083-184">При этом будет настроена корреляция второго действия Receive.</span><span class="sxs-lookup"><span data-stu-id="59083-184">This configures the correlation on the second receive activity.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="59083-185">корреляции см. в разделе [корреляции](../../../../docs/framework/wcf/feature-details/correlation.md).</span><span class="sxs-lookup"><span data-stu-id="59083-185"> correlation see [Correlation](../../../../docs/framework/wcf/feature-details/correlation.md).</span></span>  
   
-         ![Задание свойства CorrelatesOn](../../../../docs/framework/wcf/feature-details/media/correlateson.png "CorrelatesOn")  
+         <span data-ttu-id="59083-186">![Задание свойства CorrelatesOn](../../../../docs/framework/wcf/feature-details/media/correlateson.png "CorrelatesOn")</span><span class="sxs-lookup"><span data-stu-id="59083-186">![Setting the CorrelatesOn property](../../../../docs/framework/wcf/feature-details/media/correlateson.png "CorrelatesOn")</span></span>  
   
-    5.  Перетащите действие **If** и расположите его сразу после действия **ReceiveAddItem**.  Это действие работает аналогично инструкции IF.  
+    5.  <span data-ttu-id="59083-187">Перетаскивание **Если** действие сразу же после **ReceiveAddItem** действия.</span><span class="sxs-lookup"><span data-stu-id="59083-187">Drag and drop an **If** activity immediately after the **ReceiveAddItem** activity.</span></span> <span data-ttu-id="59083-188">Это действие работает аналогично инструкции IF.</span><span class="sxs-lookup"><span data-stu-id="59083-188">This activity acts just like an if statement.</span></span>  
   
-        1.  Свойству **Condition** задайте значение `itemId==”Zune HD” (itemId=”Zune HD” for Visual Basic)`.  
+        1.  <span data-ttu-id="59083-189">Задать **условие** свойства`itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`</span><span class="sxs-lookup"><span data-stu-id="59083-189">Set the **Condition** property to `itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`</span></span>  
   
-        2.  Перетащите одно действие **Assign** в раздел **Then**, а второе \- в раздел **Else**. Задайте свойства действий **Assign**, как показано на следующем рисунке.  
+        2.  <span data-ttu-id="59083-190">Перетаскивание **назначить** действие в **затем** раздела, а второе-в **Else** разделе Задание свойств **назначить** действия, как показано на следующем рисунке.</span><span class="sxs-lookup"><span data-stu-id="59083-190">Drag and drop an **Assign** activity in to the **Then** section and another into the **Else** section set the properties of the **Assign** activities as shown in the following illustration.</span></span>  
   
-             ![Присвоение результата вызова службы](../../../../docs/framework/wcf/feature-details/media/resultassign.png "ResultAssign")  
+             <span data-ttu-id="59083-191">![Присваивание результата вызова службы](../../../../docs/framework/wcf/feature-details/media/resultassign.png "ResultAssign")</span><span class="sxs-lookup"><span data-stu-id="59083-191">![Assigning the result of the service call](../../../../docs/framework/wcf/feature-details/media/resultassign.png "ResultAssign")</span></span>  
   
-             Если условие будет иметь значение `true`, будет выполнен раздел **Then**.  Если условие будет иметь значение `false`, будет выполнен раздел **Else**.  
+             <span data-ttu-id="59083-192">Если условие равно `true` **затем** будет выполнен раздел.</span><span class="sxs-lookup"><span data-stu-id="59083-192">If the condition is `true` the **Then** section will be executed.</span></span> <span data-ttu-id="59083-193">Если условие равно `false` **Else** выполняется раздел.</span><span class="sxs-lookup"><span data-stu-id="59083-193">If the condition is `false` the **Else** section is executed.</span></span>  
   
-        3.  Выберите действие **SendReplyToReceive** и задайте свойство **DisplayName**, отмеченное на следующем рисунке.  
+        3.  <span data-ttu-id="59083-194">Выберите **SendReplyToReceive** и задайте **DisplayName** свойства, показанные на следующем рисунке.</span><span class="sxs-lookup"><span data-stu-id="59083-194">Select the **SendReplyToReceive** activity and set the **DisplayName** property shown in the following illustration.</span></span>  
   
-             ![Задание свойств действия SendReply](../../../../docs/framework/wcf/feature-details/media/setreply2properties.png "SetReply2Properties")  
+             <span data-ttu-id="59083-195">![Задание свойств действия SendReply](../../../../docs/framework/wcf/feature-details/media/setreply2properties.png "SetReply2Properties")</span><span class="sxs-lookup"><span data-stu-id="59083-195">![Setting the SendReply activity properties](../../../../docs/framework/wcf/feature-details/media/setreply2properties.png "SetReply2Properties")</span></span>  
   
-        4.  Щелкните ссылку **Определить...** в действии **SetReplyToAddItem** и настройте его, как показано на следующем рисунке.  При этом действие **SendReplyToAddItem** будет настроено на возврат значения в переменной `orderResult`.  
+        4.  <span data-ttu-id="59083-196">Нажмите кнопку **определить...**  ссылку в **SetReplyToAddItem** действия и настройте его так, как показано на следующем рисунке.</span><span class="sxs-lookup"><span data-stu-id="59083-196">Click the **Define ...** link in the **SetReplyToAddItem** activity and configure it as shown in the following illustration.</span></span> <span data-ttu-id="59083-197">Это настраивает **SendReplyToAddItem** действие будет возвращать значение в `orderResult` переменной.</span><span class="sxs-lookup"><span data-stu-id="59083-197">This configures the **SendReplyToAddItem** activity to return the value in the `orderResult` variable.</span></span>  
   
-             ![Задание привязки данных для действия SendReply](../../../../docs/framework/wcf/feature-details/media/replytoadditemcontent.gif "ReplyToAddItemContent")  
+             <span data-ttu-id="59083-198">![Задание привязки данных для действия SendReply](../../../../docs/framework/wcf/feature-details/media/replytoadditemcontent.gif "ReplyToAddItemContent")</span><span class="sxs-lookup"><span data-stu-id="59083-198">![Setting the data binding for the SendReply activit](../../../../docs/framework/wcf/feature-details/media/replytoadditemcontent.gif "ReplyToAddItemContent")</span></span>  
   
-8.  Откройте файл web.config и добавьте в раздел \<behavior\> следующие элементы, чтобы включить сохранение рабочего процесса.  
+8.  <span data-ttu-id="59083-199">Откройте файл web.config и добавьте следующие элементы в \<поведение > раздел, чтобы включить сохранение рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="59083-199">Open the web.config file and add the following elements in the \<behavior> section to enable workflow persistence.</span></span>  
   
     ```xml  
     <sqlWorkflowInstanceStore connectionString="Data Source=your-machine\SQLExpress;Initial Catalog=SQLPersistenceStore;Integrated Security=True;Asynchronous Processing=True" instanceEncodingOption="None" instanceCompletionAction="DeleteAll" instanceLockedExceptionAction="BasicRetry" hostLockRenewalPeriod="00:00:30" runnableInstancesDetectionPeriod="00:00:02" />  
               <workflowIdle timeToUnload="0"/>  
-  
     ```  
   
     > [!WARNING]
-    >  В приведенном выше фрагменте кода необходимо заменить имя узла и экземпляра SQL Server.  
+    >  <span data-ttu-id="59083-200">В приведенном выше фрагменте кода необходимо заменить имя узла и экземпляра SQL Server.</span><span class="sxs-lookup"><span data-stu-id="59083-200">Make sure to replace your host and SQL server instance name in the previous code snippet.</span></span>  
   
-9. Постройте решение.  
+9. <span data-ttu-id="59083-201">Постройте решение.</span><span class="sxs-lookup"><span data-stu-id="59083-201">Build the solution.</span></span>  
   
-### Создание клиентского приложения, вызывающего службу рабочего процесса  
+### <a name="to-create-a-client-application-to-call-the-workflow-service"></a><span data-ttu-id="59083-202">Создание клиентского приложения, вызывающего службу рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="59083-202">To Create a Client Application to Call the Workflow Service</span></span>  
   
-1.  Добавьте в решение новый проект консольного приложения с именем `OrderClient`.  
+1.  <span data-ttu-id="59083-203">Добавьте в решение новый проект консольного приложения с именем `OrderClient`.</span><span class="sxs-lookup"><span data-stu-id="59083-203">Add a new Console application project called `OrderClient` to the solution.</span></span>  
   
-2.  Добавьте в проект `OrderClient` ссылки на следующие сборки:  
+2.  <span data-ttu-id="59083-204">Добавьте в проект `OrderClient` ссылки на следующие сборки:</span><span class="sxs-lookup"><span data-stu-id="59083-204">Add references to the following assemblies to the `OrderClient` project</span></span>  
   
-    1.  System.ServiceModel.dll  
+    1.  <span data-ttu-id="59083-205">System.ServiceModel.dll</span><span class="sxs-lookup"><span data-stu-id="59083-205">System.ServiceModel.dll</span></span>  
   
-    2.  System.ServiceModel.Activities.dll  
+    2.  <span data-ttu-id="59083-206">System.ServiceModel.Activities.dll</span><span class="sxs-lookup"><span data-stu-id="59083-206">System.ServiceModel.Activities.dll</span></span>  
   
-3.  Добавьте ссылку на службу рабочего процесса и укажите `OrderService` в качестве пространства имен.  
+3.  <span data-ttu-id="59083-207">Добавьте ссылку на службу рабочего процесса и укажите `OrderService` в качестве пространства имен.</span><span class="sxs-lookup"><span data-stu-id="59083-207">Add a service reference to the workflow service and specify `OrderService` as the namespace.</span></span>  
   
-4.  В метод `Main()` клиентского проекта добавьте следующий код:  
+4.  <span data-ttu-id="59083-208">В метод `Main()` клиентского проекта добавьте следующий код:</span><span class="sxs-lookup"><span data-stu-id="59083-208">In the `Main()` method of the client project add the following code:</span></span>  
   
     ```  
     static void Main(string[] args)  
@@ -189,29 +190,23 @@ caps.handback.revision: 9
        string orderResult = addProxy.AddItem(item);  
        Console.WriteLine("Service returned: " + orderResult);  
     }  
-  
     ```  
   
-5.  Выполните построение решения и запустите приложение `OrderClient`.  Клиент выведет на экран следующий текст.  
+5.  <span data-ttu-id="59083-209">Выполните построение решения и запустите приложение `OrderClient`.</span><span class="sxs-lookup"><span data-stu-id="59083-209">Build the solution and run the `OrderClient` application.</span></span> <span data-ttu-id="59083-210">Клиент выведет на экран следующий текст.</span><span class="sxs-lookup"><span data-stu-id="59083-210">The client will display the following text:</span></span>  
   
     ```Output  
-  
-                  Отправка начального сообщения  
-    Служба Workflow Service простаивает…  Нажмите клавишу ВВОД, чтобы отправить сообщение о добавлении элемента для повторной активации службы Workflow Service…    
+    Sending start messageWorkflow service is idle...Press [ENTER] to send an add item message to reactivate the workflow service...  
     ```  
   
-6.  Чтобы проверить, что служба рабочего процесса сохранена, запустите среду SQL Server Management Studio. Для этого нажмите кнопку **Пуск** и выберите **Все программы**, **Microsoft SQL Server 2008**, **SQL Server Management Studio**.  
+6.  <span data-ttu-id="59083-211">Чтобы проверить, сохранен в рабочем процессе, запустите SQL Server Management Studio последовательно выбрав пункты **запустить** меню, при выборе **все программы**, **Microsoft SQL Server 2008**, **SQL Server Management Studio**.</span><span class="sxs-lookup"><span data-stu-id="59083-211">To verify that the workflow service has been persisted, start the SQL Server Management Studio by going to the **Start** menu, Selecting **All Programs**, **Microsoft SQL Server 2008**, **SQL Server Management Studio**.</span></span>  
   
-    1.  В области слева раскройте узел **Базы данных**, **SQLPersistenceStore**, **Представления**, щелкните правой кнопкой мыши **System.Activities.DurableInstancing.Instances** и выберите **Выделить 1000 верхних строк**.  В области **Результаты** должен отображаться хотя бы один экземпляр.  Если во время работы возникнет исключение, в этой области могут быть указаны и другие экземпляры, оставшиеся от прошлых запусков.  Чтобы удалить существующие строки, щелкните **System.Activities.DurableInstancing.Instances** правой кнопкой мыши и выберите **Изменить 200 верхних строк**, нажмите кнопку **Выполнить**, выделите все строки в области результатов и нажмите **Удалить**.  Чтобы проверить, что в базе данных отображается экземпляр, созданный учебным приложением, перед запуском клиента удалите все записи из представления экземпляров.  После запуска клиента выполните этот запрос \(«Выделить 1000 верхних строк»\) еще раз и удостоверьтесь, что новый экземпляр добавлен.  
+    1.  <span data-ttu-id="59083-212">На левой панели разверните узел, **баз данных**, **SQLPersistenceStore**, **представления** и щелкните правой кнопкой мыши **System.Activities.DurableInstancing.Instances**  и выберите **выделить 1000 верхних строк**.</span><span class="sxs-lookup"><span data-stu-id="59083-212">In the left hand pane expand, **Databases**, **SQLPersistenceStore**, **Views** and right click **System.Activities.DurableInstancing.Instances** and select **Select Top 1000 Rows**.</span></span> <span data-ttu-id="59083-213">В **результатов** панели убедитесь, вы видите в списке хотя бы один экземпляр.</span><span class="sxs-lookup"><span data-stu-id="59083-213">In the **Results** pane verify you see at least one instance listed.</span></span> <span data-ttu-id="59083-214">Если во время работы возникнет исключение, в этой области могут быть указаны и другие экземпляры, оставшиеся от прошлых запусков.</span><span class="sxs-lookup"><span data-stu-id="59083-214">There may be other instances from prior runs if an exception occurred while running.</span></span> <span data-ttu-id="59083-215">Удалить существующие строки, щелкните правой кнопкой мыши **System.Activities.DurableInstancing.Instances** и выбрав **изменить 200 верхних строк**, нажмите клавишу **Execute** кнопки выбрать все строки в области результатов и **удалить**.</span><span class="sxs-lookup"><span data-stu-id="59083-215">You can delete existing rows by right clicking **System.Activities.DurableInstancing.Instances** and selecting **Edit Top 200 rows**, pressing the **Execute** button, selecting all rows in the results pane and selecting **delete**.</span></span>  <span data-ttu-id="59083-216">Чтобы проверить, что в базе данных отображается экземпляр, созданный учебным приложением, перед запуском клиента удалите все записи из представления экземпляров.</span><span class="sxs-lookup"><span data-stu-id="59083-216">To verify the instance displayed in the database is the instance your application created, verify the instances view is empty prior to running the client.</span></span> <span data-ttu-id="59083-217">После запуска клиента выполните этот запрос («Выделить 1000 верхних строк») еще раз и удостоверьтесь, что новый экземпляр добавлен.</span><span class="sxs-lookup"><span data-stu-id="59083-217">Once the client is running re-run the query (Select Top 1000 Rows) and verify a new instance has been added.</span></span>  
   
-7.  Нажмите клавишу ВВОД, чтобы отправить сообщение о добавлении товара службе рабочего процесса.  Клиент выведет на экран следующий текст.  
+7.  <span data-ttu-id="59083-218">Нажмите клавишу ВВОД, чтобы отправить сообщение о добавлении товара службе рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="59083-218">Press enter to send the add item message to the workflow service.</span></span> <span data-ttu-id="59083-219">Клиент выведет на экран следующий текст.</span><span class="sxs-lookup"><span data-stu-id="59083-219">The client will display the following text:</span></span>  
   
     ```Output  
-  
-                  Отправка сообщения о добавлении элемента  
-    Возвращено службой: элемент добавлен к заказу  
-    Нажмите любую клавишу для продолжения.  .  .    
+    Sending add item messageService returned: Item added to orderPress any key to continue . . .  
     ```  
   
-## См. также  
- [Службы рабочего процесса](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+## <a name="see-also"></a><span data-ttu-id="59083-220">См. также</span><span class="sxs-lookup"><span data-stu-id="59083-220">See Also</span></span>  
+ [<span data-ttu-id="59083-221">Службы рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="59083-221">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)

@@ -1,25 +1,28 @@
 ---
-title: "ReliableSessionBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ReliableSessionBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: effda125-b8d3-4de6-8c0e-f59f5ea8f6eb
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3f4aff60c96db5071d41a3f011019b05746f0c96
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# ReliableSessionBindingElement
-ReliableSessionBindingElement  
+# <a name="reliablesessionbindingelement"></a><span data-ttu-id="8ad02-102">ReliableSessionBindingElement</span><span class="sxs-lookup"><span data-stu-id="8ad02-102">ReliableSessionBindingElement</span></span>
+<span data-ttu-id="8ad02-103">ReliableSessionBindingElement</span><span class="sxs-lookup"><span data-stu-id="8ad02-103">ReliableSessionBindingElement</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="8ad02-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8ad02-104">Syntax</span></span>  
   
 ```  
 class ReliableSessionBindingElement : BindingElement  
@@ -35,73 +38,73 @@ class ReliableSessionBindingElement : BindingElement
 };  
 ```  
   
-## Методы  
- Класс ReliableSessionBindingElement не определяет никаких методов.  
+## <a name="methods"></a><span data-ttu-id="8ad02-105">Методы</span><span class="sxs-lookup"><span data-stu-id="8ad02-105">Methods</span></span>  
+ <span data-ttu-id="8ad02-106">Класс ReliableSessionBindingElement не определяет никаких методов.</span><span class="sxs-lookup"><span data-stu-id="8ad02-106">The ReliableSessionBindingElement class does not define any methods.</span></span>  
   
-## Свойства  
- Класс ReliableSessionBindingElement имеет следующие свойства.  
+## <a name="properties"></a><span data-ttu-id="8ad02-107">Свойства</span><span class="sxs-lookup"><span data-stu-id="8ad02-107">Properties</span></span>  
+ <span data-ttu-id="8ad02-108">Класс ReliableSessionBindingElement имеет следующие свойства.</span><span class="sxs-lookup"><span data-stu-id="8ad02-108">The ReliableSessionBindingElement class has the following properties:</span></span>  
   
-### AcknowledgementInterval  
- Тип данных: datetime  
+### <a name="acknowledgementinterval"></a><span data-ttu-id="8ad02-109">AcknowledgementInterval</span><span class="sxs-lookup"><span data-stu-id="8ad02-109">AcknowledgementInterval</span></span>  
+ <span data-ttu-id="8ad02-110">Тип данных: datetime</span><span class="sxs-lookup"><span data-stu-id="8ad02-110">Data type: datetime</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="8ad02-111">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="8ad02-111">Access type: Read-only</span></span>  
   
- Промежуток времени, в течение которого пункт назначения ожидает перед отправкой подтверждения источнику сообщения по надежным каналам, созданным фабрикой.  
+ <span data-ttu-id="8ad02-112">Промежуток времени, в течение которого пункт назначения ожидает перед отправкой подтверждения источнику сообщения по надежным каналам, созданным фабрикой.</span><span class="sxs-lookup"><span data-stu-id="8ad02-112">The interval of time that a destination waits before sending an acknowledgement to the message source on reliable channels that are created by the factory.</span></span>  
   
-### FlowControlEnabled  
- Тип данных: boolean  
+### <a name="flowcontrolenabled"></a><span data-ttu-id="8ad02-113">FlowControlEnabled</span><span class="sxs-lookup"><span data-stu-id="8ad02-113">FlowControlEnabled</span></span>  
+ <span data-ttu-id="8ad02-114">Тип данных: boolean</span><span class="sxs-lookup"><span data-stu-id="8ad02-114">Data type: boolean</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="8ad02-115">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="8ad02-115">Access type: Read-only</span></span>  
   
- Логическое значение, указывающее, включено ли управление потоком.  
+ <span data-ttu-id="8ad02-116">Логическое значение, указывающее, включено ли управление потоком.</span><span class="sxs-lookup"><span data-stu-id="8ad02-116">A Boolean value that specifies whether flow control is enabled.</span></span>  
   
-### InactivityTimeout  
- Тип данных: datetime  
+### <a name="inactivitytimeout"></a><span data-ttu-id="8ad02-117">InactivityTimeout</span><span class="sxs-lookup"><span data-stu-id="8ad02-117">InactivityTimeout</span></span>  
+ <span data-ttu-id="8ad02-118">Тип данных: datetime</span><span class="sxs-lookup"><span data-stu-id="8ad02-118">Data type: datetime</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="8ad02-119">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="8ad02-119">Access type: Read-only</span></span>  
   
- Максимальное время, в течение которого канал позволяет другому участнику соединения не отправлять никаких сообщений, прежде чем канал будет закрыт с ошибкой.  
+ <span data-ttu-id="8ad02-120">Максимальное время, в течение которого канал позволяет другому участнику соединения не отправлять никаких сообщений, прежде чем канал будет закрыт с ошибкой.</span><span class="sxs-lookup"><span data-stu-id="8ad02-120">Specifies the maximum duration the channel is going to allow the other communicating party not to send any messages before faulting the channel.</span></span>  
   
-### MaxPendingChannels  
- Тип данных: sint32  
+### <a name="maxpendingchannels"></a><span data-ttu-id="8ad02-121">MaxPendingChannels</span><span class="sxs-lookup"><span data-stu-id="8ad02-121">MaxPendingChannels</span></span>  
+ <span data-ttu-id="8ad02-122">Тип данных: sint32</span><span class="sxs-lookup"><span data-stu-id="8ad02-122">Data type: sint32</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="8ad02-123">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="8ad02-123">Access type: Read-only</span></span>  
   
- Максимальное число каналов, ожидающих принятия на прослушивателе.  
+ <span data-ttu-id="8ad02-124">Максимальное число каналов, ожидающих принятия на прослушивателе.</span><span class="sxs-lookup"><span data-stu-id="8ad02-124">The maximum number of channels that can wait to be accepted on the listener.</span></span>  
   
-### MaxRetryCount  
- Тип данных: sint32  
+### <a name="maxretrycount"></a><span data-ttu-id="8ad02-125">MaxRetryCount</span><span class="sxs-lookup"><span data-stu-id="8ad02-125">MaxRetryCount</span></span>  
+ <span data-ttu-id="8ad02-126">Тип данных: sint32</span><span class="sxs-lookup"><span data-stu-id="8ad02-126">Data type: sint32</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="8ad02-127">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="8ad02-127">Access type: Read-only</span></span>  
   
- Максимальное количество попыток повторной передачи надежным каналом сообщения, для которого не было получено подтверждение приема. Повторная передача осуществляется посредством вызова метода `Send` в базовом канале.  
+ <span data-ttu-id="8ad02-128">Максимальное количество попыток повторной передачи надежным каналом сообщения, для которого не было получено подтверждение приема. Повторная передача осуществляется посредством вызова метода `Send` в базовом канале.</span><span class="sxs-lookup"><span data-stu-id="8ad02-128">The maximum number of times a reliable channel attempts to retransmit a message it has not received an acknowledgement for, by calling `Send` on its underlying channel.</span></span>  
   
-### MaxTransferWindowSize  
- Тип данных: sint32  
+### <a name="maxtransferwindowsize"></a><span data-ttu-id="8ad02-129">MaxTransferWindowSize</span><span class="sxs-lookup"><span data-stu-id="8ad02-129">MaxTransferWindowSize</span></span>  
+ <span data-ttu-id="8ad02-130">Тип данных: sint32</span><span class="sxs-lookup"><span data-stu-id="8ad02-130">Data type: sint32</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="8ad02-131">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="8ad02-131">Access type: Read-only</span></span>  
   
- Максимальный размер окна передачи для надежного сеанса.  
+ <span data-ttu-id="8ad02-132">Максимальный размер окна передачи для надежного сеанса.</span><span class="sxs-lookup"><span data-stu-id="8ad02-132">The maximum transfer window size for the reliable session.</span></span>  
   
-### Ordered  
- Тип данных: boolean  
+### <a name="ordered"></a><span data-ttu-id="8ad02-133">Ordered</span><span class="sxs-lookup"><span data-stu-id="8ad02-133">Ordered</span></span>  
+ <span data-ttu-id="8ad02-134">Тип данных: boolean</span><span class="sxs-lookup"><span data-stu-id="8ad02-134">Data type: boolean</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="8ad02-135">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="8ad02-135">Access type: Read-only</span></span>  
   
- Логическое значение, определяющее, прибывают ли сообщения точно в том порядке, в котором они были отправлены.  
+ <span data-ttu-id="8ad02-136">Логическое значение, определяющее, прибывают ли сообщения точно в том порядке, в котором они были отправлены.</span><span class="sxs-lookup"><span data-stu-id="8ad02-136">A Boolean value that specifies whether messages are guaranteed to arrive in the order they were sent.</span></span>  
   
-### ReliableMessagingVersion  
- Тип данных: integer  
+### <a name="reliablemessagingversion"></a><span data-ttu-id="8ad02-137">ReliableMessagingVersion</span><span class="sxs-lookup"><span data-stu-id="8ad02-137">ReliableMessagingVersion</span></span>  
+ <span data-ttu-id="8ad02-138">Тип данных: integer</span><span class="sxs-lookup"><span data-stu-id="8ad02-138">Data type: integer</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="8ad02-139">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="8ad02-139">Access type: Read-only</span></span>  
   
- Целочисленное значение, задающее версию используемого в надежном канале протокола WS\-ReliableMessaging.  
+ <span data-ttu-id="8ad02-140">Целочисленное значение, задающее версию используемого в надежном канале протокола WS-ReliableMessaging.</span><span class="sxs-lookup"><span data-stu-id="8ad02-140">An integer that specifies the WS-ReliableMessaging protocol version used in the reliable session.</span></span>  
   
-## Требования  
+## <a name="requirements"></a><span data-ttu-id="8ad02-141">Требования</span><span class="sxs-lookup"><span data-stu-id="8ad02-141">Requirements</span></span>  
   
-|MOF|Объявлено в файле Servicemodel.mof.|  
-|---------|-----------------------------------------|  
-|Пространство имен|Определено в root\\ServiceModel.|  
+|<span data-ttu-id="8ad02-142">MOF</span><span class="sxs-lookup"><span data-stu-id="8ad02-142">MOF</span></span>|<span data-ttu-id="8ad02-143">Объявлено в файле Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="8ad02-143">Declared in Servicemodel.mof.</span></span>|  
+|---------|-----------------------------------|  
+|<span data-ttu-id="8ad02-144">Пространство имен</span><span class="sxs-lookup"><span data-stu-id="8ad02-144">Namespace</span></span>|<span data-ttu-id="8ad02-145">Определено в root\ServiceModel.</span><span class="sxs-lookup"><span data-stu-id="8ad02-145">Defined in root\ServiceModel</span></span>|  
   
-## См. также  
+## <a name="see-also"></a><span data-ttu-id="8ad02-146">См. также</span><span class="sxs-lookup"><span data-stu-id="8ad02-146">See Also</span></span>  
  <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>

@@ -1,44 +1,45 @@
 ---
-title: "Компонент ErrorProvider (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "сообщения об ошибках, отображение"
-  - "ErrorProvider - компонент [Windows Forms]"
-  - "ошибки [Windows Forms]"
+title: "Компонент ErrorProvider (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- error messages [Windows Forms], displaying
+- errors [Windows Forms]
+- ErrorProvider component [Windows Forms]
 ms.assetid: c0f2e231-c5c9-413d-a507-75af2db499b6
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c1dd0cfd8062274d4e2ad9ce75ae41ed69e703d4
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Компонент ErrorProvider (Windows Forms)
-Компонент Windows Forms `ErrorProvider` позволяет показать пользователю неагрессивным способом, что что\-то не так.  Обычно он используется вместе с проверкой сведений, вводимых в форму пользователем, или отображением ошибок в наборе данных.  
+# <a name="errorprovider-component-windows-forms"></a><span data-ttu-id="ead2e-102">Компонент ErrorProvider (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="ead2e-102">ErrorProvider Component (Windows Forms)</span></span>
+<span data-ttu-id="ead2e-103">Windows Forms `ErrorProvider` компонент используется для представления пользователю в фоновом режиме, что-то не так.</span><span class="sxs-lookup"><span data-stu-id="ead2e-103">The Windows Forms `ErrorProvider` component is used to show the user in a non-intrusive way that something is wrong.</span></span> <span data-ttu-id="ead2e-104">Обычно используется в сочетании с проверка пользовательского ввода в форме или отображение ошибок в наборе данных.</span><span class="sxs-lookup"><span data-stu-id="ead2e-104">It is typically used in conjunction with validating user input on a form, or displaying errors within a dataset.</span></span>  
   
-## В этом подразделе  
- [Общие сведения о компоненте ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-overview-windows-forms.md)  
- Описание данного элемента управления, его основных возможностей и свойств.  
+## <a name="in-this-section"></a><span data-ttu-id="ead2e-105">Содержание</span><span class="sxs-lookup"><span data-stu-id="ead2e-105">In This Section</span></span>  
+ [<span data-ttu-id="ead2e-106">Общие сведения о компоненте ErrorProvider</span><span class="sxs-lookup"><span data-stu-id="ead2e-106">ErrorProvider Component Overview</span></span>](../../../../docs/framework/winforms/controls/errorprovider-component-overview-windows-forms.md)  
+ <span data-ttu-id="ead2e-107">Описание компонента и его основные возможности и свойства.</span><span class="sxs-lookup"><span data-stu-id="ead2e-107">Explains what this component is and its key features and properties.</span></span>  
   
- [Практическое руководство. Отображение значков ошибок при проверке введенных в форму данных с помощью компонента ErrorProvider в Windows Forms](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)  
- Приведены инструкции по проверке введенных пользователем данных с помощью поставщика ошибок.  
+ [<span data-ttu-id="ead2e-108">Практическое руководство. Отображение значков ошибок при проверке введенных в форму данных с помощью компонента ErrorProvider в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ead2e-108">How to: Display Error Icons for Form Validation with the Windows Forms ErrorProvider Component</span></span>](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)  
+ <span data-ttu-id="ead2e-109">Указания по проверке вводимых пользователем данных с помощью поставщика ошибок.</span><span class="sxs-lookup"><span data-stu-id="ead2e-109">Gives directions for validating user input with an error provider component.</span></span>  
   
- [Практическое руководство. Индикация ошибок данных, содержащихся в объекте DataSet, с помощью компонента ErrorProvider в Windows Forms](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)  
- Приведены инструкции по использованию поставщика ошибок для отображения ошибок в данных.  
+ [<span data-ttu-id="ead2e-110">Практическое руководство. Индикация ошибок данных, содержащихся в объекте DataSet, с помощью компонента ErrorProvider в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ead2e-110">How to: View Errors Within a DataSet with the Windows Forms ErrorProvider Component</span></span>](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)  
+ <span data-ttu-id="ead2e-111">Инструкции по использованию поставщика ошибок для отображения ошибок в данных.</span><span class="sxs-lookup"><span data-stu-id="ead2e-111">Gives directions for using an error provider component to display data errors.</span></span>  
   
-## Ссылка  
+## <a name="reference"></a><span data-ttu-id="ead2e-112">Ссылка</span><span class="sxs-lookup"><span data-stu-id="ead2e-112">Reference</span></span>  
  <xref:System.Windows.Forms.ErrorProvider>  
- Описание класса и ссылки на все его члены.  
+ <span data-ttu-id="ead2e-113">Описание класса и ссылки на все его члены.</span><span class="sxs-lookup"><span data-stu-id="ead2e-113">Describes this class and has links to all its members.</span></span>  
   
-## Связанные подразделы  
- [Элементы управления для использования в формах Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Полный список элементов управления Windows Forms со ссылками на разделы, в которых описывается их использование.
+## <a name="related-sections"></a><span data-ttu-id="ead2e-114">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="ead2e-114">Related Sections</span></span>  
+ [<span data-ttu-id="ead2e-115">Элементы управления для использования в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ead2e-115">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="ead2e-116">Полный список элементов управления Windows Forms со ссылками на информацию об их применении.</span><span class="sxs-lookup"><span data-stu-id="ead2e-116">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

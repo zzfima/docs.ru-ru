@@ -1,73 +1,84 @@
 ---
-title: "&lt;sendMessageChannelCache&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: '&lt;sendMessageChannelCache&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 241e428e-5030-4b13-8a0a-69f05288d3d9
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1543142a8ff5fb77db48d0e479433c533e7eff83
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;sendMessageChannelCache&gt;
-Поведение службы, которое позволяет изменить уровни доступа к кэшу, параметры кэша фабрики канала и параметры кэша канала для рабочих процессов, которые отправляют сообщения в конечные точки служб с использованием действий отправки сообщений.  
+# <a name="ltsendmessagechannelcachegt"></a><span data-ttu-id="b82f0-102">&lt;sendMessageChannelCache&gt;</span><span class="sxs-lookup"><span data-stu-id="b82f0-102">&lt;sendMessageChannelCache&gt;</span></span>
+<span data-ttu-id="b82f0-103">Поведение службы, позволяющее настройку совместное использование уровней, параметры кэша фабрики каналов и настройки кэша канала для рабочих процессов, отправляющих сообщения в конечные точки службы, с помощью действий обмена сообщениями отправки кэша.</span><span class="sxs-lookup"><span data-stu-id="b82f0-103">A service behavior that enables the customization of the cache sharing levels, the settings of the channel factory cache, and the settings of the channel cache for workflows that send messages to service endpoints using Send messaging activities.</span></span>  
   
-## Синтаксис  
+<span data-ttu-id="b82f0-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="b82f0-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="b82f0-105">\<поведения ></span><span class="sxs-lookup"><span data-stu-id="b82f0-105">\<behaviors></span></span>  
+<span data-ttu-id="b82f0-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="b82f0-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="b82f0-107">\<поведение ></span><span class="sxs-lookup"><span data-stu-id="b82f0-107">\<behavior></span></span>  
+<span data-ttu-id="b82f0-108">\<sendMessageChannelCache ></span><span class="sxs-lookup"><span data-stu-id="b82f0-108">\<sendMessageChannelCache></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="b82f0-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b82f0-109">Syntax</span></span>  
   
-<behaviors>  
-  <serviceBehaviors>  
-    <behavior name=String">  
-       <sendMessageChannelCache allowUnsafeCaching="Boolean" >          
-           <channelSettings idleTimeout="TimeSpan" leaseTimeout="TimeSpan" maxItemsInCache="Integer" />  
-           <factorySettings idleTimeout="TimeSpan" leaseTimeout="TimeSpan" maxItemsInCache="Integer" />  
-       </sendMessageChannelCache>  
-    </behavior>  
-  </serviceBehaviors>  
+```xml  
+<behaviors>
+  <serviceBehaviors>
+    <behavior name="String">
+      <sendMessageChannelCache allowUnsafeCaching="Boolean">
+        <channelSettings idleTimeout="TimeSpan"
+                         leaseTimeout="TimeSpan" 
+                         maxItemsInCache="Integer" />
+        <factorySettings idleTimeout="TimeSpan" 
+                         leaseTimeout="TimeSpan" 
+                         maxItemsInCache="Integer" />
+      </sendMessageChannelCache>
+    </behavior>
+  </serviceBehaviors>
 </behaviors>  
-  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b82f0-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="b82f0-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="b82f0-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="b82f0-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="b82f0-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b82f0-112">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|allowUnsafeCaching|Логическое значение, указывающее, следует ли включить кэширование.  Если служба рабочего процесса имеет пользовательские привязки или поведения, то кэширование может оказаться небезопасным \(и будет отключено по умолчанию\).  Однако если кэширование необходимо включить, то установите это свойство в значение **true**.|  
+|<span data-ttu-id="b82f0-113">Атрибут</span><span class="sxs-lookup"><span data-stu-id="b82f0-113">Attribute</span></span>|<span data-ttu-id="b82f0-114">Описание</span><span class="sxs-lookup"><span data-stu-id="b82f0-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="b82f0-115">allowUnsafeCaching</span><span class="sxs-lookup"><span data-stu-id="b82f0-115">allowUnsafeCaching</span></span>|<span data-ttu-id="b82f0-116">Логическое значение, указывающее, следует ли включить кэширование.</span><span class="sxs-lookup"><span data-stu-id="b82f0-116">A Boolean value that indicates whether to turn caching on.</span></span> <span data-ttu-id="b82f0-117">Если служба рабочего процесса имеет пользовательские привязки или поведения, то кэширование может оказаться небезопасным (и будет отключено по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="b82f0-117">If your workflow service has custom bindings or custom behaviors, caching could be unsecure and therefore is disabled by default.</span></span> <span data-ttu-id="b82f0-118">Тем не менее, если вы хотите включить кэширование на присвойте этому свойству значение **true**.</span><span class="sxs-lookup"><span data-stu-id="b82f0-118">However, if you want to turn caching on set this property to **true**.</span></span>|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="b82f0-119">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="b82f0-119">Child Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<channelSettings\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/channelsettings.md)|Указывает параметры кэша канала.|  
-|[\<factorySettings\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/factorysettings.md)|Указывает параметры кэша фабрики канала.|  
+|<span data-ttu-id="b82f0-120">Элемент</span><span class="sxs-lookup"><span data-stu-id="b82f0-120">Element</span></span>|<span data-ttu-id="b82f0-121">Описание</span><span class="sxs-lookup"><span data-stu-id="b82f0-121">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="b82f0-122">\<channelSettings ></span><span class="sxs-lookup"><span data-stu-id="b82f0-122">\<channelSettings></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/channelsettings.md)|<span data-ttu-id="b82f0-123">Указывает параметры кэша канала.</span><span class="sxs-lookup"><span data-stu-id="b82f0-123">Specifies the settings of the channel cache.</span></span>|  
+|[<span data-ttu-id="b82f0-124">\<factorySettings ></span><span class="sxs-lookup"><span data-stu-id="b82f0-124">\<factorySettings></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/factorysettings.md)|<span data-ttu-id="b82f0-125">Указывает параметры кэша фабрики канала.</span><span class="sxs-lookup"><span data-stu-id="b82f0-125">Specifies the settings of the channel factory cache.</span></span>|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="b82f0-126">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="b82f0-126">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<behavior\> для \<serviceBehaviors\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Указывает элемент поведения.|  
+|<span data-ttu-id="b82f0-127">Элемент</span><span class="sxs-lookup"><span data-stu-id="b82f0-127">Element</span></span>|<span data-ttu-id="b82f0-128">Описание</span><span class="sxs-lookup"><span data-stu-id="b82f0-128">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="b82f0-129">\<поведение > из \<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="b82f0-129">\<behavior> of \<serviceBehaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|<span data-ttu-id="b82f0-130">Указывает элемент поведения.</span><span class="sxs-lookup"><span data-stu-id="b82f0-130">Specifies a behavior element.</span></span>|  
   
-## Заметки  
- Это поведение службы предназначено для рабочих процессов, отправляющих сообщения в конечные точки служб.  Эти рабочие процессы обычно являются клиентскими, но также могут быть службами рабочих процессов, размещенными в <xref:System.ServiceModel.WorkflowServiceHost>.  
+## <a name="remarks"></a><span data-ttu-id="b82f0-131">Примечания</span><span class="sxs-lookup"><span data-stu-id="b82f0-131">Remarks</span></span>  
+ <span data-ttu-id="b82f0-132">Это поведение службы предназначено для рабочих процессов, отправляющих сообщения в конечные точки служб.</span><span class="sxs-lookup"><span data-stu-id="b82f0-132">This service behavior is intended for workflows that send messages to service endpoints.</span></span> <span data-ttu-id="b82f0-133">Эти рабочие процессы обычно являются клиентскими, но также могут быть службами рабочих процессов, размещенными в <xref:System.ServiceModel.WorkflowServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="b82f0-133">These workflows are typically client workflows but could also be workflow services that are hosted in a <xref:System.ServiceModel.WorkflowServiceHost>.</span></span>  
   
- По умолчанию в рабочем процессе, размещенном в <xref:System.ServiceModel.WorkflowServiceHost>, кэш, используемый действиями обмена сообщениями <xref:System.ServiceModel.Activities.Send>, совместно используется всеми экземплярами рабочих процессов в <xref:System.ServiceModel.WorkflowServiceHost> \(кэширование уровня узла\).  Для клиентского рабочего процесса, не размещенного в <xref:System.ServiceModel.WorkflowServiceHost>, кэш доступен только для экземпляра рабочего процесса \(кэширование уровня экземпляра\).  По умолчанию кэширование отключено для всех действий отправки в рабочем процессе, в конфигурации которого определены конечные точки.  
+ <span data-ttu-id="b82f0-134">По умолчанию в рабочем процессе, размещенном в <xref:System.ServiceModel.WorkflowServiceHost>, кэш, используемый действиями обмена сообщениями <xref:System.ServiceModel.Activities.Send>, совместно используется всеми экземплярами рабочих процессов в <xref:System.ServiceModel.WorkflowServiceHost> (кэширование уровня узла).</span><span class="sxs-lookup"><span data-stu-id="b82f0-134">By default, in a workflow hosted by a <xref:System.ServiceModel.WorkflowServiceHost>, the cache used by <xref:System.ServiceModel.Activities.Send> messaging activities is shared across all workflow instances in the <xref:System.ServiceModel.WorkflowServiceHost> (host-level caching).</span></span> <span data-ttu-id="b82f0-135">Для клиентского рабочего процесса, не размещенного в <xref:System.ServiceModel.WorkflowServiceHost>, кэш доступен только для экземпляра рабочего процесса (кэширование уровня экземпляра).</span><span class="sxs-lookup"><span data-stu-id="b82f0-135">For a client workflow that is not hosted by a <xref:System.ServiceModel.WorkflowServiceHost>, the cache is available only to the workflow instance (instance-level caching).</span></span> <span data-ttu-id="b82f0-136">По умолчанию кэширование отключено для всех действий отправки в рабочем процессе, в конфигурации которого определены конечные точки.</span><span class="sxs-lookup"><span data-stu-id="b82f0-136">Caching is disabled by default for any send activity in your workflow that has endpoints defined in configuration.</span></span>  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] том, как изменять уровни совместного использования кэша по умолчанию, а также настройки кэша для фабрики каналов и кэша каналов, см. в разделе [Изменение уровней совместного использования кэша для действий «Send»](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]<span data-ttu-id="b82f0-137">изменить уровни доступа к кэшу по умолчанию и настройки кэша для фабрики каналов и кэша каналов см. в разделе [изменение уровней совместного использования кэша для действий отправки](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).</span><span class="sxs-lookup"><span data-stu-id="b82f0-137"> how to change the default cache sharing levels and cache settings for the channel factory and channel cache, see [Changing the Cache Sharing Levels for Send Activities](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).</span></span>  
   
-## Пример  
- В размещенной службе рабочего процесса в файле конфигурации приложения можно указать параметры кэша фабрики и канала.  Для этого необходимо создать поведение службы, содержащее параметры для кэша фабрики и канала, и добавить это поведение в службу.  В следующем примере показано содержимое файла конфигурации, в котором находится поведение службы **MyChannelCacheBehavior**  с пользовательскими параметрами кэша фабрики и канала.  Это поведение службы добавляется к службе посредством атрибута **behaviorConfiguarion** .  
+## <a name="example"></a><span data-ttu-id="b82f0-138">Пример</span><span class="sxs-lookup"><span data-stu-id="b82f0-138">Example</span></span>  
+ <span data-ttu-id="b82f0-139">В размещенной службе рабочего процесса в файле конфигурации приложения можно указать параметры кэша фабрики и канала.</span><span class="sxs-lookup"><span data-stu-id="b82f0-139">In a hosted workflow service, you can specify the factory cache and channel cache settings in the application configuration file.</span></span> <span data-ttu-id="b82f0-140">Для этого необходимо создать поведение службы, содержащее параметры для кэша фабрики и канала, и добавить это поведение в службу.</span><span class="sxs-lookup"><span data-stu-id="b82f0-140">To do so, add a service behavior that contains the cache settings for the factory and channel cache and add this service behavior to your service.</span></span> <span data-ttu-id="b82f0-141">В следующем примере показано содержимое файла конфигурации, содержащий **MyChannelCacheBehavior** поведение службы с параметрами кэша пользовательской фабрики и канала.</span><span class="sxs-lookup"><span data-stu-id="b82f0-141">The following example shows the contents of a configuration file that contains the **MyChannelCacheBehavior**  service behavior with the custom factory cache and channel cache settings.</span></span> <span data-ttu-id="b82f0-142">Это поведение добавляется к службе через **behaviorConfiguarion** атрибута.</span><span class="sxs-lookup"><span data-stu-id="b82f0-142">This service behavior is added to the service through the **behaviorConfiguarion** attribute.</span></span>  
   
-```  
-  
+```xml  
 <configuration>    
   <system.serviceModel>  
     <!-- List of other config sections here -->   
@@ -87,11 +98,10 @@ caps.handback.revision: 3
     </services>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## См. также  
- <xref:System.ServiceModel.Activities.SendMessageChannelCache>   
- <xref:System.ServiceModel.Activities.Configuration.SendMessageChannelCacheElement>   
- <xref:System.ServiceModel.Activities.Send>   
- [Изменение уровней совместного использования кэша для действий «Send»](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)
+## <a name="see-also"></a><span data-ttu-id="b82f0-143">См. также</span><span class="sxs-lookup"><span data-stu-id="b82f0-143">See Also</span></span>  
+ <xref:System.ServiceModel.Activities.SendMessageChannelCache>  
+ <xref:System.ServiceModel.Activities.Configuration.SendMessageChannelCacheElement>  
+ <xref:System.ServiceModel.Activities.Send>  
+ [<span data-ttu-id="b82f0-144">Изменение совместного использования кэша уровни для действия отправки</span><span class="sxs-lookup"><span data-stu-id="b82f0-144">Changing the Cache Sharing Levels for Send Activities</span></span>](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)

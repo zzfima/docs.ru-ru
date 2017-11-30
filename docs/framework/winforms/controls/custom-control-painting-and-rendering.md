@@ -1,63 +1,63 @@
 ---
-title: "Рисование и отрисовка пользовательского элемента управления | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "пользовательские элементы управления [Windows Forms], рисование"
-  - "пользовательские элементы управления [Windows Forms], отрисовка"
-  - "OnPaint - метод"
-  - "пользовательские элементы управления [Windows Forms], рисование"
+title: "Рисование и отрисовка пользовательского элемента управления"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom controls [Windows Forms], rendering
+- custom controls [Windows Forms], painting
+- user controls [Windows Forms], painting
 ms.assetid: a09dbf76-0966-4cbf-a66a-2083ba98e068
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: babf3d235f4cca61ad6d0e5fdc4e6b6146c7d060
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Рисование и отрисовка пользовательского элемента управления
-Пользовательское рисование элементов управления является одной из сложных задач, которая легко решается с помощью платформы .NET Framework.  В зависимости от графического внешнего вида элемента управления можно выбрать различные параметры при разработке специализированного элемента управления.  При разработке элемента управления, наследуемого от класса `Control` необходимо предоставить код, позволяющий элементу управления выполнить визуализацию графического представления.  При создании пользовательского элемента управления с помощью наследования из `UserControl` или при наследовании из одного из элементов управления Windows Forms можно переопределить стандартное графическое представление и предоставить собственный код графики.  Если необходимо предоставить пользовательскую отрисовку для составных элементов управления разрабатываемого `UserControl`, выбор параметров становится более ограниченным, но при этом по\-прежнему можно воспользоваться широкими графическими возможностями для элементов управления и приложений.  
+# <a name="custom-control-painting-and-rendering"></a><span data-ttu-id="74a02-102">Рисование и отрисовка пользовательского элемента управления</span><span class="sxs-lookup"><span data-stu-id="74a02-102">Custom Control Painting and Rendering</span></span>
+<span data-ttu-id="74a02-103">Пользовательское рисование элементов управления является одним из сложных задач, стало проще платформой .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="74a02-103">Custom painting of controls is one of the many complicated tasks made easy by the .NET Framework.</span></span> <span data-ttu-id="74a02-104">При создании пользовательского элемента управления, существует несколько вариантов относительно графического внешнего вида элемента управления.</span><span class="sxs-lookup"><span data-stu-id="74a02-104">When authoring a custom control, you have many options regarding your control's graphical appearance.</span></span> <span data-ttu-id="74a02-105">При создании элемента управления, который наследует от `Control`, необходимо предоставить код, позволяющий элементу управления выполнить визуализацию графического представления.</span><span class="sxs-lookup"><span data-stu-id="74a02-105">If you are authoring a control that inherits from the `Control`, you must provide code that allows your control to render its graphical representation.</span></span> <span data-ttu-id="74a02-106">При создании пользовательского элемента управления путем наследования от `UserControl`, или при наследовании от одного из элементов управления Windows Forms, может переопределить стандартное графическое представление и предоставить собственный код графики.</span><span class="sxs-lookup"><span data-stu-id="74a02-106">If you are creating a user control by inheriting from the `UserControl`, or are inheriting from one of the Windows Forms controls, you may override the standard graphical representation and provide your own graphics code.</span></span> <span data-ttu-id="74a02-107">Если вы хотите предоставить пользовательскую отрисовку для составных элементов управления `UserControl` при разработке, параметров становится более ограниченным, но по-прежнему можно воспользоваться широкими графическими возможностями для элементов управления и приложений.</span><span class="sxs-lookup"><span data-stu-id="74a02-107">If you want to provide custom rendering for the constituent controls of a `UserControl` you are authoring, your options become more limited, but still allow a wide range of graphical possibilities for your controls and applications.</span></span>  
   
-## В этом подразделе  
- [Отрисовка элементов управления Windows Forms](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
- Показано, как запрограммировать логику отображения элемента управления.  
+## <a name="in-this-section"></a><span data-ttu-id="74a02-108">Содержание</span><span class="sxs-lookup"><span data-stu-id="74a02-108">In This Section</span></span>  
+ [<span data-ttu-id="74a02-109">Отрисовка элементов управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="74a02-109">Rendering a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
+ <span data-ttu-id="74a02-110">Показано, как запрограммировать логику отображения элемента управления.</span><span class="sxs-lookup"><span data-stu-id="74a02-110">Shows how to program the logic that displays a control.</span></span>  
   
- [Элементы управления, разработанные пользователем](../../../../docs/framework/winforms/controls/user-drawn-controls.md)  
- Обзор действий, необходимых для записи и переопределения кода отрисовки для элемента управления.  
+ [<span data-ttu-id="74a02-111">Элементы управления, разработанные пользователем</span><span class="sxs-lookup"><span data-stu-id="74a02-111">User-Drawn Controls</span></span>](../../../../docs/framework/winforms/controls/user-drawn-controls.md)  
+ <span data-ttu-id="74a02-112">Обзор действий, необходимых для записи и переопределения код отрисовки для элемента управления.</span><span class="sxs-lookup"><span data-stu-id="74a02-112">Gives an overview of the steps involved in writing and overriding rendering code for your control.</span></span>  
   
- [Составные элементы управления](../../../../docs/framework/winforms/controls/constituent-controls.md)  
- Описание реализации пользовательского кода отрисовки для составных элементов управления в пользовательских элементах управления и формах.  
+ [<span data-ttu-id="74a02-113">Составные элементы управления</span><span class="sxs-lookup"><span data-stu-id="74a02-113">Constituent Controls</span></span>](../../../../docs/framework/winforms/controls/constituent-controls.md)  
+ <span data-ttu-id="74a02-114">Описывает, как реализовать пользовательский код отрисовки для составных элементов управления в пользовательских элементах управления и формах.</span><span class="sxs-lookup"><span data-stu-id="74a02-114">Describes how to implement custom rendering code for constituent controls in your user controls and forms.</span></span>  
   
- [Практическое руководство. Сокрытие элемента управления во время выполнения](../../../../docs/framework/winforms/controls/how-to-make-your-control-invisible-at-run-time.md)  
- Продемонстрировано использование свойства <xref:System.Windows.Forms.Control.Visible%2A> для скрытия и отображения элемента управления.  
+ [<span data-ttu-id="74a02-115">Практическое руководство. Скрытие элемента управления во время выполнения</span><span class="sxs-lookup"><span data-stu-id="74a02-115">How to: Make Your Control Invisible at Run Time</span></span>](../../../../docs/framework/winforms/controls/how-to-make-your-control-invisible-at-run-time.md)  
+ <span data-ttu-id="74a02-116">Показано, как использовать <xref:System.Windows.Forms.Control.Visible%2A> свойство, чтобы скрыть или отобразить элемент управления.</span><span class="sxs-lookup"><span data-stu-id="74a02-116">Shows how to use the <xref:System.Windows.Forms.Control.Visible%2A> property to hide and show a control.</span></span>  
   
- [Практическое руководство. Установка степени прозрачности фона элемента управления](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)  
- Показано, как использовать метод <xref:System.Windows.Forms.Control.SetStyle%2A> для создания непрозрачного, прозрачного и частично прозрачного цвета фона.  
+ [<span data-ttu-id="74a02-117">Практическое руководство. Установка степени прозрачности фона элемента управления</span><span class="sxs-lookup"><span data-stu-id="74a02-117">How to: Give Your Control a Transparent Background</span></span>](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)  
+ <span data-ttu-id="74a02-118">Показано, как использовать <xref:System.Windows.Forms.Control.SetStyle%2A> метод для создания цвет фона, который является непрозрачным, прозрачным или полупрозрачным.</span><span class="sxs-lookup"><span data-stu-id="74a02-118">Shows how to use the <xref:System.Windows.Forms.Control.SetStyle%2A> method to create a background color that is opaque, transparent, or partially transparent.</span></span>  
   
- [Отрисовка элементов управления с применением визуальных стилей](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)  
- Описание порядка визуализации элементов управления при помощи визуальных стилей в поддерживающих их операционных системах.  
+ [<span data-ttu-id="74a02-119">Отрисовка элементов управления с применением визуальных стилей</span><span class="sxs-lookup"><span data-stu-id="74a02-119">Rendering Controls with Visual Styles</span></span>](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)  
+ <span data-ttu-id="74a02-120">Показано, как отображать элементы управления с использованием стилей оформления в операционных системах, которые их поддерживают.</span><span class="sxs-lookup"><span data-stu-id="74a02-120">Shows how to render controls using visual styles in operating systems that support them.</span></span>  
   
-## Ссылка  
+## <a name="reference"></a><span data-ttu-id="74a02-121">Ссылка</span><span class="sxs-lookup"><span data-stu-id="74a02-121">Reference</span></span>  
  <xref:System.Windows.Forms.Control>  
- Описание этого класса и ссылки на разделы с описаниями его членов.  
+ <span data-ttu-id="74a02-122">Описывает данный класс и предоставляет ссылки на все его члены.</span><span class="sxs-lookup"><span data-stu-id="74a02-122">Describes this class and has links to all of its members.</span></span>  
   
  <xref:System.Windows.Forms.UserControl>  
- Описание этого класса и ссылки на разделы с описаниями его членов.  
+ <span data-ttu-id="74a02-123">Описывает данный класс и предоставляет ссылки на все его члены.</span><span class="sxs-lookup"><span data-stu-id="74a02-123">Describes this class and has links to all of its members.</span></span>  
   
  <xref:System.Windows.Forms.Control.OnPaint%2A>  
- Описание этого метода.  
+ <span data-ttu-id="74a02-124">Описание этого метода.</span><span class="sxs-lookup"><span data-stu-id="74a02-124">Describes this method.</span></span>  
   
-## Связанные подразделы  
- [Практическое руководство. Создание объектов Graphics для рисования](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- Описание функциональных возможностей графики [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] в Visual Studio и ссылки на дополнительные сведения.  
+## <a name="related-sections"></a><span data-ttu-id="74a02-125">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="74a02-125">Related Sections</span></span>  
+ [<span data-ttu-id="74a02-126">Практическое руководство. Создание графических объектов для рисования</span><span class="sxs-lookup"><span data-stu-id="74a02-126">How to: Create Graphics Objects for Drawing</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ <span data-ttu-id="74a02-127">Представляет [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] функциональных возможностей графики из Visual Studio и ссылки на дополнительные сведения.</span><span class="sxs-lookup"><span data-stu-id="74a02-127">Introduces [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] graphics functionality from a Visual Studio perspective and gives links to more information.</span></span>  
   
- [Создание собственных элементов управления](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
- Описание типов пользовательских элементов управления, которые можно создать.
+ [<span data-ttu-id="74a02-128">Разновидности пользовательских элементов управления</span><span class="sxs-lookup"><span data-stu-id="74a02-128">Varieties of Custom Controls</span></span>](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ <span data-ttu-id="74a02-129">Описание типов пользовательских элементов управления, которые можно создать.</span><span class="sxs-lookup"><span data-stu-id="74a02-129">Describes the kinds of custom controls you can author.</span></span>

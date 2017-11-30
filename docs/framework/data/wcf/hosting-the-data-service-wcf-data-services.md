@@ -1,52 +1,53 @@
 ---
-title: "Размещение службы данных (службы WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "HTML"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "Службы WCF Data Services, настройка"
-  - "Службы WCF Data Services, Windows Communication Foundation"
+title: "Размещение служб данных (службы данных WCF)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF Data Services, configuring
+- WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6a11e7e499f705f4aace791320057e04205db58c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Размещение службы данных (службы WCF Data Services)
-С помощью [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] можно создать службу, предоставляющую данные в виде канала [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)].  Эта служба данных определена в качестве класса, наследуемого от <xref:System.Data.Services.DataService%601>.  Этот класс содержит функции, необходимые для обработки сообщений запроса, выполнения операций обновления в источнике данных и создания сообщений ответов, как предусмотрено в [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Однако служба данных не может выполнить привязку к сетевому сокету и прослушивать через него входящие запросы HTTP.  Реализацию этой обязательной функциональности служба данных возлагает на размещающий компонент.  
+# <a name="hosting-the-data-service-wcf-data-services"></a><span data-ttu-id="7fb3a-102">Размещение служб данных (службы данных WCF)</span><span class="sxs-lookup"><span data-stu-id="7fb3a-102">Hosting the Data Service (WCF Data Services)</span></span>
+<span data-ttu-id="7fb3a-103">С помощью [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], можно создать службу, предоставляющую данные в виде [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канала.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-103">By using [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], you can create a service that exposes data as an [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed.</span></span> <span data-ttu-id="7fb3a-104">Эта служба данных определена в качестве класса, наследуемого от <xref:System.Data.Services.DataService%601>.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-104">This data service is defined as a class that inherits from <xref:System.Data.Services.DataService%601>.</span></span> <span data-ttu-id="7fb3a-105">Этот класс предоставляет функциональность, необходимую для обработки сообщения запроса, выполнения обновлений в источнике данных и создания ответных сообщений, как того требует [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7fb3a-105">This class provides the functionality required to process request messages, perform updates against the data source, and generate responses messages, as required by [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].</span></span> <span data-ttu-id="7fb3a-106">Однако службы данных не удается привязать к и прослушивать входящие HTTP-запросы к сетевому сокету.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-106">However, a data service cannot bind to and listen on a network socket for incoming HTTP requests.</span></span> <span data-ttu-id="7fb3a-107">Реализацию этой обязательной функциональности служба данных возлагает на размещающий компонент.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-107">For this required functionality, the data service relies on a hosting component.</span></span>  
   
- Узел службы данных выполняет следующие задачи от имени источника данных:  
+ <span data-ttu-id="7fb3a-108">Узел службы данных выполняет следующие задачи от имени источника данных:</span><span class="sxs-lookup"><span data-stu-id="7fb3a-108">The data service host performs the following tasks on behalf of the data service:</span></span>  
   
--   Прослушивает запросы и перенаправляет их службе данных.  
+-   <span data-ttu-id="7fb3a-109">Прослушивает запросы и перенаправляет их службе данных.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-109">Listens for requests and routes these requests to the data service.</span></span>  
   
--   Создает экземпляр службы данных для каждого запроса.  
+-   <span data-ttu-id="7fb3a-110">Создает экземпляр службы данных для каждого запроса.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-110">Creates an instance of the data service for each request.</span></span>  
   
--   Запрашивает обработку входящего запроса службой данных.  
+-   <span data-ttu-id="7fb3a-111">Запрашивает обработку входящего запроса службой данных.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-111">Requests that the data service process the incoming request.</span></span>  
   
--   Отправляет ответ от имени службы данных.  
+-   <span data-ttu-id="7fb3a-112">Отправляет ответ от имени службы данных.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-112">Sends the response on behalf of the data service.</span></span>  
   
- Для упрощения размещения службы данных службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] интегрируются с Windows Communication Foundation \(WCF\).  Служба данных обеспечивает реализацию по умолчанию WCF, которая используется как узел службы данных в приложении [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  Следовательно, службу данных можно разместить одним из следующих способов:  
+ <span data-ttu-id="7fb3a-113">Для упрощения размещения службы данных, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] предназначена для интеграции с Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="7fb3a-113">To simplify hosting a data service, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] is designed to integrate with Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="7fb3a-114">Служба данных обеспечивает реализацию по умолчанию WCF, который служит в качестве узла службы данных в [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] приложения.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-114">The data service provides a default WCF implementation that serves as the data service host in an [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] application.</span></span> <span data-ttu-id="7fb3a-115">Следовательно, службу данных можно разместить одним из следующих способов:</span><span class="sxs-lookup"><span data-stu-id="7fb3a-115">Therefore, you can host a data service in one of the following ways:</span></span>  
   
--   В приложении [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+-   <span data-ttu-id="7fb3a-116">В приложении [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7fb3a-116">In an [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] application.</span></span>  
   
--   В управляемом приложении, которое поддерживает резидентные службы WCF.  
+-   <span data-ttu-id="7fb3a-117">В управляемом приложении, которое поддерживает резидентные службы WCF.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-117">In a managed application that supports self-hosted WCF services.</span></span>  
   
--   В других специализированных узлах службы данных.  
+-   <span data-ttu-id="7fb3a-118">В других специализированных узлах службы данных.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-118">In some other custom data service host.</span></span>  
   
-## Размещение службы данных в приложении ASP.NET  
- При использовании диалогового окна **Добавить новый элемент** в среде Visual Studio для определения службы данных в приложении ASP.NET среда создает в проекте два новых файла.  Первый файл имеет расширение `.svc` и определяет для среды выполнения WCF способ создания экземпляра службы данных.  Ниже приведен пример этого файла для образца службы данных Northwind, созданного при изучении [краткого руководства](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md):  
+## <a name="hosting-a-data-service-in-an-aspnet-application"></a><span data-ttu-id="7fb3a-119">Размещение службы данных в приложении ASP.NET</span><span class="sxs-lookup"><span data-stu-id="7fb3a-119">Hosting a Data Service in an ASP.NET Application</span></span>  
+ <span data-ttu-id="7fb3a-120">При использовании **Добавление нового элемента** диалогового окна в Visual Studio для определения службы данных в приложении ASP.NET, средство создает два новых файла в проекте.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-120">When you use the **Add New Item** dialog in Visual Studio to define a data service in an ASP.NET application, the tool generates two new files in the project.</span></span> <span data-ttu-id="7fb3a-121">Первый файл имеет расширение `.svc` и определяет для среды выполнения WCF способ создания экземпляра службы данных.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-121">The first file has a `.svc` extension and instructs the WCF runtime how to instantiate the data service.</span></span> <span data-ttu-id="7fb3a-122">Ниже приведен пример этого файла для образца службы данных Northwind созданы при выполнении [краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md):</span><span class="sxs-lookup"><span data-stu-id="7fb3a-122">The following is an example of this file for the Northwind sample data service created when you complete the [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md):</span></span>  
   
 ```  
 <%@ ServiceHost Language="C#"   
@@ -56,32 +57,32 @@ caps.handback.revision: 3
     Service="NorthwindService.Northwind" %>   
 ```  
   
- Эта директива используется для инструкции приложения для создания узла службы для именованного класса службы данных путем использования класса <xref:System.Data.Services.DataServiceHostFactory>.  
+ <span data-ttu-id="7fb3a-123">Эта директива используется для инструкции приложения для создания узла службы для именованного класса службы данных путем использования класса <xref:System.Data.Services.DataServiceHostFactory>.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-123">This directive tells the application to create the service host for the named data service class by using the <xref:System.Data.Services.DataServiceHostFactory> class.</span></span>  
   
- Страница с выделенным кодом для файла `.svc` содержит класс, являющийся реализацией самой службы данных, определенной следующим образом для образца службы данных Northwind:  
+ <span data-ttu-id="7fb3a-124">Страница с выделенным кодом для файла `.svc` содержит класс, являющийся реализацией самой службы данных, определенной следующим образом для образца службы данных Northwind:</span><span class="sxs-lookup"><span data-stu-id="7fb3a-124">The code-behind page for the `.svc` file contains the class that is the implementation of the data service itself, which is defined as follows for the Northwind sample data service:</span></span>  
   
  [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#servicedefinition)]
  [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]  
   
- Служба данных работает как служба WCF, поэтому она интегрируется с [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и следует модели веб\-программирования WCF. Дополнительные сведения см. в разделах [Службы WCF и ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) и [Модель веб\-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).  
+ <span data-ttu-id="7fb3a-125">Поскольку служба данных работает аналогично службе WCF, она интегрируется с [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и соответствует модели веб-программирования WCF.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-125">Because a data service behaves like a WCF service, the data service integrates with [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] and follows the WCF Web programming model.</span></span> <span data-ttu-id="7fb3a-126">Дополнительные сведения см. в разделе [службы WCF и ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) и [модель программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).</span><span class="sxs-lookup"><span data-stu-id="7fb3a-126">For more information, see [WCF Services and ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) and [WCF Web HTTP Programming Model](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).</span></span>  
   
-## Резидентные службы WCF  
- Реализация интеграции с WCF позволяет службам [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] резидентно размещать службы данных в качестве службы WCF.  Служба может быть резидентно размещена в любом приложении [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], например в консольном приложении.  Класс <xref:System.Data.Services.DataServiceHost>, наследуемый от <xref:System.ServiceModel.Web.WebServiceHost>, используется для создания экземпляров службы данных по определенному адресу.  
+## <a name="self-hosted-wcf-services"></a><span data-ttu-id="7fb3a-127">Резидентные службы WCF</span><span class="sxs-lookup"><span data-stu-id="7fb3a-127">Self-Hosted WCF Services</span></span>  
+ <span data-ttu-id="7fb3a-128">Так как оно включает реализацию WCF [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] резидентно размещать службы данных в качестве службы WCF.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-128">Because it incorporates a WCF implementation, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] support self-hosting a data service as a WCF service.</span></span> <span data-ttu-id="7fb3a-129">Служба может быть резидентно размещена в любом приложении [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], например в консольном приложении.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-129">A service can be self-hosted in any [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] application, such as a console application.</span></span> <span data-ttu-id="7fb3a-130">Класс <xref:System.Data.Services.DataServiceHost>, наследуемый от <xref:System.ServiceModel.Web.WebServiceHost>, используется для создания экземпляров службы данных по определенному адресу.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-130">The <xref:System.Data.Services.DataServiceHost> class, which inherits from <xref:System.ServiceModel.Web.WebServiceHost>, is used to instantiate the data service at a specific address.</span></span>  
   
- Резидентное размещение можно использовать для разработки и тестирования, поскольку оно упрощает развертывание и диагностику службы.  Однако этот вид размещения не предоставляет расширенные функции размещения и управления, предоставляемые в [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] или в службе IIS. Дополнительные сведения см. в разделе [Размещение в управляемом приложении](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).  
+ <span data-ttu-id="7fb3a-131">Резидентное размещение можно использовать для разработки и тестирования, поскольку оно упрощает развертывание и диагностику службы.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-131">Self-hosting can be used for development and testing because it can make it easier to deploy and troubleshoot the service.</span></span> <span data-ttu-id="7fb3a-132">Однако этот тип размещения не обеспечивает дополнительные функции размещения и управления, обеспечиваемые [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] или службами IIS.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-132">However, this kind of hosting does not provide the advanced hosting and management features provided by [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] or by Internet Information Services (IIS).</span></span> <span data-ttu-id="7fb3a-133">Дополнительные сведения см. в разделе [размещение в приложении управляемых](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).</span><span class="sxs-lookup"><span data-stu-id="7fb3a-133">For more information, see [Hosting in a Managed Application](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).</span></span>  
   
-## Определение специализированных узлов служб данных  
- В случае если ограничения, связанные с реализацией узла WCF, неприемлемы, для службы данных можно также определить настраиваемый узел.  Любой класс, реализующий интерфейс <xref:System.Data.Services.IDataServiceHost>, можно использовать в качестве сетевого узла для службы данных.  Настраиваемый узел должен реализовать интерфейс <xref:System.Data.Services.IDataServiceHost> и поддерживать следующие основные функции узла службы данных:  
+## <a name="defining-a-custom-data-service-host"></a><span data-ttu-id="7fb3a-134">Определение специализированных узлов служб данных</span><span class="sxs-lookup"><span data-stu-id="7fb3a-134">Defining a Custom Data Service Host</span></span>  
+ <span data-ttu-id="7fb3a-135">В случае если ограничения, связанные с реализацией узла WCF, неприемлемы, для службы данных можно также определить настраиваемый узел.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-135">For cases where the WCF host implementation is too restrictive, you can also define a custom host for a data service.</span></span> <span data-ttu-id="7fb3a-136">Любой класс, реализующий интерфейс <xref:System.Data.Services.IDataServiceHost>, можно использовать в качестве сетевого узла для службы данных.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-136">Any class that implements <xref:System.Data.Services.IDataServiceHost> interface can be used as the network host for a data service.</span></span> <span data-ttu-id="7fb3a-137">Настраиваемый узел должен реализовать интерфейс <xref:System.Data.Services.IDataServiceHost> и поддерживать следующие основные функции узла службы данных:</span><span class="sxs-lookup"><span data-stu-id="7fb3a-137">A custom host must implement the <xref:System.Data.Services.IDataServiceHost> interface and be able to handle the following basic responsibilities of the data service host:</span></span>  
   
--   Обеспечивать службу данных корневым путем службы.  
+-   <span data-ttu-id="7fb3a-138">Обеспечивать службу данных корневым путем службы.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-138">Provide the data service with the service root path.</span></span>  
   
--   Обрабатывать данные заголовков запроса и ответа в соответствующей реализации элемента <xref:System.Data.Services.IDataServiceHost>.  
+-   <span data-ttu-id="7fb3a-139">Обрабатывать данные заголовков запроса и ответа в соответствующей реализации элемента <xref:System.Data.Services.IDataServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-139">Process request and response headers information to the appropriate <xref:System.Data.Services.IDataServiceHost> member implementation.</span></span>  
   
--   Обрабатывать исключения, сформированные службой данных.  
+-   <span data-ttu-id="7fb3a-140">Обрабатывать исключения, сформированные службой данных.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-140">Handle exceptions raised by the data service.</span></span>  
   
--   Проверять параметры в строке запроса.  
+-   <span data-ttu-id="7fb3a-141">Проверять параметры в строке запроса.</span><span class="sxs-lookup"><span data-stu-id="7fb3a-141">Validate parameters in the query string.</span></span>  
   
-## См. также  
- [Определение службы WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)   
- [Представление данных в виде службы](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)   
- [Настройка службы данных](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="7fb3a-142">См. также</span><span class="sxs-lookup"><span data-stu-id="7fb3a-142">See Also</span></span>  
+ [<span data-ttu-id="7fb3a-143">Определение служб данных WCF</span><span class="sxs-lookup"><span data-stu-id="7fb3a-143">Defining WCF Data Services</span></span>](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
+ [<span data-ttu-id="7fb3a-144">Предоставление данных как службы</span><span class="sxs-lookup"><span data-stu-id="7fb3a-144">Exposing Your Data as a Service</span></span>](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
+ [<span data-ttu-id="7fb3a-145">Настройка службы данных</span><span class="sxs-lookup"><span data-stu-id="7fb3a-145">Configuring the Data Service</span></span>](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)

@@ -1,25 +1,31 @@
 ---
-title: "Выполнение запроса XPath над DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Выполнение запроса XPath к набору данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e8a993c75f33dd3c98da5534658d02b4eeeda51a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Выполнение запроса XPath над DataSet
-Связь между синхронизированным объектом <xref:System.Data.DataSet> и объектом <xref:System.Xml.XmlDataDocument> позволяет использовать службы XML, например запрос XPath, предоставляющий доступ к объекту **XmlDataDocument**, и выполнять некоторые функции более простым способом, чем напрямую обращаться к объекту **DataSet**.  Например, вместо использования метода **Select** объекта <xref:System.Data.DataTable> для перехода по связям к другим таблицам в объекте **DataSet** можно выполнить запрос XPath к объекту **XmlDataDocument**, синхронизированному с объектом **DataSet**, чтобы получить список XML\-элементов в виде объекта <xref:System.Xml.XmlNodeList>.  Узлы в объекте **XmlNodeList**, приведенные к узлам <xref:System.Xml.XmlElement>, затем можно передать методу **GetRowFromElement** **XmlDataDocument**, чтобы вернуть совпадающие ссылки <xref:System.Data.DataRow> к строкам таблицы в синхронизированном объекте **DataSet**.  
+# <a name="performing-an-xpath-query-on-a-dataset"></a><span data-ttu-id="33fea-102">Выполнение запроса XPath к набору данных</span><span class="sxs-lookup"><span data-stu-id="33fea-102">Performing an XPath Query on a DataSet</span></span>
+<span data-ttu-id="33fea-103">Связь между синхронизированным <xref:System.Data.DataSet> и <xref:System.Xml.XmlDataDocument> позволяет использовать XML-служб, таких как запрос языка XML Path (XPath), которые обращаются к **XmlDataDocument** и выполнять некоторые функции более удобным, чем доступ к **DataSet** напрямую.</span><span class="sxs-lookup"><span data-stu-id="33fea-103">The relationship between a synchronized <xref:System.Data.DataSet> and <xref:System.Xml.XmlDataDocument> allows you to make use of XML services, such as the XML Path Language (XPath) query, that access the **XmlDataDocument** and can perform certain functionality more conveniently than accessing the **DataSet** directly.</span></span> <span data-ttu-id="33fea-104">Например, вместо использования **выберите** метод <xref:System.Data.DataTable> для перехода по связям к другим таблицам в **DataSet**, можно выполнить запрос XPath к **XmlDataDocument**  , синхронизируется с **DataSet**, чтобы получить список XML-элементов в виде <xref:System.Xml.XmlNodeList>.</span><span class="sxs-lookup"><span data-stu-id="33fea-104">For example, rather than using the **Select** method of a <xref:System.Data.DataTable> to navigate relationships to other tables in a **DataSet**, you can perform an XPath query on an **XmlDataDocument** that is synchronized with the **DataSet**, to get a list of XML elements in the form of an <xref:System.Xml.XmlNodeList>.</span></span> <span data-ttu-id="33fea-105">Узлы в **XmlNodeList**, приведенное <xref:System.Xml.XmlElement> узлов, может быть передан **GetRowFromElement** метод **XmlDataDocument**, чтобы вернуть совпадающие <xref:System.Data.DataRow> ссылки на строки таблицы в синхронизированном **набора данных**.</span><span class="sxs-lookup"><span data-stu-id="33fea-105">The nodes in the **XmlNodeList**, cast as <xref:System.Xml.XmlElement> nodes, can then be passed to the **GetRowFromElement** method of the **XmlDataDocument**, to return matching <xref:System.Data.DataRow> references to the rows of the table in the synchronized **DataSet**.</span></span>  
   
- Например, следующий образец кода выполняет запрос XPath «по внукам».  Объект **DataSet** заполняется тремя таблицами: **Customers**, **Orders** и **OrderDetails**.  В образце первая связь типа «родители\-потомки» создается между таблицами **Customers** и **Orders** и между таблицами **Orders** и **OrderDetails**.  Затем выполняется запрос XPath, возвращающий объект **XmlNodeList**, содержащий узлы **Customers**, где внучатый узел **OrderDetails** имеет узел **ProductID** со значением 43.  По сути дела, запрос XPath определяет, какой из заказчиков, заказавших продукт, имеет значение узла **ProductID**, равное 43.  
+ <span data-ttu-id="33fea-106">Например, следующий образец кода выполняет запрос XPath «по внукам».</span><span class="sxs-lookup"><span data-stu-id="33fea-106">For example, the following code sample performs a "grandchild" XPath query.</span></span> <span data-ttu-id="33fea-107">**DataSet** заполняется тремя таблицами: **клиентов**, **заказов**, и **OrderDetails**.</span><span class="sxs-lookup"><span data-stu-id="33fea-107">The **DataSet** is filled with three tables: **Customers**, **Orders**, and **OrderDetails**.</span></span> <span data-ttu-id="33fea-108">В этом образце родители потомки сначала создается связь между **клиентов** и **заказов** таблиц и между **заказов** и **OrderDetails** таблиц.</span><span class="sxs-lookup"><span data-stu-id="33fea-108">In the sample, a parent-child relation is first created between the **Customers** and **Orders** tables, and between the **Orders** and **OrderDetails** tables.</span></span> <span data-ttu-id="33fea-109">Затем выполняется запрос XPath для возврата **XmlNodeList** из **клиентов** узлы где внучатый узел **OrderDetails** узел имеет **ProductID**со значением 43.</span><span class="sxs-lookup"><span data-stu-id="33fea-109">An XPath query is then performed to return an **XmlNodeList** of **Customers** nodes where a grandchild **OrderDetails** node has a **ProductID** node with the value of 43.</span></span> <span data-ttu-id="33fea-110">По сути, в образце используется запрос XPath для определения того, какой из заказчиков, заказавших продукт, имеющий **ProductID** 43.</span><span class="sxs-lookup"><span data-stu-id="33fea-110">In essence, the sample is using the XPath query to determine which customers have ordered the product that has the **ProductID** of 43.</span></span>  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -105,6 +111,6 @@ foreach (XmlNode xmlNode in nodeList)
 }  
 ```  
   
-## См. также  
- [Синхронизация DataSet и XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="33fea-111">См. также</span><span class="sxs-lookup"><span data-stu-id="33fea-111">See Also</span></span>  
+ [<span data-ttu-id="33fea-112">Набор данных и XmlDataDocument синхронизации</span><span class="sxs-lookup"><span data-stu-id="33fea-112">DataSet and XmlDataDocument Synchronization</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
+ [<span data-ttu-id="33fea-113">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="33fea-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

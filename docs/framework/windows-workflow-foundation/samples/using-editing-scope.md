@@ -1,49 +1,53 @@
 ---
-title: "Использование области редактирования | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Использование области редактирования"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6aec54cef13bcd99fb65a6305e086fe577b6bc13
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Использование области редактирования
-В этом образце показано, как организовать набор изменений в пакет, чтобы отменить их как одну атомарную операцию.По умолчанию действия, выполняемые автором конструктора действий, автоматически интегрируются в систему отмены и повтора.  
+# <a name="using-editing-scope"></a><span data-ttu-id="eff0c-102">Использование области редактирования</span><span class="sxs-lookup"><span data-stu-id="eff0c-102">Using Editing Scope</span></span>
+<span data-ttu-id="eff0c-103">В этом образце показано, как организовать набор изменений в пакет, чтобы отменить их как одну атомарную операцию.</span><span class="sxs-lookup"><span data-stu-id="eff0c-103">This sample demonstrates how to batch a set of changes so that they can be undone in a single atomic unit.</span></span> <span data-ttu-id="eff0c-104">По умолчанию действия, выполняемые автором конструктора действий, автоматически интегрируются в систему отмены и повтора.</span><span class="sxs-lookup"><span data-stu-id="eff0c-104">By default, the actions taken by an activity designer author are automatically integrated into the Undo/Redo system.</span></span>  
   
-## Демонстрации  
- Редактирование области, отмена и повтор.  
+## <a name="demonstrates"></a><span data-ttu-id="eff0c-105">Демонстрации</span><span class="sxs-lookup"><span data-stu-id="eff0c-105">Demonstrates</span></span>  
+ <span data-ttu-id="eff0c-106">Редактирование области, отмена и повтор.</span><span class="sxs-lookup"><span data-stu-id="eff0c-106">Editing scope and Undo and Redo.</span></span>  
   
-## Обсуждение  
- В этом образце показано, как организовать набор изменений в дереве <xref:System.Activities.Presentation.Model.ModelItem> в рамках одной единицы работы.Обратите внимание, что при привязке к <xref:System.Activities.Presentation.Model.ModelItem> значений непосредственно из конструктора WPF изменения вносятся автоматически.В данном образце показано, что следует делать, когда организуемые в пакет изменения производятся посредством императивного кода, а не единичным изменением.  
+## <a name="discussion"></a><span data-ttu-id="eff0c-107">Обсуждение</span><span class="sxs-lookup"><span data-stu-id="eff0c-107">Discussion</span></span>  
+ <span data-ttu-id="eff0c-108">В этом образце показано, как организовать набор изменений в дереве <xref:System.Activities.Presentation.Model.ModelItem> в рамках одной единицы работы.</span><span class="sxs-lookup"><span data-stu-id="eff0c-108">This sample demonstrates how to batch a set of changes to the <xref:System.Activities.Presentation.Model.ModelItem> tree within a single unit of work.</span></span> <span data-ttu-id="eff0c-109">Обратите внимание, что при привязке к <xref:System.Activities.Presentation.Model.ModelItem> значений непосредственно из конструктора WPF изменения вносятся автоматически.</span><span class="sxs-lookup"><span data-stu-id="eff0c-109">Note that when binding to <xref:System.Activities.Presentation.Model.ModelItem> values directly from a WPF designer, changes are applied automatically.</span></span> <span data-ttu-id="eff0c-110">В данном образце показано, что следует делать, когда организуемые в пакет изменения производятся посредством императивного кода, а не единичным изменением.</span><span class="sxs-lookup"><span data-stu-id="eff0c-110">This sample demonstrates what must be done when multiple changes to be batched are being made through imperative code, rather than a single change.</span></span>  
   
- В данном образце добавляются три действия.Когда начинается редактирование, для экземпляра <xref:System.Activities.Presentation.Model.ModelItem> вызывается метод <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>.Изменения, внесенные в дерево <xref:System.Activities.Presentation.Model.ModelItem> в рамках данной области редактирования, организуются в пакет.Команда <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> возвращает объект <xref:System.Activities.Presentation.Model.EditingScope>, с помощью которого можно управлять данным экземпляром.Чтобы зафиксировать или восстановить область редактирования, можно вызвать метод <xref:System.Activities.Presentation.Model.EditingScope.OnComplete%2A> или <xref:System.Activities.Presentation.Model.EditingScope.OnRevert%2A>.  
+ <span data-ttu-id="eff0c-111">В данном образце добавляются три действия.</span><span class="sxs-lookup"><span data-stu-id="eff0c-111">In this sample, three activities are added.</span></span> <span data-ttu-id="eff0c-112">Когда начинается редактирование, для экземпляра <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> вызывается метод <xref:System.Activities.Presentation.Model.ModelItem>.</span><span class="sxs-lookup"><span data-stu-id="eff0c-112">When editing begins, <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> is called on an instance of <xref:System.Activities.Presentation.Model.ModelItem>.</span></span> <span data-ttu-id="eff0c-113">Изменения, внесенные в дерево <xref:System.Activities.Presentation.Model.ModelItem> в рамках данной области редактирования, организуются в пакет.</span><span class="sxs-lookup"><span data-stu-id="eff0c-113">Changes made to the <xref:System.Activities.Presentation.Model.ModelItem> tree within this editing scope are batched.</span></span> <span data-ttu-id="eff0c-114">Команда <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> возвращает объект <xref:System.Activities.Presentation.Model.EditingScope>, с помощью которого можно управлять данным экземпляром.</span><span class="sxs-lookup"><span data-stu-id="eff0c-114">The <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> command returns an <xref:System.Activities.Presentation.Model.EditingScope>, which can be used to control this instance.</span></span> <span data-ttu-id="eff0c-115">Чтобы зафиксировать или восстановить область редактирования, можно вызвать метод <xref:System.Activities.Presentation.Model.EditingScope.OnComplete%2A> или <xref:System.Activities.Presentation.Model.EditingScope.OnRevert%2A>.</span><span class="sxs-lookup"><span data-stu-id="eff0c-115">Either <xref:System.Activities.Presentation.Model.EditingScope.OnComplete%2A> or <xref:System.Activities.Presentation.Model.EditingScope.OnRevert%2A> can be called to either commit or revert the editing scope.</span></span>  
   
- Кроме того, можно вкладывать друг в друга объекты <xref:System.Activities.Presentation.Model.EditingScope>, которые позволяют отслеживать несколько групп изменений как часть более крупной области изменений, и которые можно регулировать вручную.Сценарий, использующий эту возможность, полезен при необходимости по отдельности фиксировать или восстанавливать изменения из нескольких диалогов, которые считаются единичными атомарными операциями.В данном образце области редактирования накапливаются с использованием коллекции <xref:System.Collections.ObjectModel.ObservableCollection%601> объектов типа <xref:System.Activities.Presentation.Model.ModelEditingScope>.Коллекция <xref:System.Collections.ObjectModel.ObservableCollection%601> используется таким образом, чтобы глубину вложения можно было контролировать через интерфейс конструктора.  
+ <span data-ttu-id="eff0c-116">Кроме того, можно вкладывать друг в друга объекты <xref:System.Activities.Presentation.Model.EditingScope>, которые позволяют отслеживать несколько групп изменений как часть более крупной области изменений, и которые можно регулировать вручную.</span><span class="sxs-lookup"><span data-stu-id="eff0c-116">You can also nest <xref:System.Activities.Presentation.Model.EditingScope> objects, which allows for multiple sets of changes to be tracked as part of a larger editing scope and can be controlled individually.</span></span> <span data-ttu-id="eff0c-117">Сценарий, использующий эту возможность, полезен при необходимости по отдельности фиксировать или восстанавливать изменения из нескольких диалогов, которые считаются единичными атомарными операциями.</span><span class="sxs-lookup"><span data-stu-id="eff0c-117">A scenario that may use this feature would be when changes from multiple dialogs must be committed or reverted separately, with all changes being treated as a single atomic operation.</span></span> <span data-ttu-id="eff0c-118">В данном образце области редактирования накапливаются с использованием коллекции <xref:System.Collections.ObjectModel.ObservableCollection%601> объектов типа <xref:System.Activities.Presentation.Model.ModelEditingScope>.</span><span class="sxs-lookup"><span data-stu-id="eff0c-118">In this sample, the editing scopes are stacked using an <xref:System.Collections.ObjectModel.ObservableCollection%601> of type <xref:System.Activities.Presentation.Model.ModelEditingScope>.</span></span> <span data-ttu-id="eff0c-119">Коллекция <xref:System.Collections.ObjectModel.ObservableCollection%601> используется таким образом, чтобы глубину вложения можно было контролировать через интерфейс конструктора.</span><span class="sxs-lookup"><span data-stu-id="eff0c-119">The <xref:System.Collections.ObjectModel.ObservableCollection%601> is used so that the depth of the nesting can be observed on the designer surface.</span></span>  
   
-## Настройка, построение и выполнение образца  
+## <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="eff0c-120">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="eff0c-120">To set up, build, and run the sample</span></span>  
   
-1.  Постройте и запустите образец, после чего модифицируйте рабочий процесс при помощи кнопок слева.  
+1.  <span data-ttu-id="eff0c-121">Постройте и запустите образец, после чего модифицируйте рабочий процесс при помощи кнопок слева.</span><span class="sxs-lookup"><span data-stu-id="eff0c-121">Build and run the sample, and then use the buttons on the left to modify the workflow.</span></span>  
   
-2.  Нажмите кнопку **Открыть область редактирования**.  
+2.  <span data-ttu-id="eff0c-122">Нажмите кнопку **открыть область редактирования**.</span><span class="sxs-lookup"><span data-stu-id="eff0c-122">Click **Open Editing Scope**.</span></span>  
   
-    1.  Эта команда вызывает метод <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, создающий область редактирования и отправляющий ее в стек редактирования.  
+    1.  <span data-ttu-id="eff0c-123">Эта команда вызывает метод <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, создающий область редактирования и отправляющий ее в стек редактирования.</span><span class="sxs-lookup"><span data-stu-id="eff0c-123">This command calls <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> that creates an editing scope and pushes it onto the editing stack.</span></span>  
   
-    2.  Затем к выбранному элементу <xref:System.Activities.Presentation.Model.ModelItem> добавляются три действия.Стоит заметить, что если область редактирования открывалась не с помощью метода <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, на полотне конструктора появятся три новых действия.Пока эта операция еще находится в очереди <xref:System.Activities.Presentation.Model.EditingScope>, конструктор не обновляется.  
+    2.  <span data-ttu-id="eff0c-124">Затем к выбранному элементу <xref:System.Activities.Presentation.Model.ModelItem> добавляются три действия.</span><span class="sxs-lookup"><span data-stu-id="eff0c-124">Three activities are then added to the selected <xref:System.Activities.Presentation.Model.ModelItem>.</span></span> <span data-ttu-id="eff0c-125">Стоит заметить, что если область редактирования открывалась не с помощью метода <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, на полотне конструктора появятся три новых действия.</span><span class="sxs-lookup"><span data-stu-id="eff0c-125">Note that if the editing scope had not been opened with <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, three new activities would appear on the designer canvas.</span></span> <span data-ttu-id="eff0c-126">Пока эта операция еще находится в очереди <xref:System.Activities.Presentation.Model.EditingScope>, конструктор не обновляется.</span><span class="sxs-lookup"><span data-stu-id="eff0c-126">Because this operation is still pending within the <xref:System.Activities.Presentation.Model.EditingScope>, the designer is not yet updated.</span></span>  
   
-3.  Чтобы зафиксировать область редактирования, нажмите кнопку **Закрыть область редактирования**.Три действия появятся в конструкторе.  
+3.  <span data-ttu-id="eff0c-127">Нажмите клавишу **закрыть область редактирования** чтобы зафиксировать область редактирования.</span><span class="sxs-lookup"><span data-stu-id="eff0c-127">Press **Close Editing Scope** to commit the editing scope.</span></span> <span data-ttu-id="eff0c-128">Три действия появятся в конструкторе.</span><span class="sxs-lookup"><span data-stu-id="eff0c-128">Three activities appear in the designer.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="eff0c-129">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="eff0c-129">The samples may already be installed on your machine.</span></span> <span data-ttu-id="eff0c-130">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="eff0c-130">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="eff0c-131">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="eff0c-131">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="eff0c-132">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="eff0c-132">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\UsingEditingScope`
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\UsingEditingScope`

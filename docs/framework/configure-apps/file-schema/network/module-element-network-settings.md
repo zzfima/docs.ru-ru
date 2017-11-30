@@ -1,85 +1,87 @@
 ---
-title: "Элемент &lt;module&gt; (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#module"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/module"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<module> - элемент"
-  - "module - элемент"
+title: "&lt;модуль&gt; элемент (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#module
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/module
+helpviewer_keywords:
+- module element
+- <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: a039f6ed985997c5557659abd299fe0fc7699a1b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;module&gt; (параметры сети)
-Добавляет в приложение новый модуль прокси.  
+# <a name="ltmodulegt-element-network-settings"></a><span data-ttu-id="a9801-102">&lt;модуль&gt; элемент (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="a9801-102">&lt;module&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="a9801-103">Добавляет в приложение новый модуль прокси-сервера.</span><span class="sxs-lookup"><span data-stu-id="a9801-103">Adds a new proxy module to the application.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="a9801-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="a9801-104">\<configuration></span></span>  
+<span data-ttu-id="a9801-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="a9801-105">\<system.net></span></span>  
+<span data-ttu-id="a9801-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="a9801-106">\<defaultProxy></span></span>  
+<span data-ttu-id="a9801-107">\<модуль ></span><span class="sxs-lookup"><span data-stu-id="a9801-107">\<module></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="a9801-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a9801-108">Syntax</span></span>  
   
-      <module   
-   type = "name", System, Version="version number", Culture="culture", PublicKeyToken="token" "   
+```xml  
+<module   
+  type="type_fullname, assembly_fullname"   
 />  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a9801-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="a9801-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="a9801-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="a9801-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="a9801-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="a9801-111">Attributes</span></span>  
   
-|**Атрибут**|**Описание**|  
-|-----------------|------------------|  
-|`type`|Имя и особенности модуля, реализующего прокси.|  
+|<span data-ttu-id="a9801-112">**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))</span><span class="sxs-lookup"><span data-stu-id="a9801-112">**Attribute**</span></span>|<span data-ttu-id="a9801-113">**Описание**</span><span class="sxs-lookup"><span data-stu-id="a9801-113">**Description**</span></span>|  
+|-------------------|---------------------|  
+|`type`|<span data-ttu-id="a9801-114">Полное имя типа (обозначается <xref:System.Type.FullName%2A> свойства) и имя сборки (обозначается <xref:System.Reflection.Assembly.FullName%2A> свойства), разделенных запятыми, реализующая прокси-сервер.</span><span class="sxs-lookup"><span data-stu-id="a9801-114">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma, that implements the proxy.</span></span>|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a><span data-ttu-id="a9801-115">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="a9801-115">Child Elements</span></span>  
+ <span data-ttu-id="a9801-116">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="a9801-116">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="a9801-117">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="a9801-117">Parent Elements</span></span>  
   
-|**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Настраивает протокол HTTP прокси\-сервера.|  
+|<span data-ttu-id="a9801-118">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="a9801-118">**Element**</span></span>|<span data-ttu-id="a9801-119">**Описание**</span><span class="sxs-lookup"><span data-stu-id="a9801-119">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="a9801-120">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="a9801-120">defaultProxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|<span data-ttu-id="a9801-121">Настраивает прокси-сервер протокола передачи гипертекста (HTTP).</span><span class="sxs-lookup"><span data-stu-id="a9801-121">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
   
-## Заметки  
- Элемент `module` регистрирует классы прокси, реализующие интерфейс <xref:System.Net.IWebProxy>.  После регистрации прокси\-класса элемент `module` может использоваться для запроса данных через поддерживаемый прокси.  
+## <a name="remarks"></a><span data-ttu-id="a9801-122">Примечания</span><span class="sxs-lookup"><span data-stu-id="a9801-122">Remarks</span></span>  
+ <span data-ttu-id="a9801-123">`module` Элемент регистрирует прокси-классы, реализующие <xref:System.Net.IWebProxy> интерфейса.</span><span class="sxs-lookup"><span data-stu-id="a9801-123">The `module` element registers proxy classes that implement the <xref:System.Net.IWebProxy> interface.</span></span> <span data-ttu-id="a9801-124">После регистрации прокси-класса элемент `module` может использоваться для запроса данных через поддерживаемый прокси.</span><span class="sxs-lookup"><span data-stu-id="a9801-124">After registering the proxy class, `module` can be used to request information through the supported proxy.</span></span>  
   
- Значением для атрибута `type` должно быть имя допустимой динамически загружаемой библиотеки \(DLL\) и имя класса модуля.  
+ <span data-ttu-id="a9801-125">Значение для `type` атрибут должен иметь имя класса, модуля и имя из его соответствующий динамических ссылок библиотеки (DLL).</span><span class="sxs-lookup"><span data-stu-id="a9801-125">The value for the `type` attribute should be the class name of the module and the name of its corresponding Dynamic Link Library (DLL).</span></span>  
   
-## Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+## <a name="configuration-files"></a><span data-ttu-id="a9801-126">Файлы конфигурации</span><span class="sxs-lookup"><span data-stu-id="a9801-126">Configuration Files</span></span>  
+ <span data-ttu-id="a9801-127">Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="a9801-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## Пример  
- В следующем примере кода регистрируется пользовательский прокси\-класс.  
+## <a name="example"></a><span data-ttu-id="a9801-128">Пример</span><span class="sxs-lookup"><span data-stu-id="a9801-128">Example</span></span>  
+ <span data-ttu-id="a9801-129">В следующем примере регистрируется пользовательский прокси-класс.</span><span class="sxs-lookup"><span data-stu-id="a9801-129">The following example registers a custom proxy class.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <defaultProxy>  
       <module  
-        type = "Test.CustomWebProxy, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"  
+        type="Test.CustomWebProxy, TestProxy, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b23a5c561934e385"  
       />  
     </defaultProxy>  
   </system.net>  
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Net.IWebProxy?displayProperty=fullName>   
- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="a9801-130">См. также</span><span class="sxs-lookup"><span data-stu-id="a9801-130">See Also</span></span>  
+ <xref:System.Net.IWebProxy?displayProperty=nameWithType>  
+ [<span data-ttu-id="a9801-131">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="a9801-131">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

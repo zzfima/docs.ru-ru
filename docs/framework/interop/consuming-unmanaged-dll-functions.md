@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - unmanaged functions, calling
 - COM interop, DLL functions
@@ -26,70 +20,68 @@ helpviewer_keywords:
 - platform invoke
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bc0e2e7af861fd6ee233cad5069fef862bb29717
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ec93728566d6aa16d4b9b15b171d79831cc0dbeb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="consuming-unmanaged-dll-functions"></a>Использование неуправляемых функций DLL
-Вызов неуправляемого кода — это служба, позволяющая управляемому коду вызывать неуправляемые функции, реализованные в библиотеках динамической компоновки (DLL), например функции библиотек Win32 API. Он обнаруживает и вызывает экспортированную функцию и при необходимости маршалирует ее аргументы (целые числа, строки, массивы, структуры и так далее) через границы взаимодействия. Дополнительные сведения об этой службе см. в разделе [Подробный обзор вызова неуправляемого кода](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243).  
+# <a name="consuming-unmanaged-dll-functions"></a><span data-ttu-id="9f04d-102">Использование неуправляемых функций DLL</span><span class="sxs-lookup"><span data-stu-id="9f04d-102">Consuming Unmanaged DLL Functions</span></span>
+<span data-ttu-id="9f04d-103">Вызов неуправляемого кода — это служба, позволяющая управляемому коду вызывать неуправляемые функции, реализованные в библиотеках динамической компоновки (DLL), например функции библиотек Win32 API.</span><span class="sxs-lookup"><span data-stu-id="9f04d-103">Platform invoke is a service that enables managed code to call unmanaged functions implemented in dynamic link libraries (DLLs), such as those in the Win32 API.</span></span> <span data-ttu-id="9f04d-104">Он обнаруживает и вызывает экспортированную функцию и при необходимости маршалирует ее аргументы (целые числа, строки, массивы, структуры и так далее) через границы взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="9f04d-104">It locates and invokes an exported function and marshals its arguments (integers, strings, arrays, structures, and so on) across the interoperation boundary as needed.</span></span> <span data-ttu-id="9f04d-105">Дополнительные сведения об этой службе см. в разделе [Подробный обзор вызова неуправляемого кода](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243).</span><span class="sxs-lookup"><span data-stu-id="9f04d-105">For more information about this service, see [A Closer Look at Platform Invoke](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243).</span></span>  
   
- В этом разделе представлено несколько задач, связанных с использованием неуправляемых функций DLL. Кроме того, раздел содержит общие сведения и ссылки на дополнительную информацию и примеры.  
+ <span data-ttu-id="9f04d-106">В этом разделе представлено несколько задач, связанных с использованием неуправляемых функций DLL.</span><span class="sxs-lookup"><span data-stu-id="9f04d-106">This section introduces several tasks associated with consuming unmanaged DLL functions.</span></span> <span data-ttu-id="9f04d-107">Кроме того, раздел содержит общие сведения и ссылки на дополнительную информацию и примеры.</span><span class="sxs-lookup"><span data-stu-id="9f04d-107">In addition to the following tasks, there are general considerations and a link providing additional information and examples.</span></span>  
   
-#### <a name="to-consume-exported-dll-functions"></a>Использование экспортированных функций DLL  
+#### <a name="to-consume-exported-dll-functions"></a><span data-ttu-id="9f04d-108">Использование экспортированных функций DLL</span><span class="sxs-lookup"><span data-stu-id="9f04d-108">To consume exported DLL functions</span></span>  
   
-1.  [Идентификация функций в библиотеках DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md).  
+1.  <span data-ttu-id="9f04d-109">[Идентификация функций в библиотеках DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md).</span><span class="sxs-lookup"><span data-stu-id="9f04d-109">[Identify functions in DLLs](../../../docs/framework/interop/identifying-functions-in-dlls.md).</span></span>  
   
-     Как минимум, необходимо указать имя функции и имя библиотеки DLL, содержащей ее.  
+     <span data-ttu-id="9f04d-110">Как минимум, необходимо указать имя функции и имя библиотеки DLL, содержащей ее.</span><span class="sxs-lookup"><span data-stu-id="9f04d-110">Minimally, you must specify the name of the function and name of the DLL that contains it.</span></span>  
   
-2.  [Создание класса, содержащего функции DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md).  
+2.  <span data-ttu-id="9f04d-111">[Создание класса, содержащего функции DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md).</span><span class="sxs-lookup"><span data-stu-id="9f04d-111">[Create a class to hold DLL functions](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md).</span></span>  
   
-     Можно использовать существующий класс, создать отдельный класс для каждой неуправляемой функции или создать один класс, содержащий набор связанных неуправляемых функций.  
+     <span data-ttu-id="9f04d-112">Можно использовать существующий класс, создать отдельный класс для каждой неуправляемой функции или создать один класс, содержащий набор связанных неуправляемых функций.</span><span class="sxs-lookup"><span data-stu-id="9f04d-112">You can use an existing class, create an individual class for each unmanaged function, or create one class that contains a set of related unmanaged functions.</span></span>  
   
-3.  [Создание прототипов в управляемом коде](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
+3.  <span data-ttu-id="9f04d-113">[Создание прототипов в управляемом коде](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).</span><span class="sxs-lookup"><span data-stu-id="9f04d-113">[Create prototypes in managed code](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).</span></span>  
   
-     [Visual Basic] Используйте оператор **Declare** с ключевыми словами **Function** и **Lib**. В редких случаях можно использовать атрибут **DllImportAttribute** с ключевыми словами **Shared Function**. Такие случаи рассматриваются далее в этом разделе.  
+     <span data-ttu-id="9f04d-114">[Visual Basic] Используйте оператор **Declare** с ключевыми словами **Function** и **Lib**.</span><span class="sxs-lookup"><span data-stu-id="9f04d-114">[Visual Basic] Use the **Declare** statement with the **Function** and **Lib** keywords.</span></span> <span data-ttu-id="9f04d-115">В редких случаях можно использовать атрибут **DllImportAttribute** с ключевыми словами **Shared Function**.</span><span class="sxs-lookup"><span data-stu-id="9f04d-115">In some rare cases, you can use the **DllImportAttribute** with the **Shared Function** keywords.</span></span> <span data-ttu-id="9f04d-116">Такие случаи рассматриваются далее в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="9f04d-116">These cases are explained later in this section.</span></span>  
   
-     [C#] Используйте атрибут **DllImportAttribute** для идентификации библиотеки DLL и функции. Пометьте метод модификаторами **static** и **extern**.  
+     <span data-ttu-id="9f04d-117">[C#] Используйте атрибут **DllImportAttribute** для идентификации библиотеки DLL и функции.</span><span class="sxs-lookup"><span data-stu-id="9f04d-117">[C#] Use the **DllImportAttribute** to identify the DLL and function.</span></span> <span data-ttu-id="9f04d-118">Пометьте метод модификаторами **static** и **extern**.</span><span class="sxs-lookup"><span data-stu-id="9f04d-118">Mark the method with the **static** and **extern** modifiers.</span></span>  
   
-     [C++] Используйте атрибут **DllImportAttribute** для идентификации библиотеки DLL и функции. Пометьте метод или функцию оболочки модификатором **extern "C"**.  
+     <span data-ttu-id="9f04d-119">[C++] Используйте атрибут **DllImportAttribute** для идентификации библиотеки DLL и функции.</span><span class="sxs-lookup"><span data-stu-id="9f04d-119">[C++] Use the **DllImportAttribute** to identify the DLL and function.</span></span> <span data-ttu-id="9f04d-120">Пометьте метод или функцию оболочки модификатором **extern "C"**.</span><span class="sxs-lookup"><span data-stu-id="9f04d-120">Mark the wrapper method or function with **extern "C"**.</span></span>  
   
-4.  [Вызов функции DLL](../../../docs/framework/interop/calling-a-dll-function.md).  
+4.  <span data-ttu-id="9f04d-121">[Вызов функции DLL](../../../docs/framework/interop/calling-a-dll-function.md).</span><span class="sxs-lookup"><span data-stu-id="9f04d-121">[Call a DLL function](../../../docs/framework/interop/calling-a-dll-function.md).</span></span>  
   
-     Вызовите метод управляемого класса так же, как и любой другой управляемый метод. [Передача структур](../../../docs/framework/interop/passing-structures.md) и [реализация функций обратного вызова](../../../docs/framework/interop/callback-functions.md) представляют собой особые случаи.  
+     <span data-ttu-id="9f04d-122">Вызовите метод управляемого класса так же, как и любой другой управляемый метод.</span><span class="sxs-lookup"><span data-stu-id="9f04d-122">Call the method on your managed class as you would any other managed method.</span></span> <span data-ttu-id="9f04d-123">[Передача структур](../../../docs/framework/interop/passing-structures.md) и [реализация функций обратного вызова](../../../docs/framework/interop/callback-functions.md) представляют собой особые случаи.</span><span class="sxs-lookup"><span data-stu-id="9f04d-123">[Passing structures](../../../docs/framework/interop/passing-structures.md) and [implementing callback functions](../../../docs/framework/interop/callback-functions.md) are special cases.</span></span>  
   
- Примеры, демонстрирующие создание объявлений на основе .NET, которые используются с вызовом неуправляемого кода, см. в разделе [Маршалинг данных при вызове неуправляемого кода](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+ <span data-ttu-id="9f04d-124">Примеры, демонстрирующие создание объявлений на основе .NET, которые используются с вызовом неуправляемого кода, см. в разделе [Маршалинг данных при вызове неуправляемого кода](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span><span class="sxs-lookup"><span data-stu-id="9f04d-124">For examples that demonstrate how to construct .NET-based declarations to be used with platform invoke, see [Marshaling Data with Platform Invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span></span>  
   
-## <a name="a-closer-look-at-platform-invoke"></a>Подробный обзор вызова неуправляемого кода  
- Вызов неуправляемого кода использует метаданные для нахождения экспортированных функций и маршалинга их аргументов во время выполнения. Данный процесс показан на следующем рисунке.  
+## <a name="a-closer-look-at-platform-invoke"></a><span data-ttu-id="9f04d-125">Подробный обзор вызова неуправляемого кода</span><span class="sxs-lookup"><span data-stu-id="9f04d-125">A closer look at platform invoke</span></span>  
+ <span data-ttu-id="9f04d-126">Вызов неуправляемого кода использует метаданные для нахождения экспортированных функций и маршалинга их аргументов во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="9f04d-126">Platform invoke relies on metadata to locate exported functions and marshal their arguments at run time.</span></span> <span data-ttu-id="9f04d-127">Данный процесс показан на следующем рисунке.</span><span class="sxs-lookup"><span data-stu-id="9f04d-127">The following illustration shows this process.</span></span>  
   
- ![Платформозависимый вызов](../../../docs/framework/interop/media/pinvoke.gif "pinvoke")  
-Вызов неуправляемой функции DLL с помощью вызова неуправляемого кода  
+ <span data-ttu-id="9f04d-128">![Платформозависимый вызов](../../../docs/framework/interop/media/pinvoke.gif "pinvoke")</span><span class="sxs-lookup"><span data-stu-id="9f04d-128">![Platform invoke](../../../docs/framework/interop/media/pinvoke.gif "pinvoke")</span></span>  
+<span data-ttu-id="9f04d-129">Вызов неуправляемой функции DLL с помощью вызова неуправляемого кода</span><span class="sxs-lookup"><span data-stu-id="9f04d-129">A platform invoke call to an unmanaged DLL function</span></span>  
   
- Когда неуправляемый код вызывает неуправляемую функцию, то он выполняет следующую последовательность действий:  
+ <span data-ttu-id="9f04d-130">Когда неуправляемый код вызывает неуправляемую функцию, то он выполняет следующую последовательность действий:</span><span class="sxs-lookup"><span data-stu-id="9f04d-130">When platform invoke calls an unmanaged function, it performs the following sequence of actions:</span></span>  
   
-1.  Определяет библиотеку DLL, содержащую функцию.  
+1.  <span data-ttu-id="9f04d-131">Определяет библиотеку DLL, содержащую функцию.</span><span class="sxs-lookup"><span data-stu-id="9f04d-131">Locates the DLL containing the function.</span></span>  
   
-2.  Загружает библиотеку DLL в память.  
+2.  <span data-ttu-id="9f04d-132">Загружает библиотеку DLL в память.</span><span class="sxs-lookup"><span data-stu-id="9f04d-132">Loads the DLL into memory.</span></span>  
   
-3.  Находит адрес функции в памяти и помещает ее аргументы в стек, выполнив по необходимости маршалинг данных.  
+3.  <span data-ttu-id="9f04d-133">Находит адрес функции в памяти и помещает ее аргументы в стек, выполнив по необходимости маршалинг данных.</span><span class="sxs-lookup"><span data-stu-id="9f04d-133">Locates the address of the function in memory and pushes its arguments onto the stack, marshaling data as required.</span></span>  
   
     > [!NOTE]
-    >  Поиск и загрузка библиотеки DLL, а также определение адреса функции в памяти выполняются только при первом вызове функции.  
+    >  <span data-ttu-id="9f04d-134">Поиск и загрузка библиотеки DLL, а также определение адреса функции в памяти выполняются только при первом вызове функции.</span><span class="sxs-lookup"><span data-stu-id="9f04d-134">Locating and loading the DLL, and locating the address of the function in memory occur only on the first call to the function.</span></span>  
   
-4.  Передает управление неуправляемой функции.  
+4.  <span data-ttu-id="9f04d-135">Передает управление неуправляемой функции.</span><span class="sxs-lookup"><span data-stu-id="9f04d-135">Transfers control to the unmanaged function.</span></span>  
   
- Вызов неуправляемого кода вызывает исключения, создаваемые неуправляемой функцией для управляемого вызывающего объекта.  
+ <span data-ttu-id="9f04d-136">Вызов неуправляемого кода вызывает исключения, создаваемые неуправляемой функцией для управляемого вызывающего объекта.</span><span class="sxs-lookup"><span data-stu-id="9f04d-136">Platform invoke throws exceptions generated by the unmanaged function to the managed caller.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Взаимодействие с неуправляемым кодом](../../../docs/framework/interop/index.md)   
- [Примеры вызовов неуправляемого кода](../../../docs/framework/interop/platform-invoke-examples.md)   
- [Маршалинг взаимодействия](../../../docs/framework/interop/interop-marshaling.md)   
- [Использование неуправляемых функций DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
-
+## <a name="see-also"></a><span data-ttu-id="9f04d-137">См. также</span><span class="sxs-lookup"><span data-stu-id="9f04d-137">See Also</span></span>  
+ [<span data-ttu-id="9f04d-138">Взаимодействие с неуправляемым кодом</span><span class="sxs-lookup"><span data-stu-id="9f04d-138">Interoperating with Unmanaged Code</span></span>](../../../docs/framework/interop/index.md)  
+ [<span data-ttu-id="9f04d-139">Примеры вызовов неуправляемого кода</span><span class="sxs-lookup"><span data-stu-id="9f04d-139">Platform Invoke Examples</span></span>](../../../docs/framework/interop/platform-invoke-examples.md)  
+ [<span data-ttu-id="9f04d-140">Маршалинг взаимодействия</span><span class="sxs-lookup"><span data-stu-id="9f04d-140">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)  
+ [<span data-ttu-id="9f04d-141">Использование неуправляемых функций DLL</span><span class="sxs-lookup"><span data-stu-id="9f04d-141">Consuming Unmanaged DLL Functions</span></span>](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)

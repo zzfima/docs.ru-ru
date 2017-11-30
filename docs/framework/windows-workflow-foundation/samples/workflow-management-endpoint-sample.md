@@ -1,43 +1,47 @@
 ---
-title: "Образец конечной точки управления рабочим процессом | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Образец конечной точки управления рабочим процессом"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3ac6e08f-c43d-4bb7-83c3-e3890a4dac03
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9d13d1d2af449631f93dd4df29ff41113ffbbfec
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Образец конечной точки управления рабочим процессом
-Этот образец показывает, как можно использовать конечную точку управления рабочего процесса для создания и запуска рабочих процессов как локально, так и удаленно.В следующем образце показано создание узла конечной точки управления, и клиентов, вызывающих конечную точку управления для создания и запуска экземпляра рабочего процесса.Рабочий процесс не является службой.  
+# <a name="workflow-management-endpoint-sample"></a><span data-ttu-id="947ae-102">Образец конечной точки управления рабочим процессом</span><span class="sxs-lookup"><span data-stu-id="947ae-102">Workflow Management Endpoint Sample</span></span>
+<span data-ttu-id="947ae-103">Этот образец показывает, как можно использовать конечную точку управления рабочего процесса для создания и запуска рабочих процессов как локально, так и удаленно.</span><span class="sxs-lookup"><span data-stu-id="947ae-103">This sample shows how a workflow control endpoint can be used to create and run workflows both locally and remotely.</span></span> <span data-ttu-id="947ae-104">В следующем образце показано создание узла конечной точки управления, и клиентов, вызывающих конечную точку управления для создания и запуска экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="947ae-104">The sample demonstrates how to host a control endpoint and write clients that call the control endpoint to create and run the instance of a workflow.</span></span> <span data-ttu-id="947ae-105">Рабочий процесс не является службой.</span><span class="sxs-lookup"><span data-stu-id="947ae-105">The workflow is not a service.</span></span>  
   
- На стороне службы образца рабочий процесс размещен с помощью WorkflowServiceHost, также добавлен WorkflowControlEndpoint, что позволяет клиентам выполнять операции управления \(приостановка, запуск и т. д.\).Добавлено также определяемое пользователем создание конечной точки CreationEndpoint, что позволяет создать рабочий процесс.Затем служба использует эти конечные точки для запуска рабочего процесса в приостановленном состоянии, а после этого возобновляет рабочий процесс.Клиент выполняет те же операции, но в коде клиента.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] этих интерфейсах см. в разделах [Конечная точка элемента управления рабочего процесса](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md) и [Как разместить не являющийся службой рабочий процесс в службах IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-non-service-workflow-in-iis.md)  
+ <span data-ttu-id="947ae-106">На стороне службы образца рабочий процесс размещен с помощью WorkflowServiceHost, а также добавлен WorkflowControlEndpoint, что позволяет клиентам выполнять операции управления (приостановка, запуск и т. д.).</span><span class="sxs-lookup"><span data-stu-id="947ae-106">On the service side of the sample a workflow is hosted with WorkflowServiceHost and a WorkflowControlEndpoint is added so that clients can perform control operations (Suspend, Start, etc).</span></span> <span data-ttu-id="947ae-107">Добавлено также определяемое пользователем создание конечной точки CreationEndpoint, что позволяет создать рабочий процесс.</span><span class="sxs-lookup"><span data-stu-id="947ae-107">A user-defined CreationEndpoint is also added to allow the workflow to be created.</span></span> <span data-ttu-id="947ae-108">Затем служба использует эти конечные точки для запуска рабочего процесса в приостановленном состоянии, а после этого возобновляет рабочий процесс.</span><span class="sxs-lookup"><span data-stu-id="947ae-108">The service then uses these endpoints to start the workflow in a suspended state and then resume the workflow.</span></span> <span data-ttu-id="947ae-109">Клиент выполняет те же операции, но в коде клиента.</span><span class="sxs-lookup"><span data-stu-id="947ae-109">The client performs the same operations but from the client code.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="947ae-110">просмотреть эти интерфейсы, [конечной точки управления рабочего процесса](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md) и [как: разместить не являющийся службой рабочий процесс в службах IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-non-service-workflow-in-iis.md)</span><span class="sxs-lookup"><span data-stu-id="947ae-110"> these interfaces see, [Workflow Control Endpoint](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md) and [How to: Host a non-service workflow in IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-non-service-workflow-in-iis.md)</span></span>  
   
-#### Запуск образца  
+#### <a name="to-run-the-sample"></a><span data-ttu-id="947ae-111">Выполнение образца</span><span class="sxs-lookup"><span data-stu-id="947ae-111">To run the sample</span></span>  
   
-1.  Запустите среду [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] с правами администратора.  
+1.  <span data-ttu-id="947ae-112">Запустите среду [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] с правами администратора.</span><span class="sxs-lookup"><span data-stu-id="947ae-112">Run [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] with administrator privileges.</span></span>  
   
-2.  Откройте решение ManagementEndpoint.sln в [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+2.  <span data-ttu-id="947ae-113">Откройте решение ManagementEndpoint.sln в [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="947ae-113">Open the ManagementEndpoint.sln solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-3.  Чтобы построить решение, нажмите сочетание клавиш CTRL\+SHIFT\+B или выберите команду **Построить решение** в меню **Построение**.  
+3.  <span data-ttu-id="947ae-114">Чтобы построить решение, нажмите клавиши CTRL + SHIFT + B или выберите **построить решение** из **построения** меню.</span><span class="sxs-lookup"><span data-stu-id="947ae-114">To build the solution, press CTRL+SHIFT+B or select **Build Solution** from the **Build** menu.</span></span>  
   
-4.  Запустите приложение ManagementEndpoint.exe.  
+4.  <span data-ttu-id="947ae-115">Запустите приложение ManagementEndpoint.exe.</span><span class="sxs-lookup"><span data-stu-id="947ae-115">Start the ManagementEndpoint.exe application.</span></span>  
   
-5.  Запустите приложение Client.exe.  
+5.  <span data-ttu-id="947ae-116">Запустите приложение Client.exe.</span><span class="sxs-lookup"><span data-stu-id="947ae-116">Start the Client.exe application.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="947ae-117">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="947ae-117">The samples may already be installed on your computer.</span></span> <span data-ttu-id="947ae-118">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="947ae-118">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="947ae-119">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="947ae-119">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="947ae-120">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="947ae-120">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Basic\Execution\ManagementEndpoint`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ManagementEndpoint`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="947ae-121">См. также</span><span class="sxs-lookup"><span data-stu-id="947ae-121">See Also</span></span>

@@ -1,79 +1,82 @@
 ---
-title: "Implementing the UI Automation Value Control Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control patterns, Value"
-  - "UI Automation, Value control pattern"
-  - "Value control pattern"
+title: "Реализация шаблона элемента управления Value модели автоматизации пользовательского интерфейса"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control patterns, Value
+- UI Automation, Value control pattern
+- Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-caps.latest.revision: 25
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 24
+caps.latest.revision: "25"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 23e71c4ce230221f82172a0e5429fc362379869c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Implementing the UI Automation Value Control Pattern
+# <a name="implementing-the-ui-automation-value-control-pattern"></a><span data-ttu-id="a18a1-102">Реализация шаблона элемента управления Value модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="a18a1-102">Implementing the UI Automation Value Control Pattern</span></span>
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], заданные в пространстве имен <xref:System.Windows.Automation>. Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="a18a1-103">Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> .</span><span class="sxs-lookup"><span data-stu-id="a18a1-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="a18a1-104">Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="a18a1-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.IValueProvider>, включая сведения о событиях и свойствах. Ссылки на дополнительные материалы перечислены в конце раздела.  
+ <span data-ttu-id="a18a1-105">В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.IValueProvider>, включая сведения о событиях и свойствах.</span><span class="sxs-lookup"><span data-stu-id="a18a1-105">This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.IValueProvider>, including information on events and properties.</span></span> <span data-ttu-id="a18a1-106">Ссылки на дополнительные материалы перечислены в конце раздела.</span><span class="sxs-lookup"><span data-stu-id="a18a1-106">Links to additional references are listed at the end of the topic.</span></span>  
   
- Шаблон элемента управления <xref:System.Windows.Automation.ValuePattern> используется для поддержки элементов управления, имеющих встроенное значение, которое не попадает в диапазон и может быть представлено в виде строки. Эта строка может быть редактируемой в зависимости от элемента управления и его параметров. Примеры элементов управления, реализующих данный шаблон элемента управления, см. в разделе [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ <span data-ttu-id="a18a1-107">Шаблон элемента управления <xref:System.Windows.Automation.ValuePattern> используется для поддержки элементов управления, имеющих встроенное значение, которое не попадает в диапазон и может быть представлено в виде строки.</span><span class="sxs-lookup"><span data-stu-id="a18a1-107">The <xref:System.Windows.Automation.ValuePattern> control pattern is used to support controls that have an intrinsic value not spanning a range and that can be represented as a string.</span></span> <span data-ttu-id="a18a1-108">Эта строка может быть редактируемой в зависимости от элемента управления и его параметров.</span><span class="sxs-lookup"><span data-stu-id="a18a1-108">This string can be editable, depending on the control and its settings.</span></span> <span data-ttu-id="a18a1-109">Примеры элементов управления, реализующих данный шаблон элемента управления, см. в разделе [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span><span class="sxs-lookup"><span data-stu-id="a18a1-109">For examples of controls that implement this pattern, see [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span></span>  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## Правила и соглашения реализации  
- При реализации шаблона элемента управления Value обратите внимание на следующие правила и соглашения.  
+## <a name="implementation-guidelines-and-conventions"></a><span data-ttu-id="a18a1-110">Правила и соглашения реализации</span><span class="sxs-lookup"><span data-stu-id="a18a1-110">Implementation Guidelines and Conventions</span></span>  
+ <span data-ttu-id="a18a1-111">При реализации шаблона элемента управления Value обратите внимание на следующие правила и соглашения.</span><span class="sxs-lookup"><span data-stu-id="a18a1-111">When implementing the Value control pattern, note the following guidelines and conventions:</span></span>  
   
--   Элементы управления, такие как <xref:System.Windows.Automation.ControlType.ListItem> и <xref:System.Windows.Automation.ControlType.TreeItem>, должны поддерживать шаблон <xref:System.Windows.Automation.ValuePattern>, если значение любого из элементов можно изменять независимо от текущего режима редактирования элемента управления. Родительский элемент управления также должен поддерживать шаблон <xref:System.Windows.Automation.ValuePattern>, если дочерние элементы являются редактируемыми.  
+-   <span data-ttu-id="a18a1-112">Элементы управления, такие как <xref:System.Windows.Automation.ControlType.ListItem> и <xref:System.Windows.Automation.ControlType.TreeItem> , должны поддерживать шаблон <xref:System.Windows.Automation.ValuePattern> , если значение любого из элементов можно изменять независимо от текущего режима редактирования элемента управления.</span><span class="sxs-lookup"><span data-stu-id="a18a1-112">Controls such as <xref:System.Windows.Automation.ControlType.ListItem> and <xref:System.Windows.Automation.ControlType.TreeItem> must support <xref:System.Windows.Automation.ValuePattern> if the value of any of the items is editable, regardless of the current edit mode of the control.</span></span> <span data-ttu-id="a18a1-113">Родительский элемент управления также должен поддерживать шаблон <xref:System.Windows.Automation.ValuePattern> , если дочерние элементы являются редактируемыми.</span><span class="sxs-lookup"><span data-stu-id="a18a1-113">The parent control must also support <xref:System.Windows.Automation.ValuePattern> if the child items are editable.</span></span>  
   
- ![Редактируемый элемент списка.](../../../docs/framework/ui-automation/media/uia-valuepattern-editable-listitem.PNG "UIA\_ValuePattern\_Editable\_ListItem")  
-Пример редактируемого элемента списка  
+ <span data-ttu-id="a18a1-114">![Редактируемый элемент списка. ] (../../../docs/framework/ui-automation/media/uia-valuepattern-editable-listitem.PNG "UIA_ValuePattern_Editable_ListItem")</span><span class="sxs-lookup"><span data-stu-id="a18a1-114">![Editable list item.](../../../docs/framework/ui-automation/media/uia-valuepattern-editable-listitem.PNG "UIA_ValuePattern_Editable_ListItem")</span></span>  
+<span data-ttu-id="a18a1-115">Пример редактируемого элемента списка</span><span class="sxs-lookup"><span data-stu-id="a18a1-115">Example of an Editable List Item</span></span>  
   
--   Однострочные элементы управления "Поле ввода" поддерживают программный доступ к своему содержимому путем реализации <xref:System.Windows.Automation.Provider.IValueProvider>. Однако многострочные элементы управления "Поле ввода" не реализуют <xref:System.Windows.Automation.Provider.IValueProvider>; вместо этого они предоставляют доступ к своему содержимому путем реализации <xref:System.Windows.Automation.Provider.ITextProvider>.  
+-   <span data-ttu-id="a18a1-116">Однострочные элементы управления "Поле ввода" поддерживают программный доступ к своему содержимому путем реализации <xref:System.Windows.Automation.Provider.IValueProvider>.</span><span class="sxs-lookup"><span data-stu-id="a18a1-116">Single-line edit controls support programmatic access to their contents by implementing <xref:System.Windows.Automation.Provider.IValueProvider>.</span></span> <span data-ttu-id="a18a1-117">Однако многострочные элементы управления "Поле ввода" не реализуют <xref:System.Windows.Automation.Provider.IValueProvider>; вместо этого они предоставляют доступ к своему содержимому путем реализации <xref:System.Windows.Automation.Provider.ITextProvider>.</span><span class="sxs-lookup"><span data-stu-id="a18a1-117">However, multi-line edit controls do not implement <xref:System.Windows.Automation.Provider.IValueProvider>; instead they provide access to their content by implementing <xref:System.Windows.Automation.Provider.ITextProvider>.</span></span>  
   
--   Для получения текстового содержимого многострочного элемента управления "Поле ввода" этот элемент управления должен реализовывать <xref:System.Windows.Automation.Provider.ITextProvider>. Однако <xref:System.Windows.Automation.Provider.ITextProvider> не поддерживает установку значения элемента управления.  
+-   <span data-ttu-id="a18a1-118">Для получения текстового содержимого многострочного элемента управления "Поле ввода" этот элемент управления должен реализовывать <xref:System.Windows.Automation.Provider.ITextProvider>.</span><span class="sxs-lookup"><span data-stu-id="a18a1-118">To retrieve the textual contents of a multi-line edit control, the control must implement <xref:System.Windows.Automation.Provider.ITextProvider>.</span></span> <span data-ttu-id="a18a1-119">Однако <xref:System.Windows.Automation.Provider.ITextProvider> не поддерживает установку значения элемента управления.</span><span class="sxs-lookup"><span data-stu-id="a18a1-119">However, <xref:System.Windows.Automation.Provider.ITextProvider> does not support setting the value of a control.</span></span>  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider> не поддерживает извлечение сведений о форматировании или значений подстроки. Реализуйте <xref:System.Windows.Automation.Provider.ITextProvider> в этих сценариях.  
+-   <span data-ttu-id="a18a1-120"><xref:System.Windows.Automation.Provider.IValueProvider> не поддерживает извлечение сведений о форматировании или значений подстроки.</span><span class="sxs-lookup"><span data-stu-id="a18a1-120"><xref:System.Windows.Automation.Provider.IValueProvider> does not support the retrieval of formatting information or substring values.</span></span> <span data-ttu-id="a18a1-121">Реализуйте <xref:System.Windows.Automation.Provider.ITextProvider> в этих сценариях.</span><span class="sxs-lookup"><span data-stu-id="a18a1-121">Implement <xref:System.Windows.Automation.Provider.ITextProvider> in these scenarios.</span></span>  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider> должен быть реализован такими элементами управления, как **Палитра** из [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] \(приведенный ниже\), который поддерживает строковое сопоставление между значением цвета \(например, "желтый"\) и эквивалентной внутренней структурой [!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)].  
+-   <span data-ttu-id="a18a1-122"><xref:System.Windows.Automation.Provider.IValueProvider> должен быть реализован такими элементами управления, как **Палитра** из [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (приведенный ниже), который поддерживает строковое сопоставление между значением цвета (например, "желтый") и эквивалентной внутренней структурой [!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="a18a1-122"><xref:System.Windows.Automation.Provider.IValueProvider> must be implemented by controls such as the **Color Picker** selection control from [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (illustrated below), which supports string mapping between a color value (for example, "yellow") and an equivalent internal [!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)] structure.</span></span>  
   
- ![Палитра с отмеченным желтым цветом.](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA\_ValuePattern\_ColorPicker")  
-Пример сопоставления строки настройки цвета  
+ <span data-ttu-id="a18a1-123">![Палитра с отмеченным желтым цветом. ] (../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")</span><span class="sxs-lookup"><span data-stu-id="a18a1-123">![Color picker with yellow highlighted.](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")</span></span>  
+<span data-ttu-id="a18a1-124">Пример сопоставления строки настройки цвета</span><span class="sxs-lookup"><span data-stu-id="a18a1-124">Example of Color Swatch String Mapping</span></span>  
   
--   Элемент управления должен иметь свойство <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>, установленное в значение `true`, и свойство <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>, установленное в значение `false`, перед разрешением вызова метода <xref:System.Windows.Automation.Provider.IValueProvider.SetValue%2A>.  
+-   <span data-ttu-id="a18a1-125">Элемент управления должен иметь свойство <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> , установленное в значение `true` , и свойство <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> , установленное в значение `false` , перед разрешением вызова метода <xref:System.Windows.Automation.Provider.IValueProvider.SetValue%2A>.</span><span class="sxs-lookup"><span data-stu-id="a18a1-125">A control should have its <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> set to `true` and its <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> set to `false` before allowing a call to <xref:System.Windows.Automation.Provider.IValueProvider.SetValue%2A>.</span></span>  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
-## Обязательные члены для IValueProvider  
- Следующие свойства и методы обязательны для реализации <xref:System.Windows.Automation.Provider.IValueProvider>.  
+## <a name="required-members-for-ivalueprovider"></a><span data-ttu-id="a18a1-126">Обязательные члены для IValueProvider</span><span class="sxs-lookup"><span data-stu-id="a18a1-126">Required Members for IValueProvider</span></span>  
+ <span data-ttu-id="a18a1-127">Следующие свойства и методы обязательны для реализации <xref:System.Windows.Automation.Provider.IValueProvider>.</span><span class="sxs-lookup"><span data-stu-id="a18a1-127">The following properties and methods are required for implementing <xref:System.Windows.Automation.Provider.IValueProvider>.</span></span>  
   
-|Обязательные члены|Тип члена|Примечания|  
-|------------------------|---------------|----------------|  
-|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|Свойство|Нет|  
-|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|Свойство|Нет|  
-|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|Метод|Нет|  
+|<span data-ttu-id="a18a1-128">Обязательные члены</span><span class="sxs-lookup"><span data-stu-id="a18a1-128">Required members</span></span>|<span data-ttu-id="a18a1-129">Тип члена</span><span class="sxs-lookup"><span data-stu-id="a18a1-129">Member type</span></span>|<span data-ttu-id="a18a1-130">Примечания</span><span class="sxs-lookup"><span data-stu-id="a18a1-130">Notes</span></span>|  
+|----------------------|-----------------|-----------|  
+|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|<span data-ttu-id="a18a1-131">Свойство</span><span class="sxs-lookup"><span data-stu-id="a18a1-131">Property</span></span>|<span data-ttu-id="a18a1-132">Нет</span><span class="sxs-lookup"><span data-stu-id="a18a1-132">None</span></span>|  
+|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|<span data-ttu-id="a18a1-133">Свойство</span><span class="sxs-lookup"><span data-stu-id="a18a1-133">Property</span></span>|<span data-ttu-id="a18a1-134">Нет</span><span class="sxs-lookup"><span data-stu-id="a18a1-134">None</span></span>|  
+|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|<span data-ttu-id="a18a1-135">Метод</span><span class="sxs-lookup"><span data-stu-id="a18a1-135">Method</span></span>|<span data-ttu-id="a18a1-136">Нет</span><span class="sxs-lookup"><span data-stu-id="a18a1-136">None</span></span>|  
   
 <a name="Exceptions"></a>   
-## Исключения  
- Поставщики должны вызывать следующие исключения.  
+## <a name="exceptions"></a><span data-ttu-id="a18a1-137">Исключения</span><span class="sxs-lookup"><span data-stu-id="a18a1-137">Exceptions</span></span>  
+ <span data-ttu-id="a18a1-138">Поставщики должны вызывать следующие исключения.</span><span class="sxs-lookup"><span data-stu-id="a18a1-138">Providers must throw the following exceptions.</span></span>  
   
-|Тип исключения|Условие|  
-|--------------------|-------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -   Если данные, зависящие от языкового стандарта, передаются в элемент управления в неправильном формате: например, неправильно сформатированная дата.|  
-|<xref:System.ArgumentException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -   Если новое значение не может быть преобразовано из строки в формат, распознаваемый элементом управления.|  
-|<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -   При попытке работы с элементом управления, который не включен.|  
+|<span data-ttu-id="a18a1-139">Тип исключения</span><span class="sxs-lookup"><span data-stu-id="a18a1-139">Exception type</span></span>|<span data-ttu-id="a18a1-140">Условие</span><span class="sxs-lookup"><span data-stu-id="a18a1-140">Condition</span></span>|  
+|--------------------|---------------|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> <span data-ttu-id="a18a1-141">-Если языкового стандарта передается в элемент управления имеет неверный формат, например дату в неправильном формате.</span><span class="sxs-lookup"><span data-stu-id="a18a1-141">-   If locale-specific information is passed to a control in an incorrect format such as an incorrectly formatted date.</span></span>|  
+|<xref:System.ArgumentException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> <span data-ttu-id="a18a1-142">-Если новое значение не может быть преобразовано из строки в формат, распознаваемый элементом управления.</span><span class="sxs-lookup"><span data-stu-id="a18a1-142">-   If a new value cannot be converted from a string to a format the control recognizes.</span></span>|  
+|<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> <span data-ttu-id="a18a1-143">-Если попытка работы с элементом управления, который не включен.</span><span class="sxs-lookup"><span data-stu-id="a18a1-143">-   When an attempt is made to manipulate a control that is not enabled.</span></span>|  
   
-## См. также  
- [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)   
- [Support Control Patterns in a UI Automation Provider](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)   
- [UI Automation Control Patterns for Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)   
- [TextPattern Insert Text Sample](http://msdn.microsoft.com/ru-ru/67353f93-7ee2-42f2-ab76-5c078cf6ca16)   
- [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)   
- [Use Caching in UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a><span data-ttu-id="a18a1-144">См. также</span><span class="sxs-lookup"><span data-stu-id="a18a1-144">See Also</span></span>  
+ [<span data-ttu-id="a18a1-145">Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="a18a1-145">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="a18a1-146">Поддержка шаблонов элементов управления в поставщике модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="a18a1-146">Support Control Patterns in a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [<span data-ttu-id="a18a1-147">Шаблоны элементов управления модели автоматизации пользовательского интерфейса для клиентов</span><span class="sxs-lookup"><span data-stu-id="a18a1-147">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="a18a1-148">Пример текста TextPattern Insert</span><span class="sxs-lookup"><span data-stu-id="a18a1-148">TextPattern Insert Text Sample</span></span>](http://msdn.microsoft.com/en-us/67353f93-7ee2-42f2-ab76-5c078cf6ca16)  
+ [<span data-ttu-id="a18a1-149">Общие сведения о дереве модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="a18a1-149">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [<span data-ttu-id="a18a1-150">Использование кэширования в модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="a18a1-150">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

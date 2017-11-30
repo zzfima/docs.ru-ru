@@ -1,65 +1,71 @@
 ---
-title: "Практическое руководство. Вывод текста по контуру | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "градиентная кисть"
-  - "кисть с линейным градиентом"
-  - "контурный текст"
-  - "оформление, кисть с линейным градиентом"
-  - "оформление, контурные эффекты"
+title: "Практическое руководство. Вывод текста по контуру"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- typography [WPF], linear gradient brush
+- outlined text [WPF]
+- gradient brush [WPF]
+- linear gradient brush [WPF]
+- typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 76d0dcf63f9d8a66106f4bcdc52a2bf98c75cdc4
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Вывод текста по контуру
-В большинстве случаев при добавлении декоративных элементов в текстовые строки в приложении [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] используется текст в виде коллекции дискретных символов или глифов.  Например, можно создать кисть линейного градиента и применить ее к свойству <xref:System.Windows.Controls.Control.Foreground%2A> объекта <xref:System.Windows.Controls.TextBox>.  Когда происходит отображение или редактирование текстового поля, кисть линейного градиента автоматически применяется к текущему набору символов в строке текста.  
+# <a name="how-to-create-outlined-text"></a><span data-ttu-id="5895b-102">Практическое руководство. Вывод текста по контуру</span><span class="sxs-lookup"><span data-stu-id="5895b-102">How to: Create Outlined Text</span></span>
+<span data-ttu-id="5895b-103">В большинстве случаев при добавлении декоративных элементов в текстовые строки в вашей [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложение, вы используете текст в виде коллекции дискретных символов или глифов.</span><span class="sxs-lookup"><span data-stu-id="5895b-103">In most cases, when you are adding ornamentation to text strings in your [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application, you are using text in terms of a collection of discrete characters, or glyphs.</span></span> <span data-ttu-id="5895b-104">Например, можно создать кисти линейного градиента и применить его к <xref:System.Windows.Controls.Control.Foreground%2A> свойство <xref:System.Windows.Controls.TextBox> объекта.</span><span class="sxs-lookup"><span data-stu-id="5895b-104">For example, you could create a linear gradient brush and apply it to the <xref:System.Windows.Controls.Control.Foreground%2A> property of a <xref:System.Windows.Controls.TextBox> object.</span></span> <span data-ttu-id="5895b-105">При отображении или измените текстовое поле кисти линейного градиента автоматически применяется текущий набор символов в текстовой строке.</span><span class="sxs-lookup"><span data-stu-id="5895b-105">When you display or edit the text box, the linear gradient brush is automatically applied to the current set of characters in the text string.</span></span>  
   
- ![Текст, отображенный при помощи кисти линейного градиента](../../../../docs/framework/wpf/advanced/media/outlinedtext01.png "OutlinedText01")  
-Пример кисти линейного градиента, применяемой к текстовому полю  
+ <span data-ttu-id="5895b-106">![Текст, отображаемый кисти линейного градиента](../../../../docs/framework/wpf/advanced/media/outlinedtext01.jpg "OutlinedText01")</span><span class="sxs-lookup"><span data-stu-id="5895b-106">![Text displayed with a linear gradient brush](../../../../docs/framework/wpf/advanced/media/outlinedtext01.jpg "OutlinedText01")</span></span>  
+<span data-ttu-id="5895b-107">Пример кисти линейного градиента, применяются к текстовому полю</span><span class="sxs-lookup"><span data-stu-id="5895b-107">Example of a linear gradient brush applied to a text box</span></span>  
   
- В то же время текст можно также преобразовать в объекты <xref:System.Windows.Media.Geometry>, что позволяет создавать другие типы визуально насыщенного текста.  Например, можно создать объект <xref:System.Windows.Media.Geometry>, основанный на контуре строки текста.  
+ <span data-ttu-id="5895b-108">Тем не менее, можно преобразовать текст в <xref:System.Windows.Media.Geometry> объекты, что позволяет создавать другие типы визуально форматированного текста.</span><span class="sxs-lookup"><span data-stu-id="5895b-108">However, you can also convert text into <xref:System.Windows.Media.Geometry> objects, allowing you to create other types of visually rich text.</span></span> <span data-ttu-id="5895b-109">Например, можно создать <xref:System.Windows.Media.Geometry> объекта, основанного на структуре текстовой строки.</span><span class="sxs-lookup"><span data-stu-id="5895b-109">For example, you could create a <xref:System.Windows.Media.Geometry> object based on the outline of a text string.</span></span>  
   
- ![Оконтуривание текста с использованием кисти линейного градиента](../../../../docs/framework/wpf/advanced/media/outlinedtext02.png "OutlinedText02")  
-Пример кисти линейного градиента, применяемой к геометрической форме контура текста  
+ <span data-ttu-id="5895b-110">![Оконтуривание текста с использованием кисти линейного градиента](../../../../docs/framework/wpf/advanced/media/outlinedtext02.jpg "OutlinedText02")</span><span class="sxs-lookup"><span data-stu-id="5895b-110">![Text outline using a linear gradient brush](../../../../docs/framework/wpf/advanced/media/outlinedtext02.jpg "OutlinedText02")</span></span>  
+<span data-ttu-id="5895b-111">Пример кисти линейного градиента, применяемой к геометрии структуры текста</span><span class="sxs-lookup"><span data-stu-id="5895b-111">Example of a linear gradient brush applied to the outline geometry of text</span></span>  
   
- Текст, преобразованный в объект <xref:System.Windows.Media.Geometry>, не является набором символов, для которого изменение символов в текстовой строке невозможно.  Тем не менее, внешний вид преобразованного текста можно изменять с помощью свойств штриха и заливки.  Штрих — это контур преобразованного текста, а заливка — область внутри контура преобразованного текста.  
+ <span data-ttu-id="5895b-112">Если текст преобразуется в <xref:System.Windows.Media.Geometry> объекта, он больше не является набором символов — изменение символов в текстовой строке невозможно.</span><span class="sxs-lookup"><span data-stu-id="5895b-112">When text is converted to a <xref:System.Windows.Media.Geometry> object, it is no longer a collection of characters—you cannot modify the characters in the text string.</span></span> <span data-ttu-id="5895b-113">Тем не менее можно повлиять на внешний вид преобразованного текст, изменив его свойства штриха и заливки.</span><span class="sxs-lookup"><span data-stu-id="5895b-113">However, you can affect the appearance of the converted text by modifying its stroke and fill properties.</span></span> <span data-ttu-id="5895b-114">Штрих — это контур преобразованного текста; заливка — это область внутри контура преобразованного текста.</span><span class="sxs-lookup"><span data-stu-id="5895b-114">The stroke refers to the outline of the converted text; the fill refers to the area inside the outline of the converted text.</span></span>  
   
- Следующие примеры демонстрируют несколько способов создания визуальных эффектов, изменяя штрих и заливку преобразованного текста.  
+ <span data-ttu-id="5895b-115">Следующие примеры иллюстрируют несколько способов создания визуальных эффектов путем изменения обводки и заливку преобразованного текста.</span><span class="sxs-lookup"><span data-stu-id="5895b-115">The following examples illustrate several ways of creating visual effects by modifying the stroke and fill of converted text.</span></span>  
   
- ![Текст с различными цветами для заполнения штриха](../../../../docs/framework/wpf/advanced/media/outlinedtext03.png "OutlinedText03")  
-Пример установки разного цвета для штриха и заливки  
+ <span data-ttu-id="5895b-116">![Текст с различными цветами для заполнения штриха](../../../../docs/framework/wpf/advanced/media/outlinedtext03.jpg "OutlinedText03")</span><span class="sxs-lookup"><span data-stu-id="5895b-116">![Text with different colors for fill and stroke](../../../../docs/framework/wpf/advanced/media/outlinedtext03.jpg "OutlinedText03")</span></span>  
+<span data-ttu-id="5895b-117">Пример установки разного цвета для штриха и заливки</span><span class="sxs-lookup"><span data-stu-id="5895b-117">Example of setting stroke and fill to different colors</span></span>  
   
- ![Текст с кистью изображения, примененной к штриху](../../../../docs/framework/wpf/advanced/media/outlinedtext04.png "OutlinedText04")  
-Пример применения кисти к штриху  
+ <span data-ttu-id="5895b-118">![Текст с кистью изображения, примененной к штриху](../../../../docs/framework/wpf/advanced/media/outlinedtext04.jpg "OutlinedText04")</span><span class="sxs-lookup"><span data-stu-id="5895b-118">![Text with image brush applied to stroke](../../../../docs/framework/wpf/advanced/media/outlinedtext04.jpg "OutlinedText04")</span></span>  
+<span data-ttu-id="5895b-119">Пример применения кисти к штриху</span><span class="sxs-lookup"><span data-stu-id="5895b-119">Example of an image brush applied to the stroke</span></span>  
   
- Также возможно изменить прямоугольник ограничивающего поля или выделить преобразованный текст.  Следующий пример демонстрирует способ создания визуальных эффектов путем изменения штриха и выделения преобразованного текста.  
+ <span data-ttu-id="5895b-120">Можно также изменить ограничивающего прямоугольника поля или выделить преобразованный текст.</span><span class="sxs-lookup"><span data-stu-id="5895b-120">It is also possible to modify the bounding box rectangle, or highlight, of the converted text.</span></span> <span data-ttu-id="5895b-121">Следующий пример демонстрирует способ создания визуальных эффектов путем изменения обводки и выделения преобразованного текста.</span><span class="sxs-lookup"><span data-stu-id="5895b-121">The following example illustrates a way to creating visual effects by modifying the stroke and highlight of converted text.</span></span>  
   
- ![Текст с кистью изображения, примененной к штриху](../../../../docs/framework/wpf/advanced/media/outlinedtext05.png "OutlinedText05")  
-Пример применения кисти к штриху и выделению  
+ <span data-ttu-id="5895b-122">![Текст с кистью изображения, примененной к штриху](../../../../docs/framework/wpf/advanced/media/outlinedtext05.jpg "OutlinedText05")</span><span class="sxs-lookup"><span data-stu-id="5895b-122">![Text with image brush applied to stroke](../../../../docs/framework/wpf/advanced/media/outlinedtext05.jpg "OutlinedText05")</span></span>  
+<span data-ttu-id="5895b-123">Пример применения кисти к штриху и выделению</span><span class="sxs-lookup"><span data-stu-id="5895b-123">Example of an image brush applied to the stroke and highlight</span></span>  
   
-## Пример  
- Чтобы преобразовать текст в объект <xref:System.Windows.Media.Geometry>, необходимо использовать объект <xref:System.Windows.Media.FormattedText>.  После создания этого объекта можно использовать методы <xref:System.Windows.Media.FormattedText.BuildGeometry%2A> и <xref:System.Windows.Media.FormattedText.BuildHighlightGeometry%2A> для преобразования текста в объекты <xref:System.Windows.Media.Geometry>.  Первый метод возвращает геометрическую форму форматированного текста, а второй — геометрическую форму ограничивающего поля форматированного текста.  В следующем примере показано создание объекта <xref:System.Windows.Media.FormattedText> и извлечение геометрических форм форматированного текста и его ограничивающего поля.  
+## <a name="example"></a><span data-ttu-id="5895b-124">Пример</span><span class="sxs-lookup"><span data-stu-id="5895b-124">Example</span></span>  
+ <span data-ttu-id="5895b-125">Ключ, чтобы преобразовать текст в <xref:System.Windows.Media.Geometry> необходимо использовать <xref:System.Windows.Media.FormattedText> объекта.</span><span class="sxs-lookup"><span data-stu-id="5895b-125">The key to converting text to a <xref:System.Windows.Media.Geometry> object is to use the <xref:System.Windows.Media.FormattedText> object.</span></span> <span data-ttu-id="5895b-126">После создания этот объект можно использовать <xref:System.Windows.Media.FormattedText.BuildGeometry%2A> и <xref:System.Windows.Media.FormattedText.BuildHighlightGeometry%2A> методов, чтобы преобразовать текст в <xref:System.Windows.Media.Geometry> объектов.</span><span class="sxs-lookup"><span data-stu-id="5895b-126">Once you have created this object, you can use the <xref:System.Windows.Media.FormattedText.BuildGeometry%2A> and <xref:System.Windows.Media.FormattedText.BuildHighlightGeometry%2A> methods to convert the text to <xref:System.Windows.Media.Geometry> objects.</span></span> <span data-ttu-id="5895b-127">Первый метод возвращает геометрии форматированного текста. Второй метод возвращает геометрию форматированный текст ограничивающего прямоугольника.</span><span class="sxs-lookup"><span data-stu-id="5895b-127">The first method returns the geometry of the formatted text; the second method returns the geometry of the formatted text's bounding box.</span></span> <span data-ttu-id="5895b-128">В следующем примере кода показано, как создать <xref:System.Windows.Media.FormattedText> объекта и извлечение геометрических форм форматированного текста и его ограничивающего прямоугольника.</span><span class="sxs-lookup"><span data-stu-id="5895b-128">The following code example shows how to create a <xref:System.Windows.Media.FormattedText> object and to retrieve the geometries of the formatted text and its bounding box.</span></span>  
   
  [!code-csharp[OutlineTextControlViewer#CreateText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs#createtext)]
  [!code-vb[OutlineTextControlViewer#CreateText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb#createtext)]  
   
- Чтобы отобразить извлеченные объекты <xref:System.Windows.Media.Geometry>, необходимо иметь доступ к <xref:System.Windows.Media.DrawingContext> объекта, который отображает преобразованный текст.  В приведенных примерах кода это делается путем создания объекта пользовательского элемента управления, который является производным от класса, поддерживающего определенную пользователем отрисовку.  
+ <span data-ttu-id="5895b-129">Чтобы отобразить извлеченные <xref:System.Windows.Media.Geometry> объектов, необходимо получить доступ к <xref:System.Windows.Media.DrawingContext> объекта, который отображает преобразованный текст.</span><span class="sxs-lookup"><span data-stu-id="5895b-129">In order to display the retrieved the <xref:System.Windows.Media.Geometry> objects, you need to access the <xref:System.Windows.Media.DrawingContext> of the object that is displaying the converted text.</span></span> <span data-ttu-id="5895b-130">В этих примерах кода этого путем создания объекта пользовательского элемента управления, производный от класса, поддерживающего определенную пользователем отрисовку.</span><span class="sxs-lookup"><span data-stu-id="5895b-130">In these code examples, this is done by creating a custom control object that is derived from a class that supports user-defined rendering.</span></span>  
   
- Чтобы отобразить объекты <xref:System.Windows.Media.Geometry> в пользовательском элементе управления, выполните переопределение для метода <xref:System.Windows.UIElement.OnRender%2A>.  Переопределенный метод должен использовать метод <xref:System.Windows.Media.DrawingContext.DrawGeometry%2A> для рисования объектов <xref:System.Windows.Media.Geometry>.  
+ <span data-ttu-id="5895b-131">Для отображения <xref:System.Windows.Media.Geometry> объектов в пользовательский элемент управления, выполните переопределение для <xref:System.Windows.UIElement.OnRender%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="5895b-131">To display <xref:System.Windows.Media.Geometry> objects in the custom control, provide an override for the <xref:System.Windows.UIElement.OnRender%2A> method.</span></span> <span data-ttu-id="5895b-132">Переопределенный метод должен использовать <xref:System.Windows.Media.DrawingContext.DrawGeometry%2A> метод для отображения <xref:System.Windows.Media.Geometry> объектов.</span><span class="sxs-lookup"><span data-stu-id="5895b-132">Your overridden method should use the <xref:System.Windows.Media.DrawingContext.DrawGeometry%2A> method to draw the <xref:System.Windows.Media.Geometry> objects.</span></span>  
   
  [!code-csharp[OutlineTextControlViewer#OnRender](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs#onrender)]
  [!code-vb[OutlineTextControlViewer#OnRender](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb#onrender)]  
   
-## См. также  
- [Рисование форматированного текста](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)
+## <a name="see-also"></a><span data-ttu-id="5895b-133">См. также</span><span class="sxs-lookup"><span data-stu-id="5895b-133">See Also</span></span>  
+ [<span data-ttu-id="5895b-134">Рисование форматированного текста</span><span class="sxs-lookup"><span data-stu-id="5895b-134">Drawing Formatted Text</span></span>](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)

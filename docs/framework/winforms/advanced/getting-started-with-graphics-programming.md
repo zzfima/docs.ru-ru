@@ -1,74 +1,75 @@
 ---
-title: "Приступая к программированию графики | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "рисование"
-  - "примеры [Windows Forms], графика"
-  - "начало работы, программирование графики"
-  - "графика, начало работы"
+title: "Приступая к программированию графики"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- graphics [Windows Forms], getting started
+- getting started [Windows Forms], graphics programming
+- examples [Windows Forms], graphics
+- drawing
 ms.assetid: eb0f6d6f-9e52-4167-9592-ff4b82fb5869
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ca9f439dbb4f95a05886c822cd6436793acab6a9
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Приступая к программированию графики
-В данном разделе описывается, как начать использовать интерфейс [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] в приложении Windows Forms.  В следующих разделах приведены инструкции по решению некоторых задач [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], таких как рисование и заливка фигур и текста.  
+# <a name="getting-started-with-graphics-programming"></a><span data-ttu-id="63927-102">Приступая к программированию графики</span><span class="sxs-lookup"><span data-stu-id="63927-102">Getting Started with Graphics Programming</span></span>
+<span data-ttu-id="63927-103">В этом разделе показано, как приступить к использованию [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] в приложении Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="63927-103">This section shows how to get started using [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] in a Windows Forms application.</span></span> <span data-ttu-id="63927-104">В следующих темах инструкции по решению некоторых [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] задач, таких как рисование и заливка фигур и текста.</span><span class="sxs-lookup"><span data-stu-id="63927-104">The following topics show how to complete several [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] tasks such as drawing and filling shapes and text.</span></span>  
   
-## В этом подразделе  
- [Практическое руководство. Создание объектов Graphics для рисования](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- Создание объекта <xref:System.Drawing.Graphics> для рисования.  
+## <a name="in-this-section"></a><span data-ttu-id="63927-105">Содержание</span><span class="sxs-lookup"><span data-stu-id="63927-105">In This Section</span></span>  
+ [<span data-ttu-id="63927-106">Практическое руководство. Создание графических объектов для рисования</span><span class="sxs-lookup"><span data-stu-id="63927-106">How to: Create Graphics Objects for Drawing</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ <span data-ttu-id="63927-107">Показано, как создать <xref:System.Drawing.Graphics> объекта для рисования.</span><span class="sxs-lookup"><span data-stu-id="63927-107">Shows how to create a <xref:System.Drawing.Graphics> object for drawing.</span></span>  
   
- [Практическое руководство. Создание пера](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
- Создание пера.  
+ [<span data-ttu-id="63927-108">Практическое руководство. Создание пера</span><span class="sxs-lookup"><span data-stu-id="63927-108">How to: Create a Pen</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
+ <span data-ttu-id="63927-109">Демонстрирует создание пера.</span><span class="sxs-lookup"><span data-stu-id="63927-109">Shows how to create a pen.</span></span>  
   
- [Практическое руководство. Установка цвета фона для пера](../../../../docs/framework/winforms/advanced/how-to-set-the-color-of-a-pen.md)  
- Установка цвета пера.  
+ [<span data-ttu-id="63927-110">Практическое руководство. Установка цвета пера</span><span class="sxs-lookup"><span data-stu-id="63927-110">How to: Set the Color of a Pen</span></span>](../../../../docs/framework/winforms/advanced/how-to-set-the-color-of-a-pen.md)  
+ <span data-ttu-id="63927-111">Показано, как задать цвет пера.</span><span class="sxs-lookup"><span data-stu-id="63927-111">Demonstrates how to set the color of a pen.</span></span>  
   
- [Практическое руководство. Создание сплошной кисти](../../../../docs/framework/winforms/advanced/how-to-create-a-solid-brush.md)  
- Создание сплошной кисти.  
+ [<span data-ttu-id="63927-112">Практическое руководство. Создание сплошной кисти</span><span class="sxs-lookup"><span data-stu-id="63927-112">How to: Create a Solid Brush</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-solid-brush.md)  
+ <span data-ttu-id="63927-113">Описывает создание сплошной кисти.</span><span class="sxs-lookup"><span data-stu-id="63927-113">Describes how to create a solid brush.</span></span>  
   
- [Практическое руководство. Рисование линии в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)  
- Рисование линии.  
+ [<span data-ttu-id="63927-114">Практическое руководство. Рисование линии в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="63927-114">How to: Draw a Line on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)  
+ <span data-ttu-id="63927-115">Показано, как рисование линии.</span><span class="sxs-lookup"><span data-stu-id="63927-115">Demonstrates how to draw a line.</span></span>  
   
- [Практическое руководство. Рисование линии или контурной фигуры](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)  
- Рисование фигуры.  
+ [<span data-ttu-id="63927-116">Практическое руководство. Рисование контурной фигуры</span><span class="sxs-lookup"><span data-stu-id="63927-116">How to: Draw an Outlined Shape</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)  
+ <span data-ttu-id="63927-117">Описывает, как Рисование фигур.</span><span class="sxs-lookup"><span data-stu-id="63927-117">Describes how to draw a shape.</span></span>  
   
- [Практическое руководство. Рисование заполненного прямоугольника в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
- Рисование прямоугольника.  
+ [<span data-ttu-id="63927-118">Практическое руководство. Рисование заполненного прямоугольника в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="63927-118">How to: Draw a Filled Rectangle on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
+ <span data-ttu-id="63927-119">Объясняется, как рисование прямоугольника.</span><span class="sxs-lookup"><span data-stu-id="63927-119">Explains how to draw a rectangle.</span></span>  
   
- [Практическое руководство. Рисование заполненного эллипса в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-ellipse-on-a-windows-form.md)  
- Рисование эллипса.  
+ [<span data-ttu-id="63927-120">Практическое руководство. Рисование заполненного эллипса в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="63927-120">How to: Draw a Filled Ellipse on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-ellipse-on-a-windows-form.md)  
+ <span data-ttu-id="63927-121">Показано, как рисование заполненного эллипса.</span><span class="sxs-lookup"><span data-stu-id="63927-121">Shows how to draw a filled ellipse.</span></span>  
   
- [Практическое руководство. Отрисовка текста в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)  
- Рисование текста.  
+ [<span data-ttu-id="63927-122">Практическое руководство. Рисование текста в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="63927-122">How to: Draw Text on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)  
+ <span data-ttu-id="63927-123">Описывает, как для рисования текста.</span><span class="sxs-lookup"><span data-stu-id="63927-123">Describes how to draw text.</span></span>  
   
- [Практическое руководство. Рисование текста по вертикали в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-vertical-text-on-a-windows-form.md)  
- Рисование вертикального текста.  
+ [<span data-ttu-id="63927-124">Практическое руководство. Рисование текста по вертикали в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="63927-124">How to: Draw Vertical Text on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-vertical-text-on-a-windows-form.md)  
+ <span data-ttu-id="63927-125">Показано, как рисование вертикального текста.</span><span class="sxs-lookup"><span data-stu-id="63927-125">Shows how to draw vertical text.</span></span>  
   
- [Практическое руководство. Вывод изображений с использованием GDI\+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)  
- Рисование изображений.  
+ [<span data-ttu-id="63927-126">Практическое руководство. Прорисовка изображений с использованием GDI+</span><span class="sxs-lookup"><span data-stu-id="63927-126">How to: Render Images with GDI+</span></span>](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)  
+ <span data-ttu-id="63927-127">Показано, как рисовать изображения.</span><span class="sxs-lookup"><span data-stu-id="63927-127">Demonstrates how to draw images.</span></span>  
   
- [Практическое руководство. Создание фигурной формы Windows Forms](../../../../docs/framework/winforms/advanced/how-to-create-a-shaped-windows-form.md)  
- Изменение вида формы.  
+ [<span data-ttu-id="63927-128">Практическое руководство. Создание фигурной формы Windows Forms</span><span class="sxs-lookup"><span data-stu-id="63927-128">How to: Create a Shaped Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-shaped-windows-form.md)  
+ <span data-ttu-id="63927-129">Объясняется, как изменить форму формы.</span><span class="sxs-lookup"><span data-stu-id="63927-129">Explains how to change the shape of a form.</span></span>  
   
- [Практическое руководство. Копирование пикселов для уменьшения эффекта дрожания изображения в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md)  
- Копирование пикселей между областями.  
+ [<span data-ttu-id="63927-130">Практическое руководство. Копирование пикселей для уменьшения эффекта дрожания изображения в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="63927-130">How to: Copy Pixels for Reducing Flicker in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md)  
+ <span data-ttu-id="63927-131">Объясняет, как копирование точек из одной области в другую.</span><span class="sxs-lookup"><span data-stu-id="63927-131">Explains how to copy pixels from one area to another.</span></span>  
   
-## Ссылка  
+## <a name="reference"></a><span data-ttu-id="63927-132">Ссылка</span><span class="sxs-lookup"><span data-stu-id="63927-132">Reference</span></span>  
  <xref:System.Drawing>  
- Описание пространства имен и ссылки на разделы с описаниями всех его членов.  
+ <span data-ttu-id="63927-133">Описание пространства имен и содержит ссылки на все его члены.</span><span class="sxs-lookup"><span data-stu-id="63927-133">Describes this namespace and has links to all its members.</span></span>  
   
  <xref:System.Windows.Forms>  
- Описание пространства имен и ссылки на разделы с описаниями всех его членов.
+ <span data-ttu-id="63927-134">Описание пространства имен и содержит ссылки на все его члены.</span><span class="sxs-lookup"><span data-stu-id="63927-134">Describes this namespace and has links to all of its members.</span></span>

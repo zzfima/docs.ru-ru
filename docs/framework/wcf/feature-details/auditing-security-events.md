@@ -1,69 +1,71 @@
 ---
-title: "Аудит событий безопасности | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "аудит событий безопасности [WCF]"
+title: "Аудит событий безопасности"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-caps.latest.revision: 27
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 933f62e1921fe12255965567bbec0faf651e0ba2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Аудит событий безопасности
-Приложения, созданные с помощью [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], могут регистрировать в журнале события, связанные с безопасностью \(успешно, сбой или оба\), используя функцию аудита.События записываются в журнал системных событий Windows, и их можно просматривать при помощи средства просмотра событий.  
+# <a name="auditing-security-events"></a><span data-ttu-id="1c6f8-102">Аудит событий безопасности</span><span class="sxs-lookup"><span data-stu-id="1c6f8-102">Auditing Security Events</span></span>
+<span data-ttu-id="1c6f8-103">Приложения, созданные с помощью [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], могут регистрировать в журнале события, связанные с безопасностью (успешно, сбой или оба), используя функцию аудита.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-103">Applications created with [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] can log security events (either success, failure, or both) with the auditing feature.</span></span> <span data-ttu-id="1c6f8-104">События записываются в журнал системных событий Windows, и их можно просматривать при помощи средства просмотра событий.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-104">The events are written to the Windows system event log and can be examined using the Event Viewer.</span></span>  
   
- Аудит позволяет администраторам обнаруживать уже законченную или происходящую атаку.Кроме того, аудит может помочь разработчику при отладке неполадок, связанных с безопасностью.Например, если в результате ошибки в конфигурации авторизации или политики проверки авторизованному пользователю было отказано в доступе, разработчик может быстро найти и понять причину такой ошибки, изучив журнал событий.  
+ <span data-ttu-id="1c6f8-105">Аудит позволяет администраторам обнаруживать уже законченную или происходящую атаку.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-105">Auditing provides a way for an administrator to detect an attack that has already occurred or is in progress.</span></span> <span data-ttu-id="1c6f8-106">Кроме того, аудит может помочь разработчику при отладке неполадок, связанных с безопасностью.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-106">In addition, auditing can help a developer to debug security-related problems.</span></span> <span data-ttu-id="1c6f8-107">Например, если в результате ошибки в конфигурации авторизации или политики проверки авторизованному пользователю было отказано в доступе, разработчик может быстро найти и понять причину такой ошибки, изучив журнал событий.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-107">For example, if an error in the configuration of the authorization or checking policy accidentally denies access to an authorized user, a developer can quickly discover and isolate the cause of this error by examining the event log.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] о безопасности в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] см. в разделе [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md).[!INCLUDE[crabout](../../../../includes/crabout-md.md)] о программировании [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] см. в разделе [Базовое программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="1c6f8-108">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] безопасности, в разделе [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md).</span><span class="sxs-lookup"><span data-stu-id="1c6f8-108"> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security, see [Security Overview](../../../../docs/framework/wcf/feature-details/security-overview.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="1c6f8-109">Программирование [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], в разделе [базовое Программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).</span><span class="sxs-lookup"><span data-stu-id="1c6f8-109"> programming [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], see [Basic WCF Programming](../../../../docs/framework/wcf/basic-wcf-programming.md).</span></span>  
   
-## Уровень и поведение аудита  
- Предусмотрены два уровня аудита безопасности.  
+## <a name="audit-level-and-behavior"></a><span data-ttu-id="1c6f8-110">Уровень и поведение аудита</span><span class="sxs-lookup"><span data-stu-id="1c6f8-110">Audit Level and Behavior</span></span>  
+ <span data-ttu-id="1c6f8-111">Предусмотрены два уровня аудита безопасности.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-111">Two levels of security audits exist:</span></span>  
   
--   Уровень авторизации службы, на котором производится авторизация вызывающего абонента.  
+-   <span data-ttu-id="1c6f8-112">Уровень авторизации службы, на котором производится авторизация вызывающего абонента.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-112">Service authorization level, in which a caller is authorized.</span></span>  
   
--   Уровень сообщений, на котором [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] проверяет допустимость сообщений и проверяет подлинность вызывающего абонента.  
+-   <span data-ttu-id="1c6f8-113">Уровень сообщений, на котором [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] проверяет допустимость сообщений и проверяет подлинность вызывающего абонента.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-113">Message level, in which [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] checks for message validity and authenticates the caller.</span></span>  
   
- Можно проверить результаты аудита обеих уровней \(успех или ошибка\), что называется *поведением аудита*.  
+ <span data-ttu-id="1c6f8-114">Вы можете проверить аудита обеих уровней успешное выполнение или сбой, который называется *поведением аудита*.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-114">You can check both audit levels for success or failure, which is known as the *audit behavior*.</span></span>  
   
-## Расположение журнала аудита  
- После определения уровня и поведения аудита, вы \(или администратор\) можете задать расположение журнала аудита.Доступны три варианта: журнал по умолчанию, журнал приложения и журнал безопасности.Если задан журнал по умолчанию, фактический журнал зависит от используемой системы и от того, поддерживает ли система запись в журнал безопасности.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] в подразделе «Операционная система» далее в этом разделе.  
+## <a name="audit-log-location"></a><span data-ttu-id="1c6f8-115">Расположение журнала аудита</span><span class="sxs-lookup"><span data-stu-id="1c6f8-115">Audit Log Location</span></span>  
+ <span data-ttu-id="1c6f8-116">После определения уровня и поведения аудита, вы (или администратор) можете задать расположение журнала аудита.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-116">Once you determine an audit level and behavior, you (or an administrator) can specify a location for the audit log.</span></span> <span data-ttu-id="1c6f8-117">Доступны три варианта: журнал по умолчанию, журнал приложения и журнал безопасности.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-117">The three choices include: Default, Application, and Security.</span></span> <span data-ttu-id="1c6f8-118">Если задан журнал по умолчанию, фактический журнал зависит от используемой системы и от того, поддерживает ли система запись в журнал безопасности.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-118">When you specify Default, the actual log depends on which system you are using and whether the system supports writing to the security log.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="1c6f8-119"> в подразделе «Операционная система» далее в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-119"> the "Operating System" section later in this topic.</span></span>  
   
- Для записи в журнал безопасности требуются привилегии `SeAuditPrivilege`.По умолчанию этой привилегией обладают только учетные записи Local System и Network Service.Для управления функциями `read` и `delete` журнала безопасности требуются привилегии `SeSecurityPrivilege`.По умолчанию эту привилегию имеют только администраторы.  
+ <span data-ttu-id="1c6f8-120">Для записи в журнал безопасности требуются привилегии `SeAuditPrivilege`.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-120">To write to the Security log requires the `SeAuditPrivilege`.</span></span> <span data-ttu-id="1c6f8-121">По умолчанию этой привилегией обладают только учетные записи Local System и Network Service.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-121">By default, only Local System and Network Service accounts have this privilege.</span></span> <span data-ttu-id="1c6f8-122">Для управления функциями `read` и `delete` журнала безопасности требуются привилегии `SeSecurityPrivilege`.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-122">To manage the Security log functions `read` and `delete` requires the `SeSecurityPrivilege`.</span></span> <span data-ttu-id="1c6f8-123">По умолчанию эту привилегию имеют только администраторы.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-123">By default, only administrators have this privilege.</span></span>  
   
- В отличие от этого, авторизованные пользователи могут производить чтение и запись журнала приложений.[!INCLUDE[wxp](../../../../includes/wxp-md.md)] по умолчанию записывает события аудита в журнал приложения.Этот журнал может также содержать персональный сведения, видимые всем авторизованным пользователям.  
+ <span data-ttu-id="1c6f8-124">В отличие от этого авторизованные пользователи могут производить чтение и запись в журнал приложений.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-124">In contrast, authenticated users can read and write to the Application log.</span></span> [!INCLUDE[wxp](../../../../includes/wxp-md.md)]<span data-ttu-id="1c6f8-125"> по умолчанию записывает события аудита в журнал приложения.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-125"> writes audit events to the Application log by default.</span></span> <span data-ttu-id="1c6f8-126">Этот журнал может также содержать персональный сведения, видимые всем авторизованным пользователям.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-126">The log can also contain personal information that is visible to all authenticated users.</span></span>  
   
-## Подавление сбоев аудита  
- При аудите можно также выбрать, следует ли подавлять сбои аудита.По умолчанию сбой аудита не влияет на приложение.Однако при необходимости можно задать для этого параметра значение `false`, что приводит к возникновению исключения.  
+## <a name="suppressing-audit-failures"></a><span data-ttu-id="1c6f8-127">Подавление сбоев аудита</span><span class="sxs-lookup"><span data-stu-id="1c6f8-127">Suppressing Audit Failures</span></span>  
+ <span data-ttu-id="1c6f8-128">При аудите можно также выбрать, следует ли подавлять сбои аудита.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-128">Another option during auditing is whether to suppress any audit failure.</span></span> <span data-ttu-id="1c6f8-129">По умолчанию сбой аудита не влияет на приложение.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-129">By default, an audit failure does not affect an application.</span></span> <span data-ttu-id="1c6f8-130">Однако при необходимости можно задать для этого параметра значение `false`, что приводит к возникновению исключения.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-130">If required, however, you can set the option to `false`, which causes an exception to be thrown.</span></span>  
   
-## Программирование аудита  
- Поведение аудита можно задавать либо путем программирования, либо через конфигурацию.  
+## <a name="programming-auditing"></a><span data-ttu-id="1c6f8-131">Программирование аудита</span><span class="sxs-lookup"><span data-stu-id="1c6f8-131">Programming Auditing</span></span>  
+ <span data-ttu-id="1c6f8-132">Поведение аудита можно задавать либо путем программирования, либо через конфигурацию.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-132">You can specify auditing behavior either programmatically or through configuration.</span></span>  
   
-### Классы аудита  
- В приведенной ниже таблице описаны классы и свойства, используемые для программирования поведения аудита.  
+### <a name="auditing-classes"></a><span data-ttu-id="1c6f8-133">Классы аудита</span><span class="sxs-lookup"><span data-stu-id="1c6f8-133">Auditing Classes</span></span>  
+ <span data-ttu-id="1c6f8-134">В приведенной ниже таблице описаны классы и свойства, используемые для программирования поведения аудита.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-134">The following table describes the classes and properties used to program auditing behavior.</span></span>  
   
-|Класс|Описание|  
-|-----------|--------------|  
-|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>|Позволяет задавать параметры аудита в виде поведения службы.|  
-|<xref:System.ServiceModel.AuditLogLocation>|Перечисление для задания журнала, в который требуется производить запись.Предусмотрены значения Default, Application и Security.Если выбрано значение Default, фактическое расположение журнала определяется операционной системой.См. подраздел "Выбор журнала приложения или журнала безопасности" ниже в этом разделе.|  
-|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A>|Задает тип событий проверки подлинности сообщений для аудита на уровне сообщения.Предусмотрены варианты `None`, `Failure`, `Success` и `SuccessOrFailure`.|  
-|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>|Задает тип событий авторизации службы для аудита на уровне службы.Предусмотрены варианты `None`, `Failure`, `Success` и `SuccessOrFailure`.|  
-|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>|Задает, что происходит с запросом клиента в случае сбоя аудита.Например, если служба пытается произвести запись в журнал безопасности, но не имеет привилегий `SeAuditPrivilege`.Значение по умолчанию `true` означает, что сбои игнорируются и запрос клиента обрабатывается обычным образом.|  
+|<span data-ttu-id="1c6f8-135">Класс</span><span class="sxs-lookup"><span data-stu-id="1c6f8-135">Class</span></span>|<span data-ttu-id="1c6f8-136">Описание</span><span class="sxs-lookup"><span data-stu-id="1c6f8-136">Description</span></span>|  
+|-----------|-----------------|  
+|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>|<span data-ttu-id="1c6f8-137">Позволяет задавать параметры аудита в виде поведения службы.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-137">Enables setting options for auditing as a service behavior.</span></span>|  
+|<xref:System.ServiceModel.AuditLogLocation>|<span data-ttu-id="1c6f8-138">Перечисление для задания журнала, в который требуется производить запись.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-138">Enumeration to specify which log to write to.</span></span> <span data-ttu-id="1c6f8-139">Предусмотрены значения Default, Application и Security.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-139">The possible values are Default, Application, and Security.</span></span> <span data-ttu-id="1c6f8-140">Если выбрано значение Default, фактическое расположение журнала определяется операционной системой.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-140">When you select Default, the operating system determines the actual log location.</span></span> <span data-ttu-id="1c6f8-141">См. подраздел "Выбор журнала приложения или журнала безопасности" ниже в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-141">See the "Application or Security Event Log Choice" section later in this topic.</span></span>|  
+|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A>|<span data-ttu-id="1c6f8-142">Задает тип событий проверки подлинности сообщений для аудита на уровне сообщения.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-142">Specifies which types of message authentication events are audited at the message level.</span></span> <span data-ttu-id="1c6f8-143">Предусмотрены варианты `None`, `Failure`, `Success` и `SuccessOrFailure`.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-143">The choices are `None`, `Failure`, `Success`, and `SuccessOrFailure`.</span></span>|  
+|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>|<span data-ttu-id="1c6f8-144">Задает тип событий авторизации службы для аудита на уровне службы.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-144">Specifies which types of service authorization events are audited at the service level.</span></span> <span data-ttu-id="1c6f8-145">Предусмотрены варианты `None`, `Failure`, `Success` и `SuccessOrFailure`.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-145">The choices are `None`, `Failure`, `Success`, and `SuccessOrFailure`.</span></span>|  
+|<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>|<span data-ttu-id="1c6f8-146">Задает, что происходит с запросом клиента в случае сбоя аудита.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-146">Specifies what happens to the client request when auditing fails.</span></span> <span data-ttu-id="1c6f8-147">Например, если служба пытается произвести запись в журнал безопасности, но не имеет привилегий `SeAuditPrivilege`.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-147">For example, when the service attempts to write to the security log, but does not have `SeAuditPrivilege`.</span></span> <span data-ttu-id="1c6f8-148">Значение по умолчанию `true` означает, что сбои игнорируются и запрос клиента обрабатывается обычным образом.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-148">The default value of `true` indicates that failures are ignored, and the client request is processed normally.</span></span>|  
   
- Пример настройки приложения для регистрации событий аудита см. в разделе [Практическое руководство. Аудит событий безопасности](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
+ <span data-ttu-id="1c6f8-149">Пример настройки приложения для записи событий аудита см. в разделе [как: аудит событий безопасности](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).</span><span class="sxs-lookup"><span data-stu-id="1c6f8-149">For an example of setting up an application to log audit events, see [How to: Audit Security Events](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).</span></span>  
   
-### Конфигурация  
- Для задания поведения аудита можно также использовать конфигурацию, добавив [\<serviceSecurityAudit\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) в [\<поведения\>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).Этот элемент должен быть добавлен в [\<поведение\>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md), как показано в следующем коде.  
+### <a name="configuration"></a><span data-ttu-id="1c6f8-150">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="1c6f8-150">Configuration</span></span>  
+ <span data-ttu-id="1c6f8-151">Чтобы задать поведение аудита, добавив также можно настроить конфигурацию [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) под [ \<поведения >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).</span><span class="sxs-lookup"><span data-stu-id="1c6f8-151">You can also use configuration to specify auditing behavior by adding a [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) under the [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).</span></span> <span data-ttu-id="1c6f8-152">Необходимо добавить элемент в списке [ \<поведение >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-152">You must add the element under a [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) as shown in the following code.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.serviceModel>  
     <behaviors>  
@@ -80,37 +82,37 @@ caps.handback.revision: 27
 </configuration>  
 ```  
   
- Если аудит включен и параметр `auditLogLocation` не задан, для систем, поддерживающих запись в журнал безопасности, по умолчанию используется журнал "Security"; в противном случае используется журнал "Application".Только операционные системы [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] и [!INCLUDE[wv](../../../../includes/wv-md.md)] поддерживают запись в журнал безопасности.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] в подразделе «Операционная система» далее в этом разделе.  
+ <span data-ttu-id="1c6f8-153">Если аудит включен и параметр `auditLogLocation` не задан, для систем, поддерживающих запись в журнал безопасности, по умолчанию используется журнал "Security"; в противном случае используется журнал "Application".</span><span class="sxs-lookup"><span data-stu-id="1c6f8-153">If auditing is enabled and an `auditLogLocation` is not specified, the default log name is "Security" log for the platform supporting writing to the Security log; otherwise, it is "Application" log.</span></span> <span data-ttu-id="1c6f8-154">Только операционные системы [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] и [!INCLUDE[wv](../../../../includes/wv-md.md)] поддерживают запись в журнал безопасности.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-154">Only the [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] and [!INCLUDE[wv](../../../../includes/wv-md.md)] operating systems support writing to the Security log.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="1c6f8-155"> в подразделе «Операционная система» далее в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-155"> the "Operating System" section later in this topic.</span></span>  
   
-## Вопросы безопасности  
- Если злоумышленник знает о том, что включен аудит, он может отправить недопустимые сообщения, приводящие к внесению записей аудита в журнал.Если это приводит к заполнению журнала аудита, система аудита дает сбой.Для решения этой проблемы задайте свойству <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> значение `true` и используйте свойства средства «Просмотр событий» для управления поведением аудита.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] в статье службы поддержки Майкрософт, посвященной просмотру и управлению журналами событий с помощью оснастки «Просмотр событий» в Windows XP, статья [Как просматривать и управлять журналами событий в средстве «Просмотр событий» в Windows XP](http://go.microsoft.com/fwlink/?LinkId=89150).  
+## <a name="security-considerations"></a><span data-ttu-id="1c6f8-156">Вопросы безопасности</span><span class="sxs-lookup"><span data-stu-id="1c6f8-156">Security Considerations</span></span>  
+ <span data-ttu-id="1c6f8-157">Если злоумышленник знает о том, что включен аудит, он может отправить недопустимые сообщения, приводящие к внесению записей аудита в журнал.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-157">If a malicious user knows that auditing is enabled, that attacker can send invalid messages that cause audit entries to be written.</span></span> <span data-ttu-id="1c6f8-158">Если это приводит к заполнению журнала аудита, система аудита дает сбой.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-158">If the audit log is filled in this manner, the auditing system fails.</span></span> <span data-ttu-id="1c6f8-159">Для решения этой проблемы задайте свойству <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> значение `true` и используйте свойства средства «Просмотр событий» для управления поведением аудита.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-159">To mitigate this, set the <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> property to `true` and use the properties of the Event Viewer to control the auditing behavior.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="1c6f8-160">статья службы поддержки Майкрософт на просмотр и управление журналами событий с помощью средства просмотра событий в Windows XP, см. в [способы просмотра и управления журналами событий в средстве просмотра событий в Windows XP](http://go.microsoft.com/fwlink/?LinkId=89150).</span><span class="sxs-lookup"><span data-stu-id="1c6f8-160"> the Microsoft Support article on viewing and managing event logs by using the Event Viewer in Windows XP available at [How to view and manage event logs in Event Viewer in Windows XP](http://go.microsoft.com/fwlink/?LinkId=89150).</span></span>  
   
- События аудита, записанные в журнал приложения в [!INCLUDE[wxp](../../../../includes/wxp-md.md)], видны всем авторизованным пользователям.  
+ <span data-ttu-id="1c6f8-161">События аудита, записанные в журнал приложения в [!INCLUDE[wxp](../../../../includes/wxp-md.md)], видны всем авторизованным пользователям.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-161">Audit events that are written to the Application Log on [!INCLUDE[wxp](../../../../includes/wxp-md.md)] are visible to any authenticated user.</span></span>  
   
-## Выбор журнала событий приложения или журнала событий безопасности  
- В приведенной ниже таблице приведены сведения, помогающие выбрать журнал для записи событий — журнал событий приложения или журнал событий безопасности.  
+## <a name="choosing-between-application-and-security-event-logs"></a><span data-ttu-id="1c6f8-162">Выбор журнала событий приложения или журнала событий безопасности</span><span class="sxs-lookup"><span data-stu-id="1c6f8-162">Choosing Between Application and Security Event Logs</span></span>  
+ <span data-ttu-id="1c6f8-163">В приведенной ниже таблице приведены сведения, помогающие выбрать журнал для записи событий - журнал событий приложения или журнал событий безопасности.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-163">The following tables provide information to help you choose whether to log into the Application or the Security event log.</span></span>  
   
-#### Операционная система  
+#### <a name="operating-system"></a><span data-ttu-id="1c6f8-164">Операционная система</span><span class="sxs-lookup"><span data-stu-id="1c6f8-164">Operating System</span></span>  
   
-|Система|Журнал приложения|Журнал безопасности|  
-|-------------|-----------------------|-------------------------|  
-|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] или более поздняя версия|Поддерживается|Не поддерживается|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] и [!INCLUDE[wv](../../../../includes/wv-md.md)]|Поддерживается|Контекст потока должен обладать привилегиями `SeAuditPrivilege`|  
+|<span data-ttu-id="1c6f8-165">System</span><span class="sxs-lookup"><span data-stu-id="1c6f8-165">System</span></span>|<span data-ttu-id="1c6f8-166">Журнал приложения</span><span class="sxs-lookup"><span data-stu-id="1c6f8-166">Application log</span></span>|<span data-ttu-id="1c6f8-167">Журнал безопасности</span><span class="sxs-lookup"><span data-stu-id="1c6f8-167">Security log</span></span>|  
+|------------|---------------------|------------------|  
+|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]<span data-ttu-id="1c6f8-168"> или более поздняя версия</span><span class="sxs-lookup"><span data-stu-id="1c6f8-168"> or later</span></span>|<span data-ttu-id="1c6f8-169">Поддерживается</span><span class="sxs-lookup"><span data-stu-id="1c6f8-169">Supported</span></span>|<span data-ttu-id="1c6f8-170">Не поддерживается</span><span class="sxs-lookup"><span data-stu-id="1c6f8-170">Not supported</span></span>|  
+|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)]<span data-ttu-id="1c6f8-171"> и [!INCLUDE[wv](../../../../includes/wv-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1c6f8-171"> and [!INCLUDE[wv](../../../../includes/wv-md.md)]</span></span>|<span data-ttu-id="1c6f8-172">Поддерживается</span><span class="sxs-lookup"><span data-stu-id="1c6f8-172">Supported</span></span>|<span data-ttu-id="1c6f8-173">Контекст потока должен обладать привилегиями `SeAuditPrivilege`</span><span class="sxs-lookup"><span data-stu-id="1c6f8-173">Thread context must possess `SeAuditPrivilege`</span></span>|  
   
-#### Прочие факторы  
- В дополнение к операционной системе, в следующей таблице описываются другие параметры, влияющие на разрешение регистрации.  
+#### <a name="other-factors"></a><span data-ttu-id="1c6f8-174">Прочие факторы</span><span class="sxs-lookup"><span data-stu-id="1c6f8-174">Other Factors</span></span>  
+ <span data-ttu-id="1c6f8-175">В дополнение к операционной системе, в следующей таблице описываются другие параметры, влияющие на разрешение регистрации.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-175">In addition to the operating system, the following table describes other settings that control the enablement of logging.</span></span>  
   
-|Фактор|Журнал приложения|Журнал безопасности|  
-|------------|-----------------------|-------------------------|  
-|Управление политикой аудита|Неприменимо.|Помимо конфигурации, журнал безопасности управляется также политикой администратора локальной безопасности \(LSA\).Необходимо также разрешить категорию "Аудит доступа к объектам".|  
-|Взаимодействие с пользователем по умолчанию|Все авторизованные пользователи могут производить запись в журнал приложения, поэтому для процессов приложения никакие дополнительные шаги, связанные с разрешениями, не требуются.|Процесс приложения \(контекст\) должен иметь привилегии `SeAuditPrivilege`.|  
+|<span data-ttu-id="1c6f8-176">Фактор</span><span class="sxs-lookup"><span data-stu-id="1c6f8-176">Factor</span></span>|<span data-ttu-id="1c6f8-177">Журнал приложения</span><span class="sxs-lookup"><span data-stu-id="1c6f8-177">Application log</span></span>|<span data-ttu-id="1c6f8-178">Журнал безопасности</span><span class="sxs-lookup"><span data-stu-id="1c6f8-178">Security log</span></span>|  
+|------------|---------------------|------------------|  
+|<span data-ttu-id="1c6f8-179">Управление политикой аудита</span><span class="sxs-lookup"><span data-stu-id="1c6f8-179">Audit policy management</span></span>|<span data-ttu-id="1c6f8-180">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-180">Not applicable.</span></span>|<span data-ttu-id="1c6f8-181">Помимо конфигурации, журнал безопасности управляется также политикой администратора локальной безопасности (LSA).</span><span class="sxs-lookup"><span data-stu-id="1c6f8-181">Along with configuration, the Security log is also controlled by the local security authority (LSA) policy.</span></span> <span data-ttu-id="1c6f8-182">Необходимо также разрешить категорию "Аудит доступа к объектам".</span><span class="sxs-lookup"><span data-stu-id="1c6f8-182">The "Audit object access" category must also be enabled.</span></span>|  
+|<span data-ttu-id="1c6f8-183">Взаимодействие с пользователем по умолчанию</span><span class="sxs-lookup"><span data-stu-id="1c6f8-183">Default user experience</span></span>|<span data-ttu-id="1c6f8-184">Все авторизованные пользователи могут производить запись в журнал приложения, поэтому для процессов приложения никакие дополнительные шаги, связанные с разрешениями, не требуются.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-184">All authenticated users can write to the Application log, so no additional permission step is needed for application processes.</span></span>|<span data-ttu-id="1c6f8-185">Процесс приложения (контекст) должен иметь привилегии `SeAuditPrivilege`.</span><span class="sxs-lookup"><span data-stu-id="1c6f8-185">The application process (context) must have `SeAuditPrivilege`.</span></span>|  
   
-## См. также  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>   
- <xref:System.ServiceModel.AuditLogLocation>   
- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Базовое программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)   
- [Практическое руководство. Аудит событий безопасности](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)   
- [\<serviceSecurityAudit\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)   
- [\<поведения\>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)   
- [Модель безопасности для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x419)
+## <a name="see-also"></a><span data-ttu-id="1c6f8-186">См. также</span><span class="sxs-lookup"><span data-stu-id="1c6f8-186">See Also</span></span>  
+ <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
+ <xref:System.ServiceModel.AuditLogLocation>  
+ [<span data-ttu-id="1c6f8-187">Общие сведения о безопасности</span><span class="sxs-lookup"><span data-stu-id="1c6f8-187">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="1c6f8-188">Базовое программирование для WCF</span><span class="sxs-lookup"><span data-stu-id="1c6f8-188">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [<span data-ttu-id="1c6f8-189">Как: аудит событий безопасности</span><span class="sxs-lookup"><span data-stu-id="1c6f8-189">How to: Audit Security Events</span></span>](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
+ [<span data-ttu-id="1c6f8-190">\<serviceSecurityAudit ></span><span class="sxs-lookup"><span data-stu-id="1c6f8-190">\<serviceSecurityAudit></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)  
+ [<span data-ttu-id="1c6f8-191">\<поведения ></span><span class="sxs-lookup"><span data-stu-id="1c6f8-191">\<behaviors></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+ [<span data-ttu-id="1c6f8-192">Модель безопасности для Windows Server App Fabric</span><span class="sxs-lookup"><span data-stu-id="1c6f8-192">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

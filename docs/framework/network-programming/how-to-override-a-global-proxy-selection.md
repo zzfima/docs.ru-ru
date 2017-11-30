@@ -8,26 +8,23 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 ms.assetid: 0da481a9-b414-4230-beb0-e3ceba882fe5
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cecb98628231e6a8b2847043e3f3c2206c164ae3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: dc9f8f4e958d1988cecd769431e99d70ff2a4cfd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-override-a-global-proxy-selection"></a>Практическое руководство. Переопределение глобальных прокси-серверов
-В этом примере класс **WebRequest** отправляется на веб-сайт www.contoso.com, который переопределяет глобальные прокси-серверы прокси-сервером с именем `alternateproxy` на порту 80.  
+# <a name="how-to-override-a-global-proxy-selection"></a><span data-ttu-id="53c3f-102">Практическое руководство. Переопределение глобальных прокси-серверов</span><span class="sxs-lookup"><span data-stu-id="53c3f-102">How to: Override a Global Proxy Selection</span></span>
+<span data-ttu-id="53c3f-103">В этом примере класс **WebRequest** отправляется на веб-сайт www.contoso.com, который переопределяет глобальные прокси-серверы прокси-сервером с именем `alternateproxy` на порту 80.</span><span class="sxs-lookup"><span data-stu-id="53c3f-103">This example sends a **WebRequest** to www.contoso.com that overrides the global proxy selection with a proxy server named `alternateproxy` on port 80.</span></span>  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a><span data-ttu-id="53c3f-104">Пример</span><span class="sxs-lookup"><span data-stu-id="53c3f-104">Example</span></span>  
   
 ```csharp  
 WebRequest req = WebRequest.Create("http://www.contoso.com/");  
@@ -39,12 +36,11 @@ Dim req As WebRequest = WebRequest.Create("http://www.contoso.com/")
 req.Proxy = New WebProxy("http://alternateproxy:80/")  
 ```  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
- Для этого примера требуются:  
+## <a name="compiling-the-code"></a><span data-ttu-id="53c3f-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="53c3f-105">Compiling the Code</span></span>  
+ <span data-ttu-id="53c3f-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="53c3f-106">This example requires:</span></span>  
   
--   Ссылки на пространство имен **System.Net**.  
+-   <span data-ttu-id="53c3f-107">Ссылки на пространство имен **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="53c3f-107">References to the **System.Net** namespace.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Использование протоколов приложений](../../../docs/framework/network-programming/using-application-protocols.md)   
- [Доступ к Интернету через прокси-сервер](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
-
+## <a name="see-also"></a><span data-ttu-id="53c3f-108">См. также</span><span class="sxs-lookup"><span data-stu-id="53c3f-108">See Also</span></span>  
+ [<span data-ttu-id="53c3f-109">Использование протоколов приложений</span><span class="sxs-lookup"><span data-stu-id="53c3f-109">Using Application Protocols</span></span>](../../../docs/framework/network-programming/using-application-protocols.md)  
+ [<span data-ttu-id="53c3f-110">Доступ к Интернету через прокси-сервер</span><span class="sxs-lookup"><span data-stu-id="53c3f-110">Accessing the Internet Through a Proxy</span></span>](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)

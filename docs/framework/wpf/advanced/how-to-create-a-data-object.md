@@ -1,91 +1,97 @@
 ---
-title: "Как создать объект данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "объекты данных [WPF], создание"
-  - "DataObject - класс [WPF], создание"
-  - "перетаскивание [WPF], создание объектов данных"
+title: "Как создать объект данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataObject class [WPF], creating
+- data objects [WPF], creating
+- drag-and-drop [WPF], creating data objects
 ms.assetid: 022fa142-717d-4fea-a53c-3b52e9d91aff
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7b002e1c7a9eea2592de58aac3b838b9f6f982ce
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Как создать объект данных
-Далее приведены примеры различных способов создания объекта данных с помощью конструкторов, предоставленных классом <xref:System.Windows.DataObject>.  
+# <a name="how-to-create-a-data-object"></a><span data-ttu-id="f3ec3-102">Как создать объект данных</span><span class="sxs-lookup"><span data-stu-id="f3ec3-102">How to: Create a Data Object</span></span>
+<span data-ttu-id="f3ec3-103">Следующие примеры демонстрируют различные способы создания объекта данных с помощью конструкторов, предоставляемые <xref:System.Windows.DataObject> класса.</span><span class="sxs-lookup"><span data-stu-id="f3ec3-103">The following examples show various ways to create a data object using the constructors provided by the <xref:System.Windows.DataObject> class.</span></span>  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="f3ec3-104">Пример</span><span class="sxs-lookup"><span data-stu-id="f3ec3-104">Example</span></span>  
   
-### Описание  
- В следующем примере код создает новый объект данных и использует один из перегруженных конструкторов \(<xref:System.Windows.DataObject.%23ctor%28System.Object%29>\) для инициализации объекта данных со строкой.  В этом случае, соответствующий формат данных определяется автоматически, согласно типу хранимых данных, и их автоматическое преобразование разрешено по умолчанию.  
+### <a name="description"></a><span data-ttu-id="f3ec3-105">Описание</span><span class="sxs-lookup"><span data-stu-id="f3ec3-105">Description</span></span>  
+ <span data-ttu-id="f3ec3-106">В следующем примере кода создается новый объект данных и использует один из перегруженных конструкторов (<xref:System.Windows.DataObject.%23ctor%28System.Object%29>) для инициализации объекта данных со строкой.</span><span class="sxs-lookup"><span data-stu-id="f3ec3-106">The following example code creates a new data object and uses one of the overloaded constructors (<xref:System.Windows.DataObject.%23ctor%28System.Object%29>) to initialize the data object with a string.</span></span>  <span data-ttu-id="f3ec3-107">В этом случае соответствующий формат данных определяется автоматически в соответствии с типом хранимых данных, и по умолчанию разрешено автоматическое преобразование сохраненных данных.</span><span class="sxs-lookup"><span data-stu-id="f3ec3-107">In this case, an appropriate data format is determined automatically according to the stored data's type, and auto-converting of the stored data is allowed by default.</span></span>  
   
-### Код  
+### <a name="code"></a><span data-ttu-id="f3ec3-108">Код</span><span class="sxs-lookup"><span data-stu-id="f3ec3-108">Code</span></span>  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Simple](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_simple)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Simple](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_simple)]  
   
-### Описание  
- Следующий кода примера является сжатой версией кода, который приведен выше.  
+### <a name="description"></a><span data-ttu-id="f3ec3-109">Описание</span><span class="sxs-lookup"><span data-stu-id="f3ec3-109">Description</span></span>  
+ <span data-ttu-id="f3ec3-110">Следующий пример кода представляет собой сжатую версию приведенного выше кода.</span><span class="sxs-lookup"><span data-stu-id="f3ec3-110">The following example code is a condensed version of the code shown above.</span></span>  
   
-### Код  
+### <a name="code"></a><span data-ttu-id="f3ec3-111">Код</span><span class="sxs-lookup"><span data-stu-id="f3ec3-111">Code</span></span>  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Simple_Condensed](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_simple_condensed)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Simple_Condensed](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_simple_condensed)]  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="f3ec3-112">Пример</span><span class="sxs-lookup"><span data-stu-id="f3ec3-112">Example</span></span>  
   
-### Описание  
- В следующем примере код создает новый объект данных и использует один из перегруженных конструкторов \(<xref:System.Windows.DataObject.%23ctor%28System.String%2CSystem.Object%29>\) для инициализации объекта данных со строкой и заданным форматом данных.  В этом случае, формат данных определяется строкой. Класс <xref:System.Windows.DataFormats> предоставляет набор строк предопределенных типов.  Автоматическое преобразование сохраненных данных по умолчанию разрешено.  
+### <a name="description"></a><span data-ttu-id="f3ec3-113">Описание</span><span class="sxs-lookup"><span data-stu-id="f3ec3-113">Description</span></span>  
+ <span data-ttu-id="f3ec3-114">В следующем примере кода создается новый объект данных и использует один из перегруженных конструкторов (<xref:System.Windows.DataObject.%23ctor%28System.String%2CSystem.Object%29>) для инициализации объекта данных со строкой и указанного формата данных.</span><span class="sxs-lookup"><span data-stu-id="f3ec3-114">The following example code creates a new data object and uses one of the overloaded constructors (<xref:System.Windows.DataObject.%23ctor%28System.String%2CSystem.Object%29>) to initialize the data object with a string and a specified data format.</span></span>  <span data-ttu-id="f3ec3-115">В этом случае формат данных задается строкой. <xref:System.Windows.DataFormats> класс предоставляет набор строк предопределенных типов.</span><span class="sxs-lookup"><span data-stu-id="f3ec3-115">In this case the data format is specified by a string; the <xref:System.Windows.DataFormats> class provides a set of pre-defined type strings.</span></span> <span data-ttu-id="f3ec3-116">Автоматическое преобразование сохраненных данных по умолчанию разрешено.</span><span class="sxs-lookup"><span data-stu-id="f3ec3-116">Auto-converting of the stored data is allowed by default.</span></span>  
   
-### Код  
+### <a name="code"></a><span data-ttu-id="f3ec3-117">Код</span><span class="sxs-lookup"><span data-stu-id="f3ec3-117">Code</span></span>  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_TypeString](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_typestring)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_TypeString](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_typestring)]  
   
-### Описание  
- Следующий кода примера является сжатой версией кода, который приведен выше.  
+### <a name="description"></a><span data-ttu-id="f3ec3-118">Описание</span><span class="sxs-lookup"><span data-stu-id="f3ec3-118">Description</span></span>  
+ <span data-ttu-id="f3ec3-119">Следующий пример кода представляет собой сжатую версию приведенного выше кода.</span><span class="sxs-lookup"><span data-stu-id="f3ec3-119">The following example code is a condensed version of the code shown above.</span></span>  
   
-### Код  
+### <a name="code"></a><span data-ttu-id="f3ec3-120">Код</span><span class="sxs-lookup"><span data-stu-id="f3ec3-120">Code</span></span>  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_TypeString_Condensed](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_typestring_condensed)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_TypeString_Condensed](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_typestring_condensed)]  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="f3ec3-121">Пример</span><span class="sxs-lookup"><span data-stu-id="f3ec3-121">Example</span></span>  
   
-### Описание  
- В следующем примере код создает новый объект данных и использует один из перегруженных конструкторов \(<xref:System.Windows.DataObject.%23ctor%2A>\) для инициализации объекта данных со строкой и заданным форматом данных.  В этом случае, формат данных задается параметром <xref:System.Type>.  Автоматическое преобразование сохраненных данных по умолчанию разрешено.  
+### <a name="description"></a><span data-ttu-id="f3ec3-122">Описание</span><span class="sxs-lookup"><span data-stu-id="f3ec3-122">Description</span></span>  
+ <span data-ttu-id="f3ec3-123">В следующем примере кода создается новый объект данных и использует один из перегруженных конструкторов (<xref:System.Windows.DataObject.%23ctor%2A>) для инициализации объекта данных со строкой и указанного формата данных.</span><span class="sxs-lookup"><span data-stu-id="f3ec3-123">The following example code creates a new data object and uses one of the overloaded constructors (<xref:System.Windows.DataObject.%23ctor%2A>) to initialize the data object with a string and a specified data format.</span></span>  <span data-ttu-id="f3ec3-124">В этом случае формат данных задается <xref:System.Type> параметра.</span><span class="sxs-lookup"><span data-stu-id="f3ec3-124">In this case the data format is specified by a <xref:System.Type> parameter.</span></span>  <span data-ttu-id="f3ec3-125">Автоматическое преобразование сохраненных данных по умолчанию разрешено.</span><span class="sxs-lookup"><span data-stu-id="f3ec3-125">Auto-converting of the stored data is allowed by default.</span></span>  
   
-### Код  
+### <a name="code"></a><span data-ttu-id="f3ec3-126">Код</span><span class="sxs-lookup"><span data-stu-id="f3ec3-126">Code</span></span>  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Type](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_type)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Type](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_type)]  
   
-### Описание  
- Следующий кода примера является сжатой версией кода, который приведен выше.  
+### <a name="description"></a><span data-ttu-id="f3ec3-127">Описание</span><span class="sxs-lookup"><span data-stu-id="f3ec3-127">Description</span></span>  
+ <span data-ttu-id="f3ec3-128">Следующий пример кода представляет собой сжатую версию приведенного выше кода.</span><span class="sxs-lookup"><span data-stu-id="f3ec3-128">The following example code is a condensed version of the code shown above.</span></span>  
   
-### Код  
+### <a name="code"></a><span data-ttu-id="f3ec3-129">Код</span><span class="sxs-lookup"><span data-stu-id="f3ec3-129">Code</span></span>  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Type_Condensed](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_type_condensed)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Type_Condensed](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_type_condensed)]  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="f3ec3-130">Пример</span><span class="sxs-lookup"><span data-stu-id="f3ec3-130">Example</span></span>  
   
-### Описание  
- В следующем примере код создает новый объект данных и использует один из перегруженных конструкторов \(<xref:System.Windows.DataObject.%23ctor%28System.String%2CSystem.Object%2CSystem.Boolean%29>\) для инициализации объекта данных со строкой и заданным форматом данных.  В этом случае, формат данных определяется строкой. Класс <xref:System.Windows.DataFormats> предоставляет набор строк предопределенных типов.  Этот перегруженный конструктор позволяет вызывающему объекту определить, разрешено ли автоматическое преобразование.  
+### <a name="description"></a><span data-ttu-id="f3ec3-131">Описание</span><span class="sxs-lookup"><span data-stu-id="f3ec3-131">Description</span></span>  
+ <span data-ttu-id="f3ec3-132">В следующем примере кода создается новый объект данных и использует один из перегруженных конструкторов (<xref:System.Windows.DataObject.%23ctor%28System.String%2CSystem.Object%2CSystem.Boolean%29>) для инициализации объекта данных со строкой и указанного формата данных.</span><span class="sxs-lookup"><span data-stu-id="f3ec3-132">The following example code creates a new data object and uses one of the overloaded constructors (<xref:System.Windows.DataObject.%23ctor%28System.String%2CSystem.Object%2CSystem.Boolean%29>) to initialize the data object with a string and a specified data format.</span></span>  <span data-ttu-id="f3ec3-133">В этом случае формат данных задается строкой. <xref:System.Windows.DataFormats> класс предоставляет набор строк предопределенных типов.</span><span class="sxs-lookup"><span data-stu-id="f3ec3-133">In this case the data format is specified by a string; the <xref:System.Windows.DataFormats> class provides a set of pre-defined type strings.</span></span> <span data-ttu-id="f3ec3-134">Этот перегруженный конструктор позволяет вызывающему объекту укажите, разрешено ли автоматическое преобразование.</span><span class="sxs-lookup"><span data-stu-id="f3ec3-134">This particular constructor overload enables the caller to specify whether auto-converting is allowed.</span></span>  
   
-### Код  
+### <a name="code"></a><span data-ttu-id="f3ec3-135">Код</span><span class="sxs-lookup"><span data-stu-id="f3ec3-135">Code</span></span>  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_AutoConvert](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_autoconvert)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_AutoConvert](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_autoconvert)]  
   
-### Описание  
- Следующий кода примера является сжатой версией кода, который приведен выше.  
+### <a name="description"></a><span data-ttu-id="f3ec3-136">Описание</span><span class="sxs-lookup"><span data-stu-id="f3ec3-136">Description</span></span>  
+ <span data-ttu-id="f3ec3-137">Следующий пример кода представляет собой сжатую версию приведенного выше кода.</span><span class="sxs-lookup"><span data-stu-id="f3ec3-137">The following example code is a condensed version of the code shown above.</span></span>  
   
-### Код  
+### <a name="code"></a><span data-ttu-id="f3ec3-138">Код</span><span class="sxs-lookup"><span data-stu-id="f3ec3-138">Code</span></span>  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_AutoConvert_Condensed](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_autoconvert_condensed)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_AutoConvert_Condensed](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_autoconvert_condensed)]  
   
-## См. также  
+## <a name="see-also"></a><span data-ttu-id="f3ec3-139">См. также</span><span class="sxs-lookup"><span data-stu-id="f3ec3-139">See Also</span></span>  
  <xref:System.Windows.IDataObject>

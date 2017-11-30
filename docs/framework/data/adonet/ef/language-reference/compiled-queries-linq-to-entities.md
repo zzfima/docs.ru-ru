@@ -1,82 +1,84 @@
 ---
-title: "Скомпилированные запросы (LINQ to Entities) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "Скомпилированные запросы (LINQ to Entities)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: de490bac737520ffef5899c8515322c72b2a1144
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Скомпилированные запросы (LINQ to Entities)
-Если приложение многократно выполняет похожие по структуре запросы на платформе Entity Framework, во многих случаях можно повысить производительность, скомпилировав запрос один раз, а затем выполняя его несколько раз с разными параметрами.  Например, приложению может понадобиться получить всех клиентов из определенного города; имя города указывается пользователем во время выполнения с помощью формы.  Для этих целей технология LINQ to Entities поддерживает использование скомпилированных запросов.  
+# <a name="compiled-queries--linq-to-entities"></a><span data-ttu-id="0bb4b-102">Скомпилированные запросы (LINQ to Entities)</span><span class="sxs-lookup"><span data-stu-id="0bb4b-102">Compiled Queries  (LINQ to Entities)</span></span>
+<span data-ttu-id="0bb4b-103">Если приложение многократно выполняет похожие по структуре запросы на платформе Entity Framework, во многих случаях можно повысить производительность, скомпилировав запрос один раз, а затем выполняя его несколько раз с разными параметрами.</span><span class="sxs-lookup"><span data-stu-id="0bb4b-103">When you have an application that executes structurally similar queries many times in the Entity Framework, you can frequently increase performance by compiling the query one time and executing it several times with different parameters.</span></span> <span data-ttu-id="0bb4b-104">Например, приложению может понадобиться получить всех клиентов из определенного города; имя города указывается пользователем во время выполнения с помощью формы.</span><span class="sxs-lookup"><span data-stu-id="0bb4b-104">For example, an application might have to retrieve all the customers in a particular city; the city is specified at runtime by the user in a form.</span></span> <span data-ttu-id="0bb4b-105">Для этих целей технология LINQ to Entities поддерживает использование скомпилированных запросов.</span><span class="sxs-lookup"><span data-stu-id="0bb4b-105">LINQ to Entities supports using compiled queries for this purpose.</span></span>  
   
- Начиная с версии 4.5 платформы .NET Framework, запросы LINQ кэшируются автоматически.  Тем не менее можно использовать скомпилированные запросы LINQ для снижения затрат при последующем выполнении, и скомпилированные запросы могут быть более эффективными, чем запросы LINQ, которые автоматически сохраняются в кэше.  Обратите внимание, что запросы LINQ to Entities, которые применяют оператор `Enumerable.Contains` к коллекции в памяти, автоматически не кэшируются.  Также в скомпилированных запросах LINQ не допускаются коллекции в памяти с параметрами.  
+ <span data-ttu-id="0bb4b-106">Начиная с версии 4.5 платформы .NET Framework, запросы LINQ кэшируются автоматически.</span><span class="sxs-lookup"><span data-stu-id="0bb4b-106">Starting with the .NET Framework 4.5, LINQ queries are cached automatically.</span></span> <span data-ttu-id="0bb4b-107">Тем не менее можно использовать скомпилированные запросы LINQ для снижения затрат при последующем выполнении, и скомпилированные запросы могут быть более эффективными, чем запросы LINQ, которые автоматически сохраняются в кэше.</span><span class="sxs-lookup"><span data-stu-id="0bb4b-107">However, you can still use compiled LINQ queries to reduce this cost in later executions and compiled queries can be more efficient than LINQ queries that are automatically cached.</span></span> <span data-ttu-id="0bb4b-108">Обратите внимание, что запросы LINQ to Entities, которые применяют оператор `Enumerable.Contains` к коллекции в памяти, автоматически не кэшируются.</span><span class="sxs-lookup"><span data-stu-id="0bb4b-108">Note that LINQ to Entities queries that apply the `Enumerable.Contains` operator to in-memory collections are not automatically cached.</span></span> <span data-ttu-id="0bb4b-109">Также в скомпилированных запросах LINQ не допускаются коллекции в памяти с параметрами.</span><span class="sxs-lookup"><span data-stu-id="0bb4b-109">Also parameterizing in-memory collections in compiled LINQ queries is not allowed.</span></span>  
   
- Класс <xref:System.Data.Objects.CompiledQuery> обеспечивает компиляцию и кэширование запросов для повторного использования.  Концептуально данный класс содержит метод <xref:System.Data.Objects.CompiledQuery> `Compile` с несколькими перегрузками.  Вызовите метод `Compile`, чтобы создать новый делегат, для представления скомпилированного запроса.  Метод `Compile`, которому предоставляют контекст <xref:System.Data.Objects.ObjectContext> и значения параметров, возвращает делегата, который формирует определенный результат \(например, экземпляр <xref:System.Linq.IQueryable%601>\).  Компиляция запроса выполняется только один раз во время первого выполнения.  Параметры слияния, которые заданы для запроса во время компиляции, далее не могут быть изменены.  После компиляции запроса ему можно передавать только параметры примитивного типа, но нельзя заменять части запроса, которые изменят созданный код SQL.  Дополнительные сведения см. в разделе [Параметры объединения Entity Framework и компилированные запросы](http://go.microsoft.com/fwlink/?LinkId=199591)  
+ <span data-ttu-id="0bb4b-110">Класс <xref:System.Data.Objects.CompiledQuery> обеспечивает компиляцию и кэширование запросов для повторного использования.</span><span class="sxs-lookup"><span data-stu-id="0bb4b-110">The <xref:System.Data.Objects.CompiledQuery> class provides compilation and caching of queries for reuse.</span></span> <span data-ttu-id="0bb4b-111">Концептуально данный класс содержит метод <xref:System.Data.Objects.CompiledQuery> `Compile` с несколькими перегрузками.</span><span class="sxs-lookup"><span data-stu-id="0bb4b-111">Conceptually, this class contains a <xref:System.Data.Objects.CompiledQuery>'s `Compile` method with several overloads.</span></span> <span data-ttu-id="0bb4b-112">Вызовите метод `Compile`, чтобы создать новый делегат, для представления скомпилированного запроса.</span><span class="sxs-lookup"><span data-stu-id="0bb4b-112">Call the `Compile` method to create a new delegate to represent the compiled query.</span></span> <span data-ttu-id="0bb4b-113">Метод `Compile`, которому предоставляют контекст <xref:System.Data.Objects.ObjectContext> и значения параметров, возвращает делегата, который формирует определенный результат (например, экземпляр <xref:System.Linq.IQueryable%601>).</span><span class="sxs-lookup"><span data-stu-id="0bb4b-113">The `Compile` methods, provided with a <xref:System.Data.Objects.ObjectContext> and parameter values, return a delegate that produces some result (such as an <xref:System.Linq.IQueryable%601> instance).</span></span> <span data-ttu-id="0bb4b-114">Компиляция запроса выполняется только один раз во время первого выполнения.</span><span class="sxs-lookup"><span data-stu-id="0bb4b-114">The query compiles once during only the first execution.</span></span> <span data-ttu-id="0bb4b-115">Параметры слияния, которые заданы для запроса во время компиляции, далее не могут быть изменены.</span><span class="sxs-lookup"><span data-stu-id="0bb4b-115">The merge options set for the query at the time of the compilation cannot be changed later.</span></span> <span data-ttu-id="0bb4b-116">После компиляции запроса ему можно передавать только параметры примитивного типа, но нельзя заменять части запроса, которые изменят созданный код SQL.</span><span class="sxs-lookup"><span data-stu-id="0bb4b-116">Once the query is compiled you can only supply parameters of primitive type but you cannot replace parts of the query that would change the generated SQL.</span></span> <span data-ttu-id="0bb4b-117">Дополнительные сведения см. в разделе [параметры объединения Entity Framework и компилированные запросы](http://go.microsoft.com/fwlink/?LinkId=199591)</span><span class="sxs-lookup"><span data-stu-id="0bb4b-117">For more information, see [Entity Framework Merge Options and Compiled Queries](http://go.microsoft.com/fwlink/?LinkId=199591)</span></span>  
   
- Выражение запроса [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], компилируемое в запросе <xref:System.Data.Objects.CompiledQuery> методом `Compile`, представлено одним из универсальных делегатов `Func`, например <xref:System.Func%605>.  Выражение запроса может инкапсулировать не более одного параметра `ObjectContext`, одного возвращаемого параметра и 16 параметров запроса.  Если нужно больше 16 параметров запроса, то можно создать структуру, свойства которой будут соответствовать параметрам запроса.  После задания свойств ими можно будет воспользоваться в выражении запроса из структуры.  
+ <span data-ttu-id="0bb4b-118">[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] Выражение запроса, <xref:System.Data.Objects.CompiledQuery> `Compile` метод компилирует представляется одним из универсальных `Func` делегаты, такие как <xref:System.Func%605>.</span><span class="sxs-lookup"><span data-stu-id="0bb4b-118">The [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] query expression that the <xref:System.Data.Objects.CompiledQuery>'s `Compile` method compiles is represented by one of the generic `Func` delegates, such as <xref:System.Func%605>.</span></span> <span data-ttu-id="0bb4b-119">Выражение запроса может инкапсулировать не более одного параметра `ObjectContext`, одного возвращаемого параметра и 16 параметров запроса.</span><span class="sxs-lookup"><span data-stu-id="0bb4b-119">At most, the query expression can encapsulate an `ObjectContext` parameter, a return parameter, and 16 query parameters.</span></span> <span data-ttu-id="0bb4b-120">Если нужно больше 16 параметров запроса, то можно создать структуру, свойства которой будут соответствовать параметрам запроса.</span><span class="sxs-lookup"><span data-stu-id="0bb4b-120">If more than 16 query parameters are required, you can create a structure whose properties represent query parameters.</span></span> <span data-ttu-id="0bb4b-121">После задания свойств ими можно будет воспользоваться в выражении запроса из структуры.</span><span class="sxs-lookup"><span data-stu-id="0bb4b-121">You can then use the properties on the structure in the query expression after you set the properties.</span></span>  
   
-## Пример  
- В следующем примере компилируется и вызывается запрос, принимающий входной параметр типа <xref:System.Decimal> и возвращающий последовательность заказов, сумма заказа которых больше или равна 200 долларам США:  
+## <a name="example"></a><span data-ttu-id="0bb4b-122">Пример</span><span class="sxs-lookup"><span data-stu-id="0bb4b-122">Example</span></span>  
+ <span data-ttu-id="0bb4b-123">В следующем примере компилируется и вызывается запрос, принимающий входной параметр типа <xref:System.Decimal> и возвращающий последовательность заказов, сумма заказа которых больше или равна 200 долларам США:</span><span class="sxs-lookup"><span data-stu-id="0bb4b-123">The following example compiles and then invokes a query that accepts a <xref:System.Decimal> input parameter and returns a sequence of orders where the total due is greater than or equal to $200.00:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery2)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery2)]  
   
-## Пример  
- В следующем примере компилируется и вызывается запрос, возвращающий экземпляр элемента <xref:System.Data.Objects.ObjectQuery%601>:  
+## <a name="example"></a><span data-ttu-id="0bb4b-124">Пример</span><span class="sxs-lookup"><span data-stu-id="0bb4b-124">Example</span></span>  
+ <span data-ttu-id="0bb4b-125">В следующем примере компилируется и вызывается запрос, возвращающий экземпляр элемента <xref:System.Data.Objects.ObjectQuery%601>:</span><span class="sxs-lookup"><span data-stu-id="0bb4b-125">The following example compiles and then invokes a query that returns an <xref:System.Data.Objects.ObjectQuery%601> instance:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery1_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery1_mq)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery1_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery1_mq)]  
   
-## Пример  
- В следующем примере компилируется и затем вызывается запрос, возвращающий среднее значение цен списка продуктов в виде значения <xref:System.Decimal>:  
+## <a name="example"></a><span data-ttu-id="0bb4b-126">Пример</span><span class="sxs-lookup"><span data-stu-id="0bb4b-126">Example</span></span>  
+ <span data-ttu-id="0bb4b-127">В следующем примере компилируется и затем вызывается запрос, возвращающий среднее значение цен списка продуктов в виде значения <xref:System.Decimal>:</span><span class="sxs-lookup"><span data-stu-id="0bb4b-127">The following example compiles and then invokes a query that returns the average of the product list prices as a <xref:System.Decimal> value:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery3_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery3_mq)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery3_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery3_mq)]  
   
-## Пример  
- В следующем примере компилируется и затем вызывается запрос, принимающий входной параметр <xref:System.String> и возвращающий экземпляр `Contact`, адрес электронной почты которого начинается с указанной строки:  
+## <a name="example"></a><span data-ttu-id="0bb4b-128">Пример</span><span class="sxs-lookup"><span data-stu-id="0bb4b-128">Example</span></span>  
+ <span data-ttu-id="0bb4b-129">В следующем примере компилируется и затем вызывается запрос, принимающий входной параметр <xref:System.String> и возвращающий экземпляр `Contact`, адрес электронной почты которого начинается с указанной строки:</span><span class="sxs-lookup"><span data-stu-id="0bb4b-129">The following example compiles and then invokes a query that accepts a <xref:System.String> input parameter and then returns a `Contact` whose e-mail address starts with the specified string:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery4_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery4_mq)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery4_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery4_mq)]  
   
-## Пример  
- В следующем примере компилируется и вызывается запрос, который принимает входные параметры <xref:System.DateTime> и <xref:System.Decimal> и возвращает последовательность заказов с датой позднее 8 марта 2003 г. и суммой заказа менее 300 долларов:  
+## <a name="example"></a><span data-ttu-id="0bb4b-130">Пример</span><span class="sxs-lookup"><span data-stu-id="0bb4b-130">Example</span></span>  
+ <span data-ttu-id="0bb4b-131">В следующем примере компилируется и вызывается запрос, который принимает входные параметры <xref:System.DateTime> и <xref:System.Decimal> и возвращает последовательность заказов с датой позднее 8 марта 2003 г. и суммой заказа менее 300 долларов:</span><span class="sxs-lookup"><span data-stu-id="0bb4b-131">The following example compiles and then invokes a query that accepts <xref:System.DateTime> and <xref:System.Decimal> input parameters and returns a sequence of orders where the order date is later than March 8, 2003, and the total due is less than $300.00:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery5)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery5)]  
   
-## Пример  
- В следующем примере компилируется и вызывается запрос, принимающий входной параметр типа <xref:System.DateTime> и возвращающий последовательность заказов с датой после 8 марта 2004 г.  Этот запрос возвращает сведения о заказе в виде последовательности анонимных типов.  Анонимные типы выводятся компилятором, поэтому параметры типа нельзя указать в методе `Compile` <xref:System.Data.Objects.CompiledQuery> и тип определяется в самом запросе.  
+## <a name="example"></a><span data-ttu-id="0bb4b-132">Пример</span><span class="sxs-lookup"><span data-stu-id="0bb4b-132">Example</span></span>  
+ <span data-ttu-id="0bb4b-133">В следующем примере компилируется и вызывается запрос, принимающий входной параметр типа <xref:System.DateTime> и возвращающий последовательность заказов с датой после 8 марта 2004 г.</span><span class="sxs-lookup"><span data-stu-id="0bb4b-133">The following example compiles and then invokes a query that accepts a <xref:System.DateTime> input parameter and returns a sequence of orders where the order date is later than March 8, 2004.</span></span> <span data-ttu-id="0bb4b-134">Этот запрос возвращает сведения о заказе в виде последовательности анонимных типов.</span><span class="sxs-lookup"><span data-stu-id="0bb4b-134">This query returns the order information as a sequence of anonymous types.</span></span> <span data-ttu-id="0bb4b-135">Анонимные типы выводятся компилятором, поэтому параметры типа нельзя указать в методе <xref:System.Data.Objects.CompiledQuery>`Compile` и тип определяется в самом запросе.</span><span class="sxs-lookup"><span data-stu-id="0bb4b-135">Anonymous types are inferred by the compiler, so you cannot specify type parameters in the <xref:System.Data.Objects.CompiledQuery>'s `Compile` method and the type is defined in the query itself.</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery6)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery6)]  
   
-## Пример  
- В следующем примере компилируется и вызывается запрос, принимающий входной параметр в виде пользовательской структуры и возвращающий последовательность заказов.  В структуре определяются такие параметры запроса, как время начала, окончания и общая сумма заказа, а запрос возвращает заказы, поставленные с 3 по 8 марта 2003 г. общей суммой более 700 долларов США.  
+## <a name="example"></a><span data-ttu-id="0bb4b-136">Пример</span><span class="sxs-lookup"><span data-stu-id="0bb4b-136">Example</span></span>  
+ <span data-ttu-id="0bb4b-137">В следующем примере компилируется и вызывается запрос, принимающий входной параметр в виде пользовательской структуры и возвращающий последовательность заказов.</span><span class="sxs-lookup"><span data-stu-id="0bb4b-137">The following example compiles and then invokes a query that accepts a user-defined structure input parameter and returns a sequence of orders.</span></span> <span data-ttu-id="0bb4b-138">В структуре определяются такие параметры запроса, как время начала, окончания и общая сумма заказа, а запрос возвращает заказы, поставленные с 3 по 8 марта 2003 г. общей суммой более 700 долларов США.</span><span class="sxs-lookup"><span data-stu-id="0bb4b-138">The structure defines start date, end date, and total due query parameters, and the query returns orders shipped between March 3 and March 8, 2003 with a total due greater than $700.00.</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery7)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery7)]  
   
- Структура, определяющая параметры запроса:  
+ <span data-ttu-id="0bb4b-139">Структура, определяющая параметры запроса:</span><span class="sxs-lookup"><span data-stu-id="0bb4b-139">The structure that defines the query parameters:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#myparamsstruct)]
  [!code-vb[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myparamsstruct)]  
   
-## См. также  
- [Платформа ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)   
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)   
- [Параметры объединения Entity Framework и компилированные запросы](http://go.microsoft.com/fwlink/?LinkId=199591)
+## <a name="see-also"></a><span data-ttu-id="0bb4b-140">См. также</span><span class="sxs-lookup"><span data-stu-id="0bb4b-140">See Also</span></span>  
+ [<span data-ttu-id="0bb4b-141">Платформа ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="0bb4b-141">ADO.NET Entity Framework</span></span>](../../../../../../docs/framework/data/adonet/ef/index.md)  
+ [<span data-ttu-id="0bb4b-142">LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="0bb4b-142">LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
+ [<span data-ttu-id="0bb4b-143">Параметры слияния Entity Framework и скомпилированные запросы</span><span class="sxs-lookup"><span data-stu-id="0bb4b-143">Entity Framework Merge Options and Compiled Queries</span></span>](http://go.microsoft.com/fwlink/?LinkId=199591)

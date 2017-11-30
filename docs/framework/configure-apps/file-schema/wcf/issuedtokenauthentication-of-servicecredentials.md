@@ -1,28 +1,37 @@
 ---
-title: "&lt;issuedTokenAuthentication&gt; для &lt;serviceCredentials&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;issuedTokenAuthentication&gt; для &lt;serviceCredentials&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5c2e288f-f603-4d13-839a-0fd6d1981bec
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2d8e3c7df0108c6f8656827c6c0795dcb9fe3a9e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;issuedTokenAuthentication&gt; для &lt;serviceCredentials&gt;
-Определяет пользовательский маркер, выданный в качестве учетных данных службы.  
+# <a name="ltissuedtokenauthenticationgt-of-ltservicecredentialsgt"></a><span data-ttu-id="ff8fc-102">&lt;issuedTokenAuthentication&gt; для &lt;serviceCredentials&gt;</span><span class="sxs-lookup"><span data-stu-id="ff8fc-102">&lt;issuedTokenAuthentication&gt; of &lt;serviceCredentials&gt;</span></span>
+<span data-ttu-id="ff8fc-103">Определяет пользовательский маркер, выданный в качестве учетных данных службы.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-103">Specifies a custom token issued as a service credential.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="ff8fc-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="ff8fc-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="ff8fc-105">\<поведения ></span><span class="sxs-lookup"><span data-stu-id="ff8fc-105">\<behaviors></span></span>  
+<span data-ttu-id="ff8fc-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="ff8fc-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="ff8fc-107">\<поведение ></span><span class="sxs-lookup"><span data-stu-id="ff8fc-107">\<behavior></span></span>  
+<span data-ttu-id="ff8fc-108">\<serviceCredentials ></span><span class="sxs-lookup"><span data-stu-id="ff8fc-108">\<serviceCredentials></span></span>  
+<span data-ttu-id="ff8fc-109">\<issuedTokenAuthentication ></span><span class="sxs-lookup"><span data-stu-id="ff8fc-109">\<issuedTokenAuthentication></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="ff8fc-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ff8fc-110">Syntax</span></span>  
   
+```xml  
 <issuedTokenAuthentication   
    allowUntrustedRsaIssuers="Boolean"  
    audienceUriMode="Always/BearerKeyOnly/Never"  
@@ -43,40 +52,40 @@ certificateValidationMode="ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"
 </issuedTokenAuthentication>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описываются атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ff8fc-111">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="ff8fc-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="ff8fc-112">В следующих разделах описываются атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-112">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="ff8fc-113">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="ff8fc-113">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|`allowedAudienceUris`|Возвращает набор целевых универсальных кодов ресурса \(URI\), для которых может быть предназначен маркер безопасности <xref:System.IdentityModel.Tokens.SamlSecurityToken>, чтобы считаться допустимым в экземпляре <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  Дополнительные сведения об использовании этого атрибута см. в разделе <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>.|  
-|`allowUntrustedRsaIssuers`|Логическое значение, которое указывает, допускаются ли недоверенные издатели сертификатов RSA.<br /><br /> Сертификаты подписываются центрами сертификации \(ЦС\) для проверки подлинности.  Недоверенным издателем является ЦС, который не указан как надежный для подписания сертификатов.|  
-|`audienceUriMode`|Возвращает значение, которое указывает, должно ли проверяться свойство <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> маркера безопасности <xref:System.IdentityModel.Tokens.SamlSecurityToken>.  Это значение имеет тип <xref:System.IdentityModel.Selectors.AudienceUriMode>.  Дополнительные сведения об использовании этого атрибута см. в разделе <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>.|  
-|`certificateValidationMode`|Устанавливает режим проверки сертификата.  Одно из допустимых значений для <xref:System.ServiceModel.Security.X509CertificateValidationMode>.  Если свойству присвоено значение `Custom`, также необходимо указать свойство `customCertificateValidator`.  Значение по умолчанию — `ChainTrust`.|  
-|`customCertificateValidatorType`|Необязательная строка.  Тип и сборка, используемые для проверки пользовательского типа.  Этот атрибут должен быть задан, когда `certificateValidationMode` имеет значение `Custom`.|  
-|`revocationMode`|Задает режим отзыва, который указывает, проводится ли проверка списка отозванных сертификатов; этот режим также определяет способ проверки: с подключением к сети или автономно.  Это атрибут типа <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>.|  
-|`samlSerializer`|Необязательный строковый атрибут, который задает тип SamlSerializer, который используется для учетных данных службы.  Значение по умолчанию \- пустая строка.|  
-|`trustedStoreLocation`|Необязательное перечисление.  Одно из двух местоположений системного хранилища: `LocalMachine` или `CurrentUser`.|  
+|<span data-ttu-id="ff8fc-114">Атрибут</span><span class="sxs-lookup"><span data-stu-id="ff8fc-114">Attribute</span></span>|<span data-ttu-id="ff8fc-115">Описание</span><span class="sxs-lookup"><span data-stu-id="ff8fc-115">Description</span></span>|  
+|---------------|-----------------|  
+|`allowedAudienceUris`|<span data-ttu-id="ff8fc-116">Возвращает набор целевых универсальных кодов ресурса (URI), для которых может быть предназначен маркер безопасности <xref:System.IdentityModel.Tokens.SamlSecurityToken>, чтобы считаться допустимым в экземпляре <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-116">Gets the set of target URIs for which the <xref:System.IdentityModel.Tokens.SamlSecurityToken> security token can be targeted for in order to be considered valid by a <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> instance.</span></span> <span data-ttu-id="ff8fc-117">Дополнительные сведения об использовании этого атрибута см. в разделе <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-117">For more information on using this attribute, see <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>.</span></span>|  
+|`allowUntrustedRsaIssuers`|<span data-ttu-id="ff8fc-118">Логическое значение, которое указывает, допускаются ли недоверенные издатели сертификатов RSA.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-118">A Boolean value that specifies if untrusted RSA certificate issuers are allowed.</span></span><br /><br /> <span data-ttu-id="ff8fc-119">Сертификаты подписываются центрами сертификации (ЦС) для проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-119">Certificates are signed by certification authorities (CAs) to verify authenticity.</span></span> <span data-ttu-id="ff8fc-120">Недоверенным издателем является ЦС, который не указан как надежный для подписания сертификатов.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-120">An untrusted issuer is a CA that is not specified to be trusted to sign certificates.</span></span>|  
+|`audienceUriMode`|<span data-ttu-id="ff8fc-121">Возвращает значение, которое указывает, должно ли проверяться свойство <xref:System.IdentityModel.Tokens.SamlSecurityToken> маркера безопасности <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition>.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-121">Gets a value that specifies whether the <xref:System.IdentityModel.Tokens.SamlSecurityToken> security token's <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> should be validated.</span></span> <span data-ttu-id="ff8fc-122">Это значение имеет тип <xref:System.IdentityModel.Selectors.AudienceUriMode>.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-122">This value is of type <xref:System.IdentityModel.Selectors.AudienceUriMode>.</span></span> <span data-ttu-id="ff8fc-123">Дополнительные сведения об использовании этого атрибута см. в разделе <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-123">For more information on using this attribute, see <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>.</span></span>|  
+|`certificateValidationMode`|<span data-ttu-id="ff8fc-124">Устанавливает режим проверки сертификата.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-124">Sets the certificate validation mode.</span></span> <span data-ttu-id="ff8fc-125">Одно из допустимых значений для <xref:System.ServiceModel.Security.X509CertificateValidationMode>.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-125">One of the valid values of <xref:System.ServiceModel.Security.X509CertificateValidationMode>.</span></span> <span data-ttu-id="ff8fc-126">Если свойству присвоено значение `Custom`, также необходимо указать свойство `customCertificateValidator`.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-126">If set to `Custom`, then a `customCertificateValidator` must also be supplied.</span></span> <span data-ttu-id="ff8fc-127">Значение по умолчанию — `ChainTrust`.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-127">The default is `ChainTrust`.</span></span>|  
+|`customCertificateValidatorType`|<span data-ttu-id="ff8fc-128">Необязательная строка.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-128">Optional string.</span></span> <span data-ttu-id="ff8fc-129">Тип и сборка, используемые для проверки пользовательского типа.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-129">A type and assembly used to validate a custom type.</span></span> <span data-ttu-id="ff8fc-130">Этот атрибут должен быть задан, когда `certificateValidationMode` имеет значение `Custom`.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-130">This attribute must be set when `certificateValidationMode` is set to `Custom`.</span></span>|  
+|`revocationMode`|<span data-ttu-id="ff8fc-131">Задает режим отзыва, который указывает, проводится ли проверка списка отозванных сертификатов; этот режим также определяет способ проверки: с подключением к сети или автономно.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-131">Sets the revocation mode that specifies whether a revocation check occurs, and if it is performed online or offline.</span></span> <span data-ttu-id="ff8fc-132">Это атрибут типа <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-132">This attribute is of type <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>.</span></span>|  
+|`samlSerializer`|<span data-ttu-id="ff8fc-133">Необязательный строковый атрибут, который задает тип SamlSerializer, который используется для учетных данных службы.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-133">An optional string attribute that specifies the type of SamlSerializer that is used for the service credential.</span></span> <span data-ttu-id="ff8fc-134">Значение по умолчанию - пустая строка.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-134">The default is an empty string.</span></span>|  
+|`trustedStoreLocation`|<span data-ttu-id="ff8fc-135">Необязательное перечисление.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-135">Optional enumeration.</span></span> <span data-ttu-id="ff8fc-136">Одно из двух местоположений системного хранилища: `LocalMachine` или `CurrentUser`.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-136">One of the two system store locations: `LocalMachine` or `CurrentUser`.</span></span>|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="ff8fc-137">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="ff8fc-137">Child Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|`knownCertificates`|Задает коллекцию элементов <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElement>, которая задает доверенных издателей для учетных данных службы.|  
+|<span data-ttu-id="ff8fc-138">Элемент</span><span class="sxs-lookup"><span data-stu-id="ff8fc-138">Element</span></span>|<span data-ttu-id="ff8fc-139">Описание</span><span class="sxs-lookup"><span data-stu-id="ff8fc-139">Description</span></span>|  
+|-------------|-----------------|  
+|`knownCertificates`|<span data-ttu-id="ff8fc-140">Задает коллекцию элементов <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElement>, которая задает доверенных издателей для учетных данных службы.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-140">Specifies a collection of <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElement> elements that specifies trusted issuers for the service credential.</span></span>|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="ff8fc-141">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="ff8fc-141">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<serviceCredentials\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Задает учетные данные, используемые при проверке подлинности службы, а также параметры, относящиеся к проверке учетных данных клиента.|  
+|<span data-ttu-id="ff8fc-142">Элемент</span><span class="sxs-lookup"><span data-stu-id="ff8fc-142">Element</span></span>|<span data-ttu-id="ff8fc-143">Описание</span><span class="sxs-lookup"><span data-stu-id="ff8fc-143">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="ff8fc-144">\<serviceCredentials ></span><span class="sxs-lookup"><span data-stu-id="ff8fc-144">\<serviceCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|<span data-ttu-id="ff8fc-145">Задает учетные данные, используемые при проверке подлинности службы, а также параметры, относящиеся к проверке учетных данных клиента.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-145">Specifies the credential to be used in authenticating the service, and the client credential validation-related settings.</span></span>|  
   
-## Заметки  
- В сценарии с выданным маркером имеется три этапа.  На первом этапе клиент, который пытается получить доступ к службе, направляется к *службе маркеров безопасности*.  Затем служба маркеров безопасности проводит проверку подлинности клиента и выдает клиенту маркер, обычно на языке Security Assertions Markup Language \(SAML\).  После этого клиент возвращается к службе с этим маркером.  Служба проверяет наличие в маркере данных, позволяющих проверить подлинность маркера и, соответственно, самого клиента.  Для проверки подлинности маркера сертификат, используемый службой маркеров безопасности, должен быть известен службе.  
+## <a name="remarks"></a><span data-ttu-id="ff8fc-146">Примечания</span><span class="sxs-lookup"><span data-stu-id="ff8fc-146">Remarks</span></span>  
+ <span data-ttu-id="ff8fc-147">В сценарии с выданным маркером имеется три этапа.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-147">The issued token scenario has three stages.</span></span> <span data-ttu-id="ff8fc-148">На первом этапе клиент, который пытается получить доступ к службе называется *службы маркеров безопасности*.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-148">In the first stage, a client trying to access a service is referred to a *secure token service*.</span></span> <span data-ttu-id="ff8fc-149">Затем служба маркеров безопасности проводит проверку подлинности клиента и выдает клиенту маркер, обычно на языке Security Assertions Markup Language (SAML).</span><span class="sxs-lookup"><span data-stu-id="ff8fc-149">The secure token service then authenticates the client and subsequently issues the client a token, typically a Security Assertions Markup Language (SAML) token.</span></span> <span data-ttu-id="ff8fc-150">После этого клиент возвращается к службе с этим маркером.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-150">The client then returns to the service with the token.</span></span> <span data-ttu-id="ff8fc-151">Служба проверяет наличие в маркере данных, позволяющих проверить подлинность маркера и, соответственно, самого клиента.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-151">The service examines the token for data that allows the service to authenticate the token and therefore the client.</span></span> <span data-ttu-id="ff8fc-152">Для проверки подлинности маркера сертификат, используемый службой маркеров безопасности, должен быть известен службе.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-152">To authenticate the token, the certificate the secure token service uses must be known to the service.</span></span>  
   
- Этот элемент является хранилищем подобных сертификатов службы маркеров безопасности.  Используйте элемент [\<knownCertificates\>](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md), чтобы добавить сертификаты.  Вставьте элемент [\<добавление;\>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md) для каждого сертификата, как показано в следующем примере.  
+ <span data-ttu-id="ff8fc-153">Этот элемент является хранилищем подобных сертификатов службы маркеров безопасности.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-153">This element is the repository for any such secure token service certificates.</span></span> <span data-ttu-id="ff8fc-154">Чтобы добавить сертификаты, используйте [ \<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md).</span><span class="sxs-lookup"><span data-stu-id="ff8fc-154">To add certificates, use the [\<knownCertificates>](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md).</span></span> <span data-ttu-id="ff8fc-155">Вставить [ \<Добавить >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md) для каждого сертификата, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-155">Insert an [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md) for each certificate, as shown in the following example.</span></span>  
   
-```  
+```xml  
 <issuedTokenAuthorization>  
    <knownCertificates>  
       <add findValue="www.contoso.com"   
@@ -86,17 +95,17 @@ certificateValidationMode="ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"
 </issuedTokenAuthentication>  
 ```  
   
- По умолчанию сертификаты должны быть получены от службы маркеров безопасности.  Эти "известные" сертификаты гарантируют, что доступ к службе могут получить только допустимые клиенты.  
+ <span data-ttu-id="ff8fc-156">По умолчанию сертификаты должны быть получены от службы маркеров безопасности.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-156">By default, the certificates must be obtained from a secure token service.</span></span> <span data-ttu-id="ff8fc-157">Эти "известные" сертификаты гарантируют, что доступ к службе могут получить только допустимые клиенты.</span><span class="sxs-lookup"><span data-stu-id="ff8fc-157">These "known" certificates ensure that only legitimate clients can access a service.</span></span>  
   
- Дополнительные сведения об использовании данного элемента конфигурации см. в разделе [Как настраивать учетные данные службы федерации](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
+ <span data-ttu-id="ff8fc-158">Дополнительные сведения об использовании данного элемента конфигурации в разделе [как: Настройка учетных данных службы федерации](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).</span><span class="sxs-lookup"><span data-stu-id="ff8fc-158">For more information on using this configuration element, see [How to: Configure Credentials on a Federation Service](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).</span></span>  
   
-## См. также  
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>   
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>   
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>   
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.IssuedTokenAuthentication%2A>   
- <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement>   
- <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A>   
- <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>   
- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Как настраивать учетные данные службы федерации](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+## <a name="see-also"></a><span data-ttu-id="ff8fc-159">См. также</span><span class="sxs-lookup"><span data-stu-id="ff8fc-159">See Also</span></span>  
+ <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>  
+ <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>  
+ <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>  
+ <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.IssuedTokenAuthentication%2A>  
+ <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement>  
+ <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A>  
+ <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>  
+ [<span data-ttu-id="ff8fc-160">Защита служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="ff8fc-160">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="ff8fc-161">Как: настройте учетные данные для службы федерации</span><span class="sxs-lookup"><span data-stu-id="ff8fc-161">How to: Configure Credentials on a Federation Service</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)

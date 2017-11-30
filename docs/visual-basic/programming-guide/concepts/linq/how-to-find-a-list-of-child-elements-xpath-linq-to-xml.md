@@ -1,37 +1,32 @@
 ---
-title: "Практическое руководство: поиск списка дочерних элементов (XPath-LINQ to XML) (Visual Basic) | Документы Microsoft"
+title: "Как: поиск списка дочерних элементов (XPath-LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2868abfd-9f7b-412a-9cb5-f643f0fed146
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f56490f307f623453bb5e658d1e55241c9ac4201
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 110aa447a4804e5162eb45d3d59f12fb174e4473
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a>Практическое руководство: поиск списка дочерних элементов (XPath-LINQ to XML) (Visual Basic)
-В этом разделе сравнивается ось дочернего элемента XPath [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A>оси.</xref:System.Xml.Linq.XContainer.Elements%2A>  
+# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="52c55-102">Как: поиск списка дочерних элементов (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="52c55-102">How to: Find a List of Child Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="52c55-103">В этом разделе проводится сравнение оси дочерних элементов XPath с осью [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<xref:System.Xml.Linq.XContainer.Elements%2A>.</span><span class="sxs-lookup"><span data-stu-id="52c55-103">This topic compares the XPath child elements axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> axis.</span></span>  
   
- Выражение XPath: `./*`.  
+ <span data-ttu-id="52c55-104">Выражение XPath: `./*`.</span><span class="sxs-lookup"><span data-stu-id="52c55-104">The XPath expression is: `./*`</span></span>  
   
-## <a name="example"></a>Пример  
- В этом примере осуществляется поиск всех дочерних элементов элемента `Address`.  
+## <a name="example"></a><span data-ttu-id="52c55-105">Пример</span><span class="sxs-lookup"><span data-stu-id="52c55-105">Example</span></span>  
+ <span data-ttu-id="52c55-106">В этом примере осуществляется поиск всех дочерних элементов элемента `Address`.</span><span class="sxs-lookup"><span data-stu-id="52c55-106">This example finds all of the child elements of the `Address` element.</span></span>  
   
- В этом примере используется следующий XML-документ: [пример XML-файла: несколько заказов на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ <span data-ttu-id="52c55-107">В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="52c55-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim cpo As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -54,7 +49,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- В этом примере выводятся следующие данные:  
+ <span data-ttu-id="52c55-108">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="52c55-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -66,6 +61,5 @@ Results are identical
 <Country>USA</Country>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [LINQ to XML для пользователей XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-
+## <a name="see-also"></a><span data-ttu-id="52c55-109">См. также</span><span class="sxs-lookup"><span data-stu-id="52c55-109">See Also</span></span>  
+ [<span data-ttu-id="52c55-110">LINQ to XML для пользователей XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="52c55-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -1,32 +1,35 @@
 ---
-title: "Как представлять столбцы, допускающие значения NULL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Представление столбцов как столбцов, допускающих значения NULL"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ebb71a37-1f4c-4fa7-b2d2-d903f13c4af1
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: efa6f9d453940151dfe01d27827760521359ab67
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как представлять столбцы, допускающие значения NULL
-Для указания того, что связанный столбец базы данных может содержать значения NULL, используется свойство [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> атрибута <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
+# <a name="how-to-represent-columns-as-allowing-null-values"></a><span data-ttu-id="26020-102">Практическое руководство. Представление столбцов как столбцов, допускающих значения NULL</span><span class="sxs-lookup"><span data-stu-id="26020-102">How to: Represent Columns as Allowing Null Values</span></span>
+<span data-ttu-id="26020-103">Используйте [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> свойство <xref:System.Data.Linq.Mapping.ColumnAttribute> атрибута, чтобы указать, что связанный столбец базы данных может содержать значения null.</span><span class="sxs-lookup"><span data-stu-id="26020-103">Use the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> property on the <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute to specify that the associated database column can hold null values.</span></span>  
   
- Примеры кода см. в разделе <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>.  
+ <span data-ttu-id="26020-104">Примеры кода см. в разделе <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>.</span><span class="sxs-lookup"><span data-stu-id="26020-104">For code examples, see <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>.</span></span>  
   
-### Включение для столбца возможности содержать значения NULL  
+### <a name="to-designate-a-column-as-allowing-null-values"></a><span data-ttu-id="26020-105">Включение для столбца возможности содержать значения NULL</span><span class="sxs-lookup"><span data-stu-id="26020-105">To designate a column as allowing null values</span></span>  
   
-1.  Добавьте свойство <xref:System.Data.Linq.Mapping.ColumnAttribute> атрибуту <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>.  
+1.  <span data-ttu-id="26020-106">Добавьте свойство <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> атрибуту <xref:System.Data.Linq.Mapping.ColumnAttribute>.</span><span class="sxs-lookup"><span data-stu-id="26020-106">Add the <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> property to the <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute.</span></span>  
   
-2.  Задайте свойству <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> значение `true`.  
+2.  <span data-ttu-id="26020-107">Задайте свойству <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> значение `true`.</span><span class="sxs-lookup"><span data-stu-id="26020-107">Set the <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> property value to `true`.</span></span>  
   
-## См. также  
- [Модель объектов LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)   
- [Как настроить классы сущностей с помощью редактора кода](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+## <a name="see-also"></a><span data-ttu-id="26020-108">См. также</span><span class="sxs-lookup"><span data-stu-id="26020-108">See Also</span></span>  
+ [<span data-ttu-id="26020-109">LINQ to SQL модель объектов</span><span class="sxs-lookup"><span data-stu-id="26020-109">The LINQ to SQL Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
+ [<span data-ttu-id="26020-110">Как: Настройка классов сущностей с помощью редактора кода</span><span class="sxs-lookup"><span data-stu-id="26020-110">How to: Customize Entity Classes by Using the Code Editor</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

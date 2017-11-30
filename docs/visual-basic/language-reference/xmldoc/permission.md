@@ -1,51 +1,50 @@
 ---
-title: "&lt;разрешение&gt; (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "<permission> - XML-тег"
-  - "permission - XML-тег"
+title: "&lt;разрешение&gt; (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- <permission> XML tag
+- permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 67e11998e43a43f92c26eb5f7daa488d288823c8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;разрешение&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Задает требуемое разрешение для члена.  
+# <a name="ltpermissiongt-visual-basic"></a><span data-ttu-id="49959-102">&lt;разрешение&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="49959-102">&lt;permission&gt; (Visual Basic)</span></span>
+<span data-ttu-id="49959-103">Указывает разрешение, необходимые для элемента.</span><span class="sxs-lookup"><span data-stu-id="49959-103">Specifies a required permission for the member.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="49959-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="49959-104">Syntax</span></span>  
   
-```  
+```xml  
 <permission cref="member">description</permission>  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a><span data-ttu-id="49959-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="49959-105">Parameters</span></span>  
  `member`  
- Ссылка на член или поле, которое может вызываться из текущей среды компиляции.  Компилятор проверяет, существует ли элемент кода и приводит `member` к каноническому имени элемента в выходных XML\-данных.  Заключите `member` в кавычки \(" "\).  
+ <span data-ttu-id="49959-106">Ссылка на член или поле, которые доступны для вызова из текущей среды компиляции.</span><span class="sxs-lookup"><span data-stu-id="49959-106">A reference to a member or field that is available to be called from the current compilation environment.</span></span> <span data-ttu-id="49959-107">Компилятор проверяет, существует ли элемент кода, и приводит `member` к каноническому имени элемента в выходных XML-данных.</span><span class="sxs-lookup"><span data-stu-id="49959-107">The compiler checks that the given code element exists and translates `member` to the canonical element name in the output XML.</span></span> <span data-ttu-id="49959-108">Заключите `member` в кавычки (» «).</span><span class="sxs-lookup"><span data-stu-id="49959-108">Enclose `member` in quotation marks (" ").</span></span>  
   
  `description`  
- Описание доступа к члену.  
+ <span data-ttu-id="49959-109">Описание уровня доступа для члена.</span><span class="sxs-lookup"><span data-stu-id="49959-109">A description of the access to the member.</span></span>  
   
-## Заметки  
- Используйте тег `<permission>`, чтобы документ получил доступ к члену.  Используйте класс <xref:System.Security.PermissionSet>, чтобы указать доступ к члену.  
+## <a name="remarks"></a><span data-ttu-id="49959-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="49959-110">Remarks</span></span>  
+ <span data-ttu-id="49959-111">Используйте `<permission>` тег для документирования доступ к члену.</span><span class="sxs-lookup"><span data-stu-id="49959-111">Use the `<permission>` tag to document the access of a member.</span></span> <span data-ttu-id="49959-112">Используйте <xref:System.Security.PermissionSet> классу, чтобы задать доступ к члену.</span><span class="sxs-lookup"><span data-stu-id="49959-112">Use the <xref:System.Security.PermissionSet> class to specify access to a member.</span></span>  
   
- Чтобы выделить документирующие комментарии в отдельный файл, необходимо использовать при компиляции параметр [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+ <span data-ttu-id="49959-113">Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).</span><span class="sxs-lookup"><span data-stu-id="49959-113">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## Пример  
- В данном примере используется тег `<permission>`, указывающий, что требуется <xref:System.Security.Permissions.FileIOPermission> для метода `ReadFile`.  
+## <a name="example"></a><span data-ttu-id="49959-114">Пример</span><span class="sxs-lookup"><span data-stu-id="49959-114">Example</span></span>  
+ <span data-ttu-id="49959-115">В этом примере используется `<permission>` тегов для описания, <xref:System.Security.Permissions.FileIOPermission> затребована `ReadFile` метод.</span><span class="sxs-lookup"><span data-stu-id="49959-115">This example uses the `<permission>` tag to describe that the <xref:System.Security.Permissions.FileIOPermission> is required by the `ReadFile` method.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#7](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/permission_1.vb)]  
   
-## См. также  
- [XML\-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="49959-116">См. также</span><span class="sxs-lookup"><span data-stu-id="49959-116">See Also</span></span>  
+ [<span data-ttu-id="49959-117">XML-теги для комментариев</span><span class="sxs-lookup"><span data-stu-id="49959-117">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

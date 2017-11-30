@@ -1,33 +1,36 @@
 ---
-title: "Поведение служб по умолчанию | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "образец поведения службы по умолчанию [Windows Communication Foundation]"
-  - "поведения служб, по умолчанию"
+title: "Поведение служб по умолчанию"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- service behaviors, defaults
+- Default Service Behavior Sample [Windows Communication Foundation]
 ms.assetid: 442d4f71-c64e-4c62-816a-a66c38e7d3ec
-caps.latest.revision: 28
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d584bbe3092524397639e5db8da6632deea8a752
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Поведение служб по умолчанию
-В этом образце показано, как могут настраиваться параметры поведения службы.Данный образец основан на образце [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md), который реализует контракт службы `ICalculator`.В этом образце с помощью атрибутов <xref:System.ServiceModel.ServiceBehaviorAttribute> и <xref:System.ServiceModel.OperationBehaviorAttribute> явным образом определены поведения службы и операции.Поведения можно настраивать в файлах конфигурации или непосредственно в коде \(как показано в этом образце\).  
+# <a name="default-service-behavior"></a><span data-ttu-id="c3c13-102">Поведение служб по умолчанию</span><span class="sxs-lookup"><span data-stu-id="c3c13-102">Default Service Behavior</span></span>
+<span data-ttu-id="c3c13-103">В этом образце показано, как могут настраиваться параметры поведения службы.</span><span class="sxs-lookup"><span data-stu-id="c3c13-103">This sample demonstrates how service behavior settings can be configured.</span></span> <span data-ttu-id="c3c13-104">Пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md), который реализует `ICalculator` контракт службы.</span><span class="sxs-lookup"><span data-stu-id="c3c13-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), which implements the `ICalculator` service contract.</span></span> <span data-ttu-id="c3c13-105">В этом образце с помощью атрибутов <xref:System.ServiceModel.ServiceBehaviorAttribute> и <xref:System.ServiceModel.OperationBehaviorAttribute> явным образом определены поведения службы и операции.</span><span class="sxs-lookup"><span data-stu-id="c3c13-105">This sample explicitly defines service behaviors and operation behaviors using the <xref:System.ServiceModel.ServiceBehaviorAttribute> and <xref:System.ServiceModel.OperationBehaviorAttribute> attributes.</span></span> <span data-ttu-id="c3c13-106">Поведения можно настраивать в файлах конфигурации или непосредственно в коде (как показано в этом образце).</span><span class="sxs-lookup"><span data-stu-id="c3c13-106">You can configure behaviors in configuration files or imperatively in code (as this sample demonstrates).</span></span>  
   
- В этом образце клиентом является консольное приложение \(EXE\), а служба размещается в службах IIS.  
+ <span data-ttu-id="c3c13-107">В этом образце клиентом является консольное приложение (EXE), а служба размещается в службах IIS.</span><span class="sxs-lookup"><span data-stu-id="c3c13-107">In this sample, the client is a console application (.exe) and the service is hosted by Internet Information Services (IIS).</span></span>  
   
 > [!NOTE]
->  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
+>  <span data-ttu-id="c3c13-108">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="c3c13-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- Класс службы задает поведение с помощью атрибутов <xref:System.ServiceModel.ServiceBehaviorAttribute> и <xref:System.ServiceModel.OperationBehaviorAttribute>, как показано в следующем образце кода.Все заданные значения являются значениями по умолчанию.  
+ <span data-ttu-id="c3c13-109">Класс службы задает поведение с помощью атрибутов <xref:System.ServiceModel.ServiceBehaviorAttribute> и <xref:System.ServiceModel.OperationBehaviorAttribute>, как показано в следующем образце кода.</span><span class="sxs-lookup"><span data-stu-id="c3c13-109">The service class specifies behaviors with the <xref:System.ServiceModel.ServiceBehaviorAttribute> and the <xref:System.ServiceModel.OperationBehaviorAttribute> as shown in the following code sample.</span></span> <span data-ttu-id="c3c13-110">Все заданные значения являются значениями по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="c3c13-110">All values specified are the defaults.</span></span>  
   
 ```  
 [ServiceBehavior(  
@@ -50,31 +53,30 @@ public class CalculatorService : ICalculator
     }  
     ...  
 }  
-  
 ```  
   
- Поведения службы задаются атрибутом <xref:System.ServiceModel.ServiceBehaviorAttribute>.В приведенной ниже таблице описаны некоторые из этих поведений.  
+ <span data-ttu-id="c3c13-111">Поведения службы задаются атрибутом <xref:System.ServiceModel.ServiceBehaviorAttribute>.</span><span class="sxs-lookup"><span data-stu-id="c3c13-111">Service behaviors are specified with the <xref:System.ServiceModel.ServiceBehaviorAttribute> attribute.</span></span> <span data-ttu-id="c3c13-112">В приведенной ниже таблице описаны некоторые из этих поведений.</span><span class="sxs-lookup"><span data-stu-id="c3c13-112">The following table describes some of these behaviors.</span></span>  
   
-|Поведение службы|Описание|  
-|----------------------|--------------|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.AutomaticSessionShutdown%2A>|Автоматически завершает сеанс по запросу клиента.|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>|Задает режим параллелизма для каждого из экземпляров служб.|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>|Задает режим контекста экземпляра.|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.UseSynchronizationContext%2A>|Определяет, нужно ли использовать предоставляемый контекст синхронизации, если он задан.Его следует использовать, если требуется определить, нужно ли использовать `WindowsFormsSynchronizationContext` в приложениях Windows Forms.|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A>|Определяет, что общие необработанные исключения выполнения должны преобразовываться в `Fault<string>` и отправляться как сообщения об ошибках.|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A>|Задает уровень изоляции транзакций.|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.ValidateMustUnderstand%2A>|Определяет, вызывают ли непредвиденные заголовки сообщений ошибку.|  
+|<span data-ttu-id="c3c13-113">Поведение службы</span><span class="sxs-lookup"><span data-stu-id="c3c13-113">Service behavior</span></span>|<span data-ttu-id="c3c13-114">Описание</span><span class="sxs-lookup"><span data-stu-id="c3c13-114">Description</span></span>|  
+|----------------------|-----------------|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.AutomaticSessionShutdown%2A>|<span data-ttu-id="c3c13-115">Автоматически завершает сеанс по запросу клиента.</span><span class="sxs-lookup"><span data-stu-id="c3c13-115">Automatically shuts down a session at the client's request.</span></span>|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>|<span data-ttu-id="c3c13-116">Задает режим параллелизма для каждого из экземпляров служб.</span><span class="sxs-lookup"><span data-stu-id="c3c13-116">Specifies the concurrency mode for each service instance.</span></span>|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>|<span data-ttu-id="c3c13-117">Задает режим контекста экземпляра.</span><span class="sxs-lookup"><span data-stu-id="c3c13-117">Specifies the instance context mode.</span></span>|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.UseSynchronizationContext%2A>|<span data-ttu-id="c3c13-118">Определяет, нужно ли использовать предоставляемый контекст синхронизации, если он задан.</span><span class="sxs-lookup"><span data-stu-id="c3c13-118">Determines whether to use the provided synchronization context, if one is set.</span></span> <span data-ttu-id="c3c13-119">Его следует использовать, если требуется определить, нужно ли использовать `WindowsFormsSynchronizationContext` в приложениях Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="c3c13-119">Use this when you want to control whether to use a `WindowsFormsSynchronizationContext` in Windows Forms applications.</span></span>|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A>|<span data-ttu-id="c3c13-120">Определяет, что общие необработанные исключения выполнения должны преобразовываться в `Fault<string>` и отправляться как сообщения об ошибках.</span><span class="sxs-lookup"><span data-stu-id="c3c13-120">Determines whether general unhandled execution exceptions are to be converted into a `Fault<string>` and sent as a fault message.</span></span>|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A>|<span data-ttu-id="c3c13-121">Задает уровень изоляции транзакций.</span><span class="sxs-lookup"><span data-stu-id="c3c13-121">Specifies the isolation level for transactions.</span></span>|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.ValidateMustUnderstand%2A>|<span data-ttu-id="c3c13-122">Определяет, вызывают ли неожиданные заголовки сообщений ошибку.</span><span class="sxs-lookup"><span data-stu-id="c3c13-122">Determines whether unexpected message headers cause an error condition.</span></span>|  
   
- Поведения операций задаются атрибутом <xref:System.ServiceModel.OperationBehaviorAttribute>.В приведенной ниже таблице описаны некоторые из этих поведений.  
+ <span data-ttu-id="c3c13-123">Поведения операций задаются атрибутом <xref:System.ServiceModel.OperationBehaviorAttribute>.</span><span class="sxs-lookup"><span data-stu-id="c3c13-123">Operation behaviors are specified by using the <xref:System.ServiceModel.OperationBehaviorAttribute> attribute.</span></span> <span data-ttu-id="c3c13-124">В приведенной ниже таблице описаны некоторые из этих поведений.</span><span class="sxs-lookup"><span data-stu-id="c3c13-124">The following table describes some of these behaviors.</span></span>  
   
-|Поведение операции|Описание|  
-|------------------------|--------------|  
-|<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>|Определяет, приводит ли завершение операции службы к завершению текущей транзакции.|  
-|<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>|Определяет, зачислятся ли операция службы в транзакции потока клиента.|  
-|<xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>|Определяет, олицетворяет ли операция службы удостоверение вызывающей стороны.|  
-|<xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A>|Определяет, удаляются ли экземпляры служб при начале и завершении вызова операции службы.|  
+|<span data-ttu-id="c3c13-125">Поведение операции</span><span class="sxs-lookup"><span data-stu-id="c3c13-125">Operation Behavior</span></span>|<span data-ttu-id="c3c13-126">Описание</span><span class="sxs-lookup"><span data-stu-id="c3c13-126">Description</span></span>|  
+|------------------------|-----------------|  
+|<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>|<span data-ttu-id="c3c13-127">Определяет, приводит ли завершение операции службы к завершению текущей транзакции.</span><span class="sxs-lookup"><span data-stu-id="c3c13-127">Determines whether service operation completion commits the current transaction.</span></span>|  
+|<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>|<span data-ttu-id="c3c13-128">Определяет, зачислятся ли операция службы в транзакции потока клиента.</span><span class="sxs-lookup"><span data-stu-id="c3c13-128">Determines whether the service operation enlists in a client-flowed transaction.</span></span>|  
+|<xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>|<span data-ttu-id="c3c13-129">Определяет, олицетворяет ли операция службы удостоверение вызывающей стороны.</span><span class="sxs-lookup"><span data-stu-id="c3c13-129">Determines whether the service operation impersonates the caller's identity.</span></span>|  
+|<xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A>|<span data-ttu-id="c3c13-130">Определяет, удаляются ли экземпляры служб при начале и завершении вызова операции службы.</span><span class="sxs-lookup"><span data-stu-id="c3c13-130">Determines whether service instances are recycled at the start or end of the service operation call.</span></span>|  
   
- При выполнении образца запросы и ответы операций отображаются в окне консоли клиента.Задержка между вызовами связана с вызовами метода `System.Threading.Thread.Sleep()` в операциях службы.В остальных образцах поведений эти поведения описаны более подробно.Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
+ <span data-ttu-id="c3c13-131">При выполнении примера запросы и ответы операций отображаются в окне консоли клиента.</span><span class="sxs-lookup"><span data-stu-id="c3c13-131">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="c3c13-132">Задержка между вызовами связана с вызовами метода `System.Threading.Thread.Sleep()` в операциях службы.</span><span class="sxs-lookup"><span data-stu-id="c3c13-132">The delay between the calls is the result of the calls to `System.Threading.Thread.Sleep()` made in the service operations.</span></span> <span data-ttu-id="c3c13-133">В остальных образцах поведений эти поведения описаны более подробно.</span><span class="sxs-lookup"><span data-stu-id="c3c13-133">The rest of the behavior samples explain these behaviors in more detail.</span></span> <span data-ttu-id="c3c13-134">Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.</span><span class="sxs-lookup"><span data-stu-id="c3c13-134">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -85,21 +87,21 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### Настройка, построение и выполнение образца  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="c3c13-135">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="c3c13-135">To set up, build, and run the sample</span></span>  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="c3c13-136">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="c3c13-136">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="c3c13-137">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="c3c13-137">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в разделе [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="c3c13-138">Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="c3c13-138">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="c3c13-139">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="c3c13-139">The samples may already be installed on your machine.</span></span> <span data-ttu-id="c3c13-140">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="c3c13-140">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="c3c13-141">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="c3c13-141">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="c3c13-142">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="c3c13-142">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Default`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Default`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="c3c13-143">См. также</span><span class="sxs-lookup"><span data-stu-id="c3c13-143">See Also</span></span>

@@ -1,42 +1,45 @@
 ---
-title: "210 — MessageThrottleExceeded | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 210 - MessageThrottleExceeded
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 24ca08ea-c11c-4753-946e-98aa820f8711
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2d027f549e86095c732d0e60df3faded44a39fd2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 210 — MessageThrottleExceeded
-## Свойства  
+# <a name="210---messagethrottleexceeded"></a><span data-ttu-id="7c55a-102">210 - MessageThrottleExceeded</span><span class="sxs-lookup"><span data-stu-id="7c55a-102">210 - MessageThrottleExceeded</span></span>
+## <a name="properties"></a><span data-ttu-id="7c55a-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="7c55a-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|210|  
-|Keywords|EndToEndMonitoring, HealthMonitoring, Troubleshooting, ServiceModel|  
-|Level|Warning|  
-|Channel|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="7c55a-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="7c55a-104">ID</span></span>|<span data-ttu-id="7c55a-105">210</span><span class="sxs-lookup"><span data-stu-id="7c55a-105">210</span></span>|  
+|<span data-ttu-id="7c55a-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="7c55a-106">Keywords</span></span>|<span data-ttu-id="7c55a-107">EndToEndMonitoring, HealthMonitoring, Troubleshooting, ServiceModel</span><span class="sxs-lookup"><span data-stu-id="7c55a-107">EndToEndMonitoring, HealthMonitoring, Troubleshooting, ServiceModel</span></span>|  
+|<span data-ttu-id="7c55a-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="7c55a-108">Level</span></span>|<span data-ttu-id="7c55a-109">Предупреждение</span><span class="sxs-lookup"><span data-stu-id="7c55a-109">Warning</span></span>|  
+|<span data-ttu-id="7c55a-110">Канал</span><span class="sxs-lookup"><span data-stu-id="7c55a-110">Channel</span></span>|<span data-ttu-id="7c55a-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="7c55a-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## Описание  
- Это событие создается при превышении одного из трех основных пределов регулирования службы.Обратите внимание, что это событие создается только в том случае, если предел регулирования превышен уже в исходной конфигурации.Например, если предел регулирования на число одновременных вызовов составляет 10, то при выполнении одиннадцатого вызова будет вызвано событие `MessageThrottleExceeded`.Выполнение двенадцатого вызова не приведет к созданию еще одного события.Если в рамках действия контролируемое значение незначительно изменилось в области предела регулирования, то новые сообщения не вызываются, что позволяет избежать формирования потока ложных сообщений.В этом примере завершение нескольких вызовов указывает на наличие 9 одновременных вызовов.Если последовательно получено еще два входящих вызова, то текущее значение снова будет равно 11.При этом еще одно событие вызвано не будет.Если текущее значение составляет 70 процентов от предела регулирования, то вызывается другое событие, указывающее на замедление выполнения действия.При выполнении последующих действий, которые приводят к превышению ограничения, вызывается другое событие `MessageThrottleExceeded`.В этом примере, если количество одновременных вызовов в определенный момент времени составляло 7, а затем достигло 11, вызывается еще одно событие `MessageThrottleExceeded`.  
+## <a name="description"></a><span data-ttu-id="7c55a-112">Описание</span><span class="sxs-lookup"><span data-stu-id="7c55a-112">Description</span></span>  
+ <span data-ttu-id="7c55a-113">Это событие создается при превышении одного из трех основных пределов регулирования службы.</span><span class="sxs-lookup"><span data-stu-id="7c55a-113">This event is emitted when one of the three main service throttles have been exceeded.</span></span> <span data-ttu-id="7c55a-114">Обратите внимание, что это событие создается только в том случае, если предел регулирования превышен уже в исходной конфигурации.</span><span class="sxs-lookup"><span data-stu-id="7c55a-114">Note that this event is only emitted when the throttle limit is initially exceeded.</span></span> <span data-ttu-id="7c55a-115">Например, если предел регулирования на число одновременных вызовов составляет 10, то при выполнении одиннадцатого вызова будет вызвано событие `MessageThrottleExceeded`.</span><span class="sxs-lookup"><span data-stu-id="7c55a-115">For example, if the throttle limit for concurrent calls is 10, the 11th concurrent call results in a `MessageThrottleExceeded` event.</span></span> <span data-ttu-id="7c55a-116">Выполнение двенадцатого вызова не приведет к созданию еще одного события.</span><span class="sxs-lookup"><span data-stu-id="7c55a-116">The 12th call does not result in another event.</span></span> <span data-ttu-id="7c55a-117">Если в рамках действия контролируемое значение незначительно изменилось в области предела регулирования, то новые сообщения не вызываются, что позволяет избежать формирования потока ложных сообщений.</span><span class="sxs-lookup"><span data-stu-id="7c55a-117">Additionally, to avoid a noisy event stream, activity that hovers around the limit does not result in another event.</span></span> <span data-ttu-id="7c55a-118">В этом примере завершение нескольких вызовов указывает на наличие 9 одновременных вызовов.</span><span class="sxs-lookup"><span data-stu-id="7c55a-118">In this example, if a couple of calls complete then there are 9 concurrent calls.</span></span> <span data-ttu-id="7c55a-119">Если последовательно получено еще два входящих вызова, то текущее значение снова будет равно 11.</span><span class="sxs-lookup"><span data-stu-id="7c55a-119">If subsequently two more calls come in, the current value is again 11.</span></span> <span data-ttu-id="7c55a-120">При этом еще одно событие вызвано не будет.</span><span class="sxs-lookup"><span data-stu-id="7c55a-120">This does not result in another event.</span></span> <span data-ttu-id="7c55a-121">Если текущее значение составляет 70 процентов от предела регулирования, то вызывается другое событие, указывающее на замедление выполнения действия.</span><span class="sxs-lookup"><span data-stu-id="7c55a-121">When the current value falls to 70 percent of the throttle limit a different event is emitted that indicates that the activity has slowed.</span></span> <span data-ttu-id="7c55a-122">При выполнении последующих действий, которые приводят к превышению ограничения, вызывается другое событие `MessageThrottleExceeded`.</span><span class="sxs-lookup"><span data-stu-id="7c55a-122">Future activity that exceeds the limit results in another `MessageThrottleExceeded` event being emitted.</span></span> <span data-ttu-id="7c55a-123">В этом примере, если количество одновременных вызовов в определенный момент времени составляло 7, а затем достигло 11, вызывается еще одно событие `MessageThrottleExceeded`.</span><span class="sxs-lookup"><span data-stu-id="7c55a-123">In this example, if the amount of concurrent calls falls to 7 and then again reaches 11 and another `MessageThrottleExceeded` event is emitted.</span></span>  
   
-## Message  
- Был достигнут предел ограничителя «%1» из «%2».  
+## <a name="message"></a><span data-ttu-id="7c55a-124">Сообщение</span><span class="sxs-lookup"><span data-stu-id="7c55a-124">Message</span></span>  
+ <span data-ttu-id="7c55a-125">Был достигнут предел ограничителя «%1» из «%2».</span><span class="sxs-lookup"><span data-stu-id="7c55a-125">The '%1' throttle limit of '%2' was hit.</span></span>  
   
-## Подробности  
+## <a name="details"></a><span data-ttu-id="7c55a-126">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="7c55a-126">Details</span></span>  
   
-|Имя элемента данных|Тип элемента данных|Описание|  
-|-------------------------|-------------------------|--------------|  
-|Throttle Name|`xs:string`|Имя превышенного ограничителя.`MaxConcurrentCalls`, `MaxConcurrentInstances` либо `MaxConcurrentSessions`,|  
-|Limit|`xs:long`|Заданный в данный момент предел ограничителя.|  
-|HostReference|`xs:string`|Для служб, размещенных на веб\-узле, это поле является уникальным идентификатором службы в веб\-иерархии.Ее формат определяется следующим образом: «имя веб\-сайта виртуальный путь приложения&#124;виртуальный путь службы&#124;ServiceName».«веб\-сайт по умолчанию\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService».|  
-|AppDomain|`xs:string`|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|
+|<span data-ttu-id="7c55a-127">Имя элемента данных</span><span class="sxs-lookup"><span data-stu-id="7c55a-127">Data Item Name</span></span>|<span data-ttu-id="7c55a-128">Тип элемента данных</span><span class="sxs-lookup"><span data-stu-id="7c55a-128">Data Item Type</span></span>|<span data-ttu-id="7c55a-129">Описание</span><span class="sxs-lookup"><span data-stu-id="7c55a-129">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="7c55a-130">Throttle Name</span><span class="sxs-lookup"><span data-stu-id="7c55a-130">Throttle Name</span></span>|`xs:string`|<span data-ttu-id="7c55a-131">Имя превышенного ограничителя.</span><span class="sxs-lookup"><span data-stu-id="7c55a-131">The name of the throttle that has been exceeded.</span></span> <span data-ttu-id="7c55a-132">`MaxConcurrentCalls`, `MaxConcurrentInstances` либо `MaxConcurrentSessions`,</span><span class="sxs-lookup"><span data-stu-id="7c55a-132">Either `MaxConcurrentCalls`, `MaxConcurrentInstances`, or `MaxConcurrentSessions`,</span></span>|  
+|<span data-ttu-id="7c55a-133">Limit</span><span class="sxs-lookup"><span data-stu-id="7c55a-133">Limit</span></span>|`xs:long`|<span data-ttu-id="7c55a-134">Заданный в данный момент предел ограничителя.</span><span class="sxs-lookup"><span data-stu-id="7c55a-134">The currently configured limit of the throttle.</span></span>|  
+|<span data-ttu-id="7c55a-135">HostReference</span><span class="sxs-lookup"><span data-stu-id="7c55a-135">HostReference</span></span>|`xs:string`|<span data-ttu-id="7c55a-136">Для служб, размещенных на веб-узле, это поле является уникальным идентификатором службы в веб-иерархии.</span><span class="sxs-lookup"><span data-stu-id="7c55a-136">For Web-hosted services, this field uniquely identifies the service in the Web hierarchy.</span></span> <span data-ttu-id="7c55a-137">Ее формат определяется как "веб-сайт имя виртуальный путь приложения &#124; Виртуальный путь службы &#124; ServiceName ".</span><span class="sxs-lookup"><span data-stu-id="7c55a-137">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'.</span></span> <span data-ttu-id="7c55a-138">Пример: "по умолчанию веб-сайта или CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService ".</span><span class="sxs-lookup"><span data-stu-id="7c55a-138">Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.</span></span>|  
+|<span data-ttu-id="7c55a-139">AppDomain</span><span class="sxs-lookup"><span data-stu-id="7c55a-139">AppDomain</span></span>|`xs:string`|<span data-ttu-id="7c55a-140">Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="7c55a-140">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

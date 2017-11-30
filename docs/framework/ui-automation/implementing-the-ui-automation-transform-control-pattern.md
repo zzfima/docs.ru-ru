@@ -1,73 +1,76 @@
 ---
-title: "Implementing the UI Automation Transform Control Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control patterns, Transform"
-  - "Transform control pattern"
-  - "UI Automation, Transform control pattern"
+title: "Реализация шаблона элемента управления преобразованиями модели автоматизации пользовательского интерфейса"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control patterns, Transform
+- Transform control pattern
+- UI Automation, Transform control pattern
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
-caps.latest.revision: 14
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: df871c7f7214a6135db2493972dd76f41ce31aaa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Implementing the UI Automation Transform Control Pattern
+# <a name="implementing-the-ui-automation-transform-control-pattern"></a><span data-ttu-id="5855c-102">Реализация шаблона элемента управления преобразованиями модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="5855c-102">Implementing the UI Automation Transform Control Pattern</span></span>
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], заданные в пространстве имен <xref:System.Windows.Automation>. Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="5855c-103">Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> .</span><span class="sxs-lookup"><span data-stu-id="5855c-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="5855c-104">Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="5855c-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.ITransformProvider>, включая сведения о свойствах, методах и событиях. Ссылки на дополнительные материалы перечислены в конце раздела.  
+ <span data-ttu-id="5855c-105">В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.ITransformProvider>, включая сведения о свойствах, методах и событиях.</span><span class="sxs-lookup"><span data-stu-id="5855c-105">This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.ITransformProvider>, including information about properties, methods, and events.</span></span> <span data-ttu-id="5855c-106">Ссылки на дополнительные материалы перечислены в конце раздела.</span><span class="sxs-lookup"><span data-stu-id="5855c-106">Links to additional references are listed at the end of the topic.</span></span>  
   
- Шаблон элемента управления <xref:System.Windows.Automation.TransformPattern> используется для поддержки элементов управления, которые можно перемещать, поворачивать или изменять их размер в двумерном пространстве. Примеры элементов управления, реализующих данный шаблон элемента управления, см. в разделе [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ <span data-ttu-id="5855c-107">Шаблон элемента управления <xref:System.Windows.Automation.TransformPattern> используется для поддержки элементов управления, которые можно перемещать, поворачивать или изменять их размер в двумерном пространстве.</span><span class="sxs-lookup"><span data-stu-id="5855c-107">The <xref:System.Windows.Automation.TransformPattern> control pattern is used to support controls that can be moved, resized, or rotated within a two-dimensional space.</span></span> <span data-ttu-id="5855c-108">Примеры элементов управления, реализующих данный шаблон элемента управления, см. в разделе [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span><span class="sxs-lookup"><span data-stu-id="5855c-108">For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span></span>  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## Правила и соглашения реализации  
- При реализации шаблона элемента управления Transform обратите внимание на следующие правила и соглашения.  
+## <a name="implementation-guidelines-and-conventions"></a><span data-ttu-id="5855c-109">Правила и соглашения реализации</span><span class="sxs-lookup"><span data-stu-id="5855c-109">Implementation Guidelines and Conventions</span></span>  
+ <span data-ttu-id="5855c-110">При реализации шаблона элемента управления Transform обратите внимание на следующие правила и соглашения.</span><span class="sxs-lookup"><span data-stu-id="5855c-110">When implementing the Transform control pattern, note the following guidelines and conventions:</span></span>  
   
--   Поддержка этого шаблона элемента управления не ограничена объектами на рабочем столе. Этот шаблон элемента управления также должен поддерживаться дочерними элементами объекта контейнера, если эти дочерние элементы можно перемещать, изменять их размер или свободно поворачивать в пределах контейнера.  
+-   <span data-ttu-id="5855c-111">Поддержка этого шаблона элемента управления не ограничена объектами на рабочем столе.</span><span class="sxs-lookup"><span data-stu-id="5855c-111">Support for this control pattern is not limited to objects on the desktop.</span></span> <span data-ttu-id="5855c-112">Этот шаблон элемента управления также должен поддерживаться дочерними элементами объекта контейнера, если эти дочерние элементы можно перемещать, изменять их размер или свободно поворачивать в пределах контейнера.</span><span class="sxs-lookup"><span data-stu-id="5855c-112">This control pattern must also be supported by the children of a container object if the children can be moved, resized, or rotated freely within the boundaries of the container.</span></span>  
   
--   Объект нельзя перемещать, изменять его размер или поворачивать таким образом, что его итоговое положение на экране окажется полностью вне координат своего контейнера и поэтому он станет недоступным для клавиатуры или мыши \(например, когда окно верхнего уровня перемещается за пределы экрана или дочерний объект перемещается за пределы границ окна просмотра контейнера\). В этих случаях объект помещается максимально близко к запрошенным экранным координатам с переопределением верхней или левой координаты, чтобы они находились в границах контейнера.  
+-   <span data-ttu-id="5855c-113">Объект нельзя перемещать, изменять его размер или поворачивать таким образом, что его итоговое положение на экране окажется полностью вне координат своего контейнера и поэтому он станет недоступным для клавиатуры или мыши (например, когда окно верхнего уровня перемещается за пределы экрана или дочерний объект перемещается за пределы границ окна просмотра контейнера).</span><span class="sxs-lookup"><span data-stu-id="5855c-113">An object cannot be moved, resized, or rotated such that its resulting screen location would be completely outside the coordinates of its container and therefore inaccessible to the keyboard or mouse (for example, when a top-level window is moved off-screen or a child object is moved outside the boundaries of the container's viewport).</span></span> <span data-ttu-id="5855c-114">В этих случаях объект помещается максимально близко к запрошенным экранным координатам с переопределением верхней или левой координаты, чтобы они находились в границах контейнера.</span><span class="sxs-lookup"><span data-stu-id="5855c-114">In these cases, the object is placed as close to the requested screen coordinates as possible with the top or left coordinates overridden to be within the container boundaries.</span></span>  
   
--   Для систем с несколькими мониторами при перемещении объекта, изменении его размера или повороте полностью за пределами координат объединенного рабочего стола объект помещается на основном мониторе максимально близко к запрошенным координатам.  
+-   <span data-ttu-id="5855c-115">Для систем с несколькими мониторами при перемещении объекта, изменении его размера или повороте полностью за пределами координат объединенного рабочего стола объект помещается на основном мониторе максимально близко к запрошенным координатам.</span><span class="sxs-lookup"><span data-stu-id="5855c-115">For multi-monitor systems, if an object is moved, resized, or rotated completely outside the combined desktop screen coordinates, the object is placed on the primary monitor as close to the requested coordinates as possible.</span></span>  
   
--   Все параметры и значения свойств являются абсолютными и не зависят от языка и региональных параметров.  
+-   <span data-ttu-id="5855c-116">Все параметры и значения свойств являются абсолютными и не зависят от языка и региональных параметров.</span><span class="sxs-lookup"><span data-stu-id="5855c-116">All parameters and property values are absolute and independent of locale.</span></span>  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
-## Обязательные члены для ITransformProvider  
- Следующие свойства и методы обязательны для реализации <xref:System.Windows.Automation.Provider.ITransformProvider>.  
+## <a name="required-members-for-itransformprovider"></a><span data-ttu-id="5855c-117">Обязательные члены для ITransformProvider</span><span class="sxs-lookup"><span data-stu-id="5855c-117">Required Members for ITransformProvider</span></span>  
+ <span data-ttu-id="5855c-118">Следующие свойства и методы обязательны для реализации <xref:System.Windows.Automation.Provider.ITransformProvider>.</span><span class="sxs-lookup"><span data-stu-id="5855c-118">The following properties and methods are required for implementing <xref:System.Windows.Automation.Provider.ITransformProvider>.</span></span>  
   
-|Обязательные члены|Тип члена|Примечания|  
-|------------------------|---------------|----------------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|Метод|Нет|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Метод|Нет|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|Метод|Нет|  
+|<span data-ttu-id="5855c-119">Обязательные члены</span><span class="sxs-lookup"><span data-stu-id="5855c-119">Required members</span></span>|<span data-ttu-id="5855c-120">Тип члена</span><span class="sxs-lookup"><span data-stu-id="5855c-120">Member type</span></span>|<span data-ttu-id="5855c-121">Примечания</span><span class="sxs-lookup"><span data-stu-id="5855c-121">Notes</span></span>|  
+|----------------------|-----------------|-----------|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|<span data-ttu-id="5855c-122">Свойство</span><span class="sxs-lookup"><span data-stu-id="5855c-122">Property</span></span>|<span data-ttu-id="5855c-123">Нет</span><span class="sxs-lookup"><span data-stu-id="5855c-123">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|<span data-ttu-id="5855c-124">Свойство</span><span class="sxs-lookup"><span data-stu-id="5855c-124">Property</span></span>|<span data-ttu-id="5855c-125">Нет</span><span class="sxs-lookup"><span data-stu-id="5855c-125">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|<span data-ttu-id="5855c-126">Свойство</span><span class="sxs-lookup"><span data-stu-id="5855c-126">Property</span></span>|<span data-ttu-id="5855c-127">Нет</span><span class="sxs-lookup"><span data-stu-id="5855c-127">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|<span data-ttu-id="5855c-128">Метод</span><span class="sxs-lookup"><span data-stu-id="5855c-128">Method</span></span>|<span data-ttu-id="5855c-129">Нет</span><span class="sxs-lookup"><span data-stu-id="5855c-129">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|<span data-ttu-id="5855c-130">Метод</span><span class="sxs-lookup"><span data-stu-id="5855c-130">Method</span></span>|<span data-ttu-id="5855c-131">Нет</span><span class="sxs-lookup"><span data-stu-id="5855c-131">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|<span data-ttu-id="5855c-132">Метод</span><span class="sxs-lookup"><span data-stu-id="5855c-132">Method</span></span>|<span data-ttu-id="5855c-133">Нет</span><span class="sxs-lookup"><span data-stu-id="5855c-133">None</span></span>|  
   
- Этот шаблон элемента управления не имеет связанных событий.  
+ <span data-ttu-id="5855c-134">Этот шаблон элемента управления не имеет связанных событий.</span><span class="sxs-lookup"><span data-stu-id="5855c-134">This control pattern has no associated events.</span></span>  
   
 <a name="Exceptions"></a>   
-## Исключения  
- Поставщики должны вызывать следующие исключения.  
+## <a name="exceptions"></a><span data-ttu-id="5855c-135">Исключения</span><span class="sxs-lookup"><span data-stu-id="5855c-135">Exceptions</span></span>  
+ <span data-ttu-id="5855c-136">Поставщики должны вызывать следующие исключения.</span><span class="sxs-lookup"><span data-stu-id="5855c-136">Providers must throw the following exceptions.</span></span>  
   
-|Тип исключения|Условие|  
-|--------------------|-------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> -   Если свойство <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> имеет значение false.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> -   Если свойство <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> имеет значение false.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> -   Если свойство <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> имеет значение false.|  
+|<span data-ttu-id="5855c-137">Тип исключения</span><span class="sxs-lookup"><span data-stu-id="5855c-137">Exception Type</span></span>|<span data-ttu-id="5855c-138">Условие</span><span class="sxs-lookup"><span data-stu-id="5855c-138">Condition</span></span>|  
+|--------------------|---------------|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> <span data-ttu-id="5855c-139">-Если <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> имеет значение false.</span><span class="sxs-lookup"><span data-stu-id="5855c-139">-   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> is false.</span></span>|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> <span data-ttu-id="5855c-140">-Если <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> имеет значение false.</span><span class="sxs-lookup"><span data-stu-id="5855c-140">-   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> is false.</span></span>|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> <span data-ttu-id="5855c-141">-Если <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> имеет значение false.</span><span class="sxs-lookup"><span data-stu-id="5855c-141">-   If the <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> is false.</span></span>|  
   
-## См. также  
- [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)   
- [Support Control Patterns in a UI Automation Provider](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)   
- [UI Automation Control Patterns for Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)   
- [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)   
- [Use Caching in UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a><span data-ttu-id="5855c-142">См. также</span><span class="sxs-lookup"><span data-stu-id="5855c-142">See Also</span></span>  
+ [<span data-ttu-id="5855c-143">Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="5855c-143">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="5855c-144">Поддержка шаблонов элементов управления в поставщике модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="5855c-144">Support Control Patterns in a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [<span data-ttu-id="5855c-145">Шаблоны элементов управления модели автоматизации пользовательского интерфейса для клиентов</span><span class="sxs-lookup"><span data-stu-id="5855c-145">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="5855c-146">Общие сведения о дереве модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="5855c-146">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [<span data-ttu-id="5855c-147">Использование кэширования в модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="5855c-147">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

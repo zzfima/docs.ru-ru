@@ -1,51 +1,54 @@
 ---
-title: "Значение порядка преобразований | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "преобразования, значимость порядка"
+title: "Значение порядка преобразований"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: transformations [Windows Forms], order signficance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8b170c9247b2415c724c1306a4c21d067c823b4c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Значение порядка преобразований
-В одном объекте <xref:System.Drawing.Drawing2D.Matrix> может храниться одно преобразование или некоторая последовательность преобразований.  Такая последовательность преобразований называется составным преобразованием.  Матрица составного преобразования получается с помощью перемножения матриц отдельных преобразований.  
+# <a name="why-transformation-order-is-significant"></a><span data-ttu-id="41a8b-102">Значение порядка преобразований</span><span class="sxs-lookup"><span data-stu-id="41a8b-102">Why Transformation Order Is Significant</span></span>
+<span data-ttu-id="41a8b-103">Один <xref:System.Drawing.Drawing2D.Matrix> объект может хранить одно преобразование или последовательность преобразований.</span><span class="sxs-lookup"><span data-stu-id="41a8b-103">A single <xref:System.Drawing.Drawing2D.Matrix> object can store a single transformation or a sequence of transformations.</span></span> <span data-ttu-id="41a8b-104">Называется составное преобразование.</span><span class="sxs-lookup"><span data-stu-id="41a8b-104">The latter is called a composite transformation.</span></span> <span data-ttu-id="41a8b-105">Матрица составного преобразования вычисляется путем умножения матриц отдельных преобразований.</span><span class="sxs-lookup"><span data-stu-id="41a8b-105">The matrix of a composite transformation is obtained by multiplying the matrices of individual transformations.</span></span>  
   
-## Примеры составных преобразований  
- Порядок следования отдельных преобразований имеет важное значение для составного преобразования.  Например, если применяется поворот, затем масштабирование, а затем сдвиг, получается совершенно другой результат, чем если бы сначала был применен сдвиг, затем поворот, а затем масштабирование.  В [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] построение составных преобразований осуществляется слева направо.  Если S, R и T являются матрицами масштабирования, поворота и сдвига, соответственно, тогда произведение SRT \(именно в таком порядке\) является матрицей составного преобразования, которое сначала масштабирует, затем поворачивает, а затем осуществляет сдвиг.  Матрица, равная произведению SRT, отличается от матрицы, являющейся произведением TRS.  
+## <a name="composite-transform-examples"></a><span data-ttu-id="41a8b-106">Примеры составных преобразований</span><span class="sxs-lookup"><span data-stu-id="41a8b-106">Composite Transform Examples</span></span>  
+ <span data-ttu-id="41a8b-107">Составное преобразование важен порядок отдельных преобразований.</span><span class="sxs-lookup"><span data-stu-id="41a8b-107">In a composite transformation, the order of individual transformations is important.</span></span> <span data-ttu-id="41a8b-108">Например если сначала сменить, а затем масштабирование, а затем перевести, можно получить другой результат, чем если вы сначала выполнить преобразование, поворот, затем масштабирование.</span><span class="sxs-lookup"><span data-stu-id="41a8b-108">For example, if you first rotate, then scale, then translate, you get a different result than if you first translate, then rotate, then scale.</span></span> <span data-ttu-id="41a8b-109">В [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], построение составных преобразований слева направо.</span><span class="sxs-lookup"><span data-stu-id="41a8b-109">In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], composite transformations are built from left to right.</span></span> <span data-ttu-id="41a8b-110">Если S, R и T матрицы масштабирования, поворота и сдвига соответственно, затем продукта SRT (именно в таком порядке) является матрицей составного преобразования, которое сначала масштабирует, затем поворачивает, а затем преобразует.</span><span class="sxs-lookup"><span data-stu-id="41a8b-110">If S, R, and T are scale, rotation, and translation matrices respectively, then the product SRT (in that order) is the matrix of the composite transformation that first scales, then rotates, then translates.</span></span> <span data-ttu-id="41a8b-111">Матрица произведению SRT отличается от произведением ТС матрицы.</span><span class="sxs-lookup"><span data-stu-id="41a8b-111">The matrix produced by the product SRT is different from the matrix produced by the product TRS.</span></span>  
   
- Одной из причин важности порядка выполнения преобразований является то, что такие преобразования, как поворот и масштабирование, осуществляются относительно начала координат.  Масштабирование объекта, центрированного по началу координат, дает другой результат, чем масштабирование объекта, который куда\-либо сдвинут относительно этой точки.  Аналогично, поворот объекта, центрированного по началу координат, дает другой результат, чем поворот объекта, который куда\-либо сдвинут относительно этой точки.  
+ <span data-ttu-id="41a8b-112">Одна из причин важен порядок, — что преобразования, как поворот и масштабирование выполняются по отношению к исходной системы координат.</span><span class="sxs-lookup"><span data-stu-id="41a8b-112">One reason order is significant is that transformations like rotation and scaling are done with respect to the origin of the coordinate system.</span></span> <span data-ttu-id="41a8b-113">Масштабирование объекта, который выравнивается по центру в источнике выдает различный результат, чем масштабирование объекта, который был перемещен этой точки.</span><span class="sxs-lookup"><span data-stu-id="41a8b-113">Scaling an object that is centered at the origin produces a different result than scaling an object that has been moved away from the origin.</span></span> <span data-ttu-id="41a8b-114">Аналогично поворот объекта, который выравнивается по центру в источнике выдает различный результат от поворота объекта, который был перемещен этой точки.</span><span class="sxs-lookup"><span data-stu-id="41a8b-114">Similarly, rotating an object that is centered at the origin produces a different result than rotating an object that has been moved away from the origin.</span></span>  
   
- В следующем примере комбинация масштабирования, поворота и сдвига \(именно в таком порядке\) используется для конструирования составного преобразования.  Аргумент <xref:System.Drawing.Drawing2D.MatrixOrder>, передаваемый методу <xref:System.Drawing.Graphics.RotateTransform%2A>, указывает на то, что поворот будет выполняться после масштабирования.  Аналогично аргумент <xref:System.Drawing.Drawing2D.MatrixOrder>, передаваемый методу <xref:System.Drawing.Graphics.TranslateTransform%2A>, указывает на то, что сдвиг будет выполняться после поворота.  <xref:System.Drawing.Drawing2D.MatrixOrder> и <xref:System.Drawing.Drawing2D.MatrixOrder> являются членами перечисления <xref:System.Drawing.Drawing2D.MatrixOrder>.  
+ <span data-ttu-id="41a8b-115">В следующем примере объединяются масштабирования, поворота и преобразования (в указанном порядке) для формирования составного преобразования.</span><span class="sxs-lookup"><span data-stu-id="41a8b-115">The following example combines scaling, rotation and translation (in that order) to form a composite transformation.</span></span> <span data-ttu-id="41a8b-116">Аргумент <xref:System.Drawing.Drawing2D.MatrixOrder.Append> передаваемый <xref:System.Drawing.Graphics.RotateTransform%2A> метод указывает, что поворот будет выполняться после масштабирования.</span><span class="sxs-lookup"><span data-stu-id="41a8b-116">The argument <xref:System.Drawing.Drawing2D.MatrixOrder.Append> passed to the <xref:System.Drawing.Graphics.RotateTransform%2A> method indicates that the rotation will follow the scaling.</span></span> <span data-ttu-id="41a8b-117">Аналогично аргумент <xref:System.Drawing.Drawing2D.MatrixOrder.Append> передаваемый <xref:System.Drawing.Graphics.TranslateTransform%2A> метод указывает, что сдвиг будет выполняться поворот.</span><span class="sxs-lookup"><span data-stu-id="41a8b-117">Likewise, the argument <xref:System.Drawing.Drawing2D.MatrixOrder.Append> passed to the <xref:System.Drawing.Graphics.TranslateTransform%2A> method indicates that the translation will follow the rotation.</span></span> <span data-ttu-id="41a8b-118"><xref:System.Drawing.Drawing2D.MatrixOrder.Append>и <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> являются членами <xref:System.Drawing.Drawing2D.MatrixOrder> перечисления.</span><span class="sxs-lookup"><span data-stu-id="41a8b-118"><xref:System.Drawing.Drawing2D.MatrixOrder.Append> and <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> are members of the <xref:System.Drawing.Drawing2D.MatrixOrder> enumeration.</span></span>  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#21)]  
   
- В следующем примере осуществляются те же вызовы методов, что и в предыдущем, но порядок вызова методов меняется на обратный.  Получающееся при этом составное преобразование \(сдвиг, поворот, масштабирование\) дает результат, принципиально отличающийся от результата выполнения исходного преобразования \(масштабирование, поворот, сдвиг\).  
+ <span data-ttu-id="41a8b-119">В следующем примере создается те же вызовы методов, как в предыдущем примере, но изменять порядок вызовов.</span><span class="sxs-lookup"><span data-stu-id="41a8b-119">The following example makes the same method calls as the preceding example, but the order of the calls is reversed.</span></span> <span data-ttu-id="41a8b-120">Полученный порядок операций сначала перевести, затем поворот, а затем повернуть шкала, которая дает очень другой результат, масштабирование, затем сдвиг.</span><span class="sxs-lookup"><span data-stu-id="41a8b-120">The resulting order of operations is first translate, then rotate, then scale, which produces a very different result than first scale, then rotate, then translate.</span></span>  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.MiscLegacyTopics#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#22)]  
   
- Первым способом изменения порядка выполнения отдельных преобразований, формирующих составное преобразование, на обратный является изменение на обратный порядка вызовов методов.  Второй способ управления порядком операций заключается в изменении значения параметра порядка следования матриц.  Следующий пример полностью аналогичен предыдущему, но в нем параметр <xref:System.Drawing.Drawing2D.MatrixOrder> заменен на <xref:System.Drawing.Drawing2D.MatrixOrder>.  Перемножение матриц осуществляется в порядке SRT, где S, R и T являются матрицами масштабирования, поворота и сдвига соответственно.  При применении составного преобразования сначала осуществляется масштабирование, затем поворот, а затем сдвиг.  
+ <span data-ttu-id="41a8b-121">Чтобы изменить порядок отдельных преобразований, составное преобразование можно изменить порядок последовательности вызовов метода.</span><span class="sxs-lookup"><span data-stu-id="41a8b-121">One way to reverse the order of individual transformations in a composite transformation is to reverse the order of a sequence of method calls.</span></span> <span data-ttu-id="41a8b-122">Второй способ управления порядком операций является изменение порядка следования матриц.</span><span class="sxs-lookup"><span data-stu-id="41a8b-122">A second way to control the order of operations is to change the matrix order argument.</span></span> <span data-ttu-id="41a8b-123">Ниже приведен таким же, как и предыдущий пример, за исключением того, что <xref:System.Drawing.Drawing2D.MatrixOrder.Append> был изменен на <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend>.</span><span class="sxs-lookup"><span data-stu-id="41a8b-123">The following example is the same as the preceding example, except that <xref:System.Drawing.Drawing2D.MatrixOrder.Append> has been changed to <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend>.</span></span> <span data-ttu-id="41a8b-124">Умножение матриц осуществляется в порядке SRT, где S, R и T являются матрицами масштабирования, поворота и сдвига соответственно.</span><span class="sxs-lookup"><span data-stu-id="41a8b-124">The matrix multiplication is done in the order SRT, where S, R, and T are the matrices for scale, rotate, and translate, respectively.</span></span> <span data-ttu-id="41a8b-125">Порядок составного преобразования сначала осуществляется масштабирование, затем поворот, а затем перевести.</span><span class="sxs-lookup"><span data-stu-id="41a8b-125">The order of the composite transformation is first scale, then rotate, then translate.</span></span>  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.MiscLegacyTopics#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#23)]  
   
- Результаты, полученные в рассмотренном примере и самом первом примере данного раздела, ничем не отличаются друг от друга.  Это объясняется тем, что были изменены на обратный как порядок вызовов методов, так и порядок выполнения умножения матриц.  
+ <span data-ttu-id="41a8b-126">Результат предыдущего примера равен в результате выполнения первого примера в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="41a8b-126">The result of the immediately preceding example is the same as the result of the first example in this topic.</span></span> <span data-ttu-id="41a8b-127">Это так, как были изменены на обратный порядок вызовы методов и порядок умножения матрицы.</span><span class="sxs-lookup"><span data-stu-id="41a8b-127">This is because we reversed both the order of the method calls and the order of the matrix multiplication.</span></span>  
   
-## См. также  
- <xref:System.Drawing.Drawing2D.Matrix>   
- [Системы координат и преобразования](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)   
- [Использование преобразований в управляемом GDI\+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+## <a name="see-also"></a><span data-ttu-id="41a8b-128">См. также</span><span class="sxs-lookup"><span data-stu-id="41a8b-128">See Also</span></span>  
+ <xref:System.Drawing.Drawing2D.Matrix>  
+ [<span data-ttu-id="41a8b-129">Системы координат и преобразования</span><span class="sxs-lookup"><span data-stu-id="41a8b-129">Coordinate Systems and Transformations</span></span>](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [<span data-ttu-id="41a8b-130">Использование преобразований в управляемом GDI+</span><span class="sxs-lookup"><span data-stu-id="41a8b-130">Using Transformations in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

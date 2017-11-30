@@ -1,39 +1,42 @@
 ---
-title: "Надежный сеанс по протоколу HTTPS с использованием пользовательской привязки | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Надежный сеанс по протоколу HTTPS с использованием пользовательской привязки"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dfd417bc04bcbcabda70618aff9db3605556b068
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Надежный сеанс по протоколу HTTPS с использованием пользовательской привязки
-В этом образце показано использование безопасности транспорта SSL с надежными сеансами.Надежные сеансы реализуют протокол WS\-ReliableMessaging.Чтобы создать безопасный надежный сеанс, можно объединить протокол WS\-Security с надежными сеансами.Но в некоторых случаях может потребоваться использовать безопасность транспорта HTTP с протоколом SSL.  
+# <a name="custom-binding-reliable-session-over-https"></a><span data-ttu-id="f9f2c-102">Надежный сеанс по протоколу HTTPS с использованием пользовательской привязки</span><span class="sxs-lookup"><span data-stu-id="f9f2c-102">Custom Binding Reliable Session over HTTPS</span></span>
+<span data-ttu-id="f9f2c-103">В этом образце показано использование безопасности транспорта SSL с надежными сеансами.</span><span class="sxs-lookup"><span data-stu-id="f9f2c-103">This sample demonstrates the use of SSL transport security with Reliable Sessions.</span></span> <span data-ttu-id="f9f2c-104">Надежные сеансы реализуют протокол WS-ReliableMessaging.</span><span class="sxs-lookup"><span data-stu-id="f9f2c-104">Reliable Sessions implements the WS-Reliable Messaging protocol.</span></span> <span data-ttu-id="f9f2c-105">Чтобы создать безопасный надежный сеанс, можно объединить протокол WS-Security с надежными сеансами.</span><span class="sxs-lookup"><span data-stu-id="f9f2c-105">You can have a secure reliable session by composing WS-Security over Reliable Sessions.</span></span> <span data-ttu-id="f9f2c-106">Но в некоторых случаях может потребоваться использовать безопасность транспорта HTTP с протоколом SSL.</span><span class="sxs-lookup"><span data-stu-id="f9f2c-106">But sometimes, you may choose to instead use HTTP transport security with SSL.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="f9f2c-107">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="f9f2c-107">The samples may already be installed on your machine.</span></span> <span data-ttu-id="f9f2c-108">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="f9f2c-108">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="f9f2c-109">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="f9f2c-109">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="f9f2c-110">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="f9f2c-110">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSessionOverHttps`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSessionOverHttps`  
   
-## Подробные сведения об образце  
- Протокол SSL гарантирует защищенность пакетов.Важно отметить, что этот подход отличается от защиты надежных сеансов с помощью протокола WS\-SecureConversation.  
+## <a name="sample-details"></a><span data-ttu-id="f9f2c-111">Подробные сведения об образце</span><span class="sxs-lookup"><span data-stu-id="f9f2c-111">Sample Details</span></span>  
+ <span data-ttu-id="f9f2c-112">Протокол SSL гарантирует защищенность пакетов.</span><span class="sxs-lookup"><span data-stu-id="f9f2c-112">SSL ensures that the packets themselves are secured.</span></span> <span data-ttu-id="f9f2c-113">Важно отметить, что этот подход отличается от защиты надежных сеансов с помощью протокола WS-SecureConversation.</span><span class="sxs-lookup"><span data-stu-id="f9f2c-113">It is important to note that this is different from securing the reliable session using WS-Secure Conversation.</span></span>  
   
- Чтобы использовать надежные сеансы поверх протокола HTTPS, необходимо создать пользовательскую привязку.Данный образец основан на образце [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md), реализующем службу калькулятора.Пользовательская привязка создается с помощью элемента привязки надежных сеансов и элемента [\<httpsTransport\>](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md).Ниже представлена конфигурация пользовательской привязки.  
+ <span data-ttu-id="f9f2c-114">Чтобы использовать надежные сеансы поверх протокола HTTPS, необходимо создать пользовательскую привязку.</span><span class="sxs-lookup"><span data-stu-id="f9f2c-114">To use reliable session over HTTPS, you must create a custom binding.</span></span> <span data-ttu-id="f9f2c-115">Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующий службу калькулятора.</span><span class="sxs-lookup"><span data-stu-id="f9f2c-115">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span> <span data-ttu-id="f9f2c-116">Создать пользовательскую привязку с помощью элемента привязки надежного сеанса и [ \<httpsTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md).</span><span class="sxs-lookup"><span data-stu-id="f9f2c-116">A custom binding is created using the reliable session binding element and the [\<httpsTransport>](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md).</span></span> <span data-ttu-id="f9f2c-117">Ниже представлена конфигурация пользовательской привязки.</span><span class="sxs-lookup"><span data-stu-id="f9f2c-117">The following configuration is of the custom binding.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <system.serviceModel>  
@@ -77,9 +80,9 @@ caps.handback.revision: 13
 </configuration>  
 ```  
   
- Код программы в этом образце полностью идентичен коду службы, описанной в разделе [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md).Перед построением и выполнением образца необходимо с помощью мастера сертификатов веб\-сервера создать и назначить сертификат.Определения конечной точки и привязки в файле конфигурации включают использование пользовательской привязки, как показано в следующем образце файла конфигурации клиента.  
+ <span data-ttu-id="f9f2c-118">В образце кода программы, идентичной [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) службы.</span><span class="sxs-lookup"><span data-stu-id="f9f2c-118">The program code in the sample is identical to that of the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) service.</span></span> <span data-ttu-id="f9f2c-119">Перед построением и запуском примера необходимо с помощью мастера сертификатов веб-сервера создать и назначить сертификат.</span><span class="sxs-lookup"><span data-stu-id="f9f2c-119">You must create a certificate and assign it by using the Web Server Certificate Wizard before building and running the sample.</span></span> <span data-ttu-id="f9f2c-120">Определения конечной точки и привязки в файле конфигурации включают использование пользовательской привязки, как показано в следующем образце файла конфигурации клиента.</span><span class="sxs-lookup"><span data-stu-id="f9f2c-120">The endpoint definition and binding definition in the configuration file settings enable the use of custom binding as shown in the following sample configuration for the client.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <system.serviceModel>  
@@ -105,20 +108,18 @@ caps.handback.revision: 13
   </system.serviceModel>  
   
 </configuration>  
-  
 ```  
   
- Заданный адрес использует схему https:\/\/.  
+ <span data-ttu-id="f9f2c-121">Заданный адрес использует схему https://.</span><span class="sxs-lookup"><span data-stu-id="f9f2c-121">The address specified uses the https:// scheme.</span></span>  
   
- Поскольку используемый в этом образце сертификат является тестовым сертификатом, созданным с помощью средства Makecert.exe, при попытке доступа по адресу "https:", например https:\/\/localhost\/servicemodelsamples\/service.svc, через браузер, появляется предупреждение системы безопасности.Чтобы клиент [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] мог работать с используемым тестовым сертификатом, в клиент был добавлен дополнительный код, подавляющий появление предупреждения системы безопасности.При использовании рабочих сертификатов этот код и соответствующие классы не требуются.  
+ <span data-ttu-id="f9f2c-122">Поскольку используемый в этом образце сертификат является тестовым сертификатом, созданным с помощью средства Makecert.exe, при попытке доступа по адресу "https:", например https://localhost/servicemodelsamples/service.svc, через браузер, появляется предупреждение системы безопасности.</span><span class="sxs-lookup"><span data-stu-id="f9f2c-122">Because the certificate used in this sample is a test certificate created with Makecert.exe, a security alert appears when you try to access an https: address, such as https://localhost/servicemodelsamples/service.svc, from your browser.</span></span> <span data-ttu-id="f9f2c-123">Чтобы клиент [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] мог работать с используемым тестовым сертификатом, в клиент был добавлен дополнительный код, подавляющий появление предупреждения системы безопасности.</span><span class="sxs-lookup"><span data-stu-id="f9f2c-123">To allow the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] client to work with a test certificate in place, some additional code has been added to the client to suppress the security alert.</span></span> <span data-ttu-id="f9f2c-124">При использовании рабочих сертификатов этот код и соответствующие классы не требуются.</span><span class="sxs-lookup"><span data-stu-id="f9f2c-124">This code, and the accompanying class, is not required when using production certificates.</span></span>  
   
 ```  
 // This code is required only for test certificates like those created by Makecert.exe.  
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
-  
 ```  
   
- При выполнении образца запросы и ответы операций отображаются в окне консоли клиента.Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
+ <span data-ttu-id="f9f2c-125">При выполнении примера запросы и ответы операций отображаются в окне консоли клиента.</span><span class="sxs-lookup"><span data-stu-id="f9f2c-125">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="f9f2c-126">Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.</span><span class="sxs-lookup"><span data-stu-id="f9f2c-126">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -129,21 +130,20 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-#### Настройка, построение и выполнение образца  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="f9f2c-127">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="f9f2c-127">To set up, build, and run the sample</span></span>  
   
-1.  Установите [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0, выполнив следующую команду.  
+1.  <span data-ttu-id="f9f2c-128">Установка [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0, выполнив следующую команду.</span><span class="sxs-lookup"><span data-stu-id="f9f2c-128">Install  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command.</span></span>  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
-  
     ```  
   
-2.  Убедитесь, что выполнены действия, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  <span data-ttu-id="f9f2c-129">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="f9f2c-129">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-3.  Убедитесь, что выполнены процедуры, описанные в разделе [Инструкции по установке сертификата сервера в службах IIS](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).  
+3.  <span data-ttu-id="f9f2c-130">Убедитесь, что вы выполнили [инструкции по установке сертификата сервера Internet Information Services (IIS)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).</span><span class="sxs-lookup"><span data-stu-id="f9f2c-130">Ensure that you have performed the [Internet Information Services (IIS) Server Certificate Installation Instructions](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).</span></span>  
   
-4.  Чтобы выполнить построение версии решения для языка C\# или Visual Basic .NET, следуйте инструкциям раздела [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4.  <span data-ttu-id="f9f2c-131">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="f9f2c-131">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-5.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям раздела [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+5.  <span data-ttu-id="f9f2c-132">Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="f9f2c-132">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="f9f2c-133">См. также</span><span class="sxs-lookup"><span data-stu-id="f9f2c-133">See Also</span></span>

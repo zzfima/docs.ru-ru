@@ -1,24 +1,26 @@
 ---
-title: "Метод &quot;&lt;имя_метода&gt;&quot; не имеет параметров с именем &quot;&lt;имя_параметра&gt;&quot; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrArgument_InvalidNamedArg2"
+title: "Метод &#39; &lt;имя_метода&gt;&#39; имеет параметр с именем &#39;&lt; имя_параметра&gt;&#39;"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrArgument_InvalidNamedArg2
 ms.assetid: b4346b6a-87da-4e65-a2de-ee5239c671f8
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1d1e5e8fb0f26b8e5ada4409fb0a5cf6ec3d80e9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Метод &quot;&lt;имя_метода&gt;&quot; не имеет параметров с именем &quot;&lt;имя_параметра&gt;&quot;
-Указанный именованный аргумент не соответствует ни одному из аргументов целевого метода.  
+# <a name="method-39ltmethodnamegt39-has-no-parameter-named-39ltparameternamegt39"></a><span data-ttu-id="f02ce-102">Метод &#39; &lt;имя_метода&gt;&#39; имеет параметр с именем &#39;&lt; имя_параметра&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="f02ce-102">Method &#39;&lt;methodname&gt;&#39; has no parameter named &#39;&lt;parametername&gt;&#39;</span></span>
+<span data-ttu-id="f02ce-103">Указанный именованный аргумент не соответствует ни одному из аргументов целевого метода.</span><span class="sxs-lookup"><span data-stu-id="f02ce-103">A supplied named argument does not match any of the arguments of the target method.</span></span>  
   
-### Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f02ce-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="f02ce-104">To correct this error</span></span>  
   
-1.  Убедитесь, что именованный аргумент был указан верно.  
+1.  <span data-ttu-id="f02ce-105">Убедитесь, что именованный аргумент был указан верно.</span><span class="sxs-lookup"><span data-stu-id="f02ce-105">Ensure that the named argument was supplied correctly.</span></span>  
   
-## См. также  
- [Передача аргументов по значению и по ссылке](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+## <a name="see-also"></a><span data-ttu-id="f02ce-106">См. также</span><span class="sxs-lookup"><span data-stu-id="f02ce-106">See Also</span></span>  
+ [<span data-ttu-id="f02ce-107">Передача аргументов по значению и по ссылке</span><span class="sxs-lookup"><span data-stu-id="f02ce-107">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

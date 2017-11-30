@@ -1,26 +1,28 @@
 ---
-title: "Не удается вычислить коэффициент, используя предоставленные аргументы. | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrFinancial_CannotCalculateRate"
+title: "Не удается вычислить коэффициент, используя предоставленные аргументы."
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrFinancial_CannotCalculateRate
 ms.assetid: 17d5c8eb-4716-4b72-977f-a640c02e630d
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: bd5d86bf6b4c0be77fa42599e6c8e042190b89f1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Не удается вычислить коэффициент, используя предоставленные аргументы.
-Вычисление коэффициента не содержит обязательные аргументы.  
+# <a name="cannot-calculate-rate-using-the-arguments-provided"></a><span data-ttu-id="ede3d-102">Не удается вычислить коэффициент, используя предоставленные аргументы.</span><span class="sxs-lookup"><span data-stu-id="ede3d-102">Cannot calculate rate using the arguments provided</span></span>
+<span data-ttu-id="ede3d-103">Вычисление коэффициента не содержит обязательные аргументы.</span><span class="sxs-lookup"><span data-stu-id="ede3d-103">The rate calculation does not contain the required arguments.</span></span>  
   
-### Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ede3d-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="ede3d-104">To correct this error</span></span>  
   
-1.  Проверьте правильность написания аргументов в выражении. Неправильно написанное имя переменной может привести к неявному созданию числовой переменной, которая инициализируется нулевым значением.  
+1.  <span data-ttu-id="ede3d-105">Проверьте правильность написания аргументов в выражении.</span><span class="sxs-lookup"><span data-stu-id="ede3d-105">Check the spelling of arguments in the expression.</span></span> <span data-ttu-id="ede3d-106">Неправильно написанное имя переменной может привести к неявному созданию числовой переменной, которая инициализируется нулевым значением.</span><span class="sxs-lookup"><span data-stu-id="ede3d-106">A misspelled variable name can implicitly create a numeric variable that is initialized to zero.</span></span>  
   
-2.  Проверьте предыдущие операции с переменными в выражении, в особенности те, которые передавались в процедуру как аргументы из других процедур.  
+2.  <span data-ttu-id="ede3d-107">Проверьте предыдущие операции с переменными в выражении, в особенности те, которые передавались в процедуру как аргументы из других процедур.</span><span class="sxs-lookup"><span data-stu-id="ede3d-107">Check previous operations on variables in the expression, especially those passed into the procedure as arguments from other procedures.</span></span>  
   
-## См. также  
- [Сводка по финансовым функциям](../../visual-basic/language-reference/keywords/financial-summary.md)
+## <a name="see-also"></a><span data-ttu-id="ede3d-108">См. также</span><span class="sxs-lookup"><span data-stu-id="ede3d-108">See Also</span></span>  
+ [<span data-ttu-id="ede3d-109">Сводка по финансовым функциям</span><span class="sxs-lookup"><span data-stu-id="ede3d-109">Financial Summary</span></span>](../../visual-basic/language-reference/keywords/financial-summary.md)

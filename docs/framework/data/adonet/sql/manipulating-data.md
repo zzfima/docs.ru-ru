@@ -1,32 +1,38 @@
 ---
-title: "Обработка данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Управление данными"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5117d2aba6fe368a7a17e3d35d8c4887582267e3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Обработка данных
-До того как был введен в действие режим MARS, для поиска решений в некоторых сценариях разработчикам приходилось использовать либо несколько соединений, либо серверные курсоры.  Кроме того, при использовании нескольких соединений в условиях транзакции приходилось прибегать к связанным соединениям \(на основе системных хранимых процедур **sp\_getbindtoken** и **sp\_bindsession**\).  В следующих сценариях показано использование соединения с включенным режимом MARS вместо нескольких соединений.  
+# <a name="manipulating-data"></a><span data-ttu-id="e127d-102">Управление данными</span><span class="sxs-lookup"><span data-stu-id="e127d-102">Manipulating Data</span></span>
+<span data-ttu-id="e127d-103">До того как был введен в действие режим MARS, для поиска решений в некоторых сценариях разработчикам приходилось использовать либо несколько соединений, либо серверные курсоры.</span><span class="sxs-lookup"><span data-stu-id="e127d-103">Before the introduction of Multiple Active Result Sets (MARS), developers had to use either multiple connections or server-side cursors to solve certain scenarios.</span></span> <span data-ttu-id="e127d-104">Кроме того, при использовании нескольких соединений в случае транзакций, связанных соединений (с **sp_getbindtoken** и **sp_bindsession**) не требуются.</span><span class="sxs-lookup"><span data-stu-id="e127d-104">In addition, when multiple connections were used in a transactional situation, bound connections (with **sp_getbindtoken** and **sp_bindsession**) were required.</span></span> <span data-ttu-id="e127d-105">В следующих сценариях показано использование соединения с включенным режимом MARS вместо нескольких соединений.</span><span class="sxs-lookup"><span data-stu-id="e127d-105">The following scenarios show how to use a MARS-enabled connection instead of multiple connections.</span></span>  
   
-## Использование нескольких команд с помощью режима MARS  
- Следующее приложение командной строки демонстрирует использование двух модулей <xref:System.Data.SqlClient.SqlDataReader> с двумя объектами <xref:System.Data.SqlClient.SqlCommand> и одним объектом <xref:System.Data.SqlClient.SqlConnection> с включенным режимом MARS.  
+## <a name="using-multiple-commands-with-mars"></a><span data-ttu-id="e127d-106">Использование нескольких команд с помощью режима MARS</span><span class="sxs-lookup"><span data-stu-id="e127d-106">Using Multiple Commands with MARS</span></span>  
+ <span data-ttu-id="e127d-107">Следующее приложение командной строки демонстрирует использование двух модулей <xref:System.Data.SqlClient.SqlDataReader> с двумя объектами <xref:System.Data.SqlClient.SqlCommand> и одним объектом <xref:System.Data.SqlClient.SqlConnection> с включенным режимом MARS.</span><span class="sxs-lookup"><span data-stu-id="e127d-107">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with two <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span>  
   
-### Пример  
- Пример открывает одиночное соединение с базой данных **AdventureWorks**.  С помощью объекта <xref:System.Data.SqlClient.SqlCommand> создается объект <xref:System.Data.SqlClient.SqlDataReader>.  После использования модуля чтения данных открывается второй объект <xref:System.Data.SqlClient.SqlDataReader>, использующий данные из первого объекта <xref:System.Data.SqlClient.SqlDataReader> в качестве входа для предложения WHERE второго модуля чтения данных.  
+### <a name="example"></a><span data-ttu-id="e127d-108">Пример</span><span class="sxs-lookup"><span data-stu-id="e127d-108">Example</span></span>  
+ <span data-ttu-id="e127d-109">Пример открывает одиночное соединение с **AdventureWorks** базы данных.</span><span class="sxs-lookup"><span data-stu-id="e127d-109">The example opens a single connection to the **AdventureWorks** database.</span></span> <span data-ttu-id="e127d-110">С помощью объекта <xref:System.Data.SqlClient.SqlCommand> создается объект <xref:System.Data.SqlClient.SqlDataReader>.</span><span class="sxs-lookup"><span data-stu-id="e127d-110">Using a <xref:System.Data.SqlClient.SqlCommand> object, a <xref:System.Data.SqlClient.SqlDataReader> is created.</span></span> <span data-ttu-id="e127d-111">После использования модуля чтения данных открывается второй объект <xref:System.Data.SqlClient.SqlDataReader>, использующий данные из первого объекта <xref:System.Data.SqlClient.SqlDataReader> в качестве входа для предложения WHERE второго модуля чтения данных.</span><span class="sxs-lookup"><span data-stu-id="e127d-111">As the reader is used, a second <xref:System.Data.SqlClient.SqlDataReader> is opened, using data from the first <xref:System.Data.SqlClient.SqlDataReader> as input to the WHERE clause for the second reader.</span></span>  
   
 > [!NOTE]
->  В следующем примере используется образец базы данных **AdventureWorks**, входящий в состав [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  Представленная в образце кода строка соединения предполагает, что база данных установлена и доступна на локальном компьютере.  Измените строку соединения при необходимости в соответствии с вашей средой.  
+>  <span data-ttu-id="e127d-112">В следующем примере используется образец **AdventureWorks** базы данных, входящий в состав [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e127d-112">The following example uses the sample **AdventureWorks** database included with [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span></span> <span data-ttu-id="e127d-113">Представленная в образце кода строка соединения предполагает, что база данных установлена и доступна на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="e127d-113">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="e127d-114">Измените строку соединения при необходимости в соответствии с вашей средой.</span><span class="sxs-lookup"><span data-stu-id="e127d-114">Modify the connection string as necessary for your environment.</span></span>  
   
 ```vb  
 Option Strict On  
@@ -167,14 +173,14 @@ static void Main()
 }  
 ```  
   
-## Считывание и обновление данных с помощью режима MARS  
- Режим MARS позволяет использовать соединение как для операций чтения, так и для операций языка DML более чем с одной отложенной операцией.  Эта функция избавляет приложение от необходимости решения ошибок занятости соединения.  Кроме того, режим MARS позволяет заменить серверные курсоры, которые, как правило, потребляют много ресурсов.  Наконец, несколько операций могут осуществляться одновременно в одном соединении, поэтому в них может совместно использоваться один и тот же контекст транзакции, в результате чего отпадает необходимость использования системных хранимых процедур **sp\_getbindtoken** и **sp\_bindsession**.  
+## <a name="reading-and-updating-data-with-mars"></a><span data-ttu-id="e127d-115">Считывание и обновление данных с помощью режима MARS</span><span class="sxs-lookup"><span data-stu-id="e127d-115">Reading and Updating Data with MARS</span></span>  
+ <span data-ttu-id="e127d-116">Режим MARS позволяет использовать соединение как для операций чтения, так и для операций языка DML более чем с одной отложенной операцией.</span><span class="sxs-lookup"><span data-stu-id="e127d-116">MARS allows a connection to be used for both read operations and data manipulation language (DML) operations with more than one pending operation.</span></span> <span data-ttu-id="e127d-117">Эта функция избавляет приложение от необходимости решения ошибок занятости соединения.</span><span class="sxs-lookup"><span data-stu-id="e127d-117">This feature eliminates the need for an application to deal with connection-busy errors.</span></span> <span data-ttu-id="e127d-118">Кроме того, режим MARS позволяет заменить серверные курсоры, которые, как правило, потребляют много ресурсов.</span><span class="sxs-lookup"><span data-stu-id="e127d-118">In addition, MARS can replace the user of server-side cursors, which generally consume more resources.</span></span> <span data-ttu-id="e127d-119">Наконец, несколько операций могут осуществляться в одном соединении, они могут совместно использовать тот же контекст транзакции, устраняя необходимость использования **sp_getbindtoken** и **sp_bindsession** системные хранимые процедуры.</span><span class="sxs-lookup"><span data-stu-id="e127d-119">Finally, because multiple operations can operate on a single connection, they can share the same transaction context, eliminating the need to use **sp_getbindtoken** and **sp_bindsession** system stored procedures.</span></span>  
   
-### Пример  
- Следующее приложение командной строки демонстрирует использование двух модулей <xref:System.Data.SqlClient.SqlDataReader> с тремя объектами <xref:System.Data.SqlClient.SqlCommand> и одним объектом <xref:System.Data.SqlClient.SqlConnection> с включенным режимом MARS.  Первый объект команды получает список поставщиков, оценка кредитоспособности которых равна 5.  Второй объект команды по идентификатору поставщика из объекта <xref:System.Data.SqlClient.SqlDataReader> загружает второй объект <xref:System.Data.SqlClient.SqlDataReader>, содержащий все продукты данного поставщика.  Каждая запись продукта обрабатывается вторым модулем <xref:System.Data.SqlClient.SqlDataReader>.  Для определения нового состояния **OnOrderQty** выполняется вычисление.  Затем используется третий объект команды для занесения в таблицу **ProductVendor** нового значения.  Весь процесс выполняется в пределах одной транзакции, для которой в конце выполняется откат.  
+### <a name="example"></a><span data-ttu-id="e127d-120">Пример</span><span class="sxs-lookup"><span data-stu-id="e127d-120">Example</span></span>  
+ <span data-ttu-id="e127d-121">Следующее приложение командной строки демонстрирует использование двух модулей <xref:System.Data.SqlClient.SqlDataReader> с тремя объектами <xref:System.Data.SqlClient.SqlCommand> и одним объектом <xref:System.Data.SqlClient.SqlConnection> с включенным режимом MARS.</span><span class="sxs-lookup"><span data-stu-id="e127d-121">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with three <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span> <span data-ttu-id="e127d-122">Первый объект команды получает список поставщиков, оценка кредитоспособности которых равна 5.</span><span class="sxs-lookup"><span data-stu-id="e127d-122">The first command object retrieves a list of vendors whose credit rating is 5.</span></span> <span data-ttu-id="e127d-123">Второй объект команды по идентификатору поставщика из объекта <xref:System.Data.SqlClient.SqlDataReader> загружает второй объект <xref:System.Data.SqlClient.SqlDataReader>, содержащий все продукты данного поставщика.</span><span class="sxs-lookup"><span data-stu-id="e127d-123">The second command object uses the vendor ID provided from a <xref:System.Data.SqlClient.SqlDataReader> to load the second <xref:System.Data.SqlClient.SqlDataReader> with all of the products for the particular vendor.</span></span> <span data-ttu-id="e127d-124">Каждая запись продукта обрабатывается вторым модулем <xref:System.Data.SqlClient.SqlDataReader>.</span><span class="sxs-lookup"><span data-stu-id="e127d-124">Each product record is visited by the second <xref:System.Data.SqlClient.SqlDataReader>.</span></span> <span data-ttu-id="e127d-125">Для определения нового выполняется вычисление **OnOrderQty** должно быть.</span><span class="sxs-lookup"><span data-stu-id="e127d-125">A calculation is performed to determine what the new **OnOrderQty** should be.</span></span> <span data-ttu-id="e127d-126">Затем используется третий объект команды для обновления **ProductVendor** таблицы с новым значением.</span><span class="sxs-lookup"><span data-stu-id="e127d-126">The third command object is then used to update the **ProductVendor** table with the new value.</span></span> <span data-ttu-id="e127d-127">Весь процесс выполняется в пределах одной транзакции, для которой в конце выполняется откат.</span><span class="sxs-lookup"><span data-stu-id="e127d-127">This entire process takes place within a single transaction, which is rolled back at the end.</span></span>  
   
 > [!NOTE]
->  В следующем примере используется образец базы данных **AdventureWorks**, входящий в состав [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  Представленная в образце кода строка соединения предполагает, что база данных установлена и доступна на локальном компьютере.  Измените строку соединения при необходимости в соответствии с вашей средой.  
+>  <span data-ttu-id="e127d-128">В следующем примере используется образец **AdventureWorks** базы данных, входящий в состав [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e127d-128">The following example uses the sample **AdventureWorks** database included with [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span></span> <span data-ttu-id="e127d-129">Представленная в образце кода строка соединения предполагает, что база данных установлена и доступна на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="e127d-129">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="e127d-130">Измените строку соединения при необходимости в соответствии с вашей средой.</span><span class="sxs-lookup"><span data-stu-id="e127d-130">Modify the connection string as necessary for your environment.</span></span>  
   
 ```vb  
 Option Strict On  
@@ -406,6 +412,6 @@ private static string GetConnectionString()
 }  
 ```  
   
-## См. также  
- [Режим MARS](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="e127d-131">См. также</span><span class="sxs-lookup"><span data-stu-id="e127d-131">See Also</span></span>  
+ [<span data-ttu-id="e127d-132">Несколько активных результирующих наборов (MARS)</span><span class="sxs-lookup"><span data-stu-id="e127d-132">Multiple Active Result Sets (MARS)</span></span>](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
+ [<span data-ttu-id="e127d-133">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="e127d-133">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

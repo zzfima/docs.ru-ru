@@ -1,93 +1,96 @@
 ---
-title: "Проверка подлинности в SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Аутентификация в SQL Server"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e3b597d04ee53a094d9c50dff406f57e5fd57b00
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Проверка подлинности в SQL Server
-[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] поддерживает два режима проверки подлинности: режим проверки подлинности Windows и режим смешанной проверки подлинности.  
+# <a name="authentication-in-sql-server"></a><span data-ttu-id="28b0c-102">Аутентификация в SQL Server</span><span class="sxs-lookup"><span data-stu-id="28b0c-102">Authentication in SQL Server</span></span>
+[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]<span data-ttu-id="28b0c-103"> поддерживает два режима проверки подлинности: режим проверки подлинности Windows и режим смешанной проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="28b0c-103"> supports two authentication modes, Windows authentication mode and mixed mode.</span></span>  
   
--   Режим проверки подлинности Windows является режимом по умолчанию. Поскольку эта модель безопасности [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] тесно интегрирована с Windows, часто ее называют встроенной функцией безопасности.  Определенным учетным записям пользователей и групп Windows разрешается входить в SQL Server.  Пользователи Windows, прошедшие проверку подлинности, не должны предъявлять дополнительные учетные данные.  
+-   <span data-ttu-id="28b0c-104">Режим проверки подлинности Windows является режимом по умолчанию. Поскольку эта модель безопасности [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] тесно интегрирована с Windows, часто ее называют встроенной функцией безопасности.</span><span class="sxs-lookup"><span data-stu-id="28b0c-104">Windows authentication is the default, and is often referred to as integrated security because this [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] security model is tightly integrated with Windows.</span></span> <span data-ttu-id="28b0c-105">Определенным учетным записям пользователей и групп Windows разрешается входить в SQL Server.</span><span class="sxs-lookup"><span data-stu-id="28b0c-105">Specific Windows user and group accounts are trusted to log in to SQL Server.</span></span> <span data-ttu-id="28b0c-106">Пользователи Windows, прошедшие проверку подлинности, не должны предъявлять дополнительные учетные данные.</span><span class="sxs-lookup"><span data-stu-id="28b0c-106">Windows users who have already been authenticated do not have to present additional credentials.</span></span>  
   
--   Режим смешанной аутентификации поддерживает проверку подлинности как средствами Windows, так и средствами [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  Пары имен пользователей и паролей ведутся в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
+-   <span data-ttu-id="28b0c-107">Режим смешанной аутентификации поддерживает проверку подлинности как средствами Windows, так и средствами [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span><span class="sxs-lookup"><span data-stu-id="28b0c-107">Mixed mode supports authentication both by Windows and by [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span></span> <span data-ttu-id="28b0c-108">Пары имен пользователей и паролей ведутся в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span><span class="sxs-lookup"><span data-stu-id="28b0c-108">User name and password pairs are maintained within [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span></span>  
   
 > [!IMPORTANT]
->  Рекомендуется по возможности использовать проверку подлинности Windows.  При проверке подлинности Windows используется ряд зашифрованных сообщений для проверки подлинности пользователей в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  А при использовании имен входа [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] имена входа и пароли [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] передаются по сети, что делает их менее защищенными.  
+>  <span data-ttu-id="28b0c-109">Рекомендуется по возможности использовать проверку подлинности Windows.</span><span class="sxs-lookup"><span data-stu-id="28b0c-109">We recommend using Windows authentication wherever possible.</span></span> <span data-ttu-id="28b0c-110">При проверке подлинности Windows используется ряд зашифрованных сообщений для проверки подлинности пользователей в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span><span class="sxs-lookup"><span data-stu-id="28b0c-110">Windows authentication uses a series of encrypted messages to authenticate users in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span></span> <span data-ttu-id="28b0c-111">А при использовании имен входа [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] имена входа и пароли [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] передаются по сети, что делает их менее защищенными.</span><span class="sxs-lookup"><span data-stu-id="28b0c-111">When [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] logins are used, [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] login names and passwords are passed across the network, which makes them less secure.</span></span>  
   
- При использовании проверки подлинности Windows пользователи уже вошли в Windows и им не нужно отдельно входить еще и в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  Следующая строка подключения `SqlConnection.ConnectionString` задает проверку подлинности Windows, не требуя имени пользователя или пароля.  
+ <span data-ttu-id="28b0c-112">При использовании проверки подлинности Windows пользователи уже вошли в Windows и им не нужно отдельно входить еще и в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span><span class="sxs-lookup"><span data-stu-id="28b0c-112">With Windows authentication, users are already logged onto Windows and do not have to log on separately to [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span></span> <span data-ttu-id="28b0c-113">Следующая строка подключения `SqlConnection.ConnectionString` задает проверку подлинности Windows, не требуя имени пользователя или пароля.</span><span class="sxs-lookup"><span data-stu-id="28b0c-113">The following `SqlConnection.ConnectionString` specifies Windows authentication without requiring the a user name or password.</span></span>  
   
 ```  
 "Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;  
 ```  
   
 > [!NOTE]
->  Имена входа отличаются от пользователей базы данных.  Имена входа или группы Windows необходимо сопоставлять с пользователями базы данных или ролями при помощи отдельной операции.  После этого пользователям или ролям предоставляются разрешения на доступ к объектам базы данных.  
+>  <span data-ttu-id="28b0c-114">Имена входа отличаются от пользователей базы данных.</span><span class="sxs-lookup"><span data-stu-id="28b0c-114">Logins are distinct from database users.</span></span> <span data-ttu-id="28b0c-115">Имена входа или группы Windows необходимо сопоставлять с пользователями базы данных или ролями при помощи отдельной операции.</span><span class="sxs-lookup"><span data-stu-id="28b0c-115">You must map logins or Windows groups to database users or roles in a separate operation.</span></span> <span data-ttu-id="28b0c-116">После этого пользователям или ролям предоставляются разрешения на доступ к объектам базы данных.</span><span class="sxs-lookup"><span data-stu-id="28b0c-116">You then grant permissions to users or roles to access database objects.</span></span>  
   
-## Сценарии проверки подлинности  
- Обычно проверка подлинности Windows является наилучшим вариантом в следующих ситуациях.  
+## <a name="authentication-scenarios"></a><span data-ttu-id="28b0c-117">Сценарии проверки подлинности</span><span class="sxs-lookup"><span data-stu-id="28b0c-117">Authentication Scenarios</span></span>  
+ <span data-ttu-id="28b0c-118">Обычно проверка подлинности Windows является наилучшим вариантом в следующих ситуациях.</span><span class="sxs-lookup"><span data-stu-id="28b0c-118">Windows authentication is usually the best choice in the following situations:</span></span>  
   
--   Имеется контроллер домена.  
+-   <span data-ttu-id="28b0c-119">Имеется контроллер домена.</span><span class="sxs-lookup"><span data-stu-id="28b0c-119">There is a domain controller.</span></span>  
   
--   Приложение и база данных находятся на одном компьютере.  
+-   <span data-ttu-id="28b0c-120">Приложение и база данных находятся на одном компьютере.</span><span class="sxs-lookup"><span data-stu-id="28b0c-120">The application and the database are on the same computer.</span></span>  
   
--   Используется экземпляр [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Express или LocalDB.  
+-   <span data-ttu-id="28b0c-121">Используется экземпляр [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Express или LocalDB.</span><span class="sxs-lookup"><span data-stu-id="28b0c-121">You are using an instance of [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Express or LocalDB.</span></span>  
   
- Имена входа SQL Server часто используются в следующих ситуациях.  
+ <span data-ttu-id="28b0c-122">Имена входа SQL Server часто используются в следующих ситуациях.</span><span class="sxs-lookup"><span data-stu-id="28b0c-122">SQL Server logins are often used in the following situations:</span></span>  
   
--   При наличии рабочей группы.  
+-   <span data-ttu-id="28b0c-123">При наличии рабочей группы.</span><span class="sxs-lookup"><span data-stu-id="28b0c-123">If you have a workgroup.</span></span>  
   
--   Пользователи подключаются из разных, не доверенных доменов.  
+-   <span data-ttu-id="28b0c-124">Пользователи подключаются из разных, не доверенных доменов.</span><span class="sxs-lookup"><span data-stu-id="28b0c-124">Users connect from different, non-trusted domains.</span></span>  
   
--   Интернет\-приложения, например [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
-  
-> [!NOTE]
->  При использовании аутентификации Windows имена входа [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] не отключаются.  Чтобы отключить имена входа [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] с высокими правами доступа, используйте инструкцию [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] ALTER LOGIN DISABLE.  
-  
-## Типы имен входа  
- В [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] существует три типа имен входа.  
-  
--   Учетная запись локального пользователя Windows или учетная запись доверенного домена.  [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] доверяет проверку подлинности учетных записей пользователей Windows самой системе Windows.  
-  
--   Группа пользователей Windows.  В случае предоставления доступа группе пользователей Windows право доступа получают все имена пользователей, входящие в эту группу.  
-  
--   Имя входа [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] хранит в базе данных master имя пользователя и хэш пароля путем использования внутренних методов проверки подлинности при попытке входа в базу данных.  
+-   <span data-ttu-id="28b0c-125">Интернет-приложения, например [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="28b0c-125">Internet applications, such as [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] предоставляет имена входа, созданные из сертификатов или асимметричных ключей, которые используются только для подписывания кода.  Они не могут использоваться для подключения к [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
+>  <span data-ttu-id="28b0c-126">При использовании аутентификации Windows имена входа [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] не отключаются.</span><span class="sxs-lookup"><span data-stu-id="28b0c-126">Specifying Windows authentication does not disable [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] logins.</span></span> <span data-ttu-id="28b0c-127">Чтобы отключить имена входа [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] с высокими правами доступа, используйте инструкцию [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] ALTER LOGIN DISABLE.</span><span class="sxs-lookup"><span data-stu-id="28b0c-127">Use the ALTER LOGIN DISABLE [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] statement to disable highly-privileged [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] logins.</span></span>  
   
-## Режим смешанной проверки подлинности  
- При необходимости использовать режим смешанной проверки подлинности следует создать имена входа [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], которые хранятся в SQL Server.  Затем имя пользователя и пароль [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] нужно будет вводить во время выполнения.  
+## <a name="login-types"></a><span data-ttu-id="28b0c-128">Типы имен входа</span><span class="sxs-lookup"><span data-stu-id="28b0c-128">Login Types</span></span>  
+ <span data-ttu-id="28b0c-129">В [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] существует три типа имен входа.</span><span class="sxs-lookup"><span data-stu-id="28b0c-129">[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] supports three types of logins:</span></span>  
+  
+-   <span data-ttu-id="28b0c-130">Учетная запись локального пользователя Windows или учетная запись доверенного домена.</span><span class="sxs-lookup"><span data-stu-id="28b0c-130">A local Windows user account or trusted domain account.</span></span> [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]<span data-ttu-id="28b0c-131"> доверяет проверку подлинности учетных записей пользователей Windows самой системе Windows.</span><span class="sxs-lookup"><span data-stu-id="28b0c-131"> relies on Windows to authenticate the Windows user accounts.</span></span>  
+  
+-   <span data-ttu-id="28b0c-132">Группа пользователей Windows.</span><span class="sxs-lookup"><span data-stu-id="28b0c-132">Windows group.</span></span> <span data-ttu-id="28b0c-133">В случае предоставления доступа группе пользователей Windows право доступа получают все имена пользователей, входящие в эту группу.</span><span class="sxs-lookup"><span data-stu-id="28b0c-133">Granting access to a Windows group grants access to all Windows user logins that are members of the group.</span></span>  
+  
+-   <span data-ttu-id="28b0c-134">Имя входа [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span><span class="sxs-lookup"><span data-stu-id="28b0c-134">[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] login.</span></span> [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]<span data-ttu-id="28b0c-135"> хранит в базе данных master имя пользователя и хэш пароля путем использования внутренних методов проверки подлинности при попытке входа в базу данных.</span><span class="sxs-lookup"><span data-stu-id="28b0c-135"> stores both the username and a hash of the password in the master database, by using internal authentication methods to verify login attempts.</span></span>  
+  
+> [!NOTE]
+>  [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]<span data-ttu-id="28b0c-136"> предоставляет имена входа, созданные из сертификатов или асимметричных ключей, которые используются только для подписывания кода.</span><span class="sxs-lookup"><span data-stu-id="28b0c-136"> provides logins created from certificates or asymmetric keys that are used only for code signing.</span></span> <span data-ttu-id="28b0c-137">Они не могут использоваться для подключения к [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span><span class="sxs-lookup"><span data-stu-id="28b0c-137">They cannot be used to connect to [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span></span>  
+  
+## <a name="mixed-mode-authentication"></a><span data-ttu-id="28b0c-138">Режим смешанной проверки подлинности</span><span class="sxs-lookup"><span data-stu-id="28b0c-138">Mixed Mode Authentication</span></span>  
+ <span data-ttu-id="28b0c-139">При необходимости использовать режим смешанной проверки подлинности следует создать имена входа [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], которые хранятся в SQL Server.</span><span class="sxs-lookup"><span data-stu-id="28b0c-139">If you must use mixed mode authentication, you must create [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] logins, which are stored in SQL Server.</span></span> <span data-ttu-id="28b0c-140">Затем имя пользователя и пароль [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] нужно будет вводить во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="28b0c-140">You then have to supply the [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] user name and password at run time.</span></span>  
   
 > [!IMPORTANT]
->  [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] устанавливается с именем входа [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] `sa` \(сокращение от «system administrator»\).  Назначьте имени входа `sa` надежный пароль и не используйте имя входа `sa` в приложениях.  Имя входа `sa` сопоставляется предопределенной роли сервера `sysadmin`, которая имеет безотзывные административные учетные данные для всего сервера.  Если организатор атаки получит доступ с учетными данными системного администратора, потенциальный ущерб системе может быть огромным.  Все члены группы Windows `BUILTIN\Administrators` \(группы локального администратора\) по умолчанию являются членами роли `sysadmin`, но их можно удалить из этой роли.  
+>  [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]<span data-ttu-id="28b0c-141"> устанавливается с именем входа [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] `sa` (сокращение от «system administrator»).</span><span class="sxs-lookup"><span data-stu-id="28b0c-141"> installs with a [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] login named `sa` (an abbreviation of "system administrator").</span></span> <span data-ttu-id="28b0c-142">Назначьте имени входа `sa` надежный пароль и не используйте имя входа `sa` в приложениях.</span><span class="sxs-lookup"><span data-stu-id="28b0c-142">Assign a strong password to the `sa` login and do not use the `sa` login in your application.</span></span> <span data-ttu-id="28b0c-143">Имя входа `sa` сопоставляется предопределенной роли сервера `sysadmin`, которая имеет безотзывные административные учетные данные для всего сервера.</span><span class="sxs-lookup"><span data-stu-id="28b0c-143">The `sa` login maps to the `sysadmin` fixed server role, which has irrevocable administrative credentials on the whole server.</span></span> <span data-ttu-id="28b0c-144">Если организатор атаки получит доступ с учетными данными системного администратора, потенциальный ущерб системе может быть огромным.</span><span class="sxs-lookup"><span data-stu-id="28b0c-144">There are no limits to the potential damage if an attacker gains access as a system administrator.</span></span> <span data-ttu-id="28b0c-145">Все члены группы Windows `BUILTIN\Administrators` (группы локального администратора) по умолчанию являются членами роли `sysadmin`, но их можно удалить из этой роли.</span><span class="sxs-lookup"><span data-stu-id="28b0c-145">All members of the Windows `BUILTIN\Administrators` group (the local administrator's group) are members of the `sysadmin` role by default, but can be removed from that role.</span></span>  
   
- При работе на [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] или более поздней версии [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] представляет механизмы политики паролей Windows для имен входа [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  Политика сложности паролей позволяет отражать атаки с использованием простого перебора путем увеличения числа возможных паролей.  [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] может применить к паролям, используемым в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], те же уровни сложности паролей и истечения срока их действия, которые применяются в [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)].  
+ <span data-ttu-id="28b0c-146">При работе на [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] или более поздней версии [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] представляет механизмы политики паролей Windows для имен входа [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)].</span><span class="sxs-lookup"><span data-stu-id="28b0c-146">[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] provides Windows password policy mechanisms for [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] logins when it is running on [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] or later versions.</span></span> <span data-ttu-id="28b0c-147">Политика сложности паролей позволяет отражать атаки с использованием простого перебора путем увеличения числа возможных паролей.</span><span class="sxs-lookup"><span data-stu-id="28b0c-147">Password complexity policies are designed to deter brute force attacks by increasing the number of possible passwords.</span></span> [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]<span data-ttu-id="28b0c-148"> может применить к паролям, используемым в [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)], те же уровни сложности паролей и истечения срока их действия, которые применяются в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span><span class="sxs-lookup"><span data-stu-id="28b0c-148"> can apply the same complexity and expiration policies used in [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] to passwords used inside [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span></span>  
   
 > [!IMPORTANT]
->  Объединение строк соединения из ввода пользователя может привести к уязвимости к атакам внедрения данных в строку соединения.  Чтобы создавать синтаксически допустимые строки соединения во время выполнения, используйте <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  Для получения дополнительной информации см. [Построители строк подключения](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
+>  <span data-ttu-id="28b0c-149">Объединение строк соединения из ввода пользователя может привести к уязвимости к атакам внедрения данных в строку соединения.</span><span class="sxs-lookup"><span data-stu-id="28b0c-149">Concatenating connection strings from user input can leave you vulnerable to a connection string injection attack.</span></span> <span data-ttu-id="28b0c-150">Чтобы создавать синтаксически допустимые строки соединения во время выполнения, используйте <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.</span><span class="sxs-lookup"><span data-stu-id="28b0c-150">Use the <xref:System.Data.SqlClient.SqlConnectionStringBuilder> to create syntactically valid connection strings at run time.</span></span> <span data-ttu-id="28b0c-151">Дополнительные сведения см. в разделе [построители строк соединения](../../../../../docs/framework/data/adonet/connection-string-builders.md).</span><span class="sxs-lookup"><span data-stu-id="28b0c-151">For more information, see [Connection String Builders](../../../../../docs/framework/data/adonet/connection-string-builders.md).</span></span>  
   
-## Внешние ресурсы  
- Дополнительные сведения см. в следующих ресурсах.  
+## <a name="external-resources"></a><span data-ttu-id="28b0c-152">Внешние ресурсы</span><span class="sxs-lookup"><span data-stu-id="28b0c-152">External Resources</span></span>  
+ <span data-ttu-id="28b0c-153">Дополнительные сведения см. в следующих ресурсах.</span><span class="sxs-lookup"><span data-stu-id="28b0c-153">For more information, see the following resources.</span></span>  
   
-|Ресурс|Описание|  
-|------------|--------------|  
-|[Principals](http://msdn.microsoft.com/library/bb543165.aspx) в электронной документации [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]|Описывает имена входа и других участников безопасности, имеющихся в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].|  
+|<span data-ttu-id="28b0c-154">Ресурс</span><span class="sxs-lookup"><span data-stu-id="28b0c-154">Resource</span></span>|<span data-ttu-id="28b0c-155">Описание</span><span class="sxs-lookup"><span data-stu-id="28b0c-155">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="28b0c-156">[Субъекты](http://msdn.microsoft.com/library/bb543165.aspx) в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] электронной документации</span><span class="sxs-lookup"><span data-stu-id="28b0c-156">[Principals](http://msdn.microsoft.com/library/bb543165.aspx) in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online</span></span>|<span data-ttu-id="28b0c-157">Описывает имена входа и других участников безопасности, имеющихся в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span><span class="sxs-lookup"><span data-stu-id="28b0c-157">Describes logins and other security principals in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span></span>|  
   
-## См. также  
- [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [Сценарии защиты приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)   
- [Подключение к источнику данных](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)   
- [Строки подключения](../../../../../docs/framework/data/adonet/connection-strings.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="28b0c-158">См. также</span><span class="sxs-lookup"><span data-stu-id="28b0c-158">See Also</span></span>  
+ [<span data-ttu-id="28b0c-159">Защита приложений ADO.NET</span><span class="sxs-lookup"><span data-stu-id="28b0c-159">Securing ADO.NET Applications</span></span>](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="28b0c-160">Сценарии безопасности приложений в SQL Server</span><span class="sxs-lookup"><span data-stu-id="28b0c-160">Application Security Scenarios in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [<span data-ttu-id="28b0c-161">Подключение к источнику данных</span><span class="sxs-lookup"><span data-stu-id="28b0c-161">Connecting to a Data Source</span></span>](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
+ [<span data-ttu-id="28b0c-162">Строки подключения</span><span class="sxs-lookup"><span data-stu-id="28b0c-162">Connection Strings</span></span>](../../../../../docs/framework/data/adonet/connection-strings.md)  
+ [<span data-ttu-id="28b0c-163">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="28b0c-163">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

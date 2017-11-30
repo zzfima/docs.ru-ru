@@ -1,47 +1,48 @@
 ---
-title: "Системы координат и преобразования | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "графика, преобразования"
-  - "преобразование матриц"
-  - "преобразования"
+title: "Системы координат и преобразования"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transformations
+- graphics [Windows Forms], transformations
+- matrix transformations
 ms.assetid: 9fef7451-bddf-4c68-9350-400d1f1f25a3
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b89453b427e6a9552416f95c488f0c2a575b5cb4
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Системы координат и преобразования
-Интерфейс [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] предоставляет средства для проведения преобразований объемных или страничных систем координат, что позволяет пользователю интерфейса выполнять определенные действия \(вращение, масштабирование, сдвиг и т. п.\) над рисуемыми элементами.  Эти два типа преобразований можно использовать в различных вариантах систем координат.  
+# <a name="coordinate-systems-and-transformations"></a><span data-ttu-id="6b219-102">Системы координат и преобразования</span><span class="sxs-lookup"><span data-stu-id="6b219-102">Coordinate Systems and Transformations</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="6b219-103">предоставляет универсальное преобразование и преобразование страницы, чтобы их можно преобразовать (поворот, масштабирование, преобразования и так далее) элементов, рисования.</span><span class="sxs-lookup"><span data-stu-id="6b219-103"> provides a world transformation and a page transformation so that you can transform (rotate, scale, translate, and so on) the items you draw.</span></span> <span data-ttu-id="6b219-104">Два преобразования также позволяют работать в различных систем координат.</span><span class="sxs-lookup"><span data-stu-id="6b219-104">The two transformations also allow you to work in a variety of coordinate systems.</span></span>  
   
-## В этом подразделе  
- [Типы систем координат](../../../../docs/framework/winforms/advanced/types-of-coordinate-systems.md)  
- Описание систем координат и преобразований.  
+## <a name="in-this-section"></a><span data-ttu-id="6b219-105">Содержание</span><span class="sxs-lookup"><span data-stu-id="6b219-105">In This Section</span></span>  
+ [<span data-ttu-id="6b219-106">Типы систем координат</span><span class="sxs-lookup"><span data-stu-id="6b219-106">Types of Coordinate Systems</span></span>](../../../../docs/framework/winforms/advanced/types-of-coordinate-systems.md)  
+ <span data-ttu-id="6b219-107">Представляет системы координат и преобразования.</span><span class="sxs-lookup"><span data-stu-id="6b219-107">Introduces coordinates systems and transformations.</span></span>  
   
- [Матричное представление преобразований](../../../../docs/framework/winforms/advanced/matrix-representation-of-transformations.md)  
- Использование матриц для преобразования координат.  
+ [<span data-ttu-id="6b219-108">Матричное представление преобразований</span><span class="sxs-lookup"><span data-stu-id="6b219-108">Matrix Representation of Transformations</span></span>](../../../../docs/framework/winforms/advanced/matrix-representation-of-transformations.md)  
+ <span data-ttu-id="6b219-109">Описывает использование матриц для преобразования координат.</span><span class="sxs-lookup"><span data-stu-id="6b219-109">Discusses using matrices for coordinate transformations.</span></span>  
   
- [Глобальные и локальные преобразования](../../../../docs/framework/winforms/advanced/global-and-local-transformations.md)  
- Глобальные и локальные преобразования.  
+ [<span data-ttu-id="6b219-110">Глобальные и локальные преобразования</span><span class="sxs-lookup"><span data-stu-id="6b219-110">Global and Local Transformations</span></span>](../../../../docs/framework/winforms/advanced/global-and-local-transformations.md)  
+ <span data-ttu-id="6b219-111">Описывает глобальные и локальные преобразования.</span><span class="sxs-lookup"><span data-stu-id="6b219-111">Discusses global and local transformations.</span></span>  
   
-## Ссылка  
+## <a name="reference"></a><span data-ttu-id="6b219-112">Ссылка</span><span class="sxs-lookup"><span data-stu-id="6b219-112">Reference</span></span>  
  <xref:System.Drawing.Drawing2D.Matrix>  
- Инкапсулирует матрицу 3 на 3 аффинного преобразования.  
+ <span data-ttu-id="6b219-113">Инкапсулирует аффинное представление с матричным преобразованием 3 на 3, представляющим геометрическое преобразование.</span><span class="sxs-lookup"><span data-stu-id="6b219-113">Encapsulates a 3-by-3 affine matrix that represents a geometric transform.</span></span>  
   
-## Связанные подразделы  
- [Использование преобразований в управляемом GDI\+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
- Список разделов с дополнительной информации об использовании матричных преобразований.  
+## <a name="related-sections"></a><span data-ttu-id="6b219-114">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="6b219-114">Related Sections</span></span>  
+ [<span data-ttu-id="6b219-115">Использование преобразований в управляемом GDI+</span><span class="sxs-lookup"><span data-stu-id="6b219-115">Using Transformations in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
+ <span data-ttu-id="6b219-116">Предоставляет список разделов, в которых содержатся дополнительные сведения об использовании преобразования.</span><span class="sxs-lookup"><span data-stu-id="6b219-116">Provides a list of topics that provide more information about how to use matrix transformations.</span></span>  
   
- [Управляемый код GDI\+](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
- Список разделов с описанием графических элементов, которые можно использовать в .NET Framework.
+ [<span data-ttu-id="6b219-117">Управляемый код GDI+</span><span class="sxs-lookup"><span data-stu-id="6b219-117">About GDI+ Managed Code</span></span>](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
+ <span data-ttu-id="6b219-118">Содержит список разделов с описанием графических элементов, которые можно использовать в платформе .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="6b219-118">Contains a list of topics describing the graphics constructs you can use in the .NET Framework.</span></span>

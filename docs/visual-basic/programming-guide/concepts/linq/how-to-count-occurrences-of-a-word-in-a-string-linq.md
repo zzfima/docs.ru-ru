@@ -1,35 +1,27 @@
 ---
-title: "Практическое руководство: количество вхождений слова в строке (LINQ) (Visual Basic) | Документы Microsoft"
+title: "Как: подсчет вхождений слова в строке (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: bc367e46-f7cc-45f9-936f-754e661b7bb9
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5ec6bb31fa095786f7c507a66e831a90fd1c6e92
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 82b40e11a72d26858cc2b0b5c0c759517f5b5ee3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>Практическое руководство: количество вхождений слова в строке (LINQ) (Visual Basic)
-В этом примере показано, как использовать LINQ-запрос для подсчета вхождений указанного слова в строке. Обратите внимание, что для выполнения подсчета сначала <xref:System.String.Split%2A>метод вызывается для создания массива слов.</xref:System.String.Split%2A> Чтобы снижается производительность <xref:System.String.Split%2A>метод.</xref:System.String.Split%2A> Если подсчет слов является единственной операцией в строке, следует рассмотреть возможность использования <xref:System.Text.RegularExpressions.Regex.Matches%2A>или <xref:System.String.IndexOf%2A>методов вместо.</xref:System.String.IndexOf%2A> </xref:System.Text.RegularExpressions.Regex.Matches%2A> Однако если производительность не критична или предложение уже разделено для выполнения других запросов на него, затем имеет смысл использовать LINQ для подсчета слов или фраз.  
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a><span data-ttu-id="9b2ef-102">Как: подсчет вхождений слова в строке (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9b2ef-102">How to: Count Occurrences of a Word in a String (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="9b2ef-103">В этом примере показано, как с помощью запроса LINQ определить, сколько раз то или иное слово встречается в строке.</span><span class="sxs-lookup"><span data-stu-id="9b2ef-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="9b2ef-104">Обратите внимание на то, что для этого сначала вызывается метод <xref:System.String.Split%2A>, который создает массив слов.</span><span class="sxs-lookup"><span data-stu-id="9b2ef-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="9b2ef-105">Использование метода <xref:System.String.Split%2A> связано с определенным снижением производительности.</span><span class="sxs-lookup"><span data-stu-id="9b2ef-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="9b2ef-106">Если для строки выполняется только подсчет слов, рекомендуется вместо него использовать метод <xref:System.Text.RegularExpressions.Regex.Matches%2A> или <xref:System.String.IndexOf%2A>.</span><span class="sxs-lookup"><span data-stu-id="9b2ef-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="9b2ef-107">Если же производительность не критична или вы уже разбили предложение, чтобы выполнить с ним другие типы запросов, имеет смысл подсчитать слова или фразы с помощью LINQ.</span><span class="sxs-lookup"><span data-stu-id="9b2ef-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a><span data-ttu-id="9b2ef-108">Пример</span><span class="sxs-lookup"><span data-stu-id="9b2ef-108">Example</span></span>  
   
 ```vb  
 Class CountWords  
@@ -74,8 +66,8 @@ End Class
 ' 3 occurrence(s) of the search term "data" were found.  
 ```  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, в платформе .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.  
+## <a name="compiling-the-code"></a><span data-ttu-id="9b2ef-109">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="9b2ef-109">Compiling the Code</span></span>  
+ <span data-ttu-id="9b2ef-110">Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивой `Imports` для пространства имен System.Linq.</span><span class="sxs-lookup"><span data-stu-id="9b2ef-110">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="9b2ef-111">См. также</span><span class="sxs-lookup"><span data-stu-id="9b2ef-111">See Also</span></span>  
+ [<span data-ttu-id="9b2ef-112">LINQ и строки (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9b2ef-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

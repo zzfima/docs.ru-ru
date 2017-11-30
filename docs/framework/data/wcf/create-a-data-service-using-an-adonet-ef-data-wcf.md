@@ -1,80 +1,83 @@
 ---
-title: "Как создать службу данных с использованием источника данных ADO.NET Entity Framework (службы WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Службы WCF Data Services, Entity Framework"
-  - "Службы WCF Data Services, поставщики"
+title: "Практическое руководство. Создание службы данных с использованием источника данных Entity Framework ADO.NET (службы данных WCF)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF Data Services, providers
+- WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d69a3cf60b60806085a9bb7ae292cc88ba99871e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как создать службу данных с использованием источника данных ADO.NET Entity Framework (службы WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] предоставляет данные сущности в виде службы данных.  Эти данные сущностей предоставляются [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], если источником данных является реляционная база данных.  В этом разделе будет показано создание модели данных на базе [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] в веб\-приложении [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], основанном на существующей базе данных, а также создание новой службы данных с помощью этой модели.  
+# <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a><span data-ttu-id="4ac90-102">Практическое руководство. Создание службы данных с использованием источника данных Entity Framework ADO.NET (службы данных WCF)</span><span class="sxs-lookup"><span data-stu-id="4ac90-102">How to: Create a Data Service Using an ADO.NET Entity Framework Data Source (WCF Data Services)</span></span>
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="4ac90-103"> предоставляет данные сущности в виде службы данных.</span><span class="sxs-lookup"><span data-stu-id="4ac90-103"> exposes entity data as a data service.</span></span> <span data-ttu-id="4ac90-104">Эти данные сущностей предоставляются [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], если источником данных является реляционная база данных.</span><span class="sxs-lookup"><span data-stu-id="4ac90-104">This entity data is provided by the [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] when the data source is a relational database.</span></span> <span data-ttu-id="4ac90-105">В этом разделе будет показано создание модели данных на базе [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] в веб-приложении [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], основанном на существующей базе данных, а также создание новой службы данных с помощью этой модели.</span><span class="sxs-lookup"><span data-stu-id="4ac90-105">This topic shows you how to create an [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-based data model in a [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] Web application that is based on an existing database and use this data model to create a new data service.</span></span>  
   
- Кроме того, в составе [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] предусмотрена программа командной строки, которая может создавать модель [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] за пределами проекта [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  Для получения дополнительной информации см. [Как использовать средство EdmGen.exe для создания файлов модели и сопоставления](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).  
+ <span data-ttu-id="4ac90-106">Кроме того, в составе [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] предусмотрена программа командной строки, которая может создавать модель [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] за пределами проекта [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4ac90-106">The [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] also provides a command line tool that can generate an [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] model outside of a [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] project.</span></span> <span data-ttu-id="4ac90-107">Дополнительные сведения см. в разделе [как: использование EdmGen.exe для создания модели и сопоставления файлов](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).</span><span class="sxs-lookup"><span data-stu-id="4ac90-107">For more information, see [How to: Use EdmGen.exe to Generate the Model and Mapping Files](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).</span></span>  
   
-### Добавление модели Entity Framework на основе существующей базы данных в существующее веб\-приложение  
+### <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a><span data-ttu-id="4ac90-108">Добавление модели Entity Framework на основе существующей базы данных в существующее веб-приложение</span><span class="sxs-lookup"><span data-stu-id="4ac90-108">To add an Entity Framework model that is based on an existing database to an existing Web application</span></span>  
   
-1.  В меню **Проект** выберите пункт **Добавить новый элемент**.  
+1.  <span data-ttu-id="4ac90-109">На **проекта** меню, нажмите кнопку **добавить новый элемент**.</span><span class="sxs-lookup"><span data-stu-id="4ac90-109">On the **Project** menu, click **Add new item**.</span></span>  
   
-2.  Щелкните в области **Шаблоны** категорию **Данные** и выберите **Модель ADO.NET EDM**.  
+2.  <span data-ttu-id="4ac90-110">В **шаблоны** области, нажмите кнопку **данные** категории, а затем выберите **ADO.NET Entity Data Model**.</span><span class="sxs-lookup"><span data-stu-id="4ac90-110">In the **Templates** pane, click the **Data** category, and then select **ADO.NET Entity Data Model**.</span></span>  
   
-3.  Введите имя модели и нажмите кнопку **Добавить**.  
+3.  <span data-ttu-id="4ac90-111">Введите имя модели и нажмите кнопку **добавить**.</span><span class="sxs-lookup"><span data-stu-id="4ac90-111">Type the model name and then click **Add**.</span></span>  
   
-     Отображается первая страница мастера [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)].  
+     <span data-ttu-id="4ac90-112">Отображается первая страница мастера [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4ac90-112">The first page of the [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] Wizard is displayed.</span></span>  
   
-4.  В диалоговом окне **Выбор содержимого модели** выберите параметр **Создать из базы данных**.  Затем нажмите кнопку **Далее**.  
+4.  <span data-ttu-id="4ac90-113">В **Выбор содержимого модели** выберите **создать из базы данных**.</span><span class="sxs-lookup"><span data-stu-id="4ac90-113">In the **Choose Model Contents** dialog box, select **Generate from database**.</span></span> <span data-ttu-id="4ac90-114">Затем нажмите кнопку **Далее**.</span><span class="sxs-lookup"><span data-stu-id="4ac90-114">Then click **Next**.</span></span>  
   
-5.  Нажмите кнопку **Создать соединение**.  
+5.  <span data-ttu-id="4ac90-115">Нажмите кнопку **новое подключение** кнопки.</span><span class="sxs-lookup"><span data-stu-id="4ac90-115">Click the **New Connection** button.</span></span>  
   
-6.  В диалоговом окне **Свойства соединения** введите имя сервера, выберите метод проверки подлинности, введите имя базы данных и нажмите кнопку **ОК**.  
+6.  <span data-ttu-id="4ac90-116">В **свойства соединения** диалоговое окно, введите имя сервера, выберите метод проверки подлинности, введите имя базы данных и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="4ac90-116">In the **Connection Properties** dialog box, type your server name, select the authentication method, type the database name, and then click **OK**.</span></span>  
   
-     В диалоговом окне **Выбор подключения к данным** отображаются выбранные параметры подключения к базе данных.  
+     <span data-ttu-id="4ac90-117">**Выбор подключения к данным**диалогового обновляется параметры подключения к базе данных.</span><span class="sxs-lookup"><span data-stu-id="4ac90-117">The **Choose Your Data Connection**s dialog box is updated with your database connection settings.</span></span>  
   
-7.  Проверьте, что установлен флажок **Сохранить параметры подключения сущности в App.Config как:**.  Затем нажмите кнопку **Далее**.  
+7.  <span data-ttu-id="4ac90-118">Убедитесь, что **сохранить настройки подключения сущности в App.Config как:** установлен флажок.</span><span class="sxs-lookup"><span data-stu-id="4ac90-118">Ensure that the **Save entity connection settings in App.Config as:** checkbox is checked.</span></span> <span data-ttu-id="4ac90-119">Затем нажмите кнопку **Далее**.</span><span class="sxs-lookup"><span data-stu-id="4ac90-119">Then click **Next**.</span></span>  
   
-8.  В диалоговом окне **Выбор объектов базы данных** выберите все объекты базы данных, которые планируется предоставлять в службе данных.  
+8.  <span data-ttu-id="4ac90-120">В **Выбор объектов базы данных** диалоговое окно, выберите все объекты базы данных, которые планируется предоставлять в службе данных.</span><span class="sxs-lookup"><span data-stu-id="4ac90-120">In the **Choose Your Database Objects** dialog box, select all of database objects that you plan to expose in the data service.</span></span>  
   
     > [!NOTE]
-    >  Объекты, включенные в модель данных, не предоставляются службой данных автоматически.  Они должны явно предоставляться самой службой.  Для получения дополнительной информации см. [Настройка службы данных](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
+    >  <span data-ttu-id="4ac90-121">Объекты, включенные в модель данных, не предоставляются службой данных автоматически.</span><span class="sxs-lookup"><span data-stu-id="4ac90-121">Objects included in the data model are not automatically exposed by the data service.</span></span> <span data-ttu-id="4ac90-122">Они должны явно предоставляться самой службой.</span><span class="sxs-lookup"><span data-stu-id="4ac90-122">They must be explicitly exposed by the service itself.</span></span> <span data-ttu-id="4ac90-123">Дополнительные сведения см. в разделе [Настройка службы данных](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="4ac90-123">For more information, see [Configuring the Data Service](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).</span></span>  
   
-9. Нажмите кнопку **Готово**, чтобы завершить работу с мастером.  
+9. <span data-ttu-id="4ac90-124">Нажмите кнопку **Готово** для завершения работы мастера.</span><span class="sxs-lookup"><span data-stu-id="4ac90-124">Click **Finish** to complete the wizard.</span></span>  
   
-     При этом создается модель данных по умолчанию на основе указанной базы данных.  [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] позволяет настроить модель данных.  Для получения дополнительной информации см. [Tasks](http://msdn.microsoft.com/ru-ru/7166f1f1-4de8-4bd4-86b5-5e20a2ebaccb).  
+     <span data-ttu-id="4ac90-125">При этом создается модель данных по умолчанию на основе указанной базы данных.</span><span class="sxs-lookup"><span data-stu-id="4ac90-125">This creates a default data model based on the specific database.</span></span> <span data-ttu-id="4ac90-126">[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] позволяет настроить модель данных.</span><span class="sxs-lookup"><span data-stu-id="4ac90-126">The [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] enables to customize the data model.</span></span> <span data-ttu-id="4ac90-127">Дополнительные сведения см. в разделе [Задачи](http://msdn.microsoft.com/en-us/7166f1f1-4de8-4bd4-86b5-5e20a2ebaccb).</span><span class="sxs-lookup"><span data-stu-id="4ac90-127">For more information, see [Tasks](http://msdn.microsoft.com/en-us/7166f1f1-4de8-4bd4-86b5-5e20a2ebaccb).</span></span>  
   
-### Создание службы данных с использованием новой модели данных  
+### <a name="to-create-the-data-service-by-using-the-new-data-model"></a><span data-ttu-id="4ac90-128">Создание службы данных с использованием новой модели данных</span><span class="sxs-lookup"><span data-stu-id="4ac90-128">To create the data service by using the new data model</span></span>  
   
-1.  В [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] откройте EDMX\-файл, представляющий модель данных.  
+1.  <span data-ttu-id="4ac90-129">В [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] откройте EDMX-файл, представляющий модель данных.</span><span class="sxs-lookup"><span data-stu-id="4ac90-129">In [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], open the .edmx file that represents the data model.</span></span>  
   
-2.  В **браузере моделей** щелкните модель правой кнопкой мыши, выберите команду **Свойства** и отметьте имя контейнера сущностей.  
+2.  <span data-ttu-id="4ac90-130">В **браузер моделей**, щелкните правой кнопкой мыши модель, нажмите кнопку **свойства**и запишите имя контейнера сущностей.</span><span class="sxs-lookup"><span data-stu-id="4ac90-130">In the **Model Browser**, right-click the model, click **Properties**, and then note the name of the entity container.</span></span>  
   
-3.  В **Обозревателе решений** щелкните правой кнопкой мыши имя проекта [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и выберите **Добавить новый элемент**.  
+3.  <span data-ttu-id="4ac90-131">В **обозревателе решений**, щелкните правой кнопкой мыши имя вашего [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] проекта, а затем нажмите кнопку **Добавление нового элемента**.</span><span class="sxs-lookup"><span data-stu-id="4ac90-131">In **Solution Explorer**, right-click the name of your [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] project, and then click **Add New Item**.</span></span>  
   
-4.  В диалоговом окне **Добавление нового элемента** выберите пункт **Служба данных WCF**.  
+4.  <span data-ttu-id="4ac90-132">В **Добавление нового элемента** выберите **службы данных WCF**.</span><span class="sxs-lookup"><span data-stu-id="4ac90-132">In the **Add New Item** dialog box, select **WCF Data Service**.</span></span>  
   
-5.  Введите имя службы и нажмите кнопку **ОК**.  
+5.  <span data-ttu-id="4ac90-133">Задайте имя для службы и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="4ac90-133">Supply a name for the service, and then click **OK**.</span></span>  
   
-     [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] создает метку XML и файлы с кодом для новой службы.  По умолчанию открывается окно редактора кода.  
+     [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]<span data-ttu-id="4ac90-134"> создает метку XML и файлы с кодом для новой службы.</span><span class="sxs-lookup"><span data-stu-id="4ac90-134"> creates the XML markup and code files for the new service.</span></span> <span data-ttu-id="4ac90-135">По умолчанию открывается окно редактора кода.</span><span class="sxs-lookup"><span data-stu-id="4ac90-135">By default, the code-editor window opens.</span></span>  
   
-6.  В коде службы данных замените комментарий `/* TODO: put your data source class name here */` в определении класса, задающего службу данных, типом, порожденным от класса <xref:System.Data.Objects.ObjectContext> и являющимся контейнером сущностей модели данных, который был отмечен на шаге 2.  
+6.  <span data-ttu-id="4ac90-136">В коде службы данных замените комментарий `/* TODO: put your data source class name here */` в определении класса, задающего службу данных, типом, порожденным от класса <xref:System.Data.Objects.ObjectContext> и являющимся контейнером сущностей модели данных, который был отмечен на шаге 2.</span><span class="sxs-lookup"><span data-stu-id="4ac90-136">In the code for the data service, replace the comment `/* TODO: put your data source class name here */` in the definition of the class that defines the data service with the type that inherits from the <xref:System.Data.Objects.ObjectContext> class and that is the entity container of the data model, which was noted in step 2.</span></span>  
   
-7.  Включите в коде службы данных доступ авторизованных клиентов к наборам сущностей, предоставляемым службой данных.  Для получения дополнительной информации см. [Создание службы данных](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
+7.  <span data-ttu-id="4ac90-137">Включите в коде службы данных доступ авторизованных клиентов к наборам сущностей, предоставляемым службой данных.</span><span class="sxs-lookup"><span data-stu-id="4ac90-137">In the code for the data service, enable authorized clients to access the entity sets that the data service exposes.</span></span> <span data-ttu-id="4ac90-138">Дополнительные сведения см. в разделе [Создание службы данных](../../../../docs/framework/data/wcf/creating-the-data-service.md).</span><span class="sxs-lookup"><span data-stu-id="4ac90-138">For more information, see [Creating the Data Service](../../../../docs/framework/data/wcf/creating-the-data-service.md).</span></span>  
   
-8.  Для проверки службы данных Northwind.svc с помощью веб\-браузера следуйте инструкциям в разделе [Доступ к службе из веб\-браузера](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
+8.  <span data-ttu-id="4ac90-139">Для тестирования службы Northwind.svc данных с помощью веб-браузера, следуйте инструкциям в разделе [доступа к службе из веб-браузер](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).</span><span class="sxs-lookup"><span data-stu-id="4ac90-139">To test the Northwind.svc data service by using a Web browser, follow the instructions in the topic [Accessing the Service from a Web Browser](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).</span></span>  
   
-## См. также  
- [Определение службы WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)   
- [Поставщики служб данных](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)   
- [Как создать службу данных с помощью поставщика отражения](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)   
- [Как создать службу данных с помощью источника данных LINQ to SQL](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="4ac90-140">См. также</span><span class="sxs-lookup"><span data-stu-id="4ac90-140">See Also</span></span>  
+ [<span data-ttu-id="4ac90-141">Определение служб данных WCF</span><span class="sxs-lookup"><span data-stu-id="4ac90-141">Defining WCF Data Services</span></span>](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
+ [<span data-ttu-id="4ac90-142">Поставщики служб данных</span><span class="sxs-lookup"><span data-stu-id="4ac90-142">Data Services Providers</span></span>](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
+ [<span data-ttu-id="4ac90-143">Как: создание службы данных с помощью поставщика отражения</span><span class="sxs-lookup"><span data-stu-id="4ac90-143">How to: Create a Data Service Using the Reflection Provider</span></span>](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
+ [<span data-ttu-id="4ac90-144">Как: создание службы данных с использованием LINQ к источнику данных SQL</span><span class="sxs-lookup"><span data-stu-id="4ac90-144">How to: Create a Data Service Using a LINQ to SQL Data Source</span></span>](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md)

@@ -1,28 +1,36 @@
 ---
-title: "Элемент &lt;localServiceSettings&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Элемент &lt;localServiceSettings&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1e251c226484788b7ebc059cd68caf1f3c150c62
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;localServiceSettings&gt;
-Задает параметры безопасности локальной службы для этой привязки.  
+# <a name="ltlocalservicesettingsgt-element"></a><span data-ttu-id="27142-102">Элемент &lt;localServiceSettings&gt;</span><span class="sxs-lookup"><span data-stu-id="27142-102">&lt;localServiceSettings&gt; element</span></span>
+<span data-ttu-id="27142-103">Задает параметры безопасности локальной службы для этой привязки.</span><span class="sxs-lookup"><span data-stu-id="27142-103">Specifies the security settings of a local service for this binding.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="27142-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="27142-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="27142-105">\<привязки ></span><span class="sxs-lookup"><span data-stu-id="27142-105">\<bindings></span></span>  
+<span data-ttu-id="27142-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="27142-106">\<customBinding></span></span>  
+<span data-ttu-id="27142-107">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="27142-107">\<binding></span></span>  
+<span data-ttu-id="27142-108">\<Безопасность ></span><span class="sxs-lookup"><span data-stu-id="27142-108">\<security></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="27142-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="27142-109">Syntax</span></span>  
   
+```xml  
 <security>  
    <localServiceSettings detectReplays="Boolean"  
       inactivityTimeout="TimeSpan"  
@@ -41,62 +49,62 @@ caps.handback.revision: 13
 </security>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="27142-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="27142-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="27142-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="27142-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="27142-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="27142-112">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|`detectReplays`|Логическое значение, показывающее, будут ли атаки с повторением обнаружены и ликвидированы на канале автоматически.  Значение по умолчанию — `false`.|  
-|`inactivityTimeout`|Положительное значение типа <xref:System.TimeSpan>, в котором указывается время бездействия канала.  Значение по умолчанию \- 01:00:00.|  
-|`issuedCookieLifeTime`|Значение типа <xref:System.TimeSpan>, которое задает время существования для всех новых файлов безопасности cookie.  Файлы cookie, время существования который превышает заданное время, используются повторно и снова должны быть согласованы.  Значение по умолчанию \- 10:00:00.|  
-|`maxCachedCookies`|Положительное целое число, указывающее максимальное количество файлов cookie, которые могут быть кэшированы.  Значение по умолчанию — 1000.|  
-|`maxClockSkew`|Значение типа <xref:System.TimeSpan>, указывающее максимальный разброс времени между системными часами взаимодействующих сторон.  Значение по умолчанию \- 00:05:00.<br /><br /> Если задано значение по умолчанию, получатель принимает сообщения с отметками времени отправки, которое на пять минут раньше или позже времени получения сообщения.  Сообщения, которые не прошли проверку времени отправки, отклоняются.  Данная настройка используется в сочетании с атрибутом `replayWindow`.|  
-|`maxPendingSessions`|Положительное целое число, указывающее максимальное число отложенных сеансов безопасности, поддерживаемых службой.  При достижении указанного предела все новые клиенты получают сообщения об ошибках SOAP.  Значение по умолчанию — 1000.|  
-|`maxStatefulNegotiations`|Положительное целое число, указывающее количество одновременно выполняемых согласований режима безопасности.  Сеансы согласования сверх заданного предела помещаются в очередь и могут быть завершены, только когда число выполняемых согласований опускается ниже заданного предела.  Значение по умолчанию — 1024.|  
-|`negotiationTimeout`|Значение типа <xref:System.TimeSpan>, которое указывает время существования политики безопасности, используемой каналом.  По истечении заданного времени канал согласовывает с клиентом новую политику безопасности.  Значение по умолчанию \- 00:02:00.|  
-|`reconnectTransportOnFailure`|Логическое значение, указывающее, будет ли после транспортных сбоев выполняться попытка восстановления подключений, использующих режим обмена сообщениями WS\-Reliable.  По умолчанию используется значение `true`, что означает бесконечное число попыток повторного подключения.  Цикл нарушается при возникновении тайм\-аута бездействия, в результате чего канал вызывает исключение при невозможности повторного подключения.|  
-|`replayCacheSize`|Положительное целое число, указывающее количество кэшированных параметров nonce, используемых для определения ответов.  При превышении лимита самые старые параметры nonce удаляются, и создаются новые параметры nonce для новых сообщений.  Значение по умолчанию — 500000.|  
-|`replayWindow`|Значение типа <xref:System.TimeSpan>, которое указывает срок действия параметров nonce отдельного сообщения.<br /><br /> По истечении данного срока сообщение с тем же параметром nonce, что и у сообщения, отправленного ранее, приниматься не будет.  Данный атрибут используется вместе с атрибутом `maxClockSkew` в целях предотвращения атак с повторением передачи пакетов.  Злоумышленник может повторно отправить сообщение после закрытия окна повторной отправки сообщения.  Данное сообщение, тем не менее, не пройдет проверку `maxClockSkew`, в результате которой отклоняются сообщения с отметками времени отправки, превышающими указанный период до или после времени получения сообщения.|  
-|`sessionKeyRenewalInterval`|Значение <xref:System.TimeSpan>, которое задает интервал времени, по истечении которого инициатор будет обновлять ключ сеанса безопасности.  Значение по умолчанию \- 10:00:00.|  
-|`sessionKeyRolloverInterval`|Значение <xref:System.TimeSpan>, которое задает интервал времени, в течение которого предыдущий сеансовый ключ остается действительным для входящих сообщений, пока выполняется обновление ключа.  Значение по умолчанию \- 00:05:00.<br /><br /> Во время обновления ключа отправка сообщения клиентом и сервером всегда должна выполняться с помощью самого последнего доступного ключа.  Обе стороны принимают входящие сообщения, защищенные с помощью предыдущего сеансового ключа, вплоть до истечения времени смены ключа.|  
-|`timestampValidityDuration`|Положительное значение типа <xref:System.TimeSpan>, указывающее срок действия отметки времени.  Значение по умолчанию \- 00:15:00.|  
+|<span data-ttu-id="27142-113">Атрибут</span><span class="sxs-lookup"><span data-stu-id="27142-113">Attribute</span></span>|<span data-ttu-id="27142-114">Описание</span><span class="sxs-lookup"><span data-stu-id="27142-114">Description</span></span>|  
+|---------------|-----------------|  
+|`detectReplays`|<span data-ttu-id="27142-115">Логическое значение, показывающее, будут ли атаки с повторением обнаружены и ликвидированы на канале автоматически.</span><span class="sxs-lookup"><span data-stu-id="27142-115">A Boolean value that specifies whether replay attacks against the channel are detected and dealt with automatically.</span></span> <span data-ttu-id="27142-116">Значение по умолчанию — `false`.</span><span class="sxs-lookup"><span data-stu-id="27142-116">The default is `false`.</span></span>|  
+|`inactivityTimeout`|<span data-ttu-id="27142-117">Положительное значение типа <xref:System.TimeSpan>, в котором указывается время бездействия канала. Значение по умолчанию - 01:00:00.</span><span class="sxs-lookup"><span data-stu-id="27142-117">A positive <xref:System.TimeSpan> that specifies the duration of inactivity the channel waits before it times out. The default is "01:00:00".</span></span>|  
+|`issuedCookieLifeTime`|<span data-ttu-id="27142-118">Значение типа <xref:System.TimeSpan>, которое задает время существования для всех новых файлов безопасности cookie.</span><span class="sxs-lookup"><span data-stu-id="27142-118">A <xref:System.TimeSpan> that specifies the lifetime issued to all new security cookies.</span></span> <span data-ttu-id="27142-119">Файлы cookie, время существования который превышает заданное время, используются повторно и снова должны быть согласованы.</span><span class="sxs-lookup"><span data-stu-id="27142-119">Cookies that exceed their lifetime are recycled and need to be negotiated again.</span></span> <span data-ttu-id="27142-120">Значение по умолчанию - 10:00:00.</span><span class="sxs-lookup"><span data-stu-id="27142-120">The default value is "10:00:00".</span></span>|  
+|`maxCachedCookies`|<span data-ttu-id="27142-121">Положительное целое число, указывающее максимальное количество файлов cookie, которые могут быть кэшированы.</span><span class="sxs-lookup"><span data-stu-id="27142-121">A positive integer that specifies the maximum number of cookies that can be cached.</span></span> <span data-ttu-id="27142-122">Значение по умолчанию — 1000.</span><span class="sxs-lookup"><span data-stu-id="27142-122">The default is 1000.</span></span>|  
+|`maxClockSkew`|<span data-ttu-id="27142-123">Значение типа <xref:System.TimeSpan>, указывающее максимальный разброс времени между системными часами взаимодействующих сторон.</span><span class="sxs-lookup"><span data-stu-id="27142-123">A <xref:System.TimeSpan> that specifies the maximum time difference between the system clocks of the two communicating parties.</span></span> <span data-ttu-id="27142-124">Значение по умолчанию - 00:05:00.</span><span class="sxs-lookup"><span data-stu-id="27142-124">The default value is "00:05:00".</span></span><br /><br /> <span data-ttu-id="27142-125">Если задано значение по умолчанию, получатель принимает сообщения с отметками времени отправки, которое на пять минут раньше или позже времени получения сообщения.</span><span class="sxs-lookup"><span data-stu-id="27142-125">When this value is set to the default, the receiver accepts messages with send-time time stamps up to 5 minutes later or earlier than the time the message was received.</span></span> <span data-ttu-id="27142-126">Сообщения, которые не прошли проверку времени отправки, отклоняются.</span><span class="sxs-lookup"><span data-stu-id="27142-126">Messages that do not pass the send-time test are rejected.</span></span> <span data-ttu-id="27142-127">Данная настройка используется в сочетании с атрибутом `replayWindow`.</span><span class="sxs-lookup"><span data-stu-id="27142-127">This setting is used in conjunction with the `replayWindow` attribute.</span></span>|  
+|`maxPendingSessions`|<span data-ttu-id="27142-128">Положительное целое число, указывающее максимальное число отложенных сеансов безопасности, поддерживаемых службой.</span><span class="sxs-lookup"><span data-stu-id="27142-128">A positive integer that specifies the maximum number of pending security sessions that the service supports.</span></span> <span data-ttu-id="27142-129">При достижении указанного предела все новые клиенты получают сообщения об ошибках SOAP.</span><span class="sxs-lookup"><span data-stu-id="27142-129">When this limit is reached, all new clients receive SOAP faults.</span></span> <span data-ttu-id="27142-130">Значение по умолчанию — 1000.</span><span class="sxs-lookup"><span data-stu-id="27142-130">The default value is 1000.</span></span>|  
+|`maxStatefulNegotiations`|<span data-ttu-id="27142-131">Положительное целое число, указывающее количество одновременно выполняемых согласований режима безопасности.</span><span class="sxs-lookup"><span data-stu-id="27142-131">A positive integer that specifies the number of security negotiations that can be active concurrently.</span></span> <span data-ttu-id="27142-132">Сеансы согласования сверх заданного предела помещаются в очередь и могут быть завершены, только когда число выполняемых согласований опускается ниже заданного предела.</span><span class="sxs-lookup"><span data-stu-id="27142-132">Negotiation sessions in excess of the limit are queued and can only be completed when a space below the limit becomes available.</span></span> <span data-ttu-id="27142-133">Значение по умолчанию — 1024.</span><span class="sxs-lookup"><span data-stu-id="27142-133">The default value is 1024.</span></span>|  
+|`negotiationTimeout`|<span data-ttu-id="27142-134">Значение типа <xref:System.TimeSpan>, которое указывает время существования политики безопасности, используемой каналом.</span><span class="sxs-lookup"><span data-stu-id="27142-134">A <xref:System.TimeSpan> that specifies the lifetime of the security policy used by channel.</span></span> <span data-ttu-id="27142-135">По истечении заданного времени канал согласовывает с клиентом новую политику безопасности.</span><span class="sxs-lookup"><span data-stu-id="27142-135">When the time expires, the channel renegotiates with the client for a new security policy.</span></span> <span data-ttu-id="27142-136">Значение по умолчанию - 00:02:00.</span><span class="sxs-lookup"><span data-stu-id="27142-136">The default value is "00:02:00".</span></span>|  
+|`reconnectTransportOnFailure`|<span data-ttu-id="27142-137">Логическое значение, указывающее, будет ли после транспортных сбоев выполняться попытка восстановления подключений, использующих режим обмена сообщениями WS-Reliable.</span><span class="sxs-lookup"><span data-stu-id="27142-137">A Boolean value that specifies whether connections using WS-Reliable messaging will attempt to reconnect after transport failures.</span></span> <span data-ttu-id="27142-138">По умолчанию используется значение `true`, что означает бесконечное число попыток повторного подключения.</span><span class="sxs-lookup"><span data-stu-id="27142-138">The default is `true`, which means that infinite attempts to reconnect are attempted.</span></span> <span data-ttu-id="27142-139">Цикл нарушается при возникновении тайм-аута бездействия, в результате чего канал вызывает исключение при невозможности повторного подключения.</span><span class="sxs-lookup"><span data-stu-id="27142-139">The cycle is broken by the inactivity time-out, which causes the channel to throw an exception when it cannot be reconnected.</span></span>|  
+|`replayCacheSize`|<span data-ttu-id="27142-140">Положительное целое число, указывающее количество кэшированных параметров nonce, используемых для определения ответов.</span><span class="sxs-lookup"><span data-stu-id="27142-140">A positive integer that specifies the number of cached nonces used for replay detection.</span></span> <span data-ttu-id="27142-141">При превышении лимита самые старые параметры nonce удаляются, и создаются новые параметры nonce для новых сообщений.</span><span class="sxs-lookup"><span data-stu-id="27142-141">If this limit is exceeded, the oldest nonce is removed and a new nonce is created for the new message.</span></span> <span data-ttu-id="27142-142">Значение по умолчанию — 500000.</span><span class="sxs-lookup"><span data-stu-id="27142-142">The default value is 500000.</span></span>|  
+|`replayWindow`|<span data-ttu-id="27142-143">Значение типа <xref:System.TimeSpan>, которое указывает срок действия параметров nonce отдельного сообщения.</span><span class="sxs-lookup"><span data-stu-id="27142-143">A <xref:System.TimeSpan> that specifies the duration in which individual message nonces are valid.</span></span><br /><br /> <span data-ttu-id="27142-144">По истечении данного срока сообщение с тем же параметром nonce, что и у сообщения, отправленного ранее, приниматься не будет.</span><span class="sxs-lookup"><span data-stu-id="27142-144">After this duration, a message sent with the same nonce as the one sent before will not be accepted.</span></span> <span data-ttu-id="27142-145">Данный атрибут используется вместе с атрибутом `maxClockSkew` в целях предотвращения атак с повторением передачи пакетов.</span><span class="sxs-lookup"><span data-stu-id="27142-145">This attribute is used in conjunction with the `maxClockSkew` attribute to prevent replay attacks.</span></span> <span data-ttu-id="27142-146">Злоумышленник может повторно отправить сообщение после закрытия окна повторной отправки сообщения.</span><span class="sxs-lookup"><span data-stu-id="27142-146">An attacker could replay a message after its replay window has expired.</span></span> <span data-ttu-id="27142-147">Данное сообщение, тем не менее, не пройдет проверку `maxClockSkew`, в результате которой отклоняются сообщения с отметками времени отправки, превышающими указанный период до или после времени получения сообщения.</span><span class="sxs-lookup"><span data-stu-id="27142-147">This message, however, would fail the `maxClockSkew` test which rejects messages with send-time timestamps up to a specified time later or earlier than the time the message was received.</span></span>|  
+|`sessionKeyRenewalInterval`|<span data-ttu-id="27142-148">Значение <xref:System.TimeSpan>, которое задает интервал времени, по истечении которого инициатор будет обновлять ключ сеанса безопасности.</span><span class="sxs-lookup"><span data-stu-id="27142-148">A <xref:System.TimeSpan> that specifies the duration after which the initiator will renew the key for the security session.</span></span> <span data-ttu-id="27142-149">Значение по умолчанию - 10:00:00.</span><span class="sxs-lookup"><span data-stu-id="27142-149">The default is "10:00:00".</span></span>|  
+|`sessionKeyRolloverInterval`|<span data-ttu-id="27142-150">Значение <xref:System.TimeSpan>, которое задает интервал времени, в течение которого предыдущий сеансовый ключ остается действительным для входящих сообщений, пока выполняется обновление ключа.</span><span class="sxs-lookup"><span data-stu-id="27142-150">A <xref:System.TimeSpan> that specifies the time interval a previous session key is valid on incoming messages during a key renewal.</span></span> <span data-ttu-id="27142-151">Значение по умолчанию - 00:05:00.</span><span class="sxs-lookup"><span data-stu-id="27142-151">The default is "00:05:00".</span></span><br /><br /> <span data-ttu-id="27142-152">Во время обновления ключа отправка сообщения клиентом и сервером всегда должна выполняться с помощью самого последнего доступного ключа.</span><span class="sxs-lookup"><span data-stu-id="27142-152">During key renewal, the client and server must always send messages using the most current available key.</span></span> <span data-ttu-id="27142-153">Обе стороны принимают входящие сообщения, защищенные с помощью предыдущего сеансового ключа, вплоть до истечения времени смены ключа.</span><span class="sxs-lookup"><span data-stu-id="27142-153">Both parties will accept incoming messages secured with the previous session key until the rollover time expires.</span></span>|  
+|`timestampValidityDuration`|<span data-ttu-id="27142-154">Положительное значение типа <xref:System.TimeSpan>, указывающее срок действия отметки времени.</span><span class="sxs-lookup"><span data-stu-id="27142-154">A positive <xref:System.TimeSpan> that specifies the duration in which a time stamp is valid.</span></span> <span data-ttu-id="27142-155">Значение по умолчанию - 00:15:00.</span><span class="sxs-lookup"><span data-stu-id="27142-155">The default is "00:15:00".</span></span>|  
   
-### Дочерние элементы  
- Отсутствует.  
+### <a name="child-elements"></a><span data-ttu-id="27142-156">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="27142-156">Child Elements</span></span>  
+ <span data-ttu-id="27142-157">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="27142-157">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="27142-158">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="27142-158">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<безопасность\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Задает параметры безопасности для пользовательской привязки.|  
-|[\<secureConversationBootstrap\>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Задает значения по умолчанию, используемые для инициализации службы безопасного обмена данными.|  
+|<span data-ttu-id="27142-159">Элемент</span><span class="sxs-lookup"><span data-stu-id="27142-159">Element</span></span>|<span data-ttu-id="27142-160">Описание</span><span class="sxs-lookup"><span data-stu-id="27142-160">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="27142-161">\<Безопасность ></span><span class="sxs-lookup"><span data-stu-id="27142-161">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|<span data-ttu-id="27142-162">Задает параметры безопасности для пользовательской привязки.</span><span class="sxs-lookup"><span data-stu-id="27142-162">Specifies the security options for a custom binding.</span></span>|  
+|[<span data-ttu-id="27142-163">\<secureConversationBootstrap ></span><span class="sxs-lookup"><span data-stu-id="27142-163">\<secureConversationBootstrap></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|<span data-ttu-id="27142-164">Задает значения по умолчанию, используемые для инициализации службы безопасного обмена данными.</span><span class="sxs-lookup"><span data-stu-id="27142-164">Specifies the default values used for initiating a secure conversation service.</span></span>|  
   
-## Заметки  
- Данные настройки являются локальными, поскольку они не публикуются как часть политики безопасности службы и не влияют на привязку клиента.  
+## <a name="remarks"></a><span data-ttu-id="27142-165">Примечания</span><span class="sxs-lookup"><span data-stu-id="27142-165">Remarks</span></span>  
+ <span data-ttu-id="27142-166">Данные настройки являются локальными, поскольку они не публикуются как часть политики безопасности службы и не влияют на привязку клиента.</span><span class="sxs-lookup"><span data-stu-id="27142-166">The settings are local because they are not published as part of the security policy of the service and do not affect the client's binding.</span></span>  
   
- Описанные ниже атрибуты элемента `localServiceSecuritySettings` могут способствовать снижению риска атак типа «отказ в обслуживании».  
+ <span data-ttu-id="27142-167">Описанные ниже атрибуты элемента `localServiceSecuritySettings` могут способствовать снижению риска атак типа «отказ в обслуживании».</span><span class="sxs-lookup"><span data-stu-id="27142-167">The following attributes of the `localServiceSecuritySettings` element can help mitigate a denial-of-service (DOS) security attack:</span></span>  
   
--   `maxCachedCookies` управляет максимальным числом ограниченных по времени маркеров SecurityContextTokens, кэшируемых сервером после согласования протокола SPNEGO или SSL.  
+-   <span data-ttu-id="27142-168">`maxCachedCookies` управляет максимальным числом ограниченных по времени маркеров SecurityContextTokens, кэшируемых сервером после согласования протокола SPNEGO или SSL.</span><span class="sxs-lookup"><span data-stu-id="27142-168">`maxCachedCookies`: controls the maximum number of time-bounded SecurityContextTokens that are cached by the server after doing SPNEGO or SSL negotiation.</span></span>  
   
--   `issuedCookieLifetime` управляет временем существования маркеров SecurityContextTokens, выпускаемых сервером после согласования протокола SPNEGO или SSL.  Сервер кэширует маркеры SecurityContextTokens на данный период времени.  
+-   <span data-ttu-id="27142-169">`issuedCookieLifetime` управляет временем существования маркеров SecurityContextTokens, выпускаемых сервером после согласования протокола SPNEGO или SSL.</span><span class="sxs-lookup"><span data-stu-id="27142-169">`issuedCookieLifetime`: controls the lifetime of the SecurityContextTokens that are issued by the server following SPNEGO or SSL negotiation.</span></span> <span data-ttu-id="27142-170">Сервер кэширует маркеры SecurityContextTokens на данный период времени.</span><span class="sxs-lookup"><span data-stu-id="27142-170">The server caches the SecurityContextTokens for this period of time.</span></span>  
   
--   `maxPendingSessions` управляет максимальным числом безопасных диалогов, установленных на сервере, но для которых ни одно сообщение приложения не было обработано.  Данная квота препятствует установлению клиентами безопасных диалогов в службе; таким образом, служба должна отслеживать состояние каждого из клиентов, но не использовать их.  
+-   <span data-ttu-id="27142-171">`maxPendingSessions` управляет максимальным числом безопасных диалогов, установленных на сервере, но для которых ни одно сообщение приложения не было обработано.</span><span class="sxs-lookup"><span data-stu-id="27142-171">`maxPendingSessions`: controls the maximum number of secure conversations that are established at the server but for which no application messages have been processed.</span></span> <span data-ttu-id="27142-172">Данная квота препятствует установлению клиентами безопасных диалогов в службе; таким образом, служба должна отслеживать состояние каждого из клиентов, но не использовать их.</span><span class="sxs-lookup"><span data-stu-id="27142-172">This quota prevents clients from establishing secure conversations at the service, thereby causing the service to maintain state for each client, but never using them.</span></span>  
   
--   `inactivityTimeout` управляет максимальным сроком, в течение которого служба поддерживает безопасный диалог, не получая сообщений приложения в этой связи.  Данная квота препятствует установлению клиентами безопасных диалогов в службе; таким образом, служба должна отслеживать состояние каждого из клиентов, но не использовать их.  
+-   <span data-ttu-id="27142-173">`inactivityTimeout` управляет максимальным сроком, в течение которого служба поддерживает безопасный диалог, не получая сообщений приложения в этой связи.</span><span class="sxs-lookup"><span data-stu-id="27142-173">`inactivityTimeout`: controls the maximum time that the service keeps a secure conversation alive without ever receiving an application message on it.</span></span> <span data-ttu-id="27142-174">Данная квота препятствует установлению клиентами безопасных диалогов в службе; таким образом, служба должна отслеживать состояние каждого из клиентов, но не использовать их.</span><span class="sxs-lookup"><span data-stu-id="27142-174">This quota prevents clients from establishing secure conversations at the service, thereby causing the service to maintain state for each client, but never using them.</span></span>  
   
- В процессе сеанса безопасного диалога следует учесть, что атрибуты `inactivityTimeout` и `receiveTimeout` в привязке влияют на тайм\-аут сеанса.  Наименьшая из этих величин определяет момент, когда истекает время ожидания.  
+ <span data-ttu-id="27142-175">В процессе сеанса безопасного диалога следует учесть, что атрибуты `inactivityTimeout` и `receiveTimeout` в привязке влияют на тайм-аут сеанса.</span><span class="sxs-lookup"><span data-stu-id="27142-175">In a secure conversation session, note that both `inactivityTimeout` and the `receiveTimeout` attributes on the binding affect session timeout.</span></span> <span data-ttu-id="27142-176">Наименьшая из этих величин определяет момент, когда истекает время ожидания.</span><span class="sxs-lookup"><span data-stu-id="27142-176">The shorter of the two determines when timeouts occur.</span></span>  
   
-## См. также  
- <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>   
- <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalServiceSettings%2A>   
- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>   
- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [Привязки](../../../../../docs/framework/wcf/bindings.md)   
- [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [\<customBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)   
- [Как создавать пользовательскую привязку с использованием элемента SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)   
- [Безопасность пользовательской привязки](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+## <a name="see-also"></a><span data-ttu-id="27142-177">См. также</span><span class="sxs-lookup"><span data-stu-id="27142-177">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>  
+ <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalServiceSettings%2A>  
+ <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>  
+ <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [<span data-ttu-id="27142-178">Привязки</span><span class="sxs-lookup"><span data-stu-id="27142-178">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="27142-179">Расширение привязок</span><span class="sxs-lookup"><span data-stu-id="27142-179">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="27142-180">Пользовательские привязки</span><span class="sxs-lookup"><span data-stu-id="27142-180">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="27142-181">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="27142-181">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [<span data-ttu-id="27142-182">Как: Создание пользовательской привязки, с использованием элемента SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="27142-182">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [<span data-ttu-id="27142-183">Безопасность пользовательской привязки</span><span class="sxs-lookup"><span data-stu-id="27142-183">Custom Binding Security</span></span>](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

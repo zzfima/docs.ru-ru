@@ -1,23 +1,26 @@
 ---
-title: "Количество прерванных операций с поддержкой транзакций | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Количество прерванных операций с поддержкой транзакций"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d0ff844c-a33c-4ecf-8be5-b5b33635914a
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a15b779517693363224851e3b81a1917c11c7e7c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Количество прерванных операций с поддержкой транзакций
-Имя счетчика: Количество прерванных операций с поддержкой транзакций.  
+# <a name="transacted-operations-aborted"></a><span data-ttu-id="5a56a-102">Количество прерванных операций с поддержкой транзакций</span><span class="sxs-lookup"><span data-stu-id="5a56a-102">Transacted Operations Aborted</span></span>
+<span data-ttu-id="5a56a-103">Имя счетчика: Количество прерванных операций с поддержкой транзакций.</span><span class="sxs-lookup"><span data-stu-id="5a56a-103">Counter Name: Transacted Operations Aborted.</span></span>  
   
-## Описание  
- Количество транзакционных операций, прерванных в этой службе.
+## <a name="description"></a><span data-ttu-id="5a56a-104">Описание</span><span class="sxs-lookup"><span data-stu-id="5a56a-104">Description</span></span>  
+ <span data-ttu-id="5a56a-105">Количество транзакционных операций, прерванных в этой службе.</span><span class="sxs-lookup"><span data-stu-id="5a56a-105">Number of transactional operations that have been aborted in this service.</span></span>

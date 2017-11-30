@@ -1,71 +1,69 @@
 ---
-title: "Security and User Input | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "security [.NET Framework], user input"
-  - "user input, security"
-  - "secure coding, user input"
-  - "code security, user input"
+title: "Безопасность и ввод данных пользователем"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [.NET Framework], user input
+- user input, security
+- secure coding, user input
+- code security, user input
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
-caps.latest.revision: 7
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "7"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 804b91cdda1316bc0a3081c8353493faf8869b4f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Security and User Input
-Пользовательские данные, представляющие собой любой вид входных данных \(данные из веб\-запроса или URL, ввод в элементы управления приложения Microsoft Windows Forms и т. д.\), могут влиять на код неблагоприятным образом, так как часто они используются непосредственно как параметры для вызова другого кода.  Эта ситуация аналогична той, когда вредоносный код вызывает ваш код с неожиданными значениями параметров, и в этом случае требуются аналогичные меры предосторожности.  Ввод данных пользователем на самом деле несколько труднее обезопасить, потому что в этом случае отсутствует кадр стека, по которому можно отследить наличие потенциально небезопасных данных.  
+# <a name="security-and-user-input"></a><span data-ttu-id="dfe80-102">Безопасность и ввод данных пользователем</span><span class="sxs-lookup"><span data-stu-id="dfe80-102">Security and User Input</span></span>
+<span data-ttu-id="dfe80-103">Пользовательские данные, представляющие собой любой вид входных данных (данные из веб-запроса или URL-адрес, входные данные в элементы управления приложения Microsoft Windows Forms и так далее), могут отрицательно влиять на код, поскольку такие данные часто используются непосредственно как параметры для вызова другого кода.</span><span class="sxs-lookup"><span data-stu-id="dfe80-103">User data, which is any kind of input (data from a Web request or URL, input to controls of a Microsoft Windows Forms application, and so on), can adversely influence code because often that data is used directly as parameters to call other code.</span></span> <span data-ttu-id="dfe80-104">Такое поведение аналогично поведению вредоносного кода, вызывающего ваш код со странными параметрами, поэтому следует предпринимать такие же меры предосторожности.</span><span class="sxs-lookup"><span data-stu-id="dfe80-104">This situation is analogous to malicious code calling your code with strange parameters, and the same precautions should be taken.</span></span> <span data-ttu-id="dfe80-105">Ввод данных пользователем на самом деле защитить несколько труднее, поскольку нет кадра стека, с помощью которого можно отслеживать наличие потенциально недоверенных данных.</span><span class="sxs-lookup"><span data-stu-id="dfe80-105">User input is actually harder to make safe because there is no stack frame to trace the presence of the potentially untrusted data.</span></span>  
   
- Ошибки системы безопасности, связанные с вводом данных — одни из самых неуловимых и трудно обнаруживаемых, потому что даже если они находятся в коде, не имеющем, как кажется, никакого отношения к безопасности, эти ошибки служат воротами, через которые измененные данные передаются в другой код.  Для обнаружения подобных ошибок следует рассмотреть все виды используемых входных данных, выяснить для них диапазоны возможных значений и проверить, в состоянии ли обрабатывающий их код правильно работать при всех этих значениях.  Можно исправить ошибки рассматриваемого вида с помощью проверки входных данных на принадлежность диапазону допустимых значений и отказа от ввода любых данных, которые код не в состоянии корректно обработать.  
+ <span data-ttu-id="dfe80-106">Это одна из ошибок безопасности, которые наиболее сложно найти, поскольку несмотря на то, что они находятся в коде, на первый взгляд не связанном с безопасностью, такие данные играют роль шлюза для передачи неверных данных в другой код.</span><span class="sxs-lookup"><span data-stu-id="dfe80-106">These are among the subtlest and hardest security bugs to find because, although they can exist in code that is seemingly unrelated to security, they are a gateway to pass bad data through to other code.</span></span> <span data-ttu-id="dfe80-107">В процессе поиска подобных ошибок проанализируйте все входные данные, все возможные диапазоны значений и определите, может ли код в случае обнаружения таких данных корректно их обработать.</span><span class="sxs-lookup"><span data-stu-id="dfe80-107">To look for these bugs, follow any kind of input data, imagine what the range of possible values might be, and consider whether the code seeing this data can handle all those cases.</span></span> <span data-ttu-id="dfe80-108">Такие ошибки можно устранить посредством проверки диапазонов и отбрасывания любых входных данных, которые не могут быть обработаны кодом.</span><span class="sxs-lookup"><span data-stu-id="dfe80-108">You can fix these bugs through range checking and rejecting any input the code cannot handle.</span></span>  
   
- При использовании ввода пользовательских данных следует учитывать следующие важные аспекты.  
+ <span data-ttu-id="dfe80-109">Ниже приведены некоторые важные аспекты, связанные с данными пользователя.</span><span class="sxs-lookup"><span data-stu-id="dfe80-109">Some important considerations involving user data include the following:</span></span>  
   
--   Любые данные пользователя в ответе сервера обрабатываются клиентом в контексте узла сервера.  Если веб\-сервер принимает пользовательские данные и добавляет их на возвращаемую веб\-страницу, он может, например, содержать тэг **\<script\>**, который будет выполняться как отправленный с сервера.  
+-   <span data-ttu-id="dfe80-110">Все данные пользователя в ответе сервера выполняются в контексте узла сервера на клиенте.</span><span class="sxs-lookup"><span data-stu-id="dfe80-110">Any user data in a server response runs in the context of the server's site on the client.</span></span> <span data-ttu-id="dfe80-111">Если веб-сервер принимает пользовательские данные и вставляет их в возвращаемую веб-страницу, можно, например, включить тег **\<script>** и запустить выполнение как с сервера.</span><span class="sxs-lookup"><span data-stu-id="dfe80-111">If your Web server takes user data and inserts it into the returned Web page, it might, for example, include a **\<script>** tag and run as if from the server.</span></span>  
   
--   Следует помнить, что клиент может потребовать любой URL\-адрес.  
+-   <span data-ttu-id="dfe80-112">Помните, что клиент может запросить любой URL-адрес.</span><span class="sxs-lookup"><span data-stu-id="dfe80-112">Remember that the client can request any URL.</span></span>  
   
--   Проверьте неожиданные и некорректные пути:  
+-   <span data-ttu-id="dfe80-113">Рассмотрим сложные и некорректные пути:</span><span class="sxs-lookup"><span data-stu-id="dfe80-113">Consider tricky or invalid paths:</span></span>  
   
-    -   ..\\ , слишком длинные пути  
+    -   <span data-ttu-id="dfe80-114">..\ , пути очень большой длины;</span><span class="sxs-lookup"><span data-stu-id="dfe80-114">..\ , extremely long paths.</span></span>  
   
-    -   использование подстановочных знаков \(\*\);  
+    -   <span data-ttu-id="dfe80-115">Использование подстановочных знаков (*).</span><span class="sxs-lookup"><span data-stu-id="dfe80-115">Use of wild card characters (*).</span></span>  
   
-    -   расширение лексемы \(%лексема%\);  
+    -   <span data-ttu-id="dfe80-116">Расширение токена (%token%).</span><span class="sxs-lookup"><span data-stu-id="dfe80-116">Token expansion (%token%).</span></span>  
   
-    -   необычные пути, имеющие специальное назначение;  
+    -   <span data-ttu-id="dfe80-117">Необычные пути, имеющие специальное значение.</span><span class="sxs-lookup"><span data-stu-id="dfe80-117">Strange forms of paths with special meaning.</span></span>  
   
-    -   альтернативные имена потоков файловой системы, например `filename::$DATA`;  
+    -   <span data-ttu-id="dfe80-118">Альтернативные имена потоков файловой системы, например `filename::$DATA`.</span><span class="sxs-lookup"><span data-stu-id="dfe80-118">Alternate file system stream names such as `filename::$DATA`.</span></span>  
   
-    -   короткие варианты имен файлов, например `longfi~1` для `longfilename`.  
+    -   <span data-ttu-id="dfe80-119">Короткие имена файлов, такие как `longfi~1` для `longfilename`.</span><span class="sxs-lookup"><span data-stu-id="dfe80-119">Short versions of file names such as `longfi~1` for `longfilename`.</span></span>  
   
--   Следует помнить, что Eval \(пользовательские\_данные\) может осуществить любые действия.  
+-   <span data-ttu-id="dfe80-120">Помните, что Eval(userdata) может выполнять любые операции.</span><span class="sxs-lookup"><span data-stu-id="dfe80-120">Remember that Eval(userdata) can do anything.</span></span>  
   
--   Позднее связывание с именем, которое содержит некоторые пользовательские данные, может представлять опасность.  
+-   <span data-ttu-id="dfe80-121">Будьте осторожны при позднем связывании с именем, которое содержит какие-либо пользовательские данные.</span><span class="sxs-lookup"><span data-stu-id="dfe80-121">Be wary of late binding to a name that includes some user data.</span></span>  
   
--   При работе с веб\-данными проверьте различные допустимые формы escape\-последовательностей, такие как:  
+-   <span data-ttu-id="dfe80-122">Если вы имеете дело с веб-данными, проверьте на допустимость различные формы escape-последовательностей, включая:</span><span class="sxs-lookup"><span data-stu-id="dfe80-122">If you are dealing with Web data, consider the various forms of escapes that are permissible, including:</span></span>  
   
-    -   шестнадцатеричные escape\-последовательности \(%nn\);  
+    -   <span data-ttu-id="dfe80-123">Шестнадцатеричные escape-последовательности (%nn).</span><span class="sxs-lookup"><span data-stu-id="dfe80-123">Hexadecimal escapes (%nn).</span></span>  
   
-    -   escape\-последовательности в кодировке Юникод \(%nnn\);  
+    -   <span data-ttu-id="dfe80-124">escape-последовательности Юникода (%nnn).</span><span class="sxs-lookup"><span data-stu-id="dfe80-124">Unicode escapes (%nnn).</span></span>  
   
-    -   длинные escape\-последовательности UTF\-8 \(%nn%nn\);  
+    -   <span data-ttu-id="dfe80-125">Специальные символы увеличенной длины в UTF-8 (%nn%nn).</span><span class="sxs-lookup"><span data-stu-id="dfe80-125">Overlong UTF-8 escapes (%nn%nn).</span></span>  
   
-    -   двойные escape\-последовательности \(%nn становится %mmnn, где %mm является escape\-последовательностью для '%'\).  
+    -   <span data-ttu-id="dfe80-126">Двойные escape-последовательности (%nn становится %mmnn, где %mm — escape-последовательность для "%").</span><span class="sxs-lookup"><span data-stu-id="dfe80-126">Double escapes (%nn becomes %mmnn, where %mm is the escape for '%').</span></span>  
   
--   Будьте осторожны с именами пользователей, которые могут иметь более одного канонического формата.  Например, в Microsoft Windows 2000 часто можно использовать как вариант MYDOMAIN\\\\*имя\_пользователя*, так и вариант *имя\_пользователя*@mydomain.example.com.  
+-   <span data-ttu-id="dfe80-127">Будьте осторожны с именами пользователей, которые могут иметь несколько канонических форматов.</span><span class="sxs-lookup"><span data-stu-id="dfe80-127">Be wary of user names that might have more than one canonical format.</span></span> <span data-ttu-id="dfe80-128">Например, часто можно использовать либо формат ДОМЕН\\*имя_пользователя*, либо формат *имя_пользователя* @mydomain.example.com.</span><span class="sxs-lookup"><span data-stu-id="dfe80-128">For example, you can often use either the MYDOMAIN\\*username* form or the *username*@mydomain.example.com form.</span></span>  
   
-## См. также  
- [Secure Coding Guidelines](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="dfe80-129">См. также</span><span class="sxs-lookup"><span data-stu-id="dfe80-129">See Also</span></span>  
+ [<span data-ttu-id="dfe80-130">Правила написания безопасного кода</span><span class="sxs-lookup"><span data-stu-id="dfe80-130">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)

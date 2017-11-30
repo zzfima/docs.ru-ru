@@ -1,88 +1,92 @@
 ---
-title: "Решение SQLStoreExtensibility | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Решение SQLStoreExtensibility"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 111e7aa4164d9fc811ebe3f5efb196df77d1ded0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Решение SQLStoreExtensibility
-Этот образец демонстрирует использование и конфигурацию распространяемых свойств в хранилище экземпляров рабочих процессов SQL.Хранилище экземпляров рабочих процессов SQL — это реализация хранилища экземпляров на основе SQL Server.Это дает экземпляру возможность сохранять свое состояние и загружать свое состояние из базы данных SQL Server или SQL Server Express либо заносить состояние в эту базу данных.Возможность расширения хранилища позволяет пользователю определять свойства, хранимые в хранилище экземпляров.Эти свойства отображаются в представлении распространяемых свойств, которые позволяют пользователю запрашивать их.  
+# <a name="sqlstoreextensibility"></a><span data-ttu-id="7c6d3-102">Решение SQLStoreExtensibility</span><span class="sxs-lookup"><span data-stu-id="7c6d3-102">SQLStoreExtensibility</span></span>
+<span data-ttu-id="7c6d3-103">Этот образец демонстрирует использование и конфигурацию распространяемых свойств в хранилище экземпляров рабочих процессов SQL.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-103">This sample demonstrates the use and configuration of promoted properties in the SQL workflow instance store.</span></span> <span data-ttu-id="7c6d3-104">Хранилище экземпляров рабочих процессов SQL - это реализация хранилища экземпляров на основе SQL Server.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-104">The SQL workflow instance store is a SQL-based implementation of an instance store.</span></span> <span data-ttu-id="7c6d3-105">Это дает экземпляру возможность сохранять свое состояние и загружать свое состояние из базы данных SQL Server или SQL Server Express либо заносить состояние в эту базу данных.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-105">It allows an instance to save its state and load its state to and from a SQL Server or SQL Server Express database.</span></span> <span data-ttu-id="7c6d3-106">Возможность расширения хранилища позволяет пользователю определять свойства, хранимые в хранилище экземпляров.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-106">The store extensibility feature allows the user to define properties that are stored in the instance store.</span></span> <span data-ttu-id="7c6d3-107">Эти свойства отображаются в представлении распространяемых свойств, которые позволяют пользователю запрашивать их.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-107">These properties are displayed in a promoted properties view that allows the user to query for them.</span></span>  
   
- Этот образец состоит из рабочего процесса, реализующего службу счета.После вызова метода запуска службы служба начинает считать от 0 до 29.Значение счетчика увеличивается каждые 2 секунды.Рабочий процесс сохраняется после каждого отсчета.Текущее значение этого счета хранится в хранилище экземпляров в виде распространяемого свойства.  
+ <span data-ttu-id="7c6d3-108">Этот образец состоит из рабочего процесса, реализующего службу счета.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-108">This sample consists of a workflow that implements a counting service.</span></span> <span data-ttu-id="7c6d3-109">После вызова метода запуска службы служба начинает считать от 0 до 29.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-109">Once the service's start method is invoked, the service counts from 0 to 29.</span></span> <span data-ttu-id="7c6d3-110">Значение счетчика увеличивается каждые 2 секунды.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-110">The counter is incremented once every 2 seconds.</span></span> <span data-ttu-id="7c6d3-111">Рабочий процесс сохраняется после каждого отсчета.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-111">After each count, the workflow persists.</span></span> <span data-ttu-id="7c6d3-112">Текущее значение этого счета хранится в хранилище экземпляров в виде распространяемого свойства.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-112">The current counter value is stored in the instance store as a promoted property.</span></span>  
   
- Рабочий процесс подсчета является резидентным в узле службы рабочих процессов.Метод `Main` программы выполняет следующие действия.  
+ <span data-ttu-id="7c6d3-113">Рабочий процесс подсчета является резидентным в узле службы рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-113">The Counting Workflow is self-hosted by a Workflow Service Host.</span></span> <span data-ttu-id="7c6d3-114">Метод `Main` программы выполняет следующие действия.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-114">The program's `Main` method performs the following actions:</span></span>  
   
--   Создает экземпляр узла службы рабочих процессов, в котором размещается рабочий процесс подсчета, и определяет конечные точки, в которых может быть достигнут рабочий процесс подсчета.  
+-   <span data-ttu-id="7c6d3-115">Создает экземпляр узла службы рабочих процессов, в котором размещается рабочий процесс подсчета, и определяет конечные точки, в которых может быть достигнут рабочий процесс подсчета.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-115">Creates an instance of the Workflow Service Host that hosts the Counting Workflow and defines the endpoints under which the Counting Workflow can be reached.</span></span>  
   
--   Определяет поведение хранилища экземпляров рабочих процессов SQL, которое используется для настройки экземпляра рабочего процесса SQL.Хранилищу указывается рассматривать `CountStatus` как распространяемое свойство.  
+-   <span data-ttu-id="7c6d3-116">Определяет поведение хранилища экземпляров рабочих процессов SQL, которое используется для настройки экземпляра рабочего процесса SQL.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-116">Defines a SQL workflow instance store behavior, which is used to configure the SQL workflow instance store.</span></span> <span data-ttu-id="7c6d3-117">Хранилищу указывается рассматривать `CountStatus` как распространяемое свойство.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-117">The store is instructed to treat `CountStatus` as a promoted property.</span></span>  
   
--   Создает клиент, который вызывает метод запуска рабочего процесса подсчета.  
+-   <span data-ttu-id="7c6d3-118">Создает клиент, который вызывает метод запуска рабочего процесса подсчета.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-118">Creates a client that calls the start method of the counting workflow.</span></span>  
   
- После запуска программы счетчик автоматически начинает увеличиваться.Учтите, что на загрузку экземпляра и настройку хранилища экземпляров рабочих процессов SQL может уйти несколько секунд.  
+ <span data-ttu-id="7c6d3-119">После запуска программы счетчик автоматически начинает увеличиваться.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-119">Once the program is started, the counter automatically starts counting.</span></span> <span data-ttu-id="7c6d3-120">Учтите, что на загрузку экземпляра и настройку хранилища экземпляров рабочих процессов SQL может уйти несколько секунд.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-120">Note that it might take a few seconds to load the instance and configure the SQL workflow instance store.</span></span>  
   
- Для продвижения значения подсчета в качестве пользовательского свойства должны быть выполнены следующие шаги.  
+ <span data-ttu-id="7c6d3-121">Для продвижения значения подсчета в качестве пользовательского свойства должны быть выполнены следующие шаги.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-121">To promote the counter value as a custom property, the following steps must be taken:</span></span>  
   
-1.  Класс `CounterStatus` определяет расширение экземпляра типа <xref:System.Activities.Persistence.PersistenceParticipant>, которое используется действиями для предоставления переменных состояния.`Count` определяется как значение, доступное только для записи.Когда экземпляр рабочего процесса достигает точки сохраняемости, расширение экземпляра сохраняет свойство `Count` в коллекцию данных сохраняемости.  
+1.  <span data-ttu-id="7c6d3-122">Класс `CounterStatus` определяет расширение экземпляра типа <xref:System.Activities.Persistence.PersistenceParticipant>, которое используется действиями для предоставления переменных состояния.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-122">The class `CounterStatus` defines an instance extension of type <xref:System.Activities.Persistence.PersistenceParticipant>, which is used by activities to supply the state variables.</span></span> <span data-ttu-id="7c6d3-123">`Count` определяется как значение, доступное только на запись.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-123">`Count` is defined as a write-only value.</span></span> <span data-ttu-id="7c6d3-124">Когда экземпляр рабочего процесса достигает точки сохраняемости, расширение экземпляра сохраняет свойство `Count` в коллекцию данных сохраняемости.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-124">When a workflow instance comes to a persistence point, the instance extension saves the `Count` property into the persistence data collection.</span></span>  
   
-2.  При создании хранилища экземпляров новое свойство, `CountStatus`, определяется через метод `store.Promote()`.  
+2.  <span data-ttu-id="7c6d3-125">При создании хранилища экземпляров новое свойство, `CountStatus`, определяется через метод `store.Promote()`.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-125">When creating the instance store, a new property, `CountStatus`, is defined through the `store.Promote()` method.</span></span>  
   
-3.  Действие `SaveCounter` рабочего процесса присваивает текущее значение подсчета полю состояния `Count`.  
+3.  <span data-ttu-id="7c6d3-126">Действие `SaveCounter` рабочего процесса присваивает текущее значение подсчета полю состояния `Count`.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-126">The workflow's `SaveCounter` activity assigns the current counter value to the `Count` status field.</span></span>  
   
-### Использование этого образца  
+### <a name="to-use-this-sample"></a><span data-ttu-id="7c6d3-127">Использование этого образца</span><span class="sxs-lookup"><span data-stu-id="7c6d3-127">To use this sample</span></span>  
   
-1.  Создайте базу данных хранилища экземпляров.  
+1.  <span data-ttu-id="7c6d3-128">Создайте базу данных хранилища экземпляров.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-128">Create the instance store database.</span></span>  
   
-    1.  Откройте окно командной строки [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+    1.  <span data-ttu-id="7c6d3-129">Откройте командную строку [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7c6d3-129">Open a [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] command prompt.</span></span>  
   
-    2.  Перейдите в каталог образцов \(\\WF\\Basic\\Persistence\\SqlStoreExtensibility\\CS\) и запустите CreateInstanceStore.cmd в командной строке [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+    2.  <span data-ttu-id="7c6d3-130">Перейдите в каталог образцов (\WF\Basic\Persistence\SqlStoreExtensibility\CS) и запустите CreateInstanceStore.cmd в командной строке [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7c6d3-130">Navigate to the sample directory (\WF\Basic\Persistence\SqlStoreExtensibility\CS) and run CreateInstanceStore.cmd in the [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] command prompt.</span></span>  
   
         > [!WARNING]
-        >  Скрипт CreateInstanceStore.cmd создает базу данных в экземпляре SQL Server 2008 Express по умолчанию.Чтобы установить базу данных в другом экземпляре, измените скрипт.  
+        >  <span data-ttu-id="7c6d3-131">Скрипт CreateInstanceStore.cmd создает базу данных в экземпляре SQL Server 2008 Express по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-131">The CreateInstanceStore.cmd script attempts to create the database on the default instance of SQL Server 2008 Express.</span></span> <span data-ttu-id="7c6d3-132">Чтобы установить базу данных в другом экземпляре, измените скрипт.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-132">If you want to install the database on a different instance, modify the script to do so.</span></span>  
   
-2.  Откройте [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] и загрузите решение SqlStoreExtensibility.sln, после чего постройте его нажатием комбинации клавиш CTRL\+SHIFT\+B.  
+2.  <span data-ttu-id="7c6d3-133">Откройте [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] и загрузите решение SqlStoreExtensibility.sln, после чего выполните его сборку нажатием сочетания клавиш CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-133">Open [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] and load the SqlStoreExtensibility.sln solution and build it by pressing CTRL+SHIFT+B.</span></span>  
   
     > [!WARNING]
-    >  Если база данных установлена в именованном экземпляре SQL Server, обновите строку соединения в коде перед построением решения.  
+    >  <span data-ttu-id="7c6d3-134">Если база данных установлена в именованном экземпляре SQL Server, обновите строку соединения в коде перед построением решения.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-134">If you installed the database on a non-default instance of SQL Server, update the connection string in the code prior to building the solution.</span></span>  
   
-3.  С правами администратора запустите образец. Для этого перейдите в каталог исполняемых файлов \(\\WF\\Basic\\Persistence\\SqlStoreExtensibility\\bin\\Debug\) проекта в [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], щелкните правой кнопкой мыши файл SqlStoreExtensibility.exe и выберите команду **Запуск от имени администратора**.  
+3.  <span data-ttu-id="7c6d3-135">Запуск образца с правами администратора, перейдите в каталог проекта (\WF\Basic\Persistence\SqlStoreExtensibility\bin\Debug) в [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], щелкнув правой кнопкой мыши SqlStoreExtensibility.exe и выберите команду **запуска от имени Администратор**.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-135">Run the sample with administrator privileges by navigating to the project’s bin directory (\WF\Basic\Persistence\SqlStoreExtensibility\bin\Debug) in [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], right-clicking SqlStoreExtensibility.exe and selecting **Run as Administrator**.</span></span>  
   
-### Проверка правильности работы образца  
+### <a name="to-verify-the-sample-is-working-correctly"></a><span data-ttu-id="7c6d3-136">Проверка правильности работы образца</span><span class="sxs-lookup"><span data-stu-id="7c6d3-136">To verify the sample is working correctly</span></span>  
   
-1.  Используйте среду SQL Server Management Studio, чтобы просмотреть содержимое таблицы экземпляров, выбрав в обозревателе объектов **Базы данных**, **InstanceStore**, затем **System.ServiceModel.Activities.DurableInstancing.InstanceTable**, щелкните правой кнопкой мыши **System.ServiceModel.Activities.DurableInstancing.InstanceTable** и выберите команду **Выделить 1000 верхних строк**.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] среде SQL Server Management Studio см. в разделе [Введение в SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645).  
+1.  <span data-ttu-id="7c6d3-137">Используйте SQL Server Management Studio для просмотра содержимого таблицы экземпляров, выбрав **баз данных**, **InstanceStore**, а затем  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** в обозревателе объектов щелкните правой кнопкой мыши **System.ServiceModel.Activities.DurableInstancing.InstanceTable** и выберите  **Выберите первые 1000 строк**.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-137">Use SQL Server Management Studio to view the contents of the instance table by selecting **Databases**, **InstanceStore**, and then **System.ServiceModel.Activities.DurableInstancing.InstanceTable** in the Object Explorer, right-click **System.ServiceModel.Activities.DurableInstancing.InstanceTable** and select **Select Top 1000 Rows**.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="7c6d3-138">SQL Server Management Studio, в разделе [Знакомство с SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645)</span><span class="sxs-lookup"><span data-stu-id="7c6d3-138"> SQL Server Management Studio, see [Introducing SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645)</span></span>  
   
-2.  Просмотрите перечисленные экземпляры рабочих процессов.  
+2.  <span data-ttu-id="7c6d3-139">Просмотрите перечисленные экземпляры рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-139">Observe the workflow instances listed.</span></span>  
   
-3.  В командной строке [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] запустите скрипт QueryInstanceStore.cmd, находящийся в каталоге образцов \(\\WF\\Basic\\Persistence\\SqlStoreExtensibility\).  
+3.  <span data-ttu-id="7c6d3-140">В командной строке [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] запустите скрипт QueryInstanceStore.cmd, находящийся в каталоге образцов (\WF\Basic\Persistence\SqlStoreExtensibility).</span><span class="sxs-lookup"><span data-stu-id="7c6d3-140">In a [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] command prompt, run the QueryInstanceStore.cmd script located in the sample directory (\WF\Basic\Persistence\SqlStoreExtensibility).</span></span>  
   
-4.  Просмотрите значение подсчета, отображаемое в поле **CountStatus**.  
+4.  <span data-ttu-id="7c6d3-141">Обратите внимание на значение счетчика отображается в разделе **CountStatus**.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-141">Observe the counter value displayed under **CountStatus**.</span></span>  
   
-5.  Чтобы просмотреть изменение значения поля **CountStats**, несколько раз запустите скрипт.  
+5.  <span data-ttu-id="7c6d3-142">Запустите сценарий несколько раз для просмотра **CountStats** изменение значения.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-142">Run the script a few times to see the **CountStats** value change.</span></span>  
   
-6.  Чтобы завершить приложение рабочего процесса, нажмите клавишу ВВОД.  
+6.  <span data-ttu-id="7c6d3-143">Чтобы завершить приложение рабочего процесса, нажмите клавишу ВВОД.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-143">Press ENTER to terminate the workflow application.</span></span>  
   
-### Удаление образца  
+### <a name="to-uninstall-the-sample"></a><span data-ttu-id="7c6d3-144">Удаление образца</span><span class="sxs-lookup"><span data-stu-id="7c6d3-144">To uninstall the sample</span></span>  
   
-1.  Удалите базу данных хранилища образцов, запустив скрипт RemoveInstanceStore.cmd, находящийся в каталоге образцов \(\\WF\\Basic\\Persistence\\SqlStoreExtensibility\).  
+1.  <span data-ttu-id="7c6d3-145">Удалите базу данных хранилища образцов, запустив скрипт RemoveInstanceStore.cmd, находящийся в каталоге образцов (\WF\Basic\Persistence\SqlStoreExtensibility).</span><span class="sxs-lookup"><span data-stu-id="7c6d3-145">Remove the instance store database by running the RemoveInstanceStore.cmd script located in the sample directory (\WF\Basic\Persistence\SqlStoreExtensibility).</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="7c6d3-146">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-146">The samples may already be installed on your machine.</span></span> <span data-ttu-id="7c6d3-147">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="7c6d3-147">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="7c6d3-148">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="7c6d3-148">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="7c6d3-149">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="7c6d3-149">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Basic\Persistence\SQLStoreExtensibility`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\SQLStoreExtensibility`  
   
-## См. также  
- [Сохраняемость рабочего процесса](../../../../docs/framework/windows-workflow-foundation//workflow-persistence.md)   
- [Службы рабочего процесса](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [Образцы размещения и сохраняемости AppFabric](http://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a><span data-ttu-id="7c6d3-150">См. также</span><span class="sxs-lookup"><span data-stu-id="7c6d3-150">See Also</span></span>  
+ [<span data-ttu-id="7c6d3-151">Сохраняемость рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="7c6d3-151">Workflow Persistence</span></span>](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)  
+ [<span data-ttu-id="7c6d3-152">Службы рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="7c6d3-152">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [<span data-ttu-id="7c6d3-153">Образцы размещения и сохраняемости образцы</span><span class="sxs-lookup"><span data-stu-id="7c6d3-153">AppFabric Hosting and Persistence Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193961)

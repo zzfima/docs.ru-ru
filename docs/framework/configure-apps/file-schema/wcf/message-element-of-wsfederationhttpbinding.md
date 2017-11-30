@@ -1,28 +1,37 @@
 ---
-title: "Элемент &lt;message&gt; &lt;wsFederationHttpBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Элемент &lt;message&gt; &lt;wsFederationHttpBinding&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-caps.latest.revision: 28
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7b17a6325b84382d9d22b4da3ccf7e1598dc42df
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;message&gt; &lt;wsFederationHttpBinding&gt;
-Определяет параметры безопасности уровня сообщений для элемента [\<wsFederationHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+# <a name="ltmessagegt-element-of-ltwsfederationhttpbindinggt"></a><span data-ttu-id="a7af2-102">Элемент &lt;message&gt; &lt;wsFederationHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="a7af2-102">&lt;message&gt; element of &lt;wsFederationHttpBinding&gt;</span></span>
+<span data-ttu-id="a7af2-103">Определяет параметры безопасности уровня сообщений для [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="a7af2-103">Defines the settings for the message-level security for the [\<wsFederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="a7af2-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="a7af2-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="a7af2-105">\<привязки ></span><span class="sxs-lookup"><span data-stu-id="a7af2-105">\<bindings></span></span>  
+<span data-ttu-id="a7af2-106">\<wsFederatedBinding ></span><span class="sxs-lookup"><span data-stu-id="a7af2-106">\<wsFederatedBinding></span></span>  
+<span data-ttu-id="a7af2-107">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="a7af2-107">\<binding></span></span>  
+<span data-ttu-id="a7af2-108">\<Безопасность ></span><span class="sxs-lookup"><span data-stu-id="a7af2-108">\<security></span></span>  
+<span data-ttu-id="a7af2-109">\<сообщение ></span><span class="sxs-lookup"><span data-stu-id="a7af2-109">\<message></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="a7af2-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a7af2-110">Syntax</span></span>  
   
+```xml  
 <wsFederationBinding>  
      <binding >  
          <security>  
@@ -81,61 +90,60 @@ caps.handback.revision: 28
 </wsFederationBinding>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a7af2-111">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="a7af2-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="a7af2-112">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="a7af2-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="a7af2-113">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="a7af2-113">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|algorithmSuite|Задает алгоритмы шифрования сообщений и ключей.  Допустимые значения этого атрибута см. в таблице "Атрибут algorithmSuite".  Значение по умолчанию — `Basic256`.<br /><br /> Это атрибут типа <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.  Эти алгоритмы соответствуют алгоритмам, заданным в спецификации языка политики безопасности \(WS\-SecurityPolicy\).|  
-|issuedKeyType|Задает тип выдаваемого ключа.  Допустимы следующие значения:<br /><br /> -   SymmetricKey<br />-   PublicKey<br /><br /> Значение по умолчанию — `SymmetricKey`.  Это атрибут типа <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
-|issuedTokenType|Строка, содержащая универсальный код ресурса \(URI\), который задает тип выдаваемых маркеров.  Значение по умолчанию — `null`.|  
-|negotiateServiceCredential|Логическое значение, которое определяет, должен ли проводиться обмен учетными данными службы в рамках процесса согласования, или допустимо использование внештатного канала.  Значением по умолчанию является `true`, означающее, что учетные данные службы согласуются.|  
+|<span data-ttu-id="a7af2-114">Атрибут</span><span class="sxs-lookup"><span data-stu-id="a7af2-114">Attribute</span></span>|<span data-ttu-id="a7af2-115">Описание</span><span class="sxs-lookup"><span data-stu-id="a7af2-115">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="a7af2-116">algorithmSuite</span><span class="sxs-lookup"><span data-stu-id="a7af2-116">algorithmSuite</span></span>|<span data-ttu-id="a7af2-117">Задает алгоритмы шифрования сообщений и ключей.</span><span class="sxs-lookup"><span data-stu-id="a7af2-117">Sets the message encryption and key-wrap algorithms.</span></span> <span data-ttu-id="a7af2-118">Допустимые значения этого атрибута см. в таблице «Атрибут algorithmSuite».</span><span class="sxs-lookup"><span data-stu-id="a7af2-118">See the "algorithmSuite attribute" table for valid values of this attribute.</span></span> <span data-ttu-id="a7af2-119">Значение по умолчанию — `Basic256`.</span><span class="sxs-lookup"><span data-stu-id="a7af2-119">The default value is `Basic256`.</span></span><br /><br /> <span data-ttu-id="a7af2-120">Это атрибут типа <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.</span><span class="sxs-lookup"><span data-stu-id="a7af2-120">This attribute is of type <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.</span></span> <span data-ttu-id="a7af2-121">Эти алгоритмы соответствуют алгоритмам, заданным в спецификации языка политики безопасности (WS-SecurityPolicy).</span><span class="sxs-lookup"><span data-stu-id="a7af2-121">These algorithms map to those specified in the Security Policy Language (WS-SecurityPolicy) specification.</span></span>|  
+|<span data-ttu-id="a7af2-122">issuedKeyType</span><span class="sxs-lookup"><span data-stu-id="a7af2-122">issuedKeyType</span></span>|<span data-ttu-id="a7af2-123">Задает тип выдаваемого ключа.</span><span class="sxs-lookup"><span data-stu-id="a7af2-123">Specifies the type of key to be issued.</span></span> <span data-ttu-id="a7af2-124">Допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="a7af2-124">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="a7af2-125">-SymmetricKey</span><span class="sxs-lookup"><span data-stu-id="a7af2-125">-   SymmetricKey</span></span><br /><span data-ttu-id="a7af2-126">-PublicKey</span><span class="sxs-lookup"><span data-stu-id="a7af2-126">-   PublicKey</span></span><br /><br /> <span data-ttu-id="a7af2-127">Значение по умолчанию — `SymmetricKey`.</span><span class="sxs-lookup"><span data-stu-id="a7af2-127">The default is `SymmetricKey`.</span></span> <span data-ttu-id="a7af2-128">Это атрибут типа <xref:System.IdentityModel.Tokens.SecurityKeyType>.</span><span class="sxs-lookup"><span data-stu-id="a7af2-128">This attribute is of type <xref:System.IdentityModel.Tokens.SecurityKeyType>.</span></span>|  
+|<span data-ttu-id="a7af2-129">issuedTokenType</span><span class="sxs-lookup"><span data-stu-id="a7af2-129">issuedTokenType</span></span>|<span data-ttu-id="a7af2-130">Строка, содержащая универсальный код ресурса (URI), который задает тип выдаваемых маркеров.</span><span class="sxs-lookup"><span data-stu-id="a7af2-130">A string that contains a URI that specifies the type of token to be issued.</span></span> <span data-ttu-id="a7af2-131">Значение по умолчанию — `null`.</span><span class="sxs-lookup"><span data-stu-id="a7af2-131">The default is `null`.</span></span>|  
+|<span data-ttu-id="a7af2-132">negotiateServiceCredential</span><span class="sxs-lookup"><span data-stu-id="a7af2-132">negotiateServiceCredential</span></span>|<span data-ttu-id="a7af2-133">Логическое значение, которое определяет, должен ли проводиться обмен учетными данными службы в рамках процесса согласования, или допустимо использование внештатного канала.</span><span class="sxs-lookup"><span data-stu-id="a7af2-133">A Boolean value that specifies whether the service credential should be exchanged as part of negotiation or is available out of band.</span></span> <span data-ttu-id="a7af2-134">Значением по умолчанию является `true`, означающее, что учетные данные службы согласуются.</span><span class="sxs-lookup"><span data-stu-id="a7af2-134">The default is `true`, which means that the service credential is negotiated.</span></span>|  
   
-## Атрибут algorithmSuite  
+## <a name="algorithmsuite-attribute"></a><span data-ttu-id="a7af2-135">Атрибут algorithmSuite</span><span class="sxs-lookup"><span data-stu-id="a7af2-135">algorithmSuite Attribute</span></span>  
   
-|Значение|Описание|  
-|--------------|--------------|  
-|Basic128|Используется шифрование Basic128, Sha1 для хэша и Rsa\-oaep\-mgf1p для шифрования ключа.|  
-|Basic192|Используется шифрование Basic192, Sha1 для хэша и Rsa\-oaep\-mgf1p для шифрования ключа.|  
-|Basic256|Используется шифрование Basic256, Sha1 для хэша и Rsa\-oaep\-mgf1p для шифрования ключа.|  
-|Basic256Rsa15|Используется Basic256 для шифрования сообщения, Sha1 для хэша и Rsa15 для шифрования ключа.|  
-|Basic192Rsa15|Используется Basic192 для шифрования сообщения, Sha1 для хэша и Rsa15 для шифрования ключа.|  
-|TripleDes|Используется шифрование TripleDes, Sha1 для хэша и Rsa\-oaep\-mgf1p для шифрования ключа.|  
-|Basic128Rsa15|Используется Basic128 для шифрования сообщения, Sha1 для хэша и Rsa15 для шифрования ключа.|  
-|TripleDesRsa15|Используется TripleDes для шифрования сообщения, Sha1 для хэша и Rsa15 для шифрования ключа.|  
-|Basic128Sha256|Используется Basic128 для шифрования сообщения, Sha256 для хэша и Rsa\-oaep\-mgf1p для шифрования ключа.|  
-|Basic192Sha256|Используется Basic192 для шифрования сообщения, Sha256 для хэша и Rsa\-oaep\-mgf1p для шифрования ключа.|  
-|Basic256Sha256|Используется Basic256 для шифрования сообщения, Sha256 для хэша и Rsa\-oaep\-mgf1p для шифрования ключа.|  
-|TripleDesSha256|Используется TripleDes для шифрования сообщения, Sha256 для хэша и Rsa\-oaep\-mgf1p для шифрования ключа.|  
-|Basic128Sha256Rsa15|Используется Basic128 для шифрования сообщения, Sha256 для хэша и Rsa15 для шифрования ключа.|  
-|Basic192Sha256Rsa15|Используется Aes192 для шифрования сообщения, Sha256 для хэша и Rsa15 для шифрования ключа.|  
-|Basic256Sha256Rsa15|Используется Basic256 для шифрования сообщения, Sha256 для хэша и Rsa15 для шифрования ключа.|  
-|TripleDesSha256Rsa15|Используется TripleDes для шифрования сообщения, Sha256 для хэша и Rsa15 для шифрования ключа.|  
+|<span data-ttu-id="a7af2-136">Значение</span><span class="sxs-lookup"><span data-stu-id="a7af2-136">Value</span></span>|<span data-ttu-id="a7af2-137">Описание</span><span class="sxs-lookup"><span data-stu-id="a7af2-137">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="a7af2-138">Basic128</span><span class="sxs-lookup"><span data-stu-id="a7af2-138">Basic128</span></span>|<span data-ttu-id="a7af2-139">Используется шифрование Basic128, Sha1 для хэша и Rsa-oaep-mgf1p для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="a7af2-139">Use Basic128 encryption, Sha1 for message digest, and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="a7af2-140">Basic192</span><span class="sxs-lookup"><span data-stu-id="a7af2-140">Basic192</span></span>|<span data-ttu-id="a7af2-141">Используется шифрование Basic192, Sha1 для хэша и Rsa-oaep-mgf1p для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="a7af2-141">Use Basic192 encryption, Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="a7af2-142">Basic256</span><span class="sxs-lookup"><span data-stu-id="a7af2-142">Basic256</span></span>|<span data-ttu-id="a7af2-143">Используется шифрование Basic256, Sha1 для хэша и Rsa-oaep-mgf1p для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="a7af2-143">Use Basic256 encryption, Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="a7af2-144">Basic256Rsa15</span><span class="sxs-lookup"><span data-stu-id="a7af2-144">Basic256Rsa15</span></span>|<span data-ttu-id="a7af2-145">Используется Basic256 для шифрования сообщения, Sha1 для хэша и Rsa15 для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="a7af2-145">Use Basic256 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="a7af2-146">Basic192Rsa15</span><span class="sxs-lookup"><span data-stu-id="a7af2-146">Basic192Rsa15</span></span>|<span data-ttu-id="a7af2-147">Используется Basic192 для шифрования сообщения, Sha1 для хэша и Rsa15 для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="a7af2-147">Use Basic192 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="a7af2-148">TripleDes</span><span class="sxs-lookup"><span data-stu-id="a7af2-148">TripleDes</span></span>|<span data-ttu-id="a7af2-149">Используется шифрование TripleDes, Sha1 для хэша и Rsa-oaep-mgf1p для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="a7af2-149">Use TripleDes encryption, Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="a7af2-150">Basic128Rsa15</span><span class="sxs-lookup"><span data-stu-id="a7af2-150">Basic128Rsa15</span></span>|<span data-ttu-id="a7af2-151">Используется Basic128 для шифрования сообщения, Sha1 для хэша и Rsa15 для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="a7af2-151">Use Basic128 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="a7af2-152">TripleDesRsa15</span><span class="sxs-lookup"><span data-stu-id="a7af2-152">TripleDesRsa15</span></span>|<span data-ttu-id="a7af2-153">Используется TripleDes для шифрования сообщения, Sha1 для хэша и Rsa15 для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="a7af2-153">Use TripleDes encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="a7af2-154">Basic128Sha256</span><span class="sxs-lookup"><span data-stu-id="a7af2-154">Basic128Sha256</span></span>|<span data-ttu-id="a7af2-155">Используется Basic128 для шифрования сообщения, Sha256 для хэша и Rsa-oaep-mgf1p для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="a7af2-155">Use Basic128 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="a7af2-156">Basic192Sha256</span><span class="sxs-lookup"><span data-stu-id="a7af2-156">Basic192Sha256</span></span>|<span data-ttu-id="a7af2-157">Используется Basic192 для шифрования сообщения, Sha256 для хэша и Rsa-oaep-mgf1p для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="a7af2-157">Use Basic192 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="a7af2-158">Basic256Sha256</span><span class="sxs-lookup"><span data-stu-id="a7af2-158">Basic256Sha256</span></span>|<span data-ttu-id="a7af2-159">Используется Basic256 для шифрования сообщения, Sha256 для хэша и Rsa-oaep-mgf1p для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="a7af2-159">Use Basic256 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="a7af2-160">TripleDesSha256</span><span class="sxs-lookup"><span data-stu-id="a7af2-160">TripleDesSha256</span></span>|<span data-ttu-id="a7af2-161">Используется TripleDes для шифрования сообщения, Sha256 для хэша и Rsa-oaep-mgf1p для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="a7af2-161">Use TripleDes for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="a7af2-162">Basic128Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="a7af2-162">Basic128Sha256Rsa15</span></span>|<span data-ttu-id="a7af2-163">Используется Basic128 для шифрования сообщения, Sha256 для хэша и Rsa15 для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="a7af2-163">Use Basic128 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="a7af2-164">Basic192Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="a7af2-164">Basic192Sha256Rsa15</span></span>|<span data-ttu-id="a7af2-165">Используется Aes192 для шифрования сообщения, Sha256 для хэша и Rsa15 для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="a7af2-165">Use Aes192 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="a7af2-166">Basic256Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="a7af2-166">Basic256Sha256Rsa15</span></span>|<span data-ttu-id="a7af2-167">Используется Basic256 для шифрования сообщения, Sha256 для хэша и Rsa15 для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="a7af2-167">Use Basic256 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="a7af2-168">TripleDesSha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="a7af2-168">TripleDesSha256Rsa15</span></span>|<span data-ttu-id="a7af2-169">Используется TripleDes для шифрования сообщения, Sha256 для хэш-кода и Rsa15 для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="a7af2-169">Use TripleDes for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="a7af2-170">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="a7af2-170">Child Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<claimTypeRequirements\>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Задает коллекцию типов утверждений для этой привязки.  Каждый элемент имеет тип <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
-|issuer|Задает конечную точку, которая выдает маркер безопасности.  Это элемент типа <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
-|issuerMetadata|Задает адрес конечной точки издателя.|  
-|[\<tokenRequestParameters\>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Коллекция параметров запроса маркера.  Каждый параметр представляет собой элемент XML.|  
+|<span data-ttu-id="a7af2-171">Элемент</span><span class="sxs-lookup"><span data-stu-id="a7af2-171">Element</span></span>|<span data-ttu-id="a7af2-172">Описание</span><span class="sxs-lookup"><span data-stu-id="a7af2-172">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="a7af2-173">\<claimTypeRequirements ></span><span class="sxs-lookup"><span data-stu-id="a7af2-173">\<claimTypeRequirements></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|<span data-ttu-id="a7af2-174">Задает коллекцию типов утверждений для этой привязки.</span><span class="sxs-lookup"><span data-stu-id="a7af2-174">Specifies a collection of claim types for this binding.</span></span> <span data-ttu-id="a7af2-175">Каждый элемент имеет тип <xref:System.ServiceModel.Configuration.ClaimTypeElement>.</span><span class="sxs-lookup"><span data-stu-id="a7af2-175">Each element is of type <xref:System.ServiceModel.Configuration.ClaimTypeElement>.</span></span>|  
+|<span data-ttu-id="a7af2-176">issuer</span><span class="sxs-lookup"><span data-stu-id="a7af2-176">issuer</span></span>|<span data-ttu-id="a7af2-177">Задает конечную точку, которая выдает маркер безопасности.</span><span class="sxs-lookup"><span data-stu-id="a7af2-177">Specifies an endpoint that issues a security token.</span></span> <span data-ttu-id="a7af2-178">Это элемент типа <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.</span><span class="sxs-lookup"><span data-stu-id="a7af2-178">This element is of type <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.</span></span>|  
+|<span data-ttu-id="a7af2-179">issuerMetadata</span><span class="sxs-lookup"><span data-stu-id="a7af2-179">issuerMetadata</span></span>|<span data-ttu-id="a7af2-180">Задает адрес конечной точки издателя.</span><span class="sxs-lookup"><span data-stu-id="a7af2-180">Specifies the endpoint address of the issuer.</span></span>|  
+|[<span data-ttu-id="a7af2-181">\<tokenRequestParameters ></span><span class="sxs-lookup"><span data-stu-id="a7af2-181">\<tokenRequestParameters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|<span data-ttu-id="a7af2-182">Коллекция параметров запроса маркера.</span><span class="sxs-lookup"><span data-stu-id="a7af2-182">A collection of token request parameters.</span></span> <span data-ttu-id="a7af2-183">Каждый параметр представляет собой элемент XML.</span><span class="sxs-lookup"><span data-stu-id="a7af2-183">Each parameter is an XML element.</span></span>|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="a7af2-184">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="a7af2-184">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<безопасность\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|Определяет параметры безопасности для привязки.|  
+|<span data-ttu-id="a7af2-185">Элемент</span><span class="sxs-lookup"><span data-stu-id="a7af2-185">Element</span></span>|<span data-ttu-id="a7af2-186">Описание</span><span class="sxs-lookup"><span data-stu-id="a7af2-186">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="a7af2-187">\<Безопасность ></span><span class="sxs-lookup"><span data-stu-id="a7af2-187">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|<span data-ttu-id="a7af2-188">Определяет параметры безопасности для привязки.</span><span class="sxs-lookup"><span data-stu-id="a7af2-188">Defines the security settings for a binding.</span></span>|  
   
-## См. также  
- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>   
- <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>   
- <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>   
- <xref:System.ServiceModel.Configuration.FederatedMessageSecurityElement>   
- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Привязки](../../../../../docs/framework/wcf/bindings.md)   
- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/ru-ru/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<привязка\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="a7af2-189">См. также</span><span class="sxs-lookup"><span data-stu-id="a7af2-189">See Also</span></span>  
+ <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>  
+ <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>  
+ <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>  
+ <span data-ttu-id="a7af2-190">`System.ServiceModel.Configuration.FederatedMessageSecurityElement`[Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)</span><span class="sxs-lookup"><span data-stu-id="a7af2-190">`System.ServiceModel.Configuration.FederatedMessageSecurityElement` [Securing Services and Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)</span></span>  
+ [<span data-ttu-id="a7af2-191">Привязки</span><span class="sxs-lookup"><span data-stu-id="a7af2-191">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="a7af2-192">Настройка привязок, предоставляемых системой</span><span class="sxs-lookup"><span data-stu-id="a7af2-192">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="a7af2-193">Использование привязок для настройки служб Windows Communication Foundation и клиентов</span><span class="sxs-lookup"><span data-stu-id="a7af2-193">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="a7af2-194">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="a7af2-194">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

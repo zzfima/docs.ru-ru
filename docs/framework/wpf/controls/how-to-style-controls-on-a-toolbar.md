@@ -1,29 +1,32 @@
 ---
-title: "Практическое руководство. Определение стиля элементов управления на панели инструментов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "настройка элементов управления в панели инструментов"
-  - "стили элементов управления в панели инструментов"
-  - "панели инструментов"
+title: "Практическое руководство. Определение стиля элементов управления на панели инструментов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- styling controls on toolbar [WPF]
+- toolbars [WPF]
+- customizing controls on toolbar [WPF]
 ms.assetid: ba6ae056-d6a9-4c24-90f8-467ab0bc0b1a
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ce090ace11262e4809dbecadd5fe89d7dfaf62e5
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Определение стиля элементов управления на панели инструментов
-В классе <xref:System.Windows.Controls.ToolBar> определяются объекты <xref:System.Windows.ResourceKey>, задающие стиль элементов управления, представленных на объекте <xref:System.Windows.Controls.ToolBar>.  Чтобы задать стиль элемента управления на объекте <xref:System.Windows.Controls.ToolBar>, установите для атрибута стиля `x:key` значение <xref:System.Windows.ResourceKey>, определенное в классе <xref:System.Windows.Controls.ToolBar>.  
+# <a name="how-to-style-controls-on-a-toolbar"></a><span data-ttu-id="540a7-102">Практическое руководство. Определение стиля элементов управления на панели инструментов</span><span class="sxs-lookup"><span data-stu-id="540a7-102">How to: Style Controls on a ToolBar</span></span>
+<span data-ttu-id="540a7-103"><xref:System.Windows.Controls.ToolBar> Определяет <xref:System.Windows.ResourceKey> объектов для задания стиля элементов управления в пределах <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="540a7-103">The <xref:System.Windows.Controls.ToolBar> defines <xref:System.Windows.ResourceKey> objects to specify the style of controls within the <xref:System.Windows.Controls.ToolBar>.</span></span>  <span data-ttu-id="540a7-104">Для стиля элемента управления в <xref:System.Windows.Controls.ToolBar>, задайте `x:key` атрибута стиля для <xref:System.Windows.ResourceKey> определенные в <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="540a7-104">To style a control in a <xref:System.Windows.Controls.ToolBar>, set the `x:key` attribute of the style to a <xref:System.Windows.ResourceKey> defined in <xref:System.Windows.Controls.ToolBar>.</span></span>  
   
- В классе <xref:System.Windows.Controls.ToolBar> определяются следующие объекты <xref:System.Windows.ResourceKey>:  
+ <span data-ttu-id="540a7-105"><xref:System.Windows.Controls.ToolBar> Определяет следующие <xref:System.Windows.ResourceKey> объектов:</span><span class="sxs-lookup"><span data-stu-id="540a7-105">The <xref:System.Windows.Controls.ToolBar> defines the following <xref:System.Windows.ResourceKey> objects:</span></span>  
   
 -   <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>  
   
@@ -41,11 +44,11 @@ caps.handback.revision: 4
   
 -   <xref:System.Windows.Controls.ToolBar.ToggleButtonStyleKey%2A>  
   
-## Пример  
- В следующем примере определяются стили для элементов управления на <xref:System.Windows.Controls.ToolBar>.  
+## <a name="example"></a><span data-ttu-id="540a7-106">Пример</span><span class="sxs-lookup"><span data-stu-id="540a7-106">Example</span></span>  
+ <span data-ttu-id="540a7-107">В следующем примере определяется стили для элементов управления в пределах <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="540a7-107">The following example defines styles for the controls within a <xref:System.Windows.Controls.ToolBar>.</span></span>  
   
- [!code-xml[ToolBar_snip#ToolBarAllStyles](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBar_snip/CS/pane1.xaml#toolbarallstyles)]  
-[!code-xml[ToolBar_snip#ToolBar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBar_snip/CS/pane1.xaml#toolbar)]  
+ [!code-xaml[ToolBar_snip#ToolBarAllStyles](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBar_snip/CS/pane1.xaml#toolbarallstyles)]  
+[!code-xaml[ToolBar_snip#ToolBar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBar_snip/CS/pane1.xaml#toolbar)]  
   
-## См. также  
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a><span data-ttu-id="540a7-108">См. также</span><span class="sxs-lookup"><span data-stu-id="540a7-108">See Also</span></span>  
+ [<span data-ttu-id="540a7-109">Стилизация и использование шаблонов</span><span class="sxs-lookup"><span data-stu-id="540a7-109">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)

@@ -1,39 +1,42 @@
 ---
-title: "Настройка службы совместного использования портов Net.TCP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Настройка службы совместного использования портов Net.TCP"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-caps.latest.revision: 20
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b8b0d1920e70f0d9b6f837800bcc049999f6fde7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Настройка службы совместного использования портов Net.TCP
-Резидентные службы, использующие транспорт Net.TCP, могут управлять несколькими дополнительными параметрами, такими как `ListenBacklog` и `MaxPendingAccepts`, которые, в свою очередь, управляют поведением базового сокета TCP, используемого для сетевого взаимодействия.  Однако эти параметры для каждого сокета применяются только на уровне привязки, если в привязке транспорта отключено совместное использование портов \(по умолчанию совместное использование включено\).  
+# <a name="configuring-the-nettcp-port-sharing-service"></a><span data-ttu-id="bdc0c-102">Настройка службы совместного использования портов Net.TCP</span><span class="sxs-lookup"><span data-stu-id="bdc0c-102">Configuring the Net.TCP Port Sharing Service</span></span>
+<span data-ttu-id="bdc0c-103">Резидентные службы, использующие транспорт Net.TCP, могут управлять несколькими дополнительными параметрами, такими как `ListenBacklog` и `MaxPendingAccepts`, которые, в свою очередь, управляют поведением базового сокета TCP, используемого для сетевого взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="bdc0c-103">Self-hosted services that use the Net.TCP transport can control several advanced settings, such as `ListenBacklog` and `MaxPendingAccepts`, which govern the behavior of the underlying TCP socket used for network communication.</span></span> <span data-ttu-id="bdc0c-104">Однако эти параметры для каждого сокета применяются только на уровне привязки, если в привязке транспорта отключено совместное использование портов (по умолчанию совместное использование включено).</span><span class="sxs-lookup"><span data-stu-id="bdc0c-104">However, these settings for each socket only apply at the binding level if the transport binding has disabled port sharing, which is enabled by default.</span></span>  
   
- Если привязка net.tcp включает поддержку общего использования портов \(задавая значение `portSharingEnabled =true` для элемента привязки транспорта\), она неявно разрешает внешнему процессу \(а именно SMSvcHost.exe, в котором размещается служба совместного использования портов Net.TCP\) управлять сокетом TCP от своего имени.  Например, при использовании протокола TCP необходимо задать следующее.  
+ <span data-ttu-id="bdc0c-105">Если привязка net.tcp включает поддержку общего использования портов (задавая значение `portSharingEnabled =true` для элемента привязки транспорта), она неявно разрешает внешнему процессу (а именно SMSvcHost.exe, в котором размещается служба совместного использования портов Net.TCP) управлять сокетом TCP от своего имени.</span><span class="sxs-lookup"><span data-stu-id="bdc0c-105">When a net.tcp binding enables port sharing (by setting `portSharingEnabled =true` on the transport binding element), it implicitly allows an external process (namely the SMSvcHost.exe, which hosts the Net.TCP Port Sharing Service) to manage the TCP socket on its behalf.</span></span> <span data-ttu-id="bdc0c-106">Например, при использовании протокола TCP необходимо задать следующее.</span><span class="sxs-lookup"><span data-stu-id="bdc0c-106">For example, when using TCP, specify:</span></span>  
   
-```  
+```xml  
     <tcpTransport   
         portSharingEnabled="true"  
 />  
 ```  
   
- Подобная настройка позволяет игнорировать любые параметры сокета, заданные в элементе привязки транспорта службы, и использовать параметры сокета, задаваемые SMSvcHost.exe.  
+ <span data-ttu-id="bdc0c-107">Подобная настройка позволяет игнорировать любые параметры сокета, заданные в элементе привязки транспорта службы, и использовать параметры сокета, задаваемые SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="bdc0c-107">When configured in this way, any socket settings specified on the service's transport binding element are ignored in favor of the socket settings specified by SMSvcHost.exe.</span></span>  
   
- Для настройки SMSvcHost.exe необходимо создать файл конфигурации XML с именем SmSvcHost.exe.config и разместить его в том же физическом каталоге, что и исполняемый файл SMSvcHost.exe \(например, C:\\Windows\\Microsoft.NET\\Framework\\v4.5\).  
+ <span data-ttu-id="bdc0c-108">Для настройки SMSvcHost.exe необходимо создать файл конфигурации XML с именем SmSvcHost.exe.config и разместить его в том же физическом каталоге, что и исполняемый файл SMSvcHost.exe (например, C:\Windows\Microsoft.NET\Framework\v4.5).</span><span class="sxs-lookup"><span data-stu-id="bdc0c-108">To configure the SMSvcHost.exe, create an XML configuration file named SmSvcHost.exe.config and place it in the same physical directory as the SMSvcHost.exe executable (for example, C:\Windows\Microsoft.NET\Framework\v4.5).</span></span>  
   
- В следующем примере представлен образец файла SMSvcHost.exe.config с заданными явно параметрами по умолчанию для всех настраиваемых значений.  
+ <span data-ttu-id="bdc0c-109">В следующем примере представлен образец файла SMSvcHost.exe.config с заданными явно параметрами по умолчанию для всех настраиваемых значений.</span><span class="sxs-lookup"><span data-stu-id="bdc0c-109">The following example illustrates a sample SMSvcHost.exe.config, with the default settings for all configurable values stated explicitly.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <system.serviceModel.activation>  
        <net.tcp listenBacklog="16" <!—16 * # of processors -->  
@@ -57,18 +60,18 @@ caps.handback.revision: 20
 </configuration>  
 ```  
   
-## Определение необходимости изменения файла SMSvcHost.exe.config  
- В целом, при изменении содержимого файла SMSvcHost.exe.config необходимо соблюдать осторожность, так как любые параметры конфигурации, заданные в этом файле, влияют на работу всех служб на компьютере с поддержкой службы совместного использования портов Net.TCP.  Сюда относятся приложения [!INCLUDE[wv](../../../../includes/wv-md.md)], использующие функции активации TCP службы активации Windows \(WAS\).  
+## <a name="when-to-modify-smsvchostexeconfig"></a><span data-ttu-id="bdc0c-110">Определение необходимости изменения файла SMSvcHost.exe.config</span><span class="sxs-lookup"><span data-stu-id="bdc0c-110">When to Modify SMSvcHost.exe.config</span></span>  
+ <span data-ttu-id="bdc0c-111">В целом, при изменении содержимого файла SMSvcHost.exe.config необходимо соблюдать осторожность, так как любые параметры конфигурации, заданные в этом файле, влияют на работу всех служб на компьютере с поддержкой службы совместного использования портов Net.TCP.</span><span class="sxs-lookup"><span data-stu-id="bdc0c-111">In general, care should be taken when modifying the contents of the SMSvcHost.exe.config file, because any configuration settings specified in this file affect all of the services on a computer that uses the Net.TCP Port Sharing Service.</span></span> <span data-ttu-id="bdc0c-112">Сюда относятся приложения [!INCLUDE[wv](../../../../includes/wv-md.md)], использующие функции активации TCP службы активации Windows (WAS).</span><span class="sxs-lookup"><span data-stu-id="bdc0c-112">This includes applications on [!INCLUDE[wv](../../../../includes/wv-md.md)] that use the TCP Activation features of the Windows Process Activation Service (WAS).</span></span>  
   
- Однако иногда возникает необходимость в изменении конфигурации службы совместного использования портов Net.TCP по умолчанию.  Например, значение по умолчанию для `maxPendingAccepts` равняется количеству процессоров, помноженному на 4.  Требуется увеличить это значение для серверов, на которых размещено много служб, совместно использующих порты, чтобы обеспечить максимальную пропускную способность.  Значение по умолчанию для `maxPendingConnections` равно 100.  Также следует рассмотреть возможность увеличения этого значения, если наблюдаются потери клиентских подключений вследствие множества одновременных вызовов службы со стороны клиентов.  
+ <span data-ttu-id="bdc0c-113">Однако иногда возникает необходимость в изменении конфигурации службы совместного использования портов Net.TCP по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="bdc0c-113">However, sometimes you may need to change the default configuration for the Net.TCP Port Sharing Service.</span></span> <span data-ttu-id="bdc0c-114">Например, значение по умолчанию для `maxPendingAccepts` равняется количеству процессоров, помноженному на 4.</span><span class="sxs-lookup"><span data-stu-id="bdc0c-114">For example, the default value for `maxPendingAccepts` is 4 * number of processors.</span></span> <span data-ttu-id="bdc0c-115">Требуется увеличить это значение для серверов, на которых размещено много служб, совместно использующих порты, чтобы обеспечить максимальную пропускную способность.</span><span class="sxs-lookup"><span data-stu-id="bdc0c-115">Servers that host a large number of services that use port sharing may increase this value to achieve maximum throughput.</span></span> <span data-ttu-id="bdc0c-116">Значение по умолчанию для `maxPendingConnections` равно 100.</span><span class="sxs-lookup"><span data-stu-id="bdc0c-116">The default value for `maxPendingConnections` is 100.</span></span> <span data-ttu-id="bdc0c-117">Также следует рассмотреть возможность увеличения этого значения, если наблюдаются потери клиентских подключений вследствие множества одновременных вызовов службы со стороны клиентов.</span><span class="sxs-lookup"><span data-stu-id="bdc0c-117">You should consider increasing this value also if there are multiple concurrent clients calling the service and the service is dropping client connections.</span></span>  
   
- Файл SMSvcHost.exe.config также содержит информацию об удостоверениях процессов, реализуемых с помощью службы совместного использования портов.  При подключении процесса к службе совместного использования портов для работы с общим портом TCP удостоверение подключающегося процесса проверяется по списку удостоверений, которым разрешено работать со службой совместного использования портов.  Эти удостоверения задаются в качестве идентификаторов безопасности \(SID\) в разделе \<allowAccounts\> файла SMSvcHost.exe.config.  По умолчанию разрешение на работу со службой совместного использования портов предоставляется системным учетным записям \(LocalService, LocalSystem и NetworkService\), а также участникам группы "Администраторы".  Приложения, которые разрешают выполняемому под другим удостоверением \(например, удостоверением пользователя\) процессу подключаться к службе совместного использования портов, должны явно добавить в файл SMSvcHost.exe.config соответствующие SID \(эти изменения не применяются до перезапуска процесса SMSvc.exe\).  
+ <span data-ttu-id="bdc0c-118">Файл SMSvcHost.exe.config также содержит информацию об удостоверениях процессов, реализуемых с помощью службы совместного использования портов.</span><span class="sxs-lookup"><span data-stu-id="bdc0c-118">SMSvcHost.exe.config also contains information about the process identities that may make use of the port sharing service.</span></span> <span data-ttu-id="bdc0c-119">При подключении процесса к службе совместного использования портов для работы с общим портом TCP удостоверение подключающегося процесса проверяется по списку удостоверений, которым разрешено работать со службой совместного использования портов.</span><span class="sxs-lookup"><span data-stu-id="bdc0c-119">When a process connects to the port sharing service to make use of a shared TCP port, the process identity of the connecting process is checked against a list of identities that are permitted to make use of the port sharing service.</span></span> <span data-ttu-id="bdc0c-120">Эти удостоверения задаются в виде идентификаторы безопасности (SID) в \<allowAccounts > файла SMSvcHost.exe.config.</span><span class="sxs-lookup"><span data-stu-id="bdc0c-120">These identities are specified as security identifiers (SIDs) in the \<allowAccounts> section of the SMSvcHost.exe.config file.</span></span> <span data-ttu-id="bdc0c-121">По умолчанию разрешение на работу со службой совместного использования портов предоставляется системным учетным записям (LocalService, LocalSystem и NetworkService), а также участникам группы "Администраторы".</span><span class="sxs-lookup"><span data-stu-id="bdc0c-121">By default, permission to use the port sharing service is granted to system accounts (LocalService, LocalSystem, and NetworkService) as well as members of the Administrators group.</span></span> <span data-ttu-id="bdc0c-122">Приложения, которые разрешают выполняемому под другим удостоверением (например, удостоверением пользователя) процессу подключаться к службе совместного использования портов, должны явно добавить в файл SMSvcHost.exe.config соответствующие SID (эти изменения не применяются до перезапуска процесса SMSvc.exe).</span><span class="sxs-lookup"><span data-stu-id="bdc0c-122">Applications that allow a process running as another identity (for example, a user identity) to connect to the port sharing service must explicitly add the appropriate SID to the SMSvcHost.exe.config (these changes are not applied until the SMSvc.exe process is restarted).</span></span>  
   
 > [!NOTE]
->  В системах [!INCLUDE[wv](../../../../includes/wv-md.md)] с включенным контролем учетных записей \(UAC\) локальным пользователям требуются разрешения более высокого уровня, даже если их учетная запись является участником группы "Администраторы".  Чтобы эти пользователи могли работать со службой совместного использования портов без разрешений более высокого уровня, необходимо явно добавить идентификатор безопасности пользователя \(или идентификатор безопасности группы, участником которой является пользователь\) в раздел \<allowAccounts\> файла SMSvcHost.exe.config.  
+>  <span data-ttu-id="bdc0c-123">В системах [!INCLUDE[wv](../../../../includes/wv-md.md)] с включенным контролем учетных записей (UAC) локальным пользователям требуются разрешения более высокого уровня, даже если их учетная запись является участником группы "Администраторы".</span><span class="sxs-lookup"><span data-stu-id="bdc0c-123">On [!INCLUDE[wv](../../../../includes/wv-md.md)] systems with User Account Control (UAC) enabled, local users require elevated permissions even if their account is a member of the Administrators group.</span></span> <span data-ttu-id="bdc0c-124">Чтобы эти пользователи могли сделать использование службы без повышения прав, идентификатор безопасности пользователя (или идентификатор безопасности группы, членом которой является пользователь) совместного использования портов необходимо явным образом добавить \<allowAccounts > раздел файла SMSvcHost.exe.config.</span><span class="sxs-lookup"><span data-stu-id="bdc0c-124">To allow these users to make use of the port sharing service without elevation, the user's SID (or the SID of a group in which the user is a member) must be explicitly added to the \<allowAccounts> section of SMSvcHost.exe.config.</span></span>  
   
 > [!WARNING]
->  В файле SMSvcHost.exe.config по умолчанию задается пользовательское значение `etwProviderId`, чтобы трассировка SMSvcHost.exe не вмешивалась в работу трассировок служб.  
+>  <span data-ttu-id="bdc0c-125">В файле SMSvcHost.exe.config по умолчанию задается пользовательское значение `etwProviderId`, чтобы трассировка SMSvcHost.exe не вмешивалась в работу трассировок служб.</span><span class="sxs-lookup"><span data-stu-id="bdc0c-125">The default SMSvcHost.exe.config file specifies a custom `etwProviderId` to prevent SMSvcHost.exe tracing from interfering with service traces.</span></span>  
   
-## См. также  
- [\<net.tcp\>](../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)
+## <a name="see-also"></a><span data-ttu-id="bdc0c-126">См. также</span><span class="sxs-lookup"><span data-stu-id="bdc0c-126">See Also</span></span>  
+ [<span data-ttu-id="bdc0c-127">\<NET.TCP ></span><span class="sxs-lookup"><span data-stu-id="bdc0c-127">\<net.tcp></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)

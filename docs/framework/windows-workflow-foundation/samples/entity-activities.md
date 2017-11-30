@@ -1,44 +1,48 @@
 ---
-title: "Действия с сущностями | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Действия с сущностями"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c04f7413-7fb8-40c6-819e-dc92b145b62e
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cc1ddb69e69e603c4460ef6db1a60f4e2e650749
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Действия с сущностями
-В этом образце показывается, как можно использовать платформу ADO.NET Entity Framework совместно с [!INCLUDE[wf2](../../../../includes/wf2-md.md)] для упрощения доступа к данным.  
+# <a name="entity-activities"></a><span data-ttu-id="9f47a-102">Действия с сущностями</span><span class="sxs-lookup"><span data-stu-id="9f47a-102">Entity Activities</span></span>
+<span data-ttu-id="9f47a-103">В этом образце показывается, как можно использовать платформу ADO.NET Entity Framework совместно с [!INCLUDE[wf2](../../../../includes/wf2-md.md)] для упрощения доступа к данным.</span><span class="sxs-lookup"><span data-stu-id="9f47a-103">This sample shows how to use the ADO.NET Entity Framework with [!INCLUDE[wf2](../../../../includes/wf2-md.md)] to simplify data access.</span></span>  
   
- С помощью платформы ADO.NET Entity Framework разработчики могут работать с данными в форме объектов, свойств и связей определенного домена, например клиентов, заказов, подробных сведений о заказах и связей между этими сущностями.В платформе ADO.NET Entity Framework это достигается за счет уровня абстракции, позволяющего осуществлять программирование по концептуальной модели приложения, а не напрямую по схеме реляционного хранилища.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] платформе ADO.NET Entity Framework см. в разделе [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
+ <span data-ttu-id="9f47a-104">С помощью платформы ADO.NET Entity Framework разработчики могут работать с данными в форме объектов, свойств и связей определенного домена, например клиентов, заказов, подробных сведений о заказах и связей между этими сущностями.</span><span class="sxs-lookup"><span data-stu-id="9f47a-104">The ADO.NET Entity Framework enables developers to work with data in the form of domain-specific objects, properties and relationships such as Customers, Orders, Order Details and the relationships between these entities.</span></span> <span data-ttu-id="9f47a-105">На платформе ADO.NET Entity Framework это достигается за счет уровня абстракции, позволяющего осуществлять программирование по концептуальной модели приложения, а не напрямую по схеме реляционного хранилища.</span><span class="sxs-lookup"><span data-stu-id="9f47a-105">The ADO.NET Entity Framework does this by providing a level of abstraction that enables programming against a conceptual application model instead of programming directly against a relational storage schema.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="9f47a-106">ADO.NET Entity Framework см. в разделе [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).</span><span class="sxs-lookup"><span data-stu-id="9f47a-106"> the ADO.NET Entity Framework see [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).</span></span>  
   
-## Подробные сведения об образце  
- В этом образце используется база данных `Northwind`, в него входят скрипты для создания и удаления базы данных `Northwind` \(Setup.cmd и Cleanup.cmd\).Среди проектов этого образца имеется модель EDM, основанная на базе данных `Northwind`.Модель можно найти, открыв файл `Northwind.edmx`, который включен в проект.Именно эта модель определяет форму объектов, к которым может осуществляться доступ из платформы ADO.NET Entity Framework.  
+## <a name="sample-details"></a><span data-ttu-id="9f47a-107">Подробные сведения об образце</span><span class="sxs-lookup"><span data-stu-id="9f47a-107">Sample details</span></span>  
+ <span data-ttu-id="9f47a-108">В этом образце используется база данных `Northwind`, в него входят скрипты для создания и удаления базы данных `Northwind` (Setup.cmd и Cleanup.cmd).</span><span class="sxs-lookup"><span data-stu-id="9f47a-108">This sample uses the `Northwind` database and includes scripts for creating and removing the `Northwind` database (Setup.cmd and Cleanup.cmd).</span></span> <span data-ttu-id="9f47a-109">Среди проектов этого образца имеется модель EDM, основанная на базе данных `Northwind`.</span><span class="sxs-lookup"><span data-stu-id="9f47a-109">The projects in this sample include an Entity Data Model based on the `Northwind` database.</span></span> <span data-ttu-id="9f47a-110">Модель можно найти, открыв файл `Northwind.edmx`, который включен в проект.</span><span class="sxs-lookup"><span data-stu-id="9f47a-110">You can find the model by opening the `Northwind.edmx` file that is included in the project.</span></span> <span data-ttu-id="9f47a-111">Именно эта модель определяет форму объектов, к которым может осуществляться доступ из платформы ADO.NET Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="9f47a-111">This is the model that defines the shape of the objects that can be accessed using the ADO.NET Entity Framework.</span></span>  
   
- В данный образец включены следующие действия:  
+ <span data-ttu-id="9f47a-112">В данный образец включены следующие действия:</span><span class="sxs-lookup"><span data-stu-id="9f47a-112">The following activities are included in this sample:</span></span>  
   
--   `EntitySQLQuery`: действие `EntitySQLQuery` позволяет получать объекты из базы данных на основе строки запроса Entity SQL.Entity SQL — это независимый от хранилища язык, сходный с SQL, который позволяет задавать запросы на основе концептуальной модели и сущностей, являющихся частью модели или домена.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] о языке Entity SQL см. в разделе [Язык Entity SQL](http://go.microsoft.com/fwlink/?LinkId=165646).  
+-   <span data-ttu-id="9f47a-113">`EntitySQLQuery`: действие `EntitySQLQuery` позволяет получать объекты из базы данных на основе строки запроса Entity SQL.</span><span class="sxs-lookup"><span data-stu-id="9f47a-113">`EntitySQLQuery`: The `EntitySQLQuery` activity allows you to retrieve objects from the database based on an Entity SQL query string.</span></span> <span data-ttu-id="9f47a-114">Entity SQL - это независимый от хранилища язык, сходный с SQL, который позволяет задавать запросы на основе концептуальной модели и сущностей, являющихся частью модели или домена.</span><span class="sxs-lookup"><span data-stu-id="9f47a-114">Entity SQL is a store independent language that is similar to SQL and it allows you to specify queries based on the conceptual model and the entities that are a part of the model or domain.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="9f47a-115">Язык Entity SQL. в разделе [язык Entity SQL](http://go.microsoft.com/fwlink/?LinkId=165646).</span><span class="sxs-lookup"><span data-stu-id="9f47a-115"> Entity SQL Language, see [Entity SQL Language](http://go.microsoft.com/fwlink/?LinkId=165646).</span></span>  
   
--   `EntityLinqQuery`: это действие позволяет получать объекты из базы данных на основе запроса LINQ или предиката.  
+-   <span data-ttu-id="9f47a-116">`EntityLinqQuery`: это действие позволяет получать объекты из базы данных на основе запроса LINQ или предиката.</span><span class="sxs-lookup"><span data-stu-id="9f47a-116">`EntityLinqQuery`: This activity allows you to retrieve objects from the database based on a LINQ query or predicate.</span></span>  
   
--   `EntityAdd`: действие `EntityAdd` позволяет добавлять сущность или коллекцию сущностей в базу данных.  
+-   <span data-ttu-id="9f47a-117">`EntityAdd`: действие `EntityAdd` позволяет добавлять сущность или коллекцию сущностей в базу данных.</span><span class="sxs-lookup"><span data-stu-id="9f47a-117">`EntityAdd`: The `EntityAdd` activity allows you to add an entity or a collection of entities to the database.</span></span>  
   
--   `EntityDelete`: действие `EntityDelete` позволяет удалять сущность или коллекцию сущностей из базы данных.  
+-   <span data-ttu-id="9f47a-118">`EntityDelete`: действие `EntityDelete` позволяет удалять сущность или коллекцию сущностей из базы данных.</span><span class="sxs-lookup"><span data-stu-id="9f47a-118">`EntityDelete`: The `EntityDelete` activity allows you to delete an entity or a collection of entities from the database.</span></span>  
   
--   `ObjectContextScope`: упомянутые ранее действия могут быть использованы только в пределах содержащего их экземпляра действия `ObjectContextScope`.Действие `ObjectContextScope` настраивает соединение с базой данных.Для действия требуется строка подключения \(которая передается с использованием настройки файла конфигурации или возвращается с ее помощью\).Действие `ObjectContextScope` облегчает выполнение группы связанных операций с сущностями.Поскольку эта область поддерживает активное соединение, она является несохраняемой областью.Кроме того, при выполнении действием `ObjectContextScope` выхода все изменения, которые внесены в объекты, возвращенные с помощью действий сущностей в области, автоматически сохраняются в базе данных. Для сохранения объектов в базу данных не требуется никаких последующих действий.  
+-   <span data-ttu-id="9f47a-119">`ObjectContextScope`: упомянутые ранее действия могут быть использованы только в пределах содержащего их экземпляра действия `ObjectContextScope`.</span><span class="sxs-lookup"><span data-stu-id="9f47a-119">`ObjectContextScope`: The previously mentioned activities can only be used within a containing `ObjectContextScope` activity instance.</span></span> <span data-ttu-id="9f47a-120">Действие `ObjectContextScope` настраивает соединение с базой данных.</span><span class="sxs-lookup"><span data-stu-id="9f47a-120">The `ObjectContextScope` activity sets up the connection to the database.</span></span> <span data-ttu-id="9f47a-121">Для действия требуется строка подключения (которая передается с использованием настройки файла конфигурации или возвращается с ее помощью).</span><span class="sxs-lookup"><span data-stu-id="9f47a-121">It requires a connection string (that is either passed in or retrieved using a configuration file setting).</span></span> <span data-ttu-id="9f47a-122">Действие `ObjectContextScope` облегчает выполнение группы связанных операций с сущностями.</span><span class="sxs-lookup"><span data-stu-id="9f47a-122">The `ObjectContextScope` activity makes it easy to perform a group of related operations on entities.</span></span> <span data-ttu-id="9f47a-123">Поскольку эта область поддерживает активное соединение, она является несохраняемой областью.</span><span class="sxs-lookup"><span data-stu-id="9f47a-123">Because this scope maintains an active connection, it is a No Persist scope.</span></span> <span data-ttu-id="9f47a-124">Кроме того, при выполнении действием `ObjectContextScope` выхода все изменения, которые внесены в объекты, возвращенные с помощью действий сущностей в области, автоматически сохраняются в базе данных. Для сохранения объектов в базу данных не требуется никаких последующих действий.</span><span class="sxs-lookup"><span data-stu-id="9f47a-124">In addition, when the `ObjectContextScope` activity exits, any changes that are made to objects retrieved using Entity Activities within that scope automatically get persisted back to the database, and no explicit or subsequent action is required to save objects back to the database.</span></span>  
   
-## Использование действий сущностей  
- Следующие фрагменты кода демонстрируют использование действий сущностей, представленных в этом образце.  
+## <a name="using-the-entity-activities"></a><span data-ttu-id="9f47a-125">Использование действий сущностей</span><span class="sxs-lookup"><span data-stu-id="9f47a-125">Using the entity activities</span></span>  
+ <span data-ttu-id="9f47a-126">Следующие фрагменты кода демонстрируют использование действий сущностей, представленных в этом образце.</span><span class="sxs-lookup"><span data-stu-id="9f47a-126">The following code snippets demonstrate how to use the entity activities presented in this sample.</span></span>  
   
-### EntitySql  
- Приведенный далее фрагмент кода показывает, как запрашивать всех клиентов из Лондона с сортировкой по имени и как выполнить итерацию по списку клиентов.  
+### <a name="entitysql"></a><span data-ttu-id="9f47a-127">EntitySql</span><span class="sxs-lookup"><span data-stu-id="9f47a-127">EntitySql</span></span>  
+ <span data-ttu-id="9f47a-128">Приведенный далее фрагмент кода показывает, как запрашивать всех клиентов из Лондона с сортировкой по имени и как выполнить итерацию по списку клиентов.</span><span class="sxs-lookup"><span data-stu-id="9f47a-128">The code snippet below shows how to query all customers in London sorted by name and how to iterate through the list of customers.</span></span>  
   
 ```  
 Variable<IEnumerable<Customer>> londonCustomers = new Variable<IEnumerable<Customer>>();  
@@ -81,12 +85,11 @@ return new ObjectContextScope
                     }  
                 }  
         }                 
-};  
-  
+};     
 ```  
   
-### EntityLinqQuery  
- Приведенный далее фрагмент кода показывает, как запросить всех клиентов из Лондона и как выполнить итерацию по итоговому списку клиентов.  
+### <a name="entitylinqquery"></a><span data-ttu-id="9f47a-129">EntityLinqQuery</span><span class="sxs-lookup"><span data-stu-id="9f47a-129">EntityLinqQuery</span></span>  
+ <span data-ttu-id="9f47a-130">Приведенный далее фрагмент кода показывает, как запросить всех клиентов из Лондона и как выполнить итерацию по итоговому списку клиентов.</span><span class="sxs-lookup"><span data-stu-id="9f47a-130">The code snippet below shows how to query all customers in London and how to iterate through the resulting list of customers.</span></span>  
   
 ```  
 Variable<IEnumerable<Customer>> londonCustomers = new Variable<IEnumerable<Customer>>() { Name = "LondonCustomers" };  
@@ -126,11 +129,10 @@ return new ObjectContextScope
         }  
     }  
 };  
-  
 ```  
   
-### EntityAdd  
- Приведенный далее фрагмент кода показывает, как добавить запись OrderDetail в существующий заказ.  
+### <a name="entityadd"></a><span data-ttu-id="9f47a-131">EntityAdd</span><span class="sxs-lookup"><span data-stu-id="9f47a-131">EntityAdd</span></span>  
+ <span data-ttu-id="9f47a-132">Приведенный далее фрагмент кода показывает, как добавить запись OrderDetail в существующий заказ.</span><span class="sxs-lookup"><span data-stu-id="9f47a-132">The code snippet below shows how to add an OrderDetail record to an existing Order.</span></span>  
   
 ```  
 Variable<IEnumerable<Order>> orders = new Variable<IEnumerable<Order>>();  
@@ -176,11 +178,10 @@ return new ObjectContextScope
         }  
     }  
 };  
-  
 ```  
   
-### EntityDelete  
- Приведенный далее фрагмент кода показывает, как удалить существующую запись OrderDetail из заказа \(если он существует\).  
+### <a name="entitydelete"></a><span data-ttu-id="9f47a-133">EntityDelete</span><span class="sxs-lookup"><span data-stu-id="9f47a-133">EntityDelete</span></span>  
+ <span data-ttu-id="9f47a-134">Приведенный далее фрагмент кода показывает, как удалить существующую запись OrderDetail из заказа (если он существует).</span><span class="sxs-lookup"><span data-stu-id="9f47a-134">The code snippet below shows how to delete an existing OrderDetail record in an Order (if it exists).</span></span>  
   
 ```  
 Variable<IEnumerable<OrderDetail>> orderDetails = new Variable<IEnumerable<OrderDetail>>();              
@@ -224,45 +225,44 @@ return new ObjectContextScope
         }  
     }  
 };  
-  
 ```  
   
-## Использование этого образца  
- Перед выполнением этого образца необходимо создать базу данных `Northwind` в локальном экземпляре SQL Server Express.  
+## <a name="to-use-this-sample"></a><span data-ttu-id="9f47a-135">Использование этого образца</span><span class="sxs-lookup"><span data-stu-id="9f47a-135">To use this sample</span></span>  
+ <span data-ttu-id="9f47a-136">Перед выполнением этого образца необходимо создать базу данных `Northwind` в локальном экземпляре SQL Server Express.</span><span class="sxs-lookup"><span data-stu-id="9f47a-136">You must create the `Northwind` database in your local SQL server Express instance before running this sample.</span></span>  
   
-#### Настройка базы данных «Northwind».  
+#### <a name="to-set-up-the-northwind-database"></a><span data-ttu-id="9f47a-137">Настройка базы данных «Northwind».</span><span class="sxs-lookup"><span data-stu-id="9f47a-137">To set up the Northwind database</span></span>  
   
-1.  Откройте окно командной строки.  
+1.  <span data-ttu-id="9f47a-138">Откройте окно командной строки.</span><span class="sxs-lookup"><span data-stu-id="9f47a-138">Open a command prompt.</span></span>  
   
-2.  В новом окне командной строки перейдите в папку EntityActivities\\CS.  
+2.  <span data-ttu-id="9f47a-139">В новом окне командной строки перейдите в папку EntityActivities\CS.</span><span class="sxs-lookup"><span data-stu-id="9f47a-139">In the new command prompt window, navigate to the EntityActivities\CS folder.</span></span>  
   
-3.  Введите `setup.cmd` и нажмите клавишу ВВОД.  
+3.  <span data-ttu-id="9f47a-140">Тип `setup.cmd` и нажмите клавишу ВВОД.</span><span class="sxs-lookup"><span data-stu-id="9f47a-140">Type `setup.cmd` and press ENTER.</span></span>  
   
-#### Выполнение образца  
+#### <a name="to-run-the-sample"></a><span data-ttu-id="9f47a-141">Выполнение образца</span><span class="sxs-lookup"><span data-stu-id="9f47a-141">To run the sample</span></span>  
   
-1.  Откройте файл решения EntityActivities.sln в среде [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+1.  <span data-ttu-id="9f47a-142">Откройте файл решения EntityActivities.sln в среде [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9f47a-142">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the EntityActivities.sln solution file.</span></span>  
   
-2.  Для построения решения нажмите CTRL\+SHIFT\+B.  
+2.  <span data-ttu-id="9f47a-143">Для построения решения нажмите CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="9f47a-143">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Чтобы запустить решение, нажмите клавиши CTRL\+F5.  
+3.  <span data-ttu-id="9f47a-144">Чтобы запустить решение, нажмите клавиши CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="9f47a-144">To run the solution, press CTRL+F5.</span></span>  
   
- После выполнения этого образца базу данных `Northwind` можно удалить.  
+ <span data-ttu-id="9f47a-145">После выполнения этого образца базу данных `Northwind` можно удалить.</span><span class="sxs-lookup"><span data-stu-id="9f47a-145">After running this sample, you may want to remove the `Northwind` database.</span></span>  
   
-#### Удаление базы данных «Northwind».  
+#### <a name="to-uninstall-the-northwind-database"></a><span data-ttu-id="9f47a-146">Удаление базы данных «Northwind».</span><span class="sxs-lookup"><span data-stu-id="9f47a-146">To uninstall the Northwind database</span></span>  
   
-1.  Откройте окно командной строки.  
+1.  <span data-ttu-id="9f47a-147">Откройте окно командной строки.</span><span class="sxs-lookup"><span data-stu-id="9f47a-147">Open a command prompt.</span></span>  
   
-2.  В новом окне командной строки перейдите в папку EntityActivities\\CS.  
+2.  <span data-ttu-id="9f47a-148">В новом окне командной строки перейдите в папку EntityActivities\CS.</span><span class="sxs-lookup"><span data-stu-id="9f47a-148">In the new command prompt window, navigate to the EntityActivities\CS folder.</span></span>  
   
-3.  Введите `cleanup.cmd` и нажмите клавишу ВВОД.  
+3.  <span data-ttu-id="9f47a-149">Тип `cleanup.cmd` и нажмите клавишу ВВОД.</span><span class="sxs-lookup"><span data-stu-id="9f47a-149">Type `cleanup.cmd` and press ENTER.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="9f47a-150">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="9f47a-150">The samples may already be installed on your machine.</span></span> <span data-ttu-id="9f47a-151">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="9f47a-151">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="9f47a-152">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="9f47a-152">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="9f47a-153">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="9f47a-153">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\EntityActivities`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\EntityActivities`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="9f47a-154">См. также</span><span class="sxs-lookup"><span data-stu-id="9f47a-154">See Also</span></span>

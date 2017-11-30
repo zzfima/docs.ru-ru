@@ -1,100 +1,107 @@
 ---
-title: "&lt;identityConfiguration&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;identityConfiguration&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1db76253-07da-447b-9e7a-3705c7228cf4
-caps.latest.revision: 13
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: b1cca286fc967631c60aa02a1318fe24120e05b0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;identityConfiguration&gt;
-Задает параметры уровня службы удостоверений.  
+# <a name="ltidentityconfigurationgt"></a><span data-ttu-id="9a402-102">&lt;identityConfiguration&gt;</span><span class="sxs-lookup"><span data-stu-id="9a402-102">&lt;identityConfiguration&gt;</span></span>
+<span data-ttu-id="9a402-103">Указывает параметры уровня службы удостоверений.</span><span class="sxs-lookup"><span data-stu-id="9a402-103">Specifies service-level identity settings.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="9a402-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="9a402-104">\<system.identityModel></span></span>  
+<span data-ttu-id="9a402-105">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="9a402-105">\<identityConfiguration></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="9a402-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9a402-106">Syntax</span></span>  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration  
-      name=xs:string  
-      saveBootstrapContext=xs:boolean>  
-      maximumClockSkew=TimeSpan >  
-  </identityConfiguration>  
+  <identityConfiguration  
+      name=xs:string  
+      saveBootstrapContext=xs:boolean>  
+      maximumClockSkew=TimeSpan >  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние элементы и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="9a402-107">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="9a402-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="9a402-108">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="9a402-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="9a402-109">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="9a402-109">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|имя|Имя раздела конфигурации identity.  Это имя можно использовать для ссылки на раздел определенной конфигурации.  Если не `name` атрибут указан, раздел определяет конфигурацию по умолчанию.  Конфигурация по умолчанию всегда используется в сценарии пассивной интеграции.  Дополнительные сведения см. в описании элемента [\<federationConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md).|  
-|saveBootstrapContext|Указывает, включены ли загрузочный маркеров в маркер сеанса.  Также возможно установить значение на коллекции обработчик маркеров, задав `saveBootstrapContext` атрибут на [\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) элемент.  Значение в коллекцию обработчиков маркеров переопределяет значение, заданное на службу.|  
-|maximumClockSkew|A <xref:System.TimeSpan> , определяющий максимальное разрешенные часы Наклон.  Управляет Наклон максимальное разрешенные часы при выполнении операций с учетом времени, такие как проверка время истечения срока действия сеанса входа.  Значение по умолчанию — 5 минут "00: 05".  Дополнительные сведения об указании <xref:System.TimeSpan> значения, см. [Timespan Values](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_TimespanValues).  Наклон максимального времени могут быть указаны на коллекцию обработчика маркера, установив `maximumClockSkew` атрибут на [\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) элемент.  Значение в коллекцию обработчиков маркеров переопределяет значение, заданное на службу.|  
+|<span data-ttu-id="9a402-110">Атрибут</span><span class="sxs-lookup"><span data-stu-id="9a402-110">Attribute</span></span>|<span data-ttu-id="9a402-111">Описание</span><span class="sxs-lookup"><span data-stu-id="9a402-111">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="9a402-112">имя</span><span class="sxs-lookup"><span data-stu-id="9a402-112">name</span></span>|<span data-ttu-id="9a402-113">Имя раздела конфигурации удостоверений.</span><span class="sxs-lookup"><span data-stu-id="9a402-113">The name of the identity configuration section.</span></span> <span data-ttu-id="9a402-114">Это имя можно использовать для ссылки на определенный раздел конфигурации.</span><span class="sxs-lookup"><span data-stu-id="9a402-114">You can use this name to reference a specific configuration section.</span></span> <span data-ttu-id="9a402-115">Если не `name` атрибут указан, раздел определяет конфигурацию по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="9a402-115">If no `name` attribute is specified, the section defines the default configuration.</span></span> <span data-ttu-id="9a402-116">Конфигурация по умолчанию всегда используется в сценариях с пассивной федерацией.</span><span class="sxs-lookup"><span data-stu-id="9a402-116">The default configuration is always used for passive federation scenarios.</span></span> <span data-ttu-id="9a402-117">Дополнительные сведения см. в разделе [ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) элемента.</span><span class="sxs-lookup"><span data-stu-id="9a402-117">For more information, see the [\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) element.</span></span>|  
+|<span data-ttu-id="9a402-118">saveBootstrapContext</span><span class="sxs-lookup"><span data-stu-id="9a402-118">saveBootstrapContext</span></span>|<span data-ttu-id="9a402-119">Указывает, следует ли включать в токен сеанса начальной загрузки маркеры.</span><span class="sxs-lookup"><span data-stu-id="9a402-119">Specifies whether bootstrap tokens should be included in the session token.</span></span> <span data-ttu-id="9a402-120">Значение также может быть задана для коллекции обработчика токенов, задав `saveBootstrapContext` атрибут [ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) элемента.</span><span class="sxs-lookup"><span data-stu-id="9a402-120">The value may also be set on a token handler collection by setting the `saveBootstrapContext` attribute on the [\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) element.</span></span> <span data-ttu-id="9a402-121">Значение, заданное в коллекцию обработчиков токенов переопределяет значение, заданное для службы.</span><span class="sxs-lookup"><span data-stu-id="9a402-121">A value set on the token handler collection overrides the value set on the service.</span></span>|  
+|<span data-ttu-id="9a402-122">maximumClockSkew</span><span class="sxs-lookup"><span data-stu-id="9a402-122">maximumClockSkew</span></span>|<span data-ttu-id="9a402-123">Объект <xref:System.TimeSpan> , указывающее максимально допустимое время отклонения.</span><span class="sxs-lookup"><span data-stu-id="9a402-123">A <xref:System.TimeSpan> that specifies the maximum allowed clock skew.</span></span> <span data-ttu-id="9a402-124">Определяет максимально допустимое время отклонения при выполнении операций, зависящих от времени, например для проверки истечения срока действия сеанса входа в систему.</span><span class="sxs-lookup"><span data-stu-id="9a402-124">Controls the maximum allowed clock skew when performing time-sensitive operations, such as validating the expiration time of a sign-in session.</span></span> <span data-ttu-id="9a402-125">Значение по умолчанию — 5 минут «00: 05:00».</span><span class="sxs-lookup"><span data-stu-id="9a402-125">The default is 5 minutes, "00:05:00".</span></span> <span data-ttu-id="9a402-126">Дополнительные сведения о способах указания <xref:System.TimeSpan> значения, в разделе [значения Timespan](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).</span><span class="sxs-lookup"><span data-stu-id="9a402-126">For more information about how to specify <xref:System.TimeSpan> values, see [Timespan Values](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).</span></span> <span data-ttu-id="9a402-127">Также можно задать максимальную расфазировку синхронизирующих импульсов на коллекцию обработчика токенов, задав `maximumClockSkew` атрибут [ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) элемента.</span><span class="sxs-lookup"><span data-stu-id="9a402-127">The maximum clock skew may also be set on a token handler collection by setting the `maximumClockSkew` attribute on the [\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) element.</span></span> <span data-ttu-id="9a402-128">Значение, заданное в коллекцию обработчиков токенов переопределяет значение, заданное для службы.</span><span class="sxs-lookup"><span data-stu-id="9a402-128">A value set on the token handler collection overrides the value set on the service.</span></span>|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="9a402-129">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="9a402-129">Child Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<caches\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Регистрирует кэши для обнаружения маркеров преобразования и маркеров сеансов.  Задается на уровне службы или на коллекцию обработчика маркера безопасности.  Необязательный.|  
-|[\<certificateValidation\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Управляет параметрами, обработчиков маркеров для проверки сертификатов.  Задается на уровне службы или на коллекцию обработчика маркера безопасности.  Необязательный.|  
-|[\<claimsAuthenticationManager\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|Регистрирует диспетчер проверки подлинности заявок для входящих утверждений.  Необязательный.|  
-|[\<claimsAuthorizationManager\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|Регистрирует диспетчер авторизации заявок для входящих утверждений.  Необязательный.|  
-|[\<claimTypeRequired\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Определяет набор необходимых утверждений для входящих токенов безопасности.  Необязательный.|  
-|[\<securityTokenHandlers\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Указывает коллекции обработчиков маркеров безопасности.  Можно указать ноль или более коллекций обработчики маркеров безопасности.  Необязательный.|  
-|[\<tokenReplayDetection\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Включает маркера повторений и определяет срок действия маркеров.  Задается на уровне службы или на коллекцию обработчика маркера безопасности.  Необязательный.|  
+|<span data-ttu-id="9a402-130">Элемент</span><span class="sxs-lookup"><span data-stu-id="9a402-130">Element</span></span>|<span data-ttu-id="9a402-131">Описание</span><span class="sxs-lookup"><span data-stu-id="9a402-131">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="9a402-132">\<кэширует ></span><span class="sxs-lookup"><span data-stu-id="9a402-132">\<caches></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|<span data-ttu-id="9a402-133">Регистрирует кэши, используемый для маркеров сеансов и обнаружение воспроизведения токенов.</span><span class="sxs-lookup"><span data-stu-id="9a402-133">Registers the caches used for session tokens and token replay detection.</span></span> <span data-ttu-id="9a402-134">Можно указать на уровне службы или в коллекцию обработчика токенов безопасности.</span><span class="sxs-lookup"><span data-stu-id="9a402-134">Can be specified at the service-level or on a security token handler collection.</span></span> <span data-ttu-id="9a402-135">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="9a402-135">Optional.</span></span>|  
+|[<span data-ttu-id="9a402-136">\<certificateValidation ></span><span class="sxs-lookup"><span data-stu-id="9a402-136">\<certificateValidation></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|<span data-ttu-id="9a402-137">Управляет параметрами обработчиков токенов, используемых для проверки сертификатов.</span><span class="sxs-lookup"><span data-stu-id="9a402-137">Controls the settings that token handlers use to validate certificates.</span></span> <span data-ttu-id="9a402-138">Можно указать на уровне службы или в коллекцию обработчика токенов безопасности.</span><span class="sxs-lookup"><span data-stu-id="9a402-138">Can be specified at the service-level or on a security token handler collection.</span></span> <span data-ttu-id="9a402-139">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="9a402-139">Optional.</span></span>|  
+|[<span data-ttu-id="9a402-140">\<claimsAuthenticationManager ></span><span class="sxs-lookup"><span data-stu-id="9a402-140">\<claimsAuthenticationManager></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|<span data-ttu-id="9a402-141">Регистрирует диспетчер проверки подлинности утверждений входящие утверждения.</span><span class="sxs-lookup"><span data-stu-id="9a402-141">Registers a claims authentication manager for the incoming claims.</span></span> <span data-ttu-id="9a402-142">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="9a402-142">Optional.</span></span>|  
+|[<span data-ttu-id="9a402-143">\<claimsAuthorizationManager ></span><span class="sxs-lookup"><span data-stu-id="9a402-143">\<claimsAuthorizationManager></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|<span data-ttu-id="9a402-144">Регистрирует диспетчера авторизации утверждений для входящих утверждений.</span><span class="sxs-lookup"><span data-stu-id="9a402-144">Registers a claims authorization manager for the incoming claims.</span></span> <span data-ttu-id="9a402-145">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="9a402-145">Optional.</span></span>|  
+|[<span data-ttu-id="9a402-146">\<claimTypeRequired ></span><span class="sxs-lookup"><span data-stu-id="9a402-146">\<claimTypeRequired></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|<span data-ttu-id="9a402-147">Указывает набор утверждений, необходимых для входящих токенов безопасности.</span><span class="sxs-lookup"><span data-stu-id="9a402-147">Specifies the set of required claims for incoming security tokens.</span></span> <span data-ttu-id="9a402-148">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="9a402-148">Optional.</span></span>|  
+|[<span data-ttu-id="9a402-149">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="9a402-149">\<securityTokenHandlers></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|<span data-ttu-id="9a402-150">Задает коллекцию обработчиков токенов безопасности.</span><span class="sxs-lookup"><span data-stu-id="9a402-150">Specifies a collection of security token handlers.</span></span> <span data-ttu-id="9a402-151">Можно указать ноль или более коллекциях обработчиков токенов безопасности.</span><span class="sxs-lookup"><span data-stu-id="9a402-151">Zero or more collections of security token handlers can be specified.</span></span> <span data-ttu-id="9a402-152">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="9a402-152">Optional.</span></span>|  
+|[<span data-ttu-id="9a402-153">\<tokenReplayDetection ></span><span class="sxs-lookup"><span data-stu-id="9a402-153">\<tokenReplayDetection></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|<span data-ttu-id="9a402-154">Включает обнаружение воспроизведения токенов и определяет время жизни токенов.</span><span class="sxs-lookup"><span data-stu-id="9a402-154">Enables token replay detection and specifies the expiration time for tokens.</span></span> <span data-ttu-id="9a402-155">Можно указать на уровне службы или в коллекцию обработчика токенов безопасности.</span><span class="sxs-lookup"><span data-stu-id="9a402-155">Can be specified at the service-level or on a security token handler collection.</span></span> <span data-ttu-id="9a402-156">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="9a402-156">Optional.</span></span>|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="9a402-157">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="9a402-157">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<system.identityModel\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)|Содержит настройки для включения параметров Foundation удостоверение Windows \(WIF\) в приложениях.|  
+|<span data-ttu-id="9a402-158">Элемент</span><span class="sxs-lookup"><span data-stu-id="9a402-158">Element</span></span>|<span data-ttu-id="9a402-159">Описание</span><span class="sxs-lookup"><span data-stu-id="9a402-159">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="9a402-160">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="9a402-160">\<system.identityModel></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)|<span data-ttu-id="9a402-161">Обеспечивает настройку для включения параметров Windows Identity Foundation (WIF) в приложениях.</span><span class="sxs-lookup"><span data-stu-id="9a402-161">Provides configuration for enabling Windows Identity Foundation (WIF) options in applications.</span></span>|  
   
-## Заметки  
- Несколько идентификаторов, могут быть определены конфигурации, каждый с уникальным именем.  Поведение выглядит следующим образом:  
+## <a name="remarks"></a><span data-ttu-id="9a402-162">Примечания</span><span class="sxs-lookup"><span data-stu-id="9a402-162">Remarks</span></span>  
+ <span data-ttu-id="9a402-163">Несколько удостоверений, которые могут быть определены конфигурации, каждый с уникальным именем.</span><span class="sxs-lookup"><span data-stu-id="9a402-163">Multiple identity configurations may be defined, each with a unique name.</span></span> <span data-ttu-id="9a402-164">Поведение выглядит следующим образом:</span><span class="sxs-lookup"><span data-stu-id="9a402-164">The behavior is as follows:</span></span>  
   
-1.  Если не `<identityConfiguration>` указанного элемента.  Идентификатор конфигурации по умолчанию создается во время выполнения и заполняются значениями по умолчанию.  
+1.  <span data-ttu-id="9a402-165">Если не `<identityConfiguration>` указанный элемент.</span><span class="sxs-lookup"><span data-stu-id="9a402-165">If no `<identityConfiguration>` element is specified.</span></span> <span data-ttu-id="9a402-166">Конфигурацию удостоверения по умолчанию создается во время выполнения и заполняется значениями по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="9a402-166">A default identity configuration is created at runtime and populated with default values.</span></span>  
   
-2.  Если один `<identityConfiguration>` указанного элемента.  Это идентификатор конфигурации по умолчанию.  Не важно с именем или неименованными.  
+2.  <span data-ttu-id="9a402-167">Если один `<identityConfiguration>` указанный элемент.</span><span class="sxs-lookup"><span data-stu-id="9a402-167">If a single `<identityConfiguration>` element is specified.</span></span> <span data-ttu-id="9a402-168">Это конфигурация по умолчанию удостоверений.</span><span class="sxs-lookup"><span data-stu-id="9a402-168">It is the default identity configuration.</span></span> <span data-ttu-id="9a402-169">Неважно с именем или без имени.</span><span class="sxs-lookup"><span data-stu-id="9a402-169">It does not matter whether it is named or unnamed.</span></span>  
   
-3.  Если несколько `<identityConfiguration>` указанных элементов.  Безымянные элемент указывает идентификатор конфигурации по умолчанию.  Рекомендуется указывать несколько `<identityConfiguration>` элементов, один из них должен быть без имени.  
+3.  <span data-ttu-id="9a402-170">При наличии нескольких `<identityConfiguration>` указаны элементы.</span><span class="sxs-lookup"><span data-stu-id="9a402-170">If multiple `<identityConfiguration>` elements are specified.</span></span> <span data-ttu-id="9a402-171">Безымянный элемент указывает конфигурацию удостоверения по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="9a402-171">The unnamed element specifies the default identity configuration.</span></span> <span data-ttu-id="9a402-172">Рекомендуется, если задано несколько `<identityConfiguration>` элементов, один из них должен быть неименованным.</span><span class="sxs-lookup"><span data-stu-id="9a402-172">It is recommended that when you specify multiple `<identityConfiguration>` elements, one of them should be unnamed.</span></span>  
   
 > [!WARNING]
->  Если задано несколько `<identityConfiguration>` элементов, один из них должен быть без имени.  Без имени элемента будет идентификатор конфигурации по умолчанию.  
+>  <span data-ttu-id="9a402-173">Если задано несколько `<identityConfiguration>` элементов, один из них должен быть неименованным.</span><span class="sxs-lookup"><span data-stu-id="9a402-173">If you specify multiple `<identityConfiguration>` elements, one of them should be unnamed.</span></span> <span data-ttu-id="9a402-174">Безымянный элемент будет конфигурацию удостоверения по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="9a402-174">The unnamed element will be the default identity configuration.</span></span>  
   
- Некоторые из параметров, указанных в `<identityConfiguration>` элемент может быть переопределен путем настройки на коллекцию обработчика маркера безопасности или настройки обработчиков маркеров безопасности.  
-  
-> [!IMPORTANT]
->  При использовании <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> или <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> класса для обеспечения контроля доступа на основе заявок в коде конфигурации identity, на который ссылается `<federationConfiguration>` элемент настраивает диспетчер авторизации заявок и политики, который используется для принятия решения об авторизации.  Это верно даже в ситуациях, которые не являются пассивный веб\-сценариев, например приложения Windows Communication Foundation \(WCF\) или приложение, которое не является веб.  Если приложение не является пассивным веб\-приложения [\<claimsAuthorizationManager\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) элемент \(и политики его дочерних элементов, если они есть\) являются только параметры, применяемые конфигурации указанного удостоверения.  Другие параметры не обрабатываются.  Дополнительные сведения см. в описании элемента [\<federationConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md).  
-  
- `<identityConfiguration>` Представленного элементом <xref:System.IdentityModel.Configuration.IdentityConfigurationElement> класса.  Представленный раздел конфигурации identity <xref:System.IdentityModel.Configuration.IdentityConfiguration> класса.  
+ <span data-ttu-id="9a402-175">Некоторые параметры, указанные в `<identityConfiguration>` элемент могут переопределяться параметрами на коллекцию обработчика токенов безопасности или параметры на обработчики токенов безопасности.</span><span class="sxs-lookup"><span data-stu-id="9a402-175">Some of the settings specified in the `<identityConfiguration>` element can be overridden by settings on a security token handler collection or by settings on individual security token handlers.</span></span>  
   
 > [!IMPORTANT]
->  Указав следующие элементы в качестве дочерних элементов `<identityConfiguration>` элемент устарел, несмотря на то, что поведение по\-прежнему поддерживается для обратной совместимости.  Вместо этого указанного этих элементов в [\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) элемент.  
+>  <span data-ttu-id="9a402-176">При использовании <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> или <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> класса для обеспечения контроля доступа на основе утверждений в коде, на который ссылается конфигурация удостоверений `<federationConfiguration>` элемент настраивает диспетчера авторизации утверждений и политики, которая используется, чтобы сделать решения об авторизации.</span><span class="sxs-lookup"><span data-stu-id="9a402-176">When using the <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> or the <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> class to provide claims-based access control in your code, the identity configuration that is referenced by the `<federationConfiguration>` element configures the claims authorization manager and policy that is used to make authorization decisions.</span></span> <span data-ttu-id="9a402-177">Это верно даже в случаях, не пассивный сценариях веб-, например приложений Windows Communication Foundation (WCF) или приложение, которое не является веб сервера.</span><span class="sxs-lookup"><span data-stu-id="9a402-177">This is true, even in scenarios that are not passive Web scenarios, for example Windows Communication Foundation (WCF) applications or an application that is not Web-based.</span></span> <span data-ttu-id="9a402-178">Если приложение не пассивное веб-приложение [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) элемент (и политики его дочерние элементы, если он имеется) указанное удостоверение конфигурации являются только параметры, применяемые.</span><span class="sxs-lookup"><span data-stu-id="9a402-178">If the application is not a passive Web application, the [\<claimsAuthorizationManager>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) element (and its child policy elements, if present) of the referenced identity configuration are the only settings applied.</span></span> <span data-ttu-id="9a402-179">Все остальные параметры игнорируются.</span><span class="sxs-lookup"><span data-stu-id="9a402-179">All other settings are ignored.</span></span> <span data-ttu-id="9a402-180">Дополнительные сведения см. в разделе [ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) элемента.</span><span class="sxs-lookup"><span data-stu-id="9a402-180">For more information, see the [\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) element.</span></span>  
+  
+ <span data-ttu-id="9a402-181">`<identityConfiguration>` Представлен <xref:System.IdentityModel.Configuration.IdentityConfigurationElement> класса.</span><span class="sxs-lookup"><span data-stu-id="9a402-181">The `<identityConfiguration>` element is represented by the <xref:System.IdentityModel.Configuration.IdentityConfigurationElement> class.</span></span> <span data-ttu-id="9a402-182">Раздел конфигурации удостоверения представляется <xref:System.IdentityModel.Configuration.IdentityConfiguration> класса.</span><span class="sxs-lookup"><span data-stu-id="9a402-182">An identity configuration section is represented by the <xref:System.IdentityModel.Configuration.IdentityConfiguration> class.</span></span>  
+  
+> [!IMPORTANT]
+>  <span data-ttu-id="9a402-183">Указание следующие элементы в качестве дочерних элементов `<identityConfiguration>` элемент является устаревшим, несмотря на то, что поведение по-прежнему поддерживается для обеспечения обратной совместимости.</span><span class="sxs-lookup"><span data-stu-id="9a402-183">Specifying the following elements as child elements of the `<identityConfiguration>` element has been deprecated, although the behavior is still supported for backward compatibility.</span></span> <span data-ttu-id="9a402-184">Эти элементы вместо этого указывается в разделе [ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) элемента.</span><span class="sxs-lookup"><span data-stu-id="9a402-184">These elements should, instead, be specified under the [\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) element.</span></span>  
 >   
->  -   [\<audienceUris\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)  
-> -   [\<issuerNameRegistry\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)  
-> -   [\<issuerTokenResolver\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)  
-> -   [\<serviceTokenResolver\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)  
+>  -   [<span data-ttu-id="9a402-185">\<audienceUris ></span><span class="sxs-lookup"><span data-stu-id="9a402-185">\<audienceUris></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)  
+> -   [<span data-ttu-id="9a402-186">\<issuerNameRegistry ></span><span class="sxs-lookup"><span data-stu-id="9a402-186">\<issuerNameRegistry></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)  
+> -   [<span data-ttu-id="9a402-187">\<issuerTokenResolver ></span><span class="sxs-lookup"><span data-stu-id="9a402-187">\<issuerTokenResolver></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)  
+> -   [<span data-ttu-id="9a402-188">\<serviceTokenResolver ></span><span class="sxs-lookup"><span data-stu-id="9a402-188">\<serviceTokenResolver></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)  
   
-## Пример  
- В следующем примере создается конфигурация удостоверения, с именем «alternateConfiguration».  Идентификация конфигурации определяет параметры по умолчанию.  
+## <a name="example"></a><span data-ttu-id="9a402-189">Пример</span><span class="sxs-lookup"><span data-stu-id="9a402-189">Example</span></span>  
+ <span data-ttu-id="9a402-190">В следующем примере создается конфигурация удостоверений, с именем «alternateConfiguration».</span><span class="sxs-lookup"><span data-stu-id="9a402-190">The following example creates an identity configuration named "alternateConfiguration".</span></span> <span data-ttu-id="9a402-191">Конфигурацию удостоверения указывает параметры по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="9a402-191">The identity configuration specifies default settings.</span></span>  
   
-```  
+```xml  
 <system.identityModel>  
     <identityConfiguration name="alternateConfiguration"/>  
 </system.identityModel>  
 ```  
   
-## См. также  
- <xref:System.IdentityModel.Configuration.IdentityConfiguration>   
+## <a name="see-also"></a><span data-ttu-id="9a402-192">См. также</span><span class="sxs-lookup"><span data-stu-id="9a402-192">See Also</span></span>  
+ <xref:System.IdentityModel.Configuration.IdentityConfiguration>  
  <xref:System.IdentityModel.Configuration.IdentityConfigurationElement>

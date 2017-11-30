@@ -5,43 +5,35 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - callback function
 - platform invoke, calling unmanaged functions
 ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a81751f83a66ce12cbc2e898cd3d0a178b955344
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 84c3f13317f771ba81af0fc7368124c59f8a1a37
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="callback-functions"></a>Функции обратного вызова
-Функция обратного вызова — это программный код в управляемом приложении, который помогает неуправляемой функции DLL выполнить задачу. Вызовы функции обратного вызова косвенно, через функцию DLL, передаются из управляемого приложения и возвращаются в управляемую реализацию. Лишь некоторые из многих функций DLL, вызываемых в вызове неуправляемого кода, требуют для своего выполнения наличия в управляемом коде функции обратного вызова.  
+# <a name="callback-functions"></a><span data-ttu-id="8a80c-102">Функции обратного вызова</span><span class="sxs-lookup"><span data-stu-id="8a80c-102">Callback Functions</span></span>
+<span data-ttu-id="8a80c-103">Функция обратного вызова — это программный код в управляемом приложении, который помогает неуправляемой функции DLL выполнить задачу.</span><span class="sxs-lookup"><span data-stu-id="8a80c-103">A callback function is code within a managed application that helps an unmanaged DLL function complete a task.</span></span> <span data-ttu-id="8a80c-104">Вызовы функции обратного вызова косвенно, через функцию DLL, передаются из управляемого приложения и возвращаются в управляемую реализацию.</span><span class="sxs-lookup"><span data-stu-id="8a80c-104">Calls to a callback function pass indirectly from a managed application, through a DLL function, and back to the managed implementation.</span></span> <span data-ttu-id="8a80c-105">Лишь некоторые из многих функций DLL, вызываемых в вызове неуправляемого кода, требуют для своего выполнения наличия в управляемом коде функции обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="8a80c-105">Some of the many DLL functions called with platform invoke require a callback function in managed code to run properly.</span></span>  
   
- Для вызова большинства функций DLL из управляемого кода нужно создать управляемое определение функции и затем выполнить сам вызов. Этот процесс достаточно прост.  
+ <span data-ttu-id="8a80c-106">Для вызова большинства функций DLL из управляемого кода нужно создать управляемое определение функции и затем выполнить сам вызов.</span><span class="sxs-lookup"><span data-stu-id="8a80c-106">To call most DLL functions from managed code, you create a managed definition of the function and then call it.</span></span> <span data-ttu-id="8a80c-107">Этот процесс достаточно прост.</span><span class="sxs-lookup"><span data-stu-id="8a80c-107">The process is straightforward.</span></span>  
   
- Применение функции DLL, требующей наличия функции обратного вызова, предполагает выполнение некоторых дополнительных шагов. Во-первых, необходимо определить, требуется ли для функции обратный вызов. Это можно выяснить в документации по функции. Далее нужно создать функцию обратного вызова в управляемом приложении. И, наконец, вы вызываете функцию DLL, передавая указатель на функцию обратного вызова в качестве аргумента. Перечисленные действия показаны на приведенной ниже иллюстрации.  
+ <span data-ttu-id="8a80c-108">Применение функции DLL, требующей наличия функции обратного вызова, предполагает выполнение некоторых дополнительных шагов.</span><span class="sxs-lookup"><span data-stu-id="8a80c-108">Using a DLL function that requires a callback function has some additional steps.</span></span> <span data-ttu-id="8a80c-109">Во-первых, необходимо определить, требуется ли для функции обратный вызов. Это можно выяснить в документации по функции.</span><span class="sxs-lookup"><span data-stu-id="8a80c-109">First, you must determine whether the function requires a callback by looking at the documentation for the function.</span></span> <span data-ttu-id="8a80c-110">Далее нужно создать функцию обратного вызова в управляемом приложении.</span><span class="sxs-lookup"><span data-stu-id="8a80c-110">Next, you have to create the callback function in your managed application.</span></span> <span data-ttu-id="8a80c-111">И, наконец, вы вызываете функцию DLL, передавая указатель на функцию обратного вызова в качестве аргумента.</span><span class="sxs-lookup"><span data-stu-id="8a80c-111">Finally, you call the DLL function, passing a pointer to the callback function as an argument.</span></span> <span data-ttu-id="8a80c-112">Перечисленные действия показаны на приведенной ниже иллюстрации.</span><span class="sxs-lookup"><span data-stu-id="8a80c-112">The following illustration summarizes these steps.</span></span>  
   
- ![Обратный вызов неуправляемого кода](../../../docs/framework/interop/media/pinvokecallback.gif "pinvokecallback")  
-Функция обратного вызова и реализация  
+ <span data-ttu-id="8a80c-113">![Обратный вызов неуправляемого кода](../../../docs/framework/interop/media/pinvokecallback.gif "pinvokecallback")</span><span class="sxs-lookup"><span data-stu-id="8a80c-113">![Platform invoke callback](../../../docs/framework/interop/media/pinvokecallback.gif "pinvokecallback")</span></span>  
+<span data-ttu-id="8a80c-114">Функция обратного вызова и реализация</span><span class="sxs-lookup"><span data-stu-id="8a80c-114">Callback function and implementation</span></span>  
   
- Функции обратного вызова — идеальное средство для многократного выполнения некоторой задачи. Другая область их применения — с функциями перечисления интерфейса Win32 API, такими как **EnumFontFamilies**, **EnumPrinters** и **EnumWindows**. Функция **EnumWindows** выполняет перечисление всех существующих на компьютере окон, используя функцию обратного вызова, чтобы выполнить задачу для каждого окна. Инструкции и пример см. в разделе [Практическое руководство. Реализация функций обратного вызова](../../../docs/framework/interop/how-to-implement-callback-functions.md).  
+ <span data-ttu-id="8a80c-115">Функции обратного вызова — идеальное средство для многократного выполнения некоторой задачи.</span><span class="sxs-lookup"><span data-stu-id="8a80c-115">Callback functions are ideal for use in situations in which a task is performed repeatedly.</span></span> <span data-ttu-id="8a80c-116">Другая область их применения — с функциями перечисления интерфейса Win32 API, такими как **EnumFontFamilies**, **EnumPrinters** и **EnumWindows**.</span><span class="sxs-lookup"><span data-stu-id="8a80c-116">Another common usage is with enumeration functions, such as **EnumFontFamilies**, **EnumPrinters**, and **EnumWindows** in the Win32 API.</span></span> <span data-ttu-id="8a80c-117">Функция **EnumWindows** выполняет перечисление всех существующих на компьютере окон, используя функцию обратного вызова, чтобы выполнить задачу для каждого окна.</span><span class="sxs-lookup"><span data-stu-id="8a80c-117">The **EnumWindows** function enumerates through all existing windows on your computer, calling the callback function to perform a task on each window.</span></span> <span data-ttu-id="8a80c-118">Инструкции и пример см. в разделе [Практическое руководство. Реализация функций обратного вызова](../../../docs/framework/interop/how-to-implement-callback-functions.md).</span><span class="sxs-lookup"><span data-stu-id="8a80c-118">For instructions and an example, see [How to: Implement Callback Functions](../../../docs/framework/interop/how-to-implement-callback-functions.md).</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Практическое руководство. Реализация функций обратного вызова](../../../docs/framework/interop/how-to-implement-callback-functions.md)   
- [Вызов функции DLL](../../../docs/framework/interop/calling-a-dll-function.md)
-
+## <a name="see-also"></a><span data-ttu-id="8a80c-119">См. также</span><span class="sxs-lookup"><span data-stu-id="8a80c-119">See Also</span></span>  
+ [<span data-ttu-id="8a80c-120">Практическое руководство. Реализация функций обратного вызова</span><span class="sxs-lookup"><span data-stu-id="8a80c-120">How to: Implement Callback Functions</span></span>](../../../docs/framework/interop/how-to-implement-callback-functions.md)  
+ [<span data-ttu-id="8a80c-121">Вызов функции DLL</span><span class="sxs-lookup"><span data-stu-id="8a80c-121">Calling a DLL Function</span></span>](../../../docs/framework/interop/calling-a-dll-function.md)

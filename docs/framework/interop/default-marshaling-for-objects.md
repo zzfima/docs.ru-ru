@@ -5,63 +5,59 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 67d05a21d537bfca92bc76473fb6f6048865ef8c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c5bfafcad5f1f60e7e763b69f220188517d29f17
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="default-marshaling-for-objects"></a>Маршалинг по умолчанию для объектов
-Параметры и поля, типизированные как <xref:System.Object?displayProperty=fullName>, могут предоставляться в неуправляемый код в виде одного из следующих типов:  
+# <a name="default-marshaling-for-objects"></a><span data-ttu-id="f4854-102">Маршалинг по умолчанию для объектов</span><span class="sxs-lookup"><span data-stu-id="f4854-102">Default Marshaling for Objects</span></span>
+<span data-ttu-id="f4854-103">Параметры и поля, типизированные как <xref:System.Object?displayProperty=nameWithType>, могут предоставляться в неуправляемый код в виде одного из следующих типов:</span><span class="sxs-lookup"><span data-stu-id="f4854-103">Parameters and fields typed as <xref:System.Object?displayProperty=nameWithType> can be exposed to unmanaged code as one of the following types:</span></span>  
   
--   Вариант, если объект является параметром.  
+-   <span data-ttu-id="f4854-104">Вариант, если объект является параметром.</span><span class="sxs-lookup"><span data-stu-id="f4854-104">A variant when the object is a parameter.</span></span>  
   
--   Интерфейс, если объект является полем структуры.  
+-   <span data-ttu-id="f4854-105">Интерфейс, если объект является полем структуры.</span><span class="sxs-lookup"><span data-stu-id="f4854-105">An interface when the object is a structure field.</span></span>  
   
- Маршалинг для типов объектов поддерживается только для COM-взаимодействия. По умолчанию выполняется маршалинг объектов в варианты COM. Эти правила применяются только к типу **Object** и не относятся к строго типизированным объектам, производным от класса **Object**.  
+ <span data-ttu-id="f4854-106">Маршалинг для типов объектов поддерживается только для COM-взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="f4854-106">Only COM interop supports marshaling for object types.</span></span> <span data-ttu-id="f4854-107">По умолчанию выполняется маршалинг объектов в варианты COM.</span><span class="sxs-lookup"><span data-stu-id="f4854-107">The default behavior is to marshal objects to COM variants.</span></span> <span data-ttu-id="f4854-108">Эти правила применяются только к типу **Object** и не относятся к строго типизированным объектам, производным от класса **Object**.</span><span class="sxs-lookup"><span data-stu-id="f4854-108">These rules apply only to the type **Object** and do not apply to strongly typed objects that derive from the **Object** class.</span></span>  
   
- В этом разделе приводятся следующие дополнительные сведения о маршалинге типов объектов:  
+ <span data-ttu-id="f4854-109">В этом разделе приводятся следующие дополнительные сведения о маршалинге типов объектов:</span><span class="sxs-lookup"><span data-stu-id="f4854-109">This topic provides the following additional information about marshaling object types:</span></span>  
   
--   [Маршалинг параметров](#cpcondefaultmarshalingforobjectsanchor7)  
+-   [<span data-ttu-id="f4854-110">Маршалинг параметров</span><span class="sxs-lookup"><span data-stu-id="f4854-110">Marshaling Options</span></span>](#cpcondefaultmarshalingforobjectsanchor7)  
   
--   [Маршалинг объекта в интерфейс](#cpcondefaultmarshalingforobjectsanchor2)  
+-   [<span data-ttu-id="f4854-111">Маршалинг объекта в интерфейс</span><span class="sxs-lookup"><span data-stu-id="f4854-111">Marshaling Object to Interface</span></span>](#cpcondefaultmarshalingforobjectsanchor2)  
   
--   [Маршалинг объекта в вариант](#cpcondefaultmarshalingforobjectsanchor3)  
+-   [<span data-ttu-id="f4854-112">Маршалинг объекта в вариант</span><span class="sxs-lookup"><span data-stu-id="f4854-112">Marshaling Object to Variant</span></span>](#cpcondefaultmarshalingforobjectsanchor3)  
   
--   [Маршалинг варианта в объект](#cpcondefaultmarshalingforobjectsanchor4)  
+-   [<span data-ttu-id="f4854-113">Маршалинг варианта в объект</span><span class="sxs-lookup"><span data-stu-id="f4854-113">Marshaling Variant to Object</span></span>](#cpcondefaultmarshalingforobjectsanchor4)  
   
--   [Маршалинг вариантов ByRef](#cpcondefaultmarshalingforobjectsanchor6)  
+-   [<span data-ttu-id="f4854-114">Маршалинг вариантов ByRef</span><span class="sxs-lookup"><span data-stu-id="f4854-114">Marshaling ByRef Variants</span></span>](#cpcondefaultmarshalingforobjectsanchor6)  
   
 <a name="cpcondefaultmarshalingforobjectsanchor7"></a>   
-## <a name="marshaling-options"></a>Маршалинг параметров  
- В следующей таблице показаны параметры маршалинга для типа данных **Object**. Атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute> предоставляет несколько значений перечисления <xref:System.Runtime.InteropServices.UnmanagedType> для маршалинга объектов.  
+## <a name="marshaling-options"></a><span data-ttu-id="f4854-115">Маршалинг параметров</span><span class="sxs-lookup"><span data-stu-id="f4854-115">Marshaling Options</span></span>  
+ <span data-ttu-id="f4854-116">В следующей таблице показаны параметры маршалинга для типа данных **Object**.</span><span class="sxs-lookup"><span data-stu-id="f4854-116">The following table shows the marshaling options for the **Object** data type.</span></span> <span data-ttu-id="f4854-117">Атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute> предоставляет несколько значений перечисления <xref:System.Runtime.InteropServices.UnmanagedType> для маршалинга объектов.</span><span class="sxs-lookup"><span data-stu-id="f4854-117">The <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute provides several <xref:System.Runtime.InteropServices.UnmanagedType> enumeration values to marshal objects.</span></span>  
   
-|Тип перечисления|Описание неуправляемого формата|  
+|<span data-ttu-id="f4854-118">Тип перечисления</span><span class="sxs-lookup"><span data-stu-id="f4854-118">Enumeration type</span></span>|<span data-ttu-id="f4854-119">Описание неуправляемого формата</span><span class="sxs-lookup"><span data-stu-id="f4854-119">Description of unmanaged format</span></span>|  
 |----------------------|-------------------------------------|  
-|**UnmanagedType.Struct**<br /><br /> (по умолчанию для параметров)|Вариант в стиле COM.|  
-|**UnmanagedType.Interface**|Интерфейс **IDispatch**, если возможно. В противном случае интерфейс **IUnknown**.|  
-|**UnmanagedType.IUnknown**<br /><br /> (по умолчанию для полей)|Интерфейс **IUnknown**.|  
-|**UnmanagedType.IDispatch**|Интерфейс **IDispatch**.|  
+|<span data-ttu-id="f4854-120">**UnmanagedType.Struct**</span><span class="sxs-lookup"><span data-stu-id="f4854-120">**UnmanagedType.Struct**</span></span><br /><br /> <span data-ttu-id="f4854-121">(по умолчанию для параметров)</span><span class="sxs-lookup"><span data-stu-id="f4854-121">(default for parameters)</span></span>|<span data-ttu-id="f4854-122">Вариант в стиле COM.</span><span class="sxs-lookup"><span data-stu-id="f4854-122">A COM-style variant.</span></span>|  
+|<span data-ttu-id="f4854-123">**UnmanagedType.Interface**</span><span class="sxs-lookup"><span data-stu-id="f4854-123">**UnmanagedType.Interface**</span></span>|<span data-ttu-id="f4854-124">Интерфейс **IDispatch**, если возможно. В противном случае интерфейс **IUnknown**.</span><span class="sxs-lookup"><span data-stu-id="f4854-124">An **IDispatch** interface, if possible; otherwise, an **IUnknown** interface.</span></span>|  
+|<span data-ttu-id="f4854-125">**UnmanagedType.IUnknown**</span><span class="sxs-lookup"><span data-stu-id="f4854-125">**UnmanagedType.IUnknown**</span></span><br /><br /> <span data-ttu-id="f4854-126">(по умолчанию для полей)</span><span class="sxs-lookup"><span data-stu-id="f4854-126">(default for fields)</span></span>|<span data-ttu-id="f4854-127">Интерфейс **IUnknown**.</span><span class="sxs-lookup"><span data-stu-id="f4854-127">An **IUnknown** interface.</span></span>|  
+|<span data-ttu-id="f4854-128">**UnmanagedType.IDispatch**</span><span class="sxs-lookup"><span data-stu-id="f4854-128">**UnmanagedType.IDispatch**</span></span>|<span data-ttu-id="f4854-129">Интерфейс **IDispatch**.</span><span class="sxs-lookup"><span data-stu-id="f4854-129">An **IDispatch** interface.</span></span>|  
   
- В следующем примере показано определение управляемого интерфейса для `MarshalObject`.  
+ <span data-ttu-id="f4854-130">В следующем примере показано определение управляемого интерфейса для `MarshalObject`.</span><span class="sxs-lookup"><span data-stu-id="f4854-130">The following example shows the managed interface definition for `MarshalObject`.</span></span>  
   
 ```vb  
 Interface MarshalObject  
@@ -95,7 +91,7 @@ interface MarshalObject {
 }  
 ```  
   
- Следующий пример кода экспортирует интерфейс `MarshalObject` в библиотеку типов.  
+ <span data-ttu-id="f4854-131">Следующий пример кода экспортирует интерфейс `MarshalObject` в библиотеку типов.</span><span class="sxs-lookup"><span data-stu-id="f4854-131">The following code exports the `MarshalObject` interface to a type library.</span></span>  
   
 ```  
 interface MarshalObject {  
@@ -112,9 +108,9 @@ interface MarshalObject {
 ```  
   
 > [!NOTE]
->  Маршалер взаимодействия после вызова автоматически высвобождает любой выделенный объект внутри варианта.  
+>  <span data-ttu-id="f4854-132">Маршалер взаимодействия после вызова автоматически высвобождает любой выделенный объект внутри варианта.</span><span class="sxs-lookup"><span data-stu-id="f4854-132">The interop marshaler automatically frees any allocated object inside the variant after the call.</span></span>  
   
- В следующем примере показан форматированный тип значения.  
+ <span data-ttu-id="f4854-133">В следующем примере показан форматированный тип значения.</span><span class="sxs-lookup"><span data-stu-id="f4854-133">The following example shows a formatted value type.</span></span>  
   
 ```vb  
 Public Structure ObjectHolder  
@@ -130,7 +126,7 @@ public struct ObjectHolder {
 }  
 ```  
   
- Следующий пример кода экспортирует форматированный тип в библиотеку типов.  
+ <span data-ttu-id="f4854-134">Следующий пример кода экспортирует форматированный тип в библиотеку типов.</span><span class="sxs-lookup"><span data-stu-id="f4854-134">The following code exports the formatted type to a type library.</span></span>  
   
 ```  
 struct ObjectHolder {  
@@ -140,50 +136,50 @@ struct ObjectHolder {
 ```  
   
 <a name="cpcondefaultmarshalingforobjectsanchor2"></a>   
-## <a name="marshaling-object-to-interface"></a>Маршалинг объекта в интерфейс  
- Если объект предоставляется модели COM в виде интерфейса, это будет интерфейс класса для управляемого типа <xref:System.Object> (интерфейс **_Object**). В полученной библиотеке типов этот интерфейс типизируется как **IDispatch** (<xref:System.Runtime.InteropServices.UnmanagedType>) или **IUnknown** (**UnmanagedType.IUnknown**). Клиенты COM могут динамически вызывать члены управляемого класса или любые члены, реализуемые его производными классами, используя интерфейс **_Object**. Клиент также может вызывать **QueryInterface** для получения любого другого интерфейса, явно реализуемого управляемым типом.  
+## <a name="marshaling-object-to-interface"></a><span data-ttu-id="f4854-135">Маршалинг объекта в интерфейс</span><span class="sxs-lookup"><span data-stu-id="f4854-135">Marshaling Object to Interface</span></span>  
+ <span data-ttu-id="f4854-136">Если объект предоставляется модели COM в виде интерфейса, это будет интерфейс класса для управляемого типа <xref:System.Object> (интерфейс **_Object**).</span><span class="sxs-lookup"><span data-stu-id="f4854-136">When an object is exposed to COM as an interface, that interface is the class interface for the managed type <xref:System.Object> (the **_Object** interface).</span></span> <span data-ttu-id="f4854-137">В полученной библиотеке типов этот интерфейс типизируется как **IDispatch** (<xref:System.Runtime.InteropServices.UnmanagedType>) или **IUnknown** (**UnmanagedType.IUnknown**).</span><span class="sxs-lookup"><span data-stu-id="f4854-137">This interface is typed as an **IDispatch** (<xref:System.Runtime.InteropServices.UnmanagedType>) or an **IUnknown** (**UnmanagedType.IUnknown**) in the resulting type library.</span></span> <span data-ttu-id="f4854-138">Клиенты COM могут динамически вызывать члены управляемого класса или любые члены, реализуемые его производными классами, используя интерфейс **_Object**.</span><span class="sxs-lookup"><span data-stu-id="f4854-138">COM clients can dynamically invoke the members of the managed class or any members implemented by its derived classes through the **_Object** interface.</span></span> <span data-ttu-id="f4854-139">Клиент также может вызывать **QueryInterface** для получения любого другого интерфейса, явно реализуемого управляемым типом.</span><span class="sxs-lookup"><span data-stu-id="f4854-139">The client can also call **QueryInterface** to obtain any other interface explicitly implemented by the managed type.</span></span>  
   
 <a name="cpcondefaultmarshalingforobjectsanchor3"></a>   
-## <a name="marshaling-object-to-variant"></a>Маршалинг объекта в вариант  
- При маршалинге объекта в вариант внутренний тип варианта определяется во время выполнения на основе следующих правил:  
+## <a name="marshaling-object-to-variant"></a><span data-ttu-id="f4854-140">Маршалинг объекта в вариант</span><span class="sxs-lookup"><span data-stu-id="f4854-140">Marshaling Object to Variant</span></span>  
+ <span data-ttu-id="f4854-141">При маршалинге объекта в вариант внутренний тип варианта определяется во время выполнения на основе следующих правил:</span><span class="sxs-lookup"><span data-stu-id="f4854-141">When an object is marshaled to a variant, the internal variant type is determined at run time, based on the following rules:</span></span>  
   
--   Если ссылка на объект имеет значение NULL (**Nothing** в Visual Basic), выполняется маршалинг объекта в вариант типа **VT_EMPTY**.  
+-   <span data-ttu-id="f4854-142">Если ссылка на объект имеет значение NULL (**Nothing** в Visual Basic), выполняется маршалинг объекта в вариант типа **VT_EMPTY**.</span><span class="sxs-lookup"><span data-stu-id="f4854-142">If the object reference is null (**Nothing** in Visual Basic), the object is marshaled to a variant of type **VT_EMPTY**.</span></span>  
   
--   Если объект является экземпляром любого типа, представленного в следующей таблице, итоговый тип варианта определяется встроенными правилами маршалера, которые показаны в таблице.  
+-   <span data-ttu-id="f4854-143">Если объект является экземпляром любого типа, представленного в следующей таблице, итоговый тип варианта определяется встроенными правилами маршалера, которые показаны в таблице.</span><span class="sxs-lookup"><span data-stu-id="f4854-143">If the object is an instance of any type listed in the following table, the resulting variant type is determined by the rules built into the marshaler and shown in the table.</span></span>  
   
--   Другие объекты, которым требуется явное управление поведением маршалинга, могут реализовывать интерфейс <xref:System.IConvertible>. В этом случае тип варианта определяется в соответствии с кодом типа, возвращаемым из метода <xref:System.IConvertible.GetTypeCode%2A?displayProperty=fullName>. В противном случае выполняется маршалинг объекта в виде варианта типа **VT_UNKNOWN**.  
+-   <span data-ttu-id="f4854-144">Другие объекты, которым требуется явное управление поведением маршалинга, могут реализовывать интерфейс <xref:System.IConvertible>.</span><span class="sxs-lookup"><span data-stu-id="f4854-144">Other objects that need to explicitly control the marshaling behavior can implement the <xref:System.IConvertible> interface.</span></span> <span data-ttu-id="f4854-145">В этом случае тип варианта определяется в соответствии с кодом типа, возвращаемым из метода <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f4854-145">In that case, the variant type is determined by the type code returned from the <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="f4854-146">В противном случае выполняется маршалинг объекта в виде варианта типа **VT_UNKNOWN**.</span><span class="sxs-lookup"><span data-stu-id="f4854-146">Otherwise, the object is marshaled as a variant of type **VT_UNKNOWN**.</span></span>  
   
-### <a name="marshaling-system-types-to-variant"></a>Маршалинг системных типов в вариант  
- В следующей таблице показаны управляемые типы объектов и соответствующие им варианты модели COM. Эти типы преобразуются только в том случае, если сигнатура вызываемого метода относится к типу <xref:System.Object?displayProperty=fullName>.  
+### <a name="marshaling-system-types-to-variant"></a><span data-ttu-id="f4854-147">Маршалинг системных типов в вариант</span><span class="sxs-lookup"><span data-stu-id="f4854-147">Marshaling System Types to Variant</span></span>  
+ <span data-ttu-id="f4854-148">В следующей таблице показаны управляемые типы объектов и соответствующие им варианты модели COM.</span><span class="sxs-lookup"><span data-stu-id="f4854-148">The following table shows managed object types and their corresponding COM variant types.</span></span> <span data-ttu-id="f4854-149">Эти типы преобразуются только в том случае, если сигнатура вызываемого метода относится к типу <xref:System.Object?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f4854-149">These types are converted only when the signature of the method being called is of type <xref:System.Object?displayProperty=nameWithType>.</span></span>  
   
-|Тип объекта|Тип варианта COM|  
+|<span data-ttu-id="f4854-150">Тип объекта</span><span class="sxs-lookup"><span data-stu-id="f4854-150">Object type</span></span>|<span data-ttu-id="f4854-151">Тип варианта COM</span><span class="sxs-lookup"><span data-stu-id="f4854-151">COM variant type</span></span>|  
 |-----------------|----------------------|  
-|Ссылка на объект NULL (**Nothing** в Visual Basic).|**VT_EMPTY**|  
-|<xref:System.DBNull?displayProperty=fullName>|**VT_NULL**|  
-|<xref:System.Runtime.InteropServices.ErrorWrapper?displayProperty=fullName>|**VT_ERROR**|  
-|<xref:System.Reflection.Missing?displayProperty=fullName>|**VT_ERROR** с **E_PARAMNOTFOUND**|  
-|<xref:System.Runtime.InteropServices.DispatchWrapper?displayProperty=fullName>|**VT_DISPATCH**|  
-|<xref:System.Runtime.InteropServices.UnknownWrapper?displayProperty=fullName>|**VT_UNKNOWN**|  
-|<xref:System.Runtime.InteropServices.CurrencyWrapper?displayProperty=fullName>|**VT_CY**|  
-|<xref:System.Boolean?displayProperty=fullName>|**VT_BOOL**|  
-|<xref:System.SByte?displayProperty=fullName>|**VT_I1**|  
-|<xref:System.Byte?displayProperty=fullName>|**VT_UI1**|  
-|<xref:System.Int16?displayProperty=fullName>|**VT_I2**|  
-|<xref:System.UInt16?displayProperty=fullName>|**VT_UI2**|  
-|<xref:System.Int32?displayProperty=fullName>|**VT_I4**|  
-|<xref:System.UInt32?displayProperty=fullName>|**VT_UI4**|  
-|<xref:System.Int64?displayProperty=fullName>|**VT_I8**|  
-|<xref:System.UInt64?displayProperty=fullName>|**VT_UI8**|  
-|<xref:System.Single?displayProperty=fullName>|**VT_R4**|  
-|<xref:System.Double?displayProperty=fullName>|**VT_R8**|  
-|<xref:System.Decimal?displayProperty=fullName>|**VT_DECIMAL**|  
-|<xref:System.DateTime?displayProperty=fullName>|**VT_DATE**|  
-|<xref:System.String?displayProperty=fullName>|**VT_BSTR**|  
-|<xref:System.IntPtr?displayProperty=fullName>|**VT_INT**|  
-|<xref:System.UIntPtr?displayProperty=fullName>|**VT_UINT**|  
-|<xref:System.Array?displayProperty=fullName>|**VT_ARRAY**|  
+|<span data-ttu-id="f4854-152">Ссылка на объект NULL (**Nothing** в Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="f4854-152">Null object reference (**Nothing** in Visual Basic).</span></span>|<span data-ttu-id="f4854-153">**VT_EMPTY**</span><span class="sxs-lookup"><span data-stu-id="f4854-153">**VT_EMPTY**</span></span>|  
+|<xref:System.DBNull?displayProperty=nameWithType>|<span data-ttu-id="f4854-154">**VT_NULL**</span><span class="sxs-lookup"><span data-stu-id="f4854-154">**VT_NULL**</span></span>|  
+|<xref:System.Runtime.InteropServices.ErrorWrapper?displayProperty=nameWithType>|<span data-ttu-id="f4854-155">**VT_ERROR**</span><span class="sxs-lookup"><span data-stu-id="f4854-155">**VT_ERROR**</span></span>|  
+|<xref:System.Reflection.Missing?displayProperty=nameWithType>|<span data-ttu-id="f4854-156">**VT_ERROR** с **E_PARAMNOTFOUND**</span><span class="sxs-lookup"><span data-stu-id="f4854-156">**VT_ERROR** with **E_PARAMNOTFOUND**</span></span>|  
+|<xref:System.Runtime.InteropServices.DispatchWrapper?displayProperty=nameWithType>|<span data-ttu-id="f4854-157">**VT_DISPATCH**</span><span class="sxs-lookup"><span data-stu-id="f4854-157">**VT_DISPATCH**</span></span>|  
+|<xref:System.Runtime.InteropServices.UnknownWrapper?displayProperty=nameWithType>|<span data-ttu-id="f4854-158">**VT_UNKNOWN**</span><span class="sxs-lookup"><span data-stu-id="f4854-158">**VT_UNKNOWN**</span></span>|  
+|<xref:System.Runtime.InteropServices.CurrencyWrapper?displayProperty=nameWithType>|<span data-ttu-id="f4854-159">**VT_CY**</span><span class="sxs-lookup"><span data-stu-id="f4854-159">**VT_CY**</span></span>|  
+|<xref:System.Boolean?displayProperty=nameWithType>|<span data-ttu-id="f4854-160">**VT_BOOL**</span><span class="sxs-lookup"><span data-stu-id="f4854-160">**VT_BOOL**</span></span>|  
+|<xref:System.SByte?displayProperty=nameWithType>|<span data-ttu-id="f4854-161">**VT_I1**</span><span class="sxs-lookup"><span data-stu-id="f4854-161">**VT_I1**</span></span>|  
+|<xref:System.Byte?displayProperty=nameWithType>|<span data-ttu-id="f4854-162">**VT_UI1**</span><span class="sxs-lookup"><span data-stu-id="f4854-162">**VT_UI1**</span></span>|  
+|<xref:System.Int16?displayProperty=nameWithType>|<span data-ttu-id="f4854-163">**VT_I2**</span><span class="sxs-lookup"><span data-stu-id="f4854-163">**VT_I2**</span></span>|  
+|<xref:System.UInt16?displayProperty=nameWithType>|<span data-ttu-id="f4854-164">**VT_UI2**</span><span class="sxs-lookup"><span data-stu-id="f4854-164">**VT_UI2**</span></span>|  
+|<xref:System.Int32?displayProperty=nameWithType>|<span data-ttu-id="f4854-165">**VT_I4**</span><span class="sxs-lookup"><span data-stu-id="f4854-165">**VT_I4**</span></span>|  
+|<xref:System.UInt32?displayProperty=nameWithType>|<span data-ttu-id="f4854-166">**VT_UI4**</span><span class="sxs-lookup"><span data-stu-id="f4854-166">**VT_UI4**</span></span>|  
+|<xref:System.Int64?displayProperty=nameWithType>|<span data-ttu-id="f4854-167">**VT_I8**</span><span class="sxs-lookup"><span data-stu-id="f4854-167">**VT_I8**</span></span>|  
+|<xref:System.UInt64?displayProperty=nameWithType>|<span data-ttu-id="f4854-168">**VT_UI8**</span><span class="sxs-lookup"><span data-stu-id="f4854-168">**VT_UI8**</span></span>|  
+|<xref:System.Single?displayProperty=nameWithType>|<span data-ttu-id="f4854-169">**VT_R4**</span><span class="sxs-lookup"><span data-stu-id="f4854-169">**VT_R4**</span></span>|  
+|<xref:System.Double?displayProperty=nameWithType>|<span data-ttu-id="f4854-170">**VT_R8**</span><span class="sxs-lookup"><span data-stu-id="f4854-170">**VT_R8**</span></span>|  
+|<xref:System.Decimal?displayProperty=nameWithType>|<span data-ttu-id="f4854-171">**VT_DECIMAL**</span><span class="sxs-lookup"><span data-stu-id="f4854-171">**VT_DECIMAL**</span></span>|  
+|<xref:System.DateTime?displayProperty=nameWithType>|<span data-ttu-id="f4854-172">**VT_DATE**</span><span class="sxs-lookup"><span data-stu-id="f4854-172">**VT_DATE**</span></span>|  
+|<xref:System.String?displayProperty=nameWithType>|<span data-ttu-id="f4854-173">**VT_BSTR**</span><span class="sxs-lookup"><span data-stu-id="f4854-173">**VT_BSTR**</span></span>|  
+|<xref:System.IntPtr?displayProperty=nameWithType>|<span data-ttu-id="f4854-174">**VT_INT**</span><span class="sxs-lookup"><span data-stu-id="f4854-174">**VT_INT**</span></span>|  
+|<xref:System.UIntPtr?displayProperty=nameWithType>|<span data-ttu-id="f4854-175">**VT_UINT**</span><span class="sxs-lookup"><span data-stu-id="f4854-175">**VT_UINT**</span></span>|  
+|<xref:System.Array?displayProperty=nameWithType>|<span data-ttu-id="f4854-176">**VT_ARRAY**</span><span class="sxs-lookup"><span data-stu-id="f4854-176">**VT_ARRAY**</span></span>|  
   
- В следующем примере кода с помощью интерфейса `MarshalObject` демонстрируется передача различных типов вариантов на COM-сервер.  
+ <span data-ttu-id="f4854-177">В следующем примере кода с помощью интерфейса `MarshalObject` демонстрируется передача различных типов вариантов на COM-сервер.</span><span class="sxs-lookup"><span data-stu-id="f4854-177">Using the `MarshalObject` interface defined in the previous example, the following code example demonstrates how to pass various types of variants to a COM server.</span></span>  
   
 ```vb  
 Dim mo As New MarshalObject()  
@@ -205,7 +201,7 @@ mo.SetVariant((single)27.0);   // Marshal as variant of type VT_R4.
 mo.SetVariant((double)27.0);   // Marshal as variant of type VT_R8.  
 ```  
   
- Маршалинг типов COM, у которых нет соответствующих управляемых типов, может осуществляться с использованием классов-оболочек, таких как <xref:System.Runtime.InteropServices.ErrorWrapper>, <xref:System.Runtime.InteropServices.DispatchWrapper>, <xref:System.Runtime.InteropServices.UnknownWrapper> и <xref:System.Runtime.InteropServices.CurrencyWrapper>. В следующем примере кода демонстрируется использование этих классов-оболочек для передачи различных типов вариантов на COM-сервер.  
+ <span data-ttu-id="f4854-178">Маршалинг типов COM, у которых нет соответствующих управляемых типов, может осуществляться с использованием классов-оболочек, таких как <xref:System.Runtime.InteropServices.ErrorWrapper>, <xref:System.Runtime.InteropServices.DispatchWrapper>, <xref:System.Runtime.InteropServices.UnknownWrapper> и <xref:System.Runtime.InteropServices.CurrencyWrapper>.</span><span class="sxs-lookup"><span data-stu-id="f4854-178">COM types that do not have corresponding managed types can be marshaled using wrapper classes such as <xref:System.Runtime.InteropServices.ErrorWrapper>, <xref:System.Runtime.InteropServices.DispatchWrapper>, <xref:System.Runtime.InteropServices.UnknownWrapper>, and <xref:System.Runtime.InteropServices.CurrencyWrapper>.</span></span> <span data-ttu-id="f4854-179">В следующем примере кода демонстрируется использование этих классов-оболочек для передачи различных типов вариантов на COM-сервер.</span><span class="sxs-lookup"><span data-stu-id="f4854-179">The following code example demonstrates how to use these wrappers to pass various types of variants to a COM server.</span></span>  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -231,120 +227,119 @@ mo.SetVariant(new ErrorWrapper(0x80054002));
 mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));  
 ```  
   
- Классы-оболочки определяются в пространстве имен <xref:System.Runtime.InteropServices>.  
+ <span data-ttu-id="f4854-180">Классы-оболочки определяются в пространстве имен <xref:System.Runtime.InteropServices>.</span><span class="sxs-lookup"><span data-stu-id="f4854-180">The wrapper classes are defined in the <xref:System.Runtime.InteropServices> namespace.</span></span>  
   
-### <a name="marshaling-the-iconvertible-interface-to-variant"></a>Маршалинг интерфейса IConvertible в вариант  
- Типы, которые не приведены в предыдущем разделе, могут управлять маршалингом посредством реализации интерфейса <xref:System.IConvertible>. Если объект реализует интерфейс **IConvertible**, тип варианта COM определяется во время выполнения на основе значения перечисления <xref:System.TypeCode>, которое возвращается методом <xref:System.IConvertible.GetTypeCode%2A?displayProperty=fullName>.  
+### <a name="marshaling-the-iconvertible-interface-to-variant"></a><span data-ttu-id="f4854-181">Маршалинг интерфейса IConvertible в вариант</span><span class="sxs-lookup"><span data-stu-id="f4854-181">Marshaling the IConvertible Interface to Variant</span></span>  
+ <span data-ttu-id="f4854-182">Типы, которые не приведены в предыдущем разделе, могут управлять маршалингом посредством реализации интерфейса <xref:System.IConvertible>.</span><span class="sxs-lookup"><span data-stu-id="f4854-182">Types other than those listed in the previous section can control how they are marshaled by implementing the <xref:System.IConvertible> interface.</span></span> <span data-ttu-id="f4854-183">Если объект реализует интерфейс **IConvertible**, тип варианта COM определяется во время выполнения на основе значения перечисления <xref:System.TypeCode>, которое возвращается методом <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f4854-183">If the object implements the **IConvertible** interface, the COM variant type is determined at run time by the value of the <xref:System.TypeCode> enumeration returned from the <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType> method.</span></span>  
   
- В следующей таблице показаны возможные значения перечисления **TypeCode** и соответствующие им типы вариантов COM.  
+ <span data-ttu-id="f4854-184">В следующей таблице показаны возможные значения перечисления **TypeCode** и соответствующие им типы вариантов COM.</span><span class="sxs-lookup"><span data-stu-id="f4854-184">The following table shows the possible values for the **TypeCode** enumeration and the corresponding COM variant type for each value.</span></span>  
   
-|Код типа|Тип варианта COM|  
+|<span data-ttu-id="f4854-185">Код типа</span><span class="sxs-lookup"><span data-stu-id="f4854-185">TypeCode</span></span>|<span data-ttu-id="f4854-186">Тип варианта COM</span><span class="sxs-lookup"><span data-stu-id="f4854-186">COM variant type</span></span>|  
 |--------------|----------------------|  
-|**TypeCode.Empty**|**VT_EMPTY**|  
-|**TypeCode.Object**|**VT_UNKNOWN**|  
-|**TypeCode.DBNull**|**VT_NULL**|  
-|**TypeCode.Boolean**|**VT_BOOL**|  
-|**TypeCode.Char**|**VT_UI2**|  
-|**TypeCode.Sbyte**|**VT_I1**|  
-|**TypeCode.Byte**|**VT_UI1**|  
-|**TypeCode.Int16**|**VT_I2**|  
-|**TypeCode.UInt16**|**VT_UI2**|  
-|**TypeCode.Int32**|**VT_I4**|  
-|**TypeCode.UInt32**|**VT_UI4**|  
-|**TypeCode.Int64**|**VT_I8**|  
-|**TypeCode.UInt64**|**VT_UI8**|  
-|**TypeCode.Single**|**VT_R4**|  
-|**TypeCode.Double**|**VT_R8**|  
-|**TypeCode.Decimal**|**VT_DECIMAL**|  
-|**TypeCode.DateTime**|**VT_DATE**|  
-|**TypeCode.String**|**VT_BSTR**|  
-|Не поддерживается.|**VT_INT**|  
-|Не поддерживается.|**VT_UINT**|  
-|Не поддерживается.|**VT_ARRAY**|  
-|Не поддерживается.|**VT_RECORD**|  
-|Не поддерживается.|**VT_CY**|  
-|Не поддерживается.|**VT_VARIANT**|  
+|<span data-ttu-id="f4854-187">**TypeCode.Empty**</span><span class="sxs-lookup"><span data-stu-id="f4854-187">**TypeCode.Empty**</span></span>|<span data-ttu-id="f4854-188">**VT_EMPTY**</span><span class="sxs-lookup"><span data-stu-id="f4854-188">**VT_EMPTY**</span></span>|  
+|<span data-ttu-id="f4854-189">**TypeCode.Object**</span><span class="sxs-lookup"><span data-stu-id="f4854-189">**TypeCode.Object**</span></span>|<span data-ttu-id="f4854-190">**VT_UNKNOWN**</span><span class="sxs-lookup"><span data-stu-id="f4854-190">**VT_UNKNOWN**</span></span>|  
+|<span data-ttu-id="f4854-191">**TypeCode.DBNull**</span><span class="sxs-lookup"><span data-stu-id="f4854-191">**TypeCode.DBNull**</span></span>|<span data-ttu-id="f4854-192">**VT_NULL**</span><span class="sxs-lookup"><span data-stu-id="f4854-192">**VT_NULL**</span></span>|  
+|<span data-ttu-id="f4854-193">**TypeCode.Boolean**</span><span class="sxs-lookup"><span data-stu-id="f4854-193">**TypeCode.Boolean**</span></span>|<span data-ttu-id="f4854-194">**VT_BOOL**</span><span class="sxs-lookup"><span data-stu-id="f4854-194">**VT_BOOL**</span></span>|  
+|<span data-ttu-id="f4854-195">**TypeCode.Char**</span><span class="sxs-lookup"><span data-stu-id="f4854-195">**TypeCode.Char**</span></span>|<span data-ttu-id="f4854-196">**VT_UI2**</span><span class="sxs-lookup"><span data-stu-id="f4854-196">**VT_UI2**</span></span>|  
+|<span data-ttu-id="f4854-197">**TypeCode.Sbyte**</span><span class="sxs-lookup"><span data-stu-id="f4854-197">**TypeCode.Sbyte**</span></span>|<span data-ttu-id="f4854-198">**VT_I1**</span><span class="sxs-lookup"><span data-stu-id="f4854-198">**VT_I1**</span></span>|  
+|<span data-ttu-id="f4854-199">**TypeCode.Byte**</span><span class="sxs-lookup"><span data-stu-id="f4854-199">**TypeCode.Byte**</span></span>|<span data-ttu-id="f4854-200">**VT_UI1**</span><span class="sxs-lookup"><span data-stu-id="f4854-200">**VT_UI1**</span></span>|  
+|<span data-ttu-id="f4854-201">**TypeCode.Int16**</span><span class="sxs-lookup"><span data-stu-id="f4854-201">**TypeCode.Int16**</span></span>|<span data-ttu-id="f4854-202">**VT_I2**</span><span class="sxs-lookup"><span data-stu-id="f4854-202">**VT_I2**</span></span>|  
+|<span data-ttu-id="f4854-203">**TypeCode.UInt16**</span><span class="sxs-lookup"><span data-stu-id="f4854-203">**TypeCode.UInt16**</span></span>|<span data-ttu-id="f4854-204">**VT_UI2**</span><span class="sxs-lookup"><span data-stu-id="f4854-204">**VT_UI2**</span></span>|  
+|<span data-ttu-id="f4854-205">**TypeCode.Int32**</span><span class="sxs-lookup"><span data-stu-id="f4854-205">**TypeCode.Int32**</span></span>|<span data-ttu-id="f4854-206">**VT_I4**</span><span class="sxs-lookup"><span data-stu-id="f4854-206">**VT_I4**</span></span>|  
+|<span data-ttu-id="f4854-207">**TypeCode.UInt32**</span><span class="sxs-lookup"><span data-stu-id="f4854-207">**TypeCode.UInt32**</span></span>|<span data-ttu-id="f4854-208">**VT_UI4**</span><span class="sxs-lookup"><span data-stu-id="f4854-208">**VT_UI4**</span></span>|  
+|<span data-ttu-id="f4854-209">**TypeCode.Int64**</span><span class="sxs-lookup"><span data-stu-id="f4854-209">**TypeCode.Int64**</span></span>|<span data-ttu-id="f4854-210">**VT_I8**</span><span class="sxs-lookup"><span data-stu-id="f4854-210">**VT_I8**</span></span>|  
+|<span data-ttu-id="f4854-211">**TypeCode.UInt64**</span><span class="sxs-lookup"><span data-stu-id="f4854-211">**TypeCode.UInt64**</span></span>|<span data-ttu-id="f4854-212">**VT_UI8**</span><span class="sxs-lookup"><span data-stu-id="f4854-212">**VT_UI8**</span></span>|  
+|<span data-ttu-id="f4854-213">**TypeCode.Single**</span><span class="sxs-lookup"><span data-stu-id="f4854-213">**TypeCode.Single**</span></span>|<span data-ttu-id="f4854-214">**VT_R4**</span><span class="sxs-lookup"><span data-stu-id="f4854-214">**VT_R4**</span></span>|  
+|<span data-ttu-id="f4854-215">**TypeCode.Double**</span><span class="sxs-lookup"><span data-stu-id="f4854-215">**TypeCode.Double**</span></span>|<span data-ttu-id="f4854-216">**VT_R8**</span><span class="sxs-lookup"><span data-stu-id="f4854-216">**VT_R8**</span></span>|  
+|<span data-ttu-id="f4854-217">**TypeCode.Decimal**</span><span class="sxs-lookup"><span data-stu-id="f4854-217">**TypeCode.Decimal**</span></span>|<span data-ttu-id="f4854-218">**VT_DECIMAL**</span><span class="sxs-lookup"><span data-stu-id="f4854-218">**VT_DECIMAL**</span></span>|  
+|<span data-ttu-id="f4854-219">**TypeCode.DateTime**</span><span class="sxs-lookup"><span data-stu-id="f4854-219">**TypeCode.DateTime**</span></span>|<span data-ttu-id="f4854-220">**VT_DATE**</span><span class="sxs-lookup"><span data-stu-id="f4854-220">**VT_DATE**</span></span>|  
+|<span data-ttu-id="f4854-221">**TypeCode.String**</span><span class="sxs-lookup"><span data-stu-id="f4854-221">**TypeCode.String**</span></span>|<span data-ttu-id="f4854-222">**VT_BSTR**</span><span class="sxs-lookup"><span data-stu-id="f4854-222">**VT_BSTR**</span></span>|  
+|<span data-ttu-id="f4854-223">Не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="f4854-223">Not supported.</span></span>|<span data-ttu-id="f4854-224">**VT_INT**</span><span class="sxs-lookup"><span data-stu-id="f4854-224">**VT_INT**</span></span>|  
+|<span data-ttu-id="f4854-225">Не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="f4854-225">Not supported.</span></span>|<span data-ttu-id="f4854-226">**VT_UINT**</span><span class="sxs-lookup"><span data-stu-id="f4854-226">**VT_UINT**</span></span>|  
+|<span data-ttu-id="f4854-227">Не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="f4854-227">Not supported.</span></span>|<span data-ttu-id="f4854-228">**VT_ARRAY**</span><span class="sxs-lookup"><span data-stu-id="f4854-228">**VT_ARRAY**</span></span>|  
+|<span data-ttu-id="f4854-229">Не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="f4854-229">Not supported.</span></span>|<span data-ttu-id="f4854-230">**VT_RECORD**</span><span class="sxs-lookup"><span data-stu-id="f4854-230">**VT_RECORD**</span></span>|  
+|<span data-ttu-id="f4854-231">Не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="f4854-231">Not supported.</span></span>|<span data-ttu-id="f4854-232">**VT_CY**</span><span class="sxs-lookup"><span data-stu-id="f4854-232">**VT_CY**</span></span>|  
+|<span data-ttu-id="f4854-233">Не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="f4854-233">Not supported.</span></span>|<span data-ttu-id="f4854-234">**VT_VARIANT**</span><span class="sxs-lookup"><span data-stu-id="f4854-234">**VT_VARIANT**</span></span>|  
   
- Значение варианта COM определяется посредством вызова интерфейса **IConvertible.To** *Type*, в котором **To** *Type* — это подпрограмма преобразования, которая соответствует типу, возвращаемому из **IConvertible.GetTypeCode**. Например, объект, который возвращает **TypeCode.Double** из **IConvertible.GetTypeCode**, маршалируется как вариант COM типа **VT_R8**. Чтобы получить значение варианта (хранится в поле **dblVal** варианта COM), можно выполнить приведение к интерфейсу **IConvertible** и вызвать метод <xref:System.IConvertible.ToDouble%2A>.  
+ <span data-ttu-id="f4854-235">Значение варианта COM определяется посредством вызова интерфейса **IConvertible.To** *Type*, в котором **To** *Type* — это подпрограмма преобразования, которая соответствует типу, возвращаемому из **IConvertible.GetTypeCode**.</span><span class="sxs-lookup"><span data-stu-id="f4854-235">The value of the COM variant is determined by calling the **IConvertible.To** *Type* interface, where **To** *Type* is the conversion routine that corresponds to the type that was returned from **IConvertible.GetTypeCode**.</span></span> <span data-ttu-id="f4854-236">Например, объект, который возвращает **TypeCode.Double** из **IConvertible.GetTypeCode**, маршалируется как вариант COM типа **VT_R8**.</span><span class="sxs-lookup"><span data-stu-id="f4854-236">For example, an object that returns **TypeCode.Double** from **IConvertible.GetTypeCode** is marshaled as a COM variant of type **VT_R8**.</span></span> <span data-ttu-id="f4854-237">Чтобы получить значение варианта (хранится в поле **dblVal** варианта COM), можно выполнить приведение к интерфейсу **IConvertible** и вызвать метод <xref:System.IConvertible.ToDouble%2A>.</span><span class="sxs-lookup"><span data-stu-id="f4854-237">You can obtain the value of the variant (stored in the **dblVal** field of the COM variant) by casting to the **IConvertible** interface and calling the <xref:System.IConvertible.ToDouble%2A> method.</span></span>  
   
 <a name="cpcondefaultmarshalingforobjectsanchor4"></a>   
-## <a name="marshaling-variant-to-object"></a>Маршалинг варианта в объект  
- При маршалинге варианта в объект тип (а в некоторых случаях и значение) маршалированного варианта определяет тип получаемого объекта. В следующей таблице показаны типы вариантов и соответствующие им типы объектов, которые создаются маршалером при передаче варианта из COM в .NET Framework.  
+## <a name="marshaling-variant-to-object"></a><span data-ttu-id="f4854-238">Маршалинг варианта в объект</span><span class="sxs-lookup"><span data-stu-id="f4854-238">Marshaling Variant to Object</span></span>  
+ <span data-ttu-id="f4854-239">При маршалинге варианта в объект тип (а в некоторых случаях и значение) маршалированного варианта определяет тип получаемого объекта.</span><span class="sxs-lookup"><span data-stu-id="f4854-239">When marshaling a variant to an object, the type, and sometimes the value, of the marshaled variant determines the type of object produced.</span></span> <span data-ttu-id="f4854-240">В следующей таблице показаны типы вариантов и соответствующие им типы объектов, которые создаются маршалером при передаче варианта из COM в .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="f4854-240">The following table identifies each variant type and the corresponding object type that the marshaler creates when a variant is passed from COM to the .NET Framework.</span></span>  
   
-|Тип варианта COM|Тип объекта|  
+|<span data-ttu-id="f4854-241">Тип варианта COM</span><span class="sxs-lookup"><span data-stu-id="f4854-241">COM variant type</span></span>|<span data-ttu-id="f4854-242">Тип объекта</span><span class="sxs-lookup"><span data-stu-id="f4854-242">Object type</span></span>|  
 |----------------------|-----------------|  
-|**VT_EMPTY**|Ссылка на объект NULL (**Nothing** в Visual Basic).|  
-|**VT_NULL**|<xref:System.DBNull?displayProperty=fullName>|  
-|**VT_DISPATCH**|**System.__ComObject** или значение NULL если (pdispVal == null)|  
-|**VT_UNKNOWN**|**System.__ComObject** или значение NULL если (punkVal == null)|  
-|**VT_ERROR**|<xref:System.UInt32?displayProperty=fullName>|  
-|**VT_BOOL**|<xref:System.Boolean?displayProperty=fullName>|  
-|**VT_I1**|<xref:System.SByte?displayProperty=fullName>|  
-|**VT_UI1**|<xref:System.Byte?displayProperty=fullName>|  
-|**VT_I2**|<xref:System.Int16?displayProperty=fullName>|  
-|**VT_UI2**|<xref:System.UInt16?displayProperty=fullName>|  
-|**VT_I4**|<xref:System.Int32?displayProperty=fullName>|  
-|**VT_UI4**|<xref:System.UInt32?displayProperty=fullName>|  
-|**VT_I8**|<xref:System.Int64?displayProperty=fullName>|  
-|**VT_UI8**|<xref:System.UInt64?displayProperty=fullName>|  
-|**VT_R4**|<xref:System.Single?displayProperty=fullName>|  
-|**VT_R8**|<xref:System.Double?displayProperty=fullName>|  
-|**VT_DECIMAL**|<xref:System.Decimal?displayProperty=fullName>|  
-|**VT_DATE**|<xref:System.DateTime?displayProperty=fullName>|  
-|**VT_BSTR**|<xref:System.String?displayProperty=fullName>|  
-|**VT_INT**|<xref:System.Int32?displayProperty=fullName>|  
-|**VT_UINT**|<xref:System.UInt32?displayProperty=fullName>|  
-|**VT_ARRAY** &#124; **VT_\***|<xref:System.Array?displayProperty=fullName>|  
-|**VT_CY**|<xref:System.Decimal?displayProperty=fullName>|  
-|**VT_RECORD**|Соответствующий тип упакованного значения.|  
-|**VT_VARIANT**|Не поддерживается.|  
+|<span data-ttu-id="f4854-243">**VT_EMPTY**</span><span class="sxs-lookup"><span data-stu-id="f4854-243">**VT_EMPTY**</span></span>|<span data-ttu-id="f4854-244">Ссылка на объект NULL (**Nothing** в Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="f4854-244">Null object reference (**Nothing** in Visual Basic).</span></span>|  
+|<span data-ttu-id="f4854-245">**VT_NULL**</span><span class="sxs-lookup"><span data-stu-id="f4854-245">**VT_NULL**</span></span>|<xref:System.DBNull?displayProperty=nameWithType>|  
+|<span data-ttu-id="f4854-246">**VT_DISPATCH**</span><span class="sxs-lookup"><span data-stu-id="f4854-246">**VT_DISPATCH**</span></span>|<span data-ttu-id="f4854-247">**System.__ComObject** или значение NULL если (pdispVal == null)</span><span class="sxs-lookup"><span data-stu-id="f4854-247">**System.__ComObject** or null if (pdispVal == null)</span></span>|  
+|<span data-ttu-id="f4854-248">**VT_UNKNOWN**</span><span class="sxs-lookup"><span data-stu-id="f4854-248">**VT_UNKNOWN**</span></span>|<span data-ttu-id="f4854-249">**System.__ComObject** или значение NULL если (punkVal == null)</span><span class="sxs-lookup"><span data-stu-id="f4854-249">**System.__ComObject** or null if (punkVal == null)</span></span>|  
+|<span data-ttu-id="f4854-250">**VT_ERROR**</span><span class="sxs-lookup"><span data-stu-id="f4854-250">**VT_ERROR**</span></span>|<xref:System.UInt32?displayProperty=nameWithType>|  
+|<span data-ttu-id="f4854-251">**VT_BOOL**</span><span class="sxs-lookup"><span data-stu-id="f4854-251">**VT_BOOL**</span></span>|<xref:System.Boolean?displayProperty=nameWithType>|  
+|<span data-ttu-id="f4854-252">**VT_I1**</span><span class="sxs-lookup"><span data-stu-id="f4854-252">**VT_I1**</span></span>|<xref:System.SByte?displayProperty=nameWithType>|  
+|<span data-ttu-id="f4854-253">**VT_UI1**</span><span class="sxs-lookup"><span data-stu-id="f4854-253">**VT_UI1**</span></span>|<xref:System.Byte?displayProperty=nameWithType>|  
+|<span data-ttu-id="f4854-254">**VT_I2**</span><span class="sxs-lookup"><span data-stu-id="f4854-254">**VT_I2**</span></span>|<xref:System.Int16?displayProperty=nameWithType>|  
+|<span data-ttu-id="f4854-255">**VT_UI2**</span><span class="sxs-lookup"><span data-stu-id="f4854-255">**VT_UI2**</span></span>|<xref:System.UInt16?displayProperty=nameWithType>|  
+|<span data-ttu-id="f4854-256">**VT_I4**</span><span class="sxs-lookup"><span data-stu-id="f4854-256">**VT_I4**</span></span>|<xref:System.Int32?displayProperty=nameWithType>|  
+|<span data-ttu-id="f4854-257">**VT_UI4**</span><span class="sxs-lookup"><span data-stu-id="f4854-257">**VT_UI4**</span></span>|<xref:System.UInt32?displayProperty=nameWithType>|  
+|<span data-ttu-id="f4854-258">**VT_I8**</span><span class="sxs-lookup"><span data-stu-id="f4854-258">**VT_I8**</span></span>|<xref:System.Int64?displayProperty=nameWithType>|  
+|<span data-ttu-id="f4854-259">**VT_UI8**</span><span class="sxs-lookup"><span data-stu-id="f4854-259">**VT_UI8**</span></span>|<xref:System.UInt64?displayProperty=nameWithType>|  
+|<span data-ttu-id="f4854-260">**VT_R4**</span><span class="sxs-lookup"><span data-stu-id="f4854-260">**VT_R4**</span></span>|<xref:System.Single?displayProperty=nameWithType>|  
+|<span data-ttu-id="f4854-261">**VT_R8**</span><span class="sxs-lookup"><span data-stu-id="f4854-261">**VT_R8**</span></span>|<xref:System.Double?displayProperty=nameWithType>|  
+|<span data-ttu-id="f4854-262">**VT_DECIMAL**</span><span class="sxs-lookup"><span data-stu-id="f4854-262">**VT_DECIMAL**</span></span>|<xref:System.Decimal?displayProperty=nameWithType>|  
+|<span data-ttu-id="f4854-263">**VT_DATE**</span><span class="sxs-lookup"><span data-stu-id="f4854-263">**VT_DATE**</span></span>|<xref:System.DateTime?displayProperty=nameWithType>|  
+|<span data-ttu-id="f4854-264">**VT_BSTR**</span><span class="sxs-lookup"><span data-stu-id="f4854-264">**VT_BSTR**</span></span>|<xref:System.String?displayProperty=nameWithType>|  
+|<span data-ttu-id="f4854-265">**VT_INT**</span><span class="sxs-lookup"><span data-stu-id="f4854-265">**VT_INT**</span></span>|<xref:System.Int32?displayProperty=nameWithType>|  
+|<span data-ttu-id="f4854-266">**VT_UINT**</span><span class="sxs-lookup"><span data-stu-id="f4854-266">**VT_UINT**</span></span>|<xref:System.UInt32?displayProperty=nameWithType>|  
+|<span data-ttu-id="f4854-267">**VT_ARRAY** &#124; **VT_\***</span><span class="sxs-lookup"><span data-stu-id="f4854-267">**VT_ARRAY** &#124; **VT_\***</span></span>|<xref:System.Array?displayProperty=nameWithType>|  
+|<span data-ttu-id="f4854-268">**VT_CY**</span><span class="sxs-lookup"><span data-stu-id="f4854-268">**VT_CY**</span></span>|<xref:System.Decimal?displayProperty=nameWithType>|  
+|<span data-ttu-id="f4854-269">**VT_RECORD**</span><span class="sxs-lookup"><span data-stu-id="f4854-269">**VT_RECORD**</span></span>|<span data-ttu-id="f4854-270">Соответствующий тип упакованного значения.</span><span class="sxs-lookup"><span data-stu-id="f4854-270">Corresponding boxed value type.</span></span>|  
+|<span data-ttu-id="f4854-271">**VT_VARIANT**</span><span class="sxs-lookup"><span data-stu-id="f4854-271">**VT_VARIANT**</span></span>|<span data-ttu-id="f4854-272">Не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="f4854-272">Not supported.</span></span>|  
   
- Типы вариантов, передаваемые из модели COM в управляемый код и обратно в COM, могут не сохранять тип варианта во время вызова. Рассмотрим, что произойдет при передаче типа варианта **VT_DISPATCH** из модели COM в .NET Framework. Во время маршалинга вариант преобразуется в <xref:System.Object?displayProperty=fullName>. Если затем **Object** возвращается в COM, выполняется его обратный маршалинг в вариант типа **VT_UNKNOWN**. При этом не гарантируется, что вариант, полученный при маршалинге объекта из управляемого кода в COM, будет иметь тот же тип, что и вариант, изначально использованный для создания объекта.  
+ <span data-ttu-id="f4854-273">Типы вариантов, передаваемые из модели COM в управляемый код и обратно в COM, могут не сохранять тип варианта во время вызова.</span><span class="sxs-lookup"><span data-stu-id="f4854-273">Variant types passed from COM to managed code and then back to COM might not retain the same variant type for the duration of the call.</span></span> <span data-ttu-id="f4854-274">Рассмотрим, что произойдет при передаче типа варианта **VT_DISPATCH** из модели COM в .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="f4854-274">Consider what happens when a variant of type **VT_DISPATCH** is passed from COM to the .NET Framework.</span></span> <span data-ttu-id="f4854-275">Во время маршалинга вариант преобразуется в <xref:System.Object?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f4854-275">During marshaling, the variant is converted to a <xref:System.Object?displayProperty=nameWithType>.</span></span> <span data-ttu-id="f4854-276">Если затем **Object** возвращается в COM, выполняется его обратный маршалинг в вариант типа **VT_UNKNOWN**.</span><span class="sxs-lookup"><span data-stu-id="f4854-276">If the **Object** is then passed back to COM, it is marshaled back to a variant of type **VT_UNKNOWN**.</span></span> <span data-ttu-id="f4854-277">При этом не гарантируется, что вариант, полученный при маршалинге объекта из управляемого кода в COM, будет иметь тот же тип, что и вариант, изначально использованный для создания объекта.</span><span class="sxs-lookup"><span data-stu-id="f4854-277">There is no guarantee that the variant produced when an object is marshaled from managed code to COM will be the same type as the variant initially used to produce the object.</span></span>  
   
 <a name="cpcondefaultmarshalingforobjectsanchor6"></a>   
-## <a name="marshaling-byref-variants"></a>Маршалинг вариантов ByRef  
- Сами по себе варианты могут передаваться по значению или по ссылке. Несмотря на это, также можно использовать флаг **VT_BYREF** с любым типом варианта, чтобы указать, что содержимое варианта передается по ссылке, а не по значению. Разница между маршалингом вариантов по ссылке и с установленным флагом **VT_BYREF** может показаться не очевидной. На следующем рисунке показаны различия между этими способами.  
+## <a name="marshaling-byref-variants"></a><span data-ttu-id="f4854-278">Маршалинг вариантов ByRef</span><span class="sxs-lookup"><span data-stu-id="f4854-278">Marshaling ByRef Variants</span></span>  
+ <span data-ttu-id="f4854-279">Сами по себе варианты могут передаваться по значению или по ссылке. Несмотря на это, также можно использовать флаг **VT_BYREF** с любым типом варианта, чтобы указать, что содержимое варианта передается по ссылке, а не по значению.</span><span class="sxs-lookup"><span data-stu-id="f4854-279">Although variants themselves can be passed by value or by reference, the **VT_BYREF** flag can also be used with any variant type to indicate that the contents of the variant are being passed by reference instead of by value.</span></span> <span data-ttu-id="f4854-280">Разница между маршалингом вариантов по ссылке и с установленным флагом **VT_BYREF** может показаться не очевидной.</span><span class="sxs-lookup"><span data-stu-id="f4854-280">The difference between marshaling variants by reference and marshaling a variant with the **VT_BYREF** flag set can be confusing.</span></span> <span data-ttu-id="f4854-281">На следующем рисунке показаны различия между этими способами.</span><span class="sxs-lookup"><span data-stu-id="f4854-281">The following illustration clarifies the differences.</span></span>  
   
- ![Вариант, передающийся по стопке](../../../docs/framework/interop/media/interopvariant.gif "interopvariant")  
-Варианты, передаваемые по значению и по ссылке  
+ <span data-ttu-id="f4854-282">![Вариант, передающийся по стопке](../../../docs/framework/interop/media/interopvariant.gif "interopvariant")</span><span class="sxs-lookup"><span data-stu-id="f4854-282">![Variant passed on the stack](../../../docs/framework/interop/media/interopvariant.gif "interopvariant")</span></span>  
+<span data-ttu-id="f4854-283">Варианты, передаваемые по значению и по ссылке</span><span class="sxs-lookup"><span data-stu-id="f4854-283">Variants passed by value and by reference</span></span>  
   
- **Поведение по умолчанию при маршалинге объектов и вариантов по значению**  
+ <span data-ttu-id="f4854-284">**Поведение по умолчанию при маршалинге объектов и вариантов по значению**</span><span class="sxs-lookup"><span data-stu-id="f4854-284">**Default behavior for marshaling objects and variants by value**</span></span>  
   
--   При передаче объектов из управляемого кода в COM содержимое объекта копируется в новый вариант, создаваемый маршалером, с использованием правил, которые определены в разделе [Маршалинг объекта в вариант](#cpcondefaultmarshalingforobjectsanchor3). Изменения, внесенные в вариант в неуправляемом коде, не применяются к исходному объекту после возврата из вызова.  
+-   <span data-ttu-id="f4854-285">При передаче объектов из управляемого кода в COM содержимое объекта копируется в новый вариант, создаваемый маршалером, с использованием правил, которые определены в разделе [Маршалинг объекта в вариант](#cpcondefaultmarshalingforobjectsanchor3).</span><span class="sxs-lookup"><span data-stu-id="f4854-285">When passing objects from managed code to COM, the contents of the object are copied into a new variant created by the marshaler, using the rules defined in [Marshaling Object to Variant](#cpcondefaultmarshalingforobjectsanchor3).</span></span> <span data-ttu-id="f4854-286">Изменения, внесенные в вариант в неуправляемом коде, не применяются к исходному объекту после возврата из вызова.</span><span class="sxs-lookup"><span data-stu-id="f4854-286">Changes made to the variant on the unmanaged side are not propagated back to the original object on return from the call.</span></span>  
   
--   При передаче вариантов из COM в управляемый код содержимое варианта копируется в создаваемый объект с использованием правил, которые определены в разделе [Маршалинг варианта в объект](#cpcondefaultmarshalingforobjectsanchor4). Изменения, внесенные в объект в управляемом коде, не применяются к исходному варианту после возврата из вызова.  
+-   <span data-ttu-id="f4854-287">При передаче вариантов из COM в управляемый код содержимое варианта копируется в создаваемый объект с использованием правил, которые определены в разделе [Маршалинг варианта в объект](#cpcondefaultmarshalingforobjectsanchor4).</span><span class="sxs-lookup"><span data-stu-id="f4854-287">When passing variants from COM to managed code, the contents of the variant are copied to a newly created object, using the rules defined in [Marshaling Variant to Object](#cpcondefaultmarshalingforobjectsanchor4).</span></span> <span data-ttu-id="f4854-288">Изменения, внесенные в объект в управляемом коде, не применяются к исходному варианту после возврата из вызова.</span><span class="sxs-lookup"><span data-stu-id="f4854-288">Changes made to the object on the managed side are not propagated back to the original variant on return from the call.</span></span>  
   
- **Поведение по умолчанию при маршалинге объектов и вариантов по ссылке**  
+ <span data-ttu-id="f4854-289">**Поведение по умолчанию при маршалинге объектов и вариантов по ссылке**</span><span class="sxs-lookup"><span data-stu-id="f4854-289">**Default behavior for marshaling objects and variants by reference**</span></span>  
   
- Для распространения изменений в вызывающем объекте параметры необходимо передавать по ссылке. Например, можно использовать ключевое слово **ref** в C# (или **ByRef** в управляемом коде Visual Basic) для передачи параметров по ссылке. В модели COM ссылочные параметры передаются с использованием указателя, например **variant \***.  
+ <span data-ttu-id="f4854-290">Для распространения изменений в вызывающем объекте параметры необходимо передавать по ссылке.</span><span class="sxs-lookup"><span data-stu-id="f4854-290">To propagate changes back to the caller, the parameters must be passed by reference.</span></span> <span data-ttu-id="f4854-291">Например, можно использовать ключевое слово **ref** в C# (или **ByRef** в управляемом коде Visual Basic) для передачи параметров по ссылке.</span><span class="sxs-lookup"><span data-stu-id="f4854-291">For example, you can use the **ref** keyword in C# (or **ByRef** in Visual Basic managed code) to pass parameters by reference.</span></span> <span data-ttu-id="f4854-292">В модели COM ссылочные параметры передаются с использованием указателя, например **variant \***.</span><span class="sxs-lookup"><span data-stu-id="f4854-292">In COM, reference parameters are passed using a pointer such as a **variant \***.</span></span>  
   
--   При передаче объекта в COM по ссылке маршалер создает новый вариант и копирует содержимое ссылки на объект в вариант до того, как будет выполнен вызов. Вариант передается в неуправляемую функцию, в которой пользователь может изменять его содержимое. После возврата из вызова изменения, внесенные в вариант в неуправляемом коде, применяются к исходному объекту. Если тип варианта отличается от типа варианта, переданного в вызов, изменения применяются к объекту другого типа. Таким образом, тип переданного в вызов объекта может отличаться от типа объекта, возвращаемого из вызова.  
+-   <span data-ttu-id="f4854-293">При передаче объекта в COM по ссылке маршалер создает новый вариант и копирует содержимое ссылки на объект в вариант до того, как будет выполнен вызов.</span><span class="sxs-lookup"><span data-stu-id="f4854-293">When passing an object to COM by reference, the marshaler creates a new variant and copies the contents of the object reference into the variant before the call is made.</span></span> <span data-ttu-id="f4854-294">Вариант передается в неуправляемую функцию, в которой пользователь может изменять его содержимое.</span><span class="sxs-lookup"><span data-stu-id="f4854-294">The variant is passed to the unmanaged function where the user is free to change the contents of the variant.</span></span> <span data-ttu-id="f4854-295">После возврата из вызова изменения, внесенные в вариант в неуправляемом коде, применяются к исходному объекту.</span><span class="sxs-lookup"><span data-stu-id="f4854-295">On return from the call, any changes made to the variant on the unmanaged side are propagated back to the original object.</span></span> <span data-ttu-id="f4854-296">Если тип варианта отличается от типа варианта, переданного в вызов, изменения применяются к объекту другого типа.</span><span class="sxs-lookup"><span data-stu-id="f4854-296">If the type of the variant differs from the type of the variant passed to the call, then the changes are propagated back to an object of a different type.</span></span> <span data-ttu-id="f4854-297">Таким образом, тип переданного в вызов объекта может отличаться от типа объекта, возвращаемого из вызова.</span><span class="sxs-lookup"><span data-stu-id="f4854-297">That is, the type of the object passed into the call can differ from the type of the object returned from the call.</span></span>  
   
--   При передаче варианта в управляемый код по ссылке маршалер создает новый объект и копирует содержимое варианта в объект до того, как будет выполнен вызов. Ссылка на объект передается в управляемую функцию, в которой пользователь может изменять сам объект. После возврата из вызова изменения, внесенные в указываемый по ссылке объект, применяются к исходному варианту. Если тип объекта отличается от типа объекта, переданного в вызов, тип исходного варианта изменяется и значение передается обратно в вариант. Аналогичным образом, тип переданного в вызов варианта может отличаться от типа варианта, возвращаемого из вызова.  
+-   <span data-ttu-id="f4854-298">При передаче варианта в управляемый код по ссылке маршалер создает новый объект и копирует содержимое варианта в объект до того, как будет выполнен вызов.</span><span class="sxs-lookup"><span data-stu-id="f4854-298">When passing a variant to managed code by reference, the marshaler creates a new object and copies the contents of the variant into the object before making the call.</span></span> <span data-ttu-id="f4854-299">Ссылка на объект передается в управляемую функцию, в которой пользователь может изменять сам объект.</span><span class="sxs-lookup"><span data-stu-id="f4854-299">A reference to the object is passed to the managed function, where the user is free to change the object.</span></span> <span data-ttu-id="f4854-300">После возврата из вызова изменения, внесенные в указываемый по ссылке объект, применяются к исходному варианту.</span><span class="sxs-lookup"><span data-stu-id="f4854-300">On return from the call, any changes made to the referenced object are propagated back to the original variant.</span></span> <span data-ttu-id="f4854-301">Если тип объекта отличается от типа объекта, переданного в вызов, тип исходного варианта изменяется и значение передается обратно в вариант.</span><span class="sxs-lookup"><span data-stu-id="f4854-301">If the type of the object differs from the type of the object passed in to the call, the type of the original variant is changed and the value is propagated back into the variant.</span></span> <span data-ttu-id="f4854-302">Аналогичным образом, тип переданного в вызов варианта может отличаться от типа варианта, возвращаемого из вызова.</span><span class="sxs-lookup"><span data-stu-id="f4854-302">Again, the type of the variant passed into the call can differ from the type of the variant returned from the call.</span></span>  
   
- **Поведение по умолчанию при маршалинге варианта с установленным флагом VT_BYREF**  
+ <span data-ttu-id="f4854-303">**Поведение по умолчанию при маршалинге варианта с установленным флагом VT_BYREF**</span><span class="sxs-lookup"><span data-stu-id="f4854-303">**Default behavior for marshaling a variant with the VT_BYREF flag set**</span></span>  
   
--   Для варианта, передаваемого в управляемый код по значению, может быть установлен флаг **VT_BYREF**, который указывает, что вариант содержит ссылку вместо значения. В этом случае вариант по-прежнему маршалируется в объект, поскольку вариант передается по значению. Маршалер автоматически разыменовывает содержимое варианта и копирует его во вновь созданный объект до того, как будет выполнен вызов. После этого объект передается в управляемую функцию. Тем не менее при возврате из вызова объект не применяется к исходному варианту. Изменения, внесенные в управляемый объект, утрачиваются.  
+-   <span data-ttu-id="f4854-304">Для варианта, передаваемого в управляемый код по значению, может быть установлен флаг **VT_BYREF**, который указывает, что вариант содержит ссылку вместо значения.</span><span class="sxs-lookup"><span data-stu-id="f4854-304">A variant being passed to managed code by value can have the **VT_BYREF** flag set to indicate that the variant contains a reference instead of a value.</span></span> <span data-ttu-id="f4854-305">В этом случае вариант по-прежнему маршалируется в объект, поскольку вариант передается по значению.</span><span class="sxs-lookup"><span data-stu-id="f4854-305">In this case, the variant is still marshaled to an object because the variant is being passed by value.</span></span> <span data-ttu-id="f4854-306">Маршалер автоматически разыменовывает содержимое варианта и копирует его во вновь созданный объект до того, как будет выполнен вызов.</span><span class="sxs-lookup"><span data-stu-id="f4854-306">The marshaler automatically dereferences the contents of the variant and copies it into a newly created object before making the call.</span></span> <span data-ttu-id="f4854-307">После этого объект передается в управляемую функцию. Тем не менее при возврате из вызова объект не применяется к исходному варианту.</span><span class="sxs-lookup"><span data-stu-id="f4854-307">The object is then passed into the managed function; however, on return from the call, the object is not propagated back into the original variant.</span></span> <span data-ttu-id="f4854-308">Изменения, внесенные в управляемый объект, утрачиваются.</span><span class="sxs-lookup"><span data-stu-id="f4854-308">Changes made to the managed object are lost.</span></span>  
   
     > [!CAUTION]
-    >  Изменить значение варианта, переданного по значению, нельзя, даже если для варианта установлен флаг **VT_BYREF**.  
+    >  <span data-ttu-id="f4854-309">Изменить значение варианта, переданного по значению, нельзя, даже если для варианта установлен флаг **VT_BYREF**.</span><span class="sxs-lookup"><span data-stu-id="f4854-309">There is no way to change the value of a variant passed by value, even if the variant has the **VT_BYREF** flag set.</span></span>  
   
--   Для варианта, передаваемого в управляемый код по ссылке, также может быть установлен флаг **VT_BYREF**, который указывает, что вариант содержит еще одну ссылку. В этом случае вариант маршалируется в объект **ref**, поскольку вариант передается по ссылке. Маршалер автоматически разыменовывает содержимое варианта и копирует его во вновь созданный объект до того, как будет выполнен вызов. При возврате из вызова значение объекта возвращается по ссылке с исходным вариантом только в том случае, если тип объекта совпадает с типом переданного объекта. Таким образом, при передаче не изменяется тип варианта с установленным флагом **VT_BYREF**. Если во время вызова тип объекта изменяется, при возврате из него возникает исключение <xref:System.InvalidCastException>.  
+-   <span data-ttu-id="f4854-310">Для варианта, передаваемого в управляемый код по ссылке, также может быть установлен флаг **VT_BYREF**, который указывает, что вариант содержит еще одну ссылку.</span><span class="sxs-lookup"><span data-stu-id="f4854-310">A variant being passed to managed code by reference can also have the **VT_BYREF** flag set to indicate that the variant contains another reference.</span></span> <span data-ttu-id="f4854-311">В этом случае вариант маршалируется в объект **ref**, поскольку вариант передается по ссылке.</span><span class="sxs-lookup"><span data-stu-id="f4854-311">If it does, the variant is marshaled to a **ref** object because the variant is being passed by reference.</span></span> <span data-ttu-id="f4854-312">Маршалер автоматически разыменовывает содержимое варианта и копирует его во вновь созданный объект до того, как будет выполнен вызов.</span><span class="sxs-lookup"><span data-stu-id="f4854-312">The marshaler automatically dereferences the contents of the variant and copies it into a newly created object before making the call.</span></span> <span data-ttu-id="f4854-313">При возврате из вызова значение объекта возвращается по ссылке с исходным вариантом только в том случае, если тип объекта совпадает с типом переданного объекта.</span><span class="sxs-lookup"><span data-stu-id="f4854-313">On return from the call, the value of the object is propagated back to the reference within the original variant only if the object is the same type as the object passed in.</span></span> <span data-ttu-id="f4854-314">Таким образом, при передаче не изменяется тип варианта с установленным флагом **VT_BYREF**.</span><span class="sxs-lookup"><span data-stu-id="f4854-314">That is, propagation does not change the type of a variant with the **VT_BYREF** flag set.</span></span> <span data-ttu-id="f4854-315">Если во время вызова тип объекта изменяется, при возврате из него возникает исключение <xref:System.InvalidCastException>.</span><span class="sxs-lookup"><span data-stu-id="f4854-315">If the type of the object is changed during the call, an <xref:System.InvalidCastException> occurs on return from the call.</span></span>  
   
- В следующей таблице описываются общие правила распространения для вариантов и объектов.  
+ <span data-ttu-id="f4854-316">В следующей таблице описываются общие правила распространения для вариантов и объектов.</span><span class="sxs-lookup"><span data-stu-id="f4854-316">The following table summarizes the propagation rules for variants and objects.</span></span>  
   
-|Исходный тип|Целевой тип|Возвращаемые изменения|  
+|<span data-ttu-id="f4854-317">Исходный тип</span><span class="sxs-lookup"><span data-stu-id="f4854-317">From</span></span>|<span data-ttu-id="f4854-318">Целевой тип</span><span class="sxs-lookup"><span data-stu-id="f4854-318">To</span></span>|<span data-ttu-id="f4854-319">Возвращаемые изменения</span><span class="sxs-lookup"><span data-stu-id="f4854-319">Changes propagated back</span></span>|  
 |----------|--------|-----------------------------|  
-|**Вариант**  *v*|**Объект**  *o*|Никогда|  
-|**Объект**  *o*|**Вариант**  *v*|Никогда|  
-|**Вариант**   ***\****  *pv*|**Ссылочный объект**  *o*|Всегда|  
-|**Ссылочный объект**  *o*|**Вариант**   ***\****  *pv*|Всегда|  
-|**Вариант***v* **(VT_BYREF** *&#124;* **VT_\*)** |**Объект**  *o*|Никогда|  
-|**Вариант**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Ссылочный объект**  *o*|Только если тип не был изменен.|  
+|<span data-ttu-id="f4854-320">**Вариант**  *v*</span><span class="sxs-lookup"><span data-stu-id="f4854-320">**Variant**  *v*</span></span>|<span data-ttu-id="f4854-321">**Объект**  *o*</span><span class="sxs-lookup"><span data-stu-id="f4854-321">**Object**  *o*</span></span>|<span data-ttu-id="f4854-322">Никогда</span><span class="sxs-lookup"><span data-stu-id="f4854-322">Never</span></span>|  
+|<span data-ttu-id="f4854-323">**Объект**  *o*</span><span class="sxs-lookup"><span data-stu-id="f4854-323">**Object**  *o*</span></span>|<span data-ttu-id="f4854-324">**Вариант**  *v*</span><span class="sxs-lookup"><span data-stu-id="f4854-324">**Variant**  *v*</span></span>|<span data-ttu-id="f4854-325">Никогда</span><span class="sxs-lookup"><span data-stu-id="f4854-325">Never</span></span>|  
+|<span data-ttu-id="f4854-326">**Вариант**   ***\****  *pv*</span><span class="sxs-lookup"><span data-stu-id="f4854-326">**Variant**   ***\****  *pv*</span></span>|<span data-ttu-id="f4854-327">**Ссылочный объект**  *o*</span><span class="sxs-lookup"><span data-stu-id="f4854-327">**Ref Object**  *o*</span></span>|<span data-ttu-id="f4854-328">Всегда</span><span class="sxs-lookup"><span data-stu-id="f4854-328">Always</span></span>|  
+|<span data-ttu-id="f4854-329">**Ссылочный объект**  *o*</span><span class="sxs-lookup"><span data-stu-id="f4854-329">**Ref object**  *o*</span></span>|<span data-ttu-id="f4854-330">**Вариант**   ***\****  *pv*</span><span class="sxs-lookup"><span data-stu-id="f4854-330">**Variant**   ***\****  *pv*</span></span>|<span data-ttu-id="f4854-331">Всегда</span><span class="sxs-lookup"><span data-stu-id="f4854-331">Always</span></span>|  
+|<span data-ttu-id="f4854-332">**Вариант***v* **(VT_BYREF** *&#124;* **VT_\*)** </span><span class="sxs-lookup"><span data-stu-id="f4854-332">**Variant**  *v* **(VT_BYREF** *&#124;* **VT_\*)**</span></span>|<span data-ttu-id="f4854-333">**Объект**  *o*</span><span class="sxs-lookup"><span data-stu-id="f4854-333">**Object**  *o*</span></span>|<span data-ttu-id="f4854-334">Никогда</span><span class="sxs-lookup"><span data-stu-id="f4854-334">Never</span></span>|  
+|<span data-ttu-id="f4854-335">**Вариант**  *v* **(VT_BYREF** *&#124;* **VT_)**</span><span class="sxs-lookup"><span data-stu-id="f4854-335">**Variant**  *v* **(VT_BYREF** *&#124;* **VT_)**</span></span>|<span data-ttu-id="f4854-336">**Ссылочный объект**  *o*</span><span class="sxs-lookup"><span data-stu-id="f4854-336">**Ref Object**  *o*</span></span>|<span data-ttu-id="f4854-337">Только если тип не был изменен.</span><span class="sxs-lookup"><span data-stu-id="f4854-337">Only if the type has not changed.</span></span>|  
   
-## <a name="see-also"></a>См. также  
- [Характеристики маршалинга по умолчанию](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [Преобразуемые и непреобразуемые типы](../../../docs/framework/interop/blittable-and-non-blittable-types.md)   
- [Атрибуты направления](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
- [Копирование и закрепление](../../../docs/framework/interop/copying-and-pinning.md)
-
+## <a name="see-also"></a><span data-ttu-id="f4854-338">См. также</span><span class="sxs-lookup"><span data-stu-id="f4854-338">See Also</span></span>  
+ [<span data-ttu-id="f4854-339">Характеристики маршалинга по умолчанию</span><span class="sxs-lookup"><span data-stu-id="f4854-339">Default Marshaling Behavior</span></span>](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [<span data-ttu-id="f4854-340">Преобразуемые и непреобразуемые типы</span><span class="sxs-lookup"><span data-stu-id="f4854-340">Blittable and Non-Blittable Types</span></span>](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
+ [<span data-ttu-id="f4854-341">Атрибуты направления</span><span class="sxs-lookup"><span data-stu-id="f4854-341">Directional Attributes</span></span>](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
+ [<span data-ttu-id="f4854-342">Копирование и закрепление</span><span class="sxs-lookup"><span data-stu-id="f4854-342">Copying and Pinning</span></span>](../../../docs/framework/interop/copying-and-pinning.md)

@@ -1,53 +1,54 @@
 ---
-title: "Элемент управления DomainUpDown (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DomainUpDown - элемент управления [Windows Forms]"
-  - "счетчик - элемент управления"
-  - "счетчик - элемент управления, поля со стрелками "вверх/вниз""
-  - "поля со стрелками "вверх/вниз""
-  - "поля со стрелками "вверх/вниз", счетчик - элементы управления"
+title: "Элемент управления DomainUpDown (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DomainUpDown control [Windows Forms]
+- spin button control [Windows Forms], up-down controls
+- up-down controls
+- spin button control
+- up-down controls [Windows Forms], spin button controls
 ms.assetid: fb7cf017-e931-4a95-9d21-8caee4ee122a
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 37cec82876edadfed5cda338ca12775ad19ae732
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Элемент управления DomainUpDown (Windows Forms)
-Элемент управления Windows Forms <xref:System.Windows.Forms.DomainUpDown> выглядит как сочетание текстового поля и пары кнопок для перемещения вверх и вниз по списку.  Он выводит и задает текстовую строку в списке вариантов.  Пользователь может выбрать строку, перемещаясь по списку с помощью кнопок со стрелками вверх и вниз, с помощью клавиш со стрелками ВВЕРХ и ВНИЗ или введя строку, совпадающую с элементом в списке.  Один из возможных способов применения этого элемента управления — выбор элементов из списка имен, расположенных в алфавитном порядке.  \(Для сортировки списка свойству <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> необходимо присвоить значение `true`.\) По своему назначению данный элемент управления близок списку или полю со списком, но он более компактен.  
+# <a name="domainupdown-control-windows-forms"></a><span data-ttu-id="8704f-102">Элемент управления DomainUpDown (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="8704f-102">DomainUpDown Control (Windows Forms)</span></span>
+<span data-ttu-id="8704f-103">Windows Forms <xref:System.Windows.Forms.DomainUpDown> элемент управления выглядит как сочетание текстового поля и пары кнопок для перемещения вверх или вниз по списку.</span><span class="sxs-lookup"><span data-stu-id="8704f-103">The Windows Forms <xref:System.Windows.Forms.DomainUpDown> control looks like a combination of a text box and a pair of buttons for moving up or down through a list.</span></span> <span data-ttu-id="8704f-104">Он выводит и задает текстовую строку в списке вариантов.</span><span class="sxs-lookup"><span data-stu-id="8704f-104">The control displays and sets a text string from a list of choices.</span></span> <span data-ttu-id="8704f-105">Пользователь может выбрать строку, щелкнув кнопок со стрелками вверх по списку, клавиши со стрелками вверх и вниз или введя строку, совпадающую с элементом в списке.</span><span class="sxs-lookup"><span data-stu-id="8704f-105">The user can select the string by clicking up and down buttons to move through a list, by pressing the UP and DOWN ARROW keys, or by typing a string that matches an item in the list.</span></span> <span data-ttu-id="8704f-106">Того, можно использовать для этого элемента управления можно выбрать элементы из списка имен в алфавитном порядке сортировки.</span><span class="sxs-lookup"><span data-stu-id="8704f-106">One possible use for this control is for selecting items from an alphabetically sorted list of names.</span></span> <span data-ttu-id="8704f-107">(Чтобы отсортировать список, установите <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> свойства `true`.) Функции данного элемента управления очень похож на список или поле со списком, но оно занимает мало места.</span><span class="sxs-lookup"><span data-stu-id="8704f-107">(To sort the list, set the <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> property to `true`.) The function of this control is very similar to the list box or combo box, but it takes up very little space.</span></span>  
   
- Ключевыми свойствами элемента управления являются <xref:System.Windows.Forms.DomainUpDown.Items%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> и <xref:System.Windows.Forms.DomainUpDown.Wrap%2A>.  Свойство <xref:System.Windows.Forms.DomainUpDown.Items%2A> содержит список объектов, текстовые значения которых отображаются в элементе управления.  Если для свойства <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> задано значение `false`, элемент управления автоматически завершает текст, вводимый пользователем, и сопоставляет его со значением в списке.  Если для свойства <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> задано значение `true`, при прокрутке до последнего элемента следом за ним выводится первый элемент списка и наоборот.  Основными методами этого элемента управления являются методы <xref:System.Windows.Forms.DomainUpDown.UpButton%2A> и <xref:System.Windows.Forms.DomainUpDown.DownButton%2A>.  
+ <span data-ttu-id="8704f-108">Ключевые свойства элемента управления являются <xref:System.Windows.Forms.DomainUpDown.Items%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>, и <xref:System.Windows.Forms.DomainUpDown.Wrap%2A>.</span><span class="sxs-lookup"><span data-stu-id="8704f-108">The key properties of the control are <xref:System.Windows.Forms.DomainUpDown.Items%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>, and <xref:System.Windows.Forms.DomainUpDown.Wrap%2A>.</span></span> <span data-ttu-id="8704f-109"><xref:System.Windows.Forms.DomainUpDown.Items%2A> Свойство содержит список объектов, текстовые значения отображаются в элементе управления.</span><span class="sxs-lookup"><span data-stu-id="8704f-109">The <xref:System.Windows.Forms.DomainUpDown.Items%2A> property contains the list of objects whose text values are displayed in the control.</span></span> <span data-ttu-id="8704f-110">Если <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> равно `false`, элемент управления автоматически завершает текст, пользователь и сопоставляет его значение в списке.</span><span class="sxs-lookup"><span data-stu-id="8704f-110">If <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> is set to `false`, the control automatically completes text that the user types and matches it to a value in the list.</span></span> <span data-ttu-id="8704f-111">Если <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> равно `true`, прокручивать за последний элемент перейти к первому элементу в списке и наоборот.</span><span class="sxs-lookup"><span data-stu-id="8704f-111">If <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> is set to `true`, scrolling past the last item will take you to the first item in the list and vice versa.</span></span> <span data-ttu-id="8704f-112">Основные методы элемента управления, <xref:System.Windows.Forms.DomainUpDown.UpButton%2A> и <xref:System.Windows.Forms.DomainUpDown.DownButton%2A>.</span><span class="sxs-lookup"><span data-stu-id="8704f-112">The key methods of the control are <xref:System.Windows.Forms.DomainUpDown.UpButton%2A> and <xref:System.Windows.Forms.DomainUpDown.DownButton%2A>.</span></span>  
   
- Этот элемент управления выводит только текстовые строки.  Для вывода числовых значений следует использовать элемент управления <xref:System.Windows.Forms.NumericUpDown>.  Дополнительные сведения см. в разделе [Элемент управления NumericUpDown](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md).  
+ <span data-ttu-id="8704f-113">Этот элемент управления отображает только текстовые строки.</span><span class="sxs-lookup"><span data-stu-id="8704f-113">This control displays only text strings.</span></span> <span data-ttu-id="8704f-114">Если требуется, чтобы элемент управления, отображающий числовые значения, используйте <xref:System.Windows.Forms.NumericUpDown> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="8704f-114">If you want a control that displays numeric values, use the <xref:System.Windows.Forms.NumericUpDown> control.</span></span> <span data-ttu-id="8704f-115">Дополнительные сведения см. в разделе [управления NumericUpDown](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md) .</span><span class="sxs-lookup"><span data-stu-id="8704f-115">For more information, see [NumericUpDown Control](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md) .</span></span>  
   
-## В этом подразделе  
- [Общие сведения об элементе управления DomainUpDown](../../../../docs/framework/winforms/controls/domainupdown-control-overview-windows-forms.md)  
- Основные понятия, связанные с элементом управления <xref:System.Windows.Forms.DomainUpDown>, который позволяет пользователям просматривать списки текстовых строк и выбирать в них отдельные элементы.  
+## <a name="in-this-section"></a><span data-ttu-id="8704f-116">Содержание</span><span class="sxs-lookup"><span data-stu-id="8704f-116">In This Section</span></span>  
+ [<span data-ttu-id="8704f-117">Общие сведения об элементе управления DomainUpDown</span><span class="sxs-lookup"><span data-stu-id="8704f-117">DomainUpDown Control Overview</span></span>](../../../../docs/framework/winforms/controls/domainupdown-control-overview-windows-forms.md)  
+ <span data-ttu-id="8704f-118">Основные понятия <xref:System.Windows.Forms.DomainUpDown> элемента управления, который позволяет пользователям просматривать и выбирать из списка текстовых строк.</span><span class="sxs-lookup"><span data-stu-id="8704f-118">Introduces the general concepts of the <xref:System.Windows.Forms.DomainUpDown> control, which allows users to browse through and select from a list of text strings.</span></span>  
   
- [Практическое руководство. Добавление элементов в элемент управления DomainUpDown в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md)  
- Описание способов задания текстовых строк, выводимых в элементе управления <xref:System.Windows.Forms.DomainUpDown>.  
+ [<span data-ttu-id="8704f-119">Практическое руководство. Добавление элементов в элемент управления DomainUpDown в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8704f-119">How to: Add Items to Windows Forms DomainUpDown Controls Programmatically</span></span>](../../../../docs/framework/winforms/controls/how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md)  
+ <span data-ttu-id="8704f-120">Описание способа указания текстовые строки <xref:System.Windows.Forms.DomainUpDown> элемент управления должен отображать.</span><span class="sxs-lookup"><span data-stu-id="8704f-120">Describes how to specify the text strings the <xref:System.Windows.Forms.DomainUpDown> control should display.</span></span>  
   
- [Практическое руководство. Удаление элементов из элемента управления DomainUpDown в Windows Forms](../../../../docs/framework/winforms/controls/how-to-remove-items-from-windows-forms-domainupdown-controls.md)  
- Описание способов удаления элементов из элемента управления <xref:System.Windows.Forms.DomainUpDown> в коде.  
+ [<span data-ttu-id="8704f-121">Практическое руководство. Удаление элементов из элемента управления DomainUpDown в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8704f-121">How to: Remove Items from Windows Forms DomainUpDown Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-remove-items-from-windows-forms-domainupdown-controls.md)  
+ <span data-ttu-id="8704f-122">Содержит сведения об удалении элементов из <xref:System.Windows.Forms.DomainUpDown> элемента управления в коде.</span><span class="sxs-lookup"><span data-stu-id="8704f-122">Describes how to delete items from the <xref:System.Windows.Forms.DomainUpDown> control in code.</span></span>  
   
-## Ссылка  
+## <a name="reference"></a><span data-ttu-id="8704f-123">Ссылка</span><span class="sxs-lookup"><span data-stu-id="8704f-123">Reference</span></span>  
  <xref:System.Windows.Forms.DomainUpDown>  
- Описание класса и ссылки на все его члены.  
+ <span data-ttu-id="8704f-124">Описание класса и ссылки на все его члены.</span><span class="sxs-lookup"><span data-stu-id="8704f-124">Describes this class and has links to all its members.</span></span>  
   
  <xref:System.Windows.Forms.NumericUpDown>  
- Описание класса и ссылки на разделы с описанием всех его членов.  
+ <span data-ttu-id="8704f-125">Описывает данный класс и содержит ссылки на все его члены...</span><span class="sxs-lookup"><span data-stu-id="8704f-125">Describes this class and has links to all its members..</span></span>  
   
-## Связанные подразделы  
- [Элементы управления, которые можно использовать в формах Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Полный список элементов управления Windows Forms со ссылками на разделы, в которых описывается их использование.
+## <a name="related-sections"></a><span data-ttu-id="8704f-126">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="8704f-126">Related Sections</span></span>  
+ [<span data-ttu-id="8704f-127">Элементы управления для использования в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8704f-127">Controls You Can Use On Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="8704f-128">Полный список элементов управления Windows Forms со ссылками на информацию об их применении.</span><span class="sxs-lookup"><span data-stu-id="8704f-128">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

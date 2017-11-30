@@ -1,50 +1,53 @@
 ---
-title: "Привязки Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "привязки [WCF]"
-  - "WCF [WCF], привязки"
-  - "Windows Communication Foundation [WCF], привязки"
+title: "Привязки Windows Communication Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF [WCF], bindings
+- Windows Communication Foundation [WCF], bindings
+- bindings [WCF]
 ms.assetid: 83639133-89f7-43f0-b4ef-8d9e57c08d25
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 22b7b8f568b3350972ace128fdc3164c4f3ba179
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Привязки Windows Communication Foundation
-В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] способ реализации приложения отделяется от способа его взаимодействия с другим программным обеспечением.Привязки используются для указания транспорта, кодировки и данных протокола, требующихся для обмена информацией между клиентами и службами.В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используются привязки для создания базового описания конечной точки, потому большинство данных о привязке должно быть согласовано сторонами, обменивающимися информацией.Самым простым способом является использование клиентами службы той же привязки, которую использует конечная точка службы.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] том, как это сделать, см. в разделе [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/ru-ru/bd8b277b-932f-472f-a42a-b02bb5257dfb).  
+# <a name="windows-communcation-foundation-bindings"></a><span data-ttu-id="9c18d-102">Привязки Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="9c18d-102">Windows Communcation Foundation Bindings</span></span>
+<span data-ttu-id="9c18d-103">В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] способ реализации приложения отделяется от способа его взаимодействия с другим программным обеспечением.</span><span class="sxs-lookup"><span data-stu-id="9c18d-103">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] separates how the software for an application is written from how it communicates with other software.</span></span> <span data-ttu-id="9c18d-104">Привязки используются для указания транспорта, кодировки и данных протокола, требуемых для связи клиентов и служб.</span><span class="sxs-lookup"><span data-stu-id="9c18d-104">Bindings are used to specify the transport, encoding, and protocol details required for clients and services to communicate with each other.</span></span> <span data-ttu-id="9c18d-105">В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] привязки используются для создания базового описания конечной точки, поэтому большинство данных о привязке должно быть согласовано сторонами, обменивающимися информацией.</span><span class="sxs-lookup"><span data-stu-id="9c18d-105">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uses bindings to generate the underlying wire representation of the endpoint, so most of the binding details must be agreed upon by the parties that are communicating.</span></span> <span data-ttu-id="9c18d-106">Самым простым способом является использование клиентами службы той же привязки, которую использует конечная точка службы.</span><span class="sxs-lookup"><span data-stu-id="9c18d-106">The easiest way to achieve this is for clients of a service to use the same binding that the endpoint for the service uses.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="9c18d-107">как это сделать, см. [с помощью привязок для настройки служб Windows Communication Foundation и клиентов](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb).</span><span class="sxs-lookup"><span data-stu-id="9c18d-107"> how to do this, see [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb).</span></span>  
   
- Привязка состоит из коллекции элементов привязки.Каждый элемент описывает некоторый аспект взаимодействия конечной точки с клиентами.Привязка должна содержать как минимум один элемент транспорта, как минимум один элемент кодирования сообщений \(по умолчанию предоставляемый элементом транспорта привязки\) и любое количество других элементов протоколов привязки.Процесс, создающий среду выполнения из этого описания, позволяет добавлять код из каждого элемента привязки в эту среду выполнения.  
+ <span data-ttu-id="9c18d-108">Привязка состоит из коллекции элементов привязки.</span><span class="sxs-lookup"><span data-stu-id="9c18d-108">A binding is made up of a collection of binding elements.</span></span> <span data-ttu-id="9c18d-109">Каждый элемент описывает некоторый аспект взаимодействия конечной точки с клиентами.</span><span class="sxs-lookup"><span data-stu-id="9c18d-109">Each element describes some aspect of how the endpoint communicates with clients.</span></span> <span data-ttu-id="9c18d-110">Привязка должна содержать как минимум один элемент транспорта, как минимум один элемент кодирования сообщений (по умолчанию предоставляемый элементом транспорта привязки) и любое количество других элементов протоколов привязки.</span><span class="sxs-lookup"><span data-stu-id="9c18d-110">A binding must include at least one transport binding element, at least one message-encoding binding element (which the transport binding element can provide by default), and any number of other protocol binding elements.</span></span> <span data-ttu-id="9c18d-111">Процесс, создающий среду выполнения из этого описания, позволяет добавлять код из каждого элемента привязки в эту среду выполнения.</span><span class="sxs-lookup"><span data-stu-id="9c18d-111">The process that builds a runtime out of this description allows each binding element to contribute code to that runtime.</span></span>  
   
- В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предусмотрены привязки, содержащие стандартные наборы элементов привязки.Можно использовать их с параметрами по умолчанию либо изменить значения этих параметров согласно потребностям пользователя.Эти предоставляемые системой привязки имеют свойства, обеспечивающие прямое управление элементами привязки и их параметрами.Также можно параллельно работать с несколькими версиями привязки, присвоив отдельное имя каждой из них.Подробные сведения см. в разделе [Настройка привязок, предоставляемых системой](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md).  
+ <span data-ttu-id="9c18d-112">В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предусмотрены привязки, содержащие стандартные наборы элементов привязки.</span><span class="sxs-lookup"><span data-stu-id="9c18d-112">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provides bindings that contain common selections of binding elements.</span></span> <span data-ttu-id="9c18d-113">Можно использовать их с параметрами по умолчанию либо изменить значения этих параметров согласно потребностям пользователя.</span><span class="sxs-lookup"><span data-stu-id="9c18d-113">These can be used with their default settings or you can modify those default values according to user requirements.</span></span> <span data-ttu-id="9c18d-114">Эти предоставляемые системой привязки имеют свойства, обеспечивающие прямое управление элементами привязки и их параметрами.</span><span class="sxs-lookup"><span data-stu-id="9c18d-114">These system-provided bindings have properties that allow direct control over the binding elements and their settings.</span></span> <span data-ttu-id="9c18d-115">Также можно параллельно работать с несколькими версиями привязки, присвоив отдельное имя каждой из них.</span><span class="sxs-lookup"><span data-stu-id="9c18d-115">You can also easily work side-by-side with multiple versions of a binding by giving each version of the binding its own name.</span></span> <span data-ttu-id="9c18d-116">Дополнительные сведения см. в разделе [Configuring System-Provided привязки](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="9c18d-116">For details, see [Configuring System-Provided Bindings](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md).</span></span>  
   
- Если потребуется коллекция элементов привязки, не предусмотренная в числе предоставляемых системой, можно создать пользовательскую привязку, содержащую требуемую коллекцию элементов привязки.Создавать эти пользовательские привязки очень просто, и для этого не требуется новый класс, однако в них отсутствуют свойства для управления элементами привязки или их параметрами.Обращаться к элементам привязки и изменять их параметры можно через содержащую их коллекцию.Подробные сведения см. в разделе [Пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ <span data-ttu-id="9c18d-117">Если потребуется коллекция элементов привязки, не предусмотренная в числе предоставляемых системой, можно создать пользовательскую привязку, содержащую требуемую коллекцию элементов привязки.</span><span class="sxs-lookup"><span data-stu-id="9c18d-117">If you need a collection of binding elements not provided by one of these system-provided bindings, you can create a custom binding that consists of the collection of binding elements required.</span></span> <span data-ttu-id="9c18d-118">Создавать эти пользовательские привязки очень просто, и для этого не требуется новый класс, однако в них отсутствуют свойства для управления элементами привязки или их параметрами.</span><span class="sxs-lookup"><span data-stu-id="9c18d-118">These custom bindings are easy to create and do not require a new class, but they do not provide properties for controlling the binding elements or their settings.</span></span> <span data-ttu-id="9c18d-119">Обращаться к элементам привязки и изменять их параметры можно через содержащую их коллекцию.</span><span class="sxs-lookup"><span data-stu-id="9c18d-119">You can access the binding elements and modify their settings through the collection that contains them.</span></span> <span data-ttu-id="9c18d-120">Дополнительные сведения см. в разделе [пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="9c18d-120">For details, see [Custom Bindings](../../../../docs/framework/wcf/extending/custom-bindings.md).</span></span>  
   
-## В этом подразделе  
- [Настройка привязок, предоставляемых системой](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- Описание способов использования и изменения привязок, предусмотренных в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], для поддержки стандартных сценариев.  
+## <a name="in-this-section"></a><span data-ttu-id="9c18d-121">Содержание</span><span class="sxs-lookup"><span data-stu-id="9c18d-121">In This Section</span></span>  
+ [<span data-ttu-id="9c18d-122">Настройка привязок, предоставляемых системой</span><span class="sxs-lookup"><span data-stu-id="9c18d-122">Configuring System-Provided Bindings</span></span>](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ <span data-ttu-id="9c18d-123">Описание способов использования и изменения привязок, предусмотренных в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], для поддержки стандартных сценариев.</span><span class="sxs-lookup"><span data-stu-id="9c18d-123">Describes how to use and modify the bindings that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provides to support common scenarios.</span></span>  
   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/ru-ru/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- Описание способов определения привязок [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] для служб и клиентов \(принудительно в коде или декларативно с помощью конфигурации\).  
+ [<span data-ttu-id="9c18d-124">Использование привязок для настройки служб Windows Communication Foundation и клиентов</span><span class="sxs-lookup"><span data-stu-id="9c18d-124">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ <span data-ttu-id="9c18d-125">Описание способов определения привязок [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] для служб и клиентов (принудительно в коде или декларативно с помощью конфигурации).</span><span class="sxs-lookup"><span data-stu-id="9c18d-125">Describes how to define [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bindings for services and clients imperatively in code and declaratively using configuration.</span></span>  
   
- [Пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md)  
- Описание элемента <xref:System.ServiceModel.Channels.CustomBinding> и сферы его применения.  
+ [<span data-ttu-id="9c18d-126">Пользовательские привязки</span><span class="sxs-lookup"><span data-stu-id="9c18d-126">Custom Bindings</span></span>](../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ <span data-ttu-id="9c18d-127">Описание элемента <xref:System.ServiceModel.Channels.CustomBinding> и сферы его применения.</span><span class="sxs-lookup"><span data-stu-id="9c18d-127">Describes what a <xref:System.ServiceModel.Channels.CustomBinding> is and when it is used.</span></span>  
   
-## Ссылка  
+## <a name="reference"></a><span data-ttu-id="9c18d-128">Ссылка</span><span class="sxs-lookup"><span data-stu-id="9c18d-128">Reference</span></span>  
  <xref:System.ServiceModel.Channels.Binding>  
   
  <xref:System.ServiceModel.Channels.BindingElement>  
   
  <xref:System.ServiceModel.Channels.CustomBinding>  
   
-## Связанные подразделы  
- [Расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md)
+## <a name="related-sections"></a><span data-ttu-id="9c18d-129">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="9c18d-129">Related Sections</span></span>  
+ [<span data-ttu-id="9c18d-130">Расширение привязок</span><span class="sxs-lookup"><span data-stu-id="9c18d-130">Extending Bindings</span></span>](../../../../docs/framework/wcf/extending/extending-bindings.md)

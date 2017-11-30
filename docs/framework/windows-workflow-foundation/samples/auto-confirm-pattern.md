@@ -1,47 +1,51 @@
 ---
-title: "Шаблон автоподтверждения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Шаблон автоподтверждения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 668aec65-78d3-4636-9c7b-deed643a18f9
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 30aa268fbfa8a6f59491de30dbde6508ccdd7a68
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Шаблон автоподтверждения
-Данный образец включает три сценария, иллюстрирующих пользовательское действие `AutoConfirmScope`.В первом образце показано успешное выполнение последовательности из четырех подлежащих компенсации действий, из которых второе и третье действия являются вложенными в `AutoConfirmScope`.Во втором образце показана та же последовательность с исключением, сформированным после выполнения четвертого действия <xref:System.Activities.Statements.CompensableActivity>.В третьем сценарии показана та же последовательность с исключением, сформированным в `AutoConfirmScope` после завершения второго действия <xref:System.Activities.Statements.CompensableActivity>.  
+# <a name="auto-confirm-pattern"></a><span data-ttu-id="0d97a-102">Шаблон автоподтверждения</span><span class="sxs-lookup"><span data-stu-id="0d97a-102">Auto-Confirm Pattern</span></span>
+<span data-ttu-id="0d97a-103">Данный образец включает три сценария, иллюстрирующих пользовательское действие `AutoConfirmScope`.</span><span class="sxs-lookup"><span data-stu-id="0d97a-103">This sample consists of three scenarios that run illustrating a custom `AutoConfirmScope` activity.</span></span> <span data-ttu-id="0d97a-104">В первом образце показано успешное выполнение последовательности из четырех подлежащих компенсации действий, из которых второе и третье действия являются вложенными в `AutoConfirmScope`.</span><span class="sxs-lookup"><span data-stu-id="0d97a-104">The first sample shows the successful execution of a sequence of four compensable activities where the second and third are nested in an `AutoConfirmScope`.</span></span> <span data-ttu-id="0d97a-105">Во втором образце показана та же последовательность с исключением, сформированным после выполнения четвертого действия <xref:System.Activities.Statements.CompensableActivity>.</span><span class="sxs-lookup"><span data-stu-id="0d97a-105">The second sample shows the same sequence with an exception occurring after the execution of the fourth <xref:System.Activities.Statements.CompensableActivity>.</span></span> <span data-ttu-id="0d97a-106">В третьем сценарии показана та же последовательность с исключением, сформированным в `AutoConfirmScope` после завершения второго действия <xref:System.Activities.Statements.CompensableActivity>.</span><span class="sxs-lookup"><span data-stu-id="0d97a-106">The third scenario shows the same sequence with an exception occurring in the `AutoConfirmScope` after the second <xref:System.Activities.Statements.CompensableActivity> completes.</span></span>  
   
- В образце демонстрируется шаблон автоматического подтверждения, в котором все дочерние действия, подлежащие компенсации, подтверждаются после успешного завершения области.Этот шаблон определяет время существования всех дочерних действий, подлежащих компенсации, поскольку они больше не могут быть компенсированы или подтверждены.  
+ <span data-ttu-id="0d97a-107">В образце демонстрируется шаблон автоматического подтверждения, в котором все дочерние действия, подлежащие компенсации, подтверждаются после успешного завершения области.</span><span class="sxs-lookup"><span data-stu-id="0d97a-107">The sample demonstrates the auto-confirm pattern where all child compensable activities are confirmed upon successful completion of the scope.</span></span> <span data-ttu-id="0d97a-108">Этот шаблон определяет время существования всех дочерних действий, подлежащих компенсации, поскольку они больше не могут быть компенсированы или подтверждены.</span><span class="sxs-lookup"><span data-stu-id="0d97a-108">This pattern defines the lifetime of all child compensable activities, as they can no longer be compensated or confirmed.</span></span>  
   
- Область включает объект <xref:System.Activities.Statements.TryCatch>, где <xref:System.Activities.Statements.TryCatch.Try%2A> является внутренним действием <xref:System.Activities.Statements.CompensableActivity>.Определенное пользователем текст действия `AutoConfirmScope` является текстом внутреннего действия <xref:System.Activities.Statements.CompensableActivity>.Когда это внутреннее действие <xref:System.Activities.Statements.CompensableActivity> завершается, оно создает объект <xref:System.Activities.Statements.CompensationToken> как выходной аргумент.Действие `AutoConfirmScope` использует свойство <xref:System.Activities.Statements.TryCatch.Finally%2A> для проверки, создан ли маркер, и если да, то подтверждает внутреннее действие <xref:System.Activities.Statements.CompensableActivity>.Внутреннее действие <xref:System.Activities.Statements.CompensableActivity> вызывает компенсацию по умолчанию для всех подлежащих компенсации действий, которые могут существовать в его тексте.  
+ <span data-ttu-id="0d97a-109">Область включает объект <xref:System.Activities.Statements.TryCatch>, где <xref:System.Activities.Statements.TryCatch.Try%2A> является внутренним действием <xref:System.Activities.Statements.CompensableActivity>.</span><span class="sxs-lookup"><span data-stu-id="0d97a-109">The scope consists of a <xref:System.Activities.Statements.TryCatch> where the <xref:System.Activities.Statements.TryCatch.Try%2A> is an internal <xref:System.Activities.Statements.CompensableActivity>.</span></span> <span data-ttu-id="0d97a-110">Определенное пользователем текст действия `AutoConfirmScope` является текстом внутреннего действия <xref:System.Activities.Statements.CompensableActivity>.</span><span class="sxs-lookup"><span data-stu-id="0d97a-110">The user-specified body of the `AutoConfirmScope` is the body of the inner <xref:System.Activities.Statements.CompensableActivity>.</span></span> <span data-ttu-id="0d97a-111">Когда это внутреннее действие <xref:System.Activities.Statements.CompensableActivity> завершается, оно создает объект <xref:System.Activities.Statements.CompensationToken> как выходной аргумент.</span><span class="sxs-lookup"><span data-stu-id="0d97a-111">When this internal <xref:System.Activities.Statements.CompensableActivity> completes, it produces a <xref:System.Activities.Statements.CompensationToken> as an out-argument.</span></span> <span data-ttu-id="0d97a-112">Действие `AutoConfirmScope` использует свойство <xref:System.Activities.Statements.TryCatch.Finally%2A> для проверки, создан ли маркер, и если да, то подтверждает внутреннее действие <xref:System.Activities.Statements.CompensableActivity>.</span><span class="sxs-lookup"><span data-stu-id="0d97a-112">The `AutoConfirmScope` uses a <xref:System.Activities.Statements.TryCatch.Finally%2A> to check whether the token has been produced and if it has then it confirms the inner <xref:System.Activities.Statements.CompensableActivity>.</span></span> <span data-ttu-id="0d97a-113">Внутреннее действие <xref:System.Activities.Statements.CompensableActivity> вызывает компенсацию по умолчанию для всех подлежащих компенсации действий, которые могут существовать в его теле.</span><span class="sxs-lookup"><span data-stu-id="0d97a-113">The inner <xref:System.Activities.Statements.CompensableActivity> invokes the default compensation for any compensable activities that may exist in its body.</span></span>  
   
- В первом сценарии показано успешное выполнение рабочего процесса, и демонстрируется, что второе и третье действия, подлежащие компенсации, уже подтверждены, когда завершается рабочий процесс, а первое и четвертое действия подтверждаются.При этом создается порядок подтверждения: третье, второе, четвертое и первое.  
+ <span data-ttu-id="0d97a-114">В первом сценарии показано успешное выполнение рабочего процесса, и демонстрируется, что второе и третье действия, подлежащие компенсации, уже подтверждены, когда завершается рабочий процесс, а первое и четвертое действия подтверждаются.</span><span class="sxs-lookup"><span data-stu-id="0d97a-114">The first scenario shows successful execution of the workflow and demonstrates that the second and third compensable activities are already confirmed when the workflow completes and the first and fourth are confirmed.</span></span> <span data-ttu-id="0d97a-115">При этом создается порядок подтверждения: третье, второе, четвертое и первое.</span><span class="sxs-lookup"><span data-stu-id="0d97a-115">This produces a confirmation order of three, two, four, and one.</span></span>  
   
- Во втором сценарии показано исключение после завершения четырех подлежащих компенсации действий.Поскольку второе и третье подлежащие компенсации действия уже подтверждены, они не затрагиваются, но первое и четвертое компенсируются.При этом создается порядок следующий порядок: подтверждение третьего, подтверждение второго, компенсация четвертого и компенсация первого.  
+ <span data-ttu-id="0d97a-116">Во втором сценарии показано исключение после завершения четырех подлежащих компенсации действий.</span><span class="sxs-lookup"><span data-stu-id="0d97a-116">The second scenario shows an exception after the four compensable activities have completed.</span></span> <span data-ttu-id="0d97a-117">Поскольку второе и третье подлежащие компенсации действия уже подтверждены, они не затрагиваются, но первое и четвертое компенсируются.</span><span class="sxs-lookup"><span data-stu-id="0d97a-117">Because compensable activities two and three are already confirmed they are unaffected but one and four are compensated.</span></span> <span data-ttu-id="0d97a-118">При этом создается порядок следующий порядок: подтверждение третьего, подтверждение второго, компенсация четвертого и компенсация первого.</span><span class="sxs-lookup"><span data-stu-id="0d97a-118">This produces confirm three, confirm two, compensate four and compensate one.</span></span>  
   
- В последнем сценарии показано неуспешное выполнение действия `AutoConfirmScope`.В этом сценарии исключение возникает после завершения второго действия <xref:System.Activities.Statements.CompensableActivity>.Поскольку третье и четвертое подлежащие компенсации действия не выполнялись, они не затрагиваются.Поскольку область не завершена успешно, второе действие <xref:System.Activities.Statements.CompensableActivity> не подтверждено.При этом создается порядок подтверждения: второе, затем первое.  
+ <span data-ttu-id="0d97a-119">В последнем сценарии показано неуспешное выполнение действия `AutoConfirmScope`.</span><span class="sxs-lookup"><span data-stu-id="0d97a-119">The final scenario shows unsuccessful execution of the `AutoConfirmScope`.</span></span> <span data-ttu-id="0d97a-120">В этом сценарии исключение возникает после завершения второго действия <xref:System.Activities.Statements.CompensableActivity>.</span><span class="sxs-lookup"><span data-stu-id="0d97a-120">In this scenario, an exception occurs after the completion of the second <xref:System.Activities.Statements.CompensableActivity>.</span></span> <span data-ttu-id="0d97a-121">Поскольку третье и четвертое подлежащие компенсации действия не выполнялись, они не затрагиваются.</span><span class="sxs-lookup"><span data-stu-id="0d97a-121">Because the third and fourth compensable activities have not executed, they are unaffected.</span></span> <span data-ttu-id="0d97a-122">Поскольку область не завершена успешно, второе действие <xref:System.Activities.Statements.CompensableActivity> не подтверждено.</span><span class="sxs-lookup"><span data-stu-id="0d97a-122">Because the scope did not complete successfully, the second <xref:System.Activities.Statements.CompensableActivity> does not get confirmed.</span></span> <span data-ttu-id="0d97a-123">При этом создается порядок подтверждения: второе, затем первое.</span><span class="sxs-lookup"><span data-stu-id="0d97a-123">This produces and compensation order of two then one.</span></span>  
   
-#### Использование этого образца  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="0d97a-124">Использование этого образца</span><span class="sxs-lookup"><span data-stu-id="0d97a-124">To use this sample</span></span>  
   
-1.  В среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] откройте файл решения AutoConfirmSample.sln.  
+1.  <span data-ttu-id="0d97a-125">В среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] откройте файл решения AutoConfirmSample.sln.</span><span class="sxs-lookup"><span data-stu-id="0d97a-125">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the AutoConfirmSample.sln solution file.</span></span>  
   
-2.  Для построения решения нажмите CTRL\+SHIFT\+B.  
+2.  <span data-ttu-id="0d97a-126">Для построения решения нажмите CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="0d97a-126">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Чтобы запустить решение, нажмите клавиши CTRL\+F5.  
+3.  <span data-ttu-id="0d97a-127">Чтобы запустить решение, нажмите клавиши CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="0d97a-127">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="0d97a-128">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="0d97a-128">The samples may already be installed on your machine.</span></span> <span data-ttu-id="0d97a-129">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="0d97a-129">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="0d97a-130">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="0d97a-130">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="0d97a-131">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="0d97a-131">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Scenario\Compensation\AutoConfirm`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Compensation\AutoConfirm`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="0d97a-132">См. также</span><span class="sxs-lookup"><span data-stu-id="0d97a-132">See Also</span></span>

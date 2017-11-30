@@ -1,43 +1,47 @@
 ---
-title: "Вложенные объекты TransactionScope в службе | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Вложенные объекты TransactionScope в службе"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e7e1ba64-1384-4eba-add8-415636e2d6d0
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 475da3f9204764a2585bd7a50381db7ad72c2b1e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Вложенные объекты TransactionScope в службе
-Этот образец состоит из двух сценариев, при выполнении показывающих, как обрабатывать экземпляры действий <xref:System.Activities.Statements.TransactionScope> в службе.Сначала запускается транзакция с использованием действия <xref:System.Activities.Statements.TransactionScope> для создания новой транзакции на клиенте и объекта <xref:System.ServiceModel.Activities.TransactedReceiveScope> для получения транзакции и определения времени ее существования на сервере.Первый сценарий в службе выполняет вторичное действие <xref:System.Activities.Statements.TransactionScope> для демонстрации вложения действий <xref:System.Activities.Statements.TransactionScope> в службе.Второй сценарий показывает, как соблюдаются времена ожиданий во вложенных действиях <xref:System.Activities.Statements.TransactionScope>.  
+# <a name="nesting-of-transactionscope-within-a-service"></a><span data-ttu-id="228eb-102">Вложенные объекты TransactionScope в службе</span><span class="sxs-lookup"><span data-stu-id="228eb-102">Nesting of TransactionScope within a service</span></span>
+<span data-ttu-id="228eb-103">Этот образец состоит из двух сценариев, при выполнении показывающих, как обрабатывать экземпляры действий <xref:System.Activities.Statements.TransactionScope> в службе.</span><span class="sxs-lookup"><span data-stu-id="228eb-103">This sample consists of two scenarios that run showing how to handle <xref:System.Activities.Statements.TransactionScope> activity instances within a service.</span></span> <span data-ttu-id="228eb-104">Сначала запускается транзакция с использованием действия <xref:System.Activities.Statements.TransactionScope> для создания новой транзакции на клиенте и объекта <xref:System.ServiceModel.Activities.TransactedReceiveScope> для получения транзакции и определения времени ее существования на сервере.</span><span class="sxs-lookup"><span data-stu-id="228eb-104">First the transaction is initiated using the <xref:System.Activities.Statements.TransactionScope> activity to create a new transaction on the client and <xref:System.ServiceModel.Activities.TransactedReceiveScope> to receive and scope the lifetime of the transaction on the server.</span></span> <span data-ttu-id="228eb-105">Первый сценарий в службе выполняет вторичное действие <xref:System.Activities.Statements.TransactionScope> для демонстрации вложения действий <xref:System.Activities.Statements.TransactionScope> в службе.</span><span class="sxs-lookup"><span data-stu-id="228eb-105">The first scenario within the service runs a secondary <xref:System.Activities.Statements.TransactionScope> activity to demonstrate the nesting of the <xref:System.Activities.Statements.TransactionScope> activities within the service.</span></span> <span data-ttu-id="228eb-106">Второй сценарий показывает, как соблюдаются времена ожиданий во вложенных действиях <xref:System.Activities.Statements.TransactionScope>.</span><span class="sxs-lookup"><span data-stu-id="228eb-106">The second scenario shows how time-outs are respected within the nested <xref:System.Activities.Statements.TransactionScope> activities.</span></span>  
   
-## Клиентское приложение  
- Клиентское приложение выполняет рабочий процесс, запускающий действие <xref:System.Activities.Statements.TransactionScope>, выводит на печать идентификатор распределенной транзакции, отсылает сообщение на сервер, передает транзакцию, получает ответ, снова выводит на печать идентификатор распределенной транзакции и завершает свою работу.Данный порядок операций осуществляется один раз для каждого сценария службы.  
+## <a name="client-application"></a><span data-ttu-id="228eb-107">Клиентское приложение</span><span class="sxs-lookup"><span data-stu-id="228eb-107">Client Application</span></span>  
+ <span data-ttu-id="228eb-108">Клиентское приложение выполняет рабочий процесс, запускающий действие <xref:System.Activities.Statements.TransactionScope>, выводит на печать идентификатор распределенной транзакции, отсылает сообщение на сервер, передает транзакцию, получает ответ, снова выводит на печать идентификатор распределенной транзакции и завершает свою работу.</span><span class="sxs-lookup"><span data-stu-id="228eb-108">The client application runs a workflow that starts a <xref:System.Activities.Statements.TransactionScope> activity, prints the distributed transaction ID, sends a message to the server, flows the transaction, receives the reply, prints the distributed transaction ID again and completes.</span></span> <span data-ttu-id="228eb-109">Данный порядок операций осуществляется один раз для каждого сценария службы.</span><span class="sxs-lookup"><span data-stu-id="228eb-109">It does this once for each service scenario.</span></span>  
   
-## Серверное приложение  
- Проект сервера размещается на узле <xref:System.ServiceModel.Activities.WorkflowServiceHost>, создающем конечную точку, прослушивающую сообщения от клиента.Рабочий процесс центрирован относительно действия <xref:System.ServiceModel.Activities.TransactedReceiveScope>, которое получает переданное сообщение от клиента, выводит на печать идентификатор распределенной транзакции, а затем выполняет второе действие <xref:System.Activities.Statements.TransactionScope>.В первом сценарии транзакция завершена успешно.Во втором сценарии текст действия <xref:System.Activities.Statements.TransactionScope> имеет пятисекундную задержку, а время ожидания для транзакции составляет две секунды.Когда истекает время ожидания транзакции, транзакция прерывается.  
+## <a name="server-application"></a><span data-ttu-id="228eb-110">Серверное приложение</span><span class="sxs-lookup"><span data-stu-id="228eb-110">Server Application</span></span>  
+ <span data-ttu-id="228eb-111">Проект сервера размещается на узле <xref:System.ServiceModel.Activities.WorkflowServiceHost>, создающем конечную точку, прослушивающую сообщения от клиента.</span><span class="sxs-lookup"><span data-stu-id="228eb-111">The server project is hosted in <xref:System.ServiceModel.Activities.WorkflowServiceHost>, which creates the endpoint to listen for the message from the client.</span></span> <span data-ttu-id="228eb-112">Рабочий процесс центрирован относительно действия <xref:System.ServiceModel.Activities.TransactedReceiveScope>, которое получает переданное сообщение от клиента, выводит на печать идентификатор распределенной транзакции, а затем выполняет второе действие <xref:System.Activities.Statements.TransactionScope>.</span><span class="sxs-lookup"><span data-stu-id="228eb-112">The workflow is centered on the <xref:System.ServiceModel.Activities.TransactedReceiveScope>, which receives the flowed transaction from the client, prints the distributed transaction ID and then executes a second <xref:System.Activities.Statements.TransactionScope> activity.</span></span> <span data-ttu-id="228eb-113">В первом сценарии транзакция завершена успешно.</span><span class="sxs-lookup"><span data-stu-id="228eb-113">In the first scenario, the transaction is completed successfully.</span></span> <span data-ttu-id="228eb-114">Во втором сценарии текст действия <xref:System.Activities.Statements.TransactionScope> имеет пятисекундную задержку, а время ожидания для транзакции составляет две секунды.</span><span class="sxs-lookup"><span data-stu-id="228eb-114">In the second scenario, the body of the <xref:System.Activities.Statements.TransactionScope> activity is a five-second delay and the time-out for the transaction is set to two seconds.</span></span> <span data-ttu-id="228eb-115">Когда истекает время ожидания транзакции, транзакция прерывается.</span><span class="sxs-lookup"><span data-stu-id="228eb-115">When the transaction times out the transaction is aborted.</span></span>  
   
-#### Выполнение образца  
+#### <a name="to-run-the-sample"></a><span data-ttu-id="228eb-116">Выполнение образца</span><span class="sxs-lookup"><span data-stu-id="228eb-116">To run the sample</span></span>  
   
-1.  Откройте решение TransactionServiceExample.sln в [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="228eb-117">Откройте решение TransactionServiceExample.sln в [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="228eb-117">Open the TransactionServiceExample.sln solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  Чтобы построить решение, нажмите сочетание клавиш CTRL\+SHIFT\+B или выберите команду **Построить решение** в меню **Построение**.  
+2.  <span data-ttu-id="228eb-118">Чтобы построить решение, нажмите клавиши CTRL + SHIFT + B или выберите **построить решение** из **построения** меню.</span><span class="sxs-lookup"><span data-stu-id="228eb-118">To build the solution, press CTRL+SHIFT+B or select **Build Solution** from the **Build** menu.</span></span>  
   
-3.  После успешного построения щелкните решение правой кнопкой мыши и выберите команду **Назначить запускаемые проекты**.В диалоговом окне выберите вариант **Несколько запускаемых проектов** и убедитесь, что для обоих проектов задано действие **Запустить**.  
+3.  <span data-ttu-id="228eb-119">После успешного построения щелкните решение правой кнопкой мыши и выберите **назначить запускаемые проекты**.</span><span class="sxs-lookup"><span data-stu-id="228eb-119">Once the build has succeeded, right-click the solution and select **Set Startup Projects**.</span></span> <span data-ttu-id="228eb-120">В диалоговом окне выберите **несколько запускаемых проектов** и убедитесь, что для обоих проектов задано действие **запустить**.</span><span class="sxs-lookup"><span data-stu-id="228eb-120">From the dialog box, select **Multiple Startup Projects** and ensure the action for both projects is **Start**.</span></span>  
   
-4.  Нажмите клавишу F5 или выберите команду **Начать отладку** в меню **Отладка**.Также можно нажать клавиши CTRL\+F5 или выбрать команду **Запуск без отладки** в меню **Отладка**, чтобы запустить выполнение без отладки.  
+4.  <span data-ttu-id="228eb-121">Нажмите клавишу F5 или выберите **начать отладку** из **отладки** меню.</span><span class="sxs-lookup"><span data-stu-id="228eb-121">Press F5 or select **Start Debugging** from the **Debug** menu.</span></span> <span data-ttu-id="228eb-122">Кроме того, нажмите клавиши CTRL + F5 или выберите **Запуск без отладки** из **отладки** меню для запуска без отладки.</span><span class="sxs-lookup"><span data-stu-id="228eb-122">Alternatively, you can press CTRL+F5 or select **Start Without Debugging** from the **Debug** menu to run without debugging.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="228eb-123">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="228eb-123">The samples may already be installed on your machine.</span></span> <span data-ttu-id="228eb-124">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="228eb-124">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="228eb-125">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="228eb-125">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="228eb-126">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="228eb-126">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Basic\Transactions\TRSCompostability`
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\TRSComposability`

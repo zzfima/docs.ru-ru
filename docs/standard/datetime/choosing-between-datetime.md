@@ -1,120 +1,132 @@
 ---
-title: "Выбор между типами DateTime, DateTimeOffset, TimeSpan и TimeZoneInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DateTimeOffset - структура"
-  - "TimeZoneInfo - класс"
-  - "часовые пояса [платформа .NET Framework], общие способы использования"
-  - "классы даты и времени [платформа .NET Framework]"
-  - "часовые пояса [платформа .NET Framework], параметры типа"
-  - "DateTime - структура"
+title: "Выбор между типами DateTime, DateTimeOffset, TimeSpan и TimeZoneInfo"
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DateTimeOffset structure
+- TimeZoneInfo class
+- time zones [.NET Framework], common uses
+- date and time classes [.NET Framework]
+- time zones [.NET Framework], type options
+- DateTime structure
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
-caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 2d2ed7d037faa0bab649600128dc97580c7b972f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Выбор между типами DateTime, DateTimeOffset, TimeSpan и TimeZoneInfo
-Приложения [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], использующие сведения о дате и времени, очень разнообразны и могут использовать эти сведения различными способами. Чаще всего сведения о дате и времени используются в следующих целях:  
-  
--   для представления только даты; сведения о времени не имеют значения;  
-  
--   для представления только времени; сведения о дате не имеют значения;  
-  
--   для представления абстрактных даты и времени, не привязанных к определенному времени и месту \(например, большинство магазинов международных сетей открываются по рабочим дням в 9:00\);  
-  
--   для получения сведений о дате и времени из источников вне [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], в которых они, как правило, хранятся в простом типе данных;  
-  
--   для однозначной идентификации конкретного момента времени: некоторые приложения требуют, чтобы дата и время были однозначными только в основной системе; другие требуют, чтобы они были однозначным в разных системах \(то есть дату, сериализованную в одной системе, можно достоверно десериализовать и использовать в другой системе в любой точке мира\);  
-  
--   для сохранения нескольких связанных значений времени \(например, местного времени запрашивающей системы и серверного времени получения веб\-запроса\);  
-  
--   для выполнения арифметических операций с датой и временем, возможно, с результатом, однозначно определяющим момент времени.  
-  
- Платформа [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] включает типы <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan> и <xref:System.TimeZoneInfo>, которые можно использовать для создания приложений, работающих с датами и временем.  
-  
+# <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a><span data-ttu-id="4c58b-102">Выбор между типами DateTime, DateTimeOffset, TimeSpan и TimeZoneInfo</span><span class="sxs-lookup"><span data-stu-id="4c58b-102">Choosing between DateTime, DateTimeOffset, TimeSpan, and TimeZoneInfo</span></span>
+
+<span data-ttu-id="4c58b-103">Приложения .NET, использующие сведения о дате и времени, очень разнообразны и могут применять эти сведения различными способами.</span><span class="sxs-lookup"><span data-stu-id="4c58b-103">.NET applications that use date and time information are very diverse and can use that information in several ways.</span></span> <span data-ttu-id="4c58b-104">Чаще всего сведения о дате и времени используются в следующих целях:</span><span class="sxs-lookup"><span data-stu-id="4c58b-104">The more common uses of date and time information include one or more of the following:</span></span>
+
+* <span data-ttu-id="4c58b-105">для представления только даты; сведения о времени не имеют значения;</span><span class="sxs-lookup"><span data-stu-id="4c58b-105">To reflect a date only, so that time information is not important.</span></span>
+
+* <span data-ttu-id="4c58b-106">для представления только времени; сведения о дате не имеют значения;</span><span class="sxs-lookup"><span data-stu-id="4c58b-106">To reflect a time only, so that date information is not important.</span></span>
+
+* <span data-ttu-id="4c58b-107">для представления абстрактных даты и времени, не привязанных к определенному времени и месту (например, большинство магазинов международных сетей открываются по рабочим дням в 9:00);</span><span class="sxs-lookup"><span data-stu-id="4c58b-107">To reflect an abstract date and time that is not tied to a specific time and place (for example, most stores in an international chain open on weekdays at 9:00 A.M.).</span></span>
+
+* <span data-ttu-id="4c58b-108">Чтобы получить сведения о дате и времени из источников вне .NET, обычно где хранятся сведения о дате и времени в простой тип данных.</span><span class="sxs-lookup"><span data-stu-id="4c58b-108">To retrieve date and time information from sources outside of .NET, typically where date and time information is stored in a simple data type.</span></span>
+
+* <span data-ttu-id="4c58b-109">для однозначной идентификации конкретного момента времени:</span><span class="sxs-lookup"><span data-stu-id="4c58b-109">To uniquely and unambiguously identify a single point in time.</span></span> <span data-ttu-id="4c58b-110">некоторые приложения требуют, чтобы дата и время были однозначными только в основной системе; другие требуют, чтобы они были однозначным в разных системах (то есть дату, сериализованную в одной системе, можно достоверно десериализовать и использовать в другой системе в любой точке мира);</span><span class="sxs-lookup"><span data-stu-id="4c58b-110">Some applications require that a date and time be unambiguous only on the host system; others require that it be unambiguous across systems (that is, a date serialized on one system can be meaningfully deserialized and used on another system anywhere in the world).</span></span>
+
+* <span data-ttu-id="4c58b-111">для сохранения нескольких связанных значений времени (например, местного времени запрашивающей системы и серверного времени получения веб-запроса);</span><span class="sxs-lookup"><span data-stu-id="4c58b-111">To preserve multiple related times (such as the requestor's local time and the server's time of receipt for a Web request).</span></span>
+
+* <span data-ttu-id="4c58b-112">для выполнения арифметических операций с датой и временем, возможно, с результатом, однозначно определяющим момент времени.</span><span class="sxs-lookup"><span data-stu-id="4c58b-112">To perform date and time arithmetic, possibly with a result that uniquely and unambiguously identifies a single point in time.</span></span>
+
+<span data-ttu-id="4c58b-113">Включает в себя .NET <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, и <xref:System.TimeZoneInfo> типы, которые можно использовать для создания приложений, работающих с датами и временем.</span><span class="sxs-lookup"><span data-stu-id="4c58b-113">.NET includes the <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, and <xref:System.TimeZoneInfo> types, all of which can be used to build applications that work with dates and times.</span></span>
+
 > [!NOTE]
->  В этом разделе не рассматривается четвертый тип, <xref:System.TimeZone>, так как его функциональность практически полностью включена в класс <xref:System.TimeZoneInfo>. Везде, где это возможно, разработчикам следует использовать класс <xref:System.TimeZoneInfo> вместо класса <xref:System.TimeZone>.  
-  
-## Структура DateTime  
- Значение <xref:System.DateTime> определяет конкретную дату и время. Начиная с версии [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 2.0 оно включает свойство <xref:System.DateTime.Kind%2A>, которое предоставляет ограниченные сведения о часовом поясе, которому принадлежат эти дата и время. Значение <xref:System.DateTimeKind>, возвращаемое свойством <xref:System.DateTime.Kind%2A>, указывает, представляет ли значение <xref:System.DateTime> местное время \(<xref:System.DateTimeKind?displayProperty=fullName>\), время в формате UTC \(<xref:System.DateTimeKind?displayProperty=fullName>\) или неопределенное время \(<xref:System.DateTimeKind?displayProperty=fullName>\).  
-  
- Структура <xref:System.DateTime> подходит для приложений, которые:  
-  
--   работают только с датами;  
-  
--   работают только со временем;  
-  
--   работают с абстрактными датами и временем;  
-  
--   работают с датами и временем, для которых отсутствуют сведения о часовом поясе;  
-  
--   работают только с датами и временем в формате UTC;  
-  
--   получают информацию о дате и времени из источников вне [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], таких как базы данных SQL \(как правило, информация о дате и времени хранится в этих источниках в простом формате, который совместим со структурой <xref:System.DateTime>\);  
-  
--   выполняют арифметические операции с датой и временем, но учитывают только общие результаты. Например, в операции сложения, которая добавляет шесть месяцев к определенным дате и времени, часто не важно, корректируется ли результат с учетом перехода на летнее время.  
-  
- Кроме случая, когда определенное значение <xref:System.DateTime> представляет время в формате UTC, значение даты и времени часто является неоднозначным или ограниченным в плане возможности переноса. Например, если значение <xref:System.DateTime> представляет местное время, оно является переносимым внутри местного часового пояса \(то есть если значение десериализуется в другой системе в том же часовом поясе, оно по\-прежнему однозначно определяет конкретный момент времени\). За пределами местного часового пояса значение <xref:System.DateTime> может иметь несколько интерпретаций. Если свойство <xref:System.DateTime.Kind%2A> имеет значение <xref:System.DateTimeKind?displayProperty=fullName>, значение даты и времени становится еще менее переносимым: в этом случае оно неоднозначно даже в том же часовом поясе и, возможно, даже на том же компьютере, на котором оно было впервые сериализовано. Значение <xref:System.DateTime> однозначно идентифицирует момент времени независимо от времени системы или часового пояса, в котором оно используется, только если это значение представляет время в формате UTC.  
-  
+> <span data-ttu-id="4c58b-114">В этом разделе не рассматривается четвертый тип, <xref:System.TimeZone>, так как его функциональность практически полностью включена в класс <xref:System.TimeZoneInfo> .</span><span class="sxs-lookup"><span data-stu-id="4c58b-114">This topic does not discuss a fourth type, <xref:System.TimeZone>, because its functionality is almost entirely incorporated in the <xref:System.TimeZoneInfo> class.</span></span> <span data-ttu-id="4c58b-115">Везде, где это возможно, разработчикам следует использовать класс <xref:System.TimeZoneInfo> вместо класса <xref:System.TimeZone> .</span><span class="sxs-lookup"><span data-stu-id="4c58b-115">Whenever possible, developers should use the <xref:System.TimeZoneInfo> class instead of the <xref:System.TimeZone> class.</span></span>
+
+## <a name="the-datetime-structure"></a><span data-ttu-id="4c58b-116">Структура DateTime</span><span class="sxs-lookup"><span data-stu-id="4c58b-116">The DateTime structure</span></span>
+
+<span data-ttu-id="4c58b-117">Значение <xref:System.DateTime> определяет конкретную дату и время.</span><span class="sxs-lookup"><span data-stu-id="4c58b-117">A <xref:System.DateTime> value defines a particular date and time.</span></span> <span data-ttu-id="4c58b-118">Он включает <xref:System.DateTime.Kind%2A> свойства, которое предоставляет ограниченные сведения о часовом поясе, к которому указанной даты и времени принадлежит.</span><span class="sxs-lookup"><span data-stu-id="4c58b-118">It includes a <xref:System.DateTime.Kind%2A> property that provides limited information about the time zone to which that date and time belongs.</span></span> <span data-ttu-id="4c58b-119"><xref:System.DateTimeKind> Значения, возвращенного <xref:System.DateTime.Kind%2A> свойство указывает, является ли <xref:System.DateTime> значение представляет собой местное время (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>), по Гринвичу (UTC) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>), или неопределенное время (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>).</span><span class="sxs-lookup"><span data-stu-id="4c58b-119">The <xref:System.DateTimeKind> value returned by the <xref:System.DateTime.Kind%2A> property indicates whether the <xref:System.DateTime> value represents the local time (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>), Coordinated Universal Time (UTC) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>), or an unspecified time (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>).</span></span>
+
+<span data-ttu-id="4c58b-120">Структура <xref:System.DateTime> подходит для приложений, которые:</span><span class="sxs-lookup"><span data-stu-id="4c58b-120">The <xref:System.DateTime> structure is suitable for applications that do the following:</span></span>
+
+* <span data-ttu-id="4c58b-121">работают только с датами;</span><span class="sxs-lookup"><span data-stu-id="4c58b-121">Work with dates only.</span></span>
+
+* <span data-ttu-id="4c58b-122">работают только со временем;</span><span class="sxs-lookup"><span data-stu-id="4c58b-122">Work with times only.</span></span>
+
+* <span data-ttu-id="4c58b-123">работают с абстрактными датами и временем;</span><span class="sxs-lookup"><span data-stu-id="4c58b-123">Work with abstract dates and times.</span></span>
+
+* <span data-ttu-id="4c58b-124">работают с датами и временем, для которых отсутствуют сведения о часовом поясе;</span><span class="sxs-lookup"><span data-stu-id="4c58b-124">Work with dates and times for which time zone information is missing.</span></span>
+
+* <span data-ttu-id="4c58b-125">работают только с датами и временем в формате UTC;</span><span class="sxs-lookup"><span data-stu-id="4c58b-125">Work with UTC dates and times only.</span></span>
+
+* <span data-ttu-id="4c58b-126">Получить сведения о дате и времени из источников вне .NET, таких как базы данных SQL.</span><span class="sxs-lookup"><span data-stu-id="4c58b-126">Retrieve date and time information from sources outside of .NET, such as SQL databases.</span></span> <span data-ttu-id="4c58b-127">(как правило, информация о дате и времени хранится в этих источниках в простом формате, который совместим со структурой <xref:System.DateTime> );</span><span class="sxs-lookup"><span data-stu-id="4c58b-127">Typically, these sources store date and time information in a simple format that is compatible with the <xref:System.DateTime> structure.</span></span>
+
+* <span data-ttu-id="4c58b-128">выполняют арифметические операции с датой и временем, но учитывают только общие результаты.</span><span class="sxs-lookup"><span data-stu-id="4c58b-128">Perform date and time arithmetic, but are concerned with general results.</span></span> <span data-ttu-id="4c58b-129">Например, в операции сложения, которая добавляет шесть месяцев к определенным дате и времени, часто не важно, корректируется ли результат с учетом перехода на летнее время.</span><span class="sxs-lookup"><span data-stu-id="4c58b-129">For example, in an addition operation that adds six months to a particular date and time, it is often not important whether the result is adjusted for daylight saving time.</span></span>
+
+<span data-ttu-id="4c58b-130">Кроме случая, когда определенное значение <xref:System.DateTime> представляет время в формате UTC, значение даты и времени часто является неоднозначным или ограниченным в плане возможности переноса.</span><span class="sxs-lookup"><span data-stu-id="4c58b-130">Unless a particular <xref:System.DateTime> value represents UTC, that date and time value is often ambiguous or limited in its portability.</span></span> <span data-ttu-id="4c58b-131">Например, если значение <xref:System.DateTime> представляет местное время, оно является переносимым внутри местного часового пояса (то есть если значение десериализуется в другой системе в том же часовом поясе, оно по-прежнему однозначно определяет конкретный момент времени).</span><span class="sxs-lookup"><span data-stu-id="4c58b-131">For example, if a <xref:System.DateTime> value represents the local time, it is portable within that local time zone (that is, if the value is deserialized on another system in the same time zone, that value still unambiguously identifies a single point in time).</span></span> <span data-ttu-id="4c58b-132">За пределами местного часового пояса значение <xref:System.DateTime> может иметь несколько интерпретаций.</span><span class="sxs-lookup"><span data-stu-id="4c58b-132">Outside the local time zone, that <xref:System.DateTime> value can have multiple interpretations.</span></span> <span data-ttu-id="4c58b-133">Если свойство <xref:System.DateTime.Kind%2A> имеет значение <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>, значение даты и времени становится еще менее переносимым: в этом случае оно неоднозначно даже в том же часовом поясе и, возможно, даже на том же компьютере, на котором оно было впервые сериализовано.</span><span class="sxs-lookup"><span data-stu-id="4c58b-133">If the value's <xref:System.DateTime.Kind%2A> property is <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>, it is even less portable: it is now ambiguous within the same time zone and possibly even on the same system on which it was first serialized.</span></span> <span data-ttu-id="4c58b-134">Значение <xref:System.DateTime> однозначно идентифицирует момент времени независимо от времени системы или часового пояса, в котором оно используется, только если это значение представляет время в формате UTC.</span><span class="sxs-lookup"><span data-stu-id="4c58b-134">Only if a <xref:System.DateTime> value represents UTC does that value unambiguously identify a single point in time regardless of the system or time zone in which the value is used.</span></span>
+
 > [!IMPORTANT]
->  При сохранении или совместном использовании данных <xref:System.DateTime> следует использовать формат UTC, а для свойства <xref:System.DateTime.Kind%2A> значения <xref:System.DateTime> должно быть задано значение <xref:System.DateTimeKind?displayProperty=fullName>.  
-  
-## Структура DateTimeOffset  
- Структура <xref:System.DateTimeOffset> представляет значение даты и времени, а также смещение, которое указывает, насколько это значение отличается от времени в формате UTC. Таким образом, значение всегда однозначно идентифицирует единственный момент времени.  
-  
- Тип <xref:System.DateTimeOffset> включает все функциональные возможности типа <xref:System.DateTime>, а также сведения о часовом поясе. Это делает его подходящим для приложений, которые:  
-  
--   однозначно идентифицируют единственный момент времени; тип <xref:System.DateTimeOffset> можно использовать для однозначного определения текущего момента времени, для ведения журнала времени транзакций, ведения журнала времени событий системы или приложений, а также для записи времени создания и изменения файлов;  
-  
--   выполняют общие арифметические операции с датами и временем;  
-  
--   сохраняют несколько связанных значений времени, если они хранятся как два отдельных значения или два члена структуры.  
-  
+> <span data-ttu-id="4c58b-135">При сохранении или совместном использовании данных <xref:System.DateTime> следует использовать формат UTC, а для свойства <xref:System.DateTime.Kind%2A> значения <xref:System.DateTime> должно быть задано значение <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="4c58b-135">When saving or sharing <xref:System.DateTime> data, UTC should be used and the <xref:System.DateTime> value's <xref:System.DateTime.Kind%2A> property should be set to <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>.</span></span>
+
+## <a name="the-datetimeoffset-structure"></a><span data-ttu-id="4c58b-136">Структура DateTimeOffset</span><span class="sxs-lookup"><span data-stu-id="4c58b-136">The DateTimeOffset structure</span></span>
+
+<span data-ttu-id="4c58b-137">Структура <xref:System.DateTimeOffset> представляет значение даты и времени, а также смещение, которое указывает, насколько это значение отличается от времени в формате UTC.</span><span class="sxs-lookup"><span data-stu-id="4c58b-137">The <xref:System.DateTimeOffset> structure represents a date and time value, together with an offset that indicates how much that value differs from UTC.</span></span> <span data-ttu-id="4c58b-138">Таким образом, значение всегда однозначно идентифицирует единственный момент времени.</span><span class="sxs-lookup"><span data-stu-id="4c58b-138">Thus, the value always unambiguously identifies a single point in time.</span></span>
+
+<span data-ttu-id="4c58b-139">Тип <xref:System.DateTimeOffset> включает все функциональные возможности типа <xref:System.DateTime> , а также сведения о часовом поясе.</span><span class="sxs-lookup"><span data-stu-id="4c58b-139">The <xref:System.DateTimeOffset> type includes all of the functionality of the <xref:System.DateTime> type along with time zone awareness.</span></span> <span data-ttu-id="4c58b-140">Это вполне подходит для приложений, которые выполняют следующее:</span><span class="sxs-lookup"><span data-stu-id="4c58b-140">This makes it suitable for applications that do the following:</span></span>
+
+* <span data-ttu-id="4c58b-141">однозначно идентифицируют единственный момент времени;</span><span class="sxs-lookup"><span data-stu-id="4c58b-141">Uniquely and unambiguously identify a single point in time.</span></span> <span data-ttu-id="4c58b-142">тип <xref:System.DateTimeOffset> можно использовать для однозначного определения текущего момента времени, для ведения журнала времени транзакций, ведения журнала времени событий системы или приложений, а также для записи времени создания и изменения файлов;</span><span class="sxs-lookup"><span data-stu-id="4c58b-142">The <xref:System.DateTimeOffset> type can be used to unambiguously define the meaning of "now", to log transaction times, to log the times of system or application events, and to record file creation and modification times.</span></span>
+
+* <span data-ttu-id="4c58b-143">выполняют общие арифметические операции с датами и временем;</span><span class="sxs-lookup"><span data-stu-id="4c58b-143">Perform general date and time arithmetic.</span></span>
+
+* <span data-ttu-id="4c58b-144">сохраняют несколько связанных значений времени, если они хранятся как два отдельных значения или два члена структуры.</span><span class="sxs-lookup"><span data-stu-id="4c58b-144">Preserve multiple related times, as long as those times are stored as two separate values or as two members of a structure.</span></span>
+
 > [!NOTE]
->  Эти варианты использования значений <xref:System.DateTimeOffset> более распространены, чем варианты использования значений <xref:System.DateTime>. Соответственно, <xref:System.DateTimeOffset> следует рассматривать как тип даты и времени по умолчанию для разработки приложений.  
-  
- Значение <xref:System.DateTimeOffset> не привязано к определенному часовому поясу, но может быть создано из любого часового пояса. Чтобы проиллюстрировать это, в примере ниже перечисляются часовые пояса, к которым может принадлежать ряд значений <xref:System.DateTimeOffset> \(включая местное тихоокеанское время США\).  
-  
- [!code-csharp[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual1.cs#1)]
- [!code-vb[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual1.vb#1)]  
-  
- Выходные данные показывают, что все значения даты и времени в этом примере могут принадлежать по крайней мере трем разным часовым поясам. Значение <xref:System.DateTimeOffset> 6\/10\/2007 показывает, что если значение даты и времени представляет летнее время, его смещение от времени UTC необязательно соответствует базовому смещению UTC исходного часового пояса или смещению от времени UTC, указанному в его отображаемом имени. Это означает, что, так как одно значение <xref:System.DateTimeOffset> не является тесно связанным с его часовым поясом, оно не может отражать переход часового пояса с летнего на зимнее время и обратно. Это может быть особенно проблематичным, когда используются арифметические операции со значением <xref:System.DateTimeOffset>. \(Описание способов выполнения арифметических операций с датой и временем с учетом правил коррекции часового пояса см. в разделе [Выполнение арифметических операций с датами и временем](../../../docs/standard/datetime/performing-arithmetic-operations.md).\)  
-  
-## Структура TimeSpan  
- Структура <xref:System.TimeSpan> представляет интервал времени. Ее обычно используют двумя способами:  
-  
--   для отражения интервала времени между двумя значениями даты и времени \(например, при вычитании одного значения <xref:System.DateTime> из другого возвращается значение <xref:System.TimeSpan>\);  
-  
--   для измерения прошедшего времени. Например, свойство <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=fullName> возвращает значение <xref:System.TimeSpan>, которое отражает интервал времени, прошедший с момента вызова одного из методов <xref:System.Diagnostics.Stopwatch>, который начинает измерение прошедшего времени.  
-  
- Значение <xref:System.TimeSpan> также может использоваться для замены значения <xref:System.DateTime>, если это значение отражает время без указания времени суток. Этот вариант использования аналогичен свойствам <xref:System.DateTime.TimeOfDay%2A?displayProperty=fullName> и <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=fullName>, которые возвращают значение <xref:System.TimeSpan>, представляющее время безотносительно к дате. Например, структуру <xref:System.TimeSpan> можно использовать для представления ежедневного времени открытия или закрытия магазина или времени, в которое происходит любое регулярное событие.  
-  
- В примере ниже определяется структура `StoreInfo`, которая включает объекты <xref:System.TimeSpan>, представляющие время закрытия и открытия магазина, а также объект <xref:System.TimeZoneInfo>, представляющий часовой пояс магазина. Структура также включает два метода, `IsOpenNow` и `IsOpenAt`, указывающие, открыт ли магазин в то время, которое указал пользователь, предположительно находящийся в местном часовом поясе.  
-  
- [!code-csharp[Conceptual.ChoosingDates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.choosingdates/cs/datetimereplacement1.cs#1)]
- [!code-vb[Conceptual.ChoosingDates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.choosingdates/vb/datetimereplacement1.vb#1)]  
-  
- Затем клиентский код может использовать структуру `StoreInfo`, как показано ниже.  
-  
- [!code-csharp[Conceptual.ChoosingDates#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.choosingdates/cs/datetimereplacement1.cs#2)]
- [!code-vb[Conceptual.ChoosingDates#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.choosingdates/vb/datetimereplacement1.vb#2)]  
-  
-## Класс TimeZoneInfo  
- Класс <xref:System.TimeZoneInfo> представляет все часовые пояса Земли и обеспечивает преобразование любого значения даты и времени из одного часового пояса в его эквивалент в другом часовом поясе. Класс <xref:System.TimeZoneInfo> позволяет работать со значениями даты и времени, обеспечивая однозначную идентификацию единственного момента времени с помощью любого значения даты и времени. Класс <xref:System.TimeZoneInfo> также является расширяемым. Хотя он зависит от сведений о часовом поясе, предоставленных для систем Windows и определенных в реестре, он поддерживает создание настраиваемых часовых поясов. Кроме того, он поддерживает сериализацию и десериализацию сведений о часовом поясе.  
-  
- В некоторых случаях использование всех преимуществ класса <xref:System.TimeZoneInfo> может потребовать дальнейших усилий по разработке. Во\-первых, значения даты и времени не связаны тесно с часовыми поясами, к которым они относятся. Соответственно, если приложение не предоставляет некоторый механизм для связывания даты и времени с соответствующим часовым поясом, определенное значение даты и времени может легко утратить связь с часовым поясом. \(Одним из способов связывания этой информации является определение класса или структуры, содержащих значение даты и времени и связанный с ним часовой пояс.\) Во\-вторых, в Windows XP и более ранних версиях Windows фактически нет поддержки исторической информации о часовых поясах, а в [!INCLUDE[windowsver](../../../includes/windowsver-md.md)] имеется только ограниченная поддержка. В приложениях, предназначенных для обработки исторических значений даты и времени, необходимо более широко использовать настраиваемые часовые пояса.  
-  
- Использование преимуществ поддержки часовых поясов в [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] возможно только в том случае, если часовой пояс, к которому относится значение даты и времени, известен при создании экземпляра объекта даты и времени. Как правило, это условие не выполняется, особенно в сетевых или веб\-приложениях.  
-  
-## См. также  
- [Даты, время и часовые пояса](../../../docs/standard/datetime/index.md)
+> <span data-ttu-id="4c58b-145">Эти варианты использования значений <xref:System.DateTimeOffset> более распространены, чем варианты использования значений <xref:System.DateTime> .</span><span class="sxs-lookup"><span data-stu-id="4c58b-145">These uses for <xref:System.DateTimeOffset> values are much more common than those for <xref:System.DateTime> values.</span></span> <span data-ttu-id="4c58b-146">Соответственно, <xref:System.DateTimeOffset> следует рассматривать как тип даты и времени по умолчанию для разработки приложений.</span><span class="sxs-lookup"><span data-stu-id="4c58b-146">As a result, <xref:System.DateTimeOffset> should be considered the default date and time type for application development.</span></span>
+
+<span data-ttu-id="4c58b-147">Значение <xref:System.DateTimeOffset> не привязано к определенному часовому поясу, но может быть создано из любого часового пояса.</span><span class="sxs-lookup"><span data-stu-id="4c58b-147">A <xref:System.DateTimeOffset> value is not tied to a particular time zone, but can originate from any of a variety of time zones.</span></span> <span data-ttu-id="4c58b-148">Чтобы проиллюстрировать это, в примере ниже перечисляются часовые пояса, к которым может принадлежать ряд значений <xref:System.DateTimeOffset> (включая местное тихоокеанское время США).</span><span class="sxs-lookup"><span data-stu-id="4c58b-148">To illustrate this, the following example lists the time zones to which a number of <xref:System.DateTimeOffset> values (including a local Pacific Standard Time) can belong.</span></span>
+
+[!code-csharp[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual1.cs#1)]
+[!code-vb[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual1.vb#1)]
+
+<span data-ttu-id="4c58b-149">Выходные данные показывают, что все значения даты и времени в этом примере могут принадлежать по крайней мере трем разным часовым поясам.</span><span class="sxs-lookup"><span data-stu-id="4c58b-149">The output shows that each date and time value in this example can belong to at least three different time zones.</span></span> <span data-ttu-id="4c58b-150">Значение <xref:System.DateTimeOffset> 6/10/2007 показывает, что если значение даты и времени представляет летнее время, его смещение от времени UTC необязательно соответствует базовому смещению UTC исходного часового пояса или смещению от времени UTC, указанному в его отображаемом имени.</span><span class="sxs-lookup"><span data-stu-id="4c58b-150">The <xref:System.DateTimeOffset> value of 6/10/2007 shows that if a date and time value represents a daylight saving time, its offset from UTC does not even necessarily correspond to the originating time zone's base UTC offset or to the offset from UTC found in its display name.</span></span> <span data-ttu-id="4c58b-151">Это означает, что, так как одно значение <xref:System.DateTimeOffset> не является тесно связанным с его часовым поясом, оно не может отражать переход часового пояса с летнего на зимнее время и обратно.</span><span class="sxs-lookup"><span data-stu-id="4c58b-151">This means that, because a single <xref:System.DateTimeOffset> value is not tightly coupled with its time zone, it cannot reflect a time zone's transition to and from daylight saving time.</span></span> <span data-ttu-id="4c58b-152">Это может быть особенно проблематичным, когда используются арифметические операции со значением <xref:System.DateTimeOffset> .</span><span class="sxs-lookup"><span data-stu-id="4c58b-152">This can be particularly problematic when date and time arithmetic is used to manipulate a <xref:System.DateTimeOffset> value.</span></span> <span data-ttu-id="4c58b-153">(Описание способов выполнения арифметических операций с датой и временем с учетом правил коррекции часового пояса см. в разделе [Performing arithmetic operations with dates and times](../../../docs/standard/datetime/performing-arithmetic-operations.md).)</span><span class="sxs-lookup"><span data-stu-id="4c58b-153">(For a discussion of how to perform date and time arithmetic in a way that takes account of a time zone's adjustment rules, see [Performing arithmetic operations with dates and times](../../../docs/standard/datetime/performing-arithmetic-operations.md).)</span></span>
+
+## <a name="the-timespan-structure"></a><span data-ttu-id="4c58b-154">Структура TimeSpan</span><span class="sxs-lookup"><span data-stu-id="4c58b-154">The TimeSpan structure</span></span>
+
+<span data-ttu-id="4c58b-155">Структура <xref:System.TimeSpan> представляет интервал времени.</span><span class="sxs-lookup"><span data-stu-id="4c58b-155">The <xref:System.TimeSpan> structure represents a time interval.</span></span> <span data-ttu-id="4c58b-156">Ее обычно используют двумя способами:</span><span class="sxs-lookup"><span data-stu-id="4c58b-156">Its two typical uses are:</span></span>
+
+* <span data-ttu-id="4c58b-157">для отражения интервала времени между двумя значениями даты и времени</span><span class="sxs-lookup"><span data-stu-id="4c58b-157">Reflecting the time interval between two date and time values.</span></span> <span data-ttu-id="4c58b-158">(например, при вычитании одного значения <xref:System.DateTime> из другого возвращается значение <xref:System.TimeSpan> );</span><span class="sxs-lookup"><span data-stu-id="4c58b-158">For example, subtracting one <xref:System.DateTime> value from another returns a <xref:System.TimeSpan> value.</span></span>
+
+* <span data-ttu-id="4c58b-159">для измерения прошедшего времени.</span><span class="sxs-lookup"><span data-stu-id="4c58b-159">Measuring elapsed time.</span></span> <span data-ttu-id="4c58b-160">Например <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> возвращает <xref:System.TimeSpan> значение, которое отражает интервал времени, прошедшего с момента вызова одного из <xref:System.Diagnostics.Stopwatch> методов, который начинает измерение прошедшего времени.</span><span class="sxs-lookup"><span data-stu-id="4c58b-160">For example, the <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> property returns a <xref:System.TimeSpan> value that reflects the time interval that has elapsed since the call to one of the <xref:System.Diagnostics.Stopwatch> methods that begins to measure elapsed time.</span></span>
+
+<span data-ttu-id="4c58b-161">Значение <xref:System.TimeSpan> также может использоваться для замены значения <xref:System.DateTime> , если это значение отражает время без указания времени суток.</span><span class="sxs-lookup"><span data-stu-id="4c58b-161">A <xref:System.TimeSpan> value can also be used as a replacement for a <xref:System.DateTime> value when that value reflects a time without reference to a particular time of day.</span></span> <span data-ttu-id="4c58b-162">Данный подход аналогичен <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> и <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType> свойства, которые возвращают <xref:System.TimeSpan> значение, представляющее время без указания даты.</span><span class="sxs-lookup"><span data-stu-id="4c58b-162">This usage is similar to the <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> and <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType> properties, which return a <xref:System.TimeSpan> value that represents the time without reference to a date.</span></span> <span data-ttu-id="4c58b-163">Например, структуру <xref:System.TimeSpan> можно использовать для представления ежедневного времени открытия или закрытия магазина или времени, в которое происходит любое регулярное событие.</span><span class="sxs-lookup"><span data-stu-id="4c58b-163">For example, the <xref:System.TimeSpan> structure can be used to reflect a store's daily opening or closing time, or it can be used to represent the time at which any regular event occurs.</span></span>
+
+<span data-ttu-id="4c58b-164">В примере ниже определяется структура `StoreInfo` , которая включает объекты <xref:System.TimeSpan> , представляющие время закрытия и открытия магазина, а также объект <xref:System.TimeZoneInfo> , представляющий часовой пояс магазина.</span><span class="sxs-lookup"><span data-stu-id="4c58b-164">The following example defines a `StoreInfo` structure that includes <xref:System.TimeSpan> objects for store opening and closing times, as well as a <xref:System.TimeZoneInfo> object that represents the store's time zone.</span></span> <span data-ttu-id="4c58b-165">Структура также включает два метода, `IsOpenNow` и `IsOpenAt`, указывающие, открыт ли магазин в то время, которое указал пользователь, предположительно находящийся в местном часовом поясе.</span><span class="sxs-lookup"><span data-stu-id="4c58b-165">The structure also includes two methods, `IsOpenNow` and `IsOpenAt`, that indicates whether the store is open at a time specified by the user, who is assumed to be in the local time zone.</span></span>
+
+[!code-csharp[Conceptual.ChoosingDates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.choosingdates/cs/datetimereplacement1.cs#1)]
+[!code-vb[Conceptual.ChoosingDates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.choosingdates/vb/datetimereplacement1.vb#1)]
+
+<span data-ttu-id="4c58b-166">Затем клиентский код может использовать структуру `StoreInfo` , как показано ниже.</span><span class="sxs-lookup"><span data-stu-id="4c58b-166">The `StoreInfo` structure can then be used by client code like the following.</span></span>
+
+[!code-csharp[Conceptual.ChoosingDates#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.choosingdates/cs/datetimereplacement1.cs#2)]
+[!code-vb[Conceptual.ChoosingDates#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.choosingdates/vb/datetimereplacement1.vb#2)]
+
+## <a name="the-timezoneinfo-class"></a><span data-ttu-id="4c58b-167">Класс TimeZoneInfo</span><span class="sxs-lookup"><span data-stu-id="4c58b-167">The TimeZoneInfo class</span></span>
+
+<span data-ttu-id="4c58b-168">Класс <xref:System.TimeZoneInfo> class represents any of the Earth's time zones, and enables the conversion of any date and time in one time zone to its equivalent in another time zone.</span><span class="sxs-lookup"><span data-stu-id="4c58b-168">The <xref:System.TimeZoneInfo> class represents any of the Earth's time zones, and enables the conversion of any date and time in one time zone to its equivalent in another time zone.</span></span> <span data-ttu-id="4c58b-169">Класс <xref:System.TimeZoneInfo> позволяет работать со значениями даты и времени, обеспечивая однозначную идентификацию единственного момента времени с помощью любого значения даты и времени.</span><span class="sxs-lookup"><span data-stu-id="4c58b-169">The <xref:System.TimeZoneInfo> class makes it possible to work with dates and times so that any date and time value unambiguously identifies a single point in time.</span></span> <span data-ttu-id="4c58b-170">Класс <xref:System.TimeZoneInfo> также является расширяемым.</span><span class="sxs-lookup"><span data-stu-id="4c58b-170">The <xref:System.TimeZoneInfo> class is also extensible.</span></span> <span data-ttu-id="4c58b-171">Хотя он зависит от сведений о часовом поясе, предоставленных для систем Windows и определенных в реестре, он поддерживает создание настраиваемых часовых поясов.</span><span class="sxs-lookup"><span data-stu-id="4c58b-171">Although it depends on time zone information provided for Windows systems and defined in the registry, it supports the creation of custom time zones.</span></span> <span data-ttu-id="4c58b-172">Кроме того, он поддерживает сериализацию и десериализацию сведений о часовом поясе.</span><span class="sxs-lookup"><span data-stu-id="4c58b-172">It also supports the serialization and deserialization of time zone information.</span></span>
+
+<span data-ttu-id="4c58b-173">В некоторых случаях использование всех преимуществ класса <xref:System.TimeZoneInfo> может потребовать дальнейших усилий по разработке.</span><span class="sxs-lookup"><span data-stu-id="4c58b-173">In some cases, taking full advantage of the <xref:System.TimeZoneInfo> class may require further development work.</span></span> <span data-ttu-id="4c58b-174">Если значения даты и времени не связаны тесно с часовыми поясами, к которым они принадлежат, дополнительная не требуется.</span><span class="sxs-lookup"><span data-stu-id="4c58b-174">If date and time values are not tightly coupled with the time zones to which they belong, further work is required.</span></span> <span data-ttu-id="4c58b-175">Если приложение не предоставляет некоторый механизм для связывания даты и времени с соответствующим часовым поясом, можно легко для определенной даты и времени значение утратить связь с его часовым поясом.</span><span class="sxs-lookup"><span data-stu-id="4c58b-175">Unless your application provides some mechanism for linking a date and time with its associated time zone, it's easy for a particular date and time value to become disassociated from its time zone.</span></span> <span data-ttu-id="4c58b-176">Одним из способов связывания этой информации является определение класса или структуры, содержащих значение даты и времени и связанный с ним часовой пояс.</span><span class="sxs-lookup"><span data-stu-id="4c58b-176">One method of linking this information is to define a class or structure that contains both the date and time value and its associated time zone object.</span></span>
+
+<span data-ttu-id="4c58b-177">Использование преимуществ поддержки часовых поясов в .NET возможно только в том случае, если часовой пояс, к которому относится значение даты и времени, известен при создании экземпляра объекта даты и времени.</span><span class="sxs-lookup"><span data-stu-id="4c58b-177">Taking advantage of time zone support in .NET is possible only if the time zone to which a date and time value belongs is known when that date and time object is instantiated.</span></span> <span data-ttu-id="4c58b-178">Как правило, это условие не выполняется, особенно в сетевых или веб-приложениях.</span><span class="sxs-lookup"><span data-stu-id="4c58b-178">This is often not the case, particularly in Web or network applications.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="4c58b-179">См. также</span><span class="sxs-lookup"><span data-stu-id="4c58b-179">See also</span></span>
+
+[<span data-ttu-id="4c58b-180">Даты, время и часовые пояса</span><span class="sxs-lookup"><span data-stu-id="4c58b-180">Dates, times, and time zones</span></span>](../../../docs/standard/datetime/index.md)

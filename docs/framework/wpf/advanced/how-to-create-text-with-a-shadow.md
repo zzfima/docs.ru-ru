@@ -1,75 +1,78 @@
 ---
-title: "Практическое руководство. Создание текста с тенью | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "эффекты тени в тексте"
-  - "текст, затененные"
-  - "оформление, эффекты тени"
+title: "Практическое руководство. Создание текста с тенью"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- typography [WPF], shadow effects
+- shadow effects in text [WPF]
+- text [WPF], shadowed
 ms.assetid: 6ab9c754-6001-4708-b479-5367f2fd1a35
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 31bbc3da54c10304e52f93d38365a8d9ed005505
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Создание текста с тенью
-В примерах этого раздела показано, как создать эффект тени для отображаемого текста.  
+# <a name="how-to-create-text-with-a-shadow"></a><span data-ttu-id="cceba-102">Практическое руководство. Создание текста с тенью</span><span class="sxs-lookup"><span data-stu-id="cceba-102">How to: Create Text with a Shadow</span></span>
+<span data-ttu-id="cceba-103">Примеры в этом разделе демонстрируют создание эффекта тени для отображаемого текста.</span><span class="sxs-lookup"><span data-stu-id="cceba-103">The examples in this section show how to create a shadow effect for displayed text.</span></span>  
   
-## Пример  
- Объект <xref:System.Windows.Media.Effects.DropShadowEffect> позволяет создавать разнообразные эффекты тени для объектов [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  В следующем примере показан эффект тени, применяемый к тексту.  В этом случае тень является мягкой, что означает размытие цвета тени.  
+## <a name="example"></a><span data-ttu-id="cceba-104">Пример</span><span class="sxs-lookup"><span data-stu-id="cceba-104">Example</span></span>  
+ <span data-ttu-id="cceba-105"><xref:System.Windows.Media.Effects.DropShadowEffect> Объектов позволяет создавать разнообразные эффекты тени для [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] объектов.</span><span class="sxs-lookup"><span data-stu-id="cceba-105">The <xref:System.Windows.Media.Effects.DropShadowEffect> object allows you to create a variety of drop shadow effects for [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] objects.</span></span> <span data-ttu-id="cceba-106">В следующем примере показано применение эффекта тени к тексту.</span><span class="sxs-lookup"><span data-stu-id="cceba-106">The following example shows a drop shadow effect applied to text.</span></span> <span data-ttu-id="cceba-107">В этом случае используется мягкая тень, то есть цвет тени размывается.</span><span class="sxs-lookup"><span data-stu-id="cceba-107">In this case, the shadow is a soft shadow, which means the shadow color blurs.</span></span>  
   
- ![Тень текста с мягкостью &#61; 0.25](../../../../docs/framework/wpf/advanced/media/shadowtext01.png "ShadowText01")  
-Пример текста с мягкой тенью  
+ <span data-ttu-id="cceba-108">![Тень текста с мягкостью &#61; 0,25](../../../../docs/framework/wpf/advanced/media/shadowtext01.jpg "ShadowText01")</span><span class="sxs-lookup"><span data-stu-id="cceba-108">![Text shadow with Softness &#61; 0.25](../../../../docs/framework/wpf/advanced/media/shadowtext01.jpg "ShadowText01")</span></span>  
+<span data-ttu-id="cceba-109">Пример текста с мягкой тенью</span><span class="sxs-lookup"><span data-stu-id="cceba-109">Example of text with a soft shadow</span></span>  
   
- Можно управлять шириной тени, задавая значение свойства <xref:System.Windows.Media.Effects.DropShadowEffect.ShadowDepth%2A>.  Значение `4.0` указывает ширину тени равную 4 пикселям.  Можно управлять резкостью или размытием тени, изменяя свойство <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A>.  Значение `0.0` указывает отсутствие размытия.  В следующем примере показан способ создания мягкой тени.  
+ <span data-ttu-id="cceba-110">Можно задать ширину тени, установив <xref:System.Windows.Media.Effects.DropShadowEffect.ShadowDepth%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="cceba-110">You can control the width of a shadow by setting the <xref:System.Windows.Media.Effects.DropShadowEffect.ShadowDepth%2A> property.</span></span> <span data-ttu-id="cceba-111">Значение `4.0` указывает ширину тени 4 пикселя.</span><span class="sxs-lookup"><span data-stu-id="cceba-111">A value of `4.0` indicates a shadow width of 4 pixels.</span></span> <span data-ttu-id="cceba-112">Можно управлять плавность или размытия тени, изменяя <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="cceba-112">You can control the softness, or blur, of a shadow by modifying the <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A> property.</span></span> <span data-ttu-id="cceba-113">Значение `0.0` указывает отсутствие размытия.</span><span class="sxs-lookup"><span data-stu-id="cceba-113">A value of `0.0` indicates no blurring.</span></span> <span data-ttu-id="cceba-114">В следующем примере кода показано создание мягкой тени.</span><span class="sxs-lookup"><span data-stu-id="cceba-114">The following code example shows how to create a soft shadow.</span></span>  
   
- [!code-xml[TextShadowSnippets#TextShadowSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/SingleShadows.xaml#textshadowsnippet1)]  
+ [!code-xaml[TextShadowSnippets#TextShadowSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/SingleShadows.xaml#textshadowsnippet1)]  
   
 > [!NOTE]
->  Эти эффекты тени не проходят через конвейер отрисовки текста [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  В результате, при использовании этих эффектов отключается технология ClearType.  
+>  <span data-ttu-id="cceba-115">Эти эффекты тени не проходят через [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] конвейера отрисовки текста.</span><span class="sxs-lookup"><span data-stu-id="cceba-115">These shadow effects do not go through the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] text rendering pipeline.</span></span> <span data-ttu-id="cceba-116">Следовательно, тип ClearType при использовании этих эффектов отключен.</span><span class="sxs-lookup"><span data-stu-id="cceba-116">As a result, ClearType is disabled when using these effects.</span></span>  
   
- В следующем примере показан эффект жесткой тени, применяемый к тексту.  В этом случае тень не размыта.  
+ <span data-ttu-id="cceba-117">В следующем примере показано применение эффекта жесткой тени к тексту.</span><span class="sxs-lookup"><span data-stu-id="cceba-117">The following example shows a hard drop shadow effect applied to text.</span></span> <span data-ttu-id="cceba-118">В этом случае тень не размыта.</span><span class="sxs-lookup"><span data-stu-id="cceba-118">In this case, the shadow is not blurred.</span></span>  
   
- ![Тень текста с мягкостью &#61; 0](../../../../docs/framework/wpf/advanced/media/shadowtext02.png "ShadowText02")  
-Пример текста с жесткой тенью  
+ <span data-ttu-id="cceba-119">![Тень текста с мягкостью &#61; 0](../../../../docs/framework/wpf/advanced/media/shadowtext02.jpg "ShadowText02")</span><span class="sxs-lookup"><span data-stu-id="cceba-119">![Text shadow with Softness &#61; 0](../../../../docs/framework/wpf/advanced/media/shadowtext02.jpg "ShadowText02")</span></span>  
+<span data-ttu-id="cceba-120">Пример текста с жесткой тенью</span><span class="sxs-lookup"><span data-stu-id="cceba-120">Example of text with a hard shadow</span></span>  
   
- Можно создать жесткую тень, присвоив свойству <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A> значение `0.0`, которое указывает, что эффект размытия не используется.  Можно управлять направлением тени, изменяя свойство <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A>.  Значение этого свойства представляет собой угол между `0` и `360`.  На следующем рисунке показаны значения направления для свойства <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A>.  
+ <span data-ttu-id="cceba-121">Жесткой тени можно создать, присвоив <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A> свойства `0.0`, который показывает, что отсутствие размытия.</span><span class="sxs-lookup"><span data-stu-id="cceba-121">You can create a hard shadow by setting the <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A> property to `0.0`, which indicates that no blurring is used.</span></span> <span data-ttu-id="cceba-122">Можно управлять направлением тени, изменяя <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="cceba-122">You can control the direction of the shadow by modifying the <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A> property.</span></span> <span data-ttu-id="cceba-123">Значение этого свойства угол между `0` и `360`.</span><span class="sxs-lookup"><span data-stu-id="cceba-123">Set the directional value of this property to a degree between `0` and `360`.</span></span> <span data-ttu-id="cceba-124">На следующем рисунке показан направления значения <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A> значение свойства.</span><span class="sxs-lookup"><span data-stu-id="cceba-124">The following illustration shows the directional values of the <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A> property setting.</span></span>  
   
- ![Параметр степени тени DropShadow](../../../../docs/framework/wpf/advanced/media/shadowtext08.png "ShadowText08")  
-Схема направления объекта DropShadow  
+ <span data-ttu-id="cceba-125">![Параметр степени тени DropShadow](../../../../docs/framework/wpf/advanced/media/shadowtext08.png "ShadowText08")</span><span class="sxs-lookup"><span data-stu-id="cceba-125">![DropShadow degree setting of shadow](../../../../docs/framework/wpf/advanced/media/shadowtext08.png "ShadowText08")</span></span>  
+<span data-ttu-id="cceba-126">Схема направления DropShadow</span><span class="sxs-lookup"><span data-stu-id="cceba-126">DropShadow Direction diagram</span></span>  
   
- В следующем примере показан способ создания жесткой тени.  
+ <span data-ttu-id="cceba-127">В следующем примере кода показано создание жесткой тени.</span><span class="sxs-lookup"><span data-stu-id="cceba-127">The following code example shows how to create a hard shadow.</span></span>  
   
- [!code-xml[TextShadowSnippets#TextShadowSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/SingleShadows.xaml#textshadowsnippet2)]  
+ [!code-xaml[TextShadowSnippets#TextShadowSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/SingleShadows.xaml#textshadowsnippet2)]  
   
-## Использование эффекта размытия  
- С помощью объекта <xref:System.Windows.Media.Effects.BlurBitmapEffect> можно создать аналогичный тени эффект, который можно поместить позади текстового объекта.  Эффект размытия, примененный к тексту, размывает текст равномерно во всех направлениях.  
+## <a name="using-a-blur-effect"></a><span data-ttu-id="cceba-128">Использование эффекта размытия</span><span class="sxs-lookup"><span data-stu-id="cceba-128">Using a Blur Effect</span></span>  
+ <span data-ttu-id="cceba-129">Объект <xref:System.Windows.Media.Effects.BlurBitmapEffect> можно использовать для создания эффекта аналогичный тени, который можно поместить позади текстового объекта.</span><span class="sxs-lookup"><span data-stu-id="cceba-129">A <xref:System.Windows.Media.Effects.BlurBitmapEffect> can be used to create a shadow-like effect that can be placed behind a text object.</span></span> <span data-ttu-id="cceba-130">Если к тексту применяется эффект размытия для точечных рисунков, текст равномерно размывается во всех направлениях.</span><span class="sxs-lookup"><span data-stu-id="cceba-130">A blur bitmap effect applied to text blurs the text evenly in all directions.</span></span>  
   
- В следующем примере показан эффект размытия, примененный к тексту.  
+ <span data-ttu-id="cceba-131">В следующем примере показан эффект размытия, примененный к тексту.</span><span class="sxs-lookup"><span data-stu-id="cceba-131">The following example shows a blur effect applied to text.</span></span>  
   
- ![Тень текста с использованием BlurBitmapEffect](../../../../docs/framework/wpf/advanced/media/shadowtext06.png "ShadowText06")  
-Пример текста с эффектом размытия  
+ <span data-ttu-id="cceba-132">![Тень текста с использованием BlurBitmapEffect](../../../../docs/framework/wpf/advanced/media/shadowtext06.jpg "ShadowText06")</span><span class="sxs-lookup"><span data-stu-id="cceba-132">![Text shadow using a BlurBitmapEffect](../../../../docs/framework/wpf/advanced/media/shadowtext06.jpg "ShadowText06")</span></span>  
+<span data-ttu-id="cceba-133">Пример текста с эффектом размытия</span><span class="sxs-lookup"><span data-stu-id="cceba-133">Example of text with a blur effect</span></span>  
   
- В следующем примере кода показан способ создания эффекта размытия.  
+ <span data-ttu-id="cceba-134">В следующем примере кода показано создание эффекта размытия.</span><span class="sxs-lookup"><span data-stu-id="cceba-134">The following code example shows how to create a blur effect.</span></span>  
   
- [!code-xml[TextShadowSnippets#TextShadowSnippet6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/BlurShadows.xaml#textshadowsnippet6)]  
+ [!code-xaml[TextShadowSnippets#TextShadowSnippet6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/BlurShadows.xaml#textshadowsnippet6)]  
   
-## Использование преобразования со смещением  
- Объект <xref:System.Windows.Media.TranslateTransform> можно использовать для создания эффекта, похожего на тень, который можно поместить позади объекта текста.  
+## <a name="using-a-translate-transform"></a><span data-ttu-id="cceba-135">Использование преобразования переноса</span><span class="sxs-lookup"><span data-stu-id="cceba-135">Using a Translate Transform</span></span>  
+ <span data-ttu-id="cceba-136">Объект <xref:System.Windows.Media.TranslateTransform> можно использовать для создания эффекта аналогичный тени, который можно поместить позади текстового объекта.</span><span class="sxs-lookup"><span data-stu-id="cceba-136">A <xref:System.Windows.Media.TranslateTransform> can be used to create a shadow-like effect that can be placed behind a text object.</span></span>  
   
- В следующем примере кода используется объект <xref:System.Windows.Media.TranslateTransform> для смещения текста.  В этом примере немного смещенная копия текста под основным текстом создает эффект тени.  
+ <span data-ttu-id="cceba-137">Следующий пример кода использует <xref:System.Windows.Media.TranslateTransform> для смещения текста.</span><span class="sxs-lookup"><span data-stu-id="cceba-137">The following code example uses a <xref:System.Windows.Media.TranslateTransform> to offset text.</span></span> <span data-ttu-id="cceba-138">В этом примере слегка смещенная копия текста под основным текстом создает эффект тени.</span><span class="sxs-lookup"><span data-stu-id="cceba-138">In this example, a slightly offset copy of text below the primary text creates a shadow effect.</span></span>  
   
- ![Тень текста с использованием TranslateTransform](../../../../docs/framework/wpf/advanced/media/shadowtext07.png "ShadowText07")  
-Пример текста с использованием преобразования для создания эффекта тени  
+ <span data-ttu-id="cceba-139">![Тень текста с использованием TranslateTransform](../../../../docs/framework/wpf/advanced/media/shadowtext07.jpg "ShadowText07")</span><span class="sxs-lookup"><span data-stu-id="cceba-139">![Text shadow using a TranslateTransform](../../../../docs/framework/wpf/advanced/media/shadowtext07.jpg "ShadowText07")</span></span>  
+<span data-ttu-id="cceba-140">Пример текста, в котором преобразование используется для создания эффекта тени</span><span class="sxs-lookup"><span data-stu-id="cceba-140">Example of text using a transform for a shadow effect</span></span>  
   
- В следующем примере показано, как создать преобразование для создания эффекта тени.  
+ <span data-ttu-id="cceba-141">В следующем примере кода показано создание эффекта тени с помощью преобразования.</span><span class="sxs-lookup"><span data-stu-id="cceba-141">The following code example shows how to create a transform for a shadow effect.</span></span>  
   
- [!code-xml[TextShadowSnippets#TextShadowSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/TransformShadows.xaml#textshadowsnippet7)]
+ [!code-xaml[TextShadowSnippets#TextShadowSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/TransformShadows.xaml#textshadowsnippet7)]

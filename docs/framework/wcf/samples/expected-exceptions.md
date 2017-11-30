@@ -1,36 +1,39 @@
 ---
-title: "Ожидаемые исключения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ожидаемые исключения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 77ddddd51229712f85bc780889169e159c1c83e8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Ожидаемые исключения
-В этом образце показано, как перехватывать ожидаемые исключения при использовании типизированного клиента.Данный образец основан на образце [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md), реализующем службу калькулятора.В этом образце клиентом является консольное приложение \(EXE\), а служба размещается в службах IIS.  
+# <a name="expected-exceptions"></a><span data-ttu-id="6db01-102">Ожидаемые исключения</span><span class="sxs-lookup"><span data-stu-id="6db01-102">Expected Exceptions</span></span>
+<span data-ttu-id="6db01-103">В этом образце показано, как перехватывать ожидаемые исключения при использовании типизированного клиента.</span><span class="sxs-lookup"><span data-stu-id="6db01-103">This sample demonstrates how to catch expected exceptions when using a typed client.</span></span> <span data-ttu-id="6db01-104">Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующий службу калькулятора.</span><span class="sxs-lookup"><span data-stu-id="6db01-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span> <span data-ttu-id="6db01-105">В этом образце клиентом является консольное приложение (EXE), а служба размещается в службах IIS.</span><span class="sxs-lookup"><span data-stu-id="6db01-105">In this sample, the client is a console application (.exe) and the service is hosted by Internet Information Services (IIS).</span></span>  
   
 > [!NOTE]
->  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
+>  <span data-ttu-id="6db01-106">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="6db01-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- В этом образце показано кэширование и обработка ожидаемых исключений двух типов, которые должны обрабатываться правильно работающими программами: `TimeoutException` и `CommunicationException`.  
+ <span data-ttu-id="6db01-107">В этом образце показано кэширование и обработка ожидаемых исключений двух типов, которые должны обрабатываться правильно работающими программами: `TimeoutException` и `CommunicationException`.</span><span class="sxs-lookup"><span data-stu-id="6db01-107">This sample demonstrates catching and handling the two expected exception types that correct programs must handle: `TimeoutException` and `CommunicationException`.</span></span>  
   
- Исключения, создаваемые методами взаимодействия клиента [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] могут быть ожидаемыми или неожиданными.Неожиданные исключения включают разрушительный сбой, например `OutOfMemoryException`, и ошибки программирования, например `ArgumentNullException` или `InvalidOperationException`.В общем случае не существует удобного способа обработки неожиданных ошибок, поэтому обычно их не следует перехватывать при вызове метода взаимодействия клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ <span data-ttu-id="6db01-108">Исключения, создаваемые методами взаимодействия клиента [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] могут быть ожидаемыми или неожиданными.</span><span class="sxs-lookup"><span data-stu-id="6db01-108">Exceptions that are thrown from communication methods on a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] client are either expected or unexpected.</span></span> <span data-ttu-id="6db01-109">Неожиданные исключения включают разрушительный сбой, например `OutOfMemoryException`, и ошибки программирования, например `ArgumentNullException` или `InvalidOperationException`.</span><span class="sxs-lookup"><span data-stu-id="6db01-109">Unexpected exceptions include catastrophic failures like `OutOfMemoryException` and programming errors like `ArgumentNullException` or `InvalidOperationException`.</span></span> <span data-ttu-id="6db01-110">В общем случае не существует удобного способа обработки неожиданных ошибок, поэтому обычно их не следует перехватывать при вызове метода взаимодействия клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6db01-110">Typically there is no useful way to handle unexpected errors, so typically you should not catch them when calling a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client communication method.</span></span>  
   
- К ожидаемым исключениям методов взаимодействия клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] относятся исключения `TimeoutException`, `CommunicationException`, а также все производные классы для класса `CommunicationException`.Они указывают на проблему взаимодействия, которую можно безопасно обработать путем прерывания работы клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и создания сообщения о сбое взаимодействия.Поскольку внешние факторы могут вызывать появление таких ошибок в любом приложении, правильно разработанные приложения должны перехватывать эти исключения и предпринимать соответствующие восстановительные меры.  
+ <span data-ttu-id="6db01-111">К ожидаемым исключениям методов взаимодействия клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] относятся исключения `TimeoutException`, `CommunicationException`, а также все производные классы для класса `CommunicationException`.</span><span class="sxs-lookup"><span data-stu-id="6db01-111">Expected exceptions from communication methods on a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client include `TimeoutException`, `CommunicationException`, and any derived class of `CommunicationException`.</span></span> <span data-ttu-id="6db01-112">Они указывают на проблему взаимодействия, которую можно безопасно обработать путем прерывания работы клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и создания сообщения о сбое взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="6db01-112">These indicate a problem during communication that can be safely handled by aborting the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client and reporting a communication failure.</span></span> <span data-ttu-id="6db01-113">Поскольку внешние факторы могут вызывать появление таких ошибок в любом приложении, правильно разработанные приложения должны перехватывать эти исключения и предпринимать соответствующие восстановительные меры.</span><span class="sxs-lookup"><span data-stu-id="6db01-113">Because external factors can cause these errors in any application, correct applications must catch these exceptions and recover when they occur.</span></span>  
   
- Имеется несколько классов, производных от `CommunicationException`, которые могут создаваться клиентом.В некоторых случаях приложение может также перехватывать определенные исключения, чтобы выполнять специальную обработку, и обрабатывать оставшиеся исключения как исключения типа `CommunicationException`.Чтобы реализовать это, необходимо в первую очередь перехватывать более узкие виды исключений, а лишь затем перехватывать исключение `CommunicationException` в более позднем предложении catch.  
+ <span data-ttu-id="6db01-114">Имеется несколько классов, производных от `CommunicationException`, которые могут создаваться клиентом.</span><span class="sxs-lookup"><span data-stu-id="6db01-114">There are several derived classes of `CommunicationException` that a client can throw.</span></span> <span data-ttu-id="6db01-115">В некоторых случаях приложение может также перехватывать определенные исключения, чтобы выполнять специальную обработку, и обрабатывать оставшиеся исключения как исключения типа `CommunicationException`.</span><span class="sxs-lookup"><span data-stu-id="6db01-115">In some cases, applications also catch some of these to do special handling, but let the others be handled as a `CommunicationException`.</span></span> <span data-ttu-id="6db01-116">Чтобы реализовать это, необходимо в первую очередь перехватывать более узкие виды исключений, а лишь затем перехватывать исключение `CommunicationException` в более позднем предложении catch.</span><span class="sxs-lookup"><span data-stu-id="6db01-116">This can be accomplished by catching the more specific exception type first and then catching `CommunicationException` in a later catch-clause.</span></span>  
   
- Код, вызывающий методы взаимодействия, должен перехватывать исключения `TimeoutException` и `CommunicationException`.Один из способов обработки таких ошибок заключается в прерывании работы клиента и создании сообщения о сбое взаимодействия.  
+ <span data-ttu-id="6db01-117">Код, вызывающий методы взаимодействия, должен перехватывать исключения `TimeoutException` и `CommunicationException`.</span><span class="sxs-lookup"><span data-stu-id="6db01-117">Code that calls a client communication method must catch the `TimeoutException` and `CommunicationException`.</span></span> <span data-ttu-id="6db01-118">Один из способов обработки таких ошибок заключается в прерывании работы клиента и создании сообщения о сбое взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="6db01-118">One way to handle such errors is to abort the client and report the communication failure.</span></span>  
   
 ```  
 try  
@@ -52,14 +55,14 @@ catch (CommunicationException exception)
 }  
 ```  
   
- Если происходит ожидаемое исключение, клиент может стать или не стать непригодным к использованию в дальнейшем.Чтобы определить, можно ли использовать клиент, проверьте, что свойство `State` имеет значение `CommunicationState`.Opened.Если свойство имеет значение Opened, клиент можно использовать.В противном случае необходимо прервать работу клиента и освободить все ссылки на него.  
+ <span data-ttu-id="6db01-119">Если происходит ожидаемое исключение, клиент может стать или не стать непригодным к использованию в дальнейшем.</span><span class="sxs-lookup"><span data-stu-id="6db01-119">If an expected exception occurs, the client may or may not be usable afterwards.</span></span> <span data-ttu-id="6db01-120">Чтобы определить, можно ли использовать клиент, проверьте, что свойство `State` имеет значение `CommunicationState`.Opened.</span><span class="sxs-lookup"><span data-stu-id="6db01-120">To determine if the client is still usable, check that the `State` property is `CommunicationState`.Opened.</span></span> <span data-ttu-id="6db01-121">Если свойство имеет значение Opened, клиент можно использовать.</span><span class="sxs-lookup"><span data-stu-id="6db01-121">If it is still opened, then it is still usable.</span></span> <span data-ttu-id="6db01-122">В противном случае необходимо прервать работу клиента и освободить все ссылки на него.</span><span class="sxs-lookup"><span data-stu-id="6db01-122">Otherwise you should abort the client and release all references to it.</span></span>  
   
 > [!CAUTION]
->  Можно заметить, что клиенты с сеансом невозможно использовать после возникновения исключения, а клиенты без сеансов использовать после исключения можно.Однако это не является универсальным правилом, поэтому если требуется продолжать использовать клиент после исключения, приложение должно проверить значение свойства `State`, чтобы убедиться, что клиент еще открыт.  
+>  <span data-ttu-id="6db01-123">Можно заметить, что клиенты с сеансом невозможно использовать после возникновения исключения, а клиенты без сеансов использовать после исключения можно.</span><span class="sxs-lookup"><span data-stu-id="6db01-123">You may observe that clients that have a session are often no longer usable after an exception, and clients that do not have a session are often still usable after an exception.</span></span> <span data-ttu-id="6db01-124">Однако это не является универсальным правилом, поэтому если требуется продолжать использовать клиент после исключения, приложение должно проверить значение свойства `State`, чтобы убедиться, что клиент еще открыт.</span><span class="sxs-lookup"><span data-stu-id="6db01-124">However, neither of these is guaranteed, so if you want to try to continue using the client after an exception your application should check the `State` property to verify the client is still opened.</span></span>  
   
- При выполнении образца ответы операций и исключения отображаются в окне консоли клиента.  
+ <span data-ttu-id="6db01-125">При выполнении образца ответы и исключения операций отображаются в окне консоли клиента.</span><span class="sxs-lookup"><span data-stu-id="6db01-125">When you run the sample, the operation responses and exceptions are displayed in the client console window.</span></span>  
   
- Клиентский процесс выполняет два сценария, каждый из которых пытается выполнить операцию `Add`, а затем операцию `Divide`.Первый сценарий имитирует сбой в работе сети путем прерывания работы клиента перед вызовом `Divide`.Второй сценарий вызывает возникновение таймаута путем задания слишком короткого времени ожидания завершения метода.Ниже представлен ожидаемый результат выполнения клиентского процесса.  
+ <span data-ttu-id="6db01-126">Клиентский процесс выполняет два сценария, каждый из которых пытается выполнить операцию `Add`, а затем операцию `Divide`.</span><span class="sxs-lookup"><span data-stu-id="6db01-126">The client process runs two scenarios, each of which attempts to call `Add` followed by `Divide`.</span></span> <span data-ttu-id="6db01-127">Первый сценарий имитирует сбой в работе сети путем прерывания работы клиента перед вызовом `Divide`.</span><span class="sxs-lookup"><span data-stu-id="6db01-127">The first scenario simulates a network issue by aborting the client before making the call to `Divide`.</span></span> <span data-ttu-id="6db01-128">Второй сценарий вызывает возникновение таймаута путем задания слишком короткого времени ожидания завершения метода.</span><span class="sxs-lookup"><span data-stu-id="6db01-128">The second scenario causes a timeout condition by setting the timeout too short for the method to complete.</span></span> <span data-ttu-id="6db01-129">Ниже представлен ожидаемый результат выполнения клиентского процесса.</span><span class="sxs-lookup"><span data-stu-id="6db01-129">The expected output from the client process is:</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -70,21 +73,21 @@ Set timeout too short for method to complete...
 Got System.TimeoutException  
 ```  
   
-### Настройка, построение и выполнение образца  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="6db01-130">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="6db01-130">To set up, build, and run the sample</span></span>  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="6db01-131">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="6db01-131">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="6db01-132">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="6db01-132">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в разделе [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="6db01-133">Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="6db01-133">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="6db01-134">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="6db01-134">The samples may already be installed on your machine.</span></span> <span data-ttu-id="6db01-135">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="6db01-135">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="6db01-136">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="6db01-136">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="6db01-137">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="6db01-137">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Client\ExpectedExceptions`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ExpectedExceptions`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="6db01-138">См. также</span><span class="sxs-lookup"><span data-stu-id="6db01-138">See Also</span></span>

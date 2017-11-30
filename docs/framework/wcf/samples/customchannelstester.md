@@ -1,51 +1,54 @@
 ---
-title: "CustomChannelsTester | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: CustomChannelsTester
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2d915d567a5918060ab5e7592d4cd49384249ab9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# CustomChannelsTester
-`CustomChannelsTester` \- это средство, позволяющее проверять реализации пользовательских каналов на соответствие набору предопределенных контрактов службы.  Можно выбрать набор контрактов службы и передать его средству с помощью XML\-файла.  Затем средство создает службу и клиента, использующих реализации пользовательского канала во время обмена сообщениями.  
+# <a name="customchannelstester"></a><span data-ttu-id="c472f-102">CustomChannelsTester</span><span class="sxs-lookup"><span data-stu-id="c472f-102">CustomChannelsTester</span></span>
+<span data-ttu-id="c472f-103">`CustomChannelsTester` - это средство, позволяющее проверять реализации пользовательских каналов на соответствие набору предопределенных контрактов службы.</span><span class="sxs-lookup"><span data-stu-id="c472f-103">The `CustomChannelsTester` is a tool that you can use to test your custom channel implementations against a set of predefined service contracts.</span></span> <span data-ttu-id="c472f-104">Можно выбрать набор контрактов службы и передать его средству с помощью XML-файла.</span><span class="sxs-lookup"><span data-stu-id="c472f-104">You can select the set of service contracts and pass it to the tool using an XML file.</span></span> <span data-ttu-id="c472f-105">Затем средство создает службу и клиента, использующих реализации пользовательского канала во время обмена сообщениями.</span><span class="sxs-lookup"><span data-stu-id="c472f-105">The tool then generates the service and client that exercises your custom channel implementations during message exchange.</span></span>  
   
-### Построение средства  
+### <a name="to-build-the-tool"></a><span data-ttu-id="c472f-106">Построение средства</span><span class="sxs-lookup"><span data-stu-id="c472f-106">To build the tool</span></span>  
   
-1.  Для сборки решения следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1.  <span data-ttu-id="c472f-107">Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="c472f-107">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-2.  При построении решения создаются три файла: CustomChannelsTester.exe, TestSpec.xml и SampleRun.cmd.  Файл SampleRun.cmd содержит образец командной строки, показывающий использование этой программы для проверки образца [Транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  
+2.  <span data-ttu-id="c472f-108">При построении решения создаются три файла: CustomChannelsTester.exe, TestSpec.xml и SampleRun.cmd.</span><span class="sxs-lookup"><span data-stu-id="c472f-108">Building the solution generates three files: CustomChannelsTester.exe, TestSpec.xml and SampleRun.cmd.</span></span> <span data-ttu-id="c472f-109">Файл SampleRun.cmd содержит пример командной строки, в котором показано, как использовать это средство для проверки [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца.</span><span class="sxs-lookup"><span data-stu-id="c472f-109">The file SampleRun.cmd has a sample command line that shows how to use this tool to test the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample.</span></span>  
   
-### Запуск средства  
+### <a name="to-run-the-tool"></a><span data-ttu-id="c472f-110">Запуск средства</span><span class="sxs-lookup"><span data-stu-id="c472f-110">To run the tool</span></span>  
   
--   В командной строке введите следующую команду.  
+-   <span data-ttu-id="c472f-111">В командной строке введите следующую команду.</span><span class="sxs-lookup"><span data-stu-id="c472f-111">At the command prompt type the following command:</span></span>  
   
     ```  
     CustomChannelsTester.exe /binding:YourCustomBindngName /dll:TheAssemblyWhereThisTypeisDefined /testspec:XmlFileNameWhichContainsTestOptions  
     ```  
   
-     Необходимо использовать параметр `/binding`.  
+     <span data-ttu-id="c472f-112">Необходимо использовать параметр `/binding`.</span><span class="sxs-lookup"><span data-stu-id="c472f-112">Using the `/binding` option is required.</span></span>  
   
-     Если "привязка" не является предоставляемой системой [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] привязкой, требуется `/dll`.  
+     <span data-ttu-id="c472f-113">Если "привязка" не является предоставляемой системой `/dll` привязкой, требуется [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c472f-113">`/dll` is required if "binding" is not a system-provided binding provided by [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span>  
   
-     Параметр `/testspec` является необязательным.  
+     <span data-ttu-id="c472f-114">Параметр `/testspec` является необязательным.</span><span class="sxs-lookup"><span data-stu-id="c472f-114">`/testspec` is optional.</span></span>  
   
-     В результате создаются сервер и клиенты на основе спецификаций теста и привязки.  
+     <span data-ttu-id="c472f-115">В результате создаются сервер и клиенты на основе спецификаций теста и привязки.</span><span class="sxs-lookup"><span data-stu-id="c472f-115">This creates server and clients based on the test specifications and the binding.</span></span>  
   
-     Выполняет клиент и сервер и возвращает результаты.  
+     <span data-ttu-id="c472f-116">Выполняет клиент и сервер и возвращает результаты.</span><span class="sxs-lookup"><span data-stu-id="c472f-116">Executes the client and server and returns the results.</span></span>  
   
-     Далее приведен пример XML\-кода для описания спецификаций теста \(testspec.xml\).  
+     <span data-ttu-id="c472f-117">Далее приведен пример XML-кода для описания спецификаций теста (testspec.xml).</span><span class="sxs-lookup"><span data-stu-id="c472f-117">The following is the sample XML for the description of the test specifications (testspec.xml):</span></span>  
   
-    ```  
+    ```xml  
     <TestSpec xmlns="http://WCF/TestSpec" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"   
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >  
     <ServiceContract>  
@@ -76,4 +79,4 @@ caps.handback.revision: 12
     </TestSpec>  
     ```  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="c472f-118">См. также</span><span class="sxs-lookup"><span data-stu-id="c472f-118">See Also</span></span>

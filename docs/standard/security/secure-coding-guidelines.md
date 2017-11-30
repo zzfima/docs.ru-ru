@@ -1,86 +1,90 @@
 ---
-title: "Secure Coding Guidelines | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "managed wrapper to native code implementation"
-  - "secure coding"
-  - "reusable components"
-  - "library code that exposes protected resources"
-  - "code, security"
-  - "code security"
-  - "secure coding, options"
-  - "components [.NET Framework], security"
-  - "code security, options"
-  - "security-neutral code"
-  - "security [.NET Framework], coding guidelines"
+title: "Правила написания безопасного кода"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- managed wrapper to native code implementation
+- secure coding
+- reusable components
+- library code that exposes protected resources
+- code, security
+- code security
+- secure coding, options
+- components [.NET Framework], security
+- code security, options
+- security-neutral code
+- security [.NET Framework], coding guidelines
 ms.assetid: 4f882d94-262b-4494-b0a6-ba9ba1f5f177
-caps.latest.revision: 20
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "20"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 3be1a51db31f18255eabe633cdeaeb860f9c8ce7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Secure Coding Guidelines
-Защита на основе фактических данных и управление доступом для кода предоставляют очень мощные, четкие механизмы для обеспечения безопасности. Большая часть кода приложения может просто использовать инфраструктуру, реализуемую .NET Framework. В некоторых случаях требуется дополнительная защита на уровне приложения, построенная либо путем расширения системы, либо с помощью новых специальных методов.  
+# <a name="secure-coding-guidelines"></a><span data-ttu-id="e5764-102">Правила написания безопасного кода</span><span class="sxs-lookup"><span data-stu-id="e5764-102">Secure Coding Guidelines</span></span>
+<span data-ttu-id="e5764-103">Защита на основе фактических данных и управление доступом для кода предоставляют очень мощные, четкие механизмы для обеспечения безопасности.</span><span class="sxs-lookup"><span data-stu-id="e5764-103">Evidence-based security and code access security provide very powerful, explicit mechanisms to implement security.</span></span> <span data-ttu-id="e5764-104">Большая часть кода приложения может просто использовать инфраструктуру, реализуемую .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e5764-104">Most application code can simply use the infrastructure implemented by the .NET Framework.</span></span> <span data-ttu-id="e5764-105">В некоторых случаях требуется дополнительная защита на уровне приложения, построенная либо путем расширения системы, либо с помощью новых специальных методов.</span><span class="sxs-lookup"><span data-stu-id="e5764-105">In some cases, additional application-specific security is required, built either by extending the security system or by using new ad hoc methods.</span></span>  
   
- Используя в своем коде обеспечиваемые .NET Framework разрешения и другие механизмы применения ограничений, вы должны возвести барьеры, чтобы предотвратить получение вредоносным кодом сведений, которые вы не хотите раскрывать, или выполнение других нежелательных действий. Кроме того, необходимо соблюсти баланс между безопасностью и удобством использования во всех планируемых сценариях с использованием доверенного кода.  
+ <span data-ttu-id="e5764-106">Используя в своем коде обеспечиваемые .NET Framework разрешения и другие механизмы применения ограничений, вы должны возвести барьеры, чтобы предотвратить получение вредоносным кодом сведений, которые вы не хотите раскрывать, или выполнение других нежелательных действий.</span><span class="sxs-lookup"><span data-stu-id="e5764-106">Using the .NET Framework-enforced permissions and other enforcement in your code, you should erect barriers to prevent malicious code from obtaining information that you do not want it to have or performing other undesirable actions.</span></span> <span data-ttu-id="e5764-107">Кроме того, необходимо соблюсти баланс между безопасностью и удобством использования во всех планируемых сценариях с использованием доверенного кода.</span><span class="sxs-lookup"><span data-stu-id="e5764-107">Additionally, you must strike a balance between security and usability in all the expected scenarios using trusted code.</span></span>  
   
- В этом обзоре описываются различные способы разработки кода, взаимодействующего с системой безопасности.  
+ <span data-ttu-id="e5764-108">В этом обзоре описываются различные способы разработки кода, взаимодействующего с системой безопасности.</span><span class="sxs-lookup"><span data-stu-id="e5764-108">This overview describes the different ways code can be designed to work with the security system.</span></span>  
   
-> [!NOTE]
->  В версии [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] произошли серьезные изменения в терминологии и модели безопасности .NET Framework. Дополнительные сведения об этих изменениях см. в разделе [Изменения системы безопасности](../../../docs/framework/security/security-changes.md).  
+## <a name="securing-resource-access"></a><span data-ttu-id="e5764-109">Обеспечение безопасности доступа к ресурсам</span><span class="sxs-lookup"><span data-stu-id="e5764-109">Securing Resource Access</span></span>  
+ <span data-ttu-id="e5764-110">При разработке и написания кода необходимо защитить и ограничить доступ данного кода к ресурсам, особенно при использовании или вызове кода неизвестного происхождения.</span><span class="sxs-lookup"><span data-stu-id="e5764-110">When designing and writing your code, you need to protect and limit the access that code has to resources, especially when using or invoking code of unknown origin.</span></span> <span data-ttu-id="e5764-111">Убедиться, что ваш код является безопасным, можно с помощью следующих методов.</span><span class="sxs-lookup"><span data-stu-id="e5764-111">So, keep in mind the following techniques to ensure your code is secure:</span></span>  
   
-## Управление доступом для кода и частично доверенный код  
- Платформа .NET Framework предоставляет механизм для принудительного применения различных уровней доверия к разным частям кода, выполняемым в одном и том же приложении. Этот механизм называется управлением доступом для кода.  Управление доступом для кода в .NET Framework не гарантирует изоляцию кода, и его не следует использовать в качестве границы зоны безопасности с частично доверенным кодом, особенно кодом неизвестного происхождения. Мы не рекомендуем загружать и выполнять код из неизвестных источников, не предприняв дополнительные меры безопасности.  
+-   <span data-ttu-id="e5764-112">Не используйте управление доступом для кода (CAS).</span><span class="sxs-lookup"><span data-stu-id="e5764-112">Do not use Code Access Security (CAS).</span></span>  
   
- Эта политика действует в отношении всех версий платформы .NET Framework, кроме платформы .NET Framework в составе Silverlight.  
+-   <span data-ttu-id="e5764-113">Не используйте частично доверенный код.</span><span class="sxs-lookup"><span data-stu-id="e5764-113">Do not use partial trusted code.</span></span>  
   
-## Нейтральный код  
- Нейтральный код не взаимодействует явным образом с системой безопасности. Он работает с любыми полученными разрешениями. Хотя приложения, которые не могут перехватывать исключения системы безопасности, связанные с защищенными операциями \(такими как использование файлов, сетевые операции и т. д\), могут привести к возникновению необработанного исключения, нейтральный код по\-прежнему использует преимущества технологий безопасности .NET Framework.  
+-   <span data-ttu-id="e5764-114">Не используйте удаленное взаимодействие .NET.</span><span class="sxs-lookup"><span data-stu-id="e5764-114">Do not use .NET Remoting.</span></span>  
   
- Библиотека нейтрального кода имеет особенности, которые следует понимать. Предположим, что библиотека предоставляет элементы API, которые используют файлы или вызывают неуправляемый код; если код не имеет соответствующих разрешений, он не будет выполняться так, как описано. Однако даже если код имеет разрешения, вызывающий его код приложения должен иметь те же разрешения, чтобы он мог работать. Если вызывающий код не имеет необходимых разрешений, в результате проверки стека управления доступом для кода возникает <xref:System.Security.SecurityException>.  
+-   <span data-ttu-id="e5764-115">Не используйте модель DCOM.</span><span class="sxs-lookup"><span data-stu-id="e5764-115">Do not use Distributed Component Object Model (DCOM).</span></span>  
   
-## Код приложения, не являющийся повторно используемым компонентом  
- Если код является частью приложения, которое не будет вызываться другим кодом, безопасность обеспечивается достаточно просто, и специальное кодирование может не понадобиться. Однако помните, что вредоносный код может вызвать ваш код. Хотя управление доступом для кода может предотвратить доступ вредоносного кода к ресурсам, такой код все еще может считывать значения полей или свойств, которые могут содержать конфиденциальные сведения.  
+-   <span data-ttu-id="e5764-116">Не используйте двоичные модули форматирования.</span><span class="sxs-lookup"><span data-stu-id="e5764-116">Do not use binary formatters.</span></span>  
   
- Кроме того, если код принимает ввод пользователя из Интернета или других ненадежных источников, будьте осторожны, чтобы не были введены вредоносные данные.  
+ <span data-ttu-id="e5764-117">Управление доступом для кода и прозрачный для системы безопасности код не будут поддерживаться в качестве границы безопасности при работе с частично доверенным кодом.</span><span class="sxs-lookup"><span data-stu-id="e5764-117">Code Access Security and Security-Transparent Code will not be supported as a security boundary with partially trusted code.</span></span> <span data-ttu-id="e5764-118">Мы не рекомендуем загружать и выполнять код из неизвестных источников, не предприняв дополнительные меры безопасности.</span><span class="sxs-lookup"><span data-stu-id="e5764-118">We advise against loading and executing code of unknown origins without putting alternative security measures in place.</span></span> <span data-ttu-id="e5764-119">Ниже приведены дополнительные меры безопасности.</span><span class="sxs-lookup"><span data-stu-id="e5764-119">The alternative security measures are:</span></span>  
   
-## Реализация управляемой оболочки для машинного кода  
- Обычно в этом сценарии некоторые полезные функции реализуются в машинном коде, который требуется сделать доступным для управляемого кода. Управляемые оболочки легко создаются с помощью вызова неуправляемого кода или COM\-взаимодействия. Однако если это сделать, для успешного выполнения вызывающим ваши оболочки объектам необходимо предоставить права на неуправляемый код. Согласно политике по умолчанию это означает, что код, загруженный из интрасети или Интернета, не будет работать с оболочками.  
+-   <span data-ttu-id="e5764-120">Виртуализация</span><span class="sxs-lookup"><span data-stu-id="e5764-120">Virtualization</span></span>  
   
- Вместо предоставления всем приложениям, использующим эти оболочки, прав на неуправляемый код лучше дать такие права только коду оболочки. Если эта базовая функциональность не предоставляет никакие ресурсы и реализация также безопасна, оболочке достаточно просто объявить свои права, что позволяет любому коду вызывать ее. При использовании ресурсов написание безопасного кода должно быть таким же, как в случае кода библиотеки, описанного в следующем разделе. Поскольку оболочка потенциально предоставляет вызывающим объектам доступ к этим ресурсам, необходима тщательная проверка безопасности машинного кода, за которую отвечает оболочка.  
+-   <span data-ttu-id="e5764-121">Контейнеры AppContainer</span><span class="sxs-lookup"><span data-stu-id="e5764-121">AppContainers</span></span>  
   
-## Код библиотеки, предоставляющий защищенные ресурсы  
- Это самый мощный и поэтому потенциально опасный \(при неправильном использовании\) подход к написанию безопасного кода: библиотека служит как интерфейс для другого кода для доступа к определенным ресурсам, которые иначе недоступны, так же, как классы .NET Framework обеспечивают разрешения для ресурсов, которые они используют. При предоставлении доступа к ресурсу код должен сначала запросить соответствующее разрешение на ресурс \(т. е. он должен выполнить проверку безопасности\), а затем объявить свои права на выполнение текущей операции.  
+-   <span data-ttu-id="e5764-122">Пользователи операционной системы (ОС) и разрешения</span><span class="sxs-lookup"><span data-stu-id="e5764-122">Operating system (OS) users and permissions</span></span>  
   
-## Связанные разделы  
+-   <span data-ttu-id="e5764-123">Контейнеры Hyper-V</span><span class="sxs-lookup"><span data-stu-id="e5764-123">Hyper-V containers</span></span>  
   
-|Заголовок|Описание|  
-|---------------|--------------|  
-|[How to: Run Partially Trusted Code in a Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)|Объяснение, как запускать частично доверенное приложение в ограниченной среде безопасности, которая ограничивает права доступа, предоставленные коду.|  
-|[Securing State Data](../../../docs/standard/security/securing-state-data.md)|Описание порядка защиты закрытых членов.|  
-|[Securing Method Access](../../../docs/framework/misc/securing-method-access.md)|Описание порядка защиты методов от их вызова частично доверенным кодом.|  
-|[Securing Wrapper Code](../../../docs/framework/misc/securing-wrapper-code.md)|Вопросы безопасности кода, являющегося оболочкой другого кода.|  
-|[Security and Public Read\-only Array Fields](../../../docs/framework/misc/security-and-public-read-only-array-fields.md)|Вопросы безопасности кода, использующего общедоступные массивы только для чтения, обнаруженные в библиотеках .NET Framework.|  
-|[Securing Exception Handling](../../../docs/framework/misc/securing-exception-handling.md)|Вопросы безопасности для обработки исключений.|  
-|[Security and User Input](../../../docs/standard/security/security-and-user-input.md)|Вопросы безопасности для приложений, которые принимают пользовательский ввод.|  
-|[Security and Remoting Considerations](../../../docs/framework/misc/security-and-remoting-considerations.md)|Вопросы безопасности для приложений, взаимодействующих в доменах приложений.|  
-|[Security and Serialization](../../../docs/framework/misc/security-and-serialization.md)|Вопросы безопасности при сериализации объектов.|  
-|[Security and Race Conditions](../../../docs/standard/security/security-and-race-conditions.md)|Описывается, как избежать состояний соперничества в коде.|  
-|[Security and On\-the\-Fly Code Generation](../../../docs/standard/security/security-and-on-the-fly-code-generation.md)|Вопросы безопасности для приложений, создающих динамический код.|  
-|[Security and Setup Issues](../Topic/Security%20and%20Setup%20Issues.md)|Рекомендации по тестированию и настройке приложения.|  
-|[Code Access Security](../../../docs/framework/misc/code-access-security.md)|Подробное описание управления доступом для кода в .NET Framework и инструкции по его использованию в коде.|  
-|[Role\-Based Security](../../../docs/standard/security/role-based-security.md)|Подробное описание безопасности на основе ролей в .NET Framework и инструкции по ее использованию в коде.|
+## <a name="security-neutral-code"></a><span data-ttu-id="e5764-124">Нейтральный код</span><span class="sxs-lookup"><span data-stu-id="e5764-124">Security-Neutral Code</span></span>  
+ <span data-ttu-id="e5764-125">Нейтральный код не взаимодействует явным образом с системой безопасности.</span><span class="sxs-lookup"><span data-stu-id="e5764-125">Security-neutral code does nothing explicit with the security system.</span></span> <span data-ttu-id="e5764-126">Он работает с любыми полученными разрешениями.</span><span class="sxs-lookup"><span data-stu-id="e5764-126">It runs with whatever permissions it receives.</span></span> <span data-ttu-id="e5764-127">Хотя приложения, которые не могут перехватывать исключения системы безопасности, связанные с защищенными операциями (такими как использование файлов, сетевые операции и т. д), могут привести к возникновению необработанного исключения, нейтральный код по-прежнему использует преимущества технологий безопасности .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e5764-127">Although applications that fail to catch security exceptions associated with protected operations (such as using files, networking, and so on) can result in an unhandled exception, security-neutral code still takes advantage of the .NET Framework security technologies.</span></span>  
+  
+ <span data-ttu-id="e5764-128">Библиотека нейтрального кода имеет особенности, которые следует понимать.</span><span class="sxs-lookup"><span data-stu-id="e5764-128">A security-neutral library has special characteristics that you should understand.</span></span> <span data-ttu-id="e5764-129">Предположим, что библиотека предоставляет элементы API, которые используют файлы или вызывают неуправляемый код; если код не имеет соответствующих разрешений, он не будет выполняться так, как описано.</span><span class="sxs-lookup"><span data-stu-id="e5764-129">Suppose your library provides API elements that use files or call unmanaged code; if your code does not have the corresponding permission, it will not run as described.</span></span> <span data-ttu-id="e5764-130">Однако даже если код имеет разрешения, вызывающий его код приложения должен иметь те же разрешения, чтобы он мог работать.</span><span class="sxs-lookup"><span data-stu-id="e5764-130">However, even if the code has the permission, any application code that calls it must have the same permission in order to work.</span></span> <span data-ttu-id="e5764-131">Если вызывающий код не имеет необходимых разрешений, <xref:System.Security.SecurityException> появляется в результате проверки стека управления доступом для кода.</span><span class="sxs-lookup"><span data-stu-id="e5764-131">If the calling code does not have the right permission, a <xref:System.Security.SecurityException> appears as a result of the code access security stack walk.</span></span>  
+  
+## <a name="application-code-that-is-not-a-reusable-component"></a><span data-ttu-id="e5764-132">Код приложения, не являющийся повторно используемым компонентом</span><span class="sxs-lookup"><span data-stu-id="e5764-132">Application Code That Is Not a Reusable Component</span></span>  
+ <span data-ttu-id="e5764-133">Если код является частью приложения, которое не будет вызываться другим кодом, безопасность обеспечивается достаточно просто, и специальное кодирование может не понадобиться.</span><span class="sxs-lookup"><span data-stu-id="e5764-133">If your code is part of an application that will not be called by other code, security is simple and special coding might not be required.</span></span> <span data-ttu-id="e5764-134">Однако помните, что вредоносный код может вызвать ваш код.</span><span class="sxs-lookup"><span data-stu-id="e5764-134">However, remember that malicious code can call your code.</span></span> <span data-ttu-id="e5764-135">Хотя управление доступом для кода может предотвратить доступ вредоносного кода к ресурсам, такой код все еще может считывать значения полей или свойств, которые могут содержать конфиденциальные сведения.</span><span class="sxs-lookup"><span data-stu-id="e5764-135">While code access security might stop malicious code from accessing resources, such code could still read values of your fields or properties that might contain sensitive information.</span></span>  
+  
+ <span data-ttu-id="e5764-136">Кроме того, если код принимает ввод пользователя из Интернета или других ненадежных источников, будьте осторожны, чтобы не были введены вредоносные данные.</span><span class="sxs-lookup"><span data-stu-id="e5764-136">Additionally, if your code accepts user input from the Internet or other unreliable sources, you must be careful about malicious input.</span></span>  
+  
+## <a name="managed-wrapper-to-native-code-implementation"></a><span data-ttu-id="e5764-137">Реализация управляемой оболочки для машинного кода</span><span class="sxs-lookup"><span data-stu-id="e5764-137">Managed Wrapper to Native Code Implementation</span></span>  
+ <span data-ttu-id="e5764-138">Обычно в этом сценарии некоторые полезные функции реализуются в машинном коде, который требуется сделать доступным для управляемого кода.</span><span class="sxs-lookup"><span data-stu-id="e5764-138">Typically in this scenario, some useful functionality is implemented in native code that you want to make available to managed code.</span></span> <span data-ttu-id="e5764-139">Управляемые оболочки легко создаются с помощью вызова неуправляемого кода или COM-взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="e5764-139">Managed wrappers are easy to write using either platform invoke or COM interop.</span></span> <span data-ttu-id="e5764-140">Однако если это сделать, для успешного выполнения вызывающим ваши оболочки объектам необходимо предоставить права на неуправляемый код.</span><span class="sxs-lookup"><span data-stu-id="e5764-140">However, if you do this, callers of your wrappers must have unmanaged code rights in order to succeed.</span></span> <span data-ttu-id="e5764-141">Согласно политике по умолчанию это означает, что код, загруженный из интрасети или Интернета, не будет работать с оболочками.</span><span class="sxs-lookup"><span data-stu-id="e5764-141">Under default policy, this means that code downloaded from an intranet or the Internet will not work with the wrappers.</span></span>  
+  
+ <span data-ttu-id="e5764-142">Вместо предоставления всем приложениям, использующим эти оболочки, прав на неуправляемый код лучше дать такие права только коду оболочки.</span><span class="sxs-lookup"><span data-stu-id="e5764-142">Instead of giving all applications that use these wrappers unmanaged code rights, it is better to give these rights only to the wrapper code.</span></span> <span data-ttu-id="e5764-143">Если эта базовая функциональность не предоставляет никакие ресурсы и реализация также безопасна, оболочке достаточно просто объявить свои права, что позволяет любому коду вызывать ее.</span><span class="sxs-lookup"><span data-stu-id="e5764-143">If the underlying functionality exposes no resources and the implementation is likewise safe, the wrapper only needs to assert its rights, which enables any code to call through it.</span></span> <span data-ttu-id="e5764-144">При использовании ресурсов написание безопасного кода должно быть таким же, как в случае кода библиотеки, описанного в следующем разделе.</span><span class="sxs-lookup"><span data-stu-id="e5764-144">When resources are involved, security coding should be the same as the library code case described in the next section.</span></span> <span data-ttu-id="e5764-145">Поскольку оболочка потенциально предоставляет вызывающим объектам доступ к этим ресурсам, необходима тщательная проверка безопасности машинного кода, за которую отвечает оболочка.</span><span class="sxs-lookup"><span data-stu-id="e5764-145">Because the wrapper is potentially exposing callers to these resources, careful verification of the safety of the native code is necessary and is the wrapper's responsibility.</span></span>  
+  
+## <a name="library-code-that-exposes-protected-resources"></a><span data-ttu-id="e5764-146">Код библиотеки, предоставляющий защищенные ресурсы</span><span class="sxs-lookup"><span data-stu-id="e5764-146">Library Code That Exposes Protected Resources</span></span>  
+ <span data-ttu-id="e5764-147">Это самый мощный и поэтому потенциально опасный (при неправильном использовании) подход к написанию безопасного кода: библиотека служит как интерфейс для другого кода для доступа к определенным ресурсам, которые иначе недоступны, так же, как классы .NET Framework обеспечивают разрешения для ресурсов, которые они используют.</span><span class="sxs-lookup"><span data-stu-id="e5764-147">This is the most powerful and hence potentially dangerous (if done incorrectly) approach for security coding: Your library serves as an interface for other code to access certain resources that are not otherwise available, just as the classes of the .NET Framework enforce permissions for the resources they use.</span></span> <span data-ttu-id="e5764-148">При предоставлении доступа к ресурсу код должен сначала запросить соответствующее разрешение на ресурс (т. е. он должен выполнить проверку безопасности), а затем объявить свои права на выполнение текущей операции.</span><span class="sxs-lookup"><span data-stu-id="e5764-148">Wherever you expose a resource, your code must first demand the permission appropriate to the resource (that is, it must perform a security check) and then typically assert its rights to perform the actual operation.</span></span>  
+  
+## <a name="related-topics"></a><span data-ttu-id="e5764-149">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="e5764-149">Related Topics</span></span>  
+  
+|<span data-ttu-id="e5764-150">Заголовок</span><span class="sxs-lookup"><span data-stu-id="e5764-150">Title</span></span>|<span data-ttu-id="e5764-151">Описание</span><span class="sxs-lookup"><span data-stu-id="e5764-151">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="e5764-152">Обеспечение безопасности данных</span><span class="sxs-lookup"><span data-stu-id="e5764-152">Securing State Data</span></span>](../../../docs/standard/security/securing-state-data.md)|<span data-ttu-id="e5764-153">Описание порядка защиты закрытых членов.</span><span class="sxs-lookup"><span data-stu-id="e5764-153">Describes how to protect private members.</span></span>|  
+|[<span data-ttu-id="e5764-154">Безопасность и ввод данных пользователем</span><span class="sxs-lookup"><span data-stu-id="e5764-154">Security and User Input</span></span>](../../../docs/standard/security/security-and-user-input.md)|<span data-ttu-id="e5764-155">Вопросы безопасности для приложений, которые принимают пользовательский ввод.</span><span class="sxs-lookup"><span data-stu-id="e5764-155">Describes security concerns for applications that accept user input.</span></span>|  
+|[<span data-ttu-id="e5764-156">Безопасность и конфликты</span><span class="sxs-lookup"><span data-stu-id="e5764-156">Security and Race Conditions</span></span>](../../../docs/standard/security/security-and-race-conditions.md)|<span data-ttu-id="e5764-157">Описывается, как избежать состояний соперничества в коде.</span><span class="sxs-lookup"><span data-stu-id="e5764-157">Describes how to avoid race conditions in your code.</span></span>|  
+|[<span data-ttu-id="e5764-158">Безопасность и создание кода "на лету"</span><span class="sxs-lookup"><span data-stu-id="e5764-158">Security and On-the-Fly Code Generation</span></span>](../../../docs/standard/security/security-and-on-the-fly-code-generation.md)|<span data-ttu-id="e5764-159">Вопросы безопасности для приложений, создающих динамический код.</span><span class="sxs-lookup"><span data-stu-id="e5764-159">Describes security concerns for applications that generate dynamic code.</span></span>|  
+|[<span data-ttu-id="e5764-160">Безопасность на основе ролей</span><span class="sxs-lookup"><span data-stu-id="e5764-160">Role-Based Security</span></span>](../../../docs/standard/security/role-based-security.md)|<span data-ttu-id="e5764-161">Подробное описание безопасности на основе ролей в .NET Framework и инструкции по ее использованию в коде.</span><span class="sxs-lookup"><span data-stu-id="e5764-161">Describes .NET Framework role-based security in detail and provides instructions for using it in your code.</span></span>|

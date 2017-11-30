@@ -1,28 +1,31 @@
 ---
-title: "Недопустимая строка шаблона | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
+title: "Недопустимая строка шаблона"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
 ms.assetid: ec1aecdb-5339-4a93-be71-eec56b1d7438
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: f824a5844d6d2b365358030119826266a4b42ef3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Недопустимая строка шаблона
-Строка шаблона, указанная в операции поиска `Like`, является недопустимой.  
+# <a name="invalid-pattern-string"></a><span data-ttu-id="4d3fd-102">Недопустимая строка шаблона</span><span class="sxs-lookup"><span data-stu-id="4d3fd-102">Invalid pattern string</span></span>
+<span data-ttu-id="4d3fd-103">Строка шаблона, указанная в операции поиска `Like` , является недопустимой.</span><span class="sxs-lookup"><span data-stu-id="4d3fd-103">The pattern string specified in the `Like` operation of a search is invalid.</span></span>  
   
-### Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="4d3fd-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="4d3fd-104">To correct this error</span></span>  
   
-1.  Просмотрите допустимые символы для выражений списка.  
+1.  <span data-ttu-id="4d3fd-105">Просмотрите допустимые символы для выражений списка.</span><span class="sxs-lookup"><span data-stu-id="4d3fd-105">Review the valid characters for list expressions.</span></span>  
   
-2.  В диапазоне шаблона убедитесь, что знак в начале диапазона меньше знака в конце диапазона, как в `[a-z]`.  
+2.  <span data-ttu-id="4d3fd-106">В диапазоне шаблона убедитесь, что знак в начале диапазона меньше знака в конце диапазона, как в `[a-z]`.</span><span class="sxs-lookup"><span data-stu-id="4d3fd-106">In the pattern range, ensure that the start range character is less than the end range character, as in `[a-z]`.</span></span>  
   
-3.  В диапазоне шаблона убедитесь, что не отсутствуют дефисы, указанные рядом друг с другом, как в `[a--z]`.  
+3.  <span data-ttu-id="4d3fd-107">В диапазоне шаблона убедитесь, что не отсутствуют дефисы, указанные рядом друг с другом, как в `[a--z]`.</span><span class="sxs-lookup"><span data-stu-id="4d3fd-107">In the pattern range, ensure that there are not multiple hyphens next to each other, as in `[a--z]`.</span></span>  
   
-4.  Завершите диапазон шаблона закрывающей скобкой.  
+4.  <span data-ttu-id="4d3fd-108">Завершите диапазон шаблона закрывающей скобкой.</span><span class="sxs-lookup"><span data-stu-id="4d3fd-108">End pattern ranges with a closing bracket.</span></span>  
   
-## См. также  
- [Оператор Like](../../visual-basic/language-reference/operators/like-operator.md)
+## <a name="see-also"></a><span data-ttu-id="4d3fd-109">См. также</span><span class="sxs-lookup"><span data-stu-id="4d3fd-109">See Also</span></span>  
+ [<span data-ttu-id="4d3fd-110">Оператор Like</span><span class="sxs-lookup"><span data-stu-id="4d3fd-110">Like Operator</span></span>](../../visual-basic/language-reference/operators/like-operator.md)

@@ -1,63 +1,66 @@
 ---
-title: "Безопасность рабочих процессов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "программирование [WF], безопасность рабочих процессов"
+title: "Безопасность рабочих процессов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7b9afd82e90aa8a951f8d78535958723f8c632dd
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/21/2017
 ---
-# Безопасность рабочих процессов
-[!INCLUDE[wf](../../../includes/wf-md.md)] объединяется с несколькими разными технологиями, например Microsoft SQL Server и [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  В случае неправильной настройки взаимодействие с этими технологиями может вызвать проблемы безопасности в рабочем процессе.  
+# <a name="workflow-security"></a><span data-ttu-id="f86d7-102">Безопасность рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="f86d7-102">Workflow Security</span></span>
+[!INCLUDE[wf](../../../includes/wf-md.md)]<span data-ttu-id="f86d7-103"> объединяется с несколькими разными технологиями, например Microsoft SQL Server и [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f86d7-103"> is integrated with several different technologies, such as Microsoft SQL Server and [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].</span></span> <span data-ttu-id="f86d7-104">В случае неправильной настройки взаимодействие с этими технологиями может вызвать проблемы безопасности в рабочем процессе.</span><span class="sxs-lookup"><span data-stu-id="f86d7-104">Interacting with these technologies may introduce security issues into your workflow if done improperly.</span></span>  
   
-## Вопросы безопасности сохраняемости  
+## <a name="persistence-security-concerns"></a><span data-ttu-id="f86d7-105">Вопросы безопасности сохраняемости</span><span class="sxs-lookup"><span data-stu-id="f86d7-105">Persistence Security Concerns</span></span>  
   
-1.  Рабочие процессы, которые используют действия <xref:System.Activities.Statements.Delay> и сохраняемость, должны повторно активироваться службой.  Windows AppFabric использует службу Workflow Management Service \(WMS\) для повторной активации рабочих процессов с истекшими таймерами.  WMS создает объект <xref:System.ServiceModel.WorkflowServiceHost> для размещения повторно активированного рабочего процесса.  Если служба WMS остановлена, сохраненные рабочие процессы не будут активироваться повторно при истечении их таймеров.  
+1.  <span data-ttu-id="f86d7-106">Рабочие процессы, которые используют действия <xref:System.Activities.Statements.Delay> и сохраняемость, должны повторно активироваться службой.</span><span class="sxs-lookup"><span data-stu-id="f86d7-106">Workflows that use a <xref:System.Activities.Statements.Delay> activity and persistence need to be reactivated by a service.</span></span> <span data-ttu-id="f86d7-107">Windows AppFabric использует службу Workflow Management Service (WMS) для повторной активации рабочих процессов с истекшими таймерами.</span><span class="sxs-lookup"><span data-stu-id="f86d7-107">Windows AppFabric uses the Workflow Management Service (WMS) to reactivate workflows with expired timers.</span></span> <span data-ttu-id="f86d7-108">WMS создает объект <xref:System.ServiceModel.WorkflowServiceHost> для размещения повторно активированного рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="f86d7-108">WMS creates a <xref:System.ServiceModel.WorkflowServiceHost> to host the reactivated workflow.</span></span> <span data-ttu-id="f86d7-109">Если служба WMS остановлена, сохраненные рабочие процессы не будут активироваться повторно при истечении их таймеров.</span><span class="sxs-lookup"><span data-stu-id="f86d7-109">If the WMS service is stopped, persisted workflows will not be reactivated when their timers expire.</span></span>  
   
-2.  Доступ к устойчивым экземплярам должен быть защищен от вредоносных сущностей, внешних относительно домена приложения.  Кроме того, разработчики должны гарантировать, что вредоносный код будет невозможно выполнить в том же домене приложения, что и код устойчивого экземпляра.  
+2.  <span data-ttu-id="f86d7-110">Доступ к устойчивым экземплярам должен быть защищен от вредоносных сущностей, внешних относительно домена приложения.</span><span class="sxs-lookup"><span data-stu-id="f86d7-110">Access to durable instancing should be protected against malicious entities external to the application domain.</span></span> <span data-ttu-id="f86d7-111">Кроме того, разработчики должны гарантировать, что вредоносный код будет невозможно выполнить в том же домене приложения, что и код устойчивого экземпляра.</span><span class="sxs-lookup"><span data-stu-id="f86d7-111">In addition, developers should ensure that malicious code can't be executed in the same application domain as the durable instancing code.</span></span>  
   
-3.  Устойчивый экземпляр не должен выполняться с разрешениями более высокого уровня \(администратора\).  
+3.  <span data-ttu-id="f86d7-112">Устойчивый экземпляр не должен выполняться с разрешениями более высокого уровня (администратора).</span><span class="sxs-lookup"><span data-stu-id="f86d7-112">Durable instancing should not be run with elevated (Administrator) permissions.</span></span>  
   
-4.  Данные, обрабатываемые за пределами домена приложения, должны быть защищены.  
+4.  <span data-ttu-id="f86d7-113">Данные, обрабатываемые за пределами домена приложения, должны быть защищены.</span><span class="sxs-lookup"><span data-stu-id="f86d7-113">Data being processed outside the application domain should be protected.</span></span>  
   
-5.  Приложения, требующие изоляции безопасности, не должны использовать совместно один и тот же экземпляр абстракции схемы.  Такие приложения должны использовать различные поставщики хранилищ или поставщики хранилищ, настроенные на создание разных экземпляров хранилищ.  
+5.  <span data-ttu-id="f86d7-114">Приложения, требующие изоляции безопасности, не должны использовать совместно один и тот же экземпляр абстракции схемы.</span><span class="sxs-lookup"><span data-stu-id="f86d7-114">Applications that require security isolation should not share the same instance of the schema abstraction.</span></span> <span data-ttu-id="f86d7-115">Такие приложения должны использовать различные поставщики хранилищ или поставщики хранилищ, настроенные на создание разных экземпляров хранилищ.</span><span class="sxs-lookup"><span data-stu-id="f86d7-115">Such applications should use different store providers, or store providers configured to use different store instantiations.</span></span>  
   
-## Вопросы безопасности SQL Server  
+## <a name="sql-server-security-concerns"></a><span data-ttu-id="f86d7-116">Вопросы безопасности SQL Server</span><span class="sxs-lookup"><span data-stu-id="f86d7-116">SQL Server Security Concerns</span></span>  
   
--   Если используется большое количество дочерних действий, расположений, закладок, расширений узла и областей или используются закладки с очень большим объемом полезных нагрузок, может быть исчерпана память или во время сохранения будет выделен чрезмерно большой объем пространства базы данных.  Избежать этого можно с помощью мер безопасности на уровне объекта и на уровне базы данных.  
+-   <span data-ttu-id="f86d7-117">Если используется большое количество дочерних действий, расположений, закладок, расширений узла и областей или используются закладки с очень большим объемом полезных нагрузок, может быть исчерпана память или во время сохранения будет выделен чрезмерно большой объем пространства базы данных.</span><span class="sxs-lookup"><span data-stu-id="f86d7-117">When large numbers of child activities, locations, bookmarks, host extensions, or scopes are used, or when bookmarks with very large payloads are used, memory can be exhausted, or undue amounts of database space can be allocated during persistence.</span></span> <span data-ttu-id="f86d7-118">Избежать этого можно с помощью мер безопасности на уровне объекта и на уровне базы данных.</span><span class="sxs-lookup"><span data-stu-id="f86d7-118">This can be mitigated by using object-level and database-level security.</span></span>  
   
--   Если используется <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, хранилище экземпляров должно быть защищено.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Рекомендации по SQL Server](http://go.microsoft.com/fwlink/?LinkId=164972).  
+-   <span data-ttu-id="f86d7-119">Если используется <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, хранилище экземпляров должно быть защищено.</span><span class="sxs-lookup"><span data-stu-id="f86d7-119">When using <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, the instance store must be secured.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="f86d7-120">[SQL Server Best Practices](http://go.microsoft.com/fwlink/?LinkId=164972).</span><span class="sxs-lookup"><span data-stu-id="f86d7-120"> [SQL Server Best Practices](http://go.microsoft.com/fwlink/?LinkId=164972).</span></span>  
   
--   Конфиденциальные данные в хранилище экземпляров должны быть зашифрованы.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Шифрование SQL](http://go.microsoft.com/fwlink/?LinkId=164976).  
+-   <span data-ttu-id="f86d7-121">Конфиденциальные данные в хранилище экземпляров должны быть зашифрованы.</span><span class="sxs-lookup"><span data-stu-id="f86d7-121">Sensitive data in the instance store should be encrypted.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="f86d7-122">[Шифрование SQL](http://go.microsoft.com/fwlink/?LinkId=164976).</span><span class="sxs-lookup"><span data-stu-id="f86d7-122"> [SQL Security Encryption](http://go.microsoft.com/fwlink/?LinkId=164976).</span></span>  
   
--   Так как строка подключения базы данных часто содержится в файле конфигурации, следует использовать безопасность уровня Windows \(ACL\) для обеспечения защиты файла конфигурации \(обычно это Web.Config\), а также для того, чтобы гарантировать, что сведения об имени входа и пароле не содержатся в строке подключения.  В качестве альтернативы между базой данных и веб\-сервером можно использовать аутентификацию Windows.  
+-   <span data-ttu-id="f86d7-123">Так как строка подключения базы данных часто содержится в файле конфигурации, следует использовать безопасность уровня Windows (ACL) для обеспечения защиты файла конфигурации (обычно это Web.Config), а также для того, чтобы гарантировать, что сведения об имени входа и пароле не содержатся в строке подключения.</span><span class="sxs-lookup"><span data-stu-id="f86d7-123">Since the database connection string is often included in a configuration file, windows-level security (ACL) should be used to ensure that the configuration file (Web.Config usually) is secure, and that login and password information are not included in the connection string.</span></span> <span data-ttu-id="f86d7-124">В качестве альтернативы между базой данных и веб-сервером можно использовать аутентификацию Windows.</span><span class="sxs-lookup"><span data-stu-id="f86d7-124">Windows authentication should be used between the database and the web server instead.</span></span>  
   
-## Рекомендации по WorkflowServiceHost  
+## <a name="considerations-for-workflowservicehost"></a><span data-ttu-id="f86d7-125">Рекомендации по WorkflowServiceHost</span><span class="sxs-lookup"><span data-stu-id="f86d7-125">Considerations for WorkflowServiceHost</span></span>  
   
--   Конечные точки [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], используемые в рабочих процессах, должны быть защищены.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Общие сведения о безопасности WCF](http://go.microsoft.com/fwlink/?LinkID=164975).  
+-   <span data-ttu-id="f86d7-126">Конечные точки [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], используемые в рабочих процессах, должны быть защищены.</span><span class="sxs-lookup"><span data-stu-id="f86d7-126">[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] endpoints used in workflows should be secured.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="f86d7-127">[Общие сведения о безопасности WCF](http://go.microsoft.com/fwlink/?LinkID=164975).</span><span class="sxs-lookup"><span data-stu-id="f86d7-127"> [WCF Security Overview](http://go.microsoft.com/fwlink/?LinkID=164975).</span></span>  
   
--   Авторизацию на уровне узлов можно реализовать с помощью <xref:System.ServiceModel.ServiceAuthorizationManager>.  Дополнительные сведения см. в разделе [Создание настраиваемого диспетчера авторизации для службы](http://go.microsoft.com/fwlink/?LinkId=192228).  Это также показано в следующем образце: [Защита служб рабочего процесса](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).  
+-   <span data-ttu-id="f86d7-128">Авторизацию на уровне узлов можно реализовать с помощью <xref:System.ServiceModel.ServiceAuthorizationManager>.</span><span class="sxs-lookup"><span data-stu-id="f86d7-128">Host-level authorization can be implemented by using <xref:System.ServiceModel.ServiceAuthorizationManager>.</span></span> <span data-ttu-id="f86d7-129">В разделе [How To: Создание пользовательского диспетчера авторизации для службы](http://go.microsoft.com/fwlink/?LinkId=192228) подробные сведения.</span><span class="sxs-lookup"><span data-stu-id="f86d7-129">See [How To: Create a Custom Authorization Manager for a Service](http://go.microsoft.com/fwlink/?LinkId=192228) for details.</span></span> <span data-ttu-id="f86d7-130">Это также показано в следующем примере: [Защита служб рабочего процесса](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).</span><span class="sxs-lookup"><span data-stu-id="f86d7-130">This is also demonstrated in the following sample: [Securing Workflow Services](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).</span></span>  
   
--   Кроме того, контекст ServiceSecurityContext для входящего сообщения доступен из рабочего процесса посредством доступа к OperationContext.  Дополнительные сведения см. в разделе [Доступ к OperationContext из службы рабочего процесса](../../../docs/framework/wcf/feature-details/accessing-operationcontext-from-a-workflow-service.md).  
+-   <span data-ttu-id="f86d7-131">Кроме того, контекст ServiceSecurityContext для входящего сообщения доступен из рабочего процесса посредством доступа к OperationContext.</span><span class="sxs-lookup"><span data-stu-id="f86d7-131">The ServiceSecurityContext for the incoming message is also available from within workflow by accessing OperationContext.</span></span>  <span data-ttu-id="f86d7-132">В разделе [доступ к OperationContext из службы рабочего процесса](../../../docs/framework/wcf/feature-details/accessing-operationcontext-from-a-workflow-service.md) подробные сведения.</span><span class="sxs-lookup"><span data-stu-id="f86d7-132">See [Accessing OperationContext from a Workflow Service](../../../docs/framework/wcf/feature-details/accessing-operationcontext-from-a-workflow-service.md) for details.</span></span>  
   
-## Пакет безопасности WF CTP  
- Пакет безопасности Microsoft WF CTP 1 — это первый выпуск CTP\-версии набора действий и их реализаций, основанного на [Windows Workflow Foundation](http://msdn.microsoft.com/netframework/aa663328.aspx) в [.NET Framework 4](http://msdn.microsoft.com/netframework/default.aspx) \(WF 4\) и [Windows Identity Foundation \(WIF\)](http://msdn.microsoft.com/security/aa570351.aspx).  Пакет безопасности Microsoft WF CTP 1 содержит действия и их конструкторы, которые демонстрируют простое включение различных сценариев обеспечения безопасности с помощью рабочих процессов, в том числе следующие:  
+## <a name="wf-security-pack-ctp"></a><span data-ttu-id="f86d7-133">Пакет безопасности WF CTP</span><span class="sxs-lookup"><span data-stu-id="f86d7-133">WF Security Pack CTP</span></span>  
+ <span data-ttu-id="f86d7-134">Пакет безопасности Microsoft WF CTP 1 является первой CTP (CTP)-версии набора действий и их реализации на основе [Windows Workflow Foundation](http://msdn.microsoft.com/netframework/aa663328.aspx)в [.NET Framework 4](http://msdn.microsoft.com/netframework/default.aspx) (WF (4) и [Windows Identity Foundation (WIF)](http://msdn.microsoft.com/security/aa570351.aspx).</span><span class="sxs-lookup"><span data-stu-id="f86d7-134">The Microsoft WF Security Pack CTP 1 is the first community technology preview (CTP) release of a set of activities and their implementation based on [Windows Workflow Foundation](http://msdn.microsoft.com/netframework/aa663328.aspx)in [.NET Framework 4](http://msdn.microsoft.com/netframework/default.aspx) (WF 4) and the [Windows Identity Foundation (WIF)](http://msdn.microsoft.com/security/aa570351.aspx).</span></span>  <span data-ttu-id="f86d7-135">Пакет безопасности Microsoft WF CTP 1 содержит действия и их конструкторы, которые демонстрируют простое включение различных сценариев обеспечения безопасности с помощью рабочих процессов, в том числе следующие:</span><span class="sxs-lookup"><span data-stu-id="f86d7-135">The Microsoft WF Security Pack CTP 1 contains both activities and their designers which illustrate how to easily enable various security-related scenarios using workflow, including:</span></span>  
   
-1.  Олицетворение удостоверения клиента в рабочем процессе  
+1.  <span data-ttu-id="f86d7-136">Олицетворение удостоверения клиента в рабочем процессе</span><span class="sxs-lookup"><span data-stu-id="f86d7-136">Impersonating a client identity in the workflow</span></span>  
   
-2.  Авторизация в рабочих процессах, например PrincipalPermission и проверка утверждений  
+2.  <span data-ttu-id="f86d7-137">Авторизация в рабочих процессах, например PrincipalPermission и проверка утверждений</span><span class="sxs-lookup"><span data-stu-id="f86d7-137">In-workflow authorization, such as PrincipalPermission and validation of Claims</span></span>  
   
-3.  Обмен сообщениями с использованием проверки подлинности \(с применением определенных в рабочем процессе ClientCredentials\), например с использованием имени пользователя и пароля или токена, полученного от службы токенов безопасности \(STS\)  
+3.  <span data-ttu-id="f86d7-138">Обмен сообщениями с использованием проверки подлинности (с применением определенных в рабочем процессе ClientCredentials), например с использованием имени пользователя и пароля или токена, полученного от службы токенов безопасности (STS)</span><span class="sxs-lookup"><span data-stu-id="f86d7-138">Authenticated messaging using ClientCredentials specified in the workflow, such as username/password or a token retrieved from a Security Token Service (STS)</span></span>  
   
-4.  Сквозная передача токена безопасности клиента внутренней службе \(делегирование на основе утверждений\) с помощью WS\-Trust ActAs  
+4.  <span data-ttu-id="f86d7-139">Сквозная передача токена безопасности клиента внутренней службе (делегирование на основе утверждений) с помощью WS-Trust ActAs</span><span class="sxs-lookup"><span data-stu-id="f86d7-139">Flowing a client security token to a back-end service (claims-based delegation) using WS-Trust ActAs</span></span>  
   
- Получить дополнительные сведения и скачать пакет безопасности CTP WF можно на странице [Пакет безопасности WF CTP](http://wf.codeplex.com/releases/view/48114)
+<span data-ttu-id="f86d7-140">Дополнительные сведения и загрузить пакет безопасности CTP WF см. раздел: [пакет безопасности WF CTP](http://wf.codeplex.com/releases/view/48114)</span><span class="sxs-lookup"><span data-stu-id="f86d7-140">For more information and to download the WF Security Pack CTP, see: [WF Security Pack CTP](http://wf.codeplex.com/releases/view/48114)</span></span>

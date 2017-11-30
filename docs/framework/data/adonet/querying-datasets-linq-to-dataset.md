@@ -1,36 +1,39 @@
 ---
-title: "Запросы к объектам DataSet (LINQ to DataSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Запросы к наборам данных (LINQ to DataSet)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bb68d2e4-623d-4d60-85e3-965254f6fee7
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4f1b1a70025dc81bdf99c636b65c23d373e73a80
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Запросы к объектам DataSet (LINQ to DataSet)
-После того как в объекте <xref:System.Data.DataSet> появятся данные, к нему можно выполнять запросы.  Составление запросов с использованием [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] похоже на использование [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] с другими источниками данных, поддерживающих [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)].  Тем не менее нужно помнить, что при использовании запросов [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] к <xref:System.Data.DataSet> запрашивается перечисление объектов типа <xref:System.Data.DataRow> вместо перечисления определенного типа.  Это означает, что в запросах [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] можно использовать любые элементы класса <xref:System.Data.DataRow>.  Это позволяет создавать мощные, сложные запросы.  
+# <a name="querying-datasets-linq-to-dataset"></a><span data-ttu-id="040a2-102">Запросы к наборам данных (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="040a2-102">Querying DataSets (LINQ to DataSet)</span></span>
+<span data-ttu-id="040a2-103">После того как в объекте <xref:System.Data.DataSet> появятся данные, к нему можно выполнять запросы.</span><span class="sxs-lookup"><span data-stu-id="040a2-103">After a <xref:System.Data.DataSet> object has been populated with data, you can begin querying it.</span></span> <span data-ttu-id="040a2-104">Составление запросов с использованием [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] похоже на использование [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] с другими источниками данных, поддерживающих [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="040a2-104">Formulating queries with [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] is similar to using [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] against other [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-enabled data sources.</span></span> <span data-ttu-id="040a2-105">Однако следует помнить, что при использовании [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] запросов по <xref:System.Data.DataSet> запрашивается перечисление <xref:System.Data.DataRow> объектов вместо перечисления пользовательского типа.</span><span class="sxs-lookup"><span data-stu-id="040a2-105">Remember, however, that when you use [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] queries over a <xref:System.Data.DataSet> object you are querying an enumeration of <xref:System.Data.DataRow> objects, instead of an enumeration of a custom type.</span></span> <span data-ttu-id="040a2-106">Это означает, что можно использовать любой из членов <xref:System.Data.DataRow> класса в вашей [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] запросов.</span><span class="sxs-lookup"><span data-stu-id="040a2-106">This means that you can use any of the members of the <xref:System.Data.DataRow> class in your [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] queries.</span></span> <span data-ttu-id="040a2-107">Это позволяет создавать мощные, сложные запросы.</span><span class="sxs-lookup"><span data-stu-id="040a2-107">This lets you to create rich, complex queries.</span></span>  
   
- Так же как и с помощью других реализаций [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], запросы [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] можно создавать двух различных видов: в синтаксисе выражений запросов и синтаксисе запросов, основанных на методе.  Дополнительные сведения об этих двух видах см. в разделе [Getting Started with LINQ](http://msdn.microsoft.com/ru-ru/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9). Синтаксис выражений запросов и синтаксис запросов на основе методов может быть использован для выполнения запросов к отдельным таблицам в <xref:System.Data.DataSet>, к нескольким таблицам в <xref:System.Data.DataSet>, а также к таблицам в типизированном <xref:System.Data.DataSet>.  
+ <span data-ttu-id="040a2-108">Как и в случае с другими реализациями [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], можно создать [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] запросов в двух различных видов: синтаксис выражений запросов и синтаксис запросов на основе методов.</span><span class="sxs-lookup"><span data-stu-id="040a2-108">As with other implementations of [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], you can create [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] queries in two different forms: query expression syntax and method-based query syntax.</span></span> <span data-ttu-id="040a2-109">Дополнительные сведения об этих двух форм см. в разделе [Приступая к работе с LINQ](http://msdn.microsoft.com/en-us/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9).</span><span class="sxs-lookup"><span data-stu-id="040a2-109">For more information about these two forms, see [Getting Started with LINQ](http://msdn.microsoft.com/en-us/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9).</span></span> <span data-ttu-id="040a2-110">Синтаксис выражений запросов или синтаксис запросов на основе методов можно использовать для выполнения запросов к отдельным таблицам в <xref:System.Data.DataSet>, к нескольким таблицам в <xref:System.Data.DataSet> или к таблицам в типизированном <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="040a2-110">You can use query expression syntax or method-based query syntax to perform queries against single tables in a <xref:System.Data.DataSet>, against multiple tables in a <xref:System.Data.DataSet>, or against tables in a typed <xref:System.Data.DataSet>.</span></span>  
   
-## Содержание  
- [Запросы к одиночным таблицам](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)  
- Описывается выполнение запросов к отдельным таблицам.  
+## <a name="in-this-section"></a><span data-ttu-id="040a2-111">Содержание</span><span class="sxs-lookup"><span data-stu-id="040a2-111">In This Section</span></span>  
+ [<span data-ttu-id="040a2-112">Запросы к одной таблице</span><span class="sxs-lookup"><span data-stu-id="040a2-112">Single-Table Queries</span></span>](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)  
+ <span data-ttu-id="040a2-113">Описывается выполнение запросов к отдельным таблицам.</span><span class="sxs-lookup"><span data-stu-id="040a2-113">Describes how to perform single-table queries.</span></span>  
   
- [Межтабличные запросы](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)  
- Описывается выполнение межтабличных запросов.  
+ [<span data-ttu-id="040a2-114">Запросы между таблицами</span><span class="sxs-lookup"><span data-stu-id="040a2-114">Cross-Table Queries</span></span>](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)  
+ <span data-ttu-id="040a2-115">Описывается выполнение межтабличных запросов.</span><span class="sxs-lookup"><span data-stu-id="040a2-115">Describes how to perform cross-table queries.</span></span>  
   
- [Запрос к типизированным объектам DataSet](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
- Описываются запросы к типизированным объектам <xref:System.Data.DataSet>.  
+ [<span data-ttu-id="040a2-116">Запросы к типизированным наборам данных</span><span class="sxs-lookup"><span data-stu-id="040a2-116">Querying Typed DataSets</span></span>](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
+ <span data-ttu-id="040a2-117">Описываются запросы к типизированным объектам <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="040a2-117">Describes how to query typed <xref:System.Data.DataSet> objects.</span></span>  
   
-## См. также  
- [Примеры LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)   
- [Загрузка данных в DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+## <a name="see-also"></a><span data-ttu-id="040a2-118">См. также</span><span class="sxs-lookup"><span data-stu-id="040a2-118">See Also</span></span>  
+ [<span data-ttu-id="040a2-119">Примеры LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="040a2-119">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
+ [<span data-ttu-id="040a2-120">Для загрузки данных в набор данных</span><span class="sxs-lookup"><span data-stu-id="040a2-120">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)

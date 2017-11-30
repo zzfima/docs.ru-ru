@@ -1,28 +1,31 @@
 ---
-title: "Использование стандартных конечных точек | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Использование стандартных конечных точек"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 85dda1619fe3a77c4716806de2467cb96287b2f9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Использование стандартных конечных точек
-Этот образец демонстрирует использование стандартных конечных точек в файлах конфигурации службы.  Стандартная конечная точка позволяет пользователю упростить определения конечных точек за счет использования единого свойства, описывающего комбинацию адреса, привязки и контракта вместе с дополнительными свойствами.  Данный образец демонстрирует определение и реализацию пользовательской стандартной конечной точки, а также определение конкретных свойств в конечной точке.  
+# <a name="usage-of-standard-endpoints"></a><span data-ttu-id="14733-102">Использование стандартных конечных точек</span><span class="sxs-lookup"><span data-stu-id="14733-102">Usage of Standard Endpoints</span></span>
+<span data-ttu-id="14733-103">Этот образец демонстрирует использование стандартных конечных точек в файлах конфигурации службы.</span><span class="sxs-lookup"><span data-stu-id="14733-103">This sample demonstrates how to use standard endpoints in service configuration files.</span></span> <span data-ttu-id="14733-104">Стандартная конечная точка позволяет пользователю упростить определения конечных точек за счет использования единого свойства, описывающего комбинацию адреса, привязки и контракта вместе с дополнительными свойствами.</span><span class="sxs-lookup"><span data-stu-id="14733-104">A standard endpoint allows the user to simplify endpoint definitions by using a single property to describe an address, binding and contract combination with additional properties associated to it.</span></span> <span data-ttu-id="14733-105">Данный образец демонстрирует определение и реализацию пользовательской стандартной конечной точки, а также определение конкретных свойств в конечной точке.</span><span class="sxs-lookup"><span data-stu-id="14733-105">This sample demonstrates how to define and implement a custom standard endpoint and how to define specific properties in the endpoint.</span></span>  
   
-## Подробные сведения об образце  
- Конечные точки службы могут быть заданы с использованием трех параметров: адреса, привязки и контракта.  Кроме того, можно задать и другие параметры \- конфигурацию поведения, заголовки, URI прослушивания и т. д.  В некоторых случаях значения адресов, привязок или контрактов не могут меняться.  В такой ситуации можно воспользоваться стандартными конечными точками.  Среди примеров таких конечных точек \- конечные точки обмена метаданными и конечные точки обнаружения.  Стандартные конечные точки также повышают удобство использования, позволяя конфигурировать конечные точки службы, не предоставляя сведений фиксированного характера и не создавая для них собственных стандартных конечных точек. Это дает возможность, например, повысить удобство использования, предоставляя разумный набор значений по умолчанию и тем самым сокращая количество строк в файле конфигурации.  
+## <a name="sample-details"></a><span data-ttu-id="14733-106">Подробные сведения об образце</span><span class="sxs-lookup"><span data-stu-id="14733-106">Sample Details</span></span>  
+ <span data-ttu-id="14733-107">Конечные точки службы могут быть заданы с использованием трех параметров: адреса, привязки и контракта.</span><span class="sxs-lookup"><span data-stu-id="14733-107">Service endpoints can be specified by supplying three parameters: address, binding and contract.</span></span> <span data-ttu-id="14733-108">Кроме того, можно задать и другие параметры - конфигурацию поведения, заголовки, URI прослушивания и т. д.</span><span class="sxs-lookup"><span data-stu-id="14733-108">Other parameters that can be supplied include behavior configuration, headers, listen URI, and so on.</span></span> <span data-ttu-id="14733-109">В некоторых случаях значения адресов, привязок или контрактов не могут меняться.</span><span class="sxs-lookup"><span data-stu-id="14733-109">In some cases, any or all of addresses, bindings and contracts have values that cannot change.</span></span> <span data-ttu-id="14733-110">В такой ситуации можно воспользоваться стандартными конечными точками.</span><span class="sxs-lookup"><span data-stu-id="14733-110">For this reason, it is possible to use standard endpoints.</span></span> <span data-ttu-id="14733-111">Среди примеров таких конечных точек - конечные точки обмена метаданными и конечные точки обнаружения.</span><span class="sxs-lookup"><span data-stu-id="14733-111">Some examples of such endpoints include metadata exchange endpoints and discovery endpoints.</span></span> <span data-ttu-id="14733-112">Стандартные конечные точки также повышают удобство использования, позволяя конфигурировать конечные точки службы, не предоставляя сведений фиксированного характера и не создавая для них собственных стандартных конечных точек. Это дает возможность, например, повысить удобство использования, предоставляя разумный набор значений по умолчанию и тем самым сокращая количество строк в файле конфигурации.</span><span class="sxs-lookup"><span data-stu-id="14733-112">Standard endpoints also improve usability by allowing configuration of service endpoints without having to provide information of a fixed nature or to create their own standard endpoints, for example to improve usability by supplying a reasonable set of default values and thus reducing the verbosity of configuration files.</span></span>  
   
- Данный образец состоит из двух проектов \- службы, которая определяет две стандартных конечных точки, и клиента, который обращается к службе.  Метод определения стандартных конечных точек для этой службы в файле конфигурации показан в следующем примере.  
+ <span data-ttu-id="14733-113">Данный образец состоит из двух проектов - службы, которая определяет две стандартных конечных точки, и клиента, который обращается к службе.</span><span class="sxs-lookup"><span data-stu-id="14733-113">This sample consists of two projects: the service that defines two standard endpoints and the client that communicates with the service.</span></span> <span data-ttu-id="14733-114">Метод определения стандартных конечных точек для этой службы в файле конфигурации показан в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="14733-114">The way the standard endpoints are defined for the service in the configuration file is show in the following example.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -53,12 +56,11 @@ caps.handback.revision: 8
     </standardEndpoints>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
- Первая конечная точка, определенная для службы, имеет тип `customEndpoint`, ее определение можно увидеть в разделе `<standardEndpoints>`, в котором свойству `property` задано значение `true`.  Это пример конечной точки, дополненной новым свойством.  Вторая конечная точка соответствует конечной точке метаданных, и значения адреса, привязки и контракта в ней фиксированы.  
+ <span data-ttu-id="14733-115">Первая конечная точка, определенная для службы, имеет тип `customEndpoint`, ее определение можно увидеть в разделе `<standardEndpoints>`, в котором свойству `property` задано значение `true`.</span><span class="sxs-lookup"><span data-stu-id="14733-115">The first endpoint defined for the service is of kind `customEndpoint`, whose definition can be seen in the `<standardEndpoints>` section, in which the property `property` is given the value `true`.</span></span> <span data-ttu-id="14733-116">Это пример конечной точки, дополненной новым свойством.</span><span class="sxs-lookup"><span data-stu-id="14733-116">This is the case of an endpoint customized with a new property.</span></span> <span data-ttu-id="14733-117">Вторая конечная точка соответствует конечной точке метаданных, и значения адреса, привязки и контракта в ней фиксированы.</span><span class="sxs-lookup"><span data-stu-id="14733-117">The second endpoint corresponds to a metadata endpoint, in which the values for address, binding and contract are fixed.</span></span>  
   
- Для определения элемента стандартной конечной точки необходимо создать класс, производный от класса `StandardEndpointElement`.  В нашем образце класс `CustomEndpointElement` определен, как показано в следующем фрагменте кода.  
+ <span data-ttu-id="14733-118">Для определения элемента стандартной конечной точки необходимо создать класс, производный от класса `StandardEndpointElement`.</span><span class="sxs-lookup"><span data-stu-id="14733-118">To define the standard endpoint element, a class that derives from `StandardEndpointElement` must be created.</span></span> <span data-ttu-id="14733-119">В нашем образце класс `CustomEndpointElement` определен, как показано в следующем фрагменте кода.</span><span class="sxs-lookup"><span data-stu-id="14733-119">In the case of this sample, the `CustomEndpointElement` class has been defined as shown in the following example.</span></span>  
   
 ```csharp  
 public class CustomEndpointElement : StandardEndpointElement  
@@ -109,10 +111,9 @@ public class CustomEndpointElement : StandardEndpointElement
     {  
     }  
 }  
-  
 ```  
   
- В функции `CreateServiceEndpoint` создается объект `CustomEndpoint`.  Его определение показано в следующем примере.  
+ <span data-ttu-id="14733-120">В функции `CreateServiceEndpoint` создается объект `CustomEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="14733-120">In the `CreateServiceEndpoint` function, a `CustomEndpoint` object is created.</span></span> <span data-ttu-id="14733-121">Его определение показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="14733-121">Its definition is shown in the following example.</span></span>  
   
 ```  
 public class CustomEndpoint : ServiceEndpoint  
@@ -140,43 +141,42 @@ public class CustomEndpoint : ServiceEndpoint
             set;  
         }  
     }  
-  
 ```  
   
- Чтобы осуществить сообщение между службой и клиентом, в клиенте, обращающемся к службе, создается ссылка на службу.  Когда образец построен и запущен, запускается и служба, и клиент сообщается с ней.  Обратите внимание, что ссылку на службу следует обновлять при каждом изменении службы.  
+ <span data-ttu-id="14733-122">Чтобы осуществить сообщение между службой и клиентом, в клиенте, обращающемся к службе, создается ссылка на службу.</span><span class="sxs-lookup"><span data-stu-id="14733-122">To perform the communication between service and client, a service reference is created in the client to the service.</span></span> <span data-ttu-id="14733-123">Когда образец построен и запущен, запускается и служба, и клиент сообщается с ней.</span><span class="sxs-lookup"><span data-stu-id="14733-123">When the sample is built and executed, the service executes and the client communicates with it.</span></span> <span data-ttu-id="14733-124">Обратите внимание, что ссылку на службу следует обновлять при каждом изменении службы.</span><span class="sxs-lookup"><span data-stu-id="14733-124">Note that the service reference should be updated every time there is some change in the service.</span></span>  
   
-#### Использование этого образца  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="14733-125">Использование этого образца</span><span class="sxs-lookup"><span data-stu-id="14733-125">To use this sample</span></span>  
   
-1.  Откройте в среде [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] файл StandardEndpoints.sln.  
+1.  <span data-ttu-id="14733-126">Откройте в среде [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] файл StandardEndpoints.sln.</span><span class="sxs-lookup"><span data-stu-id="14733-126">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the StandardEndpoints.sln file.</span></span>  
   
-2.  Разрешите запуск нескольких проектов.  
+2.  <span data-ttu-id="14733-127">Разрешите запуск нескольких проектов.</span><span class="sxs-lookup"><span data-stu-id="14733-127">Enable multiple projects to start up.</span></span>  
   
-    1.  В окне **Обозреватель решений** щелкните правой кнопкой решение "Standard Endpoints" и выберите пункт **Свойства**.  
+    1.  <span data-ttu-id="14733-128">В **обозревателе решений**, щелкните правой кнопкой мыши решение стандартные конечные точки, а затем выберите **свойства**.</span><span class="sxs-lookup"><span data-stu-id="14733-128">In **Solution Explorer**, right-click the Standard Endpoints solution and then select **Properties**.</span></span>  
   
-    2.  В разделе **Общие свойства** выберите **Запускаемый проект**, затем **Несколько запускаемых проектов**.  
+    2.  <span data-ttu-id="14733-129">В **общие свойства**выберите **запускаемый проект**, а затем нажмите кнопку **несколько запускаемых проектов**.</span><span class="sxs-lookup"><span data-stu-id="14733-129">In **Common Properties**, select **Startup Project**, and then click **Multiple Startup Projects**.</span></span>  
   
-    3.  Переместите проект "Service" в начало списка и задайте параметру **Действие** значение **Пуск**.  
+    3.  <span data-ttu-id="14733-130">Переместить в начало списка, в проект службы с **действия** значение **запустить**.</span><span class="sxs-lookup"><span data-stu-id="14733-130">Move the Service project to the beginning of the list, with the **Action** set to **Start**.</span></span>  
   
-    4.  Переместите проект «Client» после проекта «Service» и также задайте параметру **Действие** значение **Пуск**.  
+    4.  <span data-ttu-id="14733-131">Переместить клиентский проект после обновления проекта, также с **действия** значение **запустить**.</span><span class="sxs-lookup"><span data-stu-id="14733-131">Move the Client project after the Service project, also with the **Action** set to **Start**.</span></span>  
   
-         Это указывает, что проект «Client» выполняется после проекта «Service».  
+         <span data-ttu-id="14733-132">Это указывает, что проект «Client» выполняется после проекта «Service».</span><span class="sxs-lookup"><span data-stu-id="14733-132">This specifies that the Client project is executed after the Service project.</span></span>  
   
-3.  Чтобы запустить решение, нажмите клавишу F5.  
+3.  <span data-ttu-id="14733-133">Чтобы запустить решение, нажмите клавишу F5.</span><span class="sxs-lookup"><span data-stu-id="14733-133">To run the solution, press F5.</span></span>  
   
 > [!NOTE]
->  Если эти действия не дают результата, то проверьте правильность настройки среды, выполнив следующие действия.  
+>  <span data-ttu-id="14733-134">Если эти действия не дают результата, то проверьте правильность настройки среды, выполнив следующие действия.</span><span class="sxs-lookup"><span data-stu-id="14733-134">If these steps do not work, then make sure that your environment has been properly set up, using the following steps.</span></span>  
 >   
->  1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
-> 2.  Для сборки решения следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
-> 3.  Чтобы запустить образец в конфигурации с одним или несколькими компьютерами, выполните инструкции из раздела [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+>  1.  <span data-ttu-id="14733-135">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="14733-135">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+> 2.  <span data-ttu-id="14733-136">Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="14733-136">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+> 3.  <span data-ttu-id="14733-137">Запуск образца одного или нескольких конфигураций на компьютере, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="14733-137">To run the sample in a single or multiple computer configurations, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.  Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="14733-138">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="14733-138">The samples may already be installed on your machine.</span></span> <span data-ttu-id="14733-139">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="14733-139">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="14733-140">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="14733-140">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="14733-141">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="14733-141">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Services\StandardEndpoints`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\StandardEndpoints`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="14733-142">См. также</span><span class="sxs-lookup"><span data-stu-id="14733-142">See Also</span></span>

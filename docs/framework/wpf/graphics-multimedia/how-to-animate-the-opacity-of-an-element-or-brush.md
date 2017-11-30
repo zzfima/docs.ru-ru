@@ -1,33 +1,36 @@
 ---
-title: "Практическое руководство. Анимация свойства &quot;Прозрачность&quot; элемента или кисти | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "анимация, Opacity - свойство"
-  - "непрозрачность, анимирование"
+title: "Практическое руководство. Анимация свойства \"Прозрачность\" элемента или кисти"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- opacity [WPF], animating
+- animation [WPF], Opacity property
 ms.assetid: 572af23b-39dd-48d1-9db5-4bca56a4b3d3
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 808d29292e176af8d3af1fc0f4a02c48ee05ea35
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Анимация свойства &quot;Прозрачность&quot; элемента или кисти
-Чтобы создать эффект проявления и исчезновения элемента Framework, можно анимировать его свойство <xref:System.Windows.UIElement.Opacity%2A>, или анимировать свойство <xref:System.Windows.Media.Brush.Opacity%2A> использующейся для его рисования кисти <xref:System.Windows.Media.Brush> \(или нескольких кистей\).  Анимация свойства прозрачности элемента создает эффект появления и исчезновения для него и его потомков, но анимация кисти используется для рисования элемента с лучшим выделением, в зависимости от того, какая часть элемента постепенно изменяется.   Например, можно анимировать свойство «Прозрачность» элемента «Кисть», использующегося для рисования фона кнопки.  Это вызовет эффект проявления и исчезновения фона кнопки, в то время как текст кнопки будет оставаться полностью непрозрачным.  
+# <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a><span data-ttu-id="f9c33-102">Практическое руководство. Анимация свойства "Прозрачность" элемента или кисти</span><span class="sxs-lookup"><span data-stu-id="f9c33-102">How to: Animate the Opacity of an Element or Brush</span></span>
+<span data-ttu-id="f9c33-103">Чтобы сделать элемент структуры исчезновения и появления, анимация его <xref:System.Windows.UIElement.Opacity%2A> свойство или анимировать <xref:System.Windows.Media.Brush.Opacity%2A> свойство <xref:System.Windows.Media.Brush> (или кисти) используется для рисования.</span><span class="sxs-lookup"><span data-stu-id="f9c33-103">To make a framework element fade in and out of view, you can animate its <xref:System.Windows.UIElement.Opacity%2A> property or you can animate the <xref:System.Windows.Media.Brush.Opacity%2A> property of the <xref:System.Windows.Media.Brush> (or brushes) used to paint it.</span></span> <span data-ttu-id="f9c33-104">Анимация прозрачности элемента упрощает исчезновения и появления его дочерних элементов, но анимации кисть, используемую для рисования элемента позволяет иметь большую избирательность о Плавное какая часть элемента.</span><span class="sxs-lookup"><span data-stu-id="f9c33-104">Animating the element's opacity makes it and its children fade in and out of view, but animating the brush used to paint the element enables you to be more selective about which portion of the element fades.</span></span> <span data-ttu-id="f9c33-105">Например вы Анимация прозрачности кисть, используемую для рисования фона кнопки.</span><span class="sxs-lookup"><span data-stu-id="f9c33-105">For example, you could animate the opacity of a brush used to paint a button's background.</span></span> <span data-ttu-id="f9c33-106">Это приведет к тому и исчезновения представления, оставив его текст полностью непрозрачный фон кнопки.</span><span class="sxs-lookup"><span data-stu-id="f9c33-106">This would cause the button's background to fade in and out of view, while leaving its text fully opaque.</span></span>  
   
 > [!NOTE]
->  Анимация <xref:System.Windows.Media.Brush.Opacity%2A> <xref:System.Windows.Media.Brush> имеет большую производительность, чем анимация свойства <xref:System.Windows.UIElement.Opacity%2A> элемента.  
+>  <span data-ttu-id="f9c33-107">Анимация <xref:System.Windows.Media.Brush.Opacity%2A> из <xref:System.Windows.Media.Brush> дает выигрыш в производительности, чем анимация <xref:System.Windows.UIElement.Opacity%2A> свойства элемента.</span><span class="sxs-lookup"><span data-stu-id="f9c33-107">Animating the <xref:System.Windows.Media.Brush.Opacity%2A> of a <xref:System.Windows.Media.Brush> provides performance benefits over animating the <xref:System.Windows.UIElement.Opacity%2A> property of an element.</span></span>  
   
- В следующем примере создается эффект проявления и исчезновения для двух кнопок.  Свойство «Прозрачность» первой <xref:System.Windows.Controls.Button> анимируется от `1.0` до `0.0` с <xref:System.Windows.Media.Animation.Timeline.Duration%2A> в пять секунд.  Вторая кнопка также анимирована, но свойство «Прозрачность» элемента SolidColorBrush используется для рисования только ее фона <xref:System.Windows.Controls.Control.Background%2A>, поэтому анимируется фон, а не вся кнопка.  Во время выполнения примера первая кнопка проявляется и исчезает вся, а во второй кнопке проявляется и исчезает только фон.  Текст и границы второй кнопки остаются полностью непрозрачными.  
+ <span data-ttu-id="f9c33-108">В следующем примере две кнопки анимированных, чтобы они исчезновения и появления.</span><span class="sxs-lookup"><span data-stu-id="f9c33-108">In the following example, two buttons are animated so that they fade in and out of view.</span></span> <span data-ttu-id="f9c33-109">Непрозрачность первого <xref:System.Windows.Controls.Button> анимация от `1.0` для `0.0` над <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 5 секунд.</span><span class="sxs-lookup"><span data-stu-id="f9c33-109">The Opacity of the first <xref:System.Windows.Controls.Button> is animated from `1.0` to `0.0` over a <xref:System.Windows.Media.Animation.Timeline.Duration%2A> of five seconds.</span></span> <span data-ttu-id="f9c33-110">Вторая кнопка также анимации, но непрозрачность SolidColorBrush используется для рисования его <xref:System.Windows.Controls.Control.Background%2A> анимировано вместо непрозрачность кнопка целиком.</span><span class="sxs-lookup"><span data-stu-id="f9c33-110">The second button is also animated, but the Opacity of the SolidColorBrush used to paint its <xref:System.Windows.Controls.Control.Background%2A> is animated rather than the opacity of the entire button.</span></span> <span data-ttu-id="f9c33-111">При запуске данного примера первая кнопка проявляется и исчезает вся, пока фон вторая кнопка исчезает и появляется.</span><span class="sxs-lookup"><span data-stu-id="f9c33-111">When the example is run, the first button completely fades in and out of view, while only the background of the second button fades in and out of view.</span></span> <span data-ttu-id="f9c33-112">Текст и границы остаются полностью непрозрачными.</span><span class="sxs-lookup"><span data-stu-id="f9c33-112">Its text and border remain fully opaque.</span></span>  
   
-## Пример  
- [!code-xml[timingbehaviors_snip#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/OpacityAnimationExample.xaml#10)]  
+## <a name="example"></a><span data-ttu-id="f9c33-113">Пример</span><span class="sxs-lookup"><span data-stu-id="f9c33-113">Example</span></span>  
+ [!code-xaml[timingbehaviors_snip#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/OpacityAnimationExample.xaml#10)]  
   
- В этот пример не включен код.  Полный пример также показывает, как анимировать прозрачность <xref:System.Windows.Media.Color> внутри <xref:System.Windows.Media.LinearGradientBrush>.  Полный код примера см. в разделе [Пример анимации прозрачности элемента](http://go.microsoft.com/fwlink/?LinkID=159968).
+ <span data-ttu-id="f9c33-114">В этом примере отсутствует код.</span><span class="sxs-lookup"><span data-stu-id="f9c33-114">Code has been omitted from this example.</span></span> <span data-ttu-id="f9c33-115">Полный пример также показано, как анимация прозрачности <xref:System.Windows.Media.Color> в <xref:System.Windows.Media.LinearGradientBrush>.</span><span class="sxs-lookup"><span data-stu-id="f9c33-115">The full sample also shows how to animate the opacity of a <xref:System.Windows.Media.Color> within a <xref:System.Windows.Media.LinearGradientBrush>.</span></span>  <span data-ttu-id="f9c33-116">Полный пример см. в разделе [Анимация прозрачности элемента-пример](http://go.microsoft.com/fwlink/?LinkID=159968).</span><span class="sxs-lookup"><span data-stu-id="f9c33-116">For the full sample, see the [Animating the Opacity of an Element Sample](http://go.microsoft.com/fwlink/?LinkID=159968).</span></span>

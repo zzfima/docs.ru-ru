@@ -1,37 +1,28 @@
 ---
-title: "Практическое руководство: сериализовать с помощью XmlSerializer (Visual Basic) | Документы Microsoft"
+title: "Как: сериализация с использованием XmlSerializer (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: cace24eb-0f43-4016-8e4b-199e5ef73a1c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4503774e8d6fc9b0a71c3a4ee390f98b485cc003
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 9d137296f6f4006cd222ebfa5e36e04d41f6ab9f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>Практическое руководство: сериализовать с помощью XmlSerializer (Visual Basic)
-В этом разделе приводится пример, где выполняется сериализация и десериализация с использованием <xref:System.Xml.Serialization.XmlSerializer>.</xref:System.Xml.Serialization.XmlSerializer>  
+# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a><span data-ttu-id="ac55c-102">Как: сериализация с использованием XmlSerializer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ac55c-102">How to: Serialize Using XmlSerializer (Visual Basic)</span></span>
+<span data-ttu-id="ac55c-103">Этот раздел показывает пример сериализации и десериализации с помощью <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="ac55c-103">This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере создается некоторое количество объектов, содержащих <xref:System.Xml.Linq.XElement>объектов.</xref:System.Xml.Linq.XElement> Затем объекты сериализуются в поток памяти и далее десериализуются из потока памяти.  
+## <a name="example"></a><span data-ttu-id="ac55c-104">Пример</span><span class="sxs-lookup"><span data-stu-id="ac55c-104">Example</span></span>  
+ <span data-ttu-id="ac55c-105">В следующем примере создается некоторое количество объектов, содержащих объекты <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="ac55c-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="ac55c-106">Затем объекты сериализуются в поток памяти и далее десериализуются из потока памяти.</span><span class="sxs-lookup"><span data-stu-id="ac55c-106">It then serializes them to a memory stream, and then deserializes them from the memory stream.</span></span>  
   
 ```vb  
 Imports System  
@@ -87,7 +78,7 @@ Public Class XLinqTest
 End Class  
 ```  
   
- В этом примере выводятся следующие данные:  
+ <span data-ttu-id="ac55c-107">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="ac55c-107">This example produces the following output:</span></span>  
   
 ```  
 Testing for type: XElementNullContainer  
@@ -98,6 +89,5 @@ Testing for type: XElementContainer
   Deserialized type: XElementContainer  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Сериализация графов объектов, содержащих объекты XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
-
+## <a name="see-also"></a><span data-ttu-id="ac55c-108">См. также</span><span class="sxs-lookup"><span data-stu-id="ac55c-108">See Also</span></span>  
+ [<span data-ttu-id="ac55c-109">Сериализация графов объектов, содержащих объекты XElement (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ac55c-109">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

@@ -1,44 +1,50 @@
 ---
-title: "Практическое руководство. Анимирование свойства с помощью раскадровки (класс Storyboard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "анимация, Раскадровки"
-  - "Раскадровки, анимация"
+title: "Практическое руководство. Анимирование свойства с помощью раскадровки (класс Storyboard)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- animation [WPF], Storyboards
+- Storyboards [WPF], animation
 ms.assetid: f4a314e9-1da2-4367-85fc-1232487efa7a
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2129ea06e8c92b3912d2abdd3d1a63e651ac59e1
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Анимирование свойства с помощью раскадровки (класс Storyboard)
-В этом примере показано использование <xref:System.Windows.Media.Animation.Storyboard> для анимации свойств.  Для анимации свойства с помощью <xref:System.Windows.Media.Animation.Storyboard>, создайте анимацию для каждого свойства, которое требуется анимировать, а также создайте <xref:System.Windows.Media.Animation.Storyboard> для хранения анимации.  
+# <a name="how-to-animate-a-property-by-using-a-storyboard"></a><span data-ttu-id="d7b1c-102">Практическое руководство. Анимирование свойства с помощью раскадровки (класс Storyboard)</span><span class="sxs-lookup"><span data-stu-id="d7b1c-102">How to: Animate a Property by Using a Storyboard</span></span>
+<span data-ttu-id="d7b1c-103">В этом примере показано, как использовать <xref:System.Windows.Media.Animation.Storyboard> для анимации свойства.</span><span class="sxs-lookup"><span data-stu-id="d7b1c-103">This example shows how to use a <xref:System.Windows.Media.Animation.Storyboard> to animate properties.</span></span> <span data-ttu-id="d7b1c-104">Для анимации свойства с помощью <xref:System.Windows.Media.Animation.Storyboard>, создайте анимацию для каждого свойства, которое необходимо анимировать, а также для создания <xref:System.Windows.Media.Animation.Storyboard> для хранения анимации.</span><span class="sxs-lookup"><span data-stu-id="d7b1c-104">To animate a property by using a <xref:System.Windows.Media.Animation.Storyboard>, create an animation for each property that you want to animate and also create a <xref:System.Windows.Media.Animation.Storyboard> to contain the animations.</span></span>  
   
- Тип свойства определяет тип используемой анимации.  Например, чтобы анимация свойства, которое принимает значения <xref:System.Double>, используйте <xref:System.Windows.Media.Animation.DoubleAnimation>.  <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> и <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> [вложенные свойства](GTMT) определяют объект и свойства, к которым применяется анимация.  
+ <span data-ttu-id="d7b1c-105">Тип свойства определяет тип используемой анимации.</span><span class="sxs-lookup"><span data-stu-id="d7b1c-105">The type of property determines the type of animation to use.</span></span> <span data-ttu-id="d7b1c-106">Например, для анимации свойства, которое принимает <xref:System.Double> значения, используйте <xref:System.Windows.Media.Animation.DoubleAnimation>.</span><span class="sxs-lookup"><span data-stu-id="d7b1c-106">For example, to animate a property that takes <xref:System.Double> values, use a <xref:System.Windows.Media.Animation.DoubleAnimation>.</span></span> <span data-ttu-id="d7b1c-107"><xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> И <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> вложенные свойства укажите объект и свойство, к которому применяется анимация.</span><span class="sxs-lookup"><span data-stu-id="d7b1c-107">The <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> and <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> attached properties specify the object and property to which the animation is applied.</span></span>  
   
- Чтобы запустить раскадровку в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], используйте действия <xref:System.Windows.Media.Animation.BeginStoryboard> и <xref:System.Windows.EventTrigger>.  <xref:System.Windows.EventTrigger> начинает действие <xref:System.Windows.Media.Animation.BeginStoryboard> при возникновении события, заданного его свойством <xref:System.Windows.EventTrigger.RoutedEvent%2A>.  Действие <xref:System.Windows.Media.Animation.BeginStoryboard> запускает <xref:System.Windows.Media.Animation.Storyboard>.  
+ <span data-ttu-id="d7b1c-108">Запуск раскадровки в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], используйте <xref:System.Windows.Media.Animation.BeginStoryboard> действия и <xref:System.Windows.EventTrigger>.</span><span class="sxs-lookup"><span data-stu-id="d7b1c-108">To start a storyboard in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], use a <xref:System.Windows.Media.Animation.BeginStoryboard> action and an <xref:System.Windows.EventTrigger>.</span></span> <span data-ttu-id="d7b1c-109"><xref:System.Windows.EventTrigger> Начинает <xref:System.Windows.Media.Animation.BeginStoryboard> действия, если событие, определяемое его <xref:System.Windows.EventTrigger.RoutedEvent%2A> происходит свойство.</span><span class="sxs-lookup"><span data-stu-id="d7b1c-109">The <xref:System.Windows.EventTrigger> begins the <xref:System.Windows.Media.Animation.BeginStoryboard> action when the event that is specified by its <xref:System.Windows.EventTrigger.RoutedEvent%2A> property occurs.</span></span> <span data-ttu-id="d7b1c-110"><xref:System.Windows.Media.Animation.BeginStoryboard> Запускает действие <xref:System.Windows.Media.Animation.Storyboard>.</span><span class="sxs-lookup"><span data-stu-id="d7b1c-110">The <xref:System.Windows.Media.Animation.BeginStoryboard> action starts the <xref:System.Windows.Media.Animation.Storyboard>.</span></span>  
   
- В следующем примере используются объекты <xref:System.Windows.Media.Animation.Storyboard> для анимации двух элементов управления <xref:System.Windows.Controls.Button>.  Чтобы заставить первую кнопку изменить размер, анимируется ее <xref:System.Windows.FrameworkElement.Width%2A>.  Чтобы заставить вторую кнопку изменить цвета, свойство <xref:System.Windows.Media.SolidColorBrush.Color%2A> элемента <xref:System.Windows.Media.SolidColorBrush> используется для установки <xref:System.Windows.Controls.Control.Background%2A> анимированной кнопки.  
+ <span data-ttu-id="d7b1c-111">В следующем примере используется <xref:System.Windows.Media.Animation.Storyboard> объектов анимации два <xref:System.Windows.Controls.Button> элементов управления.</span><span class="sxs-lookup"><span data-stu-id="d7b1c-111">The following example uses <xref:System.Windows.Media.Animation.Storyboard> objects to animate two <xref:System.Windows.Controls.Button> controls.</span></span> <span data-ttu-id="d7b1c-112">Чтобы сделать первую кнопку Изменение размера, его <xref:System.Windows.FrameworkElement.Width%2A> выполняется анимация.</span><span class="sxs-lookup"><span data-stu-id="d7b1c-112">To make the first button change in size, its <xref:System.Windows.FrameworkElement.Width%2A> is animated.</span></span> <span data-ttu-id="d7b1c-113">Чтобы изменить цвет, вторая кнопка <xref:System.Windows.Media.SolidColorBrush.Color%2A> свойство <xref:System.Windows.Media.SolidColorBrush> используется для задания <xref:System.Windows.Controls.Control.Background%2A> кнопки, выполняется анимация.</span><span class="sxs-lookup"><span data-stu-id="d7b1c-113">To make the second button change color, the <xref:System.Windows.Media.SolidColorBrush.Color%2A> property of the <xref:System.Windows.Media.SolidColorBrush> is used to set the <xref:System.Windows.Controls.Control.Background%2A> of the button that is animated.</span></span>  
   
-## Пример  
- [!code-xml[AnimatePropertyStoryboards#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/AnimatePropertyStoryboards/XAML/StoryboardExample.xaml#1)]  
+## <a name="example"></a><span data-ttu-id="d7b1c-114">Пример</span><span class="sxs-lookup"><span data-stu-id="d7b1c-114">Example</span></span>  
+ [!code-xaml[AnimatePropertyStoryboards#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/AnimatePropertyStoryboards/XAML/StoryboardExample.xaml#1)]  
   
 > [!NOTE]
->  Несмотря на то, что анимация может ориентироваться и на объект <xref:System.Windows.FrameworkElement>, например <xref:System.Windows.Controls.Control> или <xref:System.Windows.Controls.Panel>, и на объект <xref:System.Windows.Freezable>, например <xref:System.Windows.Media.Brush> или <xref:System.Windows.Media.Transform>, только элементы структуры имеют свойство <xref:System.Windows.FrameworkElement.Name%2A>.  Чтобы назначить имя замороженному объекту таким образом, чтобы на него могла быть ориентирована анимация, используйте [Директива x:Name](../../../../docs/framework/xaml-services/x-name-directive.md), как показано в предыдущем примере.  
+>  <span data-ttu-id="d7b1c-115">Несмотря на то, что анимация может ориентироваться и <xref:System.Windows.FrameworkElement> объект, такой как <xref:System.Windows.Controls.Control> или <xref:System.Windows.Controls.Panel>и <xref:System.Windows.Freezable> объект, такой как <xref:System.Windows.Media.Brush> или <xref:System.Windows.Media.Transform>, только элементы структуры имеют <xref:System.Windows.FrameworkElement.Name%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="d7b1c-115">Although animations can target both a <xref:System.Windows.FrameworkElement> object, such as a <xref:System.Windows.Controls.Control> or <xref:System.Windows.Controls.Panel>, and a <xref:System.Windows.Freezable> object, such as a <xref:System.Windows.Media.Brush> or <xref:System.Windows.Media.Transform>, only framework elements have a <xref:System.Windows.FrameworkElement.Name%2A> property.</span></span> <span data-ttu-id="d7b1c-116">Для назначения имени объекту freezable, чтобы его можно было использовать в анимации, следует использовать [директиву x:Name](../../../../docs/framework/xaml-services/x-name-directive.md), как показано в предыдущем примере.</span><span class="sxs-lookup"><span data-stu-id="d7b1c-116">To assign a name to a freezable so that it can be targeted by an animation, use the [x:Name Directive](../../../../docs/framework/xaml-services/x-name-directive.md), as the previous example shows.</span></span>  
   
- Если используется код, необходимо создать <xref:System.Windows.NameScope> для <xref:System.Windows.FrameworkElement> и зарегистрировать имена объектов для анимации с этим <xref:System.Windows.FrameworkElement>.  Для запуска анимации из кода используйте действие <xref:System.Windows.Media.Animation.BeginStoryboard> с <xref:System.Windows.EventTrigger>.  При необходимости можно использовать обработчик событий и метод <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> класса <xref:System.Windows.Media.Animation.Storyboard>.  В следующем примере показано, как использовать метод <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>.  
+ <span data-ttu-id="d7b1c-117">Если используется код, необходимо создать <xref:System.Windows.NameScope> для <xref:System.Windows.FrameworkElement> и зарегистрируйте имена объектов анимации с помощью <xref:System.Windows.FrameworkElement>.</span><span class="sxs-lookup"><span data-stu-id="d7b1c-117">If you use code, you must create a <xref:System.Windows.NameScope> for a <xref:System.Windows.FrameworkElement> and register the names of the objects to animate with that <xref:System.Windows.FrameworkElement>.</span></span> <span data-ttu-id="d7b1c-118">Чтобы запустить анимацию в коде, используйте <xref:System.Windows.Media.Animation.BeginStoryboard> действие с <xref:System.Windows.EventTrigger>.</span><span class="sxs-lookup"><span data-stu-id="d7b1c-118">To start the animations in code, use a <xref:System.Windows.Media.Animation.BeginStoryboard> action with an <xref:System.Windows.EventTrigger>.</span></span> <span data-ttu-id="d7b1c-119">При необходимости можно использовать обработчик событий и <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> метод <xref:System.Windows.Media.Animation.Storyboard>.</span><span class="sxs-lookup"><span data-stu-id="d7b1c-119">Optionally, you can use an event handler and the <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> method of <xref:System.Windows.Media.Animation.Storyboard>.</span></span> <span data-ttu-id="d7b1c-120">В следующем примере показано, как использовать метод <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>.</span><span class="sxs-lookup"><span data-stu-id="d7b1c-120">The following example shows how to use the <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> method.</span></span>  
   
  [!code-csharp[AnimatePropertyStoryboards#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimatePropertyStoryboards/CSharp/StoryboardExample.cs#11)]
  [!code-vb[AnimatePropertyStoryboards#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AnimatePropertyStoryboards/VisualBasic/StoryboardExample.vb#11)]  
   
- Дополнительные сведения об анимации и раскадровках см. в разделе [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+ <span data-ttu-id="d7b1c-121">Дополнительные сведения об анимации и раскадровках см. в разделе [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).</span><span class="sxs-lookup"><span data-stu-id="d7b1c-121">For more information about animation and storyboards, see [Animation Overview](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).</span></span>  
   
- Если используется код, не ограничивайте использование объектов <xref:System.Windows.Media.Animation.Storyboard> для анимации свойств.  Дополнительные сведения и примеры см. в разделах [Анимация свойства без раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md) и [Анимирование свойства с помощью AnimationClock](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md).
+ <span data-ttu-id="d7b1c-122">Если используется код, вы не ограничены использованием <xref:System.Windows.Media.Animation.Storyboard> объекты для анимации свойства.</span><span class="sxs-lookup"><span data-stu-id="d7b1c-122">If you use code, you are not limited to using <xref:System.Windows.Media.Animation.Storyboard> objects in order to animate properties.</span></span> <span data-ttu-id="d7b1c-123">Дополнительные сведения и примеры см. в разделах [Анимация свойств без использования раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md) и [Анимация свойств с помощью AnimationClock](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md).</span><span class="sxs-lookup"><span data-stu-id="d7b1c-123">For more information and examples, see [Animate a Property Without Using a Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md) and [Animate a Property by Using an AnimationClock](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md).</span></span>

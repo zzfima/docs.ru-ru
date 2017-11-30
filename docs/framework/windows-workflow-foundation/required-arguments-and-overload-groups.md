@@ -1,24 +1,28 @@
 ---
-title: "Обязательные аргументы и группы перегруженных аргументов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Обязательные аргументы и группы перегруженных аргументов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fae9759faa6ae5e2fa65417c6ef5767330f6d9c6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Обязательные аргументы и группы перегруженных аргументов
-Действия можно настроить таким образом, чтобы для их выполнения требовалась привязка определенных аргументов.Атрибут `RequiredArgument` указывает, что для действия необходимы определенные аргументы, а атрибут `OverloadGroup` используется для группирования категорий необходимых аргументов.С помощью атрибутов авторы действий могут реализовать простые или сложные конфигурации проверки правильности действий.  
+# <a name="required-arguments-and-overload-groups"></a><span data-ttu-id="3c0f8-102">Обязательные аргументы и группы перегруженных аргументов</span><span class="sxs-lookup"><span data-stu-id="3c0f8-102">Required Arguments and Overload Groups</span></span>
+<span data-ttu-id="3c0f8-103">Действия можно настроить таким образом, чтобы для их выполнения требовалась привязка определенных аргументов.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-103">Activities can be configured so that certain arguments are required to be bound for the activity to be valid for execution.</span></span> <span data-ttu-id="3c0f8-104">Атрибут `RequiredArgument` указывает, что для действия необходимы определенные аргументы, а атрибут `OverloadGroup` используется для группирования категорий необходимых аргументов.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-104">The `RequiredArgument` attribute is used to indicate that certain arguments on an activity are required and the `OverloadGroup` attribute is used to group categories of required arguments together.</span></span> <span data-ttu-id="3c0f8-105">С помощью атрибутов авторы действий могут реализовать простые или сложные конфигурации проверки правильности действий.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-105">By using the attributes, activity authors can provide simple or complex activity validation configurations.</span></span>  
   
-## Использование обязательных аргументов  
- Чтобы использовать атрибут `RequiredArgument` в действии, укажите необходимые аргументы с помощью <xref:System.Activities.RequiredArgumentAttribute>.В этом примере действие `Add` определено, как имеющее два обязательных аргумента.  
+## <a name="using-required-arguments"></a><span data-ttu-id="3c0f8-106">Использование обязательных аргументов</span><span class="sxs-lookup"><span data-stu-id="3c0f8-106">Using Required Arguments</span></span>  
+ <span data-ttu-id="3c0f8-107">Чтобы использовать атрибут `RequiredArgument` в действии, укажите необходимые аргументы с помощью <xref:System.Activities.RequiredArgumentAttribute>.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-107">To use the `RequiredArgument` attribute in an activity, indicate the desired arguments using <xref:System.Activities.RequiredArgumentAttribute>.</span></span> <span data-ttu-id="3c0f8-108">В этом примере действие `Add` определено, как имеющее два обязательных аргумента.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-108">In this example, an `Add` activity is defined that has two required arguments.</span></span>  
   
 ```csharp  
 public sealed class Add : CodeActivity<int>  
@@ -36,7 +40,7 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- В XAML необходимые аргументы также обозначаются с помощью <xref:System.Activities.RequiredArgumentAttribute>.В данном примере действие `Add` определено с помощью трех аргументов и использует действие <xref:System.Activities.Statements.Assign%601> для выполнения операции добавления.  
+ <span data-ttu-id="3c0f8-109">В XAML необходимые аргументы также обозначаются с помощью <xref:System.Activities.RequiredArgumentAttribute>.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-109">In XAML, required arguments are also indicated by using <xref:System.Activities.RequiredArgumentAttribute>.</span></span> <span data-ttu-id="3c0f8-110">В данном примере действие `Add` определено с помощью трех аргументов и использует действие <xref:System.Activities.Statements.Assign%601> для выполнения операции сложения.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-110">In this example the `Add` activity is defined by using three arguments and uses an <xref:System.Activities.Statements.Assign%601> activity to perform the add operation.</span></span>  
   
 ```xaml  
 <Activity x:Class="ValidationDemo.Add" ...>  
@@ -64,14 +68,14 @@ public sealed class Add : CodeActivity<int>
 </Activity>  
 ```  
   
- При использовании действия, если любой из необходимых аргументов не привязан, будет возвращена следующая ошибка проверки.  
+ <span data-ttu-id="3c0f8-111">При использовании действия, если любой из необходимых аргументов не привязан, будет возвращена следующая ошибка проверки.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-111">If the activity is used and either of the required arguments is not bound the following validation error is returned.</span></span>  
   
- **Не указано значение необходимого аргумента действия Operand1.**   
+ <span data-ttu-id="3c0f8-112">**Не указано значение необходимого аргумента действия «Операнд_1».**</span><span class="sxs-lookup"><span data-stu-id="3c0f8-112">**Value for a required activity argument 'Operand1' was not supplied.**</span></span>  
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)] о проверке и обработке ошибок проверки и предупреждений см. в разделе [Вызов проверки действия](../../../docs/framework/windows-workflow-foundation//invoking-activity-validation.md).  
+>  [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="3c0f8-113">сведения об проверку и обработку ошибок и предупреждений проверки, в разделе [вызова проверки действия](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).</span><span class="sxs-lookup"><span data-stu-id="3c0f8-113"> about checking for and handling validation errors and warnings, see [Invoking Activity Validation](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).</span></span>  
   
-## Использование групп перегрузки  
- Группы перегрузки предоставляют метод, позволяющий определить, какие комбинации аргументов допустимы для действия.Аргументы группируются с помощью <xref:System.Activities.OverloadGroupAttribute>.Каждой группе присваивается имя, указанное в <xref:System.Activities.OverloadGroupAttribute>. Действие допустимо, когда привязан только один из наборов аргументов в группе перегрузки.В следующем примере из образца [OverloadGroups](../../../docs/framework/windows-workflow-foundation/samples/overloadgroups.md) определяется класс `CreateLocation`.  
+## <a name="using-overload-groups"></a><span data-ttu-id="3c0f8-114">Использование групп перегрузки</span><span class="sxs-lookup"><span data-stu-id="3c0f8-114">Using Overload Groups</span></span>  
+ <span data-ttu-id="3c0f8-115">Группы перегрузки предоставляют метод, позволяющий определить, какие комбинации аргументов допустимы для действия.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-115">Overload groups provide a method for indicating which combinations of arguments are valid in an activity.</span></span> <span data-ttu-id="3c0f8-116">Аргументы группируются с помощью <xref:System.Activities.OverloadGroupAttribute>.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-116">Arguments are grouped together by using <xref:System.Activities.OverloadGroupAttribute>.</span></span> <span data-ttu-id="3c0f8-117">Каждой группе присваивается имя, указанное в <xref:System.Activities.OverloadGroupAttribute>. Действие допустимо, когда привязан только один из наборов аргументов в группе перегрузки.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-117">Each group is given a name that is specified by the <xref:System.Activities.OverloadGroupAttribute>, The activity is valid when only one set of arguments in an overload group are bound.</span></span> <span data-ttu-id="3c0f8-118">В следующем примере берется из [OverloadGroups](../../../docs/framework/windows-workflow-foundation/samples/overloadgroups.md) образце `CreateLocation` определен класс.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-118">In the following example, taken from the [OverloadGroups](../../../docs/framework/windows-workflow-foundation/samples/overloadgroups.md) sample, a `CreateLocation` class is defined.</span></span>  
   
 ```csharp  
 class CreateLocation: Activity  
@@ -108,9 +112,9 @@ class CreateLocation: Activity
 }  
 ```  
   
- Задача данного действия — указать местоположение в США.Для этого пользователь действия может указать местоположение с помощью одной из трех групп аргументов.Чтобы указать допустимые сочетания аргументов, определены 3 группы перегрузки.`G1` содержит аргументы `Latitude` и `Longitude`.`G2` содержит `Street`, `City` и `State`.`G3` содержит `Street` и `Zip`.`Name` также является обязательным аргументом, но не входит в группу перегрузки.Чтобы данное действие было допустимым, `Name` должно быть привязано вместе со всеми аргументами из только одной группы перегрузки.  
+ <span data-ttu-id="3c0f8-119">Задача данного действия - указать местоположение в США.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-119">The objective of this activity is to specify a location in the US.</span></span> <span data-ttu-id="3c0f8-120">Для этого пользователь действия может указать местоположение с помощью одной из трех групп аргументов.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-120">To do this, the user of the activity can specify the location using one of three groups of arguments.</span></span> <span data-ttu-id="3c0f8-121">Чтобы указать допустимые сочетания аргументов, определены 3 группы перегрузки.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-121">To specify the valid combinations of arguments, three overload groups are defined.</span></span> <span data-ttu-id="3c0f8-122">`G1` содержит аргументы `Latitude` и `Longitude`.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-122">`G1` contains the `Latitude` and `Longitude` arguments.</span></span> <span data-ttu-id="3c0f8-123">`G2` содержит `Street`, `City` и `State`.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-123">`G2` contains `Street`, `City`, and `State`.</span></span> <span data-ttu-id="3c0f8-124">`G3` содержит `Street` и `Zip`.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-124">`G3` contains `Street` and `Zip`.</span></span> <span data-ttu-id="3c0f8-125">`Name` также является обязательным аргументом, но не входит в группу перегрузки.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-125">`Name` is also a required argument, but it is not part of an overload group.</span></span> <span data-ttu-id="3c0f8-126">Чтобы данное действие было допустимым, `Name` должно быть привязано вместе со всеми аргументами только из одной группы перегрузки.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-126">For this activity to be valid, `Name` would have to be bound together with all of the arguments from one and only one overload group.</span></span>  
   
- В следующем примере, взятом из образца [Действия доступа к базе данных](../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md), имеется 2 группы перегрузки: `ConnectionString` и `ConfigFileSectionName`.Чтобы данное действие было допустимым, должны быть связаны либо аргументы `ProviderName` и `ConnectionString`, либо аргумент `ConfigName`, но не оба.  
+ <span data-ttu-id="3c0f8-127">В следующем примере берется из [действия доступа к базе данных](../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md) примера существуют две группы перегрузки: `ConnectionString` и `ConfigFileSectionName`.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-127">In the following example, taken from the [Database Access Activities](../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md) sample, there are two overload groups: `ConnectionString` and `ConfigFileSectionName`.</span></span> <span data-ttu-id="3c0f8-128">Чтобы данное действие было допустимым, должны быть связаны либо аргументы `ProviderName` и `ConnectionString`, либо аргумент `ConfigName`, но не оба.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-128">For this activity to be valid, either the `ProviderName` and `ConnectionString` arguments must be bound, or the `ConfigName` argument, but not both.</span></span>  
   
 ```  
 Public class DbUpdate: AsyncCodeActivity  
@@ -146,21 +150,21 @@ Public class DbUpdate: AsyncCodeActivity
 }  
 ```  
   
- При определении группы перегрузки:  
+ <span data-ttu-id="3c0f8-129">При определении группы перегрузки:</span><span class="sxs-lookup"><span data-stu-id="3c0f8-129">When defining an overload group:</span></span>  
   
--   Группа перегрузки не может быть подмножеством или эквивалентным набором другой группы перегрузки.  
+-   <span data-ttu-id="3c0f8-130">Группа перегрузки не может быть подмножеством или эквивалентным набором другой группы перегрузки.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-130">An overload group cannot be a subset or an equivalent set of another overload group.</span></span>  
   
     > [!NOTE]
-    >  Существует одно исключение из данного правила.Если группа перегрузки является подмножеством другой группы перегрузки и подмножество содержит только аргументы, где `RequiredArgument` равен `false`, то группа перегрузки допустима.  
+    >  <span data-ttu-id="3c0f8-131">Существует одно исключение из данного правила.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-131">There is one exception to this rule.</span></span> <span data-ttu-id="3c0f8-132">Если группа перегрузки является подмножеством другой группы перегрузки и подмножество содержит только аргументы, где `RequiredArgument` равен `false`, то группа перегрузки допустима.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-132">If an overload group is a subset of another overload group, and the subset contains only arguments where `RequiredArgument` is `false`, then the overload group is valid.</span></span>  
   
--   Группы перегрузки могут пересекаться, но это приводит к ошибке, если пересечение групп содержит все обязательные аргументы одной или обеих групп.В предыдущем примере группы перегрузки `G2` и `G3` перекрываются, но поскольку пересечение не содержит все аргументы одной или обеих групп, то это допустимо.  
+-   <span data-ttu-id="3c0f8-133">Группы перегрузки могут пересекаться, но это приведет к ошибке, если пересечение групп содержит все обязательные аргументы одной или обеих групп.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-133">Overload groups can overlap but it is an error if the intersection of the groups contains all the required arguments of one or both of the overload groups.</span></span> <span data-ttu-id="3c0f8-134">В предыдущем примере группы перегрузки `G2` и `G3` перекрываются, но поскольку пересечение не содержит все аргументы одной или обеих групп, то это допустимо.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-134">In the previous example the `G2` and `G3` overload groups overlapped, but because the intersection did not contain all the arguments of one or both of the groups this was valid.</span></span>  
   
- Если имеет место привязка аргументов в группе перегрузки:  
+ <span data-ttu-id="3c0f8-135">Если имеет место привязка аргументов в группе перегрузки:</span><span class="sxs-lookup"><span data-stu-id="3c0f8-135">When binding arguments in an overload group:</span></span>  
   
--   Группа перегрузки считается связанной, если все аргументы `RequiredArgument` в этой группе связанные.  
+-   <span data-ttu-id="3c0f8-136">Группа перегрузки считается связанной, если все аргументы `RequiredArgument` в этой группе - связанные.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-136">An overload group is considered bound if all the `RequiredArgument` arguments in the group are bound.</span></span>  
   
--   Если в группе нет ни одного аргумента `RequiredArgument` и хотя бы один аргумент связан, то группа также считается связанной.  
+-   <span data-ttu-id="3c0f8-137">Если в группе нет ни одного аргумента `RequiredArgument` и хотя бы один аргумент связан, то группа также считается связанной.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-137">If a group has zero `RequiredArgument` arguments and at least one argument bound, then the group is considered bound.</span></span>  
   
--   Возникает ошибка проверки, если ни одна из групп перегрузки не является связанной и при этом нет ни одной группы перегрузки без аргументов `RequiredArgument`.  
+-   <span data-ttu-id="3c0f8-138">Возникает ошибка проверки, если ни одна из групп перегрузки не является связанной и при этом нет ни одной группы перегрузки без аргументов `RequiredArgument`.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-138">It is a validation error if no overload groups are bound unless one overload group has no `RequiredArgument` arguments in it.</span></span>  
   
--   При наличии нескольких связанных групп перегрузки возникает ошибка, т. е. все обязательные аргументы в одной группе перегрузки являются связанными и любой аргумент в другой группе перегрузки также связан.
+-   <span data-ttu-id="3c0f8-139">При наличии нескольких привязанных групп перегрузки возникнет ошибка, т. е. все обязательные аргументы в одной группе являются связанными и любой аргумент в другой группе перегрузки также связан.</span><span class="sxs-lookup"><span data-stu-id="3c0f8-139">It is an error to have more than one overload group bound, that is, all required arguments in one overload group are bound and any argument in another overload group is also bound.</span></span>

@@ -1,41 +1,44 @@
 ---
-title: "Одноранговые сетки | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Одноранговые сетки"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d93e312e-ac04-40f8-baea-5da1cacb546e
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1ca3d934564447018f44a423c36f26454588db4e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Одноранговые сетки
-*Сетка* — это именованная коллекция \(взаимосвязанный граф\) из одноранговых узлов, которые могут взаимодействовать между собой и которые идентифицируются по уникальному ИД сетки.  Каждый узел соединен с несколькими другими узлами.  В хорошо связанной сетке существует путь между любыми двумя узлами, расстояние между наиболее удаленными узлами относительно невелико, а сетка остается связанной, даже если некоторые узлы или связи выпадают.  Активные узлы в сетке публикуют сведения о своих конечных точках, а также соответствующие идентификаторы сетки, чтобы другие одноранговые узлы могли находить их.  
+# <a name="peer-meshes"></a><span data-ttu-id="61537-102">Одноранговые сетки</span><span class="sxs-lookup"><span data-stu-id="61537-102">Peer Meshes</span></span>
+<span data-ttu-id="61537-103">Объект *mesh* — это именованная коллекция (взаимосвязанный граф) из одноранговых узлов, которые могут взаимодействовать друг с другом и которые идентифицируются по уникальному ИД сетки.</span><span class="sxs-lookup"><span data-stu-id="61537-103">A *mesh* is a named collection (an interconnected graph) of peer nodes that can communicate among themselves and that are identified by a unique mesh ID.</span></span> <span data-ttu-id="61537-104">Каждый узел соединен с несколькими другими узлами.</span><span class="sxs-lookup"><span data-stu-id="61537-104">Each node is connected to multiple other nodes.</span></span> <span data-ttu-id="61537-105">В хорошо связанной сетке существует путь между любыми двумя узлами, расстояние между наиболее удаленными узлами относительно невелико, а сетка остается связанной, даже если некоторые узлы или связи выпадают. Активные узлы в сетке публикуют сведения о своих конечных точках, а также соответствующие идентификаторы сетки, чтобы другие одноранговые узлы могли находить их.</span><span class="sxs-lookup"><span data-stu-id="61537-105">In a well-connected mesh, there is a path between any two nodes, with relatively few hops between the nodes on the furthest edges of the mesh, and the mesh will remain connected even if some nodes or connections drop out. Active nodes in the mesh publish their endpoint information with a corresponding mesh ID so that other peers can find them.</span></span>  
   
-## Характеристики сетки, созданной с помощью однорангового канала  
+## <a name="characteristics-of-a-mesh-created-using-peer-channel"></a><span data-ttu-id="61537-106">Характеристики сетки, созданной с помощью однорангового канала</span><span class="sxs-lookup"><span data-stu-id="61537-106">Characteristics of a Mesh Created Using Peer Channel</span></span>  
   
-#### Уникальный идентификатор  
+#### <a name="uniquely-identified"></a><span data-ttu-id="61537-107">Уникальный идентификатор</span><span class="sxs-lookup"><span data-stu-id="61537-107">Uniquely Identified</span></span>  
   
--   Каждая сетка характеризуется уникальным идентификатором.  Имя сетки \(или ее идентификатор\) имеет формат DNS\-имени узла.  Таким образом, идентификатор сетки должен быть уникальным для определенного клиента приложения в пределах области используемого распознавателя.  Простые имена, такие как "MyFamilysPeers" или "KevinsPokerTable", могут совпасть с именами других пользователей и вернуть неверные сведения о конечной точке, в результате чего будет нарушена конфиденциальность или увеличится задержка подключений.  Один из способов избежать таких проблем \- добавить к псевдониму уникальный идентификатор \(например, "KevinsPokerTable90210"\).  
+-   <span data-ttu-id="61537-108">Каждая сетка характеризуется уникальным идентификатором.</span><span class="sxs-lookup"><span data-stu-id="61537-108">A unique ID identifies each mesh.</span></span> <span data-ttu-id="61537-109">Имя сетки (или ее идентификатор) имеет формат DNS-имени узла.</span><span class="sxs-lookup"><span data-stu-id="61537-109">The name of the mesh (or mesh ID) is in the same format as a Domain Name System (DNS) host name.</span></span> <span data-ttu-id="61537-110">Таким образом, идентификатор сетки должен быть уникальным для определенного клиента приложения в пределах области используемого распознавателя.</span><span class="sxs-lookup"><span data-stu-id="61537-110">As such, this mesh ID must be unique for the intended client of the application within the scope of the resolver being used.</span></span> <span data-ttu-id="61537-111">Простые имена, такие как "MyFamilysPeers" или "KevinsPokerTable", могут совпасть с именами других пользователей и вернуть неверные сведения о конечной точке, в результате чего будет нарушена конфиденциальность или увеличится задержка подключений.</span><span class="sxs-lookup"><span data-stu-id="61537-111">A common name such as "MyFamilysPeers" or "KevinsPokerTable," may easily collide with other user names and may return unintended peer endpoint information, which could result in privacy issues or increase connection latency.</span></span> <span data-ttu-id="61537-112">Один из способов избежать таких проблем - добавить к псевдониму уникальный идентификатор (например, "KevinsPokerTable90210").</span><span class="sxs-lookup"><span data-stu-id="61537-112">One way to avoid these issues may be to add a unique ID as a postfix to the nickname for the mesh (for example, "KevinsPokerTable90210").</span></span>  
   
-#### Распространение сообщений  
+#### <a name="message-flooding"></a><span data-ttu-id="61537-113">Распространение сообщений</span><span class="sxs-lookup"><span data-stu-id="61537-113">Message Flooding</span></span>  
   
--   Сетка позволяет распространять сообщения от одного или нескольких отправителей среди всех остальных одноранговых узлов в рамках одной сетки.  В сообщениях, отправляемых одноранговыми узлами, используются заголовки, заданные в пространстве имен, расположенном по адресу `http://schemas.microsoft.com/net/2006/05/peer`.  
+-   <span data-ttu-id="61537-114">Сетка позволяет распространять сообщения от одного или нескольких отправителей среди всех остальных одноранговых узлов в рамках одной сетки.</span><span class="sxs-lookup"><span data-stu-id="61537-114">The mesh allows messages to be propagated from one or more senders to all other peer nodes in the same mesh.</span></span> <span data-ttu-id="61537-115">В сообщениях, отправляемых одноранговыми узлами, используются заголовки, заданные в пространстве имен, расположенном по адресу `http://schemas.microsoft.com/net/2006/05/peer`.</span><span class="sxs-lookup"><span data-stu-id="61537-115">Messages flooded by peer nodes use headers specified in the namespace at `http://schemas.microsoft.com/net/2006/05/peer`.</span></span>  
   
-#### Оптимизированные подключения  
+#### <a name="optimized-connections"></a><span data-ttu-id="61537-116">Оптимизированные подключения</span><span class="sxs-lookup"><span data-stu-id="61537-116">Optimized Connections</span></span>  
   
--   Сетка одноранговых каналов автоматически настраивается при подключении и отключении узлов, что гарантирует хорошую связь между узлами и низкую вероятность создания областей \(изолированных друг от друга групп узлов\).  Кроме того, подключения в сетке динамически оптимизируются на основании действующих шаблонов трафика, чтобы задержка сообщения на пути от отправителя к получателю была минимальной.  
+-   <span data-ttu-id="61537-117">Сетка одноранговых каналов автоматически настраивается при подключении и отключении узлов, что гарантирует хорошую связь между узлами и низкую вероятность создания областей (изолированных друг от друга групп узлов).</span><span class="sxs-lookup"><span data-stu-id="61537-117">A Peer Channel mesh automatically adjusts when nodes join and leave, ensuring that all nodes have good connectivity with little chance of creating partitions (groups of nodes isolated from each other).</span></span> <span data-ttu-id="61537-118">Кроме того, подключения в сетке динамически оптимизируются на основании действующих шаблонов трафика, чтобы задержка сообщения на пути от отправителя к получателю была минимальной.</span><span class="sxs-lookup"><span data-stu-id="61537-118">Connections in the mesh are also dynamically optimized based on current traffic patterns so that message latency from sender to receiver is as small as possible.</span></span>  
   
-#### Популярные сетевые функции, не реализуемые одноранговыми каналами  
- Важно знать о популярных сетевых функциях, которые не реализуются одноранговыми каналами.  Список функций, которые можно реализовать поверх одноранговых каналов, включает следующие возможности:  
+#### <a name="popular-network-features-that-peer-channel-does-not-provide"></a><span data-ttu-id="61537-119">Популярные сетевые функции, не реализуемые одноранговыми каналами</span><span class="sxs-lookup"><span data-stu-id="61537-119">Popular Network Features That Peer Channel Does Not Provide</span></span>  
+ <span data-ttu-id="61537-120">Важно знать о популярных сетевых функциях, которые не реализуются одноранговыми каналами.</span><span class="sxs-lookup"><span data-stu-id="61537-120">It is important to be aware of popular network features that Peer Channel does not provide.</span></span> <span data-ttu-id="61537-121">Список возможностей, которые можно реализовать поверх одноранговых каналов, включает следующие возможности:</span><span class="sxs-lookup"><span data-stu-id="61537-121">These features, which may all be built on top of Peer Channel, include the following:</span></span>  
   
--   **упорядочение сообщений:** сообщения из одного источника могут достигать получателей не в том порядке, в котором они были отправлены.  Приложения, требующие доставки сообщений в определенном порядке, должны самостоятельно реализовывать такие функции \(например, путем включения во все сообщения идентификаторов с возрастающими значениями\);  
+-   <span data-ttu-id="61537-122">**Упорядочение сообщений:** сообщения из одного источника могут достигать не во всех остальных субъектов, в том же порядке или в порядке, в котором отправлены.</span><span class="sxs-lookup"><span data-stu-id="61537-122">**Message ordering:** Messages originating from a single source may not arrive at all other parties in the same order or in the order that the source sent.</span></span> <span data-ttu-id="61537-123">Приложения, требующие доставки сообщений в определенном порядке, должны самостоятельно реализовывать такие функции (например, путем включения во все сообщения идентификаторов с возрастающими значениями);</span><span class="sxs-lookup"><span data-stu-id="61537-123">Applications that require messages be delivered in a certain order must build it into their applications (for example, by including a monotonically increasing ID with all messages).</span></span>  
   
--   **надежный обмен сообщениями:** одноранговые каналы не включают механизм для подтверждения получения всеми узлами.  Чтобы гарантировать доставку сообщений, необходимо разработать уровень обеспечения надежности поверх одноранговых каналов.
+-   <span data-ttu-id="61537-124">**Надежный обмен сообщениями:** одноранговый канал не поддерживает механизм для подтверждения получения всеми узлами.</span><span class="sxs-lookup"><span data-stu-id="61537-124">**Reliable messaging:** Peer Channel does not include a mechanism to ensure message reception by all peers.</span></span> <span data-ttu-id="61537-125">Чтобы гарантировать доставку сообщений, необходимо разработать уровень обеспечения надежности поверх одноранговых каналов.</span><span class="sxs-lookup"><span data-stu-id="61537-125">To guarantee message delivery, you must write a reliability layer on top of Peer Channel.</span></span>

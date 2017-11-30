@@ -1,39 +1,36 @@
 ---
-title: "Предложение In (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.In"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "In - ключевое слово [Visual Basic]"
+title: "Предложение In (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.In
+helpviewer_keywords: In keyword [Visual Basic]
 ms.assetid: 2f003a85-8fb6-4280-822b-6ac12839b915
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 347c1268ccb29238a0845b57d5d0f88f1ca27d59
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Предложение In (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Указывает группу, которую должна проходить переменная цикла в конструкции `For Each`, или коллекцию для запроса в предложении `From`, `Join` или `Group Join`.  
+# <a name="in-clause-visual-basic"></a><span data-ttu-id="29320-102">Предложение In (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="29320-102">In Clause (Visual Basic)</span></span>
+<span data-ttu-id="29320-103">Определяет группу, которую будет проходить переменная цикла `For Each` цикл или коллекцию для запроса в `From`, `Join`, или `Group Join` предложения.</span><span class="sxs-lookup"><span data-stu-id="29320-103">Specifies the group that the loop variable is to traverse in a `For Each` loop, or specifies the collection to query in a `From`, `Join`, or `Group Join` clause.</span></span>  
   
-## Заметки  
- Ключевое слово `In` можно использовать в следующих контекстах:  
+## <a name="remarks"></a><span data-ttu-id="29320-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="29320-104">Remarks</span></span>  
+ <span data-ttu-id="29320-105">`In` Ключевое слово может использоваться в следующих контекстах:</span><span class="sxs-lookup"><span data-stu-id="29320-105">The `In` keyword can be used in the following contexts:</span></span>  
   
- [Оператор For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [<span data-ttu-id="29320-106">Оператор For Each...Next</span><span class="sxs-lookup"><span data-stu-id="29320-106">For Each...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
- [Предложение From](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="29320-107">Предложение From</span><span class="sxs-lookup"><span data-stu-id="29320-107">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
   
- [Предложение Join](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [<span data-ttu-id="29320-108">Предложение Join</span><span class="sxs-lookup"><span data-stu-id="29320-108">Join Clause</span></span>](../../../visual-basic/language-reference/queries/join-clause.md)  
   
- [Предложение Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [<span data-ttu-id="29320-109">Предложение Group Join</span><span class="sxs-lookup"><span data-stu-id="29320-109">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
-## См. также  
- [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="29320-110">См. также</span><span class="sxs-lookup"><span data-stu-id="29320-110">See Also</span></span>  
+ [<span data-ttu-id="29320-111">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="29320-111">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

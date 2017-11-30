@@ -1,135 +1,115 @@
 ---
-title: "Элемент &lt;supportedRuntime&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#supportedRuntime"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup/supportedRuntime"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<supportedRuntime> - элемент"
-  - "supportedRuntime - элемент"
+title: "&lt;supportedRuntime&gt; элемент"
+ms.date: 10/17/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
+ms.custom: updateeachrelease
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#supportedRuntime
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup/supportedRuntime
+helpviewer_keywords:
+- supportedRuntime element
+- <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-caps.latest.revision: 33
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 28
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 5c38dc87d6015f0c814ea319c9353ea757478b85
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;supportedRuntime&gt;
-Указывает, какие версии среды CLR поддерживает приложение. Этот элемент должен использоваться всеми приложениями, собранными с применением версии 1.1 или более поздней версии .NET Framework.  
+# <a name="ltsupportedruntimegt-element"></a><span data-ttu-id="bc41a-102">&lt;supportedRuntime&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="bc41a-102">&lt;supportedRuntime&gt; Element</span></span>
+<span data-ttu-id="bc41a-103">Указывает, какие версии среды CLR поддерживает приложение.</span><span class="sxs-lookup"><span data-stu-id="bc41a-103">Specifies which versions of the common language runtime the application supports.</span></span> <span data-ttu-id="bc41a-104">Этот элемент должен использоваться всеми приложениями, собранными с применением версии 1.1 или более поздней версии .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="bc41a-104">This element should be used by all applications built with version 1.1 or later of the .NET Framework.</span></span>  
   
- [\<configuration\>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+[<span data-ttu-id="bc41a-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="bc41a-105">\<configuration></span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+
+[<span data-ttu-id="bc41a-106">\<startup></span><span class="sxs-lookup"><span data-stu-id="bc41a-106">\<startup></span></span>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
   
- [\<startup\>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+<span data-ttu-id="bc41a-107">**\<supportedRuntime>**</span><span class="sxs-lookup"><span data-stu-id="bc41a-107">**\<supportedRuntime>**</span></span>  
   
- **\<supportedRuntime\>**  
+## <a name="syntax"></a><span data-ttu-id="bc41a-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bc41a-108">Syntax</span></span>  
   
-## Синтаксис  
-  
-```  
-  
+```xml  
 <supportedRuntime version="runtime version" sku="sku id"/>  
 ```  
   
-## Атрибуты  
+## <a name="attributes"></a><span data-ttu-id="bc41a-109">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="bc41a-109">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|**version**|Необязательный атрибут.<br /><br /> Строковое значение, задающее версию среды CLR, которая поддерживается данным приложением. Допустимые значения атрибута `version` см. в разделе [Значения "runtime version"](#version). **Note:**  В .NET Framework 3.5 значение версии *runtime version* принимает форму *основной номер*.*дополнительный номер*.*сборка*. Начиная с [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], требуются только основной и дополнительный номера версии \(то есть "v4.0" вместо "v4.0.30319"\). Рекомендуется использовать более короткие строки.|  
-|**sku**|Необязательный атрибут.<br /><br /> Строковое значение, которое указывает единицу складского хранения \(SKU\), которая, в свою очередь, указывает выпуск .NET Framework, поддерживаемый этим приложением.<br /><br /> Начиная с .NET Framework 4.0, рекомендуется использовать атрибут `sku`.  Если он присутствует, он указывает целевую версию .NET Framework приложения.<br /><br /> Допустимые значения атрибута SKU см. в разделе [Значения "sku id"](#sku).|  
+|<span data-ttu-id="bc41a-110">Атрибут</span><span class="sxs-lookup"><span data-stu-id="bc41a-110">Attribute</span></span>|<span data-ttu-id="bc41a-111">Описание</span><span class="sxs-lookup"><span data-stu-id="bc41a-111">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="bc41a-112">**version**</span><span class="sxs-lookup"><span data-stu-id="bc41a-112">**version**</span></span>|<span data-ttu-id="bc41a-113">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="bc41a-113">Optional attribute.</span></span><br /><br /> <span data-ttu-id="bc41a-114">Строковое значение, задающее версию среды CLR, которая поддерживается данным приложением.</span><span class="sxs-lookup"><span data-stu-id="bc41a-114">A string value that specifies the version of the common language runtime (CLR) that this application supports.</span></span> <span data-ttu-id="bc41a-115">Допустимые значения `version` см. в разделе [значения «runtime version»](#version) раздела.</span><span class="sxs-lookup"><span data-stu-id="bc41a-115">For valid values of the `version` attribute, see the ["runtime version" values](#version) section.</span></span> <span data-ttu-id="bc41a-116">**Примечание:** через .NET Framework 3.5»*версии среды выполнения*» значение принимает форму *основных*. *дополнительный номер*. *Построение*.</span><span class="sxs-lookup"><span data-stu-id="bc41a-116">**Note:**  Through the .NET Framework 3.5, the "*runtime version*" value takes the form *major*.*minor*.*build*.</span></span> <span data-ttu-id="bc41a-117">Начиная с [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], требуются только основной и дополнительный номера версии (то есть "v4.0" вместо "v4.0.30319").</span><span class="sxs-lookup"><span data-stu-id="bc41a-117">Beginning with the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], only the major and minor version numbers are required (that is, "v4.0" instead of "v4.0.30319").</span></span> <span data-ttu-id="bc41a-118">Рекомендуется использовать более короткие строки.</span><span class="sxs-lookup"><span data-stu-id="bc41a-118">The shorter string is recommended.</span></span>|  
+|<span data-ttu-id="bc41a-119">**номер SKU**</span><span class="sxs-lookup"><span data-stu-id="bc41a-119">**sku**</span></span>|<span data-ttu-id="bc41a-120">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="bc41a-120">Optional attribute.</span></span><br /><br /> <span data-ttu-id="bc41a-121">Строковое значение, которое указывает единицу складского хранения (SKU), которая, в свою очередь, указывает выпуск .NET Framework, поддерживаемый этим приложением.</span><span class="sxs-lookup"><span data-stu-id="bc41a-121">A string value that specifies the stock-keeping unit (SKU), which in turn specifies which .NET Framework release this application supports.</span></span><br /><br /> <span data-ttu-id="bc41a-122">Начиная с .NET Framework 4.0, использование `sku` рекомендуется использовать атрибут.</span><span class="sxs-lookup"><span data-stu-id="bc41a-122">Starting with the .NET Framework 4.0, the use of the `sku` attribute is recommended.</span></span>  <span data-ttu-id="bc41a-123">Если он присутствует, он указывает целевую версию .NET Framework приложения.</span><span class="sxs-lookup"><span data-stu-id="bc41a-123">When present, it indicates the version of the .NET Framework that the app targets.</span></span><br /><br /> <span data-ttu-id="bc41a-124">Допустимые значения атрибута sku см [значения «sku id»](#sku) раздела.</span><span class="sxs-lookup"><span data-stu-id="bc41a-124">For valid values of the sku attribute, see the ["sku id" values](#sku) section.</span></span>|  
   
-## Заметки  
- Если элемент **\<supportedRuntime\>** отсутствует в файле конфигурации приложения, используется версия среды выполнения, которая применялась для сборки приложения.  
-  
- Элемент **\<supportedRuntime\>** должен использоваться всеми приложениями, собранными с применением версии 1.1 или более поздней версии среды выполнения. Приложения, собранные для поддержки только версии 1.0 среды выполнения, должны использовать элемент [\<requiredRuntime\>](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md).  
-  
-> [!NOTE]
->  При применении функции [CorBindToRuntimeByCfg](../../../../../ocs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) для задания файла конфигурации необходимо использовать элемент `<requiredRuntime>` для всех версий среды выполнения. При использовании функции [CorBindToRuntimeByCfg](../../../../../ocs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) элемент `<supportedRuntime>` игнорируется.  
-  
- Для приложений, поддерживающих версии среды выполнения от .NET Framework 1.1 до 3.5, при поддержке нескольких версий среды выполнения первый элемент должен задавать наиболее предпочтительную версию среды, а последний — наименее предпочтительную. Для приложений, поддерживающих .NET Framework 4.0 или более поздних версий, атрибут `version` указывает версию CLR, общую для .NET Framework 4 и более поздних версий, а атрибут `sku` указывает одну целевую версию .NET Framework приложения.  
+## <a name="remarks"></a><span data-ttu-id="bc41a-125">Примечания</span><span class="sxs-lookup"><span data-stu-id="bc41a-125">Remarks</span></span>  
+<span data-ttu-id="bc41a-126">Если  **\<supportedRuntime >** элемент отсутствует в файле конфигурации приложения, используется версия среды выполнения, используемые для построения приложения.</span><span class="sxs-lookup"><span data-stu-id="bc41a-126">If the **\<supportedRuntime>** element is not present in the application configuration file, the version of the runtime used to build the application is used.</span></span>  
+
+<span data-ttu-id="bc41a-127">**\<SupportedRuntime >** элемент должен использоваться всеми приложениями, собранными с помощью версии 1.1 или более поздней версии среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="bc41a-127">The **\<supportedRuntime>** element should be used by all applications built using version 1.1 or later of the runtime.</span></span> <span data-ttu-id="bc41a-128">Приложения, созданные для поддержки только версии 1.0 среды выполнения, должны использовать [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) элемента.</span><span class="sxs-lookup"><span data-stu-id="bc41a-128">Applications built to support only version 1.0 of the runtime must use the [\<requiredRuntime>](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) element.</span></span>  
   
 > [!NOTE]
->  Если приложение использует устаревшие пути активации, например [функцию CorBindToRuntimeEx](../../../../../ocs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), и эти пути требуются для активации версии 4 среды CLR вместо более ранней версии, или если приложение собрано с применением [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], но зависит от сборки смешанного режима, выполненной с использованием более ранней версии .NET Framework, то в списке поддерживаемых сред недостаточно указать [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]. Кроме того, в элементе [\<startup\>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) файла конфигурации атрибуту `useLegacyV2RuntimeActivationPolicy` необходимо присвоить значение `true`. Однако при установке для этого атрибута значения `true` все компоненты, собранные с более ранними версиями .NET Framework, будут работать с использованием [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], а не сред выполнения, с которыми они были собраны.  
+>  <span data-ttu-id="bc41a-129">Если вы используете [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) для указания файла конфигурации, необходимо использовать `<requiredRuntime>` элемент для всех версий среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="bc41a-129">If you use the [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) function to specify the configuration file, you must use the `<requiredRuntime>` element for all versions of the runtime.</span></span> <span data-ttu-id="bc41a-130">`<supportedRuntime>` Элемент игнорируется при использовании [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md).</span><span class="sxs-lookup"><span data-stu-id="bc41a-130">The `<supportedRuntime>` element is ignored when you use [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md).</span></span>  
   
- Приложения рекомендуется тестировать со всеми версиями .NET Framework, в которых они могут работать.  
+<span data-ttu-id="bc41a-131">Для приложений, поддерживающих версии среды выполнения от .NET Framework 1.1 до 3.5, при поддержке нескольких версий среды выполнения первый элемент должен задавать наиболее предпочтительную версию среды, а последний — наименее предпочтительную.</span><span class="sxs-lookup"><span data-stu-id="bc41a-131">For apps that support versions of the runtime from the .NET Framework 1.1 through 3.5, when multiple versions of the runtime are supported, the first element should specify the most preferred version of the runtime, and the last element should specify the least preferred version.</span></span> <span data-ttu-id="bc41a-132">Для приложений, поддерживающих .NET Framework 4.0 или более поздних версиях `version` атрибут указывает версию среды CLR, которые являются общими для .NET Framework 4 и более поздних версиях, и `sku` атрибут указывает на одной версии платформы .NET Framework, приложение целевые объекты.</span><span class="sxs-lookup"><span data-stu-id="bc41a-132">For apps that support the .NET Framework 4.0 or later versions, the `version` attribute indicates the CLR version, which is common to the .NET Framework 4 and later versions, and the `sku` attribute indicates single .NET Framework version that the app targets.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="bc41a-133">Если приложение использует устаревшие активации пути, такие как [функция CorBindToRuntimeEx](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), и нужно, чтобы эти пути для активации версии 4 среды CLR вместо более ранней версии, или если приложение создано с [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], но имеет зависимость сборки смешанного режима, созданного с помощью более ранней версии платформы .NET Framework, она не является достаточной для указания [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] в списке поддерживаемых сред выполнения.</span><span class="sxs-lookup"><span data-stu-id="bc41a-133">If your application uses legacy activation paths, such as the [CorBindToRuntimeEx function](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), and you want those paths to activate version 4 of the CLR instead of an earlier version, or if your application is built with the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] but has a dependency on a mixed-mode assembly built with an earlier version of the .NET Framework, it is not sufficient to specify the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] in the list of supported runtimes.</span></span> <span data-ttu-id="bc41a-134">Кроме того, в [ \<запуска > элемент](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) в файле конфигурации, необходимо установить `useLegacyV2RuntimeActivationPolicy` атрибут `true`.</span><span class="sxs-lookup"><span data-stu-id="bc41a-134">In addition, in the [\<startup> element](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) in your configuration file, you must set the `useLegacyV2RuntimeActivationPolicy` attribute to `true`.</span></span> <span data-ttu-id="bc41a-135">Однако при установке для этого атрибута значения `true` все компоненты, собранные с более ранними версиями .NET Framework, будут работать с использованием [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], а не сред выполнения, с которыми они были собраны.</span><span class="sxs-lookup"><span data-stu-id="bc41a-135">However, setting this attribute to `true` means that all components built with earlier versions of the .NET Framework are run using the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] instead of the runtimes they were built with.</span></span>  
+  
+<span data-ttu-id="bc41a-136">Приложения рекомендуется тестировать со всеми версиями .NET Framework, в которых они могут работать.</span><span class="sxs-lookup"><span data-stu-id="bc41a-136">We recommend that you test applications with all the .NET Framework versions that they can run on.</span></span>  
   
 <a name="version"></a>   
-## Значения "runtime version"  
- В следующей таблице перечислены допустимые значения для *runtime version* атрибута `version`.  
-  
-|Версия платформы .NET Framework|Атрибут `version`|  
-|-------------------------------------|-----------------------|  
-|1,0|"v1.0.3705"|  
-|1.1|"v1.1.4322"|  
-|2.0|"v2.0.50727"|  
-|3.0|"v2.0.50727"|  
-|3.5|"v2.0.50727"|  
-|4.0|"v4.0"|  
-|4.5|"v4.0"|  
-|4.5.1|"v4.0"|  
-|4.5.2|"v4.0"|  
-|4.6|"v4.0"|  
-|4.6.1|"v4.0"|  
+## <a name="runtime-version-values"></a><span data-ttu-id="bc41a-137">Значения "runtime version"</span><span class="sxs-lookup"><span data-stu-id="bc41a-137">"runtime version" values</span></span>  
+<span data-ttu-id="bc41a-138">`runtime` Атрибут указывает версию Common Language Runtime (CLR), необходимой для данного приложения.</span><span class="sxs-lookup"><span data-stu-id="bc41a-138">The `runtime` attribute specifies the Common Language Runtime (CLR) version that is required for a given application.</span></span> <span data-ttu-id="bc41a-139">Обратите внимание, что все версии платформы .NET Framework версий 4.x укажите `v4.0` среды CLR.</span><span class="sxs-lookup"><span data-stu-id="bc41a-139">Note that all .NET Framework v4.x versions specify the `v4.0` CLR.</span></span> <span data-ttu-id="bc41a-140">В следующей таблице перечислены допустимые значения для *версии среды выполнения* значение `version` атрибута.</span><span class="sxs-lookup"><span data-stu-id="bc41a-140">The following table lists valid values for the *runtime version* value of the `version` attribute.</span></span>  
+
+|<span data-ttu-id="bc41a-141">Версия платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="bc41a-141">.NET Framework version</span></span>|<span data-ttu-id="bc41a-142">Атрибут `version`</span><span class="sxs-lookup"><span data-stu-id="bc41a-142">`version` attribute</span></span>|  
+|----------------------------|-------------------------|  
+|<span data-ttu-id="bc41a-143">1,0</span><span class="sxs-lookup"><span data-stu-id="bc41a-143">1.0</span></span>|<span data-ttu-id="bc41a-144">"v1.0.3705"</span><span class="sxs-lookup"><span data-stu-id="bc41a-144">"v1.0.3705"</span></span>|  
+|<span data-ttu-id="bc41a-145">1.1</span><span class="sxs-lookup"><span data-stu-id="bc41a-145">1.1</span></span>|<span data-ttu-id="bc41a-146">"v1.1.4322"</span><span class="sxs-lookup"><span data-stu-id="bc41a-146">"v1.1.4322"</span></span>|  
+|<span data-ttu-id="bc41a-147">2.0</span><span class="sxs-lookup"><span data-stu-id="bc41a-147">2.0</span></span>|<span data-ttu-id="bc41a-148">"v2.0.50727"</span><span class="sxs-lookup"><span data-stu-id="bc41a-148">"v2.0.50727"</span></span>|  
+|<span data-ttu-id="bc41a-149">3.0</span><span class="sxs-lookup"><span data-stu-id="bc41a-149">3.0</span></span>|<span data-ttu-id="bc41a-150">"v2.0.50727"</span><span class="sxs-lookup"><span data-stu-id="bc41a-150">"v2.0.50727"</span></span>|  
+|<span data-ttu-id="bc41a-151">3.5</span><span class="sxs-lookup"><span data-stu-id="bc41a-151">3.5</span></span>|<span data-ttu-id="bc41a-152">"v2.0.50727"</span><span class="sxs-lookup"><span data-stu-id="bc41a-152">"v2.0.50727"</span></span>|  
+|<span data-ttu-id="bc41a-153">4.0-4.7.1</span><span class="sxs-lookup"><span data-stu-id="bc41a-153">4.0-4.7.1</span></span>|<span data-ttu-id="bc41a-154">"v4.0"</span><span class="sxs-lookup"><span data-stu-id="bc41a-154">"v4.0"</span></span>|  
+
   
 <a name="sku"></a>   
-## Значения "sku id"  
- В следующей таблице перечислены версии .NET Framework, начиная с .NET Framework 4, которые поддерживаются атрибутом `sku`.  Обратите внимание, что атрибут `sku`, начиная с .NET Framework 4, указывает целевую версию .NET Framework приложения.  
+## <a name="sku-id-values"></a><span data-ttu-id="bc41a-155">Значения "sku id"</span><span class="sxs-lookup"><span data-stu-id="bc41a-155">"sku id" values</span></span>  
+<span data-ttu-id="bc41a-156">`sku` Использует атрибут target framework моникером для указания версии .NET Framework, которая обращается и для запуска приложения.</span><span class="sxs-lookup"><span data-stu-id="bc41a-156">The `sku` attribute uses a target framework moniker (TFM) to indicate the version of the .NET Framework that the app targets and requires to run.</span></span> <span data-ttu-id="bc41a-157">В следующей таблице перечислены допустимые значения, которые поддерживаются `sku` атрибут, начиная с .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="bc41a-157">The following table lists valid values that are supported by the `sku` attribute, starting with the .NET Framework 4.</span></span>
   
-|Версия платформы .NET Framework|Атрибут `sku`|  
-|-------------------------------------|-------------------|  
-|4.0|".NETFramework,Version\=v4.0"|  
-|4.0, клиентский профиль|".NETFramework,Version\=v4.0,Profile\=Client"|  
-|4.0, обновление платформы 1|.NETFramework,Version\=v4.0.1|  
-|4.0, клиентский профиль, обновление 1|.NETFramework,Version\=v4.0.1,Profile\=Client|  
-|4.0, обновление платформы 2|.NETFramework,Version\=v4.0.2|  
-|4.0, клиентский профиль, обновление 2|.NETFramework,Version\=v4.0.2,Profile\=Client|  
-|4.0, обновление платформы 3|.NETFramework,Version\=v4.0.3|  
-|4.0, клиентский профиль, обновление 3|.NETFramework,Version\=v4.0.3,Profile\=Client|  
-|4.5|".NETFramework,Version\=v4.5"|  
-|4.5.1|".NETFramework,Version\=v4.5.1"|  
-|4.5.2|".NETFramework,Version\=v4.5.2"|  
-|4.6|".NETFramework,Version\=v4.6"|  
-|4.6.1|".NETFramework,Version\=v4.6.1"|  
-  
- В следующей таблице показано, в каких установленных версиях .NET Framework 4 будет работать приложение при разных значениях атрибута `sku`, когда атрибут `version` имеет значение v4.0, а в атрибуте `sku` указаны версия .NET Framework 4 или одно из обновлений платформы \(PU\).  
-  
-|Значение атрибута `sku`|4.0 клиентская|4.0 полная|4.0 клиентская \+ обновления платформы 1|4.0 полная \+ обновления платформы 1|4.0 клиентская \+ обновление платформы 2|4.0 полная \+ обновление платформы 2|4.0 клиентская \+ обновление платформы 3|4.0 полная \+ обновление платформы 3|4.5 и более поздние версии|  
-|-----------------------------|--------------------|----------------|----------------------------------------------|------------------------------------------|----------------------------------------------|------------------------------------------|----------------------------------------------|------------------------------------------|--------------------------------|  
-|.NETFramework,Version\=v4.0,Profile\=Client|Да|Да|Да|Да|Да|Да|Да|Да|Да|  
-|.NETFramework,Version\=v4.0||Да||Да||Да||Да|Да|  
-|.NETFramework,Version\=v4.0.1,Profile\=Client|||Да|Да|Да|Да|Да|Да|Да|  
-|.NETFramework,Version\=v4.0.1||||Да||Да||Да|Да|  
-|.NETFramework,Version\=v4.0.2,Profile\=Client|||||Да|Да|Да|Да|Да|  
-|.NETFramework,Version\=v4.0.2||||||Да||Да|Да|  
-|.NETFramework,Version\=v4.0.3,Profile\=Client|||||||Да|Да|Да|  
-|.NETFramework,Version\=v4.0.3||||||||Да|Да|  
-  
-## Пример  
- В следующем примере показано задание в файле конфигурации поддерживаемых версий среды выполнения. В файле конфигурации указано, что приложение предназначено для .NET Framework 4.6.  
+|<span data-ttu-id="bc41a-158">Версия платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="bc41a-158">.NET Framework version</span></span>|<span data-ttu-id="bc41a-159">Атрибут `sku`</span><span class="sxs-lookup"><span data-stu-id="bc41a-159">`sku` attribute</span></span>|  
+|----------------------------|---------------------|  
+|<span data-ttu-id="bc41a-160">4.0</span><span class="sxs-lookup"><span data-stu-id="bc41a-160">4.0</span></span>|<span data-ttu-id="bc41a-161">".NETFramework,Version=v4.0"</span><span class="sxs-lookup"><span data-stu-id="bc41a-161">".NETFramework,Version=v4.0"</span></span>|  
+|<span data-ttu-id="bc41a-162">4.0, клиентский профиль</span><span class="sxs-lookup"><span data-stu-id="bc41a-162">4.0, Client Profile</span></span>|<span data-ttu-id="bc41a-163">".NETFramework,Version=v4.0,Profile=Client"</span><span class="sxs-lookup"><span data-stu-id="bc41a-163">".NETFramework,Version=v4.0,Profile=Client"</span></span>|  
+|<span data-ttu-id="bc41a-164">4.0, обновление платформы 1</span><span class="sxs-lookup"><span data-stu-id="bc41a-164">4.0, platform update 1</span></span>|<span data-ttu-id="bc41a-165">.NETFramework,Version=v4.0.1</span><span class="sxs-lookup"><span data-stu-id="bc41a-165">.NETFramework,Version=v4.0.1</span></span>|  
+|<span data-ttu-id="bc41a-166">4.0, клиентский профиль, обновление 1</span><span class="sxs-lookup"><span data-stu-id="bc41a-166">4.0, Client Profile, update 1</span></span>|<span data-ttu-id="bc41a-167">.NETFramework,Version=v4.0.1,Profile=Client</span><span class="sxs-lookup"><span data-stu-id="bc41a-167">.NETFramework,Version=v4.0.1,Profile=Client</span></span>|  
+|<span data-ttu-id="bc41a-168">4.0, обновление платформы 2</span><span class="sxs-lookup"><span data-stu-id="bc41a-168">4.0, platform update 2</span></span>|<span data-ttu-id="bc41a-169">.NETFramework,Version=v4.0.2</span><span class="sxs-lookup"><span data-stu-id="bc41a-169">.NETFramework,Version=v4.0.2</span></span>|  
+|<span data-ttu-id="bc41a-170">4.0, клиентский профиль, обновление 2</span><span class="sxs-lookup"><span data-stu-id="bc41a-170">4.0, Client Profile, update 2</span></span>|<span data-ttu-id="bc41a-171">.NETFramework,Version=v4.0.2,Profile=Client</span><span class="sxs-lookup"><span data-stu-id="bc41a-171">.NETFramework,Version=v4.0.2,Profile=Client</span></span>|  
+|<span data-ttu-id="bc41a-172">4.0, обновление платформы 3</span><span class="sxs-lookup"><span data-stu-id="bc41a-172">4.0, platform update 3</span></span>|<span data-ttu-id="bc41a-173">.NETFramework,Version=v4.0.3</span><span class="sxs-lookup"><span data-stu-id="bc41a-173">.NETFramework,Version=v4.0.3</span></span>|  
+|<span data-ttu-id="bc41a-174">4.0, клиентский профиль, обновление 3</span><span class="sxs-lookup"><span data-stu-id="bc41a-174">4.0, Client Profile, update 3</span></span>|<span data-ttu-id="bc41a-175">.NETFramework,Version=v4.0.3,Profile=Client</span><span class="sxs-lookup"><span data-stu-id="bc41a-175">.NETFramework,Version=v4.0.3,Profile=Client</span></span>|  
+|<span data-ttu-id="bc41a-176">4.5</span><span class="sxs-lookup"><span data-stu-id="bc41a-176">4.5</span></span>|<span data-ttu-id="bc41a-177">".NETFramework,Version=v4.5"</span><span class="sxs-lookup"><span data-stu-id="bc41a-177">".NETFramework,Version=v4.5"</span></span>|  
+|<span data-ttu-id="bc41a-178">4.5.1</span><span class="sxs-lookup"><span data-stu-id="bc41a-178">4.5.1</span></span>|<span data-ttu-id="bc41a-179">".NETFramework,Version=v4.5.1"</span><span class="sxs-lookup"><span data-stu-id="bc41a-179">".NETFramework,Version=v4.5.1"</span></span>|  
+|<span data-ttu-id="bc41a-180">4.5.2</span><span class="sxs-lookup"><span data-stu-id="bc41a-180">4.5.2</span></span>|<span data-ttu-id="bc41a-181">".NETFramework,Version=v4.5.2"</span><span class="sxs-lookup"><span data-stu-id="bc41a-181">".NETFramework,Version=v4.5.2"</span></span>|  
+|<span data-ttu-id="bc41a-182">4.6</span><span class="sxs-lookup"><span data-stu-id="bc41a-182">4.6</span></span>|<span data-ttu-id="bc41a-183">".NETFramework,Version=v4.6"</span><span class="sxs-lookup"><span data-stu-id="bc41a-183">".NETFramework,Version=v4.6"</span></span>|  
+|<span data-ttu-id="bc41a-184">4.6.1</span><span class="sxs-lookup"><span data-stu-id="bc41a-184">4.6.1</span></span>|<span data-ttu-id="bc41a-185">".NETFramework,Version=v4.6.1"</span><span class="sxs-lookup"><span data-stu-id="bc41a-185">".NETFramework,Version=v4.6.1"</span></span>|  
+|<span data-ttu-id="bc41a-186">4.6.2</span><span class="sxs-lookup"><span data-stu-id="bc41a-186">4.6.2</span></span>|<span data-ttu-id="bc41a-187">". NETFramework, версия = v4.6.2»</span><span class="sxs-lookup"><span data-stu-id="bc41a-187">".NETFramework,Version=v4.6.2"</span></span>|  
+|<span data-ttu-id="bc41a-188">4.7</span><span class="sxs-lookup"><span data-stu-id="bc41a-188">4.7</span></span>|<span data-ttu-id="bc41a-189">". NETFramework, версия = v4.7»</span><span class="sxs-lookup"><span data-stu-id="bc41a-189">".NETFramework,Version=v4.7"</span></span>|
+|<span data-ttu-id="bc41a-190">4.7.1</span><span class="sxs-lookup"><span data-stu-id="bc41a-190">4.7.1</span></span>|<span data-ttu-id="bc41a-191">". NETFramework, версия = 4.7.1"</span><span class="sxs-lookup"><span data-stu-id="bc41a-191">".NETFramework,Version=4.7.1"</span></span>|
+
+## <a name="example"></a><span data-ttu-id="bc41a-192">Пример</span><span class="sxs-lookup"><span data-stu-id="bc41a-192">Example</span></span>  
+ <span data-ttu-id="bc41a-193">В следующем примере показано задание в файле конфигурации поддерживаемых версий среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="bc41a-193">The following example shows how to specify the supported runtime version in a configuration file.</span></span> <span data-ttu-id="bc41a-194">В файле конфигурации указано, что приложение предназначено 4.7 .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="bc41a-194">The configuration file indicates that the app targets the .NET Framework 4.7.</span></span>  
   
 ```xml  
-  
-<configuration> <startup> <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6" /> </startup> </configuration>  
-  
+<configuration>  
+   <startup>  
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7" />  
+   </startup>  
+</configuration>  
 ```  
   
-## Файл конфигурации  
- Этот элемент может использоваться в файле конфигурации приложения.  
+## <a name="configuration-file"></a><span data-ttu-id="bc41a-195">Файл конфигурации</span><span class="sxs-lookup"><span data-stu-id="bc41a-195">Configuration File</span></span>  
+ <span data-ttu-id="bc41a-196">Этот элемент может использоваться в файле конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="bc41a-196">This element can be used in the application configuration file.</span></span>  
   
-## См. также  
- [Схема параметров запуска](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)   
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [\<PaveOver\> Указание используемой версии среды выполнения](http://msdn.microsoft.com/ru-ru/c376208d-980d-42b4-865b-fbe0d9cc97c2)   
- [Внутрипроцессное параллельное выполнение](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)
+## <a name="see-also"></a><span data-ttu-id="bc41a-197">См. также</span><span class="sxs-lookup"><span data-stu-id="bc41a-197">See Also</span></span>  
+ [<span data-ttu-id="bc41a-198">Схема параметров запуска</span><span class="sxs-lookup"><span data-stu-id="bc41a-198">Startup Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
+ [<span data-ttu-id="bc41a-199">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="bc41a-199">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="bc41a-200">Внутрипроцессное параллельное выполнение</span><span class="sxs-lookup"><span data-stu-id="bc41a-200">In-Process Side-by-Side Execution</span></span>](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

@@ -1,27 +1,33 @@
 ---
-title: "Запись содержимого набора как данных XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Запись содержимого набора как данных XML"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d43fd8ec006f92131056d389ed2153263f7b7f1c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Запись содержимого набора как данных XML
-В ADO.NET можно записать XML-представление <xref:System.Data.DataSet>, со схемой или без нее. Если информация схемы встраивается внутрь XML, она записываются на языке XSD. Схема содержит определения таблиц для <xref:System.Data.DataSet> а также определения связей и ограничений.  
+# <a name="writing-dataset-contents-as-xml-data"></a><span data-ttu-id="7f846-102">Запись содержимого набора как данных XML</span><span class="sxs-lookup"><span data-stu-id="7f846-102">Writing DataSet Contents as XML Data</span></span>
+<span data-ttu-id="7f846-103">В ADO.NET можно записать XML-представление объекта <xref:System.Data.DataSet> вместе со схемой или без нее.</span><span class="sxs-lookup"><span data-stu-id="7f846-103">In ADO.NET you can write an XML representation of a <xref:System.Data.DataSet>, with or without its schema.</span></span> <span data-ttu-id="7f846-104">Если информация схемы встраивается внутрь XML, она записываются на языке XSD.</span><span class="sxs-lookup"><span data-stu-id="7f846-104">If schema information is included inline with the XML, it is written using the XML Schema definition language (XSD).</span></span> <span data-ttu-id="7f846-105">Схема содержит определения таблиц для <xref:System.Data.DataSet>, а также определения связей и ограничений.</span><span class="sxs-lookup"><span data-stu-id="7f846-105">The schema contains the table definitions of the <xref:System.Data.DataSet> as well as the relation and constraint definitions.</span></span>  
   
- При <xref:System.Data.DataSet> записывается как XML-данные, строки в <xref:System.Data.DataSet> записываются в своей текущей версии. Тем не менее <xref:System.Data.DataSet> может быть записан как DiffGram, чтобы текущий и исходные значения строки будут включены.  
+ <span data-ttu-id="7f846-106">Если <xref:System.Data.DataSet> записан как XML-данные, строки в <xref:System.Data.DataSet> записываются в своей текущей версии.</span><span class="sxs-lookup"><span data-stu-id="7f846-106">When a <xref:System.Data.DataSet> is written as XML data, the rows in the <xref:System.Data.DataSet> are written in their current versions.</span></span> <span data-ttu-id="7f846-107">Однако <xref:System.Data.DataSet> может быть записан как DiffGram, так что будут включены и текущие, и исходные данные строк.</span><span class="sxs-lookup"><span data-stu-id="7f846-107">However, the <xref:System.Data.DataSet> can also be written as a DiffGram so that both the current and the original values of the rows will be included.</span></span>  
   
- XML-представление <xref:System.Data.DataSet> могут записываться в файл, поток, **XmlWriter**, или строку. Эти возможности обеспечивают большую гибкость способа переноса XML-представление <xref:System.Data.DataSet>. Чтобы получить XML-представление <xref:System.Data.DataSet> как строка, используйте **GetXml** метода, как показано в следующем примере.  
+ <span data-ttu-id="7f846-108">XML-представление <xref:System.Data.DataSet> могут записываться в файл, поток, **XmlWriter**, или строка.</span><span class="sxs-lookup"><span data-stu-id="7f846-108">The XML representation of the <xref:System.Data.DataSet> can be written to a file, a stream, an **XmlWriter**, or a string.</span></span> <span data-ttu-id="7f846-109">Эти возможности обеспечивают большую гибкость способа переноса XML-представления для <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="7f846-109">These choices provide great flexibility for how you transport the XML representation of the <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="7f846-110">Чтобы получить XML-представление <xref:System.Data.DataSet> как строку, используется **GetXml** метода, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="7f846-110">To obtain the XML representation of the <xref:System.Data.DataSet> as a string, use the **GetXml** method as shown in the following example.</span></span>  
   
 ```vb  
 Dim xmlDS As String = custDS.GetXml()  
@@ -31,37 +37,34 @@ Dim xmlDS As String = custDS.GetXml()
 string xmlDS = custDS.GetXml();  
 ```  
   
- **GetXml** возвращает XML-представление <xref:System.Data.DataSet> без сведений о схеме. Для записи сведений о схеме из <xref:System.Data.DataSet> (в виде схемы XML) в строку используйте **GetXmlSchema**.  
+ <span data-ttu-id="7f846-111">**GetXml** возвращает XML-представление <xref:System.Data.DataSet> без данных схемы.</span><span class="sxs-lookup"><span data-stu-id="7f846-111">**GetXml** returns the XML representation of the <xref:System.Data.DataSet> without schema information.</span></span> <span data-ttu-id="7f846-112">Для записи сведений о схеме из <xref:System.Data.DataSet> (в виде схемы XML) в строку используйте **GetXmlSchema**.</span><span class="sxs-lookup"><span data-stu-id="7f846-112">To write the schema information from the <xref:System.Data.DataSet> (as XML Schema) to a string, use **GetXmlSchema**.</span></span>  
   
- Для записи <xref:System.Data.DataSet> в файл, поток, или **XmlWriter**, используйте **WriteXml** метод. Первый параметр, передаваемый **WriteXml** место назначения вывода XML. Например, передается строка, содержащая имя файла **System.IO.TextWriter** объекта и т. д. Можно передать необязательный второй параметр **XmlWriteMode** чтобы указать, как должны быть записаны выходные данные XML.  
+ <span data-ttu-id="7f846-113">Для записи <xref:System.Data.DataSet> в файл, поток, или **XmlWriter**, используйте **WriteXml** метод.</span><span class="sxs-lookup"><span data-stu-id="7f846-113">To write a <xref:System.Data.DataSet> to a file, stream, or **XmlWriter**, use the **WriteXml** method.</span></span> <span data-ttu-id="7f846-114">Первый параметр, передаваемый **WriteXml** копируются выходные данные XML.</span><span class="sxs-lookup"><span data-stu-id="7f846-114">The first parameter you pass to **WriteXml** is the destination of the XML output.</span></span> <span data-ttu-id="7f846-115">Например, передается строка, содержащая имя файла **System.IO.TextWriter** объекта и т. д.</span><span class="sxs-lookup"><span data-stu-id="7f846-115">For example, pass a string containing a file name, a **System.IO.TextWriter** object, and so on.</span></span> <span data-ttu-id="7f846-116">Можно передать необязательный второй параметр **XmlWriteMode** для указания, как должны записываться выходные данные XML.</span><span class="sxs-lookup"><span data-stu-id="7f846-116">You can pass an optional second parameter of an **XmlWriteMode** to specify how the XML output is to be written.</span></span>  
   
- Ниже приведены параметры для **XmlWriteMode**.  
+ <span data-ttu-id="7f846-117">В следующей таблице показаны параметры для **XmlWriteMode**.</span><span class="sxs-lookup"><span data-stu-id="7f846-117">The following table shows the options for **XmlWriteMode**.</span></span>  
   
-|Параметр XmlWriteMode|Описание|  
+|<span data-ttu-id="7f846-118">Параметр XmlWriteMode</span><span class="sxs-lookup"><span data-stu-id="7f846-118">XmlWriteMode option</span></span>|<span data-ttu-id="7f846-119">Описание</span><span class="sxs-lookup"><span data-stu-id="7f846-119">Description</span></span>|  
 |-------------------------|-----------------|  
-|**IgnoreSchema**|Записывает текущее содержимое <xref:System.Data.DataSet> как XML-данных без схемы XML. Это значение по умолчанию.|  
-|**WriteSchema**|Записывает текущее содержимое <xref:System.Data.DataSet> как XML-данных с реляционной структурой в виде встроенной схемы XML.|  
-|**DiffGram**|Записывает весь <xref:System.Data.DataSet> как DiffGram, включая исходные и текущие значения. Дополнительные сведения см. в разделе [дельты](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).|  
+|<span data-ttu-id="7f846-120">**IgnoreSchema**</span><span class="sxs-lookup"><span data-stu-id="7f846-120">**IgnoreSchema**</span></span>|<span data-ttu-id="7f846-121">Записывает текущее содержимое <xref:System.Data.DataSet> как XML-данные, без схемы XML.</span><span class="sxs-lookup"><span data-stu-id="7f846-121">Writes the current contents of the <xref:System.Data.DataSet> as XML data, without an XML Schema.</span></span> <span data-ttu-id="7f846-122">Это значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="7f846-122">This is the default.</span></span>|  
+|<span data-ttu-id="7f846-123">**WriteSchema**</span><span class="sxs-lookup"><span data-stu-id="7f846-123">**WriteSchema**</span></span>|<span data-ttu-id="7f846-124">Записывает текущее содержимое <xref:System.Data.DataSet> в виде XML-данных с реляционной структурой в виде встроенной схемы XML.</span><span class="sxs-lookup"><span data-stu-id="7f846-124">Writes the current contents of the <xref:System.Data.DataSet> as XML data with the relational structure as inline XML Schema.</span></span>|  
+|<span data-ttu-id="7f846-125">**DiffGram**</span><span class="sxs-lookup"><span data-stu-id="7f846-125">**DiffGram**</span></span>|<span data-ttu-id="7f846-126">Записывает весь <xref:System.Data.DataSet> как DiffGram, включая исходные и текущие значения.</span><span class="sxs-lookup"><span data-stu-id="7f846-126">Writes the entire <xref:System.Data.DataSet> as a DiffGram, including original and current values.</span></span> <span data-ttu-id="7f846-127">Дополнительные сведения см. в разделе [дельты](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).</span><span class="sxs-lookup"><span data-stu-id="7f846-127">For more information, see [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).</span></span>|  
   
- При записи XML-представление <xref:System.Data.DataSet> , содержащий **DataRelation** объектов, вы скорее всего понадобятся результирующий XML дочерние строки для каждой связи были вложены в соответствующие родительские элементы. Для этого задайте **Nested** свойство **DataRelation** для **true** при добавлении **DataRelation** для <xref:System.Data.DataSet>. Дополнительные сведения см. в разделе [вложение отношений DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
+ <span data-ttu-id="7f846-128">При записи XML-представление <xref:System.Data.DataSet> , содержащий **DataRelation** объектов, скорее всего, вы будете результирующем XML-КОДЕ дочерние строки для каждой связи были вложены в соответствующие родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="7f846-128">When writing an XML representation of a <xref:System.Data.DataSet> that contains **DataRelation** objects, you will most likely want the resulting XML to have the child rows of each relation nested within their related parent elements.</span></span> <span data-ttu-id="7f846-129">Чтобы сделать это, задайте **Nested** свойство **DataRelation** для **true** при добавлении **DataRelation** для <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="7f846-129">To accomplish this, set the **Nested** property of the **DataRelation** to **true** when you add the **DataRelation** to the <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="7f846-130">Дополнительные сведения см. в разделе [вложение отношений DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).</span><span class="sxs-lookup"><span data-stu-id="7f846-130">For more information, see [Nesting DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).</span></span>  
   
- Ниже приведены два примера создания XML-представление <xref:System.Data.DataSet> в файл. В первом примере имя файла для результирующего XML передается как строка, **WriteXml**. Во втором примере передается **System.IO.StreamWriter** объекта.  
+ <span data-ttu-id="7f846-131">Далее даются два примера того, как записать в файл XML-представление для <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="7f846-131">Following are two examples of how to write the XML representation of a <xref:System.Data.DataSet> to a file.</span></span> <span data-ttu-id="7f846-132">Первый пример передает имя файла для результирующего XML как строка, **WriteXml**.</span><span class="sxs-lookup"><span data-stu-id="7f846-132">The first example passes the file name for the resulting XML as a string to **WriteXml**.</span></span> <span data-ttu-id="7f846-133">Во втором примере передается **System.IO.StreamWriter** объекта.</span><span class="sxs-lookup"><span data-stu-id="7f846-133">The second example passes a **System.IO.StreamWriter** object.</span></span>  
   
 ```vb  
 custDS.WriteXml("Customers.xml", XmlWriteMode.WriteSchema)  
-  
 ```  
   
 ```csharp  
 custDS.WriteXml("Customers.xml", XmlWriteMode.WriteSchema);  
-  
 ```  
   
 ```vb  
 Dim xmlSW As System.IO.StreamWriter = New System.IO.StreamWriter("Customers.xml")  
 custDS.WriteXml(xmlSW, XmlWriteMode.WriteSchema)  
 xmlSW.Close()  
-  
 ```  
   
 ```csharp  
@@ -70,20 +73,20 @@ custDS.WriteXml(xmlSW, XmlWriteMode.WriteSchema);
 xmlSW.Close();  
 ```  
   
-## <a name="mapping-columns-to-xml-elements-attributes-and-text"></a>Сопоставление столбцов с XML-элементами, атрибутами и текстом  
- Можно указать, как столбец таблицы представляется в формате XML с помощью **ColumnMapping** свойство **DataColumn** объекта. В следующей таблице показаны различные **MappingType** значения для **ColumnMapping** свойство столбца таблицы, а результирующий XML.  
+## <a name="mapping-columns-to-xml-elements-attributes-and-text"></a><span data-ttu-id="7f846-134">Сопоставление столбцов с XML-элементами, атрибутами и текстом</span><span class="sxs-lookup"><span data-stu-id="7f846-134">Mapping Columns to XML Elements, Attributes, and Text</span></span>  
+ <span data-ttu-id="7f846-135">Можно указать, как столбец таблицы представляется в формате XML с помощью **ColumnMapping** свойство **DataColumn** объекта.</span><span class="sxs-lookup"><span data-stu-id="7f846-135">You can specify how a column of a table is represented in XML using the **ColumnMapping** property of the **DataColumn** object.</span></span> <span data-ttu-id="7f846-136">В следующей таблице показаны различные **MappingType** значения для **ColumnMapping** свойство столбца таблицы, а результирующий XML.</span><span class="sxs-lookup"><span data-stu-id="7f846-136">The following table shows the different **MappingType** values for the **ColumnMapping** property of a table column, and the resulting XML.</span></span>  
   
-|Значение MappingType|Описание|  
+|<span data-ttu-id="7f846-137">Значение MappingType</span><span class="sxs-lookup"><span data-stu-id="7f846-137">MappingType value</span></span>|<span data-ttu-id="7f846-138">Описание</span><span class="sxs-lookup"><span data-stu-id="7f846-138">Description</span></span>|  
 |-----------------------|-----------------|  
-|**Элемент**|Это значение по умолчанию. Столбец записывается как XML-элемент, где ColumnName - имя элемента, а содержимое столбца записывается как текст элемента. Пример:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
-|**Атрибут**|Столбец записывается как XML-атрибут XML-элемента для текущей строки, где ColumnName - это имя атрибута, а содержимое столбца записывается как значение атрибута. Например:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
-|**SimpleContent**|Содержимое столбца записывается как текст в XML-элементе для текущей строки. Пример:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> Обратите внимание, что **SimpleContent** нельзя задать для столбца таблицы, которая имеет **элемент** столбцы или вложенные связи.|  
-|**Скрытые**|Столбец не записывается в выводимый XML.|  
+|<span data-ttu-id="7f846-139">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="7f846-139">**Element**</span></span>|<span data-ttu-id="7f846-140">Это значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="7f846-140">This is the default.</span></span> <span data-ttu-id="7f846-141">Столбец записывается как XML-элемент, где ColumnName - имя элемента, а содержимое столбца записывается как текст элемента.</span><span class="sxs-lookup"><span data-stu-id="7f846-141">The column is written as an XML element where the ColumnName is the name of the element and the contents of the column are written as the text of the element.</span></span> <span data-ttu-id="7f846-142">Пример:</span><span class="sxs-lookup"><span data-stu-id="7f846-142">For example:</span></span><br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
+|<span data-ttu-id="7f846-143">**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))</span><span class="sxs-lookup"><span data-stu-id="7f846-143">**Attribute**</span></span>|<span data-ttu-id="7f846-144">Столбец записывается как XML-атрибут XML-элемента для текущей строки, где ColumnName - это имя атрибута, а содержимое столбца записывается как значение атрибута.</span><span class="sxs-lookup"><span data-stu-id="7f846-144">The column is written as an XML attribute of the XML element for the current row where the ColumnName is the name of the attribute and the contents of the column are written as the value of the attribute.</span></span> <span data-ttu-id="7f846-145">Пример:</span><span class="sxs-lookup"><span data-stu-id="7f846-145">For example:</span></span><br /><br /> `<RowElement ColumnName="Column Contents" />`|  
+|<span data-ttu-id="7f846-146">**SimpleContent**</span><span class="sxs-lookup"><span data-stu-id="7f846-146">**SimpleContent**</span></span>|<span data-ttu-id="7f846-147">Содержимое столбца записывается как текст в XML-элементе для текущей строки.</span><span class="sxs-lookup"><span data-stu-id="7f846-147">The contents of the column are written as text in the XML element for the current row.</span></span> <span data-ttu-id="7f846-148">Пример:</span><span class="sxs-lookup"><span data-stu-id="7f846-148">For example:</span></span><br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> <span data-ttu-id="7f846-149">Обратите внимание, что **SimpleContent** нельзя задать для столбца таблицы, которая имеет **элемент** столбцы или вложенные связи.</span><span class="sxs-lookup"><span data-stu-id="7f846-149">Note that **SimpleContent** cannot be set for a column of a table that has **Element** columns or nested relations.</span></span>|  
+|<span data-ttu-id="7f846-150">**Скрытые**</span><span class="sxs-lookup"><span data-stu-id="7f846-150">**Hidden**</span></span>|<span data-ttu-id="7f846-151">Столбец не записывается в выводимый XML.</span><span class="sxs-lookup"><span data-stu-id="7f846-151">The column is not written in the XML output.</span></span>|  
   
-## <a name="see-also"></a>См. также  
- [Использование XML в набор данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [Дельты](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)   
- [Вложение отношений DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)   
- [Запись сведений о схеме набора данных как XSD](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-schema-information-as-xsd.md)   
- [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Управляемые поставщики ADO.NET и Центр разработчиков DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="7f846-152">См. также</span><span class="sxs-lookup"><span data-stu-id="7f846-152">See Also</span></span>  
+ [<span data-ttu-id="7f846-153">Использование XML в наборах данных</span><span class="sxs-lookup"><span data-stu-id="7f846-153">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [<span data-ttu-id="7f846-154">Дельты</span><span class="sxs-lookup"><span data-stu-id="7f846-154">DiffGrams</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)  
+ [<span data-ttu-id="7f846-155">Вложение отношений DataRelation</span><span class="sxs-lookup"><span data-stu-id="7f846-155">Nesting DataRelations</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
+ [<span data-ttu-id="7f846-156">Запись сведений о схеме набора данных как XSD</span><span class="sxs-lookup"><span data-stu-id="7f846-156">Writing DataSet Schema Information as XSD</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-schema-information-as-xsd.md)  
+ [<span data-ttu-id="7f846-157">Наборы данных, таблицы данных и объекты DataView</span><span class="sxs-lookup"><span data-stu-id="7f846-157">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="7f846-158">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="7f846-158">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

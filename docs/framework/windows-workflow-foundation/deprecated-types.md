@@ -1,43 +1,47 @@
 ---
-title: "Deprecated types in Windows Workflow Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Устаревшие типы в Windows Workflow Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4aebe928-a964-4c1c-abf7-0dbbd3604b13
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 085b0590d08843477c4dff4754791c93110b1fb7
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/21/2017
 ---
-# Deprecated types in Windows Workflow Foundation
-В .NET 4 группа разработки по рабочим процессам представила полностью новую подсистему рабочих процессов в пространстве имен <xref:System.Activities>.  С выходом бета\-версии .NET 4.5 мы отмечаем большинство типов в пространствах имен «WF 3» <xref:System.Workflow.Activities>, <xref:System.Workflow.ComponentModel> и <xref:System.Workflow.Runtime> как устаревшие.  
+# <a name="deprecated-types-in-windows-workflow-foundation"></a><span data-ttu-id="1c2b9-102">Устаревшие типы в Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="1c2b9-102">Deprecated types in Windows Workflow Foundation</span></span>
+<span data-ttu-id="1c2b9-103">В .NET 4 группа разработки по рабочим процессам представила полностью новую подсистему рабочих процессов в пространстве имен <xref:System.Activities>.</span><span class="sxs-lookup"><span data-stu-id="1c2b9-103">In .NET 4 the Workflow Team released an all new Workflow engine in the <xref:System.Activities> namespace.</span></span> <span data-ttu-id="1c2b9-104">С выпуском бета-версии .NET 4.5 Мы отмечаем большинство типов в «WF 3» <xref:System.Workflow.Activities>, <xref:System.Workflow.ComponentModel>, и <xref:System.Workflow.Runtime> пространства имен, как устаревшие.</span><span class="sxs-lookup"><span data-stu-id="1c2b9-104">With the release of .NET 4.5 Beta we are marking most of the types in the "WF 3" <xref:System.Workflow.Activities>, <xref:System.Workflow.ComponentModel>, and  <xref:System.Workflow.Runtime> namespaces as obsolete.</span></span>  
   
-## Устаревшие пространства имен и средства  
- Следующие сборки содержат один и более открытых типов, которые станут устаревшими.  
+## <a name="obsolete-namespaces-and-tools"></a><span data-ttu-id="1c2b9-105">Устаревшие пространства имен и средства</span><span class="sxs-lookup"><span data-stu-id="1c2b9-105">Obsolete namespaces and tools</span></span>  
+ <span data-ttu-id="1c2b9-106">Следующие сборки содержат один и более открытых типов, которые станут устаревшими.</span><span class="sxs-lookup"><span data-stu-id="1c2b9-106">The following assemblies have one or more public types that will be deprecated:</span></span>  
   
--   System.Workflow.Activities.dll  
+-   <span data-ttu-id="1c2b9-107">System.Workflow.Activities.dll</span><span class="sxs-lookup"><span data-stu-id="1c2b9-107">System.Workflow.Activities.dll</span></span>  
   
--   System.Workflow.ComponentModel.dll  
+-   <span data-ttu-id="1c2b9-108">System.Workflow.ComponentModel.dll</span><span class="sxs-lookup"><span data-stu-id="1c2b9-108">System.Workflow.ComponentModel.dll</span></span>  
   
--   System.Workflow.Runtime.dll  
+-   <span data-ttu-id="1c2b9-109">System.Workflow.Runtime.dll</span><span class="sxs-lookup"><span data-stu-id="1c2b9-109">System.Workflow.Runtime.dll</span></span>  
   
--   System.WorkflowServices.dll  
+-   <span data-ttu-id="1c2b9-110">System.WorkflowServices.dll</span><span class="sxs-lookup"><span data-stu-id="1c2b9-110">System.WorkflowServices.dll</span></span>  
   
--   Microsoft.Workflow.DebugController.dll  
+-   <span data-ttu-id="1c2b9-111">Microsoft.Workflow.DebugController.dll</span><span class="sxs-lookup"><span data-stu-id="1c2b9-111">Microsoft.Workflow.DebugController.dll</span></span>  
   
--   Microsoft.Workflow.Compiler.exe  
+-   <span data-ttu-id="1c2b9-112">Microsoft.Workflow.Compiler.exe</span><span class="sxs-lookup"><span data-stu-id="1c2b9-112">Microsoft.Workflow.Compiler.exe</span></span>  
   
--   Wfc.exe  
+-   <span data-ttu-id="1c2b9-113">Wfc.exe</span><span class="sxs-lookup"><span data-stu-id="1c2b9-113">Wfc.exe</span></span>  
   
- В результате этого клиенты, использующие устаревшие API WF 3, увидят предупреждения при сборке с сообщением следующего вида:  
+ <span data-ttu-id="1c2b9-114">В результате этого клиенты, использующие устаревшие API WF 3, увидят предупреждения при сборке с сообщением следующего вида:</span><span class="sxs-lookup"><span data-stu-id="1c2b9-114">As a result, customers who are using the deprecated WF 3 APIs will encounter build warnings with a message similar to the following:</span></span>  
   
-  **Предупреждение BC40000. X устарело: типы WF 3 устарели.  Взамен рекомендуется использовать WF 4.**  В одном из последующих выпусков \(не в 4.5\) типы будут удалены из .NET Framework, но временной промежуток до этого еще не определен.  Текущий шаг позволяет донести наши планы до клиентов и дает им достаточно времени для перехода на новую модель WF4.  Безусловно, эти типы WF 3 будут поддерживаться в рамках [политики жизненного цикла поддержки Майкрософт](http://aka.ms/MicrosoftSupportLifecycle).  Существующие приложения WF3 будут запускаться в .NET 4.5 без проблем; [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] будет поддерживать новые и существующие решения на основе WF3.  
+ <span data-ttu-id="1c2b9-115">**Предупреждение BC40000: X устарело: типы WF 3 устарели. Вместо нее используйте WF 4.**</span><span class="sxs-lookup"><span data-stu-id="1c2b9-115">**Warning BC40000: X is obsolete: WF 3 types are deprecated. Please use WF 4 instead.**</span></span> <span data-ttu-id="1c2b9-116">В одном из последующих выпусков (не в 4.5) типы будут удалены из .NET Framework, но временной промежуток до этого еще не определен.</span><span class="sxs-lookup"><span data-stu-id="1c2b9-116">We will remove the types from the .NET Framework in a future release, but we have not yet determined that timeframe (not in 4.5).</span></span> <span data-ttu-id="1c2b9-117">Текущий шаг позволяет донести наши планы до клиентов и дает им достаточно времени для перехода на новую модель WF4.</span><span class="sxs-lookup"><span data-stu-id="1c2b9-117">This current step allows us to communicate our direction to our customers and allow them plenty of time to move to the new WF4 model.</span></span> <span data-ttu-id="1c2b9-118">Мы Конечно, продолжит поддерживает эти типы WF 3 в разделе [политики жизненного цикла поддержки Microsoft](http://aka.ms/MicrosoftSupportLifecycle).</span><span class="sxs-lookup"><span data-stu-id="1c2b9-118">We will, of course, continue to support these WF 3 types under the [Microsoft Support Lifecycle Policy](http://aka.ms/MicrosoftSupportLifecycle).</span></span> <span data-ttu-id="1c2b9-119">Существующие приложения WF3 будут запускаться в .NET 4.5 без проблем; [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] будет поддерживать новые и существующие решения на основе WF3.</span><span class="sxs-lookup"><span data-stu-id="1c2b9-119">Existing WF3 applications will run without issue on .NET 4.5, and [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] will support new and existing WF3-based solutions.</span></span>  
   
- Основанные на правилах типы в пространстве имен <xref:System.Workflow.Activities.Rules>, не имеющие замены в WF 4.5, не устарели.  
+ <span data-ttu-id="1c2b9-120">Основанные на правилах типы в пространстве имен <xref:System.Workflow.Activities.Rules>, не имеющие замены в WF 4.5, не устарели.</span><span class="sxs-lookup"><span data-stu-id="1c2b9-120">Rules related types in the <xref:System.Workflow.Activities.Rules> namespace, which do not have a replacement in WF 4.5, have not been deprecated.</span></span>  
   
- Справку для клиентов, которым требуется миграция в WF 4, см. в статьях [руководства по миграции рабочего процесса 4](http://aka.ms/WF4MigrationGuidance) на сайте MSDN и в разделе [Комплект миграции WF 4](http://aka.ms/WF4MigrationKit) на сайте [WF Codeplex](http://aka.ms/WFCodeplex).
+ <span data-ttu-id="1c2b9-121">Клиенты, которые планируют перенести свои приложения в WF 4 будет поиск справки в [руководство по миграции рабочего процесса 4](migration-guidance.md).</span><span class="sxs-lookup"><span data-stu-id="1c2b9-121">Customers who want to migrate their applications to WF 4 will find help in the [Workflow 4 Migration Guidance](migration-guidance.md).</span></span>

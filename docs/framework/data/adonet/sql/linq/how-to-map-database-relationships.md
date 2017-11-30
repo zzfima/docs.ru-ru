@@ -1,62 +1,68 @@
 ---
-title: "Как сопоставить связи базы данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Сопоставление отношений базы данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: aa771fbde889febb269f49603f7d2a2ac5c67784
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как сопоставить связи базы данных
-Отношения данных, которые всегда останутся неизменными, можно закодировать в виде ссылок в классе сущностей.  В учебной базе данных Northwind, всегда существует связь между заказчиками и их заказами, т.к. обычно заказчики размещают заказы.  
+# <a name="how-to-map-database-relationships"></a><span data-ttu-id="087c5-102">Практическое руководство. Сопоставление отношений базы данных</span><span class="sxs-lookup"><span data-stu-id="087c5-102">How to: Map Database Relationships</span></span>
+<span data-ttu-id="087c5-103">Отношения данных, которые всегда останутся неизменными, можно закодировать в виде ссылок в классе сущностей.</span><span class="sxs-lookup"><span data-stu-id="087c5-103">You can encode as property references in your entity class any data relationships that will always be the same.</span></span> <span data-ttu-id="087c5-104">В учебной базе данных Northwind, всегда существует связь между заказчиками и их заказами, т.к. обычно заказчики размещают заказы.</span><span class="sxs-lookup"><span data-stu-id="087c5-104">In the Northwind sample database, for example, because customers typically place orders, there is always a relationship in the model between customers and their orders.</span></span>  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] определяет атрибут <xref:System.Data.Linq.Mapping.AssociationAttribute>, с помощью которого представляются такие отношения.  Этот атрибут используется совместно с типами <xref:System.Data.Linq.EntitySet%601> и <xref:System.Data.Linq.EntityRef%601> для представления в базе данных связи по внешнему ключу. Дополнительные сведения см. в разделе «Атрибут Association» статьи [Сопоставление на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="087c5-105">Определяет <xref:System.Data.Linq.Mapping.AssociationAttribute> атрибут для представления таких связей.</span><span class="sxs-lookup"><span data-stu-id="087c5-105"> defines an <xref:System.Data.Linq.Mapping.AssociationAttribute> attribute to help represent such relationships.</span></span> <span data-ttu-id="087c5-106">Этот атрибут используется совместно с типами <xref:System.Data.Linq.EntitySet%601> и <xref:System.Data.Linq.EntityRef%601> для представления в базе данных связи по внешнему ключу.</span><span class="sxs-lookup"><span data-stu-id="087c5-106">This attribute is used together with the <xref:System.Data.Linq.EntitySet%601> and <xref:System.Data.Linq.EntityRef%601> types to represent what would be a foreign key relationship in a database.</span></span> <span data-ttu-id="087c5-107">Дополнительные сведения см. в разделе разделе атрибут Association [сопоставления на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).</span><span class="sxs-lookup"><span data-stu-id="087c5-107">For more information, see the Association Attribute section of [Attribute-Based Mapping](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).</span></span>  
   
 > [!NOTE]
->  В значениях свойства Storage для атрибутов AssociationAttribute и ColumnAttribute учитывается регистр.  Например, следует убедиться в том, что регистр символов в значении, использованном в атрибуте свойства AssociationAttribute.Storage, соответствует регистру символов в соответствующих именах свойств в остальном коде.  Это относится ко всем языкам программирования среды .NET, даже к тем, которые обычно не учитывают регистр, включая [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)].  Дополнительные сведения о свойстве Storage см. в разделе <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=fullName>.  
+>  <span data-ttu-id="087c5-108">В значениях свойства Storage для атрибутов AssociationAttribute и ColumnAttribute учитывается регистр.</span><span class="sxs-lookup"><span data-stu-id="087c5-108">AssociationAttribute and ColumnAttribute Storage property values are case sensitive.</span></span> <span data-ttu-id="087c5-109">Например, следует убедиться в том, что регистр символов в значении, использованном в атрибуте свойства AssociationAttribute.Storage, соответствует регистру символов в соответствующих именах свойств в остальном коде.</span><span class="sxs-lookup"><span data-stu-id="087c5-109">For example, ensure that values used in the attribute for the AssociationAttribute.Storage property match the case for the corresponding property names used elsewhere in the code.</span></span> <span data-ttu-id="087c5-110">Это относится ко всем языкам программирования среды .NET, даже к тем, которые обычно не учитывают регистр, включая [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="087c5-110">This applies to all .NET programming languages, even those which are not typically case sensitive, including [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)].</span></span> <span data-ttu-id="087c5-111">Дополнительные сведения о свойстве Storage см. в разделе <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="087c5-111">For more information about the Storage property, see <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.</span></span>  
   
- Большинство связей имеют тип «один ко многим», как и в примере, представленном далее в этом разделе.  Отношения "один\-к\-одному" и "один\-ко\-многим" можно представить следующим образом.  
+ <span data-ttu-id="087c5-112">Большинство связей имеют тип «один ко многим», как и в примере, представленном далее в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="087c5-112">Most relationships are one-to-many, as in the example later in this topic.</span></span> <span data-ttu-id="087c5-113">Отношения "один-к-одному" и "один-ко-многим" можно представить следующим образом.</span><span class="sxs-lookup"><span data-stu-id="087c5-113">You can also represent one-to-one and many-to-many relationships as follows:</span></span>  
   
--   Один к одному. Этот тип связей представляется включением элементов <xref:System.Data.Linq.EntitySet%601> с обеих сторон.  
+-   <span data-ttu-id="087c5-114">Один к одному. Этот тип связей представляется включением элементов <xref:System.Data.Linq.EntitySet%601> с обеих сторон.</span><span class="sxs-lookup"><span data-stu-id="087c5-114">One-to-one: Represent this kind of relationship by including <xref:System.Data.Linq.EntitySet%601> on both sides.</span></span>  
   
-     Например, рассмотрим отношение `Customer`\-`SecurityCode`, созданное таким образом, что код безопасности клиента не будет найден в таблице `Customer`, а может быть получен только авторизованными лицами.  
+     <span data-ttu-id="087c5-115">Например, рассмотрим `Customer` - `SecurityCode` отношения, созданная, чтобы код безопасности клиента не будет найден в `Customer` таблицы и может быть получен только авторизованными лицами.</span><span class="sxs-lookup"><span data-stu-id="087c5-115">For example, consider a `Customer`-`SecurityCode` relationship, created so that the customer's security code will not be found in the `Customer` table and can be accessed only by authorized persons.</span></span>  
   
--   Многие ко многим. В связях типа «многие ко многим» первичный ключ связанной таблицы \(называемой также таблицей *соединения*\) часто формируется составлением внешних ключей из двух других таблиц.  
+-   <span data-ttu-id="087c5-116">Многие ко многим: В связях многие ко многим, первичный ключ связанной таблицы (также называется *связующей* таблицы) часто формируется составлением внешних ключей из двух таблиц.</span><span class="sxs-lookup"><span data-stu-id="087c5-116">Many-to-many: In many-to-many relationships, the primary key of the link table (also named the *junction* table) is often formed by a composite of the foreign keys from the other two tables.</span></span>  
   
-     В качестве примера рассмотрим связь `Employee`\-`Project` типа «многие ко многим», образованную с помощью связанной таблицы `EmployeeProject`.  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] требует, чтобы такая связь моделировалась по трем классам: `Employee`, `Project` и `EmployeeProject`.  В этом случае изменение отношения между `Employee` и `Project` может потребовать обновления первичного ключа `EmployeeProject`.  Однако данная ситуация наилучшим образом моделируется для удаления существующего `EmployeeProject` и создания нового `EmployeeProject`.  
+     <span data-ttu-id="087c5-117">Например, рассмотрим `Employee` - `Project` многие ко-многим, сформированный с помощью связанной таблицы `EmployeeProject`.</span><span class="sxs-lookup"><span data-stu-id="087c5-117">For example, consider an `Employee`-`Project` many-to-many relationship formed by using link table `EmployeeProject`.</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="087c5-118"> требует, чтобы такая связь моделировалась по трем классам: `Employee`, `Project` и `EmployeeProject`.</span><span class="sxs-lookup"><span data-stu-id="087c5-118"> requires that such a relationship be modeled by using three classes: `Employee`, `Project`, and `EmployeeProject`.</span></span> <span data-ttu-id="087c5-119">В этом случае изменение отношения между `Employee` и `Project` может потребовать обновления первичного ключа `EmployeeProject`.</span><span class="sxs-lookup"><span data-stu-id="087c5-119">In this case, changing the relationship between an `Employee` and a `Project` can appear to require an update of the primary key `EmployeeProject`.</span></span> <span data-ttu-id="087c5-120">Однако данная ситуация наилучшим образом моделируется для удаления существующего `EmployeeProject` и создания нового `EmployeeProject`.</span><span class="sxs-lookup"><span data-stu-id="087c5-120">However, this situation is best modeled as deleting an existing `EmployeeProject` and the creating a new `EmployeeProject`.</span></span>  
   
     > [!NOTE]
-    >  Отношения в реляционных базах данных обычно моделируются в виде значений внешнего ключа, ссылающихся на первичные ключи в других таблицах.  Для перемещения между ними следует явно связать две таблицы с помощью реляционной операции *соединения*.  
+    >  <span data-ttu-id="087c5-121">Отношения в реляционных базах данных обычно моделируются в виде значений внешнего ключа, ссылающихся на первичные ключи в других таблицах.</span><span class="sxs-lookup"><span data-stu-id="087c5-121">Relationships in relational databases are typically modeled as foreign key values that refer to primary keys in other tables.</span></span> <span data-ttu-id="087c5-122">Для перемещения между ними следует явно связать две таблицы с помощью реляционной *соединения* операции.</span><span class="sxs-lookup"><span data-stu-id="087c5-122">To navigate between them you explicitly associate the two tables by using a relational *join* operation.</span></span>  
     >   
-    >  С другой стороны, объекты в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ссылаются друг на друга с помощью ссылок свойств или коллекций ссылок, к которым можно перейти с использованием *точечной* нотации.  
+    >  <span data-ttu-id="087c5-123">Объекты в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], с другой стороны, обращаются друг к другу с помощью ссылок свойств или коллекций ссылок, к которым можно перейти с помощью *точка* нотации.</span><span class="sxs-lookup"><span data-stu-id="087c5-123">Objects in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], on the other hand, refer to each other by using property references or collections of references that you navigate by using *dot* notation.</span></span>  
   
-## Пример  
- В следующем примере отношения "один\-ко\-многим" класс `Customer` имеет свойство, объявляющее отношение между клиентами и их заказами.  Свойство `Orders` имеет тип <xref:System.Data.Linq.EntitySet%601>.  Этот тип указывает, что данное отношение относится к виду "один\-ко\-многим" \(один клиент \- много заказов\).  Свойство <xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A> используется для описания установки данной связи, а именно: путем указания в связанном классе имени свойства, которое будет сравниваться с существующим.  В этом примере свойство `CustomerID` сравнивается таким образом, как если бы *соединение* базы данных сравнивалось с данным значением столбца.  
+## <a name="example"></a><span data-ttu-id="087c5-124">Пример</span><span class="sxs-lookup"><span data-stu-id="087c5-124">Example</span></span>  
+ <span data-ttu-id="087c5-125">В следующем примере отношения "один-ко-многим" класс `Customer` имеет свойство, объявляющее отношение между клиентами и их заказами.</span><span class="sxs-lookup"><span data-stu-id="087c5-125">In the following one-to-many example, the `Customer` class has a property that declares the relationship between customers and their orders.</span></span>  <span data-ttu-id="087c5-126">Свойство `Orders` имеет тип <xref:System.Data.Linq.EntitySet%601>.</span><span class="sxs-lookup"><span data-stu-id="087c5-126">The `Orders` property is of type <xref:System.Data.Linq.EntitySet%601>.</span></span> <span data-ttu-id="087c5-127">Этот тип указывает, что данное отношение относится к виду "один-ко-многим" (один клиент - много заказов).</span><span class="sxs-lookup"><span data-stu-id="087c5-127">This type signifies that this relationship is one-to-many (one customer to many orders).</span></span> <span data-ttu-id="087c5-128">Свойство <xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A> используется для описания установки данной связи, а именно: путем указания в связанном классе имени свойства, которое будет сравниваться с существующим.</span><span class="sxs-lookup"><span data-stu-id="087c5-128">The <xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A> property is used to describe how this association is accomplished, namely, by specifying the name of the property in the related class to be compared with this one.</span></span> <span data-ttu-id="087c5-129">В этом примере `CustomerID` сравнивается свойства, как базы данных *соединения* бы сравнить значение этого столбца.</span><span class="sxs-lookup"><span data-stu-id="087c5-129">In this example, the `CustomerID` property is compared, just as a database *join* would compare that column value.</span></span>  
   
 > [!NOTE]
->  Если разработка производится в среде [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], то можно воспользоваться [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для создания ассоциации между классами.  
+>  <span data-ttu-id="087c5-130">Если разработка производится в среде [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], то можно воспользоваться [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для создания ассоциации между классами.</span><span class="sxs-lookup"><span data-stu-id="087c5-130">If you are using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], you can use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to create an association between classes.</span></span>  
   
  [!code-csharp[DlinqCustomize#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#3)]
  [!code-vb[DlinqCustomize#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#3)]  
   
-## Пример  
- Возможна и обратная ситуация.  Для описания ассоциации между клиентами и заказами вместо класса `Customer` можно использовать класс `Order`.  Чтобы описать обратную связь с клиентом, класс `Order` использует тип <xref:System.Data.Linq.EntityRef%601>, как показано в следующем примере кода.  
+## <a name="example"></a><span data-ttu-id="087c5-131">Пример</span><span class="sxs-lookup"><span data-stu-id="087c5-131">Example</span></span>  
+ <span data-ttu-id="087c5-132">Возможна и обратная ситуация.</span><span class="sxs-lookup"><span data-stu-id="087c5-132">You can also reverse the situation.</span></span> <span data-ttu-id="087c5-133">Для описания ассоциации между клиентами и заказами вместо класса `Customer` можно использовать класс `Order`.</span><span class="sxs-lookup"><span data-stu-id="087c5-133">Instead of using the `Customer` class to describe the association between customers and orders, you can use the `Order` class.</span></span> <span data-ttu-id="087c5-134">Чтобы описать обратную связь с клиентом, класс `Order` использует тип <xref:System.Data.Linq.EntityRef%601>, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="087c5-134">The `Order` class uses the <xref:System.Data.Linq.EntityRef%601> type to describe the relationship back to the customer, as in the following code example.</span></span>  
   
 > [!NOTE]
->  Класс <xref:System.Data.Linq.EntityRef%601> поддерживает *отложенную загрузку*.  Дополнительные сведения  *см. в разделе* [Сравнение отложенной и немедленной загрузки](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
+>  <span data-ttu-id="087c5-135"><xref:System.Data.Linq.EntityRef%601> Поддерживает класс *отложенная загрузка*.</span><span class="sxs-lookup"><span data-stu-id="087c5-135">The <xref:System.Data.Linq.EntityRef%601> class supports *deferred loading*.</span></span> <span data-ttu-id="087c5-136">Для получения дополнительной информации *разделе* [отложенное или немедленное загрузки](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).</span><span class="sxs-lookup"><span data-stu-id="087c5-136">For more information, *see* [Deferred versus Immediate Loading](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).</span></span>  
   
  [!code-csharp[DLinqCustomize#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#5)]
  [!code-vb[DLinqCustomize#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#5)]  
   
-## См. также  
- [Как настроить классы сущностей с помощью редактора кода](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)   
- [Модель объектов LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+## <a name="see-also"></a><span data-ttu-id="087c5-137">См. также</span><span class="sxs-lookup"><span data-stu-id="087c5-137">See Also</span></span>  
+ [<span data-ttu-id="087c5-138">Как: Настройка классов сущностей с помощью редактора кода</span><span class="sxs-lookup"><span data-stu-id="087c5-138">How to: Customize Entity Classes by Using the Code Editor</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)  
+ [<span data-ttu-id="087c5-139">LINQ to SQL модель объектов</span><span class="sxs-lookup"><span data-stu-id="087c5-139">The LINQ to SQL Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)

@@ -1,31 +1,34 @@
 ---
-title: "Microsoft.Transactions.TransactionBridge.CreateTransactionFailure | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Microsoft.Transactions.TransactionBridge.CreateTransactionFailure
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c3468e23-49a9-4a84-972d-a79a658851b3
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 19312862a9ae801ae0909c390b0c86ee989f7f94
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Microsoft.Transactions.TransactionBridge.CreateTransactionFailure
-Невозможно создать транзакцию.  
+# <a name="microsofttransactionstransactionbridgecreatetransactionfailure"></a><span data-ttu-id="6cb78-102">Microsoft.Transactions.TransactionBridge.CreateTransactionFailure</span><span class="sxs-lookup"><span data-stu-id="6cb78-102">Microsoft.Transactions.TransactionBridge.CreateTransactionFailure</span></span>
+<span data-ttu-id="6cb78-103">Невозможно создать транзакцию.</span><span class="sxs-lookup"><span data-stu-id="6cb78-103">A transaction could not be created.</span></span>  
   
-## Описание  
- Данная трассировка создается, если MSDTC не может создать транзакцию.  Это может быть вызвано недостаточным объемом ресурсов, отсутствием места в журнале или другими ошибками.  
+## <a name="description"></a><span data-ttu-id="6cb78-104">Описание</span><span class="sxs-lookup"><span data-stu-id="6cb78-104">Description</span></span>  
+ <span data-ttu-id="6cb78-105">Данная трассировка создается, если MSDTC не может создать транзакцию.</span><span class="sxs-lookup"><span data-stu-id="6cb78-105">This trace is generated when MSDTC is unable to create a transaction.</span></span> <span data-ttu-id="6cb78-106">Это может быть вызвано недостаточным объемом ресурсов, отсутствием места в журнале или другими ошибками.</span><span class="sxs-lookup"><span data-stu-id="6cb78-106">This can be due to low resources, insufficient log space, or other errors.</span></span>  
   
-## Устранение неполадок  
- Проверьте строку состояния в сообщении трассировки и определите, имеются ли элементы, с которыми можно произвести какие\-либо действия.  
+## <a name="troubleshooting"></a><span data-ttu-id="6cb78-107">Устранение неполадок</span><span class="sxs-lookup"><span data-stu-id="6cb78-107">Troubleshooting</span></span>  
+ <span data-ttu-id="6cb78-108">Проверьте строку состояния в сообщении трассировки и определите, имеются ли элементы, с которыми можно произвести какие-либо действия.</span><span class="sxs-lookup"><span data-stu-id="6cb78-108">Inspect the status string within the trace message to determine if any actionable item exists.</span></span>  
   
-## См. также  
- [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Использование трассировки для устранения неполадок приложения](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [Администрирование и диагностика](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="6cb78-109">См. также</span><span class="sxs-lookup"><span data-stu-id="6cb78-109">See Also</span></span>  
+ [<span data-ttu-id="6cb78-110">Трассировка</span><span class="sxs-lookup"><span data-stu-id="6cb78-110">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="6cb78-111">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="6cb78-111">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="6cb78-112">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="6cb78-112">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

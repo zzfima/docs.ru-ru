@@ -1,67 +1,65 @@
 ---
-title: "Система типов (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "ESQL"
+title: "Система типов (Entity SQL)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b951a51c4a9daee44ba55aa3589900ca4cad188a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Система типов (Entity SQL)
-Язык [!INCLUDE[esql](../../../../../../includes/esql-md.md)] поддерживает следующие типы.  
+# <a name="type-system-entity-sql"></a><span data-ttu-id="9f291-102">Система типов (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="9f291-102">Type System (Entity SQL)</span></span>
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="9f291-103">поддерживает несколько типов.</span><span class="sxs-lookup"><span data-stu-id="9f291-103"> supports a number of types:</span></span>  
   
--   Типы\-примитивы \(простые типы\), такие как `Int32` и `String.`  
+-   <span data-ttu-id="9f291-104">Типы-примитивы (простые типы), такие как `Int32` и `String.`</span><span class="sxs-lookup"><span data-stu-id="9f291-104">Primitive (simple) types such as `Int32` and `String.`</span></span>  
   
--   Номинальные типы, которые определяются в схеме, например <xref:System.Data.Metadata.Edm.EntityType>, <xref:System.Data.Metadata.Edm.ComplexType> и <xref:System.Data.Metadata.Edm.RelationshipType>.  
+-   <span data-ttu-id="9f291-105">Номинальные типы, которые определяются в схеме, например <xref:System.Data.Metadata.Edm.EntityType>, <xref:System.Data.Metadata.Edm.ComplexType> и <xref:System.Data.Metadata.Edm.RelationshipType>.</span><span class="sxs-lookup"><span data-stu-id="9f291-105">Nominal types that are defined in the schema, such as <xref:System.Data.Metadata.Edm.EntityType>, <xref:System.Data.Metadata.Edm.ComplexType>, and <xref:System.Data.Metadata.Edm.RelationshipType>.</span></span>  
   
--   Анонимные типы, которые явно не определяются в схеме: <xref:System.Data.Metadata.Edm.CollectionType>, <xref:System.Data.Metadata.Edm.RowType> и <xref:System.Data.Metadata.Edm.RefType>.  
+-   <span data-ttu-id="9f291-106">Анонимные типы, которые явно не определяются в схеме: <xref:System.Data.Metadata.Edm.CollectionType>, <xref:System.Data.Metadata.Edm.RowType> и <xref:System.Data.Metadata.Edm.RefType>.</span><span class="sxs-lookup"><span data-stu-id="9f291-106">Anonymous types that are not defined in the schema explicitly: <xref:System.Data.Metadata.Edm.CollectionType>, <xref:System.Data.Metadata.Edm.RowType>, and <xref:System.Data.Metadata.Edm.RefType>.</span></span>  
   
- В этом разделе рассматриваются анонимные типы, которые не определяются в схеме явно, но поддерживаются языком [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  Сведения о типах\-примитивах и номинальных типах см. в разделе [Conceptual Model Types \(CSDL\)](http://msdn.microsoft.com/ru-ru/987b995f-e429-4569-9559-b4146744def4).  
+ <span data-ttu-id="9f291-107">В этом разделе рассматриваются анонимные типы, которые не определяются в схеме явно, но поддерживаются языком [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9f291-107">This section discusses the anonymous types that are not defined in the schema explicitly but are supported by [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span></span> <span data-ttu-id="9f291-108">Сведения о простых и номинальные типы разделе [типы концептуальной модели (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4).</span><span class="sxs-lookup"><span data-stu-id="9f291-108">For information on primitive and nominal types, see [Conceptual Model Types (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4).</span></span>  
   
-## Строки  
- Структура строки зависит от последовательности типизированных и именованных элементов, из которых состоит строка.  Тип строки не имеет идентификатора и не может наследоваться.  Экземпляры строк одинакового типа считаются равными, если равны соответствующие элементы этих строк.  Со строками не связаны операции, отличные от проверки равнозначности их структуры, к тому же они не имеют эквивалентов в среде CLR.  Запросы могут возвращать структуры, содержащие строки или коллекции строк.  API определения привязки между запросами [!INCLUDE[esql](../../../../../../includes/esql-md.md)] и базовым языком определяет способ реализации строк в запросе, вырабатывающем этот результат.  Сведения о создании экземпляра строки см. в разделе [Сборка типов](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
+## <a name="rows"></a><span data-ttu-id="9f291-109">Строки</span><span class="sxs-lookup"><span data-stu-id="9f291-109">Rows</span></span>  
+ <span data-ttu-id="9f291-110">Структура строки зависит от последовательности типизированных и именованных элементов, из которых состоит строка.</span><span class="sxs-lookup"><span data-stu-id="9f291-110">The structure of a row depends on the sequence of typed and named members that the row consists of.</span></span> <span data-ttu-id="9f291-111">Тип строки не имеет идентификатора и не может наследоваться.</span><span class="sxs-lookup"><span data-stu-id="9f291-111">A row type has no identity and cannot be inherited from.</span></span> <span data-ttu-id="9f291-112">Экземпляры строк одинакового типа считаются равными, если равны соответствующие элементы этих строк.</span><span class="sxs-lookup"><span data-stu-id="9f291-112">Instances of the same row type are equivalent if the members are respectively equivalent.</span></span> <span data-ttu-id="9f291-113">Со строками не связаны операции, отличные от проверки равнозначности их структуры, к тому же они не имеют эквивалентов в среде CLR.</span><span class="sxs-lookup"><span data-stu-id="9f291-113">Rows have no behavior beyond their structural equivalence and have no equivalent in the common language runtime.</span></span> <span data-ttu-id="9f291-114">Запросы могут возвращать структуры, содержащие строки или коллекции строк.</span><span class="sxs-lookup"><span data-stu-id="9f291-114">Queries can result in structures that contain rows or collections of rows.</span></span> <span data-ttu-id="9f291-115">API определения привязки между запросами [!INCLUDE[esql](../../../../../../includes/esql-md.md)] и базовым языком определяет способ реализации строк в запросе, вырабатывающем этот результат.</span><span class="sxs-lookup"><span data-stu-id="9f291-115">The API binding between the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] queries and the host language defines how rows are realized in the query that produced the result.</span></span> <span data-ttu-id="9f291-116">Сведения о создании экземпляра строки см. в разделе [типов, создав](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="9f291-116">For information on how to construct a row instance, see [Constructing Types](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).</span></span>  
   
-## Коллекции  
- Типы коллекций представляют ноль и более экземпляров других объектов.  Сведения о конструировании коллекций см. в разделе [Сборка типов](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
+## <a name="collections"></a><span data-ttu-id="9f291-117">Коллекции</span><span class="sxs-lookup"><span data-stu-id="9f291-117">Collections</span></span>  
+ <span data-ttu-id="9f291-118">Типы коллекций представляют ноль и более экземпляров других объектов.</span><span class="sxs-lookup"><span data-stu-id="9f291-118">Collection types represent zero or more instances of other objects.</span></span> <span data-ttu-id="9f291-119">Сведения о способах создания коллекции см. в разделе [типов, создав](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="9f291-119">For information on how to construct collection, see [Constructing Types](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).</span></span>  
   
-## Ссылки  
- Ссылка \- это логический указатель на отдельную сущность в определенном наборе сущностей.  
+## <a name="references"></a><span data-ttu-id="9f291-120">Ссылки</span><span class="sxs-lookup"><span data-stu-id="9f291-120">References</span></span>  
+ <span data-ttu-id="9f291-121">Ссылка - это логический указатель на отдельную сущность в определенном наборе сущностей.</span><span class="sxs-lookup"><span data-stu-id="9f291-121">A reference is a logical pointer to a specific entity in a specific entity set.</span></span>  
   
- Язык [!INCLUDE[esql](../../../../../../includes/esql-md.md)] поддерживает следующие операторы для конструирования, деконструирования и перехода по ссылкам.  
+ <span data-ttu-id="9f291-122">Язык [!INCLUDE[esql](../../../../../../includes/esql-md.md)] поддерживает следующие операторы для конструирования, деконструирования и перехода по ссылкам.</span><span class="sxs-lookup"><span data-stu-id="9f291-122">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] supports the following operators to construct, deconstruct, and navigate through references:</span></span>  
   
--   [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)  
+-   [<span data-ttu-id="9f291-123">REF</span><span class="sxs-lookup"><span data-stu-id="9f291-123">REF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)  
   
--   [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)  
+-   [<span data-ttu-id="9f291-124">CREATEREF</span><span class="sxs-lookup"><span data-stu-id="9f291-124">CREATEREF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)  
   
--   [KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)  
+-   [<span data-ttu-id="9f291-125">КЛЮЧ</span><span class="sxs-lookup"><span data-stu-id="9f291-125">KEY</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)  
   
--   [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)  
+-   [<span data-ttu-id="9f291-126">DEREF</span><span class="sxs-lookup"><span data-stu-id="9f291-126">DEREF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)  
   
- По ссылке можно переходить с помощью оператора доступа к элементам «точка» \(`.`\).  В следующем фрагменте извлекается свойство Id \(объекта Order\) путем перехода по свойству r \(сокращение от reference\).  
+ <span data-ttu-id="9f291-127">По ссылке можно переходить с помощью оператора доступа к элементам «точка» (`.`).</span><span class="sxs-lookup"><span data-stu-id="9f291-127">You can navigate through a reference by using the member access (dot) operator(`.`).</span></span> <span data-ttu-id="9f291-128">В следующем фрагменте извлекается свойство Id (объекта Order) путем перехода по свойству r (сокращение от reference).</span><span class="sxs-lookup"><span data-stu-id="9f291-128">The following snippet extracts the Id property (of Order) by navigating through the r (reference) property.</span></span>  
   
 ```  
 select o2.r.Id   
 from (select ref(o) as r from LOB.Orders as o) as o2   
 ```  
   
- Если ссылка имеет значение NULL или цель ссылки не существует, результатом становится NULL.  
+ <span data-ttu-id="9f291-129">Если ссылка имеет значение NULL или цель ссылки не существует, результатом становится NULL.</span><span class="sxs-lookup"><span data-stu-id="9f291-129">If the reference value is null, or if the target of the reference does not exist, the result is null.</span></span>  
   
-## См. также  
- [Общие сведения о языке Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)   
- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)   
- [CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)   
- [Спецификации языка CSDL, SSDL и MSL](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)
+## <a name="see-also"></a><span data-ttu-id="9f291-130">См. также</span><span class="sxs-lookup"><span data-stu-id="9f291-130">See Also</span></span>  
+ [<span data-ttu-id="9f291-131">Общие сведения об Entity SQL</span><span class="sxs-lookup"><span data-stu-id="9f291-131">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
+ [<span data-ttu-id="9f291-132">Справочник по Entity SQL</span><span class="sxs-lookup"><span data-stu-id="9f291-132">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [<span data-ttu-id="9f291-133">ПРИВЕДЕНИЕ ТИПОВ</span><span class="sxs-lookup"><span data-stu-id="9f291-133">CAST</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)  
+ [<span data-ttu-id="9f291-134">Спецификации CSDL, SSDL и MSL</span><span class="sxs-lookup"><span data-stu-id="9f291-134">CSDL, SSDL, and MSL Specifications</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

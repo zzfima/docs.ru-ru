@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - marshaling, samples
 - platform invoke, marshaling data
@@ -24,39 +18,37 @@ helpviewer_keywords:
 - marshaling, platform invoke
 - sample applications [.NET Framework], marshaling strings
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8d8455d4f1b4dbb463176c06d680b2bd0b1ff9d9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 750f4e6852cd5aa52d03f884edcbfbf80ed5fab5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="marshaling-strings"></a>Маршалинг строк
-При вызове неуправляемого кода копируются строковые аргументы, и при необходимости выполняется преобразование этих аргументов из формата .NET Framework (Юникод) в неуправляемый формат (ANSI). Так как управляемые строки являются неизменяемыми, то при вызове неуправляемого кода они не копируются обратно из неуправляемой памяти в управляемую память при возврате из функции.  
+# <a name="marshaling-strings"></a><span data-ttu-id="c3bef-102">Маршалинг строк</span><span class="sxs-lookup"><span data-stu-id="c3bef-102">Marshaling Strings</span></span>
+<span data-ttu-id="c3bef-103">При вызове неуправляемого кода копируются строковые аргументы, и при необходимости выполняется преобразование этих аргументов из формата .NET Framework (Юникод) в неуправляемый формат (ANSI).</span><span class="sxs-lookup"><span data-stu-id="c3bef-103">Platform invoke copies string parameters, converting them from the .NET Framework format (Unicode) to the unmanaged format (ANSI), if needed.</span></span> <span data-ttu-id="c3bef-104">Так как управляемые строки являются неизменяемыми, то при вызове неуправляемого кода они не копируются обратно из неуправляемой памяти в управляемую память при возврате из функции.</span><span class="sxs-lookup"><span data-stu-id="c3bef-104">Because managed strings are immutable, platform invoke does not copy them back from unmanaged memory to managed memory when the function returns.</span></span>  
   
- В таблице ниже представлены варианты маршалинга строк, описано их использование и приведена ссылка на соответствующий пример кода .NET Framework.  
+ <span data-ttu-id="c3bef-105">В таблице ниже представлены варианты маршалинга строк, описано их использование и приведена ссылка на соответствующий пример кода .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c3bef-105">The following table lists marshaling options for strings, describes their usage, and provides a link to the corresponding .NET Framework sample.</span></span>  
   
-|Строка|Описание|Пример|  
+|<span data-ttu-id="c3bef-106">Строка</span><span class="sxs-lookup"><span data-stu-id="c3bef-106">String</span></span>|<span data-ttu-id="c3bef-107">Описание</span><span class="sxs-lookup"><span data-stu-id="c3bef-107">Description</span></span>|<span data-ttu-id="c3bef-108">Пример</span><span class="sxs-lookup"><span data-stu-id="c3bef-108">Sample</span></span>|  
 |------------|-----------------|------------|  
-|По значению.|Передает строки в качестве параметров In.|[MsgBox](../../../docs/framework/interop/msgbox-sample.md)|  
-|Как результат.|Возвращает строки из неуправляемого кода.|[Строки](http://msdn.microsoft.com/en-us/be9e82a3-dc95-4aaa-9396-61b66e467e02)|  
-|По ссылке.|Передает строки в качестве параметров In/Out с помощью <xref:System.Text.StringBuilder>.|[Buffers](http://msdn.microsoft.com/en-us/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5)|  
-|В структуре по значению.|Передает строки в структуре, которая является параметром In.|[Структуры](http://msdn.microsoft.com/en-us/96a62265-dcf9-4608-bc0a-1f762ab9f48e)|  
-|В структуре по ссылке **(char\*)**.|Передает строки в структуре, которая является параметром In/Out. Неуправляемая функция ожидает указатель на символьный буфер, и размер буфера является членом структуры.|[Строки](http://msdn.microsoft.com/en-us/be9e82a3-dc95-4aaa-9396-61b66e467e02)|  
-|В структуре по ссылке **(char[])**.|Передает строки в структуре, которая является параметром In/Out. Неуправляемая функция ожидает внедренный символьный буфер.|[OSInfo](http://msdn.microsoft.com/en-us/69d89067-507b-41fe-859d-30bf3ff29455)|  
-|В классе по значению **(char\*)**.|Передает строки в классе (класс является параметром In/Out). Неуправляемая функция ожидает указатель на символьный буфер.|[OpenFileDlg](http://msdn.microsoft.com/en-us/b7dea792-cb92-4baf-ac7b-6a24803e6c75)|  
-|В классе по значению **(char[])**.|Передает строки в классе (класс является параметром In/Out). Неуправляемая функция ожидает внедренный символьный буфер.|[OSInfo](http://msdn.microsoft.com/en-us/69d89067-507b-41fe-859d-30bf3ff29455)|  
-|Как массив строк по значению.|Создает массив строк, который передается по значению.|[Массивы](../../../docs/framework/interop/marshaling-different-types-of-arrays.md)|  
-|Как массив структур, содержащих строки по значению.|Создает массив структур, содержащих строки. Массив передается по значению.|[Массивы](../../../docs/framework/interop/marshaling-different-types-of-arrays.md)|  
+|<span data-ttu-id="c3bef-109">По значению.</span><span class="sxs-lookup"><span data-stu-id="c3bef-109">By value.</span></span>|<span data-ttu-id="c3bef-110">Передает строки в качестве параметров In.</span><span class="sxs-lookup"><span data-stu-id="c3bef-110">Passes strings as In parameters.</span></span>|[<span data-ttu-id="c3bef-111">MsgBox</span><span class="sxs-lookup"><span data-stu-id="c3bef-111">MsgBox</span></span>](../../../docs/framework/interop/msgbox-sample.md)|  
+|<span data-ttu-id="c3bef-112">Как результат.</span><span class="sxs-lookup"><span data-stu-id="c3bef-112">As result.</span></span>|<span data-ttu-id="c3bef-113">Возвращает строки из неуправляемого кода.</span><span class="sxs-lookup"><span data-stu-id="c3bef-113">Returns strings from unmanaged code.</span></span>|[<span data-ttu-id="c3bef-114">Строки</span><span class="sxs-lookup"><span data-stu-id="c3bef-114">Strings</span></span>](http://msdn.microsoft.com/en-us/be9e82a3-dc95-4aaa-9396-61b66e467e02)|  
+|<span data-ttu-id="c3bef-115">По ссылке.</span><span class="sxs-lookup"><span data-stu-id="c3bef-115">By reference.</span></span>|<span data-ttu-id="c3bef-116">Передает строки в качестве параметров In/Out с помощью <xref:System.Text.StringBuilder>.</span><span class="sxs-lookup"><span data-stu-id="c3bef-116">Passes strings as In/Out parameters using <xref:System.Text.StringBuilder>.</span></span>|[<span data-ttu-id="c3bef-117">Buffers</span><span class="sxs-lookup"><span data-stu-id="c3bef-117">Buffers</span></span>](http://msdn.microsoft.com/en-us/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5)|  
+|<span data-ttu-id="c3bef-118">В структуре по значению.</span><span class="sxs-lookup"><span data-stu-id="c3bef-118">In a structure by value.</span></span>|<span data-ttu-id="c3bef-119">Передает строки в структуре, которая является параметром In.</span><span class="sxs-lookup"><span data-stu-id="c3bef-119">Passes strings in a structure that is an In parameter.</span></span>|[<span data-ttu-id="c3bef-120">Структуры</span><span class="sxs-lookup"><span data-stu-id="c3bef-120">Structs</span></span>](http://msdn.microsoft.com/en-us/96a62265-dcf9-4608-bc0a-1f762ab9f48e)|  
+|<span data-ttu-id="c3bef-121">В структуре по ссылке **(char\*)**.</span><span class="sxs-lookup"><span data-stu-id="c3bef-121">In a structure by reference **(char\*)**.</span></span>|<span data-ttu-id="c3bef-122">Передает строки в структуре, которая является параметром In/Out.</span><span class="sxs-lookup"><span data-stu-id="c3bef-122">Passes strings in a structure that is an In/Out parameter.</span></span> <span data-ttu-id="c3bef-123">Неуправляемая функция ожидает указатель на символьный буфер, и размер буфера является членом структуры.</span><span class="sxs-lookup"><span data-stu-id="c3bef-123">The unmanaged function expects a pointer to a character buffer and the buffer size is a member of the structure.</span></span>|[<span data-ttu-id="c3bef-124">Строки</span><span class="sxs-lookup"><span data-stu-id="c3bef-124">Strings</span></span>](http://msdn.microsoft.com/en-us/be9e82a3-dc95-4aaa-9396-61b66e467e02)|  
+|<span data-ttu-id="c3bef-125">В структуре по ссылке **(char[])**.</span><span class="sxs-lookup"><span data-stu-id="c3bef-125">In a structure by reference **(char[])**.</span></span>|<span data-ttu-id="c3bef-126">Передает строки в структуре, которая является параметром In/Out.</span><span class="sxs-lookup"><span data-stu-id="c3bef-126">Passes strings in a structure that is an In/Out parameter.</span></span> <span data-ttu-id="c3bef-127">Неуправляемая функция ожидает внедренный символьный буфер.</span><span class="sxs-lookup"><span data-stu-id="c3bef-127">The unmanaged function expects an embedded character buffer.</span></span>|[<span data-ttu-id="c3bef-128">OSInfo</span><span class="sxs-lookup"><span data-stu-id="c3bef-128">OSInfo</span></span>](http://msdn.microsoft.com/en-us/69d89067-507b-41fe-859d-30bf3ff29455)|  
+|<span data-ttu-id="c3bef-129">В классе по значению **(char\*)**.</span><span class="sxs-lookup"><span data-stu-id="c3bef-129">In a class by value **(char\*)**.</span></span>|<span data-ttu-id="c3bef-130">Передает строки в классе (класс является параметром In/Out).</span><span class="sxs-lookup"><span data-stu-id="c3bef-130">Passes strings in a class (a class is an In/Out parameter).</span></span> <span data-ttu-id="c3bef-131">Неуправляемая функция ожидает указатель на символьный буфер.</span><span class="sxs-lookup"><span data-stu-id="c3bef-131">The unmanaged function expects a pointer to a character buffer.</span></span>|[<span data-ttu-id="c3bef-132">OpenFileDlg</span><span class="sxs-lookup"><span data-stu-id="c3bef-132">OpenFileDlg</span></span>](http://msdn.microsoft.com/en-us/b7dea792-cb92-4baf-ac7b-6a24803e6c75)|  
+|<span data-ttu-id="c3bef-133">В классе по значению **(char[])**.</span><span class="sxs-lookup"><span data-stu-id="c3bef-133">In a class by value **(char[])**.</span></span>|<span data-ttu-id="c3bef-134">Передает строки в классе (класс является параметром In/Out).</span><span class="sxs-lookup"><span data-stu-id="c3bef-134">Passes strings in a class (a class is an In/Out parameter).</span></span> <span data-ttu-id="c3bef-135">Неуправляемая функция ожидает внедренный символьный буфер.</span><span class="sxs-lookup"><span data-stu-id="c3bef-135">The unmanaged function expects an embedded character buffer.</span></span>|[<span data-ttu-id="c3bef-136">OSInfo</span><span class="sxs-lookup"><span data-stu-id="c3bef-136">OSInfo</span></span>](http://msdn.microsoft.com/en-us/69d89067-507b-41fe-859d-30bf3ff29455)|  
+|<span data-ttu-id="c3bef-137">Как массив строк по значению.</span><span class="sxs-lookup"><span data-stu-id="c3bef-137">As an array of strings by value.</span></span>|<span data-ttu-id="c3bef-138">Создает массив строк, который передается по значению.</span><span class="sxs-lookup"><span data-stu-id="c3bef-138">Creates an array of strings that is passed by value.</span></span>|[<span data-ttu-id="c3bef-139">Массивы</span><span class="sxs-lookup"><span data-stu-id="c3bef-139">Arrays</span></span>](../../../docs/framework/interop/marshaling-different-types-of-arrays.md)|  
+|<span data-ttu-id="c3bef-140">Как массив структур, содержащих строки по значению.</span><span class="sxs-lookup"><span data-stu-id="c3bef-140">As an array of structures that contain strings by value.</span></span>|<span data-ttu-id="c3bef-141">Создает массив структур, содержащих строки. Массив передается по значению.</span><span class="sxs-lookup"><span data-stu-id="c3bef-141">Creates an array of structures that contain strings and the array is passed by value.</span></span>|[<span data-ttu-id="c3bef-142">Массивы</span><span class="sxs-lookup"><span data-stu-id="c3bef-142">Arrays</span></span>](../../../docs/framework/interop/marshaling-different-types-of-arrays.md)|  
   
-## <a name="see-also"></a>См. также  
- [Маршалинг данных при вызове неуправляемого кода](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)   
- [Типы данных в вызове неуправляемого кода](http://msdn.microsoft.com/en-us/16014d9f-d6bd-481e-83f0-df11377c550f)   
- [Маршалинг классов, структур и объединений](../../../docs/framework/interop/marshaling-classes-structures-and-unions.md)   
- [Маршалинг массивов типов](http://msdn.microsoft.com/en-us/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)   
- [Различные примеры маршалинга](http://msdn.microsoft.com/en-us/a915c948-54e9-4d0f-a525-95a77fd8ed70)
-
+## <a name="see-also"></a><span data-ttu-id="c3bef-143">См. также</span><span class="sxs-lookup"><span data-stu-id="c3bef-143">See Also</span></span>  
+ [<span data-ttu-id="c3bef-144">Маршалинг данных при вызове неуправляемого кода</span><span class="sxs-lookup"><span data-stu-id="c3bef-144">Marshaling Data with Platform Invoke</span></span>](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)  
+ [<span data-ttu-id="c3bef-145">Типы данных вызовов неуправляемого кода</span><span class="sxs-lookup"><span data-stu-id="c3bef-145">Platform Invoke Data Types</span></span>](http://msdn.microsoft.com/en-us/16014d9f-d6bd-481e-83f0-df11377c550f)  
+ [<span data-ttu-id="c3bef-146">Маршалинг классов, структур и объединений</span><span class="sxs-lookup"><span data-stu-id="c3bef-146">Marshaling Classes, Structures, and Unions</span></span>](../../../docs/framework/interop/marshaling-classes-structures-and-unions.md)  
+ [<span data-ttu-id="c3bef-147">Маршалинг массивов типов</span><span class="sxs-lookup"><span data-stu-id="c3bef-147">Marshaling Arrays of Types</span></span>](http://msdn.microsoft.com/en-us/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)  
+ [<span data-ttu-id="c3bef-148">Различные примеры маршалинга</span><span class="sxs-lookup"><span data-stu-id="c3bef-148">Miscellaneous Marshaling Samples</span></span>](http://msdn.microsoft.com/en-us/a915c948-54e9-4d0f-a525-95a77fd8ed70)

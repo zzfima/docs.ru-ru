@@ -1,33 +1,35 @@
 ---
-title: "Поставщик Entity Framework (службы WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Службы WCF Data Services, поставщики"
+title: "Поставщик Entity Framework (службы данных WCF)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WCF Data Services, providers
 ms.assetid: 650b5eb6-c71d-4dc1-8b64-b6beaf752114
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f2ce54596cbfebd1a4b0a81819b34c6ffcddfb88
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Поставщик Entity Framework (службы WCF Data Services)
-Как и [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], платформа ADO.NET Entity Framework основана на модели EDM, которая представляет собой разновидность модели связей сущностей.  Entity Framework преобразует операции собственной реализации модели EDM, которая называется *концептуальной моделью*, в эквивалентные операции над источником данных.  Это превращает Entity Framework в идеальный поставщик для служб данных на основе реляционных данных. Любая база данных, на которой имеется поставщик данных, поддерживающий Entity Framework, может использоваться совместно со службами [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  Список источников данных, поддерживающих в настоящее время Entity Framework, см. в разделе [Поставщики сторонних производителей для Entity Framework](http://go.microsoft.com/fwlink/?LinkId=143699).  
+# <a name="entity-framework-provider-wcf-data-services"></a><span data-ttu-id="cb5c2-102">Поставщик Entity Framework (службы данных WCF)</span><span class="sxs-lookup"><span data-stu-id="cb5c2-102">Entity Framework Provider (WCF Data Services)</span></span>
+<span data-ttu-id="cb5c2-103">Как и [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], платформа ADO.NET Entity Framework основана на модели EDM, которая представляет собой разновидность модели связей сущностей.</span><span class="sxs-lookup"><span data-stu-id="cb5c2-103">Like [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], the ADO.NET Entity Framework is based on the Entity Data Model, which is a type of entity-relationship model.</span></span> <span data-ttu-id="cb5c2-104">Entity Framework преобразует операции собственной реализации модели EDM, которая называется *концептуальной модели*, в эквивалентные операции над источником данных.</span><span class="sxs-lookup"><span data-stu-id="cb5c2-104">The Entity Framework translates operations against its implementation of the Entity Data Model, which is called the *conceptual model*, into equivalent operations against a data source.</span></span> <span data-ttu-id="cb5c2-105">Это превращает Entity Framework в идеальный поставщик для служб данных на основе реляционных данных. Любая база данных, на которой имеется поставщик данных, поддерживающий Entity Framework, может использоваться совместно со службами [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cb5c2-105">This makes the Entity Framework an ideal provider for data services that are based on relational data, and any database that has a data provider that supports the Entity Framework can be used with [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].</span></span> <span data-ttu-id="cb5c2-106">Список источников данных, которые в настоящее время поддерживает платформу Entity Framework см. в разделе [сторонние поставщики для Entity Framework](http://go.microsoft.com/fwlink/?LinkId=143699).</span><span class="sxs-lookup"><span data-stu-id="cb5c2-106">For a list of the data sources that currently support the Entity Framework, see [Third-Party Providers for the Entity Framework](http://go.microsoft.com/fwlink/?LinkId=143699).</span></span>  
   
- В концептуальной модели контейнер сущностей является корнем службы.  Прежде чем данные могут быть предоставлены службой данных, необходимо определить концептуальную модель Entity Framework.  Для получения дополнительной информации см. [Как создать службу данных с использованием источника данных ADO.NET Entity Framework](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md).  
+ <span data-ttu-id="cb5c2-107">В концептуальной модели контейнер сущностей является корнем службы.</span><span class="sxs-lookup"><span data-stu-id="cb5c2-107">In a conceptual model, the entity container is the root of the service.</span></span> <span data-ttu-id="cb5c2-108">Прежде чем данные могут быть предоставлены службой данных, необходимо определить концептуальную модель Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="cb5c2-108">You must define a conceptual model in the Entity Framework before the data can be exposed by a data service.</span></span> <span data-ttu-id="cb5c2-109">Дополнительные сведения см. в разделе [как: создание службы данных с помощью источника данных Entity Framework ADO.NET](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md).</span><span class="sxs-lookup"><span data-stu-id="cb5c2-109">For more information, see [How to: Create a Data Service Using an ADO.NET Entity Framework Data Source](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md).</span></span>  
   
- Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживают модель оптимистичного параллелизма, позволяя определять токен параллелизма для сущности.  Этот маркер параллелизма, включающий одно или несколько свойств сущности, используется службой данных для определения, произошло ли изменение в запрашиваемых, обновляемых или удаляемых данных.  Когда значения маркера, полученные из eTag в запросе, отличаются от текущих значений сущности, служба данных вызывает исключение.  Чтобы указать, что свойство является частью маркера параллелизма, требуется применить атрибут `ConcurrencyMode="Fixed"` в модели данных, определенной поставщиком [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)].  Токен параллелизма не может включать ключевое свойство или свойство навигации. Дополнительные сведения см. в разделе [Обновление службы данных](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="cb5c2-110">поддерживает модель оптимистичного параллелизма, позволяя определять маркер параллелизма для сущности.</span><span class="sxs-lookup"><span data-stu-id="cb5c2-110"> supports the optimistic concurrency model by enabling you to define a concurrency token for an entity.</span></span> <span data-ttu-id="cb5c2-111">Этот маркер параллелизма, включающий одно или несколько свойств сущности, используется службой данных для определения, произошло ли изменение в запрашиваемых, обновляемых или удаляемых данных.</span><span class="sxs-lookup"><span data-stu-id="cb5c2-111">This concurrency token, which includes one or more properties of the entity, is used by the data service to determine whether a change has occurred in the data that is being requested, updated, or deleted.</span></span> <span data-ttu-id="cb5c2-112">Когда значения маркера, полученные из eTag в запросе, отличаются от текущих значений сущности, служба данных вызывает исключение.</span><span class="sxs-lookup"><span data-stu-id="cb5c2-112">When token values obtained from the eTag in the request differ from the current values of the entity, an exception is raised by the data service.</span></span> <span data-ttu-id="cb5c2-113">Чтобы указать, что свойство является частью маркера параллелизма, требуется применить атрибут `ConcurrencyMode="Fixed"` в модели данных, определенной поставщиком [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cb5c2-113">To indicate that a property is part of the concurrency token, you must apply the attribute `ConcurrencyMode="Fixed"` in the data model defined by the [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] provider.</span></span> <span data-ttu-id="cb5c2-114">Маркер параллелизма не может содержать ключевое свойство или свойство навигации.</span><span class="sxs-lookup"><span data-stu-id="cb5c2-114">The concurrency token cannot include a key property or a navigation property.</span></span> <span data-ttu-id="cb5c2-115">Дополнительные сведения см. в разделе [обновление службы данных](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="cb5c2-115">For more information, see [Updating the Data Service](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).</span></span>  
   
- Дополнительные сведения о платформе Entity Framework см. в разделе [Общие сведения о платформе Entity Framework](../../../../docs/framework/data/adonet/ef/overview.md).  
+ <span data-ttu-id="cb5c2-116">Дополнительные сведения о платформе Entity Framework см. в разделе [Общие сведения об Entity Framework](../../../../docs/framework/data/adonet/ef/overview.md).</span><span class="sxs-lookup"><span data-stu-id="cb5c2-116">To learn more about the Entity Framework, see [Entity Framework Overview](../../../../docs/framework/data/adonet/ef/overview.md).</span></span>  
   
-## См. также  
- [Поставщики служб данных](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)   
- [Поставщик отражения](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)   
- [Модель EDM](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a><span data-ttu-id="cb5c2-117">См. также</span><span class="sxs-lookup"><span data-stu-id="cb5c2-117">See Also</span></span>  
+ [<span data-ttu-id="cb5c2-118">Поставщики служб данных</span><span class="sxs-lookup"><span data-stu-id="cb5c2-118">Data Services Providers</span></span>](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
+ [<span data-ttu-id="cb5c2-119">Поставщик отражения</span><span class="sxs-lookup"><span data-stu-id="cb5c2-119">Reflection Provider</span></span>](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)  
+ [<span data-ttu-id="cb5c2-120">Модель EDM</span><span class="sxs-lookup"><span data-stu-id="cb5c2-120">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)

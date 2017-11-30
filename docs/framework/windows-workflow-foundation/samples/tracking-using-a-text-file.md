@@ -1,35 +1,39 @@
 ---
-title: "Отслеживание использования с помощью текстового файла | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Отслеживание использования с помощью текстового файла"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a2725c34b79b8c9dd05a9f9a071ef52e29527e02
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Отслеживание использования с помощью текстового файла
-В данном образце демонстрируется отслеживание расширения [!INCLUDE[wf](../../../../includes/wf-md.md)] путем создания настраиваемого участника отслеживания.Участниками отслеживания являются классы платформы .NET Framework, которые получают записи отслеживания от среды выполнения при их передаче.Можно создать участника отслеживания для транспортировки событий отслеживания в место назначения, требуемое для сценария.Например, участник отслеживания событий для Windows \(ETW\) предоставляется как часть [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].Участник отслеживания в этом образце записывает записи в текстовый файл в формате XML.  
+# <a name="tracking-using-a-text-file"></a><span data-ttu-id="0f3bb-102">Отслеживание использования с помощью текстового файла</span><span class="sxs-lookup"><span data-stu-id="0f3bb-102">Tracking Using a Text File</span></span>
+<span data-ttu-id="0f3bb-103">В данном образце демонстрируется отслеживание расширения [!INCLUDE[wf](../../../../includes/wf-md.md)] путем создания настраиваемого участника отслеживания.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-103">This sample demonstrates how to extend tracking in [!INCLUDE[wf](../../../../includes/wf-md.md)] by creating a custom tracking participant.</span></span> <span data-ttu-id="0f3bb-104">Участниками отслеживания являются классы платформы .NET Framework, которые получают записи отслеживания от среды выполнения при их передаче.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-104">Tracking participants are .NET Framework classes that receive tracking records from the runtime as they are emitted.</span></span> <span data-ttu-id="0f3bb-105">Можно создать участника отслеживания для транспортировки событий отслеживания в место назначения, требуемое для сценария.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-105">You can create a tracking participant to transport the tracking events to whichever destination is required for your scenario.</span></span> <span data-ttu-id="0f3bb-106">Например, участник отслеживания событий для Windows (ETW) предоставляется как часть [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0f3bb-106">For example, ETW (Event Tracing for Windows) Tracking Participant is provided as part of the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="0f3bb-107">Участник отслеживания в этом образце записывает записи в текстовый файл в формате XML.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-107">The tracking participant in this sample writes the records in XML format to a text file.</span></span>  
   
-## Подробные сведения об образце  
- Для оптимизации применимости и надежности участника отслеживания должны быть выполнены некоторые шаги для правильного подключения участника отслеживания в среду выполнения.В следующей таблице описываются классы, используемые в образце для создания участника отслеживания, который соответствует рекомендациям.  
+## <a name="sample-details"></a><span data-ttu-id="0f3bb-108">Подробные сведения об образце</span><span class="sxs-lookup"><span data-stu-id="0f3bb-108">Sample details</span></span>  
+ <span data-ttu-id="0f3bb-109">Для оптимизации применимости и надежности участника отслеживания должны быть выполнены некоторые шаги для правильного подключения участника отслеживания в среду выполнения.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-109">To optimize the usefulness and robustness of your tracking participant, some additional steps must be completed to properly wire the tracking participant to the runtime.</span></span> <span data-ttu-id="0f3bb-110">В следующей таблице описываются классы, используемые в образце для создания участника отслеживания, который соответствует рекомендациям.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-110">The following table describes the classes used in this sample to create a tracking participant that complies with best practices.</span></span>  
   
-|Класс|Описание|  
-|-----------|--------------|  
-|`TextFileTrackingExtensionElement`|Элемент <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> используется для определения раздела конфигурации, используемого для настройки участника отслеживания текстового файла.Это позволяет пользователям указывать место назначения файла журнала с помощью обычных файлов конфигурации платформы .NET Framework.|  
-|`TextFileTrackingBehavior`|Разные виды поведения в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] позволяют пользователям внедрять расширения в среду выполнения.Это поведение добавляет участника отслеживания к службе при ее запуске.|  
-|`TextFileTrackingParticipant`|Участник отслеживания, который получает участников отслеживания во время выполнения и сохраняет их в файле журнала как XML.|  
+|<span data-ttu-id="0f3bb-111">Класс</span><span class="sxs-lookup"><span data-stu-id="0f3bb-111">Class</span></span>|<span data-ttu-id="0f3bb-112">Описание</span><span class="sxs-lookup"><span data-stu-id="0f3bb-112">Description</span></span>|  
+|-----------|-----------------|  
+|`TextFileTrackingExtensionElement`|<span data-ttu-id="0f3bb-113">Элемент <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> используется для определения раздела конфигурации, используемого для настройки участника отслеживания текстового файла.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-113">A <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> is used to define the configuration section used to configure the text file tracking participant.</span></span> <span data-ttu-id="0f3bb-114">Это позволяет пользователям указывать место назначения файла журнала с помощью обычных файлов конфигурации платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-114">This allows users to specify the destination of the log file using standard .NET Framework configuration files.</span></span>|  
+|`TextFileTrackingBehavior`|<span data-ttu-id="0f3bb-115">Разные виды поведения в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] позволяют пользователям внедрять расширения в среду выполнения.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-115">Behaviors in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] allow users to inject extensions into the runtime.</span></span> <span data-ttu-id="0f3bb-116">Это поведение добавляет участника отслеживания к службе при ее запуске.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-116">This behavior adds the tracking participant to the service when the service starts.</span></span>|  
+|`TextFileTrackingParticipant`|<span data-ttu-id="0f3bb-117">Участник отслеживания, который получает участников отслеживания во время выполнения и сохраняет их в файле журнала как XML.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-117">The tracking participant that receives tracking participants at runtime and stores them to a log file as XML.</span></span>|  
   
-## Конфигурация элементов расширения поведения  
- Для использования элемента расширения поведения, описанного ранее с помощью файлов конфигурации .NET Framework, требуется выполнить еще один шаг.Если должно использоваться расширение, в файлы конфигурации необходимо внести следующую конфигурацию.  
+## <a name="behavior-extension-elements-configuration"></a><span data-ttu-id="0f3bb-118">Конфигурация элементов расширения поведения</span><span class="sxs-lookup"><span data-stu-id="0f3bb-118">Behavior Extension Elements Configuration</span></span>  
+ <span data-ttu-id="0f3bb-119">Для использования элемента расширения поведения, описанного ранее с помощью файлов конфигурации .NET Framework, требуется выполнить еще один шаг.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-119">One more step is required to make use of the behavior extension element previously described using .NET Framework configuration files.</span></span> <span data-ttu-id="0f3bb-120">Если должно использоваться расширение, в файлы конфигурации необходимо внести следующую конфигурацию.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-120">The following configuration must be placed in configuration files where the extension is to be used.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
     <extensions>  
       <behaviorExtensions>  
@@ -38,64 +42,63 @@ caps.handback.revision: 13
     </extensions>  
 …  
   </system.serviceModel>  
-  
 ```  
   
 > [!NOTE]
->  См. файл Web.config в образце полного примера использования конфигурации элементов расширения поведения.  
+>  <span data-ttu-id="0f3bb-121">См. файл Web.config в образце полного примера использования конфигурации элементов расширения поведения.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-121">See the Web.config file in the sample for a complete example usage of behavior extension elements configuration.</span></span>  
   
-## Пользовательские записи отслеживания  
- Файл GetStockPrices.cs демонстрирует способ создания пользовательских записей отслеживания в <xref:System.Activities.CodeActivity>.При выполнении образца найдите эту запись.  
+## <a name="custom-tracking-records"></a><span data-ttu-id="0f3bb-122">Пользовательские записи отслеживания</span><span class="sxs-lookup"><span data-stu-id="0f3bb-122">Custom Tracking Records</span></span>  
+ <span data-ttu-id="0f3bb-123">Файл GetStockPrices.cs демонстрирует способ создания пользовательских записей отслеживания в <xref:System.Activities.CodeActivity>.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-123">The GetStockPrices.cs file demonstrates how to create custom tracking records from within a <xref:System.Activities.CodeActivity>.</span></span> <span data-ttu-id="0f3bb-124">При выполнении образца найдите эту запись.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-124">Look for this record when running the sample.</span></span>  
   
-#### Использование этого образца  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="0f3bb-125">Использование этого образца</span><span class="sxs-lookup"><span data-stu-id="0f3bb-125">To use this sample</span></span>  
   
-1.  Откройте файл решения WFStockPriceApplication.sln в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="0f3bb-126">Откройте файл решения WFStockPriceApplication.sln в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0f3bb-126">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the WFStockPriceApplication.sln solution file.</span></span>  
   
-2.  Для построения решения нажмите CTRL\+SHIFT\+B.  
+2.  <span data-ttu-id="0f3bb-127">Для построения решения нажмите CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-127">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Чтобы запустить решение, нажмите клавиши CTRL\+F5.  
+3.  <span data-ttu-id="0f3bb-128">Чтобы запустить решение, нажмите клавиши CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-128">To run the solution, press CTRL+F5.</span></span>  
   
-     Откроется окно браузера со списком каталогов для приложения.  
+     <span data-ttu-id="0f3bb-129">Откроется окно браузера со списком каталогов для приложения.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-129">The browser window opens and shows the directory listing for the application.</span></span>  
   
-4.  Щелкните файл StockPriceService.xamlx в браузере.  
+4.  <span data-ttu-id="0f3bb-130">Щелкните файл StockPriceService.xamlx в браузере.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-130">In the browser, click StockPriceService.xamlx.</span></span>  
   
-5.  В браузере отображается страница **StockPriceService**, содержащая адрес WSDL локальной службы.Скопируйте этот адрес.  
+5.  <span data-ttu-id="0f3bb-131">В браузере отображается **StockPriceService** страницы, содержащей адрес wsdl локальной службы.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-131">The browser displays the **StockPriceService** page, which contains the local service wsdl address.</span></span> <span data-ttu-id="0f3bb-132">Скопируйте этот адрес.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-132">Copy this address.</span></span>  
   
-     Примером адреса WSDL локальной службы является http:\/\/localhost:53797\/StockPriceService.xamlx?wsdl.  
+     <span data-ttu-id="0f3bb-133">Примером адреса WSDL локальной службы является http://localhost:53797/StockPriceService.xamlx?wsdl.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-133">An example of the local service wsdl address is http://localhost:53797/StockPriceService.xamlx?wsdl.</span></span>  
   
-6.  В [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] перейдите в папку [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] \(по умолчанию папкой установки является папка %SystemDrive%\\Program Files\\Microsoft Visual Studio 10.0\).Затем перейдите в подпапку Common7\\IDE\\.  
+6.  <span data-ttu-id="0f3bb-134">В [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] перейдите в папку [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] (по умолчанию папкой установки является папка %SystemDrive%\Program Files\Microsoft Visual Studio 10.0).</span><span class="sxs-lookup"><span data-stu-id="0f3bb-134">Using [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], go to your [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] folder (the default installation folder is %SystemDrive%\Program Files\Microsoft Visual Studio 10.0).</span></span> <span data-ttu-id="0f3bb-135">Затем перейдите в подпапку Common7\IDE\.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-135">Then locate the Common7\IDE\ subfolder.</span></span>  
   
-7.  Дважды щелкните файл, чтобы запустить тестовый клиент WCF.  
+7.  <span data-ttu-id="0f3bb-136">Дважды щелкните файл, чтобы запустить тестовый клиент WCF.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-136">Double-click the WcfTestClient.exe file to launch the WCF Test Client.</span></span>  
   
-8.  В тестовом клиенте WCF выберите в меню **Файл** команду **Добавить службу**.  
+8.  <span data-ttu-id="0f3bb-137">В тестовом клиенте WCF выберите **добавить службу...**</span><span class="sxs-lookup"><span data-stu-id="0f3bb-137">In the WCF Test Client, select **Add Service…**</span></span> <span data-ttu-id="0f3bb-138">из **файл** меню.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-138">from the **File** menu.</span></span>  
   
-9. Вставьте в текстовое поле только что скопированный URL\-адрес.  
+9. <span data-ttu-id="0f3bb-139">Вставьте в текстовое поле только что скопированный URL-адрес.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-139">Paste the URL you just copied into the text box.</span></span>  
   
-10. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно.  
+10. <span data-ttu-id="0f3bb-140">Нажмите кнопку **ОК** чтобы закрыть диалоговое окно.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-140">Click **OK** to close the dialog.</span></span>  
   
-11. Проверьте службу с помощью тестового клиента WCF.  
+11. <span data-ttu-id="0f3bb-141">Проверьте службу с помощью тестового клиента WCF.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-141">Test the service using the WCF Test Client.</span></span>  
   
-    1.  В тестовом клиенте WCF дважды щелкните **GetStockPrice\(\)** под узлом **IStockPriceService**.  
+    1.  <span data-ttu-id="0f3bb-142">В тестовом клиенте WCF дважды щелкните **GetStockPrice()** под **IStockPriceService** узла.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-142">In the WCF Test Client, double-click **GetStockPrice()** under the **IStockPriceService** node.</span></span>  
   
-         В правой области отобразится метод **GetStockPrice\(\)** с одним параметром.  
+         <span data-ttu-id="0f3bb-143">**GetStockPrice()** метод отображается в правой области с одним параметром.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-143">The **GetStockPrice()** method appears in the right pane, with one parameter.</span></span>  
   
-    2.  Введите Contoso в качестве значения параметра.  
+    2.  <span data-ttu-id="0f3bb-144">Введите Contoso в качестве значения параметра.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-144">Type in Contoso as the value for the parameter.</span></span>  
   
-    3.  Нажмите кнопку **Вызвать**.  
+    3.  <span data-ttu-id="0f3bb-145">Нажмите кнопку **вызова**.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-145">Click **Invoke**.</span></span>  
   
-12. Просмотрите отслеживаемые события в файле журнала, расположенном в каталоге данных приложения: %APPDATA%\\trackingRecords.log.  
+12. <span data-ttu-id="0f3bb-146">Просмотрите отслеживаемые события в файле журнала, расположенном в каталоге данных приложения: %APPDATA%\trackingRecords.log.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-146">See the tracked events in the log file located in your application data directory at %APPDATA%\trackingRecords.log.</span></span>  
   
     > [!NOTE]
-    >  %APPDATA% является переменной среды, которая вычисляется как %SystemDrive%\\Users\\\<имя\_пользователя\>\\AppData\\Roaming в [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)] или в Windows Server 2008.  
+    >  <span data-ttu-id="0f3bb-147">% APPDATA % является переменной среды, которая разрешает %SystemDrive%\Users\\< имя_пользователя\>\AppData\Roaming в [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], или Windows Server 2008.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-147">The %APPDATA% is an environment variable that resolves to %SystemDrive%\Users\\<username\>\AppData\Roaming in [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], or Windows Server 2008.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="0f3bb-148">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-148">The samples may already be installed on your computer.</span></span> <span data-ttu-id="0f3bb-149">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="0f3bb-149">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="0f3bb-150">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="0f3bb-150">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="0f3bb-151">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="0f3bb-151">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Basic\Tracking\TextFileTracking`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\TextFileTracking`  
   
-## См. также  
- [Образцы наблюдения за AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a><span data-ttu-id="0f3bb-152">См. также</span><span class="sxs-lookup"><span data-stu-id="0f3bb-152">See Also</span></span>  
+ [<span data-ttu-id="0f3bb-153">Примеры мониторинга AppFabric</span><span class="sxs-lookup"><span data-stu-id="0f3bb-153">AppFabric Monitoring Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193959)

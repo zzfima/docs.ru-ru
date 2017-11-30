@@ -1,60 +1,56 @@
 ---
-title: "Извлечение абзацев и стилей (Visual Basic) | Документы Microsoft"
+title: "Извлечение абзацев и стилей (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d9ed2238-d38e-4ad4-b88b-db7859df9bde
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bb6d68296a720a796a319502c4cb2f0319727459
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 95c85b4731a9ada0a6af1a9d825bef9b873e89ee
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="retrieving-the-paragraphs-and-their-styles-visual-basic"></a>Извлечение абзацев и стилей (Visual Basic)
-В этом примере составляется запрос, при котором получаются узлы абзацев из документа WordprocessingML. Также идентифицируется стиль каждого абзаца.  
+# <a name="retrieving-the-paragraphs-and-their-styles-visual-basic"></a><span data-ttu-id="27a3d-102">Извлечение абзацев и стилей (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="27a3d-102">Retrieving the Paragraphs and Their Styles (Visual Basic)</span></span>
+<span data-ttu-id="27a3d-103">В этом примере составляется запрос, при котором получаются узлы абзацев из документа WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="27a3d-103">In this example, we write a query that retrieves the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="27a3d-104">Также идентифицируется стиль каждого абзаца.</span><span class="sxs-lookup"><span data-stu-id="27a3d-104">It also identifies the style of each paragraph.</span></span>  
   
- Этот запрос строится на основе запроса в предыдущем примере [поиск стиля абзаца по умолчанию (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md), который получает стиль по умолчанию из списка стилей. Эти сведения требуются для того, чтобы запрос мог идентифицировать стиль абзацев, для которых явно не установлен стиль. Стили абзацев устанавливаются при помощи элемента `w:pPr`. Если абзац не содержит этот элемент, выполняется форматирование стилем по умолчанию.  
+ <span data-ttu-id="27a3d-105">Этот запрос основан на запросе в предыдущем примере [поиск стиля абзаца по умолчанию (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md), который получает стиль по умолчанию из списка стилей.</span><span class="sxs-lookup"><span data-stu-id="27a3d-105">This query builds on the query in the previous example, [Finding the Default Paragraph Style (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md), which retrieves the default style from the list of styles.</span></span> <span data-ttu-id="27a3d-106">Эти сведения требуются для того, чтобы запрос мог идентифицировать стиль абзацев, для которых явно не установлен стиль.</span><span class="sxs-lookup"><span data-stu-id="27a3d-106">This information is required so that the query can identify the style of paragraphs that do not have a style explicitly set.</span></span> <span data-ttu-id="27a3d-107">Стили абзацев устанавливаются при помощи элемента `w:pPr`. Если абзац не содержит этот элемент, выполняется форматирование стилем по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="27a3d-107">Paragraph styles are set through the `w:pPr` element; if a paragraph does not contain this element, it is formatted with the default style.</span></span>  
   
- В этом разделе объясняется значение некоторых фрагментов запроса, после чего запрос показывается в составе целостного рабочего примера.  
+ <span data-ttu-id="27a3d-108">В этом разделе объясняется значение некоторых фрагментов запроса, после чего запрос показывается в составе целостного рабочего примера.</span><span class="sxs-lookup"><span data-stu-id="27a3d-108">This topic explains the significance of some pieces of the query, then shows the query as part of a complete, working example.</span></span>  
   
-## <a name="example"></a>Пример  
- Источник этого запроса по получению всех абзацев документа и их стилей таков:  
+## <a name="example"></a><span data-ttu-id="27a3d-109">Пример</span><span class="sxs-lookup"><span data-stu-id="27a3d-109">Example</span></span>  
+ <span data-ttu-id="27a3d-110">Источник этого запроса по получению всех абзацев документа и их стилей таков:</span><span class="sxs-lookup"><span data-stu-id="27a3d-110">The source of the query to retrieve all the paragraphs in a document and their styles is as follows:</span></span>  
   
 ```vb  
 xDoc.Root.<w:body>...<w:p>  
 ```  
   
- Это выражение напоминает источник запроса в предыдущем примере [поиск стиля абзаца по умолчанию (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md). Основное различие заключается в том, что он использует <xref:System.Xml.Linq.XContainer.Descendants%2A>оси вместо <xref:System.Xml.Linq.XContainer.Elements%2A>оси.</xref:System.Xml.Linq.XContainer.Elements%2A> </xref:System.Xml.Linq.XContainer.Descendants%2A> Запрос использует <xref:System.Xml.Linq.XContainer.Descendants%2A>оси так, как в документах, имеются разделы, абзацы не будут прямыми потомками элемента текста; вместо этого будут находиться на два уровня вниз по иерархии.</xref:System.Xml.Linq.XContainer.Descendants%2A> С помощью <xref:System.Xml.Linq.XContainer.Descendants%2A>оси, этот код будет работать вне зависимости от того, является ли используются разделы.</xref:System.Xml.Linq.XContainer.Descendants%2A>  
+ <span data-ttu-id="27a3d-111">Это выражение похоже на источник запроса в предыдущем примере [поиск стиля абзаца по умолчанию (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md).</span><span class="sxs-lookup"><span data-stu-id="27a3d-111">This expression is similar to the source of the query in the previous example, [Finding the Default Paragraph Style (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md).</span></span> <span data-ttu-id="27a3d-112">Основная разница в том, что здесь используется ось <xref:System.Xml.Linq.XContainer.Descendants%2A> вместо оси <xref:System.Xml.Linq.XContainer.Elements%2A>.</span><span class="sxs-lookup"><span data-stu-id="27a3d-112">The main difference is that it uses the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis instead of the <xref:System.Xml.Linq.XContainer.Elements%2A> axis.</span></span> <span data-ttu-id="27a3d-113">В запросе используется ось <xref:System.Xml.Linq.XContainer.Descendants%2A>, поскольку в документах, в которых имеются разделы, абзацы не будут прямыми потомками элемента текста, а будут находиться на два уровня ниже в иерархии.</span><span class="sxs-lookup"><span data-stu-id="27a3d-113">The query uses the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis because in documents that have sections, the paragraphs will not be the direct children of the body element; rather, the paragraphs will be two levels down in the hierarchy.</span></span> <span data-ttu-id="27a3d-114">За счет использования оси <xref:System.Xml.Linq.XContainer.Descendants%2A> этот код будет работать вне зависимости от того, используются разделы или нет.</span><span class="sxs-lookup"><span data-stu-id="27a3d-114">By using the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis, the code will work of whether or not the document uses sections.</span></span>  
   
-## <a name="example"></a>Пример  
- В этом разделе используется предложение `Let`, чтобы определить элемент, содержащий узел стиля. Если элемент не найден, то `styleNode` устанавливается в значение `Nothing`:  
+## <a name="example"></a><span data-ttu-id="27a3d-115">Пример</span><span class="sxs-lookup"><span data-stu-id="27a3d-115">Example</span></span>  
+ <span data-ttu-id="27a3d-116">В этом разделе используется предложение `Let`, чтобы определить элемент, содержащий узел стиля.</span><span class="sxs-lookup"><span data-stu-id="27a3d-116">The query uses a `Let` clause to determine the element that contains the style node.</span></span> <span data-ttu-id="27a3d-117">Если элемент не найден, то `styleNode` устанавливается в значение `Nothing`:</span><span class="sxs-lookup"><span data-stu-id="27a3d-117">If there is no element, then `styleNode` is set to `Nothing`:</span></span>  
   
 ```vb  
 Let styleNode As XElement = para.<w:pPr>.<w:pStyle>.FirstOrDefault()  
 ```  
   
- `Let` Сначала использует предложение <xref:System.Xml.Linq.XContainer.Elements%2A>оси, чтобы найти все элементы с именем `pPr`, затем использует <xref:System.Xml.Linq.Extensions.Elements%2A>метод расширения, чтобы найти все дочерние элементы с именем `pStyle`и затем использует <xref:System.Linq.Enumerable.FirstOrDefault%2A>стандартного оператора запроса для преобразования коллекции в одноэлементный.</xref:System.Linq.Enumerable.FirstOrDefault%2A> </xref:System.Xml.Linq.Extensions.Elements%2A> </xref:System.Xml.Linq.XContainer.Elements%2A> Если коллекция пуста, `styleNode` устанавливается в значение `Nothing`. Это выражение полезно для поиска потомков узла `pStyle`. Обратите внимание, что, если дочерний узел `pPr` не существует, код продолжает работать, а не выводит исключение. Вместо этого узел `styleNode` устанавливается в значение `Nothing`, что именно и требуется для предложения `Let`.  
+ <span data-ttu-id="27a3d-118">Предложение `Let` сначала использует ось <xref:System.Xml.Linq.XContainer.Elements%2A> для поиска всех элементов с названием `pPr`, затем использует метод расширений <xref:System.Xml.Linq.Extensions.Elements%2A> для поиска всех дочерних элементов с названием `pStyle` и затем использует стандартный оператор запросов <xref:System.Linq.Enumerable.FirstOrDefault%2A> для объединения коллекции в одно целое.</span><span class="sxs-lookup"><span data-stu-id="27a3d-118">The `Let` clause first uses the <xref:System.Xml.Linq.XContainer.Elements%2A> axis to find all elements named `pPr`, then uses the <xref:System.Xml.Linq.Extensions.Elements%2A> extension method to find all child elements named `pStyle`, and finally uses the <xref:System.Linq.Enumerable.FirstOrDefault%2A> standard query operator to convert the collection to a singleton.</span></span> <span data-ttu-id="27a3d-119">Если коллекция пуста, `styleNode` устанавливается в значение `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="27a3d-119">If the collection is empty, `styleNode` is set to `Nothing`.</span></span> <span data-ttu-id="27a3d-120">Это выражение полезно для поиска потомков узла `pStyle`.</span><span class="sxs-lookup"><span data-stu-id="27a3d-120">This is a useful idiom to look for the `pStyle` descendant node.</span></span> <span data-ttu-id="27a3d-121">Обратите внимание, что, если дочерний узел `pPr` не существует, код продолжает работать, а не выводит исключение. Вместо этого узел `styleNode` устанавливается в значение `Nothing`, что именно и требуется для предложения `Let`.</span><span class="sxs-lookup"><span data-stu-id="27a3d-121">Note that if the `pPr` child node does not exist, the code does nor fail by throwing an exception; instead, `styleNode` is set to `Nothing`, which is the desired behavior of this `Let` clause.</span></span>  
   
- В этом запросе выполняется проецирование коллекции анонимного типа с двумя членами, `StyleName` и `ParagraphNode`.  
+ <span data-ttu-id="27a3d-122">В этом запросе выполняется проецирование коллекции анонимного типа с двумя членами, `StyleName` и `ParagraphNode`.</span><span class="sxs-lookup"><span data-stu-id="27a3d-122">The query projects a collection of an anonymous type with two members, `StyleName` and `ParagraphNode`.</span></span>  
   
-## <a name="example"></a>Пример  
- В данном примере обрабатывается документ WordprocessingML, из которого извлекаются узлы абзацев. Также идентифицируется стиль каждого абзаца. Этот пример основан на предыдущих примерах данного учебника. Новый запрос выявляется в комментариях в нижеприведенном коде.  
+## <a name="example"></a><span data-ttu-id="27a3d-123">Пример</span><span class="sxs-lookup"><span data-stu-id="27a3d-123">Example</span></span>  
+ <span data-ttu-id="27a3d-124">В данном примере обрабатывается документ WordprocessingML, из которого извлекаются узлы абзацев.</span><span class="sxs-lookup"><span data-stu-id="27a3d-124">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="27a3d-125">Также идентифицируется стиль каждого абзаца.</span><span class="sxs-lookup"><span data-stu-id="27a3d-125">It also identifies the style of each paragraph.</span></span> <span data-ttu-id="27a3d-126">Этот пример основан на предыдущих примерах данного учебника.</span><span class="sxs-lookup"><span data-stu-id="27a3d-126">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="27a3d-127">Новый запрос выявляется в комментариях в нижеприведенном коде.</span><span class="sxs-lookup"><span data-stu-id="27a3d-127">The new query is called out in comments in the code below.</span></span>  
   
- Можно найти инструкции по созданию исходного документа для данного примера в [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ <span data-ttu-id="27a3d-128">Имеются инструкции по созданию исходного документа для этого примера в [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="27a3d-128">You can find instructions for creating the source document for this example in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- В этом примере используются классы, находящиеся в сборке WindowsBase. Используются типы из <xref:System.IO.Packaging?displayProperty=fullName>имен.</xref:System.IO.Packaging?displayProperty=fullName>  
+ <span data-ttu-id="27a3d-129">В этом примере используются классы, находящиеся в сборке WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="27a3d-129">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="27a3d-130">Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="27a3d-130">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -124,7 +120,7 @@ Module Module1
 End Module  
 ```  
   
- В этом примере выводятся следующие выходные данные при применении к документу, описанному в [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ <span data-ttu-id="27a3d-131">В этом примере выводятся следующие выходные данные при применении к документу, описанной в [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="27a3d-131">This example produces the following output when applied to the document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
 ```  
 StyleName:Heading1  
@@ -144,8 +140,8 @@ StyleName:Normal
 StyleName:Code  
 ```  
   
-## <a name="next-steps"></a>Дальнейшие действия  
- В следующем разделе [извлечение текста абзацев (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), вы создадите запрос на извлечение текста абзацев.  
+## <a name="next-steps"></a><span data-ttu-id="27a3d-132">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="27a3d-132">Next Steps</span></span>  
+ <span data-ttu-id="27a3d-133">В следующем разделе [извлечение текста абзацев (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), вы создадите запрос на извлечение текста абзацев.</span><span class="sxs-lookup"><span data-stu-id="27a3d-133">In the next topic, [Retrieving the Text of the Paragraphs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), you'll create a query to retrieve the text of paragraphs.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Учебное руководство: Управление содержимым в документе WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a><span data-ttu-id="27a3d-134">См. также</span><span class="sxs-lookup"><span data-stu-id="27a3d-134">See Also</span></span>  
+ [<span data-ttu-id="27a3d-135">Учебник: Управление содержимым в документе WordprocessingML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="27a3d-135">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

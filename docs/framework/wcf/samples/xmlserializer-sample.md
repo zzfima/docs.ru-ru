@@ -1,30 +1,33 @@
 ---
-title: "Образец XmlSerializer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Пример XmlSerializer"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-caps.latest.revision: 23
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dc224de36f607bd1f15e10987c68b14a69e992b5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Образец XmlSerializer
-Данный образец демонстрирует выполнение сериализации и десериализации типов, совместимых с <xref:System.Xml.Serialization.XmlSerializer>.Модуль форматирования [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] по умолчанию является классом <xref:System.Runtime.Serialization.DataContractSerializer>.Класс <xref:System.Xml.Serialization.XmlSerializer> может быть использован для выполнения сериализации и десериализации типов в том случае, когда не может быть использован класс <xref:System.Runtime.Serialization.DataContractSerializer>.Это часто происходит, когда требуется четкий контроль над XML — например, если фрагмент данных должен быть атрибутом XML, а не XML\-элементом.Кроме того, сериализатор <xref:System.Xml.Serialization.XmlSerializer> часто выбирается автоматически при создании клиентов для служб, не относящихся к [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+# <a name="xmlserializer-sample"></a><span data-ttu-id="a0ea8-102">Пример XmlSerializer</span><span class="sxs-lookup"><span data-stu-id="a0ea8-102">XMLSerializer Sample</span></span>
+<span data-ttu-id="a0ea8-103">Данный образец демонстрирует выполнение сериализации и десериализации типов, совместимых с <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="a0ea8-103">This sample demonstrates how to serialize and deserialize types that are compatible with the <xref:System.Xml.Serialization.XmlSerializer>.</span></span> <span data-ttu-id="a0ea8-104">Модуль форматирования [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] по умолчанию является классом <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="a0ea8-104">The default [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] formatter is the <xref:System.Runtime.Serialization.DataContractSerializer> class.</span></span> <span data-ttu-id="a0ea8-105">Класс <xref:System.Xml.Serialization.XmlSerializer> может быть использован для выполнения сериализации и десериализации типов в том случае, когда не может быть использован класс <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="a0ea8-105">The <xref:System.Xml.Serialization.XmlSerializer> class can be used to serialize and deserialize types when the <xref:System.Runtime.Serialization.DataContractSerializer> class cannot be used.</span></span> <span data-ttu-id="a0ea8-106">Это часто происходит, когда требуется четкий контроль над XML - например, если фрагмент данных должен быть атрибутом XML, а не XML-элементом.</span><span class="sxs-lookup"><span data-stu-id="a0ea8-106">This is often the case when precise control over the XML is required - for example, if a piece of data must be an XML attribute and not an XML element.</span></span> <span data-ttu-id="a0ea8-107">Кроме того, сериализатор <xref:System.Xml.Serialization.XmlSerializer> часто выбирается автоматически при создании клиентов для служб, не относящихся к [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a0ea8-107">Also, the <xref:System.Xml.Serialization.XmlSerializer> often gets automatically selected when creating clients for non-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services.</span></span>  
   
- В этом образце клиентом является консольное приложение \(EXE\), а служба размещается в службах IIS.  
+ <span data-ttu-id="a0ea8-108">В этом образце клиентом является консольное приложение (EXE), а служба размещается в службах IIS.</span><span class="sxs-lookup"><span data-stu-id="a0ea8-108">In this sample, the client is a console application (.exe) and the service is hosted by Internet Information Services (IIS).</span></span>  
   
 > [!NOTE]
->  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
+>  <span data-ttu-id="a0ea8-109">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="a0ea8-109">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- Как показано в следующем образце кода, к интерфейсу должны быть применены атрибуты <xref:System.ServiceModel.ServiceContractAttribute> и <xref:System.ServiceModel.XmlSerializerFormatAttribute>.  
+ <span data-ttu-id="a0ea8-110">Как показано в следующем образце кода, к интерфейсу должны быть применены атрибуты <xref:System.ServiceModel.ServiceContractAttribute> и <xref:System.ServiceModel.XmlSerializerFormatAttribute>.</span><span class="sxs-lookup"><span data-stu-id="a0ea8-110">The <xref:System.ServiceModel.ServiceContractAttribute> and <xref:System.ServiceModel.XmlSerializerFormatAttribute> must be applied to the interface as shown in the following sample code.</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"), XmlSerializerFormat]  
@@ -39,10 +42,9 @@ public interface IXmlSerializerCalculator
     [OperationContract]  
     ComplexNumber Divide(ComplexNumber n1, ComplexNumber n2);  
 }  
-  
 ```  
   
- Общие члены класса `ComplexNumber` сериализуются с помощью <xref:System.Xml.Serialization.XmlSerializer> как атрибуты XML.Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> не может быть использован для создания данного вида экземпляра XML.  
+ <span data-ttu-id="a0ea8-111">Общие члены класса `ComplexNumber` сериализуются с помощью <xref:System.Xml.Serialization.XmlSerializer> как атрибуты XML.</span><span class="sxs-lookup"><span data-stu-id="a0ea8-111">The public members of `ComplexNumber` class are serialized by <xref:System.Xml.Serialization.XmlSerializer> as XML attributes.</span></span> <span data-ttu-id="a0ea8-112">Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> не может быть использован для создания данного вида экземпляра XML.</span><span class="sxs-lookup"><span data-stu-id="a0ea8-112">The <xref:System.Runtime.Serialization.DataContractSerializer> cannot be used to create this kind of XML instance.</span></span>  
   
 ```  
 public class ComplexNumber  
@@ -78,7 +80,7 @@ public class ComplexNumber
 }  
 ```  
   
- Реализация службы рассчитывает и возвращает соответствующий результат, принимая и возвращая значения типа `ComplexNumber`.  
+ <span data-ttu-id="a0ea8-113">Реализация службы рассчитывает и возвращает соответствующий результат, принимая и возвращая значения типа `ComplexNumber`.</span><span class="sxs-lookup"><span data-stu-id="a0ea8-113">The service implementation calculates and returns the appropriate result—accepting and returning values of the `ComplexNumber` type.</span></span>  
   
 ```  
 public class XmlSerializerCalculatorService : IXmlSerializerCalculator  
@@ -90,10 +92,9 @@ public class XmlSerializerCalculatorService : IXmlSerializerCalculator
     }  
     …  
 }  
-  
 ```  
   
- Реализация клиента также оперирует комплексными числами.Контракт службы и типы данных определяются во входном файле generatedClient.cs, который был создан с помощью средства [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) из метаданных службы.Svcutil.exe может определить, когда контракт не сериализуется с помощью сериализатора <xref:System.Runtime.Serialization.DataContractSerializer>, и в этом случае возвращается к выдаче типов `XmlSerializable`.Если нужно принудительно использовать сериализатор <xref:System.Xml.Serialization.XmlSerializer>, можно указать в средстве Svcutil.exe параметр \/serializer:XmlSerializer \(использование XmlSerializer\).  
+ <span data-ttu-id="a0ea8-114">Реализация клиента также оперирует комплексными числами.</span><span class="sxs-lookup"><span data-stu-id="a0ea8-114">The client implementation also uses complex numbers.</span></span> <span data-ttu-id="a0ea8-115">Контракт службы и типы данных определяются в исходном файле generatedClient.cs, созданных [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) из метаданных службы.</span><span class="sxs-lookup"><span data-stu-id="a0ea8-115">Both the service contract and the data types are defined in the generatedClient.cs source file, which was generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) from service metadata.</span></span> <span data-ttu-id="a0ea8-116">Svcutil.exe может определить, когда контракт не сериализуется с помощью сериализатора <xref:System.Runtime.Serialization.DataContractSerializer>, и в этом случае возвращается к выдаче типов `XmlSerializable`.</span><span class="sxs-lookup"><span data-stu-id="a0ea8-116">Svcutil.exe can detect when a contract is not serializable by the <xref:System.Runtime.Serialization.DataContractSerializer> and reverts to emitting `XmlSerializable` types in this case.</span></span> <span data-ttu-id="a0ea8-117">Если нужно принудительно использовать сериализатор <xref:System.Xml.Serialization.XmlSerializer>, можно указать в средстве Svcutil.exe параметр /serializer:XmlSerializer (использование XmlSerializer).</span><span class="sxs-lookup"><span data-stu-id="a0ea8-117">If you want to force the use of the <xref:System.Xml.Serialization.XmlSerializer>, you can pass the /serializer:XmlSerializer (use XmlSerializer) command option to the Svcutil.exe tool.</span></span>  
   
 ```  
 // Create a client.  
@@ -113,10 +114,9 @@ Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",
     result.Real, result.Imaginary);  
     …  
 }  
-  
 ```  
   
- При выполнении образца запросы и ответы операций отображаются в окне консоли клиента.Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
+ <span data-ttu-id="a0ea8-118">При выполнении примера запросы и ответы операций отображаются в окне консоли клиента.</span><span class="sxs-lookup"><span data-stu-id="a0ea8-118">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="a0ea8-119">Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.</span><span class="sxs-lookup"><span data-stu-id="a0ea8-119">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
@@ -127,21 +127,21 @@ Divide(3 + 7i, 5 + -2i) = 0.0344827586206897 + 1.41379310344828i
 Press <ENTER> to terminate client.  
 ```  
   
-### Настройка, построение и выполнение образца  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="a0ea8-120">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="a0ea8-120">To set up, build, and run the sample</span></span>  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="a0ea8-121">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="a0ea8-121">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="a0ea8-122">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="a0ea8-122">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в разделе [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="a0ea8-123">Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="a0ea8-123">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="a0ea8-124">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="a0ea8-124">The samples may already be installed on your machine.</span></span> <span data-ttu-id="a0ea8-125">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="a0ea8-125">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="a0ea8-126">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="a0ea8-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="a0ea8-127">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="a0ea8-127">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Client\Interop\XmlSerializer`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\XmlSerializer`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="a0ea8-128">См. также</span><span class="sxs-lookup"><span data-stu-id="a0ea8-128">See Also</span></span>
