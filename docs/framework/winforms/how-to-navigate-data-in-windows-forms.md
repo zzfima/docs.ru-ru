@@ -1,63 +1,67 @@
 ---
-title: "Практическое руководство. Навигация по набору данных, отображаемых в форме Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "CurrencyManager - класс, перемещение по данным в формах Windows Forms"
-  - "курсоры, источники данных"
-  - "данные [Windows Forms], переходы"
-  - "источники данных, Windows Forms"
-  - "Windows Forms, переходы"
+title: "Практическое руководство. Навигация по набору данных, отображаемых в форме Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- cursors [Windows Forms], data sources
+- data sources [Windows Forms], Windows Forms
+- Windows Forms, navigating
+- CurrencyManager class [Windows Forms], navigating Windows Forms data
+- data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7c754bba18e93f63306701381f66af04b593c473
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Навигация по набору данных, отображаемых в форме Windows Forms
-Наиболее простым способом перехода по записям источника данных в приложении Windows является привязка компонента <xref:System.Windows.Forms.BindingSource> к источнику данных и последующая привязка элементов управления к компоненту <xref:System.Windows.Forms.BindingSource>.  После этого можно использовать встроенные методы навигации компонента <xref:System.Windows.Forms.BindingSource>, например <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> и <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>.  Использование этих методов позволит правильно настроить свойства <xref:System.Windows.Forms.BindingSource.Position%2A> и <xref:System.Windows.Forms.BindingSource.Current%2A> компонента <xref:System.Windows.Forms.BindingSource>.  Можно также найти элемент и сделать его текущим, установив свойство <xref:System.Windows.Forms.BindingSource.Position%2A>.  
+# <a name="how-to-navigate-data-in-windows-forms"></a>Практическое руководство. Навигация по набору данных, отображаемых в форме Windows Forms
+Самым простым способом перемещения по записям в источнике данных в приложении Windows является привязка <xref:System.Windows.Forms.BindingSource> компонент источника данных, а затем привязать элементы управления к <xref:System.Windows.Forms.BindingSource>. Затем можно использовать встроенные методы навигации на <xref:System.Windows.Forms.BindingSource> такие <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> и <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. С помощью этих методов настроит <xref:System.Windows.Forms.BindingSource.Position%2A> и <xref:System.Windows.Forms.BindingSource.Current%2A> свойства <xref:System.Windows.Forms.BindingSource> соответствующим образом. Можно также найти элемент и задать его в качестве текущего элемента, задав <xref:System.Windows.Forms.BindingSource.Position%2A> свойство.  
   
-### Увеличение позиции в источнике данных  
+### <a name="to-increment-the-position-in-a-data-source"></a>Увеличение позиции в источнике данных  
   
-1.  Присвойте номер записи связанных данных, на которую следует переместиться, свойству <xref:System.Windows.Forms.BindingSource.Position%2A> компонента <xref:System.Windows.Forms.BindingSource> .  В следующем примере демонстрируется использование метода <xref:System.Windows.Forms.BindingSource.MoveNext%2A> компонента <xref:System.Windows.Forms.BindingSource> для увеличения значения свойства <xref:System.Windows.Forms.BindingSource.Position%2A> при щелчке элемента управления `nextButton`.  Компонент <xref:System.Windows.Forms.BindingSource> связан с таблицей `Customers` набора данных `Northwind`.  
+1.  Задать <xref:System.Windows.Forms.BindingSource.Position%2A> свойство <xref:System.Windows.Forms.BindingSource> для позиции записи, чтобы перейти на связанных данных. В следующем примере демонстрируется использование <xref:System.Windows.Forms.BindingSource.MoveNext%2A> метод <xref:System.Windows.Forms.BindingSource> увеличиваемого <xref:System.Windows.Forms.BindingSource.Position%2A> свойство при `nextButton` нажатии. <xref:System.Windows.Forms.BindingSource> Связан с `Customers` набора данных `Northwind`.  
   
     > [!NOTE]
-    >  Если для свойства <xref:System.Windows.Forms.BindingSource.Position%2A> задать значение, которое выходит за пределы диапазона, ограниченного первой и последней записями, это не приведет к ошибке, так как платформа [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] не разрешит задать значение положения, выходящее за границы списка.  Если в приложении важно знать, достигнута ли первая или последняя запись, добавьте логику для проверки превышения количества элементов данных.  
+    >  Установка <xref:System.Windows.Forms.BindingSource.Position%2A> значение за пределами первой или последней записи не приводит к ошибке как [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] не позволяют задать положение значение, выходящее за пределы списка. Если важно знать, достигнута ли первой или последней записи приложения, добавьте логику для проверки превышения количества элементов данных.  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.NavigatingData#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#4)]  
   
-### Чтобы проверить, достигнута ли первая или последняя запись, выполните следующие действия.  
+### <a name="to-check-whether-you-have-passed-the-end-or-beginning"></a>Чтобы проверить, является ли начала или конца  
   
-1.  Создайте обработчик событий для события <xref:System.Windows.Forms.BindingSource.PositionChanged>.  В обработчике можно проверить, превысило ли предполагаемое значение положения действительное значение счетчика элементов данных.  
+1.  Создайте обработчик событий для события <xref:System.Windows.Forms.BindingSource.PositionChanged>. В обработчике можно проверить ли предлагаемое позиция превысил счетчик элемент фактические данные.  
   
-     В следующем примере показано, как можно реализовать проверку достижения последнего элемента данных.  В примере при достижении последнего элемента отключается кнопка **Далее**.  
+     В следующем примере показано, как можно проверить ли достижения последнего элемента данных. В примере, если вы находитесь на последний элемент **Далее** отключить кнопку в форме.  
   
     > [!NOTE]
-    >  Обратите внимание, что при изменении списка, по которому перемещается пользователь, в коде следует снова включить кнопку **Далее**, чтобы пользователи могли просматривать новый список целиком.  Кроме того, следует учесть, что вышеупомянутое событие <xref:System.Windows.Forms.BindingSource.PositionChanged> используемого компонента <xref:System.Windows.Forms.BindingSource> должно быть связано со своим методом обработки событий.  Ниже приведен пример метода обработки события <xref:System.Windows.Forms.BindingSource.PositionChanged>.  
+    >  Имейте в виду, что следует изменить список Навигация в коде, следует снова включить **Далее** кнопку, чтобы пользователи могли просматривать всю длину нового списка. Кроме того, имейте в виду, указанных выше <xref:System.Windows.Forms.BindingSource.PositionChanged> событий для конкретного <xref:System.Windows.Forms.BindingSource> вы работаете с должно быть связано со своим методом обработки событий. Ниже приведен пример метода обработки <xref:System.Windows.Forms.BindingSource.PositionChanged> событий:  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.NavigatingData#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#3)]  
   
-### Чтобы найти элемент и сделать его текущим, выполните следующие действия.  
+### <a name="to-find-an-item-and-set-it-as-the-current-item"></a>Чтобы найти элемент и задать его в качестве текущего элемента  
   
-1.  Найдите запись, которую необходимо сделать текущим элементом.  Если источник данных реализует интерфейс <xref:System.ComponentModel.IBindingList>, то для поиска элемента можно использовать метод <xref:System.Windows.Forms.BindingSource.Find%2A> компонента <xref:System.Windows.Forms.BindingSource>.  В качестве примеров источников данных, реализующих интерфейс <xref:System.ComponentModel.IBindingList>, можно назвать объекты <xref:System.ComponentModel.BindingList%601> и <xref:System.Data.DataView>.  
+1.  Найдите запись, которую вы хотите установить в качестве текущего элемента. Это можно сделать с помощью <xref:System.Windows.Forms.BindingSource.Find%2A> метод <xref:System.Windows.Forms.BindingSource>, если источник данных реализует <xref:System.ComponentModel.IBindingList>. Некоторые примеры данных источники, реализующие <xref:System.ComponentModel.IBindingList> , <xref:System.ComponentModel.BindingList%601> и <xref:System.Data.DataView>.  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.NavigatingData#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
   
-## См. также  
- [Источники данных, поддерживаемые Windows Forms](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)   
- [Получение уведомления об изменении данных, связанных с элементом управления, в Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)   
- [Связывание данных и Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)   
- [Связывание элементов управления Windows Forms с данными](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a>См. также  
+ [Источники данных, поддерживаемые Windows Forms](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)  
+ [Уведомления об изменениях в привязке данных Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
+ [Привязка данных и Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
+ [Привязка данных Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)

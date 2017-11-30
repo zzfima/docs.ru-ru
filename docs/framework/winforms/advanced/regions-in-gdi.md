@@ -1,51 +1,55 @@
 ---
-title: "Области в GDI+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "рисование, области"
-  - "GDI+, области"
-  - "области"
+title: "Области в GDI+"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- GDI+, regions
+- drawing [Windows Forms], regions
+- regions
 ms.assetid: 52184f9b-16dd-4bbd-85be-029112644ceb
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0525e7b58353909d41e5367aa52a17aa56bcd77c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Области в GDI+
-Область — это часть зоны, отображаемой устройством вывода.  Области могут быть как простыми \(один прямоугольник\), так и сложными \(набор многоугольников и замкнутых кривых\).  На приведенном ниже рисунке изображены две области: одна из них образована прямоугольником, а другая образована контуром.  
+# <a name="regions-in-gdi"></a>Области в GDI+
+Область — это часть области отображения устройство вывода. Области могут быть простой (один прямоугольник) или сложными (набор многоугольников и замкнутых кривых). На следующем рисунке показано две области: один из них образована прямоугольником, а другая образована путь.  
   
- ![Области](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art27.png "AboutGdip02\_Art27")  
+ ![Регионы](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art27.gif "AboutGdip02_Art27")  
   
-## Использование областей  
- Области часто используются для задания обрезки и для проверки попадания в некоторую зону.  Обрезка заключается в запрете на рисование вне границ определенной области экрана, обычно это область, нуждающаяся в обновлении.  Проверка на попадание заключается в определении, находился ли курсор в определенной области экрана, когда была нажата кнопка мыши.  
+## <a name="using-regions"></a>Использование областей  
+ Области часто используются для обрезки и проверка нажатия. Отсечение заключается в запрете на рисование определенной области отображения, обычно это область, необходимо обновить. Проверка на наличие данных включает в себя проверку, чтобы определить, находится ли курсор в области экрана при нажатии кнопки мыши.  
   
- Область можно построить на основе прямоугольника или контура.  .Можно также создавать сложные области путем объединения существующих областей.  У класса <xref:System.Drawing.Region> имеются следующие методы для объединения областей: <xref:System.Drawing.Region.Intersect%2A>, <xref:System.Drawing.Region.Union%2A>, <xref:System.Drawing.Region.Xor%2A>, <xref:System.Drawing.Region.Exclude%2A> и <xref:System.Drawing.Region.Complement%2A>.  
+ Можно создать регион из прямоугольника или путь. Можно также создавать сложные области путем объединения существующих областей. <xref:System.Drawing.Region> Класс предоставляет следующие методы для объединения областей: <xref:System.Drawing.Region.Intersect%2A>, <xref:System.Drawing.Region.Union%2A>, <xref:System.Drawing.Region.Xor%2A>, <xref:System.Drawing.Region.Exclude%2A>, и <xref:System.Drawing.Region.Complement%2A>.  
   
- Пересечение двух областей состоит из всех точек, принадлежащих обеим областям.  Объединение — это набор из всех точек, принадлежащих одной или обеим областям.  Дополнение области состоит из всех точек, не входящих в область.  На приведенном ниже рисунке изображено пересечение и объединение двух областей, изображенных на предыдущем рисунке.  
+ Пересечение двух областей — это совокупность всех точек, принадлежащих обоих регионах. Объединение — это набор всех точек, принадлежащих одной или обеих областей. Дополнение области — это набор всех точек, которые не находятся в области. Пересечение и объединение двух областей, на предыдущем рисунке показано на следующем рисунке.  
   
- ![Области](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art28.png "AboutGdip02\_Art28")  
+ ![Регионы](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art28.gif "AboutGdip02_Art28")  
   
- Метод <xref:System.Drawing.Region.Xor%2A>, примененный к паре областей, выдает область, содержащую все точки, которые принадлежат только одной из заданных областей, но не им обеим.  Метод <xref:System.Drawing.Region.Exclude%2A>, примененный к паре областей, выдает область, содержащую все точки первой области, не являющиеся точками второй области.  На приведенном ниже рисунке изображены области, полученные в результате применения методов <xref:System.Drawing.Region.Xor%2A> и <xref:System.Drawing.Region.Exclude%2A> к двум областям, изображение которых приведено в начале раздела.  
+ <xref:System.Drawing.Region.Xor%2A> Метод, примененный к паре областей, выдает область, содержащую все точки, которые принадлежат к одной области или другой, но не оба. <xref:System.Drawing.Region.Exclude%2A> Метод, примененный к паре областей, выдает область, содержащую все точки первой области, которые не являются второй области. На следующем рисунке показан областей, которые являются результатом применения <xref:System.Drawing.Region.Xor%2A> и <xref:System.Drawing.Region.Exclude%2A> методы для двух регионах, показанный в начале этого раздела.  
   
- ![Области](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art29.png "AboutGdip02\_Art29")  
+ ![Регионы](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art29.gif "AboutGdip02_Art29")  
   
- Чтобы залить область, требуются объекты <xref:System.Drawing.Graphics>, <xref:System.Drawing.Brush> и <xref:System.Drawing.Region>.  У объекта <xref:System.Drawing.Graphics> имеется метод <xref:System.Drawing.Graphics.FillRegion%2A>, а объект <xref:System.Drawing.Brush> предназначен для хранения таких параметров заливки, как ее цвет и шаблон.  В приведенном ниже примере демонстрируется заливка области сплошным цветом.  
+ Чтобы заполнить область, необходимо <xref:System.Drawing.Graphics> объекта, <xref:System.Drawing.Brush> объекта и <xref:System.Drawing.Region> объекта. <xref:System.Drawing.Graphics> Объект предоставляет <xref:System.Drawing.Graphics.FillRegion%2A> метода и <xref:System.Drawing.Brush> объект хранилищем атрибутов, таких как цвета или узора заливки. Следующий пример заполняет область сплошным цветом.  
   
  [!code-csharp[LinesCurvesAndShapes#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#61)]
  [!code-vb[LinesCurvesAndShapes#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#61)]  
   
-## См. также  
- <xref:System.Drawing.Region?displayProperty=fullName>   
- [Прямые и кривые линии и фигуры](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Drawing.Region?displayProperty=nameWithType>  
+ [Линии, кривые и фигуры](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
  [Использование областей](../../../../docs/framework/winforms/advanced/using-regions.md)

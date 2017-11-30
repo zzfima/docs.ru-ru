@@ -1,47 +1,39 @@
 ---
-title: "Операции проецирования (Visual Basic) | Документы Microsoft"
+title: "Операции проецирования (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8876e65e752e0b18404ec32aecdcad7805533840
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4927a27795881c34b689a2054ee8697575b53026
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="projection-operations-visual-basic"></a>Операции проецирования (Visual Basic)
-Проекцией называют операцию преобразования объекта в новую форму, которая часто состоит только те свойства, которые будут использоваться впоследствии. С помощью проекции можно создать новый тип, построенный из каждого объекта. Можно проецировать свойство и выполнять математические функции над ней. Также можно проецировать исходный объект без изменения его.  
+Проекцией называют операцию преобразования объекта в новую форму, которая часто состоит только из тех его свойств, которые будут использоваться впоследствии. С помощью проекции можно создать новый тип, построенный из каждого объекта. Вы можете проецировать свойство и выполнять над ним математические функции. Также можно проецировать исходный объект, не изменяя его.  
   
- В следующем разделе перечислены методы стандартных операторов запросов, выполняющие проекции.  
+ Методы стандартных операторов запросов, которые выполняют проецирование, перечислены в следующем разделе.  
   
 ## <a name="methods"></a>Методы  
   
-|Имя метода|Описание|Синтаксис выражения запроса для Visual Basic|Дополнительные сведения|  
+|Имя метода|Описание|Синтаксис выражения запроса Visual Basic|Дополнительные сведения|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|Выбрать|Проецирует значения, основанные на функции преобразования.|`Select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Select%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=fullName></xref:System.Linq.Queryable.Select%2A?displayProperty=fullName>|  
-|SelectMany|Проецирует последовательности значений, которые основаны на функции преобразования, а затем выравнивает их в одну последовательность.|Используйте несколько `From` предложения|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=fullName></xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=fullName></xref:System.Linq.Queryable.SelectMany%2A?displayProperty=fullName>|  
+|Выбрать|Проецирует значения, основанные на функции преобразования.|`Select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
+|SelectMany|Проецирует последовательности значений, основанных на функции преобразования, а затем выравнивает их в одну последовательность.|Использование нескольких предложений `From`|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-examples"></a>Примеры синтаксиса выражений запросов  
   
 ### <a name="select"></a>Выбрать  
- В следующем примере используется `Select` предложение для проецирования первой буквы из каждой строки в списке строк.  
+ В приведенном ниже примере предложение `Select` используется для проецирования первой буквы из каждой строки в списке строк.  
   
 ```vb  
 Dim words = New List(Of String) From {"an", "apple", "a", "day"}  
@@ -66,7 +58,7 @@ MsgBox(sb.ToString())
 ```  
   
 ### <a name="selectmany"></a>SelectMany  
- В следующем примере используется несколько `From` предложений для проецирования каждого слово из каждой строки в списке строк.  
+ В следующем примере используется несколько `From` предложений для проецирования каждого слово из каждой строки в список строк.  
   
 ```vb  
 Dim phrases = New List(Of String) From {"an apple a day", "the quick brown fox"}  
@@ -95,21 +87,21 @@ MsgBox(sb.ToString())
 ' fox  
 ```  
   
-## <a name="select-versus-selectmany"></a>Выберите сравнение SelectMany  
- Рабочие и `Select()` и `SelectMany()` является для получения результирующего значения (или значений) из исходных значений. `Select()`создает один результат для каждого исходного значения. Таким образом, общий результат является коллекцию, которая имеет одинаковое количество элементов в исходной коллекции. Напротив `SelectMany()` создает общий результат, содержащий соединенные подколлекции из каждого исходного значения. Функция преобразования, которая передается в качестве аргумента `SelectMany()` должно возвращать перечисляемую последовательность значений для каждого исходного значения. Эти перечисляемые последовательности затем объединяются `SelectMany()` создать одну большую последовательность.  
+## <a name="select-versus-selectmany"></a>Select или SelectMany  
+ Задача обоих методов `Select()` и `SelectMany()` заключается в создании результирующего значения (или значений) из исходных значений. `Select()` создает один результат для каждого исходного значения. Таким образом, общий результат является коллекцией, имеющей то же количество элементов, что и исходная коллекция. `SelectMany()`, напротив, создает общий результат, содержащий соединенные подколлекции из каждого исходного значения. Функция преобразования, которая передается в качестве аргумента методу `SelectMany()`, должна возвращать перечисляемую последовательность значений для каждого исходного значения. Эти перечисляемые последовательности затем объединяются `SelectMany()` для создания одной большой последовательности.  
   
- На следующих двух рисунках принципиальные различия между действиями этих двух методов. В каждом случае предполагается, что функция выбора (преобразования) выбирает массив цветов из каждого исходного значения.  
+ На двух рисунках, приведенных ниже, показаны принципиальные различия между работой этих двух методов. В обоих случаях предполагается, что функция выбора (преобразования) выбирает массив цветов из каждого исходного значения.  
   
- На этом рисунке показана как `Select()` возвращает коллекцию, которая имеет одинаковое количество элементов в исходной коллекции.  
+ На этом рисунке представлено, как `Select()` возвращает коллекцию, которая имеет то же количество элементов, что и исходная коллекция.  
   
- ![Концептуальная иллюстрация действия Select()](../../../../csharp/programming-guide/concepts/linq/media/selectaction.png "SelectAction")  
+ ![Концептуальная иллюстрация действия Select&#40;&#41;](../../../../csharp/programming-guide/concepts/linq/media/selectaction.png "SelectAction")  
   
- На этом рисунке показана как `SelectMany()` объединяет промежуточные последовательности массивов в один конечный результат, содержащий все значения из промежуточных массивов.  
+ На этом рисунке показано, как `SelectMany()` объединяет промежуточные последовательности массивов в один конечный результат, содержащий все значения из промежуточных массивов.  
   
- ![График, отображающий действие SelectMany(). ] (../../../../csharp/programming-guide/concepts/linq/media/selectmany.png "SelectMany")  
+ ![Схема работы SelectMany&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/selectmany.png "SelectMany")  
   
 ### <a name="code-example"></a>Пример кода  
- В следующем примере сравнивается поведение `Select()` и `SelectMany()`. Код создает «Букет» из цветов с первых двух элементов из каждого списка имен цветов в исходной коллекции. В этом примере «одно значение», функция преобразования <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29>использует представляет коллекцию значений.</xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> Это требует дополнительного `For Each` цикл для перечисления каждой строки в каждой подпоследовательности.  
+ В приведенном ниже примере сравнивается действие `Select()` и `SelectMany()`. Код создает "букет" из цветов путем получения первых двух элементов из каждого списка названий цветов в исходной коллекции. В этом примере отдельное значение, используемое функцией преобразования <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29>, представляет собой коллекцию значений. Этот требует дополнительного цикла `For Each` для перечисления каждой строки в каждой подпоследовательности.  
   
 ```vb  
 Class Bouquet  
@@ -188,10 +180,10 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Linq></xref:System.Linq>   
- [Общие сведения о стандартных операторах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Предложение SELECT](../../../../visual-basic/language-reference/queries/select-clause.md)   
- [Практическое руководство: объединение данных с помощью соединений](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)   
- [Практическое руководство: заполнение коллекций объектов из нескольких источников (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)   
- [Практическое руководство: возвращение результата запроса LINQ как конкретный тип](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)   
- [Практическое руководство: Разделение файла на несколько файлов с помощью групп (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+ <xref:System.Linq>  
+ [Общие сведения о стандартных операторах запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [Предложение Select](../../../../visual-basic/language-reference/queries/select-clause.md)  
+ [How to: Combine Data with Joins](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md) (Практическое руководство. Объединение данных с помощью соединений)  
+ [Как: заполнение коллекций объектов из нескольких источников (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)  
+ [Практическое руководство. Возвращение результата запроса LINQ в виде определенного типа](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)  
+ [Как: Разделение файла на несколько файлов с помощью групп (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

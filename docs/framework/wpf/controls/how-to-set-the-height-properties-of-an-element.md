@@ -1,49 +1,55 @@
 ---
-title: "Практическое руководство. Установка свойств высоты элемента | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "свойства высоты"
-  - "Panel - элемент управления, свойства высоты элементов"
+title: "Практическое руководство. Установка свойств высоты элемента"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- height properties [WPF]
+- Panel control [WPF], height properties of elements
 ms.assetid: 5ab9e781-dbb8-469a-a3c8-cf38ce312647
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8ae66e60375cfbc45a4f1e8834b6420bc5c0b70a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Установка свойств высоты элемента
-## Пример  
- В данном примере визуально показывается разница в получаемом изображении в результате задания четырех связанных с высотой свойств в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+# <a name="how-to-set-the-height-properties-of-an-element"></a>Практическое руководство. Установка свойств высоты элемента
+## <a name="example"></a>Пример  
+ В этом примере визуально показаны различия в поведении между четырьмя свойствами, связанных с высотой в отрисовки [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
- Класс <xref:System.Windows.FrameworkElement> предоставляет четыре свойства, описывающих характеристики высоты элемента.  Эти четыре свойства могут конфликтовать, и в этом случае значение, которое получает приоритет, определяется следующим образом: значение <xref:System.Windows.FrameworkElement.MinHeight%2A> получает приоритет перед значением <xref:System.Windows.FrameworkElement.MaxHeight%2A>, которое, в свою очередь, получает приоритет перед значением <xref:System.Windows.FrameworkElement.Height%2A>.  Четвертое свойство <xref:System.Windows.FrameworkElement.ActualHeight%2A> доступно только для чтения и сообщает о фактической высоте, определенной при взаимодействии с процессом макета.  
+ <xref:System.Windows.FrameworkElement> Класс предоставляет четыре свойства, описывающие характеристики высоту элемента. Эти четыре свойства могут конфликтовать, и при этом, значение, которое имеет больший приоритет, определяется следующим образом: <xref:System.Windows.FrameworkElement.MinHeight%2A> значение имеет приоритет над <xref:System.Windows.FrameworkElement.MaxHeight%2A> значение, которое в свою очередь имеет приоритет над <xref:System.Windows.FrameworkElement.Height%2A> значение. Четвертое свойство <xref:System.Windows.FrameworkElement.ActualHeight%2A>, доступной только для чтения и сообщает о фактической высоте, определенной при взаимодействии с процессом макета.  
   
- В следующих примерах [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] элемент <xref:System.Windows.Shapes.Rectangle> \(`rect1`\) представлен в качестве дочернего элемента объекта <xref:System.Windows.Controls.Canvas>.  Можно изменить свойства высоты <xref:System.Windows.Shapes.Rectangle> с помощью нескольких элементов <xref:System.Windows.Controls.ListBox>, представляющих значения свойств <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.MaxHeight%2A> и <xref:System.Windows.FrameworkElement.Height%2A>.  Таким образом визуально отображается приоритет каждого свойства.  
+ Следующие [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] примерах <xref:System.Windows.Shapes.Rectangle> элемент (`rect1`) как дочерний <xref:System.Windows.Controls.Canvas>. Можно изменить свойства высоты <xref:System.Windows.Shapes.Rectangle> с помощью ряда <xref:System.Windows.Controls.ListBox> элементы, представляющие значения свойств <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.MaxHeight%2A>, и <xref:System.Windows.FrameworkElement.Height%2A>. Таким образом визуально отображается приоритет каждого свойства.  
   
- [!code-xml[HeightMinHeightMaxHeight#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml#1)]  
-[!code-xml[HeightMinHeightMaxHeight#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml#2)]  
+ [!code-xaml[HeightMinHeightMaxHeight#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml#1)]  
+[!code-xaml[HeightMinHeightMaxHeight#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml#2)]  
   
- В следующих примерах кода программной части обрабатываются события, которые создаются событием <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged>.  Каждый обработчик берет значение из <xref:System.Windows.Controls.ListBox>, анализирует его как <xref:System.Double> и применяет это значение к указанному свойству высоты.  Значения высоты также преобразуются в строку и записываются в различные элементы <xref:System.Windows.Controls.TextBlock> \(определение этих элементов не представлено в выбранном XAML\).  
+ В следующих примерах кода обработки событий, <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> вызывает событие. Каждый обработчик принимает входные данные <xref:System.Windows.Controls.ListBox>, анализирует его как <xref:System.Double>и применяет значение к указанному свойству высоты. Значения высоты также преобразуются в строку и записываются в различные <xref:System.Windows.Controls.TextBlock> элементы (определение этих элементов не представлено в выбранном XAML).  
   
  [!code-csharp[HeightMinHeightMaxHeight#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml.cs#3)]
  [!code-vb[HeightMinHeightMaxHeight#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HeightMinHeightMaxHeight/VisualBasic/Window1.xaml.vb#3)]  
   
- Полный код примера см. в разделе [Пример свойств высоты](http://go.microsoft.com/fwlink/?LinkID=159993).  
+ Полный пример см. в разделе [свойства высоты-пример](http://go.microsoft.com/fwlink/?LinkID=159993).  
   
-## См. также  
- <xref:System.Windows.FrameworkElement>   
- <xref:System.Windows.Controls.ListBox>   
- <xref:System.Windows.FrameworkElement.ActualHeight%2A>   
- <xref:System.Windows.FrameworkElement.MaxHeight%2A>   
- <xref:System.Windows.FrameworkElement.MinHeight%2A>   
- <xref:System.Windows.FrameworkElement.Height%2A>   
- [Установка свойств ширины элемента](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)   
- [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md)   
- [Height Properties Sample](http://go.microsoft.com/fwlink/?LinkID=159993)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.FrameworkElement>  
+ <xref:System.Windows.Controls.ListBox>  
+ <xref:System.Windows.FrameworkElement.ActualHeight%2A>  
+ <xref:System.Windows.FrameworkElement.MaxHeight%2A>  
+ <xref:System.Windows.FrameworkElement.MinHeight%2A>  
+ <xref:System.Windows.FrameworkElement.Height%2A>  
+ [Определение свойств ширины элемента](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
+ [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [Пример свойств высоты](http://go.microsoft.com/fwlink/?LinkID=159993)

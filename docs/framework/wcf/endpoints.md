@@ -1,27 +1,29 @@
 ---
-title: "Конечные точки Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "конечные точки [WCF]"
+title: "Конечные точки Windows Communication Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: endpoints [WCF]
 ms.assetid: bd0c310f-dd9f-4081-9be2-3db5909850b6
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4ac3d1f16d860ea01217d0d1d35d0588da0c8d87
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Конечные точки Windows Communication Foundation
-Вся связь со службой [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] осуществляется через *конечные точки* службы.  Конечные точки обеспечивают доступ клиентов к функциональным возможностям службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+# <a name="windows-communication-foundation-endpoints"></a>Конечные точки Windows Communication Foundation
+Вся связь со [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] службы осуществляется с помощью *конечные точки* службы. Конечные точки обеспечивают доступ клиентов к функциональным возможностям службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   
- Дополнительные сведения о создании конечной точки см. в разделе [Общие сведения о создании конечных точек](../../../docs/framework/wcf/endpoint-creation-overview.md).  Каждая конечная точка содержит:  
+ Общие сведения о создании конечной точки см. в разделе [Общие сведения о создании конечной точки](../../../docs/framework/wcf/endpoint-creation-overview.md). Каждая конечная точка содержит:  
   
 -   адрес, показывающий, где можно найти конечную точку;  
   
@@ -31,30 +33,30 @@ caps.handback.revision: 13
   
  Дополнительные сведения по способам задания этих отдельных частей конечной точки см. в следующих разделах.  
   
--   [Задание адреса конечной точки](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
+-   [Указание адреса конечной точки](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
   
 -   [Использование привязок для настройки служб и клиентов](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
   
 -   [Проектирование и реализация служб](../../../docs/framework/wcf/designing-and-implementing-services.md)  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Общие сведения о создании конечных точек](../../../docs/framework/wcf/endpoint-creation-overview.md)  
  Описывает структуру конечной точки и общие шаги по определению конечной точки в конфигурации и в коде, а также по использованию конечных точек по умолчанию, привязок и поведений, предоставляемых средой выполнения.  
   
- [Задание адреса конечной точки](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
+ [Указание адреса конечной точки](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
  Описание взаимодействия со службой [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] с использованием конечных точек.  
   
- [Практическое руководство. Создание конечной точки службы в конфигурации](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Как: создать конечную точку службы в конфигурации](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Описание создания конечной точки службы в конфигурации.  
   
- [Как создать конечную точку службы в коде](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [Как: создать конечную точку службы в коде](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  Описание создания конечной точки службы в коде.  
   
  [Публикация конечных точек метаданных](../../../docs/framework/wcf/publishing-metadata-endpoints.md)  
  Описание публикации метаданных путем публикации конечных точек метаданных в конфигурации и в коде.  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:System.ServiceModel.EndpointAddress>  
   
-## Связанные подразделы  
+## <a name="related-sections"></a>Связанные разделы  
  [Базовый жизненный цикл программирования](../../../docs/framework/wcf/basic-programming-lifecycle.md)

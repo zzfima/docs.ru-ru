@@ -1,42 +1,42 @@
 ---
-title: "Общие сведения о компоненте PrintDocument (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PrintDocument"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "PrintDocument - компонент [Windows Forms], сведения о компоненте PrintDocument"
-  - "печать [Windows Forms], компонент PrintDocument"
+title: "Общие сведения о компоненте PrintDocument (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PrintDocument
+helpviewer_keywords:
+- PrintDocument component [Windows Forms], about PrintDocument component
+- printing [Windows Forms], PrintDocument component
 ms.assetid: b59b4b60-dce5-42ca-8421-3a54a2f7bab0
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f052283b743d5f1a7ed9d2bb6576390e5343dcae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения о компоненте PrintDocument (Windows Forms)
-Компонент форм Windows Forms [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) используется для задания свойств, описывающих печатаемый объект, и для организации печати документа в приложениях Windows.  Его можно использовать в сочетании с компонентом [PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md) для управления всеми аспектами печати документа.  
+# <a name="printdocument-component-overview-windows-forms"></a>Общие сведения о компоненте PrintDocument (Windows Forms)
+Компонент Windows Forms [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) позволяет определять свойства, описывающие печатаемое содержимое, и распечатывать документы в приложениях Windows. Его можно использовать в сочетании с компонентом [PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md) для управления всеми аспектами печати документов.  
   
-## Использование компонента PrintDocument  
- Ниже описаны два основных сценария, в которых используется компонент <xref:System.Drawing.Printing.PrintDocument>.  
+## <a name="working-with-the-printdocument-component"></a>Работа с компонентом PrintDocument  
+ Две основные сценарии, охватывающие <xref:System.Drawing.Printing.PrintDocument> , компонент:  
   
--   Простые задания печати, например печать отдельного текстового файла.  В этом случае компонент <xref:System.Drawing.Printing.PrintDocument> добавляется в форму Windows Forms, а затем добавляется программный алгоритм, печатающий файл в обработчике событий <xref:System.Drawing.Printing.PrintDocument.PrintPage>.  Для печати документа программный алгоритм должен завершаться методом <xref:System.Drawing.Printing.PrintDocument.Print%2A>.  Этот метод посылает на принтер объект <xref:System.Drawing.Graphics>, который содержится в свойстве <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> класса <xref:System.Drawing.Printing.PrintPageEventArgs>.  Пример печати текстового документа с использованием компонента <xref:System.Drawing.Printing.PrintDocument> см. в разделе [How to: Print a Multi\-Page Text File in Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md).  
+-   Простые задания печати, такие как печать отдельного текстового файла. В этом случае необходимо добавить <xref:System.Drawing.Printing.PrintDocument> компонента в форму Windows, затем добавьте логику программирования, которая выводит файл в <xref:System.Drawing.Printing.PrintDocument.PrintPage> обработчика событий. Программная логика должна которое завершается результирующим с <xref:System.Drawing.Printing.PrintDocument.Print%2A> метод для печати документа. Этот метод отправляет <xref:System.Drawing.Graphics> объектов, содержащихся в <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> свойство <xref:System.Drawing.Printing.PrintPageEventArgs> класса на принтер. Пример, демонстрирующий печать текста документа с помощью <xref:System.Drawing.Printing.PrintDocument> компонента, в разделе [как: печать многостраничных текстовый файл в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md).  
   
--   Более сложные задания печати, например в тех случаях, когда требуется повторно применить написанный программный алгоритм.  В этом случае необходимо произвести новый компонент из компонента <xref:System.Drawing.Printing.PrintDocument> и переопределить \(см. [Переопределение](../Topic/Overrides%20\(Visual%20Basic\).md) для Visual Basic или [Переопределение](../Topic/override%20\(C%23%20Reference\).md) для C\#\) событие <xref:System.Drawing.Printing.PrintDocument.PrintPage>.  
+-   Более сложные задания печати, например ситуации, когда требуется повторное использование уже написанной логики печати. В этом случае необходимо наследовать новый компонент из <xref:System.Drawing.Printing.PrintDocument> компонента и переопределение (см. [переопределяет](~/docs/visual-basic/language-reference/modifiers/overrides.md) для Visual Basic или [переопределить](~/docs/csharp/language-reference/keywords/override.md) для C#) <xref:System.Drawing.Printing.PrintDocument.PrintPage> событий.  
   
- Добавленный в форму компонент <xref:System.Drawing.Printing.PrintDocument> появляется в нижней области конструктора Windows Forms.  
+ При добавлении в форму, <xref:System.Drawing.Printing.PrintDocument> компонент появится в области в нижней части конструктора Windows Forms.  
   
-## См. также  
- <xref:System.Drawing.Graphics>   
- <xref:System.Drawing.Printing.PrintDocument>   
- [Windows Forms Print Support](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Drawing.Graphics>  
+ <xref:System.Drawing.Printing.PrintDocument>  
+ [Поддержка печати в Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  
  [Компонент PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)

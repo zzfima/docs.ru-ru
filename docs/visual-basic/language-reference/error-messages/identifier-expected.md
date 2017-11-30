@@ -1,55 +1,37 @@
 ---
-title: "Требуется идентификатор | Документы Microsoft"
-ms.date: 2015-07-20
+title: "Требуется идентификатор"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30203
 - bc30203
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC30203
+helpviewer_keywords: BC30203
 ms.assetid: c05162ee-55d0-4d7f-84bb-e7758d4c5081
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 795b1d47c2fef7246d23260b5a866ede8f4cadb8
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: db6e4f3793e4369ae3956f9e77c0b5c9e47c7f9f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="identifier-expected"></a>Требуется идентификатор
-Элемент программирования, который не является распознаваемым именем объявленного элемента происходит, где контекст требует имя элемента. Одной из возможных причин — что атрибут был указан не в начале инструкции.  
+Программный элемент, который не является распознаваемым именем объявленного элемента происходит в контексте требуется имя элемента. Одной из возможных причин — что атрибут был указан не в начале инструкции.  
   
  **Идентификатор ошибки:** BC30203  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Убедитесь, что все атрибуты в операторе помещены в начале.  
+-   Убедитесь, что все атрибуты в операторе находятся в начале.  
   
 -   Проверьте правильность написания имен элементов в операторе.  
   
 ## <a name="see-also"></a>См. также  
- [Имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
+ [Имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
  [Обзор атрибутов](../../../visual-basic/programming-guide/concepts/attributes/index.md)
  

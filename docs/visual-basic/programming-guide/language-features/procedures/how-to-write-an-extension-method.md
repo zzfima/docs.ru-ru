@@ -1,47 +1,46 @@
 ---
-title: "Практическое руководство. Написание метода расширения (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "расширение типов данных"
-  - "методы расширения [Visual Basic]"
-  - "запись методов расширения"
+title: "Практическое руководство. Написание метода расширения (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- extending data types [Visual Basic]
+- writing extension methods [Visual Basic]
+- extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 65cdabf59886e7457a327ee9cde968a6a73f2280
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Написание метода расширения (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Методы расширения позволяют добавлять методы к существующему классу.  Метод расширения может вызываться так, как если бы он был экземпляром этого класса.  
+# <a name="how-to-write-an-extension-method-visual-basic"></a>Практическое руководство. Написание метода расширения (Visual Basic)
+Методы расширения позволяют добавлять методы в существующий класс. Метод расширения может вызываться, как если бы он был экземпляром этого класса.  
   
-### Для определения метода расширения  
+### <a name="to-define-an-extension-method"></a>Для определения метода расширения  
   
-1.  Откройте новое или существующее приложение Visual Basic в Visual Studio.  
+1.  Откройте новый или существующий приложения Visual Basic в Visual Studio.  
   
-2.  Включите следующий оператор импорта в верхнюю часть файла, в котором нужно определить метод расширения:  
+2.  В верхней части файла, в котором необходимо определить метод расширения включают следующие инструкции import:  
   
     ```  
     Imports System.Runtime.CompilerServices  
     ```  
   
-3.  Внутри модуля в новом или существующем приложении определите метод с атрибутом расширения:  
+3.  Внутри модуля нового или существующего приложения определите метод с атрибутом расширения:  
   
     ```  
     <Extension()>  
     ```  
   
-4.  Объявите метод обычным способом, за исключением того, что первый параметр должен быть типом данных, который требуется расширить.  
+4.  Объявите метод обычным способом, за исключением того, что тип первого параметра должен быть тип данных, который требуется расширить.  
   
     ```  
     <Extension()>   
@@ -50,10 +49,10 @@ caps.handback.revision: 11
     End Sub  
     ```  
   
-## Пример  
- В следующем примере объявляется метод расширения в модуле `StringExtensions`.  Второй модуль `Module1` импортирует `StringExtensions` и вызывает метод.  При вызове метод расширения должен быть в области.  Метод расширения `PrintAndPunctuate` расширяет класс <xref:System.String> методом, отображающим экземпляр строки, которая сопровождается строкой символов пунктуации, переданных как параметр.  
+## <a name="example"></a>Пример  
+ В следующем примере объявляется метод расширения в модуль `StringExtensions`. Второй модуль `Module1`, импортирует `StringExtensions` и вызывает метод. Метод расширения должен быть в области видимости при вызове. Метод расширения `PrintAndPunctuate` расширяет <xref:System.String> класс с методом, который отображает экземпляр строки и строки символов пунктуации, отправляемый в качестве параметра.  
   
-```vb#  
+```vb  
 ' Declarations will typically be in a separate module.  
 Imports System.Runtime.CompilerServices  
   
@@ -67,7 +66,7 @@ Module StringExtensions
 End Module  
 ```  
   
-```vb#  
+```vb  
 ' Import the module that holds the extension method you want to use,   
 ' and call it.  
   
@@ -82,18 +81,17 @@ Module Module1
     End Sub  
   
 End Module  
-  
 ```  
   
- Обратите внимание, что метод определен с двумя параметрами, а вызван с только одним.  Первый параметр `aString` в определении метода привязан к `example` — экземпляру `String`, который вызывает метод.  Результат выполнения примера выглядит следующим образом:  
+ Обратите внимание, что метод определен с двумя параметрами и только с одним именем. Первый параметр `aString`, в методе связано `example`, экземпляр `String` , вызывает метод. Выходные данные примера выглядит следующим образом:  
   
  `Hello?`  
   
  `Hello!!!!`  
   
-## См. также  
- <xref:System.Runtime.CompilerServices.ExtensionAttribute>   
- [Методы расширения](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)   
- [Оператор Module](../../../../visual-basic/language-reference/statements/module-statement.md)   
- [Параметры и аргументы процедуры](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Область видимости в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Runtime.CompilerServices.ExtensionAttribute>  
+ [Методы расширения](./extension-methods.md)  
+ [Оператор Module](../../../../visual-basic/language-reference/statements/module-statement.md)  
+ [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)  
+ [Область в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

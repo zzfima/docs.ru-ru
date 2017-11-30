@@ -1,34 +1,32 @@
 ---
-title: "Доступ запрещен (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID70"
-dev_langs: 
-  - "VB"
+title: "Доступ запрещен (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID70
 ms.assetid: 71f46756-f522-4814-aab4-492bf9924245
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c5d7965ebd42cb3e56d66966d035be9ba3d3957c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Доступ запрещен (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Предпринята попытка записи на защищенный от записи диск или получения доступа к заблокированному файлу.  
+# <a name="permission-denied-visual-basic"></a>Доступ запрещен (Visual Basic)
+Была предпринята попытка записи на диск защищен от записи или доступа к заблокированному файлу.  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Чтобы открыть файл, защищенный от записи, измените атрибут защиты от записи файла.  
+1.  Чтобы открыть файл защищен от записи, измените атрибут защиту от записи файла.  
   
-2.  Убедитесь, что файл не заблокирован другим процессом, и попытайтесь открыть файл после того, как этот процесс его освободит.  
+2.  Убедитесь, что файл не заблокирован другим процессом и ожидания для открытия файла, пока не будет освобожден другим процессом.  
   
-3.  Чтобы получить доступ к реестру, проверьте, что разрешения пользователя включают этот тип доступа к реестру.  
+3.  Для доступа к реестру, убедитесь, что разрешения пользователя включают этот тип доступа к реестру.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Типы ошибок](../../../visual-basic/programming-guide/language-features/error-types.md)

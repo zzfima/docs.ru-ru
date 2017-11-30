@@ -1,47 +1,30 @@
 ---
-title: "Практическое руководство: определение параметра для процедуры (Visual Basic) | Документы Microsoft"
+title: "Практическое руководство. Объявление параметра для процедуры (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- procedure parameters, defining data types for
-- procedures, parameters
-- procedures, defining
+- procedure parameters [Visual Basic], defining data types for
+- procedures [Visual Basic], parameters
+- procedures [Visual Basic], defining
 - Visual Basic code, procedures
-- procedure parameters, defining
+- procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9fb9ad244499039c1768ff97f071168e0a0842e4
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 3c909cfe1b45a42aae91948917f310474575f225
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Практическое руководство. Объявление параметра для процедуры (Visual Basic)
-Объект *параметр* позволяет вызывающему коду передать значение в вызываемую процедуру при ее вызове. Каждый параметр процедуры объявляется так же, как объявить переменную, указав его имя и тип данных. Можно также указать механизм передачи, и параметр является необязательным.  
+Объект *параметр* позволяет вызывающему коду значение передается в процедуру при ее вызове. Каждый параметр процедуры объявляется так же, как объявить переменную, указав его имя и тип данных. Можно также задать способ передачи, и параметр является необязательным.  
   
  Дополнительные сведения см. в разделе [параметры и аргументы процедуры](./procedure-parameters-and-arguments.md).  
   
@@ -51,39 +34,39 @@ ms.lasthandoff: 03/13/2017
   
 2.  Выберите тип данных параметра.  
   
-3.  После имени параметра `As` предложение, чтобы указать тип данных.  
+3.  После имени параметра `As` предложений, чтобы указать тип данных.  
   
 4.  Определите механизм передачи для параметра. Обычно необходимо передавать параметр по значению, если не требуется, чтобы иметь возможность изменить его значение в вызывающем коде процедуры.  
   
-5.  Перед именем параметра с [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) или [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) для указания механизм передачи. Дополнительные сведения см. в разделе [различия между передачей аргумента по значению и по ссылке](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
+5.  Перед именем параметра [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) или [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) для указания механизм передачи. Дополнительные сведения см. в разделе [различия между передачей аргумента по значению и по ссылке](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
-6.  Если аргумент является необязательным, укажите перед механизмом передачи [необязательно](../../../../visual-basic/language-reference/modifiers/optional.md) и соответствовать типу данных параметра со знака равенства (`=`) и значение по умолчанию.  
+6.  Если аргумент является необязательным, укажите перед механизмом передачи [необязательно](../../../../visual-basic/language-reference/modifiers/optional.md) и следуйте тип данных параметра со знака равенства (`=`) и значение по умолчанию.  
   
-     В следующем примере определяется структура `Sub` процедуры с тремя параметрами. Первые два являются обязательными, а третий — необязательным. Объявления параметров в списке параметров разделяются запятыми.  
+     В следующем примере определяется по контуру `Sub` процедуры с тремя параметрами. Первые два являются обязательными, а третий — необязательным. Объявления параметра в списке параметров разделяются запятыми.  
   
-     [!code-vb[VbVbcnProcedures&#33;](./codesnippet/VisualBasic/how-to-define-a-parameter-for-a-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures#33](./codesnippet/VisualBasic/how-to-define-a-parameter-for-a-procedure_1.vb)]  
   
-     Первый параметр принимает `customer` объекта, и `updateCustomer` может непосредственно обновлять переменную, передаваемую в `c` , так как аргумент передается [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Процедура не может изменить значения последних двух аргументов, поскольку они передаются [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
+     Первый параметр принимает `customer` объекта, и `updateCustomer` может непосредственно обновлять переменную, передаваемую в `c` потому, что аргумент передается [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Процедура не может изменить значения последних двух аргументов, поскольку они передаются [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
   
-     Если вызывающий код не предоставляет значение для `level` параметр [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] устанавливает его значение по умолчанию 0.  
+     Если вызывающий код не предоставляет значение для `level` параметр [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] устанавливает его значение по умолчанию 0.  
   
-     Если переключатель проверки типа ([оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) является `Off`, `As` предложение необязательно при определении параметров. Однако если любой из параметров использует `As` предложение, их необходимо его использование. Если переключатель проверки типов имеет `On`, `As` предложение является обязательным для каждого определения параметра.  
+     Если переключатель проверки типа ([оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) является `Off`, `As` предложение необязательно при определении параметров. Тем не менее если любой из параметров использует `As` предложения, все из них необходимо использовать его. Если ключ проверки типа `On`, `As` предложение является обязательным для каждого определения параметра.  
   
-     Задание типов данных для всех элементов программирования называется *строгой типизации*. При задании `Option Strict On`, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] обеспечивает строгую типизацию. Это настоятельно рекомендуется, по следующим причинам:  
+     Задание типов данных для всех элементов программирования называется *строгую типизацию*. При задании `Option Strict On`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] обеспечивает строгую типизацию. Это настоятельно рекомендуется, по следующим причинам:  
   
-    -   Он обеспечивает поддержку IntelliSense для переменных и параметров. Это позволяет видеть их свойства и другие члены, при вводе в коде.  
+    -   Она включает поддержку IntelliSense для переменных и параметров. Это позволяет видеть свойства и другие члены, вводимые в коде.  
   
-    -   Это позволяет компилятору выполнять проверку типов. Благодаря этому обнаруживаются операторы, которые могут вызвать сбой во время выполнения из-за ошибок, таких как переполнение. Обнаруживаются также вызовы методов для объектов, которые не поддерживают их.  
+    -   Это позволяет компилятору выполнять проверку типов. Благодаря этому обнаруживаются операторы, которые могут вызвать сбой во время выполнения из-за ошибок, таких как переполнение. Он также обнаруживаются вызовы методов для объектов, которые не поддерживают.  
   
-    -   Обеспечивается более быстрое выполнение кода. Одна из причин для этого является, если не указать тип данных для элемента программирования [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] компилятор присваивает его `Object` типа. Скомпилированному коду может потребоваться преобразовать вперед и назад между `Object` и других типов данных, что снижает производительность.  
+    -   Это приводит к более быстрое выполнение кода. Одна из причин для этого: Если не указать тип данных для элемента программирования [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] компилятор назначает его `Object` типа. Скомпилированному коду может потребоваться преобразовать и переключений между `Object` и других типов данных, что снижает производительность.  
   
 ## <a name="see-also"></a>См. также  
- [Процедуры](./index.md)   
- [Sub-процедуры](./sub-procedures.md)   
- [Процедуры функций](./function-procedures.md)   
- [Практическое руководство: передача аргументов в процедуру](./how-to-pass-arguments-to-a-procedure.md)   
- [Передача аргументов по значению и по ссылке](./passing-arguments-by-value-and-by-reference.md)   
- [Рекурсивные процедуры](./recursive-procedures.md)   
- [Перегрузка процедур](./procedure-overloading.md)   
- [Объекты и классы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
+ [Процедуры](./index.md)  
+ [Подпрограммы](./sub-procedures.md)  
+ [Процедуры функций](./function-procedures.md)  
+ [Практическое руководство. Передача аргументов в процедуру](./how-to-pass-arguments-to-a-procedure.md)  
+ [Передача аргументов по значению и по ссылке](./passing-arguments-by-value-and-by-reference.md)  
+ [Рекурсивные процедуры](./recursive-procedures.md)  
+ [Перегрузка процедур](./procedure-overloading.md)  
+ [Объекты и классы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
  [Объектно-ориентированное программирование](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)

@@ -1,53 +1,48 @@
 ---
-title: "&lt;= (меньше или равно) (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "&lt;= (меньше или равно) (Entity SQL)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7c46da5c-fa09-4d90-adcc-c7e1b769d8e6
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 6b3e6054233074010f46d28e1c5b15d456ae41bf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;= (меньше или равно) (Entity SQL)
+# <a name="lt-less-than-or-equal-to-entity-sql"></a>&lt;= (меньше или равно) (Entity SQL)
 Сравнивает два выражения и определяет, имеет ли левое выражение значение, меньшее или равное значению правого выражения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-expression  
-<=  
-expression  
-  
+expression <= expression  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  `expression`  
  Любое допустимое выражение. Оба выражения должны иметь типы данных, допускающих неявное преобразование.  
   
-## Типы результата  
- Значение `true`, если левое выражение меньше или равно правому выражению. В противном случае \- значение `false`.  
+## <a name="result-types"></a>Типы результата  
+ Значение`true` , если левое выражение меньше или равно правому выражению. В противном случае - значение `false`.  
   
-## Пример  
- Следующий запрос Entity SQL использует оператор сравнения \<\= для сравнения двух выражений и определяет, имеет ли левое выражение значение, меньшее или равное значению правого выражения. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
+## <a name="example"></a>Пример  
+ Следующий запрос Entity SQL использует оператор сравнения <= для сравнения двух выражений и определяет, имеет ли левое выражение значение, меньшее или равное значению правого выражения. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1.  Выполните процедуру из статьи [Как выполнить запрос, возвращающий результаты типа StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  Выполните процедуру из статьи [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery`:  
+2.  Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   
  [!code-csharp[DP EntityServices Concepts 2#LESS_OR_EQUALS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less_or_equals)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

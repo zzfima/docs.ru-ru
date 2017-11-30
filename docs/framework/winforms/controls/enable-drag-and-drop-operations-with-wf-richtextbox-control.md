@@ -1,36 +1,41 @@
 ---
-title: "Практическое руководство. Разрешение операций перетаскивания для элемента управления RichTextBox в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "примеры [Windows Forms], текстовые поля"
-  - "перетаскивание, элемент управления RichTextBox"
-  - "текстовые поля, операции перетаскивания"
-  - "RichTextBox — элемент управления [Windows Forms], операции перетаскивания"
+title: "Практическое руководство. Разрешение операций перетаскивания для элемента управления RichTextBox в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- examples [Windows Forms], text boxes
+- drag and drop [Windows Forms], richTextBox control
+- text boxes [Windows Forms], drag-and-drop operations
+- RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 91739643aaa2d7fe3ea302d0d35edabbae0ab14f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Разрешение операций перетаскивания для элемента управления RichTextBox в Windows Forms
-Операции перетаскивания для элемента управления <xref:System.Windows.Forms.RichTextBox> Windows Forms выполняются путем обработки событий <xref:System.Windows.Forms.RichTextBox.DragEnter> и <xref:System.Windows.Forms.RichTextBox.DragDrop>. Таким образом, операции перетаскивания для элемента управления <xref:System.Windows.Forms.RichTextBox> являются очень простыми.  
+# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Практическое руководство. Разрешение операций перетаскивания для элемента управления RichTextBox в Windows Forms
+Операции перетаскивания для элемента управления <xref:System.Windows.Forms.RichTextBox> Windows Forms выполняются путем обработки событий <xref:System.Windows.Forms.RichTextBox.DragEnter> и <xref:System.Windows.Forms.RichTextBox.DragDrop> . Таким образом, операции перетаскивания для элемента управления <xref:System.Windows.Forms.RichTextBox> являются очень простыми.  
   
-### Включение операций перетаскивания в элементе управления RichTextBox  
+### <a name="to-enable-drag-operations-in-a-richtextbox-control"></a>Включение операций перетаскивания в элементе управления RichTextBox  
   
 1.  Задайте для свойства <xref:System.Windows.Forms.RichTextBox.AllowDrop%2A> элемента управления <xref:System.Windows.Forms.RichTextBox> значение `true`.  
   
-2.  Напишите код в обработчике событий для события <xref:System.Windows.Forms.RichTextBox.DragEnter>. Используйте инструкцию `if`, чтобы проверить допустимость типа перетаскиваемых данных \(в данном случае это текст\). Свойство <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=fullName> может иметь одно из значений перечисления <xref:System.Windows.Forms.DragDropEffects>.  
+2.  Напишите код в обработчике событий для события <xref:System.Windows.Forms.RichTextBox.DragEnter> . Используйте инструкцию `if` , чтобы проверить допустимость типа перетаскиваемых данных (в данном случае это текст). Свойство <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> может иметь одно из значений перечисления <xref:System.Windows.Forms.DragDropEffects>.  
   
     ```vb  
     Private Sub RichTextBox1_DragEnter(ByVal sender As Object, _   
@@ -42,7 +47,6 @@ caps.handback.revision: 16
           e.Effect = DragDropEffects.None  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -54,7 +58,6 @@ caps.handback.revision: 16
        else  
           e.Effect = DragDropEffects.None;  
     }  
-  
     ```  
   
     ```cpp  
@@ -69,7 +72,7 @@ caps.handback.revision: 16
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] и [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] и [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
   
     ```csharp  
     this.richTextBox1.DragEnter += new  
@@ -83,9 +86,9 @@ caps.handback.revision: 16
        (this, &Form1::richTextBox1_DragEnter);  
     ```  
   
-3.  Напишите код для обработки события <xref:System.Windows.Forms.RichTextBox.DragDrop>. Используйте метод <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=fullName> для получения перетаскиваемых данных.  
+3.  Напишите код для обработки события <xref:System.Windows.Forms.RichTextBox.DragDrop> . Используйте метод <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> для получения перетаскиваемых данных.  
   
-     В примере ниже код задает перетаскиваемые данные в свойстве <xref:System.Windows.Forms.RichTextBox.Text%2A> элемента управления <xref:System.Windows.Forms.RichTextBox>. Если в элементе управления <xref:System.Windows.Forms.RichTextBox> уже существует текст, перетаскиваемый текст вставляется в точку вставки.  
+     В примере ниже код задает перетаскиваемые данные в свойстве <xref:System.Windows.Forms.RichTextBox.Text%2A> элемента управления <xref:System.Windows.Forms.RichTextBox> . Если в элементе управления <xref:System.Windows.Forms.RichTextBox> уже существует текст, перетаскиваемый текст вставляется в точку вставки.  
   
     ```vb  
     Private Sub RichTextBox1_DragDrop(ByVal sender As Object, _   
@@ -104,7 +107,6 @@ caps.handback.revision: 16
           e.Data.GetData(DataFormats.Text).ToString()  
        RichTextBox1.Text = RichTextBox1.Text + s  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -124,7 +126,6 @@ caps.handback.revision: 16
           e.Data.GetData(DataFormats.Text).ToString();  
        richTextBox1.Text = richTextBox1.Text + s;  
     }  
-  
     ```  
   
     ```cpp  
@@ -147,13 +148,12 @@ caps.handback.revision: 16
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] и [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] и [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
   
     ```csharp  
     this.richTextBox1.DragDrop += new  
         System.Windows.Forms.DragEventHandler  
         (this.richTextBox1_DragDrop);  
-  
     ```  
   
     ```cpp  
@@ -162,20 +162,20 @@ caps.handback.revision: 16
        (this, &Form1::richTextBox1_DragDrop);  
     ```  
   
-### Тестирование функциональности перетаскивания в приложении  
+### <a name="to-test-the-drag-and-drop-functionality-in-your-application"></a>Тестирование функциональности перетаскивания в приложении  
   
 1.  Сохраните приложение и выполните его сборку. Пока сборка выполняется, запустите WordPad.  
   
-     WordPad — это текстовый редактор, установленный операционной системой Windows, который позволяет выполнять операции перетаскивания. Чтобы открыть его, нажмите кнопку **Пуск**, выберите пункт **Выполнить**, введите `WordPad` в текстовом поле диалогового окна **Выполнить** и затем нажмите кнопку **ОК**.  
+     WordPad — это текстовый редактор, установленный операционной системой Windows, который позволяет выполнять операции перетаскивания. Чтобы открыть его, нажмите кнопку **Пуск** , выберите пункт **Выполнить**, введите `WordPad` в текстовом поле диалогового окна **Выполнить** и затем нажмите кнопку **ОК**.  
   
 2.  После открытия WordPad введите в нем строку текста. С помощью мыши выделите этот текст и перетащите его в элемент управления <xref:System.Windows.Forms.RichTextBox> в вашем приложении Windows.  
   
-     Обратите внимание, что когда вы переводите указатель мыши в элемент управления <xref:System.Windows.Forms.RichTextBox> \(и, следовательно, инициируете событие <xref:System.Windows.Forms.RichTextBox.DragEnter>\), курсор изменяется, и можно вставить выделенный текст в элемент управления <xref:System.Windows.Forms.RichTextBox>.  
+     Обратите внимание, что когда вы переводите указатель мыши в элемент управления <xref:System.Windows.Forms.RichTextBox> (и, следовательно, инициируете событие <xref:System.Windows.Forms.RichTextBox.DragEnter> ), курсор изменяется, и можно вставить выделенный текст в элемент управления <xref:System.Windows.Forms.RichTextBox> .  
   
-     После отпускания кнопки мыши выделенный текст удаляется \(то есть инициируется событие <xref:System.Windows.Forms.RichTextBox.DragDrop>\) и вставляется в элемент управления <xref:System.Windows.Forms.RichTextBox>.  
+     После отпускания кнопки мыши выделенный текст удаляется (то есть инициируется событие <xref:System.Windows.Forms.RichTextBox.DragDrop> ) и вставляется в элемент управления <xref:System.Windows.Forms.RichTextBox> .  
   
-## См. также  
- <xref:System.Windows.Forms.RichTextBox>   
- [How to: Perform Drag\-and\-Drop Operations Between Applications](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)   
- [Элемент управления RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)   
- [Элементы управления для использования в формах Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.RichTextBox>  
+ [Практическое руководство. Выполнение операции перетаскивания между приложениями](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)  
+ [Элемент управления RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

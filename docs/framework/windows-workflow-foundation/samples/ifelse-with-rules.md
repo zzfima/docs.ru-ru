@@ -1,47 +1,51 @@
 ---
-title: "Действие IfElse с правилами | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Действие IfElse с правилами"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c4ad9bb2-9037-413a-8b14-59ed7b927a9e
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5cd0859db8071f9af130756fdc9b34726199be9a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Действие IfElse с правилами
+# <a name="ifelse-with-rules"></a>Действие IfElse с правилами
 В данном образце демонстрируется использование условий правила для действия класса <xref:System.Workflow.Activities.IfElseActivity>.  
   
- В данном образце из узла передается параметр `OrderValue`.Значение параметра используется в условии правила для первого ответвления действия класса <xref:System.Workflow.Activities.IfElseActivity>.Если значение меньше 10 000, выполняется первое разветвление, а действие <xref:System.Workflow.Activities.CodeActivity> в первом ответвлении выводит в консоль **Get Manager Approval**.Если значение больше 10 000, выполняется действие <xref:System.Workflow.Activities.CodeActivity> во втором разветвлении и выводится **Get VP Approval**.  
+ В данном образце из узла передается параметр `OrderValue`. Значение параметра используется в условии правила для первого ответвления действия класса <xref:System.Workflow.Activities.IfElseActivity>. Если значение меньше 10 000, выполняет первую ветвь и <xref:System.Workflow.Activities.CodeActivity> действия в первом ответвлении выводит **получение руководителя** на консоль. Если значение больше 10 000, <xref:System.Workflow.Activities.CodeActivity> действия во втором разветвлении выполняется и выводится **получить утверждение вице-Президент**.  
   
-### Построение образца  
+### <a name="to-build-the-sample"></a>Сборка образца  
   
 1.  Откройте решение в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Постройте решение, нажав клавиши CTRL\+SHIFT\+B.  
+2.  Выполните сборку решения, нажав клавиши CTRL+SHIFT+B.  
   
-3.  Запустите решение без отладки, нажав сочетание клавиш CTRL\+F5.  
+3.  Запустите решение без отладки, нажав сочетание клавиш CTRL+F5.  
   
-### Запуск образца  
+### <a name="to-run-the-sample"></a>Выполнение образца  
   
--   В окне командной строки пакета SDK запустите файл с расширением EXE в папке «IfElseWithRules\\bin\\debug» \(или в папке «IfElseWithRules\\bin» для образца в Visual Basic\), вложенной в главную папку образца.  
+-   В окне командной строки пакета SDK запустите файл с расширением EXE в папке «IfElseWithRules\bin\debug» (или в папке «IfElseWithRules\bin» для образца в Visual Basic), вложенной в главную папку образца.  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец находится в следующем каталоге:  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец находится в следующем каталоге:  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Basic\Rules\IfElseWithRules`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\IfElseWithRules`  
   
-## См. также  
- <xref:System.Workflow.Activities.Rules>   
- <xref:System.Workflow.Activities.IfElseActivity>   
- <xref:System.Workflow.Activities.CodeActivity>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Workflow.Activities.Rules>  
+ <xref:System.Workflow.Activities.IfElseActivity>  
+ <xref:System.Workflow.Activities.CodeActivity>  
  <xref:System.Workflow.Activities.Rules.RuleDefinitions>

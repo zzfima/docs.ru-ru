@@ -1,43 +1,46 @@
 ---
-title: "Практическое руководство. Рисование прямоугольника | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "рисование, прямоугольники"
-  - "графика [WPF], прямоугольники"
-  - "прямоугольники, рисование"
+title: "Практическое руководство. Рисование прямоугольника"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- drawing [WPF], rectangles
+- graphics [WPF], rectangles
+- rectangles [WPF], drawing
 ms.assetid: beeb57ef-fab5-4446-a38a-1588f97b4c2f
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4c163897af27c9b34c8cd87a3b197047f86d21ab
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Рисование прямоугольника
-В этом примере демонстрируется рисование прямоугольника с помощью элемента <xref:System.Windows.Shapes.Rectangle>.  
+# <a name="how-to-draw-a-rectangle"></a>Практическое руководство. Рисование прямоугольника
+В этом примере показано, как рисование прямоугольника с помощью <xref:System.Windows.Shapes.Rectangle> элемента.  
   
- Чтобы нарисовать прямоугольник, создайте элемент <xref:System.Windows.Shapes.Rectangle> и установите его свойства <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A>.  Для закраски области внутри прямоугольника установите свойство <xref:System.Windows.Shapes.Shape.Fill%2A>.  Для рисования контура прямоугольника используйте его свойства <xref:System.Windows.Shapes.Shape.Stroke%2A> и <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>.  
+ Чтобы нарисовать прямоугольник, создайте <xref:System.Windows.Shapes.Rectangle> элемент и указать его <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A>. Чтобы рисовать внутри прямоугольника, задайте его <xref:System.Windows.Shapes.Shape.Fill%2A>. Чтобы предоставить структуру прямоугольник, используйте его <xref:System.Windows.Shapes.Shape.Stroke%2A> и <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> свойства.  
   
- Для рисования округленных углов прямоугольника установите необязательные свойства <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> и <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>.  Свойства <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> и <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> устанавливают радиусы эллипса, который используется для округления углов прямоугольника, по осям x и y.  
+ Чтобы предоставить прямоугольника скругленные углы, укажите необязательное <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> и <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> свойства. <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> И <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> свойства заданы радиусы осей x и y для эллипса, который используется для скругления углов прямоугольника.  
   
- В следующем примере выполняется рисование двух элементов <xref:System.Windows.Shapes.Rectangle> на объекте <xref:System.Windows.Controls.Canvas>.  Для первого прямоугольника выполняется внутренняя заливка с использованием цвета <xref:System.Windows.Media.Brushes.Blue%2A>.  Для второго прямоугольника применяется внутренняя заливка с использованием цвета <xref:System.Windows.Media.Brushes.Blue%2A>, а также контур цвета <xref:System.Windows.Media.Brushes.Black%2A> и округленные углы.  
+ В следующем примере два <xref:System.Windows.Shapes.Rectangle> элементы отображаются в <xref:System.Windows.Controls.Canvas>. Первый прямоугольник имеет <xref:System.Windows.Media.Brushes.Blue%2A> внутренних. Второй прямоугольник имеет <xref:System.Windows.Media.Brushes.Blue%2A> внутренних, <xref:System.Windows.Media.Brushes.Black%2A> структуры и прямоугольника с закругленными углами.  
   
-## Пример  
- [!code-xml[drawingwithshapeelements#Rectangle1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/rectangleexample.xaml#rectangle1)]  
+## <a name="example"></a>Пример  
+ [!code-xaml[drawingwithshapeelements#Rectangle1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/rectangleexample.xaml#rectangle1)]  
   
- В этом примере прямоугольники содержатся на объекте <xref:System.Windows.Controls.Canvas>. Также можно использовать прямоугольники \(и любые другие элементы фигур\) с любыми объектами <xref:System.Windows.Controls.Panel> или <xref:System.Windows.Controls.Control>, поддерживающими нетекстовое содержимое.  Прямоугольники часто используются в качестве фона для частей панелей <xref:System.Windows.Controls.Grid>.  Пример см. в разделе [Общие сведения о таблицах](../../../../docs/framework/wpf/advanced/table-overview.md).  
+ Несмотря на то, что в этом примере используется <xref:System.Windows.Controls.Canvas> содержать прямоугольники, можно использовать элементы прямоугольник (и все остальные элементы фигур) с любым <xref:System.Windows.Controls.Panel> или <xref:System.Windows.Controls.Control> , поддерживающую нетекстовых содержимое. На самом деле это особенно полезно в качестве фона для частей прямоугольники <xref:System.Windows.Controls.Grid> панелей. Пример см. в разделе [Общие сведения о таблицах](../../../../docs/framework/wpf/advanced/table-overview.md).  
   
- Этот пример является фрагментом большего примера; полный пример см. на веб\-странице [Shape Elements Sample](http://go.microsoft.com/fwlink/?LinkID=160037).  
+ Этот пример является частью большего примера; Полный пример см. в разделе [пример элементов фигуры](http://go.microsoft.com/fwlink/?LinkID=160037).  
   
-## См. также  
- <xref:System.Windows.Shapes.Rectangle>   
- [Shape Elements Sample](http://go.microsoft.com/fwlink/?LinkID=160037)   
- [Обзор фигур и базовых средств рисования в приложении WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Shapes.Rectangle>  
+ [Пример элементов фигуры](http://go.microsoft.com/fwlink/?LinkID=160037)  
+ [Обзор фигур и базовых средств рисования в приложении WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
  [Общие сведения о таблицах](../../../../docs/framework/wpf/advanced/table-overview.md)

@@ -1,42 +1,45 @@
 ---
-title: "223 — OperationFaulted | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 223 - OperationFaulted
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2f7d89d7-3a6a-40fe-9610-5424eb6bbf61
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a04ed11db97d02a90e016ee1825b303375a23412
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 223 — OperationFaulted
-## Свойства  
+# <a name="223---operationfaulted"></a>223 - OperationFaulted
+## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
-|ID|223|  
-|Keywords|EndToEndMonitoring, HealthMonitoring, Troubleshooting, ServiceModel|  
-|Level|Warning|  
-|Channel|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|Идентификатор|223|  
+|Ключевые слова|EndToEndMonitoring, HealthMonitoring, Troubleshooting, ServiceModel|  
+|Уровень|Предупреждение|  
+|Канал|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Описание  
+## <a name="description"></a>Описание  
  Это событие вызывается в том случае, если при вызове `OperationInvoker` модели службы по умолчанию обнаружено исключение, производное от `FaultException`.  
   
-## Message  
- Метод «%1» вызывал исключение FaultException после того, как был вызван OperationInvoker.Длительность вызова метода составила «%2» мс.  
+## <a name="message"></a>Сообщение  
+ Метод «%1» вызывал исключение FaultException после того, как был вызван OperationInvoker. Длительность вызова метода составила «%2» мс.  
   
-## Подробности  
+## <a name="details"></a>Подробные сведения  
   
 |Имя элемента данных|Тип элемента данных|Описание|  
-|-------------------------|-------------------------|--------------|  
+|--------------------|--------------------|-----------------|  
 |MethodName|`xs:string`|Имя CLR метода, который был вызван `OperationInvoker`.|  
-|Duration|`xs:long`|Время в миллисекундах, которое потребовалось `OperationInvoker`, чтобы вызвать метод.|  
-|HostReference|`xs:string`|Для служб, размещенных на веб\-узле, это поле является уникальным идентификатором службы в веб\-иерархии.Ее формат определяется следующим образом: «имя веб\-сайта виртуальный путь приложения&#124;виртуальный путь службы&#124;ServiceName».«веб\-сайт по умолчанию\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService».|  
+|Длительность|`xs:long`|Время в миллисекундах, которое потребовалось `OperationInvoker`, чтобы вызвать метод.|  
+|HostReference|`xs:string`|Для служб, размещенных на веб-узле, это поле является уникальным идентификатором службы в веб-иерархии. Ее формат определяется как "веб-сайт имя виртуальный путь приложения &#124; Виртуальный путь службы &#124; ServiceName ". Пример: "по умолчанию веб-сайта или CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService ".|  
 |AppDomain|`xs:string`|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|

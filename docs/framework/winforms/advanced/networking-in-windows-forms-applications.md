@@ -1,45 +1,46 @@
 ---
-title: "Networking in Windows Forms Applications | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "networking, Windows Forms"
-  - "Windows Forms, networking"
+title: "Использование сети в приложениях Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- networking [Windows Forms], Windows Forms
+- Windows Forms, networking
 ms.assetid: babf8af3-8000-46e2-8c68-a42127efabba
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c4b9748de672e36ae4c4ff913ab8c76262dc5875
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Networking in Windows Forms Applications
-.NET Framework предоставляет классы для отображения веб\-страниц, загрузки веб\-содержимого, взаимодействия с узлами по протоколу FTP и использования веб\-служб, что позволяет легко встраивать сетевые функции в приложение.  Перечисленные ниже ресурсы помогут понять сетевые технологии среды .NET Framework и способ их интеграции в формы Windows Forms.  
+# <a name="networking-in-windows-forms-applications"></a>Использование сети в приложениях Windows Forms
+.NET Framework предоставляет классы для отображения веб-страниц, загрузки веб-содержимого, взаимодействия с узлами протокол FTP передачи файла и использование веб-служб, что позволяет легко встраивать сетевые функции в приложении. Следующие ресурсы помогут понять сетевые технологии .NET Framework и как интегрировать их в Windows Forms.  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:System.Net>  
- Корневое пространство имен для классов .NET Framework, работающих с сетевыми подключениями.  
+ Корневое пространство имен для классов в платформе .NET Framework, работающих с сетевыми подключениями.  
   
  <xref:System.Net.WebClient>  
- Удобный класс для получения веб\-содержимого или HTTP\-содержимого программными средствами.  
+ Удобный класс для получения веб- или HTTP-содержимого программными средствами.  
   
  <xref:System.Net.FtpWebRequest>  
  Класс для извлечения и отправки файлов по протоколу FTP.  
   
  <xref:System.Windows.Forms.WebBrowser>  
- Управляемый класс\-оболочка для элемента управления `WebBrowser`, который входит в состав Windows.  
+ Управляемый класс-оболочку для `WebBrowser` элемент управления, который входит в состав Windows.  
   
-## Связанные подразделы  
+## <a name="related-sections"></a>Связанные разделы  
  [Сетевое программирование в .NET Framework](../../../../docs/framework/network-programming/index.md)  
- Введение в работу с сетью в .NET Framework.  
+ Общие сведения о сетях в платформе .NET Framework.  
   
- [Связывание элементов управления Windows Forms с данными](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- Описывает способы отображения содержимого базы данных в приложении либо из локального хранилища данных, либо из базы данных, расположенной в сети.
+ [Привязка данных Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ Описывает, как отобразить содержимое базы данных в приложении, либо из локального хранилища данных или базы данных, расположенной в сети.

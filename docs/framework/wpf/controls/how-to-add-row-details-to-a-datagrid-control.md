@@ -1,73 +1,79 @@
 ---
-title: "Добавление сведений о строках в элемент управления DataGrid | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DataGrid [WPF], сведения о строке"
-  - "DataTemplate [WPF], DataGrid"
-  - "сведения о строке [WPF], DataGrid"
+title: "Добавление сведений о строках в элемент управления DataGrid"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataTemplate [WPF], DataGrid
+- row details [WPF], DataGrid
+- DataGrid [WPF], row details
 ms.assetid: 0bdc6f50-9b4c-483f-9df6-a47a1fde998b
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 036e06d110df8900ab46f0d501f30b4a163c8eb9
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Добавление сведений о строках в элемент управления DataGrid
-При использовании элемента управления <xref:System.Windows.Controls.DataGrid> можно настраивать представление данных путем добавления раздела сведений о строке.  Добавление раздела сведений о строке позволяет группировать некоторые данные в шаблон, который может быть видимым или свернутым.  Например, можно добавить сведения о строке в элемент управления <xref:System.Windows.Controls.DataGrid>, представляющие только сводку по данным каждой строки в элементе управления <xref:System.Windows.Controls.DataGrid>, но предоставляет дополнительные поля данных при выборе пользователем этой строки.  Шаблон для раздела сведений о строке задается в свойстве <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A>.  На следующем рисунке показан пример раздела сведений о строке.  
+# <a name="how-to-add-row-details-to-a-datagrid-control"></a>Добавление сведений о строках в элемент управления DataGrid
+При использовании <xref:System.Windows.Controls.DataGrid> элемента управления, можно настраивать представление данных путем добавления раздела сведений о строке. Добавление раздела сведений о строке позволяет группировать некоторые данные в шаблоне, который при необходимости видима или свернута. Например, можно добавить сведения о строке в <xref:System.Windows.Controls.DataGrid> , представляющие только сводку данных для каждой строки в <xref:System.Windows.Controls.DataGrid>, но предоставляет дополнительные поля данных, когда пользователь выбирает строку. Определить шаблон для раздела сведений о строке в <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> свойство. Ниже показан пример раздела сведений о строке.  
   
- ![Сетка DataGrid, показанная со сведениями в строке](../../../../docs/framework/wpf/controls/media/ndp-rowdetails.png "NDP\_RowDetails")  
+ ![Сетка DataGrid, показанная со сведениями в строке](../../../../docs/framework/wpf/controls/media/ndp-rowdetails.png "NDP_RowDetails")  
   
- Шаблон сведений о строке задается либо как встроенный XAML, либо как ресурс.  Оба варианта показаны в следующих процедурах.  Шаблон данных, добавляемый как ресурс, может использоваться во всем проекте без необходимости повторного создания шаблона.  Шаблон данных, добавляемый как встроенный XAML, доступен только из элемента управления, в котором он определен.  
+ Определение шаблона сведений о строке, либо как встроенный XAML или как ресурс. Оба варианта показаны в следующих процедурах. Шаблон данных, который добавляется в качестве ресурса можно использовать в проекте без повторного создания шаблона. Шаблон данных, который добавляется как встроенный код XAML доступен только из элемента управления, где он определен.  
   
-### Отображение сведений о строке с помощью встроенного XAML  
+### <a name="to-display-row-details-by-using-inline-xaml"></a>Отображение сведений о строке с помощью встроенного XAML  
   
-1.  Создайте элемент управления <xref:System.Windows.Controls.DataGrid>, отображающий данные из источника данных.  
+1.  Создание <xref:System.Windows.Controls.DataGrid> , отображающий данные из источника данных.  
   
-2.  В элементе управления <xref:System.Windows.Controls.DataGrid> добавьте элемент <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A>.  
+2.  В элементе <xref:System.Windows.Controls.DataGrid> добавьте элемент <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A>.  
   
-3.  Создайте шаблон <xref:System.Windows.DataTemplate>, задающий внешний вид раздела сведений о строке.  
+3.  Создание <xref:System.Windows.DataTemplate> , определяет внешний вид раздела сведений о строке.  
   
-     В следующем примере XAML показан элемент управления <xref:System.Windows.Controls.DataGrid> и порядок задания встроенного шаблона <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A>.  Элемент управления <xref:System.Windows.Controls.DataGrid> отображает три значения в каждой строке и не менее трех значений при выборе этой строки.  
+     В следующем XAML показан <xref:System.Windows.Controls.DataGrid> и определения <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> встроенной. <xref:System.Windows.Controls.DataGrid> Отображает три значения в каждой строке и три дополнительные значения при выборе строки.  
   
-     [!code-xml[DataGrid_RowDetails#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/mainwindow.xaml#1)]  
+     [!code-xaml[DataGrid_RowDetails#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/mainwindow.xaml#1)]  
   
-     В следующем примере кода показан запрос, используемый для выбора данных, отображаемых в элементе управления <xref:System.Windows.Controls.DataGrid>.  В этом примере запрос выбирает данные из сущности, содержащей сведения о клиенте.  
+     В следующем коде показано запрос, который используется для выбора данных, отображаемых в <xref:System.Windows.Controls.DataGrid>. В этом примере запрос выбирает данные из сущности, содержащей сведения о клиенте.  
   
      [!code-csharp[DataGrid_RowDetails#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/mainwindow.xaml.cs#2)]
      [!code-vb[DataGrid_RowDetails#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_rowdetails/vb/mainwindow.xaml.vb#2)]  
   
-### Отображение сведений о строке с помощью ресурса  
+### <a name="to-display-row-details-by-using-a-resource"></a>Отображение сведений о строке с помощью ресурса  
   
-1.  Создайте элемент управления <xref:System.Windows.Controls.DataGrid>, отображающий данные из источника данных.  
+1.  Создание <xref:System.Windows.Controls.DataGrid> , отображающий данные из источника данных.  
   
-2.  Добавьте элемент <xref:System.Windows.FrameworkElement.Resources%2A> в корневой элемент, такой как элемент управления <xref:System.Windows.Window> и <xref:System.Windows.Controls.Page>, или же добавьте элемент <xref:System.Windows.Application.Resources%2A> в класс <xref:System.Windows.Application> в файле App.xaml \(или Application.xaml\).  
+2.  Добавить <xref:System.Windows.FrameworkElement.Resources%2A> элемента корневого элемента, например <xref:System.Windows.Window> управления или <xref:System.Windows.Controls.Page> , или же добавьте <xref:System.Windows.Application.Resources%2A> элемент <xref:System.Windows.Application> класс в файле App.xaml (или Application.xaml).  
   
-3.  В элементе ресурсов создайте шаблон <xref:System.Windows.DataTemplate>, задающий внешний вид раздела сведений о строке.  
+3.  В элементе ресурсов создайте <xref:System.Windows.DataTemplate> , определяет внешний вид раздела сведений о строке.  
   
-     Следующий пример XAML показывает элемент <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A>, заданный в классе <xref:System.Windows.Application>.  
+     В следующем XAML показан <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> определенные в <xref:System.Windows.Application> класса.  
   
-     [!code-xml[DataGrid_RowDetails#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/app.xaml#3)]  
+     [!code-xaml[DataGrid_RowDetails#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/app.xaml#3)]  
   
-4.  В элементе <xref:System.Windows.DataTemplate> установите атрибут [Директива x:Key](../../../../docs/framework/xaml-services/x-key-directive.md) в значение, уникально идентифицирующее шаблон данных.  
+4.  На <xref:System.Windows.DataTemplate>, задайте [директива x: Key](../../../../docs/framework/xaml-services/x-key-directive.md) значение, уникально идентифицирующее шаблон данных.  
   
-5.  В элементе <xref:System.Windows.Controls.DataGrid> установите в качестве значения свойства <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> ресурс, заданный в на предыдущих этапах.  Назначьте этот ресурс как статический.  
+5.  В <xref:System.Windows.Controls.DataGrid> , задайте <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> свойство для ресурса, определенного в предыдущих шагах. Назначьте универсальный код ресурса, как статический ресурс.  
   
-     В следующем примере XAML показывается установка в качестве значения свойства <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> ресурса из предыдущего примера.  
+     В следующем XAML показан <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> свойства ресурса из предыдущего примера.  
   
-     [!code-xml[DataGrid_RowDetails#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/window2.xaml#4)]  
+     [!code-xaml[DataGrid_RowDetails#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/window2.xaml#4)]  
   
-### Установка видимости и предотвращение горизонтальной прокрутки сведений о строке  
+### <a name="to-set-visibility-and-prevent-horizontal-scrolling-for-row-details"></a>Установка видимости и предотвращение горизонтальной прокрутки сведений о строке  
   
-1.  При необходимости присвойте свойству <xref:System.Windows.Controls.DataGrid.RowDetailsVisibilityMode%2A> значение <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode>.  
+1.  При необходимости задайте <xref:System.Windows.Controls.DataGrid.RowDetailsVisibilityMode%2A> свойства <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode> значение.  
   
-     По умолчанию это значение устанавливается в <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode>.  Можно установить его в значение <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode>, чтобы показывать сведения по всем строкам, или в значение <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode>, чтобы скрыть сведения для всех строк.  
+     По умолчанию присвоено значение <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode.VisibleWhenSelected>. Вы можете задать <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode.Visible> чтобы показать сведения для всех строк или <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode.Collapsed> Чтобы скрыть сведения для всех строк.  
   
-2.  При необходимости установите свойство <xref:System.Windows.Controls.DataGrid.AreRowDetailsFrozen%2A> в значение `true`, предотвратить горизонтальное прокручивание раздела сведений о строке.
+2.  При необходимости задайте <xref:System.Windows.Controls.DataGrid.AreRowDetailsFrozen%2A> свойства `true` для предотвращения строки раздела горизонтальная прокрутка сведений о.

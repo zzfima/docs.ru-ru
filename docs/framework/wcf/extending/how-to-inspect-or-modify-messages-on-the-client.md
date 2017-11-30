@@ -1,40 +1,43 @@
 ---
-title: "Практическое руководство. Проверка или изменение сообщений на клиенте | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Проверка или изменение сообщений на клиенте"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 164e19891e576b6d310839a1221ad8ed0d315444
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Проверка или изменение сообщений на клиенте
-Реализация интерфейса <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=fullName> и его вставка в среду выполнения клиента позволяет проверять или изменять входящие или исходящие сообщения клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  Для получения дополнительной информации см. [Расширение клиентов](../../../../docs/framework/wcf/extending/extending-clients.md).  Эквивалентную функцию в службе выполняет интерфейс <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=fullName>.  Полный пример кода приведен в образце [Инспекторы сообщений](../../../../docs/framework/wcf/samples/message-inspectors.md).  
+# <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Практическое руководство. Проверка или изменение сообщений на клиенте
+Реализация интерфейса [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и его вставка в среду выполнения клиента позволяет проверять или изменять входящие или исходящие сообщения клиента <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [расширение клиентов](../../../../docs/framework/wcf/extending/extending-clients.md). Эквивалентную функцию в службе выполняет интерфейс <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Полный пример кода см. [инспекторы сообщений](../../../../docs/framework/wcf/samples/message-inspectors.md) образца.  
   
-### Проверка или изменение сообщений  
+### <a name="to-inspect-or-modify-messages"></a>Проверка или изменение сообщений  
   
-1.  Реализовать интерфейс <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=fullName>.  
+1.  Реализовать интерфейс <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>.  
   
-2.  Реализуйте интерфейс <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=fullName> или <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=fullName> в зависимости от области, в которую нужно вставить инспектор сообщений клиентов.  Интерфейс <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=fullName> позволяет изменять поведение на уровне конечной точки.  Интерфейс <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=fullName> позволяет изменять поведение на уровне контракта.  
+2.  Реализуйте интерфейс <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> или <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> в зависимости от области, в которую нужно вставить инспектор сообщений клиентов. <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>позволяет изменять поведение на уровне конечной точки. <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>позволяет изменять поведение на уровне контракта.  
   
-3.  Вставьте поведение до вызова метода <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=fullName> или метода <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=fullName> фабрики каналов <xref:System.ServiceModel.ChannelFactory%601?displayProperty=fullName>.  Дополнительные сведения см. в разделе [Настройка и расширение среды выполнения с помощью поведений](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+3.  Вставьте поведение до вызова метода <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> или метода <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> фабрики каналов <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [настройку и расширение среды выполнения с помощью поведений](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующих примерах кода показаны, по порядку:  
   
 -   реализация инспектора клиента;  
   
 -   поведение конечной точки, вставляющее инспектор;  
   
--   Класс <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> \- это производный класс, позволяющий добавить поведение в файл конфигурации.  
+-   Класс <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> - это производный класс, позволяющий добавить поведение в файл конфигурации.  
   
 -   Файл конфигурации, добавляющий поведение конечной точки, которая вставляет пользовательский инспектор сообщений в среду выполнения клиента.  
   
@@ -57,7 +60,6 @@ public class SimpleMessageInspector : IClientMessageInspector
         return null;  
     }  
 }  
-  
 ```  
   
 ```csharp  
@@ -102,10 +104,9 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
         return new SimpleEndpointBehavior();  
     }  
 }  
-  
 ```  
   
-```vb  
+```xml
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
     <system.serviceModel>  
@@ -132,10 +133,9 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
       </extensions>  
     </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## См. также  
- <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=fullName>   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=fullName>   
+## <a name="see-also"></a>См. также  
+ <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>  
  [Настройка и расширение среды выполнения с помощью поведений](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

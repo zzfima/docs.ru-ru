@@ -1,28 +1,34 @@
 ---
-title: "Пошаговое руководство. Упорядочение элементов управления Windows Forms в приложении WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "упорядочивание элементов управления"
-  - "гибридные приложения [взаимодействие с WPF]"
+title: "Пошаговое руководство. Упорядочение элементов управления Windows Forms в приложении WPF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- hybrid applications [WPF interoperability]
+- arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-caps.latest.revision: 31
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 28
+caps.latest.revision: "31"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f78da83657c4c1bd913f67c9e612264cc5dbdf99
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пошаговое руководство. Упорядочение элементов управления Windows Forms в приложении WPF
-В этом пошаговом руководстве демонстрируется использование возможностей макета [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для упорядочения элементов управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] в гибридных приложениях.  
+# <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Пошаговое руководство. Упорядочение элементов управления Windows Forms в приложении WPF
+В этом пошаговом руководстве показано, как использовать [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] возможностей компоновки для размещения [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементов управления в гибридных приложениях.  
   
- В этом пошаговом руководстве демонстрируется выполнение следующих задач.  
+ В данном пошаговом руководстве представлены следующие задачи.  
   
 -   Создание проекта.  
   
@@ -36,7 +42,7 @@ caps.handback.revision: 28
   
 -   Установка свойств макета.  
   
--   Описание ограничений z\-порядка.  
+-   Описание ограничений z-порядка.  
   
 -   Закрепление.  
   
@@ -52,244 +58,244 @@ caps.handback.revision: 28
   
 -   Использование динамических контейнеров макета.  
   
- Полный код для задач, приведенных в этом руководстве, см. на веб\-странице [Arranging Windows Forms Controls in WPF Sample](http://go.microsoft.com/fwlink/?LinkID=159971).  
+ Полный пример кода для задач, приведенных в этом пошаговом руководстве, см. [упорядочение элементов управления Windows Forms в образце WPF](http://go.microsoft.com/fwlink/?LinkID=159971).  
   
- По окончании знакомства с разделом пользователь будет иметь представление о возможностях макета [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] в приложениях, основанных на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ По завершении вы получите представление о [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] возможности разметки в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-приложений на основе.  
   
-## Обязательные компоненты  
+## <a name="prerequisites"></a>Предварительные требования  
  Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.  
   
 -   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
   
-## Создание проекта  
+## <a name="creating-the-project"></a>Создание проекта  
   
-#### Чтобы создать и настроить проект  
+#### <a name="to-create-and-set-up-the-project"></a>Создание и настройка проекта  
   
-1.  Создайте проект приложения WPF с именем `WpfLayoutHostingWf`.  
+1.  Создание проекта приложения WPF с именем `WpfLayoutHostingWf`.  
   
 2.  В обозревателе решений добавьте ссылки на следующие сборки.  
   
     -   WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    -   System.Windows.Forms.  
   
-    -   System.Drawing  
+    -   System.Drawing;  
   
 3.  Дважды щелкните файл MainWindow.xaml, чтобы открыть его в представлении XAML.  
   
-4.  В элементе <xref:System.Windows.Window> добавьте следующее сопоставление пространства имен [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
+4.  В <xref:System.Windows.Window> элемента, добавьте следующий [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] сопоставление пространства имен.  
   
     ```xaml  
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
     ```  
   
-5.  В элементе <xref:System.Windows.Controls.Grid> задайте для свойства <xref:System.Windows.Controls.Grid.ShowGridLines%2A> значение `true` и определите пять строк и три столбца.  
+5.  В <xref:System.Windows.Controls.Grid> элемент набора <xref:System.Windows.Controls.Grid.ShowGridLines%2A> свойства `true` и определите пять строк и три столбца.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#2)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#2)]  
   
-## Использование параметров макета по умолчанию  
- По умолчанию элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> обрабатывает макет для размещаемого элемента управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
+## <a name="using-default-layout-settings"></a>Использование параметров макета по умолчанию  
+ По умолчанию <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент обрабатывает макет для размещаемого [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элемента управления.  
   
-#### Для использования параметров макета по умолчанию  
+#### <a name="to-use-default-layout-settings"></a>Использование параметров макета по умолчанию  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Элемент управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=fullName> находится внутри элемента управления <xref:System.Windows.Controls.Canvas>.  Размер размещаемого элемента управления основан на его содержимом, а размеры элемента управления <xref:System.Windows.Forms.Integration.WindowsFormsHost> изменяются, чтобы вместить размещаемый элемент управления.  
+2.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=nameWithType> Элемент управления отображается в <xref:System.Windows.Controls.Canvas>. Размещенного элемента управления изменяется в зависимости от содержимого и <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемента изменяются, чтобы вместить размещенного элемента управления.  
   
-## Изменение размеров в зависимости от содержимого  
- Элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> обеспечивает то, что размер размещаемого элемента управления изменяется для правильного отображения его содержимого.  
+## <a name="sizing-to-content"></a>Изменение размеров в зависимости от содержимого  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost> Элемент гарантирует, что размещенного элемента управления имеет размер для правильного отображения ее содержимого.  
   
-#### Для изменения размера в зависимости от содержимого  
+#### <a name="to-size-to-content"></a>Изменение размеров в соответствии с содержимым  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#4)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#4)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Размер двух новых кнопок корректно изменяется для отображения длинных строк текста и большого шрифта, а размер элементов <xref:System.Windows.Forms.Integration.WindowsFormsHost> изменяется, чтобы вместить размещаемые элементы управления.  
+2.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. Два новых элемента управления button изменяется для отображения длинных строк текста и размера шрифта правильно и <xref:System.Windows.Forms.Integration.WindowsFormsHost> элементов изменяется, чтобы вместить размещаемые элементы управления.  
   
-## Использование абсолютного позиционирования  
- Абсолютное позиционирование можно использовать для размещения элемента <xref:System.Windows.Forms.Integration.WindowsFormsHost> в любом месте в пользовательском интерфейсе.  
+## <a name="using-absolute-positioning"></a>Использование абсолютного позиционирования  
+ Абсолютное позиционирование используется для размещения <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент в любом месте в пользовательском интерфейсе (UI).  
   
-#### Чтобы использовать абсолютное позиционирование  
+#### <a name="to-use-absolute-positioning"></a>Использование абсолютного позиционирования  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#5)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#5)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> размещается в 20 пикселях от верхнего края ячейки сетки и в 20 пикселях от левого края.  
+2.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Элемент помещается 20 пикселей от верхнего края ячейки сетки и 20 пикселей от левого края.  
   
-## Задание размера явным образом  
- Можно указать размер элемента <xref:System.Windows.Forms.Integration.WindowsFormsHost> с помощью <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A>.  
+## <a name="specifying-size-explicitly"></a>Задание размера явным образом  
+ Можно указать размер <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемента с помощью <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> свойства.  
   
-#### Чтобы явно указать размер  
+#### <a name="to-specify-size-explicitly"></a>Задание размера явным образом  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Размер элемента <xref:System.Windows.Forms.Integration.WindowsFormsHost> устанавливается в 50 пикселей в ширину и в 70 пикселей в высоту — это меньше, чем параметры макета по умолчанию.  Содержимое элемента управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] упорядочивается соответствующим образом.  
+2.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Элемент имеет значение 50 пикселей в ширину 70 пикселей в высоту, размер которой меньше, чем параметры макета по умолчанию. Содержимое [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] управления упорядочивается соответствующим образом.  
   
-## Установка свойств макета  
- Всегда следует задавать связанные с макетом свойства для размещаемого элемента управления с помощью свойств элемента <xref:System.Windows.Forms.Integration.WindowsFormsHost>.  При установке свойств макета непосредственно для размещаемого элемента управления результат не будет соответствовать ожидаемому.  
+## <a name="setting-layout-properties"></a>Установка свойств макета  
+ Всегда задавать свойства, связанные с макетом размещенного элемента управления, с помощью свойств <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемента. При установке свойств макета непосредственно для размещаемого элемента управления результат не будет соответствовать ожидаемому.  
   
- Установка связанных с макетом свойств размещаемого элемента управления в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] не оказывает никакого действия.  
+ Установка свойства, связанные с макетом размещенного элемента управления в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] не делает ничего.  
   
-#### Чтобы увидеть влияние задания свойств размещаемого элемента управления  
+#### <a name="to-see-the-effects-of-setting-properties-on-the-hosted-control"></a>Чтобы увидеть влияние задания свойств размещаемого элемента управления  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#7)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#7)]  
   
-2.  В обозревателе решений дважды щелкните файл MainWindow.xaml.  vb или MainWindow.xaml.cs, чтобы открыть его в редакторе кода.  
+2.  В обозревателе решений дважды щелкните файл MainWindow.xaml. vb или MainWindow.xaml.cs, чтобы открыть его в редакторе кода.  
   
-3.  Скопируйте следующий код в определение класса `MainWindow`.  
+3.  Скопируйте следующий код в `MainWindow` определения класса.  
   
      [!code-csharp[WpfLayoutHostingWfWithXaml#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#101)]
      [!code-vb[WpfLayoutHostingWfWithXaml#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#101)]  
   
-4.  Нажмите клавишу F5 для построения и выполнения приложения.  
+4.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.  
   
-5.  Нажмите кнопку **Click Me**.  Обработчик событий `button1_Click` задает свойства <xref:System.Windows.Forms.Control.Top%2A> и <xref:System.Windows.Forms.Control.Left%2A> размещаемого элемента управления.  Это приводит к изменению положения размещаемого элемента управления в элементе <xref:System.Windows.Forms.Integration.WindowsFormsHost>.  Ведущий элемент занимает то же пространство на экране, но размещаемый элемент управления обрезается.  Вместо этого размещаемый элемент управления должен всегда заполнять элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost>.  
+5.  Нажмите кнопку **Click me** кнопки. `button1_Click` Задает обработчик событий <xref:System.Windows.Forms.Control.Top%2A> и <xref:System.Windows.Forms.Control.Left%2A> свойства размещенным элементом управления. В результате размещенного элемента управления изменять внутри <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемента. Ведущий элемент занимает то же пространство на экране, но размещаемый элемент управления обрезается. Вместо этого размещаемый элемент управления должен всегда заполнять <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемента.  
   
-## Описание ограничений z\-порядка  
- По умолчанию visible <xref:System.Windows.Forms.Integration.WindowsFormsHost> элементы всегда рисуется поверх другого  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементы, и они не затрагиваются z\-порядка.  Чтобы включить Z\-приказывать, установите <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> свойство   <xref:System.Windows.Forms.Integration.WindowsFormsHost> true и  <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> свойство  <xref:System.Windows.Interop.CompositionMode.Full> OR  <xref:System.Windows.Interop.CompositionMode.OutputOnly>.  
+## <a name="understanding-z-order-limitations"></a>Описание ограничений z-порядка  
+ По умолчанию отображается <xref:System.Windows.Forms.Integration.WindowsFormsHost> элементы всегда рисуются поверх других [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементы и они не подвержены влиянию z порядка. Чтобы включить z порядка, задайте <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> свойство <xref:System.Windows.Forms.Integration.WindowsFormsHost> значение true и <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> свойства <xref:System.Windows.Interop.CompositionMode.Full> или <xref:System.Windows.Interop.CompositionMode.OutputOnly>.  
   
-#### Доступны по умолчанию расширения функциональности z\-порядок  
+#### <a name="to-see-the-default-z-order-behavior"></a>Просмотр ограничений z-порядка  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> рисуется через элемент метки.  
+2.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Элемент рисуется через элемент label.  
   
-#### Увидеть расширение функциональности z\-порядка, когда IsRedirected true  
+#### <a name="to-see-the-z-order-behavior-when-isredirected-is-true"></a>Чтобы увидеть поведение z порядка, когда свойству IsRedirected присвоено значение "true"  
   
-1.  Заменить предыдущий пример z\-порядок следующим кодом XAML.  
+1.  Замените следующий код XAML в предыдущем примере z порядка.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#8b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#8b)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#8b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#8b)]  
   
-     Нажмите клавишу F5 для построения и выполнения приложения.  Элемент метки окрашен над <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент.  
+     Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. Элемент label рисуется через <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемента.  
   
-## Закрепление  
- Элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> поддерживает закрепление [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Задайте вложенное свойство <xref:System.Windows.Controls.DockPanel.Dock%2A>, чтобы закрепить размещаемый элемент управления в элементе <xref:System.Windows.Controls.DockPanel>.  
+## <a name="docking"></a>Закрепление  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>поддерживает элемент [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] закрепления. Задать <xref:System.Windows.Controls.DockPanel.Dock%2A> вложенное свойство, чтобы закрепить размещенного элемента управления в <xref:System.Windows.Controls.DockPanel> элемент.  
   
-#### Чтобы закрепить размещаемый элемент управления  
+#### <a name="to-dock-a-hosted-control"></a>Закрепление размещаемого элемента управления  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#9)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#9)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> закрепляется по правой стороне элемента <xref:System.Windows.Controls.DockPanel>.  
+2.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Элемент закреплен в правую часть <xref:System.Windows.Controls.DockPanel> элемента.  
   
-## Задание видимости  
- Элемент управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] можно сделать невидимым или свернуть его, задав свойству <xref:System.Windows.UIElement.Visibility%2A> элемента <xref:System.Windows.Forms.Integration.WindowsFormsHost>.  Если элемент управления невидим, он не отображается, но при этом занимает пространство разметки.  Если элемент управления свернут, он не отображается и не занимает пространство разметки.  
+## <a name="setting-visibility"></a>Задание видимости  
+ Можно сделать ваш [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] управления невидимым или свернуть его, задав <xref:System.Windows.UIElement.Visibility%2A> свойства <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемента. Если элемент управления невидим, он не отображается, но при этом занимает пространство разметки. Если элемент управления свернут, он не отображается и не занимает пространство разметки.  
   
-#### Чтобы задать видимость размещаемого элемента управления  
+#### <a name="to-set-the-visibility-of-a-hosted-control"></a>Задание видимости размещаемого элемента управления  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#10)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#10)]  
   
 2.  В файле MainWindow.xaml.vb или MainWindow.xaml.cs скопируйте следующий код в определение класса.  
   
      [!code-csharp[WpfLayoutHostingWfWithXaml#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#102)]
      [!code-vb[WpfLayoutHostingWfWithXaml#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#102)]  
   
-3.  Нажмите клавишу F5 для построения и выполнения приложения.  
+3.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.  
   
-4.  Нажмите на кнопку **Click to make invisible** чтобы сделать элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> невидимым.  
+4.  Нажмите кнопку **щелкните, чтобы сделать невидимыми** кнопку, чтобы <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент невидимым.  
   
-5.  Нажмите на кнопку **Click to collapse** кнопку, чтобы полностью скрыть элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> в макете.  Когда элемент управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] свернут, соседние элементы переупорядочиваются, чтобы занять его место.  
+5.  Нажмите кнопку **щелкните, чтобы свернуть** кнопку, чтобы скрыть <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент из макета полностью. Когда [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] управления свернут, соседние элементы переупорядочиваются, чтобы занять его место.  
   
-## Размещение нерастягиваемых элементов управления  
- Некоторые элементы управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] имеют фиксированный размер и не растягиваются для заполнения доступного места в макете.  Например, элемент управления <xref:System.Windows.Forms.MonthCalendar> отображает месяц в фиксированном пространстве.  
+## <a name="hosting-a-control-that-does-not-stretch"></a>Размещение нерастягиваемых элементов управления  
+ Некоторые [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы управления имеют фиксированный размер и не растягиваются для заполнения доступного места в макете. Например <xref:System.Windows.Forms.MonthCalendar> элемент управления отображает месяц в фиксированное пространство.  
   
-#### Чтобы разместить нерастягиваемый элемент управления  
+#### <a name="to-host-a-control-that-does-not-stretch"></a>Размещение нерастягиваемого элемента управления  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#11)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#11)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> выравнивается по центру в строке сетки, но он не растягивается, чтобы заполнить доступное пространство.  Если окно достаточно большое, можно увидеть два или более месяцев, отображаемых размещаемым элементом управления <xref:System.Windows.Forms.MonthCalendar>, но они выравниваются по центру строки.  Обработчик макета [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] выравнивает по центру элементы, размеры которых не меняются для заполнения доступного пространства.  
+2.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Элемента выравнивается по центру в строке сетки, но она не растягивается для заполнения всего доступного пространства. Если окно является достаточно большим, можно увидеть два или более месяцев, отображаемых размещаемым <xref:System.Windows.Forms.MonthCalendar> элемента управления, но они выравниваются по центру в строке. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Обработчик макетов Центрирование элементов, которые не меняются для заполнения всего доступного пространства.  
   
-## Масштабирование  
- В отличие от элементов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], большинство элементов управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] не являются непрерывно масштабируемыми.  По умолчанию <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент масштабирует размещаемый элемент управления его, если это возможно.  Чтобы включить полноценное масштабирование, установите <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> свойство   <xref:System.Windows.Forms.Integration.WindowsFormsHost> true и  <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> свойство  <xref:System.Windows.Interop.CompositionMode.Full> OR  <xref:System.Windows.Interop.CompositionMode.OutputOnly>.  
+## <a name="scaling"></a>Масштабирование  
+ В отличие от [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементов, большинство [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы управления не являются непрерывно масштабируемыми. По умолчанию <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент масштабирует ее размещенного элемента управления, когда это возможно.  Чтобы включить полноценные масштабирование, задайте <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> свойство <xref:System.Windows.Forms.Integration.WindowsFormsHost> значение true и <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> свойства <xref:System.Windows.Interop.CompositionMode.Full> или <xref:System.Windows.Interop.CompositionMode.OutputOnly>.  
   
-#### Масштабирование размещаемый элемент управления по умолчанию с помощью расширения функциональности  
+#### <a name="to-scale-a-hosted-control-by-using-the-default-behavior"></a>Масштабирование размещаемого элемента управления с помощью поведения по умолчанию  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#12)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#12)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Размещаемый элемент управления и его окружающие элементы масштабируется с коэффициентом 0,5.  Однако шрифт размещаемого элемента управления не масштабируется.  
+2.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. Размещаемый элемент управления и его окружающие элементы масштабируются с коэффициентом 0,5. Но шрифт размещаемого элемента управления не масштабируется.  
   
-#### Масштабирование размещаемый элемент управления установкой IsRedirected true  
+#### <a name="to-scale-a-hosted-control-by-setting-isredirected-to-true"></a>Масштабирование размещаемого элемента управления с помощью установки для свойства IsRedirected значения "true"  
   
-1.  Заменить предыдущий пример масштабирования следующим кодом XAML.  
+1.  Замените следующий код XAML в предыдущем примере масштабирования.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#12b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#12b)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#12b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#12b)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Размещаемый элемент управления, его окружающие элементы и шрифт размещаемого элемента управления \- на 0,5.  
+2.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. Шрифт размещаемого элемента управления, его окружающих элементов и вложенных в него элементов масштабируется с коэффициентом 0,5.  
   
-## Поворот  
- В отличие от элементов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], элементы управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] не поддерживают поворот.  По умолчанию <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент не вращает с другим  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементы, когда применяется преобразование поворота.  Любой угол поворота, отличный от 180 градусов, вызывает событие <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>.  Чтобы включить выполнять циклический сдвиг к любому углу, установите <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> свойство   <xref:System.Windows.Forms.Integration.WindowsFormsHost> true и  <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> свойство  <xref:System.Windows.Interop.CompositionMode.Full> OR  <xref:System.Windows.Interop.CompositionMode.OutputOnly>.  
+## <a name="rotating"></a>Поворот  
+ В отличие от [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементов, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы управления не поддерживают поворот. По умолчанию <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент не поворачивается вместе с другими [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементы, когда применяется преобразование поворота. Значение поворота, отличное от 180 градусов, вызывает <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> событий.  Чтобы включить на любой угол поворота, задайте <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> свойство <xref:System.Windows.Forms.Integration.WindowsFormsHost> значение true и <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> свойства <xref:System.Windows.Interop.CompositionMode.Full> или <xref:System.Windows.Interop.CompositionMode.OutputOnly>.  
   
-#### Чтобы увидеть эффект от поворота в гибридном приложении  
+#### <a name="to-see-the-effect-of-rotation-in-a-hybrid-application"></a>Чтобы увидеть эффект от поворота в гибридном приложении  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#13)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#13)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Размещаемый элемент управления не повернут, но его соседние элементы повернуты на угол в 180 градусов.  Для отображения элементов может потребоваться изменить размер окна.  
+2.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. Размещаемый элемент управления не повернут, но его соседние элементы повернуты на угол в 180 градусов. Для отображения элементов может потребоваться изменить размер окна.  
   
-#### Увидеть эффект поворота в гибридном приложении при IsRedirected true  
+#### <a name="to-see-the-effect-of-rotation-in-a-hybrid-application-when-isredirected-is-true"></a>Чтобы увидеть эффект от поворота в гибридном приложении, когда для свойства IsRedirected задано значение "true"  
   
-1.  Заменить предыдущий пример поворота следующим кодом XAML.  
+1.  Замените следующий код XAML в предыдущем примере поворота.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#13b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#13b)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#13b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#13b)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Размещаемый элемент управления вращано.  Обратите внимание, что <xref:System.Windows.Media.RotateTransform.Angle%2A> свойству может быть присвоено любое значение.  Для отображения элементов может потребоваться изменить размер окна.  
+2.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. Размещаемый элемент повернут.  Обратите внимание, что <xref:System.Windows.Media.RotateTransform.Angle%2A> свойство может быть присвоено любое значение. Для отображения элементов может потребоваться изменить размер окна.  
   
-## Задание полей и внутренних полей  
- Поля и внутренние поля в макете [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] похожи на свои аналоги в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  Просто задайте свойства <xref:System.Windows.Controls.Control.Padding%2A> и <xref:System.Windows.FrameworkElement.Margin%2A> элемента <xref:System.Windows.Forms.Integration.WindowsFormsHost>.  
+## <a name="setting-padding-and-margins"></a>Задание отбивки и внутренних полей  
+ Заполнение и поля в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] макета аналогичны отступы и рамки, в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Просто установите <xref:System.Windows.Controls.Control.Padding%2A> и <xref:System.Windows.FrameworkElement.Margin%2A> свойства <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемента.  
   
-#### Чтобы задать поля и внутренние поля размещаемого элемента управления  
+#### <a name="to-set-padding-and-margins-for-a-hosted-control"></a>Задание отбивки и внутренних полей размещаемого элемента управления  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]  
-    [!code-xml[WpfLayoutHostingWfWithXaml#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]  
+    [!code-xaml[WpfLayoutHostingWfWithXaml#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Параметры полей и внутренних полей будут применены к размещаемым элементам управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] так же, как и в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
+2.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. Параметры поля и заполнение применяются к размещаемым [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементов управления таким же образом, как они будут применяться в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
   
-## Использование динамических контейнеров макета  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] предоставляет два динамических контейнера макета, <xref:System.Windows.Forms.FlowLayoutPanel> и <xref:System.Windows.Forms.TableLayoutPanel>.  Можно также использовать эти контейнеры в макетах [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+## <a name="using-dynamic-layout-containers"></a>Использование динамических контейнеров макета  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]предусмотрены два типа контейнеров динамического макета, <xref:System.Windows.Forms.FlowLayoutPanel> и <xref:System.Windows.Forms.TableLayoutPanel>. Можно также использовать эти контейнеры в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] макеты.  
   
-#### Чтобы использовать динамический контейнер макета  
+#### <a name="to-use-a-dynamic-layout-container"></a>Использование динамических контейнеров макета  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#16)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#16)]  
   
 2.  В файле MainWindow.xaml.vb или MainWindow.xaml.cs скопируйте следующий код в определение класса.  
   
      [!code-csharp[WpfLayoutHostingWfWithXaml#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#103)]
      [!code-vb[WpfLayoutHostingWfWithXaml#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#103)]  
   
-3.  Добавьте вызов метода `InitializeFlowLayoutPanel` в конструктор.  
+3.  Добавьте вызов `InitializeFlowLayoutPanel` в конструкторе.  
   
      [!code-csharp[WpfLayoutHostingWfWithXaml#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#104)]
      [!code-vb[WpfLayoutHostingWfWithXaml#104](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#104)]  
   
-4.  Нажмите клавишу F5 для построения и выполнения приложения.  Элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> заполняет <xref:System.Windows.Controls.DockPanel>, а <xref:System.Windows.Forms.FlowLayoutPanel> упорядочивает его дочерние элементы в направлении <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> по умолчанию.  
+4.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Заполняет элемент <xref:System.Windows.Controls.DockPanel>, и <xref:System.Windows.Forms.FlowLayoutPanel> упорядочивает его дочерние элементы в значение по умолчанию <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>.  
   
-## См. также  
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [Конструктор WPF](http://msdn.microsoft.com/ru-ru/c6c65214-8411-4e16-b254-163ed4099c26)   
- [Вопросы, связанные с макетом элемента WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)   
- [Arranging Windows Forms Controls in WPF Sample](http://go.microsoft.com/fwlink/?LinkID=159971)   
- [Пошаговое руководство. Размещение составного элемента управления Windows Forms в приложении WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [Конструктор WPF](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [Вопросы, связанные с макетом элемента WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)  
+ [Элементы управления упорядочение Windows Forms в образце WPF](http://go.microsoft.com/fwlink/?LinkID=159971)  
+ [Пошаговое руководство. Размещение составного элемента управления Windows Forms в приложении WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
  [Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

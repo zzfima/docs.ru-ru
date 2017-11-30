@@ -1,37 +1,29 @@
 ---
-title: "Практическое руководство: использование пула потоков (Visual Basic) | Документы Microsoft"
+title: "Как: использование пула потоков (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 90a0bb24-39f8-41f5-a217-b52a7d4fed0b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d60bceea0ed956075233f5f045131ffb2eb37eef
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 42a4120900203eb7eb5ad8463fba4491636882b1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-use-a-thread-pool-visual-basic"></a>Практическое руководство: использование пула потоков (Visual Basic)
-*Группировка потоков в пул* является формой многопоточности, при которой задачи добавляются в очередь и автоматически запускаются при создании новых потоков. Дополнительные сведения см. в разделе [потоков пула (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md).  
+# <a name="how-to-use-a-thread-pool-visual-basic"></a>Как: использование пула потоков (Visual Basic)
+*Группировка потоков в пул* — это форма многопоточности, при которой задачи добавляются в очередь и при создании новых потоков запускаются автоматически. Дополнительные сведения см. в разделе [потоков пула (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md).  
   
- В следующем примере пул потоков .NET Framework для вычисления `Fibonacci` результата для десяти чисел от 20 до 40. Каждый `Fibonacci` результат будет представлен `Fibonacci` класс, который предоставляет метод, именуемый `ThreadPoolCallback` , выполняющий вычисления. Объект, который представляет каждый `Fibonacci` создается значение и `ThreadPoolCallback` методу передается <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>, который назначает доступный поток в пуле для выполнения метода.</xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ В следующем примере пул потоков .NET Framework используется для вычисления результата `Fibonacci` для десяти чисел в диапазоне от 20 до 40. Каждый результат `Fibonacci` представлен классом `Fibonacci`, который предоставляет метод с именем `ThreadPoolCallback`, выполняющий вычисление. Создается объект, представляющий каждое значение `Fibonacci`, а затем метод `ThreadPoolCallback` передается в объект <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>, который назначает для выполнения метода доступный в пуле поток.  
   
- Так как каждая `Fibonacci` объекту присваивается значение для вычисления, и потому, что каждый поток будут конкурировать за ресурсы процессора, невозможно знать заранее, сколько времени потребуется для всех десяти результатов необходимо вычислить. Именно поэтому каждый `Fibonacci` объект передается экземпляр <xref:System.Threading.ManualResetEvent>класса во время конструирования.</xref:System.Threading.ManualResetEvent> Каждый объект сигнализирует соответствующему объекту события вычисления после завершения операции, который позволяет главному потоку блокировать выполнение <xref:System.Threading.WaitHandle.WaitAll%2A>до всех десяти `Fibonacci` объектов вычисления результата.</xref:System.Threading.WaitHandle.WaitAll%2A> `Main` Метод отображает все `Fibonacci` результат.  
+ Поскольку каждому объекту `Fibonacci` присваивается полупроизвольное значение для расчета, а процессорное время распределяется между потоками, узнать, сколько времени займет вычисление всех десяти результатов, заранее невозможно. Именно поэтому во время конструирования каждому объекту `Fibonacci` передается экземпляр класса <xref:System.Threading.ManualResetEvent>. Каждый объект сигнализирует предоставленному объекту события о завершении расчетов, что позволяет основному потоку блокировать выполнение <xref:System.Threading.WaitHandle.WaitAll%2A> до получения результатов по всем десяти объектам `Fibonacci`. После этого метод `Main` отображает каждый результат `Fibonacci`.  
   
 ## <a name="example"></a>Пример  
   
@@ -113,7 +105,7 @@ Module Module1
 End Module  
 ```  
   
- Ниже приведен пример выходных данных.  
+ Ниже показан пример выходных значений.  
   
 ```  
 launching 10 tasks...  
@@ -151,14 +143,14 @@ Fibonacci(27) = 196418
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Threading.Mutex></xref:System.Threading.Mutex>   
- <xref:System.Threading.WaitHandle.WaitAll%2A></xref:System.Threading.WaitHandle.WaitAll%2A>   
- <xref:System.Threading.ManualResetEvent></xref:System.Threading.ManualResetEvent>   
- <xref:System.Threading.EventWaitHandle.Set%2A></xref:System.Threading.EventWaitHandle.Set%2A>   
- <xref:System.Threading.ThreadPool></xref:System.Threading.ThreadPool>   
- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A></xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>   
- <xref:System.Threading.ManualResetEvent></xref:System.Threading.ManualResetEvent>   
- [Группировка потоков в пул (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)   
- [Работа с потоками (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)   
- @System.Threading.Monitor   
- [Безопасность](http://msdn.microsoft.com/library/9a9621d7-8883-4a4f-a874-65e8e09e20a6)
+ <xref:System.Threading.Mutex>  
+ <xref:System.Threading.WaitHandle.WaitAll%2A>  
+ <xref:System.Threading.ManualResetEvent>  
+ <xref:System.Threading.EventWaitHandle.Set%2A>  
+ <xref:System.Threading.ThreadPool>  
+ <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ <xref:System.Threading.ManualResetEvent>  
+ <xref:System.Threading.Monitor>  
+ [Группировка потоков в пул (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)  
+ [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md) (Работа с потоками (Visual Basic))  
+ [Безопасность](../../../../standard/security/index.md)

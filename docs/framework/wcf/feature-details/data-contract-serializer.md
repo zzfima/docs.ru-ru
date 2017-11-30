@@ -1,36 +1,39 @@
 ---
-title: "Сериализатор контракта данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "контракты данных [WCF], сериализатор"
-  - "DataContractSerializer"
-  - "WCF, данные"
+title: "Сериализатор контракта данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data contracts [WCF], serializer
+- WCF, data
+- DataContractSerializer
 ms.assetid: 3d64837e-0a0c-4cc8-90ff-a5c6f313c63a
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b54ce5f26cbb18a6aeef28a36f9efe28d24be79a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Сериализатор контракта данных
-Инфраструктура [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] использует класс <xref:System.Runtime.Serialization.DataContractSerializer> в качестве сериализатора по умолчанию.В подразделах этого раздела представлены дополнительные сведения об использовании этого класса в качестве автономного сериализатора.  
+# <a name="data-contract-serializer"></a>Сериализатор контракта данных
+Инфраструктура [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] использует класс <xref:System.Runtime.Serialization.DataContractSerializer> в качестве сериализатора по умолчанию. В подразделах этого раздела представлены дополнительные сведения об использовании этого класса в качестве автономного сериализатора.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Сериализация и десериализация](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)  
  Подробное описание использования класса <xref:System.Runtime.Serialization.DataContractSerializer> для сериализации графов объектов и десериализации документов XML в объекты.  
   
- [Импорт и экспорт схемы](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
- Пояснения о том, как создавать схему языка определения схемы XML \(XSD\) из класса [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] или как создавать код из документа схемы XSD.  
+ [Импорт и Экспорт схемы](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
+ Пояснения о том, как создавать схему языка определения схемы XML (XSD) из класса [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] или как создавать код из документа схемы XSD.  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
   
  <xref:System.Runtime.Serialization.NetDataContractSerializer>  
@@ -39,11 +42,11 @@ caps.handback.revision: 12
   
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
   
-## Связанные подразделы  
+## <a name="related-sections"></a>Связанные разделы  
  [Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
   
- [Передача данных и сериализация](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
+ [Передача данных и сериализации](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
   
-## См. также  
- [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)   
- [Задание передачи данных в контрактах служб](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
+ [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

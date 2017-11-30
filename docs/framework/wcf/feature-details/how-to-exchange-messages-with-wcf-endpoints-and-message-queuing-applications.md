@@ -1,29 +1,35 @@
 ---
-title: "Практическое руководство. Обмен сообщениями с конечными точками WCF и приложениями очереди сообщений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Обмен сообщениями с конечными точками WCF и приложениями очереди сообщений"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d09b8e662b2876fa5d5c5246ea7e7a4998cde9ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Обмен сообщениями с конечными точками WCF и приложениями очереди сообщений
+# <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Практическое руководство. Обмен сообщениями с конечными точками WCF и приложениями очереди сообщений
 Существующие приложения MSMQ можно интегрировать с приложениями [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], используя привязку интеграции MSMQ для преобразования сообщений MSMQ в сообщения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и наоборот. Это позволяет вызывать принимающие приложения MSMQ из клиентов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], а также вызывать службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] из отправляющих приложений MSMQ.  
   
- В этом разделе рассматривается, как использовать <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> для взаимодействия с использованием очередей между (1 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиентом и службой приложения MSMQ с помощью System.Messaging и (2) клиентом приложения MSMQ и [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы.  
+ В этом разделе рассматривается, как использовать привязку <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> для взаимодействия с использованием очередей между (1) клиентом [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и службой приложения MSMQ, созданной с помощью System.Messaging, и (2) клиентом приложения MSMQ и службой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- Полный пример, демонстрирующий вызов принимающего приложения MSMQ из [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиента, в разделе [Windows Communication Foundation для Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) образца.  
+ Полный пример, демонстрирующий вызов принимающее приложение MSMQ из [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиента, в разделе [Windows Communication Foundation для Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) образца.  
   
- Полный пример, демонстрирующий вызов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы от клиента MSMQ см. в разделе [очереди сообщений в Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) образца.  
+ Полный пример, демонстрирующий вызов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы от клиента MSMQ см. в разделе [служба очередей сообщений Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) образца.  
   
 ### <a name="to-create-a-wcf-service-that-receives-messages-from-a-msmq-client"></a>Создание службы WCF, получающей сообщения от клиента MSMQ  
   
@@ -32,16 +38,16 @@ caps.handback.revision: 18
      [!code-csharp[S_MsmqToWcf#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmqtowcf/cs/service.cs#1)]
      [!code-vb[S_MsmqToWcf#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#1)]  
   
-2.  Реализуйте интерфейс и примените <xref:System.ServiceModel.ServiceBehaviorAttribute> атрибута к классу, как показано в следующем примере кода.  
+2.  Реализуйте интерфейс и примените атрибут <xref:System.ServiceModel.ServiceBehaviorAttribute> к классу, как показано в следующем примере кода.  
   
      [!code-csharp[S_MsmqToWcf#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmqtowcf/cs/service.cs#2)]
      [!code-vb[S_MsmqToWcf#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#2)]  
   
-3.  Создайте файл конфигурации, который определяет <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>.  
+3.  Создайте файл конфигурации, задающий привязку <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>.  
   
   
   
-4.  Создать экземпляр <xref:System.ServiceModel.ServiceHost> объект, использующий настроенную привязку.  
+4.  Создайте экземпляр объекта <xref:System.ServiceModel.ServiceHost>, использующий настроенную привязку.  
   
   
   
@@ -67,9 +73,9 @@ caps.handback.revision: 18
      [!code-csharp[S_WcfToMsmq#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/client.cs#4)]  
   
 ## <a name="see-also"></a>См. также  
- [Общие сведения об очередях](../../../../docs/framework/wcf/feature-details/queues-overview.md)   
- [Практическое руководство: обмен сообщениями с конечными точками WCF в очереди](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)   
- [Windows Communication Foundation для очереди сообщений](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)   
- [Установка очереди сообщений (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)   
- [Сообщения очереди в Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)   
+ [Общие сведения об очередях](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ [Как: обмен сообщениями с конечными точками WCF в очереди](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [Windows Communication Foundation для очереди сообщений](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
+ [Установка очереди сообщений (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
+ [В Windows Communication Foundation очереди сообщений](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
  [Безопасность сообщений через очереди сообщений](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

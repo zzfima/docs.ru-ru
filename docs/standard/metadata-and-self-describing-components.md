@@ -8,6 +8,9 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - runtime, metadata
 - languages, interoperability
@@ -18,16 +21,15 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 8fcb5ea90cc16d62fee5b8e95b03bfe53c3a6793
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f5469f649d594553e1567d6d611cfafcd28e2c5b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="metadata-and-self-describing-components"></a>Метаданные и компоненты с самоописанием
 В прошлом программный компонент (EXE или DLL), написанный на одном языке, не мог просто так использовать программный компонент, написанный на другом языке. Модель COM стала шагом вперед в решении этой проблемы. Платформа .NET Framework упрощает взаимодействие компонентов, позволяя компиляторам добавлять дополнительные описательные данные во все модули и сборки. Эти данные, называемые метаданными, способствуют эффективному взаимодействию компонентов.  
@@ -176,4 +178,3 @@ IL_000d:  call int32 ConsoleApplication.MyApp::Add(int32,int32) /* 06000003 */
 |Заголовок|Описание|  
 |-----------|-----------------|  
 |[Атрибуты](../../docs/standard/attributes/index.md)|Описание способов применения атрибутов, написания настраиваемых атрибутов и извлечения данных, хранящихся в атрибутах.|
-

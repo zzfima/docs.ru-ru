@@ -1,25 +1,28 @@
 ---
-title: "MsmqBindingElementBase | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: MsmqBindingElementBase
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 210d41ab-a2a4-4d7a-afd2-0916c08a4015
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 009596ee8fd7218a07487183d932e91dad07797c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# MsmqBindingElementBase
+# <a name="msmqbindingelementbase"></a>MsmqBindingElementBase
 MsmqBindingElementBase  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class MsmqBindingElementBase : TransportBindingElement  
@@ -38,95 +41,95 @@ class MsmqBindingElementBase : TransportBindingElement
 };  
 ```  
   
-## Методы  
+## <a name="methods"></a>Методы  
  Класс MsmqBindingElementBase не определяет никаких методов.  
   
-## Свойства  
+## <a name="properties"></a>Свойства  
  Класс MsmqBindingElementBase имеет следующие свойства.  
   
-### CustomDeadLetterQueue  
+### <a name="customdeadletterqueue"></a>CustomDeadLetterQueue  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
- Универсальный код ресурса \(URI\), содержащий местоположение очереди недоставленных сообщений для каждого приложения; в эту очередь помещаются просроченные сообщения или сообщения, которые не удалось передать или доставить.  
+ Универсальный код ресурса (URI), содержащий местоположение очереди недоставленных сообщений для каждого приложения; в эту очередь помещаются просроченные сообщения или сообщения, которые не удалось передать или доставить.  
   
-### DeadLetterQueue  
+### <a name="deadletterqueue"></a>DeadLetterQueue  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Значение перечисления, указывающее тип используемой очереди недоставленных сообщений.  
   
-### Durable  
+### <a name="durable"></a>Durable  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Значение, указывающее, являются ли сообщения, обрабатываемые этой привязкой, устойчивыми или неустойчивыми.  
   
-### ExactlyOnce  
+### <a name="exactlyonce"></a>ExactlyOnce  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Логическое значение, указывающее, доставляются ли сообщения, обрабатываемые этой привязкой, только один раз.  
   
-### MaxRetryCycles  
+### <a name="maxretrycycles"></a>MaxRetryCycles  
  Тип данных: sint32  
   
  Тип доступа: только для чтения  
   
  Максимальное количество циклов повторных попыток доставить сообщение принимающему приложению.  
   
-### ReceiveErrorHandling  
+### <a name="receiveerrorhandling"></a>ReceiveErrorHandling  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Параметры обработки подозрительных сообщений.  
   
-### ReceiveRetryCount  
+### <a name="receiveretrycount"></a>ReceiveRetryCount  
  Тип данных: sint32  
   
  Тип доступа: только для чтения  
   
  Максимальное количество немедленных повторных попыток считывания сообщения из очереди приложения.  
   
-### RetryCycleDelay  
+### <a name="retrycycledelay"></a>RetryCycleDelay  
  Тип данных: datetime  
   
  Тип доступа: только для чтения  
   
  Значение, указывающее временную задержку между циклами повторных попыток доставить сообщение, которое не удалось доставить немедленно.  
   
-### TimeToLive  
+### <a name="timetolive"></a>TimeToLive  
  Тип данных: datetime  
   
  Тип доступа: только для чтения  
   
  Промежуток времени, соответствующий максимальному сроку нахождения в очереди сообщений, обрабатываемых этой привязкой.  
   
-### UseMsmqTracing  
+### <a name="usemsmqtracing"></a>UseMsmqTracing  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Логическое значение, указывающее, следует ли трассировать сообщения, обрабатываемые этой привязкой.  
   
-### UseSourceJournal  
+### <a name="usesourcejournal"></a>UseSourceJournal  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Логическое значение, указывающее, должны ли сохраняться в очереди журнала источника копии сообщений, обрабатываемых этой привязкой.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |MOF|Объявлено в файле Servicemodel.mof.|  
-|---------|-----------------------------------------|  
-|Пространство имен|Определено в root\\ServiceModel.|  
+|---------|-----------------------------------|  
+|Пространство имен|Определено в root\ServiceModel.|  
   
-## См. также  
- <xref:System.ServiceModel.NetMsmqBinding>   
+## <a name="see-also"></a>См. также  
+ <xref:System.ServiceModel.NetMsmqBinding>  
  <xref:System.ServiceModel.MsmqBindingBase>

@@ -1,38 +1,37 @@
 ---
-title: "Практическое руководство. Создание строки с помощью StringBuilder в Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "StringBuilder - класс"
-  - "строки [Visual Basic], использование класса StringBuilder"
+title: "Практическое руководство. Создание строки с помощью StringBuilder в Visual Basic"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- StringBuilder class
+- strings [Visual Basic], using StringBuilder
 ms.assetid: 9c042880-aa16-432e-9ccb-cd00abda9ae3
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c799794b319843b0239ce9589e0c556c603c8617
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание строки с помощью StringBuilder в Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-В этом примере создается длинная строка из множества маленьких строк с помощью класса <xref:System.Text.StringBuilder>.  Класс <xref:System.Text.StringBuilder> является более эффективным для сложения нескольких строк, чем оператор `&=`.  
+# <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>Практическое руководство. Создание строки с помощью StringBuilder в Visual Basic
+В этом примере создается длинная строка из множества маленьких строк с помощью <xref:System.Text.StringBuilder> класса. <xref:System.Text.StringBuilder> Класс является более эффективным, чем `&=` оператора для сложения нескольких строк.  
   
-## Пример  
- В следующем примере создается экземпляр класса <xref:System.Text.StringBuilder>, прибавляется 1 000 строк к этому экземпляру и возвращается его строковое представление.  
+## <a name="example"></a>Пример  
+ В следующем примере создается экземпляр <xref:System.Text.StringBuilder> прибавляется 1 000 строк к этому экземпляру класса и возвращает его строковое представление.  
   
  [!code-vb[VbVbalrStrings#70](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-create-strings-using-a-stringbuilder_1.vb)]  
   
-## См. также  
- [Использование класса StringBuilder](../Topic/Using%20the%20StringBuilder%20Class%20in%20the%20.NET%20Framework.md)   
- [Оператор &\=](../../../../visual-basic/language-reference/operators/and-assignment-operator.md)   
- [Строки](../../../../visual-basic/programming-guide/language-features/strings/index.md)   
- [Создание новых строк](../Topic/Creating%20New%20Strings%20in%20the%20.NET%20Framework.md)   
- [Обработка строк](../Topic/Manipulating%20Strings%20in%20the%20.NET%20Framework.md)   
- [Strings Sample](http://msdn.microsoft.com/ru-ru/be9e82a3-dc95-4aaa-9396-61b66e467e02)
+## <a name="see-also"></a>См. также  
+ [Using the StringBuilder class](../../../../standard/base-types/stringbuilder.md) (Использование класса StringBuilder)  
+ [Оператор &=](../../../../visual-basic/language-reference/operators/and-assignment-operator.md)  
+ [Строки](../../../../visual-basic/programming-guide/language-features/strings/index.md)  
+ [Создание строк](../../../../standard/base-types/creating-new.md)  
+ [Операции со строками](../../../../standard/base-types/manipulating-strings.md)  
+ [Пример строк](http://msdn.microsoft.com/en-us/be9e82a3-dc95-4aaa-9396-61b66e467e02)
