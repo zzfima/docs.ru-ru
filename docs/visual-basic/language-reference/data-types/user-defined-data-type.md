@@ -1,74 +1,73 @@
 ---
-title: "Тип данных, определенный пользователем | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "UserDefined"
-  - "UDT"
-  - "vb.UDT"
-  - "User-Defined"
-  - "vb.UserDefined"
-  - "vb.User-Defined"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "типы данных [Visual Basic], назначение"
-  - "типы данных [Visual Basic], определяемые пользователем"
-  - "Structure - оператор"
-  - "структуры, как пользовательские типы данных"
-  - "типы [Visual Basic], определяемые пользователем"
-  - "пользовательские типы данных"
-  - "пользовательские типы данных, объявление структуры"
-  - "пользовательские типы данных, структуры в Visual Basic"
-  - "пользовательские типы данных, Visual Basic"
-  - "типы, определяемые пользователем"
-  - "типы, определяемые пользователем, объявление структуры"
-  - "типы, определяемые пользователем, структуры в Visual Basic"
-  - "типы, определяемые пользователем, Visual Basic"
+title: "Тип данных, определенный пользователем"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- UserDefined
+- UDT
+- vb.UDT
+- User-Defined
+- vb.UserDefined
+- vb.User-Defined
+helpviewer_keywords:
+- user-defined data types [Visual Basic], Visual Basic
+- user-defined types
+- structures [Visual Basic], as user-defined data types
+- user-defined types [Visual Basic], Visual Basic
+- user-defined types [Visual Basic], structure declaration
+- user-defined types [Visual Basic], structures in Visual Basic
+- user-defined data types [Visual Basic], structure declaration
+- data types [Visual Basic], assigning
+- Structure statement [Visual Basic]
+- data types [Visual Basic], user-defined
+- user-defined data types [Visual Basic], structures in Visual Basic
+- user-defined data types
+- types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 7e1876d61a2ce89b04c6e5061b868f0be365639f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Тип данных, определенный пользователем
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Содержит данные в определенном пользователем формате.  Оператор `Structure` определяет формат.  
+# <a name="user-defined-data-type"></a><span data-ttu-id="5d658-102">Тип данных, определенный пользователем</span><span class="sxs-lookup"><span data-stu-id="5d658-102">User-Defined Data Type</span></span>
+<span data-ttu-id="5d658-103">Содержит данные в формате, определяемом.</span><span class="sxs-lookup"><span data-stu-id="5d658-103">Holds data in a format you define.</span></span> <span data-ttu-id="5d658-104">`Structure` Инструкция определяет формат.</span><span class="sxs-lookup"><span data-stu-id="5d658-104">The `Structure` statement defines the format.</span></span>  
   
- Предыдущие версии Visual Basic поддерживают определяемый пользователем тип данных \(UDT\).  Текущая версия расширяет UDT до *структуры*.  Структура — это объединение одного или нескольких *членов* любых типов данных.  Visual Basic обрабатывает структуру как единое целое, хотя можно получить доступ к членам по отдельности.  
+ <span data-ttu-id="5d658-105">Предыдущие версии Visual Basic поддерживают определяемый пользователем тип (UDT).</span><span class="sxs-lookup"><span data-stu-id="5d658-105">Previous versions of Visual Basic support the user-defined type (UDT).</span></span> <span data-ttu-id="5d658-106">Текущая версия расширяет в определяемом пользователем ТИПЕ *структуры*.</span><span class="sxs-lookup"><span data-stu-id="5d658-106">The current version expands the UDT to a *structure*.</span></span> <span data-ttu-id="5d658-107">Структура — это объединение одного или нескольких *члены* различных типов данных.</span><span class="sxs-lookup"><span data-stu-id="5d658-107">A structure is a concatenation of one or more *members* of various data types.</span></span> <span data-ttu-id="5d658-108">Visual Basic обрабатывает структуру как единый блок, хотя также можно использовать его члены по отдельности.</span><span class="sxs-lookup"><span data-stu-id="5d658-108">Visual Basic treats a structure as a single unit, although you can also access its members individually.</span></span>  
   
-## Заметки  
- Определяйте и используйте структуры данных, когда требуется объединить в единое целое различные типы данных, или когда ни один из простейших типов данных не подходит для выполнения требуемых условий.  
+## <a name="remarks"></a><span data-ttu-id="5d658-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="5d658-109">Remarks</span></span>  
+ <span data-ttu-id="5d658-110">Определять и использовать тип структуры данных, когда необходимо объединить различные типы данных в одну единицу или когда ни одна из простейших типов данных соответствует конкретным требованиям.</span><span class="sxs-lookup"><span data-stu-id="5d658-110">Define and use a structure data type when you need to combine various data types into a single unit, or when none of the elementary data types serve your needs.</span></span>  
   
- Значение по умолчанию для структуры данных состоит из комбинации значений по умолчанию каждого из ее членов.  
+ <span data-ttu-id="5d658-111">Значение по умолчанию типа структуры данных состоит из комбинации значений по умолчанию для каждого из его членов.</span><span class="sxs-lookup"><span data-stu-id="5d658-111">The default value of a structure data type consists of the combination of the default values of each of its members.</span></span>  
   
-## Формат объявления  
- Объявление структуры начинается с оператора [Оператор Structure](../../../visual-basic/language-reference/statements/structure-statement.md) и завершается оператором `End` `Structure`.  Оператор `Structure` содержит имя структуры, которая является также идентификатором типа данных, определяемых структурой.  Другие части кода могут использовать этот идентификатор для объявления переменных, параметров и возвращаемых значений функций в качестве типа данных структуры.  
+## <a name="declaration-format"></a><span data-ttu-id="5d658-112">Формат объявления</span><span class="sxs-lookup"><span data-stu-id="5d658-112">Declaration Format</span></span>  
+ <span data-ttu-id="5d658-113">Объявление структуры начинается с [оператор Structure](../../../visual-basic/language-reference/statements/structure-statement.md) и заканчивается `End``Structure` инструкции.</span><span class="sxs-lookup"><span data-stu-id="5d658-113">A structure declaration starts with the [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md) and ends with the `End``Structure` statement.</span></span> <span data-ttu-id="5d658-114">`Structure` Оператор содержит имя структуры, которая является также идентификатором типа данных, определение структуры.</span><span class="sxs-lookup"><span data-stu-id="5d658-114">The `Structure` statement supplies the name of the structure, which is also the identifier of the data type the structure is defining.</span></span> <span data-ttu-id="5d658-115">Другие части кода можно использовать этот идентификатор для объявления переменных, параметров и функции возвращают значения типа данных этой структуры.</span><span class="sxs-lookup"><span data-stu-id="5d658-115">Other parts of the code can use this identifier to declare variables, parameters, and function return values to be of this structure's data type.</span></span>  
   
- Объявления между операторами `Structure` и `End` `Structure` определяют члены структуры.  
+ <span data-ttu-id="5d658-116">Объявления между `Structure` и `End``Structure` инструкции определения членов структуры.</span><span class="sxs-lookup"><span data-stu-id="5d658-116">The declarations between the `Structure` and `End``Structure` statements define the members of the structure.</span></span>  
   
-## Уровни доступа к членам  
- Каждый член необходимо объявить с помощью оператора [Оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md) или оператора, определяющего уровень доступа, например, [Public](../../../visual-basic/language-reference/modifiers/public.md) или [Friend](../../../visual-basic/language-reference/modifiers/friend.md) или [Private](../../../visual-basic/language-reference/modifiers/private.md).  Если используется оператор `Dim`, то уровень доступа по умолчанию является открытым \(Public\).  
+## <a name="member-access-levels"></a><span data-ttu-id="5d658-117">Уровни доступа к членам</span><span class="sxs-lookup"><span data-stu-id="5d658-117">Member Access Levels</span></span>  
+ <span data-ttu-id="5d658-118">Необходимо объявить каждый член с помощью [оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md) или инструкцию, которая определяет уровень доступа, например [открытый](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), или [частного](../../../visual-basic/language-reference/modifiers/private.md).</span><span class="sxs-lookup"><span data-stu-id="5d658-118">You must declare every member using a [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md) or a statement that specifies access level, such as [Public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), or [Private](../../../visual-basic/language-reference/modifiers/private.md).</span></span> <span data-ttu-id="5d658-119">Если вы используете `Dim` оператора, по умолчанию уровня доступа к открытым.</span><span class="sxs-lookup"><span data-stu-id="5d658-119">If you use a `Dim` statement, the access level defaults to public.</span></span>  
   
-## Советы по программированию  
+## <a name="programming-tips"></a><span data-ttu-id="5d658-120">Советы по программированию</span><span class="sxs-lookup"><span data-stu-id="5d658-120">Programming Tips</span></span>  
   
--   **Потребление ресурсов памяти**. Как и для всех составных типов данных, нельзя точно подсчитать общее потребление ресурсов памяти структуры простым сложением номинальных объемов памяти, занимаемых отдельными членами структуры.  Более того, нельзя однозначно полагать, что порядок расположения элементов в памяти такой же, как и порядок их объявления.  Если требуется контролировать расположение структуры в памяти, можно применить атрибут <xref:System.Runtime.InteropServices.StructLayoutAttribute> в операторе `Structure`.  
+-   <span data-ttu-id="5d658-121">**Потребление памяти.**</span><span class="sxs-lookup"><span data-stu-id="5d658-121">**Memory Consumption.**</span></span> <span data-ttu-id="5d658-122">Как и все составные типы данных, нельзя вычислить безопасно общее потребление памяти структуры путем сложения выделения Номинальное дисковое его члены.</span><span class="sxs-lookup"><span data-stu-id="5d658-122">As with all composite data types, you cannot safely calculate the total memory consumption of a structure by adding together the nominal storage allocations of its members.</span></span> <span data-ttu-id="5d658-123">Более того нельзя безошибочно полагать, что порядок расположения элементов в памяти является таким же, как и порядок их объявления.</span><span class="sxs-lookup"><span data-stu-id="5d658-123">Furthermore, you cannot safely assume that the order of storage in memory is the same as your order of declaration.</span></span> <span data-ttu-id="5d658-124">Если вам необходимо управлять структуры хранилища структуры, можно применить <xref:System.Runtime.InteropServices.StructLayoutAttribute> атрибут `Structure` инструкции.</span><span class="sxs-lookup"><span data-stu-id="5d658-124">If you need to control the storage layout of a structure, you can apply the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute to the `Structure` statement.</span></span>  
   
--   **Вопросы взаимодействия**. При взаимодействии с компонентами, написанными не для платформы .NET Framework, например, с объектами автоматизации или COM\-объектами, имейте в виду, что определяемые пользователем типы в других средах несовместимы с типами структуры Visual Basic.  
+-   <span data-ttu-id="5d658-125">**Вопросы взаимодействия.**</span><span class="sxs-lookup"><span data-stu-id="5d658-125">**Interop Considerations.**</span></span> <span data-ttu-id="5d658-126">При взаимодействии с компонентами, которые не написаны для платформы .NET Framework, например автоматизации или COM-объекты, необходимо помнить, что определяемые пользователем типы в других средах не совместимы с Visual Basic типами структуры.</span><span class="sxs-lookup"><span data-stu-id="5d658-126">If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that user-defined types in other environments are not compatible with Visual Basic structure types.</span></span>  
   
--   **Расширение**. Автоматического прямого или обратного преобразования в любой тип данных структуры не существует.  Операторы преобразования можно определить для структуры с помощью оператора [Оператор Operator](../../../visual-basic/language-reference/statements/operator-statement.md); кроме того, можно объявлять каждый оператор преобразования как `Widening` или `Narrowing`.  
+-   <span data-ttu-id="5d658-127">**Расширяющие.**</span><span class="sxs-lookup"><span data-stu-id="5d658-127">**Widening.**</span></span> <span data-ttu-id="5d658-128">Нет автоматического преобразования в или из любой тип данных структуры.</span><span class="sxs-lookup"><span data-stu-id="5d658-128">There is no automatic conversion to or from any structure data type.</span></span> <span data-ttu-id="5d658-129">Можно определить операторы преобразования структуры с помощью [оператор Operator](../../../visual-basic/language-reference/statements/operator-statement.md), и можно объявить каждый оператор преобразования быть `Widening` или `Narrowing`.</span><span class="sxs-lookup"><span data-stu-id="5d658-129">You can define conversion operators on your structure using the [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md), and you can declare each conversion operator to be `Widening` or `Narrowing`.</span></span>  
   
--   **Символы типов**. Типы данных структуры не имеют буквенного символа или идентификатора.  
+-   <span data-ttu-id="5d658-130">**Символы типов.**</span><span class="sxs-lookup"><span data-stu-id="5d658-130">**Type Characters.**</span></span> <span data-ttu-id="5d658-131">Типы данных структуры не имеют буквенного символа или знак типа идентификатора.</span><span class="sxs-lookup"><span data-stu-id="5d658-131">Structure data types have no literal type character or identifier type character.</span></span>  
   
--   **Тип Framework.**. В платформе .NET Framework отсутствует соответствующий тип.  Все структуры наследуются от класса .NET Framework <xref:System.ValueType?displayProperty=fullName>, но ни одна из отдельных структур не соответствует классу <xref:System.ValueType?displayProperty=fullName>.  
+-   <span data-ttu-id="5d658-132">**Тип Framework.**</span><span class="sxs-lookup"><span data-stu-id="5d658-132">**Framework Type.**</span></span> <span data-ttu-id="5d658-133">Нет соответствующих типов в .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="5d658-133">There is no corresponding type in the .NET Framework.</span></span> <span data-ttu-id="5d658-134">Все структуры наследуют от класса .NET Framework <xref:System.ValueType?displayProperty=nameWithType>, но не отдельные структура соответствует <xref:System.ValueType?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="5d658-134">All structures inherit from the .NET Framework class <xref:System.ValueType?displayProperty=nameWithType>, but no individual structure corresponds to <xref:System.ValueType?displayProperty=nameWithType>.</span></span>  
   
-## Пример  
- В следующем примере демонстрируется объявление структуры.  
+## <a name="example"></a><span data-ttu-id="5d658-135">Пример</span><span class="sxs-lookup"><span data-stu-id="5d658-135">Example</span></span>  
+ <span data-ttu-id="5d658-136">В следующем примере демонстрируется структура объявления структуры.</span><span class="sxs-lookup"><span data-stu-id="5d658-136">The following paradigm shows the outline of the declaration of a structure.</span></span>  
   
 ```  
 [Public | Protected | Friend | Protected Friend | Private] Structure structname  
@@ -78,14 +77,14 @@ caps.handback.revision: 12
 End Structure  
 ```  
   
-## См. также  
- <xref:System.ValueType>   
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>   
- [Типы данных](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Оператор Structure](../../../visual-basic/language-reference/statements/structure-statement.md)   
- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)   
- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)   
- [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Эффективное использование типов данных](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a><span data-ttu-id="5d658-137">См. также</span><span class="sxs-lookup"><span data-stu-id="5d658-137">See Also</span></span>  
+ <xref:System.ValueType>  
+ <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
+ [<span data-ttu-id="5d658-138">Типы данных</span><span class="sxs-lookup"><span data-stu-id="5d658-138">Data Types</span></span>](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="5d658-139">Функции преобразования типов</span><span class="sxs-lookup"><span data-stu-id="5d658-139">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="5d658-140">Сводка по преобразованию</span><span class="sxs-lookup"><span data-stu-id="5d658-140">Conversion Summary</span></span>](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [<span data-ttu-id="5d658-141">Оператор Structure</span><span class="sxs-lookup"><span data-stu-id="5d658-141">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [<span data-ttu-id="5d658-142">Расширение</span><span class="sxs-lookup"><span data-stu-id="5d658-142">Widening</span></span>](../../../visual-basic/language-reference/modifiers/widening.md)  
+ [<span data-ttu-id="5d658-143">Narrowing</span><span class="sxs-lookup"><span data-stu-id="5d658-143">Narrowing</span></span>](../../../visual-basic/language-reference/modifiers/narrowing.md)  
+ [<span data-ttu-id="5d658-144">Структуры</span><span class="sxs-lookup"><span data-stu-id="5d658-144">Structures</span></span>](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [<span data-ttu-id="5d658-145">Эффективное использование типов данных</span><span class="sxs-lookup"><span data-stu-id="5d658-145">Efficient Use of Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

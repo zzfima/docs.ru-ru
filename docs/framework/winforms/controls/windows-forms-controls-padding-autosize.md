@@ -1,204 +1,205 @@
 ---
-title: "Пошаговое руководство. Создание структуры элементов управления Windows Forms с помощью свойств &quot;Padding&quot;, &quot;Margins&quot; и &quot;AutoSize&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Margin.Bottom"
-  - "Margin.Left"
-  - "Margin.Top"
-  - "Margin.All"
-  - "Margin.Right"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "AutoSize - свойство, пошаговые руководства"
-  - "макет [Windows Forms], задание полей и интервалов"
-  - "Margin - свойство [Windows Forms], пошаговые руководства"
-  - "Padding - свойство [Windows Forms], пошаговые руководства"
-  - "пошаговые руководства [Windows Forms], макет"
-  - "Windows Forms, макет"
+title: "Пошаговое руководство. Создание структуры элементов управления Windows Forms с помощью свойств \"Padding\", \"Margins\" и \"AutoSize\""
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Margin.Bottom
+- Margin.Left
+- Margin.Top
+- Margin.All
+- Margin.Right
+helpviewer_keywords:
+- Margin property [Windows Forms], walkthroughs
+- walkthroughs [Windows Forms], layout
+- AutoSize property [Windows Forms], walkthroughs
+- Padding property [Windows Forms], walkthroughs
+- layout [Windows Forms], margins and padding
+- Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
-caps.latest.revision: 28
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2dce58776af84b1f4c733ddce2553e4b18b1b824
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пошаговое руководство. Создание структуры элементов управления Windows Forms с помощью свойств &quot;Padding&quot;, &quot;Margins&quot; и &quot;AutoSize&quot;
-Точное расположение элементов управления на форме является важным для многих приложений.  **Конструктор Windows Forms** предоставляет широкий набор параметров макета, позволяющих выполнить эту задачу.  Тремя наиболее важными средствами являются свойства <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A> и <xref:System.Windows.Forms.Control.AutoSize%2A>, присутствующие у всех элементов управления Windows Forms.  
+# <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a><span data-ttu-id="5d114-102">Пошаговое руководство. Создание структуры элементов управления Windows Forms с помощью свойств "Padding", "Margins" и "AutoSize"</span><span class="sxs-lookup"><span data-stu-id="5d114-102">Walkthrough: Laying Out Windows Forms Controls with Padding, Margins, and the AutoSize Property</span></span>
+<span data-ttu-id="5d114-103">Точное расположение элементов управления на форме является важным для многих приложений.</span><span class="sxs-lookup"><span data-stu-id="5d114-103">Precise placement of controls on your form is a high priority for many applications.</span></span> <span data-ttu-id="5d114-104">**Конструктор Windows Forms** дает много инструментов для выполнения этой задачи.</span><span class="sxs-lookup"><span data-stu-id="5d114-104">The **Windows Forms Designer** gives you many layout tools to accomplish this.</span></span> <span data-ttu-id="5d114-105">Три наиболее важными являются <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, и <xref:System.Windows.Forms.Control.AutoSize%2A> свойства, которые присутствуют на все элементы управления Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="5d114-105">Three of the most important are the <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, and <xref:System.Windows.Forms.Control.AutoSize%2A> properties, which are present on all Windows Forms controls.</span></span>  
   
- Свойство <xref:System.Windows.Forms.Control.Margin%2A> определяет пространство вокруг элемента управления, которое обеспечивает определенное расстояние между границами этого элемента и другими элементами.  
+ <span data-ttu-id="5d114-106">Свойство <xref:System.Windows.Forms.Control.Margin%2A> определяет поле вокруг элемента управления, благодаря которому обеспечивается определенное расстояние между границами этого элемента и другими элементами.</span><span class="sxs-lookup"><span data-stu-id="5d114-106">The <xref:System.Windows.Forms.Control.Margin%2A> property defines the space around the control that keeps other controls a specified distance from the control's borders.</span></span>  
   
- Свойство <xref:System.Windows.Forms.Control.Padding%2A> определяет пространство внутри элемента управления, которое обеспечивает определенное расстояние между содержимым элемента управления \(например значением свойства <xref:System.Windows.Forms.Control.Text%2A>\) и границами элемента управления.  
+ <span data-ttu-id="5d114-107">Свойство <xref:System.Windows.Forms.Control.Padding%2A> определяет поле внутри элемента управления, благодаря которому обеспечивается определенное расстояние между содержимым элемента управления (например, значением свойства <xref:System.Windows.Forms.Control.Text%2A>) и его границами.</span><span class="sxs-lookup"><span data-stu-id="5d114-107">The <xref:System.Windows.Forms.Control.Padding%2A> property defines the space in the interior of a control that keeps the control's content (for example, the value of its <xref:System.Windows.Forms.Control.Text%2A> property) a specified distance from the control's borders.</span></span>  
   
- На следующем рисунке показаны свойства <xref:System.Windows.Forms.Control.Padding%2A> и <xref:System.Windows.Forms.Control.Margin%2A> элемента управления.  
+ <span data-ttu-id="5d114-108">На рисунке ниже демонстрируется значение свойств <xref:System.Windows.Forms.Control.Padding%2A> и <xref:System.Windows.Forms.Control.Margin%2A> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-108">The following illustration shows the <xref:System.Windows.Forms.Control.Padding%2A> and <xref:System.Windows.Forms.Control.Margin%2A> properties on a control.</span></span>  
   
- ![Поля и заполнение для элементов управления Windows Forms](../../../../docs/framework/winforms/controls/media/vs-winformpadmargin.gif "VS\_WinFormPadMargin")  
+ <span data-ttu-id="5d114-109">![Поля и заполнение для Windows Forms, элементы управления](../../../../docs/framework/winforms/controls/media/vs-winformpadmargin.gif "VS_WinFormPadMargin")</span><span class="sxs-lookup"><span data-stu-id="5d114-109">![Padding And Margin for Windows Forms Controls](../../../../docs/framework/winforms/controls/media/vs-winformpadmargin.gif "VS_WinFormPadMargin")</span></span>  
   
- Свойство <xref:System.Windows.Forms.Control.AutoSize%2A> включает автоматическое изменение размера элемента в соответствии с его содержимым.  Размер не будет установлен меньше исходного значения свойства <xref:System.Windows.Forms.Control.Size%2A>, а также будет учтено значение свойства <xref:System.Windows.Forms.Control.Padding%2A>.  
+ <span data-ttu-id="5d114-110"><xref:System.Windows.Forms.Control.AutoSize%2A> Свойство сообщает автоматическое изменение размера содержимого элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-110">The <xref:System.Windows.Forms.Control.AutoSize%2A> property tells a control to automatically size itself to its contents.</span></span> <span data-ttu-id="5d114-111">Его размер не будет меньше, чем исходного значения <xref:System.Windows.Forms.Control.Size%2A> свойство и его будет учитывать значение его <xref:System.Windows.Forms.Control.Padding%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="5d114-111">It will not resize itself to be smaller than the value of its original <xref:System.Windows.Forms.Control.Size%2A> property, and it will account for the value of its <xref:System.Windows.Forms.Control.Padding%2A> property.</span></span>  
   
- В этом пошаговом руководстве демонстрируется выполнение следующих задач.  
+ <span data-ttu-id="5d114-112">В данном пошаговом руководстве представлены следующие задачи.</span><span class="sxs-lookup"><span data-stu-id="5d114-112">Tasks illustrated in this walkthrough include:</span></span>  
   
--   создание проекта типа Windows Forms;  
+-   <span data-ttu-id="5d114-113">Создание проекта Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5d114-113">Creating a Windows Forms project</span></span>  
   
--   Установка полей элементов управления  
+-   <span data-ttu-id="5d114-114">Установка полей для элементов управления</span><span class="sxs-lookup"><span data-stu-id="5d114-114">Setting Margins for Your Controls</span></span>  
   
--   Установка заполнения элементов управления  
+-   <span data-ttu-id="5d114-115">Установка заполнения элементов управления</span><span class="sxs-lookup"><span data-stu-id="5d114-115">Setting Padding for Your Controls</span></span>  
   
--   Автоматическое определение размеров элементов управления  
+-   <span data-ttu-id="5d114-116">Автоматическое изменение размеров элементов управления</span><span class="sxs-lookup"><span data-stu-id="5d114-116">Automatically Sizing Your Controls</span></span>  
   
- По завершению процесса ознакомления вы получите представление о роли, которую играют эти важные средства работы с макетами.  
+ <span data-ttu-id="5d114-117">После завершения вы будете понимать роль, которую играют эти важные функции макета.</span><span class="sxs-lookup"><span data-stu-id="5d114-117">When you are finished, you will have an understanding of the role played by these important layout features.</span></span>  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="5d114-118">Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.</span><span class="sxs-lookup"><span data-stu-id="5d114-118">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="5d114-119">Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** .</span><span class="sxs-lookup"><span data-stu-id="5d114-119">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="5d114-120">Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="5d114-120">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-## Обязательные компоненты  
- Для выполнения этого пошагового руководства потребуется следующее.  
+## <a name="prerequisites"></a><span data-ttu-id="5d114-121">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="5d114-121">Prerequisites</span></span>  
+ <span data-ttu-id="5d114-122">Для выполнения данного пошагового руководства требуется:</span><span class="sxs-lookup"><span data-stu-id="5d114-122">In order to complete this walkthrough, you will need:</span></span>  
   
--   разрешения, необходимые для создания и выполнения проектов приложений Windows Forms на компьютере, на котором установлена Visual Studio.  
+-   <span data-ttu-id="5d114-123">Разрешения, необходимые для создания и выполнения проектов приложений Windows Forms на компьютере, где установлена среда Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="5d114-123">Sufficient permissions to be able to create and run Windows Forms application projects on the computer where Visual Studio is installed.</span></span>  
   
-## Создание проекта  
- Для начала следует создать проект и подготовить форму.  
+## <a name="creating-the-project"></a><span data-ttu-id="5d114-124">Создание проекта</span><span class="sxs-lookup"><span data-stu-id="5d114-124">Creating the Project</span></span>  
+ <span data-ttu-id="5d114-125">Первым шагом является создание проекта и настройка формы.</span><span class="sxs-lookup"><span data-stu-id="5d114-125">The first step is to create the project and set up the form.</span></span>  
   
-#### Создание проекта  
+#### <a name="to-create-the-project"></a><span data-ttu-id="5d114-126">Создание проекта</span><span class="sxs-lookup"><span data-stu-id="5d114-126">To create the project</span></span>  
   
-1.  Создайте проект **Приложение Windows** с именем `LayoutExample`.  Дополнительные сведения см. в разделе [How to: Create a Windows Application Project](http://msdn.microsoft.com/ru-ru/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  <span data-ttu-id="5d114-127">Создание **приложение Windows** проект с именем `LayoutExample`.</span><span class="sxs-lookup"><span data-stu-id="5d114-127">Create a **Windows Application** project called `LayoutExample`.</span></span> <span data-ttu-id="5d114-128">Дополнительные сведения см. в разделе [как: Создание проекта приложения Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) .</span><span class="sxs-lookup"><span data-stu-id="5d114-128">For more information, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) .</span></span>  
   
-2.  В конструкторе **Windows Forms** выберите форму.  
+2.  <span data-ttu-id="5d114-129">Выберите форму в **конструктор Windows Forms**.</span><span class="sxs-lookup"><span data-stu-id="5d114-129">Select the form in the **Windows Forms Designer**.</span></span>  
   
-## Установка полей элементов управления  
- Установить расстояние по умолчанию между элементами управления можно с помощью свойства <xref:System.Windows.Forms.Control.Margin%2A>.  При перемещении элемента управления достаточно близко к другому элементу управления появляется линия привязки, показывающая границы обоих элементов управления.  Перемещаемый элемент управления будет привязан к определенному границами расстоянию.  
+## <a name="setting-margins-for-your-controls"></a><span data-ttu-id="5d114-130">Установка полей для элементов управления</span><span class="sxs-lookup"><span data-stu-id="5d114-130">Setting Margins for Your Controls</span></span>  
+ <span data-ttu-id="5d114-131">Можно задать по умолчанию расстояние между элементами управления с помощью <xref:System.Windows.Forms.Control.Margin%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="5d114-131">You can set the default distance between your controls using the <xref:System.Windows.Forms.Control.Margin%2A> property.</span></span> <span data-ttu-id="5d114-132">При перемещении элемента управления как можно ближе к другому элементу управления, то появится линия привязки, показывающая границы для двух элементов управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-132">When you move a control close enough to another control, you will see a snapline that shows the margins for the two controls.</span></span> <span data-ttu-id="5d114-133">Перемещаемый элемент управления будет привязан к определенному границами поля.</span><span class="sxs-lookup"><span data-stu-id="5d114-133">The control you are moving will also snap to the distance defined by the margins.</span></span>  
   
-#### Чтобы расположить элементы управления на форме с помощью свойства "Margin"  
+#### <a name="to-arrange-controls-on-your-form-using-the-margin-property"></a><span data-ttu-id="5d114-134">Размещение элементов управления в форме с помощью свойства поля</span><span class="sxs-lookup"><span data-stu-id="5d114-134">To arrange controls on your form using the Margin property</span></span>  
   
-1.  Перетащите два элемента управления <xref:System.Windows.Forms.Button> из **панели элементов** в форму.  
+1.  <span data-ttu-id="5d114-135">Перетащите два <xref:System.Windows.Forms.Button> управляет из **элементов** на форму.</span><span class="sxs-lookup"><span data-stu-id="5d114-135">Drag two <xref:System.Windows.Forms.Button> controls from the **Toolbox** onto your form.</span></span>  
   
-2.  Выберите один из элементов управления <xref:System.Windows.Forms.Button> и приблизьте его к другому почти до касания.  
+2.  <span data-ttu-id="5d114-136">Выберите один из <xref:System.Windows.Forms.Button> элементов управления и переместите его к другому, пока они почти соприкасаются.</span><span class="sxs-lookup"><span data-stu-id="5d114-136">Select one of the <xref:System.Windows.Forms.Button> controls and move it close to the other, until they are almost touching.</span></span>  
   
-     Обратите внимание на линию привязки, которая появится между ними.  Это расстояние определяется суммой значений свойства <xref:System.Windows.Forms.Control.Margin%2A> двух элементов управления.  Перемещаемый элемент управления будет привязан к этому расстоянию.  Дополнительные сведения см. в разделе [Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
+     <span data-ttu-id="5d114-137">Просмотрите привязки между ними.</span><span class="sxs-lookup"><span data-stu-id="5d114-137">Observe the snapline that appears between them.</span></span> <span data-ttu-id="5d114-138">Это расстояние складывается из двух элементов управления <xref:System.Windows.Forms.Control.Margin%2A> значения.</span><span class="sxs-lookup"><span data-stu-id="5d114-138">This distance is the sum of the two controls' <xref:System.Windows.Forms.Control.Margin%2A> values.</span></span> <span data-ttu-id="5d114-139">Это расстояние будет привязан элемент управления, который нужно переместить.</span><span class="sxs-lookup"><span data-stu-id="5d114-139">The control you are moving snaps to this distance.</span></span> <span data-ttu-id="5d114-140">Дополнительные сведения см. в разделе [Пошаговое руководство: упорядочение элементов управления в формах Windows Forms с помощью линий привязки](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).</span><span class="sxs-lookup"><span data-stu-id="5d114-140">For details, see [Walkthrough: Arranging Controls on Windows Forms Using Snaplines](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).</span></span>  
   
-3.  Измените свойство <xref:System.Windows.Forms.Control.Margin%2A> одного из элементов управления, развернув пункт <xref:System.Windows.Forms.Control.Margin%2A> в окне **Свойства**, и установив значение свойства <xref:System.Windows.Forms.Padding.All%2A> равным 20.  
+3.  <span data-ttu-id="5d114-141">Изменение <xref:System.Windows.Forms.Control.Margin%2A> свойство одного из элементов управления, развернув <xref:System.Windows.Forms.Control.Margin%2A> входа в **свойства** и установив <xref:System.Windows.Forms.Padding.All%2A> до 20.</span><span class="sxs-lookup"><span data-stu-id="5d114-141">Change the <xref:System.Windows.Forms.Control.Margin%2A> property of one of the controls by expanding the <xref:System.Windows.Forms.Control.Margin%2A> entry in the **Properties** window and setting the <xref:System.Windows.Forms.Padding.All%2A> property to 20.</span></span>  
   
-4.  Выберите один из элементов управления <xref:System.Windows.Forms.Button> и приблизьте его к другому.  
+4.  <span data-ttu-id="5d114-142">Выберите один из <xref:System.Windows.Forms.Button> элементы управления, и перетащите его к другому.</span><span class="sxs-lookup"><span data-stu-id="5d114-142">Select one of the <xref:System.Windows.Forms.Button> controls and move it close to the other.</span></span>  
   
-     Линия привязки, определяющая сумму значений полей, длиннее. И элемент управления привязывается на большем расстоянии от другого элемента управления.  
+     <span data-ttu-id="5d114-143">Линии привязки определение сумма значений полей длиннее и элемент управления привязывается к больше расстояние от другого элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-143">The snapline defining the sum of the margin values is longer and that the control snaps to a greater distance from the other control.</span></span>  
   
-5.  Измените свойство <xref:System.Windows.Forms.Control.Margin%2A> выбранного элемента управления, развернув пункт <xref:System.Windows.Forms.Control.Margin%2A> в окне **Свойства**, и установив значение свойства <xref:System.Windows.Forms.Padding.Top%2A> равным 5.  
+5.  <span data-ttu-id="5d114-144">Изменение <xref:System.Windows.Forms.Control.Margin%2A> свойства выбранного элемента управления, развернув <xref:System.Windows.Forms.Control.Margin%2A> входа в **свойства** и установив <xref:System.Windows.Forms.Padding.Top%2A> значение 5.</span><span class="sxs-lookup"><span data-stu-id="5d114-144">Change the <xref:System.Windows.Forms.Control.Margin%2A> property of the selected control by expanding the <xref:System.Windows.Forms.Control.Margin%2A> entry in the **Properties** window and setting the <xref:System.Windows.Forms.Padding.Top%2A> property to 5.</span></span>  
   
-6.  Переместите выбранный элемент управления под другой элемент управления и обратите внимание на то, что линия привязки будет короче.  Переместите выбранный элемент управления слева от другого элемента управления и обратите внимание на то, что линия привязки будет такой же, как на этапе 4.  
+6.  <span data-ttu-id="5d114-145">Переместите выбранный элемент управления под другой элемент управления и обратите внимание на более короткие линии привязки.</span><span class="sxs-lookup"><span data-stu-id="5d114-145">Move the selected control below the other control and observe that the snapline is shorter.</span></span> <span data-ttu-id="5d114-146">Переместите выбранный элемент управления слева от другого элемента управления и обратите внимание, что линии привязки сохраняет значение, наблюдаемое в шаге 4.</span><span class="sxs-lookup"><span data-stu-id="5d114-146">Move the selected control to the left of the other control and observe that the snapline retains the value observed in step 4.</span></span>  
   
-7.  Можно установить разные значения для каждого из параметров свойства <xref:System.Windows.Forms.Control.Margin%2A> — <xref:System.Windows.Forms.Padding.Left%2A>, <xref:System.Windows.Forms.Padding.Top%2A>, <xref:System.Windows.Forms.Padding.Right%2A>, <xref:System.Windows.Forms.Padding.Bottom%2A> — или можно установить единое значение для всех этих параметров с помощью свойства <xref:System.Windows.Forms.Padding.All%2A>.  
+7.  <span data-ttu-id="5d114-147">Можно задать каждый из аспектов <xref:System.Windows.Forms.Control.Margin%2A> свойство, <xref:System.Windows.Forms.Padding.Left%2A>, <xref:System.Windows.Forms.Padding.Top%2A>, <xref:System.Windows.Forms.Padding.Right%2A>, <xref:System.Windows.Forms.Padding.Bottom%2A>, чтобы разные значения, или задать их все в то же значение с <xref:System.Windows.Forms.Padding.All%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="5d114-147">You can set each of the aspects of the <xref:System.Windows.Forms.Control.Margin%2A> property, <xref:System.Windows.Forms.Padding.Left%2A>, <xref:System.Windows.Forms.Padding.Top%2A>, <xref:System.Windows.Forms.Padding.Right%2A>, <xref:System.Windows.Forms.Padding.Bottom%2A>, to different values, or you can set them all to the same value with the <xref:System.Windows.Forms.Padding.All%2A> property.</span></span>  
   
-## Установка заполнения элементов управления  
- Для создания точного макета в соответствии с требованиями приложения элементы управления часто содержат дочерние элементы управления.  При необходимости определить расстояние между границами дочернего и родительского элемента управления используйте свойство <xref:System.Windows.Forms.Control.Padding%2A> родительского элемента управления в сочетании со свойством <xref:System.Windows.Forms.Control.Margin%2A> дочернего элемента управления.  Свойство <xref:System.Windows.Forms.Control.Padding%2A> также используется для управления расстоянием между содержимым элемента управления \(например свойством <xref:System.Windows.Forms.Control.Text%2A> элемента управления <xref:System.Windows.Forms.Button>\) и его границами.  
+## <a name="setting-padding-for-your-controls"></a><span data-ttu-id="5d114-148">Установка заполнения элементов управления</span><span class="sxs-lookup"><span data-stu-id="5d114-148">Setting Padding for Your Controls</span></span>  
+ <span data-ttu-id="5d114-149">Для получения точного макета, необходимый для приложения, элементы управления будут часто содержат дочерние элементы управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-149">To achieve the precise layout required for your application, your controls will often contain child controls.</span></span> <span data-ttu-id="5d114-150">Если вы хотите определить расстояние между границей дочернего элемента управления к границе родительского элемента управления, используйте родительского элемента управления <xref:System.Windows.Forms.Control.Padding%2A> свойства в сочетании с дочерним элементом управления <xref:System.Windows.Forms.Control.Margin%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="5d114-150">When you want to specify the proximity of the child control's border to the parent control's border, use the parent control's <xref:System.Windows.Forms.Control.Padding%2A> property in conjunction with the child control's <xref:System.Windows.Forms.Control.Margin%2A> property.</span></span> <span data-ttu-id="5d114-151"><xref:System.Windows.Forms.Control.Padding%2A> Свойство также используется для управления расстоянием между содержимым элемента управления (например, <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Text%2A> свойства) и его границами.</span><span class="sxs-lookup"><span data-stu-id="5d114-151">The <xref:System.Windows.Forms.Control.Padding%2A> property is also used to control the proximity of a control's content (for example, a <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Text%2A> property) to its borders.</span></span>  
   
-#### Чтобы расположить элементы управления на форме с помощью свойства "Padding"  
+#### <a name="to-arrange-controls-on-your-form-using-padding"></a><span data-ttu-id="5d114-152">Размещение элементов управления в форме с помощью заполнения</span><span class="sxs-lookup"><span data-stu-id="5d114-152">To arrange controls on your form using padding</span></span>  
   
-1.  Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в форму.  
+1.  <span data-ttu-id="5d114-153">Перетащите <xref:System.Windows.Forms.Button> управления из **элементов** на форму.</span><span class="sxs-lookup"><span data-stu-id="5d114-153">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span>  
   
-2.  Измените значение свойства <xref:System.Windows.Forms.Control.AutoSize%2A> элемента управления <xref:System.Windows.Forms.Button> на `true`.  
+2.  <span data-ttu-id="5d114-154">Измените значение свойства <xref:System.Windows.Forms.Control.AutoSize%2A> элемента управления <xref:System.Windows.Forms.Button> на `true`.</span><span class="sxs-lookup"><span data-stu-id="5d114-154">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.AutoSize%2A> property to `true`.</span></span>  
   
-3.  Измените свойство <xref:System.Windows.Forms.Control.Padding%2A>, развернув пункт <xref:System.Windows.Forms.Control.Padding%2A> в окне **Свойства**, и установив значение свойства <xref:System.Windows.Forms.Padding.All%2A> равным 5.  
+3.  <span data-ttu-id="5d114-155">Изменение <xref:System.Windows.Forms.Control.Padding%2A> , развернув <xref:System.Windows.Forms.Control.Padding%2A> входа в **свойства** и установив <xref:System.Windows.Forms.Padding.All%2A> значение 5.</span><span class="sxs-lookup"><span data-stu-id="5d114-155">Change the <xref:System.Windows.Forms.Control.Padding%2A> property by expanding the <xref:System.Windows.Forms.Control.Padding%2A> entry in the **Properties** window and setting the <xref:System.Windows.Forms.Padding.All%2A> property to 5.</span></span>  
   
-     Элемент управления расширится, чтобы обеспечить необходимое пространство для новых внутренних полей.  
+     <span data-ttu-id="5d114-156">Элемент управления расширяется, чтобы выделить место для новых внутренних полей.</span><span class="sxs-lookup"><span data-stu-id="5d114-156">The control expands to provide room for the new padding.</span></span>  
   
-4.  Перетащите элемент управления <xref:System.Windows.Forms.GroupBox> из **панели элементов** в форму.  Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в элемент управления <xref:System.Windows.Forms.GroupBox>.  Расположите элемент управления <xref:System.Windows.Forms.Button>, совместив его с нижним правым углом элемента управления <xref:System.Windows.Forms.GroupBox>.  
+4.  <span data-ttu-id="5d114-157">Перетащите <xref:System.Windows.Forms.GroupBox> управления из **элементов** на форму.</span><span class="sxs-lookup"><span data-stu-id="5d114-157">Drag a <xref:System.Windows.Forms.GroupBox> control from the **Toolbox** onto your form.</span></span> <span data-ttu-id="5d114-158">Перетащите <xref:System.Windows.Forms.Button> управления из **элементов** в <xref:System.Windows.Forms.GroupBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-158">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="5d114-159">Позиция <xref:System.Windows.Forms.Button> управления его записи на диск с в правом нижнем углу <xref:System.Windows.Forms.GroupBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-159">Position the <xref:System.Windows.Forms.Button> control so it is flush with the lower-right corner of the <xref:System.Windows.Forms.GroupBox> control.</span></span>  
   
-     Обратите внимание на линию привязки, которая появится при приближении элемента управления <xref:System.Windows.Forms.Button> к нижней и правой границе элемента управления <xref:System.Windows.Forms.GroupBox>.  Эти линии привязки соответствуют свойству <xref:System.Windows.Forms.Control.Margin%2A> элемента управления <xref:System.Windows.Forms.Button>.  
+     <span data-ttu-id="5d114-160">Обратите внимание на линии привязки, как <xref:System.Windows.Forms.Button> управления приближается к нижней и правой границ <xref:System.Windows.Forms.GroupBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-160">Observe the snaplines that appear as the <xref:System.Windows.Forms.Button> control approaches the bottom and right borders of the <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="5d114-161">Эти линии привязки соответствуют <xref:System.Windows.Forms.Control.Margin%2A> свойство <xref:System.Windows.Forms.Button>.</span><span class="sxs-lookup"><span data-stu-id="5d114-161">These snaplines correspond to the <xref:System.Windows.Forms.Control.Margin%2A> property of the <xref:System.Windows.Forms.Button>.</span></span>  
   
-5.  Измените свойство <xref:System.Windows.Forms.Control.Padding%2A> элемента управления <xref:System.Windows.Forms.GroupBox>, развернув пункт <xref:System.Windows.Forms.Control.Padding%2A> в окне **Свойства** и установив значение свойства <xref:System.Windows.Forms.Padding.All%2A> равным 20.  
+5.  <span data-ttu-id="5d114-162">Изменение <xref:System.Windows.Forms.GroupBox> элемента управления <xref:System.Windows.Forms.Control.Padding%2A> , развернув <xref:System.Windows.Forms.Control.Padding%2A> входа в **свойства** и установив <xref:System.Windows.Forms.Padding.All%2A> до 20.</span><span class="sxs-lookup"><span data-stu-id="5d114-162">Change the <xref:System.Windows.Forms.GroupBox> control's <xref:System.Windows.Forms.Control.Padding%2A> property by expanding the <xref:System.Windows.Forms.Control.Padding%2A> entry in the **Properties** window and setting the <xref:System.Windows.Forms.Padding.All%2A> property to 20.</span></span>  
   
-6.  Выберите элемент управления <xref:System.Windows.Forms.Button> внутри элемента управления <xref:System.Windows.Forms.GroupBox> и переместите его к центру <xref:System.Windows.Forms.GroupBox>.  
+6.  <span data-ttu-id="5d114-163">Выберите <xref:System.Windows.Forms.Button> управления в пределах <xref:System.Windows.Forms.GroupBox> управления и переместить его к центру <xref:System.Windows.Forms.GroupBox>.</span><span class="sxs-lookup"><span data-stu-id="5d114-163">Select the <xref:System.Windows.Forms.Button> control within the <xref:System.Windows.Forms.GroupBox> control and move it toward the center of the <xref:System.Windows.Forms.GroupBox>.</span></span>  
   
-     Линии привязки появятся на большем расстоянии от границ элемента управления <xref:System.Windows.Forms.GroupBox>.  Это расстояние определяется суммой значений свойства <xref:System.Windows.Forms.Control.Margin%2A> элемента управления <xref:System.Windows.Forms.Button> и свойства <xref:System.Windows.Forms.Control.Padding%2A> элемента управления <xref:System.Windows.Forms.GroupBox>.  
+     <span data-ttu-id="5d114-164">Линии привязки появятся на большем расстоянии от границ элемента <xref:System.Windows.Forms.GroupBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-164">The snaplines appear at a greater distance from the borders of the <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="5d114-165">Это расстояние равно сумме <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Margin%2A> свойство и <xref:System.Windows.Forms.GroupBox> элемента управления <xref:System.Windows.Forms.Control.Padding%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="5d114-165">This distance is the sum of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Margin%2A> property and the <xref:System.Windows.Forms.GroupBox> control's <xref:System.Windows.Forms.Control.Padding%2A> property.</span></span>  
   
-## Автоматическое определение размеров элементов управления  
- В некоторых приложениях размер элемента управления во время выполнения и во время разработки отличается.  Например, текст элемента управления <xref:System.Windows.Forms.Button> может извлекаться из базы данных, и его длина не будет известна заранее.  
+## <a name="automatically-sizing-your-controls"></a><span data-ttu-id="5d114-166">Автоматическое изменение размеров элементов управления</span><span class="sxs-lookup"><span data-stu-id="5d114-166">Automatically Sizing Your Controls</span></span>  
+ <span data-ttu-id="5d114-167">В некоторых приложениях размер элемента управления будут одинаковыми на время выполнения во время разработки.</span><span class="sxs-lookup"><span data-stu-id="5d114-167">In some applications, the size of a control will not be the same at run time as it was at design time.</span></span> <span data-ttu-id="5d114-168">Текст <xref:System.Windows.Forms.Button> элемента управления, например, могут быть извлечены из базы данных, а его длина не будет известен заранее.</span><span class="sxs-lookup"><span data-stu-id="5d114-168">The text of a <xref:System.Windows.Forms.Button> control, for example, may be taken from a database, and its length will not be known in advance.</span></span>  
   
- Когда свойству <xref:System.Windows.Forms.Control.AutoSize%2A> присвоено значение `true`, размер элемента управления изменяется автоматически в соответствии с его содержимым.  Дополнительные сведения см. в разделе [Свойство AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md).  
+ <span data-ttu-id="5d114-169">Когда <xref:System.Windows.Forms.Control.AutoSize%2A> свойству `true`, изменится на его содержимое размер элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-169">When the <xref:System.Windows.Forms.Control.AutoSize%2A> property is set to `true`, the control will size itself to its content.</span></span> <span data-ttu-id="5d114-170">Дополнительные сведения см. в разделе [Общие](../../../../docs/framework/winforms/controls/autosize-property-overview.md).</span><span class="sxs-lookup"><span data-stu-id="5d114-170">For more information, see [AutoSize Property Overview](../../../../docs/framework/winforms/controls/autosize-property-overview.md).</span></span>  
   
-#### Чтобы расположить элементы управления на форме с помощью свойства AutoSize  
+#### <a name="to-arrange-controls-on-your-form-using-the-autosize-property"></a><span data-ttu-id="5d114-171">Размещение элементов управления на форме с помощью свойства AutoSize</span><span class="sxs-lookup"><span data-stu-id="5d114-171">To arrange controls on your form using the AutoSize property</span></span>  
   
-1.  Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в форму.  
+1.  <span data-ttu-id="5d114-172">Перетащите <xref:System.Windows.Forms.Button> управления из **элементов** на форму.</span><span class="sxs-lookup"><span data-stu-id="5d114-172">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span>  
   
-2.  Измените значение свойства <xref:System.Windows.Forms.Control.AutoSize%2A> элемента управления <xref:System.Windows.Forms.Button> на `true`.  
+2.  <span data-ttu-id="5d114-173">Измените значение свойства <xref:System.Windows.Forms.Control.AutoSize%2A> элемента управления <xref:System.Windows.Forms.Button> на `true`.</span><span class="sxs-lookup"><span data-stu-id="5d114-173">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.AutoSize%2A> property to `true`.</span></span>  
   
-3.  Измените свойство <xref:System.Windows.Forms.Control.Text%2A> элемента управления <xref:System.Windows.Forms.Button> на "Эта кнопка содержит длинную строку для свойства Text".  
+3.  <span data-ttu-id="5d114-174">Изменение <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Text%2A> свойства «**на этой кнопке изображен длинную строку для свойства Text**.»</span><span class="sxs-lookup"><span data-stu-id="5d114-174">Change the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Text%2A> property to "**This button has a long string for its Text property**."</span></span>  
   
-     После внесения изменений размер элемента управления <xref:System.Windows.Forms.Button> будет изменен автоматически в соответствии с новым текстом.  
+     <span data-ttu-id="5d114-175">При фиксации изменений, <xref:System.Windows.Forms.Button> элемента управления изменяется автоматически, чтобы вместить новый текст.</span><span class="sxs-lookup"><span data-stu-id="5d114-175">When you commit the change, the <xref:System.Windows.Forms.Button> control resizes itself to fit the new text.</span></span>  
   
-4.  Перетащите еще один элемент управления <xref:System.Windows.Forms.Button> с **панели элементов** на форму.  
+4.  <span data-ttu-id="5d114-176">Перетащите еще одно <xref:System.Windows.Forms.Button> управления из **элементов** на форму.</span><span class="sxs-lookup"><span data-stu-id="5d114-176">Drag another <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span>  
   
-5.  Измените свойство <xref:System.Windows.Forms.Control.Text%2A> элемента управления <xref:System.Windows.Forms.Button> на "Эта кнопка содержит длинную строку для свойства Text".  
+5.  <span data-ttu-id="5d114-177">Изменение <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Text%2A> свойства «**на этой кнопке изображен длинную строку для свойства Text.**»</span><span class="sxs-lookup"><span data-stu-id="5d114-177">Change the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Text%2A> property to "**This button has a long string for its Text property.**"</span></span>  
   
-     После применения изменения размер элемента управления <xref:System.Windows.Forms.Button> не будет изменен автоматически, текст будет обрезан правой границе элемента управления.  
+     <span data-ttu-id="5d114-178">При фиксации изменений, <xref:System.Windows.Forms.Button> сам не размеры элемента управления, и текст будет обрезан правой границе элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-178">When you commit the change, the <xref:System.Windows.Forms.Button> control does not resize itself, and the text is clipped by the right edge of the control.</span></span>  
   
-6.  Измените свойство <xref:System.Windows.Forms.Control.Padding%2A>, развернув пункт <xref:System.Windows.Forms.Control.Padding%2A> в окне **Свойства**, и установив значение свойства <xref:System.Windows.Forms.Padding.All%2A> равным 5.  
+6.  <span data-ttu-id="5d114-179">Изменение <xref:System.Windows.Forms.Control.Padding%2A> , развернув <xref:System.Windows.Forms.Control.Padding%2A> входа в **свойства** и установив <xref:System.Windows.Forms.Padding.All%2A> значение 5.</span><span class="sxs-lookup"><span data-stu-id="5d114-179">Change the <xref:System.Windows.Forms.Control.Padding%2A> property by expanding the <xref:System.Windows.Forms.Control.Padding%2A> entry in the **Properties** window and setting the <xref:System.Windows.Forms.Padding.All%2A> property to 5.</span></span>  
   
-     Текст внутри элемента управления обрезается со всех четырех сторон.  
+     <span data-ttu-id="5d114-180">Все четыре стороны обрезается текст элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-180">The text in the control's interior is clipped on all four sides.</span></span>  
   
-7.  Измените свойство <xref:System.Windows.Forms.Control.AutoSize%2A> элемента управления <xref:System.Windows.Forms.Button> на `true`.  
+7.  <span data-ttu-id="5d114-181">Изменение <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.AutoSize%2A> свойства `true`.</span><span class="sxs-lookup"><span data-stu-id="5d114-181">Change the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.AutoSize%2A> property to `true`.</span></span>  
   
-     Размер элемента управления <xref:System.Windows.Forms.Button> изменяется автоматически, чтобы помещалась вся строка.  Кроме того, добавлены внутренние границы вокруг текста, за счет чего элемент управления <xref:System.Windows.Forms.Button> увеличился во всех четырех направлениях.  
+     <span data-ttu-id="5d114-182"><xref:System.Windows.Forms.Button> Элемента управления изменяется автоматически, чтобы помещалась вся строка.</span><span class="sxs-lookup"><span data-stu-id="5d114-182">The <xref:System.Windows.Forms.Button> control resizes itself to encompass the entire string.</span></span> <span data-ttu-id="5d114-183">Кроме того, были добавлены заполнения вокруг текста, вызывая <xref:System.Windows.Forms.Button> элемента управления, чтобы развернуть во всех четырех направлениях.</span><span class="sxs-lookup"><span data-stu-id="5d114-183">Also, padding has been added around the text, causing the <xref:System.Windows.Forms.Button> control to expand in all four directions.</span></span>  
   
-8.  Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в форму.  Расположите его рядом с нижним правым углом формы.  
+8.  <span data-ttu-id="5d114-184">Перетащите <xref:System.Windows.Forms.Button> управления из **элементов** на форму.</span><span class="sxs-lookup"><span data-stu-id="5d114-184">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span> <span data-ttu-id="5d114-185">Поместите его в правом нижнем углу формы.</span><span class="sxs-lookup"><span data-stu-id="5d114-185">Position it near the lower-right corner of the form.</span></span>  
   
-9. Измените значение свойства <xref:System.Windows.Forms.Control.AutoSize%2A> элемента управления <xref:System.Windows.Forms.Button> на `true`.  
+9. <span data-ttu-id="5d114-186">Измените значение свойства <xref:System.Windows.Forms.Control.AutoSize%2A> элемента управления <xref:System.Windows.Forms.Button> на `true`.</span><span class="sxs-lookup"><span data-stu-id="5d114-186">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.AutoSize%2A> property to `true`.</span></span>  
   
-10. Присвойте свойству <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления <xref:System.Windows.Forms.Button> значение <xref:System.Windows.Forms.AnchorStyles>, <xref:System.Windows.Forms.AnchorStyles>.  
+10. <span data-ttu-id="5d114-187">Задать <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Anchor%2A> свойства <xref:System.Windows.Forms.AnchorStyles.Right>, <xref:System.Windows.Forms.AnchorStyles.Bottom>.</span><span class="sxs-lookup"><span data-stu-id="5d114-187">Set the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Anchor%2A> property to <xref:System.Windows.Forms.AnchorStyles.Right>, <xref:System.Windows.Forms.AnchorStyles.Bottom>.</span></span>  
   
-11. Измените свойство <xref:System.Windows.Forms.Control.Text%2A> элемента управления <xref:System.Windows.Forms.Button> на "Эта кнопка содержит длинную строку для свойства Text".  
+11. <span data-ttu-id="5d114-188">Изменение <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Text%2A> свойства «**на этой кнопке изображен длинную строку для свойства Text.**»</span><span class="sxs-lookup"><span data-stu-id="5d114-188">Change the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Text%2A> property to "**This button has a long string for its Text property.**"</span></span>  
   
-     После применения изменения размер элемента управления <xref:System.Windows.Forms.Button> будет изменен автоматически влево.  Вообще, при автоматическом определении размеров увеличение размера элемента управления происходит в направлении, противоположном установке <xref:System.Windows.Forms.Control.Anchor%2A>.  
+     <span data-ttu-id="5d114-189">При фиксации изменений, <xref:System.Windows.Forms.Button> элемент управления может изменять свои размеры налево.</span><span class="sxs-lookup"><span data-stu-id="5d114-189">When you commit the change, the <xref:System.Windows.Forms.Button> control resizes itself toward the left.</span></span> <span data-ttu-id="5d114-190">Как правило, автоматическое изменение размеров приведет к увеличению размера элемента управления в направлении, противоположном его <xref:System.Windows.Forms.Control.Anchor%2A> значение свойства.</span><span class="sxs-lookup"><span data-stu-id="5d114-190">In general, automatic sizing will increase the size of a control in the direction opposite its <xref:System.Windows.Forms.Control.Anchor%2A> property setting.</span></span>  
   
-## Свойства AutoSize и AutoSizeMode  
- Некоторые элементы управления поддерживают свойство `AutoSizeMode`, что обеспечивает более точное управление автоматическим определением размеров элемента управления.  
+## <a name="autosize-and-autosizemode-properties"></a><span data-ttu-id="5d114-191">AutoSize и свойства AutoSizeMode</span><span class="sxs-lookup"><span data-stu-id="5d114-191">AutoSize and AutoSizeMode Properties</span></span>  
+ <span data-ttu-id="5d114-192">Некоторые элементы управления поддерживают `AutoSizeMode` свойство, которое дает более точный контроль над поведение автоматического изменения размеров элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-192">Some controls support the `AutoSizeMode` property, which gives you more fine-grained control over the automatic sizing behavior of a control.</span></span>  
   
-#### Чтобы использовать свойство AutoSizeMode  
+#### <a name="to-use-the-autosizemode-property"></a><span data-ttu-id="5d114-193">Чтобы использовать AutoSizeMode-свойство</span><span class="sxs-lookup"><span data-stu-id="5d114-193">To use the AutoSizeMode property</span></span>  
   
-1.  Перетащите элемент управления <xref:System.Windows.Forms.Panel> из **панели элементов** в форму.  
+1.  <span data-ttu-id="5d114-194">Перетащите <xref:System.Windows.Forms.Panel> управления из **элементов** на форму.</span><span class="sxs-lookup"><span data-stu-id="5d114-194">Drag a <xref:System.Windows.Forms.Panel> control from the **Toolbox** onto your form.</span></span>  
   
-2.  Присвойте свойству <xref:System.Windows.Forms.Control.AutoSize%2A> элемента управления <xref:System.Windows.Forms.Panel> значение `true`.  
+2.  <span data-ttu-id="5d114-195">Установите для параметра <xref:System.Windows.Forms.Panel> элемента управления <xref:System.Windows.Forms.Control.AutoSize%2A> свойства `true`.</span><span class="sxs-lookup"><span data-stu-id="5d114-195">Set the value of the <xref:System.Windows.Forms.Panel> control's <xref:System.Windows.Forms.Control.AutoSize%2A> property to `true`.</span></span>  
   
-3.  Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в элемент управления <xref:System.Windows.Forms.Panel>.  
+3.  <span data-ttu-id="5d114-196">Перетащите <xref:System.Windows.Forms.Button> управления из **элементов** в <xref:System.Windows.Forms.Panel> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-196">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the <xref:System.Windows.Forms.Panel> control.</span></span>  
   
-4.  Расположите элемент управления <xref:System.Windows.Forms.Button> рядом с нижним правым углом элемента управления <xref:System.Windows.Forms.Panel>.  
+4.  <span data-ttu-id="5d114-197">Место <xref:System.Windows.Forms.Button> управления в правом нижнем углу <xref:System.Windows.Forms.Panel> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-197">Place the <xref:System.Windows.Forms.Button> control near the lower-right corner of the <xref:System.Windows.Forms.Panel> control.</span></span>  
   
-5.  Выберите элемент управления <xref:System.Windows.Forms.Panel> и возьмитесь за нижний правый маркер изменения размера.  Попробуйте увеличить и уменьшить размер элемента управления <xref:System.Windows.Forms.Panel>.  
+5.  <span data-ttu-id="5d114-198">Выберите <xref:System.Windows.Forms.Panel> управления и захватите правый нижний маркер.</span><span class="sxs-lookup"><span data-stu-id="5d114-198">Select the <xref:System.Windows.Forms.Panel> control and grab the lower-right sizing handle.</span></span> <span data-ttu-id="5d114-199">Изменить размер <xref:System.Windows.Forms.Panel> управления, чтобы увеличить и уменьшить.</span><span class="sxs-lookup"><span data-stu-id="5d114-199">Resize the <xref:System.Windows.Forms.Panel> control to be larger and smaller.</span></span>  
   
     > [!NOTE]
-    >  Размер элемента управления <xref:System.Windows.Forms.Panel> можно изменять свободно, но размер нельзя установить меньше положения нижнего правого угла элемента управления <xref:System.Windows.Forms.Button>.  Такое поведение определяется значением свойства `AutoSizeMode` по умолчанию — <xref:System.Windows.Forms.AutoSizeMode>.  
+    >  <span data-ttu-id="5d114-200">Вы можете свободно изменять размер <xref:System.Windows.Forms.Panel> управления, но размер нельзя установить меньше, чем положение <xref:System.Windows.Forms.Button> правый нижний угол элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-200">You can freely resize the <xref:System.Windows.Forms.Panel> control, but you cannot size it smaller than the position of the <xref:System.Windows.Forms.Button> control's lower-right corner.</span></span> <span data-ttu-id="5d114-201">Такое поведение определяется по значению по умолчанию `AutoSizeMode` свойство, которое является <xref:System.Windows.Forms.AutoSizeMode.GrowOnly>.</span><span class="sxs-lookup"><span data-stu-id="5d114-201">This behavior is specified by the default value of the `AutoSizeMode` property, which is <xref:System.Windows.Forms.AutoSizeMode.GrowOnly>.</span></span>  
   
-6.  Присвойте свойству `AutoSizeMode` элемента управления <xref:System.Windows.Forms.Panel> значение <xref:System.Windows.Forms.AutoSizeMode>.  
+6.  <span data-ttu-id="5d114-202">Установите для параметра <xref:System.Windows.Forms.Panel> элемента управления `AutoSizeMode` свойства <xref:System.Windows.Forms.AutoSizeMode.GrowAndShrink>.</span><span class="sxs-lookup"><span data-stu-id="5d114-202">Set the value of the <xref:System.Windows.Forms.Panel> control's `AutoSizeMode` property to <xref:System.Windows.Forms.AutoSizeMode.GrowAndShrink>.</span></span>  
   
-     Размеры элемента управления <xref:System.Windows.Forms.Panel> определяются автоматически для окружения элемента управления <xref:System.Windows.Forms.Button>.  Размеры элемента управления <xref:System.Windows.Forms.Panel> изменить нельзя.  
+     <span data-ttu-id="5d114-203"><xref:System.Windows.Forms.Panel> Размера элемента управления вокруг <xref:System.Windows.Forms.Button> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-203">The <xref:System.Windows.Forms.Panel> control sizes itself to surround the <xref:System.Windows.Forms.Button> control.</span></span> <span data-ttu-id="5d114-204">Не удается изменить размер <xref:System.Windows.Forms.Panel> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-204">You cannot resize the <xref:System.Windows.Forms.Panel> control.</span></span>  
   
-7.  Перетащите элемент управления <xref:System.Windows.Forms.Button> к верхнему левому углу элемента управления <xref:System.Windows.Forms.Panel>.  
+7.  <span data-ttu-id="5d114-205">Перетащите <xref:System.Windows.Forms.Button> управления сторону в верхнем левом углу <xref:System.Windows.Forms.Panel> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-205">Drag the <xref:System.Windows.Forms.Button> control toward the upper-left corner of the <xref:System.Windows.Forms.Panel> control.</span></span>  
   
-     Размер элемента управления <xref:System.Windows.Forms.Panel> изменится в соответствии с новым положением элемента управления <xref:System.Windows.Forms.Button>.  
+     <span data-ttu-id="5d114-206"><xref:System.Windows.Forms.Panel> Управления изменяет свой размер <xref:System.Windows.Forms.Button> новое положение элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-206">The <xref:System.Windows.Forms.Panel> control resizes to the <xref:System.Windows.Forms.Button> control's new position.</span></span>  
   
-## Следующие действия  
- Для упорядочивания элементов управления приложений Windows Forms есть также много других возможностей форматирования.  Ниже приведено несколько комбинаций, которые можно попробовать.  
+## <a name="next-steps"></a><span data-ttu-id="5d114-207">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="5d114-207">Next Steps</span></span>  
+ <span data-ttu-id="5d114-208">Существует множество возможностей компоновки для упорядочивания элементов управления в приложениях Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="5d114-208">There are many other layout features for arranging controls in your Windows Forms applications.</span></span> <span data-ttu-id="5d114-209">Ниже приведены некоторые сочетания, которые можно попробовать.</span><span class="sxs-lookup"><span data-stu-id="5d114-209">Here are some combinations you might try:</span></span>  
   
--   Постройте форму с помощью элемента управления<xref:System.Windows.Forms.TableLayoutPanel> control.  Дополнительные сведения см. в разделе [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).  Попробуйте изменить значения свойства <xref:System.Windows.Forms.Control.Padding%2A> элемента управления <xref:System.Windows.Forms.TableLayoutPanel>, а также свойства <xref:System.Windows.Forms.Control.Margin%2A> дочерних элементов управления.  
+-   <span data-ttu-id="5d114-210">Создайте форму с помощью <xref:System.Windows.Forms.TableLayoutPanel> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-210">Build a form using a <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span> <span data-ttu-id="5d114-211">Дополнительные сведения см. в разделе [Пошаговое руководство: упорядочение элементов управления в Windows Forms с помощью элемента TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).</span><span class="sxs-lookup"><span data-stu-id="5d114-211">For details, see [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).</span></span> <span data-ttu-id="5d114-212">Попробуйте изменить значения <xref:System.Windows.Forms.TableLayoutPanel> элемента управления <xref:System.Windows.Forms.Control.Padding%2A> свойства, а также <xref:System.Windows.Forms.Control.Margin%2A> свойства дочерних элементов управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-212">Try changing the values of the <xref:System.Windows.Forms.TableLayoutPanel> control's <xref:System.Windows.Forms.Control.Padding%2A> property, as well as the <xref:System.Windows.Forms.Control.Margin%2A> property on its child controls.</span></span>  
   
--   Попробуйте выполнить тот же эксперимент с помощью элемента управления <xref:System.Windows.Forms.FlowLayoutPanel>.  Дополнительные сведения см. в разделе [Пример. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
+-   <span data-ttu-id="5d114-213">Повторите ту же эксперимент с помощью <xref:System.Windows.Forms.FlowLayoutPanel> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-213">Try the same experiment using a <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span> <span data-ttu-id="5d114-214">Дополнительные сведения см. в разделе [Пошаговое руководство: упорядочение элементов управления в Windows Forms с помощью элемента FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).</span><span class="sxs-lookup"><span data-stu-id="5d114-214">For details, see [Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).</span></span>  
   
--   Поэкспериментируйте с закреплением дочерних элементов управления в элементе управления <xref:System.Windows.Forms.Panel>.  Свойство <xref:System.Windows.Forms.Control.Padding%2A> является более общей реализацией свойства <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>. Вы можете убедиться в этом, поместив дочерний элемент управления в элемент управления <xref:System.Windows.Forms.Panel> и присвоив свойству <xref:System.Windows.Forms.Control.Dock%2A> дочернего элемента управления свойство <xref:System.Windows.Forms.DockStyle>.  Присвойте свойству <xref:System.Windows.Forms.Control.Padding%2A> элемента управления <xref:System.Windows.Forms.Panel> различные значения и обратите внимание на производимый изменениями эффект.  
+-   <span data-ttu-id="5d114-215">Поэкспериментируйте с закреплением дочерних элементов управления в <xref:System.Windows.Forms.Panel> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5d114-215">Experiment with docking child controls in a <xref:System.Windows.Forms.Panel> control.</span></span> <span data-ttu-id="5d114-216"><xref:System.Windows.Forms.Control.Padding%2A> Свойство является более общей реализацией <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> свойство и может выполнить самостоятельно, это условие выполняется, размещение дочернего элемента управления в <xref:System.Windows.Forms.Panel> управления и задание дочернего элемента управления <xref:System.Windows.Forms.Control.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.Fill>.</span><span class="sxs-lookup"><span data-stu-id="5d114-216">The <xref:System.Windows.Forms.Control.Padding%2A> property is a more general realization of the <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> property, and you can satisfy yourself that this is the case by putting a child control in a <xref:System.Windows.Forms.Panel> control and setting the child control's <xref:System.Windows.Forms.Control.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Fill>.</span></span> <span data-ttu-id="5d114-217">Задать <xref:System.Windows.Forms.Panel> элемента управления <xref:System.Windows.Forms.Control.Padding%2A> свойство различные значения и Примечание эффект.</span><span class="sxs-lookup"><span data-stu-id="5d114-217">Set the <xref:System.Windows.Forms.Panel> control's <xref:System.Windows.Forms.Control.Padding%2A> property to various values and note the effect.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.Control.AutoSize%2A>   
- <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>   
- <xref:System.Windows.Forms.Control.Margin%2A>   
- <xref:System.Windows.Forms.Control.Padding%2A>   
- [Свойство AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md)   
- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)   
- [Пример. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)   
- [Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+## <a name="see-also"></a><span data-ttu-id="5d114-218">См. также</span><span class="sxs-lookup"><span data-stu-id="5d114-218">See Also</span></span>  
+ <xref:System.Windows.Forms.Control.AutoSize%2A>  
+ <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>  
+ <xref:System.Windows.Forms.Control.Margin%2A>  
+ <xref:System.Windows.Forms.Control.Padding%2A>  
+ [<span data-ttu-id="5d114-219">Свойство AutoSize</span><span class="sxs-lookup"><span data-stu-id="5d114-219">AutoSize Property Overview</span></span>](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
+ [<span data-ttu-id="5d114-220">Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="5d114-220">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [<span data-ttu-id="5d114-221">Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="5d114-221">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+ [<span data-ttu-id="5d114-222">Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки</span><span class="sxs-lookup"><span data-stu-id="5d114-222">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

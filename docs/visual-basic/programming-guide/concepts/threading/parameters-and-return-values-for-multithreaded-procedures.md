@@ -1,36 +1,28 @@
 ---
-title: "Параметры и возвращаемые значения для многопоточных процедур (Visual Basic) | Документы Microsoft"
+title: "Параметры и возвращаемые значения для многопоточных процедур (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: cbdce172-7ff6-41a9-bb21-53a7c6f538a5
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d5d8adde531d31aa6bf353f53bd4cfecc084f515
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 071e0aa916e4b3464c7c0cbff6596cabc6b67906
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="parameters-and-return-values-for-multithreaded-procedures-visual-basic"></a>Параметры и возвращаемые значения для многопоточных процедур (Visual Basic)
-Предоставление и возврат значений в многопоточных приложениях является сложной, так как конструктор для класса поток должен быть передан ссылку на процедуру, которая не принимает аргументов и не возвращает значений. В следующих разделах показаны некоторые простые способы передачи параметров и возвращаемых значений из процедур в отдельных потоках.  
+# <a name="parameters-and-return-values-for-multithreaded-procedures-visual-basic"></a><span data-ttu-id="5a8c2-102">Параметры и возвращаемые значения для многопоточных процедур (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5a8c2-102">Parameters and Return Values for Multithreaded Procedures (Visual Basic)</span></span>
+<span data-ttu-id="5a8c2-103">Предоставлять и возвращать значения в многопоточном приложении сложно, поскольку в конструктор для класса потока должна передаваться ссылка на процедуру, которая принимает аргумент и не возвращает никакое значение.</span><span class="sxs-lookup"><span data-stu-id="5a8c2-103">Supplying and returning values in a multithreaded application is complicated because the constructor for the thread class must be passed a reference to a procedure that takes no arguments and returns no value.</span></span> <span data-ttu-id="5a8c2-104">В следующих разделах показано несколько простых способов предоставления параметров и возвращения значений из процедур в отдельных потоках.</span><span class="sxs-lookup"><span data-stu-id="5a8c2-104">The following sections show some simple ways to supply parameters and return values from procedures on separate threads.</span></span>  
   
-## <a name="supplying-parameters-for-multithreaded-procedures"></a>Предоставление параметров для многопоточных процедур  
- Лучший способ передачи параметров при вызове многопотокового метода является заключение нужного метода в класс и определение полей для этого класса, который будет использоваться в качестве параметров для нового потока. Преимуществом этого подхода является то, что новый экземпляр класса, позволяет создавать со своими параметрами нужно запустить новый поток каждый раз. Например рассмотрим функцию, вычисляющую площадь треугольника, как показано в следующем коде:  
+## <a name="supplying-parameters-for-multithreaded-procedures"></a><span data-ttu-id="5a8c2-105">Предоставление параметров для многопоточных процедур</span><span class="sxs-lookup"><span data-stu-id="5a8c2-105">Supplying Parameters for Multithreaded Procedures</span></span>  
+ <span data-ttu-id="5a8c2-106">Лучший способ передать параметры для вызова многопоточного метода — это вложить нужный метод в класс и определить для этого класса поля, которые будут служить параметрами для нового потока.</span><span class="sxs-lookup"><span data-stu-id="5a8c2-106">The best way to supply parameters for a multithreaded method call is to wrap the target method in a class and define fields for that class that will serve as parameters for the new thread.</span></span> <span data-ttu-id="5a8c2-107">Преимущество этого подхода состоит в том, что новый экземпляр класса с его собственными параметрами можно создавать каждый раз, когда вам нужно запустить новый поток.</span><span class="sxs-lookup"><span data-stu-id="5a8c2-107">The advantage of this approach is that you can create a new instance of the class, with its own parameters, every time you want to start a new thread.</span></span> <span data-ttu-id="5a8c2-108">Допустим, например, что у вас есть функция, вычисляющая площадь треугольника, как в следующем коде:</span><span class="sxs-lookup"><span data-stu-id="5a8c2-108">For example, suppose you have a function that calculates the area of a triangle, as in the following code:</span></span>  
   
 ```vb  
 Function CalcArea(ByVal Base As Double, ByVal Height As Double) As Double  
@@ -38,7 +30,7 @@ Function CalcArea(ByVal Base As Double, ByVal Height As Double) As Double
 End Function  
 ```  
   
- Можно написать класс-оболочку `CalcArea` и имеет поля для хранения входных параметров, как показано ниже:  
+ <span data-ttu-id="5a8c2-109">Напишем класс, в который вложена функция `CalcArea` и который создает поля для хранения входных параметров:</span><span class="sxs-lookup"><span data-stu-id="5a8c2-109">You can write a class that wraps the `CalcArea` function and creates fields to store input parameters, as follows:</span></span>  
   
 ```vb  
 Class AreaClass  
@@ -52,7 +44,7 @@ Class AreaClass
 End Class  
 ```  
   
- Для использования `AreaClass`, можно создать `AreaClass` и установить `Base` и `Height` свойства, как показано в следующем коде:  
+ <span data-ttu-id="5a8c2-110">Чтобы использовать `AreaClass`, можно создать объект `AreaClass` и задать свойства `Base` и `Height`, как показано в следующем коде:</span><span class="sxs-lookup"><span data-stu-id="5a8c2-110">To use the `AreaClass`, you can create an `AreaClass` object, and set the `Base` and `Height` properties as shown in the following code:</span></span>  
   
 ```vb  
 Protected Sub TestArea()  
@@ -65,12 +57,12 @@ Protected Sub TestArea()
 End Sub  
 ```  
   
- Обратите внимание, что `TestArea` не проверяет значение `Area` после вызова `CalcArea` метод. Поскольку `CalcArea` выполняется в отдельном потоке, `Area` поле не обязательно быть задано, если проверить его сразу после вызова `Thread.Start`. В следующем разделе описываются более эффективный способ возвращения значений из многопоточных процедур.  
+ <span data-ttu-id="5a8c2-111">Обратите внимание на то, что процедура `TestArea` не проверяет значение поля `Area` после вызова метода `CalcArea`.</span><span class="sxs-lookup"><span data-stu-id="5a8c2-111">Notice that the `TestArea` procedure does not check the value of the `Area` field after calling the `CalcArea` method.</span></span> <span data-ttu-id="5a8c2-112">Поскольку `CalcArea` выполняется в отдельном потоке, поле `Area` может оказаться не заданным, если проверять его сразу после вызова `Thread.Start`.</span><span class="sxs-lookup"><span data-stu-id="5a8c2-112">Because `CalcArea` runs on a separate thread, the `Area` field is not guaranteed to be set if you check it immediately after calling `Thread.Start`.</span></span> <span data-ttu-id="5a8c2-113">В следующем разделе рассматривается более удобный способ получения возвращаемых значений из многопоточных процедур.</span><span class="sxs-lookup"><span data-stu-id="5a8c2-113">The next section discusses a better way to return values from multithreaded procedures.</span></span>  
   
-## <a name="returning-values-from-multithreaded-procedures"></a>Получение возвращаемых значений от многопоточных процедур  
- Получение возвращаемых значений от процедур, выполняемых в отдельных потоках, осложняется тем, что процедуры не могут быть функциями и нельзя использовать `ByRef` аргументы. Самый простой способ возвращения значений является использование <xref:System.ComponentModel.BackgroundWorker>компонент для управления потоками и вызова события при завершении задачи и обработки результатов с помощью обработчика событий.</xref:System.ComponentModel.BackgroundWorker>  
+## <a name="returning-values-from-multithreaded-procedures"></a><span data-ttu-id="5a8c2-114">Получение возвращаемых значений из многопоточных процедур</span><span class="sxs-lookup"><span data-stu-id="5a8c2-114">Returning Values from Multithreaded Procedures</span></span>  
+ <span data-ttu-id="5a8c2-115">Получение возвращаемых значений из процедур, выполняемых в отдельных потоках, осложняется тем, что процедуры не могут быть функциями, а аргументы `ByRef` использовать нельзя.</span><span class="sxs-lookup"><span data-stu-id="5a8c2-115">Returning values from procedures that run on separate threads is complicated by the fact that the procedures cannot be functions and cannot use `ByRef` arguments.</span></span> <span data-ttu-id="5a8c2-116">Самый простой способ получить возвращаемые значения — это применить компонент <xref:System.ComponentModel.BackgroundWorker>, управляющий потоками и создающий событие по завершении задачи, а затем обработать результаты с помощью обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="5a8c2-116">The easiest way to return values is to use the <xref:System.ComponentModel.BackgroundWorker> component to manage your threads and raise an event when the task is done, and process the results with an event handler.</span></span>  
   
- В следующем примере возвращается значение, при возникновении события от процедуры, выполняющейся в отдельном потоке:  
+ <span data-ttu-id="5a8c2-117">В следующем примере значение возвращается в результате создания события из процедуры, выполняемой в отдельном потоке:</span><span class="sxs-lookup"><span data-stu-id="5a8c2-117">The following example returns a value by raising an event from a procedure running on a separate thread:</span></span>  
   
 ```vb  
 Private Class AreaClass2  
@@ -116,13 +108,13 @@ Private Sub BackgroundWorker1_RunWorkerCompleted(
 End Sub  
 ```  
   
- Можно указать параметры и возвращаемые значения для потоков из пула потоков с помощью необязательного `ByVal` объект состояния переменной <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>метод.</xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> Таймер потока потоков также поддерживает объект состояния для этой цели. Сведения о группировке потоков и таймеры потоков в разделе [пул потоков (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)[пул потоков](http://msdn.microsoft.com/library/4b8bb2c8-8ca4-457c-9afd-d11bc9a05701) и [таймеры потоков (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-timers.md).  
+ <span data-ttu-id="5a8c2-118">Параметры и возвращаемые значения можно передавать в поток пула потоков с помощью необязательной переменной объекта состояния `ByVal` метода <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>.</span><span class="sxs-lookup"><span data-stu-id="5a8c2-118">You can provide parameters and return values to thread-pool threads by using the optional `ByVal` state-object variable of the <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> method.</span></span> <span data-ttu-id="5a8c2-119">Потоки таймера потоков также поддерживают объект состояния в этом контексте.</span><span class="sxs-lookup"><span data-stu-id="5a8c2-119">Thread-timer threads also support a state object for this purpose.</span></span> <span data-ttu-id="5a8c2-120">Сведения о группировке потоков и таймеры потоков см. в разделе [пул потоков (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)[пул потоков](http://msdn.microsoft.com/library/4b8bb2c8-8ca4-457c-9afd-d11bc9a05701) и [таймеры потоков (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-timers.md).</span><span class="sxs-lookup"><span data-stu-id="5a8c2-120">For information on thread pooling and thread timers, see [Thread Pooling (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)[Thread Pooling](http://msdn.microsoft.com/library/4b8bb2c8-8ca4-457c-9afd-d11bc9a05701) and [Thread Timers (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-timers.md).</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Пошаговое руководство: Многопоточность с помощью компонента BackgroundWorker (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)   
- [Группировка потоков в пул (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)   
- [Синхронизация потоков (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)   
- [События](../../../../visual-basic/programming-guide/language-features/events/index.md)   
- [Многопоточные приложения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)   
- [Делегаты](../../../../visual-basic/programming-guide/language-features/delegates/index.md)   
- [Многопоточность в компонентах](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)
+## <a name="see-also"></a><span data-ttu-id="5a8c2-121">См. также</span><span class="sxs-lookup"><span data-stu-id="5a8c2-121">See Also</span></span>  
+ [<span data-ttu-id="5a8c2-122">Пошаговое руководство. Многопоточность с помощью компонента BackgroundWorker (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5a8c2-122">Walkthrough: Multithreading with the BackgroundWorker Component (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)  
+ [<span data-ttu-id="5a8c2-123">Группировка потоков в пул (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5a8c2-123">Thread Pooling (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)  
+ [<span data-ttu-id="5a8c2-124">Синхронизация потоков (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5a8c2-124">Thread Synchronization (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)  
+ [<span data-ttu-id="5a8c2-125">События</span><span class="sxs-lookup"><span data-stu-id="5a8c2-125">Events</span></span>](../../../../visual-basic/programming-guide/language-features/events/index.md)  
+ [<span data-ttu-id="5a8c2-126">Многопоточные приложения (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5a8c2-126">Multithreaded Applications (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)  
+ [<span data-ttu-id="5a8c2-127">Делегаты</span><span class="sxs-lookup"><span data-stu-id="5a8c2-127">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
+ [<span data-ttu-id="5a8c2-128">Многопоточность в компонентах</span><span class="sxs-lookup"><span data-stu-id="5a8c2-128">Multithreading in Components</span></span>](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)

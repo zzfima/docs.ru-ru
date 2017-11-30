@@ -1,96 +1,91 @@
 ---
-title: "Общие задачи, выполняемые с помощью операторов Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "операторы [Visual Basic], арифметические"
-  - "операторы [Visual Basic], сдвиг битов"
-  - "операторы [Visual Basic], побитовые"
-  - "операторы [Visual Basic], сравнение"
-  - "операторы [Visual Basic], объединение"
-  - "операторы [Visual Basic], логический"
-  - "операторы [Visual Basic], логические сокращенного вычисления"
-  - "операторы [Visual Basic], сравнение строк"
-  - "операторы [Visual Basic], объединение строк"
-  - "код Visual Basic, операторы"
+title: "Общие задачи, выполняемые с помощью операторов Visual Basic"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- operators [Visual Basic], logical
+- operators [Visual Basic], string concatenation
+- operators [Visual Basic], bitwise
+- operators [Visual Basic], bit-shift
+- operators [Visual Basic], arithmetic
+- operators [Visual Basic], string comparison
+- operators [Visual Basic], concatenation
+- Visual Basic code, operators
+- operators [Visual Basic], comparison
+- operators [Visual Basic], short-circuiting logical
 ms.assetid: d181afe5-fafa-460f-a13b-81203f6f4587
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0886bc0365f37f964c4c4872a7b1624ec7388067
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие задачи, выполняемые с помощью операторов Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Операторы выполняют многие общие задачи над одним или несколькими выражениями называемыми *операндами*.  
+# <a name="common-tasks-performed-with-visual-basic-operators"></a><span data-ttu-id="2c25a-102">Общие задачи, выполняемые с помощью операторов Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2c25a-102">Common Tasks Performed with Visual Basic Operators</span></span>
+<span data-ttu-id="2c25a-103">Операторы выполняют многие общие задачи над одним или несколькими выражениями вызывается *операндов*.</span><span class="sxs-lookup"><span data-stu-id="2c25a-103">Operators perform many common tasks involving one or more expressions called *operands*.</span></span>  
   
-## Арифметические задачи и задачи побитового сдвига  
- В следующей таблице перечислены доступные арифметические операции и операции сдвига.  
+## <a name="arithmetic-and-bit-shift-tasks"></a><span data-ttu-id="2c25a-104">Арифметические и поразрядного сдвига задачи</span><span class="sxs-lookup"><span data-stu-id="2c25a-104">Arithmetic and Bit-shift Tasks</span></span>  
+ <span data-ttu-id="2c25a-105">В следующей таблице перечислены доступные операции арифметические и сдвига.</span><span class="sxs-lookup"><span data-stu-id="2c25a-105">The following table summarizes the available arithmetic and bit-shift operations.</span></span>  
   
-|||  
-|-|-|  
-|Целевой тип|См.|  
-|Сложить одно числовое значение с другим|[Оператор \+](../../../../visual-basic/language-reference/operators/addition-operator.md)|  
-|Вычесть одно числовое значение из другого|[Оператор "\-"](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
-|Поменять знак числового значения|[Оператор "\-"](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
-|Умножить одно числовое значение на другое|[Оператор \*](../../../../visual-basic/language-reference/operators/multiplication-operator.md)|  
-|Разделить одно числовое значение на другое|[Оператор \/](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)|  
-|Найти частное от деления одного числового значения на другое \(без остатка\)|[Оператор \\](../Topic/-%20Operator%20\(Visual%20Basic\)2.md)|  
-|Найти остаток от деления одного числового значения на другое \(без частного\)|[Оператор Mod](../../../../visual-basic/language-reference/operators/mod-operator.md)|  
-|Возвести одно числовое значение в степень другого|[Оператор ^](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)|  
-|Сдвиг битового представления числового значения влево|[Оператор \<\<](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
-|Сдвиг битового представления числового значения вправо|[Оператор \>\>](../../../../visual-basic/language-reference/operators/right-shift-operator.md)|  
+|<span data-ttu-id="2c25a-106">Целевой тип</span><span class="sxs-lookup"><span data-stu-id="2c25a-106">To</span></span>|<span data-ttu-id="2c25a-107">См.</span><span class="sxs-lookup"><span data-stu-id="2c25a-107">See</span></span>|  
+|---|---|  
+|<span data-ttu-id="2c25a-108">Добавьте одно числовое значение в другой</span><span class="sxs-lookup"><span data-stu-id="2c25a-108">Add one numeric value to another</span></span>|[<span data-ttu-id="2c25a-109">Оператор +</span><span class="sxs-lookup"><span data-stu-id="2c25a-109">+ Operator</span></span>](../../../../visual-basic/language-reference/operators/addition-operator.md)|  
+|<span data-ttu-id="2c25a-110">Вычитание одного числового значения из другого</span><span class="sxs-lookup"><span data-stu-id="2c25a-110">Subtract one numeric value from another</span></span>|[<span data-ttu-id="2c25a-111">-Оператор (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2c25a-111">- Operator (Visual Basic)</span></span>](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
+|<span data-ttu-id="2c25a-112">Изменение знака числового значения</span><span class="sxs-lookup"><span data-stu-id="2c25a-112">Reverse the sign of a numeric value</span></span>|[<span data-ttu-id="2c25a-113">-Оператор (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2c25a-113">- Operator (Visual Basic)</span></span>](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
+|<span data-ttu-id="2c25a-114">Умножить одно числовое значение на другое</span><span class="sxs-lookup"><span data-stu-id="2c25a-114">Multiply one numeric value by another</span></span>|[<span data-ttu-id="2c25a-115">Оператор *</span><span class="sxs-lookup"><span data-stu-id="2c25a-115">* Operator</span></span>](../../../../visual-basic/language-reference/operators/multiplication-operator.md)|  
+|<span data-ttu-id="2c25a-116">Деление одного числового значения в другую</span><span class="sxs-lookup"><span data-stu-id="2c25a-116">Divide one numeric value into another</span></span>|[<span data-ttu-id="2c25a-117">/ Оператор (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2c25a-117">/ Operator (Visual Basic)</span></span>](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)|  
+|<span data-ttu-id="2c25a-118">Найти частное от деления одного числового значения на другое (без остатка)</span><span class="sxs-lookup"><span data-stu-id="2c25a-118">Find the quotient of one numeric value divided by another (without the remainder)</span></span>|[<span data-ttu-id="2c25a-119">\ Оператор (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2c25a-119">\ Operator (Visual Basic)</span></span>](../../../../visual-basic/language-reference/operators/integer-division-operator.md)|  
+|<span data-ttu-id="2c25a-120">Остаток от деления одного числового значения на другое (без частного)</span><span class="sxs-lookup"><span data-stu-id="2c25a-120">Find the remainder of one numeric value divided by another (without the quotient)</span></span>|[<span data-ttu-id="2c25a-121">Оператор Mod</span><span class="sxs-lookup"><span data-stu-id="2c25a-121">Mod Operator</span></span>](../../../../visual-basic/language-reference/operators/mod-operator.md)|  
+|<span data-ttu-id="2c25a-122">Возвести одно числовое значение в степень другого</span><span class="sxs-lookup"><span data-stu-id="2c25a-122">Raise one numeric value to the power of another</span></span>|[<span data-ttu-id="2c25a-123">Оператор ^</span><span class="sxs-lookup"><span data-stu-id="2c25a-123">^ Operator</span></span>](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)|  
+|<span data-ttu-id="2c25a-124">Сдвиг битового представления числового значения влево</span><span class="sxs-lookup"><span data-stu-id="2c25a-124">Shift the bit pattern of a numeric value to the left</span></span>|[<span data-ttu-id="2c25a-125"><\<Оператор</span><span class="sxs-lookup"><span data-stu-id="2c25a-125"><\< Operator</span></span>](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
+|<span data-ttu-id="2c25a-126">Сдвиг битового представления числового значения вправо</span><span class="sxs-lookup"><span data-stu-id="2c25a-126">Shift the bit pattern of a numeric value to the right</span></span>|[<span data-ttu-id="2c25a-127">Оператор >></span><span class="sxs-lookup"><span data-stu-id="2c25a-127">>> Operator</span></span>](../../../../visual-basic/language-reference/operators/right-shift-operator.md)|  
   
-## Задачи сравнения  
- В следующей таблице перечислены доступные операции сравнения.  
+## <a name="comparison-tasks"></a><span data-ttu-id="2c25a-128">Сравнение задачи</span><span class="sxs-lookup"><span data-stu-id="2c25a-128">Comparison Tasks</span></span>  
+ <span data-ttu-id="2c25a-129">В следующей таблице перечислены доступные операции сравнения.</span><span class="sxs-lookup"><span data-stu-id="2c25a-129">The following table summarizes the available comparison operations.</span></span>  
   
-|||  
-|-|-|  
-|Целевой тип|См.|  
-|Определить равенство двух значений|Оператор `=` \([Операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|Определить неравенство двух значений|`<>` Оператор \([Операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|Определить, является ли одно значение меньше другого|`<` Оператор \([Операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|Определить, является ли одно значение больше другого|`>` Оператор \([Операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|Определить, является ли одно значение меньше или равно другому|`<=` Оператор \([Операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|Определить, является ли одно значение больше или равно другому|`>=` Оператор \([Операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|Определить, ссылаются ли две переменные объектов на один экземпляр|[Оператор Is](../../../../visual-basic/language-reference/operators/is-operator.md)|  
-|Определить, ссылаются ли две переменные объектов на разные экземпляры|[Оператор IsNot](../../../../visual-basic/language-reference/operators/isnot-operator.md)|  
-|Определить, является ли объект определенным типом|[Оператор TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md)|  
+|<span data-ttu-id="2c25a-130">Целевой тип</span><span class="sxs-lookup"><span data-stu-id="2c25a-130">To</span></span>|<span data-ttu-id="2c25a-131">См.</span><span class="sxs-lookup"><span data-stu-id="2c25a-131">See</span></span>|  
+|---|---|  
+|<span data-ttu-id="2c25a-132">Определяет, равны ли два значения</span><span class="sxs-lookup"><span data-stu-id="2c25a-132">Determine whether two values are equal</span></span>|<span data-ttu-id="2c25a-133">`=`Оператор ([операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="2c25a-133">`=` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="2c25a-134">Определить, равны ли два значения</span><span class="sxs-lookup"><span data-stu-id="2c25a-134">Determine whether two values are unequal</span></span>|<span data-ttu-id="2c25a-135">`<>`Оператор ([операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="2c25a-135">`<>` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="2c25a-136">Определить, является ли одно значение меньше другого</span><span class="sxs-lookup"><span data-stu-id="2c25a-136">Determine whether one value is less than another</span></span>|<span data-ttu-id="2c25a-137">`<`Оператор ([операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="2c25a-137">`<` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="2c25a-138">Определить, является ли одно значение больше другого</span><span class="sxs-lookup"><span data-stu-id="2c25a-138">Determine whether one value is greater than another</span></span>|<span data-ttu-id="2c25a-139">`>`Оператор ([операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="2c25a-139">`>` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="2c25a-140">Определить, является ли одно значение меньше или равно другому</span><span class="sxs-lookup"><span data-stu-id="2c25a-140">Determine whether one value is less than or equal to another</span></span>|<span data-ttu-id="2c25a-141">`<=`Оператор ([операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="2c25a-141">`<=` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="2c25a-142">Определить, является ли одно значение больше или равно другому</span><span class="sxs-lookup"><span data-stu-id="2c25a-142">Determine whether one value is greater than or equal to another</span></span>|<span data-ttu-id="2c25a-143">`>=`Оператор ([операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="2c25a-143">`>=` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="2c25a-144">Определить, ссылаются ли две объектные переменные на один и тот же экземпляр объекта</span><span class="sxs-lookup"><span data-stu-id="2c25a-144">Determine whether two object variables refer to the same object instance</span></span>|[<span data-ttu-id="2c25a-145">Оператор Is</span><span class="sxs-lookup"><span data-stu-id="2c25a-145">Is Operator</span></span>](../../../../visual-basic/language-reference/operators/is-operator.md)|  
+|<span data-ttu-id="2c25a-146">Определить, ссылаются ли две объектные переменные на разные экземпляры объекта</span><span class="sxs-lookup"><span data-stu-id="2c25a-146">Determine whether two object variables refer to different object instances</span></span>|[<span data-ttu-id="2c25a-147">Оператор IsNot</span><span class="sxs-lookup"><span data-stu-id="2c25a-147">IsNot Operator</span></span>](../../../../visual-basic/language-reference/operators/isnot-operator.md)|  
+|<span data-ttu-id="2c25a-148">Определить, является ли объект определенного типа</span><span class="sxs-lookup"><span data-stu-id="2c25a-148">Determine whether an object is of a specific type</span></span>|[<span data-ttu-id="2c25a-149">Оператор TypeOf</span><span class="sxs-lookup"><span data-stu-id="2c25a-149">TypeOf Operator</span></span>](../../../../visual-basic/language-reference/operators/typeof-operator.md)|  
   
-## Задачи объединения  
- В следующей таблице перечислены доступные операции объединения.  
+## <a name="concatenation-tasks"></a><span data-ttu-id="2c25a-150">Задачи объединения</span><span class="sxs-lookup"><span data-stu-id="2c25a-150">Concatenation Tasks</span></span>  
+ <span data-ttu-id="2c25a-151">В следующей таблице перечислены доступные операции объединения.</span><span class="sxs-lookup"><span data-stu-id="2c25a-151">The following table summarizes the available concatenation operations.</span></span>  
   
-|||  
-|-|-|  
-|Целевой тип|См.|  
-|Объединить несколько строк в одну строку|Оператор `&` \([Операторы объединения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)\)|  
-|Добавить числовые значения к строке|`+` Оператор \([Операторы объединения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)\)|  
+|<span data-ttu-id="2c25a-152">Целевой тип</span><span class="sxs-lookup"><span data-stu-id="2c25a-152">To</span></span>|<span data-ttu-id="2c25a-153">См.</span><span class="sxs-lookup"><span data-stu-id="2c25a-153">See</span></span>|  
+|---|---|  
+|<span data-ttu-id="2c25a-154">Объединяют несколько строк в одну строку</span><span class="sxs-lookup"><span data-stu-id="2c25a-154">Join multiple strings into a single string</span></span>|<span data-ttu-id="2c25a-155">`&`Оператор ([операторы объединения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))</span><span class="sxs-lookup"><span data-stu-id="2c25a-155">`&` Operator ([Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))</span></span>|  
+|<span data-ttu-id="2c25a-156">Присоединение числового значения к строке</span><span class="sxs-lookup"><span data-stu-id="2c25a-156">Join numeric values with string values</span></span>|<span data-ttu-id="2c25a-157">`+`Оператор ([операторы объединения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))</span><span class="sxs-lookup"><span data-stu-id="2c25a-157">`+` Operator ([Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))</span></span>|  
   
-## Логические и побитовые задачи  
- В следующей таблице перечислены доступные логические и поразрядные операции.  
+## <a name="logical-and-bitwise-tasks"></a><span data-ttu-id="2c25a-158">Логические и побитовые задачи</span><span class="sxs-lookup"><span data-stu-id="2c25a-158">Logical and Bitwise Tasks</span></span>  
+ <span data-ttu-id="2c25a-159">В следующей таблице перечислены доступные логические и битовые операции.</span><span class="sxs-lookup"><span data-stu-id="2c25a-159">The following table summarizes the available logical and bitwise operations.</span></span>  
   
-|||  
-|-|-|  
-|Целевой тип|См.|  
-|Выполнить логическое отрицание значения Boolean|[Оператор Not](../../../../visual-basic/language-reference/operators/not-operator.md)|  
-|Выполнить логическое умножение двух значений типа Boolean|[Оператор And](../../../../visual-basic/language-reference/operators/and-operator.md)|  
-|Выполнить включающее логическое сложение двух значений типа Boolean|[Оператор Or](../../../../visual-basic/language-reference/operators/or-operator.md)|  
-|Выполнить исключающее логическое сложение двух значений типа Boolean|[Оператор Xor](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
-|Выполнить сокращенное логическое умножение двух значений типа Boolean|[Оператор AndAlso](../../../../visual-basic/language-reference/operators/andalso-operator.md)|  
-|Выполнить сокращенное включающее логическое сложение двух значений типа Boolean|[Оператор OrElse](../../../../visual-basic/language-reference/operators/orelse-operator.md)|  
-|Выполнить поразрядное логическое умножение двух целых значений|[Оператор And](../../../../visual-basic/language-reference/operators/and-operator.md)|  
-|Выполнить поразрядное включающее логическое сложение двух целых значений|[Оператор Or](../../../../visual-basic/language-reference/operators/or-operator.md)|  
-|Выполнить поразрядное исключающее логическое сложение двух целых значений|[Оператор Xor](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
-|Выполнить поразрядное логическое отрицание целого значения|[Оператор Not](../../../../visual-basic/language-reference/operators/not-operator.md)|  
+|<span data-ttu-id="2c25a-160">Целевой тип</span><span class="sxs-lookup"><span data-stu-id="2c25a-160">To</span></span>|<span data-ttu-id="2c25a-161">См.</span><span class="sxs-lookup"><span data-stu-id="2c25a-161">See</span></span>|  
+|---|---|  
+|<span data-ttu-id="2c25a-162">Выполнить логическое отрицание логическое значение</span><span class="sxs-lookup"><span data-stu-id="2c25a-162">Perform logical negation on a Boolean value</span></span>|[<span data-ttu-id="2c25a-163">Оператор Not</span><span class="sxs-lookup"><span data-stu-id="2c25a-163">Not Operator</span></span>](../../../../visual-basic/language-reference/operators/not-operator.md)|  
+|<span data-ttu-id="2c25a-164">Выполнить логическое умножение двух логических значений</span><span class="sxs-lookup"><span data-stu-id="2c25a-164">Perform logical conjunction on two Boolean values</span></span>|[<span data-ttu-id="2c25a-165">Оператор And</span><span class="sxs-lookup"><span data-stu-id="2c25a-165">And Operator</span></span>](../../../../visual-basic/language-reference/operators/and-operator.md)|  
+|<span data-ttu-id="2c25a-166">Выполнить включающее логическое сложение двух значений типа Boolean</span><span class="sxs-lookup"><span data-stu-id="2c25a-166">Perform inclusive logical disjunction on two Boolean values</span></span>|[<span data-ttu-id="2c25a-167">Оператор Or</span><span class="sxs-lookup"><span data-stu-id="2c25a-167">Or Operator</span></span>](../../../../visual-basic/language-reference/operators/or-operator.md)|  
+|<span data-ttu-id="2c25a-168">Выполнить исключающее логическое сложение двух значений типа Boolean</span><span class="sxs-lookup"><span data-stu-id="2c25a-168">Perform exclusive logical disjunction on two Boolean values</span></span>|[<span data-ttu-id="2c25a-169">Оператор Xor</span><span class="sxs-lookup"><span data-stu-id="2c25a-169">Xor Operator</span></span>](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
+|<span data-ttu-id="2c25a-170">Выполнить сокращенное логическое умножение двух значений типа Boolean</span><span class="sxs-lookup"><span data-stu-id="2c25a-170">Perform short-circuited logical conjunction on two Boolean values</span></span>|[<span data-ttu-id="2c25a-171">Оператор AndAlso</span><span class="sxs-lookup"><span data-stu-id="2c25a-171">AndAlso Operator</span></span>](../../../../visual-basic/language-reference/operators/andalso-operator.md)|  
+|<span data-ttu-id="2c25a-172">Выполнить сокращенное включающее логическое сложение двух значений типа Boolean</span><span class="sxs-lookup"><span data-stu-id="2c25a-172">Perform short-circuited inclusive logical disjunction on two Boolean values</span></span>|[<span data-ttu-id="2c25a-173">Оператор OrElse</span><span class="sxs-lookup"><span data-stu-id="2c25a-173">OrElse Operator</span></span>](../../../../visual-basic/language-reference/operators/orelse-operator.md)|  
+|<span data-ttu-id="2c25a-174">Выполнить-разрядной логическое умножение двух целых значений</span><span class="sxs-lookup"><span data-stu-id="2c25a-174">Perform bit-by-bit logical conjunction on two integral values</span></span>|[<span data-ttu-id="2c25a-175">Оператор And</span><span class="sxs-lookup"><span data-stu-id="2c25a-175">And Operator</span></span>](../../../../visual-basic/language-reference/operators/and-operator.md)|  
+|<span data-ttu-id="2c25a-176">Выполнить-разрядной включающее логическое сложение двух целых значений</span><span class="sxs-lookup"><span data-stu-id="2c25a-176">Perform bit-by-bit inclusive logical disjunction on two integral values</span></span>|[<span data-ttu-id="2c25a-177">Оператор Or</span><span class="sxs-lookup"><span data-stu-id="2c25a-177">Or Operator</span></span>](../../../../visual-basic/language-reference/operators/or-operator.md)|  
+|<span data-ttu-id="2c25a-178">Выполнить-разрядной исключающее логическое сложение двух целых значений</span><span class="sxs-lookup"><span data-stu-id="2c25a-178">Perform bit-by-bit exclusive logical disjunction on two integral values</span></span>|[<span data-ttu-id="2c25a-179">Оператор Xor</span><span class="sxs-lookup"><span data-stu-id="2c25a-179">Xor Operator</span></span>](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
+|<span data-ttu-id="2c25a-180">Разрядной логического отрицания целочисленное значение</span><span class="sxs-lookup"><span data-stu-id="2c25a-180">Perform bit-by-bit logical negation on an integral value</span></span>|[<span data-ttu-id="2c25a-181">Оператор Not</span><span class="sxs-lookup"><span data-stu-id="2c25a-181">Not Operator</span></span>](../../../../visual-basic/language-reference/operators/not-operator.md)|  
   
-## См. также  
- [Операторы и выражения](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)   
- [Список операторов, сгруппированных по функциональному назначению](../../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+## <a name="see-also"></a><span data-ttu-id="2c25a-182">См. также</span><span class="sxs-lookup"><span data-stu-id="2c25a-182">See Also</span></span>  
+ [<span data-ttu-id="2c25a-183">Операторы и выражения</span><span class="sxs-lookup"><span data-stu-id="2c25a-183">Operators and Expressions</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
+ [<span data-ttu-id="2c25a-184">Список операторов, сгруппированных по функциональному назначению</span><span class="sxs-lookup"><span data-stu-id="2c25a-184">Operators Listed by Functionality</span></span>](../../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

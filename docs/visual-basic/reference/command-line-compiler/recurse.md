@@ -1,78 +1,61 @@
 ---
-title: "/ recurse | Документы Microsoft"
-ms.date: 2015-07-20
+title: /recurse
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - /recurse compiler option [Visual Basic]
 - -recurse compiler option [Visual Basic]
 - recurse compiler option [Visual Basic]
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fbf7d67c7f70345e62ddbb03c8626b688b5c593b
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bb69c7c44dcc2e8da5eb8a76f7d22f936a6d948f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="recurse"></a>/recurse
-Компилирует файлы исходного кода во всех дочерних каталогах в указанном каталоге или каталоге проекта.  
+# <a name="recurse"></a><span data-ttu-id="77295-102">/recurse</span><span class="sxs-lookup"><span data-stu-id="77295-102">/recurse</span></span>
+<span data-ttu-id="77295-103">Компилирует файлы с исходным кодом во всех дочерних папках указанного каталога или каталога проекта.</span><span class="sxs-lookup"><span data-stu-id="77295-103">Compiles source-code files in all child directories of either the specified directory or the project directory.</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="77295-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="77295-104">Syntax</span></span>  
   
 ```  
 /recurse:[dir\]file  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+## <a name="arguments"></a><span data-ttu-id="77295-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="77295-105">Arguments</span></span>  
  `dir`  
- Необязательный. Каталог, в котором следует начать поиск. Если не указан, поиск начинается в каталоге проекта.  
+ <span data-ttu-id="77295-106">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="77295-106">Optional.</span></span> <span data-ttu-id="77295-107">Каталог, с которого будет начинаться поиск.</span><span class="sxs-lookup"><span data-stu-id="77295-107">The directory in which you want the search to begin.</span></span> <span data-ttu-id="77295-108">Если не указан, поиск начинается в каталоге проекта.</span><span class="sxs-lookup"><span data-stu-id="77295-108">If not specified, the search begins in the project directory.</span></span>  
   
  `file`  
- Обязательный. Файлы для поиска. Допускаются подстановочные знаки.  
+ <span data-ttu-id="77295-109">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="77295-109">Required.</span></span> <span data-ttu-id="77295-110">Файлы для поиска.</span><span class="sxs-lookup"><span data-stu-id="77295-110">The file(s) to search for.</span></span> <span data-ttu-id="77295-111">Поддерживаются подстановочные знаки.</span><span class="sxs-lookup"><span data-stu-id="77295-111">Wildcard characters are allowed.</span></span>  
   
-## <a name="remarks"></a>Примечания  
- Можно использовать подстановочные знаки в имени файла для компиляции всех файлов из папки проекта без использования `/recurse`. Если указано имя выходного файла, компилятор использует имя первого входного файла обработки. Обычно это первый файл в списке файлов, скомпилированных в алфавитном порядке. По этой причине лучше всего задать выходной файл с помощью `/out` параметр.  
+## <a name="remarks"></a><span data-ttu-id="77295-112">Примечания</span><span class="sxs-lookup"><span data-stu-id="77295-112">Remarks</span></span>  
+ <span data-ttu-id="77295-113">Можно использовать подстановочные знаки в имени файла для компиляции всех файлов в каталоге проекта без использования `/recurse`.</span><span class="sxs-lookup"><span data-stu-id="77295-113">You can use wildcards in a file name to compile all matching files in the project directory without using `/recurse`.</span></span> <span data-ttu-id="77295-114">Если указано имя выходного файла, компилятор использует имя выходного файла, обработано первой входной файл.</span><span class="sxs-lookup"><span data-stu-id="77295-114">If no output file name is specified, the compiler bases the output file name on the first input file processed.</span></span> <span data-ttu-id="77295-115">Обычно это первый файл в списке файлов, скомпилированных в алфавитном порядке.</span><span class="sxs-lookup"><span data-stu-id="77295-115">This is generally the first file in the list of files compiled when viewed alphabetically.</span></span> <span data-ttu-id="77295-116">По этой причине лучше всего задать выходной файл с помощью `/out` параметр.</span><span class="sxs-lookup"><span data-stu-id="77295-116">For this reason, it is best to specify an output file using the `/out` option.</span></span>  
   
 > [!NOTE]
->  `/recurse` Параметр недоступен из среды разработки Visual Studio; она доступна только при компиляции из командной строки.  
+>  <span data-ttu-id="77295-117">`/recurse` Параметр недоступен в среде разработки Visual Studio; она доступна только при компиляции из командной строки.</span><span class="sxs-lookup"><span data-stu-id="77295-117">The `/recurse` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a>Пример  
- Следующий код компилирует все [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] файлы в текущем каталоге.  
+## <a name="example"></a><span data-ttu-id="77295-118">Пример</span><span class="sxs-lookup"><span data-stu-id="77295-118">Example</span></span>  
+ <span data-ttu-id="77295-119">Следующий код компилирует все [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] файлы в текущем каталоге.</span><span class="sxs-lookup"><span data-stu-id="77295-119">The following code compiles all [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] files in the current directory.</span></span>  
   
 ```  
 vbc *.vb  
 ```  
   
- Следующий код компилирует все [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] файлы в `Test\ABC` каталога и любые каталогов ниже его и затем создает `Test.ABC.dll`.  
+ <span data-ttu-id="77295-120">Следующий код компилирует все [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] файлы в `Test\ABC` каталога и любые каталоги под ним, а затем создает `Test.ABC.dll`.</span><span class="sxs-lookup"><span data-stu-id="77295-120">The following code compiles all [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] files in the `Test\ABC` directory and any directories below it, and then generates `Test.ABC.dll`.</span></span>  
   
 ```  
 vbc /target:library /out:Test.ABC.dll /recurse:Test\ABC\*.vb  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Компилятор командной строки Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
- [/ out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)   
- [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="77295-121">См. также</span><span class="sxs-lookup"><span data-stu-id="77295-121">See Also</span></span>  
+ [<span data-ttu-id="77295-122">Компилятор Visual Basic с интерфейсом командной строки</span><span class="sxs-lookup"><span data-stu-id="77295-122">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="77295-123">/ out (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="77295-123">/out (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/out.md)  
+ [<span data-ttu-id="77295-124">Примеры командных строк компиляции</span><span class="sxs-lookup"><span data-stu-id="77295-124">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

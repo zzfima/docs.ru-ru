@@ -1,68 +1,66 @@
 ---
-title: "Предложение Select (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QuerySelect"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "запросы [Visual Basic], Select"
-  - "Select - предложение"
-  - "Select - оператор"
+title: "Предложение Select (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.QuerySelect
+helpviewer_keywords:
+- Select statement [Visual Basic]
+- Select clause [Visual Basic]
+- queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a9d8cabcbd8554ca2aee639eaac8a52f0485a266
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Предложение Select (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Определяет результат запроса.  
+# <a name="select-clause-visual-basic"></a><span data-ttu-id="ac9dc-102">Предложение Select (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ac9dc-102">Select Clause (Visual Basic)</span></span>
+<span data-ttu-id="ac9dc-103">Определяет результат запроса.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-103">Defines the result of a query.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="ac9dc-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ac9dc-104">Syntax</span></span>  
   
 ```  
 Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]  
 ```  
   
-## Части  
+## <a name="parts"></a><span data-ttu-id="ac9dc-105">Части</span><span class="sxs-lookup"><span data-stu-id="ac9dc-105">Parts</span></span>  
  `var1`  
- Необязательный.  Псевдоним может использоваться для ссылки на результаты выражения столбца.  
+ <span data-ttu-id="ac9dc-106">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-106">Optional.</span></span> <span data-ttu-id="ac9dc-107">Псевдоним, который может использоваться для ссылки на результаты выражения столбца.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-107">An alias that can be used to reference the results of the column expression.</span></span>  
   
  `fieldName1`  
- Обязательный.  Имя поля для возврата результатов запроса.  
+ <span data-ttu-id="ac9dc-108">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-108">Required.</span></span> <span data-ttu-id="ac9dc-109">Имя поля для возврата в результатах запроса.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-109">The name of the field to return in the query result.</span></span>  
   
-## Заметки  
- Можно использовать предложение `Select`, чтобы определить результаты возврата из запроса.  Это позволяет определить элементы нового анонимного типа, который создается при запросе, или целевые члены именованного типа, возвращаемого запросом.  Предложение `Select` не является обязательным для запроса.  Если предложение `Select` не указано, запрос возвращает тип, основанный на всех членах переменных диапазона для текущей области.  Дополнительные сведения см. в разделе [Анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  Если запрос создает именованный тип, будет возвращен результат типа <xref:System.Collections.Generic.IEnumerable%601> где `T` имеет созданный тип.  
+## <a name="remarks"></a><span data-ttu-id="ac9dc-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="ac9dc-110">Remarks</span></span>  
+ <span data-ttu-id="ac9dc-111">Можно использовать `Select` предложение для определения результатов, возвращаемых из запроса.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-111">You can use the `Select` clause to define the results to return from a query.</span></span> <span data-ttu-id="ac9dc-112">Это позволяет определить элементы нового анонимного типа, созданный запрос или целевые члены именованного типа, возвращенные запросом.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-112">This enables you to either define the members of a new anonymous type that is created by a query, or to target the members of a named type that is returned by a query.</span></span> <span data-ttu-id="ac9dc-113">`Select` Предложение не является обязательным для запроса.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-113">The `Select` clause is not required for a query.</span></span> <span data-ttu-id="ac9dc-114">Если не `Select` указано предложение, запрос будет возвращать тип, основанный на всех членах переменных диапазона для текущей области.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-114">If no `Select` clause is specified, the query will return a type based on all members of the range variables identified for the current scope.</span></span> <span data-ttu-id="ac9dc-115">Дополнительные сведения см. в статье [Анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).</span><span class="sxs-lookup"><span data-stu-id="ac9dc-115">For more information, see [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).</span></span> <span data-ttu-id="ac9dc-116">Когда запрос создает именованный тип, он вернет результат типа <xref:System.Collections.Generic.IEnumerable%601> где `T` созданный тип.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-116">When a query creates a named type, it will return a result of type <xref:System.Collections.Generic.IEnumerable%601> where `T` is the created type.</span></span>  
   
- Предложение `Select` может ссылаться на переменные в текущей области.  Это включает диапазон переменных, определенных в предложении `From` \(или в предложениях `From`\).  Также включаются любые новые переменные, созданные с псевдонимом с помощью предложений `Aggregate`, `Let`, `Group By` или `Group Join`, и переменные из предыдущего предложения `Select` в выражении запроса.  Предложение `Select` может также включать статические значения.  Например, ниже приведен пример выражения запроса, в котором предложение `Select` определяет результат запроса как новый анонимный тип с четырьмя элементами: `ProductName`, `Price`, `Discount` и `DiscountedPrice`.  Значения членов `ProductName` и `Price` берутся из переменной диапазона продукта, которая определяется в условии `From`.  Значение члена `DiscountedPrice` вычисляется в предложении `Let`.  Член `Discount` представляет собой статическое значение.  
+ <span data-ttu-id="ac9dc-117">`Select` Предложение может ссылаться на переменные в текущей области.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-117">The `Select` clause can reference any variables in the current scope.</span></span> <span data-ttu-id="ac9dc-118">Это включает в себя переменные диапазона, определенные в `From` предложение (или `From` предложения).</span><span class="sxs-lookup"><span data-stu-id="ac9dc-118">This includes range variables identified in the `From` clause (or `From` clauses).</span></span> <span data-ttu-id="ac9dc-119">Он также включает любые новые переменные, созданные с использованием псевдонима, `Aggregate`, `Let`, `Group By`, или `Group Join` предложений или переменные с предыдущей `Select` предложение в выражении запроса.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-119">It also includes any new variables created with an alias by the `Aggregate`, `Let`, `Group By`, or `Group Join` clauses, or variables from a previous `Select` clause in the query expression.</span></span> <span data-ttu-id="ac9dc-120">`Select` Предложение также могут включать статические значения.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-120">The `Select` clause can also include static values.</span></span> <span data-ttu-id="ac9dc-121">Например, в следующем примере кода показано выражение запроса, в котором `Select` предложение определяет результат запроса как новый анонимный тип с четырьмя элементами: `ProductName`, `Price`, `Discount`, и `DiscountedPrice`.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-121">For example, the following code example shows a query expression in which the `Select` clause defines the query result as a new anonymous type with four members: `ProductName`, `Price`, `Discount`, and `DiscountedPrice`.</span></span> <span data-ttu-id="ac9dc-122">`ProductName` И `Price` член значения берутся из переменной диапазона продукта, определенного в `From` предложения.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-122">The `ProductName` and `Price` member values are taken from the product range variable that is defined in the `From` clause.</span></span> <span data-ttu-id="ac9dc-123">`DiscountedPrice` Значение элемента вычисляется в `Let` предложения.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-123">The `DiscountedPrice` member value is calculated in the `Let` clause.</span></span> <span data-ttu-id="ac9dc-124">`Discount` Член имеет статическое значение.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-124">The `Discount` member is a static value.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#27](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_1.vb)]  
   
- Предложение `Select` представляет новый набор переменных диапазонов для последующих запросов предложения, а также предыдущие переменные диапазонов, которые больше не принадлежат области.  Последнее предложение `Select` в выражении запроса определяет возвращаемое значение запроса.  Например, следующий запрос возвращает имя компании и идентификатор каждого заказчика для которого итоговая сумма превышает 500.  Первое предложение `Select` определяет переменные диапазона для предложения `Where` и второго предложения `Select`.  Второе предложение `Select` определяет значения, возвращаемые запросом в виде нового анонимного типа.  
+ <span data-ttu-id="ac9dc-125">`Select` Предложение представляет новый набор переменных диапазона для последующих запросов предложения, а предыдущие переменные диапазона больше не находятся в области.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-125">The `Select` clause introduces a new set of range variables for subsequent query clauses, and previous range variables are no longer in scope.</span></span> <span data-ttu-id="ac9dc-126">Последний `Select` предложение в выражении запроса определяет возвращаемое значение запроса.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-126">The last `Select` clause in a query expression determines the return value of the query.</span></span> <span data-ttu-id="ac9dc-127">Например следующий запрос возвращает компании имя и идентификатор каждого заказчика, для которого итоговая сумма превышает 500.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-127">For example, the following query returns the company name and order ID for every customer order for which the total exceeds 500.</span></span> <span data-ttu-id="ac9dc-128">Первый `Select` предложение определяет переменные диапазона для `Where` предложение, а второй — `Select` предложения.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-128">The first `Select` clause identifies the range variables for the `Where` clause and the second `Select` clause.</span></span> <span data-ttu-id="ac9dc-129">Второй `Select` предложение определяет значения, возвращаемые методом запроса в виде нового анонимного типа.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-129">The second `Select` clause identifies the values returned by the query as a new anonymous type.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#28](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_2.vb)]  
   
- Если предложение `Select` определяет один элемент для возврата, выражение запроса возвращает коллекцию типа одного элемента.  Если в предложении `Select` определяется несколько возвращаемых элементов, выражение запроса возвращает коллекцию нового анонимного типа на основе выбранных элементов.  Например, следующие два запроса возвращают коллекции двух различных типов на основе предложения `Select`.  В первом запросе возвращается коллекция названий компаний в виде строк.  Второй запрос возвращает коллекцию объектов `Customer`, заполненную названиями компаний и сведениями об адресах.  
+ <span data-ttu-id="ac9dc-130">Если `Select` предложение определяет один элемент для возврата, выражение запроса возвращает коллекцию типа одного элемента.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-130">If the `Select` clause identifies a single item to return, the query expression returns a collection of the type of that single item.</span></span> <span data-ttu-id="ac9dc-131">Если `Select` предложение определяет несколько возвращаемых элементов, выражение запроса возвращает коллекцию анонимного типа, на основе выбранных элементов.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-131">If the `Select` clause identifies multiple items to return, the query expression returns a collection of a new anonymous type, based on the selected items.</span></span> <span data-ttu-id="ac9dc-132">Например, следующие два запроса возвращают коллекции двух различных типов на основе `Select` предложения.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-132">For example, the following two queries return collections of two different types based on the `Select` clause.</span></span> <span data-ttu-id="ac9dc-133">Первый запрос возвращает коллекцию имен компании как строки.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-133">The first query returns a collection of company names as strings.</span></span> <span data-ttu-id="ac9dc-134">Второй запрос возвращает коллекцию `Customer` объектов, заполненных названия компаний и сведения об адресе.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-134">The second query returns a collection of `Customer` objects populated with the company names and address information.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#29](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_3.vb)]  
   
-## Пример  
- Следующее выражение запроса использует предложение `From` для объявления переменной диапазона `cust` для коллекции `customers`.  Предложение `Select` выбирает имя и идентификатор клиента, после чего заполняет столбцы `CompanyName` и `CustomerID` новой переменной диапазона.  Оператор `For Each` просматривает каждый возвращаемый объект и отображает столбцы `CompanyName` и `CustomerID` для каждой записи.  
+## <a name="example"></a><span data-ttu-id="ac9dc-135">Пример</span><span class="sxs-lookup"><span data-stu-id="ac9dc-135">Example</span></span>  
+ <span data-ttu-id="ac9dc-136">В следующем запросе используется выражение `From` предложение для объявления переменной диапазона `cust` для `customers` коллекции.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-136">The following query expression uses a `From` clause to declare a range variable `cust` for the `customers` collection.</span></span> <span data-ttu-id="ac9dc-137">`Select` Предложение выбирает имя клиента и значение идентификатора и заполняет `CompanyName` и `CustomerID` столбцов новой переменной диапазона.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-137">The `Select` clause selects the customer name and ID value and populates the `CompanyName` and `CustomerID` columns of the new range variable.</span></span> <span data-ttu-id="ac9dc-138">`For Each` Инструкция обрабатывает в цикле каждый возвращаемый объект и отображает `CompanyName` и `CustomerID` столбцов для каждой записи.</span><span class="sxs-lookup"><span data-stu-id="ac9dc-138">The `For Each` statement loops over each returned object and displays the `CompanyName` and `CustomerID` columns for each record.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#30](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_4.vb)]  
   
-## См. также  
- [Знакомство с LINQ в Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Запросы](../../../visual-basic/language-reference/queries/queries.md)   
- [Предложение From](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Предложение Where](../../../visual-basic/language-reference/queries/where-clause.md)   
- [Предложение Order By](../../../visual-basic/language-reference/queries/order-by-clause.md)   
- [Анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+## <a name="see-also"></a><span data-ttu-id="ac9dc-139">См. также</span><span class="sxs-lookup"><span data-stu-id="ac9dc-139">See Also</span></span>  
+ <span data-ttu-id="ac9dc-140">[Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ac9dc-140">[Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)</span></span>  
+ [<span data-ttu-id="ac9dc-141">Запросы</span><span class="sxs-lookup"><span data-stu-id="ac9dc-141">Queries</span></span>](../../../visual-basic/language-reference/queries/queries.md)  
+ [<span data-ttu-id="ac9dc-142">Предложение From</span><span class="sxs-lookup"><span data-stu-id="ac9dc-142">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="ac9dc-143">Предложения Where</span><span class="sxs-lookup"><span data-stu-id="ac9dc-143">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)  
+ [<span data-ttu-id="ac9dc-144">Предложение Order By</span><span class="sxs-lookup"><span data-stu-id="ac9dc-144">Order By Clause</span></span>](../../../visual-basic/language-reference/queries/order-by-clause.md)  
+ [<span data-ttu-id="ac9dc-145">Анонимные типы</span><span class="sxs-lookup"><span data-stu-id="ac9dc-145">Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

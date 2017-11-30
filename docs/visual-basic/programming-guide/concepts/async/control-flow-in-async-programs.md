@@ -1,48 +1,40 @@
 ---
-title: "Управление ходом выполнения в асинхронных программах (Visual Basic) | Документы Microsoft"
+title: "Поток управления в асинхронных программах (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 15e02fbc023db9ae2f3ee9f40598faa7c9c027a0
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 28d5d087b48e4c816cbe3a84966346be6cda772e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="control-flow-in-async-programs-visual-basic"></a>Поток управления в асинхронных программах (Visual Basic)
-Можно написать и более легко поддерживать асинхронные программы с помощью `Async` и `Await` ключевые слова. Однако результаты могут оказаться неожиданными Если вы не понимаете, как работает программа. Этот раздел трассировки, передачи потока управления через простой асинхронной программы, чтобы показать, когда элемент управления перемещается из одного метода другим и какие данные каждый раз.  
+# <a name="control-flow-in-async-programs-visual-basic"></a><span data-ttu-id="b15b3-102">Поток управления в асинхронных программах (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b15b3-102">Control Flow in Async Programs (Visual Basic)</span></span>
+<span data-ttu-id="b15b3-103">Можно намного проще создавать и обслуживать асинхронные программы с помощью ключевых слов `Async` и `Await`.</span><span class="sxs-lookup"><span data-stu-id="b15b3-103">You can write and maintain asynchronous programs more easily by using the `Async` and `Await` keywords.</span></span> <span data-ttu-id="b15b3-104">Однако при непонимании механизма работы асинхронной программы результаты могут удивить.</span><span class="sxs-lookup"><span data-stu-id="b15b3-104">However, the results might surprise you if you don't understand how your program operates.</span></span> <span data-ttu-id="b15b3-105">В этом разделе выполняется трассировка потока управления с помощью простой асинхронной программы, чтобы продемонстрировать переход потока управления от одного метода к другому, включая данные, передаваемые в каждом случае.</span><span class="sxs-lookup"><span data-stu-id="b15b3-105">This topic traces the flow of control through a simple async program to show you when control moves from one method to another and what information is transferred each time.</span></span>  
   
 > [!NOTE]
->  Ключевые слова `Async` и `Await` появились в Visual Studio 2012.  
+>  <span data-ttu-id="b15b3-106">Ключевые слова `Async` и `Await` появились в Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="b15b3-106">The `Async` and `Await` keywords were introduced in Visual Studio 2012.</span></span>  
   
- В общем случае пометить методы, содержащие асинхронного кода с [Async](../../../../visual-basic/language-reference/modifiers/async.md) модификатор. В метод, помеченный с помощью модификатора async, можно использовать [Await (Visual Basic)](../../../../visual-basic/language-reference/operators/await-operator.md) оператор, чтобы указать, где метод приостанавливает для ожидания завершения вызванного асинхронного процесса. Дополнительные сведения см. в разделе [асинхронное программирование с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
+ <span data-ttu-id="b15b3-107">Как правило, пометьте методы, содержащие асинхронного кода с [Async](../../../../visual-basic/language-reference/modifiers/async.md) модификатор.</span><span class="sxs-lookup"><span data-stu-id="b15b3-107">In general, you mark methods that contain asynchronous code with the [Async](../../../../visual-basic/language-reference/modifiers/async.md) modifier.</span></span> <span data-ttu-id="b15b3-108">В метод, помеченный модификатором async, можно использовать [Await (Visual Basic)](../../../../visual-basic/language-reference/operators/await-operator.md) оператор, чтобы указать, где метод приостанавливается ожидания вызываемый асинхронный процесс для выполнения.</span><span class="sxs-lookup"><span data-stu-id="b15b3-108">In a method that's marked with an async modifier, you can use an [Await (Visual Basic)](../../../../visual-basic/language-reference/operators/await-operator.md) operator to specify where the method pauses to wait for a called asynchronous process to complete.</span></span> <span data-ttu-id="b15b3-109">Дополнительные сведения см. в разделе [асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).</span><span class="sxs-lookup"><span data-stu-id="b15b3-109">For more information, see [Asynchronous Programming with Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).</span></span>  
   
- В следующем примере асинхронные методы для загрузки содержимого веб-сайт, указанный как строка и отображения длину строки. Пример содержит два метода.  
+ <span data-ttu-id="b15b3-110">В следующем примере асинхронные методы используются для загрузки содержимого указанного веб-сайта в виде строки и отображения длины строки.</span><span class="sxs-lookup"><span data-stu-id="b15b3-110">The following example uses async methods to download the contents of a specified website as a string and to display the length of the string.</span></span> <span data-ttu-id="b15b3-111">Пример содержит следующие два метода:</span><span class="sxs-lookup"><span data-stu-id="b15b3-111">The example contains the following two methods.</span></span>  
   
--   `startButton_Click`, который вызывает метод `AccessTheWebAsync` и отображает результат.  
+-   <span data-ttu-id="b15b3-112">`startButton_Click`, который вызывает метод `AccessTheWebAsync` и выводит результат;</span><span class="sxs-lookup"><span data-stu-id="b15b3-112">`startButton_Click`, which calls `AccessTheWebAsync` and displays the result.</span></span>  
   
--   `AccessTheWebAsync`, который загружает содержимое веб-сайта в виде строки и возвращает длину строки. `AccessTheWebAsync`использует асинхронную <xref:System.Net.Http.HttpClient>метод <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, чтобы загрузить содержимое.</xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> </xref:System.Net.Http.HttpClient>  
+-   <span data-ttu-id="b15b3-113">`AccessTheWebAsync`, который загружает содержимое веб-сайта в виде строки и возвращает длину строки.</span><span class="sxs-lookup"><span data-stu-id="b15b3-113">`AccessTheWebAsync`, which downloads the contents of a website as a string and returns the length of the string.</span></span> <span data-ttu-id="b15b3-114">`AccessTheWebAsync` использует для загрузки содержимого асинхронный метод <xref:System.Net.Http.HttpClient> <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>.</span><span class="sxs-lookup"><span data-stu-id="b15b3-114">`AccessTheWebAsync` uses an asynchronous <xref:System.Net.Http.HttpClient> method, <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, to download the contents.</span></span>  
   
- Нумерация отображаемые строки отображаются в стратегических точках в программе помогут вам понять, как работает программа и объясняется, что происходит на каждом этапе, который отмечен. Отображение линии обозначаются «Один» до «ШЕСТЬ.» Метки представляют порядок, в котором программа достигает этих строк кода.  
+ <span data-ttu-id="b15b3-115">Выводимые строки помечены номерами на стратегических этапах программы, чтобы помочь вам понять, как работает программа и что происходит на каждом отмеченном этапе.</span><span class="sxs-lookup"><span data-stu-id="b15b3-115">Numbered display lines appear at strategic points throughout the program to help you understand how the program runs and to explain what happens at each point that is marked.</span></span> <span data-ttu-id="b15b3-116">Выводимые строки обозначены номерами от ONE (один) до SIX (шесть).</span><span class="sxs-lookup"><span data-stu-id="b15b3-116">The display lines are labeled "ONE" through "SIX."</span></span> <span data-ttu-id="b15b3-117">Метки представляют порядок, в котором программа достигает эти строки кода.</span><span class="sxs-lookup"><span data-stu-id="b15b3-117">The labels represent the order in which the program reaches these lines of code.</span></span>  
   
- В следующем коде показано структуры программы.  
+ <span data-ttu-id="b15b3-118">В следующем примере кода показана структура программы.</span><span class="sxs-lookup"><span data-stu-id="b15b3-118">The following code shows an outline of the program.</span></span>  
   
 ```vb  
 Class MainWindow  
@@ -76,13 +68,11 @@ Class MainWindow
     End Function  
   
 End Class  
-  
 ```  
   
- Каждый из расположения с меткой, «Один» до «ШЕСТЬ,» отображает сведения о текущем состоянии программы. Получается следующий результат.  
+ <span data-ttu-id="b15b3-119">Каждое из расположений, обозначенное от одного до шести, отображает сведения о текущем состоянии программы.</span><span class="sxs-lookup"><span data-stu-id="b15b3-119">Each of the labeled locations, "ONE" through "SIX," displays information about the current state of the program.</span></span> <span data-ttu-id="b15b3-120">Выводятся следующие результаты.</span><span class="sxs-lookup"><span data-stu-id="b15b3-120">The following output is produced.</span></span>  
   
 ```  
-  
 ONE:   Entering startButton_Click.  
            Calling AccessTheWebAsync.  
   
@@ -110,43 +100,43 @@ SIX:   Back in startButton_Click.
 Length of the downloaded string: 33946.  
 ```  
   
-## <a name="set-up-the-program"></a>Настроить программу  
- Код, который используется в этом разделе можно загрузить с сайта MSDN, или можно выполнить его самостоятельно.  
+## <a name="set-up-the-program"></a><span data-ttu-id="b15b3-121">Настройка программы</span><span class="sxs-lookup"><span data-stu-id="b15b3-121">Set Up the Program</span></span>  
+ <span data-ttu-id="b15b3-122">Можно загрузить используемый в этом разделе код из MSDN, или же можно создать его самостоятельно.</span><span class="sxs-lookup"><span data-stu-id="b15b3-122">You can download the code that this topic uses from MSDN, or you can build it yourself.</span></span>  
   
 > [!NOTE]
->  Чтобы выполнить этот пример, необходимо иметь Visual Studio 2012 или более поздней версии и платформы .NET Framework 4.5 или более новая версия вашего компьютера.  
+>  <span data-ttu-id="b15b3-123">Чтобы запустить пример, необходимо иметь Visual Studio 2012 или более поздней версии и платформы .NET Framework 4.5 или более новая версия на компьютере.</span><span class="sxs-lookup"><span data-stu-id="b15b3-123">To run the example, you must have Visual Studio 2012 or newer and  the .NET Framework 4.5 or newer installed on your computer.</span></span>  
   
-### <a name="download-the-program"></a>Загрузка программы  
- Можно загрузить приложение из этого раздела [образец Async: поток управления в асинхронных программах](http://go.microsoft.com/fwlink/?LinkId=255285). Далее откройте и запустите программу.  
+### <a name="download-the-program"></a><span data-ttu-id="b15b3-124">Скачайте программу</span><span class="sxs-lookup"><span data-stu-id="b15b3-124">Download the Program</span></span>  
+ <span data-ttu-id="b15b3-125">Вы можете скачать приложение для этого раздела на странице примеров [Async Sample: Control Flow in Async Programs](http://go.microsoft.com/fwlink/?LinkId=255285).</span><span class="sxs-lookup"><span data-stu-id="b15b3-125">You can download the application for this topic from [Async Sample: Control Flow in Async Programs](http://go.microsoft.com/fwlink/?LinkId=255285).</span></span> <span data-ttu-id="b15b3-126">Следующие шаги описывают процесс открытия и запуска программы.</span><span class="sxs-lookup"><span data-stu-id="b15b3-126">The following steps open and run the program.</span></span>  
   
-1.  Распакуйте загруженный файл, а затем запустите Visual Studio.  
+1.  <span data-ttu-id="b15b3-127">Распакуйте загруженный файл, а затем запустите Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="b15b3-127">Unzip the downloaded file, and then start Visual Studio.</span></span>  
   
-2.  В строке меню выберите **Файл**, **Открыть**, **Проект/Решение**.  
+2.  <span data-ttu-id="b15b3-128">В строке меню выберите **Файл**, **Открыть**, **Проект/Решение**.</span><span class="sxs-lookup"><span data-stu-id="b15b3-128">On the menu bar, choose **File**, **Open**, **Project/Solution**.</span></span>  
   
-3.  Перейдите к папке, содержащий распакованную образец кода, откройте файл решения (SLN-файл) и нажмите клавишу F5 для построения и запуска проекта.  
+3.  <span data-ttu-id="b15b3-129">Перейдите к папке, содержащей распакованный пример кода, откройте файл решения (SLN), а затем нажмите клавишу F5 для сборки и выполнения проекта.</span><span class="sxs-lookup"><span data-stu-id="b15b3-129">Navigate to the folder that holds the unzipped sample code, open the solution (.sln) file, and then choose the F5 key to build and run the project.</span></span>  
   
-### <a name="build-the-program-yourself"></a>Самостоятельное построение программы  
- Следующий проект Windows Presentation Foundation (WPF) содержит пример кода для этой темы.  
+### <a name="build-the-program-yourself"></a><span data-ttu-id="b15b3-130">Самостоятельное построение программы</span><span class="sxs-lookup"><span data-stu-id="b15b3-130">Build the Program Yourself</span></span>  
+ <span data-ttu-id="b15b3-131">Следующий проект Windows Presentation Foundation (WPF) содержит примеры кода для этого раздела.</span><span class="sxs-lookup"><span data-stu-id="b15b3-131">The following Windows Presentation Foundation (WPF) project contains the code example for this topic.</span></span>  
   
- Чтобы запустить проект, выполните следующие действия.  
+ <span data-ttu-id="b15b3-132">Чтобы запустить проект, выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="b15b3-132">To run the project, perform the following steps:</span></span>  
   
-1.  Запустите Visual Studio.  
+1.  <span data-ttu-id="b15b3-133">Запустите Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="b15b3-133">Start Visual Studio.</span></span>  
   
-2.  В строке меню выберите **Файл**, **Создать**, **Проект**.  
+2.  <span data-ttu-id="b15b3-134">В строке меню выберите **Файл**, **Создать**, **Проект**.</span><span class="sxs-lookup"><span data-stu-id="b15b3-134">On the menu bar, choose **File**, **New**, **Project**.</span></span>  
   
-     Откроется диалоговое окно **Новый проект** .  
+     <span data-ttu-id="b15b3-135">Откроется диалоговое окно **Новый проект** .</span><span class="sxs-lookup"><span data-stu-id="b15b3-135">The **New Project** dialog box opens.</span></span>  
   
-3.  В **установленные шаблоны** область, выберите **Visual Basic**и нажмите кнопку **приложение WPF** в списке типов проектов.  
+3.  <span data-ttu-id="b15b3-136">В **установленные шаблоны** области, выберите **Visual Basic**и нажмите кнопку **приложение WPF** в списке типов проектов.</span><span class="sxs-lookup"><span data-stu-id="b15b3-136">In the **Installed Templates** pane, choose **Visual Basic**, and then choose **WPF Application** from the list of project types.</span></span>  
   
-4.  Введите `AsyncTracer` как имя проекта, а затем выберите **ОК** кнопки.  
+4.  <span data-ttu-id="b15b3-137">Введите `AsyncTracer` в качестве имени проекта и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="b15b3-137">Enter `AsyncTracer` as the name of the project, and then choose the **OK** button.</span></span>  
   
-     Появится новый проект в **обозревателе решений**.  
+     <span data-ttu-id="b15b3-138">В **обозревателе решений** появится новый проект.</span><span class="sxs-lookup"><span data-stu-id="b15b3-138">The new project appears in **Solution Explorer**.</span></span>  
   
-5.  В редакторе кода Visual Studio перейдите на вкладку **MainWindow.xaml** .  
+5.  <span data-ttu-id="b15b3-139">В редакторе кода Visual Studio перейдите на вкладку **MainWindow.xaml** .</span><span class="sxs-lookup"><span data-stu-id="b15b3-139">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>  
   
-     Если вкладка не отображается, откройте контекстное меню для MainWindow.xaml в **обозревателе решений**, а затем выберите **Просмотр кода**.  
+     <span data-ttu-id="b15b3-140">Если вкладка не отображается, откройте контекстное меню для MainWindow.xaml в **обозревателе решений** и выберите пункт **Просмотреть код**.</span><span class="sxs-lookup"><span data-stu-id="b15b3-140">If the tab isn’t visible, open the shortcut menu for MainWindow.xaml in **Solution Explorer**, and then choose **View Code**.</span></span>  
   
-6.  В **XAML** Просмотр файла MainWindow.XAML, замените код следующим кодом.  
+6.  <span data-ttu-id="b15b3-141">Замените код в представлении **XAML** файла MainWindow.xaml на следующий.</span><span class="sxs-lookup"><span data-stu-id="b15b3-141">In the **XAML** view of MainWindow.xaml, replace the code with the following code.</span></span>  
   
     ```vb  
     <Window  
@@ -160,16 +150,15 @@ Length of the downloaded string: 33946.
   
         </Grid>  
     </Window>  
-  
     ```  
   
-     Появится простое окно, содержащее текстовое поле и кнопку в **разработки** файла MainWindow.XAML.  
+     <span data-ttu-id="b15b3-142">В представлении **Конструктор** файла MainWindow.xaml появится простое окно, содержащее кнопку и текстовое поле.</span><span class="sxs-lookup"><span data-stu-id="b15b3-142">A simple window that contains a text box and a button appears in the **Design** view of MainWindow.xaml.</span></span>  
   
-7.  Добавить ссылку <xref:System.Net.Http>.</xref:System.Net.Http>  
+7.  <span data-ttu-id="b15b3-143">Добавьте ссылку для <xref:System.Net.Http>.</span><span class="sxs-lookup"><span data-stu-id="b15b3-143">Add a reference for <xref:System.Net.Http>.</span></span>  
   
-8.  В **обозревателе решений**, откройте контекстное меню для MainWindow.xaml.vb и выберите **Просмотр кода**.  
+8.  <span data-ttu-id="b15b3-144">В **обозревателе решений**, откройте контекстное меню для MainWindow.xaml.vb и затем выберите **Просмотр кода**.</span><span class="sxs-lookup"><span data-stu-id="b15b3-144">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.vb, and then choose **View Code**.</span></span>  
   
-9. В файл MainWindow.xaml.vb замените код следующим кодом.  
+9. <span data-ttu-id="b15b3-145">В файле замените код следующим кодом.</span><span class="sxs-lookup"><span data-stu-id="b15b3-145">In MainWindow.xaml.vb , replace the code with the following code.</span></span>  
   
     ```vb  
     ' Add an Imports statement and a reference for System.Net.Http.  
@@ -234,9 +223,9 @@ Length of the downloaded string: 33946.
     End Class  
     ```  
   
-10. Нажмите клавишу F5, чтобы запустить программу, а затем нажмите кнопку **Start** .  
+10. <span data-ttu-id="b15b3-146">Нажмите клавишу F5, чтобы запустить программу, а затем нажмите кнопку **Start** .</span><span class="sxs-lookup"><span data-stu-id="b15b3-146">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
   
-     Должен появиться следующий результат.  
+     <span data-ttu-id="b15b3-147">Должен появиться следующий результат.</span><span class="sxs-lookup"><span data-stu-id="b15b3-147">The following output should appear.</span></span>  
   
     ```  
     ONE:   Entering startButton_Click.  
@@ -266,83 +255,120 @@ Length of the downloaded string: 33946.
     Length of the downloaded string: 33946.  
     ```  
   
-## <a name="trace-the-program"></a>Программа трассировки  
+## <a name="trace-the-program"></a><span data-ttu-id="b15b3-148">Трассировка программы</span><span class="sxs-lookup"><span data-stu-id="b15b3-148">Trace the Program</span></span>  
   
-### <a name="steps-one-and-two"></a>Шаги ОДИН и ДВА  
- Отображение первых двух строк проследить путь как `startButton_Click` вызовов `AccessTheWebAsync`, и `AccessTheWebAsync` вызывает асинхронный <xref:System.Net.Http.HttpClient>метод <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>.</xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> </xref:System.Net.Http.HttpClient> Ниже описаны вызовов из метода в метод.  
+### <a name="steps-one-and-two"></a><span data-ttu-id="b15b3-149">Шаги ОДИН и ДВА</span><span class="sxs-lookup"><span data-stu-id="b15b3-149">Steps ONE and TWO</span></span>  
+ <span data-ttu-id="b15b3-150">В первых двух строках прослеживается путь по мере того, как метод `startButton_Click` вызывает `AccessTheWebAsync`, а `AccessTheWebAsync` вызывает асинхронный метод <xref:System.Net.Http.HttpClient> <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>.</span><span class="sxs-lookup"><span data-stu-id="b15b3-150">The first two display lines trace the path as `startButton_Click` calls `AccessTheWebAsync`, and `AccessTheWebAsync` calls the asynchronous <xref:System.Net.Http.HttpClient> method <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>.</span></span> <span data-ttu-id="b15b3-151">Ниже показаны вызовы из метода в метод.</span><span class="sxs-lookup"><span data-stu-id="b15b3-151">The following image outlines the calls from method to method.</span></span>  
   
- ![Шаги&1; и&2;](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace ONETWO")  
+ <span data-ttu-id="b15b3-152">![Шаги ONE (один) и TWO (два)](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")</span><span class="sxs-lookup"><span data-stu-id="b15b3-152">![Steps ONE and TWO](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")</span></span>  
   
- Тип возвращаемого значения и `AccessTheWebAsync` и `client.GetStringAsync` <xref:System.Threading.Tasks.Task%601>.</xref:System.Threading.Tasks.Task%601> Для `AccessTheWebAsync`, TResult является целым числом. Для `GetStringAsync`, TResult — строка. Дополнительные сведения о возвращаемых типов асинхронный метод в разделе [возвращают типы Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
+ <span data-ttu-id="b15b3-153">Типом возвращаемого значения и для `AccessTheWebAsync`, и для `client.GetStringAsync` является <xref:System.Threading.Tasks.Task%601>.</span><span class="sxs-lookup"><span data-stu-id="b15b3-153">The return type of both `AccessTheWebAsync` and `client.GetStringAsync` is <xref:System.Threading.Tasks.Task%601>.</span></span> <span data-ttu-id="b15b3-154">Для `AccessTheWebAsync` значение TResult является целым числом.</span><span class="sxs-lookup"><span data-stu-id="b15b3-154">For `AccessTheWebAsync`, TResult is an integer.</span></span> <span data-ttu-id="b15b3-155">Для `GetStringAsync` значение TResult является строкой.</span><span class="sxs-lookup"><span data-stu-id="b15b3-155">For `GetStringAsync`, TResult is a string.</span></span> <span data-ttu-id="b15b3-156">Дополнительные сведения о типах возвращаемых асинхронного метода см. в разделе [асинхронные типы возвращаемых значений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).</span><span class="sxs-lookup"><span data-stu-id="b15b3-156">For more information about async method return types, see [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).</span></span>  
   
- Возвращение задач асинхронный метод возвращает экземпляр задачи, когда элемент управления перемещается обратно вызывающему. Возвращает элемент управления из асинхронного метода вызывающему либо если `Await` оператор встречается в вызываемый метод или когда завершается вызванный метод. Отображение строки, помеченные как «ТРИ» до «6» трассировки эта часть процесса.  
+ <span data-ttu-id="b15b3-157">Асинхронный метод, возвращающий задачи, возвращает экземпляр задачи, когда контроль управления возвращается к вызывающему объекту.</span><span class="sxs-lookup"><span data-stu-id="b15b3-157">A task-returning async method returns a task instance when control shifts back to the caller.</span></span> <span data-ttu-id="b15b3-158">Управление передается от асинхронного метода его вызывающему методу, когда в вызванном методе обнаруживается оператор `Await` или когда вызванный метод завершается.</span><span class="sxs-lookup"><span data-stu-id="b15b3-158">Control returns from an async method to its caller either when an `Await` operator is encountered in the called method or when the called method ends.</span></span> <span data-ttu-id="b15b3-159">Отображаемые строки, которые помечены от трёх до шести, отслеживают эту часть процесса.</span><span class="sxs-lookup"><span data-stu-id="b15b3-159">The display lines that are labeled "THREE" through "SIX" trace this part of the process.</span></span>  
   
-### <a name="step-three"></a>Шаг ТРИ  
- В `AccessTheWebAsync`, асинхронный метод <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>вызывается для загрузки содержимого веб-страницы целевой.</xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> Возвращает элемент управления `client.GetStringAsync` для `AccessTheWebAsync` при `client.GetStringAsync` возвращает.  
+### <a name="step-three"></a><span data-ttu-id="b15b3-160">Шаг ТРИ</span><span class="sxs-lookup"><span data-stu-id="b15b3-160">Step THREE</span></span>  
+ <span data-ttu-id="b15b3-161">В `AccessTheWebAsync` для загрузки содержимого целевой веб-страницы вызывается асинхронный метод <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>.</span><span class="sxs-lookup"><span data-stu-id="b15b3-161">In `AccessTheWebAsync`, the asynchronous method <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> is called to download the contents of the target webpage.</span></span> <span data-ttu-id="b15b3-162">Управление передается от `client.GetStringAsync` методу `AccessTheWebAsync` при возвращении результатов методом `client.GetStringAsync`.</span><span class="sxs-lookup"><span data-stu-id="b15b3-162">Control returns from `client.GetStringAsync` to `AccessTheWebAsync` when `client.GetStringAsync` returns.</span></span>  
   
- `client.GetStringAsync` Метод возвращает задачу, строки, назначенный `getStringTask` переменных в `AccessTheWebAsync`. Следующие строки в примере программы показано, как вызвать `client.GetStringAsync` и назначения.  
+ <span data-ttu-id="b15b3-163">Метод `client.GetStringAsync` возвращает задачу строки, назначенной переменной `getStringTask` в `AccessTheWebAsync`.</span><span class="sxs-lookup"><span data-stu-id="b15b3-163">The `client.GetStringAsync` method returns a task of string that’s assigned to the `getStringTask` variable in `AccessTheWebAsync`.</span></span> <span data-ttu-id="b15b3-164">Следующая строка в примере программы демонстрирует вызов `client.GetStringAsync` и назначение.</span><span class="sxs-lookup"><span data-stu-id="b15b3-164">The following line in the example program shows the call to `client.GetStringAsync` and the assignment.</span></span>  
   
-<CodeContentPlaceHolder>5</CodeContentPlaceHolder>  
- Можно считать задачи обещание по `client.GetStringAsync` для создания фактической строки со временем. В то же время Если `AccessTheWebAsync` есть работа, не зависящей от обещанной строку из `client.GetStringAsync`, что продолжением работы во время `client.GetStringAsync` ожидания. В этом примере следующие строки выходных данных, которые обозначены «ТРИ», представляют возможность работать независимо  
+```vb  
+Dim getStringTask As Task(Of String) = client.GetStringAsync("http://msdn.microsoft.com")  
+```  
   
-<CodeContentPlaceHolder>6</CodeContentPlaceHolder>  
- Следующая инструкция приостанавливает ход выполнения в `AccessTheWebAsync` при `getStringTask` будет ожидать.  
+ <span data-ttu-id="b15b3-165">Можно представить себе задачу как обещание `client.GetStringAsync` создать в конечном итоге фактическую строку.</span><span class="sxs-lookup"><span data-stu-id="b15b3-165">You can think of the task as a promise by `client.GetStringAsync` to produce an actual string eventually.</span></span> <span data-ttu-id="b15b3-166">В то же время, если у `AccessTheWebAsync` есть работа, не зависящая от обещанной строки, от `client.GetStringAsync`, эта работа будет продолжена во время ожидания `client.GetStringAsync`.</span><span class="sxs-lookup"><span data-stu-id="b15b3-166">In the meantime, if `AccessTheWebAsync` has work to do that doesn't depend on the promised string from `client.GetStringAsync`, that work can continue while  `client.GetStringAsync` waits.</span></span> <span data-ttu-id="b15b3-167">В этом примере следующие строки вывода, которые обозначены как "THREE", представляют возможность сделать независимую работу.</span><span class="sxs-lookup"><span data-stu-id="b15b3-167">In the example, the following lines of output, which are labeled "THREE," represent the opportunity to do independent work</span></span>  
   
-<CodeContentPlaceHolder>7</CodeContentPlaceHolder>  
- На следующем рисунке поток управления из `client.GetStringAsync` для назначения `getStringTask` и от создания `getStringTask` в приложение оператор Await.  
+```  
+THREE: Back in AccessTheWebAsync.  
+           Task getStringTask is started.  
+           About to await getStringTask & return a Task<int> to startButton_Click.  
+```  
   
- ![ТРЕТИЙ шаг](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "три AsyncTrace")  
+ <span data-ttu-id="b15b3-168">Следующая инструкция приостанавливает ход выполнения в `AccessTheWebAsync` при ожидании `getStringTask`.</span><span class="sxs-lookup"><span data-stu-id="b15b3-168">The following statement suspends progress in `AccessTheWebAsync` when `getStringTask` is awaited.</span></span>  
   
- Выражение await приостанавливает `AccessTheWebAsync` до `client.GetStringAsync` возвращает. В то же время управление возвращается вызывающему объекту `AccessTheWebAsync`, `startButton_Click`.  
+```vb  
+Dim urlContents As String = Await getStringTask  
+```  
+  
+ <span data-ttu-id="b15b3-169">На следующем рисунке показана поток управления из `client.GetStringAsync` для присвоения `getStringTask` и с момента создания `getStringTask` для применения оператора Await.</span><span class="sxs-lookup"><span data-stu-id="b15b3-169">The following image shows the flow of control from `client.GetStringAsync` to the assignment to `getStringTask` and from the creation of `getStringTask` to the application of an Await operator.</span></span>  
+  
+ <span data-ttu-id="b15b3-170">![Шаг THREE (три)](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")</span><span class="sxs-lookup"><span data-stu-id="b15b3-170">![Step THREE](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")</span></span>  
+  
+ <span data-ttu-id="b15b3-171">Выражение await приостанавливает `AccessTheWebAsync` до возвращения результатов `client.GetStringAsync`.</span><span class="sxs-lookup"><span data-stu-id="b15b3-171">The await expression suspends `AccessTheWebAsync` until `client.GetStringAsync` returns.</span></span> <span data-ttu-id="b15b3-172">На это время управление возвращается вызывающему объекту метода `AccessTheWebAsync`, `startButton_Click`.</span><span class="sxs-lookup"><span data-stu-id="b15b3-172">In the meantime, control returns to the caller of `AccessTheWebAsync`, `startButton_Click`.</span></span>  
   
 > [!NOTE]
->  Как правило вы сразу ожидать результата вызова асинхронного метода. Например, следующее присвоение может заменить предыдущий код, который создает и затем ожидает `getStringTask`:`Dim urlContents As String = Await client.GetStringAsync("http://msdn.microsoft.com")`  
+>  <span data-ttu-id="b15b3-173">Как правило, ожидание вызова асинхронного метода выполняется немедленно.</span><span class="sxs-lookup"><span data-stu-id="b15b3-173">Typically, you await the call to an asynchronous method immediately.</span></span> <span data-ttu-id="b15b3-174">Например, следующее присвоение может заменить предыдущий код, который создает, а затем ожидает `getStringTask`: `Dim urlContents As String = Await client.GetStringAsync("http://msdn.microsoft.com")`</span><span class="sxs-lookup"><span data-stu-id="b15b3-174">For example, the following assignment could replace the previous code that creates and then awaits `getStringTask`: `Dim urlContents As String = Await client.GetStringAsync("http://msdn.microsoft.com")`</span></span>  
 >   
->  В этом разделе оператор await применяется позже для вывода линий, которые отмечают поток управления в программе.  
+>  <span data-ttu-id="b15b3-175">В этом разделе оператор await применяется позже для размещения строк, которые отмечают поток управления в программе.</span><span class="sxs-lookup"><span data-stu-id="b15b3-175">In this topic, the await operator is applied later to accommodate the output lines that mark the flow of control through the program.</span></span>  
   
-### <a name="step-four"></a>Шаг ЧЕТЫРЕ  
- Объявленный тип возвращаемого значения `AccessTheWebAsync` — `Task(Of Integer)`. Таким образом, когда `AccessTheWebAsync` будет приостановлен, он возвращает задачу, целого числа в `startButton_Click`. Следует понимать, что возвращаемая задача не `getStringTask`. Возвращаемая задача является новой задачи целое число, представляющее что остается сделать в приостановленном методе `AccessTheWebAsync`. Задача является обещание из `AccessTheWebAsync` производить целое число, при завершении задачи.  
+### <a name="step-four"></a><span data-ttu-id="b15b3-176">Шаг ЧЕТЫРЕ</span><span class="sxs-lookup"><span data-stu-id="b15b3-176">Step FOUR</span></span>  
+ <span data-ttu-id="b15b3-177">Объявленный тип возвращаемого значения `AccessTheWebAsync` — `Task(Of Integer)`.</span><span class="sxs-lookup"><span data-stu-id="b15b3-177">The declared return type of `AccessTheWebAsync` is `Task(Of Integer)`.</span></span> <span data-ttu-id="b15b3-178">Таким образом, когда выполнение `AccessTheWebAsync` приостанавливается, он возвращает задачу целого числа в `startButton_Click`.</span><span class="sxs-lookup"><span data-stu-id="b15b3-178">Therefore, when `AccessTheWebAsync` is suspended, it returns a task of integer to `startButton_Click`.</span></span> <span data-ttu-id="b15b3-179">Следует понимать, что возвращаемая задача — не `getStringTask`.</span><span class="sxs-lookup"><span data-stu-id="b15b3-179">You should understand that the returned task isn’t `getStringTask`.</span></span> <span data-ttu-id="b15b3-180">Возвращаемая задача — это новая задача целого числа, представляющая оставшуюся работу в приостановленном методе `AccessTheWebAsync`.</span><span class="sxs-lookup"><span data-stu-id="b15b3-180">The returned task is a new task of integer that represents what remains to be done in the suspended method, `AccessTheWebAsync`.</span></span> <span data-ttu-id="b15b3-181">Задача является обещанием `AccessTheWebAsync` создать фактическое целое число после завершения задачи.</span><span class="sxs-lookup"><span data-stu-id="b15b3-181">The task is a promise from `AccessTheWebAsync` to produce an integer when the task is complete.</span></span>  
   
- Следующий оператор назначает эту задачу, чтобы `getLengthTask` переменной.  
+ <span data-ttu-id="b15b3-182">Следующий оператор назначает эту задачу переменной `getLengthTask`.</span><span class="sxs-lookup"><span data-stu-id="b15b3-182">The following statement assigns this task to the `getLengthTask` variable.</span></span>  
   
-<CodeContentPlaceHolder>8</CodeContentPlaceHolder>  
- Как и в `AccessTheWebAsync`, `startButton_Click` можно продолжить работу, не зависят от результатов асинхронной задачи (`getLengthTask`) пока не ожидать задачу. Следующие выходные данные строки представляют этой работы.  
+```vb  
+Dim getLengthTask As Task(Of Integer) = AccessTheWebAsync()  
+```  
   
-<CodeContentPlaceHolder>9</CodeContentPlaceHolder>  
- Выполнение в `startButton_Click` при приостановке `getLengthTask` будет ожидать. Следующая инструкция назначения приостанавливает `startButton_Click` до `AccessTheWebAsync` завершения.  
+ <span data-ttu-id="b15b3-183">Как и в `AccessTheWebAsync`, `startButton_Click` может продолжать работу, которая не зависит от результатов асинхронной задачи (`getLengthTask`), во время ожидания задачи.</span><span class="sxs-lookup"><span data-stu-id="b15b3-183">As in `AccessTheWebAsync`, `startButton_Click` can continue with work that doesn’t depend on the results of the asynchronous task (`getLengthTask`) until the task is awaited.</span></span> <span data-ttu-id="b15b3-184">Следующие выходные строки представляют такую работу.</span><span class="sxs-lookup"><span data-stu-id="b15b3-184">The following output lines represent that work.</span></span>  
   
-<CodeContentPlaceHolder>10</CodeContentPlaceHolder>  
- На следующем рисунке стрелки Показать поток управления из выражения await в `AccessTheWebAsync` для присвоения значения для `getLengthTask`, следуют обычной обработки в `startButton_Click` до `getLengthTask` будет ожидать.  
+```  
+FOUR:  Back in startButton_Click.  
+           Task getLengthTask is started.  
+           About to await getLengthTask -- no caller to return to.  
+```  
   
- ![ЧЕТВЕРТЫЙ шаг](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace ЧЕТЫРЕ")  
+ <span data-ttu-id="b15b3-185">Выполнение в `startButton_Click` приостанавливается при ожидании `getLengthTask`.</span><span class="sxs-lookup"><span data-stu-id="b15b3-185">Progress in `startButton_Click` is suspended when `getLengthTask` is awaited.</span></span> <span data-ttu-id="b15b3-186">Следующая инструкция назначения приостанавливает `startButton_Click` до завершения `AccessTheWebAsync`.</span><span class="sxs-lookup"><span data-stu-id="b15b3-186">The following assignment statement suspends `startButton_Click` until `AccessTheWebAsync` is complete.</span></span>  
   
-### <a name="step-five"></a>Шаг ПЯТЬ  
- Когда `client.GetStringAsync` указывает, что завершения обработки в `AccessTheWebAsync` освобождается после приостановки и можно продолжить выполнение после оператора await. Приведенный ниже выходные данные представляют продолжение обработки.  
+```vb  
+Dim contentLength As Integer = Await getLengthTask  
+```  
   
-<CodeContentPlaceHolder>11</CodeContentPlaceHolder>  
- Операнд оператора return `urlContents.Length`, хранится в задаче, `AccessTheWebAsync` возвращает. Выражение await получает это значение из `getLengthTask` в `startButton_Click`.  
+ <span data-ttu-id="b15b3-187">На следующем рисунке стрелками показан поток управления из выражения await в `AccessTheWebAsync` к назначению значения `getLengthTask`, за которым следует обычная обработка в методе `startButton_Click` до ожидания `getLengthTask`.</span><span class="sxs-lookup"><span data-stu-id="b15b3-187">In the following illustration, the arrows show the flow of control from the await expression in `AccessTheWebAsync` to the assignment of a value to `getLengthTask`, followed by normal processing in `startButton_Click` until `getLengthTask` is awaited.</span></span>  
   
- На следующем рисунке показано перемещение элемента управления после `client.GetStringAsync` (и `getStringTask`) завершены.  
+ <span data-ttu-id="b15b3-188">![Шаг FOUR (четыре)](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace-FOUR")</span><span class="sxs-lookup"><span data-stu-id="b15b3-188">![Step FOUR](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace-FOUR")</span></span>  
   
- ![ПЯТЫЙ шаг](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace&5;")  
+### <a name="step-five"></a><span data-ttu-id="b15b3-189">Шаг ПЯТЬ</span><span class="sxs-lookup"><span data-stu-id="b15b3-189">Step FIVE</span></span>  
+ <span data-ttu-id="b15b3-190">Когда `client.GetStringAsync` уведомляет о завершении, обработка в `AccessTheWebAsync` возобновляется и может продолжаться после оператора await.</span><span class="sxs-lookup"><span data-stu-id="b15b3-190">When `client.GetStringAsync` signals that it’s complete, processing in `AccessTheWebAsync` is released from suspension and can continue past the await statement.</span></span> <span data-ttu-id="b15b3-191">Приведенные ниже строки выходных данных представляют возобновление обработки.</span><span class="sxs-lookup"><span data-stu-id="b15b3-191">The following lines of output represent the resumption of processing.</span></span>  
   
- `AccessTheWebAsync`Возвращает выполняется до завершения и управления `startButton_Click`, который ожидает завершения.  
+```  
+FIVE:  Back in AccessTheWebAsync.  
+           Task getStringTask is complete.  
+           Processing the return statement.  
+           Exiting from AccessTheWebAsync.  
+```  
   
-### <a name="step-six"></a>Шаг ШЕСТЬ  
- Когда `AccessTheWebAsync` сигнализирует завершения обработки можно продолжить выполнение после оператора await в `startButton_Async`. На самом деле программа имеет ничего общего дополнительные.  
+ <span data-ttu-id="b15b3-192">Операнд оператора return, `urlContents.Length`, хранится в задаче, возвращаемой `AccessTheWebAsync`.</span><span class="sxs-lookup"><span data-stu-id="b15b3-192">The operand of the return statement, `urlContents.Length`, is stored in the task that  `AccessTheWebAsync` returns.</span></span> <span data-ttu-id="b15b3-193">Выражение await получает это значение из `getLengthTask` в `startButton_Click`.</span><span class="sxs-lookup"><span data-stu-id="b15b3-193">The await expression retrieves that value from `getLengthTask` in `startButton_Click`.</span></span>  
   
- Приведенный ниже выходные данные представляют продолжение обработки в `startButton_Async`:  
+ <span data-ttu-id="b15b3-194">На следующем рисунке показана передача управления после завершения `client.GetStringAsync` (и `getStringTask`).</span><span class="sxs-lookup"><span data-stu-id="b15b3-194">The following image shows the transfer of control after `client.GetStringAsync` (and `getStringTask`) are complete.</span></span>  
   
-<CodeContentPlaceHolder>12</CodeContentPlaceHolder>  
- Выражение await извлекает из `getLengthTask` целое значение, представляющее операнд оператора return в `AccessTheWebAsync`. Следующая инструкция присваивает это значение `contentLength` переменной.  
+ <span data-ttu-id="b15b3-195">![Шаг FIVE (пять)](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")</span><span class="sxs-lookup"><span data-stu-id="b15b3-195">![Step FIVE](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")</span></span>  
   
-<CodeContentPlaceHolder>13</CodeContentPlaceHolder>  
- На следующем рисунке показано возвращение управления из `AccessTheWebAsync` в `startButton_Click`.  
+ <span data-ttu-id="b15b3-196">`AccessTheWebAsync` выполняется до завершения, и управление возвращается к `startButton_Click`, который ожидает завершения.</span><span class="sxs-lookup"><span data-stu-id="b15b3-196">`AccessTheWebAsync` runs to completion, and control returns to `startButton_Click`, which is awaiting the completion.</span></span>  
   
- ![ШЕСТОЙ шаг](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace&6;")  
+### <a name="step-six"></a><span data-ttu-id="b15b3-197">Шаг ШЕСТЬ</span><span class="sxs-lookup"><span data-stu-id="b15b3-197">Step SIX</span></span>  
+ <span data-ttu-id="b15b3-198">Когда `AccessTheWebAsync` уведомляет о завершении, обработка может продолжаться после оператора await в `startButton_Async`.</span><span class="sxs-lookup"><span data-stu-id="b15b3-198">When `AccessTheWebAsync` signals that it’s complete, processing can continue past the await statement in `startButton_Async`.</span></span> <span data-ttu-id="b15b3-199">Фактически, на этом работа программы завершается.</span><span class="sxs-lookup"><span data-stu-id="b15b3-199">In fact, the program has nothing more to do.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Асинхронное программирование с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)   
- [Асинхронные типы возвращаемых значений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)   
- [Пошаговое руководство: Доступ к Интернету с помощью модификатора Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
- [Пример асинхронности: Поток управления в асинхронных программах (C# и Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255285)
+ <span data-ttu-id="b15b3-200">Приведенные ниже строки выходных данных представляют возобновление обработки в `startButton_Async`:</span><span class="sxs-lookup"><span data-stu-id="b15b3-200">The following lines of output represent the resumption of processing in `startButton_Async`:</span></span>  
+  
+```  
+SIX:   Back in startButton_Click.  
+           Task getLengthTask is finished.  
+           Result from AccessTheWebAsync is stored in contentLength.  
+           About to display contentLength and exit.  
+```  
+  
+ <span data-ttu-id="b15b3-201">Выражение await получает из `getLengthTask` целое значение, представляющее операнд оператора return в `AccessTheWebAsync`.</span><span class="sxs-lookup"><span data-stu-id="b15b3-201">The await expression retrieves from `getLengthTask` the integer value that’s the operand of the return statement in `AccessTheWebAsync`.</span></span> <span data-ttu-id="b15b3-202">Следующий оператор назначает это значение переменной `contentLength`.</span><span class="sxs-lookup"><span data-stu-id="b15b3-202">The following statement assigns that value to the `contentLength` variable.</span></span>  
+  
+```vb  
+Dim contentLength As Integer = Await getLengthTask  
+```  
+  
+ <span data-ttu-id="b15b3-203">На следующем рисунке показано возвращение управления от `AccessTheWebAsync` к `startButton_Click`.</span><span class="sxs-lookup"><span data-stu-id="b15b3-203">The following image shows the return of control from `AccessTheWebAsync` to `startButton_Click`.</span></span>  
+  
+ <span data-ttu-id="b15b3-204">![Шаг SIX (шесть)](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")</span><span class="sxs-lookup"><span data-stu-id="b15b3-204">![Step SIX](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="b15b3-205">См. также</span><span class="sxs-lookup"><span data-stu-id="b15b3-205">See Also</span></span>  
+ [<span data-ttu-id="b15b3-206">Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b15b3-206">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+ <span data-ttu-id="b15b3-207">[Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md) (Типы возвращаемых значений Async (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="b15b3-207">[Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)</span></span>  
+ <span data-ttu-id="b15b3-208">[Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Пошаговое руководство. Доступ к веб-сайтам с помощью модификатора Async и оператора Await (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="b15b3-208">[Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)</span></span>  
+ [<span data-ttu-id="b15b3-209">Пример асинхронности. Поток управления в асинхронных программах (C# и Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b15b3-209">Async Sample: Control Flow in Async Programs (C# and Visual Basic)</span></span>](http://go.microsoft.com/fwlink/?LinkId=255285)

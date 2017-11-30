@@ -1,36 +1,34 @@
 ---
-title: "Оператор Namespace | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Namespace"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "декларации, пространства имен"
-  - "объявление пространств имен, синтаксис"
-  - "оператор Namespace"
-  - "пространства имен, объявление"
-  - "пространства имен, вложенные"
-  - "пространства имен, корневой"
-  - "корневые пространства имен"
+title: "Оператор Namespace"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Namespace
+helpviewer_keywords:
+- namespaces [Visual Basic], root
+- Namespace statement [Visual Basic]
+- namespaces [Visual Basic], nested
+- declaring namespaces [Visual Basic], syntax
+- namespaces [Visual Basic], declaring
+- root namespaces
+- declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
-caps.latest.revision: 39
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 39
+caps.latest.revision: "39"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 9863286a8eda2559ab678c77a81cc7d6063c3e3d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оператор Namespace
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Объявляет имя пространства имен и вызывает исходный код ниже объявления для компиляции в пределах этого пространства имен.  
+# <a name="namespace-statement"></a><span data-ttu-id="4e175-102">Оператор Namespace</span><span class="sxs-lookup"><span data-stu-id="4e175-102">Namespace Statement</span></span>
+<span data-ttu-id="4e175-103">Объявляет имя пространства имен и вызывает исходный код ниже объявления для компиляции в этом пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="4e175-103">Declares the name of a namespace and causes the source code that follows the declaration to be compiled within that namespace.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="4e175-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4e175-104">Syntax</span></span>  
   
 ```  
 Namespace [Global.] { name | name.name }  
@@ -38,68 +36,68 @@ Namespace [Global.] { name | name.name }
 End Namespace  
 ```  
   
-## Части  
- Global  
- Необязательный.  Позволяет указать пространство имен из корневого пространства имен проекта.  Дополнительные сведения см. в разделе [Пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+## <a name="parts"></a><span data-ttu-id="4e175-105">Части</span><span class="sxs-lookup"><span data-stu-id="4e175-105">Parts</span></span>  
+ <span data-ttu-id="4e175-106">Global</span><span class="sxs-lookup"><span data-stu-id="4e175-106">Global</span></span>  
+ <span data-ttu-id="4e175-107">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="4e175-107">Optional.</span></span> <span data-ttu-id="4e175-108">Позволяет определить пространство имен из корневого пространства имен проекта.</span><span class="sxs-lookup"><span data-stu-id="4e175-108">Allows you to define a namespace out of the root namespace of your project.</span></span> <span data-ttu-id="4e175-109">В разделе [пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="4e175-109">See [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).</span></span>  
   
  `name`  
- Обязательный.  Уникальное имя пространства имен.  Должно быть допустимым идентификатором Visual Basic.  Дополнительные сведения см. в разделе [Имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ <span data-ttu-id="4e175-110">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="4e175-110">Required.</span></span> <span data-ttu-id="4e175-111">Уникальное имя, которое определяет пространство имен.</span><span class="sxs-lookup"><span data-stu-id="4e175-111">A unique name that identifies the namespace.</span></span> <span data-ttu-id="4e175-112">Должен быть допустимым идентификатором Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="4e175-112">Must be a valid Visual Basic identifier.</span></span> <span data-ttu-id="4e175-113">Дополнительные сведения см. в разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span><span class="sxs-lookup"><span data-stu-id="4e175-113">For more information, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>  
   
  `componenttypes`  
- Необязательный.  Элементы пространства имен.  Они включают, но не ограничиваются, перечисления, структуры, интерфейсы, классы, модули, делегаты и другие пространства имен.  
+ <span data-ttu-id="4e175-114">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="4e175-114">Optional.</span></span> <span data-ttu-id="4e175-115">Элементы, составляющие пространство имен.</span><span class="sxs-lookup"><span data-stu-id="4e175-115">Elements that make up the namespace.</span></span> <span data-ttu-id="4e175-116">Возможные, но не ограничиваются, перечисления, структуры, интерфейсы, классы, модули, делегаты и другие пространства имен.</span><span class="sxs-lookup"><span data-stu-id="4e175-116">These include, but are not limited to, enumerations, structures, interfaces, classes, modules, delegates, and other namespaces.</span></span>  
   
  `End Namespace`  
- Завершает блок `Namespace`.  
+ <span data-ttu-id="4e175-117">Завершает `Namespace` блока.</span><span class="sxs-lookup"><span data-stu-id="4e175-117">Terminates a `Namespace` block.</span></span>  
   
-## Заметки  
- Пространства имен используются в качестве организационной системы.  Они предоставляют возможность классификации и представления элементов программирования, которые предоставляются другим программам и приложениям.  Видит, что пространство имен \- не " a " *тип* в том смысле, что класс или структура быть\-вы не могут объявлять элемент программирования, чтобы иметь тип данных пространства имен.  
+## <a name="remarks"></a><span data-ttu-id="4e175-118">Примечания</span><span class="sxs-lookup"><span data-stu-id="4e175-118">Remarks</span></span>  
+ <span data-ttu-id="4e175-119">Пространства имен используются в качестве системы организации.</span><span class="sxs-lookup"><span data-stu-id="4e175-119">Namespaces are used as an organizational system.</span></span> <span data-ttu-id="4e175-120">Они предоставляют возможность классификации и представления элементов программирования, которые предоставляются другим программам и приложениям.</span><span class="sxs-lookup"><span data-stu-id="4e175-120">They provide a way to classify and present programming elements that are exposed to other programs and applications.</span></span> <span data-ttu-id="4e175-121">Обратите внимание, что пространство имен не *типа* в том смысле, что класс или структура, нельзя объявлять элемент программирования с типом данных пространства имен.</span><span class="sxs-lookup"><span data-stu-id="4e175-121">Note that a namespace is not a *type* in the sense that a class or structure is—you cannot declare a programming element to have the data type of a namespace.</span></span>  
   
- Все элементы программирования, объявленные после оператора `Namespace`, относятся к пространству имен.  Visual Basic продолжает компилировать элементы в последнем объявленном пространстве имен до тех пор, пока он не встречает оператор `End Namespace` или `Namespace`.  
+ <span data-ttu-id="4e175-122">Все элементы программирования, объявленные после `Namespace` инструкции принадлежат этого пространства имен.</span><span class="sxs-lookup"><span data-stu-id="4e175-122">All programming elements declared after a `Namespace` statement belong to that namespace.</span></span> <span data-ttu-id="4e175-123">Visual Basic по-прежнему скомпилировать в последней объявленного пространства имен элементов, пока встретится либо `End Namespace` инструкции или другой `Namespace` инструкции.</span><span class="sxs-lookup"><span data-stu-id="4e175-123">Visual Basic continues to compile elements into the last declared namespace until it encounters either an `End Namespace` statement or another `Namespace` statement.</span></span>  
   
- Если пространство имен уже определено \(даже за пределами проекта\), к нему можно добавить элементы программирования.  Для этого используется a `Namespace` выписка для направления, что Visual Basic компилировало элементы в пространство имен.  
+ <span data-ttu-id="4e175-124">Если пространство имен уже определено, даже за пределами проекта, можно добавить программным элементам, которые к нему.</span><span class="sxs-lookup"><span data-stu-id="4e175-124">If a namespace is already defined, even outside your project, you can add programming elements to it.</span></span> <span data-ttu-id="4e175-125">Чтобы сделать это, используйте `Namespace` инструкцию, чтобы дать Visual Basic для компиляции элементов в этом пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="4e175-125">To do this, you use a `Namespace` statement to direct Visual Basic to compile elements into that namespace.</span></span>  
   
- Можно использовать инструкцию `Namespace` только на уровне файла или пространства имен.  Это означает, что *контекст объявления* внутри пространства имен должен быть исходным файлом или другим пространством имен и не может быть классом, структурой, модулем, интерфейсом или процедурой.  Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ <span data-ttu-id="4e175-126">Можно использовать `Namespace` инструкции только на уровне файлов и пространств имен.</span><span class="sxs-lookup"><span data-stu-id="4e175-126">You can use a `Namespace` statement only at the file or namespace level.</span></span> <span data-ttu-id="4e175-127">Это означает *контекст объявления* для пространства имен должен быть исходным файлом или другое пространство имен и не может быть класс, структура, модуль, интерфейс или процедуры.</span><span class="sxs-lookup"><span data-stu-id="4e175-127">This means the *declaration context* for a namespace must be a source file or another namespace, and cannot be a class, structure, module, interface, or procedure.</span></span> <span data-ttu-id="4e175-128">Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="4e175-128">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>  
   
- Можно объявить одно пространство имен в другом.  Не существует строгого ограничения уровней вложения, которые можно объявить, но следует помнить, что когда другой код получает доступ к элементам, объявленным во внутреннем пространстве имен, он должен использовать строку квалификации, содержащую все имена пространства имен в иерархии вложений.  
+ <span data-ttu-id="4e175-129">Можно объявить одно пространство имен в другой.</span><span class="sxs-lookup"><span data-stu-id="4e175-129">You can declare one namespace within another.</span></span> <span data-ttu-id="4e175-130">Нет строгого ограничения уровней вложения можно объявить, но помните, что когда другой код обращается к элементам, объявленным во внутреннем пространстве имен, он должен использовать квалификации строка, содержащая все имена пространств имен в иерархии вложений.</span><span class="sxs-lookup"><span data-stu-id="4e175-130">There is no strict limit to the levels of nesting you can declare, but remember that when other code accesses the elements declared in the innermost namespace, it must use a qualification string that contains all the namespace names in the nesting hierarchy.</span></span>  
   
-## Уровень доступа  
- Пространства имен обрабатываются, если они имеют a `Public` уровень доступа.  К пространству имен можно обращаться из кода в том же проекте, из других проектов, которые ссылаются на проект, и из любой сборки, построенной из проекта.  
+## <a name="access-level"></a><span data-ttu-id="4e175-131">Уровень доступа</span><span class="sxs-lookup"><span data-stu-id="4e175-131">Access Level</span></span>  
+ <span data-ttu-id="4e175-132">Пространства имен обрабатываются, как если бы они имели `Public` уровень доступа.</span><span class="sxs-lookup"><span data-stu-id="4e175-132">Namespaces are treated as if they have a `Public` access level.</span></span> <span data-ttu-id="4e175-133">Пространство имен может осуществляться из кода в том же проекте, из других проектов, которые ссылаются на проект и из любой сборки, построенной из проекта.</span><span class="sxs-lookup"><span data-stu-id="4e175-133">A namespace can be accessed from code anywhere in the same project, from other projects that reference the project, and from any assembly built from the project.</span></span>  
   
- Элементы программирования, объявленные на уровне пространства имен \(то есть имеют смысл в пространстве имен, но не внутри какого\-либо другого элемента\), могут иметь доступ `Public` или `Friend`.  Если данный параметр не определен, по умолчанию для элемента используется уровень доступа `Friend`.  Элементы, которые можно объявить на уровне пространства имен, включают классы, структуры, модули, интерфейсы, перечисления и делегаты.  Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ <span data-ttu-id="4e175-134">Элементы программирования, объявленные на уровне пространства имен, то есть в пространстве имен, но не внутри любого другого элемента, могут иметь `Public` или `Friend` доступа.</span><span class="sxs-lookup"><span data-stu-id="4e175-134">Programming elements declared at namespace level, meaning in a namespace but not inside any other element, can have `Public` or `Friend` access.</span></span> <span data-ttu-id="4e175-135">Если не указан, уровень доступа таких использует элемент `Friend` по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="4e175-135">If unspecified, the access level of such an element uses `Friend` by default.</span></span> <span data-ttu-id="4e175-136">Элементы, которые можно объявить на уровне пространства имен включают классы, структуры, модули, интерфейсы, перечисления и делегаты.</span><span class="sxs-lookup"><span data-stu-id="4e175-136">Elements you can declare at namespace level include classes, structures, modules, interfaces, enumerations, and delegates.</span></span> <span data-ttu-id="4e175-137">Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="4e175-137">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>  
   
-## Корневое пространство имен  
- Все имена пространства имен в проекте основаны на *корневом пространстве имен*.  Visual Studio задает имя проекта как корневое пространство имен по умолчанию для всего кода в проекте.  Например, если проект называется `Payroll`, его элементы программирования относятся к пространству имен `Payroll`.  При объявлении `Namespace funding` полным именем пространства имен будет являться `Payroll.funding`.  
+## <a name="root-namespace"></a><span data-ttu-id="4e175-138">Корневое пространство имен</span><span class="sxs-lookup"><span data-stu-id="4e175-138">Root Namespace</span></span>  
+ <span data-ttu-id="4e175-139">Все имена пространств имен в проекте основаны на *корневое пространство имен*.</span><span class="sxs-lookup"><span data-stu-id="4e175-139">All namespace names in your project are based on a *root namespace*.</span></span> <span data-ttu-id="4e175-140">Visual Studio назначает имя проекта в качестве корневого пространства имен по умолчанию для всего кода в проекте.</span><span class="sxs-lookup"><span data-stu-id="4e175-140">Visual Studio assigns your project name as the default root namespace for all code in your project.</span></span> <span data-ttu-id="4e175-141">Например, если проект называется `Payroll`, его программные элементы относятся к пространству имен `Payroll`.</span><span class="sxs-lookup"><span data-stu-id="4e175-141">For example, if your project is named `Payroll`, its programming elements belong to namespace `Payroll`.</span></span> <span data-ttu-id="4e175-142">При объявлении `Namespace funding`, полное имя пространства имен- `Payroll.funding`.</span><span class="sxs-lookup"><span data-stu-id="4e175-142">If you declare `Namespace funding`, the full name of that namespace is `Payroll.funding`.</span></span>  
   
- При необходимости указать существующее пространство имен в операторе `Namespace` \(как в примере с базовым списком классов\), можно установить корневое пространство имен в значение NULL.  Для этого щелкните **Свойства проекта** в меню **Проект** и удалите запись в поле **Корневое пространство имен**.  Если это не было выполнено в примере с базовым списком классов, компилятор Visual Basic будет обрабатывать `System.Collections.Generic` в качестве нового пространства имен в пределах проекта `Payroll`, а полным именем будет являться `Payroll.System.Collections.Generic`.  
+ <span data-ttu-id="4e175-143">Если вы хотите указать существующее пространство имен в `Namespace` инструкции, такие как в примере класс универсального списка корневое пространство имен можно задать значение null.</span><span class="sxs-lookup"><span data-stu-id="4e175-143">If you want to specify an existing namespace in a `Namespace` statement, such as in the generic list class example, you can set your root namespace to a null value.</span></span> <span data-ttu-id="4e175-144">Чтобы сделать это, нажмите кнопку **свойства проекта** из **проекта** меню и затем снимите **корневое пространство имен** входа, чтобы поле остается пустым.</span><span class="sxs-lookup"><span data-stu-id="4e175-144">To do this, click **Project Properties** from the **Project** menu and then clear the **Root namespace** entry so that the box is empty.</span></span> <span data-ttu-id="4e175-145">Если это не это пример класса универсального списка компилятор Visual Basic может потребоваться `System.Collections.Generic` как новое пространство имен в проекте `Payroll`, с полным именем из `Payroll.System.Collections.Generic`.</span><span class="sxs-lookup"><span data-stu-id="4e175-145">If you did not do this in the generic list class example, the Visual Basic compiler would take `System.Collections.Generic` as a new namespace within project `Payroll`, with the full name of `Payroll.System.Collections.Generic`.</span></span>  
   
- Кроме того можно использовать ключевое слово `Global` для ссылки на элементы пространства имен, определенные вне проекта.  Это позволяет сохранить имя проекта в качестве корневого пространства имен.  Это уменьшает вероятность случайного слияния элементов программирования с соответствующими им элементами в существующем пространстве имен.  Дополнительные сведения см. в разделе "global \- ключевое слово в разделе полных именах" в [Пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ <span data-ttu-id="4e175-146">Кроме того, можно использовать `Global` ключевое слово для ссылки на элементы пространства имен, определенные вне проекта.</span><span class="sxs-lookup"><span data-stu-id="4e175-146">Alternatively, you can use the `Global` keyword to refer to elements of namespaces defined outside your project.</span></span> <span data-ttu-id="4e175-147">Это позволит сохранить имя проекта как корневое пространство имен.</span><span class="sxs-lookup"><span data-stu-id="4e175-147">Doing so lets you retain your project name as the root namespace.</span></span> <span data-ttu-id="4e175-148">Это уменьшает вероятность случайного слияния элементов программирования с соответствующими им существующие пространства имен.</span><span class="sxs-lookup"><span data-stu-id="4e175-148">This reduces the chance of unintentionally merging your programming elements together with those of existing namespaces.</span></span> <span data-ttu-id="4e175-149">Дополнительные сведения см. в подразделе «Глобальные ключевое слово в полных имен» [пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="4e175-149">For more information, see the "Global Keyword in Fully Qualified Names" section in [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).</span></span>  
   
- `Global` ключевое слово может также использоваться при выписке пространства имен.  Это позволяет определить пространство имен из корневого пространства имен проекта.  Дополнительные сведения см. в разделе "global \- ключевое слово в разделе" in выписках пространства имен [Пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ <span data-ttu-id="4e175-150">`Global` Ключевое слово также может использоваться в операторе пространства имен.</span><span class="sxs-lookup"><span data-stu-id="4e175-150">The `Global` keyword can also be used in a Namespace statement.</span></span> <span data-ttu-id="4e175-151">Это позволяет определить пространство имен из корневых пространств имен проекта.</span><span class="sxs-lookup"><span data-stu-id="4e175-151">This lets you define a namespace out of the root namespace of your project.</span></span> <span data-ttu-id="4e175-152">Дополнительные сведения см. в разделе «Глобальные ключевое слово в операторы Namespace» [пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="4e175-152">For more information, see the "Global Keyword in Namespace Statements" section in [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).</span></span>  
   
- **Устранение неполадок.** Корневое пространство имен может привести к непредвиденному объединению имен пространств имен.  Если сделать ссылку на пространство имен, определенное вне проекта, компилятор Visual Basic может обработать их как вложенные пространства имен в корневом пространстве имен.  В таком случае компилятор не распознает никакие типы, которые уже были определены во внешних пространствах имен.  Избежать этого или установил свое корневое пространство имен со значением NULL как описано в разделе "пространство имен" или использует `Global` ключевое слово для доступа к элементам внешних пространствах имен.  
+ <span data-ttu-id="4e175-153">**Устранение неполадок.**</span><span class="sxs-lookup"><span data-stu-id="4e175-153">**Troubleshooting.**</span></span> <span data-ttu-id="4e175-154">Корневое пространство имен может привести к непредвиденному объединению имен пространств имен.</span><span class="sxs-lookup"><span data-stu-id="4e175-154">The root namespace can lead to unexpected concatenations of namespace names.</span></span> <span data-ttu-id="4e175-155">Если ссылки на пространства имен, определенные вне проекта, компилятор Visual Basic может обработать их как вложенные пространства имен в корневом пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="4e175-155">If you make reference to namespaces defined outside your project, the Visual Basic compiler can construe them as nested namespaces in the root namespace.</span></span> <span data-ttu-id="4e175-156">В этом случае компилятор не распознает все типы, которые уже были определены во внешних пространствах имен.</span><span class="sxs-lookup"><span data-stu-id="4e175-156">In such a case, the compiler does not recognize any types that have been already defined in the external namespaces.</span></span> <span data-ttu-id="4e175-157">Чтобы избежать этого, присвоено значение null, как описано в «Корневого пространства имен» корневое пространство имен или использовать `Global` ключевое слово для доступа к элементам внешних пространств имен.</span><span class="sxs-lookup"><span data-stu-id="4e175-157">To avoid this, either set your root namespace to a null value as described in "Root Namespace," or use the `Global` keyword to access elements of external namespaces.</span></span>  
   
-## Атрибуты и модификаторы  
- Нельзя применять атрибуты к пространству имен.  Атрибут вносит сведения для метаданных сборки, которые не имеют смысла для исходных классификаторов, таких как пространства имен.  
+## <a name="attributes-and-modifiers"></a><span data-ttu-id="4e175-158">Атрибуты и модификаторы</span><span class="sxs-lookup"><span data-stu-id="4e175-158">Attributes and Modifiers</span></span>  
+ <span data-ttu-id="4e175-159">Не удается применить атрибуты к пространству имен.</span><span class="sxs-lookup"><span data-stu-id="4e175-159">You cannot apply attributes to a namespace.</span></span> <span data-ttu-id="4e175-160">Атрибут вносит сведения для метаданных сборки, которые не имеют смысла для исходных классификаторов, такие как пространства имен.</span><span class="sxs-lookup"><span data-stu-id="4e175-160">An attribute contributes information to the assembly's metadata, which is not meaningful for source classifiers such as namespaces.</span></span>  
   
- Нельзя применять модификаторы доступа или процедур или какие\-либо другие модификаторы к пространству имен.  Поскольку оно не является типом, данные модификаторы не имеют смысла.  
+ <span data-ttu-id="4e175-161">Не удается применить доступа или модификаторы процедуры или другие модификаторы к пространству имен.</span><span class="sxs-lookup"><span data-stu-id="4e175-161">You cannot apply any access or procedure modifiers, or any other modifiers, to a namespace.</span></span> <span data-ttu-id="4e175-162">Так как он не является типом, эти модификаторы не имеют смысла.</span><span class="sxs-lookup"><span data-stu-id="4e175-162">Because it is not a type, these modifiers are not meaningful.</span></span>  
   
-## Пример  
- В следующем примере объявляются два пространства имен, причем одно из них вложено в другое.  
+## <a name="example"></a><span data-ttu-id="4e175-163">Пример</span><span class="sxs-lookup"><span data-stu-id="4e175-163">Example</span></span>  
+ <span data-ttu-id="4e175-164">В следующем примере объявляются два пространства имен, вложенных в другой друг.</span><span class="sxs-lookup"><span data-stu-id="4e175-164">The following example declares two namespaces, one nested in the other.</span></span>  
   
  [!code-vb[VbVbalrStatements#43](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_1.vb)]  
   
-## Пример  
- В следующем примере в одной строке объявляется несколько вложенных пространств имен. По смыслу этот пример эквивалентен предыдущему.  
+## <a name="example"></a><span data-ttu-id="4e175-165">Пример</span><span class="sxs-lookup"><span data-stu-id="4e175-165">Example</span></span>  
+ <span data-ttu-id="4e175-166">В следующем примере объявляется несколько вложенных пространств имен в одной строке, и он эквивалентен предыдущему примеру.</span><span class="sxs-lookup"><span data-stu-id="4e175-166">The following example declares multiple nested namespaces on a single line, and it is equivalent to the previous example.</span></span>  
   
  [!code-vb[VbVbalrStatements#41](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_2.vb)]  
   
-## Пример  
- В следующем примере выполняется обращение к классу, определенному в предыдущих примерах.  
+## <a name="example"></a><span data-ttu-id="4e175-167">Пример</span><span class="sxs-lookup"><span data-stu-id="4e175-167">Example</span></span>  
+ <span data-ttu-id="4e175-168">Следующий пример обращается к класс, определенный в предыдущих примерах.</span><span class="sxs-lookup"><span data-stu-id="4e175-168">The following example accesses the class defined in the previous examples.</span></span>  
   
  [!code-vb[VbVbalrStatements#42](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_3.vb)]  
   
-## Пример  
- В следующем примере определяется схема нового универсального списка класса и она добавляется к пространству имен <xref:System.Collections.Generic?displayProperty=fullName>.  
+## <a name="example"></a><span data-ttu-id="4e175-169">Пример</span><span class="sxs-lookup"><span data-stu-id="4e175-169">Example</span></span>  
+ <span data-ttu-id="4e175-170">В следующем примере определяется схема нового универсального списка класса и добавляет его в <xref:System.Collections.Generic?displayProperty=nameWithType> пространства имен.</span><span class="sxs-lookup"><span data-stu-id="4e175-170">The following example defines the skeleton of a new generic list class and adds it to the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Namespace System.Collections.Generic  
@@ -110,7 +108,7 @@ Namespace System.Collections.Generic
 End Namespace  
 ```  
   
-## См. также  
- [Оператор Imports \(пространство имен .NET и тип\)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)   
- [Имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
- [Пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+## <a name="see-also"></a><span data-ttu-id="4e175-171">См. также</span><span class="sxs-lookup"><span data-stu-id="4e175-171">See Also</span></span>  
+ [<span data-ttu-id="4e175-172">Оператор Imports (пространство имен и тип .NET)</span><span class="sxs-lookup"><span data-stu-id="4e175-172">Imports Statement (.NET Namespace and Type)</span></span>](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+ [<span data-ttu-id="4e175-173">Имена объявленных элементов</span><span class="sxs-lookup"><span data-stu-id="4e175-173">Declared Element Names</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
+ [<span data-ttu-id="4e175-174">Пространства имен в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4e175-174">Namespaces in Visual Basic</span></span>](../../../visual-basic/programming-guide/program-structure/namespaces.md)

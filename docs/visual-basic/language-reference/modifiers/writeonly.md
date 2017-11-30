@@ -1,61 +1,60 @@
 ---
-title: "WriteOnly (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "WriteOnly"
-  - "vb.WriteOnly"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "свойства [Visual Basic], только запись"
-  - "конфиденциальные данные"
-  - "конфиденциальные данные, защита"
-  - "WriteOnly - ключевое слово"
-  - "свойства только для записи"
+title: WriteOnly (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- WriteOnly
+- vb.WriteOnly
+helpviewer_keywords:
+- write-only properties
+- WriteOnly keyword [Visual Basic]
+- sensitive data, protecting
+- properties [Visual Basic], write-only
+- sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 9dab9115c31e538bd28583b9f0591ae0c9611e2e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# WriteOnly (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Указывает, что свойство может быть записано, но не прочитано.  
+# <a name="writeonly-visual-basic"></a><span data-ttu-id="49f0b-102">WriteOnly (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="49f0b-102">WriteOnly (Visual Basic)</span></span>
+<span data-ttu-id="49f0b-103">Указывает, что свойство можно осуществлять запись, но не читать.</span><span class="sxs-lookup"><span data-stu-id="49f0b-103">Specifies that a property can be written but not read.</span></span>  
   
-## Заметки  
+## <a name="remarks"></a><span data-ttu-id="49f0b-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="49f0b-104">Remarks</span></span>  
   
-## Правила  
- **Контекст объявления.** Можно использовать зарезервированное слово `WriteOnly` только на уровне модуля.  Это означает, что контекст объявления для свойства `WriteOnly` должен быть классом, структурой или модулем и не может быть исходным файлом, пространством имен или процедурой.  
+## <a name="rules"></a><span data-ttu-id="49f0b-105">Правила</span><span class="sxs-lookup"><span data-stu-id="49f0b-105">Rules</span></span>  
+ <span data-ttu-id="49f0b-106">**Контекст объявления.**</span><span class="sxs-lookup"><span data-stu-id="49f0b-106">**Declaration Context.**</span></span> <span data-ttu-id="49f0b-107">`WriteOnly` можно использовать только на уровне модуля.</span><span class="sxs-lookup"><span data-stu-id="49f0b-107">You can use `WriteOnly` only at module level.</span></span> <span data-ttu-id="49f0b-108">Это означает, что контекст объявления для `WriteOnly` свойства должен быть классом, структурой или модуля и не может быть исходным файлом, пространством имен или процедуры.</span><span class="sxs-lookup"><span data-stu-id="49f0b-108">This means the declaration context for a `WriteOnly` property must be a class, structure, or module, and cannot be a source file, namespace, or procedure.</span></span>  
   
- Можно объявить свойство как `WriteOnly`, но нельзя как переменную.  
+ <span data-ttu-id="49f0b-109">Можно объявить свойство как `WriteOnly`, но не переменной.</span><span class="sxs-lookup"><span data-stu-id="49f0b-109">You can declare a property as `WriteOnly`, but not a variable.</span></span>  
   
-## Использование WriteOnly  
- Иногда требуется, чтобы код устанавливал значение, но не открывал его.  Например, конфиденциальные данные, такие как социальный регистрационный номер или пароль, необходимо защитить от доступа любого компонента, который не устанавливал их.  В этих случаях для установки значения можно использовать свойство `WriteOnly`.  
+## <a name="when-to-use-writeonly"></a><span data-ttu-id="49f0b-110">Когда следует использовать WriteOnly</span><span class="sxs-lookup"><span data-stu-id="49f0b-110">When to Use WriteOnly</span></span>  
+ <span data-ttu-id="49f0b-111">Иногда требуется, чтобы иметь возможность установить значение, но не открывал его код-потребитель.</span><span class="sxs-lookup"><span data-stu-id="49f0b-111">Sometimes you want the consuming code to be able to set a value but not discover what it is.</span></span> <span data-ttu-id="49f0b-112">Например конфиденциальные данные, такие как социальных регистрационный номер или пароль, должен быть защищены от доступа из любого компонента, который не был указан.</span><span class="sxs-lookup"><span data-stu-id="49f0b-112">For example, sensitive data, such as a social registration number or a password, needs to be protected from access by any component that did not set it.</span></span> <span data-ttu-id="49f0b-113">В этих случаях можно использовать `WriteOnly` свойство для задания значения.</span><span class="sxs-lookup"><span data-stu-id="49f0b-113">In these cases, you can use a `WriteOnly` property to set the value.</span></span>  
   
 > [!IMPORTANT]
->  При определении и использовании свойства `WriteOnly` необходимо учитывать следующие дополнительные защитные меры.  
+>  <span data-ttu-id="49f0b-114">При определении и использовать `WriteOnly` свойства, рассмотрим следующие дополнительные защитные меры:</span><span class="sxs-lookup"><span data-stu-id="49f0b-114">When you define and use a `WriteOnly` property, consider the following additional protective measures:</span></span>  
   
--   **Переопределение.** Если свойство является членом класса, определите его по умолчанию [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), не объявляйте его как `Overridable` или `MustOverride`.  Это предотвращает нежелательный доступ с помощью переопределения в производном классе.  
+-   <span data-ttu-id="49f0b-115">**Переопределение.**</span><span class="sxs-lookup"><span data-stu-id="49f0b-115">**Overriding.**</span></span> <span data-ttu-id="49f0b-116">Если свойство является членом класса, разрешить его значение по умолчанию [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), а не объявлять `Overridable` или `MustOverride`.</span><span class="sxs-lookup"><span data-stu-id="49f0b-116">If the property is a member of a class, allow it to default to [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), and do not declare it `Overridable` or `MustOverride`.</span></span> <span data-ttu-id="49f0b-117">Это предотвращает нежелательный доступ с помощью переопределения в производном классе.</span><span class="sxs-lookup"><span data-stu-id="49f0b-117">This prevents a derived class from making undesired access through an override.</span></span>  
   
--   **Уровень доступа.** Если важные данные свойства хранятся в одной или нескольких переменных, объявите их [Private](../../../visual-basic/language-reference/modifiers/private.md), чтобы другой код не имел к ним доступа.  
+-   <span data-ttu-id="49f0b-118">**Уровень доступа.**</span><span class="sxs-lookup"><span data-stu-id="49f0b-118">**Access Level.**</span></span> <span data-ttu-id="49f0b-119">Если навести свойства конфиденциальные данные в одну или несколько переменных, объявите их [закрытый](../../../visual-basic/language-reference/modifiers/private.md) , чтобы к ним можно обращаться никакой другой код.</span><span class="sxs-lookup"><span data-stu-id="49f0b-119">If you hold the property's sensitive data in one or more variables, declare them [Private](../../../visual-basic/language-reference/modifiers/private.md) so that no other code can access them.</span></span>  
   
--   **Шифрование.** Все конфиденциальные данные следует хранить в зашифрованном виде, а не в виде обычного текста.  Если вредоносный код каким\-либо образом получает доступ к этой области памяти, для него будет сложнее использовать данные.  Шифрование полезно также при сериализации конфиденциальных данных.  
+-   <span data-ttu-id="49f0b-120">**Шифрование.**</span><span class="sxs-lookup"><span data-stu-id="49f0b-120">**Encryption.**</span></span> <span data-ttu-id="49f0b-121">Хранить все конфиденциальные данные в зашифрованном виде, а не в виде обычного текста.</span><span class="sxs-lookup"><span data-stu-id="49f0b-121">Store all sensitive data in encrypted form rather than in plain text.</span></span> <span data-ttu-id="49f0b-122">Если вредоносный код каким-то получает доступ к этой области памяти, это сложнее использовать данные.</span><span class="sxs-lookup"><span data-stu-id="49f0b-122">If malicious code somehow gains access to that area of memory, it is more difficult to make use of the data.</span></span> <span data-ttu-id="49f0b-123">Шифрование также полезен, если это необходимо для сериализации конфиденциальных данных.</span><span class="sxs-lookup"><span data-stu-id="49f0b-123">Encryption is also useful if it is necessary to serialize the sensitive data.</span></span>  
   
--   **Сброс.** Когда класс, структура или модуль, определяющие свойство, завершаются, следует присвоить конфиденциальным данным значения по умолчанию или другие не имеющие смысла значения.  Это обеспечивает дополнительную защиту при освобождении области памяти для общего доступа.  
+-   <span data-ttu-id="49f0b-124">**Сброс.**</span><span class="sxs-lookup"><span data-stu-id="49f0b-124">**Resetting.**</span></span> <span data-ttu-id="49f0b-125">Когда класс, структура или модуль, определяющие свойство завершается, сброс конфиденциальные данные, другие значения имеют смысла или значения по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="49f0b-125">When the class, structure, or module defining the property is being terminated, reset the sensitive data to default values or to other meaningless values.</span></span> <span data-ttu-id="49f0b-126">Это обеспечивает дополнительную защиту компьютера при освобождении этой области памяти для общего доступа.</span><span class="sxs-lookup"><span data-stu-id="49f0b-126">This gives extra protection when that area of memory is freed for general access.</span></span>  
   
--   **Сохранение.** Не сохраняйте никакие конфиденциальные данные на диск, если этого можно избежать.  Кроме того, не следует записывать конфиденциальные данные в буфер обмена.  
+-   <span data-ttu-id="49f0b-127">**Сохраняемость.**</span><span class="sxs-lookup"><span data-stu-id="49f0b-127">**Persistence.**</span></span> <span data-ttu-id="49f0b-128">Не сохраняются никакие конфиденциальные данные на диск, если этого можно избежать.</span><span class="sxs-lookup"><span data-stu-id="49f0b-128">Do not persist any sensitive data, for example on disk, if you can avoid it.</span></span> <span data-ttu-id="49f0b-129">Кроме того не записывать конфиденциальные данные в буфер обмена.</span><span class="sxs-lookup"><span data-stu-id="49f0b-129">Also, do not write any sensitive data to the Clipboard.</span></span>  
   
- Модификатор `WriteOnly` можно использовать в следующем контексте.  
+ <span data-ttu-id="49f0b-130">`WriteOnly` Модификатор может использоваться в этом контексте:</span><span class="sxs-lookup"><span data-stu-id="49f0b-130">The `WriteOnly` modifier can be used in this context:</span></span>  
   
- [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="49f0b-131">Оператор Property</span><span class="sxs-lookup"><span data-stu-id="49f0b-131">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
   
-## См. также  
- [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)   
- [Private](../../../visual-basic/language-reference/modifiers/private.md)   
- [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="49f0b-132">См. также</span><span class="sxs-lookup"><span data-stu-id="49f0b-132">See Also</span></span>  
+ [<span data-ttu-id="49f0b-133">ReadOnly</span><span class="sxs-lookup"><span data-stu-id="49f0b-133">ReadOnly</span></span>](../../../visual-basic/language-reference/modifiers/readonly.md)  
+ [<span data-ttu-id="49f0b-134">Закрытые</span><span class="sxs-lookup"><span data-stu-id="49f0b-134">Private</span></span>](../../../visual-basic/language-reference/modifiers/private.md)  
+ [<span data-ttu-id="49f0b-135">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="49f0b-135">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

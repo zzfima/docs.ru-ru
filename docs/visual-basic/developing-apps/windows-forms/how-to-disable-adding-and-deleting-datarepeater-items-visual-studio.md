@@ -1,82 +1,84 @@
 ---
-title: "Пошаговое руководство. Запрещение возможности добавления и удаления элементов DataRepeater (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "DataRepeater, отключение добавления"
-  - "DataRepeater, отключение удаления"
+title: "Пошаговое руководство. Запрещение возможности добавления и удаления элементов DataRepeater (Visual Studio)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataRepeater, disabling delete
+- DataRepeater, disabling add
 ms.assetid: 298d8f60-ddfe-4361-ab66-cf76d0df5220
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1b15fe6fb5190855126ffa60ac488aaa74ad9b5a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пошаговое руководство. Запрещение возможности добавления и удаления элементов DataRepeater (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-По умолчанию, пользователи могут добавлять и удалять элементы в\/из элемента управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  Пользователи могут добавить новый элемент нажав CTRL\+N, когда на <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItemEventArgs.DataRepeaterItem%2A> находится в фокусе или нажав кнопку **AddNewItem** на элементе управления <xref:System.Windows.Forms.BindingNavigator>.  Пользователи могут удалить новый элемент нажав DELETE, когда на <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItemEventArgs.DataRepeaterItem%2A> находится в фокусе или нажав кнопку **DeleteItem** на элементе управления <xref:System.Windows.Forms.BindingNavigator>.  
+# <a name="how-to-disable-adding-and-deleting-datarepeater-items-visual-studio"></a><span data-ttu-id="7e6fd-102">Пошаговое руководство. Запрещение возможности добавления и удаления элементов DataRepeater (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="7e6fd-102">How to: Disable Adding and Deleting DataRepeater Items (Visual Studio)</span></span>
+<span data-ttu-id="7e6fd-103">По умолчанию пользователи могут добавлять и удалять элементы в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="7e6fd-103">By default, users can add and delete items in a <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span></span> <span data-ttu-id="7e6fd-104">Пользователи могут добавлять новый элемент, нажав клавиши CTRL + N при <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItemEventArgs.DataRepeaterItem%2A> находится в фокусе или щелкнув **AddNewItem** кнопку <xref:System.Windows.Forms.BindingNavigator> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="7e6fd-104">Users can add a new item by pressing CTRL+N when a <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItemEventArgs.DataRepeaterItem%2A> has focus or by clicking the **AddNewItem** button on the <xref:System.Windows.Forms.BindingNavigator> control.</span></span> <span data-ttu-id="7e6fd-105">Удалить элемент, нажав клавишу DELETE, когда <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItemEventArgs.DataRepeaterItem%2A> находится в фокусе или щелкнув **DeleteItem** кнопку на <xref:System.Windows.Forms.BindingNavigator> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="7e6fd-105">Users can delete an item by pressing DELETE when a <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItemEventArgs.DataRepeaterItem%2A> has focus or by clicking the **DeleteItem** button on the <xref:System.Windows.Forms.BindingNavigator> control.</span></span>  
   
- Можно отключить добавление и\/или удаление на этапе проектирования или во время выполнения.  
+ <span data-ttu-id="7e6fd-106">Можно отключить, добавив или удалив во время разработки или во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="7e6fd-106">You can disable adding and/or deleting at design time or at run time.</span></span>  
   
-### Чтобы отключить добавление и удаление на этапе разработки  
+### <a name="to-disable-adding-and-deleting-at-design-time"></a><span data-ttu-id="7e6fd-107">Чтобы отключить добавление и удаление во время разработки</span><span class="sxs-lookup"><span data-stu-id="7e6fd-107">To disable adding and deleting at design time</span></span>  
   
-1.  В конструкторе Windows Forms выберите элемент управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  
+1.  <span data-ttu-id="7e6fd-108">В конструкторе Windows Forms выберите <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="7e6fd-108">In the Windows Forms Designer, select the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span></span>  
   
     > [!NOTE]
-    >  Следует выбрать нижнюю часть элемента управления.  Если выбрать подраздел шаблона элемента, то можно просмотреть различные настройки свойств.  
+    >  <span data-ttu-id="7e6fd-109">Необходимо выбрать нижней части элемента управления.</span><span class="sxs-lookup"><span data-stu-id="7e6fd-109">You must select the lower section of the control.</span></span> <span data-ttu-id="7e6fd-110">При выборе области шаблона элемента, отображается другой набор свойств.</span><span class="sxs-lookup"><span data-stu-id="7e6fd-110">If you select the item template section, a different set of properties will be displayed.</span></span>  
   
-2.  В окне "Свойства" присвойте свойству <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.AllowUserToAddItems%2A> значение **False**.  
+2.  <span data-ttu-id="7e6fd-111">В окне свойств задайте <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.AllowUserToAddItems%2A> свойства **False**.</span><span class="sxs-lookup"><span data-stu-id="7e6fd-111">In the Properties window, set the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.AllowUserToAddItems%2A> property to **False**.</span></span>  
   
-3.  Присвойте свойству <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.AllowUserToDeleteItems%2A> значение  **False**.  
+3.  <span data-ttu-id="7e6fd-112">Задать <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.AllowUserToDeleteItems%2A> свойства **False**.</span><span class="sxs-lookup"><span data-stu-id="7e6fd-112">Set the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.AllowUserToDeleteItems%2A> property to **False**.</span></span>  
   
-4.  В конструкторе Windows Forms, выберите элемент управления <xref:System.Windows.Forms.BindingNavigator> и затем нажмите кнопку **AddNewItem** \(кнопка со знаком плюса\).  
+4.  <span data-ttu-id="7e6fd-113">В конструкторе Windows Forms выберите <xref:System.Windows.Forms.BindingNavigator> управления и нажмите кнопку **AddNewItem** (кнопка со знаком плюс на нем).</span><span class="sxs-lookup"><span data-stu-id="7e6fd-113">In the Windows Forms Designer, select the <xref:System.Windows.Forms.BindingNavigator> control, and then click the **AddNewItem** button (the button with a plus sign on it).</span></span>  
   
-5.  В окне "Свойства" присвойте свойству <xref:System.Windows.Forms.ToolBarButton.Enabled%2A> значение **False**.  
+5.  <span data-ttu-id="7e6fd-114">В окне свойств задайте <xref:System.Windows.Forms.ToolBarButton.Enabled%2A> свойства **False**.</span><span class="sxs-lookup"><span data-stu-id="7e6fd-114">In the Properties window, set the <xref:System.Windows.Forms.ToolBarButton.Enabled%2A> property to **False**.</span></span>  
   
-6.  В конструкторе Windows Forms, выберите элемент управления <xref:System.Windows.Forms.BindingNavigator> и затем нажмите кнопку **DeleteItem** \(кнопка с красным значком X\).  
+6.  <span data-ttu-id="7e6fd-115">В конструкторе Windows Forms выберите <xref:System.Windows.Forms.BindingNavigator> управления и нажмите кнопку **DeleteItem** (кнопка с красным крестом на нем).</span><span class="sxs-lookup"><span data-stu-id="7e6fd-115">In the Windows Forms Designer, select the <xref:System.Windows.Forms.BindingNavigator> control, and then click the **DeleteItem** button (the button with a red X on it).</span></span>  
   
-7.  В окне "Свойства" присвойте свойству <xref:System.Windows.Forms.ToolBarButton.Enabled%2A> значение **False**.  
+7.  <span data-ttu-id="7e6fd-116">В окне свойств задайте <xref:System.Windows.Forms.ToolBarButton.Enabled%2A> свойства **False**.</span><span class="sxs-lookup"><span data-stu-id="7e6fd-116">In the Properties window, set the <xref:System.Windows.Forms.ToolBarButton.Enabled%2A> property to **False**.</span></span>  
   
-8.  В области компонентов выберите источник данных <xref:System.Windows.Forms.BindingSource> к которому привязан элемент управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  
+8.  <span data-ttu-id="7e6fd-117">В области компонентов, выберите <xref:System.Windows.Forms.BindingSource> к которому <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> привязан.</span><span class="sxs-lookup"><span data-stu-id="7e6fd-117">In the Component Tray, select the <xref:System.Windows.Forms.BindingSource> to which the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> is bound.</span></span>  
   
-9. В окне "Свойства" присвойте свойству <xref:System.Windows.Forms.BindingSource.AllowNew%2A> значение **False**.  
+9. <span data-ttu-id="7e6fd-118">В окне свойств задайте <xref:System.Windows.Forms.BindingSource.AllowNew%2A> свойства **False**.</span><span class="sxs-lookup"><span data-stu-id="7e6fd-118">In the Properties window, set the <xref:System.Windows.Forms.BindingSource.AllowNew%2A> property to **False**.</span></span>  
   
-10. В конструкторе Windows Forms, дважды нажмите кнопку **DeleteItem**, чтобы открыть редактор кода.  
+10. <span data-ttu-id="7e6fd-119">В конструкторе Windows Forms дважды щелкните **DeleteItem** кнопку, чтобы открыть редактор кода.</span><span class="sxs-lookup"><span data-stu-id="7e6fd-119">In the Windows Forms Designer, double-click the **DeleteItem** button to open the Code Editor.</span></span>  
   
-11. Выберите событие `BindingNavigatorDeleteItem_EnabledChanged` из раскрывающегося списка событий.  
+11. <span data-ttu-id="7e6fd-120">Выберите в раскрывающемся списке события `BindingNavigatorDeleteItem_EnabledChanged` событий.</span><span class="sxs-lookup"><span data-stu-id="7e6fd-120">In the Events drop-down list, select the `BindingNavigatorDeleteItem_EnabledChanged` event.</span></span>  
   
-12. В обработчик событий `BindingNavigatorDeleteItem_EnabledChanged` добавьте следующий код:  
+12. <span data-ttu-id="7e6fd-121">Добавьте следующий код в обработчик событий `BindingNavigatorDeleteItem_EnabledChanged` .</span><span class="sxs-lookup"><span data-stu-id="7e6fd-121">Add the following code to the `BindingNavigatorDeleteItem_EnabledChanged` event handler:</span></span>  
   
-     [!code-cs[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_1.cs)]
+     [!code-csharp[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_1.cs)]
      [!code-vb[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_1.vb)]  
   
     > [!NOTE]
-    >  Это шаг является необходимым, поскольку <xref:System.Windows.Forms.BindingSource> включает кнопку **DeleteItem** каждый раз при изменении текущей записи.  
+    >  <span data-ttu-id="7e6fd-122">Этот шаг необходим, так как <xref:System.Windows.Forms.BindingSource> будет активировать кнопку **DeleteItem** при каждом изменении текущей записи.</span><span class="sxs-lookup"><span data-stu-id="7e6fd-122">This step is necessary because the <xref:System.Windows.Forms.BindingSource> will enable the **DeleteItem** button every time that the current record changes.</span></span>  
   
-### Чтобы отключить добавление и удаление во время выполнения  
+### <a name="to-disable-adding-and-deleting-at-run-time"></a><span data-ttu-id="7e6fd-123">Чтобы отключить добавление и удаление во время выполнения</span><span class="sxs-lookup"><span data-stu-id="7e6fd-123">To disable adding and deleting at run time</span></span>  
   
-1.  В конструкторе Windows Forms, дважды щелкните форму, чтобы открыть редактор кода.  
+1.  <span data-ttu-id="7e6fd-124">В конструкторе Windows Forms дважды щелкните форму, чтобы открыть редактор кода.</span><span class="sxs-lookup"><span data-stu-id="7e6fd-124">In the Windows Forms Designer, double-click the form to open the Code Editor.</span></span>  
   
-2.  Добавьте следующий код в событие `Form_Load`:  
+2.  <span data-ttu-id="7e6fd-125">Добавьте следующий код в событие `Form_Load` :</span><span class="sxs-lookup"><span data-stu-id="7e6fd-125">Add the following code to the `Form_Load` event:</span></span>  
   
-     [!code-cs[VbPowerPacksDataRepeaterDisableAddDelete#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_2.cs)]
+     [!code-csharp[VbPowerPacksDataRepeaterDisableAddDelete#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_2.cs)]
      [!code-vb[VbPowerPacksDataRepeaterDisableAddDelete#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_2.vb)]  
   
-3.  В обработчик событий `BindingNavigatorDeleteItem_EnabledChanged` добавьте следующий код:  
+3.  <span data-ttu-id="7e6fd-126">Добавьте следующий код в обработчик событий `BindingNavigatorDeleteItem_EnabledChanged` .</span><span class="sxs-lookup"><span data-stu-id="7e6fd-126">Add the following code to the `BindingNavigatorDeleteItem_EnabledChanged` event handler:</span></span>  
   
-     [!code-cs[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_1.cs)]
+     [!code-csharp[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_1.cs)]
      [!code-vb[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_1.vb)]  
   
     > [!NOTE]
-    >  Это шаг является необходимым, поскольку <xref:System.Windows.Forms.BindingSource> включает кнопку **DeleteItem** каждый раз при изменении текущей записи.  
+    >  <span data-ttu-id="7e6fd-127">Этот шаг необходим, так как <xref:System.Windows.Forms.BindingSource> будет активировать кнопку **DeleteItem** при каждом изменении текущей записи.</span><span class="sxs-lookup"><span data-stu-id="7e6fd-127">This step is necessary because the <xref:System.Windows.Forms.BindingSource> will enable the **DeleteItem** button every time that the current record changes.</span></span>  
   
-## См. также  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>   
- [Общие сведения об элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)   
- [Устранение неполадок при использовании элемента управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)
+## <a name="see-also"></a><span data-ttu-id="7e6fd-128">См. также</span><span class="sxs-lookup"><span data-stu-id="7e6fd-128">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+ [<span data-ttu-id="7e6fd-129">Общие сведения об элементе управления DataRepeater</span><span class="sxs-lookup"><span data-stu-id="7e6fd-129">Introduction to the DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
+ [<span data-ttu-id="7e6fd-130">Устранение неполадок при использовании элемента управления DataRepeater</span><span class="sxs-lookup"><span data-stu-id="7e6fd-130">Troubleshooting the DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)

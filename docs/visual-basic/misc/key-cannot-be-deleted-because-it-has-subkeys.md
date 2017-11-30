@@ -1,25 +1,28 @@
 ---
-title: "Нельзя удалить раздел, так как он содержит подразделы | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
+title: "Нельзя удалить раздел, так как он содержит подразделы"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
 ms.assetid: 71d7f28f-42ef-4eb7-a39e-512c40b79977
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 29d98e3e34c0f41a22bff47b268dc63ca45cfc85
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Нельзя удалить раздел, так как он содержит подразделы
-Удалить раздел нельзя, так как он содержит подразделы.  
+# <a name="key-cannot-be-deleted-because-it-has-subkeys"></a><span data-ttu-id="932dd-102">Нельзя удалить раздел, так как он содержит подразделы</span><span class="sxs-lookup"><span data-stu-id="932dd-102">Key cannot be deleted because it has subkeys</span></span>
+<span data-ttu-id="932dd-103">Удалить раздел нельзя, так как он содержит подразделы.</span><span class="sxs-lookup"><span data-stu-id="932dd-103">The key cannot be deleted because it has subkeys.</span></span>  
   
-### Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="932dd-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="932dd-104">To correct this error</span></span>  
   
--   Определите и удалите подразделы указанного раздела перед выполнением этой операции.  
+-   <span data-ttu-id="932dd-105">Определите и удалите подразделы указанного раздела перед выполнением этой операции.</span><span class="sxs-lookup"><span data-stu-id="932dd-105">Determine and delete the specified key's subkeys before attempting this operation.</span></span>  
   
-## См. также  
- <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>   
- [Практическое руководство. Удаление раздела реестра](../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)   
- [Чтение и запись в реестр с использованием объекта My \(Visual Basic\)](http://msdn.microsoft.com/ru-ru/1309ad05-5bef-401f-970a-2f6455873b79)   
- [Устранение неполадок, связанных с управлением реестром \(Visual Basic\)](http://msdn.microsoft.com/ru-ru/6ca24f55-3697-4017-b687-9de45858af4c)
+## <a name="see-also"></a><span data-ttu-id="932dd-106">См. также</span><span class="sxs-lookup"><span data-stu-id="932dd-106">See Also</span></span>  
+ <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>  
+ [<span data-ttu-id="932dd-107">Практическое руководство. Удаление раздела реестра</span><span class="sxs-lookup"><span data-stu-id="932dd-107">How to: Delete a Registry Key</span></span>](../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)  
+ [<span data-ttu-id="932dd-108">Чтение и запись в реестр с использованием My (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="932dd-108">Reading from and Writing to the Registry Using My (Visual Basic)</span></span>](http://msdn.microsoft.com/en-us/1309ad05-5bef-401f-970a-2f6455873b79)  
+ [<span data-ttu-id="932dd-109">Устранение неполадок С управлением реестром (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="932dd-109">Troubleshooting: Manipulating the Registry (Visual Basic)</span></span>](http://msdn.microsoft.com/en-us/6ca24f55-3697-4017-b687-9de45858af4c)

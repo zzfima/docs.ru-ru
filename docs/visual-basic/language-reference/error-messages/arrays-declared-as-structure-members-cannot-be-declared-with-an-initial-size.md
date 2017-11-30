@@ -1,36 +1,34 @@
 ---
-title: "Массивы, объявленные как члены структуры, не могут быть объявлены с указанием начального размера | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc31043"
-  - "bc31043"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC31043"
+title: "Массивы, объявленные как члены структуры, не могут быть объявлены с указанием начального размера"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc31043
+- bc31043
+helpviewer_keywords: BC31043
 ms.assetid: 5bd90c71-1b78-444b-91e1-4789451ef085
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 983154a144a79991c86db5056ad0e0e563a3ba73
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Массивы, объявленные как члены структуры, не могут быть объявлены с указанием начального размера
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Массив, содержащийся в структуре, объявлен с указанием начального размера.  Нельзя инициализировать любой элемент структуры и объявить размер массива в одной форме инициализации.  
+# <a name="arrays-declared-as-structure-members-cannot-be-declared-with-an-initial-size"></a><span data-ttu-id="e3129-102">Массивы, объявленные как члены структуры, не могут быть объявлены с указанием начального размера</span><span class="sxs-lookup"><span data-stu-id="e3129-102">Arrays declared as structure members cannot be declared with an initial size</span></span>
+<span data-ttu-id="e3129-103">Массив в структуре объявлен с указанием начального размера.</span><span class="sxs-lookup"><span data-stu-id="e3129-103">An array in a structure is declared with an initial size.</span></span> <span data-ttu-id="e3129-104">Не удается инициализировать любой элемент структуры и объявить размер массива является одной форме инициализации.</span><span class="sxs-lookup"><span data-stu-id="e3129-104">You cannot initialize any structure element, and declaring an array size is one form of initialization.</span></span>  
   
- **Идентификатор ошибки:** BC31043  
+ <span data-ttu-id="e3129-105">**Идентификатор ошибки:** BC31043</span><span class="sxs-lookup"><span data-stu-id="e3129-105">**Error ID:** BC31043</span></span>  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e3129-106">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="e3129-106">To correct this error</span></span>  
   
-1.  Определите массив в структуре как динамический \(без указания начального размера\).  
+1.  <span data-ttu-id="e3129-107">Определите массив в структуре как динамический (без указания начального размера).</span><span class="sxs-lookup"><span data-stu-id="e3129-107">Define the array in your structure as dynamic (no initial size).</span></span>  
   
-2.  Если требуется массив определенного размера, можно использовать преобразование динамического массива с помощью [Оператор ReDim](../../../visual-basic/language-reference/statements/redim-statement.md) при запуске кода.  Это показано в приведенном ниже примере.  
+2.  <span data-ttu-id="e3129-108">Если требуется, чтобы размер массива, можно использовать преобразование динамического массива с [оператор ReDim](../../../visual-basic/language-reference/statements/redim-statement.md) при выполнении кода.</span><span class="sxs-lookup"><span data-stu-id="e3129-108">If you require a certain size of array, you can redimension a dynamic array with a [ReDim Statement](../../../visual-basic/language-reference/statements/redim-statement.md) when your code is running.</span></span> <span data-ttu-id="e3129-109">Это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="e3129-109">The following example illustrates this.</span></span>  
   
     ```  
     Structure demoStruct  
@@ -43,6 +41,6 @@ caps.handback.revision: 11
     End Sub  
     ```  
   
-## См. также  
- [Массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [Практическое руководство. Объявление структуры](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+## <a name="see-also"></a><span data-ttu-id="e3129-110">См. также</span><span class="sxs-lookup"><span data-stu-id="e3129-110">See Also</span></span>  
+ [<span data-ttu-id="e3129-111">Массивы</span><span class="sxs-lookup"><span data-stu-id="e3129-111">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [<span data-ttu-id="e3129-112">Практическое руководство. Объявление структуры</span><span class="sxs-lookup"><span data-stu-id="e3129-112">How to: Declare a Structure</span></span>](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)

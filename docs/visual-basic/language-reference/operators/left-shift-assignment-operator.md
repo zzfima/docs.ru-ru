@@ -1,67 +1,64 @@
 ---
-title: "Оператор &lt;&lt;= (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.<<="
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "<<= - оператор [Visual Basic]"
-  - "операторы назначения, составное"
-  - "составные операторы присваивания"
-  - "<<= - оператор"
-  - "<<= - оператор"
-  - "операторы [Visual Basic], составное присвоение"
+title: "&lt;&lt;= Оператор (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.<<=
+helpviewer_keywords:
+- operator <<=
+- assignment statements [Visual Basic], compound
+- <<= operator [Visual Basic]
+- statements [Visual Basic], compound assignment
+- operator<<=
+- compound assignment statements [Visual Basic]
 ms.assetid: 8ad26613-faff-4e2f-89ee-63feee33bfda
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 5c5c36e4f91155c09d01b448777483941d018d9a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оператор &lt;&lt;= (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Производит арифметический сдвиг значения переменной или свойcтва влево и присваивает результат переменной или свойству.  
+# <a name="ltlt-operator-visual-basic"></a><span data-ttu-id="36571-102">&lt;&lt;= Оператор (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="36571-102">&lt;&lt;= Operator (Visual Basic)</span></span>
+<span data-ttu-id="36571-103">Выполняет арифметическое смещение влево на значение переменной или свойства и присваивает результат переменной или свойству.</span><span class="sxs-lookup"><span data-stu-id="36571-103">Performs an arithmetic left shift on the value of a variable or property and assigns the result back to the variable or property.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="36571-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="36571-104">Syntax</span></span>  
   
 ```  
-  
 variableorproperty <<= amount  
 ```  
   
-## Части  
+## <a name="parts"></a><span data-ttu-id="36571-105">Части</span><span class="sxs-lookup"><span data-stu-id="36571-105">Parts</span></span>  
  `variableorproperty`  
- Обязательный.  Переменная или свойство целого типа \(`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long` или `ULong`\).  
+ <span data-ttu-id="36571-106">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="36571-106">Required.</span></span> <span data-ttu-id="36571-107">Переменная или свойство целого типа (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, или `ULong`).</span><span class="sxs-lookup"><span data-stu-id="36571-107">Variable or property of an integral type (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`).</span></span>  
   
  `amount`  
- Обязательный.  Цифровое значение с типом данных, расширяемым до `Integer`.  
+ <span data-ttu-id="36571-108">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="36571-108">Required.</span></span> <span data-ttu-id="36571-109">Числовое выражение типа данных, который расширяется до `Integer`.</span><span class="sxs-lookup"><span data-stu-id="36571-109">Numeric expression of a data type that widens to `Integer`.</span></span>  
   
-## Заметки  
- Элемент с левой стороны оператора `<<=` может быть простой скалярной переменной, свойством или элементом массива.  Переменная или свойство не могут быть [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+## <a name="remarks"></a><span data-ttu-id="36571-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="36571-110">Remarks</span></span>  
+ <span data-ttu-id="36571-111">Элемент, на левой стороне `<<=` оператор может быть простой скалярной переменной, свойством или элемент массива.</span><span class="sxs-lookup"><span data-stu-id="36571-111">The element on the left side of the `<<=` operator can be a simple scalar variable, a property, or an element of an array.</span></span> <span data-ttu-id="36571-112">Переменная или свойство не может быть [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).</span><span class="sxs-lookup"><span data-stu-id="36571-112">The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).</span></span>  
   
- `<<=` сначала выполняет арифметический оператор left миграция на значение переменной или свойства.  Оператор затем присвоить результат этой операции назад в разделах переменной или свойству.  
+ <span data-ttu-id="36571-113">`<<=` Оператор сначала выполняет арифметическое смещение влево на значение переменной или свойству.</span><span class="sxs-lookup"><span data-stu-id="36571-113">The `<<=` operator first performs an arithmetic left shift on the value of the variable or property.</span></span> <span data-ttu-id="36571-114">Затем оператор присваивает результат этой операции, переменной или свойству.</span><span class="sxs-lookup"><span data-stu-id="36571-114">The operator then assigns the result of that operation back to that variable or property.</span></span>  
   
- Арифметические сдвиги не являются циклическими. Это означает, что биты, сдвинутые в один конец результата, не вводятся повторно в другой конец.  В арифметическом левом сдвиге биты, сдвинутые за пределы диапазона типа данных результата, отбрасываются, а освободившиеся справа позиции битов задаются как нули.  
+ <span data-ttu-id="36571-115">Арифметический сдвиг не циклической, это означает, что биты, сдвигаемые результата, не подставляются с другой стороны.</span><span class="sxs-lookup"><span data-stu-id="36571-115">Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end.</span></span> <span data-ttu-id="36571-116">В арифметический сдвиг влево биты, сдвигаемые дальше диапазона типа данных результата отбрасываются, а освободившиеся справа позиции битов заполняются нулями.</span><span class="sxs-lookup"><span data-stu-id="36571-116">In an arithmetic left shift, the bits shifted beyond the range of the result data type are discarded, and the bit positions vacated on the right are set to zero.</span></span>  
   
-## Перегрузка  
- [Оператор \<\<](../../../visual-basic/language-reference/operators/left-shift-operator.md) может быть *перегружен*. Это означает, что класс или структура может переопределить его действие, если операнд имеет такой же тип класса или структуры.  Перегрузка оператора `<<` влияет на тип выполнения оператора `<<=`.  Если в коде используется оператор `<<=` для класса или структуры, перегружающей `<<`, убедитесь, что его переопределенное выполнение понятно.  Дополнительные сведения см. в разделе [Процедуры операторов](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+## <a name="overloading"></a><span data-ttu-id="36571-117">Перегрузка</span><span class="sxs-lookup"><span data-stu-id="36571-117">Overloading</span></span>  
+ <span data-ttu-id="36571-118">[<< Оператор](../../../visual-basic/language-reference/operators/left-shift-operator.md) может быть *перегружены*, что означает, что класс или структура может переопределить его поведение, если операнд имеет тип этого класса или структуры.</span><span class="sxs-lookup"><span data-stu-id="36571-118">The [<< Operator](../../../visual-basic/language-reference/operators/left-shift-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="36571-119">Перегрузка `<<` оператор влияет на поведение `<<=` оператор.</span><span class="sxs-lookup"><span data-stu-id="36571-119">Overloading the `<<` operator affects the behavior of the `<<=` operator.</span></span> <span data-ttu-id="36571-120">Если ваш код использует `<<=` для класса или структуры, перегружающей `<<`, убедитесь, что его переопределенное.</span><span class="sxs-lookup"><span data-stu-id="36571-120">If your code uses `<<=` on a class or structure that overloads `<<`, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="36571-121">Дополнительные сведения см. в разделе [процедуры оператора](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="36571-121">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## Пример  
- Следующий пример демонстрирует использование оператора `<<=` для сдвига битовой структуры переменной типа `Integer` влево с присвоением результирующего значения переменной.  
+## <a name="example"></a><span data-ttu-id="36571-122">Пример</span><span class="sxs-lookup"><span data-stu-id="36571-122">Example</span></span>  
+ <span data-ttu-id="36571-123">В следующем примере используется `<<=` оператор, на которое производится Сдвиг битового представления `Integer` переменной влево на указанную величину и назначить результат переменной.</span><span class="sxs-lookup"><span data-stu-id="36571-123">The following example uses the `<<=` operator to shift the bit pattern of an `Integer` variable left by the specified amount and assign the result to the variable.</span></span>  
   
  [!code-vb[VbVbalrOperators#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/left-shift-assignment-operator_1.vb)]  
   
-## См. также  
- [Оператор \<\<](../../../visual-basic/language-reference/operators/left-shift-operator.md)   
- [Операторы присваивания](../../../visual-basic/language-reference/operators/assignment-operators.md)   
- [Операторы поразрядного сдвига](../../../visual-basic/language-reference/operators/bit-shift-operators.md)   
- [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Операторы](../../../visual-basic/programming-guide/language-features/statements.md)
+## <a name="see-also"></a><span data-ttu-id="36571-124">См. также</span><span class="sxs-lookup"><span data-stu-id="36571-124">See Also</span></span>  
+ [<span data-ttu-id="36571-125">Оператор <<</span><span class="sxs-lookup"><span data-stu-id="36571-125"><< Operator</span></span>](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
+ [<span data-ttu-id="36571-126">Операторы присваивания</span><span class="sxs-lookup"><span data-stu-id="36571-126">Assignment Operators</span></span>](../../../visual-basic/language-reference/operators/assignment-operators.md)  
+ [<span data-ttu-id="36571-127">Операторы сдвига битов</span><span class="sxs-lookup"><span data-stu-id="36571-127">Bit Shift Operators</span></span>](../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
+ [<span data-ttu-id="36571-128">Порядок применения операторов в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="36571-128">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [<span data-ttu-id="36571-129">Список операторов, сгруппированных по функциональному назначению</span><span class="sxs-lookup"><span data-stu-id="36571-129">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [<span data-ttu-id="36571-130">Операторы</span><span class="sxs-lookup"><span data-stu-id="36571-130">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)

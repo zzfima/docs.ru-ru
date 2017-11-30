@@ -1,52 +1,50 @@
 ---
-title: "Абстракции (абстрактные типы и интерфейсы) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "абстрактные интерфейсы [платформа .NET Framework]"
-  - "абстрактные интерфейсы [платформа .NET Framework]"
-  - "Абстрактные типы [платформа .NET Framework]"
-  - "Абстрактные типы [платформа .NET Framework]"
+title: "Абстракции (абстрактные типы и интерфейсы)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- interfaces [.NET Framework], abstract
+- abstract interfaces [.NET Framework]
+- abstract types [.NET Framework]
+- types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d601ab89b08dd9e9bd0b27d2cfb1c495c33a2786
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Абстракции (абстрактные типы и интерфейсы)
-Абстракция — это тип, который описывает контракт, но не обеспечивают полную реализацию контракта. Абстракции обычно реализуются как абстрактные классы или интерфейсы, и они поставляются с четко определенный набор справочной документации, описывающий необходимую семантику типов, реализующей контракт. Ниже перечислены некоторые из важнейших абстракций в .NET Framework <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, и <xref:System.Object>.  
+# <a name="abstractions-abstract-types-and-interfaces"></a><span data-ttu-id="77fef-102">Абстракции (абстрактные типы и интерфейсы)</span><span class="sxs-lookup"><span data-stu-id="77fef-102">Abstractions (Abstract Types and Interfaces)</span></span>
+<span data-ttu-id="77fef-103">Абстракция — это тип, который описывает контракт, но не обеспечивают полную реализацию контракта.</span><span class="sxs-lookup"><span data-stu-id="77fef-103">An abstraction is a type that describes a contract but does not provide a full implementation of the contract.</span></span> <span data-ttu-id="77fef-104">Абстрактные классы обычно реализуются как абстрактных классов или интерфейсов, а они имеют четко определенный набор справочной документации, описывающий необходимую семантику типы, реализующие контракт.</span><span class="sxs-lookup"><span data-stu-id="77fef-104">Abstractions are usually implemented as abstract classes or interfaces, and they come with a well-defined set of reference documentation describing the required semantics of the types implementing the contract.</span></span> <span data-ttu-id="77fef-105">Ниже перечислены некоторые наиболее важные абстрактные классы в .NET Framework <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, и <xref:System.Object>.</span><span class="sxs-lookup"><span data-stu-id="77fef-105">Some of the most important abstractions in the .NET Framework include <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, and <xref:System.Object>.</span></span>  
   
- Платформы можно расширить путем реализации конкретный тип, поддерживающий контракта абстракции и использовать этот конкретный тип framework API\-интерфейсов много \(работе\) абстракции.  
+ <span data-ttu-id="77fef-106">Платформы можно расширить путем реализации конкретный тип, поддерживают этот контракт абстракции и framework API-интерфейсов потребителя (при работе с на) с помощью этого конкретного типа абстракции.</span><span class="sxs-lookup"><span data-stu-id="77fef-106">You can extend frameworks by implementing a concrete type that supports the contract of an abstraction and using this concrete type with framework APIs consuming (operating on) the abstraction.</span></span>  
   
- Может применяться и полезные абстракция, которая может выдержать испытание времени для разработки очень сложно. Основные сложности является получение правильного набора элементов, не больше и не меньше. Если это абстракция имеет слишком много элементов, он становится трудно или даже невозможно реализовать. Если он имеет слишком мало элементов для обещанной функциональных возможностей, он не стал бесполезен в много интересных ситуаций.  
+ <span data-ttu-id="77fef-107">Может применяться и полезные абстракции, который способен выдержать теста времени разработки очень сложно.</span><span class="sxs-lookup"><span data-stu-id="77fef-107">A meaningful and useful abstraction that is able to withstand the test of time is very difficult to design.</span></span> <span data-ttu-id="77fef-108">Основной сложности является получение правильного набора элементов, не больше и не меньше.</span><span class="sxs-lookup"><span data-stu-id="77fef-108">The main difficulty is getting the right set of members, no more and no fewer.</span></span> <span data-ttu-id="77fef-109">Если это абстракция имеет слишком много элементов, он становится трудно или даже невозможно реализовать.</span><span class="sxs-lookup"><span data-stu-id="77fef-109">If an abstraction has too many members, it becomes difficult or even impossible to implement.</span></span> <span data-ttu-id="77fef-110">Если он имеет слишком мало элементов для обещанный функциональных возможностей, бесполезен во многих сценариях интерес.</span><span class="sxs-lookup"><span data-stu-id="77fef-110">If it has too few members for the promised functionality, it becomes useless in many interesting scenarios.</span></span>  
   
- Слишком много абстракции в платформе также отрицательно повлиять на удобство использования платформы. Часто бывает довольно сложно понять абстракцию, не понимая, как ИТ вписывается в общую картину конкретных реализаций и API\-интерфейсы, работающие с абстракцией. Кроме того имена абстракций и члены являются абстрактными обязательно, часто делает их непонятными и unapproachable без первого основные сведения о более широком контексте их использования.  
+ <span data-ttu-id="77fef-111">Слишком много абстракций в платформе также отрицательно повлиять на удобство использования платформы.</span><span class="sxs-lookup"><span data-stu-id="77fef-111">Too many abstractions in a framework also negatively affect usability of the framework.</span></span> <span data-ttu-id="77fef-112">Часто бывает довольно сложно понять абстракцию без понимания того, как он заполняет общую картину конкретные реализации и API-интерфейсы, работающие с абстракции.</span><span class="sxs-lookup"><span data-stu-id="77fef-112">It is often quite difficult to understand an abstraction without understanding how it fits into the larger picture of the concrete implementations and the APIs operating on the abstraction.</span></span> <span data-ttu-id="77fef-113">Кроме того имена абстрактные классы и члены являются абстрактными обязательно, часто делает их непонятном или unapproachable без первого основные сведения о более широкий контекст их использования.</span><span class="sxs-lookup"><span data-stu-id="77fef-113">Also, names of abstractions and their members are necessarily abstract, which often makes them cryptic and unapproachable without first understanding the broader context of their usage.</span></span>  
   
- Тем не менее абстракции предоставляют очень мощный расширяемости, другие механизмы расширяемости часто не совпадают. Они лежат в основе архитектуры шаблонов, таких как подключаемые модули, инверсии управления \(IoC\), конвейеры и т. д. Они также крайне важно для тестирования платформ. Хороший абстракции позволяют заглушки интенсивной зависимости для целей модульного тестирования. В общем абстракции отвечают за популярных возможностей современных инфраструктур объектно ориентированного.  
+ <span data-ttu-id="77fef-114">Тем не менее абстрактные классы предоставляют очень мощные расширяемости, другие механизмы расширяемости, часто не может совпадать.</span><span class="sxs-lookup"><span data-stu-id="77fef-114">However, abstractions provide extremely powerful extensibility that the other extensibility mechanisms cannot often match.</span></span> <span data-ttu-id="77fef-115">Они являются основой архитектурные шаблоны, например подключаемых модулей и инверсии управления (IoC), конвейеры и т. д.</span><span class="sxs-lookup"><span data-stu-id="77fef-115">They are at the core of many architectural patterns, such as plug-ins, inversion of control (IoC), pipelines, and so on.</span></span> <span data-ttu-id="77fef-116">Это крайне важно для возможности платформы тестирования.</span><span class="sxs-lookup"><span data-stu-id="77fef-116">They are also extremely important for testability of frameworks.</span></span> <span data-ttu-id="77fef-117">Хороший абстрактные классы позволяют заглушки интенсивной зависимости с целью тестирования модулей.</span><span class="sxs-lookup"><span data-stu-id="77fef-117">Good abstractions make it possible to stub out heavy dependencies for the purpose of unit testing.</span></span> <span data-ttu-id="77fef-118">Таким образом абстрактные классы отвечают за популярных платформ современный объектно ориентированного богатыми возможностями.</span><span class="sxs-lookup"><span data-stu-id="77fef-118">In summary, abstractions are responsible for the sought-after richness of the modern object-oriented frameworks.</span></span>  
   
- **X не** обеспечивают абстракции, пока не проверите их путем разработки нескольких конкретных реализаций и API\-интерфейсы, использование абстракций.  
+ <span data-ttu-id="77fef-119">**X не** предоставляют абстракции, пока не проверите их путем разработки нескольких конкретных реализаций и использует эти абстракции API-интерфейсы.</span><span class="sxs-lookup"><span data-stu-id="77fef-119">**X DO NOT** provide abstractions unless they are tested by developing several concrete implementations and APIs consuming the abstractions.</span></span>  
   
- **✓ сделать** тщательно выбирайте между абстрактным классом и интерфейсом при проектировании абстракции.  
+ <span data-ttu-id="77fef-120">**✓ СДЕЛАТЬ** тщательно выбирайте между абстрактным классом и интерфейсом при проектировании абстракции.</span><span class="sxs-lookup"><span data-stu-id="77fef-120">**✓ DO** choose carefully between an abstract class and an interface when designing an abstraction.</span></span>  
   
- **✓ Рассмотрите ВОЗМОЖНОСТЬ** предоставляет тесты конкретных реализаций абстракций. Такие тесты позволят пользователям проверить их правильность реализации контракта.  
+ <span data-ttu-id="77fef-121">**✓ Попробуйте** предоставление тесты конкретных реализаций абстракций.</span><span class="sxs-lookup"><span data-stu-id="77fef-121">**✓ CONSIDER** providing reference tests for concrete implementations of abstractions.</span></span> <span data-ttu-id="77fef-122">Такие тесты позволят пользователям проверить их реализации правильной реализации контракта.</span><span class="sxs-lookup"><span data-stu-id="77fef-122">Such tests should allow users to test whether their implementations correctly implement the contract.</span></span>  
   
- *Частей © 2005, 2009 корпорации Microsoft. Все права защищены.*  
+ <span data-ttu-id="77fef-123">*Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*</span><span class="sxs-lookup"><span data-stu-id="77fef-123">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Воспроизведены разрешении Пирсон образования, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для повторного использования библиотеки .NET, второе издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс опубликованы 22 октября 2008 г., издательство Addison\-Wesley Professional как часть цикла разработки Microsoft Windows.*  
+ <span data-ttu-id="77fef-124">*Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="77fef-124">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## См. также  
- [Рекомендации по проектированию Framework](../../../docs/standard/design-guidelines/index.md)   
- [Разработка с обеспечением расширяемости](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+## <a name="see-also"></a><span data-ttu-id="77fef-125">См. также</span><span class="sxs-lookup"><span data-stu-id="77fef-125">See Also</span></span>  
+ [<span data-ttu-id="77fef-126">Рекомендации по проектированию на основе Framework</span><span class="sxs-lookup"><span data-stu-id="77fef-126">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="77fef-127">Разработка для расширяемости</span><span class="sxs-lookup"><span data-stu-id="77fef-127">Designing for Extensibility</span></span>](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

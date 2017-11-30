@@ -1,61 +1,59 @@
 ---
-title: "Shared (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Shared"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "элементы, общие"
-  - "члены, общие"
-  - "не общие"
-  - "общие элементы"
-  - "Shared - ключевое слово"
-  - "общие члены"
+title: Shared (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Shared
+helpviewer_keywords:
+- Shared keyword [Visual Basic]
+- members [Visual Basic], shared
+- shared members
+- nonshared
+- shared [elements VB]
+- elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: fce13c308a449e63eacc2bc4c94c274c7e25506a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Shared (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Указывает, что один или несколько объявленных элементов программирования связаны с классом или структурой целиком, а не с определенным экземпляром класса или структуры.  
+# <a name="shared-visual-basic"></a><span data-ttu-id="a728c-102">Shared (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a728c-102">Shared (Visual Basic)</span></span>
+<span data-ttu-id="a728c-103">Указывает, что один или несколько объявленных программных элементов связаны с классом или структурой целиком, а не с определенным экземпляром класса или структуры.</span><span class="sxs-lookup"><span data-stu-id="a728c-103">Specifies that one or more declared programming elements are associated with a class or structure at large, and not with a specific instance of the class or structure.</span></span>  
   
-## Заметки  
+## <a name="remarks"></a><span data-ttu-id="a728c-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="a728c-104">Remarks</span></span>  
   
-## Когда следует использовать Shared  
- Совместное использование членов класса или структуры делает ее доступной для каждого экземпляра, в отличие от *не являющихся общими* элементов, где каждый экземпляр хранит собственную копию.  Это полезно, например, если значение переменной используется во всем приложении.  Если объявить эту переменную как `Shared`, тогда все экземпляры имеют доступ к одному месту хранения, и если один экземпляр изменяет значение переменной, то все экземпляры получают доступ к обновленному значению.  
+## <a name="when-to-use-shared"></a><span data-ttu-id="a728c-105">Когда следует использовать Shared</span><span class="sxs-lookup"><span data-stu-id="a728c-105">When to Use Shared</span></span>  
+ <span data-ttu-id="a728c-106">Совместное использование членов класса или структуры делает ее доступной для каждого экземпляра, а не *не совместно*, где каждый экземпляр хранит собственную копию.</span><span class="sxs-lookup"><span data-stu-id="a728c-106">Sharing a member of a class or structure makes it available to every instance, rather than *nonshared*, where each instance keeps its own copy.</span></span> <span data-ttu-id="a728c-107">Это полезно, например, если значение переменной используется для всего приложения.</span><span class="sxs-lookup"><span data-stu-id="a728c-107">This is useful, for example, if the value of a variable applies to the entire application.</span></span> <span data-ttu-id="a728c-108">Если объявить эту переменную как `Shared`, затем все экземпляры доступа место хранения и доступа, если один экземпляр изменяет значение переменной, все экземпляры обновленное значение.</span><span class="sxs-lookup"><span data-stu-id="a728c-108">If you declare that variable to be `Shared`, then all instances access the same storage location, and if one instance changes the variable's value, all instances access the updated value.</span></span>  
   
- Совместное использование не изменяет уровень доступа для члена.  Например, член класса может использоваться совместно и закрытым образом \(только в пределах класса\) или несовместно и открыто.  Дополнительные сведения см. в разделе [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ <span data-ttu-id="a728c-109">Совместное использование не изменяет уровень доступа члена.</span><span class="sxs-lookup"><span data-stu-id="a728c-109">Sharing does not alter the access level of a member.</span></span> <span data-ttu-id="a728c-110">Например, член класса можно использовать совместно и private (доступен только в пределах класса), или открытый, так и не используемые совместно.</span><span class="sxs-lookup"><span data-stu-id="a728c-110">For example, a class member can be shared and private (accessible only from within the class), or nonshared and public.</span></span> <span data-ttu-id="a728c-111">Дополнительные сведения см. в разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="a728c-111">For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
-## Правила  
+## <a name="rules"></a><span data-ttu-id="a728c-112">Правила</span><span class="sxs-lookup"><span data-stu-id="a728c-112">Rules</span></span>  
   
--   **Контекст объявления.** Можно использовать зарезервированное слово `Shared` только на уровне модуля.  Это означает, что контекст объявления для элемента `Shared` должен быть классом или структурой и не может быть исходным файлом, пространством имен или процедурой.  
+-   <span data-ttu-id="a728c-113">**Контекст объявления.**</span><span class="sxs-lookup"><span data-stu-id="a728c-113">**Declaration Context.**</span></span> <span data-ttu-id="a728c-114">`Shared` можно использовать только на уровне модуля.</span><span class="sxs-lookup"><span data-stu-id="a728c-114">You can use `Shared` only at module level.</span></span> <span data-ttu-id="a728c-115">Это означает, что контекст объявления для `Shared` элемент должен быть классом или структурой и не может быть исходным файлом, пространством имен или процедуры.</span><span class="sxs-lookup"><span data-stu-id="a728c-115">This means the declaration context for a `Shared` element must be a class or structure, and cannot be a source file, namespace, or procedure.</span></span>  
   
--   **Комбинированные модификаторы.** Не допускается указание в одном объявлении ключевого слова `Shared` совместно с [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md) или [Static](../../../visual-basic/language-reference/modifiers/static.md).  
+-   <span data-ttu-id="a728c-116">**Комбинированные модификаторы.**</span><span class="sxs-lookup"><span data-stu-id="a728c-116">**Combined Modifiers.**</span></span> <span data-ttu-id="a728c-117">Нельзя указать `Shared` вместе с [переопределяет](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), или [ Статические](../../../visual-basic/language-reference/modifiers/static.md) в одном объявлении.</span><span class="sxs-lookup"><span data-stu-id="a728c-117">You cannot specify `Shared` together with [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), or [Static](../../../visual-basic/language-reference/modifiers/static.md) in the same declaration.</span></span>  
   
--   **Доступ.** Доступ к совместно используемому элементу может осуществляться путем указания вместе с ним имени класса или структуры, но не имени переменной экземпляра класса или структуры.  Нет необходимости создавать экземпляр класса или структуры для доступа к их общим членам.  
+-   <span data-ttu-id="a728c-118">**Доступ к.**</span><span class="sxs-lookup"><span data-stu-id="a728c-118">**Accessing.**</span></span> <span data-ttu-id="a728c-119">Доступ к совместно используемому элементу путем указания имени класса или структуры, не с именем переменной определенного экземпляра класса или структуры.</span><span class="sxs-lookup"><span data-stu-id="a728c-119">You access a shared element by qualifying it with its class or structure name, not with the variable name of a specific instance of its class or structure.</span></span> <span data-ttu-id="a728c-120">Вы даже нет для создания экземпляра класса или структуры для доступа к его общие члены.</span><span class="sxs-lookup"><span data-stu-id="a728c-120">You do not even have to create an instance of a class or structure to access its shared members.</span></span>  
   
-     В следующем примере вызывается совместно используемая процедура <xref:System.Double.IsNaN%2A>, представленная структурой <xref:System.Double>.  
+     <span data-ttu-id="a728c-121">В следующем примере вызывается общую процедуру <xref:System.Double.IsNaN%2A> предоставляемые <xref:System.Double> структуры.</span><span class="sxs-lookup"><span data-stu-id="a728c-121">The following example calls the shared procedure <xref:System.Double.IsNaN%2A> exposed by the <xref:System.Double> structure.</span></span>  
   
      `If Double.IsNaN(result) Then MsgBox("Result is mathematically undefined.")`  
   
--   **Неявное совместное использование данных.** Нельзя использовать модификатор `Shared` в [Оператор Const](../../../visual-basic/language-reference/statements/const-statement.md), но константы неявно являются общими.  Аналогично, нельзя объявлять член модуля или интерфейса как `Shared`, но они являются общими неявно.  
+-   <span data-ttu-id="a728c-122">**Неявное совместное использование данных.**</span><span class="sxs-lookup"><span data-stu-id="a728c-122">**Implicit Sharing.**</span></span> <span data-ttu-id="a728c-123">Нельзя использовать `Shared` модификатора [оператор Const](../../../visual-basic/language-reference/statements/const-statement.md), но константы неявно являются общими.</span><span class="sxs-lookup"><span data-stu-id="a728c-123">You cannot use the `Shared` modifier in a [Const Statement](../../../visual-basic/language-reference/statements/const-statement.md), but constants are implicitly shared.</span></span> <span data-ttu-id="a728c-124">Аналогичным образом, нельзя объявлять член модуля или интерфейса быть `Shared`, но они являются общими неявно.</span><span class="sxs-lookup"><span data-stu-id="a728c-124">Similarly, you cannot declare a member of a module or an interface to be `Shared`, but they are implicitly shared.</span></span>  
   
-## Поведение  
+## <a name="behavior"></a><span data-ttu-id="a728c-125">Поведение</span><span class="sxs-lookup"><span data-stu-id="a728c-125">Behavior</span></span>  
   
--   **Хранилище.** Общая переменная или событие сохраняется в памяти только один раз независимо от того, сколько экземпляров класса или структуры создается.  Аналогично, общая процедура или свойство содержат только один набор локальных переменных.  
+-   <span data-ttu-id="a728c-126">**Хранилище.**</span><span class="sxs-lookup"><span data-stu-id="a728c-126">**Storage.**</span></span> <span data-ttu-id="a728c-127">Общая переменная или событие сохраняется в памяти только один раз, независимо от того, сколько экземпляров, создайте его класса или структуры.</span><span class="sxs-lookup"><span data-stu-id="a728c-127">A shared variable or event is stored in memory only once, no matter how many or few instances you create of its class or structure.</span></span> <span data-ttu-id="a728c-128">Аналогичным образом общая процедура или свойство содержат только один набор локальных переменных.</span><span class="sxs-lookup"><span data-stu-id="a728c-128">Similarly, a shared procedure or property holds only one set of local variables.</span></span>  
   
--   **Доступ через переменную экземпляра.** Доступ к совместно используемому элементу может осуществляться путем указания вместе с ним имени переменной, которая содержит экземпляр класса или структуры.  Хотя, обычно это работает как ожидается, компилятор создает предупреждающее сообщение, и доступ производится с помощью имени класса или структуры, а не переменной.  
+-   <span data-ttu-id="a728c-129">**Доступ через переменную экземпляра.**</span><span class="sxs-lookup"><span data-stu-id="a728c-129">**Accessing through an Instance Variable.**</span></span> <span data-ttu-id="a728c-130">Можно получить доступ к совместно используемому элементу, указав его с именем переменной, которая содержит экземпляр класса или структуры.</span><span class="sxs-lookup"><span data-stu-id="a728c-130">It is possible to access a shared element by qualifying it with the name of a variable that contains a specific instance of its class or structure.</span></span> <span data-ttu-id="a728c-131">Несмотря на то, что это обычно работает ожидаемым образом, компилятор выдает предупреждающее сообщение и доступ через имя класса или структуры, а не переменной.</span><span class="sxs-lookup"><span data-stu-id="a728c-131">Although this usually works as expected, the compiler generates a warning message and makes the access through the class or structure name instead of the variable.</span></span>  
   
--   **Доступ через экземпляр выражения.** Если доступ к общему элементу осуществляется через выражение, возвращающее экземпляр его класса или структуры, компилятор осуществляет доступ с помощью имени класса или структуры, а не вычисляет выражение.  Это приводит к непредвиденным результатам, если предполагалось использовать выражение для выполнения других действий или для возврата экземпляра.  Это показано в приведенном ниже примере.  
+-   <span data-ttu-id="a728c-132">**Доступ через экземпляр выражения.**</span><span class="sxs-lookup"><span data-stu-id="a728c-132">**Accessing through an Instance Expression.**</span></span> <span data-ttu-id="a728c-133">Если доступ к совместно используемому элементу осуществляется через выражение, возвращающее экземпляр его класса или структуры, компилятор осуществляет доступ с помощью имени класса или структуры, а не оценки выражения.</span><span class="sxs-lookup"><span data-stu-id="a728c-133">If you access a shared element through an expression that returns an instance of its class or structure, the compiler makes the access through the class or structure name instead of evaluating the expression.</span></span> <span data-ttu-id="a728c-134">Это приводит к непредвиденным результатам, если предполагалось использовать выражение для выполнения других действий, а также возврат экземпляра.</span><span class="sxs-lookup"><span data-stu-id="a728c-134">This produces unexpected results if you intended the expression to perform other actions as well as returning the instance.</span></span> <span data-ttu-id="a728c-135">Это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="a728c-135">The following example illustrates this.</span></span>  
   
     ```  
     Sub main()  
@@ -83,26 +81,26 @@ caps.handback.revision: 16
     End Class  
     ```  
   
-     В предыдущем примере компилятор создает предупреждение оба раза, когда код обращается к общей переменной `total` через экземпляр.  В каждом случае он осуществляет доступ непосредственно через класс `shareTotal` и не использует экземпляры.  В случае предполагаемого вызова процедуры `returnClass` это означает, что она даже не создает вызов `returnClass`, то есть не выполняются дополнительные действия для отображения "Функция returnClass\(\) вызвана".  
+     <span data-ttu-id="a728c-136">В предыдущем примере, компилятор создает предупреждение оба раза код обращается к общей переменной `total` через экземпляр.</span><span class="sxs-lookup"><span data-stu-id="a728c-136">In the preceding example, the compiler generates a warning message both times the code accesses the shared variable `total` through an instance.</span></span> <span data-ttu-id="a728c-137">В каждом случае он осуществляет доступ непосредственно через класс `shareTotal` и не вносит в него экземпляры.</span><span class="sxs-lookup"><span data-stu-id="a728c-137">In each case it makes the access directly through the class `shareTotal` and does not make use of any instance.</span></span> <span data-ttu-id="a728c-138">В случае предполагаемого вызова процедуры `returnClass`, это означает, что она даже не создает вызов `returnClass`, поэтому дополнительные действия для отображения «Вызывается функция returnClass()» не выполняется.</span><span class="sxs-lookup"><span data-stu-id="a728c-138">In the case of the intended call to the procedure `returnClass`, this means it does not even generate a call to `returnClass`, so the additional action of displaying "Function returnClass() called" is not performed.</span></span>  
   
- Модификатор `Shared` можно использовать в следующих контекстах:  
+ <span data-ttu-id="a728c-139">Модификатор `Shared` можно использовать в следующих контекстах:</span><span class="sxs-lookup"><span data-stu-id="a728c-139">The `Shared` modifier can be used in these contexts:</span></span>  
   
- [Оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [<span data-ttu-id="a728c-140">Оператор Dim</span><span class="sxs-lookup"><span data-stu-id="a728c-140">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
- [Оператор Event](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [<span data-ttu-id="a728c-141">Оператор Event</span><span class="sxs-lookup"><span data-stu-id="a728c-141">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="a728c-142">Оператор Function</span><span class="sxs-lookup"><span data-stu-id="a728c-142">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Оператор Operator](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [<span data-ttu-id="a728c-143">Оператор Statement</span><span class="sxs-lookup"><span data-stu-id="a728c-143">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
- [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="a728c-144">Оператор Property</span><span class="sxs-lookup"><span data-stu-id="a728c-144">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="a728c-145">Оператор Sub</span><span class="sxs-lookup"><span data-stu-id="a728c-145">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## См. также  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)   
- [Static](../../../visual-basic/language-reference/modifiers/static.md)   
- [Время существования в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a><span data-ttu-id="a728c-146">См. также</span><span class="sxs-lookup"><span data-stu-id="a728c-146">See Also</span></span>  
+ [<span data-ttu-id="a728c-147">Shadows</span><span class="sxs-lookup"><span data-stu-id="a728c-147">Shadows</span></span>](../../../visual-basic/language-reference/modifiers/shadows.md)  
+ [<span data-ttu-id="a728c-148">Статические</span><span class="sxs-lookup"><span data-stu-id="a728c-148">Static</span></span>](../../../visual-basic/language-reference/modifiers/static.md)  
+ [<span data-ttu-id="a728c-149">Время существования в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a728c-149">Lifetime in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [<span data-ttu-id="a728c-150">Процедуры</span><span class="sxs-lookup"><span data-stu-id="a728c-150">Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
+ [<span data-ttu-id="a728c-151">Структуры</span><span class="sxs-lookup"><span data-stu-id="a728c-151">Structures</span></span>](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [<span data-ttu-id="a728c-152">Объекты и классы</span><span class="sxs-lookup"><span data-stu-id="a728c-152">Objects and Classes</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

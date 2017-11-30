@@ -1,44 +1,47 @@
 ---
-title: "Практическое руководство. Повторение анимации | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "анимация, повтор"
-  - "RepeatBehavior - свойство временных шкал Timeline"
-  - "повторяющаяся анимация"
-  - "RepeatBehavior - свойство Timeline"
+title: "Практическое руководство. Повторение анимации"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RepeatBehavior property of timelines [WPF]
+- repeating animating [WPF]
+- Timelines RepeatBehavior property [WPF]
+- animation [WPF], repeating
 ms.assetid: e6f3b068-eeeb-47fd-8d40-8848c31f1e1e
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d2f942771e01c2b7fae989f73779672edb8ba2f4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Повторение анимации
-В этом примере показано использование свойства <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> <xref:System.Windows.Media.Animation.Timeline> для управления повторением анимации.  
+# <a name="how-to-repeat-an-animation"></a><span data-ttu-id="12a0c-102">Практическое руководство. Повторение анимации</span><span class="sxs-lookup"><span data-stu-id="12a0c-102">How to: Repeat an Animation</span></span>
+<span data-ttu-id="12a0c-103">В этом примере показано, как использовать <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> свойство <xref:System.Windows.Media.Animation.Timeline> для управления повторением анимации.</span><span class="sxs-lookup"><span data-stu-id="12a0c-103">This example shows how to use the <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> property of a <xref:System.Windows.Media.Animation.Timeline> in order to control the repeat behavior of an animation.</span></span>  
   
-## Пример  
- Свойство <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> <xref:System.Windows.Media.Animation.Timeline> определяет, сколько раз будет повторяться анимация.  С помощью <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> можно указать, что <xref:System.Windows.Media.Animation.Timeline> будет повторяться определенное число раз \(итераций\) или в течение указанного периода времени.  В любом случае анимация осуществляет столько проходов от начала до конца, сколько требуется для выполнения запрошенного числа повторений или длительности.  
+## <a name="example"></a><span data-ttu-id="12a0c-104">Пример</span><span class="sxs-lookup"><span data-stu-id="12a0c-104">Example</span></span>  
+ <span data-ttu-id="12a0c-105"><xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> Свойство <xref:System.Windows.Media.Animation.Timeline> определяет, сколько раз анимации повторе его простой длительности.</span><span class="sxs-lookup"><span data-stu-id="12a0c-105">The <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> property of a <xref:System.Windows.Media.Animation.Timeline> controls how many times an animation repeats its simple duration.</span></span> <span data-ttu-id="12a0c-106">С помощью <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>, можно указать, что <xref:System.Windows.Media.Animation.Timeline> повторяется для определенное число раз (итераций) или в течение указанного времени.</span><span class="sxs-lookup"><span data-stu-id="12a0c-106">By using <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>, you can specify that a <xref:System.Windows.Media.Animation.Timeline> repeats for a certain number of times (an iteration count) or for a specified time period.</span></span> <span data-ttu-id="12a0c-107">В любом случае анимация проходит через столько запусков начала до конца, сколько требуется для запрошенного числа повторений или длительности.</span><span class="sxs-lookup"><span data-stu-id="12a0c-107">In either case, the animation goes through as many beginning-to-end runs that it needs in order to fill the requested count or duration.</span></span>  
   
- По умолчанию временные шкалы имеют число повторений, равное 1.0. Это означает, что они воспроизводятся один раз и не повторяются.  Тем не менее, если установить свойство <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> элемента <xref:System.Windows.Media.Animation.Timeline> в значение <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>, временная последовательность повторяется бесконечное число раз.  
+ <span data-ttu-id="12a0c-108">По умолчанию временные шкалы имеют число повторов, равным 1,0, это означает, воспроизведение происходит один раз и не повторяется.</span><span class="sxs-lookup"><span data-stu-id="12a0c-108">By default, timelines have a repeat count of 1.0, which means they play one time and do not repeat.</span></span> <span data-ttu-id="12a0c-109">Тем не менее если задать <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> свойство <xref:System.Windows.Media.Animation.Timeline> для <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>, временная шкала повторяется бесконечно.</span><span class="sxs-lookup"><span data-stu-id="12a0c-109">However, if you set the <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> property of a <xref:System.Windows.Media.Animation.Timeline> to <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>, the timeline repeats indefinitely.</span></span>  
   
- В следующем примере показано использование свойства <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> для управления повторением анимации.  В примере анимируется свойство <xref:System.Windows.FrameworkElement.Width%2A> пяти прямоугольников, каждый из которых использует разный тип повторения.  
+ <span data-ttu-id="12a0c-110">В следующем примере показано, как использовать <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> свойства для управления повторением анимации.</span><span class="sxs-lookup"><span data-stu-id="12a0c-110">The following example shows how to use the <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> property to control the repeat behavior of an animation.</span></span> <span data-ttu-id="12a0c-111">В примере анимируется <xref:System.Windows.FrameworkElement.Width%2A> свойство пяти прямоугольников, каждый с помощью другой тип поведения.</span><span class="sxs-lookup"><span data-stu-id="12a0c-111">The example animates the <xref:System.Windows.FrameworkElement.Width%2A> property of five rectangles with each rectangle using a different type of repeat behavior.</span></span>  
   
- [!code-xml[timingbehaviors_snip#RepeatBehaviorWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/RepeatBehaviorExample.xaml#repeatbehaviorwholepage)]  
+ [!code-xaml[timingbehaviors_snip#RepeatBehaviorWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/RepeatBehaviorExample.xaml#repeatbehaviorwholepage)]  
   
- Полный код примера см. на веб\-странице [Пример поведения анимации во времени](http://go.microsoft.com/fwlink/?LinkID=159970).  
+ <span data-ttu-id="12a0c-112">Полный пример см. в разделе [пример поведения анимации времени](http://go.microsoft.com/fwlink/?LinkID=159970).</span><span class="sxs-lookup"><span data-stu-id="12a0c-112">For the complete sample, see [Animation Timing Behavior Sample](http://go.microsoft.com/fwlink/?LinkID=159970).</span></span>  
   
-## См. также  
- [Накапливание значений анимации в повторяющихся циклах](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)   
- [Определение автоматического реверса для шкалы времени](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)   
- [Практические руководства](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)   
- [Animation and Timing](http://msdn.microsoft.com/ru-ru/7d83765b-d5ae-41b1-b423-80206e1124aa)   
- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [Animation Timing Behavior Sample](http://go.microsoft.com/fwlink/?LinkID=159970)
+## <a name="see-also"></a><span data-ttu-id="12a0c-113">См. также</span><span class="sxs-lookup"><span data-stu-id="12a0c-113">See Also</span></span>  
+ [<span data-ttu-id="12a0c-114">Накапливание значений анимации в повторяющихся циклах</span><span class="sxs-lookup"><span data-stu-id="12a0c-114">Accumulate Animation Values During Repeat Cycles</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)  
+ [<span data-ttu-id="12a0c-115">Определение автоматического реверса для шкалы времени</span><span class="sxs-lookup"><span data-stu-id="12a0c-115">Specify Whether a Timeline Automatically Reverses</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)  
+ [<span data-ttu-id="12a0c-116">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="12a0c-116">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)  
+ [<span data-ttu-id="12a0c-117">Анимация и расчет времени</span><span class="sxs-lookup"><span data-stu-id="12a0c-117">Animation and Timing</span></span>](http://msdn.microsoft.com/en-us/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [<span data-ttu-id="12a0c-118">Общие сведения об эффектах анимации</span><span class="sxs-lookup"><span data-stu-id="12a0c-118">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="12a0c-119">Пример поведения анимации с учетом времени</span><span class="sxs-lookup"><span data-stu-id="12a0c-119">Animation Timing Behavior Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=159970)

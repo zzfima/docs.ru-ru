@@ -1,42 +1,48 @@
 ---
-title: "Практическое руководство. Создание различных шаблонов с помощью TileBrush | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "создание, шаблонов мозаики с помощью TileBrush"
-  - "шаблоны мозаики, создание"
-  - "TileBrush, создание шаблонов мозаики"
+title: "Практическое руководство. Создание различных шаблонов с помощью TileBrush"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- TileBrush [WPF], creating tile patterns
+- tile patterns [WPF], creating
+- creating [WPF], tile patterns with TileBrush
 ms.assetid: 5aa46632-3527-4668-9d8d-0375c8af28aa
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6247f6a16cd8ab7be683d0d4d33aac021f3a2b32
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание различных шаблонов с помощью TileBrush
-В этом примере показывается использование свойства <xref:System.Windows.Media.TileBrush.TileMode%2A> <xref:System.Windows.Media.TileBrush> для создания шаблона.  
+# <a name="how-to-create-different-tile-patterns-with-a-tilebrush"></a><span data-ttu-id="a14c9-102">Практическое руководство. Создание различных шаблонов с помощью TileBrush</span><span class="sxs-lookup"><span data-stu-id="a14c9-102">How to: Create Different Tile Patterns with a TileBrush</span></span>
+<span data-ttu-id="a14c9-103">В этом примере показано, как использовать <xref:System.Windows.Media.TileBrush.TileMode%2A> свойство <xref:System.Windows.Media.TileBrush> для создания шаблона.</span><span class="sxs-lookup"><span data-stu-id="a14c9-103">This example shows how to use the <xref:System.Windows.Media.TileBrush.TileMode%2A> property of a <xref:System.Windows.Media.TileBrush> to create a pattern.</span></span>  
   
- Свойство <xref:System.Windows.Media.TileBrush.TileMode%2A> позволяет указать, как повторяется, т.е. выкладывается, содержимое <xref:System.Windows.Media.TileBrush> для заполнения выходной области.  Чтобы создать шаблон, установите <xref:System.Windows.Media.TileBrush.TileMode%2A> в <xref:System.Windows.Media.TileMode>, <xref:System.Windows.Media.TileMode>, <xref:System.Windows.Media.TileMode> или в <xref:System.Windows.Media.TileMode>.  Необходимо также задать <xref:System.Windows.Media.TileBrush.Viewport%2A> <xref:System.Windows.Media.TileBrush> так, чтобы она была меньше области, которая заполняется; в противном случае будет выведен только один фрагмент, независимо от того, какое задано значение <xref:System.Windows.Media.TileBrush.TileMode%2A>.  
+ <span data-ttu-id="a14c9-104"><xref:System.Windows.Media.TileBrush.TileMode%2A> Свойство позволяет указать, как содержимое <xref:System.Windows.Media.TileBrush> является повторяется, то есть, мозаичное заполнение области вывода.</span><span class="sxs-lookup"><span data-stu-id="a14c9-104">The <xref:System.Windows.Media.TileBrush.TileMode%2A> property enables you to specify how the content of a <xref:System.Windows.Media.TileBrush> is repeated, that is, tiled to fill an output area.</span></span> <span data-ttu-id="a14c9-105">Чтобы создать шаблон, необходимо задать <xref:System.Windows.Media.TileBrush.TileMode%2A> для <xref:System.Windows.Media.TileMode.Tile>, <xref:System.Windows.Media.TileMode.FlipX>, <xref:System.Windows.Media.TileMode.FlipY>, или <xref:System.Windows.Media.TileMode.FlipXY>.</span><span class="sxs-lookup"><span data-stu-id="a14c9-105">To create a pattern, you set the <xref:System.Windows.Media.TileBrush.TileMode%2A> to <xref:System.Windows.Media.TileMode.Tile>, <xref:System.Windows.Media.TileMode.FlipX>, <xref:System.Windows.Media.TileMode.FlipY>, or <xref:System.Windows.Media.TileMode.FlipXY>.</span></span> <span data-ttu-id="a14c9-106">Необходимо также задать <xref:System.Windows.Media.TileBrush.Viewport%2A> из <xref:System.Windows.Media.TileBrush> , чтобы оно было меньше, чем область закрашивания; в противном случае — только один фрагмент производству, независимо от того, что <xref:System.Windows.Media.TileBrush.TileMode%2A> используется параметр.</span><span class="sxs-lookup"><span data-stu-id="a14c9-106">You must also set the <xref:System.Windows.Media.TileBrush.Viewport%2A> of the <xref:System.Windows.Media.TileBrush> so that it is smaller than the area that you are painting; otherwise, only a single tile is produced, regardless which <xref:System.Windows.Media.TileBrush.TileMode%2A> setting you use.</span></span>  
   
-## Пример  
- В следующем примере создаются пять объектов <xref:System.Windows.Media.DrawingBrush>, каждому из них присваиваются различные значения <xref:System.Windows.Media.TileBrush.TileMode%2A>, и затем они используются для рисования пяти прямоугольников.  Хотя этот пример использует класс <xref:System.Windows.Media.DrawingBrush> для демонстрации поведения <xref:System.Windows.Media.TileBrush.TileMode%2A>, свойство <xref:System.Windows.Media.TileBrush.TileMode%2A> работает одинаково для всех объектов <xref:System.Windows.Media.TileBrush>, т.е. для <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.VisualBrush> и <xref:System.Windows.Media.DrawingBrush>.  
+## <a name="example"></a><span data-ttu-id="a14c9-107">Пример</span><span class="sxs-lookup"><span data-stu-id="a14c9-107">Example</span></span>  
+ <span data-ttu-id="a14c9-108">В следующем примере создается пять <xref:System.Windows.Media.DrawingBrush> объектов, дает им каждый отдельный <xref:System.Windows.Media.TileBrush.TileMode%2A> установку и использует их для рисования пяти прямоугольников.</span><span class="sxs-lookup"><span data-stu-id="a14c9-108">The following example creates five <xref:System.Windows.Media.DrawingBrush> objects, gives them each a different <xref:System.Windows.Media.TileBrush.TileMode%2A> setting, and uses them to paint five rectangles.</span></span> <span data-ttu-id="a14c9-109">Несмотря на то, что в этом примере используется <xref:System.Windows.Media.DrawingBrush> для демонстрации <xref:System.Windows.Media.TileBrush.TileMode%2A> поведение, <xref:System.Windows.Media.TileBrush.TileMode%2A> работает одинаково для всех <xref:System.Windows.Media.TileBrush> объектов, то есть для <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.VisualBrush>, и <xref:System.Windows.Media.DrawingBrush>.</span><span class="sxs-lookup"><span data-stu-id="a14c9-109">Although this example uses the <xref:System.Windows.Media.DrawingBrush> class to demonstrate <xref:System.Windows.Media.TileBrush.TileMode%2A> behavior, the <xref:System.Windows.Media.TileBrush.TileMode%2A> property works identically for all the <xref:System.Windows.Media.TileBrush> objects, that is, for <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.VisualBrush>, and <xref:System.Windows.Media.DrawingBrush>.</span></span>  
   
- На следующем рисунке показан результат данного примера.  
+ <span data-ttu-id="a14c9-110">На следующей иллюстрации показан результат выполнения этого примера.</span><span class="sxs-lookup"><span data-stu-id="a14c9-110">The following illustration shows the output that this example produces.</span></span>  
   
- ![Пример мозаичного вывода TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrushtilemodeexample.png "graphicsmm\_DrawingBrushTileModeExample")  
-Шаблоны мозаики, созданные с помощью свойства TileMode  
+ <span data-ttu-id="a14c9-111">![Мозаичное заполнение в выходных данных примера TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrushtilemodeexample.png "graphicsmm_DrawingBrushTileModeExample")</span><span class="sxs-lookup"><span data-stu-id="a14c9-111">![TileBrush tiling example output](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrushtilemodeexample.png "graphicsmm_DrawingBrushTileModeExample")</span></span>  
+<span data-ttu-id="a14c9-112">Шаблоны мозаики, созданные с помощью свойства TileMode</span><span class="sxs-lookup"><span data-stu-id="a14c9-112">Tile patterns created with the TileMode property</span></span>  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMDrawingBrushTileModeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/TileModeExample.cs#graphicsmmdrawingbrushtilemodeexample)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMDrawingBrushTileModeExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/tilemodeexample.vb#graphicsmmdrawingbrushtilemodeexample)]
- [!code-xml[BrushesIntroduction_snip#GraphicsMMDrawingBrushTileModeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/TileModeExample.xaml#graphicsmmdrawingbrushtilemodeexample)]  
+ [!code-xaml[BrushesIntroduction_snip#GraphicsMMDrawingBrushTileModeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/TileModeExample.xaml#graphicsmmdrawingbrushtilemodeexample)]  
   
-## См. также  
- [Установка размера мозаики для TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-tile-size-for-a-tilebrush.md)   
- [Рисование с помощью объектов Image, Drawing и Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+## <a name="see-also"></a><span data-ttu-id="a14c9-113">См. также</span><span class="sxs-lookup"><span data-stu-id="a14c9-113">See Also</span></span>  
+ [<span data-ttu-id="a14c9-114">Установка размера плитки для объекта TileBrush</span><span class="sxs-lookup"><span data-stu-id="a14c9-114">Set the Tile Size for a TileBrush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-tile-size-for-a-tilebrush.md)  
+ [<span data-ttu-id="a14c9-115">Заполнение с использованием изображений, рисунков и визуальных элементов</span><span class="sxs-lookup"><span data-stu-id="a14c9-115">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

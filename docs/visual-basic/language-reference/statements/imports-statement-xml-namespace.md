@@ -1,81 +1,62 @@
 ---
-title: "Оператор Imports (пространство имен XML) | Документы Microsoft"
-ms.date: 2015-07-20
+title: "Оператор Imports (пространство имен XML)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.ImportsXmlns
-dev_langs:
-- VB
+f1_keywords: vb.ImportsXmlns
 helpviewer_keywords:
 - XML namespace [Visual Basic], importing
 - imports [Visual Basic]
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 546168994973d19336f86f4b4e9ec566f0b9dd91
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a0fe6d37c58ead94f2c03736318209abb67cd6dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="imports-statement-xml-namespace"></a>Оператор Imports (пространство имен XML)
-Импортирует префиксы пространства имен XML для использования в XML-литералы и свойства оси XML.  
+# <a name="imports-statement-xml-namespace"></a><span data-ttu-id="007b7-102">Оператор Imports (пространство имен XML)</span><span class="sxs-lookup"><span data-stu-id="007b7-102">Imports Statement (XML Namespace)</span></span>
+<span data-ttu-id="007b7-103">Импортирует префиксы пространства имен XML для использования в XML-литералы и свойства оси XML.</span><span class="sxs-lookup"><span data-stu-id="007b7-103">Imports XML namespace prefixes for use in XML literals and XML axis properties.</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="007b7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="007b7-104">Syntax</span></span>  
   
 ```  
 Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">  
 ```  
   
-## <a name="parts"></a>Части  
+## <a name="parts"></a><span data-ttu-id="007b7-105">Части</span><span class="sxs-lookup"><span data-stu-id="007b7-105">Parts</span></span>  
  `xmlNamespacePrefix`  
- Необязательный. Строка, по которой XML элементы и атрибуты можно обращаться к `xmlNamespaceName`. Если не `xmlNamespacePrefix` будет указано, импортируемое пространство имен XML — пространство имен XML по умолчанию. Должен быть допустимым идентификатором XML. Дополнительные сведения см. в разделе [имена объявленных элементов XML и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).  
+ <span data-ttu-id="007b7-106">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="007b7-106">Optional.</span></span> <span data-ttu-id="007b7-107">Строка, в котором XML элементы и атрибуты могут ссылаться на `xmlNamespaceName`.</span><span class="sxs-lookup"><span data-stu-id="007b7-107">The string by which XML elements and attributes can refer to `xmlNamespaceName`.</span></span> <span data-ttu-id="007b7-108">Если не `xmlNamespacePrefix` будет указано, импортируемое пространство имен XML — пространство имен XML по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="007b7-108">If no `xmlNamespacePrefix` is supplied, the imported XML namespace is the default XML namespace.</span></span> <span data-ttu-id="007b7-109">Должен быть допустимым идентификатором XML.</span><span class="sxs-lookup"><span data-stu-id="007b7-109">Must be a valid XML identifier.</span></span> <span data-ttu-id="007b7-110">Дополнительные сведения см. в разделе [имена из объявленных элементов и атрибутов XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="007b7-110">For more information, see [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).</span></span>  
   
  `xmlNamespaceName`  
- Обязательный. Строка, определяющая импортируемого пространства имен XML.  
+ <span data-ttu-id="007b7-111">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="007b7-111">Required.</span></span> <span data-ttu-id="007b7-112">Строка, определяющая импортируемого пространства имен XML.</span><span class="sxs-lookup"><span data-stu-id="007b7-112">The string identifying the XML namespace being imported.</span></span>  
   
-## <a name="remarks"></a>Примечания  
- Можно использовать `Imports` инструкции для определения глобального пространства имен XML, который можно использовать с XML-литералы и свойства оси XML, а также параметры, передаваемые `GetXmlNamespace` оператор. (Дополнительные сведения об использовании `Imports` statement, чтобы импортировать псевдоним, который можно использовать, где используются имена типов в коде, в разделе [оператор Imports (пространство имен .NET и тип)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) Синтаксис объявления пространства имен XML с помощью `Imports` инструкции идентичен синтаксису, используемому в формате XML. Таким образом, можно скопировать объявление пространства имен из XML-файла и использовать его в `Imports` инструкции.  
+## <a name="remarks"></a><span data-ttu-id="007b7-113">Примечания</span><span class="sxs-lookup"><span data-stu-id="007b7-113">Remarks</span></span>  
+ <span data-ttu-id="007b7-114">Можно использовать `Imports` инструкции для определения глобальных пространств имен XML, который можно использовать с XML-литералы и свойства оси XML, или в качестве параметров, переданных `GetXmlNamespace` оператор.</span><span class="sxs-lookup"><span data-stu-id="007b7-114">You can use the `Imports` statement to define global XML namespaces that you can use with XML literals and XML axis properties, or as parameters passed to the `GetXmlNamespace` operator.</span></span> <span data-ttu-id="007b7-115">(Дополнительные сведения об использовании `Imports` инструкцию, чтобы импортировать псевдоним, который можно использовать, где используются имена типов в коде, в разделе [оператор Imports (пространство имен .NET и тип)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) Синтаксис объявления пространства имен XML с помощью `Imports` инструкции идентична синтаксис, используемый в формате XML.</span><span class="sxs-lookup"><span data-stu-id="007b7-115">(For information about using the `Imports` statement to import an alias that can be used where type names are used in your code, see [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) The syntax for declaring an XML namespace by using the `Imports` statement is identical to the syntax used in XML.</span></span> <span data-ttu-id="007b7-116">Таким образом, можно скопировать объявление пространства имен из XML-файла и использовать его в `Imports` инструкции.</span><span class="sxs-lookup"><span data-stu-id="007b7-116">Therefore, you can copy a namespace declaration from an XML file and use it in an `Imports` statement.</span></span>  
   
- Префиксы пространства имен XML полезны, когда требуется повторно создать элементы XML, которые находятся в том же пространстве имен. Префикс пространства имен XML, объявленные с `Imports` инструкция является глобальным в том смысле, что он доступен всему коду в файле. Его можно использовать при создании литералов XML-элемента и при доступе к свойствам осей XML. Дополнительные сведения см. в разделе [литерала XML элемент](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) и [свойства оси XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md).  
+ <span data-ttu-id="007b7-117">Префиксы пространства имен XML полезны в тех случаях, когда требуется повторно создать XML-элементах из одного пространства имен.</span><span class="sxs-lookup"><span data-stu-id="007b7-117">XML namespace prefixes are useful when you want to repeatedly create XML elements that are from the same namespace.</span></span> <span data-ttu-id="007b7-118">Объявленный префикс пространства имен XML с `Imports` инструкция является глобальным в том смысле, что он доступен для всего кода в файле.</span><span class="sxs-lookup"><span data-stu-id="007b7-118">The XML namespace prefix declared with the `Imports` statement is global in the sense that it is available to all code in the file.</span></span> <span data-ttu-id="007b7-119">Его можно использовать при создании литералов XML-элемента и при доступе к свойства оси XML.</span><span class="sxs-lookup"><span data-stu-id="007b7-119">You can use it when you create XML element literals and when you access XML axis properties.</span></span> <span data-ttu-id="007b7-120">Дополнительные сведения см. в разделе [литерала элемента XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) и [свойства оси XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md).</span><span class="sxs-lookup"><span data-stu-id="007b7-120">For more information, see [XML Element Literal](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) and [XML Axis Properties](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md).</span></span>  
   
- Если можно определить глобальное пространство имен XML без префикса пространства имен (например, `Imports <xmlns="http://SomeNameSpace>"`), такое пространство рассматривается как пространство имен XML по умолчанию. Пространство имен XML по умолчанию используется для любого элемента XML-литералов или свойств оси атрибута XML, которых явно не указано пространство имен. Пространство имен по умолчанию также используется, если указанного пространства имен является пустое пространство имен (то есть, `xmlns=""`). Пространство имен XML по умолчанию не применяется для атрибутов XML в XML-литералов или свойства оси атрибута XML, у которых нет пространства имен.  
+ <span data-ttu-id="007b7-121">Если определить глобальное пространство имен XML без префикса пространства имен (например, `Imports <xmlns="http://SomeNameSpace>"`), это пространство имен, считается пространства имен XML по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="007b7-121">If you define a global XML namespace without a namespace prefix (for example, `Imports <xmlns="http://SomeNameSpace>"`), that namespace is considered the default XML namespace.</span></span> <span data-ttu-id="007b7-122">Для любого элемента XML-литералов или свойств оси атрибута XML, не указывается пространство имен явно используется пространство имен XML по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="007b7-122">The default XML namespace is used for any XML element literals or XML attribute axis properties that do not explicitly specify a namespace.</span></span> <span data-ttu-id="007b7-123">Пространство имен по умолчанию используется также в том случае, если указанное пространство имен является пустое пространство (то есть, `xmlns=""`).</span><span class="sxs-lookup"><span data-stu-id="007b7-123">The default namespace is also used if the specified namespace is the empty namespace (that is, `xmlns=""`).</span></span> <span data-ttu-id="007b7-124">Пространство имен XML по умолчанию не применяется для атрибутов XML в XML-литералов или свойств оси атрибута XML, не имеет пространства имен.</span><span class="sxs-lookup"><span data-stu-id="007b7-124">The default XML namespace does not apply to XML attributes in XML literals or to XML attribute axis properties that do not have a namespace.</span></span>  
   
- Пространства имен XML, определенные в XML-литерал, который называются *локальными пространствами имен XML*, имеют приоритет над пространствами имен XML, определяются `Imports` инструкции в качестве глобальных. Пространства имен XML, который определен с `Imports` инструкции имеют приоритет над пространствами имен XML, импортированные для проекта Visual Basic. Если XML-литерал определяет пространство имен XML, то Локальное пространство имен неприменимо к внедренные выражения.  
+ <span data-ttu-id="007b7-125">Пространства имен XML, определенные в XML-литерал, которые называются *локального пространства имен XML*, имеют приоритет над пространствами имен XML, который определен с `Imports` инструкции как глобальный.</span><span class="sxs-lookup"><span data-stu-id="007b7-125">XML namespaces that are defined in an XML literal, which are called *local XML namespaces*, take precedence over XML namespaces that are defined by the `Imports` statement as global.</span></span> <span data-ttu-id="007b7-126">Пространства имен XML, который определен с `Imports` инструкции имеют приоритет над пространства имен XML, импортированные в проекте Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="007b7-126">XML namespaces that are defined by the `Imports` statement take precedence over XML namespaces imported for a Visual Basic project.</span></span> <span data-ttu-id="007b7-127">Если XML-литерал определяет пространство имен XML, то Локальное пространство имен не применяется к внедренные выражения.</span><span class="sxs-lookup"><span data-stu-id="007b7-127">If an XML literal defines an XML namespace, that local namespace does not apply to embedded expressions.</span></span>  
   
- Глобальные пространства имен XML, выполните те же правила области видимости и определения пространства имен .NET Framework. В результате можно включить `Imports` инструкции для определения глобального пространства имен XML в любом месте можно импортировать пространство имен .NET Framework. Это включает файлы кода и импортированные пространства имен на уровне проекта. Сведения о пространствах имен уровня проекта см. в разделе [страница "ссылки" в конструкторе проектов (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/references-page-project-designer-visual-basic).  
+ <span data-ttu-id="007b7-128">Глобальные пространства имен XML подчиняются тем же правилам определения областей и определения, как пространства имен .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="007b7-128">Global XML namespaces follow the same scoping and definition rules as .NET Framework namespaces.</span></span> <span data-ttu-id="007b7-129">В результате можно включить `Imports` инструкции для определения глобального пространства имен XML в любом месте можно импортировать пространство имен .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="007b7-129">As a result, you can include an `Imports` statement to define a global XML namespace anywhere you can import a .NET Framework namespace.</span></span> <span data-ttu-id="007b7-130">Сюда входят файлы кода и импортированных пространств имен уровня проекта.</span><span class="sxs-lookup"><span data-stu-id="007b7-130">This includes both code files and project-level imported namespaces.</span></span> <span data-ttu-id="007b7-131">Сведения о пространствах имен уровня проекта см. в разделе [страница "ссылки" в конструкторе проектов (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="007b7-131">For information about project-level imported namespaces, see [References Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic).</span></span>  
   
- Каждый исходный файл может содержать любое количество `Imports` инструкции. Они должны следовать за параметром объявления, такие как `Option Strict` инструкции и они должны предшествовать объявления элементов программирования, таких как `Module` или `Class` инструкции.  
+ <span data-ttu-id="007b7-132">Каждый исходный файл может содержать любое количество `Imports` инструкции.</span><span class="sxs-lookup"><span data-stu-id="007b7-132">Each source file can contain any number of `Imports` statements.</span></span> <span data-ttu-id="007b7-133">Они должны следовать за параметром объявления, такие как `Option Strict` инструкции и они должны предшествовать объявлениям элементов программирования, таких как `Module` или `Class` инструкции.</span><span class="sxs-lookup"><span data-stu-id="007b7-133">These must follow option declarations, such as the `Option Strict` statement, and they must precede programming element declarations, such as `Module` or `Class` statements.</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере импортируется пространство имен XML по умолчанию и определить префикс пространства имен XML `ns`. Затем он создает XML-литералы, использующие оба пространства имен.  
+## <a name="example"></a><span data-ttu-id="007b7-134">Пример</span><span class="sxs-lookup"><span data-stu-id="007b7-134">Example</span></span>  
+ <span data-ttu-id="007b7-135">В следующем примере импортируется пространство имен XML по умолчанию и пространства имен XML, определенного с префиксом `ns`.</span><span class="sxs-lookup"><span data-stu-id="007b7-135">The following example imports a default XML namespace and an XML namespace identified with the prefix `ns`.</span></span> <span data-ttu-id="007b7-136">Затем он создает XML-литералы, использующие оба пространства имен.</span><span class="sxs-lookup"><span data-stu-id="007b7-136">It then creates XML literals that use both namespaces.</span></span>  
   
- [!code-vb[VbXMLSamples&#45;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_1.vb)]  
+ [!code-vb[VbXMLSamples#45](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_1.vb)]  
   
- Этот пример кода отображает следующий текст:  
+ <span data-ttu-id="007b7-137">Этот пример кода отображает следующий текст:</span><span class="sxs-lookup"><span data-stu-id="007b7-137">This code displays the following text:</span></span>  
   
 ```xml  
 <ns:outer xmlns="http://DefaultNamespace"   
@@ -86,12 +67,12 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 </ns:outer>  
 ```  
   
-## <a name="example"></a>Пример  
- В следующем примере импортируется префикс пространства имен XML `ns`. Затем он создает XML-литерал, использует префикс пространства имен и отображается конечная форма элемента.  
+## <a name="example"></a><span data-ttu-id="007b7-138">Пример</span><span class="sxs-lookup"><span data-stu-id="007b7-138">Example</span></span>  
+ <span data-ttu-id="007b7-139">В следующем примере выполняется импорт префикс пространства имен XML `ns`.</span><span class="sxs-lookup"><span data-stu-id="007b7-139">The following example imports the XML namespace prefix `ns`.</span></span> <span data-ttu-id="007b7-140">Затем он создает XML-литерал, использует префикс пространства имен и отображается конечная форма элемента.</span><span class="sxs-lookup"><span data-stu-id="007b7-140">It then creates an XML literal that uses the namespace prefix and displays the element's final form.</span></span>  
   
- [!code-vb[VbXMLSamples&#22;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_2.vb)]  
+ [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_2.vb)]  
   
- Этот пример кода отображает следующий текст:  
+ <span data-ttu-id="007b7-141">Этот пример кода отображает следующий текст:</span><span class="sxs-lookup"><span data-stu-id="007b7-141">This code displays the following text:</span></span>  
   
 ```xml  
 <ns:outer xmlns:ns="http://SomeNamespace">  
@@ -102,19 +83,19 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 </ns:outer>  
 ```  
   
- Обратите внимание, что компилятор преобразует префикс пространства имен XML из глобального префикса в определение локального префикса.  
+ <span data-ttu-id="007b7-142">Обратите внимание, что компилятор преобразует префикс пространства имен XML из глобального префикса определение локального префикса.</span><span class="sxs-lookup"><span data-stu-id="007b7-142">Notice that the compiler converted the XML namespace prefix from a global prefix to a local prefix definition.</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере импортируется префикс пространства имен XML `ns`. Затем префикс пространства имен используется для создания литерала XML и доступа к первому дочернему узлу с полным именем `ns:name`.  
+## <a name="example"></a><span data-ttu-id="007b7-143">Пример</span><span class="sxs-lookup"><span data-stu-id="007b7-143">Example</span></span>  
+ <span data-ttu-id="007b7-144">В следующем примере выполняется импорт префикс пространства имен XML `ns`.</span><span class="sxs-lookup"><span data-stu-id="007b7-144">The following example imports the XML namespace prefix `ns`.</span></span> <span data-ttu-id="007b7-145">Затем префикс пространства имен используется для создания литерала XML и доступа к первому дочернему узлу с полным именем `ns:name`.</span><span class="sxs-lookup"><span data-stu-id="007b7-145">It then uses the prefix of the namespace to create an XML literal and access the first child node with the qualified name `ns:name`.</span></span>  
   
- [!code-vb[VbXMLSamples&19;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_3.vb)]  
+ [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_3.vb)]  
   
- Этот пример кода отображает следующий текст:  
+ <span data-ttu-id="007b7-146">Этот пример кода отображает следующий текст:</span><span class="sxs-lookup"><span data-stu-id="007b7-146">This code displays the following text:</span></span>  
   
  `Patrick Hines`  
   
-## <a name="see-also"></a>См. также  
- [Литеральное представление XML элемента](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)   
- [Свойства оси XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)   
- [Имена объявленных элементов и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)   
- [Оператор GetXmlNamespace](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)
+## <a name="see-also"></a><span data-ttu-id="007b7-147">См. также</span><span class="sxs-lookup"><span data-stu-id="007b7-147">See Also</span></span>  
+ [<span data-ttu-id="007b7-148">XML-литерал элемента</span><span class="sxs-lookup"><span data-stu-id="007b7-148">XML Element Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
+ [<span data-ttu-id="007b7-149">Свойства оси XML</span><span class="sxs-lookup"><span data-stu-id="007b7-149">XML Axis Properties</span></span>](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [<span data-ttu-id="007b7-150">Имена объявленных элементов и атрибутов XML</span><span class="sxs-lookup"><span data-stu-id="007b7-150">Names of Declared XML Elements and Attributes</span></span>](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)  
+ [<span data-ttu-id="007b7-151">Оператор GetXmlNamespace</span><span class="sxs-lookup"><span data-stu-id="007b7-151">GetXmlNamespace Operator</span></span>](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)

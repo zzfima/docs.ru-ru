@@ -1,109 +1,92 @@
 ---
-title: "Время существования в Visual Basic | Документы Microsoft"
+title: "Время существования в Visual Basic"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- static variables, lifetime
-- static variables, Visual Basic
-- declared elements, lifetime
-- Shared variable lifetime
-- lifetime, declared elements
-- lifetime, Visual Basic
-- lifetime
+- static variables [Visual Basic], lifetime
+- static variables [Visual Basic], Visual Basic
+- declared elements [Visual Basic], lifetime
+- Shared variable lifetime [Visual Basic]
+- lifetime [Visual Basic], declared elements
+- lifetime [Visual Basic], Visual Basic
+- lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fa0cbdf4a8fe5e8fc41e4e4f373c79451fb7b75f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 999490885571889b2de911cc14754f8db257d0af
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="lifetime-in-visual-basic"></a>Время существования в Visual Basic
-*Время существования* объявленного элемента — это период времени, во время которого он доступен для использования. Переменные, только элементы, которые имеют время жизни. Для этой цели компилятор обрабатывает параметры процедуры и функция возвращает как особые виды переменных. Время жизни переменной представляет период времени, в течение которого она может иметь значение. Его значение может меняться со временем, но он всегда содержит некоторое значение.  
+# <a name="lifetime-in-visual-basic"></a><span data-ttu-id="766c0-102">Время существования в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="766c0-102">Lifetime in Visual Basic</span></span>
+<span data-ttu-id="766c0-103">*Время существования* объявленного элемента — это период времени, во время которого он доступен для использования.</span><span class="sxs-lookup"><span data-stu-id="766c0-103">The *lifetime* of a declared element is the period of time during which it is available for use.</span></span> <span data-ttu-id="766c0-104">Переменные являются только элементы, которые имеют время жизни.</span><span class="sxs-lookup"><span data-stu-id="766c0-104">Variables are the only elements that have lifetime.</span></span> <span data-ttu-id="766c0-105">Для этой цели компилятор обрабатывает параметры процедуры, и функция возвращает в качестве особые случаи переменных.</span><span class="sxs-lookup"><span data-stu-id="766c0-105">For this purpose, the compiler treats procedure parameters and function returns as special cases of variables.</span></span> <span data-ttu-id="766c0-106">Срок жизни переменной представляет период времени, в течение которого может иметь значение.</span><span class="sxs-lookup"><span data-stu-id="766c0-106">The lifetime of a variable represents the period of time during which it can hold a value.</span></span> <span data-ttu-id="766c0-107">Его значение может меняться со временем, но он всегда содержит некоторое значение.</span><span class="sxs-lookup"><span data-stu-id="766c0-107">Its value can change over its lifetime, but it always holds some value.</span></span>  
   
-## <a name="different-lifetimes"></a>Различные жизненные циклы  
- Объект *переменной-члена* (объявленные на уровне модуля, вне любой процедуры) обычно имеет то же время существования, как элемент, в котором она объявлена. Неиспользуемый переменной, объявленной в классе или структуре существует как отдельная копия для каждого экземпляра класса или структуры, в котором она объявлена. Каждая такая переменная имеет то же время существования экземпляра. Однако `Shared` переменная имеет сроком существования, который длится в течение работы приложения.  
+## <a name="different-lifetimes"></a><span data-ttu-id="766c0-108">Различные сроки существования</span><span class="sxs-lookup"><span data-stu-id="766c0-108">Different Lifetimes</span></span>  
+ <span data-ttu-id="766c0-109">Объект *переменной-члена* (объявленные на уровне модуля, вне любой процедуры) обычно имеет то же время существования, как элемент, в котором она объявлена.</span><span class="sxs-lookup"><span data-stu-id="766c0-109">A *member variable* (declared at module level, outside any procedure) typically has the same lifetime as the element in which it is declared.</span></span> <span data-ttu-id="766c0-110">Не являющаяся общей переменная объявлена в классе или структуре существует как отдельная копия для каждого экземпляра класса или структуры, в котором она объявлена.</span><span class="sxs-lookup"><span data-stu-id="766c0-110">A nonshared variable declared in a class or structure exists as a separate copy for each instance of the class or structure in which it is declared.</span></span> <span data-ttu-id="766c0-111">Каждая такая переменная имеет одинаковое время существования экземпляра.</span><span class="sxs-lookup"><span data-stu-id="766c0-111">Each such variable has the same lifetime as its instance.</span></span> <span data-ttu-id="766c0-112">Однако `Shared` переменная имеет сроком существования, который длится в течение работы приложения.</span><span class="sxs-lookup"><span data-stu-id="766c0-112">However, a `Shared` variable has only a single lifetime, which lasts for the entire time your application is running.</span></span>  
   
- Объект *локальной переменной* (объявленные внутри процедуры) существует только во время выполнения процедуры, в котором она объявлена. Это также относится к аргументам этой процедуры и значениям, возвращаемым функциями. Однако если процедура вызывает другие процедуры, значения ее локальных переменных сохраняются во время выполнения вызванной процедуры.  
+ <span data-ttu-id="766c0-113">Объект *локальной переменной* (объявленные внутри процедуры) существует только во время выполнения процедуры, в котором она объявлена.</span><span class="sxs-lookup"><span data-stu-id="766c0-113">A *local variable* (declared inside a procedure) exists only while the procedure in which it is declared is running.</span></span> <span data-ttu-id="766c0-114">Это также относится к аргументам этой процедуры и значениям, возвращаемым функциями.</span><span class="sxs-lookup"><span data-stu-id="766c0-114">This applies also to that procedure's parameters and to any function return.</span></span> <span data-ttu-id="766c0-115">Однако если процедура вызывает другие процедуры, значения локальных переменных сохраняются во время работы вызываемых процедур.</span><span class="sxs-lookup"><span data-stu-id="766c0-115">However, if that procedure calls other procedures, the local variables retain their values while the called procedures are running.</span></span>  
   
-## <a name="beginning-of-lifetime"></a>Начало времени существования  
- Время существования локальной переменной начинается при передаче управления процедуры, в котором она объявлена. Каждой локальной переменной инициализируется значением по умолчанию для его типа данных, как только начинается процедура запущена. Когда в процедуре встречается `Dim` инструкция, определяющая исходные значения, он устанавливает эти переменные для этих значений, даже если код уже назначены другие значения.  
+## <a name="beginning-of-lifetime"></a><span data-ttu-id="766c0-116">Начало времени существования</span><span class="sxs-lookup"><span data-stu-id="766c0-116">Beginning of Lifetime</span></span>  
+ <span data-ttu-id="766c0-117">Время существования локальной переменной начинается при передаче управления процедуры, в котором она объявлена.</span><span class="sxs-lookup"><span data-stu-id="766c0-117">A local variable's lifetime begins when control enters the procedure in which it is declared.</span></span> <span data-ttu-id="766c0-118">Каждой локальной переменной инициализируется значением по умолчанию для его типа данных, как только начинается процедура запущена.</span><span class="sxs-lookup"><span data-stu-id="766c0-118">Every local variable is initialized to the default value for its data type as soon as the procedure begins running.</span></span> <span data-ttu-id="766c0-119">Когда в процедуре встречается `Dim` инструкция, определяющая исходные значения, он задает эти переменные те значения, даже если ваш код уже назначены другие значения.</span><span class="sxs-lookup"><span data-stu-id="766c0-119">When the procedure encounters a `Dim` statement that specifies initial values, it sets those variables to those values, even if your code had already assigned other values to them.</span></span>  
   
- Каждый член структурной переменной инициализируется, как если бы он был отдельной переменной. Аналогичным образом каждый элемент массива инициализируется отдельно.  
+ <span data-ttu-id="766c0-120">Каждый член структурной переменной инициализируется, как если бы он был отдельной переменной.</span><span class="sxs-lookup"><span data-stu-id="766c0-120">Each member of a structure variable is initialized as if it were a separate variable.</span></span> <span data-ttu-id="766c0-121">Аналогичным образом каждый элемент массива инициализируется по отдельности.</span><span class="sxs-lookup"><span data-stu-id="766c0-121">Similarly, each element of an array variable is initialized individually.</span></span>  
   
- Переменные, объявленные в блоке внутри процедуры (такие как `For` цикл), инициализируются при входе в процедуру. Инициализация вступают в силу ли код никогда не исполняет блока.  
+ <span data-ttu-id="766c0-122">Переменные, объявленные в блоке внутри процедуры (например, `For` цикла), инициализируются при входе в процедуру.</span><span class="sxs-lookup"><span data-stu-id="766c0-122">Variables declared within a block inside a procedure (such as a `For` loop) are initialized on entry to the procedure.</span></span> <span data-ttu-id="766c0-123">Инициализация вступают в силу независимо от того, имеется ли ваш код, когда-либо выполняется блок.</span><span class="sxs-lookup"><span data-stu-id="766c0-123">These initializations take effect whether or not your code ever executes the block.</span></span>  
   
-## <a name="end-of-lifetime"></a>Окончание времени существования  
- Когда процедура завершается, значения ее локальных переменных не сохраняются, и [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] освобождает память. В следующий раз, вызвать процедуру, все ее локальные переменные создаются заново и повторно инициализированы.  
+## <a name="end-of-lifetime"></a><span data-ttu-id="766c0-124">Окончание времени существования</span><span class="sxs-lookup"><span data-stu-id="766c0-124">End of Lifetime</span></span>  
+ <span data-ttu-id="766c0-125">По окончании выполнения процедуры значения ее локальных переменных не сохраняются, и [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] освобождает память.</span><span class="sxs-lookup"><span data-stu-id="766c0-125">When a procedure terminates, the values of its local variables are not preserved, and [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] reclaims their memory.</span></span> <span data-ttu-id="766c0-126">При очередном вызове процедуры, все ее локальные переменные создаются заново и повторно инициализированы.</span><span class="sxs-lookup"><span data-stu-id="766c0-126">The next time you call the procedure, all its local variables are created afresh and reinitialized.</span></span>  
   
- При экземпляра класса или структуры, не являющиеся общими переменные теряют их память и их значения. Каждый новый экземпляр класса или структуры создает и повторно инициализирует не совместно переменные. Однако `Shared` переменные сохраняются, пока не завершится работа приложения.  
+ <span data-ttu-id="766c0-127">При экземпляра класса или структуры, не являющиеся общими переменные теряют их память и их значения.</span><span class="sxs-lookup"><span data-stu-id="766c0-127">When an instance of a class or structure terminates, its nonshared variables lose their memory and their values.</span></span> <span data-ttu-id="766c0-128">Каждый новый экземпляр класса или структуры, создает и повторно инициализирует ее не совместно переменные.</span><span class="sxs-lookup"><span data-stu-id="766c0-128">Each new instance of the class or structure creates and reinitializes its nonshared variables.</span></span> <span data-ttu-id="766c0-129">Однако `Shared` переменные сохраняются, пока не завершится работа приложения.</span><span class="sxs-lookup"><span data-stu-id="766c0-129">However, `Shared` variables are preserved until your application stops running.</span></span>  
   
-## <a name="extension-of-lifetime"></a>Продление срока жизни  
- Если объявить локальную переменную с `Static` ключевое слово, ее время существования будет дольше времени выполнения процедуры. В следующей таблице показано, как объявление процедуры определяет, как долго `Static` переменная существует.  
+## <a name="extension-of-lifetime"></a><span data-ttu-id="766c0-130">Продление срока жизни</span><span class="sxs-lookup"><span data-stu-id="766c0-130">Extension of Lifetime</span></span>  
+ <span data-ttu-id="766c0-131">Если объявить локальную переменную с `Static` ключевое слово, время существования превышает время выполнения процедуры.</span><span class="sxs-lookup"><span data-stu-id="766c0-131">If you declare a local variable with the `Static` keyword, its lifetime is longer than the execution time of its procedure.</span></span> <span data-ttu-id="766c0-132">В следующей таблице показано, как объявление процедуры определяет, как долго `Static` переменная существует.</span><span class="sxs-lookup"><span data-stu-id="766c0-132">The following table shows how the procedure declaration determines how long a `Static` variable exists.</span></span>  
   
-|Расположение процедуры и совместное использование|Начинается время существования статической переменной|Заканчивается время существования статической переменной|  
+|<span data-ttu-id="766c0-133">Расположение процедуры и совместное использование</span><span class="sxs-lookup"><span data-stu-id="766c0-133">Procedure location and sharing</span></span>|<span data-ttu-id="766c0-134">Начинается время существования статической переменной</span><span class="sxs-lookup"><span data-stu-id="766c0-134">Static variable lifetime begins</span></span>|<span data-ttu-id="766c0-135">Заканчивается время существования статической переменной</span><span class="sxs-lookup"><span data-stu-id="766c0-135">Static variable lifetime ends</span></span>|  
 |------------------------------------|-------------------------------------|-----------------------------------|  
-|В модуле (общем по умолчанию)|Первый раз при вызове процедуры|При остановке приложения|  
-|В классе `Shared` (процедура не является членом экземпляра)|Первый раз при вызове процедуры на определенном экземпляре или на само имя класса или структуры|При остановке приложения|  
-|В экземпляре класса не `Shared` (процедура является членом экземпляра)|Первый раз при вызове процедуры для определенного экземпляра|Когда экземпляр освобождается для сборки мусора (GC)|  
+|<span data-ttu-id="766c0-136">В модуле (совместно используемые по умолчанию)</span><span class="sxs-lookup"><span data-stu-id="766c0-136">In a module (shared by default)</span></span>|<span data-ttu-id="766c0-137">Первый раз при вызове процедуры</span><span class="sxs-lookup"><span data-stu-id="766c0-137">The first time the procedure is called</span></span>|<span data-ttu-id="766c0-138">При остановке приложения</span><span class="sxs-lookup"><span data-stu-id="766c0-138">When your application stops running</span></span>|  
+|<span data-ttu-id="766c0-139">В классе `Shared` (процедура не является членом экземпляра)</span><span class="sxs-lookup"><span data-stu-id="766c0-139">In a class, `Shared` (procedure is not an instance member)</span></span>|<span data-ttu-id="766c0-140">Первый раз процедура вызывается на определенном экземпляре или на само имя класса или структуры</span><span class="sxs-lookup"><span data-stu-id="766c0-140">The first time the procedure is called either on a specific instance or on the class or structure name itself</span></span>|<span data-ttu-id="766c0-141">При остановке приложения</span><span class="sxs-lookup"><span data-stu-id="766c0-141">When your application stops running</span></span>|  
+|<span data-ttu-id="766c0-142">В экземпляре класса не `Shared` (процедура является членом экземпляра)</span><span class="sxs-lookup"><span data-stu-id="766c0-142">In an instance of a class, not `Shared` (procedure is an instance member)</span></span>|<span data-ttu-id="766c0-143">Первый раз при вызове процедуры для определенного экземпляра</span><span class="sxs-lookup"><span data-stu-id="766c0-143">The first time the procedure is called on the specific instance</span></span>|<span data-ttu-id="766c0-144">Если этот экземпляр освобождается для сборки мусора (GC)</span><span class="sxs-lookup"><span data-stu-id="766c0-144">When the instance is released for garbage collection (GC)</span></span>|  
   
-## <a name="static-variables-of-the-same-name"></a>Статические переменные с тем же именем  
- Можно объявить статические переменные с тем же именем в более чем одной процедуры. После этого, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] компилятор считает каждую из этих переменных как отдельный элемент. Инициализация одной из этих переменных не влияет на значения остальных. Это же правило применяется при определении процедуры с набором перегрузок и объявлении статической переменной с тем же именем в каждой перегрузке.  
+## <a name="static-variables-of-the-same-name"></a><span data-ttu-id="766c0-145">Статические переменные с тем же именем</span><span class="sxs-lookup"><span data-stu-id="766c0-145">Static Variables of the Same Name</span></span>  
+ <span data-ttu-id="766c0-146">Можно объявить статические переменные с тем же именем в более чем одной процедуры.</span><span class="sxs-lookup"><span data-stu-id="766c0-146">You can declare static variables with the same name in more than one procedure.</span></span> <span data-ttu-id="766c0-147">После этого, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] компилятор считает, что каждый из таких переменных как отдельный элемент.</span><span class="sxs-lookup"><span data-stu-id="766c0-147">If you do this, the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler considers each such variable to be a separate element.</span></span> <span data-ttu-id="766c0-148">Инициализация одной из этих переменных не влияет на значения остальных.</span><span class="sxs-lookup"><span data-stu-id="766c0-148">The initialization of one of these variables does not affect the values of the others.</span></span> <span data-ttu-id="766c0-149">То же самое происходит, если определить процедуру с набором перегрузок и объявления статической переменной с тем же именем в каждой перегрузке.</span><span class="sxs-lookup"><span data-stu-id="766c0-149">The same applies if you define a procedure with a set of overloads and declare a static variable with the same name in each overload.</span></span>  
   
-## <a name="containing-elements-for-static-variables"></a>Содержание элементов для статических переменных  
- Можно объявить статическую локальную переменную в пределах класса, то есть внутри процедуры в этом классе. Однако нельзя объявлять статическую локальную переменную в структуре как член структуры или как локальную переменную процедуры в этой структуре.  
+## <a name="containing-elements-for-static-variables"></a><span data-ttu-id="766c0-150">Содержание элементов для статических переменных</span><span class="sxs-lookup"><span data-stu-id="766c0-150">Containing Elements for Static Variables</span></span>  
+ <span data-ttu-id="766c0-151">Можно объявить статическую локальную переменную в пределах класса, то есть внутри процедуры в этом классе.</span><span class="sxs-lookup"><span data-stu-id="766c0-151">You can declare a static local variable within a class, that is, inside a procedure in that class.</span></span> <span data-ttu-id="766c0-152">Однако нельзя объявлять статическую локальную переменную в структуре как член структуры или как локальную переменную процедуры в этой структуре.</span><span class="sxs-lookup"><span data-stu-id="766c0-152">However, you cannot declare a static local variable within a structure, either as a structure member or as a local variable of a procedure within that structure.</span></span>  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a><span data-ttu-id="766c0-153">Пример</span><span class="sxs-lookup"><span data-stu-id="766c0-153">Example</span></span>  
   
-### <a name="description"></a>Описание  
- В следующем примере объявляется переменная с [статических](../../../../visual-basic/language-reference/modifiers/static.md) ключевое слово. (Обратите внимание, что нет необходимости `Dim` ключевое слово при [оператора Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) использует модификатор, например `Static`.)  
+### <a name="description"></a><span data-ttu-id="766c0-154">Описание</span><span class="sxs-lookup"><span data-stu-id="766c0-154">Description</span></span>  
+ <span data-ttu-id="766c0-155">В следующем примере объявляется переменная с [статических](../../../../visual-basic/language-reference/modifiers/static.md) ключевое слово.</span><span class="sxs-lookup"><span data-stu-id="766c0-155">The following example declares a variable with the [Static](../../../../visual-basic/language-reference/modifiers/static.md) keyword.</span></span> <span data-ttu-id="766c0-156">(Обратите внимание, что нет необходимости `Dim` ключевое слово при [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) использует модификатор, например `Static`.)</span><span class="sxs-lookup"><span data-stu-id="766c0-156">(Note that you do not need the `Dim` keyword when the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) uses a modifier such as `Static`.)</span></span>  
   
-### <a name="code"></a>Код  
- [!code-vb[VbVbalrKeywords&#13;](../../../../visual-basic/language-reference/codesnippet/VisualBasic/lifetime_1.vb)]  
+### <a name="code"></a><span data-ttu-id="766c0-157">Код</span><span class="sxs-lookup"><span data-stu-id="766c0-157">Code</span></span>  
+ [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/VisualBasic/lifetime_1.vb)]  
   
-### <a name="comments"></a>Комментарии  
- В предыдущем примере переменной `applesSold` продолжает существовать после процедуры `runningTotal` возвращается вызывающему коду. В следующий раз `runningTotal` вызывается, `applesSold` сохраняет ранее вычисленное значение.  
+### <a name="comments"></a><span data-ttu-id="766c0-158">Комментарии</span><span class="sxs-lookup"><span data-stu-id="766c0-158">Comments</span></span>  
+ <span data-ttu-id="766c0-159">В предыдущем примере переменной `applesSold` продолжает существовать после процедуры `runningTotal` возвращает в вызывающий код.</span><span class="sxs-lookup"><span data-stu-id="766c0-159">In the preceding example, the variable `applesSold` continues to exist after the procedure `runningTotal` returns to the calling code.</span></span> <span data-ttu-id="766c0-160">В следующий раз `runningTotal` вызове `applesSold` сохраняет ранее вычисленное значение.</span><span class="sxs-lookup"><span data-stu-id="766c0-160">The next time `runningTotal` is called, `applesSold` retains its previously calculated value.</span></span>  
   
- Если `applesSold` была объявлена без использования `Static`, предыдущие накопленные значения не сохраняются по вызовов `runningTotal`. В следующий раз `runningTotal` был вызван `applesSold` бы заново, принимая значение 0, и `runningTotal` просто возвращала бы то же значение, с помощью которого он был вызван.  
+ <span data-ttu-id="766c0-161">Если `applesSold` была объявлена без использования `Static`, предыдущие накопленные значения не сохраняются между вызовами `runningTotal`.</span><span class="sxs-lookup"><span data-stu-id="766c0-161">If `applesSold` had been declared without using `Static`, the previous accumulated values would not be preserved across calls to `runningTotal`.</span></span> <span data-ttu-id="766c0-162">В следующий раз `runningTotal` был вызван `applesSold` будет заново, инициализируется значением 0, и `runningTotal` просто возвращала бы то же значение, с которым была вызвана.</span><span class="sxs-lookup"><span data-stu-id="766c0-162">The next time `runningTotal` was called, `applesSold` would have been recreated and initialized to 0, and `runningTotal` would have simply returned the same value with which it was called.</span></span>  
   
-### <a name="compiling-the-code"></a>Компиляция кода  
- Можно инициализировать значение статической локальной переменной при ее объявлении. При объявлении массива `Static`, можно инициализировать его ранг (размерность), длина каждого из измерений и значения отдельных элементов.  
+### <a name="compiling-the-code"></a><span data-ttu-id="766c0-163">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="766c0-163">Compiling the Code</span></span>  
+ <span data-ttu-id="766c0-164">Можно инициализировать значение статической локальной переменной в рамках его объявления.</span><span class="sxs-lookup"><span data-stu-id="766c0-164">You can initialize the value of a static local variable as part of its declaration.</span></span> <span data-ttu-id="766c0-165">При объявлении массива `Static`, можно инициализировать его ранг (число измерений), длину каждого измерения и значения отдельных элементов.</span><span class="sxs-lookup"><span data-stu-id="766c0-165">If you declare an array to be `Static`, you can initialize its rank (number of dimensions), the length of each dimension, and the values of the individual elements.</span></span>  
   
-### <a name="security"></a>Безопасность  
- В предыдущем примере можно создать тот же срок существования путем объявления `applesSold` на уровне модуля. Если изменить область действия переменной таким образом, тем не менее, процедура будет больше не нужно монопольный доступ к нему. Поскольку другие процедуры может получить доступ к `applesSold` и измените его значение, значения с накоплением ненадежными, а код может быть более сложным в обслуживании.  
+### <a name="security"></a><span data-ttu-id="766c0-166">Безопасность</span><span class="sxs-lookup"><span data-stu-id="766c0-166">Security</span></span>  
+ <span data-ttu-id="766c0-167">В приведенном выше примере можно создать тот же срок существования путем объявления `applesSold` на уровне модуля.</span><span class="sxs-lookup"><span data-stu-id="766c0-167">In the preceding example, you can produce the same lifetime by declaring `applesSold` at module level.</span></span> <span data-ttu-id="766c0-168">Если область действия переменной изменена таким образом, тем не менее, процедура будет больше нет эксклюзивного доступа к нему.</span><span class="sxs-lookup"><span data-stu-id="766c0-168">If you changed the scope of a variable this way, however, the procedure would no longer have exclusive access to it.</span></span> <span data-ttu-id="766c0-169">Поскольку другие процедуры может получить доступ к `applesSold` и измените его значение, промежуточных итогов ненадежными, а код может быть более сложным в обслуживании.</span><span class="sxs-lookup"><span data-stu-id="766c0-169">Because other procedures could access `applesSold` and change its value, the running total could be unreliable and the code could be more difficult to maintain.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Общие](../../../../visual-basic/language-reference/modifiers/shared.md)   
- [Никаких действий](../../../../visual-basic/language-reference/nothing.md)   
- [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
- [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Область видимости в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)   
- [Уровни доступа в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [Переменные](../../../../visual-basic/programming-guide/language-features/variables/index.md)   
- [Объявление переменных](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [Устранение неполадок типы данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Статические](../../../../visual-basic/language-reference/modifiers/static.md)
+## <a name="see-also"></a><span data-ttu-id="766c0-170">См. также</span><span class="sxs-lookup"><span data-stu-id="766c0-170">See Also</span></span>  
+ [<span data-ttu-id="766c0-171">Общие</span><span class="sxs-lookup"><span data-stu-id="766c0-171">Shared</span></span>](../../../../visual-basic/language-reference/modifiers/shared.md)  
+ [<span data-ttu-id="766c0-172">Nothing</span><span class="sxs-lookup"><span data-stu-id="766c0-172">Nothing</span></span>](../../../../visual-basic/language-reference/nothing.md)  
+ [<span data-ttu-id="766c0-173">Имена объявленных элементов</span><span class="sxs-lookup"><span data-stu-id="766c0-173">Declared Element Names</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
+ [<span data-ttu-id="766c0-174">Ссылки на объявленные элементы</span><span class="sxs-lookup"><span data-stu-id="766c0-174">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="766c0-175">Область в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="766c0-175">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
+ [<span data-ttu-id="766c0-176">Уровни доступа в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="766c0-176">Access levels in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [<span data-ttu-id="766c0-177">Переменные</span><span class="sxs-lookup"><span data-stu-id="766c0-177">Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
+ [<span data-ttu-id="766c0-178">Объявление переменных</span><span class="sxs-lookup"><span data-stu-id="766c0-178">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [<span data-ttu-id="766c0-179">Устранение неполадок, связанных с типами данных</span><span class="sxs-lookup"><span data-stu-id="766c0-179">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="766c0-180">Статические</span><span class="sxs-lookup"><span data-stu-id="766c0-180">Static</span></span>](../../../../visual-basic/language-reference/modifiers/static.md)

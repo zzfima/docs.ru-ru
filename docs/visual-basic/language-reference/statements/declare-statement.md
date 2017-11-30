@@ -1,161 +1,159 @@
 ---
-title: "Оператор Declare | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Declare"
-  - "vb.Lib"
-  - "vb.Any"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Alias - ключевое слово"
-  - "API - интерфейсы, объявление функций API"
-  - "As - ключевое слово, в Declare - оператор"
-  - "декларации, внешние"
-  - "декларации, процедуры"
-  - "Declare - оператор"
-  - "объявление процедур, Declare - оператор"
-  - "библиотеки DLL, объявление процедур"
-  - "внешние ссылки, Visual Basic"
-  - "процедуры функций, объявление"
-  - "функции [Visual Basic], процедуры функций"
-  - "Lib - ключевое слово"
-  - "вызов неуправляемого кода, внешние ссылки Visual Basic"
-  - "процедуры, объявление"
-  - "процедуры, внешние"
-  - "Public - ключевое слово, Declare - оператор"
-  - "ресурсы [Visual Basic], объявление"
-  - "Sub - процедуры, декларации"
-  - "код Visual Basic, процедуры функций"
-  - "код Visual Basic, Sub - процедуры"
+title: Declare Statement
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Declare
+- vb.Lib
+- vb.Any
+helpviewer_keywords:
+- Lib keyword [Visual Basic]
+- declaring procedures [Visual Basic], Declare statement
+- functions [Visual Basic], function procedures
+- declarations [Visual Basic], procedures
+- procedures [Visual Basic], declaration
+- procedures [Visual Basic], external
+- Alias keyword [Visual Basic]
+- external references [Visual Basic], Visual Basic
+- DLLs, declaring procedures
+- Declare statement [Visual Basic]
+- declarations [Visual Basic], external
+- Visual Basic code, Function procedures
+- As keyword [Visual Basic], in Declare statement
+- resources [Visual Basic], declaring
+- Public keyword [Visual Basic], Declare statement
+- platform invoke, Visual Basic external references
+- Sub procedures [Visual Basic], declarations
+- APIs, declaring API functions
+- Visual Basic code, Sub procedures
+- Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-caps.latest.revision: 30
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 30
+caps.latest.revision: "30"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2560f34a5130ef7453b50ffb4495b67bf1dfa4c8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оператор Declare
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Объявляет ссылку на процедуру, реализованную во внешнем файле.  
+# <a name="declare-statement"></a><span data-ttu-id="ba518-102">Declare Statement</span><span class="sxs-lookup"><span data-stu-id="ba518-102">Declare Statement</span></span>
+<span data-ttu-id="ba518-103">Объявляет ссылку на процедуру, реализованную во внешнем файле.</span><span class="sxs-lookup"><span data-stu-id="ba518-103">Declares a reference to a procedure implemented in an external file.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="ba518-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ba518-104">Syntax</span></span>  
   
 ```  
-[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Overloads ] _  
-Declare [ charsetmodifier ] [ Sub ] name Lib "libname" _  
-[ Alias "aliasname" ] [ ([ parameterlist ]) ]  
+[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Overloads ] _  
+Declare [ charsetmodifier ] [ Sub ] name Lib "libname" _  
+[ Alias "aliasname" ] [ ([ parameterlist ]) ]  
 ' -or-  
-[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Overloads ] _  
-Declare [ charsetmodifier ] [ Function ] name Lib "libname" _  
-[ Alias "aliasname" ] [ ([ parameterlist ]) ] [ As returntype ]  
+[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Overloads ] _  
+Declare [ charsetmodifier ] [ Function ] name Lib "libname" _  
+[ Alias "aliasname" ] [ ([ parameterlist ]) ] [ As returntype ]  
 ```  
   
-## Части  
+## <a name="parts"></a><span data-ttu-id="ba518-105">Части</span><span class="sxs-lookup"><span data-stu-id="ba518-105">Parts</span></span>  
   
-|||  
-|-|-|  
-|Термин|Определение|  
-|`attributelist`|Необязательный.  См. [Список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Необязательный.  Может принимать следующие значения:<br /><br /> -   [Открытый](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Защищенный](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Дополнительные сведения см. в разделе [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Необязательный.  См. раздел [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`charsetmodifier`|Необязательный.  Задает кодировку и информацию для поиска файла.  Может принимать следующие значения:<br /><br /> -   [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) \(по умолчанию\)<br />-   [Юникод](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Auto](../../../visual-basic/language-reference/modifiers/auto.md)|  
-|`Sub`|Необязательно, но требуется наличие `Sub` или `Function`.  Указывает на то, что внешняя процедура не возвращает значение.|  
-|`Function`|Необязательно, но требуется наличие `Sub` или `Function`.  Указывает на то, что внешняя процедура возвращает значение.|  
-|`name`|Обязательный.  Имя этой внешней ссылки.  Дополнительные сведения см. в разделе [Имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Lib`|Обязательный.  Вводит предложение `Lib`, которое определяет внешний файл \(библиотека DLL или источник кода\), содержащий внешнюю процедуру.|  
-|`libname`|Обязательный.  Имя файла, который содержит объявляемую процедуру.|  
-|`Alias`|Необязательный.  Указывает, что объявляемая процедура не может быть идентифицирована в ее файле по имени, указанному в `name`.  Необходимо указать его идентификацию в `aliasname`.|  
-|`aliasname`|Является обязательным, если используется ключевое слово `Alias`.  Строка, идентифицирующая процедуру одним из двух способов:<br /><br /> Имя точки входа в процедуру в файле в кавычках \(`""`\)<br /><br /> \-или\-<br /><br /> Символ решетки \(`#`\), за которым следует целое число, указывающее порядковый номер точки входа в процедуру в файле|  
-|`parameterlist`|Требуется, если процедура принимает параметры.  Дополнительные сведения см. в разделе [Список параметров](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`returntype`|Требуется, если указана инструкция `Function`, а `Option Strict` имеет значение `On`.  Тип значения, возвращаемого процедурой.|  
+|<span data-ttu-id="ba518-106">Термин</span><span class="sxs-lookup"><span data-stu-id="ba518-106">Term</span></span>|<span data-ttu-id="ba518-107">Определение</span><span class="sxs-lookup"><span data-stu-id="ba518-107">Definition</span></span>|  
+|---|---|  
+|`attributelist`|<span data-ttu-id="ba518-108">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="ba518-108">Optional.</span></span> <span data-ttu-id="ba518-109">В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).</span><span class="sxs-lookup"><span data-stu-id="ba518-109">See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).</span></span>|  
+|`accessmodifier`|<span data-ttu-id="ba518-110">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="ba518-110">Optional.</span></span> <span data-ttu-id="ba518-111">Ниже указаны доступные значения.</span><span class="sxs-lookup"><span data-stu-id="ba518-111">Can be one of the following:</span></span><br /><br /> <span data-ttu-id="ba518-112">-   [Public](../../../visual-basic/language-reference/modifiers/public.md)</span><span class="sxs-lookup"><span data-stu-id="ba518-112">-   [Public](../../../visual-basic/language-reference/modifiers/public.md)</span></span><br /><span data-ttu-id="ba518-113">-   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md)</span><span class="sxs-lookup"><span data-stu-id="ba518-113">-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)</span></span><br /><span data-ttu-id="ba518-114">-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)</span><span class="sxs-lookup"><span data-stu-id="ba518-114">-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)</span></span><br /><span data-ttu-id="ba518-115">-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)</span><span class="sxs-lookup"><span data-stu-id="ba518-115">-   [Private](../../../visual-basic/language-reference/modifiers/private.md)</span></span><br />-   `Protected Friend`<br /><br /> <span data-ttu-id="ba518-116">В разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="ba518-116">See [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>|  
+|`Shadows`|<span data-ttu-id="ba518-117">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="ba518-117">Optional.</span></span> <span data-ttu-id="ba518-118">В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).</span><span class="sxs-lookup"><span data-stu-id="ba518-118">See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).</span></span>|  
+|`charsetmodifier`|<span data-ttu-id="ba518-119">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="ba518-119">Optional.</span></span> <span data-ttu-id="ba518-120">Задает набор символов и файл поиска сведений.</span><span class="sxs-lookup"><span data-stu-id="ba518-120">Specifies character set and file search information.</span></span> <span data-ttu-id="ba518-121">Ниже указаны доступные значения.</span><span class="sxs-lookup"><span data-stu-id="ba518-121">Can be one of the following:</span></span><br /><br /> <span data-ttu-id="ba518-122">-   [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) (по умолчанию)</span><span class="sxs-lookup"><span data-stu-id="ba518-122">-   [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) (default)</span></span><br /><span data-ttu-id="ba518-123">-   [Юникод](../../../visual-basic/language-reference/modifiers/unicode.md)</span><span class="sxs-lookup"><span data-stu-id="ba518-123">-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)</span></span><br /><span data-ttu-id="ba518-124">-   [Авто](../../../visual-basic/language-reference/modifiers/auto.md)</span><span class="sxs-lookup"><span data-stu-id="ba518-124">-   [Auto](../../../visual-basic/language-reference/modifiers/auto.md)</span></span>|  
+|`Sub`|<span data-ttu-id="ba518-125">Необязательно, но либо `Sub` или `Function` должны отображаться.</span><span class="sxs-lookup"><span data-stu-id="ba518-125">Optional, but either `Sub` or `Function` must appear.</span></span> <span data-ttu-id="ba518-126">Указывает, что внешняя процедура не возвращает значение.</span><span class="sxs-lookup"><span data-stu-id="ba518-126">Indicates that the external procedure does not return a value.</span></span>|  
+|`Function`|<span data-ttu-id="ba518-127">Необязательно, но либо `Sub` или `Function` должны отображаться.</span><span class="sxs-lookup"><span data-stu-id="ba518-127">Optional, but either `Sub` or `Function` must appear.</span></span> <span data-ttu-id="ba518-128">Указывает, что внешняя процедура возвращает значение.</span><span class="sxs-lookup"><span data-stu-id="ba518-128">Indicates that the external procedure returns a value.</span></span>|  
+|`name`|<span data-ttu-id="ba518-129">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="ba518-129">Required.</span></span> <span data-ttu-id="ba518-130">Имя этой внешней ссылки.</span><span class="sxs-lookup"><span data-stu-id="ba518-130">Name of this external reference.</span></span> <span data-ttu-id="ba518-131">Дополнительные сведения см. в разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span><span class="sxs-lookup"><span data-stu-id="ba518-131">For more information, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>|  
+|`Lib`|<span data-ttu-id="ba518-132">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="ba518-132">Required.</span></span> <span data-ttu-id="ba518-133">Представляет `Lib` предложение, которое идентифицирует внешний файл (DLL или код ресурса), содержащий внешнюю процедуру.</span><span class="sxs-lookup"><span data-stu-id="ba518-133">Introduces a `Lib` clause, which identifies the external file (DLL or code resource) that contains an external procedure.</span></span>|  
+|`libname`|<span data-ttu-id="ba518-134">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="ba518-134">Required.</span></span> <span data-ttu-id="ba518-135">Имя файла, который содержит объявляемую процедуру.</span><span class="sxs-lookup"><span data-stu-id="ba518-135">Name of the file that contains the declared procedure.</span></span>|  
+|`Alias`|<span data-ttu-id="ba518-136">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="ba518-136">Optional.</span></span> <span data-ttu-id="ba518-137">Указывает, что объявляемая процедура не может определяться в его файле имя, указанное в `name`.</span><span class="sxs-lookup"><span data-stu-id="ba518-137">Indicates that the procedure being declared cannot be identified within its file by the name specified in `name`.</span></span> <span data-ttu-id="ba518-138">Необходимо указать его идентификацию в `aliasname`.</span><span class="sxs-lookup"><span data-stu-id="ba518-138">You specify its identification in `aliasname`.</span></span>|  
+|`aliasname`|<span data-ttu-id="ba518-139">Является обязательным, если используется `Alias` ключевое слово.</span><span class="sxs-lookup"><span data-stu-id="ba518-139">Required if you use the `Alias` keyword.</span></span> <span data-ttu-id="ba518-140">Строка, идентифицирующая процедуру одним из двух способов:</span><span class="sxs-lookup"><span data-stu-id="ba518-140">String that identifies the procedure in one of two ways:</span></span><br /><br /> <span data-ttu-id="ba518-141">Имя точки входа в процедуру в файле в кавычках (`""`)</span><span class="sxs-lookup"><span data-stu-id="ba518-141">The entry point name of the procedure within its file, within quotes (`""`)</span></span><br /><br /> <span data-ttu-id="ba518-142">-или-</span><span class="sxs-lookup"><span data-stu-id="ba518-142">-or-</span></span><br /><br /> <span data-ttu-id="ba518-143">Знак решетки (`#`) за которым следует целое число, указывающее порядковый номер точки входа процедуры в его файле</span><span class="sxs-lookup"><span data-stu-id="ba518-143">A number sign (`#`) followed by an integer specifying the ordinal number of the procedure's entry point within its file</span></span>|  
+|`parameterlist`|<span data-ttu-id="ba518-144">Требуется, если процедура принимает параметры.</span><span class="sxs-lookup"><span data-stu-id="ba518-144">Required if the procedure takes parameters.</span></span> <span data-ttu-id="ba518-145">В разделе [список параметров](../../../visual-basic/language-reference/statements/parameter-list.md).</span><span class="sxs-lookup"><span data-stu-id="ba518-145">See [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).</span></span>|  
+|`returntype`|<span data-ttu-id="ba518-146">Обязателен, если `Function` указан и `Option Strict` — `On`.</span><span class="sxs-lookup"><span data-stu-id="ba518-146">Required if `Function` is specified and `Option Strict` is `On`.</span></span> <span data-ttu-id="ba518-147">Тип данных значения, возвращаемого процедурой.</span><span class="sxs-lookup"><span data-stu-id="ba518-147">Data type of the value returned by the procedure.</span></span>|  
   
-## Заметки  
- Иногда необходимо вызвать процедуру, определенную в файле, \(таком как DLL или кодовый ресурс\) за пределами проекта.  После этого компилятор Visual Basic не имеет доступа к таким данным, как расположение процедуры, способ идентификации, последовательность вызова и возвращаемый тип, кодировка строк, необходимым для корректного вызова процедуры.  `Declare` создает ссылку на внешнюю процедуру и предоставляет необходимую информацию.  
+## <a name="remarks"></a><span data-ttu-id="ba518-148">Примечания</span><span class="sxs-lookup"><span data-stu-id="ba518-148">Remarks</span></span>  
+ <span data-ttu-id="ba518-149">Иногда возникает необходимость вызове процедуры, определенной в файле за пределами проекта (например, DLL или код ресурса).</span><span class="sxs-lookup"><span data-stu-id="ba518-149">Sometimes you need to call a procedure defined in a file (such as a DLL or code resource) outside your project.</span></span> <span data-ttu-id="ba518-150">При этом компилятор Visual Basic нет доступа к сведениям, необходимым для корректного вызова процедуры, например которой находится процедура, ее идентификатор, последовательность вызова и тип возвращаемого значения и строки набор символов, которые он использует.</span><span class="sxs-lookup"><span data-stu-id="ba518-150">When you do this, the Visual Basic compiler does not have access to the information it needs to call the procedure correctly, such as where the procedure is located, how it is identified, its calling sequence and return type, and the string character set it uses.</span></span> <span data-ttu-id="ba518-151">`Declare` Инструкция создает ссылку на внешнюю процедуру и предоставляет необходимую информацию.</span><span class="sxs-lookup"><span data-stu-id="ba518-151">The `Declare` statement creates a reference to an external procedure and supplies this necessary information.</span></span>  
   
- Можно использовать зарезервированное слово `Declare` только на уровне модуля.  Это означает, что *контекст объявления* для внешней ссылки должен быть классом, структурой или модулем и не может быть исходным файлом, пространством имен, интерфейсом, процедурой или блоком.  Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ <span data-ttu-id="ba518-152">`Declare` можно использовать только на уровне модуля.</span><span class="sxs-lookup"><span data-stu-id="ba518-152">You can use `Declare` only at module level.</span></span> <span data-ttu-id="ba518-153">Это означает *контекст объявления* для внешней ссылки должен быть классом, структурой или модуля и не может быть исходный файл, пространство имен, интерфейс, процедура или блок.</span><span class="sxs-lookup"><span data-stu-id="ba518-153">This means the *declaration context* for an external reference must be a class, structure, or module, and cannot be a source file, namespace, interface, procedure, or block.</span></span> <span data-ttu-id="ba518-154">Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="ba518-154">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>  
   
- Внешние ссылки по умолчанию имеют уровень доступа [Public](../../../visual-basic/language-reference/modifiers/public.md).  Уровни доступа можно настроить с помощью модификаторов доступа.  
+ <span data-ttu-id="ba518-155">Внешние ссылки по умолчанию для [открытый](../../../visual-basic/language-reference/modifiers/public.md) доступа.</span><span class="sxs-lookup"><span data-stu-id="ba518-155">External references default to [Public](../../../visual-basic/language-reference/modifiers/public.md) access.</span></span> <span data-ttu-id="ba518-156">Вы можете настроить уровни доступа с помощью модификаторов доступа.</span><span class="sxs-lookup"><span data-stu-id="ba518-156">You can adjust their access levels with the access modifiers.</span></span>  
   
-## Правила  
+## <a name="rules"></a><span data-ttu-id="ba518-157">Правила</span><span class="sxs-lookup"><span data-stu-id="ba518-157">Rules</span></span>  
   
--   **Атрибуты.** Можно применить атрибуты к внешней ссылке.  Любой применяемый атрибут имеет силу только в проекте, а не во внешнем файле.  
+-   <span data-ttu-id="ba518-158">**Атрибуты.**</span><span class="sxs-lookup"><span data-stu-id="ba518-158">**Attributes.**</span></span> <span data-ttu-id="ba518-159">Можно применить атрибуты к внешней ссылке.</span><span class="sxs-lookup"><span data-stu-id="ba518-159">You can apply attributes to an external reference.</span></span> <span data-ttu-id="ba518-160">Любой применяемый атрибут действует только в проекте, но не во внешнем файле.</span><span class="sxs-lookup"><span data-stu-id="ba518-160">Any attribute you apply has effect only in your project, not in the external file.</span></span>  
   
--   **Модификаторы.** Внешние процедуры неявно являются [Shared](../../../visual-basic/language-reference/modifiers/shared.md).  Нельзя использовать ключевое слово `Shared` при объявлении внешней ссылки и невозможно изменить ее статус общего доступа.  
+-   <span data-ttu-id="ba518-161">**Модификаторы.**</span><span class="sxs-lookup"><span data-stu-id="ba518-161">**Modifiers.**</span></span> <span data-ttu-id="ba518-162">Внешние процедуры являются неявно [Shared](../../../visual-basic/language-reference/modifiers/shared.md).</span><span class="sxs-lookup"><span data-stu-id="ba518-162">External procedures are implicitly [Shared](../../../visual-basic/language-reference/modifiers/shared.md).</span></span> <span data-ttu-id="ba518-163">Нельзя использовать `Shared` ключевого слова при объявлении внешней ссылки и невозможно изменить ее статус общего доступа.</span><span class="sxs-lookup"><span data-stu-id="ba518-163">You cannot use the `Shared` keyword when declaring an external reference, and you cannot alter its shared status.</span></span>  
   
-     Внешняя процедура не может участвовать в переопределении, реализовывать члены интерфейса или обрабатывать события.  Соответственно в операторе `Declare` нельзя использовать `Overrides`, `Overridable`, `NotOverridable`, `MustOverride`, `Implements` или `Handles`.  
+     <span data-ttu-id="ba518-164">Внешнюю процедуру не может участвовать в переопределении, реализовывать члены интерфейса или обрабатывать события.</span><span class="sxs-lookup"><span data-stu-id="ba518-164">An external procedure cannot participate in overriding, implement interface members, or handle events.</span></span> <span data-ttu-id="ba518-165">Таким образом, нельзя использовать `Overrides`, `Overridable`, `NotOverridable`, `MustOverride`, `Implements`, или `Handles` ключевое слово в `Declare` инструкции.</span><span class="sxs-lookup"><span data-stu-id="ba518-165">Accordingly, you cannot use the `Overrides`, `Overridable`, `NotOverridable`, `MustOverride`, `Implements`, or `Handles` keyword in a `Declare` statement.</span></span>  
   
--   **Имя внешней процедуры.** Нет необходимости задавать этой внешней ссылке такое же имя \(в `name`\), как имя точки входа в процедуру во внешнем файле \(`aliasname`\).  Оператор `Alias` можно использовать для указания имени точки входа.  Это может быть полезно, если внешняя процедура имеет такое же имя, как зарезервированный модификатор Visual Basic, переменная, процедура или любой другой элемент программирования в той же самой области видимости.  
-  
-    > [!NOTE]
-    >  В большинстве DLL имена точек входа зависят от регистра.  
-  
--   **Номер внешней процедуры.** В качестве альтернативы можно использовать оператор `Alias` для указания порядкового номера точки входа в пределах таблицы экспорта внешнего файла.  Чтобы сделать это, начинайте `aliasname` со знака \(`#`\).  Это может быть полезно, если какой\-либо символ в имени внешней процедуры не допускается в Visual Basic, или внешний файл экспортирует процедуру без указания имени.  
-  
-## Правила типов данных  
-  
--   **Типы данных параметров.** Если `Option Strict` в значении `On`, то необходимо указать тип данных каждого параметра в `parameterlist`.  Это может быть любой тип данных или имя перечисления, структуры, класса или интерфейса.  В пределах `parameterlist` используется оператор `As` для указания типа данных аргумента для передачи каждому параметру.  
+-   <span data-ttu-id="ba518-166">**Имя внешней процедуры.**</span><span class="sxs-lookup"><span data-stu-id="ba518-166">**External Procedure Name.**</span></span> <span data-ttu-id="ba518-167">Нет необходимости задавать этой внешней ссылке тем же именем (в `name`) в качестве имени точки входа процедуры во внешнем файле (`aliasname`).</span><span class="sxs-lookup"><span data-stu-id="ba518-167">You do not have to give this external reference the same name (in `name`) as the procedure's entry-point name within its external file (`aliasname`).</span></span> <span data-ttu-id="ba518-168">Можно использовать `Alias` предложение для указания имени точки входа.</span><span class="sxs-lookup"><span data-stu-id="ba518-168">You can use an `Alias` clause to specify the entry-point name.</span></span> <span data-ttu-id="ba518-169">Это может быть полезно, если внешняя процедура имеет то же имя, что зарезервированный модификатор Visual Basic или переменной, процедура или любого другого элемента программирования в той же области.</span><span class="sxs-lookup"><span data-stu-id="ba518-169">This can be useful if the external procedure has the same name as a Visual Basic reserved modifier or a variable, procedure, or any other programming element in the same scope.</span></span>  
   
     > [!NOTE]
-    >  Если внешняя процедура была написана не для .NET Framework, то необходимо следить за соответствием типов данных.  Например, если объявляется внешняя ссылка на процедуру Visual Basic 6.0 с параметром `Integer` \(16 бит в Visual Basic 6.0\), то необходимо определить соответствующий аргумент как `Short` в инструкции `Declare`, поскольку этот тип представляет 16\-разрядное целое число в Visual Basic.  Подобным же образом `Long` имеет другую ширину данных в Visual Basic 6.0, и по другому реализуется тип `Date`.  
+    >  <span data-ttu-id="ba518-170">В большинстве DLL имена точек входа учитывается регистр.</span><span class="sxs-lookup"><span data-stu-id="ba518-170">Entry-point names in most DLLs are case-sensitive.</span></span>  
   
--   **Возвращаемый тип данных.** Если внешняя процедура является `Function`, и `Option Strict` в значении `On`, то необходимо указать тип данных значения, возвращаемого в вызывающий код.  Это может быть любой тип данных или имя перечисления, структуры, класса или интерфейса.  
+-   <span data-ttu-id="ba518-171">**Номер внешней процедуры.**</span><span class="sxs-lookup"><span data-stu-id="ba518-171">**External Procedure Number.**</span></span> <span data-ttu-id="ba518-172">Кроме того, можно использовать `Alias` предложений, чтобы указать порядковый номер точки входа в пределах таблицы экспорта внешнего файла.</span><span class="sxs-lookup"><span data-stu-id="ba518-172">Alternatively, you can use an `Alias` clause to specify the ordinal number of the entry point within the export table of the external file.</span></span> <span data-ttu-id="ba518-173">Чтобы сделать это, следует начать `aliasname` со знака номера (`#`).</span><span class="sxs-lookup"><span data-stu-id="ba518-173">To do this, you begin `aliasname` with a number sign (`#`).</span></span> <span data-ttu-id="ba518-174">Это полезно в том случае, если любой символ в имени внешней процедуры не допускается в Visual Basic, или внешний файл экспортирует процедуру без указания имени.</span><span class="sxs-lookup"><span data-stu-id="ba518-174">This can be useful if any character in the external procedure name is not allowed in Visual Basic, or if the external file exports the procedure without a name.</span></span>  
+  
+## <a name="data-type-rules"></a><span data-ttu-id="ba518-175">Правила типов данных</span><span class="sxs-lookup"><span data-stu-id="ba518-175">Data Type Rules</span></span>  
+  
+-   <span data-ttu-id="ba518-176">**Типы данных параметров.**</span><span class="sxs-lookup"><span data-stu-id="ba518-176">**Parameter Data Types.**</span></span> <span data-ttu-id="ba518-177">Если `Option Strict` — `On`, необходимо указать тип данных каждого параметра в `parameterlist`.</span><span class="sxs-lookup"><span data-stu-id="ba518-177">If `Option Strict` is `On`, you must specify the data type of each parameter in `parameterlist`.</span></span> <span data-ttu-id="ba518-178">Это может быть любой тип данных или имя перечисления, структуры, класса или интерфейса.</span><span class="sxs-lookup"><span data-stu-id="ba518-178">This can be any data type or the name of an enumeration, structure, class, or interface.</span></span> <span data-ttu-id="ba518-179">В пределах `parameterlist`, используется `As` предложений, чтобы указать тип данных аргумента для передачи каждого параметра.</span><span class="sxs-lookup"><span data-stu-id="ba518-179">Within `parameterlist`, you use an `As` clause to specify the data type of the argument to be passed to each parameter.</span></span>  
   
     > [!NOTE]
-    >  Компилятор Visual Basic не проверяет совместимость типов данных с типами данных внешней процедуры.  Если имеется несоответствие, то общеязыковая среда выполнения создает исключение <xref:System.Runtime.InteropServices.MarshalDirectiveException> во время выполнения.  
+    >  <span data-ttu-id="ba518-180">Если внешняя процедура не была написана для платформы .NET Framework, необходимо соблюдать осторожность, соответствующие типы данных.</span><span class="sxs-lookup"><span data-stu-id="ba518-180">If the external procedure was not written for the .NET Framework, you must take care that the data types correspond.</span></span> <span data-ttu-id="ba518-181">Например, если объявляется внешняя ссылка на процедуру Visual Basic 6.0 с `Integer` параметра (16 бит в Visual Basic 6.0), необходимо определить соответствующий аргумент как `Short` в `Declare` инструкции, так как это 16 - целое число типа bit в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="ba518-181">For example, if you declare an external reference to a Visual Basic 6.0 procedure with an `Integer` parameter (16 bits in Visual Basic 6.0), you must identify the corresponding argument as `Short` in the `Declare` statement, because that is the 16-bit integer type in Visual Basic.</span></span> <span data-ttu-id="ba518-182">Аналогичным образом `Long` имеет другой размер в Visual Basic 6.0 и `Date` реализуется по-разному.</span><span class="sxs-lookup"><span data-stu-id="ba518-182">Similarly, `Long` has a different data width in Visual Basic 6.0, and `Date` is implemented differently.</span></span>  
   
--   **Типы данных по умолчанию.** Если `Option Strict` имеет значение `Off` и не указан тип данных параметра в `parameterlist`, то компилятор Visual Basic преобразует соответствующий аргумент к [Тип данных Object](../../../visual-basic/language-reference/data-types/object-data-type.md).  Аналогично, если не указан `returntype`, то компилятор устанавливает тип возвращаемых данных как `Object`.  
+-   <span data-ttu-id="ba518-183">**Тип данных возвращаемого значения.**</span><span class="sxs-lookup"><span data-stu-id="ba518-183">**Return Data Type.**</span></span> <span data-ttu-id="ba518-184">Если внешняя процедура является `Function` и `Option Strict` — `On`, необходимо указать тип данных значения, возвращаемого в вызывающий код.</span><span class="sxs-lookup"><span data-stu-id="ba518-184">If the external procedure is a `Function` and `Option Strict` is `On`, you must specify the data type of the value returned to the calling code.</span></span> <span data-ttu-id="ba518-185">Это может быть любой тип данных или имя перечисления, структуры, класса или интерфейса.</span><span class="sxs-lookup"><span data-stu-id="ba518-185">This can be any data type or the name of an enumeration, structure, class, or interface.</span></span>  
   
     > [!NOTE]
-    >  Поскольку происходит работа с внешними процедурами, которые, возможно, были написаны на других платформах, опасно делать любые предположения о типах данных или оставлять их по умолчанию.  Гораздо безопаснее указывать тип данных каждого параметра и возвращаемого значения, если таковые имеются.  Это также улучшает удобочитаемость кода.  
+    >  <span data-ttu-id="ba518-186">Компилятор Visual Basic не проверяет, что типы данных совместимы с файлами внешней процедуры.</span><span class="sxs-lookup"><span data-stu-id="ba518-186">The Visual Basic compiler does not verify that your data types are compatible with those of the external procedure.</span></span> <span data-ttu-id="ba518-187">Если имеется несоответствие, общеязыковая среда выполнения создает <xref:System.Runtime.InteropServices.MarshalDirectiveException> исключений во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="ba518-187">If there is a mismatch, the common language runtime generates a <xref:System.Runtime.InteropServices.MarshalDirectiveException> exception at run time.</span></span>  
   
-## Поведение  
+-   <span data-ttu-id="ba518-188">**Типы данных по умолчанию.**</span><span class="sxs-lookup"><span data-stu-id="ba518-188">**Default Data Types.**</span></span> <span data-ttu-id="ba518-189">Если `Option Strict` — `Off` и задают тип данных параметра в `parameterlist`, компилятор Visual Basic преобразует соответствующего аргумента в [тип данных объекта](../../../visual-basic/language-reference/data-types/object-data-type.md).</span><span class="sxs-lookup"><span data-stu-id="ba518-189">If `Option Strict` is `Off` and you do not specify the data type of a parameter in `parameterlist`, the Visual Basic compiler converts the corresponding argument to the [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md).</span></span> <span data-ttu-id="ba518-190">Аналогично Если вы не укажете `returntype`, компилятор принимает тип возвращаемых данных для `Object`.</span><span class="sxs-lookup"><span data-stu-id="ba518-190">Similarly, if you do not specify `returntype`, the compiler takes the return data type to be `Object`.</span></span>  
   
--   **Область действия.** Область внешней ссылки \- ее класс, структура или модуль.  
+    > [!NOTE]
+    >  <span data-ttu-id="ba518-191">Поскольку вы имеете дело с внешней процедуре, которая может быть записана на другой платформе, его небезопасно делать никаких предположений о типах данных или оставлять их по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="ba518-191">Because you are dealing with an external procedure that might have been written on a different platform, it is dangerous to make any assumptions about data types or to allow them to default.</span></span> <span data-ttu-id="ba518-192">Это гораздо более безопасной указать тип данных каждого параметра и возвращаемого значения, если таковые имеются.</span><span class="sxs-lookup"><span data-stu-id="ba518-192">It is much safer to specify the data type of every parameter and of the return value, if any.</span></span> <span data-ttu-id="ba518-193">Это также повышает удобочитаемость кода.</span><span class="sxs-lookup"><span data-stu-id="ba518-193">This also improves the readability of your code.</span></span>  
   
--   **Время существования.** Внешняя ссылка имеет такое же время жизни, как класс, структура или модуль, в котором она была объявлена.  
+## <a name="behavior"></a><span data-ttu-id="ba518-194">Поведение</span><span class="sxs-lookup"><span data-stu-id="ba518-194">Behavior</span></span>  
   
--   **Вызов внешних процедур.** Вызов внешней процедуры производится таким же образом, как и вызов `Function` или `Sub` процедуры — с помощью использования ее в выражении, если она возвращает значение, или с помощью указания ее в [Оператор Call](../../../visual-basic/language-reference/statements/call-statement.md), если она не возвращает значения.  
+-   <span data-ttu-id="ba518-195">**Область действия.**</span><span class="sxs-lookup"><span data-stu-id="ba518-195">**Scope.**</span></span> <span data-ttu-id="ba518-196">Область действия его класса, структуры или модуля является внешней ссылкой.</span><span class="sxs-lookup"><span data-stu-id="ba518-196">An external reference is in scope throughout its class, structure, or module.</span></span>  
   
-     Аргументы передаются внешней процедуре точно в соответствии с `parameterlist` в инструкции `Declare`.  Не принимается во внимание, как параметры были изначально объявлены во внешнем файле.  Аналогично, если есть возвращаемое значение, то используется оно точно в соответствии с `returntype` инструкции `Declare`.  
+-   <span data-ttu-id="ba518-197">**Время существования.**</span><span class="sxs-lookup"><span data-stu-id="ba518-197">**Lifetime.**</span></span> <span data-ttu-id="ba518-198">Внешняя ссылка имеет то же время существования, как класс, структура или модуль, в котором она объявлена.</span><span class="sxs-lookup"><span data-stu-id="ba518-198">An external reference has the same lifetime as the class, structure, or module in which it is declared.</span></span>  
   
--   **Кодировки.** Можно указать в `charsetmodifier`, как Visual Basic следует упаковывать строки, когда он вызывает внешнюю процедуру.  Модификатор `Ansi` указывает Visual Basic упаковывать все строки в значения ANSI, а модификатор `Unicode` \- в значения Юникода.  Модификатор `Auto` указывает Visual Basic упаковывать строки согласно правилам .NET Framework на основе внешней ссылки `name` или `aliasname`, если они указаны.  Значение по умолчанию — `Ansi`.  
+-   <span data-ttu-id="ba518-199">**Вызов внешних процедур.**</span><span class="sxs-lookup"><span data-stu-id="ba518-199">**Calling an External Procedure.**</span></span> <span data-ttu-id="ba518-200">Вызов внешней процедуры так же, как `Function` или `Sub` процедуры — с помощью его в выражении, если он возвращает значение, или путем задания его в [инструкции Call](../../../visual-basic/language-reference/statements/call-statement.md) , если он не возвращает значение.</span><span class="sxs-lookup"><span data-stu-id="ba518-200">You call an external procedure the same way you call a `Function` or `Sub` procedure—by using it in an expression if it returns a value, or by specifying it in a [Call Statement](../../../visual-basic/language-reference/statements/call-statement.md) if it does not return a value.</span></span>  
   
-     `charsetmodifier` также указывает, как Visual Basic должен искать внешнюю процедуру в его внешнем файле.  `Ansi` и `Unicode` указывают Visual Basic выполнять поиск без изменения имени в ходе поиска.  `Auto` указывает Visual Basic определить базовую кодировку платформы времени выполнения и, возможно, изменить имя внешней процедуры следующим образом:  
+     <span data-ttu-id="ba518-201">Передайте аргументы внешней процедуры точно в соответствии с `parameterlist` в `Declare` инструкции.</span><span class="sxs-lookup"><span data-stu-id="ba518-201">You pass arguments to the external procedure exactly as specified by `parameterlist` in the `Declare` statement.</span></span> <span data-ttu-id="ba518-202">Не учитывать как параметры были изначально объявлены во внешнем файле.</span><span class="sxs-lookup"><span data-stu-id="ba518-202">Do not take into account how the parameters were originally declared in the external file.</span></span> <span data-ttu-id="ba518-203">Аналогичным образом, если возвращаемое значение отсутствует, использовать его точно в соответствии с `returntype` в `Declare` инструкции.</span><span class="sxs-lookup"><span data-stu-id="ba518-203">Similarly, if there is a return value, use it exactly as specified by `returntype` in the `Declare` statement.</span></span>  
   
-    -   На ANSI платформах, таких как Windows 95, Windows 98 или Windows Millennium Edition, сначала производится поиск внешней процедуры без изменения имени.  В случае неудачи в конец имени внешней процедуры добавляется "A", и осуществляется повторный поиск.  
+-   <span data-ttu-id="ba518-204">**Наборы знаков.**</span><span class="sxs-lookup"><span data-stu-id="ba518-204">**Character Sets.**</span></span> <span data-ttu-id="ba518-205">Можно указать в `charsetmodifier` как Visual Basic должен маршалировать строки при вызове внешней процедуры.</span><span class="sxs-lookup"><span data-stu-id="ba518-205">You can specify in `charsetmodifier` how Visual Basic should marshal strings when it calls the external procedure.</span></span> <span data-ttu-id="ba518-206">`Ansi` Модификатор указывает Visual Basic маршалировать все строки в значения ANSI и `Unicode` модификатор направляет его в маршалировать все строки в значения Юникода.</span><span class="sxs-lookup"><span data-stu-id="ba518-206">The `Ansi` modifier directs Visual Basic to marshal all strings to ANSI values, and the `Unicode` modifier directs it to marshal all strings to Unicode values.</span></span> <span data-ttu-id="ba518-207">`Auto` Направляет модификатор Visual Basic для маршалинга строк в соответствии с .NET Framework правила на основе внешней ссылки `name`, или `aliasname` Если указано.</span><span class="sxs-lookup"><span data-stu-id="ba518-207">The `Auto` modifier directs Visual Basic to marshal strings according to .NET Framework rules based on the external reference `name`, or `aliasname` if specified.</span></span> <span data-ttu-id="ba518-208">Значение по умолчанию — `Ansi`.</span><span class="sxs-lookup"><span data-stu-id="ba518-208">The default value is `Ansi`.</span></span>  
   
-    -   На Юникод платформе, таких как Windows NT, Windows 2000 или Windows XP, сначала производится поиск внешней процедуры без изменения имени.  В случае неудачи в конец имени внешней процедуры добавляется "W", и осуществляется повторный поиск.  
+     <span data-ttu-id="ba518-209">`charsetmodifier`также указывает, как Visual Basic следует искать внешней процедуры во внешнем файле.</span><span class="sxs-lookup"><span data-stu-id="ba518-209">`charsetmodifier` also specifies how Visual Basic should look up the external procedure within its external file.</span></span> <span data-ttu-id="ba518-210">`Ansi`и `Unicode` оба направления Visual Basic для поиска без изменения имени во время поиска.</span><span class="sxs-lookup"><span data-stu-id="ba518-210">`Ansi` and `Unicode` both direct Visual Basic to look it up without modifying its name during the search.</span></span> <span data-ttu-id="ba518-211">`Auto`Указывает Visual Basic, чтобы определить базовый набор символов платформы во время выполнения и возможно, изменить имя внешней процедуры следующим образом:</span><span class="sxs-lookup"><span data-stu-id="ba518-211">`Auto` directs Visual Basic to determine the base character set of the run-time platform and possibly modify the external procedure name, as follows:</span></span>  
   
--   **Механизм.** Visual Basic использует механизм .NET Framework *платформозависимый вызов* \(PInvoke\) для разрешения и доступа к внешним процедурам.  Инструкция `Declare` и класс <xref:System.Runtime.InteropServices.DllImportAttribute> используют этот механизм автоматически и не нуждаются в любых знаниях о PInvoke.  Дополнительные сведения см. в разделе [Пошаговое руководство. Вызов API Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
+    -   <span data-ttu-id="ba518-212">На платформе ANSI, таких как Windows 95, Windows 98 или Windows Millennium Edition сначала найдите внешнюю процедуру без изменения имени.</span><span class="sxs-lookup"><span data-stu-id="ba518-212">On an ANSI platform, such as Windows 95, Windows 98, or Windows Millennium Edition, first look up the external procedure with no name modification.</span></span> <span data-ttu-id="ba518-213">В случае неудачи добавляется в конец имени внешней процедуры «A», и повторный поиск.</span><span class="sxs-lookup"><span data-stu-id="ba518-213">If that fails, append "A" to the end of the external procedure name and look it up again.</span></span>  
+  
+    -   <span data-ttu-id="ba518-214">На платформе Юникода, например Windows NT, Windows 2000 или Windows XP сначала найдите внешнюю процедуру без изменения имени.</span><span class="sxs-lookup"><span data-stu-id="ba518-214">On a Unicode platform, such as Windows NT, Windows 2000, or Windows XP, first look up the external procedure with no name modification.</span></span> <span data-ttu-id="ba518-215">Если это не удается добавить «W» в конец внешней процедуре имя и повторный поиск.</span><span class="sxs-lookup"><span data-stu-id="ba518-215">If that fails, append "W" to the end of the external procedure name and look it up again.</span></span>  
+  
+-   <span data-ttu-id="ba518-216">**Механизм.**</span><span class="sxs-lookup"><span data-stu-id="ba518-216">**Mechanism.**</span></span> <span data-ttu-id="ba518-217">Visual Basic использует .NET Framework *неуправляемого* (PInvoke) механизм для разрешения и доступ к внешней процедуры.</span><span class="sxs-lookup"><span data-stu-id="ba518-217">Visual Basic uses the .NET Framework *platform invoke* (PInvoke) mechanism to resolve and access external procedures.</span></span> <span data-ttu-id="ba518-218">`Declare` Инструкции и <xref:System.Runtime.InteropServices.DllImportAttribute> класс оба используют этот механизм автоматически и не требуются сведения о PInvoke.</span><span class="sxs-lookup"><span data-stu-id="ba518-218">The `Declare` statement and the <xref:System.Runtime.InteropServices.DllImportAttribute> class both use this mechanism automatically, and you do not need any knowledge of PInvoke.</span></span> <span data-ttu-id="ba518-219">Дополнительные сведения см. в разделе [Пошаговое руководство: вызов API Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).</span><span class="sxs-lookup"><span data-stu-id="ba518-219">For more information, see [Walkthrough: Calling Windows APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).</span></span>  
   
 > [!IMPORTANT]
->  Если внешняя процедура выполняется за пределами общеязыковой среды выполнения \(CLR\), то это *неуправляемый код*.  При вызове таких процедур, например функции Win32 API или метода COM, приложение может подвергаться угрозе безопасности.  Дополнительные сведения см. в разделе [Secure Coding Guidelines for Unmanaged Code](../Topic/Secure%20Coding%20Guidelines%20for%20Unmanaged%20Code.md).  
+>  <span data-ttu-id="ba518-220">Если внешняя процедура выполняется за пределами общеязыковой среды выполнения (CLR), это *неуправляемого кода*.</span><span class="sxs-lookup"><span data-stu-id="ba518-220">If the external procedure runs outside the common language runtime (CLR), it is *unmanaged code*.</span></span> <span data-ttu-id="ba518-221">При вызове процедуры, например функции Win32 API или метода COM, могут сделать ваше приложение к угрозам безопасности.</span><span class="sxs-lookup"><span data-stu-id="ba518-221">When you call such a procedure, for example a Win32 API function or a COM method, you might expose your application to security risks.</span></span> <span data-ttu-id="ba518-222">Дополнительные сведения см. в разделе [правила написания безопасного кода для неуправляемого кода](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).</span><span class="sxs-lookup"><span data-stu-id="ba518-222">For more information, see [Secure Coding Guidelines for Unmanaged Code](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).</span></span>  
   
-## Пример  
- В следующем примере объявляется внешняя ссылка на `Function`, которая возвращает имя текущего пользователя.  Затем вызывается внешняя процедура `GetUserNameA` как часть процедуры `getUser`.  
+## <a name="example"></a><span data-ttu-id="ba518-223">Пример</span><span class="sxs-lookup"><span data-stu-id="ba518-223">Example</span></span>  
+ <span data-ttu-id="ba518-224">В следующем примере объявляется внешняя ссылка на `Function` процедуру, которая возвращает имя текущего пользователя.</span><span class="sxs-lookup"><span data-stu-id="ba518-224">The following example declares an external reference to a `Function` procedure that returns the current user name.</span></span> <span data-ttu-id="ba518-225">Затем он вызывает внешней процедуры `GetUserNameA` как часть `getUser` процедуры.</span><span class="sxs-lookup"><span data-stu-id="ba518-225">It then calls the external procedure `GetUserNameA` as part of the `getUser` procedure.</span></span>  
   
  [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_1.vb)]  
   
-## Пример  
- <xref:System.Runtime.InteropServices.DllImportAttribute> предоставляет альтернативный способ использования функций в неуправляемом коде.  В следующем примере импортируемая функция объявляется без применения оператора `Declare`.  
+## <a name="example"></a><span data-ttu-id="ba518-226">Пример</span><span class="sxs-lookup"><span data-stu-id="ba518-226">Example</span></span>  
+ <span data-ttu-id="ba518-227"><xref:System.Runtime.InteropServices.DllImportAttribute> Предоставляет альтернативный способ использования функций в неуправляемом коде.</span><span class="sxs-lookup"><span data-stu-id="ba518-227">The <xref:System.Runtime.InteropServices.DllImportAttribute> provides an alternative way of using functions in unmanaged code.</span></span> <span data-ttu-id="ba518-228">В следующем примере объявляется импортированной функции без использования `Declare` инструкции.</span><span class="sxs-lookup"><span data-stu-id="ba518-228">The following example declares an imported function without using a `Declare` statement.</span></span>  
   
  [!code-vb[VbVbalrStatements#16](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_2.vb)]  
   
  [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_3.vb)]  
   
-## См. также  
- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>   
- [Оператор Imports \(пространство имен .NET и тип\)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)   
- [Оператор AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)   
- [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)   
- [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Список параметров](../../../visual-basic/language-reference/statements/parameter-list.md)   
- [Оператор Call](../../../visual-basic/language-reference/statements/call-statement.md)   
- [Пошаговое руководство. Вызов API Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+## <a name="see-also"></a><span data-ttu-id="ba518-229">См. также</span><span class="sxs-lookup"><span data-stu-id="ba518-229">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>  
+ [<span data-ttu-id="ba518-230">Оператор Imports (пространство имен и тип .NET)</span><span class="sxs-lookup"><span data-stu-id="ba518-230">Imports Statement (.NET Namespace and Type)</span></span>](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+ [<span data-ttu-id="ba518-231">Оператор AddressOf</span><span class="sxs-lookup"><span data-stu-id="ba518-231">AddressOf Operator</span></span>](../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [<span data-ttu-id="ba518-232">Оператор Function</span><span class="sxs-lookup"><span data-stu-id="ba518-232">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="ba518-233">Оператор Sub</span><span class="sxs-lookup"><span data-stu-id="ba518-233">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="ba518-234">Список параметров</span><span class="sxs-lookup"><span data-stu-id="ba518-234">Parameter List</span></span>](../../../visual-basic/language-reference/statements/parameter-list.md)  
+ [<span data-ttu-id="ba518-235">Оператор Call</span><span class="sxs-lookup"><span data-stu-id="ba518-235">Call Statement</span></span>](../../../visual-basic/language-reference/statements/call-statement.md)  
+ [<span data-ttu-id="ba518-236">Пошаговое руководство. Вызов API-интерфейсов Windows</span><span class="sxs-lookup"><span data-stu-id="ba518-236">Walkthrough: Calling Windows APIs</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

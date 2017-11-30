@@ -1,150 +1,156 @@
 ---
-title: "Пошаговое руководство. Сопоставление свойств с помощью элемента управления ElementHost | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ElementHost - элемент управления, сопоставление свойств"
-  - "сопоставление свойств"
+title: "Пошаговое руководство. Сопоставление свойств с помощью элемента управления ElementHost"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- mapping properties [WPF]
+- ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dae954012d15431d2019d3d9cbe61747a8646d4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пошаговое руководство. Сопоставление свойств с помощью элемента управления ElementHost
-В этом руководстве описывается порядок использования свойства <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> для сопоставления свойств [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] с соответствующими свойствами элемента [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+# <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a><span data-ttu-id="708b6-102">Пошаговое руководство. Сопоставление свойств с помощью элемента управления ElementHost</span><span class="sxs-lookup"><span data-stu-id="708b6-102">Walkthrough: Mapping Properties Using the ElementHost Control</span></span>
+<span data-ttu-id="708b6-103">В этом пошаговом руководстве показано, как использовать <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> свойство для сопоставления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] свойства соответствующим свойствам размещенных [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элемента.</span><span class="sxs-lookup"><span data-stu-id="708b6-103">This walkthrough shows you how to use the <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> property to map [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] properties to corresponding properties on a hosted [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] element.</span></span>  
   
- В этом пошаговом руководстве демонстрируется выполнение следующих задач.  
+ <span data-ttu-id="708b6-104">В данном пошаговом руководстве представлены следующие задачи.</span><span class="sxs-lookup"><span data-stu-id="708b6-104">Tasks illustrated in this walkthrough include:</span></span>  
   
--   Создание проекта.  
+-   <span data-ttu-id="708b6-105">Создание проекта.</span><span class="sxs-lookup"><span data-stu-id="708b6-105">Creating the project.</span></span>  
   
--   Определение нового сопоставления свойства.  
+-   <span data-ttu-id="708b6-106">Определение нового сопоставления свойства.</span><span class="sxs-lookup"><span data-stu-id="708b6-106">Defining a new property mapping.</span></span>  
   
--   Удаление сопоставления свойства по умолчанию.  
+-   <span data-ttu-id="708b6-107">Удаление сопоставления свойства по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="708b6-107">Removing a default property mapping.</span></span>  
   
--   Расширение сопоставления свойства по умолчанию.  
+-   <span data-ttu-id="708b6-108">Расширение сопоставления свойства по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="708b6-108">Extending a default property mapping.</span></span>  
   
- Полный пример кода для задач, приведенных в этом обзоре, см. на странице [Пример сопоставления свойств с помощью элемента управления ElementHost](http://go.microsoft.com/fwlink/?LinkID=160018).  
+ <span data-ttu-id="708b6-109">Полный пример кода для задач, приведенных в этом пошаговом руководстве, см. [сопоставление свойств с помощью пример элемента управления ElementHost](http://go.microsoft.com/fwlink/?LinkID=160018).</span><span class="sxs-lookup"><span data-stu-id="708b6-109">For a complete code listing of the tasks illustrated in this walkthrough, see [Mapping Properties Using the ElementHost Control Sample](http://go.microsoft.com/fwlink/?LinkID=160018).</span></span>  
   
- После изучения этого раздела вы сможете сопоставлять свойства [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] с соответствующими свойствами элемента [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ <span data-ttu-id="708b6-110">Когда вы закончите, можно для сопоставления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] свойства соответствующее [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] свойства элемента.</span><span class="sxs-lookup"><span data-stu-id="708b6-110">When you are finished, you will be able to map [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] properties to corresponding [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] properties on a hosted element.</span></span>  
   
-## Обязательные компоненты  
- Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.  
+## <a name="prerequisites"></a><span data-ttu-id="708b6-111">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="708b6-111">Prerequisites</span></span>  
+ <span data-ttu-id="708b6-112">Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.</span><span class="sxs-lookup"><span data-stu-id="708b6-112">You need the following components to complete this walkthrough:</span></span>  
   
--   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)].  
+-   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)]<span data-ttu-id="708b6-113">.</span><span class="sxs-lookup"><span data-stu-id="708b6-113">.</span></span>  
   
-## Создание проекта  
+## <a name="creating-the-project"></a><span data-ttu-id="708b6-114">Создание проекта</span><span class="sxs-lookup"><span data-stu-id="708b6-114">Creating the Project</span></span>  
   
-#### Создание проекта  
+#### <a name="to-create-the-project"></a><span data-ttu-id="708b6-115">Создание проекта</span><span class="sxs-lookup"><span data-stu-id="708b6-115">To create the project</span></span>  
   
-1.  Создайте проект приложения [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] с именем `PropertyMappingWithElementHost`.  Дополнительные сведения см. в разделе [How to: Create a Windows Application Project](http://msdn.microsoft.com/ru-ru/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  <span data-ttu-id="708b6-116">Создание [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] проект приложения с именем `PropertyMappingWithElementHost`.</span><span class="sxs-lookup"><span data-stu-id="708b6-116">Create a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] application project named `PropertyMappingWithElementHost`.</span></span> <span data-ttu-id="708b6-117">Для получения дополнительной информации см. [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span><span class="sxs-lookup"><span data-stu-id="708b6-117">For more information, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span></span>  
   
-2.  В обозревателе решений добавьте ссылки на следующие сборки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+2.  <span data-ttu-id="708b6-118">В обозревателе решений добавьте ссылки на следующие [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] сборки.</span><span class="sxs-lookup"><span data-stu-id="708b6-118">In Solution Explorer, add references to the following [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assemblies.</span></span>  
   
-    -   PresentationCore  
+    -   <span data-ttu-id="708b6-119">PresentationCore</span><span class="sxs-lookup"><span data-stu-id="708b6-119">PresentationCore</span></span>  
   
-    -   PresentationFramework  
+    -   <span data-ttu-id="708b6-120">PresentationFramework</span><span class="sxs-lookup"><span data-stu-id="708b6-120">PresentationFramework</span></span>  
   
-    -   WindowsBase  
+    -   <span data-ttu-id="708b6-121">WindowsBase</span><span class="sxs-lookup"><span data-stu-id="708b6-121">WindowsBase</span></span>  
   
-    -   WindowsFormsIntegration  
+    -   <span data-ttu-id="708b6-122">WindowsFormsIntegration</span><span class="sxs-lookup"><span data-stu-id="708b6-122">WindowsFormsIntegration</span></span>  
   
-3.  Скопируйте следующий код в начало файла кода `Form1`.  
+3.  <span data-ttu-id="708b6-123">Скопируйте следующий код в верхнюю часть `Form1` файл кода.</span><span class="sxs-lookup"><span data-stu-id="708b6-123">Copy the following code into the top of the `Form1` code file.</span></span>  
   
      [!code-csharp[PropertyMappingWithElementHost#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#10)]
      [!code-vb[PropertyMappingWithElementHost#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#10)]  
   
-4.  Откройте форму `Form1` в конструкторе Windows Forms.  Дважды щелкните форму, чтобы добавить обработчик событий <xref:System.Windows.Forms.Form.Load>.  
+4.  <span data-ttu-id="708b6-124">Откройте `Form1` в конструкторе Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="708b6-124">Open `Form1` in the Windows Forms Designer.</span></span> <span data-ttu-id="708b6-125">Дважды щелкните форму, чтобы добавить обработчик событий для <xref:System.Windows.Forms.Form.Load> события.</span><span class="sxs-lookup"><span data-stu-id="708b6-125">Double-click the form to add an event handler for the <xref:System.Windows.Forms.Form.Load> event.</span></span>  
   
-5.  Вернитесь в конструктор Windows Forms и добавьте обработчик событий для события <xref:System.Windows.Forms.Control.Resize> формы.  Дополнительные сведения см. в разделе [How to: Create Event Handlers Using the Designer](http://msdn.microsoft.com/ru-ru/8461e9b8-14e8-406f-936e-3726732b23d2).  
+5.  <span data-ttu-id="708b6-126">Вернитесь к конструктору Windows Forms и добавьте обработчик событий для формы <xref:System.Windows.Forms.Control.Resize> событий.</span><span class="sxs-lookup"><span data-stu-id="708b6-126">Return to the Windows Forms Designer and add an event handler for the form's <xref:System.Windows.Forms.Control.Resize> event.</span></span> <span data-ttu-id="708b6-127">Дополнительные сведения см. в разделе [как: создание событий обработчики с помощью конструктора](http://msdn.microsoft.com/en-us/8461e9b8-14e8-406f-936e-3726732b23d2).</span><span class="sxs-lookup"><span data-stu-id="708b6-127">For more information, see [How to: Create Event Handlers Using the Designer](http://msdn.microsoft.com/en-us/8461e9b8-14e8-406f-936e-3726732b23d2).</span></span>  
   
-6.  Объявите поле <xref:System.Windows.Forms.Integration.ElementHost> в классе `Form1`.  
+6.  <span data-ttu-id="708b6-128">Объявите <xref:System.Windows.Forms.Integration.ElementHost> в `Form1` класса.</span><span class="sxs-lookup"><span data-stu-id="708b6-128">Declare an <xref:System.Windows.Forms.Integration.ElementHost> field in the `Form1` class.</span></span>  
   
      [!code-csharp[PropertyMappingWithElementHost#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#16)]
      [!code-vb[PropertyMappingWithElementHost#16](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#16)]  
   
-## Определение новых сопоставлений свойств  
- Элемент управления <xref:System.Windows.Forms.Integration.ElementHost> предоставляет несколько сопоставлений свойств по умолчанию.  Чтобы добавить новое сопоставление свойства, следует вызвать метод <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> для свойства <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> элемента управления <xref:System.Windows.Forms.Integration.ElementHost>.  
+## <a name="defining-new-property-mappings"></a><span data-ttu-id="708b6-129">Определение новых сопоставлений свойств</span><span class="sxs-lookup"><span data-stu-id="708b6-129">Defining New Property Mappings</span></span>  
+ <span data-ttu-id="708b6-130"><xref:System.Windows.Forms.Integration.ElementHost> Управления предоставляет несколько по умолчанию сопоставления свойств.</span><span class="sxs-lookup"><span data-stu-id="708b6-130">The <xref:System.Windows.Forms.Integration.ElementHost> control provides several default property mappings.</span></span> <span data-ttu-id="708b6-131">Добавить новое сопоставление свойства путем вызова <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> метод <xref:System.Windows.Forms.Integration.ElementHost> элемента управления <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>.</span><span class="sxs-lookup"><span data-stu-id="708b6-131">You add a new property mapping by calling the <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> method on the <xref:System.Windows.Forms.Integration.ElementHost> control's <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>.</span></span>  
   
-#### Определение новых сопоставлений свойств  
+#### <a name="to-define-new-property-mappings"></a><span data-ttu-id="708b6-132">Для определения новых сопоставлений свойств</span><span class="sxs-lookup"><span data-stu-id="708b6-132">To define new property mappings</span></span>  
   
-1.  Скопируйте следующий код в определение класса `Form1`.  
+1.  <span data-ttu-id="708b6-133">Скопируйте следующий код в определение `Form1` класса.</span><span class="sxs-lookup"><span data-stu-id="708b6-133">Copy the following code into the definition for the `Form1` class.</span></span>  
   
      [!code-csharp[PropertyMappingWithElementHost#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#12)]
      [!code-vb[PropertyMappingWithElementHost#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#12)]  
   
-     Метод `AddMarginMapping` используется для добавления нового сопоставления для свойства <xref:System.Windows.Forms.Control.Margin%2A>.  
+     <span data-ttu-id="708b6-134">`AddMarginMapping` Метод добавляет новое сопоставление для <xref:System.Windows.Forms.Control.Margin%2A> свойства.</span><span class="sxs-lookup"><span data-stu-id="708b6-134">The `AddMarginMapping` method adds a new mapping for the <xref:System.Windows.Forms.Control.Margin%2A> property.</span></span>  
   
-     Метод `OnMarginChange` используется для преобразования свойства <xref:System.Windows.Forms.Control.Margin%2A> в свойство [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.FrameworkElement.Margin%2A>.  
+     <span data-ttu-id="708b6-135">`OnMarginChange` Метод переводит <xref:System.Windows.Forms.Control.Margin%2A> свойства [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.FrameworkElement.Margin%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="708b6-135">The `OnMarginChange` method translates the <xref:System.Windows.Forms.Control.Margin%2A> property to the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.FrameworkElement.Margin%2A> property.</span></span>  
   
-2.  Скопируйте следующий код в определение класса `Form1`.  
+2.  <span data-ttu-id="708b6-136">Скопируйте следующий код в определение `Form1` класса.</span><span class="sxs-lookup"><span data-stu-id="708b6-136">Copy the following code into the definition for the `Form1` class.</span></span>  
   
      [!code-csharp[PropertyMappingWithElementHost#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#14)]
      [!code-vb[PropertyMappingWithElementHost#14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#14)]  
   
-     Метод `AddRegionMapping` используется для добавления нового сопоставления для свойства <xref:System.Windows.Forms.Control.Region%2A>.  
+     <span data-ttu-id="708b6-137">`AddRegionMapping` Метод добавляет новое сопоставление для <xref:System.Windows.Forms.Control.Region%2A> свойства.</span><span class="sxs-lookup"><span data-stu-id="708b6-137">The `AddRegionMapping` method adds a new mapping for the <xref:System.Windows.Forms.Control.Region%2A> property.</span></span>  
   
-     Метод `OnRegionChange` используется для преобразования свойства <xref:System.Windows.Forms.Control.Region%2A> в свойство [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.UIElement.Clip%2A>.  
+     <span data-ttu-id="708b6-138">`OnRegionChange` Метод переводит <xref:System.Windows.Forms.Control.Region%2A> свойства [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.UIElement.Clip%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="708b6-138">The `OnRegionChange` method translates the <xref:System.Windows.Forms.Control.Region%2A> property to the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.UIElement.Clip%2A> property.</span></span>  
   
-     Метод `Form1_Resize` используется для обработки события <xref:System.Windows.Forms.Control.Resize> формы и изменения размеров области отсечения в соответствии с размером размещенного элемента.  
+     <span data-ttu-id="708b6-139">`Form1_Resize` Метод обрабатывает формы <xref:System.Windows.Forms.Control.Resize> событий и размеров области отсечения для соответствия размещаемому элементу.</span><span class="sxs-lookup"><span data-stu-id="708b6-139">The `Form1_Resize` method handles the form's <xref:System.Windows.Forms.Control.Resize> event and sizes the clipping region to fit the hosted element.</span></span>  
   
-## Удаление сопоставления свойства по умолчанию  
- Чтобы удалить сопоставление свойства по умолчанию, вызовите метод <xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A> для свойства <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> элемента управления <xref:System.Windows.Forms.Integration.ElementHost>.  
+## <a name="removing-a-default-property-mapping"></a><span data-ttu-id="708b6-140">Удаление сопоставления свойства по умолчанию</span><span class="sxs-lookup"><span data-stu-id="708b6-140">Removing a Default Property Mapping</span></span>  
+ <span data-ttu-id="708b6-141">Удалить сопоставление свойства по умолчанию путем вызова <xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A> метод <xref:System.Windows.Forms.Integration.ElementHost> элемента управления <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>.</span><span class="sxs-lookup"><span data-stu-id="708b6-141">Remove a default property mapping by calling the <xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A> method on the <xref:System.Windows.Forms.Integration.ElementHost> control's <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>.</span></span>  
   
-#### Удаление сопоставления свойства по умолчанию  
+#### <a name="to-remove-a-default-property-mapping"></a><span data-ttu-id="708b6-142">Удаление сопоставления свойства по умолчанию</span><span class="sxs-lookup"><span data-stu-id="708b6-142">To remove a default property mapping</span></span>  
   
--   Скопируйте следующий код в определение класса `Form1`.  
+-   <span data-ttu-id="708b6-143">Скопируйте следующий код в определение `Form1` класса.</span><span class="sxs-lookup"><span data-stu-id="708b6-143">Copy the following code into the definition for the `Form1` class.</span></span>  
   
      [!code-csharp[PropertyMappingWithElementHost#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#13)]
      [!code-vb[PropertyMappingWithElementHost#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#13)]  
   
-     Метод `RemoveCursorMapping` используется для удаления сопоставления по умолчанию для свойства <xref:System.Windows.Forms.Control.Cursor%2A>.  
+     <span data-ttu-id="708b6-144">`RemoveCursorMapping` Метод удаляет сопоставление по умолчанию для <xref:System.Windows.Forms.Control.Cursor%2A> свойства.</span><span class="sxs-lookup"><span data-stu-id="708b6-144">The `RemoveCursorMapping` method deletes the default mapping for the <xref:System.Windows.Forms.Control.Cursor%2A> property.</span></span>  
   
-## Расширение сопоставления свойства по умолчанию  
- Можно использовать сопоставление свойства по умолчанию, а также расширить его с помощью собственного сопоставления.  
+## <a name="extending-a-default-property-mapping"></a><span data-ttu-id="708b6-145">Расширение сопоставления свойства по умолчанию</span><span class="sxs-lookup"><span data-stu-id="708b6-145">Extending a Default Property Mapping</span></span>  
+ <span data-ttu-id="708b6-146">Вы можете использовать сопоставление свойства по умолчанию, а также расширить его с помощью собственного сопоставления.</span><span class="sxs-lookup"><span data-stu-id="708b6-146">You can use a default property mapping and also extend it with your own mapping.</span></span>  
   
-#### Расширение сопоставления свойства по умолчанию  
+#### <a name="to-extend-a-default-property-mapping"></a><span data-ttu-id="708b6-147">Расширение сопоставления свойства по умолчанию</span><span class="sxs-lookup"><span data-stu-id="708b6-147">To extend a default property mapping</span></span>  
   
--   Скопируйте следующий код в определение класса `Form1`.  
+-   <span data-ttu-id="708b6-148">Скопируйте следующий код в определение `Form1` класса.</span><span class="sxs-lookup"><span data-stu-id="708b6-148">Copy the following code into the definition for the `Form1` class.</span></span>  
   
      [!code-csharp[PropertyMappingWithElementHost#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#15)]
      [!code-vb[PropertyMappingWithElementHost#15](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#15)]  
   
-     Метод `ExtendBackColorMapping` используется для добавления пользовательского преобразователя свойств к существующему сопоставлению свойства <xref:System.Windows.Forms.Control.BackColor%2A>.  
+     <span data-ttu-id="708b6-149">`ExtendBackColorMapping` Метод добавляет пользовательский преобразователь свойств для существующего <xref:System.Windows.Forms.Control.BackColor%2A> сопоставление свойств.</span><span class="sxs-lookup"><span data-stu-id="708b6-149">The `ExtendBackColorMapping` method adds a custom property translator to the existing <xref:System.Windows.Forms.Control.BackColor%2A> property mapping.</span></span>  
   
-     Метод `OnBackColorChange` используется для присваивания определенного изображения свойству <xref:System.Windows.Controls.Control.Background%2A> размещенного элемента управления.  Метод `OnBackColorChange` вызывается после применения сопоставления свойства по умолчанию.  
+     <span data-ttu-id="708b6-150">`OnBackColorChange` Метод назначает конкретный образ размещенного элемента управления <xref:System.Windows.Controls.Control.Background%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="708b6-150">The `OnBackColorChange` method assigns a specific image to the hosted control's <xref:System.Windows.Controls.Control.Background%2A> property.</span></span> <span data-ttu-id="708b6-151">`OnBackColorChange` Метод вызывается после применения сопоставления свойства по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="708b6-151">The `OnBackColorChange` method is called after the default property mapping is applied.</span></span>  
   
-## Инициализация сопоставлений свойств  
+## <a name="initializing-your-property-mappings"></a><span data-ttu-id="708b6-152">Инициализация сопоставлений свойств</span><span class="sxs-lookup"><span data-stu-id="708b6-152">Initializing Your Property Mappings</span></span>  
   
-#### Инициализация сопоставления свойств  
+#### <a name="to-initialize-your-property-mappings"></a><span data-ttu-id="708b6-153">Инициализация сопоставлений свойств</span><span class="sxs-lookup"><span data-stu-id="708b6-153">To initialize your property mappings</span></span>  
   
-1.  Скопируйте следующий код в определение класса `Form1`.  
+1.  <span data-ttu-id="708b6-154">Скопируйте следующий код в определение `Form1` класса.</span><span class="sxs-lookup"><span data-stu-id="708b6-154">Copy the following code into the definition for the `Form1` class.</span></span>  
   
      [!code-csharp[PropertyMappingWithElementHost#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#11)]
      [!code-vb[PropertyMappingWithElementHost#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#11)]  
   
-     Метод `Form1_Load` используется для обработки события <xref:System.Windows.Forms.Form.Load> и выполнения следующей инициализации.  
+     <span data-ttu-id="708b6-155">`Form1_Load` Метод обрабатывает <xref:System.Windows.Forms.Form.Load> событие и выполняет следующую инициализацию.</span><span class="sxs-lookup"><span data-stu-id="708b6-155">The `Form1_Load` method handles the <xref:System.Windows.Forms.Form.Load> event and performs the following initialization.</span></span>  
   
-    -   Создание элемента [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button>.  
+    -   <span data-ttu-id="708b6-156">Создает [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> элемента.</span><span class="sxs-lookup"><span data-stu-id="708b6-156">Creates a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> element.</span></span>  
   
-    -   Вызов методов, ранее определенных в пошаговом руководстве, для настройки сопоставлений свойств.  
+    -   <span data-ttu-id="708b6-157">Вызывает методы, ранее определенные в руководстве, для настройки сопоставлений свойств.</span><span class="sxs-lookup"><span data-stu-id="708b6-157">Calls the methods you defined earlier in the walkthrough to set up the property mappings.</span></span>  
   
-    -   Назначение начальных значений сопоставленным свойствам.  
+    -   <span data-ttu-id="708b6-158">Присваивает начальные значения сопоставленным свойствам.</span><span class="sxs-lookup"><span data-stu-id="708b6-158">Assigns initial values to the mapped properties.</span></span>  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  
+2.  <span data-ttu-id="708b6-159">Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="708b6-159">Press F5 to build and run the application.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [Сопоставление свойств Windows Forms и WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)   
- [Конструктор WPF](http://msdn.microsoft.com/ru-ru/c6c65214-8411-4e16-b254-163ed4099c26)   
- [Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="708b6-160">См. также</span><span class="sxs-lookup"><span data-stu-id="708b6-160">See Also</span></span>  
+ <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [<span data-ttu-id="708b6-161">Сопоставление свойств Windows Forms и WPF</span><span class="sxs-lookup"><span data-stu-id="708b6-161">Windows Forms and WPF Property Mapping</span></span>](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
+ [<span data-ttu-id="708b6-162">Конструктор WPF</span><span class="sxs-lookup"><span data-stu-id="708b6-162">WPF Designer</span></span>](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [<span data-ttu-id="708b6-163">Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms</span><span class="sxs-lookup"><span data-stu-id="708b6-163">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

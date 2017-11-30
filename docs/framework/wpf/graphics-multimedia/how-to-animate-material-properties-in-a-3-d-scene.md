@@ -1,41 +1,44 @@
 ---
-title: "Практическое руководство. Анимация свойств материалов в трехмерной сцене | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "трехмерные сцены, анимация свойств Material"
-  - "анимация, свойства Material в трехмерных сценах"
-  - "свойства Material, анимация в трехмерных сценах"
+title: "Практическое руководство. Анимация свойств материалов в трехмерной сцене"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Material properties [WPF], animating in 3-D scenes
+- animation [WPF], Material properties in 3-D scenes
+- 3-D scenes [WPF], animating Material properties
 ms.assetid: 229fd6eb-7401-4992-b0c9-8b28de230c0f
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 273c03fcedbd5e5b2f6a38cb718788d5f8d8fda3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Анимация свойств материалов в трехмерной сцене
-В этом примере демонстрируется анимация свойства <xref:System.Windows.Media.Brush.Opacity%2A> из <xref:System.Windows.Media.Media3D.Material> применяемая к [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] модели.  
+# <a name="how-to-animate-material-properties-in-a-3-d-scene"></a><span data-ttu-id="e5fc8-102">Практическое руководство. Анимация свойств материалов в трехмерной сцене</span><span class="sxs-lookup"><span data-stu-id="e5fc8-102">How to: Animate Material Properties in a 3-D Scene</span></span>
+<span data-ttu-id="e5fc8-103">В этом примере демонстрируется анимация <xref:System.Windows.Media.Brush.Opacity%2A> свойство <xref:System.Windows.Media.Media3D.Material> применены к [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] модели.</span><span class="sxs-lookup"><span data-stu-id="e5fc8-103">This example shows how to animate the <xref:System.Windows.Media.Brush.Opacity%2A> property of the <xref:System.Windows.Media.Media3D.Material> applied to a [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] model.</span></span>  
   
- В следующем примере кода определяется <xref:System.Windows.Media.LinearGradientBrush>, используемый как <xref:System.Windows.Media.Media3D.Material>, применяемый к 3\-D объекту.  
+ <span data-ttu-id="e5fc8-104">В следующем примере кода определяется <xref:System.Windows.Media.LinearGradientBrush> используется в качестве <xref:System.Windows.Media.Media3D.Material> 3D объекта.</span><span class="sxs-lookup"><span data-stu-id="e5fc8-104">The following code example defines the <xref:System.Windows.Media.LinearGradientBrush> used as the <xref:System.Windows.Media.Media3D.Material> applied to the 3D object.</span></span>  
   
- [!code-xml[Animation3DGallery_snip#AnimateMaterialExampleInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/AnimateMaterialExample.xaml#animatematerialexampleinline1)]  
+ [!code-xaml[Animation3DGallery_snip#AnimateMaterialExampleInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/AnimateMaterialExample.xaml#animatematerialexampleinline1)]  
   
- Свойство <xref:System.Windows.Media.Brush.Opacity%2A> этого <xref:System.Windows.Media.LinearGradientBrush> анимировано с помощью приведенного ниже примера кода.  
+ <span data-ttu-id="e5fc8-105"><xref:System.Windows.Media.Brush.Opacity%2A> Этого <xref:System.Windows.Media.LinearGradientBrush> анимировано с помощью в примере кода.</span><span class="sxs-lookup"><span data-stu-id="e5fc8-105">The <xref:System.Windows.Media.Brush.Opacity%2A> property of this <xref:System.Windows.Media.LinearGradientBrush> is animated using the code example below.</span></span>  
   
- [!code-xml[Animation3DGallery_snip#AnimateMaterialExampleInline2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/AnimateMaterialExample.xaml#animatematerialexampleinline2)]  
+ [!code-xaml[Animation3DGallery_snip#AnimateMaterialExampleInline2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/AnimateMaterialExample.xaml#animatematerialexampleinline2)]  
   
-## Пример  
- Следующий код показывает весь пример.  
+## <a name="example"></a><span data-ttu-id="e5fc8-106">Пример</span><span class="sxs-lookup"><span data-stu-id="e5fc8-106">Example</span></span>  
+ <span data-ttu-id="e5fc8-107">Ниже приведен пример целиком.</span><span class="sxs-lookup"><span data-stu-id="e5fc8-107">The following code shows the entire sample.</span></span>  
   
- [!code-xml[Animation3DGallery_snip#AnimateMaterialExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/AnimateMaterialExample.xaml#animatematerialexamplewholepage)]  
+ [!code-xaml[Animation3DGallery_snip#AnimateMaterialExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/AnimateMaterialExample.xaml#animatematerialexamplewholepage)]  
   
-## См. также  
- [Создание трехмерной сцены](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)   
- [Обзор трехмерной графики](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+## <a name="see-also"></a><span data-ttu-id="e5fc8-108">См. также</span><span class="sxs-lookup"><span data-stu-id="e5fc8-108">See Also</span></span>  
+ [<span data-ttu-id="e5fc8-109">Создание трехмерной сцены</span><span class="sxs-lookup"><span data-stu-id="e5fc8-109">Create a 3-D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
+ [<span data-ttu-id="e5fc8-110">Обзор трехмерной графики</span><span class="sxs-lookup"><span data-stu-id="e5fc8-110">3-D Graphics Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)

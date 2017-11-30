@@ -1,65 +1,64 @@
 ---
-title: "Контексты объявления и уровни доступа по умолчанию (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "уровни доступа, уровни по умолчанию"
-  - "уровни доступа, Visual Basic"
-  - "Контексты объявления, Visual Basic"
-  - "уровень модуля, определенный"
-  - "Уровень пространства имен, определенный"
-  - "уровень процедуры, определенный"
+title: "Контексты объявления и уровни доступа по умолчанию (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- module level, defined
+- declaration contexts, Visual Basic
+- procedure level, defined
+- namespace level, defined
+- access levels, Visual Basic
+- access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b89b74a6c0393f6a52a0b5c1ddf6f66c505564ba
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Контексты объявления и уровни доступа по умолчанию (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-В этом подразделе описано, какие типы Visual Basic могут быть объявлены внутри других типов, и каковы их уровни доступа по умолчанию, если не указано иное.  
+# <a name="declaration-contexts-and-default-access-levels-visual-basic"></a><span data-ttu-id="b1c6c-102">Контексты объявления и уровни доступа по умолчанию (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b1c6c-102">Declaration Contexts and Default Access Levels (Visual Basic)</span></span>
+<span data-ttu-id="b1c6c-103">В этом разделе описывается, какие типы Visual Basic могут быть объявлены внутри других типов, и что их уровни доступа по умолчанию, если не указана.</span><span class="sxs-lookup"><span data-stu-id="b1c6c-103">This topic describes which Visual Basic types can be declared within which other types, and what their access levels default to if not specified.</span></span>  
   
-## Уровни контекста объявления  
- *Контекстом объявления* элемента программирования является область кода, в которой он был объявлен.  Чаще всего, это другой программный элемент, который затем называется *содержащим элементом*.  
+## <a name="declaration-context-levels"></a><span data-ttu-id="b1c6c-104">Уровни контекста объявления</span><span class="sxs-lookup"><span data-stu-id="b1c6c-104">Declaration Context Levels</span></span>  
+ <span data-ttu-id="b1c6c-105">*Контекст объявления* элемента программирования является область кода, в котором она объявлена.</span><span class="sxs-lookup"><span data-stu-id="b1c6c-105">The *declaration context* of a programming element is the region of code in which it is declared.</span></span> <span data-ttu-id="b1c6c-106">Часто это другой программный элемент, который затем будет вызвана *содержащий элемент*.</span><span class="sxs-lookup"><span data-stu-id="b1c6c-106">This is often another programming element, which is then called the *containing element*.</span></span>  
   
- Существуют следующие уровни для контекстов объявления:  
+ <span data-ttu-id="b1c6c-107">Ниже перечислены уровни для контекстов объявления.</span><span class="sxs-lookup"><span data-stu-id="b1c6c-107">The levels for declaration contexts are the following:</span></span>  
   
--   *Уровень пространства имен* — в исходном файле или в пространстве имен, но не в классе, структуре, модуле или интерфейсе.  
+-   <span data-ttu-id="b1c6c-108">*Уровень пространства имен* — в пределах исходного файла или пространства имен, но не внутри класса, структуры, модуля или интерфейса</span><span class="sxs-lookup"><span data-stu-id="b1c6c-108">*Namespace level* — within a source file or namespace but not within a class, structure, module, or interface</span></span>  
   
--   *Уровень модуля* — внутри класса, структуры, модуля или интерфейса, но не в процедуре или блоке.  
+-   <span data-ttu-id="b1c6c-109">*Уровень модуля* — внутри класса, структуры, модуля или интерфейса, но не внутри процедуры или блока</span><span class="sxs-lookup"><span data-stu-id="b1c6c-109">*Module level* — within a class, structure, module, or interface but not within a procedure or block</span></span>  
   
--   *Уровень процедуры* — внутри процедуры или блока \(например, `If` или `For`\).  
+-   <span data-ttu-id="b1c6c-110">*Уровень процедуры* — внутри процедуры или блока (такие как `If` или `For`)</span><span class="sxs-lookup"><span data-stu-id="b1c6c-110">*Procedure level* — within a procedure or block (such as `If` or `For`)</span></span>  
   
- В следующей таблице показаны уровни доступа по умолчанию для различных элементов программирования, в зависимости от их контекстов объявления.  
+ <span data-ttu-id="b1c6c-111">В следующей таблице показаны уровни доступа по умолчанию для различных элементов программирования, в зависимости от их контекстов объявления.</span><span class="sxs-lookup"><span data-stu-id="b1c6c-111">The following table shows the default access levels for various declared programming elements, depending on their declaration contexts.</span></span>  
   
-|Объявленный элемент|Уровень пространства имен|Уровень модуля|Уровень процедуры|  
-|-------------------------|-------------------------------|--------------------|-----------------------|  
-|Переменная \([Оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md)\)|Недопустимо|`Private` \(`Public` в `Structure`, недопустимо в `Interface`\)|`Public`|  
-|Константа \([Оператор Const](../../../visual-basic/language-reference/statements/const-statement.md)\)|Недопустимо|`Private` \(`Public` в `Structure`, недопустимо в `Interface`\)|`Public`|  
-|Перечисление \([Оператор Enum](../../../visual-basic/language-reference/statements/enum-statement.md)\)|`Friend`|`Public`|Недопустимо|  
-|Класс \([Оператор Class](../../../visual-basic/language-reference/statements/class-statement.md)\)|`Friend`|`Public`|Недопустимо|  
-|Структура \([Оператор Structure](../../../visual-basic/language-reference/statements/structure-statement.md)\)|`Friend`|`Public`|Недопустимо|  
-|Модуль \([Оператор Module](../../../visual-basic/language-reference/statements/module-statement.md)\)|`Friend`|Недопустимо|Недопустимо|  
-|Интерфейс \([Оператор Interface](../../../visual-basic/language-reference/statements/interface-statement.md)\)|`Friend`|`Public`|Недопустимо|  
-|Процедура \([Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md), [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)\)|Недопустимо|`Public`|Недопустимо|  
-|Внешняя ссылка \([Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)\)|Недопустимо|`Public` \(недопустимо в `Interface`\)|Недопустимо|  
-|Оператор \([Оператор Operator](../../../visual-basic/language-reference/statements/operator-statement.md)\)|Недопустимо|`Public` \(недопустимо в `Interface` или `Module`\)|Недопустимо|  
-|Свойство \([Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)\)|Недопустимо|`Public`|Недопустимо|  
-|Свойство по умолчанию \([Default](../../../visual-basic/language-reference/modifiers/default.md)\)|Недопустимо|`Public` \(недопустимо в `Module`\)|Недопустимо|  
-|Событие \([Оператор Event](../../../visual-basic/language-reference/statements/event-statement.md)\)|Недопустимо|`Public`|Недопустимо|  
-|Делегат \([Оператор Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md)\)|`Friend`|`Public`|Недопустимо|  
+|<span data-ttu-id="b1c6c-112">Объявленный элемент</span><span class="sxs-lookup"><span data-stu-id="b1c6c-112">Declared element</span></span>|<span data-ttu-id="b1c6c-113">Уровень пространства имен</span><span class="sxs-lookup"><span data-stu-id="b1c6c-113">Namespace level</span></span>|<span data-ttu-id="b1c6c-114">Уровень модуля</span><span class="sxs-lookup"><span data-stu-id="b1c6c-114">Module level</span></span>|<span data-ttu-id="b1c6c-115">Уровень процедуры</span><span class="sxs-lookup"><span data-stu-id="b1c6c-115">Procedure level</span></span>|  
+|----------------------|---------------------|------------------|---------------------|  
+|<span data-ttu-id="b1c6c-116">Переменной ([оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md))</span><span class="sxs-lookup"><span data-stu-id="b1c6c-116">Variable ([Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md))</span></span>|<span data-ttu-id="b1c6c-117">Не допускается</span><span class="sxs-lookup"><span data-stu-id="b1c6c-117">Not allowed</span></span>|<span data-ttu-id="b1c6c-118">`Private`(`Public` в `Structure`, не допускается в `Interface`)</span><span class="sxs-lookup"><span data-stu-id="b1c6c-118">`Private` (`Public` in `Structure`, not allowed in `Interface`)</span></span>|`Public`|  
+|<span data-ttu-id="b1c6c-119">Константы ([оператор Const](../../../visual-basic/language-reference/statements/const-statement.md))</span><span class="sxs-lookup"><span data-stu-id="b1c6c-119">Constant ([Const Statement](../../../visual-basic/language-reference/statements/const-statement.md))</span></span>|<span data-ttu-id="b1c6c-120">Не допускается</span><span class="sxs-lookup"><span data-stu-id="b1c6c-120">Not allowed</span></span>|<span data-ttu-id="b1c6c-121">`Private`(`Public` в `Structure`, не допускается в `Interface`)</span><span class="sxs-lookup"><span data-stu-id="b1c6c-121">`Private` (`Public` in `Structure`, not allowed in `Interface`)</span></span>|`Public`|  
+|<span data-ttu-id="b1c6c-122">Перечисление ([оператор Enum](../../../visual-basic/language-reference/statements/enum-statement.md))</span><span class="sxs-lookup"><span data-stu-id="b1c6c-122">Enumeration ([Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md))</span></span>|`Friend`|`Public`|<span data-ttu-id="b1c6c-123">Не допускается</span><span class="sxs-lookup"><span data-stu-id="b1c6c-123">Not allowed</span></span>|  
+|<span data-ttu-id="b1c6c-124">Класс ([оператор Class](../../../visual-basic/language-reference/statements/class-statement.md))</span><span class="sxs-lookup"><span data-stu-id="b1c6c-124">Class ([Class Statement](../../../visual-basic/language-reference/statements/class-statement.md))</span></span>|`Friend`|`Public`|<span data-ttu-id="b1c6c-125">Не допускается</span><span class="sxs-lookup"><span data-stu-id="b1c6c-125">Not allowed</span></span>|  
+|<span data-ttu-id="b1c6c-126">Структура ([структура инструкции](../../../visual-basic/language-reference/statements/structure-statement.md))</span><span class="sxs-lookup"><span data-stu-id="b1c6c-126">Structure ([Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md))</span></span>|`Friend`|`Public`|<span data-ttu-id="b1c6c-127">Не допускается</span><span class="sxs-lookup"><span data-stu-id="b1c6c-127">Not allowed</span></span>|  
+|<span data-ttu-id="b1c6c-128">Модуль ([оператор Module](../../../visual-basic/language-reference/statements/module-statement.md))</span><span class="sxs-lookup"><span data-stu-id="b1c6c-128">Module ([Module Statement](../../../visual-basic/language-reference/statements/module-statement.md))</span></span>|`Friend`|<span data-ttu-id="b1c6c-129">Не допускается</span><span class="sxs-lookup"><span data-stu-id="b1c6c-129">Not allowed</span></span>|<span data-ttu-id="b1c6c-130">Не допускается</span><span class="sxs-lookup"><span data-stu-id="b1c6c-130">Not allowed</span></span>|  
+|<span data-ttu-id="b1c6c-131">Интерфейс ([оператор Interface](../../../visual-basic/language-reference/statements/interface-statement.md))</span><span class="sxs-lookup"><span data-stu-id="b1c6c-131">Interface ([Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md))</span></span>|`Friend`|`Public`|<span data-ttu-id="b1c6c-132">Не допускается</span><span class="sxs-lookup"><span data-stu-id="b1c6c-132">Not allowed</span></span>|  
+|<span data-ttu-id="b1c6c-133">Процедура ([функции инструкции](../../../visual-basic/language-reference/statements/function-statement.md), [оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md))</span><span class="sxs-lookup"><span data-stu-id="b1c6c-133">Procedure ([Function Statement](../../../visual-basic/language-reference/statements/function-statement.md), [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md))</span></span>|<span data-ttu-id="b1c6c-134">Не допускается</span><span class="sxs-lookup"><span data-stu-id="b1c6c-134">Not allowed</span></span>|`Public`|<span data-ttu-id="b1c6c-135">Не допускается</span><span class="sxs-lookup"><span data-stu-id="b1c6c-135">Not allowed</span></span>|  
+|<span data-ttu-id="b1c6c-136">Внешняя ссылка ([инструкции Declare](../../../visual-basic/language-reference/statements/declare-statement.md))</span><span class="sxs-lookup"><span data-stu-id="b1c6c-136">External reference ([Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md))</span></span>|<span data-ttu-id="b1c6c-137">Не допускается</span><span class="sxs-lookup"><span data-stu-id="b1c6c-137">Not allowed</span></span>|<span data-ttu-id="b1c6c-138">`Public`(не допускается в `Interface`)</span><span class="sxs-lookup"><span data-stu-id="b1c6c-138">`Public` (not allowed in `Interface`)</span></span>|<span data-ttu-id="b1c6c-139">Не допускается</span><span class="sxs-lookup"><span data-stu-id="b1c6c-139">Not allowed</span></span>|  
+|<span data-ttu-id="b1c6c-140">Оператор ([оператор Operator](../../../visual-basic/language-reference/statements/operator-statement.md))</span><span class="sxs-lookup"><span data-stu-id="b1c6c-140">Operator ([Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md))</span></span>|<span data-ttu-id="b1c6c-141">Не допускается</span><span class="sxs-lookup"><span data-stu-id="b1c6c-141">Not allowed</span></span>|<span data-ttu-id="b1c6c-142">`Public`(не допускается в `Interface` или `Module`)</span><span class="sxs-lookup"><span data-stu-id="b1c6c-142">`Public` (not allowed in `Interface` or `Module`)</span></span>|<span data-ttu-id="b1c6c-143">Не допускается</span><span class="sxs-lookup"><span data-stu-id="b1c6c-143">Not allowed</span></span>|  
+|<span data-ttu-id="b1c6c-144">Свойство ([оператор Property](../../../visual-basic/language-reference/statements/property-statement.md))</span><span class="sxs-lookup"><span data-stu-id="b1c6c-144">Property ([Property Statement](../../../visual-basic/language-reference/statements/property-statement.md))</span></span>|<span data-ttu-id="b1c6c-145">Не допускается</span><span class="sxs-lookup"><span data-stu-id="b1c6c-145">Not allowed</span></span>|`Public`|<span data-ttu-id="b1c6c-146">Не допускается</span><span class="sxs-lookup"><span data-stu-id="b1c6c-146">Not allowed</span></span>|  
+|<span data-ttu-id="b1c6c-147">Свойство по умолчанию ([по умолчанию](../../../visual-basic/language-reference/modifiers/default.md))</span><span class="sxs-lookup"><span data-stu-id="b1c6c-147">Default property ([Default](../../../visual-basic/language-reference/modifiers/default.md))</span></span>|<span data-ttu-id="b1c6c-148">Не допускается</span><span class="sxs-lookup"><span data-stu-id="b1c6c-148">Not allowed</span></span>|<span data-ttu-id="b1c6c-149">`Public`(не допускается в `Module`)</span><span class="sxs-lookup"><span data-stu-id="b1c6c-149">`Public` (not allowed in `Module`)</span></span>|<span data-ttu-id="b1c6c-150">Не допускается</span><span class="sxs-lookup"><span data-stu-id="b1c6c-150">Not allowed</span></span>|  
+|<span data-ttu-id="b1c6c-151">События ([оператор Event](../../../visual-basic/language-reference/statements/event-statement.md))</span><span class="sxs-lookup"><span data-stu-id="b1c6c-151">Event ([Event Statement](../../../visual-basic/language-reference/statements/event-statement.md))</span></span>|<span data-ttu-id="b1c6c-152">Не допускается</span><span class="sxs-lookup"><span data-stu-id="b1c6c-152">Not allowed</span></span>|`Public`|<span data-ttu-id="b1c6c-153">Не допускается</span><span class="sxs-lookup"><span data-stu-id="b1c6c-153">Not allowed</span></span>|  
+|<span data-ttu-id="b1c6c-154">Делегат ([оператор Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md))</span><span class="sxs-lookup"><span data-stu-id="b1c6c-154">Delegate ([Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md))</span></span>|`Friend`|`Public`|<span data-ttu-id="b1c6c-155">Не допускается</span><span class="sxs-lookup"><span data-stu-id="b1c6c-155">Not allowed</span></span>|  
   
- Дополнительные сведения см. в разделе [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ <span data-ttu-id="b1c6c-156">Дополнительные сведения см. в разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="b1c6c-156">For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
-## См. также  
- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)   
- [Private](../../../visual-basic/language-reference/modifiers/private.md)   
- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+## <a name="see-also"></a><span data-ttu-id="b1c6c-157">См. также</span><span class="sxs-lookup"><span data-stu-id="b1c6c-157">See Also</span></span>  
+ [<span data-ttu-id="b1c6c-158">Friend</span><span class="sxs-lookup"><span data-stu-id="b1c6c-158">Friend</span></span>](../../../visual-basic/language-reference/modifiers/friend.md)  
+ [<span data-ttu-id="b1c6c-159">Закрытые</span><span class="sxs-lookup"><span data-stu-id="b1c6c-159">Private</span></span>](../../../visual-basic/language-reference/modifiers/private.md)  
+ [<span data-ttu-id="b1c6c-160">Public</span><span class="sxs-lookup"><span data-stu-id="b1c6c-160">Public</span></span>](../../../visual-basic/language-reference/modifiers/public.md)

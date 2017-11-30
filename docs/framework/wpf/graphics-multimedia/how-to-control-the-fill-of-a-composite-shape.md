@@ -1,73 +1,76 @@
 ---
-title: "Практическое руководство. Управление заливкой составных фигур | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "фигуры, составной, управление заливкой"
-  - "составные фигуры, управляющий заливки"
-  - "графика [WPF], составные фигуры"
-  - "Заливка, управление"
+title: "Практическое руководство. Управление заливкой составных фигур"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- shapes [WPF], composite [WPF], controlling fill
+- composite shapes [WPF], controlling fill
+- graphics [WPF], composite shapes
+- fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5730b930a4f863ad01fcb6153d9bfd8f700fdb92
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Управление заливкой составных фигур
-<xref:System.Windows.Media.GeometryGroup.FillRule%2A> свойство <xref:System.Windows.Media.GeometryGroup> или <xref:System.Windows.Media.PathGeometry>, задает «правило», которое составные фигуры используют, чтобы определить, является ли заданная точка частью геометрии. Существует два возможных значения для <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule> и <xref:System.Windows.Media.FillRule>. Следующие разделы описывают использование этих двух правил.  
+# <a name="how-to-control-the-fill-of-a-composite-shape"></a><span data-ttu-id="f7d01-102">Практическое руководство. Управление заливкой составных фигур</span><span class="sxs-lookup"><span data-stu-id="f7d01-102">How to: Control the Fill of a Composite Shape</span></span>
+<span data-ttu-id="f7d01-103"><xref:System.Windows.Media.GeometryGroup.FillRule%2A> Свойство <xref:System.Windows.Media.GeometryGroup> или <xref:System.Windows.Media.PathGeometry>, указывает «правило», использующий составные фигуры, чтобы определить, является ли заданная точка частью геометрии.</span><span class="sxs-lookup"><span data-stu-id="f7d01-103">The <xref:System.Windows.Media.GeometryGroup.FillRule%2A> property of a <xref:System.Windows.Media.GeometryGroup> or a <xref:System.Windows.Media.PathGeometry>, specifies a "rule" which the composite shape uses to determine whether a given point is part of the geometry.</span></span> <span data-ttu-id="f7d01-104">Существует два возможных значения <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> и <xref:System.Windows.Media.FillRule.Nonzero>.</span><span class="sxs-lookup"><span data-stu-id="f7d01-104">There are two possible values for <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> and <xref:System.Windows.Media.FillRule.Nonzero>.</span></span> <span data-ttu-id="f7d01-105">Следующие разделы описывают использование этих двух правил.</span><span class="sxs-lookup"><span data-stu-id="f7d01-105">The following sections will describe how to use these two rules.</span></span>  
   
- **EvenOdd:** это правило определяет, является ли точка в области заполнения путем рисования луча от этой точки до бесконечности в любом направлении и подсчета количества сегментов контура в пределах заданной фигуры, которые пересекает луч. Если это число нечетное, точка находится внутри; если четное — точка находится снаружи.  
+ <span data-ttu-id="f7d01-106">**EvenOdd:** правило, определяющее, находится ли точка в области заполнения, с помощью рисования луча от этой точки до бесконечности в любом направлении и подсчета числа сегментов пути в пределах заданной фигуры, которые пересекает луч.</span><span class="sxs-lookup"><span data-stu-id="f7d01-106">**EvenOdd:** This rule determines whether a point is in the fill region by drawing a ray from that point to infinity in any direction and counting the number of path segments within the given shape that the ray crosses.</span></span> <span data-ttu-id="f7d01-107">Если это число нечетное, точка находится внутри; если четное — точка находится снаружи.</span><span class="sxs-lookup"><span data-stu-id="f7d01-107">If this number is odd, the point is inside; if even, the point is outside.</span></span>  
   
- Например, приведенный ниже XAML создает составной фигуры, состоящий из ряда концентрических колец (цель) с <xref:System.Windows.Media.GeometryGroup.FillRule%2A> значение <xref:System.Windows.Media.FillRule>.  
+ <span data-ttu-id="f7d01-108">Например, приведенный ниже код XAML создает составного фигуру, состоящую из ряда концентрических колец (цель) с <xref:System.Windows.Media.GeometryGroup.FillRule%2A> значение <xref:System.Windows.Media.FillRule.EvenOdd>.</span><span class="sxs-lookup"><span data-stu-id="f7d01-108">For example, the XAML below creates a composite shape made up of a series of concentric rings (target) with a <xref:System.Windows.Media.GeometryGroup.FillRule%2A> set to <xref:System.Windows.Media.FillRule.EvenOdd>.</span></span>  
   
- [!code-xml[GeometriesMiscSnippets_snip#FillRuleEvenOddValue](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillruleevenoddvalue)]  
+ [!code-xaml[GeometriesMiscSnippets_snip#FillRuleEvenOddValue](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillruleevenoddvalue)]  
   
- На следующем рисунке фигура, созданная в предыдущем примере.  
+ <span data-ttu-id="f7d01-109">На следующем рисунке показана фигура, созданная в предыдущем примере.</span><span class="sxs-lookup"><span data-stu-id="f7d01-109">The following illustration shows the shape created in the previous example.</span></span>  
   
- ![Снимок экрана: Свойство FillRule для EvenOdd](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleevenoddfirstone.png "FillRuleEvenOddFirstOne")  
+ <span data-ttu-id="f7d01-110">![Снимок экрана: свойство FillRule в значении EvenOdd](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleevenoddfirstone.png "FillRuleEvenOddFirstOne")</span><span class="sxs-lookup"><span data-stu-id="f7d01-110">![Screenshot: FillRule Property of EvenOdd](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleevenoddfirstone.png "FillRuleEvenOddFirstOne")</span></span>  
   
- В приведенном выше рисунке Обратите внимание, что центр и третье кольцо не заполнены. Это потому, что луч, нарисованный из любой точки в одном из этих двух колец проходит через четное число сегментов. См. рисунок ниже:  
+ <span data-ttu-id="f7d01-111">Обратите внимание, что на приведенном выше рисунке центр и третье кольцо не заполнены.</span><span class="sxs-lookup"><span data-stu-id="f7d01-111">In the illustration above, notice that the center and 3rd ring are not filled.</span></span> <span data-ttu-id="f7d01-112">Это потому, что луч, нарисованный из любой точки в одном из этих двух колец проходит через четное число сегментов.</span><span class="sxs-lookup"><span data-stu-id="f7d01-112">This is because a ray drawn from any point within either of those two rings passes through an even number of segments.</span></span> <span data-ttu-id="f7d01-113">См. рисунок ниже:</span><span class="sxs-lookup"><span data-stu-id="f7d01-113">See illustration below:</span></span>  
   
- ![Схема: Значение свойства FillRule для EvenOdd](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleevenodd2.png "FillRuleEvenOdd2")  
+ <span data-ttu-id="f7d01-114">![Рисунок: свойство FillRule в значении EvenOdd](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleevenodd2.png "FillRuleEvenOdd2")</span><span class="sxs-lookup"><span data-stu-id="f7d01-114">![Diagram: FillRule property value of EvenOdd](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleevenodd2.png "FillRuleEvenOdd2")</span></span>  
   
- **Ненулевое значение:** это правило определяет, является ли точка в области заполнения пути путем рисования луча от этой точки до бесконечности в любом направлении и проверкой мест, в которых сегмент фигуры пересекает луч. Начиная с нуля, добавляется единица каждый раз сегмент пересекает луч слева направо, и вычитается единица каждый раз, когда сегмент пересекает луч справа налево. Если после подсчета пересечений результат равен нулю, то точка находится снаружи пути. В противном случае — она находится внутри.  
+ <span data-ttu-id="f7d01-115">**NonZero:** правило, которое определяет, находится ли точка в области заполнения пути, с помощью рисования луча от этой точки до бесконечности в любом направлении и проверкой мест, в которых сегмент фигуры пересекает луч.</span><span class="sxs-lookup"><span data-stu-id="f7d01-115">**NonZero:** This rule determines whether a point is in the fill region of the path by drawing a ray from that point to infinity in any direction and then examining the places where a segment of the shape crosses the ray.</span></span> <span data-ttu-id="f7d01-116">Начиная с нуля, добавляется единица каждый раз, когда сегмент пересекает луч слева направо, и вычитается единица каждый раз, когда сегмент пересекает луч справа налево.</span><span class="sxs-lookup"><span data-stu-id="f7d01-116">Starting with a count of zero, add one each time a Segment crosses the ray from left to right and subtract one each time a path segment crosses the ray from right to left.</span></span> <span data-ttu-id="f7d01-117">Если после подсчета пересечений результат равен нулю, то точка находится снаружи пути.</span><span class="sxs-lookup"><span data-stu-id="f7d01-117">After counting the crossings, if the result is zero then the point is outside the path.</span></span> <span data-ttu-id="f7d01-118">В противном случае — она находится внутри.</span><span class="sxs-lookup"><span data-stu-id="f7d01-118">Otherwise, it is inside.</span></span>  
   
- [!code-xml[GeometriesMiscSnippets_snip#FillRuleNonZeroValueEllipseGeometry](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovalueellipsegeometry)]  
+ [!code-xaml[GeometriesMiscSnippets_snip#FillRuleNonZeroValueEllipseGeometry](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovalueellipsegeometry)]  
   
- В примере выше значение <xref:System.Windows.Media.FillRule> для <xref:System.Windows.Media.GeometryGroup.FillRule%2A> дает в результате следующей иллюстрации:  
+ <span data-ttu-id="f7d01-119">В примере выше значение <xref:System.Windows.Media.FillRule.Nonzero> для <xref:System.Windows.Media.GeometryGroup.FillRule%2A> в результате дает ниже:</span><span class="sxs-lookup"><span data-stu-id="f7d01-119">Using the example above, a value of <xref:System.Windows.Media.FillRule.Nonzero> for <xref:System.Windows.Media.GeometryGroup.FillRule%2A> gives the following illustration as a result:</span></span>  
   
- ![Снимок экрана: Значение FillRule для NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero1.png "FillRuleNonZero1")  
+ <span data-ttu-id="f7d01-120">![Снимок экрана: FillRule со значением NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero1.png "FillRuleNonZero1")</span><span class="sxs-lookup"><span data-stu-id="f7d01-120">![Screenshot: FillRule value of NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero1.png "FillRuleNonZero1")</span></span>  
   
- Как можно видеть, все кольца заполнены. Это потому, что все сегменты идут в одном направлении и поэтому луч, рисуемый из любой точки, будут пересекать один или несколько сегментов и сумма пересечения не будет равна нулю. Например на следующем рисунке красные стрелки обозначают направление рисуются сегменты и белая стрелка показывают произвольный луч, идущий от точки во внутреннем кольце. Начиная с нуля, для каждого сегмента, который пересекает луч, значение&1; добавляется, так как сегмент пересекает луч слева направо.  
+ <span data-ttu-id="f7d01-121">Как можно видеть, все кольца заполнены.</span><span class="sxs-lookup"><span data-stu-id="f7d01-121">As you can see, all the rings are filled.</span></span> <span data-ttu-id="f7d01-122">Это связано с тем, что все сегменты идут в одном направлении и поэтому луч, рисуемый из любой точки, будет пересекать один или несколько сегментов и сумма пересечений не будет равна нулю.</span><span class="sxs-lookup"><span data-stu-id="f7d01-122">This is because all the segments are running in the same direction and so a ray drawn from any point will cross one or more segments and the sum of the crossings will not equal zero.</span></span> <span data-ttu-id="f7d01-123">Например, на следующем рисунке красные стрелки обозначают направление рисования сегментов, а белая стрелка показывает произвольный луч, идущий от точки во внутреннем кольце.</span><span class="sxs-lookup"><span data-stu-id="f7d01-123">For example, in the illustration below, the red arrows represent the direction the segments are drawn and the white arrow represents an arbitrary ray running from a point in the innermost ring.</span></span> <span data-ttu-id="f7d01-124">Начиная с нуля, для каждого сегмента, который пересекает луч, значение 1 добавляется, так как сегмент пересекает луч слева направо.</span><span class="sxs-lookup"><span data-stu-id="f7d01-124">Starting with a value of zero, for each segment that the ray crosses, a value of one is added because the segment crosses the ray from left to right.</span></span>  
   
- ![Схема: Значение свойства FillRule равно NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero2.png "FillRuleNonZero2")  
+ <span data-ttu-id="f7d01-125">![Схема: FillRule со значением NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero2.png "FillRuleNonZero2")</span><span class="sxs-lookup"><span data-stu-id="f7d01-125">![Diagram: FillRule property value equal to NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero2.png "FillRuleNonZero2")</span></span>  
   
- Чтобы лучше продемонстрировать поведение <xref:System.Windows.Media.FillRule> более сложные фигуры с сегментами в разных направлениях правило является обязательным. Приведенный ниже код XAML создает фигуру, аналогичную в предыдущем примере, за исключением того, что она создается с <xref:System.Windows.Media.PathGeometry> а не <xref:System.Windows.Media.EllipseGeometry> которого создает четыре концентрических дуги а не полностью замкнутые концентрических окружностей.  
+ <span data-ttu-id="f7d01-126">Для лучшей демонстрации поведения <xref:System.Windows.Media.FillRule.Nonzero> требуется правило более сложные фигуры с сегментами в другом направлении.</span><span class="sxs-lookup"><span data-stu-id="f7d01-126">To better demonstrate the behavior of <xref:System.Windows.Media.FillRule.Nonzero> rule a more complex shape with segments running in different directions is required.</span></span> <span data-ttu-id="f7d01-127">Приведенный ниже код XAML создает фигуру, аналогичную аналогичен предыдущему примеру, за исключением того, что она создана с <xref:System.Windows.Media.PathGeometry> а затем <xref:System.Windows.Media.EllipseGeometry> создает четыре концентрических дуги а не полностью замкнутые концентрических окружностей.</span><span class="sxs-lookup"><span data-stu-id="f7d01-127">The XAML code below creates a similar shape as the previous example except that it is created with a <xref:System.Windows.Media.PathGeometry> rather then a <xref:System.Windows.Media.EllipseGeometry> which creates four concentric arcs rather then fully closed concentric circles.</span></span>  
   
- [!code-xml[GeometriesMiscSnippets_snip#FillRuleNonZeroValuePathGeometry](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovaluepathgeometry)]  
+ [!code-xaml[GeometriesMiscSnippets_snip#FillRuleNonZeroValuePathGeometry](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovaluepathgeometry)]  
   
- На следующем рисунке фигура, созданная в предыдущем примере.  
+ <span data-ttu-id="f7d01-128">На следующем рисунке показана фигура, созданная в предыдущем примере.</span><span class="sxs-lookup"><span data-stu-id="f7d01-128">The following illustration shows the shape created in the previous example.</span></span>  
   
- ![Снимок экрана: Значение свойства FillRule для NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero3.png "FillRuleNonZero3")  
+ <span data-ttu-id="f7d01-129">![Снимок экрана: FillRule со значением NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero3.png "FillRuleNonZero3")</span><span class="sxs-lookup"><span data-stu-id="f7d01-129">![Screenshot: FillRule property value of NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero3.png "FillRuleNonZero3")</span></span>  
   
- Обратите внимание, что третья дуга от центра не заполняется. На приведенном ниже рисунке показана причина этого. На рисунке красные стрелки обозначают направление рисуются сегменты. Две белые стрелки показывают два произвольных луча, которые выходят из точки в «незаполненной» области. Как видно из рисунка, сумма значений из данного луча, пересекающего сегментов в пути равно нулю. Как указано выше, сумма ноль означает, что точка частью геометрии (не является частью заливки) при сумма, которая *не* нулю, в том числе отрицательное значение, является частью геометрии.  
+ <span data-ttu-id="f7d01-130">Обратите внимание, что третья дуга от центра не заполнена.</span><span class="sxs-lookup"><span data-stu-id="f7d01-130">Notice that the third arc from the center is not filled.</span></span> <span data-ttu-id="f7d01-131">На приведенном ниже рисунке показана причина этого.</span><span class="sxs-lookup"><span data-stu-id="f7d01-131">The illustration below shows why this is.</span></span> <span data-ttu-id="f7d01-132">На рисунке красные стрелки обозначают направление, в котором рисуются сегменты.</span><span class="sxs-lookup"><span data-stu-id="f7d01-132">In the illustration, the red arrows represent the direction the segments are drawn.</span></span> <span data-ttu-id="f7d01-133">Две белые стрелки показывают два произвольных луча, которые выходят из точки в «незаполненной» области.</span><span class="sxs-lookup"><span data-stu-id="f7d01-133">The two white arrows represent two arbitrary rays that move out from a point in the "non-filled" region.</span></span> <span data-ttu-id="f7d01-134">Как видно из рисунка, сумма значений для луча, пересекающего сегменты в пути, равна нулю.</span><span class="sxs-lookup"><span data-stu-id="f7d01-134">As can be seen from the illustration, the sum of the values from a given ray crossing the segments in its path is zero.</span></span> <span data-ttu-id="f7d01-135">Как указано выше, сумма ноль означает, что точка не является частью геометрии (не является частью заливки), а сумма, которая *не равна* нулю, в том числе отрицательное значение, является частью геометрии.</span><span class="sxs-lookup"><span data-stu-id="f7d01-135">As defined above, a sum of zero means that the point is not part of the geometry (not part of the fill) while a sum that is *not* zero, including a negative value, is part of the geometry.</span></span>  
   
- ![Схема: Значение свойства FillRule для NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero4.png "FillRuleNonZero4")  
+ <span data-ttu-id="f7d01-136">![Схема: FillRule со значением NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero4.png "FillRuleNonZero4")</span><span class="sxs-lookup"><span data-stu-id="f7d01-136">![Diagram: FillRule property value of NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero4.png "FillRuleNonZero4")</span></span>  
   
- **Примечание:** в целях <xref:System.Windows.Media.FillRule>, все фигуры считаются замкнутыми. Если имеется разрыв в сегменте, нарисуйте воображаемую линию, чтобы закрыть его. В приведенном выше примере имеются небольшие разрывы в колец. Учитывая это, можно предположить, что луч, проходящий через разрыв, даст результата луча, проходящего в другом направлении. Ниже приведен увеличенный рисунок одного из этих разрывов и «воображаемый сегмент» (сегмент, нарисованный для применения <xref:System.Windows.Media.FillRule>), закрывает его.  
+ <span data-ttu-id="f7d01-137">**Примечание:** в целях <xref:System.Windows.Media.FillRule>, все фигуры считаются замкнутыми.</span><span class="sxs-lookup"><span data-stu-id="f7d01-137">**Note:** For the purposes of <xref:System.Windows.Media.FillRule>, all shapes are considered closed.</span></span> <span data-ttu-id="f7d01-138">Если в сегменте есть разрыв, нарисуйте воображаемую линию, чтобы его закрыть.</span><span class="sxs-lookup"><span data-stu-id="f7d01-138">If there is a gap in a segment, draw an imaginary line to close it.</span></span> <span data-ttu-id="f7d01-139">В приведенном выше примере имеются небольшие разрывы в кольцах.</span><span class="sxs-lookup"><span data-stu-id="f7d01-139">In the example above, there are small gaps in the rings.</span></span> <span data-ttu-id="f7d01-140">Учитывая это, можно предположить, что луч, проходящий через разрыв, даст другой результат, чем луч, проходящий в другом направлении.</span><span class="sxs-lookup"><span data-stu-id="f7d01-140">Given this, one might expect a ray that runs through the gap to give a different result then a ray running in another direction.</span></span> <span data-ttu-id="f7d01-141">Ниже приведен увеличенный рисунок одного из этих разрывов и «мнимой сегмент» (сегмент, который рисуется для применения <xref:System.Windows.Media.FillRule>), закрывает его.</span><span class="sxs-lookup"><span data-stu-id="f7d01-141">Below is an enlarged illustration of one of these gaps and the "imaginary segment" (segment that is drawn for purposes of applying the <xref:System.Windows.Media.FillRule>) that closes it.</span></span>  
   
- ![Схема: Для FillRule, сегменты всегда закрыты](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleclosedshapes.png "FillRuleClosedShapes")  
+ <span data-ttu-id="f7d01-142">![Схема: для FillRule сегменты всегда считаются замкнутыми](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleclosedshapes.png "FillRuleClosedShapes")</span><span class="sxs-lookup"><span data-stu-id="f7d01-142">![Diagram: For FillRule, segments are always closed](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleclosedshapes.png "FillRuleClosedShapes")</span></span>  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a><span data-ttu-id="f7d01-143">Пример</span><span class="sxs-lookup"><span data-stu-id="f7d01-143">Example</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Создание составной фигуры](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)   
- [Общие сведения о геометрии](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+## <a name="see-also"></a><span data-ttu-id="f7d01-144">См. также</span><span class="sxs-lookup"><span data-stu-id="f7d01-144">See Also</span></span>  
+ [<span data-ttu-id="f7d01-145">Создание составной фигуры</span><span class="sxs-lookup"><span data-stu-id="f7d01-145">Create a Composite Shape</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
+ [<span data-ttu-id="f7d01-146">Общие сведения о классе Geometry</span><span class="sxs-lookup"><span data-stu-id="f7d01-146">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)

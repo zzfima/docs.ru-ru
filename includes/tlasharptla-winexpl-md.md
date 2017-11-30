@@ -1,1 +1,1 @@
-Проводник Microsoft Windows
+<span data-ttu-id="c4f92-101">Проводник Microsoft Windows</span><span class="sxs-lookup"><span data-stu-id="c4f92-101">Microsoft Windows Explorer</span></span>

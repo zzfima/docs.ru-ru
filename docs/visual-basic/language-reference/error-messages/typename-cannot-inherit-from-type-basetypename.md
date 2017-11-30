@@ -1,44 +1,42 @@
 ---
-title: "&lt;имяТипа&gt; не может наследоваться от &lt;тип&gt; &lt;имяБазовогоТипа&gt;, поскольку он расширяет доступ базового типа &lt;тип&gt; за пределы сборки | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30910"
-  - "bc30910"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30910"
+title: "&#39; &lt;typename&gt;&#39; не может наследовать от &lt;тип&gt; &#39;&lt; имя_базового_типа&gt;&#39; поскольку он расширяет доступ базового &lt;тип&gt; за пределы данной сборки"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30910
+- bc30910
+helpviewer_keywords: BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d01981d3136968ae2534539b8eccab4c5c535fbc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;имяТипа&gt; не может наследоваться от &lt;тип&gt; &lt;имяБазовогоТипа&gt;, поскольку он расширяет доступ базового типа &lt;тип&gt; за пределы сборки
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Класс или интерфейс наследует базовый класс или интерфейс, но имеет менее строгий уровень доступа.  
+# <a name="39lttypenamegt39-cannot-inherit-from-lttypegt-39ltbasetypenamegt39-because-it-expands-the-access-of-the-base-lttypegt-outside-the-assembly"></a><span data-ttu-id="1ebbb-102">&#39; &lt;typename&gt;&#39; не может наследовать от &lt;тип&gt; &#39;&lt; имя_базового_типа&gt;&#39; поскольку он расширяет доступ базового &lt;тип&gt; за пределы данной сборки</span><span class="sxs-lookup"><span data-stu-id="1ebbb-102">&#39;&lt;typename&gt;&#39; cannot inherit from &lt;type&gt; &#39;&lt;basetypename&gt;&#39; because it expands the access of the base &lt;type&gt; outside the assembly</span></span>
+<span data-ttu-id="1ebbb-103">Класс или интерфейс наследует от базового класса или интерфейса, но имеет менее строгий уровень доступа.</span><span class="sxs-lookup"><span data-stu-id="1ebbb-103">A class or interface inherits from a base class or interface but has a less restrictive access level.</span></span>  
   
- Например интерфейс `Public` наследуется от интерфейса `Friend` или класс `Protected` наследуется от класса `Private`.  Это предоставляет доступ к базовому классу или интерфейсу выше установленного уровня.  
+ <span data-ttu-id="1ebbb-104">Например `Public` интерфейс наследует от `Friend` интерфейса, или `Protected` класс наследует от `Private` класса.</span><span class="sxs-lookup"><span data-stu-id="1ebbb-104">For example, a `Public` interface inherits from a `Friend` interface, or a `Protected` class inherits from a `Private` class.</span></span> <span data-ttu-id="1ebbb-105">Это предоставляет базовый класс или интерфейс для доступа к выше установленного уровня.</span><span class="sxs-lookup"><span data-stu-id="1ebbb-105">This exposes the base class or interface to access beyond the intended level.</span></span>  
   
- **Идентификатор ошибки**: BC30910  
+ <span data-ttu-id="1ebbb-106">**Идентификатор ошибки:** BC30910</span><span class="sxs-lookup"><span data-stu-id="1ebbb-106">**Error ID:** BC30910</span></span>  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a><span data-ttu-id="1ebbb-107">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="1ebbb-107">To correct this error</span></span>  
   
--   Замените уровень доступа производного класса или интерфейса, по крайней мере, на такой же, как у базового класса или интерфейса.  
+-   <span data-ttu-id="1ebbb-108">Измените уровень доступа производный класс или интерфейс был менее строгий, чем базового класса или интерфейса.</span><span class="sxs-lookup"><span data-stu-id="1ebbb-108">Change the access level of the derived class or interface to be at least as restrictive as that of the base class or interface.</span></span>  
   
-     \-или\-  
+     <span data-ttu-id="1ebbb-109">-или-</span><span class="sxs-lookup"><span data-stu-id="1ebbb-109">-or-</span></span>  
   
--   Если требуется менее строгий уровень доступа, удалите оператор `Inherits`.  Наследование от базового класса или интерфейса с более строгими ограничениями невозможно.  
+-   <span data-ttu-id="1ebbb-110">Если требуется менее строгий уровень доступа, удалите `Inherits` инструкции.</span><span class="sxs-lookup"><span data-stu-id="1ebbb-110">If you require the less restrictive access level, remove the `Inherits` statement.</span></span> <span data-ttu-id="1ebbb-111">Не может наследовать от более ограниченный базового класса или интерфейса.</span><span class="sxs-lookup"><span data-stu-id="1ebbb-111">You cannot inherit from a more restricted base class or interface.</span></span>  
   
-## См. также  
- [Оператор Class](../../../visual-basic/language-reference/statements/class-statement.md)   
- [Оператор Interface](../../../visual-basic/language-reference/statements/interface-statement.md)   
- [Инструкция Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)   
- [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+## <a name="see-also"></a><span data-ttu-id="1ebbb-112">См. также</span><span class="sxs-lookup"><span data-stu-id="1ebbb-112">See Also</span></span>  
+ [<span data-ttu-id="1ebbb-113">Оператор Class</span><span class="sxs-lookup"><span data-stu-id="1ebbb-113">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [<span data-ttu-id="1ebbb-114">Оператор Interface</span><span class="sxs-lookup"><span data-stu-id="1ebbb-114">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [<span data-ttu-id="1ebbb-115">Оператор Inherits</span><span class="sxs-lookup"><span data-stu-id="1ebbb-115">Inherits Statement</span></span>](../../../visual-basic/language-reference/statements/inherits-statement.md)  
+ [<span data-ttu-id="1ebbb-116">Уровни доступа в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1ebbb-116">Access levels in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)

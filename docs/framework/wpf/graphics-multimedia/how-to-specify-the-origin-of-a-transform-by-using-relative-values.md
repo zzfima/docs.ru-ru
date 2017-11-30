@@ -1,52 +1,55 @@
 ---
-title: "Практическое руководство. Задание источника преобразования с помощью относительных значений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "графика, начала Transform"
-  - "начала Transform"
-  - "Transform, начала"
+title: "Практическое руководство. Задание источника преобразования с помощью относительных значений"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- origins of Transforms [WPF]
+- Transforms [WPF], origins of
+- graphics [WPF], origins of Transforms
 ms.assetid: f4dbc29d-93c7-41cd-96d8-5cfd8624b470
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ec61fdedc78b785dccf2c235cd17fd20b6d5abc4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Задание источника преобразования с помощью относительных значений
-В этом примере показано использование относительных значений для указания <xref:System.Windows.UIElement.RenderTransform%2A>, применяемого к <xref:System.Windows.FrameworkElement>.  
+# <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a><span data-ttu-id="0c288-102">Практическое руководство. Задание источника преобразования с помощью относительных значений</span><span class="sxs-lookup"><span data-stu-id="0c288-102">How to: Specify the Origin of a Transform by Using Relative Values</span></span>
+<span data-ttu-id="0c288-103">В этом примере показано использование относительных значений для указания <xref:System.Windows.UIElement.RenderTransform%2A> , применяемый к <xref:System.Windows.FrameworkElement>.</span><span class="sxs-lookup"><span data-stu-id="0c288-103">This example shows how to use relative values to specify the origin of a <xref:System.Windows.UIElement.RenderTransform%2A> that is applied to a <xref:System.Windows.FrameworkElement>.</span></span>  
   
- При повороте, масштабировании или [наклоне](GTMT) <xref:System.Windows.FrameworkElement> с помощью свойства <xref:System.Windows.UIElement.RenderTransform%2A>, значение по умолчанию применяет преобразование к верхнему левому углу элемента.  Если вы хотите повернуть, отмасштабировать или наклонить объект относительно центра элемента, можно установить центр элемента центром преобразования.  Однако, это решение требует знания размера элемента.  Простым способом применения преобразования к центру элемента является установка его свойства <xref:System.Windows.UIElement.RenderTransformOrigin%2A> в значение \(0,5, 0,5\), вместо установки центрального значения преобразования.  
+ <span data-ttu-id="0c288-104">Когда поворачивать, масштабировать и наклонять <xref:System.Windows.FrameworkElement> с помощью <xref:System.Windows.UIElement.RenderTransform%2A> свойства, значение по умолчанию применяет преобразование верхнего левого угла элемента.</span><span class="sxs-lookup"><span data-stu-id="0c288-104">When you rotate, scale, or skew a <xref:System.Windows.FrameworkElement> by using the <xref:System.Windows.UIElement.RenderTransform%2A> property, the default setting applies the transform to the upper-left corner of the element.</span></span> <span data-ttu-id="0c288-105">Если требуется выполнить поворот, масштабирование или наклон в центре элемента, можно скорректировать действие, задав центр преобразования в центре элемента.</span><span class="sxs-lookup"><span data-stu-id="0c288-105">If you want to rotate, scale, or skew from the center of the element, you can compensate by setting the center of the transform to the center of the element.</span></span> <span data-ttu-id="0c288-106">Но для этого способа требуется знание размера элемента.</span><span class="sxs-lookup"><span data-stu-id="0c288-106">However, that solution requires that you know the size of the element.</span></span> <span data-ttu-id="0c288-107">Более простой способ применения преобразования к центру элемента является установка его <xref:System.Windows.UIElement.RenderTransformOrigin%2A> свойства (0,5, 0,5), вместо установки центрального значения преобразования.</span><span class="sxs-lookup"><span data-stu-id="0c288-107">An easier way of applying a transform to the center of an element is to set its <xref:System.Windows.UIElement.RenderTransformOrigin%2A> property to (0.5, 0.5), instead of setting a center value on the transform itself.</span></span>  
   
-## Пример  
- В следующем примере используется <xref:System.Windows.Media.RotateTransform>для поворота <xref:System.Windows.Controls.Button> на 45 градусов по часовой стрелке.  Поскольку в примере не задан центр, кнопка поворачивается вокруг точки \(0, 0\), то есть верхнего левого угла.  <xref:System.Windows.Media.RotateTransform> применяется к свойству <xref:System.Windows.UIElement.RenderTransform%2A>.  
+## <a name="example"></a><span data-ttu-id="0c288-108">Пример</span><span class="sxs-lookup"><span data-stu-id="0c288-108">Example</span></span>  
+ <span data-ttu-id="0c288-109">В следующем примере используется <xref:System.Windows.Media.RotateTransform> Поворачиваемый <xref:System.Windows.Controls.Button> 45 градусов по часовой стрелке.</span><span class="sxs-lookup"><span data-stu-id="0c288-109">The following example uses a <xref:System.Windows.Media.RotateTransform> to rotate a <xref:System.Windows.Controls.Button> 45 degrees clockwise.</span></span> <span data-ttu-id="0c288-110">Так как в примере не задана центральная точка, то кнопка поворачивается вокруг точки (0, 0), т. е. левого верхнего угла.</span><span class="sxs-lookup"><span data-stu-id="0c288-110">Because the example does not specify a center, the button rotates about the point (0, 0), which is its upper-left corner.</span></span> <span data-ttu-id="0c288-111"><xref:System.Windows.Media.RotateTransform> Применяется к <xref:System.Windows.UIElement.RenderTransform%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="0c288-111">The <xref:System.Windows.Media.RotateTransform> is applied to the <xref:System.Windows.UIElement.RenderTransform%2A> property.</span></span>  
   
- На следующем рисунке показан результат преобразования для следующего примера.  
+ <span data-ttu-id="0c288-112">Ниже показан результат преобразования для следующего примера.</span><span class="sxs-lookup"><span data-stu-id="0c288-112">The following illustration shows the transformation result for the example that follows.</span></span>  
   
- ![Преобразованная кнопка с использованием RenderTransform](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm\_RenderTransformWithDefaultCenter")  
-Поворот на 45 градусов по часовой стрелке с использованием свойства RenderTransform  
+ <span data-ttu-id="0c288-113">![Преобразованная кнопка с использованием RenderTransform](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")</span><span class="sxs-lookup"><span data-stu-id="0c288-113">![A button transformed using RenderTransform](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")</span></span>  
+<span data-ttu-id="0c288-114">Поворот по часовой стрелке на 45 градусов с использованием свойства RenderTransform</span><span class="sxs-lookup"><span data-stu-id="0c288-114">A 45 degree clockwise rotation by using the RenderTransform property</span></span>  
   
- [!code-xml[Transforms_snip#GraphicsMMRotateButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
   
- В следующем примере также используется объект <xref:System.Windows.Media.RotateTransform> для поворота объекта <xref:System.Windows.Controls.Button> на 45 градусов по часовой стрелке, а также присваивается значение \(0,5,0,5\) свойству <xref:System.Windows.UIElement.RenderTransformOrigin%2A> кнопки.  В результате поворот выполняется относительно центра кнопки, а не ее верхнего левого угла.  
+ <span data-ttu-id="0c288-115">В следующем примере также используется <xref:System.Windows.Media.RotateTransform> Поворачиваемый <xref:System.Windows.Controls.Button> 45 градусов по часовой стрелке, однако в этом примере устанавливается <xref:System.Windows.UIElement.RenderTransformOrigin%2A> кнопки (0,5, 0,5).</span><span class="sxs-lookup"><span data-stu-id="0c288-115">The following example also uses a <xref:System.Windows.Media.RotateTransform> to rotate a <xref:System.Windows.Controls.Button> 45 degrees clockwise; however, this example sets the <xref:System.Windows.UIElement.RenderTransformOrigin%2A> of the button to (0.5, 0.5).</span></span> <span data-ttu-id="0c288-116">В результате кнопка поворачивается вокруг центра, а не вокруг левого верхнего угла.</span><span class="sxs-lookup"><span data-stu-id="0c288-116">As a result, the rotation is applied to the center of the button instead of to the upper-left corner.</span></span>  
   
- На следующем рисунке показан результат преобразования для следующего примера.  
+ <span data-ttu-id="0c288-117">Ниже показан результат преобразования для следующего примера.</span><span class="sxs-lookup"><span data-stu-id="0c288-117">The following illustration shows the transformation result for the example that follows.</span></span>  
   
- ![Кнопка, преобразованная по центру](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm\_RenderTransformRelativeCenter")  
-Поворот на 45 градусов с использованием свойство RenderTransform с RenderTransformOrigin, равным \(0,5, 0,5\)  
+ <span data-ttu-id="0c288-118">![Кнопка, преобразованная по центру](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")</span><span class="sxs-lookup"><span data-stu-id="0c288-118">![A button transformed about its center](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")</span></span>  
+<span data-ttu-id="0c288-119">Поворот на 45 градусов с использованием свойства RenderTransform с заданным для RenderTransformOrigin значением (0,5, 0,5)</span><span class="sxs-lookup"><span data-stu-id="0c288-119">A 45 degree rotation by using the RenderTransform property with a RenderTransformOrigin of (0.5, 0.5)</span></span>  
   
- [!code-xml[Transforms_snip#GraphicsMMRotateButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
   
- Дополнительные сведения об объектах <xref:System.Windows.FrameworkElement> см. в разделе [Общие сведения о классах Transform](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).  
+ <span data-ttu-id="0c288-120">Дополнительные сведения о преобразовании <xref:System.Windows.FrameworkElement> объектов, в разделе [преобразует Обзор](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).</span><span class="sxs-lookup"><span data-stu-id="0c288-120">For more information about transforming <xref:System.Windows.FrameworkElement> objects, see the [Transforms Overview](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).</span></span>  
   
-## См. также  
- <xref:System.Windows.Media.Transform>   
- [Общие сведения о классах Transform](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)   
- [Практические руководства](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="0c288-121">См. также</span><span class="sxs-lookup"><span data-stu-id="0c288-121">See Also</span></span>  
+ <xref:System.Windows.Media.Transform>  
+ [<span data-ttu-id="0c288-122">Общие сведения о классах Transform</span><span class="sxs-lookup"><span data-stu-id="0c288-122">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
+ [<span data-ttu-id="0c288-123">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="0c288-123">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

@@ -1,138 +1,144 @@
 ---
-title: "Общие сведения об объявлении привязок | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "привязка данных, декларации"
-  - "объявления привязки"
-  - "привязка данных, декларации"
-  - "расширения разметки"
-  - "синтаксис объектных элементов"
-  - "синтаксис, объектные элементы"
+title: "Общие сведения об объявлении привязок"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- markup extensions [WPF]
+- data binding [WPF], declarations
+- object element syntax [WPF]
+- binding data [WPF], declarations
+- syntax [WPF], object elements
+- binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-caps.latest.revision: 34
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 33
+caps.latest.revision: "34"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 28b139f6ea2aad41e4d733e8c622699f2474b3e6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об объявлении привязок
-В этом разделе обсуждаются различные способы объявления привязок.  
+# <a name="binding-declarations-overview"></a><span data-ttu-id="3ed14-102">Общие сведения об объявлении привязок</span><span class="sxs-lookup"><span data-stu-id="3ed14-102">Binding Declarations Overview</span></span>
+<span data-ttu-id="3ed14-103">В этом разделе описываются различные способы объявления привязок.</span><span class="sxs-lookup"><span data-stu-id="3ed14-103">This topic discusses the different ways you can declare a binding.</span></span>  
   
-   
+ 
   
 <a name="Prereq"></a>   
-## Предварительные требования  
- Перед прочтением этого раздела следует ознакомиться с основными понятиями и принципами использования расширений разметки.  Дополнительные сведения о расширениях разметки см. в разделе [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+## <a name="prerequisites"></a><span data-ttu-id="3ed14-104">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="3ed14-104">Prerequisites</span></span>  
+ <span data-ttu-id="3ed14-105">Важно, чтобы перед прочтением этого раздела вы были знакомы с основными понятиями и принципами использования расширений разметки.</span><span class="sxs-lookup"><span data-stu-id="3ed14-105">Before reading this topic, it is important that you are familiar with the concept and usage of markup extensions.</span></span> <span data-ttu-id="3ed14-106">Подробнее о расширениях разметки см. в разделе [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).</span><span class="sxs-lookup"><span data-stu-id="3ed14-106">For more information about markup extensions, see [Markup Extensions and WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).</span></span>  
   
- В этом разделе не рассматриваются понятия привязки данных.  Сведения о понятиях привязки данных см. в разделе [Общие сведения о связывании данных](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ <span data-ttu-id="3ed14-107">В этом разделе не рассматриваются сведения о привязке данных.</span><span class="sxs-lookup"><span data-stu-id="3ed14-107">This topic does not cover data binding concepts.</span></span> <span data-ttu-id="3ed14-108">Описание концепции привязки данных см. в разделе [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md).</span><span class="sxs-lookup"><span data-stu-id="3ed14-108">For a discussion of data binding concepts, see [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md).</span></span>  
   
 <a name="BindinginXAML"></a>   
-## Объявление привязки в XAML  
- В этом разделе описывается объявление привязки в языке XAML.  
+## <a name="declaring-a-binding-in-xaml"></a><span data-ttu-id="3ed14-109">Объявление привязки в XAML</span><span class="sxs-lookup"><span data-stu-id="3ed14-109">Declaring a Binding in XAML</span></span>  
+ <span data-ttu-id="3ed14-110">В этом разделе описывается объявление привязки в XAML.</span><span class="sxs-lookup"><span data-stu-id="3ed14-110">This section discusses how to declare a binding in XAML.</span></span>  
   
 <a name="MarkupExtensionSyntax"></a>   
-### Использование расширения разметки  
- <xref:System.Windows.Data.Binding> является расширением разметки.  Объявление привязки, выполняемое с помощью расширения привязки, состоит из ряда предложений, следующих за ключевым словом `Binding` и разделенных запятыми \(,\).  Предложения в объявлении привязки могут следовать в любом порядке и составлять множество различных комбинаций.  Эти предложения представляют собой пары *имя*\=*значение*, где *имя* — это имя свойства <xref:System.Windows.Data.Binding>, а *значение* — значение, устанавливаемое для свойства.  
+### <a name="markup-extension-usage"></a><span data-ttu-id="3ed14-111">Использование расширения разметки</span><span class="sxs-lookup"><span data-stu-id="3ed14-111">Markup Extension Usage</span></span>  
+ <span data-ttu-id="3ed14-112"><xref:System.Windows.Data.Binding> является расширением разметки.</span><span class="sxs-lookup"><span data-stu-id="3ed14-112"><xref:System.Windows.Data.Binding> is a markup extension.</span></span> <span data-ttu-id="3ed14-113">Если для объявления привязки вы используете расширение привязки, то объявление состоит из ряда предложений, следующих за ключевым словом `Binding` и разделенных запятыми (,).</span><span class="sxs-lookup"><span data-stu-id="3ed14-113">When you use the binding extension to declare a binding, the declaration consists of a series of clauses following the `Binding` keyword and separated by commas (,).</span></span> <span data-ttu-id="3ed14-114">Предложения в объявлении привязки могут следовать в любом порядке, и существует множество различных комбинаций.</span><span class="sxs-lookup"><span data-stu-id="3ed14-114">The clauses in the binding declaration can be in any order and there are many possible combinations.</span></span> <span data-ttu-id="3ed14-115">Эти предложения представляют *имя*=*значение* пары where *имя* имя <xref:System.Windows.Data.Binding> свойство и *значение* — значение настраиваемого свойства.</span><span class="sxs-lookup"><span data-stu-id="3ed14-115">The clauses are *Name*=*Value* pairs where *Name* is the name of the <xref:System.Windows.Data.Binding> property and *Value* is the value you are setting for the property.</span></span>  
   
- Создаваемые строки объявления привязки в разметке должны быть вложены к определенному [свойству зависимостей](GTMT) целевого объекта.  В следующем примере показывается, как привязать свойство <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=fullName> с помощью расширения привязки, задавая свойства <xref:System.Windows.Data.Binding.Source%2A> и <xref:System.Windows.Data.Binding.Path%2A>.  
+ <span data-ttu-id="3ed14-116">При создании строк объявления привязки в разметке они должны быть присоединены к конкретному свойству зависимостей целевого объекта.</span><span class="sxs-lookup"><span data-stu-id="3ed14-116">When creating binding declaration strings in markup, they must be attached to the specific dependency property of a target object.</span></span> <span data-ttu-id="3ed14-117">Следующий пример показывает, как привязать <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> свойства с помощью расширения привязки, указав <xref:System.Windows.Data.Binding.Source%2A> и <xref:System.Windows.Data.Binding.Path%2A> свойства.</span><span class="sxs-lookup"><span data-stu-id="3ed14-117">The following example shows how to bind the <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> property using the binding extension, specifying the <xref:System.Windows.Data.Binding.Source%2A> and <xref:System.Windows.Data.Binding.Path%2A> properties.</span></span>  
   
- [!code-xml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
+ [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
   
- Таким способом можно указать большинство свойств класса <xref:System.Windows.Data.Binding>.  Дополнительные сведения о расширении привязки, а также о списке свойств класса <xref:System.Windows.Data.Binding>, которые не могут быть заданы с помощью расширения привязки, см. в разделе [Привязка расширения разметки](../../../../docs/framework/wpf/advanced/binding-markup-extension.md).  
+ <span data-ttu-id="3ed14-118">Большинство свойств можно указать <xref:System.Windows.Data.Binding> таким способом.</span><span class="sxs-lookup"><span data-stu-id="3ed14-118">You can specify most of the properties of the <xref:System.Windows.Data.Binding> class this way.</span></span> <span data-ttu-id="3ed14-119">Дополнительные сведения о расширении привязки, а также список <xref:System.Windows.Data.Binding> свойства, которые нельзя задать с помощью расширения привязки в разделе [расширение разметки со связыванием](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) Обзор.</span><span class="sxs-lookup"><span data-stu-id="3ed14-119">For more information about the binding extension as well as for a list of <xref:System.Windows.Data.Binding> properties that cannot be set using the binding extension, see the [Binding Markup Extension](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) overview.</span></span>  
   
 <a name="ObjectElementSyntax"></a>   
-### Синтаксис объектного элемента  
- Синтаксис объектного элемента является альтернативным вариантом для создания объявления привязки.  В большинстве случаев нет каких\-либо преимуществ в использовании расширения разметки или синтаксиса объектного элемента.  Тем не менее, если расширение разметки не поддерживает скрипт разработчика \(например, если значение свойства имеет нестроковый тип, для которого не существует преобразования\), следует использовать синтаксис объектного элемента.  
+### <a name="object-element-syntax"></a><span data-ttu-id="3ed14-120">Синтаксис объектных элементов</span><span class="sxs-lookup"><span data-stu-id="3ed14-120">Object Element Syntax</span></span>  
+ <span data-ttu-id="3ed14-121">Синтаксис объектных элементов является альтернативой созданию объявления привязки.</span><span class="sxs-lookup"><span data-stu-id="3ed14-121">Object element syntax is an alternative to creating the binding declaration.</span></span> <span data-ttu-id="3ed14-122">В большинстве случаев нет каких-то специальных преимуществ в использовании либо только расширения разметки, либо только синтаксиса объектных элементов.</span><span class="sxs-lookup"><span data-stu-id="3ed14-122">In most cases, there is no particular advantage to using either the markup extension or the object element syntax.</span></span> <span data-ttu-id="3ed14-123">Но в тех случаях, когда расширение разметки не подходит конкретно для вашего сценария (например, если значение свойства имеет нестроковый тип, для которого не существует преобразования), то следует использовать синтаксис объектных элементов.</span><span class="sxs-lookup"><span data-stu-id="3ed14-123">However, in cases which the markup extension does not support your scenario, such as when your property value is of a non-string type for which no type conversion exists, you need to use the object element syntax.</span></span>  
   
- Ниже приведен пример использования синтаксиса объектного элемента и расширения разметки:  
+ <span data-ttu-id="3ed14-124">Ниже приведен пример использования синтаксиса объектных элементов и расширения разметки:</span><span class="sxs-lookup"><span data-stu-id="3ed14-124">The following is an example of both the object element syntax and the markup extension usage:</span></span>  
   
- [!code-xml[BindConversionMarkup#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
+ [!code-xaml[BindConversionMarkup#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
   
- В этом примере выполняется привязка свойства <xref:System.Windows.Controls.TextBlock.Foreground%2A> посредством объявления привязки с помощью синтаксиса расширения.  В объявлении привязки для свойства <xref:System.Windows.Controls.TextBlock.Text%2A> используется синтаксис объектного элемента.  
+ <span data-ttu-id="3ed14-125">В примере выполняется привязка <xref:System.Windows.Controls.TextBlock.Foreground%2A> , объявляя привязки с помощью синтаксиса расширения.</span><span class="sxs-lookup"><span data-stu-id="3ed14-125">The example binds the <xref:System.Windows.Controls.TextBlock.Foreground%2A> property by declaring a binding using the extension syntax.</span></span> <span data-ttu-id="3ed14-126">В объявлении привязки для <xref:System.Windows.Controls.TextBlock.Text%2A> свойство использует синтаксис элемента объекта.</span><span class="sxs-lookup"><span data-stu-id="3ed14-126">The binding declaration for the <xref:System.Windows.Controls.TextBlock.Text%2A> property uses the object element syntax.</span></span>  
   
- Дополнительные сведения о различных терминах см. в разделе [Подробное описание синтаксиса XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
+ <span data-ttu-id="3ed14-127">Дополнительные сведения о различных терминах см. в разделе [Подробное описание синтаксиса XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).</span><span class="sxs-lookup"><span data-stu-id="3ed14-127">For more information about the different terms, see [XAML Syntax In Detail](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).</span></span>  
   
 <a name="MBandPB"></a>   
-### Классы MultiBinding и PriorityBinding  
- Классы <xref:System.Windows.Data.MultiBinding> и <xref:System.Windows.Data.PriorityBinding> не поддерживают синтаксис расширения XAML.  Таким образом, при объявлении классов <xref:System.Windows.Data.MultiBinding> или <xref:System.Windows.Data.PriorityBinding> в XAML следует использовать синтаксис объектного элемента.  
+### <a name="multibinding-and-prioritybinding"></a><span data-ttu-id="3ed14-128">Классы MultiBinding и PriorityBinding</span><span class="sxs-lookup"><span data-stu-id="3ed14-128">MultiBinding and PriorityBinding</span></span>  
+ <span data-ttu-id="3ed14-129"><xref:System.Windows.Data.MultiBinding>и <xref:System.Windows.Data.PriorityBinding> не поддерживают синтаксис расширения XAML.</span><span class="sxs-lookup"><span data-stu-id="3ed14-129"><xref:System.Windows.Data.MultiBinding> and <xref:System.Windows.Data.PriorityBinding> do not support the XAML extension syntax.</span></span> <span data-ttu-id="3ed14-130">Таким образом, необходимо использовать синтаксис элемента объекта, если вы объявляете <xref:System.Windows.Data.MultiBinding> или <xref:System.Windows.Data.PriorityBinding> в XAML.</span><span class="sxs-lookup"><span data-stu-id="3ed14-130">Therefore, you must use the object element syntax if you are declaring a <xref:System.Windows.Data.MultiBinding> or a <xref:System.Windows.Data.PriorityBinding> in XAML.</span></span>  
   
 <a name="BindinginCode"></a>   
-## Создание привязки в коде  
- Другим способом указания привязки является установка свойств непосредственно в объекте <xref:System.Windows.Data.Binding> в коде.  В следующем примере демонстрируется создание объекта <xref:System.Windows.Data.Binding> и указание свойств в коде.  В данном примере `TheConverter` — это объект, реализующий интерфейс <xref:System.Windows.Data.IValueConverter>.  
+## <a name="creating-a-binding-in-code"></a><span data-ttu-id="3ed14-131">Создание привязки в коде</span><span class="sxs-lookup"><span data-stu-id="3ed14-131">Creating a Binding in Code</span></span>  
+ <span data-ttu-id="3ed14-132">Другим способом задания привязки является установка свойств непосредственно на <xref:System.Windows.Data.Binding> объекта в коде.</span><span class="sxs-lookup"><span data-stu-id="3ed14-132">Another way to specify a binding is to set properties directly on a <xref:System.Windows.Data.Binding> object in code.</span></span> <span data-ttu-id="3ed14-133">В следующем примере показано, как создать <xref:System.Windows.Data.Binding> объекта и указать свойства в коде.</span><span class="sxs-lookup"><span data-stu-id="3ed14-133">The following example shows how to create a <xref:System.Windows.Data.Binding> object and specify the properties in code.</span></span>  <span data-ttu-id="3ed14-134">В этом примере `TheConverter` — это объект, реализующий <xref:System.Windows.Data.IValueConverter> интерфейса.</span><span class="sxs-lookup"><span data-stu-id="3ed14-134">In this example, `TheConverter` is an object that implements the <xref:System.Windows.Data.IValueConverter> interface.</span></span>  
   
  [!code-csharp[BindConversion#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
  [!code-vb[BindConversion#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
 [!code-csharp[BindConversion#end1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#end1)]
 [!code-vb[BindConversion#end1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#end1)]  
   
- Если привязываемый объект имеет тип <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement>, можно вызвать метод `SetBinding` объекта вместо метода <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=fullName>.  Пример см. в разделе [Создание привязки в коде](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md).  
+ <span data-ttu-id="3ed14-135">Если объект выполняется привязка <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement> можно вызвать `SetBinding` метод объекта напрямую, а не с помощью <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="3ed14-135">If the object you are binding is a <xref:System.Windows.FrameworkElement> or a <xref:System.Windows.FrameworkContentElement> you can call the `SetBinding` method on your object directly instead of using <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="3ed14-136">Пример см. в разделе [Создание привязки в коде](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md).</span><span class="sxs-lookup"><span data-stu-id="3ed14-136">For an example, see [Create a Binding in Code](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md).</span></span>  
   
 <a name="Path_Syntax"></a>   
-## Синтаксис Binding.Path  
- Свойство<xref:System.Windows.Data.Binding.Path%2A> служит для определения исходного значения, к которому необходимо выполнить привязку:  
+## <a name="binding-path-syntax"></a><span data-ttu-id="3ed14-137">Синтаксис пути привязки</span><span class="sxs-lookup"><span data-stu-id="3ed14-137">Binding Path Syntax</span></span>  
+ <span data-ttu-id="3ed14-138">Используйте <xref:System.Windows.Data.Binding.Path%2A> свойство, чтобы указать исходное значение, которое вы хотите привязать к:</span><span class="sxs-lookup"><span data-stu-id="3ed14-138">Use the <xref:System.Windows.Data.Binding.Path%2A> property to specify the source value you want to bind to:</span></span>  
   
--   В простейшем случае значение свойства <xref:System.Windows.Data.Binding.Path%2A> является именем свойства исходного объекта, используемого для привязки, например `Path=PropertyName`.  
+-   <span data-ttu-id="3ed14-139">В самом простом случае <xref:System.Windows.Data.Binding.Path%2A> значение свойства является именем свойства исходного объекта, используемого для привязки, такие как `Path=PropertyName`.</span><span class="sxs-lookup"><span data-stu-id="3ed14-139">In the simplest case, the <xref:System.Windows.Data.Binding.Path%2A> property value is the name of the property of the source object to use for the binding, such as `Path=PropertyName`.</span></span>  
   
--   Вложенные свойства могут задаваться с использованием того же синтаксиса, что и в [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)].  Например, предложение `Path=ShoppingCart.Order` устанавливает привязку к вложенному свойству `Order` объекта или свойства `ShoppingCart`.  
+-   <span data-ttu-id="3ed14-140">Подсвойства какого-либо свойства можно задавать, используя синтаксис, схожий с синтаксисом [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3ed14-140">Subproperties of a property can be specified by a similar syntax as in [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)].</span></span> <span data-ttu-id="3ed14-141">Например, предложение `Path=ShoppingCart.Order` задает привязку к подсвойству `Order` объекта или свойства `ShoppingCart`.</span><span class="sxs-lookup"><span data-stu-id="3ed14-141">For instance, the clause `Path=ShoppingCart.Order` sets the binding to the subproperty `Order` of the object or property `ShoppingCart`.</span></span>  
   
--   Чтобы осуществить привязку к [вложенному свойству зависимостей](GTMT), заключите [вложенное свойство зависимостей](GTMT) в круглые скобки.  Например, для привязки [вложенного свойства зависимостей](GTMT) <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=fullName> используется синтаксис `Path=(DockPanel.Dock)`.  
+-   <span data-ttu-id="3ed14-142">Для привязки присоединенного свойства заключите его в скобки.</span><span class="sxs-lookup"><span data-stu-id="3ed14-142">To bind to an attached property, place parentheses around the attached property.</span></span> <span data-ttu-id="3ed14-143">Например, для привязки к вложенное свойство <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>, синтаксис `Path=(DockPanel.Dock)`.</span><span class="sxs-lookup"><span data-stu-id="3ed14-143">For example, to bind to the attached property <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>, the syntax is `Path=(DockPanel.Dock)`.</span></span>  
   
--   Индексаторы свойства могут задаваться в квадратных скобках, следующих за именем свойства, в котором они применяются.  Например, предложение `Path=ShoppingCart[0]` устанавливает привязку к индексу, который соответствует порядку обработки символьной строки "0" с использованием внутренней индексации свойства.  Также поддерживаются вложенные индексаторы.  
+-   <span data-ttu-id="3ed14-144">Индексаторы свойства можно указать в квадратных скобках после имени свойства, для которого применяется индексатор.</span><span class="sxs-lookup"><span data-stu-id="3ed14-144">Indexers of a property can be specified within square brackets following the property name where the indexer is applied.</span></span> <span data-ttu-id="3ed14-145">Например, предложение `Path=ShoppingCart[0]` задает привязку к индексу, который соответствует способу, который внутренняя индексация свойства использует для обработки символьной строки "0".</span><span class="sxs-lookup"><span data-stu-id="3ed14-145">For instance, the clause `Path=ShoppingCart[0]` sets the binding to the index that corresponds to how your property's internal indexing handles the literal string "0".</span></span> <span data-ttu-id="3ed14-146">Также поддерживаются вложенные индексаторы.</span><span class="sxs-lookup"><span data-stu-id="3ed14-146">Nested indexers are also supported.</span></span>  
   
--   Индексаторы и вложенные свойства могут использоваться в предложении `Path` одновременно, например: `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`.  
+-   <span data-ttu-id="3ed14-147">Индексаторы и вложенные свойства могут сочетаться в предложении `Path`, например, `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`</span><span class="sxs-lookup"><span data-stu-id="3ed14-147">Indexers and subproperties can be mixed in a `Path` clause; for example, `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`</span></span>  
   
--   Индексаторы могут иметь несколько внутренних параметров, разделенных запятыми \(,\).  Тип каждого параметра может быть указан в круглых скобках.  Например, допускается выражение `Path="[(sys:Int32)42,(sys:Int32)24]"`, где `sys` соответствует пространству имен `System`.  
+-   <span data-ttu-id="3ed14-148">Индексаторы могут иметь несколько внутренних параметров, разделенных запятыми (,).</span><span class="sxs-lookup"><span data-stu-id="3ed14-148">Inside indexers you can have multiple indexer parameters separated by commas (,).</span></span> <span data-ttu-id="3ed14-149">Тип каждого параметра указывается в скобках.</span><span class="sxs-lookup"><span data-stu-id="3ed14-149">The type of each parameter can be specified with parentheses.</span></span> <span data-ttu-id="3ed14-150">Например, вы можете задать предложение `Path="[(sys:Int32)42,(sys:Int32)24]"`, где `sys` сопоставляется с пространством имен `System`.</span><span class="sxs-lookup"><span data-stu-id="3ed14-150">For example, you can have `Path="[(sys:Int32)42,(sys:Int32)24]"`, where `sys` is mapped to the `System` namespace.</span></span>  
   
--   Если источник является представлением коллекции, текущий элемент можно задать косой чертой \(\/\).  Например, предложение `Path=/` задает привязку к текущему элементу в представлении.  Если источником является коллекция, этот синтаксис задает текущий элемент представления коллекции по умолчанию.  
+-   <span data-ttu-id="3ed14-151">Если источником является представлением коллекции, текущий элемент можно указать с косой чертой (/).</span><span class="sxs-lookup"><span data-stu-id="3ed14-151">When the source is a collection view, the current item can be specified with a slash (/).</span></span> <span data-ttu-id="3ed14-152">Например, предложение `Path=/` задает привязку к текущему элементу в представлении.</span><span class="sxs-lookup"><span data-stu-id="3ed14-152">For example, the clause `Path=/` sets the binding to the current item in the view.</span></span> <span data-ttu-id="3ed14-153">Если источником является коллекция, этот синтаксис задает текущий элемент представления коллекции по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="3ed14-153">When the source is a collection, this syntax specifies the current item of the default collection view.</span></span>  
   
--   Имена свойств и косые черты можно объединять для обхода свойств, представляющих собой коллекции.  Например, `Path=/Offices/ManagerName` указывает текущий элемент исходной коллекции, которая содержит свойство `Offices`, являющееся также коллекцией.  Ее текущий элемент представляет собой объект, содержащий свойство `ManagerName`.  
+-   <span data-ttu-id="3ed14-154">Имена свойств и косые черты можно объединять для обхода свойств, которые являются коллекциями.</span><span class="sxs-lookup"><span data-stu-id="3ed14-154">Property names and slashes can be combined to traverse properties that are collections.</span></span> <span data-ttu-id="3ed14-155">Например, предложение `Path=/Offices/ManagerName` задает текущий элемент коллекции источников, где свойство `Offices` также является коллекцией.</span><span class="sxs-lookup"><span data-stu-id="3ed14-155">For example, `Path=/Offices/ManagerName` specifies the current item of the source collection, which contains an `Offices` property that is also a collection.</span></span> <span data-ttu-id="3ed14-156">Текущий элемент этой коллекции — объект, содержащий свойство `ManagerName`.</span><span class="sxs-lookup"><span data-stu-id="3ed14-156">Its current item is an object that contains a `ManagerName` property.</span></span>  
   
--   При необходимости можно также использовать путь в виде точки \(.\) для привязки к текущему источнику.  Например, запись `Text="{Binding}"` эквивалентна записи `Text="{Binding Path=.}"`.  
+-   <span data-ttu-id="3ed14-157">При необходимости для привязки к текущему источнику можно использовать путь в виде точки (.).</span><span class="sxs-lookup"><span data-stu-id="3ed14-157">Optionally, a period (.) path can be used to bind to the current source.</span></span> <span data-ttu-id="3ed14-158">Например, предложение `Text="{Binding}"` эквивалентно предложению `Text="{Binding Path=.}"`.</span><span class="sxs-lookup"><span data-stu-id="3ed14-158">For example, `Text="{Binding}"` is equivalent to `Text="{Binding Path=.}"`.</span></span>  
   
-### Механизм исключения  
+### <a name="escaping-mechanism"></a><span data-ttu-id="3ed14-159">Механизм экранирования</span><span class="sxs-lookup"><span data-stu-id="3ed14-159">Escaping Mechanism</span></span>  
   
--   Внутри индексаторов \(\[ \]\) знак "крышки" \(^\) используется для пропуска следующего символа.  
+-   <span data-ttu-id="3ed14-160">Внутри индексаторов ([]) знак крышки (^) задает экранирование следующего символа.</span><span class="sxs-lookup"><span data-stu-id="3ed14-160">Inside indexers ([ ]), the caret character (^) escapes the next character.</span></span>  
   
--   При задании значения <xref:System.Windows.Data.Binding.Path%2A> в XAML, также необходимо избегать определенных знаков \(с помощью сущностей XML\), которые являются особыми для определения языка XML.  
+-   <span data-ttu-id="3ed14-161">Если задать <xref:System.Windows.Data.Binding.Path%2A> в XAML, также необходимо экранировать (с помощью сущностей XML) некоторые символы, которые являются особыми для определения языка XML:</span><span class="sxs-lookup"><span data-stu-id="3ed14-161">If you set <xref:System.Windows.Data.Binding.Path%2A> in XAML, you also need to escape (using XML entities) certain characters that are special to the XML language definition:</span></span>  
   
-    -   Чтобы избежать знака "&", используйте выражение `&`.  
+    -   <span data-ttu-id="3ed14-162">Используйте `&` в качестве escape-символа для символа &.</span><span class="sxs-lookup"><span data-stu-id="3ed14-162">Use `&` to escape the character "&".</span></span>  
   
-    -   Чтобы избежать завершающего тега "\>", используйте выражение `>`.  
+    -   <span data-ttu-id="3ed14-163">Используйте `>` для экранирования закрывающего тега ">".</span><span class="sxs-lookup"><span data-stu-id="3ed14-163">Use `>` to escape the end tag ">".</span></span>  
   
--   Кроме того, если вся привязка описывается в атрибуте с помощью синтаксиса расширения разметки, необходимо пропустить с помощью знака обратной косой черты \(\\\) символы, которые зарезервированы для анализатора расширения разметки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
+-   <span data-ttu-id="3ed14-164">Кроме того, если вы задаете всю привязку в атрибуте, используя синтаксис расширения разметки, необходимо экранировать (с помощью обратной косой черты \\) символы, которые являются специфическими для синтаксического анализатора расширения разметки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3ed14-164">Additionally, if you describe the entire binding in an attribute using the markup extension syntax, you need to escape (using backslash \\) characters that are special to the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] markup extension parser:</span></span>  
   
-    -   Знак обратной косой черты \(\\\) используется в качестве escape\-символ а для самого себя.  
+    -   <span data-ttu-id="3ed14-165">Обратная косая черта (\\) сама по себе является escape-символом.</span><span class="sxs-lookup"><span data-stu-id="3ed14-165">Backslash (\\) is the escape character itself.</span></span>  
   
-    -   Знак равенства \(\=\) разделяет имя и значение свойства.  
+    -   <span data-ttu-id="3ed14-166">Знак равенства (=) разделяет имя свойства и значение этого свойства.</span><span class="sxs-lookup"><span data-stu-id="3ed14-166">The equal sign (=) separates property name from property value.</span></span>  
   
-    -   Запятая \(,\) разделяет свойства.  
+    -   <span data-ttu-id="3ed14-167">Запятая (,) отделяет свойства друг от друга.</span><span class="sxs-lookup"><span data-stu-id="3ed14-167">Comma (,) separates properties.</span></span>  
   
-    -   Правая фигурная скобка \(}\) определяет конец расширения разметки.  
+    -   <span data-ttu-id="3ed14-168">Закрывающая фигурная скобка (}) указывает конец расширения разметки.</span><span class="sxs-lookup"><span data-stu-id="3ed14-168">The right curly brace (}) is the end of a markup extension.</span></span>  
   
 <a name="Default"></a>   
-## Поведения по умолчанию  
- Если иное не указано в объявлении, поведение по умолчанию выглядит следующим образом.  
+## <a name="default-behaviors"></a><span data-ttu-id="3ed14-169">Поведение по умолчанию</span><span class="sxs-lookup"><span data-stu-id="3ed14-169">Default Behaviors</span></span>  
+ <span data-ttu-id="3ed14-170">Поведение по умолчанию выглядит следующим образом, если не указано в объявлении.</span><span class="sxs-lookup"><span data-stu-id="3ed14-170">The default behavior is as follows if not specified in the declaration.</span></span>  
   
--   Создается преобразователь по умолчанию, который пытается выполнить преобразование типа из значения [исходного объекта привязки](GTMT) в значение [целевого объекта привязки](GTMT).  Если преобразование не может быть выполнено, используемый по умолчанию преобразователь возвращает значение `null`.  
+-   <span data-ttu-id="3ed14-171">Создается преобразователь по умолчанию, который пытается выполнить преобразование типов между значением источника привязки и значением целевого объекта привязки.</span><span class="sxs-lookup"><span data-stu-id="3ed14-171">A default converter is created that tries to do a type conversion between the binding source value and the binding target value.</span></span> <span data-ttu-id="3ed14-172">Если преобразование не удается выполнить, преобразователь по умолчанию возвращает значение `null`.</span><span class="sxs-lookup"><span data-stu-id="3ed14-172">If a conversion cannot be made, the default converter returns `null`.</span></span>  
   
--   Если не установлено свойство <xref:System.Windows.Data.Binding.ConverterCulture%2A>, механизм привязки использует свойство `Language` [целевого объекта привязки](GTMT).  В XAML по умолчанию — это "en\-US", или же значение, унаследованное у корневого элемента \(или любого другого элемента страницы\), если для него оно было задано явно.  
+-   <span data-ttu-id="3ed14-173">Если вы не установите <xref:System.Windows.Data.Binding.ConverterCulture%2A>, использует механизм привязки `Language` свойства целевого объекта привязки.</span><span class="sxs-lookup"><span data-stu-id="3ed14-173">If you do not set <xref:System.Windows.Data.Binding.ConverterCulture%2A>, the binding engine uses the `Language` property of the binding target object.</span></span> <span data-ttu-id="3ed14-174">В языке XAML это свойство по умолчанию имеет значение "en-US" или наследует свое значение от корневого элемента (или любого элемента) страницы, если оно было задано явным образом.</span><span class="sxs-lookup"><span data-stu-id="3ed14-174">In XAML, this defaults to "en-US" or inherits the value from the root element (or any element) of the page, if one has been explicitly set.</span></span>  
   
--   Если уже существует контекст данных привязки \(например контекст данных, унаследованный от родительского элемента\), и возвращаемые этим контекстом объект или коллекция могут использоваться для привязки без изменения пути, в объявлении привязки допускается отсутствие предложений: `{Binding}`. Таким способом часто выполняется привязка для стилизации данных \(в этом случае выполняется привязка коллекции\).  Дополнительные сведения см. в разделе "Целые объекты, используемые в качестве источника привязки" раздела [Общие сведения об источниках привязки](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+-   <span data-ttu-id="3ed14-175">При условии, что привязка уже имеет контекст данных (например, контекст данных, наследуемый от родительского элемента), а объект или коллекция, возвращаемые этим контекстом, подходят для привязки без необходимости дополнительного изменения пути, объявление привязки может вообще не иметь предложений: `{Binding}`. Таким способом привязка часто задается для стилей данных, где привязка воздействует на коллекцию.</span><span class="sxs-lookup"><span data-stu-id="3ed14-175">As long as the binding already has a data context (for instance, the inherited data context coming from a parent element), and whatever item or collection being returned by that context is appropriate for binding without requiring further path modification, a binding declaration can have no clauses at all: `{Binding}` This is often the way a binding is specified for data styling, where the binding acts upon a collection.</span></span> <span data-ttu-id="3ed14-176">Дополнительные сведения см. в подразделе "Использование всего объекта в качестве источника привязки" раздела [Общие сведения об источниках привязки](../../../../docs/framework/wpf/data/binding-sources-overview.md).</span><span class="sxs-lookup"><span data-stu-id="3ed14-176">For more information, see the "Entire Objects Used as a Binding Source" section in the [Binding Sources Overview](../../../../docs/framework/wpf/data/binding-sources-overview.md).</span></span>  
   
--   Используемое по умолчанию свойство <xref:System.Windows.Data.Binding.Mode%2A> может быть односторонним и двусторонним в соответствии со [свойством зависимостей](GTMT), привязка которого осуществляется.  Чтобы обеспечить необходимое поведение привязки, можно явно объявить режим привязки.  В общем случае для свойств элементов управления, редактируемых пользователем, например <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=fullName> и <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=fullName>, по умолчанию используются двусторонние привязки, а для большинства других свойств — односторонние привязки.  
+-   <span data-ttu-id="3ed14-177">Значение по умолчанию <xref:System.Windows.Data.Binding.Mode%2A> может быть односторонним и двусторонним в свойство зависимостей, к которому осуществляется привязка.</span><span class="sxs-lookup"><span data-stu-id="3ed14-177">The default <xref:System.Windows.Data.Binding.Mode%2A> varies between one-way and two-way depending on the dependency property that is being bound.</span></span> <span data-ttu-id="3ed14-178">Режим привязки всегда можно объявить явным образом, чтобы обеспечить требуемое поведение привязки.</span><span class="sxs-lookup"><span data-stu-id="3ed14-178">You can always declare the binding mode explicitly to ensure that your binding has the desired behavior.</span></span> <span data-ttu-id="3ed14-179">В целом редактируемого свойства элемента управления такие как <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> и <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>, по умолчанию имеют двухсторонние привязки, в то время как большинство других свойств по умолчанию имеют односторонние привязки.</span><span class="sxs-lookup"><span data-stu-id="3ed14-179">In general, user-editable control properties, such as <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> and <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>, default to two-way bindings, whereas most other properties default to one-way bindings.</span></span>  
   
--   Свойство <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> по умолчанию может иметь значения <xref:System.Windows.Data.UpdateSourceTrigger> и <xref:System.Windows.Data.UpdateSourceTrigger>, в зависимости от привязанного [свойства зависимостей](GTMT).  Значением по умолчанию для большинства [свойств зависимостей](GTMT) является <xref:System.Windows.Data.UpdateSourceTrigger>, в то время как свойство<xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=fullName> по умолчанию имеет значение <xref:System.Windows.Data.UpdateSourceTrigger>.  
+-   <span data-ttu-id="3ed14-180">Значение по умолчанию <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> значение зависит от используемого <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> и <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> в зависимости от того, в свойство привязанного зависимостей.</span><span class="sxs-lookup"><span data-stu-id="3ed14-180">The default <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> value varies between <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> and <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> depending on the bound dependency property as well.</span></span> <span data-ttu-id="3ed14-181">Значение по умолчанию для большинства свойств зависимостей — <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, а свойство <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> имеет значение по умолчанию <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.</span><span class="sxs-lookup"><span data-stu-id="3ed14-181">The default value for most dependency properties is <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, while the <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> property has a default value of <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.</span></span>  
   
-## См. также  
- [Общие сведения о связывании данных](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Практические руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)   
- [Привязка данных](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)   
- [Синтаксис PropertyPath XAML](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)
+## <a name="see-also"></a><span data-ttu-id="3ed14-182">См. также</span><span class="sxs-lookup"><span data-stu-id="3ed14-182">See Also</span></span>  
+ [<span data-ttu-id="3ed14-183">Общие сведения о привязке данных</span><span class="sxs-lookup"><span data-stu-id="3ed14-183">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="3ed14-184">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="3ed14-184">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [<span data-ttu-id="3ed14-185">Привязка данных</span><span class="sxs-lookup"><span data-stu-id="3ed14-185">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="3ed14-186">Синтаксис PropertyPath в XAML</span><span class="sxs-lookup"><span data-stu-id="3ed14-186">PropertyPath XAML Syntax</span></span>](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)

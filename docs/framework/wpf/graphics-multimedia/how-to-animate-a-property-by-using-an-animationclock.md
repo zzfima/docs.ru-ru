@@ -1,46 +1,52 @@
 ---
-title: "Практическое руководство. Анимирование свойства с помощью AnimationClock | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "анимация, свойства, с помощью AnimationClock"
-  - "AnimationClock"
+title: "Практическое руководство. Анимирование свойства с помощью AnimationClock"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- animation [WPF], properties [WPF], with AnimationClocks
+- AnimationClocks [WPF]
 ms.assetid: e6542021-714c-4675-9567-04f1c7380834
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 47df7aaad45000bc8c761a9bb9022d37e0f0828c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Анимирование свойства с помощью AnimationClock
-В этом примере показано использование объектов <xref:System.Windows.Media.Animation.Clock> для анимации свойства.  
+# <a name="how-to-animate-a-property-by-using-an-animationclock"></a><span data-ttu-id="36637-102">Практическое руководство. Анимирование свойства с помощью AnimationClock</span><span class="sxs-lookup"><span data-stu-id="36637-102">How to: Animate a Property by Using an AnimationClock</span></span>
+<span data-ttu-id="36637-103">В этом примере показано, как использовать <xref:System.Windows.Media.Animation.Clock> объекты для анимации свойства.</span><span class="sxs-lookup"><span data-stu-id="36637-103">This example shows how to use <xref:System.Windows.Media.Animation.Clock> objects to animate a property.</span></span>  
   
- Существует три способа анимации [свойства зависимостей](GTMT):  
+ <span data-ttu-id="36637-104">Есть три способа анимации свойства зависимостей:</span><span class="sxs-lookup"><span data-stu-id="36637-104">There are three ways to animate a dependency property:</span></span>  
   
--   Создание <xref:System.Windows.Media.Animation.AnimationTimeline> и его соединение с этим свойством при помощи <xref:System.Windows.Media.Animation.Storyboard>.  
+-   <span data-ttu-id="36637-105">Создание <xref:System.Windows.Media.Animation.AnimationTimeline> и связать его с этим свойством, с помощью <xref:System.Windows.Media.Animation.Storyboard>.</span><span class="sxs-lookup"><span data-stu-id="36637-105">Create an <xref:System.Windows.Media.Animation.AnimationTimeline> and associate it with that property by using a <xref:System.Windows.Media.Animation.Storyboard>.</span></span>  
   
--   Использование метода объекта <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> для применения одного <xref:System.Windows.Media.Animation.AnimationTimeline> к целевому свойству.  
+-   <span data-ttu-id="36637-106">Используйте метод объекта <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> применить один метод <xref:System.Windows.Media.Animation.AnimationTimeline> к целевому свойству.</span><span class="sxs-lookup"><span data-stu-id="36637-106">Use the object's <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> method to apply a single <xref:System.Windows.Media.Animation.AnimationTimeline> to a target property.</span></span>  
   
--   Создание <xref:System.Windows.Media.Animation.AnimationClock> из <xref:System.Windows.Media.Animation.AnimationTimeline> и применение его к свойству.  
+-   <span data-ttu-id="36637-107">Создание <xref:System.Windows.Media.Animation.AnimationClock> из <xref:System.Windows.Media.Animation.AnimationTimeline> и применить его к свойству.</span><span class="sxs-lookup"><span data-stu-id="36637-107">Create an <xref:System.Windows.Media.Animation.AnimationClock> from an <xref:System.Windows.Media.Animation.AnimationTimeline> and apply it to a property.</span></span>  
   
- Объекты <xref:System.Windows.Media.Animation.Storyboard> и метод <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> позволяют анимировать свойства без непосредственного создания и распространения часов \(примеры см. в разделе [Анимация свойства с помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md) [Анимация свойства без раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)\); часы создаются и распространяются автоматически.  
+ <span data-ttu-id="36637-108"><xref:System.Windows.Media.Animation.Storyboard>объекты и <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> метод позволяют анимировать свойства без непосредственного создания и распространения часов (примеры см. в разделе [анимации свойства с помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md) и [анимировать свойство без С помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)); часы создаются и распространяются автоматически.</span><span class="sxs-lookup"><span data-stu-id="36637-108"><xref:System.Windows.Media.Animation.Storyboard> objects and the <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> method enable you to animate properties without directly creating and distributing clocks (for examples, see [Animate a Property by Using a Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md) and [Animate a Property Without Using a Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)); clocks are created and distributed for you automatically.</span></span>  
   
-## Пример  
- В следующем примере показано создание <xref:System.Windows.Media.Animation.AnimationClock> и применение его к двум аналогичным свойствам.  
+## <a name="example"></a><span data-ttu-id="36637-109">Пример</span><span class="sxs-lookup"><span data-stu-id="36637-109">Example</span></span>  
+ <span data-ttu-id="36637-110">В следующем примере показано, как создать <xref:System.Windows.Media.Animation.AnimationClock> и применить его к двум аналогичным свойствам.</span><span class="sxs-lookup"><span data-stu-id="36637-110">The following example shows how to create an <xref:System.Windows.Media.Animation.AnimationClock> and apply it to two similar properties.</span></span>  
   
  [!code-csharp[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/AnimationClockExample.cs#graphicsmmcreateanimationclockwholeclass)]
  [!code-vb[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/animationclockexample.vb#graphicsmmcreateanimationclockwholeclass)]  
   
- Пример, показывающий управление элементом <xref:System.Windows.Media.Animation.Clock> в интерактивном режиме после его запуска, см. в разделе [Управление часами в интерактивном режиме](../../../../docs/framework/wpf/graphics-multimedia/how-to-interactively-control-a-clock.md).  
+ <span data-ttu-id="36637-111">Пример, показывающий, как управлять в интерактивном режиме <xref:System.Windows.Media.Animation.Clock> после ее запуска в разделе [управление часами в интерактивном режиме](../../../../docs/framework/wpf/graphics-multimedia/how-to-interactively-control-a-clock.md).</span><span class="sxs-lookup"><span data-stu-id="36637-111">For an example showing how to interactively control a <xref:System.Windows.Media.Animation.Clock> after it starts, see [Interactively Control a Clock](../../../../docs/framework/wpf/graphics-multimedia/how-to-interactively-control-a-clock.md).</span></span>  
   
-## См. также  
- [Анимация свойства с помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)   
- [Анимация свойства без раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)   
- [Общие сведения о методах анимации свойств](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+## <a name="see-also"></a><span data-ttu-id="36637-112">См. также</span><span class="sxs-lookup"><span data-stu-id="36637-112">See Also</span></span>  
+ [<span data-ttu-id="36637-113">Анимация свойства с помощью раскадровки</span><span class="sxs-lookup"><span data-stu-id="36637-113">Animate a Property by Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)  
+ [<span data-ttu-id="36637-114">Анимация свойства без использования раскадровки</span><span class="sxs-lookup"><span data-stu-id="36637-114">Animate a Property Without Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)  
+ [<span data-ttu-id="36637-115">Общие сведения о методах анимации свойств</span><span class="sxs-lookup"><span data-stu-id="36637-115">Property Animation Techniques Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)

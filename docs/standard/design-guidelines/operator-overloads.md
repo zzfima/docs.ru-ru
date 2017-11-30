@@ -1,62 +1,60 @@
 ---
-title: "Перегрузки операторов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "операторы [платформа .NET Framework] перегрузки"
-  - "имена [платформа .NET Framework] перегруженные операторы"
-  - "рекомендации по разработке членов, операторы"
-  - "перегруженные операторы"
+title: "Перегрузки операторов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- operators [.NET Framework], overloads
+- names [.NET Framework], overloaded operators
+- member design guidelines, operators
+- overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: ffd472a7c410bd541ea0382f05f7ed92acb0e688
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Перегрузки операторов
-Перегрузки операторов позволяют отображаются, как если бы они были примитивы языка встроенные типы framework.  
+# <a name="operator-overloads"></a><span data-ttu-id="ddc5e-102">Перегрузки операторов</span><span class="sxs-lookup"><span data-stu-id="ddc5e-102">Operator Overloads</span></span>
+<span data-ttu-id="ddc5e-103">Перегрузки операторов разрешить отображаются, как если бы они были примитивы языка встроенных типов framework.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-103">Operator overloads allow framework types to appear as if they were built-in language primitives.</span></span>  
   
- Несмотря на то, что разрешены или в определенных ситуациях перегрузки операторов следует использовать осторожно. Есть много вариантов, в которых оператор перегрузка были неправильно, например при framework разработчики начали использовать операторы для операций, которые должны быть простые методы. Следующие рекомендации помогут решить, когда и как использовать перегрузку операторов.  
+ <span data-ttu-id="ddc5e-104">Несмотря на то, что разрешенные, так и в определенных ситуациях, перегрузки операторов следует использовать осторожно.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-104">Although allowed and useful in some situations, operator overloads should be used cautiously.</span></span> <span data-ttu-id="ddc5e-105">Существует много случаев, в какой оператор перегрузка были злоупотреблениям в виде, например при запуске конструкторы framework использование операторов для операций, которые должны быть простые методы.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-105">There are many cases in which operator overloading has been abused, such as when framework designers started to use operators for operations that should be simple methods.</span></span> <span data-ttu-id="ddc5e-106">Следующие рекомендации помогут вам решить, когда и как использовать перегрузку операторов.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-106">The following guidelines should help you decide when and how to use operator overloading.</span></span>  
   
- **ИЗБЕЖАТЬ X** определения перегрузки оператора, за исключением типов, которые следует считать типы\-примитивы \(встроенные\).  
+ <span data-ttu-id="ddc5e-107">**X ИЗБЕГАЙТЕ** определения перегрузки оператора, за исключением того, в типах, которые следует воспринимается как типы-примитивы (встроенные).</span><span class="sxs-lookup"><span data-stu-id="ddc5e-107">**X AVOID** defining operator overloads, except in types that should feel like primitive (built-in) types.</span></span>  
   
- **✓ Рассмотрите ВОЗМОЖНОСТЬ** определения перегрузки оператора в типе, который следует считать тип\-примитив.  
+ <span data-ttu-id="ddc5e-108">**✓ Попробуйте** определения перегрузки оператора в типе, который следует кажется типом-примитивом.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-108">**✓ CONSIDER** defining operator overloads in a type that should feel like a primitive type.</span></span>  
   
- Например <xref:System.String?displayProperty=fullName> имеет `operator==` и `operator!=` определены.  
+ <span data-ttu-id="ddc5e-109">Например <xref:System.String?displayProperty=nameWithType> имеет `operator==` и `operator!=` определен.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-109">For example, <xref:System.String?displayProperty=nameWithType> has `operator==` and `operator!=` defined.</span></span>  
   
- **✓ сделать** определения перегрузки оператора в структурах, представления чисел \(например, <xref:System.Decimal?displayProperty=fullName>\).  
+ <span data-ttu-id="ddc5e-110">**СДЕЛАТЬ ✓** определения перегрузки операторов в структур, которые представляют собой числа (например, <xref:System.Decimal?displayProperty=nameWithType>).</span><span class="sxs-lookup"><span data-stu-id="ddc5e-110">**✓ DO** define operator overloads in structs that represent numbers (such as <xref:System.Decimal?displayProperty=nameWithType>).</span></span>  
   
- **X не** быть оригинальное при определении перегрузки операторов.  
+ <span data-ttu-id="ddc5e-111">**X не** быть забавны при определении перегрузки операторов.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-111">**X DO NOT** be cute when defining operator overloads.</span></span>  
   
- Перегрузка оператора полезна в случаях, когда очевиден результат операции, которые будут. Например, имеет смысл иметь возможность вычесть единицу <xref:System.DateTime> из другого `DateTime` и <xref:System.TimeSpan>. Тем не менее он не подходит для использования оператора union логического объединения двух запросов к базе данных или использовать оператор shift для записи в поток.  
+ <span data-ttu-id="ddc5e-112">Перегрузка операторов полезно в случаях, когда очевиден результат операции, которые будут.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-112">Operator overloading is useful in cases in which it is immediately obvious what the result of the operation will be.</span></span> <span data-ttu-id="ddc5e-113">Например, имеет смысл получить возможность вычесть единицу <xref:System.DateTime> из другого `DateTime` и получить <xref:System.TimeSpan>.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-113">For example, it makes sense to be able to subtract one <xref:System.DateTime> from another `DateTime` and get a <xref:System.TimeSpan>.</span></span> <span data-ttu-id="ddc5e-114">Тем не менее он не подходит для использования логического оператора union объединения двух запросов к базе данных или использовать оператор сдвига для записи в поток.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-114">However, it is not appropriate to use the logical union operator to union two database queries, or to use the shift operator to write to a stream.</span></span>  
   
- **X не** предоставляют перегрузки оператор, если по крайней мере один из операндов имеет тип, определив перегрузку.  
+ <span data-ttu-id="ddc5e-115">**X не** предоставляют перегрузки оператор, если по крайней мере один из операндов имеет тип, определив перегрузку.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-115">**X DO NOT** provide operator overloads unless at least one of the operands is of the type defining the overload.</span></span>  
   
- **✓ сделать** перегрузку операторов симметричную.  
+ <span data-ttu-id="ddc5e-116">**✓ СДЕЛАТЬ** перегружать операторы симметричную.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-116">**✓ DO** overload operators in a symmetric fashion.</span></span>  
   
- Например, при перегрузке `operator==`, то следует перегрузить `operator!=`. Аналогичным образом при перегрузке `operator<`, то следует перегрузить `operator>`, и т. д.  
+ <span data-ttu-id="ddc5e-117">Например, при перегрузке `operator==`, следует также перегрузить `operator!=`.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-117">For example, if you overload the `operator==`, you should also overload the `operator!=`.</span></span> <span data-ttu-id="ddc5e-118">Аналогично при перегрузке `operator<`, следует также перегрузить `operator>`, и т. д.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-118">Similarly, if you overload the `operator<`, you should also overload the `operator>`, and so on.</span></span>  
   
- **✓ Рассмотрите ВОЗМОЖНОСТЬ** обеспечивая понятные имена, соответствующие методы для каждого перегруженного оператора.  
+ <span data-ttu-id="ddc5e-119">**✓ Попробуйте** предоставлять методы с понятными именами, которые соответствуют каждой перегруженный оператор.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-119">**✓ CONSIDER** providing methods with friendly names that correspond to each overloaded operator.</span></span>  
   
- Многие языки не поддерживают перегрузки операторов. По этой причине рекомендуется Включение дополнительный метод с соответствующим именем конкретного домена, который предоставляет эквивалент функциональных возможностей типов, перегрузку операторов.  
+ <span data-ttu-id="ddc5e-120">Многие языки не поддерживают перегрузку операторов.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-120">Many languages do not support operator overloading.</span></span> <span data-ttu-id="ddc5e-121">По этой причине рекомендуется Включение дополнительный метод с соответствующим именем конкретного домена, обеспечивающее эквивалентную функциональность типов, перегрузку операторов.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-121">For this reason, it is recommended that types that overload operators include a secondary method with an appropriate domain-specific name that provides equivalent functionality.</span></span>  
   
- Следующая таблица содержит список операторов и имена соответствующих методов понятное.  
+ <span data-ttu-id="ddc5e-122">Следующая таблица содержит список операторов и имена соответствующих понятное методов.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-122">The following table contains a list of operators and the corresponding friendly method names.</span></span>  
   
-|Символ оператора C\#|Имя метаданных|Понятное имя|  
-|--------------------------|--------------------|------------------|  
+|<span data-ttu-id="ddc5e-123">Символ оператора C#</span><span class="sxs-lookup"><span data-stu-id="ddc5e-123">C# Operator Symbol</span></span>|<span data-ttu-id="ddc5e-124">Имя метаданных</span><span class="sxs-lookup"><span data-stu-id="ddc5e-124">Metadata Name</span></span>|<span data-ttu-id="ddc5e-125">Понятное имя</span><span class="sxs-lookup"><span data-stu-id="ddc5e-125">Friendly Name</span></span>|  
+|-------------------------|-------------------|-------------------|  
 |`N/A`|`op_Implicit`|`To<TypeName>/From<TypeName>`|  
 |`N/A`|`op_Explicit`|`To<TypeName>/From<TypeName>`|  
 |`+ (binary)`|`op_Addition`|`Add`|  
@@ -66,9 +64,9 @@ caps.handback.revision: 11
 |`%`|`op_Modulus`|`Mod or Remainder`|  
 |`^`|`op_ExclusiveOr`|`Xor`|  
 |`& (binary)`|`op_BitwiseAnd`|`BitwiseAnd`|  
-|`&#124;`|`op_BitwiseOr`|`BitwiseOr`|  
+|<code>&#124;</code>|`op_BitwiseOr`|`BitwiseOr`|  
 |`&&`|`op_LogicalAnd`|`And`|  
-|`&#124;&#124;`|`op_LogicalOr`|`Or`|  
+|<code>&#124;&#124;</code>|`op_LogicalOr`|`Or`|  
 |`=`|`op_Assign`|`Assign`|  
 |`<<`|`op_LeftShift`|`LeftShift`|  
 |`>>`|`op_RightShift`|`RightShift`|  
@@ -87,7 +85,7 @@ caps.handback.revision: 11
 |`%=`|`op_ModulusAssignment`|`Mod`|  
 |`+=`|`op_AdditionAssignment`|`Add`|  
 |`&=`|`op_BitwiseAndAssignment`|`BitwiseAnd`|  
-|`&#124;=`|`op_BitwiseOrAssignment`|`BitwiseOr`|  
+|<code>&#124;=</code>|`op_BitwiseOrAssignment`|`BitwiseOr`|  
 |`,`|`op_Comma`|`Comma`|  
 |`/=`|`op_DivisionAssignment`|`Divide`|  
 |`--`|`op_Decrement`|`Decrement`|  
@@ -96,32 +94,32 @@ caps.handback.revision: 11
 |`+ (unary)`|`op_UnaryPlus`|`Plus`|  
 |`~`|`op_OnesComplement`|`OnesComplement`|  
   
-### Перегрузка оператора \=\=  
- Перегрузка `operator ==` довольно сложен. Семантика оператора должны совместимы с несколько других членов, таких как <xref:System.Object.Equals%2A?displayProperty=fullName>.  
+### <a name="overloading-operator-"></a><span data-ttu-id="ddc5e-126">Перегрузка оператора ==</span><span class="sxs-lookup"><span data-stu-id="ddc5e-126">Overloading Operator ==</span></span>  
+ <span data-ttu-id="ddc5e-127">Перегрузка `operator ==` — довольно сложными.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-127">Overloading `operator ==` is quite complicated.</span></span> <span data-ttu-id="ddc5e-128">Семантика оператора требуется для обеспечения совместимости с несколько других элементов, таких как <xref:System.Object.Equals%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-128">The semantics of the operator need to be compatible with several other members, such as <xref:System.Object.Equals%2A?displayProperty=nameWithType>.</span></span>  
   
-### Операторы преобразования  
- Операторы преобразования являются унарные операторы, которые позволяют преобразование из одного типа в другой. Операторы должен быть определен как статических членов операнда или возвращаемого типа. Существует два типа операторов преобразования: явные и неявные.  
+### <a name="conversion-operators"></a><span data-ttu-id="ddc5e-129">Операторы преобразования</span><span class="sxs-lookup"><span data-stu-id="ddc5e-129">Conversion Operators</span></span>  
+ <span data-ttu-id="ddc5e-130">Операторы преобразования являются унарные операторы, позволяющие преобразование из одного типа в другой.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-130">Conversion operators are unary operators that allow conversion from one type to another.</span></span> <span data-ttu-id="ddc5e-131">Операторы должны быть определены как статические члены на операнд или тип возвращаемого значения.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-131">The operators must be defined as static members on either the operand or the return type.</span></span> <span data-ttu-id="ddc5e-132">Существует два типа операторов преобразования: явные и неявные.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-132">There are two types of conversion operators: implicit and explicit.</span></span>  
   
- **X не** укажите оператор преобразования, если такое преобразование не ожидается конечными пользователями.  
+ <span data-ttu-id="ddc5e-133">**X не** предоставить оператор преобразования, если такое преобразование не ожидается конечными пользователями.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-133">**X DO NOT** provide a conversion operator if such conversion is not clearly expected by the end users.</span></span>  
   
- **X не** определить операторы преобразования за пределами области типа.  
+ <span data-ttu-id="ddc5e-134">**X не** определить операторы преобразования за пределами области типа.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-134">**X DO NOT** define conversion operators outside of a type’s domain.</span></span>  
   
- Например <xref:System.Int32>, <xref:System.Double>, и <xref:System.Decimal> являются все числовые типы, в то время как <xref:System.DateTime> не является. Таким образом, должно быть не оператор преобразования `Double(long)` для `DateTime`. В этом случае является предпочтительным конструктор.  
+ <span data-ttu-id="ddc5e-135">Например <xref:System.Int32>, <xref:System.Double>, и <xref:System.Decimal> являются все числовые типы, в то время как <xref:System.DateTime> не является.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-135">For example, <xref:System.Int32>, <xref:System.Double>, and <xref:System.Decimal> are all numeric types, whereas <xref:System.DateTime> is not.</span></span> <span data-ttu-id="ddc5e-136">Таким образом, должно быть не оператор преобразования `Double(long)` для `DateTime`.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-136">Therefore, there should be no conversion operator to convert a `Double(long)` to a `DateTime`.</span></span> <span data-ttu-id="ddc5e-137">В этом случае является предпочтительным конструктор.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-137">A constructor is preferred in such a case.</span></span>  
   
- **X не** предоставить неявный оператор преобразования, если преобразование является потенциально с потерями.  
+ <span data-ttu-id="ddc5e-138">**X не** предоставить неявный оператор преобразования, если преобразование является потенциально с потерями.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-138">**X DO NOT** provide an implicit conversion operator if the conversion is potentially lossy.</span></span>  
   
- Например, не должно быть неявного преобразования из `Double` к `Int32` из\-за `Double` имеет широкий диапазон, чем `Int32`. Оператор явного преобразования могут быть предоставлены, даже если преобразование является потенциально с потерями.  
+ <span data-ttu-id="ddc5e-139">Например, не должно быть неявное преобразование из `Double` для `Int32` из-за `Double` имеет широкий диапазон, чем `Int32`.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-139">For example, there should not be an implicit conversion from `Double` to `Int32` because `Double` has a wider range than `Int32`.</span></span> <span data-ttu-id="ddc5e-140">Оператор явного преобразования может быть указано, даже если преобразование является потенциально с потерями.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-140">An explicit conversion operator can be provided even if the conversion is potentially lossy.</span></span>  
   
- **X не** исключения из неявных приведений типов.  
+ <span data-ttu-id="ddc5e-141">**X не** вызывайте исключения из неявных приведений типов.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-141">**X DO NOT** throw exceptions from implicit casts.</span></span>  
   
- Очень сложно конечным пользователям понять, что произошло, поскольку не будут знать, что происходит преобразования.  
+ <span data-ttu-id="ddc5e-142">Это очень сложно конечным пользователям понять, что произошло, потому что не будут знать, что происходит преобразования.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-142">It is very difficult for end users to understand what is happening, because they might not be aware that a conversion is taking place.</span></span>  
   
- **✓ сделать** исключение <xref:System.InvalidCastException?displayProperty=fullName> Если вызов оператора преобразования приводит к преобразование с потерями и контракт оператора не позволяет.  
+ <span data-ttu-id="ddc5e-143">**СДЕЛАТЬ ✓** throw <xref:System.InvalidCastException?displayProperty=nameWithType> случае вызов оператора приведения преобразование с потерями и контракт оператора не допускает преобразования с потерей данных.</span><span class="sxs-lookup"><span data-stu-id="ddc5e-143">**✓ DO** throw <xref:System.InvalidCastException?displayProperty=nameWithType> if a call to a cast operator results in a lossy conversion and the contract of the operator does not allow lossy conversions.</span></span>  
   
- *Частей © 2005, 2009 корпорации Microsoft. Все права защищены.*  
+ <span data-ttu-id="ddc5e-144">*Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*</span><span class="sxs-lookup"><span data-stu-id="ddc5e-144">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Воспроизведены разрешении Пирсон образования, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для повторного использования библиотеки .NET, второе издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс опубликованы 22 октября 2008 г., издательство Addison\-Wesley Professional как часть цикла разработки Microsoft Windows.*  
+ <span data-ttu-id="ddc5e-145">*Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="ddc5e-145">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## См. также  
- [Рекомендации по разработке членов](../../../docs/standard/design-guidelines/member.md)   
- [Рекомендации по проектированию Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a><span data-ttu-id="ddc5e-146">См. также</span><span class="sxs-lookup"><span data-stu-id="ddc5e-146">See Also</span></span>  
+ [<span data-ttu-id="ddc5e-147">Рекомендации по разработке членов</span><span class="sxs-lookup"><span data-stu-id="ddc5e-147">Member Design Guidelines</span></span>](../../../docs/standard/design-guidelines/member.md)  
+ [<span data-ttu-id="ddc5e-148">Рекомендации по проектированию на основе Framework</span><span class="sxs-lookup"><span data-stu-id="ddc5e-148">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

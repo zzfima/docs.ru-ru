@@ -1,55 +1,60 @@
 ---
-title: "Выполнение операций с заданной периодичностью с помощью компонента Timer в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "примеры [Windows Forms], таймеры"
-  - "инициализация, Timer - компоненты"
-  - "процедуры, определенные интервалы времени"
-  - "Timer - компонент [Windows Forms], инициализация"
-  - "таймеры, интервалы событий"
-  - "таймеры, для Windows"
+title: "Выполнение операций с заданной периодичностью с помощью компонента Timer в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- examples [Windows Forms], timers
+- timers [Windows Forms], event intervals
+- initialization [Windows Forms], Timer components
+- timers [Windows Forms], Windows-based
+- Timer component [Windows Forms], initializing
+- procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: af16d1e2c3ef683a6e3da4197a30af58d7758a0e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Выполнение операций с заданной периодичностью с помощью компонента Timer в Windows Forms
-Иногда может потребоваться создать процедуру, которая выполняется через определенные интервалы времени до окончания цикла или запускается по истечении установленного интервала.  Создание такой процедуры возможно благодаря компоненту <xref:System.Windows.Forms.Timer>.  
+# <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a><span data-ttu-id="8d59f-102">Выполнение операций с заданной периодичностью с помощью компонента Timer в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8d59f-102">How to: Run Procedures at Set Intervals with the Windows Forms Timer Component</span></span>
+<span data-ttu-id="8d59f-103">Иногда может потребоваться создать процедуру, которая выполняется через определенные интервалы времени до окончания цикла или запускается по истечении установленного интервала.</span><span class="sxs-lookup"><span data-stu-id="8d59f-103">You might sometimes want to create a procedure that runs at specific time intervals until a loop has finished or that runs when a set time interval has elapsed.</span></span> <span data-ttu-id="8d59f-104">Создание такой процедуры возможно благодаря компоненту <xref:System.Windows.Forms.Timer>.</span><span class="sxs-lookup"><span data-stu-id="8d59f-104">The <xref:System.Windows.Forms.Timer> component makes such a procedure possible.</span></span>  
   
- Этот компонент предназначен для работы в среде Windows Forms.  Если вам требуется таймер, подходящий для серверной среды, см. раздел [Introduction to Server\-Based Timers](http://msdn.microsoft.com/ru-ru/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  
+ <span data-ttu-id="8d59f-105">Этот компонент предназначен для работы в среде Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="8d59f-105">This component is designed for a Windows Forms environment.</span></span> <span data-ttu-id="8d59f-106">Если вам требуется таймер, подходящий для серверной среды, см. раздел [Общие сведения о серверных таймерах](http://msdn.microsoft.com/en-us/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).</span><span class="sxs-lookup"><span data-stu-id="8d59f-106">If you need a timer that is suitable for a server environment, see [Introduction to Server-Based Timers](http://msdn.microsoft.com/en-us/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).</span></span>  
   
 > [!NOTE]
->  Существуют некоторые ограничения при использовании компонента <xref:System.Windows.Forms.Timer>.  Дополнительные сведения см. в разделе [Ограничения свойства Interval компонента Timer в Windows Forms](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md).  
+>  <span data-ttu-id="8d59f-107">Существуют некоторые ограничения при использовании компонента <xref:System.Windows.Forms.Timer>.</span><span class="sxs-lookup"><span data-stu-id="8d59f-107">There are some limitations when using the <xref:System.Windows.Forms.Timer> component.</span></span> <span data-ttu-id="8d59f-108">Дополнительные сведения см. в разделе [ограничения свойства Interval компонента Timer Windows Forms](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md).</span><span class="sxs-lookup"><span data-stu-id="8d59f-108">For more information, see [Limitations of the Windows Forms Timer Component's Interval Property](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md).</span></span>  
   
-### Выполнение процедуры через заданные интервалы времени с помощью компонента Timer  
+### <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a><span data-ttu-id="8d59f-109">Выполнение процедуры через заданные интервалы времени с помощью компонента Timer</span><span class="sxs-lookup"><span data-stu-id="8d59f-109">To run a procedure at set intervals with the Timer component</span></span>  
   
-1.  Добавьте элемент <xref:System.Windows.Forms.Timer> в форму.  В следующем разделе "Пример" показано, как сделать это программным путем.  [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] также поддерживает добавление компонентов в форму.  См. также [Практическое руководство. Добавление элементов управления без пользовательского интерфейса в Windows Forms](http://msdn.microsoft.com/library/becyw7bz%20\(v=vs.110\)).  
+1.  <span data-ttu-id="8d59f-110">Добавьте элемент <xref:System.Windows.Forms.Timer> в форму.</span><span class="sxs-lookup"><span data-stu-id="8d59f-110">Add a <xref:System.Windows.Forms.Timer> to your form.</span></span> <span data-ttu-id="8d59f-111">В следующем разделе "Пример" показано, как сделать это программным путем.</span><span class="sxs-lookup"><span data-stu-id="8d59f-111">See the following Example section for an illustration of how to do this programmatically.</span></span> [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]<span data-ttu-id="8d59f-112"> также поддерживает добавление компонентов в форму.</span><span class="sxs-lookup"><span data-stu-id="8d59f-112"> also has support for adding components to a form.</span></span> <span data-ttu-id="8d59f-113">См. также [как: Добавление элементов управления без пользовательского интерфейса в Windows Forms](http://msdn.microsoft.com/library/becyw7bz\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="8d59f-113">Also see [How to: Add Controls Without a User Interface to Windows Forms](http://msdn.microsoft.com/library/becyw7bz\(v=vs.110\)).</span></span>  
   
-2.  Задайте значение свойства <xref:System.Windows.Forms.Timer.Interval%2A> \(в миллисекундах\) для таймера.  Это свойство определяет, сколько времени пройдет до момента повторного запуска процедуры.  
+2.  <span data-ttu-id="8d59f-114">Задайте значение свойства <xref:System.Windows.Forms.Timer.Interval%2A> (в миллисекундах) для таймера.</span><span class="sxs-lookup"><span data-stu-id="8d59f-114">Set the <xref:System.Windows.Forms.Timer.Interval%2A> property (in milliseconds) for the timer.</span></span> <span data-ttu-id="8d59f-115">Это свойство определяет, сколько времени пройдет до момента повторного запуска процедуры.</span><span class="sxs-lookup"><span data-stu-id="8d59f-115">This property determines how much time will pass before the procedure is run again.</span></span>  
   
     > [!NOTE]
-    >  Чем чаще происходит событие таймера, тем выше загрузка процессора при ответе на событие.  Это может снизить общую производительность.  Не устанавливайте значение интервала меньше, чем необходимо.  
+    >  <span data-ttu-id="8d59f-116">Чем чаще происходит событие таймера, тем выше загрузка процессора при ответе на событие.</span><span class="sxs-lookup"><span data-stu-id="8d59f-116">The more often a timer event occurs, the more processor time is used in responding to the event.</span></span> <span data-ttu-id="8d59f-117">Это может снизить общую производительность.</span><span class="sxs-lookup"><span data-stu-id="8d59f-117">This can slow down overall performance.</span></span> <span data-ttu-id="8d59f-118">Не устанавливайте значение интервала меньше, чем необходимо.</span><span class="sxs-lookup"><span data-stu-id="8d59f-118">Do not set a smaller interval than you need.</span></span>  
   
-3.  Напишите соответствующий код в обработчике событий <xref:System.Windows.Forms.Timer.Tick>.  Код, написанный в этом событии, будет выполняться с интервалом, указанным в свойстве <xref:System.Windows.Forms.Timer.Interval%2A>.  
+3.  <span data-ttu-id="8d59f-119">Напишите соответствующий код в обработчике событий <xref:System.Windows.Forms.Timer.Tick>.</span><span class="sxs-lookup"><span data-stu-id="8d59f-119">Write appropriate code in the <xref:System.Windows.Forms.Timer.Tick> event handler.</span></span> <span data-ttu-id="8d59f-120">Код, написанный в этом событии, будет выполняться с интервалом, указанным в свойстве <xref:System.Windows.Forms.Timer.Interval%2A>.</span><span class="sxs-lookup"><span data-stu-id="8d59f-120">The code you write in this event will run at the interval specified in the <xref:System.Windows.Forms.Timer.Interval%2A> property.</span></span>  
   
-4.  Задайте для свойства <xref:System.Windows.Forms.Timer.Enabled%2A> значение `true`, чтобы запустить таймер.  Событие <xref:System.Windows.Forms.Timer.Tick> начнет возникать, запуская процедуру с заданным интервалом.  
+4.  <span data-ttu-id="8d59f-121">Задайте для свойства <xref:System.Windows.Forms.Timer.Enabled%2A> значение `true`, чтобы запустить таймер.</span><span class="sxs-lookup"><span data-stu-id="8d59f-121">Set the <xref:System.Windows.Forms.Timer.Enabled%2A> property to `true` to start the timer.</span></span> <span data-ttu-id="8d59f-122">Событие <xref:System.Windows.Forms.Timer.Tick> начнет возникать, запуская процедуру с заданным интервалом.</span><span class="sxs-lookup"><span data-stu-id="8d59f-122">The <xref:System.Windows.Forms.Timer.Tick> event will begin to occur, running your procedure at the set interval.</span></span>  
   
-5.  В соответствующее время задайте для свойства <xref:System.Windows.Forms.Timer.Enabled%2A> значение `false`, чтобы остановить повторный запуск процедуры.  Задание интервала равным `0` не приводит к остановке таймера.  
+5.  <span data-ttu-id="8d59f-123">В соответствующее время задайте для свойства <xref:System.Windows.Forms.Timer.Enabled%2A> значение `false`, чтобы остановить повторный запуск процедуры.</span><span class="sxs-lookup"><span data-stu-id="8d59f-123">At the appropriate time, set the <xref:System.Windows.Forms.Timer.Enabled%2A> property to `false` to stop the procedure from running again.</span></span> <span data-ttu-id="8d59f-124">Задание интервала `0` не приводит к остановке таймера.</span><span class="sxs-lookup"><span data-stu-id="8d59f-124">Setting the interval to `0` does not cause the timer to stop.</span></span>  
   
-## Пример  
- В первом примере кода отслеживается время дня с шагом в одну секунду.  В нем используются <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Label> и компонент <xref:System.Windows.Forms.Timer> в форме.  Свойству <xref:System.Windows.Forms.Timer.Interval%2A> присваивается значение 1000 \(эквивалентно одной секунде\).  В событии <xref:System.Windows.Forms.Timer.Tick> для подписи метки задается текущее время.  При нажатии кнопки свойству <xref:System.Windows.Forms.Timer.Enabled%2A> присваивается значение `false`, после чего таймер перестает обновлять подпись метки.  В следующем примере кода требуется наличие формы с элементом управления <xref:System.Windows.Forms.Button> с именем `Button1`, элементом управления <xref:System.Windows.Forms.Timer> с именем `Timer1` и элементом управления <xref:System.Windows.Forms.Label> с именем `Label1`.  
+## <a name="example"></a><span data-ttu-id="8d59f-125">Пример</span><span class="sxs-lookup"><span data-stu-id="8d59f-125">Example</span></span>  
+ <span data-ttu-id="8d59f-126">В первом примере кода отслеживается время дня с шагом в одну секунду.</span><span class="sxs-lookup"><span data-stu-id="8d59f-126">This first code example tracks the time of day in one-second increments.</span></span> <span data-ttu-id="8d59f-127">В нем используются <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Label> и компонент <xref:System.Windows.Forms.Timer> в форме.</span><span class="sxs-lookup"><span data-stu-id="8d59f-127">It uses a <xref:System.Windows.Forms.Button>, a <xref:System.Windows.Forms.Label>, and a <xref:System.Windows.Forms.Timer> component on a form.</span></span> <span data-ttu-id="8d59f-128">Свойству <xref:System.Windows.Forms.Timer.Interval%2A> присваивается значение 1000 (эквивалентно одной секунде).</span><span class="sxs-lookup"><span data-stu-id="8d59f-128">The <xref:System.Windows.Forms.Timer.Interval%2A> property is set to 1000 (equal to one second).</span></span> <span data-ttu-id="8d59f-129">В событии <xref:System.Windows.Forms.Timer.Tick> для подписи метки задается текущее время.</span><span class="sxs-lookup"><span data-stu-id="8d59f-129">In the <xref:System.Windows.Forms.Timer.Tick> event, the label's caption is set to the current time.</span></span> <span data-ttu-id="8d59f-130">При нажатии кнопки свойству <xref:System.Windows.Forms.Timer.Enabled%2A> присваивается значение `false`, после чего таймер перестает обновлять подпись метки.</span><span class="sxs-lookup"><span data-stu-id="8d59f-130">When the button is clicked, the <xref:System.Windows.Forms.Timer.Enabled%2A> property is set to `false`, stopping the timer from updating the label's caption.</span></span> <span data-ttu-id="8d59f-131">В следующем примере кода требуется наличие формы с <xref:System.Windows.Forms.Button> управления с именем `Button1`, <xref:System.Windows.Forms.Timer> управления с именем `Timer1`и <xref:System.Windows.Forms.Label> управления с именем `Label1`.</span><span class="sxs-lookup"><span data-stu-id="8d59f-131">The following code example requires that you have a form with a <xref:System.Windows.Forms.Button> control named `Button1`, a <xref:System.Windows.Forms.Timer> control named `Timer1`, and a <xref:System.Windows.Forms.Label> control named `Label1`.</span></span>  
   
 ```vb  
 Private Sub InitializeTimer()  
@@ -75,7 +80,6 @@ Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.Event
          Timer1.Enabled = True  
       End If  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -112,7 +116,6 @@ private void Button1_Click(object sender, EventArgs e)
     Timer1.Enabled = true;  
   }  
 }  
-  
 ```  
   
 ```cpp  
@@ -153,11 +156,10 @@ private:
          timer1->Enabled = true;  
       }  
    }  
-  
 ```  
   
-## Пример  
- Во втором примере кода процедура выполняется каждые 600 миллисекунд до завершения цикла.  В следующем примере кода требуется наличие формы с элементом управления <xref:System.Windows.Forms.Button> с именем `Button1`, элементом управления <xref:System.Windows.Forms.Timer> с именем `Timer1` и элементом управления <xref:System.Windows.Forms.Label> с именем `Label1`.  
+## <a name="example"></a><span data-ttu-id="8d59f-132">Пример</span><span class="sxs-lookup"><span data-stu-id="8d59f-132">Example</span></span>  
+ <span data-ttu-id="8d59f-133">Во втором примере кода процедура выполняется каждые 600 миллисекунд до завершения цикла.</span><span class="sxs-lookup"><span data-stu-id="8d59f-133">This second code example runs a procedure every 600 milliseconds until a loop has finished.</span></span> <span data-ttu-id="8d59f-134">В следующем примере кода требуется наличие формы с <xref:System.Windows.Forms.Button> управления с именем `Button1`, <xref:System.Windows.Forms.Timer> управления с именем `Timer1`и <xref:System.Windows.Forms.Label> управления с именем `Label1`.</span><span class="sxs-lookup"><span data-stu-id="8d59f-134">The following code example requires that you have a form with a <xref:System.Windows.Forms.Button> control named `Button1`, a <xref:System.Windows.Forms.Timer> control named `Timer1`, and a <xref:System.Windows.Forms.Label> control named `Label1`.</span></span>  
   
 ```vb  
 ' This variable will be the loop counter.  
@@ -182,7 +184,6 @@ Private Sub Timer1_Tick(ByVal sender As Object, ByVal e As System.EventArgs) Han
       Label1.Text = "Procedures Run: " & counter.ToString  
    End If  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -215,7 +216,6 @@ private void timer1_Tick(object sender, System.EventArgs e)
       label1.Text = "Procedures Run: " + counter.ToString();  
       }  
 }  
-  
 ```  
   
 ```cpp  
@@ -252,7 +252,7 @@ private:
    }  
 ```  
   
-## См. также  
- <xref:System.Windows.Forms.Timer>   
- [Компонент Timer](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)   
- [Общие сведения о компоненте Timer](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="8d59f-135">См. также</span><span class="sxs-lookup"><span data-stu-id="8d59f-135">See Also</span></span>  
+ <xref:System.Windows.Forms.Timer>  
+ [<span data-ttu-id="8d59f-136">Компонент Timer</span><span class="sxs-lookup"><span data-stu-id="8d59f-136">Timer Component</span></span>](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
+ [<span data-ttu-id="8d59f-137">Общие сведения о компоненте Timer</span><span class="sxs-lookup"><span data-stu-id="8d59f-137">Timer Component Overview</span></span>](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)

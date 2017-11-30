@@ -1,131 +1,124 @@
 ---
-title: "Оператор + (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.+"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "+ - оператор"
-  - "арифметические операторы, сложение"
-  - "операторы объединения, синтаксис"
-  - "строки [Visual Basic], сцепление"
-  - "оператор суммирования"
+title: "+ Оператор (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.+
+helpviewer_keywords:
+- arithmetic operators [Visual Basic], addition
+- + operator
+- concatenation operators [Visual Basic], syntax
+- strings [Visual Basic], concatenating
+- sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-caps.latest.revision: 26
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: fb0d66db2d777c046ccec69acc1f2069d21baf6c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оператор + (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Складывает два числа или возвращает точное значение числового выражения.  Может также использоваться для сцепления двух строковых выражений.  
+# <a name="-operator-visual-basic"></a><span data-ttu-id="bfc41-102">Оператор + (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bfc41-102">+ Operator (Visual Basic)</span></span>
+<span data-ttu-id="bfc41-103">Складывает два числа или возвращает положительное значение числового выражения.</span><span class="sxs-lookup"><span data-stu-id="bfc41-103">Adds two numbers or returns the positive value of a numeric expression.</span></span> <span data-ttu-id="bfc41-104">Может также использоваться для сцепления двух строковых выражений.</span><span class="sxs-lookup"><span data-stu-id="bfc41-104">Can also be used to concatenate two string expressions.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="bfc41-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bfc41-105">Syntax</span></span>  
   
 ```  
-  
       expression1 + expression2  
 - or -  
 + expression1  
 ```  
   
-## Части  
+## <a name="parts"></a><span data-ttu-id="bfc41-106">Части</span><span class="sxs-lookup"><span data-stu-id="bfc41-106">Parts</span></span>  
   
-|||  
-|-|-|  
-|Термин|Определение|  
-|`expression1`|Обязательный.  Любое числовое или строковое выражение.|  
-|`expression2`|Требуется, если оператор `+` не используется для вычисления отрицательного значения.  Любое числовое или строковое выражение.|  
+|<span data-ttu-id="bfc41-107">Термин</span><span class="sxs-lookup"><span data-stu-id="bfc41-107">Term</span></span>|<span data-ttu-id="bfc41-108">Определение</span><span class="sxs-lookup"><span data-stu-id="bfc41-108">Definition</span></span>|  
+|---|---|  
+|`expression1`|<span data-ttu-id="bfc41-109">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="bfc41-109">Required.</span></span> <span data-ttu-id="bfc41-110">Числовое или строковое выражение.</span><span class="sxs-lookup"><span data-stu-id="bfc41-110">Any numeric or string expression.</span></span>|  
+|`expression2`|<span data-ttu-id="bfc41-111">Требуется, если `+` оператор вычисляет отрицательное значение.</span><span class="sxs-lookup"><span data-stu-id="bfc41-111">Required unless the `+` operator is calculating a negative value.</span></span> <span data-ttu-id="bfc41-112">Числовое или строковое выражение.</span><span class="sxs-lookup"><span data-stu-id="bfc41-112">Any numeric or string expression.</span></span>|  
   
-## Результат  
- Если `expression1` и `expression2` оба являются о числовыми, то результатом является их арифметическая сумма.  
+## <a name="result"></a><span data-ttu-id="bfc41-113">Результат</span><span class="sxs-lookup"><span data-stu-id="bfc41-113">Result</span></span>  
+ <span data-ttu-id="bfc41-114">Если `expression1` и `expression2` оба, являются числовыми, результатом является их арифметическая сумма.</span><span class="sxs-lookup"><span data-stu-id="bfc41-114">If `expression1` and `expression2` are both numeric, the result is their arithmetic sum.</span></span>  
   
- Если `expression2` отсутствует, то оператор `+` является *унарным* оператором идентификатора для неизменяемого значения выражения.  В этом случае операция представляет собой сохранение знака выражения `expression1` таким образом, чтобы результат был отрицательным, если `expression1` было отрицательным.  
+ <span data-ttu-id="bfc41-115">Если `expression2` отсутствует, `+` оператор *унарный* оператором идентификатора для неизменяемого значения выражения.</span><span class="sxs-lookup"><span data-stu-id="bfc41-115">If `expression2` is absent, the `+` operator is the *unary* identity operator for the unchanged value of an expression.</span></span> <span data-ttu-id="bfc41-116">В этом смысле операция представляет собой сохранение знака `expression1`, поэтому результат будет отрицательным Если `expression1` является отрицательным значением.</span><span class="sxs-lookup"><span data-stu-id="bfc41-116">In this sense, the operation consists of retaining the sign of `expression1`, so the result is negative if `expression1` is negative.</span></span>  
   
- Если `expression1` и `expression2` оба являются строками, результатом является объединение их значений.  
+ <span data-ttu-id="bfc41-117">Если `expression1` и `expression2` представляют собой строки, результатом является объединением их значения.</span><span class="sxs-lookup"><span data-stu-id="bfc41-117">If `expression1` and `expression2` are both strings, the result is the concatenation of their values.</span></span>  
   
- Если `expression1` и `expression2` разных типов, то действие зависит от их типов, их содержимого и значения параметра [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md).  Дополнительные сведения см. в таблицах в разделе "Примечания".  
+ <span data-ttu-id="bfc41-118">Если `expression1` и `expression2` , смешанных типов действия зависят от их типов, их содержимое и значения [оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md).</span><span class="sxs-lookup"><span data-stu-id="bfc41-118">If `expression1` and `expression2` are of mixed types, the action taken depends on their types, their contents, and the setting of the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).</span></span> <span data-ttu-id="bfc41-119">Дополнительные сведения содержатся в таблицах раздела «Примечания».</span><span class="sxs-lookup"><span data-stu-id="bfc41-119">For more information, see the tables in "Remarks."</span></span>  
   
-## Поддерживаемые типы  
- Все числовые типы, в том числе беззнаковые, с плавающей запятой, `Decimal` и `String`.  
+## <a name="supported-types"></a><span data-ttu-id="bfc41-120">Поддерживаемые типы</span><span class="sxs-lookup"><span data-stu-id="bfc41-120">Supported Types</span></span>  
+ <span data-ttu-id="bfc41-121">Все числовые типы, включая типы без знака и с плавающей запятой и `Decimal`, и `String`.</span><span class="sxs-lookup"><span data-stu-id="bfc41-121">All numeric types, including the unsigned and floating-point types and `Decimal`, and `String`.</span></span>  
   
-## Заметки  
- В общем случае `+` выполняет арифметическое сложение, когда это возможно, и объединяет, только если оба выражения являются строками.  
+## <a name="remarks"></a><span data-ttu-id="bfc41-122">Примечания</span><span class="sxs-lookup"><span data-stu-id="bfc41-122">Remarks</span></span>  
+ <span data-ttu-id="bfc41-123">В общем случае `+` выполняет арифметического сложения, когда это возможно и объединяет только в том случае, если оба выражения являются строками.</span><span class="sxs-lookup"><span data-stu-id="bfc41-123">In general, `+` performs arithmetic addition when possible, and concatenates only when both expressions are strings.</span></span>  
   
- Если ни одно из двух выражений не является `Object`, Visual Basic выполняет следующие действия.  
+ <span data-ttu-id="bfc41-124">Если ни одно из выражений `Object`, Visual Basic выполняет следующие действия.</span><span class="sxs-lookup"><span data-stu-id="bfc41-124">If neither expression is an `Object`, Visual Basic takes the following actions.</span></span>  
   
-|||  
-|-|-|  
-|Типы данных выражений|Действие компилятора|  
-|Оба выражения являются числовыми типами данных \(`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single` или `Double`\)|Сложение.  Тип данных результата является числовым типом, соответствующим типам данных выражений `expression1` и `expression2`.  См. таблицы "Целочисленные арифметические операции" в разделе [Типы данных результатов оператора](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
-|Оба выражения имеют тип `String`|Объединение.|  
-|Одно выражение — числовой тип данных, а второе — строка.|Если `Option Strict` имеет значение `On`, то создается ошибка компилятора.<br /><br /> Если `Option Strict` имеет значение `Off`, то можно неявно преобразовать `String` в `Double` и сложить.<br /><br /> Если `String` не может быть преобразовано в `Double`, создается исключение <xref:System.InvalidCastException>.|  
-|Одно выражение числового типа данных, а второе — [Nothing](../../../visual-basic/language-reference/nothing.md)|Сложение, `Nothing` принимается за ноль.|  
-|Одно выражение — строка, а второе — `Nothing`|Объединение, `Nothing` возвращает "".|  
+|<span data-ttu-id="bfc41-125">Типы данных выражений</span><span class="sxs-lookup"><span data-stu-id="bfc41-125">Data types of expressions</span></span>|<span data-ttu-id="bfc41-126">Действие компилятора</span><span class="sxs-lookup"><span data-stu-id="bfc41-126">Action by compiler</span></span>|  
+|---|---|  
+|<span data-ttu-id="bfc41-127">Оба выражения имеют числовые типы данных (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, или `Double`)</span><span class="sxs-lookup"><span data-stu-id="bfc41-127">Both expressions are numeric data types (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, or `Double`)</span></span>|<span data-ttu-id="bfc41-128">Добавите.</span><span class="sxs-lookup"><span data-stu-id="bfc41-128">Add.</span></span> <span data-ttu-id="bfc41-129">Тип данных результата является числовым типом, соответствующим для типов данных `expression1` и `expression2`.</span><span class="sxs-lookup"><span data-stu-id="bfc41-129">The result data type is a numeric type appropriate for the data types of `expression1` and `expression2`.</span></span> <span data-ttu-id="bfc41-130">В таблице «Целочисленных арифметических операций» в [типы данных из результатов оператора](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).</span><span class="sxs-lookup"><span data-stu-id="bfc41-130">See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).</span></span>|  
+|<span data-ttu-id="bfc41-131">Оба выражения имеют тип`String`</span><span class="sxs-lookup"><span data-stu-id="bfc41-131">Both expressions are of type `String`</span></span>|<span data-ttu-id="bfc41-132">Объединение.</span><span class="sxs-lookup"><span data-stu-id="bfc41-132">Concatenate.</span></span>|  
+|<span data-ttu-id="bfc41-133">Одно выражение является числовым типом данных, а другой — строка</span><span class="sxs-lookup"><span data-stu-id="bfc41-133">One expression is a numeric data type and the other is a string</span></span>|<span data-ttu-id="bfc41-134">Если `Option Strict` — `On`, затем создает ошибку компилятора.</span><span class="sxs-lookup"><span data-stu-id="bfc41-134">If `Option Strict` is `On`, then generate a compiler error.</span></span><br /><br /> <span data-ttu-id="bfc41-135">Если `Option Strict` — `Off`, неявно преобразовать `String` для `Double` и добавьте.</span><span class="sxs-lookup"><span data-stu-id="bfc41-135">If `Option Strict` is `Off`, then implicitly convert the `String` to `Double` and add.</span></span><br /><br /> <span data-ttu-id="bfc41-136">Если `String` не может быть преобразован `Double`, создается исключение <xref:System.InvalidCastException> исключение.</span><span class="sxs-lookup"><span data-stu-id="bfc41-136">If the `String` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.</span></span>|  
+|<span data-ttu-id="bfc41-137">Одно выражение является числовым типом данных, а другой — [Nothing](../../../visual-basic/language-reference/nothing.md)</span><span class="sxs-lookup"><span data-stu-id="bfc41-137">One expression is a numeric data type, and the other is [Nothing](../../../visual-basic/language-reference/nothing.md)</span></span>|<span data-ttu-id="bfc41-138">Добавить, с `Nothing` табличные значения как ноль.</span><span class="sxs-lookup"><span data-stu-id="bfc41-138">Add, with `Nothing` valued as zero.</span></span>|  
+|<span data-ttu-id="bfc41-139">Одно выражение представляет собой строку, а другой —`Nothing`</span><span class="sxs-lookup"><span data-stu-id="bfc41-139">One expression is a string, and the other is `Nothing`</span></span>|<span data-ttu-id="bfc41-140">Объединение с `Nothing` значениями, как «».</span><span class="sxs-lookup"><span data-stu-id="bfc41-140">Concatenate, with `Nothing` valued as "".</span></span>|  
   
- Если одно из выражений является выражением `Object`, Visual Basic выполняет следующие действия.  
+ <span data-ttu-id="bfc41-141">Если одно из выражений является `Object` выражения, Visual Basic выполняет следующие действия.</span><span class="sxs-lookup"><span data-stu-id="bfc41-141">If one expression is an `Object` expression, Visual Basic takes the following actions.</span></span>  
   
-|||  
-|-|-|  
-|Типы данных выражений|Действие компилятора|  
-|Выражение `Object` содержит числовое значение и другое — числового типа данных.|Если `Option Strict` имеет значение `On`, то создается ошибка компилятора.<br /><br /> Если `Option Strict` имеет значение `Off`, то можно использовать сложение.|  
-|Выражение `Object` содержит числовое значение и другое `String`|Если `Option Strict` имеет значение `On`, то создается ошибка компилятора.<br /><br /> Если `Option Strict` имеет значение `Off`, то можно неявно преобразовать `String` в `Double` и сложить.<br /><br /> Если `String` не может быть преобразовано в `Double`, создается исключение <xref:System.InvalidCastException>.|  
-|Выражение `Object` содержит строку и другое — числового типа данных|Если `Option Strict` имеет значение `On`, то создается ошибка компилятора.<br /><br /> Если `Option Strict` имеет значение `Off`, то можно неявно преобразовать `Object` в `Double` и сложить.<br /><br /> Если `Object` не может быть преобразовано в `Double`, создается исключение <xref:System.InvalidCastException>.|  
-|Выражение `Object` содержит строку, а другое имеет тип `String`|Если `Option Strict` имеет значение `On`, то создается ошибка компилятора.<br /><br /> Если `Option Strict` имеет значение `Off`, то можно неявно преобразовать `Object` в `String` и объединить.|  
+|<span data-ttu-id="bfc41-142">Типы данных выражений</span><span class="sxs-lookup"><span data-stu-id="bfc41-142">Data types of expressions</span></span>|<span data-ttu-id="bfc41-143">Действие компилятора</span><span class="sxs-lookup"><span data-stu-id="bfc41-143">Action by compiler</span></span>|  
+|---|---|  
+|<span data-ttu-id="bfc41-144">`Object`выражение содержит числовое значение, а другой — числовой тип данных</span><span class="sxs-lookup"><span data-stu-id="bfc41-144">`Object` expression holds a numeric value and the other is a numeric data type</span></span>|<span data-ttu-id="bfc41-145">Если `Option Strict` — `On`, затем создает ошибку компилятора.</span><span class="sxs-lookup"><span data-stu-id="bfc41-145">If `Option Strict` is `On`, then generate a compiler error.</span></span><br /><br /> <span data-ttu-id="bfc41-146">Если `Option Strict` — `Off`, затем добавьте.</span><span class="sxs-lookup"><span data-stu-id="bfc41-146">If `Option Strict` is `Off`, then add.</span></span>|  
+|<span data-ttu-id="bfc41-147">`Object`выражение содержит числовое значение, а другой — типа`String`</span><span class="sxs-lookup"><span data-stu-id="bfc41-147">`Object` expression holds a numeric value and the other is of type `String`</span></span>|<span data-ttu-id="bfc41-148">Если `Option Strict` — `On`, затем создает ошибку компилятора.</span><span class="sxs-lookup"><span data-stu-id="bfc41-148">If `Option Strict` is `On`, then generate a compiler error.</span></span><br /><br /> <span data-ttu-id="bfc41-149">Если `Option Strict` — `Off`, неявно преобразовать `String` для `Double` и добавьте.</span><span class="sxs-lookup"><span data-stu-id="bfc41-149">If `Option Strict` is `Off`, then implicitly convert the `String` to `Double` and add.</span></span><br /><br /> <span data-ttu-id="bfc41-150">Если `String` не может быть преобразован `Double`, создается исключение <xref:System.InvalidCastException> исключение.</span><span class="sxs-lookup"><span data-stu-id="bfc41-150">If the `String` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.</span></span>|  
+|<span data-ttu-id="bfc41-151">`Object`выражение содержит строку, а другой — числовой тип данных</span><span class="sxs-lookup"><span data-stu-id="bfc41-151">`Object` expression holds a string and the other is a numeric data type</span></span>|<span data-ttu-id="bfc41-152">Если `Option Strict` — `On`, затем создает ошибку компилятора.</span><span class="sxs-lookup"><span data-stu-id="bfc41-152">If `Option Strict` is `On`, then generate a compiler error.</span></span><br /><br /> <span data-ttu-id="bfc41-153">Если `Option Strict` — `Off`, неявно преобразует строку `Object` для `Double` и добавьте.</span><span class="sxs-lookup"><span data-stu-id="bfc41-153">If `Option Strict` is `Off`, then implicitly convert the string `Object` to `Double` and add.</span></span><br /><br /> <span data-ttu-id="bfc41-154">Если строка `Object` не может быть преобразован `Double`, создается исключение <xref:System.InvalidCastException> исключение.</span><span class="sxs-lookup"><span data-stu-id="bfc41-154">If the string `Object` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.</span></span>|  
+|<span data-ttu-id="bfc41-155">`Object`выражение содержит строку, а другой — типа`String`</span><span class="sxs-lookup"><span data-stu-id="bfc41-155">`Object` expression holds a string and the other is of type `String`</span></span>|<span data-ttu-id="bfc41-156">Если `Option Strict` — `On`, затем создает ошибку компилятора.</span><span class="sxs-lookup"><span data-stu-id="bfc41-156">If `Option Strict` is `On`, then generate a compiler error.</span></span><br /><br /> <span data-ttu-id="bfc41-157">Если `Option Strict` — `Off`, неявно преобразовать `Object` для `String` и соединения.</span><span class="sxs-lookup"><span data-stu-id="bfc41-157">If `Option Strict` is `Off`, then implicitly convert `Object` to `String` and concatenate.</span></span>|  
   
- Если оба выражения являются `Object` выражениями, Visual Basic выполняет следующие действия \(только `Option Strict Off`\).  
+ <span data-ttu-id="bfc41-158">Если оба выражения имеют `Object` выражения, Visual Basic выполняет следующие действия (`Option Strict Off` только).</span><span class="sxs-lookup"><span data-stu-id="bfc41-158">If both expressions are `Object` expressions, Visual Basic takes the following actions (`Option Strict Off` only).</span></span>  
   
-|||  
-|-|-|  
-|Типы данных выражений|Действие компилятора|  
-|Оба выражения `Object` содержат числовые значения|Сложение.|  
-|Оба выражения `Object` имеют тип `String`|Объединение.|  
-|Одно выражение `Object` содержит числовое значение, а другое содержит строку|Можно неявно преобразовать строку `Object` в `Double` и сложить.<br /><br /> Если строка `Object` не может быть преобразована в числовое значение, то создается исключение <xref:System.InvalidCastException>.|  
+|<span data-ttu-id="bfc41-159">Типы данных выражений</span><span class="sxs-lookup"><span data-stu-id="bfc41-159">Data types of expressions</span></span>|<span data-ttu-id="bfc41-160">Действие компилятора</span><span class="sxs-lookup"><span data-stu-id="bfc41-160">Action by compiler</span></span>|  
+|---|---|  
+|<span data-ttu-id="bfc41-161">Оба `Object` выражения содержат числовые значения</span><span class="sxs-lookup"><span data-stu-id="bfc41-161">Both `Object` expressions hold numeric values</span></span>|<span data-ttu-id="bfc41-162">Добавите.</span><span class="sxs-lookup"><span data-stu-id="bfc41-162">Add.</span></span>|  
+|<span data-ttu-id="bfc41-163">Оба `Object` выражения имеют тип`String`</span><span class="sxs-lookup"><span data-stu-id="bfc41-163">Both `Object` expressions are of type `String`</span></span>|<span data-ttu-id="bfc41-164">Объединение.</span><span class="sxs-lookup"><span data-stu-id="bfc41-164">Concatenate.</span></span>|  
+|<span data-ttu-id="bfc41-165">Один `Object` выражение содержит числовое значение, а другое содержит строку</span><span class="sxs-lookup"><span data-stu-id="bfc41-165">One `Object` expression holds a numeric value and the other holds a string</span></span>|<span data-ttu-id="bfc41-166">Неявно преобразует строку `Object` для `Double` и добавьте.</span><span class="sxs-lookup"><span data-stu-id="bfc41-166">Implicitly convert the string `Object` to `Double` and add.</span></span><br /><br /> <span data-ttu-id="bfc41-167">Если строка `Object` не может быть преобразован в числовое значение, а затем вызывать <xref:System.InvalidCastException> исключение.</span><span class="sxs-lookup"><span data-stu-id="bfc41-167">If the string `Object` cannot be converted to a numeric value, then throw an <xref:System.InvalidCastException> exception.</span></span>|  
   
- Если любое из двух выражений `Object` принимает значение [Nothing](../../../visual-basic/language-reference/nothing.md) или <xref:System.DBNull>, то оператор `+` рассматривает его как `String` со значением "".  
+ <span data-ttu-id="bfc41-168">Если параметр `Object` выражение, результатом которого является [ничего](../../../visual-basic/language-reference/nothing.md) или <xref:System.DBNull>, `+` оператор воспринимает его как `String` со значением «».</span><span class="sxs-lookup"><span data-stu-id="bfc41-168">If either `Object` expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md) or <xref:System.DBNull>, the `+` operator treats it as a `String` with a value of "".</span></span>  
   
 > [!NOTE]
->  При использовании оператора `+` не всегда удается определить, произойдет объединение строк или операция сложения.  Чтобы избежать неоднозначности и получить самодокументирующий код, используйте для объединения оператор `&`.  
+>  <span data-ttu-id="bfc41-169">При использовании `+` оператор не можно определить, произойдет ли объединение строк или сложение операция.</span><span class="sxs-lookup"><span data-stu-id="bfc41-169">When you use the `+` operator, you might not be able to determine whether addition or string concatenation will occur.</span></span> <span data-ttu-id="bfc41-170">Используйте `&` для объединения оператор во избежание неоднозначности и выполнять код.</span><span class="sxs-lookup"><span data-stu-id="bfc41-170">Use the `&` operator for concatenation to eliminate ambiguity and to provide self-documenting code.</span></span>  
   
-## Перегрузка  
- Оператор `+` может быть *перегружен*; это означает, что класс или структура может переопределить его поведение, если операнд имеет тип соответствующего класса или структуры.  Если в коде используется этот оператор для такого класса или структуры, убедитесь, что его переопределенное поведение вам понятно.  Дополнительные сведения см. в разделе [Процедуры операторов](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+## <a name="overloading"></a><span data-ttu-id="bfc41-171">Перегрузка</span><span class="sxs-lookup"><span data-stu-id="bfc41-171">Overloading</span></span>  
+ <span data-ttu-id="bfc41-172">`+` Оператор может быть *перегружены*, что означает, что класс или структура может переопределить его поведение, если операнд имеет тип этого класса или структуры.</span><span class="sxs-lookup"><span data-stu-id="bfc41-172">The `+` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="bfc41-173">Если ваш код использует этот оператор для такого класса или структуры, убедитесь, что его переопределенное.</span><span class="sxs-lookup"><span data-stu-id="bfc41-173">If your code uses this operator on such a class or structure, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="bfc41-174">Дополнительные сведения см. в разделе [процедуры оператора](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="bfc41-174">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## Пример  
- В следующем примере оператор `+` используется для сложения чисел.  Если оба операнда являются числовыми, Visual Basic вычисляет арифметический результат.  Арифметический результат возвращает сумму двух операндов.  
+## <a name="example"></a><span data-ttu-id="bfc41-175">Пример</span><span class="sxs-lookup"><span data-stu-id="bfc41-175">Example</span></span>  
+ <span data-ttu-id="bfc41-176">В следующем примере используется `+` оператора для сложения чисел.</span><span class="sxs-lookup"><span data-stu-id="bfc41-176">The following example uses the `+` operator to add numbers.</span></span> <span data-ttu-id="bfc41-177">Если оба операнда являются числовыми, Visual Basic вычисляет арифметический результат.</span><span class="sxs-lookup"><span data-stu-id="bfc41-177">If the operands are both numeric, Visual Basic computes the arithmetic result.</span></span> <span data-ttu-id="bfc41-178">Арифметический результат возвращает сумму двух операндов.</span><span class="sxs-lookup"><span data-stu-id="bfc41-178">The arithmetic result represents the sum of the two operands.</span></span>  
   
  [!code-vb[VbVbalrOperators#6](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_1.vb)]  
   
- Кроме того, имеется возможность использовать оператор `+` для объединения строк.  Если оба операнда являются строками, Visual Basic объединяет их.  Результат объединения представляет одну строку, состоящую из содержимого двух операндов \(один за другим\).  
+ <span data-ttu-id="bfc41-179">Можно также использовать `+` оператор для объединения строк.</span><span class="sxs-lookup"><span data-stu-id="bfc41-179">You can also use the `+` operator to concatenate strings.</span></span> <span data-ttu-id="bfc41-180">Если оба операнда являются строками, Visual Basic объединяет их.</span><span class="sxs-lookup"><span data-stu-id="bfc41-180">If the operands are both strings, Visual Basic concatenates them.</span></span> <span data-ttu-id="bfc41-181">Результат объединения представляет одну строку, состоящую из содержимого двух операндов один за другим.</span><span class="sxs-lookup"><span data-stu-id="bfc41-181">The concatenation result represents a single string consisting of the contents of the two operands one after the other.</span></span>  
   
- Если используются операнды разных типов, результат зависит от значения [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md).  В следующем примере показан результат, когда для `Option Strict` задано `On`.  
+ <span data-ttu-id="bfc41-182">Если операнды имеют разных типов, результат зависит от настройки [оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md).</span><span class="sxs-lookup"><span data-stu-id="bfc41-182">If the operands are of mixed types, the result depends on the setting of the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).</span></span> <span data-ttu-id="bfc41-183">В следующем примере показан результат при `Option Strict` — `On`.</span><span class="sxs-lookup"><span data-stu-id="bfc41-183">The following example illustrates the result when `Option Strict` is `On`.</span></span>  
   
  [!code-vb[VbVbalrOperators#53](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_2.vb)]  
   
  [!code-vb[VbVbalrOperators#50](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_3.vb)]  
 [!code-vb[VbVbalrOperators#51](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_4.vb)]  
   
- В следующем примере показан результат, когда для `Option Strict` задано `Off`.  
+ <span data-ttu-id="bfc41-184">В следующем примере показан результат при `Option Strict` — `Off`.</span><span class="sxs-lookup"><span data-stu-id="bfc41-184">The following example illustrates the result when `Option Strict` is `Off`.</span></span>  
   
  [!code-vb[VbVbalrOperators#54](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_5.vb)]  
   
  [!code-vb[VbVbalrOperators#50](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_3.vb)]  
 [!code-vb[VbVbalrOperators#52](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_6.vb)]  
   
- Чтобы избежать неоднозначности, при объединении следует использовать оператор `&` вместо `+`.  
+ <span data-ttu-id="bfc41-185">Чтобы избежать неоднозначности, следует использовать `&` оператор вместо `+` для объединения.</span><span class="sxs-lookup"><span data-stu-id="bfc41-185">To eliminate ambiguity, you should use the `&` operator instead of `+` for concatenation.</span></span>  
   
-## См. также  
- [Оператор &](../../../visual-basic/language-reference/operators/concatenation-operator.md)   
- [Операторы объединения](../../../visual-basic/language-reference/operators/concatenation-operators.md)   
- [Арифметические операторы](../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Арифметические операторы в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)   
- [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a><span data-ttu-id="bfc41-186">См. также</span><span class="sxs-lookup"><span data-stu-id="bfc41-186">See Also</span></span>  
+ [<span data-ttu-id="bfc41-187">Оператор &</span><span class="sxs-lookup"><span data-stu-id="bfc41-187">& Operator</span></span>](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
+ [<span data-ttu-id="bfc41-188">Операторы объединения</span><span class="sxs-lookup"><span data-stu-id="bfc41-188">Concatenation Operators</span></span>](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
+ [<span data-ttu-id="bfc41-189">Арифметические операторы</span><span class="sxs-lookup"><span data-stu-id="bfc41-189">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [<span data-ttu-id="bfc41-190">Список операторов, сгруппированных по функциональному назначению</span><span class="sxs-lookup"><span data-stu-id="bfc41-190">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [<span data-ttu-id="bfc41-191">Порядок применения операторов в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="bfc41-191">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [<span data-ttu-id="bfc41-192">Арифметические операторы в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="bfc41-192">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
+ [<span data-ttu-id="bfc41-193">Оператор Option Strict</span><span class="sxs-lookup"><span data-stu-id="bfc41-193">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)

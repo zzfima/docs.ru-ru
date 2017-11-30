@@ -1,33 +1,31 @@
 ---
-title: "Оператор Return (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Return"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "поток управления, возврат управления выражениям"
-  - "выражения [Visual Basic], возврат управления"
-  - "Return - оператор"
-  - "Return - оператор, синтаксис"
+title: "Оператор Return (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Return
+helpviewer_keywords:
+- Return statement [Visual Basic], syntax
+- control flow [Visual Basic], returning control to expressions
+- Return statement [Visual Basic]
+- expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b66d16a249164b8989f05f10c785b97055bfde9e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оператор Return (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Возвращает управление коду, вызвавшему процедуру `Function`, `Sub` `Get`, `Set` или `Operator`.  
+# <a name="return-statement-visual-basic"></a><span data-ttu-id="8bf28-102">Оператор Return (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8bf28-102">Return Statement (Visual Basic)</span></span>
+<span data-ttu-id="8bf28-103">Возвращает элемент управления в код, который вызвал `Function`, `Sub`, `Get`, `Set`, или `Operator` процедуры.</span><span class="sxs-lookup"><span data-stu-id="8bf28-103">Returns control to the code that called a `Function`, `Sub`, `Get`, `Set`, or `Operator` procedure.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="8bf28-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8bf28-104">Syntax</span></span>  
   
 ```  
 Return  
@@ -35,31 +33,31 @@ Return
 Return expression  
 ```  
   
-## Часть  
+## <a name="part"></a><span data-ttu-id="8bf28-105">Отделение</span><span class="sxs-lookup"><span data-stu-id="8bf28-105">Part</span></span>  
  `expression`  
- Является обязательным в процедурах `Function`, `Get` и `Operator`.  Выражение, представляющее значение, возвращаемое вызывающему коду.  
+ <span data-ttu-id="8bf28-106">Требуется в `Function`, `Get`, или `Operator` процедуры.</span><span class="sxs-lookup"><span data-stu-id="8bf28-106">Required in a `Function`, `Get`, or `Operator` procedure.</span></span> <span data-ttu-id="8bf28-107">Выражение, представляющее значение, возвращаемое вызывающему коду.</span><span class="sxs-lookup"><span data-stu-id="8bf28-107">Expression that represents the value to be returned to the calling code.</span></span>  
   
-## Заметки  
- В процедуре `Sub` или `Set` оператор `Return` эквивалентен оператору `Exit Sub` или `Exit Property`, а `expression` не указывается.  
+## <a name="remarks"></a><span data-ttu-id="8bf28-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="8bf28-108">Remarks</span></span>  
+ <span data-ttu-id="8bf28-109">В `Sub` или `Set` процедуре `Return` оператор эквивалентен `Exit Sub` или `Exit Property` инструкции, и `expression` не должен быть указан.</span><span class="sxs-lookup"><span data-stu-id="8bf28-109">In a `Sub` or `Set` procedure, the `Return` statement is equivalent to an `Exit Sub` or `Exit Property` statement, and `expression` must not be supplied.</span></span>  
   
- В процедуре `Function`, `Get` или `Operator` оператор `Return` должен включать `expression`, а `expression` должно определяться значением типа данных, преобразуемого в возвращаемый тип процедуры.  В процедурах `Function` и `Get` имеется альтернативный способ назначения выражения имени процедуры для использования в качестве возвращаемого значения, а также выполнения операторов `Exit Function` и `Exit Property`.  В процедуре `Operator` следует использовать `Return` `expression`.  
+ <span data-ttu-id="8bf28-110">В `Function`, `Get`, или `Operator` процедуре `Return` инструкция должна включать `expression`, и `expression` должны иметь тип данных, которое можно преобразовать в тип возвращаемого значения процедуры.</span><span class="sxs-lookup"><span data-stu-id="8bf28-110">In a `Function`, `Get`, or `Operator` procedure, the `Return` statement must include `expression`, and `expression` must evaluate to a data type that is convertible to the return type of the procedure.</span></span> <span data-ttu-id="8bf28-111">В `Function` или `Get` процедуры, также существует возможность назначения выражения имени процедуры для использования в качестве возвращаемого значения и последующего выполнения `Exit Function` или `Exit Property` инструкции.</span><span class="sxs-lookup"><span data-stu-id="8bf28-111">In a `Function` or `Get` procedure, you also have the alternative of assigning an expression to the procedure name to serve as the return value, and then executing an `Exit Function` or `Exit Property` statement.</span></span> <span data-ttu-id="8bf28-112">В `Operator` процедуру, необходимо использовать `Return``expression`.</span><span class="sxs-lookup"><span data-stu-id="8bf28-112">In an `Operator` procedure, you must use `Return``expression`.</span></span>  
   
- Можно включить столько операторов `Return`, сколько необходимо в той же процедуре.  
+ <span data-ttu-id="8bf28-113">Можно включить столько `Return` инструкций в той же процедуре соответствующим образом.</span><span class="sxs-lookup"><span data-stu-id="8bf28-113">You can include as many `Return` statements as appropriate in the same procedure.</span></span>  
   
 > [!NOTE]
->  Код в блоке `Finally` выполняется после того, как встретится оператор `Return` в блоке `Try` или `Catch` блок, но перед этим выполняется оператор `Return`.  A `Return` не удалось включить в выписку  `Finally` блок.  
+>  <span data-ttu-id="8bf28-114">Код в `Finally` блок выполняется после `Return` инструкции в `Try` или `Catch` блок обнаружен, но перед этим `Return` выполняет инструкцию.</span><span class="sxs-lookup"><span data-stu-id="8bf28-114">The code in a `Finally` block runs after a `Return` statement in a `Try` or `Catch` block is encountered, but before that `Return` statement executes.</span></span> <span data-ttu-id="8bf28-115">Объект `Return` инструкции не могут быть включены в `Finally` блока.</span><span class="sxs-lookup"><span data-stu-id="8bf28-115">A `Return` statement cannot be included in a `Finally` block.</span></span>  
   
-## Пример  
- В следующем примере оператор `Return` используется несколько раз для возвращения из процедуры, если дальнейшие вычисления не нужны.  
+## <a name="example"></a><span data-ttu-id="8bf28-116">Пример</span><span class="sxs-lookup"><span data-stu-id="8bf28-116">Example</span></span>  
+ <span data-ttu-id="8bf28-117">В следующем примере используется `Return` инструкции несколько раз, чтобы возвращать вызывающему коду, если процедуру не нужно ничего.</span><span class="sxs-lookup"><span data-stu-id="8bf28-117">The following example uses the `Return` statement several times to return to the calling code when the procedure does not have to do anything else.</span></span>  
   
  [!code-vb[VbVbalrStatements#53](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/return-statement_1.vb)]  
   
-## См. также  
- [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)   
- [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Оператор Get](../../../visual-basic/language-reference/statements/get-statement.md)   
- [Оператор Set](../../../visual-basic/language-reference/statements/set-statement.md)   
- [Оператор Operator](../../../visual-basic/language-reference/statements/operator-statement.md)   
- [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)   
- [Оператор Exit](../../../visual-basic/language-reference/statements/exit-statement.md)   
- [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a><span data-ttu-id="8bf28-118">См. также</span><span class="sxs-lookup"><span data-stu-id="8bf28-118">See Also</span></span>  
+ [<span data-ttu-id="8bf28-119">Оператор Function</span><span class="sxs-lookup"><span data-stu-id="8bf28-119">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="8bf28-120">Оператор Sub</span><span class="sxs-lookup"><span data-stu-id="8bf28-120">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="8bf28-121">Оператор Get</span><span class="sxs-lookup"><span data-stu-id="8bf28-121">Get Statement</span></span>](../../../visual-basic/language-reference/statements/get-statement.md)  
+ [<span data-ttu-id="8bf28-122">Оператор Set</span><span class="sxs-lookup"><span data-stu-id="8bf28-122">Set Statement</span></span>](../../../visual-basic/language-reference/statements/set-statement.md)  
+ [<span data-ttu-id="8bf28-123">Оператор Statement</span><span class="sxs-lookup"><span data-stu-id="8bf28-123">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [<span data-ttu-id="8bf28-124">Оператор Property</span><span class="sxs-lookup"><span data-stu-id="8bf28-124">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="8bf28-125">Оператор Exit</span><span class="sxs-lookup"><span data-stu-id="8bf28-125">Exit Statement</span></span>](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [<span data-ttu-id="8bf28-126">Оператор Try...Catch...Finally</span><span class="sxs-lookup"><span data-stu-id="8bf28-126">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

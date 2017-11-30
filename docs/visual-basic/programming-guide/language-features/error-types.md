@@ -1,60 +1,45 @@
 ---
-title: "Типы ошибок (Visual Basic) | Документы Microsoft"
+title: "Типы ошибок (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - exceptions, types
 - errors [Visual Basic], types
 - errors [Visual Basic], logic
 - errors [Visual Basic], syntax
-- logic errors, Visual Basic
-- run-time errors, types of errors
-- syntax errors, Visual Basic
+- logic errors [Visual Basic], Visual Basic
+- run-time errors [Visual Basic], types of errors
+- syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d48756b74baf757f043e68124d8b65c2f613e595
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: e01ed588d284a475a537a5fcf5ca506d25ca69f1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="error-types-visual-basic"></a>Типы ошибок (Visual Basic)
-В [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], ошибки (также называемый *исключения*) делятся на три категории: синтаксические ошибки, ошибки времени выполнения и логических ошибок.  
+# <a name="error-types-visual-basic"></a><span data-ttu-id="4ee35-102">Типы ошибок (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4ee35-102">Error Types (Visual Basic)</span></span>
+<span data-ttu-id="4ee35-103">В [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], ошибок (также называемый *исключения*) делятся на три категории: синтаксические ошибки, ошибки времени выполнения и логические ошибки.</span><span class="sxs-lookup"><span data-stu-id="4ee35-103">In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], errors (also called *exceptions*) fall into one of three categories: syntax errors, run-time errors, and logic errors.</span></span>  
   
-## <a name="syntax-errors"></a>Синтаксические ошибки  
- *Синтаксические ошибки* те, которые появляются при написании кода. [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]проверяет код при вводе в **редактор кода** окна и предупредит вас, если вы сделаете ошибку, например, неправильное написание слова или неправильное использование элемента языка. Синтаксические ошибки являются наиболее распространенным типом ошибки. Их легко исправить в среде кодирования по мере их появления.  
+## <a name="syntax-errors"></a><span data-ttu-id="4ee35-104">Синтаксические ошибки</span><span class="sxs-lookup"><span data-stu-id="4ee35-104">Syntax Errors</span></span>  
+ <span data-ttu-id="4ee35-105">*Синтаксические ошибки* являются те, которые отображаются во время написания кода.</span><span class="sxs-lookup"><span data-stu-id="4ee35-105">*Syntax errors* are those that appear while you write code.</span></span> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="4ee35-106">проверяет код при вводе в **редактор кода** окна и оповещает пользователя в случае ошибки, например неправильное написание слова или неправильное использование элемента языка.</span><span class="sxs-lookup"><span data-stu-id="4ee35-106"> checks your code as you type it in the **Code Editor** window and alerts you if you make a mistake, such as misspelling a word or using a language element improperly.</span></span> <span data-ttu-id="4ee35-107">Синтаксические ошибки являются наиболее распространенным типом ошибки.</span><span class="sxs-lookup"><span data-stu-id="4ee35-107">Syntax errors are the most common type of errors.</span></span> <span data-ttu-id="4ee35-108">Их легко исправить в среде кодирования по мере их появления.</span><span class="sxs-lookup"><span data-stu-id="4ee35-108">You can fix them easily in the coding environment as soon as they occur.</span></span>  
   
 > [!NOTE]
->  `Option Explicit` Инструкция является одним из средств предотвращения синтаксических ошибок. Принудительно объявлять, заранее, все переменные для использования в приложении. Таким образом когда эти переменные используются в коде, опечатки немедленно обнаруживаются и могут быть исправлены.  
+>  <span data-ttu-id="4ee35-109">`Option Explicit` Инструкция является одним из средств предотвращения синтаксических ошибок.</span><span class="sxs-lookup"><span data-stu-id="4ee35-109">The `Option Explicit` statement is one means of avoiding syntax errors.</span></span> <span data-ttu-id="4ee35-110">Он заставляет можно объявить, заранее, все переменные для использования в приложении.</span><span class="sxs-lookup"><span data-stu-id="4ee35-110">It forces you to declare, in advance, all the variables to be used in the application.</span></span> <span data-ttu-id="4ee35-111">Таким образом Если эти переменные используются в коде, опечатки немедленно обнаруживаются и могут быть исправлены.</span><span class="sxs-lookup"><span data-stu-id="4ee35-111">Therefore, when those variables are used in the code, any typographic errors are caught immediately and can be fixed.</span></span>  
   
-## <a name="run-time-errors"></a>Ошибки во время выполнения  
- *Ошибки во время выполнения* те, которые отображаются только после компиляции и выполнения кода. Они включают в себя код, который может отображаться правильно, он не содержат синтаксических ошибок, но не выполняются. Например может правильно написать строку кода для открытия файла. Но если файл поврежден, приложение не может выполнить `Open` функции и будет остановлено. Большинство ошибок времени выполнения можно устранить, переписав ошибочный код и перекомпилировать и запустить приложение.  
+## <a name="run-time-errors"></a><span data-ttu-id="4ee35-112">Ошибки во время выполнения</span><span class="sxs-lookup"><span data-stu-id="4ee35-112">Run-Time Errors</span></span>  
+ <span data-ttu-id="4ee35-113">*Ошибки во время выполнения* являются те, которые отображаются только после компиляции и выполнения кода.</span><span class="sxs-lookup"><span data-stu-id="4ee35-113">*Run-time errors* are those that appear only after you compile and run your code.</span></span> <span data-ttu-id="4ee35-114">Они включают код, который может указаны правильно, он не содержат синтаксических ошибок, но не выполняются.</span><span class="sxs-lookup"><span data-stu-id="4ee35-114">These involve code that may appear to be correct in that it has no syntax errors, but that will not execute.</span></span> <span data-ttu-id="4ee35-115">Например может правильно написать строку кода для открытия файла.</span><span class="sxs-lookup"><span data-stu-id="4ee35-115">For example, you might correctly write a line of code to open a file.</span></span> <span data-ttu-id="4ee35-116">Но если файл поврежден, приложение не может выполнить `Open` функции и будет остановлено.</span><span class="sxs-lookup"><span data-stu-id="4ee35-116">But if the file is corrupted, the application cannot carry out the `Open` function, and it stops running.</span></span> <span data-ttu-id="4ee35-117">Вы можете исправить большинство ошибок времени выполнения, переписав ошибочный код и перекомпилировать и запустить приложение.</span><span class="sxs-lookup"><span data-stu-id="4ee35-117">You can fix most run-time errors by rewriting the faulty code, and then recompiling and rerunning it.</span></span>  
   
-## <a name="logic-errors"></a>Логические ошибки  
- *Логические ошибки* те, которые выявляются при использования приложения. Они являются большинство часто нежелательных или непредвиденных результатов в ответ на действия пользователя. Например, ошибочное нажатие клавиши или другое внешнее воздействие может вызвать прекращение работы в ожидаемом приложения или вообще. Логические ошибки — обычно наиболее сложно исправить, так как он не всегда ясно их происхождение.  
+## <a name="logic-errors"></a><span data-ttu-id="4ee35-118">Логические ошибки</span><span class="sxs-lookup"><span data-stu-id="4ee35-118">Logic Errors</span></span>  
+ <span data-ttu-id="4ee35-119">*Логические ошибки* — это те, которые выявляются приложения уже используется.</span><span class="sxs-lookup"><span data-stu-id="4ee35-119">*Logic errors* are those that appear once the application is in use.</span></span> <span data-ttu-id="4ee35-120">Они являются большинства часто нежелательных или непредвиденных результатов в ответ на действия пользователя.</span><span class="sxs-lookup"><span data-stu-id="4ee35-120">They are most often unwanted or unexpected results in response to user actions.</span></span> <span data-ttu-id="4ee35-121">Например, ошибочное нажатие клавиши или другое внешнее воздействие может вызвать прекращение работы в ожидаемом приложения или вообще.</span><span class="sxs-lookup"><span data-stu-id="4ee35-121">For example, a mistyped key or other outside influence might cause your application to stop working within expected parameters, or altogether.</span></span> <span data-ttu-id="4ee35-122">Логические ошибки обычно являются наиболее сложно исправить, так как не всегда ясно их происхождение.</span><span class="sxs-lookup"><span data-stu-id="4ee35-122">Logic errors are generally the hardest type to fix, since it is not always clear where they originate.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Оператор Try... Catch... Finally (Visual Basic)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)   
- [Основы отладки](https://docs.microsoft.com/visualstudio/debugger/debugger-basics)
+## <a name="see-also"></a><span data-ttu-id="4ee35-123">См. также</span><span class="sxs-lookup"><span data-stu-id="4ee35-123">See Also</span></span>  
+ [<span data-ttu-id="4ee35-124">Оператор Try...Catch...Finally</span><span class="sxs-lookup"><span data-stu-id="4ee35-124">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [<span data-ttu-id="4ee35-125">Основы отладки</span><span class="sxs-lookup"><span data-stu-id="4ee35-125">Debugger Basics</span></span>](/visualstudio/debugger/debugger-basics)

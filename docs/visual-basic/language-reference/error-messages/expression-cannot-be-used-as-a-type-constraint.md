@@ -1,58 +1,56 @@
 ---
-title: "&lt;выражение&gt; нельзя использовать в качестве ограничения типа | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc32061"
-  - "vbc32061"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC32061"
+title: "&#39; &lt;выражение&gt;&#39; нельзя использовать в качестве ограничения типа"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc32061
+- vbc32061
+helpviewer_keywords: BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 054c05747491afb02601df00225a703560cbe91c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;выражение&gt; нельзя использовать в качестве ограничения типа
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Список ограничений содержит выражение, которое является недопустимым ограничением для параметра типа.  
+# <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a><span data-ttu-id="89251-102">&#39; &lt;выражение&gt;&#39; нельзя использовать в качестве ограничения типа</span><span class="sxs-lookup"><span data-stu-id="89251-102">&#39;&lt;expression&gt;&#39; cannot be used as a type constraint</span></span>
+<span data-ttu-id="89251-103">Список ограничений включает выражение, которое не представляет допустимое ограничение для параметра типа.</span><span class="sxs-lookup"><span data-stu-id="89251-103">A constraint list includes an expression that does not represent a valid constraint on a type parameter.</span></span>  
   
- Список ограничений устанавливает требования в отношении аргумента типа, переданного параметру типа.  Можно задать следующие требования в любой комбинации:  
+ <span data-ttu-id="89251-104">Список ограничений назначает требования на тип аргумента, передаваемого параметру типа.</span><span class="sxs-lookup"><span data-stu-id="89251-104">A constraint list imposes requirements on the type argument passed to the type parameter.</span></span> <span data-ttu-id="89251-105">Вы можете указать приведенные ниже требования в любой комбинации.</span><span class="sxs-lookup"><span data-stu-id="89251-105">You can specify the following requirements in any combination:</span></span>  
   
--   Аргумент типа должен реализовывать один или несколько интерфейсов.  
+-   <span data-ttu-id="89251-106">Аргумент типа должен реализовывать один или несколько интерфейсов</span><span class="sxs-lookup"><span data-stu-id="89251-106">The type argument must implement one or more interfaces</span></span>  
   
--   Аргумент типа должен наследоваться не более чем от одного класса.  
+-   <span data-ttu-id="89251-107">Аргумент типа должен наследовать не более чем от одного класса</span><span class="sxs-lookup"><span data-stu-id="89251-107">The type argument must inherit from at most one class</span></span>  
   
--   Аргумент типа должен предоставлять конструктор без параметров, к которому создающий код может получить доступ \(включая ограничение `New`\).  
+-   <span data-ttu-id="89251-108">Аргумент типа должен предоставлять конструктор без параметров, к которому создающий код может получить доступ (включая ограничение `New` ).</span><span class="sxs-lookup"><span data-stu-id="89251-108">The type argument must expose a parameterless constructor that the creating code can access (include the `New` constraint)</span></span>  
   
- Если не включать любой определенный класс или интерфейс в список ограничений, то можно наложить более общее требование, указав одно из следующих ограничений:  
+ <span data-ttu-id="89251-109">Если не включать определенный класс или интерфейс в список ограничений, то можно наложить более общее требование, указав одно из приведенных ниже ограничений.</span><span class="sxs-lookup"><span data-stu-id="89251-109">If you do not include any specific class or interface in the constraint list, you can impose a more general requirement by specifying one of the following:</span></span>  
   
--   Аргумент типа должен быть типом значения \(включая ограничение `Structure`\).  
+-   <span data-ttu-id="89251-110">Аргумент типа должен быть типом значения (включая ограничение `Structure` ).</span><span class="sxs-lookup"><span data-stu-id="89251-110">The type argument must be a value type (include the `Structure` constraint)</span></span>  
   
--   Аргумент типа должен быть ссылочным типом \(включая ограничение `Class`\).  
+-   <span data-ttu-id="89251-111">Аргумент типа должен быть ссылочным типом (включая ограничение `Class` ).</span><span class="sxs-lookup"><span data-stu-id="89251-111">The type argument must be a reference type (include the `Class` constraint)</span></span>  
   
- Нельзя указывать оба ограничения, `Structure` и `Class`, для одного и того же параметра типа, а также указывать какой\-либо из них более одного раза.  
+ <span data-ttu-id="89251-112">Нельзя указывать оба ограничения, `Structure` и `Class` , для одного и того же параметра типа, а также нельзя указывать какое-либо из них более одного раза.</span><span class="sxs-lookup"><span data-stu-id="89251-112">You cannot specify both `Structure` and `Class` for the same type parameter, and you cannot specify either one more than once.</span></span>  
   
- **Идентификатор ошибки**: BC32061  
+ <span data-ttu-id="89251-113">**Идентификатор ошибки:** BC32061</span><span class="sxs-lookup"><span data-stu-id="89251-113">**Error ID:** BC32061</span></span>  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a><span data-ttu-id="89251-114">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="89251-114">To correct this error</span></span>  
   
--   Убедитесь, что выражение и его элементы написаны правильно.  
+-   <span data-ttu-id="89251-115">Проверьте правильность написания выражения и его элементов.</span><span class="sxs-lookup"><span data-stu-id="89251-115">Verify that the expression and its elements are spelled correctly.</span></span>  
   
--   Если выражение не входит в ранее приведенный список требований, удалите его из списка ограничений.  
+-   <span data-ttu-id="89251-116">Если выражение не соответствует требованиям предыдущего списка, удалите его из списка ограничений.</span><span class="sxs-lookup"><span data-stu-id="89251-116">If the expression does not qualify for the preceding list of requirements, remove it from the constraint list.</span></span>  
   
--   Если выражение ссылается на интерфейс или класс, убедитесь, что компилятор имеет доступ к интерфейсу или классу.  Возможно, требуется уточнить его имя или требуется добавить ссылку на проект.  Дополнительные сведения см. в разделе "Ссылки в проектах" в [Ссылки на объявленные элементы](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+-   <span data-ttu-id="89251-117">Если выражение ссылается на интерфейс или класс, убедитесь, что у компилятора есть доступ к этому интерфейсу или классу.</span><span class="sxs-lookup"><span data-stu-id="89251-117">If the expression refers to an interface or class, verify that the compiler has access to that interface or class.</span></span> <span data-ttu-id="89251-118">Возможно, вам потребуется проверить его имя и добавить ссылку в проект.</span><span class="sxs-lookup"><span data-stu-id="89251-118">You might need to qualify its name, and you might need to add a reference to your project.</span></span> <span data-ttu-id="89251-119">Дополнительные сведения см. в разделе «Ссылки на проекты» в [ссылки на объявленные элементы](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span><span class="sxs-lookup"><span data-stu-id="89251-119">For more information, see "References to Projects" in [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span></span>  
   
-## См. также  
- [Универсальные типы в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [Типы значений и ссылочные типы](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Ссылки на объявленные элементы](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Практическое руководство. Добавление и удаление ссылок с помощью диалогового окна "Добавление ссылок"](http://msdn.microsoft.com/ru-ru/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)
+## <a name="see-also"></a><span data-ttu-id="89251-120">См. также</span><span class="sxs-lookup"><span data-stu-id="89251-120">See Also</span></span>  
+ [<span data-ttu-id="89251-121">Универсальные типы в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="89251-121">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [<span data-ttu-id="89251-122">Типы значений и ссылочные типы</span><span class="sxs-lookup"><span data-stu-id="89251-122">Value Types and Reference Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [<span data-ttu-id="89251-123">Ссылки на объявленные элементы</span><span class="sxs-lookup"><span data-stu-id="89251-123">References to Declared Elements</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="89251-124">NIB. Практическое руководство. Добавление и удаление ссылок с помощью диалогового окна "Добавление ссылок"</span><span class="sxs-lookup"><span data-stu-id="89251-124">NIB How to: Add or Remove References By Using the Add Reference Dialog Box</span></span>](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)

@@ -1,41 +1,42 @@
 ---
-title: "Была создана ссылка на внедренную сборку взаимодействия &lt;сборка_1&gt; из-за наличия неявной ссылки на эту сборки из сборки &lt;сборка_2&gt; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc40059"
-  - "bc40059"
-helpviewer_keywords: 
-  - "BC40059"
-  - "VBC40059"
+title: "Была создана ссылка на внедренную сборку взаимодействия &#39; &lt;assembly1&gt;&#39; из-за наличия неявной ссылки на эту сборку из сборки &#39;&lt; Assembly2&gt;&#39;"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc40059
+- bc40059
+helpviewer_keywords:
+- VBC40059
+- BC40059
 ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: bc2fbb044fc839aa24abf3dc1ea864457efb0653
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Была создана ссылка на внедренную сборку взаимодействия &lt;сборка_1&gt; из-за наличия неявной ссылки на эту сборки из сборки &lt;сборка_2&gt;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Была создана ссылка на внедренную сборку взаимодействия \<сборка\_1\> из\-за наличия неявной ссылки на эту сборку из сборки \<сборка\_2\>.Попробуйте изменить свойство "Внедрить типы взаимодействия" любой сборки.  
+# <a name="a-reference-was-created-to-embedded-interop-assembly-39ltassembly1gt39-because-of-an-indirect-reference-to-that-assembly-from-assembly-39ltassembly2gt39"></a><span data-ttu-id="bc365-102">Была создана ссылка на внедренную сборку взаимодействия &#39; &lt;assembly1&gt;&#39; из-за наличия неявной ссылки на эту сборку из сборки &#39;&lt; Assembly2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="bc365-102">A reference was created to embedded interop assembly &#39;&lt;assembly1&gt;&#39; because of an indirect reference to that assembly from assembly &#39;&lt;assembly2&gt;&#39;</span></span>
+<span data-ttu-id="bc365-103">Была создана ссылка на внедренную сборку взаимодействия "\<сборка1>" из-за косвенной ссылки на эту сборку из сборки "\<сборка2>".</span><span class="sxs-lookup"><span data-stu-id="bc365-103">A reference was created to embedded interop assembly '\<assembly1>' because of an indirect reference to that assembly from assembly '\<assembly2>'.</span></span> <span data-ttu-id="bc365-104">Рекомендуется изменить свойство "Внедрить типы взаимодействия" в одной из сборок.</span><span class="sxs-lookup"><span data-stu-id="bc365-104">Consider changing the 'Embed Interop Types' property on either assembly.</span></span>  
   
- Была добавлена ссылка на сборку \(сборка\_1\), свойству `Embed Interop Types` которой присвоено значение `True`.  Это указывает компилятору внедрить сведения о типе сборки взаимодействия из этой сборки.  Однако компилятор не может внедрить такие сведения из этой сборки, поскольку другая сборка, на которую имеется ссылка \(сборка\_2\), также ссылается на эту сборку \(сборка\_1\), и ее свойству `Embed Interop Types` присвоено значение `False`.  
+ <span data-ttu-id="bc365-105">Была добавлена ссылка на сборку (сборка1), для которой свойству `Embed Interop Types` присвоено значение `True`.</span><span class="sxs-lookup"><span data-stu-id="bc365-105">You have added a reference to an assembly (assembly1) that has the `Embed Interop Types` property set to `True`.</span></span> <span data-ttu-id="bc365-106">Это указывает компилятору на необходимость внедрить сведения о типе взаимодействия из этой сборки.</span><span class="sxs-lookup"><span data-stu-id="bc365-106">This instructs the compiler to embed interop type information from that assembly.</span></span> <span data-ttu-id="bc365-107">Тем не менее компилятор не может внедрить такие сведения из этой сборки, поскольку другая сборка, на которую задаются ссылки (сборка2), также ссылается на эту сборку (сборка1) и содержит свойство `Embed Interop Types` со значением `False`.</span><span class="sxs-lookup"><span data-stu-id="bc365-107">However, the compiler cannot embed interop type information from that assembly because another assembly that you have referenced (assembly2) also references that assembly (assembly1) and has the `Embed Interop Types` property set to `False`.</span></span>  
   
 > [!NOTE]
->  Присвоение свойству `Embed Interop Types` для ссылки на сборку значения `True` равнозначно созданию ссылки на сборку с помощью параметра `/link` для компилятора командной строки.  
+>  <span data-ttu-id="bc365-108">Если присвоить свойству `Embed Interop Types` для ссылки на сборку значение `True`, это будет эквивалентно ссылке на сборку с использованием параметра `/link` для компилятора командной строки.</span><span class="sxs-lookup"><span data-stu-id="bc365-108">Setting the `Embed Interop Types` property on an assembly reference to `True` is equivalent to referencing the assembly by using the `/link` option for the command-line compiler.</span></span>  
   
- **Идентификатор ошибки:** BC40059  
+ <span data-ttu-id="bc365-109">**Идентификатор ошибки:** BC40059</span><span class="sxs-lookup"><span data-stu-id="bc365-109">**Error ID:** BC40059</span></span>  
   
-### Чтобы устранить это предупреждение, выполните следующие действия:  
+### <a name="to-address-this-warning"></a><span data-ttu-id="bc365-110">Устранение предупреждения</span><span class="sxs-lookup"><span data-stu-id="bc365-110">To address this warning</span></span>  
   
--   Чтобы внедрить сведения о типе сборки взаимодействия для обеих сборок, присвойте свойству `Embed Interop Types` для всех ссылок на сборку \(сборка\_1\) значение `True`.  
+-   <span data-ttu-id="bc365-111">Чтобы внедрить сведения о типе взаимодействия для обеих сборок, присвойте свойству `Embed Interop Types` во всех ссылках на сборку сборка1 значение `True`.</span><span class="sxs-lookup"><span data-stu-id="bc365-111">To embed interop type information for both assemblies, set the `Embed Interop Types` property on all references to assembly1 to `True`.</span></span>  
   
--   Чтобы удалить предупреждение, свойству `Embed Interop Types` сборки \(сборка\_1\) можно присвоить значение `False`.  В этом случае сведения о типе сборки взаимодействия предоставляются основной сборкой взаимодействия.  
+-   <span data-ttu-id="bc365-112">Чтобы устранить это предупреждение, можно присвоить свойству `Embed Interop Types` сборки сборка1 значение `False`.</span><span class="sxs-lookup"><span data-stu-id="bc365-112">To remove the warning, you can set the `Embed Interop Types` property of assembly1 to `False`.</span></span> <span data-ttu-id="bc365-113">В этом случае сведения о типе взаимодействия предоставляется основной сборки взаимодействия (PIA).</span><span class="sxs-lookup"><span data-stu-id="bc365-113">In this case, interop type information is provided by a primary interop assembly (PIA).</span></span>  
   
-## См. также  
- [\/link](../../../visual-basic/reference/command-line-compiler/link.md)   
- [Programming with Primary Interop Assemblies](http://msdn.microsoft.com/ru-ru/306fa1d6-0703-4004-9e93-d0a57f1be81e)
+## <a name="see-also"></a><span data-ttu-id="bc365-114">См. также</span><span class="sxs-lookup"><span data-stu-id="bc365-114">See Also</span></span>  
+ [<span data-ttu-id="bc365-115">/link (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bc365-115">/link (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/link.md)  
+ [<span data-ttu-id="bc365-116">Программирование с использованием основных сборок взаимодействия</span><span class="sxs-lookup"><span data-stu-id="bc365-116">Programming with Primary Interop Assemblies</span></span>](http://msdn.microsoft.com/en-us/306fa1d6-0703-4004-9e93-d0a57f1be81e)

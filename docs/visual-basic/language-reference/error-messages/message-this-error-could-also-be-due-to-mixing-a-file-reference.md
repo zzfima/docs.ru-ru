@@ -1,62 +1,43 @@
 ---
-title: "&lt;сообщение&gt; Эта ошибка может также быть вызвана смешением ссылки на файл со ссылкой из проекта на сборку &quot;&lt;assemblyname&gt;&quot; | Документы Microsoft"
-ms.date: 2015-07-20
+title: "&lt;сообщение&gt; Эта ошибка может также быть вызвана смешением ссылки на файл со ссылкой проекта на сборку &#39;&lt; AssemblyName&gt;&#39;"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc30971
 - vbc30971
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC30971
+helpviewer_keywords: BC30971
 ms.assetid: 75d2e8b5-2fdc-4623-8b32-cba805dab7db
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a1806fd078fc05d966c718841e5b78c1323a43c2
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a30e5d5aca09e7b74e16dd05cdc0c5c361c1657d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="ltmessagegt-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-39ltassemblynamegt39"></a>&lt;сообщение&gt; Эта ошибка может также быть вызвана смешением ссылки на файл со ссылкой из проекта на сборку "&lt;assemblyname&gt;"
-\<сообщение настроек Эта ошибка может также быть вызвана смешением ссылки на файл со ссылкой из проекта на сборку "\<assemblyname настроек. В этом случае попробуйте заменить ссылку на файл "\<assemblyfilename настроек" в проекте "\<projectname1 настроек" со ссылкой на проект "\<projectname2 настроек".  
+# <a name="ltmessagegt-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-39ltassemblynamegt39"></a><span data-ttu-id="40f9a-102">&lt;сообщение&gt; Эта ошибка может также быть вызвана смешением ссылки на файл со ссылкой проекта на сборку &#39;&lt; AssemblyName&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="40f9a-102">&lt;message&gt; This error could also be due to mixing a file reference with a project reference to assembly &#39;&lt;assemblyname&gt;&#39;</span></span>
+<span data-ttu-id="40f9a-103">\<сообщение > Эта ошибка может также быть вызвана смешением ссылки на файл со ссылкой из проекта на сборку "\<assemblyname >.</span><span class="sxs-lookup"><span data-stu-id="40f9a-103">\<message> This error could also be due to mixing a file reference with a project reference to assembly '\<assemblyname>.</span></span> <span data-ttu-id="40f9a-104">В этом случае попробуйте заменить ссылку на файл "\<имя_файла_сборки >" в проекте "\<имя_проекта1 >" со ссылкой проекта "\<имя_проекта2 >".</span><span class="sxs-lookup"><span data-stu-id="40f9a-104">In this case, try replacing the file reference to '\<assemblyfilename>' in project '\<projectname1>' with a project reference to '\<projectname2>'.</span></span>  
   
- Код в проекте обращается к члену другого проекта, но конфигурация решения не позволяет [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] компилятора для разрешения ссылки.  
+ <span data-ttu-id="40f9a-105">Код в проекте обращается к члену другого проекта, но конфигурация решения не позволяет компилятору [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] разрешить ссылку.</span><span class="sxs-lookup"><span data-stu-id="40f9a-105">Code in your project accesses a member of another project, but the configuration of your solution does not allow the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler to resolve the reference.</span></span>  
   
- Для доступа к типу, определенному в другой сборке, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] компилятор должен иметь ссылку на эту сборку. Это должна быть одна однозначная ссылка, не вызывающая циклических ссылок между проектами.  
+ <span data-ttu-id="40f9a-106">Для доступа к типу, определенному в другой сборке, компилятор [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] должен иметь ссылку на эту сборку.</span><span class="sxs-lookup"><span data-stu-id="40f9a-106">To access a type defined in another assembly, the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler must have a reference to that assembly.</span></span> <span data-ttu-id="40f9a-107">Это должна быть одна однозначная ссылка, не вызывающая циклических ссылок между проектами.</span><span class="sxs-lookup"><span data-stu-id="40f9a-107">This must be a single, unambiguous reference that does not cause circular references among projects.</span></span>  
   
- **Идентификатор ошибки:** BC30971  
+ <span data-ttu-id="40f9a-108">**Идентификатор ошибки:** BC30971</span><span class="sxs-lookup"><span data-stu-id="40f9a-108">**Error ID:** BC30971</span></span>  
   
-## <a name="to-correct-this-error"></a>Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="40f9a-109">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="40f9a-109">To correct this error</span></span>  
   
-1.  Определите, какой проект создает наиболее подходящую сборку для проекта, чтобы ссылаться на нее в дальнейшем. Для этого можно использовать такие критерии, как простота доступа к файлам и частота обновления.  
+1.  <span data-ttu-id="40f9a-110">Определите, какой проект создает наиболее подходящую сборку для проекта, чтобы ссылаться на нее в дальнейшем.</span><span class="sxs-lookup"><span data-stu-id="40f9a-110">Determine which project produces the best assembly for your project to reference.</span></span> <span data-ttu-id="40f9a-111">Для этого можно использовать такие критерии, как простота доступа к файлам и частота обновления.</span><span class="sxs-lookup"><span data-stu-id="40f9a-111">For this decision, you might use criteria such as ease of file access and frequency of updates.</span></span>  
   
-2.  В свойствах проекта добавьте ссылку на проект, содержащий сборку, определяющую используемый тип.  
+2.  <span data-ttu-id="40f9a-112">В свойствах проекта добавьте ссылку на проект, содержащий сборку, определяющую используемый тип.</span><span class="sxs-lookup"><span data-stu-id="40f9a-112">In your project properties, add a reference to the project that contains the assembly that defines the type you are using.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Управление ссылками проекта](https://docs.microsoft.com/visualstudio/ide/managing-references-in-a-project)   
- [Ссылки на объявленные элементы](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [NIB. Практическое руководство. Добавление и удаление ссылок с помощью диалогового окна "Добавление ссылки"](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)   
- [NIB Практическое руководство: изменение свойств проекта и параметров конфигурации](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)   
- [Диагностика неработающих ссылок](https://docs.microsoft.com/visualstudio/ide/troubleshooting-broken-references)
+## <a name="see-also"></a><span data-ttu-id="40f9a-113">См. также</span><span class="sxs-lookup"><span data-stu-id="40f9a-113">See Also</span></span>  
+ [<span data-ttu-id="40f9a-114">Управление ссылками в проекте</span><span class="sxs-lookup"><span data-stu-id="40f9a-114">Managing references in a project</span></span>](/visualstudio/ide/managing-references-in-a-project)  
+ [<span data-ttu-id="40f9a-115">Ссылки на объявленные элементы</span><span class="sxs-lookup"><span data-stu-id="40f9a-115">References to Declared Elements</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="40f9a-116">NIB. Практическое руководство. Добавление и удаление ссылок с помощью диалогового окна "Добавление ссылок"</span><span class="sxs-lookup"><span data-stu-id="40f9a-116">NIB How to: Add or Remove References By Using the Add Reference Dialog Box</span></span>](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)  
+ [<span data-ttu-id="40f9a-117">Управление свойствами проектов и решений</span><span class="sxs-lookup"><span data-stu-id="40f9a-117">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)  
+ [<span data-ttu-id="40f9a-118">Диагностика неработающих ссылок</span><span class="sxs-lookup"><span data-stu-id="40f9a-118">Troubleshooting Broken References</span></span>](/visualstudio/ide/troubleshooting-broken-references)
