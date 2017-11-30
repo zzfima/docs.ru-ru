@@ -1,1 +1,1 @@
-ADO.NET 3,0
+<span data-ttu-id="ee787-101">ADO.NET 3,0</span><span class="sxs-lookup"><span data-stu-id="ee787-101">ADO.NET 3.0</span></span>

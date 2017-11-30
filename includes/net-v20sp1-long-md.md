@@ -1,1 +1,1 @@
-.NET Framework 2.0 с пакетом обновления 1 (SP1)
+<span data-ttu-id="25e25-101">.NET Framework 2.0 с пакетом обновления 1 (SP1)</span><span class="sxs-lookup"><span data-stu-id="25e25-101">.NET Framework 2.0 Service Pack 1</span></span>

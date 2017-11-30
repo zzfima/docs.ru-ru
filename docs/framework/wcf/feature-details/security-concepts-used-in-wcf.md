@@ -1,58 +1,61 @@
 ---
-title: "Основные понятия безопасности, используемые в WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Основные понятия безопасности, используемые в WCF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-caps.latest.revision: 15
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 0f490fc09ada9ee80cb6cee12e9e9061e820026e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Основные понятия безопасности, используемые в WCF
-Безопасность [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] основана на принципах, которые уже используются и развертываются в различных инфраструктурах безопасности.  
+# <a name="security-concepts-used-in-wcf"></a><span data-ttu-id="dc58c-102">Основные понятия безопасности, используемые в WCF</span><span class="sxs-lookup"><span data-stu-id="dc58c-102">Security Concepts Used in WCF</span></span>
+<span data-ttu-id="dc58c-103">Безопасность [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] основана на принципах, которые уже используются и развертываются в различных инфраструктурах безопасности.</span><span class="sxs-lookup"><span data-stu-id="dc58c-103">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] security is built upon concepts already in use and deployed in various security infrastructures.</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддерживает некоторые из этих инфраструктур, например протокол SSL по HTTP \(HTTPS\).Однако [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не только поддерживает существующие инфраструктуры безопасности, но и реализует новые стандарты безопасности с возможностью взаимодействия \(такие как WS\-Security\) через сообщения с кодировкой SOAP.Принципы безопасности, лежащие в основе обоих способов, остаются неизменными при использовании существующих механизмов или новых стандартов с возможностью взаимодействия.Чтобы реализовать оптимальную модель безопасности для какого\-либо приложения, необходимо понимать принципы, лежащие в основе существующих инфраструктур и новых стандартов.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="dc58c-104"> поддерживает некоторые из этих инфраструктур, например протокол SSL по HTTP (HTTPS).</span><span class="sxs-lookup"><span data-stu-id="dc58c-104"> supports some of those infrastructures, such as Secure Sockets Layer (SSL) over HTTP (HTTPS).</span></span> <span data-ttu-id="dc58c-105">Однако [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не только поддерживает существующие инфраструктуры безопасности, но и реализует новые стандарты безопасности с возможностью взаимодействия (такие как WS-Security) через сообщения с кодировкой SOAP.</span><span class="sxs-lookup"><span data-stu-id="dc58c-105">However, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] goes beyond supporting existing security infrastructures by implementing newer interoperable security standards (such as WS-Security) over SOAP-encoded messages.</span></span> <span data-ttu-id="dc58c-106">Принципы безопасности, лежащие в основе обоих способов, остаются неизменными при использовании существующих механизмов или новых стандартов с возможностью взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="dc58c-106">Whether you are using existing mechanisms or new interoperable standards, the security concepts behind both are the same.</span></span> <span data-ttu-id="dc58c-107">Чтобы реализовать оптимальную модель безопасности для какого-либо приложения, необходимо понимать принципы, лежащие в основе существующих инфраструктур и новых стандартов.</span><span class="sxs-lookup"><span data-stu-id="dc58c-107">Understanding the concepts behind existing infrastructures and the newer standards is central to implementing the best security model for an application.</span></span>  
   
-## Вводные сведения о безопасности веб\-служб WCF  
- Группа «Шаблоны и примеры Microsoft» написала подробный технический документ по безопасности WCF, который можно загрузить здесь: [WCF Security Guide](http://go.microsoft.com/fwlink/?LinkId=210210).В этом документе описываются основные понятия безопасности в отношении веб\-служб, ключевые понятия безопасности WCF, сценарии приложений для интрасети, а также сценарии приложений для Интернета.  
+## <a name="introduction-to-security-for-wcf-web-services"></a><span data-ttu-id="dc58c-108">Вводные сведения о безопасности веб-служб WCF</span><span class="sxs-lookup"><span data-stu-id="dc58c-108">Introduction to Security for WCF Web Services</span></span>  
+ <span data-ttu-id="dc58c-109">Группа шаблонов и методов Майкрософт написал подробные Технический документ о руководство по безопасности WCF, который можно загрузить здесь: [руководство по безопасности WCF](http://go.microsoft.com/fwlink/?LinkId=210210).</span><span class="sxs-lookup"><span data-stu-id="dc58c-109">The Microsoft Patterns and Practices group wrote an in-depth whitepaper on WCF security guidance which is available for download here: [WCF Security Guide](http://go.microsoft.com/fwlink/?LinkId=210210).</span></span> <span data-ttu-id="dc58c-110">В этом документе описываются основные понятия безопасности в отношении веб-служб, ключевые понятия безопасности WCF, сценарии приложений для интрасети, а также сценарии приложений для Интернета.</span><span class="sxs-lookup"><span data-stu-id="dc58c-110">This whitepaper describes the fundamental security concepts as they relate to web services, key WCF security concepts, intranet application scenarios, and internet application scenarios.</span></span>  
   
-## Общеотраслевые спецификации безопасности  
+## <a name="industry-wide-security-specifications"></a><span data-ttu-id="dc58c-111">Общеотраслевые спецификации безопасности</span><span class="sxs-lookup"><span data-stu-id="dc58c-111">Industry-Wide Security Specifications</span></span>  
   
-### Инфраструктура открытых ключей  
- Инфраструктура открытых ключей \(PKI\) является системой цифровых сертификатов, центров сертификации и других центров регистрации, проверяющих и подтверждающих подлинность каждой стороны, участвующей в электронной транзакции, с использованием шифрования с открытым ключом.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Службы сертификатов Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkId=210211).  
+### <a name="public-key-infrastructure"></a><span data-ttu-id="dc58c-112">Инфраструктура открытых ключей</span><span class="sxs-lookup"><span data-stu-id="dc58c-112">Public Key Infrastructure</span></span>  
+ <span data-ttu-id="dc58c-113">Инфраструктура открытых ключей (PKI) - это система цифровых сертификатов, центров сертификации и других центров регистрации, которая позволяет проверить и подтвердить подлинность каждой стороны, участвующей в электронной транзакции, с помощью шифрования с открытым ключом.</span><span class="sxs-lookup"><span data-stu-id="dc58c-113">Public Key Infrastructure (PKI) is a system of digital certificates, certification authorities, and other registration authorities that verify and authenticate each party involved in an electronic transaction through the use of public key cryptography.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="dc58c-114">[Служб сертификатов Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkId=210211).</span><span class="sxs-lookup"><span data-stu-id="dc58c-114"> [Windows Server 2008 R2 Certificate Services](http://go.microsoft.com/fwlink/?LinkId=210211).</span></span>  
   
-### Протокол Kerberos  
- *Протокол Kerberos* представляет собой спецификацию для создания механизма безопасности, проверяющего подлинность пользователей в домене Windows.Благодаря этому пользователь может устанавливать защищенный контекст с другими сущностями в домене.В Windows 2000 и более поздних платформах по умолчанию используется протокол Kerberos.Понимание механизмов системы полезно при создании службы, взаимодействующей с клиентами интрасети.Кроме того, так как *привязка Web Services Security Kerberos* является общедоступной, можно использовать протокол Kerberos для связи с клиентами в интернете \(то есть взаимодействие обеспечивается протоколом Kerberos\).[!INCLUDE[crabout](../../../../includes/crabout-md.md)] реализации протокола Kerberos в Windows см. в разделе [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkId=210212).  
+### <a name="kerberos-protocol"></a><span data-ttu-id="dc58c-115">Протокол Kerberos</span><span class="sxs-lookup"><span data-stu-id="dc58c-115">Kerberos Protocol</span></span>  
+ <span data-ttu-id="dc58c-116">*Протокола Kerberos* представляет собой спецификацию для создания механизма безопасности, который выполняет проверку подлинности пользователей в домене Windows.</span><span class="sxs-lookup"><span data-stu-id="dc58c-116">The *Kerberos protocol* is a specification for creating a security mechanism that authenticates users on a Windows domain.</span></span> <span data-ttu-id="dc58c-117">Благодаря этому пользователь может устанавливать защищенный контекст с другими сущностями в домене.</span><span class="sxs-lookup"><span data-stu-id="dc58c-117">It allows a user to establish a secure context with other entities within a domain.</span></span> <span data-ttu-id="dc58c-118">В Windows 2000 и более поздних платформах по умолчанию используется протокол Kerberos.</span><span class="sxs-lookup"><span data-stu-id="dc58c-118">Windows 2000 and later platforms use the Kerberos protocol by default.</span></span> <span data-ttu-id="dc58c-119">Понимание механизмов системы полезно при создании службы, взаимодействующей с клиентами интрасети.</span><span class="sxs-lookup"><span data-stu-id="dc58c-119">Understanding the mechanisms of the system is useful when creating a service that will interact with intranet clients.</span></span> <span data-ttu-id="dc58c-120">Кроме того, поскольку *Привязка WS-Security Kerberos* является общедоступной, можно использовать протокол Kerberos для взаимодействия с клиентами в Интернете (то есть, протокол Kerberos, поддерживает возможность взаимодействия).</span><span class="sxs-lookup"><span data-stu-id="dc58c-120">In addition, since the *Web Services Security Kerberos Binding* is widely published, you can use the Kerberos protocol to communicate with Internet clients (that is, the Kerberos protocol is interoperable).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="dc58c-121">о реализации протокола Kerberos в Windows. в разделе [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkId=210212).</span><span class="sxs-lookup"><span data-stu-id="dc58c-121"> how the Kerberos protocol is implemented in Windows, see  [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkId=210212).</span></span>  
   
-### Сертификаты X.509  
- Сертификаты X.509 являются основной формой учетных данных, используемой в приложениях безопасности.Дополнительные сведения о сертификатах X.509 см. в разделе [Сертификаты открытого ключа X.509](http://go.microsoft.com/fwlink/?LinkId=210213).Сертификаты X.509 хранятся в хранилище сертификатов.На компьютере под управлением Windows имеется несколько типов хранилищ сертификатов, каждое из которых используется в разных целях.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] различных хранилищах см. в разделе [Хранилища сертификатов](http://go.microsoft.com/fwlink/?LinkID=87787).  
+### <a name="x509-certificates"></a><span data-ttu-id="dc58c-122">Сертификаты X.509</span><span class="sxs-lookup"><span data-stu-id="dc58c-122">X.509 Certificates</span></span>  
+ <span data-ttu-id="dc58c-123">Сертификаты X.509 являются основной формой учетных данных, используемой в приложениях безопасности.</span><span class="sxs-lookup"><span data-stu-id="dc58c-123">X.509 certificates are a primary credential form used in security applications.</span></span> <span data-ttu-id="dc58c-124">Дополнительные сведения о X.509 см. [сертификаты открытого ключа X.509](http://go.microsoft.com/fwlink/?LinkId=210213).</span><span class="sxs-lookup"><span data-stu-id="dc58c-124">For more information on X.509 certificates see [X.509 Public Key Certificates](http://go.microsoft.com/fwlink/?LinkId=210213).</span></span> <span data-ttu-id="dc58c-125">Сертификаты X.509 хранятся в хранилище сертификатов.</span><span class="sxs-lookup"><span data-stu-id="dc58c-125">X.509 certificates are stored within a certificate store.</span></span> <span data-ttu-id="dc58c-126">На компьютере под управлением Windows имеется несколько типов хранилищ сертификатов, каждое из которых используется в разных целях.</span><span class="sxs-lookup"><span data-stu-id="dc58c-126">A computer running Windows has several kinds of certificate stores, each with a different purpose.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="dc58c-127">различные хранилища, в разделе [хранилищ сертификатов](http://go.microsoft.com/fwlink/?LinkID=87787).</span><span class="sxs-lookup"><span data-stu-id="dc58c-127"> the different stores, see [Certificate Stores](http://go.microsoft.com/fwlink/?LinkID=87787).</span></span>  
   
-## Спецификации безопасности веб\-служб  
- Определяемые системой привязки поддерживают множество часто используемых спецификаций обеспечения безопасности веб\-служб.Полный список системных привязок и спецификаций веб\-служб, которые они поддерживают, приведен здесь: [Протоколы веб\-служб, поддерживаемые предоставляемыми системой привязками](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+## <a name="web-services-security-specifications"></a><span data-ttu-id="dc58c-128">Спецификации безопасности веб-служб</span><span class="sxs-lookup"><span data-stu-id="dc58c-128">Web Services Security Specifications</span></span>  
+ <span data-ttu-id="dc58c-129">Определяемые системой привязки поддерживают множество часто используемых спецификаций обеспечения безопасности веб-служб.</span><span class="sxs-lookup"><span data-stu-id="dc58c-129">The system-defined bindings support many commonly used web services security specifications.</span></span> <span data-ttu-id="dc58c-130">Полный список предоставляемых системой привязок и спецификаций веб-служб, они поддерживают см.: [протоколы веб-служб поддерживаемые привязками предоставляемые системой](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)</span><span class="sxs-lookup"><span data-stu-id="dc58c-130">For a complete list of system-provided bindings and the web services specifications they support see: [Web Services Protocols Supported by System-Provided Interoperability Bindings](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)</span></span>  
   
-## Механизмы управления доступом  
- WCF предоставляет несколько способов управления доступом к службе или операции.Среди них  
+## <a name="access-control-mechanisms"></a><span data-ttu-id="dc58c-131">Механизмы управления доступом</span><span class="sxs-lookup"><span data-stu-id="dc58c-131">Access Control Mechanisms</span></span>  
+ <span data-ttu-id="dc58c-132">WCF предоставляет несколько способов управления доступом к службе или операции.</span><span class="sxs-lookup"><span data-stu-id="dc58c-132">WCF provides a number of ways to control access to a service or operation.</span></span> <span data-ttu-id="dc58c-133">Среди них</span><span class="sxs-lookup"><span data-stu-id="dc58c-133">Among them are</span></span>  
   
-1.  <xref:System.Security.Permissions.PrinciplePermissionAttribute>  
+1.  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
   
-2.  Поставщик участия ASP.NET  
+2.  <span data-ttu-id="dc58c-134">Поставщик участия ASP.NET</span><span class="sxs-lookup"><span data-stu-id="dc58c-134">ASP.NET Membership Provider</span></span>  
   
-3.  Поставщик ролей ASP.NET  
+3.  <span data-ttu-id="dc58c-135">Поставщик ролей ASP.NET</span><span class="sxs-lookup"><span data-stu-id="dc58c-135">ASP.NET Role Provider</span></span>  
   
-4.  Диспетчер авторизации  
+4.  <span data-ttu-id="dc58c-136">Диспетчер авторизации</span><span class="sxs-lookup"><span data-stu-id="dc58c-136">Authorization Manager</span></span>  
   
-5.  Модель удостоверения  
+5.  <span data-ttu-id="dc58c-137">Модель удостоверения</span><span class="sxs-lookup"><span data-stu-id="dc58c-137">Identity Model</span></span>  
   
- Дополнительные сведения по этим темам см. в разделе [Механизмы управления доступом](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md).  
+ <span data-ttu-id="dc58c-138">Дополнительные сведения о см. следующие разделы [механизмы управления доступом](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)</span><span class="sxs-lookup"><span data-stu-id="dc58c-138">For more information on these topics see, [Access Control Mechanisms](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)</span></span>  
   
-## См. также  
- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Модель безопасности для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x419)
+## <a name="see-also"></a><span data-ttu-id="dc58c-139">См. также</span><span class="sxs-lookup"><span data-stu-id="dc58c-139">See Also</span></span>  
+ [<span data-ttu-id="dc58c-140">Общие сведения о безопасности</span><span class="sxs-lookup"><span data-stu-id="dc58c-140">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="dc58c-141">Модель безопасности для Windows Server App Fabric</span><span class="sxs-lookup"><span data-stu-id="dc58c-141">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -1,1 +1,1 @@
-Планшетный ПК
+<span data-ttu-id="7aa55-101">Планшетный ПК</span><span class="sxs-lookup"><span data-stu-id="7aa55-101">Tablet PC</span></span>

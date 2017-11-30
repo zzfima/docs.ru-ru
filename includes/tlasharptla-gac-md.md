@@ -1,1 +1,1 @@
-глобальный кэш сборок (GAC)
+<span data-ttu-id="dac4f-101">глобальный кэш сборок (GAC)</span><span class="sxs-lookup"><span data-stu-id="dac4f-101">global assembly cache (GAC)</span></span>

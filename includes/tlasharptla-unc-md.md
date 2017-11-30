@@ -1,1 +1,1 @@
-Формат UNC (Universal Naming Convention)
+<span data-ttu-id="f62f3-101">Формат UNC (Universal Naming Convention)</span><span class="sxs-lookup"><span data-stu-id="f62f3-101">Universal Naming Convention (UNC)</span></span>

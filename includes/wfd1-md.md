@@ -1,1 +1,1 @@
-Конструктор рабочих процессов Windows
+<span data-ttu-id="098f0-101">Конструктор рабочих процессов Windows</span><span class="sxs-lookup"><span data-stu-id="098f0-101">Windows Workflow Designer</span></span>

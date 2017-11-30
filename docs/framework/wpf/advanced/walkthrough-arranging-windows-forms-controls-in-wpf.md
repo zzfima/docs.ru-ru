@@ -1,295 +1,301 @@
 ---
-title: "Пошаговое руководство. Упорядочение элементов управления Windows Forms в приложении WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "упорядочивание элементов управления"
-  - "гибридные приложения [взаимодействие с WPF]"
+title: "Пошаговое руководство. Упорядочение элементов управления Windows Forms в приложении WPF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- hybrid applications [WPF interoperability]
+- arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-caps.latest.revision: 31
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 28
+caps.latest.revision: "31"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f78da83657c4c1bd913f67c9e612264cc5dbdf99
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пошаговое руководство. Упорядочение элементов управления Windows Forms в приложении WPF
-В этом пошаговом руководстве демонстрируется использование возможностей макета [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для упорядочения элементов управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] в гибридных приложениях.  
+# <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a><span data-ttu-id="400b1-102">Пошаговое руководство. Упорядочение элементов управления Windows Forms в приложении WPF</span><span class="sxs-lookup"><span data-stu-id="400b1-102">Walkthrough: Arranging Windows Forms Controls in WPF</span></span>
+<span data-ttu-id="400b1-103">В этом пошаговом руководстве показано, как использовать [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] возможностей компоновки для размещения [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементов управления в гибридных приложениях.</span><span class="sxs-lookup"><span data-stu-id="400b1-103">This walkthrough shows you how to use [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] layout features to arrange [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls in a hybrid application.</span></span>  
   
- В этом пошаговом руководстве демонстрируется выполнение следующих задач.  
+ <span data-ttu-id="400b1-104">В данном пошаговом руководстве представлены следующие задачи.</span><span class="sxs-lookup"><span data-stu-id="400b1-104">Tasks illustrated in this walkthrough include:</span></span>  
   
--   Создание проекта.  
+-   <span data-ttu-id="400b1-105">Создание проекта.</span><span class="sxs-lookup"><span data-stu-id="400b1-105">Creating the project.</span></span>  
   
--   Использование параметров макета по умолчанию.  
+-   <span data-ttu-id="400b1-106">Использование параметров макета по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="400b1-106">Using default layout settings.</span></span>  
   
--   Изменение размеров в зависимости от содержимого.  
+-   <span data-ttu-id="400b1-107">Изменение размеров в зависимости от содержимого.</span><span class="sxs-lookup"><span data-stu-id="400b1-107">Sizing to content.</span></span>  
   
--   Использование абсолютного позиционирования.  
+-   <span data-ttu-id="400b1-108">Использование абсолютного позиционирования.</span><span class="sxs-lookup"><span data-stu-id="400b1-108">Using absolute positioning.</span></span>  
   
--   Задание размера явным образом.  
+-   <span data-ttu-id="400b1-109">Задание размера явным образом.</span><span class="sxs-lookup"><span data-stu-id="400b1-109">Specifying size explicitly.</span></span>  
   
--   Установка свойств макета.  
+-   <span data-ttu-id="400b1-110">Установка свойств макета.</span><span class="sxs-lookup"><span data-stu-id="400b1-110">Setting layout properties.</span></span>  
   
--   Описание ограничений z\-порядка.  
+-   <span data-ttu-id="400b1-111">Описание ограничений z-порядка.</span><span class="sxs-lookup"><span data-stu-id="400b1-111">Understanding z-order limitations.</span></span>  
   
--   Закрепление.  
+-   <span data-ttu-id="400b1-112">Закрепление.</span><span class="sxs-lookup"><span data-stu-id="400b1-112">Docking.</span></span>  
   
--   Задание видимости.  
+-   <span data-ttu-id="400b1-113">Задание видимости.</span><span class="sxs-lookup"><span data-stu-id="400b1-113">Setting visibility.</span></span>  
   
--   Размещение нерастягиваемых элементов управления.  
+-   <span data-ttu-id="400b1-114">Размещение нерастягиваемых элементов управления.</span><span class="sxs-lookup"><span data-stu-id="400b1-114">Hosting a control that does not stretch.</span></span>  
   
--   Масштабирование.  
+-   <span data-ttu-id="400b1-115">Масштабирование.</span><span class="sxs-lookup"><span data-stu-id="400b1-115">Scaling.</span></span>  
   
--   Поворот.  
+-   <span data-ttu-id="400b1-116">Поворот.</span><span class="sxs-lookup"><span data-stu-id="400b1-116">Rotating.</span></span>  
   
--   Задание полей и внутренних полей.  
+-   <span data-ttu-id="400b1-117">Задание полей и внутренних полей.</span><span class="sxs-lookup"><span data-stu-id="400b1-117">Setting padding and margins.</span></span>  
   
--   Использование динамических контейнеров макета.  
+-   <span data-ttu-id="400b1-118">Использование динамических контейнеров макета.</span><span class="sxs-lookup"><span data-stu-id="400b1-118">Using dynamic layout containers.</span></span>  
   
- Полный код для задач, приведенных в этом руководстве, см. на веб\-странице [Arranging Windows Forms Controls in WPF Sample](http://go.microsoft.com/fwlink/?LinkID=159971).  
+ <span data-ttu-id="400b1-119">Полный пример кода для задач, приведенных в этом пошаговом руководстве, см. [упорядочение элементов управления Windows Forms в образце WPF](http://go.microsoft.com/fwlink/?LinkID=159971).</span><span class="sxs-lookup"><span data-stu-id="400b1-119">For a complete code listing of the tasks illustrated in this walkthrough, see [Arranging Windows Forms Controls in WPF Sample](http://go.microsoft.com/fwlink/?LinkID=159971).</span></span>  
   
- По окончании знакомства с разделом пользователь будет иметь представление о возможностях макета [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] в приложениях, основанных на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ <span data-ttu-id="400b1-120">По завершении вы получите представление о [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] возможности разметки в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-приложений на основе.</span><span class="sxs-lookup"><span data-stu-id="400b1-120">When you are finished, you will have an understanding of [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] layout features in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-based applications.</span></span>  
   
-## Обязательные компоненты  
- Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.  
+## <a name="prerequisites"></a><span data-ttu-id="400b1-121">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="400b1-121">Prerequisites</span></span>  
+ <span data-ttu-id="400b1-122">Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.</span><span class="sxs-lookup"><span data-stu-id="400b1-122">You need the following components to complete this walkthrough:</span></span>  
   
--   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
+-   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)]<span data-ttu-id="400b1-123">.</span><span class="sxs-lookup"><span data-stu-id="400b1-123">.</span></span>  
   
-## Создание проекта  
+## <a name="creating-the-project"></a><span data-ttu-id="400b1-124">Создание проекта</span><span class="sxs-lookup"><span data-stu-id="400b1-124">Creating the Project</span></span>  
   
-#### Чтобы создать и настроить проект  
+#### <a name="to-create-and-set-up-the-project"></a><span data-ttu-id="400b1-125">Создание и настройка проекта</span><span class="sxs-lookup"><span data-stu-id="400b1-125">To create and set up the project</span></span>  
   
-1.  Создайте проект приложения WPF с именем `WpfLayoutHostingWf`.  
+1.  <span data-ttu-id="400b1-126">Создание проекта приложения WPF с именем `WpfLayoutHostingWf`.</span><span class="sxs-lookup"><span data-stu-id="400b1-126">Create a WPF Application project named `WpfLayoutHostingWf`.</span></span>  
   
-2.  В обозревателе решений добавьте ссылки на следующие сборки.  
+2.  <span data-ttu-id="400b1-127">В обозревателе решений добавьте ссылки на следующие сборки.</span><span class="sxs-lookup"><span data-stu-id="400b1-127">In Solution Explorer, add references to the following assemblies.</span></span>  
   
-    -   WindowsFormsIntegration  
+    -   <span data-ttu-id="400b1-128">WindowsFormsIntegration</span><span class="sxs-lookup"><span data-stu-id="400b1-128">WindowsFormsIntegration</span></span>  
   
-    -   System.Windows.Forms  
+    -   <span data-ttu-id="400b1-129">System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="400b1-129">System.Windows.Forms</span></span>  
   
-    -   System.Drawing  
+    -   <span data-ttu-id="400b1-130">System.Drawing;</span><span class="sxs-lookup"><span data-stu-id="400b1-130">System.Drawing</span></span>  
   
-3.  Дважды щелкните файл MainWindow.xaml, чтобы открыть его в представлении XAML.  
+3.  <span data-ttu-id="400b1-131">Дважды щелкните файл MainWindow.xaml, чтобы открыть его в представлении XAML.</span><span class="sxs-lookup"><span data-stu-id="400b1-131">Double-click MainWindow.xaml to open it in XAML view.</span></span>  
   
-4.  В элементе <xref:System.Windows.Window> добавьте следующее сопоставление пространства имен [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
+4.  <span data-ttu-id="400b1-132">В <xref:System.Windows.Window> элемента, добавьте следующий [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] сопоставление пространства имен.</span><span class="sxs-lookup"><span data-stu-id="400b1-132">In the <xref:System.Windows.Window> element, add the following [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] namespace mapping.</span></span>  
   
     ```xaml  
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
     ```  
   
-5.  В элементе <xref:System.Windows.Controls.Grid> задайте для свойства <xref:System.Windows.Controls.Grid.ShowGridLines%2A> значение `true` и определите пять строк и три столбца.  
+5.  <span data-ttu-id="400b1-133">В <xref:System.Windows.Controls.Grid> элемент набора <xref:System.Windows.Controls.Grid.ShowGridLines%2A> свойства `true` и определите пять строк и три столбца.</span><span class="sxs-lookup"><span data-stu-id="400b1-133">In the <xref:System.Windows.Controls.Grid> element set the <xref:System.Windows.Controls.Grid.ShowGridLines%2A> property to `true` and define five rows and three columns.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#2)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#2)]  
   
-## Использование параметров макета по умолчанию  
- По умолчанию элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> обрабатывает макет для размещаемого элемента управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
+## <a name="using-default-layout-settings"></a><span data-ttu-id="400b1-134">Использование параметров макета по умолчанию</span><span class="sxs-lookup"><span data-stu-id="400b1-134">Using Default Layout Settings</span></span>  
+ <span data-ttu-id="400b1-135">По умолчанию <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент обрабатывает макет для размещаемого [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элемента управления.</span><span class="sxs-lookup"><span data-stu-id="400b1-135">By default, the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element handles the layout for the hosted [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control.</span></span>  
   
-#### Для использования параметров макета по умолчанию  
+#### <a name="to-use-default-layout-settings"></a><span data-ttu-id="400b1-136">Использование параметров макета по умолчанию</span><span class="sxs-lookup"><span data-stu-id="400b1-136">To use default layout settings</span></span>  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  <span data-ttu-id="400b1-137">Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.</span><span class="sxs-lookup"><span data-stu-id="400b1-137">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Элемент управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=fullName> находится внутри элемента управления <xref:System.Windows.Controls.Canvas>.  Размер размещаемого элемента управления основан на его содержимом, а размеры элемента управления <xref:System.Windows.Forms.Integration.WindowsFormsHost> изменяются, чтобы вместить размещаемый элемент управления.  
+2.  <span data-ttu-id="400b1-138">Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="400b1-138">Press F5 to build and run the application.</span></span> <span data-ttu-id="400b1-139">[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=nameWithType> Элемент управления отображается в <xref:System.Windows.Controls.Canvas>.</span><span class="sxs-lookup"><span data-stu-id="400b1-139">The [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Button?displayProperty=nameWithType> control appears in the <xref:System.Windows.Controls.Canvas>.</span></span> <span data-ttu-id="400b1-140">Размещенного элемента управления изменяется в зависимости от содержимого и <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемента изменяются, чтобы вместить размещенного элемента управления.</span><span class="sxs-lookup"><span data-stu-id="400b1-140">The hosted control is sized based on its content, and the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element is sized to accommodate the hosted control.</span></span>  
   
-## Изменение размеров в зависимости от содержимого  
- Элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> обеспечивает то, что размер размещаемого элемента управления изменяется для правильного отображения его содержимого.  
+## <a name="sizing-to-content"></a><span data-ttu-id="400b1-141">Изменение размеров в зависимости от содержимого</span><span class="sxs-lookup"><span data-stu-id="400b1-141">Sizing to Content</span></span>  
+ <span data-ttu-id="400b1-142"><xref:System.Windows.Forms.Integration.WindowsFormsHost> Элемент гарантирует, что размещенного элемента управления имеет размер для правильного отображения ее содержимого.</span><span class="sxs-lookup"><span data-stu-id="400b1-142">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> element ensures that the hosted control is sized to display its content properly.</span></span>  
   
-#### Для изменения размера в зависимости от содержимого  
+#### <a name="to-size-to-content"></a><span data-ttu-id="400b1-143">Изменение размеров в соответствии с содержимым</span><span class="sxs-lookup"><span data-stu-id="400b1-143">To size to content</span></span>  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  <span data-ttu-id="400b1-144">Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.</span><span class="sxs-lookup"><span data-stu-id="400b1-144">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#4)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#4)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Размер двух новых кнопок корректно изменяется для отображения длинных строк текста и большого шрифта, а размер элементов <xref:System.Windows.Forms.Integration.WindowsFormsHost> изменяется, чтобы вместить размещаемые элементы управления.  
+2.  <span data-ttu-id="400b1-145">Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="400b1-145">Press F5 to build and run the application.</span></span> <span data-ttu-id="400b1-146">Два новых элемента управления button изменяется для отображения длинных строк текста и размера шрифта правильно и <xref:System.Windows.Forms.Integration.WindowsFormsHost> элементов изменяется, чтобы вместить размещаемые элементы управления.</span><span class="sxs-lookup"><span data-stu-id="400b1-146">The two new button controls are sized to display the longer text string and larger font size properly, and the <xref:System.Windows.Forms.Integration.WindowsFormsHost> elements are resized to accommodate the hosted controls.</span></span>  
   
-## Использование абсолютного позиционирования  
- Абсолютное позиционирование можно использовать для размещения элемента <xref:System.Windows.Forms.Integration.WindowsFormsHost> в любом месте в пользовательском интерфейсе.  
+## <a name="using-absolute-positioning"></a><span data-ttu-id="400b1-147">Использование абсолютного позиционирования</span><span class="sxs-lookup"><span data-stu-id="400b1-147">Using Absolute Positioning</span></span>  
+ <span data-ttu-id="400b1-148">Абсолютное позиционирование используется для размещения <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент в любом месте в пользовательском интерфейсе (UI).</span><span class="sxs-lookup"><span data-stu-id="400b1-148">You can use absolute positioning to place the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element anywhere in the user interface (UI).</span></span>  
   
-#### Чтобы использовать абсолютное позиционирование  
+#### <a name="to-use-absolute-positioning"></a><span data-ttu-id="400b1-149">Использование абсолютного позиционирования</span><span class="sxs-lookup"><span data-stu-id="400b1-149">To use absolute positioning</span></span>  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  <span data-ttu-id="400b1-150">Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.</span><span class="sxs-lookup"><span data-stu-id="400b1-150">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#5)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#5)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> размещается в 20 пикселях от верхнего края ячейки сетки и в 20 пикселях от левого края.  
+2.  <span data-ttu-id="400b1-151">Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="400b1-151">Press F5 to build and run the application.</span></span> <span data-ttu-id="400b1-152"><xref:System.Windows.Forms.Integration.WindowsFormsHost> Элемент помещается 20 пикселей от верхнего края ячейки сетки и 20 пикселей от левого края.</span><span class="sxs-lookup"><span data-stu-id="400b1-152">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> element is placed 20 pixels from the top side of the grid cell and 20 pixels from the left.</span></span>  
   
-## Задание размера явным образом  
- Можно указать размер элемента <xref:System.Windows.Forms.Integration.WindowsFormsHost> с помощью <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A>.  
+## <a name="specifying-size-explicitly"></a><span data-ttu-id="400b1-153">Задание размера явным образом</span><span class="sxs-lookup"><span data-stu-id="400b1-153">Specifying Size Explicitly</span></span>  
+ <span data-ttu-id="400b1-154">Можно указать размер <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемента с помощью <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> свойства.</span><span class="sxs-lookup"><span data-stu-id="400b1-154">You can specify the size of the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element using the <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> properties.</span></span>  
   
-#### Чтобы явно указать размер  
+#### <a name="to-specify-size-explicitly"></a><span data-ttu-id="400b1-155">Задание размера явным образом</span><span class="sxs-lookup"><span data-stu-id="400b1-155">To specify size explicitly</span></span>  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  <span data-ttu-id="400b1-156">Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.</span><span class="sxs-lookup"><span data-stu-id="400b1-156">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Размер элемента <xref:System.Windows.Forms.Integration.WindowsFormsHost> устанавливается в 50 пикселей в ширину и в 70 пикселей в высоту — это меньше, чем параметры макета по умолчанию.  Содержимое элемента управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] упорядочивается соответствующим образом.  
+2.  <span data-ttu-id="400b1-157">Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="400b1-157">Press F5 to build and run the application.</span></span> <span data-ttu-id="400b1-158"><xref:System.Windows.Forms.Integration.WindowsFormsHost> Элемент имеет значение 50 пикселей в ширину 70 пикселей в высоту, размер которой меньше, чем параметры макета по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="400b1-158">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> element is set to a size of 50 pixels wide by 70 pixels high, which is smaller than the default layout settings.</span></span> <span data-ttu-id="400b1-159">Содержимое [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] управления упорядочивается соответствующим образом.</span><span class="sxs-lookup"><span data-stu-id="400b1-159">The content of the [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control is rearranged accordingly.</span></span>  
   
-## Установка свойств макета  
- Всегда следует задавать связанные с макетом свойства для размещаемого элемента управления с помощью свойств элемента <xref:System.Windows.Forms.Integration.WindowsFormsHost>.  При установке свойств макета непосредственно для размещаемого элемента управления результат не будет соответствовать ожидаемому.  
+## <a name="setting-layout-properties"></a><span data-ttu-id="400b1-160">Установка свойств макета</span><span class="sxs-lookup"><span data-stu-id="400b1-160">Setting Layout Properties</span></span>  
+ <span data-ttu-id="400b1-161">Всегда задавать свойства, связанные с макетом размещенного элемента управления, с помощью свойств <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемента.</span><span class="sxs-lookup"><span data-stu-id="400b1-161">Always set layout-related properties on the hosted control by using the properties of the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element.</span></span> <span data-ttu-id="400b1-162">При установке свойств макета непосредственно для размещаемого элемента управления результат не будет соответствовать ожидаемому.</span><span class="sxs-lookup"><span data-stu-id="400b1-162">Setting layout properties directly on the hosted control will yield unintended results.</span></span>  
   
- Установка связанных с макетом свойств размещаемого элемента управления в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] не оказывает никакого действия.  
+ <span data-ttu-id="400b1-163">Установка свойства, связанные с макетом размещенного элемента управления в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] не делает ничего.</span><span class="sxs-lookup"><span data-stu-id="400b1-163">Setting layout-related properties on the hosted control in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] has no effect.</span></span>  
   
-#### Чтобы увидеть влияние задания свойств размещаемого элемента управления  
+#### <a name="to-see-the-effects-of-setting-properties-on-the-hosted-control"></a><span data-ttu-id="400b1-164">Чтобы увидеть влияние задания свойств размещаемого элемента управления</span><span class="sxs-lookup"><span data-stu-id="400b1-164">To see the effects of setting properties on the hosted control</span></span>  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  <span data-ttu-id="400b1-165">Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.</span><span class="sxs-lookup"><span data-stu-id="400b1-165">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#7)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#7)]  
   
-2.  В обозревателе решений дважды щелкните файл MainWindow.xaml.  vb или MainWindow.xaml.cs, чтобы открыть его в редакторе кода.  
+2.  <span data-ttu-id="400b1-166">В обозревателе решений дважды щелкните файл MainWindow.xaml. vb</span><span class="sxs-lookup"><span data-stu-id="400b1-166">In Solution Explorer, double-click MainWindow.xaml.</span></span> <span data-ttu-id="400b1-167">или MainWindow.xaml.cs, чтобы открыть его в редакторе кода.</span><span class="sxs-lookup"><span data-stu-id="400b1-167">vb or MainWindow.xaml.cs to open it in the Code Editor.</span></span>  
   
-3.  Скопируйте следующий код в определение класса `MainWindow`.  
+3.  <span data-ttu-id="400b1-168">Скопируйте следующий код в `MainWindow` определения класса.</span><span class="sxs-lookup"><span data-stu-id="400b1-168">Copy the following code into the `MainWindow` class definition.</span></span>  
   
      [!code-csharp[WpfLayoutHostingWfWithXaml#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#101)]
      [!code-vb[WpfLayoutHostingWfWithXaml#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#101)]  
   
-4.  Нажмите клавишу F5 для построения и выполнения приложения.  
+4.  <span data-ttu-id="400b1-169">Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="400b1-169">Press F5 to build and run the application.</span></span>  
   
-5.  Нажмите кнопку **Click Me**.  Обработчик событий `button1_Click` задает свойства <xref:System.Windows.Forms.Control.Top%2A> и <xref:System.Windows.Forms.Control.Left%2A> размещаемого элемента управления.  Это приводит к изменению положения размещаемого элемента управления в элементе <xref:System.Windows.Forms.Integration.WindowsFormsHost>.  Ведущий элемент занимает то же пространство на экране, но размещаемый элемент управления обрезается.  Вместо этого размещаемый элемент управления должен всегда заполнять элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost>.  
+5.  <span data-ttu-id="400b1-170">Нажмите кнопку **Click me** кнопки.</span><span class="sxs-lookup"><span data-stu-id="400b1-170">Click the **Click me** button.</span></span> <span data-ttu-id="400b1-171">`button1_Click` Задает обработчик событий <xref:System.Windows.Forms.Control.Top%2A> и <xref:System.Windows.Forms.Control.Left%2A> свойства размещенным элементом управления.</span><span class="sxs-lookup"><span data-stu-id="400b1-171">The `button1_Click` event handler sets the <xref:System.Windows.Forms.Control.Top%2A> and <xref:System.Windows.Forms.Control.Left%2A> properties on the hosted control.</span></span> <span data-ttu-id="400b1-172">В результате размещенного элемента управления изменять внутри <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемента.</span><span class="sxs-lookup"><span data-stu-id="400b1-172">This causes the hosted control to be repositioned within the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element.</span></span> <span data-ttu-id="400b1-173">Ведущий элемент занимает то же пространство на экране, но размещаемый элемент управления обрезается.</span><span class="sxs-lookup"><span data-stu-id="400b1-173">The host maintains the same screen area, but the hosted control is clipped.</span></span> <span data-ttu-id="400b1-174">Вместо этого размещаемый элемент управления должен всегда заполнять <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемента.</span><span class="sxs-lookup"><span data-stu-id="400b1-174">Instead, the hosted control should always fill the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element.</span></span>  
   
-## Описание ограничений z\-порядка  
- По умолчанию visible <xref:System.Windows.Forms.Integration.WindowsFormsHost> элементы всегда рисуется поверх другого  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементы, и они не затрагиваются z\-порядка.  Чтобы включить Z\-приказывать, установите <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> свойство   <xref:System.Windows.Forms.Integration.WindowsFormsHost> true и  <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> свойство  <xref:System.Windows.Interop.CompositionMode.Full> OR  <xref:System.Windows.Interop.CompositionMode.OutputOnly>.  
+## <a name="understanding-z-order-limitations"></a><span data-ttu-id="400b1-175">Описание ограничений z-порядка</span><span class="sxs-lookup"><span data-stu-id="400b1-175">Understanding Z-Order Limitations</span></span>  
+ <span data-ttu-id="400b1-176">По умолчанию отображается <xref:System.Windows.Forms.Integration.WindowsFormsHost> элементы всегда рисуются поверх других [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементы и они не подвержены влиянию z порядка.</span><span class="sxs-lookup"><span data-stu-id="400b1-176">By default, visible <xref:System.Windows.Forms.Integration.WindowsFormsHost> elements are always drawn on top of other [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elements, and they are unaffected by z-order.</span></span> <span data-ttu-id="400b1-177">Чтобы включить z порядка, задайте <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> свойство <xref:System.Windows.Forms.Integration.WindowsFormsHost> значение true и <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> свойства <xref:System.Windows.Interop.CompositionMode.Full> или <xref:System.Windows.Interop.CompositionMode.OutputOnly>.</span><span class="sxs-lookup"><span data-stu-id="400b1-177">To enable z-ordering, set the <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> property of the <xref:System.Windows.Forms.Integration.WindowsFormsHost> to true and the <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> property to <xref:System.Windows.Interop.CompositionMode.Full> or <xref:System.Windows.Interop.CompositionMode.OutputOnly>.</span></span>  
   
-#### Доступны по умолчанию расширения функциональности z\-порядок  
+#### <a name="to-see-the-default-z-order-behavior"></a><span data-ttu-id="400b1-178">Просмотр ограничений z-порядка</span><span class="sxs-lookup"><span data-stu-id="400b1-178">To see the default z-order behavior</span></span>  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  <span data-ttu-id="400b1-179">Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.</span><span class="sxs-lookup"><span data-stu-id="400b1-179">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> рисуется через элемент метки.  
+2.  <span data-ttu-id="400b1-180">Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="400b1-180">Press F5 to build and run the application.</span></span> <span data-ttu-id="400b1-181"><xref:System.Windows.Forms.Integration.WindowsFormsHost> Элемент рисуется через элемент label.</span><span class="sxs-lookup"><span data-stu-id="400b1-181">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> element is painted over the label element.</span></span>  
   
-#### Увидеть расширение функциональности z\-порядка, когда IsRedirected true  
+#### <a name="to-see-the-z-order-behavior-when-isredirected-is-true"></a><span data-ttu-id="400b1-182">Чтобы увидеть поведение z порядка, когда свойству IsRedirected присвоено значение "true"</span><span class="sxs-lookup"><span data-stu-id="400b1-182">To see the z-order behavior when IsRedirected is true</span></span>  
   
-1.  Заменить предыдущий пример z\-порядок следующим кодом XAML.  
+1.  <span data-ttu-id="400b1-183">Замените следующий код XAML в предыдущем примере z порядка.</span><span class="sxs-lookup"><span data-stu-id="400b1-183">Replace the previous z-order example with the following XAML.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#8b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#8b)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#8b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#8b)]  
   
-     Нажмите клавишу F5 для построения и выполнения приложения.  Элемент метки окрашен над <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент.  
+     <span data-ttu-id="400b1-184">Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="400b1-184">Press F5 to build and run the application.</span></span> <span data-ttu-id="400b1-185">Элемент label рисуется через <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемента.</span><span class="sxs-lookup"><span data-stu-id="400b1-185">The label element is painted over the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element.</span></span>  
   
-## Закрепление  
- Элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> поддерживает закрепление [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Задайте вложенное свойство <xref:System.Windows.Controls.DockPanel.Dock%2A>, чтобы закрепить размещаемый элемент управления в элементе <xref:System.Windows.Controls.DockPanel>.  
+## <a name="docking"></a><span data-ttu-id="400b1-186">Закрепление</span><span class="sxs-lookup"><span data-stu-id="400b1-186">Docking</span></span>  
+ <span data-ttu-id="400b1-187"><xref:System.Windows.Forms.Integration.WindowsFormsHost>поддерживает элемент [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] закрепления.</span><span class="sxs-lookup"><span data-stu-id="400b1-187"><xref:System.Windows.Forms.Integration.WindowsFormsHost> element supports [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] docking.</span></span> <span data-ttu-id="400b1-188">Задать <xref:System.Windows.Controls.DockPanel.Dock%2A> вложенное свойство, чтобы закрепить размещенного элемента управления в <xref:System.Windows.Controls.DockPanel> элемент.</span><span class="sxs-lookup"><span data-stu-id="400b1-188">Set the <xref:System.Windows.Controls.DockPanel.Dock%2A> attached property to dock the hosted control in a <xref:System.Windows.Controls.DockPanel> element.</span></span>  
   
-#### Чтобы закрепить размещаемый элемент управления  
+#### <a name="to-dock-a-hosted-control"></a><span data-ttu-id="400b1-189">Закрепление размещаемого элемента управления</span><span class="sxs-lookup"><span data-stu-id="400b1-189">To dock a hosted control</span></span>  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  <span data-ttu-id="400b1-190">Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.</span><span class="sxs-lookup"><span data-stu-id="400b1-190">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#9)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#9)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> закрепляется по правой стороне элемента <xref:System.Windows.Controls.DockPanel>.  
+2.  <span data-ttu-id="400b1-191">Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="400b1-191">Press F5 to build and run the application.</span></span> <span data-ttu-id="400b1-192"><xref:System.Windows.Forms.Integration.WindowsFormsHost> Элемент закреплен в правую часть <xref:System.Windows.Controls.DockPanel> элемента.</span><span class="sxs-lookup"><span data-stu-id="400b1-192">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> element is docked to the right side of the <xref:System.Windows.Controls.DockPanel> element.</span></span>  
   
-## Задание видимости  
- Элемент управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] можно сделать невидимым или свернуть его, задав свойству <xref:System.Windows.UIElement.Visibility%2A> элемента <xref:System.Windows.Forms.Integration.WindowsFormsHost>.  Если элемент управления невидим, он не отображается, но при этом занимает пространство разметки.  Если элемент управления свернут, он не отображается и не занимает пространство разметки.  
+## <a name="setting-visibility"></a><span data-ttu-id="400b1-193">Задание видимости</span><span class="sxs-lookup"><span data-stu-id="400b1-193">Setting Visibility</span></span>  
+ <span data-ttu-id="400b1-194">Можно сделать ваш [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] управления невидимым или свернуть его, задав <xref:System.Windows.UIElement.Visibility%2A> свойства <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемента.</span><span class="sxs-lookup"><span data-stu-id="400b1-194">You can make your [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control invisible or collapse it by setting the <xref:System.Windows.UIElement.Visibility%2A> property on the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element.</span></span> <span data-ttu-id="400b1-195">Если элемент управления невидим, он не отображается, но при этом занимает пространство разметки.</span><span class="sxs-lookup"><span data-stu-id="400b1-195">When a control is invisible, it is not displayed, but it occupies layout space.</span></span> <span data-ttu-id="400b1-196">Если элемент управления свернут, он не отображается и не занимает пространство разметки.</span><span class="sxs-lookup"><span data-stu-id="400b1-196">When a control is collapsed, it is not displayed, nor does it occupy layout space.</span></span>  
   
-#### Чтобы задать видимость размещаемого элемента управления  
+#### <a name="to-set-the-visibility-of-a-hosted-control"></a><span data-ttu-id="400b1-197">Задание видимости размещаемого элемента управления</span><span class="sxs-lookup"><span data-stu-id="400b1-197">To set the visibility of a hosted control</span></span>  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  <span data-ttu-id="400b1-198">Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.</span><span class="sxs-lookup"><span data-stu-id="400b1-198">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#10)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#10)]  
   
-2.  В файле MainWindow.xaml.vb или MainWindow.xaml.cs скопируйте следующий код в определение класса.  
+2.  <span data-ttu-id="400b1-199">В файле MainWindow.xaml.vb или MainWindow.xaml.cs скопируйте следующий код в определение класса.</span><span class="sxs-lookup"><span data-stu-id="400b1-199">In MainWindow.xaml.vb or MainWindow.xaml.cs, copy the following code into the class definition.</span></span>  
   
      [!code-csharp[WpfLayoutHostingWfWithXaml#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#102)]
      [!code-vb[WpfLayoutHostingWfWithXaml#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#102)]  
   
-3.  Нажмите клавишу F5 для построения и выполнения приложения.  
+3.  <span data-ttu-id="400b1-200">Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="400b1-200">Press F5 to build and run the application.</span></span>  
   
-4.  Нажмите на кнопку **Click to make invisible** чтобы сделать элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> невидимым.  
+4.  <span data-ttu-id="400b1-201">Нажмите кнопку **щелкните, чтобы сделать невидимыми** кнопку, чтобы <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент невидимым.</span><span class="sxs-lookup"><span data-stu-id="400b1-201">Click the **Click to make invisible** button to make the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element invisible.</span></span>  
   
-5.  Нажмите на кнопку **Click to collapse** кнопку, чтобы полностью скрыть элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> в макете.  Когда элемент управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] свернут, соседние элементы переупорядочиваются, чтобы занять его место.  
+5.  <span data-ttu-id="400b1-202">Нажмите кнопку **щелкните, чтобы свернуть** кнопку, чтобы скрыть <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент из макета полностью.</span><span class="sxs-lookup"><span data-stu-id="400b1-202">Click the **Click to collapse** button to hide the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element from the layout entirely.</span></span> <span data-ttu-id="400b1-203">Когда [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] управления свернут, соседние элементы переупорядочиваются, чтобы занять его место.</span><span class="sxs-lookup"><span data-stu-id="400b1-203">When the [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control is collapsed, the surrounding elements are rearranged to occupy its space.</span></span>  
   
-## Размещение нерастягиваемых элементов управления  
- Некоторые элементы управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] имеют фиксированный размер и не растягиваются для заполнения доступного места в макете.  Например, элемент управления <xref:System.Windows.Forms.MonthCalendar> отображает месяц в фиксированном пространстве.  
+## <a name="hosting-a-control-that-does-not-stretch"></a><span data-ttu-id="400b1-204">Размещение нерастягиваемых элементов управления</span><span class="sxs-lookup"><span data-stu-id="400b1-204">Hosting a Control That Does Not Stretch</span></span>  
+ <span data-ttu-id="400b1-205">Некоторые [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы управления имеют фиксированный размер и не растягиваются для заполнения доступного места в макете.</span><span class="sxs-lookup"><span data-stu-id="400b1-205">Some [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls have a fixed size and do not stretch to fill available space in the layout.</span></span> <span data-ttu-id="400b1-206">Например <xref:System.Windows.Forms.MonthCalendar> элемент управления отображает месяц в фиксированное пространство.</span><span class="sxs-lookup"><span data-stu-id="400b1-206">For example, the <xref:System.Windows.Forms.MonthCalendar> control displays a month in a fixed space.</span></span>  
   
-#### Чтобы разместить нерастягиваемый элемент управления  
+#### <a name="to-host-a-control-that-does-not-stretch"></a><span data-ttu-id="400b1-207">Размещение нерастягиваемого элемента управления</span><span class="sxs-lookup"><span data-stu-id="400b1-207">To host a control that does not stretch</span></span>  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  <span data-ttu-id="400b1-208">Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.</span><span class="sxs-lookup"><span data-stu-id="400b1-208">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#11)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#11)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> выравнивается по центру в строке сетки, но он не растягивается, чтобы заполнить доступное пространство.  Если окно достаточно большое, можно увидеть два или более месяцев, отображаемых размещаемым элементом управления <xref:System.Windows.Forms.MonthCalendar>, но они выравниваются по центру строки.  Обработчик макета [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] выравнивает по центру элементы, размеры которых не меняются для заполнения доступного пространства.  
+2.  <span data-ttu-id="400b1-209">Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="400b1-209">Press F5 to build and run the application.</span></span> <span data-ttu-id="400b1-210"><xref:System.Windows.Forms.Integration.WindowsFormsHost> Элемента выравнивается по центру в строке сетки, но она не растягивается для заполнения всего доступного пространства.</span><span class="sxs-lookup"><span data-stu-id="400b1-210">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> element is centered in the grid row, but it is not stretched to fill the available space.</span></span> <span data-ttu-id="400b1-211">Если окно является достаточно большим, можно увидеть два или более месяцев, отображаемых размещаемым <xref:System.Windows.Forms.MonthCalendar> элемента управления, но они выравниваются по центру в строке.</span><span class="sxs-lookup"><span data-stu-id="400b1-211">If the window is large enough, you may see two or more months displayed by the hosted <xref:System.Windows.Forms.MonthCalendar> control, but these are centered in the row.</span></span> <span data-ttu-id="400b1-212">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Обработчик макетов Центрирование элементов, которые не меняются для заполнения всего доступного пространства.</span><span class="sxs-lookup"><span data-stu-id="400b1-212">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] layout engine centers elements that cannot be sized to fill the available space.</span></span>  
   
-## Масштабирование  
- В отличие от элементов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], большинство элементов управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] не являются непрерывно масштабируемыми.  По умолчанию <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент масштабирует размещаемый элемент управления его, если это возможно.  Чтобы включить полноценное масштабирование, установите <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> свойство   <xref:System.Windows.Forms.Integration.WindowsFormsHost> true и  <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> свойство  <xref:System.Windows.Interop.CompositionMode.Full> OR  <xref:System.Windows.Interop.CompositionMode.OutputOnly>.  
+## <a name="scaling"></a><span data-ttu-id="400b1-213">Масштабирование</span><span class="sxs-lookup"><span data-stu-id="400b1-213">Scaling</span></span>  
+ <span data-ttu-id="400b1-214">В отличие от [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементов, большинство [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы управления не являются непрерывно масштабируемыми.</span><span class="sxs-lookup"><span data-stu-id="400b1-214">Unlike [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elements, most [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls are not continuously scalable.</span></span> <span data-ttu-id="400b1-215">По умолчанию <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент масштабирует ее размещенного элемента управления, когда это возможно.</span><span class="sxs-lookup"><span data-stu-id="400b1-215">By default, the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element scales its hosted control when possible.</span></span>  <span data-ttu-id="400b1-216">Чтобы включить полноценные масштабирование, задайте <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> свойство <xref:System.Windows.Forms.Integration.WindowsFormsHost> значение true и <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> свойства <xref:System.Windows.Interop.CompositionMode.Full> или <xref:System.Windows.Interop.CompositionMode.OutputOnly>.</span><span class="sxs-lookup"><span data-stu-id="400b1-216">To enable full-fledged scaling, set the <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> property of the <xref:System.Windows.Forms.Integration.WindowsFormsHost> to true and the <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> property to <xref:System.Windows.Interop.CompositionMode.Full> or <xref:System.Windows.Interop.CompositionMode.OutputOnly>.</span></span>  
   
-#### Масштабирование размещаемый элемент управления по умолчанию с помощью расширения функциональности  
+#### <a name="to-scale-a-hosted-control-by-using-the-default-behavior"></a><span data-ttu-id="400b1-217">Масштабирование размещаемого элемента управления с помощью поведения по умолчанию</span><span class="sxs-lookup"><span data-stu-id="400b1-217">To scale a hosted control by using the default behavior</span></span>  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  <span data-ttu-id="400b1-218">Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.</span><span class="sxs-lookup"><span data-stu-id="400b1-218">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#12)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#12)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Размещаемый элемент управления и его окружающие элементы масштабируется с коэффициентом 0,5.  Однако шрифт размещаемого элемента управления не масштабируется.  
+2.  <span data-ttu-id="400b1-219">Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="400b1-219">Press F5 to build and run the application.</span></span> <span data-ttu-id="400b1-220">Размещаемый элемент управления и его окружающие элементы масштабируются с коэффициентом 0,5.</span><span class="sxs-lookup"><span data-stu-id="400b1-220">The hosted control and its surrounding elements are scaled by a factor of 0.5.</span></span> <span data-ttu-id="400b1-221">Но шрифт размещаемого элемента управления не масштабируется.</span><span class="sxs-lookup"><span data-stu-id="400b1-221">However, the hosted control's font is not scaled.</span></span>  
   
-#### Масштабирование размещаемый элемент управления установкой IsRedirected true  
+#### <a name="to-scale-a-hosted-control-by-setting-isredirected-to-true"></a><span data-ttu-id="400b1-222">Масштабирование размещаемого элемента управления с помощью установки для свойства IsRedirected значения "true"</span><span class="sxs-lookup"><span data-stu-id="400b1-222">To scale a hosted control by setting IsRedirected to true</span></span>  
   
-1.  Заменить предыдущий пример масштабирования следующим кодом XAML.  
+1.  <span data-ttu-id="400b1-223">Замените следующий код XAML в предыдущем примере масштабирования.</span><span class="sxs-lookup"><span data-stu-id="400b1-223">Replace the previous scaling example with the following XAML.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#12b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#12b)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#12b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#12b)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Размещаемый элемент управления, его окружающие элементы и шрифт размещаемого элемента управления \- на 0,5.  
+2.  <span data-ttu-id="400b1-224">Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="400b1-224">Press F5 to build and run the application.</span></span> <span data-ttu-id="400b1-225">Шрифт размещаемого элемента управления, его окружающих элементов и вложенных в него элементов масштабируется с коэффициентом 0,5.</span><span class="sxs-lookup"><span data-stu-id="400b1-225">The hosted control, its surrounding elements, and the hosted control's font are scaled by a factor of 0.5.</span></span>  
   
-## Поворот  
- В отличие от элементов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], элементы управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] не поддерживают поворот.  По умолчанию <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент не вращает с другим  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементы, когда применяется преобразование поворота.  Любой угол поворота, отличный от 180 градусов, вызывает событие <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>.  Чтобы включить выполнять циклический сдвиг к любому углу, установите <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> свойство   <xref:System.Windows.Forms.Integration.WindowsFormsHost> true и  <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> свойство  <xref:System.Windows.Interop.CompositionMode.Full> OR  <xref:System.Windows.Interop.CompositionMode.OutputOnly>.  
+## <a name="rotating"></a><span data-ttu-id="400b1-226">Поворот</span><span class="sxs-lookup"><span data-stu-id="400b1-226">Rotating</span></span>  
+ <span data-ttu-id="400b1-227">В отличие от [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементов, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы управления не поддерживают поворот.</span><span class="sxs-lookup"><span data-stu-id="400b1-227">Unlike [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elements, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls do not support rotation.</span></span> <span data-ttu-id="400b1-228">По умолчанию <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент не поворачивается вместе с другими [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементы, когда применяется преобразование поворота.</span><span class="sxs-lookup"><span data-stu-id="400b1-228">By default, the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element does not rotate with other [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elements when a rotation transformation is applied.</span></span> <span data-ttu-id="400b1-229">Значение поворота, отличное от 180 градусов, вызывает <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> событий.</span><span class="sxs-lookup"><span data-stu-id="400b1-229">Any rotation value other than 180 degrees raises the <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> event.</span></span>  <span data-ttu-id="400b1-230">Чтобы включить на любой угол поворота, задайте <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> свойство <xref:System.Windows.Forms.Integration.WindowsFormsHost> значение true и <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> свойства <xref:System.Windows.Interop.CompositionMode.Full> или <xref:System.Windows.Interop.CompositionMode.OutputOnly>.</span><span class="sxs-lookup"><span data-stu-id="400b1-230">To enable rotating to any angle, set the <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> property of the <xref:System.Windows.Forms.Integration.WindowsFormsHost> to true and the <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> property to <xref:System.Windows.Interop.CompositionMode.Full> or <xref:System.Windows.Interop.CompositionMode.OutputOnly>.</span></span>  
   
-#### Чтобы увидеть эффект от поворота в гибридном приложении  
+#### <a name="to-see-the-effect-of-rotation-in-a-hybrid-application"></a><span data-ttu-id="400b1-231">Чтобы увидеть эффект от поворота в гибридном приложении</span><span class="sxs-lookup"><span data-stu-id="400b1-231">To see the effect of rotation in a hybrid application</span></span>  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  <span data-ttu-id="400b1-232">Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.</span><span class="sxs-lookup"><span data-stu-id="400b1-232">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#13)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#13)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Размещаемый элемент управления не повернут, но его соседние элементы повернуты на угол в 180 градусов.  Для отображения элементов может потребоваться изменить размер окна.  
+2.  <span data-ttu-id="400b1-233">Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="400b1-233">Press F5 to build and run the application.</span></span> <span data-ttu-id="400b1-234">Размещаемый элемент управления не повернут, но его соседние элементы повернуты на угол в 180 градусов.</span><span class="sxs-lookup"><span data-stu-id="400b1-234">The hosted control is not rotated, but its surrounding elements are rotated by an angle of 180 degrees.</span></span> <span data-ttu-id="400b1-235">Для отображения элементов может потребоваться изменить размер окна.</span><span class="sxs-lookup"><span data-stu-id="400b1-235">You may have to resize the window to see the elements.</span></span>  
   
-#### Увидеть эффект поворота в гибридном приложении при IsRedirected true  
+#### <a name="to-see-the-effect-of-rotation-in-a-hybrid-application-when-isredirected-is-true"></a><span data-ttu-id="400b1-236">Чтобы увидеть эффект от поворота в гибридном приложении, когда для свойства IsRedirected задано значение "true"</span><span class="sxs-lookup"><span data-stu-id="400b1-236">To see the effect of rotation in a hybrid application when IsRedirected is true</span></span>  
   
-1.  Заменить предыдущий пример поворота следующим кодом XAML.  
+1.  <span data-ttu-id="400b1-237">Замените следующий код XAML в предыдущем примере поворота.</span><span class="sxs-lookup"><span data-stu-id="400b1-237">Replace the previous rotation example with the following XAML.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#13b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#13b)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#13b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#13b)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Размещаемый элемент управления вращано.  Обратите внимание, что <xref:System.Windows.Media.RotateTransform.Angle%2A> свойству может быть присвоено любое значение.  Для отображения элементов может потребоваться изменить размер окна.  
+2.  <span data-ttu-id="400b1-238">Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="400b1-238">Press F5 to build and run the application.</span></span> <span data-ttu-id="400b1-239">Размещаемый элемент повернут.</span><span class="sxs-lookup"><span data-stu-id="400b1-239">The hosted control is rotated.</span></span>  <span data-ttu-id="400b1-240">Обратите внимание, что <xref:System.Windows.Media.RotateTransform.Angle%2A> свойство может быть присвоено любое значение.</span><span class="sxs-lookup"><span data-stu-id="400b1-240">Note that the <xref:System.Windows.Media.RotateTransform.Angle%2A> property can be set to any value.</span></span> <span data-ttu-id="400b1-241">Для отображения элементов может потребоваться изменить размер окна.</span><span class="sxs-lookup"><span data-stu-id="400b1-241">You may have to resize the window to see the elements.</span></span>  
   
-## Задание полей и внутренних полей  
- Поля и внутренние поля в макете [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] похожи на свои аналоги в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  Просто задайте свойства <xref:System.Windows.Controls.Control.Padding%2A> и <xref:System.Windows.FrameworkElement.Margin%2A> элемента <xref:System.Windows.Forms.Integration.WindowsFormsHost>.  
+## <a name="setting-padding-and-margins"></a><span data-ttu-id="400b1-242">Задание отбивки и внутренних полей</span><span class="sxs-lookup"><span data-stu-id="400b1-242">Setting Padding and Margins</span></span>  
+ <span data-ttu-id="400b1-243">Заполнение и поля в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] макета аналогичны отступы и рамки, в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].</span><span class="sxs-lookup"><span data-stu-id="400b1-243">Padding and margins in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] layout are similar to padding and margins in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].</span></span> <span data-ttu-id="400b1-244">Просто установите <xref:System.Windows.Controls.Control.Padding%2A> и <xref:System.Windows.FrameworkElement.Margin%2A> свойства <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемента.</span><span class="sxs-lookup"><span data-stu-id="400b1-244">Simply set the <xref:System.Windows.Controls.Control.Padding%2A> and <xref:System.Windows.FrameworkElement.Margin%2A> properties on the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element.</span></span>  
   
-#### Чтобы задать поля и внутренние поля размещаемого элемента управления  
+#### <a name="to-set-padding-and-margins-for-a-hosted-control"></a><span data-ttu-id="400b1-245">Задание отбивки и внутренних полей размещаемого элемента управления</span><span class="sxs-lookup"><span data-stu-id="400b1-245">To set padding and margins for a hosted control</span></span>  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  <span data-ttu-id="400b1-246">Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.</span><span class="sxs-lookup"><span data-stu-id="400b1-246">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]  
-    [!code-xml[WpfLayoutHostingWfWithXaml#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]  
+    [!code-xaml[WpfLayoutHostingWfWithXaml#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]  
   
-2.  Нажмите клавишу F5 для построения и выполнения приложения.  Параметры полей и внутренних полей будут применены к размещаемым элементам управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] так же, как и в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
+2.  <span data-ttu-id="400b1-247">Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="400b1-247">Press F5 to build and run the application.</span></span> <span data-ttu-id="400b1-248">Параметры поля и заполнение применяются к размещаемым [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементов управления таким же образом, как они будут применяться в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].</span><span class="sxs-lookup"><span data-stu-id="400b1-248">The padding and margin settings are applied to the hosted [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls in the same way they would be applied in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
-## Использование динамических контейнеров макета  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] предоставляет два динамических контейнера макета, <xref:System.Windows.Forms.FlowLayoutPanel> и <xref:System.Windows.Forms.TableLayoutPanel>.  Можно также использовать эти контейнеры в макетах [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+## <a name="using-dynamic-layout-containers"></a><span data-ttu-id="400b1-249">Использование динамических контейнеров макета</span><span class="sxs-lookup"><span data-stu-id="400b1-249">Using Dynamic Layout Containers</span></span>  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<span data-ttu-id="400b1-250">предусмотрены два типа контейнеров динамического макета, <xref:System.Windows.Forms.FlowLayoutPanel> и <xref:System.Windows.Forms.TableLayoutPanel>.</span><span class="sxs-lookup"><span data-stu-id="400b1-250"> provides two dynamic layout containers, <xref:System.Windows.Forms.FlowLayoutPanel> and <xref:System.Windows.Forms.TableLayoutPanel>.</span></span> <span data-ttu-id="400b1-251">Можно также использовать эти контейнеры в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] макеты.</span><span class="sxs-lookup"><span data-stu-id="400b1-251">You can also use these containers in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] layouts.</span></span>  
   
-#### Чтобы использовать динамический контейнер макета  
+#### <a name="to-use-a-dynamic-layout-container"></a><span data-ttu-id="400b1-252">Использование динамических контейнеров макета</span><span class="sxs-lookup"><span data-stu-id="400b1-252">To use a dynamic layout container</span></span>  
   
-1.  Скопируйте следующую разметку XAML в элемент <xref:System.Windows.Controls.Grid>.  
+1.  <span data-ttu-id="400b1-253">Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.</span><span class="sxs-lookup"><span data-stu-id="400b1-253">Copy the following XAML into the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-     [!code-xml[WpfLayoutHostingWfWithXaml#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#16)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#16)]  
   
-2.  В файле MainWindow.xaml.vb или MainWindow.xaml.cs скопируйте следующий код в определение класса.  
+2.  <span data-ttu-id="400b1-254">В файле MainWindow.xaml.vb или MainWindow.xaml.cs скопируйте следующий код в определение класса.</span><span class="sxs-lookup"><span data-stu-id="400b1-254">In MainWindow.xaml.vb or MainWindow.xaml.cs copy the following code into the class definition.</span></span>  
   
      [!code-csharp[WpfLayoutHostingWfWithXaml#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#103)]
      [!code-vb[WpfLayoutHostingWfWithXaml#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#103)]  
   
-3.  Добавьте вызов метода `InitializeFlowLayoutPanel` в конструктор.  
+3.  <span data-ttu-id="400b1-255">Добавьте вызов `InitializeFlowLayoutPanel` в конструкторе.</span><span class="sxs-lookup"><span data-stu-id="400b1-255">Add a call to the `InitializeFlowLayoutPanel` method in the constructor.</span></span>  
   
      [!code-csharp[WpfLayoutHostingWfWithXaml#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#104)]
      [!code-vb[WpfLayoutHostingWfWithXaml#104](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#104)]  
   
-4.  Нажмите клавишу F5 для построения и выполнения приложения.  Элемент <xref:System.Windows.Forms.Integration.WindowsFormsHost> заполняет <xref:System.Windows.Controls.DockPanel>, а <xref:System.Windows.Forms.FlowLayoutPanel> упорядочивает его дочерние элементы в направлении <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> по умолчанию.  
+4.  <span data-ttu-id="400b1-256">Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="400b1-256">Press F5 to build and run the application.</span></span> <span data-ttu-id="400b1-257"><xref:System.Windows.Forms.Integration.WindowsFormsHost> Заполняет элемент <xref:System.Windows.Controls.DockPanel>, и <xref:System.Windows.Forms.FlowLayoutPanel> упорядочивает его дочерние элементы в значение по умолчанию <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>.</span><span class="sxs-lookup"><span data-stu-id="400b1-257">The <xref:System.Windows.Forms.Integration.WindowsFormsHost> element fills the <xref:System.Windows.Controls.DockPanel>, and <xref:System.Windows.Forms.FlowLayoutPanel> arranges its child controls in the default <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [Конструктор WPF](http://msdn.microsoft.com/ru-ru/c6c65214-8411-4e16-b254-163ed4099c26)   
- [Вопросы, связанные с макетом элемента WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)   
- [Arranging Windows Forms Controls in WPF Sample](http://go.microsoft.com/fwlink/?LinkID=159971)   
- [Пошаговое руководство. Размещение составного элемента управления Windows Forms в приложении WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)   
- [Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="400b1-258">См. также</span><span class="sxs-lookup"><span data-stu-id="400b1-258">See Also</span></span>  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [<span data-ttu-id="400b1-259">Конструктор WPF</span><span class="sxs-lookup"><span data-stu-id="400b1-259">WPF Designer</span></span>](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [<span data-ttu-id="400b1-260">Вопросы, связанные с макетом элемента WindowsFormsHost</span><span class="sxs-lookup"><span data-stu-id="400b1-260">Layout Considerations for the WindowsFormsHost Element</span></span>](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)  
+ [<span data-ttu-id="400b1-261">Элементы управления упорядочение Windows Forms в образце WPF</span><span class="sxs-lookup"><span data-stu-id="400b1-261">Arranging Windows Forms Controls in WPF Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=159971)  
+ [<span data-ttu-id="400b1-262">Пошаговое руководство. Размещение составного элемента управления Windows Forms в приложении WPF</span><span class="sxs-lookup"><span data-stu-id="400b1-262">Walkthrough: Hosting a Windows Forms Composite Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
+ [<span data-ttu-id="400b1-263">Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms</span><span class="sxs-lookup"><span data-stu-id="400b1-263">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

@@ -1,98 +1,101 @@
 ---
-title: "Обучение с помощью пошаговых руководств | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Обучение с использованием пошаговых руководств"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 38961451a51ae47d05d7625ee0e83da97261eb0b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Обучение с помощью пошаговых руководств
-В документации [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] представлено несколько пошаговых руководств.  В данном разделе рассматриваются общие вопросы пошаговых руководств \(включая устранение неполадок\) и предоставляются ссылки на некоторые пошаговые руководства для начинающих изучать [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+# <a name="learning-by-walkthroughs"></a><span data-ttu-id="443d2-102">Обучение с использованием пошаговых руководств</span><span class="sxs-lookup"><span data-stu-id="443d2-102">Learning by Walkthroughs</span></span>
+<span data-ttu-id="443d2-103">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Документации представлено несколько пошаговых руководств.</span><span class="sxs-lookup"><span data-stu-id="443d2-103">The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation provides several walkthroughs.</span></span> <span data-ttu-id="443d2-104">В данном разделе рассматриваются общие вопросы пошаговых руководств (включая устранение неполадок) и предоставляются ссылки на некоторые пошаговые руководства для начинающих изучать [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="443d2-104">This topic addresses some general walkthrough issues (including troubleshooting), and provides links to several entry-level walkthroughs for learning about [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
   
 > [!NOTE]
->  В пошаговых руководствах этого раздела, предназначенного для начала работы, предоставляется основной код, который поддерживает технологию [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  На практике для реализации приложений [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] обычно используются проекты [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] и Windows Forms.  В документации к [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] содержатся примеры и пошаговые руководства для этой цели.  
+>  <span data-ttu-id="443d2-105">В пошаговых руководствах этого раздела, предназначенного для начала работы, предоставляется основной код, который поддерживает технологию [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="443d2-105">The walkthroughs in this Getting Started section expose you to the basic code that supports [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technology.</span></span> <span data-ttu-id="443d2-106">На практике для реализации приложений [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] обычно используются проекты [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] и Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="443d2-106">In actual practice, you will typically use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] and Windows Forms projects to implement your [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applications.</span></span> <span data-ttu-id="443d2-107">В документации к [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] содержатся примеры и пошаговые руководства для этой цели.</span><span class="sxs-lookup"><span data-stu-id="443d2-107">The [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] documentation provides examples and walkthroughs for this purpose.</span></span>  
   
-## Пошаговые руководства для начала работы  
- В этом разделе доступно несколько пошаговых руководств.  Все они основаны на базе данных "Northwind", используемой в качестве примера, и представляют функции [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] с подробным описанием действий, позволяющим до минимума снизить сложности их использования.  
+## <a name="getting-started-walkthroughs"></a><span data-ttu-id="443d2-108">Пошаговые руководства для начала работы</span><span class="sxs-lookup"><span data-stu-id="443d2-108">Getting Started Walkthroughs</span></span>  
+ <span data-ttu-id="443d2-109">В этом разделе доступно несколько пошаговых руководств.</span><span class="sxs-lookup"><span data-stu-id="443d2-109">Several walkthroughs are available in this section.</span></span> <span data-ttu-id="443d2-110">Все они основаны на базе данных "Northwind", используемой в качестве примера, и представляют функции [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] с подробным описанием действий, позволяющим до минимума снизить сложности их использования.</span><span class="sxs-lookup"><span data-stu-id="443d2-110">These walkthroughs are based on the sample Northwind database, and present [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] features at a gentle pace with minimal complexities.</span></span>  
   
- Ниже приведена примерная последовательность, в которой рекомендуется выполнять данные пошаговые руководства.  
+ <span data-ttu-id="443d2-111">Ниже приведена примерная последовательность, в которой рекомендуется выполнять данные пошаговые руководства.</span><span class="sxs-lookup"><span data-stu-id="443d2-111">A typical progression to follow would be as follows:</span></span>  
   
-|Цель|Visual Basic|C\#|  
-|----------|------------------|---------|  
-|Создание класса сущности и выполнение простого запроса.|[Пошаговое руководство. Простая модель объектов и простой запрос \(Visual Basic\) \(LINQ to SQL\).](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[Пошаговое руководство. Простая модель объектов и простой запрос \(C\#\)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
-|Добавление второго класса и выполнение более сложного запроса.<br /><br /> \(Требуется выполнение предыдущего пошагового руководства.\)|[Пошаговое руководство. Выполнение запросов со связями \(Visual Basic\)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[Пошаговое руководство. Запросы по связям \(C\#\)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
-|Добавление, изменение и удаление элементов в базе данных.|[Пошаговое руководство. Обработка данных \(Visual Basic\)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[Пошаговое руководство. Обработка данных \(C\#\)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
-|Использование хранимых процедур.|[Пошаговое руководство. Применение только хранимых процедур \(Visual Basic\)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[Пошаговое руководство. Использование только хранимых процедур \(C\#\)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
+|<span data-ttu-id="443d2-112">Цель</span><span class="sxs-lookup"><span data-stu-id="443d2-112">Objective</span></span>|<span data-ttu-id="443d2-113">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="443d2-113">Visual Basic</span></span>|<span data-ttu-id="443d2-114">C#</span><span class="sxs-lookup"><span data-stu-id="443d2-114">C#</span></span>|  
+|---------------|------------------|---------|  
+|<span data-ttu-id="443d2-115">Создание класса сущности и выполнение простого запроса.</span><span class="sxs-lookup"><span data-stu-id="443d2-115">Create an entity class and execute a simple query.</span></span>|[<span data-ttu-id="443d2-116">Пошаговое руководство: Простая модель объектов и запрос (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="443d2-116">Walkthrough: Simple Object Model and Query (Visual Basic)</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[<span data-ttu-id="443d2-117">Пошаговое руководство: Простая модель объектов и запросов (C#)</span><span class="sxs-lookup"><span data-stu-id="443d2-117">Walkthrough: Simple Object Model and Query (C#)</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
+|<span data-ttu-id="443d2-118">Добавление второго класса и выполнение более сложного запроса.</span><span class="sxs-lookup"><span data-stu-id="443d2-118">Add a second class and execute a more complex query.</span></span><br /><br /> <span data-ttu-id="443d2-119">(Требуется выполнение предыдущего пошагового руководства.)</span><span class="sxs-lookup"><span data-stu-id="443d2-119">(Requires completion of previous walkthrough).</span></span>|[<span data-ttu-id="443d2-120">Пошаговое руководство: Запросы по связям (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="443d2-120">Walkthrough: Querying Across Relationships (Visual Basic)</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[<span data-ttu-id="443d2-121">Пошаговое руководство: Запросы по связям (C#)</span><span class="sxs-lookup"><span data-stu-id="443d2-121">Walkthrough: Querying Across Relationships (C#)</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
+|<span data-ttu-id="443d2-122">Добавление, изменение и удаление элементов в базе данных.</span><span class="sxs-lookup"><span data-stu-id="443d2-122">Add, change, and delete items in the database.</span></span>|[<span data-ttu-id="443d2-123">Пошаговое руководство: Обработка данных (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="443d2-123">Walkthrough: Manipulating Data (Visual Basic)</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[<span data-ttu-id="443d2-124">Пошаговое руководство: Обработка данных (C#)</span><span class="sxs-lookup"><span data-stu-id="443d2-124">Walkthrough: Manipulating Data (C#)</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
+|<span data-ttu-id="443d2-125">Использование хранимых процедур.</span><span class="sxs-lookup"><span data-stu-id="443d2-125">Use stored procedures.</span></span>|[<span data-ttu-id="443d2-126">Пошаговое руководство: Применение только хранимых процедур (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="443d2-126">Walkthrough: Using Only Stored Procedures (Visual Basic)</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[<span data-ttu-id="443d2-127">Пошаговое руководство: Применение только хранимых процедур (C#)</span><span class="sxs-lookup"><span data-stu-id="443d2-127">Walkthrough: Using Only Stored Procedures (C#)</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
   
-## Общие правила  
- Ниже представлены общие сведения, которые касаются всех этих пошаговых руководств.  
+## <a name="general"></a><span data-ttu-id="443d2-128">Общие</span><span class="sxs-lookup"><span data-stu-id="443d2-128">General</span></span>  
+ <span data-ttu-id="443d2-129">Ниже представлены общие сведения, которые касаются всех этих пошаговых руководств.</span><span class="sxs-lookup"><span data-stu-id="443d2-129">The following information pertains to these walkthroughs in general:</span></span>  
   
--   Среда. В каждом пошаговом руководстве [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] в качестве интегрированной среды разработки используется [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].  
+-   <span data-ttu-id="443d2-130">Среда. В каждом пошаговом руководстве [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] в качестве интегрированной среды разработки используется [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="443d2-130">Environment: Each [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] walkthrough uses [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] as its integrated development environment (IDE).</span></span>  
   
--   Ядро SQL. Эти пошаговые руководства предназначены для реализации с помощью SQL Server Express.  Если на компьютере не установлено приложение SQL Server Express, его можно загрузить бесплатно.  Дополнительные сведения см. в разделе [Загрузка образцов баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+-   <span data-ttu-id="443d2-131">Ядро SQL. Эти пошаговые руководства предназначены для реализации с помощью SQL Server Express.</span><span class="sxs-lookup"><span data-stu-id="443d2-131">SQL engines: These walkthroughs are written to be implemented by using SQL Server Express.</span></span> <span data-ttu-id="443d2-132">Если на компьютере не установлено приложение SQL Server Express, его можно загрузить бесплатно.</span><span class="sxs-lookup"><span data-stu-id="443d2-132">If you do not have SQL Server Express, you can download it free of charge.</span></span> <span data-ttu-id="443d2-133">Дополнительные сведения см. в разделе [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span><span class="sxs-lookup"><span data-stu-id="443d2-133">For more information, see [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span></span>  
   
     > [!NOTE]
-    >  В качестве строки подключения в данных пошаговых руководствах [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] используется имя файла.  Простое указания имени файла является одной из удобных возможностей, которые технология [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] предоставляет пользователям SQL Server Express.  Не забывайте уделять особое внимание вопросам безопасности.  Дополнительные сведения см. в разделе [Безопасность в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
+    >  <span data-ttu-id="443d2-134">В качестве строки подключения в данных пошаговых руководствах [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] используется имя файла.</span><span class="sxs-lookup"><span data-stu-id="443d2-134">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] walkthroughs use a file name as a connection string.</span></span> <span data-ttu-id="443d2-135">Простое указания имени файла является одной из удобных возможностей, которые технология [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] предоставляет пользователям SQL Server Express.</span><span class="sxs-lookup"><span data-stu-id="443d2-135">Simply specifying a file name is a convenience that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides for SQL Server Express users.</span></span> <span data-ttu-id="443d2-136">Не забывайте уделять особое внимание вопросам безопасности.</span><span class="sxs-lookup"><span data-stu-id="443d2-136">Always pay attention to security issues.</span></span> <span data-ttu-id="443d2-137">Дополнительные сведения см. в разделе [безопасность в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).</span><span class="sxs-lookup"><span data-stu-id="443d2-137">For more information, see [Security in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).</span></span>  
   
--   В пошаговых руководствах [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] обычно требуется база данных "Northwind".  Дополнительные сведения см. в разделе [Загрузка образцов баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="443d2-138">Пошаговые руководства обычно требуется образец базы данных "Борей".</span><span class="sxs-lookup"><span data-stu-id="443d2-138"> walkthroughs typically require the Northwind sample database.</span></span> <span data-ttu-id="443d2-139">Дополнительные сведения см. в разделе [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span><span class="sxs-lookup"><span data-stu-id="443d2-139">For more information, see [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span></span>  
   
--   Диалоговые окна и команды меню, отображаемые в данных пошаговых руководствах, могут отличаться от описанных в справке в зависимости от текущих параметров или версии [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].  Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+-   <span data-ttu-id="443d2-140">Диалоговые окна и команды меню, отображаемые в данных пошаговых руководствах, могут отличаться от описанных в справке в зависимости от текущих параметров или версии [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="443d2-140">The dialog boxes and menu commands you see in walkthroughs might differ from those described in Help, depending on your active settings or [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] edition.</span></span> <span data-ttu-id="443d2-141">Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** .</span><span class="sxs-lookup"><span data-stu-id="443d2-141">To change your settings, click **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="443d2-142">Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="443d2-142">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
--   Для пошаговых руководств, в которых рассматриваются многоуровневые сценарии, сервер должен быть установлен на компьютере, отличном от компьютера разработки, и у пользователя должны быть соответствующие права доступа к этому серверу.  
+-   <span data-ttu-id="443d2-143">Для пошаговых руководств, в которых рассматриваются многоуровневые сценарии, сервер должен быть установлен на компьютере, отличном от компьютера разработки, и у пользователя должны быть соответствующие права доступа к этому серверу.</span><span class="sxs-lookup"><span data-stu-id="443d2-143">For walkthroughs that address multi-tier scenarios, a server must be located on a computer that is distinct from the development computer, and you must have appropriate permissions to access the server.</span></span>  
   
--   Именем класса, который обычно представляет таблицу "Orders" в базе данных "Northwind", является `[Order]`.  Это имя следует использовать с escape\-знаком, поскольку `Order` является зарезервированным словом в [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)].  
+-   <span data-ttu-id="443d2-144">Именем класса, который обычно представляет таблицу "Orders" в базе данных "Northwind", является `[Order]`.</span><span class="sxs-lookup"><span data-stu-id="443d2-144">The name of the class that typically represents the Orders table in the Northwind sample database is `[Order]`.</span></span> <span data-ttu-id="443d2-145">Это имя следует использовать с escape-знаком, поскольку `Order` является зарезервированным словом в [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="443d2-145">The escaping is required because `Order` is a keyword in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)].</span></span>  
   
-## Устранение неполадок  
- Если у пользователя нет достаточных прав для доступа к базам данных, используемым в этих пошаговых руководствах, то во время выполнения могут возникать ошибки.  Ниже приведены действия, которые могут помочь в решении наиболее распространенных проблем.  
+## <a name="troubleshooting"></a><span data-ttu-id="443d2-146">Устранение неполадок</span><span class="sxs-lookup"><span data-stu-id="443d2-146">Troubleshooting</span></span>  
+ <span data-ttu-id="443d2-147">Если у пользователя нет достаточных прав для доступа к базам данных, используемым в этих пошаговых руководствах, то во время выполнения могут возникать ошибки.</span><span class="sxs-lookup"><span data-stu-id="443d2-147">Run-time errors can occur because you do not have sufficient permissions to access the databases used in these walkthroughs.</span></span> <span data-ttu-id="443d2-148">Ниже приведены действия, которые могут помочь в решении наиболее распространенных проблем.</span><span class="sxs-lookup"><span data-stu-id="443d2-148">See the following steps to help resolve the most common of these issues.</span></span>  
   
-### Проблемы входа  
- Для доступа к базе данных приложение можно использовать учетную запись, которая не допускается в этой базе данных.  
+### <a name="log-on-issues"></a><span data-ttu-id="443d2-149">Проблемы входа</span><span class="sxs-lookup"><span data-stu-id="443d2-149">Log-On Issues</span></span>  
+ <span data-ttu-id="443d2-150">Для доступа к базе данных приложение можно использовать учетную запись, которая не допускается в этой базе данных.</span><span class="sxs-lookup"><span data-stu-id="443d2-150">Your application might be trying to access the database by way of a database logon it does not accept.</span></span>  
   
-##### Чтобы проверить или изменить учетную запись для входа в базу данных, выполните следующие действия.  
+##### <a name="to-verify-or-change-the-database-log-on"></a><span data-ttu-id="443d2-151">Чтобы проверить или изменить учетную запись для входа в базу данных, выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="443d2-151">To verify or change the database log on</span></span>  
   
-1.  В меню **Пуск** операционной системы Windows последовательно выберите **Все программы**, **Microsoft SQL Server 2005**, **Средства настройки**, а затем щелкните пункт **Диспетчер конфигурации SQL Server**.  
+1.  <span data-ttu-id="443d2-152">В ОС Windows **запустить** последовательно выберите пункты **все программы**, **Microsoft SQL Server 2005**, пункты **средства настройки**, а затем нажмите кнопку **Диспетчер конфигурации SQL Server**.</span><span class="sxs-lookup"><span data-stu-id="443d2-152">On the Windows **Start** menu, point to **All Programs**, **Microsoft SQL Server 2005**, point to **Configuration Tools**, and then click **SQL Server Configuration Manager**.</span></span>  
   
-2.  В левой области **Диспетчера конфигурации SQL Server** выберите **Службы SQL Server 2005**.  
+2.  <span data-ttu-id="443d2-153">В левой области **диспетчер конфигурации SQL Server**, нажмите кнопку **служб SQL Server 2005**.</span><span class="sxs-lookup"><span data-stu-id="443d2-153">In the left pane of the **SQL Server Configuration Manager**, click **SQL Server 2005 Services**.</span></span>  
   
-3.  В правой области щелкните правой кнопкой мыши пункт **SQL Server \(SQLEXPRESS\)** и затем выберите **Свойства**.  
+3.  <span data-ttu-id="443d2-154">В области справа щелкните правой кнопкой мыши **SQL Server (SQLEXPRESS)**, а затем нажмите кнопку **свойства**.</span><span class="sxs-lookup"><span data-stu-id="443d2-154">In the right pane, right-click **SQL Server (SQLEXPRESS)**, and then click **Properties**.</span></span>  
   
-4.  Перейдите на вкладку **Вход** и проверьте учетную запись, используемую для входа на сервер.  
+4.  <span data-ttu-id="443d2-155">Нажмите кнопку **вход в систему** и проверьте, как вы пытаетесь войти на сервер.</span><span class="sxs-lookup"><span data-stu-id="443d2-155">Click the **Log On** tab and verify how you are trying to log on to the server.</span></span>  
   
-     В большинстве случаев разрешено использовать учетную запись **Локальная система**.  
+     <span data-ttu-id="443d2-156">В большинстве случаев **Local System** работает.</span><span class="sxs-lookup"><span data-stu-id="443d2-156">In most cases, **Local System** works.</span></span>  
   
-     Если производятся изменения, щелкните **Перезапустить**, чтобы перезапустить службу.  
+     <span data-ttu-id="443d2-157">При внесении изменений, нажмите кнопку **перезапустите** для перезапуска службы.</span><span class="sxs-lookup"><span data-stu-id="443d2-157">If you make a change, click **Restart** to restart the service.</span></span>  
   
-### Протоколы  
- В некоторых случаях, чтобы приложение могло получить доступ к базе данных, необходимо правильно настроить протоколы.  Например, протокол **Именованные каналы**, который требуется для выполнения пошаговых руководств [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], не включен по умолчанию.  
+### <a name="protocols"></a><span data-ttu-id="443d2-158">Протоколы</span><span class="sxs-lookup"><span data-stu-id="443d2-158">Protocols</span></span>  
+ <span data-ttu-id="443d2-159">В некоторых случаях, чтобы приложение могло получить доступ к базе данных, необходимо правильно настроить протоколы.</span><span class="sxs-lookup"><span data-stu-id="443d2-159">At times, protocols might not be set correctly for your application to access the database.</span></span> <span data-ttu-id="443d2-160">Например **именованных каналов** протокол, который требуется для выполнения пошаговых руководств [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], не включен по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="443d2-160">For example, the **Named Pipes** protocol, which is required for walkthroughs in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], is not enabled by default.</span></span>  
   
-##### Включение протокола именованных каналов  
+##### <a name="to-enable-the-named-pipes-protocol"></a><span data-ttu-id="443d2-161">Включение протокола именованных каналов</span><span class="sxs-lookup"><span data-stu-id="443d2-161">To enable the Named Pipes protocol</span></span>  
   
-1.  В левой области **Диспетчера конфигурации SQL Server** разверните узел **Сетевая конфигурация SQL Server 2005** и щелкните **Протоколы для SQLEXPRESS**.  
+1.  <span data-ttu-id="443d2-162">В левой области **диспетчер конфигурации SQL Server**, разверните **сетевая конфигурация SQL Server 2005**, а затем нажмите кнопку **протоколы для SQLEXPRESS**.</span><span class="sxs-lookup"><span data-stu-id="443d2-162">In the left pane of the **SQL Server Configuration Manager**, expand **SQL Server 2005 Network Configuration**, and then click **Protocols for SQLEXPRESS**.</span></span>  
   
-2.  В правой области проверьте, что протокол **Именованные каналы** включен.  Если протокол не включен, щелкните правой кнопкой мыши пункт **Именованные каналы** и выберите команду **Включить**.  
+2.  <span data-ttu-id="443d2-163">В области справа убедитесь, что **именованных каналов** протокол включен.</span><span class="sxs-lookup"><span data-stu-id="443d2-163">In the right pane, make sure that the **Named Pipes** protocol is enabled.</span></span> <span data-ttu-id="443d2-164">Если это не так, щелкните правой кнопкой мыши **именованные каналы** и нажмите кнопку **включить**.</span><span class="sxs-lookup"><span data-stu-id="443d2-164">If it is not, right-click **Name Pipes** and then click **Enable**.</span></span>  
   
-     После этого необходимо остановить и снова запустить службу.  Выполните действия, описанные в следующем разделе.  
+     <span data-ttu-id="443d2-165">После этого необходимо остановить и снова запустить службу.</span><span class="sxs-lookup"><span data-stu-id="443d2-165">You will have to stop and restart the service.</span></span> <span data-ttu-id="443d2-166">Выполните действия, описанные в следующем разделе.</span><span class="sxs-lookup"><span data-stu-id="443d2-166">Follow the steps in the next block.</span></span>  
   
-### Остановка и повторный запуск службы  
- Чтобы изменения вступили в силу, необходимо остановить и снова запустить службы.  
+### <a name="stopping-and-restarting-the-service"></a><span data-ttu-id="443d2-167">Остановка и повторный запуск службы</span><span class="sxs-lookup"><span data-stu-id="443d2-167">Stopping and Restarting the Service</span></span>  
+ <span data-ttu-id="443d2-168">Чтобы изменения вступили в силу, необходимо остановить и снова запустить службы.</span><span class="sxs-lookup"><span data-stu-id="443d2-168">You must stop and restart services before your changes can take effect.</span></span>  
   
-##### Остановка и повторный запуск службы  
+##### <a name="to-stop-and-restart-the-service"></a><span data-ttu-id="443d2-169">Остановка и повторный запуск службы</span><span class="sxs-lookup"><span data-stu-id="443d2-169">To stop and restart the service</span></span>  
   
-1.  В левой области **Диспетчера конфигурации SQL Server** выберите **Службы SQL Server 2005**.  
+1.  <span data-ttu-id="443d2-170">В левой области **диспетчер конфигурации SQL Server**, нажмите кнопку **служб SQL Server 2005**.</span><span class="sxs-lookup"><span data-stu-id="443d2-170">In the left pane of the **SQL Server Configuration Manager**, click **SQL Server 2005 Services**.</span></span>  
   
-2.  В правой области щелкните правой кнопкой мыши пункт **SQL Server \(SQLEXPRESS\)** и затем выберите команду **Остановить**.  
+2.  <span data-ttu-id="443d2-171">В области справа щелкните правой кнопкой мыши **SQL Server (SQLEXPRESS)**, а затем нажмите кнопку **остановить**.</span><span class="sxs-lookup"><span data-stu-id="443d2-171">In the right pane, right-click **SQL Server (SQLEXPRESS)**, and then click **Stop**.</span></span>  
   
-3.  Щелкните правой кнопкой мыши пункт **SQL Server \(SQLEXPRESS\)** и выберите команду **Перезапустить**.  
+3.  <span data-ttu-id="443d2-172">Щелкните правой кнопкой мыши **SQL Server (SQLEXPRESS)**, а затем нажмите кнопку **перезапустите**.</span><span class="sxs-lookup"><span data-stu-id="443d2-172">Right-click **SQL Server (SQLEXPRESS)**, and then click **Restart**.</span></span>  
   
-## См. также  
- [Начало работы](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+## <a name="see-also"></a><span data-ttu-id="443d2-173">См. также</span><span class="sxs-lookup"><span data-stu-id="443d2-173">See Also</span></span>  
+ [<span data-ttu-id="443d2-174">Начало работы</span><span class="sxs-lookup"><span data-stu-id="443d2-174">Getting Started</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

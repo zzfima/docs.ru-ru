@@ -1,49 +1,50 @@
 ---
-title: "Практическое руководство. Выравнивание нескольких элементов управления в формах Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "элементы управления [Windows Forms], выравнивание"
-  - "элементы управления [Windows Forms], размещение"
-  - "формы, выравнивание элементов управления"
-  - "Windows Forms, выравнивание элементов управления"
+title: "Практическое руководство. Выравнивание нескольких элементов управления в формах Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- forms [Windows Forms], aligning controls
+- Windows Forms, aligning controls
+- controls [Windows Forms], positioning
+- controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ea32e6642ebdfaf116364d06c1e825b73bca19c9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Выравнивание нескольких элементов управления в формах Windows Forms
-Чтобы стандартизировать макет пользовательского интерфейса в приложении на базе Windows, можно с помощью одной команды задать расположение групп элементов управления.  
+# <a name="how-to-align-multiple-controls-on-windows-forms"></a><span data-ttu-id="bd2e0-102">Практическое руководство. Выравнивание нескольких элементов управления в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bd2e0-102">How to: Align Multiple Controls on Windows Forms</span></span>
+<span data-ttu-id="bd2e0-103">Чтобы стандартизировать макет пользовательского интерфейса (UI) приложения на основе Windows, можно разместить группы элементов управления с помощью одной команды.</span><span class="sxs-lookup"><span data-stu-id="bd2e0-103">To standardize the layout of the user interface (UI) of your Windows-based application, you can position groups of controls with a single command.</span></span>  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="bd2e0-104">Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.</span><span class="sxs-lookup"><span data-stu-id="bd2e0-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="bd2e0-105">Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** .</span><span class="sxs-lookup"><span data-stu-id="bd2e0-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="bd2e0-106">Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="bd2e0-106">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Чтобы выровнять несколько элементов управления в форме  
+### <a name="to-align-multiple-controls-on-a-form"></a><span data-ttu-id="bd2e0-107">Выравнивание нескольких элементов управления в форме</span><span class="sxs-lookup"><span data-stu-id="bd2e0-107">To align multiple controls on a form</span></span>  
   
-1.  Откройте форму, элементы управления в которой требуется разместить в **Конструкторе Windows Forms**.  
+1.  <span data-ttu-id="bd2e0-108">Откройте форму, содержащую элементы управления, можно разместить в **конструктор Windows Forms**.</span><span class="sxs-lookup"><span data-stu-id="bd2e0-108">Open the form containing the controls you want to position in the **Windows Forms Designer**.</span></span>  
   
-2.  Выберите элементы управления, которые требуется расположить так, чтобы первый выбранный элемент управления был основным элементом, по которому следует выровнять остальные элементы.  
+2.  <span data-ttu-id="bd2e0-109">Выберите элементы управления, которые требуется выровнять таким образом, чтобы первый выбранный элемент управления основным элементом управления, к которому должны быть выровнены остальные.</span><span class="sxs-lookup"><span data-stu-id="bd2e0-109">Select the controls you want to align so that the first control you select is the primary control to which the others should be aligned.</span></span>  
   
-3.  В меню **Формат** наведите курсор мыши на команду **Выровнять**, а затем выберите одну из семи доступных команд.  
+3.  <span data-ttu-id="bd2e0-110">На **формат** последовательно выберите пункты **выровнять**, а затем выберите одну из семи доступных команд.</span><span class="sxs-lookup"><span data-stu-id="bd2e0-110">On the **Format** menu, point to **Align**, and then click one of the seven choices available.</span></span>  
   
-## См. также  
- [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)   
- [Практическое руководство. Добавление элементов управления в формы Windows Forms.](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)   
- [Расположение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [Элементы управления для использования в формах Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [Функциональная классификация элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)   
- [Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)   
- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)   
- [Пример. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)   
- [Практическое руководство. Переназначение существующих элементов управления другим родительским элементам](../../../../docs/framework/winforms/controls/how-to-reassign-existing-controls-to-a-different-parent.md)
+## <a name="see-also"></a><span data-ttu-id="bd2e0-111">См. также</span><span class="sxs-lookup"><span data-stu-id="bd2e0-111">See Also</span></span>  
+ [<span data-ttu-id="bd2e0-112">Элементы управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bd2e0-112">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ [<span data-ttu-id="bd2e0-113">Практическое руководство. Добавление элементов управления в формы Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bd2e0-113">How to: Add Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
+ [<span data-ttu-id="bd2e0-114">Упорядочение элементов управления в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bd2e0-114">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [<span data-ttu-id="bd2e0-115">Элементы управления для использования в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bd2e0-115">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [<span data-ttu-id="bd2e0-116">Функциональная классификация элементов управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bd2e0-116">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
+ [<span data-ttu-id="bd2e0-117">Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки</span><span class="sxs-lookup"><span data-stu-id="bd2e0-117">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ [<span data-ttu-id="bd2e0-118">Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="bd2e0-118">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [<span data-ttu-id="bd2e0-119">Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="bd2e0-119">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+ [<span data-ttu-id="bd2e0-120">Практическое руководство. Переназначение существующих элементов управления другим родительским элементам</span><span class="sxs-lookup"><span data-stu-id="bd2e0-120">How to: Reassign Existing Controls to a Different Parent</span></span>](../../../../docs/framework/winforms/controls/how-to-reassign-existing-controls-to-a-different-parent.md)

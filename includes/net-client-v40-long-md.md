@@ -1,1 +1,1 @@
-.NET Framework 4 (клиентский профиль)
+<span data-ttu-id="fe1e0-101">.NET Framework 4 (клиентский профиль)</span><span class="sxs-lookup"><span data-stu-id="fe1e0-101">.NET Framework 4 Client Profile</span></span>

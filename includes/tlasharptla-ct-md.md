@@ -1,1 +1,1 @@
-Технология Microsoft ClearType
+<span data-ttu-id="7ffea-101">Технология Microsoft ClearType</span><span class="sxs-lookup"><span data-stu-id="7ffea-101">Microsoft ClearType</span></span>

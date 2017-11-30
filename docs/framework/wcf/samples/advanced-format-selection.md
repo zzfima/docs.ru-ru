@@ -1,56 +1,59 @@
 ---
-title: "Выбор дополнительного формата | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Выбор дополнительного формата"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5b3c1bd6c63188b9b812248b8d815237832a4aad
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Выбор дополнительного формата
-Данный образец демонстрирует расширение программной модели [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST для поддержки новых форматов исходящих ответов.  Кроме того, образец использует шаблон T4 для возврата ответов в виде страницы XHTML, показывая, как можно реализовать наглядную программную модель.  
+# <a name="advanced-format-selection"></a><span data-ttu-id="f9abb-102">Выбор дополнительного формата</span><span class="sxs-lookup"><span data-stu-id="f9abb-102">Advanced Format Selection</span></span>
+<span data-ttu-id="f9abb-103">Данный образец демонстрирует расширение программной модели [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST для поддержки новых форматов исходящих ответов.</span><span class="sxs-lookup"><span data-stu-id="f9abb-103">This sample demonstrates how to extend the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST programming model to support new outgoing response formats.</span></span> <span data-ttu-id="f9abb-104">Кроме того, образец использует шаблон T4 для возврата ответов в виде страницы XHTML, показывая, как можно реализовать наглядную программную модель.</span><span class="sxs-lookup"><span data-stu-id="f9abb-104">In addition, the sample uses a T4 Template to return the response as an XHTML page, demonstrating how a view-style programming model can be implemented.</span></span>  
   
-## Подробные сведения об образце  
- Образец состоит из простой службы, а также клиентского кода, производящего запросы к этой службе.  Служба поддерживает единственную операцию \[WebGet\], имеющую следующую сигнатуру метода: `Message EchoListWithGet(string list);`  
+## <a name="sample-details"></a><span data-ttu-id="f9abb-105">Подробные сведения об образце</span><span class="sxs-lookup"><span data-stu-id="f9abb-105">Sample Details</span></span>  
+ <span data-ttu-id="f9abb-106">Образец состоит из простой службы, а также клиентского кода, производящего запросы к этой службе.</span><span class="sxs-lookup"><span data-stu-id="f9abb-106">The sample consists of a simple service along with client code that makes requests to the service.</span></span>  <span data-ttu-id="f9abb-107">Служба поддерживает единственную операцию [WebGet], имеющую следующую сигнатуру метода: `Message EchoListWithGet(string list);`</span><span class="sxs-lookup"><span data-stu-id="f9abb-107">The service supports a single [WebGet] operation, which has the following method signature: `Message EchoListWithGet(string list);`</span></span>  
   
- Когда клиент производит запрос к службе, он предоставляет разделенный запятыми список элементов в параметре строки запроса `list`, а служба возвращает тот же список в одном из следующих форматов: XML, JSON, Atom, XHTML или jpeg.  
+ <span data-ttu-id="f9abb-108">Когда клиент производит запрос к службе, он предоставляет разделенный запятыми список элементов в параметре строки запроса `list`, а служба возвращает тот же список в одном из следующих форматов: XML, JSON, Atom, XHTML или jpeg.</span><span class="sxs-lookup"><span data-stu-id="f9abb-108">When the client makes a request to the service, it provides a comma-separated list of items from the `list` query-string parameter and the service returns that same list in one of the following formats: XML, JSON, Atom, XHTML, or jpeg.</span></span>  
   
- Формат ответа, возвращаемого службой, определяется, во\-первых, параметром строки запроса `format`, а во\-вторых, заголовком HTTP Accept, содержащимся в запросе.  Если значение параметра строки запроса `format` указывает один из перечисленных ранее форматов, ответ возвращается в этом формате.  Если параметр строки запроса `format` отсутствует, служба перебирает элементы заголовка Accept в запросе и возвращает формат первого поддерживаемого ею типа содержимого content\-type.  
+ <span data-ttu-id="f9abb-109">Формат ответа, возвращаемого службой, определяется, во-первых, параметром строки запроса `format`, а во-вторых, заголовком HTTP Accept, содержащимся в запросе.</span><span class="sxs-lookup"><span data-stu-id="f9abb-109">The response format returned by the service is determined first by a `format` query-string parameter and second by an HTTP Accept header supplied with the request.</span></span> <span data-ttu-id="f9abb-110">Если значение параметра строки запроса `format` указывает один из перечисленных ранее форматов, ответ возвращается в этом формате.</span><span class="sxs-lookup"><span data-stu-id="f9abb-110">If the value of `format` query-string parameter is one of the preceding formats, then the response is returned in that format.</span></span> <span data-ttu-id="f9abb-111">Если параметр строки запроса `format` отсутствует, служба перебирает элементы заголовка Accept в запросе и возвращает формат первого поддерживаемого ею типа содержимого content-type.</span><span class="sxs-lookup"><span data-stu-id="f9abb-111">If the `format` query-string is not present, then the service iterates through the Accept header elements from the request and returns the format of the first content-type that the service supports.</span></span>  
   
- Возвращаемый тип операции можно игнорировать.  Программная модель [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST сама по себе поддерживает только форматы ответа XML и JSON, если операция возвращает тип, отличный от <xref:System.ServiceModel.Channels.Message>.  Однако, если используется тип ответа <xref:System.ServiceModel.Channels.Message>, разработчик имеет полный контроль над тем, какой формат должно иметь это сообщение.  
+ <span data-ttu-id="f9abb-112">Возвращаемый тип операции можно игнорировать.</span><span class="sxs-lookup"><span data-stu-id="f9abb-112">The return type of the operation is worth noting.</span></span> <span data-ttu-id="f9abb-113">Программная модель [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST сама по себе поддерживает только форматы ответа XML и JSON, если операция возвращает тип, отличный от <xref:System.ServiceModel.Channels.Message>.</span><span class="sxs-lookup"><span data-stu-id="f9abb-113">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST programming model only natively supports XML and JSON response formats when an operation returns a type other than <xref:System.ServiceModel.Channels.Message>.</span></span> <span data-ttu-id="f9abb-114">Однако, если используется тип ответа <xref:System.ServiceModel.Channels.Message>, разработчик имеет полный контроль над тем, какой формат должно иметь это сообщение.</span><span class="sxs-lookup"><span data-stu-id="f9abb-114">However, when using <xref:System.ServiceModel.Channels.Message> as the return type, the developer has complete control over how the content of the message should be formatted.</span></span>  
   
- Образец использует методы <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> и <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> для сериализации списка строк в сообщениях XML, JSON и ATOM соответственно.  В случае формата ответа jpeg используется метод <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A>, а изображение сохраняется в потоке.  Ответ XHTML использует метод <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A>, а также предварительно обработанный шаблон T4, который состоит из TT\-файла и автоматически формируемого файла CS.  TT\-файл позволяет разработчику записывать ответ в виде шаблона, содержащего переменные и управляющие структуры.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] T4 см. в разделе [Создание артефактов с использованием текстовых шаблонов](http://go.microsoft.com/fwlink/?LinkId=166023).  
+ <span data-ttu-id="f9abb-115">Образец использует методы <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> и <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> для сериализации списка строк в сообщениях XML, JSON и ATOM соответственно.</span><span class="sxs-lookup"><span data-stu-id="f9abb-115">The sample uses the <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> and <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> methods to serialize the list of strings into XML, JSON, and ATOM messages respectively.</span></span> <span data-ttu-id="f9abb-116">В случае формата ответа jpeg используется метод <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A>, а изображение сохраняется в потоке.</span><span class="sxs-lookup"><span data-stu-id="f9abb-116">For the jpeg response format, the <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A> method is used and the image is saved to the stream.</span></span> <span data-ttu-id="f9abb-117">Ответ XHTML использует метод <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A>, а также предварительно обработанный шаблон T4, который состоит из TT-файла и автоматически формируемого файла CS.</span><span class="sxs-lookup"><span data-stu-id="f9abb-117">For the XHTML response, the <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A> is used along with a preprocessed T4 template, which consists of a .tt file and an auto-generated .cs file.</span></span> <span data-ttu-id="f9abb-118">TT-файл позволяет разработчику записывать ответ в виде шаблона, содержащего переменные и управляющие структуры.</span><span class="sxs-lookup"><span data-stu-id="f9abb-118">The .tt file allows a developer to write a response in a template form that contains variables and control structures.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="f9abb-119">T4 см. в разделе [Создание артефактов с помощью текстовых шаблонов](http://go.microsoft.com/fwlink/?LinkId=166023).</span><span class="sxs-lookup"><span data-stu-id="f9abb-119"> T4, see [Generating Artifacts By Using Text Templates](http://go.microsoft.com/fwlink/?LinkId=166023).</span></span>  
   
- Образец состоит из резидентной службы и клиента, который работает в консольном приложении.  Во время выполнения консольного приложения клиент совершает запросы к службе и выводит в окно консоли нужные сведения из ответов.  
+ <span data-ttu-id="f9abb-120">Образец состоит из резидентной службы и клиента, который работает в консольном приложении.</span><span class="sxs-lookup"><span data-stu-id="f9abb-120">The sample consists of a self-hosted service and a client that runs within a console application.</span></span> <span data-ttu-id="f9abb-121">Во время выполнения консольного приложения клиент совершает запросы к службе и выводит в окно консоли нужные сведения из ответов.</span><span class="sxs-lookup"><span data-stu-id="f9abb-121">As the console application runs, the client makes requests to the service and writes the pertinent information from the responses to the console window.</span></span>  
   
-#### Запуск образца  
+#### <a name="to-run-this-sample"></a><span data-ttu-id="f9abb-122">Запуск образца</span><span class="sxs-lookup"><span data-stu-id="f9abb-122">To run this sample</span></span>  
   
-1.  Откройте решение образца «Advanced Format Selection».  Для успешного выполнения образца среду [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] необходимо запускать от имени администратора.  Для этого щелкните правой кнопкой мыши значок [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] и выберите в контекстном меню команду **Запуск от имени администратора**.  
+1.  <span data-ttu-id="f9abb-123">Откройте решение образца «Advanced Format Selection».</span><span class="sxs-lookup"><span data-stu-id="f9abb-123">Open the solution for the Advanced Format Selection Sample.</span></span> <span data-ttu-id="f9abb-124">Для успешного выполнения образца среду [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] необходимо запускать от имени администратора.</span><span class="sxs-lookup"><span data-stu-id="f9abb-124">When launching [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], you should run as an administrator for the sample to execute successfully.</span></span> <span data-ttu-id="f9abb-125">Для этого щелкните правой кнопкой мыши [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] значок и выбрав **Запуск от имени администратора** в контекстном меню.</span><span class="sxs-lookup"><span data-stu-id="f9abb-125">Do this by right-clicking the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] icon and choosing **Run as Administrator** from the context menu.</span></span>  
   
-2.  Нажмите сочетание клавиш CTRL\+SHIFT\+B для построения решения, затем сочетание клавиш Ctrl\-F5 для запуска консольного приложения проекта AdvancedFormatSelection без отладки.  Открывается окно консоли с URI запущенной службы и URI HTML\-страницы справки для запущенной службы.  
+2.  <span data-ttu-id="f9abb-126">Нажмите сочетание клавиш CTRL+SHIFT+B для построения решения, затем сочетание клавиш Ctrl-F5 для запуска консольного приложения проекта AdvancedFormatSelection без отладки.</span><span class="sxs-lookup"><span data-stu-id="f9abb-126">Press CTRL+SHIFT+B to build the solution and then press Ctrl-F5 to run the console application AdvancedFormatSelection project without debugging.</span></span> <span data-ttu-id="f9abb-127">Открывается окно консоли с URI запущенной службы и URI HTML-страницы справки для запущенной службы.</span><span class="sxs-lookup"><span data-stu-id="f9abb-127">The console window appears and provides the URI of the running service and the URI of the HTML help page for the running service.</span></span>  
   
-3.  Во время выполнения образца клиент отправляет запросы к службе и выводит ответы в окно консоли.  Обратите внимание на различные форматы ответов: XML, JSON, Atom и XHTML.  
+3.  <span data-ttu-id="f9abb-128">Во время выполнения образца клиент отправляет запросы к службе и выводит ответы в окно консоли.</span><span class="sxs-lookup"><span data-stu-id="f9abb-128">As the sample runs, the client sends requests to the service and writes the responses to the console window.</span></span> <span data-ttu-id="f9abb-129">Обратите внимание на различные форматы ответов: XML, JSON, Atom и XHTML.</span><span class="sxs-lookup"><span data-stu-id="f9abb-129">Notice the different formats of the responses: XML, JSON, Atom, and XHTML.</span></span>  
   
-4.  После этого вам будет предложено перейти к URI, в котором можно запросить ответ в формате JPEG.  Откройте браузер и перейдите по заданному URI.  
+4.  <span data-ttu-id="f9abb-130">После этого вам будет предложено перейти к URI, в котором можно запросить ответ в формате JPEG.</span><span class="sxs-lookup"><span data-stu-id="f9abb-130">You are then prompted to browse to a URI in which you can request the response in a .jpeg format.</span></span> <span data-ttu-id="f9abb-131">Откройте браузер и перейдите по заданному URI.</span><span class="sxs-lookup"><span data-stu-id="f9abb-131">Open a browser and browse to the given URI.</span></span>  
   
-5.  Чтобы завершить образец, нажмите любую клавишу.  
+5.  <span data-ttu-id="f9abb-132">Чтобы завершить образец, нажмите любую клавишу.</span><span class="sxs-lookup"><span data-stu-id="f9abb-132">Press any key to terminate the sample.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.  Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="f9abb-133">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="f9abb-133">The samples may already be installed on your machine.</span></span> <span data-ttu-id="f9abb-134">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="f9abb-134">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="f9abb-135">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="f9abb-135">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="f9abb-136">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="f9abb-136">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Web\AdvancedFormatSelection`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AdvancedFormatSelection`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="f9abb-137">См. также</span><span class="sxs-lookup"><span data-stu-id="f9abb-137">See Also</span></span>

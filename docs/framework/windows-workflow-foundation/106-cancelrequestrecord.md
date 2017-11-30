@@ -1,51 +1,55 @@
 ---
-title: "106 ― CancelRequestRecord | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "106 ― CancelRequestRecord"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f72a59aa-8093-4a8e-94df-40acaffb1ffb
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 36de6eabb247cb59e8759032e5cd6d6996b52d45
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 106 ― CancelRequestRecord
-## Свойства  
+# <a name="106---cancelrequestrecord"></a><span data-ttu-id="ddc82-102">106 ― CancelRequestRecord</span><span class="sxs-lookup"><span data-stu-id="ddc82-102">106 - CancelRequestRecord</span></span>
+## <a name="properties"></a><span data-ttu-id="ddc82-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="ddc82-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Id|106|  
-|Keywords|EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking|  
-|Level|Information|  
-|Channel|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="ddc82-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="ddc82-104">Id</span></span>|<span data-ttu-id="ddc82-105">106</span><span class="sxs-lookup"><span data-stu-id="ddc82-105">106</span></span>|  
+|<span data-ttu-id="ddc82-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="ddc82-106">Keywords</span></span>|<span data-ttu-id="ddc82-107">EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking</span><span class="sxs-lookup"><span data-stu-id="ddc82-107">EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking</span></span>|  
+|<span data-ttu-id="ddc82-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="ddc82-108">Level</span></span>|<span data-ttu-id="ddc82-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="ddc82-109">Information</span></span>|  
+|<span data-ttu-id="ddc82-110">Канал</span><span class="sxs-lookup"><span data-stu-id="ddc82-110">Channel</span></span>|<span data-ttu-id="ddc82-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="ddc82-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## Описание  
- Это событие создается участником отслеживания ETW, когда действие внутри рабочего процесса создает запись cancelrequestedrecord.  
+## <a name="description"></a><span data-ttu-id="ddc82-112">Описание</span><span class="sxs-lookup"><span data-stu-id="ddc82-112">Description</span></span>  
+ <span data-ttu-id="ddc82-113">Это событие создается участником отслеживания ETW, когда действие внутри рабочего процесса создает запись cancelrequestedrecord.</span><span class="sxs-lookup"><span data-stu-id="ddc82-113">This event is emitted by the ETW tracking participant when a activity within a workflow instance emits cancelrequestedrecord.</span></span>  
   
-## Message  
- TrackRecord\=CancelRequestedRecord, InstanceId\=%1, RecordNumber\=%2, EventTime\=%3, Name\=%4, ActivityId\=%5, ActivityInstanceId\=%6, ActivityTypeName\=%7, ChildActivityName\=%8, ChildActivityId\=%9, ChildActivityInstanceId\=%10, ChildActivityTypeName\=%11, Annotations\=%12, ProfileName\=%13  
+## <a name="message"></a><span data-ttu-id="ddc82-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="ddc82-114">Message</span></span>  
+ <span data-ttu-id="ddc82-115">TrackRecord=CancelRequestedRecord, InstanceId=%1, RecordNumber=%2, EventTime=%3, Name=%4, ActivityId=%5, ActivityInstanceId=%6, ActivityTypeName=%7, ChildActivityName=%8, ChildActivityId=%9, ChildActivityInstanceId=%10, ChildActivityTypeName=%11, Annotations=%12, ProfileName=%13</span><span class="sxs-lookup"><span data-stu-id="ddc82-115">TrackRecord = CancelRequestedRecord, InstanceID=%1, RecordNumber=%2, EventTime=%3, Name=%4, ActivityId=%5, ActivityInstanceId=%6, ActivityTypeName = %7, ChildActivityName = %8, ChildActivityId = %9, ChildActivityInstanceId = %10, ChildActivityTypeName =%11, Annotations=%12, ProfileName = %13</span></span>  
   
-## Подробности  
+## <a name="details"></a><span data-ttu-id="ddc82-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="ddc82-116">Details</span></span>  
   
-|Имя элемента данных|Тип элемента данных|Описание|  
-|-------------------------|-------------------------|--------------|  
-|InstanceId|xs:GUID|Идентификатор экземпляра для рабочего процесса.|  
-|RecordNumber|xs:long|Порядковый номер созданной записи.|  
-|EventTime|xs:dateTime|Время в формате UTC, когда было создано событие.|  
-|Name|xs:string|Имя действия, запросившего операцию отмены.|  
-|ActivityId|xs:string|Идентификатор действия, запросившего операцию отмены.|  
-|ActivityInstanceId|xs:string|Идентификатор экземпляра действия, запросившего операцию отмены.|  
-|ActivityTypeName|xs:string|Тип действия, запросившего операцию отмены.|  
-|ChildActivityName|xs:string|Имя отменяемого действия.|  
-|ChildActivityId|xs:string|Идентификатор отменяемого действия.|  
-|ChildActivityInstanceId|xs:string|Идентификатор экземпляра отменяемого действия.|  
-|ChildActivityTypeName|xs:string|Тип отменяемого действия.|  
-|Annotations|xs:string|Заметки, добавленные к этому событию.Значения хранятся в xml\-элементе в формате \<элементы\>\< имя элемента \= "annotationName" тип\="System.String"\>annotationValue\<\/элемент\>\<\/элементы\>.Если ни одной заметки не указано, строка содержит \<элементы\/\>.Размер событий ETW ограничен размером буфера ETW или максимальным размером полезных данных для события ETW.Если размер события превышает пределы ETW, событие усекается путем отбрасывания заметок и замены значения заметок значением \<элементы\>...\<\/элементы\>.|  
-|ProfileName|xs:string|Имя или профиль отслеживания, который привел к созданию этого события.|  
-|HostReference|xs:string|Для служб, размещенных на веб\-сайтах, это поле служит уникальным идентификатором службы в веб\-иерархии.Формат определяется следующим образом: «имя\_веб\-сайта виртуальный\_путь\_приложения&#124;виртуальный\_путь\_службы&#124;имя\_службы». Пример: «веб\-сайт по умолчанию\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService»|  
-|AppDomain|xs:string|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|
+|<span data-ttu-id="ddc82-117">Имя элемента данных</span><span class="sxs-lookup"><span data-stu-id="ddc82-117">Data Item Name</span></span>|<span data-ttu-id="ddc82-118">Тип элемента данных</span><span class="sxs-lookup"><span data-stu-id="ddc82-118">Data Item Type</span></span>|<span data-ttu-id="ddc82-119">Описание</span><span class="sxs-lookup"><span data-stu-id="ddc82-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="ddc82-120">InstanceId</span><span class="sxs-lookup"><span data-stu-id="ddc82-120">InstanceId</span></span>|<span data-ttu-id="ddc82-121">xs:GUID</span><span class="sxs-lookup"><span data-stu-id="ddc82-121">xs:GUID</span></span>|<span data-ttu-id="ddc82-122">Идентификатор экземпляра для рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="ddc82-122">The instance id for the workflow</span></span>|  
+|<span data-ttu-id="ddc82-123">RecordNumber</span><span class="sxs-lookup"><span data-stu-id="ddc82-123">RecordNumber</span></span>|<span data-ttu-id="ddc82-124">xs:long</span><span class="sxs-lookup"><span data-stu-id="ddc82-124">xs:long</span></span>|<span data-ttu-id="ddc82-125">Порядковый номер созданной записи.</span><span class="sxs-lookup"><span data-stu-id="ddc82-125">The sequence number of the emitted record</span></span>|  
+|<span data-ttu-id="ddc82-126">EventTime</span><span class="sxs-lookup"><span data-stu-id="ddc82-126">EventTime</span></span>|<span data-ttu-id="ddc82-127">xs:dateTime</span><span class="sxs-lookup"><span data-stu-id="ddc82-127">xs:dateTime</span></span>|<span data-ttu-id="ddc82-128">Время в формате UTC, когда было создано событие.</span><span class="sxs-lookup"><span data-stu-id="ddc82-128">The time in UTC when the event was emitted</span></span>|  
+|<span data-ttu-id="ddc82-129">Имя</span><span class="sxs-lookup"><span data-stu-id="ddc82-129">Name</span></span>|<span data-ttu-id="ddc82-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="ddc82-130">xs:string</span></span>|<span data-ttu-id="ddc82-131">Имя действия, запросившего операцию отмены.</span><span class="sxs-lookup"><span data-stu-id="ddc82-131">The name of the activity that requested the cancel operation</span></span>|  
+|<span data-ttu-id="ddc82-132">ActivityId</span><span class="sxs-lookup"><span data-stu-id="ddc82-132">ActivityId</span></span>|<span data-ttu-id="ddc82-133">xs:string</span><span class="sxs-lookup"><span data-stu-id="ddc82-133">xs:string</span></span>|<span data-ttu-id="ddc82-134">Идентификатор действия, запросившего операцию отмены.</span><span class="sxs-lookup"><span data-stu-id="ddc82-134">The id of the activity that requested the cancel operation</span></span>|  
+|<span data-ttu-id="ddc82-135">ActivityInstanceId</span><span class="sxs-lookup"><span data-stu-id="ddc82-135">ActivityInstanceId</span></span>|<span data-ttu-id="ddc82-136">xs:string</span><span class="sxs-lookup"><span data-stu-id="ddc82-136">xs:string</span></span>|<span data-ttu-id="ddc82-137">Идентификатор экземпляра действия, запросившего операцию отмены.</span><span class="sxs-lookup"><span data-stu-id="ddc82-137">The instance id of the activity that requested the cancel operation</span></span>|  
+|<span data-ttu-id="ddc82-138">ActivityTypeName</span><span class="sxs-lookup"><span data-stu-id="ddc82-138">ActivityTypeName</span></span>|<span data-ttu-id="ddc82-139">xs:string</span><span class="sxs-lookup"><span data-stu-id="ddc82-139">xs:string</span></span>|<span data-ttu-id="ddc82-140">Тип действия, запросившего операцию отмены.</span><span class="sxs-lookup"><span data-stu-id="ddc82-140">The type of the activity that requested the cancel operation</span></span>|  
+|<span data-ttu-id="ddc82-141">ChildActivityName</span><span class="sxs-lookup"><span data-stu-id="ddc82-141">ChildActivityName</span></span>|<span data-ttu-id="ddc82-142">xs:string</span><span class="sxs-lookup"><span data-stu-id="ddc82-142">xs:string</span></span>|<span data-ttu-id="ddc82-143">Имя отменяемого действия.</span><span class="sxs-lookup"><span data-stu-id="ddc82-143">The name of the activity being canceled</span></span>|  
+|<span data-ttu-id="ddc82-144">ChildActivityId</span><span class="sxs-lookup"><span data-stu-id="ddc82-144">ChildActivityId</span></span>|<span data-ttu-id="ddc82-145">xs:string</span><span class="sxs-lookup"><span data-stu-id="ddc82-145">xs:string</span></span>|<span data-ttu-id="ddc82-146">Идентификатор отменяемого действия.</span><span class="sxs-lookup"><span data-stu-id="ddc82-146">The id of the activity being canceled</span></span>|  
+|<span data-ttu-id="ddc82-147">ChildActivityInstanceId</span><span class="sxs-lookup"><span data-stu-id="ddc82-147">ChildActivityInstanceId</span></span>|<span data-ttu-id="ddc82-148">xs:string</span><span class="sxs-lookup"><span data-stu-id="ddc82-148">xs:string</span></span>|<span data-ttu-id="ddc82-149">Идентификатор экземпляра отменяемого действия.</span><span class="sxs-lookup"><span data-stu-id="ddc82-149">The instance id of the activity being canceled</span></span>|  
+|<span data-ttu-id="ddc82-150">ChildActivityTypeName</span><span class="sxs-lookup"><span data-stu-id="ddc82-150">ChildActivityTypeName</span></span>|<span data-ttu-id="ddc82-151">xs:string</span><span class="sxs-lookup"><span data-stu-id="ddc82-151">xs:string</span></span>|<span data-ttu-id="ddc82-152">Тип отменяемого действия.</span><span class="sxs-lookup"><span data-stu-id="ddc82-152">The type of the activity being canceled</span></span>|  
+|<span data-ttu-id="ddc82-153">Заметки</span><span class="sxs-lookup"><span data-stu-id="ddc82-153">Annotations</span></span>|<span data-ttu-id="ddc82-154">xs:string</span><span class="sxs-lookup"><span data-stu-id="ddc82-154">xs:string</span></span>|<span data-ttu-id="ddc82-155">Заметки, добавленные к этому событию.</span><span class="sxs-lookup"><span data-stu-id="ddc82-155">The annotations that were added to this event.</span></span>  <span data-ttu-id="ddc82-156">Значения хранятся в виде элемента xml в формате \<элементы >\< имя элемента = «annotationName» type="System.String" > annotationValue\</товар > \< /items >.</span><span class="sxs-lookup"><span data-stu-id="ddc82-156">The values are stored in an xml element in the format \<items>\< item  name = "annotationName" type="System.String">annotationValue\</item>\</items>.</span></span>  <span data-ttu-id="ddc82-157">Если не задано никаких заметок, строка содержит \<элементы / >.</span><span class="sxs-lookup"><span data-stu-id="ddc82-157">If no annotations are specified then the string contains \<items/>.</span></span> <span data-ttu-id="ddc82-158">Размер событий ETW ограничен размером буфера ETW или максимальным размером полезных данных для события ETW.</span><span class="sxs-lookup"><span data-stu-id="ddc82-158">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="ddc82-159">Если размер события превышает пределы трассировки событий Windows, то событие усекается путем отбрасывания заметок и замены значения заметок значением с \<элементы >...  \< /items >.</span><span class="sxs-lookup"><span data-stu-id="ddc82-159">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the annotation value with \<items>...\</items>.</span></span>|  
+|<span data-ttu-id="ddc82-160">ProfileName</span><span class="sxs-lookup"><span data-stu-id="ddc82-160">ProfileName</span></span>|<span data-ttu-id="ddc82-161">xs:string</span><span class="sxs-lookup"><span data-stu-id="ddc82-161">xs:string</span></span>|<span data-ttu-id="ddc82-162">Имя или профиль отслеживания, который привел к созданию этого события.</span><span class="sxs-lookup"><span data-stu-id="ddc82-162">The name or the tracking profile that resulted in this event being emitted</span></span>|  
+|<span data-ttu-id="ddc82-163">HostReference</span><span class="sxs-lookup"><span data-stu-id="ddc82-163">HostReference</span></span>|<span data-ttu-id="ddc82-164">xs:string</span><span class="sxs-lookup"><span data-stu-id="ddc82-164">xs:string</span></span>|<span data-ttu-id="ddc82-165">Для служб, размещенных на веб-сайтах, это поле служит уникальным идентификатором службы в веб-иерархии.</span><span class="sxs-lookup"><span data-stu-id="ddc82-165">For web hosted services, this field uniquely identifies the service in the web hierarchy.</span></span>  <span data-ttu-id="ddc82-166">Ее формат определяется как "веб-сайт имя виртуальный путь приложения &#124; Виртуальный путь службы &#124; ServiceName "Пример:" по умолчанию веб-сайта или CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService "</span><span class="sxs-lookup"><span data-stu-id="ddc82-166">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName' Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'</span></span>|  
+|<span data-ttu-id="ddc82-167">AppDomain</span><span class="sxs-lookup"><span data-stu-id="ddc82-167">AppDomain</span></span>|<span data-ttu-id="ddc82-168">xs:string</span><span class="sxs-lookup"><span data-stu-id="ddc82-168">xs:string</span></span>|<span data-ttu-id="ddc82-169">Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="ddc82-169">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

@@ -1,31 +1,34 @@
 ---
-title: "&lt;system.serviceModel&gt; рабочего процесса | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "&lt;system.serviceModel&gt; рабочего процесса"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 97247abe629d12b6c60d8157786b9b82e9e14f4b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;system.serviceModel&gt; рабочего процесса
-В этом разделе конфигурации содержатся все элементы конфигурации рабочего процесса.  
+# <a name="ltsystemservicemodelgt-of-workflow"></a><span data-ttu-id="00408-102">&lt;system.serviceModel&gt; рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="00408-102">&lt;system.serviceModel&gt; of workflow</span></span>
+<span data-ttu-id="00408-103">В этом разделе конфигурации содержатся все элементы конфигурации рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="00408-103">This configuration section contains all the workflow configuration elements.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="00408-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="00408-104">Syntax</span></span>  
   
-```  
-  
+```xml  
 <system.ServiceModel>  
   <behaviors>  
     <serviceBehaviors>  
     <behavior name="String">  
-      <bufferReceive maxPendingMessagesPerChannel=”Integer” />  
+      <bufferReceive maxPendingMessagesPerChannel="Integer" />  
       <etwTracking profileName="String" />  
      <sendMessageChannelCache allowUnsafeCaching="Boolean" >          
         <channelSettings idleTimeout="TimeSpan" leaseTimeout="TimeSpan" maxItemsInCache="Integer" />  
@@ -44,14 +47,14 @@ caps.handback.revision: 4
     </behavior>  
     </serviceBehaviors>  
   </behaviors>  
-  <tracking>    
+  <tracking>    
      <participants>   
       <add name="String"   
            profileName="String"  
            type="String" />   
      </participants>   
-    <trackingProfile name="String">  
-      <workflow activityDefinitionId="String">  
+    <trackingProfile name="String">  
+      <workflow activityDefinitionId="String">  
           <activityScheduledQueries>  
              <activityScheduledQuery activityName="String"  
                  childActivityName="String"/>  
@@ -83,34 +86,34 @@ caps.handback.revision: 4
                  faultHandlerActivityName="String"/>  
           </faultPropagationQueries>  
          <workflowInstanceQueries>  
-            <workflowInstanceQuery>  
-              <states>  
-                 <state name="String"/>  
-              </states>  
-          </workflowInstanceQuery>  
+            <workflowInstanceQuery>  
+              <states>  
+                 <state name="String"/>  
+              </states>  
+          </workflowInstanceQuery>  
         </workflowInstanceQueries>  
-      </workflow>  
-    </trackingProfile>          
-   </profiles>  
+      </workflow>  
+    </trackingProfile>          
+   </profiles>  
   </tracking>  
 </system.ServiceModel>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="00408-105">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="00408-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="00408-106">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="00408-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
- Нет  
+### <a name="attributes"></a><span data-ttu-id="00408-107">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="00408-107">Attributes</span></span>  
+ <span data-ttu-id="00408-108">Нет</span><span class="sxs-lookup"><span data-stu-id="00408-108">None</span></span>  
   
-### Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="00408-109">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="00408-109">Child Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<behaviors\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|Этот раздел определяет коллекцию **serviceBehaviors**.  Каждый элемент в коллекции определяет элементы поведения, используемые службами.  Каждый элемент поведения идентифицируется по уникальному атрибуту **name**.|  
-|[\<tracking\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|Представляет раздел конфигурации для определения настроек отслеживания для службы рабочего процесса.<br /><br /> Дополнительные сведения об отслеживании рабочего процесса и его конфигурации см. в разделах [Отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md) и [Настройка отслеживания рабочего процесса](../../../../../docs/framework/windows-workflow-foundation//configuring-tracking-for-a-workflow.md).|  
+|<span data-ttu-id="00408-110">Элемент</span><span class="sxs-lookup"><span data-stu-id="00408-110">Element</span></span>|<span data-ttu-id="00408-111">Описание</span><span class="sxs-lookup"><span data-stu-id="00408-111">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="00408-112">\<поведения ></span><span class="sxs-lookup"><span data-stu-id="00408-112">\<behaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|<span data-ttu-id="00408-113">В этом разделе определены **serviceBehaviors** коллекции.</span><span class="sxs-lookup"><span data-stu-id="00408-113">This section defines the **serviceBehaviors** collection.</span></span>  <span data-ttu-id="00408-114">Каждый элемент в коллекции определяет элементы поведения, используемые службами.</span><span class="sxs-lookup"><span data-stu-id="00408-114">Each element in the collection defines behavior elements consumed by services.</span></span> <span data-ttu-id="00408-115">Каждый элемент поведения идентифицируется по уникальному **имя** атрибута.</span><span class="sxs-lookup"><span data-stu-id="00408-115">Each behavior element is identified by its unique **name** attribute.</span></span>|  
+|[<span data-ttu-id="00408-116">\<Отслеживание ></span><span class="sxs-lookup"><span data-stu-id="00408-116">\<tracking></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|<span data-ttu-id="00408-117">Представляет раздел конфигурации для определения настроек отслеживания для службы рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="00408-117">Represents a configuration section for defining tracking settings for a workflow service.</span></span><br /><br /> <span data-ttu-id="00408-118">Дополнительные сведения об отслеживании рабочих процессов и их конфигурации см. в разделе [отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) и [Настройка отслеживания для рабочего процесса](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="00408-118">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Configuring Tracking for a Workflow](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span></span>|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="00408-119">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="00408-119">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|\<configuration\>|Корневой элемент для всех элементов конфигурации в файле конфигурации .NET.|
+|<span data-ttu-id="00408-120">Элемент</span><span class="sxs-lookup"><span data-stu-id="00408-120">Element</span></span>|<span data-ttu-id="00408-121">Описание</span><span class="sxs-lookup"><span data-stu-id="00408-121">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="00408-122">\<configuration></span><span class="sxs-lookup"><span data-stu-id="00408-122">\<configuration></span></span>|<span data-ttu-id="00408-123">Корневой элемент для всех элементов конфигурации в файле конфигурации .NET.</span><span class="sxs-lookup"><span data-stu-id="00408-123">The root element for all configuration elements in a .NET configuration file.</span></span>|

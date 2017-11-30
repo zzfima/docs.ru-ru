@@ -1,1 +1,1 @@
-Windows XP Home Edition, Windows XP Professional, Windows Server 2003
+<span data-ttu-id="d95fd-101">Windows XP Home Edition, Windows XP Professional, Windows Server 2003</span><span class="sxs-lookup"><span data-stu-id="d95fd-101">Windows XP Home Edition, Windows XP Professional, Windows Server 2003</span></span>

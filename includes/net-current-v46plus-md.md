@@ -1,1 +1,1 @@
-Доступно с версии 4.6
+<span data-ttu-id="478fe-101">Доступно с версии 4.6</span><span class="sxs-lookup"><span data-stu-id="478fe-101">Available since 4.6</span></span>

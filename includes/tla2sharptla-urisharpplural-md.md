@@ -1,1 +1,1 @@
-Идентификаторы URI
+<span data-ttu-id="9ecb2-101">Идентификаторы URI</span><span class="sxs-lookup"><span data-stu-id="9ecb2-101">URIs</span></span>

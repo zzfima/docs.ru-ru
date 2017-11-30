@@ -1,1 +1,1 @@
-библиотека динамической компоновки (DLL)
+<span data-ttu-id="eb993-101">библиотека динамической компоновки (DLL)</span><span class="sxs-lookup"><span data-stu-id="eb993-101">dynamic-link library (DLL)</span></span>

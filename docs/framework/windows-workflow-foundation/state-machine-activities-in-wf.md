@@ -1,28 +1,32 @@
 ---
-title: "Действия конечного автомата в WF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Действия конечного автомата в WF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 93312eaf-07e0-4a55-b4f7-4cdbbc4dee2d
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5056557c9fee74e9a16b235220c797e1f6356ce3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Действия конечного автомата в WF
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] предоставляет несколько системных действий и конструкторов действий для создания рабочих процессов конечного автомата.  
+# <a name="state-machine-activities-in-wf"></a><span data-ttu-id="9b332-102">Действия конечного автомата в WF</span><span class="sxs-lookup"><span data-stu-id="9b332-102">State Machine Activities in WF</span></span>
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<span data-ttu-id="9b332-103"> предусматривает несколько системных действий и конструкторов действий для создания рабочих процессов конечного автомата.</span><span class="sxs-lookup"><span data-stu-id="9b332-103"> provides several system-provided activities and activity designers for creating state machine workflows.</span></span>  
   
 |||  
 |-|-|  
-|<xref:System.Activities.Statements.StateMachine>|Выполняет включенные действия на основе известной парадигмы конечного автомата.|  
-|<xref:System.Activities.Statements.State>|Представляет состояние в конечном автомате.|  
-|<xref:System.Activities.Core.Presentation.FinalState>|Представляет завершающее состояние в конечном автомате.<xref:System.Activities.Core.Presentation.FinalState> — конструктор действий, который при использовании создает <xref:System.Activities.Statements.State>, предварительно настроенное как завершающие состояние.Дополнительные сведения см. в разделе [Конструктор FinalState Activity](../Topic/FinalState%20Activity%20Designer.md).|  
-|<xref:System.Activities.Statements.Transition>|Представляет переход между двумя состояниями.Не существует элемента **Область элементов** для <xref:System.Activities.Statements.Transition>; переходы создаются в конструкторе рабочих процессов путем перетаскивания линии между двумя состояниями или путем размещения состояния на треугольниках, отображаемых при наведении одного состояния на другое.Дополнительные сведения см. в разделе [Конструктор действий переходов](../Topic/Transition%20Activity%20Designer.md).|  
+|<xref:System.Activities.Statements.StateMachine>|<span data-ttu-id="9b332-104">Выполняет включенные действия на основе известной парадигмы конечного автомата.</span><span class="sxs-lookup"><span data-stu-id="9b332-104">Executes contained activities using the familiar state machine paradigm.</span></span>|  
+|<xref:System.Activities.Statements.State>|<span data-ttu-id="9b332-105">Представляет состояние в конечном компьютере.</span><span class="sxs-lookup"><span data-stu-id="9b332-105">Represents a state in a state machine.</span></span>|  
+|<xref:System.Activities.Core.Presentation.FinalState>|<span data-ttu-id="9b332-106">Представляет завершающее состояние в конечном автомате.</span><span class="sxs-lookup"><span data-stu-id="9b332-106">Represents a terminating state in a state machine.</span></span> <span data-ttu-id="9b332-107"><xref:System.Activities.Core.Presentation.FinalState> - конструктор действий, который при использовании создает <xref:System.Activities.Statements.State>, предварительно настроенное как завершающие состояние.</span><span class="sxs-lookup"><span data-stu-id="9b332-107"><xref:System.Activities.Core.Presentation.FinalState> is an activity designer that when used creates a <xref:System.Activities.Statements.State> preconfigured as a terminating state.</span></span> <span data-ttu-id="9b332-108">Дополнительные сведения см. в разделе [конструктора действий FinalState](/visualstudio/workflow-designer/finalstate-activity-designer).</span><span class="sxs-lookup"><span data-stu-id="9b332-108">For more information, see [FinalState Activity Designer](/visualstudio/workflow-designer/finalstate-activity-designer).</span></span>|  
+|<xref:System.Activities.Statements.Transition>|<span data-ttu-id="9b332-109">Представляет переход между двумя состояниями.</span><span class="sxs-lookup"><span data-stu-id="9b332-109">Represents the transition between two states.</span></span> <span data-ttu-id="9b332-110">Имеется не **элементов** элемент <xref:System.Activities.Statements.Transition>; переходы создаются в конструкторе рабочих процессов путем перетаскивания линии между двумя состояниями или путем сброса состояния на треугольники, появляющиеся при установке одного состояния прохождении курсора над другой .</span><span class="sxs-lookup"><span data-stu-id="9b332-110">There is no **Toolbox** item for <xref:System.Activities.Statements.Transition>; transitions are created on the workflow designer by dragging and dropping a line between two states, or by dropping a state on the triangles that appear when one state is hovered over another.</span></span> <span data-ttu-id="9b332-111">Дополнительные сведения см. в разделе [конструктор действий переходов](/visualstudio/workflow-designer/transition-activity-designer).</span><span class="sxs-lookup"><span data-stu-id="9b332-111">For more information, see [Transition Activity Designer](/visualstudio/workflow-designer/transition-activity-designer).</span></span>|  
   
-## См. также  
- [Учебник по началу работы](../../../docs/framework/windows-workflow-foundation//getting-started-tutorial.md)
+## <a name="see-also"></a><span data-ttu-id="9b332-112">См. также</span><span class="sxs-lookup"><span data-stu-id="9b332-112">See Also</span></span>  
+ [<span data-ttu-id="9b332-113">Руководство по началу работы</span><span class="sxs-lookup"><span data-stu-id="9b332-113">Getting Started Tutorial</span></span>](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)

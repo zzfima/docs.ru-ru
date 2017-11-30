@@ -1,1 +1,1 @@
-Проигрыватель Windows Media (Microsoft)
+<span data-ttu-id="4f553-101">Проигрыватель Windows Media (Microsoft)</span><span class="sxs-lookup"><span data-stu-id="4f553-101">Microsoft Windows Media Player</span></span>

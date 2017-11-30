@@ -1,35 +1,37 @@
 ---
-title: "Пользовательская конечная точка защищенных метаданных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Пользовательская конечная точка защищенных метаданных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-caps.latest.revision: 19
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 78fbde5f83d4a24594e06b787756c7ab3762d75a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Пользовательская конечная точка защищенных метаданных
-В этом образце показано, как реализовать службу с защищенной конечной точкой метаданных, которая использует одну из привязок, не предназначенную для обмена метаданными, и как настроить средство [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) или клиентов на извлечение метаданных из такой конечной точки метаданных.Существует две системные привязки для предоставления конечных точек метаданных: mexHttpBinding и mexHttpsBinding.Привязка mexHttpBinding используется для предоставления конечной точки метаданных через HTTP в незащищенном режиме.Привязка mexHttpsBinding используется для предоставления конечной точки метаданных через HTTP в защищенном режиме.В этом образце описывается предоставление защищенной конечной точки метаданных с использованием объекта <xref:System.ServiceModel.WSHttpBinding>.Такой подход следует использовать, если требуется изменить параметры безопасности привязки, но при этом нежелательно использовать протокол HTTPS.При использовании привязки mexHttpsBinding конечная точка метаданных будет защищена, но изменение параметров привязки окажется невозможным.  
+# <a name="custom-secure-metadata-endpoint"></a><span data-ttu-id="eb752-102">Пользовательская конечная точка защищенных метаданных</span><span class="sxs-lookup"><span data-stu-id="eb752-102">Custom Secure Metadata Endpoint</span></span>
+<span data-ttu-id="eb752-103">Этот образец демонстрирует реализацию службы, конечную точку метаданных, безопасности, использующий одну из привязок, не принадлежащий метаданным exchange и настройте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) или клиентов для выборки метаданные из такой конечной точки метаданных.</span><span class="sxs-lookup"><span data-stu-id="eb752-103">This sample demonstrates how to implement a service with a secure metadata endpoint that uses one of the non-metadata exchange bindings, and how to configure [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) or clients to fetch the metadata from such a metadata endpoint.</span></span> <span data-ttu-id="eb752-104">Существует две системные привязки для предоставления конечных точек метаданных: mexHttpBinding и mexHttpsBinding.</span><span class="sxs-lookup"><span data-stu-id="eb752-104">There are two system-provided bindings available for exposing metadata endpoints: mexHttpBinding and mexHttpsBinding.</span></span> <span data-ttu-id="eb752-105">Привязка mexHttpBinding используется для предоставления конечной точки метаданных через HTTP в незащищенном режиме.</span><span class="sxs-lookup"><span data-stu-id="eb752-105">mexHttpBinding is used to expose a metadata endpoint over HTTP in a non-secure manner.</span></span> <span data-ttu-id="eb752-106">Привязка mexHttpsBinding используется для предоставления конечной точки метаданных через HTTP в защищенном режиме.</span><span class="sxs-lookup"><span data-stu-id="eb752-106">mexHttpsBinding is used to expose a metadata endpoint over HTTPS in a secure manner.</span></span> <span data-ttu-id="eb752-107">В этом образце описывается предоставление защищенной конечной точки метаданных с использованием объекта <xref:System.ServiceModel.WSHttpBinding>.</span><span class="sxs-lookup"><span data-stu-id="eb752-107">This sample illustrates how to expose a secure metadata endpoint using the <xref:System.ServiceModel.WSHttpBinding>.</span></span> <span data-ttu-id="eb752-108">Такой подход следует использовать, если требуется изменить параметры безопасности привязки, но при этом нежелательно использовать протокол HTTPS.</span><span class="sxs-lookup"><span data-stu-id="eb752-108">You would want to do this when you want to change the security settings on the binding, but you do not want to use HTTPS.</span></span> <span data-ttu-id="eb752-109">При использовании привязки mexHttpsBinding конечная точка метаданных будет защищена, но изменение параметров привязки окажется невозможным.</span><span class="sxs-lookup"><span data-stu-id="eb752-109">If you use the mexHttpsBinding your metadata endpoint will be secure, but there is no way to modify the binding settings.</span></span>  
   
 > [!NOTE]
->  Процедура установки и инструкции по построению для этого образца приведены в конце этого раздела.  
+>  <span data-ttu-id="eb752-110">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="eb752-110">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
-## Служба  
- Служба в образце имеет две конечные точки.Конечная точка приложения служит в качестве контракта `ICalculator` для привязки `WSHttpBinding` с включенным сеансом `ReliableSession` и режимом безопасности `Message` с использованием сертификатов.Конечная точка метаданных также использует привязку `WSHttpBinding` с аналогичными параметрами безопасности, но без `ReliableSession`.Соответствующая конфигурация представлена ниже.  
+## <a name="service"></a><span data-ttu-id="eb752-111">Служба</span><span class="sxs-lookup"><span data-stu-id="eb752-111">Service</span></span>  
+ <span data-ttu-id="eb752-112">Служба в образце имеет две конечные точки.</span><span class="sxs-lookup"><span data-stu-id="eb752-112">The service in this sample has two endpoints.</span></span> <span data-ttu-id="eb752-113">Конечная точка приложения служит в качестве контракта `ICalculator` для привязки `WSHttpBinding` с включенным сеансом `ReliableSession` и режимом безопасности `Message` с использованием сертификатов.</span><span class="sxs-lookup"><span data-stu-id="eb752-113">The application endpoint serves the `ICalculator` contract on a `WSHttpBinding` with `ReliableSession` enabled and `Message` security using certificates.</span></span> <span data-ttu-id="eb752-114">Конечная точка метаданных также использует привязку `WSHttpBinding` с аналогичными параметрами безопасности, но без `ReliableSession`.</span><span class="sxs-lookup"><span data-stu-id="eb752-114">The metadata endpoint also uses `WSHttpBinding`, with the same security settings but with no `ReliableSession`.</span></span> <span data-ttu-id="eb752-115">Соответствующая конфигурация представлена ниже.</span><span class="sxs-lookup"><span data-stu-id="eb752-115">Here is the relevant configuration:</span></span>  
   
-```  
-<services>  
-    …  
+```xml  
+<services>   
     <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
-            behaviorConfiguration="CalculatorServiceBehavior">  
+             behaviorConfiguration="CalculatorServiceBehavior">  
      <!-- use base address provided by host -->  
      <endpoint address=""  
        binding="wsHttpBinding"  
@@ -58,24 +60,24 @@ caps.handback.revision: 19
  </bindings>  
 ```  
   
- Во многих других образцах конечная точка метаданных использует привязку по умолчанию `mexHttpBinding`, которая не является безопасной.В данном примере безопасность метаданных обеспечивается с помощью привязки `WSHttpBinding` с режимом безопасности `Message`.Чтобы клиенты метаданных могли извлекать эти метаданные, они должны быть настроены с соответствующей привязкой.В образце показаны два таких клиента.  
+ <span data-ttu-id="eb752-116">Во многих других образцах конечная точка метаданных использует привязку по умолчанию `mexHttpBinding`, которая не является безопасной.</span><span class="sxs-lookup"><span data-stu-id="eb752-116">In many of the other samples, the metadata endpoint uses the default `mexHttpBinding`, which is not secure.</span></span> <span data-ttu-id="eb752-117">В данном примере безопасность метаданных обеспечивается с помощью привязки `WSHttpBinding` с режимом безопасности `Message`.</span><span class="sxs-lookup"><span data-stu-id="eb752-117">Here the metadata is secured using `WSHttpBinding` with `Message` security.</span></span> <span data-ttu-id="eb752-118">Чтобы клиенты метаданных могли извлекать эти метаданные, они должны быть настроены с соответствующей привязкой.</span><span class="sxs-lookup"><span data-stu-id="eb752-118">In order for metadata clients to retrieve this metadata, they must be configured with a matching binding.</span></span> <span data-ttu-id="eb752-119">В образце показаны два таких клиента.</span><span class="sxs-lookup"><span data-stu-id="eb752-119">This sample demonstrates two such clients.</span></span>  
   
- Первый клиент использует Svcutil.exe для извлечения метаданных, а также создания клиентского кода и конфигурации во время разработки.Поскольку служба использует для метаданных привязку, отличную от привязки по умолчанию, средство Svcutil.exe необходимо настроить определенным образом, чтобы оно могло получать метаданные из службы с помощью данной привязки.  
+ <span data-ttu-id="eb752-120">Первый клиент использует Svcutil.exe для извлечения метаданных, а также создания клиентского кода и конфигурации во время разработки.</span><span class="sxs-lookup"><span data-stu-id="eb752-120">The first client uses Svcutil.exe to fetch the metadata and generate client code and configuration at design time.</span></span> <span data-ttu-id="eb752-121">Поскольку служба использует для метаданных привязку, отличную от привязки по умолчанию, средство Svcutil.exe необходимо настроить определенным образом, чтобы оно могло получать метаданные из службы с помощью данной привязки.</span><span class="sxs-lookup"><span data-stu-id="eb752-121">Because the service uses a non-default binding for the metadata, the Svcutil.exe tool must be specifically configured so that it can get the metadata from the service using that binding.</span></span>  
   
- Второй клиент использует распознаватель `MetadataResolver` с целью динамического извлечения метаданных для известного контракта с последующим вызовом операций на динамически создаваемом клиенте.  
+ <span data-ttu-id="eb752-122">Второй клиент использует распознаватель `MetadataResolver` с целью динамического извлечения метаданных для известного контракта с последующим вызовом операций на динамически создаваемом клиенте.</span><span class="sxs-lookup"><span data-stu-id="eb752-122">The second client uses the `MetadataResolver` to dynamically fetch the metadata for a known contract and then invoke operations on the dynamically generated client.</span></span>  
   
-## Клиент Svcutil  
- При использовании привязки по умолчанию для размещения конечной точки `IMetadataExchange` можно запустить Svcutil.exe с указанием адреса этой конечной точки.  
+## <a name="svcutil-client"></a><span data-ttu-id="eb752-123">Клиент Svcutil</span><span class="sxs-lookup"><span data-stu-id="eb752-123">Svcutil client</span></span>  
+ <span data-ttu-id="eb752-124">При использовании привязки по умолчанию для размещения конечной точки `IMetadataExchange` можно запустить Svcutil.exe с указанием адреса этой конечной точки.</span><span class="sxs-lookup"><span data-stu-id="eb752-124">When using the default binding to host your `IMetadataExchange` endpoint, you can run Svcutil.exe with the address of that endpoint:</span></span>  
   
 ```  
 svcutil http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- И это будет работать.Однако в этом образце для размещения метаданных сервер использует привязку, отличную от привязки по умолчанию.Поэтому средство Svcutil.exe необходимо настроить на использование правильной привязки.Это можно сделать с помощью файла Svcutil.exe.config.  
+ <span data-ttu-id="eb752-125">И это будет работать.</span><span class="sxs-lookup"><span data-stu-id="eb752-125">and it works.</span></span> <span data-ttu-id="eb752-126">Однако в этом образце для размещения метаданных сервер использует привязку, отличную от привязки по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="eb752-126">But in this sample, the server uses a non-default endpoint to host the metadata.</span></span> <span data-ttu-id="eb752-127">Поэтому средство Svcutil.exe необходимо настроить на использование правильной привязки.</span><span class="sxs-lookup"><span data-stu-id="eb752-127">So Svcutil.exe must be instructed to use the correct binding.</span></span> <span data-ttu-id="eb752-128">Это можно сделать с помощью файла Svcutil.exe.config.</span><span class="sxs-lookup"><span data-stu-id="eb752-128">This can be done using a Svcutil.exe.config file.</span></span>  
   
- Файл Svcutil.exe.config выглядит как обычный файл конфигурации клиента.Единственными необычными аспектами являются имя и контракт конечной точки клиента:  
+ <span data-ttu-id="eb752-129">Файл Svcutil.exe.config выглядит как обычный файл конфигурации клиента.</span><span class="sxs-lookup"><span data-stu-id="eb752-129">The Svcutil.exe.config file looks like a normal client configuration file.</span></span> <span data-ttu-id="eb752-130">Единственными необычными аспектами являются имя и контракт конечной точки клиента:</span><span class="sxs-lookup"><span data-stu-id="eb752-130">The only unusual aspects are the client endpoint name and contract:</span></span>  
   
-```  
+```xml  
 <endpoint name="http"  
           binding="wsHttpBinding"  
           bindingConfiguration="Binding1"  
@@ -83,26 +85,26 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
           contract="IMetadataExchange" />  
 ```  
   
- Имя конечной точки должно совпадать с именем схемы адреса, по которому размещаются метаданные, а контрактом конечной точки должен быть `IMetadataExchange`.Таким образом, при запуске команды  
+ <span data-ttu-id="eb752-131">Имя конечной точки должно совпадать с именем схемы адреса, по которому размещаются метаданные, а контрактом конечной точки должен быть `IMetadataExchange`.</span><span class="sxs-lookup"><span data-stu-id="eb752-131">The endpoint name must be the name of the scheme of the address where the metadata is hosted and the endpoint contract must be `IMetadataExchange`.</span></span> <span data-ttu-id="eb752-132">Таким образом, при запуске команды</span><span class="sxs-lookup"><span data-stu-id="eb752-132">Thus, when Svcutil.exe is run with a command-line such as the following:</span></span>  
   
 ```  
 svcutil http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- выполняется поиск конечной точки с именем "http" и контракта `IMetadataExchange` для настройки привязки и поведения при взаимодействии с конечной точкой метаданных.В остальной части файла Svcutil.exe.config в образце определяются конфигурация привязки и учетные данные поведения для соответствия конфигурации сервера конечной точки метаданных.  
+ <span data-ttu-id="eb752-133">выполняется поиск конечной точки с именем "http" и контракта `IMetadataExchange` для настройки привязки и поведения при взаимодействии с конечной точкой метаданных.</span><span class="sxs-lookup"><span data-stu-id="eb752-133">it looks for the endpoint named "http" and contract `IMetadataExchange` to configure the binding and behavior of the communication exchange with the metadata endpoint.</span></span> <span data-ttu-id="eb752-134">В остальной части файла Svcutil.exe.config в образце определяются конфигурация привязки и учетные данные поведения для соответствия конфигурации сервера конечной точки метаданных.</span><span class="sxs-lookup"><span data-stu-id="eb752-134">The rest of the Svcutil.exe.config file in the sample specifies the binding configuration and behavior credentials to match the server's configuration of the metadata endpoint.</span></span>  
   
- Чтобы средство Svcutil.exe могло использовать конфигурацию, заданную в файле Svcutil.exe.config, файл Svcutil.exe должен находиться в одном каталоге с файлом конфигурации.Таким образом, необходимо скопировать файл Svcutil.exe из расположения установки в каталог, содержащий файл Svcutil.exe.config.Затем из этого каталога необходимо выполнить следующую команду:  
+ <span data-ttu-id="eb752-135">Чтобы средство Svcutil.exe могло использовать конфигурацию, заданную в файле Svcutil.exe.config, файл Svcutil.exe должен находиться в одном каталоге с файлом конфигурации.</span><span class="sxs-lookup"><span data-stu-id="eb752-135">In order for Svcutil.exe to pick up the configuration in Svcutil.exe.config, Svcutil.exe must be in the same directory as the configuration file.</span></span> <span data-ttu-id="eb752-136">Таким образом, необходимо скопировать файл Svcutil.exe из расположения установки в каталог, содержащий файл Svcutil.exe.config.</span><span class="sxs-lookup"><span data-stu-id="eb752-136">As a result, you must copy Svcutil.exe from its install location to the directory that contains the Svcutil.exe.config file.</span></span> <span data-ttu-id="eb752-137">Затем из этого каталога необходимо выполнить следующую команду:</span><span class="sxs-lookup"><span data-stu-id="eb752-137">Then from that directory, run the following command:</span></span>  
   
 ```  
 .\svcutil.exe http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- Начальнаяточка с обратной косой чертой ".'\\" в начале команды гарантирует, что будет выполнена копия Svcutil.exe, расположенная в данном каталоге \(для которой задан соответствующий файл Svcutil.exe.config\).  
+ <span data-ttu-id="eb752-138">Начальные». \\«гарантирует, что копия Svcutil.exe в этом каталоге (тот, который имеет соответствующий файл Svcutil.exe.config) запускается.</span><span class="sxs-lookup"><span data-stu-id="eb752-138">The leading ".\\" ensures that the copy of Svcutil.exe in this directory (the one which has a corresponding Svcutil.exe.config) is run.</span></span>  
   
-## Клиент MetadataResolver  
- Если клиенту известен контракт и способ обращения к метаданным во время разработки, клиент может динамически определять привязку и адрес конечных точек приложения с помощью распознавателя `MetadataResolver`.Это демонстрируется в данном образце клиента: показано, как настроить привязку и учетные данные, используемые распознавателем `MetadataResolver`, путем создания и настройки клиента `MetadataExchangeClient`.  
+## <a name="metadataresolver-client"></a><span data-ttu-id="eb752-139">Клиент MetadataResolver</span><span class="sxs-lookup"><span data-stu-id="eb752-139">MetadataResolver client</span></span>  
+ <span data-ttu-id="eb752-140">Если клиенту известен контракт и способ обращения к метаданным во время разработки, клиент может динамически определять привязку и адрес конечных точек приложения с помощью распознавателя `MetadataResolver`.</span><span class="sxs-lookup"><span data-stu-id="eb752-140">If the client knows the contract and how to talk to the metadata at design time, the client can dynamically find out the binding and address of application endpoints using the `MetadataResolver`.</span></span> <span data-ttu-id="eb752-141">Это демонстрируется в данном образце клиента: показано, как настроить привязку и учетные данные, используемые распознавателем `MetadataResolver`, путем создания и настройки клиента `MetadataExchangeClient`.</span><span class="sxs-lookup"><span data-stu-id="eb752-141">This sample client demonstrates this, showing how to configure the binding and credentials used by `MetadataResolver` by creating and configuring a `MetadataExchangeClient`.</span></span>  
   
- Информацию о привязке и сертификате, указанную в файле Svcutil.exe.config, можно задать императивно в клиенте `MetadataExchangeClient`:  
+ <span data-ttu-id="eb752-142">Информацию о привязке и сертификате, указанную в файле Svcutil.exe.config, можно задать императивно в клиенте `MetadataExchangeClient`:</span><span class="sxs-lookup"><span data-stu-id="eb752-142">The same binding and certificate information that appeared in Svcutil.exe.config can be specified imperatively on the `MetadataExchangeClient`:</span></span>  
   
 ```  
 // Specify the Metadata Exchange binding and its security mode  
@@ -118,7 +120,7 @@ mexClient.SoapCredentials.ServiceCertificate.SetDefaultCertificate(    StoreLoca
     X509FindType.FindBySubjectName, "localhost");  
 ```  
   
- При настроенном клиенте `mexClient` можно перечислить требуемые контракты и использовать распознаватель `MetadataResolver` для получения списка конечных точек с этими контрактами.  
+ <span data-ttu-id="eb752-143">При настроенном клиенте `mexClient` можно перечислить требуемые контракты и использовать распознаватель `MetadataResolver` для получения списка конечных точек с этими контрактами.</span><span class="sxs-lookup"><span data-stu-id="eb752-143">With the `mexClient` configured, we can enumerate the contracts we are interested in, and use `MetadataResolver` to fetch a list of endpoints with those contracts:</span></span>  
   
 ```  
 // The contract we want to fetch metadata for  
@@ -130,68 +132,68 @@ EndpointAddress mexAddress = new    EndpointAddress(ConfigurationManager.AppSett
 ServiceEndpointCollection endpoints =    MetadataResolver.Resolve(contracts, mexAddress, mexClient);  
 ```  
   
- Наконец, можно использовать информацию из этих конечных точек для инициализации привязки и адреса фабрики `ChannelFactory`, используемой для создания каналов взаимодействия с конечными точками приложения.  
+ <span data-ttu-id="eb752-144">Наконец, можно использовать информацию из этих конечных точек для инициализации привязки и адреса фабрики `ChannelFactory`, используемой для создания каналов взаимодействия с конечными точками приложения.</span><span class="sxs-lookup"><span data-stu-id="eb752-144">Finally we can use the information from those endpoints to initialize the binding and address of a `ChannelFactory` used to create channels to communicate with the application endpoints.</span></span>  
   
 ```  
 ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Binding, endpoint.Address);  
 ```  
   
- Основная задача данного образца клиента — показать, что при использовании распознавателя `MetadataResolver` и необходимости задания пользовательских привязок или поведений для обмена метаданными можно использовать клиент `MetadataExchangeClient` для задания этих пользовательских параметров.  
+ <span data-ttu-id="eb752-145">Основная задача данного образца клиента - показать, что при использовании распознавателя `MetadataResolver` и необходимости задания пользовательских привязок или поведений для обмена метаданными можно использовать клиент `MetadataExchangeClient` для задания этих пользовательских параметров.</span><span class="sxs-lookup"><span data-stu-id="eb752-145">The key point of this sample client is to demonstrate that, if you are using `MetadataResolver`, and you must specify custom bindings or behaviors for the metadata exchange communication, you can use a `MetadataExchangeClient` to specify those custom settings.</span></span>  
   
-#### Настройка и построение образца  
+#### <a name="to-set-up-and-build-the-sample"></a><span data-ttu-id="eb752-146">Настройка и сборка образца</span><span class="sxs-lookup"><span data-stu-id="eb752-146">To set up and build the sample</span></span>  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="eb752-147">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="eb752-147">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Чтобы построить решение, следуйте инструкциям раздела [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="eb752-148">Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="eb752-148">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-#### Запуск образца на том же компьютере  
+#### <a name="to-run-the-sample-on-the-same-machine"></a><span data-ttu-id="eb752-149">Запуск образца на том же компьютере</span><span class="sxs-lookup"><span data-stu-id="eb752-149">To run the sample on the same machine</span></span>  
   
-1.  Запустите файл Setup.bat из папки установки образца.При этом устанавливаются все сертификаты, необходимые для запуска образца.Обратите внимание, что файл Setup.bat использует средство FindPrivateKey.exe, которое устанавливается путем запуска файла setupCertTool.bat, указанного в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="eb752-150">Запустите файл Setup.bat из папки установки примера.</span><span class="sxs-lookup"><span data-stu-id="eb752-150">Run Setup.bat from the sample install folder.</span></span> <span data-ttu-id="eb752-151">При этом устанавливаются все сертификаты, необходимые для выполнения образца.</span><span class="sxs-lookup"><span data-stu-id="eb752-151">This installs all the certificates required for running the sample.</span></span> <span data-ttu-id="eb752-152">Обратите внимание, что файл Setup.bat использует средство FindPrivateKey.exe, которое устанавливается при запуске setupCertTool.bat из [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="eb752-152">Note that Setup.bat uses the FindPrivateKey.exe tool, which is installed by running setupCertTool.bat from [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Запустите клиентское приложение из каталога \\MetadataResolverClient\\bin или \\SvcutilClient\\bin.Действия клиента отображаются в консольном приложении клиента.  
+2.  <span data-ttu-id="eb752-153">Запустите клиентское приложение из каталога \MetadataResolverClient\bin или \SvcutilClient\bin.</span><span class="sxs-lookup"><span data-stu-id="eb752-153">Run the client application from \MetadataResolverClient\bin or \SvcutilClient\bin.</span></span> <span data-ttu-id="eb752-154">Действия клиента отображаются в консольном приложении клиента.</span><span class="sxs-lookup"><span data-stu-id="eb752-154">Client activity is displayed on the client console application.</span></span>  
   
-3.  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/ru-ru/8787c877-5e96-42da-8214-fa737a38f10b).  
+3.  <span data-ttu-id="eb752-155">Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="eb752-155">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-4.  После завершения работы образца запустите файл Cleanup.bat, чтобы удалить сертификаты.В других образцах обеспечения безопасности используются те же сертификаты.  
+4.  <span data-ttu-id="eb752-156">После завершения работы образца запустите файл Cleanup.bat, чтобы удалить сертификаты.</span><span class="sxs-lookup"><span data-stu-id="eb752-156">Remove the certificates by running Cleanup.bat when you have finished with the sample.</span></span> <span data-ttu-id="eb752-157">В других образцах обеспечения безопасности используются те же сертификаты.</span><span class="sxs-lookup"><span data-stu-id="eb752-157">Other security samples use the same certificates.</span></span>  
   
-#### Выполнение образца на нескольких компьютерах  
+#### <a name="to-run-the-sample-across-machines"></a><span data-ttu-id="eb752-158">Выполнение примера на нескольких компьютерах</span><span class="sxs-lookup"><span data-stu-id="eb752-158">To run the sample across machines</span></span>  
   
-1.  На сервере выполните команду `setup.bat service`.При выполнении команды `setup.bat` с аргументом `service` создается сертификат службы с полным именем домена компьютера, который экспортируется в файл с именем Service.cer.  
+1.  <span data-ttu-id="eb752-159">На сервере выполните команду `setup.bat service`.</span><span class="sxs-lookup"><span data-stu-id="eb752-159">On the server, run `setup.bat service`.</span></span> <span data-ttu-id="eb752-160">Под управлением `setup.bat` с `service` аргумент создается сертификат службы с полным доменным именем компьютера и экспортируется в файл с именем Service.cer.</span><span class="sxs-lookup"><span data-stu-id="eb752-160">Running `setup.bat` with the `service` argument creates a service certificate with the fully-qualified domain name of the machine and exports the service certificate to a file named Service.cer.</span></span>  
   
-2.  Измените Web.config на сервере так, чтобы в файле отражалось новое имя сертификата.Для этого необходимо изменить атрибут `findValue` в элементе [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) на полное доменное имя компьютера.  
+2.  <span data-ttu-id="eb752-161">Измените Web.config на сервере так, чтобы в файле отражалось новое имя сертификата.</span><span class="sxs-lookup"><span data-stu-id="eb752-161">On the server, edit Web.config to reflect the new certificate name.</span></span> <span data-ttu-id="eb752-162">То есть изменить `findValue` атрибута в [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) элемента, который требуется полное доменное имя компьютера.</span><span class="sxs-lookup"><span data-stu-id="eb752-162">That is, change the `findValue` attribute in the [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) element to the fully-qualified domain name of the machine.</span></span>  
   
-3.  Скопируйте файл Service.cer из каталога службы в клиентский каталог на клиентском компьютере.  
+3.  <span data-ttu-id="eb752-163">Скопируйте файл Service.cer из каталога службы в клиентский каталог на клиентском компьютере.</span><span class="sxs-lookup"><span data-stu-id="eb752-163">Copy the Service.cer file from the service directory to the client directory on the client machine.</span></span>  
   
-4.  На клиенте выполните команду `setup.bat client`.При выполнении команды `setup.bat` с аргументом `client` создается сертификат клиента с именем Client.com, который экспортируется в файл с именем Client.cer.  
+4.  <span data-ttu-id="eb752-164">На клиенте выполните команду `setup.bat client`.</span><span class="sxs-lookup"><span data-stu-id="eb752-164">On the client, run `setup.bat client`.</span></span> <span data-ttu-id="eb752-165">Под управлением `setup.bat` с `client` создается сертификат клиента с именем Client.com, который экспортируется в файл с именем Client.cer.</span><span class="sxs-lookup"><span data-stu-id="eb752-165">Running `setup.bat` with the `client` argument creates a client certificate named Client.com and exports the client certificate to a file named Client.cer.</span></span>  
   
-5.  В файле App.config клиента `MetadataResolverClient` на клиентском компьютере измените значение адреса конечной точки обмена метаданными, чтобы оно соответствовало новому адресу службы.Для этого замените имя localhost полным именем домена сервера.Кроме того, замените вхождение "localhost" в файле metadataResolverClient.cs новым именем сертификата службы \(полным доменным именем сервера\).Выполните то же самое для файла App.config проекта SvcutilClient.  
+5.  <span data-ttu-id="eb752-166">В файле App.config клиента `MetadataResolverClient` на клиентском компьютере измените значение адреса конечной точки обмена метаданными, чтобы оно соответствовало новому адресу службы.</span><span class="sxs-lookup"><span data-stu-id="eb752-166">In the App.config file of the `MetadataResolverClient` on the client machine, change the address value of the mex endpoint to match the new address of your service.</span></span> <span data-ttu-id="eb752-167">Для этого замените имя localhost полным именем домена сервера.</span><span class="sxs-lookup"><span data-stu-id="eb752-167">You do this by replacing localhost with the fully-qualified domain name of the server.</span></span> <span data-ttu-id="eb752-168">Кроме того, замените вхождение "localhost" в файле metadataResolverClient.cs новым именем сертификата службы (полным доменным именем сервера).</span><span class="sxs-lookup"><span data-stu-id="eb752-168">Also change the occurrence of "localhost" in the metadataResolverClient.cs file to the new service certificate name (the fully-qualified domain name of the server).</span></span> <span data-ttu-id="eb752-169">Выполните то же самое для файла App.config проекта SvcutilClient.</span><span class="sxs-lookup"><span data-stu-id="eb752-169">Do the same thing for the App.config of the SvcutilClient project.</span></span>  
   
-6.  Скопируйте файл Client.cer из клиентского каталога в каталог службы на сервере.  
+6.  <span data-ttu-id="eb752-170">Скопируйте файл Client.cer из клиентского каталога в каталог службы на сервере.</span><span class="sxs-lookup"><span data-stu-id="eb752-170">Copy the Client.cer file from the client directory to the service directory on the server.</span></span>  
   
-7.  На клиенте запустите файл `ImportServiceCert.bat`.Он импортирует сертификат службы из файла Service.cer в хранилище CurrentUser \- TrustedPeople.  
+7.  <span data-ttu-id="eb752-171">На клиенте выполните команду `ImportServiceCert.bat`.</span><span class="sxs-lookup"><span data-stu-id="eb752-171">On the client, run `ImportServiceCert.bat`.</span></span> <span data-ttu-id="eb752-172">Он импортирует сертификат службы из файла Service.cer в хранилище CurrentUser - TrustedPeople.</span><span class="sxs-lookup"><span data-stu-id="eb752-172">This imports the service certificate from the Service.cer file into the CurrentUser - TrustedPeople store.</span></span>  
   
-8.  На сервере запустите файл `ImportClientCert.bat`. Он импортирует сертификат клиента из файла Client.cer в хранилище LocalMachine \- TrustedPeople.  
+8.  <span data-ttu-id="eb752-173">На сервере запустите файл `ImportClientCert.bat`. Он импортирует сертификат клиента из файла Client.cer в хранилище LocalMachine - TrustedPeople.</span><span class="sxs-lookup"><span data-stu-id="eb752-173">On the server, run `ImportClientCert.bat`, This imports the client certificate from the Client.cer file into the LocalMachine - TrustedPeople store.</span></span>  
   
-9. На компьютере службы выполните построение проекта службы в Visual Studio и выберите страницу справки в веб\-браузере, чтобы проверить что она запущена.  
+9. <span data-ttu-id="eb752-174">На компьютере службы выполните построение проекта службы в Visual Studio и выберите страницу справки в веб-браузере, чтобы проверить что она запущена.</span><span class="sxs-lookup"><span data-stu-id="eb752-174">On the service machine, build the service project in Visual Studio and select the help page in a web browser to verify that it is running.</span></span>  
   
-10. На клиентском компьютере запустите клиент MetadataResolverClient или SvcutilClient из VS.  
+10. <span data-ttu-id="eb752-175">На клиентском компьютере запустите клиент MetadataResolverClient или SvcutilClient из VS.</span><span class="sxs-lookup"><span data-stu-id="eb752-175">On the client machine, run the MetadataResolverClient or the SvcutilClient from VS.</span></span>  
   
-    1.  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/ru-ru/8787c877-5e96-42da-8214-fa737a38f10b).  
+    1.  <span data-ttu-id="eb752-176">Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="eb752-176">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-#### Очистка после образца  
+#### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="eb752-177">Очистка после образца</span><span class="sxs-lookup"><span data-stu-id="eb752-177">To clean up after the sample</span></span>  
   
--   После завершения работы образца запустите в папке образцов файл Cleanup.bat.  
+-   <span data-ttu-id="eb752-178">После завершения работы примера запустите в папке примеров файл Cleanup.bat.</span><span class="sxs-lookup"><span data-stu-id="eb752-178">Run Cleanup.bat in the samples folder once you have finished running the sample.</span></span>  
   
     > [!NOTE]
-    >  Этот скрипт не удаляет сертификаты службы на клиенте при выполнении образца на нескольких компьютерах.Если образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], в которых использовались сертификаты, выполнялись на нескольких компьютерах, обязательно удалите сертификаты службы, которые были установлены в хранилище «CurrentUser \- TrustedPeople».Для этого используйте следующую команду: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`.Например, `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    >  <span data-ttu-id="eb752-179">Этот скрипт не удаляет сертификаты службы на клиенте при выполнении примера на нескольких компьютерах.</span><span class="sxs-lookup"><span data-stu-id="eb752-179">This script does not remove service certificates on a client when running this sample across machines.</span></span> <span data-ttu-id="eb752-180">Если примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], в которых использовались сертификаты, выполнялись на нескольких компьютерах, обязательно удалите сертификаты службы, которые были установлены в хранилище CurrentUser - TrustedPeople.</span><span class="sxs-lookup"><span data-stu-id="eb752-180">If you have run [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] samples that use certificates across machines, be sure to clear the service certificates that have been installed in the CurrentUser - TrustedPeople store.</span></span> <span data-ttu-id="eb752-181">Для этого используйте следующую команду: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`.</span><span class="sxs-lookup"><span data-stu-id="eb752-181">To do this, use the following command: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`.</span></span> <span data-ttu-id="eb752-182">Например, `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.</span><span class="sxs-lookup"><span data-stu-id="eb752-182">For example: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="eb752-183">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="eb752-183">The samples may already be installed on your machine.</span></span> <span data-ttu-id="eb752-184">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="eb752-184">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="eb752-185">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="eb752-185">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="eb752-186">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="eb752-186">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Extensibility\Metadata\CustomMexEndpoint`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\CustomMexEndpoint`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="eb752-187">См. также</span><span class="sxs-lookup"><span data-stu-id="eb752-187">See Also</span></span>

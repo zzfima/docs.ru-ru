@@ -1,26 +1,29 @@
 ---
-title: "Создание подписанного и/или зашифрованного пользовательского заголовка | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание пользовательского заголовка, который подписан и- или шифрования"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e8668b37-c79f-4714-9de5-afcb88b9ff02
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ac43be1978a2a6e80b08e0c4bcd5e0e92043719e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Создание подписанного и/или зашифрованного пользовательского заголовка
-При вызове службы, которая не является службой WCF, с помощью клиента WCF иногда приходится применять пользовательские заголовки протокола SOAP.  В WCF имеется ошибка канонизации, которая не позволяет подписанным и зашифрованным пользовательским заголовкам работать со службами, не являющимися службами WCF.  Проблема вызывается неверной канонизацией пространств имен XML по умолчанию.  Она возникает только при вызове служб, не являющихся службами WCF, с подписанными и\/или зашифрованными пользовательскими заголовками.  Когда служба получает сообщение, содержащее подписанный и\/или зашифрованный пользовательский заголовок, ей не удается проверить сигнатуру.  Данный обходный путь решения проблемы обходит проблему канонизации, позволяет работать со службами, которые не являются службами WCF, но не мешает работать и со службами WCF.  
+# <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a><span data-ttu-id="e1090-102">Создание пользовательского заголовка, который подписан и- или шифрования</span><span class="sxs-lookup"><span data-stu-id="e1090-102">Creating a custom header that is signed and-or encrypted</span></span>
+<span data-ttu-id="e1090-103">При вызове службы, которая не является службой WCF, с помощью клиента WCF иногда приходится применять пользовательские заголовки протокола SOAP.</span><span class="sxs-lookup"><span data-stu-id="e1090-103">When calling a non-WCF service using a WCF client it is sometimes necessary to use custom SOAP headers.</span></span> <span data-ttu-id="e1090-104">В WCF имеется ошибка канонизации, которая не позволяет подписанным и зашифрованным пользовательским заголовкам работать со службами, не являющимися службами WCF.</span><span class="sxs-lookup"><span data-stu-id="e1090-104">There is a canonicalization bug in WCF that prevents custom headers that are signed and encrypted from working with a non-WCF service.</span></span> <span data-ttu-id="e1090-105">Проблема вызывается неверной канонизацией пространств имен XML по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="e1090-105">The problem is caused by the incorrect canonicalization of default XML namespaces.</span></span> <span data-ttu-id="e1090-106">Она возникает только при вызове служб, не являющихся службами WCF, с подписанными и/или зашифрованными пользовательскими заголовками.</span><span class="sxs-lookup"><span data-stu-id="e1090-106">This is only problematic when calling non-WCF services with custom headers that are signed and/or encrypted.</span></span>  <span data-ttu-id="e1090-107">Когда служба получает сообщение, содержащее подписанный и/или зашифрованный пользовательский заголовок, ей не удается проверить сигнатуру.</span><span class="sxs-lookup"><span data-stu-id="e1090-107">When the service receives the message containing the signed and/or encrypted custom header it is unable to verify the signature.</span></span> <span data-ttu-id="e1090-108">Данный обходный путь решения проблемы обходит проблему канонизации, позволяет работать со службами, которые не являются службами WCF, но не мешает работать и со службами WCF.</span><span class="sxs-lookup"><span data-stu-id="e1090-108">This workaround avoids the canonicalization bug, allows interoperability with non-WCF services, but does not prevent interoperability with WCF services.</span></span>  
   
-## Определение пользовательского заголовка  
- Пользовательские заголовки определяются посредством определения контракта сообщения и отметки элементов, которые должны отправляться в форме заголовков, атрибутом <xref:System.ServiceModel.MessageHeaderAttribute>.  Чтобы обойти ошибку канонизации, необходимо, чтобы сериализатор XML объявлял пространство имен в пользовательском заголовке с помощью префикса вместо объявления пространства имен по умолчанию.  В коде ниже показывается определение типа данных, который будет использоваться в качестве заголовка сообщения, с правильным объявлением пространства имен.  
+## <a name="defining-the-custom-header"></a><span data-ttu-id="e1090-109">Определение пользовательского заголовка</span><span class="sxs-lookup"><span data-stu-id="e1090-109">Defining the custom header</span></span>  
+ <span data-ttu-id="e1090-110">Пользовательские заголовки определяются посредством определения контракта сообщения и отметки элементов, которые должны отправляться в форме заголовков, атрибутом <xref:System.ServiceModel.MessageHeaderAttribute>.</span><span class="sxs-lookup"><span data-stu-id="e1090-110">Custom headers are defined by defining a message contract and marking the members you want to be sent as headers with a <xref:System.ServiceModel.MessageHeaderAttribute> attribute.</span></span> <span data-ttu-id="e1090-111">Чтобы обойти ошибку канонизации, необходимо, чтобы сериализатор XML объявлял пространство имен в пользовательском заголовке с помощью префикса вместо объявления пространства имен по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="e1090-111">To work around the canonicalization bug you must ensure that the XML serializer declares the namespace for the custom header with a prefix instead of a default namespace declaration.</span></span> <span data-ttu-id="e1090-112">В коде ниже показывается определение типа данных, который будет использоваться в качестве заголовка сообщения, с правильным объявлением пространства имен.</span><span class="sxs-lookup"><span data-stu-id="e1090-112">The following code shows how to define the data type that will be used as a message header with the correct namespace declaration.</span></span>  
   
 ```  
 [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.648")]  
@@ -50,7 +53,7 @@ public partial class msgHeaderElement
 }  
 ```  
   
- Этот код объявляет новый тип, `msgHeaderElement`, который будет сериализоваться с помощью сериализатора XML.  Когда экземпляр данного типа сериализуется, он будет определять пространство имен с префиксом «h», тем самым обходя ошибку канонизации.  Затем контракт сообщения определяет экземпляр `msgHeaderElement` и отмечает его атрибутом <xref:System.ServiceModel.MessageHeaderAttribute>, как показано в следующем примере.  
+ <span data-ttu-id="e1090-113">Этот код объявляет новый тип, `msgHeaderElement`, который будет сериализоваться с помощью сериализатора XML.</span><span class="sxs-lookup"><span data-stu-id="e1090-113">This code declares a new type called `msgHeaderElement` that will be serialized with the XML Serializer.</span></span> <span data-ttu-id="e1090-114">Когда экземпляр данного типа сериализуется, он будет определять пространство имен с префиксом «h», тем самым обходя ошибку канонизации.</span><span class="sxs-lookup"><span data-stu-id="e1090-114">When an instance of this type is serialized, it will define a namespace with an ‘h’ prefix, thus working around the canonicalization bug.</span></span>  <span data-ttu-id="e1090-115">Затем контракт сообщения определяет экземпляр `msgHeaderElement` и отмечает его атрибутом <xref:System.ServiceModel.MessageHeaderAttribute>, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="e1090-115">The message contract would then define an instance of `msgHeaderElement` and mark it with the <xref:System.ServiceModel.MessageHeaderAttribute> attribute as shown in the following example.</span></span>  
   
 ```  
 [MessageContract]  
@@ -61,10 +64,9 @@ public  class MyMessageContract
    public msgHeaderElement;  
    // other message contents...  
 }  
-  
 ```  
   
-## См. также  
- [Контракт сообщения по умолчанию](../../../../docs/framework/wcf/samples/default-message-contract.md)   
- [Контракты сообщений](../../../../docs/framework/wcf/samples/message-contracts.md)   
- [Использование контрактов сообщений](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+## <a name="see-also"></a><span data-ttu-id="e1090-116">См. также</span><span class="sxs-lookup"><span data-stu-id="e1090-116">See Also</span></span>  
+ [<span data-ttu-id="e1090-117">Контракт сообщения по умолчанию</span><span class="sxs-lookup"><span data-stu-id="e1090-117">Default Message Contract</span></span>](../../../../docs/framework/wcf/samples/default-message-contract.md)  
+ [<span data-ttu-id="e1090-118">Контракты сообщений</span><span class="sxs-lookup"><span data-stu-id="e1090-118">Message Contracts</span></span>](../../../../docs/framework/wcf/samples/message-contracts.md)  
+ [<span data-ttu-id="e1090-119">Использование контрактов сообщений</span><span class="sxs-lookup"><span data-stu-id="e1090-119">Using Message Contracts</span></span>](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)

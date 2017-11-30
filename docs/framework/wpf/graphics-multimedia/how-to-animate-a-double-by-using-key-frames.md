@@ -1,50 +1,56 @@
 ---
-title: "Инструкция по Анимации типа Double с помощью ключевых кадров | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "анимация, Double по ключевым кадрам"
-  - "Двойные, анимация по ключевым кадрам"
-  - "ключевые кадры, анимация Double по"
+title: "Инструкция по Анимации типа Double с помощью ключевых кадров"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Doubles [WPF], animating with key frames
+- animation [WPF], Doubles with key frames
+- key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2c4ec6554ee024450e397ee7757649be7537eaae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Инструкция по Анимации типа Double с помощью ключевых кадров
-В этом примере демонстрируется анимация значения свойства, которое принимает <xref:System.Double> с помощью полных кадров.  
+# <a name="how-to-animate-a-double-by-using-key-frames"></a><span data-ttu-id="6afbd-102">Инструкция по Анимации типа Double с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="6afbd-102">How to: Animate a Double by Using Key Frames</span></span>
+<span data-ttu-id="6afbd-103">В этом примере показано, как анимация значения свойства, которое принимает <xref:System.Double> с помощью ключевых кадров.</span><span class="sxs-lookup"><span data-stu-id="6afbd-103">This example shows how to animate the value of a property that takes a <xref:System.Double> by using key frames.</span></span>  
   
-## Пример  
- В следующем примере прямоугольник перемещается по экрану.  В примере используется класс <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> для анимации свойства <xref:System.Windows.Media.TranslateTransform.X%2A> из <xref:System.Windows.Media.TranslateTransform>, примененного к <xref:System.Windows.Shapes.Rectangle>.  Эта анимация, которая повторяется бесконечно, использует три полных кадра следующим способом:  
+## <a name="example"></a><span data-ttu-id="6afbd-104">Пример</span><span class="sxs-lookup"><span data-stu-id="6afbd-104">Example</span></span>  
+ <span data-ttu-id="6afbd-105">В следующем примере прямоугольник перемещается по экрану.</span><span class="sxs-lookup"><span data-stu-id="6afbd-105">The following example moves a rectangle across a screen.</span></span> <span data-ttu-id="6afbd-106">В этом примере <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> класса для анимации <xref:System.Windows.Media.TranslateTransform.X%2A> свойство <xref:System.Windows.Media.TranslateTransform> применены к <xref:System.Windows.Shapes.Rectangle>.</span><span class="sxs-lookup"><span data-stu-id="6afbd-106">The example uses the <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> class to animate the <xref:System.Windows.Media.TranslateTransform.X%2A> property of a <xref:System.Windows.Media.TranslateTransform> applied to a <xref:System.Windows.Shapes.Rectangle>.</span></span> <span data-ttu-id="6afbd-107">Эта анимация, которая бесконечно повторяется, использует три ключевых кадра следующим образом:</span><span class="sxs-lookup"><span data-stu-id="6afbd-107">This animation, which repeats indefinitely, uses three key frames in the following manner:</span></span>  
   
-1.  В течение первых трех секунд используется экземпляр класса <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> для перемещения прямоугольника по пути с равномерной скоростью от его начальной позиции в позицию 500.  Линейные полные кадры, такие как <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> создают гладкий линейный переход между значениями.  
+1.  <span data-ttu-id="6afbd-108">В течение первых трех секунд используется экземпляр <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> класс, чтобы переместить прямоугольник в пути с постоянной скоростью из его начальной позиции в позиции 500.</span><span class="sxs-lookup"><span data-stu-id="6afbd-108">During the first three seconds, uses an instance of the <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> class to move the rectangle along a path at a steady rate from its starting position to the 500 position.</span></span> <span data-ttu-id="6afbd-109">Линейный ключевые кадры, такие как <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> Создание линейной плавный переход между значениями.</span><span class="sxs-lookup"><span data-stu-id="6afbd-109">Linear key frames like <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> create a smooth linear transition between values.</span></span>  
   
-2.  В конце четвертый секунды используется экземпляр класса <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> для мгновенного перемещения прямоугольника к следующей позиции.  Дискретные полные кадры, такие как <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> создают резкие переходы между значениями.  В этом примере прямоугольник находится в начальной позиции и затем внезапно появляется в позиции 500.  
+2.  <span data-ttu-id="6afbd-110">В конце четвертый второй используется экземпляр <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> класс внезапно Перемещение прямоугольника до следующей позиции.</span><span class="sxs-lookup"><span data-stu-id="6afbd-110">At the end of the fourth second, uses an instance of the <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> class to suddenly move the rectangle to the next position.</span></span> <span data-ttu-id="6afbd-111">Дискретные полные кадры типа <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> создают резкие переходы между значениями.</span><span class="sxs-lookup"><span data-stu-id="6afbd-111">Discrete key frames like <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> create sudden jumps between values.</span></span> <span data-ttu-id="6afbd-112">В этом примере прямоугольник находится в начальной позиции, а затем внезапно появляется в позиции 500.</span><span class="sxs-lookup"><span data-stu-id="6afbd-112">In this example, the rectangle is at the starting position and then suddenly appears at the 500 position.</span></span>  
   
-3.  В последние две секунды используется экземпляр класса <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> чтобы возвратить прямоугольник назад, в его начальное положение.  Полные кадры [Spline](GTMT) такие, как <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> создают изменяющийся переход между значениями согласно значению свойства <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A>.  В этом примере прямоугольник начинает перемещаться медленно и затем экспоненциально ускоряется к концу временного сегмента.  
+3.  <span data-ttu-id="6afbd-113">В последних двух секунд используется экземпляр <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> класса, чтобы переместить прямоугольник обратно в исходное положение.</span><span class="sxs-lookup"><span data-stu-id="6afbd-113">In the final two seconds, uses an instance of the <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> class to move the rectangle back to its starting position.</span></span> <span data-ttu-id="6afbd-114">Как и опорных кадров сплайна <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> создания переменного перехода между значениями в соответствии со значением <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="6afbd-114">Spline key frames like <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> create a variable transition between values according to the value of the <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A> property.</span></span> <span data-ttu-id="6afbd-115">В этом примере прямоугольник начинает двигаться медленно и ускоряется экспоненциально к концу временного отрезка.</span><span class="sxs-lookup"><span data-stu-id="6afbd-115">In this example, the rectangle begins by moving slowly and then speeds up exponentially toward the end of the time segment.</span></span>  
   
  [!code-csharp[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/AltDoubleAnimationUsingKeyFramesExample.cs#altdoubleanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/altdoubleanimationusingkeyframesexample.vb#altdoubleanimationusingkeyframeswholepage)]
- [!code-xml[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/AltDoubleAnimationUsingKeyFramesExample.xaml#altdoubleanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/AltDoubleAnimationUsingKeyFramesExample.xaml#altdoubleanimationusingkeyframeswholepage)]  
   
- Полный пример см. на веб\-странице [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012).  
+ <span data-ttu-id="6afbd-116">Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](http://go.microsoft.com/fwlink/?LinkID=160012).</span><span class="sxs-lookup"><span data-stu-id="6afbd-116">For the complete sample, see [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012).</span></span>  
   
- Для совместимости с другими примерами анимации версии кода этого примера используют объект <xref:System.Windows.Media.Animation.Storyboard>, чтобы применить <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>.  Альтернативно, когда применяется единственная анимация в коде, проще использовать метод <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> вместо использования <xref:System.Windows.Media.Animation.Storyboard>.  Пример см. в разделе [Анимация свойства без раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
+ <span data-ttu-id="6afbd-117">Для совместимости с другими примерами анимации версии кода этого примера используют <xref:System.Windows.Media.Animation.Storyboard> объекта для применения <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>.</span><span class="sxs-lookup"><span data-stu-id="6afbd-117">For consistency with other animation examples, the code versions of this example use a <xref:System.Windows.Media.Animation.Storyboard> object to apply the <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>.</span></span> <span data-ttu-id="6afbd-118">Кроме того, при применении одной анимации в коде, проще использовать <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> метод вместо <xref:System.Windows.Media.Animation.Storyboard>.</span><span class="sxs-lookup"><span data-stu-id="6afbd-118">Alternatively, when applying a single animation in code, it is simpler to use the <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> method instead of using a <xref:System.Windows.Media.Animation.Storyboard>.</span></span> <span data-ttu-id="6afbd-119">Пример см. в разделе [Анимация свойства без использования раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).</span><span class="sxs-lookup"><span data-stu-id="6afbd-119">For an example, see [Animate a Property Without Using a Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).</span></span>  
   
-## См. также  
- <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>   
- <xref:System.Windows.Shapes.Rectangle>   
- <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>   
- <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>   
- <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>   
- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [Практические руководства, посвященные анимации по полным кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="6afbd-120">См. также</span><span class="sxs-lookup"><span data-stu-id="6afbd-120">See Also</span></span>  
+ <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
+ <xref:System.Windows.Shapes.Rectangle>  
+ <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>  
+ <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>  
+ <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>  
+ [<span data-ttu-id="6afbd-121">Общие сведения об анимации по ключевым кадрам</span><span class="sxs-lookup"><span data-stu-id="6afbd-121">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [<span data-ttu-id="6afbd-122">Практические руководства, посвященные анимации по ключевым кадрам</span><span class="sxs-lookup"><span data-stu-id="6afbd-122">Key-Frame How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

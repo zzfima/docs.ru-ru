@@ -1,1 +1,1 @@
-Среда выполнения Windows
+<span data-ttu-id="fc9df-101">Среда выполнения Windows</span><span class="sxs-lookup"><span data-stu-id="fc9df-101">Windows Runtime</span></span>

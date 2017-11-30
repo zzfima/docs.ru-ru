@@ -1,57 +1,63 @@
 ---
-title: "Безопасность транспорта с анонимным клиентом | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Безопасность транспорта с анонимным клиентом"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-caps.latest.revision: 14
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: a4d4180a0a60e062ab6d8872b153d5bc8b416708
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Безопасность транспорта с анонимным клиентом
-В этом сценарии [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] для обеспечения конфиденциальности и целостности используется безопасность транспорта \(HTTPS\).Сервер должен пройти проверку подлинности с использованием сертификата SSL, и клиенты должны доверять сертификату сервера.Проверка подлинности клиента не выполняется никаким механизмом и, следовательно, клиент является анонимным.  
+# <a name="transport-security-with-an-anonymous-client"></a><span data-ttu-id="8ddc2-102">Безопасность транспорта с анонимным клиентом</span><span class="sxs-lookup"><span data-stu-id="8ddc2-102">Transport Security with an Anonymous Client</span></span>
+<span data-ttu-id="8ddc2-103">В этом сценарии [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] для обеспечения конфиденциальности и целостности используется безопасность транспорта (HTTPS).</span><span class="sxs-lookup"><span data-stu-id="8ddc2-103">This [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] scenario uses transport security (HTTPS) to ensure confidentiality and integrity.</span></span> <span data-ttu-id="8ddc2-104">Сервер должен пройти проверку подлинности с использованием сертификата SSL, и клиенты должны доверять сертификату сервера.</span><span class="sxs-lookup"><span data-stu-id="8ddc2-104">The server must be authenticated with a Secure Sockets Layer (SSL) certificate, and the clients must trust the server's certificate.</span></span> <span data-ttu-id="8ddc2-105">Проверка подлинности клиента не выполняется никаким механизмом и, следовательно, клиент является анонимным.</span><span class="sxs-lookup"><span data-stu-id="8ddc2-105">The client is not authenticated by any mechanism and is, therefore, anonymous.</span></span>  
   
- Пример приложения см. в разделе [Безопасность транспорта WS](../../../../docs/framework/wcf/samples/ws-transport-security.md).[!INCLUDE[crabout](../../../../includes/crabout-md.md)] безопасности транспорта см. в разделе [Общие сведения о безопасности транспорта](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
+ <span data-ttu-id="8ddc2-106">Пример приложения см. в разделе [безопасность транспорта WS](../../../../docs/framework/wcf/samples/ws-transport-security.md).</span><span class="sxs-lookup"><span data-stu-id="8ddc2-106">For a sample application, see [WS Transport Security](../../../../docs/framework/wcf/samples/ws-transport-security.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="8ddc2-107">безопасность транспорта см. в разделе [Общие сведения о безопасности транспорта](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).</span><span class="sxs-lookup"><span data-stu-id="8ddc2-107"> transport security, see [Transport Security Overview](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] об использовании сертификата со службой см. в разделах [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) и [Практическое руководство. Настройка порта с использованием SSL\-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="8ddc2-108">с помощью сертификата со службой, в разделе [работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) и [как: Настройка порта с SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span><span class="sxs-lookup"><span data-stu-id="8ddc2-108"> using a certificate with a service, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) and [How to: Configure a Port with an SSL Certificate](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span></span>  
   
- ![Использование безопасности транспорта с анонимным клиентом](../../../../docs/framework/wcf/feature-details/media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif "8fa2e931\-0cfb\-4aaa\-9272\-91d652b85d8d")  
+ <span data-ttu-id="8ddc2-109">![Использование безопасности транспорта с анонимным клиентом](../../../../docs/framework/wcf/feature-details/media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif "8fa2e931-0cfb-4aaa-9272-91d652b85d8d")</span><span class="sxs-lookup"><span data-stu-id="8ddc2-109">![Using transport security with an anonymous client](../../../../docs/framework/wcf/feature-details/media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif "8fa2e931-0cfb-4aaa-9272-91d652b85d8d")</span></span>  
   
-|Характеристика|Описание|  
-|--------------------|--------------|  
-|Режим безопасности|Транспорт|  
-|Взаимодействие|С существующими веб\-службами и клиентами|  
-|Проверка подлинности \(сервера\)<br /><br /> Проверка подлинности \(клиента\)|Да<br /><br /> На уровне приложения \(без поддержки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\)|  
-|Целостность|Да|  
-|Конфиденциальность|Да|  
-|Транспорт|HTTPS|  
-|Привязка|<xref:System.ServiceModel.WsHttpBinding>|  
+|<span data-ttu-id="8ddc2-110">Характеристика</span><span class="sxs-lookup"><span data-stu-id="8ddc2-110">Characteristic</span></span>|<span data-ttu-id="8ddc2-111">Описание</span><span class="sxs-lookup"><span data-stu-id="8ddc2-111">Description</span></span>|  
+|--------------------|-----------------|  
+|<span data-ttu-id="8ddc2-112">Режим безопасности</span><span class="sxs-lookup"><span data-stu-id="8ddc2-112">Security Mode</span></span>|<span data-ttu-id="8ddc2-113">Transport</span><span class="sxs-lookup"><span data-stu-id="8ddc2-113">Transport</span></span>|  
+|<span data-ttu-id="8ddc2-114">Взаимодействие</span><span class="sxs-lookup"><span data-stu-id="8ddc2-114">Interoperability</span></span>|<span data-ttu-id="8ddc2-115">С существующими веб-службами и клиентами</span><span class="sxs-lookup"><span data-stu-id="8ddc2-115">With existing Web services and clients</span></span>|  
+|<span data-ttu-id="8ddc2-116">Проверка подлинности (сервера)</span><span class="sxs-lookup"><span data-stu-id="8ddc2-116">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="8ddc2-117">Проверка подлинности (клиента)</span><span class="sxs-lookup"><span data-stu-id="8ddc2-117">Authentication (Client)</span></span>|<span data-ttu-id="8ddc2-118">Да</span><span class="sxs-lookup"><span data-stu-id="8ddc2-118">Yes</span></span><br /><br /> <span data-ttu-id="8ddc2-119">На уровне приложения (без поддержки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)])</span><span class="sxs-lookup"><span data-stu-id="8ddc2-119">Application level (no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] support)</span></span>|  
+|<span data-ttu-id="8ddc2-120">Целостность</span><span class="sxs-lookup"><span data-stu-id="8ddc2-120">Integrity</span></span>|<span data-ttu-id="8ddc2-121">Да</span><span class="sxs-lookup"><span data-stu-id="8ddc2-121">Yes</span></span>|  
+|<span data-ttu-id="8ddc2-122">Конфиденциальность</span><span class="sxs-lookup"><span data-stu-id="8ddc2-122">Confidentiality</span></span>|<span data-ttu-id="8ddc2-123">Да</span><span class="sxs-lookup"><span data-stu-id="8ddc2-123">Yes</span></span>|  
+|<span data-ttu-id="8ddc2-124">Transport</span><span class="sxs-lookup"><span data-stu-id="8ddc2-124">Transport</span></span>|<span data-ttu-id="8ddc2-125">HTTPS</span><span class="sxs-lookup"><span data-stu-id="8ddc2-125">HTTPS</span></span>|  
+|<span data-ttu-id="8ddc2-126">Привязка</span><span class="sxs-lookup"><span data-stu-id="8ddc2-126">Binding</span></span>|<span data-ttu-id="8ddc2-127"><<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`></span><span class="sxs-lookup"><span data-stu-id="8ddc2-127"><<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`></span></span>|  
   
-## Служба  
- Предполагается, что представленные ниже код и конфигурация выполняются независимо.Выполните одно из следующих действий.  
+## <a name="service"></a><span data-ttu-id="8ddc2-128">Служба</span><span class="sxs-lookup"><span data-stu-id="8ddc2-128">Service</span></span>  
+ <span data-ttu-id="8ddc2-129">Предполагается, что представленные ниже код и конфигурация выполняются независимо.</span><span class="sxs-lookup"><span data-stu-id="8ddc2-129">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="8ddc2-130">Выполните одно из следующих действий.</span><span class="sxs-lookup"><span data-stu-id="8ddc2-130">Do one of the following:</span></span>  
   
--   Создайте автономную службу, используя код без конфигурации.  
+-   <span data-ttu-id="8ddc2-131">Создайте автономную службу, используя код без конфигурации.</span><span class="sxs-lookup"><span data-stu-id="8ddc2-131">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   Создайте службу, используя предоставленную конфигурацию, но не определяйте конечные точки.  
+-   <span data-ttu-id="8ddc2-132">Создайте службу, используя предоставленную конфигурацию, но не определяйте конечные точки.</span><span class="sxs-lookup"><span data-stu-id="8ddc2-132">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### Код  
- В следующем коде показано создание конечной точки с использованием безопасности транспорта:  
+### <a name="code"></a><span data-ttu-id="8ddc2-133">Код</span><span class="sxs-lookup"><span data-stu-id="8ddc2-133">Code</span></span>  
+ <span data-ttu-id="8ddc2-134">В следующем коде показано создание конечной точки с использованием безопасности транспорта:</span><span class="sxs-lookup"><span data-stu-id="8ddc2-134">The following code shows how to create an endpoint using transport security:</span></span>  
   
  [!code-csharp[c_SecurityScenarios#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#5)]
  [!code-vb[c_SecurityScenarios#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#5)]  
   
-### Конфигурация  
- В следующем коде настраивается та же конечная точка с использованием конфигурации.Проверка подлинности клиента не выполняется никаким механизмом и, следовательно, клиент является анонимным.  
+### <a name="configuration"></a><span data-ttu-id="8ddc2-135">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="8ddc2-135">Configuration</span></span>  
+ <span data-ttu-id="8ddc2-136">В следующем коде настраивается та же конечная точка с использованием конфигурации.</span><span class="sxs-lookup"><span data-stu-id="8ddc2-136">The following code sets up the same endpoint using configuration.</span></span> <span data-ttu-id="8ddc2-137">Проверка подлинности клиента не выполняется никаким механизмом и, следовательно, клиент является анонимным.</span><span class="sxs-lookup"><span data-stu-id="8ddc2-137">The client is not authenticated by any mechanism, and is therefore anonymous.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -78,24 +84,24 @@ caps.handback.revision: 14
 </configuration>  
 ```  
   
-## Клиент  
- Предполагается, что представленные ниже код и конфигурация выполняются независимо.Выполните одно из следующих действий.  
+## <a name="client"></a><span data-ttu-id="8ddc2-138">Клиент</span><span class="sxs-lookup"><span data-stu-id="8ddc2-138">Client</span></span>  
+ <span data-ttu-id="8ddc2-139">Предполагается, что представленные ниже код и конфигурация выполняются независимо.</span><span class="sxs-lookup"><span data-stu-id="8ddc2-139">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="8ddc2-140">Выполните одно из следующих действий.</span><span class="sxs-lookup"><span data-stu-id="8ddc2-140">Do one of the following:</span></span>  
   
--   Создайте автономный клиент, используя код \(и код клиента\).  
+-   <span data-ttu-id="8ddc2-141">Создайте автономный клиент, используя код (и код клиента).</span><span class="sxs-lookup"><span data-stu-id="8ddc2-141">Create a stand-alone client using the code (and client code).</span></span>  
   
--   Создайте клиент, который не определяет никаких адресов конечных точек.Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации.Пример:  
+-   <span data-ttu-id="8ddc2-142">Создайте клиент, который не определяет никаких адресов конечных точек.</span><span class="sxs-lookup"><span data-stu-id="8ddc2-142">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="8ddc2-143">Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации.</span><span class="sxs-lookup"><span data-stu-id="8ddc2-143">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="8ddc2-144">Например:</span><span class="sxs-lookup"><span data-stu-id="8ddc2-144">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### Код  
+### <a name="code"></a><span data-ttu-id="8ddc2-145">Код</span><span class="sxs-lookup"><span data-stu-id="8ddc2-145">Code</span></span>  
  [!code-csharp[c_SecurityScenarios#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#6)]
  [!code-vb[c_SecurityScenarios#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#6)]  
   
-### Конфигурация  
- Вместо кода для настройки службы можно использовать следующую конфигурацию.  
+### <a name="configuration"></a><span data-ttu-id="8ddc2-146">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="8ddc2-146">Configuration</span></span>  
+ <span data-ttu-id="8ddc2-147">Вместо кода для настройки службы можно использовать следующую конфигурацию.</span><span class="sxs-lookup"><span data-stu-id="8ddc2-147">The following configuration can be used instead of the code to set up the service.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.serviceModel>  
     <bindings>  
@@ -118,8 +124,8 @@ caps.handback.revision: 14
 </configuration>  
 ```  
   
-## См. также  
- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Безопасность транспорта WS](../../../../docs/framework/wcf/samples/ws-transport-security.md)   
- [Общие сведения о безопасности транспорта](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)   
- [Модель безопасности для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x419)
+## <a name="see-also"></a><span data-ttu-id="8ddc2-148">См. также</span><span class="sxs-lookup"><span data-stu-id="8ddc2-148">See Also</span></span>  
+ [<span data-ttu-id="8ddc2-149">Общие сведения о безопасности</span><span class="sxs-lookup"><span data-stu-id="8ddc2-149">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="8ddc2-150">Безопасность транспорта WS</span><span class="sxs-lookup"><span data-stu-id="8ddc2-150">WS Transport Security</span></span>](../../../../docs/framework/wcf/samples/ws-transport-security.md)  
+ [<span data-ttu-id="8ddc2-151">Общие сведения о безопасности транспорта</span><span class="sxs-lookup"><span data-stu-id="8ddc2-151">Transport Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
+ [<span data-ttu-id="8ddc2-152">Модель безопасности для Windows Server App Fabric</span><span class="sxs-lookup"><span data-stu-id="8ddc2-152">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

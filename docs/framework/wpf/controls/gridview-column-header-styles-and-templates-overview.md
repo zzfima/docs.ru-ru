@@ -1,48 +1,51 @@
 ---
-title: "Общие сведения о стилях заголовков столбцов GridView и шаблонах | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "заголовки столбцов, настройка"
-  - "элементы управления, ListView"
-  - "GridView - режим представления, настройка заголовков столбцов"
-  - "верхние колонтитулы, настройка"
-  - "ListView - элементы управления [WPF], стили заголовков столбцов GridView"
+title: "Общие сведения о стилях заголовков столбцов GridView и шаблонах"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- column headers [WPF], customizing
+- ListView controls [WPF], GridView column header styles
+- controls [WPF], ListView
+- headers [WPF], customizing
+- GridView view mode [WPF], customizing column headers
 ms.assetid: 74835674-a39e-4ab5-9418-ad7f6ab7b956
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ad0f7cacc8256e060bb12611bd1818b694e1e6dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения о стилях заголовков столбцов GridView и шаблонах
-Этот обзор описывает порядок приоритетов для свойств, предназначенных для настройки заголовков столбцов в режиме представления <xref:System.Windows.Controls.GridView> элемента управления <xref:System.Windows.Controls.ListView>.  
+# <a name="gridview-column-header-styles-and-templates-overview"></a><span data-ttu-id="81579-102">Общие сведения о стилях заголовков столбцов GridView и шаблонах</span><span class="sxs-lookup"><span data-stu-id="81579-102">GridView Column Header Styles and Templates Overview</span></span>
+<span data-ttu-id="81579-103">В этом обзоре описывается порядок приоритета для свойств, которые позволяют настроить заголовок столбца в <xref:System.Windows.Controls.GridView> режим просмотра для <xref:System.Windows.Controls.ListView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="81579-103">This overview discusses the order of precedence for properties that you use to customize a column header in the <xref:System.Windows.Controls.GridView> view mode of a <xref:System.Windows.Controls.ListView> control.</span></span>  
   
-## Настройка заголовка столбца в GridView  
- Свойства, определяющие содержимое, макет и стиль заголовка столбца в <xref:System.Windows.Controls.GridView>, присутствуют во многих связанных классах.  Некоторые из этих свойств содержат похожие или аналогичные функции.  
+## <a name="customizing-a-column-header-in-a-gridview"></a><span data-ttu-id="81579-104">Настройка заголовка столбца в элементе управления GridView</span><span class="sxs-lookup"><span data-stu-id="81579-104">Customizing a Column Header in a GridView</span></span>  
+ <span data-ttu-id="81579-105">Свойства, определяющие содержимое, макет и стиль заголовка столбца в <xref:System.Windows.Controls.GridView> находятся на множество связанных классов.</span><span class="sxs-lookup"><span data-stu-id="81579-105">The properties that define the content, layout, and style of a column header in a <xref:System.Windows.Controls.GridView> are found on many related classes.</span></span> <span data-ttu-id="81579-106">Некоторые из этих свойств имеют сходные или тому же.</span><span class="sxs-lookup"><span data-stu-id="81579-106">Some of these properties have functionality that is similar or the same.</span></span>  
   
- В следующей таблице показаны группы свойств, которые выполняют одну и ту же функцию.  Можно использовать эти свойства для настройки заголовков столбцов в <xref:System.Windows.Controls.GridView>.  Порядок приоритетов для связанных свойств определяется справа налево, наивысший приоритет имеет свойство в крайнем правом столбце.  Например, если <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> задано для объекта <xref:System.Windows.Controls.GridViewColumnHeader>, а <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> задано для связанного объекта <xref:System.Windows.Controls.GridViewColumn>, то <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> имеет более высокий приоритет.  В этом случае <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> не оказывает влияния.  
+ <span data-ttu-id="81579-107">Строки в таблице ниже показаны группы свойств, которые выполняют ту же функцию.</span><span class="sxs-lookup"><span data-stu-id="81579-107">The rows in the following table show groups of properties that perform the same function.</span></span> <span data-ttu-id="81579-108">Эти свойства можно использовать для настройки заголовков столбцов в <xref:System.Windows.Controls.GridView>.</span><span class="sxs-lookup"><span data-stu-id="81579-108">You can use these properties to customize the column headers in a <xref:System.Windows.Controls.GridView>.</span></span> <span data-ttu-id="81579-109">Порядок приоритетов для связанных свойств — справа налево, где свойство в крайнем правом столбце имеет наивысший приоритет.</span><span class="sxs-lookup"><span data-stu-id="81579-109">The order of precedence for related properties is from right to left where the property in the farthest right column has the highest precedence.</span></span> <span data-ttu-id="81579-110">Например если <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> устанавливается на <xref:System.Windows.Controls.GridViewColumnHeader> объекта и <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> набор для соответствующей <xref:System.Windows.Controls.GridViewColumn>, <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> имеет более высокий приоритет.</span><span class="sxs-lookup"><span data-stu-id="81579-110">For example, if a <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> is set on the <xref:System.Windows.Controls.GridViewColumnHeader> object and the <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> is set on the associated <xref:System.Windows.Controls.GridViewColumn>, the <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> takes precedence.</span></span> <span data-ttu-id="81579-111">В этом сценарии <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> не делает ничего.</span><span class="sxs-lookup"><span data-stu-id="81579-111">In this scenario, the <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> has no effect.</span></span>  
   
- **Связанные свойства для заголовков столбцов в GridView**  
+ <span data-ttu-id="81579-112">**Связанные свойства для заголовков столбцов в элементе управления GridView**</span><span class="sxs-lookup"><span data-stu-id="81579-112">**Related properties for column headers in a GridView**</span></span>  
   
 |||||  
 |-|-|-|-|  
-|**Классы**|<xref:System.Windows.Controls.GridView>|<xref:System.Windows.Controls.GridViewColumn>|<xref:System.Windows.Controls.GridViewColumnHeader>|  
-|**Свойства контекстного меню**|<xref:System.Windows.Controls.GridView.ColumnHeaderContextMenu%2A>|Неприменимо|<xref:System.Windows.FrameworkElement.ContextMenu%2A>|  
-|**Подсказка**<br /><br /> **Свойства**|<xref:System.Windows.Controls.GridView.ColumnHeaderToolTip%2A>|Неприменимо|<xref:System.Windows.FrameworkElement.ToolTip%2A>|  
-|**Шаблон заголовка**<br /><br /> **Свойства**|<xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> <sup>1</sup>\/<br /><br /> <xref:System.Windows.Controls.GridView.ColumnHeaderTemplateSelector%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> <sup>1</sup>\/<br /><br /> <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A>|<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <sup>1</sup>\/<br /><br /> <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>|  
-|**Свойства стилей**|<xref:System.Windows.Controls.GridView.ColumnHeaderContainerStyle%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A>|<xref:System.Windows.FrameworkElement.Style%2A>|  
+|<span data-ttu-id="81579-113">**Классы**</span><span class="sxs-lookup"><span data-stu-id="81579-113">**Classes**</span></span>|<xref:System.Windows.Controls.GridView>|<xref:System.Windows.Controls.GridViewColumn>|<xref:System.Windows.Controls.GridViewColumnHeader>|  
+|<span data-ttu-id="81579-114">**Свойства контекстного меню**</span><span class="sxs-lookup"><span data-stu-id="81579-114">**Context Menu Properties**</span></span>|<xref:System.Windows.Controls.GridView.ColumnHeaderContextMenu%2A>|<span data-ttu-id="81579-115">Неприменимо</span><span class="sxs-lookup"><span data-stu-id="81579-115">Not applicable</span></span>|<xref:System.Windows.FrameworkElement.ContextMenu%2A>|  
+|<span data-ttu-id="81579-116">**ToolTip**</span><span class="sxs-lookup"><span data-stu-id="81579-116">**ToolTip**</span></span><br /><br /> <span data-ttu-id="81579-117">**Свойства**</span><span class="sxs-lookup"><span data-stu-id="81579-117">**Properties**</span></span>|<xref:System.Windows.Controls.GridView.ColumnHeaderToolTip%2A>|<span data-ttu-id="81579-118">Неприменимо</span><span class="sxs-lookup"><span data-stu-id="81579-118">Not applicable</span></span>|<xref:System.Windows.FrameworkElement.ToolTip%2A>|  
+|<span data-ttu-id="81579-119">**Шаблон заголовка**</span><span class="sxs-lookup"><span data-stu-id="81579-119">**Header Template**</span></span><br /><br /> <span data-ttu-id="81579-120">**Свойства**</span><span class="sxs-lookup"><span data-stu-id="81579-120">**Properties**</span></span>|<span data-ttu-id="81579-121"><xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> <sup>1</sup>/</span><span class="sxs-lookup"><span data-stu-id="81579-121"><xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> <sup>1</sup>/</span></span><br /><br /> <xref:System.Windows.Controls.GridView.ColumnHeaderTemplateSelector%2A>|<span data-ttu-id="81579-122"><xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> <sup>1</sup>/</span><span class="sxs-lookup"><span data-stu-id="81579-122"><xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> <sup>1</sup>/</span></span><br /><br /> <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A>|<span data-ttu-id="81579-123"><xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <sup>1</sup>/</span><span class="sxs-lookup"><span data-stu-id="81579-123"><xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <sup>1</sup>/</span></span><br /><br /> <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>|  
+|<span data-ttu-id="81579-124">**Свойства стиля**</span><span class="sxs-lookup"><span data-stu-id="81579-124">**Style Properties**</span></span>|<xref:System.Windows.Controls.GridView.ColumnHeaderContainerStyle%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A>|<xref:System.Windows.FrameworkElement.Style%2A>|  
   
- <sup>1</sup> Для **свойств шаблона заголовка**, если заданы свойства шаблона и селектора шаблона, то свойство шаблона имеет приоритет.  Например, если заданы оба свойства <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> и <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>, приоритет имеет свойство <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>.  
+ <span data-ttu-id="81579-125"><sup>1</sup>для **свойств шаблона заголовка**, если значение шаблона и свойства селектор шаблона, имеет приоритет свойства шаблона.</span><span class="sxs-lookup"><span data-stu-id="81579-125"><sup>1</sup>For **Header Template Properties**, if you set both the template and template selector properties, the template property takes precedence.</span></span> <span data-ttu-id="81579-126">Например, если заданы оба <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> и <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> свойства, <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> имеет приоритет.</span><span class="sxs-lookup"><span data-stu-id="81579-126">For example, if you set both the <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> and <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> properties, the <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> property takes precedence.</span></span>  
   
-## См. также  
- [Практические руководства](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)   
- [Общие сведения об элементе управления ListView](../../../../docs/framework/wpf/controls/listview-overview.md)   
- [Общие сведения о GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
+## <a name="see-also"></a><span data-ttu-id="81579-127">См. также</span><span class="sxs-lookup"><span data-stu-id="81579-127">See Also</span></span>  
+ [<span data-ttu-id="81579-128">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="81579-128">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [<span data-ttu-id="81579-129">Общие сведения об элементе управления ListView</span><span class="sxs-lookup"><span data-stu-id="81579-129">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)  
+ [<span data-ttu-id="81579-130">Общие сведения о GridView</span><span class="sxs-lookup"><span data-stu-id="81579-130">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)

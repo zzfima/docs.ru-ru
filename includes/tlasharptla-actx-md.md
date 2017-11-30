@@ -1,1 +1,1 @@
-Microsoft ActiveX
+<span data-ttu-id="f32f1-101">Microsoft ActiveX</span><span class="sxs-lookup"><span data-stu-id="f32f1-101">Microsoft ActiveX</span></span>

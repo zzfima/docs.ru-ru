@@ -1,1 +1,1 @@
-ClearType
+<span data-ttu-id="1f6a1-101">ClearType</span><span class="sxs-lookup"><span data-stu-id="1f6a1-101">ClearType</span></span>

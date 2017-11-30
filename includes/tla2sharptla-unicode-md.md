@@ -1,1 +1,1 @@
-Юникод
+<span data-ttu-id="87b85-101">Юникод</span><span class="sxs-lookup"><span data-stu-id="87b85-101">Unicode</span></span>

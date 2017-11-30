@@ -1,50 +1,42 @@
 ---
-title: "Использование метода Async для доступа к файлам (Visual Basic) | Документы Microsoft"
+title: "Использование метода Async для доступа к файлам (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c989305f-08e3-4687-95c3-948465cda202
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e0e548989b1d2c32b9faf5ce0dd90ae371dfc028
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 329ae43f8752fbe8a7167b57cb710cc53c0ec247
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="using-async-for-file-access-visual-basic"></a>Использование метода Async для доступа к файлам (Visual Basic)
-Функция Async для доступа к файлам. С помощью функции Async можно вызывать асинхронные методы, не прибегая к использованию обратных вызовов или разделению кода между несколькими методами или лямбда-выражениями. Чтобы сделать синхронный код асинхронным, просто вызвать асинхронный метод вместо синхронного и добавить в код несколько ключевых слов.  
+# <a name="using-async-for-file-access-visual-basic"></a><span data-ttu-id="4e683-102">Использование метода Async для доступа к файлам (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4e683-102">Using Async for File Access (Visual Basic)</span></span>
+<span data-ttu-id="4e683-103">Функции Async можно использовать для доступа к файлам.</span><span class="sxs-lookup"><span data-stu-id="4e683-103">You can use the Async feature to access files.</span></span> <span data-ttu-id="4e683-104">С помощью функции Async можно вызывать асинхронные методы, не прибегая к использованию обратных вызовов или разделению кода между несколькими методами или лямбда-выражениями.</span><span class="sxs-lookup"><span data-stu-id="4e683-104">By using the Async feature, you can call into asynchronous methods without using callbacks or splitting your code across multiple methods or lambda expressions.</span></span> <span data-ttu-id="4e683-105">Для выполнения последовательного кода асинхронно просто вызовите асинхронный метод вместо синхронного метода и добавьте несколько ключевых слов в код.</span><span class="sxs-lookup"><span data-stu-id="4e683-105">To make synchronous code asynchronous, you just call an asynchronous method instead of a synchronous method and add a few keywords to the code.</span></span>  
   
- Может потребоваться для добавления асинхронность для вызовов для доступа к следующим причинам:  
+ <span data-ttu-id="4e683-106">Можно рассмотреть следующие причины для добавления асинхронности для вызовов для доступа к файлам.</span><span class="sxs-lookup"><span data-stu-id="4e683-106">You might consider the following reasons for adding asynchrony to file access calls:</span></span>  
   
--   Асинхронность пользовательского интерфейса приложений делает отклика, так как поток пользовательского интерфейса, который запускает операцию может выполнять другую работу. Если поток пользовательского интерфейса должен выполняться код, занимает много времени (например, более чем 50 миллисекунд), пользовательский Интерфейс может ожидать завершения ввода-вывода и потока пользовательского интерфейса можно снова обработки клавиатуры и мыши ввода и другие события.  
+-   <span data-ttu-id="4e683-107">Асинхронность делает приложения пользовательского интерфейса более отзывчивыми, потому что поток пользовательского интерфейса, который запускает операцию, может продолжать выполнять и другую работу.</span><span class="sxs-lookup"><span data-stu-id="4e683-107">Asynchrony makes UI applications more responsive because the UI thread that launches the operation can perform other work.</span></span> <span data-ttu-id="4e683-108">Если поток пользовательского интерфейса должен выполнять код, который занимает много времени (например, более 50 миллисекунд), пользовательский интерфейс можно приостановить до тех пор, пока не будет завершен ввод-вывод, и затем пользовательский интерфейс сможет снова обрабатывать ввод с клавиатуры, мыши и другие события.</span><span class="sxs-lookup"><span data-stu-id="4e683-108">If the UI thread must execute code that takes a long time (for example, more than 50 milliseconds), the UI may freeze until the I/O is complete and the UI thread can again process keyboard and mouse input and other events.</span></span>  
   
--   Асинхронность повышает масштабируемость ASP.NET и других серверных приложений, сокращая потребность в потоки. Если приложение использует выделенный поток отклика на тысячи запросов одновременно обрабатывается, необходимы тысячи потоков. Асинхронных операций часто не требуется использовать поток во время ожидания. Они короткое время использовать существующий поток завершения ввода-вывода в конце.  
+-   <span data-ttu-id="4e683-109">Асинхронность улучшает масштабируемость ASP.NET и других серверных приложений за счет уменьшения необходимости использования потоков.</span><span class="sxs-lookup"><span data-stu-id="4e683-109">Asynchrony improves the scalability of ASP.NET and other server-based applications by reducing the need for threads.</span></span> <span data-ttu-id="4e683-110">Если приложение использует выделенный поток на ответ и тысяча запросов приходит одновременно, тысяча потоков не потребуется.</span><span class="sxs-lookup"><span data-stu-id="4e683-110">If the application uses a dedicated thread per response and a thousand requests are being handled simultaneously, a thousand threads are needed.</span></span> <span data-ttu-id="4e683-111">Асинхронные операции часто не нуждаются в пользовании потоком во время ожидания.</span><span class="sxs-lookup"><span data-stu-id="4e683-111">Asynchronous operations often don’t need to use a thread during the wait.</span></span> <span data-ttu-id="4e683-112">Они пользуются существующим потоком завершения ввода-вывода короткое время в конце.</span><span class="sxs-lookup"><span data-stu-id="4e683-112">They use the existing I/O completion thread briefly at the end.</span></span>  
   
--   Задержка операцию доступа к файлу может быть очень низким при текущих условиях, но задержка может значительно повысить в будущем. Например файл можно переместить на сервер, по всему миру.  
+-   <span data-ttu-id="4e683-113">Задержка операции доступа к файлу может быть очень низкой при текущих условиях, но может значительно увеличиться в будущем.</span><span class="sxs-lookup"><span data-stu-id="4e683-113">The latency of a file access operation might be very low under current conditions, but the latency may greatly increase in the future.</span></span> <span data-ttu-id="4e683-114">Например, файл может быть перемещен на сервер через Интернет.</span><span class="sxs-lookup"><span data-stu-id="4e683-114">For example, a file may be moved to a server that's across the world.</span></span>  
   
--   Добавленный дополнительную нагрузку, связанную с помощью функции Async мал.  
+-   <span data-ttu-id="4e683-115">Добавленные издержки при использовании функции Async являются малыми.</span><span class="sxs-lookup"><span data-stu-id="4e683-115">The added overhead of using the Async feature is small.</span></span>  
   
--   Асинхронные задачи можно легко запускать параллельно.  
+-   <span data-ttu-id="4e683-116">Асинхронные задачи могут легко выполняться параллельно.</span><span class="sxs-lookup"><span data-stu-id="4e683-116">Asynchronous tasks can easily be run in parallel.</span></span>  
   
-## <a name="running-the-examples"></a>Выполнение примеров  
- Чтобы выполнить примеры в этом разделе, можно создать **приложение WPF** или **приложение Windows Forms** и добавьте **кнопку**. Для кнопки `Click` события, добавьте вызов первого метода в каждом примере.  
+## <a name="running-the-examples"></a><span data-ttu-id="4e683-117">Выполнение примеров</span><span class="sxs-lookup"><span data-stu-id="4e683-117">Running the Examples</span></span>  
+ <span data-ttu-id="4e683-118">Чтобы выполнить примеры в этом разделе, вы можете создать **приложение WPF** или **приложение Windows Forms**, а затем добавить **кнопку**.</span><span class="sxs-lookup"><span data-stu-id="4e683-118">To run the examples in this topic, you can create a **WPF Application** or a **Windows Forms Application** and then add a **Button**.</span></span> <span data-ttu-id="4e683-119">В событии `Click` кнопки добавьте вызов к первому методу в каждом примере.</span><span class="sxs-lookup"><span data-stu-id="4e683-119">In the button's `Click` event, add a call to the first method in each example.</span></span>  
   
- В следующих примерах, включают следующие `Imports` инструкции.  
+ <span data-ttu-id="4e683-120">В следующие примеры добавьте указанные ниже операторы`Imports`.</span><span class="sxs-lookup"><span data-stu-id="4e683-120">In the following examples, include the following `Imports` statements.</span></span>  
   
 ```vb  
 Imports System  
@@ -55,13 +47,13 @@ Imports System.Text
 Imports System.Threading.Tasks  
 ```  
   
-## <a name="use-of-the-filestream-class"></a>Использование класса FileStream  
- Примеры в этом разделе используют <xref:System.IO.FileStream>класс, который имеет параметр, который вызывает асинхронный ввод-вывод на уровне операционной системы.</xref:System.IO.FileStream> При использовании этого параметра может блокировать поток из пула потоков во многих случаях. Чтобы включить этот параметр, необходимо указать `useAsync=true` или `options=FileOptions.Asynchronous` аргумента в вызове конструктора.  
+## <a name="use-of-the-filestream-class"></a><span data-ttu-id="4e683-121">Использование класса FileStream</span><span class="sxs-lookup"><span data-stu-id="4e683-121">Use of the FileStream Class</span></span>  
+ <span data-ttu-id="4e683-122">В приведенных в этой статье примерах используется класс <xref:System.IO.FileStream>, содержащий параметр, который вызывает асинхронный ввод-вывод на уровне операционной системы.</span><span class="sxs-lookup"><span data-stu-id="4e683-122">The examples in this topic use the <xref:System.IO.FileStream> class, which has an option that causes asynchronous I/O to occur at the operating system level.</span></span> <span data-ttu-id="4e683-123">С помощью этого параметра можно избежать блокирования пула потоков во многих случаях.</span><span class="sxs-lookup"><span data-stu-id="4e683-123">By using this option, you can avoid blocking a ThreadPool thread in many cases.</span></span> <span data-ttu-id="4e683-124">Чтобы включить этот параметр, необходимо добавить в вызов конструктора аргумент `useAsync=true` или `options=FileOptions.Asynchronous`.</span><span class="sxs-lookup"><span data-stu-id="4e683-124">To enable this option, you specify the `useAsync=true` or `options=FileOptions.Asynchronous` argument in the constructor call.</span></span>  
   
- Этот параметр нельзя использовать с <xref:System.IO.StreamReader>и <xref:System.IO.StreamWriter>при их открытии непосредственно, путем указания пути файла.</xref:System.IO.StreamWriter> </xref:System.IO.StreamReader> Тем не менее, можно использовать этот параметр, если вы предоставили эту <xref:System.IO.Stream>, <xref:System.IO.FileStream>класс открыт.</xref:System.IO.FileStream> </xref:System.IO.Stream> Обратите внимание, что асинхронные вызовы быстрее в приложениях с интерфейсом пользователя даже если поток из пула потоков будет заблокирована, так как поток пользовательского интерфейса не блокируются во время ожидания.  
+ <span data-ttu-id="4e683-125">Этот параметр нельзя использовать с классами <xref:System.IO.StreamReader> и <xref:System.IO.StreamWriter>, если вы открываете их напрямую (указав путь к файлу).</span><span class="sxs-lookup"><span data-stu-id="4e683-125">You can’t use this option with <xref:System.IO.StreamReader> and <xref:System.IO.StreamWriter> if you open them directly by specifying a file path.</span></span> <span data-ttu-id="4e683-126">При этом параметр можно использовать, если им предоставлен <xref:System.IO.Stream>, открытый классом <xref:System.IO.FileStream>.</span><span class="sxs-lookup"><span data-stu-id="4e683-126">However, you can use this option if you provide them a <xref:System.IO.Stream> that the <xref:System.IO.FileStream> class opened.</span></span> <span data-ttu-id="4e683-127">Обратите внимание, что асинхронные вызовы выполняются быстрее в приложениях пользовательского интерфейса, даже если поток в пуле потоков блокирован, поскольку поток пользовательского интерфейса не блокирован во время ожидания.</span><span class="sxs-lookup"><span data-stu-id="4e683-127">Note that asynchronous calls are faster in UI apps even if a ThreadPool thread is blocked, because the UI thread isn’t blocked during the wait.</span></span>  
   
-## <a name="writing-text"></a>Запись текста  
- Следующий пример записывает текст в файл. В каждом await инструкции, метод немедленно завершает работу. По завершении файлового ввода-вывода метод возобновляется с оператора, следующего за оператором await. Обратите внимание, что в определении методов, использующих оператор await модификатор async.  
+## <a name="writing-text"></a><span data-ttu-id="4e683-128">Запись текста</span><span class="sxs-lookup"><span data-stu-id="4e683-128">Writing Text</span></span>  
+ <span data-ttu-id="4e683-129">Следующие примеры записывают текст в файл.</span><span class="sxs-lookup"><span data-stu-id="4e683-129">The following example writes text to a file.</span></span> <span data-ttu-id="4e683-130">На каждой точке await происходит немедленный выход из метода.</span><span class="sxs-lookup"><span data-stu-id="4e683-130">At each await statement, the method immediately exits.</span></span> <span data-ttu-id="4e683-131">После завершения файлового ввода-вывода метод возобновляет работу с пункта, следующего за await.</span><span class="sxs-lookup"><span data-stu-id="4e683-131">When the file I/O is complete, the method resumes at the statement that follows the await statement.</span></span> <span data-ttu-id="4e683-132">Обратите внимание, что модификатор async в определении методов требует наличия await в теле метода.</span><span class="sxs-lookup"><span data-stu-id="4e683-132">Note that the async modifier is in the definition of methods that use the await statement.</span></span>  
   
 ```vb  
 Public Async Sub ProcessWrite()  
@@ -83,17 +75,17 @@ Private Async Function WriteTextAsync(filePath As String, text As String) As Tas
 End Function  
 ```  
   
- Исходный пример состоит из инструкции `Await sourceStream.WriteAsync(encodedText, 0, encodedText.Length)`, который является сокращенной формой записи двух следующих операторов:  
+ <span data-ttu-id="4e683-133">Первоначальная строка с оператором `Await sourceStream.WriteAsync(encodedText, 0, encodedText.Length)` является сокращенной формой записи двух следующих операторов:</span><span class="sxs-lookup"><span data-stu-id="4e683-133">The original example has the statement `Await sourceStream.WriteAsync(encodedText, 0, encodedText.Length)`, which is a contraction of the following two statements:</span></span>  
   
 ```vb  
 Dim theTask As Task = sourceStream.WriteAsync(encodedText, 0, encodedText.Length)  
 Await theTask  
 ```  
   
- Первая инструкция возвращает задачу и приводит к обработке файла для запуска. Второй инструкции с оператором await вызывает метод немедленно выхода и возвращает другую задачу. После завершения обработки позже файлов, выполнение передается оператору, следующему за оператором await. Дополнительные сведения см. в разделе [поток управления в асинхронных программах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).  
+ <span data-ttu-id="4e683-134">Первый оператор возвращает задачу и вызывает запуск обработки файла.</span><span class="sxs-lookup"><span data-stu-id="4e683-134">The first statement returns a task and causes file processing to start.</span></span> <span data-ttu-id="4e683-135">Вторая строка с await немедленно оставляет метод и возвращается в другую задачу.</span><span class="sxs-lookup"><span data-stu-id="4e683-135">The second statement with the await causes the method to immediately exit and return a different task.</span></span> <span data-ttu-id="4e683-136">При окончании обработки файла выполнение возвращается в точку выполнения, которая следует за await.</span><span class="sxs-lookup"><span data-stu-id="4e683-136">When the file processing later completes, execution returns to the statement that follows the await.</span></span> <span data-ttu-id="4e683-137">Дополнительные сведения см. в разделе [поток управления в асинхронных программах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).</span><span class="sxs-lookup"><span data-stu-id="4e683-137">For more information, see  [Control Flow in Async Programs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).</span></span>  
   
-## <a name="reading-text"></a>Чтение текста  
- Следующий пример выполняет чтение текста из файла. Текст в буфер и, таким образом, помещается в <xref:System.Text.StringBuilder>.</xref:System.Text.StringBuilder> В отличие от предыдущего примера вычисление await создает значение. <xref:System.IO.Stream.ReadAsync%2A>Возвращает <xref:System.Threading.Tasks.Task> \< <xref:System.Int32>настроек, поэтому вычисление await выводятся `Int32` значение (`numRead`) после завершения операции.</xref:System.Int32> </xref:System.Threading.Tasks.Task> </xref:System.IO.Stream.ReadAsync%2A> Дополнительные сведения см. в разделе [возвращают типы Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
+## <a name="reading-text"></a><span data-ttu-id="4e683-138">Чтение текста</span><span class="sxs-lookup"><span data-stu-id="4e683-138">Reading Text</span></span>  
+ <span data-ttu-id="4e683-139">Следующий пример считывает текст из файла.</span><span class="sxs-lookup"><span data-stu-id="4e683-139">The following example reads text from a file.</span></span> <span data-ttu-id="4e683-140">Текст добавляется в буфер обмена, а затем, в данном случае, помещается в <xref:System.Text.StringBuilder>.</span><span class="sxs-lookup"><span data-stu-id="4e683-140">The text is buffered and, in this case, placed into a <xref:System.Text.StringBuilder>.</span></span> <span data-ttu-id="4e683-141">В отличие от предыдущего примера await выдаёт в результате значение.</span><span class="sxs-lookup"><span data-stu-id="4e683-141">Unlike in the previous example, the evaluation of the await produces a value.</span></span> <span data-ttu-id="4e683-142">Метод <xref:System.IO.Stream.ReadAsync%2A> возвращает <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, поэтому по завершении операции оценка await выдает значение `Int32` (`numRead`).</span><span class="sxs-lookup"><span data-stu-id="4e683-142">The <xref:System.IO.Stream.ReadAsync%2A> method returns a <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, so the evaluation of the await produces an `Int32` value (`numRead`) after the operation completes.</span></span> <span data-ttu-id="4e683-143">Дополнительные сведения см. в разделе [асинхронные типы возвращаемых значений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).</span><span class="sxs-lookup"><span data-stu-id="4e683-143">For more information, see [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).</span></span>  
   
 ```vb  
 Public Async Sub ProcessRead()  
@@ -134,12 +126,12 @@ Private Async Function ReadTextAsync(filePath As String) As Task(Of String)
 End Function  
 ```  
   
-## <a name="parallel-asynchronous-io"></a>Параллельных асинхронных операций ввода-вывода  
- Ниже приведен пример параллельной обработки, написав 10 текстовых файлов. Для каждого файла <xref:System.IO.Stream.WriteAsync%2A>метод возвращает задачу, которая затем добавляется в список задач.</xref:System.IO.Stream.WriteAsync%2A> `Await Task.WhenAll(tasks)` Инструкция завершает данный метод и резюме в методе при обработке файла завершения для всех задач.  
+## <a name="parallel-asynchronous-io"></a><span data-ttu-id="4e683-144">Параллельный асинхронный ввод-вывод</span><span class="sxs-lookup"><span data-stu-id="4e683-144">Parallel Asynchronous I/O</span></span>  
+ <span data-ttu-id="4e683-145">В следующем примере показана параллельная обработка при записи 10 текстовых файлов.</span><span class="sxs-lookup"><span data-stu-id="4e683-145">The following example demonstrates parallel processing by writing 10 text files.</span></span> <span data-ttu-id="4e683-146">Для каждого файла метод <xref:System.IO.Stream.WriteAsync%2A> возвращает задачу, которая затем добавляется в список задач.</span><span class="sxs-lookup"><span data-stu-id="4e683-146">For each file, the <xref:System.IO.Stream.WriteAsync%2A> method returns a task that is then added to a list of tasks.</span></span> <span data-ttu-id="4e683-147">Оператор `Await Task.WhenAll(tasks)` существует и возобновляется в методе, как только завершается обработка файла для всех задач.</span><span class="sxs-lookup"><span data-stu-id="4e683-147">The `Await Task.WhenAll(tasks)` statement exits the method and resumes within the method when file processing is complete for all of the tasks.</span></span>  
   
- В примере закрывается, все <xref:System.IO.FileStream>экземпляров в `Finally` блокируется после выполнения задач.</xref:System.IO.FileStream> Если каждый `FileStream` вместо этого была создана в `Imports` инструкции, `FileStream` может быть удален до завершения задачи.  
+ <span data-ttu-id="4e683-148">Пример закрывает все экземпляры <xref:System.IO.FileStream> в блоке `Finally` после завершения всех задач.</span><span class="sxs-lookup"><span data-stu-id="4e683-148">The example closes all <xref:System.IO.FileStream> instances in a `Finally` block after the tasks are complete.</span></span> <span data-ttu-id="4e683-149">Если бы вместо этого каждый `FileStream` был бы создан в операторе `Imports`, то `FileStream` можно было бы удалить до завершения задачи.</span><span class="sxs-lookup"><span data-stu-id="4e683-149">If each `FileStream` was instead created in a `Imports` statement, the `FileStream` might be disposed of before the task was complete.</span></span>  
   
- Обратите внимание, что любой повысить производительность почти полностью от параллельной обработки и не асинхронной обработки. Преимущества асинхронность, что она не блокирует несколько потоков, и что она не блокирует поток пользовательского интерфейса.  
+ <span data-ttu-id="4e683-150">Обратите внимание, что любое увеличение производительности зависит почти полностью от параллельной, а не асинхронной обработки.</span><span class="sxs-lookup"><span data-stu-id="4e683-150">Note that any performance boost is almost entirely from the parallel processing and not the asynchronous processing.</span></span> <span data-ttu-id="4e683-151">Преимущества асинхронности в том, что она не привязана к количеству потоков и не связана с потоком пользовательского интерфейса.</span><span class="sxs-lookup"><span data-stu-id="4e683-151">The advantages of asynchrony are that it doesn’t tie up multiple threads, and that it doesn’t tie up the user interface thread.</span></span>  
   
 ```vb  
 Public Async Sub ProcessWriteMult()  
@@ -175,9 +167,9 @@ Public Async Sub ProcessWriteMult()
 End Sub  
 ```  
   
- При использовании <xref:System.IO.Stream.WriteAsync%2A>и <xref:System.IO.Stream.ReadAsync%2A>методов, можно указать <xref:System.Threading.CancellationToken>, который можно использовать для отмены операции ходу.</xref:System.Threading.CancellationToken> </xref:System.IO.Stream.ReadAsync%2A> </xref:System.IO.Stream.WriteAsync%2A> Дополнительные сведения см. в разделе [Fine-Tuning асинхронного приложения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) и [Отмена в управляемых потоках](http://msdn.microsoft.com/library/eea11fe5-d8b0-4314-bb5d-8a58166fb1c3).  
+ <span data-ttu-id="4e683-152">При использовании методов <xref:System.IO.Stream.WriteAsync%2A> и <xref:System.IO.Stream.ReadAsync%2A> можно указать <xref:System.Threading.CancellationToken>, который позволяет отменить операцию в середине потока.</span><span class="sxs-lookup"><span data-stu-id="4e683-152">When using the <xref:System.IO.Stream.WriteAsync%2A> and <xref:System.IO.Stream.ReadAsync%2A> methods, you can specify a <xref:System.Threading.CancellationToken>, which you can use to cancel the operation mid-stream.</span></span> <span data-ttu-id="4e683-153">Дополнительные сведения см. в разделе [Fine-Tuning асинхронного приложения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) и [Отмена в управляемых потоках](../../../../standard/threading/cancellation-in-managed-threads.md).</span><span class="sxs-lookup"><span data-stu-id="4e683-153">For more information, see [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) and [Cancellation in Managed Threads](../../../../standard/threading/cancellation-in-managed-threads.md).</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Асинхронное программирование с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)   
- [Асинхронные типы возвращаемых значений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)   
- [Поток управления в асинхронных программах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
+## <a name="see-also"></a><span data-ttu-id="4e683-154">См. также</span><span class="sxs-lookup"><span data-stu-id="4e683-154">See Also</span></span>  
+ [<span data-ttu-id="4e683-155">Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4e683-155">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+ <span data-ttu-id="4e683-156">[Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md) (Типы возвращаемых значений Async (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="4e683-156">[Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)</span></span>  
+ <span data-ttu-id="4e683-157">[Control Flow in Async Programs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md) (Поток управления в асинхронных программах (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="4e683-157">[Control Flow in Async Programs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)</span></span>

@@ -1,1 +1,1 @@
-Идентификаторы
+<span data-ttu-id="5e929-101">Идентификаторы</span><span class="sxs-lookup"><span data-stu-id="5e929-101">IDs</span></span>

@@ -1,1 +1,1 @@
-пакет средств разработки программного обеспечения (SDK)
+<span data-ttu-id="20c93-101">пакет средств разработки программного обеспечения (SDK)</span><span class="sxs-lookup"><span data-stu-id="20c93-101">software development kit (SDK)</span></span>

@@ -1,111 +1,103 @@
 ---
-title: "Классификация стандартных операторов запросов по способу выполнения (Visual Basic) | Документы Microsoft"
+title: "Классификация стандартных операторов запросов по способу выполнения (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 7f55b0be-9f6e-44f8-865c-6afbea50cc54
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a13f2fcf33c2faacd5b2662cd96d0f962b54322f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 553a638cdaaebeaa5ab21850250b2d70536f557c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Классификация стандартных операторов запросов по способу выполнения (Visual Basic)
-Реализации объектов методы стандартных операторов запросов LINQ выполняются одним из двух основных способов: немедленным и отложенным. Операторы запросов, использующие отложенное выполнение можно дополнительно разделить на две категории: потоковые и непотоковые. Если вы знаете, как выполнять разных операторов запросов, может помочь понять результаты, полученные из заданного запроса. Это особенно важно, если изменение источника данных или построении запроса поверх другого. В этом разделе представлена классификация стандартных операторов запросов по способу выполнения.  
+# <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a><span data-ttu-id="73174-102">Классификация стандартных операторов запросов по способу выполнения (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="73174-102">Classification of Standard Query Operators by Manner of Execution (Visual Basic)</span></span>
+<span data-ttu-id="73174-103">В реализации LINQ to Objects выполнение методов стандартных операторов запросов бывает немедленным и отложенным.</span><span class="sxs-lookup"><span data-stu-id="73174-103">The LINQ to Objects implementations of the standard query operator methods execute in one of two main ways: immediate or deferred.</span></span> <span data-ttu-id="73174-104">Операторы запросов, использующие отложенное выполнение, можно дополнительно разделить на две категории: потоковые и непотоковые.</span><span class="sxs-lookup"><span data-stu-id="73174-104">The query operators that use deferred execution can be additionally divided into two categories: streaming and non-streaming.</span></span> <span data-ttu-id="73174-105">Если вы знаете, каким образом выполняются разные операторы запросов, это может помочь понять результаты, полученные из данного запроса.</span><span class="sxs-lookup"><span data-stu-id="73174-105">If you know how the different query operators execute, it may help you understand the results that you get from a given query.</span></span> <span data-ttu-id="73174-106">Это особенно справедливо при изменении источника данных или создании одного запроса поверх другого.</span><span class="sxs-lookup"><span data-stu-id="73174-106">This is especially true if the data source is changing or if you are building a query on top of another query.</span></span> <span data-ttu-id="73174-107">В этом разделе представлена классификация стандартных операторов запросов по способу выполнения.</span><span class="sxs-lookup"><span data-stu-id="73174-107">This topic classifies the standard query operators according to their manner of execution.</span></span>  
   
-## <a name="manners-of-execution"></a>Способ выполнения  
+## <a name="manners-of-execution"></a><span data-ttu-id="73174-108">Способ выполнения</span><span class="sxs-lookup"><span data-stu-id="73174-108">Manners of Execution</span></span>  
   
-### <a name="immediate"></a>Интерпретация  
- Немедленное выполнение означает, что источник данных считывается, и операция выполняется в том месте кода, где объявлен запрос. Все стандартные операторы запросов, возвращающие один результат не перечислимый немедленно.  
+### <a name="immediate"></a><span data-ttu-id="73174-109">Интерпретация</span><span class="sxs-lookup"><span data-stu-id="73174-109">Immediate</span></span>  
+ <span data-ttu-id="73174-110">Немедленное выполнение означает, что источник данных считывается и операция выполняется в той точке кода, где объявлен запрос.</span><span class="sxs-lookup"><span data-stu-id="73174-110">Immediate execution means that the data source is read and the operation is performed at the point in the code where the query is declared.</span></span> <span data-ttu-id="73174-111">Все стандартные операторы запросов, возвращающие один, неперечислимый результат, выполняются немедленно.</span><span class="sxs-lookup"><span data-stu-id="73174-111">All the standard query operators that return a single, non-enumerable result execute immediately.</span></span>  
   
-### <a name="deferred"></a>Отложено  
- Отложенное выполнение означает, что операция не выполняется в том месте кода где объявлен запрос. Она выполняется только после перечисления переменной запроса, например с помощью `For Each` инструкции. Это означает, что результаты выполнения запроса зависят от содержимого источника данных при выполнении запроса вместо того, чтобы после определения запроса. Если переменная запроса перечисляется несколько раз, результаты могут отличаться каждый раз. Почти все стандартные операторы запросов, возвращающая <xref:System.Collections.Generic.IEnumerable%601>или <xref:System.Linq.IOrderedEnumerable%601>выполнение отложенным способом.</xref:System.Linq.IOrderedEnumerable%601> </xref:System.Collections.Generic.IEnumerable%601>  
+### <a name="deferred"></a><span data-ttu-id="73174-112">Отложено</span><span class="sxs-lookup"><span data-stu-id="73174-112">Deferred</span></span>  
+ <span data-ttu-id="73174-113">Отложенное выполнение означает, что операция не выполняется в той точке кода, где объявлен запрос.</span><span class="sxs-lookup"><span data-stu-id="73174-113">Deferred execution means that the operation is not performed at the point in the code where the query is declared.</span></span> <span data-ttu-id="73174-114">Она выполняется только после перечисления переменной запроса, например с помощью оператора `For Each`.</span><span class="sxs-lookup"><span data-stu-id="73174-114">The operation is performed only when the query variable is enumerated, for example by using a `For Each` statement.</span></span> <span data-ttu-id="73174-115">Это означает, что результаты выполнения запроса зависят от содержимого источника данных при выполнении запроса, а не при его определении.</span><span class="sxs-lookup"><span data-stu-id="73174-115">This means that the results of executing the query depend on the contents of the data source when the query is executed rather than when the query is defined.</span></span> <span data-ttu-id="73174-116">Если переменная запроса перечисляется несколько раз, результаты могут каждый раз отличаться.</span><span class="sxs-lookup"><span data-stu-id="73174-116">If the query variable is enumerated multiple times, the results might differ every time.</span></span> <span data-ttu-id="73174-117">Практически все стандартные операторы запроса, которые возвращают значения типа <xref:System.Collections.Generic.IEnumerable%601> или <xref:System.Linq.IOrderedEnumerable%601>, выполняются отложенным способом.</span><span class="sxs-lookup"><span data-stu-id="73174-117">Almost all the standard query operators whose return type is <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Linq.IOrderedEnumerable%601> execute in a deferred manner.</span></span>  
   
- Операторы запросов, использующие отложенное выполнение может классифицироваться Кроме того, потоковые и непотоковые.  
+ <span data-ttu-id="73174-118">Операторы запросов, использующие отложенное выполнение, можно дополнительно разделить на потоковые и непотоковые.</span><span class="sxs-lookup"><span data-stu-id="73174-118">Query operators that use deferred execution can be additionally classified as streaming or non-streaming.</span></span>  
   
-#### <a name="streaming"></a>Потоковые операторы  
- Потоковые операторы не считывают все исходные данные до получения элементов. Во время выполнения потоковый оператор осуществляет свои действия в каждый исходный элемент доступен для чтения и возвращает элемент, если это уместно. Потоковый оператор продолжает считывание исходных элементов до результирующий элемент может быть произведено. Это означает, что для получения одного результата элемента могут быть прочитаны более одного исходного элемента.  
+#### <a name="streaming"></a><span data-ttu-id="73174-119">Потоковые операторы</span><span class="sxs-lookup"><span data-stu-id="73174-119">Streaming</span></span>  
+ <span data-ttu-id="73174-120">Потоковые операторы не считывают все исходные данные до создания элементов.</span><span class="sxs-lookup"><span data-stu-id="73174-120">Streaming operators do not have to read all the source data before they yield elements.</span></span> <span data-ttu-id="73174-121">Во время выполнения потоковый оператор выполняет свою операцию с каждым исходным элементом по мере считывания и при необходимости создает элемент.</span><span class="sxs-lookup"><span data-stu-id="73174-121">At the time of execution, a streaming operator performs its operation on each source element as it is read and yields the element if appropriate.</span></span> <span data-ttu-id="73174-122">Потоковый оператор продолжает считывание исходных элементов до того момента, когда можно будет создать итоговый элемент.</span><span class="sxs-lookup"><span data-stu-id="73174-122">A streaming operator continues to read source elements until a result element can be produced.</span></span> <span data-ttu-id="73174-123">Это означает, что для получения одного итогового элемента может быть считано несколько исходных элементов.</span><span class="sxs-lookup"><span data-stu-id="73174-123">This means that more than one source element might be read to produce one result element.</span></span>  
   
-#### <a name="non-streaming"></a>Непотоковые  
- Непотоковые операторы должны считывать все исходные данные до получения результирующего элемента. В эту категорию попадают операциях сортировки и группировки. Во время выполнения непотоковые операторы запросов считывают все исходные данные, помещают их в структуру данных, выполнить операцию и выдают итоговые элементы.  
+#### <a name="non-streaming"></a><span data-ttu-id="73174-124">Непотоковые</span><span class="sxs-lookup"><span data-stu-id="73174-124">Non-Streaming</span></span>  
+ <span data-ttu-id="73174-125">Непотоковые операторы должны считать все исходные данные до создания итогового элемента.</span><span class="sxs-lookup"><span data-stu-id="73174-125">Non-streaming operators must read all the source data before they can yield a result element.</span></span> <span data-ttu-id="73174-126">В эту категорию попадают операции сортировки и группировки.</span><span class="sxs-lookup"><span data-stu-id="73174-126">Operations such as sorting or grouping fall into this category.</span></span> <span data-ttu-id="73174-127">Во время выполнения непотоковые операторы запросов считывают все исходные данные, помещают их в структуру данных, выполняют операцию и создают итоговые элементы.</span><span class="sxs-lookup"><span data-stu-id="73174-127">At the time of execution, non-streaming query operators read all the source data, put it into a data structure, perform the operation, and yield the resulting elements.</span></span>  
   
-## <a name="classification-table"></a>Таблица классификации  
- Следующая таблица классифицирует каждый методов стандартных операторов запросов по способу выполнения.  
+## <a name="classification-table"></a><span data-ttu-id="73174-128">Таблица классификации</span><span class="sxs-lookup"><span data-stu-id="73174-128">Classification Table</span></span>  
+ <span data-ttu-id="73174-129">В следующей таблице приведена классификация всех методов стандартных операторов запросов по способу выполнения.</span><span class="sxs-lookup"><span data-stu-id="73174-129">The following table classifies each standard query operator method according to its method of execution.</span></span>  
   
 > [!NOTE]
->  Если оператор помечен в двух столбцах, в операции участвуют два входных последовательностей и каждой последовательности вычисляется по-разному. В таких случаях следует всегда первой последовательности в списке параметров, которое вычисляется отложенным потоковым способом.  
+>  <span data-ttu-id="73174-130">Если оператор помечен в двух столбцах, в операции участвуют две входные последовательности, и каждая последовательность вычисляется по-разному.</span><span class="sxs-lookup"><span data-stu-id="73174-130">If an operator is marked in two columns, two input sequences are involved in the operation, and each sequence is evaluated differently.</span></span> <span data-ttu-id="73174-131">В таких случаях первая последовательность в списке параметров всегда вычисляется отложенным потоковым способом.</span><span class="sxs-lookup"><span data-stu-id="73174-131">In these cases, it is always the first sequence in the parameter list that is evaluated in a deferred, streaming manner.</span></span>  
   
-|Стандартный оператор запроса|Возвращаемый тип|Немедленное выполнение|Отложенное выполнение потоковой передачи|Отложенное непотоковые выполнения|  
+|<span data-ttu-id="73174-132">Стандартный оператор запроса</span><span class="sxs-lookup"><span data-stu-id="73174-132">Standard Query Operator</span></span>|<span data-ttu-id="73174-133">Возвращаемый тип</span><span class="sxs-lookup"><span data-stu-id="73174-133">Return Type</span></span>|<span data-ttu-id="73174-134">Немедленное выполнение</span><span class="sxs-lookup"><span data-stu-id="73174-134">Immediate Execution</span></span>|<span data-ttu-id="73174-135">Отложенное потоковое выполнение</span><span class="sxs-lookup"><span data-stu-id="73174-135">Deferred Streaming Execution</span></span>|<span data-ttu-id="73174-136">Отложенное непотоковое выполнение</span><span class="sxs-lookup"><span data-stu-id="73174-136">Deferred Non-Streaming Execution</span></span>|  
 |-----------------------------|-----------------|-------------------------|----------------------------------|---------------------------------------|  
-|<xref:System.Linq.Enumerable.Aggregate%2A></xref:System.Linq.Enumerable.Aggregate%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.All%2A></xref:System.Linq.Enumerable.All%2A>|<xref:System.Boolean></xref:System.Boolean>|X|||  
-|<xref:System.Linq.Enumerable.Any%2A></xref:System.Linq.Enumerable.Any%2A>|<xref:System.Boolean></xref:System.Boolean>|X|||  
-|<xref:System.Linq.Enumerable.AsEnumerable%2A></xref:System.Linq.Enumerable.AsEnumerable%2A>|<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Average%2A></xref:System.Linq.Enumerable.Average%2A>|Одно числовое значение|X|||  
-|<xref:System.Linq.Enumerable.Cast%2A></xref:System.Linq.Enumerable.Cast%2A>|<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Concat%2A></xref:System.Linq.Enumerable.Concat%2A>|<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Contains%2A></xref:System.Linq.Enumerable.Contains%2A>|<xref:System.Boolean></xref:System.Boolean>|X|||  
-|<xref:System.Linq.Enumerable.Count%2A></xref:System.Linq.Enumerable.Count%2A>|<xref:System.Int32></xref:System.Int32>|X|||  
-|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A></xref:System.Linq.Enumerable.DefaultIfEmpty%2A>|<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Distinct%2A></xref:System.Linq.Enumerable.Distinct%2A>|<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.ElementAt%2A></xref:System.Linq.Enumerable.ElementAt%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.ElementAtOrDefault%2A></xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.Empty%2A></xref:System.Linq.Enumerable.Empty%2A>|<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>|X|||  
-|<xref:System.Linq.Enumerable.Except%2A></xref:System.Linq.Enumerable.Except%2A>|<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>||X|X|  
-|<xref:System.Linq.Enumerable.First%2A></xref:System.Linq.Enumerable.First%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.FirstOrDefault%2A></xref:System.Linq.Enumerable.FirstOrDefault%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.GroupBy%2A></xref:System.Linq.Enumerable.GroupBy%2A>|<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>|||X|  
-|<xref:System.Linq.Enumerable.GroupJoin%2A></xref:System.Linq.Enumerable.GroupJoin%2A>|<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>||X|X|  
-<xref:System.Linq.Enumerable.Intersect%2A></xref:System.Linq.Enumerable.Intersect%2A>|<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>||X|X|  
-|<xref:System.Linq.Enumerable.Join%2A></xref:System.Linq.Enumerable.Join%2A>|<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>||X|X|  
-|<xref:System.Linq.Enumerable.Last%2A></xref:System.Linq.Enumerable.Last%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.LastOrDefault%2A></xref:System.Linq.Enumerable.LastOrDefault%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.LongCount%2A></xref:System.Linq.Enumerable.LongCount%2A>|<xref:System.Int64></xref:System.Int64>|X|||  
-|<xref:System.Linq.Enumerable.Max%2A></xref:System.Linq.Enumerable.Max%2A>|Одно числовое значение, TSource или TResult|X|||  
-|<xref:System.Linq.Enumerable.Min%2A></xref:System.Linq.Enumerable.Min%2A>|Одно числовое значение, TSource или TResult|X|||  
-|<xref:System.Linq.Enumerable.OfType%2A></xref:System.Linq.Enumerable.OfType%2A>|<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.OrderBy%2A></xref:System.Linq.Enumerable.OrderBy%2A>|<xref:System.Linq.IOrderedEnumerable%601></xref:System.Linq.IOrderedEnumerable%601>|||X|  
-|<xref:System.Linq.Enumerable.OrderByDescending%2A></xref:System.Linq.Enumerable.OrderByDescending%2A>|<xref:System.Linq.IOrderedEnumerable%601></xref:System.Linq.IOrderedEnumerable%601>|||X|  
-|<xref:System.Linq.Enumerable.Range%2A></xref:System.Linq.Enumerable.Range%2A>|<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Repeat%2A></xref:System.Linq.Enumerable.Repeat%2A>|<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Reverse%2A></xref:System.Linq.Enumerable.Reverse%2A>|<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>|||X|  
-|<xref:System.Linq.Enumerable.Select%2A></xref:System.Linq.Enumerable.Select%2A>|<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.SelectMany%2A></xref:System.Linq.Enumerable.SelectMany%2A>|<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.SequenceEqual%2A></xref:System.Linq.Enumerable.SequenceEqual%2A>|<xref:System.Boolean></xref:System.Boolean>|X|||  
-|<xref:System.Linq.Enumerable.Single%2A></xref:System.Linq.Enumerable.Single%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.SingleOrDefault%2A></xref:System.Linq.Enumerable.SingleOrDefault%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.Skip%2A></xref:System.Linq.Enumerable.Skip%2A>|<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.SkipWhile%2A></xref:System.Linq.Enumerable.SkipWhile%2A>|<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Sum%2A></xref:System.Linq.Enumerable.Sum%2A>|Одно числовое значение|X|||  
-|<xref:System.Linq.Enumerable.Take%2A></xref:System.Linq.Enumerable.Take%2A>|<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>||X||  
-<xref:System.Linq.Enumerable.TakeWhile%2A></xref:System.Linq.Enumerable.TakeWhile%2A>|<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.ThenBy%2A></xref:System.Linq.Enumerable.ThenBy%2A>|<xref:System.Linq.IOrderedEnumerable%601></xref:System.Linq.IOrderedEnumerable%601>|||X|  
-|<xref:System.Linq.Enumerable.ThenByDescending%2A></xref:System.Linq.Enumerable.ThenByDescending%2A>|<xref:System.Linq.IOrderedEnumerable%601></xref:System.Linq.IOrderedEnumerable%601>|||X|  
-|<xref:System.Linq.Enumerable.ToArray%2A></xref:System.Linq.Enumerable.ToArray%2A>|Массив TSource|X|||  
-|<xref:System.Linq.Enumerable.ToDictionary%2A></xref:System.Linq.Enumerable.ToDictionary%2A>|<xref:System.Collections.Generic.Dictionary%602></xref:System.Collections.Generic.Dictionary%602>|X|||  
-|<xref:System.Linq.Enumerable.ToList%2A></xref:System.Linq.Enumerable.ToList%2A>|<xref:System.Collections.Generic.IList%601></xref:System.Collections.Generic.IList%601>|X|||  
-|<xref:System.Linq.Enumerable.ToLookup%2A></xref:System.Linq.Enumerable.ToLookup%2A>|<xref:System.Linq.ILookup%602></xref:System.Linq.ILookup%602>|X|||  
-|<xref:System.Linq.Enumerable.Union%2A></xref:System.Linq.Enumerable.Union%2A>|<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Where%2A></xref:System.Linq.Enumerable.Where%2A>|<xref:System.Collections.Generic.IEnumerable%601></xref:System.Collections.Generic.IEnumerable%601>||X||  
+|<xref:System.Linq.Enumerable.Aggregate%2A>|<span data-ttu-id="73174-137">TSource</span><span class="sxs-lookup"><span data-stu-id="73174-137">TSource</span></span>|<span data-ttu-id="73174-138">X</span><span class="sxs-lookup"><span data-stu-id="73174-138">X</span></span>|||  
+|<xref:System.Linq.Enumerable.All%2A>|<xref:System.Boolean>|<span data-ttu-id="73174-139">X</span><span class="sxs-lookup"><span data-stu-id="73174-139">X</span></span>|||  
+|<xref:System.Linq.Enumerable.Any%2A>|<xref:System.Boolean>|<span data-ttu-id="73174-140">X</span><span class="sxs-lookup"><span data-stu-id="73174-140">X</span></span>|||  
+|<xref:System.Linq.Enumerable.AsEnumerable%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="73174-141">X</span><span class="sxs-lookup"><span data-stu-id="73174-141">X</span></span>||  
+|<xref:System.Linq.Enumerable.Average%2A>|<span data-ttu-id="73174-142">Одно числовое значение</span><span class="sxs-lookup"><span data-stu-id="73174-142">Single numeric value</span></span>|<span data-ttu-id="73174-143">X</span><span class="sxs-lookup"><span data-stu-id="73174-143">X</span></span>|||  
+|<xref:System.Linq.Enumerable.Cast%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="73174-144">X</span><span class="sxs-lookup"><span data-stu-id="73174-144">X</span></span>||  
+|<xref:System.Linq.Enumerable.Concat%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="73174-145">X</span><span class="sxs-lookup"><span data-stu-id="73174-145">X</span></span>||  
+|<xref:System.Linq.Enumerable.Contains%2A>|<xref:System.Boolean>|<span data-ttu-id="73174-146">X</span><span class="sxs-lookup"><span data-stu-id="73174-146">X</span></span>|||  
+|<xref:System.Linq.Enumerable.Count%2A>|<xref:System.Int32>|<span data-ttu-id="73174-147">X</span><span class="sxs-lookup"><span data-stu-id="73174-147">X</span></span>|||  
+|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="73174-148">X</span><span class="sxs-lookup"><span data-stu-id="73174-148">X</span></span>||  
+|<xref:System.Linq.Enumerable.Distinct%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="73174-149">X</span><span class="sxs-lookup"><span data-stu-id="73174-149">X</span></span>||  
+|<xref:System.Linq.Enumerable.ElementAt%2A>|<span data-ttu-id="73174-150">TSource</span><span class="sxs-lookup"><span data-stu-id="73174-150">TSource</span></span>|<span data-ttu-id="73174-151">X</span><span class="sxs-lookup"><span data-stu-id="73174-151">X</span></span>|||  
+|<xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|<span data-ttu-id="73174-152">TSource</span><span class="sxs-lookup"><span data-stu-id="73174-152">TSource</span></span>|<span data-ttu-id="73174-153">X</span><span class="sxs-lookup"><span data-stu-id="73174-153">X</span></span>|||  
+|<xref:System.Linq.Enumerable.Empty%2A>|<xref:System.Collections.Generic.IEnumerable%601>|<span data-ttu-id="73174-154">X</span><span class="sxs-lookup"><span data-stu-id="73174-154">X</span></span>|||  
+|<xref:System.Linq.Enumerable.Except%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="73174-155">X</span><span class="sxs-lookup"><span data-stu-id="73174-155">X</span></span>|<span data-ttu-id="73174-156">X</span><span class="sxs-lookup"><span data-stu-id="73174-156">X</span></span>|  
+|<xref:System.Linq.Enumerable.First%2A>|<span data-ttu-id="73174-157">TSource</span><span class="sxs-lookup"><span data-stu-id="73174-157">TSource</span></span>|<span data-ttu-id="73174-158">X</span><span class="sxs-lookup"><span data-stu-id="73174-158">X</span></span>|||  
+|<xref:System.Linq.Enumerable.FirstOrDefault%2A>|<span data-ttu-id="73174-159">TSource</span><span class="sxs-lookup"><span data-stu-id="73174-159">TSource</span></span>|<span data-ttu-id="73174-160">X</span><span class="sxs-lookup"><span data-stu-id="73174-160">X</span></span>|||  
+|<xref:System.Linq.Enumerable.GroupBy%2A>|<xref:System.Collections.Generic.IEnumerable%601>|||<span data-ttu-id="73174-161">X</span><span class="sxs-lookup"><span data-stu-id="73174-161">X</span></span>|  
+|<xref:System.Linq.Enumerable.GroupJoin%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="73174-162">X</span><span class="sxs-lookup"><span data-stu-id="73174-162">X</span></span>|<span data-ttu-id="73174-163">X</span><span class="sxs-lookup"><span data-stu-id="73174-163">X</span></span>|  
+<xref:System.Linq.Enumerable.Intersect%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="73174-164">X</span><span class="sxs-lookup"><span data-stu-id="73174-164">X</span></span>|<span data-ttu-id="73174-165">X</span><span class="sxs-lookup"><span data-stu-id="73174-165">X</span></span>|  
+|<xref:System.Linq.Enumerable.Join%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="73174-166">X</span><span class="sxs-lookup"><span data-stu-id="73174-166">X</span></span>|<span data-ttu-id="73174-167">X</span><span class="sxs-lookup"><span data-stu-id="73174-167">X</span></span>|  
+|<xref:System.Linq.Enumerable.Last%2A>|<span data-ttu-id="73174-168">TSource</span><span class="sxs-lookup"><span data-stu-id="73174-168">TSource</span></span>|<span data-ttu-id="73174-169">X</span><span class="sxs-lookup"><span data-stu-id="73174-169">X</span></span>|||  
+|<xref:System.Linq.Enumerable.LastOrDefault%2A>|<span data-ttu-id="73174-170">TSource</span><span class="sxs-lookup"><span data-stu-id="73174-170">TSource</span></span>|<span data-ttu-id="73174-171">X</span><span class="sxs-lookup"><span data-stu-id="73174-171">X</span></span>|||  
+|<xref:System.Linq.Enumerable.LongCount%2A>|<xref:System.Int64>|<span data-ttu-id="73174-172">X</span><span class="sxs-lookup"><span data-stu-id="73174-172">X</span></span>|||  
+|<xref:System.Linq.Enumerable.Max%2A>|<span data-ttu-id="73174-173">Одно числовое значение, TSource или TResult</span><span class="sxs-lookup"><span data-stu-id="73174-173">Single numeric value, TSource, or TResult</span></span>|<span data-ttu-id="73174-174">X</span><span class="sxs-lookup"><span data-stu-id="73174-174">X</span></span>|||  
+|<xref:System.Linq.Enumerable.Min%2A>|<span data-ttu-id="73174-175">Одно числовое значение, TSource или TResult</span><span class="sxs-lookup"><span data-stu-id="73174-175">Single numeric value, TSource, or TResult</span></span>|<span data-ttu-id="73174-176">X</span><span class="sxs-lookup"><span data-stu-id="73174-176">X</span></span>|||  
+|<xref:System.Linq.Enumerable.OfType%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="73174-177">X</span><span class="sxs-lookup"><span data-stu-id="73174-177">X</span></span>||  
+|<xref:System.Linq.Enumerable.OrderBy%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||<span data-ttu-id="73174-178">X</span><span class="sxs-lookup"><span data-stu-id="73174-178">X</span></span>|  
+|<xref:System.Linq.Enumerable.OrderByDescending%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||<span data-ttu-id="73174-179">X</span><span class="sxs-lookup"><span data-stu-id="73174-179">X</span></span>|  
+|<xref:System.Linq.Enumerable.Range%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="73174-180">X</span><span class="sxs-lookup"><span data-stu-id="73174-180">X</span></span>||  
+|<xref:System.Linq.Enumerable.Repeat%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="73174-181">X</span><span class="sxs-lookup"><span data-stu-id="73174-181">X</span></span>||  
+|<xref:System.Linq.Enumerable.Reverse%2A>|<xref:System.Collections.Generic.IEnumerable%601>|||<span data-ttu-id="73174-182">X</span><span class="sxs-lookup"><span data-stu-id="73174-182">X</span></span>|  
+|<xref:System.Linq.Enumerable.Select%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="73174-183">X</span><span class="sxs-lookup"><span data-stu-id="73174-183">X</span></span>||  
+|<xref:System.Linq.Enumerable.SelectMany%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="73174-184">X</span><span class="sxs-lookup"><span data-stu-id="73174-184">X</span></span>||  
+|<xref:System.Linq.Enumerable.SequenceEqual%2A>|<xref:System.Boolean>|<span data-ttu-id="73174-185">X</span><span class="sxs-lookup"><span data-stu-id="73174-185">X</span></span>|||  
+|<xref:System.Linq.Enumerable.Single%2A>|<span data-ttu-id="73174-186">TSource</span><span class="sxs-lookup"><span data-stu-id="73174-186">TSource</span></span>|<span data-ttu-id="73174-187">X</span><span class="sxs-lookup"><span data-stu-id="73174-187">X</span></span>|||  
+|<xref:System.Linq.Enumerable.SingleOrDefault%2A>|<span data-ttu-id="73174-188">TSource</span><span class="sxs-lookup"><span data-stu-id="73174-188">TSource</span></span>|<span data-ttu-id="73174-189">X</span><span class="sxs-lookup"><span data-stu-id="73174-189">X</span></span>|||  
+|<xref:System.Linq.Enumerable.Skip%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="73174-190">X</span><span class="sxs-lookup"><span data-stu-id="73174-190">X</span></span>||  
+|<xref:System.Linq.Enumerable.SkipWhile%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="73174-191">X</span><span class="sxs-lookup"><span data-stu-id="73174-191">X</span></span>||  
+|<xref:System.Linq.Enumerable.Sum%2A>|<span data-ttu-id="73174-192">Одно числовое значение</span><span class="sxs-lookup"><span data-stu-id="73174-192">Single numeric value</span></span>|<span data-ttu-id="73174-193">X</span><span class="sxs-lookup"><span data-stu-id="73174-193">X</span></span>|||  
+|<xref:System.Linq.Enumerable.Take%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="73174-194">X</span><span class="sxs-lookup"><span data-stu-id="73174-194">X</span></span>||  
+<xref:System.Linq.Enumerable.TakeWhile%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="73174-195">X</span><span class="sxs-lookup"><span data-stu-id="73174-195">X</span></span>||  
+|<xref:System.Linq.Enumerable.ThenBy%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||<span data-ttu-id="73174-196">X</span><span class="sxs-lookup"><span data-stu-id="73174-196">X</span></span>|  
+|<xref:System.Linq.Enumerable.ThenByDescending%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||<span data-ttu-id="73174-197">X</span><span class="sxs-lookup"><span data-stu-id="73174-197">X</span></span>|  
+|<xref:System.Linq.Enumerable.ToArray%2A>|<span data-ttu-id="73174-198">Массив TSource</span><span class="sxs-lookup"><span data-stu-id="73174-198">TSource array</span></span>|<span data-ttu-id="73174-199">X</span><span class="sxs-lookup"><span data-stu-id="73174-199">X</span></span>|||  
+|<xref:System.Linq.Enumerable.ToDictionary%2A>|<xref:System.Collections.Generic.Dictionary%602>|<span data-ttu-id="73174-200">X</span><span class="sxs-lookup"><span data-stu-id="73174-200">X</span></span>|||  
+|<xref:System.Linq.Enumerable.ToList%2A>|<xref:System.Collections.Generic.IList%601>|<span data-ttu-id="73174-201">X</span><span class="sxs-lookup"><span data-stu-id="73174-201">X</span></span>|||  
+|<xref:System.Linq.Enumerable.ToLookup%2A>|<xref:System.Linq.ILookup%602>|<span data-ttu-id="73174-202">X</span><span class="sxs-lookup"><span data-stu-id="73174-202">X</span></span>|||  
+|<xref:System.Linq.Enumerable.Union%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="73174-203">X</span><span class="sxs-lookup"><span data-stu-id="73174-203">X</span></span>||  
+|<xref:System.Linq.Enumerable.Where%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="73174-204">X</span><span class="sxs-lookup"><span data-stu-id="73174-204">X</span></span>||  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Linq.Enumerable></xref:System.Linq.Enumerable>   
- [Общие сведения о стандартных операторах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Синтаксис выражений запроса для стандартных операторов запросов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)   
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a><span data-ttu-id="73174-205">См. также</span><span class="sxs-lookup"><span data-stu-id="73174-205">See Also</span></span>  
+ <xref:System.Linq.Enumerable>  
+ [<span data-ttu-id="73174-206">Общие сведения о стандартных операторах запроса (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="73174-206">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="73174-207">Синтаксис выражения запроса для стандартных операторов запроса (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="73174-207">Query Expression Syntax for Standard Query Operators (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
+ [<span data-ttu-id="73174-208">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="73174-208">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

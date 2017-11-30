@@ -1,1 +1,1 @@
-Модель COM
+<span data-ttu-id="cf379-101">Модель COM</span><span class="sxs-lookup"><span data-stu-id="cf379-101">Component Object Model (COM)</span></span>

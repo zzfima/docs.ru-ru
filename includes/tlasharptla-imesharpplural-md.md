@@ -1,1 +1,1 @@
-Редакторы метода ввода (IME)
+<span data-ttu-id="c20d3-101">Редакторы метода ввода (IME)</span><span class="sxs-lookup"><span data-stu-id="c20d3-101">Input Method Editors (IMEs)</span></span>

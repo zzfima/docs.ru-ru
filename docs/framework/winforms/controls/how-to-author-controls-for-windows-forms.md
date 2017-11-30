@@ -1,70 +1,71 @@
 ---
-title: "Практическое руководство. Создание элементов управления для форм Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "элементы управления [Windows Forms], создание"
-  - "пользовательские элементы управления [Windows Forms], создание"
-  - "UserControl - класс, Windows Forms"
+title: "Практическое руководство. Создание элементов управления для форм Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms], creating
+- UserControl class [Windows Forms], Windows Forms
+- custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f42ee49a4690c23a563740993e721207d5dedea0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание элементов управления для форм Windows Forms
-Элемент управления играет роль графической связи между пользователем и программой.  Элемент управления может предоставлять или обрабатывать данные, принимать данные, введенные пользователем, реагировать на события, а также выполнять любые другие функции, связывающие пользователя и приложение.  Поскольку элемент управления по существу является компонентом с графическим интерфейсом, он может обрабатывать любую функцию, которую выполняет компонент, а также обеспечивать взаимодействие с пользователем.  Элементы управления создаются для конкретных целей; их разработка — это лишь одна из разновидностей задач программирования.  С учетом этого в следующих разделах представлены общие сведения о процессе разработки элементов управления.  Приводятся также ссылки на дополнительные сведения об отдельных шагах описываемых процедур.  
+# <a name="how-to-author-controls-for-windows-forms"></a><span data-ttu-id="a1537-102">Практическое руководство. Создание элементов управления для форм Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a1537-102">How to: Author Controls for Windows Forms</span></span>
+<span data-ttu-id="a1537-103">Элемент управления выполняет роль визуальной связи между пользователем и программой.</span><span class="sxs-lookup"><span data-stu-id="a1537-103">A control represents a graphical link between the user and the program.</span></span> <span data-ttu-id="a1537-104">Он может предоставлять или обрабатывать данные, принимать входные данные пользователя, реагировать на события или выполнять любые другие функции, устанавливающие связь между пользователем и приложением.</span><span class="sxs-lookup"><span data-stu-id="a1537-104">A control can provide or process data, accept user input, respond to events, or perform any number of other functions that connect the user and the application.</span></span> <span data-ttu-id="a1537-105">Поскольку элемент управления — это по сути компонент с графическим интерфейсом, он может выполнять любую функцию компонента и в то же время обеспечивать взаимодействие с пользователем.</span><span class="sxs-lookup"><span data-stu-id="a1537-105">Because a control is essentially a component with a graphical interface, it can serve any function that a component does, as well as provide user interaction.</span></span> <span data-ttu-id="a1537-106">Элементы управления создаются для конкретных целей, и процесс их создания входит в процесс программирования.</span><span class="sxs-lookup"><span data-stu-id="a1537-106">Controls are created to serve specific purposes, and authoring controls is just another programming task.</span></span> <span data-ttu-id="a1537-107">Ниже описан процесс создания элемента управления с учетом всего вышесказанного.</span><span class="sxs-lookup"><span data-stu-id="a1537-107">With that in mind, the following steps represent an overview of the control authoring process.</span></span> <span data-ttu-id="a1537-108">Ссылки указывают на дополнительные сведения об отдельных этапах.</span><span class="sxs-lookup"><span data-stu-id="a1537-108">Links provide additional information on the individual steps.</span></span>  
   
 > [!NOTE]
->  Если необходимо создать пользовательский элемент управления для использования в конструкторе Web Forms, см. раздел [Developing Custom ASP.NET Server Controls](../Topic/Developing%20Custom%20ASP.NET%20Server%20Controls.md).  
+>  <span data-ttu-id="a1537-109">Если вам необходимо создать пользовательский элемент управления для использования в Web Forms, см. раздел [Разработка пользовательских серверных элементов управления ASP.NET](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).</span><span class="sxs-lookup"><span data-stu-id="a1537-109">If you want to author a custom control to use on Web Forms, see [Developing Custom ASP.NET Server Controls](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).</span></span>  
 >   
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="a1537-110">Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.</span><span class="sxs-lookup"><span data-stu-id="a1537-110">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="a1537-111">Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** .</span><span class="sxs-lookup"><span data-stu-id="a1537-111">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="a1537-112">Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="a1537-112">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Чтобы разработать элемент управления, выполните следующие действия:  
+### <a name="to-author-a-control"></a><span data-ttu-id="a1537-113">Создание элемента управления</span><span class="sxs-lookup"><span data-stu-id="a1537-113">To author a control</span></span>  
   
-1.  Определите действия, которые должен выполнять элемент управления, или роль, которую он будет играть в приложении.  Необходимо рассмотреть следующие факторы:  
+1.  <span data-ttu-id="a1537-114">Определите, какую функцию или роль ваш элемент управления должен выполнять в приложении.</span><span class="sxs-lookup"><span data-stu-id="a1537-114">Determine what you want your control to accomplish, or what part it will play in your application.</span></span> <span data-ttu-id="a1537-115">При этом необходимо учитывать следующие факторы.</span><span class="sxs-lookup"><span data-stu-id="a1537-115">Factors to consider are:</span></span>  
   
-    -   Какой вид должен иметь графический интерфейс?  
+    -   <span data-ttu-id="a1537-116">Какого рода графический интерфейс вам требуется?</span><span class="sxs-lookup"><span data-stu-id="a1537-116">What kind of graphical interface do you need?</span></span>  
   
-    -   Какие особые виды взаимодействия с пользователем будет обрабатывать элемент управления?  
+    -   <span data-ttu-id="a1537-117">Какие взаимодействия с пользователем будет обрабатывать этот элемент управления?</span><span class="sxs-lookup"><span data-stu-id="a1537-117">What specific user interactions will this control handle?</span></span>  
   
-    -   Существуют ли элементы управления, выполняющие нужные функции?  
+    -   <span data-ttu-id="a1537-118">Обладают ли необходимыми функциональными возможностями какие-либо из существующих элементов управления?</span><span class="sxs-lookup"><span data-stu-id="a1537-118">Is the functionality you need provided by any existing controls?</span></span>  
   
-    -   Можно ли получить нужные функции путем объединения нескольких элементов управления Windows Forms?  
+    -   <span data-ttu-id="a1537-119">Можно ли получить необходимую функциональную возможность, объединив несколько элементов управления Windows Forms?</span><span class="sxs-lookup"><span data-stu-id="a1537-119">Can you get the functionality you need by combining several Windows Forms controls?</span></span>  
   
-2.  Если для элемента управления необходима объектная модель, определите способ распределения функций в этой модели и разделите их между элементом управления и вложенными объектами.  Объектная модель может быть полезна при планировании сложного элемента управления или при необходимости объединения нескольких функций.  
+2.  <span data-ttu-id="a1537-120">Если для элемента управления требуется объектная модель, определите, каким образом функциональные возможности будут распределяться по объектной модели, и разделите их между элементом управления и подчиненными объектами.</span><span class="sxs-lookup"><span data-stu-id="a1537-120">If you need an object model for your control, determine how functionality will be distributed throughout the object model, and divide up functionality between the control and any subobjects.</span></span> <span data-ttu-id="a1537-121">Объектная модель может пригодиться при планировании сложного элемента управления, а также в случае, если вам требуется внедрить сразу несколько функциональных возможностей.</span><span class="sxs-lookup"><span data-stu-id="a1537-121">An object model may be useful if you are planning a complex control, or want to incorporate several functionalities.</span></span>  
   
-3.  Определите необходимый тип элемента управления \(например, пользовательский элемент управления, нестандартный элемент управления, унаследованный элемент управления Windows Forms\).  Дополнительные сведения см. в разделах [Рекомендации относительно типов элементов управления](../../../../docs/framework/winforms/controls/control-type-recommendations.md) и [Создание собственных элементов управления](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md).  
+3.  <span data-ttu-id="a1537-122">Определите необходимый тип элемента управления (например, пользовательский элемент управления, настраиваемый элемент управления, наследуемый элемент управления Windows Forms).</span><span class="sxs-lookup"><span data-stu-id="a1537-122">Determine the type of control (for example, user control, custom control, inherited Windows Forms control) you need.</span></span> <span data-ttu-id="a1537-123">Дополнительные сведения см. в разделах [Рекомендации относительно типов элементов управления](../../../../docs/framework/winforms/controls/control-type-recommendations.md) и [Разновидности пользовательских элементов управления](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md).</span><span class="sxs-lookup"><span data-stu-id="a1537-123">For details, see [Control Type Recommendations](../../../../docs/framework/winforms/controls/control-type-recommendations.md) and [Varieties of Custom Controls](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md).</span></span>  
   
-4.  Представьте функции в качестве свойств, методов и событий элемента управления и его вложенных объектов или вспомогательных структур, а затем назначьте соответствующие уровни доступа \(например, открытый, защищенный и т. д.\).  
+4.  <span data-ttu-id="a1537-124">Представьте функции в качестве свойств, методов и событий элемента управления и его подчиненных объектов или вспомогательных структур и назначьте соответствующие уровни доступа (например, public, protected и т. д.).</span><span class="sxs-lookup"><span data-stu-id="a1537-124">Express functionality as properties, methods, and events of the control and its subobjects or subsidiary structures, and assign appropriate access levels (for example, public, protected, and so on).</span></span>  
   
-5.  Если для элемента управления необходимо пользовательское оформление, добавьте соответствующий код.  Дополнительные сведения см. в разделе [Рисование и отрисовка пользовательского элемента управления](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md).  
+5.  <span data-ttu-id="a1537-125">Если для элемента управления необходима пользовательская отрисовка, добавьте соответствующий код.</span><span class="sxs-lookup"><span data-stu-id="a1537-125">If you need custom painting for your control, add code for it.</span></span> <span data-ttu-id="a1537-126">Дополнительные сведения см. в разделе [Рисование и отрисовка пользовательского элемента управления](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md).</span><span class="sxs-lookup"><span data-stu-id="a1537-126">For details, see [Custom Control Painting and Rendering](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md).</span></span>  
   
-6.  Если элемент управления наследует от класса <xref:System.Windows.Forms.UserControl>, можно проверить его поведение во время выполнения, построив управляющий проект и запустив его в **тестовом контейнере пользовательских элементов управления**.  Дополнительные сведения см. в разделе [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+6.  <span data-ttu-id="a1537-127">Если элемент управления наследуется от <xref:System.Windows.Forms.UserControl>, можно проверить его поведение во время выполнения, построение проекта элемента управления и его выполнение в **контейнере для тестирования пользовательских элементов управления**.</span><span class="sxs-lookup"><span data-stu-id="a1537-127">If your control inherits from <xref:System.Windows.Forms.UserControl>, you can test its runtime behavior by building the control project and running it in the **UserControl Test Container**.</span></span> <span data-ttu-id="a1537-128">Дополнительные сведения см. в разделе [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span><span class="sxs-lookup"><span data-stu-id="a1537-128">For more information, see [How to: Test the Run-Time Behavior of a UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span></span>  
   
-7.  Можно также выполнить тестирование и отладку элемента управления путем создания нового проекта, например приложения Windows, и помещения его в контейнер.  Этот процесс описан в разделе [Пример. Создание составного элемента управления с помощью Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md).  
+7.  <span data-ttu-id="a1537-129">Кроме того, для тестирования и отладки элемента управления можно создать новый проект, например приложение Windows, и поместив его в контейнер.</span><span class="sxs-lookup"><span data-stu-id="a1537-129">You can also test and debug your control by creating a new project, such as a Windows Application, and placing it into a container.</span></span> <span data-ttu-id="a1537-130">Этот процесс демонстрируется в разделе [Пошаговое руководство. Создание составного элемента управления с помощью Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md).</span><span class="sxs-lookup"><span data-stu-id="a1537-130">This process is demonstrated as part of [Walkthrough: Authoring a Composite Control with Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md).</span></span>  
   
-8.  Включите в тестовый проект поочередно каждую функцию элемента управления для проверки.  
+8.  <span data-ttu-id="a1537-131">При добавлении каждой функции добавляйте ее в тестовый проект для реализации новых функциональных возможностей.</span><span class="sxs-lookup"><span data-stu-id="a1537-131">As you add each feature, add features to your test project to exercise the new functionality.</span></span>  
   
-9. Повторите этот шаг, каждый раз внося уточнения в структуру элемента.  
+9. <span data-ttu-id="a1537-132">Повторите эти действия, добавив необходимые уточнения.</span><span class="sxs-lookup"><span data-stu-id="a1537-132">Repeat, refining the design.</span></span>  
   
-10. Выполните упаковку и развертывание элемента управления.  Дополнительные сведения см. в разделе [Развертывание приложений, служб и компонентов](../Topic/Deploying%20Applications,%20Services,%20and%20Components.md).  
+10. <span data-ttu-id="a1537-133">Упакуйте и разверните элемент управления.</span><span class="sxs-lookup"><span data-stu-id="a1537-133">Package and deploy your control.</span></span> <span data-ttu-id="a1537-134">Дополнительные сведения см. в разделе [Развертывание приложений, служб и компонентов](https://msdn.microsoft.com/library/wtzawcsz).</span><span class="sxs-lookup"><span data-stu-id="a1537-134">For details, see [Deploying Applications, Services, and Components](https://msdn.microsoft.com/library/wtzawcsz).</span></span>  
   
-## См. также  
- [Пример. Создание составного элемента управления с помощью Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)   
- [Пример. Наследование элементов управления форм Windows Forms с помощью Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)   
- [Практическое руководство. Наследование класса UserControl.](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)   
- [Практическое руководство. Наследование класса Control.](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)   
- [Практическое руководство. Наследование существующих элементов управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)   
- [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)   
- [Создание собственных элементов управления](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a><span data-ttu-id="a1537-135">См. также</span><span class="sxs-lookup"><span data-stu-id="a1537-135">See Also</span></span>  
+ [<span data-ttu-id="a1537-136">Пошаговое руководство. Создание составного элемента управления с помощью Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a1537-136">Walkthrough: Authoring a Composite Control with Visual Basic</span></span>](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
+ [<span data-ttu-id="a1537-137">Пошаговое руководство. Наследование элементов управления форм Windows Forms с помощью Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a1537-137">Walkthrough: Inheriting from a Windows Forms Control with Visual Basic</span></span>](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+ [<span data-ttu-id="a1537-138">Практическое руководство. Наследование класса UserControl</span><span class="sxs-lookup"><span data-stu-id="a1537-138">How to: Inherit from the UserControl Class</span></span>](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  
+ [<span data-ttu-id="a1537-139">Практическое руководство. Наследование класса Control</span><span class="sxs-lookup"><span data-stu-id="a1537-139">How to: Inherit from the Control Class</span></span>](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
+ [<span data-ttu-id="a1537-140">Практическое руководство. Наследование существующих элементов управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a1537-140">How to: Inherit from Existing Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
+ [<span data-ttu-id="a1537-141">Практическое руководство. Тестирование поведения элемента UserControl во время выполнения</span><span class="sxs-lookup"><span data-stu-id="a1537-141">How to: Test the Run-Time Behavior of a UserControl</span></span>](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+ [<span data-ttu-id="a1537-142">Разновидности пользовательских элементов управления</span><span class="sxs-lookup"><span data-stu-id="a1537-142">Varieties of Custom Controls</span></span>](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
