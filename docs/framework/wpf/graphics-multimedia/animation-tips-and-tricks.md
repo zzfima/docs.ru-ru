@@ -1,137 +1,142 @@
 ---
-title: "Советы и рекомендации по анимации | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "анимированные объекты [WPF], устранение неполадок"
-  - "советы и рекомендации по анимации [WPF]"
-  - "анимация [WPF], FillBehavior - свойство"
-  - "анимация [WPF], использование системных ресурсов"
-  - "устранение неполадок производительности [WPF], анимация"
-  - "советы и рекомендации [WPF], анимация"
-  - "устранение неполадок [WPF], анимация"
-  - "устранение неполадок анимации [WPF]"
+title: "Советы и рекомендации по анимации"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- troubleshooting [WPF], animation
+- animations [WPF], FillBehavior property
+- troubleshooting animation [WPF]
+- animating objects [WPF], troubleshooting
+- animation tips and tricks [WPF]
+- tips and tricks [WPF], animation
+- performance troubleshooting [WPF], animation
+- animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ca88d95f760e44b6cdc319923215151eff4bf762
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Советы и рекомендации по анимации
-При работе с анимацией в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] некоторые советы и рекомендации помогут улучшить выполнение анимаций и избавят разработчика от разочарований.  
+# <a name="animation-tips-and-tricks"></a>Советы и рекомендации по анимации
+При работе с анимации в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], существует ряд советы и рекомендации помогут улучшить анимациями высокую производительность и сократить число трудностей.  
   
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
 <a name="generalissuessection"></a>   
-## Общие проблемы  
+## <a name="general-issues"></a>Общие проблемы  
   
-### Анимация расположения полосы прокрутки или ползунка замораживает их  
- При анимации расположения полосы прокрутки или ползунка с помощью анимации, имеющей <xref:System.Windows.Media.Animation.FillBehavior> <xref:System.Windows.Media.Animation.FillBehavior> \(значение по умолчанию\), пользователь больше не сможет перемещать полосу прокрутки или ползунок.  Это происходит потому, что несмотря на завершение анимации она по\-прежнему переопределяет базовое значение целевого свойства.  Чтобы прекратить переопределение анимацией текущего значения свойства, удалите его или присвойте ему значение <xref:System.Windows.Media.Animation.FillBehavior> <xref:System.Windows.Media.Animation.FillBehavior>.  Дополнительные сведения и пример см. в разделе [Установка свойства после его анимации с помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md).  
+### <a name="animating-the-position-of-a-scroll-bar-or-slider-freezes-it"></a>Анимация расположения полосы прокрутки или ползунка замораживает их  
+ При анимации положение полосы прокрутки или ползунка с помощью анимации, которая имеет <xref:System.Windows.Media.Animation.FillBehavior> из <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd> (значение по умолчанию), пользователь больше не будут иметь возможность перемещать полосы прокрутки или ползунка. Это происходит из-за того, что, хотя анимация завершена, она по-прежнему переопределяет базовое значение целевого свойства. Чтобы остановить анимацию переопределять значение текущего свойства, удалить его или присвоить ему <xref:System.Windows.Media.Animation.FillBehavior> из <xref:System.Windows.Media.Animation.FillBehavior.Stop>. Дополнительные сведения и пример см. в разделе [задать свойства после анимации с помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md).  
   
-### Анимация выходных данных анимации не дает эффекта  
- Невозможна анимация объекта, являющегося выходным для другой анимации.  Например, при использовании <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> для анимации <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Rectangle> из <xref:System.Windows.Media.RadialGradientBrush> в <xref:System.Windows.Media.SolidColorBrush> невозможна анимация ни одного из свойств <xref:System.Windows.Media.RadialGradientBrush> или <xref:System.Windows.Media.SolidColorBrush>.  
+### <a name="animating-the-output-of-an-animation-has-no-effect"></a>Анимация выходных данных анимации ничего не делает  
+ Невозможна анимация объекта, являющегося выходным объектом другой анимации. Например, если вы используете <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> для анимации <xref:System.Windows.Shapes.Shape.Fill%2A> из <xref:System.Windows.Shapes.Rectangle> из <xref:System.Windows.Media.RadialGradientBrush> для <xref:System.Windows.Media.SolidColorBrush>, не удается анимировать любые свойства <xref:System.Windows.Media.RadialGradientBrush> или <xref:System.Windows.Media.SolidColorBrush>.  
   
-### Невозможно изменить значение свойства после его анимации  
- В некоторых случаях нельзя изменить значение свойства после анимации, даже после того, как анимация завершена.  Это происходит потому, что несмотря на завершение анимации она по\-прежнему переопределяет базовое значение свойства.  Чтобы прекратить переопределение анимацией текущего значения свойства, удалите его или присвойте ему значение <xref:System.Windows.Media.Animation.FillBehavior> <xref:System.Windows.Media.Animation.FillBehavior>.  Дополнительные сведения и пример см. в разделе [Установка свойства после его анимации с помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md).  
+### <a name="cant-change-the-value-of-a-property-after-animating-it"></a>Невозможно изменить значение свойства после его анимации  
+ В некоторых случаях может получиться так, что вы не сможете изменить значение свойства после его анимации, даже после завершения анимации. Это происходит из-за того, что, хотя анимация завершена, она по-прежнему переопределяет базовое значение свойства. Чтобы остановить анимацию переопределять значение текущего свойства, удалить его или присвоить ему <xref:System.Windows.Media.Animation.FillBehavior> из <xref:System.Windows.Media.Animation.FillBehavior.Stop>. Дополнительные сведения и пример см. в разделе [задать свойства после анимации с помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md).  
   
-### Изменение временной шкалы не дает эффекта  
- Несмотря на то, что большинство свойств <xref:System.Windows.Media.Animation.Timeline> являются анимируемыми и могут быть привязаны к данным, изменение значений свойств активного <xref:System.Windows.Media.Animation.Timeline> не дает никакого эффекта.  Это происходит потому, что после начала <xref:System.Windows.Media.Animation.Timeline> система времени создает копию <xref:System.Windows.Media.Animation.Timeline> и использует ее для создания объекта <xref:System.Windows.Media.Animation.Clock>.  Изменение исходного объекта не влияет на копию системы.  
+### <a name="changing-a-timeline-has-no-effect"></a>Изменение временной шкалы ничего не делает  
+ Несмотря на то что большинство <xref:System.Windows.Media.Animation.Timeline> свойства, анимации и могут быть привязаны к данным, изменение значений свойств активного <xref:System.Windows.Media.Animation.Timeline> не дает эффекта. Это потому, что, когда <xref:System.Windows.Media.Animation.Timeline> — начался, система времени создается копия <xref:System.Windows.Media.Animation.Timeline> и использует его для создания <xref:System.Windows.Media.Animation.Clock> объекта. Изменение исходного объекта не влияет на сделанную системой копию.  
   
- Для того, чтобы <xref:System.Windows.Media.Animation.Timeline> мог отражать изменения, его часы должны быть повторно созданы и использованы для замены ранее созданных часов.  Автоматическое обновление часов не поддерживается.  Ниже приведены несколько способов применения изменений шкалы времени:  
+ Для <xref:System.Windows.Media.Animation.Timeline> в соответствии с изменениями, необходимо заново и используемая для замены ранее созданных часов его часов. Автоматическое повторное создание часов не выполняется. Ниже показано несколько способов применения изменений временной шкалы.  
   
--   Если шкала времени принадлежит <xref:System.Windows.Media.Animation.Storyboard>, можно заставить ее отражать изменения посредством применения ее раскадровки при помощи метода <xref:System.Windows.Media.Animation.BeginStoryboard> или <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>.  Это имеет побочный эффект в виде перезапуска анимации.  В коде можно использовать метод <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> для возврата раскадровки обратно в предыдущее положение.  
+-   Если временная шкала или принадлежит <xref:System.Windows.Media.Animation.Storyboard>, чтобы облегчить отражать изменения посредством применения ее раскадровки при помощи <xref:System.Windows.Media.Animation.BeginStoryboard> или <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> метод. Это имеет побочный эффект в виде перезапуска анимации. В коде, можно использовать <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> метода для возврата раскадровки обратно в предыдущее положение.  
   
--   Если анимация применяется непосредственно к свойству с помощью метода <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>, снова вызовите метод <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> и передайте ему измененную анимацию.  
+-   Если анимация применяется непосредственно к свойству с помощью <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> метод, вызовите <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> метод еще раз и передать его анимации, которая была изменена.  
   
--   Если работа ведется непосредственно на уровне часов, создайте и примените новый набор часов и используйте их для замены предыдущего набора созданных часов.  
+-   При работе непосредственно на уровне часов создайте и примените новый набор часов и используйте его для замены предыдущего набора созданных часов.  
   
- Дополнительные сведения о шкалах времени и часах см. в разделе [Общие сведения об анимации и системе управления временем](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
+ Дополнительные сведения о шкалах времени и часах см. в разделе [анимации и общие сведения о синхронизации системы](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
   
-### FillBehavior.Stop не работает как ожидалось  
- Иногда присвоение свойству <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> значения <xref:System.Windows.Media.Animation.FillBehavior> не дает эффекта, например, когда одна анимация «передается» к другой, так как ее параметр <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> имеет значение <xref:System.Windows.Media.Animation.HandoffBehavior>.  
+### <a name="fillbehaviorstop-doesnt-work-as-expected"></a>FillBehavior.Stop не работает должным образом  
+ Иногда при задании <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> свойства <xref:System.Windows.Media.Animation.FillBehavior.Stop> кажется, что не дает эффекта, например, когда одна анимация «передается» на другой, так как он имеет <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> параметра <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace>.  
   
- В следующем примере создаются объекты <xref:System.Windows.Controls.Canvas>, <xref:System.Windows.Shapes.Rectangle> и <xref:System.Windows.Media.TranslateTransform>.  <xref:System.Windows.Media.TranslateTransform> будет анимирован для перемещения <xref:System.Windows.Shapes.Rectangle> вокруг <xref:System.Windows.Controls.Canvas>.  
+ В следующем примере создается <xref:System.Windows.Controls.Canvas>, <xref:System.Windows.Shapes.Rectangle> и <xref:System.Windows.Media.TranslateTransform>. <xref:System.Windows.Media.TranslateTransform> Будет анимации для перемещения <xref:System.Windows.Shapes.Rectangle> вокруг <xref:System.Windows.Controls.Canvas>.  
   
- [!code-xml[AnimationTipsAndTricksSample_snip#FillBehaviorTipAnimatedObject](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipanimatedobject)]  
+ [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipAnimatedObject](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipanimatedobject)]  
   
- Примеры в этом разделе используют определенные выше объекты для демонстрации нескольких случаев, в которых свойство <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> не действует так, как ожидалось.  
+ Примеры в этом разделе используют определенные выше объекты для демонстрации нескольких случаев где <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> свойство не работает, как можно ожидать его.  
   
-#### FillBehavior\="Stop" и HandoffBehavior с несколькими анимациями  
- Иногда кажется, что анимация игнорирует свойство <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> при замене второй анимацией.  Рассмотрим следующий пример, в котором создается два объекта <xref:System.Windows.Media.Animation.Storyboard>, которые используются для анимации <xref:System.Windows.Media.TranslateTransform>, показанного в предыдущем примере.  
+#### <a name="fillbehaviorstop-and-handoffbehavior-with-multiple-animations"></a>FillBehavior="Stop" и HandoffBehavior с несколькими анимациями  
+ Иногда кажется, что анимация игнорирует его <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> свойство при замене второй анимацией. Рассмотрим следующий пример, который создает два <xref:System.Windows.Media.Animation.Storyboard> и использует их для анимации <xref:System.Windows.Media.TranslateTransform> показано в предыдущем примере.  
   
- Первый <xref:System.Windows.Media.Animation.Storyboard>, `B1`, анимирует свойство <xref:System.Windows.Media.TranslateTransform.X%2A> класса <xref:System.Windows.Media.TranslateTransform> от 0 до 350, которое перемещает прямоугольник на 350 пикселей вправо.  Когда анимация завершается и останавливает воспроизведение, свойство <xref:System.Windows.Media.TranslateTransform.X%2A> возвращается к исходному значению, равному 0.  В результате, прямоугольник перемещается вправо на 350 пикселей, а затем переходит обратно в исходное положение.  
+ Первый <xref:System.Windows.Media.Animation.Storyboard>, `B1`, анимирует <xref:System.Windows.Media.TranslateTransform.X%2A> свойство <xref:System.Windows.Media.TranslateTransform> от 0 до 350, которое перемещает прямоугольник на 350 пикселей вправо. При анимации достигает конца своего срока и останавливает воспроизведение, <xref:System.Windows.Media.TranslateTransform.X%2A> свойство возвращается в свое исходное значение 0. В результате прямоугольник перемещается вправо на 350 пикселей, а затем перепрыгивает обратно в исходное положение.  
   
- [!code-xml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardB1Button](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardb1button)]  
+ [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardB1Button](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardb1button)]  
   
- Второй <xref:System.Windows.Media.Animation.Storyboard>, `B2` также анимирует свойство <xref:System.Windows.Media.TranslateTransform.X%2A> того же <xref:System.Windows.Media.TranslateTransform>.  Так как установлено только свойство <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> анимации в этом <xref:System.Windows.Media.Animation.Storyboard>, анимация использует текущее значение анимируемого свойства в качестве начального значения.  
+ Второй <xref:System.Windows.Media.Animation.Storyboard>, `B2`, также анимирует <xref:System.Windows.Media.TranslateTransform.X%2A> свойство одной и той же <xref:System.Windows.Media.TranslateTransform>. Так как только <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> свойства анимации в этой <xref:System.Windows.Media.Animation.Storyboard> не установлен, анимация использует текущее значение анимируемого свойства в качестве начального значения.  
   
- [!code-xml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardB2Button](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardb2button)]  
+ [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardB2Button](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardb2button)]  
   
- При нажатии второй кнопки во время воспроизведения первого <xref:System.Windows.Media.Animation.Storyboard>, можно ожидать следующее поведение:  
+ Если щелкнуть второй кнопки во время первого <xref:System.Windows.Media.Animation.Storyboard> — воспроизведение, можно ожидать следующее поведение:  
   
-1.  Первая раскадровка заканчивается и отправляет прямоугольник обратно в исходное положение, поскольку анимация имеет <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> в значении <xref:System.Windows.Media.Animation.FillBehavior>.  
+1.  Первая раскадровка заканчивается и отправляет прямоугольник обратно в исходное положение, поскольку анимация имеет <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> из <xref:System.Windows.Media.Animation.FillBehavior.Stop>.  
   
-2.  Вторая раскадровка вступает в действие и выполняет анимацию от текущего положения, которое сейчас равно 0, до положения 500.  
+2.  Вторая раскадровка вступает в силу и анимируется от текущей позиции, которая теперь имеет значение 0, до 500.  
   
- **Но это не происходит.** Вместо этого, прямоугольник не возвращается обратно, а продолжает перемещаться вправо.  Это происходит потому, что вторая анимация использует текущее значение первой анимации в качестве начального значения и производит анимацию от этого значения до 500.  Когда вторая анимация заменяет первую из\-за использования <xref:System.Windows.Media.Animation.HandoffBehavior> <xref:System.Windows.Media.Animation.HandoffBehavior>, объект <xref:System.Windows.Media.Animation.FillBehavior> первой анимации не имеет значения.  
+ **Но этого не происходит.** Прямоугольник не прыгает обратно; он продолжает перемещаться вправо. Это происходит потому, что вторая анимация использует текущее значение первой анимации в качестве своего начального значения и анимируется от этого значения до 500. Когда вторая анимация заменяет первый, так как <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace> <xref:System.Windows.Media.Animation.HandoffBehavior> используется, <xref:System.Windows.Media.Animation.FillBehavior> первого анимация не имеет значения.  
   
-#### FillBehavior и завершенное событие  
- В следующем примере демонстрируется другой скрипт, в котором <xref:System.Windows.Media.Animation.FillBehavior> <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>, кажется, не дает эффекта.  В примере опять используется раскадровка для анимации свойства <xref:System.Windows.Media.TranslateTransform.X%2A> объекта <xref:System.Windows.Media.TranslateTransform> от 0 до 350.  Однако на этот раз в примере регистрируется событие <xref:System.Windows.Media.Animation.Timeline.Completed>.  
+#### <a name="fillbehavior-and-the-completed-event"></a>FillBehavior и завершенное событие  
+ В следующем примере демонстрируется другой скрипт, в котором <xref:System.Windows.Media.Animation.FillBehavior.Stop> <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> не дает эффекта. Опять же, в примере используется раскадровки для анимации <xref:System.Windows.Media.TranslateTransform.X%2A> свойство <xref:System.Windows.Media.TranslateTransform> от 0 до 350. Тем не менее, это время в примере регистрируется для <xref:System.Windows.Media.Animation.Timeline.Completed> события.  
   
- [!code-xml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardCButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardcbutton)]  
+ [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardCButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardcbutton)]  
   
- Обработчик событий <xref:System.Windows.Media.Animation.Timeline.Completed> запускает другую <xref:System.Windows.Media.Animation.Storyboard>, которая анимирует то же свойство от его текущего значения до 500.  
+ <xref:System.Windows.Media.Animation.Timeline.Completed> Обработчик событий запускает другой <xref:System.Windows.Media.Animation.Storyboard> анимирования то же свойство с его текущим значением 500.  
   
  [!code-csharp[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardC1CompletedHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml.cs#fillbehaviortipstoryboardc1completedhandler)]
  [!code-vb[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardC1CompletedHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/VisualBasic/FillBehaviorTip.xaml.vb#fillbehaviortipstoryboardc1completedhandler)]  
   
- Ниже приведена разметка, определяющая вторую <xref:System.Windows.Media.Animation.Storyboard> в качестве ресурса.  
+ Ниже приведен разметка, определяющая второй <xref:System.Windows.Media.Animation.Storyboard> как ресурс.  
   
- [!code-xml[AnimationTipsAndTricksSample_snip#FillBehaviorTipResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipresources)]  
+ [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipresources)]  
   
- При запуске <xref:System.Windows.Media.Animation.Storyboard> ожидается, что свойство <xref:System.Windows.Media.TranslateTransform.X%2A> объекта <xref:System.Windows.Media.TranslateTransform> анимируется от 0 до 350, возвращается к значению 0 после завершения \(поскольку оно имеет значение <xref:System.Windows.Media.Animation.FillBehavior> функции <xref:System.Windows.Media.Animation.FillBehavior>\), а затем анимируется от 0 до 500.  Вместо этого <xref:System.Windows.Media.TranslateTransform> анимируется от 0 до 350, а затем до 500.  
+ При запуске <xref:System.Windows.Media.Animation.Storyboard>, можно ожидать <xref:System.Windows.Media.TranslateTransform.X%2A> свойство <xref:System.Windows.Media.TranslateTransform> анимируется от 0 до 350, возвращается к значению 0 после ее завершения (так как он содержит <xref:System.Windows.Media.Animation.FillBehavior> параметра <xref:System.Windows.Media.Animation.FillBehavior.Stop>) и затем анимируется от 0 до 500. Вместо этого <xref:System.Windows.Media.TranslateTransform> выполняет анимацию от 0 до 350, а затем — до 500.  
   
- Это происходит из\-за последовательности, в которой [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] вызывает события, а также из\-за того, что значения свойств кэшируются и не пересчитываются, если свойство является действительным.  Событие <xref:System.Windows.Media.Animation.Timeline.Completed> обрабатывается первым, так как оно было вызвано временной шкалой корня \(первая <xref:System.Windows.Media.Animation.Storyboard>\).  На этот раз свойство <xref:System.Windows.Media.TranslateTransform.X%2A> по\-прежнему возвращает анимированное значение, так как оно еще не было объявлено недействительным.  Вторая <xref:System.Windows.Media.Animation.Storyboard> использует кэшированное значение в качестве начального значения и начинает анимацию.  
+ Это порядок, в котором [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] вызывает события и потому, что значения свойств кэшируются и не пересчитываются, если свойство является действительным. <xref:System.Windows.Media.Animation.Timeline.Completed> Событие обрабатывается первым, так как оно было вызвано временной шкалой корня (первая <xref:System.Windows.Media.Animation.Storyboard>). В настоящее время <xref:System.Windows.Media.TranslateTransform.X%2A> свойство по-прежнему возвращает значению анимируемого, поскольку он еще не стали недействительными. Второй <xref:System.Windows.Media.Animation.Storyboard> использует кэшированное значение в качестве начального значения и начинает анимацию.  
   
 <a name="performancesection"></a>   
-## Производительность  
+## <a name="performance"></a>Производительность  
   
-### Анимация продолжает выполняться после ухода со страницы  
- При покидании <xref:System.Windows.Controls.Page>, содержащей выполняющуюся анимацию, эти анимации будут продолжать воспроизведение до сборки мусора <xref:System.Windows.Controls.Page>.  В зависимости от используемой системы переходов страница, с которой вы ушли, может оставаться в памяти неограниченное количество времени, тем самым потребляя ресурсы анимацией.  Это наиболее заметно, если страница содержит постоянно выполняющиеся анимации \(«анимации окружения»\).  
+### <a name="animations-continue-to-run-after-navigating-away-from-a-page"></a>Анимация продолжает выполняться после ухода со страницы  
+ При переходе от <xref:System.Windows.Controls.Page> , содержащей выполняющуюся анимацию, эти анимации будут продолжать воспроизведение до <xref:System.Windows.Controls.Page> выполняет сборку мусора. В зависимости от используемой системы навигации страница, с которой ушли, может оставаться в памяти неограниченное количество времени, постоянно потребляя ресурсы на анимацию. Это наиболее заметно, когда страница содержит постоянно выполняющиеся анимации ("фоновые").  
   
- По этой причине целесообразно использовать событие <xref:System.Windows.FrameworkElement.Unloaded> для удаления анимации при покидании страницы.  
+ По этой причине рекомендуется использовать <xref:System.Windows.FrameworkElement.Unloaded> событий для удаления анимации, когда вы уходите со страницы.  
   
- Существуют различные способы удалить анимацию.  Следующие методы могут использоваться для удаления анимаций, которые принадлежат <xref:System.Windows.Media.Animation.Storyboard>.  
+ Анимацию можно удалить разными способами. Следующие методы можно использовать для удаления анимации, принадлежащих <xref:System.Windows.Media.Animation.Storyboard>.  
   
--   Чтобы удалить запущенную с помощью триггера событий <xref:System.Windows.Media.Animation.Storyboard>, обратитесь к разделу [How to: Remove a Storyboard](http://msdn.microsoft.com/ru-ru/7fe39531-de2f-46a0-a69f-b783d04235ee).  
+-   Чтобы удалить <xref:System.Windows.Media.Animation.Storyboard> запуска с помощью триггера событий см. в разделе [как: Удаление раскадровки](http://msdn.microsoft.com/en-us/7fe39531-de2f-46a0-a69f-b783d04235ee).  
   
--   Чтобы использовать код для удаления <xref:System.Windows.Media.Animation.Storyboard>, см. метод <xref:System.Windows.Media.Animation.Storyboard.Remove%2A>.  
+-   Чтобы использовать код для удаления <xref:System.Windows.Media.Animation.Storyboard>, в разделе <xref:System.Windows.Media.Animation.Storyboard.Remove%2A> метод.  
   
  Следующий метод может использоваться независимо от того, как была запущена анимация.  
   
--   Чтобы удалить анимацию из определенного свойства, используйте метод <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29>.  Укажите анимируемое свойство в качестве первого параметра и `null` \- в качестве второго.  Это удалит все часы анимации из свойства.  
+-   Чтобы удалить анимацию из определенного свойства, используйте <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> метод. Укажите в качестве первого параметра, анимируемого свойства и `null` вторым. Это удалит из свойства все часы анимации.  
   
- Дополнительные сведения о различных способах анимации свойств см. в разделе [Общие сведения о методах анимации свойств](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).  
+ Дополнительные сведения о различных способах анимации свойств см. в разделе [Общие сведения о методах анимации свойства](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).  
   
-### Использование составного HandoffBehavior потребляет системные ресурсы  
- При применении <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.Media.Animation.AnimationTimeline> или <xref:System.Windows.Media.Animation.AnimationClock> к свойству с помощью <xref:System.Windows.Media.Animation.HandoffBehavior> <xref:System.Windows.Media.Animation.HandoffBehavior> любые объекты <xref:System.Windows.Media.Animation.Clock>, ранее связанные с этом свойством, продолжают потреблять системные ресурсы. Система времени не удаляет эти часы автоматически.  
+### <a name="using-the-compose-handoffbehavior-consumes-system-resources"></a>Использование составного HandoffBehavior потребляет системные ресурсы  
+ При применении <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.Media.Animation.AnimationTimeline>, или <xref:System.Windows.Media.Animation.AnimationClock> к свойству с помощью <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> <xref:System.Windows.Media.Animation.HandoffBehavior>, любые <xref:System.Windows.Media.Animation.Clock> ранее связанную с ним объекты по-прежнему потребление системных ресурсов; система времени не будет Удаляет эти часы автоматически.  
   
- Чтобы избежать проблем с производительностью при применении большого количества часов с помощью <xref:System.Windows.Media.Animation.HandoffBehavior>, следует удалить созданные часы из свойства анимации после ее завершения.  Существует несколько способов удаления часов.  
+ Чтобы избежать проблем с производительностью при применении большое число часов с помощью <xref:System.Windows.Media.Animation.HandoffBehavior.Compose>, необходимо удалить составляющую часами анимированное свойство после их завершения. Есть несколько способов удаления часов.  
   
--   Чтобы удалить все часы из свойства, воспользуйтесь методами <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29> или <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> анимированного объекта.  Укажите анимируемое свойство в качестве первого параметра и `null` \- в качестве второго.  Это удалит все часы анимации из свойства.  
+-   Чтобы удалить все часы из свойства, используйте <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29> или <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> метод анимированного объекта. Укажите в качестве первого параметра, анимируемого свойства и `null` вторым. Это удалит из свойства все часы анимации.  
   
--   Для удаления определенных <xref:System.Windows.Media.Animation.AnimationClock> из списка часов используйте свойство <xref:System.Windows.Media.Animation.Clock.Controller%2A> объекта <xref:System.Windows.Media.Animation.AnimationClock>, чтобы получить <xref:System.Windows.Media.Animation.ClockController>, затем вызовите метод <xref:System.Windows.Media.Animation.ClockController.Remove%2A> объекта <xref:System.Windows.Media.Animation.ClockController>.  Обычно это выполняется в обработчике событий <xref:System.Windows.Media.Animation.Clock.Completed> для часов.  Обратите внимание, что только корневые часы могут управляться через <xref:System.Windows.Media.Animation.ClockController>; свойство <xref:System.Windows.Media.Animation.Clock.Controller%2A> дочерних часов вернет `null`.  Кроме того, обратите внимание, что событие <xref:System.Windows.Media.Animation.Clock.Completed> не будет вызвано, если эффективная продолжительность часов является бесконечностью.  В этом случае пользователю необходимо будет определить, когда вызвать <xref:System.Windows.Media.Animation.ClockController.Remove%2A>.  
+-   Для удаления определенных <xref:System.Windows.Media.Animation.AnimationClock> из списка часов используйте <xref:System.Windows.Media.Animation.Clock.Controller%2A> свойство <xref:System.Windows.Media.Animation.AnimationClock> для получения <xref:System.Windows.Media.Animation.ClockController>, затем вызовите <xref:System.Windows.Media.Animation.ClockController.Remove%2A> метод <xref:System.Windows.Media.Animation.ClockController>. Обычно это делается <xref:System.Windows.Media.Animation.Clock.Completed> обработчика событий для часов. Обратите внимание, что только корневые часы могут управляться <xref:System.Windows.Media.Animation.ClockController>; <xref:System.Windows.Media.Animation.Clock.Controller%2A> свойство дочерних часов вернет `null`. Обратите внимание, что <xref:System.Windows.Media.Animation.Clock.Completed> событие не будет вызвано, если эффективная продолжительность часов является бесконечностью.  В этом случае пользователю будет необходимо определить, когда вызывать <xref:System.Windows.Media.Animation.ClockController.Remove%2A>.  
   
- В основном, эта проблема анимации объектов, имеющих длинное время жизни.  Если объект уничтожается сборщиком мусора, его часы также будут отключены и собраны как мусор.  
+ В основном это проблема для анимации объектов, имеющих длинное время жизни.  Когда объект собирается как мусор, его часы отсоединяются и также собираются как мусор.  
   
- Дополнительные сведения об объектах часов см. в разделе [Общие сведения об анимации и системе управления временем](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
+ Дополнительные сведения об объектах часов см. в разделе [анимации и общие сведения о синхронизации системы](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: tdykstra
 ms.author: tdykstra
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7886b3bfe8299b64277d6062ab481136caafbde0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 69e6ea6a95ffdea8f7a21540106d4817119a7cb3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="caching-in-net-framework-applications"></a>Кэширование в приложениях платформы .NET Framework
 Кэширование позволяет хранить данные в памяти для быстрого доступа. При повторном доступе к данным приложения могут получать их из кэша вместо извлечения из исходного источника. Это может повысить производительность и масштабируемость. Кроме того, кэширование обеспечивает доступность данных при временной недоступности источника данных.  
@@ -88,8 +86,7 @@ ms.lasthandoff: 08/21/2017
  Дополнительные сведения см. в записи [Расширенное кэширование выходных данных в ASP.NET 4 (серия, посвященная VS 2010 и .NET 4.0)](http://go.microsoft.com/fwlink/?LinkId=185772) блога Скотта Гатри (Scott Guthrie).  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Runtime.Caching.ObjectCache>   
- <xref:System.Runtime.Caching.MemoryCache>   
- [Пошаговое руководство. Кэширование данных приложения WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)   
+ <xref:System.Runtime.Caching.ObjectCache>  
+ <xref:System.Runtime.Caching.MemoryCache>  
+ [Пошаговое руководство. Кэширование данных приложения WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)  
  [Пошаговое руководство. Кэширование данных приложения в ASP.NET](http://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23)
-

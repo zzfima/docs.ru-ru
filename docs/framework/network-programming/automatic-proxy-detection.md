@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - automatic proxy detections
 - Web Proxy Auto-Discovery
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9f0c1a0d462768229c730f06a6514d040a3e5c1c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 8eec6ff84978cdbd31dd4be307d0eb9560edde19
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="automatic-proxy-detection"></a>Автоматическое обнаружение прокси-сервера
 В ходе автоматического обнаружения прокси-сервера система определяет сервер веб-прокси, который используется для отправки запросов от имени клиента. Эта функция также называется автообнаружением веб-прокси (WPAD). Если автоматическое обнаружение прокси-сервера включено, система пытается обнаружить скрипт конфигурации прокси-сервера, возвращающий набор прокси-серверов, который можно использовать для обработки запросов. Если такой скрипт обнаружен, он скачивается, компилируется и запускается на локальном компьютере при получении информации о прокси-сервере, потока запроса или ответа для запроса, который использует экземпляр <xref:System.Net.WebProxy>.  
@@ -80,7 +77,6 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
  Для обработки запросов, не указывающих прокси-сервер, используется прокси-сервер по умолчанию домена приложения, который доступен в свойстве <xref:System.Net.WebRequest.DefaultWebProxy%2A>.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Net.WebProxy>   
- <xref:System.Net.WebRequest>   
+ <xref:System.Net.WebProxy>  
+ <xref:System.Net.WebRequest>  
  [Элемент \<system.Net> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
-

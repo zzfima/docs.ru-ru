@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4006b18e91b79d5f31649a0a15a18b9f7f28c38e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 6b93335d0d5d1524c9a0b955d1ea279be8c0f243
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltlibrarygt-element-net-native"></a>Элемент &lt;Library&gt; (машинный код .NET)
 Определяет сборку, содержащую типы и члены типов, метаданные которой доступны для отражения во время выполнения.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 08/21/2017
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*assembly_name*|Простое имя сборки без расширения файла. Этот атрибут соответствует свойству <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=fullName>. Например, имя сборки с именем Extensions.dll является «Extensions». Сведения об особой форме имени сборки *assembly_name* с поддержкой условного включения метаданных сборки см. в разделе "Примечания".|  
+|*assembly_name*|Простое имя сборки без расширения файла. Этот атрибут соответствует свойству <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType>. Например, имя сборки с именем Extensions.dll является «Extensions». Сведения об особой форме имени сборки *assembly_name* с поддержкой условного включения метаданных сборки см. в разделе "Примечания".|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
@@ -79,8 +77,7 @@ ms.lasthandoff: 08/21/2017
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Элемент \<Application>](../../../docs/framework/net-native/application-element-net-native.md)   
- [Элемент \<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)   
- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
+ [\<Приложения > элемент](../../../docs/framework/net-native/application-element-net-native.md)  
+ [\<Директивы > элемент](../../../docs/framework/net-native/directives-element-net-native.md)  
+ [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
-

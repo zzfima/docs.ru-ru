@@ -1,53 +1,54 @@
 ---
-title: "Рисование линий и фигур с помощью пера | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "рисование"
-  - "примеры [Windows Forms], рисование линий и фигур"
-  - "примеры [Windows Forms], перья"
-  - "перья"
+title: "Рисование линий и фигур с помощью пера"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pens
+- examples [Windows Forms], drawing lines and shapes
+- examples [Windows Forms], pens
+- drawing
 ms.assetid: 8a7542ab-3e9e-443f-8405-2d6053528e20
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0913dc2745e1b244e4b03c0e6b946441a401c5b1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Рисование линий и фигур с помощью пера
-Используйте для рисования линейных сегментов, кривых, а также контуров различных фигур объекты [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen`.  В данном разделе термин *линия* относится ко всему вышеперечисленному, если только специально не указывается, что имеется в виду отрезок прямой.  Для управления цветом, толщиной, выравниванием и стилем линий, рисуемых пером, устанавливайте значения соответствующих свойств этого соответствующего объекта Pen.  
+# <a name="using-a-pen-to-draw-lines-and-shapes"></a>Рисование линий и фигур с помощью пера
+Используйте [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` объектов для рисования линейных сегментов, кривых и контуров фигур. В этом разделе *строки* ссылается на любой из них, если не указано означает сегмент линии. Настройка параметров пера для управления цвет, ширину, выравнивание и стиль линий, нарисованных при помощи этого пера.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Практическое руководство. Рисование линий с помощью пера](../../../../docs/framework/winforms/advanced/how-to-use-a-pen-to-draw-lines.md)  
- Рисование линий.  
+ Описываются способы рисования линий.  
   
  [Практическое руководство. Рисование прямоугольников с помощью пера](../../../../docs/framework/winforms/advanced/how-to-use-a-pen-to-draw-rectangles.md)  
- Рисование прямоугольников.  
+ Описывает, как Рисование прямоугольников.  
   
  [Практическое руководство. Задание толщины и выравнивания пера](../../../../docs/framework/winforms/advanced/how-to-set-pen-width-and-alignment.md)  
- Изменение ширины и параметров выравнивания для объекта `Pen`.  
+ Объясняется, как изменить ширину и выравнивание `Pen` объекта.  
   
  [Практическое руководство. Рисование линий с наконечниками](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-with-line-caps.md)  
- Добавление конечных элементов к рисуемым линиям.  
+ Описывает добавление оконечных линиям.  
   
  [Практическое руководство. Соединение линий](../../../../docs/framework/winforms/advanced/how-to-join-lines.md)  
- Соединение двух линий.  
+ Показано, как соединить две строки.  
   
  [Практическое руководство. Рисование пользовательских пунктирных линий](../../../../docs/framework/winforms/advanced/how-to-draw-a-custom-dashed-line.md)  
- Рисование штриховых линий.  
+ Описывает способ рисования пунктирной линией.  
   
  [Практическое руководство. Рисование линии с текстурным заполнением](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-filled-with-a-texture.md)  
- Рисование линии с текстурным заполнением.  
+ Объясняет, как рисование линии с текстурным заполнением.  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:System.Drawing.Pen>  
  Описание класса и ссылки на все его члены.

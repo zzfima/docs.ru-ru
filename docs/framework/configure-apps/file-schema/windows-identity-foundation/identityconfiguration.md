@@ -1,100 +1,107 @@
 ---
-title: "&lt;identityConfiguration&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;identityConfiguration&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1db76253-07da-447b-9e7a-3705c7228cf4
-caps.latest.revision: 13
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: b1cca286fc967631c60aa02a1318fe24120e05b0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;identityConfiguration&gt;
-Задает параметры уровня службы удостоверений.  
+# <a name="ltidentityconfigurationgt"></a>&lt;identityConfiguration&gt;
+Указывает параметры уровня службы удостоверений.  
   
-## Синтаксис  
+ \<system.identityModel >  
+\<identityConfiguration >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration  
-      name=xs:string  
-      saveBootstrapContext=xs:boolean>  
-      maximumClockSkew=TimeSpan >  
-  </identityConfiguration>  
+  <identityConfiguration  
+      name=xs:string  
+      saveBootstrapContext=xs:boolean>  
+      maximumClockSkew=TimeSpan >  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние элементы и родительские элементы.  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
+ В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|имя|Имя раздела конфигурации identity.  Это имя можно использовать для ссылки на раздел определенной конфигурации.  Если не `name` атрибут указан, раздел определяет конфигурацию по умолчанию.  Конфигурация по умолчанию всегда используется в сценарии пассивной интеграции.  Дополнительные сведения см. в описании элемента [\<federationConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md).|  
-|saveBootstrapContext|Указывает, включены ли загрузочный маркеров в маркер сеанса.  Также возможно установить значение на коллекции обработчик маркеров, задав `saveBootstrapContext` атрибут на [\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) элемент.  Значение в коллекцию обработчиков маркеров переопределяет значение, заданное на службу.|  
-|maximumClockSkew|A <xref:System.TimeSpan> , определяющий максимальное разрешенные часы Наклон.  Управляет Наклон максимальное разрешенные часы при выполнении операций с учетом времени, такие как проверка время истечения срока действия сеанса входа.  Значение по умолчанию — 5 минут "00: 05".  Дополнительные сведения об указании <xref:System.TimeSpan> значения, см. [Timespan Values](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_TimespanValues).  Наклон максимального времени могут быть указаны на коллекцию обработчика маркера, установив `maximumClockSkew` атрибут на [\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) элемент.  Значение в коллекцию обработчиков маркеров переопределяет значение, заданное на службу.|  
+|---------------|-----------------|  
+|имя|Имя раздела конфигурации удостоверений. Это имя можно использовать для ссылки на определенный раздел конфигурации. Если не `name` атрибут указан, раздел определяет конфигурацию по умолчанию. Конфигурация по умолчанию всегда используется в сценариях с пассивной федерацией. Дополнительные сведения см. в разделе [ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) элемента.|  
+|saveBootstrapContext|Указывает, следует ли включать в токен сеанса начальной загрузки маркеры. Значение также может быть задана для коллекции обработчика токенов, задав `saveBootstrapContext` атрибут [ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) элемента. Значение, заданное в коллекцию обработчиков токенов переопределяет значение, заданное для службы.|  
+|maximumClockSkew|Объект <xref:System.TimeSpan> , указывающее максимально допустимое время отклонения. Определяет максимально допустимое время отклонения при выполнении операций, зависящих от времени, например для проверки истечения срока действия сеанса входа в систему. Значение по умолчанию — 5 минут «00: 05:00». Дополнительные сведения о способах указания <xref:System.TimeSpan> значения, в разделе [значения Timespan](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md). Также можно задать максимальную расфазировку синхронизирующих импульсов на коллекцию обработчика токенов, задав `maximumClockSkew` атрибут [ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) элемента. Значение, заданное в коллекцию обработчиков токенов переопределяет значение, заданное для службы.|  
   
-### Дочерние элементы  
-  
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<caches\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Регистрирует кэши для обнаружения маркеров преобразования и маркеров сеансов.  Задается на уровне службы или на коллекцию обработчика маркера безопасности.  Необязательный.|  
-|[\<certificateValidation\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Управляет параметрами, обработчиков маркеров для проверки сертификатов.  Задается на уровне службы или на коллекцию обработчика маркера безопасности.  Необязательный.|  
-|[\<claimsAuthenticationManager\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|Регистрирует диспетчер проверки подлинности заявок для входящих утверждений.  Необязательный.|  
-|[\<claimsAuthorizationManager\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|Регистрирует диспетчер авторизации заявок для входящих утверждений.  Необязательный.|  
-|[\<claimTypeRequired\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Определяет набор необходимых утверждений для входящих токенов безопасности.  Необязательный.|  
-|[\<securityTokenHandlers\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Указывает коллекции обработчиков маркеров безопасности.  Можно указать ноль или более коллекций обработчики маркеров безопасности.  Необязательный.|  
-|[\<tokenReplayDetection\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Включает маркера повторений и определяет срок действия маркеров.  Задается на уровне службы или на коллекцию обработчика маркера безопасности.  Необязательный.|  
-  
-### Родительские элементы  
+### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<system.identityModel\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)|Содержит настройки для включения параметров Foundation удостоверение Windows \(WIF\) в приложениях.|  
+|-------------|-----------------|  
+|[\<кэширует >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Регистрирует кэши, используемый для маркеров сеансов и обнаружение воспроизведения токенов. Можно указать на уровне службы или в коллекцию обработчика токенов безопасности. Необязательно.|  
+|[\<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Управляет параметрами обработчиков токенов, используемых для проверки сертификатов. Можно указать на уровне службы или в коллекцию обработчика токенов безопасности. Необязательно.|  
+|[\<claimsAuthenticationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|Регистрирует диспетчер проверки подлинности утверждений входящие утверждения. Необязательно.|  
+|[\<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|Регистрирует диспетчера авторизации утверждений для входящих утверждений. Необязательно.|  
+|[\<claimTypeRequired >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Указывает набор утверждений, необходимых для входящих токенов безопасности. Необязательно.|  
+|[\<securityTokenHandlers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Задает коллекцию обработчиков токенов безопасности. Можно указать ноль или более коллекциях обработчиков токенов безопасности. Необязательно.|  
+|[\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Включает обнаружение воспроизведения токенов и определяет время жизни токенов. Можно указать на уровне службы или в коллекцию обработчика токенов безопасности. Необязательно.|  
   
-## Заметки  
- Несколько идентификаторов, могут быть определены конфигурации, каждый с уникальным именем.  Поведение выглядит следующим образом:  
+### <a name="parent-elements"></a>Родительские элементы  
   
-1.  Если не `<identityConfiguration>` указанного элемента.  Идентификатор конфигурации по умолчанию создается во время выполнения и заполняются значениями по умолчанию.  
+|Элемент|Описание|  
+|-------------|-----------------|  
+|[\<system.identityModel >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)|Обеспечивает настройку для включения параметров Windows Identity Foundation (WIF) в приложениях.|  
   
-2.  Если один `<identityConfiguration>` указанного элемента.  Это идентификатор конфигурации по умолчанию.  Не важно с именем или неименованными.  
+## <a name="remarks"></a>Примечания  
+ Несколько удостоверений, которые могут быть определены конфигурации, каждый с уникальным именем. Поведение выглядит следующим образом:  
   
-3.  Если несколько `<identityConfiguration>` указанных элементов.  Безымянные элемент указывает идентификатор конфигурации по умолчанию.  Рекомендуется указывать несколько `<identityConfiguration>` элементов, один из них должен быть без имени.  
+1.  Если не `<identityConfiguration>` указанный элемент. Конфигурацию удостоверения по умолчанию создается во время выполнения и заполняется значениями по умолчанию.  
+  
+2.  Если один `<identityConfiguration>` указанный элемент. Это конфигурация по умолчанию удостоверений. Неважно с именем или без имени.  
+  
+3.  При наличии нескольких `<identityConfiguration>` указаны элементы. Безымянный элемент указывает конфигурацию удостоверения по умолчанию. Рекомендуется, если задано несколько `<identityConfiguration>` элементов, один из них должен быть неименованным.  
   
 > [!WARNING]
->  Если задано несколько `<identityConfiguration>` элементов, один из них должен быть без имени.  Без имени элемента будет идентификатор конфигурации по умолчанию.  
+>  Если задано несколько `<identityConfiguration>` элементов, один из них должен быть неименованным. Безымянный элемент будет конфигурацию удостоверения по умолчанию.  
   
- Некоторые из параметров, указанных в `<identityConfiguration>` элемент может быть переопределен путем настройки на коллекцию обработчика маркера безопасности или настройки обработчиков маркеров безопасности.  
-  
-> [!IMPORTANT]
->  При использовании <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> или <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> класса для обеспечения контроля доступа на основе заявок в коде конфигурации identity, на который ссылается `<federationConfiguration>` элемент настраивает диспетчер авторизации заявок и политики, который используется для принятия решения об авторизации.  Это верно даже в ситуациях, которые не являются пассивный веб\-сценариев, например приложения Windows Communication Foundation \(WCF\) или приложение, которое не является веб.  Если приложение не является пассивным веб\-приложения [\<claimsAuthorizationManager\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) элемент \(и политики его дочерних элементов, если они есть\) являются только параметры, применяемые конфигурации указанного удостоверения.  Другие параметры не обрабатываются.  Дополнительные сведения см. в описании элемента [\<federationConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md).  
-  
- `<identityConfiguration>` Представленного элементом <xref:System.IdentityModel.Configuration.IdentityConfigurationElement> класса.  Представленный раздел конфигурации identity <xref:System.IdentityModel.Configuration.IdentityConfiguration> класса.  
+ Некоторые параметры, указанные в `<identityConfiguration>` элемент могут переопределяться параметрами на коллекцию обработчика токенов безопасности или параметры на обработчики токенов безопасности.  
   
 > [!IMPORTANT]
->  Указав следующие элементы в качестве дочерних элементов `<identityConfiguration>` элемент устарел, несмотря на то, что поведение по\-прежнему поддерживается для обратной совместимости.  Вместо этого указанного этих элементов в [\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) элемент.  
+>  При использовании <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> или <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> класса для обеспечения контроля доступа на основе утверждений в коде, на который ссылается конфигурация удостоверений `<federationConfiguration>` элемент настраивает диспетчера авторизации утверждений и политики, которая используется, чтобы сделать решения об авторизации. Это верно даже в случаях, не пассивный сценариях веб-, например приложений Windows Communication Foundation (WCF) или приложение, которое не является веб сервера. Если приложение не пассивное веб-приложение [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) элемент (и политики его дочерние элементы, если он имеется) указанное удостоверение конфигурации являются только параметры, применяемые. Все остальные параметры игнорируются. Дополнительные сведения см. в разделе [ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) элемента.  
+  
+ `<identityConfiguration>` Представлен <xref:System.IdentityModel.Configuration.IdentityConfigurationElement> класса. Раздел конфигурации удостоверения представляется <xref:System.IdentityModel.Configuration.IdentityConfiguration> класса.  
+  
+> [!IMPORTANT]
+>  Указание следующие элементы в качестве дочерних элементов `<identityConfiguration>` элемент является устаревшим, несмотря на то, что поведение по-прежнему поддерживается для обеспечения обратной совместимости. Эти элементы вместо этого указывается в разделе [ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) элемента.  
 >   
->  -   [\<audienceUris\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)  
-> -   [\<issuerNameRegistry\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)  
-> -   [\<issuerTokenResolver\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)  
-> -   [\<serviceTokenResolver\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)  
+>  -   [\<audienceUris >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)  
+> -   [\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)  
+> -   [\<issuerTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)  
+> -   [\<serviceTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)  
   
-## Пример  
- В следующем примере создается конфигурация удостоверения, с именем «alternateConfiguration».  Идентификация конфигурации определяет параметры по умолчанию.  
+## <a name="example"></a>Пример  
+ В следующем примере создается конфигурация удостоверений, с именем «alternateConfiguration». Конфигурацию удостоверения указывает параметры по умолчанию.  
   
-```  
+```xml  
 <system.identityModel>  
     <identityConfiguration name="alternateConfiguration"/>  
 </system.identityModel>  
 ```  
   
-## См. также  
- <xref:System.IdentityModel.Configuration.IdentityConfiguration>   
+## <a name="see-also"></a>См. также  
+ <xref:System.IdentityModel.Configuration.IdentityConfiguration>  
  <xref:System.IdentityModel.Configuration.IdentityConfigurationElement>

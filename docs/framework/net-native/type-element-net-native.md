@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0f483fba5ade9d33588a946984ca914b95cd1f18
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2569ac2ec170e5ac137751d790d41c2ab6cf0262
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lttypegt-element-net-native"></a>Элемент &lt;Type&gt; (машинный код .NET)
 Применяет политику выполнения для конкретного типа, например класса или структуры.  
@@ -52,9 +50,9 @@ ms.lasthandoff: 08/21/2017
 |`Browse`|Отражение|Необязательный атрибут. Управляет запросами для получения сведений об элементах программы, но не включает доступ среды выполнения.|  
 |`Dynamic`|Отражение|Необязательный атрибут. Управляет доступом среды выполнения ко всем членам типа, включая конструкторы, методы, поля, свойства и события, чтобы включить динамическое программирование.|  
 |`Serialize`|Сериализация|Необязательный атрибут. Управляет доступом среды выполнения к конструкторам, полям и свойствам, позволяющим сериализовать и десериализовать экземпляры типа с помощью таких библиотек, как, например, сериализатор Newtonsoft JSON.|  
-|`DataContractSerializer`|Сериализация|Необязательный атрибут. Определяет политику для сериализации, в которой используется класс <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.|  
-|`DataContractJsonSerializer`|Сериализация|Необязательный атрибут. Определяет политику для сериализации JSON, в которой используется класс <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName>.|  
-|`XmlSerializer`|Сериализация|Необязательный атрибут. Определяет политику для сериализации XML, в которой используется класс <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>.|  
+|`DataContractSerializer`|Сериализация|Необязательный атрибут. Определяет политику для сериализации, в которой используется класс <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.|  
+|`DataContractJsonSerializer`|Сериализация|Необязательный атрибут. Определяет политику для сериализации JSON, в которой используется класс <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType>.|  
+|`XmlSerializer`|Сериализация|Необязательный атрибут. Определяет политику для сериализации XML, в которой используется класс <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.|  
 |`MarshalObject`|Interop|Необязательный атрибут. Определяет политику для маршалинга ссылочных типов в среды выполнения Windows и COM.|  
 |`MarshalDelegate`|Interop|Необязательный атрибут. Определяет политики для маршалинга типов делегатов как указателей функции на машинный код.|  
 |`MarshalStructure`|Interop|Необязательный атрибут. Определяет политики для маршалинга типов значений в машинный код.|  
@@ -105,10 +103,10 @@ ms.lasthandoff: 08/21/2017
   
  Элемент `<Type>` универсального типа применяет свою политику для всех экземпляров, которые не имеют собственной политики. Политика сконструированных универсальных типов определяется элементом [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  
   
- Если тип является универсальным типом, к его имени добавляется символ апострофа (\`), за которым следует его число универсальных параметров. Например, атрибут `Name` элемента `<Type>` для класса <xref:System.Collections.Generic.List%601?displayProperty=fullName> отображается как `Name="System.Collections.Generic.List`1"`.  
+ Если тип является универсальным типом, к его имени добавляется символ апострофа (\`), за которым следует его число универсальных параметров. Например, атрибут `Name` элемента `<Type>` для класса <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> отображается как `Name="System.Collections.Generic.List`1"`.  
   
 ## <a name="example"></a>Пример  
- В следующем примере отражение используется для отображения сведений о полях, свойствах и методах класса <xref:System.Collections.Generic.List%601?displayProperty=fullName>. Переменная `b` в примере является элементом управления [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx). Так как просто извлекаются сведения о типе, доступность метаданных определяется параметром политики `Browse`.  
+ В следующем примере отражение используется для отображения сведений о полях, свойствах и методах класса <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. Переменная `b` в примере является элементом управления [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx). Так как просто извлекаются сведения о типе, доступность метаданных определяется параметром политики `Browse`.  
   
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]  
   
@@ -126,11 +124,11 @@ ms.lasthandoff: 08/21/2017
 ```  
   
 ## <a name="example"></a>Пример  
- В следующем примере отражение используется для получения объекта <xref:System.Reflection.PropertyInfo>, представляющего свойство <xref:System.String.Chars%2A?displayProperty=fullName>. Затем он использует метод <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=fullName> для извлечения значения седьмого знака в строке и для отображения всех символов в строке. Переменная `b` в примере является элементом управления [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx).  
+ В следующем примере отражение используется для получения объекта <xref:System.Reflection.PropertyInfo>, представляющего свойство <xref:System.String.Chars%2A?displayProperty=nameWithType>. Затем он использует метод <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> для извлечения значения седьмого знака в строке и для отображения всех символов в строке. Переменная `b` в примере является элементом управления [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx).  
   
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]  
   
- Поскольку метаданные для объекта <xref:System.String> недоступны, вызов метода <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=fullName> приводит к исключению <xref:System.NullReferenceException> во время выполнения при компиляции с цепочкой инструментов [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Чтобы избежать исключений и предоставить необходимые метаданные, добавьте следующий элемент `<Type>` элемент в файл директив среды выполнения:  
+ Поскольку метаданные для объекта <xref:System.String> недоступны, вызов метода <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> приводит к исключению <xref:System.NullReferenceException> во время выполнения при компиляции с цепочкой инструментов [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Чтобы избежать исключений и предоставить необходимые метаданные, добавьте следующий элемент `<Type>` элемент в файл директив среды выполнения:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -142,7 +140,6 @@ ms.lasthandoff: 08/21/2017
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)   
+ [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)  
  [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-

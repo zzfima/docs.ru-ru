@@ -1,26 +1,29 @@
 ---
-title: "Атрибут KnownAssemblyAttribute | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Атрибут KnownAssemblyAttribute"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e2ffa42fabed3fe32f557cee9c4cb14a331d7350
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Атрибут KnownAssemblyAttribute
-В этом образце показано, как можно настроить процессы сериализации и десериализации с помощью класса <xref:System.Runtime.Serialization.DataContractResolver>.  В этом образце показано, как динамически добавлять известные типы во время сериализации и десериализации.  
+# <a name="knownassemblyattribute"></a>Атрибут KnownAssemblyAttribute
+В этом образце показано, как можно настроить процессы сериализации и десериализации с помощью класса <xref:System.Runtime.Serialization.DataContractResolver>. В этом образце показано, как динамически добавлять известные типы во время сериализации и десериализации.  
   
-## Подробные сведения об образце  
- Этот образец состоит из четырех проектов.  Один из них соответствует службе, которая будет размещаться службами IIS и определяет следующий контракт службы.  
+## <a name="sample-details"></a>Подробные сведения об образце  
+ Этот образец состоит из четырех проектов. Один из них соответствует службе, которая будет размещаться службами IIS и определяет следующий контракт службы.  
   
 ```  
 // Definition of a service contract.  
@@ -43,7 +46,6 @@ public interface IDataContractCalculator
     [OperationContract]  
     List<ComplexNumber> CombineLists(List<ComplexNumber> list1, List<ComplexNumber> list2);  
 }  
-  
 ```  
   
  Контракт службы реализован, как показано в следующем примере.  
@@ -90,10 +92,9 @@ public interface IDataContractCalculator
         return result;  
     }  
 }  
-  
 ```  
   
- Другой проект соответствует клиенту, который сообщается с сервером и вызывает предоставляемые им методы.  Определение клиента показано в следующем примере.  
+ Другой проект соответствует клиенту, который сообщается с сервером и вызывает предоставляемые им методы. Определение клиента показано в следующем примере.  
   
 ```  
  // Client implementation code.  
@@ -194,12 +195,11 @@ public interface IDataContractCalculator
         Console.ReadLine();  
     }  
 }  
-  
 ```  
   
- Определение контракта службы помечено атрибутом `KnownAssembly`.  Этот атрибут содержит имя библиотеки типов, каждый из которых становится известным во время выполнения как службе, так и клиенту.  
+ Определение контракта службы помечено атрибутом `KnownAssembly`. Этот атрибут содержит имя библиотеки типов, каждый из которых становится известным во время выполнения как службе, так и клиенту.  
   
- Атрибут `KnownAssembly` реализует интерфейс `IContractBehavior` для того, чтобы определить сериализатор `DataContractSerializer` с арбитром `DataContractResolver` для каждого из поведений операции.  Арбитр `DataContractResolver` исследует сборку после ее создания и создает словарь с сопоставлениями типов и имен, который используется при сериализации и десериализации различных типов.  Таким образом, типы `ResolveType` и `ResolveName` должны искать необходимые данные в этом словаре.  
+ Атрибут `KnownAssembly` реализует интерфейс `IContractBehavior` для того, чтобы определить сериализатор `DataContractSerializer` с арбитром `DataContractResolver` для каждого из поведений операции. Арбитр `DataContractResolver` исследует сборку после ее создания и создает словарь с сопоставлениями типов и имен, который используется при сериализации и десериализации различных типов. Таким образом, типы `ResolveType` и `ResolveName` должны искать необходимые данные в этом словаре.  
   
  Арбитр `DataContractResolver`, определенный для этого образца, показан в следующем фрагменте кода.  
   
@@ -283,7 +283,6 @@ public class MyDataContractResolver : DataContractResolver
            }  
        }  
    }  
-  
 ```  
   
  Библиотека типов, которая используется в этом образце, показана в следующем фрагменте кода.  
@@ -329,7 +328,6 @@ public class ComplexNumberWithMagnitude : ComplexNumber
         set { }  
     }  
 }  
-  
 ```  
   
  Обратите внимание, что типу `ComplexNumber` не должен быть статически известен тип `ComplexNumberWithMagnitude`, поскольку последний станет известен во время выполнения.  
@@ -354,34 +352,33 @@ Lists combined:
 2 + 2i  
 3 + 3i  
 4 + 4i  
-  
 ```  
   
-#### Настройка, выполнение и сборка образца  
+#### <a name="to-set-up-run-and-build-the-sample"></a>Настройка, выполнение и сборка образца  
   
-1.  Щелкните правой кнопкой мыши атрибут решения **KnownAssemblyAttribute** и выберите пункт **Свойства**.  
+1.  Щелкните правой кнопкой мыши решение **KnownAssemblyAttribute** и выберите **свойства**.  
   
-2.  В разделе **Общие свойства** выберите **Запускаемый проект**, затем **Несколько запускаемых проектов**.  
+2.  В **общие свойства**выберите **запускаемый проект**, а затем нажмите кнопку **несколько запускаемых проектов**.  
   
-3.  Добавьте действие **Пуск** в проекты **Service** и **Client**.  
+3.  Добавить **запустить** действие **службы** и **клиента** проектов.  
   
-4.  Нажмите кнопку **ОК**, а затем клавишу **F5** для выполнения образца.  
+4.  Нажмите кнопку **ОК**и нажмите клавишу **F5** для запуска образца.  
   
 5.  Если приложение выполняется неправильно, убедитесь в правильности настройки среды, выполнив следующие шаги.  
   
-6.  Убедитесь, что выполнена [процедура однократной настройки образцов Windows Communication Foundation](http://go.microsoft.com/fwlink/?LinkId=150774).  
+6.  Убедитесь, что вы выполнили [выполняемая однократно процедура однократной настройки образцов Windows Communication Foundation](http://go.microsoft.com/fwlink/?LinkId=150774).  
   
-7.  Чтобы построить решение, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](http://go.microsoft.com/fwlink/?LinkId=150775).  
+7.  Чтобы построить решение, следуйте инструкциям в [построение образцов Windows Communication Foundation](http://go.microsoft.com/fwlink/?LinkId=150775).  
   
-8.  Чтобы запустить образец на одном или нескольких компьютерах, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](http://go.microsoft.com/fwlink/?LinkId=150776).  
+8.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](http://go.microsoft.com/fwlink/?LinkId=150776).  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.  Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  
   
-## См. также
+## <a name="see-also"></a>См. также

@@ -1,37 +1,29 @@
 ---
-title: "Практическое руководство: создание запросов к XML в пространствах имен (Visual Basic) | Документы Microsoft"
+title: "Как: создавать запросы к XML в пространствах имен (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5af26b7ec0a2ab465917cd0ee62f65a97f5f0e40
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 5708a2a162132262722f390842f59c9c6a6838e4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Практическое руководство: создание запросов к XML в пространствах имен (Visual Basic)
-Чтобы создать запрос на XML, который находится в пространстве имен, необходимо использовать <xref:System.Xml.Linq.XName>объекты, имеющие правильное пространство имен.</xref:System.Xml.Linq.XName>  
+# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Как: создавать запросы к XML в пространствах имен (Visual Basic)
+Для записи XML-запросов в пространстве имен необходимо использовать объекты <xref:System.Xml.Linq.XName> с правильно заданным пространством имен.  
   
  В Visual Basic наиболее распространенным подходом является определение глобального пространства имен и последующее применение XML-литералов и XML-свойств, в которых указано это пространство имен. Можно определить глобальное пространство имен по умолчанию, и в этом случае элементы XML-литералов будут представлены в этом пространстве имен по умолчанию. Иначе можно определить глобальное пространство имен с помощью префикса, а затем использовать этот префикс в XML-литералах и XML-свойствах в соответствии с необходимостью. Как и в других формах XML, по умолчанию атрибуты всегда находятся вне пространства имен.  
   
- Первый набор примеров в этом разделе показано, как создать XML-дерева в пространстве имен по умолчанию. Второй набор показывает порядок создания XML-дерева в пространстве имен с префиксом.  
+ Первый набор примеров в данном разделе показывает порядок создания XML-дерева в пространстве имен по умолчанию. Второй набор показывает порядок создания XML-дерева в пространстве имен с префиксом.  
   
 ## <a name="example"></a>Пример  
  В следующем примере создается XML-дерево, находящееся в пространстве имен по умолчанию. Затем извлекается коллекция элементов.  

@@ -1,26 +1,30 @@
 ---
-title: "Как включить сохраняемость для рабочих процессов и служб рабочих процессов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Как включить сохраняемость для рабочих процессов и служб рабочих процессов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2b1c8bf3-9866-45a4-b06d-ee562393e503
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: eb380b8fdfb6b293cfcd02f056895109bf221d83
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Как включить сохраняемость для рабочих процессов и служб рабочих процессов
+# <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a>Как включить сохраняемость для рабочих процессов и служб рабочих процессов
 В этом разделе описывается процесс включения сохраняемости для рабочих процессов и служб рабочих процессов.  
   
-## Включение сохраняемости для рабочих процессов  
- Посредством свойства <xref:System.Activities.WorkflowApplication.InstanceStore%2A> класса <xref:System.Activities.WorkflowApplication> можно связать хранилище экземпляров с **WorkflowApplication**.Метод <xref:System.Activities.WorkflowApplication.Persist%2A> сохраняет рабочий процесс в хранилище экземпляров, связанном с приложением.Метод <xref:System.Activities.WorkflowApplication.Unload%2A> сохраняет рабочий процесс в хранилище экземпляров, а затем выгружает экземпляр из памяти.Метод **Load** загружает рабочий процесс в память, используя данные рабочего процесса из хранилища сохраняемости экземпляра.  
+## <a name="enable-persistence-for-workflows"></a>Включение сохраняемости для рабочих процессов  
+ Можно связать хранилище экземпляров с **WorkflowApplication** с помощью <xref:System.Activities.WorkflowApplication.InstanceStore%2A> свойство <xref:System.Activities.WorkflowApplication> класса. Метод <xref:System.Activities.WorkflowApplication.Persist%2A> сохраняет рабочий процесс в хранилище экземпляров, связанном с приложением. Метод <xref:System.Activities.WorkflowApplication.Unload%2A> сохраняет рабочий процесс в хранилище экземпляров, а затем выгружает экземпляр из памяти. **Нагрузки** метод загружает рабочий процесс в память, используя данные рабочего процесса в хранилище сохраняемости экземпляра.  
   
- Метод **Persist** выполняет следующие шаги.  
+ **Persist** метод выполняет следующие действия:  
   
 1.  Приостанавливает работу планировщика рабочих процессов и ждет перехода рабочего процесса в состояние бездействия.  
   
@@ -28,7 +32,7 @@ caps.handback.revision: 8
   
 3.  Возобновляет работу планировщика рабочих процессов.  
   
- Метод **Unload** выполняет следующие шаги.  
+ **Выгрузить** метод выполняет следующие действия:  
   
 1.  Приостанавливает работу планировщика рабочих процессов и ждет перехода рабочего процесса в состояние бездействия.  
   
@@ -36,23 +40,21 @@ caps.handback.revision: 8
   
 3.  Удаляет экземпляр рабочего процесса из памяти.  
   
- Методы **Persist** и **Unload** блокируются на время нахождения рабочего процесса в зоне несохраняемости до тех пор, пока рабочий процесс не выйдет из этой зоны.Метод продолжает работу, выполняя операции сохранения или выгрузки после выхода из зоны несохраняемости.Если зона несохраняемости не завершается до истечения времени ожидания или если процесс сохраняемости занимает слишком много времени, формируется исключение TimeoutException.  
+ Оба **Persist** и **выгрузить** блокируются на время рабочий процесс находится в зоне несохраняемости, пока рабочий процесс не выйдет из этой зоны. Метод продолжает работу, выполняя операции сохранения или выгрузки после выхода из зоны несохраняемости. Если зона несохраняемости не завершается до истечения времени ожидания или если процесс сохраняемости занимает слишком много времени, формируется исключение TimeoutException.  
   
-## Включение сохраняемости для служб рабочих процессов в коде  
- Элемент **DurableInstancingOptions** класса <xref:System.ServiceModel.WorkflowServiceHost> имеет свойство **InstanceStore**, с помощью которого хранилища экземпляров вы можете связывать с **WorkflowServiceHost**.  
+## <a name="enable-persistence-for-workflow-services-in-code"></a>Включение сохраняемости для служб Workflow Services в коде  
+ **DurableInstancingOptions** членом <xref:System.ServiceModel.WorkflowServiceHost> класс имеет свойство с именем **InstanceStore** , можно использовать для связывания в хранилище экземпляров с **WorkflowServiceHost** .  
   
 ```  
-  
 // wsh is an instance of WorkflowServiceHost class  
 wsh.DurableInstancingOptions.InstanceStore = new SqlWorkflowInstanceStore();  
-  
 ```  
   
- Когда **WorkflowServiceHost** открыт, сохраняемость автоматически включена, если **DurableInstancingOptions.InstanceStore** имеет значение, отличное от null.  
+ Когда **WorkflowServiceHost** будет открыт, сохраняемость автоматически включена, если **DurableInstancingOptions.InstanceStore** не имеет значение null.  
   
- Обычно поведение служб предоставляет конкретное хранилище экземпляров, которое используется узлом службы рабочих процессов с помощью свойства **InstanceStore**.Например, SqlWorkflowInstanceStoreBehavior создает экземпляр **SqlWorkflowInstanceStore**, настраивает и присваивает его **DurableInstancingOptions.InstanceStore**.  
+ Обычно поведение служб предоставляет конкретное хранилище экземпляров для использования с узлом службы рабочего процесса с помощью **InstanceStore** свойство. Например, SqlWorkflowInstanceStoreBehavior создает экземпляр **SqlWorkflowInstanceStore**, настраивает и присваивает его **DurableInstancingOptions.InstanceStore**.  
   
-## Включение сохраняемости для служб рабочих процессов с помощью файла конфигурации приложения  
+## <a name="enable-persistence-for-workflow-services-using-an-application-configuration-file"></a>Включение сохраняемости для служб Workflow Services с помощью файла конфигурации приложения  
  Сохраняемость можно включить с помощью файла конфигурации приложения, добавив следующий код в файл app.config или web.config.  
   
 ```xml  
@@ -60,12 +62,11 @@ wsh.DurableInstancingOptions.InstanceStore = new SqlWorkflowInstanceStore();
   <system.serviceModel>  
     <behaviors>  
       <serviceBehaviors>  
-        <behavior name=”myBehavior”>  
-          <SqlWorkflowInstanceStore connectionString=”Data Source=myDatatbaseServer;Initial Catalog=myPersistenceDatabase”>  
+        <behavior name="myBehavior">  
+          <SqlWorkflowInstanceStore connectionString="Data Source=myDatatbaseServer;Initial Catalog=myPersistenceDatabase">  
         </behavior>  
       </serviceBehaviors>  
     <behaviors>  
   </system.serviceModel>  
 </configuration>  
-  
 ```

@@ -1,52 +1,44 @@
 ---
-title: "События LINQ to XML (Visual Basic) | Документы Microsoft"
+title: "События LINQ to XML (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 34923928-b99c-4004-956e-38f6db25e910
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2b7756845f155c4683015d54b41f2ecc09b29333
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b19d8f19f9feb1d385f9900d76d2a7af8e89bbeb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="linq-to-xml-events-visual-basic"></a>События LINQ to XML (Visual Basic)
-[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]события позволяют получать уведомления при изменении XML-дерева.  
+События [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] позволяют получать уведомления, когда изменяется дерево XML.  
   
- Можно добавить события в экземпляр любого <xref:System.Xml.Linq.XObject>.</xref:System.Xml.Linq.XObject> Обработчик события будет получать уведомления об изменениях <xref:System.Xml.Linq.XObject>и всех его потомков.</xref:System.Xml.Linq.XObject> Например, можно добавить обработчик события в корень дерева и обрабатывать все изменения дерева в этом обработчике события.  
+ Можно добавить события в экземпляр любого объекта <xref:System.Xml.Linq.XObject>. Обработчик события будет получать уведомления об изменениях объекта <xref:System.Xml.Linq.XObject> и всех его потомков. Например, можно добавить обработчик события в корень дерева и обрабатывать все изменения дерева в этом обработчике события.  
   
- Примеры [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] события, см. <xref:System.Xml.Linq.XObject.Changing>и <xref:System.Xml.Linq.XObject.Changed>.</xref:System.Xml.Linq.XObject.Changed> </xref:System.Xml.Linq.XObject.Changing>  
+ Примеры таких событий [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] см. в разделах <xref:System.Xml.Linq.XObject.Changing> и <xref:System.Xml.Linq.XObject.Changed>.  
   
 ## <a name="types-and-events"></a>Типы и события  
  Используйте следующие типы при работе с событиями.  
   
 |Тип|Описание|  
 |----------|-----------------|  
-|<xref:System.Xml.Linq.XObjectChange></xref:System.Xml.Linq.XObjectChange>|Указывает тип события, когда происходит событие <xref:System.Xml.Linq.XObject>.</xref:System.Xml.Linq.XObject>|  
-|<xref:System.Xml.Linq.XObjectChangeEventArgs></xref:System.Xml.Linq.XObjectChangeEventArgs>|Предоставляет данные для <xref:System.Xml.Linq.XObject.Changing>и <xref:System.Xml.Linq.XObject.Changed>события.</xref:System.Xml.Linq.XObject.Changed> </xref:System.Xml.Linq.XObject.Changing>|  
+|<xref:System.Xml.Linq.XObjectChange>|Задает тип события, когда событие вызывается объектом <xref:System.Xml.Linq.XObject>.|  
+|<xref:System.Xml.Linq.XObjectChangeEventArgs>|Предоставляет данные для событий <xref:System.Xml.Linq.XObject.Changing> и <xref:System.Xml.Linq.XObject.Changed>.|  
   
  При изменении дерева XML возникают следующие события.  
   
 |Событие|Описание|  
 |-----------|-----------------|  
-|<xref:System.Xml.Linq.XObject.Changing></xref:System.Xml.Linq.XObject.Changing>|Происходит непосредственно перед тем, как <xref:System.Xml.Linq.XObject>или какой-либо из его потомков для изменения.</xref:System.Xml.Linq.XObject>|  
-|<xref:System.Xml.Linq.XObject.Changed></xref:System.Xml.Linq.XObject.Changed>|Происходит при <xref:System.Xml.Linq.XObject>был изменен или один из его наследников.</xref:System.Xml.Linq.XObject>|  
+|<xref:System.Xml.Linq.XObject.Changing>|Возникает непосредственно перед тем, как объект <xref:System.Xml.Linq.XObject> или какой-либо его потомок изменяется.|  
+|<xref:System.Xml.Linq.XObject.Changed>|Возникает, когда изменился объект <xref:System.Xml.Linq.XObject> или один из его потомков.|  
   
 ## <a name="example"></a>Пример  
   
@@ -132,4 +124,4 @@ Total:308
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Дополнительно программированию LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+ [Дополнительно LINQ to XML, программирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

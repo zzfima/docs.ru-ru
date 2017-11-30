@@ -1,32 +1,35 @@
 ---
-title: "Образец строго типизированных расширений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Пример строго типизированных расширений"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e6fb08ab30a66d25d7150723e4329aabea9b6bb1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Образец строго типизированных расширений
-В этом образце используется класс <xref:System.ServiceModel.Syndication.SyndicationFeed>.Однако показанные в образце шаблоны можно использовать со всеми классами Syndication, которые поддерживают данные расширения.  
+# <a name="strongly-typed-extensions-sample"></a>Пример строго типизированных расширений
+В этом примере используется класс <xref:System.ServiceModel.Syndication.SyndicationFeed>. Однако показанные в примере шаблоны можно использовать со всеми классами Syndication, которые поддерживают данные расширения.  
   
- Объектная модель синдикации \(<xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem> и связанные классы\) поддерживает слабо типизированный доступ к данным расширений с использованием свойств <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> и <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>.В этом образце показано, как обеспечить строго типизированный доступ к данным расширений, реализовав пользовательские производные классы для классов <xref:System.ServiceModel.Syndication.SyndicationFeed> и <xref:System.ServiceModel.Syndication.SyndicationItem>, чтобы сделать доступными в виде строго типизированных свойств некоторые относящиеся к конкретным приложениям расширения.  
+ Объектная модель синдикации (<xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem> и связанные классы) поддерживает слабо типизированный доступ к данным расширений с использованием свойств <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> и <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>. В этом образце показано, как обеспечить строго типизированный доступ к данным расширений, реализовав пользовательские производные классы для классов <xref:System.ServiceModel.Syndication.SyndicationFeed> и <xref:System.ServiceModel.Syndication.SyndicationItem>, чтобы сделать доступными в виде строго типизированных свойств некоторые относящиеся к конкретным приложениям расширения.  
   
- Например, здесь показано, как реализовать элемент расширения, определенный в документе RFC "Atom Threading Extensions".Этот образец приводится исключительно с целью демонстрации и не является полной реализацией предлагаемой спецификации.  
+ Например, здесь показано, как реализовать элемент расширения, определенный в документе RFC "Atom Threading Extensions". Этот образец приводится исключительно с целью демонстрации и не является полной реализацией предлагаемой спецификации.  
   
-## Образец XML  
+## <a name="sample-xml"></a>Образец XML  
  В следующем примере XML показана запись Atom 1.0 с дополнительным элементом расширения `<in-reply-to>`.  
   
-```  
+```xml  
 <entry>  
     <id>tag:example.org,2005:1,2</id>  
     <title type="text">Another response to the original</title>  
@@ -45,13 +48,12 @@ caps.handback.revision: 15
                      Even more data</aDifferentElement>  
     </in-reply-to>  
 </entry>  
-  
 ```  
   
- Элемент `<in-reply-to>` задает три обязательных атрибута \(`ref`, `type` и `href`\) и разрешает использование дополнительных атрибутов и элементов расширений.  
+ `<in-reply-to>` Элемент задает три обязательных атрибута (`ref`, `type` и `href`) и разрешает наличие дополнительных атрибутов и элементов расширений.  
   
-## Моделирование элемента In\-Reply\-To  
- В этом образце элемент `<in-reply-to>` моделируется в среде CLR, которая реализует интерфейс <xref:System.Xml.Serialization.IXmlSerializable>, позволяющий использовать его с <xref:System.Runtime.Serialization.DataContractSerializer>.Кроме того, в образце реализованы методы и свойства для доступа к данным элемента, как показано в следующем образце кода.  
+## <a name="modeling-the-in-reply-to-element"></a>Моделирование элемента In-Reply-To  
+ В этом образце элемент `<in-reply-to>` моделируется в среде CLR, которая реализует интерфейс <xref:System.Xml.Serialization.IXmlSerializable>, позволяющий использовать его с <xref:System.Runtime.Serialization.DataContractSerializer>. Кроме того, в образце реализованы методы и свойства для доступа к данным элемента, как показано в следующем образце кода.  
   
 ```  
 [XmlRoot(ElementName = "in-reply-to", Namespace = "http://contoso.org/syndication/thread/1.0")]  
@@ -92,12 +94,11 @@ public class InReplyToElement : IXmlSerializable
     public Uri Source  
     { get; set; }  
 }  
-  
 ```  
   
- Класс `InReplyToElement` реализует свойства для обязательного атрибута \(`HRef`, `MediaType` и `Source`\), а также коллекцию для хранения расширений <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> и <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>.  
+ Класс `InReplyToElement` реализует свойства для обязательного атрибута (`HRef`, `MediaType` и `Source`), а также коллекцию для хранения расширений <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> и <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>.  
   
- Класс `InReplyToElement` реализует интерфейс <xref:System.Xml.Serialization.IXmlSerializable>, который позволяет напрямую управлять тем, как экземпляры объектов считываются из XML и записываются в XML.Метод `ReadXml` сначала считывает значения свойств `Ref`, `HRef`, `Source` и `MediaType` из переданного ему объекта <xref:System.Xml.XmlReader>.Все неизвестные атрибуты хранятся в коллекции <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A>.После чтения всех атрибутов вызывается метод <xref:System.Xml.XmlReader.ReadStartElement>, чтобы перевести средство чтения к следующему элементу.Поскольку у моделируемого этим классом элемента нет обязательных дочерних элементов, дочерние элементы буферизуются в экземплярах `XElement` и хранятся в коллекции <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>, как показано в следующем примере кода.  
+ Класс `InReplyToElement` реализует интерфейс <xref:System.Xml.Serialization.IXmlSerializable>, который позволяет напрямую управлять тем, как экземпляры объектов считываются из XML и записываются в XML. Метод `ReadXml` сначала считывает значения свойств `Ref`, `HRef`, `Source` и `MediaType` из переданного ему объекта <xref:System.Xml.XmlReader>. Все неизвестные атрибуты хранятся в коллекции <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A>. После чтения всех атрибутов вызывается метод <xref:System.Xml.XmlReader.ReadStartElement>, чтобы перевести средство чтения к следующему элементу. Поскольку у моделируемого этим классом элемента нет обязательных дочерних элементов, дочерние элементы буферизуются в экземплярах `XElement` и хранятся в коллекции <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>, как показано в следующем примере кода.  
   
 ```  
 public void ReadXml(System.Xml.XmlReader reader)  
@@ -151,10 +152,9 @@ public void ReadXml(System.Xml.XmlReader reader)
         reader.ReadEndElement();  
     }  
 }  
-  
 ```  
   
- В `WriteXml` в методе `InReplyToElement` сначала записывает значения из свойств `Ref`, `HRef`, `Source` и `MediaType` в виде атрибутов XML \(`WriteXml` не отвечает за запись самого внешнего элемента, поскольку это делает сторона, вызывающая `WriteXml`\).Кроме того, он записывает содержимое свойств <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> и <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> в средство записи, как показано в следующем примере кода.  
+ В `WriteXml` в методе `InReplyToElement` сначала записывает значения из свойств `Ref`, `HRef`, `Source` и `MediaType` в виде атрибутов XML (`WriteXml` не отвечает за запись самого внешнего элемента, поскольку это делает сторона, вызывающая `WriteXml`). Кроме того, он записывает содержимое свойств <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> и <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> в средство записи, как показано в следующем примере кода.  
   
 ```  
 public void WriteXml(System.Xml.XmlWriter writer)  
@@ -192,13 +192,12 @@ public void WriteXml(System.Xml.XmlWriter writer)
         element.WriteTo(writer);  
     }  
 }  
-  
 ```  
   
-## ThreadedFeed и ThreadedItem  
- В этом образце элементы `SyndicationItems` с расширениями `InReplyTo` моделируются с помощью класса `ThreadedItem`.Аналогично класс `ThreadedFeed` является каналом `SyndicationFeed`, элементы которого являются экземплярами `ThreadedItem`.  
+## <a name="threadedfeed-and-threadeditem"></a>ThreadedFeed и ThreadedItem  
+ В этом образце элементы `SyndicationItems` с расширениями `InReplyTo` моделируются с помощью класса `ThreadedItem`. Аналогично класс `ThreadedFeed` является каналом `SyndicationFeed`, элементы которого являются экземплярами `ThreadedItem`.  
   
- Класс `ThreadedFeed` наследует классу `SyndicationFeed` и переопределяет метод `OnCreateItem`, чтобы он возвращал элементы `ThreadedItem`.Кроме того, он реализует метод для доступа к коллекции `Items` в виде `ThreadedItems`, как показано в следующем примере кода.  
+ Класс `ThreadedFeed` наследует классу `SyndicationFeed` и переопределяет метод `OnCreateItem`, чтобы он возвращал элементы `ThreadedItem`. Кроме того, он реализует метод для доступа к коллекции `Items` в виде `ThreadedItems`, как показано в следующем примере кода.  
   
 ```  
 public class ThreadedFeed : SyndicationFeed  
@@ -220,10 +219,9 @@ public class ThreadedFeed : SyndicationFeed
         return new ThreadedItem();  
     }  
 }  
-  
 ```  
   
- Класс `ThreadedItem` наследует классу `SyndicationItem` и делает элемент `InReplyToElement` строго типизированным свойством.Это делает возможным удобный программный доступ к данным расширений `InReplyTo`.Кроме того, он реализует методы `TryParseElement` и `WriteElementExtensions` для чтения и записи данных расширений, как показано в следующем примере кода.  
+ Класс `ThreadedItem` наследует классу `SyndicationItem` и делает элемент `InReplyToElement` строго типизированным свойством. Это делает возможным удобный программный доступ к данным расширений `InReplyTo`. Кроме того, он реализует методы `TryParseElement` и `WriteElementExtensions` для чтения и записи данных расширений, как показано в следующем примере кода.  
   
 ```  
 public class ThreadedItem : SyndicationItem  
@@ -280,24 +278,23 @@ public class ThreadedItem : SyndicationItem
         base.WriteElementExtensions(writer, version);  
     }  
 }  
-  
 ```  
   
-#### Настройка, построение и выполнение образца  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в разделе [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StronglyTypedExtensions`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StronglyTypedExtensions`  
   
-## См. также
+## <a name="see-also"></a>См. также

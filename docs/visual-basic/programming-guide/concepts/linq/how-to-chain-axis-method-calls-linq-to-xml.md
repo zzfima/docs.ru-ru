@@ -1,37 +1,32 @@
 ---
-title: "Практическое руководство: цепочку вызовы для методов осей (LINQ to XML) (Visual Basic) | Документы Microsoft"
+title: "Как: связанные вызовы метода оси (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e4e22942-39bd-460f-b3c0-9f09e53d3aa9
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7c0e9d440ab50b7f275296731e5210578bcedcaa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 39579d08d339ed8964520936d28ee289de5fb15d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-chain-axis-method-calls-linq-to-xml-visual-basic"></a>Практическое руководство: цепочку вызовы для методов осей (LINQ to XML) (Visual Basic)
+# <a name="how-to-chain-axis-method-calls-linq-to-xml-visual-basic"></a>Как: связанные вызовы метода оси (LINQ to XML) (Visual Basic)
 Обычно при написании кода вы будете придерживаться схемы, по которой вызывается метод оси, после чего вызывается одна из осей метода расширений.  
   
- Существуют две оси с именем `Elements` , которые возвращают коллекцию элементов: <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>метод и <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>метод.</xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> </xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> Можно сочетать эти две оси таким образом, чтобы найти все элементы с указанным именем на заданной глубине дерева.  
+ Существуют две оси с именем `Elements`, которые возвращают коллекцию элементов: методы <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> и <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>. Можно сочетать эти две оси таким образом, чтобы найти все элементы с указанным именем на заданной глубине дерева.  
   
 ## <a name="example"></a>Пример  
- В этом примере используется <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>и <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>для поиска всех `Name` элементы во всех `Address` элементы во всех `PurchaseOrder` элементы.</xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> </xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>  
+ В этом примере с помощью методов<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> и <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> выполняется поиск всех элементов `Name` во всех элементах `Address` во всех элементах `PurchaseOrder`.  
   
- В этом примере используется следующий XML-документ: [пример XML-файла: несколько заказов на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim purchaseOrders As XElement = XElement.Load("PurchaseOrders.xml")  
@@ -54,7 +49,7 @@ Next
 <Name>Jessica Arnold</Name>  
 ```  
   
- Это работает, поскольку один из реализаций `Elements` ось — как метод расширения <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XContainer>.</xref:System.Xml.Linq.XContainer> </xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement>является производным от <xref:System.Xml.Linq.XContainer>, чтобы можно было вызвать <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>результаты вызова метода <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>метод.</xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> </xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> </xref:System.Xml.Linq.XContainer></xref:System.Xml.Linq.XElement>  
+ Такой подход оправдан, поскольку одна из реализаций оси `Elements` представляет собой метод расширений <xref:System.Collections.Generic.IEnumerable%601> по отношению к <xref:System.Xml.Linq.XContainer>. <xref:System.Xml.Linq.XElement> вычисляется из <xref:System.Xml.Linq.XContainer>, что позволяет вызвать метод <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> по результатам вызова метода <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Пример  
  Иногда может потребоваться получить все элементы с определенной глубины структуры элементов при условии, что неизвестно, имеются промежуточные предки или нет. Например, в следующем документе может потребоваться получение всех элементов `ConfigParameter`, которые являются дочерними по отношению к элементу `Customer`, кроме `ConfigParameter`, которые являются дочерними по отношению к элементу `Root`.  
@@ -81,7 +76,7 @@ Next
 </Root>  
 ```  
   
- Чтобы сделать это, можно использовать <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>оси, следующим образом:</xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>  
+ Чтобы это реализовать, можно использовать ось <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> следующим образом.  
   
 ```vb  
 Dim root As XElement = XElement.Load("Irregular.xml")  
@@ -102,7 +97,7 @@ Next
 ## <a name="example"></a>Пример  
  Следующий пример демонстрирует тот же способ обработки XML, что и в пространстве имен. Дополнительные сведения см. в разделе [работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- В этом примере используется следующий XML-документ: [пример XML-файла: несколько заказов на покупку в пространстве имен](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку в пространстве имен](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  

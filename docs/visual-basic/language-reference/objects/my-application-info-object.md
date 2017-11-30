@@ -1,39 +1,38 @@
 ---
-title: "Объект My.Application.Info | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.Application.AssemblyInfo - объект"
-  - "My.Application.Info - объект"
+title: "Объект My.Application.Info"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- My.Application.Info object
+- My.Application.AssemblyInfo object
 ms.assetid: 2f4782ed-3da2-4d88-b341-0c6f480fb7bb
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a4aa70edbe5de2d2411f62e6dcd7677896585c48
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Объект My.Application.Info
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Предоставляет свойства для получения сведений о приложении, например номера версии, описания, загруженных сборок и т. д.  
+# <a name="myapplicationinfo-object"></a>Объект My.Application.Info
+Предоставляет свойства для получения сведений о приложении, такие как номер версии, описание, загруженных сборок и т. д.  
   
-## Заметки  
- Дополнительные сведения о доступных методах и свойствах объекта `My.Application.Info` см. в разделе <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>.  
+## <a name="remarks"></a>Примечания  
+ Дополнительные сведения о методах и свойствах `My.Application.Info` см. в разделе <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>.  
   
 > [!NOTE]
->  Можно использовать свойства класса <xref:System.Diagnostics.FileVersionInfo?displayProperty=fullName> для получения сведений о файле на диске.  
+>  Можно использовать свойства <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType> для получения сведений о файле на диске.  
   
-## Требования  
- **Пространство имен:** <xref:Microsoft.VisualBasic.ApplicationServices>  
+## <a name="requirements"></a>Требования  
+ **Пространство имен:**<xref:Microsoft.VisualBasic.ApplicationServices>  
   
- **Класс:** <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>  
+ **Класс:**<xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>  
   
- **Сборка:** библиотека времени выполнения Visual Basic \(в Microsoft.VisualBasic.dll\)  
+ **Сборка:** Visual Basic Runtime Library (Microsoft.VisualBasic.dll)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Объект My.Application](../../../visual-basic/language-reference/objects/my-application-object.md)

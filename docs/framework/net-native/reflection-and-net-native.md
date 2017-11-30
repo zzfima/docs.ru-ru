@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f6ec8d0a93354fcea17b27321d59174f2e53a47f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: d9e4bdc26815feab7910e7518f7cd691a1f4dece
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="reflection-and-net-native"></a>Отражение и машинный код .NET
 В платформа.NET Framework управляемая разработка поддерживает метапрограммирование через интерфейс API отражения. Отражение позволяет проверять объекты в приложении, вызывать методы для объектов, обнаруженные в результате проверки, создавать новые типы во время выполнения и поддерживает множество других сценариев динамического кода. Оно также поддерживает сериализацию и десериализацию, позволяющую сохранять значения полей объекта и восстанавливать их позже. Все эти сценарии требуют использования JIT-компилятора платформы .NET Framework для генерации машинного кода на основе имеющихся метаданных.  
@@ -33,7 +31,7 @@ ms.lasthandoff: 08/21/2017
 > [!NOTE]
 >  Общие сведения о процессе компиляции машинного кода .NET, обосновывающие необходимость файла директив среды выполнения, см. в разделе [Машинный код .NET и компиляция](../../../docs/framework/net-native/net-native-and-compilation.md).  
   
- Кроме того [!INCLUDE[net_native](../../../includes/net-native-md.md)] не позволяет выполнить отражение через закрытые члены библиотеки классов платформы .NET Framework. Например, вызов свойства <xref:System.Reflection.TypeInfo.DeclaredFields%2A?displayProperty=fullName> для извлечения полей типа библиотеки классов платформы .NET Framework возвращает только открытые или защищенные поля.  
+ Кроме того [!INCLUDE[net_native](../../../includes/net-native-md.md)] не позволяет выполнить отражение через закрытые члены библиотеки классов платформы .NET Framework. Например, вызов свойства <xref:System.Reflection.TypeInfo.DeclaredFields%2A?displayProperty=nameWithType> для извлечения полей типа библиотеки классов платформы .NET Framework возвращает только открытые или защищенные поля.  
   
  В следующих разделах содержится основная и справочная документация, которая может потребоваться для поддержки отражения и сериализации в приложениях:  
   
@@ -44,6 +42,5 @@ ms.lasthandoff: 08/21/2017
 -   [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
 ## <a name="see-also"></a>См. также  
- [Компиляция приложений с помощью машинного кода .NET](../../../docs/framework/net-native/index.md)   
+ [Компиляция приложений с помощью машинного кода .NET](../../../docs/framework/net-native/index.md)  
  [.NET Native и компиляция](../../../docs/framework/net-native/net-native-and-compilation.md)
-

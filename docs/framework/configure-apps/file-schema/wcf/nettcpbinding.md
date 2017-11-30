@@ -5,26 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-helpviewer_keywords:
-- netTcpBinding Element
+helpviewer_keywords: netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cfa05d2ced97c9c666453ea5ecaf7144add5e23a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 9928a845545c2328ed86d182ceb37381522d70ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltnettcpbindinggt"></a>&lt;netTcpBinding&gt;
 Задает безопасную, надежную и оптимизированную привязку, пригодную для обмена данными между компьютерами. По умолчанию создает стек связи среды выполнения с безопасностью Windows для защиты и проверки подлинности сообщений, с протоколом TCP для доставки сообщений, а также с кодированием двоичных сообщений.  
@@ -158,10 +152,9 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.NetTcpBinding>   
- <xref:System.ServiceModel.Configuration.NetTcpBindingElement>   
- [Привязки](../../../../../docs/framework/wcf/bindings.md)   
- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Использование привязок для настройки служб Windows Communication Foundation и клиентов](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
+ <xref:System.ServiceModel.NetTcpBinding>  
+ <xref:System.ServiceModel.Configuration.NetTcpBindingElement>  
+ [Привязки](../../../../../docs/framework/wcf/bindings.md)  
+ [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Использование привязок для настройки служб Windows Communication Foundation и клиентов](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Привязка >](../../../../../docs/framework/misc/binding.md)
-

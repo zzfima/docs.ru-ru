@@ -1,74 +1,75 @@
 ---
-title: "Приступая к программированию графики | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "рисование"
-  - "примеры [Windows Forms], графика"
-  - "начало работы, программирование графики"
-  - "графика, начало работы"
+title: "Приступая к программированию графики"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- graphics [Windows Forms], getting started
+- getting started [Windows Forms], graphics programming
+- examples [Windows Forms], graphics
+- drawing
 ms.assetid: eb0f6d6f-9e52-4167-9592-ff4b82fb5869
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ca9f439dbb4f95a05886c822cd6436793acab6a9
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Приступая к программированию графики
-В данном разделе описывается, как начать использовать интерфейс [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] в приложении Windows Forms.  В следующих разделах приведены инструкции по решению некоторых задач [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], таких как рисование и заливка фигур и текста.  
+# <a name="getting-started-with-graphics-programming"></a>Приступая к программированию графики
+В этом разделе показано, как приступить к использованию [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] в приложении Windows Forms. В следующих темах инструкции по решению некоторых [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] задач, таких как рисование и заливка фигур и текста.  
   
-## В этом подразделе  
- [Практическое руководство. Создание объектов Graphics для рисования](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- Создание объекта <xref:System.Drawing.Graphics> для рисования.  
+## <a name="in-this-section"></a>Содержание  
+ [Практическое руководство. Создание графических объектов для рисования](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ Показано, как создать <xref:System.Drawing.Graphics> объекта для рисования.  
   
  [Практическое руководство. Создание пера](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
- Создание пера.  
+ Демонстрирует создание пера.  
   
- [Практическое руководство. Установка цвета фона для пера](../../../../docs/framework/winforms/advanced/how-to-set-the-color-of-a-pen.md)  
- Установка цвета пера.  
+ [Практическое руководство. Установка цвета пера](../../../../docs/framework/winforms/advanced/how-to-set-the-color-of-a-pen.md)  
+ Показано, как задать цвет пера.  
   
  [Практическое руководство. Создание сплошной кисти](../../../../docs/framework/winforms/advanced/how-to-create-a-solid-brush.md)  
- Создание сплошной кисти.  
+ Описывает создание сплошной кисти.  
   
  [Практическое руководство. Рисование линии в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)  
- Рисование линии.  
+ Показано, как рисование линии.  
   
- [Практическое руководство. Рисование линии или контурной фигуры](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)  
- Рисование фигуры.  
+ [Практическое руководство. Рисование контурной фигуры](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)  
+ Описывает, как Рисование фигур.  
   
  [Практическое руководство. Рисование заполненного прямоугольника в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
- Рисование прямоугольника.  
+ Объясняется, как рисование прямоугольника.  
   
  [Практическое руководство. Рисование заполненного эллипса в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-ellipse-on-a-windows-form.md)  
- Рисование эллипса.  
+ Показано, как рисование заполненного эллипса.  
   
- [Практическое руководство. Отрисовка текста в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)  
- Рисование текста.  
+ [Практическое руководство. Рисование текста в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)  
+ Описывает, как для рисования текста.  
   
  [Практическое руководство. Рисование текста по вертикали в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-vertical-text-on-a-windows-form.md)  
- Рисование вертикального текста.  
+ Показано, как рисование вертикального текста.  
   
- [Практическое руководство. Вывод изображений с использованием GDI\+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)  
- Рисование изображений.  
+ [Практическое руководство. Прорисовка изображений с использованием GDI+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)  
+ Показано, как рисовать изображения.  
   
  [Практическое руководство. Создание фигурной формы Windows Forms](../../../../docs/framework/winforms/advanced/how-to-create-a-shaped-windows-form.md)  
- Изменение вида формы.  
+ Объясняется, как изменить форму формы.  
   
- [Практическое руководство. Копирование пикселов для уменьшения эффекта дрожания изображения в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md)  
- Копирование пикселей между областями.  
+ [Практическое руководство. Копирование пикселей для уменьшения эффекта дрожания изображения в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md)  
+ Объясняет, как копирование точек из одной области в другую.  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:System.Drawing>  
- Описание пространства имен и ссылки на разделы с описаниями всех его членов.  
+ Описание пространства имен и содержит ссылки на все его члены.  
   
  <xref:System.Windows.Forms>  
- Описание пространства имен и ссылки на разделы с описаниями всех его членов.
+ Описание пространства имен и содержит ссылки на все его члены.

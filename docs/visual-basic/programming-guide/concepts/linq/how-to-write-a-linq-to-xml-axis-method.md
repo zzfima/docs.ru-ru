@@ -1,35 +1,30 @@
 ---
-title: "Практическое руководство: запись LINQ в методе оси XML (Visual Basic) | Документы Microsoft"
+title: "Как: запись LINQ метод оси XML (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b676f025-a24c-4076-8713-aa809b2b8ce0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6749c2eee72cdc24c5dc3957e00a8bab54ce226b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: d0c0c61514e6f51b060c3ccd431920c3a9adc418
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>Практическое руководство: запись LINQ в методе оси XML (Visual Basic)
+# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>Как: запись LINQ метод оси XML (Visual Basic)
 Можно написать свои собственные методы оси для получения коллекций из XML-дерева. Один из лучших способов выполнения этого состоит в написании метода расширения, возвращающего коллекцию элементов или атрибутов. Метод расширения можно написать для возврата указанных поднаборов элементов или атрибутов с учетом требований приложения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере используются два метода расширения. Первый метод расширения `GetXPath`, работает с <xref:System.Xml.Linq.XObject>и возвращает выражение XPath, которое при вычислении возвращает узел или атрибут.</xref:System.Xml.Linq.XObject> Второй метод расширения `Find`, оперирует <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement> Он возвращает коллекцию <xref:System.Xml.Linq.XAttribute>объекты и <xref:System.Xml.Linq.XElement>объектов, содержащих некоторый указанный текст.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XAttribute>  
+ В следующем примере используются два метода расширения. Первый метод расширения, `GetXPath`, действует применительно к <xref:System.Xml.Linq.XObject> и возвращает выражение XPath, которое после его вычисления возвращает узел или атрибут. Второй метод расширения, `Find`, применяется к <xref:System.Xml.Linq.XElement>. Он возвращает коллекцию объектов <xref:System.Xml.Linq.XAttribute> и <xref:System.Xml.Linq.XElement>, содержащих некоторый указанный текст.  
   
- В этом примере используется следующий XML-документ: [пример XML-файла: несколько заказов на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -231,4 +226,3 @@ End Module
   
 ## <a name="see-also"></a>См. также  
  [Дополнительные способы создания запросов (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
-

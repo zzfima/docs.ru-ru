@@ -1,85 +1,87 @@
 ---
-title: "Элемент &lt;module&gt; (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#module"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/module"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<module> - элемент"
-  - "module - элемент"
+title: "&lt;модуль&gt; элемент (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#module
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/module
+helpviewer_keywords:
+- module element
+- <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: a039f6ed985997c5557659abd299fe0fc7699a1b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;module&gt; (параметры сети)
-Добавляет в приложение новый модуль прокси.  
+# <a name="ltmodulegt-element-network-settings"></a>&lt;модуль&gt; элемент (параметры сети)
+Добавляет в приложение новый модуль прокси-сервера.  
   
-## Синтаксис  
+ \<configuration>  
+\<System.NET >  
+\<defaultProxy >  
+\<модуль >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
-      <module   
-   type = "name", System, Version="version number", Culture="culture", PublicKeyToken="token" "   
+```xml  
+<module   
+  type="type_fullname, assembly_fullname"   
 />  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
-|**Атрибут**|**Описание**|  
-|-----------------|------------------|  
-|`type`|Имя и особенности модуля, реализующего прокси.|  
+|**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
+|-------------------|---------------------|  
+|`type`|Полное имя типа (обозначается <xref:System.Type.FullName%2A> свойства) и имя сборки (обозначается <xref:System.Reflection.Assembly.FullName%2A> свойства), разделенных запятыми, реализующая прокси-сервер.|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a>Дочерние элементы  
+ Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Настраивает протокол HTTP прокси\-сервера.|  
+|-----------------|---------------------|  
+|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Настраивает прокси-сервер протокола передачи гипертекста (HTTP).|  
   
-## Заметки  
- Элемент `module` регистрирует классы прокси, реализующие интерфейс <xref:System.Net.IWebProxy>.  После регистрации прокси\-класса элемент `module` может использоваться для запроса данных через поддерживаемый прокси.  
+## <a name="remarks"></a>Примечания  
+ `module` Элемент регистрирует прокси-классы, реализующие <xref:System.Net.IWebProxy> интерфейса. После регистрации прокси-класса элемент `module` может использоваться для запроса данных через поддерживаемый прокси.  
   
- Значением для атрибута `type` должно быть имя допустимой динамически загружаемой библиотеки \(DLL\) и имя класса модуля.  
+ Значение для `type` атрибут должен иметь имя класса, модуля и имя из его соответствующий динамических ссылок библиотеки (DLL).  
   
-## Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+## <a name="configuration-files"></a>Файлы конфигурации  
+ Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
-## Пример  
- В следующем примере кода регистрируется пользовательский прокси\-класс.  
+## <a name="example"></a>Пример  
+ В следующем примере регистрируется пользовательский прокси-класс.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <defaultProxy>  
       <module  
-        type = "Test.CustomWebProxy, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"  
+        type="Test.CustomWebProxy, TestProxy, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b23a5c561934e385"  
       />  
     </defaultProxy>  
   </system.net>  
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Net.IWebProxy?displayProperty=fullName>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Net.IWebProxy?displayProperty=nameWithType>  
  [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

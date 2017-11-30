@@ -1,40 +1,43 @@
 ---
-title: "Активация NamedPipe | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Активация NamedPipe"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-caps.latest.revision: 28
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 55594e1505e60ede8d7c6abcbd8a9cf9a1f739bb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Активация NamedPipe
-Этот пример демонстрирует размещение службы, которая использует службу активации Windows \(WAS\), чтобы активировать службу, которая взаимодействует через именованные каналы.  Этот пример основан на примере [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md) и для выполнения требует [!INCLUDE[wv](../../../../includes/wv-md.md)].  
+# <a name="namedpipe-activation"></a>Активация NamedPipe
+Этот пример демонстрирует размещение службы, которая использует службу активации Windows (WAS), чтобы активировать службу, которая взаимодействует через именованные каналы. Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) и требует [!INCLUDE[wv](../../../../includes/wv-md.md)] для запуска.  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.  Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\NamedPipeActivation`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\NamedPipeActivation`  
   
-## Подробные сведения об образце  
- Пример содержит консольную программу клиента \(EXE\) и библиотеку службы \(DLL\), размещаемую в рабочем процессе, активируемом службой активации процесса Windows \(WAS\).  Действия клиента отображаются в окне консоли.  
+## <a name="sample-details"></a>Подробные сведения об образце  
+ Пример содержит консольную программу клиента (EXE) и библиотеку службы (DLL), размещаемую в рабочем процессе, активируемом службой активации процесса Windows (WAS). Действия клиента отображаются в окне консоли.  
   
- Служба реализует контракт, определяющий шаблон взаимодействия "запрос\-ответ".  Контракт определяется интерфейсом `ICalculator`, который предоставляет математические операции \(сложить, вычесть, умножить и разделить\), как это показано ниже в образце кода.  
+ Служба реализует контракт, определяющий шаблон взаимодействия "запрос-ответ". Контракт определяется интерфейсом `ICalculator`, который предоставляет математические операции (сложить, вычесть, умножить и разделить), как это показано ниже в образце кода.  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -74,14 +77,13 @@ public class CalculatorService : ICalculator
         return n1 / n2;  
     }  
 }  
-  
 ```  
   
- Образец использует изменяемую привязку `netNamedPipeBinding` без использования безопасности.  Привязка задается в файлах конфигурации для клиента и службы.  Тип привязки для службы задается в атрибуте `binding` элемента конечной точки, как показано в следующем образце конфигурации.  
+ Образец использует изменяемую привязку `netNamedPipeBinding` без использования безопасности. Привязка задается в файлах конфигурации для клиента и службы. Тип привязки для службы задается в атрибуте `binding` элемента конечной точки, как показано в следующем образце конфигурации.  
   
  Если требуется использовать безопасную привязку именованного канала, измените настройку режима безопасности для требуемого параметра безопасности и снова запустите svcutil.exe на клиенте, чтобы получить обновленный файл конфигурации клиента.  
   
-```  
+```xml  
 <system.serviceModel>  
         <services>  
             <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -122,7 +124,7 @@ public class CalculatorService : ICalculator
   
  Информация конечной точки клиента настраивается, как показано в следующем образце кода.  
   
-```  
+```xml  
 <system.serviceModel>  
   
     <client>  
@@ -152,7 +154,7 @@ public class CalculatorService : ICalculator
   </system.serviceModel>  
 ```  
   
- При выполнении примера запросы и ответы операций отображаются в окне консоли клиента.  Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
+ При выполнении примера запросы и ответы операций отображаются в окне консоли клиента. Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -163,27 +165,27 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-#### Настройка, сборка и выполнение образца  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Убедитесь, что установлена платформа [!INCLUDE[iisver](../../../../includes/iisver-md.md)].  Для активации WAS требуются службы [!INCLUDE[iisver](../../../../includes/iisver-md.md)].  
+1.  Убедитесь, что установлена платформа [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. Для активации WAS требуются службы [!INCLUDE[iisver](../../../../includes/iisver-md.md)].  
   
-2.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Убедитесь, что выполнена [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
      Дополнительно установите компоненты активации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], работающие по протоколу, отличному от HTTP.  
   
-    1.  В меню **Пуск** выберите **Панель управления**.  
+    1.  Из **запустить** меню, выберите **панели управления**.  
   
-    2.  Выберите **Программы и компоненты**.  
+    2.  Выберите **программы и компоненты**.  
   
-    3.  Нажмите кнопку **Вкл. или Выкл. компоненты Windows**.  
+    3.  Нажмите кнопку **отключение компонентов Windows**.  
   
-    4.  Разверните узел **Microsoft .NET Framework 3.0** и проверьте компонент **Активация Windows Communication Foundation с использованием протокола, отличного от HTTP**.  
+    4.  Разверните **Microsoft .NET Framework 3.0** узел и проверьте **не-HTTP активация Windows Communication Foundation** компонентов.  
   
-3.  Настройка службы активации Windows \(WAS\) для поддержки активации именованных каналов.  
+3.  Настройка службы активации Windows (WAS) для поддержки активации именованных каналов.  
   
      Для удобства два нижеописанных действия выполняются в пакетном файле AddNetPipeSiteBinding.cmd, расположенном в каталоге с примерами.  
   
-    1.  Чтобы поддерживать активацию по net.pipe, веб\-узел по умолчанию должен прежде быть привязан к протоколу net.pipe.  Сделать это позволяет файл Appcmd.exe, который устанавливается с помощью набора инструментов управления IIS 7.0.  В командной строке с повышенными привилегиями \(с правами администратора\) выполните следующую команду.  
+    1.  Чтобы поддерживать активацию по net.pipe, веб-узел по умолчанию должен прежде быть привязан к протоколу net.pipe. Сделать это позволяет файл Appcmd.exe, который устанавливается с помощью набора инструментов управления IIS 7.0. В командной строке с повышенными привилегиями (с правами администратора) выполните следующую команду.  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
@@ -193,9 +195,9 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  Эта команда представляет собой одну строку текста.  
   
-         Эта команда добавит для веб\-сайта по умолчанию привязку сайта к протоколу net.pipe.  
+         Эта команда добавит для веб-сайта по умолчанию привязку сайта к протоколу net.pipe.  
   
-    2.  Несмотря на то что все приложения в узле имеют общую привязку к протоколу net.pipe, включать поддержку net.pipe можно для каждого приложения отдельно.  Чтобы включить протокол net.pipe для приложения \/servicemodelsamples, необходимо выполнить следующую команду из командной строки с повышенными привилегиями.  
+    2.  Несмотря на то что все приложения в узле имеют общую привязку к протоколу net.pipe, включать поддержку net.pipe можно для каждого приложения отдельно. Чтобы включить протокол net.pipe для приложения /servicemodelsamples, необходимо выполнить следующую команду из командной строки с повышенными привилегиями.  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.pipe  
@@ -204,9 +206,9 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  Эта команда представляет собой одну строку текста.  
   
-         Эта команда позволяет осуществлять доступ к приложению \/servicemodelsamples как по адресу http:\/\/localhost\/servicemodelsamples, так и по адресу net.tcp:\/\/localhost\/servicemodelsamples.  
+         Эта команда позволяет осуществлять доступ к приложению /servicemodelsamples как по адресу http://localhost/servicemodelsamples, так и по адресу net.tcp://localhost/servicemodelsamples.  
   
-4.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 5.  Удалите привязку узла к протоколу net.pipe, добавленную ранее для этого образца.  
   
@@ -230,5 +232,5 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  Эта команда должна вводиться как одна строка текста.  
   
-## См. также  
- [Образцы размещения и сохраняемости фабрики приложений](http://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>См. также  
+ [Образцы размещения и сохраняемости образцы](http://go.microsoft.com/fwlink/?LinkId=193961)

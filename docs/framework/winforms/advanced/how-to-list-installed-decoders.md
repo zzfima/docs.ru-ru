@@ -1,42 +1,46 @@
 ---
-title: "Практическое руководство. Получение списка установленных декодеров | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "кодеки изображений, список"
-  - "декодеры изображений, список"
+title: "Практическое руководство. Получение списка установленных декодеров"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- image codecs [Windows Forms], listing
+- image decoders [Windows Forms], listing
 ms.assetid: 11417191-8c95-40ca-8024-779e61706fb6
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 17cbdebfa6cbb0cacacd923de4bd22125c812938
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Получение списка установленных декодеров
-Иногда требуется получить список установленных на компьютере декодеров, чтобы понять, может ли приложение читать изображение в виде файла того или иного формата.  У класса <xref:System.Drawing.Imaging.ImageCodecInfo> имеются статические методы <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A>, позволяющие получить список доступных декодеров изображений.  Метод <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> возвращает массив объектов <xref:System.Drawing.Imaging.ImageCodecInfo>.  
+# <a name="how-to-list-installed-decoders"></a>Практическое руководство. Получение списка установленных декодеров
+Можно перечислить декодеров изображений, доступных на компьютере, для определения, является ли ваше приложение сможет считать определенного файла формата изображений. <xref:System.Drawing.Imaging.ImageCodecInfo> Класс предоставляет <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> статические методы, чтобы определить, какой образ декодеров доступны. <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A>Возвращает массив <xref:System.Drawing.Imaging.ImageCodecInfo> объектов.  
   
-## Пример  
- Следующий пример кода возвращает список установленных декодеров и значения их свойств.  
+## <a name="example"></a>Пример  
+ В следующем примере кода возвращает список установленных декодеров и значения их свойств.  
   
  [!code-csharp[UsingImageEncodersDecoders#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/UsingImageEncodersDecoders/CS/Form1.cs#2)]
  [!code-vb[UsingImageEncodersDecoders#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/UsingImageEncodersDecoders/VB/Form1.vb#2)]  
   
-## Компиляция кода  
- Для этого примера необходимо следующее.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Для этого примера требуются:  
   
--   Приложение Windows Forms.  
+-   приложение Windows Forms;  
   
--   Объект <xref:System.Windows.Forms.PaintEventArgs>, являющийся параметром <xref:System.Windows.Forms.PaintEventHandler>.  
+-   Объект <xref:System.Windows.Forms.PaintEventArgs>, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
   
-## См. также  
- [Практическое руководство. Получение списка установленных кодировщиков](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)   
- [Применение кодировщиков и декодеров изображений в управляемом GDI\+](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
+## <a name="see-also"></a>См. также  
+ [Практическое руководство. Получение списка установленных кодировщиков](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)  
+ [Применение кодировщиков и декодеров изображений в управляемом GDI+](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)

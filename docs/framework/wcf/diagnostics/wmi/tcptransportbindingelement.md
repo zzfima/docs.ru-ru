@@ -1,25 +1,28 @@
 ---
-title: "TcpTransportBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: TcpTransportBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 33bbc1e5-44e4-4ee3-b7b5-801dc78956e4
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 180e954661319cb32edfd3180418fe9b1571ea5c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# TcpTransportBindingElement
+# <a name="tcptransportbindingelement"></a>TcpTransportBindingElement
 TcpTransportBindingElement  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement  
@@ -31,45 +34,45 @@ class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement
 };  
 ```  
   
-## Методы  
+## <a name="methods"></a>Методы  
  Класс TcpTransportBindingElement не определяет никаких методов.  
   
-## Свойства  
+## <a name="properties"></a>Свойства  
  Класс TcpTransportBindingElement имеет следующие свойства.  
   
-### ConnectionPoolSettings  
+### <a name="connectionpoolsettings"></a>ConnectionPoolSettings  
  Тип данных: TcpConnectionPoolSettings  
   
  Тип доступа: только для чтения  
   
  Настройки пула подключений.  
   
-### ListenBacklog  
+### <a name="listenbacklog"></a>ListenBacklog  
  Тип данных: sint32  
   
  Тип доступа: только для чтения  
   
  Максимально допустимое количество ожидающих запросов на подключение в очереди.  
   
-### PortSharingEnabled  
+### <a name="portsharingenabled"></a>PortSharingEnabled  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Логическое значение, определяющее, включено ли совместное использование порта TCP для этого подключения.  
   
-### TeredoEnabled  
+### <a name="teredoenabled"></a>TeredoEnabled  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
- Логическое значение, указывающее, используется ли Teredo \(технология адресации клиентов, защищенных брандмауэром\).  
+ Логическое значение, указывающее, используется ли Teredo (технология адресации клиентов, защищенных брандмауэром).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |MOF|Объявлено в файле Servicemodel.mof.|  
-|---------|-----------------------------------------|  
-|Пространство имен|Определено в root\\ServiceModel.|  
+|---------|-----------------------------------|  
+|Пространство имен|Определено в root\ServiceModel.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Channels.TcpTransportBindingElement>

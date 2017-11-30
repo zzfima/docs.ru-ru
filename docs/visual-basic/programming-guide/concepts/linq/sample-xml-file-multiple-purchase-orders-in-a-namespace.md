@@ -1,33 +1,25 @@
 ---
-title: "Пример XML-файла: Несколько заказы в Namespace3 | Документы Microsoft"
+title: "Образец XML-файла: Несколько заказов на покупку в Namespace3"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 03f754c6-89f7-4143-8456-4963044be7e5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 81e6e6319fd8d5f1bcb7065cda6b8eb652a99b55
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 72da7e088f7c00ffedc1fb648db97d290343a2e3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>Пример XML-файла. Несколько заказов на покупку в пространстве имен
-Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Этот файл содержит несколько заказов на покупку. XML располагается в пространстве имен.  
+Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Этот файл содержит несколько заказов на покупку. XML располагается в пространстве имен.  
   
 ## <a name="purchaseordersinnamespacexml"></a>PurchaseOrdersInNamespace.xml  
   

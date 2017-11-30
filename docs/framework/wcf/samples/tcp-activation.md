@@ -1,39 +1,42 @@
 ---
-title: "Активация TCP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Активация TCP"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-caps.latest.revision: 34
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 34
+caps.latest.revision: "34"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f02528828c3751b2f8e34bd7ebb8a1a789feeb2c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Активация TCP
-Этот образец демонстрирует размещение службы, использующей службу активации Windows \(WAS\) для активации службы, которая осуществляет взаимодействие по протоколу net.tcp.  Этот образец основан на примере [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+# <a name="tcp-activation"></a>Активация TCP
+Этот образец демонстрирует размещение службы, использующей службу активации Windows (WAS) для активации службы, которая осуществляет взаимодействие по протоколу net.tcp. Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.  Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\TCPActivation`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\TCPActivation`  
   
- Пример содержит консольную программу клиента \(EXE\) и библиотеку службы \(DLL\), размещаемую в рабочем процессе, активируемом службой WAS.  Действия клиента отображаются в окне консоли.  
+ Пример содержит консольную программу клиента (EXE) и библиотеку службы (DLL), размещаемую в рабочем процессе, активируемом службой WAS. Действия клиента отображаются в окне консоли.  
   
- Служба реализует контракт, определяющий шаблон взаимодействия "запрос\-ответ".  Контракт определяется интерфейсом `ICalculator`, который предоставляет математические операции \(сложение, вычитание, умножение и деление\), как показано ниже в образце кода:  
+ Служба реализует контракт, определяющий шаблон взаимодействия "запрос-ответ". Контракт определяется интерфейсом `ICalculator`, который предоставляет математические операции (сложение, вычитание, умножение и деление), как показано ниже в образце кода:  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -75,11 +78,11 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- В этом образце используется вариант привязки net.tcp с включенным совместным использованием порта TCP и отключенным механизмом безопасности.  Если требуется использовать безопасную привязку TCP, измените режим безопасности сервера на требуемое значение и снова запустите svcutil.exe на клиенте, чтобы получить обновленный файл конфигурации клиента.  
+ В этом образце используется вариант привязки net.tcp с включенным совместным использованием порта TCP и отключенным механизмом безопасности. Если требуется использовать безопасную привязку TCP, измените режим безопасности сервера на требуемое значение и снова запустите svcutil.exe на клиенте, чтобы получить обновленный файл конфигурации клиента.  
   
  В следующем образце показана конфигурация для службы:  
   
-```  
+```xml  
 <system.serviceModel>  
   
     <services>  
@@ -117,7 +120,7 @@ public class CalculatorService : ICalculator
   
  Конечная точка клиента настраивается так, как показано в следующем образце кода:  
   
-```  
+```xml  
 <system.serviceModel>  
     <bindings>  
         <netTcpBinding>  
@@ -134,7 +137,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>  
 ```  
   
- При выполнении примера запросы и ответы операций отображаются в окне консоли клиента.  Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
+ При выполнении примера запросы и ответы операций отображаются в окне консоли клиента. Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -145,36 +148,36 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### Настройка, сборка и выполнение образца  
+### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Убедитесь, что установлена платформа [!INCLUDE[iisver](../../../../includes/iisver-md.md)].  Для активации WAS требуются службы [!INCLUDE[iisver](../../../../includes/iisver-md.md)].  
+1.  Убедитесь, что установлена платформа [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. Для активации WAS требуются службы [!INCLUDE[iisver](../../../../includes/iisver-md.md)].  
   
-2.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
      Дополнительно установите компоненты активации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], работающие по протоколу, отличному от HTTP.  
   
-    1.  В меню **Пуск** выберите **Панель управления**.  
+    1.  Из **запустить** меню, выберите **панели управления**.  
   
-    2.  Выберите **Программы и компоненты**.  
+    2.  Выберите **программы и компоненты**.  
   
-    3.  Нажмите кнопку **Вкл. или Выкл. компоненты Windows**.  
+    3.  Нажмите кнопку **отключение компонентов Windows**.  
   
-    4.  Разверните узел **Microsoft .NET Framework 3.0** и проверьте компонент **Активация Windows Communication Foundation с использованием протокола, отличного от HTTP**.  
+    4.  Разверните **Microsoft .NET Framework 3.0** узел и проверьте **не-HTTP активация Windows Communication Foundation** компонентов.  
   
 3.  Настройте службу WAS на поддержку активации по протоколу TCP.  
   
      Для удобства два нижеописанных действия выполняются в пакетом файле AddNetTcpSiteBinding.cmd, расположенном в каталоге с образцами.  
   
-    1.  Для поддержки активации по net.tcp веб\-узел по умолчанию необходимо сначала привязать к порту net.tcp.  Сделать это позволяет программа Appcmd.exe, которая устанавливается с набором инструментов управления IIS 7.0.  В командной строке с правами администратора выполните следующую команду:  
+    1.  Для поддержки активации по net.tcp веб-узел по умолчанию необходимо сначала привязать к порту net.tcp. Сделать это позволяет программа Appcmd.exe, которая устанавливается с набором инструментов управления IIS 7.0. В командной строке с правами администратора выполните следующую команду:  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  
         ```  
   
         > [!TIP]
-        >  Эта команда представляет собой одну строку текста.  Она добавляет привязку сайта к протоколу net.tcp в веб\-сайт по умолчанию, ожидающий передачи данных по протоколу TCP на порту 808 с любым именем узла.  
+        >  Эта команда представляет собой одну строку текста. Она добавляет привязку сайта к протоколу net.tcp в веб-сайт по умолчанию, ожидающий передачи данных по протоколу TCP на порту 808 с любым именем узла.  
   
-    2.  Несмотря на то что все приложения в узле имеют общую привязку к протоколу net.tcp, включать поддержку net.tcp можно для каждого приложения отдельно.  Для включения протокола net.tcp для приложения \/servicemodelsample необходимо выполнить следующую команду из командной строки с правами администратора:  
+    2.  Несмотря на то что все приложения в узле имеют общую привязку к протоколу net.tcp, включать поддержку net.tcp можно для каждого приложения отдельно. Для включения протокола net.tcp для приложения /servicemodelsample необходимо выполнить следующую команду из командной строки с правами администратора:  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app   
@@ -182,11 +185,11 @@ Press <ENTER> to terminate client.
         ```  
   
         > [!NOTE]
-        >  Эта команда представляет собой одну строку текста.  Эта команда позволяет осуществлять доступ к приложению \/servicemodelsamples как по адресу http:\/\/localhost\/servicemodelsamples, так и по адресу net.tcp:\/\/localhost\/servicemodelsamples.  
+        >  Эта команда представляет собой одну строку текста. Эта команда позволяет осуществлять доступ к приложению /servicemodelsamples как по адресу http://localhost/servicemodelsamples, так и по адресу net.tcp://localhost/servicemodelsamples.  
   
-4.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-5.  Чтобы запустить образец на одном или нескольких компьютерах, следуйте инструкциям в разделе [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+5.  Для запуска образца в конфигурации с одним или несколькими компьютерами следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
      Удалите привязку сайта к протоколу net.tcp, добавленную ранее для данного образца.  
   
@@ -212,5 +215,5 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  Эта команда должна вводиться как одна строка текста.  
   
-## См. также  
- [Образцы размещения и сохраняемости фабрики приложений](http://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>См. также  
+ [Образцы размещения и сохраняемости образцы](http://go.microsoft.com/fwlink/?LinkId=193961)

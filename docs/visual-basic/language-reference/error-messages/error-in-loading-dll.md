@@ -1,44 +1,42 @@
 ---
-title: "Ошибка при загрузке библиотеки DLL (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID48"
-dev_langs: 
-  - "VB"
+title: "Ошибка при загрузке библиотеки DLL (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID48
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: cc557dcc6709178b6519adb56f31debcbd1d1c39
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Ошибка при загрузке библиотеки DLL (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Динамически подключаемая библиотека \(DLL\) — это библиотека, заданная в предложении `Lib` оператора `Declare`.  Возможные причины этой ошибки:  
+# <a name="error-in-loading-dll-visual-basic"></a>Ошибка при загрузке библиотеки DLL (Visual Basic)
+Библиотеки динамической компоновки (DLL) — это библиотека, указанный в `Lib` предложения `Declare` инструкции. Среди возможных причин этой ошибки:  
   
 -   Файл не является исполняемой программой DLL.  
   
--   Файл не является файлом DLL Microsoft Windows.  
+-   Файл не является Библиотекой Microsoft Windows.  
   
--   DLL ссылается на другую, не существующую DLL.  
+-   DLL ссылается на другой библиотеке DLL, не существует.  
   
--   Данной DLL или DLL, на которую есть ссылка, нет в каталоге, указанном в пути.  
+-   DLL или DLL, на которую указывает ссылка не находится в каталоге, указанном в пути.  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Если файл является исходным текстовым файлом и, следовательно, не является исполняемым файлом DLL, его следует скомпилировать и привязать к исполняемой форме DLL.  
+-   Если файл исходного текста файла и поэтому не исполняемым файлом DLL, ее необходимо компиляции и компоновки в форму исполняемого файла DLL.  
   
--   Если файл не является DLL\-файлом Microsoft Windows, следует получить его эквивалент в Microsoft Windows.  
+-   Если файл не является Библиотекой Microsoft Windows, получите эквивалентное Microsoft Windows.  
   
--   Если DLL ссылается на другую, не существующую DLL, следует получить DLL, на которую существует ссылка, и сделать ее доступной.  
+-   Если DLL ссылается на другой библиотеки DLL, которая не указан, получите указанной библиотеке DLL и сделать ее доступной.  
   
--   Если данной DLL или DLL, на которую существует ссылка, нет в каталоге, указанном в пути, следует перенести DLL в каталог, на который указывает ссылка.  
+-   Если DLL или DLL, на которую указывает ссылка не находится в каталоге, указанном в пути, следует перенести DLL к указанному каталогу.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)

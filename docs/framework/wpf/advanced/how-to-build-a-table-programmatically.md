@@ -1,66 +1,69 @@
 ---
-title: "Практическое руководство. Построение таблицы программным способом | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "создание, таблиц (программным способом)"
-  - "документы, программное создание таблиц"
-  - "таблицы, создание программным способом"
+title: "Практическое руководство. Построение таблицы программным способом"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: tables [WPF], creating programmatically
 ms.assetid: e3ca88f3-6e94-4b61-82fc-42104c10b761
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8ef961bb219f201cf5fe32a5b2bbdf70ef45e73b
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Построение таблицы программным способом
-В следующих примерах показано, как программно создать <xref:System.Windows.Documents.Table> и заполнить ее содержимым.  Содержимое таблицы распределено по пяти строкам \(представленным объектами <xref:System.Windows.Documents.TableRow>, содержащимися в объекте <xref:System.Windows.Documents.Table.RowGroups%2A>\) и шести столбцам \(представленным объектами <xref:System.Windows.Documents.TableColumn>\).  Строки используются для различных целей представления, включая строку названия, предназначенную для заголовка всей таблицы, строку заголовка для описания столбцов данных в таблице, и строку нижнего колонтитула для итоговой информации.  Обратите внимание, что строки "название", "заголовок" и "примечания" не встроены в таблицу, а просто являются строками с разными характеристиками.  Ячейки таблицы содержат фактическое содержимое, которое может состоять из текста, изображений или практически любых других элементов [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
+# <a name="how-to-build-a-table-programmatically"></a>Практическое руководство. Построение таблицы программным способом
+Следующие примеры показывают, как программным способом создать <xref:System.Windows.Documents.Table> и заполнить ее содержимым. Содержимое таблицы распределено по пяти строк (представленного <xref:System.Windows.Documents.TableRow> объектов, содержащихся в <xref:System.Windows.Documents.Table.RowGroups%2A> объекта) и шесть столбцов (представленного <xref:System.Windows.Documents.TableColumn> объектов). Строки используются для различных целей представления, включая строку названия, предназначенную для заголовка всей таблицы, строку заголовка для описания столбцов данных в таблице и строку нижнего колонтитула для сводной информации.  Обратите внимание, что строки "title", "header" и "footer" не встроены в таблицу. Это просто строки с разными характеристиками. Ячейки таблицы содержат фактическое содержимое, которое может включать текст, изображения или практически любых других [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] элемента.  
   
-## Пример  
- Вначале создается <xref:System.Windows.Documents.FlowDocument> для размещения <xref:System.Windows.Documents.Table>, а также новая таблица <xref:System.Windows.Documents.Table>, в которую добавляется содержимое из <xref:System.Windows.Documents.FlowDocument>.  
+## <a name="example"></a>Пример  
+ Во-первых, <xref:System.Windows.Documents.FlowDocument> создается узел <xref:System.Windows.Documents.Table>и новый <xref:System.Windows.Documents.Table> создается и добавляется к содержимому <xref:System.Windows.Documents.FlowDocument>.  
   
  [!code-csharp[TableSnippets#_TableCreate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreate)]
  [!code-vb[TableSnippets#_TableCreate](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreate)]  
   
-## Пример  
- Далее с применением некоторого форматирования создаются шесть объектов <xref:System.Windows.Documents.TableColumn>, которые добавляются в коллекцию таблицы <xref:System.Windows.Documents.Table.Columns%2A>.  
+## <a name="example"></a>Пример  
+ Далее, шести <xref:System.Windows.Documents.TableColumn> объекты создаются и добавляются в таблицу <xref:System.Windows.Documents.Table.Columns%2A> коллекции с применением некоторого форматирования.  
   
 > [!NOTE]
->  Обратите внимание, что коллекция таблицы <xref:System.Windows.Documents.Table.Columns%2A> использует стандартное индексирование начиная с нуля.  
+>  Обратите внимание, что таблицы <xref:System.Windows.Documents.Table.Columns%2A> коллекция использует стандартную индексацию с нуля.  
   
  [!code-csharp[TableSnippets#_TableCreateColumns](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreatecolumns)]
  [!code-vb[TableSnippets#_TableCreateColumns](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreatecolumns)]  
   
-## Пример  
- Далее создается строка названия и добавляется к таблице с применением некоторого форматирования.  Строка названия будет содержать одну ячейку, объединяющую все шесть столбцов таблицы.  
+## <a name="example"></a>Пример  
+ Затем создается строка заголовка и добавляется в таблицу с определенным форматированием.  Строка названия содержит одну ячейку, охватывающую все шесть столбцов таблицы.  
   
  [!code-csharp[TableSnippets#_TableAddTitleRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddtitlerow)]
  [!code-vb[TableSnippets#_TableAddTitleRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddtitlerow)]  
   
-## Пример  
- Далее создается и добавляется в таблицу строка заголовка, а ее ячейки создаются и заполняются содержимым.  
+## <a name="example"></a>Пример  
+ Далее создается и добавляется в таблицу строка заголовка, а ячейки в строке заголовка создаются и заполняются содержимым.  
   
  [!code-csharp[TableSnippets#_TableAddHeaderRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddheaderrow)]
  [!code-vb[TableSnippets#_TableAddHeaderRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddheaderrow)]  
   
-## Пример  
- Далее создается и добавляется в таблицу строка для данных, ячейки этой строки также создаются и заполняются содержимым.  Построение этой строки аналогично построению строки заголовка за исключением слегка отличающегося форматирования.  
+## <a name="example"></a>Пример  
+ Затем создается и добавляется в таблицу ряд данных, а ячейки в этой строке создаются и заполняются содержимым.  Построение этой строки аналогично построению строки заголовка с применением немного другого форматирования.  
   
  [!code-csharp[TableSnippets#_TableAddDataRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableadddatarow)]
  [!code-vb[TableSnippets#_TableAddDataRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableadddatarow)]  
   
-## Пример  
- После этого создается, добавляется и форматируется строка нижнего колонтитула.  Как и строка названия, нижний колонтитул содержит одну ячейку, объединяющую все шесть столбцов таблицы.  
+## <a name="example"></a>Пример  
+ Наконец, создается, добавляется и форматируется строка нижнего колонтитула.  Как и строка названия, нижний колонтитул содержит одну ячейку, которая включает все шесть столбцов в таблице.  
   
  [!code-csharp[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddfooterrow)]
  [!code-vb[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Общие сведения о таблицах](../../../../docs/framework/wpf/advanced/table-overview.md)

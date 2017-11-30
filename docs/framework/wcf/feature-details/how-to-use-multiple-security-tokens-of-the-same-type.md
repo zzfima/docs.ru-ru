@@ -1,27 +1,30 @@
 ---
-title: "Практическое руководство. Использование нескольких маркеров безопасности одного типа | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Использование нескольких маркеров безопасности одного типа"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 9827d43ba4b0693d16380d93b066948d464bb978
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Практическое руководство. Использование нескольких маркеров безопасности одного типа
--   В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0 клиентское сообщение содержало только один маркер любого заданного типа.  Теперь клиентские сообщения могут содержать несколько маркеров одного типа.  В этом разделе описывается, как включать в сообщение клиента несколько маркеров одного типа.  
+# <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>Практическое руководство. Использование нескольких маркеров безопасности одного типа
+-   В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0 клиентское сообщение содержало только один маркер любого заданного типа. Теперь клиентские сообщения могут содержать несколько маркеров одного типа. В этом разделе описывается, как включать в сообщение клиента несколько маркеров одного типа.  
   
 -   Обратите внимание, что настроить таким образом службу невозможно: служба может содержать только один вспомогательный маркер.  
   
-### Использование нескольких маркеров безопасности одного типа  
+### <a name="to-use-multiple-security-tokens-of-the-same-type"></a>Использование нескольких маркеров безопасности одного типа  
   
 1.  Создайте пустую коллекцию элементов привязки для заполнения.  
   
@@ -51,10 +54,10 @@ caps.handback.revision: 8
   
      [!code-csharp[C_CustomBinding#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#15)]  
   
-## Пример  
+## <a name="example"></a>Пример  
  Ниже приводится весь метод, описанный в предыдущей процедуре.  
   
  [!code-csharp[C_CustomBinding#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#7)]  
   
-## См. также  
- [Security Architecture](http://msdn.microsoft.com/ru-ru/16593476-d36a-408d-808c-ae6fd483e28f)
+## <a name="see-also"></a>См. также  
+ [Архитектура безопасности](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)

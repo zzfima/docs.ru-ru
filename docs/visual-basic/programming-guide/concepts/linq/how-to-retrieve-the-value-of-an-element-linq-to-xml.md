@@ -1,34 +1,30 @@
 ---
-title: "Практическое руководство: извлечение значений элемента (LINQ to XML) (Visual Basic) | Документы Microsoft"
+title: "Как: извлечение значения элемента (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 76b9b2a5-b3ba-49da-ba74-82100e1bd21c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d38928df51006a8db9417d34ccbe6cd03091db66
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: e688872ea514e822a81b4b3e285ad0d0aa8a0f17
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>Практическое руководство: извлечение значений элемента (LINQ to XML) (Visual Basic)
-В этом разделе показано получение значений элементов. Это можно сделать двумя основными способами. Один способ состоит в приведении <xref:System.Xml.Linq.XElement>или <xref:System.Xml.Linq.XAttribute>в требуемый тип.</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement> Оператор явного преобразования, который преобразует содержимое элемента или атрибута в указанный тип и присваивает полученное значение указанной переменной. Кроме того, можно использовать <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName>свойства или <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName>свойство.</xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName> </xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName>  
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>Как: извлечение значения элемента (LINQ to XML) (Visual Basic)
+В этом разделе показано получение значений элементов. Это можно сделать двумя основными способами. Первый способ состоит в приведении <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XAttribute> к желаемому типу. Оператор явного преобразования, который преобразует содержимое элемента или атрибута в указанный тип и присваивает полученное значение указанной переменной. Иначе можно использовать свойство <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> или <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>.  
   
- С помощью Visual Basic лучшим подходом является использование <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName>свойство.</xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName>  
+ При использовании Visual Basic лучшим подходом является использование свойства <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Пример  
- Чтобы получить значение элемента, нужно просто привести <xref:System.Xml.Linq.XElement>объекта к желаемому типу.</xref:System.Xml.Linq.XElement> Всегда можно привести элемент к строке следующим образом:  
+ Для получения значения элемента нужно просто привести объект <xref:System.Xml.Linq.XElement> к желаемому типу. Всегда можно привести элемент к строке следующим образом:  
   
 ```vb  
 Dim e As XElement = <StringElement>abcde</StringElement>  
@@ -38,7 +34,7 @@ Console.WriteLine("Value of e:" & e.Value)
   
  В этом примере выводятся следующие данные:  
   
-```  
+```xml  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
@@ -54,17 +50,17 @@ Console.WriteLine("Value of e:" & CInt(e))
   
  В этом примере выводятся следующие данные:  
   
-```  
+```xml  
 <Age>44</Age>  
 Value of e:44  
 ```  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]provides explicit cast operators for the following data types: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, and `GUID?`.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] предусматривает операторы явного приведения для следующих типов данных: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID` и `GUID?`.  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]предоставляет аналогичные операторы приведения для <xref:System.Xml.Linq.XAttribute>объектов.</xref:System.Xml.Linq.XAttribute>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]предоставляет аналогичные операторы приведения для объектов <xref:System.Xml.Linq.XAttribute>.  
   
 ## <a name="example"></a>Пример  
- Можно использовать <xref:System.Xml.Linq.XElement.Value%2A>свойство для извлечения содержимого элемента:</xref:System.Xml.Linq.XElement.Value%2A>  
+ Свойство <xref:System.Xml.Linq.XElement.Value%2A> может использоваться для получения содержимого элемента.  
   
 ```vb  
 Dim e As XElement = <StringElement>abcde</StringElement>  
@@ -74,13 +70,13 @@ Console.WriteLine("Value of e:" & e.Value)
   
  В этом примере выводятся следующие данные:  
   
-```  
+```xml  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
   
 ## <a name="example"></a>Пример  
- Иногда осуществляются попытки получить значение элемента, в отношении которого неизвестно, существует ли он. В этом случае при назначении элемент привести тип nullable (либо `string` или одного из таких типов в [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)]), если элемент не существует, то переменной просто присваивается значение `Nothing`. В следующем коде показано, что если элемент может существовать или не существовать, проще использовать приведение типа, а не использовать <xref:System.Xml.Linq.XElement.Value%2A>свойство.</xref:System.Xml.Linq.XElement.Value%2A>  
+ Иногда осуществляются попытки получить значение элемента, в отношении которого неизвестно, существует ли он. В этом случае назначение приведенному элементу типа, допускающего значение NULL (либо типа `string`, либо одного из типов в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], допускающих значение NULL), приводит к тому, что если элемент не существует, то переменной просто присваивается значение `Nothing`. В следующем коде показано, что при отсутствии сведений о том, существует ли элемент, проще использовать приведение типа, чем свойство <xref:System.Xml.Linq.XElement.Value%2A>.  
   
 ```vb  
 Dim root As XElement = <Root>  

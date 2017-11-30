@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - requesting data from Internet, streams
 - Networking
@@ -25,21 +23,20 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fa27a458e05254a14cf9f6408422f1d824b5a32c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f9e011b304a7f6c7d0d07761677c0368efcfcf4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-streams-on-the-network"></a>Использование потоков в сети
 Сетевые ресурсы представлены в .NET Framework как потоки. Если рассматривать потоки в целом, платформа .NET Framework предоставляет указанные ниже возможности.  
   
--   Единый способ отправки и получения данных через Интернет. Каким бы ни было содержимое файла — HTML, XML или что-то иное — приложение будет использовать для отправки и получения данных методы <xref:System.IO.Stream.Write%2A?displayProperty=fullName> и <xref:System.IO.Stream.Read%2A?displayProperty=fullName>.  
+-   Единый способ отправки и получения данных через Интернет. Каким бы ни было содержимое файла — HTML, XML или что-то иное — приложение будет использовать для отправки и получения данных методы <xref:System.IO.Stream.Write%2A?displayProperty=nameWithType> и <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType>.  
   
 -   Совместимость с другими потоками в платформе .NET Framework. Потоки используются в .NET Framework в самых разных целях, и для их обработки имеется развитая инфраструктура. Например, вы можете изменить приложение, считывающее данные XML из потока <xref:System.IO.FileStream>, так, чтобы оно считывало данные из <xref:System.Net.Sockets.NetworkStream>, изменив всего лишь несколько строк кода, которые инициализируют поток. Основные отличия класса **NetworkStream** от других потоков заключаются в том, что **NetworkStream** не поддерживает поиск, свойство <xref:System.Net.Sockets.NetworkStream.CanSeek%2A> всегда возвращает значение **false**, а методы <xref:System.Net.Sockets.NetworkStream.Seek%2A> и <xref:System.Net.Sockets.NetworkStream.Position%2A> создают исключение <xref:System.NotSupportedException>.  
   
@@ -115,6 +112,5 @@ sr.Close()
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Практическое руководство. Запрос данных с помощью класса WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)   
+ [Практическое руководство. Запрос данных с помощью класса WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)  
  [Запрос данных](../../../docs/framework/network-programming/requesting-data.md)
-

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - unmanaged functions, calling
 - COM interop, DLL functions
@@ -26,16 +20,15 @@ helpviewer_keywords:
 - platform invoke
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bc0e2e7af861fd6ee233cad5069fef862bb29717
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ec93728566d6aa16d4b9b15b171d79831cc0dbeb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Использование неуправляемых функций DLL
 Вызов неуправляемого кода — это служба, позволяющая управляемому коду вызывать неуправляемые функции, реализованные в библиотеках динамической компоновки (DLL), например функции библиотек Win32 API. Он обнаруживает и вызывает экспортированную функцию и при необходимости маршалирует ее аргументы (целые числа, строки, массивы, структуры и так далее) через границы взаимодействия. Дополнительные сведения об этой службе см. в разделе [Подробный обзор вызова неуправляемого кода](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243).  
@@ -88,8 +81,7 @@ ms.lasthandoff: 08/21/2017
  Вызов неуправляемого кода вызывает исключения, создаваемые неуправляемой функцией для управляемого вызывающего объекта.  
   
 ## <a name="see-also"></a>См. также  
- [Взаимодействие с неуправляемым кодом](../../../docs/framework/interop/index.md)   
- [Примеры вызовов неуправляемого кода](../../../docs/framework/interop/platform-invoke-examples.md)   
- [Маршалинг взаимодействия](../../../docs/framework/interop/interop-marshaling.md)   
+ [Взаимодействие с неуправляемым кодом](../../../docs/framework/interop/index.md)  
+ [Примеры вызовов неуправляемого кода](../../../docs/framework/interop/platform-invoke-examples.md)  
+ [Маршалинг взаимодействия](../../../docs/framework/interop/interop-marshaling.md)  
  [Использование неуправляемых функций DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
-

@@ -1,61 +1,60 @@
 ---
-title: "&lt;include&gt;(Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "<include> - XML- тэг"
-  - "include - XML- тэг"
+title: "&lt;включить&gt; (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- include XML tag
+- <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 22eebaa8da8ef082e132cfdf8cb68498bfe16d73
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;include&gt;(Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Ссылается на другой файл, описывающий типы и элементы в исходном коде.  
+# <a name="ltincludegt-visual-basic"></a>&lt;включить&gt; (Visual Basic)
+Ссылается на другой файл, описывающий типы и члены в исходном коде.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
+```xml  
 <include file="filename" path="tagpath[@name='id']" />  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `filename`  
- Обязательный.  Имя файла, содержащего документацию.  Имя файла может быть дополнено путем.  Заключите `filename` в двойные кавычки \(" "\).  
+ Обязательный. Имя файла, содержащего документацию. Имя файла может быть дополнено с указанием пути. Заключите `filename` в двойные кавычки (» «).  
   
  `tagpath`  
- Обязательный.  Путь тегов в `filename`, который приводит к тегу `name`.  Заключите путь в двойные кавычки \(" "\).  
+ Обязательный. Путь тегов в `filename`, который ведет к тегу `name`. Заключите путь в двойные кавычки (» «).  
   
  `name`  
- Обязательный.  Спецификатор имени в теге, который предшествует комментариям.  `Name` будет иметь `id`.  
+ Обязательный. Спецификатор имени тега, который предшествует комментарии. `Name`будет иметь `id`.  
   
  `id`  
- Обязательный.  Идентификатор для тега, который предшествует комментариям.  Заключите идентификатор в одинарные кавычки \(' '\).  
+ Обязательный. Идентификатор тега, который предшествует комментариям. Заключите идентификатор в одинарные кавычки ("").  
   
-## Заметки  
- Используйте тег `<include>` для ссылок на комментарии в другом файле, описывающем типы и элементы в вашем исходном коде.  Это является альтернативой помещению комментариев документации непосредственно в файле исходного кода.  
+## <a name="remarks"></a>Примечания  
+ Используйте `<include>` тег для ссылок на комментарии в другом файле, описывающем типы и элементы в исходном коде. Этот способ является альтернативой размещению комментариев документации непосредственно в файле исходного кода.  
   
- Тег `<include>` использует W3C XML Path Language \(XPath\) Version 1.0 Recommendation.  Дополнительные сведения о способах настройки использования `<include>` доступны на http:\/\/www.w3.org\/TR\/xpath.  
+ `<include>` Тег использует рекомендация W3C языка XML Path (XPath) версии 1.0. Дополнительные сведения о способах настройки вашей `<include>` используйте найти по адресу http://www.w3.org/TR/xpath.  
   
-## Пример  
- Этот пример использует тег `<include>` для импорта комментариев документации элемента из файла с именем `commentFile.xml`.  
+## <a name="example"></a>Пример  
+ В этом примере используется `<include>` тег, чтобы импортировать член комментарии из файла с именем `commentFile.xml`.  
   
  [!code-vb[VbVbcnXmlDocComments#4](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/include_1.vb)]  
   
- Формат `commentFile.xml` представлен ниже.  
+ Формат `commentFile.xml` выглядит следующим образом.  
   
-```  
+```xml  
 <Docs>  
 <Members name="Open">  
 <summary>Opens a file.</summary>  
@@ -68,5 +67,5 @@ caps.handback.revision: 11
 </Docs>  
 ```  
   
-## См. также  
- [XML\-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a>См. также  
+ [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

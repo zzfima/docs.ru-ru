@@ -4,16 +4,15 @@ ms.date: 08/07/2017
 ms.prod: .net
 ms.topic: article
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
 ms.openlocfilehash: 82349611fe127da46bed8998ac883c10c5164cd3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="serialization-concepts"></a>Концепции сериализации
 Для чего нужна сериализация? Двумя наиболее важными причинами являются сохранение состояния объекта в среде хранения, чтобы впоследствии можно было воссоздать точную копию, и отправить объект по значению из одного домена приложения в другой. Например, сериализация используется, чтобы сохранить состояние сеанса в ASP.NET и скопировать объекты в буфер обмена в Windows Forms. Она также используется при удаленном взаимодействии для передачи объектов по значению с одного домена приложения в другой.
@@ -41,4 +40,3 @@ ms.lasthandoff: 08/21/2017
   
  [Сериализация XML и SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
  Описывает механизм сериализации XML и SOAP, входящий в среду CLR.
-

@@ -1,32 +1,33 @@
 ---
-title: "Элемент управления ToolStrip (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "панели инструментов [Windows Forms]"
-  - "ToolStrip - элемент управления [Windows Forms]"
+title: "Элемент управления ToolStrip (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- toolbars [Windows Forms]
+- ToolStrip control [Windows Forms]
 ms.assetid: e5ef455a-e049-429c-8005-30c93132fb79
-caps.latest.revision: 28
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1ce887d47e82a3981eb745f23c881d54c38927e1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Элемент управления ToolStrip (Windows Forms)
+# <a name="toolstrip-control-windows-forms"></a>Элемент управления ToolStrip (Windows Forms)
 Элементы управления <xref:System.Windows.Forms.ToolStrip> — это панели инструментов, на которых можно разместить меню, элементы управления и пользовательские элементы управления в приложениях Windows Forms.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Общие сведения об элементе управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
- Описывается этот элемент управления, его основные возможности и свойства.  
+ Описывается элемент управления, его основные возможности и свойства.  
   
  [Практическое руководство. Определение действий, выполняемых в случае переполнения элемента управления ToolStrip](../../../../docs/framework/winforms/controls/how-to-manage-toolstrip-overflow-in-windows-forms.md)  
  Описывается область  переполнения и управление ею.  
@@ -50,7 +51,7 @@ caps.handback.revision: 28
  Описание способов получения стандартного и пользовательского оформления элементов управления <xref:System.Windows.Forms.ToolStrip>.  
   
  [Практическое руководство. Пользовательская прорисовка элемента управления ToolStrip](../../../../docs/framework/winforms/controls/how-to-custom-draw-a-toolstrip-control.md)  
- Описание различных аспектов пользовательского \(собственной\) прорисовки в элементах управления <xref:System.Windows.Forms.ToolStrip>.  
+ Описание различных аспектов пользовательского (собственной) прорисовки в элементах управления <xref:System.Windows.Forms.ToolStrip>.  
   
  [Практическое руководство. Создание переключателей в элементах управления ToolStrip](../../../../docs/framework/winforms/controls/how-to-create-toggle-buttons-in-toolstrip-controls.md)  
  Описание создания переключателя <xref:System.Windows.Forms.ToolStripButton>.  
@@ -61,7 +62,7 @@ caps.handback.revision: 28
  [Практическое руководство. Перемещение элемента ToolStrip из контейнера ToolStripContainer в форму](../../../../docs/framework/winforms/controls/how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
  Описание способа получения <xref:System.Windows.Forms.ToolStrip> без контейнера, но с формой.  
   
- [Руководство: расположение элемента ToolStripItem на полосе ToolStrip](../../../../docs/framework/winforms/controls/how-to-position-a-toolstripitem-on-a-toolstrip.md)  
+ [Практическое руководство. Размещение элемента ToolStripItem на полосе ToolStrip](../../../../docs/framework/winforms/controls/how-to-position-a-toolstripitem-on-a-toolstrip.md)  
  Описывается, как разместить <xref:System.Windows.Forms.ToolStripButton> на крайнем левом или правом конце <xref:System.Windows.Forms.ToolStrip>.  
   
  [Практическое руководство. Выход из элемента управления ToolStrip с помощью клавиши TAB](../../../../docs/framework/winforms/controls/how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control.md)  
@@ -71,32 +72,32 @@ caps.handback.revision: 28
  Описывается, как настроить элементы <xref:System.Windows.Forms.ToolStrip> для обнаружения наведения указателя мыши на них без необходимости синхронизации различных событий мыши.  
   
  [Практическое руководство. Создание формы MDI с использованием элементов управления ToolStripPanel](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-toolstrippanel-controls.md)  
- Описывается, как создавать MDI\-приложения с элементами управления <xref:System.Windows.Forms.ToolStripPanel>.  
+ Описывается, как создавать MDI-приложения с элементами управления <xref:System.Windows.Forms.ToolStripPanel>.  
   
  [Практическое руководство. Создание формы MDI путем слияния меню и с применением и элементов управления ToolStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
  Описывается создание формы MDI, которая поддерживает элементы управления <xref:System.Windows.Forms.ToolStrip> и слияние меню.  
   
  [Практическое руководство. Создание профессионально оформленного элемента управления ToolStrip](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md)  
- В следующем примере кода демонстрируется использование элементов управления <xref:System.Windows.Forms.ToolStripProfessionalRenderer> для создания составного элемента управления, напоминающего **область переходов** в Microsoft® Outlook®.  
+ Описывает использование <xref:System.Windows.Forms.ToolStripProfessionalRenderer> класса для создания составного элемента управления, напоминающего **панели навигации** в Microsoft® Outlook®.  
   
  [Практическое руководство. Реализация пользовательского класса, производного от ToolStripRenderer](../../../../docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md)  
  Описывается способ настройки внешнего вида элемента управления <xref:System.Windows.Forms.ToolStrip>, который  можно настроить путем реализации класса, производного от <xref:System.Windows.Forms.ToolStripRenderer>.  
   
--   [Практическое руководство. Создание в Windows Forms базового элемента управления ToolStrip со стандартными элементами с помощью конструктора](http://msdn.microsoft.com/library/571c1z99\(v=vs.110\))  
+-   [Как: Создание основных Windows Forms элемента управления ToolStrip со стандартными элементами с помощью конструктора](http://msdn.microsoft.com/library/571c1z99\(v=vs.110\))  
   
 -   [Практическое руководство. Перемещение элемента ToolStrip из контейнера ToolStripContainer в форму](http://msdn.microsoft.com/library/ms171701\(v=vs.110\))  
   
--   [Пример. Создание профессионально оформленного элемента управления ToolStrip](http://msdn.microsoft.com/library/ms233664\(v=vs.110\)).  
+-   [Пример. Создание профессионально оформленного элемента управления ToolStripl](http://msdn.microsoft.com/library/ms233664\(v=vs.110\))  
   
--   [Пример. Создание формы MDI путем слияния меню и с применением элементов управления ToolStrip](http://msdn.microsoft.com/library/ms233676\(v=vs.110\)).  
+-   [Пример. Создание формы MDI путем слияния меню и с применением и элементов управления ToolStrip](http://msdn.microsoft.com/library/ms233676\(v=vs.110\))  
   
--   [Диалоговое окно задач ToolStrip](http://msdn.microsoft.com/library/ms233648\(v=vs.110\)).  
+-   [Диалоговое окно задач ToolStrip](http://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
   
 -   [Редактор коллекции элементов ToolStrip](http://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  Класс <xref:System.Windows.Forms.ToolStrip>  
- Описание класса и всех его членов.  
+ Описание класса и ссылки на все его члены.  
   
  <xref:System.Windows.Forms.ToolStrip>  
  Описывает класс <xref:System.Windows.Forms.ToolStrip> и содержит ссылки на все его члены.  
@@ -104,6 +105,6 @@ caps.handback.revision: 28
  <xref:System.Windows.Forms.ToolStripItem>  
  Описывает класс <xref:System.Windows.Forms.ToolStripItem> и содержит ссылки на все его члены.  
   
-## Связанные подразделы  
- [Элементы управления для использования в формах Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Полный список элементов управления Windows Forms со ссылками на разделы с описанием их применения.
+## <a name="related-sections"></a>Связанные разделы  
+ [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ Полный список элементов управления Windows Forms со ссылками на информацию об их применении.

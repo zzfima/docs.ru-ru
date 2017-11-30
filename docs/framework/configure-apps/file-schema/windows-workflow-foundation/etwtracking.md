@@ -1,66 +1,73 @@
 ---
-title: "&lt;etwTracking&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: '&lt;etwTracking&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: cb45c82e-6ea1-4c4d-924c-118a25ae1f35
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 583c5bcb1e864b79f80a9c3095ed8ce7b74a19eb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;etwTracking&gt;
-Поведение службы позволяет ей использовать отслеживание ETW совместно с <xref:System.Activities.Tracking.ETWTrackingParticipant>.  
+# <a name="ltetwtrackinggt"></a>&lt;etwTracking&gt;
+Поведение службы, которое позволяет службе использовать с помощью отслеживания ETW <xref:System.Activities.Tracking.EtwTrackingParticipant>.  
   
-## Синтаксис  
+\<система. ServiceModel >  
+\<поведения >  
+\<serviceBehaviors >  
+\<поведение >  
+\<etwTracking >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
-<behaviors>  
-  <serviceBehaviors>  
-    <behavior name=String">  
-      <etwTracking profileName=”String” />  
-    </behavior>  
-  </serviceBehaviors>  
+```xml  
+<behaviors>
+  <serviceBehaviors>
+    <behavior name="String">
+      <etwTracking profileName="String" />
+    </behavior>
+  </serviceBehaviors>
 </behaviors>  
-  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
+|---------------|-----------------|  
 |profileName|Строка, указывающая имя профиля отслеживания, связанного с этим поведением.|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<behavior\> для \<serviceBehaviors\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Указывает элемент поведения.|  
+|-------------|-----------------|  
+|[\<поведение > из \<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Указывает элемент поведения.|  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Если добавить этот элемент к конфигурации поведения службы, то для службы рабочего процесса будет настроен участник отслеживания.  
   
- Участники отслеживания используются для выдачи данных отслеживания из рабочего процесса и их сохранения на различные носители.  Подобным образом любая последующая обработка записей отслеживания также может быть выполнена внутри участника отслеживания.  
+ Участники отслеживания используются для выдачи данных отслеживания из рабочего процесса и их сохранения на различные носители. Подобным образом любая последующая обработка записей отслеживания также может быть выполнена внутри участника отслеживания.  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере конфигурации показан стандартный участник отслеживания ETW, который настраивается в файле Web.config.  
   
- Идентификатор поставщика, который используется участником отслеживания ETW для внесения записей отслеживания в ETW, задан в разделе **\<diagnostics\>**.  Участник отслеживания имеет связанный с ним профиль для указания записей отслеживания, на которые он подписан.  Это определяется атрибутом **profileName** элемента **\<add\>**.  После их определения участник отслеживания добавляется к поведению службы **\<etwTracking\>**.  При этом выбранные участники отслеживания добавляются в расширения экземпляра рабочего процесса, чтобы они начали получать записи отслеживания.  
+ Идентификатор поставщика, который используется участником отслеживания ETW для внесения записей отслеживания в ETW, определяется в  **\<диагностики >** раздела. Участник отслеживания имеет связанный с ним профиль для указания записей отслеживания, на которые он подписан. Это определяется **profileName** атрибут  **\<Добавить >** элемента. После их определения участник отслеживания добавляется к  **\<etwTracking >** поведение службы. При этом выбранные участники отслеживания добавляются в расширения экземпляра рабочего процесса, чтобы они начали получать записи отслеживания.  
   
-```  
-  
+```xml  
 <configuration>   
   <system.web>   
     <compilation targetFrameworkMoniker=".NETFramework,Version=v4.0"/>   
@@ -85,8 +92,8 @@ caps.handback.revision: 5
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>   
- <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>   
- [Отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)   
- [Участники отслеживания](../../../../../docs/framework/windows-workflow-foundation//tracking-participants.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>  
+ <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>  
+ [Отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [Участники отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)

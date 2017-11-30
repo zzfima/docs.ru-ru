@@ -1,35 +1,38 @@
 ---
-title: "Практическое руководство. Создание службы WCF с поддержкой AJAX и клиента ASP.NET для обращения к службе | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Создание службы WCF с поддержкой AJAX и клиента ASP.NET для обращения к службе"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a45a186b0d281976f3d6ad554d75742ba0f1cd50
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Практическое руководство. Создание службы WCF с поддержкой AJAX и клиента ASP.NET для обращения к службе
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Практическое руководство. Создание службы WCF с поддержкой AJAX и клиента ASP.NET для обращения к службе
 В этом разделе показано, как использовать Visual Studio 2008 для создания службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с поддержкой AJAX и клиента ASP.NET, который к ней обращается. Коды для службы и для клиента содержатся в разделе «Пример», который следует за разделом «Процедуры», в котором описаны шаги их создания.  
   
 ### <a name="to-create-the-aspnet-client-application"></a>Создание клиентского приложения ASP.NET.  
   
 1.  Откройте [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-2.  Из **файл** выберите пункт **New**, затем **проекта**, затем **Web**и выберите **веб-приложение ASP.NET**.  
+2.  Из **файл** последовательно выберите пункты **New**, затем **проекта**, затем **Web**и выберите **веб-приложение ASP.NET**.  
   
 3.  Назовите проект `SandwichServices` и нажмите кнопку **ОК**.  
   
 ### <a name="to-create-the-wcf-ajax-enabled-service"></a>Создание службы WCF с поддержкой AJAX  
   
-1.  Щелкните правой кнопкой мыши `SandwichServices` проекта в **обозревателе решений** и выберите пункт **добавить**, затем **новый элемент**, а затем **служба WCF с поддержкой AJAX**.  
+1.  Щелкните правой кнопкой мыши `SandwichServices` проекта в **обозревателе решений** и выберите **добавить**, затем **новый элемент**, а затем **служба WCF с поддержкой AJAX** .  
   
 2.  Имя службы `CostService` в **имя** и нажмите кнопку **добавить**.  
   
@@ -49,7 +52,7 @@ caps.handback.revision: 9
      }  
     ```  
   
-5.  Реализация операций службы. Добавить <xref:System.ServiceModel.OperationContractAttribute> для каждой из операций, чтобы указать, что они являются частью контракта. В следующем примере реализован метод, который возвращает стоимость заданного числа сандвичей.  
+5.  Реализация операций службы. Добавьте <xref:System.ServiceModel.OperationContractAttribute> в каждую операцию для указания, что они являются частью контракта. В следующем примере реализован метод, который возвращает стоимость заданного числа сандвичей.  
   
     ```  
     public class CostService  
@@ -68,15 +71,15 @@ caps.handback.revision: 9
   
 1.  Откройте страницу Default.aspx и выберите **разработки** представления.  
   
-2.  От **представление** выберите пункт **элементов**.  
+2.  Из **представление** последовательно выберите пункты **элементов**.  
   
-3.  Разверните **расширений AJAX** узел и перетащите **ScriptManager** на страницу Default.aspx.  
+3.  Разверните **расширения AJAX** узла и перетащите **ScriptManager** на страницу Default.aspx.  
   
 4.  Щелкните правой кнопкой мыши **ScriptManager** и выберите **свойства**.  
   
-5.  Разверните **службы** коллекции в **свойства** окно, чтобы открыть **редактор коллекции ServiceReference** окна.  
+5.  Разверните **службы** коллекции в **свойства** чтобы открыть **редактор коллекции ServiceReference** окна.  
   
-6.  Щелкните **добавить**, укажите `CostService.svc` как **путь** и нажмите **ОК**.  
+6.  Нажмите кнопку **добавить**, укажите `CostService.svc` как **путь** и нажмите **ОК**.  
   
 7.  Разверните **HTML** узел в **элементов** и перетащите **Input (Button)** на страницу Default.aspx.  
   
@@ -86,7 +89,7 @@ caps.handback.revision: 9
   
 10. Дважды щелкните **кнопку** для доступа к коду JavaScript.  
   
-11. Передайте следующий код JavaScript в `script`настроек элемента.  
+11. Передайте следующий код JavaScript в <`script`> элемент.  
   
     ```  
     function Button1_onclick() {  
@@ -101,7 +104,7 @@ caps.handback.revision: 9
   
 ### <a name="to-access-the-service-from-the-client"></a>Доступ к службе из клиента  
   
-1.  Используйте сочетание клавиш Ctrl+F5 для запуска службы и веб-клиента. Щелкните **цена за 3 Жареных Сандвича** кнопку, чтобы создать ожидаемый результат «3,75».  
+1.  Используйте сочетание клавиш Ctrl+F5 для запуска службы и веб-клиента. Нажмите кнопку **цена за 3 Жареных Сандвича** кнопку, чтобы создать ожидаемый результат «3,75».  
   
 ## <a name="example"></a>Пример  
  Этот пример содержит код службы, содержащийся в файле WCFService.svc.cs, и код клиента, содержащийся в файле Default.aspx.  
@@ -175,7 +178,4 @@ alert(result);
         <input id="Button1" type="button" value="Price for 3 Sandwiches" onclick="return Button1_onclick()" /></p>  
 </body>  
 </html>  
-  
-```  
-  
-<!-- TODO: review snippet reference  [!CODE [Microsoft.Win32.RegistryKey#4](Microsoft.Win32.RegistryKey#4)]  -->
+```     

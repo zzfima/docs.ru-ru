@@ -1,31 +1,34 @@
 ---
-title: "CustomChannelsTester | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: CustomChannelsTester
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2d915d567a5918060ab5e7592d4cd49384249ab9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# CustomChannelsTester
-`CustomChannelsTester` \- это средство, позволяющее проверять реализации пользовательских каналов на соответствие набору предопределенных контрактов службы.  Можно выбрать набор контрактов службы и передать его средству с помощью XML\-файла.  Затем средство создает службу и клиента, использующих реализации пользовательского канала во время обмена сообщениями.  
+# <a name="customchannelstester"></a>CustomChannelsTester
+`CustomChannelsTester` - это средство, позволяющее проверять реализации пользовательских каналов на соответствие набору предопределенных контрактов службы. Можно выбрать набор контрактов службы и передать его средству с помощью XML-файла. Затем средство создает службу и клиента, использующих реализации пользовательского канала во время обмена сообщениями.  
   
-### Построение средства  
+### <a name="to-build-the-tool"></a>Построение средства  
   
-1.  Для сборки решения следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1.  Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  При построении решения создаются три файла: CustomChannelsTester.exe, TestSpec.xml и SampleRun.cmd.  Файл SampleRun.cmd содержит образец командной строки, показывающий использование этой программы для проверки образца [Транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  
+2.  При построении решения создаются три файла: CustomChannelsTester.exe, TestSpec.xml и SampleRun.cmd. Файл SampleRun.cmd содержит пример командной строки, в котором показано, как использовать это средство для проверки [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца.  
   
-### Запуск средства  
+### <a name="to-run-the-tool"></a>Запуск средства  
   
 -   В командной строке введите следующую команду.  
   
@@ -35,7 +38,7 @@ caps.handback.revision: 12
   
      Необходимо использовать параметр `/binding`.  
   
-     Если "привязка" не является предоставляемой системой [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] привязкой, требуется `/dll`.  
+     Если "привязка" не является предоставляемой системой `/dll` привязкой, требуется [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
      Параметр `/testspec` является необязательным.  
   
@@ -43,9 +46,9 @@ caps.handback.revision: 12
   
      Выполняет клиент и сервер и возвращает результаты.  
   
-     Далее приведен пример XML\-кода для описания спецификаций теста \(testspec.xml\).  
+     Далее приведен пример XML-кода для описания спецификаций теста (testspec.xml).  
   
-    ```  
+    ```xml  
     <TestSpec xmlns="http://WCF/TestSpec" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"   
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >  
     <ServiceContract>  
@@ -76,4 +79,4 @@ caps.handback.revision: 12
     </TestSpec>  
     ```  
   
-## См. также
+## <a name="see-also"></a>См. также

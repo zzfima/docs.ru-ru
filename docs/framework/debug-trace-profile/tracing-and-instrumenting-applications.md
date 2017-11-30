@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - tracing [.NET Framework]
 - debugging [.NET Framework], instrumentation
@@ -23,19 +20,18 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 899776c29fc0d0c6a43f28c089c51b9695a1ef6f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 932fef22681aeb2a68d7852884127155757e4099
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Трассировка и оборудование приложений
-Трассировка — это способ мониторинга выполнения приложения во время его выполнения. Вы можете добавить инструментирование трассировки и отладки в свое приложения .NET Framework при его разработке; кроме того, вы можете использовать это инструментирование при разработке приложения и после его развертывания. С помощью классов <xref:System.Diagnostics.Trace?displayProperty=fullName>, <xref:System.Diagnostics.Debug?displayProperty=fullName> и <xref:System.Diagnostics.TraceSource?displayProperty=fullName> можно записывать сведения об ошибках и выполнении приложения в журналы, текстовые файлы или на другие устройства для последующего анализа.  
+Трассировка — это способ мониторинга выполнения приложения во время его выполнения. Вы можете добавить инструментирование трассировки и отладки в свое приложения .NET Framework при его разработке; кроме того, вы можете использовать это инструментирование при разработке приложения и после его развертывания. С помощью классов <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> и <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> можно записывать сведения об ошибках и выполнении приложения в журналы, текстовые файлы или на другие устройства для последующего анализа.  
   
  Термин *инструментирование* относится к возможности мониторинга и измерения уровня производительности продукта и диагностики ошибок. В программировании это означает способность приложения включать следующие возможности.  
   
@@ -126,7 +122,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Необходимо уделить особое внимание размещению операторов трассировки для использования во время выполнения. Вы должны учесть, какие сведения трассировки скорее всего потребуются в развертываемом приложении, чтобы в полной мере охватить все вероятные сценарии трассировки. Поскольку приложения, использующие трассировку, могут быть самыми разными, не существует общих принципов стратегического размещения трассировки. Дополнительные сведения о размещении операторов трассировки см. в разделе [Практическое руководство. Добавление операторов трассировки в код приложения](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md).  
   
 ## <a name="output-from-tracing"></a>Выходные данные трассировки  
- Выходные данные трассировки собираются объектами, которые называются *прослушивателями*. Прослушиватель — это объект, который принимает выходные данные трассировки и записывает их в устройство вывода (обычно это окно, журнал или текстовый файл). При создании прослушиватель трассировки, как правило, добавляется к коллекции <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=fullName>, что позволяет ему получать все выходные данные трассировки.  
+ Выходные данные трассировки собираются объектами, которые называются *прослушивателями*. Прослушиватель — это объект, который принимает выходные данные трассировки и записывает их в устройство вывода (обычно это окно, журнал или текстовый файл). При создании прослушиватель трассировки, как правило, добавляется к коллекции <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType>, что позволяет ему получать все выходные данные трассировки.  
   
  Сведения трассировки всегда записываются как минимум в целевой объект вывода <xref:System.Diagnostics.Trace> по умолчанию, <xref:System.Diagnostics.DefaultTraceListener>. Если по каким-то причинам объект <xref:System.Diagnostics.DefaultTraceListener> был удален, а другие прослушиватели не были добавлены в коллекцию <xref:System.Diagnostics.Trace.Listeners%2A>, сообщения трассировки получены не будут. Дополнительные сведения см. в разделе [Прослушиватели трассировки](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
   
@@ -154,15 +150,14 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Если не отключить трассировку и отладку перед развертыванием приложения ASP.NET, то приложение может отображать сведения о себе, которые могут использоваться вредоносными программами. Дополнительные сведения см. в разделах [Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md), [Компиляция и сборка](/visualstudio/ide/compiling-and-building-in-visual-studio) и [Практическое руководство. Создание, инициализация и настройка переключателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md). Отладка также настраивается через службы IIS.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Diagnostics.Trace>   
- <xref:System.Diagnostics.TraceSource>   
- [Контракты для кода](../../../docs/framework/debug-trace-profile/code-contracts.md)   
- [Типы проектов C#, F# и Visual Basic](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)   
- [Практическое руководство. Добавление операторов трассировки в код приложения](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)   
- [Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)   
- [Практическое руководство. Создание, инициализация и настройка переключателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)   
- [Практическое руководство. Создание и инициализация источников трассировки](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)   
- [Практическое руководство. Использование TraceSource и фильтров с прослушивателями трассировки](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)   
- [Прослушиватели трассировки](../../../docs/framework/debug-trace-profile/trace-listeners.md)   
+ <xref:System.Diagnostics.Trace>  
+ <xref:System.Diagnostics.TraceSource>  
+ [Контракты для кода](../../../docs/framework/debug-trace-profile/code-contracts.md)  
+ [Типы проектов C#, F# и Visual Basic](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)  
+ [Как: добавление операторов трассировки в код приложения](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
+ [Как: условная компиляция с Trace и Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
+ [Как: создание, инициализация и настройка переключателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
+ [Как: Создание и инициализация источников трассировки](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
+ [Как: использование TraceSource и фильтров с прослушивателями трассировки](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)  
+ [Прослушиватели трассировки](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
  [Переключатели трассировки](../../../docs/framework/debug-trace-profile/trace-switches.md)
-

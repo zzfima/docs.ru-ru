@@ -1,33 +1,25 @@
 ---
-title: "Практическое руководство: количество вхождений слова в строке (LINQ) (Visual Basic) | Документы Microsoft"
+title: "Как: подсчет вхождений слова в строке (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: bc367e46-f7cc-45f9-936f-754e661b7bb9
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5ec6bb31fa095786f7c507a66e831a90fd1c6e92
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 82b40e11a72d26858cc2b0b5c0c759517f5b5ee3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>Практическое руководство: количество вхождений слова в строке (LINQ) (Visual Basic)
-В этом примере показано, как использовать LINQ-запрос для подсчета вхождений указанного слова в строке. Обратите внимание, что для выполнения подсчета сначала <xref:System.String.Split%2A>метод вызывается для создания массива слов.</xref:System.String.Split%2A> Чтобы снижается производительность <xref:System.String.Split%2A>метод.</xref:System.String.Split%2A> Если подсчет слов является единственной операцией в строке, следует рассмотреть возможность использования <xref:System.Text.RegularExpressions.Regex.Matches%2A>или <xref:System.String.IndexOf%2A>методов вместо.</xref:System.String.IndexOf%2A> </xref:System.Text.RegularExpressions.Regex.Matches%2A> Однако если производительность не критична или предложение уже разделено для выполнения других запросов на него, затем имеет смысл использовать LINQ для подсчета слов или фраз.  
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>Как: подсчет вхождений слова в строке (LINQ) (Visual Basic)
+В этом примере показано, как с помощью запроса LINQ определить, сколько раз то или иное слово встречается в строке. Обратите внимание на то, что для этого сначала вызывается метод <xref:System.String.Split%2A>, который создает массив слов. Использование метода <xref:System.String.Split%2A> связано с определенным снижением производительности. Если для строки выполняется только подсчет слов, рекомендуется вместо него использовать метод <xref:System.Text.RegularExpressions.Regex.Matches%2A> или <xref:System.String.IndexOf%2A>. Если же производительность не критична или вы уже разбили предложение, чтобы выполнить с ним другие типы запросов, имеет смысл подсчитать слова или фразы с помощью LINQ.  
   
 ## <a name="example"></a>Пример  
   
@@ -75,7 +67,7 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, в платформе .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.  
+ Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивой `Imports` для пространства имен System.Linq.  
   
 ## <a name="see-also"></a>См. также  
  [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

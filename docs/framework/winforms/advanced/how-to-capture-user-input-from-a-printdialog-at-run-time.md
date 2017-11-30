@@ -1,69 +1,70 @@
 ---
-title: "How to: Capture User Input from a PrintDialog at Run Time | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "print options, changing at run time"
-  - "printing [Windows Forms], options"
-  - "print options"
-  - "run time, changing print options"
+title: "Практическое руководство. Перенаправление данных, введенные пользователем в PrintDialog во время выполнения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- print options [Windows Forms], changing at run time
+- printing [Windows Forms], options
+- print options
+- run time [Windows Forms], changing print options
 ms.assetid: 438501d8-9a70-4fb3-aae6-e46579aba0c6
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6c942cb5f005177b74dd25a9725b4990553adbb8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Capture User Input from a PrintDialog at Run Time
-Параметры, относящиеся к печати, можно задать во время разработки, но иногда необходимо изменить их во время выполнения, как правило, из\-за решений, принятых пользователем.  Входные данные пользователя для печати документа можно получить с помощью компонентов <xref:System.Windows.Forms.PrintDialog> и <xref:System.Drawing.Printing.PrintDocument>.  
+# <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a>Практическое руководство. Перенаправление данных, введенные пользователем в PrintDialog во время выполнения
+Хотя можно задать параметры, относящиеся к печати во время разработки, иногда может потребоваться изменить эти параметры во время выполнения, скорее всего, из-за параметров, заданных пользователем. Ввод данных для печати документ с помощью <xref:System.Windows.Forms.PrintDialog> и <xref:System.Drawing.Printing.PrintDocument> компонентов.  
   
-### Чтобы изменить параметры печати программными средствами, выполните следующие действия.  
+### <a name="to-change-print-options-programmatically"></a>Чтобы изменить параметры печати программными средствами  
   
-1.  Добавьте в форму компоненты <xref:System.Windows.Forms.PrintDialog> и <xref:System.Drawing.Printing.PrintDocument>.  
+1.  Добавить <xref:System.Windows.Forms.PrintDialog> и <xref:System.Drawing.Printing.PrintDocument> форму компонента.  
   
-2.  Установите для свойства <xref:System.Windows.Forms.PrintDialog.Document%2A> компонента <xref:System.Windows.Forms.PrintDialog> в значение документа <xref:System.Drawing.Printing.PrintDocument>, добавленного в форму.  
+2.  Задать <xref:System.Windows.Forms.PrintDialog.Document%2A> свойство <xref:System.Windows.Forms.PrintDialog> для <xref:System.Drawing.Printing.PrintDocument> добавленного в форму.  
   
     ```vb  
     PrintDialog1.Document = PrintDocument1  
-  
     ```  
   
     ```csharp  
     printDialog1.Document = PrintDocument1;  
-  
     ```  
   
     ```cpp  
     printDialog1->Document = PrintDocument1;  
     ```  
   
-3.  Отобразите компонент <xref:System.Windows.Forms.PrintDialog> с помощью метода <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>.  
+3.  Отображение <xref:System.Windows.Forms.PrintDialog> компонента с помощью <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> метод.  
   
     ```vb  
     PrintDialog1.ShowDialog()  
-  
     ```  
   
     ```csharp  
     printDialog1.ShowDialog();  
-  
     ```  
   
     ```cpp  
     printDialog1->ShowDialog();  
     ```  
   
-4.  Параметры печати, заданные пользователем в диалоговом окне, будут скопированы в свойство <xref:System.Drawing.Printing.PrinterSettings> компонента <xref:System.Drawing.Printing.PrintDocument>.  
+4.  Пользовательские настройки печати, из диалогового окна будут скопированы <xref:System.Drawing.Printing.PrinterSettings> свойство <xref:System.Drawing.Printing.PrintDocument> компонента.  
   
-## См. также  
- [How to: Print a Multi\-Page Text File in Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)   
- [Windows Forms Print Support](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+## <a name="see-also"></a>См. также  
+ [Практическое руководство. Печать многостраничных текстовых файлов в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)  
+ [Поддержка печати в Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

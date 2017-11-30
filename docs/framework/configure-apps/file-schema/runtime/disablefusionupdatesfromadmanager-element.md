@@ -1,79 +1,81 @@
 ---
-title: "Элемент &lt;disableFusionUpdatesFromADManager&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<disableFusionUpdatesFromADManager> - элемент"
-  - "disableFusionUpdatesFromADManager - элемент"
+title: "&lt;disableFusionUpdatesFromADManager&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- disableFusionUpdatesFromADManager element
+- <disableFusionUpdatesFromADManager> element
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
-caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d4aa3343e7f3f60bbf6a57340d858c1ef12197bb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;disableFusionUpdatesFromADManager&gt;
-Задает, отключено ли поведение по умолчанию, которое разрешает хост\-приложению среды выполнения переопределять параметры конфигурации для домена приложения.  
+# <a name="ltdisablefusionupdatesfromadmanagergt-element"></a>&lt;disableFusionUpdatesFromADManager&gt; элемент
+Указывает, отключено ли поведение по умолчанию, которое разрешает хост-приложению среды выполнения переопределять параметры конфигурации для домена приложения.  
   
-## Синтаксис  
+ \<Конфигурация > элемент  
+\<Среда выполнения > элемент  
+\<disableFusionUpdatesFromADManager >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
 <disableFusionUpdatesFromADManager enabled="0|1"/>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|enabled|Обязательный атрибут.<br /><br /> Задает, отключена ли доступная по умолчанию возможность переопределять параметры Fusion.|  
+|---------------|-----------------|  
+|enabled|Обязательный атрибут.<br /><br /> Указывает, отключен ли по умолчанию возможность переопределения параметров Fusion.|  
   
-## Атрибут enabled  
+## <a name="enabled-attribute"></a>Атрибут enabled  
   
 |Значение|Описание|  
-|--------------|--------------|  
-|0|Не отключать возможность переопределения параметров Fusion.  Начиная с [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], это поведение по умолчанию.|  
-|1|Отключить возможность переопределения параметров Fusion.  Это позволяет вернуться к поведению предыдущих версий платформы .NET Framework.|  
+|-----------|-----------------|  
+|0|Не отключайте возможность переопределения параметров Fusion. Это поведение по умолчанию, начиная с [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
+|1|Отключите возможность переопределения параметров Fusion. При этом восстанавливается поведение предыдущих версий платформы .NET Framework.|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a>Дочерние элементы  
+ Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`runtime`|Элемент, содержащий сведения о привязке сборок и сборке мусора.|  
+|-------------|-----------------|  
+|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
+|`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
-## Заметки  
- Начиная с [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], по умолчанию объекту <xref:System.AppDomainManager> разрешено переопределять параметры конфигурации с помощью свойства <xref:System.AppDomainSetup.ConfigurationFile%2A> или метода <xref:System.AppDomainSetup.SetConfigurationBytes%2A> объекта <xref:System.AppDomainSetup>, передаваемого в вашу реализацию метода <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=fullName> в вашем подклассе <xref:System.AppDomainManager>.  Для домена приложения по умолчанию изменяемые вами параметры переопределяют параметры, которые были заданы в файле конфигурации приложения.  Для других доменов приложений они переопределяют параметры конфигурации, которые были переданы методу <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=fullName> или <xref:System.AppDomain.CreateDomain%2A?displayProperty=fullName>.  
+## <a name="remarks"></a>Примечания  
+ Начиная с [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], поведение по умолчанию разрешено <xref:System.AppDomainManager> для переопределения параметров конфигурации с помощью <xref:System.AppDomainSetup.ConfigurationFile%2A> свойство или <xref:System.AppDomainSetup.SetConfigurationBytes%2A> метод <xref:System.AppDomainSetup> объекта, передаваемого в вашу реализацию из <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> метод в вашем подклассе <xref:System.AppDomainManager>. Для домена приложения по умолчанию, изменить параметры переопределяют параметры, указанные в файле конфигурации приложения. Для других доменов приложений они переопределяют параметры конфигурации, которые были переданы <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> или <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> метод.  
   
- Вы можете передать или новые сведения о конфигурации, или значение NULL \(`Nothing` в Visual Basic\), чтобы удалить переданные сведения о конфигурации.  
+ Можно передать новые сведения о конфигурации, или передайте значение null (`Nothing` в Visual Basic) для исключения сведений о конфигурации, который был передан.  
   
- Не передавайте сведения о конфигурации одновременно свойству <xref:System.AppDomainSetup.ConfigurationFile%2A> и методу <xref:System.AppDomainSetup.SetConfigurationBytes%2A>.  Если передать сведения о конфигурации и свойству, и методу, сведения, переданные свойству <xref:System.AppDomainSetup.ConfigurationFile%2A>, игнорируются, так как метод <xref:System.AppDomainSetup.SetConfigurationBytes%2A> переопределяет сведения о конфигурации из файла конфигурации приложения.  Если используется свойство <xref:System.AppDomainSetup.ConfigurationFile%2A>, можно передать значение NULL \(`Nothing` в Visual Basic\) методу <xref:System.AppDomainSetup.SetConfigurationBytes%2A>, чтобы удалить любые байты конфигурации, которые были указаны в вызове метода <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=fullName> или <xref:System.AppDomain.CreateDomain%2A?displayProperty=fullName>.  
+ Не следует передавать сведения о конфигурации и <xref:System.AppDomainSetup.ConfigurationFile%2A> свойство и <xref:System.AppDomainSetup.SetConfigurationBytes%2A> метод. Если как передать сведения о конфигурации, сведения о передаче <xref:System.AppDomainSetup.ConfigurationFile%2A> свойство игнорируется, так как <xref:System.AppDomainSetup.SetConfigurationBytes%2A> метод переопределяет сведения о конфигурации из файла конфигурации приложения. Если вы используете <xref:System.AppDomainSetup.ConfigurationFile%2A> свойства, можно передать значение null (`Nothing` в Visual Basic) для <xref:System.AppDomainSetup.SetConfigurationBytes%2A> метод, чтобы удалить любые байты конфигурации, которые были указаны в вызове <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> или <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> метод.  
   
- Помимо сведений о конфигурации, в объекте <xref:System.AppDomainSetup>, переданном в вашу реализацию метода <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=fullName>, можно изменить указанные ниже параметры: <xref:System.AppDomainSetup.ApplicationBase%2A>, <xref:System.AppDomainSetup.ApplicationName%2A>, <xref:System.AppDomainSetup.CachePath%2A>, <xref:System.AppDomainSetup.DisallowApplicationBaseProbing%2A>, <xref:System.AppDomainSetup.DisallowBindingRedirects%2A>, <xref:System.AppDomainSetup.DisallowCodeDownload%2A>, <xref:System.AppDomainSetup.DisallowPublisherPolicy%2A>, <xref:System.AppDomainSetup.DynamicBase%2A>, <xref:System.AppDomainSetup.LoaderOptimization%2A>, <xref:System.AppDomainSetup.PrivateBinPath%2A>, <xref:System.AppDomainSetup.PrivateBinPathProbe%2A>, <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> и <xref:System.AppDomainSetup.ShadowCopyFiles%2A>.  
+ Помимо сведений о конфигурации, можно изменить следующие параметры на <xref:System.AppDomainSetup> объекта, передаваемого в вашу реализацию <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> метод: <xref:System.AppDomainSetup.ApplicationBase%2A>, <xref:System.AppDomainSetup.ApplicationName%2A>, <xref:System.AppDomainSetup.CachePath%2A>, <xref:System.AppDomainSetup.DisallowApplicationBaseProbing%2A>, <xref:System.AppDomainSetup.DisallowBindingRedirects%2A> , <xref:System.AppDomainSetup.DisallowCodeDownload%2A>, <xref:System.AppDomainSetup.DisallowPublisherPolicy%2A>, <xref:System.AppDomainSetup.DynamicBase%2A>, <xref:System.AppDomainSetup.LoaderOptimization%2A>, <xref:System.AppDomainSetup.PrivateBinPath%2A>, <xref:System.AppDomainSetup.PrivateBinPathProbe%2A>, <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>, и <xref:System.AppDomainSetup.ShadowCopyFiles%2A>.  
   
- Вместо использования элемента `<disableFusionUpdatesFromADManager>`, поведение по умолчанию можно отключить, создав параметр реестра или задав переменную среды.  В реестре создайте ключ типа DWORD с именем `COMPLUS_disableFusionUpdatesFromADManager` в разделе `HKCU\Software\Microsoft\.NETFramework` или `HKLM\Software\Microsoft\.NETFramework` и задайте для него значение 1.  В командной строке задайте для переменной среды `COMPLUS_disableFusionUpdatesFromADManager` значение 1.  
+ В качестве альтернативы с помощью `<disableFusionUpdatesFromADManager>` элемента, можно отключить поведение по умолчанию, создав параметр реестра или задав переменную среды. В реестре создайте параметр DWORD с именем `COMPLUS_disableFusionUpdatesFromADManager` под `HKCU\Software\Microsoft\.NETFramework` или `HKLM\Software\Microsoft\.NETFramework`и задайте значение 1. В командной строке, задайте переменную среды `COMPLUS_disableFusionUpdatesFromADManager` значение 1.  
   
-## Пример  
- В следующем примере кода показано, как отключить возможность переопределения параметров Fusion с помощью элемента `<disableFusionUpdatesFromADManager>`.  
+## <a name="example"></a>Пример  
+ В следующем примере показано, как отключить возможность переопределения параметров Fusion с помощью `<disableFusionUpdatesFromADManager>` элемента.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <disableFusionUpdatesFromADManager enabled="1" />  
@@ -81,7 +83,7 @@ caps.handback.revision: 7
 </configuration>  
 ```  
   
-## См. также  
- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)   
+## <a name="see-also"></a>См. также  
+ [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [Обнаружение сборок в среде выполнения](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

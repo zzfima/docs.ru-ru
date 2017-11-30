@@ -1,33 +1,36 @@
 ---
-title: "Практическое руководство. Изменение интервалов между абзацами | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "документы, изменение интервалов между абзацами"
-  - "абзацы, интервал между"
-  - "интервалы между абзацами"
+title: "Практическое руководство. Изменение интервалов между абзацами"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- spacing between paragraphs [WPF]
+- paragraphs [WPF], spacing between
+- documents [WPF], adjusting spacing between paragraphs
 ms.assetid: 7cd2f2ac-0e19-4587-bfb6-7f5b18c9536e
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1936426b44ed667d03e4881e66a081d5097a2880
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Изменение интервалов между абзацами
-В этом примере демонстрируется настройка или устранение интервалов между абзацами в содержимом нефиксированного формата.  
+# <a name="how-to-adjust-spacing-between-paragraphs"></a>Практическое руководство. Изменение интервалов между абзацами
+В этом примере показано, как Настройка или устранение интервалов между абзацами в содержимом нефиксированного формата.  
   
- В содержимом нефиксированного формата дополнительное расстояние, возникающее между абзацами, является результатом набора полей этих абзацев. Поэтому интервалами между абзацами можно управлять при помощи корректировки полей этих абзацев.  Чтобы полностью убрать дополнительное расстояние между двумя абзацами, установите поля для абзацев в значение **0**.  Для достижения одинакового интервала между абзацами во всем <xref:System.Windows.Documents.FlowDocument>, используйте стилизацию для установки одинакового значения поля для всех абзацев в <xref:System.Windows.Documents.FlowDocument>.  
+ В содержимом нефиксированного формата дополнительное пространство, возникающее между абзацами является результатом поля этих абзацев. Таким образом интервала между абзацами можно управлять, настраивая размеры полей этих абзацев.  Чтобы полностью убрать дополнительное расстояние между двумя абзацами, установите поля для абзацев в **0**.  Для достижения одинакового интервала между абзацами во всем <xref:System.Windows.Documents.FlowDocument>, использовать для задания одинакового значения поля для всех абзацев в стилях <xref:System.Windows.Documents.FlowDocument>.  
   
- Важно обратить внимание, что поля для двух соседних абзацев заменены на большее поле, а не увеличены вдвое.  Таким образом, если два соседних абзаца имеют поля 20 пикселей и 40 пикселей соответственно, результирующий интервал между абзацами будет 40 пикселей, что является большим из двух значений полей.  
+ Это важно отметить, что поля для двух соседних абзацев будет «свернуть» большее из двух полей, а не вдвое. Таким образом Если два соседних абзаца имеют поля 20 пикселей и 40 пикселей соответственно, результирующий интервал между абзацами будет 40 пикселей, большее из двух значений полей.  
   
-## Пример  
- В следующем примере используется стилизация для установки полей для всех элементов <xref:System.Windows.Documents.Paragraph> в <xref:System.Windows.Documents.FlowDocument> в значение **0**, которая эффективно удаляет дополнительное расстояние между абзацами в <xref:System.Windows.Documents.FlowDocument>.  
+## <a name="example"></a>Пример  
+ В следующем примере используется стили, чтобы задать поля для всех <xref:System.Windows.Documents.Paragraph> элементов в <xref:System.Windows.Documents.FlowDocument> для **0**, которая эффективно удаляет дополнительное расстояние между абзацами в <xref:System.Windows.Documents.FlowDocument>.  
   
- [!code-xml[BlockSnippets#_ParagraphSpacingXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_paragraphspacingxaml)]
+ [!code-xaml[BlockSnippets#_ParagraphSpacingXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_paragraphspacingxaml)]

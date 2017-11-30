@@ -1,27 +1,30 @@
 ---
-title: "Управление | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Управление"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 52f4825b-91a2-4f23-94f4-cfd76a7980cf
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d0e0bc62177a33c81c22c06af202e1c45d4fb210
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Управление
+# <a name="management"></a>Управление
 В образцах из этого раздела показано управление [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## В этом подразделе  
- [Службы WCF и средство отслеживания событий для Windows](../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)  
- Демонстрирует использование аналитического отслеживания в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для передачи событий в сеанс отслеживания событий для Windows \(ETW\).  
+## <a name="in-this-section"></a>Содержание  
+ [Службы WCF и трассировки событий Windows](../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)  
+ Демонстрирует использование аналитического отслеживания в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для передачи событий в сеанс отслеживания событий для Windows (ETW).  
   
  [Аналитическая трассировка WCF](../../../../docs/framework/wcf/samples/wcf-analytic-tracing.md)  
  Демонстрирует способы добавления собственных событий трассировки к потоку аналитически отслеживаемых событий, которые [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] записывает в трассировку событий Windows в [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
@@ -30,7 +33,7 @@ caps.handback.revision: 6
  Демонстрирует реализацию прослушивателя трассировки циклического буфера.  
   
  [Трассировка событий Windows](../../../../docs/framework/wcf/samples/etw-tracing.md)  
- Демонстрируется, как реализовать сквозную \(E2E\) трассировку с помощью средства отслеживания событий для Windows.  
+ Демонстрируется, как реализовать сквозную (E2E) трассировку с помощью средства отслеживания событий для Windows.  
   
  [Расширение трассировки](../../../../docs/framework/wcf/samples/extending-tracing.md)  
  Демонстрируется, как расширить возможности трассировки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] путем добавления пользовательских трассировок действий в код клиента и службы.  
@@ -48,4 +51,4 @@ caps.handback.revision: 6
  Демонстрирует, как с помощью пользовательского поведения проверять службы на компьютере на их соответствие определенным условиям.  
   
  [Поставщик WMI](../../../../docs/framework/wcf/samples/wmi-provider.md)  
- Демонстрируется, как собирать данные из служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] во время выполнения с помощью встроенного в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поставщика инструментария управления Windows \(WMI\).
+ Демонстрируется, как собирать данные из служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] во время выполнения с помощью встроенного в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поставщика инструментария управления Windows (WMI).
