@@ -1,41 +1,45 @@
 ---
-title: "Доступ к членам управляемой объектной модели документов HTML, доступ к которым не предоставляется явно | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "управляемый HTML DOM, получения доступа к членам, не предоставленным явно"
-  - "члены, не предоставленные явно"
+title: "Доступ к членам управляемой объектной модели документов HTML, доступ к которым не предоставляется явно"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- unexposed members
+- managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dda2581ceed854fa5121076f0c7b9df414bffe52
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Доступ к членам управляемой объектной модели документов HTML, доступ к которым не предоставляется явно
-Управляемая объектная модель \(DOM\) HTML\-документов содержит класс с именем <xref:System.Windows.Forms.HtmlElement>, предоставляющий свойства, методы и события, общие для всех элементов HTML.  Иногда, однако, требуется доступ к членам, которые управляемый интерфейс не предоставляет непосредственно.  В этом разделе рассматриваются два способа получения доступа к членам, не предоставленным явно, включая [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] и функции языка сценариев VBScript, определенные внутри веб\-страницы.  
+# <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a><span data-ttu-id="b286c-102">Доступ к членам управляемой объектной модели документов HTML, доступ к которым не предоставляется явно</span><span class="sxs-lookup"><span data-stu-id="b286c-102">Accessing Unexposed Members on the Managed HTML Document Object Model</span></span>
+<span data-ttu-id="b286c-103">Управляемый объектной модели (DOM) HTML документа содержит класс с именем <xref:System.Windows.Forms.HtmlElement> , предоставляющий свойства, методы и события, общие для всех элементов HTML.</span><span class="sxs-lookup"><span data-stu-id="b286c-103">The managed HTML Document Object Model (DOM) contains a class called <xref:System.Windows.Forms.HtmlElement> that exposes the properties, methods, and events that all HTML elements have in common.</span></span> <span data-ttu-id="b286c-104">Иногда тем не менее, необходимо будет получить доступ к членам, которые управляемый интерфейс не предоставляет непосредственно.</span><span class="sxs-lookup"><span data-stu-id="b286c-104">Sometimes, however, you will need to access members that the managed interface does not directly expose.</span></span> <span data-ttu-id="b286c-105">В этом разделе рассматриваются два способа получения доступа к членам, не предоставленным явно, включая [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] и функции VBScript, определенные внутри веб-страницы.</span><span class="sxs-lookup"><span data-stu-id="b286c-105">This topic examines two ways for accessing unexposed members, including [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] and VBScript functions defined inside of a Web page.</span></span>  
   
-## Доступ с помощью управляемых интерфейсов к членам, не предоставленным явно  
- <xref:System.Windows.Forms.HtmlDocument> и <xref:System.Windows.Forms.HtmlElement> предоставляют четыре метода обеспечения доступа к членам, не предоставленным явно.  В следующей таблице приведены типы и соответствующие методы.  
+## <a name="accessing-unexposed-members-through-managed-interfaces"></a><span data-ttu-id="b286c-106">Доступ к членам, не предоставленным явно через управляемых интерфейсов</span><span class="sxs-lookup"><span data-stu-id="b286c-106">Accessing Unexposed Members through Managed Interfaces</span></span>  
+ <span data-ttu-id="b286c-107"><xref:System.Windows.Forms.HtmlDocument>и <xref:System.Windows.Forms.HtmlElement> предоставляют четыре метода, которые обеспечивают доступ к членам, не предоставленным явно.</span><span class="sxs-lookup"><span data-stu-id="b286c-107"><xref:System.Windows.Forms.HtmlDocument> and <xref:System.Windows.Forms.HtmlElement> provide four methods that enable access to unexposed members.</span></span> <span data-ttu-id="b286c-108">В следующей таблице показаны типы и соответствующие методы.</span><span class="sxs-lookup"><span data-stu-id="b286c-108">The following table shows the types and their corresponding methods.</span></span>  
   
-|Тип члена|Методы|  
-|---------------|------------|  
-|Свойства \(<xref:System.Windows.Forms.HtmlElement>\)|<xref:System.Windows.Forms.HtmlElement.GetAttribute%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.SetAttribute%2A>|  
-|Методы|<xref:System.Windows.Forms.HtmlElement.InvokeMember%2A>|  
-|События \(<xref:System.Windows.Forms.HtmlDocument>\)|<xref:System.Windows.Forms.HtmlDocument.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlDocument.DetachEventHandler%2A>|  
-|События \(<xref:System.Windows.Forms.HtmlElement>\)|<xref:System.Windows.Forms.HtmlElement.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.DetachEventHandler%2A>|  
-|События \(<xref:System.Windows.Forms.HtmlWindow>\)|<xref:System.Windows.Forms.HtmlWindow.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlWindow.DetachEventHandler%2A>|  
+|<span data-ttu-id="b286c-109">Тип члена</span><span class="sxs-lookup"><span data-stu-id="b286c-109">Member Type</span></span>|<span data-ttu-id="b286c-110">Методы</span><span class="sxs-lookup"><span data-stu-id="b286c-110">Method(s)</span></span>|  
+|-----------------|-----------------|  
+|<span data-ttu-id="b286c-111">Свойства (<xref:System.Windows.Forms.HtmlElement>)</span><span class="sxs-lookup"><span data-stu-id="b286c-111">Properties (<xref:System.Windows.Forms.HtmlElement>)</span></span>|<xref:System.Windows.Forms.HtmlElement.GetAttribute%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.SetAttribute%2A>|  
+|<span data-ttu-id="b286c-112">Методы</span><span class="sxs-lookup"><span data-stu-id="b286c-112">Methods</span></span>|<xref:System.Windows.Forms.HtmlElement.InvokeMember%2A>|  
+|<span data-ttu-id="b286c-113">События (<xref:System.Windows.Forms.HtmlDocument>)</span><span class="sxs-lookup"><span data-stu-id="b286c-113">Events (<xref:System.Windows.Forms.HtmlDocument>)</span></span>|<xref:System.Windows.Forms.HtmlDocument.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlDocument.DetachEventHandler%2A>|  
+|<span data-ttu-id="b286c-114">События (<xref:System.Windows.Forms.HtmlElement>)</span><span class="sxs-lookup"><span data-stu-id="b286c-114">Events (<xref:System.Windows.Forms.HtmlElement>)</span></span>|<xref:System.Windows.Forms.HtmlElement.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.DetachEventHandler%2A>|  
+|<span data-ttu-id="b286c-115">События (<xref:System.Windows.Forms.HtmlWindow>)</span><span class="sxs-lookup"><span data-stu-id="b286c-115">Events (<xref:System.Windows.Forms.HtmlWindow>)</span></span>|<xref:System.Windows.Forms.HtmlWindow.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlWindow.DetachEventHandler%2A>|  
   
- При использовании этих методов предполагается, что имеется элемент правильного базового типа.  Предположим, что требуется ожидать передачи данных от события `Submit` элемента `FORM` на HTML\-странице, чтобы выполнить предварительную обработку значений `FORM` перед их отправкой на сервер.  В идеальном случае, если имеется возможность управления HTML\-кодом, можно задать для `FORM` уникальный атрибут `ID`.  
+ <span data-ttu-id="b286c-116">При использовании этих методов, предполагается, что имеется элемент правильного базового типа.</span><span class="sxs-lookup"><span data-stu-id="b286c-116">When you use these methods, it is assumed that you have an element of the correct underlying type.</span></span> <span data-ttu-id="b286c-117">Предположим, что необходимо прослушивать `Submit` событие `FORM` на HTML-странице, чтобы выполнить предварительную обработку `FORM`его значения перед их отправкой на сервер.</span><span class="sxs-lookup"><span data-stu-id="b286c-117">Suppose that you want to listen to the `Submit` event of a `FORM` element on an HTML page, so that you can perform some pre-processing on the `FORM`'s values before the user submits them to the server.</span></span> <span data-ttu-id="b286c-118">В идеальном случае, если контроль над HTML, необходимо определить `FORM` уникальный `ID` атрибута.</span><span class="sxs-lookup"><span data-stu-id="b286c-118">Ideally, if you have control over the HTML, you would define the `FORM` to have a unique `ID` attribute.</span></span>  
   
 ```  
 <HTML>  
@@ -53,29 +57,29 @@ caps.handback.revision: 10
 </HTML>  
 ```  
   
- После загрузки этой страницы в элемент управления <xref:System.Windows.Forms.WebBrowser> метод <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A> можно использовать для извлечения `FORM` во время выполнения с помощью формы `form1` в качестве аргумента.  
+ <span data-ttu-id="b286c-119">После загрузки этой страницы в <xref:System.Windows.Forms.WebBrowser> управления, можно использовать <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A> метод для извлечения `FORM` во время выполнения с помощью `form1` в качестве аргумента.</span><span class="sxs-lookup"><span data-stu-id="b286c-119">After you load this page into the <xref:System.Windows.Forms.WebBrowser> control, you can use the <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A> method to retrieve the `FORM` at run time using `form1` as the argument.</span></span>  
   
  [!code-csharp[System.Windows.Forms.HtmlElement#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#10)]
  [!code-vb[System.Windows.Forms.HtmlElement#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#10)]  
   
-## Доступ к неуправляемым интерфейсам  
- Доступ к членам управляемой модели HTML DOM, не предоставляемым явно, также можно получить с помощью интерфейса неуправляемой модели COM, предоставляемого каждым классом DOM.  Этот способ рекомендуется, если требуется выполнить несколько вызовов членов, не предоставленных явно, или если члены, не предоставленные явно, возвращают неуправляемые интерфейсы, не упакованные в управляемую модель HTML DOM.  
+## <a name="accessing-unmanaged-interfaces"></a><span data-ttu-id="b286c-120">Доступ к неуправляемым интерфейсам</span><span class="sxs-lookup"><span data-stu-id="b286c-120">Accessing Unmanaged Interfaces</span></span>  
+ <span data-ttu-id="b286c-121">Также доступа к членам, не предоставленным явно на управляемый HTML DOM, используя неуправляемые интерфейсы объектов модели компонентов (COM), предоставляемые каждым классом DOM..</span><span class="sxs-lookup"><span data-stu-id="b286c-121">You can also access unexposed members on the managed HTML DOM by using the unmanaged Component Object Model (COM) interfaces exposed by each DOM class.</span></span> <span data-ttu-id="b286c-122">Это рекомендуется, если необходимо выполнить несколько вызовов членов, не предоставленные явно или члены, не предоставленные явно возвращают неуправляемые интерфейсы, не упакованные управляемую модель HTML DOM.</span><span class="sxs-lookup"><span data-stu-id="b286c-122">This is recommended if you have to make several calls against unexposed members, or if the unexposed members return other unmanaged interfaces not wrapped by the managed HTML DOM.</span></span>  
   
- В следующей таблице приведены все неуправляемые интерфейсы, предоставляемые через управляемую модель HTML DOM.  Чтобы получить описание использования и пример кода, щелкните соответствующую ссылку.  
+ <span data-ttu-id="b286c-123">В следующей таблице приведены все неуправляемые интерфейсы, предоставляемые через управляемую модель HTML DOM.</span><span class="sxs-lookup"><span data-stu-id="b286c-123">The following table shows all of the unmanaged interfaces exposed through the managed HTML DOM.</span></span> <span data-ttu-id="b286c-124">Щелкните ссылку для пояснения ее использования и пример кода.</span><span class="sxs-lookup"><span data-stu-id="b286c-124">Click on each link for an explanation of its usage and for example code.</span></span>  
   
-|Тип|Неуправляемый интерфейс|  
-|---------|-----------------------------|  
+|<span data-ttu-id="b286c-125">Тип</span><span class="sxs-lookup"><span data-stu-id="b286c-125">Type</span></span>|<span data-ttu-id="b286c-126">Неуправляемый интерфейс</span><span class="sxs-lookup"><span data-stu-id="b286c-126">Unmanaged Interface</span></span>|  
+|----------|-------------------------|  
 |<xref:System.Windows.Forms.HtmlDocument>|<xref:System.Windows.Forms.HtmlDocument.DomDocument%2A>|  
 |<xref:System.Windows.Forms.HtmlElement>|<xref:System.Windows.Forms.HtmlElement.DomElement%2A>|  
 |<xref:System.Windows.Forms.HtmlWindow>|<xref:System.Windows.Forms.HtmlWindow.DomWindow%2A>|  
 |<xref:System.Windows.Forms.HtmlHistory>|<xref:System.Windows.Forms.HtmlHistory.DomHistory%2A>|  
   
- Самый простой способ \- использовать интерфейсы модели COM добавить ссылку на неуправляемую библиотеку HTML DOM \(MSHTML.dll\) из приложения, хотя это не поддерживается.  Дополнительные сведения см. в разделе [Статья 934368 базы знаний Майкрософт](http://support.microsoft.com/kb/934368).  
+ <span data-ttu-id="b286c-127">Самый простой способ использования интерфейсов COM является добавление ссылки на неуправляемую библиотеку HTML DOM (MSHTML.dll) из своего приложения, несмотря на то, что это не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="b286c-127">The easiest way to use the COM interfaces is to add a reference to the unmanaged HTML DOM library (MSHTML.dll) from your application, although this is unsupported.</span></span> <span data-ttu-id="b286c-128">Дополнительные сведения см. в разделе [934368 статьи базы знаний](http://support.microsoft.com/kb/934368).</span><span class="sxs-lookup"><span data-stu-id="b286c-128">For more information, see [Knowledge Base Article 934368](http://support.microsoft.com/kb/934368).</span></span>  
   
-## Функции доступа к скрипту  
- HTML\-страница может определять одну или несколько функций с помощью скриптового языка, такого как [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] или VBScript.  Эти функции размещаются внутри страницы `SCRIPT` на странице и могут выполняться по запросу или в ответ на событие в модели DOM.  
+## <a name="accessing-script-functions"></a><span data-ttu-id="b286c-129">Доступ к функциям скриптов</span><span class="sxs-lookup"><span data-stu-id="b286c-129">Accessing Script Functions</span></span>  
+ <span data-ttu-id="b286c-130">HTML-страницы можно определить одну или несколько функций с помощью языка сценариев, таких как [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] или VBScript.</span><span class="sxs-lookup"><span data-stu-id="b286c-130">An HTML page can define one or more functions by using a scripting language such as [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] or VBScript.</span></span> <span data-ttu-id="b286c-131">Эти функции размещаются внутри `SCRIPT` страницы на странице и могут выполняться по запросу или в ответ на событие в модели DOM.</span><span class="sxs-lookup"><span data-stu-id="b286c-131">These functions are placed inside of a `SCRIPT` page in the page, and can be run on demand or in response to an event on the DOM.</span></span>  
   
- Используя метод <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>, можно вызвать любую функцию скрипта, определенную в HTML\-странице.  Если метод скрипта возвращает элемент HTML, можно использовать приведение, чтобы преобразовать этот возвращаемый результат в <xref:System.Windows.Forms.HtmlElement>.  Дополнительные сведения и пример кода содержатся в разделе <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.  
+ <span data-ttu-id="b286c-132">Можно вызвать любую функцию скрипта, определяется в HTML-страницы с использованием <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="b286c-132">You can call any script functions you define in an HTML page using the <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> method.</span></span> <span data-ttu-id="b286c-133">Если метод скрипта возвращает HTML-элемент, можно использовать приведение, чтобы преобразовать этот возвращаемый результат <xref:System.Windows.Forms.HtmlElement>.</span><span class="sxs-lookup"><span data-stu-id="b286c-133">If the script method returns an HTML element, you can use a cast to convert this return result to an <xref:System.Windows.Forms.HtmlElement>.</span></span> <span data-ttu-id="b286c-134">Дополнительные сведения и пример кода см. в разделе <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.</span><span class="sxs-lookup"><span data-stu-id="b286c-134">For details and example code, see <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.</span></span>  
   
-## См. также  
- [Использование управляемой объектной модели HTML\-документов](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+## <a name="see-also"></a><span data-ttu-id="b286c-135">См. также</span><span class="sxs-lookup"><span data-stu-id="b286c-135">See Also</span></span>  
+ [<span data-ttu-id="b286c-136">Использование управляемой объектной модели HTML-документов</span><span class="sxs-lookup"><span data-stu-id="b286c-136">Using the Managed HTML Document Object Model</span></span>](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
