@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
+ms.openlocfilehash: 390d08332113a50b363bdbb71921bafd7e33e87d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: 7b51317b570fcabfe1847685a97c6deab32dcc5c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="porting-to-net-core---libraries"></a>Перенос в .NET Core — библиотеки
 
 В этой статье рассматривается перенос кода библиотеки в .NET Core для его выполнения на разных платформах.
@@ -25,7 +23,8 @@ ms.lasthandoff: 08/04/2017
 
 В этой статье предполагается, что вы:
 
-- используете Visual Studio 2017 или более поздней версии, так как .NET Core не поддерживается в более ранних версиях Visual Studio;
+- используете Visual Studio 2017 или более поздней версии, так как
+  - .NET core не поддерживается в более ранних версиях Visual Studio
 - ознакомлены с [рекомендуемым процессом переноса](index.md);
 - устранили все проблемы с [зависимостями сторонних разработчиков](third-party-deps.md).
 
@@ -56,7 +55,7 @@ ms.lasthandoff: 08/04/2017
 
 Домены приложений позволяют изолировать приложения друг от друга. Для этих доменов требуется поддержка среды выполнения и, как правило, они довольно дорого стоят. Кроме того, домены приложений не реализованы в .NET Core. И мы не планируем добавлять эту возможность в будущем. Вместо нее для изоляции кода мы рекомендуем использовать отдельные процессы или контейнеры. Для динамической загрузки сборок рекомендуется использовать новый класс <xref:System.Runtime.Loader.AssemblyLoadContext>.
 
-Чтобы упростить перенос кода из .NET Framework, мы предоставили некоторые рабочие области API <xref:System.AppDomain> в .NET Core. Некоторые API-интерфейсы работают без изменений (например, <xref:System.AppDomain.UnhandledException?displayProperty=fullName>), одни элементы не выполняют никаких действий (например, <xref:System.AppDomain.SetCachePath%2A>), а другие создают исключение <xref:System.PlatformNotSupportedException> (например, <xref:System.AppDomain.CreateDomain%2A>). Просмотрите типы, используемые для [эталонного исходного кода `System.AppDomain`](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Extensions/src/System/AppDomain.cs) в [репозитории DotNet и CoreFX на сайте GitHub](https://github.com/dotnet/corefx), и обязательно выберите ветвь, которая соответствует реализованной версии.
+Чтобы упростить перенос кода из .NET Framework, мы предоставили некоторые рабочие области API <xref:System.AppDomain> в .NET Core. Некоторые API-интерфейсы работают без изменений (например, <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), одни элементы не выполняют никаких действий (например, <xref:System.AppDomain.SetCachePath%2A>), а другие создают исключение <xref:System.PlatformNotSupportedException> (например, <xref:System.AppDomain.CreateDomain%2A>). Просмотрите типы, используемые для [эталонного исходного кода `System.AppDomain`](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Extensions/src/System/AppDomain.cs) в [репозитории DotNet и CoreFX на сайте GitHub](https://github.com/dotnet/corefx), и обязательно выберите ветвь, которая соответствует реализованной версии.
 
 ### <a name="remoting"></a>Удаленное взаимодействие
 
@@ -197,4 +196,3 @@ ms.lasthandoff: 08/04/2017
 1. Выберите следующий уровень кода для переноса и повторите предыдущие шаги.
 
 Двигаясь от базовых объектов библиотеки к более высоким уровням и тестируя каждый из них требуемым образом, вы обеспечиваете систематичность переноса и изоляцию проблем, относящихся к отдельным уровням кода.
-

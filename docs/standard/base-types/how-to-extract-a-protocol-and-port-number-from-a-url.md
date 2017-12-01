@@ -1,33 +1,39 @@
 ---
-title: "Практическое руководство. Извлечение протокола и номера порта из URL-адреса | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "регулярные выражения .NET Framework, примеры"
-  - "разбор текста с регулярными выражениями, примеры"
-  - "синтаксис соответствия шаблону с регулярными выражениями, примеры"
-  - "регулярные выражения [платформа .NET Framework], примеры"
-  - "регулярные выражения, примеры"
-  - "поиск с регулярными выражениями, примеры"
+title: "Практическое руководство. Извлечение протокола и номера порта из URL-адреса"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- searching with regular expressions, examples
+- parsing text with regular expressions, examples
+- regular expressions, examples
+- .NET Framework regular expressions, examples
+- regular expressions [.NET Framework], examples
+- pattern-matching with regular expressions, examples
 ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
-caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 10ab05ac8b24c0658be2f27809137c6b0bd4834f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Практическое руководство. Извлечение протокола и номера порта из URL-адреса
-В следующем примере выполняется извлечение протокола и номера порта из URL\-адреса.  
+# <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Практическое руководство. Извлечение протокола и номера порта из URL-адреса
+В следующем примере выполняется извлечение протокола и номера порта из URL-адреса.  
   
-## Пример  
- В примере используется метод <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=fullName> для возврата протокола, за которым через двоеточие следует номер порта.  
+## <a name="example"></a>Пример  
+ В этом примере <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> метод для возврата протокола и двоеточие, за которым следует номер порта.  
   
  [!code-csharp[RegularExpressions.Examples.Protocol#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/cs/Example.cs#1)]
  [!code-vb[RegularExpressions.Examples.Protocol#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/vb/Example.vb#1)]  
@@ -35,20 +41,20 @@ caps.handback.revision: 15
  Возможные интерпретации шаблона регулярного выражения `^(?<proto>\w+)://[^/]+?(?<port>:\d+)?/` показаны в следующей таблице.  
   
 |Шаблон|Описание|  
-|------------|--------------|  
+|-------------|-----------------|  
 |`^`|Соответствие должно обнаруживаться в начале строки.|  
-|`(?<proto>\w+)`|Совпадение с одним или несколькими символами слова.  Эта группа должна получить имя `proto`.|  
-|`://`|Соответствует двоеточию, за которым следуют две косые черты.|  
-|`[^/]+?`|Соответствует одному или нескольким вхождениям \(но как можно меньшему числу\) любого символа, отличного от косой черты.|  
-|`(?<port>:\d+)?`|Соответствует вхождениям в количестве 0 или 1 двоеточия, за которым следует одна или несколько цифр.  Эта группа должна получить имя `port`.|  
-|`/`|Соответствует косой черте.|  
+|`(?<proto>\w+)`|Совпадение с одним или несколькими символами слова. Имя этой группы `proto`.|  
+|`://`|Совпадение с двоеточием, за которым следуют две косые черты.|  
+|`[^/]+?`|Совпадение с одним или несколькими вхождениями (но как можно меньшему числу) любого символа, отличного от косой черты.|  
+|`(?<port>:\d+)?`|Совпадение с вхождениями в количестве 0 или 1 двоеточия, за которым следует одна или несколько цифр. Имя этой группы `port`.|  
+|`/`|Совпадение с косой чертой.|  
   
- Метод <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=fullName> разворачивает последовательность замены `${proto}${port}`, которая объединяет захваченное значение двух именованных групп в шаблон регулярного выражения.  Это удобная альтернатива явному объединению строк, извлеченных из объекта коллекции, который был возвращен свойством <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=fullName>.  
+ <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> Метод развертывает `${proto}${port}` замены последовательности, который объединяет значение две именованные группы, в шаблоне регулярного выражения. Он является удобной альтернативой явно сцепления строк, полученных из коллекции объект, возвращаемый <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> свойство.  
   
- В следующем примере используется метод <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=fullName> с двумя подстановками, `${proto}` и`${port}`, для включения захваченных групп в выходную строку.  Вместо этого, можно извлечь захваченные группы из соответствующего объекта <xref:System.Text.RegularExpressions.GroupCollection>, как показано в следующем примере кода.  
+ В этом примере <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> метод с двумя подстановками `${proto}` и `${port}`, включаемых в выходной строке записанной группы. Захватываемым группам можно получить из соответствующего <xref:System.Text.RegularExpressions.GroupCollection> вместо этого, как показано в следующем коде.  
   
  [!code-csharp[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/cs/example2.cs#2)]
  [!code-vb[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/vb/example2.vb#2)]  
   
-## См. также  
- [Регулярные выражения в .NET Framework](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>См. также  
+ [Регулярные выражения .NET](../../../docs/standard/base-types/regular-expressions.md)

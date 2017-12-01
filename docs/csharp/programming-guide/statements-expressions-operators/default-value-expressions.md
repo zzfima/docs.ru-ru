@@ -1,24 +1,22 @@
 ---
 title: "Выражения значения по умолчанию (руководство по программированию на C#)"
 description: "Выражения значения по умолчанию создают значение по умолчанию для любого ссылочного типа или типа значения"
-ms.date: 2017-08-23
+ms.date: 08/23/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - generics [C#], default keyword
 - default keyword [C#], generic programming
 ms.assetid: b9daf449-4e64-496e-8592-6ed2c8875a98
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: c2bb1c269e5347d615c47ab828506aef538c4761
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
-ms.openlocfilehash: 7b5b53d7ed92c6f6377a3e494daf1d02a4cf0934
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="default-value-expressions-c-programming-guide"></a>Выражения значения по умолчанию (руководство по программированию на C#)
 
@@ -27,15 +25,15 @@ ms.lasthandoff: 08/29/2017
 - Будет ли тип `T` ссылочным типом или типом значения.
 - Если тип `T` является типом значения, будет ли это числовое значение или пользовательская структура.
 
- При заданной переменной `t` параметризованного типа `T` оператор `t = null` действителен, только если `T` является ссылочным типом. Присваивание `t = 0` работает только для типов числовых значений, но не для структур. В качестве решения используйте выражение значения по умолчанию, которое возвращает `null` для ссылочных типов (типы классов и интерфейсов), а также нуль для типов числовых значений. Для пользовательских структур оно возвращает структуру, инициализированную шаблоном нулевых бит, который создает 0 или `null` для каждого элемента в зависимости от того, является ли элемент значением или ссылочным типом. Для типов значений, допускающих значения NULL, ключевое слово `default` возвращает <xref:System.Nullable%601?displayProperty=fullName>, которое инициализируется как любая другая структура.
+ При заданной переменной `t` параметризованного типа `T` оператор `t = null` действителен, только если `T` является ссылочным типом. Присваивание `t = 0` работает только для типов числовых значений, но не для структур. В качестве решения используйте выражение значения по умолчанию, которое возвращает `null` для ссылочных типов (типы классов и интерфейсов), а также нуль для типов числовых значений. Для пользовательских структур оно возвращает структуру, инициализированную шаблоном нулевых бит, который создает 0 или `null` для каждого элемента в зависимости от того, является ли элемент значением или ссылочным типом. Для типов значений, допускающих значения NULL, ключевое слово `default` возвращает <xref:System.Nullable%601?displayProperty=nameWithType>, которое инициализируется как любая другая структура.
 
 Выражение `default(T)` не ограничивается универсальными классами и методами. Выражения значения по умолчанию можно использовать с любым управляемым типом. Любые из следующих выражений допустимы.
 
- [!code-cs[csProgGuideGenerics#1](../../../../samples/snippets/csharp/programming-guide/statements-expressions-operators/default-value-expressions.cs)]
+ [!code-csharp[csProgGuideGenerics#1](../../../../samples/snippets/csharp/programming-guide/statements-expressions-operators/default-value-expressions.cs)]
 
  В следующем примере из класса `GenericList<T>` показано, как использовать оператор `default(T)` в универсальном классе. Дополнительные сведения см. в разделе [Общие сведения об универсальных шаблонах](../generics/introduction-to-generics.md).
 
- [!code-cs[csProgGuideGenerics#2](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#Snippet41)]
+ [!code-csharp[csProgGuideGenerics#2](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#Snippet41)]
 
 ## <a name="default-literal-and-type-inference"></a>Литерал по умолчанию и определение типа
 
@@ -49,12 +47,11 @@ ms.lasthandoff: 08/29/2017
 
 В следующем примере показано множество вариантов использования литерала `default` в выражении значения по умолчанию:
 
-[!code-cs[csProgGuideGenerics#3](../../../../samples/snippets/csharp/programming-guide/statements-expressions-operators/default-literal.cs)]
+[!code-csharp[csProgGuideGenerics#3](../../../../samples/snippets/csharp/programming-guide/statements-expressions-operators/default-literal.cs)]
 
 ## <a name="see-also"></a>См. также
 
- <xref:System.Collections.Generic> [Руководство по программированию на C#](../index.md)   
- [Универсальные шаблоны](../generics/index.md)   
- [Универсальные методы](../generics/generic-methods.md)   
- [Универсальные шаблоны](~/docs/standard/generics/index.md)   
-
+ <xref:System.Collections.Generic>[Руководство по программированию на C#](../index.md)  
+ [Универсальные шаблоны](../generics/index.md)  
+ [Универсальные методы](../generics/generic-methods.md)  
+ [Универсальные шаблоны](~/docs/standard/generics/index.md)  

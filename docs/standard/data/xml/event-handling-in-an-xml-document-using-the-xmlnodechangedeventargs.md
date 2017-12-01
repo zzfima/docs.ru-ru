@@ -1,31 +1,32 @@
 ---
-title: "Обработка событий в XML-документе с помощью XmlNodeChangedEventArgs | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Обработка событий в XML-документе с помощью XmlNodeChangedEventArgs"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 2bfd6eee5831b6bb92c0274fe5925184c80a92e2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Обработка событий в XML-документе с помощью XmlNodeChangedEventArgs
-Класс **XmlNodeChangedEventArgs** инкапсулирует аргументы, передаваемые обработчикам событий, которые зарегистрированы в объекте **XmlDocument** для обработки событий.  События и описания условий их срабатывания приведены в следующей таблице.  
+# <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Обработка событий в XML-документе с помощью XmlNodeChangedEventArgs
+**XmlNodeChangedEventArgs** инкапсулирует аргументы, передаваемые обработчикам событий, зарегистрированных на **XmlDocument** для обработки событий. События и описания условий их срабатывания приведены в следующей таблице.  
   
 |Событие|Срабатывание|  
-|-------------|------------------|  
+|-----------|-----------|  
 |<xref:System.Xml.XmlDocument.NodeInserting>|Перед вставкой узла, принадлежащего текущему документу, в другой узел.|  
 |<xref:System.Xml.XmlDocument.NodeInserted>|После вставки узла, принадлежащего текущему документу, в другой узел.|  
 |<xref:System.Xml.XmlDocument.NodeRemoving>|Перед удалением узла, принадлежащего этому документу, из документа.|  
@@ -34,7 +35,7 @@ caps.handback.revision: 3
 |<xref:System.Xml.XmlDocument.NodeChanged>|После изменения значения узла.|  
   
 > [!NOTE]
->  Если использование памяти **XmlDataDocument** полностью оптимизировано для работы хранилища **DataSet**, то **XmlDataDocument** может не инициировать ни одно из приведенных выше событий при внесении изменений в базовом хранилище **DataSet**.  Если эти события нужны, то необходимо просмотреть один раз весь **XmlDocument**, чтобы полностью оптимизировать использование памяти.  
+>  Если **XmlDataDocument** использование памяти полностью оптимизирован для использования **DataSet** хранилища, **XmlDataDocument** не могут вызывать события, перечисленные выше, если изменения в базовом **набора данных**. Если эти события нужны, то необходимо просмотреть весь **XmlDocument** один раз, чтобы полностью оптимизировать использование памяти.  
   
  В следующем примере кода показано, как определить обработчик событий, и как добавить его к событию.  
   
@@ -79,9 +80,9 @@ void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)
 }  
 ```  
   
- Некоторые операции модели DOM представляют собой составные операции, которые могут вызвать срабатывание нескольких событий.  Например, **AppendChild** может также удалить узел, добавляемый из его предыдущего родителя.  В этом случае сначала сработает событие **NodeRemoved**, а затем событие **NodeInserted**.  Такие операции, как установка **InnerXml**, могут вызывать срабатывание нескольких событий.  
+ Некоторые операции модели DOM представляют собой составные операции, которые могут вызвать срабатывание нескольких событий. Например **AppendChild** также может потребоваться удалить узел, добавляемый из его предыдущего родителя. В этом случае вы видите **NodeRemoved** во-первых, сработавшего события, за которым следует **NodeInserted** событий. Операции, такие как параметр **InnerXml** может привести к несколько событий.  
   
- В следующем примере кода показано создание обработчика события и обработка события **NodeInserted**.  
+ В следующем примере кода показано создание обработчика события и обработка **NodeInserted** событий.  
   
 ```vb  
 Imports System  
@@ -212,7 +213,7 @@ public class Sample
 } // End class   
 ```  
   
- Дополнительные сведения см. в разделах [XmlNodeChangeEventArgs Members](frlrfSystemXmlXmlNodeChangedEventArgsMembersTopic) и [XmlNodeChangedEventHandler Delegate](frlrfSystemXmlXmlNodeChangedEventHandlerClassTopic).  
+ Дополнительные сведения см. в разделах <xref:System.Xml.XmlNodeChangedEventArgs> и <xref:System.Xml.XmlNodeChangedEventHandler>.  
   
-## См. также  
- [Модель DOM для XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>См. также  
+ [Модель объектов XML-документов (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

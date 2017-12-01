@@ -1,38 +1,29 @@
 ---
 title: "Руководство по развертыванию .NET Framework для разработчиков"
-ms.custom: 
-ms.date: 03/30/2017
+ms.custom: updateeachrelease
+ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology: dotnet-clr
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-caps.latest.revision: 108
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 287005af09f3f022c368d3c8fab12ad02b30e944
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 043338d73e67ee36d2888b748402d824ee6d5daf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Руководство по развертыванию .NET Framework для разработчиков
-В этом разделе приводятся сведения для разработчиков, которые планируют устанавливать [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2 или .NET Framework 4.7 вместе со своими приложениями.
+Этот раздел содержит сведения для разработчиков, которые хотят установить [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2, или 4.7 .NET Framework или 4.7.1 вместе со своими приложениями.
 
 Ссылки для загрузки см. в подразделе [Распространяемые пакеты](#redistributable-packages). Можно также загрузить перераспределяемые пакеты и языковые пакеты со следующих страниц Центра загрузки Microsoft:
+
+- .NET framework 4.7.1 для всех операционных систем ([веб-установщик](http://go.microsoft.com/fwlink/?LinkId=852095) или [автономный установщик](http://go.microsoft.com/fwlink/p/?LinkId=852107))
 
 - .NET Framework 4.7 для всех операционных систем ([веб-установщик](http://go.microsoft.com/fwlink/?LinkId=825299) или [автономный установщик](http://go.microsoft.com/fwlink/p/?LinkId=825303))
 
@@ -51,17 +42,17 @@ ms.lasthandoff: 07/28/2017
  Важные примечания:
 
 > [!NOTE]
-> Фраза "[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и доработанные версии" относится к выпускам [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 и 4.7.
+> Фраза « [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и вспомогательных выпусков» ссылается на [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и более поздними версиями.
 
-- [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2 и 4.7 — это обновления на месте для [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], что означает, что они используют ту же версию среды выполнения, но версии сборок обновлены и включают новые типы и члены.
+- [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 и 4.7.1 — это обновления на месте для [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], означающее, что они используют ту же версию среды выполнения, но версии сборок обновлены и включают новые типы и члены.
 
-- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и ее точечные выпуски представляют собой инкрементные расширения возможностей [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. При установке [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 или 4.7 в системе, где уже установлена [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], сборки версии 4 заменяются более новыми версиями.
+- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и ее точечные выпуски представляют собой инкрементные расширения возможностей [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. При установке [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 4.7 или 4.7.1 в системе, которая имеет [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] установлен, сборки версии 4 заменяются более новых версий.
 
 - Если вы ссылаетесь на [внештатный пакет](http://msdn.microsoft.com/library/dn151288\(v=vs.110\).aspx) Майкрософт в своем приложении, сборка будет включена в пакет приложения.
 
 - Для установки [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и ее точечных выпусков требуются права администратора.
 
-- Платформа [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] входит в состав [!INCLUDE[win8](../../../includes/win8-md.md)] и [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], поэтому развертывать ее вместе с приложением на этих операционных системах не нужно. Аналогично, [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] входит в состав [!INCLUDE[win81](../../../includes/win81-md.md)] и Windows Server 2012 R2. Платформа .NET Framework 4.5.2 не включена ни в какую операционную систему. [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] входит в состав Windows 10, [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] — в состав ноябрьского обновления Windows Update 10, [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] — в состав юбилейного обновления Windows 10 Anniversary Update.  Платформа .NET Framework 4.7 входит в состав обновления Windows 10 Creators Update. Полный список требований к оборудованию и программному обеспечению см. в разделе [Требования к системе для .NET Framework](../../../docs/framework/get-started/system-requirements.md).
+- Платформа [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] входит в состав [!INCLUDE[win8](../../../includes/win8-md.md)] и [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], поэтому развертывать ее вместе с приложением на этих операционных системах не нужно. Аналогично, [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] входит в состав [!INCLUDE[win81](../../../includes/win81-md.md)] и Windows Server 2012 R2. Платформа .NET Framework 4.5.2 не включена ни в какую операционную систему. [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] входит в состав Windows 10, [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] — в состав ноябрьского обновления Windows Update 10, [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] — в состав юбилейного обновления Windows 10 Anniversary Update.  4.7 .NET Framework входит в центре обновления Windows 10 создатели и .NET Framework 4.7.1 включается в центре обновления Windows 10 Осень создатели. Полный список требований к оборудованию и программному обеспечению см. в разделе [Требования к системе для .NET Framework](../../../docs/framework/get-started/system-requirements.md).
 
 - Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]пользователи могут просматривать список запущенных приложений .NET Framework во время установки и легко закрывать их. Это помогает избежать перезапуска системы, вызываемого установкой .NET Framework. См. раздел [Уменьшение перезапусков системы](../../../docs/framework/deployment/reducing-system-restarts.md).
 
@@ -72,12 +63,12 @@ ms.lasthandoff: 07/28/2017
  Сведения о способах развертывания платформы .NET Framework и ее системных зависимостей по сети см. в разделе [Руководство по развертыванию для администраторов](../../../docs/framework/deployment/guide-for-administrators.md).
 
 ## <a name="deployment-options-for-your-app"></a>Варианты развертывания приложения
- Когда приложение готово к публикации на веб-сервере или в другом централизованном расположении, откуда пользователи смогут его устанавливать, можно выбрать один из нескольких методов развертывания. Некоторые из этих методов предусмотрены в Visual Studio. В следующей таблице перечислены варианты развертывания приложения с указанием распространяемого пакета .NET Framework, соответствующего каждому варианту. Помимо этого, можно написать для приложения собственную программу установки; дополнительные сведения см. в подразделе [Привязка установки .NET Framework к установке приложения](#chaining).
+ Когда приложение готово к публикации на веб-сервере или в другом централизованном расположении, откуда пользователи смогут его устанавливать, можно выбрать один из нескольких методов развертывания. Некоторые из этих методов предусмотрены в Visual Studio. В следующей таблице перечислены параметры развертывания для приложения и указывает, соответствующего каждому варианту распространяемый пакет .NET Framework. Помимо этого, можно написать для приложения собственную программу установки; дополнительные сведения см. в подразделе [Привязка установки .NET Framework к установке приложения](#chaining).
 
 |Стратегия развертывания приложения|Доступные методы развертывания|Используемый распространяемый пакет .NET Framework|
 |--------------------------------------|----------------------------------|-------------------------------------------|
-|Установка из Интернета|- [InstallShield](#installshield-deployment)<br />- [Набор инструментов WiX](#wix)<br />- [Установка вручную](#installing_manually)|[Web installer](#redistributable-packages)|
-|Установка с диска|- [InstallShield](#installshield-deployment)<br />- [Набор инструментов WiX](#wix)<br />- [Установка вручную](#installing_manually)|[Offline installer](#redistributable-packages)|
+|Установка из Интернета|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Набор инструментов WiX](#wix)<br />- [Установка вручную](#installing_manually)|[Web installer](#redistributable-packages)|
+|Установка с диска|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Набор инструментов WiX](#wix)<br />- [Установка вручную](#installing_manually)|[Offline installer](#redistributable-packages)|
 |Установка из локальной сети (для корпоративных приложений)|- [ClickOnce](#clickonce-deployment)|[Веб-установщик](#redistributable-packages) (см. ограничения в [ClickOnce](#clickonce-deployment) ) или [автономный установщик](#redistributable-packages)|
 
 ## <a name="redistributable-packages"></a>Распространяемые пакеты
@@ -85,23 +76,25 @@ ms.lasthandoff: 07/28/2017
 
 ||веб-установщик|автономный установщик|
 |-|-------------------|-----------------------|
-|Файл загрузки|.NET Framework 4.7: <br />[NDP47-KB3186500-Web.exe](http://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151802-Web.exe](http://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]:<br />[NDP461-KB3102438-Web.exe](http://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]:<br />[NDP46-KB3045560-Web.exe](http://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901954-Web.exe](http://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2859818-Web.exe](http://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_setup.exe](http://go.microsoft.com/fwlink/?LinkId=225704)|.NET Framework 4.7: <br />[NDP462-KB3186497-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]: <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]: <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_x86_x64.exe](http://go.microsoft.com/fwlink/?LinkId=225702)|
+|Файл загрузки|.NET framework 4.7.1: <br/>[NDP471-KB4033344-Web.exe](http://go.microsoft.com/fwlin/?LinkId=852092)<br/><br/>.NET Framework 4.7: <br />[NDP47-KB3186500-Web.exe](http://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151802-Web.exe](http://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]:<br />[NDP461-KB3102438-Web.exe](http://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]:<br />[NDP46-KB3045560-Web.exe](http://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901954-Web.exe](http://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2859818-Web.exe](http://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_setup.exe](http://go.microsoft.com/fwlink/?LinkId=225704)|.NET framework 4.7.1: <br />[NDP471-KB4033342-x86-x64-AllOS-enu.exe](http://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET Framework 4.7: <br />[NDP47-KB3186497-x86-x64-AllOS-enu.exe](http://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]: <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]: <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_x86_x64.exe](http://go.microsoft.com/fwlink/?LinkId=225702)|
 |Требуется подключение к интернету?|Да|Нет|
 |Размер загрузки|Меньший (включает только установщик для целевой платформы) *|Больший*|
 |Языковые пакеты|Включены**|[Устанавливаются отдельно](#chain_langpack), если только не используется пакет, предназначенный для всех ОС|
-|Метод развертывания|Поддерживает все методы:<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [Установка вручную](#installing_manually)<br />- [Пользовательская установка (привязка)](#chaining)|Поддерживает все методы:<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [Установка вручную](#installing_manually)<br />- [Пользовательская установка (привязка)](#chaining)|
-|Расположение загрузки для развертывания ClickOnce|Центр загрузки Майкрософт:<br /><br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4,5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|Собственный сервер или Центр загрузки Майкрософт:<br /><br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|
+|Метод развертывания|Поддерживает все методы:<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [Установка вручную](#installing_manually)<br />- [Пользовательская установка (привязка)](#chaining)|Поддерживает все методы:<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [Установка вручную](#installing_manually)<br />- [Пользовательская установка (привязка)](#chaining)|
+|Расположение загрузки для развертывания ClickOnce|Центр загрузки Майкрософт:<br /><br /> - [.NET framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4,5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|Собственный сервер или Центр загрузки Майкрософт:<br /><br /> - [.NET framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|
 
- \* Автономный установщик больше, так как он содержит компоненты для всех целевых платформ. По завершении работы программы установки операционная система Windows кэширует только использовавшийся установщик. Если удалить автономный установщик после установки, используемое место на диске будет таким же, как при использовании веб-установщика. Если средство, используемое для создания программы установки приложения (например, [InstallShield](#installshield-deployment)), предусматривает папку для файлов установки, которая удаляется после установки, автономный установщик может быть удален автоматически путем помещения его в папку установки.
+ \* Автономный установщик больше, так как он содержит компоненты для всех целевых платформ. По завершении работы программы установки операционная система Windows кэширует только использовавшийся установщик. Если удалить автономный установщик после установки, используемое место на диске будет таким же, как при использовании веб-установщика. При использовании средства (например, [InstallAware](#installaware-deployment) или [InstallShield](#installshield-deployment)) для создания программы установки приложения предоставляет папку для файлов установки, которая удаляется после установки, автономный установщик может быть удален автоматически путем помещения его в папку установки.
 
  ** При использовании веб-установщика с пользовательской установкой можно использовать параметры языка по умолчанию на основе заданного пользователем параметра многоязычного пользовательского интерфейса (MUI) или задать другой языковой пакет с помощью параметра `/LCID` в командной строке. Примеры см. в подразделе [Привязка с использованием пользовательского интерфейса .NET Framework по умолчанию](#chaining_default) .
 
 ## <a name="deployment-methods"></a>Методы развертывания
- Существует три метода развертывания.
+ Доступны четыре метода развертывания.
 
 - Можно задать зависимость от платформы .NET Framework. Указать платформу .NET Framework в качестве необходимого компонента при установке приложения можно одним из следующих способов:
 
     - использовать [развертывание ClickOnce](#clickonce-deployment) (предусмотрено в Visual Studio);
+
+    - Создание [InstallAware проекта](#installaware-deployment) (бесплатного выпуска для пользователей Visual Studio)
 
     - создать [проект InstallShield](#installshield-deployment) (предусмотрено в Visual Studio);
 
@@ -118,7 +111,7 @@ ms.lasthandoff: 07/28/2017
  Эти методы развертывания подробно рассмотрены в следующих подразделах.
 
 ## <a name="setting-a-dependency-on-the-net-framework"></a>Установка зависимости от .NET Framework
-Если для развертывания приложения используется ClickOnce, InstallShield или WiX, можно добавить зависимость от .NET Framework, чтобы платформу можно было установить в ходе установки приложения.
+При использовании для развертывания приложения ClickOnce, InstallAware, InstallShield или WiX можно добавить зависимость от .NET Framework, чтобы его можно установить как часть приложения.
 
 ### <a name="clickonce-deployment"></a>развертывание ClickOnce
  Развертывание ClickOnce доступно для проектов, созданных при помощи Visual Basic и Visual C#, но недоступно для Visual C++.
@@ -143,6 +136,10 @@ ms.lasthandoff: 07/28/2017
 
 8.  В диалоговом окне **Страницы свойств** выберите **ОК**.
 
+<a name="installaware"></a> 
+### <a name="installaware-deployment"></a>InstallAware развертывания
+InstallAware создает приложение Windows (APPX), установщика Windows (MSI), собственный код (EXE) и пакетов App-V (Application Virtualization) из одного источника. Легко [включать любой версии платформы .NET Framework](https://www.installaware.com/one-click-pre-requisite-installer.htm) в настройках, при необходимости настроить установку по [редактирования скриптов по умолчанию](https://www.installaware.com/msicode.htm). Например InstallAware предустановку сертификатов в Windows 7, без которого происходит сбой установки .NET Framework 4.7. Дополнительные сведения о InstallAware см. в разделе [InstallAware установщика](https://www.installaware.com/) веб-сайта.
+
 ### <a name="installshield-deployment"></a>Развертывание InstallShield
  Чтобы выбрать развертывание InstallShield и добавить зависимость от .NET Framework выполните в Visual Studio следующие действия.
 
@@ -152,14 +149,14 @@ ms.lasthandoff: 07/28/2017
 
 3.  В поле **Имя** введите имя для своего проекта и выберите **ОК**.
 
-4.  Если вы первый раз создаете проект установки и развертывания, выберите **Перейти к InstallShield** или **Включить InstallShield Limited Edition** , чтобы скачать InstallShield Limited Edition для вашей версии Microsoft Visual Studio. Перезапустите Visual Studio.
+4.  Если вы создаете проект установки и развертывания в первый раз, выберите **перейти к InstallShield** или **Включение InstallShield Limited Edition** загрузить InstallShield Limited Edition для вашей версии Microsoft Visual Studio. Перезапустите Visual Studio.
 
 5.  Перейдите к мастеру **Помощник по проектам** и пункт **Файлы приложения** , чтобы добавить выходной элемент проекта. С помощью этого мастера можно настроить и другие атрибуты проекта.
 
 6.  Перейдите в окно **Требования установки** и выберите операционные системы и версию платформы .NET Framework, которую необходимо установить.
 
 7.  Откройте контекстное меню для проекта установки и выберите **Сборка**.
-
+ 
 <a name="wix"></a> 
 ### <a name="windows-installer-xml-wix-deployment"></a>Развертывание с помощью Windows Installer XML (WiX)
  Набор инструментов Windows Installer XML (WiX) собирает установочные пакеты Windows из исходного кода XML. WiX поддерживает среду командной строки, которая может быть интегрирована в процесс сборки для сборки пакетов установки MSI и MSM. С помощью WiX можно [указать .NET Framework в качестве необходимого компонента](http://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html)или [создать формирователь цепочки](http://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) для полного управления развертыванием .NET Framework. Дополнительные сведения о WiX см. на веб-сайте [набора инструментов Windows Installer XML (WiX)](http://wixtoolset.org/) .
@@ -251,6 +248,8 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 |Версия|Значение DWORD "Release"|
 |-------------|--------------------------------|
+|.NET framework установлены в центре обновления Windows 10 Осень создатели 4.7.1|461308|
+|Платформа .NET framework установлена во всех версиях ОС, отличные от центра обновления Windows 10 Осень создатели 4.7.1|461310|
 |.NET Framework 4.7 установлена в обновлении Windows 10 Creators Update|460798|
 |.NET Framework 4.7 установлена во всех версиях ОС, за исключением обновления Windows 10 Creators Update|460805|
 |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] установлена в выпуске Windows 10 Anniversary Edition|394802|
@@ -275,11 +274,13 @@ Name: Release
 Type: DWORD
 ```
 
- Чтобы определить, установлен ли окончательный выпуск языкового пакета для [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 или 4.7, проверьте значение DWORD раздела RELEASE, описанное в предыдущем разделе ([Обнаружение .NET Framework](#detect_net)).
+ Чтобы определить, установлен ли окончательный выпуск языкового пакета для [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 4.7 или 4.7.1, проверьте, значение выпуска раздела значение DWORD, описанные в предыдущем разделе [обнаружение .NET Framework](#detect_net).
 
 <a name="chain_langpack"></a> 
 ### <a name="chaining-the-language-packs-to-your-app-setup"></a>Привязка языковых пакетов к установке приложения
  Платформа .NET Framework предоставляет набор автономных исполняемых файлов языковых пакетов, содержащих локализованные ресурсы для конкретных языков и региональных параметров. Эти пакеты можно загрузить в центре загрузки корпорации Майкрософт:
+
+- [Языковые пакеты .NET framework 4.7.1](http://go.microsoft.com/fwlink/p/?LinkId=852090)
 
 - [Языковые пакеты .NET Framework 4.7](http://go.microsoft.com/fwlink/p/?LinkId=825306)
 
@@ -325,7 +326,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |5100|Компьютер пользователя не отвечает системным требованиям.|
 
 #### <a name="download-error-codes"></a>Коды ошибок загрузки
- См. следующие разделы в библиотеке MSDN:
+ См. следующие разделы:
 
 - [Коды ошибок Background Intelligent Transfer Service (BITS)](http://go.microsoft.com/fwlink/?LinkId=180946)
 
@@ -334,17 +335,17 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 - [Коды ошибок WinHttp](http://go.microsoft.com/fwlink/?LinkId=180948)
 
 #### <a name="other-error-codes"></a>Другие коды ошибок
- См. следующие разделы в библиотеке MSDN:
+ См. следующие разделы:
 
 - [Коды ошибок установщика Windows](http://go.microsoft.com/fwlink/?LinkId=180949)
 
 - [Коды результатов агента обновления Windows](http://go.microsoft.com/fwlink/?LinkId=180951)
 
 ## <a name="uninstalling-the-net-framework"></a>Удаление .NET Framework
- Начиная с [!INCLUDE[win8](../../../includes/win8-md.md)], удалить [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 или 4.7 можно с помощью пункта **Включение или отключение компонентов Windows** в панели управления. В предыдущих версиях Windows можно удалить [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 или 4.7, воспользовавшись командой **Установка и удаление программ** на панели управления.
+ Начиная с [!INCLUDE[win8](../../../includes/win8-md.md)], можно удалить [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 4.7 или 4.7.1 с помощью **Включение или отключение компонентов** панели управления. В предыдущих версиях Windows, можно удалить [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 4.7 или 4.7.1 с помощью **Установка и удаление программ** панели управления.
 
 > [!IMPORTANT]
-> Для Windows 7 и более ранних операционных систем при удалении [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2 или 4.7 файлы [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] не восстанавливаются, как и при удалении [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] не восстанавливаются файлы [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Чтобы вернуться к более старой версии, необходимо переустановить платформу со всеми обновлениями.
+> Для Windows 7 и более ранних операционных систем при удалении [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 или 4.7.1 не восстанавливаются [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] файлы и удаление [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] не восстанавливаются [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] файлов. Чтобы вернуться к более старой версии, необходимо переустановить платформу со всеми обновлениями.
 
 ## <a name="appendix"></a>Приложение
 
@@ -399,10 +400,9 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |3082|Испанский (Испания, современная сортировка)|es|
 
 ## <a name="see-also"></a>См. также
- [Руководство по развертыванию для администраторов](../../../docs/framework/deployment/guide-for-administrators.md)   
- [Требования к системе для .NET Framework](../../../docs/framework/get-started/system-requirements.md)   
- [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md)   
- [Устранение неполадок заблокированных установок и удалений .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)   
- [Уменьшение числа перезагрузок при установке платформы .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)   
+ [Руководство по развертыванию для администраторов](../../../docs/framework/deployment/guide-for-administrators.md)  
+ [Требования к системе](../../../docs/framework/get-started/system-requirements.md)  
+ [Установите .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md)  
+ [Устранение неполадок с заблокированными установками и удалениями .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
+ [Уменьшение числа перезагрузок при установке платформы .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)  
  [Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
-

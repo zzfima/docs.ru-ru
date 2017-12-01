@@ -1,59 +1,61 @@
 ---
-title: "Состояния управляемых потоков | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "работа с потоками [платформа .NET Framework], состояния"
+title: "Состояния управляемых потоков"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: threading [.NET Framework], states
 ms.assetid: 63890d5e-6025-4a7c-aaf0-d8bfd54b455f
-caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 073fb19ef34ba32ccb5d5664413718a436563770
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Состояния управляемых потоков
-Свойство <xref:System.Threading.Thread.ThreadState%2A?displayProperty=fullName> предоставляет битовую маску, которая указывает текущее состояние потока. Поток постоянно находится по крайней мере в одном из возможных состояний, указанных в перечислении <xref:System.Threading.ThreadState>, и может иметь несколько состояний одновременно.  
+# <a name="managed-thread-states"></a>Состояния управляемых потоков
+Свойство <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> предоставляет битовую маску, которая указывает текущее состояние потока. Поток постоянно находится по крайней мере в одном из возможных состояний, указанных в перечислении <xref:System.Threading.ThreadState> , и может иметь несколько состояний одновременно.  
   
 > [!IMPORTANT]
 >  Состояние потока используется только в некоторых сценариях отладки. Не используйте в коде состояния потоков для синхронизации действий потоков.  
   
- При создании управляемого потока он находится в состоянии <xref:System.Threading.ThreadState>. Поток остается в состоянии <xref:System.Threading.ThreadState>, пока не будет переведен в состояние запуска операционной системой. Вызов метода <xref:System.Threading.Thread.Start%2A> служит для того, чтобы сообщить системе, что поток можно запустить. При этом состояние потока не меняется.  
+ При создании управляемого потока он находится в состоянии <xref:System.Threading.ThreadState.Unstarted> . Поток остается в состоянии <xref:System.Threading.ThreadState.Unstarted> , пока не будет переведен в состояние запуска операционной системой. Вызов метода <xref:System.Threading.Thread.Start%2A> служит для того, чтобы сообщить системе, что поток можно запустить. При этом состояние потока не меняется.  
   
  Неуправляемые потоки, которые входят в управляемую среду, уже запущены. После запуска потока его состояние можно изменить, совершив с ним определенные действия. В приведенной ниже таблице представлены действия, изменяющие состояние потока, а также его новые состояния.  
   
 |Действие|Новое состояние|  
-|--------------|---------------------|  
-|Вызывается конструктор класса <xref:System.Threading.Thread>.|<xref:System.Threading.ThreadState>|  
-|Другой поток вызывает метод <xref:System.Threading.Thread.Start%2A?displayProperty=fullName>.|<xref:System.Threading.ThreadState>|  
-|Поток отвечает на <xref:System.Threading.Thread.Start%2A?displayProperty=fullName> и начинает выполняться.|<xref:System.Threading.ThreadState>|  
-|Поток вызывает метод <xref:System.Threading.Thread.Sleep%2A?displayProperty=fullName>.|<xref:System.Threading.ThreadState>|  
-|Поток вызывает метод <xref:System.Threading.Monitor.Wait%2A?displayProperty=fullName> другого объекта.|<xref:System.Threading.ThreadState>|  
-|Поток вызывает метод <xref:System.Threading.Thread.Join%2A?displayProperty=fullName> другого потока.|<xref:System.Threading.ThreadState>|  
-|Другой поток вызывает метод <xref:System.Threading.Thread.Suspend%2A?displayProperty=fullName>.|<xref:System.Threading.ThreadState>|  
-|Поток отвечает на запрос <xref:System.Threading.Thread.Suspend%2A?displayProperty=fullName>.|<xref:System.Threading.ThreadState>|  
-|Другой поток вызывает метод <xref:System.Threading.Thread.Resume%2A?displayProperty=fullName>.|<xref:System.Threading.ThreadState>|  
-|Другой поток вызывает метод <xref:System.Threading.Thread.Abort%2A?displayProperty=fullName>.|<xref:System.Threading.ThreadState>|  
-|Поток отвечает на <xref:System.Threading.Thread.Abort%2A?displayProperty=fullName>.|<xref:System.Threading.ThreadState>, а затем <xref:System.Threading.ThreadState>|  
+|------------|-------------------------|  
+|Вызывается конструктор класса <xref:System.Threading.Thread> .|<xref:System.Threading.ThreadState.Unstarted>|  
+|Другой поток вызывает метод <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>.|<xref:System.Threading.ThreadState.Unstarted>|  
+|Поток отвечает на <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> и начинает выполнение.|<xref:System.Threading.ThreadState.Running>|  
+|Поток вызывает метод <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>.|<xref:System.Threading.ThreadState.WaitSleepJoin>|  
+|Поток вызывает метод <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> на другом объекте.|<xref:System.Threading.ThreadState.WaitSleepJoin>|  
+|Поток вызывает метод <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> в другом потоке.|<xref:System.Threading.ThreadState.WaitSleepJoin>|  
+|Другой поток вызывает метод <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>.|<xref:System.Threading.ThreadState.SuspendRequested>|  
+|Поток отвечает на <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> запроса.|<xref:System.Threading.ThreadState.Suspended>|  
+|Другой поток вызывает метод <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType>.|<xref:System.Threading.ThreadState.Running>|  
+|Другой поток вызывает метод <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.|<xref:System.Threading.ThreadState.AbortRequested>|  
+|Поток отвечает на <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.|<xref:System.Threading.ThreadState.Aborted>, а затем <xref:System.Threading.ThreadState.Stopped>|  
   
- Так как состоянию <xref:System.Threading.ThreadState> соответствует значение 0, для определения этого состояния невозможно применить побитовую проверку. Вместо этого можно использовать следующий тест \(на псевдокоде\):  
+ Так как состоянию <xref:System.Threading.ThreadState.Running> соответствует значение 0, для определения этого состояния невозможно применить побитовую проверку. Вместо этого можно использовать следующий тест (на псевдокоде):  
   
 ```  
 if ((state & (Unstarted | Stopped)) == 0)   // implies Running     
 ```  
   
- Как правило, поток одновременно имеет более одного состояния. Например, если поток заблокируется при вызове <xref:System.Threading.Monitor.Wait%2A?displayProperty=fullName> и другой поток вызывает метод <xref:System.Threading.Thread.Abort%2A> того же потока, этот поток будет находиться в состояниях <xref:System.Threading.ThreadState> и <xref:System.Threading.ThreadState> одновременно. В этом случае, как только поток выполнит возврат из метода <xref:System.Threading.Monitor.Wait%2A> или его работа будет прервана, он получит исключение <xref:System.Threading.ThreadAbortException>.  
+ Как правило, поток одновременно имеет более одного состояния. Например, если поток заблокируется при <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> вызова, а другой поток вызывает метод <xref:System.Threading.Thread.Abort%2A> того же потока, поток будет находиться в <xref:System.Threading.ThreadState.WaitSleepJoin> и <xref:System.Threading.ThreadState.AbortRequested> состояний, в то же время. В этом случае, как только поток выполнит возврат из метода <xref:System.Threading.Monitor.Wait%2A> или его работа будет прервана, он получит исключение <xref:System.Threading.ThreadAbortException>.  
   
- Если поток был выведен из состояния <xref:System.Threading.ThreadState> в результате вызова метода <xref:System.Threading.Thread.Start%2A>, он не может вернуться в состояние <xref:System.Threading.ThreadState> ни при каких условиях. Поток никогда не может выйти из состояния <xref:System.Threading.ThreadState>.  
+ Если поток был выведен из состояния <xref:System.Threading.ThreadState.Unstarted> в результате вызова метода <xref:System.Threading.Thread.Start%2A>, он не может вернуться в состояние <xref:System.Threading.ThreadState.Unstarted> ни при каких условиях. Поток никогда не может выйти из состояния <xref:System.Threading.ThreadState.Stopped> .  
   
-## См. также  
- <xref:System.Threading.ThreadAbortException>   
- <xref:System.Threading.Thread>   
- <xref:System.Threading.ThreadState>   
- [Threading](../../../docs/standard/threading/index.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Threading.ThreadAbortException>  
+ <xref:System.Threading.Thread>  
+ <xref:System.Threading.ThreadState>  
+ [Работа с потоками](../../../docs/standard/threading/index.md)

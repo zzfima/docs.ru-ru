@@ -1,34 +1,35 @@
 ---
-title: "Как выполнить XSLT-преобразование с помощью сборки | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Как выполнить XSLT-преобразование с помощью сборки"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: f236296d604bc465973d17d63883e7b212b7f02d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как выполнить XSLT-преобразование с помощью сборки
-XSLT\-компилятор \(xsltc.exe\) компилирует таблицы стилей XSLT и создает сборку.  Сборку можно передать непосредственно методу <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=fullName>.  
+# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Как выполнить XSLT-преобразование с помощью сборки
+XSLT-компилятор (xsltc.exe) компилирует таблицы стилей XSLT и создает сборку. Сборку можно передать непосредственно методу <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>.  
   
-### Копирование XML\-файлов и XSLT\-файлов на локальный компьютер  
+### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>Копирование XML-файлов и XSLT-файлов на локальный компьютер  
   
--   Скопируйте XSLT\-файл на локальный компьютер и переименуйте его в Transform.xsl.  
+-   Скопируйте XSLT-файл на локальный компьютер и переименуйте его в Transform.xsl.  
   
-    ```  
+    ```xml  
     <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
       xmlns:msxsl="urn:schemas-microsoft-com:xslt"  
       xmlns:user="urn:my-scripts">  
@@ -93,9 +94,9 @@ XSLT\-компилятор \(xsltc.exe\) компилирует таблицы �
     </xsl:stylesheet>  
     ```  
   
--   Скопируйте XML\-файл на локальный компьютер и переименуйте его в `books.xml`.  
+-   Скопируйте XML-файл на локальный компьютер и переименуйте его в `books.xml`.  
   
-    ```  
+    ```xml  
     <?xml version="1.0"?>  
     <catalog>  
        <book id="bk101">  
@@ -136,9 +137,9 @@ XSLT\-компилятор \(xsltc.exe\) компилирует таблицы �
     </catalog>  
     ```  
   
-### Компиляция таблицы стилей с поддержкой скриптов  
+### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a>Компиляция таблицы стилей с поддержкой скриптов  
   
-1.  При выполнении следующей команды из командной строки создаются две сборки с именами `Transform.dll` и `Transform_Script1.dll` \(это действие выполняется по умолчанию.  Если не указано иное, имя класса и сборки по умолчанию совпадает с именем главной таблицы стилей\):  
+1.  При выполнении следующей команды из командной строки создаются две сборки с именами `Transform.dll` и `Transform_Script1.dll` (это действие выполняется по умолчанию. Если не указано иное, имя класса и сборки по умолчанию совпадает с именем главной таблицы стилей):  
   
     ```  
     xsltc /settings:script+ Transform.xsl  
@@ -150,11 +151,11 @@ XSLT\-компилятор \(xsltc.exe\) компилирует таблицы �
 xsltc /settings:script+ /class:Transform Transform.xsl  
 ```  
   
-### Включение скомпилированной сборки в виде ссылки во время компиляции кода  
+### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a>Включение скомпилированной сборки в виде ссылки во время компиляции кода  
   
 1.  Можно включить сборку в Visual Studio, добавив ссылку в обозревателе решений, или из командной строки.  
   
-2.  Если используется язык C\#, введите в командной строке следующее:  
+2.  Если используется язык C#, введите в командной строке следующее:  
   
     ```  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
@@ -166,7 +167,7 @@ xsltc /settings:script+ /class:Transform Transform.xsl
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-### Использование скомпилированной сборки в коде  
+### <a name="to-use-the-compiled-assembly-in-your-code"></a>Использование скомпилированной сборки в коде  
   
 1.  В следующем примере показано, как выполнить преобразование XSLT, используя скомпилированную таблицу стилей.  
   
@@ -185,10 +186,10 @@ xslt.Load(typeof(Transform))
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))  
 ```  
   
- в примере выше.  Дополнительные сведения о методе Assembly.Load см. в коде <xref:System.Reflection.Assembly.Load%2A>  
+ в примере выше. Дополнительные сведения о методе Assembly.Load см. в коде <xref:System.Reflection.Assembly.Load%2A>  
   
-## См. также  
- <xref:System.Xml.Xsl.XslCompiledTransform>   
- [XSLT\-компилятор \(xsltc.exe\)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)   
- [Преобразования XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)   
- [Построение из командной строки с помощью csc.exe](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Xml.Xsl.XslCompiledTransform>  
+ [XSLT-компилятор (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
+ [Преобразования XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
+ [Сборка из командной строки с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

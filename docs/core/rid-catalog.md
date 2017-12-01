@@ -6,12 +6,11 @@ ms.author: mairaw
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net-core
+ms.openlocfilehash: 067f9cfc283a14b7ea59a7454b7f593ce6eb5806
+ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
 ms.translationtype: HT
-ms.sourcegitcommit: 2943cc58d29323afb81f1c9ae7fc71b538851186
-ms.openlocfilehash: e1cb22d78ab9a28cbcd28a99b0b44415b5c46a4d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="net-core-rid-catalog"></a>Каталог идентификаторов сред выполнения (RID) в .NET Core
 
@@ -86,7 +85,7 @@ RID — это сокращение от *Runtime IDentifier* (идентифи
 Для использования идентификаторов RID необходимо знать, какие идентификаторы RID существуют. В платформу регулярно добавляются новые идентификаторы.
 Последнюю и полную версию см. в файле [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) в репозитории CoreFX.
 
-SDK для .NET Core 2.0 представляет концепцию переносных идентификаторов RID. Это новые значения, добавленными в схему RID, которые не привязаны к конкретной версии или дистрибутиву ОС. Их особенно удобно использовать при работе с несколькими дистрибутивами Linux.
+SDK для .NET Core 2.0 представляет концепцию переносных идентификаторов RID. Это новые значения, добавленными в схему RID, которые не привязаны к конкретной версии или дистрибутиву ОС. Они особенно полезна при работе с несколькими дистрибутивы Linux.
 
 Ниже представлен список наиболее распространенных RID, используемых для каждой ОС. Он не охватывает значения `arm` или `corert`.
 
@@ -111,6 +110,8 @@ SDK для .NET Core 2.0 представляет концепцию перен
   - `win10-x86`
   - `win10-arm`
   - `win10-arm64`
+
+В разделе [необходимых компонентов для .NET Core в Windows](windows-prerequisites.md) для получения дополнительной информации.
 
 ## <a name="linux-rids"></a>Идентификаторы RID для Linux
 
@@ -164,12 +165,19 @@ SDK для .NET Core 2.0 представляет концепцию перен
   - `linuxmint.18-x64`
   - `linuxmint.18.1-x64` (.NET Core 2.0 или более поздние версии)
 
-## <a name="os-x-rids"></a>Идентификаторы RID для OS X
+В разделе [необходимых компонентов для .NET Core для Linux](linux-prerequisites.md) для получения дополнительной информации.
 
-- `osx-x64` (.NET Core 2.0 или более поздние версии)
+## <a name="macos-rids"></a>идентификаторы RID macOS
+
+идентификаторы RID macOS использовать старые «OSX» фирменной символики.
+
+- `osx-x64`(.NET core 2.0 или более поздней версии, минимальная версия — `osx.10.12-x64`)
 - `osx.10.10-x64`
 - `osx.10.11-x64`
 - `osx.10.12-x64` (.NET Core 1.1 или более поздние версии)
+- `osx.10.13-x64`
+
+В разделе [необходимых компонентов для .NET Core на macOS](macos-prerequisites.md) для получения дополнительной информации.
 
 ## <a name="android-rids-net-core-20-or-later-versions"></a>Идентификаторы RID для Android (.NET Core 2.0 или более поздние версии)
 
@@ -177,5 +185,5 @@ SDK для .NET Core 2.0 представляет концепцию перен
 - `android.21`
 
 ## <a name="see-also"></a>См. также
- [Идентификаторы среды выполнения](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)
 
+[Идентификаторы среды выполнения](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)

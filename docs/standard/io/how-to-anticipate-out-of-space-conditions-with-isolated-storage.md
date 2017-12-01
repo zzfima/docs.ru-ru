@@ -1,51 +1,58 @@
 ---
-title: "Практическое руководство. Предупреждение нехватки места при изолированном хранении | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "хранилища данных, квоты"
-  - "изолированное хранилище, квоты"
-  - "количество используемых изолированных сохранений"
-  - "ограничение, накладываемое на используемое изолированное хранилище"
-  - "хранилища, квоты"
-  - "хранилища, условия нехватки места"
-  - "хранение данных с помощью изолированного хранилища, квоты"
-  - "сохранение данных с помощью изолированного хранилища, квоты"
-  - "свободное место в изолированном хранилище"
-  - "хранилища данных, условия нехватки места"
-  - "сохранение данных с помощью изолированного хранилища, условия нехватки места"
-  - "квоты для изолированного хранилища"
-  - "изолированное хранилище, условия нехватки места"
-  - "хранение данных с помощью изолированного хранилища, условия нехватки места"
+title: "Практическое руководство. Предупреждение нехватки места при изолированном хранении"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- data stores, quotas
+- isolated storage, quotas
+- quanitity of isolated storage used
+- limit on isolated storage used
+- stores, quotas
+- stores, out of space conditions
+- data storage using isolated storage, quotas
+- storing data using isolated storage, quotas
+- space remaining in isolated storage
+- data stores, out of space conditions
+- storing data using isolated storage, out of space conditions
+- quotas for isolated storage
+- isolated storage, out of space conditions
+- data storage using isolated storage, out of space conditions
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
-caps.latest.revision: 17
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: d813522d0aeb9bf37582c167760d44268df27039
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Предупреждение нехватки места при изолированном хранении
-Использующий изолированное хранилище код ограничен [квотой](../../../docs/standard/io/isolated-storage.md#quotas), определяющей максимальный размер ячейки данных, в которой располагаются файлы и каталоги изолированного хранилища.  Квота определяется политикой безопасности и конфигурируется администраторами.  Если при попытке записи данных превышен максимально допустимый размер, создается исключение <xref:System.IO.IsolatedStorage.IsolatedStorageException>, и операция завершается с ошибкой.  Это помогает предотвратить злонамеренные атаки типа "отказ в обслуживании", которые могут привести к отказу приложения от обслуживания запросов из\-за переполнения хранилища данных.  
+# <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Практическое руководство. Предупреждение нехватки места при изолированном хранении
+Код, использующий изолированное хранилище ограничен [квоты](../../../docs/standard/io/isolated-storage.md#quotas) , указывающее максимальный размер ячейки данных, в котором изолированных файлов хранения и каталоги существуют. Квота определяются политикой безопасности и конфигурируется администраторами. Если максимально допустимый размер превышен при попытке записи данных, <xref:System.IO.IsolatedStorage.IsolatedStorageException> исключение, и операция завершится ошибкой. Это помогает предотвратить атаки типа "отказ в обслуживании", может вызвать отказ запросов из-за переполнения хранилища данных приложения.  
   
- Чтобы помочь определить, завершится ли неудачей попытка записи по этой причине, класс <xref:System.IO.IsolatedStorage.IsolatedStorage> предоставляет три свойства, доступные только для чтения: <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A> и <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>.  Можно использовать данное свойство для определения, будет ли максимально допустимый размер хранилища превышен при попытке записи.  Следует иметь в виду, что доступ к изолированному хранению может быть параллельным. Поэтому к моменту попытки записи в оставшееся хранилище в нем свободное место, которое было рассчитано таким способом, может быть уже использовано.  Однако можно использовать максимальный размер хранилища для определения, является ли верхний предел на диске достигнутым.  
+ Чтобы помочь определить, является ли попытка записи по этой причине <xref:System.IO.IsolatedStorage.IsolatedStorage> класс предоставляет три свойства только для чтения: <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A>, и <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>. Эти свойства можно использовать для определения, будет ли максимально допустимый размер хранилища превышен при записи в хранилище. Имейте в виду, что изолированное хранилище может осуществляться одновременно. Таким образом можно вычислить объем хранилища, оставшиеся, дискового пространства может использовать по времени при попытке записи в хранилище. Тем не менее максимальный размер хранилища можно использовать для определения вероятности достижения ли верхний предел в доступное хранилище.  
   
- Свойство <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A> зависит от свидетельства о надлежащей работе сборки.  По этой причине следует получить это свойство только в объектах <xref:System.IO.IsolatedStorage.IsolatedStorageFile>, которые были созданы с помощью <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> или метода <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>.  Объекты <xref:System.IO.IsolatedStorage.IsolatedStorageFile>, созданные любым другим способом \(например, объекты, возвращенные методом <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A>\), не возвращают точный максимальный размер.  
+ <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A> Свойство зависит от свидетельство из сборки, для правильной работы. По этой причине следует получить это свойство только для <xref:System.IO.IsolatedStorage.IsolatedStorageFile> объекты, созданные с помощью <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A>, или <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> метод. <xref:System.IO.IsolatedStorage.IsolatedStorageFile>объекты, созданные другими способами (например, объекты, которые были возвращены из <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> метод) не будет возвращать точный максимальный размер.  
   
-## Пример  
- В следующем примере получается изолированное хранилище, создается несколько файлов и извлекается свойство <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>.  Размер оставшегося места выводится в байтах.  
+## <a name="example"></a>Пример  
+ В следующем примере получается изолированное хранилище, создается несколько файлов и извлекает <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A> свойство. Оставшееся место выводится в байтах.  
   
  [!code-cpp[Conceptual.IsolatedStorage#8](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source7.cpp#8)]
  [!code-csharp[Conceptual.IsolatedStorage#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source7.cs#8)]
  [!code-vb[Conceptual.IsolatedStorage#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source7.vb#8)]  
   
-## См. также  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>   
- [Изолированное хранилище](../../../docs/standard/io/isolated-storage.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+ [Изолированное хранилище](../../../docs/standard/io/isolated-storage.md)  
  [Практическое руководство. Получение хранилищ для изолированного хранения](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)

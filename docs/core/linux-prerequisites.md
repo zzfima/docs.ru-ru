@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
+ms.openlocfilehash: 04fdf26e150e6d489c0641588563f69f24835615
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 1b0379156f44b0a3e765f8d832c7a1ca74ee3598
-ms.openlocfilehash: d9da6ea27293e95e36ff8edc42ef8bafbc86c8ec
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="prerequisites-for-net-core-on-linux"></a>Необходимые компоненты для .NET Core в Linux
 
 В этой статье описываются зависимости, необходимые для разработки приложений .NET Core в Linux. Поддерживаемые дистрибутивы и версии Linux, а также перечисленные ниже зависимости относятся к двум способам разработки приложений .NET Core в Linux:
@@ -64,33 +62,35 @@ ms.lasthandoff: 09/08/2017
 
 ## <a name="linux-distribution-dependencies"></a>Зависимости дистрибутивов Linux
 
+Ниже должны быть примеры. Точные версии и имена могут немного отличаться на Ваш дистрибутив Linux, по выбору.
+
 ### <a name="ubuntu"></a>Ubuntu
 
 Для дистрибутивов Ubuntu должны быть установлены следующие библиотеки:
 
 * libunwind8
-* libunwind8-dev
-* gettext
-* libicu-dev
-* liblttng-ust-dev
-* libcurl4-openssl-dev
-* libssl-dev
-* uuid-dev
-* unzip
+* liblttng ust0
+* libcurl3
+* libssl1.0.0
+* libuuid1
+* libkrb5
+* zlib1g
+* libicu52 (для 14.X)
+* libicu55 (для 16.X)
+* libicu57 (для 17.X)
 
 ### <a name="centos"></a>CentOS
 
 Для дистрибутивов CentOS должны быть установлены следующие библиотеки:
 
-* deltarpm
-* epel-release
-* unzip
 * libunwind
-* gettext
-* libcurl-devel
-* openssl-devel
+* изменить lttng
+* libcurl
+* библиотеки OpenSSL
+* libuuid
+* krb5 библиотеки
+* libicu
 * zlib
-* libicu-devel
 
 Дополнительные сведения о зависимостях см. в статье об [автономных приложениях Linux](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
 
@@ -105,7 +105,7 @@ ms.lasthandoff: 09/08/2017
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>Установка с помощью скрипта установщика .NET Core
 
-Скрипты `dotnet-install` служат для установки цепочки инструментов CLI и общей среды выполнения без прав администратора. Скачать скрипты можно в [репозитории CLI GitHub](https://github.com/dotnet/cli/tree/rel/1.0.0/scripts/obtain).
+Скрипты `dotnet-install` служат для установки цепочки инструментов CLI и общей среды выполнения без прав администратора. Можно загрузить скрипт из: https://dot.net/v1/dotnet-install.sh
 
 Скрипт bash установщика используется в сценариях автоматизации и установки без прав администратора. Скрипт также считывает параметры PowerShell, чтобы их можно было использовать с этим скриптом в системах Linux и OS X.
 
@@ -633,4 +633,3 @@ ms.lasthandoff: 09/08/2017
 > Если при установке .NET Core 2.x в поддерживаемом дистрибутиве и версии Linux возникают проблемы, обратитесь к разделу с описанием [известных проблем в версии 2.0](https://github.com/dotnet/core/tree/master/release-notes/2.0) для используемого дистрибутива и версии. 
 >
 > Если при установке .NET Core 1.x в поддерживаемом дистрибутиве и версии Linux возникают проблемы, обратитесь к разделам с описанием [известных проблем в версии 1.0.0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) и [версии 1.0.1](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md) для используемого дистрибутива и версии.
-

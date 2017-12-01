@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 11/30/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
+ms.openlocfilehash: dbb77f57c7f3484930e1639da501ab828e1c2070
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: be8e2374f89366c6a98df900674a957bd2f531cc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="query-expression-basics"></a>Основы выражения запроса
 
@@ -32,11 +30,11 @@ ms.lasthandoff: 07/28/2017
   
 -   Извлечение подмножества элементов для получения новой последовательности без изменения отдельных элементов. Затем запрос может отсортировать или сгруппировать возвращаемую последовательность различными способами, как показано в следующем примере (предположим, что `scores` является `int[]`):  
   
-     [!code-cs[csrefQueryExpBasics#45](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_1.cs)]  
+     [!code-csharp[csrefQueryExpBasics#45](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_1.cs)]  
   
 -   Извлечение последовательности элементов, как и в предыдущем примере, но с преобразованием элементов в новый тип объекта. Например, запрос может извлекать только фамилии из определенных записей клиентов в источнике данных. Запрос также может извлекать полную запись и использовать ее для создания другого типа объекта в памяти или даже данных XML перед созданием заключительной последовательности результатов. В следующем примере показана трансформация `int` в `string`. Обратите внимание на новый тип `highScoresQuery`.  
   
-     [!code-cs[csrefQueryExpBasics#46](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_2.cs)]  
+     [!code-csharp[csrefQueryExpBasics#46](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_2.cs)]  
   
 -   Извлечение одноэлементного значения исходных данных, таких как:  
   
@@ -46,11 +44,11 @@ ms.lasthandoff: 07/28/2017
   
     -   Первый элемент, соответствующий условию, или сумма определенных значений в указанном наборе элементов. Например, следующий запрос возвращает количество оценок выше 80 из целочисленного массива `scores`:  
   
-     [!code-cs[csrefQueryExpBasics#47](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_3.cs)]  
+     [!code-csharp[csrefQueryExpBasics#47](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_3.cs)]  
   
      В предыдущем примере обратите внимание на использование скобок вокруг выражения запроса перед вызовом метода `Count`. Его также можно выразить, используя новую переменную для сохранения конкретного результата. Этот метод является более удобочитаемым, так как переменная, в которой хранится запрос, хранится отдельно от запроса, в котором хранится результат.  
   
-     [!code-cs[csrefQueryExpBasics#48](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_4.cs)]  
+     [!code-csharp[csrefQueryExpBasics#48](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_4.cs)]  
   
  В предыдущем примере запрос выполняется в вызове `Count`, так как `Count` должен выполнить итерацию результатов, чтобы определить количество элементов, возвращенных методом `highScoresQuery`.  
   
@@ -66,17 +64,17 @@ ms.lasthandoff: 07/28/2017
   
  В следующем примере кода показано простое выражение запроса с одним источником данных, одним предложением фильтрации, одним предложением упорядочения и без трансформации исходных элементов. Предложение `select` завершает запрос.  
   
- [!code-cs[csrefQueryExpBasics#49](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_5.cs)]  
+ [!code-csharp[csrefQueryExpBasics#49](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_5.cs)]  
   
  В предыдущем примере `scoreQuery` — *переменная запроса*, которую иногда называют просто *запросом*. В переменной запроса не хранятся фактические данные результата, которые получаются с помощью цикла `foreach`. Когда выполняется оператор `foreach`, результаты запроса не возвращаются с помощью переменной запроса `scoreQuery`. В этом случае они возвращаются с помощью переменной итерации `testScore`. Итерация переменной `scoreQuery` может выполняться во втором цикле `foreach`. Результаты будет теми же, если ни они, ни источник данных не изменяются.  
   
  В переменной запроса может храниться запрос, выраженный с помощью синтаксиса запроса или метода запроса, или их комбинации. В следующих примерах `queryMajorCities` и `queryMajorCities2` являются переменными запроса.  
   
- [!code-cs[csrefQueryExpBasics#50](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_6.cs)]  
+ [!code-csharp[csrefQueryExpBasics#50](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_6.cs)]  
   
  С другой стороны, в следующих примерах показаны переменные, которые не являются переменными запроса даже несмотря на то, что все они инициализируются запросом. Они не являются переменными запроса, так как в них хранятся результаты.  
   
- [!code-cs[csrefQueryExpBasics#51](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_7.cs)]  
+ [!code-csharp[csrefQueryExpBasics#51](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_7.cs)]  
   
  Дополнительные сведения о различных способах выражения запросов см. в разделе [Синтаксис запросов и синтаксис методов в LINQ](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
@@ -84,7 +82,7 @@ ms.lasthandoff: 07/28/2017
  
  В этой документации обычно явно указывается тип переменной запроса для того, чтобы продемонстрировать типичное отношение между переменной запроса и [предложением select](../language-reference/keywords/select-clause.md). Однако можно также использовать ключевое слов [var](../language-reference/keywords/var.md), чтобы указать компилятору вывести тип переменной запроса (или любой другой локальной переменной) во время компиляции. Например, ранее приведенный в данном разделе пример запроса также может быть выражен путем неявной типизации:  
   
- [!code-cs[csrefQueryExpBasics#52](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_8.cs)]  
+ [!code-csharp[csrefQueryExpBasics#52](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_8.cs)]  
   
  Дополнительные сведения см. в разделах [Неявно типизированные локальные переменные](../programming-guide/classes-and-structs/implicitly-typed-local-variables.md) и [Связи типов в операциях запроса LINQ](../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).  
   
@@ -92,13 +90,13 @@ ms.lasthandoff: 07/28/2017
  
  Выражение запроса должно начинаться с предложения `from`. Оно задает источник данных вместе с переменной диапазона. Переменная диапазона предоставляет каждый последующий элемент в исходной последовательности во время ее обзора. Переменная диапазона строго типизируется на основе типа элементов в источнике данных. В следующем примере переменная диапазона типизируется как `countries`, так как `Country` является массивом объектов `Country`. Так как переменная диапазона строго типизируется, для доступа к любым доступным элементам типа можно использовать оператор-точку.  
   
- [!code-cs[csrefQueryExpBasics#53](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_9.cs)]  
+ [!code-csharp[csrefQueryExpBasics#53](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_9.cs)]  
   
  Переменная диапазона находится в области до тех пор, пока запрос не завершится с помощью точки с запятой или предложения *continuation*.  
   
  Выражение запроса может содержать несколько предложений `from`. Используйте дополнительные предложения `from`, если каждый элемент в исходной последовательности является коллекцией или содержит коллекцию. Например, предположим, что имеется коллекция объектов `Country`, каждый из которых содержит коллекцию объектов `City` с именем `Cities`. Для выполнения запросов к объектам `City` в каждой коллекции `Country` используйте два предложения `from`, как показано ниже.  
   
- [!code-cs[csrefQueryExpBasics#54](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_10.cs)]  
+ [!code-csharp[csrefQueryExpBasics#54](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_10.cs)]  
   
  Дополнительные сведения см. в разделе [Предложение from](../language-reference/keywords/from-clause.md).  
   
@@ -110,18 +108,18 @@ ms.lasthandoff: 07/28/2017
  
  Используйте предложение `group` для получения последовательности групп, упорядоченных по указанному ключу. Ключом могут быть данные любого типа. Например, следующий запрос создает последовательность групп, содержащую один или несколько объектов `Country`, ключ для которых имеет значение `char`.  
   
- [!code-cs[csrefQueryExpBasics#55](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_11.cs)]  
+ [!code-csharp[csrefQueryExpBasics#55](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_11.cs)]  
   
  Дополнительные сведения о группировании см. в разделе [Предложение group](../language-reference/keywords/group-clause.md).  
   
 #### <a name="select-clause"></a>Предложение select  
  Используйте предложение `select` для получения всех других типов последовательностей. Простое предложение `select` просто создает последовательность с тем же типом объектов, что и у объектов, которые содержатся в источнике данных. В этом примере источник данных содержит объекты типа `Country`. Предложение `orderby` просто сортирует элементы в новом порядке, а предложение `select` создает последовательность переупорядоченных объектов `Country`.  
   
- [!code-cs[csrefQueryExpBasics#56](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_12.cs)]  
+ [!code-csharp[csrefQueryExpBasics#56](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_12.cs)]  
   
  Предложение `select` может использоваться для преобразования исходных данных в последовательности новых типов. Такое преобразование также называется *проекцией*. В следующем примере предложение `select` создает *проекцию* последовательности анонимных типов, которая содержит только подмножество полей оригинального элемента. Обратите внимание, что новые объекты инициализируются с помощью инициализатора объекта.  
   
- [!code-cs[csrefQueryExpBasics#57](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_13.cs)]  
+ [!code-csharp[csrefQueryExpBasics#57](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_13.cs)]  
   
  Дополнительные сведения обо всех методах использования предложения `select` для преобразования исходных данных см. в разделе [Предложение select](../language-reference/keywords/select-clause.md).  
   
@@ -129,7 +127,7 @@ ms.lasthandoff: 07/28/2017
  
  Ключевое слово `into` можно использовать в предложении `select` или `group` для создания временного идентификатора, в котором хранится запрос. Это действие рекомендуется выполнять, если требуется выполнить в запросе дополнительные операции запроса после операции группирования или выбора. В следующем примере объекты `countries` группируются в соответствии с численностью населения в диапазоны по 10 миллионов. После создания этих групп дополнительные предложения отфильтровывают некоторые группы, а затем сортируют группы в порядке возрастания. Чтобы выполнить эти дополнительные операции, требуется продолжение, предоставляемое с помощью `countryGroup`.  
   
- [!code-cs[csrefQueryExpBasics#58](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_14.cs)]  
+ [!code-csharp[csrefQueryExpBasics#58](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_14.cs)]  
   
  Дополнительные сведения см. в разделе [into](../language-reference/keywords/into.md).  
   
@@ -141,7 +139,7 @@ ms.lasthandoff: 07/28/2017
 
  Используйте предложение `where` для фильтрации элементов из источника данных по одному или нескольким выражениям предиката. Предложение `where` в следующем примере имеет один предикат с двумя условиями.  
   
- [!code-cs[csrefQueryExpBasics#59](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_15.cs)]  
+ [!code-csharp[csrefQueryExpBasics#59](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_15.cs)]  
   
  Дополнительные сведения см. в разделе [Предложение where](../language-reference/keywords/where-clause.md).  
   
@@ -149,7 +147,7 @@ ms.lasthandoff: 07/28/2017
 
  Используйте `orderby` предложение для сортировки результатов по возрастанию или убыванию. Также можно задать порядок дополнительной сортировки. В следующем примере выполняется основная сортировка объектов `country` по свойству `Area`. Затем выполняется дополнительная сортировка по свойству `Population`.  
   
- [!code-cs[csrefQueryExpBasics#60](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_16.cs)]  
+ [!code-csharp[csrefQueryExpBasics#60](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_16.cs)]  
   
  Ключевое слово `ascending` является необязательным, так как сортировка по умолчанию происходит по возрастанию, если не задан порядок сортировки. Дополнительные сведения см. в разделе [Предложение orderby](../language-reference/keywords/orderby-clause.md).  
   
@@ -157,7 +155,7 @@ ms.lasthandoff: 07/28/2017
 
  Используйте предложение `join` для связи или объединения элементов из одного источника данных с элементами из другого источника данных на основе сравнения на равенство определенных ключей в каждом элементе. В LINQ операции объединения выполняются в последовательностях объектов, элементы которых относятся к разным типам. После объединения двух последовательностей необходимо использовать оператор `select` или `group`, чтобы указать элемент для сохранения в выходной последовательности. Также можно использовать анонимный тип, чтобы объединить свойства каждого набора связанных элементов в новый тип для выходной последовательности. В следующем примере связываются объекты `prod`, свойство `Category` которых соответствует одной из категорий в массиве строк `categories`. Продукты, свойство `Category` которых не соответствует ни одной строке в `categories`, отфильтровываются. Оператор `select` формирует новый тип, свойства которого берутся как из `cat`, так и из `prod`.  
   
- [!code-cs[csrefQueryExpBasics#61](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_17.cs)]  
+ [!code-csharp[csrefQueryExpBasics#61](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_17.cs)]  
   
  Также можно выполнить групповое соединение путем сохранения результатов операции `join` во временную переменную, используя ключевое слово [into](../language-reference/keywords/into.md). Дополнительные сведения см. в разделе [Предложение join](../language-reference/keywords/join-clause.md).  
   
@@ -165,7 +163,7 @@ ms.lasthandoff: 07/28/2017
 
  Используйте предложение `let` для сохранения результата выражения, например вызов метода, в новую переменную диапазона. В следующем примере в переменную диапазона `firstName` сохраняется первый элемент массива строк, возвращенного с помощью `Split`.  
   
- [!code-cs[csrefQueryExpBasics#62](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_18.cs)]  
+ [!code-csharp[csrefQueryExpBasics#62](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_18.cs)]  
   
  Дополнительные сведения см. в разделе [Предложение let](../language-reference/keywords/let-clause.md).  
   
@@ -173,13 +171,12 @@ ms.lasthandoff: 07/28/2017
 
  Предложение запроса может само содержать выражение запроса, которое иногда называют *вложенным запросом*. Каждый вложенный запрос начинается с собственным предложением `from`, которое может указывать на источник данных, отличный от источника данных первого предложения `from`. Например, в следующем запросе показано выражение запроса, которое используется в операторе "select" для извлечения результатов операции группирования.  
   
- [!code-cs[csrefQueryExpBasics#63](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_19.cs)]  
+ [!code-csharp[csrefQueryExpBasics#63](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_19.cs)]  
   
  Дополнительные сведения см. в разделе [Практическое руководство. Вложенный запрос в операции группирования](perform-a-subquery-on-a-grouping-operation.md).  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../programming-guide/index.md)   
- [Выражения запросов LINQ](index.md)   
- [Ключевые слова запроса (LINQ)](../language-reference/keywords/query-keywords.md)   
+ [C# руководство по программированию](../programming-guide/index.md)  
+ [Выражения запросов LINQ](index.md)  
+ [Ключевые слова запроса (LINQ)](../language-reference/keywords/query-keywords.md)  
  [Общие сведения о стандартных операторах запросов](../programming-guide/concepts/linq/standard-query-operators-overview.md)
-

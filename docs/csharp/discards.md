@@ -1,5 +1,5 @@
 ---
-title: "Пустые переменные — руководство по языку C# | Microsoft Docs"
+title: "Пустые переменные — руководство по языку C#"
 description: "В этой статье приведены сведения о поддержке в C# пустых переменных (переменных, которым не присваиваются значения) и описаны способы их использования."
 keywords: ".NET, .NET Core"
 author: rpetrusha
@@ -9,21 +9,20 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
+ms.openlocfilehash: 800a27d2d186c738dceb6838aa669377a0c07b01
+ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
 ms.translationtype: HT
-ms.sourcegitcommit: 6170e096e36f8d054fdfe9cbd8311e6492e32a04
-ms.openlocfilehash: 3f8804f9b7522e385b145a9643dec942cc1aab9f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discards---c-guide"></a>Пустые переменные — руководство по языку C#
 
 Начиная с версии 7 язык C# поддерживает пустые переменные. Это временные фиктивные переменные, которые намеренно не используются в коде приложения. Пустые переменные эквивалентны переменным, которым не присвоены значения; пустые переменные не имеют значений. Так как пустая переменная по сути всего одна и этой переменной может даже не выделяться память, пустые переменные помогают расходовать память более экономно. Эти переменные делают код яснее, повышают его читаемость и упрощают его поддержку.
 
-Чтобы использовать пустую переменную, назначьте ей в качестве имени символ подчеркивания (`_`). Например, следующий вызов метода возвращает кортеж из трех элементов, где первое и второе значения представляют собой пустые переменные:
+Чтобы использовать пустую переменную, назначьте ей в качестве имени символ подчеркивания (`_`). Например, следующий вызов метода возвращает кортеж, в котором значения первого и второго, удаляет и *область* ранее объявленная переменная, задаваемый с соответствующим компонентом третьего, возвращенных  *GetCityInformation*:
 
 ```csharp
-(var _, _, area) = city.GetCityInformation(cityName);
+(_, _, area) = city.GetCityInformation(cityName);
 ```
 
 В C# 7 пустые переменные поддерживаются в присваиваниях в следующих контекстах:
@@ -39,13 +38,13 @@ ms.lasthandoff: 08/28/2017
 
 Пустые переменные особенно удобны при работе с кортежами, когда код вашего приложения использует одни элементы кортежа и игнорирует другие. Например, следующий метод `QueryCityDataForYears` возвращает кортеж из шести элементов: название города, его площадь, год, численность населения города в этом году, другой год и численность населения города в том году. В примере показано изменение численности населения за эти два года. Из доступных в кортеже данных нас не интересует площадь города, а название города и две даты известны нам уже на этапе разработки. Следовательно, нас интересуют только два значения численности населения, которые хранятся в кортеже. Остальные значения можно обработать как пустые переменные.  
 
-[!code-csharp[Кортеж и пустые переменные](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
+[!code-csharp[Tuple-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
 Подробнее о деконструкции кортежей с помощью пустых переменных: [Деконструкция кортежей и других типов](deconstruct.md#deconstructing-tuple-elements-with-discards).
 
 Метод `Deconstruct` класса, структуры или интерфейса также позволяет извлекать и деконструировать определенный набор данных из объекта. Пустые переменные можно использовать, когда вы хотите работать только с подмножеством деконструируемых значений. В следующем примере показана деконструкция объекта `Person` на четыре строки (имя, фамилия, город и область), но в качестве фамилии и области используются пустые переменные.
 
-[!code-csharp[Класс и пустые переменные](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/class-discard1.cs)]
+[!code-csharp[Class-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/class-discard1.cs)]
 
 Подробнее о деконструкции пользовательских типов с помощью пустых переменных: [Деконструкция кортежей и других типов](deconstruct.md#deconstructing-a-user-defined-type-with-discards).
 
@@ -55,7 +54,7 @@ ms.lasthandoff: 08/28/2017
 
 В следующем примере определяется метод `ProvidesFormatInfo`, который использует операторы [is](language-reference/keywords/is.md), чтобы узнать, предоставляет ли объект реализацию <xref:System.IFormatProvider> и не является ли он `null`. В примере также используется шаблон пустой переменной для обработки объектов любого другого типа с определенным значением.
 
-[!code-csharp[Шаблон пустой переменной](../../samples/snippets/csharp/programming-guide/discards/discard-pattern2.cs)]
+[!code-csharp[discard-pattern](../../samples/snippets/csharp/programming-guide/discards/discard-pattern2.cs)]
 
 ## <a name="calls-to-methods-with-out-parameters"></a>Вызовы методов с параметрами "out"
 
@@ -63,30 +62,29 @@ ms.lasthandoff: 08/28/2017
 
 В следующем примере вызывается метод [DateTime.TryParse(String, out DateTime)](<xref:System.DateTime.TryParse(System.String,System.DateTime@)>), который определяет, является ли строковое представление даты допустимым для текущего языка и региональных параметров. Так как этот пример связан только с проверкой строки даты и не включает анализ этой строки для получения самой даты, аргумент `out` метода является пустым.
 
-[!code-csharp[Пустые переменные с параметрами "out"](../../samples/snippets/csharp/programming-guide/discards/discard-out1.cs)]
+[!code-csharp[discard-with-out](../../samples/snippets/csharp/programming-guide/discards/discard-out1.cs)]
 
 ## <a name="a-standalone-discard"></a>Отдельная пустая переменная
 
 Вы можете использовать отдельную пустую переменную, чтобы указать, что переменную необходимо игнорировать. В следующем примере отдельная пустая переменная используется, чтобы игнорировать объект <xref:System.Threading.Tasks.Task>, возвращаемый асинхронной операцией. При этом подавляется исключение, которое выдает операция перед завершением.
 
-[!code-csharp[Отдельная пустая переменная](../../samples/snippets/csharp/programming-guide/discards/standalone-discard1.cs)]
+[!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard1.cs)]
 
 Обратите внимание, что `_` также является допустимым идентификатором. При использовании вне поддерживаемого контекста `_` считается не пустой, а действительной переменной. Если в области уже есть идентификатор с именем `_`, использование `_` в качестве отдельной пустой переменной может привести к следующим результатам:
 
 - Случайное изменение значения переменной `_` в области из-за присвоения ей значения пустой переменной. Пример:
 
-   [!code-csharp[Отдельная пустая переменная](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#1)]
+   [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#1)]
  
 - Ошибка компилятора из-за нарушения безопасности типов. Пример:
 
-   [!code-csharp[Отдельная пустая переменная](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
+   [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
  
 - Ошибка компилятора CS0136 "Невозможно объявить локальную переменную или параметр с именем "_" в этой области, так как это имя используется для определения локальной переменной или параметра во включающей локальной области". Пример:
 
-   [!code-csharp[Отдельная пустая переменная](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
+   [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 
 ## <a name="see-also"></a>См. также
 [Деконструкция кортежей и других типов](deconstruct.md)   
 [Ключевое слово `is`](language-reference/keywords/is.md)   
 [Ключевое слово `switch`](language-reference/keywords/switch.md)   
-

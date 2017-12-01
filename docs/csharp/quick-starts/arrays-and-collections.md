@@ -9,25 +9,26 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 51b190fba32186cb4c52ccd773274d9ae22c8efb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.custom: mvc
+ms.openlocfilehash: 228a9dd88d0a511492ccb8b70e0231278969acbe
+ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="c-quick-start-collections"></a>Краткое руководство по C#: коллекции #
 
-Это руководство содержит общие сведения о языке C# и классе <xref:System.Collections.Generic.List%601>.
+В этом кратком руководстве представляет собой введение в языке C# и основы <xref:System.Collections.Generic.List%601> класса.
 
-## <a name="a-simple-list-example"></a>Пример простого списка
+В этом кратком руководстве предполагается, что вы машины, которые можно использовать для разработки приложений. В разделе .NET [приступить к работе в течение 10 минут](https://www.microsoft.com/net/core) содержит инструкции по настройке в локальной среде разработки на Mac, ПК или Linux.
 
-> [!NOTE]
-> Если вы используете код, написанный на платформе [dot.net](https://dot.net/), у вас уже есть фрагмент, представленный в этом разделе. Перейдите к разделу [Изменение содержимого списка](#modify-list-contents).
-
-В этом занятии предполагается, что вы изучили краткие интернет-руководства и установили [пакет SDK для .NET Core](http://dot.net/core) и [Visual Studio Code](https://code.visualstudio.com/). 
+## <a name="a-basic-list-example"></a>Пример для базового списка.
 
 Создайте каталог с именем **list-quickstart**. Откройте этот каталог и выполните команду `dotnet new console`.
 
+> [!NOTE]
+> Если вы выполнили [начало работы с .NET через 10 минут](https://www.microsoft.com/net), вы можете продолжать использовать приложения myApp, которую вы только что создали.
+ 
 Откройте **Program.cs** в любом редакторе и замените существующий код следующим:
 
 ```csharp
@@ -213,10 +214,10 @@ foreach(var item in fibonacciNumbers)
 
 ## <a name="complete-challenge"></a>Выполнение задачи
 
-Пример решения можно [просмотреть в готовом примере кода на GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/list-quickstart/Program.cs).
+Пример решения можно [просмотреть в готовом примере кода на GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/list-quickstart/Program.cs#L13-L23).
 
 При каждой итерации цикла суммируются два последних целых числа в списке. Полученное значение добавляется в список. Цикл повторяется, пока в список не будут добавлены 20 элементов.
 
-Поздравляем! Вы выполнили задачи в руководстве по спискам.
+Поздравляем, вы выполнили краткого списка. Можно продолжить [Общие сведения о классах](introduction-to-classes.md) быстрый запуск в среде разработки.
 
 Дополнительные сведения о работе с типом `List` см. в разделе о [коллекциях](../../standard/collections/index.md) [руководства по .NET](../../standard/index.md). Также в нем описаны многие другие типы коллекций.

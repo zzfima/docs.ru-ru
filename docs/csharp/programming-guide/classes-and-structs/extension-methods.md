@@ -1,55 +1,37 @@
 ---
 title: "Методы расширения (Руководство по программированию в C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - methods [C#], adding to existing types
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 30058a461dddb872e76bef574273c62910e8b2c8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: d74c1d0760d4e776c2cf4c7dea1dac060c85a83c
-ms.openlocfilehash: 657f9ebfba5d6f49d3a88cb1cf790e4a0134a007
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="extension-methods-c-programming-guide"></a>Методы расширения (Руководство по программированию в C#)
 Методы расширения позволяют "добавлять" методы в существующие типы без создания нового производного типа, перекомпиляции и иного изменения первоначального типа. Методы расширения представляют собой особую разновидность статического метода, но вызываются так же, как методы экземпляра в расширенном типе. Для клиентского кода, написанного на языках C#, F# и Visual Basic, нет видимого различия между вызовом метода расширения и вызовом методов, фактически определенных в типе.  
   
- Самые обычные методы расширения — стандартные операторы запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], которые добавляют функции запросов в существующие типы <xref:System.Collections.IEnumerable?displayProperty=fullName> и <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>. Для использования стандартных операторов запросов их необходимо ввести в область действия с помощью директивы `using System.Linq`. Тогда каждый тип, реализующий тип <xref:System.Collections.Generic.IEnumerable%601>, будет иметь методы экземпляра, в частности <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A> и т. д. Эти дополнительные методы можно видеть в завершении операторов IntelliSense при вводе точки после экземпляра типа <xref:System.Collections.Generic.IEnumerable%601>, например <xref:System.Collections.Generic.List%601> или <xref:System.Array>.  
+ Самые обычные методы расширения — стандартные операторы запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], которые добавляют функции запросов в существующие типы <xref:System.Collections.IEnumerable?displayProperty=nameWithType> и <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Для использования стандартных операторов запросов их необходимо ввести в область действия с помощью директивы `using System.Linq`. Тогда каждый тип, реализующий тип <xref:System.Collections.Generic.IEnumerable%601>, будет иметь методы экземпляра, в частности <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A> и т. д. Эти дополнительные методы можно видеть в завершении операторов IntelliSense при вводе точки после экземпляра типа <xref:System.Collections.Generic.IEnumerable%601>, например <xref:System.Collections.Generic.List%601> или <xref:System.Array>.  
   
  В следующем примере показано, как вызывать метод стандартного оператора запроса `OrderBy` для массива целых чисел. Выражение в скобках называется лямбда-выражением. Многие стандартные операторы запроса принимают лямбда-выражения в качестве параметров, но это необязательно для методов расширения. Дополнительные сведения см. в разделе [Лямбда-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
- [!code-cs[csProgGuideExtensionMethods#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_1.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_1.cs)]  
   
  Методы расширения определяются как статические методы, но вызываются с помощью синтаксиса обращения к методу экземпляра. Их первый параметр определяет, с каким типом оперирует метод, и параметру предшествует модификатор [this](../../../csharp/language-reference/keywords/this.md). Методы расширения находятся в области действия, только если пространство имен было явно импортировано в исходный код с помощью директивы `using`.  
   
- В приведенном ниже примере показан метод расширения, определенный для класса <xref:System.String?displayProperty=fullName>. Обратите внимание, что этот метод определяется внутри невложенного, неуниверсального статического класса.  
+ В приведенном ниже примере показан метод расширения, определенный для класса <xref:System.String?displayProperty=nameWithType>. Обратите внимание, что этот метод определяется внутри невложенного, неуниверсального статического класса.  
   
- [!code-cs[csProgGuideExtensionMethods#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_2.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_2.cs)]  
   
  Метод расширения `WordCount` можно ввести в область действия с помощью следующей директивы `using`:  
   
@@ -89,7 +71,7 @@ using System.Linq;
   
  Если компилятор не может найти метод экземпляра с совпадающей сигнатурой, он выполняет привязку к совпадающему методу расширения, если такой существует.  
   
- [!code-cs[csProgGuideExtensionMethods#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_3.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_3.cs)]  
   
 ## <a name="general-guidelines"></a>Общие рекомендации  
  В общем, методы расширения рекомендуется реализовывать в ограниченном количестве и только при необходимости. Когда это возможно, клиентский код, служащий для расширения существующего типа, должен осуществлять расширение путем создания нового типа, производного от существующего. Дополнительные сведения см. в разделе [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  
@@ -105,12 +87,11 @@ using System.Linq;
  Для реализованной библиотеки классов не следует использовать методы расширения во избежание увеличения номера версии сборки. Если требуется добавить значительную функциональность в библиотеку, владельцем исходного кода которой вы являетесь, необходимо соблюдать стандартные правила .NET Framework по управлению версиями сборок. Дополнительные сведения см. в разделе [Версии сборок](https://msdn.microsoft.com/library/51ket42z).  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Parallel Programming Samples (содержится множество примеров методов расширения)](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)   
- [Лямбда-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
- [Общие сведения о стандартных операторах запроса](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)   
- [Conversion rules for Instance parameters and their impact](http://go.microsoft.com/fwlink/?LinkId=112385)   
- [Extension methods Interoperability between languages](http://go.microsoft.com/fwlink/?LinkId=112386)   
- [Extension methods and Curried Delegates](http://go.microsoft.com/fwlink/?LinkId=112387)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Parallel Образцы программирования (к ним относятся многие примеры методов расширения)](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
+ [Лямбда-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+ [Общие сведения о стандартных операторах запроса](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
+ [Правила преобразования для экземпляра параметров и их влияние](http://go.microsoft.com/fwlink/?LinkId=112385)  
+ [Методы расширения взаимодействие между языками](http://go.microsoft.com/fwlink/?LinkId=112386)  
+ [Методы расширения и делегаты, каррированные](http://go.microsoft.com/fwlink/?LinkId=112387)  
  [Extension method Binding and Error reporting](http://go.microsoft.com/fwlink/?LinkId=112388)
-

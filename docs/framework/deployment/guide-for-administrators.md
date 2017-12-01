@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: d208867789fc78a82a2e339596a5692280d95ff3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 07b7381ddc94e3bc40a4eb0ed546f9526b57600a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Руководство по развертыванию .NET Framework для администраторов
 В этой статье представлено пошаговое описание развертывания администратором платформы [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и системных зависимостей в сети с помощью Microsoft System Center Configuration Manager. В рамках этой статьи предполагается, что все целевые клиентские компьютеры соответствуют минимальным требованиям для .NET Framework. Список требований к программному обеспечению и оборудованию для установки [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] см. в разделе [Требования к системе](../../../docs/framework/get-started/system-requirements.md).  
@@ -39,8 +32,8 @@ ms.lasthandoff: 07/28/2017
   
  В этом разделе содержатся следующие подразделы.  
   
- [Процесс развертывания](#the_deployment_process)   
- [Развертывание .NET Framework](#deploying_in_a_test_environment)   
+ [Процесс развертывания](#the_deployment_process)  
+ [Развертывание .NET Framework](#deploying_in_a_test_environment)  
  [Создание коллекции](#creating_a_collection)  
  [Создание пакета и программы](#creating_a_package)  
  [Выбор точки распространения](#select_dist_point)  
@@ -145,8 +138,8 @@ ms.lasthandoff: 07/28/2017
 |**/norestart**|Запрещает программе установки автоматически перезагружать компьютер. При использовании этого параметра Configuration Manager должен обрабатывать перезагрузку компьютера.|  
 |**/chainingpackage** *PackageName*|Указывает имя пакета, осуществляющего привязку. Эта информация передается вместе с другими данными сеанса установки для тех, кто подписался на [программу улучшения качества программного обеспечения корпорации Майкрософт (CEIP)](http://go.microsoft.com/fwlink/p/?LinkId=248244). Если в имени пакета присутствуют пробелы, в качестве разделителей необходимо использовать двойные кавычки (например, **/chainingpackage "Chaining Product"**).|  
   
- На этих этапах создается пакет с именем .NET Framework 4.5. Программа развертывает автоматическую установку .NET Framework 4.5. При автоматической установке пользователи не взаимодействуют с процедурой установки, и привязываемое приложение должно захватить код возврата и обработать перезагрузку; см. в библиотеке MSDN раздел с описанием [получения сведений о ходе выполнения из пакета установки](http://go.microsoft.com/fwlink/?LinkId=179606).  
-  
+ На этих этапах создается пакет с именем .NET Framework 4.5. Программа развертывает автоматическую установку .NET Framework 4.5. При автоматической установке пользователи не взаимодействуют с процедурой установки, и привязываемое приложение должно захватить код возврата и обработать перезагрузку; в разделе [получение сведений о ходе выполнения из пакета установки](http://go.microsoft.com/fwlink/?LinkId=179606).  
+ 
 <a name="select_dist_point"></a>   
 ### <a name="select-a-distribution-point"></a>Выбор точки распространения  
  Для распространения пакета и программы на клиентских компьютерах необходимо сначала назначить систему сайта в качестве точки распространения, после чего передать на нее пакет и программу.  
@@ -236,7 +229,7 @@ ms.lasthandoff: 07/28/2017
 ### <a name="log-file-locations"></a>Расположение файлов журнала  
  Во время установки [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] создаются следующие файлы журнала:  
   
- %temp%\Microsoft .NET Framework 4.5*.txt   
+ %temp%\Microsoft .NET Framework 4.5*.txt  
  %temp%\Microsoft .NET Framework 4.5\*.html  
   
  Для сбора файлов журнала [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и создания CAB-файла, уменьшающего размер файлов, можно использовать [средство сбора журналов](http://www.microsoft.com/download/details.aspx?id=12493).  
@@ -272,6 +265,5 @@ ms.lasthandoff: 07/28/2017
 -   [Коды результатов агента обновления Windows](http://technet.microsoft.com/library/cc720442.aspx)  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по развертыванию для разработчиков](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
+ [Руководство по развертыванию для разработчиков](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  [Требования к системе](../../../docs/framework/get-started/system-requirements.md)
-

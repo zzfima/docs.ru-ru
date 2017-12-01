@@ -1,12 +1,9 @@
 ---
 title: "среда CLR"
-ms.custom: 
-ms.date: 03/30/2017
+ms.custom: updateeachrelease
+ms.date: 10/17/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - compiling source code, runtime functionality
@@ -21,16 +18,14 @@ helpviewer_keywords:
 - source code execution
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
-caps.latest.revision: 24
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: dc103d1fc853cd98f899e75d08dbfaf4dd9230d0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 98c9e59342c1a336fc6889464fce529feebc2414
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="common-language-runtime-clr"></a>Среда CLR
 .NET Framework предоставляет среду выполнения (среду CLR), которая выполняет код и предлагает службы, облегчающие процесс разработки.  
@@ -81,7 +76,7 @@ ms.lasthandoff: 08/21/2017
 |4|4|  
 |4.5 (включая 4.5.1 и 4.5.2)|4|  
 |4.6 (включая 4.6.1 и 4.6.2)|4|
-|4.7|4|  
+|4.7 (включая 4.7.1)|4|  
   
 ## <a name="related-topics"></a>Связанные разделы  
   
@@ -94,4 +89,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Версии и зависимости](../../docs/framework/migration-guide/versions-and-dependencies.md)
-

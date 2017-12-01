@@ -3,16 +3,15 @@ title: "Команда dotnet-add reference — CLI .NET Core"
 description: "Команду dotnet add reference удобно использовать для добавления ссылок между проектами."
 author: mairaw
 ms.author: mairaw
-ms.date: 08/13/2017
+ms.date: 09/19/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 9c6b0f434a9d6b1431e375ec6a437497aaddfc61
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 18e3ce22c1b9a4506b2690262d8d0c4e13a58ed1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/14/2017
 
 `PROJECT`
 
-Указывает файл проекта. Если он не указан, команда будет искать текущий каталог для него.
+Указывает файл проекта. Если он не указан, команда ищет текущий каталог для него.
 
 `PROJECT_REFERENCES`
 
@@ -64,7 +63,7 @@ ms.lasthandoff: 08/14/2017
 
 `dotnet add app/app.csproj reference lib/lib.csproj`
 
-Добавление нескольких ссылок на проект:
+Добавьте несколько ссылок проекта на проект в текущем каталоге:
 
 `dotnet add reference lib1/lib1.csproj lib2/lib2.csproj`
 

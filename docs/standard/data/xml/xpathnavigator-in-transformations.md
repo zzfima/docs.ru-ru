@@ -1,38 +1,39 @@
 ---
-title: "XPathNavigator в преобразованиях | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "XPathNavigator в преобразованиях"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 09f89708607ada18181bc6605994c7908e1dd14b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# XPathNavigator в преобразованиях
-Класс <xref:System.Xml.XPath.XPathNavigator> обеспечивает случайный доступ только для чтения и предназначен для использования в качестве входа в языке XSLT.  Он реализован в <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument> и <xref:System.Xml.XmlDocument>.  Класс <xref:System.Xml.XPath.XPathNavigator> основан на модели данных консорциума World Wide Web Consortium \(W3C\), описанной в разделе 5 рекомендаций по языку XPath.  
+# <a name="xpathnavigator-in-transformations"></a>XPathNavigator в преобразованиях
+Класс <xref:System.Xml.XPath.XPathNavigator> обеспечивает случайный доступ только для чтения и предназначен для использования в качестве входа в языке XSLT. Он реализован в <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument> и <xref:System.Xml.XmlDocument>. Класс <xref:System.Xml.XPath.XPathNavigator> основан на модели данных консорциума World Wide Web Consortium (W3C), описанной в разделе 5 рекомендаций по языку XPath.  
   
- Класс <xref:System.Xml.XPath.XPathNavigator> определяет модель курсора в любом хранилище и обеспечивает быстрые запросы XPath только для чтения к любому хранилищу данных.  <xref:System.Xml.XPath.XPathNavigator> также является классом, который используется для перебора фрагментов результирующего дерева.  
+ Класс <xref:System.Xml.XPath.XPathNavigator> определяет модель курсора в любом хранилище и обеспечивает быстрые запросы XPath только для чтения к любому хранилищу данных. <xref:System.Xml.XPath.XPathNavigator> также является классом, который используется для перебора фрагментов результирующего дерева.  
   
- API\-интерфейс позволяет получить данные из текущего узла в хранилище и перейти в связанные узлы.  <xref:System.Xml.XPath.XPathNavigator> \- модель стиля курсора, которая просматривает хранилище с помощью набора методов **Move**.  <xref:System.Xml.XPath.XPathNavigator> всегда размещается на узле.  Любой неудачно примененный метод **Move** оставляет <xref:System.Xml.XPath.XPathNavigator> без изменений.  
+ API-интерфейс позволяет получить данные из текущего узла в хранилище и перейти в связанные узлы. <xref:System.Xml.XPath.XPathNavigator> Модель стиля курсора, которая выполняет обход хранилища с помощью набора **переместить** методы. <xref:System.Xml.XPath.XPathNavigator> всегда размещается на узле. Любой **переместить** метод, не оставляет <xref:System.Xml.XPath.XPathNavigator> без изменений.  
   
- <xref:System.Xml.XPath.XPathNavigator> является классом, который используется для перебора фрагментов результирующего дерева.  Следующий образец кода создает фрагмент результирующего дерева в таблице стилей путем вызова функции с параметром `fragment`, который содержит XML.  
+ <xref:System.Xml.XPath.XPathNavigator> является классом, который используется для перебора фрагментов результирующего дерева. Следующий образец кода создает фрагмент результирующего дерева в таблице стилей путем вызова функции с параметром `fragment`, который содержит XML.  
   
-## test.xsl  
+## <a name="testxsl"></a>test.xsl  
   
-```  
+```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
                 xmlns:msxsl ="urn:schemas-microsoft-com:xslt"  
                 xmlns:user="http://www.adventure-works.com"  
@@ -61,16 +62,15 @@ caps.handback.revision: 3
 </xsl:template>  
   
 </xsl:stylesheet>  
-  
 ```  
   
-## test.xml  
+## <a name="testxml"></a>test.xml  
   
-```  
+```xml  
 <root>Some text</root>  
 ```  
   
- Следующий код использует таблицу стилей **test.xsl** и входные данные **test.xml**.  
+ В следующем коде используется **test.xsl** таблицы стилей и **test.xml** входные данные.  
   
 ```vb  
 Imports System  
@@ -91,7 +91,6 @@ Public Class sample
         xslt.Transform(xd, Nothing, strmTemp, Nothing)  
     End Sub 'Main  
 End Class 'sample  
-  
 ```  
   
 ```csharp  
@@ -117,13 +116,12 @@ public class sample
 }  
 ```  
   
-## Вывод  
+## <a name="output"></a>Вывод  
  Результат преобразования находится в файле **out.xml**:  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>Joe  
-  
 ```  
   
-## См. также  
- [Реализация классом XslTransform XSLT\-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+## <a name="see-also"></a>См. также  
+ [Реализуемых классом XslTransform XSLT-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

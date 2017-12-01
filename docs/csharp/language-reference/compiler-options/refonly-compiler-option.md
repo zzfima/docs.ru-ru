@@ -1,30 +1,24 @@
 ---
 title: "-refonly (параметры компилятора C#)"
-ms.date: 2017-07-08
+ms.date: 07/08/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /refonly
-dev_langs:
-- CSharp
+f1_keywords: /refonly
 helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: c4c745416bda56f5f1b1b4ab8267274d972a990d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81a2252314ef51b5dc01fddc081eb881aa4431a7
-ms.openlocfilehash: af99f7565a43dd28b6271611bc8690e7a2e51482
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-
 # <a name="refonly-c-compiler-options"></a>/refonly (параметры компилятора C#)
 
-Параметр **/refonly** указывает на то, что в качестве основных выходных данных должна быть выведена базовая сборка, а не сборка реализации. Параметр `/refonly` автоматически отключает вывод файлов PDB, так как базовые сборки не могут выполняться.
+**/Refonly** параметр указывает, что ссылочную сборку должны выводиться вместо реализации сборки, как основные выходные файлы. Параметр `/refonly` автоматически отключает вывод файлов PDB, так как базовые сборки не могут выполняться.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -49,6 +43,5 @@ ms.lasthandoff: 08/16/2017
 Параметры `/refonly` и [`/refout`](refout-compiler-option.md) являются взаимоисключающими.
 
 ## <a name="see-also"></a>См. также
- [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)   
+ [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)  
  [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
-

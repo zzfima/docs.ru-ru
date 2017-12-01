@@ -1,22 +1,21 @@
 ---
 title: "Автоматическое управление памятью и сборка мусора"
-description: "Автоматическое управление памятью и сборка мусора"
+description: "Узнайте, как автоматическое памяти управление является одной из служб, которые общеязыковая среда выполнения предоставляет во время выполнения управляемых."
 keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
+author: dotnet-bot
+ms.author: dotnetcontent
 ms.date: 07/22/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: d095b0b6-2454-4e23-80b4-c9e8a447116c
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 36423ac3248b14a9bb95611d5997d06b927fa88e
-ms.lasthandoff: 03/02/2017
-
+ms.openlocfilehash: 30bcf08ebb4e05706d5b25e2f805474dd1ee428e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="automatic-memory-management-and-garbage-collection"></a>Автоматическое управление памятью и сборка мусора
 
 Автоматическое управление памятью реализуется одной из служб, которые среда CLR предоставляет в ходе управляемого выполнения. Сборщик мусора среды CLR управляет освобождением и выделением памяти для приложения. Для разработчиков это означает, что при разработке управляемого приложения не нужно писать код для управления памятью. Автоматическое управление памятью позволяет устранить распространенные проблемы, такие как не освобожденный по забывчивости объект, вызывающий утечку памяти, или попытки доступа к памяти для уже удаленного объекта. В этом разделе описано, каким образом сборщик мусора выделяет и освобождает память.
@@ -56,5 +55,4 @@ ms.lasthandoff: 03/02/2017
 [System.GC](xref:System.GC)
 
 [Сборка мусора в .NET](index.md)
-
 

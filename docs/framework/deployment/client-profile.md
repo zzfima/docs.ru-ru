@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - WPF [.NET Framework Client Profile]
 - WCF [.NET Framework Client Profile]
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - profile [.NET Framework Client Profile]
 - .NET Framework Client Profile
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 0c93019b2024029fd27d78ac191f0f99bc9b0ce9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ae285c931ccabf8d16250f3260a344f1bbbd6467
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework (клиентский профиль)
 Клиентский профиль .NET — это подмножество платформы .NET Framework, которое предоставлялось с [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] и более ранними версиями и было оптимизировано для клиентских приложений. .NET Framework — это платформа разработки для Windows, Windows Phone и Microsoft Azure, которая включает в себя управляемую среду выполнения приложений и библиотеку классов .NET Framework. В [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] и более ранних версиях предоставлялось два варианта развертывания: полная платформа .NET Framework и клиентский профиль. Клиентский профиль позволял ускорить развертывание и уменьшить установочные пакеты приложений по сравнению с полной платформой .NET Framework.  
@@ -43,8 +36,7 @@ ms.lasthandoff: 07/28/2017
  При установке [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] клиентский профиль платформы .NET Framework 4 обновляется до полной версии платформы .NET Framework. Сведения об установке [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] см. в разделе [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md).  
   
 ## <a name="see-also"></a>См. также  
- [Клиентский профиль .NET Framework (.NET Framework 4)](http://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx)   
- [Обзор настройки для различных версий в Visual Studio](http://msdn.microsoft.com/library/b1702c33-0672-4ebc-b779-2b324d6ea880)   
- [Устранение неполадок, связанных с настройкой для определенных версий платформы .NET Framework](http://msdn.microsoft.com/library/830e3e45-9a93-4279-a249-75b84599aefb)   
+ [Клиентский профиль .NET framework (.NET Framework 4)](http://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx)  
+ [Обзор настройки для различных версий в Visual Studio](http://msdn.microsoft.com/library/b1702c33-0672-4ebc-b779-2b324d6ea880)  
+ [Устранение неполадок, связанных с настройкой для определенных версий платформы .NET Framework](http://msdn.microsoft.com/library/830e3e45-9a93-4279-a249-75b84599aefb)  
  [Практическое руководство. Определение целевой версии .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)
-

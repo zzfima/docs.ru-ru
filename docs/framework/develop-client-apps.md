@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,16 +20,15 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: daf09f94b4c0854365274773f8c426cc07e8c6dd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: aba9547bcd96b9e8038bc973aa9ef971bb82f698
-ms.openlocfilehash: 891c783429c069d7c807a9c31aff45d02f518eee
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>Разработка клиентских приложений с использованием .NET Framework
 Существует несколько способов разработки приложений Windows с помощью платформы .NET Framework, которые будут выполняться на пользовательских компьютерах и устройствах. В этом разделе поясняются способы создания приложений Windows с помощью Windows Presentation Foundation (WPF) и Windows Forms. Однако с помощью .NET Framework вы можете создавать и веб-приложения, а также клиентские приложения для компьютеров и устройств, которые можно предоставлять пользователям через Магазин Windows и Магазин Windows Phone.  
@@ -62,9 +60,8 @@ ms.lasthandoff: 09/01/2017
  Способы разработки веб-приложений с помощью ASP.NET.  
   
 ## <a name="see-also"></a>См. также  
- [Переносимая библиотека классов](../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)   
- [Обзор](../../docs/framework/get-started/overview.md)   
- [Руководство по разработке для .NET Framework](../../docs/framework/development-guide.md)   
- [Практическое руководство. Создание классического приложения Windows](http://msdn.microsoft.com/library/47021403-eaca-4c34-946a-a26c42a64148)   
+ [Переносимая библиотека классов](../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)  
+ [Обзор набора средств Visual Studio для Unity](../../docs/framework/get-started/overview.md)  
+ [Руководство по разработке](../../docs/framework/development-guide.md)  
+ [Как: создание классического приложения Windows](http://msdn.microsoft.com/library/47021403-eaca-4c34-946a-a26c42a64148)  
  [Приложения служб Windows](../../docs/framework/windows-services/index.md)
-

@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
+ms.openlocfilehash: 58f76332a8f3717fe10788382552598d6693e7e3
+ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
 ms.translationtype: HT
-ms.sourcegitcommit: 3ca0dce8053b9b0ac36728d6b1e00021df66345d
-ms.openlocfilehash: c0a4eda863ca586db9f712ed55fe675872981300
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/19/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
-
 # <a name="c-tuple-types"></a>Типы кортежей в C# #
 
 Кортежи в C# — эти типы, которые определяются с помощью упрощенного синтаксиса. Преимущества: более простой синтаксис, правила преобразований с учетом количества (так называемой кратности) и типов элементов, а также единые правила для копий и назначений. При этом кортежи не поддерживают некоторые объектно-ориентированные идиомы, связанные с наследованием. Общие сведения см. в подразделе "Кортежи" раздела [Новые возможности C# 7](whats-new/csharp-7.md#tuples).
@@ -25,7 +23,7 @@ ms.lasthandoff: 08/19/2017
 В этом разделе вы узнаете, какие правила языка регулируют кортежи в C# 7 и каким образом их можно использовать, получите вводные рекомендации по работе с кортежами.
 
 > [!NOTE]
-> Для новых функций кортежа требуются типы @System.ValueTuple.
+> Для новых функций кортежа требуются типы <xref:System.ValueTuple>.
 > Для использования на платформах, которые не включают эти типы, необходимо добавить пакет NuGet [`System.ValueTuple`](https://www.nuget.org/packages/System.ValueTuple/).
 >
 > Это похоже на другие функции языка, использующие типы, предоставляемые на платформе. В качестве примеров можно привести функции `async` и `await`, использующие интерфейс `INotifyCompletion`, а также LINQ на базе `IEnumerable<T>`. Тем не менее по мере увеличения степени независимости .NET от платформы механизм доставки изменяется. Периодичность поставки новых выпусков .NET Framework не всегда совпадает с выпусками обновлений для компилятора языка. Если новые функции языка используют новые типы, эти типы будут предоставляться в виде пакетов NuGet при выпуске таких новых функций. Как только эти новые типы будут добавлены в стандартный API-интерфейс .NET и включены в состав платформы, требование обязательно использовать пакет NuGet будет снято.
@@ -48,7 +46,7 @@ ms.lasthandoff: 08/19/2017
 Структура `ValueTuple` включает поля с именами `Item1`, `Item2`, `Item3` и т. д., аналогичные свойствам, определенным в существующих типах `Tuple`.
 Только эти имена можно использовать для *неименованных кортежей*. Если никакие альтернативные имена полей кортежу не предоставлены, значит, вы создали неименованный кортеж:
 
-[!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#01_UnNamedTuple "Неименованный кортеж")]
+[!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#01_UnNamedTuple "Unnamed tuple")]
 
 Кортеж в предыдущем примере был инициализирован с помощью констант-литералов, и в нем не будут созданы имена элементов с помощью *проекций имен полей кортежа* на C# 7.1.
 
@@ -57,15 +55,15 @@ ms.lasthandoff: 08/19/2017
 В то же время у них есть синонимы для всех элементов, которым вы присвоили имена.
 Для создания именованного кортежа необходимо указать имя для каждого элемента. Один из способов — указать имена в процессе инициализации кортежа:
 
-[!code-csharp[NamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#02_NamedTuple "Именованный кортеж")]
+[!code-csharp[NamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#02_NamedTuple "Named tuple")]
 
 Эти синонимы обрабатываются компилятором и языком, что позволяет эффективно использовать именованные кортежи. Интегрированные среды разработки и редакторы читают эти семантические имена с помощью API Roslyn. Это позволяет ссылаться на элементы именованного кортежа по семантическим именам в любой части сборки. При создании компилированных выходных данных компилятор заменяет имена, определенные с помощью эквивалентов `Item*`. Скомпилированный MSIL не включает имена, которые вы присвоили этим элементам.
 
 Начиная с C# 7.1, имена полей для кортежа могут быть получены из переменных, которые используются для его инициализации. Они называются **[инициализаторами проекций кортежа](#tuple-projection-initializers)**. Следующий код создает кортеж `accumulation` с элементами `count` (целое значение) и `sum` (значение double).
 
-[!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectedTupleNames "Именованный кортеж")]
+[!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 
-Компилятор должен передавать созданные вами имена для кортежей, возвращаемых открытыми методами и свойствами. В подобных случаях компилятор добавляет к методу атрибут @System.Runtime.CompilerServices.TupleElementNames. Этот атрибут содержит свойство списка @System.Runtime.CompilerServices.TupleElementNames.TransformNames, которое содержит имена, присвоенные каждому элементу в кортеже.
+Компилятор должен передавать созданные вами имена для кортежей, возвращаемых открытыми методами и свойствами. В подобных случаях компилятор добавляет к методу атрибут <xref:System.Runtime.CompilerServices.TupleElementNamesAttribute>. Этот атрибут содержит свойство списка <xref:System.Runtime.CompilerServices.TupleElementNamesAttribute.TransformNames>, которое содержит имена, присвоенные каждому элементу в кортеже.
 
 > [!NOTE]
 > Средства разработки, такие как Visual Studio, также считывают эти метаданные и предоставляют IntelliSense и другие возможности, используя имена полей метаданных.
@@ -77,11 +75,11 @@ ms.lasthandoff: 08/19/2017
 Как правило, инициализаторы проекций кортежа работают с использованием переменной или имен полей в правой части оператора инициализации кортежа.
 Если задано явное имя, оно имеет приоритет над именем проекции. Например, в следующем инициализаторе элементы имеют значения `explicitFieldOne` и `explicitFieldTwo`, а не `localVariableOne` и `localVariableTwo`:
 
-[!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionExample_Explicit "Явно именованный кортеж")]
+[!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
 
-Во всех полях, где не указано явное имя, будет проецироваться применимое неявное имя. Обратите внимание, что необязательно указывать семантические имена как явно, так и неявно. Следующий инициализатор будет иметь имена полей `Item1` со значениями `42` (ответ на главный вопрос жизни, вселенной и всего такого) и `StringContent`:
+Во всех полях, где не указано явное имя, будет проецироваться применимое неявное имя. Обратите внимание, что необязательно указывать семантические имена как явно, так и неявно. Следующем инициализаторе будет иметь имена полей `Item1`, значение которого является `42` и `StringContent`, значение которого является «Ответ на все»:
 
-[!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#MixedTuple "смешанный кортеж")]
+[!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#MixedTuple "mixed tuple")]
 
 Существуют два условия, при которых имена полей кандидата не проецируются в поле кортежа.
 
@@ -90,7 +88,7 @@ ms.lasthandoff: 08/19/2017
 
 Эти условия позволяют избежать неоднозначности. Эти имена вызывали бы неоднозначность, если бы использовались в качестве имен полей для поля в кортеже. Ни одно из этих условий не вызовет ошибки времени компиляции. Семантические имена элементов без проецируемых имен не будут проецироваться.  Все это показано в приведенных ниже примерах.
 
-[!code-csharp[Неоднозначные](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "кортежи, где не выполнялись проекции")]
+[!code-csharp[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
 
 Эти ситуации не вызывают ошибок компилятора, так как это стало бы критическим изменением кода, написанного на C# 7.0, где проекции имен полей кортежа были недоступны.
 
@@ -100,14 +98,14 @@ ms.lasthandoff: 08/19/2017
 
 В приведенных ниже примерах можно использовать указанные переменные:
 
-[!code-csharp[VariableCreation](../../samples/snippets/csharp/tuples/tuples/program.cs#03_VariableCreation "Создание переменной")]
+[!code-csharp[VariableCreation](../../samples/snippets/csharp/tuples/tuples/program.cs#03_VariableCreation "Variable creation")]
 
 В первых двух переменных, `unnamed` и `anonymous`, семантические имена элементам не назначены. Имена полей — `Item1` и `Item2`.
 Последние две переменные, `named` и `differentName`, включают назначенные элементам семантические имена. Обратите внимание на то, что элементы в этих двух кортежах называются по-разному.
 
 Все четыре этих кортежа имеют одинаковое число элементов (так называемую кратность), а типы этих элементов идентичны. Таким образом, все эти назначения работают:
 
-[!code-csharp[VariableAssignment](../../samples/snippets/csharp/tuples/tuples/program.cs#04_VariableAssignment "Назначение переменной")]
+[!code-csharp[VariableAssignment](../../samples/snippets/csharp/tuples/tuples/program.cs#04_VariableAssignment "Variable assignment")]
 
 Обратите внимание на то, что имена кортежей не назначаются. Значения элементов назначаются в соответствии с порядком элементов в кортеже.
 
@@ -124,7 +122,7 @@ named = differentShape;
 
 Чаще всего кортежи используются как возвращаемое методом значение. Разберем конкретный пример. Рассмотрим метод, который вычисляет стандартное отклонение для последовательности чисел:
 
-[!code-csharp[StandardDeviation](../../samples/snippets/csharp/tuples/tuples/statistics.cs#05_StandardDeviation "Расчет стандартного отклонения")]
+[!code-csharp[StandardDeviation](../../samples/snippets/csharp/tuples/tuples/statistics.cs#05_StandardDeviation "Compute Standard Deviation")]
 
 > [!NOTE]
 > Код в этих примерах вычисляет стандартное отклонение неисправленной выборки.
@@ -135,7 +133,7 @@ named = differentShape;
 
 Существует альтернативная формула, которая вычисляет стандартное отклонение, используя только одно перечисление последовательности.  В результате этого вычисления выдаются два значения, поскольку оно перечисляет последовательность: сумма всех элементов в последовательности и сумма квадратов всех значений:
 
-[!code-csharp[SumOfSquaresFormula](../../samples/snippets/csharp/tuples/tuples/statistics.cs#06_SumOfSquaresFormula "Вычисление стандартного отклонения с использованием суммы квадратов")]
+[!code-csharp[SumOfSquaresFormula](../../samples/snippets/csharp/tuples/tuples/statistics.cs#06_SumOfSquaresFormula "Compute Standard Deviation using the sum of squares")]
 
 Эта версия перечисляет последовательность ровно один раз. В то же время этот код не слишком подходит для повторного использования. По мере работы вы узнаете, что во многих статистических вычислениях используется число элементов в последовательности, сумма последовательности и сумма квадратов последовательности. Выполним рефакторинг этого метода и напишем служебный метод, выдающий все три из этих значений.
 
@@ -143,15 +141,15 @@ named = differentShape;
 
 Обновим этот метод таким образом, чтобы все три значения, вычисляемые при перечислении, сохранялись в кортеж. В результате создается следующая версия:
 
-[!code-csharp[TupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#07_TupleVersion "Выполнение рефакторинга для использования кортежей")]
+[!code-csharp[TupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#07_TupleVersion "Refactor to use tuples")]
 
-Поддержка рефакторинга в Visual Studio позволяет легко извлекать функции основной статистики в закрытый метод. В результате вы получаете метод `private static`, возвращающий тип кортежа с тремя значениями — `Sum`, `SumOfSquares` и `Count`:
+Поддержка оптимизации кода Visual Studio позволяет легко извлечь функциональные возможности для статистики core частный метод. В результате вы получаете метод `private static`, возвращающий тип кортежа с тремя значениями — `Sum`, `SumOfSquares` и `Count`:
 
-[!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#08_TupleMethodVersion "После извлечения служебного метода")]
+[!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
  
 Язык позволяет использовать несколько дополнительных параметров, с помощью которых можно внести несколько быстрых изменений вручную. Во-первых, объявление `var` можно использовать для инициализации результата кортежа из вызова метода `ComputeSumAndSumOfSquares`. Кроме того, в методе `ComputeSumAndSumOfSquares` можно создать три дискретные переменные. Окончательная версия показана ниже:
 
-[!code-csharp[CleanedTupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#09_CleanedTupleVersion "После итоговой очистки")]
+[!code-csharp[CleanedTupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#09_CleanedTupleVersion "After final cleanup")]
 
 Окончательную версию можно применять к любому методу, которому требуются эти три значения, а также к любому их подмножеству.
 
@@ -187,11 +185,11 @@ private static (double, double, int) ComputeSumAndSumOfSquares(IEnumerable<doubl
 Вернуть последовательность с типом кортежа легко, а имена и типы элементов можно получить во время компиляции и с помощью средств IDE.
 В качестве примера рассмотрим приложение ToDo. Определите класс следующего вида — он будет представлять одну запись в списке дел ToDo:
 
-[!code-csharp[ToDoItem](../../samples/snippets/csharp/tuples/tuples/projectionsample.cs#14_ToDoItem "Пункт в списке дел")]
+[!code-csharp[ToDoItem](../../samples/snippets/csharp/tuples/tuples/projectionsample.cs#14_ToDoItem "To Do Item")]
 
 Мобильные приложения могут поддерживать компактную форму текущих пунктов в списке дел, когда отображается только заголовок. Этот запрос LINQ выполняет проекцию, включающую только идентификатор и заголовок. Эту модель очень хорошо демонстрирует метод, возвращающий последовательность кортежей:
 
-[!code-csharp[QueryReturningTuple](../../samples/snippets/csharp/tuples/tuples/projectionsample.cs#15_QueryReturningTuple "Запрос, возвращающий кортеж")]
+[!code-csharp[QueryReturningTuple](../../samples/snippets/csharp/tuples/tuples/projectionsample.cs#15_QueryReturningTuple "Query returning a tuple")]
 
 > [!NOTE]
 > В C# 7.1 проекции кортежей позволяют создавать именованные кортежи с помощью элементов аналогично именованию свойств в анонимных типах. В коде выше оператор `select` в проекции запросов создает кортеж с элементами `ID` и `Title`.
@@ -200,13 +198,13 @@ private static (double, double, int) ComputeSumAndSumOfSquares(IEnumerable<doubl
 
 ## <a name="deconstruction"></a>Деконструкция
 
-Все элементы в кортеже можно распаковать, выполнив *деконструкцию* возвращаемого методом кортежа. Деконструкцию кортежей можно выполнять двумя различными способами.  Во-первых, можно явно объявить тип каждого поля, заключив его в круглые скобки, чтобы создать дискретные переменные для каждого элемента в кортеже:
+Все элементы в кортеже можно распаковать, выполнив *деконструкцию* возвращаемого методом кортежа. Существует три различных подхода для разбора кортежей.  Во-первых, можно явно объявить тип каждого поля, заключив его в круглые скобки, чтобы создать дискретные переменные для каждого элемента в кортеже:
 
-[!code-csharp[Deconstruct](../../samples/snippets/csharp/tuples/tuples/statistics.cs#10_Deconstruct "Деконструкция")]
+[!code-csharp[Deconstruct](../../samples/snippets/csharp/tuples/tuples/statistics.cs#10_Deconstruct "Deconstruct")]
 
 Типизированные переменные для каждого поля в кортеже можно также объявить неявно, используя ключевое слово `var` за скобками:
 
-[!code-csharp[DeconstructToVar](../../samples/snippets/csharp/tuples/tuples/statistics.cs#11_DeconstructToVar "Деконструкция в переменную")]
+[!code-csharp[DeconstructToVar](../../samples/snippets/csharp/tuples/tuples/statistics.cs#11_DeconstructToVar "Deconstruct to Var")]
 
 Кроме того, в объявлении одной или всех переменных можно также свободно использовать ключевое слово `var`, заключив его в скобки. 
 
@@ -216,27 +214,42 @@ private static (double, double, int) ComputeSumAndSumOfSquares(IEnumerable<doubl
 
 Обратите внимание на то, что определенный тип использовать за скобками нельзя, даже если каждое поле в кортеже имеет одинаковый тип.
 
+Кортежи с существующие объявления также можно деконструирования:
+
+```csharp
+public class Point
+{
+    public int X { get; set; }
+    public int Y { get; set; }
+
+    public Point(int x, int y) => (X, Y) = (x, y);
+}
+```
+
+> [!WARNING]
+>  Нельзя смешивать существующим декларациям с объявлениями, заключенный в круглые скобки. К примеру, следующие запрещено: `(var x, y) = MyMethod();`. В результате получается ошибка CS8184, так как *x* объявлен внутри скобок и *y* ранее объявлено в другом месте.
+
 ### <a name="deconstructing-user-defined-types"></a>Деконструкция пользовательских типов
 
 Любой тип кортежа можно деконструировать, как показано выше. Деконструкцию можно легко активировать для любого пользовательского типа (классов, структур и даже интерфейсов).
 
 Автор типа может определить один или несколько методов `Deconstruct`, присваивающих значения любому количеству переменных `out`, которые представляют составляющие этот тип элементы данных. Например, следующий тип `Person` определяет метод `Deconstruct`, который деконструирует объект person в элементы, представляющие имя и фамилию:
 
-[!code-csharp[TypeWithDeconstructMethod](../../samples/snippets/csharp/tuples/tuples/person.cs#12_TypeWithDeconstructMethod "Тип с методом deconstruct")]
+[!code-csharp[TypeWithDeconstructMethod](../../samples/snippets/csharp/tuples/tuples/person.cs#12_TypeWithDeconstructMethod "Type with a deconstruct method")]
 
 Метод deconstruct позволяет выполнять назначение из объекта `Person` в две строки, представляющие свойства `FirstName` и `LastName`:
 
-[!code-csharp[Deconstruct Type](../../samples/snippets/csharp/tuples/tuples/program.cs#12A_DeconstructType "Деконструкция типа класса")]
+[!code-csharp[Deconstruct Type](../../samples/snippets/csharp/tuples/tuples/program.cs#12A_DeconstructType "Deconstruct a class type")]
 
 Вы можете включить деконструкцию даже для типов, которые не создавали.
 Метод `Deconstruct` может быть методом расширения, который распаковывает доступные элементы данных в объекте. В следующем примере показан тип `Student`, производный от типа `Person`, и метод расширения, который разбивает `Student` на три переменные, представляющие `FirstName`, `LastName` и `GPA`:
 
-[!code-csharp[ExtensionDeconstructMethod](../../samples/snippets/csharp/tuples/tuples/person.cs#13_ExtensionDeconstructMethod "Тип с методом расширения deconstruct")]
+[!code-csharp[ExtensionDeconstructMethod](../../samples/snippets/csharp/tuples/tuples/person.cs#13_ExtensionDeconstructMethod "Type with a deconstruct extension method")]
 
 Теперь у объекта `Student` есть два доступных метода `Deconstruct`: метод расширения, объявленный для типов `Student`, и элемент типа `Person`. Оба из них входят в область, что позволяет разбить `Student` либо на две, либо на три переменные.
 Если учащийся назначается трем переменным, возвращается все — имя, фамилия и GPA. Если учащийся назначается двум переменным, возвращаются только имя и фамилия.
 
-[!code-csharp[Deconstruct extension method](../../samples/snippets/csharp/tuples/tuples/program.cs#13A_DeconstructExtension "Деконструкция типа класса с использованием метода расширения")]
+[!code-csharp[Deconstruct extension method](../../samples/snippets/csharp/tuples/tuples/program.cs#13A_DeconstructExtension "Deconstruct a class type using an extension method")]
 
 Определять нескольких методов `Deconstruct` в классе или иерархии классов необходимо очень осторожно. Несколько методов `Deconstruct` с одинаковым числом параметров `out` могут быстро вызвать неоднозначность. В итоге вызывающие объекты могут лишиться возможности вызвать желаемый метод `Deconstruct`.
 
@@ -245,4 +258,3 @@ private static (double, double, int) ComputeSumAndSumOfSquares(IEnumerable<doubl
 ## <a name="conclusion"></a>Заключение 
 
 Добавленная в язык и библиотеку поддержка именованных кортежей значительно упрощает работу с проектами, в которых используются структуры данных, хранящие несколько элементов, но не определяющие поведение подобно классам или структурам. Для этих типов удобно использовать кортежи. Они дают вам все преимущества статической поддержки типов и в то же время избавляют от необходимости создавать типы с использованием более подробного синтаксиса `class` или `struct`. И все же наибольшую пользу они приносят при использовании со служебными методами, имеющими атрибут `private` или `internal`. Создавайте пользовательские типы, `class` или `struct`, если ваши открытые методы возвращают значение с несколькими элементами.
-

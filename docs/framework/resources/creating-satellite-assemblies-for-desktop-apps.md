@@ -5,10 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
 - resource files, deploying
@@ -28,22 +30,21 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 11d455f16c5ee3ce78c26c7642831900e527b960
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: febb9d50bd61eef53f39bb0f36cd4e3a6049e9f5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Создание вспомогательных сборок для приложений для настольных систем
 Файлы ресурсов играют важную роль в локализованных приложениях. Они позволяют приложению использовать для отображения строк, изображений и других данных текущие региональные настройки пользователя, а также предоставлять альтернативные данных при отсутствии необходимых ресурсов для языка и региональных параметров этого пользователя. Для установления местонахождения локализованных ресурсов и их получения в платформе .NET Framework используется модель "звезда". Центром в этой модели является основная сборка, которая содержит не локализуемый исполняемый код и ресурсы для единственного языка и региональных параметров, называемых нейтральными языком и региональными параметрами, или региональными настройками по умолчанию. Язык и региональные параметры по умолчанию являются резервными параметрами; они используются, когда не доступны локализованные ресурсы. Атрибут <xref:System.Resources.NeutralResourcesLanguageAttribute> используется для указания языка и региональных параметров по умолчанию для приложения. Каждый луч звезды ведет к вспомогательной сборке, которая содержит ресурсы для одного локализованного языка и региональных параметров, но не содержит кода. Так как вспомогательные сборки не являются частью главной сборки, ресурсы, относящиеся к конкретному языку и региональным параметрам, можно легко заменять или обновлять, не заменяя главную сборку приложения.  
   
 > [!NOTE]
->  Ресурсы языка и региональных параметров по умолчанию приложения также могут храниться и во вспомогательной сборке. Для этого нужно назначить атрибуту <xref:System.Resources.NeutralResourcesLanguageAttribute> значение <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=fullName>.  
+>  Ресурсы языка и региональных параметров по умолчанию приложения также могут храниться и во вспомогательной сборке. Для этого нужно назначить атрибуту <xref:System.Resources.NeutralResourcesLanguageAttribute> значение <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=nameWithType>.  
   
 ## <a name="satellite-assembly-name-and-location"></a>Имя и расположение вспомогательной сборки  
  Для реализации модели "звезда" необходимо разместить ресурсы в определенных местах так, чтобы их можно было легко найти и использовать. Если ресурсы именованы неверно или компилируются с ошибками, или неверно расположены, то среда CLR не сможет их найти и будет вместо них использовать ресурсы языка и региональных параметров по умолчанию. Диспетчер ресурсов .NET Framework, представленный объектом <xref:System.Resources.ResourceManager>, используется для автоматического доступа к локализованным ресурсам. Для диспетчера ресурсов необходимо выполнить следующие условия.  
@@ -96,9 +97,10 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
 1.  Создайте файл ресурсов с именем Greeting.resx и Greeting.txt, который будет содержать ресурсы для языка и региональных параметров по умолчанию. Сохраните одну строку с именем `HelloString` и значением "Hello world!" в этом файле.  
   
-2.  Чтобы указать, что язык и региональные параметры по умолчанию для приложения — английский (en), необходимо добавить в файл AssemblyInfo приложения или в главный файл исходного кода, которые будут скомпилированы в основную сборку приложения, следующий атрибут <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=fullName>.  
+2.  Чтобы указать, что язык и региональные параметры по умолчанию для приложения — английский (en), необходимо добавить в файл AssemblyInfo приложения или в главный файл исходного кода, которые будут скомпилированы в основную сборку приложения, следующий атрибут <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType>.  
   
-     [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]  [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
+     [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
+     [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
   
 3.  Добавьте поддержку дополнительных языков и региональных параметров (en-US, fr-FR и ru-RU) в приложение следующим образом.  
   
@@ -122,9 +124,10 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
 5.  Скомпилируйте следующий исходный код и ресурсы для языка и региональных параметров по умолчанию в основную сборку приложения:  
   
     > [!IMPORTANT]
-    >  При использовании командной строки, а не Visual Studio, для создания примера, необходимо изменить вызов конструктора класса <xref:System.Resources.ResourceManager> на следующий: `ResourceManager rm = new ResourceManager("Greetings",``typeof(Example).Assembly);`  
+    >  При использовании командной строки, а не Visual Studio, для создания примера, необходимо изменить вызов конструктора класса <xref:System.Resources.ResourceManager> на следующий: `ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`  
   
-     [!code-csharp[Conceptual.Resources.Locating#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/program.cs#1)]  [!code-vb[Conceptual.Resources.Locating#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/module1.vb#1)]  
+     [!code-csharp[Conceptual.Resources.Locating#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/program.cs#1)]
+     [!code-vb[Conceptual.Resources.Locating#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/module1.vb#1)]  
   
      Если приложение называется Example и компилируется из командной строки, то команда для компилятора C# имеет вид:  
   
@@ -223,9 +226,10 @@ gacutil /i:StringLibrary.resources.dll
   
 3.  Создайте файл ресурсов с именем Strings.resx, который будет содержать ресурсы для языка и региональных параметров по умолчанию. Сохраните одну строку с именем `Greeting` и значением "How do you do?" в этом файле.  
   
-4.  Чтобы указать, что язык и региональные параметры по умолчанию для приложения — "en", необходимо добавить в файл AssemblyInfo приложения или в главный файл исходного кода, которые будут скомпилированы в основную сборку приложения, следующий атрибут <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=fullName>:  
+4.  Чтобы указать, что язык и региональные параметры по умолчанию для приложения — "en", необходимо добавить в файл AssemblyInfo приложения или в главный файл исходного кода, которые будут скомпилированы в основную сборку приложения, следующий атрибут <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType>:  
   
-     [!code-csharp[Conceptual.Resources.Satellites#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#2)]  [!code-vb[Conceptual.Resources.Satellites#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#2)]  
+     [!code-csharp[Conceptual.Resources.Satellites#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#2)]
+     [!code-vb[Conceptual.Resources.Satellites#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#2)]  
   
 5.  Добавьте поддержку дополнительных языков и региональных параметров (en-US, fr-FR и ru-RU) в приложение следующим образом.  
   
@@ -246,9 +250,10 @@ gacutil /i:StringLibrary.resources.dll
 7.  Скомпилируйте следующий исходный код для StringLibrary.vb или StringLibrary.cs с ресурсами для региональных настроек по умолчанию в библиотеки сборки с отложенной подписью с именем StringLibrary.dll:  
   
     > [!IMPORTANT]
-    >  При использовании командной строки, а не Visual Studio, для создания примера, необходимо изменить вызов конструктора класса <xref:System.Resources.ResourceManager> на следующий: `ResourceManager rm = new ResourceManager("Strings",``typeof(Example).Assembly);`.  
+    >  При использовании командной строки, а не Visual Studio для создания примера следует изменить вызов <xref:System.Resources.ResourceManager> конструктор класса `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`.  
   
-     [!code-csharp[Conceptual.Resources.Satellites#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#1)]  [!code-vb[Conceptual.Resources.Satellites#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#1)]  
+     [!code-csharp[Conceptual.Resources.Satellites#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#1)]
+     [!code-vb[Conceptual.Resources.Satellites#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#1)]  
   
      Команда для компилятора C# имеет вид:  
   
@@ -294,7 +299,8 @@ gacutil /i:StringLibrary.resources.dll
   
 13. Если вы используете Visual Studio, создайте проект **консольного приложения** с именем `Example`, добавьте в него следующий исходный код и ссылку на StringLibrary.dll и скомпилируйте.  
   
-     [!code-csharp[Conceptual.Resources.Satellites#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/example.cs#3)]  [!code-vb[Conceptual.Resources.Satellites#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/example.vb#3)]  
+     [!code-csharp[Conceptual.Resources.Satellites#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/example.cs#3)]
+     [!code-vb[Conceptual.Resources.Satellites#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/example.vb#3)]  
   
      Чтобы скомпилировать из командной строки используйте следующую команду для компилятора C#:  
   
@@ -311,10 +317,9 @@ gacutil /i:StringLibrary.resources.dll
 14. Запустите Example.exe.  
   
 ## <a name="see-also"></a>См. также  
- [Упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)   
- [Отложенная подпись сборки](../../../docs/framework/app-domains/delay-sign-assembly.md)   
- [Al.exe (компоновщик сборок)](../../../docs/framework/tools/al-exe-assembly-linker.md)   
- [Sn.exe (средство строгих имен)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
- [Gacutil.exe (программа глобального кэша сборок)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)   
+ [Упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
+ [Отложенная подпись сборки](../../../docs/framework/app-domains/delay-sign-assembly.md)  
+ [Al.exe (компоновщик сборок)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
+ [Sn.exe (средство строгих имен)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+ [Gacutil.exe (программа глобального кэша сборок)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
  [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md)
-

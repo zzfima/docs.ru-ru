@@ -1,33 +1,34 @@
 ---
-title: "XsltArgumentList для параметров таблицы стилей и объектов расширения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "XsltArgumentList для параметров таблицы стилей и объектов расширения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: d4741551b1e6dd2694a0bd65e65a15953f808e59
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# XsltArgumentList для параметров таблицы стилей и объектов расширения
-Класс <xref:System.Xml.Xsl.XsltArgumentList> содержит параметры языка XSLT и объекты расширения XSLT.  При передаче в метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> эти параметры и объекты расширения могут вызываться из таблиц стилей.  
+# <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList для параметров таблицы стилей и объектов расширения
+Класс <xref:System.Xml.Xsl.XsltArgumentList> содержит параметры языка XSLT и объекты расширения XSLT. При передаче в метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> эти параметры и объекты расширения могут вызываться из таблиц стилей.  
   
 > [!NOTE]
->  Классы <xref:System.Xml.Xsl.XslTransform> и <xref:System.Xml.Xsl.XsltArgumentList> являются устаревшими в [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  Преобразования XSLT можно выполнять с помощью класса <xref:System.Xml.Xsl.XslCompiledTransform>.  Дополнительные сведения см. в разделах [Использование класса XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) и [Миграция с класса XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
+>  Классы <xref:System.Xml.Xsl.XslTransform> и <xref:System.Xml.Xsl.XsltArgumentList> являются устаревшими в [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Преобразования XSLT можно выполнять с помощью класса <xref:System.Xml.Xsl.XslCompiledTransform>. В разделе [использование класса XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) и [Миграция с класса XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) для получения дополнительной информации.  
   
- Класс <xref:System.Xml.Xsl.XsltArgumentList> содержит параметры XSLT и объекты расширения XSLT.  При передаче в метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> эти параметры и объекты расширения могут вызываться из таблиц стилей.  
+ Класс <xref:System.Xml.Xsl.XsltArgumentList> содержит параметры XSLT и объекты расширения XSLT. При передаче в метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> эти параметры и объекты расширения могут вызываться из таблиц стилей.  
   
  Далее перечислены преимущества передачи объектов по сравнению с использованием внедренного скрипта.  
   
@@ -39,22 +40,22 @@ caps.handback.revision: 3
   
 -   Поддерживает передачу фрагментов результирующего дерева в таблицу стилей с помощью <xref:System.Xml.XPath.XPathNodeIterator>.  
   
-## Параметры таблицы стилей XSLT  
- Параметры XSLT добавляются в <xref:System.Xml.Xsl.XsltArgumentList> с помощью метода <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  В это время с объектом параметра связываются полное имя и URI\-код пространства имен.  
+## <a name="xslt-style-sheet-parameters"></a>Параметры таблицы стилей XSLT  
+ Параметры XSLT добавляются в <xref:System.Xml.Xsl.XsltArgumentList> с помощью метода <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>. В это время с объектом параметра связываются полное имя и URI-код пространства имен.  
   
- Объект параметра должен соответствовать типу W3C.  В следующей таблице показано соответствие типов W3C и классов \(типов\) [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Также показано, является ли тип W3C типом XPath или типом XSLT.  
+ Объект параметра должен соответствовать типу W3C. В следующей таблице показано соответствие типов W3C и классов (типов) [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Также показано, является ли тип W3C типом XPath или типом XSLT.  
   
-|Тип W3C|Эквивалентный класс \(тип\) .NET Framework|Тип XPath или тип XSLT|  
-|-------------|------------------------------------------------|----------------------------|  
+|Тип W3C|Эквивалентный класс .NET Framework (тип)|Тип XPath или тип XSLT|  
+|--------------|----------------------------------------------|-----------------------------|  
 |Строковое|System.String|XPath|  
 |Boolean|System.Boolean|XPath|  
 |Числовой|System.Double|XPath|  
 |Фрагмент дерева результатов|System.Xml.XPath.XPathNavigator|XSLT|  
 |Набор узлов|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- Если объект параметра не принадлежит ни к одному из классов выше, он принудительно преобразуется в тип Double или String.  Типы Int16, UInt16, Int32, UInt32, Int64, UInt64, Single и Decimal преобразуются в Double.  Все остальные типы преобразуются в тип String с помощью метода `ToString`.  
+ Если объект параметра не принадлежит ни к одному из классов выше, он принудительно преобразуется в тип Double или String. Типы Int16, UInt16, Int32, UInt32, Int64, UInt64, Single и Decimal преобразуются в Double. Все остальные типы преобразуются в тип String с помощью метода `ToString`.  
   
-#### Чтобы использовать параметр XSLT, пользователь должен выполнить следующие действия.  
+#### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a>Чтобы использовать параметр XSLT, пользователь должен выполнить следующие действия.  
   
 1.  Создать объект <xref:System.Xml.Xsl.XsltArgumentList> и добавить объекты с помощью метода <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  
   
@@ -62,8 +63,8 @@ caps.handback.revision: 3
   
 3.  Передать <xref:System.Xml.Xsl.XsltArgumentList> методу <xref:System.Xml.Xsl.XslTransform.Transform%2A>.  
   
-### Пример  
- В следующем примере используется метод <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> для создания параметра, хранящего вычисленную дату скидки.  Дата скидки вычисляется как 20 дней после даты заказа.  
+### <a name="example"></a>Пример  
+ В следующем примере используется метод <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> для создания параметра, хранящего вычисленную дату скидки. Дата скидки вычисляется как 20 дней после даты заказа.  
   
 ```vb  
 Imports System  
@@ -104,7 +105,6 @@ Public class Sample
   
   End Sub  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -146,10 +146,10 @@ public class Sample
 }  
 ```  
   
-### Ввод  
+### <a name="input"></a>Ввод  
  order.xml  
   
-```  
+```xml  
 <!--Represents a customer order-->  
 <order>  
   <book ISBN='10-861003-324'>  
@@ -165,7 +165,7 @@ public class Sample
   
  discount.xsl  
   
-```  
+```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">  
   <xsl:param name="discount"/>  
   <xsl:template match="/">  
@@ -178,25 +178,25 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### Вывод  
+### <a name="output"></a>Вывод  
   
-```  
+```xml  
 <order>  
    <total>36.9</total>   
    15% discount if paid by: 5/6/2001 5:01:15 PM   
 </order>  
 ```  
   
-## Объекты расширения XSLT  
- Объекты расширения XSLT добавляются в объект <xref:System.Xml.Xsl.XsltArgumentList> с помощью метода <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.  В это время с объектом расширения связываются полное имя и URI\-код пространства имен.  
+## <a name="xslt-extension-objects"></a>Объекты расширения XSLT  
+ Объекты расширения XSLT добавляются в объект <xref:System.Xml.Xsl.XsltArgumentList> с помощью метода <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>. В это время с объектом расширения связываются полное имя и URI-код пространства имен.  
   
- Во время добавления объекта вызывающий объект метода <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> должен иметь полное доверие в политике безопасности.  Если вызывающий объект обладает только частичным доверием, добавление объекта завершится ошибкой.  
+ Во время добавления объекта вызывающий объект метода <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> должен иметь полное доверие в политике безопасности. Если вызывающий объект обладает только частичным доверием, добавление объекта завершится ошибкой.  
   
- Объект добавляется успешно, однако не гарантируется успешность его выполнения.  Во время вызова метода <xref:System.Xml.Xsl.XslTransform.Transform%2A> вычисляются разрешения по свидетельству, указанному во время вызова метода <xref:System.Xml.Xsl.XslTransform.Load%2A>, и этот набор разрешений назначается для всего процесса преобразования.  Если объект расширения запускает действие, для которого необходимы разрешения, отсутствующие в наборе, вызывается исключение.  
+ Объект добавляется успешно, однако не гарантируется успешность его выполнения. Во время вызова метода <xref:System.Xml.Xsl.XslTransform.Transform%2A> вычисляются разрешения по свидетельству, указанному во время вызова метода <xref:System.Xml.Xsl.XslTransform.Load%2A>, и этот набор разрешений назначается для всего процесса преобразования. Если объект расширения запускает действие, для которого необходимы разрешения, отсутствующие в наборе, вызывается исключение.  
   
  Объекты расширения возвращают один из четырех базовых типов данных XPath: number, string, Boolean и node set.  
   
-#### Чтобы использовать объект расширения XSLT, пользователь должен выполнить следующие действия  
+#### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a>Чтобы использовать объект расширения XSLT, пользователь должен выполнить следующие действия  
   
 1.  Создать объект <xref:System.Xml.Xsl.XsltArgumentList> и добавить объект расширения с помощью метода <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.  
   
@@ -204,7 +204,7 @@ public class Sample
   
 3.  Передать <xref:System.Xml.Xsl.XsltArgumentList> методу <xref:System.Xml.Xsl.XslTransform.Transform%2A>.  
   
-### Пример  
+### <a name="example"></a>Пример  
  В следующем примере вычисляется длина окружности по заданному радиусу.  
   
 ```vb  
@@ -257,7 +257,6 @@ Public Class Sample
     End Function  
   End Class  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -315,10 +314,10 @@ public class Sample
 }  
 ```  
   
-### Ввод  
+### <a name="input"></a>Ввод  
  number.xml  
   
-```  
+```xml  
 <?xml version='1.0'?>  
 <data>  
   <circle>  
@@ -332,7 +331,7 @@ public class Sample
   
  circle.xsl  
   
-```  
+```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
     xmlns:myObj="urn:myObj">  
   
@@ -351,7 +350,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### Вывод  
+### <a name="output"></a>Вывод  
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  
@@ -372,5 +371,5 @@ public class Sample
   
  `</circles>`  
   
-## См. также  
- [Реализация классом XslTransform XSLT\-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+## <a name="see-also"></a>См. также  
+ [Реализуемых классом XslTransform XSLT-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

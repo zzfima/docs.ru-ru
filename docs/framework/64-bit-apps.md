@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - 64-bit applications [C++]
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 1ee85512cde0ce50e6a5c34cc5f6acc531c24bc0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9930b44e8ab711f319140e43ad0a36d5d78a7ffb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="64-bit-applications"></a>64-разрядные приложения
 При компиляции приложения можно указать, должно ли оно запускаться в 64-разрядной операционной системе Windows в качестве собственного приложения или в эмуляторе WOW64 (в 32- или 64-разрядной ОС Windows). WOW64 — это среда совместимости, которая позволяет выполнять 32-разрядное приложение в 64-разрядной системе. Эмулятор WOW64 входит в состав всех 64-разрядных версий операционной системы Windows.  
@@ -48,7 +46,7 @@ ms.lasthandoff: 07/28/2017
   
 -   приведение `IntPtr` к `Int32`.  
   
- Дополнительные сведения о переносе 32-разрядного приложения в 64-разрядную среду CLR см. на странице [Миграция 32-разрядного управляемого кода в 64-разрядную систему](http://go.microsoft.com/fwlink/?LinkId=150542) в библиотеке MSDN.  
+ Дополнительные сведения о переносе 32-разрядное приложение на 64-разрядной среде CLR см. в разделе [миграция 32-разрядного управляемого кода на 64-разрядную версию](https://msdn.microsoft.com/library/ms973190.aspx).  
   
 ## <a name="general-64-bit-programming-information"></a>Общие сведения о 64-разрядном программировании  
  Общие сведения о 64-разрядном программировании см. в перечисленных ниже материалах.  
@@ -73,5 +71,4 @@ ms.lasthandoff: 07/28/2017
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Определение состояния EXE- или DLL-файлов  
  Чтобы определить, будет ли EXE- или DLL-файл выполняться только на определенной платформе или в эмуляторе WOW64, воспользуйтесь [средством преобразования CorFlags (CorFlags.exe)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md). Кроме того, программа CorFlags.exe используется для изменения состояния платформы EXE- или DLL-файла. В заголовке среды CLR сборки Visual Studio основной номер версии среды выполнения имеет значение 2, а дополнительный номер версии среды выполнения — значение 5. Приложения, у которых дополнительный номер версии среды выполнения имеет значение 0, обрабатываются как приложения прежних версий и всегда запускаются в эмуляторе WOW64.  
   
- Метод <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=fullName> используется для программного определения того, будет ли EXE- или DLL-файл выполняться на определенной платформе или в эмуляторе WOW64.
-
+ Метод <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=nameWithType> используется для программного определения того, будет ли EXE- или DLL-файл выполняться на определенной платформе или в эмуляторе WOW64.

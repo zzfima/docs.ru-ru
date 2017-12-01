@@ -8,6 +8,9 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - language interoperability
 - Common Language Specification
@@ -16,16 +19,15 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: bc43226a508dfd0286c7667c02bdc2543346be9c
+ms.sourcegitcommit: 9c4b8d457ffb8d134c9d55c6d7682a0f22e2b9a8
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 270a75e0c4e3da5ea87196580ab09dbff24b80c6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="language-independence-and-language-independent-components"></a>Независимость от языка и независимые от языка компоненты
 Платформа .NET Framework является независимой от языка. Это означает, что код можно разрабатывать на одном из многих языков, ориентированных на .NET Framework, например C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL и Windows PowerShell. Чтобы использовать типы и члены библиотек классов, разработанных для платформы .NET Framework, не требуется знать их исходный язык и следовать его правилам. Если вы разрабатываете компоненты, они будут доступны всем приложениям .NET Framework вне зависимости от используемого вами языка.  
@@ -89,11 +91,13 @@ ms.lasthandoff: 08/21/2017
   
  Например, за исключением чисел типа <xref:System.Byte> целые числа без знака не являются CLS-совместимыми. В следующем примере класс `Person` предоставляет свойство `Age`, имеющее тип <xref:System.UInt16>, поэтому в коде отображается предупреждение компилятора.  
   
- [!code-csharp[Conceptual.CLSCompliant#1](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/public1.cs#1)] [!code-vb[Conceptual.CLSCompliant#1](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/public1.vb#1)]  
+ [!code-csharp[Conceptual.CLSCompliant#1](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/public1.cs#1)]
+ [!code-vb[Conceptual.CLSCompliant#1](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/public1.vb#1)]  
   
  Чтобы класс `Person` удовлетворял требованиям CLS, можно изменить тип свойства `Age` с <xref:System.UInt16> на <xref:System.Int16> — 16-битное целое число со знаком, которое является CLS-совместимым. Тип закрытого поля `personAge` изменять не требуется.  
   
- [!code-csharp[Conceptual.CLSCompliant#2](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/public2.cs#2)] [!code-vb[Conceptual.CLSCompliant#2](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/public2.vb#2)]  
+ [!code-csharp[Conceptual.CLSCompliant#2](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/public2.cs#2)]
+ [!code-vb[Conceptual.CLSCompliant#2](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/public2.vb#2)]  
   
  Публичный интерфейс библиотеки состоит из:  
   
@@ -110,20 +114,20 @@ ms.lasthandoff: 08/21/2017
 |Специальные возможности|[Доступность членов](#MemberAccess)|При переопределении унаследованных методов не должна изменяться доступность. Исключение составляют методы, унаследованные из другой сборки с доступностью `family-or-assembly`. В таких случаях переопределенный метод должен иметь доступность `family`.|10|  
 |Специальные возможности|[Доступность членов](#MemberAccess)|Видимость и доступность типов и членов должна быть такой, чтобы типы в сигнатуре любого члена были видимы и доступны всегда, когда видим или доступен сам член. Например, открытый метод, видимый за пределами его сборки, не должен иметь аргументов, типы которых видимы только в пределах сборки. Видимость и доступность типов, составляющих экземпляры универсального типа, используемого в сигнатуре любого члена, должна быть такой, чтобы типы в сигнатуре любого члена были видимы и доступны всегда, когда видим или доступен сам член. Например, экземпляр универсального типа в сигнатуре члена, видимого вне его сборки, не должен иметь универсальных аргументов, тип которых видимы только в пределах сборки.|12|  
 |Массивы|[Массивы](#arrays)|Элементы массива должны быть CLS-совместимого типа, а измерения массива — иметь нижнюю границу, равную нулю. Для различения перегрузок достаточно, чтобы элемент был массивом и у него был задан тип элементов. Если перегрузка основана на нескольких типах массивов, типы элементов должны быть именованными.|16|  
-|Атрибуты|[Атрибуты](#attributes)|Атрибуты должны иметь тип <xref:System.Attribute?displayProperty=fullName> или унаследованный от него тип.|41|  
-|Атрибуты|[Атрибуты](#attributes)|В спецификации CLS разрешено только подмножество кодировок настраиваемых атрибутов. В этих кодировках разрешается использовать только следующие типы (см. раздел IV): <xref:System.Type?displayProperty=fullName>, <xref:System.String?displayProperty=fullName>, <xref:System.Char?displayProperty=fullName>, <xref:System.Boolean?displayProperty=fullName>, <xref:System.Byte?displayProperty=fullName>, <xref:System.Int16?displayProperty=fullName>, <xref:System.Int32?displayProperty=fullName>, <xref:System.Int64?displayProperty=fullName>, <xref:System.Single?displayProperty=fullName>, <xref:System.Double?displayProperty=fullName>, а также типы перечислений, основанные на CLS-совместимых базовых целочисленных типах.|34|  
+|Атрибуты|[Атрибуты](#attributes)|Атрибуты должны иметь тип <xref:System.Attribute?displayProperty=nameWithType> или унаследованный от него тип.|41|  
+|Атрибуты|[Атрибуты](#attributes)|В спецификации CLS разрешено только подмножество кодировок настраиваемых атрибутов. В этих кодировках разрешается использовать только следующие типы (см. раздел IV): <xref:System.Type?displayProperty=nameWithType>, <xref:System.String?displayProperty=nameWithType>, <xref:System.Char?displayProperty=nameWithType>, <xref:System.Boolean?displayProperty=nameWithType>, <xref:System.Byte?displayProperty=nameWithType>, <xref:System.Int16?displayProperty=nameWithType>, <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Int64?displayProperty=nameWithType>, <xref:System.Single?displayProperty=nameWithType>, <xref:System.Double?displayProperty=nameWithType>, а также типы перечислений, основанные на CLS-совместимых базовых целочисленных типах.|34|  
 |Атрибуты|[Атрибуты](#attributes)|В спецификации CLS запрещены публично видимые обязательные модификаторы (`modreq`, см. раздел II), но разрешены необязательные модификаторы (`modopt`, см. раздел II), которые не распознаются.|35|  
 |Конструкторы|[Конструкторы](#ctors)|Доступ к данным унаследованного экземпляра возможен после того, как конструктор объекта вызвал какой-либо конструктор экземпляра базового класса. (Правило не относится к типам значений, которым не требуются конструкторы).|21|  
 |Конструкторы|[Конструкторы](#ctors)|Конструктор объекта должен вызываться только в ходе создания объекта и объекты не должны инициализироваться дважды.|22|  
 |Перечисления|[Перечисления](#enums)|Базовый тип перечисления должен быть встроенным целочисленным типом CLS, имя поля должно быть"value__" и это поле должно быть отмечено атрибутом `RTSpecialName`.|7|  
-|Перечисления|[Перечисления](#enums)|Существует два вида перечислений, которые различаются наличием/отсутствием пользовательского атрибута <xref:System.FlagsAttribute?displayProperty=fullName> (см. раздел IV библиотеки). Одно представляет именованные целочисленные значения, другое — именованные битовые флаги, сочетая которые, можно создавать значения без имени. Перечисление `enum` может принимать и другие значения.|8|  
+|Перечисления|[Перечисления](#enums)|Существует два вида перечислений, которые различаются наличием/отсутствием пользовательского атрибута <xref:System.FlagsAttribute?displayProperty=nameWithType> (см. раздел IV библиотеки). Одно представляет именованные целочисленные значения, другое — именованные битовые флаги, сочетая которые, можно создавать значения без имени. Перечисление `enum` может принимать и другие значения.|8|  
 |Перечисления|[Перечисления](#enums)|Статические поля литералов перечисления должны иметь тип перечисления.|9|  
 |события|[События](#events)|Реализующие событие методы должны быть отмечены в метаданных атрибутом `SpecialName`.|29|  
 |события|[События](#events)|Событие и его методы доступа должны иметь одинаковую доступность.|30|  
 |события|[События](#events)|У события должны либо присутствовать, либо отсутствовать оба метода `add` и `remove`.|31|  
-|события|[События](#events)|Методы `add` и `remove` события должны иметь один параметр, его тип определяет тип события. Тип параметра должен быть производным от типа <xref:System.Delegate?displayProperty=fullName>.|32|  
+|события|[События](#events)|Методы `add` и `remove` события должны иметь один параметр, его тип определяет тип события. Тип параметра должен быть производным от типа <xref:System.Delegate?displayProperty=nameWithType>.|32|  
 |события|[События](#events)|События должны следовать определенному шаблону именования. Атрибут `SpecialName`, упоминаемый в правиле 29 спецификации CLS, должен игнорироваться в соответствующих сравнениях имен и соответствовать правилам в отношении идентификаторов.|33|  
-|Исключения|[Исключения](#exceptions)|Объекты исключений должны иметь тип <xref:System.Exception?displayProperty=fullName> или унаследованный от него тип. Однако не требуется, чтобы CLS-совместимые методы блокировали распространение других типов исключений.|40|  
+|Исключения|[Исключения](#exceptions)|Объекты исключений должны иметь тип <xref:System.Exception?displayProperty=nameWithType> или унаследованный от него тип. Однако не требуется, чтобы CLS-совместимые методы блокировали распространение других типов исключений.|40|  
 |Общие|[CLS-совместимость: правила](#Rules)|Правила CLS-совместимости применяются только к тем составляющим типа, которые доступны или видны за пределами определяющей сборки.|1|  
 |Общие|[CLS-совместимость: правила](#Rules)|Члены типов, не соответствующих правилам CLS-совместимости, не должны быть отмечены как CLS-совместимые.|2|  
 |Универсальные шаблоны|[Универсальные типы и члены](#Generics)|У вложенного типа должно не меньше универсальных параметров, чем у включающего его типа. Универсальные параметры вложенного типа соответствуют по позиции универсальным параметрам включающего типа.|42|  
@@ -143,7 +147,7 @@ ms.lasthandoff: 08/21/2017
 |Перегрузка|[Перегрузки](#overloads)|Перегружать можно только свойства и методы.|37|  
 |Перегрузка|[Перегрузки](#overloads)|Свойства и методы могут перегружаться только на основе количества и типов их параметров, за исключением операторов преобразования `op_Implicit` и `op_Explicit`, которые также могут перегружаться на основе возвращаемого типа.|38|  
 |Перегрузка|--|Если в типе объявлены несколько CLS-совместимых методов с одним и тем же именем, и они создают набор экземпляров типа с одинаковыми параметрами и возвращаемыми типами, эти методы должны быть семантически эквивалентны в экземплярах типа.|48|  
-|Типы|[Сигнатуры типов и членов типов](#Types)|Тип <xref:System.Object?displayProperty=fullName> является CLS-совместимым. Все другие CLS-совместимые классы должны наследоваться от CLS-совместимого класса.|23|  
+|Типы|[Сигнатуры типов и членов типов](#Types)|Тип <xref:System.Object?displayProperty=nameWithType> является CLS-совместимым. Все другие CLS-совместимые классы должны наследоваться от CLS-совместимого класса.|23|  
 |Свойства|[Свойства](#properties)|Методы, которые реализуют получение и задание значения, должны быть отмечены в метаданных атрибутом `SpecialName`.|24|  
 |Свойства|[Свойства](#properties)|Все методы доступа свойства должны быть либо одновременно статическими, либо виртуальными, либо экземплярами.|26|  
 |Свойства|[Свойства](#properties)|Тип свойства, тип возвращаемого значения метода получения значения и тип последнего аргумента метода задания значения должны совпадать. Типы параметров свойства, типы параметров метода получения значения и типы параметров метода задания значения (за исключением его последнего параметра) должны совпадать. Все типы должны быть CLS-совместимыми и не могут быть управляемыми указателями (т. е. не могут передаваться по ссылке).|27|  
@@ -157,11 +161,12 @@ ms.lasthandoff: 08/21/2017
   
 <a name="Types"></a>   
 ### <a name="types-and-type-member-signatures"></a>Сигнатуры типов и членов типов  
- Тип <xref:System.Object?displayProperty=fullName> является CLS-совместимым. Это базовый тип всех типов объектов в системе типов .NET Framework. В платформе .NET Framework существует два вида наследования: неявное (например, класс <xref:System.String> неявно наследуется от класса <xref:System.Object>) или явное (например, класс <xref:System.Globalization.CultureNotFoundException> явно наследуется от класса <xref:System.ArgumentException>; последний явно наследуется от класса <xref:System.SystemException>; а этот — от класса <xref:System.Exception>). Чтобы производный тип был CLS-совместимым, его базовый тип должен быть CLS-совместимыми.  
+ Тип <xref:System.Object?displayProperty=nameWithType> является CLS-совместимым. Это базовый тип всех типов объектов в системе типов .NET Framework. В платформе .NET Framework существует два вида наследования: неявное (например, класс <xref:System.String> неявно наследуется от класса <xref:System.Object>) или явное (например, класс <xref:System.Globalization.CultureNotFoundException> явно наследуется от класса <xref:System.ArgumentException>; последний явно наследуется от класса <xref:System.SystemException>; а этот — от класса <xref:System.Exception>). Чтобы производный тип был CLS-совместимым, его базовый тип должен быть CLS-совместимыми.  
   
  В следующем примере рассматривается производный тип, базовый тип которого не является CLS-совместимым. Базовый класс `Counter` использует 32-битное целое число без знака в качестве счетчика. Поскольку этот класс реализует функцию счетчика с помощью переноса целого числа без знака, он помечается как не соответствующий правилам CLS-совместимости. Поэтому производный класс `NonZeroCounter` также не является CLS-совместимым.  
   
- [!code-csharp[Conceptual.CLSCompliant#12](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type3.cs#12)] [!code-vb[Conceptual.CLSCompliant#12](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type3.vb#12)]  
+ [!code-csharp[Conceptual.CLSCompliant#12](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type3.cs#12)]
+ [!code-vb[Conceptual.CLSCompliant#12](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type3.vb#12)]  
   
  Все типы в сигнатурах членов, в том числе тип свойства и тип возвращаемого значения метода, должны быть CLS-совместимыми. Кроме того, в отношении универсальных типов применяются следующие правила:  
   
@@ -208,11 +213,13 @@ ms.lasthandoff: 08/21/2017
   
  В следующем примере сигнатура метода и экземпляр универсального типа не являются CLS-совместимыми. Мы определяем класс `InvoiceItem`, имеющий свойство типа <xref:System.UInt32>, свойство типа `Nullable(Of UInt32)` и конструктор с параметрами типа <xref:System.UInt32> и `Nullable(Of UInt32)`. При компиляции появляются четыре предупреждения.  
   
- [!code-csharp[Conceptual.CLSCompliant#3](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type1.cs#3)] [!code-vb[Conceptual.CLSCompliant#3](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type1.vb#3)]  
+ [!code-csharp[Conceptual.CLSCompliant#3](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type1.cs#3)]
+ [!code-vb[Conceptual.CLSCompliant#3](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type1.vb#3)]  
   
  Они не будут отображаться, если заменить в открытом интерфейсе `InvoiceItem` типы, не соответствующие правилам CLS-совместимости, CLS-совместимыми типами:  
   
- [!code-csharp[Conceptual.CLSCompliant#4](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type2.cs#4)] [!code-vb[Conceptual.CLSCompliant#4](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type2.vb#4)]  
+ [!code-csharp[Conceptual.CLSCompliant#4](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type2.cs#4)]
+ [!code-vb[Conceptual.CLSCompliant#4](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type2.vb#4)]  
   
  Помимо перечисленных типов существуют и другие категории типов, не являющихся CLS-совместимыми. К ним относятся типы неуправляемых указателей и типы указателей функций. В следующем примере предупреждение компилятора отображается потому, что для создания массива целых чисел используется указатель на целое число.  
   
@@ -228,13 +235,14 @@ ms.lasthandoff: 08/21/2017
   
  Идентификаторы языка программирования — имена пространств имен, типов и членов — должны соответствовать [стандарту Юникода версии 3.0 (технический отчет 15, приложение 7)](http://www.unicode.org/reports/tr15/tr15-18.html). Это означает следующее.  
   
--   В качестве первого символа идентификатора можно использовать любой символ верхнего или нижнего регистра, символ заголовка, модификатора, букву или цифру Юникода. Категории символов Юникода приводятся в описании перечисления <xref:System.Globalization.UnicodeCategory?displayProperty=fullName>.  
+-   В качестве первого символа идентификатора можно использовать любой символ верхнего или нижнего регистра, символ заголовка, модификатора, букву или цифру Юникода. Категории символов Юникода приводятся в описании перечисления <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType>.  
   
 -   Допустимые последующие символы — символы тех же категорий, что и первый, а также несамостоятельные знаки, комбинированные самостоятельные знаки, десятичные числа, соединительные знаки пунктуации и коды форматирования.  
   
  Перед сравнением идентификаторов необходимо отфильтровать коды форматирования и преобразовать идентификаторы в форму нормализации Юникода C, поскольку один символ может быть представлен несколькими единицами кода в кодировке UTF-16. Последовательности символов, соответствующие одним и тем же единицам кода в форме нормализации Юникода C, не являются CLS-совместимыми. В примере ниже определяется свойство с именем `Å`, представляющим собой символ ангстрема (U+212B), и свойство с именем `Å`, представляющим собой заглавную латинскую букву А с надстрочным кружком (U+00C5). Компиляторы C# и Visual Basic помечают, что исходный код не соответствует правилам CLS-совместимости.  
   
- [!code-csharp[Conceptual.CLSCompliant#17](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/naming1.cs#17)] [!code-vb[Conceptual.CLSCompliant#17](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/naming1.vb#17)]  
+ [!code-csharp[Conceptual.CLSCompliant#17](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/naming1.cs#17)]
+ [!code-vb[Conceptual.CLSCompliant#17](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/naming1.vb#17)]  
   
  Имена членов в определенной области (например, имена пространств имен в сборке, типов в пространстве имен или членов типа) должны быть уникальными, за исключением имен, разрешаемых через перегрузку. Это правило более строгое, чем требования системы общих типов CTS, где члены разных типов (например, метод и поле) могут иметь одинаковые имена в области. В частности у членов типов:  
   
@@ -244,7 +252,8 @@ ms.lasthandoff: 08/21/2017
   
  Следующий пример иллюстрирует это правило. В нем определяется класс `Converter`, содержащий 4 члена с именем `Conversion`. Три из них — методы, один — свойство. Метод с параметром <xref:System.Int64> имеет уникальное имя, а два метода с параметром <xref:System.Int32> — нет, потому что возвращаемое значение не рассматривается как часть сигнатуры члена. Свойство `Conversion` также нарушает правило, поскольку имеет то же имя, что и перегруженные методы.  
   
- [!code-csharp[Conceptual.CLSCompliant#19](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/naming3.cs#19)] [!code-vb[Conceptual.CLSCompliant#19](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/naming3.vb#19)]  
+ [!code-csharp[Conceptual.CLSCompliant#19](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/naming3.cs#19)]
+ [!code-vb[Conceptual.CLSCompliant#19](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/naming3.vb#19)]  
   
  В некоторых языках есть уникальные ключевые слова. В языках, поддерживаемых средой CLR, должен существовать механизм обозначения идентификаторов (например, имен типов), совпадающих с ключевыми словами. Например, `case` — ключевое слово как в C#, так и в Visual Basic. В примере кода на Visual Basic неоднозначность между классом с именем `case` и ключевым словом `case` устраняется с помощью парных фигурных скобок. Иначе бы код не скомпилировался и появилось бы сообщение об ошибке "Ключевое слово не может использоваться как идентификатор".  
   
@@ -266,7 +275,8 @@ ms.lasthandoff: 08/21/2017
   
  Следующий пример иллюстрирует неявное и явное преобразования, которые являются CLS-совместимыми. В нем создается класс `UDouble`, который представляет число двойной точности с плавающей запятой со знаком. В нем предусмотрены неявные преобразования `UDouble` в <xref:System.Double> и явные преобразования `UDouble` в <xref:System.Single>, <xref:System.Double> в `UDouble` и <xref:System.Single> в `UDouble`. В нем также определен метод `ToDouble` — альтернативный вариант неявного преобразования и методы `ToSingle`, `FromDouble` и `FromSingle` — альтернативные варианты явного преобразования.  
   
- [!code-csharp[Conceptual.CLSCompliant#15](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/convert1.cs#15)] [!code-vb[Conceptual.CLSCompliant#15](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/convert1.vb#15)]  
+ [!code-csharp[Conceptual.CLSCompliant#15](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/convert1.cs#15)]
+ [!code-vb[Conceptual.CLSCompliant#15](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/convert1.vb#15)]  
   
 <a name="arrays"></a>   
 ### <a name="arrays"></a>Массивы  
@@ -274,15 +284,18 @@ ms.lasthandoff: 08/21/2017
   
 -   Нижняя граница всех измерений массива должна быть равна нулю. В следующем примере создается массив с нижней границей равной единице, т. е. он не соответствует правилам CLS-совместимости. Обратите внимание: несмотря на наличие атрибута <xref:System.CLSCompliantAttribute>, компилятор не обнаруживает, что возвращаемый методом `Numbers.GetTenPrimes` массив не является CLS-совместимым.  
   
-     [!code-csharp[Conceptual.CLSCompliant#8](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array1.cs#8)]  [!code-vb[Conceptual.CLSCompliant#8](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array1.vb#8)]  
+     [!code-csharp[Conceptual.CLSCompliant#8](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array1.cs#8)]
+     [!code-vb[Conceptual.CLSCompliant#8](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array1.vb#8)]  
   
 -   Все элементы массива должны состоять из CLS-совместимых типов. В следующем примере определяются два метода, которые возвращают массивы, не являющиеся CLS-совместимыми. Первый возвращает массив значений <xref:System.UInt32>. Второй возвращает массив <xref:System.Object>, содержащий значения <xref:System.Int32> и <xref:System.UInt32>. Поскольку тип первого массива — <xref:System.UInt32>, компилятор сообщает, что он не является CLS-совместимым. Однако он не распознает, что элементы второго массива не являются CLS-совместимыми.  
   
-     [!code-csharp[Conceptual.CLSCompliant#9](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array2.cs#9)]  [!code-vb[Conceptual.CLSCompliant#9](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array2.vb#9)]  
+     [!code-csharp[Conceptual.CLSCompliant#9](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array2.cs#9)]
+     [!code-vb[Conceptual.CLSCompliant#9](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array2.vb#9)]  
   
 -   Перегрузка методов, параметры которых являются массивами, разрешается исходя из предпосылки, что это массивы, и с учетом типа их элементов. Поэтому следующий перегруженный метод `GetSquares` является CLS-совместимым.  
   
-     [!code-csharp[Conceptual.CLSCompliant#10](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array3.cs#10)]  [!code-vb[Conceptual.CLSCompliant#10](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array3.vb#10)]  
+     [!code-csharp[Conceptual.CLSCompliant#10](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array3.cs#10)]
+     [!code-vb[Conceptual.CLSCompliant#10](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array3.vb#10)]  
   
 <a name="Interfaces"></a>   
 ### <a name="interfaces"></a>Интерфейсы  
@@ -294,13 +307,15 @@ ms.lasthandoff: 08/21/2017
   
 -   Методы, которые не являются CLS-совместимыми. Например, в следующем определении интерфейса есть метод `INumber.GetUnsigned`. Компилятор выдает предупреждение о том, что он не является CLS-совместимым.  
   
-     [!code-csharp[Conceptual.CLSCompliant#6](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/interface2.cs#6)]  [!code-vb[Conceptual.CLSCompliant#6](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/interface2.vb#6)]  
+     [!code-csharp[Conceptual.CLSCompliant#6](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/interface2.cs#6)]
+     [!code-vb[Conceptual.CLSCompliant#6](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/interface2.vb#6)]  
   
      Вследствие этого правила не требуется, чтобы CLS-совместимые типы реализовывали члены, которые не являются CLS-совместимыми. Если CLS-совместимая платформа предоставляет класс, реализующий интерфейс, который не является CLS-совместимым, в ней должны быть определены конкретные реализации всех членов, которые не являются CLS-совместимыми.  
   
  Кроме того, CLS-совместимые языковые компиляторы должны разрешать классам иметь отдельные реализации членов с одинаковыми именами и сигнатурами в нескольких интерфейсах.  Языки C# и Visual Basic поддерживают [явные реализации интерфейса](~/docs/csharp/programming-guide/interfaces/explicit-interface-implementation.md), с помощью которых можно определить разные реализации методов с одинаковыми именами. Язык Visual Basic поддерживает ключевое слово `Implements`, позволяющее явно указать интерфейс и член, которые реализует конкретный член. Этот сценарий представлен в следующем примере, где определяется класс `Temperature`, который явно реализует интерфейсы `ICelsius` и `IFahrenheit`.  
   
- [!code-csharp[Conceptual.CLSCompliant#24](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/eii1.cs#24)] [!code-vb[Conceptual.CLSCompliant#24](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/eii1.vb#24)]  
+ [!code-csharp[Conceptual.CLSCompliant#24](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/eii1.cs#24)]
+ [!code-vb[Conceptual.CLSCompliant#24](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/eii1.vb#24)]  
   
 <a name="enums"></a>   
 ### <a name="enumerations"></a>Перечисления  
@@ -308,21 +323,22 @@ ms.lasthandoff: 08/21/2017
   
 -   Базовый тип перечисления должен быть CLS-совместимым встроенным целочисленным типом (<xref:System.Byte>, <xref:System.Int16> <xref:System.Int32> или <xref:System.Int64>). Например, при определении перечисления с базовым типом <xref:System.UInt32> компилятор выдает предупреждение.  
   
-     [!code-csharp[Conceptual.CLSCompliant#7](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/enum3.cs#7)]  [!code-vb[Conceptual.CLSCompliant#7](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/enum3.vb#7)]  
+     [!code-csharp[Conceptual.CLSCompliant#7](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/enum3.cs#7)]
+     [!code-vb[Conceptual.CLSCompliant#7](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/enum3.vb#7)]  
   
--   Тип перечисления должен иметь поле `Value__` с одним экземпляром, отмеченное атрибутом <xref:System.Reflection.FieldAttributes.RTSpecialName?displayProperty=fullName>. Это позволяет неявно ссылаться на значение поля.  
+-   Тип перечисления должен иметь поле `Value__` с одним экземпляром, отмеченное атрибутом <xref:System.Reflection.FieldAttributes.RTSpecialName?displayProperty=nameWithType>. Это позволяет неявно ссылаться на значение поля.  
   
 -   Статические поля литералов перечисления должны иметь тот же тип, что и перечисление. Например, если определить перечисление `State` со значениями `State.On` и `State.Off`, `State.On` и `State.Off` будут статическими полями литералов типа `State`.  
   
 -   Существует два вида перечислений:  
   
-    -   Первый вид представляет набор взаимно исключающих именованных целочисленных значений и не имеет пользовательского атрибута <xref:System.FlagsAttribute?displayProperty=fullName>.  
+    -   Первый вид представляет набор взаимно исключающих именованных целочисленных значений и не имеет пользовательского атрибута <xref:System.FlagsAttribute?displayProperty=nameWithType>.  
   
-    -   Второй вид представляет набор битовых флагов, сочетая которые, можно создавать значения без имени. Такие перечисления имеют пользовательский атрибут <xref:System.FlagsAttribute?displayProperty=fullName>.  
+    -   Второй вид представляет набор битовых флагов, сочетая которые, можно создавать значения без имени. Такие перечисления имеют пользовательский атрибут <xref:System.FlagsAttribute?displayProperty=nameWithType>.  
   
      Дополнительные сведения см. в документации по структуре <xref:System.Enum>.  
   
--   Значение перечисления не ограничивается диапазоном указанных значений. Другими словами, диапазон значений в перечислении — это диапазон базового значения. Метод <xref:System.Enum.IsDefined%2A?displayProperty=fullName> позволяет определить, является ли указанное значение членом перечисления.  
+-   Значение перечисления не ограничивается диапазоном указанных значений. Другими словами, диапазон значений в перечислении — это диапазон базового значения. Метод <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> позволяет определить, является ли указанное значение членом перечисления.  
   
 <a name="members"></a>   
 ### <a name="type-members-in-general"></a>Обзор членов типов  
@@ -336,39 +352,46 @@ ms.lasthandoff: 08/21/2017
   
  Рассмотрим следующий пример. Атрибут <xref:System.CLSCompliantAttribute> имеет значение `true`. Когда класс `Person`, производный от класса `Animal`, изменяет доступность свойства `Species` с открытой на закрытую, компилятор выдает ошибку. Однако если доступность меняется на открытую, ошибки не возникает.  
   
- [!code-csharp[Conceptual.CLSCompliant#28](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility1.cs#28)] [!code-vb[Conceptual.CLSCompliant#28](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility1.vb#28)]  
+ [!code-csharp[Conceptual.CLSCompliant#28](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility1.cs#28)]
+ [!code-vb[Conceptual.CLSCompliant#28](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility1.vb#28)]  
   
  Типы в сигнатуре члена должны быть доступны всегда, когда доступен член. В частности, открытый член не может иметь параметр закрытого, защищенного или внутреннего типа. В следующем примере, когда конструктор класса `StringWrapper` предоставляет внутреннее значение перечисления `StringOperationType`, которое определяет, как переносится строка, компилятор выдает ошибку.  
   
- [!code-csharp[Conceptual.CLSCompliant#27](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility3.cs#27)] [!code-vb[Conceptual.CLSCompliant#27](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility3.vb#27)]  
+ [!code-csharp[Conceptual.CLSCompliant#27](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility3.cs#27)]
+ [!code-vb[Conceptual.CLSCompliant#27](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility3.vb#27)]  
   
 <a name="Generics"></a>   
 ### <a name="generic-types-and-members"></a>Универсальные типы и члены  
  У вложенного типа должно быть не меньше универсальных параметров, чем у включающего типа. Они соответствуют по позиции универсальным параметрам включающего типа. Универсальный тип может также содержать новые универсальные параметры.  
   
- Связь между параметрами универсального типа содержащего типа и вложенных типов может скрываться синтаксисом отдельных языков. В следующем примере универсальный тип `Outer<T>` содержит два вложенных класса — `Inner1A` и `Inner1B<U>`. При вызове метода `ToString`, наследуемого от класса <xref:System.Object.ToString%2A?displayProperty=fullName>, видно, что каждый вложенный класс включает параметры типа содержащего его класса.  
+ Связь между параметрами универсального типа содержащего типа и вложенных типов может скрываться синтаксисом отдельных языков. В следующем примере универсальный тип `Outer<T>` содержит два вложенных класса — `Inner1A` и `Inner1B<U>`. При вызове метода `ToString`, наследуемого от класса <xref:System.Object.ToString%2A?displayProperty=nameWithType>, видно, что каждый вложенный класс включает параметры типа содержащего его класса.  
   
- [!code-csharp[Conceptual.CLSCompliant#29](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/nestedgenerics2.cs#29)] [!code-vb[Conceptual.CLSCompliant#29](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/nestedgenerics2.vb#29)]  
+ [!code-csharp[Conceptual.CLSCompliant#29](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/nestedgenerics2.cs#29)]
+ [!code-vb[Conceptual.CLSCompliant#29](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/nestedgenerics2.vb#29)]  
   
  Имена универсальных типов кодируются в виде *имя\`n*, где *имя* — имя типа, \` — символьный литерал, а *n* — количество параметров, объявленных в типе (у вложенных универсальных типов — количество новых параметров типа). Эта запись имен универсальных типов в первую очередь пригодится разработчикам, использующим отражение для доступа к универсальным CLS-совместимым типам в библиотеке.  
   
  Если к универсальному типу применяются ограничения, то типы, используемые в качестве ограничений, должны быть CLS-совместимыми. В следующем примере определяется класс `BaseClass`, который не является CLS-совместимым, и универсальный класс `BaseCollection`, у которого параметр типа должен быть производным от класса `BaseClass`. Поскольку `BaseClass` не является CLS-совместимым, компилятор выдает предупреждение.  
   
- [!code-csharp[Conceptual.CLSCompliant#34](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics5.cs#34)] [!code-vb[Conceptual.CLSCompliant#34](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics5.vb#34)]  
+ [!code-csharp[Conceptual.CLSCompliant#34](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics5.cs#34)]
+ [!code-vb[Conceptual.CLSCompliant#34](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics5.vb#34)]  
   
  В универсальном типе, производном от универсального базового типа, должны повторно объявляться ограничения, обеспечивающие соответствие всем ограничениям базового типа. В следующем примере определяется `Number<T>`, который может представлять любой числовой тип. В нем также определяется класс `FloatingPoint<T>`, представляющий значение с плавающей запятой. Однако поскольку ограничения `Number<T>` (T должен быть типом значения) не применяются к `FloatingPoint<T>`, код не компилируется.  
   
- [!code-csharp[Conceptual.CLSCompliant#30](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics2a.cs#30)] [!code-vb[Conceptual.CLSCompliant#30](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics2a.vb#30)]  
+ [!code-csharp[Conceptual.CLSCompliant#30](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics2a.cs#30)]
+ [!code-vb[Conceptual.CLSCompliant#30](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics2a.vb#30)]  
   
  Если в класс `FloatingPoint<T>` добавить ограничение, код компилируется.  
   
- [!code-csharp[Conceptual.CLSCompliant#31](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics2.cs#31)] [!code-vb[Conceptual.CLSCompliant#31](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics2.vb#31)]  
+ [!code-csharp[Conceptual.CLSCompliant#31](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics2.cs#31)]
+ [!code-vb[Conceptual.CLSCompliant#31](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics2.vb#31)]  
   
  Спецификация CLS предполагает консервативную модель создания экземпляров вложенных типов и защищенных членов. Открытые универсальные типы не могут предоставлять поля и члены с сигнатурами, содержащими определенный экземпляр вложенного защищенного универсального типа. Неуниверсальные типы, расширяющие определенный экземпляр универсального базового класса или интерфейса, не могут предоставлять поля и члены с сигнатурами, содержащими другой экземпляр вложенного защищенного универсального типа.  
   
  В следующем примере определяется универсальный тип `C1<T>` (`C1(Of T)` в Visual Basic) и защищенный класс `C1<T>.N` (`C1(Of T).N` в Visual Basic). Объект `C1<T>` имеет два метода: `M1` и `M2`. Однако `M1` не является CLS-совместимым, поскольку он пытается возвратить объект `C1<int>.N` (или `C1(Of Integer).N`) из C1T\<T> (или `C1(Of T)`). Второй класс `C2` является производным от `C1<long>` (или `C1(Of Long)`). Он имеет два метода: `M3` и `M4`. `M3` не является CLS-совместимым, поскольку он возвращает объект `C1<int>.N` (или `C1(Of Integer).N`) из подкласса `C1<long>`. Обратите внимание, что языковые компиляторы могут накладывать даже более строгие ограничения. В этом примере на языке Visual Basic при компиляции `M4` возникает ошибка.  
   
- [!code-csharp[Conceptual.CLSCompliant#32](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics4.cs#32)] [!code-vb[Conceptual.CLSCompliant#32](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics4.vb#32)]  
+ [!code-csharp[Conceptual.CLSCompliant#32](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics4.cs#32)]
+ [!code-vb[Conceptual.CLSCompliant#32](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics4.vb#32)]  
   
 <a name="ctors"></a>   
 ### <a name="constructors"></a>Конструкторы  
@@ -378,9 +401,10 @@ ms.lasthandoff: 08/21/2017
   
      Обычно компиляторы применяют это правило вне зависимости от требований CLS-совместимости. Это иллюстрирует следующий пример. Класс `Doctor` является производным от класса `Person`, однако класс `Doctor` не может вызывать конструктор класса `Person` для инициализации наследуемых полей экземпляра.  
   
-     [!code-csharp[Conceptual.CLSCompliant#11](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/ctor1.cs#11)]  [!code-vb[Conceptual.CLSCompliant#11](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/ctor1.vb#11)]  
+     [!code-csharp[Conceptual.CLSCompliant#11](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/ctor1.cs#11)]
+     [!code-vb[Conceptual.CLSCompliant#11](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/ctor1.vb#11)]  
   
--   Конструктор объекта можно вызывать только для создания объекта. Объект невозможно инициализировать дважды. В частности это означает, что метод <xref:System.Object.MemberwiseClone%2A?displayProperty=fullName> и методы десериализации (например, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=fullName>) не должны вызывать конструкторы.  
+-   Конструктор объекта можно вызывать только для создания объекта. Объект невозможно инициализировать дважды. В частности это означает, что метод <xref:System.Object.MemberwiseClone%2A?displayProperty=nameWithType> и методы десериализации (например, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType>) не должны вызывать конструкторы.  
   
 <a name="properties"></a>   
 ### <a name="properties"></a>Свойства  
@@ -394,11 +418,11 @@ ms.lasthandoff: 08/21/2017
   
 <a name="events"></a>   
 ### <a name="events"></a>События  
- Событие определяется именем и типом. Тип события является делегатом, который используется для обозначения события. Например, событие <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> имеет тип <xref:System.ResolveEventHandler>. Помимо события также определяются три метода с именами, производными от имени события, которые обеспечивают реализацию события и имеют в метаданных сборки атрибут `SpecialName`:  
+ Событие определяется именем и типом. Тип события является делегатом, который используется для обозначения события. Например, событие <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> имеет тип <xref:System.ResolveEventHandler>. Помимо события также определяются три метода с именами, производными от имени события, которые обеспечивают реализацию события и имеют в метаданных сборки атрибут `SpecialName`:  
   
--   Метод добавления обработчика событий с именем `add_`*имя_события*. Например, метод подписки для события <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> называется `add_AssemblyResolve`.  
+-   Метод добавления обработчика событий с именем `add_`*имя_события*. Например, метод подписки для события <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> называется `add_AssemblyResolve`.  
   
--   Метод удаления обработчика событий с именем `remove_`*имя_события*. Например, метод удаления для события <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> называется `remove_AssemblyResolve`.  
+-   Метод удаления обработчика событий с именем `remove_`*имя_события*. Например, метод удаления для события <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> называется `remove_AssemblyResolve`.  
   
 -   Метод, который указывает, что возникло событие, с именем `raise_`*имя_события*.  
   
@@ -409,7 +433,8 @@ ms.lasthandoff: 08/21/2017
   
  В следующем примере определяется CLS-совместимый класс `Temperature`, который создает событие `TemperatureChanged`, если перепад температуры между двумя показаниями равен пороговому значению или превышает его. Класс `Temperature` явно определяет метод `raise_TemperatureChanged`, чтобы он мог выборочно выполнять обработчики событий.  
   
- [!code-csharp[Conceptual.CLSCompliant#20](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/event1.cs#20)] [!code-vb[Conceptual.CLSCompliant#20](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/event1.vb#20)]  
+ [!code-csharp[Conceptual.CLSCompliant#20](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/event1.cs#20)]
+ [!code-vb[Conceptual.CLSCompliant#20](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/event1.vb#20)]  
   
 <a name="overloads"></a>   
 ### <a name="overloads"></a>Overloads  
@@ -426,21 +451,24 @@ ms.lasthandoff: 08/21/2017
   
 <a name="exceptions"></a>   
 ### <a name="exceptions"></a>Исключения  
- Объекты исключений должны наследоваться от <xref:System.Exception?displayProperty=fullName> или типа, производного от <xref:System.Exception?displayProperty=fullName>. В следующем примере, когда пользовательский класс `ErrorClass` используется для обработки исключения, компилятор выдает ошибку.  
+ Объекты исключений должны наследоваться от <xref:System.Exception?displayProperty=nameWithType> или типа, производного от <xref:System.Exception?displayProperty=nameWithType>. В следующем примере, когда пользовательский класс `ErrorClass` используется для обработки исключения, компилятор выдает ошибку.  
   
- [!code-csharp[Conceptual.CLSCompliant#13](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/exceptions1.cs#13)] [!code-vb[Conceptual.CLSCompliant#13](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/exceptions1.vb#13)]  
+ [!code-csharp[Conceptual.CLSCompliant#13](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/exceptions1.cs#13)]
+ [!code-vb[Conceptual.CLSCompliant#13](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/exceptions1.vb#13)]  
   
- Чтобы она не возникала, класс `ErrorClass` должен наследоваться от <xref:System.Exception?displayProperty=fullName>. Кроме того, необходимо переопределить свойство `Message`. Эти ошибки устранены в следующем примере, где определяется CLS-совместимый класс `ErrorClass`.  
+ Чтобы она не возникала, класс `ErrorClass` должен наследоваться от <xref:System.Exception?displayProperty=nameWithType>. Кроме того, необходимо переопределить свойство `Message`. Эти ошибки устранены в следующем примере, где определяется CLS-совместимый класс `ErrorClass`.  
   
- [!code-csharp[Conceptual.CLSCompliant#14](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/exceptions2.cs#14)] [!code-vb[Conceptual.CLSCompliant#14](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/exceptions2.vb#14)]  
+ [!code-csharp[Conceptual.CLSCompliant#14](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/exceptions2.cs#14)]
+ [!code-vb[Conceptual.CLSCompliant#14](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/exceptions2.vb#14)]  
   
 <a name="attributes"></a>   
 ### <a name="attributes"></a>Атрибуты  
- В сборках .NET Framework настраиваемые атрибуты предоставляют расширяемый механизм хранения настраиваемых атрибутов и извлечения метаданных об объектах программирования (например, о сборках, типах, членах и параметрах методов). Настраиваемые атрибуты должны наследоваться от <xref:System.Attribute?displayProperty=fullName> или типа, производного от <xref:System.Attribute?displayProperty=fullName>.  
+ В сборках .NET Framework настраиваемые атрибуты предоставляют расширяемый механизм хранения настраиваемых атрибутов и извлечения метаданных об объектах программирования (например, о сборках, типах, членах и параметрах методов). Настраиваемые атрибуты должны наследоваться от <xref:System.Attribute?displayProperty=nameWithType> или типа, производного от <xref:System.Attribute?displayProperty=nameWithType>.  
   
- Это правило не выполняется в следующем примере. В нем определяется класс `NumericAttribute`, который не является производным от <xref:System.Attribute?displayProperty=fullName>. Обратите внимание, что компилятор выдает ошибку не при определении класса, а когда используется атрибут, который не является CLS-совместимым.  
+ Это правило не выполняется в следующем примере. В нем определяется класс `NumericAttribute`, который не является производным от <xref:System.Attribute?displayProperty=nameWithType>. Обратите внимание, что компилятор выдает ошибку не при определении класса, а когда используется атрибут, который не является CLS-совместимым.  
   
- [!code-csharp[Conceptual.CLSCompliant#18](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/attribute1.cs#18)] [!code-vb[Conceptual.CLSCompliant#18](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/attribute1.vb#18)]  
+ [!code-csharp[Conceptual.CLSCompliant#18](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/attribute1.cs#18)]
+ [!code-vb[Conceptual.CLSCompliant#18](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/attribute1.vb#18)]  
   
  Конструктор и свойства CLS-совместимого атрибута могут предоставлять только следующие типы:  
   
@@ -468,11 +496,12 @@ ms.lasthandoff: 08/21/2017
   
  В следующем примере определяется класс `DescriptionAttribute`, производный от <xref:System.Attribute>. Конструктор класса имеет параметр типа `Descriptor`, поэтому класс не является CLS-совместимым. Обратите внимание: компилятор C# выдает предупреждение и выполняет компиляцию, а компилятор Visual Basic не выдает ни предупреждения, ни ошибки.  
   
- [!code-csharp[Conceptual.CLSCompliant#33](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/attribute2.cs#33)] [!code-vb[Conceptual.CLSCompliant#33](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/attribute2.vb#33)]  
+ [!code-csharp[Conceptual.CLSCompliant#33](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/attribute2.cs#33)]
+ [!code-vb[Conceptual.CLSCompliant#33](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/attribute2.vb#33)]  
   
 <a name="CLSAttribute"></a>   
 ## <a name="the-clscompliantattribute-attribute"></a>Атрибут CLSCompliantAttribute  
- Атрибут <xref:System.CLSCompliantAttribute> указывает, соответствует ли элемент правилам спецификации CLS. Конструктор <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=fullName> имеет один обязательный параметр `isCompliant`, определяющий, является ли элемент программы CLS-совместимым.  
+ Атрибут <xref:System.CLSCompliantAttribute> указывает, соответствует ли элемент правилам спецификации CLS. Конструктор <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> имеет один обязательный параметр `isCompliant`, определяющий, является ли элемент программы CLS-совместимым.  
   
  Компилятор определяет элементы, которые предположительно являются CLS-совместимыми, однако не соответствуют правилам спецификации CLS, и выдает предупреждение. Он пропускает типы и члены, которые явно объявлены как не соответствующие правилам спецификации CLS.  
   
@@ -483,9 +512,9 @@ ms.lasthandoff: 08/21/2017
 -   С его помощью обеспечить, чтобы открытый интерфейс библиотеки компонентов предоставлял только CLS-совместимые элементы программы. Если элементы не являются CLS-совместимыми, компиляторы обычно выдают предупреждение.  
   
 > [!WARNING]
->  В некоторых случаях языковые компиляторы применяют правила CLS-совместимости вне зависимости от того, используется ли атрибут <xref:System.CLSCompliantAttribute>. Например, когда в интерфейсе определяется статический член, нарушается правило CLS-совместимости. Однако если определить в интерфейсе член `static` (в C#) или `Shared` (в Visual Basic), компиляторы C# и Visual Basic выдают сообщение об ошибке и не компилируют приложение.  
+>  В некоторых случаях языковые компиляторы применяют правила CLS-совместимости вне зависимости от того, используется ли атрибут <xref:System.CLSCompliantAttribute>. Например, когда в интерфейсе определяется статический член, нарушается правило CLS-совместимости. В этом учета, если определить `static` (в C#) или `Shared` (в Visual Basic) в интерфейсе член как компиляторы C# и Visual Basic выдают сообщение об ошибке и не удастся скомпилировать приложение.  
   
- Атрибут <xref:System.CLSCompliantAttribute> отмечен атрибутом <xref:System.AttributeUsageAttribute> со значением <xref:System.AttributeTargets.All?displayProperty=fullName>. Это значение позволяет применять атрибут <xref:System.CLSCompliantAttribute> к любым элементам программы: сборкам, модулям, типам (классам, структурам, перечислениям, интерфейсам и делегатам), членам типов (конструкторам, методам, свойствам, полям и событиям), параметрам, универсальным параметрам и возвращаемым значениям. Однако на практике атрибут рекомендуется применять только к сборкам, типам и членам типов. В противном случае компиляторы игнорируют атрибут и создают предупреждения для всех параметров, универсальных параметров и возвращаемых значений открытого интерфейса библиотеки, которые не являются CLS-совместимыми.  
+ Атрибут <xref:System.CLSCompliantAttribute> отмечен атрибутом <xref:System.AttributeUsageAttribute> со значением <xref:System.AttributeTargets.All?displayProperty=nameWithType>. Это значение позволяет применять атрибут <xref:System.CLSCompliantAttribute> к любым элементам программы: сборкам, модулям, типам (классам, структурам, перечислениям, интерфейсам и делегатам), членам типов (конструкторам, методам, свойствам, полям и событиям), параметрам, универсальным параметрам и возвращаемым значениям. Однако на практике атрибут рекомендуется применять только к сборкам, типам и членам типов. В противном случае компиляторы игнорируют атрибут и создают предупреждения для всех параметров, универсальных параметров и возвращаемых значений открытого интерфейса библиотеки, которые не являются CLS-совместимыми.  
   
  Значение атрибута <xref:System.CLSCompliantAttribute> наследуется вложенными элементами программы. Например, если сборка отмечена как CLS-совместимая, ее типы также являются CLS-совместимыми. Если тип отмечен как CLS-совместимый, его вложенные типы и члены также являются CLS-совместимыми.  
   
@@ -507,7 +536,8 @@ ms.lasthandoff: 08/21/2017
   
  В следующем примере с помощью атрибута <xref:System.CLSCompliantAttribute> определяется CLS-совместимая сборка и тип `CharacterUtilities`, который имеет два члена, не являющихся CLS-совместимыми. Поскольку оба члена отмечены атрибутом `CLSCompliant(false)`, компилятор не выдает предупреждения. Класс также предоставляет CLS-совместимую альтернативу для обоих методов. В обычном случае мы бы добавили две перегрузки для метода `ToUTF16`, чтобы предоставить CLS-совместимые альтернативы. Однако методы не перегружаются на основе возвращаемого значения, поэтому CLS-совместимые и несовместимые методы имеют разные имена.  
   
- [!code-csharp[Conceptual.CLSCompliant#35](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/indicator3.cs#35)] [!code-vb[Conceptual.CLSCompliant#35](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/indicator3.vb#35)]  
+ [!code-csharp[Conceptual.CLSCompliant#35](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/indicator3.cs#35)]
+ [!code-vb[Conceptual.CLSCompliant#35](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/indicator3.vb#35)]  
   
  При разработке приложений (а не библиотек, где предоставляются типы и члены, которые могут использоваться другими разработчиками) вы столкнетесь с вопросами CLS-совместимости программных элементов, которые использует приложение, только если их не поддерживает язык, на котором вы работаете. И если вы попытаетесь использовать элементы, которые не являются CLS-совместимыми, языковой компилятор выдаст предупреждение.  
   
@@ -547,7 +577,8 @@ link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll
   
  В следующем примере показаны вызовы методов `NumericLib.NearZero` и `StringLib.ToTitleCase`. Обратите внимание, что и код Visual Basic, и код C#, могут обращаться к методам в обоих классах.  
   
- [!code-csharp[Conceptual.CrossLanguage#3](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.crosslanguage/cs/useutilities1.cs#3)] [!code-vb[Conceptual.CrossLanguage#3](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.crosslanguage/vb/useutilities1.vb#3)]  
+ [!code-csharp[Conceptual.CrossLanguage#3](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.crosslanguage/cs/useutilities1.cs#3)]
+ [!code-vb[Conceptual.CrossLanguage#3](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.crosslanguage/vb/useutilities1.vb#3)]  
   
  Чтобы скомпилировать код Visual Basic, используйте следующую команду.  
   
@@ -563,4 +594,3 @@ csc example.cs /r:UtilityLib.dll
   
 ## <a name="see-also"></a>См. также  
  <xref:System.CLSCompliantAttribute>
-
