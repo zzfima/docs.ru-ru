@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3d22067f-57b8-4e0f-a571-a694512187ae
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e4ab4d0a97cbbaa2e5aaee25e0154e1cc94a82f8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 59a9f0638855206f390ee7fbace580ba37e25e23
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="conditional-get-and-put"></a>Условные методы Get и Put
 В этом образце демонстрируется использование новых интерфейсов API условного получения и обновления для модели программирования WCF REST. Поскольку больше всего подходят для условного получения и обновления ориентацией на ресурсы и службы REST, в этом примере расширяет [базовой службы ресурсов](../../../../docs/framework/wcf/samples/basic-resource-service.md) образца. В этом примере уделяется добавлена поддержка условного получения и обновления для [базовой службы ресурсов](../../../../docs/framework/wcf/samples/basic-resource-service.md) образца с помощью новых API, представленные в [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].  

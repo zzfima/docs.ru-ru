@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
 caps.latest.revision: "27"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 741fdd9c4326243414ce6c19dcdd8f80317fe225
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 23daee4b8e7cd1fcf7ec7f085fb40d788aa5e556
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="large-data-and-streaming"></a>Большие наборы данных и потоковая передача
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] является инфраструктурой связи, основанной на XML. Так как XML-данных часто закодирован в формате стандартного текста, определенного в [спецификации XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838), подключенных систем разработчикам и архитекторам обычно беспокоит занимаемое место в сети (или размер) сообщений, отправляемых через к сети, а также текстовых кодировку XML непростой специальные для эффективной передачи двоичных данных.  

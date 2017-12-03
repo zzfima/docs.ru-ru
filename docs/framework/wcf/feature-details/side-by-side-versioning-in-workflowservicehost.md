@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 68b0bea0253e32384291e5e73cc81367b0fb3305
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f3629778ded2b690f8169223101d89cb551e1449
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>Параллельное управление версиями в WorkflowServiceHost
 Параллельное управление версиями <xref:System.ServiceModel.Activities.WorkflowServiceHost>, введенное в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], предоставляет возможность размещения нескольких версий службы Workflow Service на одной конечной точке. Предоставляемая функциональность параллельной работы позволяет настроить службу Workflow Service таким образом, чтобы новые экземпляры службы Workflow Service создавались с использованием нового определения рабочего процесса, а запущенные экземпляры завершались с использованием существующего определения. Данный раздел содержит общие сведения о параллельном выполнении служб Workflow Services с использованием <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  

@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
 caps.latest.revision: "43"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7043956427561e4485bdad6a98673b997bc88e85
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d14f516ed32ecbada0b612cf06179e47acf18ddc
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ws-transaction-flow"></a>Поток транзакций WS
 В этом образце показано использование координируемой клиентом транзакции и параметры клиента и сервера для организации потока транзакции с использованием протокола WS-Atomic Transaction или OleTransactions. Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующий службу калькулятора, но операции достигается за счет демонстрируют использование `TransactionFlowAttribute` с **параметр transactionflowoption со** Перечисление, чтобы определить, в какой степени транзакций включен поток. В области поточной транзакции в базу данных записывается журнал запрошенных операций, который сохраняется до завершения транзакции, координируемой клиентом, и если транзакция клиента не завершена, транзакция веб-службы следит, чтобы соответствующие обновления базы данных не были зафиксированы.  

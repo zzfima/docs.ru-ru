@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a5509a5c-de24-4bc2-9a48-19138055dcce
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d204600682ec8acbc229240c4e1bc859d8ea4d21
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5657b48a648603f24e89c0eebd1285ed9a505e54
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>Протокол надежного обмена сообщениями, версия 1.0
 В этом разделе описаны особенности реализации в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] протокола обмена сообщениями WS-Reliable (версия 1.0 от февраля 2005 года), необходимого для взаимодействия с использованием транспорта HTTP. В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] соблюдена спецификация обмена сообщениями WS-Reliable с определенными ограничениями и пояснениями, описанными далее в этом разделе. Обратите внимание, что протокол WS-ReliableMessaging версии 1.0 реализуется начиная с версии [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  

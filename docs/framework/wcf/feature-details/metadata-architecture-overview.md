@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
 caps.latest.revision: "24"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1fa7fea1709f2664abe45ebdb916183a46885612
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cc42aa130ce5da05739af43d287441d1644d55c3
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="metadata-architecture-overview"></a>Общие сведения об архитектуре метаданных
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] обеспечивает широкие возможности для экспорта, публикации, получения и импорта метаданных служб. Службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используют метаданные для описания взаимодействия с конечными точками служб, чтобы такие средства, как Svcutil.exe, могли автоматически создавать клиентский код для обращения к службе.  

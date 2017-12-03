@@ -10,14 +10,14 @@ ms.topic: article
 helpviewer_keywords: programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d9f4df7832be962665c2a49d4b009d9cc6f76f93
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3738b484321a9c6a3cbcb2a59854bb91770bf8bf
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="workflow-tracking-and-tracing"></a>Отслеживание и трассировка рабочих процессов
 Отслеживание рабочих процессов Windows является функцией [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)], разработанной для обеспечения возможности отслеживания выполнения рабочих процессов. Она обеспечивает инфраструктуру отслеживания выполнения экземпляра рабочего процесса. Инфраструктура отслеживания WF прозрачно инструментирует рабочий процесс таким образом, что выдаются записи, отражающие ключевые события выполнения. Эта функция доступна по умолчанию для всех рабочих процессов [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. Для выполнения отслеживания в рабочий процесс [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] не нужно вносить изменения. Необходимо лишь определить объем данных отслеживания, которые требуется получать. При запуске или завершении экземпляра рабочего процесса создаются записи отслеживания, которые затем обрабатываются. Отслеживание также позволяет извлекать важные для бизнеса данные, связанные с переменными рабочего процесса. Например, если рабочий процесс представляет собой систему обработки заказов, вместе с объектом <xref:System.Activities.Tracking.TrackingRecord> можно извлечь идентификатор заказа. Как правило, функции отслеживания WF позволяют упростить диагностику и доступ к данным бизнес-аналитики из выполняемого рабочего процесса.  

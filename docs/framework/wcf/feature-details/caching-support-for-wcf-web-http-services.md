@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b951c77e522180fa615a9b6853bfc195a3e5bcb2
-ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a4dd96f444d6405022a0a812a55a92cec1052fbb
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Поддержка кэширования для веб-служб HTTP WCF
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]позволяет использовать декларативный механизм кэширования, который уже доступен в ASP.NET в службах WCF Web HTTP. Это позволяет кэшировать ответы от операций службы WCF Web HTTP. Когда пользователь отправляет инструкцию HTTP GET службе, настроенной для кэширования, ASP.NET отправляет обратно кэшированный ответ, метод службы при этом не вызывается. По истечении срока действия кэш в следующий раз, когда пользователь отправит инструкцию HTTP GET, будет вызван метод службы и ответ будет снова кэширован. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Кэш ASP.NET, в разделе [Обзор технологии кэширования ASP.NET](http://go.microsoft.com/fwlink/?LinkId=152534)  

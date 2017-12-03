@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d758abf6dbf5d8a5992a7c033e2ea1526762766d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 50bd1492c4e2e8941a77f344c04414a763390e89
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Транспорт: TCP-взаимодействие WSE 3.0
 В примере транспорта взаимодействия TCP WSE 3.0 демонстрируется реализация дуплексного сеанса TCP в виде пользовательского транспорта [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Также демонстрируется использование расширяемости уровня канала для создания интерфейса по сети с существующими развернутыми системами. Следующие шаги показывают, как построить этот пользовательский транспорт [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  

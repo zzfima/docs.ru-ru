@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 821f629a7f39869975af19c793fe26188a40d7d6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b658cc481d3ca5e87b5b9e2aab6b7561be2c65b1
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="discovery-binding-element-sample"></a>Образец элемента привязки для обнаружения
 Данный образец демонстрирует использование клиентского элемента привязки обнаружения для обнаружения службы. Эта функция позволяет разработчикам добавлять клиентский канал обнаружения к клиентскому стеку каналов, в результате чего модель программирования становится намного интуитивно понятнее. Если соответствующий канал открыт, адрес службы разрешается в процессе обнаружения. Данный образец состоит из следующих проектов.  

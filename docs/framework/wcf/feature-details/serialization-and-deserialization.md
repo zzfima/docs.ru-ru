@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6334a5b866d239dc5f961ce4f1c89eac5b6ed3b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2cf83f7c9af667a9efed59ff7a1f86ace6d8821d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="serialization-and-deserialization"></a>Сериализация и десериализация
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] включает новый модуль сериализации - <xref:System.Runtime.Serialization.DataContractSerializer>. Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> преобразует объекты [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] в формат XML и обратно. В данном разделе объясняется, как работает сериализатор.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/21/2017
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] также включает сопровождающий сериализатор - <xref:System.Runtime.Serialization.NetDataContractSerializer>. Сериализатор <xref:System.Runtime.Serialization.NetDataContractSerializer> аналогичен сериализаторам <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> и <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> в том, что он отображает имена типов [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] как часть сериализованных данных. Он применяется при совместном использовании одних и тех же типов на концах сериализации и десериализации. Оба сериализатора ( <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.NetDataContractSerializer> ) являются производными от общего базового класса <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
   
 > [!WARNING]
->  Класс <xref:System.Runtime.Serialization.DataContractSerializer> сериализует строки, содержащие управляющие символы с шестнадцатеричным значением меньше 20 в виде сущностей XML. При этом может возникнуть проблема отправки клиентами не WCF таких данных в службу WCF.  
+>  Класс <xref:System.Runtime.Serialization.DataContractSerializer> сериализует строки, содержащие управляющие символы с шестнадцатеричным значением меньше 20 в виде сущностей XML. Это может вызвать проблемы с клиентом не WCF при отправке в службу WCF таких данных.  
   
 ## <a name="creating-a-datacontractserializer-instance"></a>Создание экземпляра DataContractSerializer  
  Создание экземпляра <xref:System.Runtime.Serialization.DataContractSerializer> является важным этапом. После создания экземпляра невозможно менять какие-либо настройки.  

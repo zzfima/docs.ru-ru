@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 85084cd9-31cc-4e95-b667-42ef01336622
 caps.latest.revision: "23"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: fb899bdc8d1452046b71fdce5d0782e1d1338d2e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f93247a96501359bcda8d2956308e6570c597f93
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-one-way-contract"></a>Практическое руководство. Создание одностороннего контракта
 В этом разделе приведены основные этапы создания методов, использующих односторонние контракты. Эти методы вызывают операции службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с помощью клиента, но не ожидают ответа. Контракты этого типа можно использовать, к примеру, для публикации уведомлений для большого количества подписчиков. Также можно использовать односторонние контракты при создании дуплексного (двустороннего) контракта, что позволяет клиентам и серверам взаимодействовать независимо (клиент может инициировать вызовы сервера, а сервер - вызовы клиента). В частности, это позволяет серверу выполнять односторонние вызовы клиента, которые клиент может воспринимать как события. Подробные сведения об указании односторонних методов см. в описаниях свойства <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> и класса <xref:System.ServiceModel.OperationContractAttribute>.  

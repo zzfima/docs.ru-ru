@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 caps.latest.revision: "43"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a518f1bc6019aea0667f6be018e06bbcf36e6e9e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3bb2646a500db299f164dce34fb062a509f90047
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="unsupported-scenarios"></a>Неподдерживаемые сценарии
 По различным причинам [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] не поддерживает некоторые сценарии безопасности. Например, в операционной системе [!INCLUDE[wxp](../../../../includes/wxp-md.md)] не реализованы протоколы проверки подлинности SSPI и Kerberos, поэтому [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не поддерживает на этой платформе выполнение служб с проверкой подлинности Windows. При использовании [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в ОС Windows XP Home Edition поддерживаются другие механизмы проверки подлинности, такие как проверка имени пользователя и пароля и встроенная проверка подлинности HTTP/HTTPS.  

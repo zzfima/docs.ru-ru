@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
 caps.latest.revision: "29"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: bf4c153cb3bb0b977b2d1f0438d1b6ac0d46ab43
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ab728751a01d16c6b3d2d14de4dd09c2d2b0a17a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="supporting-tokens"></a>Вспомогательные маркеры
 Образец вспомогательных маркеров демонстрирует, как добавить дополнительные маркеры в сообщение, использующее WS-Security. Пример добавляет двоичный маркер безопасности X.509 в дополнение к маркеру безопасности имени пользователя. Этот маркер передается в заголовке сообщения WS-Security из клиента в службу, и часть сообщения подписывается закрытым ключом, связанным с маркером безопасности X.509, чтобы подтвердить получателю наличие сертификата X.509. Это полезно в случае, когда для проверки подлинности или авторизации отправителя требуются несколько утверждений, связанных с сообщением. Служба реализует контракт, определяющий шаблон взаимодействия "запрос-ответ".  

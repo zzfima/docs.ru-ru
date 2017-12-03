@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 482a48c4-eb83-40c3-a4e2-2f9a8af88b75
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 57a6a15f648f83a60f3ac402443c3c5e4aecfcd4
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2fbf80f0038ad830ab35fdb55272e45d8a6bffdc
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="usage-of-the-switch-activity-with-custom-types"></a>Использование действия Switch с пользовательскими типами
 В этом образце описывается способ включения действия <xref:System.Activities.Statements.Switch%601> для оценки определяемого пользователем сложного типа во время выполнения. В большинстве традиционных процедурных языков программирования [переключения](http://go.microsoft.com/fwlink/?LinkId=180521) инструкция выбирает логику выполнения на основе условного вычисления переменной. Обычно оператор `switch` работает с выражением, которое может быть оценено статически. Например, в C# это означает, что поддерживаются только примитивные типы, такие как <xref:System.Boolean>, <xref:System.Int32>, <xref:System.String> и типы перечисления.  

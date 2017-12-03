@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0bb95fa473cdad05a4ecb9d1ee596ecf6639874c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c3d22c83f5fbc1144d139c9e7ba6a43137f6d144
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="contract-first-workflow-service-development"></a>Разработка службы рабочих процессов на основе контракта
 Начиная с версии [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[wf](../../../includes/wf-md.md)] обеспечивает более качественную интеграцию между веб-службами и рабочими процессами с помощью средств разработки рабочего процесса на основе контракта (WCF). Средство разработки рабочих процессов на основе контракта позволяет создать контракт в Code First. Затем это средство автоматически создает в области элементов шаблон действия для каждой операции в контракте. В этом разделе содержатся общие сведения о том, как действия и свойства в службе рабочих процессов сопоставляются с атрибутами контракта службы. Пример с пошаговыми инструкциями создания рабочих процессов на основе контракта службы, в разделе [как: создание службы рабочего процесса, который использует существующий контракт службы](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  

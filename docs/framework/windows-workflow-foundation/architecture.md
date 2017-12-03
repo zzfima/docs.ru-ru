@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1d4c6495-d64a-46d0-896a-3a01fac90aa9
 caps.latest.revision: "20"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5c34b1af9c5fd93d57e94d959abe69f32572f7b0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d1b58456fe99331a47871fbf4b1ad86cd43c53c2
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="windows-workflow-architecture"></a>Архитектура рабочих процессов Windows
 [!INCLUDE[wf](../../../includes/wf-md.md)] поднимает уровень абстракции для разработки интерактивных длительных приложений. Блоки обработки инкапсулируются в виде действий. Действия работают в среде, которая обеспечивает средства для управления потоком, обработки исключений, распространения ошибок, сохранения данных состояния, загрузки и выгрузки текущих рабочих процессов из памяти, отслеживания и управления потоком транзакций.  

@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c106feb0-0245-43b5-aefe-93ce0e4d38eb
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 004a37682b855135998ef4620e673421f769326d
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 06a302b13db3b82dabb43989ac272df0d9aac008
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="basic-xaml-only-service"></a>Базовая служба с использованием только XAML
 В этом образце демонстрируется создание службы, работающей только с языком XAML. В данном сценарии рассматривается диагностическая служба для автомобильных проблем. Служба реализована в виде рабочего процесса, задающего клиенту ряд вопросов для диагностики проблемы. Эта служба может выполнять диагностику двух типов проблем (машина не заводится, или система кондиционирования не работает). Для представления трех простых операций служб в рабочем процессе использует шаблон «Запрос-ответ» из конструктора. Служба размещается в службах IIS путем создания виртуального каталога в IIS и копирования service1.xamlx и файлов Web.config в виртуальный каталог, скомпилированный код не требуется. По умолчанию в этом примере автоматически скопирует необходимые файлы в виртуальный каталог, созданный при выполнении процедуры настройки для образцов WCF и WF: [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) при построении в Visual Studio 2010.  

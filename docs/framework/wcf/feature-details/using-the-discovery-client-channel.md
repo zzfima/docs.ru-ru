@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 655885aa392420cc0f35955e6146fd6a1f8e50d7
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f012cc43d7160b737e5a9a5d4ceb5e50e91d07a1
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-the-discovery-client-channel"></a>Использование клиентского канала обнаружения
 При написании клиентского приложения WCF необходимо знать адрес конечной точки вызываемой службы. Во многих случаях адрес конечной точки службы неизвестен заранее или может измениться со временем. Клиентский канал обнаружения позволяет создать клиентское приложение WCF, описать службу, которую необходимо вызвать, после чего клиентский канал автоматически отправит зондирующий запрос. После ответа службы клиентский канал обнаружения извлекает адрес конечной точки службы из ответа запроса и пользуется им для вызова службы.  

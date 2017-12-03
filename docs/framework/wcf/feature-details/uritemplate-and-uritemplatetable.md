@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
 caps.latest.revision: "24"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7ef3f2a71280595d58291863a1852cc4c590008c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b9d08fa0e0ec556779d246af5ec11fcbeb54dedc
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate и UriTemplateTable
 Веб-разработчикам необходима возможность описания формы и структуры универсальных кодов ресурса (URI), на которые отвечают их службы. В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] появились два новых класса, позволяющие разработчикам контролировать свои URI. Классы <xref:System.UriTemplate> и <xref:System.UriTemplateTable> формируют основу модуля отправки данных на основе URI, который используется в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Эти классы могут также использоваться сами по себе, позволяя разработчиками воспользоваться преимуществами шаблонов и механизма сопоставления универсального кода ресурса (URI) без реализации службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  

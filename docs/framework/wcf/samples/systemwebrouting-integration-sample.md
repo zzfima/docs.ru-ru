@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e5050834ff01ebb6a25e746d88f7d328ded505cd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c38c7af4988e6e47ee307f5cd7a8b6733b043a7c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="systemwebrouting-integration-sample"></a>Образец интеграции с SystemWebRouting
 Этот образец показывает интеграцию уровня размещения с классами в пространстве имен <xref:System.Web.Routing>. Классы в пространстве имен <xref:System.Web.Routing> позволяют приложению использовать URL-адреса, которые не соответствуют непосредственно физическому ресурсу. С помощью веб-маршрутизации разработчик может создавать виртуальные адреса протокола HTTP, которые затем сопоставляются с действительными службами [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Это может быть полезно, когда службу WCF необходимо разместить без обязательного выделения физического файла или ресурса или к службам необходимо получать доступ по URL-адресам, не содержащим файлов, например HTML или ASPX. Этот образец показывает использование класса <xref:System.Web.Routing.RouteTable> для создания виртуальных URI-адресов, связанных с выполняющимися службами, которые определены в файле global.asax. В данном примере с помощью WCF создаются два RSS-канала: канал `movies` и канал `channels`. URL-адреса для запуска служб не содержат расширений и зарегистрированы в `Application_Start` метод `Global` класс, производный от <xref:System.Web.HttpApplication.Application_Start> класса.  

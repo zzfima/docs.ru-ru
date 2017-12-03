@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
 caps.latest.revision: "28"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 19593e61cc640068ac7c90a6abbd6ea0d6a3ff08
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4f7a425853c2416f390d28ca31dae3f415e23c54
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="custom-token"></a>Пользовательский маркер
 В этом образце показано добавление пользовательской реализации маркера в приложение [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. В этом примере маркер `CreditCardToken` используется для безопасной передачи информации о кредитных картах клиента в службу. Маркер передается в заголовок сообщения WS-Security, подписывается и шифруется с помощью симметричного элемента привязки безопасности вместе с телом и другими заголовками сообщения. Это полезно в случаях, когда встроенных маркеров недостаточно. В этом образце показано, как предоставить пользовательский маркер безопасности службы вместо того, чтобы использовать встроенные маркеры. Служба реализует контракт, определяющий шаблон взаимодействия "запрос-ответ".  

@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
 caps.latest.revision: "32"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5ef2d71496a5a1268492fa7c3cb55019e969b709
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 19ff205fd1e76a5d2ee787522cc5d94916b0c11c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="service-identity-and-authentication"></a>Идентификация и проверка подлинности службы
 Служба *удостоверение конечной точки*является значение, созданное из службы языка описания веб-служб (WSDL). Это значение распространяется по всем клиентам и используется для проверки подлинности службы. После того как клиент инициирует связь с конечной точкой и служба пройдет проверку подлинности на клиенте, клиент сравнивает значение удостоверения конечной точки с действительным значением, возвращенным процессом проверки подлинности конечной точки. Если значения совпадают, значит клиент связался с ожидаемой конечной точкой службы. Это действует как защиту от *фишинг* , так как клиента из перенаправления конечную точку, размещенную на вредоносной службе.  

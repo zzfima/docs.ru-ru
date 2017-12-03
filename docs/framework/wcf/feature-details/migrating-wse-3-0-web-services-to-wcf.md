@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ea8bbbcb6241e632075e8ebeb29bbdd3d681dae0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c97279b553a615feda1dd3a195ad033744d82983
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>Миграция веб-служб WSE 3.0 на платформу WCF
 К преимуществам переноса веб-служб WSE 3.0 на [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] относятся повышение производительности и поддержка дополнительных транспортов, дополнительных сценариев безопасности и спецификаций WS-*. При переносе веб-службы с WSE 3.0 на [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] можно добиться повышения производительности от 200% до 400%. Дополнительные сведения о поддерживаемых транспортов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], в разделе [выбор транспорта](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Список поддерживаемых сценариев [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], в разделе [типовые сценарии безопасности](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Список спецификаций, которые поддерживаются [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], в разделе [руководство по взаимодействию по протоколам веб служб](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md).  

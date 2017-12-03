@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a2725c34b79b8c9dd05a9f9a071ef52e29527e02
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: abb29dc584bbede14adcb396df8cd37a894b6f2f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="tracking-using-a-text-file"></a>Отслеживание использования с помощью текстового файла
 В данном образце демонстрируется отслеживание расширения [!INCLUDE[wf](../../../../includes/wf-md.md)] путем создания настраиваемого участника отслеживания. Участниками отслеживания являются классы платформы .NET Framework, которые получают записи отслеживания от среды выполнения при их передаче. Можно создать участника отслеживания для транспортировки событий отслеживания в место назначения, требуемое для сценария. Например, участник отслеживания событий для Windows (ETW) предоставляется как часть [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Участник отслеживания в этом образце записывает записи в текстовый файл в формате XML.  

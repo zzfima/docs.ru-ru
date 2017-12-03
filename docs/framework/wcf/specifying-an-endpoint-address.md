@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
 caps.latest.revision: "41"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8615c4a1b1ebfed2b6779d53422f346456f4fb2a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 44a51c1bc9bd17cab7e3ba59ad36aa6700f82f71
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="specifying-an-endpoint-address"></a>Задание адреса конечной точки
 Вся связь со службой [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] осуществляется через ее конечные точки. Каждая конечная точка службы <xref:System.ServiceModel.Description.ServiceEndpoint> содержит адрес <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, привязку <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> и контракт <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. В контракте задается, какие операции доступны. Привязка определяет, как осуществлять взаимодействие со службой, а адрес показывает, где можно найти службу. Каждая конечная точка должна иметь уникальный адрес. Адрес конечной точки представляется классом <xref:System.ServiceModel.EndpointAddress>, содержащим универсальный код ресурса (URI), который, в свою очередь, обозначает адрес службы, <xref:System.ServiceModel.EndpointAddress.Identity%2A>, представляющий удостоверение безопасности службы и коллекцию необязательных заголовков <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Необязательные заголовки содержат более подробную информацию для идентификации конечной точки и взаимодействия с ней. Например, в заголовках может содержаться информация о том, как следует обрабатывать входящее сообщение, куда конечная точка должна отправить ответное сообщение или какой экземпляр службы необходимо использовать для обработки входящего сообщения от конкретного пользователя, если доступно несколько экземпляров.  

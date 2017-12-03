@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d1c1493e344bfe60a12ad16e3c0d257392b3545a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 73ec25ab5376841b2970fedf17ad1de176923f16
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="systemwebrouting-integration"></a>Интеграция с System.Web.Routing
 При размещении службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] в службах IIS SVC-файл размещается в виртуальном каталоге. Этот SVC-файл указывает фабрику узла службы, которую необходимо использовать, а также класс, реализующий эту службу. При составлении запросов к службе SVC-файл указывается в URI, например: http://contoso.com/EmployeeServce.svc. Для разработчиков служб REST такой тип URI не является оптимальным. URI для служб REST указывают определенный ресурс и обычно не имеют модулей. Функция интеграции <xref:System.Web.Routing> позволяет размещать службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST, соответствующую URI-адресам без расширения. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]маршрутизации см. в разделе [маршрутизации ASP.NET](http://go.microsoft.com/fwlink/?LinkId=184660) и [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md) образца.  

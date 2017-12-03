@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 82fb1848fc329db2921b626a894b9f91e766cd30
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6aa79e76bd81c0d56b30d4bac2edd4b9cbef6b33
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>Сравнение веб-служб ASP.NET с веб-службами на основе WCF по процессу разработки
 В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предусмотрена возможность работы в режиме совместимости с ASP.NET, что позволяет программировать и настраивать приложения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] как веб-службы ASP.NET и имитировать их поведение. В следующих разделах приводится сравнение веб-служб ASP.NET и [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с точки зрения того, что необходимо для разработки приложений с использованием обеих технологий.  

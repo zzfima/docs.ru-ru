@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6b2f418298b5b937b5d4c7af2bd2def38c5827e9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b57139fdf2a07f2d37bc337a041704eee174328e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Как создать службу рабочего процесса с помощью действий обмена сообщениями
 В этом разделе приведены сведения о том, как создать простую службу рабочего процесса с помощью действий обмена сообщениями. В нем рассматривается механизм создания службы рабочего процесса, когда служба состоит только из действий обмена сообщениями. В реальных службах рабочий процесс содержит множество других действий. Служба реализует одну операцию с именем Echo, которая принимает строку и возвращает строку вызывающему коду. Это первый из двух разделов. Следующий раздел [How To: доступ к службе из приложения рабочего процесса](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) рассматривается процесс создания приложения рабочего процесса, который может вызывать службу, созданной в данном разделе.  

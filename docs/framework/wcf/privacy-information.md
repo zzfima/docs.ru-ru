@@ -14,14 +14,14 @@ helpviewer_keywords:
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
 caps.latest.revision: "34"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 53fc4be67fd3f6a7b2b8c914c11fb6540b28c199
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 93b03a2fb49774c425882183bf7fcda8b6e5c3de
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Сведения о политике конфиденциальности Windows Communication Foundation
 Корпорация Майкрософт стремится защитить конфиденциальные данные конечных пользователей. При создании приложения с использованием [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] версии 3.0 оно может повлиять на конфиденциальность информации конечных пользователей. Например, приложение может явным образом собирать контактные данные пользователей или запрашивать/отправлять информацию через Интернет на свой веб-сайт. Если в приложение внедряется технология Майкрософт, у этой технологии может быть свое поведение, которое способно повлиять на конфиденциальность данных приложения. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] отправляет информацию из приложения в корпорацию Майкрософт, только если это требуется разработчику или конечному пользователю.  

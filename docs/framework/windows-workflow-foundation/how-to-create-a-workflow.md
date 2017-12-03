@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
 caps.latest.revision: "34"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7f16df123837b2233efd156bf35975e3adbe7279
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b20ca4258204f938d611f431abc5668b88f167b1
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-workflow"></a>How to: Create a Workflow
 Рабочие процессы могут создаваться как из встроенных, так и из пользовательских действий. Приведенные здесь статьи в этом шаге раздела по созданию рабочего процесса, который использует оба встроенных действий, такие как <xref:System.Activities.Statements.Flowchart> действия и пользовательских действий из предыдущего [как: создается действие](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) раздела. Рабочий процесс моделирует игру по угадыванию числа. Для завершения учебника требуется только один из подразделов в этом разделе. Необходимо выбрать стиль, который вас интересует, и выполнить шаг. Однако при необходимости можно завершить все подразделы.  

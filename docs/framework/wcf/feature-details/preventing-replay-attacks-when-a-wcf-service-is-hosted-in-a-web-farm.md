@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1c2ed695-7a31-4257-92bd-9e9731b886a5
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4ecf37ffb87ddfdd483cebcac3f5892bab43dcd6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 383a93bee7a63bef966f4252ace13105d96ae505
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="preventing-replay-attacks-when-a-wcf-service-is-hosted-in-a-web-farm"></a>Предотвращение атак воспроизведения, когда служба WCF размещена на веб-ферме
 При использовании безопасности сообщений служба WCF предотвращает атаки путем воспроизведения NONCE из входящего сообщения и проверки внутренней`InMemoryNonceCache` на наличие созданного NONCE. Если он есть, то сообщение удаляется как повторное. Когда служба WCF размещается в веб-ферме, свойство `InMemoryNonceCache` не разделяется всеми узлами веб-фермы и служба уязвима для атак с повторением пакетов.  Для устранения подобной угрозы данный сценарий WCF 4.5 предоставляет точку расширяемости, которая позволяет реализовать собственный кэш NONCE. Это осуществляется наследованием класса от абстрактного класса <xref:System.ServiceModel.Security.NonceCache>.  

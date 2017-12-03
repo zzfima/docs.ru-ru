@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 933d1bdac8f6e3a9e2bec5278fe398696131678a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fd30b2d62d3ecf21027c0225490da6f31113cb07
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>Взаимодействие с веб-службами ASP.NET
 Взаимодействие между веб-службами [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и веб-службами [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] возможно, если обеспечить, чтобы службы, реализованные с помощью обеих технологий, соответствовали спецификации WS-I Basic Profile 1.1. Веб-службы [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], соответствующие спецификации WS-I Basic Profile 1.1, могут взаимодействовать с клиентами [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с помощью предоставляемой системой привязки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] - <xref:System.ServiceModel.BasicHttpBinding>.  

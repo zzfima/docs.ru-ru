@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f2fd247348050b8335f4f6354c88664d497dbbf2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: aa388328b1fee73aef829a512dcbcadbd3889781
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Создание асинхронных действий в WF
 Класс <xref:System.Activities.AsyncCodeActivity> предоставляет авторам действий базовый класс, обеспечивающий реализацию логики асинхронного выполнения в производных от него действиях. Это особенно полезно для пользовательских действий, которые должны выполнять работу асинхронно, не останавливая поток расписания рабочих процессов и не блокируя другие действия, которые могут выполняться параллельно. В данном разделе приводятся общие сведения о процессе создания пользовательских асинхронных действий с использованием <xref:System.Activities.AsyncCodeActivity>.  

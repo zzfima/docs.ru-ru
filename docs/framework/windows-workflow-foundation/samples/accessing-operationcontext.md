@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 861329c3945a53bf6c8ceeb7487aa0ef9902c93a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3c0966299f27312deb188aec00abe9949dc27c2d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="accessing-operationcontext"></a>Доступ к контексту OperationContext
 В этом примере показано, как действия обмена сообщениями (<xref:System.ServiceModel.Activities.Receive> и <xref:System.ServiceModel.Activities.Send>) может использоваться посредством действий пользовательской области для доступа к <xref:System.ServiceModel.OperationContext.Current%2A> и присоединения или получить пользовательского заголовка сообщения исходящего или входящего сообщения.  

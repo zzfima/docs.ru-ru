@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8436ceefea936ddbf708aa3f79c5f7bd8153ac66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ea506499cf6678beb51195654739f2537b98a188
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-enable-streaming"></a>Практическое руководство. Включение потоковой передачи
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] позволяет передавать сообщения в режиме буферизованной или потоковой передачи. По умолчанию используется режим буферизованной передачи, в случае которого сообщение должно быть доставлено полностью, прежде чем получатель сможет его прочитать. При использовании режима потоковой передачи получатель может начать обработку сообщения до того, как оно будет доставлено полностью. Режим потоковой передачи полезно использовать при большой длине передаваемых данных, которые могут обрабатываться последовательно. Режим потоковой передачи также может быть полезен, когда размер сообщения слишком велик для выполнения полной буферизации.  

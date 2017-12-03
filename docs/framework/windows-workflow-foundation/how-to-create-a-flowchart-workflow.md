@@ -12,14 +12,14 @@ dev_langs:
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 570e51c3b9c8ee227a9c5688fc7caa1b4a0d9c6d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3df93a876522ccdc001bc3f6bc8c780bc80dc21b
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>Как создать рабочий процесс блок-схемы
 Рабочие процессы могут создаваться как из встроенных, так и из пользовательских действий. В этом разделе шаги по созданию рабочего процесса, который использует оба встроенных действий, такие как <xref:System.Activities.Statements.Flowchart> действия и пользовательских действий из предыдущего [как: создается действие](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) раздела. Рабочий процесс моделирует игру по угадыванию числа.  

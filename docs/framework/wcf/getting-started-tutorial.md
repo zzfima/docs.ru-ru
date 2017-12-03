@@ -14,14 +14,14 @@ helpviewer_keywords:
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
 caps.latest.revision: "47"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5f34ac7ec2761efda640e3c4838a5f44f2e244e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 649fc2572e809238977ca3deb5740ada2dd5dc14
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="getting-started-tutorial"></a>Учебник по началу работы
 Содержащиеся в этом разделе подразделы призваны кратко познакомить читателя с процессом программирования в [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Их нужно выполнять в том порядке, в котором они перечислены в конце этой страницы. Прохождение этих занятий позволит получить базовое представление об этапах, которые необходимы для создания служб и клиентских приложений [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Служба предоставляет одну или несколько конечных точек, каждая из которых предоставляет одну или несколько операций службы. *Конечная точка* службы задает адрес, где можно найти службу, привязку, которая содержит сведения, описывающие, как клиент должен обмениваться данными со службой и контракт, определяющий функцию предоставляемую службой клиентам.  

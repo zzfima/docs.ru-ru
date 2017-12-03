@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 02624403-0d77-41cb-9a86-ab55e98c7966
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: acd2263fddf4b045cd7efc93ca85d1ed1b2e6dd0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e749594d7a37b89d5dbf02013b2f667d923af7ed
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="client-architecture"></a>Клиентская архитектура
 Для вызова операций службы приложения используют клиентские объекты [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. В этом разделе рассматриваются клиентские объекты [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], клиентские каналы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и их взаимосвязи с базовой архитектурой каналов. Для получения общих сведений о [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиентские объекты в разделе [Общие сведения о клиенте WCF](../../../../docs/framework/wcf/wcf-client-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]уровень канала в разделе [расширение уровня каналов](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  

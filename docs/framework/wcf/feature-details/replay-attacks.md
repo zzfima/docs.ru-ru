@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 81bca4572b6c4845674c63284f93c86fe5925bdf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cd96404adea7fb8e7d59dcea322b2d3832f2bfe4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="replay-attacks"></a>Атаки с повторением
 Объект *атака воспроизведения* возникает, когда злоумышленник копирует поток сообщений между двумя сторонами и воспроизводит его для одного или нескольких сторон. Если не приняты ответные меры, атакованные компьютеры обрабатывают этот поток как допустимые сообщения, что приводит к ряду негативных последствий, таких как повторные заказы одного элемента.  

@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
 caps.latest.revision: "21"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 01f6ce27a05c11ddf4662609bf98730df5ddfda3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3e8572541e0bf9ddcfb93939c177b5cb8c440b41
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Практическое руководство. Размещение службы WCF в управляемой службе Windows
 В этом разделе описаны основные шаги по созданию службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], размещенной в службе Windows. Сценарий реализуется с помощью возможности размещения в управляемой службе Windows и представляет собой работающую в течение продолжительного времени службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], размещенную за пределами служб IIS в защищенной среде, которая не активируется сообщениями. Вместо этого время существования службы контролируется операционной системой. Данный вариант размещения доступен во всех версиях Windows.  

@@ -20,14 +20,14 @@ helpviewer_keywords:
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 85ca84865305b588a9214db6e6f4e28b47937827
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4e85ee15223bc135384d698a175d57b4fd543747
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="custom-serialization"></a>Пользовательская сериализация
 Пользовательской сериализацией называется процесс управления сериализацией и десериализацией типа. Управление сериализацией позволяет обеспечить совместимость сериализации, в результате чего становится возможной сериализация и десериализация между различными версиями типа без нарушения основных функциональных возможностей типа. Например, в первой версии типа может быть только два поля. В следующей версии типа добавлено еще несколько полей. Во второй версии приложения должна быть предусмотрена возможность сериализации и десериализации обоих типов. В следующих разделах объясняется, как управлять сериализацией.

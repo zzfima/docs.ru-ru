@@ -12,14 +12,14 @@ dev_langs:
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 caps.latest.revision: "40"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4a266613b975065b37c176ec07ae404b5b17ddd7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0d0e0c5b0ea05d1a0a9798e1b6f22ce06257f03b
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>How to: Create and Run a Long Running Workflow
 Одной из основных особенностей [!INCLUDE[wf](../../../includes/wf-md.md)] является поддержка средой выполнения сохранения и выгрузки бездействующих рабочих процессов в базу данных. Действия, описанные в [как: запуск рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) демонстрируются основные принципы размещение рабочих процессов с помощью консольного приложения. Приведены примеры запуска рабочих процессов, обработчиков жизненного цикла рабочего процесса и возобновления закладок. Для эффективной демонстрации сохранения рабочего процесса требуется более сложный узел рабочих процессов, обеспечивающий запуск и возобновление нескольких экземпляров рабочего процесса. На этом шаге учебника показано, как создать ведущее приложение форм Windows Form, которое обеспечивает запуск и возобновление нескольких экземпляров рабочих процессов, сохранение рабочего процесса и основу для таких дополнительных возможностей, как отслеживание версий, которые показаны в последующих шагах учебника, и управление ими.  

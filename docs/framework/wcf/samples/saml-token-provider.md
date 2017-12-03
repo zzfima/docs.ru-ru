@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: fc6eaa916507c7e1c530d4ee757097bf0bffcd34
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 44455f6509778a84d39a0cba167328c4a7801fc6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="saml-token-provider"></a>Поставщик маркеров SAML
 В этом образце демонстрируется, как реализовать пользовательский поставщик маркеров SAML клиента. Поставщик маркеров в среде [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] используется для передачи учетных данных в инфраструктуру безопасности. Поставщик токенов осуществляет общую проверку цели и выдает соответствующие учетные данные, чтобы инфраструктура безопасности смогла обеспечить защиту сообщения. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поставляется с поставщиком токенов учетных данных по умолчанию. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] также поставляется с поставщиком токенов [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Пользовательские поставщики маркеров полезны в следующих случаях:  

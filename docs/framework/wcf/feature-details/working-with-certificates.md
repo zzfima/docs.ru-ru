@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
 caps.latest.revision: "26"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4c38a697cc5f4693977e11ff71142322533e9ded
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 63f9d22c571a007653fc794dc7638c8221a676aa
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="working-with-certificates"></a>Работа с сертификатами
 Для программирования безопасности [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] обычно используются цифровые сертификаты X.509, с помощью которых выполняется проверка подлинности клиентов и серверов, шифрование, а сообщения подписываются цифровой подписью. В этом разделе содержится краткое описание функций для работы с цифровыми сертификатами X.509 и порядка использования этих функций в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Кроме того, этот раздел включает ссылки на другие разделы с более подробным объяснением основных понятий и порядка выполнения общих задач с использованием [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и сертификатов.  

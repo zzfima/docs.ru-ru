@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
 caps.latest.revision: "38"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 50998acedf3b462e17c57d784dfc1ebe6fff38b9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d46be95be90901e51713bc20cd2898e3db069802
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="authorization-policy"></a>Политика авторизации
 В этом образце показано, как реализовать пользовательскую политику авторизации утверждений и связанный с ней пользовательский диспетчер авторизации службы. Это бывает удобно, если служба осуществляет проверку прав доступа к операциям службы на основании утверждений и предоставляет вызывающей стороне определенные права, прежде чем проверить права доступа. В этом образце показан процесс добавления утверждений, а также процесс проверки прав доступа с использованием готового набора утверждений. Все сообщения приложений, которыми обмениваются служба и клиент, подписываются и шифруются. По умолчанию при использовании привязки `wsHttpBinding` для входа от имени действующей учетной записи Windows NT используются предоставляемые клиентом имя пользователя и пароль. В этом примере показано, как использовать пользовательский <!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>--> `System.IdentityModel.Selectors.UsernamePasswordValidator` для проверки подлинности клиента. Кроме того, в этом образце показана проверка подлинности клиента на стороне службы с использованием сертификата X.509. Этот образец показывает реализацию объектов <xref:System.IdentityModel.Policy.IAuthorizationPolicy> и <xref:System.ServiceModel.ServiceAuthorizationManager>, которые между собой предоставляют заданным пользователям доступ к определенным методам службы. Этот пример построен на [имя пользователя безопасности сообщения](../../../../docs/framework/wcf/samples/message-security-user-name.md), но показано, как выполнить преобразование утверждений до <xref:System.ServiceModel.ServiceAuthorizationManager> вызова.  

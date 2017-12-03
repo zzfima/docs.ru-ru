@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a19099ea928e8867dd8206b8add0f1146496d052
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bc2a6da9a43e29091c4ff9d086e9259594a01718
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="persistence-participants"></a>Участники сохраняемости
 Участник сохраняемости может участвовать в операции сохраняемости («Сохранение» или «Загрузка»), запущенной узлом приложения. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Поставляется с двумя абстрактными классами: **PersistenceParticipant** и **PersistenceIOParticipant**, который можно использовать для создания участника сохраняемости. Участник сохраняемости создается как производное от одного из этих классов, реализует методы, представляющие интерес, а затем добавляет экземпляр класса в коллекцию <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> узла <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Узел приложения может искать такие расширения рабочих процессов при сохранении экземпляра рабочего процесса и в нужное время вызывать соответствующие методы для участников сохраняемости.  

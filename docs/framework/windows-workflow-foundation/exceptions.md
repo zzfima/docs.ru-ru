@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
 caps.latest.revision: "26"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d1484f3b0af3ee09f1cb18d3d90f81fb0a2044a9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 545049900ec632aaaf3955656bcd93e845b094de
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="exceptions"></a>Исключения
 Рабочие процессы могут использовать действие <xref:System.Activities.Statements.TryCatch> для обработки исключений, возникающих в ходе выполнения рабочего процесса. Эти исключения обрабатываются либо вызываются повторно при помощи действия <xref:System.Activities.Statements.Rethrow>. Действия в разделе <xref:System.Activities.Statements.TryCatch.Finally%2A> выполняются при завершении либо раздела <xref:System.Activities.Statements.TryCatch.Try%2A>, либо раздела <xref:System.Activities.Statements.TryCatch.Catches%2A>. Рабочие процессы, размещаемые <xref:System.Activities.WorkflowApplication> экземпляра можно также использовать <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> обработчик событий для обработки исключений, которые не обрабатываются <xref:System.Activities.Statements.TryCatch> действия.  

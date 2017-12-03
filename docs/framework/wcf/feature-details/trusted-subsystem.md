@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 229efd7fed9b8aeb1effff7bd4358930ab8c44ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a3d4979513df5eb6908974480a19374a5c6a2233
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="trusted-subsystem"></a>Доверенная подсистема
 Клиент обращается к одной или нескольким веб-службам, распределенным по сети. Веб-службы устроены так, что доступ к дополнительным ресурсам (таким как базы данных или другие веб-службы) инкапсулируется в бизнес-логике веб-службы. Эти ресурсы должны быть защищены от несанкционированного доступа. На следующем рисунке показан процесс доверенной подсистемы.  

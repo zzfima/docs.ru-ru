@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d93e312e-ac04-40f8-baea-5da1cacb546e
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1ca3d934564447018f44a423c36f26454588db4e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d747b2916f544294bb69f01aadc1321370878689
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="peer-meshes"></a>Одноранговые сетки
 Объект *mesh* — это именованная коллекция (взаимосвязанный граф) из одноранговых узлов, которые могут взаимодействовать друг с другом и которые идентифицируются по уникальному ИД сетки. Каждый узел соединен с несколькими другими узлами. В хорошо связанной сетке существует путь между любыми двумя узлами, расстояние между наиболее удаленными узлами относительно невелико, а сетка остается связанной, даже если некоторые узлы или связи выпадают. Активные узлы в сетке публикуют сведения о своих конечных точках, а также соответствующие идентификаторы сетки, чтобы другие одноранговые узлы могли находить их.  

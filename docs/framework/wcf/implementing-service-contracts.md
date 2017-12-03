@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0b40b93b33e57bf15b7ab614405ccffa44abb8df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 688637ae54e92296d103a681715dd491ba8782ba
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="implementing-service-contracts"></a>Реализация контрактов служб
 Служба - это класс, который предоставляет клиентам имеющиеся функциональные возможности в одной или нескольких конечных точках. Для создания службы необходимо создать класс, реализующий контракт [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Это можно сделать одним из двух способов. Во-первых, можно определить контракт отдельно в качестве интерфейса, а затем создать класс, реализующий этот интерфейс. Во-вторых, можно непосредственно создать класс и контракт, разместив атрибут <xref:System.ServiceModel.ServiceContractAttribute> в самом классе, а атрибут <xref:System.ServiceModel.OperationContractAttribute> - в методах, доступных клиентам службы.  

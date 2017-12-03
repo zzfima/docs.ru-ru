@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d09b8e662b2876fa5d5c5246ea7e7a4998cde9ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 75b18dab37a18723671cebf51c3cc943b907b38a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Практическое руководство. Обмен сообщениями с конечными точками WCF и приложениями очереди сообщений
 Существующие приложения MSMQ можно интегрировать с приложениями [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], используя привязку интеграции MSMQ для преобразования сообщений MSMQ в сообщения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и наоборот. Это позволяет вызывать принимающие приложения MSMQ из клиентов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], а также вызывать службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] из отправляющих приложений MSMQ.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
 caps.latest.revision: "48"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ae7df5531abf2efcb7ba0059da1d8393e5a3f7c4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fc30a755278251ac9e06f2ddd56e2c369b950af4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="transport-udp"></a>Транспорт: UDP
 В образце транспорта UDP демонстрируется реализация одноадресного и многоадресного протокола UDP в качестве пользовательского транспорта [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. В образце описана процедура, предлагаемая для создания пользовательского транспорта в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с помощью инфраструктуры канала и согласно рекомендациям [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Для создания пользовательского транспорта выполните следующие действия.  

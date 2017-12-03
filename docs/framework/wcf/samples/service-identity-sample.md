@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
 caps.latest.revision: "24"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: cb07dea841bf85901d89df5912e233cc64c2fed2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cde8966e89a22b19109688d5da0ff5b45eee55ef
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="service-identity-sample"></a>Образец идентификации службы
 В этом образце удостоверения службы демонстрируется, как назначить удостоверение для службы. Во время проектирования клиент может извлечь удостоверение используя метаданные службы, а затем в среде выполнения клиент может проверить подлинность удостоверения службы. Концепция удостоверения службы позволяет клиенту проверять подлинность службы перед вызовом любых ее операций, защищая таким образом клиента от вызовов, не прошедших проверку подлинности. При безопасном подключении служба также проводит проверку подлинности учетных данных клиента перед тем, как предоставить им доступ. Однако это выходит за рамки данного образца. См. в примерах в [клиента](../../../../docs/framework/wcf/samples/client.md) , показывающие проверки подлинности сервера.  

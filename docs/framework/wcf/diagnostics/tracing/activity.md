@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1e6e97bf935d37f9a39569190b7393a47a54781a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 382197f2a8d2375903f286dc5aa54ce5dc632bce
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="activity"></a>Действие
 В этом разделе описываются трассировки действий в модели трассировки [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]. Действия — это блоки обработки, позволяющие пользователю сузить область сбоя. Ошибки, возникающие в одном действии, напрямую связаны между собой. Например, операция заканчивается неудачей в результате сбоя при расшифровывании сообщения. Трассировки операции и расшифровывания сообщения появляются в том же действии и показывают прямую связь между ошибкой расшифровывания и ошибкой запроса.  
