@@ -10,26 +10,26 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e0709473-0997-4de3-8f49-783527309a48
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: dbc4c3413213aa36468fde6e84671de0e0a31c2f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8af7d89fdf09316594bc8ef3433e2b47e8fb0a7e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltwindowsauthenticationgt-of-ltservicecredentialsgt"></a><span data-ttu-id="9fb0f-102">&lt;windowsAuthentication&gt; для &lt;serviceCredentials&gt;</span><span class="sxs-lookup"><span data-stu-id="9fb0f-102">&lt;windowsAuthentication&gt; of &lt;serviceCredentials&gt;</span></span>
-<span data-ttu-id="9fb0f-103">Задает параметры учетной записи службы Windows.</span><span class="sxs-lookup"><span data-stu-id="9fb0f-103">Specifies the settings of a Windows service credential.</span></span>  
+# <a name="ltwindowsauthenticationgt-of-ltservicecredentialsgt"></a><span data-ttu-id="a7940-102">&lt;windowsAuthentication&gt; для &lt;serviceCredentials&gt;</span><span class="sxs-lookup"><span data-stu-id="a7940-102">&lt;windowsAuthentication&gt; of &lt;serviceCredentials&gt;</span></span>
+<span data-ttu-id="a7940-103">Задает параметры учетной записи службы Windows.</span><span class="sxs-lookup"><span data-stu-id="a7940-103">Specifies the settings of a Windows service credential.</span></span>  
   
- <span data-ttu-id="9fb0f-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="9fb0f-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="9fb0f-105">\<поведения ></span><span class="sxs-lookup"><span data-stu-id="9fb0f-105">\<behaviors></span></span>  
-<span data-ttu-id="9fb0f-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="9fb0f-106">\<serviceBehaviors></span></span>  
-<span data-ttu-id="9fb0f-107">\<поведение ></span><span class="sxs-lookup"><span data-stu-id="9fb0f-107">\<behavior></span></span>  
-<span data-ttu-id="9fb0f-108">\<serviceCredentials ></span><span class="sxs-lookup"><span data-stu-id="9fb0f-108">\<serviceCredentials></span></span>  
-<span data-ttu-id="9fb0f-109">\<windowsAuthentication ></span><span class="sxs-lookup"><span data-stu-id="9fb0f-109">\<windowsAuthentication></span></span>  
+ <span data-ttu-id="a7940-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="a7940-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="a7940-105">\<поведения ></span><span class="sxs-lookup"><span data-stu-id="a7940-105">\<behaviors></span></span>  
+<span data-ttu-id="a7940-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="a7940-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="a7940-107">\<поведение ></span><span class="sxs-lookup"><span data-stu-id="a7940-107">\<behavior></span></span>  
+<span data-ttu-id="a7940-108">\<serviceCredentials ></span><span class="sxs-lookup"><span data-stu-id="a7940-108">\<serviceCredentials></span></span>  
+<span data-ttu-id="a7940-109">\<windowsAuthentication ></span><span class="sxs-lookup"><span data-stu-id="a7940-109">\<windowsAuthentication></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9fb0f-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9fb0f-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a7940-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a7940-110">Syntax</span></span>  
   
 ```xml  
 <windowsAuthentication  
@@ -37,29 +37,29 @@ ms.lasthandoff: 11/21/2017
       includeWindowsGroups="Boolean" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="9fb0f-111">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="9fb0f-111">Attributes and Elements</span></span>  
- <span data-ttu-id="9fb0f-112">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="9fb0f-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a7940-111">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="a7940-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="a7940-112">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="a7940-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="9fb0f-113">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="9fb0f-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="a7940-113">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="a7940-113">Attributes</span></span>  
   
-|<span data-ttu-id="9fb0f-114">Атрибут</span><span class="sxs-lookup"><span data-stu-id="9fb0f-114">Attribute</span></span>|<span data-ttu-id="9fb0f-115">Описание</span><span class="sxs-lookup"><span data-stu-id="9fb0f-115">Description</span></span>|  
+|<span data-ttu-id="a7940-114">Атрибут</span><span class="sxs-lookup"><span data-stu-id="a7940-114">Attribute</span></span>|<span data-ttu-id="a7940-115">Описание</span><span class="sxs-lookup"><span data-stu-id="a7940-115">Description</span></span>|  
 |---------------|-----------------|  
-|`includeWindowsGroups`|<span data-ttu-id="9fb0f-116">Необязательный логический атрибут, который задает, включает ли система группы Windows в контекст безопасности.</span><span class="sxs-lookup"><span data-stu-id="9fb0f-116">An optional Boolean attribute that specifies whether the system includes Windows groups in the security context.</span></span> <span data-ttu-id="9fb0f-117">Значение по умолчанию — `true`.</span><span class="sxs-lookup"><span data-stu-id="9fb0f-117">The default is `true`.</span></span><br /><br /> <span data-ttu-id="9fb0f-118">Установка для этого атрибута значения `true` влияет на производительность, поскольку приводит к расширению всей группы.</span><span class="sxs-lookup"><span data-stu-id="9fb0f-118">Setting this attribute to `true` has a performance impact as it results in a full-group expansion.</span></span> <span data-ttu-id="9fb0f-119">Если нет необходимости устанавливать список групп, к которым принадлежит пользователь, установите для этого атрибута значение `false`.</span><span class="sxs-lookup"><span data-stu-id="9fb0f-119">Set this attribute to `false` if you do not need to establish the list of groups a user belongs to.</span></span>|  
-|`allowAnonymousLogons`|<span data-ttu-id="9fb0f-120">Необязательный логический атрибут, который указывает, разрешены ли анонимные, не прошедшие проверку подлинности вызывающие объекты.</span><span class="sxs-lookup"><span data-stu-id="9fb0f-120">An optional Boolean attribute that specifies whether anonymous, unauthenticated callers are allowed.</span></span> <span data-ttu-id="9fb0f-121">Значение по умолчанию — `false`.</span><span class="sxs-lookup"><span data-stu-id="9fb0f-121">The default is `false`.</span></span><br /><br /> <span data-ttu-id="9fb0f-122">Когда атрибуту `clientCredentialType` привязки задано значение `Windows`, система не разрешает анонимные вызывающие объекты.</span><span class="sxs-lookup"><span data-stu-id="9fb0f-122">When the `clientCredentialType` attribute of a binding is set to `Windows`, the system does not allow anonymous callers.</span></span> <span data-ttu-id="9fb0f-123">Это значит, что доступ к системе разрешен только прошедшим проверку подлинности вызывающим объектам домена или рабочей группы.</span><span class="sxs-lookup"><span data-stu-id="9fb0f-123">This means that only domain or workgroup authenticated callers are allowed to access the system.</span></span> <span data-ttu-id="9fb0f-124">Это поведение можно переопределить с помощью данного атрибута.</span><span class="sxs-lookup"><span data-stu-id="9fb0f-124">You can override this behavior by using this attribute.</span></span><br /><br /> <span data-ttu-id="9fb0f-125">Используйте этот режим с особой осторожностью.</span><span class="sxs-lookup"><span data-stu-id="9fb0f-125">Use this setting with extreme caution.</span></span>|  
+|`includeWindowsGroups`|<span data-ttu-id="a7940-116">Необязательный логический атрибут, который задает, включает ли система группы Windows в контекст безопасности.</span><span class="sxs-lookup"><span data-stu-id="a7940-116">An optional Boolean attribute that specifies whether the system includes Windows groups in the security context.</span></span> <span data-ttu-id="a7940-117">Значение по умолчанию — `true`.</span><span class="sxs-lookup"><span data-stu-id="a7940-117">The default is `true`.</span></span><br /><br /> <span data-ttu-id="a7940-118">Установка для этого атрибута значения `true` влияет на производительность, поскольку приводит к расширению всей группы.</span><span class="sxs-lookup"><span data-stu-id="a7940-118">Setting this attribute to `true` has a performance impact as it results in a full-group expansion.</span></span> <span data-ttu-id="a7940-119">Если нет необходимости устанавливать список групп, к которым принадлежит пользователь, установите для этого атрибута значение `false`.</span><span class="sxs-lookup"><span data-stu-id="a7940-119">Set this attribute to `false` if you do not need to establish the list of groups a user belongs to.</span></span>|  
+|`allowAnonymousLogons`|<span data-ttu-id="a7940-120">Необязательный логический атрибут, который указывает, разрешены ли анонимные, не прошедшие проверку подлинности вызывающие объекты.</span><span class="sxs-lookup"><span data-stu-id="a7940-120">An optional Boolean attribute that specifies whether anonymous, unauthenticated callers are allowed.</span></span> <span data-ttu-id="a7940-121">Значение по умолчанию — `false`.</span><span class="sxs-lookup"><span data-stu-id="a7940-121">The default is `false`.</span></span><br /><br /> <span data-ttu-id="a7940-122">Когда атрибуту `clientCredentialType` привязки задано значение `Windows`, система не разрешает анонимные вызывающие объекты.</span><span class="sxs-lookup"><span data-stu-id="a7940-122">When the `clientCredentialType` attribute of a binding is set to `Windows`, the system does not allow anonymous callers.</span></span> <span data-ttu-id="a7940-123">Это значит, что доступ к системе разрешен только прошедшим проверку подлинности вызывающим объектам домена или рабочей группы.</span><span class="sxs-lookup"><span data-stu-id="a7940-123">This means that only domain or workgroup authenticated callers are allowed to access the system.</span></span> <span data-ttu-id="a7940-124">Это поведение можно переопределить с помощью данного атрибута.</span><span class="sxs-lookup"><span data-stu-id="a7940-124">You can override this behavior by using this attribute.</span></span><br /><br /> <span data-ttu-id="a7940-125">Используйте этот режим с особой осторожностью.</span><span class="sxs-lookup"><span data-stu-id="a7940-125">Use this setting with extreme caution.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="9fb0f-126">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="9fb0f-126">Child Elements</span></span>  
- <span data-ttu-id="9fb0f-127">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="9fb0f-127">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="a7940-126">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="a7940-126">Child Elements</span></span>  
+ <span data-ttu-id="a7940-127">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="a7940-127">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="9fb0f-128">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="9fb0f-128">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="a7940-128">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="a7940-128">Parent Elements</span></span>  
   
-|<span data-ttu-id="9fb0f-129">Элемент</span><span class="sxs-lookup"><span data-stu-id="9fb0f-129">Element</span></span>|<span data-ttu-id="9fb0f-130">Описание</span><span class="sxs-lookup"><span data-stu-id="9fb0f-130">Description</span></span>|  
+|<span data-ttu-id="a7940-129">Элемент</span><span class="sxs-lookup"><span data-stu-id="a7940-129">Element</span></span>|<span data-ttu-id="a7940-130">Описание</span><span class="sxs-lookup"><span data-stu-id="a7940-130">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="9fb0f-131">\<serviceCredentials ></span><span class="sxs-lookup"><span data-stu-id="9fb0f-131">\<serviceCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|<span data-ttu-id="9fb0f-132">Задает учетные данные, используемые при проверке подлинности службы, а также параметры, относящиеся к проверке учетных данных клиента.</span><span class="sxs-lookup"><span data-stu-id="9fb0f-132">Specifies the credential to be used in authenticating the service, and the client credential validation-related settings.</span></span>|  
+|[<span data-ttu-id="a7940-131">\<serviceCredentials ></span><span class="sxs-lookup"><span data-stu-id="a7940-131">\<serviceCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|<span data-ttu-id="a7940-132">Задает учетные данные, используемые при проверке подлинности службы, а также параметры, относящиеся к проверке учетных данных клиента.</span><span class="sxs-lookup"><span data-stu-id="a7940-132">Specifies the credential to be used in authenticating the service, and the client credential validation-related settings.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9fb0f-133">Примечания</span><span class="sxs-lookup"><span data-stu-id="9fb0f-133">Remarks</span></span>  
- <span data-ttu-id="9fb0f-134">Этот элемент используется, чтобы указать, разрешается ли доступ анонимных пользователей Windows путем установки атрибута `allowAnonymousLogons`.</span><span class="sxs-lookup"><span data-stu-id="9fb0f-134">Use this element to specify whether to allow anonymous Windows users access by setting the `allowAnonymousLogons` attribute.</span></span> <span data-ttu-id="9fb0f-135">Также можно указать, включать ли сведения о группе, к которой принадлежат пользователи в AuthorizationContext, путем установки атрибута `includeWindowsGroups`.</span><span class="sxs-lookup"><span data-stu-id="9fb0f-135">You can also specify whether to include group information to which users belong in the AuthorizationContext by setting the `includeWindowsGroups` attribute.</span></span> <span data-ttu-id="9fb0f-136">Если атрибуту задано значение `true` (по умолчанию), служба может определить группы Windows, к которым принадлежит клиент.</span><span class="sxs-lookup"><span data-stu-id="9fb0f-136">If it is set to `true` (the default setting), the service can determine the Windows groups to which the client belongs.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a7940-133">Примечания</span><span class="sxs-lookup"><span data-stu-id="a7940-133">Remarks</span></span>  
+ <span data-ttu-id="a7940-134">Этот элемент используется, чтобы указать, разрешается ли доступ анонимных пользователей Windows путем установки атрибута `allowAnonymousLogons`.</span><span class="sxs-lookup"><span data-stu-id="a7940-134">Use this element to specify whether to allow anonymous Windows users access by setting the `allowAnonymousLogons` attribute.</span></span> <span data-ttu-id="a7940-135">Также можно указать, включать ли сведения о группе, к которой принадлежат пользователи в AuthorizationContext, путем установки атрибута `includeWindowsGroups`.</span><span class="sxs-lookup"><span data-stu-id="a7940-135">You can also specify whether to include group information to which users belong in the AuthorizationContext by setting the `includeWindowsGroups` attribute.</span></span> <span data-ttu-id="a7940-136">Если атрибуту задано значение `true` (по умолчанию), служба может определить группы Windows, к которым принадлежит клиент.</span><span class="sxs-lookup"><span data-stu-id="a7940-136">If it is set to `true` (the default setting), the service can determine the Windows groups to which the client belongs.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9fb0f-137">См. также</span><span class="sxs-lookup"><span data-stu-id="9fb0f-137">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="a7940-137">См. также</span><span class="sxs-lookup"><span data-stu-id="a7940-137">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.WindowsServiceElement>  
  <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.WindowsAuthentication%2A>  
  <xref:System.ServiceModel.Description.ServiceCredentials.WindowsAuthentication%2A>  

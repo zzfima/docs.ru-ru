@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b6638cd0-2e72-4634-863d-2621e46ede50
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ab03cd75e84b5a606d3ac307711017492c6f93da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1861844fda0eb347122abb93c60f56aa84e714a3
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelchannelsmsmqsessiongramsent"></a><span data-ttu-id="e9709-102">System.ServiceModel.Channels.MsmqSessiongramSent</span><span class="sxs-lookup"><span data-stu-id="e9709-102">System.ServiceModel.Channels.MsmqSessiongramSent</span></span>
-<span data-ttu-id="e9709-103">System.ServiceModel.Channels.MsmqSessiongramSent</span><span class="sxs-lookup"><span data-stu-id="e9709-103">System.ServiceModel.Channels.MsmqSessiongramSent</span></span>  
+# <a name="systemservicemodelchannelsmsmqsessiongramsent"></a><span data-ttu-id="c8dac-102">System.ServiceModel.Channels.MsmqSessiongramSent</span><span class="sxs-lookup"><span data-stu-id="c8dac-102">System.ServiceModel.Channels.MsmqSessiongramSent</span></span>
+<span data-ttu-id="c8dac-103">System.ServiceModel.Channels.MsmqSessiongramSent</span><span class="sxs-lookup"><span data-stu-id="c8dac-103">System.ServiceModel.Channels.MsmqSessiongramSent</span></span>  
   
-## <a name="description"></a><span data-ttu-id="e9709-104">Описание</span><span class="sxs-lookup"><span data-stu-id="e9709-104">Description</span></span>  
- <span data-ttu-id="e9709-105">Отправлен сеанс транспорта MSMQ.</span><span class="sxs-lookup"><span data-stu-id="e9709-105">MSMQ transport session sent.</span></span>  
+## <a name="description"></a><span data-ttu-id="c8dac-104">Описание</span><span class="sxs-lookup"><span data-stu-id="c8dac-104">Description</span></span>  
+ <span data-ttu-id="c8dac-105">Отправлен сеанс транспорта MSMQ.</span><span class="sxs-lookup"><span data-stu-id="c8dac-105">MSMQ transport session sent.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e9709-106">См. также</span><span class="sxs-lookup"><span data-stu-id="e9709-106">See Also</span></span>  
- [<span data-ttu-id="e9709-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="e9709-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="e9709-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="e9709-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="e9709-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="e9709-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="c8dac-106">См. также</span><span class="sxs-lookup"><span data-stu-id="c8dac-106">See Also</span></span>  
+ [<span data-ttu-id="c8dac-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="c8dac-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="c8dac-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="c8dac-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="c8dac-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="c8dac-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

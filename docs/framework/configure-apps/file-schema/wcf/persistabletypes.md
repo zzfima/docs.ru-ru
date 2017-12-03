@@ -10,21 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4d255097-45f0-4a04-945e-41d9bcfe8c54
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f0b816e43ec211738a47c6141e7544cb6588f82d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eea4b8352f2e7166890ef28112877b04e5ed8e18
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltpersistabletypesgt"></a><span data-ttu-id="05fc3-102">&lt;persistableTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="05fc3-102">&lt;persistableTypes&gt;</span></span>
-<span data-ttu-id="05fc3-103">Данный раздел содержит коллекцию элементов `persistableType`.</span><span class="sxs-lookup"><span data-stu-id="05fc3-103">This section contains a collection of `persistableType` elements.</span></span>  
+# <a name="ltpersistabletypesgt"></a><span data-ttu-id="b75c4-102">&lt;persistableTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="b75c4-102">&lt;persistableTypes&gt;</span></span>
+<span data-ttu-id="b75c4-103">Данный раздел содержит коллекцию элементов `persistableType`.</span><span class="sxs-lookup"><span data-stu-id="b75c4-103">This section contains a collection of `persistableType` elements.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="05fc3-104">См. также</span><span class="sxs-lookup"><span data-stu-id="05fc3-104">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b75c4-104">См. также</span><span class="sxs-lookup"><span data-stu-id="b75c4-104">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.ComPersistableTypeElementCollection>  
  <xref:System.ServiceModel.Configuration.ComPersistableTypeElement>  
- [<span data-ttu-id="05fc3-105">\<comContracts ></span><span class="sxs-lookup"><span data-stu-id="05fc3-105">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
- [<span data-ttu-id="05fc3-106">Интеграция с приложениями COM +</span><span class="sxs-lookup"><span data-stu-id="05fc3-106">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [<span data-ttu-id="05fc3-107">Как: Настройка параметров службы COM +</span><span class="sxs-lookup"><span data-stu-id="05fc3-107">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+ [<span data-ttu-id="b75c4-105">\<comContracts ></span><span class="sxs-lookup"><span data-stu-id="b75c4-105">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
+ [<span data-ttu-id="b75c4-106">Интеграция с приложениями COM +</span><span class="sxs-lookup"><span data-stu-id="b75c4-106">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+ [<span data-ttu-id="b75c4-107">Как: Настройка параметров службы COM +</span><span class="sxs-lookup"><span data-stu-id="b75c4-107">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

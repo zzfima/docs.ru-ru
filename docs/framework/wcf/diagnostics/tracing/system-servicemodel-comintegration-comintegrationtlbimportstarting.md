@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f94b1d9e-25d5-41a9-864b-5e0be7daaf56
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 00c3281d4bf84b5c4922c47fb145f0c989a66606
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ffa46ef24fcb66755a20e85b7551b99d93172a2a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationtlbimportstarting"></a><span data-ttu-id="526d2-102">System.ServiceModel.ComIntegration.ComIntegrationTLBImportStarting</span><span class="sxs-lookup"><span data-stu-id="526d2-102">System.ServiceModel.ComIntegration.ComIntegrationTLBImportStarting</span></span>
-<span data-ttu-id="526d2-103">System.ServiceModel.ComIntegration.ComIntegrationTLBImportStarting</span><span class="sxs-lookup"><span data-stu-id="526d2-103">System.ServiceModel.ComIntegration.ComIntegrationTLBImportStarting</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationtlbimportstarting"></a><span data-ttu-id="c156c-102">System.ServiceModel.ComIntegration.ComIntegrationTLBImportStarting</span><span class="sxs-lookup"><span data-stu-id="c156c-102">System.ServiceModel.ComIntegration.ComIntegrationTLBImportStarting</span></span>
+<span data-ttu-id="c156c-103">System.ServiceModel.ComIntegration.ComIntegrationTLBImportStarting</span><span class="sxs-lookup"><span data-stu-id="c156c-103">System.ServiceModel.ComIntegration.ComIntegrationTLBImportStarting</span></span>  
   
-## <a name="description"></a><span data-ttu-id="526d2-104">Описание</span><span class="sxs-lookup"><span data-stu-id="526d2-104">Description</span></span>  
- <span data-ttu-id="526d2-105">Запускается анализ библиотеки типов компонента.</span><span class="sxs-lookup"><span data-stu-id="526d2-105">The component type library analysis is starting.</span></span>  
+## <a name="description"></a><span data-ttu-id="c156c-104">Описание</span><span class="sxs-lookup"><span data-stu-id="c156c-104">Description</span></span>  
+ <span data-ttu-id="c156c-105">Запускается анализ библиотеки типов компонента.</span><span class="sxs-lookup"><span data-stu-id="c156c-105">The component type library analysis is starting.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="526d2-106">См. также</span><span class="sxs-lookup"><span data-stu-id="526d2-106">See Also</span></span>  
- [<span data-ttu-id="526d2-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="526d2-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="526d2-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="526d2-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="526d2-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="526d2-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="c156c-106">См. также</span><span class="sxs-lookup"><span data-stu-id="c156c-106">See Also</span></span>  
+ [<span data-ttu-id="c156c-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="c156c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="c156c-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="c156c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="c156c-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="c156c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

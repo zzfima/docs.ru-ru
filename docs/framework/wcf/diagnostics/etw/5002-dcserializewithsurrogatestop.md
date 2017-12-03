@@ -10,29 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 66fd4496-8b94-46d4-b987-19040b4ea4bc
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 60b39bbb3c663cd692f24208f5d1f76e841d9aff
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7f77ae373dcc3fec19fcec6d271757da0f373299
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="5002---dcserializewithsurrogatestop"></a><span data-ttu-id="dccb2-102">5002 - DCSerializeWithSurrogateStop</span><span class="sxs-lookup"><span data-stu-id="dccb2-102">5002 - DCSerializeWithSurrogateStop</span></span>
-## <a name="properties"></a><span data-ttu-id="dccb2-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="dccb2-103">Properties</span></span>  
+# <a name="5002---dcserializewithsurrogatestop"></a><span data-ttu-id="3f80d-102">5002 - DCSerializeWithSurrogateStop</span><span class="sxs-lookup"><span data-stu-id="3f80d-102">5002 - DCSerializeWithSurrogateStop</span></span>
+## <a name="properties"></a><span data-ttu-id="3f80d-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="3f80d-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="dccb2-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="dccb2-104">ID</span></span>|<span data-ttu-id="dccb2-105">5002</span><span class="sxs-lookup"><span data-stu-id="dccb2-105">5002</span></span>|  
-|<span data-ttu-id="dccb2-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="dccb2-106">Keywords</span></span>|<span data-ttu-id="dccb2-107">Сериализация</span><span class="sxs-lookup"><span data-stu-id="dccb2-107">Serialization</span></span>|  
-|<span data-ttu-id="dccb2-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="dccb2-108">Level</span></span>|<span data-ttu-id="dccb2-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="dccb2-109">Verbose</span></span>|  
-|<span data-ttu-id="dccb2-110">Канал</span><span class="sxs-lookup"><span data-stu-id="dccb2-110">Channel</span></span>|<span data-ttu-id="dccb2-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="dccb2-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="3f80d-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="3f80d-104">ID</span></span>|<span data-ttu-id="3f80d-105">5002</span><span class="sxs-lookup"><span data-stu-id="3f80d-105">5002</span></span>|  
+|<span data-ttu-id="3f80d-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="3f80d-106">Keywords</span></span>|<span data-ttu-id="3f80d-107">Сериализация</span><span class="sxs-lookup"><span data-stu-id="3f80d-107">Serialization</span></span>|  
+|<span data-ttu-id="3f80d-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="3f80d-108">Level</span></span>|<span data-ttu-id="3f80d-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="3f80d-109">Verbose</span></span>|  
+|<span data-ttu-id="3f80d-110">Канал</span><span class="sxs-lookup"><span data-stu-id="3f80d-110">Channel</span></span>|<span data-ttu-id="3f80d-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="3f80d-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="dccb2-112">Описание</span><span class="sxs-lookup"><span data-stu-id="dccb2-112">Description</span></span>  
- <span data-ttu-id="dccb2-113">Это событие создается при остановке сериализации с суррогатами, выполняемой DataContract.</span><span class="sxs-lookup"><span data-stu-id="dccb2-113">This event is emitted when the DataContract serialize with surrogates stops.</span></span>  
+## <a name="description"></a><span data-ttu-id="3f80d-112">Описание</span><span class="sxs-lookup"><span data-stu-id="3f80d-112">Description</span></span>  
+ <span data-ttu-id="3f80d-113">Это событие создается при остановке сериализации с суррогатами, выполняемой DataContract.</span><span class="sxs-lookup"><span data-stu-id="3f80d-113">This event is emitted when the DataContract serialize with surrogates stops.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="dccb2-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="dccb2-114">Message</span></span>  
- <span data-ttu-id="dccb2-115">Остановка сериализации с суррогатами, выполняемой контрактом DataContract.</span><span class="sxs-lookup"><span data-stu-id="dccb2-115">DataContract serialize with surrogates stop.</span></span>  
+## <a name="message"></a><span data-ttu-id="3f80d-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="3f80d-114">Message</span></span>  
+ <span data-ttu-id="3f80d-115">Остановка сериализации с суррогатами, выполняемой контрактом DataContract.</span><span class="sxs-lookup"><span data-stu-id="3f80d-115">DataContract serialize with surrogates stop.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="dccb2-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="dccb2-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="3f80d-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="3f80d-116">Details</span></span>

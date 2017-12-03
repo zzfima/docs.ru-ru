@@ -10,19 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4412525d-a3cc-4eae-b3e8-a50ce766d09d
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d4b597dbdd8dfea1cab35c717f416d91677c5987
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a65104a6fe76c22fca308091cc02e9496912129c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="servicetimeoutsbehavior"></a><span data-ttu-id="6439d-102">ServiceTimeoutsBehavior</span><span class="sxs-lookup"><span data-stu-id="6439d-102">ServiceTimeoutsBehavior</span></span>
-<span data-ttu-id="6439d-103">ServiceTimeoutsBehavior</span><span class="sxs-lookup"><span data-stu-id="6439d-103">ServiceTimeoutsBehavior</span></span>  
+# <a name="servicetimeoutsbehavior"></a><span data-ttu-id="132b7-102">ServiceTimeoutsBehavior</span><span class="sxs-lookup"><span data-stu-id="132b7-102">ServiceTimeoutsBehavior</span></span>
+<span data-ttu-id="132b7-103">ServiceTimeoutsBehavior</span><span class="sxs-lookup"><span data-stu-id="132b7-103">ServiceTimeoutsBehavior</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6439d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6439d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="132b7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="132b7-104">Syntax</span></span>  
   
 ```  
 class ServiceTimeoutsBehavior : Behavior  
@@ -31,24 +31,24 @@ class ServiceTimeoutsBehavior : Behavior
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="6439d-105">Методы</span><span class="sxs-lookup"><span data-stu-id="6439d-105">Methods</span></span>  
- <span data-ttu-id="6439d-106">Класс ServiceTimeoutsBehavior не определяет никакие методы.</span><span class="sxs-lookup"><span data-stu-id="6439d-106">The ServiceTimeoutsBehavior class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="132b7-105">Методы</span><span class="sxs-lookup"><span data-stu-id="132b7-105">Methods</span></span>  
+ <span data-ttu-id="132b7-106">Класс ServiceTimeoutsBehavior не определяет никакие методы.</span><span class="sxs-lookup"><span data-stu-id="132b7-106">The ServiceTimeoutsBehavior class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="6439d-107">Свойства</span><span class="sxs-lookup"><span data-stu-id="6439d-107">Properties</span></span>  
- <span data-ttu-id="6439d-108">Класс ServiceTimeoutsBehavior имеет следующее свойство.</span><span class="sxs-lookup"><span data-stu-id="6439d-108">The ServiceTimeoutsBehavior class has the following property:</span></span>  
+## <a name="properties"></a><span data-ttu-id="132b7-107">Свойства</span><span class="sxs-lookup"><span data-stu-id="132b7-107">Properties</span></span>  
+ <span data-ttu-id="132b7-108">Класс ServiceTimeoutsBehavior имеет следующее свойство.</span><span class="sxs-lookup"><span data-stu-id="132b7-108">The ServiceTimeoutsBehavior class has the following property:</span></span>  
   
-### <a name="transactiontimeout"></a><span data-ttu-id="6439d-109">TransactionTimeout</span><span class="sxs-lookup"><span data-stu-id="6439d-109">TransactionTimeout</span></span>  
- <span data-ttu-id="6439d-110">Тип данных: datetime</span><span class="sxs-lookup"><span data-stu-id="6439d-110">Data type: datetime</span></span>  
+### <a name="transactiontimeout"></a><span data-ttu-id="132b7-109">TransactionTimeout</span><span class="sxs-lookup"><span data-stu-id="132b7-109">TransactionTimeout</span></span>  
+ <span data-ttu-id="132b7-110">Тип данных: datetime</span><span class="sxs-lookup"><span data-stu-id="132b7-110">Data type: datetime</span></span>  
   
- <span data-ttu-id="6439d-111">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="6439d-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="132b7-111">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="132b7-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="6439d-112">Период времени, в течение которого транзакция должна быть завершена.</span><span class="sxs-lookup"><span data-stu-id="6439d-112">The period within which a transaction must complete.</span></span>  
+ <span data-ttu-id="132b7-112">Период времени, в течение которого транзакция должна быть завершена.</span><span class="sxs-lookup"><span data-stu-id="132b7-112">The period within which a transaction must complete.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6439d-113">Требования</span><span class="sxs-lookup"><span data-stu-id="6439d-113">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="132b7-113">Требования</span><span class="sxs-lookup"><span data-stu-id="132b7-113">Requirements</span></span>  
   
-|<span data-ttu-id="6439d-114">MOF</span><span class="sxs-lookup"><span data-stu-id="6439d-114">MOF</span></span>|<span data-ttu-id="6439d-115">Объявлено в файле Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="6439d-115">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="132b7-114">MOF</span><span class="sxs-lookup"><span data-stu-id="132b7-114">MOF</span></span>|<span data-ttu-id="132b7-115">Объявлено в файле Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="132b7-115">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="6439d-116">Пространство имен</span><span class="sxs-lookup"><span data-stu-id="6439d-116">Namespace</span></span>|<span data-ttu-id="6439d-117">Определено в root\ServiceModel.</span><span class="sxs-lookup"><span data-stu-id="6439d-117">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="132b7-116">Пространство имен</span><span class="sxs-lookup"><span data-stu-id="132b7-116">Namespace</span></span>|<span data-ttu-id="132b7-117">Определено в root\ServiceModel.</span><span class="sxs-lookup"><span data-stu-id="132b7-117">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="6439d-118">См. также</span><span class="sxs-lookup"><span data-stu-id="6439d-118">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="132b7-118">См. также</span><span class="sxs-lookup"><span data-stu-id="132b7-118">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.ServiceTimeoutsElement>

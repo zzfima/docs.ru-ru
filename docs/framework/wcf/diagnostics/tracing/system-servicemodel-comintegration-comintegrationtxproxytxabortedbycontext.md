@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e783e3cb-b011-4a3b-890b-8c710978cbc8
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 741766a1233e0b6f5a103caa0100c5b8b037b73a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b57250d8ad5ce6734e84908cca8a5052016abc18
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationtxproxytxabortedbycontext"></a><span data-ttu-id="ab9cf-102">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByContext</span><span class="sxs-lookup"><span data-stu-id="ab9cf-102">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByContext</span></span>
-<span data-ttu-id="ab9cf-103">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByContext</span><span class="sxs-lookup"><span data-stu-id="ab9cf-103">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByContext</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationtxproxytxabortedbycontext"></a><span data-ttu-id="fa770-102">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByContext</span><span class="sxs-lookup"><span data-stu-id="fa770-102">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByContext</span></span>
+<span data-ttu-id="fa770-103">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByContext</span><span class="sxs-lookup"><span data-stu-id="fa770-103">System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByContext</span></span>  
   
-## <a name="description"></a><span data-ttu-id="ab9cf-104">Описание</span><span class="sxs-lookup"><span data-stu-id="ab9cf-104">Description</span></span>  
- <span data-ttu-id="ab9cf-105">ComPlus: Транзакция прервана контекстом COM+.</span><span class="sxs-lookup"><span data-stu-id="ab9cf-105">ComPlus: Transaction aborted by COM+ context.</span></span>  
+## <a name="description"></a><span data-ttu-id="fa770-104">Описание</span><span class="sxs-lookup"><span data-stu-id="fa770-104">Description</span></span>  
+ <span data-ttu-id="fa770-105">ComPlus: Транзакция прервана контекстом COM+.</span><span class="sxs-lookup"><span data-stu-id="fa770-105">ComPlus: Transaction aborted by COM+ context.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ab9cf-106">См. также</span><span class="sxs-lookup"><span data-stu-id="ab9cf-106">See Also</span></span>  
- [<span data-ttu-id="ab9cf-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="ab9cf-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="ab9cf-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="ab9cf-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="ab9cf-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="ab9cf-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="fa770-106">См. также</span><span class="sxs-lookup"><span data-stu-id="fa770-106">See Also</span></span>  
+ [<span data-ttu-id="fa770-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="fa770-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="fa770-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="fa770-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="fa770-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="fa770-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

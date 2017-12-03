@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3bf030f3-e218-4300-943f-03aaa7dfe2d3
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: deaef024f3f1d613f2b082349471eca0ea2e878e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eb3acde02a11d73066bcfb1e6e0d377e1d4368a5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelperformancecountersfailed"></a><span data-ttu-id="a9e48-102">System.ServiceModel.PerformanceCountersFailed</span><span class="sxs-lookup"><span data-stu-id="a9e48-102">System.ServiceModel.PerformanceCountersFailed</span></span>
-<span data-ttu-id="a9e48-103">System.ServiceModel.PerformanceCountersFailed</span><span class="sxs-lookup"><span data-stu-id="a9e48-103">System.ServiceModel.PerformanceCountersFailed</span></span>  
+# <a name="systemservicemodelperformancecountersfailed"></a><span data-ttu-id="a44da-102">System.ServiceModel.PerformanceCountersFailed</span><span class="sxs-lookup"><span data-stu-id="a44da-102">System.ServiceModel.PerformanceCountersFailed</span></span>
+<span data-ttu-id="a44da-103">System.ServiceModel.PerformanceCountersFailed</span><span class="sxs-lookup"><span data-stu-id="a44da-103">System.ServiceModel.PerformanceCountersFailed</span></span>  
   
-## <a name="description"></a><span data-ttu-id="a9e48-104">Описание</span><span class="sxs-lookup"><span data-stu-id="a9e48-104">Description</span></span>  
- <span data-ttu-id="a9e48-105">Не удалось загрузить указанный счетчик производительности.</span><span class="sxs-lookup"><span data-stu-id="a9e48-105">Failed to load the specified performance counter.</span></span> <span data-ttu-id="a9e48-106">Некоторые счетчики производительности недоступны.</span><span class="sxs-lookup"><span data-stu-id="a9e48-106">Some performance counters are not available.</span></span>  
+## <a name="description"></a><span data-ttu-id="a44da-104">Описание</span><span class="sxs-lookup"><span data-stu-id="a44da-104">Description</span></span>  
+ <span data-ttu-id="a44da-105">Не удалось загрузить указанный счетчик производительности.</span><span class="sxs-lookup"><span data-stu-id="a44da-105">Failed to load the specified performance counter.</span></span> <span data-ttu-id="a44da-106">Некоторые счетчики производительности недоступны.</span><span class="sxs-lookup"><span data-stu-id="a44da-106">Some performance counters are not available.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a9e48-107">См. также</span><span class="sxs-lookup"><span data-stu-id="a9e48-107">See Also</span></span>  
- [<span data-ttu-id="a9e48-108">Трассировка</span><span class="sxs-lookup"><span data-stu-id="a9e48-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="a9e48-109">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="a9e48-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="a9e48-110">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="a9e48-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="a44da-107">См. также</span><span class="sxs-lookup"><span data-stu-id="a44da-107">See Also</span></span>  
+ [<span data-ttu-id="a44da-108">Трассировка</span><span class="sxs-lookup"><span data-stu-id="a44da-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="a44da-109">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="a44da-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="a44da-110">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="a44da-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

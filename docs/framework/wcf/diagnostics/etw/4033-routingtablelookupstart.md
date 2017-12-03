@@ -10,29 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d621ecfe-3335-44cb-97cd-a6648eecd9e2
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8ae41f8a27ef24498884ac5100d7fd6bbe4c8c55
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9e0de1856c689cd96d578e90219457861f475b8f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="4033---routingtablelookupstart"></a><span data-ttu-id="81678-102">4033 - RoutingTableLookupStart</span><span class="sxs-lookup"><span data-stu-id="81678-102">4033 - RoutingTableLookupStart</span></span>
-## <a name="properties"></a><span data-ttu-id="81678-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="81678-103">Properties</span></span>  
+# <a name="4033---routingtablelookupstart"></a><span data-ttu-id="38364-102">4033 - RoutingTableLookupStart</span><span class="sxs-lookup"><span data-stu-id="38364-102">4033 - RoutingTableLookupStart</span></span>
+## <a name="properties"></a><span data-ttu-id="38364-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="38364-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="81678-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="81678-104">ID</span></span>|<span data-ttu-id="81678-105">4033</span><span class="sxs-lookup"><span data-stu-id="81678-105">4033</span></span>|  
-|<span data-ttu-id="81678-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="81678-106">Keywords</span></span>|<span data-ttu-id="81678-107">Службы активации</span><span class="sxs-lookup"><span data-stu-id="81678-107">ActivationServices</span></span>|  
-|<span data-ttu-id="81678-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="81678-108">Level</span></span>|<span data-ttu-id="81678-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="81678-109">Verbose</span></span>|  
-|<span data-ttu-id="81678-110">Канал</span><span class="sxs-lookup"><span data-stu-id="81678-110">Channel</span></span>|<span data-ttu-id="81678-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="81678-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="38364-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="38364-104">ID</span></span>|<span data-ttu-id="38364-105">4033</span><span class="sxs-lookup"><span data-stu-id="38364-105">4033</span></span>|  
+|<span data-ttu-id="38364-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="38364-106">Keywords</span></span>|<span data-ttu-id="38364-107">Службы активации</span><span class="sxs-lookup"><span data-stu-id="38364-107">ActivationServices</span></span>|  
+|<span data-ttu-id="38364-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="38364-108">Level</span></span>|<span data-ttu-id="38364-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="38364-109">Verbose</span></span>|  
+|<span data-ttu-id="38364-110">Канал</span><span class="sxs-lookup"><span data-stu-id="38364-110">Channel</span></span>|<span data-ttu-id="38364-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="38364-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="81678-112">Описание</span><span class="sxs-lookup"><span data-stu-id="81678-112">Description</span></span>  
- <span data-ttu-id="81678-113">Это событие создается, когда просмотр таблицы маршрутизации запущен.</span><span class="sxs-lookup"><span data-stu-id="81678-113">This event is emitted when the routing table lookup has started.</span></span>  
+## <a name="description"></a><span data-ttu-id="38364-112">Описание</span><span class="sxs-lookup"><span data-stu-id="38364-112">Description</span></span>  
+ <span data-ttu-id="38364-113">Это событие создается, когда просмотр таблицы маршрутизации запущен.</span><span class="sxs-lookup"><span data-stu-id="38364-113">This event is emitted when the routing table lookup has started.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="81678-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="81678-114">Message</span></span>  
- <span data-ttu-id="81678-115">Просмотр таблицы маршрутизации запущен.</span><span class="sxs-lookup"><span data-stu-id="81678-115">Routing table lookup started.</span></span>  
+## <a name="message"></a><span data-ttu-id="38364-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="38364-114">Message</span></span>  
+ <span data-ttu-id="38364-115">Просмотр таблицы маршрутизации запущен.</span><span class="sxs-lookup"><span data-stu-id="38364-115">Routing table lookup started.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="81678-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="81678-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="38364-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="38364-116">Details</span></span>

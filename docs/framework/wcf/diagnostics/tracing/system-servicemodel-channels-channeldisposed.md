@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 172198d5-d6c3-48d6-b8ed-8cc9b7ba0204
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 986c9d5d2e5cfe899c017a9131fc90c49b35ce5a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d551c327a830743f869fdd651f13623f41e74a4d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelchannelschanneldisposed"></a><span data-ttu-id="4bccc-102">System.ServiceModel.Channels.ChannelDisposed</span><span class="sxs-lookup"><span data-stu-id="4bccc-102">System.ServiceModel.Channels.ChannelDisposed</span></span>
-<span data-ttu-id="4bccc-103">System.ServiceModel.Channels.ChannelDisposed</span><span class="sxs-lookup"><span data-stu-id="4bccc-103">System.ServiceModel.Channels.ChannelDisposed</span></span>  
+# <a name="systemservicemodelchannelschanneldisposed"></a><span data-ttu-id="6bf1c-102">System.ServiceModel.Channels.ChannelDisposed</span><span class="sxs-lookup"><span data-stu-id="6bf1c-102">System.ServiceModel.Channels.ChannelDisposed</span></span>
+<span data-ttu-id="6bf1c-103">System.ServiceModel.Channels.ChannelDisposed</span><span class="sxs-lookup"><span data-stu-id="6bf1c-103">System.ServiceModel.Channels.ChannelDisposed</span></span>  
   
-## <a name="description"></a><span data-ttu-id="4bccc-104">Описание</span><span class="sxs-lookup"><span data-stu-id="4bccc-104">Description</span></span>  
- <span data-ttu-id="4bccc-105">Канал был удален.</span><span class="sxs-lookup"><span data-stu-id="4bccc-105">A channel was disposed.</span></span>  
+## <a name="description"></a><span data-ttu-id="6bf1c-104">Описание</span><span class="sxs-lookup"><span data-stu-id="6bf1c-104">Description</span></span>  
+ <span data-ttu-id="6bf1c-105">Канал был удален.</span><span class="sxs-lookup"><span data-stu-id="6bf1c-105">A channel was disposed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4bccc-106">См. также</span><span class="sxs-lookup"><span data-stu-id="4bccc-106">See Also</span></span>  
- [<span data-ttu-id="4bccc-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="4bccc-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="4bccc-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="4bccc-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="4bccc-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="4bccc-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="6bf1c-106">См. также</span><span class="sxs-lookup"><span data-stu-id="6bf1c-106">See Also</span></span>  
+ [<span data-ttu-id="6bf1c-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="6bf1c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="6bf1c-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="6bf1c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="6bf1c-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="6bf1c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

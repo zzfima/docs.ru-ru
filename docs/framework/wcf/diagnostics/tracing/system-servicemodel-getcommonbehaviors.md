@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 20f4013b-15fa-4fe7-b129-4ec4d231e479
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e586142bd50ac9965c2350130568077c9d13eb17
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2ce53b7e53b1b105e2c176fa3e75e3bcd33516ce
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelgetcommonbehaviors"></a><span data-ttu-id="d41f5-102">System.ServiceModel.GetCommonBehaviors</span><span class="sxs-lookup"><span data-stu-id="d41f5-102">System.ServiceModel.GetCommonBehaviors</span></span>
-<span data-ttu-id="d41f5-103">System.ServiceModel.GetCommonBehaviors</span><span class="sxs-lookup"><span data-stu-id="d41f5-103">System.ServiceModel.GetCommonBehaviors</span></span>  
+# <a name="systemservicemodelgetcommonbehaviors"></a><span data-ttu-id="58e32-102">System.ServiceModel.GetCommonBehaviors</span><span class="sxs-lookup"><span data-stu-id="58e32-102">System.ServiceModel.GetCommonBehaviors</span></span>
+<span data-ttu-id="58e32-103">System.ServiceModel.GetCommonBehaviors</span><span class="sxs-lookup"><span data-stu-id="58e32-103">System.ServiceModel.GetCommonBehaviors</span></span>  
   
-## <a name="description"></a><span data-ttu-id="d41f5-104">Описание</span><span class="sxs-lookup"><span data-stu-id="d41f5-104">Description</span></span>  
- <span data-ttu-id="d41f5-105">Получить общие реакции на события machine.config.</span><span class="sxs-lookup"><span data-stu-id="d41f5-105">Get Machine.config common behaviors.</span></span>  
+## <a name="description"></a><span data-ttu-id="58e32-104">Описание</span><span class="sxs-lookup"><span data-stu-id="58e32-104">Description</span></span>  
+ <span data-ttu-id="58e32-105">Получить общие реакции на события machine.config.</span><span class="sxs-lookup"><span data-stu-id="58e32-105">Get Machine.config common behaviors.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d41f5-106">См. также</span><span class="sxs-lookup"><span data-stu-id="d41f5-106">See Also</span></span>  
- [<span data-ttu-id="d41f5-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="d41f5-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="d41f5-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="d41f5-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="d41f5-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="d41f5-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="58e32-106">См. также</span><span class="sxs-lookup"><span data-stu-id="58e32-106">See Also</span></span>  
+ [<span data-ttu-id="58e32-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="58e32-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="58e32-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="58e32-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="58e32-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="58e32-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

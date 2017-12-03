@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 193a1a73-42b8-4a98-9a72-ec06ad6b3073
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 494a2d6d60c0e2a17ce452040e9024ea3c5e3c97
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3eff98d3ab2c83c70a117d4811944488eb5a1f39
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelchannelsmsmqqueuetransactionalstatusunknown"></a><span data-ttu-id="5da12-102">System.ServiceModel.Channels.MsmqQueueTransactionalStatusUnknown</span><span class="sxs-lookup"><span data-stu-id="5da12-102">System.ServiceModel.Channels.MsmqQueueTransactionalStatusUnknown</span></span>
-<span data-ttu-id="5da12-103">System.ServiceModel.Channels.MsmqQueueTransactionalStatusUnknown</span><span class="sxs-lookup"><span data-stu-id="5da12-103">System.ServiceModel.Channels.MsmqQueueTransactionalStatusUnknown</span></span>  
+# <a name="systemservicemodelchannelsmsmqqueuetransactionalstatusunknown"></a><span data-ttu-id="0a6b4-102">System.ServiceModel.Channels.MsmqQueueTransactionalStatusUnknown</span><span class="sxs-lookup"><span data-stu-id="0a6b4-102">System.ServiceModel.Channels.MsmqQueueTransactionalStatusUnknown</span></span>
+<span data-ttu-id="0a6b4-103">System.ServiceModel.Channels.MsmqQueueTransactionalStatusUnknown</span><span class="sxs-lookup"><span data-stu-id="0a6b4-103">System.ServiceModel.Channels.MsmqQueueTransactionalStatusUnknown</span></span>  
   
-## <a name="description"></a><span data-ttu-id="5da12-104">Описание</span><span class="sxs-lookup"><span data-stu-id="5da12-104">Description</span></span>  
- <span data-ttu-id="5da12-105">Не удается определить, является ли очередь транзакционной.</span><span class="sxs-lookup"><span data-stu-id="5da12-105">Cannot detect whether the queue is transactional.</span></span>  
+## <a name="description"></a><span data-ttu-id="0a6b4-104">Описание</span><span class="sxs-lookup"><span data-stu-id="0a6b4-104">Description</span></span>  
+ <span data-ttu-id="0a6b4-105">Не удается определить, является ли очередь транзакционной.</span><span class="sxs-lookup"><span data-stu-id="0a6b4-105">Cannot detect whether the queue is transactional.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5da12-106">См. также</span><span class="sxs-lookup"><span data-stu-id="5da12-106">See Also</span></span>  
- [<span data-ttu-id="5da12-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="5da12-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="5da12-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="5da12-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="5da12-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="5da12-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="0a6b4-106">См. также</span><span class="sxs-lookup"><span data-stu-id="0a6b4-106">See Also</span></span>  
+ [<span data-ttu-id="0a6b4-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="0a6b4-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="0a6b4-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="0a6b4-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="0a6b4-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="0a6b4-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

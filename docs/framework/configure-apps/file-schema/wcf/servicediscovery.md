@@ -10,25 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9c371455767b912bd124c2207a1cc29b8ead71cb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9bdd16e02742baa14d1ebd11ea95591df7093705
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltservicediscoverygt"></a><span data-ttu-id="fd72c-102">&lt;serviceDiscovery&gt;</span><span class="sxs-lookup"><span data-stu-id="fd72c-102">&lt;serviceDiscovery&gt;</span></span>
-<span data-ttu-id="fd72c-103">Указывает возможность обнаружения конечных точек службы.</span><span class="sxs-lookup"><span data-stu-id="fd72c-103">Specifies the discoverability of service endpoints.</span></span>  
+# <a name="ltservicediscoverygt"></a><span data-ttu-id="240af-102">&lt;serviceDiscovery&gt;</span><span class="sxs-lookup"><span data-stu-id="240af-102">&lt;serviceDiscovery&gt;</span></span>
+<span data-ttu-id="240af-103">Указывает возможность обнаружения конечных точек службы.</span><span class="sxs-lookup"><span data-stu-id="240af-103">Specifies the discoverability of service endpoints.</span></span>  
   
- <span data-ttu-id="fd72c-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="fd72c-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="fd72c-105">\<поведения ></span><span class="sxs-lookup"><span data-stu-id="fd72c-105">\<behaviors></span></span>  
-<span data-ttu-id="fd72c-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="fd72c-106">\<serviceBehaviors></span></span>  
-<span data-ttu-id="fd72c-107">\<поведение ></span><span class="sxs-lookup"><span data-stu-id="fd72c-107">\<behavior></span></span>  
-<span data-ttu-id="fd72c-108">\<serviceDiscovery ></span><span class="sxs-lookup"><span data-stu-id="fd72c-108">\<serviceDiscovery></span></span>  
+ <span data-ttu-id="240af-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="240af-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="240af-105">\<поведения ></span><span class="sxs-lookup"><span data-stu-id="240af-105">\<behaviors></span></span>  
+<span data-ttu-id="240af-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="240af-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="240af-107">\<поведение ></span><span class="sxs-lookup"><span data-stu-id="240af-107">\<behavior></span></span>  
+<span data-ttu-id="240af-108">\<serviceDiscovery ></span><span class="sxs-lookup"><span data-stu-id="240af-108">\<serviceDiscovery></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fd72c-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fd72c-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="240af-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="240af-109">Syntax</span></span>  
   
 ```xml  
 <behaviors>
@@ -49,30 +49,30 @@ ms.lasthandoff: 10/18/2017
 </behaviors>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="fd72c-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="fd72c-110">Attributes and Elements</span></span>  
- <span data-ttu-id="fd72c-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="fd72c-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="240af-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="240af-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="240af-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="240af-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="fd72c-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="fd72c-112">Attributes</span></span>  
- <span data-ttu-id="fd72c-113">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="fd72c-113">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="240af-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="240af-112">Attributes</span></span>  
+ <span data-ttu-id="240af-113">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="240af-113">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="fd72c-114">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="fd72c-114">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="240af-114">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="240af-114">Child Elements</span></span>  
   
-|<span data-ttu-id="fd72c-115">Элемент</span><span class="sxs-lookup"><span data-stu-id="fd72c-115">Element</span></span>|<span data-ttu-id="fd72c-116">Описание</span><span class="sxs-lookup"><span data-stu-id="fd72c-116">Description</span></span>|  
+|<span data-ttu-id="240af-115">Элемент</span><span class="sxs-lookup"><span data-stu-id="240af-115">Element</span></span>|<span data-ttu-id="240af-116">Описание</span><span class="sxs-lookup"><span data-stu-id="240af-116">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="fd72c-117">\<announcementEndpoint ></span><span class="sxs-lookup"><span data-stu-id="fd72c-117">\<announcementEndpoint></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|<span data-ttu-id="fd72c-118">Коллекция конечных точек объявления.</span><span class="sxs-lookup"><span data-stu-id="fd72c-118">A collection of announcement endpoints.</span></span> <span data-ttu-id="fd72c-119">Используйте этот раздел, чтобы задать конечные точки, которые будут использоваться для отправки сообщений с объявлениями.</span><span class="sxs-lookup"><span data-stu-id="fd72c-119">Use this section to specify the endpoints to use for sending announcement messages.</span></span>|  
-|[<span data-ttu-id="fd72c-120">\<конечной точки discoveryEndpoint ></span><span class="sxs-lookup"><span data-stu-id="fd72c-120">\<discoveryEndpoint></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|<span data-ttu-id="fd72c-121">Коллекция конечных точек обнаружения.</span><span class="sxs-lookup"><span data-stu-id="fd72c-121">A collection of discovery endpoints.</span></span> <span data-ttu-id="fd72c-122">Используйте этот раздел, чтобы задать конечные точки, которые будут прослушиваться на предмет сообщений об обнаружении.</span><span class="sxs-lookup"><span data-stu-id="fd72c-122">Use this section to specify the endpoints on which to listen for the discovery messages.</span></span>|  
+|[<span data-ttu-id="240af-117">\<announcementEndpoint ></span><span class="sxs-lookup"><span data-stu-id="240af-117">\<announcementEndpoint></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|<span data-ttu-id="240af-118">Коллекция конечных точек объявления.</span><span class="sxs-lookup"><span data-stu-id="240af-118">A collection of announcement endpoints.</span></span> <span data-ttu-id="240af-119">Используйте этот раздел, чтобы задать конечные точки, которые будут использоваться для отправки сообщений с объявлениями.</span><span class="sxs-lookup"><span data-stu-id="240af-119">Use this section to specify the endpoints to use for sending announcement messages.</span></span>|  
+|[<span data-ttu-id="240af-120">\<конечной точки discoveryEndpoint ></span><span class="sxs-lookup"><span data-stu-id="240af-120">\<discoveryEndpoint></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|<span data-ttu-id="240af-121">Коллекция конечных точек обнаружения.</span><span class="sxs-lookup"><span data-stu-id="240af-121">A collection of discovery endpoints.</span></span> <span data-ttu-id="240af-122">Используйте этот раздел, чтобы задать конечные точки, которые будут прослушиваться на предмет сообщений об обнаружении.</span><span class="sxs-lookup"><span data-stu-id="240af-122">Use this section to specify the endpoints on which to listen for the discovery messages.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="fd72c-123">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="fd72c-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="240af-123">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="240af-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="fd72c-124">Элемент</span><span class="sxs-lookup"><span data-stu-id="fd72c-124">Element</span></span>|<span data-ttu-id="fd72c-125">Описание</span><span class="sxs-lookup"><span data-stu-id="fd72c-125">Description</span></span>|  
+|<span data-ttu-id="240af-124">Элемент</span><span class="sxs-lookup"><span data-stu-id="240af-124">Element</span></span>|<span data-ttu-id="240af-125">Описание</span><span class="sxs-lookup"><span data-stu-id="240af-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="fd72c-126">\<поведение ></span><span class="sxs-lookup"><span data-stu-id="fd72c-126">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="fd72c-127">Указывает элемент поведения.</span><span class="sxs-lookup"><span data-stu-id="fd72c-127">Specifies a behavior element.</span></span>|  
+|[<span data-ttu-id="240af-126">\<поведение ></span><span class="sxs-lookup"><span data-stu-id="240af-126">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="240af-127">Указывает элемент поведения.</span><span class="sxs-lookup"><span data-stu-id="240af-127">Specifies a behavior element.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fd72c-128">Примечания</span><span class="sxs-lookup"><span data-stu-id="fd72c-128">Remarks</span></span>  
- <span data-ttu-id="fd72c-129">При добавлении к конфигурации поведения службы этот элемент конфигурации делает все конечные точки этой службы обнаруживаемыми.</span><span class="sxs-lookup"><span data-stu-id="fd72c-129">When added to the service’s behavior configuration, this configuration element makes all of the endpoints of that service discoverable.</span></span> <span data-ttu-id="fd72c-130">Можно продолжить настройку функций обнаружения таких конечных точек с помощью [ \<конечной точки discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) или [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="fd72c-130">You can further configure the discovery features of such endpoints by using the [\<discoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) or [\<announcementEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) child elements.</span></span> <span data-ttu-id="fd72c-131">Используйте [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) раздел, чтобы настроить объявления, указав конфигурацию конечной точки для использования для отправки извещения (online/Hello и вне сети или Bye).</span><span class="sxs-lookup"><span data-stu-id="fd72c-131">Use the [\<announcementEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) section to configure the announcements by specifying the endpoint configuration to be use to send service announcements (online/Hello and offline/Bye).</span></span> <span data-ttu-id="fd72c-132">Используйте [ \<конечной точки discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) раздел, чтобы вручную указать конечную точку для прослушивания сообщений обнаружения.</span><span class="sxs-lookup"><span data-stu-id="fd72c-132">Use the [\<discoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) section to manually specify the endpoint on which to listen for the discovery messages.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="240af-128">Примечания</span><span class="sxs-lookup"><span data-stu-id="240af-128">Remarks</span></span>  
+ <span data-ttu-id="240af-129">При добавлении к конфигурации поведения службы этот элемент конфигурации делает все конечные точки этой службы обнаруживаемыми.</span><span class="sxs-lookup"><span data-stu-id="240af-129">When added to the service’s behavior configuration, this configuration element makes all of the endpoints of that service discoverable.</span></span> <span data-ttu-id="240af-130">Можно продолжить настройку функций обнаружения таких конечных точек с помощью [ \<конечной точки discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) или [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="240af-130">You can further configure the discovery features of such endpoints by using the [\<discoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) or [\<announcementEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) child elements.</span></span> <span data-ttu-id="240af-131">Используйте [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) раздел, чтобы настроить объявления, указав конфигурацию конечной точки для использования для отправки извещения (online/Hello и вне сети или Bye).</span><span class="sxs-lookup"><span data-stu-id="240af-131">Use the [\<announcementEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) section to configure the announcements by specifying the endpoint configuration to be use to send service announcements (online/Hello and offline/Bye).</span></span> <span data-ttu-id="240af-132">Используйте [ \<конечной точки discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) раздел, чтобы вручную указать конечную точку для прослушивания сообщений обнаружения.</span><span class="sxs-lookup"><span data-stu-id="240af-132">Use the [\<discoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) section to manually specify the endpoint on which to listen for the discovery messages.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fd72c-133">Пример</span><span class="sxs-lookup"><span data-stu-id="fd72c-133">Example</span></span>  
- <span data-ttu-id="fd72c-134">В следующем примере конфигурации указано, что объект CalculatorService является обнаруживаемым. Дополнительно также указана конечная точка, используемая для объявления.</span><span class="sxs-lookup"><span data-stu-id="fd72c-134">The following configuration example specifies that the CalculatorService to be discoverable, and optionally specifies the announcement endpoint to be used.</span></span>  
+## <a name="example"></a><span data-ttu-id="240af-133">Пример</span><span class="sxs-lookup"><span data-stu-id="240af-133">Example</span></span>  
+ <span data-ttu-id="240af-134">В следующем примере конфигурации указано, что объект CalculatorService является обнаруживаемым. Дополнительно также указана конечная точка, используемая для объявления.</span><span class="sxs-lookup"><span data-stu-id="240af-134">The following configuration example specifies that the CalculatorService to be discoverable, and optionally specifies the announcement endpoint to be used.</span></span>  
   
 ```xml  
 <services>  
@@ -96,5 +96,5 @@ ms.lasthandoff: 10/18/2017
 </behaviors>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fd72c-135">См. также</span><span class="sxs-lookup"><span data-stu-id="fd72c-135">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="240af-135">См. также</span><span class="sxs-lookup"><span data-stu-id="240af-135">See Also</span></span>  
  <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>

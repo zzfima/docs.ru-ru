@@ -9,29 +9,29 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: da0fd144-dda9-4613-b650-fe6325076513
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 51476e9d3fc0e57ec261f63683dc139491541bce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c3eee12b8212243f286bb21604904b37273921e6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltvariablesgt"></a><span data-ttu-id="fe7bd-102">&lt;variables&gt;</span><span class="sxs-lookup"><span data-stu-id="fe7bd-102">&lt;variables&gt;</span></span>
-<span data-ttu-id="fe7bd-103">Представляет коллекцию переменных, связанных с этим запросом действия.</span><span class="sxs-lookup"><span data-stu-id="fe7bd-103">Represents a collection of variables associated with this activity query.</span></span>  
+# <a name="ltvariablesgt"></a><span data-ttu-id="3031c-102">&lt;variables&gt;</span><span class="sxs-lookup"><span data-stu-id="3031c-102">&lt;variables&gt;</span></span>
+<span data-ttu-id="3031c-103">Представляет коллекцию переменных, связанных с этим запросом действия.</span><span class="sxs-lookup"><span data-stu-id="3031c-103">Represents a collection of variables associated with this activity query.</span></span>  
   
- <span data-ttu-id="fe7bd-104">Дополнительные сведения о запросах профиля отслеживания см. в разделе [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="fe7bd-104">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
+ <span data-ttu-id="3031c-104">Дополнительные сведения о запросах профиля отслеживания см. в разделе [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="3031c-104">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
   
-<span data-ttu-id="fe7bd-105">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="fe7bd-105">\<system.serviceModel></span></span>  
-<span data-ttu-id="fe7bd-106">\<Отслеживание ></span><span class="sxs-lookup"><span data-stu-id="fe7bd-106">\<tracking></span></span>  
-<span data-ttu-id="fe7bd-107">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="fe7bd-107">\<trackingProfile></span></span>  
-<span data-ttu-id="fe7bd-108">\<рабочий процесс ></span><span class="sxs-lookup"><span data-stu-id="fe7bd-108">\<workflow></span></span>  
-<span data-ttu-id="fe7bd-109">\<activityStateQueries ></span><span class="sxs-lookup"><span data-stu-id="fe7bd-109">\<activityStateQueries></span></span>  
-<span data-ttu-id="fe7bd-110">\<activityStateQuery ></span><span class="sxs-lookup"><span data-stu-id="fe7bd-110">\<activityStateQuery></span></span>  
-<span data-ttu-id="fe7bd-111">\<переменные ></span><span class="sxs-lookup"><span data-stu-id="fe7bd-111">\<variables></span></span>  
+<span data-ttu-id="3031c-105">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="3031c-105">\<system.serviceModel></span></span>  
+<span data-ttu-id="3031c-106">\<Отслеживание ></span><span class="sxs-lookup"><span data-stu-id="3031c-106">\<tracking></span></span>  
+<span data-ttu-id="3031c-107">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="3031c-107">\<trackingProfile></span></span>  
+<span data-ttu-id="3031c-108">\<рабочий процесс ></span><span class="sxs-lookup"><span data-stu-id="3031c-108">\<workflow></span></span>  
+<span data-ttu-id="3031c-109">\<activityStateQueries ></span><span class="sxs-lookup"><span data-stu-id="3031c-109">\<activityStateQueries></span></span>  
+<span data-ttu-id="3031c-110">\<activityStateQuery ></span><span class="sxs-lookup"><span data-stu-id="3031c-110">\<activityStateQuery></span></span>  
+<span data-ttu-id="3031c-111">\<переменные ></span><span class="sxs-lookup"><span data-stu-id="3031c-111">\<variables></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fe7bd-112">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fe7bd-112">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3031c-112">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3031c-112">Syntax</span></span>  
   
 ```xml  
 <tracking>
@@ -48,26 +48,26 @@ ms.lasthandoff: 11/21/2017
 </tracking>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="fe7bd-113">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="fe7bd-113">Attributes and Elements</span></span>  
- <span data-ttu-id="fe7bd-114">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="fe7bd-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="3031c-113">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="3031c-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="3031c-114">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="3031c-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="fe7bd-115">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="fe7bd-115">Attributes</span></span>  
- <span data-ttu-id="fe7bd-116">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="fe7bd-116">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="3031c-115">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="3031c-115">Attributes</span></span>  
+ <span data-ttu-id="3031c-116">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="3031c-116">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="fe7bd-117">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="fe7bd-117">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="3031c-117">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="3031c-117">Child Elements</span></span>  
   
-|<span data-ttu-id="fe7bd-118">Элемент</span><span class="sxs-lookup"><span data-stu-id="fe7bd-118">Element</span></span>|<span data-ttu-id="fe7bd-119">Описание</span><span class="sxs-lookup"><span data-stu-id="fe7bd-119">Description</span></span>|  
+|<span data-ttu-id="3031c-118">Элемент</span><span class="sxs-lookup"><span data-stu-id="3031c-118">Element</span></span>|<span data-ttu-id="3031c-119">Описание</span><span class="sxs-lookup"><span data-stu-id="3031c-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="fe7bd-120">\<переменная ></span><span class="sxs-lookup"><span data-stu-id="fe7bd-120">\<variable></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/variable.md)|<span data-ttu-id="fe7bd-121">Переменная, связанная с запросом состояния действия.</span><span class="sxs-lookup"><span data-stu-id="fe7bd-121">A variable associated with an activity state query.</span></span>|  
+|[<span data-ttu-id="3031c-120">\<переменная ></span><span class="sxs-lookup"><span data-stu-id="3031c-120">\<variable></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/variable.md)|<span data-ttu-id="3031c-121">Переменная, связанная с запросом состояния действия.</span><span class="sxs-lookup"><span data-stu-id="3031c-121">A variable associated with an activity state query.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="fe7bd-122">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="fe7bd-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="3031c-122">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="3031c-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="fe7bd-123">Элемент</span><span class="sxs-lookup"><span data-stu-id="fe7bd-123">Element</span></span>|<span data-ttu-id="fe7bd-124">Описание</span><span class="sxs-lookup"><span data-stu-id="fe7bd-124">Description</span></span>|  
+|<span data-ttu-id="3031c-123">Элемент</span><span class="sxs-lookup"><span data-stu-id="3031c-123">Element</span></span>|<span data-ttu-id="3031c-124">Описание</span><span class="sxs-lookup"><span data-stu-id="3031c-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="fe7bd-125">\<activityStateQuery ></span><span class="sxs-lookup"><span data-stu-id="fe7bd-125">\<activityStateQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md)|<span data-ttu-id="fe7bd-126">Представляет элемент конфигурации, используемый для отслеживания запросов на отмену дочернего действия родительским действием.</span><span class="sxs-lookup"><span data-stu-id="fe7bd-126">Represents a configuration element that is used to track requests to cancel a child activity by the parent activity.</span></span> <span data-ttu-id="fe7bd-127">Этот запрос необходим, чтобы участник отслеживания подписался на объекты записей запросов на отмену.</span><span class="sxs-lookup"><span data-stu-id="fe7bd-127">The query is necessary for a tracking participant to subscribe to cancel request record objects.</span></span>|  
+|[<span data-ttu-id="3031c-125">\<activityStateQuery ></span><span class="sxs-lookup"><span data-stu-id="3031c-125">\<activityStateQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md)|<span data-ttu-id="3031c-126">Представляет элемент конфигурации, используемый для отслеживания запросов на отмену дочернего действия родительским действием.</span><span class="sxs-lookup"><span data-stu-id="3031c-126">Represents a configuration element that is used to track requests to cancel a child activity by the parent activity.</span></span> <span data-ttu-id="3031c-127">Этот запрос необходим, чтобы участник отслеживания подписался на объекты записей запросов на отмену.</span><span class="sxs-lookup"><span data-stu-id="3031c-127">The query is necessary for a tracking participant to subscribe to cancel request record objects.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fe7bd-128">Примечания</span><span class="sxs-lookup"><span data-stu-id="fe7bd-128">Remarks</span></span>  
- <span data-ttu-id="fe7bd-129">Уникальной возможностью ActivityStateQuery является возможность извлекать данные во время отслеживания выполнения рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="fe7bd-129">One unique feature of an ActivityStateQuery is the ability to extract data when tracking the execution of a workflow.</span></span> <span data-ttu-id="fe7bd-130">Это обеспечивает дополнительный контекст при доступе к записям отслеживания после выполнения.</span><span class="sxs-lookup"><span data-stu-id="fe7bd-130">This provides additional context when accessing the tracking records post execution.</span></span> <span data-ttu-id="fe7bd-131">Можно использовать [ \<аргументы >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [ \<состояний >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) и [ \<состояний >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) элементов для извлечения любая переменная или аргумент из любого действия в рабочем процессе. В примере показан запрос состояния действия, который извлекает переменные и аргументы при действия `Closed` записи отслеживания.</span><span class="sxs-lookup"><span data-stu-id="fe7bd-131">You can use the [\<arguments>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) and [\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) elements to extract any variable or argument from any activity in a workflow.The following example shows an activity state query that extracts variables and arguments when the activity’s `Closed` tracking record is emitted.</span></span> <span data-ttu-id="fe7bd-132">Переменные и аргументы могут быть извлечены при помощи ActivityStateRecord, поэтому подписка на внутри отслеживания профиля с помощью [ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).</span><span class="sxs-lookup"><span data-stu-id="fe7bd-132">Variables and arguments can be extracted only with an ActivityStateRecord and thus are subscribed to within a tracking profile using [\<activityStateQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3031c-128">Примечания</span><span class="sxs-lookup"><span data-stu-id="3031c-128">Remarks</span></span>  
+ <span data-ttu-id="3031c-129">Уникальной возможностью ActivityStateQuery является возможность извлекать данные во время отслеживания выполнения рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="3031c-129">One unique feature of an ActivityStateQuery is the ability to extract data when tracking the execution of a workflow.</span></span> <span data-ttu-id="3031c-130">Это обеспечивает дополнительный контекст при доступе к записям отслеживания после выполнения.</span><span class="sxs-lookup"><span data-stu-id="3031c-130">This provides additional context when accessing the tracking records post execution.</span></span> <span data-ttu-id="3031c-131">Можно использовать [ \<аргументы >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [ \<состояний >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) и [ \<состояний >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) элементов для извлечения любая переменная или аргумент из любого действия в рабочем процессе. В примере показан запрос состояния действия, который извлекает переменные и аргументы при действия `Closed` записи отслеживания.</span><span class="sxs-lookup"><span data-stu-id="3031c-131">You can use the [\<arguments>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) and [\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) elements to extract any variable or argument from any activity in a workflow.The following example shows an activity state query that extracts variables and arguments when the activity’s `Closed` tracking record is emitted.</span></span> <span data-ttu-id="3031c-132">Переменные и аргументы могут быть извлечены при помощи ActivityStateRecord, поэтому подписка на внутри отслеживания профиля с помощью [ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).</span><span class="sxs-lookup"><span data-stu-id="3031c-132">Variables and arguments can be extracted only with an ActivityStateRecord and thus are subscribed to within a tracking profile using [\<activityStateQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).</span></span>  
   
 ```xml  
 <activityStateQuery activityName="SendEmailActivity">  
@@ -83,8 +83,8 @@ ms.lasthandoff: 11/21/2017
 </activityStateQuery>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fe7bd-133">См. также</span><span class="sxs-lookup"><span data-stu-id="fe7bd-133">See Also</span></span>  
- <span data-ttu-id="fe7bd-134"><xref:System.ServiceModel.Activities.Tracking.Configuration.VariableElementCollection?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="fe7bd-134"><xref:System.ServiceModel.Activities.Tracking.Configuration.VariableElementCollection?displayProperty=nameWithType></span></span>       
- <span data-ttu-id="fe7bd-135"><xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="fe7bd-135"><xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType></span></span>       
- [<span data-ttu-id="fe7bd-136">Отслеживание и трассировка рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="fe7bd-136">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [<span data-ttu-id="fe7bd-137">Профили отслеживания</span><span class="sxs-lookup"><span data-stu-id="fe7bd-137">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a><span data-ttu-id="3031c-133">См. также</span><span class="sxs-lookup"><span data-stu-id="3031c-133">See Also</span></span>  
+ <span data-ttu-id="3031c-134"><xref:System.ServiceModel.Activities.Tracking.Configuration.VariableElementCollection?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="3031c-134"><xref:System.ServiceModel.Activities.Tracking.Configuration.VariableElementCollection?displayProperty=nameWithType></span></span>       
+ <span data-ttu-id="3031c-135"><xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="3031c-135"><xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType></span></span>       
+ [<span data-ttu-id="3031c-136">Отслеживание и трассировка рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="3031c-136">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [<span data-ttu-id="3031c-137">Профили отслеживания</span><span class="sxs-lookup"><span data-stu-id="3031c-137">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

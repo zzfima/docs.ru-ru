@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d09f5336-c1e6-4b92-a04d-af556546bc69
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ed6185ab500de9796820f5774e09755c0a3d22d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ea95eaecbf5a0b07d18d024b908e2803d2a88aa0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelchannelssslclientcertmissing"></a><span data-ttu-id="d8656-102">System.ServiceModel.Channels.SslClientCertMissing</span><span class="sxs-lookup"><span data-stu-id="d8656-102">System.ServiceModel.Channels.SslClientCertMissing</span></span>
-<span data-ttu-id="d8656-103">System.ServiceModel.Channels.SslClientCertMissing</span><span class="sxs-lookup"><span data-stu-id="d8656-103">System.ServiceModel.Channels.SslClientCertMissing</span></span>  
+# <a name="systemservicemodelchannelssslclientcertmissing"></a><span data-ttu-id="1f21e-102">System.ServiceModel.Channels.SslClientCertMissing</span><span class="sxs-lookup"><span data-stu-id="1f21e-102">System.ServiceModel.Channels.SslClientCertMissing</span></span>
+<span data-ttu-id="1f21e-103">System.ServiceModel.Channels.SslClientCertMissing</span><span class="sxs-lookup"><span data-stu-id="1f21e-103">System.ServiceModel.Channels.SslClientCertMissing</span></span>  
   
-## <a name="description"></a><span data-ttu-id="d8656-104">Описание</span><span class="sxs-lookup"><span data-stu-id="d8656-104">Description</span></span>  
- <span data-ttu-id="d8656-105">Удаленному SSL-клиенту не удалось предоставить требуемый сертификат.</span><span class="sxs-lookup"><span data-stu-id="d8656-105">The remote SSL client failed to provide a required certificate.</span></span>  
+## <a name="description"></a><span data-ttu-id="1f21e-104">Описание</span><span class="sxs-lookup"><span data-stu-id="1f21e-104">Description</span></span>  
+ <span data-ttu-id="1f21e-105">Удаленному SSL-клиенту не удалось предоставить требуемый сертификат.</span><span class="sxs-lookup"><span data-stu-id="1f21e-105">The remote SSL client failed to provide a required certificate.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d8656-106">См. также</span><span class="sxs-lookup"><span data-stu-id="d8656-106">See Also</span></span>  
- [<span data-ttu-id="d8656-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="d8656-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="d8656-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="d8656-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="d8656-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="d8656-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="1f21e-106">См. также</span><span class="sxs-lookup"><span data-stu-id="1f21e-106">See Also</span></span>  
+ [<span data-ttu-id="1f21e-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="1f21e-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="1f21e-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="1f21e-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="1f21e-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="1f21e-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

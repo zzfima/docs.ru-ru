@@ -10,29 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8b3a1a76-e5f7-4421-86cf-d201d724671e
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ad8b23eca492d3d3de3cb7c6206b707ed26a5e74
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 39607533fb94f8ed86bd0678e1eccb49032b2f67
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="3394---streamedmessagewrittenbyencoder"></a><span data-ttu-id="50d2b-102">3394 - StreamedMessageWrittenByEncoder</span><span class="sxs-lookup"><span data-stu-id="50d2b-102">3394 - StreamedMessageWrittenByEncoder</span></span>
-## <a name="properties"></a><span data-ttu-id="50d2b-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="50d2b-103">Properties</span></span>  
+# <a name="3394---streamedmessagewrittenbyencoder"></a><span data-ttu-id="09047-102">3394 - StreamedMessageWrittenByEncoder</span><span class="sxs-lookup"><span data-stu-id="09047-102">3394 - StreamedMessageWrittenByEncoder</span></span>
+## <a name="properties"></a><span data-ttu-id="09047-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="09047-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="50d2b-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="50d2b-104">ID</span></span>|<span data-ttu-id="50d2b-105">3394</span><span class="sxs-lookup"><span data-stu-id="50d2b-105">3394</span></span>|  
-|<span data-ttu-id="50d2b-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="50d2b-106">Keywords</span></span>|<span data-ttu-id="50d2b-107">Канал</span><span class="sxs-lookup"><span data-stu-id="50d2b-107">Channel</span></span>|  
-|<span data-ttu-id="50d2b-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="50d2b-108">Level</span></span>|<span data-ttu-id="50d2b-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="50d2b-109">Information</span></span>|  
-|<span data-ttu-id="50d2b-110">Канал</span><span class="sxs-lookup"><span data-stu-id="50d2b-110">Channel</span></span>|<span data-ttu-id="50d2b-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="50d2b-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="09047-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="09047-104">ID</span></span>|<span data-ttu-id="09047-105">3394</span><span class="sxs-lookup"><span data-stu-id="09047-105">3394</span></span>|  
+|<span data-ttu-id="09047-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="09047-106">Keywords</span></span>|<span data-ttu-id="09047-107">Канал</span><span class="sxs-lookup"><span data-stu-id="09047-107">Channel</span></span>|  
+|<span data-ttu-id="09047-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="09047-108">Level</span></span>|<span data-ttu-id="09047-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="09047-109">Information</span></span>|  
+|<span data-ttu-id="09047-110">Канал</span><span class="sxs-lookup"><span data-stu-id="09047-110">Channel</span></span>|<span data-ttu-id="09047-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="09047-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="50d2b-112">Описание</span><span class="sxs-lookup"><span data-stu-id="50d2b-112">Description</span></span>  
- <span data-ttu-id="50d2b-113">Событие возникает при записи потокового сообщения кодировщиком.</span><span class="sxs-lookup"><span data-stu-id="50d2b-113">This event is emitted when the streamed message was written by the encoder.</span></span>  
+## <a name="description"></a><span data-ttu-id="09047-112">Описание</span><span class="sxs-lookup"><span data-stu-id="09047-112">Description</span></span>  
+ <span data-ttu-id="09047-113">Событие возникает при записи потокового сообщения кодировщиком.</span><span class="sxs-lookup"><span data-stu-id="09047-113">This event is emitted when the streamed message was written by the encoder.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="50d2b-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="50d2b-114">Message</span></span>  
- <span data-ttu-id="50d2b-115">Потоковое сообщение было записано кодировщиком.</span><span class="sxs-lookup"><span data-stu-id="50d2b-115">A streamed message was written by the encoder.</span></span>  
+## <a name="message"></a><span data-ttu-id="09047-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="09047-114">Message</span></span>  
+ <span data-ttu-id="09047-115">Потоковое сообщение было записано кодировщиком.</span><span class="sxs-lookup"><span data-stu-id="09047-115">A streamed message was written by the encoder.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="50d2b-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="50d2b-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="09047-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="09047-116">Details</span></span>

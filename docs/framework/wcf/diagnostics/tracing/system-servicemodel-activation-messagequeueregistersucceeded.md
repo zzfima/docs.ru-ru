@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a75ea3ab-b0b8-4458-be9a-5e068a74af0f
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4a43ce6597187779ea3fcd27676660ccbe7b2782
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4ca2239accf5f1da012142ea4c142d967881f304
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelactivationmessagequeueregistersucceeded"></a><span data-ttu-id="9a358-102">System.ServiceModel.Activation.MessageQueueRegisterSucceeded</span><span class="sxs-lookup"><span data-stu-id="9a358-102">System.ServiceModel.Activation.MessageQueueRegisterSucceeded</span></span>
-<span data-ttu-id="9a358-103">System.ServiceModel.Activation.MessageQueueRegisterSucceeded</span><span class="sxs-lookup"><span data-stu-id="9a358-103">System.ServiceModel.Activation.MessageQueueRegisterSucceeded</span></span>  
+# <a name="systemservicemodelactivationmessagequeueregistersucceeded"></a><span data-ttu-id="0c0bb-102">System.ServiceModel.Activation.MessageQueueRegisterSucceeded</span><span class="sxs-lookup"><span data-stu-id="0c0bb-102">System.ServiceModel.Activation.MessageQueueRegisterSucceeded</span></span>
+<span data-ttu-id="0c0bb-103">System.ServiceModel.Activation.MessageQueueRegisterSucceeded</span><span class="sxs-lookup"><span data-stu-id="0c0bb-103">System.ServiceModel.Activation.MessageQueueRegisterSucceeded</span></span>  
   
-## <a name="description"></a><span data-ttu-id="9a358-104">Описание</span><span class="sxs-lookup"><span data-stu-id="9a358-104">Description</span></span>  
- <span data-ttu-id="9a358-105">Успешно произведен вызов для регистрации пространства имен. Очередь сообщений была открыта.</span><span class="sxs-lookup"><span data-stu-id="9a358-105">A call to register a namespace succeeded, a message queue was opened.</span></span>  
+## <a name="description"></a><span data-ttu-id="0c0bb-104">Описание</span><span class="sxs-lookup"><span data-stu-id="0c0bb-104">Description</span></span>  
+ <span data-ttu-id="0c0bb-105">Успешно произведен вызов для регистрации пространства имен. Очередь сообщений была открыта.</span><span class="sxs-lookup"><span data-stu-id="0c0bb-105">A call to register a namespace succeeded, a message queue was opened.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9a358-106">См. также</span><span class="sxs-lookup"><span data-stu-id="9a358-106">See Also</span></span>  
- [<span data-ttu-id="9a358-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="9a358-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="9a358-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="9a358-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="9a358-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="9a358-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="0c0bb-106">См. также</span><span class="sxs-lookup"><span data-stu-id="0c0bb-106">See Also</span></span>  
+ [<span data-ttu-id="0c0bb-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="0c0bb-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="0c0bb-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="0c0bb-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="0c0bb-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="0c0bb-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

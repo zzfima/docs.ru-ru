@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6b72086d-a047-4316-854e-2c210d3d52fe
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 13db1d4a72f27f0fbdd62459c63d64d97957be72
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f5615c81da1fa0b4abc622eaf75567f7f0f5465d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelportsharingtransportlistenerlistenrequest"></a><span data-ttu-id="a85e3-102">System.ServiceModel.PortSharing.TransportListenerListenRequest</span><span class="sxs-lookup"><span data-stu-id="a85e3-102">System.ServiceModel.PortSharing.TransportListenerListenRequest</span></span>
-<span data-ttu-id="a85e3-103">System.ServiceModel.PortSharing.TransportListenerListenRequest</span><span class="sxs-lookup"><span data-stu-id="a85e3-103">System.ServiceModel.PortSharing.TransportListenerListenRequest</span></span>  
+# <a name="systemservicemodelportsharingtransportlistenerlistenrequest"></a><span data-ttu-id="301e7-102">System.ServiceModel.PortSharing.TransportListenerListenRequest</span><span class="sxs-lookup"><span data-stu-id="301e7-102">System.ServiceModel.PortSharing.TransportListenerListenRequest</span></span>
+<span data-ttu-id="301e7-103">System.ServiceModel.PortSharing.TransportListenerListenRequest</span><span class="sxs-lookup"><span data-stu-id="301e7-103">System.ServiceModel.PortSharing.TransportListenerListenRequest</span></span>  
   
-## <a name="description"></a><span data-ttu-id="a85e3-104">Описание</span><span class="sxs-lookup"><span data-stu-id="a85e3-104">Description</span></span>  
- <span data-ttu-id="a85e3-105">TransportListener предпринимает попытку прослушивания.</span><span class="sxs-lookup"><span data-stu-id="a85e3-105">The TransportListener is attempting to listen.</span></span>  
+## <a name="description"></a><span data-ttu-id="301e7-104">Описание</span><span class="sxs-lookup"><span data-stu-id="301e7-104">Description</span></span>  
+ <span data-ttu-id="301e7-105">TransportListener предпринимает попытку прослушивания.</span><span class="sxs-lookup"><span data-stu-id="301e7-105">The TransportListener is attempting to listen.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a85e3-106">См. также</span><span class="sxs-lookup"><span data-stu-id="a85e3-106">See Also</span></span>  
- [<span data-ttu-id="a85e3-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="a85e3-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="a85e3-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="a85e3-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="a85e3-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="a85e3-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="301e7-106">См. также</span><span class="sxs-lookup"><span data-stu-id="301e7-106">See Also</span></span>  
+ [<span data-ttu-id="301e7-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="301e7-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="301e7-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="301e7-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="301e7-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="301e7-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
