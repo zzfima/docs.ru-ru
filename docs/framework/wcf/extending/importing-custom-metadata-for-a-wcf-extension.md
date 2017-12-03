@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c00368f466e151466bdf30a89dffe6baa9b57a33
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d05cbb3091eb3a6bae3341947e14fcc1e78d1207
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Импорт пользовательских метаданных для расширения WCF
 В процессе импорта метаданных в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] создается абстрактное представление службы или ее компонентов на основе этих метаданных. Например, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] может импортировать экземпляры <xref:System.ServiceModel.Description.ServiceEndpoint>, <xref:System.ServiceModel.Channels.Binding> или <xref:System.ServiceModel.Description.ContractDescription> из документа WSDL службы. Чтобы импортировать метаданные службы в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], следует использовать реализацию абстрактного класса <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType>. Типы, производные от класса <xref:System.ServiceModel.Description.MetadataImporter>, реализуют поддержку для импорта форматов метаданных, которые используют преимущества логики импорта WS-Policy в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  

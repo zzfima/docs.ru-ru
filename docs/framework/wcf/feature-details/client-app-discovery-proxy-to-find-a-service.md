@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 09c75ff3c19110a4ed97d8b95a4f63174cba0406
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dc6b3a056aaa7aa6cb0a57c72b9591393ca0aff2
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Как реализовать клиентское приложение, которое для поиска служб использует прокси-сервер обнаружения
 Это последний из трех разделов, в которых рассматривается реализация прокси-сервера обнаружения. В предыдущем разделе [как: реализовать Обнаружимую службу, которая регистрирует прокси-сервере обнаружения](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), можно реализовать [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службу, которая регистрирует себя с прокси-сервера обнаружения. В этом разделе будет создан клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], который использует прокси-сервер обнаружения для поиска службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  

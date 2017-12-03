@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: channel model [WCF]
 ms.assetid: 07a81e11-3911-4632-90d2-cca99825b5bd
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 19dfb8d6a75496cf193831c1d9e6e71ee6bb1a7a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9be7f226c331ad20c58a06b5c7497c7942db013d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="channel-model-overview"></a>Общие сведения о модели каналов
 Стек каналов [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - это многоуровневый стек связи с одним или несколькими каналами, которые обрабатывают сообщения. В нижней части стека находится канал транспорта, отвечающий за адаптацию стека каналов к используемому транспорту (например, TCP, HTTP, SMTP и другим типам транспорта). Каналы обеспечивают модель низкоуровневого программирования для передачи и приема сообщений. Эта модель программирования основывается на нескольких интерфейсах и ресурсах других типов, в совокупности называемых моделью каналов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. В данном разделе рассматриваются формы каналов, создание базового прослушивателя каналов (в службе) и фабрики каналов (на клиенте).  

@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b88bcdbc8b5dc542a8d8e555785d36ba7e602547
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b8d353b50cf9439a9741199a52ca650e02e4d49f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="data-contract-surrogates"></a>Суррогаты контрактов данных
 Контракт данных *символов-заместителей* является дополнительным, встроенная в модель контракта данных. Эта возможность предназначена для настройки и подстановки типов, когда необходимо изменить способ сериализации типа, десериализации или преобразования типа в метаданные. Например, суррогат может использоваться в сценариях, когда для типа не задан контракт данных, поля и свойства не помечены атрибутом <xref:System.Runtime.Serialization.DataMemberAttribute> или пользователи хотят динамически создавать вариации схемы.  

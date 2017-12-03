@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 228b8d40b14781496b2c71a715008e8bf9caf86b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 545096292f34566b4bb6c3c44bb20ddac426af26
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Управление версиями службы данных (службы WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Позволяет создавать службы данных, чтобы клиенты могут обращаться к данным как ресурсам по идентификатору URI, основанные на модели данных. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] также поддерживает определение операций службы. После первоначального развертывания служб и, возможно, несколько раз на протяжении времени их существования возникает потребность в изменении этих служб. Причин тому немало: изменяющиеся потребности бизнеса, требования информационных технологий или необходимость решить какие-либо другие проблемы. При внесении изменений в существующую службу данных необходимо принять решение, следует ли определить новую версию службы данных и как оптимальным способом свести к минимуму воздействие на существующие клиентские приложения. Этот раздел содержит указания о том, когда и как следует создавать новую версию службы данных. В нем также описывается, как [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] обеспечивает обмен между клиентами и службами данных, которые поддерживают разные версии протокола [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  

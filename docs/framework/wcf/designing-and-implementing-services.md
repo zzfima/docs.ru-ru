@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
 caps.latest.revision: "37"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ee2564b59ba0c0377c93c22787974ac0a980e64b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3429a9145695a957089941d8c814d441da498c93
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="designing-and-implementing-services"></a>Проектирование и реализация служб
 В этом разделе показано, как определить и реализовать [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] контракты. Контракт службы указывает, какую информацию конечная точка передает во внешний мир. На более конкретном уровне, это выписка о наборе специальных сообщений, объединенных в такие базовые шаблоны обмена сообщениями (MEP), как запрос/ответ, односторонний обмен и дуплексный обмен. Если контракт службы является логически связанным набором обмена сообщениями, операция службы - это обмен одним сообщением. Например, операция `Hello` явно должна явно принять одно сообщение (к примеру, вызывающая сторона может объявить приветствие) и может вернуть или не вернуть сообщение (в зависимости от характера операции).  

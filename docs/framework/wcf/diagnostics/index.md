@@ -17,14 +17,14 @@ helpviewer_keywords:
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2f103570cf7d94a9ac6256f3db991c44767fa7c4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4aa9cacfaa966bbe37618406f4b1413dec433726
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="administration-and-diagnostics"></a>Администрирование и диагностика
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предоставляет широкий набор функций, благодаря которому можно отслеживать разные этапы времени существования приложения. Например, можно использовать конфигурацию для настройки служб и клиентов при развертывании. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] содержит большой набор счетчиков производительности, с помощью которых можно измерять производительность приложения. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] также предоставляет данные проверки службы в среде выполнения с помощью поставщика инструментария управления Windows (WMI) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Когда в приложении происходит ошибка или оно начинает функционировать неверно, журнал событий позволяет понять, серьезны ли причины нарушения. Также можно использовать журнал сообщений и функцию трассировки сообщений для того, чтобы понять, какие события происходят в приложении на всех этапах его работы. Эти функции помогают разработчикам и ИТ-специалистам устранять неполадки в приложении [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в случае его неверного функционирования.  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - discovery [WCF]
 ms.assetid: 462c4913-f388-45a9-9042-28ae96a4e735
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: fda50f14d9003b81f93840571b8b27f874f7730b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0c9b083180870e451816b54dddc10068ca7ec5db
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-discovery"></a>Обнаружение WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предоставляет поддержку для включения обнаружения служб во время выполнения совместимым способом с помощью протокола WS-Discovery. Службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] могут сообщать о своей доступности компьютерам в сети с помощью многоадресного сообщения либо передавать сообщение прокси-серверу обнаружения. Клиентские приложения могут осуществлять поиск служб, отвечающих набору указанных критериев, в сети или на прокси-сервере обнаружения. В подразделах этого раздела представлены общие сведения и описание модели программирования данной возможности.  

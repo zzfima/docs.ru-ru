@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b157d177b238db655e98a4cbe1d5a86ae895afa1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7daa3c08bb15b13543a4f972d7e4c5e4929e16e8
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>Подробная информация о CustomPeerResolverService: регистрация клиентов
 Каждый узел в сетке публикует информацию о своей конечной точке в службе распознавателя с помощью функции `Register`. Служба распознавателя хранит эту информацию в виде регистрационной записи. Эта запись содержит уникальный идентификатор (RegistrationID) и информацию о конечной точке (PeerNodeAddress) для узла.  
