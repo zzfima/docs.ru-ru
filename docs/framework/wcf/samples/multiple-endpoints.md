@@ -11,22 +11,22 @@ ms.topic: article
 helpviewer_keywords: Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
 caps.latest.revision: "31"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3b7e3a6da177c381bafe3adee16be36ceba50616
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6595184219ac87ef1d490308bcd927f57fa0a3ba
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="multiple-endpoints"></a><span data-ttu-id="ede1e-102">Несколько конечных точек</span><span class="sxs-lookup"><span data-stu-id="ede1e-102">Multiple Endpoints</span></span>
-<span data-ttu-id="ede1e-103">В образце "Несколько конечных точек" показано, как настроить несколько конечных точек на службе и как взаимодействовать с каждой конечной точкой со стороны клиента.</span><span class="sxs-lookup"><span data-stu-id="ede1e-103">The Multiple Endpoints sample demonstrates how to configure multiple endpoints on a service and how to communicate with each endpoint from a client.</span></span> <span data-ttu-id="ede1e-104">Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="ede1e-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="ede1e-105">Конфигурация службы была изменена для определения двух конечных точек, которые поддерживают контракт `ICalculator`, но для которых заданы различные адреса с использованием различных привязок.</span><span class="sxs-lookup"><span data-stu-id="ede1e-105">The service configuration has been modified to define two endpoints that support the `ICalculator` contract, but each at a different address using a different binding.</span></span> <span data-ttu-id="ede1e-106">Конфигурация и код клиента были изменены, чтобы он мог взаимодействовать с обеими конечными точками службы.</span><span class="sxs-lookup"><span data-stu-id="ede1e-106">The client configuration and code have been modified to communicate with both of the service endpoints.</span></span>  
+# <a name="multiple-endpoints"></a><span data-ttu-id="677d7-102">Несколько конечных точек</span><span class="sxs-lookup"><span data-stu-id="677d7-102">Multiple Endpoints</span></span>
+<span data-ttu-id="677d7-103">В образце "Несколько конечных точек" показано, как настроить несколько конечных точек на службе и как взаимодействовать с каждой конечной точкой со стороны клиента.</span><span class="sxs-lookup"><span data-stu-id="677d7-103">The Multiple Endpoints sample demonstrates how to configure multiple endpoints on a service and how to communicate with each endpoint from a client.</span></span> <span data-ttu-id="677d7-104">Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="677d7-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="677d7-105">Конфигурация службы была изменена для определения двух конечных точек, которые поддерживают контракт `ICalculator`, но для которых заданы различные адреса с использованием различных привязок.</span><span class="sxs-lookup"><span data-stu-id="677d7-105">The service configuration has been modified to define two endpoints that support the `ICalculator` contract, but each at a different address using a different binding.</span></span> <span data-ttu-id="677d7-106">Конфигурация и код клиента были изменены, чтобы он мог взаимодействовать с обеими конечными точками службы.</span><span class="sxs-lookup"><span data-stu-id="677d7-106">The client configuration and code have been modified to communicate with both of the service endpoints.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ede1e-107">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="ede1e-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="677d7-107">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="677d7-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="ede1e-108">Файл службы Web.config был изменен для определения двух конечных точек, которые поддерживают один и тот же контракт `ICalculator`, но для которых заданы различные адреса с использованием различных привязок.</span><span class="sxs-lookup"><span data-stu-id="ede1e-108">The service Web.config file has been modified to define two endpoints, each supporting the same `ICalculator` contract, but at different addresses using different bindings.</span></span> <span data-ttu-id="ede1e-109">Первая конечная точка определена по базовому адресу с использованием привязки `basicHttpBinding`, для которой не включены функции безопасности.</span><span class="sxs-lookup"><span data-stu-id="ede1e-109">The first endpoint is defined at the base address using a `basicHttpBinding` binding, which does not have security enabled.</span></span> <span data-ttu-id="ede1e-110">Вторая конечная точка определена по адресу {базовый_адрес}/secure с использованием привязки `wsHttpBinding`, которая по умолчанию является защищенной с помощью протокола WS-Security с проверкой подлинности Windows.</span><span class="sxs-lookup"><span data-stu-id="ede1e-110">The second endpoint is defined at {baseaddress}/secure using a `wsHttpBinding` binding, which is secure by default, using WS-Security with Windows authentication.</span></span>  
+ <span data-ttu-id="677d7-108">Файл службы Web.config был изменен для определения двух конечных точек, которые поддерживают один и тот же контракт `ICalculator`, но для которых заданы различные адреса с использованием различных привязок.</span><span class="sxs-lookup"><span data-stu-id="677d7-108">The service Web.config file has been modified to define two endpoints, each supporting the same `ICalculator` contract, but at different addresses using different bindings.</span></span> <span data-ttu-id="677d7-109">Первая конечная точка определена по базовому адресу с использованием привязки `basicHttpBinding`, для которой не включены функции безопасности.</span><span class="sxs-lookup"><span data-stu-id="677d7-109">The first endpoint is defined at the base address using a `basicHttpBinding` binding, which does not have security enabled.</span></span> <span data-ttu-id="677d7-110">Вторая конечная точка определена по адресу {базовый_адрес}/secure с использованием привязки `wsHttpBinding`, которая по умолчанию является защищенной с помощью протокола WS-Security с проверкой подлинности Windows.</span><span class="sxs-lookup"><span data-stu-id="677d7-110">The second endpoint is defined at {baseaddress}/secure using a `wsHttpBinding` binding, which is secure by default, using WS-Security with Windows authentication.</span></span>  
   
 ```xml  
 <service   
@@ -46,7 +46,7 @@ ms.lasthandoff: 10/18/2017
 </service>  
 ```  
   
- <span data-ttu-id="ede1e-111">Обе конечные точки также настроены на клиенте.</span><span class="sxs-lookup"><span data-stu-id="ede1e-111">Both endpoints are also configured on the client.</span></span> <span data-ttu-id="ede1e-112">Этим конечным точкам присвоены имена, чтобы вызывающий код мог передать имя требуемой конечной точки в конструктор клиента.</span><span class="sxs-lookup"><span data-stu-id="ede1e-112">These endpoints are given names so that the caller can pass the desired endpoint name into the constructor of the client.</span></span>  
+ <span data-ttu-id="677d7-111">Обе конечные точки также настроены на клиенте.</span><span class="sxs-lookup"><span data-stu-id="677d7-111">Both endpoints are also configured on the client.</span></span> <span data-ttu-id="677d7-112">Этим конечным точкам присвоены имена, чтобы вызывающий код мог передать имя требуемой конечной точки в конструктор клиента.</span><span class="sxs-lookup"><span data-stu-id="677d7-112">These endpoints are given names so that the caller can pass the desired endpoint name into the constructor of the client.</span></span>  
   
 ```xml  
 <client>  
@@ -65,7 +65,7 @@ address="http://localhost/servicemodelsamples/service.svc/secure"
 </client>  
 ```  
   
- <span data-ttu-id="ede1e-113">Клиент использует обе конечные точки, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="ede1e-113">The client uses both endpoints as shown in the following code.</span></span>  
+ <span data-ttu-id="677d7-113">Клиент использует обе конечные точки, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="677d7-113">The client uses both endpoints as shown in the following code.</span></span>  
   
 ```  
 static void Main()  
@@ -94,7 +94,7 @@ static void Main()
 }  
 ```  
   
- <span data-ttu-id="ede1e-114">При запуске клиента отображаются взаимодействия с обеими конечными точками.</span><span class="sxs-lookup"><span data-stu-id="ede1e-114">When you run the client, interactions with both endpoints are displayed.</span></span>  
+ <span data-ttu-id="677d7-114">При запуске клиента отображаются взаимодействия с обеими конечными точками.</span><span class="sxs-lookup"><span data-stu-id="677d7-114">When you run the client, interactions with both endpoints are displayed.</span></span>  
   
 ```  
 Communicate with basic endpoint.  
@@ -111,21 +111,21 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="ede1e-115">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="ede1e-115">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="677d7-115">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="677d7-115">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="ede1e-116">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="ede1e-116">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="677d7-116">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="677d7-116">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="ede1e-117">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="ede1e-117">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="677d7-117">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="677d7-117">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="ede1e-118">Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="ede1e-118">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="677d7-118">Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="677d7-118">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="ede1e-119">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="ede1e-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="ede1e-120">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="ede1e-120">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="677d7-119">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="677d7-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="677d7-120">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="677d7-120">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="ede1e-121">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="ede1e-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="ede1e-122">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="ede1e-122">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="677d7-121">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="677d7-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="677d7-122">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="677d7-122">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpoints`  
   
-## <a name="see-also"></a><span data-ttu-id="ede1e-123">См. также</span><span class="sxs-lookup"><span data-stu-id="ede1e-123">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="677d7-123">См. также</span><span class="sxs-lookup"><span data-stu-id="677d7-123">See Also</span></span>

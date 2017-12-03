@@ -10,38 +10,38 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e6633491ec3b01a4ca3494639e9537c9f6441da5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ffe4a94328d2728ca936425a58d4d641922356a0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a><span data-ttu-id="5030b-102">Как реализовать обнаружимую службу, которая регистрируется в прокси-сервере обнаружения</span><span class="sxs-lookup"><span data-stu-id="5030b-102">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>
-<span data-ttu-id="5030b-103">Данный раздел является вторым из четырех разделов, в которых обсуждается реализация прокси-сервера обнаружения.</span><span class="sxs-lookup"><span data-stu-id="5030b-103">This topic is the second of four topics that discusses how to implement a discovery proxy.</span></span> <span data-ttu-id="5030b-104">В предыдущем разделе [как: реализация прокси-сервера обнаружения](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), реализации прокси-сервера обнаружения.</span><span class="sxs-lookup"><span data-stu-id="5030b-104">In the previous topic, [How to: Implement a Discovery Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), you implemented a discovery proxy.</span></span> <span data-ttu-id="5030b-105">В данном разделе создается служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], которая отправляет сообщения объявления (`Hello` и `Bye`) на прокси-сервер обнаружения, вызывающие ее регистрацию и отмену регистрации на прокси-сервере обнаружения.</span><span class="sxs-lookup"><span data-stu-id="5030b-105">In this topic, you create a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service that sends announcement messages (`Hello` and `Bye`) to the discovery proxy, causing it to register and unregister itself with the discovery proxy.</span></span>  
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a><span data-ttu-id="1db4e-102">Как реализовать обнаружимую службу, которая регистрируется в прокси-сервере обнаружения</span><span class="sxs-lookup"><span data-stu-id="1db4e-102">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>
+<span data-ttu-id="1db4e-103">Данный раздел является вторым из четырех разделов, в которых обсуждается реализация прокси-сервера обнаружения.</span><span class="sxs-lookup"><span data-stu-id="1db4e-103">This topic is the second of four topics that discusses how to implement a discovery proxy.</span></span> <span data-ttu-id="1db4e-104">В предыдущем разделе [как: реализация прокси-сервера обнаружения](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), реализации прокси-сервера обнаружения.</span><span class="sxs-lookup"><span data-stu-id="1db4e-104">In the previous topic, [How to: Implement a Discovery Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), you implemented a discovery proxy.</span></span> <span data-ttu-id="1db4e-105">В данном разделе создается служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], которая отправляет сообщения объявления (`Hello` и `Bye`) на прокси-сервер обнаружения, вызывающие ее регистрацию и отмену регистрации на прокси-сервере обнаружения.</span><span class="sxs-lookup"><span data-stu-id="1db4e-105">In this topic, you create a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service that sends announcement messages (`Hello` and `Bye`) to the discovery proxy, causing it to register and unregister itself with the discovery proxy.</span></span>  
   
-### <a name="to-define-the-service-contract"></a><span data-ttu-id="5030b-106">Определение контракта службы</span><span class="sxs-lookup"><span data-stu-id="5030b-106">To define the service contract</span></span>  
+### <a name="to-define-the-service-contract"></a><span data-ttu-id="1db4e-106">Определение контракта службы</span><span class="sxs-lookup"><span data-stu-id="1db4e-106">To define the service contract</span></span>  
   
-1.  <span data-ttu-id="5030b-107">Добавьте новый проект консольного приложения с именем `DiscoveryProxyExample` в решение `Service`.</span><span class="sxs-lookup"><span data-stu-id="5030b-107">Add a new console application project to the `DiscoveryProxyExample` solution called `Service`.</span></span>  
+1.  <span data-ttu-id="1db4e-107">Добавьте новый проект консольного приложения с именем `DiscoveryProxyExample` в решение `Service`.</span><span class="sxs-lookup"><span data-stu-id="1db4e-107">Add a new console application project to the `DiscoveryProxyExample` solution called `Service`.</span></span>  
   
-2.  <span data-ttu-id="5030b-108">Добавьте ссылки на следующие сборки:</span><span class="sxs-lookup"><span data-stu-id="5030b-108">Add references to the following assemblies:</span></span>  
+2.  <span data-ttu-id="1db4e-108">Добавьте ссылки на следующие сборки:</span><span class="sxs-lookup"><span data-stu-id="1db4e-108">Add references to the following assemblies:</span></span>  
   
-    1.  <span data-ttu-id="5030b-109">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="5030b-109">System.ServiceModel</span></span>  
+    1.  <span data-ttu-id="1db4e-109">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="1db4e-109">System.ServiceModel</span></span>  
   
-    2.  <span data-ttu-id="5030b-110">System.ServiceModel.Discovery</span><span class="sxs-lookup"><span data-stu-id="5030b-110">System.ServiceModel.Discovery</span></span>  
+    2.  <span data-ttu-id="1db4e-110">System.ServiceModel.Discovery</span><span class="sxs-lookup"><span data-stu-id="1db4e-110">System.ServiceModel.Discovery</span></span>  
   
-3.  <span data-ttu-id="5030b-111">Добавьте в проект новый класс с именем `CalculatorService`.</span><span class="sxs-lookup"><span data-stu-id="5030b-111">Add a new class to the project called `CalculatorService`.</span></span>  
+3.  <span data-ttu-id="1db4e-111">Добавьте в проект новый класс с именем `CalculatorService`.</span><span class="sxs-lookup"><span data-stu-id="1db4e-111">Add a new class to the project called `CalculatorService`.</span></span>  
   
-4.  <span data-ttu-id="5030b-112">Добавьте следующие инструкции using.</span><span class="sxs-lookup"><span data-stu-id="5030b-112">Add the following using statements.</span></span>  
+4.  <span data-ttu-id="1db4e-112">Добавьте следующие инструкции using.</span><span class="sxs-lookup"><span data-stu-id="1db4e-112">Add the following using statements.</span></span>  
   
     ```csharp  
     using System;  
     using System.ServiceModel;  
     ```  
   
-5.  <span data-ttu-id="5030b-113">В файле CalculatorService.cs определите контракт службы.</span><span class="sxs-lookup"><span data-stu-id="5030b-113">Within CalculatorService.cs, define the service contract.</span></span>  
+5.  <span data-ttu-id="1db4e-113">В файле CalculatorService.cs определите контракт службы.</span><span class="sxs-lookup"><span data-stu-id="1db4e-113">Within CalculatorService.cs, define the service contract.</span></span>  
   
     ```csharp  
     // Define a service contract.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/21/2017
         }  
     ```  
   
-6.  <span data-ttu-id="5030b-114">Также в файле CalculatorService.cs реализуйте контракт службы.</span><span class="sxs-lookup"><span data-stu-id="5030b-114">Also within CalculatorService.cs, implement the service contract.</span></span>  
+6.  <span data-ttu-id="1db4e-114">Также в файле CalculatorService.cs реализуйте контракт службы.</span><span class="sxs-lookup"><span data-stu-id="1db4e-114">Also within CalculatorService.cs, implement the service contract.</span></span>  
   
     ```csharp  
     // Service class which implements the service contract.      
@@ -99,11 +99,11 @@ ms.lasthandoff: 11/21/2017
         }  
     ```  
   
-### <a name="to-host-the-service"></a><span data-ttu-id="5030b-115">Размещение службы</span><span class="sxs-lookup"><span data-stu-id="5030b-115">To host the service</span></span>  
+### <a name="to-host-the-service"></a><span data-ttu-id="1db4e-115">Размещение службы</span><span class="sxs-lookup"><span data-stu-id="1db4e-115">To host the service</span></span>  
   
-1.  <span data-ttu-id="5030b-116">Откройте файл Program.cs, сформированный при создании проекта.</span><span class="sxs-lookup"><span data-stu-id="5030b-116">Open the Program.cs file that was generated when you created the project.</span></span>  
+1.  <span data-ttu-id="1db4e-116">Откройте файл Program.cs, сформированный при создании проекта.</span><span class="sxs-lookup"><span data-stu-id="1db4e-116">Open the Program.cs file that was generated when you created the project.</span></span>  
   
-2.  <span data-ttu-id="5030b-117">Добавьте следующие инструкции using.</span><span class="sxs-lookup"><span data-stu-id="5030b-117">Add the following using statements.</span></span>  
+2.  <span data-ttu-id="1db4e-117">Добавьте следующие инструкции using.</span><span class="sxs-lookup"><span data-stu-id="1db4e-117">Add the following using statements.</span></span>  
   
     ```csharp 
     using System;  
@@ -112,7 +112,7 @@ ms.lasthandoff: 11/21/2017
     using System.ServiceModel.Discovery;  
     ```  
   
-3.  <span data-ttu-id="5030b-118">В метод `Main()` добавьте следующий код.</span><span class="sxs-lookup"><span data-stu-id="5030b-118">Within the `Main()` method, add the following code:</span></span>  
+3.  <span data-ttu-id="1db4e-118">В метод `Main()` добавьте следующий код.</span><span class="sxs-lookup"><span data-stu-id="1db4e-118">Within the `Main()` method, add the following code:</span></span>  
   
     ```csharp  
     // Define the base address of the service  
@@ -164,10 +164,10 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
- <span data-ttu-id="5030b-119">Реализация обнаруживаемой службы завершена.</span><span class="sxs-lookup"><span data-stu-id="5030b-119">You have completed implementing a discoverable service.</span></span> <span data-ttu-id="5030b-120">Перейдите к [как: реализовать клиентское приложение, которое использует прокси-сервер обнаружения для поиска службы](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).</span><span class="sxs-lookup"><span data-stu-id="5030b-120">Continue on to [How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).</span></span>  
+ <span data-ttu-id="1db4e-119">Реализация обнаруживаемой службы завершена.</span><span class="sxs-lookup"><span data-stu-id="1db4e-119">You have completed implementing a discoverable service.</span></span> <span data-ttu-id="1db4e-120">Перейдите к [как: реализовать клиентское приложение, которое использует прокси-сервер обнаружения для поиска службы](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).</span><span class="sxs-lookup"><span data-stu-id="1db4e-120">Continue on to [How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5030b-121">Пример</span><span class="sxs-lookup"><span data-stu-id="5030b-121">Example</span></span>  
- <span data-ttu-id="5030b-122">Далее приведен полный код, используемый в этом подразделе.</span><span class="sxs-lookup"><span data-stu-id="5030b-122">This is the full listing of the code used in this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="1db4e-121">Пример</span><span class="sxs-lookup"><span data-stu-id="1db4e-121">Example</span></span>  
+ <span data-ttu-id="1db4e-122">Далее приведен полный код, используемый в этом подразделе.</span><span class="sxs-lookup"><span data-stu-id="1db4e-122">This is the full listing of the code used in this topic.</span></span>  
   
 ```csharp  
 // CalculatorService.cs  
@@ -294,7 +294,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
 
-## <a name="see-also"></a><span data-ttu-id="5030b-123">См. также</span><span class="sxs-lookup"><span data-stu-id="5030b-123">See Also</span></span>  
- [<span data-ttu-id="5030b-124">Обнаружение WCF</span><span class="sxs-lookup"><span data-stu-id="5030b-124">WCF Discovery</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
- [<span data-ttu-id="5030b-125">Как: реализация прокси-сервера обнаружения</span><span class="sxs-lookup"><span data-stu-id="5030b-125">How to: Implement a Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- [<span data-ttu-id="5030b-126">Как: реализовать клиентское приложение, которое использует прокси-сервер обнаружения для поиска службы</span><span class="sxs-lookup"><span data-stu-id="5030b-126">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+## <a name="see-also"></a><span data-ttu-id="1db4e-123">См. также</span><span class="sxs-lookup"><span data-stu-id="1db4e-123">See Also</span></span>  
+ [<span data-ttu-id="1db4e-124">Обнаружение WCF</span><span class="sxs-lookup"><span data-stu-id="1db4e-124">WCF Discovery</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
+ [<span data-ttu-id="1db4e-125">Как: реализация прокси-сервера обнаружения</span><span class="sxs-lookup"><span data-stu-id="1db4e-125">How to: Implement a Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [<span data-ttu-id="1db4e-126">Как: реализовать клиентское приложение, которое использует прокси-сервер обнаружения для поиска службы</span><span class="sxs-lookup"><span data-stu-id="1db4e-126">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
