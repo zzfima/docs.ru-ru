@@ -1,6 +1,6 @@
 ---
 title: "Установка платформы .NET Framework в Windows 10"
-description: "Дополнительные сведения об установке .NET Framework в Windows 10 или Windows Server 2016."
+description: "Сведения об установке платформы .NET Framework в Windows 10 или Windows Server 2016."
 author: rlander
 ms.author: mairaw
 keywords: ".NET Framework, установка"
@@ -8,75 +8,75 @@ ms.date: 11/17/2017
 ms.topic: article
 ms.custom: updateeachrelease
 ms.prod: .net-framework
-ms.openlocfilehash: d7f8dd4c6ee9f7eeda389a955f806a5765876ea7
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: ff4867c74b4477a0407126833f30941426d4a33a
+ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/01/2017
 ---
-# <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Установите .NET Framework в Windows 10 и Windows Server 2016
+# <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Установка платформы .NET Framework в Windows 10 и Windows Server 2016
 
-Для многих приложений работающих под управлением Windows требуется платформа .NET Framework. Инструкции в этой статье помогут вам установить версии .NET Framework, которые необходимы. [.NET Framework 4.7.1](https://www.microsoft.com/download/details.aspx?id=56115&desc=dotnet47) является последней доступной версии.
+Для многих приложений, работающих в ОС Windows, требуется платформа .NET Framework. В этой статье приводятся инструкции по установке необходимых версий .NET Framework. [.NET Framework 4.7.1](https://www.microsoft.com/download/details.aspx?id=56115&desc=dotnet47) является последней доступной версией.
 
-Вы может попали на эту страницу после попытки выполнения приложения и отображается диалоговое окно на компьютере аналогично приведенному ниже:
+Вы могли попасть на эту страницу после попытки запуска приложения и отображения диалогового окна, аналогичного приведенному ниже:
 
-![Не удалось запустить это приложение](./media/this-application-could-not-be-started.png)
+![Не удалось запустить это приложение.](./media/this-application-could-not-be-started.png)
 
-## <a name="net-framework-471"></a>.NET framework 4.7.1
+## <a name="net-framework-471"></a>.NET Framework 4.7.1
 
-Платформа .NET Framework 4.7.1 входит в состав:
+Платформа .NET Framework 4.7.1 входит в состав:
 
-* [Создатели Осень обновления (версия 1709) для Windows 10](https://www.microsoft.com/software-download/windows10)
+* [Windows 10 Fall Creators Update (версия 1709)](https://www.microsoft.com/software-download/windows10)
 * [Windows Server 2016 (версия 1709)](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709)
 
 > [!div class="button"]
-[Загрузить .NET Framework 4.7.1](https://www.microsoft.com/net/download/thank-you/net471?utm_source=ms-docs&utm_medium=referral)
+[Скачать .NET Framework 4.7.1](https://www.microsoft.com/net/download/thank-you/net471?utm_source=ms-docs&utm_medium=referral)
 
-[.NET Framework 4.7.1](https://www.microsoft.com/download/details.aspx?id=56115&desc=dotnet47) может использоваться для запуска приложений, разработанных для .NET Framework 4.0 через 4.7.1.
+[.NET Framework 4.7.1](https://www.microsoft.com/download/details.aspx?id=56115&desc=dotnet47) можно использовать для запуска приложений, созданных для .NET Framework версии от 4.0 до 4.7.1.
 
-Можно установить [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) на:
+Вы можете установить [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) в:
 
-* Обновления создатели Windows 10 (версия 1703)
-* Обновления окончания действия (версии 1607) для Windows 10
+* Обновление Windows 10 Creators Update (версия 1703)
+* Юбилейное обновление Windows 10 Anniversary Update (версия 1607)
 * Windows Server 2016
 
-Платформа .NET Framework 4.7.1 не поддерживается:
+Платформа .NET Framework 4.7.1 не поддерживается в следующих выпусках:
 
 * Windows 10 1507
-* Windows 10 версии 1511
+* Windows 10 1511
 
-Если вы используете Windows 10 1507 или 1511 и требуется установить платформу .NET Framework 4.7.1, необходимо сначала выполнить обновление до более поздней версии Windows 10.
+Если вы используете Windows 10 1507 или 1511 и хотите установить платформу .NET Framework 4.7.1, сначала необходимо выполнить обновление до более поздней версии Windows 10.
 
-## <a name="net-framework-461"></a>.NET Framework 4.6.1
+## <a name="net-framework-462"></a>.NET Framework 4.6.2
 
-[.NET Framework 4.6.1](https://www.microsoft.com/download/details.aspx?id=49981) является последней поддерживаемой версии платформы .NET Framework в Windows 10 1507 и 1511.
+[.NET Framework 4.6.2](https://www.microsoft.com/en-us/download/details.aspx?id=53345) является последней поддерживаемой версией платформы .NET Framework в Windows 10 1507 и 1511.
 
-Платформа .NET Framework 4.6.1 поддерживает приложений, созданных для .NET Framework 4.0 через 4.6.1.
+Платформа .NET Framework 4.6.2 поддерживает приложения, созданные для платформы .NET Framework версий с 4.0 по 4.6.2.
 
 ## <a name="net-framework-35"></a>.NET Framework 3,5
 
 Следуйте инструкциям по установке [.NET Framework 3.5 в Windows 10](dotnet-35-windows-10.md).
 
-.NET Framework 3.5 поддерживает приложений, созданных для .NET Framework 1.0 до 3.5.
+Платформа .NET Framework 3.5 поддерживает приложения, созданные для платформы .NET Framework версий с 1.0 по 3.5.
 
 ## <a name="additional-information"></a>Дополнительные сведения
 
-Версии платформы .NET framework 4.x — это обновления на месте для более ранних версий. Это означает следующее:
+В версиях платформы .NET Framework 4.x существуют локальные обновления на более ранние версии. Это означает следующее.
 
-- Можно установить только одной версии платформы .NET Framework 4.x, установлены на компьютере.
+- На компьютере может быть установлена только одна версия платформы .NET Framework 4.x.
 
-- Не удается установить более раннюю версию платформы .NET Framework на компьютере, если уже установлена более новая версия.
+- Нельзя установить более раннюю версию .NET Framework, если уже установлена более поздняя версия.
 
-- 4.x версии платформы .NET Framework могут использоваться для запуска приложений, разработанных для .NET Framework 4.0 до этой версии. Например .NET Framework 4.7 можно использовать для запуска приложений, разработанных для .NET Framework 4.0 через 4.7. Последнюю версию (.NET Framework 4.7.1) можно использовать для запуска приложения, построенные будет всех версий платформы .NET Framework, начиная с версии 4.0.
+- .NET Framework версий 4.x можно использовать для запуска приложений, созданных для .NET Framework версий с 4.0 до этой версии. Например, .NET Framework 4.7 можно использовать для запуска приложений, созданных для .NET Framework версии с 4.0 до 4.7. Последнюю версию (.NET Framework 4.7.1) можно использовать для запуска приложений, созданных для всех версий платформы .NET Framework, начиная с версии 4.0.
 
-Список всех версий платформы .NET Framework, доступного для загрузки см. в разделе [загрузок .NET](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) страницы.
+Список всех версий платформы .NET Framework, доступных для скачивания, см. на странице [скачиваемых файлов .NET](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral).
 
 ## <a name="help"></a>Справка
 
-Если не удается получить правильную версию платформы .NET Framework установлена, вы можете [обратиться в корпорацию Майкрософт для получения справки](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help).
+Вы можете [обратиться за помощью в корпорацию Майкрософт](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help), если не можете определить правильную версию установленной платформы .NET Framework.
 
 ## <a name="see-also"></a>См. также
 
-[Загрузка .NET](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)   
+[Скачиваемые файлы .NET](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)   
 [Устранение неполадок заблокированных установок и удалений .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)   
-[Установите .NET Framework для разработчиков](guide-for-developers.md)
+[Установка .NET Framework для разработчиков](guide-for-developers.md)

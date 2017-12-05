@@ -1,7 +1,7 @@
 ---
-title: "Как: определить, какие обновления для системы безопасности .NET Framework и исправления установлены"
-description: "Узнайте, как определить, какие обновления для системы безопасности .NET Framework и исправлений, установленных на компьютере."
-ms.date: 11/21/2017
+title: "Практическое руководство. Определение установленных обновлений и исправлений безопасности платформы .NET Framework"
+description: "Сведения об определении установленных на компьютере обновлений и исправлений безопасности платформы .NET Framework."
+ms.date: 11/27/2017
 ms.prod: .net-framework
 ms.technology: dotnet-clr
 ms.topic: article
@@ -15,24 +15,24 @@ ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c35705470a8e1b553eca2ca0c68d3b8b9b3f6fa6
-ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
+ms.openlocfilehash: 9ff10928b87834f9b8e74e269082919f49497023
+ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 11/30/2017
 ---
-# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Как: определить, какие обновления для системы безопасности .NET Framework и исправления установлены
+# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Практическое руководство. Определение установленных обновлений и исправлений безопасности платформы .NET Framework
 
-В этой статье показано, как узнать обновлений безопасности .NET Framework и исправления установлены на компьютере.
+В этой статье содержатся сведения об определении установленных на компьютере обновлений и исправлений безопасности платформы .NET Framework.
 
 > [!NOTE]
-> Все методы, представленные в этой статье требуется учетная запись с правами администратора.
+> Для использования всех методов, представленных в этой статье, требуется учетная запись с правами администратора.
 
 ## <a name="to-find-installed-updates-using-the-registry"></a>Поиск установленных обновлений с помощью реестра
 
-Установленных обновлений и исправлений для каждой версии платформы .NET Framework, установленной на компьютере, перечислены в реестре Windows. Можно использовать редактор реестра (*regedit.exe*) программы для просмотра этих сведений.
+Установленные обновления и исправления безопасности для каждой версии .NET Framework на компьютере перечислены в реестре Windows. Для просмотра этих сведений можно использовать редактор реестра (*regedit.exe*).
 
-1. Откройте программу **regedit.exe**. В Windows 8 и более поздних версиях, щелкните правой кнопкой мыши **запустить** ![логотип Windows](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo"), а затем выберите **запуска**. В **откройте** введите **regedit** и выберите **ОК**.
+1. Откройте программу **regedit.exe**. В Windows 8 и более поздних версиях щелкните правой кнопкой мыши **Пуск** ![Эмблема Windows](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo"), а затем выберите **Выполнить**. В поле **Открыть** введите **regedit**, а затем нажмите кнопку **ОК**.
 
 2. В редакторе реестра откройте следующий подраздел:
 
@@ -40,16 +40,16 @@ ms.lasthandoff: 11/27/2017
 
      Установленные обновления перечислены в подразделах, соответствующих версии .NET Framework, к которой они относятся. Каждому обновлению присваивается номер базы знаний Microsoft (KB).
 
-В редакторе реестра версии .NET Framework и установленные обновления для каждой версии хранятся в разных подразделах. Сведения об обнаружении номеров установленных версий см. в разделе [как: определить, какие версии .NET Framework установлены](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).
+В редакторе реестра версии .NET Framework и установленные обновления для каждой версии хранятся в разных подразделах. Сведения об обнаружении номеров установленных версий см. в статье [Практическое руководство. Определение установленных версий .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).
 
-## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>Чтобы найти установленных обновлений с помощью запроса в реестр
+## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>Поиск установленных обновлений путем запроса к реестру в коде
 
-В следующем примере определяется программным образом обновления для системы безопасности .NET Framework и исправлений, установленных на компьютере:
+В следующем примере кода программным образом определяются обновления и исправления безопасности .NET Framework, установленные на компьютере:
 
 [!code-csharp[ListUpdates](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs)]
 [!code-vb[ListUpdates](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb)]
 
-В примере результат, аналогичный приведенному ниже:
+Выходные данные этого примера выглядят примерно следующим образом:
 
 ```console
 Microsoft .NET Framework 4 Client Profile
@@ -70,48 +70,47 @@ Microsoft .NET Framework 4 Extended
   KB2600217
 ```
 
-## <a name="to-find-installed-updates-by-querying-the-registry-in-powershell"></a>Чтобы найти установленных обновлений с помощью запроса в реестр с помощью PowerShell
+## <a name="to-find-installed-updates-by-querying-the-registry-in-powershell"></a>Поиск установленных обновлений путем запроса к реестру в PowerShell
 
-В следующем примере показано определение обновления для системы безопасности .NET Framework и исправлений, установленных на компьютере, с помощью PowerShell:
+В следующем примере кода показано определение установленных на компьютере обновлений и исправлений безопасности .NET Framework с помощью PowerShell:
 
 ```powershell
- Get-ChildItem "HKLM:SOFTWARE\Wow6432Node\Microsoft\Updates\*" -Recurse | Where-Object {$_.name -like
+$DotNetVersions = Get-ChildItem HKLM:\SOFTWARE\WOW6432Node\Microsoft\Updates | Where-Object {$_.name -like
  "*.NET Framework*"}
+
+ForEach($Version in $DotNetVersions){
+    
+   $Updates = Get-ChildItem $Version.PSPath
+    $Version.PSChildName
+    ForEach ($Update in $Updates){
+       $Update.PSChildName
+       }
+}
 ```
 
-В примере результат, аналогичный приведенному ниже:
+Выходные данные этого примера выглядят примерно следующим образом:
 
 ```console
-    Hive: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates\Microsoft .NET Framework 4 Client Profile
-
-
-Name                           Property
-----                           --------
-KB2468871                      ThisVersionInstalled : Y
-KB2468871v2                    ThisVersionInstalled : Y
-KB2478063                      ThisVersionInstalled : Y
-KB2533523                      ThisVersionInstalled : Y
-KB2544514                      ThisVersionInstalled : Y
-KB2600211                      ThisVersionInstalled : Y
-KB2600217                      ThisVersionInstalled : Y
-
-
-    Hive: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates\Microsoft .NET Framework 4 Extended
-
-
-Name                           Property
-----                           --------
-KB2468871                      ThisVersionInstalled : Y
-KB2468871v2                    ThisVersionInstalled : Y
-KB2478063                      ThisVersionInstalled : Y
-KB2533523                      ThisVersionInstalled : Y
-KB2544514                      ThisVersionInstalled : Y
-KB2600211                      ThisVersionInstalled : Y
-KB2600217                      ThisVersionInstalled : Y
+Microsoft .NET Framework 4 Client Profile
+KB2468871
+KB2468871v2
+KB2478063
+KB2533523
+KB2544514
+KB2600211
+KB2600217
+Microsoft .NET Framework 4 Extended
+KB2468871
+KB2468871v2
+KB2478063
+KB2533523
+KB2544514
+KB2600211
+KB2600217
 ```
 
 ## <a name="see-also"></a>См. также
 
-[Как: Определение установленных версий .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)  
-[Установите .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md)  
+[Практическое руководство.Определение установленных версий платформы .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)  
+[Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md)  
 [Версии и зависимости](../../../docs/framework/migration-guide/versions-and-dependencies.md)
