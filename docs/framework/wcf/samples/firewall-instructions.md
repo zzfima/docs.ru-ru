@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
 caps.latest.revision: "32"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0aac3a161b0482bad1a32f5223d2031402a632cc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 38d1f0f6bf9245048f21bbe1cb0aa6a0b8d768dd
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="firewall-instructions"></a>Инструкции брандмауэра
 Необходимо включить несколько портов или программ в брандмауэре, чтобы примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] могли функционировать. Многие из образцов сообщаются с использованием портов в диапазоне 8000-8003 и порта 9000. По умолчанию брандмауэр включен и запрещает доступ к этим портам. Чтобы включить брандмауэр для примеров, завершите одну из следующих операций, в зависимости от требований и среды безопасности.  
@@ -80,7 +80,7 @@ ms.lasthandoff: 10/18/2017
   
     9. Назовите это правило `WCF-WF 4.0 Samples`и нажмите кнопку **Готово**.  
   
-    10. Нажмите кнопку **правила для исходящих подключений** и повторите шаги от c до h..  
+    10. Нажмите кнопку **правила для исходящих подключений** и повторите шаги от c до h.  
   
 3.  В [!INCLUDE[wv](../../../../includes/wv-md.md)] или [!INCLUDE[lserver](../../../../includes/lserver-md.md)] выполните следующие шаги.  
   
