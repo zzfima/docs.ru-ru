@@ -1,30 +1,23 @@
 ---
 title: "Начало работы с .NET Framework"
-ms.custom: 
-ms.date: 03/30/2017
+ms.custom: updateeachrelease
+ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology: dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 66e581e04aa0c3d33fb1ef9a7f4163d131f625bf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
-ms.openlocfilehash: 327aad36a560a772e9ddb4d8d721c2545f800151
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/05/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="get-started-with-the-net-framework"></a>Начало работы с .NET Framework
 
 Платформа .NET Framework — это среда выполнения, которая управляет приложениями, предназначенными для .NET Framework. Она состоит из среды CLR, которая предоставляет инструменты управления памятью и другие службы системы, и обширной библиотеки классов, позволяющей программистам использовать устойчивый, надежный код во всех основных областях разработки приложений.
@@ -46,7 +39,7 @@ ms.lasthandoff: 08/05/2017
 
 - Совместимость версий. Обычно приложения, разработанные на основе конкретной версии платформы .NET Framework, могут выполняться без доработок и на более поздних версиях платформы.
 
-- Параллельное выполнение. Платформа .NET Framework помогает разрешать конфликты версий, поскольку на компьютере могут быть установлены несколько версий среды CLR. Это означает, что несколько версий приложений могут сосуществовать и что приложение может выполняться на версии платформы .NET Framework, для которой оно было создано. Параллельное выполнение применяется к группам версий .NET Framework 1.0/1.1, 2.0/3.0/3.5 и 4/4.5.x/4.6.x/4.7.
+- Параллельное выполнение. Платформа .NET Framework помогает разрешать конфликты версий, поскольку на компьютере могут быть установлены несколько версий среды CLR. Это означает, что несколько версий приложений могут сосуществовать и что приложение может выполняться на версии платформы .NET Framework, для которой оно было создано. Параллельное выполнение применяется к группам версий .NET Framework 1.0/1.1, 2.0/3.0/3.5 и 4/4.5.x/4.6.x/4.7.x.
 
 - Настройка для различных версий. Используя [.NET Standard](~/docs/standard/net-standard.md), разработчики создают сборки, которые работают на нескольких платформах .NET Framework, например Windows 7, Windows 8, Windows 8.1, Windows 10, Windows Phone и Xbox 360.
 
@@ -61,7 +54,7 @@ ms.lasthandoff: 08/05/2017
 
 - Если приложение зависит от конкретной версии платформы .NET Framework, то его работа может быть нарушена в случае удаления этой версии.
 
-- В некоторых версиях платформы .NET Framework существуют локальные обновления на более ранние версии. Например, [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] представляет собой обновление на месте до версии 2.0, а .NET Framework 4.7 — обновление на месте до версий 4, 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1 и 4.6.2. Дополнительные сведения см. в разделе [Платформа.NET Framework: версии и зависимости](../../../docs/framework/migration-guide/versions-and-dependencies.md).
+- В некоторых версиях платформы .NET Framework существуют локальные обновления на более ранние версии. Например, [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] представляет собой обновление на месте до версии 2.0, а .NET Framework 4.7.1 — обновление на месте до версий 4, 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 и 4.7. Дополнительные сведения см. в разделе [Платформа.NET Framework: версии и зависимости](../../../docs/framework/migration-guide/versions-and-dependencies.md).
 
 Если вы решите удалить платформу .NET Framework, всегда используйте **Программы и компоненты** из панели управления, чтобы ее удалить. Никогда не удаляйте версию платформы .NET Framework вручную.
 
@@ -74,7 +67,7 @@ ms.lasthandoff: 08/05/2017
 
 Перед разработкой приложений или компонентов платформы .NET Framework сделайте следующее:
 
-1. Если платформа не предустановлена в операционной системе, установите версию платформы .NET Framework, на которой будет работать ваше приложение. Последней рабочей версией является .NET Framework 4.7, которая предустановлена в Windows 10 Creators Update и доступна для скачивания в более ранних версиях операционной системы Windows. Требования к системе для .NET Framework см. в разделе [Требования к системе](../../../docs/framework/get-started/system-requirements.md). Сведения об установке других версий .NET Framework см. в [руководстве по установке](../../../docs/framework/install/guide-for-developers.md). Дополнительные пакеты .NET Framework выпускаются внештатно. Это значит, что они выпускаются по очереди, нерегулярно. Дополнительные сведения об этих пакетах см. в разделе [.NET Framework и отдельные выпуски](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
+1. Если платформа не предустановлена в операционной системе, установите версию платформы .NET Framework, на которой будет работать ваше приложение. Последней рабочей версией является .NET Framework 4.7.1, которая предустановлена в Windows 10 Fall Creators Update и доступна для скачивания в более ранних версиях операционной системы Windows. Требования к системе для .NET Framework см. в разделе [Требования к системе](../../../docs/framework/get-started/system-requirements.md). Сведения об установке других версий .NET Framework см. в [руководстве по установке](../../../docs/framework/install/guide-for-developers.md). Дополнительные пакеты .NET Framework выпускаются внештатно. Это значит, что они выпускаются по очереди, нерегулярно. Дополнительные сведения об этих пакетах см. в разделе [.NET Framework и отдельные выпуски](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
 
 2. Выберите язык или языки, поддерживаемые платформой .NET Framework, которые вы хотите использовать для разработки приложений. Доступен ряд языков, в том числе Visual Basic, C#, Visual F# и C++/CLI от Майкрософт. (Язык программирования, позволяющий разрабатывать приложения для .NET Framework, соответствует [спецификации Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkId=199862).)
 
@@ -99,4 +92,3 @@ ms.lasthandoff: 08/05/2017
 [Новые возможности](../../../docs/framework/whats-new/index.md)   
 [Браузер API .NET](/dotnet/api/)   
 [Руководство по разработке](../../../docs/framework/development-guide.md)
-

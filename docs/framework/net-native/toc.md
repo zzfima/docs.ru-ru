@@ -4,7 +4,7 @@
 ### [Пример. Устранение неполадок динамического программирования](example-troubleshooting-dynamic-programming.md)
 ### [Пример. Обработка исключений при привязке данных](example-handling-exceptions-when-binding-data.md)
 ### [Исключения среды выполнения в собственных приложениях .NET](runtime-exceptions-in-net-native-apps.md)
-## [Измерение улучшения запуска с машинным кодом .NET](measuring-startup-improvement-with-net-native.md)
+## [Измерение улучшения запуска с помощью .NET Native](measuring-startup-improvement-with-net-native.md)
 ## [Отражение и .NET Native](reflection-and-net-native.md)
 ### [API-интерфейсы, основанные на отражении](apis-that-rely-on-reflection.md)
 ### [Справочник по API отражения](net-native-reflection-api-reference.md)

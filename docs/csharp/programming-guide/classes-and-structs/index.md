@@ -2,13 +2,10 @@
 title: "Классы и структуры (Руководство по программированию в C#)"
 description: "Описание использования классов и структур в C#."
 keywords: "классы (C#), структуры (C#), структуры (struct) (C#), ссылочные типы (C#), типы значений (C#)"
-ms.date: 2016-01-17
+ms.date: 01/17/2016
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - structs [C#], about structs
 - classes [C#], overview
@@ -17,29 +14,14 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 8c4cbbdd0384c0c0e97d6a7c655e798d0562d9a8
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2076de96c58fb89813495cb59adacb8a0082d93c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Классы и структуры (Руководство по программированию в C#)
 Классы и структуры являются двумя основными конструкциями системы общих типов CTS, используемой в платформе .NET Framework. Оба они являются структурами данных, которые инкапсулируют набор данных и поведений в одной логической сущности. Данные и поведение являются *членами* класса или структуры. К ним относятся методы, свойства, события и другие элементы, которые описаны далее в этой статье.  
@@ -57,7 +39,7 @@ ms.lasthandoff: 09/25/2017
 ## <a name="example"></a>Пример  
  В следующем примере в пространстве имен `ProgrammingGuide` определен класс `CustomClass` с тремя членами: конструктор экземпляра, свойство с именем `Number` и метод с именем `Multiply`. Метод `Main` в классе `Program` создает экземпляр (объект) класса `CustomClass`. Обращение к методам и свойствам объекта осуществляется с использованием точечной нотации.
   
- [!code-cs[csProgGuideObjects#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/class1.cs#1)]  
+ [!code-csharp[csProgGuideObjects#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/class1.cs#1)]  
   
 ## <a name="encapsulation"></a>Инкапсуляция  
  Концепцию *инкапсуляции* признают одним из основополагающих принципов объектно-ориентированного программирования. Принцип инкапсуляции заключается в том, что в классе или структуре можно указать уровень доступности для обращения к каждому из его членов из кода, расположенного вне этого класса или структуры. Вы можете скрыть методы и переменные, которые не предназначены для использования вне класса или сборки. Это позволяет снизить риск ошибок в коде и вредоносных действий.  
@@ -88,7 +70,7 @@ ms.lasthandoff: 09/25/2017
 -   [Вложенные типы](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
   
 ### <a name="accessibility"></a>Специальные возможности  
- Некоторые методы и свойства специально предназначены для того, чтобы их вызов или доступ к ним осуществлялся из *клиентского кода*, то есть из кода за пределами этого класса или структуры. Другие методы и свойства могут использоваться только в самом классе или структуре. Важно ограничить доступность кода так, чтобы только нужные элементы клиентского кода получали к нему доступ. Уровень доступности для типов и их членов вы можете задать с помощью модификаторов доступа [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), `protected internal` и [private](../../../csharp/language-reference/keywords/private.md). По умолчанию используется режим доступа `private`. Дополнительные сведения см. в статье [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Некоторые методы и свойства специально предназначены для того, чтобы их вызов или доступ к ним осуществлялся из *клиентского кода*, то есть из кода за пределами этого класса или структуры. Другие методы и свойства могут использоваться только в самом классе или структуре. Важно ограничить доступность кода так, чтобы только нужные элементы клиентского кода получали к нему доступ. Уровень доступности для типов и их членов вы можете задать с помощью модификаторов доступа [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md), [private](../../../csharp/language-reference/keywords/private.md) и [private protected](../../../csharp/language-reference/keywords/private-protected.md). По умолчанию используется режим доступа `private`. Дополнительные сведения см. в статье [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
 ### <a name="inheritance"></a>Наследование  
  Классы (но не структуры) поддерживают наследование. Класс, производный от другого класса (*базового класса*), автоматически включает все открытые, защищенные и внутренние члены базового класса за исключением конструкторов и методов завершения. Дополнительные сведения см. в статьях о [наследовании](../../../csharp/programming-guide/classes-and-structs/inheritance.md) и [полиморфизме](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
@@ -127,4 +109,3 @@ ms.lasthandoff: 09/25/2017
   
 ## <a name="see-also"></a>См. также  
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-

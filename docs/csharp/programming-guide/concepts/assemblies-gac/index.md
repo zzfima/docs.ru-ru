@@ -1,30 +1,21 @@
 ---
 title: "Сборки и глобальный кэш сборок (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 3743c07f1de1d39f07d559aa161e4547422a6e52
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2b98bd872bfdcbebb34fff3d878b92f39e27bbe0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>Сборки и глобальный кэш сборок (C#)
 Сборки представляют собой базовый элемент развертывания, управления версиями, повторного использования, назначения областей активации и прав доступа для приложения на основе платформы .NET. Сборки создаются в форме исполняемого файла (.exe) или файла динамической библиотеки (.dll) и являются составными частями .NET Framework. Они предоставляют сведения для среды CLR, которые нужны для распознавания реализаций типов. Сборку можно представить как коллекцию типов и ресурсов, которые предназначены для совместной работы и формируют логическую единицу функциональности.  
@@ -68,13 +59,12 @@ ms.lasthandoff: 07/28/2017
 >  Чтобы создать сборку в Visual Studio, выберите пункт **Сборка** из меню **Сборка**.  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)   
- [Сборки в среде CLR](https://msdn.microsoft.com/library/k3677y81)   
- [Дружественные сборки (C#)](friend-assemblies.md)   
- [Практическое руководство. Совместное использование сборки с другими приложениями (C#)](how-to-share-an-assembly-with-other-applications.md)   
- [Практическое руководство. Загрузка и выгрузка сборок (C#)](how-to-load-and-unload-assemblies.md)   
- [Практическое руководство. Как определить, является ли файл сборкой (C#)](how-to-determine-if-a-file-is-an-assembly.md)   
- [Практическое руководство. Создание и использование сборок с помощью командной строки (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)   
- [Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)   
+ [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)  
+ [Сборки в среде CLR](https://msdn.microsoft.com/library/k3677y81)  
+ [Дружественные сборки (C#)](friend-assemblies.md)  
+ [Практическое руководство. Совместное использование сборки с другими приложениями (C#)](how-to-share-an-assembly-with-other-applications.md)  
+ [Практическое руководство. Загрузка и выгрузка сборок (C#)](how-to-load-and-unload-assemblies.md)  
+ [Практическое руководство. Как определить, является ли файл сборкой (C#)](how-to-determine-if-a-file-is-an-assembly.md)  
+ [Практическое руководство. Создание и использование сборок с помощью командной строки (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)  
+ [Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
  [Пошаговое руководство. Внедрение данных о типах из сборок Microsoft Office в Visual Studio (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
-

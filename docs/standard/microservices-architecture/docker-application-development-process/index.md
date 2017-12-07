@@ -4,16 +4,15 @@ description: "Архитектура микрослужб .NET для упако
 keywords: "Docker, микрослужбы, ASP.NET, контейнер"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 10/18/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.openlocfilehash: 97dfa3261c8ddc7a869b0991673b7a8d298972dd
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: f4c241f463ff1270037c7d66ba39409ca5d9e728
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="development-process-for-docker-based-applications"></a>Процесс разработки для приложений на основе Docker
 
@@ -25,16 +24,18 @@ ms.lasthandoff: 09/05/2017
 
 Предпочитаете ли вы использовать полнофункциональную среду IDE или упрощенный редактор, корпорация Майкрософт предлагает средства, с помощью которых можно разрабатывать приложения Docker.
 
-**Visual Studio со средствами для Docker**. Если вы используете Visual Studio 2015, то можете установить надстройку [Средства Visual Studio для Docker](https://marketplace.visualstudio.com/items?itemName=MicrosoftCloudExplorer.VisualStudioToolsforDocker-Preview). Если вы используете среду Visual Studio 2017, средства для Docker уже встроены в нее. В любом случае средства для Docker позволяют разрабатывать, запускать и проверять приложения непосредственно в целевой среде Docker. Нажмите клавишу F5 для запуска и отладки приложения (на основе одного контейнера или нескольких) непосредственно в узле Docker или нажмите клавиши CTRL+F5 для редактирования и обновления приложения без повторной сборки контейнера. Это самый простой и эффективный способ разработки приложений, предназначенных для контейнеров Docker в Linux или Windows.
+**Visual Studio (для Windows)**. Для разработки приложений на основе Docker используйте Visual Studio 2017 или более поздние версии, в которые уже встроены средства для Docker. Средства для Docker позволяют разрабатывать, запускать и проверять приложения непосредственно в целевой среде Docker. Нажмите клавишу F5 для запуска и отладки приложения (на основе одного контейнера или нескольких) непосредственно в узле Docker или нажмите клавиши CTRL+F5 для редактирования и обновления приложения без повторной сборки контейнера. Это самый эффективный вариант разработки приложений на основе Docker.
+
+**Visual Studio для Mac**. Это интегрированная среда разработки, которая является эволюцией Xamarin Studio, выполняется в macOS и поддерживает разработку приложений на основе Docker. Она должна быть предпочтительным вариантом для разработчиков, работающих на компьютерах Mac и стремящихся использовать мощную интегрированную среду разработки.
 
 **Visual Studio Code и CLI Docker**. Если вам нужен упрощенный кроссплатформенный редактор, поддерживающий любой язык программирования, то вы можете использовать Microsoft Visual Studio Code (VS Code) и CLI Docker. Таким образом реализуется кроссплатформенный подход к разработке приложений для Mac OS, Linux и Windows.
 
-Эти решения обеспечивают простой, но в то же время эффективный рабочий процесс разработки. Установив средства [Docker Community Edition (CE)](https://www.docker.com/community-edition), вы можете использовать единый интерфейс CLI Docker, чтобы создавать приложения как для Windows, так и для Linux. Кроме того, Visual Studio Code поддерживает расширения для Docker, такие как IntelliSense для Dockerfile, и ярлыки для выполнения команд Docker из редактора.
+Установив средства [Docker Community Edition (CE)](https://www.docker.com/community-edition), вы можете использовать единый интерфейс CLI Docker, чтобы создавать приложения как для Windows, так и для Linux. Кроме того, Visual Studio Code поддерживает расширения для Docker, такие как IntelliSense для Dockerfile, и ярлыки для выполнения команд Docker из редактора.
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
 -   **Средства Visual Studio для Docker**
-    [*https://visualstudiogallery.msdn.microsoft.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4*](https://visualstudiogallery.msdn.microsoft.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4)
+    [*https://docs.microsoft.com/aspnet/core/publishing/visual-studio-tools-for-docker*](https://docs.microsoft.com/aspnet/core/publishing/visual-studio-tools-for-docker)
 
 -   **Visual Studio Code**. Официальный сайт
     [*https://code.visualstudio.com/download*](https://code.visualstudio.com/download)
@@ -49,4 +50,3 @@ ms.lasthandoff: 09/05/2017
 
 >[!div class="step-by-step"]
 [Назад] (../architect-microservice-container-applications/using-azure-service-fabric.md) [Далее] (docker-app-development-workflow.md)
-

@@ -1,40 +1,21 @@
 ---
 title: "Начало работы с Visual Basic"
-ms.date: 2017-08-10
+ms.date: 08/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 1593475bf5b4a34f854bc3e89be84d7720cd497b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 4e3c1a1e6728d4a5e256b81b0f8a8b29851dc625
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="get-started-with-visual-basic"></a>Начало работы с Visual Basic
 Этот раздел документации помогает начать разработку приложений на Visual Basic.  
@@ -66,7 +47,7 @@ ms.lasthandoff: 09/25/2017
  [Получить Visual Basic](https://www.visualstudio.com/downloads/)  
  Предоставляет ссылки для скачивания версий Visual Studio, включая поддержку Visual Basic и бесплатные версии.  
 
- [Основы программирования на Visual Basic для начинающих](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)   
+ [Основы программирования на Visual Basic для начинающих](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)  
  Курс академии Microsoft Virtual Academy по основам программирования на Visual Basic.
 
  [Объектно-ориентированное программирование](../programming-guide/concepts/object-oriented-programming.md)  
@@ -91,4 +72,3 @@ ms.lasthandoff: 09/25/2017
   
  [Office and SharePoint Development](https://msdn.microsoft.com/library/d2tx7z6d) (Разработка приложений Office и SharePoint)  
  Сведения об использовании приложений Microsoft Office и [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] в рамках бизнес-приложений.
-

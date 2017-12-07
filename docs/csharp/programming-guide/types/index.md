@@ -1,12 +1,9 @@
 ---
 title: "Типы (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - value types [C#]
 - reference types [C#]
@@ -17,30 +14,14 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 1352d817241ad4dd42747dcd3a6bfbaf71f9cf25
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: d5dfee413f459c5b38b30ac9116d73e828f3aa17
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="types-c-programming-guide"></a>Типы (Руководство по программированию на C#)
 ## <a name="types-variables-and-values"></a>Типы, переменные и значения  
@@ -62,7 +43,7 @@ ms.lasthandoff: 09/25/2017
   
  Компилятор использует сведения о типах, чтобы проверить, все ли операции, выполняемые в коде, являются *типобезопасными*. Например, при объявлении переменной типа [int](../../../csharp/language-reference/keywords/int.md) компилятор позволяет в дополнение использовать переменную и операции вычитания. При попытке выполнить эти же операции для переменной типа [bool](../../../csharp/language-reference/keywords/bool.md) компилятор выдаст ошибку, как показано в следующем примере:  
   
- [!code-cs[csProgGuideTypes#42](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideTypes#42](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_1.cs)]  
   
 > [!NOTE]
 >  Тем, кто ранее использовал C и C++, нужно обратить внимание на то, что в C# тип [bool](../../../csharp/language-reference/keywords/bool.md) нельзя преобразовать в [int](../../../csharp/language-reference/keywords/int.md).  
@@ -72,11 +53,11 @@ ms.lasthandoff: 09/25/2017
 ### <a name="specifying-types-in-variable-declarations"></a>Задание типов при объявлении переменных  
  Когда вы объявляете в программе переменную или константу, для нее нужно задать тип либо использовать ключевое слово [var](../../../csharp/language-reference/keywords/var.md), чтобы компилятор определил тип самостоятельно. В следующем примере показаны некоторые объявления переменных, использующие встроенные числовые типы и сложные пользовательские типы:  
   
- [!code-cs[csProgGuideTypes#36](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_2.cs)]  
+ [!code-csharp[csProgGuideTypes#36](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_2.cs)]  
   
  Типы для параметров и возвращаемых значений метода задаются в сигнатуре метода. Далее представлена сигнатура метода, который требует значение [int](../../../csharp/language-reference/keywords/int.md) в качестве входного аргумента и возвращает строку:  
   
- [!code-cs[csProgGuideTypes#35](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_3.cs)]  
+ [!code-csharp[csProgGuideTypes#35](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_3.cs)]  
   
  После объявления переменной она не может быть повторно объявлена с новым типом, и ей нельзя присвоить значение, несовместимое с ее объявленным типом. Например, нельзя объявить переменную типа [int](../../../csharp/language-reference/keywords/int.md) и затем присвоить ей логическое значение [true](../../../csharp/language-reference/keywords/true-literal.md). Однако значения могут быть преобразованы в другие типы, например при сохранении в другие переменные или при передаче в качестве аргументов метода. Если *преобразование типов* не приводит к потере данных, она выполняется компилятором автоматически. Для преобразования, которое может привести к потере данных, необходимо выполнить *приведение* в исходном коде.  
   
@@ -127,13 +108,13 @@ char c = 'Z';
   
  Используйте ключевое слово [struct](../../../csharp/language-reference/keywords/struct.md), чтобы создать собственные пользовательские типы значений. Как правило, структура используется как контейнер для небольшого набора связанных переменных, как показано в следующем примере:  
   
- [!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_4.cs)]  
+ [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_4.cs)]  
   
  Дополнительные сведения о структурах см. в статье [Structs](../../../csharp/programming-guide/classes-and-structs/structs.md) (Структуры). Дополнительные сведения о типах значений в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] см. в статье [Система общих типов CTS](../../../standard/base-types/common-type-system.md).  
   
  Еще одна категория типов значений — это [перечисления](../../../csharp/language-reference/keywords/enum.md). Перечисление определяет набор именованных целочисленных констант. Например, перечисление <xref:System.IO.FileMode?displayProperty=nameWithType> из библиотеки классов .NET Framework содержит набор именованных целочисленных констант, которые определяют правила открытия файла. В следующем примере представлено определение этого типа:  
  
- [!code-cs[csProgGuideTypes#44](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_5.cs)]  
+ [!code-csharp[csProgGuideTypes#44](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_5.cs)]  
   
  Константа `System.IO.FileMode.Create` имеет значение 2. Поскольку имена намного лучше воспринимаются человеком при изучении исходного кода, мы рекомендуем всегда использовать перечисления вместо литеральных числовых констант. Для получения дополнительной информации см. <xref:System.IO.FileMode?displayProperty=nameWithType>.  
   
@@ -156,7 +137,7 @@ IMyInterface iface = new MyClass();
   
  Все массивы являются ссылочными типами, даже если их элементы являются типами значений. Массивы являются неявно производными от класса <xref:System.Array?displayProperty=nameWithType>, но в C# их можно объявлять и использовать с упрощенным синтаксисом, как показано в следующем примере:  
   
- [!code-cs[csProgGuideTypes#45](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_6.cs)]  
+ [!code-csharp[csProgGuideTypes#45](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_6.cs)]  
   
  Ссылочные типы полностью поддерживают наследование. Создаваемый класс может наследовать от любого другого интерфейса или класса, который не определен как [запечатанный](../../../csharp/language-reference/keywords/sealed.md), а другие классы могут наследовать от этого класса и переопределять его виртуальные методы. Дополнительные сведения о создании собственных классов см. в статье [Classes and Structs](../../../csharp/programming-guide/classes-and-structs/index.md) (Классы и структуры). Дополнительные сведения о наследовании в C# и виртуальных методах см. в статье [Inheritance](../../../csharp/programming-guide/classes-and-structs/inheritance.md) (Наследование).  
   
@@ -165,7 +146,7 @@ IMyInterface iface = new MyClass();
   
  Поскольку литералы являются типизированными и все типы в конечном счете являются производными от <xref:System.Object?displayProperty=nameWithType>, можно написать и скомпилировать следующий код:  
   
- [!code-cs[csProgGuideTypes#37](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_7.cs)]  
+ [!code-csharp[csProgGuideTypes#37](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_7.cs)]  
   
 ## <a name="generic-types"></a>Универсальные типы  
  Тип может быть объявлен с одним или несколькими *параметрами типа*вместо фактического типа (*конкретного типа*), который клиентский код предоставит при создании экземпляра этого типа. Такие типы называются *универсальными типами*. Например, тип платформы .NET Framework <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> имеет один параметр типа, которому в соответствии с соглашением присвоено имя *T*. При создании экземпляра этого типа необходимо указать тип объектов, которые будут содержаться в списке. Например, так используется список строковых значений:  
@@ -208,8 +189,7 @@ stringList.Add(4);
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Преобразование типов XML-данных](../../../standard/data/xml/conversion-of-xml-data-types.md)   
+ [Справочник по C#](../../../csharp/language-reference/index.md)  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Преобразование типов XML-данных](../../../standard/data/xml/conversion-of-xml-data-types.md)  
  [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)
-

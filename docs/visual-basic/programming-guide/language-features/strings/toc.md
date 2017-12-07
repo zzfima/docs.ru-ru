@@ -4,6 +4,7 @@
 ### [Типы методов для работы со строками](types-of-string-manipulation-methods.md)
 ### [Nothing и строки](nothing-and-strings.md)
 ### [Влияние языка и региональных параметров на строки](how-culture-affects-strings.md)
+### [Интерполированные строки](interpolated-strings.md)
 ### [Что лучше: отсчет индексации с нуля или с единицы?](zero-based-vs-one-based-string-access.md)
 ## [Практическое руководство. Создание строк с помощью StringBuilder](how-to-create-strings-using-a-stringbuilder.md)
 ## [Практическое руководство. Поиск в строке](how-to-search-within-a-string.md)

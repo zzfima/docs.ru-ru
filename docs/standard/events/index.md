@@ -8,21 +8,23 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - delegate model for events
 - application development [.NET Framework], events
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: d5b5c8db7dc264185a5f58438ead83d4a65ec492
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ae0776501bffc23ae07cc88c7f0d1729ed01b6f7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="handling-and-raising-events"></a>Обработка и вызов событий
 События на платформе .NET Framework основаны на модели делегата. Модель делегата соответствует шаблону разработки наблюдателя, который позволяет подписчику зарегистрироваться у поставщика и получать от него уведомления. Отправитель события отправляет уведомление о событии, а приемник событий получает уведомление и определяет ответ на него. В этом разделе описываются основные компоненты модели делегата, использование событий в приложениях и реализация событий в коде.  
@@ -38,7 +40,8 @@ ms.lasthandoff: 09/05/2017
   
  В следующем примере показан способ объявления события `ThresholdReached`. Событие связано с делегатом <xref:System.EventHandler> и возникает в методе `OnThresholdReached`.  
   
- [!code-csharp[EventsOverview#1](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#1)] [!code-vb[EventsOverview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#1)]  
+ [!code-csharp[EventsOverview#1](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#1)]
+ [!code-vb[EventsOverview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#1)]  
   
 ## <a name="delegates"></a>Делегаты  
  Делегат — это тип, содержащий ссылку на метод. Делегат объявлен с сигнатурой, указывающей тип возвращаемого значения и параметры для методов, на которые он ссылается, и может содержать ссылки только на методы, соответствующие его сигнатуре. Таким образом, делегат эквивалентен указателю на строго типизированную функцию или обратному вызову. Объявления делегата достаточно для определения класса делегата.  
@@ -51,25 +54,28 @@ ms.lasthandoff: 09/05/2017
   
  Для сценариев, в которых делегаты <xref:System.EventHandler> и <xref:System.EventHandler%601> не работают, можно определить собственный делегат. Сценарии, для которых необходимо определять собственные делегаты, очень редки. Это бывает, например, при работе с кодом, не распознающим универсальные типы. При объявлении делегат необходимо пометить ключевым словом `delegate` (в C#) или `Delegate` (в Visual Basic). В следующем примере показано, как объявить делегат с именем `ThresholdReachedEventHandler`.  
   
- [!code-csharp[EventsOverview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)] [!code-vb[EventsOverview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
+ [!code-csharp[EventsOverview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
+ [!code-vb[EventsOverview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
   
 ## <a name="event-data"></a>Данные событий  
- Данные, связанные с событием, могут быть предоставлены с помощью класса данных события. Платформа .NET Framework предоставляет множество классов данных событий, которые можно использовать в приложениях. Например, класс <xref:System.IO.Ports.SerialDataReceivedEventArgs> — класс данных события <xref:System.IO.Ports.SerialPort.DataReceived?displayProperty=fullName>. В платформе .NET Framework имена всех классов данных событий оканчиваются ключевым словом `EventArgs`. Определить, какой класс данных события связан с событием, можно по делегату этого события. Например, делегат <xref:System.IO.Ports.SerialDataReceivedEventHandler> содержит класс <xref:System.IO.Ports.SerialDataReceivedEventArgs> в качестве одного из своих параметров.  
+ Данные, связанные с событием, могут быть предоставлены с помощью класса данных события. Платформа .NET Framework предоставляет множество классов данных событий, которые можно использовать в приложениях. Например, класс <xref:System.IO.Ports.SerialDataReceivedEventArgs> — класс данных события <xref:System.IO.Ports.SerialPort.DataReceived?displayProperty=nameWithType>. В платформе .NET Framework имена всех классов данных событий оканчиваются ключевым словом `EventArgs`. Определить, какой класс данных события связан с событием, можно по делегату этого события. Например, делегат <xref:System.IO.Ports.SerialDataReceivedEventHandler> содержит класс <xref:System.IO.Ports.SerialDataReceivedEventArgs> в качестве одного из своих параметров.  
   
- Класс <xref:System.EventArgs> является базовым типом для всех классов данных событий. Класс <xref:System.EventArgs> используется также, если событие не содержит связанных данных. При создании события, которое лишь уведомляет другие классы о том, что что-то произошло, и не передает никаких данных, используйте класс <xref:System.EventArgs> в качестве второго параметра в делегате. Если данные не предоставляются, можно передать значение <xref:System.EventArgs.Empty?displayProperty=fullName>. Делегат <xref:System.EventHandler> содержит класс <xref:System.EventArgs> в качестве параметра.  
+ Класс <xref:System.EventArgs> является базовым типом для всех классов данных событий. Класс <xref:System.EventArgs> используется также, если событие не содержит связанных данных. При создании события, которое лишь уведомляет другие классы о том, что что-то произошло, и не передает никаких данных, используйте класс <xref:System.EventArgs> в качестве второго параметра в делегате. Если данные не предоставляются, можно передать значение <xref:System.EventArgs.Empty?displayProperty=nameWithType>. Делегат <xref:System.EventHandler> содержит класс <xref:System.EventArgs> в качестве параметра.  
   
  Если требуется создать пользовательский класс данных события, создайте класс, производный от класса <xref:System.EventArgs>, а затем укажите все члены, необходимые для передачи данных, связанных с событием. В большинстве случаев следует использовать схему именования .NET Framework и завершать имя класса данных события ключевым словом `EventArgs`.  
   
  В следующем примере показан класс данных события с именем `ThresholdReachedEventArgs`. Он содержит свойства, относящиеся только к вызываемому событию.  
   
- [!code-csharp[EventsOverview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#3)] [!code-vb[EventsOverview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#3)]  
+ [!code-csharp[EventsOverview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#3)]
+ [!code-vb[EventsOverview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#3)]  
   
 ## <a name="event-handlers"></a>Обработчики событий  
  Для обработки события в приемнике события необходимо определить метод обработчика события. Этот метод должен соответствовать сигнатуре делегата обрабатываемого события. В обработчике событий выполняются действия, необходимые при возникновении события, например сбор данных, введенных пользователем при нажатии кнопки. Чтобы получать уведомления при возникновении события, метод обработчика события должен быть подписан на событие.  
   
  В следующем примере показан метод обработчика события `c_ThresholdReached`, который соответствует сигнатуре делегата <xref:System.EventHandler>. Метод подписывается на событие `ThresholdReached`.  
   
- [!code-csharp[EventsOverview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#2)] [!code-vb[EventsOverview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
+ [!code-csharp[EventsOverview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#2)]
+ [!code-vb[EventsOverview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>Обработчики статических и динамических событий  
  Платформа .NET Framework позволяет подписчикам регистрироваться на уведомления о событиях как статически, так и динамически. Обработчики статических событий действуют в течение всего жизненного цикла класса, события которого они обрабатывают. Обработчики динамических событий активируются и деактивируются во время выполнения программы, обычно в ответ на определенную условную логику программы. Например, они могут использоваться, если уведомления о событиях требуются только в определенных условиях, либо приложение предоставляет несколько обработчиков событий и выбор конкретного обработчика зависит от условий среды выполнения. В примере в предыдущем разделе показано, как динамически добавлять обработчик события. Дополнительные сведения см. в разделах [События](../../visual-basic/programming-guide/language-features/events/index.md) и [События](../../csharp/programming-guide/events/index.md).  
@@ -89,11 +95,10 @@ ms.lasthandoff: 09/05/2017
 |[Практическое руководство. Прием событий в приложениях Web Forms](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Описывает способы обработки событий, вызванных элементом управления веб-форм (Web Forms).|  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.EventHandler>   
- <xref:System.EventHandler%601>   
- <xref:System.EventArgs>   
- <xref:System.Delegate>   
- [Общие сведения о событиях и перенаправленных событиях (приложения для Магазина Windows)](http://go.microsoft.com/fwlink/?LinkId=261485)   
- [События (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)   
+ <xref:System.EventHandler>  
+ <xref:System.EventHandler%601>  
+ <xref:System.EventArgs>  
+ <xref:System.Delegate>  
+ [Общие сведения о событиях и перенаправленных событиях (приложения для Магазина Windows)](http://go.microsoft.com/fwlink/?LinkId=261485)  
+ [События (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
  [События (Руководство по программированию в C#)](../../csharp/programming-guide/events/index.md)
-

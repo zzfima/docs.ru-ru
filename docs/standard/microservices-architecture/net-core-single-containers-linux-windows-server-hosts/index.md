@@ -8,12 +8,11 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.openlocfilehash: 73d733a45837d047319312ea7b2e558a02b39eba
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: a50c2ad3183c80fd76e6db042674e49367d7ffc9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Развертывание одноконтейнерных веб-приложений .NET Core на узлах Linux или Windows Nano Server
 
@@ -119,6 +118,8 @@ services:
   command: /bin/bash -c "dotnet restore ./eShopWeb.sln && dotnet publish  ./eShopWeb.sln -c Release -o ./obj/Docker/publish"
 ```
 
+**Примечание**. Начиная с .NET 2.0, команда dotnet restore автоматически выполняется при выполнении команды dotnet publish.
+
 Обратите внимание на то, что образ представляет собой образ сборки ASP.NET Core. Он включает в себя пакет SDK и средства, требуемые для сборки приложения и создания необходимых образов. Если запустить проект **docker-compose** с помощью этого файла, будет запущен контейнер сборки из образа, а затем в этом контейнере будет выполнена сборка образа приложения. Для сборки приложения в контейнере Docker и его последующего запуска нужно указать файл docker-compose в командной строке.
 
 Для запуска приложения в контейнерах Docker в Visual Studio можно выбрать проект **docker-compose** в качестве запускаемого проекта, а затем нажать клавиши CTRL+F5 (F5 для отладки), как и для любого другого приложения. При запуске проекта **docker-compose** Visual Studio использует для **docker-compose** файл docker-compose.yml, файл docker-compose.override.yml и один из файлов docker-compose.vs.\* После запуска приложения Visual Studio открывает браузер.
@@ -145,4 +146,3 @@ services:
 
 >[!div class="step-by-step"]
 [Назад] (../docker-application-development-process/docker-app-development-workflow.md) [Далее] (../containerize-net-framework-applications/index.md)
-

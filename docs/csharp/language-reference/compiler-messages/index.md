@@ -1,46 +1,27 @@
 ---
 title: "Ошибки компилятора C#"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: error-reference
-dev_langs:
-- CSharp
-- CSharp
 helpviewer_keywords:
 - C# language, compiler errors
 - Visual C# compiler, errors
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 2253183c0dc99ff56d06698420c9f0f8acf8dfef
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f474528cd2833fd55435d9880d4a1d0d63846aa0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="c-compiler-errors"></a>Ошибки компилятора C#
 Для некоторых ошибок компилятора C# существуют отдельные статьи, которые описывают причины этих ошибок, а иногда и методы их устранения. Используйте один из следующих вариантов действий, чтобы проверить наличие справки по конкретному сообщению об ошибке.  
   
--   Найдите номер ошибки (например, CS0029) в [окне вывода](/visualstudio/ide/reference/output-window), а затем поищите его в MSDN.  
+-   Найдите номер ошибки (например, CS0029) в [окне вывода](/visualstudio/ide/reference/output-window), а затем поищите его на сайте документации Майкрософт.  
   
 -   Выберите номер ошибки (например, CS0029) в [окне вывода](/visualstudio/ide/reference/output-window) и нажмите клавишу F1.  
   
@@ -53,9 +34,8 @@ ms.lasthandoff: 07/28/2017
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)   
- [К сожалению, конкретные сведения об этой ошибке C# отсутствуют](../../../csharp/misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)   
- [Страница "Сборка" в конструкторе проектов (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)   
- [/warn (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)   
+ [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)  
+ [К сожалению, конкретные сведения об этой ошибке C# отсутствуют.](../../../csharp/misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)  
+ [Страница "Сборка" в конструкторе проектов (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)  
+ [/warn (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)  
  [/nowarn (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)
-

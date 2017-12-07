@@ -1,2 +1,2 @@
 # [Раздел конфигурации Windows Forms](index.md)
-## [Добавить элемент](windows-forms-add-configuration-element.md)
+## [Элемент Add](windows-forms-add-configuration-element.md)
