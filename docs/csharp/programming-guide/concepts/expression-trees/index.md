@@ -1,55 +1,46 @@
 ---
 title: "Деревья выражений (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 250da307d024b1011e1fb04cd84eb25e41af3fa8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: be37183163a3747f861cbda7fd7867640ba382a2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="expression-trees-c"></a>Деревья выражений (C#)
-Деревья выражений представляют код в виде древовидной структуры, где каждый узел является выражением, например, вызовом метода или двоичной операцией, такой как `x < y`.  
+# <a name="expression-trees-c"></a><span data-ttu-id="2d38a-102">Деревья выражений (C#)</span><span class="sxs-lookup"><span data-stu-id="2d38a-102">Expression Trees (C#)</span></span>
+<span data-ttu-id="2d38a-103">Деревья выражений представляют код в виде древовидной структуры, где каждый узел является выражением, например, вызовом метода или двоичной операцией, такой как `x < y`.</span><span class="sxs-lookup"><span data-stu-id="2d38a-103">Expression trees represent code in a tree-like data structure, where each node is an expression, for example, a method call or a binary operation such as `x < y`.</span></span>  
   
- Вы можете компилировать и выполнять код, представленный деревьями выражений. Это позволяет динамически изменять выполняемый код, выполнять запросы LINQ в различных базах данных и создавать динамические запросы. Дополнительные сведения о деревьях выражений в LINQ см. в разделе [Практическое руководство. Использование деревьев выражений для создания динамических запросов (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md).  
+ <span data-ttu-id="2d38a-104">Вы можете компилировать и выполнять код, представленный деревьями выражений.</span><span class="sxs-lookup"><span data-stu-id="2d38a-104">You can compile and run code represented by expression trees.</span></span> <span data-ttu-id="2d38a-105">Это позволяет динамически изменять выполняемый код, выполнять запросы LINQ в различных базах данных и создавать динамические запросы.</span><span class="sxs-lookup"><span data-stu-id="2d38a-105">This enables dynamic modification of executable code, the execution of LINQ queries in various databases, and the creation of dynamic queries.</span></span> <span data-ttu-id="2d38a-106">Дополнительные сведения о деревьях выражений в LINQ см. в разделе [Практическое руководство. Использование деревьев выражений для создания динамических запросов (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md).</span><span class="sxs-lookup"><span data-stu-id="2d38a-106">For more information about expression trees in LINQ, see [How to: Use Expression Trees to Build Dynamic Queries (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md).</span></span>  
   
- Кроме того, деревья выражений используются в среде выполнения динамического языка (DLR) для обеспечения взаимодействия между динамическими языками и платформой .NET Framework, а также и предоставления разработчикам компиляторов возможности выдавать деревья выражений вместо промежуточного языка Microsoft (MSIL). Дополнительные сведения о DLR см. в разделе [Общие сведения о среде DLR](https://msdn.microsoft.com/library/dd233052).  
+ <span data-ttu-id="2d38a-107">Кроме того, деревья выражений используются в среде выполнения динамического языка (DLR) для обеспечения взаимодействия между динамическими языками и платформой .NET Framework, а также и предоставления разработчикам компиляторов возможности выдавать деревья выражений вместо промежуточного языка Microsoft (MSIL).</span><span class="sxs-lookup"><span data-stu-id="2d38a-107">Expression trees are also used in the dynamic language runtime (DLR) to provide interoperability between dynamic languages and the .NET Framework and to enable compiler writers to emit expression trees instead of Microsoft intermediate language (MSIL).</span></span> <span data-ttu-id="2d38a-108">Дополнительные сведения о DLR см. в разделе [Общие сведения о среде DLR](https://msdn.microsoft.com/library/dd233052).</span><span class="sxs-lookup"><span data-stu-id="2d38a-108">For more information about the DLR, see [Dynamic Language Runtime Overview](https://msdn.microsoft.com/library/dd233052).</span></span>  
   
- Вы можете использовать компилятор C# или Visual Basic для создания дерева выражений на основе анонимного лямбда-выражения или создания деревьев выражений вручную с помощью пространства имен <xref:System.Linq.Expressions>.  
+ <span data-ttu-id="2d38a-109">Вы можете использовать компилятор C# или Visual Basic для создания дерева выражений на основе анонимного лямбда-выражения или создания деревьев выражений вручную с помощью пространства имен <xref:System.Linq.Expressions>.</span><span class="sxs-lookup"><span data-stu-id="2d38a-109">You can have the C# or Visual Basic compiler create an expression tree for you based on an anonymous lambda expression, or you can create expression trees manually by using the <xref:System.Linq.Expressions> namespace.</span></span>  
   
-## <a name="creating-expression-trees-from-lambda-expressions"></a>Создание деревьев выражений на основе лямбда-выражений  
- Когда лямбда-выражение назначается переменной с типом <xref:System.Linq.Expressions.Expression%601>, компилятор выдает код для создания дерева выражений, представляющего лямбда-выражение.  
+## <a name="creating-expression-trees-from-lambda-expressions"></a><span data-ttu-id="2d38a-110">Создание деревьев выражений на основе лямбда-выражений</span><span class="sxs-lookup"><span data-stu-id="2d38a-110">Creating Expression Trees from Lambda Expressions</span></span>  
+ <span data-ttu-id="2d38a-111">Когда лямбда-выражение назначается переменной с типом <xref:System.Linq.Expressions.Expression%601>, компилятор выдает код для создания дерева выражений, представляющего лямбда-выражение.</span><span class="sxs-lookup"><span data-stu-id="2d38a-111">When a lambda expression is assigned to a variable of type <xref:System.Linq.Expressions.Expression%601>, the compiler emits code to build an expression tree that represents the lambda expression.</span></span>  
   
- Компилятор C# может создавать деревья выражений только на основе лямбда-выражений (или однострочных лямбда-функций). Они не могут анализировать лямбды операторов (или многострочные лямбды). Дополнительные сведения о лямбда-выражениях на C# см. в разделе [Лямбда-выражения](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+ <span data-ttu-id="2d38a-112">Компилятор C# может создавать деревья выражений только на основе лямбда-выражений (или однострочных лямбда-функций).</span><span class="sxs-lookup"><span data-stu-id="2d38a-112">The C# compiler can generate expression trees only from expression lambdas (or single-line lambdas).</span></span> <span data-ttu-id="2d38a-113">Они не могут анализировать лямбды операторов (или многострочные лямбды).</span><span class="sxs-lookup"><span data-stu-id="2d38a-113">It cannot parse statement lambdas (or multi-line lambdas).</span></span> <span data-ttu-id="2d38a-114">Дополнительные сведения о лямбда-выражениях на C# см. в разделе [Лямбда-выражения](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="2d38a-114">For more information about lambda expressions in C#, see [Lambda Expressions](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).</span></span>  
   
- В следующем примере кода демонстрируется способ применения компилятора C# для создания дерева выражений, представляющего лямбда-выражение `num => num < 5`.  
+ <span data-ttu-id="2d38a-115">В следующем примере кода демонстрируется способ применения компилятора C# для создания дерева выражений, представляющего лямбда-выражение `num => num < 5`.</span><span class="sxs-lookup"><span data-stu-id="2d38a-115">The following code examples demonstrate how to have the C# compiler create an expression tree that represents the lambda expression `num => num < 5`.</span></span>  
   
 ```csharp  
 Expression<Func<int, bool>> lambda = num => num < 5;  
 ```  
   
-## <a name="creating-expression-trees-by-using-the-api"></a>Создание деревьев выражений с помощью API-интерфейса  
- Для создания деревьев выражений с помощью API-интерфейса используйте класс <xref:System.Linq.Expressions.Expression>. Этот класс содержит статические методы фабрики, позволяющие создать узлы дерева выражения конкретного типа, например, <xref:System.Linq.Expressions.ParameterExpression>, который представляет переменную или параметр, или <xref:System.Linq.Expressions.MethodCallExpression>, который представляет вызов метода. <xref:System.Linq.Expressions.ParameterExpression>, <xref:System.Linq.Expressions.MethodCallExpression> и другие зависящие от выражения типы также определяются в пространстве имен <xref:System.Linq.Expressions>. Эти типы являются производными от абстрактного типа <xref:System.Linq.Expressions.Expression>.  
+## <a name="creating-expression-trees-by-using-the-api"></a><span data-ttu-id="2d38a-116">Создание деревьев выражений с помощью API-интерфейса</span><span class="sxs-lookup"><span data-stu-id="2d38a-116">Creating Expression Trees by Using the API</span></span>  
+ <span data-ttu-id="2d38a-117">Для создания деревьев выражений с помощью API-интерфейса используйте класс <xref:System.Linq.Expressions.Expression>.</span><span class="sxs-lookup"><span data-stu-id="2d38a-117">To create expression trees by using the API, use the <xref:System.Linq.Expressions.Expression> class.</span></span> <span data-ttu-id="2d38a-118">Этот класс содержит статические методы фабрики, позволяющие создать узлы дерева выражения конкретного типа, например, <xref:System.Linq.Expressions.ParameterExpression>, который представляет переменную или параметр, или <xref:System.Linq.Expressions.MethodCallExpression>, который представляет вызов метода.</span><span class="sxs-lookup"><span data-stu-id="2d38a-118">This class contains static factory methods that create expression tree nodes of specific types, for example, <xref:System.Linq.Expressions.ParameterExpression>, which represents a variable or parameter, or <xref:System.Linq.Expressions.MethodCallExpression>, which represents a method call.</span></span> <span data-ttu-id="2d38a-119"><xref:System.Linq.Expressions.ParameterExpression>, <xref:System.Linq.Expressions.MethodCallExpression> и другие зависящие от выражения типы также определяются в пространстве имен <xref:System.Linq.Expressions>.</span><span class="sxs-lookup"><span data-stu-id="2d38a-119"><xref:System.Linq.Expressions.ParameterExpression>, <xref:System.Linq.Expressions.MethodCallExpression>, and the other expression-specific types are also defined in the <xref:System.Linq.Expressions> namespace.</span></span> <span data-ttu-id="2d38a-120">Эти типы являются производными от абстрактного типа <xref:System.Linq.Expressions.Expression>.</span><span class="sxs-lookup"><span data-stu-id="2d38a-120">These types derive from the abstract type <xref:System.Linq.Expressions.Expression>.</span></span>  
   
- В следующем примере кода демонстрируется способ создания дерева выражений, представляющего лямбда-выражение `num => num < 5`, с помощью API.  
+ <span data-ttu-id="2d38a-121">В следующем примере кода демонстрируется способ создания дерева выражений, представляющего лямбда-выражение `num => num < 5`, с помощью API.</span><span class="sxs-lookup"><span data-stu-id="2d38a-121">The following code example demonstrates how to create an expression tree that represents the lambda expression `num => num < 5` by using the API.</span></span>  
   
 ```csharp  
 // Add the following using directive to your code file:  
@@ -66,7 +57,7 @@ Expression<Func<int, bool>> lambda1 =
         new ParameterExpression[] { numParam });  
 ```  
   
- На платформе .NET Framework 4 или более поздней версии API деревьев выражений также поддерживает присваивание и выражения потока управления, такие как циклы, условные блоки и блоки `try-catch`. С помощью API-интерфейса можно создавать деревья выражений, более сложные, чем деревья, создаваемые компилятором C# из лямбда-выражений. В следующем примере показан способ создания дерева выражений, которое вычисляет факториал числа.  
+ <span data-ttu-id="2d38a-122">На платформе .NET Framework 4 или более поздней версии API деревьев выражений также поддерживает присваивание и выражения потока управления, такие как циклы, условные блоки и блоки `try-catch`.</span><span class="sxs-lookup"><span data-stu-id="2d38a-122">In .NET Framework 4 or later, the expression trees API also supports assignments and control flow expressions such as loops, conditional blocks, and `try-catch` blocks.</span></span> <span data-ttu-id="2d38a-123">С помощью API-интерфейса можно создавать деревья выражений, более сложные, чем деревья, создаваемые компилятором C# из лямбда-выражений.</span><span class="sxs-lookup"><span data-stu-id="2d38a-123">By using the API, you can create expression trees that are more complex than those that can be created from lambda expressions by the C# compiler.</span></span> <span data-ttu-id="2d38a-124">В следующем примере показан способ создания дерева выражений, которое вычисляет факториал числа.</span><span class="sxs-lookup"><span data-stu-id="2d38a-124">The following example demonstrates how to create an expression tree that calculates the factorial of a number.</span></span>  
   
 ```csharp  
 // Creating a parameter expression.  
@@ -108,10 +99,10 @@ Console.WriteLine(factorial);
 // Prints 120.  
 ```
 
-Дополнительные сведения см. в записи блога [Generating Dynamic Methods with Expression Trees in Visual Studio 2010](http://go.microsoft.com/fwlink/p/?LinkId=169513) (Создание динамических методов с использованием деревьев выражений в Visual Studio 2010), которая также применима к более поздним версиям Visual Studio.
+<span data-ttu-id="2d38a-125">Дополнительные сведения см. в записи блога [Generating Dynamic Methods with Expression Trees in Visual Studio 2010](http://go.microsoft.com/fwlink/p/?LinkId=169513) (Создание динамических методов с использованием деревьев выражений в Visual Studio 2010), которая также применима к более поздним версиям Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="2d38a-125">For more information, see [Generating Dynamic Methods with Expression Trees in Visual Studio 2010](http://go.microsoft.com/fwlink/p/?LinkId=169513), which also applies to later versions of Visual Studio.</span></span>
   
-## <a name="parsing-expression-trees"></a>Синтаксический анализ деревьев выражений  
- В следующем примере кода показано, как дерево выражений, представляющее лямбда-выражение `num => num < 5`, может быть разложено на части.  
+## <a name="parsing-expression-trees"></a><span data-ttu-id="2d38a-126">Синтаксический анализ деревьев выражений</span><span class="sxs-lookup"><span data-stu-id="2d38a-126">Parsing Expression Trees</span></span>  
+ <span data-ttu-id="2d38a-127">В следующем примере кода показано, как дерево выражений, представляющее лямбда-выражение `num => num < 5`, может быть разложено на части.</span><span class="sxs-lookup"><span data-stu-id="2d38a-127">The following code example demonstrates how the expression tree that represents the lambda expression `num => num < 5` can be decomposed into its parts.</span></span>  
   
 ```csharp  
 // Add the following using directive to your code file:  
@@ -134,13 +125,13 @@ Console.WriteLine("Decomposed expression: {0} => {1} {2} {3}",
 // Decomposed expression: num => num LessThan 5  
 ```  
   
-## <a name="immutability-of-expression-trees"></a>Неизменность деревьев выражений  
- Деревья выражений должны быть неизменными. Это означает, что если требуется изменить дерево выражений, следует создать новое дерево выражений путем копирования существующего и заменить узлы в нем. Для прохода по существующему дереву выражений можно использовать другое дерево выражений (посетитель). Дополнительные сведения см. в разделе [Практическое руководство. Изменение деревьев выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md).  
+## <a name="immutability-of-expression-trees"></a><span data-ttu-id="2d38a-128">Неизменность деревьев выражений</span><span class="sxs-lookup"><span data-stu-id="2d38a-128">Immutability of Expression Trees</span></span>  
+ <span data-ttu-id="2d38a-129">Деревья выражений должны быть неизменными.</span><span class="sxs-lookup"><span data-stu-id="2d38a-129">Expression trees should be immutable.</span></span> <span data-ttu-id="2d38a-130">Это означает, что если требуется изменить дерево выражений, следует создать новое дерево выражений путем копирования существующего и заменить узлы в нем.</span><span class="sxs-lookup"><span data-stu-id="2d38a-130">This means that if you want to modify an expression tree, you must construct a new expression tree by copying the existing one and replacing nodes in it.</span></span> <span data-ttu-id="2d38a-131">Для прохода по существующему дереву выражений можно использовать другое дерево выражений (посетитель).</span><span class="sxs-lookup"><span data-stu-id="2d38a-131">You can use an expression tree visitor to traverse the existing expression tree.</span></span> <span data-ttu-id="2d38a-132">Дополнительные сведения см. в разделе [Практическое руководство. Изменение деревьев выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md).</span><span class="sxs-lookup"><span data-stu-id="2d38a-132">For more information, see [How to: Modify Expression Trees (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md).</span></span>  
   
-## <a name="compiling-expression-trees"></a>Компиляция деревьев выражений  
- Тип <xref:System.Linq.Expressions.Expression%601> предоставляет метод  <xref:System.Linq.Expressions.Expression%601.Compile%2A>, который компилирует код, представляемый деревом выражений, в исполняемый делегат.  
+## <a name="compiling-expression-trees"></a><span data-ttu-id="2d38a-133">Компиляция деревьев выражений</span><span class="sxs-lookup"><span data-stu-id="2d38a-133">Compiling Expression Trees</span></span>  
+ <span data-ttu-id="2d38a-134">Тип <xref:System.Linq.Expressions.Expression%601> предоставляет метод  <xref:System.Linq.Expressions.Expression%601.Compile%2A>, который компилирует код, представляемый деревом выражений, в исполняемый делегат.</span><span class="sxs-lookup"><span data-stu-id="2d38a-134">The <xref:System.Linq.Expressions.Expression%601> type provides the <xref:System.Linq.Expressions.Expression%601.Compile%2A> method that compiles the code represented by an expression tree into an executable delegate.</span></span>  
   
- В следующем примере кода показан способ компиляции дерева выражений и выполнения результирующего кода.  
+ <span data-ttu-id="2d38a-135">В следующем примере кода показан способ компиляции дерева выражений и выполнения результирующего кода.</span><span class="sxs-lookup"><span data-stu-id="2d38a-135">The following code example demonstrates how to compile an expression tree and run the resulting code.</span></span>  
   
 ```csharp  
 // Creating an expression tree.  
@@ -162,13 +153,12 @@ Console.WriteLine(expr.Compile()(4));
 // Also prints True.  
 ```  
   
- Дополнительные сведения см. в разделе [Практическое руководство. Выполнение деревьев выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md).  
+ <span data-ttu-id="2d38a-136">Дополнительные сведения см. в разделе [Практическое руководство. Выполнение деревьев выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md).</span><span class="sxs-lookup"><span data-stu-id="2d38a-136">For more information, see [How to: Execute Expression Trees (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md).</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Linq.Expressions>   
- [Практическое руководство. Выполнение деревьев выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)   
- [Практическое руководство. Изменение деревьев выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)   
- [Лямбда-выражения](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
- [Общие сведения о среде DLR](https://msdn.microsoft.com/library/dd233052)   
- [Основные понятия программирования (C#)](../../../../csharp/programming-guide/concepts/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="2d38a-137">См. также</span><span class="sxs-lookup"><span data-stu-id="2d38a-137">See Also</span></span>  
+ <xref:System.Linq.Expressions>  
+ [<span data-ttu-id="2d38a-138">Практическое руководство. Выполнение деревьев выражений (C#)</span><span class="sxs-lookup"><span data-stu-id="2d38a-138">How to: Execute Expression Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
+ [<span data-ttu-id="2d38a-139">Практическое руководство. Изменение деревьев выражений (C#)</span><span class="sxs-lookup"><span data-stu-id="2d38a-139">How to: Modify Expression Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)  
+ [<span data-ttu-id="2d38a-140">Лямбда-выражения</span><span class="sxs-lookup"><span data-stu-id="2d38a-140">Lambda Expressions</span></span>](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+ [<span data-ttu-id="2d38a-141">Общие сведения о среде DLR</span><span class="sxs-lookup"><span data-stu-id="2d38a-141">Dynamic Language Runtime Overview</span></span>](https://msdn.microsoft.com/library/dd233052)  
+ [<span data-ttu-id="2d38a-142">Основные понятия программирования (C#)</span><span class="sxs-lookup"><span data-stu-id="2d38a-142">Programming Concepts (C#)</span></span>](../../../../csharp/programming-guide/concepts/index.md)

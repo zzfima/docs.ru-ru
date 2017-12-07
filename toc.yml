@@ -13,9 +13,18 @@
           tocHref: /dotnet/standard/
           topicHref: /dotnet/standard/index
           items:
-            - name: 'Микрослужбы .NET: архитектура контейнерных приложений .NET'
+            - name: Электронная книга по современным веб-приложениям ASP.NET
+              tocHref: /dotnet/standard/modern-web-apps-azure-architecture/
+              topicHref: /dotnet/standard/modern-web-apps-azure-architecture/index
+            - name: Электронная книга по архитектуре микрослужб .NET
               tocHref: /dotnet/standard/microservices-architecture/
               topicHref: /dotnet/standard/microservices-architecture/index
+            - name: Электронная книга по модернизации приложений .NET
+              tocHref: /dotnet/standard/modernize-with-azure-and-containers/
+              topicHref: /dotnet/standard/modernize-with-azure-and-containers/index
+            - name: Электронная книга по микрослужбам .NET DevOps
+              tocHref: /dotnet/standard/containerized-lifecycle-architecture/
+              topicHref: /dotnet/standard/containerized-lifecycle-architecture/index
             - name: Шаблоны асинхронного программирования
               tocHref: /dotnet/standard/asynchronous-programming-patterns/
               topicHref: /dotnet/standard/asynchronous-programming-patterns/index
@@ -232,7 +241,7 @@
                   topicHref: /dotnet/framework/unmanaged-api/authenticode/index
                 - name: Отладка (ссылка неуправляемого API)
                   tocHref: /dotnet/framework/unmanaged-api/debugging/
-                  topicHref: /dotnet/framework/unmanaged-api/debuggin/index
+                  topicHref: /dotnet/framework/unmanaged-api/debugging/index
                 - name: Хранилище диагностических символов (ссылка неуправляемого API)
                   tocHref: /dotnet/framework/unmanaged-api/diagnostics/
                   topicHref: /dotnet/framework/unmanaged-api/diagnostics/index
@@ -341,6 +350,9 @@
           tocHref: /dotnet/csharp/
           topicHref: /dotnet/csharp/index
           items:
+            - name: Краткие руководства
+              tocHref: /dotnet/csharp/quick-starts/
+              topicHref: /dotnet/csharp/quick-starts/index
             - name: Начало работы
               tocHref: /dotnet/csharp/getting-started/
               topicHref: /dotnet/csharp/getting-started/index
@@ -348,8 +360,8 @@
               tocHref: /dotnet/csharp/tutorials/
               topicHref: /dotnet/csharp/tutorials/index
             - name: Обзор
-              tocHref: /dotnet/csharp/tour/
-              topicHref: /dotnet/csharp/tour/index
+              tocHref: /dotnet/csharp/tour-of-csharp/
+              topicHref: /dotnet/csharp/tour-of-csharp/index
             - name: Новые возможности
               tocHref: /dotnet/csharp/whats-new/
               topicHref: /dotnet/csharp/whats-new/index
@@ -380,7 +392,7 @@
                   topicHref: /dotnet/csharp/programming-guide/events/index
                 - name: Исключения и обработка исключений
                   tocHref: /dotnet/csharp/programming-guide/exceptions/
-                  topicHref: /dotnet/csharp/programming-guide/èxceptions/index
+                  topicHref: /dotnet/csharp/programming-guide/exceptions/index
                 - name: Файловая система и реестр
                   tocHref: /dotnet/csharp/programming-guide/file-system/
                   topicHref: /dotnet/csharp/programming-guide/file-system/index
@@ -395,7 +407,7 @@
                   topicHref: /dotnet/csharp/programming-guide/interfaces/index
                 - name: Взаимодействие
                   tocHref: /dotnet/csharp/programming-guide/interop/
-                  topicHref: /dotnet/csharp/programming-guide/ìnterop/index
+                  topicHref: /dotnet/csharp/programming-guide/interop/index
                 - name: LINQ
                   tocHref: /dotnet/csharp/programming-guide/linq/
                   topicHref: /dotnet/csharp/programming-guide/linq/index
@@ -426,7 +438,7 @@
                       topicHref: /dotnet/csharp/programming-guide/concepts/covariance-contravariance/index
                     - name: Деревья выражений
                       tocHref: /dotnet/csharp/programming-guide/concepts/expression-trees/
-                      topicHref: /dotnet/csharp/programming-guide/concepts/èxpression-trees/index
+                      topicHref: /dotnet/csharp/programming-guide/concepts/expression-trees/index
                     - name: LINQ
                       tocHref: /dotnet/csharp/programming-guide/concepts/linq/
                       topicHref: /dotnet/csharp/programming-guide/concepts/linq/index
@@ -501,7 +513,7 @@
                   topicHref: /dotnet/visual-basic/programming-guide/concepts/attributes/index
                 - name: Деревья выражений
                   tocHref: /dotnet/visual-basic/programming-guide/concepts/expression-trees/
-                  topicHref: /dotnet/visual-basic/programming-guide/concepts/èxpression-trees/index
+                  topicHref: /dotnet/visual-basic/programming-guide/concepts/expression-trees/index
                 - name: LINQ
                   tocHref: /dotnet/visual-basic/programming-guide/concepts/linq/
                   topicHref: /dotnet/visual-basic/programming-guide/concepts/linq/index
@@ -558,7 +570,7 @@
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/procedures/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/procedures/index
                 - name: Строки
-                  tocHref: /dotnet/visual-basic/programming-guide/language-features/`strings/
+                  tocHref: /dotnet/visual-basic/programming-guide/language-features/strings/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/strings/index
                 - name: Переменные
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/variables/

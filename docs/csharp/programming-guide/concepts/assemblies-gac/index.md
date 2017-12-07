@@ -1,80 +1,70 @@
 ---
 title: "Сборки и глобальный кэш сборок (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 3743c07f1de1d39f07d559aa161e4547422a6e52
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2b98bd872bfdcbebb34fff3d878b92f39e27bbe0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="assemblies-and-the-global-assembly-cache-c"></a>Сборки и глобальный кэш сборок (C#)
-Сборки представляют собой базовый элемент развертывания, управления версиями, повторного использования, назначения областей активации и прав доступа для приложения на основе платформы .NET. Сборки создаются в форме исполняемого файла (.exe) или файла динамической библиотеки (.dll) и являются составными частями .NET Framework. Они предоставляют сведения для среды CLR, которые нужны для распознавания реализаций типов. Сборку можно представить как коллекцию типов и ресурсов, которые предназначены для совместной работы и формируют логическую единицу функциональности.  
+# <a name="assemblies-and-the-global-assembly-cache-c"></a><span data-ttu-id="c4c84-102">Сборки и глобальный кэш сборок (C#)</span><span class="sxs-lookup"><span data-stu-id="c4c84-102">Assemblies and the Global Assembly Cache (C#)</span></span>
+<span data-ttu-id="c4c84-103">Сборки представляют собой базовый элемент развертывания, управления версиями, повторного использования, назначения областей активации и прав доступа для приложения на основе платформы .NET.</span><span class="sxs-lookup"><span data-stu-id="c4c84-103">Assemblies form the fundamental unit of deployment, version control, reuse, activation scoping, and security permissions for a .NET-based application.</span></span> <span data-ttu-id="c4c84-104">Сборки создаются в форме исполняемого файла (.exe) или файла динамической библиотеки (.dll) и являются составными частями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c4c84-104">Assemblies take the form of an executable (.exe) file or dynamic link library (.dll) file, and are the building blocks of the .NET Framework.</span></span> <span data-ttu-id="c4c84-105">Они предоставляют сведения для среды CLR, которые нужны для распознавания реализаций типов.</span><span class="sxs-lookup"><span data-stu-id="c4c84-105">They provide the common language runtime with the information it needs to be aware of type implementations.</span></span> <span data-ttu-id="c4c84-106">Сборку можно представить как коллекцию типов и ресурсов, которые предназначены для совместной работы и формируют логическую единицу функциональности.</span><span class="sxs-lookup"><span data-stu-id="c4c84-106">You can think of an assembly as a collection of types and resources that form a logical unit of functionality and are built to work together.</span></span>  
   
- Сборки могут содержать один или несколько модулей. Например, в крупных проектах несколько разработчиков могут создавать отдельные модули, которые вместе образуют единую сборку. Дополнительные сведения о модулях см. в статье [How to: Build a Multifile Assembly](https://msdn.microsoft.com/library/226t7yxe) (Практическое руководство. Создание многофайловой сборки).  
+ <span data-ttu-id="c4c84-107">Сборки могут содержать один или несколько модулей.</span><span class="sxs-lookup"><span data-stu-id="c4c84-107">Assemblies can contain one or more modules.</span></span> <span data-ttu-id="c4c84-108">Например, в крупных проектах несколько разработчиков могут создавать отдельные модули, которые вместе образуют единую сборку.</span><span class="sxs-lookup"><span data-stu-id="c4c84-108">For example, larger projects may be planned in such a way that several individual developers work on separate modules, all coming together to create a single assembly.</span></span> <span data-ttu-id="c4c84-109">Дополнительные сведения о модулях см. в статье [How to: Build a Multifile Assembly](https://msdn.microsoft.com/library/226t7yxe) (Практическое руководство. Создание многофайловой сборки).</span><span class="sxs-lookup"><span data-stu-id="c4c84-109">For more information about modules, see the topic [How to: Build a Multifile Assembly](https://msdn.microsoft.com/library/226t7yxe).</span></span>  
   
- Сборки имеют следующие свойства.  
+ <span data-ttu-id="c4c84-110">Сборки имеют следующие свойства.</span><span class="sxs-lookup"><span data-stu-id="c4c84-110">Assemblies have the following properties:</span></span>  
   
--   Сборки реализованы как файлы .exe или .dll.  
+-   <span data-ttu-id="c4c84-111">Сборки реализованы как файлы .exe или .dll.</span><span class="sxs-lookup"><span data-stu-id="c4c84-111">Assemblies are implemented as .exe or .dll files.</span></span>  
   
--   Сборку можно совместно использовать в нескольких приложениях, поместив ее в глобальный кэш сборок. Сборки должны получить строгие имена, чтобы их можно было включить в глобальный кэш сборок. Подробнее см. в статье [Сборки со строгими именами](https://msdn.microsoft.com/library/wd40t7ad).  
+-   <span data-ttu-id="c4c84-112">Сборку можно совместно использовать в нескольких приложениях, поместив ее в глобальный кэш сборок.</span><span class="sxs-lookup"><span data-stu-id="c4c84-112">You can share an assembly between applications by putting it in the global assembly cache.</span></span> <span data-ttu-id="c4c84-113">Сборки должны получить строгие имена, чтобы их можно было включить в глобальный кэш сборок.</span><span class="sxs-lookup"><span data-stu-id="c4c84-113">Assemblies must be strong-named before they can be included in the global assembly cache.</span></span> <span data-ttu-id="c4c84-114">Подробнее см. в статье [Сборки со строгими именами](https://msdn.microsoft.com/library/wd40t7ad).</span><span class="sxs-lookup"><span data-stu-id="c4c84-114">For more information, see [Strong-Named Assemblies](https://msdn.microsoft.com/library/wd40t7ad).</span></span>  
   
--   Сборки загружаются в память только в том случае, если они реально используются. Если сборка не используется, она не загружается. Благодаря этому свойству сборки могут быть эффективным средством для управления ресурсами в крупных проектах.  
+-   <span data-ttu-id="c4c84-115">Сборки загружаются в память только в том случае, если они реально используются.</span><span class="sxs-lookup"><span data-stu-id="c4c84-115">Assemblies are only loaded into memory if they are required.</span></span> <span data-ttu-id="c4c84-116">Если сборка не используется, она не загружается.</span><span class="sxs-lookup"><span data-stu-id="c4c84-116">If they are not used, they are not loaded.</span></span> <span data-ttu-id="c4c84-117">Благодаря этому свойству сборки могут быть эффективным средством для управления ресурсами в крупных проектах.</span><span class="sxs-lookup"><span data-stu-id="c4c84-117">This means that assemblies can be an efficient way to manage resources in larger projects.</span></span>  
   
--   Сведения о сборке можно получить программным путем с помощью отражения. Дополнительные сведения см. в разделе [Отражение (C#)](../../../../csharp/programming-guide/concepts/reflection.md).  
+-   <span data-ttu-id="c4c84-118">Сведения о сборке можно получить программным путем с помощью отражения.</span><span class="sxs-lookup"><span data-stu-id="c4c84-118">You can programmatically obtain information about an assembly by using reflection.</span></span> <span data-ttu-id="c4c84-119">Дополнительные сведения см. в разделе [Отражение (C#)](../../../../csharp/programming-guide/concepts/reflection.md).</span><span class="sxs-lookup"><span data-stu-id="c4c84-119">For more information, see [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md).</span></span>  
   
--   Если вы хотите загрузить сборку только для ее проверки, используйте метод, такой как <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>.  
+-   <span data-ttu-id="c4c84-120">Если вы хотите загрузить сборку только для ее проверки, используйте метод, такой как <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>.</span><span class="sxs-lookup"><span data-stu-id="c4c84-120">If you want to load an assembly only to inspect it, use a method such as <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>.</span></span>  
   
-## <a name="assembly-manifest"></a>Манифест сборки  
- Каждая сборка содержит *манифест сборки*. Манифест сборки выполняет роль оглавления и содержит следующую информацию.  
+## <a name="assembly-manifest"></a><span data-ttu-id="c4c84-121">Манифест сборки</span><span class="sxs-lookup"><span data-stu-id="c4c84-121">Assembly Manifest</span></span>  
+ <span data-ttu-id="c4c84-122">Каждая сборка содержит *манифест сборки*.</span><span class="sxs-lookup"><span data-stu-id="c4c84-122">Within every assembly is an *assembly manifest*.</span></span> <span data-ttu-id="c4c84-123">Манифест сборки выполняет роль оглавления и содержит следующую информацию.</span><span class="sxs-lookup"><span data-stu-id="c4c84-123">Similar to a table of contents, the assembly manifest contains the following:</span></span>  
   
--   Идентификатор сборки (ее имя и версию).  
+-   <span data-ttu-id="c4c84-124">Идентификатор сборки (ее имя и версию).</span><span class="sxs-lookup"><span data-stu-id="c4c84-124">The assembly's identity (its name and version).</span></span>  
   
--   Таблицу всех файлов, входящих в сборку. Сюда будут включаться другие ваши сборки, от которых зависит файл .exe или .dll, а также растровые изображения или файлы Readme.  
+-   <span data-ttu-id="c4c84-125">Таблицу всех файлов, входящих в сборку. Сюда будут включаться другие ваши сборки, от которых зависит файл .exe или .dll, а также растровые изображения или файлы Readme.</span><span class="sxs-lookup"><span data-stu-id="c4c84-125">A file table describing all the other files that make up the assembly, for example, any other assemblies you created that your .exe or .dll file relies on, or even bitmap or Readme files.</span></span>  
   
--   *Список ссылок сборки*, то есть список всех внешних зависимостей — библиотек или других файлов, созданных другими разработчиками, которые требуются для работы вашего приложения. Ссылки на сборки содержат ссылки на глобальные и частные объекты. Глобальные объекты находятся в глобальном кэше сборок — зоне, которая доступна другим приложениям. Закрытые объекты должны находиться в каталоге установки приложения или в одном из его подкаталогов.  
+-   <span data-ttu-id="c4c84-126">*Список ссылок сборки*, то есть список всех внешних зависимостей — библиотек или других файлов, созданных другими разработчиками, которые требуются для работы вашего приложения.</span><span class="sxs-lookup"><span data-stu-id="c4c84-126">An *assembly reference list*, which is a list of all external dependencies—.dlls or other files your application needs that may have been created by someone else.</span></span> <span data-ttu-id="c4c84-127">Ссылки на сборки содержат ссылки на глобальные и частные объекты.</span><span class="sxs-lookup"><span data-stu-id="c4c84-127">Assembly references contain references to both global and private objects.</span></span> <span data-ttu-id="c4c84-128">Глобальные объекты находятся в глобальном кэше сборок — зоне, которая доступна другим приложениям.</span><span class="sxs-lookup"><span data-stu-id="c4c84-128">Global objects reside in the global assembly cache, an area available to other applications.</span></span> <span data-ttu-id="c4c84-129">Закрытые объекты должны находиться в каталоге установки приложения или в одном из его подкаталогов.</span><span class="sxs-lookup"><span data-stu-id="c4c84-129">Private objects must be in a directory at either the same level as or below the directory in which your application is installed.</span></span>  
   
- Так как сборки содержат сведения о содержимом, версиях и зависимостях, работа созданных вами приложений на C# не зависит от значений в реестре Windows. Сборки снижают риск конфликта библиотек DLL, а также повышают надежность и простоту развертывания приложений. Во многих случаях для установки приложения на базе .NET достаточно просто скопировать его файлы на целевой компьютер.  
+ <span data-ttu-id="c4c84-130">Так как сборки содержат сведения о содержимом, версиях и зависимостях, работа созданных вами приложений на C# не зависит от значений в реестре Windows.</span><span class="sxs-lookup"><span data-stu-id="c4c84-130">Because assemblies contain information about content, versioning, and dependencies, the applications you create with C# do not rely on Windows registry values to function properly.</span></span> <span data-ttu-id="c4c84-131">Сборки снижают риск конфликта библиотек DLL, а также повышают надежность и простоту развертывания приложений.</span><span class="sxs-lookup"><span data-stu-id="c4c84-131">Assemblies reduce .dll conflicts and make your applications more reliable and easier to deploy.</span></span> <span data-ttu-id="c4c84-132">Во многих случаях для установки приложения на базе .NET достаточно просто скопировать его файлы на целевой компьютер.</span><span class="sxs-lookup"><span data-stu-id="c4c84-132">In many cases, you can install a .NET-based application simply by copying its files to the target computer.</span></span>  
   
- Подробнее см. в статье [Манифест сборки](https://msdn.microsoft.com/library/1w45z383).  
+ <span data-ttu-id="c4c84-133">Подробнее см. в статье [Манифест сборки](https://msdn.microsoft.com/library/1w45z383).</span><span class="sxs-lookup"><span data-stu-id="c4c84-133">For more information see [Assembly Manifest](https://msdn.microsoft.com/library/1w45z383).</span></span>  
   
-## <a name="adding-a-reference-to-an-assembly"></a>Добавление ссылки на сборку  
- Чтобы использовать сборку, нужно добавить ссылку на нее. После этого с помощью [директивы using](../../../../csharp/language-reference/keywords/using-directive.md) выберите пространство имен для нужных вам элементов. Когда вы добавите ссылку на сборку и импортируете ее, в вашем приложении станут доступны все предоставленные в сборке классы, свойства, методы и другие члены пространства имен, как если бы их код являлся частью файла с исходным кодом вашего приложения.  
+## <a name="adding-a-reference-to-an-assembly"></a><span data-ttu-id="c4c84-134">Добавление ссылки на сборку</span><span class="sxs-lookup"><span data-stu-id="c4c84-134">Adding a Reference to an Assembly</span></span>  
+ <span data-ttu-id="c4c84-135">Чтобы использовать сборку, нужно добавить ссылку на нее.</span><span class="sxs-lookup"><span data-stu-id="c4c84-135">To use an assembly, you must add a reference to it.</span></span> <span data-ttu-id="c4c84-136">После этого с помощью [директивы using](../../../../csharp/language-reference/keywords/using-directive.md) выберите пространство имен для нужных вам элементов.</span><span class="sxs-lookup"><span data-stu-id="c4c84-136">Next, you use the [using directive](../../../../csharp/language-reference/keywords/using-directive.md) to choose the namespace of the items you want to use.</span></span> <span data-ttu-id="c4c84-137">Когда вы добавите ссылку на сборку и импортируете ее, в вашем приложении станут доступны все предоставленные в сборке классы, свойства, методы и другие члены пространства имен, как если бы их код являлся частью файла с исходным кодом вашего приложения.</span><span class="sxs-lookup"><span data-stu-id="c4c84-137">Once an assembly is referenced and imported, all the accessible classes, properties, methods, and other members of its namespaces are available to your application as if their code were part of your source file.</span></span>  
   
- На C# вы также можете использовать две версии одной и той же сборки в одном приложении. Дополнительные сведения см. в разделе [Псевдоним extern](../../../../csharp/language-reference/keywords/extern-alias.md).  
+ <span data-ttu-id="c4c84-138">На C# вы также можете использовать две версии одной и той же сборки в одном приложении.</span><span class="sxs-lookup"><span data-stu-id="c4c84-138">In C#, you can also use two versions of the same assembly in a single application.</span></span> <span data-ttu-id="c4c84-139">Дополнительные сведения см. в разделе [Псевдоним extern](../../../../csharp/language-reference/keywords/extern-alias.md).</span><span class="sxs-lookup"><span data-stu-id="c4c84-139">For more information, see [extern alias](../../../../csharp/language-reference/keywords/extern-alias.md).</span></span>  
   
-## <a name="creating-an-assembly"></a>Создание сборки  
- Скомпилируйте приложение: щелкните **Сборка** в меню **Сборка** или запустите сборку с помощью компилятора командной строки. Дополнительные сведения о сборках из командной строки см. в статье [Сборка из командной строки с помощью csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
+## <a name="creating-an-assembly"></a><span data-ttu-id="c4c84-140">Создание сборки</span><span class="sxs-lookup"><span data-stu-id="c4c84-140">Creating an Assembly</span></span>  
+ <span data-ttu-id="c4c84-141">Скомпилируйте приложение: щелкните **Сборка** в меню **Сборка** или запустите сборку с помощью компилятора командной строки.</span><span class="sxs-lookup"><span data-stu-id="c4c84-141">Compile your application by clicking **Build** on the **Build** menu or by building it from the command line using the command-line compiler.</span></span> <span data-ttu-id="c4c84-142">Дополнительные сведения о сборках из командной строки см. в статье [Сборка из командной строки с помощью csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="c4c84-142">For details about building assemblies from the command line, see [Command-line Building With csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span>  
   
 > [!NOTE]
->  Чтобы создать сборку в Visual Studio, выберите пункт **Сборка** из меню **Сборка**.  
+>  <span data-ttu-id="c4c84-143">Чтобы создать сборку в Visual Studio, выберите пункт **Сборка** из меню **Сборка**.</span><span class="sxs-lookup"><span data-stu-id="c4c84-143">To build an assembly in Visual Studio, on the **Build** menu choose **Build**.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)   
- [Сборки в среде CLR](https://msdn.microsoft.com/library/k3677y81)   
- [Дружественные сборки (C#)](friend-assemblies.md)   
- [Практическое руководство. Совместное использование сборки с другими приложениями (C#)](how-to-share-an-assembly-with-other-applications.md)   
- [Практическое руководство. Загрузка и выгрузка сборок (C#)](how-to-load-and-unload-assemblies.md)   
- [Практическое руководство. Как определить, является ли файл сборкой (C#)](how-to-determine-if-a-file-is-an-assembly.md)   
- [Практическое руководство. Создание и использование сборок с помощью командной строки (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)   
- [Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)   
- [Пошаговое руководство. Внедрение данных о типах из сборок Microsoft Office в Visual Studio (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
-
+## <a name="see-also"></a><span data-ttu-id="c4c84-144">См. также</span><span class="sxs-lookup"><span data-stu-id="c4c84-144">See Also</span></span>  
+ [<span data-ttu-id="c4c84-145">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="c4c84-145">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="c4c84-146">Сборки в среде CLR</span><span class="sxs-lookup"><span data-stu-id="c4c84-146">Assemblies in the Common Language Runtime</span></span>](https://msdn.microsoft.com/library/k3677y81)  
+ [<span data-ttu-id="c4c84-147">Дружественные сборки (C#)</span><span class="sxs-lookup"><span data-stu-id="c4c84-147">Friend Assemblies (C#)</span></span>](friend-assemblies.md)  
+ [<span data-ttu-id="c4c84-148">Практическое руководство. Совместное использование сборки с другими приложениями (C#)</span><span class="sxs-lookup"><span data-stu-id="c4c84-148">How to: Share an Assembly with Other Applications (C#)</span></span>](how-to-share-an-assembly-with-other-applications.md)  
+ [<span data-ttu-id="c4c84-149">Практическое руководство. Загрузка и выгрузка сборок (C#)</span><span class="sxs-lookup"><span data-stu-id="c4c84-149">How to: Load and Unload Assemblies (C#)</span></span>](how-to-load-and-unload-assemblies.md)  
+ [<span data-ttu-id="c4c84-150">Практическое руководство. Как определить, является ли файл сборкой (C#)</span><span class="sxs-lookup"><span data-stu-id="c4c84-150">How to: Determine If a File Is an Assembly (C#)</span></span>](how-to-determine-if-a-file-is-an-assembly.md)  
+ [<span data-ttu-id="c4c84-151">Практическое руководство. Создание и использование сборок с помощью командной строки (C#)</span><span class="sxs-lookup"><span data-stu-id="c4c84-151">How to: Create and Use Assemblies Using the Command Line (C#)</span></span>](how-to-create-and-use-assemblies-using-the-command-line.md)  
+ [<span data-ttu-id="c4c84-152">Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio (C#)</span><span class="sxs-lookup"><span data-stu-id="c4c84-152">Walkthrough: Embedding Types from Managed Assemblies in Visual Studio (C#)</span></span>](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+ [<span data-ttu-id="c4c84-153">Пошаговое руководство. Внедрение данных о типах из сборок Microsoft Office в Visual Studio (C#)</span><span class="sxs-lookup"><span data-stu-id="c4c84-153">Walkthrough: Embedding Type Information from Microsoft Office Assemblies in Visual Studio (C#)</span></span>](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
