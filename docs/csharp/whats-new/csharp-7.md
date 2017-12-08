@@ -217,7 +217,7 @@ return result;
 
 <span data-ttu-id="0b728-251">Чтобы добавить такой кубик в коллекцию, в первую очередь определите тип, представляющий процентный кубик:</span><span class="sxs-lookup"><span data-stu-id="0b728-251">To add this kind of die to your collection, first define a type to represent the percentile die:</span></span>
 
-[!code-csharp[18_PercentileDie](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDie "Percentile Die type")]
+[!code-csharp[18_PercentileDice](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDice "Percentile Die type")]
 
 <span data-ttu-id="0b728-252">Затем добавьте выражение сопоставления `case` для нового типа:</span><span class="sxs-lookup"><span data-stu-id="0b728-252">Then, add a `case` match expression for the new type:</span></span>
 
