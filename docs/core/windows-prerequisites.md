@@ -38,7 +38,7 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="net-core-dependencies"></a>Зависимости .NET Core
 
-Для работы .NET Core 1.1 и более ранних версий в версиях Windows, более ранних, чем Windows 10 и Windows Server 2016, требуется распространяемый пакет Visual C++. Эту зависимость автоматически устанавливает установщик .NET Core.
+.NET core 1.1 и более ранних версий требуется распространяемый пакет Visual C++ при работе в версиях Windows, более ранних, чем Windows 10 и Windows Server 2016. Эта зависимость устанавливается автоматически установщиком .NET Core.
 
 [Распространяемый компонент Microsoft Visual C++ 2015 с обновлением 3](https://www.microsoft.com/download/details.aspx?id=52685) необходимо установить вручную в следующих случаях:
 

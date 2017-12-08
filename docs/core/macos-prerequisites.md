@@ -70,7 +70,7 @@ ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 
 Можно увеличить этот предел, выполните следующие действия:
 
-1. В текстовом редакторе создайте файл _/Library/LaunchDaemons/limit.maxfiles.plist_ и сохраните его со следующим содержимым:
+1. В текстовом редакторе создайте новый файл _/Library/LaunchDaemons/limit.maxfiles.plist_и сохраните файл с этого содержимого:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
