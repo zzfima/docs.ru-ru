@@ -33,7 +33,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="assembly-security-considerations"></a><span data-ttu-id="99ee8-102">Вопросы безопасности сборок</span><span class="sxs-lookup"><span data-stu-id="99ee8-102">Assembly Security Considerations</span></span>
-<span data-ttu-id="99ee8-103"><a name="top"></a> При создании сборки можно указать набор разрешений, который требуется для ее выполнения.</span><span class="sxs-lookup"><span data-stu-id="99ee8-103"><a name="top"></a> When you build an assembly, you can specify a set of permissions that the assembly requires to run.</span></span> <span data-ttu-id="99ee8-104">От свидетельства зависит, предоставляются ли сборке определенные разрешения.</span><span class="sxs-lookup"><span data-stu-id="99ee8-104">Whether certain permissions are granted or not granted to an assembly is based on evidence.</span></span>  
+<a name="top"></a> <span data-ttu-id="99ee8-103">При создании сборки можно указать набор разрешений, который требуется для ее выполнения.</span><span class="sxs-lookup"><span data-stu-id="99ee8-103">When you build an assembly, you can specify a set of permissions that the assembly requires to run.</span></span> <span data-ttu-id="99ee8-104">От свидетельства зависит, предоставляются ли сборке определенные разрешения.</span><span class="sxs-lookup"><span data-stu-id="99ee8-104">Whether certain permissions are granted or not granted to an assembly is based on evidence.</span></span>  
   
  <span data-ttu-id="99ee8-105">Существует два различных способа использования свидетельств.</span><span class="sxs-lookup"><span data-stu-id="99ee8-105">There are two distinct ways evidence is used:</span></span>  
   

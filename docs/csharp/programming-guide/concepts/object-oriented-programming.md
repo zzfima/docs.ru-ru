@@ -59,7 +59,7 @@ ms.lasthandoff: 11/08/2017
   
 -   [<span data-ttu-id="1337f-124">Делегаты</span><span class="sxs-lookup"><span data-stu-id="1337f-124">Delegates</span></span>](#Delegates)  
   
-##  <span data-ttu-id="1337f-125"><a name="Classes"></a> Классы и объекты</span><span class="sxs-lookup"><span data-stu-id="1337f-125"><a name="Classes"></a> Classes and Objects</span></span>  
+##  <a name="Classes"></a> <span data-ttu-id="1337f-125">Классы и объекты</span><span class="sxs-lookup"><span data-stu-id="1337f-125">Classes and Objects</span></span>  
  <span data-ttu-id="1337f-126">Термины *класс* и *объект* часто взаимозаменяемы, но в действительности классы описывают *типы* объектов, а объекты — это используемые *экземпляры* классов.</span><span class="sxs-lookup"><span data-stu-id="1337f-126">The terms *class* and *object* are sometimes used interchangeably, but in fact, classes describe the *type* of objects, while objects are usable *instances* of classes.</span></span> <span data-ttu-id="1337f-127">Поэтому процесс создания объекта называется *созданием экземпляра*.</span><span class="sxs-lookup"><span data-stu-id="1337f-127">So, the act of creating an object is called *instantiation*.</span></span> <span data-ttu-id="1337f-128">Если использовать сравнение с чертежом, то класс является чертежом, а объект является зданием, построенным по нему.</span><span class="sxs-lookup"><span data-stu-id="1337f-128">Using the blueprint analogy, a class is a blueprint, and an object is a building made from that blueprint.</span></span>  
   
  <span data-ttu-id="1337f-129">Определение класса:</span><span class="sxs-lookup"><span data-stu-id="1337f-129">To define a class:</span></span>  
@@ -86,10 +86,10 @@ struct SampleStruct
   
 -   [<span data-ttu-id="1337f-134">struct</span><span class="sxs-lookup"><span data-stu-id="1337f-134">struct</span></span>](../../../csharp/language-reference/keywords/struct.md)  
   
-###  <span data-ttu-id="1337f-135"><a name="Members"></a> Члены класса</span><span class="sxs-lookup"><span data-stu-id="1337f-135"><a name="Members"></a> Class Members</span></span>  
+###  <a name="Members"></a> <span data-ttu-id="1337f-135">Члены класса</span><span class="sxs-lookup"><span data-stu-id="1337f-135">Class Members</span></span>  
  <span data-ttu-id="1337f-136">Каждый класс может состоять из различных *членов класса*, которые содержат свойства, описывающие данные класса, методы, задающие поведение класса, и события, обеспечивающие связь между различными классами и объектами.</span><span class="sxs-lookup"><span data-stu-id="1337f-136">Each class can have different *class members* that include properties that describe class data, methods that define class behavior, and events that provide communication between different classes and objects.</span></span>  
   
-####  <span data-ttu-id="1337f-137"><a name="Properties"></a> Свойства и поля</span><span class="sxs-lookup"><span data-stu-id="1337f-137"><a name="Properties"></a> Properties and Fields</span></span>  
+####  <a name="Properties"></a> <span data-ttu-id="1337f-137">Свойства и поля</span><span class="sxs-lookup"><span data-stu-id="1337f-137">Properties and Fields</span></span>  
  <span data-ttu-id="1337f-138">Поля и свойства представляют сведения, содержащиеся в объекте.</span><span class="sxs-lookup"><span data-stu-id="1337f-138">Fields and properties represent information that an object contains.</span></span> <span data-ttu-id="1337f-139">Поля подобны переменным в том, что их можно прочитать или изменить напрямую.</span><span class="sxs-lookup"><span data-stu-id="1337f-139">Fields are like variables because they can be read or set directly.</span></span>  
   
  <span data-ttu-id="1337f-140">Определение поля:</span><span class="sxs-lookup"><span data-stu-id="1337f-140">To define a field:</span></span>  
@@ -138,7 +138,7 @@ class SampleClass
   
 -   [<span data-ttu-id="1337f-151">set</span><span class="sxs-lookup"><span data-stu-id="1337f-151">set</span></span>](../../../csharp/language-reference/keywords/set.md)  
   
-####  <span data-ttu-id="1337f-152"><a name="Methods"></a> Методы</span><span class="sxs-lookup"><span data-stu-id="1337f-152"><a name="Methods"></a> Methods</span></span>  
+####  <a name="Methods"></a> <span data-ttu-id="1337f-152">Методы</span><span class="sxs-lookup"><span data-stu-id="1337f-152">Methods</span></span>  
  <span data-ttu-id="1337f-153">Действие, которое выполняет объект, называется *методом*.</span><span class="sxs-lookup"><span data-stu-id="1337f-153">A *method* is an action that an object can perform.</span></span>  
   
  <span data-ttu-id="1337f-154">Определение метода класса:</span><span class="sxs-lookup"><span data-stu-id="1337f-154">To define a method of a class:</span></span>  
@@ -170,7 +170,7 @@ public int sampleMethod(int sampleParam) {}
   
 -   [<span data-ttu-id="1337f-161">Методы расширения</span><span class="sxs-lookup"><span data-stu-id="1337f-161">Extension Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
   
-####  <span data-ttu-id="1337f-162"><a name="Constructors"></a> Конструкторы</span><span class="sxs-lookup"><span data-stu-id="1337f-162"><a name="Constructors"></a> Constructors</span></span>  
+####  <a name="Constructors"></a> <span data-ttu-id="1337f-162">Конструкторы</span><span class="sxs-lookup"><span data-stu-id="1337f-162">Constructors</span></span>  
  <span data-ttu-id="1337f-163">Конструкторы — это методы классов, выполняемые автоматически при создании объекта заданного типа.</span><span class="sxs-lookup"><span data-stu-id="1337f-163">Constructors are class methods that are executed automatically when an object of a given type is created.</span></span> <span data-ttu-id="1337f-164">Обычно конструкторы выполняют инициализацию членов данных нового объекта.</span><span class="sxs-lookup"><span data-stu-id="1337f-164">Constructors usually initialize the data members of the new object.</span></span> <span data-ttu-id="1337f-165">Конструктор можно запустить только один раз при создании класса.</span><span class="sxs-lookup"><span data-stu-id="1337f-165">A constructor can run only once when a class is created.</span></span> <span data-ttu-id="1337f-166">Кроме того, код конструктора всегда выполняется раньше всех остальных частей кода в классе.</span><span class="sxs-lookup"><span data-stu-id="1337f-166">Furthermore, the code in the constructor always runs before any other code in a class.</span></span> <span data-ttu-id="1337f-167">Следует отметить, что так же, как и для других методов, можно создать несколько перегрузок конструктора.</span><span class="sxs-lookup"><span data-stu-id="1337f-167">However, you can create multiple constructor overloads in the same way as for any other method.</span></span>  
   
  <span data-ttu-id="1337f-168">Определение конструктора для класса:</span><span class="sxs-lookup"><span data-stu-id="1337f-168">To define a constructor for a class:</span></span>  
@@ -189,12 +189,12 @@ public class SampleClass
   
  <span data-ttu-id="1337f-170">[Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md).</span><span class="sxs-lookup"><span data-stu-id="1337f-170">[Constructors](../../../csharp/programming-guide/classes-and-structs/constructors.md).</span></span>  
   
-####  <span data-ttu-id="1337f-171"><a name="Finalizers"></a> Методы завершения</span><span class="sxs-lookup"><span data-stu-id="1337f-171"><a name="Finalizers"></a> Finalizers</span></span>  
+####  <a name="Finalizers"></a> <span data-ttu-id="1337f-171">Методы завершения</span><span class="sxs-lookup"><span data-stu-id="1337f-171">Finalizers</span></span>  
  <span data-ttu-id="1337f-172">Методы завершения используются для уничтожения экземпляров классов.</span><span class="sxs-lookup"><span data-stu-id="1337f-172">Finalizers are used to destruct instances of classes.</span></span> <span data-ttu-id="1337f-173">В платформе .NET Framework сборщик мусора автоматически управляет распределением и освобождением памяти для управляемых объектов приложения.</span><span class="sxs-lookup"><span data-stu-id="1337f-173">In the .NET Framework, the garbage collector automatically manages the allocation and release of memory for the managed objects in your application.</span></span> <span data-ttu-id="1337f-174">Однако для очистки неуправляемых ресурсов, создаваемых приложением, могут потребоваться методы завершения.</span><span class="sxs-lookup"><span data-stu-id="1337f-174">However, you may still need finalizers to clean up any unmanaged resources that your application creates.</span></span> <span data-ttu-id="1337f-175">На один класс допускается только один метод завершения.</span><span class="sxs-lookup"><span data-stu-id="1337f-175">There can be only one finalizers for a class.</span></span>  
   
  <span data-ttu-id="1337f-176">Дополнительные сведения о методах завершения и сборке мусора в .NET Framework см. в разделе [Сборка мусора](../../../standard/garbage-collection/index.md).</span><span class="sxs-lookup"><span data-stu-id="1337f-176">For more information about finalizers and garbage collection in the .NET Framework, see [Garbage Collection](../../../standard/garbage-collection/index.md).</span></span>  
   
-####  <span data-ttu-id="1337f-177"><a name="Events"></a> События</span><span class="sxs-lookup"><span data-stu-id="1337f-177"><a name="Events"></a> Events</span></span>  
+####  <a name="Events"></a> <span data-ttu-id="1337f-177">События</span><span class="sxs-lookup"><span data-stu-id="1337f-177">Events</span></span>  
  <span data-ttu-id="1337f-178">События позволяют классу или объекту уведомлять другие классы или объекты о возникновении каких-либо ситуаций.</span><span class="sxs-lookup"><span data-stu-id="1337f-178">Events enable a class or object to notify other classes or objects when something of interest occurs.</span></span> <span data-ttu-id="1337f-179">Класс, отправляющий (или порождающий) событие, называется *издателем*, а классы, принимающие (или обрабатывающие) событие, называются *подписчиками*.</span><span class="sxs-lookup"><span data-stu-id="1337f-179">The class that sends (or raises) the event is called the *publisher* and the classes that receive (or handle) the event are called *subscribers*.</span></span> <span data-ttu-id="1337f-180">Дополнительные сведения о том, как порождаются и обрабатываются события, см. в разделе [События](../../../standard/events/index.md).</span><span class="sxs-lookup"><span data-stu-id="1337f-180">For more information about events, how they are raised and handled, see [Events](../../../standard/events/index.md).</span></span>  
   
 -   <span data-ttu-id="1337f-181">Чтобы объявить событие в классе, используйте ключевое слово [event](../../../csharp/language-reference/keywords/event.md).</span><span class="sxs-lookup"><span data-stu-id="1337f-181">To declare an event in a class, use the [event](../../../csharp/language-reference/keywords/event.md) keyword.</span></span>  
@@ -203,7 +203,7 @@ public class SampleClass
   
 -   <span data-ttu-id="1337f-183">Чтобы подписаться на событие, используйте оператор `+=`. Чтобы отменить подписку на событие, воспользуйтесь оператором `-=`.</span><span class="sxs-lookup"><span data-stu-id="1337f-183">To subscribe to an event, use the `+=` operator; to unsubscribe from an event, use the `-=` operator.</span></span>  
   
-####  <span data-ttu-id="1337f-184"><a name="NestedClasses"></a> Вложенные классы</span><span class="sxs-lookup"><span data-stu-id="1337f-184"><a name="NestedClasses"></a> Nested Classes</span></span>  
+####  <a name="NestedClasses"></a> <span data-ttu-id="1337f-184">Вложенные классы</span><span class="sxs-lookup"><span data-stu-id="1337f-184">Nested Classes</span></span>  
  <span data-ttu-id="1337f-185">Класс, определенный внутри другого класса, называется *вложенным*.</span><span class="sxs-lookup"><span data-stu-id="1337f-185">A class defined within another class is called *nested*.</span></span> <span data-ttu-id="1337f-186">По умолчанию вложенный класс является частным.</span><span class="sxs-lookup"><span data-stu-id="1337f-186">By default, the nested class is private.</span></span>  
   
 ```csharp  
@@ -222,7 +222,7 @@ class Container
 Container.Nested nestedInstance = new Container.Nested()  
 ```  
   
-###  <span data-ttu-id="1337f-188"><a name="AccessModifiers"></a> Модификаторы доступа и уровни доступа</span><span class="sxs-lookup"><span data-stu-id="1337f-188"><a name="AccessModifiers"></a> Access Modifiers and Access Levels</span></span>  
+###  <a name="AccessModifiers"></a> <span data-ttu-id="1337f-188">Модификаторы доступа и уровни доступа</span><span class="sxs-lookup"><span data-stu-id="1337f-188">Access Modifiers and Access Levels</span></span>  
  <span data-ttu-id="1337f-189">С помощью *модификаторов доступа* все классы и члены классов могут указывать уровни доступа, предоставляемые другим классам.</span><span class="sxs-lookup"><span data-stu-id="1337f-189">All classes and class members can specify what access level they provide to other classes by using *access modifiers*.</span></span>  
   
  <span data-ttu-id="1337f-190">Имеющиеся модификаторы доступа указаны в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="1337f-190">The following access modifiers are available:</span></span>  
@@ -238,7 +238,7 @@ Container.Nested nestedInstance = new Container.Nested()
   
  <span data-ttu-id="1337f-205">Дополнительные сведения см. в разделе [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span><span class="sxs-lookup"><span data-stu-id="1337f-205">For more information, see [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span></span>  
   
-###  <span data-ttu-id="1337f-206"><a name="InstantiatingClasses"></a> Создание экземпляров классов</span><span class="sxs-lookup"><span data-stu-id="1337f-206"><a name="InstantiatingClasses"></a> Instantiating Classes</span></span>  
+###  <a name="InstantiatingClasses"></a> <span data-ttu-id="1337f-206">Создание экземпляров классов</span><span class="sxs-lookup"><span data-stu-id="1337f-206">Instantiating Classes</span></span>  
  <span data-ttu-id="1337f-207">Чтобы создать объект, необходимо создать экземпляр класса.</span><span class="sxs-lookup"><span data-stu-id="1337f-207">To create an object, you need to instantiate a class, or create a class instance.</span></span>  
   
 ```csharp  
@@ -268,7 +268,7 @@ SampleClass sampleObject = new SampleClass
   
 -   [<span data-ttu-id="1337f-212">Инициализаторы объектов и коллекций</span><span class="sxs-lookup"><span data-stu-id="1337f-212">Object and Collection Initializers</span></span>](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
   
-###  <span data-ttu-id="1337f-213"><a name="Static"></a> Статические классы и их члены</span><span class="sxs-lookup"><span data-stu-id="1337f-213"><a name="Static"></a> Static Classes and Members</span></span>  
+###  <a name="Static"></a> <span data-ttu-id="1337f-213">Статические классы и их члены</span><span class="sxs-lookup"><span data-stu-id="1337f-213">Static Classes and Members</span></span>  
  <span data-ttu-id="1337f-214">Статический член класса — это свойство, процедура или поле, которое совместно используется всеми экземплярами класса.</span><span class="sxs-lookup"><span data-stu-id="1337f-214">A static member of the class is a property, procedure, or field that is shared by all instances of a class.</span></span>  
   
  <span data-ttu-id="1337f-215">Определение статического члена</span><span class="sxs-lookup"><span data-stu-id="1337f-215">To define a static member:</span></span>  
@@ -290,7 +290,7 @@ Console.WriteLine(SampleClass.SampleString);
   
  <span data-ttu-id="1337f-219">Дополнительные сведения см. в разделе [static](../../../csharp/language-reference/keywords/static.md).</span><span class="sxs-lookup"><span data-stu-id="1337f-219">For more information, see: [static](../../../csharp/language-reference/keywords/static.md).</span></span>  
   
-###  <span data-ttu-id="1337f-220"><a name="AnonymousTypes"></a> Анонимные типы</span><span class="sxs-lookup"><span data-stu-id="1337f-220"><a name="AnonymousTypes"></a> Anonymous Types</span></span>  
+###  <a name="AnonymousTypes"></a> <span data-ttu-id="1337f-220">Анонимные типы</span><span class="sxs-lookup"><span data-stu-id="1337f-220">Anonymous Types</span></span>  
  <span data-ttu-id="1337f-221">Анонимные типы позволяют создавать объекты без написания определения класса для типа данных.</span><span class="sxs-lookup"><span data-stu-id="1337f-221">Anonymous types enable you to create objects without writing a class definition for the data type.</span></span> <span data-ttu-id="1337f-222">Вместо этого компилятор создает класс для вас.</span><span class="sxs-lookup"><span data-stu-id="1337f-222">Instead, the compiler generates a class for you.</span></span> <span data-ttu-id="1337f-223">Данный класс не имеет имени и содержит свойства, которые указаны при объявлении объекта.</span><span class="sxs-lookup"><span data-stu-id="1337f-223">The class has no usable name and contains the properties you specify in declaring the object.</span></span>  
   
  <span data-ttu-id="1337f-224">Создание экземпляра анонимного типа:</span><span class="sxs-lookup"><span data-stu-id="1337f-224">To create an instance of an anonymous type:</span></span>  
@@ -303,7 +303,7 @@ var sampleObject =
   
  <span data-ttu-id="1337f-225">Дополнительные сведения см. в разделе [Анонимные типы](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span><span class="sxs-lookup"><span data-stu-id="1337f-225">For more information, see: [Anonymous Types](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span></span>  
   
-##  <span data-ttu-id="1337f-226"><a name="Inheritance"></a> Наследование</span><span class="sxs-lookup"><span data-stu-id="1337f-226"><a name="Inheritance"></a> Inheritance</span></span>  
+##  <a name="Inheritance"></a> <span data-ttu-id="1337f-226">Наследование</span><span class="sxs-lookup"><span data-stu-id="1337f-226">Inheritance</span></span>  
  <span data-ttu-id="1337f-227">Наследование позволяет создавать новые классы, которые повторно используют, расширяют и изменяют поведение, определенное в другом классе.</span><span class="sxs-lookup"><span data-stu-id="1337f-227">Inheritance enables you to create a new class that reuses, extends, and modifies the behavior that is defined in another class.</span></span> <span data-ttu-id="1337f-228">Класс, члены которого наследуются, называется *базовым классом*, а класс, который наследует эти члены, называется *производным классом*.</span><span class="sxs-lookup"><span data-stu-id="1337f-228">The class whose members are inherited is called the *base class*, and the class that inherits those members is called the *derived class*.</span></span> <span data-ttu-id="1337f-229">Следует учитывать, что все классы в C# неявно наследуются от класса <xref:System.Object>, который поддерживает иерархию классов .NET и предоставляет низкоуровневые службы для всех классов.</span><span class="sxs-lookup"><span data-stu-id="1337f-229">However, all classes in C# implicitly inherit from the <xref:System.Object> class that supports .NET class hierarchy and provides low-level services to all classes.</span></span>  
   
 > [!NOTE]
@@ -335,7 +335,7 @@ public abstract class B { }
   
 -   [<span data-ttu-id="1337f-239">abstract</span><span class="sxs-lookup"><span data-stu-id="1337f-239">abstract</span></span>](../../../csharp/language-reference/keywords/abstract.md)  
   
-###  <span data-ttu-id="1337f-240"><a name="Overriding"></a> Переопределение членов</span><span class="sxs-lookup"><span data-stu-id="1337f-240"><a name="Overriding"></a> Overriding Members</span></span>  
+###  <a name="Overriding"></a> <span data-ttu-id="1337f-240">Переопределение членов</span><span class="sxs-lookup"><span data-stu-id="1337f-240">Overriding Members</span></span>  
  <span data-ttu-id="1337f-241">По умолчанию производный класс наследует все члены от своего базового класса.</span><span class="sxs-lookup"><span data-stu-id="1337f-241">By default, a derived class inherits all members from its base class.</span></span> <span data-ttu-id="1337f-242">Если необходимо изменить поведение унаследованного члена, необходимо переопределить его.</span><span class="sxs-lookup"><span data-stu-id="1337f-242">If you want to change the behavior of the inherited member, you need to override it.</span></span> <span data-ttu-id="1337f-243">Т. е. в производном классе можно определить новую реализацию метода, свойства или события.</span><span class="sxs-lookup"><span data-stu-id="1337f-243">That is, you can define a new implementation of the method, property or event in the derived class.</span></span>  
   
  <span data-ttu-id="1337f-244">Следующие модификаторы используются для управления переопределением свойств и методов.</span><span class="sxs-lookup"><span data-stu-id="1337f-244">The following modifiers are used to control how properties and methods are overridden:</span></span>  
@@ -347,7 +347,7 @@ public abstract class B { }
 |[<span data-ttu-id="1337f-251">abstract</span><span class="sxs-lookup"><span data-stu-id="1337f-251">abstract</span></span>](../../../csharp/language-reference/keywords/abstract.md)|<span data-ttu-id="1337f-252">Требует, чтобы член класса был переопределен в производном классе.</span><span class="sxs-lookup"><span data-stu-id="1337f-252">Requires that a class member to be overridden in the derived class.</span></span>|  
 |[<span data-ttu-id="1337f-253">Модификатор new</span><span class="sxs-lookup"><span data-stu-id="1337f-253">new Modifier</span></span>](../../../csharp/language-reference/keywords/new-modifier.md)|<span data-ttu-id="1337f-254">Скрывает член, наследуемый от базового класса</span><span class="sxs-lookup"><span data-stu-id="1337f-254">Hides a member inherited from a base class</span></span>|  
   
-##  <span data-ttu-id="1337f-255"><a name="Interfaces"></a> Интерфейсы</span><span class="sxs-lookup"><span data-stu-id="1337f-255"><a name="Interfaces"></a> Interfaces</span></span>  
+##  <a name="Interfaces"></a> <span data-ttu-id="1337f-255">Интерфейсы</span><span class="sxs-lookup"><span data-stu-id="1337f-255">Interfaces</span></span>  
  <span data-ttu-id="1337f-256">Интерфейсы, как и классы, определяют набор свойств, методов и событий.</span><span class="sxs-lookup"><span data-stu-id="1337f-256">Interfaces, like classes, define a set of properties, methods, and events.</span></span> <span data-ttu-id="1337f-257">Но, в отличие от классов, интерфейсы не предоставляют реализацию.</span><span class="sxs-lookup"><span data-stu-id="1337f-257">But unlike classes, interfaces do not provide implementation.</span></span> <span data-ttu-id="1337f-258">Они реализуются классами, но определяются как отдельные от классов сущности.</span><span class="sxs-lookup"><span data-stu-id="1337f-258">They are implemented by classes, and defined as separate entities from classes.</span></span> <span data-ttu-id="1337f-259">Интерфейс представляет собой контракт, в котором класс, реализующий интерфейс, должен реализовывать каждый аспект этого интерфейса в точном соответствии с его определением.</span><span class="sxs-lookup"><span data-stu-id="1337f-259">An interface represents a contract, in that a class that implements an interface must implement every aspect of that interface exactly as it is defined.</span></span>  
   
  <span data-ttu-id="1337f-260">Определение интерфейса:</span><span class="sxs-lookup"><span data-stu-id="1337f-260">To define an interface:</span></span>  
@@ -377,7 +377,7 @@ class SampleClass : ISampleInterface
   
  [<span data-ttu-id="1337f-264">interface</span><span class="sxs-lookup"><span data-stu-id="1337f-264">interface</span></span>](../../../csharp/language-reference/keywords/interface.md)  
   
-##  <span data-ttu-id="1337f-265"><a name="Generics"></a> Универсальные шаблоны</span><span class="sxs-lookup"><span data-stu-id="1337f-265"><a name="Generics"></a> Generics</span></span>  
+##  <a name="Generics"></a> <span data-ttu-id="1337f-265">Универсальные шаблоны</span><span class="sxs-lookup"><span data-stu-id="1337f-265">Generics</span></span>  
  <span data-ttu-id="1337f-266">Классы, структуры, интерфейсы и методы в платформе .NET Framework могут иметь *параметры типа*, которые определяют типы объектов, которые они могут хранить или использовать.</span><span class="sxs-lookup"><span data-stu-id="1337f-266">Classes, structures, interfaces and methods in the .NET Framework can include *type parameters* that define types of objects that they can store or use.</span></span> <span data-ttu-id="1337f-267">Наиболее распространенным примером универсального шаблона является коллекция, в которой можно указать тип объектов, которые могут в ней храниться.</span><span class="sxs-lookup"><span data-stu-id="1337f-267">The most common example of generics is a collection, where you can specify the type of objects to be stored in a collection.</span></span>  
   
  <span data-ttu-id="1337f-268">Определение универсального класса:</span><span class="sxs-lookup"><span data-stu-id="1337f-268">To define a generic class:</span></span>  
@@ -402,7 +402,7 @@ sampleObject.Field = "Sample string";
   
 -   [<span data-ttu-id="1337f-272">Универсальные шаблоны</span><span class="sxs-lookup"><span data-stu-id="1337f-272">Generics</span></span>](../../../csharp/programming-guide/generics/index.md)  
   
-##  <span data-ttu-id="1337f-273"><a name="Delegates"></a> Делегаты</span><span class="sxs-lookup"><span data-stu-id="1337f-273"><a name="Delegates"></a> Delegates</span></span>  
+##  <a name="Delegates"></a> <span data-ttu-id="1337f-273">Делегаты</span><span class="sxs-lookup"><span data-stu-id="1337f-273">Delegates</span></span>  
  <span data-ttu-id="1337f-274">*Делегат* — это тип, который определяет сигнатуру метода и может обеспечивать связь с любым методом с совместимой сигнатурой.</span><span class="sxs-lookup"><span data-stu-id="1337f-274">A *delegate* is a type that defines a method signature, and can provide a reference to any method with a compatible signature.</span></span> <span data-ttu-id="1337f-275">Метод можно запустить (или вызвать) с помощью делегата.</span><span class="sxs-lookup"><span data-stu-id="1337f-275">You can invoke (or call) the method through the delegate.</span></span> <span data-ttu-id="1337f-276">Делегаты используются для передачи методов в качестве аргументов к другим методам.</span><span class="sxs-lookup"><span data-stu-id="1337f-276">Delegates are used to pass methods as arguments to other methods.</span></span>  
   
 > [!NOTE]

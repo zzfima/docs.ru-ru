@@ -57,7 +57,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <span data-ttu-id="59c70-125">Индексаторы могут иметь более одного формального параметра, например при доступе к двумерному массиву.</span><span class="sxs-lookup"><span data-stu-id="59c70-125">Indexers can have more than one formal parameter, for example, when accessing a two-dimensional array.</span></span>  
   
-##  <span data-ttu-id="59c70-126"><a name="BKMK_RelatedSections"></a> Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="59c70-126"><a name="BKMK_RelatedSections"></a> Related Sections</span></span>  
+##  <a name="BKMK_RelatedSections"></a> <span data-ttu-id="59c70-126">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="59c70-126">Related Sections</span></span>  
   
 -   [<span data-ttu-id="59c70-127">Использование индексаторов</span><span class="sxs-lookup"><span data-stu-id="59c70-127">Using Indexers</span></span>](../../../csharp/programming-guide/indexers/using-indexers.md)  
   
