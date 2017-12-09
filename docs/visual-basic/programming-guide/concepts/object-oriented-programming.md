@@ -278,7 +278,7 @@ Dim sampleObject = New SampleClass With
 
 - [<span data-ttu-id="1e7b4-215">Инициализаторы объектов. Именованные и анонимные типы</span><span class="sxs-lookup"><span data-stu-id="1e7b4-215">Object Initializers: Named and Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-###  <span data-ttu-id="1e7b4-216"><a name="Static"></a>Совместно используемые классы и члены</span><span class="sxs-lookup"><span data-stu-id="1e7b4-216"><a name="Static"></a> Shared Classes and Members</span></span>  
+###  <a name="Static"></a><span data-ttu-id="1e7b4-216">Совместно используемые классы и члены</span><span class="sxs-lookup"><span data-stu-id="1e7b4-216">Shared Classes and Members</span></span>  
  <span data-ttu-id="1e7b4-217">Общий член класса имеет свойство, процедура или поле, которое является общим для всех экземпляров класса.</span><span class="sxs-lookup"><span data-stu-id="1e7b4-217">A shared member of the class is a property, procedure, or field that is shared by all instances of a class.</span></span>  
   
  <span data-ttu-id="1e7b4-218">Для определения общего элемента:</span><span class="sxs-lookup"><span data-stu-id="1e7b4-218">To define a shared member:</span></span>  
