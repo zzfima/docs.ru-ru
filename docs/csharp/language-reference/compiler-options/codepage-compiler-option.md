@@ -13,11 +13,11 @@ ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 37f40312f1218b8e666eae7cb2de6c768ee32108
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e17622256ca6a0344797ba16e007ba6feb8f873
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="codepage-c-compiler-options"></a>/codepage (параметры компилятора C#)
 Этот параметр задает кодовую страницу, используемую во время компиляции, если требуемая страница не является текущей кодовой страницей системы по умолчанию.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
  Если файлы исходного кода были созданы с помощью кодовой страницы, включенной на компьютере, либо с помощью кодовой страницы UNICODE или UTF-8, использовать параметр **/codepage** не требуется.  
   
- Сведения о том, как найти кодовые страницы, которые поддерживаются в системе, см. на странице, посвященной функции [GetCPInfo](http://go.microsoft.com/fwlink/?LinkId=148371).  
+ Сведения о том, как найти кодовые страницы, которые поддерживаются в системе, см. на странице, посвященной функции [GetCPInfo](https://msdn.microsoft.com/library/dd318078(VS.85).aspx).  
   
  Этот параметр компилятора недоступен в Visual Studio и не может быть изменен программным способом.  
   
