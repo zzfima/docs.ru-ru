@@ -31,7 +31,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a><span data-ttu-id="d4443-102">Конструкции изменения в регулярных выражениях</span><span class="sxs-lookup"><span data-stu-id="d4443-102">Alternation Constructs in Regular Expressions</span></span>
-<span data-ttu-id="d4443-103"><a name="top"></a> Конструкции изменения модифицируют регулярное выражение, включая сопоставление по принципу «либо/или» или условное сопоставление.</span><span class="sxs-lookup"><span data-stu-id="d4443-103"><a name="top"></a> Alternation constructs modify a regular expression to enable either/or or conditional matching.</span></span> <span data-ttu-id="d4443-104">Платформа .NET поддерживает три указанные далее конструкции изменения.</span><span class="sxs-lookup"><span data-stu-id="d4443-104">.NET supports three alternation constructs:</span></span>  
+<a name="top"></a> <span data-ttu-id="d4443-103">Конструкции изменения модифицируют регулярное выражение, включая сопоставление по принципу «либо/или» или условное сопоставление.</span><span class="sxs-lookup"><span data-stu-id="d4443-103">Alternation constructs modify a regular expression to enable either/or or conditional matching.</span></span> <span data-ttu-id="d4443-104">Платформа .NET поддерживает три указанные далее конструкции изменения.</span><span class="sxs-lookup"><span data-stu-id="d4443-104">.NET supports three alternation constructs:</span></span>  
   
 -   [<span data-ttu-id="d4443-105">Сопоставление шаблонов с помощью |</span><span class="sxs-lookup"><span data-stu-id="d4443-105">Pattern matching with &#124;</span></span>](#Either_Or)  
   

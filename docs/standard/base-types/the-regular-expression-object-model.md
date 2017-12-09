@@ -52,7 +52,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="the-regular-expression-object-model"></a><span data-ttu-id="189a1-102">Объектная модель регулярных выражений</span><span class="sxs-lookup"><span data-stu-id="189a1-102">The Regular Expression Object Model</span></span>
-<span data-ttu-id="189a1-103"><a name="introduction"></a>В этом разделе описывается объектная модель, используемая при работе с регулярными выражениями .NET.</span><span class="sxs-lookup"><span data-stu-id="189a1-103"><a name="introduction"></a> This topic describes the object model used in working with .NET regular expressions.</span></span> <span data-ttu-id="189a1-104">Он содержит следующие подразделы:</span><span class="sxs-lookup"><span data-stu-id="189a1-104">It contains the following sections:</span></span>  
+<a name="introduction"></a><span data-ttu-id="189a1-103">В этом разделе описывается объектная модель, используемая при работе с регулярными выражениями .NET.</span><span class="sxs-lookup"><span data-stu-id="189a1-103">This topic describes the object model used in working with .NET regular expressions.</span></span> <span data-ttu-id="189a1-104">Он содержит следующие подразделы:</span><span class="sxs-lookup"><span data-stu-id="189a1-104">It contains the following sections:</span></span>  
   
 -   [<span data-ttu-id="189a1-105">Обработчик регулярных выражений</span><span class="sxs-lookup"><span data-stu-id="189a1-105">The Regular Expression Engine</span></span>](#Engine)  
   

@@ -27,7 +27,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="fundamentals-of-garbage-collection"></a><span data-ttu-id="520c0-102">Основы сборки мусора</span><span class="sxs-lookup"><span data-stu-id="520c0-102">Fundamentals of Garbage Collection</span></span>
-<span data-ttu-id="520c0-103"><a name="top"></a> В среде CLR сборщик мусора выполняет функции автоматического диспетчера памяти.</span><span class="sxs-lookup"><span data-stu-id="520c0-103"><a name="top"></a> In the common language runtime (CLR), the garbage collector serves as an automatic memory manager.</span></span> <span data-ttu-id="520c0-104">Это предоставляет следующие преимущества:</span><span class="sxs-lookup"><span data-stu-id="520c0-104">It provides the following benefits:</span></span>  
+<a name="top"></a> <span data-ttu-id="520c0-103">В среде CLR сборщик мусора выполняет функции автоматического диспетчера памяти.</span><span class="sxs-lookup"><span data-stu-id="520c0-103">In the common language runtime (CLR), the garbage collector serves as an automatic memory manager.</span></span> <span data-ttu-id="520c0-104">Это предоставляет следующие преимущества:</span><span class="sxs-lookup"><span data-stu-id="520c0-104">It provides the following benefits:</span></span>  
   
 -   <span data-ttu-id="520c0-105">Позволяет разрабатывать приложение без необходимости освобождать память.</span><span class="sxs-lookup"><span data-stu-id="520c0-105">Enables you to develop your application without having to free memory.</span></span>  
   
