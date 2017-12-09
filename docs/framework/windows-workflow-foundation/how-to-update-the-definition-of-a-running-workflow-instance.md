@@ -49,7 +49,7 @@ ms.lasthandoff: 12/02/2017
   
 -   [<span data-ttu-id="cf5e8-117">Чтобы разрешить запуск предыдущих версий рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="cf5e8-117">To enable starting previous versions of the workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
   
-###  <span data-ttu-id="cf5e8-118"><a name="BKMK_CreateProject"></a>Создание проекта CreateUpdateMaps</span><span class="sxs-lookup"><span data-stu-id="cf5e8-118"><a name="BKMK_CreateProject"></a> To create the CreateUpdateMaps project</span></span>  
+###  <a name="BKMK_CreateProject"></a><span data-ttu-id="cf5e8-118">Создание проекта CreateUpdateMaps</span><span class="sxs-lookup"><span data-stu-id="cf5e8-118">To create the CreateUpdateMaps project</span></span>  
   
 1.  <span data-ttu-id="cf5e8-119">Щелкните правой кнопкой мыши **WF45GettingStartedTutorial** в **обозревателе решений** и выберите **добавить**, **новый проект**.</span><span class="sxs-lookup"><span data-stu-id="cf5e8-119">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>  
   
@@ -233,7 +233,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="cf5e8-143"><a name="BKMK_StateMachine"></a>Обновление StateMachineNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="cf5e8-143"><a name="BKMK_StateMachine"></a> To update StateMachineNumberGuessWorkflow</span></span>  
+###  <a name="BKMK_StateMachine"></a><span data-ttu-id="cf5e8-143">Обновление StateMachineNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="cf5e8-143">To update StateMachineNumberGuessWorkflow</span></span>  
   
 1.  <span data-ttu-id="cf5e8-144">Добавьте `CreateStateMachineUpdateMap` в класс `Program` (или `Module1`).</span><span class="sxs-lookup"><span data-stu-id="cf5e8-144">Add a `CreateStateMachineUpdateMap` to the `Program` class (or `Module1`).</span></span>  
   
@@ -426,7 +426,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="cf5e8-151"><a name="BKMK_Flowchart"></a>Обновление FlowchartNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="cf5e8-151"><a name="BKMK_Flowchart"></a> To update FlowchartNumberGuessWorkflow</span></span>  
+###  <a name="BKMK_Flowchart"></a><span data-ttu-id="cf5e8-151">Обновление FlowchartNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="cf5e8-151">To update FlowchartNumberGuessWorkflow</span></span>  
   
 1.  <span data-ttu-id="cf5e8-152">Добавьте следующий метод `CreateFlowchartUpdateMethod` в класс `Program` (или `Module1`).</span><span class="sxs-lookup"><span data-stu-id="cf5e8-152">Add the following `CreateFlowchartUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="cf5e8-153">Этот метод аналогичен `CreateStateMachineUpdateMap`.</span><span class="sxs-lookup"><span data-stu-id="cf5e8-153">This method is similar to `CreateStateMachineUpdateMap`.</span></span> <span data-ttu-id="cf5e8-154">Он начинается с вызова `StartUpdate`, затем обновляет определение рабочего процесса блок-схемы и завершается сохранением схемы обновления и обновленного определения рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="cf5e8-154">It starts with a call to `StartUpdate`, updates the flowchart workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>  
   
@@ -540,7 +540,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="cf5e8-155"><a name="BKMK_Sequential"></a>Обновление SequentialNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="cf5e8-155"><a name="BKMK_Sequential"></a> To update SequentialNumberGuessWorkflow</span></span>  
+###  <a name="BKMK_Sequential"></a><span data-ttu-id="cf5e8-155">Обновление SequentialNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="cf5e8-155">To update SequentialNumberGuessWorkflow</span></span>  
   
 1.  <span data-ttu-id="cf5e8-156">Добавьте следующий метод `CreateSequentialUpdateMethod` в класс `Program` (или `Module1`).</span><span class="sxs-lookup"><span data-stu-id="cf5e8-156">Add the following `CreateSequentialUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="cf5e8-157">Этот метод аналогичен двум другим методам.</span><span class="sxs-lookup"><span data-stu-id="cf5e8-157">This method is similar to the other two methods.</span></span> <span data-ttu-id="cf5e8-158">Он начинается с вызова `StartUpdate`, затем обновляет определение рабочего процесса последовательности и завершается сохранением схемы обновления и обновленного определения рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="cf5e8-158">It starts with a call to `StartUpdate`, updates the sequential workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>  
   
@@ -620,7 +620,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="cf5e8-159"><a name="BKMK_CreateUpdateMaps"></a>Построение и запуск приложения CreateUpdateMaps</span><span class="sxs-lookup"><span data-stu-id="cf5e8-159"><a name="BKMK_CreateUpdateMaps"></a> To build and run the CreateUpdateMaps application</span></span>  
+###  <a name="BKMK_CreateUpdateMaps"></a><span data-ttu-id="cf5e8-159">Построение и запуск приложения CreateUpdateMaps</span><span class="sxs-lookup"><span data-stu-id="cf5e8-159">To build and run the CreateUpdateMaps application</span></span>  
   
 1.  <span data-ttu-id="cf5e8-160">Обновите метод `Main` и добавьте следующие три вызова методов.</span><span class="sxs-lookup"><span data-stu-id="cf5e8-160">Update the `Main` method and add the following three method calls.</span></span> <span data-ttu-id="cf5e8-161">Эти методы добавляются в следующие разделы.</span><span class="sxs-lookup"><span data-stu-id="cf5e8-161">These methods are added in the following sections.</span></span> <span data-ttu-id="cf5e8-162">Каждый метод обновляет соответствующий рабочий процесс угадывания числа и создает `DynamicUpdateMap`.</span><span class="sxs-lookup"><span data-stu-id="cf5e8-162">Each method updates the corresponding number guess workflow and creates a `DynamicUpdateMap` that describes the updates.</span></span>  
   
@@ -654,7 +654,7 @@ ms.lasthandoff: 12/02/2017
   
      <span data-ttu-id="cf5e8-166">После создания схем обновлений и изменения определений рабочего процесса необходимо построить обновленную сборку рабочих процессов с обновленными определениями.</span><span class="sxs-lookup"><span data-stu-id="cf5e8-166">Once the update maps are created and the workflow definitions updated, the next step is to build an updated workflow assembly containing the updated definitions.</span></span>  
   
-###  <span data-ttu-id="cf5e8-167"><a name="BKMK_BuildAssembly"></a>Чтобы построить обновленную сборку рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="cf5e8-167"><a name="BKMK_BuildAssembly"></a> To build the updated workflow assembly</span></span>  
+###  <a name="BKMK_BuildAssembly"></a><span data-ttu-id="cf5e8-167">Чтобы построить обновленную сборку рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="cf5e8-167">To build the updated workflow assembly</span></span>  
   
 1.  <span data-ttu-id="cf5e8-168">Откройте второй экземпляр [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cf5e8-168">Open a second instance of [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span></span>  
   
@@ -685,7 +685,7 @@ ms.lasthandoff: 12/02/2017
   
 12. <span data-ttu-id="cf5e8-185">Переименуйте **NumberGuessWorkflowActivities.dll** для **NumberGuessWorkflowActivities_v15.dll**и скопируйте его в **PreviousVersions** папку, созданную в [Как: размещения нескольких версий рабочего процесса Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span><span class="sxs-lookup"><span data-stu-id="cf5e8-185">Rename **NumberGuessWorkflowActivities.dll** to **NumberGuessWorkflowActivities_v15.dll**, and copy it to the **PreviousVersions** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>  
   
-###  <span data-ttu-id="cf5e8-186"><a name="BKMK_UpdateWorkflowVersionMap"></a>Обновление WorkflowVersionMap новыми версиями</span><span class="sxs-lookup"><span data-stu-id="cf5e8-186"><a name="BKMK_UpdateWorkflowVersionMap"></a> To update WorkflowVersionMap with the new versions</span></span>  
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a><span data-ttu-id="cf5e8-186">Обновление WorkflowVersionMap новыми версиями</span><span class="sxs-lookup"><span data-stu-id="cf5e8-186">To update WorkflowVersionMap with the new versions</span></span>  
   
 1.  <span data-ttu-id="cf5e8-187">Переключитесь на исходный экземпляр [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cf5e8-187">Switch back to the initial instance of [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span></span>  
   
@@ -1072,7 +1072,7 @@ ms.lasthandoff: 12/02/2017
   
 5.  <span data-ttu-id="cf5e8-195">Для сборки проекта нажмите CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="cf5e8-195">Press CTRL+SHIFT+B to build the project.</span></span>  
   
-###  <span data-ttu-id="cf5e8-196"><a name="BKMK_ApplyUpdate"></a>Для применения динамического обновления</span><span class="sxs-lookup"><span data-stu-id="cf5e8-196"><a name="BKMK_ApplyUpdate"></a> To apply the dynamic updates</span></span>  
+###  <a name="BKMK_ApplyUpdate"></a><span data-ttu-id="cf5e8-196">Для применения динамического обновления</span><span class="sxs-lookup"><span data-stu-id="cf5e8-196">To apply the dynamic updates</span></span>  
   
 1.  <span data-ttu-id="cf5e8-197">Щелкните правой кнопкой мыши **WF45GettingStartedTutorial** в **обозревателе решений** и выберите **добавить**, **новый проект**.</span><span class="sxs-lookup"><span data-stu-id="cf5e8-197">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>  
   
@@ -1447,7 +1447,7 @@ ms.lasthandoff: 12/02/2017
 <span data-ttu-id="cf5e8-261">**Проверка: SequentialNumberGuessWorkflow; Версии = 2.0.0.0** </span><span class="sxs-lookup"><span data-stu-id="cf5e8-261">**Inspecting: SequentialNumberGuessWorkflow; Version=2.0.0.0** </span></span>  
 <span data-ttu-id="cf5e8-262">**Нажмите любую клавишу для продолжения...**</span><span class="sxs-lookup"><span data-stu-id="cf5e8-262">**Press any key to continue . . .**</span></span>  
   
-###  <span data-ttu-id="cf5e8-263"><a name="BKMK_BuildAndRun"></a>Чтобы запустить приложение с помощью обновленных рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="cf5e8-263"><a name="BKMK_BuildAndRun"></a> To run the application with the updated workflows</span></span>  
+###  <a name="BKMK_BuildAndRun"></a><span data-ttu-id="cf5e8-263">Чтобы запустить приложение с помощью обновленных рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="cf5e8-263">To run the application with the updated workflows</span></span>  
   
 1.  <span data-ttu-id="cf5e8-264">Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **Назначить запускаемым проектом**.</span><span class="sxs-lookup"><span data-stu-id="cf5e8-264">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>  
   
@@ -1482,7 +1482,7 @@ ms.lasthandoff: 12/02/2017
 <span data-ttu-id="cf5e8-291">**Введите число от 1 до 10** </span><span class="sxs-lookup"><span data-stu-id="cf5e8-291">**Please enter a number between 1 and 10** </span></span>  
 <span data-ttu-id="cf5e8-292">**6-правильное число. Вы угадали число за 4 попытки.**</span><span class="sxs-lookup"><span data-stu-id="cf5e8-292">**6 is correct. You guessed it in 4 turns.**</span></span>  
   
-###  <span data-ttu-id="cf5e8-293"><a name="BKMK_StartPreviousVersions"></a>Чтобы разрешить запуск предыдущих версий рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="cf5e8-293"><a name="BKMK_StartPreviousVersions"></a> To enable starting previous versions of the workflows</span></span>  
+###  <a name="BKMK_StartPreviousVersions"></a><span data-ttu-id="cf5e8-293">Чтобы разрешить запуск предыдущих версий рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="cf5e8-293">To enable starting previous versions of the workflows</span></span>  
  <span data-ttu-id="cf5e8-294">Если больше нет рабочих процессов для обновления, можно изменить приложение `NumberGuessWorkflowHost`, чтобы разрешить запуск предыдущих версий рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="cf5e8-294">If you run out of workflows to update, you can modify the `NumberGuessWorkflowHost` application to enable starting previous versions of the workflows.</span></span>  
   
 1.  <span data-ttu-id="cf5e8-295">Дважды щелкните **WorkflowHostForm** в **обозревателе решений**и выберите **WorkflowType** поле со списком.</span><span class="sxs-lookup"><span data-stu-id="cf5e8-295">Double-click **WorkflowHostForm** in **Solution Explorer**, and select the **WorkflowType** combo box.</span></span>  

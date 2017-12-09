@@ -23,9 +23,8 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/22/2017
 ---
 # <a name="application-development"></a><span data-ttu-id="07bf2-102">Разработка приложений</span><span class="sxs-lookup"><span data-stu-id="07bf2-102">Application Development</span></span>
-<span data-ttu-id="07bf2-103"><a name="introduction"></a>
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]— Это платформа представления, который может использоваться для разработки следующих типов приложений:</span><span class="sxs-lookup"><span data-stu-id="07bf2-103"><a name="introduction"></a>
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] is a presentation framework that can be used to develop the following types of applications:</span></span>  
+<a name="introduction"></a>
+<span data-ttu-id="07bf2-103">[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]— Это платформа представления, который может использоваться для разработки следующих типов приложений:</span><span class="sxs-lookup"><span data-stu-id="07bf2-103">[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] is a presentation framework that can be used to develop the following types of applications:</span></span>  
   
 -   <span data-ttu-id="07bf2-104">автономные приложения (традиционные приложения [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], созданные как исполняемые сборки, которые устанавливаются и запускаются с клиентского компьютера);</span><span class="sxs-lookup"><span data-stu-id="07bf2-104">Standalone Applications (traditional style [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applications built as executable assemblies that are installed to and run from the client computer).</span></span>  
   

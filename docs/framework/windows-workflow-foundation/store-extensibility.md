@@ -117,7 +117,7 @@ ms.lasthandoff: 12/02/2017
     go  
     ```  
   
-##  <span data-ttu-id="99aa8-119"><a name="InstancePromotedProperties"></a>Представления [System.Activities.DurableInstancing.InstancePromotedProperties]</span><span class="sxs-lookup"><span data-stu-id="99aa8-119"><a name="InstancePromotedProperties"></a> [System.Activities.DurableInstancing.InstancePromotedProperties] view</span></span>  
+##  <a name="InstancePromotedProperties"></a><span data-ttu-id="99aa8-119">Представления [System.Activities.DurableInstancing.InstancePromotedProperties]</span><span class="sxs-lookup"><span data-stu-id="99aa8-119">[System.Activities.DurableInstancing.InstancePromotedProperties] view</span></span>  
   
 |<span data-ttu-id="99aa8-120">Имя столбца</span><span class="sxs-lookup"><span data-stu-id="99aa8-120">Column Name</span></span>|<span data-ttu-id="99aa8-121">Тип столбца</span><span class="sxs-lookup"><span data-stu-id="99aa8-121">Column Type</span></span>|<span data-ttu-id="99aa8-122">Описание</span><span class="sxs-lookup"><span data-stu-id="99aa8-122">Description</span></span>|  
 |-----------------|-----------------|-----------------|  
