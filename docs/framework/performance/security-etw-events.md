@@ -23,7 +23,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="security-etw-events"></a><span data-ttu-id="4d1e9-102">События безопасности (трассировка событий Windows)</span><span class="sxs-lookup"><span data-stu-id="4d1e9-102">Security ETW Events</span></span>
-<span data-ttu-id="4d1e9-103"><a name="top"></a> События безопасности создаются при проверке строгого имени и проверке Authenticode.</span><span class="sxs-lookup"><span data-stu-id="4d1e9-103"><a name="top"></a> Security events are raised during strong name verification and Authenticode verification.</span></span>  
+<a name="top"></a> <span data-ttu-id="4d1e9-103">События безопасности создаются при проверке строгого имени и проверке Authenticode.</span><span class="sxs-lookup"><span data-stu-id="4d1e9-103">Security events are raised during strong name verification and Authenticode verification.</span></span>  
   
  <span data-ttu-id="4d1e9-104">Эта категория состоит из следующих событий:</span><span class="sxs-lookup"><span data-stu-id="4d1e9-104">This category consists of the following events:</span></span>  
   

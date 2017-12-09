@@ -23,7 +23,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="jit-tracing-etw-events"></a><span data-ttu-id="6da98-102">События трассировки JIT-компилятора (трассировка событий Windows)</span><span class="sxs-lookup"><span data-stu-id="6da98-102">JIT Tracing ETW Events</span></span>
-<span data-ttu-id="6da98-103"><a name="top"></a> Эти события собирают сведения, относящиеся к успешному или неудачному встраиванию кода JIT и вызовам с префиксом tail в JIT.</span><span class="sxs-lookup"><span data-stu-id="6da98-103"><a name="top"></a> These events collect information relating to the success or failure of just-in-time (JIT) inlining and JIT tail calls.</span></span>  
+<a name="top"></a> <span data-ttu-id="6da98-103">Эти события собирают сведения, относящиеся к успешному или неудачному встраиванию кода JIT и вызовам с префиксом tail в JIT.</span><span class="sxs-lookup"><span data-stu-id="6da98-103">These events collect information relating to the success or failure of just-in-time (JIT) inlining and JIT tail calls.</span></span>  
   
  <span data-ttu-id="6da98-104">Существует две категории событий трассировки JIT:</span><span class="sxs-lookup"><span data-stu-id="6da98-104">JIT tracing events consist of the following two categories:</span></span>  
   

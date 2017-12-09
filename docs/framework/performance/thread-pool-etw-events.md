@@ -23,7 +23,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="thread-pool-etw-events"></a><span data-ttu-id="28486-102">События пула потоков (трассировка событий Windows)</span><span class="sxs-lookup"><span data-stu-id="28486-102">Thread Pool ETW Events</span></span>
-<span data-ttu-id="28486-103"><a name="top"></a> Эти события собирают сведения о рабочих потоках и потоках ввода-вывода.</span><span class="sxs-lookup"><span data-stu-id="28486-103"><a name="top"></a> These events collect information about worker and I/O threads.</span></span>  
+<a name="top"></a> <span data-ttu-id="28486-103">Эти события собирают сведения о рабочих потоках и потоках ввода-вывода.</span><span class="sxs-lookup"><span data-stu-id="28486-103">These events collect information about worker and I/O threads.</span></span>  
   
  <span data-ttu-id="28486-104">Имеется две группы событий пула потоков:</span><span class="sxs-lookup"><span data-stu-id="28486-104">There are two groups of thread pool events:</span></span>  
   
