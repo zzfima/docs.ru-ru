@@ -11,11 +11,11 @@ ms.assetid: 236d157d-37c0-4ee8-89fc-721e6c596325
 caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 633fe784b98bf67086581b82fb4b00cff28d5f5a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 661208662c022b2a3b9c5daae6b0425e46ea6501
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="threading-c"></a>Работа с потоками (C#)
 Потоки позволяют программе на C# осуществлять параллельную обработку, то есть вы можете выполнять несколько операций одновременно. Например, потоки можно использовать для отслеживания пользовательского ввода, выполнения фоновых задач и одновременной обработки нескольких потоков ввода.  
@@ -26,7 +26,7 @@ ms.lasthandoff: 10/18/2017
   
 -   Пространство имен <xref:System.Threading> платформы .NET Framework упрощает использование потоков.  
   
--   Потоки используют одни и те же ресурсы приложения. Дополнительные сведения см. в разделе [Использование потоков и работа с потоками](https://msdn.microsoft.com/library/e1dx6b2h).  
+-   Потоки используют одни и те же ресурсы приложения. Дополнительные сведения см. в разделе [Использование потоков и работа с потоками](../../../../../docs/standard/threading/using-threads-and-threading.md).  
   
  По умолчанию программа на языке C# имеет один поток. Но можно также создавать вспомогательные потоки и выполнять в них код параллельно основному. Эти потоки часто называются *рабочими потоками*.  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 10/18/2017
  Все классы или некоторые из них можно использовать для синхронизации работы нескольких потоков, но некоторые функции для потоков поддерживаются также и языком C#. Например [оператор lock](../../../../csharp/language-reference/keywords/lock-statement.md) дает возможность синхронизации за счет неявного использования класса <xref:System.Threading.Monitor>.  
   
 > [!NOTE]
->  Начиная с [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], многопоточное программирование значительно упростилось благодаря классам <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688), новым классам параллельной коллекции из пространства имен <xref:System.Collections.Concurrent?displayProperty=nameWithType> и новой модели программирования, которая вместо потоков использует концепцию задач. Дополнительные сведения см. в разделе [Параллельное программирование](https://msdn.microsoft.com/library/dd460693).  
+>  Начиная с [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], многопоточное программирование значительно упростилось благодаря классам <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688), новым классам параллельной коллекции из пространства имен <xref:System.Collections.Concurrent?displayProperty=nameWithType> и новой модели программирования, которая вместо потоков использует концепцию задач. Дополнительные сведения см. в разделе [Параллельное программирование](../../../../../docs/standard/parallel-programming/index.md).  
   
 ## <a name="related-topics"></a>См. также  
   
@@ -52,4 +52,4 @@ ms.lasthandoff: 10/18/2017
 |[Таймеры потоков (C#)](../../../../csharp/programming-guide/concepts/threading/thread-timers.md)|Описание запуска процедур в отдельных потоках через фиксированные промежутки времени.|  
 |[Группировка потоков в пул (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)|Описание использования пула рабочих потоков, управляемых системой.|  
 |[Практическое руководство. Использование пула потоков (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|Демонстрация синхронизированного использования нескольких потоков в пуле.|  
-|[Работа с потоками](https://msdn.microsoft.com/library/3e8s7xdd)|Описание реализации работы с потоками на платформе .NET Framework.|
+|[Работа с потоками](../../../../../docs/standard/threading/index.md)|Описание реализации работы с потоками на платформе .NET Framework.|
