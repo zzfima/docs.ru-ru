@@ -21,11 +21,11 @@ ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
 caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 64e01fdfc4951dc23cd7ce92941a367882b3b6bb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a7882614b9663d1c38f137f7a69054d5bbd50b19
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Знакомство с LINQ в Visual Basic
 Встроенные в язык запросы (LINQ) позволяют использовать запросы в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] и предоставляют простые, но эффективные средства для работы с любыми видами данных. Технология LINQ позволяет не отправлять запросы на обработку в базу данных и не разрабатывать отдельный синтаксис запросов для каждого типа искомых данных, а вводит запросы в состав языка [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Синтаксис запросов не зависит от типа данных.  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/21/2017
 |Поставщик|Описание|  
 |---|---|  
 |LINQ to Objects|Поставщик LINQ to Objects позволяет направлять запросы к коллекциям и массивам, которые находятся в памяти. Если объект поддерживает интерфейс <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601>, поставщик LINQ to Objects позволяет направлять к нему запросы.<br /><br /> Поставщик LINQ to Objects включается при импорте пространства имен <xref:System.Linq>, которое импортируется по умолчанию для всех проектов [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].<br /><br /> Дополнительные сведения о поставщик LINQ to Objects см. в разделе [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).|  
-|LINQ to SQL|Поставщик LINQ to SQL позволяет запрашивать и изменять данные в базе данных SQL Server. Это упрощает сопоставление объектной модели приложения с таблицами и объектами в базе данных.<br /><br /> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] упрощает работу с LINQ to SQL включением реляционного конструктора объектов (O/R-конструктора). Он используется для создания в приложении модели объекта, которая сопоставляется с объектами в базе данных. Реляционный конструктор объектов также предоставляет функциональные возможности сопоставления сохраненных процедур и функций <xref:System.Data.Linq.DataContext> объекта, который управляет связью с базой данных и сохраняет состояние для проверки оптимистического параллелизма.<br /><br /> Дополнительные сведения о поставщике LINQ to SQL см. в разделе [LINQ to SQL](https://msdn.microsoft.com/library/bb386976). Дополнительные сведения о реляционном конструкторе объектов см. в разделе [средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
+|LINQ to SQL|Поставщик LINQ to SQL позволяет запрашивать и изменять данные в базе данных SQL Server. Это упрощает сопоставление объектной модели приложения с таблицами и объектами в базе данных.<br /><br /> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] упрощает работу с LINQ to SQL включением реляционного конструктора объектов (O/R-конструктора). Он используется для создания в приложении модели объекта, которая сопоставляется с объектами в базе данных. Реляционный конструктор объектов также предоставляет функциональные возможности сопоставления сохраненных процедур и функций <xref:System.Data.Linq.DataContext> объекта, который управляет связью с базой данных и сохраняет состояние для проверки оптимистического параллелизма.<br /><br /> Дополнительные сведения о поставщике LINQ to SQL см. в разделе [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md). Дополнительные сведения о реляционном конструкторе объектов см. в разделе [средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
 |LINQ to XML|Поставщик LINQ to XML позволяет запрашивать и изменять XML. XML можно изменить в памяти, загрузить из файла и сохранить в файл.<br /><br /> Кроме того, поставщик LINQ to XML разрешает использовать литералы XML и свойств оси XML, что позволяет записывать XML непосредственно в код [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Дополнительные сведения см. в разделе [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
 |LINQ to DataSet|Поставщик LINQ to DataSet позволяет запрашивать и обновлять данные в [!INCLUDE[vstecado](~/includes/vstecado-md.md)] набора данных. Функции LINQ можно добавить в приложения, использующие наборы данных — это позволит упростить и расширить возможности составления запросов, статистической обработки и обновления данных в наборе данных.<br /><br /> Дополнительные сведения см. в разделе [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrIntroToLINQ#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_3.vb)]  
   
- Данный пример составляет допустимый запрос сам по себе, однако особенно эффективным запрос становится при добавлении нескольких предложений, уточняющих его результат. Например, предложение `Where` позволяет отфильтровать результат по одному или нескольким значениям. Каждое выражение запроса — это одна строка кода, так что предложения можно просто добавлять в конец запроса. Запрос можно разбить на несколько текстовых строк, чтобы сделать его более удобочитаемым. Для этого используется символ продолжения строки (_). В приведенном ниже примере кода показан пример запроса с предложением `Where`.  
+ Данный пример составляет допустимый запрос сам по себе, однако особенно эффективным запрос становится при добавлении нескольких предложений, уточняющих его результат. Например, предложение `Where` позволяет отфильтровать результат по одному или нескольким значениям. Каждое выражение запроса — это одна строка кода, так что предложения можно просто добавлять в конец запроса. Запрос можно разбить на несколько строк текста для улучшения читаемости с помощью символ подчеркивания (\_) символ продолжения строки. В приведенном ниже примере кода показан пример запроса с предложением `Where`.  
   
  [!code-vb[VbVbalrIntroToLINQ#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_4.vb)]  
   
@@ -173,7 +173,7 @@ ms.lasthandoff: 11/21/2017
 |[XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)|Описание возможностей XML в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], к которым можно делать запросы и которые позволяют включать XML в код [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] как объекты данных первого класса.|  
 |[Запросы](../../../../visual-basic/language-reference/queries/queries.md)|Содержит справочные сведения о предложениях запросов, которые доступны в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].|  
 |[Встроенный язык запросов LINQ](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)|Содержит общие сведения, рекомендации по программированию и примеры для LINQ.|  
-|[LINQ to SQL](https://msdn.microsoft.com/library/bb386976)|Содержит общие сведения, рекомендации по программированию и примеры для LINQ to SQL.|  
+|[LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)|Содержит общие сведения, рекомендации по программированию и примеры для LINQ to SQL.|  
 |[LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)|Содержит общие сведения, рекомендации по программированию и примеры для LINQ to Objects.|  
 |[LINQ to ADO.NET (Страница портала)](http://msdn.microsoft.com/library/dd7d3c6a-ff98-47e9-a1a7-2d4cfc42d150)|Содержит общие сведения, рекомендации по программированию и примеры для LINQ to [!INCLUDE[vstecado](~/includes/vstecado-md.md)].|  
 |[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)|Содержит общие сведения, рекомендации по программированию и примеры для LINQ to XML.|  
@@ -203,7 +203,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>См. также  
  [Встроенный язык запросов LINQ](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  [Общие сведения о LINQ to XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- [LINQ to DataSet Обзор](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [Общие сведения о LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
+ [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  [Средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
  [Методы DataContext (O/R-конструктор)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

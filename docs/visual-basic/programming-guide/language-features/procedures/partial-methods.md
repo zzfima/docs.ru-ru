@@ -20,11 +20,11 @@ ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8ebedd6f8173e3c349240d24ddaf16e4841f67a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 975a86e33eb5744f94cd58efb227bf52eb07c1e8
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="partial-methods-visual-basic"></a>Разделяемые методы (Visual Basic)
 Разделяемые методы позволяют разработчикам использовать пользовательскую логику в код. Обычно код является частью класса автоматически созданный конструктором. Разделяемые методы определяются в разделяемый класс, созданный генератор кода, и обычно используются для предоставления уведомления, что что-то был изменен. Они позволяют разработчику указать пользовательское поведение в ответ на изменение.  
@@ -83,5 +83,5 @@ End Sub
  [Подпрограммы](./sub-procedures.md)  
  [Необязательные параметры](./optional-parameters.md)  
  [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)  
- [Создание кода в LINQ to SQL](https://msdn.microsoft.com/library/bb399400)  
- [Добавление бизнес-логики с помощью разделяемых методов](https://msdn.microsoft.com/library/bb546176)
+ [Создание кода в LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
+ [Добавление бизнес-логики с использованием разделяемых методов](../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)

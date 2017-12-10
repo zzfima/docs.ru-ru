@@ -13,18 +13,18 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 03c64c9a300a92a86dfac1ed92c67be248e53219
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 31f458f884bb7d1aad64657244e2e0278d713c20
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="deployment-considerations-entity-framework"></a>Сведения о развертывании (Entity Framework)
 В этом разделе представлены сведения о развертывании приложений, использующих для доступа к данным платформу ADO.NET Entity Framework. Дополнительные сведения о платформе Entity Framework см. в разделе [Приступая к работе](../../../../../docs/framework/data/adonet/ef/getting-started.md).  
   
  Платформа Entity Framework предоставляет набор средств, интегрирующихся в среду Visual Studio и облегчающих разработку в ней. Дополнительные сведения см. в разделе [ADO.NET Entity Data Model Tools](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527). В этом разделе не описано использование специальных технологий для развертывания приложений, созданных на базе Entity Framework.  
   
- Среда Visual Studio предоставляет функции распространения и развертывания приложений, например функцию развертывания ClickOnce. Дополнительные сведения см. в разделе [развертывание приложений и компонентов](https://msdn.microsoft.com/library/wtzawcsz) в документации по Visual Studio.  
+ Среда Visual Studio предоставляет функции распространения и развертывания приложений, например функцию развертывания ClickOnce. Дополнительные сведения см. в разделе [развертывание приложений и компонентов](/visualstudio/deployment/deploying-applications-services-and-components) в документации по Visual Studio.  
   
  При развертывании приложения, использующего платформу Entity Framework, следует принимать во внимание следующие соображения.  
   
@@ -39,5 +39,5 @@ ms.lasthandoff: 11/21/2017
 -   Поскольку Entity Framework является компонентом платформы .NET Framework, она может распространяться вместе с приложением в соответствии с условиями лицензионного соглашения для платформы .NET Framework.  
   
 ## <a name="see-also"></a>См. также  
- [Платформа ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
+ [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
  [Вопросы разработки и развертывания](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

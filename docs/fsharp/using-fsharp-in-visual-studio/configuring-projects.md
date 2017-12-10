@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 8b2ed206-34e4-4256-a6ce-0c2499561165
-ms.openlocfilehash: d2a92f725c40443c8dc6af593d28deccd3ee88de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f56fed1e16b4de1d97766f37cb1c72297d5502d5
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="configuring-projects-in-visual-studio"></a>Настройка проектов в Visual Studio
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 |`Build`|[Построение &#40; страницы, конструктор проектов C# 35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Позволяет управлять как код компилируется.|
 |`Build Events`|[Построение &#40; события страницы, конструктор проектов C# 35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Можно указать команды, выполняемые до или после компиляции.|
 |`Debug`|[Страница "Отладка" в конструкторе проектов](https://msdn.microsoft.com/library/2wcdezs5.aspx)|Позволяет управлять выполнением приложения во время отладки. Сюда входят новые Командная строка и начальный каталог приложения является, а также особые, необходимо включить, такие как машинный код и SQL режимы отладки.|
-|`Reference Paths`|[Управление ссылками в проекте](https://msdn.microsoft.com/library/ez524kew.aspx)|Позволяет указать место для поиска сборок, от которого зависит данный код.|
+|`Reference Paths`|[Управление ссылками в проекте](/visualstudio/ide/managing-references-in-a-project)|Позволяет указать место для поиска сборок, от которого зависит данный код.|
 
 ## <a name="f-specific-settings"></a>F #-параметры
 В следующей таблице перечислены параметры, характерные для F #:

@@ -15,11 +15,11 @@ ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d9347f7771e0e86f9a19cbec94ef59dcf1bdb250
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 28ec54dc062d4fdea4836b0ecc8699982dace623
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>COM-взаимодействие в приложениях .NET Framework (Visual Basic)
 Если вы хотите использовать .NET Framework и COM-объектов в одном приложении, необходимо учитывать различия в расположении этих объектов в памяти. Объект .NET Framework располагается в управляемой памяти, памяти, управляемой средой CLR и при необходимости может быть перемещен средой выполнения. COM-объект находится в неуправляемой памяти и не планируется переместить в другое расположение в памяти. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]и [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] предоставляют средства для управления взаимодействием таких управляемых и неуправляемых компонентов. Дополнительные сведения об управляемом коде см. в разделе [общеязыковая среда выполнения](../../../standard/clr.md).  
@@ -35,7 +35,7 @@ ms.lasthandoff: 10/22/2017
  [Ошибка оболочки COM-взаимодействия](/cpp/misc/com-interop-wrapper-error)  
  Описание последствий и параметры, если система проектов не удается создать оболочку COM взаимодействия для конкретного компонента.  
   
- [Взаимодействие с неуправляемым кодом](https://msdn.microsoft.com/library/sd10k43k)  
+ [Взаимодействие с неуправляемым кодом](../../../../docs/framework/interop/index.md)  
  Краткое описание некоторых проблем взаимодействия между управляемым и неуправляемым кодом и ссылки для дальнейшего изучения.  
   
  [Oболочки COM](../../../framework/interop/com-wrappers.md)  

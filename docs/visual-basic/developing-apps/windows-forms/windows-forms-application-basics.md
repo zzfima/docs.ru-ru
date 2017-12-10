@@ -12,11 +12,11 @@ ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1c5355f10fba2d1d18bc514c93f31051781bed14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2082d8169dc325b86957e7a54c6e49304660aa94
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Основы разработки приложений Windows Forms (Visual Basic)
 Важной частью [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] является возможность создания приложений Windows Forms, выполняемых локально на пользовательских компьютерах. Visual Studio можно использовать для создания приложений и пользовательский интерфейс, с помощью Windows Forms. Приложение Windows Forms строится на основе классов из <xref:System.Windows.Forms> пространства имен.  
@@ -24,11 +24,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="designing-windows-forms-applications"></a>Приложения проектирование Windows Forms  
  Можно создать в Windows Forms и приложения служб Windows с [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Дополнительные сведения см. в следующих разделах:  
   
--   [Приступая к работе с Windows Forms](https://msdn.microsoft.com/library/ms229601.aspx). Предоставляет сведения о создании и программировании Windows Forms.  
+-   [Приступая к работе с Windows Forms](../../../../docs/framework/winforms/getting-started-with-windows-forms.md). Предоставляет сведения о создании и программировании Windows Forms.  
    
--   [Элементы управления Windows Forms](https://msdn.microsoft.com/library/ettb6e2a.aspx). Набор разделов, подробно описывающих использование элементов управления Windows Forms.  
+-   [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md). Набор разделов, подробно описывающих использование элементов управления Windows Forms.  
   
--   [Приложения служб Windows](https://msdn.microsoft.com/library/y817hyb6.aspx). Список разделов, в которых описаны способы создания службы Windows.  
+-   [Приложения служб Windows](../../../../docs/framework/windows-services/index.md). Список разделов, в которых описаны способы создания службы Windows.  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>Построение многофункциональных интерактивных пользовательских интерфейсов  
  Windows Forms — это компонент интеллектуальных клиентов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], набор управляемых библиотек для выполнения распространенных задач, таких как чтение и запись в файловой системе. В среде разработки, такие как [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], можно создать приложения Windows Forms, которые отображают сведения, запрашивают ввод от пользователей и обмениваются данными с удаленными компьютерами по сети.  
@@ -36,10 +36,10 @@ ms.lasthandoff: 11/21/2017
  В Windows Forms формы — это видимая поверхность, на которой отображается информация для пользователя. Вы часто Windows Forms строится путем помещения элементов управления в формах и написания кода для реагирования на действия пользователя, такие как щелчки мыши или нажатия клавиш. *Элемент управления* — это отдельный элемент пользовательского интерфейса, предназначенный для отображения или ввода данных.  
   
 ### <a name="events"></a>События  
- Когда пользователь выполняет что-то с формой или одним из ее элементов управления, создается событие. Приложение реагирует на эти события с помощью кода и обрабатывает события при их возникновении. Подробнее см. в разделе [Создание обработчиков событий в Windows Forms](https://msdn.microsoft.com/library/dacysss4.aspx).  
+ Когда пользователь выполняет что-то с формой или одним из ее элементов управления, создается событие. Приложение реагирует на эти события с помощью кода и обрабатывает события при их возникновении. Подробнее см. в разделе [Создание обработчиков событий в Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md).  
   
 ### <a name="controls"></a>Элементы управления  
- Windows Forms включает широкий набор элементов управления, которые можно размещать на формах: элементы управления, отображающие текстовые поля, кнопки, раскрывающиеся списки, переключатели и даже веб-страницы. Список всех элементов управления, которые можно использовать в форме, представлены в разделе [Элементы управления для использования в формах Windows Forms](https://msdn.microsoft.com/library/3xdhey7w.aspx). Если существующий элемент управления не удовлетворяет потребностям, в Windows Forms можно создать пользовательские элементы управления с помощью класса <xref:System.Windows.Forms.UserControl>.  
+ Windows Forms включает широкий набор элементов управления, которые можно размещать на формах: элементы управления, отображающие текстовые поля, кнопки, раскрывающиеся списки, переключатели и даже веб-страницы. Список всех элементов управления, которые можно использовать в форме, представлены в разделе [Элементы управления для использования в формах Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md). Если существующий элемент управления не удовлетворяет потребностям, в Windows Forms можно создать пользовательские элементы управления с помощью класса <xref:System.Windows.Forms.UserControl>.  
   
  В состав Windows Forms входят многофункциональные элементы пользовательского интерфейса, позволяющие воссоздавать возможности таких сложных приложений, как Microsoft Office. С помощью <xref:System.Windows.Forms.ToolStrip> и <xref:System.Windows.Forms.MenuStrip> элемента управления, можно создать панели инструментов и меню, содержащие текст и рисунки, подменю и другие элементы управления, такие как текстовые поля и поля со списком.  
   
@@ -53,9 +53,9 @@ ms.lasthandoff: 11/21/2017
 |Целевой тип|См.|  
 |--------|---------|  
 |Создайте новое приложение Windows Forms с помощью[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[Пошаговое руководство: Создание простого Windows Form](http://msdn.microsoft.com/en-us/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
-|Использование элементов управления в формах|[Практическое руководство. Добавление элементов управления в формы Windows Forms](https://msdn.microsoft.com/library/0h5y8567.aspx)|   
-|Создание рисунков с помощью<xref:System.Drawing>|[Приступая к программированию графики](https://msdn.microsoft.com/library/da0f23z7.aspx)|  
-|Создание пользовательских элементов управления|[Практическое руководство. Наследование класса UserControl](https://msdn.microsoft.com/library/00ctb4z0.aspx)|  
+|Использование элементов управления в формах|[Практическое руководство. Добавление элементов управления в формы Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
+|Создание рисунков с помощью<xref:System.Drawing>|[Приступая к программированию графики](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
+|Создание пользовательских элементов управления|[Практическое руководство. Наследование класса UserControl](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
   
 ## <a name="displaying-and-manipulating-data"></a>Отображение и обработка данных  
  Во многих приложениях нужно отображать данные из базы данных, XML-файла, веб-службы XML или другого источника данных. Windows Forms предоставляет гибкий элемент управления называется <xref:System.Windows.Forms.DataGridView> элемента управления для отображения таких табличных данных в традиционном формате строк и столбцов, чтобы каждый фрагмент данных занимает свою собственную ячейку. С помощью <xref:System.Windows.Forms.DataGridView> можно настроить внешний вид отдельных ячеек, зафиксировать строки и столбцы на своем месте и отображение сложных элементов управления внутри ячеек, помимо прочего.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
 |Целевой тип|См.|  
 |--------|---------|  
-|Используйте <xref:System.Windows.Forms.BindingSource> компонента|[Практическое руководство. Связывание элементов управления Windows Forms с компонентом BindingSource с помощью конструктора](https://msdn.microsoft.com/library/801dxw2t.aspx)|  
+|Используйте <xref:System.Windows.Forms.BindingSource> компонента|[Практическое руководство. Связывание элементов управления Windows Forms с компонентом BindingSource с помощью конструктора](../../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
 |Работать с [!INCLUDE[vstecado](~/includes/vstecado-md.md)] источники данных|[Практическое руководство. Сортировка и фильтрация данных ADO.NET с помощью компонента BindingSource в Windows Forms](https://msdn.microsoft.com/library/ya3sah92.aspx)|  
 |Используйте окно "Источники данных"|[Пошаговое руководство. Отображение данных на форме в приложении Windows](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
@@ -98,10 +98,10 @@ ms.lasthandoff: 11/21/2017
   
 |Целевой тип|См.|  
 |--------|---------|  
-|Печать содержимого формы|[Практическое руководство. Печать графических изображений в Windows Forms](https://msdn.microsoft.com/library/741a0ktc.aspx)<br /><br /> [Практическое руководство. Печать многостраничных текстовых файлов в Windows Forms](https://msdn.microsoft.com/library/cwbe712d.aspx)|   
-|Дополнительные сведения о безопасности форм Windows Forms|[Общие сведения о безопасности в Windows Forms](https://msdn.microsoft.com/library/90k49ccb.aspx)|  
+|Печать содержимого формы|[Практическое руководство. Печать графических изображений в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Практическое руководство. Печать многостраничных текстовых файлов в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|   
+|Дополнительные сведения о безопасности форм Windows Forms|[Общие сведения о безопасности в Windows Forms](../../../../docs/framework/winforms/security-in-windows-forms-overview.md)|  
   
 ## <a name="see-also"></a>См. также  
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
- [Общие сведения о Windows Forms](https://msdn.microsoft.com/library/8bxxy49h.aspx)  
+ [Общие сведения о Windows Forms](../../../../docs/framework/winforms/windows-forms-overview.md)  
  [Объект My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)
