@@ -12,17 +12,17 @@ ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
 caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: eb25f8e8664bf0c99fd19dd66031fcb5ba8dd799
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bcb5291737a9f4763f680daaf625c58d308423f8
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a><span data-ttu-id="777ef-102">Как: Создание объединения C/C++ с помощью атрибутов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="777ef-102">How to: Create a C/C++ Union by Using Attributes (Visual Basic)</span></span>
-<span data-ttu-id="777ef-103">С помощью атрибутов можно настраивать расположение структур в памяти.</span><span class="sxs-lookup"><span data-stu-id="777ef-103">By using attributes you can customize how structs are laid out in memory.</span></span> <span data-ttu-id="777ef-104">Например, можно создать так называемое объединение в C/C++ с помощью атрибутов `StructLayout(LayoutKind.Explicit)` и `FieldOffset`.</span><span class="sxs-lookup"><span data-stu-id="777ef-104">For example, you can create what is known as a union in C/C++ by using the `StructLayout(LayoutKind.Explicit)` and `FieldOffset` attributes.</span></span>  
+# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a><span data-ttu-id="b5fde-102">Как: Создание объединения C/C++ с помощью атрибутов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b5fde-102">How to: Create a C/C++ Union by Using Attributes (Visual Basic)</span></span>
+<span data-ttu-id="b5fde-103">С помощью атрибутов можно настраивать расположение структур в памяти.</span><span class="sxs-lookup"><span data-stu-id="b5fde-103">By using attributes you can customize how structs are laid out in memory.</span></span> <span data-ttu-id="b5fde-104">Например, можно создать так называемое объединение в C/C++ с помощью атрибутов `StructLayout(LayoutKind.Explicit)` и `FieldOffset`.</span><span class="sxs-lookup"><span data-stu-id="b5fde-104">For example, you can create what is known as a union in C/C++ by using the `StructLayout(LayoutKind.Explicit)` and `FieldOffset` attributes.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="777ef-105">Пример</span><span class="sxs-lookup"><span data-stu-id="777ef-105">Example</span></span>  
- <span data-ttu-id="777ef-106">В этом сегменте кода все поля объединения `TestUnion` начинаются с одного адреса в памяти.</span><span class="sxs-lookup"><span data-stu-id="777ef-106">In this code segment, all of the fields of `TestUnion` start at the same location in memory.</span></span>  
+## <a name="example"></a><span data-ttu-id="b5fde-105">Пример</span><span class="sxs-lookup"><span data-stu-id="b5fde-105">Example</span></span>  
+ <span data-ttu-id="b5fde-106">В этом сегменте кода все поля объединения `TestUnion` начинаются с одного адреса в памяти.</span><span class="sxs-lookup"><span data-stu-id="b5fde-106">In this code segment, all of the fields of `TestUnion` start at the same location in memory.</span></span>  
   
 ```vb  
 ' Add an Imports statement for System.Runtime.InteropServices.  
@@ -44,8 +44,8 @@ Structure TestUnion
 End Structure  
 ```  
   
-## <a name="example"></a><span data-ttu-id="777ef-107">Пример</span><span class="sxs-lookup"><span data-stu-id="777ef-107">Example</span></span>  
- <span data-ttu-id="777ef-108">Ниже приведен еще один пример, в котором поля начинаются с разных явно заданных адресов.</span><span class="sxs-lookup"><span data-stu-id="777ef-108">The following is another example where fields start at different explicitly set locations.</span></span>  
+## <a name="example"></a><span data-ttu-id="b5fde-107">Пример</span><span class="sxs-lookup"><span data-stu-id="b5fde-107">Example</span></span>  
+ <span data-ttu-id="b5fde-108">Ниже приведен еще один пример, в котором поля начинаются с разных явно заданных адресов.</span><span class="sxs-lookup"><span data-stu-id="b5fde-108">The following is another example where fields start at different explicitly set locations.</span></span>  
   
 ```vb  
 ' Add an Imports statement for System.Runtime.InteropServices.  
@@ -73,14 +73,14 @@ Structure TestExplicit
  End Structure  
 ```  
   
- <span data-ttu-id="777ef-109">Два целочисленных поля `i1` и `i2` используют те же адреса памяти, что и `lg`.</span><span class="sxs-lookup"><span data-stu-id="777ef-109">The two integer fields, `i1` and `i2`, share the same memory locations as `lg`.</span></span> <span data-ttu-id="777ef-110">Такое управление расположением структуры полезно при использовании вызова неуправляемого кода.</span><span class="sxs-lookup"><span data-stu-id="777ef-110">This sort of control over struct layout is useful when using platform invocation.</span></span>  
+ <span data-ttu-id="b5fde-109">Два целочисленных поля `i1` и `i2` используют те же адреса памяти, что и `lg`.</span><span class="sxs-lookup"><span data-stu-id="b5fde-109">The two integer fields, `i1` and `i2`, share the same memory locations as `lg`.</span></span> <span data-ttu-id="b5fde-110">Такое управление расположением структуры полезно при использовании вызова неуправляемого кода.</span><span class="sxs-lookup"><span data-stu-id="b5fde-110">This sort of control over struct layout is useful when using platform invocation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="777ef-111">См. также</span><span class="sxs-lookup"><span data-stu-id="777ef-111">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b5fde-111">См. также</span><span class="sxs-lookup"><span data-stu-id="b5fde-111">See Also</span></span>  
  <xref:System.Reflection>  
  <xref:System.Attribute>  
- [<span data-ttu-id="777ef-112">Руководство по программированию на Visual Basic</span><span class="sxs-lookup"><span data-stu-id="777ef-112">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)  
- [<span data-ttu-id="777ef-113">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="777ef-113">Attributes</span></span>](https://msdn.microsoft.com/library/5x6cd29c)  
- <span data-ttu-id="777ef-114">[Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md) (Отражение (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="777ef-114">[Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)</span></span>  
- [<span data-ttu-id="777ef-115">Атрибуты (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="777ef-115">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)  
- <span data-ttu-id="777ef-116">[Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Создание настраиваемых атрибутов (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="777ef-116">[Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)</span></span>  
- <span data-ttu-id="777ef-117">[Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Обращение к атрибутам с помощью отражения (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="777ef-117">[Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)</span></span>
+ [<span data-ttu-id="b5fde-112">Руководство по программированию на Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b5fde-112">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)  
+ [<span data-ttu-id="b5fde-113">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b5fde-113">Attributes</span></span>](../../../../../docs/standard/attributes/index.md)  
+ <span data-ttu-id="b5fde-114">[Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md) (Отражение (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="b5fde-114">[Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)</span></span>  
+ [<span data-ttu-id="b5fde-115">Атрибуты (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b5fde-115">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)  
+ <span data-ttu-id="b5fde-116">[Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Создание настраиваемых атрибутов (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="b5fde-116">[Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)</span></span>  
+ <span data-ttu-id="b5fde-117">[Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Обращение к атрибутам с помощью отражения (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="b5fde-117">[Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)</span></span>
