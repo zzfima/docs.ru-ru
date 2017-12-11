@@ -9,11 +9,11 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 2fdce1e131eaa0d6952b2910f73105f097487711
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 037d94452dd62c06fe6d8ac7aea1143f52b96d32
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Запуск консольных приложений в контейнерах Windows
 
@@ -59,7 +59,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="building-the-application"></a>Построение приложения
 Обычно консольные приложения распространяются с помощью установщика, через FTP или в рамках развертывания через общую папку. При развертывании в контейнер необходимо скомпилировать ресурсы и поместить их в промежуточное расположение, которое можно будет использовать при создании образа Docker.
 
-В скрипте *build.ps1* приложение компилируется с помощью [MSBuild](https://msdn.microsoft.com/library/dd393574.aspx), чем завершается этап сборки ресурсов. Для окончательного включения нужных ресурсов в MSBuild передаются некоторые параметры. Имя файла компилируемого проекта или решения, расположение выходных данных и, наконец, конфигурация (окончательная или отладочная).
+В скрипте *build.ps1* приложение компилируется с помощью [MSBuild](/visualstudio/msbuild/msbuild), чем завершается этап сборки ресурсов. Для окончательного включения нужных ресурсов в MSBuild передаются некоторые параметры. Имя файла компилируемого проекта или решения, расположение выходных данных и, наконец, конфигурация (окончательная или отладочная).
 
 В вызове `Invoke-MSBuild` `OutputPath` имеет значение **publish**, а `Configuration` — значение **Release**. 
 

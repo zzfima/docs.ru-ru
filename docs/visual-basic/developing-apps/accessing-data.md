@@ -11,11 +11,11 @@ ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: da2fb9171a6b09ad94cea62877445bcb77c521ee
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fd4dbc66f37325afa64b7bf9720cad23e08c6bfb
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Доступ к данным в приложениях Visual Basic
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] включает несколько новых возможностей для разработки приложений, обращающихся к данным. Формы с привязкой к данным для приложений Windows создаются путем перетаскивания элементов из [окна "Источники данных"](/visualstudio/data-tools/add-new-data-sources) на форму. Привязка элементов управления к данным осуществляется путем перетаскивания элементов из **окна "Источники данных"** на форму.  
@@ -30,11 +30,11 @@ ms.lasthandoff: 10/18/2017
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  Содержит ссылки на разделы, описывающие использование LINQ с Visual Basic.  
   
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/index.md)  
  Содержит сведения о [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]. Включает примеры программирования.  
   
  [Средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
- Содержит ссылки на разделы, посвященные созданию объектной модели [LINQ to SQL](https://msdn.microsoft.com/library/bb386976) в приложениях.  
+ Содержит ссылки на разделы, посвященные созданию объектной модели [LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/index.md) в приложениях.  
   
  [Работа с наборами данных в N-уровневых приложениях](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
  Содержит ссылки на разделы о создании многоуровневых приложений для работы с данными.  

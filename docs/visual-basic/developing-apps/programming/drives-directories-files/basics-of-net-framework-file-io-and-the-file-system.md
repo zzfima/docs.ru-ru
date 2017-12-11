@@ -18,11 +18,11 @@ ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
 caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4a148aa9b7dad357aeaa6f88ec11098418005719
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 53bd56647d04c40c44a240edcd084f0719c3d4aa
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Основы файлового ввода-вывода и файловой системы в .NET Framework (Visual Basic)
 Классы в пространстве имен <xref:System.IO> используются для работы с дисками, файлами и каталогами.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
 -   **Поиск**. Вы можете запрашивать и изменять положение в потоке.  
   
- Для получения дополнительной информации см. [Composing Streams](https://msdn.microsoft.com/library/e4y2dch9).  
+ Для получения дополнительной информации см. [Composing Streams](../../../../../docs/standard/io/composing-streams.md).  
   
 ## <a name="types-of-streams"></a>Типы потоков  
  В [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] поток представлен классом <xref:System.IO.Stream>, который образует абстрактный класс для всех других потоков. Невозможно непосредственно создать экземпляр класса <xref:System.IO.Stream>, но необходимо использовать один из реализуемых им классов.  
@@ -65,13 +65,13 @@ ms.lasthandoff: 11/21/2017
   
 |Задача|См. статью|
 |---|---|   
-|Чтение и запись файла данных|[Практическое руководство. Считывание из нового файла данных и запись в этот файл](https://msdn.microsoft.com/library/36b93480.aspx)|  
-|Чтение текста из файла|[Практическое руководство. Считывание текста из файла](https://msdn.microsoft.com/library/db5x7c0d.aspx)|  
-|Запись текста в файл|[Практическое руководство. Запись текста в файл](https://msdn.microsoft.com/library/6ka1wd3w.aspx)|  
-|Считывание символов из строки|[Практическое руководство. Считывание символов из строки](https://msdn.microsoft.com/library/9yyz8a6c.aspx)|  
-|Запись символов в строку|[Практическое руководство. Запись символов в строку](https://msdn.microsoft.com/library/z4kzt0dd.aspx)|  
-|Шифрование данных|[Шифрование данных](https://msdn.microsoft.com/library/as0w18af.aspx)|  
-|Расшифровка данных|[Расшифровка данных](https://msdn.microsoft.com/library/te15te69.aspx)|  
+|Чтение и запись файла данных|[Практическое руководство. Считывание из нового файла данных и запись в этот файл](../../../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Чтение текста из файла|[Практическое руководство. Считывание текста из файла](../../../../../docs/standard/io/how-to-read-text-from-a-file.md)|  
+|Запись текста в файл|[Практическое руководство. Запись текста в файл](../../../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Считывание символов из строки|[Практическое руководство. Считывание символов из строки](../../../../../docs/standard/io/how-to-read-characters-from-a-string.md)|  
+|Запись символов в строку|[Практическое руководство. Запись символов в строку](../../../../../docs/standard/io/how-to-write-characters-to-a-string.md)|  
+|Шифрование данных|[Шифрование данных](../../../../../docs/standard/security/encrypting-data.md)|  
+|Расшифровка данных|[Расшифровка данных](../../../../../docs/standard/security/decrypting-data.md)|  
   
 ## <a name="file-access-and-attributes"></a>Доступ к файлам и атрибуты  
  Вы можете управлять созданием, открытием файлов и их совместным использованием с перечислениями <xref:System.IO.FileAccess>, <xref:System.IO.FileMode> и <xref:System.IO.FileShare>, которые содержат флаги, используемые конструкторами класса <xref:System.IO.FileStream>. Например, когда вы открываете или создаете новый <xref:System.IO.FileStream>, перечисление <xref:System.IO.FileMode> позволяет указать, открывается ли файл для добавления, следует ли создать новый файл, если указанный файл не существует, будет ли перезаписан существующий файл и т. д.  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/21/2017
   
 |Целевой тип|См.|  
 |---|---|
-|Открытие файла журнала и добавление в него текста|[Практическое руководство. Открытие файла журнала и добавление в него данных](https://msdn.microsoft.com/library/3zc0w663.aspx)|  
+|Открытие файла журнала и добавление в него текста|[Практическое руководство. Открытие файла журнала и добавление в него данных](../../../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)|  
 |Определение атрибутов файла|<xref:System.IO.FileAttributes>|  
   
 ## <a name="file-permissions"></a>Разрешения файла  
@@ -95,19 +95,19 @@ ms.lasthandoff: 11/21/2017
   
 |Задача|См. статью|
 |---|---|  
-|Создание изолированного хранилища|[Практическое руководство. Получение хранилищ для изолированного хранения](https://msdn.microsoft.com/library/k48a6h13.aspx)|  
-|Перечисление изолированных хранилищ|[Практическое руководство. Перечисление хранилищ для изолированного хранилища](https://msdn.microsoft.com/library/c3dy613a.aspx)|  
-|Удаление изолированного хранилища|[Практическое руководство. Удаление хранилищ из области изолированного хранения](https://msdn.microsoft.com/library/5w71t104.aspx)|  
-|Создание файла или каталога в изолированном хранилище|[Практическое руководство. Создание файлов и каталогов в изолированном хранилище](https://msdn.microsoft.com/library/6h2ws3ft.aspx)|  
-|Поиск файла в изолированном хранилище|[Практическое руководство. Поиск существующих файлов и каталогов в изолированном хранилище](https://msdn.microsoft.com/library/zd5e2z84.aspx)|  
-|Чтение или запись файла в изолированном хранилище|[Практическое руководство. Считывание из файлов и запись в файлы в изолированном хранилище](https://msdn.microsoft.com/library/xf96a1wz.aspx)|  
-|Удаление файла или каталога в изолированном хранилище|[Практическое руководство. Удаление файлов и каталогов из изолированного хранилища](https://msdn.microsoft.com/library/kx3852wf.aspx)|  
+|Создание изолированного хранилища|[Практическое руководство. Получение хранилищ для изолированного хранения](../../../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
+|Перечисление изолированных хранилищ|[Практическое руководство. Перечисление хранилищ для изолированного хранилища](../../../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
+|Удаление изолированного хранилища|[Практическое руководство. Удаление хранилищ из области изолированного хранения](../../../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|  
+|Создание файла или каталога в изолированном хранилище|[Практическое руководство. Создание файлов и каталогов в изолированном хранилище](../../../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
+|Поиск файла в изолированном хранилище|[Практическое руководство. Поиск существующих файлов и каталогов в изолированном хранилище](../../../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
+|Чтение или запись файла в изолированном хранилище|[Практическое руководство. Считывание из файлов и запись в файлы в изолированном хранилище](../../../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
+|Удаление файла или каталога в изолированном хранилище|[Практическое руководство. Удаление файлов и каталогов из изолированного хранилища](../../../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
   
 ## <a name="file-events"></a>События файлов  
  Компонент <xref:System.IO.FileSystemWatcher> позволяет наблюдать за изменениями в файлах и каталогах в локальной системе или на любом компьютере, к которому имеется доступ по сети. Например, при изменении файла можно отправить пользователю соответствующее оповещение. При внесении изменений выдается одно или несколько событий, которые сохраняются в буфере и передаются в компонент <xref:System.IO.FileSystemWatcher> для обработки.  
   
 ## <a name="see-also"></a>См. также  
- [Составление потоков](https://msdn.microsoft.com/library/e4y2dch9)  
+ [Составление потоков](../../../../../docs/standard/io/composing-streams.md)  
  [Файловый и потоковый ввод-вывод](https://msdn.microsoft.com/library/k3352a4t)  
  [Асинхронный файловый ввод-вывод](https://msdn.microsoft.com/library/kztecsys)  
  [Классы, используемые при файловом вводе-выводе в .NET Framework, и файловая система (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

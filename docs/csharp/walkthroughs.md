@@ -12,11 +12,11 @@ ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
 caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cba6852f129e0c62a7ece97f18b6f67c423c608c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92aef08636b7bba3a61367f8a707c82c75f8d3d3
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="c-walkthroughs"></a>Пошаговые руководства по C#
 В пошаговых руководствах содержатся инструкции по выполнению стандартных сценариев, что делает их удобным инструментом для начала изучения продукта в целом или его отдельных возможностей.  
@@ -37,19 +37,19 @@ ms.lasthandoff: 11/21/2017
  [Создание и использование динамических объектов (C# и Visual Basic)](../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
  Описание процесса создания пользовательского объекта, который динамически предоставляет содержимое текстового файла, и создание проекта, использующего библиотеку `IronPython`.  
    
- [Создание составного элемента управления с помощью C#](https://msdn.microsoft.com/library/a6h7e207.aspx)  
+ [Создание составного элемента управления с помощью C#](../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
  Описание процесса создания простого составного элемента управления и расширение его функциональных возможностей через наследование.  
   
- [Создание элемента управления Windows Forms, в котором используются преимущества функций Visual Studio, применяемых во время разработки](https://msdn.microsoft.com/library/35ea88wb.aspx)  
+ [Создание элемента управления Windows Forms, в котором используются преимущества функций Visual Studio, применяемых во время разработки](../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
  Описание создания пользовательского конструктора для пользовательского элемента управления.  
   
- [Наследование элементов управления Windows Forms с помощью Visual C#](https://msdn.microsoft.com/library/5h0k2e6x.aspx)  
+ [Наследование элементов управления Windows Forms с помощью Visual C#](../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
  Описание способа создания простого наследуемого элемента управления Button. Эта кнопка наследует функциональные возможности от стандартной кнопки Windows Forms и предоставляет настраиваемый элемент.  
   
- [Отладка пользовательских элементов управления Windows Forms во время разработки](https://msdn.microsoft.com/library/5ytx0z24.aspx)  
+ [Отладка пользовательских элементов управления Windows Forms во время разработки](../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
  Описание процедуры отладки поведения пользовательского элемента управления во время разработки.
 
- [Выполнение типичных задач с помощью смарт-тегов в элементах управления Windows Forms](https://msdn.microsoft.com/library/xhz359sc.aspx)  
+ [Выполнение типичных задач с помощью смарт-тегов в элементах управления Windows Forms](../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
  Описание некоторых наиболее типичных задач, таких как добавление или удаление вкладки в элементе управления `TabControl`, закрепление элемента управления в родительском элементе и изменение ориентации элемента управления `SplitContainer`.  
   
  [Написание запросов на C# (LINQ)](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  

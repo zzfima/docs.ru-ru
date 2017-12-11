@@ -12,16 +12,16 @@ ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: abb2291ce797f3630eebd24e563994a2d86242bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 772d3e59dbc84f77dc6f94e7cc60a89c7888551a
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Классы, используемые при файловом вводе-выводе в .NET Framework, и файловая система (Visual Basic)
 В приведенных ниже таблицах перечислены классы, обычно используемые для файлового ввода-вывода в .NET Framework. Они разделены на классы файлового ввода-вывода, классы для создания потоков и классы для чтения и записи в поток.  
   
- Документацию по [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] и более полный список см. в разделе [Общие сведения о библиотеке классов](https://msdn.microsoft.com/library/hfa3fa08).  
+ Документацию по [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] и более полный список см. в разделе [Общие сведения о библиотеке классов](../../../../../docs/standard/class-library-overview.md).  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Основные классы ввода-вывода для файлов, каталогов и дисков  
  В приведенной ниже таблице перечислены и описаны основные классы, используемые для файлового ввода-вывода.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Записывает символы в `String`. Вывод может быть либо потоком в любой кодировке, либо `String`.|  
   
 ## <a name="see-also"></a>См. также  
- [Составление потоков](https://msdn.microsoft.com/library/e4y2dch9)  
+ [Составление потоков](../../../../../docs/standard/io/composing-streams.md)  
  [Файловый и потоковый ввод-вывод](https://msdn.microsoft.com/library/k3352a4t)  
  [Асинхронный файловый ввод-вывод](https://msdn.microsoft.com/library/kztecsys)  
  [Основы файлового ввода-вывода и файловой системы в .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)
