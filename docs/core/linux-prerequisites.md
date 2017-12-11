@@ -69,7 +69,7 @@ ms.lasthandoff: 10/18/2017
 Для дистрибутивов Ubuntu должны быть установлены следующие библиотеки:
 
 * libunwind8
-* liblttng ust0
+* liblttng-ust0
 * libcurl3
 * libssl1.0.0
 * libuuid1
