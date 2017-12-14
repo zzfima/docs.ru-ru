@@ -14,11 +14,11 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1b6d24356841e8b385bef47bcba0e5694b48240
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 543e6496c826c864dc77e50fd096fc4cb43f600e
+ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Пошаговое руководство. Создание кнопки с помощью XAML
 Цель данного руководства — сведения о создании анимированной кнопки для использования в [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] приложения. В этом пошаговом руководстве используется стиль и шаблон для создания ресурса пользовательской кнопки, которая позволяет повторно использовать код и разделять логику от объявления кнопки. В этом пошаговом руководстве приведено полностью в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/21/2017
     </Application>  
     ```  
   
-     Область ресурса определяется где определить ресурс. Определение ресурсов в `Application.Resoureses` в файле app.xaml файл позволяет ресурса для использования в любом месте в приложении. Дополнительные сведения об определении области ресурсов см. в разделе [ресурсов XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+     Область ресурса определяется где определить ресурс. Определение ресурсов в `Application.Resources` в файле app.xaml файл позволяет ресурса для использования в любом месте в приложении. Дополнительные сведения об определении области ресурсов см. в разделе [ресурсов XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
 2.  **Создание стиля и определять значения свойств основных с ним:** добавьте следующую разметку, чтобы `Application.Resources` блока. Эта разметка создает <xref:System.Windows.Style> , применяется для всех кнопок в приложении, устанавливая <xref:System.Windows.FrameworkElement.Width%2A> кнопок на 90 и <xref:System.Windows.FrameworkElement.Margin%2A> до 10:  
   
@@ -328,7 +328,7 @@ ms.lasthandoff: 11/21/2017
   
      Нажмите клавишу F5 для запуска приложения и выберите одну из кнопок. Обратите внимание, что кнопка остается выделенной после нажатия, поскольку она по-прежнему имеет фокус. Если щелкнуть еще одну кнопку «Создать» получает фокус, во время его утрачивает последним.  
   
-4.  **Добавление анимации для** <xref:System.Windows.UIElement.MouseEnter> **и** <xref:System.Windows.UIElement.MouseLeave> **:** Далее будет добавлена анимация к триггерам.   Добавьте следующую разметку в любое место `ControlTemplate.Triggers` блока.  
+4.  **Добавление анимации для** <xref:System.Windows.UIElement.MouseEnter> **и** <xref:System.Windows.UIElement.MouseLeave> **:** Далее будет добавлена анимация к триггерам. Добавьте следующую разметку в любое место `ControlTemplate.Triggers` блока.  
   
     ```  
     <!-- Animations that start when mouse enters and leaves button. -->  
