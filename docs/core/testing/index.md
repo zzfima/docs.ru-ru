@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-ms.openlocfilehash: 666c06b236ad870c5c683749ab57d4488b4b8a39
-ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+ms.openlocfilehash: 780c2655b6d6a660939fb79ea58bec463ec97aa9
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Модульное тестирование в .NET Core и .NET Standard
 
@@ -34,15 +34,18 @@ ms.lasthandoff: 12/01/2017
 
 Дополнительные сведения о модульном тестировании в проектах .NET Core:
 
-Поддержка проектов модульных тестов для .NET Core: [C#](../../csharp/index.md), [F #](../../fsharp/index.md) и [Visual Basic](../../visual-basic/index.md). Также вы можете выбрать между [xUnit](http://xunit.github.io) и [MSTest](https://github.com/Microsoft/vstest-docs).
+Поддержка проектов модульных тестов для .NET Core: [C#](../../csharp/index.md), [F #](../../fsharp/index.md) и [Visual Basic](../../visual-basic/index.md). Вы можете также выбрать [xUnit](http://xunit.github.io), [NUnit](http://nunit.org) или [MSTest](https://github.com/Microsoft/vstest-docs).
 
 Дополнительные сведения об этих комбинациях см. в этих пошаговых руководствах:
 
 * Создание модульных тестов с помощью [*XUnit*, *C#* и .NET Core CLI](unit-testing-with-dotnet-test.md).
+* Создание модульных тестов с помощью [*NUnit*, *C#* и интерфейса командной строки .NET Core](unit-testing-with-nunit.md).
 * Создание модульных тестов с помощью [*MSTest*, *C#* и .NET Core CLI](unit-testing-with-mstest.md).
 * Создание модульных тестов с помощью [*XUnit*, *F#* и .NET Core CLI](unit-testing-fsharp-with-dotnet-test.md).
+* Создание модульных тестов с помощью [*NUnit*, *F#* и интерфейса командной строки .NET Core](unit-testing-fsharp-with-nunit.md).
 * Создание модульных тестов с помощью [*MSTest*, *F#* и .NET Core CLI](unit-testing-fsharp-with-mstest.md).
 * Создание модульных тестов с помощью [*XUnit*, *Visual Basic* и .NET Core CLI](unit-testing-visual-basic-with-dotnet-test.md).
+* Создание модульных тестов с помощью [*NUnit*, *Visual Basic* и интерфейса командной строки .NET Core](unit-testing-visual-basic-with-nunit.md).
 * Создание модульных тестов с помощью [*MSTest*, *Visual Basic* и .NET Core CLI](unit-testing-visual-basic-with-mstest.md).
 
 Вы можете выбрать разные языки для библиотек классов и модульных тестов. Дополнительные сведения см. в пошаговых руководствах выше (вы можете комбинировать их).
