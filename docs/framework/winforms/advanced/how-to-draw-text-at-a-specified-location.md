@@ -15,17 +15,17 @@ helpviewer_keywords:
 - text [Windows Forms], drawing at specified locations [Windows Forms]
 - drawing text
 - drawing text [Windows Forms], specified locations [Windows Forms]
-- Windows Forms, drawing text a a specified location
+- Windows Forms, drawing text at a specified location
 ms.assetid: 60816423-1c38-465e-980d-2c2b64d74086
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aab9570b98caec5b3975a5b3ff6f1e62d4ad303b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe6e8563b19ef18b89ad970f3ca35bf5f0782a32
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="how-to-draw-text-at-a-specified-location"></a>Практическое руководство. Рисование текста в указанной позиции
 При выполнении пользовательской отрисовки, можно нарисовать текст в одной горизонтальной строки, начиная с заданной точки. Можно рисовать текст таким образом, используя <xref:System.Drawing.Graphics.DrawString%2A> перегруженным методом <xref:System.Drawing.Graphics> класс, который принимает <xref:System.Drawing.Point> или <xref:System.Drawing.PointF> параметра. <xref:System.Drawing.Graphics.DrawString%2A> Также требует <xref:System.Drawing.Brush> и<xref:System.Drawing.Font>  

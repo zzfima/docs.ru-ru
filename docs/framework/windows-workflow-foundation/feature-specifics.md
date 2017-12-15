@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 369c8738addeb083b42063161957cf9f97e2cd1c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: e60ed6fb2fb85faa1d2d744bf29e40d3eaa639c3
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Особенности возможностей Windows Workflow Foundation
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] добавляет ряд функциональных возможностей в Windows Workflow Foundation. В этом документе описываются некоторые новые функциональные возможности и приведены подробные сведения о сценариях, в которых они могут оказаться полезными.  
@@ -82,7 +82,7 @@ ms.lasthandoff: 12/02/2017
   
 -   Примером корреляции для группирования сообщений является корреляция по схеме «запрос-ответ», группирующая сообщения.  
   
-    -   Для действия <xref:System.ServiceModel.Activities.Receive> щелкните свойство <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> и добавьте <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> с помощью типа CorrelationHandle, созданного в первом шаге выше.  
+    -   На <xref:System.ServiceModel.Activities.Receive> действия, если щелкнуть <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> свойство и добавьте <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> используйте дескриптор CorrelationHandle, созданный на первом шаге.  
   
     -   Создание <xref:System.ServiceModel.Activities.SendReply> действия, щелкнув правой кнопкой мыши <xref:System.ServiceModel.Activities.Receive> и нажав кнопку «Создать SendReply». Вставьте его в рабочий процесс после действия <xref:System.ServiceModel.Activities.Receive>.  
   
@@ -182,7 +182,7 @@ ms.lasthandoff: 12/02/2017
   
     -   [Обработка ошибок в действии блок-схемы с помощью TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
   
-    -   [Сценарий конечного автомата с помощью сочетания действий FlowChart и Pick](../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
+    -   [Сценарий конечного автомата с использованием сочетания действий FlowChart и Pick](../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
   
     -   [Процесс найма](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
   
@@ -239,7 +239,7 @@ ms.lasthandoff: 12/02/2017
   
 -   Образцы:  
   
-    -   [Метод InvokeMethod](../../../docs/framework/windows-workflow-foundation/samples/invokemethod.md)  
+    -   [InvokeMethod](../../../docs/framework/windows-workflow-foundation/samples/invokemethod.md)  
   
 -   Документация по конструктору: [конструктора операций InvokeMethod](/visualstudio/workflow-designer/invokemethod-activity-designer)  
   

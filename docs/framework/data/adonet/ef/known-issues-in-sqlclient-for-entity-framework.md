@@ -13,11 +13,11 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 67d4c4f08661bbf2febefead64e62c8a84045f47
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ddc93c7d707b9569bd2ea1e2c09889d68ff056bf
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Известные проблемы SqlClient для Entity Framework
 В данном разделе описаны известные проблемы, связанные с поставщиком данных .NET Framework для SQL Server (SqlClient).  
@@ -58,7 +58,7 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
  Некоторые варианты поведения базы данных зависят от уровня совместимости, установленного на базе данных. Если для атрибута `ProviderManifestToken` установлено значение 2005 и используется SQL Server версии SQL Server, а для уровня совместимости базы данных установлено значение «80» (SQL Server 2000), сформированный запрос [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] будет нацелен на SQL Server 2005, но может не выполниться, как ожидается, вследствие установки уровня совместимости. Например, если имя столбца в списке ORDER BY совпадает с именем столбца в селекторе, то можно потерять данные об упорядочивании.  
   
 ## <a name="nested-queries-in-projection"></a>Вложенные запросы в проекции  
- Вложенные запросы в предложении проекции могут быть переведены в запросы декартовых произведений на сервере. На некоторых внутренних серверах, включающих SLQ Server, это может привести к значительному увеличению таблицы TempDB. Это может снизить производительность сервера.  
+ Вложенные запросы в предложении проекции могут быть переведены в запросы декартовых произведений на сервере. На некоторых внутренних серверах, включая SLQ Server это может вызвать таблицы TempDB получить достаточно большим. Это может снизить производительность сервера.  
   
  Далее приведен пример вложенного запроса в предложении проекции:  
   
@@ -71,4 +71,4 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
   
 ## <a name="see-also"></a>См. также  
  [SqlClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
- [Рекомендации в LINQ to Entities и известные проблемы](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
+ [Рекомендации и известные проблемы в LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)

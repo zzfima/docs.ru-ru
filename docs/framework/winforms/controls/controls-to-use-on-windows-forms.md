@@ -16,11 +16,11 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 80cc1418418518efdccbb6dc0429b1ac61b56420
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7565d688c6aa177ec65918e72670a64d7eec7e1a
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Элементы управления для использования в формах Windows Forms
 Ниже приведен алфавитный список элементов управления и компонентов, используемых в формах Windows Forms. Помимо элементов управления Windows Forms, описанных в этом разделе, в формы Windows Forms можно добавлять элементы управления ActiveX и пользовательские элементы управления. Если вам не удается найти нужный элемент управления в этом списке, вы можете создать свой собственный. См. раздел [Создание элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Дополнительные сведения о выборе необходимого элемента управления см. в разделе [Функциональная классификация элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
@@ -83,9 +83,8 @@ ms.lasthandoff: 10/18/2017
  [Компонент ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md)  
  Отображает сведения об ошибке для пользователя в фоновом режиме.  
   
- Класс FileDialog  
- Предоставляет функциональные возможности базового класса для диалоговых окон открытия и сохранения файлов.  
-  
+ [Класс FileDialog](../../../../docs/framework/winforms/controls/filedialog-class.md) предоставляет функциональность базового класса для диалоговых окон файлов.
+
  [Элемент управления FlowLayoutPanel](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)  
  Представляет панель, которая динамически располагает содержимое по горизонтали или вертикали.  
   
@@ -173,8 +172,7 @@ ms.lasthandoff: 10/18/2017
  [Компонент SaveFileDialog](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)  
  Служит для выбора сохраняемых файлов и места их сохранения.  
   
- Класс SoundPlayer  
- Упрощает добавление звуков в приложениях.  
+ [Класс SoundPlayer](../../../../docs/framework/winforms/controls/soundplayer-class.md) позволяет облегчить добавление звуков в приложениях.
   
  [Элемент управления SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
  Позволяет пользователю изменять размер закрепленного элемента управления.  

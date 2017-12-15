@@ -12,11 +12,11 @@ ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f29ed78062337c7036ada2405fa610ff1f883feb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5809e8148e7ac426b876ad11948878ee0bfcd016
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="shape-of-wordprocessingml-documents-visual-basic"></a>Форма документов WordprocessingML (Visual Basic)
 Этот раздел позволяет ознакомиться с формой XML документов WordprocessingML.  
@@ -24,7 +24,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="microsoft-office-formats"></a>Форматы Microsoft Office  
  Собственным форматом файлов для выпуска 2007 системы Microsoft Office является Office Open XML (который обычно называют Open XML). Open XML - это формат на основе XML, определенный стандартом Ecma, который в настоящее время проходит стандартизацию в организации ISO-IEC. Язык разметки для файлов обработки текста в системе Open XML называется WordprocessingML. В этом учебнике в качестве входных данных для примеров используются исходные файлы WordprocessingML.  
   
- При использовании Microsoft Office 2003 документы можно сохранять в формате Office Open XML, если установлен пакет обеспечения совместимости Microsoft Office Compatibility Pack для форматов Word, Excel и PowerPoint 2007.  
+ При использовании Microsoft Office 2003, если установлен пакет совместимости Microsoft Office для Word, Excel и PowerPoint 2007 форматах можно сохранять документы в формат Office Open XML.  
   
 ## <a name="the-shape-of-wordprocessingml-documents"></a>Форма документов WordprocessingML  
  Прежде всего необходимо понять, какую форму имеют документы WordprocessingML. Документ WordprocessingML содержит элемент body (с именем `w:body`), который включает абзацы документа. Каждый абзац содержит один или несколько текстовых периодов (с именем `w:r`). Каждый текстовый период содержит один или несколько текстовых фрагментов (с именем `w:t`).  
