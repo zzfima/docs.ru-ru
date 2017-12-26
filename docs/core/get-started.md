@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
-ms.openlocfilehash: 45b361a40148c287511fafe25de4000c1dd54102
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1800eb5c69e2436d89f4abd3b519902c5724e411
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="get-started-with-net-core"></a>Начало работы с .NET Core
 
@@ -25,9 +25,9 @@ ms.lasthandoff: 10/18/2017
 
 Чтобы приступить к разработке приложений .NET Core, воспользуйтесь следующими пошаговыми учебниками.
 
-* [Создание приложения Hello World на C# с помощью .NET Core в Visual Studio 2017](./tutorials/with-visual-studio.md) — сведения о сборке, отладке и публикации простого консольного приложения .NET Core с помощью C# и Visual Studio 2017.
+* [Создание приложения Hello World на C# с помощью .NET Core в Visual Studio 2017](./tutorials/with-visual-studio.md) — сведения о сборке, отладке и публикации простого консольного приложения .NET Core с помощью C# и Visual Studio 2017.
 * [Создание библиотеки классов с помощью C# и .NET Core в Visual Studio 2017](./tutorials/library-with-visual-studio.md) — сведения о сборке библиотеки классов, написанной на C# с помощью Visual Studio 2017.
-* [Создание приложения Hello World с помощью .NET Core в Visual Studio 2017](./tutorials/vb-with-visual-studio.md) — сведения о сборке, отладке и публикации простого консольного приложения .NET Core с помощью Visual Basic и Visual Studio 2017. 
+* [Создание приложения Hello World с помощью .NET Core в Visual Studio 2017](./tutorials/vb-with-visual-studio.md) — сведения о сборке, отладке и публикации простого консольного приложения .NET Core с помощью Visual Basic и Visual Studio 2017. 
 * [Создание библиотеки классов с помощью Visual Basic и .NET Core в Visual Studio 2017](./tutorials/vb-library-with-visual-studio.md) — сведения о сборке библиотеки классов, написанной на Visual Basic с помощью Visual Studio 2017.
 * [Начало работы с Visual Studio Code с использованием языка C# и платформы .NET Core в Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core). В этом видеоролике на канале [Channel9](https://channel9.msdn.com) показано, как установить и использовать [Visual Studio Code](https://www.visualstudio.com/products/code-vs), упрощенный кроссплатформенный редактор кода от корпорации Майкрософт, для создания первого консольного приложения в .NET Core.
 * [Начало работы с .NET Core и Visual Studio 2017](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017) — этот видеоролик на канале [Channel9](https://channel9.msdn.com) описывает, как установить и использовать [Visual Studio 2017](https://www.visualstudio.com/) — полнофункциональную интегрированную среду разработки от Майкрософт — для создания первого кроссплатформенного консольного приложения в .NET Core.
@@ -37,14 +37,14 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="linux"></a>Linux
 
-Установите .NET Core на [Linux](https://www.microsoft.com/net/core#linuxredhat).
+Установите .NET Core в [Linux](https://www.microsoft.com/net/core#linuxredhat).
 
 Чтобы приступить к разработке приложений .NET Core, воспользуйтесь следующими пошаговыми учебниками.
 
 * [Начало работы с .NET Core с помощью командной строки](tutorials/using-with-xplat-cli.md). Используйте любой редактор кода для работы с [кроссплатформенным интерфейсом командной строки (CLI) .NET Core](tools/index.md).
 * [Начало работы с Visual Studio Code с использованием языка C# и платформы .NET Core в Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu). В этом видеоролике на канале [Channel9](https://channel9.msdn.com) показано, как установить и использовать [Visual Studio Code](https://code.visualstudio.com/), упрощенный кроссплатформенный редактор кода от корпорации Майкрософт, для создания первого консольного приложения .NET Core в Ubuntu 14.04.
 
-В разделе [предварительные требования для разработки Linux](linux-prerequisites.md) список поддерживаемых версий и дистрибутивы Linux.
+Список поддерживаемых версий и дистрибутивов Linux см. в статье [Необходимые компоненты для .NET Core в Linux](linux-prerequisites.md).
 
 ## <a name="os-x--macos"></a>OS X и Mac OS
 
