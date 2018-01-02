@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 00f1b1f93836f3890a4c3f3797b583a15aeb599f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bfc971cae9c09a75c43f568ccbf1b4608704be30
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcertificategt-element"></a>Элемент &lt;certificate&gt;
 Задает сертификат X.509, используемый для подписи и шифрования сообщений для клиентов одноранговых сетей.  
@@ -58,7 +59,7 @@ storeLocation="LocalMachine/CurrentUser"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Одноранговый >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Задает учетные данные, используемые при проверке подлинности одноранговых клиентов.|  
   
@@ -91,7 +92,7 @@ storeLocation="LocalMachine/CurrentUser"
  <xref:System.ServiceModel.Configuration.X509PeerCertificateElement>  
  <xref:System.ServiceModel.Security.PeerCredential.Certificate%2A>  
  [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Одноранговые сети](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
+ [Одноранговая сеть](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
  [Проверка подлинности сообщения одноранговых каналов](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
  [Нестандартная проверка подлинности одноранговых каналов](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
  [Защита приложений одноранговых каналов](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

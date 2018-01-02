@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: af2095289d5f711733c71238b855c685114d1997
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 186c511cd8a69cef5e30e369641628a10a0972d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltfiltergt"></a>&lt;Фильтр&gt;
 
@@ -57,7 +58,7 @@ ms.lasthandoff: 12/02/2017
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-| Элемент | Описание |
+| Элемент | Описание: |
 | ------- | ----------- |
 | [\<Маршрутизация >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Раздел конфигурации, в котором определяется набор фильтров маршрутизации, которые определяют тип [!INCLUDE[ indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter>, используемый при вычислении входящих сообщений. |
 

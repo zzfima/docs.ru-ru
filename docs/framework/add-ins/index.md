@@ -23,11 +23,12 @@ caps.latest.revision: "42"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9bd09d0da70869ba193b414d8a2ce6c25cbb6b38
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload: dotnet
+ms.openlocfilehash: 7e4d336992be216178b1237c9f43bffb3de61fba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-ins-and-extensibility"></a>Надстройки и расширения среды
 <a name="top"></a> Надстройки предоставляют расширенные возможности или службы для ведущего приложения. Платформа [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] предоставляет модель программирования, которую разработчики могут использовать для разработки надстроек и их активации в ведущем приложении. Для этого создается конвейер взаимодействия между ведущим приложением и надстройкой. Модель реализуется с помощью типов в пространствах имен <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>и <xref:System.AddIn.Contract> .  
@@ -109,9 +110,9 @@ ms.lasthandoff: 10/21/2017
  [К началу](#top)  
   
 <a name="related_topics"></a>   
-## <a name="related-topics"></a>Связанные разделы  
+## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание|  
+|Заголовок|Описание:|  
 |-----------|-----------------|  
 |[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|Описывается конвейер взаимодействия сегментов от ведущего приложения к надстройке. Приводятся примеры кода в пошаговых руководствах, в которых описывается построение конвейера и развертывание сегментов в конвейере в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
 |[Домены приложений и сборки](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)|Описывается связь между доменами приложений, образующими границу изоляции для обеспечения безопасности, надежности и управления версиями, и сборками.|  
@@ -119,7 +120,7 @@ ms.lasthandoff: 10/21/2017
  [К началу](#top)  
   
 <a name="reference"></a>   
-## <a name="reference"></a>Ссылки  
+## <a name="reference"></a>Ссылка  
  <xref:System.AddIn?displayProperty=nameWithType>  
   
  <xref:System.AddIn.Contract?displayProperty=nameWithType>  

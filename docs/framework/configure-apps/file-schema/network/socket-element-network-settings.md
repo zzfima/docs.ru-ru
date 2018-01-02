@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3d1adc163e889a0de6ad27347c8f122ac26d3524
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fefb8e119d428d86501e1c8cdd5eec5ef0809cbd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsocketgt-element-network-settings"></a>&lt;сокет&gt; элемент (параметры сети)
 Указывает, используют ли операции сокета порты завершения.  
@@ -50,8 +51,8 @@ ms.lasthandoff: 11/21/2017
   
 |**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
 |-------------------|---------------------|  
-|`alwaysUseCompletionPortsForAccept`|Указывает, всегда ли сокет использует порты завершения для вызовов метода Accept. Значение по умолчанию — `false`.|  
-|`alwaysUseCompletionPortsForConnect`|Указывает, всегда ли сокет использует порты завершения для вызовов метода Connect. Значение по умолчанию — `false`.|  
+|`alwaysUseCompletionPortsForAccept`|Указывает, всегда ли сокет использует порты завершения для вызовов метода Accept. Значение по умолчанию — `false`.|  
+|`alwaysUseCompletionPortsForConnect`|Указывает, всегда ли сокет использует порты завершения для вызовов метода Connect. Значение по умолчанию — `false`.|  
 |`ipProtectionLevel`|Указывает значение по умолчанию <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> для сокета. Значение по умолчанию зависит от версии Windows.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  

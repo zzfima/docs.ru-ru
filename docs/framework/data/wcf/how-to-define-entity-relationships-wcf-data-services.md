@@ -17,11 +17,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 60c2fc812bc00fcbc27335cf3b9539aacb32c91c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8a584e78c15d900bad8bdd3a85abe5e090ed47de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-entity-relationships-wcf-data-services"></a>Практическое руководство. Определение связей сущностей (службы данных WCF)
 После добавления новой сущности в службах [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] связи между нею и связанными сущностями не определяются автоматически. Пользователь может создать и изменить связи между экземплярами сущностей и отразить эти изменения в службе данных с помощью клиентской библиотеки. Дополнительные сведения см. в разделе [обновление службы данных](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
@@ -42,4 +43,4 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>См. также  
  [Библиотека клиентов служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- [Как: Добавление, изменение и удаление сущностей](../../../../docs/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services.md)
+ [Практическое руководство. Добавление, изменение и удаление сущностей](../../../../docs/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services.md)

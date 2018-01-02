@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a324c3b7f24d3395382067ea5581313af58e13f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 219b8173fdbfd84719733edc2f900511f58967d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>Ограничения и отношения схемы XML
 Ограничения можно указать в схему языка определения схемы XML (unique, key и keyref) и связи (с помощью **msdata: Relationship** заметки). В этом разделе описана интерпретация ограничений и связей, указанных в схеме XML, при формировании набора данных <xref:System.Data.DataSet>.  
@@ -197,5 +198,5 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
  Если ограничение keyref, ссылающиеся на вложенной таблицы содержит **msdata: IsNested = «true»** заметки, **DataSet** создаст одну вложенную связь на основании ограничения keyref и связанные ограничения unique/key.  
   
 ## <a name="see-also"></a>См. также  
- [Наследование реляционной структуры набора данных из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [Наследование реляционной структуры DataSet от схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

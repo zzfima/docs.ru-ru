@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 654887c870a7f620c52fa402d6324de39fdb2feb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d5f629dd347f63c8fb8e624c475bfb0ecf658f41
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltpublisherpolicygt-element"></a>&lt;publisherPolicy&gt; элемент
 Указывает, применяет ли среда выполнения политику издателя.  
@@ -47,13 +48,13 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |`apply`|Указывает, будет ли применяться политика издателя.|  
   
 ## <a name="apply-attribute"></a>Применение атрибута  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`yes`|Применяет политику издателя. Этот параметр используется по умолчанию.|  
 |`no`|Политика издателя не применяется.|  

@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3e77e43ed9d7520cbbcf453d067a49de3a86de3f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b17816ee6134dc6b3074256093c0cba07419baf5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltnetfx40pinvokestackresiliencegt-element"></a>&lt;NetFx40_PInvokeStackResilience&gt; элемент
 Указывает, исправляет ли автоматически среда выполнения неправильные объявления вызова неуправляемого кода во время выполнения за счет скорости перехода между управляемыми и неуправляемым кодом.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`0`|Среда выполнения использует быстрее архитектуру, представленные в маршалинга взаимодействия [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], которого не удается обнаружить и исправить неверные неуправляемого объявления. Это значение по умолчанию.|  
 |`1`|Среда выполнения использует медленнее переходы, которые обнаруживают и исправляют неверные объявления вызова неуправляемого кода.|  

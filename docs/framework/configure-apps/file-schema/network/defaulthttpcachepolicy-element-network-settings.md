@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f2db2fd10ca20209c21c8add71d8ee4f26951ca6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 048d9a373c77e530bd352b3caa0e122b3833a5c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;defaultHttpCachePolicy&gt; элемент (параметры сети)
 Описывает указывает, активна ли функция HTTP-кэширования и описывает политику кэширования по умолчанию.  
@@ -49,19 +50,19 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |`maximumAge`|Указывает максимальный интервал времени перед кэшированный объект помечается как устаревшая.|  
 |`maximumStale`|Указывает максимальный интервал времени после запрограммированного обновления время ожидания до кэшированный объект помечается как устаревшая.|  
 |`minimumFresh`|Указывает минимальное время актуальности кэшированного объекта.|  
-|`policyLevel`|Указывает, является ли политика кэширования автоматической или кэш пропускается. Значение по умолчанию — `BypassCache`.|  
+|`policyLevel`|Указывает, является ли политика кэширования автоматической или кэш пропускается. Значение по умолчанию — `BypassCache`.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Нет  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Определяет механизм кэширования для сетевых запросов.|  
   

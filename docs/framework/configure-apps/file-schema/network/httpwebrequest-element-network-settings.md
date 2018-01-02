@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 0a4490870cb12ff221f75b043f01baad9b5c7c96
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dadb2d7635f132b44d6fca8c56f53b847ffb1ff9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lthttpwebrequestgt-element-network-settings"></a>&lt;httpWebRequest&gt; элемент (параметры сети)
 Настраивает параметры веб-запроса.  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
 |`maximumResponseHeadersLength`|Указывает максимальную длину заголовка ответа, в килобайтах. Значение по умолчанию — 64. Значение -1 указывает, что отсутствие ограничений размера накладывается на заголовки ответа.|  
 |`maximumErrorResponseLength`|Указывает максимальную длину ответа об ошибке, в килобайтах. Значение по умолчанию — 64. Значение -1 указывает, что отсутствие ограничений размера накладывается на ответ на ошибку.|  
 |`maximumUnauthorizedUploadLength`|Указывает максимальный объем данных, передаваемых в ответ на код ошибки доступа, в байтах. Значение по умолчанию — -1. Значение -1 указывает, что отсутствие ограничений размера накладывается на отправку.|  
-|`useUnsafeHeaderParsing`|Указывает, включен ли разбор небезопасных заголовков. Значение по умолчанию — `false`.|  
+|`useUnsafeHeaderParsing`|Указывает, включен ли разбор небезопасных заголовков. Значение по умолчанию — `false`.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  

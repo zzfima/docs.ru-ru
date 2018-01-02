@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8f6bed837ab7b0c6a4aebe6116c5ab28bbc62175
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: caeede11d8128af00beb5b1b3426e8c4a5406520
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltlegacyimpersonationpolicygt-element"></a>&lt;legacyImpersonationPolicy&gt; элемент
 Указывает, что удостоверение Windows не проходит через асинхронные точки, независимо от параметров потока для контекста выполнения в текущем потоке.  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`false`|<xref:System.Security.Principal.WindowsIdentity>потоки через асинхронные точки, в зависимости от <xref:System.Threading.ExecutionContext> потока параметры для текущего потока. Это значение по умолчанию.|  
 |`true`|<xref:System.Security.Principal.WindowsIdentity>не проходит через асинхронные точки, независимо от <xref:System.Threading.ExecutionContext> потока параметры в текущем потоке.|  

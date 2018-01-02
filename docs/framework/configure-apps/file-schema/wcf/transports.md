@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 911a770fb4dc6d11f17c1f287a53ddb6552c690a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 47799c5eb10a3274b8b5f10d4ccec96a575da949
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transports"></a>Транспорты
 Транспортный уровень является самым нижним уровнем стека каналов. Основными транспортами, используемыми в [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], являются протоколы HTTP, HTTPS, TCP и именованные каналы. В этом разделе представлены элементы конфигурации, которые позволяют настраивать различные типы транспорта.  

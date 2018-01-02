@@ -10,11 +10,12 @@ ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a9722493ec62952d7cbc07d478687b8495d24f95
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2154e2a178050e5bafa7d19f37a766141d0a5838
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>Пользовательский элемент NameValueSectionHandler и DictionarySectionHandler
 
@@ -29,13 +30,13 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="parent-element"></a>Родительский элемент
 
-|     | Описание |
+|     | Описание: |
 | --- | ----------- |
 | [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-|     | Описание |
+|     | Описание: |
 | --- | ----------- |
 | [**\<Добавить >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md) для <xref:System.Configuration.NameValueSectionHandler> и<xref:System.Configuration.DictionarySectionHandler>  | Добавляет пользовательские параметры приложения. |
 | [**\<Удалите >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) для <xref:System.Configuration.NameValueSectionHandler> и<xref:System.Configuration.DictionarySectionHandler> |    Удаляет ранее определенный параметр. |
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="remarks"></a>Примечания
 
-**\<SectionName >** элемент является пользовательским элементом определяется  **\<раздел >** тегом  **\<configSections >**элемент.
+ **\<SectionName >** элемент является пользовательским элементом определяется  **\<раздел >** тегом  **\<configSections >**элемент.
 
 В следующей таблице показаны возвращает тип объекта, метод ConfigurationSettings.GetConfig для каждого обработчика раздела конфигурации:
 

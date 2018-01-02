@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b10845bb985e1461ddc5e09c4a87e1a673899ad6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c504d86a44437c81aa7ff556947b6ddaff6f9de7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="background-information"></a>Основные сведения
 Темы данного раздела содержат описания принципов и процедур, расширяющих базовую функциональность [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -30,14 +31,14 @@ ms.lasthandoff: 10/18/2017
   
 -   Изучите технический документ с подробным описанием технологии [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], дополненный примерами кода [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] и C#. Дополнительные сведения см. в разделе [LINQ to SQL: запросы LINQ .NET запросов для реляционных данных](http://go.microsoft.com/fwlink/?LinkId=93205).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [ADO.NET и LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  
  Описана связь между [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] и [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Анализ кода LINQ to SQL источника](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)  
+ [Анализ исходного кода LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)  
  Описано, как анализировать сопоставление [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] путем формирования и просмотра исходного кода из образца базы данных Northwind.  
   
- [Настройка вставки, обновления и удаления](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)  
+ [Настройка операций вставки, обновления и удаления](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)  
  Содержит сведения о добавлении кода проверки и других настроек.  
   
  [Привязка данных](../../../../../../docs/framework/data/adonet/sql/linq/data-binding.md)  
@@ -55,19 +56,19 @@ ms.lasthandoff: 10/18/2017
  [Идентификация объектов](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
  Содержит описание процесса идентификации объекта в объектной модели [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] и объяснение его отличий от аналогичного процесса в базе данных.  
   
- [LINQ to SQL модель объектов](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
+ [Модель объектов LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
  Содержит описание объектной модели и ее связи с реляционной моделью данных.  
   
  [Состояния объектов и отслеживание изменений](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md)  
  Содержит подробные сведения об отслеживании изменений в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Оптимистический параллелизм: Обзор](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
+ [Общие сведения об оптимистической блокировке](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
  Содержит описание понятия оптимистического параллелизма и определение терминов.  
   
  [Основные принципы запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
  Содержит описание аспектов работы с запросами в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], которые отличаются от запросов в [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
   
- [Получение объектов из кэша идентификаторов](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md)  
+ [Получение объектов из кэша идентификации](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md)  
  Описывает типы запросов, которые получают объекты из кэша идентификаторов.  
   
  [Безопасность в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)  
@@ -85,7 +86,7 @@ ms.lasthandoff: 10/18/2017
  [Несоответствия типов SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
  Содержит описание проблем, возникающих при сочетании различных систем типов.  
   
- [Сопоставления пользовательских типов SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md)  
+ [Настраиваемые сопоставления типов SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md)  
  Содержит рекомендации по настройке сопоставления типов.  
   
  [Определяемые пользователем функции](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)  

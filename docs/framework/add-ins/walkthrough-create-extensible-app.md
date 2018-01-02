@@ -22,11 +22,12 @@ caps.latest.revision: "32"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6609f30844421f94965fbe05114db96ed8edbb31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ac4b6fc2ae36d848306178f281cceeeb0654ec03
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>Пошаговое руководство. Создание расширяемого приложения
 В этом пошаговом руководстве описывается создание конвейера надстройки, выполняющий функции простого калькулятора. Здесь не показаны реальном сценарии; Вместо этого он демонстрирует основные функциональные возможности конвейера и как надстройка может предоставлять службы для узла.  
@@ -367,4 +368,4 @@ ms.lasthandoff: 11/21/2017
  [Пошаговое руководство: Передача коллекций между узлами и надстройки](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)  
  [Требования к разработке конвейера](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
  [Контракты, представления и адаптеры](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c)  
- [Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)
+ [Разработка конвейера](../../../docs/framework/add-ins/pipeline-development.md)
