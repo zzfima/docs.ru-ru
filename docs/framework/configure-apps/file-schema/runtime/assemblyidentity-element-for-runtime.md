@@ -20,22 +20,23 @@ caps.latest.revision: "17"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 740b08806dff65d3ce1b8de378138c2647944fd4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0dadf0e07f5e3a9f9152ae7cd57c62721402bff0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a><span data-ttu-id="0269a-102">&lt;assemblyIdentity&gt; элемент для &lt;среды выполнения&gt;</span><span class="sxs-lookup"><span data-stu-id="0269a-102">&lt;assemblyIdentity&gt; Element for &lt;runtime&gt;</span></span>
-<span data-ttu-id="0269a-103">Содержит идентификационные сведения о сборке.</span><span class="sxs-lookup"><span data-stu-id="0269a-103">Contains identifying information about the assembly.</span></span>  
+# <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a><span data-ttu-id="daf94-102">&lt;assemblyIdentity&gt; элемент для &lt;среды выполнения&gt;</span><span class="sxs-lookup"><span data-stu-id="daf94-102">&lt;assemblyIdentity&gt; Element for &lt;runtime&gt;</span></span>
+<span data-ttu-id="daf94-103">Содержит идентификационные сведения о сборке.</span><span class="sxs-lookup"><span data-stu-id="daf94-103">Contains identifying information about the assembly.</span></span>  
   
- <span data-ttu-id="0269a-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="0269a-104">\<configuration></span></span>  
-<span data-ttu-id="0269a-105">\<Среда выполнения ></span><span class="sxs-lookup"><span data-stu-id="0269a-105">\<runtime></span></span>  
-<span data-ttu-id="0269a-106">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="0269a-106">\<assemblyBinding></span></span>  
-<span data-ttu-id="0269a-107">\<dependentAssembly ></span><span class="sxs-lookup"><span data-stu-id="0269a-107">\<dependentAssembly></span></span>  
-<span data-ttu-id="0269a-108">\<assemblyIdentity ></span><span class="sxs-lookup"><span data-stu-id="0269a-108">\<assemblyIdentity></span></span>  
+ <span data-ttu-id="daf94-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="daf94-104">\<configuration></span></span>  
+<span data-ttu-id="daf94-105">\<Среда выполнения ></span><span class="sxs-lookup"><span data-stu-id="daf94-105">\<runtime></span></span>  
+<span data-ttu-id="daf94-106">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="daf94-106">\<assemblyBinding></span></span>  
+<span data-ttu-id="daf94-107">\<dependentAssembly ></span><span class="sxs-lookup"><span data-stu-id="daf94-107">\<dependentAssembly></span></span>  
+<span data-ttu-id="daf94-108">\<assemblyIdentity ></span><span class="sxs-lookup"><span data-stu-id="daf94-108">\<assemblyIdentity></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0269a-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0269a-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="daf94-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="daf94-109">Syntax</span></span>  
   
 ```xml  
    <assemblyIdentity    
@@ -44,45 +45,45 @@ publicKeyToken="public key token"
 culture="assembly culture"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="0269a-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="0269a-110">Attributes and Elements</span></span>  
- <span data-ttu-id="0269a-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="0269a-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="daf94-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="daf94-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="daf94-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="daf94-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="0269a-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="0269a-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="daf94-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="daf94-112">Attributes</span></span>  
   
-|<span data-ttu-id="0269a-113">Атрибут</span><span class="sxs-lookup"><span data-stu-id="0269a-113">Attribute</span></span>|<span data-ttu-id="0269a-114">Описание</span><span class="sxs-lookup"><span data-stu-id="0269a-114">Description</span></span>|  
+|<span data-ttu-id="daf94-113">Атрибут</span><span class="sxs-lookup"><span data-stu-id="daf94-113">Attribute</span></span>|<span data-ttu-id="daf94-114">Описание</span><span class="sxs-lookup"><span data-stu-id="daf94-114">Description</span></span>|  
 |---------------|-----------------|  
-|`name`|<span data-ttu-id="0269a-115">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="0269a-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="0269a-116">Имя сборки</span><span class="sxs-lookup"><span data-stu-id="0269a-116">The name of the assembly</span></span>|  
-|`culture`|<span data-ttu-id="0269a-117">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="0269a-117">Optional attribute.</span></span><br /><br /> <span data-ttu-id="0269a-118">Строка, указывающая язык и Страна или регион, сборки.</span><span class="sxs-lookup"><span data-stu-id="0269a-118">A string that specifies the language and country/region of the assembly.</span></span>|  
-|`publicKeyToken`|<span data-ttu-id="0269a-119">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="0269a-119">Optional attribute.</span></span><br /><br /> <span data-ttu-id="0269a-120">Шестнадцатеричное значение, указывающее строгое имя сборки.</span><span class="sxs-lookup"><span data-stu-id="0269a-120">A hexadecimal value that specifies the strong name of the assembly.</span></span>|  
-|`processorArchitecture`|<span data-ttu-id="0269a-121">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="0269a-121">Optional attribute.</span></span><br /><br /> <span data-ttu-id="0269a-122">Одно из значений «x86», «amd64», «msil» или «ia64», задающих архитектуру процессора для сборки, содержащей код для конкретного процессора.</span><span class="sxs-lookup"><span data-stu-id="0269a-122">One of the values "x86", "amd64", "msil", or "ia64", specifying the processor architecture for an assembly that contains processor-specific code.</span></span> <span data-ttu-id="0269a-123">Значения не учитывают регистр.</span><span class="sxs-lookup"><span data-stu-id="0269a-123">The values are not case-sensitive.</span></span> <span data-ttu-id="0269a-124">Если атрибуту назначено любое другое значение, вся `<assemblyIdentity>` элемент игнорируется.</span><span class="sxs-lookup"><span data-stu-id="0269a-124">If the attribute is assigned any other value, the entire `<assemblyIdentity>` element is ignored.</span></span> <span data-ttu-id="0269a-125">См. раздел <xref:System.Reflection.ProcessorArchitecture>.</span><span class="sxs-lookup"><span data-stu-id="0269a-125">See <xref:System.Reflection.ProcessorArchitecture>.</span></span>|  
+|`name`|<span data-ttu-id="daf94-115">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="daf94-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="daf94-116">Имя сборки</span><span class="sxs-lookup"><span data-stu-id="daf94-116">The name of the assembly</span></span>|  
+|`culture`|<span data-ttu-id="daf94-117">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="daf94-117">Optional attribute.</span></span><br /><br /> <span data-ttu-id="daf94-118">Строка, указывающая язык и Страна или регион, сборки.</span><span class="sxs-lookup"><span data-stu-id="daf94-118">A string that specifies the language and country/region of the assembly.</span></span>|  
+|`publicKeyToken`|<span data-ttu-id="daf94-119">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="daf94-119">Optional attribute.</span></span><br /><br /> <span data-ttu-id="daf94-120">Шестнадцатеричное значение, указывающее строгое имя сборки.</span><span class="sxs-lookup"><span data-stu-id="daf94-120">A hexadecimal value that specifies the strong name of the assembly.</span></span>|  
+|`processorArchitecture`|<span data-ttu-id="daf94-121">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="daf94-121">Optional attribute.</span></span><br /><br /> <span data-ttu-id="daf94-122">Одно из значений «x86», «amd64», «msil» или «ia64», задающих архитектуру процессора для сборки, содержащей код для конкретного процессора.</span><span class="sxs-lookup"><span data-stu-id="daf94-122">One of the values "x86", "amd64", "msil", or "ia64", specifying the processor architecture for an assembly that contains processor-specific code.</span></span> <span data-ttu-id="daf94-123">Значения не учитывают регистр.</span><span class="sxs-lookup"><span data-stu-id="daf94-123">The values are not case-sensitive.</span></span> <span data-ttu-id="daf94-124">Если атрибуту назначено любое другое значение, вся `<assemblyIdentity>` элемент игнорируется.</span><span class="sxs-lookup"><span data-stu-id="daf94-124">If the attribute is assigned any other value, the entire `<assemblyIdentity>` element is ignored.</span></span> <span data-ttu-id="daf94-125">См. раздел <xref:System.Reflection.ProcessorArchitecture>.</span><span class="sxs-lookup"><span data-stu-id="daf94-125">See <xref:System.Reflection.ProcessorArchitecture>.</span></span>|  
   
-## <a name="processorarchitecture-attribute"></a><span data-ttu-id="0269a-126">processorArchitecture атрибута</span><span class="sxs-lookup"><span data-stu-id="0269a-126">processorArchitecture Attribute</span></span>  
+## <a name="processorarchitecture-attribute"></a><span data-ttu-id="daf94-126">processorArchitecture атрибута</span><span class="sxs-lookup"><span data-stu-id="daf94-126">processorArchitecture Attribute</span></span>  
   
-|<span data-ttu-id="0269a-127">Значение</span><span class="sxs-lookup"><span data-stu-id="0269a-127">Value</span></span>|<span data-ttu-id="0269a-128">Описание</span><span class="sxs-lookup"><span data-stu-id="0269a-128">Description</span></span>|  
+|<span data-ttu-id="daf94-127">Значение</span><span class="sxs-lookup"><span data-stu-id="daf94-127">Value</span></span>|<span data-ttu-id="daf94-128">Описание:</span><span class="sxs-lookup"><span data-stu-id="daf94-128">Description</span></span>|  
 |-----------|-----------------|  
-|`amd64`|<span data-ttu-id="0269a-129">Только для 64-разрядных процессоров AMD.</span><span class="sxs-lookup"><span data-stu-id="0269a-129">A 64-bit AMD processor only.</span></span>|  
-|`ia64`|<span data-ttu-id="0269a-130">Только для 64-разрядных процессоров Intel.</span><span class="sxs-lookup"><span data-stu-id="0269a-130">A 64-bit Intel processor only.</span></span>|  
-|`msil`|<span data-ttu-id="0269a-131">Нейтральный с точки зрения процессор и количество бит на слово</span><span class="sxs-lookup"><span data-stu-id="0269a-131">Neutral with respect to processor and bits-per-word</span></span>|  
-|`x86`|<span data-ttu-id="0269a-132">Для 32-разрядных процессоров Intel, либо машинный код или в среде Windows (WOW) на 64-разрядной платформе Windows.</span><span class="sxs-lookup"><span data-stu-id="0269a-132">A 32-bit Intel processor, either native or in the Windows on Windows (WOW) environment on a 64-bit platform.</span></span>|  
+|`amd64`|<span data-ttu-id="daf94-129">Только для 64-разрядных процессоров AMD.</span><span class="sxs-lookup"><span data-stu-id="daf94-129">A 64-bit AMD processor only.</span></span>|  
+|`ia64`|<span data-ttu-id="daf94-130">Только для 64-разрядных процессоров Intel.</span><span class="sxs-lookup"><span data-stu-id="daf94-130">A 64-bit Intel processor only.</span></span>|  
+|`msil`|<span data-ttu-id="daf94-131">Нейтральный с точки зрения процессор и количество бит на слово</span><span class="sxs-lookup"><span data-stu-id="daf94-131">Neutral with respect to processor and bits-per-word</span></span>|  
+|`x86`|<span data-ttu-id="daf94-132">Для 32-разрядных процессоров Intel, либо машинный код или в среде Windows (WOW) на 64-разрядной платформе Windows.</span><span class="sxs-lookup"><span data-stu-id="daf94-132">A 32-bit Intel processor, either native or in the Windows on Windows (WOW) environment on a 64-bit platform.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="0269a-133">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="0269a-133">Child Elements</span></span>  
- <span data-ttu-id="0269a-134">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="0269a-134">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="daf94-133">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="daf94-133">Child Elements</span></span>  
+ <span data-ttu-id="daf94-134">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="daf94-134">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="0269a-135">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="0269a-135">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="daf94-135">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="daf94-135">Parent Elements</span></span>  
   
-|<span data-ttu-id="0269a-136">Элемент</span><span class="sxs-lookup"><span data-stu-id="0269a-136">Element</span></span>|<span data-ttu-id="0269a-137">Описание</span><span class="sxs-lookup"><span data-stu-id="0269a-137">Description</span></span>|  
+|<span data-ttu-id="daf94-136">Элемент</span><span class="sxs-lookup"><span data-stu-id="daf94-136">Element</span></span>|<span data-ttu-id="daf94-137">Описание:</span><span class="sxs-lookup"><span data-stu-id="daf94-137">Description</span></span>|  
 |-------------|-----------------|  
-|`assemblyBinding`|<span data-ttu-id="0269a-138">Содержит сведения о перенаправлении версии сборки и о расположениях сборок.</span><span class="sxs-lookup"><span data-stu-id="0269a-138">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
-|`configuration`|<span data-ttu-id="0269a-139">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="0269a-139">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`dependentAssembly`|<span data-ttu-id="0269a-140">Инкапсулирует политику привязки и расположение каждой сборки.</span><span class="sxs-lookup"><span data-stu-id="0269a-140">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="0269a-141">Используйте один `<dependentAssembly>` элемент для каждой сборки.</span><span class="sxs-lookup"><span data-stu-id="0269a-141">Use one `<dependentAssembly>` element for each assembly.</span></span>|  
-|`runtime`|<span data-ttu-id="0269a-142">Содержит сведения о привязке сборок и сборке мусора.</span><span class="sxs-lookup"><span data-stu-id="0269a-142">Contains information about assembly binding and garbage collection.</span></span>|  
+|`assemblyBinding`|<span data-ttu-id="daf94-138">Содержит сведения о перенаправлении версии сборки и о расположениях сборок.</span><span class="sxs-lookup"><span data-stu-id="daf94-138">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|`configuration`|<span data-ttu-id="daf94-139">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="daf94-139">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`dependentAssembly`|<span data-ttu-id="daf94-140">Инкапсулирует политику привязки и расположение каждой сборки.</span><span class="sxs-lookup"><span data-stu-id="daf94-140">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="daf94-141">Используйте один `<dependentAssembly>` элемент для каждой сборки.</span><span class="sxs-lookup"><span data-stu-id="daf94-141">Use one `<dependentAssembly>` element for each assembly.</span></span>|  
+|`runtime`|<span data-ttu-id="daf94-142">Содержит сведения о привязке сборок и сборке мусора.</span><span class="sxs-lookup"><span data-stu-id="daf94-142">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0269a-143">Примечания</span><span class="sxs-lookup"><span data-stu-id="0269a-143">Remarks</span></span>  
- <span data-ttu-id="0269a-144">Каждый  **\<dependentAssembly >** элемент должен иметь один  **\<assemblyIdentity >** дочерний элемент.</span><span class="sxs-lookup"><span data-stu-id="0269a-144">Every **\<dependentAssembly>** element must have one **\<assemblyIdentity>** child element.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="daf94-143">Примечания</span><span class="sxs-lookup"><span data-stu-id="daf94-143">Remarks</span></span>  
+ <span data-ttu-id="daf94-144">Каждый  **\<dependentAssembly >** элемент должен иметь один  **\<assemblyIdentity >** дочерний элемент.</span><span class="sxs-lookup"><span data-stu-id="daf94-144">Every **\<dependentAssembly>** element must have one **\<assemblyIdentity>** child element.</span></span>  
   
- <span data-ttu-id="0269a-145">Если `processorArchitecture` присутствует атрибут `<assemblyIdentity>` элемент применяется только к сборке с соответствующей архитектурой процессора.</span><span class="sxs-lookup"><span data-stu-id="0269a-145">If the `processorArchitecture` attribute is present, the `<assemblyIdentity>` element applies only to the assembly with the corresponding processor architecture.</span></span> <span data-ttu-id="0269a-146">Если `processorArchitecture` атрибут не задан, `<assemblyIdentity>` элемент можно применить к сборке с любой архитектурой процессора.</span><span class="sxs-lookup"><span data-stu-id="0269a-146">If the `processorArchitecture` attribute is not present, the `<assemblyIdentity>` element can apply to an assembly with any processor architecture.</span></span>  
+ <span data-ttu-id="daf94-145">Если `processorArchitecture` присутствует атрибут `<assemblyIdentity>` элемент применяется только к сборке с соответствующей архитектурой процессора.</span><span class="sxs-lookup"><span data-stu-id="daf94-145">If the `processorArchitecture` attribute is present, the `<assemblyIdentity>` element applies only to the assembly with the corresponding processor architecture.</span></span> <span data-ttu-id="daf94-146">Если `processorArchitecture` атрибут не задан, `<assemblyIdentity>` элемент можно применить к сборке с любой архитектурой процессора.</span><span class="sxs-lookup"><span data-stu-id="daf94-146">If the `processorArchitecture` attribute is not present, the `<assemblyIdentity>` element can apply to an assembly with any processor architecture.</span></span>  
   
- <span data-ttu-id="0269a-147">В следующем примере показан файл конфигурации для двух сборок с тем же именем, предназначенных для двух различных архитектур процессоров и версий, не синхронизированных синхронизирован. При выполнении приложения на x86 платформы первый `<assemblyIdentity>` применяет элемента и другое обрабатывается.</span><span class="sxs-lookup"><span data-stu-id="0269a-147">The following example shows a configuration file for two assemblies with the same name that target two different two processor architectures, and whose versions have not been maintained in synch. When the application executes on the x86 platform the first `<assemblyIdentity>` element applies and the other is ignored.</span></span> <span data-ttu-id="0269a-148">Если приложение выполняется на платформе, отличной от x86 или ia64, оба атрибута игнорируются.</span><span class="sxs-lookup"><span data-stu-id="0269a-148">If the application executes on a platform other than x86 or ia64, both are ignored.</span></span>  
+ <span data-ttu-id="daf94-147">В следующем примере показан файл конфигурации для двух сборок с тем же именем, предназначенных для двух различных архитектур процессоров и версий, не синхронизированных синхронизирован. При выполнении приложения на x86 платформы первый `<assemblyIdentity>` применяет элемента и другое обрабатывается.</span><span class="sxs-lookup"><span data-stu-id="daf94-147">The following example shows a configuration file for two assemblies with the same name that target two different two processor architectures, and whose versions have not been maintained in synch. When the application executes on the x86 platform the first `<assemblyIdentity>` element applies and the other is ignored.</span></span> <span data-ttu-id="daf94-148">Если приложение выполняется на платформе, отличной от x86 или ia64, оба атрибута игнорируются.</span><span class="sxs-lookup"><span data-stu-id="daf94-148">If the application executes on a platform other than x86 or ia64, both are ignored.</span></span>  
   
 ```xml  
 <configuration>  
@@ -109,10 +110,10 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
- <span data-ttu-id="0269a-149">Если файл конфигурации содержит `<assemblyIdentity>` элемента нет `processorArchitecture` атрибута и не содержит элемент, соответствующий платформе элемент без `processorArchitecture` используется атрибут.</span><span class="sxs-lookup"><span data-stu-id="0269a-149">If a configuration file contains an `<assemblyIdentity>` element with no `processorArchitecture` attribute, and does not contain an element that matches the platform, the element without the `processorArchitecture` attribute is used.</span></span>  
+ <span data-ttu-id="daf94-149">Если файл конфигурации содержит `<assemblyIdentity>` элемента нет `processorArchitecture` атрибута и не содержит элемент, соответствующий платформе элемент без `processorArchitecture` используется атрибут.</span><span class="sxs-lookup"><span data-stu-id="daf94-149">If a configuration file contains an `<assemblyIdentity>` element with no `processorArchitecture` attribute, and does not contain an element that matches the platform, the element without the `processorArchitecture` attribute is used.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0269a-150">Пример</span><span class="sxs-lookup"><span data-stu-id="0269a-150">Example</span></span>  
- <span data-ttu-id="0269a-151">В следующем примере показано, как для предоставления сведений о сборке.</span><span class="sxs-lookup"><span data-stu-id="0269a-151">The following example shows how to provide information about an assembly.</span></span>  
+## <a name="example"></a><span data-ttu-id="daf94-150">Пример</span><span class="sxs-lookup"><span data-stu-id="daf94-150">Example</span></span>  
+ <span data-ttu-id="daf94-151">В следующем примере показано, как для предоставления сведений о сборке.</span><span class="sxs-lookup"><span data-stu-id="daf94-151">The following example shows how to provide information about an assembly.</span></span>  
   
 ```xml  
 <configuration>  
@@ -129,7 +130,7 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0269a-152">См. также</span><span class="sxs-lookup"><span data-stu-id="0269a-152">See Also</span></span>  
- [<span data-ttu-id="0269a-153">Схема параметров среды выполнения</span><span class="sxs-lookup"><span data-stu-id="0269a-153">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [<span data-ttu-id="0269a-154">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="0269a-154">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="0269a-155">Перенаправление версий сборки</span><span class="sxs-lookup"><span data-stu-id="0269a-155">Redirecting Assembly Versions</span></span>](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a><span data-ttu-id="daf94-152">См. также</span><span class="sxs-lookup"><span data-stu-id="daf94-152">See Also</span></span>  
+ [<span data-ttu-id="daf94-153">Схема параметров среды выполнения</span><span class="sxs-lookup"><span data-stu-id="daf94-153">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="daf94-154">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="daf94-154">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="daf94-155">Перенаправление версий сборки</span><span class="sxs-lookup"><span data-stu-id="daf94-155">Redirecting Assembly Versions</span></span>](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

@@ -13,16 +13,17 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 98ea3d5fa4427b391ef06b3fc6ace9a05dfb819a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3053d4e83233027f28357d8c45087df71c21ca18
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="inference-limitations"></a><span data-ttu-id="70c91-102">Ограничения определения</span><span class="sxs-lookup"><span data-stu-id="70c91-102">Inference Limitations</span></span>
-<span data-ttu-id="70c91-103">Процесс вывода схемы <xref:System.Data.DataSet> из XML-кода может приводиться в различных схемах в зависимости от XML-элементов в каждом документе.</span><span class="sxs-lookup"><span data-stu-id="70c91-103">The process of inferring a <xref:System.Data.DataSet> schema from XML can result in different schemas depending on the XML elements in each document.</span></span> <span data-ttu-id="70c91-104">Например, рассмотрим следующие XML-документы.</span><span class="sxs-lookup"><span data-stu-id="70c91-104">For example, consider the following XML documents.</span></span>  
+# <a name="inference-limitations"></a><span data-ttu-id="6ae59-102">Ограничения определения</span><span class="sxs-lookup"><span data-stu-id="6ae59-102">Inference Limitations</span></span>
+<span data-ttu-id="6ae59-103">Процесс вывода схемы <xref:System.Data.DataSet> из XML-кода может приводиться в различных схемах в зависимости от XML-элементов в каждом документе.</span><span class="sxs-lookup"><span data-stu-id="6ae59-103">The process of inferring a <xref:System.Data.DataSet> schema from XML can result in different schemas depending on the XML elements in each document.</span></span> <span data-ttu-id="6ae59-104">Например, рассмотрим следующие XML-документы.</span><span class="sxs-lookup"><span data-stu-id="6ae59-104">For example, consider the following XML documents.</span></span>  
   
- <span data-ttu-id="70c91-105">Document1:</span><span class="sxs-lookup"><span data-stu-id="70c91-105">Document1:</span></span>  
+ <span data-ttu-id="6ae59-105">Document1:</span><span class="sxs-lookup"><span data-stu-id="6ae59-105">Document1:</span></span>  
   
 ```xml  
 <DocumentElement>  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 </DocumentElement>  
 ```  
   
- <span data-ttu-id="70c91-106">Document2:</span><span class="sxs-lookup"><span data-stu-id="70c91-106">Document2:</span></span>  
+ <span data-ttu-id="6ae59-106">Document2:</span><span class="sxs-lookup"><span data-stu-id="6ae59-106">Document2:</span></span>  
   
 ```xml  
 <DocumentElement>  
@@ -39,35 +40,35 @@ ms.lasthandoff: 11/21/2017
 </DocumentElement>  
 ```  
   
- <span data-ttu-id="70c91-107">Для «Document1», в процессе вывода создается **набора данных** с именем «DocumentElement» и таблица с именем «Элемент1», так как «Элемент1» является повторяющимся элементом.</span><span class="sxs-lookup"><span data-stu-id="70c91-107">For "Document1," the inference process produces a **DataSet** named "DocumentElement" and a table named "Element1," because "Element1" is a repeating element.</span></span>  
+ <span data-ttu-id="6ae59-107">Для «Document1», в процессе вывода создается **набора данных** с именем «DocumentElement» и таблица с именем «Элемент1», так как «Элемент1» является повторяющимся элементом.</span><span class="sxs-lookup"><span data-stu-id="6ae59-107">For "Document1," the inference process produces a **DataSet** named "DocumentElement" and a table named "Element1," because "Element1" is a repeating element.</span></span>  
   
- <span data-ttu-id="70c91-108">**Набор данных:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="70c91-108">**DataSet:** DocumentElement</span></span>  
+ <span data-ttu-id="6ae59-108">**Набор данных:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="6ae59-108">**DataSet:** DocumentElement</span></span>  
   
- <span data-ttu-id="70c91-109">**Таблица:** Element1</span><span class="sxs-lookup"><span data-stu-id="70c91-109">**Table:** Element1</span></span>  
+ <span data-ttu-id="6ae59-109">**Таблица:** Element1</span><span class="sxs-lookup"><span data-stu-id="6ae59-109">**Table:** Element1</span></span>  
   
-|<span data-ttu-id="70c91-110">Element1_Text</span><span class="sxs-lookup"><span data-stu-id="70c91-110">Element1_Text</span></span>|  
+|<span data-ttu-id="6ae59-110">Element1_Text</span><span class="sxs-lookup"><span data-stu-id="6ae59-110">Element1_Text</span></span>|  
 |--------------------|  
-|<span data-ttu-id="70c91-111">Text1</span><span class="sxs-lookup"><span data-stu-id="70c91-111">Text1</span></span>|  
-|<span data-ttu-id="70c91-112">Text2</span><span class="sxs-lookup"><span data-stu-id="70c91-112">Text2</span></span>|  
+|<span data-ttu-id="6ae59-111">Text1</span><span class="sxs-lookup"><span data-stu-id="6ae59-111">Text1</span></span>|  
+|<span data-ttu-id="6ae59-112">Text2</span><span class="sxs-lookup"><span data-stu-id="6ae59-112">Text2</span></span>|  
   
- <span data-ttu-id="70c91-113">Однако для «Document2», в процессе вывода создается **набора данных** с именем «NewDataSet» и таблица с именем «DocumentElement.»</span><span class="sxs-lookup"><span data-stu-id="70c91-113">However, for "Document2," the inference process produces a **DataSet** named "NewDataSet" and a table named "DocumentElement."</span></span> <span data-ttu-id="70c91-114">Element1 выводится в виде столбца, потому что не имеет атрибутов и дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="70c91-114">"Element1" is inferred as a column because it has no attributes and no child elements.</span></span>  
+ <span data-ttu-id="6ae59-113">Однако для «Document2», в процессе вывода создается **набора данных** с именем «NewDataSet» и таблица с именем «DocumentElement.»</span><span class="sxs-lookup"><span data-stu-id="6ae59-113">However, for "Document2," the inference process produces a **DataSet** named "NewDataSet" and a table named "DocumentElement."</span></span> <span data-ttu-id="6ae59-114">Element1 выводится в виде столбца, потому что не имеет атрибутов и дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="6ae59-114">"Element1" is inferred as a column because it has no attributes and no child elements.</span></span>  
   
- <span data-ttu-id="70c91-115">**Набор данных:** NewDataSet</span><span class="sxs-lookup"><span data-stu-id="70c91-115">**DataSet:** NewDataSet</span></span>  
+ <span data-ttu-id="6ae59-115">**Набор данных:** NewDataSet</span><span class="sxs-lookup"><span data-stu-id="6ae59-115">**DataSet:** NewDataSet</span></span>  
   
- <span data-ttu-id="70c91-116">**Таблица:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="70c91-116">**Table:** DocumentElement</span></span>  
+ <span data-ttu-id="6ae59-116">**Таблица:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="6ae59-116">**Table:** DocumentElement</span></span>  
   
-|<span data-ttu-id="70c91-117">Element1</span><span class="sxs-lookup"><span data-stu-id="70c91-117">Element1</span></span>|  
+|<span data-ttu-id="6ae59-117">Element1</span><span class="sxs-lookup"><span data-stu-id="6ae59-117">Element1</span></span>|  
 |--------------|  
-|<span data-ttu-id="70c91-118">Text1</span><span class="sxs-lookup"><span data-stu-id="70c91-118">Text1</span></span>|  
+|<span data-ttu-id="6ae59-118">Text1</span><span class="sxs-lookup"><span data-stu-id="6ae59-118">Text1</span></span>|  
   
- <span data-ttu-id="70c91-119">Эти два XML-документа, возможно, должны были выдавать одну и ту же схему, но процесс вывода дает значительно различающиеся результаты в зависимости от элементов, содержащихся в каждом документе.</span><span class="sxs-lookup"><span data-stu-id="70c91-119">These two XML documents may have been intended to produce the same schema, but the inference process produces very different results based on the elements contained in each document.</span></span>  
+ <span data-ttu-id="6ae59-119">Эти два XML-документа, возможно, должны были выдавать одну и ту же схему, но процесс вывода дает значительно различающиеся результаты в зависимости от элементов, содержащихся в каждом документе.</span><span class="sxs-lookup"><span data-stu-id="6ae59-119">These two XML documents may have been intended to produce the same schema, but the inference process produces very different results based on the elements contained in each document.</span></span>  
   
- <span data-ttu-id="70c91-120">Чтобы избежать несоответствий, которые могут произойти при создании схемы из XML-документа, рекомендуется явно задавать схему с помощью языка определения схем XML (XSD) или XML-Data Reduced (XDR), при загрузке **DataSet** из XML-ФАЙЛ.</span><span class="sxs-lookup"><span data-stu-id="70c91-120">To avoid the discrepancies that can occur when generating schema from an XML document, we recommend that you explicitly specify a schema using XML Schema definition language (XSD) or XML-Data Reduced (XDR) when loading a **DataSet** from XML.</span></span> <span data-ttu-id="70c91-121">Дополнительные сведения о явном определении **DataSet** схемы с XML-схемы, см. [наследование реляционной структуры набора данных из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).</span><span class="sxs-lookup"><span data-stu-id="70c91-121">For more information about explicitly specifying a **DataSet** schema with XML Schema, see [Deriving DataSet Relational Structure from XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).</span></span>  
+ <span data-ttu-id="6ae59-120">Чтобы избежать несоответствий, которые могут произойти при создании схемы из XML-документа, рекомендуется явно задавать схему с помощью языка определения схем XML (XSD) или XML-Data Reduced (XDR), при загрузке **DataSet** из XML-ФАЙЛ.</span><span class="sxs-lookup"><span data-stu-id="6ae59-120">To avoid the discrepancies that can occur when generating schema from an XML document, we recommend that you explicitly specify a schema using XML Schema definition language (XSD) or XML-Data Reduced (XDR) when loading a **DataSet** from XML.</span></span> <span data-ttu-id="6ae59-121">Дополнительные сведения о явном определении **DataSet** схемы с XML-схемы, см. [наследование реляционной структуры набора данных из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).</span><span class="sxs-lookup"><span data-stu-id="6ae59-121">For more information about explicitly specifying a **DataSet** schema with XML Schema, see [Deriving DataSet Relational Structure from XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="70c91-122">См. также</span><span class="sxs-lookup"><span data-stu-id="70c91-122">See Also</span></span>  
- [<span data-ttu-id="70c91-123">Определение реляционной структуры набора данных из XML</span><span class="sxs-lookup"><span data-stu-id="70c91-123">Inferring DataSet Relational Structure from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
- [<span data-ttu-id="70c91-124">Загрузка набора данных из XML</span><span class="sxs-lookup"><span data-stu-id="70c91-124">Loading a DataSet from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [<span data-ttu-id="70c91-125">Загрузка сведений о схеме набора данных из XML</span><span class="sxs-lookup"><span data-stu-id="70c91-125">Loading DataSet Schema Information from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
- [<span data-ttu-id="70c91-126">Использование XML в наборах данных</span><span class="sxs-lookup"><span data-stu-id="70c91-126">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [<span data-ttu-id="70c91-127">Наборы данных, таблицы данных и объекты DataView</span><span class="sxs-lookup"><span data-stu-id="70c91-127">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [<span data-ttu-id="70c91-128">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="70c91-128">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="6ae59-122">См. также</span><span class="sxs-lookup"><span data-stu-id="6ae59-122">See Also</span></span>  
+ [<span data-ttu-id="6ae59-123">Определение реляционной структуры DataSet из XML</span><span class="sxs-lookup"><span data-stu-id="6ae59-123">Inferring DataSet Relational Structure from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ [<span data-ttu-id="6ae59-124">Загрузка DataSet из XML</span><span class="sxs-lookup"><span data-stu-id="6ae59-124">Loading a DataSet from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [<span data-ttu-id="6ae59-125">Загрузка сведений о схеме DataSet из XML</span><span class="sxs-lookup"><span data-stu-id="6ae59-125">Loading DataSet Schema Information from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ [<span data-ttu-id="6ae59-126">Использование XML в наборах данных</span><span class="sxs-lookup"><span data-stu-id="6ae59-126">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [<span data-ttu-id="6ae59-127">Наборы данных, таблицы данных и объекты DataView</span><span class="sxs-lookup"><span data-stu-id="6ae59-127">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="6ae59-128">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="6ae59-128">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

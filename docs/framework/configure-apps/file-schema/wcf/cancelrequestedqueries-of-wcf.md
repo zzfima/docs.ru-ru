@@ -13,48 +13,49 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be3c02bdf0d51006d7df3b382541b704f71f2463
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f31663d44774f84feab76f22f19400a955a3cf8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltcancelrequestedqueriesgt-of-wcf"></a><span data-ttu-id="38e90-102">&lt;cancelRequestedQueries&gt; (WCF)</span><span class="sxs-lookup"><span data-stu-id="38e90-102">&lt;cancelRequestedQueries&gt; of WCF</span></span>
-<span data-ttu-id="38e90-103">Представляет коллекцию запросов, используемых для отслеживания запросов по отмене дочернего действия родительским действием.</span><span class="sxs-lookup"><span data-stu-id="38e90-103">Represents a collection of queries that are used to track requests to cancel a child activity by the parent activity.</span></span> <span data-ttu-id="38e90-104">Этот запрос необходим, чтобы участник отслеживания подписался на объекты записей запросов на отмену.</span><span class="sxs-lookup"><span data-stu-id="38e90-104">The query is necessary for a tracking participant to subscribe to cancel request record objects.</span></span>  
+# <a name="ltcancelrequestedqueriesgt-of-wcf"></a><span data-ttu-id="ef2b6-102">&lt;cancelRequestedQueries&gt; (WCF)</span><span class="sxs-lookup"><span data-stu-id="ef2b6-102">&lt;cancelRequestedQueries&gt; of WCF</span></span>
+<span data-ttu-id="ef2b6-103">Представляет коллекцию запросов, используемых для отслеживания запросов по отмене дочернего действия родительским действием.</span><span class="sxs-lookup"><span data-stu-id="ef2b6-103">Represents a collection of queries that are used to track requests to cancel a child activity by the parent activity.</span></span> <span data-ttu-id="ef2b6-104">Этот запрос необходим, чтобы участник отслеживания подписался на объекты записей запросов на отмену.</span><span class="sxs-lookup"><span data-stu-id="ef2b6-104">The query is necessary for a tracking participant to subscribe to cancel request record objects.</span></span>  
   
- <span data-ttu-id="38e90-105">Дополнительные сведения о запросах профиля отслеживания см. в разделе [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="38e90-105">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
+ <span data-ttu-id="ef2b6-105">Дополнительные сведения о запросах профиля отслеживания см. в разделе [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="ef2b6-105">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
   
- <span data-ttu-id="38e90-106">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="38e90-106">\<system.serviceModel></span></span>  
-<span data-ttu-id="38e90-107">\<Отслеживание ></span><span class="sxs-lookup"><span data-stu-id="38e90-107">\<tracking></span></span>  
-<span data-ttu-id="38e90-108">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="38e90-108">\<trackingProfile></span></span>  
-<span data-ttu-id="38e90-109">\<рабочий процесс ></span><span class="sxs-lookup"><span data-stu-id="38e90-109">\<workflow></span></span>  
-<span data-ttu-id="38e90-110">\<cancelRequestedQueries ></span><span class="sxs-lookup"><span data-stu-id="38e90-110">\<cancelRequestedQueries></span></span>  
+ <span data-ttu-id="ef2b6-106">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="ef2b6-106">\<system.serviceModel></span></span>  
+<span data-ttu-id="ef2b6-107">\<Отслеживание ></span><span class="sxs-lookup"><span data-stu-id="ef2b6-107">\<tracking></span></span>  
+<span data-ttu-id="ef2b6-108">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="ef2b6-108">\<trackingProfile></span></span>  
+<span data-ttu-id="ef2b6-109">\<рабочий процесс ></span><span class="sxs-lookup"><span data-stu-id="ef2b6-109">\<workflow></span></span>  
+<span data-ttu-id="ef2b6-110">\<cancelRequestedQueries ></span><span class="sxs-lookup"><span data-stu-id="ef2b6-110">\<cancelRequestedQueries></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="38e90-111">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="38e90-111">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ef2b6-111">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ef2b6-111">Syntax</span></span>  
   
 ```xml
 <tracking>   <trackingProfile name="Name">       <workflow>          <cancelRequestQueries>             <cancelRequestQuery activityName="String"                 childActivityName="String"/>          </cancelRequestQueries>       </workflow>   </trackingProfile></tracking>  
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="38e90-112">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="38e90-112">Attributes and Elements</span></span>  
- <span data-ttu-id="38e90-113">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="38e90-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ef2b6-112">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="ef2b6-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="ef2b6-113">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="ef2b6-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="38e90-114">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="38e90-114">Attributes</span></span>  
- <span data-ttu-id="38e90-115">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="38e90-115">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="ef2b6-114">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="ef2b6-114">Attributes</span></span>  
+ <span data-ttu-id="ef2b6-115">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="ef2b6-115">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="38e90-116">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="38e90-116">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="ef2b6-116">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="ef2b6-116">Child Elements</span></span>  
   
-|<span data-ttu-id="38e90-117">Элемент</span><span class="sxs-lookup"><span data-stu-id="38e90-117">Element</span></span>|<span data-ttu-id="38e90-118">Описание</span><span class="sxs-lookup"><span data-stu-id="38e90-118">Description</span></span>|  
+|<span data-ttu-id="ef2b6-117">Элемент</span><span class="sxs-lookup"><span data-stu-id="ef2b6-117">Element</span></span>|<span data-ttu-id="ef2b6-118">Описание:</span><span class="sxs-lookup"><span data-stu-id="ef2b6-118">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="38e90-119">\<cancelRequestedQuery ></span><span class="sxs-lookup"><span data-stu-id="38e90-119">\<cancelRequestedQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/cancelrequestedquery.md)|<span data-ttu-id="38e90-120">Запрос, используемый для отслеживания запросов по отмене дочернего действия родительским.</span><span class="sxs-lookup"><span data-stu-id="38e90-120">A query that is used to track requests to cancel a child activity by the parent activity</span></span>|  
+|[<span data-ttu-id="ef2b6-119">\<cancelRequestedQuery ></span><span class="sxs-lookup"><span data-stu-id="ef2b6-119">\<cancelRequestedQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/cancelrequestedquery.md)|<span data-ttu-id="ef2b6-120">Запрос, используемый для отслеживания запросов по отмене дочернего действия родительским.</span><span class="sxs-lookup"><span data-stu-id="ef2b6-120">A query that is used to track requests to cancel a child activity by the parent activity</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="38e90-121">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="38e90-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="ef2b6-121">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="ef2b6-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="38e90-122">Элемент</span><span class="sxs-lookup"><span data-stu-id="38e90-122">Element</span></span>|<span data-ttu-id="38e90-123">Описание</span><span class="sxs-lookup"><span data-stu-id="38e90-123">Description</span></span>|  
+|<span data-ttu-id="ef2b6-122">Элемент</span><span class="sxs-lookup"><span data-stu-id="ef2b6-122">Element</span></span>|<span data-ttu-id="ef2b6-123">Описание:</span><span class="sxs-lookup"><span data-stu-id="ef2b6-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="38e90-124">\<рабочий процесс ></span><span class="sxs-lookup"><span data-stu-id="38e90-124">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="38e90-125">Элемент конфигурации, содержащий все запросы для определенного рабочего процесса, обозначенного свойством `a HYPERLINK "http://msdn.microsoft.com/en-us/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx" ctivityDefinitionId`.</span><span class="sxs-lookup"><span data-stu-id="38e90-125">A configuration element that contains all queries for a specific workflow identified by the `a HYPERLINK "http://msdn.microsoft.com/en-us/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx" ctivityDefinitionId` property.</span></span>|  
+|[<span data-ttu-id="ef2b6-124">\<рабочий процесс ></span><span class="sxs-lookup"><span data-stu-id="ef2b6-124">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="ef2b6-125">Элемент конфигурации, содержащий все запросы для определенного рабочего процесса, обозначенного свойством `a HYPERLINK "http://msdn.microsoft.com/en-us/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx" ctivityDefinitionId`.</span><span class="sxs-lookup"><span data-stu-id="ef2b6-125">A configuration element that contains all queries for a specific workflow identified by the `a HYPERLINK "http://msdn.microsoft.com/en-us/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx" ctivityDefinitionId` property.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="38e90-126">См. также</span><span class="sxs-lookup"><span data-stu-id="38e90-126">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="ef2b6-126">См. также</span><span class="sxs-lookup"><span data-stu-id="ef2b6-126">See Also</span></span>  
  <xref:System.Activities.Tracking.CancelRequestedQuery>  
- [<span data-ttu-id="38e90-127">Отслеживание и трассировка рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="38e90-127">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [<span data-ttu-id="38e90-128">Профили отслеживания</span><span class="sxs-lookup"><span data-stu-id="38e90-128">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+ [<span data-ttu-id="ef2b6-127">Отслеживание и трассировка рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="ef2b6-127">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [<span data-ttu-id="ef2b6-128">Профили отслеживания</span><span class="sxs-lookup"><span data-stu-id="ef2b6-128">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

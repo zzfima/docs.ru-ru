@@ -13,20 +13,21 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a92a30ca5e2b95e7622bc145d837ac876955a8cb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5671ddce2ab733666f11e15ea2aeb3950c944992
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltheadersgt-element"></a><span data-ttu-id="0f8cc-102">Элемент &lt;headers&gt;</span><span class="sxs-lookup"><span data-stu-id="0f8cc-102">&lt;headers&gt; element</span></span>
-<span data-ttu-id="0f8cc-103">Содержит коллекцию заголовков адреса, требуемых для правильного обращения к локальному издателю.</span><span class="sxs-lookup"><span data-stu-id="0f8cc-103">This contains a collection of address headers that are required in order to correctly address the local issuer.</span></span> <span data-ttu-id="0f8cc-104">Заголовок в эту коллекцию можно добавить с помощью ключевого слова `add`.</span><span class="sxs-lookup"><span data-stu-id="0f8cc-104">You can use the `add` keyword to add a header to this collection.</span></span>  
+# <a name="ltheadersgt-element"></a><span data-ttu-id="c51ab-102">Элемент &lt;headers&gt;</span><span class="sxs-lookup"><span data-stu-id="c51ab-102">&lt;headers&gt; element</span></span>
+<span data-ttu-id="c51ab-103">Содержит коллекцию заголовков адреса, требуемых для правильного обращения к локальному издателю.</span><span class="sxs-lookup"><span data-stu-id="c51ab-103">This contains a collection of address headers that are required in order to correctly address the local issuer.</span></span> <span data-ttu-id="c51ab-104">Заголовок в эту коллекцию можно добавить с помощью ключевого слова `add`.</span><span class="sxs-lookup"><span data-stu-id="c51ab-104">You can use the `add` keyword to add a header to this collection.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0f8cc-105">См. также</span><span class="sxs-lookup"><span data-stu-id="0f8cc-105">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c51ab-105">См. также</span><span class="sxs-lookup"><span data-stu-id="c51ab-105">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.LocalIssuer%2A>  
  <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>  
  <xref:System.ServiceModel.EndpointAddress>  
  <xref:System.ServiceModel.EndpointAddress.Headers%2A>  
  <xref:System.ServiceModel.Channels.AddressHeaderCollection>  
- [<span data-ttu-id="0f8cc-106">Как: Настройка локального издателя</span><span class="sxs-lookup"><span data-stu-id="0f8cc-106">How to: Configure a Local Issuer</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
- [<span data-ttu-id="0f8cc-107">Конечные точки: Адреса, привязки и контракты</span><span class="sxs-lookup"><span data-stu-id="0f8cc-107">Endpoints: Addresses, Bindings, and Contracts</span></span>](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+ [<span data-ttu-id="c51ab-106">Практическое руководство. Настройка локального издателя</span><span class="sxs-lookup"><span data-stu-id="c51ab-106">How to: Configure a Local Issuer</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [<span data-ttu-id="c51ab-107">Конечные точки: адреса, привязки и контракты</span><span class="sxs-lookup"><span data-stu-id="c51ab-107">Endpoints: Addresses, Bindings, and Contracts</span></span>](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

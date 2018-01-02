@@ -17,57 +17,58 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 34e6e7c505dab135452664fdb815ee3e905a2ad0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b2739cc5eaa6a1e43c06849e1b00f7ac8bd531e7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltcleargt-element-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="ccfa8-102">&lt;Очистить&gt; элемент для &lt;прослушиватели&gt; для &lt;трассировки&gt;</span><span class="sxs-lookup"><span data-stu-id="ccfa8-102">&lt;clear&gt; Element for &lt;listeners&gt; for &lt;trace&gt;</span></span>
-<span data-ttu-id="ccfa8-103">Очищает коллекцию `Listeners` для трассировки.</span><span class="sxs-lookup"><span data-stu-id="ccfa8-103">Clears the `Listeners` collection for trace.</span></span>  
+# <a name="ltcleargt-element-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="25fdc-102">&lt;Очистить&gt; элемент для &lt;прослушиватели&gt; для &lt;трассировки&gt;</span><span class="sxs-lookup"><span data-stu-id="25fdc-102">&lt;clear&gt; Element for &lt;listeners&gt; for &lt;trace&gt;</span></span>
+<span data-ttu-id="25fdc-103">Очищает коллекцию `Listeners` для трассировки.</span><span class="sxs-lookup"><span data-stu-id="25fdc-103">Clears the `Listeners` collection for trace.</span></span>  
   
- <span data-ttu-id="ccfa8-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="ccfa8-104">\<configuration></span></span>  
-<span data-ttu-id="ccfa8-105">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="ccfa8-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="ccfa8-106">\<трассировки ></span><span class="sxs-lookup"><span data-stu-id="ccfa8-106">\<trace></span></span>  
-<span data-ttu-id="ccfa8-107">\<прослушиватели ></span><span class="sxs-lookup"><span data-stu-id="ccfa8-107">\<listeners></span></span>  
-<span data-ttu-id="ccfa8-108">\<Очистить ></span><span class="sxs-lookup"><span data-stu-id="ccfa8-108">\<clear></span></span>  
+ <span data-ttu-id="25fdc-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="25fdc-104">\<configuration></span></span>  
+<span data-ttu-id="25fdc-105">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="25fdc-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="25fdc-106">\<трассировки ></span><span class="sxs-lookup"><span data-stu-id="25fdc-106">\<trace></span></span>  
+<span data-ttu-id="25fdc-107">\<прослушиватели ></span><span class="sxs-lookup"><span data-stu-id="25fdc-107">\<listeners></span></span>  
+<span data-ttu-id="25fdc-108">\<Очистить ></span><span class="sxs-lookup"><span data-stu-id="25fdc-108">\<clear></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ccfa8-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ccfa8-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="25fdc-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="25fdc-109">Syntax</span></span>  
   
 ```xml  
 <clear/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="ccfa8-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="ccfa8-110">Attributes and Elements</span></span>  
- <span data-ttu-id="ccfa8-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="ccfa8-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="25fdc-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="25fdc-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="25fdc-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="25fdc-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="ccfa8-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="ccfa8-112">Attributes</span></span>  
- <span data-ttu-id="ccfa8-113">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="ccfa8-113">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="25fdc-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="25fdc-112">Attributes</span></span>  
+ <span data-ttu-id="25fdc-113">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="25fdc-113">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="ccfa8-114">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="ccfa8-114">Child Elements</span></span>  
- <span data-ttu-id="ccfa8-115">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="ccfa8-115">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="25fdc-114">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="25fdc-114">Child Elements</span></span>  
+ <span data-ttu-id="25fdc-115">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="25fdc-115">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="ccfa8-116">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="ccfa8-116">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="25fdc-116">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="25fdc-116">Parent Elements</span></span>  
   
-|<span data-ttu-id="ccfa8-117">Элемент</span><span class="sxs-lookup"><span data-stu-id="ccfa8-117">Element</span></span>|<span data-ttu-id="ccfa8-118">Описание</span><span class="sxs-lookup"><span data-stu-id="ccfa8-118">Description</span></span>|  
+|<span data-ttu-id="25fdc-117">Элемент</span><span class="sxs-lookup"><span data-stu-id="25fdc-117">Element</span></span>|<span data-ttu-id="25fdc-118">Описание</span><span class="sxs-lookup"><span data-stu-id="25fdc-118">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="ccfa8-119">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="ccfa8-119">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="ccfa8-120">Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.</span><span class="sxs-lookup"><span data-stu-id="ccfa8-120">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
-|`trace`|<span data-ttu-id="ccfa8-121">Содержит прослушиватели, которые собирают, хранят и маршрутизируют сообщения трассировки.</span><span class="sxs-lookup"><span data-stu-id="ccfa8-121">Contains listeners that collect, store, and route tracing messages.</span></span>|  
-|`listeners`|<span data-ttu-id="ccfa8-122">Содержит прослушиватели для сбора, хранения и маршрутизации сообщений.</span><span class="sxs-lookup"><span data-stu-id="ccfa8-122">Contains listeners that collect, store, and route messages.</span></span> <span data-ttu-id="ccfa8-123">Прослушиватели направляют выходные данные трассировки соответствующему целевому объекту.</span><span class="sxs-lookup"><span data-stu-id="ccfa8-123">Listeners direct the tracing output to an appropriate target.</span></span>|  
+|`configuration`|<span data-ttu-id="25fdc-119">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="25fdc-119">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="25fdc-120">Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.</span><span class="sxs-lookup"><span data-stu-id="25fdc-120">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`trace`|<span data-ttu-id="25fdc-121">Содержит прослушиватели, которые собирают, хранят и маршрутизируют сообщения трассировки.</span><span class="sxs-lookup"><span data-stu-id="25fdc-121">Contains listeners that collect, store, and route tracing messages.</span></span>|  
+|`listeners`|<span data-ttu-id="25fdc-122">Содержит прослушиватели для сбора, хранения и маршрутизации сообщений.</span><span class="sxs-lookup"><span data-stu-id="25fdc-122">Contains listeners that collect, store, and route messages.</span></span> <span data-ttu-id="25fdc-123">Прослушиватели направляют выходные данные трассировки соответствующему целевому объекту.</span><span class="sxs-lookup"><span data-stu-id="25fdc-123">Listeners direct the tracing output to an appropriate target.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ccfa8-124">Примечания</span><span class="sxs-lookup"><span data-stu-id="ccfa8-124">Remarks</span></span>  
- <span data-ttu-id="ccfa8-125">`<clear>` Элемент удаляет все прослушиватели `Listeners` коллекции для трассировки.</span><span class="sxs-lookup"><span data-stu-id="ccfa8-125">The `<clear>` element removes all listeners from the `Listeners` collection for trace.</span></span> <span data-ttu-id="ccfa8-126">Можно использовать `<clear>` элемент перед использованием `<add>` элемент, чтобы быть уверенным, отсутствуют другие активные прослушиватели в коллекции.</span><span class="sxs-lookup"><span data-stu-id="ccfa8-126">You can use the `<clear>` element before using the `<add>` element to be certain there are no other active listeners in the collection.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="25fdc-124">Примечания</span><span class="sxs-lookup"><span data-stu-id="25fdc-124">Remarks</span></span>  
+ <span data-ttu-id="25fdc-125">`<clear>` Элемент удаляет все прослушиватели `Listeners` коллекции для трассировки.</span><span class="sxs-lookup"><span data-stu-id="25fdc-125">The `<clear>` element removes all listeners from the `Listeners` collection for trace.</span></span> <span data-ttu-id="25fdc-126">Можно использовать `<clear>` элемент перед использованием `<add>` элемент, чтобы быть уверенным, отсутствуют другие активные прослушиватели в коллекции.</span><span class="sxs-lookup"><span data-stu-id="25fdc-126">You can use the `<clear>` element before using the `<add>` element to be certain there are no other active listeners in the collection.</span></span>  
   
- <span data-ttu-id="ccfa8-127">Можно снять `Listeners` коллекции программным образом путем вызова <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> метод <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> свойство (`System.Diagnostics.Trace.Listeners.Clear()`).</span><span class="sxs-lookup"><span data-stu-id="ccfa8-127">You can clear the `Listeners` collection programmatically by calling the <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> method on the <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> property (`System.Diagnostics.Trace.Listeners.Clear()`).</span></span>  
+ <span data-ttu-id="25fdc-127">Можно снять `Listeners` коллекции программным образом путем вызова <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> метод <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> свойство (`System.Diagnostics.Trace.Listeners.Clear()`).</span><span class="sxs-lookup"><span data-stu-id="25fdc-127">You can clear the `Listeners` collection programmatically by calling the <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> method on the <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> property (`System.Diagnostics.Trace.Listeners.Clear()`).</span></span>  
   
- <span data-ttu-id="ccfa8-128">Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файл конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="ccfa8-128">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
+ <span data-ttu-id="25fdc-128">Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файл конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="25fdc-128">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ccfa8-129">`<clear>` Элемент удаляет <xref:System.Diagnostics.DefaultTraceListener> из `Listeners` коллекции, меняет поведение <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, и <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> методы.</span><span class="sxs-lookup"><span data-stu-id="ccfa8-129">The `<clear>` element removes the <xref:System.Diagnostics.DefaultTraceListener> from the `Listeners` collection, altering the behavior of the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, and <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> methods.</span></span> <span data-ttu-id="ccfa8-130">Вызов `Assert` или `Fail` метод обычно приводит к отображению окна сообщения.</span><span class="sxs-lookup"><span data-stu-id="ccfa8-130">Calling an `Assert` or `Fail` method normally results in the display of a message box.</span></span> <span data-ttu-id="ccfa8-131">Однако окно сообщения не отображается при <xref:System.Diagnostics.DefaultTraceListener> не находится в `Listeners` коллекции.</span><span class="sxs-lookup"><span data-stu-id="ccfa8-131">However, the message box is not displayed if the <xref:System.Diagnostics.DefaultTraceListener> is not in the `Listeners` collection.</span></span>  
+>  <span data-ttu-id="25fdc-129">`<clear>` Элемент удаляет <xref:System.Diagnostics.DefaultTraceListener> из `Listeners` коллекции, меняет поведение <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, и <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> методы.</span><span class="sxs-lookup"><span data-stu-id="25fdc-129">The `<clear>` element removes the <xref:System.Diagnostics.DefaultTraceListener> from the `Listeners` collection, altering the behavior of the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, and <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> methods.</span></span> <span data-ttu-id="25fdc-130">Вызов `Assert` или `Fail` метод обычно приводит к отображению окна сообщения.</span><span class="sxs-lookup"><span data-stu-id="25fdc-130">Calling an `Assert` or `Fail` method normally results in the display of a message box.</span></span> <span data-ttu-id="25fdc-131">Однако окно сообщения не отображается при <xref:System.Diagnostics.DefaultTraceListener> не находится в `Listeners` коллекции.</span><span class="sxs-lookup"><span data-stu-id="25fdc-131">However, the message box is not displayed if the <xref:System.Diagnostics.DefaultTraceListener> is not in the `Listeners` collection.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ccfa8-132">Пример</span><span class="sxs-lookup"><span data-stu-id="ccfa8-132">Example</span></span>  
- <span data-ttu-id="ccfa8-133">В следующем примере показано, как использовать `<clear>` элемент перед использованием `<add>` элемент для добавления прослушивателя `console` для `Listeners` коллекции для трассировки.</span><span class="sxs-lookup"><span data-stu-id="ccfa8-133">The following example shows how to use the `<clear>` element before using the `<add>` element to add the listener `console` to the `Listeners` collection for trace.</span></span>  
+## <a name="example"></a><span data-ttu-id="25fdc-132">Пример</span><span class="sxs-lookup"><span data-stu-id="25fdc-132">Example</span></span>  
+ <span data-ttu-id="25fdc-133">В следующем примере показано, как использовать `<clear>` элемент перед использованием `<add>` элемент для добавления прослушивателя `console` для `Listeners` коллекции для трассировки.</span><span class="sxs-lookup"><span data-stu-id="25fdc-133">The following example shows how to use the `<clear>` element before using the `<add>` element to add the listener `console` to the `Listeners` collection for trace.</span></span>  
   
 ```xml  
 <configuration>  
@@ -86,11 +87,11 @@ ms.lasthandoff: 11/21/2017
 </configuration>   
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ccfa8-134">См. также</span><span class="sxs-lookup"><span data-stu-id="ccfa8-134">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="25fdc-134">См. также</span><span class="sxs-lookup"><span data-stu-id="25fdc-134">See Also</span></span>  
  <xref:System.Diagnostics.Trace.Listeners%2A>  
  <xref:System.Diagnostics.Trace>  
  <xref:System.Diagnostics.Debug>  
  <xref:System.Diagnostics.TraceSource>  
- [<span data-ttu-id="ccfa8-135">Схема параметров трассировки и отладки</span><span class="sxs-lookup"><span data-stu-id="ccfa8-135">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [<span data-ttu-id="ccfa8-136">\<remove></span><span class="sxs-lookup"><span data-stu-id="ccfa8-136">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)  
- [<span data-ttu-id="ccfa8-137">Прослушиватели трассировки</span><span class="sxs-lookup"><span data-stu-id="ccfa8-137">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+ [<span data-ttu-id="25fdc-135">Схема параметров трассировки и отладки</span><span class="sxs-lookup"><span data-stu-id="25fdc-135">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [<span data-ttu-id="25fdc-136">\<remove></span><span class="sxs-lookup"><span data-stu-id="25fdc-136">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)  
+ [<span data-ttu-id="25fdc-137">Прослушиватели трассировки</span><span class="sxs-lookup"><span data-stu-id="25fdc-137">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

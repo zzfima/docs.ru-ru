@@ -13,26 +13,27 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1f05a1019d7acc45ddc0e1bc3f2a145a297322d5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c4bc60c292c0daf2bb9f028f1cf643c6f5ae24b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltadditionalrequestparametersgt-element"></a><span data-ttu-id="fc949-102">Элемент &lt;additionalRequestParameters&gt;</span><span class="sxs-lookup"><span data-stu-id="fc949-102">&lt;additionalRequestParameters&gt; element</span></span>
-<span data-ttu-id="fc949-103">Содержит набор элементов конфигурации, задающих дополнительные параметры запросов.</span><span class="sxs-lookup"><span data-stu-id="fc949-103">This contains a collection of configuration elements that specify additional request parameters.</span></span>  
+# <a name="ltadditionalrequestparametersgt-element"></a><span data-ttu-id="096da-102">Элемент &lt;additionalRequestParameters&gt;</span><span class="sxs-lookup"><span data-stu-id="096da-102">&lt;additionalRequestParameters&gt; element</span></span>
+<span data-ttu-id="096da-103">Содержит набор элементов конфигурации, задающих дополнительные параметры запросов.</span><span class="sxs-lookup"><span data-stu-id="096da-103">This contains a collection of configuration elements that specify additional request parameters.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fc949-104">См. также</span><span class="sxs-lookup"><span data-stu-id="fc949-104">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="096da-104">См. также</span><span class="sxs-lookup"><span data-stu-id="096da-104">See Also</span></span>  
  <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.AdditionalRequestParameters%2A>  
  <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement.AdditionalRequestParameters%2A>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
- [<span data-ttu-id="fc949-105">Службы идентификации и проверки подлинности</span><span class="sxs-lookup"><span data-stu-id="fc949-105">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [<span data-ttu-id="fc949-106">Федерация и выданные маркеры</span><span class="sxs-lookup"><span data-stu-id="fc949-106">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [<span data-ttu-id="fc949-107">Возможности безопасности при использовании пользовательских привязок</span><span class="sxs-lookup"><span data-stu-id="fc949-107">Security Capabilities with Custom Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
- [<span data-ttu-id="fc949-108">Федерация и выданные маркеры</span><span class="sxs-lookup"><span data-stu-id="fc949-108">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [<span data-ttu-id="fc949-109">Привязки</span><span class="sxs-lookup"><span data-stu-id="fc949-109">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="fc949-110">Расширение привязок</span><span class="sxs-lookup"><span data-stu-id="fc949-110">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [<span data-ttu-id="fc949-111">Пользовательские привязки</span><span class="sxs-lookup"><span data-stu-id="fc949-111">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [<span data-ttu-id="fc949-112">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="fc949-112">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [<span data-ttu-id="fc949-113">Как: Создание пользовательской привязки, с использованием элемента SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="fc949-113">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [<span data-ttu-id="fc949-114">Безопасность пользовательской привязки</span><span class="sxs-lookup"><span data-stu-id="fc949-114">Custom Binding Security</span></span>](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+ [<span data-ttu-id="096da-105">Идентификация и проверка подлинности службы</span><span class="sxs-lookup"><span data-stu-id="096da-105">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [<span data-ttu-id="096da-106">Федерация и выданные маркеры</span><span class="sxs-lookup"><span data-stu-id="096da-106">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [<span data-ttu-id="096da-107">Возможности безопасности при использовании пользовательских привязок</span><span class="sxs-lookup"><span data-stu-id="096da-107">Security Capabilities with Custom Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
+ [<span data-ttu-id="096da-108">Федерация и выданные маркеры</span><span class="sxs-lookup"><span data-stu-id="096da-108">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [<span data-ttu-id="096da-109">Привязки</span><span class="sxs-lookup"><span data-stu-id="096da-109">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="096da-110">Расширение привязок</span><span class="sxs-lookup"><span data-stu-id="096da-110">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="096da-111">Пользовательские привязки</span><span class="sxs-lookup"><span data-stu-id="096da-111">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="096da-112">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="096da-112">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [<span data-ttu-id="096da-113">Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="096da-113">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [<span data-ttu-id="096da-114">Безопасность пользовательской привязки</span><span class="sxs-lookup"><span data-stu-id="096da-114">Custom Binding Security</span></span>](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

@@ -13,21 +13,22 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 0c8fd5a9a5c4d6007ff0f67132b97b0aa5d98256
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 15c2561487eecb44cf3542768de0a77d1dd6713d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltremovegt"></a><span data-ttu-id="b1746-102">&lt;remove&gt;</span><span class="sxs-lookup"><span data-stu-id="b1746-102">&lt;remove&gt;</span></span>
-<span data-ttu-id="b1746-103">Удаляет обработчик маркеров безопасности из коллекции обработчиков маркеров.</span><span class="sxs-lookup"><span data-stu-id="b1746-103">Removes the specified security token handler from the token handler collection.</span></span>  
+# <a name="ltremovegt"></a><span data-ttu-id="e6538-102">&lt;remove&gt;</span><span class="sxs-lookup"><span data-stu-id="e6538-102">&lt;remove&gt;</span></span>
+<span data-ttu-id="e6538-103">Удаляет обработчик маркеров безопасности из коллекции обработчиков маркеров.</span><span class="sxs-lookup"><span data-stu-id="e6538-103">Removes the specified security token handler from the token handler collection.</span></span>  
   
- <span data-ttu-id="b1746-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="b1746-104">\<system.identityModel></span></span>  
-<span data-ttu-id="b1746-105">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="b1746-105">\<identityConfiguration></span></span>  
-<span data-ttu-id="b1746-106">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="b1746-106">\<securityTokenHandlers></span></span>  
-<span data-ttu-id="b1746-107">\<Удалите ></span><span class="sxs-lookup"><span data-stu-id="b1746-107">\<remove></span></span>  
+ <span data-ttu-id="e6538-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="e6538-104">\<system.identityModel></span></span>  
+<span data-ttu-id="e6538-105">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="e6538-105">\<identityConfiguration></span></span>  
+<span data-ttu-id="e6538-106">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="e6538-106">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="e6538-107">\<Удалите ></span><span class="sxs-lookup"><span data-stu-id="e6538-107">\<remove></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b1746-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b1746-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e6538-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e6538-108">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -40,26 +41,26 @@ ms.lasthandoff: 10/18/2017
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="b1746-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="b1746-109">Attributes and Elements</span></span>  
- <span data-ttu-id="b1746-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="b1746-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e6538-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="e6538-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="e6538-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="e6538-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="b1746-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b1746-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="e6538-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="e6538-111">Attributes</span></span>  
   
-|<span data-ttu-id="b1746-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="b1746-112">Attribute</span></span>|<span data-ttu-id="b1746-113">Описание</span><span class="sxs-lookup"><span data-stu-id="b1746-113">Description</span></span>|  
+|<span data-ttu-id="e6538-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="e6538-112">Attribute</span></span>|<span data-ttu-id="e6538-113">Описание</span><span class="sxs-lookup"><span data-stu-id="e6538-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="b1746-114">type</span><span class="sxs-lookup"><span data-stu-id="b1746-114">type</span></span>|<span data-ttu-id="b1746-115">Имя типа CLR обработчик маркеров для удаления.</span><span class="sxs-lookup"><span data-stu-id="b1746-115">The CLR type name of the token handler to be removed.</span></span> <span data-ttu-id="b1746-116">Дополнительные сведения о способах указания `type` см. в разделе [ссылок на пользовательские типы](http://msdn.microsoft.com/en-us/7286d2e3-c63d-49fd-abdc-ce2705f22c24).</span><span class="sxs-lookup"><span data-stu-id="b1746-116">For more information about how to specify the `type` attribute, see [Custom Type References](http://msdn.microsoft.com/en-us/7286d2e3-c63d-49fd-abdc-ce2705f22c24).</span></span> <span data-ttu-id="b1746-117">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="b1746-117">Required.</span></span>|  
+|<span data-ttu-id="e6538-114">type</span><span class="sxs-lookup"><span data-stu-id="e6538-114">type</span></span>|<span data-ttu-id="e6538-115">Имя типа CLR обработчик маркеров для удаления.</span><span class="sxs-lookup"><span data-stu-id="e6538-115">The CLR type name of the token handler to be removed.</span></span> <span data-ttu-id="e6538-116">Дополнительные сведения о способах указания `type` см. в разделе [ссылок на пользовательские типы](http://msdn.microsoft.com/en-us/7286d2e3-c63d-49fd-abdc-ce2705f22c24).</span><span class="sxs-lookup"><span data-stu-id="e6538-116">For more information about how to specify the `type` attribute, see [Custom Type References](http://msdn.microsoft.com/en-us/7286d2e3-c63d-49fd-abdc-ce2705f22c24).</span></span> <span data-ttu-id="e6538-117">Обязательно.</span><span class="sxs-lookup"><span data-stu-id="e6538-117">Required.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="b1746-118">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="b1746-118">Child Elements</span></span>  
- <span data-ttu-id="b1746-119">Нет</span><span class="sxs-lookup"><span data-stu-id="b1746-119">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="e6538-118">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="e6538-118">Child Elements</span></span>  
+ <span data-ttu-id="e6538-119">Нет</span><span class="sxs-lookup"><span data-stu-id="e6538-119">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="b1746-120">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="b1746-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="e6538-120">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="e6538-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="b1746-121">Элемент</span><span class="sxs-lookup"><span data-stu-id="b1746-121">Element</span></span>|<span data-ttu-id="b1746-122">Описание</span><span class="sxs-lookup"><span data-stu-id="b1746-122">Description</span></span>|  
+|<span data-ttu-id="e6538-121">Элемент</span><span class="sxs-lookup"><span data-stu-id="e6538-121">Element</span></span>|<span data-ttu-id="e6538-122">Описание:</span><span class="sxs-lookup"><span data-stu-id="e6538-122">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="b1746-123">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="b1746-123">\<securityTokenHandlers></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|<span data-ttu-id="b1746-124">Задает коллекцию обработчиков токенов безопасности, которые зарегистрированы с конечной точкой.</span><span class="sxs-lookup"><span data-stu-id="b1746-124">Specifies a collection of security token handlers that are registered with the endpoint.</span></span>|  
+|[<span data-ttu-id="e6538-123">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="e6538-123">\<securityTokenHandlers></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|<span data-ttu-id="e6538-124">Задает коллекцию обработчиков токенов безопасности, которые зарегистрированы с конечной точкой.</span><span class="sxs-lookup"><span data-stu-id="e6538-124">Specifies a collection of security token handlers that are registered with the endpoint.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="b1746-125">Пример</span><span class="sxs-lookup"><span data-stu-id="b1746-125">Example</span></span>  
- <span data-ttu-id="b1746-126">Следующий XML-КОДЕ показано использование `<add>` и `<remove>` элементов для замены токенов обработчик сеанса по умолчанию обработчик маркеров пользовательского сеанса.</span><span class="sxs-lookup"><span data-stu-id="b1746-126">The following XML shows the use of the `<add>` and `<remove>` elements to replace the default session token handler with a custom session token handler.</span></span> <span data-ttu-id="b1746-127">XML-код будет браться из `ClaimsAwareWebFarm` образца.</span><span class="sxs-lookup"><span data-stu-id="b1746-127">The XML is taken from the `ClaimsAwareWebFarm` sample.</span></span>  
+## <a name="example"></a><span data-ttu-id="e6538-125">Пример</span><span class="sxs-lookup"><span data-stu-id="e6538-125">Example</span></span>  
+ <span data-ttu-id="e6538-126">Следующий XML-КОДЕ показано использование `<add>` и `<remove>` элементов для замены токенов обработчик сеанса по умолчанию обработчик маркеров пользовательского сеанса.</span><span class="sxs-lookup"><span data-stu-id="e6538-126">The following XML shows the use of the `<add>` and `<remove>` elements to replace the default session token handler with a custom session token handler.</span></span> <span data-ttu-id="e6538-127">XML-код будет браться из `ClaimsAwareWebFarm` образца.</span><span class="sxs-lookup"><span data-stu-id="e6538-127">The XML is taken from the `ClaimsAwareWebFarm` sample.</span></span>  
   
 ```xml  
 <securityTokenHandlers>  

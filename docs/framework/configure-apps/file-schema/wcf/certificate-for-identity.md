@@ -13,46 +13,47 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8d847def6268881cbd288fe9b3ba89de9403b41d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c1fb253ed166b4e8106f68bf2782cf215541294
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltcertificategt-for-ltidentitygt"></a><span data-ttu-id="b6a3e-102">&lt;certificate&gt; для &lt;identity&gt;</span><span class="sxs-lookup"><span data-stu-id="b6a3e-102">&lt;certificate&gt; for &lt;identity&gt;</span></span>
-<span data-ttu-id="b6a3e-103">Задает сертификат X.509, используемый для проверки сервера при подключении к клиенту.</span><span class="sxs-lookup"><span data-stu-id="b6a3e-103">Specifies an X.509 certificate used to validate a server to a client.</span></span>  
+# <a name="ltcertificategt-for-ltidentitygt"></a><span data-ttu-id="3a59c-102">&lt;certificate&gt; для &lt;identity&gt;</span><span class="sxs-lookup"><span data-stu-id="3a59c-102">&lt;certificate&gt; for &lt;identity&gt;</span></span>
+<span data-ttu-id="3a59c-103">Задает сертификат X.509, используемый для проверки сервера при подключении к клиенту.</span><span class="sxs-lookup"><span data-stu-id="3a59c-103">Specifies an X.509 certificate used to validate a server to a client.</span></span>  
   
- <span data-ttu-id="b6a3e-104">Дополнительные сведения о настройке значения элемента см. в разделе [службы удостоверений и проверки подлинности](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="b6a3e-104">For more information about setting the element value, see [Service Identity and Authentication](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span></span>  
+ <span data-ttu-id="3a59c-104">Дополнительные сведения о настройке значения элемента см. в разделе [службы удостоверений и проверки подлинности](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="3a59c-104">For more information about setting the element value, see [Service Identity and Authentication](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span></span>  
   
- <span data-ttu-id="b6a3e-105">\<удостоверение ></span><span class="sxs-lookup"><span data-stu-id="b6a3e-105">\<identity></span></span>  
-<span data-ttu-id="b6a3e-106">\<сертификат ></span><span class="sxs-lookup"><span data-stu-id="b6a3e-106">\<certificate></span></span>  
+ <span data-ttu-id="3a59c-105">\<удостоверение ></span><span class="sxs-lookup"><span data-stu-id="3a59c-105">\<identity></span></span>  
+<span data-ttu-id="3a59c-106">\<сертификат ></span><span class="sxs-lookup"><span data-stu-id="3a59c-106">\<certificate></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b6a3e-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b6a3e-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3a59c-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3a59c-107">Syntax</span></span>  
   
 ```xml  
 <certificate encodedValue = "String" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="b6a3e-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="b6a3e-108">Attributes and Elements</span></span>  
- <span data-ttu-id="b6a3e-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="b6a3e-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="3a59c-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="3a59c-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="3a59c-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="3a59c-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="b6a3e-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b6a3e-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="3a59c-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="3a59c-110">Attributes</span></span>  
   
-|<span data-ttu-id="b6a3e-111">Атрибут</span><span class="sxs-lookup"><span data-stu-id="b6a3e-111">Attribute</span></span>|<span data-ttu-id="b6a3e-112">Описание</span><span class="sxs-lookup"><span data-stu-id="b6a3e-112">Description</span></span>|  
+|<span data-ttu-id="3a59c-111">Атрибут</span><span class="sxs-lookup"><span data-stu-id="3a59c-111">Attribute</span></span>|<span data-ttu-id="3a59c-112">Описание</span><span class="sxs-lookup"><span data-stu-id="3a59c-112">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="b6a3e-113">encodedValue</span><span class="sxs-lookup"><span data-stu-id="b6a3e-113">encodedValue</span></span>|<span data-ttu-id="b6a3e-114">Кодировка Base64 сертификата.</span><span class="sxs-lookup"><span data-stu-id="b6a3e-114">A Base64 encoding of the certificate.</span></span>|  
+|<span data-ttu-id="3a59c-113">encodedValue</span><span class="sxs-lookup"><span data-stu-id="3a59c-113">encodedValue</span></span>|<span data-ttu-id="3a59c-114">Кодировка Base64 сертификата.</span><span class="sxs-lookup"><span data-stu-id="3a59c-114">A Base64 encoding of the certificate.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="b6a3e-115">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="b6a3e-115">Child Elements</span></span>  
- <span data-ttu-id="b6a3e-116">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="b6a3e-116">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="3a59c-115">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="3a59c-115">Child Elements</span></span>  
+ <span data-ttu-id="3a59c-116">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="3a59c-116">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="b6a3e-117">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="b6a3e-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="3a59c-117">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="3a59c-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="b6a3e-118">Элемент</span><span class="sxs-lookup"><span data-stu-id="b6a3e-118">Element</span></span>|<span data-ttu-id="b6a3e-119">Описание</span><span class="sxs-lookup"><span data-stu-id="b6a3e-119">Description</span></span>|  
+|<span data-ttu-id="3a59c-118">Элемент</span><span class="sxs-lookup"><span data-stu-id="3a59c-118">Element</span></span>|<span data-ttu-id="3a59c-119">Описание:</span><span class="sxs-lookup"><span data-stu-id="3a59c-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="b6a3e-120">\<удостоверение ></span><span class="sxs-lookup"><span data-stu-id="b6a3e-120">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="b6a3e-121">Задает удостоверение службы, подлинность которой должна быть проверена клиентом.</span><span class="sxs-lookup"><span data-stu-id="b6a3e-121">Specifies the identity of the service to be authenticated by the client.</span></span>|  
+|[<span data-ttu-id="3a59c-120">\<удостоверение ></span><span class="sxs-lookup"><span data-stu-id="3a59c-120">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="3a59c-121">Задает удостоверение службы, подлинность которой должна быть проверена клиентом.</span><span class="sxs-lookup"><span data-stu-id="3a59c-121">Specifies the identity of the service to be authenticated by the client.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="b6a3e-122">Пример</span><span class="sxs-lookup"><span data-stu-id="b6a3e-122">Example</span></span>  
- <span data-ttu-id="b6a3e-123">В следующем коде задается кодированное представление сертификата, используемого для проверки сервера при подключении к клиенту.</span><span class="sxs-lookup"><span data-stu-id="b6a3e-123">The following code specifies the encoded representation of a certificate used to validate a server to a client.</span></span>  
+## <a name="example"></a><span data-ttu-id="3a59c-122">Пример</span><span class="sxs-lookup"><span data-stu-id="3a59c-122">Example</span></span>  
+ <span data-ttu-id="3a59c-123">В следующем коде задается кодированное представление сертификата, используемого для проверки сервера при подключении к клиенту.</span><span class="sxs-lookup"><span data-stu-id="3a59c-123">The following code specifies the encoded representation of a certificate used to validate a server to a client.</span></span>  
   
 ```xml  
 <identity>  
@@ -60,10 +61,10 @@ ms.lasthandoff: 12/02/2017
 </identity>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b6a3e-124">См. также</span><span class="sxs-lookup"><span data-stu-id="b6a3e-124">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3a59c-124">См. также</span><span class="sxs-lookup"><span data-stu-id="3a59c-124">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.IdentityElement>  
  <xref:System.ServiceModel.EndpointAddress>  
  <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
  <xref:System.ServiceModel.EndpointIdentity>  
- [<span data-ttu-id="b6a3e-125">Службы идентификации и проверки подлинности</span><span class="sxs-lookup"><span data-stu-id="b6a3e-125">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [<span data-ttu-id="b6a3e-126">\<удостоверение ></span><span class="sxs-lookup"><span data-stu-id="b6a3e-126">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+ [<span data-ttu-id="3a59c-125">Идентификация и проверка подлинности службы</span><span class="sxs-lookup"><span data-stu-id="3a59c-125">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [<span data-ttu-id="3a59c-126">\<удостоверение ></span><span class="sxs-lookup"><span data-stu-id="3a59c-126">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

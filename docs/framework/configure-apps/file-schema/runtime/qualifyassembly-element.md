@@ -20,21 +20,22 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 521bbccd83f224cc824dae41309715d65472454e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7da2e1ac5c16f6e481c974794efceb12f102b1a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltqualifyassemblygt-element"></a><span data-ttu-id="64253-102">&lt;qualifyAssembly&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="64253-102">&lt;qualifyAssembly&gt; Element</span></span>
-<span data-ttu-id="64253-103">Задает полное имя сборки, которая должна загружаться динамически в случае использования неполного имени.</span><span class="sxs-lookup"><span data-stu-id="64253-103">Specifies the full name of the assembly that should be dynamically loaded when a partial name is used.</span></span>  
+# <a name="ltqualifyassemblygt-element"></a><span data-ttu-id="381c2-102">&lt;qualifyAssembly&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="381c2-102">&lt;qualifyAssembly&gt; Element</span></span>
+<span data-ttu-id="381c2-103">Задает полное имя сборки, которая должна загружаться динамически в случае использования неполного имени.</span><span class="sxs-lookup"><span data-stu-id="381c2-103">Specifies the full name of the assembly that should be dynamically loaded when a partial name is used.</span></span>  
   
- <span data-ttu-id="64253-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="64253-104">\<configuration></span></span>  
-<span data-ttu-id="64253-105">\<Среда выполнения ></span><span class="sxs-lookup"><span data-stu-id="64253-105">\<runtime></span></span>  
-<span data-ttu-id="64253-106">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="64253-106">\<assemblyBinding></span></span>  
-<span data-ttu-id="64253-107">\<qualifyAssembly ></span><span class="sxs-lookup"><span data-stu-id="64253-107">\<qualifyAssembly></span></span>  
+ <span data-ttu-id="381c2-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="381c2-104">\<configuration></span></span>  
+<span data-ttu-id="381c2-105">\<Среда выполнения ></span><span class="sxs-lookup"><span data-stu-id="381c2-105">\<runtime></span></span>  
+<span data-ttu-id="381c2-106">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="381c2-106">\<assemblyBinding></span></span>  
+<span data-ttu-id="381c2-107">\<qualifyAssembly ></span><span class="sxs-lookup"><span data-stu-id="381c2-107">\<qualifyAssembly></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="64253-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="64253-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="381c2-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="381c2-108">Syntax</span></span>  
   
 ```xml  
       <qualifyAssembly partialName=  
@@ -42,34 +43,34 @@ ms.lasthandoff: 11/21/2017
                  fullName="FullAssemblyName"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="64253-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="64253-109">Attributes and Elements</span></span>  
- <span data-ttu-id="64253-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="64253-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="381c2-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="381c2-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="381c2-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="381c2-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="64253-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="64253-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="381c2-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="381c2-111">Attributes</span></span>  
   
-|<span data-ttu-id="64253-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="64253-112">Attribute</span></span>|<span data-ttu-id="64253-113">Описание</span><span class="sxs-lookup"><span data-stu-id="64253-113">Description</span></span>|  
+|<span data-ttu-id="381c2-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="381c2-112">Attribute</span></span>|<span data-ttu-id="381c2-113">Описание</span><span class="sxs-lookup"><span data-stu-id="381c2-113">Description</span></span>|  
 |---------------|-----------------|  
-|`partialName`|<span data-ttu-id="64253-114">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="64253-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="64253-115">Указывает частичное имя сборки, как оно отображается в коде.</span><span class="sxs-lookup"><span data-stu-id="64253-115">Specifies the partial name of the assembly as it appears in the code.</span></span>|  
-|`fullName`|<span data-ttu-id="64253-116">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="64253-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="64253-117">Указывает полное имя сборки, как оно отображается в глобальном кэше сборок.</span><span class="sxs-lookup"><span data-stu-id="64253-117">Specifies the full name of the assembly as it appears in the global assembly cache.</span></span>|  
+|`partialName`|<span data-ttu-id="381c2-114">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="381c2-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="381c2-115">Указывает частичное имя сборки, как оно отображается в коде.</span><span class="sxs-lookup"><span data-stu-id="381c2-115">Specifies the partial name of the assembly as it appears in the code.</span></span>|  
+|`fullName`|<span data-ttu-id="381c2-116">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="381c2-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="381c2-117">Указывает полное имя сборки, как оно отображается в глобальном кэше сборок.</span><span class="sxs-lookup"><span data-stu-id="381c2-117">Specifies the full name of the assembly as it appears in the global assembly cache.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="64253-118">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="64253-118">Child Elements</span></span>  
- <span data-ttu-id="64253-119">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="64253-119">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="381c2-118">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="381c2-118">Child Elements</span></span>  
+ <span data-ttu-id="381c2-119">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="381c2-119">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="64253-120">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="64253-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="381c2-120">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="381c2-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="64253-121">Элемент</span><span class="sxs-lookup"><span data-stu-id="64253-121">Element</span></span>|<span data-ttu-id="64253-122">Описание</span><span class="sxs-lookup"><span data-stu-id="64253-122">Description</span></span>|  
+|<span data-ttu-id="381c2-121">Элемент</span><span class="sxs-lookup"><span data-stu-id="381c2-121">Element</span></span>|<span data-ttu-id="381c2-122">Описание:</span><span class="sxs-lookup"><span data-stu-id="381c2-122">Description</span></span>|  
 |-------------|-----------------|  
-|`assemblyBinding`|<span data-ttu-id="64253-123">Содержит сведения о перенаправлении версии сборки и о расположениях сборок.</span><span class="sxs-lookup"><span data-stu-id="64253-123">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
-|`configuration`|<span data-ttu-id="64253-124">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="64253-124">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="64253-125">Содержит сведения о привязке сборок и сборке мусора.</span><span class="sxs-lookup"><span data-stu-id="64253-125">Contains information about assembly binding and garbage collection.</span></span>|  
+|`assemblyBinding`|<span data-ttu-id="381c2-123">Содержит сведения о перенаправлении версии сборки и о расположениях сборок.</span><span class="sxs-lookup"><span data-stu-id="381c2-123">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|`configuration`|<span data-ttu-id="381c2-124">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="381c2-124">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="381c2-125">Содержит сведения о привязке сборок и сборке мусора.</span><span class="sxs-lookup"><span data-stu-id="381c2-125">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="64253-126">Примечания</span><span class="sxs-lookup"><span data-stu-id="64253-126">Remarks</span></span>  
- <span data-ttu-id="64253-127">Вызов <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> метода с использованием частичных имен сборок средой CLR, следует искать сборки только в базовой папке приложения.</span><span class="sxs-lookup"><span data-stu-id="64253-127">Calling the <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method using partial assembly names causes the common language runtime to look for the assembly only in the application base directory.</span></span> <span data-ttu-id="64253-128">Используйте  **\<qualifyAssembly >** элемент в файле конфигурации приложения для предоставления полных сведений о сборке (имя, версию, маркер открытого ключа и языка и региональных параметров) и средой CLR для поиска для сборки в глобальном кэше сборок.</span><span class="sxs-lookup"><span data-stu-id="64253-128">Use the **\<qualifyAssembly>** element in your application configuration file to provide the full assembly information (name, version, public key token, and culture) and cause the common language runtime to search for the assembly in the global assembly cache.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="381c2-126">Примечания</span><span class="sxs-lookup"><span data-stu-id="381c2-126">Remarks</span></span>  
+ <span data-ttu-id="381c2-127">Вызов <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> метода с использованием частичных имен сборок средой CLR, следует искать сборки только в базовой папке приложения.</span><span class="sxs-lookup"><span data-stu-id="381c2-127">Calling the <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method using partial assembly names causes the common language runtime to look for the assembly only in the application base directory.</span></span> <span data-ttu-id="381c2-128">Используйте  **\<qualifyAssembly >** элемент в файле конфигурации приложения для предоставления полных сведений о сборке (имя, версию, маркер открытого ключа и языка и региональных параметров) и средой CLR для поиска для сборки в глобальном кэше сборок.</span><span class="sxs-lookup"><span data-stu-id="381c2-128">Use the **\<qualifyAssembly>** element in your application configuration file to provide the full assembly information (name, version, public key token, and culture) and cause the common language runtime to search for the assembly in the global assembly cache.</span></span>  
   
- <span data-ttu-id="64253-129">**FullName** атрибут должен включать четыре поля удостоверения сборки: имя, версию, маркер открытого ключа и языка и региональных параметров.</span><span class="sxs-lookup"><span data-stu-id="64253-129">The **fullName** attribute must include the four fields of assembly identity: name, version, public key token, and culture.</span></span> <span data-ttu-id="64253-130">**PartialName** атрибут необходимо частично ссылку на сборку.</span><span class="sxs-lookup"><span data-stu-id="64253-130">The **partialName** attribute must partially reference an assembly.</span></span> <span data-ttu-id="64253-131">Необходимо указать по крайней мере текстовое имя сборки (наиболее распространенный случай), но можно также включить версию, маркер открытого ключа или язык и региональные параметры (или любое сочетание четырех, но не все четыре).</span><span class="sxs-lookup"><span data-stu-id="64253-131">You must specify at least the assembly's text name (the most common case), but you can also include version, public key token, or culture (or any combination of the four, but not all four).</span></span> <span data-ttu-id="64253-132">**PartialName** должно соответствовать имени, указанному в вызове.</span><span class="sxs-lookup"><span data-stu-id="64253-132">The **partialName** must match the name specified in your call.</span></span> <span data-ttu-id="64253-133">Например, нельзя указать `"math"` как **partialName** атрибута в файл конфигурации и вызовите `Assembly.Load("math, Version=3.3.3.3")` в коде.</span><span class="sxs-lookup"><span data-stu-id="64253-133">For example, you cannot specify `"math"` as the **partialName** attribute in your configuration file and call `Assembly.Load("math, Version=3.3.3.3")` in your code.</span></span>  
+ <span data-ttu-id="381c2-129">**FullName** атрибут должен включать четыре поля удостоверения сборки: имя, версию, маркер открытого ключа и языка и региональных параметров.</span><span class="sxs-lookup"><span data-stu-id="381c2-129">The **fullName** attribute must include the four fields of assembly identity: name, version, public key token, and culture.</span></span> <span data-ttu-id="381c2-130">**PartialName** атрибут необходимо частично ссылку на сборку.</span><span class="sxs-lookup"><span data-stu-id="381c2-130">The **partialName** attribute must partially reference an assembly.</span></span> <span data-ttu-id="381c2-131">Необходимо указать по крайней мере текстовое имя сборки (наиболее распространенный случай), но можно также включить версию, маркер открытого ключа или язык и региональные параметры (или любое сочетание четырех, но не все четыре).</span><span class="sxs-lookup"><span data-stu-id="381c2-131">You must specify at least the assembly's text name (the most common case), but you can also include version, public key token, or culture (or any combination of the four, but not all four).</span></span> <span data-ttu-id="381c2-132">**PartialName** должно соответствовать имени, указанному в вызове.</span><span class="sxs-lookup"><span data-stu-id="381c2-132">The **partialName** must match the name specified in your call.</span></span> <span data-ttu-id="381c2-133">Например, нельзя указать `"math"` как **partialName** атрибута в файл конфигурации и вызовите `Assembly.Load("math, Version=3.3.3.3")` в коде.</span><span class="sxs-lookup"><span data-stu-id="381c2-133">For example, you cannot specify `"math"` as the **partialName** attribute in your configuration file and call `Assembly.Load("math, Version=3.3.3.3")` in your code.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="64253-134">Пример</span><span class="sxs-lookup"><span data-stu-id="64253-134">Example</span></span>  
- <span data-ttu-id="64253-135">В следующем примере производится логически вызов `Assembly.Load("math")` в `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`.</span><span class="sxs-lookup"><span data-stu-id="64253-135">The following example logically turns the call `Assembly.Load("math")` into `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`.</span></span>  
+## <a name="example"></a><span data-ttu-id="381c2-134">Пример</span><span class="sxs-lookup"><span data-stu-id="381c2-134">Example</span></span>  
+ <span data-ttu-id="381c2-135">В следующем примере производится логически вызов `Assembly.Load("math")` в `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`.</span><span class="sxs-lookup"><span data-stu-id="381c2-135">The following example logically turns the call `Assembly.Load("math")` into `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`.</span></span>  
   
 ```xml  
 <configuration>  
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="64253-136">См. также</span><span class="sxs-lookup"><span data-stu-id="64253-136">See Also</span></span>  
- [<span data-ttu-id="64253-137">Схема параметров среды выполнения</span><span class="sxs-lookup"><span data-stu-id="64253-137">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [<span data-ttu-id="64253-138">Обнаружение сборок в среде выполнения</span><span class="sxs-lookup"><span data-stu-id="64253-138">How the Runtime Locates Assemblies</span></span>](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [<span data-ttu-id="64253-139">NIB: Частичные ссылки на сборки</span><span class="sxs-lookup"><span data-stu-id="64253-139">NIB: Partial Assembly References</span></span>](http://msdn.microsoft.com/en-us/ec90f07a-398c-4306-9401-0fc5ff9cb59f)
+## <a name="see-also"></a><span data-ttu-id="381c2-136">См. также</span><span class="sxs-lookup"><span data-stu-id="381c2-136">See Also</span></span>  
+ [<span data-ttu-id="381c2-137">Схема параметров среды выполнения</span><span class="sxs-lookup"><span data-stu-id="381c2-137">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="381c2-138">Обнаружение сборок в среде выполнения</span><span class="sxs-lookup"><span data-stu-id="381c2-138">How the Runtime Locates Assemblies</span></span>](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [<span data-ttu-id="381c2-139">NIB: Частичные ссылки на сборки</span><span class="sxs-lookup"><span data-stu-id="381c2-139">NIB: Partial Assembly References</span></span>](http://msdn.microsoft.com/en-us/ec90f07a-398c-4306-9401-0fc5ff9cb59f)
