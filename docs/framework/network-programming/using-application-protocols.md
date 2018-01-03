@@ -23,16 +23,17 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: cbbdc2f3fc326de43e9e6a066350ef28aacbec05
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b8e87e800e9f1b3a2627716d5e2116e5ba08b837
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="using-application-protocols"></a><span data-ttu-id="21875-102">Использование протоколов приложений</span><span class="sxs-lookup"><span data-stu-id="21875-102">Using Application Protocols</span></span>
-<span data-ttu-id="21875-103">Платформа .NET Framework поддерживает распространенные прикладные протоколы Интернета.</span><span class="sxs-lookup"><span data-stu-id="21875-103">The .NET Framework supports commonly used Internet application protocols.</span></span> <span data-ttu-id="21875-104">В этом разделе приводятся сведения об использовании протоколов [HTTP](../../../docs/framework/network-programming/http.md), TCP и UDP, а также интерфейса [Windows Sockets](../../../docs/framework/network-programming/sockets.md) для реализации пользовательских протоколов.</span><span class="sxs-lookup"><span data-stu-id="21875-104">This section includes information on using the [HTTP](../../../docs/framework/network-programming/http.md), "TCP", and "UDP" protocols, as well as information on using the [Windows Sockets](../../../docs/framework/network-programming/sockets.md) interface to implement custom protocols.</span></span>  
+# <a name="using-application-protocols"></a><span data-ttu-id="b2567-102">Использование протоколов приложений</span><span class="sxs-lookup"><span data-stu-id="b2567-102">Using Application Protocols</span></span>
+<span data-ttu-id="b2567-103">Платформа .NET Framework поддерживает распространенные прикладные протоколы Интернета.</span><span class="sxs-lookup"><span data-stu-id="b2567-103">The .NET Framework supports commonly used Internet application protocols.</span></span> <span data-ttu-id="b2567-104">В этом разделе приводятся сведения об использовании протоколов [HTTP](../../../docs/framework/network-programming/http.md), TCP и UDP, а также интерфейса [Windows Sockets](../../../docs/framework/network-programming/sockets.md) для реализации пользовательских протоколов.</span><span class="sxs-lookup"><span data-stu-id="b2567-104">This section includes information on using the [HTTP](../../../docs/framework/network-programming/http.md), "TCP", and "UDP" protocols, as well as information on using the [Windows Sockets](../../../docs/framework/network-programming/sockets.md) interface to implement custom protocols.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="21875-105">См. также</span><span class="sxs-lookup"><span data-stu-id="21875-105">See Also</span></span>  
- [<span data-ttu-id="21875-106">Сетевое программирование в .NET Framework</span><span class="sxs-lookup"><span data-stu-id="21875-106">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)  
- [<span data-ttu-id="21875-107">Примеры сетевого программирования</span><span class="sxs-lookup"><span data-stu-id="21875-107">Network Programming Samples</span></span>](../../../docs/framework/network-programming/network-programming-samples.md)  
- [<span data-ttu-id="21875-108">Примеры сетевых приложений для .NET в галерее кода MSDN</span><span class="sxs-lookup"><span data-stu-id="21875-108">Networking Samples for .NET on MSDN Code Gallery</span></span>](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+## <a name="see-also"></a><span data-ttu-id="b2567-105">См. также</span><span class="sxs-lookup"><span data-stu-id="b2567-105">See Also</span></span>  
+ [<span data-ttu-id="b2567-106">Сетевое программирование в .NET Framework</span><span class="sxs-lookup"><span data-stu-id="b2567-106">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)  
+ [<span data-ttu-id="b2567-107">Примеры сетевого программирования</span><span class="sxs-lookup"><span data-stu-id="b2567-107">Network Programming Samples</span></span>](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [<span data-ttu-id="b2567-108">Примеры сетевых приложений для .NET в галерее кода MSDN</span><span class="sxs-lookup"><span data-stu-id="b2567-108">Networking Samples for .NET on MSDN Code Gallery</span></span>](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

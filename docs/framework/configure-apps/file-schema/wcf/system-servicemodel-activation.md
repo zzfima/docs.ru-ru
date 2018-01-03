@@ -13,17 +13,18 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f15466e5ae0421f400d80f66370cb60f75c83990
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ae6fb19fe956d819337c7c06a0c5b58ac70c8327
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltsystemservicemodelactivationgt"></a><span data-ttu-id="9535f-102">&lt;system.serviceModel.activation&gt;</span><span class="sxs-lookup"><span data-stu-id="9535f-102">&lt;system.serviceModel.activation&gt;</span></span>
-<span data-ttu-id="9535f-103">В данном разделе конфигурации представлены параметры конфигурации для средства SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="9535f-103">This configuration section represents the configuration settings for the SMSvcHost.exe tool.</span></span> <span data-ttu-id="9535f-104">Элементы конфигурации можно задать в файле SMSvcHost.exe.config.</span><span class="sxs-lookup"><span data-stu-id="9535f-104">The configuration elements can be configured in the SMSvcHost.exe.config file.</span></span> <span data-ttu-id="9535f-105">В частности в нем содержатся все параметры компьютера, которые необходимо настроить.</span><span class="sxs-lookup"><span data-stu-id="9535f-105">Specifically, it includes all machine-wide settings that must be configured.</span></span>  
+# <a name="ltsystemservicemodelactivationgt"></a><span data-ttu-id="64dcc-102">&lt;system.serviceModel.activation&gt;</span><span class="sxs-lookup"><span data-stu-id="64dcc-102">&lt;system.serviceModel.activation&gt;</span></span>
+<span data-ttu-id="64dcc-103">В данном разделе конфигурации представлены параметры конфигурации для средства SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="64dcc-103">This configuration section represents the configuration settings for the SMSvcHost.exe tool.</span></span> <span data-ttu-id="64dcc-104">Элементы конфигурации можно задать в файле SMSvcHost.exe.config.</span><span class="sxs-lookup"><span data-stu-id="64dcc-104">The configuration elements can be configured in the SMSvcHost.exe.config file.</span></span> <span data-ttu-id="64dcc-105">В частности в нем содержатся все параметры компьютера, которые необходимо настроить.</span><span class="sxs-lookup"><span data-stu-id="64dcc-105">Specifically, it includes all machine-wide settings that must be configured.</span></span>  
   
-## <a name="sample-configuration-file"></a><span data-ttu-id="9535f-106">Образец файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="9535f-106">Sample Configuration File</span></span>  
- <span data-ttu-id="9535f-107">Далее приведен образец файла конфигурации (SMSvcHost.exe.config), используемый процессом прослушивателя SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="9535f-107">The following is a sample configuration file (SMSvcHost.exe.config), which is used by the listener process SMSvcHost.exe.</span></span>  
+## <a name="sample-configuration-file"></a><span data-ttu-id="64dcc-106">Образец файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="64dcc-106">Sample Configuration File</span></span>  
+ <span data-ttu-id="64dcc-107">Далее приведен образец файла конфигурации (SMSvcHost.exe.config), используемый процессом прослушивателя SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="64dcc-107">The following is a sample configuration file (SMSvcHost.exe.config), which is used by the listener process SMSvcHost.exe.</span></span>  
   
 ```xml  
 <configuration>  
@@ -70,5 +71,5 @@ ms.lasthandoff: 12/02/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9535f-108">См. также</span><span class="sxs-lookup"><span data-stu-id="9535f-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="64dcc-108">См. также</span><span class="sxs-lookup"><span data-stu-id="64dcc-108">See Also</span></span>  
  <xref:System.ServiceModel.Activation.Configuration>

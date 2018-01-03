@@ -15,23 +15,24 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 21e3ed09e590a5c01e5e9ca4c9f763a24df0c8df
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ffe51e94c9c968679f2cc3a5522eaf3c7f7b3c54
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="microsoftvisualstudioactivitiesasrclientactivitybuilderbuild"></a><span data-ttu-id="87e9b-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build</span><span class="sxs-lookup"><span data-stu-id="87e9b-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build</span></span>
-<span data-ttu-id="87e9b-103">Создает и настраивает объект <xref:System.Activities.ActivityBuilder>, который предоставляет данные для действия рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="87e9b-103">Creates and configures a <xref:System.Activities.ActivityBuilder> object that provides data for a workflow activity.</span></span>  
+# <a name="microsoftvisualstudioactivitiesasrclientactivitybuilderbuild"></a><span data-ttu-id="b84e3-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build</span><span class="sxs-lookup"><span data-stu-id="b84e3-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build</span></span>
+<span data-ttu-id="b84e3-103">Создает и настраивает объект <xref:System.Activities.ActivityBuilder>, который предоставляет данные для действия рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="b84e3-103">Creates and configures a <xref:System.Activities.ActivityBuilder> object that provides data for a workflow activity.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="87e9b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="87e9b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b84e3-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b84e3-104">Syntax</span></span>  
   
 ```csharp  
 public ActivityBuilder Build();   
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="87e9b-105">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="87e9b-105">Return Value</span></span>  
- <span data-ttu-id="87e9b-106">Возвращает объект <xref:System.Activities.ActivityBuilder>.</span><span class="sxs-lookup"><span data-stu-id="87e9b-106">Returns a <xref:System.Activities.ActivityBuilder> object.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b84e3-105">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="b84e3-105">Return Value</span></span>  
+ <span data-ttu-id="b84e3-106">Возвращает объект <xref:System.Activities.ActivityBuilder>.</span><span class="sxs-lookup"><span data-stu-id="b84e3-106">Returns a <xref:System.Activities.ActivityBuilder> object.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="87e9b-107">См. также</span><span class="sxs-lookup"><span data-stu-id="87e9b-107">See Also</span></span>  
- [<span data-ttu-id="87e9b-108">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span><span class="sxs-lookup"><span data-stu-id="87e9b-108">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md)
+## <a name="see-also"></a><span data-ttu-id="b84e3-107">См. также</span><span class="sxs-lookup"><span data-stu-id="b84e3-107">See Also</span></span>  
+ [<span data-ttu-id="b84e3-108">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span><span class="sxs-lookup"><span data-stu-id="b84e3-108">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md)

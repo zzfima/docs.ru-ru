@@ -19,14 +19,15 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 4304a8928b2fe768f20b2ff0bde94921565155ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7a249277a82a1b234f83e2fe17510e997425f278
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="synchronous-server-socket-example"></a><span data-ttu-id="09ce5-102">Пример синхронного сокета сервера</span><span class="sxs-lookup"><span data-stu-id="09ce5-102">Synchronous Server Socket Example</span></span>
-<span data-ttu-id="09ce5-103">Приведенная ниже программа создает сервер, который принимает запросы на соединение от клиентов.</span><span class="sxs-lookup"><span data-stu-id="09ce5-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="09ce5-104">Сервер создается с использованием синхронного сокета, поэтому выполнение серверного приложения приостанавливается, пока оно ожидает подключения от клиента.</span><span class="sxs-lookup"><span data-stu-id="09ce5-104">The server is built with a synchronous socket, so execution of the server application is suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="09ce5-105">Приложение получает строку от клиента, выводит ее в консоли, а затем отправляет строку обратно клиенту.</span><span class="sxs-lookup"><span data-stu-id="09ce5-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="09ce5-106">В строке, полученной от клиента, конец сообщения должен быть помечен строкой "\<EOF>".</span><span class="sxs-lookup"><span data-stu-id="09ce5-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
+# <a name="synchronous-server-socket-example"></a><span data-ttu-id="a3752-102">Пример синхронного сокета сервера</span><span class="sxs-lookup"><span data-stu-id="a3752-102">Synchronous Server Socket Example</span></span>
+<span data-ttu-id="a3752-103">Приведенная ниже программа создает сервер, который принимает запросы на соединение от клиентов.</span><span class="sxs-lookup"><span data-stu-id="a3752-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="a3752-104">Сервер создается с использованием синхронного сокета, поэтому выполнение серверного приложения приостанавливается, пока оно ожидает подключения от клиента.</span><span class="sxs-lookup"><span data-stu-id="a3752-104">The server is built with a synchronous socket, so execution of the server application is suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="a3752-105">Приложение получает строку от клиента, выводит ее в консоли, а затем отправляет строку обратно клиенту.</span><span class="sxs-lookup"><span data-stu-id="a3752-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="a3752-106">В строке, полученной от клиента, конец сообщения должен быть помечен строкой "\<EOF>".</span><span class="sxs-lookup"><span data-stu-id="a3752-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
   
 ```vb  
 Imports System  
@@ -166,7 +167,7 @@ public class SynchronousSocketListener {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="09ce5-107">См. также</span><span class="sxs-lookup"><span data-stu-id="09ce5-107">See Also</span></span>  
- [<span data-ttu-id="09ce5-108">Пример синхронного сокета клиента</span><span class="sxs-lookup"><span data-stu-id="09ce5-108">Synchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-client-socket-example.md)  
- [<span data-ttu-id="09ce5-109">Использование синхронного сокета сервера</span><span class="sxs-lookup"><span data-stu-id="09ce5-109">Using a Synchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
- [<span data-ttu-id="09ce5-110">Примеры кода сокетов</span><span class="sxs-lookup"><span data-stu-id="09ce5-110">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a><span data-ttu-id="a3752-107">См. также</span><span class="sxs-lookup"><span data-stu-id="a3752-107">See Also</span></span>  
+ [<span data-ttu-id="a3752-108">Пример синхронного сокета клиента</span><span class="sxs-lookup"><span data-stu-id="a3752-108">Synchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-client-socket-example.md)  
+ [<span data-ttu-id="a3752-109">Использование синхронного сокета сервера</span><span class="sxs-lookup"><span data-stu-id="a3752-109">Using a Synchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
+ [<span data-ttu-id="a3752-110">Примеры кода сокетов</span><span class="sxs-lookup"><span data-stu-id="a3752-110">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)

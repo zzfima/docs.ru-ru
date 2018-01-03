@@ -13,20 +13,21 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56443902885e191d93897096e55742f7665ba00a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a3064727eeda30c05f38558f4f0977c71e5abb48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltpersistabletypegt"></a><span data-ttu-id="7a35c-102">&lt;Восстанавливаемый тип persistableType&gt;</span><span class="sxs-lookup"><span data-stu-id="7a35c-102">&lt;persistableType&gt;</span></span>
-<span data-ttu-id="7a35c-103">Задает все восстанавливаемые типы.</span><span class="sxs-lookup"><span data-stu-id="7a35c-103">Specifies all the persistable types.</span></span>  
+# <a name="ltpersistabletypegt"></a><span data-ttu-id="f10a0-102">&lt;Восстанавливаемый тип persistableType&gt;</span><span class="sxs-lookup"><span data-stu-id="f10a0-102">&lt;persistableType&gt;</span></span>
+<span data-ttu-id="f10a0-103">Задает все восстанавливаемые типы.</span><span class="sxs-lookup"><span data-stu-id="f10a0-103">Specifies all the persistable types.</span></span>  
   
- <span data-ttu-id="7a35c-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="7a35c-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="7a35c-105">\<comContracts ></span><span class="sxs-lookup"><span data-stu-id="7a35c-105">\<comContracts></span></span>  
-<span data-ttu-id="7a35c-106">\<comContract ></span><span class="sxs-lookup"><span data-stu-id="7a35c-106">\<comContract></span></span>  
+ <span data-ttu-id="f10a0-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="f10a0-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="f10a0-105">\<comContracts ></span><span class="sxs-lookup"><span data-stu-id="f10a0-105">\<comContracts></span></span>  
+<span data-ttu-id="f10a0-106">\<comContract ></span><span class="sxs-lookup"><span data-stu-id="f10a0-106">\<comContract></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7a35c-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7a35c-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f10a0-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f10a0-107">Syntax</span></span>  
   
 ```xml  
 <comContracts>  
@@ -40,31 +41,31 @@ ms.lasthandoff: 12/02/2017
 </comContracts>  
 ```  
   
-## <a name="type"></a><span data-ttu-id="7a35c-108">Тип</span><span class="sxs-lookup"><span data-stu-id="7a35c-108">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="f10a0-108">Тип</span><span class="sxs-lookup"><span data-stu-id="f10a0-108">Type</span></span>  
  `Type`  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="7a35c-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="7a35c-109">Attributes and Elements</span></span>  
- <span data-ttu-id="7a35c-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="7a35c-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f10a0-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="f10a0-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="f10a0-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="f10a0-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="7a35c-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="7a35c-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f10a0-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="f10a0-111">Attributes</span></span>  
   
-|<span data-ttu-id="7a35c-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="7a35c-112">Attribute</span></span>|<span data-ttu-id="7a35c-113">Описание</span><span class="sxs-lookup"><span data-stu-id="7a35c-113">Description</span></span>|  
+|<span data-ttu-id="f10a0-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="f10a0-112">Attribute</span></span>|<span data-ttu-id="f10a0-113">Описание</span><span class="sxs-lookup"><span data-stu-id="f10a0-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="7a35c-114">id</span><span class="sxs-lookup"><span data-stu-id="7a35c-114">id</span></span>|<span data-ttu-id="7a35c-115">Обязательный атрибут, содержащий строку, которая задает уникальный идентификатор для восстанавливаемого типа.</span><span class="sxs-lookup"><span data-stu-id="7a35c-115">A required attribute that contains a string that specifies a unique identifier for a persistable type.</span></span>|  
-|<span data-ttu-id="7a35c-116">имя</span><span class="sxs-lookup"><span data-stu-id="7a35c-116">name</span></span>|<span data-ttu-id="7a35c-117">Необязательный атрибут, содержащий строку, которая задает имя восстанавливаемого типа.</span><span class="sxs-lookup"><span data-stu-id="7a35c-117">An optional attribute that contains a string that specifies the name of the persistable type.</span></span>|  
+|<span data-ttu-id="f10a0-114">id</span><span class="sxs-lookup"><span data-stu-id="f10a0-114">id</span></span>|<span data-ttu-id="f10a0-115">Обязательный атрибут, содержащий строку, которая задает уникальный идентификатор для восстанавливаемого типа.</span><span class="sxs-lookup"><span data-stu-id="f10a0-115">A required attribute that contains a string that specifies a unique identifier for a persistable type.</span></span>|  
+|<span data-ttu-id="f10a0-116">имя</span><span class="sxs-lookup"><span data-stu-id="f10a0-116">name</span></span>|<span data-ttu-id="f10a0-117">Необязательный атрибут, содержащий строку, которая задает имя восстанавливаемого типа.</span><span class="sxs-lookup"><span data-stu-id="f10a0-117">An optional attribute that contains a string that specifies the name of the persistable type.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="7a35c-118">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="7a35c-118">Child Elements</span></span>  
- <span data-ttu-id="7a35c-119">Нет</span><span class="sxs-lookup"><span data-stu-id="7a35c-119">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f10a0-118">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="f10a0-118">Child Elements</span></span>  
+ <span data-ttu-id="f10a0-119">Нет</span><span class="sxs-lookup"><span data-stu-id="f10a0-119">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="7a35c-120">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="7a35c-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f10a0-120">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="f10a0-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="7a35c-121">Элемент</span><span class="sxs-lookup"><span data-stu-id="7a35c-121">Element</span></span>|<span data-ttu-id="7a35c-122">Описание</span><span class="sxs-lookup"><span data-stu-id="7a35c-122">Description</span></span>|  
+|<span data-ttu-id="f10a0-121">Элемент</span><span class="sxs-lookup"><span data-stu-id="f10a0-121">Element</span></span>|<span data-ttu-id="f10a0-122">Описание:</span><span class="sxs-lookup"><span data-stu-id="f10a0-122">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="7a35c-123">\<persistableTypes ></span><span class="sxs-lookup"><span data-stu-id="7a35c-123">\<persistableTypes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)|<span data-ttu-id="7a35c-124">Коллекция элементов `persistableType`.</span><span class="sxs-lookup"><span data-stu-id="7a35c-124">A collection of `persistableType` elements.</span></span>|  
+|[<span data-ttu-id="f10a0-123">\<persistableTypes ></span><span class="sxs-lookup"><span data-stu-id="f10a0-123">\<persistableTypes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)|<span data-ttu-id="f10a0-124">Коллекция элементов `persistableType`.</span><span class="sxs-lookup"><span data-stu-id="f10a0-124">A collection of `persistableType` elements.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="7a35c-125">См. также</span><span class="sxs-lookup"><span data-stu-id="7a35c-125">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f10a0-125">См. также</span><span class="sxs-lookup"><span data-stu-id="f10a0-125">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.ComPersistableTypeElementCollection>  
  <xref:System.ServiceModel.Configuration.ComPersistableTypeElement>  
- [<span data-ttu-id="7a35c-126">\<comContracts ></span><span class="sxs-lookup"><span data-stu-id="7a35c-126">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
- [<span data-ttu-id="7a35c-127">Интеграция с приложениями COM +</span><span class="sxs-lookup"><span data-stu-id="7a35c-127">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [<span data-ttu-id="7a35c-128">Как: Настройка параметров службы COM +</span><span class="sxs-lookup"><span data-stu-id="7a35c-128">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+ [<span data-ttu-id="f10a0-126">\<comContracts ></span><span class="sxs-lookup"><span data-stu-id="f10a0-126">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
+ [<span data-ttu-id="f10a0-127">Интеграция с приложениями COM+</span><span class="sxs-lookup"><span data-stu-id="f10a0-127">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+ [<span data-ttu-id="f10a0-128">Практическое руководство. Настройка параметров службы COM+</span><span class="sxs-lookup"><span data-stu-id="f10a0-128">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

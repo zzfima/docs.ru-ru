@@ -19,16 +19,17 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 999f572d27f75094ecc72c59acee7d35f86d5342
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19e37a4df8055f14a72a4c9093cd594a234ae80d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="init-method"></a><span data-ttu-id="10798-102">Метод Init</span><span class="sxs-lookup"><span data-stu-id="10798-102">Init Method</span></span>
-<span data-ttu-id="10798-103">Подготавливает объектами, реализующими [интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) для использования.</span><span class="sxs-lookup"><span data-stu-id="10798-103">Prepares objects implementing the [IALink Interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) for use.</span></span>  
+# <a name="init-method"></a><span data-ttu-id="84eae-102">Метод Init</span><span class="sxs-lookup"><span data-stu-id="84eae-102">Init Method</span></span>
+<span data-ttu-id="84eae-103">Подготавливает объектами, реализующими [интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) для использования.</span><span class="sxs-lookup"><span data-stu-id="84eae-103">Prepares objects implementing the [IALink Interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) for use.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="10798-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="10798-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="84eae-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="84eae-104">Syntax</span></span>  
   
 ```  
 HRESULT Init(  
@@ -37,20 +38,20 @@ HRESULT Init(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="10798-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="10798-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="84eae-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="84eae-105">Parameters</span></span>  
  `pDispenser`  
- <span data-ttu-id="10798-106">[Интерфейс IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md) указатель распределитель метаданных.</span><span class="sxs-lookup"><span data-stu-id="10798-106">[IMetaDataDispenserEx Interface](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md) pointer to the metadata dispenser.</span></span>  
+ <span data-ttu-id="84eae-106">[Интерфейс IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md) указатель распределитель метаданных.</span><span class="sxs-lookup"><span data-stu-id="84eae-106">[IMetaDataDispenserEx Interface](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md) pointer to the metadata dispenser.</span></span>  
   
  `pErrorHandler`  
- <span data-ttu-id="10798-107">[Интерфейс IMetaDataError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) указатель интерфейса обработки ошибок, необязательно.</span><span class="sxs-lookup"><span data-stu-id="10798-107">[IMetaDataError Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) pointer to an optional error handling interface.</span></span>  
+ <span data-ttu-id="84eae-107">[Интерфейс IMetaDataError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) указатель интерфейса обработки ошибок, необязательно.</span><span class="sxs-lookup"><span data-stu-id="84eae-107">[IMetaDataError Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) pointer to an optional error handling interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="10798-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="10798-108">Return Value</span></span>  
- <span data-ttu-id="10798-109">Возвращает значение S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="10798-109">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="84eae-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="84eae-108">Return Value</span></span>  
+ <span data-ttu-id="84eae-109">Возвращает значение S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="84eae-109">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="10798-110">Требования</span><span class="sxs-lookup"><span data-stu-id="10798-110">Requirements</span></span>  
- <span data-ttu-id="10798-111">Требуется alink.h</span><span class="sxs-lookup"><span data-stu-id="10798-111">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="84eae-110">Требования</span><span class="sxs-lookup"><span data-stu-id="84eae-110">Requirements</span></span>  
+ <span data-ttu-id="84eae-111">Требуется alink.h</span><span class="sxs-lookup"><span data-stu-id="84eae-111">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="10798-112">См. также</span><span class="sxs-lookup"><span data-stu-id="10798-112">See Also</span></span>  
- [<span data-ttu-id="10798-113">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="10798-113">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="10798-114">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="10798-114">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="10798-115">ALink-интерфейс API</span><span class="sxs-lookup"><span data-stu-id="10798-115">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="84eae-112">См. также</span><span class="sxs-lookup"><span data-stu-id="84eae-112">See Also</span></span>  
+ [<span data-ttu-id="84eae-113">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="84eae-113">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [<span data-ttu-id="84eae-114">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="84eae-114">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [<span data-ttu-id="84eae-115">API ALink</span><span class="sxs-lookup"><span data-stu-id="84eae-115">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

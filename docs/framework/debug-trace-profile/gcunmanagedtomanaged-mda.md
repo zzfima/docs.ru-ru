@@ -23,31 +23,32 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e8d2391ba9ba1d17f2cbce54f52863f74a5dc646
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3bc02f12a49ef65614114a056f9263f9ef7f5322
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="gcunmanagedtomanaged-mda"></a><span data-ttu-id="02620-102">gcUnmanagedToManaged MDA</span><span class="sxs-lookup"><span data-stu-id="02620-102">gcUnmanagedToManaged MDA</span></span>
-<span data-ttu-id="02620-103">Помощник по отладке управляемого кода (MDA) `gcUnmanagedToManaged` вызывает сбор мусора каждый раз, когда поток переходит из неуправляемого в управляемый код.</span><span class="sxs-lookup"><span data-stu-id="02620-103">The `gcUnmanagedToManaged` managed debugging assistant (MDA) causes a garbage collection whenever a thread transitions from unmanaged to managed code.</span></span>  
+# <a name="gcunmanagedtomanaged-mda"></a><span data-ttu-id="94e80-102">gcUnmanagedToManaged MDA</span><span class="sxs-lookup"><span data-stu-id="94e80-102">gcUnmanagedToManaged MDA</span></span>
+<span data-ttu-id="94e80-103">Помощник по отладке управляемого кода (MDA) `gcUnmanagedToManaged` вызывает сбор мусора каждый раз, когда поток переходит из неуправляемого в управляемый код.</span><span class="sxs-lookup"><span data-stu-id="94e80-103">The `gcUnmanagedToManaged` managed debugging assistant (MDA) causes a garbage collection whenever a thread transitions from unmanaged to managed code.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="02620-104">Признаки</span><span class="sxs-lookup"><span data-stu-id="02620-104">Symptoms</span></span>  
- <span data-ttu-id="02620-105">Приложение, запускающее неуправляемые пользовательские компоненты с помощью модели СОМ и вызова платформы, является причиной недетерминированного нарушения прав доступа в среде CLR.</span><span class="sxs-lookup"><span data-stu-id="02620-105">An application running unmanaged user components using COM and platform invoke is causing a nondeterministic access violation in the CLR.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="94e80-104">Признаки</span><span class="sxs-lookup"><span data-stu-id="94e80-104">Symptoms</span></span>  
+ <span data-ttu-id="94e80-105">Приложение, запускающее неуправляемые пользовательские компоненты с помощью модели СОМ и вызова платформы, является причиной недетерминированного нарушения прав доступа в среде CLR.</span><span class="sxs-lookup"><span data-stu-id="94e80-105">An application running unmanaged user components using COM and platform invoke is causing a nondeterministic access violation in the CLR.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="02620-106">Причина</span><span class="sxs-lookup"><span data-stu-id="02620-106">Cause</span></span>  
- <span data-ttu-id="02620-107">Если приложение выполняет неуправляемые пользовательские компоненты, эти компоненты могут повредить кучу сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="02620-107">If an application is running unmanaged user components, then those components might have corrupted the garbage-collected heap.</span></span> <span data-ttu-id="02620-108">Это приводит к нарушению прав доступа в среде CLR при попытке сборщика мусора пройти граф объекта.</span><span class="sxs-lookup"><span data-stu-id="02620-108">This causes an access violation in the CLR when the garbage collector tries to walk the object graph.</span></span>  
+## <a name="cause"></a><span data-ttu-id="94e80-106">Причина</span><span class="sxs-lookup"><span data-stu-id="94e80-106">Cause</span></span>  
+ <span data-ttu-id="94e80-107">Если приложение выполняет неуправляемые пользовательские компоненты, эти компоненты могут повредить кучу сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="94e80-107">If an application is running unmanaged user components, then those components might have corrupted the garbage-collected heap.</span></span> <span data-ttu-id="94e80-108">Это приводит к нарушению прав доступа в среде CLR при попытке сборщика мусора пройти граф объекта.</span><span class="sxs-lookup"><span data-stu-id="94e80-108">This causes an access violation in the CLR when the garbage collector tries to walk the object graph.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="02620-109">Решение</span><span class="sxs-lookup"><span data-stu-id="02620-109">Resolution</span></span>  
- <span data-ttu-id="02620-110">Включение этого помощника уменьшает время между тем, когда неуправляемый компонент повреждает кучу сборки мусора, и тем, когда происходит нарушение прав доступа принудительным выполнением сборки мусора перед каждой управляемой передачей.</span><span class="sxs-lookup"><span data-stu-id="02620-110">Enabling this assistant reduces the time between when the unmanaged component corrupts the garbage-collected heap and when the access violation happens by forcing a garbage collection to occur before every managed transition.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="94e80-109">Решение</span><span class="sxs-lookup"><span data-stu-id="94e80-109">Resolution</span></span>  
+ <span data-ttu-id="94e80-110">Включение этого помощника уменьшает время между тем, когда неуправляемый компонент повреждает кучу сборки мусора, и тем, когда происходит нарушение прав доступа принудительным выполнением сборки мусора перед каждой управляемой передачей.</span><span class="sxs-lookup"><span data-stu-id="94e80-110">Enabling this assistant reduces the time between when the unmanaged component corrupts the garbage-collected heap and when the access violation happens by forcing a garbage collection to occur before every managed transition.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="02620-111">Влияние на среду выполнения</span><span class="sxs-lookup"><span data-stu-id="02620-111">Effect on the Runtime</span></span>  
- <span data-ttu-id="02620-112">Вызывает сборку мусора каждый раз, когда поток переходит из неуправляемого в управляемый код.</span><span class="sxs-lookup"><span data-stu-id="02620-112">Causes a garbage collection whenever a thread transitions from unmanaged to managed code.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="94e80-111">Влияние на среду выполнения</span><span class="sxs-lookup"><span data-stu-id="94e80-111">Effect on the Runtime</span></span>  
+ <span data-ttu-id="94e80-112">Вызывает сборку мусора каждый раз, когда поток переходит из неуправляемого в управляемый код.</span><span class="sxs-lookup"><span data-stu-id="94e80-112">Causes a garbage collection whenever a thread transitions from unmanaged to managed code.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="02620-113">Вывод</span><span class="sxs-lookup"><span data-stu-id="02620-113">Output</span></span>  
- <span data-ttu-id="02620-114">Данный MDA не дает результатов.</span><span class="sxs-lookup"><span data-stu-id="02620-114">This MDA produces no output.</span></span>  
+## <a name="output"></a><span data-ttu-id="94e80-113">Вывод</span><span class="sxs-lookup"><span data-stu-id="94e80-113">Output</span></span>  
+ <span data-ttu-id="94e80-114">Данный MDA не дает результатов.</span><span class="sxs-lookup"><span data-stu-id="94e80-114">This MDA produces no output.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="02620-115">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="02620-115">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="94e80-115">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="94e80-115">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -57,8 +58,8 @@ ms.lasthandoff: 11/21/2017
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="02620-116">См. также</span><span class="sxs-lookup"><span data-stu-id="02620-116">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="94e80-116">См. также</span><span class="sxs-lookup"><span data-stu-id="94e80-116">See Also</span></span>  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [<span data-ttu-id="02620-117">Диагностика ошибок посредством помощников по отладке управляемого кода</span><span class="sxs-lookup"><span data-stu-id="02620-117">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [<span data-ttu-id="02620-118">gcManagedToUnmanaged</span><span class="sxs-lookup"><span data-stu-id="02620-118">gcManagedToUnmanaged</span></span>](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)  
- [<span data-ttu-id="02620-119">Маршалинг взаимодействия</span><span class="sxs-lookup"><span data-stu-id="02620-119">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+ [<span data-ttu-id="94e80-117">Диагностика ошибок посредством помощников по отладке управляемого кода</span><span class="sxs-lookup"><span data-stu-id="94e80-117">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [<span data-ttu-id="94e80-118">gcManagedToUnmanaged</span><span class="sxs-lookup"><span data-stu-id="94e80-118">gcManagedToUnmanaged</span></span>](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)  
+ [<span data-ttu-id="94e80-119">Маршалинг взаимодействия</span><span class="sxs-lookup"><span data-stu-id="94e80-119">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

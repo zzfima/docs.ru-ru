@@ -13,36 +13,37 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 8197fefdfe54eae46aa4e593fd5014a4485f9a48
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e9e7dc1200dcb3ca54cebaf42168930c49f3d63
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="getting-started-linq-to-dataset"></a><span data-ttu-id="c7c95-102">Начало работы (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="c7c95-102">Getting Started (LINQ to DataSet)</span></span>
-<span data-ttu-id="c7c95-103">Этот раздел содержит общие сведения о программировании с помощью [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c7c95-103">This section provides introductory information about programming with [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span></span>  
+# <a name="getting-started-linq-to-dataset"></a><span data-ttu-id="51c30-102">Начало работы (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="51c30-102">Getting Started (LINQ to DataSet)</span></span>
+<span data-ttu-id="51c30-103">Этот раздел содержит общие сведения о программировании с помощью [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span><span class="sxs-lookup"><span data-stu-id="51c30-103">This section provides introductory information about programming with [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c7c95-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="c7c95-104">In This Section</span></span>  
- [<span data-ttu-id="c7c95-105">LINQ to DataSet Обзор</span><span class="sxs-lookup"><span data-stu-id="c7c95-105">LINQ to DataSet Overview</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
- <span data-ttu-id="c7c95-106">Содержит общие сведения о [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c7c95-106">Provides a conceptual overview of [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="51c30-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="51c30-104">In This Section</span></span>  
+ [<span data-ttu-id="51c30-105">Общие сведения о LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="51c30-105">LINQ to DataSet Overview</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
+ <span data-ttu-id="51c30-106">Содержит общие сведения о [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span><span class="sxs-lookup"><span data-stu-id="51c30-106">Provides a conceptual overview of [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span></span>  
   
- [<span data-ttu-id="c7c95-107">Для загрузки данных в набор данных</span><span class="sxs-lookup"><span data-stu-id="c7c95-107">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
- <span data-ttu-id="c7c95-108">Содержит пример заполнения объекта <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="c7c95-108">Provides an example of populating a <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="c7c95-109">В этом примере для получения данных из базы данных используется объект <xref:System.Data.Common.DataAdapter>.</span><span class="sxs-lookup"><span data-stu-id="c7c95-109">This example uses <xref:System.Data.Common.DataAdapter> to retrieve data from a database.</span></span>  
+ [<span data-ttu-id="51c30-107">Загрузка данных в DataSet</span><span class="sxs-lookup"><span data-stu-id="51c30-107">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
+ <span data-ttu-id="51c30-108">Содержит пример заполнения объекта <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="51c30-108">Provides an example of populating a <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="51c30-109">В этом примере для получения данных из базы данных используется объект <xref:System.Data.Common.DataAdapter>.</span><span class="sxs-lookup"><span data-stu-id="51c30-109">This example uses <xref:System.Data.Common.DataAdapter> to retrieve data from a database.</span></span>  
   
- [<span data-ttu-id="c7c95-110">Загрузка примеров баз данных</span><span class="sxs-lookup"><span data-stu-id="c7c95-110">Downloading Sample Databases</span></span>](../../../../docs/framework/data/adonet/downloading-sample-databases-linq-to-dataset.md)  
- <span data-ttu-id="c7c95-111">Содержит сведения о загрузке образца базы данных AdventureWorks, использующегося в примерах раздела [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c7c95-111">Provides information about downloading the AdventureWorks sample database, which is used in the samples throughout the [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] section.</span></span>  
+ [<span data-ttu-id="51c30-110">Загрузка примеров баз данных</span><span class="sxs-lookup"><span data-stu-id="51c30-110">Downloading Sample Databases</span></span>](../../../../docs/framework/data/adonet/downloading-sample-databases-linq-to-dataset.md)  
+ <span data-ttu-id="51c30-111">Содержит сведения о загрузке образца базы данных AdventureWorks, использующегося в примерах раздела [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span><span class="sxs-lookup"><span data-stu-id="51c30-111">Provides information about downloading the AdventureWorks sample database, which is used in the samples throughout the [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] section.</span></span>  
   
- [<span data-ttu-id="c7c95-112">Как: Создание LINQ to DataSet проекта в Visual Studio</span><span class="sxs-lookup"><span data-stu-id="c7c95-112">How to: Create a LINQ to DataSet Project In Visual Studio</span></span>](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)  
- <span data-ttu-id="c7c95-113">Содержит сведения о создании проекта [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] в среде Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="c7c95-113">Provides information about creating a [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] project in Visual Studio.</span></span>  
+ [<span data-ttu-id="51c30-112">Практическое руководство. Создание проектов LINQ to DataSet в Visual Studio</span><span class="sxs-lookup"><span data-stu-id="51c30-112">How to: Create a LINQ to DataSet Project In Visual Studio</span></span>](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)  
+ <span data-ttu-id="51c30-113">Содержит сведения о создании проекта [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] в среде Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="51c30-113">Provides information about creating a [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] project in Visual Studio.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="c7c95-114">Ссылка</span><span class="sxs-lookup"><span data-stu-id="c7c95-114">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="51c30-114">Ссылка</span><span class="sxs-lookup"><span data-stu-id="51c30-114">Reference</span></span>  
  <xref:System.Data.DataRowComparer>  
   
  <xref:System.Data.DataRowExtensions>  
   
  <xref:System.Data.DataTableExtensions>  
   
-## <a name="see-also"></a><span data-ttu-id="c7c95-115">См. также</span><span class="sxs-lookup"><span data-stu-id="c7c95-115">See Also</span></span>  
- [<span data-ttu-id="c7c95-116">LINQ to ADO.NET</span><span class="sxs-lookup"><span data-stu-id="c7c95-116">LINQ to ADO.NET</span></span>](http://msdn.microsoft.com/en-us/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
- [<span data-ttu-id="c7c95-117">Встроенный язык запросов LINQ</span><span class="sxs-lookup"><span data-stu-id="c7c95-117">LINQ (Language-Integrated Query)</span></span>](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- [<span data-ttu-id="c7c95-118">Начало работы с LINQ</span><span class="sxs-lookup"><span data-stu-id="c7c95-118">Getting Started with LINQ</span></span>](http://msdn.microsoft.com/en-us/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)
+## <a name="see-also"></a><span data-ttu-id="51c30-115">См. также</span><span class="sxs-lookup"><span data-stu-id="51c30-115">See Also</span></span>  
+ [<span data-ttu-id="51c30-116">LINQ to ADO.NET</span><span class="sxs-lookup"><span data-stu-id="51c30-116">LINQ to ADO.NET</span></span>](http://msdn.microsoft.com/en-us/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
+ [<span data-ttu-id="51c30-117">Встроенный язык запросов LINQ</span><span class="sxs-lookup"><span data-stu-id="51c30-117">LINQ (Language-Integrated Query)</span></span>](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [<span data-ttu-id="51c30-118">Начало работы с LINQ</span><span class="sxs-lookup"><span data-stu-id="51c30-118">Getting Started with LINQ</span></span>](http://msdn.microsoft.com/en-us/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)

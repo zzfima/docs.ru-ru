@@ -16,37 +16,38 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 9ca006637b74a1ba77bf82366fc615f51c7f90be
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0a47b62621c516bec863cfdf72b309b614604328
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="method-based-query-syntax-examples-grouping"></a><span data-ttu-id="68035-102">Примеры синтаксиса запросов на основе методов. Группировка</span><span class="sxs-lookup"><span data-stu-id="68035-102">Method-Based Query Syntax Examples: Grouping</span></span>
-<span data-ttu-id="68035-103">Примеры в этом разделе показано, как использовать `GroupBy` метод для запроса [модели AdventureWorks Sales](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832) с использованием синтаксиса запросов на основе методов.</span><span class="sxs-lookup"><span data-stu-id="68035-103">The examples in this topic show you how to use the `GroupBy` method to query the [AdventureWorks Sales Model](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832) using method-based query syntax.</span></span> <span data-ttu-id="68035-104">Модель AdventureWorks Sales, которая используется в этих примерах, построена на основе таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail в образце базы данных AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="68035-104">The AdventureWorks Sales Model that is used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+# <a name="method-based-query-syntax-examples-grouping"></a><span data-ttu-id="ea5b0-102">Примеры синтаксиса запросов на основе методов. Группировка</span><span class="sxs-lookup"><span data-stu-id="ea5b0-102">Method-Based Query Syntax Examples: Grouping</span></span>
+<span data-ttu-id="ea5b0-103">Примеры в этом разделе показано, как использовать `GroupBy` метод для запроса [модели AdventureWorks Sales](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832) с использованием синтаксиса запросов на основе методов.</span><span class="sxs-lookup"><span data-stu-id="ea5b0-103">The examples in this topic show you how to use the `GroupBy` method to query the [AdventureWorks Sales Model](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832) using method-based query syntax.</span></span> <span data-ttu-id="ea5b0-104">Модель AdventureWorks Sales, которая используется в этих примерах, построена на основе таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail в образце базы данных AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="ea5b0-104">The AdventureWorks Sales Model that is used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="68035-105">В примерах в этом разделе используются следующие `using` / `Imports` инструкции:</span><span class="sxs-lookup"><span data-stu-id="68035-105">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="ea5b0-105">В примерах в этом разделе используются следующие `using` / `Imports` инструкции:</span><span class="sxs-lookup"><span data-stu-id="ea5b0-105">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## <a name="example"></a><span data-ttu-id="68035-106">Пример</span><span class="sxs-lookup"><span data-stu-id="68035-106">Example</span></span>  
- <span data-ttu-id="68035-107">В следующем примере метод `GroupBy` возвращает объекты `Address`, сгруппированные по почтовому индексу.</span><span class="sxs-lookup"><span data-stu-id="68035-107">The following example uses the `GroupBy` method to return `Address` objects that are grouped by postal code.</span></span> <span data-ttu-id="68035-108">Результаты проецируются в анонимный тип.</span><span class="sxs-lookup"><span data-stu-id="68035-108">The results are projected into an anonymous type.</span></span>  
+## <a name="example"></a><span data-ttu-id="ea5b0-106">Пример</span><span class="sxs-lookup"><span data-stu-id="ea5b0-106">Example</span></span>  
+ <span data-ttu-id="ea5b0-107">В следующем примере метод `GroupBy` возвращает объекты `Address`, сгруппированные по почтовому индексу.</span><span class="sxs-lookup"><span data-stu-id="ea5b0-107">The following example uses the `GroupBy` method to return `Address` objects that are grouped by postal code.</span></span> <span data-ttu-id="ea5b0-108">Результаты проецируются в анонимный тип.</span><span class="sxs-lookup"><span data-stu-id="ea5b0-108">The results are projected into an anonymous type.</span></span>  
   
  [!code-csharp[DP L2E Examples#GroupBySimple3_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#groupbysimple3_mq)]
  [!code-vb[DP L2E Examples#GroupBySimple3_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#groupbysimple3_mq)]  
   
-## <a name="example"></a><span data-ttu-id="68035-109">Пример</span><span class="sxs-lookup"><span data-stu-id="68035-109">Example</span></span>  
- <span data-ttu-id="68035-110">В следующем примере метод `GroupBy` возвращает объекты `Contact`, сгруппированные по первой букве фамилии контактного лица.</span><span class="sxs-lookup"><span data-stu-id="68035-110">The following example uses the `GroupBy` method to return `Contact` objects that are grouped by the first letter of the contact's last name.</span></span> <span data-ttu-id="68035-111">Кроме того, результаты сортируются по первой букве фамилии и проецируются на анонимный тип.</span><span class="sxs-lookup"><span data-stu-id="68035-111">The results are also sorted by the first letter of the last name and projected into an anonymous type.</span></span>  
+## <a name="example"></a><span data-ttu-id="ea5b0-109">Пример</span><span class="sxs-lookup"><span data-stu-id="ea5b0-109">Example</span></span>  
+ <span data-ttu-id="ea5b0-110">В следующем примере метод `GroupBy` возвращает объекты `Contact`, сгруппированные по первой букве фамилии контактного лица.</span><span class="sxs-lookup"><span data-stu-id="ea5b0-110">The following example uses the `GroupBy` method to return `Contact` objects that are grouped by the first letter of the contact's last name.</span></span> <span data-ttu-id="ea5b0-111">Кроме того, результаты сортируются по первой букве фамилии и проецируются на анонимный тип.</span><span class="sxs-lookup"><span data-stu-id="ea5b0-111">The results are also sorted by the first letter of the last name and projected into an anonymous type.</span></span>  
   
  [!code-csharp[DP L2E Examples#GroupBySimple2_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#groupbysimple2_mq)]
  [!code-vb[DP L2E Examples#GroupBySimple2_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#groupbysimple2_mq)]  
   
-## <a name="example"></a><span data-ttu-id="68035-112">Пример</span><span class="sxs-lookup"><span data-stu-id="68035-112">Example</span></span>  
- <span data-ttu-id="68035-113">В следующем примере метод `GroupBy` возвращает объекты `SalesOrderHeader`, сгруппированные по идентификаторам клиентов.</span><span class="sxs-lookup"><span data-stu-id="68035-113">The following example uses the `GroupBy` method to return `SalesOrderHeader` objects that are grouped by customer ID.</span></span> <span data-ttu-id="68035-114">Также возвращается число продаж для каждого клиента.</span><span class="sxs-lookup"><span data-stu-id="68035-114">The number of sales for each customer is also returned.</span></span>  
+## <a name="example"></a><span data-ttu-id="ea5b0-112">Пример</span><span class="sxs-lookup"><span data-stu-id="ea5b0-112">Example</span></span>  
+ <span data-ttu-id="ea5b0-113">В следующем примере метод `GroupBy` возвращает объекты `SalesOrderHeader`, сгруппированные по идентификаторам клиентов.</span><span class="sxs-lookup"><span data-stu-id="ea5b0-113">The following example uses the `GroupBy` method to return `SalesOrderHeader` objects that are grouped by customer ID.</span></span> <span data-ttu-id="ea5b0-114">Также возвращается число продаж для каждого клиента.</span><span class="sxs-lookup"><span data-stu-id="ea5b0-114">The number of sales for each customer is also returned.</span></span>  
   
  [!code-csharp[DP L2E Examples#GroupByCount_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#groupbycount_mq)]
  [!code-vb[DP L2E Examples#GroupByCount_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#groupbycount_mq)]  
   
-## <a name="see-also"></a><span data-ttu-id="68035-115">См. также</span><span class="sxs-lookup"><span data-stu-id="68035-115">See Also</span></span>  
- [<span data-ttu-id="68035-116">Запросы в LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="68035-116">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a><span data-ttu-id="ea5b0-115">См. также</span><span class="sxs-lookup"><span data-stu-id="ea5b0-115">See Also</span></span>  
+ [<span data-ttu-id="ea5b0-116">Запросы в LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="ea5b0-116">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

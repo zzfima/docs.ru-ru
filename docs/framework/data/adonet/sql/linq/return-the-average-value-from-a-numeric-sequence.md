@@ -16,43 +16,44 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 87a23bce302ac7eed3081b5670cb8c532a550cde
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1759ff9ca3bbf5198187d2ec5470718dd1730cff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="return-the-average-value-from-a-numeric-sequence"></a><span data-ttu-id="77700-102">Возврат среднего значения из числовой последовательности</span><span class="sxs-lookup"><span data-stu-id="77700-102">Return the Average Value From a Numeric Sequence</span></span>
-<span data-ttu-id="77700-103">Оператор <xref:System.Linq.Enumerable.Average%2A> вычисляет среднее последовательности числовых значений.</span><span class="sxs-lookup"><span data-stu-id="77700-103">The <xref:System.Linq.Enumerable.Average%2A> operator computes the average of a sequence of numeric values.</span></span>  
+# <a name="return-the-average-value-from-a-numeric-sequence"></a><span data-ttu-id="c69be-102">Возврат среднего значения из числовой последовательности</span><span class="sxs-lookup"><span data-stu-id="c69be-102">Return the Average Value From a Numeric Sequence</span></span>
+<span data-ttu-id="c69be-103">Оператор <xref:System.Linq.Enumerable.Average%2A> вычисляет среднее последовательности числовых значений.</span><span class="sxs-lookup"><span data-stu-id="c69be-103">The <xref:System.Linq.Enumerable.Average%2A> operator computes the average of a sequence of numeric values.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="77700-104">Преобразование [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] для оператора `Average`, вычисляющего среднее значение целых чисел, возвращает целое число, а не число двойной точности.</span><span class="sxs-lookup"><span data-stu-id="77700-104">The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translation of `Average` of integer values is computed as an integer, not as a double.</span></span>  
+>  <span data-ttu-id="c69be-104">Преобразование [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] для оператора `Average`, вычисляющего среднее значение целых чисел, возвращает целое число, а не число двойной точности.</span><span class="sxs-lookup"><span data-stu-id="c69be-104">The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translation of `Average` of integer values is computed as an integer, not as a double.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="77700-105">Пример</span><span class="sxs-lookup"><span data-stu-id="77700-105">Example</span></span>  
- <span data-ttu-id="77700-106">В следующем примере вычисляется среднее для значений `Freight` из таблицы `Orders`.</span><span class="sxs-lookup"><span data-stu-id="77700-106">The following example returns the average of `Freight` values in the `Orders` table.</span></span>  
+## <a name="example"></a><span data-ttu-id="c69be-105">Пример</span><span class="sxs-lookup"><span data-stu-id="c69be-105">Example</span></span>  
+ <span data-ttu-id="c69be-106">В следующем примере вычисляется среднее для значений `Freight` из таблицы `Orders`.</span><span class="sxs-lookup"><span data-stu-id="c69be-106">The following example returns the average of `Freight` values in the `Orders` table.</span></span>  
   
- <span data-ttu-id="77700-107">Для образца базы данных Northwind результатом будет `78.2442`.</span><span class="sxs-lookup"><span data-stu-id="77700-107">Results from the sample Northwind database would be `78.2442`.</span></span>  
+ <span data-ttu-id="c69be-107">Для образца базы данных Northwind результатом будет `78.2442`.</span><span class="sxs-lookup"><span data-stu-id="c69be-107">Results from the sample Northwind database would be `78.2442`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#1)]
  [!code-vb[DLinqQueryExamples#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#1)]  
   
-## <a name="example"></a><span data-ttu-id="77700-108">Пример</span><span class="sxs-lookup"><span data-stu-id="77700-108">Example</span></span>  
- <span data-ttu-id="77700-109">Следующий пример возвращает среднее значение цены единицы для всех `Products` в таблице `Products`.</span><span class="sxs-lookup"><span data-stu-id="77700-109">The following example returns the average of the unit price of all `Products` in the `Products` table.</span></span>  
+## <a name="example"></a><span data-ttu-id="c69be-108">Пример</span><span class="sxs-lookup"><span data-stu-id="c69be-108">Example</span></span>  
+ <span data-ttu-id="c69be-109">Следующий пример возвращает среднее значение цены единицы для всех `Products` в таблице `Products`.</span><span class="sxs-lookup"><span data-stu-id="c69be-109">The following example returns the average of the unit price of all `Products` in the `Products` table.</span></span>  
   
- <span data-ttu-id="77700-110">Для образца базы данных Northwind результатом будет `28.8663`.</span><span class="sxs-lookup"><span data-stu-id="77700-110">Results from the sample Northwind database would be `28.8663`.</span></span>  
+ <span data-ttu-id="c69be-110">Для образца базы данных Northwind результатом будет `28.8663`.</span><span class="sxs-lookup"><span data-stu-id="c69be-110">Results from the sample Northwind database would be `28.8663`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#2)]
  [!code-vb[DLinqQueryExamples#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#2)]  
   
-## <a name="example"></a><span data-ttu-id="77700-111">Пример</span><span class="sxs-lookup"><span data-stu-id="77700-111">Example</span></span>  
- <span data-ttu-id="77700-112">В следующем примере используется оператор `Average` для поиска тех продуктов `Products`, цена единицы товара для которых выше среднего значения цены единицы товара для содержащей их категории.</span><span class="sxs-lookup"><span data-stu-id="77700-112">The following example uses the `Average` operator to find those `Products` whose unit price is higher than the average unit price of the category it belongs to.</span></span> <span data-ttu-id="77700-113">Затем выполняется отображение групп результатов.</span><span class="sxs-lookup"><span data-stu-id="77700-113">The example then displays the results in groups.</span></span>  
+## <a name="example"></a><span data-ttu-id="c69be-111">Пример</span><span class="sxs-lookup"><span data-stu-id="c69be-111">Example</span></span>  
+ <span data-ttu-id="c69be-112">В следующем примере используется оператор `Average` для поиска тех продуктов `Products`, цена единицы товара для которых выше среднего значения цены единицы товара для содержащей их категории.</span><span class="sxs-lookup"><span data-stu-id="c69be-112">The following example uses the `Average` operator to find those `Products` whose unit price is higher than the average unit price of the category it belongs to.</span></span> <span data-ttu-id="c69be-113">Затем выполняется отображение групп результатов.</span><span class="sxs-lookup"><span data-stu-id="c69be-113">The example then displays the results in groups.</span></span>  
   
- <span data-ttu-id="77700-114">Обратите внимание, что в этом примере требуется использовать ключевое слово `var` языка C#, поскольку тип возвращаемых данных является анонимным.</span><span class="sxs-lookup"><span data-stu-id="77700-114">Note that this example requires the use of the `var` keyword in C#, because the return type is anonymous.</span></span>  
+ <span data-ttu-id="c69be-114">Обратите внимание, что в этом примере требуется использовать ключевое слово `var` языка C#, поскольку тип возвращаемых данных является анонимным.</span><span class="sxs-lookup"><span data-stu-id="c69be-114">Note that this example requires the use of the `var` keyword in C#, because the return type is anonymous.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#3)]
  [!code-vb[DLinqQueryExamples#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#3)]  
   
- <span data-ttu-id="77700-115">Если выполнить этот пример для учебной базы данных "Northwind, результаты должны выглядеть следующим образом:</span><span class="sxs-lookup"><span data-stu-id="77700-115">If you run this query against the Northwind sample database, the results should resemble of the following:</span></span>  
+ <span data-ttu-id="c69be-115">Если выполнить этот пример для учебной базы данных "Northwind, результаты должны выглядеть следующим образом:</span><span class="sxs-lookup"><span data-stu-id="c69be-115">If you run this query against the Northwind sample database, the results should resemble of the following:</span></span>  
   
  `1`  
   
@@ -124,5 +125,5 @@ ms.lasthandoff: 10/18/2017
   
  `Gravad lax`  
   
-## <a name="see-also"></a><span data-ttu-id="77700-116">См. также</span><span class="sxs-lookup"><span data-stu-id="77700-116">See Also</span></span>  
- [<span data-ttu-id="77700-117">Статистические запросы</span><span class="sxs-lookup"><span data-stu-id="77700-117">Aggregate Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
+## <a name="see-also"></a><span data-ttu-id="c69be-116">См. также</span><span class="sxs-lookup"><span data-stu-id="c69be-116">See Also</span></span>  
+ [<span data-ttu-id="c69be-117">Статистические запросы</span><span class="sxs-lookup"><span data-stu-id="c69be-117">Aggregate Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)

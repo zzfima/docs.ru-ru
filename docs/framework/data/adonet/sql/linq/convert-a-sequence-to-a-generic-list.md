@@ -16,20 +16,21 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e563e0ed46bfdadca9923b582f2c30e12701d992
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4b1fa6895e015ab7123bf454aac435812e4a23da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="convert-a-sequence-to-a-generic-list"></a><span data-ttu-id="05904-102">Преобразование последовательности в универсальный список</span><span class="sxs-lookup"><span data-stu-id="05904-102">Convert a Sequence to a Generic List</span></span>
-<span data-ttu-id="05904-103">Для создания универсального списка из последовательности используется <xref:System.Linq.Enumerable.ToList%2A>.</span><span class="sxs-lookup"><span data-stu-id="05904-103">Use <xref:System.Linq.Enumerable.ToList%2A> to create a generic List from a sequence.</span></span>  
+# <a name="convert-a-sequence-to-a-generic-list"></a><span data-ttu-id="8eb6a-102">Преобразование последовательности в универсальный список</span><span class="sxs-lookup"><span data-stu-id="8eb6a-102">Convert a Sequence to a Generic List</span></span>
+<span data-ttu-id="8eb6a-103">Для создания универсального списка из последовательности используется <xref:System.Linq.Enumerable.ToList%2A>.</span><span class="sxs-lookup"><span data-stu-id="8eb6a-103">Use <xref:System.Linq.Enumerable.ToList%2A> to create a generic List from a sequence.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="05904-104">Пример</span><span class="sxs-lookup"><span data-stu-id="05904-104">Example</span></span>  
- <span data-ttu-id="05904-105">В следующем примере используется <xref:System.Linq.Enumerable.ToList%2A> для непосредственного преобразования запроса в универсальный <xref:System.Collections.Generic.List%601>.</span><span class="sxs-lookup"><span data-stu-id="05904-105">The following sample uses <xref:System.Linq.Enumerable.ToList%2A> to immediately evaluate a query into a generic <xref:System.Collections.Generic.List%601>.</span></span>  
+## <a name="example"></a><span data-ttu-id="8eb6a-104">Пример</span><span class="sxs-lookup"><span data-stu-id="8eb6a-104">Example</span></span>  
+ <span data-ttu-id="8eb6a-105">В следующем примере используется <xref:System.Linq.Enumerable.ToList%2A> для непосредственного преобразования запроса в универсальный <xref:System.Collections.Generic.List%601>.</span><span class="sxs-lookup"><span data-stu-id="8eb6a-105">The following sample uses <xref:System.Linq.Enumerable.ToList%2A> to immediately evaluate a query into a generic <xref:System.Collections.Generic.List%601>.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#45](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#45)]
  [!code-vb[DLinqQueryExamples#45](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#45)]  
   
-## <a name="see-also"></a><span data-ttu-id="05904-106">См. также</span><span class="sxs-lookup"><span data-stu-id="05904-106">See Also</span></span>  
- [<span data-ttu-id="05904-107">Примеры запросов</span><span class="sxs-lookup"><span data-stu-id="05904-107">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+## <a name="see-also"></a><span data-ttu-id="8eb6a-106">См. также</span><span class="sxs-lookup"><span data-stu-id="8eb6a-106">See Also</span></span>  
+ [<span data-ttu-id="8eb6a-107">Примеры запросов</span><span class="sxs-lookup"><span data-stu-id="8eb6a-107">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

@@ -14,24 +14,21 @@ ms.assetid: 3f40bacd-3fac-4741-b204-852f693d4340
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3f45dc17304c3c9d62b65760f2c1b5d461812a66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e6a2d66c860b72bd3ef59c02f548ac563fab6b8c
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="no-accessible-39main39-method-with-an-appropriate-signature-was-found-in-39ltnamegt39"></a><span data-ttu-id="b63c0-102">Ни один из доступных &#39; Main &#39; найден метод с соответствующей сигнатурой в &#39; &lt;имя&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="b63c0-102">No accessible &#39;Main&#39; method with an appropriate signature was found in &#39;&lt;name&gt;&#39;</span></span>
-<span data-ttu-id="b63c0-103">Приложения командной строки должны иметь `Sub Main` определен.</span><span class="sxs-lookup"><span data-stu-id="b63c0-103">Command-line applications must have a `Sub Main` defined.</span></span> <span data-ttu-id="b63c0-104">`Main`должен быть объявлен как `Public Shared` , если оно определено в классе или как `Public` , если определено в модуле.</span><span class="sxs-lookup"><span data-stu-id="b63c0-104">`Main` must be declared as `Public Shared` if it is defined in a class, or as `Public` if defined in a module.</span></span>  
+# <a name="no-accessible-39main39-method-with-an-appropriate-signature-was-found-in-39ltnamegt39"></a><span data-ttu-id="50d86-102">Ни один из доступных &#39; Main &#39; найден метод с соответствующей сигнатурой в &#39; &lt;имя&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="50d86-102">No accessible &#39;Main&#39; method with an appropriate signature was found in &#39;&lt;name&gt;&#39;</span></span>
+<span data-ttu-id="50d86-103">Приложения командной строки должны иметь `Sub Main` определен.</span><span class="sxs-lookup"><span data-stu-id="50d86-103">Command-line applications must have a `Sub Main` defined.</span></span> <span data-ttu-id="50d86-104">`Main`должен быть объявлен как `Public Shared` , если оно определено в классе или как `Public` , если определено в модуле.</span><span class="sxs-lookup"><span data-stu-id="50d86-104">`Main` must be declared as `Public Shared` if it is defined in a class, or as `Public` if defined in a module.</span></span>  
   
- <span data-ttu-id="b63c0-105">Дополнительные сведения о `Main`, в разделе [NIB: Visual Basic версии из Hello, World](http://msdn.microsoft.com/en-us/9d030b60-e148-4366-a462-69532f02294c).</span><span class="sxs-lookup"><span data-stu-id="b63c0-105">For more information on `Main`, see [NIB: Visual Basic Version of Hello, World](http://msdn.microsoft.com/en-us/9d030b60-e148-4366-a462-69532f02294c).</span></span>  
+ <span data-ttu-id="50d86-105">**Идентификатор ошибки:** BC30737</span><span class="sxs-lookup"><span data-stu-id="50d86-105">**Error ID:** BC30737</span></span>  
   
- <span data-ttu-id="b63c0-106">**Идентификатор ошибки:** BC30737</span><span class="sxs-lookup"><span data-stu-id="b63c0-106">**Error ID:** BC30737</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="50d86-106">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="50d86-106">To correct this error</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="b63c0-107">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="b63c0-107">To correct this error</span></span>  
+-   <span data-ttu-id="50d86-107">Определение `Public Sub Main` процедуры для вашего проекта.</span><span class="sxs-lookup"><span data-stu-id="50d86-107">Define a `Public Sub Main` procedure for your project.</span></span> <span data-ttu-id="50d86-108">Он объявляется как `Shared` только в том случае, если она определяется внутри класса.</span><span class="sxs-lookup"><span data-stu-id="50d86-108">Declare it as `Shared` if and only if you define it inside a class.</span></span>  
   
--   <span data-ttu-id="b63c0-108">Определение `Public Sub Main` процедуры для вашего проекта.</span><span class="sxs-lookup"><span data-stu-id="b63c0-108">Define a `Public Sub Main` procedure for your project.</span></span> <span data-ttu-id="b63c0-109">Он объявляется как `Shared` только в том случае, если она определяется внутри класса.</span><span class="sxs-lookup"><span data-stu-id="b63c0-109">Declare it as `Shared` if and only if you define it inside a class.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="b63c0-110">См. также</span><span class="sxs-lookup"><span data-stu-id="b63c0-110">See Also</span></span>  
- [<span data-ttu-id="b63c0-111">NIB: версия Visual Basic Hello World</span><span class="sxs-lookup"><span data-stu-id="b63c0-111">NIB: Visual Basic Version of Hello, World</span></span>](http://msdn.microsoft.com/en-us/9d030b60-e148-4366-a462-69532f02294c)  
- [<span data-ttu-id="b63c0-112">Структура программы Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b63c0-112">Structure of a Visual Basic Program</span></span>](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)  
- [<span data-ttu-id="b63c0-113">Процедуры</span><span class="sxs-lookup"><span data-stu-id="b63c0-113">Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+## <a name="see-also"></a><span data-ttu-id="50d86-109">См. также</span><span class="sxs-lookup"><span data-stu-id="50d86-109">See Also</span></span>  
+ [<span data-ttu-id="50d86-110">Структура программы Visual Basic</span><span class="sxs-lookup"><span data-stu-id="50d86-110">Structure of a Visual Basic Program</span></span>](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)  
+ [<span data-ttu-id="50d86-111">Процедуры</span><span class="sxs-lookup"><span data-stu-id="50d86-111">Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/index.md)

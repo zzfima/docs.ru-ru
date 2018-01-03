@@ -9,19 +9,19 @@ ms.assetid: 99cdb11d-9488-460b-84fb-a27f43da8be4
 caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 742457b7de5797d965e134e7d1da594856c2a4df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 33951ac200217333183d1a254791acd84836fbab
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="39strconvlinguisticcasing39-requires-39strconvlowercase39-or-39strconvuppercase39"></a><span data-ttu-id="85275-102">&#39; Для StrConv.LinguisticCasing &#39; требуется &#39; StrConv.LowerCase &#39; или &#39; StrConv.UpperCase &#39;</span><span class="sxs-lookup"><span data-stu-id="85275-102">&#39;StrConv.LinguisticCasing&#39; requires &#39;StrConv.LowerCase&#39; or &#39;StrConv.UpperCase&#39;</span></span>
-<span data-ttu-id="85275-103">Вы попытались использовать функцию `StrConv.LinguisticCasing`, что допустимо только в сочетании с функцией `StrConv.LowerCase` или `StrConv.UpperCase`.</span><span class="sxs-lookup"><span data-stu-id="85275-103">You have attempted to use `StrConv.LinguisticCasing`, which is only valid in combination with `StrConv.LowerCase` or `StrConv.UpperCase`.</span></span>  
+# <a name="39strconvlinguisticcasing39-requires-39strconvlowercase39-or-39strconvuppercase39"></a><span data-ttu-id="f179c-102">&#39; Для StrConv.LinguisticCasing &#39; требуется &#39; StrConv.LowerCase &#39; или &#39; StrConv.UpperCase &#39;</span><span class="sxs-lookup"><span data-stu-id="f179c-102">&#39;StrConv.LinguisticCasing&#39; requires &#39;StrConv.LowerCase&#39; or &#39;StrConv.UpperCase&#39;</span></span>
+<span data-ttu-id="f179c-103">Вы попытались использовать функцию `StrConv.LinguisticCasing`, что допустимо только в сочетании с функцией `StrConv.LowerCase` или `StrConv.UpperCase`.</span><span class="sxs-lookup"><span data-stu-id="f179c-103">You have attempted to use `StrConv.LinguisticCasing`, which is only valid in combination with `StrConv.LowerCase` or `StrConv.UpperCase`.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="85275-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="85275-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f179c-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="f179c-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="85275-105">Используйте функцию `StrConv.LowerCase` или `StrConv.UpperCase` вместе с функцией `StrConv.LinguisticCasing`.</span><span class="sxs-lookup"><span data-stu-id="85275-105">Use `StrConv.LowerCase` or `StrConv.UpperCase` in conjunction with `StrConv.LinguisticCasing`.</span></span>  
+1.  <span data-ttu-id="f179c-105">Используйте функцию `StrConv.LowerCase` или `StrConv.UpperCase` вместе с функцией `StrConv.LinguisticCasing`.</span><span class="sxs-lookup"><span data-stu-id="f179c-105">Use `StrConv.LowerCase` or `StrConv.UpperCase` in conjunction with `StrConv.LinguisticCasing`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="85275-106">См. также</span><span class="sxs-lookup"><span data-stu-id="85275-106">See Also</span></span>  
- [<span data-ttu-id="85275-107">НЕ в СБОРКЕ. Функция StrConv</span><span class="sxs-lookup"><span data-stu-id="85275-107">NOT IN BUILD: StrConv Function</span></span>](http://msdn.microsoft.com/en-us/31ceb44b-005b-455f-b344-9dd06efbf660)  
- [<span data-ttu-id="85275-108">Константа StrConv изменения в Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="85275-108">StrConv Constant Changes in Visual Basic .NET</span></span>](http://msdn.microsoft.com/en-us/7a8c2781-2716-40dd-90c1-96c1548516e2)
+## <a name="see-also"></a><span data-ttu-id="f179c-106">См. также</span><span class="sxs-lookup"><span data-stu-id="f179c-106">See Also</span></span>  
+   
+ [<span data-ttu-id="f179c-107">Константа StrConv изменения в Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="f179c-107">StrConv Constant Changes in Visual Basic .NET</span></span>](http://msdn.microsoft.com/en-us/7a8c2781-2716-40dd-90c1-96c1548516e2)

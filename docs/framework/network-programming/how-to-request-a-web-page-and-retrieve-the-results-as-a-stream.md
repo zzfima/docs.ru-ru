@@ -15,16 +15,17 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 30006e43899cb146f02dbed3e8e72ed1b5416f71
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 35b46bcfdbf99b311d5d0c0f8bf81f6cc7961afb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a><span data-ttu-id="ebf83-102">Практическое руководство. Запрос веб-страницы и получение результатов в виде потока</span><span class="sxs-lookup"><span data-stu-id="ebf83-102">How to: Request a Web Page and Retrieve the Results as a Stream</span></span>
-<span data-ttu-id="ebf83-103">В этом примере показано, как запросить веб-страницу и получить результаты в виде потока.</span><span class="sxs-lookup"><span data-stu-id="ebf83-103">This example shows how to request a Web page and retrieve the results in a stream.</span></span>  
+# <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a><span data-ttu-id="53e56-102">Практическое руководство. Запрос веб-страницы и получение результатов в виде потока</span><span class="sxs-lookup"><span data-stu-id="53e56-102">How to: Request a Web Page and Retrieve the Results as a Stream</span></span>
+<span data-ttu-id="53e56-103">В этом примере показано, как запросить веб-страницу и получить результаты в виде потока.</span><span class="sxs-lookup"><span data-stu-id="53e56-103">This example shows how to request a Web page and retrieve the results in a stream.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ebf83-104">Пример</span><span class="sxs-lookup"><span data-stu-id="ebf83-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="53e56-104">Пример</span><span class="sxs-lookup"><span data-stu-id="53e56-104">Example</span></span>  
   
 ```csharp  
 WebClient myClient = new WebClient();  
@@ -40,10 +41,10 @@ Dim response As Stream = myClient.OpenRead("http://www.contoso.com/index.htm")
 response.Close()  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="ebf83-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="ebf83-105">Compiling the Code</span></span>  
- <span data-ttu-id="ebf83-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="ebf83-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="53e56-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="53e56-105">Compiling the Code</span></span>  
+ <span data-ttu-id="53e56-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="53e56-106">This example requires:</span></span>  
   
--   <span data-ttu-id="ebf83-107">Ссылки на пространства имен <xref:System.IO> и <xref:System.Net>.</span><span class="sxs-lookup"><span data-stu-id="ebf83-107">References to the <xref:System.IO> and <xref:System.Net> namespaces.</span></span>  
+-   <span data-ttu-id="53e56-107">Ссылки на пространства имен <xref:System.IO> и <xref:System.Net>.</span><span class="sxs-lookup"><span data-stu-id="53e56-107">References to the <xref:System.IO> and <xref:System.Net> namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ebf83-108">См. также</span><span class="sxs-lookup"><span data-stu-id="ebf83-108">See Also</span></span>  
- [<span data-ttu-id="ebf83-109">Запрос данных</span><span class="sxs-lookup"><span data-stu-id="ebf83-109">Requesting Data</span></span>](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a><span data-ttu-id="53e56-108">См. также</span><span class="sxs-lookup"><span data-stu-id="53e56-108">See Also</span></span>  
+ [<span data-ttu-id="53e56-109">Запрос данных</span><span class="sxs-lookup"><span data-stu-id="53e56-109">Requesting Data</span></span>](../../../docs/framework/network-programming/requesting-data.md)
