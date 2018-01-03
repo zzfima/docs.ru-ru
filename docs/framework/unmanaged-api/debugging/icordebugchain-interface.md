@@ -19,25 +19,26 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9f964b5390e601b518acad44dd6fd170399ff0af
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6000f6d91b3fe2325868b9af58740e1c4cd76127
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugchain-interface1"></a>ICorDebugChain интерфейс1
 Представляет сегмент физического или логического стека вызовов.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод EnumerateFrames](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-enumerateframes-method.md)|Возвращает перечислитель, содержащий все управляемые фреймы стека в цепочке, начиная с последнего кадра.|  
-|[Getactiveframe-метод](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getactiveframe-method.md)|Получает активный (то есть последней) кадра в цепочке.|  
+|[Метод GetActiveFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getactiveframe-method.md)|Получает активный (то есть последней) кадра в цепочке.|  
 |[Метод GetCallee](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcallee-method.md)|Получает цепь, вызванной этой цепи.|  
 |[Метод GetCaller](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcaller-method.md)|Получает цепь, вызвавшую данную цепь.|  
 |[Метод GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcontext-method.md)|Не реализовано.|  
-|[GetNext-метод](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getnext-method.md)|Получает следующую цепь кадров для потока.|  
+|[Метод GetNext](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getnext-method.md)|Получает следующую цепь кадров для потока.|  
 |[Метод GetPrevious](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getprevious-method.md)|Возвращает предыдущую цепь кадров для потока.|  
 |[Метод GetReason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md)|Возвращает причину происхождения данной вызывающей цепи.|  
 |[Метод GetRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getregisterset-method.md)|Получает набор регистров для активной части этой цепи.|  
