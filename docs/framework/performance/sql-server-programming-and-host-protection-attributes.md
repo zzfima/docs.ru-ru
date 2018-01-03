@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f163223842acd4539872ad1a0ff228a76e33870d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a775b1c4f8446e756301650dcc61e3ef378408f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>программирование SQL Server и атрибуты защиты ведущего приложения
 Чтобы загружать и выполнять управляемый код, ведущее приложение SQL Server должно соответствовать требованиям ведущего приложения к управлению доступом для кода и защите ресурсов ведущего приложения.  Управление доступом для кода реализуется с применением одного из трех наборов разрешений SQL Server: SAFE, EXTERNAL-ACCESS или UNSAFE. В коде, выполняемом с набором разрешений SAFE или EXTERNAL-ACCESS, не рекомендуется использовать определенные типы и члены, к которым применен атрибут <xref:System.Security.Permissions.HostProtectionAttribute>. Атрибут <xref:System.Security.Permissions.HostProtectionAttribute> не является разрешением безопасности в той же степени, что и гарантия надежности, поскольку в нем определяются конкретные конструкции кода (типы или методы), которые ведущее приложение может запрещать.  С помощью атрибута <xref:System.Security.Permissions.HostProtectionAttribute> можно реализовать модель программирования, которая позволяет гарантировать стабильность работы ведущего приложения.  

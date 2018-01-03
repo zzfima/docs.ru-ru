@@ -14,11 +14,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fe2f00d9f735583bb048669ff0ab2659db68bf1f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: accbc05018644e3ead4ee0c08f44ec39cad8f036
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-data-services-resources"></a>Ресурсы служб данных WCF
 Вводные разделы по службам [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] можно найти в следующих местах. Во многих из них также есть ссылки на связанные разделы, содержащие более подробные сведения.  

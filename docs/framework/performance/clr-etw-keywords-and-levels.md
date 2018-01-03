@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7f5dcdd969619526c52a9ae44014030a9f0c6dc5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 72775d4cb478b6d9c9d2e65119c63f8a34ae47d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-etw-keywords-and-levels"></a>Ключевые слова и уровни среды CLR (трассировка событий Windows)
 <a name="top"></a> События трассировки событий Windows можно отфильтровать по категории и уровню. [Ключевые слова событий трассировки событий Windows в среде CLR](#keywords) обеспечивают фильтрацию событий по категории. Они используются в различных сочетаниях для поставщиков среды выполнения и очистки. [Уровни событий](#levels) определяются флагами.  
@@ -89,12 +90,12 @@ ms.lasthandoff: 11/21/2017
   
 |Ключевые слова и флаги|События загрузки и выгрузки доменов приложений, сборок, модулей|События загрузки и выгрузки методов (кроме динамических событий)|События загрузки и уничтожения динамических методов|  
 |------------------------|--------------------------------------------------------------|----------------------------------------------------------|-----------------------------------------|  
-|`LoaderKeyword`|События загрузки и выгрузки.|Нет.|Нет.|  
+|`LoaderKeyword`|События загрузки и выгрузки.|Нет.|Отсутствует.|  
 |`JITKeyword`<br /><br /> (+ `StartEnumerationKeyword` ничего не добавляет)|Нет.|События загрузки.|События загрузки и выгрузки.|  
-|`JITKeyword` +<br /><br /> `EndEnumerationKeyword`|Нет.|События загрузки и выгрузки.|События загрузки и выгрузки.|  
+|`JITKeyword` +<br /><br /> `EndEnumerationKeyword`|Отсутствует.|События загрузки и выгрузки.|События загрузки и выгрузки.|  
 |`NGenKeyword`|Нет.|Нет.|Неприменимо.|  
-|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|Нет.|События загрузки.|Неприменимо.|  
-|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|Нет.|События выгрузки.|Неприменимо.|  
+|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|Отсутствует.|События загрузки.|Неприменимо.|  
+|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|Отсутствует.|События выгрузки.|Неприменимо.|  
   
  [К началу](#top)  
   
@@ -103,12 +104,12 @@ ms.lasthandoff: 11/21/2017
   
 |Ключевые слова и флаги|События DCStart и DCEnd для доменов приложений, сборок, модулей|События DCStart и DCEnd методов (включая события динамических методов)|  
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------|  
-|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|События`DCStart` .|Нет.|  
-|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|События`DCEnd` .|Нет.|  
-|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Нет.|События`DCStart` .|  
-|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Нет.|События`DCEnd` .|  
-|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Нет.|События`DCStart` .|  
-|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Нет.|События`DCEnd` .|  
+|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|События`DCStart` .|Отсутствует.|  
+|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|События`DCEnd` .|Отсутствует.|  
+|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Отсутствует.|События`DCStart` .|  
+|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Отсутствует.|События`DCEnd` .|  
+|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Отсутствует.|События`DCStart` .|  
+|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Отсутствует.|События`DCEnd` .|  
   
  [К началу](#top)  
   

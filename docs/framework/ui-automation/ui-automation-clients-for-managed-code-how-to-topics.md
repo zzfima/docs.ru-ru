@@ -17,11 +17,12 @@ caps.latest.revision: "58"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 31cd858cd6a753b1fddd7b4be6805390142be833
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 69ef9c378aae18767d41990094e52ac2be3cbd1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a>Практические руководства, посвященные клиентам автоматизации пользовательского интерфейса для управляемого кода
 > [!NOTE]
@@ -29,11 +30,11 @@ ms.lasthandoff: 10/18/2017
   
  Этот раздел содержит подробные сведения о возможностях реализации [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] в клиентском приложении.  
   
-## <a name="in-this-section"></a>Содержание  
- [Нахождение элемента автоматизации пользовательского интерфейса, в зависимости от состояния свойства](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [Навигация между элементами автоматизированного пользовательского интерфейса с помощью TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
- [Нахождение элемента автоматизации пользовательского интерфейса для элемента списка](../../../docs/framework/ui-automation/find-a-ui-automation-element-for-a-list-item.md)  
- [Получение свойств элементов управления модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/get-ui-automation-element-properties.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Нахождение элемента модели автоматизации пользовательского интерфейса в зависимости от состояния свойства](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [Навигация между элементами модели автоматизации пользовательского интерфейса с помощью TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
+ [Нахождение элемента модели автоматизации пользовательского интерфейса для элемента списка](../../../docs/framework/ui-automation/find-a-ui-automation-element-for-a-list-item.md)  
+ [Получение свойств элементов модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/get-ui-automation-element-properties.md)  
  [Использование кэширования в модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
  [Подписка на события модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)  
  [Регистрация сборки поставщика на стороне клиента](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)  

@@ -18,11 +18,12 @@ caps.latest.revision: "60"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 8fc62b22673c732d1cb5f698916960dc1edcc192
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f6320bb23420ffcaf736aafabcb5fde38061febd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-providers-for-managed-code-how-to-topics"></a>Разделы практического руководства, посвященные поставщикам автоматизации пользовательского интерфейса для управляемого кода
 > [!NOTE]
@@ -30,11 +31,11 @@ ms.lasthandoff: 10/18/2017
   
  Этот раздел содержит примеры кода, которые демонстрируют задачи написания [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] поставщиков для [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] элементов.  
   
-## <a name="in-this-section"></a>Содержание  
- [Предоставление поставщика автоматизации пользовательского интерфейса на стороне сервера](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Предоставление серверного поставщика автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  
  [Возврат свойств от поставщика автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
  [Вызов событий из поставщика автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
  [Включение навигации в поставщике фрагментов автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
- [Поддержка шаблонов элементов управления в поставщике модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
  [Создание поставщика автоматизации пользовательского интерфейса на стороне клиента](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)  
- [Реализации поставщиков автоматизации пользовательского интерфейса в клиентском приложении](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)
+ [Реализация поставщиков автоматизации пользовательского интерфейса в приложении клиента](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)

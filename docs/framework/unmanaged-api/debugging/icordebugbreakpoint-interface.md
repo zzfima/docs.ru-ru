@@ -19,21 +19,22 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b78b61b99fb8f236e787f3acbf993d0a1c57e797
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cd2c4245b5e3dcc4f7b989a3ca9add8d568467cb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugbreakpoint-interface1"></a>ICorDebugBreakpoint интерфейс1
 Представляет точку останова в функции или контрольную точку значение.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
-|[Activate-метод](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-activate-method.md)|Задает активное состояние `ICorDebugBreakpoint`.|  
-|[IsActive-метод](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|Возвращает значение, указывающее, является ли это `ICorDebugBreakpoint` активен.|  
+|[Метод Activate](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-activate-method.md)|Задает активное состояние `ICorDebugBreakpoint`.|  
+|[Метод IsActive](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|Возвращает значение, указывающее, является ли это `ICorDebugBreakpoint` активен.|  
   
 ## <a name="remarks"></a>Примечания  
  Точки останова напрямую не поддерживают условные выражения. При необходимости такие функциональные возможности, отладчик должен реализовать его на основе `ICorDebugBreakpoint`.  

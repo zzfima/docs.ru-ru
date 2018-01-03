@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4d7e842152e84992124ec29cd551c3b5d50a6d61
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ce7433745bb76a6c12e60e11e02cd1e7ef156614
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="importfile2-method"></a>Метод ImportFile2
 Импортирует сборок и несвязанных модулей. Этот метод аналогичен [метод ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), но работает, даже если в импортируемом файле не существует на диске.  
@@ -73,4 +74,4 @@ HRESULT ImportFile2(
 ## <a name="see-also"></a>См. также  
  [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
  [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink-интерфейс API](../../../../docs/framework/unmanaged-api/alink/index.md)
+ [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

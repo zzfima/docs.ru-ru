@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9e3ff6c4ec8febda93136c5ac88223b5baf80124
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a84fdb104296cf15b5f0d2d04f4ddd7ea1419643
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>События трассировки событий Windows в библиотеке параллельных задач и PLINQ
 Библиотека параллельных задач и PLINQ создают события трассировки событий Windows (ETW), которые можно использовать для профилирования и устранения неполадок в приложениях с помощью таких средств, как Windows Performance Analyzer. Однако в большинстве сценариев оптимальный способ профилирования параллельного кода приложения — использование [визуализатора параллелизма](/visualstudio/profiling/concurrency-visualizer) в [!INCLUDE[vsUltShort](../../../includes/vsultshort-md.md)].  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="user-data"></a>Данные пользователя  
   
-|**Имя**|**Тип**|**Описание**|  
+|**Name**|**Type**|**Описание**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор объекта TaskScheduler, который начал цикл.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор задачи, которая начала цикл.|  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="user-data"></a>Данные пользователя  
   
-|**Имя**|**Тип**|**Описание**|  
+|**Name**|**Type**|**Описание**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор объекта TaskScheduler, который начал цикл.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор задачи, которая начала цикл.|  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="user-data"></a>Данные пользователя  
   
-|**Имя**|**Тип**|**Описание**|  
+|**Name**|**Type**|**Описание**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор объекта TaskScheduler, который начал цикл.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор задачи, которая начала цикл.|  
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="user-data"></a>Данные пользователя  
   
-|**Имя**|**Тип**|**Описание**|  
+|**Name**|**Type**|**Описание**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор объекта TaskScheduler, который начал цикл.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор задачи, которая начала цикл.|  
@@ -103,7 +104,7 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="user-data"></a>Данные пользователя  
   
-|**Имя**|**Тип**|**Описание**|  
+|**Name**|**Type**|**Описание**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор объекта TaskScheduler, который начал цикл.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор задачи, которая начала цикл.|  
@@ -116,7 +117,7 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="user-data"></a>Данные пользователя  
   
-|**Имя**|**Тип**|**Описание**|  
+|**Name**|**Type**|**Описание**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор объекта TaskScheduler, который начал цикл.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Идентификатор задачи, которая начала цикл.|  

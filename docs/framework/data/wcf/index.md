@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a8a0ab816aa21082cf98462f5f9d7ffd20e4dcfd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9b6b9ddd27422c09f21833548634afd7945afa89
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-data-services-45"></a>Службы WCF Data Services 4.5
 Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] (которые раньше назывались ADO.NET Data Services) — это компонент платформы .NET Framework, с помощью которого можно создавать службы, использующие [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] для передачи и получения данных через Интернет или интрасеть с помощью семантики [REST](http://go.microsoft.com/fwlink/?LinkId=113919). Службы [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] предоставляют данные как ресурсы, адресуемые с помощью URI. Доступ и изменение данных производится с помощью таких стандартных команд HTTP, как GET, PUT, POST и DELETE. В службах [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] используются соглашения об отношениях сущностей из [модели EDM](../../../../docs/framework/data/adonet/entity-data-model.md) для предоставления ресурсов в виде наборов сущностей, связанных сопоставлениями.  
@@ -115,7 +116,7 @@ ms.lasthandoff: 12/02/2017
   
 -   [Веб-сайт протокола Open Data Protocol](http://go.microsoft.com/fwlink/?LinkID=184554)  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Обзор набора средств Visual Studio для Unity](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
  Содержит общие сведения о функциях и возможностях, доступных в службах [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   

@@ -29,11 +29,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 36e88b163ab857180a02278828dba7dcec457736
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c1662e5b0f8afd4ef92d2893a11c25457dbce024
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>проверка подлинности NTLM и Kerberos
 При проверке подлинности NTLM и Kerberos по умолчанию используются учетные данные пользователя Microsoft Windows NT, связанные с вызывающим приложением, для проверки подлинности на сервере. Если используется отличная от установленной по умолчанию проверка подлинности NTLM, приложение устанавливает тип проверки подлинности NTLM и использует объект <xref:System.Net.NetworkCredential> для передачи имени пользователя, пароля и домена узлу, как показано в следующем примере.  
@@ -72,5 +73,5 @@ WReq.Credentials = CredentialCache.DefaultCredentials;
 >  Проверка подлинности NTLM не работает через прокси-сервер.  
   
 ## <a name="see-also"></a>См. также  
- [Основные и дайджест-проверка подлинности](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
+ [Обычная и дайджест-проверка подлинности](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
  [Проверка подлинности в Интернете](../../../docs/framework/network-programming/internet-authentication.md)

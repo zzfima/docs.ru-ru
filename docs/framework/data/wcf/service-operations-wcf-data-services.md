@@ -19,11 +19,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 578f62773fc63ac48977116834bb5cd3238050d3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 72af11330bc9190ea0c07e23f2e87e5f4840b677
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-operations-wcf-data-services"></a>Операции служб (службы данных WCF)
 Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют определять операции службы над службой данных для предоставления методов сервера. Как и остальные ресурсы службы данных, операции службы адресуются с помощью URI. Операции службы позволяют предоставлять бизнес-логику службы данных, например реализовывать логику проверки, применять правила безопасности на основе ролей и предоставлять специализированные возможности запросов. Операции службы представляют собой методы, добавленные в класс службы данных, производный от класса <xref:System.Data.Services.DataService%601>. Как и остальные ресурсы службы данных, методы операций службы поддерживают передачу параметров. Например, следующие операции URI службы (на основе [краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) службы данных) передает значение `London` для `city` параметр:  

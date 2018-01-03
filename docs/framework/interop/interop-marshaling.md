@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 381eccc42d5abb85cde618f4710f044f172295d5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5bfd5ca9d42c654882c77efafed82aec7e4f0c9b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interop-marshaling"></a>Маршалинг взаимодействия
 <a name="top"></a> Маршалинг взаимодействия определяет, как данные передаются в аргументах и возвращаемых значениях методов между управляемой и неуправляемой памятью во время вызовов. Маршалинг взаимодействия — это процесс времени выполнения, выполняемый службой маршалинга среды CLR.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/18/2017
   
 -   [Маршалинг удаленных вызовов](#marshaling_remote_calls)  
   
--   [См. также](#related_topics)  
+-   [Связанные разделы](#related_topics)  
   
 -   [Ссылки](#reference)  
   
@@ -149,9 +150,9 @@ ms.lasthandoff: 10/18/2017
  [К началу](#top)  
   
 <a name="related_topics"></a>   
-## <a name="related-topics"></a>Связанные разделы  
+## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание|  
+|Заголовок|Описание:|  
 |-----------|-----------------|  
 |[Характеристики маршалинга по умолчанию](../../../docs/framework/interop/default-marshaling-behavior.md)|Описываются правила, используемые службой маршалинга взаимодействия для маршалинга данных.|  
 |[Маршалинг данных при вызове неуправляемого кода](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)|Описывается способ объявления параметров метода и передачи аргументов в функции, экспортируемые неуправляемыми библиотеками.|  
@@ -166,7 +167,7 @@ ms.lasthandoff: 10/18/2017
  [К началу](#top)  
   
 <a name="reference"></a>   
-## <a name="reference"></a>Ссылки  
+## <a name="reference"></a>Ссылка  
  <xref:System.Runtime.InteropServices?displayProperty=nameWithType>  
   
  [К началу](#top)

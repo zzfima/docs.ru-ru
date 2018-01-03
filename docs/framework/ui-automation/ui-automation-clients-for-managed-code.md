@@ -17,11 +17,12 @@ caps.latest.revision: "58"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 8142ef17bdfb78226e7a65376e132bad18bc258e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 68ff7e03fe30ff61a35b20517ebaea73144ff621
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-clients-for-managed-code"></a>Клиенты автоматизации пользовательского интерфейса для управляемого кода
 > [!NOTE]
@@ -29,16 +30,16 @@ ms.lasthandoff: 10/18/2017
   
  В этом разделе содержатся обзоры и практические руководства, помогающие разрабатывать клиенты автоматизации пользовательского интерфейса.  
   
-## <a name="in-this-section"></a>Содержание  
- [UI Automation and Screen Scaling](../../../docs/framework/ui-automation/ui-automation-and-screen-scaling.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Модель автоматизации пользовательского интерфейса и масштабирование экрана](../../../docs/framework/ui-automation/ui-automation-and-screen-scaling.md)  
  [Поддержка автоматизации пользовательского интерфейса для стандартных элементов управления](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)  
  [События модели автоматизации пользовательского интерфейса для клиентов](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
  [Кэширование в клиентах автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+ [Свойства автоматизации пользовательского интерфейса для клиентов](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
  [Сопоставление шаблона элемента управления для клиентов автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
  [Шаблоны элементов управления модели автоматизации пользовательского интерфейса для клиентов](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [Получение элементов автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)  
- [Проблемы потока модели автоматизация пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)  
+ [Получение элементов модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)  
+ [Проблемы потока модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)  
  [Разделы практического руководства](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code-how-to-topics.md)  
   
 ## <a name="reference"></a>Ссылка  

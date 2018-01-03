@@ -21,11 +21,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d14c67daa387f06a3c7d6e43219991950bceb73e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6cd775ed31d0457308f86b3d5b6f40092bfa9690
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="query-projections-wcf-data-services"></a>Проекции запросов (службы данных WCF)
 Проекция представляет собой механизм в [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] для уменьшения объема данных в веб-канале, возвращаемые запросом, указав в ответе возвращаются только определенные свойства сущности. Дополнительные сведения см. в разделе [OData: параметр системного запроса ($select)](http://go.microsoft.com/fwlink/?LinkId=186076).  

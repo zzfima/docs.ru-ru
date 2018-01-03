@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f3907888ebcda9c5c6c498cbff39956391f7e213
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ccdadc22728c28c8dea80f168a98cb985b2572a7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug
 При отладке приложения во время разработки выходные данные трассировки и отладки отображаются в окне «Вывод» Visual Studio. Однако чтобы включить возможности трассировки в развернутом приложении, необходимо скомпилировать инструментированные приложения с включенной директивой компилятора **TRACE**. Это позволяет компилировать код трассировки в выпускаемой версии приложения. Если не включить директиву **TRACE**, весь код трассировки игнорируется во время компиляции и не включается в исполняемый код, который будет развернут.  
@@ -105,9 +106,9 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [Как: создание, инициализация и настройка переключателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
+ [Практическое руководство. Создание, инициализация и настройка переключателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
  [Переключатели трассировки](../../../docs/framework/debug-trace-profile/trace-switches.md)  
  [Прослушиватели трассировки](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
- [Как: добавление операторов трассировки в код приложения](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
+ [Практическое руководство. Добавление операторов трассировки в код приложения](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
  [Практическое руководство. Настройка переменных среды для командной строки Visual Studio](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
  [Практическое руководство. Вызов компилятора командной строки](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

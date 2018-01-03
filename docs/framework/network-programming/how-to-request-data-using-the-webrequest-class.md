@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: e831f3c305716afe11df6c0b1e21db1ed5a4f01e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bd714a9e006f87a817ca931757aaaaed920f50f7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a>Практическое руководство. Запрос данных с помощью класса WebRequest
 Следующая процедура описывает шаги, используемые для запроса ресурсов с сервера, например веб-страницы или файла. Ресурс должен быть определен универсальным кодом ресурса (URI).  
@@ -182,7 +183,7 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Создание Интернет-запросов](../../../docs/framework/network-programming/creating-internet-requests.md)  
+ [Создание интернет-запросов](../../../docs/framework/network-programming/creating-internet-requests.md)  
  [Использование потоков в сети](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
  [Доступ к Интернету через прокси-сервер](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
  [Запрос данных](../../../docs/framework/network-programming/requesting-data.md)  

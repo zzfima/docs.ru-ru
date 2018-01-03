@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4b29ed1c3659b1705640888ded5fe21432dc6ada
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 28203dc428db6a2dd06e9c1e85b64ef80e81ffbe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Эквивалентность типов и внедренные типы взаимодействия
 Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], среда CLR поддерживает внедрение сведений о типах COM непосредственно в управляемые сборки и не требует получения управляемыми сборками сведений о типах COM из сборок взаимодействия. Так как внедренные сведения о типах включают в себя только типы и члены, которые действительно используются в управляемой сборке, в двух управляемых сборках могут быть очень разные представления одного типа COM. Все управляемые сборки имеют разные объекты <xref:System.Type> для обозначения представления типа COM. Среда CLR поддерживает эквивалентность типов между этими разными представлениями для интерфейсов, структур, перечислений и делегатов.  

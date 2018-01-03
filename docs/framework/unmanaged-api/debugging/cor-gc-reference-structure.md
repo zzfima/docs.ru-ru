@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 11be45743bd215315139fb77f016e85bc9b592c5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a86604febb7641eef147608e564a27883fdc4bec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corgcreference-structure"></a>Структура COR_GC_REFERENCE
 Содержит сведения об объекте, в котором должна быть выполнена сборка мусора.  
@@ -39,9 +40,9 @@ typedef struct _COR_GC_REFERENCE {
 } COR_GC_REFERENCE;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`domain`|Указатель на домен приложения, к которому принадлежит объект или дескриптора. Его значение может быть `null`.|  
 |`location`|ICorDebugValue или ICorDebugReferenceValue-интерфейс, соответствующий объект, который будет собрана сборщиком мусора.|  

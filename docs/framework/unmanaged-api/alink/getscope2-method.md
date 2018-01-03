@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 143d1d7cfd6f99a662fd7a79e2e2fa629f74967a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0e57ce8fbe0b8e60c9f6f6295e9331c571aedf92
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getscope2-method"></a>Метод GetScope2
 Возвращает область импортирования.  
@@ -61,4 +62,4 @@ HRESULT GetScope2(
 ## <a name="see-also"></a>См. также  
  [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
  [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [ALink-интерфейс API](../../../../docs/framework/unmanaged-api/alink/index.md)
+ [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

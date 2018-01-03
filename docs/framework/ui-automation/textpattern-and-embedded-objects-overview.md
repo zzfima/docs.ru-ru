@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: af8d519b8036c5598740331960cacce07f375ac0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0b08bb2b4d9cdb5e90582fbce280a03f6fc04d13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Общие сведения об объектах TextPattern и Embedded
 > [!NOTE]
@@ -148,22 +149,22 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Automation.GridPattern.GetItem%2A> с параметрами (0,0)|Возвращает <xref:System.Windows.Automation.AutomationElement> , представляющий содержимое ячейки таблицы. В этом случае элемент — это текстовый элемент управления.|  
 |<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , где <xref:System.Windows.Automation.AutomationElement> — это объект, возвращаемый предыдущим методом `GetItem` .|Возвращает диапазон, охватывающий изображение ![Пример внедренного изображения](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample").|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> для объекта, возвращаемого предыдущим методом `RangeFromChild` .|Возвращает <xref:System.Windows.Automation.AutomationElement> , представляющий ячейку таблицы. В этом случае элемент — это текстовый элемент управления, поддерживающий TableItemPattern.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> для объекта, возвращаемого предыдущим методом `GetEnclosingElement` .|Возвращает <xref:System.Windows.Automation.AutomationElement> , представляющий таблицу.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> для объекта, возвращаемого предыдущим методом `GetEnclosingElement`.|Возвращает <xref:System.Windows.Automation.AutomationElement> , представляющий таблицу.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> для объекта, возвращаемого предыдущим методом `GetEnclosingElement` .|Возвращает <xref:System.Windows.Automation.AutomationElement> , представляющий поставщик текста.|  
   
  **Пример 2. Получение текстового содержимого ячейки.**  
   
 |Вызываемый метод|Результат|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.GridPattern.GetItem%2A> с параметрами (1,1).|Возвращает <xref:System.Windows.Automation.AutomationElement> , представляющий содержимое ячейки таблицы. В этом случае элемент — это текстовый элемент управления.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , где <xref:System.Windows.Automation.AutomationElement> — это объект, возвращаемый предыдущим методом `GetItem` .|Возвращает "Y".|  
+|<xref:System.Windows.Automation.GridPattern.GetItem%2A> с параметрами (1,1).|Возвращает <xref:System.Windows.Automation.AutomationElement>, представляющий содержимое ячейки таблицы. В этом случае элемент — это текстовый элемент управления.|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A>, где <xref:System.Windows.Automation.AutomationElement> — это объект, возвращаемый предыдущим методом `GetItem`.|Возвращает "Y".|  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Automation.TextPattern>  
  <xref:System.Windows.Automation.Text.TextPatternRange>  
  <xref:System.Windows.Automation.Provider.ITextProvider>  
  <xref:System.Windows.Automation.Provider.ITextRangeProvider>  
- [Доступ ко внедренным объектам с помощью автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)  
- [Expose the Content of a Table Using UI Automation](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
- [Проход по тексту, с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
+ [Доступ ко внедренным объектам с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)  
+ [Представление содержимого таблицы с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
+ [Проход по тексту с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
  [TextPattern поиска и выбора](http://msdn.microsoft.com/en-us/0a3bca57-8b72-489d-a57c-da85b7a22c7f)

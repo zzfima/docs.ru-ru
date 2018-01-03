@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b05d77df28b560b9236e467a914229c0fa9ae7e8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 68e1d66b615db7369d71f56b402c13ce41ad5e54
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="blittable-and-non-blittable-types"></a>Преобразуемые и непреобразуемые типы
 Большинство типов данных имеют общее представление как в управляемой, так и в неуправляемой памяти и не требуют специальной обработки со стороны маршалера взаимодействия. Такие типы называются *непреобразуемыми*, поскольку при их передаче между управляемым и неуправляемым кодом не требуется преобразование.  
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/18/2017
   
  В следующей таблице перечислены преобразуемые типы из пространства имен <xref:System>. [Делегаты](http://msdn.microsoft.com/en-us/d176ee76-f982-494b-b03d-92e4118896e2), представляющие собой структуры данных, которые ссылаются на статический метод или экземпляр класса, также являются преобразуемыми.  
   
-|Преобразуемые типы|Описание|  
+|Преобразуемые типы|Описание:|  
 |-------------------------|-----------------|  
 |[System.Array](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Преобразует в массив в стиле C или `SAFEARRAY`.|  
 |[System.Boolean](http://msdn.microsoft.com/en-us/d4c00537-70f7-4ca6-8197-bfc1ec037ff9)|Преобразует в одно-, двух- или четырехбайтовое значение, где `true` выражается как 1 или -1.|  

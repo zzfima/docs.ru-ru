@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 516e065bc360538e7b62807a5492c0c6c9d16e69
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c9c3bc67d7ce59d259fec06377c5de1768a130ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-wif-tracing"></a>Практическое руководство. Включение трассировки WIF
 ## <a name="applies-to"></a>Применение  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/18/2017
   
 -   Шаг 1. Создание простого приложения веб-форм ASP.NET и включение трассировки  
   
--   Шаг 2. Тестирование решения  
+-   Шаг 2. Тестирование решения  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application-and-enable-tracing"></a>Шаг 1. Создание простого приложения веб-форм ASP.NET и включение трассировки  
  На этом шаге вы создадите приложение веб-форм ASP.NET и включите трассировку, изменив файл *Web.config*.  
@@ -100,7 +101,7 @@ ms.lasthandoff: 10/18/2017
   
      С приведенными выше параметрами будет включен **подробный** уровень трассировки для WIF, а полученный журнал будет сохранен в файле **C:\logs\WIF.xml**.  
   
-## <a name="step-2--test-your-solution"></a>Шаг 2. Тестирование решения  
+## <a name="step-2--test-your-solution"></a>Шаг 2. Тестирование решения  
  На этом шаге вы проверите запись журналов в приложении ASP.NET с поддержкой WIF.  
   
 #### <a name="to-test-your-wif-enabled-aspnet-application-for-successful-tracing"></a>Проверка трассировки в приложении ASP.NET с поддержкой WIF  

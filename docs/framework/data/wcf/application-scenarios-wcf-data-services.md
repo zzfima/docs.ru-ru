@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a72445a73be44e8c7b039463ccd8b939ae6a148
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ab5d1bd8116c2f5c07c9e91bbf0a5168c6d075d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Сценарии приложений (службы данных WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]поддерживают базовый набор сценариев предоставления и использования данных в виде [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-каналов. В этом подразделе описываются разделы, относящиеся к этим сценариям.  
@@ -30,12 +31,12 @@ ms.lasthandoff: 12/02/2017
   
 -   [Предоставление данных как службы](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
   
--   [Как: создание службы данных с использованием источника данных ADO.NET Entity Framework](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)  
+-   [Практическое руководство. Создание службы данных с использованием источника данных Entity Framework ADO.NET](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)  
   
  Предоставление произвольных классов данных CLR в качестве канала [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
  -   [Предоставление данных как службы](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
   
--   [Как: создание службы данных с помощью поставщика отражения](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
+-   [Практическое руководство. Создание службы данных с использованием поставщика отражений](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
   
 -   [Поставщики служб данных](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
   
@@ -68,14 +69,14 @@ ms.lasthandoff: 12/02/2017
 -   [Библиотека клиентов служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
  Создание клиентского приложения .NET Framework, обращающегося к каналу [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] асинхронно, чтобы избежать проблем с задержкой на клиенте.  
- -   [Как: выполнение запросов к службе асинхронных данных](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)  
+ -   [Практическое руководство. Выполнение асинхронных запросов к службе данных](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)  
   
 -   [Асинхронные операции](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
 -   [Службы WCF Data Services (Silverlight)](http://msdn.microsoft.com/en-us/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
  Предоставления и получения [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канал с большой двоичный объект, доступ и изменить в виде потока.  
- -   [Потоковый поставщик](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  
+ -   [Поставщик потоковых данных](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  
   
 -   [Работа с двоичными данными](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
   
@@ -84,17 +85,17 @@ ms.lasthandoff: 12/02/2017
   
 -   [Практическое руководство. Привязка данных к элементам Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)  
   
--   [Как: привязки данных с помощью источника данных проекта](../../../../docs/framework/data/wcf/how-to-bind-data-using-a-project-data-source-wcf-data-services.md)  
+-   [Практическое руководство. Привязка данных с помощью источника данных проекта](../../../../docs/framework/data/wcf/how-to-bind-data-using-a-project-data-source-wcf-data-services.md)  
   
  Перехватывайте входящие сообщения к службе данных для выполнения проверки данных и фильтрации запросов на основе ролей.  
- -   [Как: перехват сообщений службы данных](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)  
+ -   [Практическое руководство. Перехват сообщений службы данных](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)  
   
 -   [Перехватчики](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)  
   
  Создайте конечные точки службы данных для включения специализированного поведения службы.  
- -   [Как: определение операции службы](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)  
+ -   [Практическое руководство. Определение операции службы](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)  
   
--   [Операции службы](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)  
+-   [Операции служб](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)  
   
 ## <a name="see-also"></a>См. также  
  [Краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  

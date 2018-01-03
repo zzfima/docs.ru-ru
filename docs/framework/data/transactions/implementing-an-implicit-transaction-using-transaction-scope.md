@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7733543fa1120d4cd8409fe131ddaffa7a76be41
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0b75091739b0ea97b63b35830f4946a78e49ff8f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Реализация неявной транзакции с использованием области транзакции
 Класс <xref:System.Transactions.TransactionScope> предоставляет простой способ пометки блока кода как участвующего в транзакции без необходимости взаимодействия с самой транзакцией. Область транзакции может автоматически выбирать внешнюю транзакцию и управлять ей. В целях обеспечения простоты использования и эффективности при разработке транзакционного приложения рекомендуется использовать класс <xref:System.Transactions.TransactionScope>.  

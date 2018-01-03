@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 96304cdde766f264fcfbd0f4aa3cf168adf8422d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2891313c15b4003db5d50f2e9f2d461de9397dfc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Однофазная и многофазная фиксация транзакции
 Каждым используемым в транзакции ресурсом управляет диспетчер ресурсов, действия которого координируются диспетчером транзакций. [Прикрепление ресурсов в качестве участников в транзакции](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) разделе обсуждается, как можно прикрепить ресурс (или несколько ресурсов) в транзакции. В этом разделе также описывается порядок координации процесса фиксации транзакции между зачисленными ресурсами.  
@@ -119,5 +120,5 @@ public void InDoubt (Enlistment enlistment)
  Протокол однофазной фиксации наиболее эффективен при использовании во время выполнения, поскольку все изменения производятся без какой-либо явной координации. Дополнительные сведения о этого протокола в разделе [Оптимизация с помощью одного двухфазной фиксации и однофазной](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
 ## <a name="see-also"></a>См. также  
- [С помощью одного двухфазной фиксации и однофазной оптимизации](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
- [Прикрепление ресурсов в качестве участников в транзакции](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)
+ [Оптимизация производительности с помощью механизмов уведомления об однофазной фиксации и повышаемого однофазного присоединения](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
+ [Зачисление ресурсов в транзакцию в качестве участников](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)

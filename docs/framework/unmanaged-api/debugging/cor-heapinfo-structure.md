@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e316b964e3e983f50b81228709623e162529b05c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 991e018c3967693f5b87b71c77cdbadcd4ae0cfe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corheapinfo-structure"></a>Структура COR_HEAPINFO
 Содержит общие сведения о куче для сборки мусора и указывает, является ли она перечислимой.  
@@ -40,9 +41,9 @@ typedef struct _COR_HEAPINFO {
 } COR_HEAPINFO;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`areGCStructuresValid`|`true`Если структурами для сборки мусора являются допустимыми и могут быть перечислены кучи; в противном случае `false`.|  
 |`pointerSize`|Размер в байтах указателей в целевой архитектуре.|  

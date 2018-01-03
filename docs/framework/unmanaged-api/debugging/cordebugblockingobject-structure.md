@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6c47735565c960c2600f7274d0d59d5a6ec6c178
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 85b48fd565d7cc4bb158260df167477d3e61d81e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cordebugblockingobject-structure"></a>Структура CorDebugBlockingObject
 Определяет объект, блокирующий поток и конкретную причину блокировки потока.  
@@ -39,9 +40,9 @@ CorDebugBlockingReason blockingReason;
 }  CorDebugBlockingObject;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`pBlockingObject`|Объект, на котором блокирован поток. Этот объект действителен только в течение текущего синхронизированного состояния. Если два потока блокируются на одном объекте в одном синхронизированном состоянии, можно ожидать [ICorDebugValue::GetAddress](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md) метод, чтобы возвращать то же значение. Однако интерфейсы могут находиться не эквивалентность указателей.|  
 |`dwTimeout`|Количество миллисекунд до операции блокирования будет время ожидания, или значение INFINITE, означающее, что он имеет неограниченное время ожидания. Значение времени ожидания указывает общую длину время операции блокировки, а не осталось времени.|  

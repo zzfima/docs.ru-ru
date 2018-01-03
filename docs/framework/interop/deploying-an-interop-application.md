@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f804843c248e0051582aca6d1dd6328871e1cc06
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0682fd149134531781346d21245a0b1fd3fc4d43
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-an-interop-application"></a>Развертывание приложения взаимодействия
 Приложения взаимодействия обычно включают клиентскую сборку .NET, одну или несколько сборок взаимодействия (представляющих различные библиотеки типов COM) и один или несколько зарегистрированных COM-компонентов. В Visual Studio и [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] представлены средства для импорта и преобразования библиотеки типов в сборку взаимодействия, которые описываются в разделе [Импорт библиотеки типов в виде сборки](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md). Приложение взаимодействия можно развернуть двумя способами:  

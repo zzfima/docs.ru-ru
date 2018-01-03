@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 2102fce150f512a49093eb2b214258ac35e276e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b4cc524b3b3c1dbe42f3fe3926ed44c1e917e871
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-send-data-using-the-webrequest-class"></a>Практическое руководство. Отправка данных с помощью класса WebRequest
 В следующей процедуре описаны действия, используемые для отправки данных на сервер. Эта процедура обычно используется для отправки данных на веб-страницу.  
@@ -265,7 +266,7 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Создание Интернет-запросов](../../../docs/framework/network-programming/creating-internet-requests.md)  
+ [Создание интернет-запросов](../../../docs/framework/network-programming/creating-internet-requests.md)  
  [Использование потоков в сети](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
  [Доступ к Интернету через прокси-сервер](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
  [Запрос данных](../../../docs/framework/network-programming/requesting-data.md)  
