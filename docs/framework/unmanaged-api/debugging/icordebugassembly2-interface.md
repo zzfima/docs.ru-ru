@@ -19,18 +19,19 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 960df90186376db94c86ac128b2240c16a018262
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: af9fb548f8b42c08ef4a7961f4b640ae6db832b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugassembly2-interface1"></a>Интерфейс1 ICorDebugAssembly2
 Представляет сборку. Этот интерфейс является расширением интерфейса ICorDebugAssembly.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод IsFullyTrusted](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly2-isfullytrusted-method.md)|Возвращает значение, указывающее, является ли сборки было предоставлено полное доверие система безопасности среды выполнения.|  
   

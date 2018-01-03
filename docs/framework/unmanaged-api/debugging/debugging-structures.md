@@ -17,20 +17,21 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0293a20f5f735dd38b1d167ebc5057f645fa011a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8c20bb8a9841b5ebc7a4ca9b5463fe4c541c0a82
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-structures"></a>Структуры отладки
 В этом разделе описаны неуправляемые структуры, которые использует API отладки.  
   
-## <a name="in-this-section"></a>Содержание  
- [Clr_debugging_version-структура](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Структура CLR_DEBUGGING_VERSION](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md)  
  Определяет версию продукта среды CLR, предназначенную для отладки.  
   
- [CodeChunkInfo Structure1](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md)  
+ [Структура1 CodeChunkInfo](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md)  
  Представляет одинарный блок кода в памяти.  
   
  [Структура CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)  
@@ -84,11 +85,11 @@ ms.lasthandoff: 10/18/2017
  COR_VERSION  
  Содержит стандартный номер версии среды CLR, состоящий из четырех частей.  
   
- [Stacktrace_simplecontext-структура](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)  
+ [Структура StackTrace_SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)  
  Обеспечивает простой контекст, который может использоваться вместо полной структуры `CONTEXT`.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Компонентные классы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
+ [Коклассы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
   
  [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
   

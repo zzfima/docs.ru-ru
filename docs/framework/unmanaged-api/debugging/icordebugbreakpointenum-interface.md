@@ -19,18 +19,19 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b950e3b5bcfec220b1753313213fd8e9b71b4188
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f09a9d3870e2b975dc9ed952eca33147a21fce6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugbreakpointenum-interface1"></a>ICorDebugBreakpointEnum интерфейс1
 Реализует методы ICorDebugEnum и выполняет перечисление массивов ICorDebugBreakpoint.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод Next](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpointenum-next-method.md)|Возвращает заданное число `ICorDebugBreakpoint` экземпляров из перечисления, начиная с текущей позиции.|  
   

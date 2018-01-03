@@ -19,18 +19,19 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6a40276b28f3d20428f0d7eb0556a762fdb56801
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 73966ffe89f0e84d5a516f20962472d900332faa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrdatatarget-interface"></a>Интерфейс ICLRDataTarget
 Предоставляет методы для взаимодействия с целевым элементом среды common language runtime (CLR).  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод GetCurrentThreadID](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getcurrentthreadid-method.md)|Получает идентификатор операционной системы для текущего потока.|  
 |[Метод GetImageBase](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getimagebase-method.md)|Получает базовый адрес памяти для указанного образа.|  
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 |[Метод GetThreadContext](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getthreadcontext-method.md)|Возвращает указатель на контекст потока с указанным идентификатором.|  
 |[Метод GetTLSValue](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-gettlsvalue-method.md)|Возвращает значение в локальном хранилище потока (TLS) с указанным индексом для заданного потока.|  
 |[Метод ReadVirtual](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-readvirtual-method.md)|Считывает данные из указанного адреса виртуальной памяти в указанный буфер.|  
-|[Метод запроса](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-request-method.md)|Вызывается службами доступа к данным среды выполнения (CLR) для запроса операции, как определяются реализацией.|  
+|[Метод Request](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-request-method.md)|Вызывается службами доступа к данным среды выполнения (CLR) для запроса операции, как определяются реализацией.|  
 |[Метод SetThreadContext](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-setthreadcontext-method.md)|Задает текущий контекст заданного потока в целевом процессе.|  
 |[Метод SetTLSValue](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-settlsvalue-method.md)|Задает значение в локальном хранилище потока (TLS) заданного потока в целевом процессе.|  
 |[Метод WriteVirtual](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-writevirtual-method.md)|Записывает данные из указанного буфера указанного адреса виртуальной памяти.|  

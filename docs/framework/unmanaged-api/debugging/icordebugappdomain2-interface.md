@@ -19,18 +19,19 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ebd1e504cbf2f74ad82e7fea6b6c3f355a1bda34
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c811107fcf32696aee17810af06ac0b2ddc9102d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugappdomain2-interface1"></a>Интерфейс1 ICorDebugAppDomain2
 Предоставляет методы для работы с массивами, указателями, указатели на функции и ссылочные типы. Этот интерфейс является расширением интерфейса ICorDebugAppDomain.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод GetArrayOrPointerType](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getarrayorpointertype-method.md)|Возвращает массив указанного типа, указатель или ссылку на указанный тип.|  
 |[Метод GetFunctionPointerType](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getfunctionpointertype-method.md)|Возвращает указатель на функцию с заданной подписью.|  
