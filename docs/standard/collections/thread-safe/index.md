@@ -14,11 +14,14 @@ caps.latest.revision: "24"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b5394cd2e9c9fa2b0cacb93ddf2cf05b33fabc71
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ae53d5afbca15f8adafed428d4c2141312c972ed
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="thread-safe-collections"></a>Потокобезопасные коллекции
 В [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] введено пространство имен <xref:System.Collections.Concurrent?displayProperty=nameWithType>, включающее несколько потокобезопасных и масштабируемых классов коллекций. Несколько потоков могут безопасно и эффективно добавлять и удалять элементы из таких коллекций, не требуя при этом дополнительной синхронизации в пользовательском коде. При написании нового кода следует использовать классы параллельных коллекций каждый раз, когда коллекция будет записывать одновременно для нескольких потоков. Если выполняется только чтение из общей коллекции, вы можете использовать классы в пространстве имен <xref:System.Collections.Generic?displayProperty=nameWithType>. Мы рекомендуем использовать классы коллекций версии 1.0 только в том случае, если вам нужна среда выполнения .NET Framework до версии 1.1 включительно.  
@@ -40,7 +43,7 @@ ms.lasthandoff: 10/18/2017
   
  В следующей таблице перечислены типы коллекций в пространстве имен <xref:System.Collections.Concurrent?displayProperty=nameWithType>.  
   
-|Тип|Описание|  
+|Тип|Описание:|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601>|Предоставляет возможности блокировки и ограничения для всех типов, реализующих интерфейс <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>. Дополнительные сведения см. в разделе [Общие сведения о коллекции BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602>|Потокобезопасная реализация словаря пар "ключ-значение".|  
@@ -51,7 +54,7 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="related-topics"></a>Связанные разделы  
   
-|Заголовок|Описание|  
+|Заголовок|Описание:|  
 |-----------|-----------------|  
 |[Общие сведения о коллекции BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|Приводится описание функциональных возможностей, которые предоставляются типом <xref:System.Collections.Concurrent.BlockingCollection%601>.|  
 |[Практическое руководство. Добавление элементов в коллекцию ConcurrentDictionary и их удаление из этой коллекции](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|Приводится описание добавления и удаления элементов в классе <xref:System.Collections.Concurrent.ConcurrentDictionary%602>|  

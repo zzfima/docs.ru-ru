@@ -16,11 +16,14 @@ caps.latest.revision: "36"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8ab02ada92e06333cc7ec2ea3ae832c48d3e16ec
-ms.sourcegitcommit: f416ac259c1a771e4e6c72728d8c11a77082f11c
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7760f30e8053b55c2f846c08ccb6a3d026089afb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="collections-and-data-structures"></a>Коллекции и структуры данных
 Связанные данные могут обрабатываться более эффективно, если они объединены в коллекцию. Вы можете использовать класс <xref:System.Array?displayProperty=nameWithType> или классы в пространствах имен <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent> и System.Collections.Immutable, чтобы добавлять, удалять и изменять отдельные элементы или диапазон элементов в коллекции.  
@@ -77,7 +80,7 @@ ms.lasthandoff: 12/01/2017
 <a name="BKMK_RelatedTopics"></a>   
 ## <a name="related-topics"></a>Связанные разделы  
   
-|Заголовок|Описание|  
+|Заголовок|Описание:|  
 |-----------|-----------------|  
 |[Выбор класса коллекции](../../../docs/standard/collections/selecting-a-collection-class.md)|Описывает различные коллекций и содержит сведения по выбору коллекции, соответствующей сценарию пользователя.|  
 |[Часто используемые типы коллекций](../../../docs/standard/collections/commonly-used-collection-types.md)|Описывает часто используемые типы универсальных и неуниверсальных коллекций, таких как <xref:System.Array?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> и <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.|  

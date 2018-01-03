@@ -20,11 +20,12 @@ caps.latest.revision: "56"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: eee16adfaa38b9a616f47d8489d99d0d9714cbaa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c88aabf046ac720d14db3e68c8e04092188a7ef1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Развертывание .NET Framework и приложений
 Эта статья поможет приступить к развертыванию платформы .NET Framework с приложением. Большая часть информации предназначена для разработчиков, изготовителей оборудования и администраторов предприятия. Пользователям, которые хотят установить .NET Framework на своих компьютерах, следует прочитать статью [Установка .NET Framework](~/docs/framework/install/index.md).  
@@ -159,9 +160,9 @@ ms.lasthandoff: 10/18/2017
   
  На выбор способа развертывания приложения могут также влиять соображения безопасности. Разрешения безопасности предоставляются управляемому коду в соответствии с его расположением. Развертывание приложения или компонента в расположении, где они получают низкий уровень доверия, например в Интернете, ограничивает возможности приложения или компонента. Дополнительные сведения о развертывании и аспектах безопасности см. в статье [Основы управления доступом для кода](../../../docs/framework/misc/code-access-security-basics.md).  
   
-## <a name="related-topics"></a>Связанные разделы  
+## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание|  
+|Заголовок|Описание:|  
 |-----------|-----------------|  
 |[Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Описывается то, как среда CLR определяет, какую сборку следует использовать для выполнения запроса привязки.|  
 |[Рекомендации для загрузки сборок](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|Описывается, как избежать проблем с идентификацией типов, которые могут привести к возникновению исключений <xref:System.InvalidCastException> и <xref:System.MissingMethodException> и других ошибок.|  

@@ -13,11 +13,14 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 38382609fb21069fd69a84eb8b9de4701efeaf2c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 22a2eb72dc06a644171c143a61698e661d2c66c6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-documents-and-data"></a>XML-документы и данные
 Платформа .NET Framework имеет всеобъемлющий и интегрированный набор классов, с помощью которых можно легко создавать приложения, использующие XML. Классы из следующих пространств имен поддерживают синтаксический анализ и запись XML-кода, изменение XML-данных в памяти, проверку данных и преобразование XSLT.  
@@ -64,7 +67,7 @@ ms.lasthandoff: 10/18/2017
   
 -   **Интеграция с ADO.NET** Классы XML и [ADO.NET](../../../../docs/framework/data/adonet/index.md) тесно интегрированы для сведения воедино реляционных данных и XML. Класс <xref:System.Data.DataSet> представляет собой кэш «в памяти» для данных, полученных из базы данных. Класс <xref:System.Data.DataSet> позволяет считывать и записывать код XML с помощью классов <xref:System.Xml.XmlReader> и <xref:System.Xml.XmlWriter>, сохранять внутреннюю реляционную структуру в виде схем XML (XSD) и логически выводить структуру схем XML-документов.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Параметры обработки XML](../../../../docs/standard/data/xml/xml-processing-options.md)  
  Обсуждаются параметры обработки XML-данных.  
   

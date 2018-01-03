@@ -14,20 +14,23 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e061508b6b74e81b79ab7d53b0277afd38072635
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 554de5d65929afc03b57bdc604ceeb6ac35362d4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="parallel-programming-in-net"></a>Параллельное программирование в .NET
 Многие персональные компьютеры и рабочие станции имеют ЦП, содержащие два или четыре ядра, которые позволяют одновременно выполнять несколько потоков. В ближайшем будущем ожидается, что компьютеры будут иметь значительно больше ядер. Чтобы воспользоваться преимуществами существующего и будущего оборудования, можно распараллеливать код для распределения работы между несколькими процессорами. В прошлом распараллеливание требовало управления потоками и взаимоблокировками на низком уровне. [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] и [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] улучают поддержку параллельного программирования, предоставляя новую среду выполнения, новые типы библиотек классов и новые средства диагностики. Эти функциональные возможности упрощают параллельную разработку, что позволяет разработчикам писать эффективный, детализированный и масштабируемый параллельный код с помощью естественных выразительных средств без необходимости непосредственной работы с потоками или пулом потоков. На рисунке ниже представлен общий обзор архитектуры параллельного программирования в [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
  ![Архитектура параллельного программирования в .NET](../../../docs/standard/parallel-programming/media/tpl-architecture.png "TPL_Architecture")  
   
-## <a name="related-topics"></a>Связанные разделы  
+## <a name="related-topics"></a>См. также  
   
-|Технология|Описание|  
+|Технология|Описание:|  
 |----------------|-----------------|  
 |[Библиотека параллельных задач (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Предоставляет документацию для класса <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>, который содержит параллельные версии цикла `For`, цикла `ForEach`; а также для класса <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, который предоставляет предпочитаемый способ для выражения асинхронных операций.|  
 |[Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)|Параллельная реализация LINQ to Objects, которая значительно улучшает производительность во множестве сценариев.|  
