@@ -21,14 +21,15 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a4e10b8e7bee6d459dd61d4f5189c10b078c9bd0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: bf397f36d29b1d8bc7be16beeb4e4d3e49f1fb69
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugcontrollercommitchanges-method"></a><span data-ttu-id="25478-102">Метод ICorDebugController::CommitChanges</span><span class="sxs-lookup"><span data-stu-id="25478-102">ICorDebugController::CommitChanges Method</span></span>
-<span data-ttu-id="25478-103">`CommitChanges` устарел.</span><span class="sxs-lookup"><span data-stu-id="25478-103">`CommitChanges` is obsolete.</span></span> <span data-ttu-id="25478-104">Не вызывайте этот метод.</span><span class="sxs-lookup"><span data-stu-id="25478-104">Do not call this method.</span></span>  
+# <a name="icordebugcontrollercommitchanges-method"></a><span data-ttu-id="7d779-102">Метод ICorDebugController::CommitChanges</span><span class="sxs-lookup"><span data-stu-id="7d779-102">ICorDebugController::CommitChanges Method</span></span>
+<span data-ttu-id="7d779-103">`CommitChanges` устарел.</span><span class="sxs-lookup"><span data-stu-id="7d779-103">`CommitChanges` is obsolete.</span></span> <span data-ttu-id="7d779-104">Не вызывайте этот метод.</span><span class="sxs-lookup"><span data-stu-id="7d779-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="25478-105">См. также</span><span class="sxs-lookup"><span data-stu-id="25478-105">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7d779-105">См. также</span><span class="sxs-lookup"><span data-stu-id="7d779-105">See Also</span></span>  
  

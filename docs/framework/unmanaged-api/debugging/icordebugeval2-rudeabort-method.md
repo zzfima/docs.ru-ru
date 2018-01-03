@@ -21,29 +21,30 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1dd0d00338f3f9ff9ac63e84a29124913cc9febe
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4a681b19eaa4a1828e6d6b5276713d61a3625121
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugeval2rudeabort-method"></a><span data-ttu-id="bb725-102">Метод ICorDebugEval2::RudeAbort</span><span class="sxs-lookup"><span data-stu-id="bb725-102">ICorDebugEval2::RudeAbort Method</span></span>
-<span data-ttu-id="bb725-103">Прерывает вычисление этим `ICorDebugEval2` в настоящее время выполнения.</span><span class="sxs-lookup"><span data-stu-id="bb725-103">Aborts the computation that this `ICorDebugEval2` is currently performing.</span></span>  
+# <a name="icordebugeval2rudeabort-method"></a><span data-ttu-id="34e86-102">Метод ICorDebugEval2::RudeAbort</span><span class="sxs-lookup"><span data-stu-id="34e86-102">ICorDebugEval2::RudeAbort Method</span></span>
+<span data-ttu-id="34e86-103">Прерывает вычисление этим `ICorDebugEval2` в настоящее время выполнения.</span><span class="sxs-lookup"><span data-stu-id="34e86-103">Aborts the computation that this `ICorDebugEval2` is currently performing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bb725-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bb725-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="34e86-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="34e86-104">Syntax</span></span>  
   
 ```  
 HRESULT RudeAbort ();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="bb725-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="bb725-105">Remarks</span></span>  
- <span data-ttu-id="bb725-106">`RudeAbort`Освобождает все блокировки, которые содержит средство оценки, оставляя сеанс отладки в небезопасном состоянии.</span><span class="sxs-lookup"><span data-stu-id="bb725-106">`RudeAbort` does not release any locks that the evaluator holds, so it leaves the debugging session in an unsafe state.</span></span> <span data-ttu-id="bb725-107">Этот метод используется с особой осторожностью.</span><span class="sxs-lookup"><span data-stu-id="bb725-107">Call this method with extreme caution.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="34e86-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="34e86-105">Remarks</span></span>  
+ <span data-ttu-id="34e86-106">`RudeAbort`Освобождает все блокировки, которые содержит средство оценки, оставляя сеанс отладки в небезопасном состоянии.</span><span class="sxs-lookup"><span data-stu-id="34e86-106">`RudeAbort` does not release any locks that the evaluator holds, so it leaves the debugging session in an unsafe state.</span></span> <span data-ttu-id="34e86-107">Этот метод используется с особой осторожностью.</span><span class="sxs-lookup"><span data-stu-id="34e86-107">Call this method with extreme caution.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bb725-108">Требования</span><span class="sxs-lookup"><span data-stu-id="bb725-108">Requirements</span></span>  
- <span data-ttu-id="bb725-109">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bb725-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="34e86-108">Требования</span><span class="sxs-lookup"><span data-stu-id="34e86-108">Requirements</span></span>  
+ <span data-ttu-id="34e86-109">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="34e86-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bb725-110">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bb725-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="34e86-110">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="34e86-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="bb725-111">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bb725-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="34e86-111">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="34e86-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bb725-112">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bb725-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="34e86-112">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="34e86-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
