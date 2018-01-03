@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2fde543187d1904da93be255878d6c7a99de6bbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 77d6dbafc5a7c3afd9998fd8e9ae54ce60f90a45
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="filestream-data"></a>Данные FILESTREAM
 Для двоичных данных (BLOB), хранящихся в столбце varbinary(max), появился новый атрибут хранилища FILESTREAM. До появления FILESTREAM для хранения двоичных данных была необходима специальная обработка. Неструктурированные данные, например текстовые документы, изображения и видеоролики, зачастую хранятся вне базы данных, что затрудняет работу с ними.  
@@ -217,7 +218,7 @@ namespace FileStreamTest
 ## <a name="resources-in-includessnoversionincludesssnoversion-mdmd-books-online"></a>Ресурсы электронной документации по [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]  
  Полная документация по FILESTREAM содержится в указанных ниже разделах электронной документации по [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
   
-|Раздел|Описание|  
+|Раздел|Описание:|  
 |-----------|-----------------|  
 |[Проектирование и реализация хранилища FILESTREAM](http://msdn2.microsoft.com/library/bb895234\(SQL.105\).aspx)|Приводятся ссылки на документацию по атрибуту FILESTREAM и связанные с ним разделы.|  
 |[Общие сведения о FILESTREAM](http://msdn2.microsoft.com/library/bb933993\(SQL.105\).aspx)|Приводятся сведения о том, когда необходимо использовать хранилище FILESTREAM; также описывается интеграция ядра СУБД SQL Server и файловой системы NTFS.|  
@@ -228,6 +229,6 @@ namespace FileStreamTest
 ## <a name="see-also"></a>См. также  
  [Типы данных SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
  [Извлечение и изменение данных в ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Безопасность доступа кода и ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  
+ [Управление доступом для кода и ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  
  [Двоичные данные и данные большого объема SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 964a4d051600621d581e05dcf6b518b2766e2750
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 08c66309d4c789acc0f2ddf6159a11c5fb963e80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>Отладка запросов в LINQ to DataSet
 Среда [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] поддерживает отладку кода [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Однако существуют некоторые различия между отладкой [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] код и не-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] управляемого кода. Большинство функций отладки работают с [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] инструкций, включая пошаговое выполнение, задание точек останова и просмотр результатов, отображаемых в окнах отладчика. Тем не менее отложенное выполнение запроса имеет некоторые побочные эффекты, которые следует учитывать при отладке [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] кода и существуют некоторые ограничения на использование, изменить и продолжить. В этом разделе обсуждаются аспекты отладки, которые являются уникальными для [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] по сравнению с отличных[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] управляемого кода.  

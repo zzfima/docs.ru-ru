@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2299a974fc9c6af9e5fba0de6e16ab72de8b5e10
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7765779187156866c20374b60a4b541d36ac9a5b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Интеграция System.Transactions с SQL Server
 Платформа [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 2.0 включает новую платформу транзакций, к которой можно обращаться через пространство имен <xref:System.Transactions> . Возможности работы с транзакциями в этой платформе полностью интегрированы с [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], включая [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
@@ -239,5 +240,5 @@ End Function
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Транзакции и параллелизм](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
+ [Транзакции и параллельность](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

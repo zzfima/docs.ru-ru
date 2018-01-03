@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f0c708c19761f6086e1b5c2fdd15904c76fe3de9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e36019cd6d010e25292fa50ed3bf795dfca15f73
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 Задает параметры, позволяющие проводить аудит событий безопасности во время обслуживания.  
@@ -48,14 +49,14 @@ ms.lasthandoff: 11/21/2017
 |auditLogLocation|Задает местоположение журнала аудита. Допустимы следующие значения:<br /><br /> -По умолчанию: События безопасности записываются в журнал приложений в Windows XP и в журнал событий в Windows Server 2003 и Windows Vista.<br />-Application: События аудита записываются в журнал событий приложения.<br />-Security: События аудита записываются в журнал событий безопасности.<br /><br /> Значением по умолчанию является Default. Для получения дополнительной информации см. <xref:System.ServiceModel.AuditLogLocation>.|  
 |suppressAuditFailure|Логическое значение, задающее поведение для подавления ошибок записи в журнал аудита.<br /><br /> Приложения должны уведомляться об ошибках записи в журнал аудита. Если в приложении не предусмотрена обработка ошибок аудита, необходимо использовать этот атрибут для подавления ошибок записи в журнал аудита.<br /><br /> Если этот атрибут имеет значение `true`, исключения, кроме OutOfMemoryException, StackOverFlowException, ThreadAbortException и ArgumentException, которые являются результатом попыток записи событий аудита, обрабатываются системой и не распространяются на приложение. Если значением этого атрибута является `false`, все исключения, которые являются результатом попыток записи событий аудита, пропускаются в приложение.<br /><br /> Значение по умолчанию — `true`.|  
 |serviceAuthorizationAuditLevel|Задает типы событий авторизации, записываемых в журнал аудита. Допустимы следующие значения:<br /><br /> — None: Аудит событий авторизации службы не выполняется.<br />-Success: Проверяются только событий успешной авторизации службы.<br />-Ошибка: Проверяются только событий неудачной авторизации службы.<br />-SuccessAndFailure: Оба Успех и отказ события авторизации службы будут аудироваться.<br /><br /> По умолчанию используется значение None. Для получения дополнительной информации см. <xref:System.ServiceModel.AuditLevel>.|  
-|messageAuthenticationAuditLevel|Задает тип событий аудита проверки подлинности сообщений, заносимых в журнал. Допустимы следующие значения:<br /><br /> — None: Создаются нет событий аудита.<br />-Success: Регистрируются только успешные события системы безопасности (полная проверка, включая проверку сигнатуры сообщения, шифрования и проверки токенов).<br />-Ошибка: Регистрируются только ошибки.<br />-SuccessAndFailure: Оба Успех и отказ событий.<br /><br /> По умолчанию используется значение None. Для получения дополнительной информации см. <xref:System.ServiceModel.AuditLevel>.|  
+|messageAuthenticationAuditLevel|Задает тип событий аудита проверки подлинности сообщений, заносимых в журнал. Допустимы следующие значения:<br /><br /> — None: Создаются нет событий аудита.<br />-Success: Регистрируются только успешные события системы безопасности (полная проверка, включая проверку сигнатуры сообщения, шифрования и проверки токенов).<br />-Ошибка: Регистрируются только ошибки.<br />-SuccessAndFailure: Оба Успех и отказ событий.<br /><br /> По умолчанию используется значение None. Дополнительные сведения см. в разделе <xref:System.ServiceModel.AuditLevel>.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<поведение >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Указывает элемент поведения.|  
   
@@ -92,5 +93,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
  [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [Аудит](../../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Как: аудит событий безопасности](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
+ [Практическое руководство. Аудит событий безопасности](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
  [Поведение аудита службы](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md)

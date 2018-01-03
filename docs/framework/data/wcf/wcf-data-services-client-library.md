@@ -17,11 +17,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 65b02945aa81fdf18ad328a833f8f85744035871
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8e8f5626ab7439b34377ba0200fd232c41017652
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-data-services-client-library"></a>Библиотека клиентов служб данных WCF
 Со службами данных, основанными на [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)], может взаимодействовать любое приложение, которое способно отправить HTTP-запрос и обработать канал [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], возвращаемый службой данных. Эта возможность взаимодействия позволяет обращаться к службам, основанным на [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], из широкого спектра веб-приложений. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]включает в себя клиентские библиотеки, которые предоставляют более широкие возможности программирования при использовании [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] каналов из .NET Framework или приложений на основе Silverlight.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 12/02/2017
   
  Этот раздел описывает использование клиентских библиотек для доступа и изменения данных из клиентского приложения .NET Framework. Дополнительные сведения об использовании [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] клиентская библиотека с приложением на базе Silverlight, в разделе [WCF Data Services (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=186016). Имеются другие клиентские библиотеки, позволяющие использовать [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала в приложениях других видов. Дополнительные сведения см. в разделе [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185796).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Создание библиотеки клиентов службы данных](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
  Содержит описание способов создания клиентской библиотеки и клиентские классы службы данных, основанных на [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-каналов.  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 12/02/2017
  [Привязка данных к элементам управления](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
  Описывает, как привязать элементы управления к [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] канале, возвращаемых службой данных.  
   
- [Вызов операций службы](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)  
+ [Вызов операций служб](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)  
  Описывает, как использовать клиентскую библиотеку для вызова операций службы.  
   
  [Управление контекстом службы данных](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)  

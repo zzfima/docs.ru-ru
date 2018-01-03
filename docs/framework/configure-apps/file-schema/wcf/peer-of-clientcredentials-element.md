@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f2fa776711223ace6a4cebce7783b1fa0c148a4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: accd6c261a393da3ffcffd261d6603d20b8fcb3d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltpeergt-of-ltclientcredentialsgt-element"></a>&lt;peer&gt; элемент для элемента &lt;clientCredentials&gt;
 Задает учетные данные, используемые при проверке подлинности одноранговых клиентов.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<сертификат >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md)|Задает сертификат X.509, используемый для подписи и шифрования сообщений для клиентов одноранговых сетей. .|  
 |[\<peerAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)|Задает параметры проверки подлинности для одноранговых клиентов.|  
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Задает учетные данные, используемые для проверки подлинности клиента при подключении к службе.|  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Description.ClientCredentials>  
  <xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>  
  <xref:System.ServiceModel.Security.PeerCredential>  
- [Одноранговые сети](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
+ [Одноранговая сеть](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
  [Защита клиентов](../../../../../docs/framework/wcf/securing-clients.md)  
  [Проверка подлинности сообщения одноранговых каналов](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
  [Нестандартная проверка подлинности одноранговых каналов](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  

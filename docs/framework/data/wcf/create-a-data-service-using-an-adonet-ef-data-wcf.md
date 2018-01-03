@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 77a4b90b16a92e993d9283932b2a609f874c7568
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9362aa6ea02f5878d2419ee7cbaab349cae27038
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Практическое руководство. Создание службы данных с использованием источника данных Entity Framework ADO.NET (службы данных WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] предоставляет данные сущности в виде службы данных. Эти данные сущностей предоставляются [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], если источником данных является реляционная база данных. В этом разделе будет показано создание модели данных на базе [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] в веб-приложении [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], основанном на существующей базе данных, а также создание новой службы данных с помощью этой модели.  
@@ -79,5 +80,5 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>См. также  
  [Определение служб данных WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
  [Поставщики служб данных](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
- [Как: создание службы данных с помощью поставщика отражения](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
- [Как: создание службы данных с использованием LINQ к источнику данных SQL](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md)
+ [Практическое руководство. Создание службы данных с использованием поставщика отражений](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
+ [Практическое руководство. Создание службы данных с использованием источника данных LINQ to SQL](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md)

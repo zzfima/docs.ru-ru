@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f1fd1c21fc4f156bfe7a5abf9f76bd341e2d0f10
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2835d2064f1845b55dd3a33abb086c5af0fb9e6c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="comparison-semantics-entity-sql"></a>Семантика сравнения (Entity SQL)
 Выполнение любого следующего оператора [!INCLUDE[esql](../../../../../../includes/esql-md.md)] подразумевает сравнение типов экземпляров.  
@@ -76,7 +77,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="supported-combinations"></a>Поддерживаемые сочетания  
  В следующей таблице приводятся все поддерживаемые сочетания операторов сравнения для каждого типа.  
   
-|**Тип**|**=**<br /><br /> **!=**|**ГРУППИРОВАТЬ ПО**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **ЗА ИСКЛЮЧЕНИЕМ**<br /><br /> **НАБОР**<br /><br /> **ОПЕРАТОР OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**ИМЕЕТ ЗНАЧЕНИЕ NULL**<br /><br /> **НЕ ИМЕЕТ ЗНАЧЕНИЕ NULL**|  
+|**Type**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**ИМЕЕТ ЗНАЧЕНИЕ NULL**<br /><br /> **НЕ ИМЕЕТ ЗНАЧЕНИЕ NULL**|  
 |-|-|-|-|-|-|-|-|  
 |Тип сущности|Ref<sup>1</sup>|Все свойства<sup>2</sup>|Все свойства<sup>2</sup>|Все свойства<sup>2</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Ref<sup>1</sup>|  
 |Сложный тип|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|  

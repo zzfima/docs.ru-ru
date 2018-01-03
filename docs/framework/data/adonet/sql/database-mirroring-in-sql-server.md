@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0ec0b25976b1b54c91fcdebbc80bc048d2b48823
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6956d48163f9b9da66258c0dbb3452beab5420d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="database-mirroring-in-sql-server"></a>Зеркальное отображение баз данных в SQL Server
 Зеркальное отображение базы данных в SQL Server позволяет сохранять копию или зеркальную копию базы данных SQL Server на резервном сервере. Зеркальное отображение гарантирует постоянное существование двух отдельных копий данных, обеспечивая тем самым высокий уровень доступности и полную избыточность данных. Поставщик данных .NET для SQL Server предоставляет неявную поддержку зеркального отображения базы данных, поэтому разработчику не надо предпринимать никаких действий или писать код, если он настроен для работы с базой данных SQL Server. Кроме того, объект <xref:System.Data.SqlClient.SqlConnection> поддерживает режим явного подключения, в котором в строке подключения <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> можно указать имя резервного сервера-участника.  
@@ -69,7 +70,7 @@ string activeServer = connection.DataSource;
 ## <a name="database-mirroring-resources"></a>Ресурсы, посвященные зеркальному отображению баз данных  
  Документацию и сведения о настройке, развертывании и администрировании зеркального подключения см. в приведенных ниже ресурсах электронной документации по SQL Server.  
   
-|Ресурс|Описание|  
+|Ресурс|Описание:|  
 |--------------|-----------------|  
 |[Зеркальное отображение базы данных](http://msdn.microsoft.com/library/bb934127.aspx) в электронной документации по SQL Server|Описывается установка и настройка зеркального отображения в SQL Server.|  
   

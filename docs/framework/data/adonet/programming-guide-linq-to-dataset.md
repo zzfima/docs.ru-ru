@@ -13,38 +13,39 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1332bf297dae4baae62d2abd731d236ad49be4ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 298ff0c6bfc5bc251483de8e90e3a394a2337369
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-guide-linq-to-dataset"></a>Руководство по программированию (LINQ to DataSet)
 Этот раздел содержит основные сведения о программировании с помощью [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] и примеры.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Запросы в LINQ to DataSet](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md)  
  Содержит сведения о создании запросов [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
   
- [Запросы к наборам данных](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
+ [Запросы к DataSet](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
  Содержит инструкции по созданию запросов к объектам <xref:System.Data.DataSet>.  
   
  [Сравнение объектов DataRow](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md)  
  Объясняет, как использовать объект <xref:System.Data.DataRowComparer> для сравнения строк данных.  
   
- [Создание таблицы данных из запроса](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)  
+ [Создание DataTable из запроса](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)  
  Содержит сведения о создании <xref:System.Data.DataTable> из [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] запроса с помощью <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> метод.  
   
  [Как: реализовать метод CopyToDataTable\<T > где универсальный тип T не является DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
  Описывает процедуру применения пользовательского метода `CopyToDataTable<T>`, где общий параметр T не принадлежит к типу <xref:System.Data.DataRow>.  
   
- [Методы универсального Field и SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)  
+ [Универсальные методы Field и SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)  
  Предоставляет сведения об универсальных методах <xref:System.Data.DataRowExtensions.Field%2A> и <xref:System.Data.DataRowExtensions.SetField%2A>.  
   
  [Привязка данных и LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
  Описывает связывание данных с помощью объекта <xref:System.Data.DataView>.  
   
- [Отладка запросов LINQ to DataSet](../../../../docs/framework/data/adonet/debugging-linq-to-dataset-queries.md)  
+ [Отладка запросов в LINQ to DataSet](../../../../docs/framework/data/adonet/debugging-linq-to-dataset-queries.md)  
  Предоставляет сведения об отладке и устранении неполадок [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] запросов.  
   
  [Безопасность](../../../../docs/framework/data/adonet/security-linq-to-dataset.md)  

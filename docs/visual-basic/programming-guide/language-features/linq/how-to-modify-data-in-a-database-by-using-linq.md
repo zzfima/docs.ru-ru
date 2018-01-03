@@ -21,18 +21,18 @@ ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 69e2fc7a6860ad2ff43742d37cd35671ebe35acf
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 66f21b2a47d3890875062bbdf45e1c4507e1d603
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Практическое руководство. Изменение данных в базе данных с помощью LINQ (Visual Basic)
 Запросы LINQ запросы (LINQ) упрощают доступ к данным базы данных, а также изменять значения в базе данных.  
   
  В следующем примере показано создание нового приложения, которое получает и обновляет сведения в базе данных SQL Server.  
   
- Примеры в этом разделе используется образец базы данных "Борей". Если у вас образца базы данных "Борей" на компьютере разработчика, его можно загрузить из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=98088) веб-сайта. Инструкции см. в разделе [Загрузка примеров баз данных](../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ Примеры в этом разделе используется образец базы данных "Борей". Если у вас образца базы данных "Борей" на компьютере разработчика, его можно загрузить из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=98088) веб-сайта. Инструкции см. в разделе [Загрузка примеров баз данных](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 ### <a name="to-create-a-connection-to-a-database"></a>Чтобы создать подключение к базе данных  
   
@@ -168,6 +168,6 @@ ms.lasthandoff: 12/09/2017
 ## <a name="see-also"></a>См. также  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  [Запросы](../../../../visual-basic/language-reference/queries/queries.md)  
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
  [Методы DataContext (O/R-конструктор)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
  [Как: назначение хранимых процедур для выполнения обновления, вставки и удаления (конструктор O/R)](http://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)

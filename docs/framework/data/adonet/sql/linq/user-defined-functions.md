@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: ff13a123bcb2c61d786f2156e600a16cdd6bb31e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 833ffbbccfb35fd51ddde5dbeb4e3de3d79923ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="user-defined-functions"></a>Пользовательские функции
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] использует методы в объектной модели для представления пользовательских функций. Чтобы назначить методы в качестве функций, следует применить атрибут <xref:System.Data.Linq.Mapping.FunctionAttribute>, а где необходимо - атрибут <xref:System.Data.Linq.Mapping.ParameterAttribute>. Дополнительные сведения см. в разделе [LINQ to SQL модель объектов](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).  
@@ -32,12 +33,12 @@ ms.lasthandoff: 10/18/2017
   
  В темах данного раздела показано формирование и вызов этих методов в приложении при самостоятельном написании кода. Пользователи среды [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], как правило, пользуются конструктором [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для сопоставления определяемых пользователем функций.  
   
-## <a name="in-this-section"></a>Содержание  
- [Как: используйте скалярные определяемые пользователем функции](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-scalar-valued-user-defined-functions.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Практическое руководство. Использование пользовательских скалярных функций](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-scalar-valued-user-defined-functions.md)  
  Описано, как реализовать функцию, возвращающую скалярные значения.  
   
- [Как: использование возвращающих табличные значения определяемых пользователем функций](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-table-valued-user-defined-functions.md)  
+ [Практическое руководство. Использование пользовательских возвращающих табличные значения функций](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-table-valued-user-defined-functions.md)  
  Содержит описание способов реализации функции, возвращающей табличные значения.  
   
- [Как: встроенный вызов пользовательских функций](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md)  
+ [Практическое руководство. Встроенный вызов пользовательских функций](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md)  
  Содержит описание преобразования встроенных вызовов в функции и представляет различия при внутреннем осуществлении вызова.

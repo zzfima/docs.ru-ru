@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f157bb172d173872aa7b792035b653976a9c1c0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 103c7cde61350a1efaf0784964c3f31cc7d55e4b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Запросы к одной таблице (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]запросы работают с источниками данных, которые реализуют <xref:System.Collections.Generic.IEnumerable%601> интерфейса или <xref:System.Linq.IQueryable%601> интерфейса. <xref:System.Data.DataTable> Класс не реализует один из этих интерфейсов, поэтому необходимо вызвать <xref:System.Data.DataTableExtensions.AsEnumerable%2A> метод, если вы хотите использовать <xref:System.Data.DataTable> в качестве источника `From` предложения [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] запроса.  
@@ -42,5 +43,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Запросы между таблицами](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)  
- [Запросы к типизированным наборам данных](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
- [Методы универсального Field и SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)
+ [Запрос к типизированным объектам DataSet](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
+ [Универсальные методы Field и SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)

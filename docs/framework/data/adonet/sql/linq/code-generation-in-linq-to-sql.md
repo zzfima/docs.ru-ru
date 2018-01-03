@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5720ca8adbfb4a25e6c1360ac156e950a2f1ce52
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 46fd6c75ea0854f8d70bdfaceaa9b2e997422abc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-generation-in-linq-to-sql"></a>Создание кода в LINQ to SQL
 Создание кода, представляющего базу данных, можно выполнить с помощью конструктора [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] или программы командной строки SQLMetal. В любом случае полный процесс создания кода включает три этапа.  
@@ -280,8 +281,8 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Общие сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
  [Внешнее сопоставление](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- [Как: создать модель объектов в виде внешнего файла](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
+ [Практическое руководство. Создание модели объекта в виде внешнего файла](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
  [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
  [Ссылки](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

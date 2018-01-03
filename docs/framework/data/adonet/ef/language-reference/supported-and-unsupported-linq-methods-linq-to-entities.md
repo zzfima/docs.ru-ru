@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 73b0c48b4aa4b4f54090e380e85bd35b89cc3f25
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2573ff7ff4a03d5ec8a56ef311a3c065d040ccf9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Поддерживаемые и неподдерживаемые методы LINQ (LINQ to Entities)
 В данном разделе приводятся сведения о стандартных операторах запросов LINQ, поддерживаемых или неподдерживаемых в запросах [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. У многих стандартных операторов запросов LINQ существуют перегруженные версии, принимающие целочисленный аргумент. Целочисленный аргумент соответствует отсчитываемый от нуля индекс в последовательности, выполняется операция, <xref:System.Collections.Generic.IEqualityComparer%601>, или <xref:System.Collections.Generic.IComparer%601>. Если не указано обратное, эти перегруженные версии стандартных операторов LINQ не поддерживаются и при попытке их использования будет вызвано исключение.  
@@ -189,4 +190,4 @@ ms.lasthandoff: 10/18/2017
 |<xref:System.Linq.Queryable.TakeWhile%2A>|Не поддерживается|`Function TakeWhile(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> TakeWhile<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
   
 ## <a name="see-also"></a>См. также  
- [Стандартные операторы запросов в запросах LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)
+ [Стандартные операторы запроса в запросах LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)

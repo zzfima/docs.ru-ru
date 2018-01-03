@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 8d2562bb37413cd07b4548bbf2bad0b6a9aedbc5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2ef50301a5188193cc13cd0e657f53593ef0d93e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcompilergt-element"></a>&lt;Компилятор&gt; элемент
 Задает атрибуты конфигурации компилятора для поставщика языка.  
@@ -62,13 +63,13 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<providerOption > элемент](../../../../../docs/framework/configure-apps/file-schema/compiler/provideroption-element.md)|Задает атрибуты версии компилятора для поставщика языка.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[Элемент \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |[\<System.CodeDom > элемент](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Задает параметры конфигурации компилятора для доступных поставщиков языков.|  

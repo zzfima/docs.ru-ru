@@ -14,11 +14,11 @@ ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
 caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b7f41b659399ae5a12663d4e359c02606bb6f952
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: e0be7d230f16750395aaceb3c94539546716b8fd
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keyfile"></a>/keyfile
 Указывает файл, содержащий ключ или пару ключей, чтобы задать для сборки строгое имя.  
@@ -31,10 +31,10 @@ ms.lasthandoff: 12/09/2017
   
 ## <a name="arguments"></a>Аргументы  
  `file`  
- Обязательный. Файл, содержащий ключ. Если имя файла содержит пробелы, заключите имя в кавычки (» «).  
+ Обязательно. Файл, содержащий ключ. Если имя файла содержит пробелы, заключите имя в кавычки (» «).  
   
 ## <a name="remarks"></a>Примечания  
- Компилятор вставляет открытый ключ в манифест сборки, а затем подписывает окончательную сборку закрытым ключом. Чтобы создать файл ключа, введите `sn -k file` из командной строки. Дополнительные сведения см. на странице [Sn.exe (Strong Name Tool)](https://msdn.microsoft.com/library/k5b5tt23) (Sn.exe: средство строгих имен).  
+ Компилятор вставляет открытый ключ в манифест сборки, а затем подписывает окончательную сборку закрытым ключом. Чтобы создать файл ключа, введите `sn -k file` из командной строки. Дополнительные сведения см. в разделе [Sn.exe (средство строгих имен)][Sn.exe (средство строгих имен)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
  Если компиляция выполняется с `/target:module`, имя файла ключа сохраняется в модуле и включается в сборку, которая создается при компиляции с параметром [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/09/2017
   
  Обратите внимание, что файл ключей может содержать только открытый ключ.  
   
- В разделе [Создание и использование сборок](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md) Дополнительные сведения о подписи сборки.  
+ В разделе [Создание и использование сборок](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) Дополнительные сведения о подписи сборки.  
   
 > [!NOTE]
 >  `/keyfile` Параметр не доступен в [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] среде разработки; он доступен только при компиляции из командной строки.  

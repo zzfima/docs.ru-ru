@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4792967bb21912e475c32c0f37149b89a838b133
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 232f57890e70e5be0ec60408587a622fafd1ba7e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>Ответственность разработчика при переопределении поведения по умолчанию
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]не обеспечивают следующие требования, но поведение не определено, если эти требования не выполнены.  
@@ -37,4 +38,4 @@ ms.lasthandoff: 10/18/2017
 -   Наконец, ожидается, что метод переопределения выполняет объявленную операцию. Семантика операций [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], таких как безотложная загрузка, отложенная загрузка и <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, требует, чтобы переопределения предоставляли объявленные службы. Например, переопределение загрузки, которое лишь возвращает пустую коллекцию без проверки содержимого в базе данных, скорее всего, приведет к несогласованности данных.  
   
 ## <a name="see-also"></a>См. также  
- [Настройка вставки, обновления и удаления](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)
+ [Настройка операций вставки, обновления и удаления](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

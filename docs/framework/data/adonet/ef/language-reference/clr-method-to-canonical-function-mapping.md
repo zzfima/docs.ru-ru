@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5d1e6a1cc362663be3aa6c6084f658eba25dfe54
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 53acc5745b3b80cd4c124dc3f9a74173bb118158
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Сопоставление методов CLR с каноническими функциями
 Платформа Entity Framework предоставляет набор канонических функций, которые реализуют операции над строками, математические функции и другую общую функциональность для многих систем баз данных. Это позволяет разработчикам работать с широким кругом систем баз данных. При вызове из технологии запросов (например, из LINQ to Entities) канонические функции преобразуются в соответствующую функцию хранилища для используемого поставщика. Это позволяет для различных источников данных выражать вызовы функций в общей форме, обеспечивая согласованность при применении запросов. Битовые операторы AND, OR, NOT и XOR также сопоставляются с каноническими функциями, если операнд имеет числовой тип. Для операндов логического типа битовые операторы AND, OR, NOT и XOR выполняют логические операции «И», «ИЛИ», «НЕ» и «Исключающее ИЛИ». Дополнительные сведения см. в разделе [канонические функции](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  

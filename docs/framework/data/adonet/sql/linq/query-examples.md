@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0e7d7a0a1f641603887675ed0c1faebd5c06b273
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 91ff476ed8f6060975c6adc1fe01a6db9c199969
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="query-examples"></a>Примеры запросов
 В этом разделе представлен ряд примеров [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] и C# стандартных запросов [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Разработчики, использующие [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], могут просмотреть гораздо больше примеров в образце решения, представленном в разделе "Образцы". Дополнительные сведения см. в разделе [образцы](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
@@ -25,11 +26,11 @@ ms.lasthandoff: 10/18/2017
 > [!IMPORTANT]
 >  *DB* часто используется в примерах кода в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] документации. *DB* считается экземпляр *Northwind* класс, унаследованный от класса <xref:System.Data.Linq.DataContext>.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Статистические запросы](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
  Содержит описание использования <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A> и т. д.  
   
- [Возвращает первый элемент в последовательности](../../../../../../docs/framework/data/adonet/sql/linq/return-the-first-element-in-a-sequence.md)  
+ [Возврат первого элемента в последовательности](../../../../../../docs/framework/data/adonet/sql/linq/return-the-first-element-in-a-sequence.md)  
  Содержит примеры использования <xref:System.Linq.Enumerable.First%2A>.  
   
  [Возврат или пропуск элементов последовательности](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
@@ -38,25 +39,25 @@ ms.lasthandoff: 10/18/2017
  [Сортировка элементов последовательности](../../../../../../docs/framework/data/adonet/sql/linq/sort-elements-in-a-sequence.md)  
  Содержит примеры использования <xref:System.Linq.Enumerable.OrderBy%2A>.  
   
- [Группировка элементов в последовательности](../../../../../../docs/framework/data/adonet/sql/linq/group-elements-in-a-sequence.md)  
+ [Группировка элементов последовательности](../../../../../../docs/framework/data/adonet/sql/linq/group-elements-in-a-sequence.md)  
  Содержит примеры использования <xref:System.Linq.Enumerable.GroupBy%2A>.  
   
  [Удаление дубликатов элементов из последовательности](../../../../../../docs/framework/data/adonet/sql/linq/eliminate-duplicate-elements-from-a-sequence.md)  
  Содержит примеры использования <xref:System.Linq.Enumerable.Distinct%2A>.  
   
- [Определить, если некоторые или все элементы в последовательности удовлетворяют условию](../../../../../../docs/framework/data/adonet/sql/linq/determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition.md)  
+ [Проверка соответствия условию какого-либо или всех элементов](../../../../../../docs/framework/data/adonet/sql/linq/determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition.md)  
  Содержит примеры использования <xref:System.Linq.Enumerable.All%2A> и <xref:System.Linq.Enumerable.Any%2A>.  
   
- [Объединение двух последовательностей](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
+ [Сцепление двух последовательностей](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
  Содержит примеры использования <xref:System.Linq.Enumerable.Concat%2A>.  
   
  [Возврат разности наборов между двумя последовательностями](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)  
  Содержит примеры использования <xref:System.Linq.Enumerable.Except%2A>.  
   
- [Возврат пересечения наборов двух последовательностей.](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
+ [Возврат пересечения наборов двух последовательностей](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
  Содержит примеры использования <xref:System.Linq.Enumerable.Intersect%2A>.  
   
- [Возврат объединения наборов двух последовательностей.](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)  
+ [Возврат объединения наборов двух последовательностей](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)  
  Содержит примеры использования <xref:System.Linq.Enumerable.Union%2A>.  
   
  [Преобразование последовательности в массив](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-sequence-to-an-array.md)  
@@ -68,7 +69,7 @@ ms.lasthandoff: 10/18/2017
  [Преобразование типа в универсальный интерфейс IEnumerable](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-type-to-a-generic-ienumerable.md)  
  Содержит примеры использования <xref:System.Linq.Enumerable.AsEnumerable%2A>.  
   
- [Сформулировать соединения и запросы перекрестного произведения](../../../../../../docs/framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)  
+ [Формулировка запросов-объединений и запросов векторного произведения](../../../../../../docs/framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)  
  Содержит примеры использования переходов внешнего ключа в предложениях `from`, `where` и `select`.  
   
  [Формулировка проекций](../../../../../../docs/framework/data/adonet/sql/linq/formulate-projections.md)  

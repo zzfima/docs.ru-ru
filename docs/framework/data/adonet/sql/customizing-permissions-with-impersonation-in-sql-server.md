@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: cde4fafaa10d7c9b495d4f98ddcd42c7f8a7524a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fbd5aa34fa9e90df972e718c28d0ba97287c3d8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Настройка разрешений с олицетворением в SQL Server
 Во многих приложениях используются хранимые процедуры для получения доступа к данным, что позволяет ограничивать доступ к базовым таблицам на основе формирования цепочки владения. При этом можно предоставлять разрешения EXECUTE для хранимых процедур, отзывая или отменяя разрешения по отношению к базовым таблицам. В СУБД SQL Server если хранимая процедура и таблицы имеют одного владельца, то разрешения вызывающего объекта не проверяются. Но формирование цепочки владения перестает действовать, если объекты имеют разных владельцев, а также в случае применения динамического кода SQL.  
@@ -78,7 +79,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ## <a name="external-resources"></a>Внешние ресурсы  
  Дополнительные сведения см. в следующих ресурсах.  
   
-|Ресурс|Описание|  
+|Ресурс|Описание:|  
 |--------------|-----------------|  
 |[Переключение контекста](http://msdn.microsoft.com/library/ms188268.aspx) в электронной документации по SQL Server|Содержит ссылки на разделы с описаниями способов использования предложения EXECUTE AS.|  
 |[Использование инструкции EXECUTE AS для создания пользовательских наборов разрешений](http://msdn.microsoft.com/library/ms190384.aspx) и [с помощью инструкции EXECUTE AS в модулях](http://msdn.microsoft.com/library/ms178106.aspx) в электронной документации по SQL Server|Разделы содержат описание способов использования предложения EXECUTE AS.|  
@@ -87,7 +88,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
  [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Общие сведения о безопасности SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [Управление разрешениями с помощью хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
+ [Управление разрешениями с использованием хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  [Написание безопасного динамического кода SQL в SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  [Подписывание хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  [Изменение данных с помощью хранимых процедур](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  

@@ -13,18 +13,19 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e04c8fcb56b497ab183e05a0d6f40cb3facfed73
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6aa72d4c3ac27b3be6704943819596ad628e4f7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="oracle-lobs"></a>Большие двоичные объекты (LOB) Oracle
 Поставщик данных .NET Framework для Oracle содержит <xref:System.Data.OracleClient.OracleLob> класс, который используется для работы с Oracle **LOB** типов данных.  
   
  **OracleLob** может принимать одно из следующих <xref:System.Data.OracleClient.OracleType> типы данных:  
   
-|Тип данных|Описание|  
+|Тип данных|Описание:|  
 |---------------|-----------------|  
 |**BLOB-объект**|Oracle **большого двоичного ОБЪЕКТА** тип данных, который содержит двоичные данные с максимальным размером 4 гигабайта. Он сопоставляется с **массива** типа **байтов**.|  
 |**CLOB**|Oracle **CLOB** тип данных, содержащий символьные данные, в зависимости от символа по умолчанию, установленной на сервере, с максимальным размером 4 гигабайта. Он сопоставляется с **строка**.|  

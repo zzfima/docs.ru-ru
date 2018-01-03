@@ -13,20 +13,21 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 545717c1aa620644203bf6adaa866cec3e8e7fed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d44e6375209f6ad9c733d1c4412ee605b439d992
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multiple-active-result-sets-mars"></a>Несколько активных результирующих наборов (MARS)
 MARS - это возможность, обеспечивающая выполнение нескольких пакетов в одном соединении. В предыдущих версиях в одном соединении можно было одновременно выполнять только один пакет. Из того, что при использовании режима MARS выполняются сразу несколько пакетов, не следует, что операции выполняются одновременно.  
   
-## <a name="in-this-section"></a>Содержание  
- [Включение режима MARS](../../../../../docs/framework/data/adonet/sql/enabling-multiple-active-result-sets.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Включение нескольких активных результирующих наборов](../../../../../docs/framework/data/adonet/sql/enabling-multiple-active-result-sets.md)  
  Приведено описание того, как использовать MARS в SQL Server.  
   
- [Обработка данных](../../../../../docs/framework/data/adonet/sql/manipulating-data.md)  
+ [Управление данными](../../../../../docs/framework/data/adonet/sql/manipulating-data.md)  
  Предоставляет примеры разработки кода приложений MARS.  
   
 ## <a name="related-sections"></a>Связанные разделы  

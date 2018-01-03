@@ -13,16 +13,17 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 438ad3af6f6913a2c9529d0cf5bafbda89251fab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c966c19ea4de9d2e95f7c614e5d09432e0958876
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-sql-language-reference"></a>Справочник по языку Entity SQL
 В этом разделе представлена подробная документация по [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], [!INCLUDE[esql](../../../../../../includes/esql-md.md)] и языкам моделирования и сопоставления, используемым [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Спецификации CSDL, SSDL и MSL](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)  
   
  [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
@@ -35,6 +36,6 @@ ms.lasthandoff: 11/21/2017
  [Средства работы с моделью EDM ADO.NET](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)  
   
 ## <a name="see-also"></a>См. также  
- [Платформа ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)  
+ [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)  
  [Начало работы](../../../../../../docs/framework/data/adonet/ef/getting-started.md)  
  [Примеры](http://msdn.microsoft.com/en-us/77500b07-de49-4fb7-93ee-ce76f72d4646)

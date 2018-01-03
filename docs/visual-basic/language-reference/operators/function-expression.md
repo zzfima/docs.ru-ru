@@ -14,11 +14,11 @@ ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e1d9d1223b340b2172c12bd8c2f364e314e764b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb1790d363755fe9b8bd711409734f7c3a405f3e
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-expression-visual-basic"></a>Выражение Function (Visual Basic)
 Объявляет параметры и код, определяющий функции лямбда-выражения.  
@@ -37,9 +37,9 @@ End Function
   
 |Термин|Определение|  
 |---|---|  
-|`parameterlist`|Необязательно. Список имен локальных переменных, которые представляют параметры этой процедуры. Круглые скобки должны присутствовать даже в том случае, если список пуст. В разделе [список параметров](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`expression`|Обязательный. Одно выражение. Тип выражения имеет тип возвращаемого значения функции.|  
-|`statements`|Обязательный. Список инструкций, возвращает значение, используя `Return` инструкции. (См. [оператор Return](../../../visual-basic/language-reference/statements/return-statement.md).) Тип возвращаемого значения имеет тип возвращаемого значения функции.|  
+|`parameterlist`|Необязательный. Список имен локальных переменных, которые представляют параметры этой процедуры. Круглые скобки должны присутствовать даже в том случае, если список пуст. В разделе [список параметров](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`expression`|Обязательно. Одно выражение. Тип выражения имеет тип возвращаемого значения функции.|  
+|`statements`|Обязательно. Список инструкций, возвращает значение, используя `Return` инструкции. (См. [оператор Return](../../../visual-basic/language-reference/statements/return-statement.md).) Тип возвращаемого значения имеет тип возвращаемого значения функции.|  
   
 ## <a name="remarks"></a>Примечания  
  Объект *лямбда-выражение* является функцией без имени, которая вычисляет и возвращает значение. Лямбда-выражение можно использовать везде, где можно использовать тип делегата, за исключением того, как аргумент `RemoveHandler`. Дополнительные сведения о делегатах и использование лямбда-выражений с делегатами см. в разделе [оператор Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md) и [неявное преобразование делегата](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
@@ -92,7 +92,7 @@ Dim londonCusts = db.Customers.
                   Select(Function(cust) cust)  
 ```  
   
- Дополнительные сведения о методах запросов см. в разделе [запросы](../../../visual-basic/language-reference/queries/queries.md). Дополнительные сведения о стандартных операторах запросов см. в разделе [Общие сведения о стандартных операторах запроса](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+ Дополнительные сведения о методах запросов см. в разделе [запросы](../../../visual-basic/language-reference/queries/queries.md). Дополнительные сведения о стандартных операторах запросов см. в разделе [Общие сведения о стандартных операторах запроса](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="see-also"></a>См. также  
  [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)  

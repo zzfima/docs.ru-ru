@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 01c09d94fd3224e8fd875b7f6eea06b2d2c35cca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f514095e551967928d610451cfcaa9a829c0989f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sorting-and-filtering-data"></a>Сортировка и фильтрация данных
 <xref:System.Data.DataView> предоставляет несколько способов сортировки и фильтрации данных в <xref:System.Data.DataTable>.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
      В следующей таблице показаны параметры для **DataViewRowState**.  
   
-    |Параметры DataViewRowState|Описание|  
+    |Параметры DataViewRowState|Описание:|  
     |------------------------------|-----------------|  
     |**CurrentRows**|**Текущей** из всех **Unchanged**, **Added**, и **Modified** строк. Это значение по умолчанию.|  
     |**Добавить**|**Текущей** из всех **Added** строк.|  

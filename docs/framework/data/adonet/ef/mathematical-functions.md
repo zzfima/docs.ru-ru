@@ -13,16 +13,17 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 8390f1e1822d7581ab0352a8c81acbc7ce545507
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ea933d1e6c0245f3bc6cc2a0767b593957b0598a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mathematical-functions"></a>Математические функции
 Поставщик данных для SQL Server платформы .NET Framework (SqlClient) предоставляет математические функции, производящие вычисления на входящих значениях, предоставляемых в качестве аргументов, и возвращающие результат в виде числовых значений. Эти функции находятся в пространстве имен SqlServer, которое доступно при использовании SqlClient. Свойство пространства имен поставщика позволяет платформе Entity Framework узнать, какой префикс используется поставщиком для конкретных конструкций, таких как типы или функции. В следующей таблице описаны математические функции SqlClient.  
   
-|Функция|Описание|  
+|Функция|Описание:|  
 |--------------|-----------------|  
 |`ABS(` `expression` `)`|Возвращает абсолютное значение.<br /><br /> **Аргументы**<br /><br /> `expression`: значение типа `Int32`, `Int64`, `Double` или `Decimal`.<br /><br /> **Возвращаемое значение**<br /><br /> Абсолютное значение заданного выражения.<br /><br /> **Пример**<br /><br /> `SqlServer.ABS(-2)`|  
 |`ACOS(` `expression` `)`|Возвращает значение арккосинуса указанного выражения.<br /><br /> **Аргументы**<br /><br /> `expression`: Тип `Double`.<br /><br /> **Возвращаемое значение**<br /><br /> Объект `Double`.<br /><br /> **Пример**<br /><br /> `SqlServer.ACOS(.9)`|  

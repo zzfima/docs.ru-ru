@@ -9,11 +9,11 @@ ms.assetid: 4a742518-30ce-4054-b1bb-df6978f15c06
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ac628e3968dcd395a9d7ac2c68ab09219e5a2eba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0fe84777f06933ece5abd829f7cabcce75d27313
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-39ltargumentnamegt39-is-nothing-or-empty"></a>Аргумент &#39; &lt;имя_аргумента&gt;&#39; имеет значение Nothing или пуст
 Имя аргумента является недопустимым, поскольку он инициализируется значением `Nothing` или является пустым. Аргумент должен иметь определенный тип данных и допустимое имя.  
@@ -23,6 +23,6 @@ ms.lasthandoff: 11/21/2017
 -   Добавьте допустимый аргумент.  
   
 ## <a name="see-also"></a>См. также  
- [Свойство My.Application.Info.DirectoryPath](http://msdn.microsoft.com/en-us/660586b9-638e-42a7-ae21-5eee34a3fccf)  
+ [My.Application.Info.DirectoryPath](xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo.DirectoryPath)  
  [Практическое руководство. Анализ путей к файлам](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
  [Nothing](../../visual-basic/language-reference/nothing.md)

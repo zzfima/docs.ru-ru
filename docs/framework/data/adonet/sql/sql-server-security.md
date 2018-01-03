@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4f41a794916c63672ca0c844f086629f77b90aa0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4b8eafeedd03097488b1493b5654db360eab94fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-security"></a>Безопасность SQL Server
 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] предоставляет много функций для создания безопасных приложений баз данных.  
@@ -32,14 +33,14 @@ ms.lasthandoff: 11/21/2017
   
  В этом разделе кратко описываются средства безопасности в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], которые нужны разработчикам. Здесь также приведены ссылки на соответствующие разделы электронной документации по [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] и другие ресурсы, где эти функции описаны более подробно.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о безопасности SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  Описание архитектуры и средств безопасности [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
   
  [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  Подразделы с описанием различных сценариев обеспечения безопасности для приложений ADO.NET и [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
   
- [Безопасность экспресс-выпуск SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  
+ [Безопасность SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  
  Описание вопросов безопасности для [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Express.  
   
 ## <a name="related-sections"></a>Связанные разделы  

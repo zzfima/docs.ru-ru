@@ -12,11 +12,11 @@ ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f536d4c420f24241a4b5f36094dad2f6c335f1d6
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 9528b7dcfa52c30954929d714bd098eb51886ebd
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="common-attributes-visual-basic"></a>Общие атрибуты (Visual Basic)
 В этом разделе описаны атрибуты, наиболее часто используемые в программах Visual Basic.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/09/2017
   
  В следующей таблице приведены атрибуты удостоверения.  
   
-|Атрибут|Назначение|  
+|Атрибут|Цель|  
 |---------------|-------------|  
 |<xref:System.Reflection.AssemblyName>|Полностью описывает удостоверение сборки.|  
 |<xref:System.Reflection.AssemblyVersionAttribute>|Задает версию сборки.|  
@@ -63,7 +63,7 @@ ms.lasthandoff: 12/09/2017
 ### <a name="informational-attributes"></a>Информационные атрибуты  
  Информационные атрибуты можно использовать для предоставления дополнительных сведений о компании или продукте в сборке. В следующей таблице показаны информационные атрибуты, определенные в пространстве имен <xref:System.Reflection?displayProperty=nameWithType>.  
   
-|Атрибут|Назначение|  
+|Атрибут|Цель|  
 |---------------|-------------|  
 |<xref:System.Reflection.AssemblyProductAttribute>|Определяет настраиваемый атрибут, задающий имя продукта для манифеста сборки.|  
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|Определяет настраиваемый атрибут, задающий товарный знак для манифеста сборки.|  
@@ -76,7 +76,7 @@ ms.lasthandoff: 12/09/2017
 ### <a name="assembly-manifest-attributes"></a>Атрибуты манифеста сборки  
  Атрибуты манифеста сборки можно использовать для предоставления сведений в манифесте сборки. К ним относится заголовок, описание, псевдоним по умолчанию и конфигурация. В следующей таблице показаны атрибуты манифеста сборки, определенные в пространстве имен <xref:System.Reflection?displayProperty=nameWithType>.  
   
-|Атрибут|Назначение|  
+|Атрибут|Цель|  
 |---------------|-------------|  
 |<xref:System.Reflection.AssemblyTitleAttribute>|Определяет настраиваемый атрибут, задающий название сборки для манифеста сборки.|  
 |<xref:System.Reflection.AssemblyDescriptionAttribute>|Определяет настраиваемый атрибут, задающий описание сборки для манифеста сборки.|  
@@ -234,7 +234,7 @@ End Class
 ##  <a name="VB"></a>Атрибуты Visual Basic  
  В следующей таблице перечислены атрибуты, относящиеся к Visual Basic.  
   
-|Атрибут|Назначение|  
+|Атрибут|Цель|  
 |---------------|-------------|  
 |<xref:Microsoft.VisualBasic.ComClassAttribute>|Указывает компилятору на то, что класс должен быть предоставлен как COM-объектом.|  
 |<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Позволяет членам модуля должен осуществляться, используя только квалификацию, необходимую для модуля.|  
@@ -267,6 +267,6 @@ End Structure
  <xref:System.Reflection>  
  <xref:System.Attribute>  
  [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)  
- [Атрибуты](../../../../../docs/standard/attributes/index.md)  
+ [Атрибуты](../../../../standard/attributes/index.md)  
  [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md) (Отражение (Visual Basic))  
  [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Обращение к атрибутам с помощью отражения (Visual Basic))

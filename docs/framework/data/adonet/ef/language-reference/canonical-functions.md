@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b80eeedc67678d703664eb705408a72b7e4a2274
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: da48efc110669c170fc409e22cb8402f471b22e7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="canonical-functions"></a>Канонические функции
 В этом разделе обсуждаются канонические функции, которые поддерживаются всеми поставщиками данных и могут использоваться всеми технологиями запросов. Канонические функции не могут расширяться поставщиком.  
@@ -35,8 +36,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="canonical-functions-namespace"></a>Пространство имен канонических функций  
  Для канонических функций выделено пространство имен <xref:System.Data.Metadata.Edm>. Пространство имен <xref:System.Data.Metadata.Edm> автоматически включается во все запросы. Однако при импорте другого пространства имен, в котором содержится функция с именем, совпадающим с именем канонической функции (из пространства имен <xref:System.Data.Metadata.Edm>), то пространство имен необходимо указывать явным образом.  
   
-## <a name="in-this-section"></a>Содержание  
- [Канонические статистические функции](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Статистические канонические функции](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)  
  Обсуждаются статистические канонические функции языка [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
  [Математические канонические функции](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)  
@@ -48,17 +49,17 @@ ms.lasthandoff: 11/21/2017
  [Канонические функции даты и времени](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)  
  Обсуждаются канонические функции даты и времени в языке [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
- [Побитовое канонические функции](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)  
+ [Битовые канонические функции](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)  
  Обсуждаются побитовые канонические функции языка [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
  [Пространственные функции](../../../../../../docs/framework/data/adonet/ef/language-reference/spatial-functions.md)  
  Рассматриваются пространственные канонические функции языка [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
- [Другие канонические функции](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)  
+ [Прочие канонические функции](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)  
  Обсуждаются функции, которые не являются побитовыми, строковыми, математическими, статистическими или функциями даты-времени.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения об Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
  [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Концептуальная модель с сопоставление функций SQL Server](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
+ [Сопоставление канонических функций концептуальной модели с функциями SQL Server](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
  [Определяемые пользователем функции](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)

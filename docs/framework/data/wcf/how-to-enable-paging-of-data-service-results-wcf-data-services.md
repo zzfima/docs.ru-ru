@@ -17,11 +17,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9156ddbe9482683660524898aa0c6ce3673cd75f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b03dd234681d031361696108702a7bbb558065ef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a>Практическое руководство. Включение разбивки на страницы результатов службы данных (службы данных WCF)
 Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют ограничить количество сущностей, возвращаемых запросом службы данных. Пределы разбиения на страницы определены в методе, который вызывается при инициализации службы, и могут устанавливаться отдельно для каждого набора сущностей.  
@@ -39,4 +40,4 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>См. также  
  [Загрузка отложенного содержимого](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
- [Как: загрузка разбитых на страницы результатов](../../../../docs/framework/data/wcf/how-to-load-paged-results-wcf-data-services.md)
+ [Практическое руководство. Загрузка результатов, разбитых на страницы](../../../../docs/framework/data/wcf/how-to-load-paged-results-wcf-data-services.md)

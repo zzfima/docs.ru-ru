@@ -20,11 +20,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 467c572d456bf2beca9f69359d362867aefbe5a1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b93b6e8b6e687f2e39fd5792aba08eaa47fa29fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Как разработать службу данных WCF Data Service, работающую на IIS
 В этом разделе показано, как использовать [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для создания службы данных, основанный на образце базы данных Northwind, размещенное на веб-приложения ASP.NET, на котором работает в Internet Information Services (IIS). Пример создания службы данных Northwind в виде веб-приложения ASP.NET, работающая на сервере разработки ASP.NET см. в разделе [краткое руководство по службам WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: ed9094a036262bac2e101e7b4268aac2e66a0d10
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0e3f3da6554239b4f04e244d3339a4280e1add85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datatablereaders"></a>Объекты DataTableReader
 <xref:System.Data.DataTableReader> представляет содержимое объекта <xref:System.Data.DataTable> или <xref:System.Data.DataSet> в виде одного или нескольких результирующих наборов, предназначенных только для чтения и только для перенаправления.  
@@ -26,11 +27,11 @@ ms.lasthandoff: 11/21/2017
   
  Объект **DataTableReader** может содержать несколько результирующих наборов, если он был создан путем вызова <xref:System.Data.DataSet.CreateDataReader%2A>. Результаты возвращаются в том же порядке, что **DataTables** в **DataSet** объекта <xref:System.Data.DataSet.Tables%2A> коллекции.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Создание объекта DataReader](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datareader.md)  
  Описывает создание **DataTableReader** объекта.  
   
- [Навигация по таблицам данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/navigating-datatables.md)  
+ [Навигация в объектах DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/navigating-datatables.md)  
  Описывает использование **чтения** метод для перемещения по содержимое **DataTableReader**.  
   
 ## <a name="see-also"></a>См. также  

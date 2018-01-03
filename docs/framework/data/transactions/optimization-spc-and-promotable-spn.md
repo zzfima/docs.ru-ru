@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 38c3d10eaefe4608084a5e5f6ad417446200799b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6f85dabc8a447db13173a672db37b327ba4a9fe6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>Оптимизация производительности с помощью механизмов уведомления об однофазной фиксации и повышаемого однофазного присоединения
 В этом разделе описываются предоставляемые инфраструктурой <xref:System.Transactions> механизмы для оптимизации производительности.  
@@ -70,5 +71,5 @@ ms.lasthandoff: 12/02/2017
  Если имеется только один неустойчивого перечисления и не зачисление устойчивых ресурсов, неустойчивого перечисления получает уведомление о SPC.  Если любые временные приемы и только один зачисление устойчивых ресурсов, временные приемы получать 2PC. После этого зачисленный устойчивый ресурс получает уведомление об однофазной фиксации (SPC).  
   
 ## <a name="see-also"></a>См. также  
- [Прикрепление ресурсов в качестве участников в транзакции](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
- [Фиксация транзакции в однофазной и двухфазной](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)
+ [Зачисление ресурсов в транзакцию в качестве участников](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
+ [Однофазная и многофазная фиксация транзакции](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)

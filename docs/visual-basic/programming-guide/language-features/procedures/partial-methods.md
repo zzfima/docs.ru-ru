@@ -20,11 +20,11 @@ ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 975a86e33eb5744f94cd58efb227bf52eb07c1e8
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 33e34c63988e74be2c22cb7b1358f5e8b04048c6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="partial-methods-visual-basic"></a>Разделяемые методы (Visual Basic)
 Разделяемые методы позволяют разработчикам использовать пользовательскую логику в код. Обычно код является частью класса автоматически созданный конструктором. Разделяемые методы определяются в разделяемый класс, созданный генератор кода, и обычно используются для предоставления уведомления, что что-то был изменен. Они позволяют разработчику указать пользовательское поведение в ответ на изменение.  
@@ -58,7 +58,7 @@ End Sub
   
  Предыдущий пример точно дублирует подпись в объявлении, но возможны также другие варианты. В частности, другие модификаторы можно добавить, например `Overloads` или `Overrides`. Только один `Overrides` модификатор разрешен. Дополнительные сведения о метод модификаторы см [оператор Sub](../../../../visual-basic/language-reference/statements/sub-statement.md).  
   
-## <a name="use"></a>Применение  
+## <a name="use"></a>Использовать  
  Вызовите разделяемый метод, как и любой другой `Sub` процедуры. Если метод был реализован, вычисляются аргументы и выполняется тело метода. Однако следует помните, что реализация разделяемого метода является необязательным. Если метод не реализован, его вызов не оказывает влияния и не вычисляются выражения, передаваемые как аргументы в метод.  
   
 ## <a name="example"></a>Пример  
@@ -83,5 +83,5 @@ End Sub
  [Подпрограммы](./sub-procedures.md)  
  [Необязательные параметры](./optional-parameters.md)  
  [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)  
- [Создание кода в LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
- [Добавление бизнес-логики с использованием разделяемых методов](../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)
+ [Создание кода в LINQ to SQL](../../../../framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
+ [Добавление бизнес-логики с использованием разделяемых методов](../../../../framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)

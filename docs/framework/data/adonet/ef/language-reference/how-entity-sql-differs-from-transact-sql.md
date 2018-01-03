@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5d99b433cb499316872cfb09d9fca7f7da753bb5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 90c3b7d639ea6fafd570b44ee40c0567e264ea91
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Отличия Entity SQL от Transact-SQL
 В этом разделе описываются различия между [!INCLUDE[esql](../../../../../../includes/esql-md.md)] и [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  
@@ -160,7 +161,7 @@ select a, sum(t.b) from T as t group by t.a as a
 ```  
   
 ## <a name="order-by-clause-usage"></a>Использование предложения ORDER BY  
- В языке [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] предложения ORDER BY могут быть указаны только в самом верхнем блоке инструкции SELECT .. FROM .. WHERE. В языке [!INCLUDE[esql](../../../../../../includes/esql-md.md)] можно использовать вложенное выражение ORDER BY, которое может быть размещено в любом месте запроса, однако упорядочение во вложенном запросе не сохраняется.  
+ В языке [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] предложения ORDER BY могут быть указаны только в самом верхнем блоке инструкции SELECT . FROM . WHERE. В языке [!INCLUDE[esql](../../../../../../includes/esql-md.md)] можно использовать вложенное выражение ORDER BY, которое может быть размещено в любом месте запроса, однако упорядочение во вложенном запросе не сохраняется.  
   
 ```  
 -- The following query will order the results by the last name  

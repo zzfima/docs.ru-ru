@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d082b7d53330bf755f9f4322ae24d8ad3dc0ac7a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1c118948f0eac8a9df81432b75297511172b10f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Пошаговое руководство. Простая модель объектов и простой запрос (C#)
 В данном пошаговом руководстве представлен основной и полный сценарий [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] с подробным объяснением выполняемых действий. В нем создается класс сущностей, который моделирует таблицу Customers в учебной базе данных Northwind. После этого создается простой запрос на получение списка клиентов, находящихся в Лондоне.  
@@ -159,10 +160,10 @@ ms.lasthandoff: 10/18/2017
   
 3.  Чтобы закрыть приложение, в окне консоли нажмите клавишу ВВОД.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  [Пошаговое руководство: выполнение запросов в связях (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md) раздел продолжается, где заканчивается в данном пошаговом руководстве. Запросов в связях пошаговом руководстве показано, как [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] может выполнять запросы между таблицами, аналогичные *соединения* в реляционной базе данных.  
   
  Если требуется выполнить пошаговое руководство "Выполнение запросов в связях", необходимо сохранить решение, созданное в процессе только что завершенного пошагового руководства. Это условие является обязательным.  
   
 ## <a name="see-also"></a>См. также  
- [Обучение с помощью пошаговых руководств](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+ [Обучение с использованием пошаговых руководств](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

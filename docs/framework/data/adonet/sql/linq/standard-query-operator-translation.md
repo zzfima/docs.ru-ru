@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1156608e9e1aa63a2404d5394c0c4211eea60693
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a30adbc060ead6eb1805f85bd563021ba7530c36
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="standard-query-operator-translation"></a>Трансляция стандартных операторов запросов
 Технология [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] преобразует стандартные операторы запросов в команды SQL. Обработчик запросов базы данных определяет семантика выполнения преобразования SQL.  
@@ -238,7 +239,7 @@ ORDER BY [t0].[CustomerID]
 ## <a name="see-also"></a>См. также  
  [Ссылки](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
  [Возврат или пропуск элементов последовательности](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
- [Объединение двух последовательностей](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
+ [Сцепление двух последовательностей](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
  [Возврат разности наборов между двумя последовательностями](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)  
- [Возврат пересечения наборов двух последовательностей.](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
- [Возврат объединения наборов двух последовательностей.](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)
+ [Возврат пересечения наборов двух последовательностей](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
+ [Возврат объединения наборов двух последовательностей](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)

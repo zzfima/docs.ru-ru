@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f6fb5783ad8d0863ffcce0665795081c6f2041d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 82d2dec81429da43bf19e8673b56658ee9f4a2d3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dbconnection-dbcommand-and-dbexception"></a>DbConnection, DbCommand и DbException
 После создания <xref:System.Data.Common.DbProviderFactory> и <xref:System.Data.Common.DbConnection> можно будет пользоваться командами и модулями чтения данных, чтобы получать данные из источника данных.  

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 05b87dfbb54de87ce7591dd6363d56ab69ebb8a7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3c912a97c0d362fa475ae93127b84cb4a680125c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-framework-overview"></a>Общие сведения об Entity Framework
 Платформа [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] представляет собой набор технологий ADO.NET, обеспечивающих разработку приложений, связанных с обработкой данных. Архитекторам и разработчикам приложений, ориентированных на обработку данных, приходится учитывать необходимость достижения двух совершенно различных целей. Они должны моделировать сущности, связи и логику решаемых бизнес-задач, а также работать с ядрами СУБД, используемыми для сохранения и получения данных. Данные могут распределяться по нескольким системам хранения данных, в каждой из которых применяются свои протоколы, но даже в приложениях, работающих с одной системой хранения данных, необходимо поддерживать баланс между требованиями системы хранения данных и требованиями написания эффективного и удобного для обслуживания кода приложения.  
@@ -106,4 +107,4 @@ ms.lasthandoff: 10/18/2017
  Содержит ссылки на концептуальные разделы, а также ссылки на другие разделы и ресурсы по созданию приложений [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
 ## <a name="see-also"></a>См. также  
- [Платформа ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
+ [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)

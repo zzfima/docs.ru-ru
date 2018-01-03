@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 17f5c8ede620a061bb80f98652497de0a165b06c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 35251c5e2a713463510b3ff8b65e9096385c6bcf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>Применение преобразования XSLT к набору данных
 **WriteXml** метод <xref:System.Data.DataSet> дает возможность создавать содержимое **DataSet** как XML-данных. После этого типичной задачей является преобразование этого XML в другой формат с помощью XSLT-преобразования (XSLT). Однако синхронизация **набора данных** с <xref:System.Xml.XmlDataDocument> позволяет применять таблицы стилей XSLT к содержимому **DataSet** без необходимости сначала записи содержимого  **Набор данных** как XML-данных с помощью **WriteXml**.  
@@ -134,5 +135,5 @@ writer.Close();
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Набор данных и XmlDataDocument синхронизации](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
+ [Синхронизация DataSet и XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
  [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

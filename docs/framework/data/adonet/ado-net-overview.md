@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: ae25f03a091d3a9705a2e445fec948d8c5e15e0f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e18115e460bf546c2fd6263e4671457a3da68f65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adonet-overview"></a>Общие сведения о ADO.NET
 ADO.NET предоставляет согласованный доступ к таким источникам данных, как SQL Server и XML, а также к источникам данных, предоставляемым при помощи OLE DB и ODBC. Пользовательские приложения, использующие общие данные, могут использовать ADO.NET для соединения с этими источниками данных и для получения, обработки и обновления имеющихся в них данных.  
@@ -32,23 +33,23 @@ ADO.NET предоставляет согласованный доступ к т
   
  **Заявление о конфиденциальности**: сборки System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll и System.Data.DataSetExtensions.dll не различать личных данных и неконфиденциальные данные пользователя.  Эти сборки не собирают, не хранят и не переносят пользовательские личные данные. Но приложения сторонних производителей могут собирать, хранить и переносить пользовательские личные данные с использованием этих сборок.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Архитектура ADO.NET](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
  Предоставляет общие сведения об архитектуре и компонентах ADO.NET.  
   
- [Правила и возможности технологии ADO.NET](../../../../docs/framework/data/adonet/ado-net-technology-options-and-guidelines.md)  
+ [Возможности технологии и рекомендации по ADO.NET](../../../../docs/framework/data/adonet/ado-net-technology-options-and-guidelines.md)  
  Описываются продукты и технологии, входящие в состав платформы Entity Data Platform.  
   
  [LINQ и ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  Описывается реализация технологии LINQ (Language-Integrated Query) в ADO.NET и приводятся ссылки на соответствующие разделы.  
   
- [Поставщики данных .NET framework](../../../../docs/framework/data/adonet/data-providers.md)  
+ [Поставщики данных .NET Framework](../../../../docs/framework/data/adonet/data-providers.md)  
  Предоставляет общие сведения о конструкции поставщика данных .NET Framework и поставщиков данных .NET Framework, включенных при помощи ADO.NET.  
   
- [Наборы данных ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
+ [DataSets в ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
  Предоставляет общие сведения о конструкции и компонентах `DataSet`.  
   
- [С одновременным выполнением в ADO.NET](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
+ [Одновременное выполнение в ADO.NET](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
  Рассматривает различия версий ADO.NET и их влияние на параллельное выполнение и совместимость приложений.  
   
  [Примеры кода ADO.NET](../../../../docs/framework/data/adonet/ado-net-code-examples.md)  

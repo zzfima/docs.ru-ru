@@ -1,6 +1,6 @@
 ---
 title: "Начало работы с F # с помощью средства командной строки"
-description: "Сведения об использовании языка F # с CLI кросс платформенных .NET Core."
+description: "Сведения об использовании языка F # в любой операционной системе (Windows, MacOS, Linux) с CLI кросс платформенных .NET Core."
 keywords: "visual f#, f#, функциональное программирование, .NET, .NET Core"
 author: cartermp
 ms.author: phcart
@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 615db1ec-6ef3-4de2-bae6-4586affa9771
-ms.openlocfilehash: a23d4861ce599f20f37ecd0564a0187e7b9b739f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4820a8a306bd478429b497a8b7c70ff170c1c655
+ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Начало работы с F # с .NET Core CLI
 
-В этой статье рассказывается, как вы можете начать работу с помощью F # на основе .NET Core. Оно будет выполнено построение многопроектное решение с библиотекой класса, вызываемого консольного приложения.
+В этой статье рассказывается, как можно начать работу в любой операционной системе (Windows, macOS или Linux) с помощью F # с .NET Core CLI. Оно будет выполнено построение многопроектное решение с библиотекой класса, вызываемого консольного приложения.
 
 ## <a name="prerequisites"></a>Предварительные требования
 

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 6cbb6d4c11c06c1771cb32021c6c148564a6034a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a316ae288d677a0ad5bd602399e27389839ef092
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>Создание поставщика данных Entity Framework
 В этом разделе описывается порядок написания поставщика [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] для поддержки источников данных, за исключением [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] имеет поставщика, поддерживающего [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
@@ -44,10 +45,10 @@ ms.lasthandoff: 10/18/2017
 ## <a name="sample"></a>Пример  
  В разделе [образца поставщика Entity Framework](http://go.microsoft.com/fwlink/?LinkId=180616) образец [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] поставщика, который поддерживает источник данных, отличный от [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
- [Создание кода SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Создание SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)  
   
- [Создание кода SQL для изменения](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md)  
+ [Создание кода SQL для изменения данных](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md)  
   
  [Спецификация манифеста поставщика](../../../../../docs/framework/data/adonet/ef/provider-manifest-specification.md)  
   

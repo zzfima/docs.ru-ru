@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 55d139fe4a1448f1f9f4739421a90b4dc8729489
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 89e1d99b5573f36fab4f2cfe675ab95e57a8fd2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="string-canonical-functions"></a>Строковые канонические функции
 Язык [!INCLUDE[esql](../../../../../../includes/esql-md.md)] включает строковые канонические функции.  
@@ -25,7 +26,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="remarks"></a>Примечания  
  В следующей таблице приведены строковые канонические функции языка [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
-|Функция|Описание|  
+|Функция|Описание:|  
 |--------------|-----------------|  
 |`Concat (` `string1`, `string2``)`|Возвращает строку, содержащую строку `string2`, добавленную к строке `string1`.<br /><br /> **Аргументы**<br /><br /> `string1`: строка, к которой добавляется `string2`.<br /><br /> `string2`: строка, которая добавляется к `string1`.<br /><br /> **Возвращаемое значение**<br /><br /> Объект `String`. Если длина строки возвращаемого значения больше максимально допустимой длины, произойдет ошибка.<br /><br /> **Пример**<br /><br /> `-- The following example returns abcxyz.`<br /><br /> `Concat('abc', 'xyz')`|  
 |`Contains (` `string`, `target``)`|Возвращает значение `true`, если `target` содержится в `string`.<br /><br /> **Аргументы**<br /><br /> `string`: строка, в которой выполняется поиск.<br /><br /> `target`: искомая подстрока.<br /><br /> **Возвращаемое значение**<br /><br /> Значение `true`, если подстрока `target` содержится в строке `string`, в противном случае - значение `false`.<br /><br /> **Пример**<br /><br /> `-- The following example returns true.`<br /><br /> `Contains('abc', 'bc')`|  

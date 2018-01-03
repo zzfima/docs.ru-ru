@@ -14,11 +14,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2facb328791f07d6def2d466c799f031fe500d6f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2eed4db8ee76d6f7bea8b0628219e858a1db9695
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Пошаговое руководство. Использование только хранимых процедур (Visual Basic)
 В данном пошаговом руководстве представлен основной полный сценарий [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] для получения доступа к данным с использованием только хранимых процедур. Этот метод часто используется администраторами баз данных для ограничения способов получения доступа к хранилищам данных.  
@@ -197,9 +198,9 @@ ms.lasthandoff: 11/21/2017
   
 6.  Если проверка завершена, можно щелкнуть **закрыть проект** на **файл** меню и сохранить проект при появлении запроса.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  Этот проект можно улучшить, выполнив некоторые изменения. Например, можно создать поле со списком доступных хранимых процедур и разрешить пользователю выбирать процедуру для выполнения. Можно также записывать выходные данных отчетов в текстовый файл.  
   
 ## <a name="see-also"></a>См. также  
- [Обучение с помощью пошаговых руководств](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)  
+ [Обучение с использованием пошаговых руководств](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)  
  [Хранимые процедуры](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: adc5d50707155495c43703b6586cedf5da209b69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 84a72642636be2238a81f1b9c00e3ac4e7037272
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Извлечение данных и операции создания, обновления и удаления в N-уровневых приложениях (LINQ to SQL)
 При сериализации объектов сущностей, например объектов "Customers" или "Orders", на клиент по сети эти сущности отсоединяются от своего контекста данных. Контекст данных более не отслеживает их изменения или их связи с другими объектами. Это не вызывает проблемы, если клиент осуществляет только чтение данных. Также довольно просто реализовать добавление клиентами строк в базу данных. Однако если приложению требуется, чтобы клиенты имели возможность обновлять или удалять данные, то перед вызовом метода <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType> необходимо присоединить сущности к новому контексту данных. Кроме того, если используется проверка оптимистического параллелизма на основе исходных значений, также требуется реализовать способ предоставления базе данных исходной сущности и сущности после изменения. С помощью методов `Attach` можно поместить сущности в новый контекст данных после их отсоединения.  
@@ -418,4 +419,4 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
   
 ## <a name="see-also"></a>См. также  
  [N-уровневые и удаленные приложения и LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
- [Общие сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+ [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

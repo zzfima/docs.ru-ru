@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 854407d2e6d1341d5917cc78664c1f653e55fa35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d922598cb31e60b1c1648884555695c1ba089726
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="query-notifications-in-sql-server"></a>Уведомления запросов в SQL Server
 С помощью уведомлений о запросах на основе инфраструктуры компонента Service Broker приложения могут получать извещения об изменениях данных. Эта функция особенно полезна для приложений, которые предоставляют кэш данных из базы данных (например, для веб-приложений), и которым требуются уведомления об изменении исходных данных.  
@@ -48,8 +49,8 @@ ms.lasthandoff: 11/21/2017
   
 -   [Разработка (компонент Service Broker)](http://msdn.microsoft.com/library/bb522908.aspx)  
   
-## <a name="in-this-section"></a>Содержание  
- [Включение уведомлений о запросах](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Включение уведомлений запросов](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  
  Описывает использование уведомлений о запросах, в том числе требования к их включению и использованию.  
   
  [SqlDependency в приложении ASP.NET](../../../../../docs/framework/data/adonet/sql/sqldependency-in-an-aspnet-app.md)  

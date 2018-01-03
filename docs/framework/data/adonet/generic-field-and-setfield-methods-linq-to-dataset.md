@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 58c2126c97d68fbe33d53b9d9ffa81fcc1aec8a0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7f71a6e380730ce3d622437b28a3722793524968
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generic-field-and-setfield-methods-linq-to-dataset"></a>Универсальные методы Field и SetField (LINQ to DataSet)
 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]Предоставляет методы расширения для <xref:System.Data.DataRow> класс для доступа к значениям столбцов: <xref:System.Data.DataRowExtensions.Field%2A> метод и <xref:System.Data.DataRowExtensions.SetField%2A> метод. Эти методы обеспечивают разработчикам более простой доступ к значениям столбцов, особенно это касается значений NULL. Объект <xref:System.Data.DataSet> использует для представления значений NULL класс <xref:System.DBNull.Value>, тогда как [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] использует поддержку платформой [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] типов, допускающих значения NULL. Использование существующего метода доступа столбцов в <xref:System.Data.DataRow> требует приведения возвращаемого объекта к соответствующему типу. Если определенное поле <xref:System.Data.DataRow> может иметь значение null, необходимо явно проверить значение null, так как возврат <xref:System.DBNull.Value> и неявном приведении его к другому типу возникает исключение <xref:System.InvalidCastException>. В следующем примере если <xref:System.Data.DataRow.IsNull%2A> метод не использовался для проверки на значение null, будет создано исключение, если индексатор возвращает <xref:System.DBNull.Value> и пытается привести его к <xref:System.String>.  

@@ -17,11 +17,11 @@ ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
 caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 35a40d6dfb6c66183afb0f3a2980a3b7863353fa
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: 2ee98b317e9d94cad5087e708bd71ca88d2bae63
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keywords-visual-basic"></a>Ключевые слова (Visual Basic)
 В приведенных ниже таблицах перечислены все ключевые слова языка [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/02/2017
 |[Long](../../../visual-basic/language-reference/data-types/long-data-type.md)|[Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Me](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|[Mod](../../../visual-basic/language-reference/operators/mod-operator.md)|  
 |[Модуль](../../../visual-basic/language-reference/modifiers/module-keyword.md)|[Оператор Module](../../../visual-basic/language-reference/statements/module-statement.md)|[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)|[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)|  
 |[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)|[Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)|  
-|[Ограничение New](../../../visual-basic/language-reference/statements/type-list.md)|[Оператор New](../../../visual-basic/language-reference/operators/new-operator.md)|[Далее](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Next (в Resume)](../../../visual-basic/language-reference/statements/resume-statement.md)|  
+|[Ограничение New](../../../visual-basic/language-reference/statements/type-list.md)|[Оператор New](../../../visual-basic/language-reference/operators/new-operator.md)|[Вперед](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Next (в Resume)](../../../visual-basic/language-reference/statements/resume-statement.md)|  
 |[Not](../../../visual-basic/language-reference/operators/not-operator.md)|[Nothing](../../../visual-basic/language-reference/nothing.md)|[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)|[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|  
 |[Объект](../../../visual-basic/language-reference/data-types/object-data-type.md)|[Of](../../../visual-basic/language-reference/statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|[Operator](../../../visual-basic/language-reference/statements/operator-statement.md)|  
 |[Параметр](../../../visual-basic/language-reference/statements/option-keyword-statement.md)|[Необязательный](../../../visual-basic/language-reference/modifiers/optional.md)|[Or](../../../visual-basic/language-reference/operators/or-operator.md)|[OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)|  
@@ -103,11 +103,10 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание|  
+|Заголовок|Описание:|  
 |-----------|-----------------|  
 |[Сводка по массивам](../../../visual-basic/language-reference/keywords/arrays-summary.md)|Содержит список элементов языка, используемых для создания, определения и использования массивов.|  
 |[Сводка по объекту Collection](../../../visual-basic/language-reference/keywords/collection-object-summary.md)|Содержит список элементов языка, используемых для коллекций.|  
-|[Сводка по директивам компилятора (Visual Basic)](http://msdn.microsoft.com/en-us/874dad02-d4a5-4a9d-8a48-0191a0ac794a)|Содержит список директив, управляющих поведением компилятора.|  
 |[Сводка по управлению ходом выполнения](../../../visual-basic/language-reference/keywords/control-flow-summary.md)|Содержит список операторов, используемых для циклов и управления последовательностью процедур.|  
 |[Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)|Содержит список функций для преобразования чисел, дат, времени и строк.|  
 |[Сводка по типам данных](../../../visual-basic/language-reference/keywords/data-types-summary.md)|Содержит список типов данных. Также содержит перечень функций для преобразования и проверки типов данных.|  

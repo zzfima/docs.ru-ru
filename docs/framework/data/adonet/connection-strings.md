@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bd787373b869c31727cfc0d027b6b98774b0d630
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a20061c551f5cb1a19c64a2f92b8180465f58eb2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-strings-in-adonet"></a>Строки подключения в ADO.NET
 Платформа .NET Framework 2.0 предоставляет новые возможности для работы со строками подключения, включая представление новых ключевых слов для классов построителей строк подключения, упрощающих создание допустимых строк подключения во время выполнения.  
@@ -34,14 +35,14 @@ ms.lasthandoff: 11/21/2017
   
  Для решения этих проблем ADO.NET версии 2.0 предоставляет новые построители строк подключений для каждого поставщика данных .NET Framework. Ключевые слова представляются в виде свойств, позволяя проверять синтаксис строки соединения перед передачей источника данных.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Построители строк подключения](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  Демонстрирует использование классов `ConnectionStringBuilder` для создания достоверных строк соединения во время выполнения.  
   
- [Строки соединения и файлы конфигурации](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)  
+ [Строки подключения и файлы конфигурации](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)  
  Демонстрирует хранение и получение строк соединения в файлах конфигурации.  
   
- [Синтаксис строки соединения](../../../../docs/framework/data/adonet/connection-string-syntax.md)  
+ [Синтаксис строки подключения](../../../../docs/framework/data/adonet/connection-string-syntax.md)  
  Описывает настройку строк соединения, зависящих от поставщика, для `SqlClient`, `OracleClient`, `OleDb` и `Odbc`.  
   
  [Защита сведений о подключении](../../../../docs/framework/data/adonet/protecting-connection-information.md)  

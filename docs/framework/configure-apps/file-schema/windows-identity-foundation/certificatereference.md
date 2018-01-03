@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: c8acf4b6d6e6e8a0fcf7d73139a1d2c5ea03f063
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: fd0d4742a162000d438851cef9c00e21368b7ba1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcertificatereferencegt"></a>&lt;certificateReference&gt;
 Указывает параметры, используемые для поиска и проверки сертификатов в хранилище сертификатов X.509.  
@@ -50,20 +51,20 @@ ms.lasthandoff: 10/18/2017
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
-|storeName|Имя хранилища сертификатов X.509. Значение по умолчанию — «My». Необязательно.|  
-|storeLocation|Объект <xref:System.Security.Cryptography.X509Certificates.StoreLocation> значение, указывающее расположение хранилища сертификатов X.509. Значение по умолчанию — «LocalMachine». Необязательно.|  
-|x509FindType|<xref:System.Security.Cryptography.X509Certificates.X509FindType> Значение, указывающее тип выполняемого поиска, должно быть выполнено. Значение по умолчанию — «FindBySubjectDistinguishedName». Необязательно.|  
-|findValue|Значение для поиска в хранилище сертификатов X.509. Необязательно.|  
-|isChainIncluded|Указывает, следует ли выполнять проверки с с использованием цепочки сертификатов. Значение по умолчанию — «true»; Проверка выполняется с помощью цепочки сертификатов. Необязательно.|  
+|storeName|Имя хранилища сертификатов X.509. Значение по умолчанию — «My». Необязательный.|  
+|storeLocation|Объект <xref:System.Security.Cryptography.X509Certificates.StoreLocation> значение, указывающее расположение хранилища сертификатов X.509. Значение по умолчанию — «LocalMachine». Необязательный.|  
+|x509FindType|<xref:System.Security.Cryptography.X509Certificates.X509FindType> Значение, указывающее тип выполняемого поиска, должно быть выполнено. Значение по умолчанию — «FindBySubjectDistinguishedName». Необязательный.|  
+|findValue|Значение для поиска в хранилище сертификатов X.509. Необязательный.|  
+|isChainIncluded|Указывает, следует ли выполнять проверки с с использованием цепочки сертификатов. Значение по умолчанию — «true»; Проверка выполняется с помощью цепочки сертификатов. Необязательный.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Нет  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Настраивает сертификат, используемый для шифрования и расшифровки токенов.|  
   

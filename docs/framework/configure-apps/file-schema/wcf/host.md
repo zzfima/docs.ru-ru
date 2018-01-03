@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d498190e7d7c3a6e879c50324e3b973f0f8e8fa6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7177c62af8501258ad8709bff88cb85488b56727
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lthostgt"></a>&lt;узел&gt;
 Задает параметры узла службы.  
@@ -50,14 +51,14 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<baseAddresses >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|Коллекция элементов`baseAddress`, которая задает базовые адреса, используемые узлом службы.|  
 |[\<время ожидания >](../../../../../docs/framework/configure-apps/file-schema/wcf/timeouts.md)|Элемент конфигурации, задающий допустимый интервал времени для открытия или закрытия узла службы.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Служба >](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Задает параметры службы [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].|  
   

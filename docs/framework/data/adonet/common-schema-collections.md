@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 19a95cf5d8d9b5fc5f805574b6de15c90fb38efd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2b3d1a42430a02e4b3dd4a715ef27acd3e46b8ea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="common-schema-collections"></a>Общие коллекции схемы
 Стандартные коллекции схем - это коллекции схем, реализуемые каждым из управляемых поставщиков .NET Framework. Можно запросить управляемый поставщик .NET Framework для определения списка поддерживаемых коллекций схем, вызвав **GetSchema** без аргументов или с именем коллекции схем «MetaDataCollections». При этом будет возвращена <xref:System.Data.DataTable> со списком поддерживаемых коллекций схем, число ограничений, которые каждая из них поддерживает, и число идентификационных частей, которые в них используются. Данные коллекции описывают все требуемые столбцы. По желанию в поставщиках может быть предусмотрено добавление дополнительных столбцов. Например, поставщики `SqlClient` и `OracleClient` добавляют к коллекции ограничений столбец ParameterName.  
@@ -100,11 +101,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="reservedwords"></a>ReservedWords  
  Данная коллекция схем предоставляет сведения о словах, резервируемых базой данных, с которой в данный момент соединен управляемый поставщик .NET Framework.  
   
-|ColumnName|DataType|Описание|  
+|ColumnName|DataType|Описание:|  
 |----------------|--------------|-----------------|  
 |ReservedWord|string|Поставщика зарезервированным словом.|  
   
 ## <a name="see-also"></a>См. также  
- [Получение сведений о схеме базы данных](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [Извлечение сведений о схеме базы данных](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  [Коллекции GetSchema и Schema](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
  [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

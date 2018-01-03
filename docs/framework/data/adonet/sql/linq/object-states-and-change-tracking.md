@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2d6685bc3dc17294f786a572e6f11165ee011b83
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 92f2aa2aea721c424ba59af913b868907be36317
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="object-states-and-change-tracking"></a>Состояния объектов и отслеживание изменений
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]объекты для участия в некоторых всегда *состояние*. Например, когда [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] создает объект, объект находится в состоянии `Unchanged`. Новый объект, создаваемый пользователем неизвестен <xref:System.Data.Linq.DataContext> и находится в `Untracked` состояние. После успешного выполнения <xref:System.Data.Linq.DataContext.SubmitChanges%2A> все объекты, известные [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], находятся в состоянии `Unchanged`. (Единственное исключение представляют объекты, успешно удаленные из базы данных, находящиеся в состоянии `Deleted` и не используемые в экземпляре <xref:System.Data.Linq.DataContext>.)  
@@ -73,5 +74,5 @@ ms.lasthandoff: 11/21/2017
  При обновлении необходимой ссылки и соответствующего внешнего ключа следует обеспечить их непротиворечивость. Если на момент вызова <xref:System.InvalidOperationException> эти объекты не синхронизированы, создается исключение <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Несмотря на то, что изменения значения внешнего ключа достаточны для воздействия на обновление базовой строки, необходимо изменить ссылку, чтобы сохранить подключение графа объекта и обеспечить двунаправленную согласованность связей.  
   
 ## <a name="see-also"></a>См. также  
- [Общие сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [Операций вставки, обновления и удаления](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)
+ [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [Операции вставки, обновления и удаления](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)

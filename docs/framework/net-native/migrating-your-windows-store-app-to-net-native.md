@@ -13,11 +13,12 @@ caps.latest.revision: "29"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c4257876abeeccf762a7caa87f667468a16bba70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ce23d66f79f94af74250cff137499f6c8b1582ac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Миграция приложения для магазина Windows в машинный код .NET
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] обеспечивает статическую компиляцию приложений в магазине Windows или на компьютере разработчика. В отличие от динамической компиляции, выполняемой JIT-компилятором для приложений магазина Windows или [Генератором машинных образов (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) на устройстве. Несмотря на эти различия [!INCLUDE[net_native](../../../includes/net-native-md.md)] пытается поддерживать совместимость с [приложениями .NET для магазина Windows](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). В большинстве случаев все, что работает в приложении .NET для магазина Windows, также работает с [!INCLUDE[net_native](../../../includes/net-native-md.md)].  Тем не менее в некоторых случаях могут произойти изменения поведения. В этом документе рассматриваются различия между стандартными приложениями .NET для магазина Windows и [!INCLUDE[net_native](../../../includes/net-native-md.md)] в следующих областях:  

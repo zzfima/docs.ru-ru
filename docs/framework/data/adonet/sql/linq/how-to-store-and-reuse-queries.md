@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 321be8e2cd38ea1138e54587ee876ceb82f67440
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8170b1219bf66c1f90fb5db3143916f7a41aab94
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-store-and-reuse-queries"></a>Практическое руководство. Хранение и повторное использование запросов
 При наличии приложения, которое неоднократно выполняет схожие по структуре запросы, можно существенно увеличить производительность, если скомпилировать запрос один раз и затем выполнить его несколько раз с различными параметрами. Например, приложению может потребоваться получение всех клиентов из определенного города; название города указывается пользователем в форме во время выполнения. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]поддерживает использование *скомпилированных запросов* для этой цели.  
@@ -46,4 +47,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>См. также  
  <xref:System.Data.Linq.CompiledQuery>  
  [Основные принципы запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [Запросы к базе данных](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+ [Запрос к базе данных](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

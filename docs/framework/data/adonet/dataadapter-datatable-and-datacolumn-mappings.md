@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e96eb8e48b5787db5296458af650133747687295
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3df07f8b7bf71d658e9073a8aeb3d51dee087544
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>Сопоставления DataAdapter DataTable и DataColumn
 Объект **DataAdapter** содержит коллекцию из нуля или более <xref:System.Data.Common.DataTableMapping> объекты в его **TableMappings** свойство. Объект **DataTableMapping** обеспечивает основное сопоставление между данными, возвращаемыми из запроса к источнику данных и <xref:System.Data.DataTable>. **DataTableMapping** может быть передано вместо **DataTable** в **заполнения** метод **DataAdapter**. В следующем примере создается **DataTableMapping** с именем **AuthorsMapping** для **авторы** таблицы.  

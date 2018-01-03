@@ -14,11 +14,11 @@ ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4177b9da15bb89f37a7b3cbb27937e09d1c12635
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 90e2a6a0f6a7b1eb3b919cca22ae8ce37a9c00bc
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platform-visual-basic"></a>/platform (Visual Basic)
 Указывает, на какой версии платформы среды CLR может запускаться выходной файл.  
@@ -71,13 +71,11 @@ ms.lasthandoff: 12/09/2017
   
 -   Исполняемые файлы, скомпилированные с параметром `/platform:anycpu32bitpreferred`, будут выполняться в 32-разрядной среде CLR.  
   
- Дополнительные сведения о том, как разрабатывать приложения для запуска в 64-разрядной версии Windows, см. в разделе [64-разрядных приложений](../../../../docs/framework/64-bit-apps.md).  
+ Дополнительные сведения о том, как разрабатывать приложения для запуска в 64-разрядной версии Windows, см. в разделе [64-разрядных приложений](../../../framework/64-bit-apps.md).  
   
 ### <a name="to-set-platform-in-the-visual-studio-ide"></a>Чтобы задать параметр /platform в среде разработки Visual Studio  
   
 1.  В **обозревателе решений**, выберите проект, откройте **проекта** меню, а затем нажмите **свойства**.  
-  
-     Дополнительные сведения см. в разделе [NIB: управление свойства проекта с помощью конструктора проектов](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).  
   
 2.  На **компиляции** установите или снимите **предпочитать 32-разрядных** флажок, либо в **целевой Процессор** выберите значение.  
   

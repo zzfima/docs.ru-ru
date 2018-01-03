@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f0dcad5d6287d5399dac6cea38b10984781770f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 48b80856242730a5412cd9d5d8dd2c7f857304ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="architecture-and-design"></a>Архитектура и разработка
 Модуль создания SQL в [образец поставщика](http://go.microsoft.com/fwlink/?LinkId=180616) реализуется в виде посетителя в дереве выражения, представляющем дерево команд. Создание кода выполняется за один проход по дереву выражения.  

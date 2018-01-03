@@ -31,11 +31,11 @@ ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
 caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 009c5a383cc3296f7f92888a344fa265547f1077
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8a50f44a167952c735c6ed2830ca87105413401b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fornext-statement-visual-basic"></a>Оператор For... Next (Visual Basic)
 Повторяет группу операторов заданное число раз.  
@@ -54,17 +54,17 @@ Next [ counter ]
   
 ## <a name="parts"></a>Части  
   
-|Отделение|Описание|  
+|Отделение|Описание:|  
 |----------|-----------------|  
 |`counter`|Требуется в `For` инструкции. Числовой переменной. Управляющая переменная цикла for. Дополнительные сведения см. в разделе [аргумент счетчика](#BKMK_Counter) далее в этом разделе.|  
-|`datatype`|Необязательно. Тип данных `counter`. Дополнительные сведения см. в разделе [аргумент счетчика](#BKMK_Counter) далее в этом разделе.|  
-|`start`|Обязательный. Числовое выражение. Начальное значение `counter`.|  
-|`end`|Обязательный. Числовое выражение. Конечное значение `counter`.|  
-|`step`|Необязательно. Числовое выражение. Величина, на которую `counter` увеличивается при каждом прохождении цикла.|  
-|`statements`|Необязательно. Один или несколько операторов между `For` и `Next` , выполняемых указанное число раз.|  
-|`Continue For`|Необязательно. Передает управление следующей итерации цикла.|  
-|`Exit For`|Необязательно. Передает управление из `For` цикла.|  
-|`Next`|Обязательный. Завершает определение `For` цикла.|  
+|`datatype`|Необязательный. Тип данных `counter`. Дополнительные сведения см. в разделе [аргумент счетчика](#BKMK_Counter) далее в этом разделе.|  
+|`start`|Обязательно. Числовое выражение. Начальное значение `counter`.|  
+|`end`|Обязательно. Числовое выражение. Конечное значение `counter`.|  
+|`step`|Необязательный. Числовое выражение. Величина, на которую `counter` увеличивается при каждом прохождении цикла.|  
+|`statements`|Необязательный. Один или несколько операторов между `For` и `Next` , выполняемых указанное число раз.|  
+|`Continue For`|Необязательный. Передает управление следующей итерации цикла.|  
+|`Exit For`|Необязательный. Передает управление из `For` цикла.|  
+|`Next`|Обязательно. Завершает определение `For` цикла.|  
   
 > [!NOTE]
 >  `To` В этом операторе используется ключевое слово для указания диапазона для счетчика. Можно также использовать это ключевое слово в [выберите... Оператор выбора](../../../visual-basic/language-reference/statements/select-case-statement.md) и в объявлении массива. Дополнительные сведения об объявлениях массивов см. в разделе [оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md).  
@@ -186,4 +186,4 @@ Next [ counter ]
  [Оператор Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
  [Вложенные структуры управления](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
  [Оператор Exit](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [Коллекции](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)
+ [Коллекции](../../programming-guide/concepts/collections.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: de490bac737520ffef5899c8515322c72b2a1144
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7ca9848d4640fe9d941b3bfc15a7762135871861
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Скомпилированные запросы (LINQ to Entities)
 Если приложение многократно выполняет похожие по структуре запросы на платформе Entity Framework, во многих случаях можно повысить производительность, скомпилировав запрос один раз, а затем выполняя его несколько раз с разными параметрами. Например, приложению может понадобиться получить всех клиентов из определенного города; имя города указывается пользователем во время выполнения с помощью формы. Для этих целей технология LINQ to Entities поддерживает использование скомпилированных запросов.  
@@ -79,6 +80,6 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myparamsstruct)]  
   
 ## <a name="see-also"></a>См. также  
- [Платформа ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)  
+ [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)  
  [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
  [Параметры слияния Entity Framework и скомпилированные запросы](http://go.microsoft.com/fwlink/?LinkId=199591)

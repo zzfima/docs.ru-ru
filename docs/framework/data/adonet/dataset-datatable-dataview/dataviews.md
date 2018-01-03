@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a2653a94992440b747371c5d8a7b9daa66b3e3ab
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 26fbae0474253dc9792a0290a36dd52044d148b9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dataviews"></a>Объекты DataView
 <xref:System.Data.DataView> позволяет создавать различные представления данных, которые хранятся в <xref:System.Data.DataTable>. Эта возможность часто используется в приложениях связывания данных. С помощью **DataView**, можно представить данные в таблице с различными порядками сортировки, и можно фильтровать данные по состоянию строки или на основе критерия фильтра.  
@@ -28,8 +29,8 @@ ms.lasthandoff: 10/18/2017
   
  Можно использовать <xref:System.Data.DataView.DataViewManager%2A> для управления настройками представления для всех таблиц в **набора данных**. **DataViewManager** предоставляет удобный способ для управления настройками представления по умолчанию для каждой таблицы. При привязке элемента управления к более чем одна таблица из **DataSet**привязка **DataViewManager** является идеальным выбором.  
   
-## <a name="in-this-section"></a>Содержание  
- [Создание объекта DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataview.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Создание DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataview.md)  
  Описывает создание **DataView** для **DataTable**.  
   
  [Сортировка и фильтрация данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  

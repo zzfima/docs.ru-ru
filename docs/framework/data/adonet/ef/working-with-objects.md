@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e15d5ebca489be07311c5ae2ed7f4201705e352b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2f0645509410d0f383caef1a0917138468dc2101
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-objects"></a>Работа с объектами
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] позволяет отправлять запрос, вставлять, обновлять и обновлять данные, которые выражаются в виде объектов среды CLR, которые являются экземплярами типов сущности. Типы сущности представляют сущности, определенные в концептуальной модели. Платформа [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] сопоставляет сущности и связи, которые определены в концептуальной модели, с источником данных. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Предоставляет средства для выполнения следующих: материализации данных, которые возвращаются из источника данных в виде объектов; отслеживать изменения, внесенные в объекты; обработки параллелизма; распространения изменений обратно в источник данных и привязки объектов к элементам управления.  

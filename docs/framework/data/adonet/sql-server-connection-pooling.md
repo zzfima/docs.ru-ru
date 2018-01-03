@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 18e83e629eb9736db054f239c6ffe3f30baf5ea4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 18e67fd379e877ce25058ba3c90e3831b6361a0c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Объединение подключений в пул в SQL Server (ADO.NET)
 Соединение с сервером базы данных обычно состоит из нескольких длительных шагов. Необходимо установить физический канал, например сокет или именованный канал, выполнить первоначальное подтверждение установления связи с сервером, выполнить синтаксический анализ данных строки соединения, сервер должен проверить подлинность соединения, а также запустить проверку прикреплений в текущей транзакции и т. д.  
@@ -141,7 +142,7 @@ using (SqlConnection connection = new SqlConnection(
  Рекомендуется пользоваться преимуществом новых механизмов безопасности, которые пришли на смену ролям приложения. Дополнительные сведения см. в разделе [Создание ролей приложений в SQL Server](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  
   
 ## <a name="see-also"></a>См. также  
- [Организация пулов соединений](../../../../docs/framework/data/adonet/connection-pooling.md)  
+ [Объединение подключений в пул](../../../../docs/framework/data/adonet/connection-pooling.md)  
  [SQL Server и ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
  [Счетчики производительности](../../../../docs/framework/data/adonet/performance-counters.md)  
  [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

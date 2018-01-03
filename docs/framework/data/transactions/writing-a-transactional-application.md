@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c988f5ab5a342ad3282414634ca3bfc21f481ea5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9fab355da61ea7445e429cfc4e336a14b588e30c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-a-transactional-application"></a>Создание транзакционного приложения
 Пространство имен <xref:System.Transactions> предоставляет разработчикам транзакционных приложений две модели программирования для создания транзакций. Можно использовать модель явного программирования, с помощью <xref:System.Transactions.Transaction> класса или неявное модель программирования, в котором транзакции автоматически управляются инфраструктурой, с помощью <xref:System.Transactions.TransactionScope> класса. Рекомендуется использовать модель неявной транзакции для разработки приложений. Можно найти дополнительные сведения о том, как использовать область транзакции в [реализации неявную транзакцию с помощью области транзакции](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) раздела.  
@@ -28,11 +29,11 @@ ms.lasthandoff: 12/02/2017
 ### <a name="creating-a-transaction"></a>Создание транзакции  
  Пространство имен <xref:System.Transactions> предоставляет две модели для создания транзакций. Эти модели рассматриваются в следующих разделах.  
   
- [Реализация неявную транзакцию с помощью области транзакций](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)  
+ [Реализация неявной транзакции с использованием области транзакции](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)  
   
  Описывает, как пространство имен <xref:System.Transactions> поддерживает создание неявных транзакций с использованием класса <xref:System.Transactions.TransactionScope>.  
   
- [Реализация явной транзакции с помощью CommittableTransaction](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md)  
+ [Реализация явной транзакции с помощью класса CommittableTransaction](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md)  
   
  Описывает, как пространство имен <xref:System.Transactions> поддерживает создание явных транзакций с использованием класса <xref:System.Transactions.CommittableTransaction>.  
   

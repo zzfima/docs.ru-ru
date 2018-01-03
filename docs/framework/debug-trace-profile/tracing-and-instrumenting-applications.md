@@ -24,11 +24,12 @@ caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 932fef22681aeb2a68d7852884127155757e4099
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 20eea5ed6f69c17466aeb33617f418ac71a3e1b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Трассировка и оборудование приложений
 Трассировка — это способ мониторинга выполнения приложения во время его выполнения. Вы можете добавить инструментирование трассировки и отладки в свое приложения .NET Framework при его разработке; кроме того, вы можете использовать это инструментирование при разработке приложения и после его развертывания. С помощью классов <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> и <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> можно записывать сведения об ошибках и выполнении приложения в журналы, текстовые файлы или на другие устройства для последующего анализа.  
@@ -154,10 +155,10 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  <xref:System.Diagnostics.TraceSource>  
  [Контракты для кода](../../../docs/framework/debug-trace-profile/code-contracts.md)  
  [Типы проектов C#, F# и Visual Basic](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)  
- [Как: добавление операторов трассировки в код приложения](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [Как: условная компиляция с Trace и Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
- [Как: создание, инициализация и настройка переключателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
- [Как: Создание и инициализация источников трассировки](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
- [Как: использование TraceSource и фильтров с прослушивателями трассировки](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)  
+ [Практическое руководство. Добавление операторов трассировки в код приложения](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
+ [Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
+ [Практическое руководство. Создание, инициализация и настройка переключателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
+ [Практическое руководство. Создание и инициализация источников трассировки](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
+ [Практическое руководство. Использование TraceSource и фильтров с прослушивателями трассировки](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)  
  [Прослушиватели трассировки](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
  [Переключатели трассировки](../../../docs/framework/debug-trace-profile/trace-switches.md)

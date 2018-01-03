@@ -14,11 +14,11 @@ ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cc6138c7a7ca7d50a56fdd1f536e8d2dc3462a08
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f22516a5ca9626f43cb89745e67c66619cf9461f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39-multiple-file-references"></a>Значение типа &#39; &lt;Имя_типа1&gt;&#39; невозможно преобразовать в &#39;&lt; имя_типа2&gt;&#39; (Несколько ссылок на файлы)
 Значение типа "\<Имя_типа1 >" нельзя преобразовать в "\<имя_типа2 >". Несоответствие типов может быть вызвана смешением ссылки на файл "\<путь_к_файлу1 >" в проекте "\<имя_проекта1 >" со ссылкой на файл "\<путь_к_файлу2 >" в проекте "\<имя_проекта2 >". Если обе сборки идентичны, попробуйте заменить эти ссылки так, чтобы они ссылались из одного места.  
@@ -40,4 +40,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>См. также  
  [Преобразования типов в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [Управление ссылками в проекте](/visualstudio/ide/managing-references-in-a-project)  
- [NIB. Практическое руководство. Добавление и удаление ссылок с помощью диалогового окна "Добавление ссылок"](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)
+ 

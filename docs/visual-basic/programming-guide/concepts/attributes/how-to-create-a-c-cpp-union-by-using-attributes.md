@@ -12,11 +12,11 @@ ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
 caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bcb5291737a9f4763f680daaf625c58d308423f8
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 51d04c573e91a351c48edefebdb3d32fce1d306f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Как: Создание объединения C/C++ с помощью атрибутов (Visual Basic)
 С помощью атрибутов можно настраивать расположение структур в памяти. Например, можно создать так называемое объединение в C/C++ с помощью атрибутов `StructLayout(LayoutKind.Explicit)` и `FieldOffset`.  
@@ -79,7 +79,7 @@ Structure TestExplicit
  <xref:System.Reflection>  
  <xref:System.Attribute>  
  [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)  
- [Атрибуты](../../../../../docs/standard/attributes/index.md)  
+ [Атрибуты](../../../../standard/attributes/index.md)  
  [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md) (Отражение (Visual Basic))  
  [Атрибуты (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
  [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Создание настраиваемых атрибутов (Visual Basic))  

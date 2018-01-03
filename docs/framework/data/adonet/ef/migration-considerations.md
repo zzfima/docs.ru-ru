@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5ed85fde0b7c031a95ce3fee577cb07380a05eb8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 038cf7ad9f6004f785fe35eccf38185272b0ed37
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migration-considerations-entity-framework"></a>Вопросы миграции (Entity Framework)
 Платформа [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework предоставляет существующим приложениям ряд преимуществ. Наиболее важным из них является возможность использования концептуальной модели для отделения структур данных, используемых приложением, от схемы в источнике данных. Это позволяет в дальнейшем значительно упростить внесение изменений в модель хранения или сам источник данных, устранив необходимость внесения соответствующих изменений в приложение. Дополнительные сведения о преимуществах использования [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], в разделе [Общие сведения об Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) и [модели EDM](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -106,5 +107,5 @@ ms.lasthandoff: 11/21/2017
  [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]Веб-приложений часто необходимо поддерживать состояние веб-страницы или сеанса пользователя. Объекты в <xref:System.Data.Objects.ObjectContext> экземпляр хранятся в состоянии просмотра на клиенте или в состоянии сеанса на сервере и позднее извлекаются и повторно присоединить к новому контексту объекта. Дополнительные сведения см. в разделе [присоединение и отсоединение объектов](http://msdn.microsoft.com/en-us/41d5c1ef-1b78-4502-aa10-7e1438d62d23).  
   
 ## <a name="see-also"></a>См. также  
- [Вопросы развертывания](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
+ [Требования к развертыванию](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
  [Терминология платформы Entity Framework](../../../../../docs/framework/data/adonet/ef/terminology.md)

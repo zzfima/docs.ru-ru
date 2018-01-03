@@ -13,22 +13,23 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7bd381706c9ceb7c1c8f80002cee3b857b695372
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 81803df493d53b94a57720755f9bc351404b7d49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reference"></a>Ссылка
 В этом разделе содержатся справочные сведения для разработчиков [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  Также рекомендуется для поиска конкретных неполадок документы Microsoft и принять участие в [форуме по LINQ](http://go.microsoft.com/fwlink/?LinkId=76488), где можно обсудить со специалистами более сложные вопросы подробно. Вы также можете изучить технический документ с подробным описанием технологии [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], дополненный примерами кода Visual Basic и C#. Дополнительные сведения см. в разделе [LINQ to SQL: запросы LINQ .NET запросов для реляционных данных](http://go.microsoft.com/fwlink/?LinkId=93205).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Типы данных и функции](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
  Содержит описание способа конструкций среды CLR имеются соответствующие выражения SQL только там, где [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] явным образом предоставляет преобразование в подсистеме преобразования.  
   
- [Сопоставление на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
+ [Сопоставление, основанное на атрибутах](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
  Описывает [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] подход на основе атрибута для сопоставления [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] объектную модель для базы данных SQL Server.  
   
  [Создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/18/2017
  [SQL Server Compact и LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-server-compact-and-linq-to-sql.md)  
  Содержит описание отличий [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] от [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] в приложениях [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Трансляция стандартных операторов запросов](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
+ [Преобразование стандартных операторов запросов](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
  Описывает способ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] преобразует стандартные операторы запросов в команды SQL.  
   
 ## <a name="related-sections"></a>Связанные разделы  

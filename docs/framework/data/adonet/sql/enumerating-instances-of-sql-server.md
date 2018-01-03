@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 99111cb9e48bd5ccd4463afcee6b78bc2387cf7b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 679196a6cc21705c8cc07e373a928f3c77c6befb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Перечисление экземпляров SQL Server (ADO.NET)
 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] позволяет приложениям находить экземпляры [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] в существующей сети. Класс <xref:System.Data.Sql.SqlDataSourceEnumerator> обеспечивает доступ к этим сведениям разработчику приложения, предоставляя объект <xref:System.Data.DataTable> с данными обо всех видимых серверах. Эта возвращенная таблица содержит список экземпляров сервера, доступен в сети, который совпадает со списком, предоставляемым при попытке пользователя создать новое соединение и дополняет раскрывающегося списка, содержащий все доступные серверы в **подключения Свойства** диалоговое окно. Отображаемые результаты не всегда являются полными.  
@@ -53,7 +54,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
   
  Таблица, возвращенная в результате вызова этого метода, содержит следующие столбцы, причем все эти столбцы содержат значения `string`:  
   
-|Столбец|Описание|  
+|Столбец|Описание:|  
 |------------|-----------------|  
 |**Имя сервера**|Имя сервера.|  
 |**Имя_экземпляра**|Имя экземпляра сервера. Является пустым, если сервер работает в качестве экземпляра по умолчанию.|  

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3754964d07dd80442fbffd7c632304ef9d83ab1d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d04c6121c5d106f5877517e9f72d1b533480dfb7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltpeergt-of-ltservicecredentialsgt"></a>&lt;peer&gt;’ для &lt;serviceCredentials&gt;
 Задает текущие учетные данные для однорангового узла.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<сертификат >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-peer.md)|Задает сертификат X.509, используемый для подписи и шифрования сообщений для служб одноранговых сетей. .|  
 |[\<messageSenderAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication.md)|Задает параметры проверки подлинности для отправителей сообщений.|  
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Задает учетные данные, используемые при проверке подлинности службы, а также параметры, относящиеся к проверке учетных данных клиента.|  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.Peer%2A>  
  <xref:System.ServiceModel.Description.ServiceCredentials.Peer%2A>  
  <xref:System.ServiceModel.Security.PeerCredential>  
- [Одноранговые сети](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
+ [Одноранговая сеть](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
  [Проверка подлинности сообщения одноранговых каналов](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
  [Нестандартная проверка подлинности одноранговых каналов](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
  [Защита приложений одноранговых каналов](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  

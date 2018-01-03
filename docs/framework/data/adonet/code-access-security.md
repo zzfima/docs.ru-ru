@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3f8e1f776a64ab1fd957fdf327eada2cb722777a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 754c380972d79343eab83b9e862e478798218ffc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-access-security-and-adonet"></a>Управление доступом для кода и ADO.NET
 Платформа .NET Framework предлагает безопасность на основе ролей, а также управление доступом для кода (CAS). Оба средства реализуются при помощи общей инфраструктуры, предоставленной средой CLR. В области неуправляемого кода большинство приложений выполняются с правами доступа пользователя или участника. В результате, когда вредоносное программное обеспечение или программы с ошибками запускаются пользователем с повышенными правами доступа, компьютерные системы могут повреждаться, а личные данные - похищаться.  

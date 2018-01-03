@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 79c4f7e066f4961caa66d3fd19dee9eb0f21ada4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c802342f352652e24e53b70c730ddb4c5b8973a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Использование служб данных в клиентском приложении (службы данных WCF)
 Можно получить доступ к службу, предоставляющую [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канала, указав URI в веб-браузере. URI предоставляет адрес ресурса, и сообщения запроса отправляются по этим адресам для доступа или изменения базовых данных, представляемых ресурсом. Браузер формирует команду HTTP GET и возвращает запрошенный ресурс в виде канала [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Дополнительные сведения см. в разделе [доступа к службе из веб-браузер](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -62,5 +63,5 @@ ms.lasthandoff: 12/02/2017
  Существуют программные библиотеки, которые используются для получения [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала в клиентских приложениях других видов. Дополнительные сведения см. в разделе [OData SDK](http://go.microsoft.com/fwlink/?LinkId=185796).  
   
 ## <a name="see-also"></a>См. также  
- [Доступ к ресурсам службы данных](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
+ [Доступ к ресурсам служб данных](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
  [Краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

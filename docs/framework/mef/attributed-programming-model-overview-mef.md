@@ -15,11 +15,12 @@ caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 16ffe789635ee13c118c63c30ef255cc9b264a9c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 565cd9384e150f707b2e5e72342579d95c3a096e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Общие сведения о модели атрибутивного программирования (MEF)
 В Managed Extensibility Framework (MEF) *модель программирования* представляет собой определенный способ задания набора концептуальных объектов, с которыми MEF работает. Такие концептуальные объекты включают в себя части, импорты и экспорты. MEF использует их, но не указывает, как они должны быть представлены. Это делает возможным применение широкого спектра моделей программирования, включая настраиваемые.  
@@ -153,7 +154,7 @@ public class MyAddin
 }  
 ```  
   
- В этом классе метод `DoSomething` принимает один параметр `int` и возвращает `string`. Для соответствия данному экспорту часть импорта должна объявить подходящий член. Следующий класс импортирует метод `DoSomething` .  
+ В этом классе метод `DoSomething` принимает один параметр `int` и возвращает `string`. Для соответствия данному экспорту часть импорта должна объявить подходящий член. Следующий класс импортирует метод `DoSomething`.  
   
 ```vb  
 Public Class MyClass1  

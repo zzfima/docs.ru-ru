@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: fefbd3894063c0298a7ad5110ed6867408869107
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0b29caeed4bf60a5a7ad723ffd46520a89a5bd87
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="null-comparisons"></a>Сравнения NULL
 Значение `null` в источнике данных указывает на то, что это значение неизвестно. В запросах [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] можно реализовать проверку наличия значений NULL так, чтобы определенные вычисления или сравнения выполнялись только для строк с допустимыми данными, не содержащими значений NULL. Впрочем, null-семантика среды CLR может отличаться от null-семантики источника данных. В большинстве баз данных для выполнения сравнений со значением Null используется трехзначная логика. То есть сравнения со значением null не вычисляется `true` или `false`, результат вычисления равен `unknown`. Часто речь идет о реализациях Null ANSI, но так бывает не всегда.  

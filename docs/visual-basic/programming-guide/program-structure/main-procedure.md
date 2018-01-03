@@ -16,11 +16,11 @@ ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 90550ce3e62e4afbc94e2d383fa73db7178633d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6de98ad4e470cd0becaf25f5a9a00c8095e44b15
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="main-procedure-in-visual-basic"></a>Процедура Main в Visual Basic
 Каждое приложение Visual Basic должно содержать процедуру с именем `Main`. Эта процедура служит в качестве начальной точки и общего управления для приложения. Платформа .NET Framework вызывает вашей `Main` процедуру при загрузке приложения и все готово для передачи управления. Если вы создаете приложение Windows Forms, необходимо написать `Main` процедуры для приложений, которые выполняются самостоятельно.  
@@ -120,7 +120,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Array.Length%2A>  
  <xref:Microsoft.VisualBasic.Information.UBound%2A>  
  [Структура программы Visual Basic](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)  
- [NIB: версия Visual Basic Hello World](http://msdn.microsoft.com/en-us/9d030b60-e148-4366-a462-69532f02294c)  
  [/main](../../../visual-basic/reference/command-line-compiler/main.md)  
  [Общие](../../../visual-basic/language-reference/modifiers/shared.md)  
  [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  

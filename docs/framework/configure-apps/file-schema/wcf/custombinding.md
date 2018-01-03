@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 267bf183e40c8647959e97ae479d78cfe41367b2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1659e6352fa195bae56b764c80a08dee56b4c9e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 Обеспечивает пользователю полный контроль над стеком обмена сообщениями.  
@@ -199,7 +200,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<compositeDuplex >](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|Определяет двусторонний обмен сообщениями в пользовательской привязке. Используется транспортными протоколами, которые не имеют встроенной поддержки дуплексной связи, например HTTP. Напротив, протокол TCP имеет встроенную поддержку дуплексной связи, и для него не требуется использовать этот элемент привязки для службы при отправке сообщений обратно клиенту.<br /><br /> Для осуществления контакта и установления подключения клиент должен предоставить службе адрес. Этот адрес клиента предоставляется атрибутом `ClientBaseAddress`.<br /><br /> Это элемент типа <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|  
 |[\<pnrpPeerResolver >](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|Определяет распознавателя имен узлов в протоколе однорангового разрешения имен (PNRP). Это элемент типа <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|  

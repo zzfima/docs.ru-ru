@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 9119b6db6b1d3c2099af3c7bdbe042ced4dca94e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0f5aed56ba4958d44e0628f55115308751afae55
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Настройка параметров и типы данных параметров
 Объекты команды используют параметры для передачи значений в выражения SQL или хранимые процедуры, обеспечивая проверку типов и правильности. В отличие от текста команд, входные параметры обрабатываются как буквенные значения, а не как исполняемый код. Это помогает защищаться от атак путем внедрения кода SQL, при которых злоумышленник вставляет в инструкцию SQL команду, ставящую под угрозу безопасность сервера.  
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/21/2017
 ||AnsiString|VarChar|VarChar|VarChar|VarChar|  
 ||AnsiStringFixedLength|Char|Char|Char|Char|  
 |``|Валюта|Money|Валюта|Вывод типа `OdbcType` из типа `Currency` не поддерживается.|Числовой|  
-|``|Дата|Тип Date в SQL Server 2008. Вывод типа <xref:System.Data.SqlDbType> из типа Date не поддерживается в версиях SQL Server до SQL Server 2008.|DBDate|Дата|DateTime|  
+|``|Дата|Тип Date в SQL Server 2008. Вывод типа <xref:System.Data.SqlDbType> из типа Date не поддерживается в версиях SQL Server до SQL Server 2008.|DBDate|дата.|DateTime|  
 |``|SByte|Вывод типа <xref:System.Data.SqlDbType> из типа SByte не поддерживается.|TinyInt|Вывод типа `OdbcType` из типа SByte не поддерживается.|SByte|  
 ||StringFixedLength|NChar|WChar|NChar|NChar|  
 ||Время|Тип Time в SQL Server 2008. Вывод типа <xref:System.Data.SqlDbType> из типа Time не поддерживается в версиях SQL Server до SQL Server 2008.|DBTime|Время|DateTime|  

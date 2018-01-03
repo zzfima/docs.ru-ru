@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e342ce805880da848da1e17700c055aba2c74f19
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ac8209432cd975539983226cfba51f229d696bd4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datarows-and-datarowviews"></a>Объекты DataRow и DataRowView
 Представление <xref:System.Data.DataView> предоставляет перечисляемую коллекцию объектов <xref:System.Data.DataRowView>. **DataRowView** объекты предоставляют значения в виде массивов объектов, которые индексируются по имени или порядковому номеру столбца в базовой таблице. Вы можете получить доступ к <xref:System.Data.DataRow> , представленного **DataRowView** с помощью <xref:System.Data.DataRowView.Row%2A> свойство **DataRowView**.  

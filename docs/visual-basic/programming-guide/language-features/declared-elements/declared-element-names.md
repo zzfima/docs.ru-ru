@@ -32,11 +32,11 @@ ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
 caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 59fee9eb79af86df7f01bd77c27a929ef61fcfe2
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 22595eff2509d3954b3ce9d5038b19a681fbfbbe
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declared-element-names-visual-basic"></a>Имена объявленных типов (Visual Basic)
 Каждого объявленного элемента есть имя, также называемое *идентификатор*, которое используется код для ссылки на него.  
@@ -71,7 +71,7 @@ ms.lasthandoff: 12/09/2017
  `xyz$wv`  
   
 > [!CAUTION]
->  Имена элементов, начинающиеся с символа подчеркивания (`_`) которые не являются частью [независимость от языка и независимые от языка компоненты](../../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS), поэтому CLS-совместимом коде нельзя использовать компонент, определяющий такие имена. Тем не менее символ подчеркивания в любом другом месте в имени элемента является CLS-совместимым.  
+>  Имена элементов, начинающиеся с символа подчеркивания (`_`) которые не являются частью [независимость от языка и независимые от языка компоненты](../../../../standard/language-independence-and-language-independent-components.md) (CLS), поэтому CLS-совместимом коде нельзя использовать компонент, определяющий такие имена. Тем не менее символ подчеркивания в любом другом месте в имени элемента является CLS-совместимым.  
   
 ### <a name="name-length-guidelines"></a>Рекомендации по длине имени  
  На практике имя должно быть как можно более коротким при этом четко определять природу элемента. Это улучшает читаемость кода и уменьшает размер строки длины и исходный файл.  

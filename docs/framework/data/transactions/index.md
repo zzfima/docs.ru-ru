@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4a6dcd11d34f0b81d6d3982ef1c6ab211d94818b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6c66e982715d0f7f97e7a4faa92c2de57f3b1471
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-processing"></a>Обработка транзакций
 При покупке книги в книжном интернет-магазине вы обмениваете деньги (находящиеся на вашей кредитной карте) на книгу. Если на вашей кредитной карте достаточно средств, выполняется последовательность операций, гарантирующая, что вы получите книгу, а книжный магазин - ваши деньги. Однако если не удается выполнить хотя бы одну операцию в этой последовательности, вся процедура обмена заканчивается неудачей. Вы не получаете книгу, а книжный магазин не получает ваши деньги.  
@@ -27,7 +28,7 @@ ms.lasthandoff: 12/02/2017
   
  В данном разделе представлены как общие сведения об обработке транзакций, так и конкретная информация о создании транзакционных приложений и диспетчеров ресурсов с помощью платформы Microsoft .NET Framework.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Основные сведения о транзакциях](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
  Описывает базовые термины и понятия технологии обработки транзакций.  
   

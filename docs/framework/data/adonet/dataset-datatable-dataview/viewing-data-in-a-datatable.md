@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 147d6fb4509913de1f0331ce2ff6c580c6e41ef3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ab7a60b4195f3d8976a61e3909682b3748e30341
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="viewing-data-in-a-datatable"></a>Просмотр данных в таблице данных
 Можно получить содержимое из <xref:System.Data.DataTable> с помощью **строк** и **столбцы** коллекции **DataTable**. Можно также использовать <xref:System.Data.DataTable.Select%2A> метод для возврата подмножества данных в **DataTable** в соответствии с условиями поиска, порядок сортировки и состоянием строк. Кроме того, можно использовать <xref:System.Data.DataRowCollection.Find%2A> метод **DataRowCollection** при поиске конкретной строки, используя значение первичного ключа.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
  **Выберите** метод определяет, какие версии строк для просмотра и управления на основе <xref:System.Data.DataViewRowState>. В следующей таблице описаны возможные **DataViewRowState** значений перечисления.  
   
-|Значение DataViewRowState|Описание|  
+|Значение DataViewRowState|Описание:|  
 |----------------------------|-----------------|  
 |**CurrentRows**|Текущие строки, включая не изменившиеся, добавленные и измененные.|  
 |**Удален**|Удаленная строка.|  
@@ -121,6 +122,6 @@ DataRow[] custRows = workTable.Select("CustID > 5", "CustLName ASC");
  <xref:System.Data.DataSet>  
  <xref:System.Data.DataTable>  
  <xref:System.Data.DataViewRowState>  
- [Обработка данных в объект DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [Состояния строк и версии строк](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
+ [Управление данными в DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [Состояния и версии строк](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
  [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

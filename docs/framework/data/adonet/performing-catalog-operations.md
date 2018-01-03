@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f67f393dce518a76b80d91f7294ed19e9a0f411a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 841f4e126a475799e7cc66f6f7afbcc9318a1096
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performing-catalog-operations"></a>Выполнение операций каталога
 Для выполнения команды для изменения базы данных или каталога, такие как инструкция CREATE TABLE или CREATE PROCEDURE, создайте **команда** с помощью соответствующих инструкций SQL и **подключения** объекта. Выполните команду с **ExecuteNonQuery** метод **команда** объекта.  
@@ -56,6 +57,6 @@ command.ExecuteNonQuery();
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Изменение данных с помощью команды](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
+ [Использование команд для изменения данных](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
  [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

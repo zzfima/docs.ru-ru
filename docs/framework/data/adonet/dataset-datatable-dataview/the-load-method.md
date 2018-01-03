@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4617f2193b9d557094b7570f8ca8fd5ff7a9d25d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e6c6ce0b722d901e38b728a710e3c49848fb918a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-load-method"></a>Метод Load
 Метод <xref:System.Data.DataTable.Load%2A> используется для загрузки в таблицу <xref:System.Data.DataTable> строк из источника данных. Это перегруженный метод, который в самом простом принимает один параметр **DataReader**. В этой форме он просто загружает **DataTable** со строками. Кроме того, можно указать **LoadOption** параметра для управления как данные добавляются **DataTable**.  
@@ -27,7 +28,7 @@ ms.lasthandoff: 11/21/2017
   
  В следующей таблице приведено краткое описание значений перечисления <xref:System.Data.LoadOption>.  
   
-|Значение LoadOption|Описание|  
+|Значение LoadOption|Описание:|  
 |----------------------|-----------------|  
 |**OverwriteRow**|Если входящие строки имеют такое же **PrimaryKey** значение в виде строк, уже находящихся в **DataTable**, **исходного** и **текущей** значения каждого столбец заменяются значениями из входящей строки и **RowState** свойству **Unchanged**.<br /><br /> Строки из источника данных, еще не существуют в **DataTable** добавлены с классом **RowState** значение **Unchanged**.<br /><br /> Этот параметр действует обновление содержимого **DataTable** , чтобы он соответствовал содержимое источника данных.|  
 |**PreserveCurrentValues (по умолчанию)**|Если входящие строки имеют такое же **PrimaryKey** значение в виде строк, уже находящихся в **DataTable**, **исходного** присваивается содержимое входящей строки и **Текущей** значение не изменяется.<br /><br /> Если **RowState** — **Added** или **Modified**, ему присваивается **Modified**.<br /><br /> Если **RowState** было **Deleted**, он остается **Deleted**.<br /><br /> Строки из источника данных, еще не существуют в **DataTable** добавляются и **RowState** равно **Unchanged**.|  
@@ -78,5 +79,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Обработка данных в объект DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [Управление данными в DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 19be8e04f8bb0cb11c98d5361deb6deffe797fca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 14d666624ac4572956364b3db3fd5ee7aad8799b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-sql-quick-reference"></a>Краткий справочник по Entity SQL
 В этом разделе содержится краткий справочник по запросам [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Запросы в этом разделе основаны на модели AdventureWorks Sales.  
@@ -84,7 +85,7 @@ DATETIME '2006-12-25 01:01'
 ### <a name="row"></a>ROW  
  [Строка](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md) создает анонимные структурно типизированные (записей) значение как в:`ROW(1 AS myNumber, ‘Name’ AS myName).`  
   
- Пример.  
+ Пример  
   
 ```  
 SELECT VALUE row (product.ProductID as ProductID, product.Name   
@@ -105,7 +106,7 @@ SELECT VALUE row (product.ProductID as ProductID, product.Name
   
  `MULTISET(1,2,2,3)` `--same as`-`{1,2,2,3}.`  
   
- Пример.  
+ Пример  
   
 ```  
 SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE product.ListPrice IN MultiSet (125, 300)  
@@ -117,10 +118,10 @@ SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE produc
 |---------------|----------|-------------------|-------|  
 |842|Touring-Panniers, Large|PA-T100|…|  
   
-### <a name="object"></a>Объект  
+### <a name="object"></a>Object  
  [Конструктор типа с именем](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md) создает (именованных) пользовательские объекты, такие как `person("abc", 12)`.  
   
- Пример.  
+ Пример  
   
 ```  
 SELECT VALUE AdventureWorksModel.SalesOrderDetail (o.SalesOrderDetailID, o.CarrierTrackingNumber, o.OrderQty,   
@@ -195,7 +196,7 @@ SELECT VALUE DEREF(REF(p)).Name FROM
 ### <a name="createref-and-key"></a>CREATEREF и KEY  
  [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md) создает ссылку, передавая ключ. [КЛЮЧ](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md) извлекает ключевую часть выражения со ссылкой на тип.  
   
- Пример.  
+ Пример  
   
 ```  
 SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))   
@@ -235,7 +236,7 @@ SELECT Length(c. FirstName) As NameLen FROM
 ### <a name="microsoft-provider-specific"></a>Функции поставщиков данных (Майкрософт)  
  [Функции поставщиков Microsoft](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md) в `SqlServer` пространства имен.  
   
- Пример.  
+ Пример  
   
 ```  
 SELECT SqlServer.LEN(c.EmailAddress) As EmailLen FROM   
@@ -254,7 +255,7 @@ SELECT SqlServer.LEN(c.EmailAddress) As EmailLen FROM
 ## <a name="namespaces"></a>Пространства имен  
  [С помощью](../../../../../../docs/framework/data/adonet/ef/language-reference/using-entity-sql.md) задает пространства имен в выражении запроса.  
   
- Пример.  
+ Пример  
   
 ```  
 using SqlServer; LOWER('AA');  
@@ -269,7 +270,7 @@ using SqlServer; LOWER('AA');
 ## <a name="paging"></a>Разбивка на страницы  
  Разбиение на страницы, которые могут быть выражены посредством объявления [пропустить](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) и [ограничение](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) вложенными предложениями для [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) предложения.  
   
- Пример.  
+ Пример  
   
 ```  
 SELECT c.ContactID as ID, c.LastName as Name FROM   
@@ -287,7 +288,7 @@ SELECT c.ContactID as ID, c.LastName as Name FROM
 ## <a name="grouping"></a>Группирование  
  [ГРУППИРОВАНИЕ по](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md) определяет группы, в объекты, возвращаемые выражением запроса ([ВЫБЕРИТЕ](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) должны быть помещены выражения.  
   
- Пример.  
+ Пример  
   
 ```  
 SELECT VALUE name FROM AdventureWorksEntities.Product as P   
@@ -306,7 +307,7 @@ SELECT VALUE name FROM AdventureWorksEntities.Product as P
 ## <a name="navigation"></a>Навигация  
  Оператор навигации по связям позволяет переходить по связям от одной сущности (исходный элемент) к другой (конечный элемент). [НАВИГАТОР](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md) принимает тип связи, заданный как \<пространство имен >.\< имя_типа_связи >. Перейдите возвращает Ref\<T > Если количество элементов до конца — 1. Если количество элементов до конца равно n, коллекции < Ref\<T >> будут возвращены.  
   
- Пример.  
+ Пример  
   
 ```  
 SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM   
@@ -328,7 +329,7 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 ### <a name="select-value"></a>SELECT VALUE  
  Язык [!INCLUDE[esql](../../../../../../includes/esql-md.md)] поддерживает предложение SELECT VALUE, позволяющее пропустить неявное построение строки. В предложении SELECT VALUE может быть указан только один элемент. При использовании такого предложения, создается оболочка строк вокруг элементов в предложении SELECT и может создавать коллекцию необходимой формы, например: `SELECT VALUE a`.  
   
- Пример.  
+ Пример  
   
 ```  
 SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p  
@@ -360,7 +361,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
 ## <a name="case-expression"></a>Выражение варианта выбора  
  [Случае выражения](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md) вычисляет набор логических выражений для определения результата.  
   
- Пример.  
+ Пример  
   
 ```  
 CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END  

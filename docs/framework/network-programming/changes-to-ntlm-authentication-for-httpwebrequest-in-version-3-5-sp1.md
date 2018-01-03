@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: e23ec35b94196d1f8a597d3a74850b5292a4ef09
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 239834a732fe3bc1cb3e8e7f1d126d26c210d1f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Изменения в аутентификации NTLM для HttpWebRequest в версии 3.5 с пакетом обновления 1 (SP1)
 В .NET Framework версии 3.5 с пакетом обновления 1 (SP1) и более поздних внесены касающиеся безопасности изменения, влияющие на обработку встроенной проверки подлинности Windows классами <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream> и связанными классами в пространстве имен System.Net. Эти изменения могут влиять на приложения, которые используют данные классы для выполнения веб-запросов и получения ответов с применением встроенной проверки подлинности Windows на основе NTLM. Они также могут повлиять на веб-серверы и клиентские приложения, в которых используется встроенная проверка подлинности Windows.  

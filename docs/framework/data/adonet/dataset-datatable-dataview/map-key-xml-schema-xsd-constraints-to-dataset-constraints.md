@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f5247d0ccfd2ceec641ff29d29b889a55c1a5e12
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 249cb8419d4f032c37a922c9aa640f02f6efbd56
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Сопоставление ключевых ограничений XML-схемы (XSD) с ограничениями набора данных
 В схеме, можно задать ограничение ключа в элементе или атрибуте с помощью **ключ** элемента. Элемент или атрибут, в котором указывается ограничение ключа, должен иметь уникальные значения во всех экземплярах схемы, не равные NULL.  
@@ -26,7 +27,7 @@ ms.lasthandoff: 11/21/2017
   
  В следующей таблице описываются **msdata** атрибутов, которые можно указать в **ключ** элемента.  
   
-|Имя атрибута|Описание|  
+|Имя атрибута|Описание:|  
 |--------------------|-----------------|  
 |**msdata: ConstraintName**|Если этот атрибут указан, его значение используется в качестве имени ограничения. В противном случае **имя** атрибут содержит значение имени ограничения.|  
 |**msdata: PrimaryKey**|Если `PrimaryKey="true"` присутствует, **IsPrimaryKey** ограничение свойству **true**, делая его первичного ключа. **AllowDBNull** столбца задано значение **false**, поскольку первичные ключи не могут иметь значения null.|  
@@ -89,6 +90,6 @@ TableName: customers
  Значение **ConstraintName** свойство **UniqueConstraint** в **DataSet** значение **msdata: ConstraintName** атрибут, указанный в **ключ** элемента в схеме.  
   
 ## <a name="see-also"></a>См. также  
- [Сопоставление ограничений XML схемы (XSD) для ограничения набора данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- [Создание отношений наборов данных из XML-схемы (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [Сопоставление ограничений схемы XML (XSD) с ограничениями DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Создание отношений DataSet из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
  [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -14,11 +14,11 @@ ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 13df7dc6b325b97411b910c0fc8e05e65a332dc5
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 39a4245b51c1199a6aeb0c23282b1917f51164d2
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Знакомство с COM-взаимодействием (Visual Basic)
 Модель объектов компонентов (COM) позволяет объекту предоставлять его функциональность другим компонентам и приложениям хоста. Хотя COM-объекты были основой программирования в течение многих лет в Windows, приложений, предназначенных для общеязыковой среды выполнения (CLR), имеют много преимуществ.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/09/2017
 ### <a name="importing-and-exporting-type-libraries"></a>Импорт и экспорт библиотеки типов  
  [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]содержит программу Tlbimp, которая позволяет импортировать информацию из библиотеки типов в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] приложения. Можно создавать библиотеки типов из сборки с помощью программы Tlbexp.  
   
- Сведения о Tlbimp и Tlbexp см. в разделе [Tlbimp.exe (программа импорта библиотек типов)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382) и [Tlbexp.exe (программа экспорта библиотек типов)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
+ Сведения о Tlbimp и Tlbexp см. в разделе [Tlbimp.exe (программа импорта библиотек типов)](../../../framework/tools/tlbimp-exe-type-library-importer.md) и [Tlbexp.exe (программа экспорта библиотек типов)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
   
 ## <a name="interop-assemblies"></a>Сборки взаимодействия  
  Сборки взаимодействия являются [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] сборки, которые мост между управляемым и неуправляемым кода, отображая члены объекта COM, в эквивалент [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] управляемых элементов. Сборки взаимодействия, созданные в Visual Basic .NET обрабатывать различные аспекты работы с объектами COM, такие как маршалинг взаимодействия.  
@@ -62,10 +62,10 @@ ms.lasthandoff: 12/09/2017
 ## <a name="see-also"></a>См. также  
  [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)  
  [Пошаговое руководство. Реализация наследования с использованием COM-объектов](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- [Взаимодействие с неуправляемым кодом](../../../../docs/framework/interop/index.md)  
+ [Взаимодействие с неуправляемым кодом](../../../framework/interop/index.md)  
  [Устранение неполадок взаимодействия](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
  [Сборки и глобальный кэш сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Tlbimp.exe (программа экспорта библиотек типов)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)  
+ [Tlbimp.exe (программа экспорта библиотек типов)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
  [Tlbexp.exe (программа экспорта библиотек типов)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
  [Маршалинг взаимодействия](../../../framework/interop/interop-marshaling.md)  
  [COM-взаимодействие без регистрации](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: de93298062c7f99fcca3688efbd0b546d3c04c0e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6bc9a754325f7d01ee36622a23efde1cbc7c4812
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="distributed-transactions"></a>Распределенные транзакции
 Транзакция - это набор связанных задач, который, помимо всего прочего, завершается успешно (фиксация) или с ошибкой (отмена) как единое целое. Объект *распределенной транзакции* — это транзакция, затрагивающая несколько ресурсов. Для фиксации распределенной транзакции все участники должны гарантировать, что любое изменение данных будет постоянным. Изменения должны сохраняться даже в случае фатального сбоя системы или других непредвиденных событий. Если хоть один из участников не сможет предоставить такую гарантию, вся транзакция завершится с ошибкой и будет выполнен откат любых изменений данных внутри области транзакции.  
@@ -58,6 +59,6 @@ ms.lasthandoff: 11/21/2017
  Для использования распределенных транзакций возможна необходимость включения в сети MS DTC. Если включен межсетевой экран Windows, необходимо разрешить службе MS DTC использовать сеть или открыть порт MS DTC.  
   
 ## <a name="see-also"></a>См. также  
- [Транзакции и параллелизм](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
+ [Транзакции и параллельность](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  [Интеграция System.Transactions с SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
  [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

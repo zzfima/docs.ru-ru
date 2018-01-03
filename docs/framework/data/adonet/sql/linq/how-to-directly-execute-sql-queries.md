@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0ccc47a1ea740c5106517f6f53620ddc8097c531
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e8bbeb0d7ce040387b263486b947e793eca39d29
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-directly-execute-sql-queries"></a>Практическое руководство. Непосредственное выполнение запросов SQL
 Технология [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] преобразует написанные пользователем запросы в параметризованные запросы SQL (в текстовой форме) и отправляет их на сервер SQL для обработки.  
@@ -46,5 +47,5 @@ ms.lasthandoff: 11/21/2017
  Параметры записываются в тексте запроса с помощью той же нотации с фигурными скобками, которая используется в методах `Console.WriteLine()` и `String.Format()`. На самом деле `String.Format()` вызван в строке запроса, вы предоставляете, заменив фигурные скобки параметры на созданные имена параметров, таких как @p0, @p1 ..., @p(n).  
   
 ## <a name="see-also"></a>См. также  
- [Общие сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [Запросы к базе данных](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+ [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [Запрос к базе данных](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

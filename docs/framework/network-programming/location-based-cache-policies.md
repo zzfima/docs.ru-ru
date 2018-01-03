@@ -25,11 +25,12 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 7a1be9f377f9b241bf46ac67f4f3f08fc5a43821
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a09c8c47c91222d6292d46d2eea80a30ed786494
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="location-based-cache-policies"></a>политики кэша на основе расположения
 Политики кэша на основе расположения определяют актуальность действительных записей в кэше на основе расположения, в котором может быть получен запрашиваемый ресурс. Кэшируемый ресурс является действительным, если он не нарушает требований сервера по повторной проверке. Политика кэша на основе расположения создается программным способом с помощью конструктора класса <xref:System.Net.Cache.RequestCachePolicy> или <xref:System.Net.Cache.HttpRequestCachePolicy>. Тип политики на основе расположения передается в конструктор с помощью значения перечисления <xref:System.Net.Cache.RequestCacheLevel> или <xref:System.Net.Cache.HttpRequestCacheLevel>. Примеры кода с созданием политик на основе расположения см. в разделе [Практическое руководство. Установка политики кэша на основе расположения для приложения](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md). В следующих разделах приводится описание каждого типа политики кэша на основе расположения для ресурсов HTTP и HTTPS.  

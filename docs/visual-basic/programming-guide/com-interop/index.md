@@ -14,16 +14,16 @@ ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6a64eaba75128a3844847fbf803c86c2d700db72
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 58568b541c43a35f093c45f5ad0efe978b642c91
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="com-interop-visual-basic"></a>COM-взаимодействие (Visual Basic)
 Объектная модель компонентов (модель COM) позволяет объекту предоставлять свою функциональность другим компонентам и ведущим приложениям. COM-объекты входят в состав большей части современного программного обеспечения. Хотя сборки .NET являются наилучшим решением для новых приложений, в некоторых случаях необходимо использование COM-объектов. В этом разделе освещаются некоторые вопросы, связанные с созданием и использованием COM-объектов в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Знакомство с COM-взаимодействием](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
  Общие сведения о COM-взаимодействии.  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/09/2017
  Описание использования существующих COM-объектов в качестве основы для новых объектов.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Взаимодействие с неуправляемым кодом](../../../../docs/framework/interop/index.md)  
+ [Взаимодействие с неуправляемым кодом](../../../framework/interop/index.md)  
  Описываются службы взаимодействия, предоставляемые средой CLR.  
   
  [Предоставление COM-компонентов платформе .NET Framework](http://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
@@ -64,5 +64,5 @@ ms.lasthandoff: 12/09/2017
  [Предоставление компонентов .NET Framework клиентам COM](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
  Описание подготовки и использования управляемых типов из COM.  
   
- [Применение атрибутов взаимодействия](../../../../docs/framework/interop/applying-interop-attributes.md)  
+ [Применение атрибутов взаимодействия](../../../framework/interop/applying-interop-attributes.md)  
  Описание атрибутов, которые можно использовать при работе с неуправляемым кодом.

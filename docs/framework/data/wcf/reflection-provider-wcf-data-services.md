@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52fe7e777cfea04b6da2a04c0badfe92b2a0a756
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 617754fcd9515f080dc6cf8ae923c2c6fc34ad3a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Поставщик отражений (службы данных WCF)
 Помимо предоставления данных из модели данных через Entity Framework, службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживают предоставление данных, не определенных строго в модели на основе сущностей. Поставщик отражения предоставляет данные в классах, возвращаемые типы которых реализуют интерфейс <xref:System.Linq.IQueryable%601>. Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] используют отражение для определения модели данных для таких классов и поддерживают преобразование запросов к таким ресурсам на основе адресов в интегрированные в язык запросы (LINQ) к предоставляемым типам <xref:System.Linq.IQueryable%601>.  

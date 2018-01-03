@@ -14,22 +14,23 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 75cb32ac55bfa397d12f4ec514488f6b2a159e3d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7f3593b6d7f8778ae8d74e779d3446403b99b655
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-wcf-data-services"></a>Начало работы со службами данных WCF
 В подразделах этого раздела помогут быстро понять [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] и способ использования [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для предоставления и получения [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] каналов Описание базовых технологий. Этот раздел включает как концептуальное содержимое и [краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) учебника.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  В следующих разделах описывается создание служб данных с использованием служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Предоставление данных как службы](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
  Описывает этапы создания службы данных с помощью служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
- [Доступ к ресурсам службы данных](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
+ [Доступ к ресурсам служб данных](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
  Описывает, как работать с [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-каналов.  
   
  [Использование служб данных в клиентском приложении](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  

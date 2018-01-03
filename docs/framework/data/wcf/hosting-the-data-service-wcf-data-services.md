@@ -19,11 +19,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7fa76c5672b4117c446aca145b7cf98dae7801d4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e8819e8127d16b83d531dc6bdcd3af88245c695e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Размещение служб данных (службы данных WCF)
 С помощью [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], можно создать службу, предоставляющую данные в виде [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канала. Эта служба данных определена в качестве класса, наследуемого от <xref:System.Data.Services.DataService%601>. Этот класс предоставляет функциональность, необходимую для обработки сообщения запроса, выполнения обновлений в источнике данных и создания ответных сообщений, как того требует [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Однако службы данных не удается привязать к и прослушивать входящие HTTP-запросы к сетевому сокету. Реализацию этой обязательной функциональности служба данных возлагает на размещающий компонент.  

@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f963aba983379d1474c3eedc348860751306a1bf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9cd5dc57a9e7d164ec7ca1ebcc1e6d2cc2a5a6cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-express-user-instances"></a>Пользовательские экземпляры SQL Server, экспресс-выпуск
 Выпуск Microsoft SQL Server Express Edition (SQL Server Express) поддерживает пользовательский экземпляр, который доступен только при использовании поставщика данных .NET Framework для SQL Server (`SqlClient`). Пользовательским экземпляром является отдельный экземпляр компонента SQL Server Express Database Engine, который формируется родительским экземпляром. Пользовательские экземпляры позволяют пользователям, не являющимся администраторами на их локальных компьютерах, присоединяться и подключаться к базам данных SQL Server Express. Каждый экземпляр выполняется в контексте безопасности отдельного пользователя, один экземпляр на одного пользователя.  

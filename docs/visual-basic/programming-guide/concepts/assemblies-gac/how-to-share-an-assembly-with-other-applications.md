@@ -12,11 +12,11 @@ ms.assetid: 5388aedc-cb42-4622-8b70-8e701eee057a
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0ad7a3f2ee82d0a582e755035448d565a9a8cb9d
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: c079250211a4216b09e84140ff537b3f57127967
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>Как: совместное использование сборки с другими приложениями (Visual Basic)
 Сборки могут быть закрытыми или общими. По умолчанию большинство простых программ состоят из закрытой сборки, так как она не предназначена для использования другими приложениями.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/09/2017
   
 2.  Назначьте сборке строгое имя. Дополнительные сведения см. в разделе [Практическое руководство. Подписание сборки строгим именем](../../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).  
   
-3.  Назначьте сведения о версии для сборки. Дополнительные сведения см. в разделе [Версии сборок](../../../../../docs/framework/app-domains/assembly-versioning.md).  
+3.  Назначьте сведения о версии для сборки. Дополнительные сведения см. в разделе [Версии сборок](../../../../framework/app-domains/assembly-versioning.md).  
   
 4.  Добавьте сборку в глобальный кэш сборок. Дополнительные сведения см. в разделе [Практическое руководство. Установка сборки в глобальный кэш сборок](../../../../framework/app-domains/how-to-install-an-assembly-into-the-gac.md).  
   

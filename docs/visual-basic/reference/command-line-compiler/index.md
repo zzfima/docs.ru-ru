@@ -16,16 +16,16 @@ ms.assetid: 6b57c444-50c7-4b88-8f59-ed65cff5e05c
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1ba36440e3f9dd30c21f946ba52732a5ff53e62a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 7230e62a6ce201209df41ad457fbd93f3a5c866f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-basic-command-line-compiler"></a>Компилятор Visual Basic с интерфейсом командной строки
 Компилятор командной строки [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] служит альтернативой программам компиляции в составе интегрированной среды разработки [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. В этом разделе содержится описание параметров компилятора [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
  Описание компилятора командной строки [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], который служит альтернативой программам компиляции в составе интегрированной среды разработки [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
@@ -36,8 +36,5 @@ ms.lasthandoff: 10/22/2017
  Параметры компилятора в виде функциональных групп.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [NIB. Управление свойствами проекта с помощью конструктора проектов](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e)  
- Использование конструктора проектов для задания глобальных параметров проекта.  
-  
  [Visual Basic](../../../visual-basic/index.md)  
  Начальная точка работы со справкой [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].

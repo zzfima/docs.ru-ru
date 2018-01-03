@@ -23,11 +23,11 @@ ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5b1a306ba694d4bbfc4719fc728112964b1ce40f
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: a3663ca5d3e0e2c94530d4a19ebff0022f495f3d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа (Visual Basic)
 При использовании класса, модуля или структуры, имеющих члены типов целое число без знака, доступ к этим членам с помощью [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
@@ -77,7 +77,7 @@ ms.lasthandoff: 12/09/2017
     ```  
   
     > [!CAUTION]
-    >  `UInteger`, `ULong`, `UShort`, И `SByte` типы данных не являются частью [независимость от языка и независимые от языка компоненты](../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS), поэтому CLS-совместимом коде нельзя использовать компонент, который они используются.  
+    >  `UInteger`, `ULong`, `UShort`, И `SByte` типы данных не являются частью [независимость от языка и независимые от языка компоненты](../../../standard/language-independence-and-language-independent-components.md) (CLS), поэтому CLS-совместимом коде нельзя использовать компонент, который они используются.  
   
     > [!IMPORTANT]
     >  Вызов неуправляемого кода, такие как интерфейс (API), Windows предоставляет код, чтобы потенциальные угрозы безопасности.  

@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0bcb42e018f5e62179924634bfa49fcbfc4c7d16
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ebae481ba2ab486066997b52d794d9bd631c8400
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Роли сервера и базы данных в SQL Server
 Во всех версиях SQL Server используется безопасность на основе ролей, что позволяет назначать разрешения роли или группе пользователей, а не отдельным пользователям. Предопределенные роли сервера и предопределенные роли базы данных имеют предопределенный набор разрешений, назначенных для них.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
   
  Дополнительные сведения о предопределенных ролях SQL Server см. в следующих ресурсах.  
   
-|Ресурс|Описание|  
+|Ресурс|Описание:|  
 |--------------|-----------------|  
 |[Роли уровня сервера](http://msdn.microsoft.com/library/ms188659.aspx) и [разрешения предопределенных ролей сервера](http://msdn.microsoft.com/library/ms175892.aspx) в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] электронной документации|Описывает предопределенные роли сервера и связанные с ними разрешения в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].|  
 |[Роли уровня базы данных](http://msdn.microsoft.com/library/ms189121.aspx) и [разрешения предопределенных ролей базы данных](http://msdn.microsoft.com/library/ms189612.aspx) в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] электронной документации|Описывает предопределенные роли базы данных и связанные с ними разрешения|  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
   
  Дополнительные сведения об именах входа, пользователях и ролях SQL Server см. в следующих ресурсах.  
   
-|Ресурс|Описание|  
+|Ресурс|Описание:|  
 |--------------|-----------------|  
 |[Управление доступом и удостоверениями](http://msdn.microsoft.com/library/bb510418.aspx) в электронной документации по SQL Server|Содержит ссылки на разделы, описывающие участников, роли, учетные данные, защищаемые объекты и разрешения.|  
 |[Субъекты](http://msdn.microsoft.com/library/ms181127.aspx) в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] электронной документации|Описывает участников и содержит ссылки на разделы, описывающие роли сервера и базы данных.|  

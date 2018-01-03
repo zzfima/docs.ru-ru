@@ -24,18 +24,19 @@ caps.latest.revision: "28"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 21032358c9edb1b79d9e170e477502670f781fc3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4368ce1256e1e0637907768b3698ca7dab97c5f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-tracing-and-profiling"></a>Отладка, трассировка и профилирование
 Для отладки приложения .NET Framework компилятор и среда выполнения должны быть настроены для включения присоединения отладчика к приложению и создания символов и сопоставлений строк, если это возможно, для приложения и его соответствующего языка MSIL. После отладки управляемого приложения можно выполнить его профилирование для повышения производительности. Профилирование оценивает и описывает строки исходного кода, создающие наиболее часто выполняемый код, и время, необходимое для их выполнения.  
   
  Приложения .NET Framework можно легко отладить с помощью Visual Studio, который обрабатывает многие детали конфигурации. Если Visual Studio не установлен, вы можете проверять и улучшать производительность приложений .NET Framework с помощью классов отладки в пространстве имен <xref:System.Diagnostics> .NET Framework. Это пространство имен включает классы <xref:System.Diagnostics.Trace>, <xref:System.Diagnostics.Debug> и <xref:System.Diagnostics.TraceSource> для трассировки потока выполнения и классы <xref:System.Diagnostics.Process>, <xref:System.Diagnostics.EventLog> и <xref:System.Diagnostics.PerformanceCounter> для профилирования кода.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Включение отладки с JIT-присоединением](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)  
  Показывается, как настроить реестр для JIT-присоединения модуля отладки к приложению .NET Framework.  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/18/2017
  [Повышение эффективности отладки с помощью атрибутов просмотра отладчика](../../../docs/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes.md)  
  Описывается, как разработчик типа может указать, как этот тип будет выглядеть при отображении в отладчике.  
   
- [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)  
+ [Счетчики производительности](../../../docs/framework/debug-trace-profile/performance-counters.md)  
  Описываются счетчики, которые можно использовать для отслеживания производительности приложения.  
   
 ## <a name="related-sections"></a>Связанные разделы  

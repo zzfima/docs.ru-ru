@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 69b72a824e6f9468c9b3d86073243d506382e766
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8433376c9950594b57b800b401d68d849e743d85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-data-model"></a>EDM (модель данных с использованием сущностей)
 Модель EDM - это набор основных понятий, которые описывают структуру данных независимо от формы хранения. Модель EDM заимствует свойства модели «сущность-связь», описанной Питером Ченом в 1976 г., более того, она строится на модели «сущность-связь» и расширяет возможности ее традиционного использования.  
@@ -29,49 +30,49 @@ ms.lasthandoff: 11/21/2017
 ## <a name="in-this-section"></a>Содержание  
  В подразделах этого раздела описываются основные понятия модели EDM. Любой специфический язык домена (DSL), реализующий модель EDM, должен включать основные понятия, описанные в данном разделе. Обратите внимание, что [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) использует язык CSDL для определения концептуальных моделей. Дополнительные сведения см. в разделе [спецификация языка CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md).  
   
- [Основные понятия модели данных сущности](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
   
- [Модель EDM: пространства имен](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
+ [Модель EDM. Пространство имен](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
   
- [Модель данных сущности: Примитивные типы данных](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
+ [Модель EDM. Примитивные типы данных](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
   
- [Модель EDM: наследование](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
+ [Модель EDM. Наследование](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
   
- [Конечная точка ассоциации](../../../../docs/framework/data/adonet/association-end.md)  
+ [конечная точка ассоциации](../../../../docs/framework/data/adonet/association-end.md)  
   
- [Кратность конечной точки ассоциации](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
+ [кратность конечной точки ассоциации](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
   
  [набор ассоциаций](../../../../docs/framework/data/adonet/association-set.md)  
   
- [Конечная точка набора ассоциаций](../../../../docs/framework/data/adonet/association-set-end.md)  
+ [конечная точка набора ассоциаций](../../../../docs/framework/data/adonet/association-set-end.md)  
   
- [Тип ассоциации](../../../../docs/framework/data/adonet/association-type.md)  
+ [тип ассоциации](../../../../docs/framework/data/adonet/association-type.md)  
   
- [Сложный тип](../../../../docs/framework/data/adonet/complex-type.md)  
+ [сложный тип](../../../../docs/framework/data/adonet/complex-type.md)  
   
- [контейнер сущностей](../../../../docs/framework/data/adonet/entity-container.md)  
+ [контейнер сущности](../../../../docs/framework/data/adonet/entity-container.md)  
   
  [ключ сущности](../../../../docs/framework/data/adonet/entity-key.md)  
   
- [набор сущностей](../../../../docs/framework/data/adonet/entity-set.md)  
+ [набор сущности](../../../../docs/framework/data/adonet/entity-set.md)  
   
- [Тип сущности](../../../../docs/framework/data/adonet/entity-type.md)  
+ [тип сущности](../../../../docs/framework/data/adonet/entity-type.md)  
   
  [facet](../../../../docs/framework/data/adonet/facet.md)  
   
- [Свойство внешнего ключа](../../../../docs/framework/data/adonet/foreign-key-property.md)  
+ [свойство внешнего ключа](../../../../docs/framework/data/adonet/foreign-key-property.md)  
   
- [Объявляемая моделью функция](../../../../docs/framework/data/adonet/model-declared-function.md)  
+ [объявляемая моделью функция](../../../../docs/framework/data/adonet/model-declared-function.md)  
   
- [функция определенной модели](../../../../docs/framework/data/adonet/model-defined-function.md)  
+ [определяемая моделью функция](../../../../docs/framework/data/adonet/model-defined-function.md)  
   
  [свойство навигации](../../../../docs/framework/data/adonet/navigation-property.md)  
   
- [Свойство](../../../../docs/framework/data/adonet/property.md)  
+ [свойство](../../../../docs/framework/data/adonet/property.md)  
   
- [Ограничение ссылочной целостности](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
+ [ограничение ссылочной целостности](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
   
 ## <a name="see-also"></a>См. также  
  [Средства работы с моделью EDM ADO.NET](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)  
  [Общие сведения о файлах .edmx](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
- [Спецификация языка CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)
+ [Спецификация CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)

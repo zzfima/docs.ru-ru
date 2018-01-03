@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a8577c10dd4d3e2118a4b4dca8b22766a54fc854
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 37dfeec82339ed4381d158b1bd5ac442223bfe50
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>N-уровневое использование LINQ to SQL с веб-службами
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]предназначена специально для использования на среднем уровне в слабо связанных доступа к данным (DAL), например веб-службы. Если уровнем представления данных является веб-страница ASP.NET, то для управления передачей данных между пользовательским интерфейсом и <xref:System.Web.UI.WebControls.LinqDataSource> на среднем уровне используется серверный веб-элемент управления [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Если уровень представления данных не является страницей ASP.NET, то и на среднем уровне, и на уровне представления данных необходимо выполнить дополнительные действия по управлению сериализацией и десериализацией данных.  

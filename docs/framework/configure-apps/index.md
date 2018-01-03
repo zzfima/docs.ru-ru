@@ -34,11 +34,12 @@ caps.latest.revision: "28"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 2bd01e697d6852b9eb50418e5b6f506a133cbc2d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 32607c853506ae7339057893c10fd9931e5823be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Настройка приложений с использованием файлов конфигурации
 Среда .NET Framework предоставляет разработчикам и администраторам возможность управления и гибкой настройки способа выполнения приложений с помощью файлов конфигурации. Файлы конфигурации имеют формат XML, и при необходимости их можно изменять. Администратор может контролировать, к каким из защищенных ресурсов может осуществлять доступ приложение, какие оно будет использовать версии сборок и где расположены удаленные объекты и приложения. Разработчики могут задавать параметры в файлах конфигурации, устраняя необходимость в перекомпиляции приложения при каждом изменении той или иной установки. В этом разделе рассказывается, какие параметры могут быть настроены и для чего может потребоваться настройка приложения.  
@@ -109,7 +110,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Файл конфигурации политики пользователя: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Поиск сборок с помощью DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
  Описание процесса настройки среды выполнения для использования переменной среды DEVPATH при поиске сборок.  
   

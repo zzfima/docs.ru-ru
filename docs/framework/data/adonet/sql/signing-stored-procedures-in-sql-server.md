@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 86c2a6c3f2c84c931df15e4809980a76cb6d826c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b3d90579e28fde40d461bdb511d797e5d7f6f179
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Подписывание хранимых процедур в SQL Server
 Хранимую процедуру можно подписать сертификатом или асимметричным ключом. Эта возможность предназначена для сценариев, в которых разрешения не могут наследоваться по цепочке владения или если цепочка владения разорвана, например в динамическом SQL. Можно создать пользователя, сопоставленного с сертификатом, предоставляя разрешения пользователя сертификата на объекты, доступ к которым нужен хранимым процедурам.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="external-resources"></a>Внешние ресурсы  
  Дополнительные сведения см. в следующих ресурсах.  
   
-|Ресурс|Описание|  
+|Ресурс|Описание:|  
 |--------------|-----------------|  
 |[Подписание модулей](http://go.microsoft.com/fwlink/?LinkId=98590) в электронной документации по SQL Server|Описывает подписывание модулей, демонстрирует образец сценария и содержит ссылки на соответствующие разделы по языку Transact-SQL.|  
 |[Подписывание хранимых процедур с помощью сертификата](http://msdn.microsoft.com/library/bb283630.aspx) в электронной документации по SQL Server|Предоставляет учебник для подписания хранимой процедуры с помощью сертификата.|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/21/2017
  [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Общие сведения о безопасности SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [Управление разрешениями с помощью хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
+ [Управление разрешениями с использованием хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  [Написание безопасного динамического кода SQL в SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  [Настройка разрешений с олицетворением в SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
  [Изменение данных с помощью хранимых процедур](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  

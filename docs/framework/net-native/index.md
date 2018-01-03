@@ -19,11 +19,12 @@ caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a79744d99571fa1428da1fade8f63c4c80ae7b6c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 92dac407ace9a039f5e6edc16b093fea5c485f63
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compiling-apps-with-net-native"></a>Компиляция приложений с помощью машинного кода .NET
 [!INCLUDE[net_native](../../../includes/net-native-md.md)]Технология предварительной компиляции для построения и развертывания приложений Windows, входит в состав Visual Studio 2015 и более поздних версиях. Она автоматически компилирует окончательные версии приложений, написанных в форме управляемого кода (C# или Visual Basic) и предназначенных для .NET Framework и Windows 10, в машинный код.  
@@ -68,7 +69,7 @@ ms.lasthandoff: 10/18/2017
   
  Для приложений, предназначенных для Windows 10, выполняется передача двоичных файлов компиляции машинного кода .NET в пакетах приложений (файлы APPX) в Магазин Windows.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  Дополнительные сведения о разработке приложений при использовании компиляции машинного кода .NET см. в следующих разделах  
   
 -   [Приступая к компиляции кода с помощью машинного кода .NET: пошаговое руководство разработчика](../../../docs/framework/net-native/getting-started-with-net-native.md)  

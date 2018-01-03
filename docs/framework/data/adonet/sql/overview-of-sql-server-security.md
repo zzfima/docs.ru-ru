@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d93d077153cd15534175c1e60e63a765ce893c71
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ff0a78a852bdbf2fa1eb075273cad317c21fb182
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="overview-of-sql-server-security"></a>Общие сведения о безопасности SQL Server
 Стратегия всесторонней защиты с перекрывающимися уровнями безопасности - это лучший способ борьбы с угрозами безопасности. SQL Server предоставляет архитектуру безопасности, которая позволяет администраторам баз данных и разработчикам создавать защищенные приложения баз данных и бороться с угрозами. В каждой версии SQL Server имеются усовершенствования по сравнению с предыдущими версиями в виде добавления новых функций и возможностей. Однако система безопасности не поставляется в готовом виде. Каждое приложение уникально по своим требованиям к безопасности. Разработчики должны понимать, какое сочетание функций и возможностей является наиболее подходящим для борьбы с известными угрозами и предупреждения угроз, которые могу появиться в будущем.  
@@ -30,11 +31,11 @@ ms.lasthandoff: 11/21/2017
   
  В этом разделе описываются основные принципы безопасности в SQL Server. В нем приведены ссылки на полную документацию в соответствующей версии электронной документации по SQL Server.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Проверка подлинности в SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
  Описание процесса входа и проверки подлинности в SQL Server и ссылки на дополнительные ресурсы.  
   
- [Сервер и роли базы данных в SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
+ [Роли сервера и базы данных в SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
  Описание фиксированных ролей сервера и базы данных, пользовательских ролей базы данных и встроенных учетных записей. Здесь также приведены ссылки на дополнительные ресурсы.  
   
  [Владение и отделение пользователей от схем в SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
  [Шифрование данных в SQL Server](../../../../../docs/framework/data/adonet/sql/data-encryption-in-sql-server.md)  
  Описание режимов шифрования данных в SQL Server. Здесь также приведены ссылки на дополнительные ресурсы.  
   
- [Безопасность интеграции со средой CLR в SQL Server](../../../../../docs/framework/data/adonet/sql/clr-integration-security-in-sql-server.md)  
+ [Безопасность интеграции CLR в SQL Server](../../../../../docs/framework/data/adonet/sql/clr-integration-security-in-sql-server.md)  
  Здесь приведены ссылки на ресурсы по безопасности для интеграции со средой CLR.  
   
 ## <a name="see-also"></a>См. также  

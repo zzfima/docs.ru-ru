@@ -17,16 +17,17 @@ caps.latest.revision: "24"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 76b747624a22212fb7b9ba1a6353956a99ed1559
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d702e7c910536566aabfaa7948afb24ae94d2cb1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="network-programming-in-the-net-framework"></a>Сетевое программирование в .NET Framework
 Microsoft .NET Framework обеспечивает многоуровневую, расширяемую и управляемую реализацию служб Интернета, которую можно легко и быстро интегрировать в приложения. В сетевых приложениях можно использовать подключаемые протоколы, которые позволяют автоматически применять новые протоколы Интернета, или управляемую реализацию интерфейса сокетов Windows, дающую возможность работать с сетью на уровне сокетов.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Введение в подключаемые протоколы](../../../docs/framework/network-programming/introducing-pluggable-protocols.md)  
  Описание способов доступа к интернет-ресурсу вне зависимости от используемого протокола доступа  
   
@@ -143,7 +144,7 @@ Microsoft .NET Framework обеспечивает многоуровневую, 
  Обеспечивает поддержку настройки аутентификации с помощью расширенной защиты приложений.  
   
 ## <a name="see-also"></a>См. также  
- [Программирование разделы руководства по сети](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
+ [Практические руководства по сетевому программированию](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
  [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Примеры сетевых приложений для .NET в галерее кода MSDN](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  
  [Пример HttpClient](http://go.microsoft.com/fwlink/?LinkId=242550)

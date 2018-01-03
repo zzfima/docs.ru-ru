@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5a846bc321aab19cb1d04ba55ca4cca4b7188bcd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3c58dbd35c2c203450960118b58da49518098ed7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>Определение реляционной структуры набора данных из XML
 Реляционная структура (или схема) набора данных <xref:System.Data.DataSet> состоит из таблиц, столбцов, ограничений и связей. При загрузке <xref:System.Data.DataSet> из кода XML схема может быть определена заранее или создана, либо явно, либо с помощью вывода, на основании загружаемого кода XML. Дополнительные сведения о загрузке схемы и содержимое <xref:System.Data.DataSet> из XML, в разделе [загрузка DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) и [загрузки набора данных сведения о схеме из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md).  
@@ -28,8 +29,8 @@ ms.lasthandoff: 10/18/2017
   
  Не все атрибуты, присутствующие в XML-документе, должны быть включены в процесс вывода. Атрибуты с уточнением в виде пространств имен могут включать метаданные, которые являются значимыми для XML-документа, но не для схемы <xref:System.Data.DataSet>. Используя <xref:System.Data.DataSet.InferXmlSchema%2A>, можно указывать пространства имен, которые не должны учитываться в процессе вывода. Дополнительные сведения см. в разделе [загрузки набора данных сведения о схеме из XML-кода](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md).  
   
-## <a name="in-this-section"></a>Содержание  
- [Сводка процесса вывода схемы DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/summary-of-the-dataset-schema-inference-process.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Общие сведения о процессе определения схемы DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/summary-of-the-dataset-schema-inference-process.md)  
  Предоставляет высокоуровневую сводку правил для вывода схемы <xref:System.Data.DataSet> с использованием кода XML.  
   
  [Определение таблиц](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-tables.md)  
@@ -44,14 +45,14 @@ ms.lasthandoff: 10/18/2017
  [Определение текста элемента](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-element-text.md)  
  Описывает столбцы, которые создаются для текста в элементах XML, и поясняет условия, при которых текст в элементах XML не учитываются.  
   
- [Ограничения на вывод](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inference-limitations.md)  
+ [Ограничения определения](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inference-limitations.md)  
  Обсуждает ограничения вывода схемы.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Использование XML в наборах данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  Описывает, как объект <xref:System.Data.DataSet> взаимодействует с XML-данными.  
   
- [Наследование реляционной структуры набора данных из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [Наследование реляционной структуры DataSet от схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  Описывает реляционную структуру (или схему) набора данных <xref:System.Data.DataSet>, которая создается с помощью схемы XSD.  
   
  [Общие сведения об ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)  

@@ -20,18 +20,18 @@ ms.assetid: ef103092-9bed-4134-97f4-2db696e83c12
 caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0d2e93d9b4518482b22c78d10d31c4035bdf587e
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 80d4f05e9f90e8543c61af26080e66f9cf262f01
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>Практическое руководство. Фильтрование результатов запроса с помощью LINQ (Visual Basic)
 Встроенные в язык запросы (LINQ) упрощает доступ к данным базы данных и выполнения запросов.  
   
  В следующем примере показано создание нового приложения, которое выполняет запросы к базе данных SQL Server и фильтрует результаты по определенному значению с помощью `Where` предложения. Дополнительные сведения см. в разделе [предложение Where](../../../../visual-basic/language-reference/queries/where-clause.md).  
   
- Примеры в этом разделе используется образец базы данных "Борей". Если у вас образца базы данных "Борей" на компьютере разработчика, его можно загрузить из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=98088) веб-сайта. Инструкции см. в разделе [Загрузка примеров баз данных](../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ Примеры в этом разделе используется образец базы данных "Борей". Если у вас образца базы данных "Борей" на компьютере разработчика, его можно загрузить из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=98088) веб-сайта. Инструкции см. в разделе [Загрузка примеров баз данных](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -88,5 +88,5 @@ ms.lasthandoff: 12/09/2017
 ## <a name="see-also"></a>См. также  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  [Запросы](../../../../visual-basic/language-reference/queries/queries.md)  
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
  [Методы DataContext (O/R-конструктор)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

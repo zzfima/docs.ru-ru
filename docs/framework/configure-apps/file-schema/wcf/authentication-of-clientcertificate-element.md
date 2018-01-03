@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0bebbc8b5cc315e92645cbbf0321de53122c7b1c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e909bd7f6257445fe4c42dd92ae366676f72d60c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltauthenticationgt-of-ltclientcertificategt-element"></a>&lt;authentication&gt; элемента &lt;clientCertificate&gt;
 Указывает расширения функциональности аутентификации для сертификатов клиентов, используемых службой.  
@@ -86,7 +87,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)|Определяет сертификат X.509, используемый для проверки подлинности клиента по отношению к службе.|  
   
@@ -124,5 +125,5 @@ trustedStoreLocation="CurrentUser/LocalMachine"
  <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Authentication%2A>  
  <xref:System.ServiceModel.Configuration.X509ClientCertificateAuthenticationElement>  
  [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Как: создание службы, использующей пользовательский сертификат проверяющий элемент управления](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
+ [Практическое руководство. Создание службы, использующей пользовательский проверяющий элемент управления для сертификатов](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
  [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

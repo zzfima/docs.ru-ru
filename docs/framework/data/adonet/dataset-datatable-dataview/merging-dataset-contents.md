@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5f45addd61f275a0bba4b61552bb629bfc6ee7df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 44d171cab4099436d7daea26def831f149b75b13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="merging-dataset-contents"></a>Слияние содержимого набора данных
 Метод <xref:System.Data.DataSet.Merge%2A> можно использовать для объединения содержимого массива <xref:System.Data.DataSet>, <xref:System.Data.DataTable> или <xref:System.Data.DataRow> с существующим `DataSet`. Несколько факторов и параметров влияют на то, как новые данные объединяются с существующим `DataSet`.  
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Состояния строк и версии строк](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
+ [Состояния и версии строк](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
  [Объекты DataAdapter и DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Извлечение и изменение данных в ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [Извлечение идентификации или значений автонумерации](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  

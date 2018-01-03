@@ -13,18 +13,19 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b60cffd357022454de001986a48ef06bdd1fe3f1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 804acd77887c1cf05caa2004e75ef01110909490
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="aggregate-functions-sqlclient-for-entity-framework"></a>Статистические функции (SqlClient для Entity Framework)
 Поставщик данных .NET Framework для SQL Server (SqlClient) предоставляет агрегатные функции. Агрегатные функции выполняют вычисления на наборе входных значений и возвращают значение. Эти функции находятся в пространстве имен SqlServer, которое доступно при использовании SqlClient. Свойство пространства имен поставщика позволяет платформе Entity Framework узнать, какой префикс используется поставщиком для конкретных конструкций, таких как типы или функции.  
   
  В следующей таблице описаны агрегатные функции SqlClient.  
   
-|Функция|Описание|  
+|Функция|Описание:|  
 |--------------|-----------------|  
 |`AVG(` `expression` `)`|Возвращает среднее значение для значений в коллекции.<br /><br /> Значения NULL не учитываются.<br /><br /> **Аргументы**<br /><br /> `Int32`, `Int64`, `Double`, И `Decimal`.<br /><br /> **Возвращаемое значение**<br /><br /> Тип параметра `expression`.<br /><br /> **Пример**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_AVG](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_avg)]
  [!code-sql[DP EntityServices Concepts#SQLSERVER_AVG](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_avg)]|  
@@ -57,4 +58,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Язык Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
- [Канонические статистические функции](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)
+ [Статистические канонические функции](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)

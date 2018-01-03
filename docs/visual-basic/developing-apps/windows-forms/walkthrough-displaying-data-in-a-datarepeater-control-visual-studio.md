@@ -13,11 +13,11 @@ ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6f0cf690b816d57dc4a2646eb82d649727d033a9
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 93072bf30c8ee2a4a44c4862de0882072c298f8b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>Пошаговое руководство. Отображение данных в элементе управления DataRepeater (Visual Studio)
 Это пошаговое руководство содержит базовый сценарий для отображения связанных данных в элементе управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> от начала и до конца.  
@@ -25,7 +25,7 @@ ms.lasthandoff: 12/09/2017
 ## <a name="prerequisite"></a>Предварительные требования  
  В данном пошаговом руководстве требуется доступ к учебной базе данных Northwind.  
   
- Если база данных не установлена на компьютере разработчика, загрузите ее с веб-узла [Центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=98088). Инструкции см. в разделе [Загрузка примеров баз данных](../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ Если база данных не установлена на компьютере разработчика, загрузите ее с веб-узла [Центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=98088). Инструкции см. в разделе [Загрузка примеров баз данных](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 ## <a name="overview"></a>Обзор  
  Данное пошаговое руководство состоит из четырех основных задач.  
@@ -91,9 +91,9 @@ ms.lasthandoff: 12/09/2017
   
     -   Если подключение к учебной базе данных "Борей" доступно в раскрывающемся списке, то выберите его.  
   
-         -или-  
+         - или -  
   
-    -   Нажмите кнопку **Создать подключение** для создания подключения к данным. Дополнительные сведения см. в разделе [How to: Create Connections to SQL Server Databases](http://msdn.microsoft.com/en-us/360c340d-e5a6-4a7e-a569-e95d500be43d).  
+    -   Нажмите кнопку **Создать подключение** для создания подключения к данным. Дополнительные сведения см. в разделе [Добавление новых подключений](/visualstudio/data-tools/add-new-connections).  
   
 5.  Если базе данных требуется пароль, выберите параметр для включения конфиденциальных данных и щелкните **Далее**.  
   

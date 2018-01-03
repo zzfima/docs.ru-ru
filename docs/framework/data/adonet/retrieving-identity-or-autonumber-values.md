@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1a689bb22fc5bb553084b9d1b1dc60e74e47970c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87da4a20430373d15e433ffa21c1e29bf560ebd7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Извлечение идентификации или значений автонумерации
 Первичным ключом в реляционной базе данных является столбец или сочетание столбцов, которые всегда содержат уникальные значения. Если известно значение первичного ключа, то можно найти строку, которая содержит это значение. Такие СУРБД, как SQL Server, Oracle и Microsoft Access/Jet, поддерживают создание столбцов с автоматически увеличивающимися значениями, которые могут назначаться в качестве первичных ключей. Эти значения формируются сервером по мере добавления строк в таблицу. В SQL Server задается свойство идентификатора столбца, в Oracle создается последовательность Sequence, а в Microsoft Access создается столбец AutoNumber.  
@@ -542,7 +543,7 @@ class Program {
 ## <a name="see-also"></a>См. также  
  [Извлечение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [Объекты DataAdapter и DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Состояния строк и версии строк](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
+ [Состояния и версии строк](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
  [AcceptChanges и RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
  [Слияние содержимого набора данных](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)  
  [Обновление источников данных с объектами DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  

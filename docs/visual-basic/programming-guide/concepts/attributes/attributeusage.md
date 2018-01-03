@@ -12,11 +12,11 @@ ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 29d227cf50fe23d5619bf5fb6f9a598ea78ef077
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 5f358068d00c042a979216cdda51dcc7e07abbc5
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 Определяет, как можно использовать пользовательский класс атрибутов. Атрибут `AttributeUsage` можно применять к пользовательским определениям атрибутов, чтобы контролировать применение нового атрибута. При явном применении параметры по умолчанию выглядят следующим образом:  
@@ -174,7 +174,7 @@ A2
  <xref:System.Attribute>  
  <xref:System.Reflection>  
  [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)  
- [Атрибуты](../../../../../docs/standard/attributes/index.md)  
+ [Атрибуты](../../../../standard/attributes/index.md)  
  [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md) (Отражение (Visual Basic))  
  [Атрибуты (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
  [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Создание настраиваемых атрибутов (Visual Basic))  

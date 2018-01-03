@@ -13,23 +13,24 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4b7c59096f1decc57b5d8aa4194cbb838c358042
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 946ac72dd569e14cec6491f0cd4aff637f298004
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="communicating-with-the-database"></a>Установка связи с базой данных
 В темах этого раздела описываются некоторые основные аспекты по установке и поддержке подключения к базе данных.  
   
-## <a name="in-this-section"></a>Содержание  
- [Как: подключение к базе данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Практическое руководство. Подключение к базе данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md)  
  Содержит сведения по использованию класса <xref:System.Data.Linq.DataContext> для подключения к базе данных.  
   
- [Как: непосредственное выполнение команд SQL](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-commands.md)  
+ [Практическое руководство. Непосредственное выполнение команд SQL](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-commands.md)  
  Содержит сведения по использованию <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> для отправки команд языка SQL.  
   
- [Как: повторного использования подключения между командой ADO.NET и контекстом DataContext](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)  
+ [Практическое руководство. Повторное использование соединения между командой ADO.NET и контекстом DataContext](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)  
  Содержит примеры использования существующих подключений [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] в приложении [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
 ## <a name="see-also"></a>См. также  

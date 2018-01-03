@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e3879d8eeec498f2855ee2b540f77570ee91109f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a2fa902cfbea3c6eb15e1832231bb3ed83de5497
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linq-to-sql-with-tightly-coupled-client-server-applications"></a>LINQ to SQL и тесно связанные клиентские/серверные приложения
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]может использоваться на среднем уровне с тесно связанными интеллектуальными клиентами на уровне представления данных. Реализация сценариев, в которых используется доступ к данным только для чтения и не выполняются проверки оптимистического параллелизма на основе исходных значений или меток времени, представляет собой не более сложную задачу, чем сценарии без удаленного взаимодействия. Однако, если база данных требует выполнения проверки оптимистического параллелизма на основе исходных значений, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не предоставляет того уровня поддержки кругового пути данных, который обеспечивается DataSets. Тем не менее, средний уровень [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] может обмениваться данными с клиентами на любой платформе.  
@@ -26,5 +27,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [N-уровневые и удаленные приложения и LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
- [LINQ to SQL N-уровневые веб-службы](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-web-services.md)  
+ [N-уровневое использование LINQ to SQL с веб-службами](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-web-services.md)  
  [Работа с наборами данных в N-уровневых приложениях](http://msdn.microsoft.com/library/f6ae2ee0-ea5f-4a79-8f4b-e21c115afb20)

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 312324553333427c08acf7ef3eb11059f2224d06
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a3b07d94804741dfbfee508dfb0ce47e2cb47c2a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-identity-foundation-45-overview"></a>Обзор Windows Identity Foundation 4.5
 Windows Identity Foundation 4.5 — это набор классов .NET Framework для реализации в приложениях удостоверений на основе утверждений. С его помощью вам будет гораздо проще воспользоваться преимуществами приложений и служб, поддерживающих утверждения. WIF 4.5 можно использовать в любом веб-приложении или в любой веб-службе, использующей NET Framework 4.5 или более поздней версии. WIF — один из компонентов семейства ПО Microsoft Federated Identity, реализующего общую отраслевую концепцию на основе открытых стандартов. Семейство Federated Identity состоит из трех компонентов: [служб федерации Active Directory®](http://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0, [службы контроля доступа (ACS) Microsoft Azure](http://go.microsoft.com/fwlink/?LinkID=247517) и WIF. В совокупности эти 3 компонента формируют основу новой облачной платформы удостоверений и доступа на основе утверждений.  

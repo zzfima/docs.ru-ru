@@ -19,14 +19,14 @@ ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
 caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: dfdb403519d7e29602fc87445ce32aeb0e55250e
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 97f02fd85d4796d6799a8a5b40a9137eeb79a93f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-basic-naming-conventions"></a>Соглашения об именах Visual Basic
-При задании имени элемента в приложении Visual Basic, первый символ с тем же именем необходимо буквы алфавита или знака подчеркивания. Обратите внимание, что имена, начинающиеся с символа подчеркивания, не совместимы с [независимость от языка и независимые от языка компоненты](../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS).  
+При задании имени элемента в приложении Visual Basic, первый символ с тем же именем необходимо буквы алфавита или знака подчеркивания. Обратите внимание, что имена, начинающиеся с символа подчеркивания, не совместимы с [независимость от языка и независимые от языка компоненты](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
   
  Следующие советы для именования.  
   
