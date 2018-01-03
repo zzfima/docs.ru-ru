@@ -21,16 +21,17 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: df6efbc86ff958cb8a715c81f86ea1112629fe67
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 08644816d3fa11ade5a8ebee1573e8f66d526101
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="enumimporttypes-method"></a><span data-ttu-id="b441b-102">Метод EnumImportTypes</span><span class="sxs-lookup"><span data-stu-id="b441b-102">EnumImportTypes Method</span></span>
-<span data-ttu-id="b441b-103">Выполняет перечисление всех типов в каждой области.</span><span class="sxs-lookup"><span data-stu-id="b441b-103">Enumerates each type in each scope.</span></span>  
+# <a name="enumimporttypes-method"></a><span data-ttu-id="c25b0-102">Метод EnumImportTypes</span><span class="sxs-lookup"><span data-stu-id="c25b0-102">EnumImportTypes Method</span></span>
+<span data-ttu-id="c25b0-103">Выполняет перечисление всех типов в каждой области.</span><span class="sxs-lookup"><span data-stu-id="c25b0-103">Enumerates each type in each scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b441b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b441b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c25b0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c25b0-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumImportTypes(  
@@ -41,26 +42,26 @@ HRESULT EnumImportTypes(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b441b-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="b441b-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c25b0-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="c25b0-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="b441b-106">Дескриптор для перечислителя.</span><span class="sxs-lookup"><span data-stu-id="b441b-106">Handle for enumerator.</span></span>  
+ <span data-ttu-id="c25b0-106">Дескриптор для перечислителя.</span><span class="sxs-lookup"><span data-stu-id="c25b0-106">Handle for enumerator.</span></span>  
   
  `dwMax`  
- <span data-ttu-id="b441b-107">Максимальное число извлекаемых типов.</span><span class="sxs-lookup"><span data-stu-id="b441b-107">Maximum number of types to retrieve.</span></span>  
+ <span data-ttu-id="c25b0-107">Максимальное число извлекаемых типов.</span><span class="sxs-lookup"><span data-stu-id="c25b0-107">Maximum number of types to retrieve.</span></span>  
   
  `aTypeDefs`  
- <span data-ttu-id="b441b-108">Получает маркеры не должно превышать типа `dwMax`.</span><span class="sxs-lookup"><span data-stu-id="b441b-108">Recieves type tokens, not to exceed `dwMax`.</span></span>  
+ <span data-ttu-id="c25b0-108">Получает маркеры не должно превышать типа `dwMax`.</span><span class="sxs-lookup"><span data-stu-id="c25b0-108">Recieves type tokens, not to exceed `dwMax`.</span></span>  
   
  `pdwCount`  
- <span data-ttu-id="b441b-109">Получает фактическое число типов в `aTypeDefs`.</span><span class="sxs-lookup"><span data-stu-id="b441b-109">Receives actual number of type in `aTypeDefs`.</span></span>  
+ <span data-ttu-id="c25b0-109">Получает фактическое число типов в `aTypeDefs`.</span><span class="sxs-lookup"><span data-stu-id="c25b0-109">Receives actual number of type in `aTypeDefs`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b441b-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="b441b-110">Return Value</span></span>  
- <span data-ttu-id="b441b-111">Возвращает значение S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="b441b-111">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c25b0-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="c25b0-110">Return Value</span></span>  
+ <span data-ttu-id="c25b0-111">Возвращает значение S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="c25b0-111">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b441b-112">Требования</span><span class="sxs-lookup"><span data-stu-id="b441b-112">Requirements</span></span>  
- <span data-ttu-id="b441b-113">Требуется alink.h</span><span class="sxs-lookup"><span data-stu-id="b441b-113">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c25b0-112">Требования</span><span class="sxs-lookup"><span data-stu-id="c25b0-112">Requirements</span></span>  
+ <span data-ttu-id="c25b0-113">Требуется alink.h</span><span class="sxs-lookup"><span data-stu-id="c25b0-113">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b441b-114">См. также</span><span class="sxs-lookup"><span data-stu-id="b441b-114">See Also</span></span>  
- [<span data-ttu-id="b441b-115">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="b441b-115">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="b441b-116">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="b441b-116">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="b441b-117">ALink-интерфейс API</span><span class="sxs-lookup"><span data-stu-id="b441b-117">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="c25b0-114">См. также</span><span class="sxs-lookup"><span data-stu-id="c25b0-114">See Also</span></span>  
+ [<span data-ttu-id="c25b0-115">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="c25b0-115">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [<span data-ttu-id="c25b0-116">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="c25b0-116">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [<span data-ttu-id="c25b0-117">API ALink</span><span class="sxs-lookup"><span data-stu-id="c25b0-117">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

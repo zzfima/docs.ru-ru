@@ -21,16 +21,17 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cd0e55cab6f0fdb7f971d7cf06e5703340e32307
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4d8827821deaeda311a42855737ecf53ab635a02
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="addimport-method1"></a><span data-ttu-id="27cec-102">Метод AddImport 1</span><span class="sxs-lookup"><span data-stu-id="27cec-102">AddImport Method1</span></span>
-<span data-ttu-id="27cec-103">Добавляет импортирует в сборку.</span><span class="sxs-lookup"><span data-stu-id="27cec-103">Adds imports to the assembly.</span></span>  
+# <a name="addimport-method1"></a><span data-ttu-id="e0e1b-102">Метод AddImport 1</span><span class="sxs-lookup"><span data-stu-id="e0e1b-102">AddImport Method1</span></span>
+<span data-ttu-id="e0e1b-103">Добавляет импортирует в сборку.</span><span class="sxs-lookup"><span data-stu-id="e0e1b-103">Adds imports to the assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="27cec-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="27cec-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e0e1b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e0e1b-104">Syntax</span></span>  
   
 ```  
 HRESULT AddImport(  
@@ -41,26 +42,26 @@ HRESULT AddImport(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="27cec-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="27cec-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e0e1b-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="e0e1b-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="27cec-106">Уникальный идентификатор сборки, которую необходимо дополнить.</span><span class="sxs-lookup"><span data-stu-id="27cec-106">Unique ID of assembly to be augmented.</span></span>  
+ <span data-ttu-id="e0e1b-106">Уникальный идентификатор сборки, которую необходимо дополнить.</span><span class="sxs-lookup"><span data-stu-id="e0e1b-106">Unique ID of assembly to be augmented.</span></span>  
   
  `ImportToken`  
- <span data-ttu-id="27cec-107">Уникальный идентификатор, извлеченный из [метод ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), файла для импорта.</span><span class="sxs-lookup"><span data-stu-id="27cec-107">Unique ID, retrieved from [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), of file to be imported.</span></span>  
+ <span data-ttu-id="e0e1b-107">Уникальный идентификатор, извлеченный из [метод ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), файла для импорта.</span><span class="sxs-lookup"><span data-stu-id="e0e1b-107">Unique ID, retrieved from [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), of file to be imported.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="27cec-108">Флаги FileDef COM +, таких как `ffContainsNoMetaData` и `ffWriteable`.</span><span class="sxs-lookup"><span data-stu-id="27cec-108">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> <span data-ttu-id="27cec-109">`dwFlags`передается [метод DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span><span class="sxs-lookup"><span data-stu-id="27cec-109">`dwFlags` is passed to [DefineFile Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
+ <span data-ttu-id="e0e1b-108">Флаги FileDef COM +, таких как `ffContainsNoMetaData` и `ffWriteable`.</span><span class="sxs-lookup"><span data-stu-id="e0e1b-108">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> <span data-ttu-id="e0e1b-109">`dwFlags`передается [метод DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span><span class="sxs-lookup"><span data-stu-id="e0e1b-109">`dwFlags` is passed to [DefineFile Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
   
  `pFileToken`  
- <span data-ttu-id="27cec-110">Указатель на маркер, который получает идентификатор для результирующего файла.</span><span class="sxs-lookup"><span data-stu-id="27cec-110">Pointer to token that receives the ID for the resulting file.</span></span>  
+ <span data-ttu-id="e0e1b-110">Указатель на маркер, который получает идентификатор для результирующего файла.</span><span class="sxs-lookup"><span data-stu-id="e0e1b-110">Pointer to token that receives the ID for the resulting file.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="27cec-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="27cec-111">Return Value</span></span>  
- <span data-ttu-id="27cec-112">Возвращает значение S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="27cec-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e0e1b-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="e0e1b-111">Return Value</span></span>  
+ <span data-ttu-id="e0e1b-112">Возвращает значение S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="e0e1b-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="27cec-113">Требования</span><span class="sxs-lookup"><span data-stu-id="27cec-113">Requirements</span></span>  
- <span data-ttu-id="27cec-114">Требуется alink.h</span><span class="sxs-lookup"><span data-stu-id="27cec-114">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e0e1b-113">Требования</span><span class="sxs-lookup"><span data-stu-id="e0e1b-113">Requirements</span></span>  
+ <span data-ttu-id="e0e1b-114">Требуется alink.h</span><span class="sxs-lookup"><span data-stu-id="e0e1b-114">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="27cec-115">См. также</span><span class="sxs-lookup"><span data-stu-id="27cec-115">See Also</span></span>  
- [<span data-ttu-id="27cec-116">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="27cec-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="27cec-117">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="27cec-117">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="27cec-118">ALink-интерфейс API</span><span class="sxs-lookup"><span data-stu-id="27cec-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="e0e1b-115">См. также</span><span class="sxs-lookup"><span data-stu-id="e0e1b-115">See Also</span></span>  
+ [<span data-ttu-id="e0e1b-116">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="e0e1b-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [<span data-ttu-id="e0e1b-117">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="e0e1b-117">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [<span data-ttu-id="e0e1b-118">API ALink</span><span class="sxs-lookup"><span data-stu-id="e0e1b-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

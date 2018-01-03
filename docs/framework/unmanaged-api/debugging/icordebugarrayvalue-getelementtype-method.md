@@ -21,16 +21,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f225dd26376d511518900c38e13d74503004da17
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 17c1d51c01614a25d52f90557bb10b6842419995
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugarrayvaluegetelementtype-method"></a><span data-ttu-id="f01d3-102">Метод ICorDebugArrayValue::GetElementType</span><span class="sxs-lookup"><span data-stu-id="f01d3-102">ICorDebugArrayValue::GetElementType Method</span></span>
-<span data-ttu-id="f01d3-103">Возвращает значение, указывающее простой тип элементов в массиве.</span><span class="sxs-lookup"><span data-stu-id="f01d3-103">Gets a value that indicates the simple type of the elements in the array.</span></span>  
+# <a name="icordebugarrayvaluegetelementtype-method"></a><span data-ttu-id="69326-102">Метод ICorDebugArrayValue::GetElementType</span><span class="sxs-lookup"><span data-stu-id="69326-102">ICorDebugArrayValue::GetElementType Method</span></span>
+<span data-ttu-id="69326-103">Возвращает значение, указывающее простой тип элементов в массиве.</span><span class="sxs-lookup"><span data-stu-id="69326-103">Gets a value that indicates the simple type of the elements in the array.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f01d3-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f01d3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="69326-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="69326-104">Syntax</span></span>  
   
 ```  
 HRESULT GetElementType (  
@@ -38,15 +39,15 @@ HRESULT GetElementType (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f01d3-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f01d3-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="69326-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="69326-105">Parameters</span></span>  
  `pType`  
- <span data-ttu-id="f01d3-106">[out] Указатель на значение CorElementType перечисление, указывающее тип.</span><span class="sxs-lookup"><span data-stu-id="f01d3-106">[out] A pointer to a value of the CorElementType enumeration that indicates the type.</span></span>  
+ <span data-ttu-id="69326-106">[out] Указатель на значение CorElementType перечисление, указывающее тип.</span><span class="sxs-lookup"><span data-stu-id="69326-106">[out] A pointer to a value of the CorElementType enumeration that indicates the type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f01d3-107">Требования</span><span class="sxs-lookup"><span data-stu-id="f01d3-107">Requirements</span></span>  
- <span data-ttu-id="f01d3-108">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f01d3-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="69326-107">Требования</span><span class="sxs-lookup"><span data-stu-id="69326-107">Requirements</span></span>  
+ <span data-ttu-id="69326-108">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="69326-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f01d3-109">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f01d3-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="69326-109">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="69326-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f01d3-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f01d3-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="69326-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="69326-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f01d3-111">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f01d3-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="69326-111">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="69326-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

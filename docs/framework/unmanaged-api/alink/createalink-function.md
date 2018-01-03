@@ -21,16 +21,17 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a102e9601f751ee8c7e325293e83467b1314ff41
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 54a5afd8ee42fa122f3e18415be0b1d06c2f9302
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="createalink-function"></a><span data-ttu-id="5cc61-102">Функция CreateALink</span><span class="sxs-lookup"><span data-stu-id="5cc61-102">CreateALink Function</span></span>
-<span data-ttu-id="5cc61-103">Создает экземпляр компоновщика сборок и задает указатель для указанного интерфейса.</span><span class="sxs-lookup"><span data-stu-id="5cc61-103">Creates an instance of the Assembly Linker and sets a pointer to the specified interface.</span></span>  
+# <a name="createalink-function"></a><span data-ttu-id="cad9a-102">Функция CreateALink</span><span class="sxs-lookup"><span data-stu-id="cad9a-102">CreateALink Function</span></span>
+<span data-ttu-id="cad9a-103">Создает экземпляр компоновщика сборок и задает указатель для указанного интерфейса.</span><span class="sxs-lookup"><span data-stu-id="cad9a-103">Creates an instance of the Assembly Linker and sets a pointer to the specified interface.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5cc61-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5cc61-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cad9a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="cad9a-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateALink (  
@@ -39,15 +40,15 @@ HRESULT CreateALink (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5cc61-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="5cc61-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="cad9a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="cad9a-105">Parameters</span></span>  
   
-|<span data-ttu-id="5cc61-106">Параметр</span><span class="sxs-lookup"><span data-stu-id="5cc61-106">Parameter</span></span>|<span data-ttu-id="5cc61-107">Описание</span><span class="sxs-lookup"><span data-stu-id="5cc61-107">Description</span></span>|  
+|<span data-ttu-id="cad9a-106">Параметр</span><span class="sxs-lookup"><span data-stu-id="cad9a-106">Parameter</span></span>|<span data-ttu-id="cad9a-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="cad9a-107">Description</span></span>|  
 |---------------|-----------------|  
-|`riid`|<span data-ttu-id="5cc61-108">Физическое имя одного из интерфейсов компоновщика сборок.</span><span class="sxs-lookup"><span data-stu-id="5cc61-108">The physical name of one of the Assembly Linker interfaces.</span></span>|  
-|`ppInterface`|<span data-ttu-id="5cc61-109">Расположение, которое при успешном завершении содержит указатель на `riid` интерфейса.</span><span class="sxs-lookup"><span data-stu-id="5cc61-109">The location that on successful completion contains a pointer to the `riid` interface.</span></span>|  
+|`riid`|<span data-ttu-id="cad9a-108">Физическое имя одного из интерфейсов компоновщика сборок.</span><span class="sxs-lookup"><span data-stu-id="cad9a-108">The physical name of one of the Assembly Linker interfaces.</span></span>|  
+|`ppInterface`|<span data-ttu-id="cad9a-109">Расположение, которое при успешном завершении содержит указатель на `riid` интерфейса.</span><span class="sxs-lookup"><span data-stu-id="cad9a-109">The location that on successful completion contains a pointer to the `riid` interface.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5cc61-110">Требования</span><span class="sxs-lookup"><span data-stu-id="5cc61-110">Requirements</span></span>  
- <span data-ttu-id="5cc61-111">**Библиотека**: alink.dll</span><span class="sxs-lookup"><span data-stu-id="5cc61-111">**Library**: alink.dll</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cad9a-110">Требования</span><span class="sxs-lookup"><span data-stu-id="cad9a-110">Requirements</span></span>  
+ <span data-ttu-id="cad9a-111">**Библиотека**: alink.dll</span><span class="sxs-lookup"><span data-stu-id="cad9a-111">**Library**: alink.dll</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5cc61-112">См. также</span><span class="sxs-lookup"><span data-stu-id="5cc61-112">See Also</span></span>  
- [<span data-ttu-id="5cc61-113">Al.exe (компоновщик сборок)</span><span class="sxs-lookup"><span data-stu-id="5cc61-113">Al.exe (Assembly Linker)</span></span>](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a><span data-ttu-id="cad9a-112">См. также</span><span class="sxs-lookup"><span data-stu-id="cad9a-112">See Also</span></span>  
+ [<span data-ttu-id="cad9a-113">Al.exe (компоновщик сборок)</span><span class="sxs-lookup"><span data-stu-id="cad9a-113">Al.exe (Assembly Linker)</span></span>](../../../../docs/framework/tools/al-exe-assembly-linker.md)

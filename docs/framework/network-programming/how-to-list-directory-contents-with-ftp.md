@@ -12,16 +12,17 @@ caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f5f74b215fb753d8d5a12a3e203b8598fc258053
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b3c0a5090709999ee5ab17e857bb5334d6982954
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-list-directory-contents-with-ftp"></a><span data-ttu-id="13525-102">Практическое руководство. Список содержимого каталога с помощью FTP</span><span class="sxs-lookup"><span data-stu-id="13525-102">How to: List Directory Contents with FTP</span></span>
-<span data-ttu-id="13525-103">В этом примере показано, как вывести содержимое каталога на FTP-сервере.</span><span class="sxs-lookup"><span data-stu-id="13525-103">This sample shows how to list the directory contents of an FTP server.</span></span>  
+# <a name="how-to-list-directory-contents-with-ftp"></a><span data-ttu-id="413aa-102">Практическое руководство. Список содержимого каталога с помощью FTP</span><span class="sxs-lookup"><span data-stu-id="413aa-102">How to: List Directory Contents with FTP</span></span>
+<span data-ttu-id="413aa-103">В этом примере показано, как вывести содержимое каталога на FTP-сервере.</span><span class="sxs-lookup"><span data-stu-id="413aa-103">This sample shows how to list the directory contents of an FTP server.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="13525-104">Пример</span><span class="sxs-lookup"><span data-stu-id="13525-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="413aa-104">Пример</span><span class="sxs-lookup"><span data-stu-id="413aa-104">Example</span></span>  
   
 ```csharp  
 using System;  
@@ -57,11 +58,11 @@ namespace Examples.System.Net
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="13525-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="13525-105">Compiling the Code</span></span>  
- <span data-ttu-id="13525-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="13525-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="413aa-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="413aa-105">Compiling the Code</span></span>  
+ <span data-ttu-id="413aa-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="413aa-106">This example requires:</span></span>  
   
--   <span data-ttu-id="13525-107">Ссылки на пространство имен **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="13525-107">References to the **System.Net** namespace.</span></span>  
+-   <span data-ttu-id="413aa-107">Ссылки на пространство имен **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="413aa-107">References to the **System.Net** namespace.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="13525-108">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="13525-108">Robust Programming</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="413aa-108">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="413aa-108">Robust Programming</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="13525-109">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="13525-109">.NET Framework Security</span></span>
+## <a name="net-framework-security"></a><span data-ttu-id="413aa-109">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="413aa-109">.NET Framework Security</span></span>

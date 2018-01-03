@@ -21,16 +21,17 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 69b1d7d02031e23571a7a5d0e5c64e6bea66d636
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9dccf5308216fbeda80213fecf0f7065f3dbe9d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugappdomaingetmodulefrommetadatainterface-method"></a><span data-ttu-id="a5b28-102">Метод ICorDebugAppDomain::GetModuleFromMetaDataInterface</span><span class="sxs-lookup"><span data-stu-id="a5b28-102">ICorDebugAppDomain::GetModuleFromMetaDataInterface Method</span></span>
-<span data-ttu-id="a5b28-103">Возвращает модуль, соответствующий данному интерфейсу метаданных.</span><span class="sxs-lookup"><span data-stu-id="a5b28-103">Gets the module that corresponds to the given metadata interface.</span></span>  
+# <a name="icordebugappdomaingetmodulefrommetadatainterface-method"></a><span data-ttu-id="43e4e-102">Метод ICorDebugAppDomain::GetModuleFromMetaDataInterface</span><span class="sxs-lookup"><span data-stu-id="43e4e-102">ICorDebugAppDomain::GetModuleFromMetaDataInterface Method</span></span>
+<span data-ttu-id="43e4e-103">Возвращает модуль, соответствующий данному интерфейсу метаданных.</span><span class="sxs-lookup"><span data-stu-id="43e4e-103">Gets the module that corresponds to the given metadata interface.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a5b28-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a5b28-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="43e4e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="43e4e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetModuleFromMetaDataInterface (  
@@ -39,18 +40,18 @@ HRESULT GetModuleFromMetaDataInterface (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a5b28-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a5b28-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="43e4e-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="43e4e-105">Parameters</span></span>  
  `pIMetaData`  
- <span data-ttu-id="a5b28-106">[in] Указатель на объект, который является одним из [интерфейсы метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).</span><span class="sxs-lookup"><span data-stu-id="a5b28-106">[in] A pointer to an object that is one of the [Metadata interfaces](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).</span></span>  
+ <span data-ttu-id="43e4e-106">[in] Указатель на объект, который является одним из [интерфейсы метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).</span><span class="sxs-lookup"><span data-stu-id="43e4e-106">[in] A pointer to an object that is one of the [Metadata interfaces](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).</span></span>  
   
  `ppModule`  
- <span data-ttu-id="a5b28-107">[out] Указатель на адрес объекта ICorDebugModule, который представляет модуль, соответствующий данному интерфейсу метаданных.</span><span class="sxs-lookup"><span data-stu-id="a5b28-107">[out] A pointer to the address of an ICorDebugModule object that represents the module corresponding to the given metadata interface.</span></span>  
+ <span data-ttu-id="43e4e-107">[out] Указатель на адрес объекта ICorDebugModule, который представляет модуль, соответствующий данному интерфейсу метаданных.</span><span class="sxs-lookup"><span data-stu-id="43e4e-107">[out] A pointer to the address of an ICorDebugModule object that represents the module corresponding to the given metadata interface.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a5b28-108">Требования</span><span class="sxs-lookup"><span data-stu-id="a5b28-108">Requirements</span></span>  
- <span data-ttu-id="a5b28-109">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a5b28-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="43e4e-108">Требования</span><span class="sxs-lookup"><span data-stu-id="43e4e-108">Requirements</span></span>  
+ <span data-ttu-id="43e4e-109">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="43e4e-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a5b28-110">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a5b28-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="43e4e-110">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="43e4e-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a5b28-111">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a5b28-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="43e4e-111">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="43e4e-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a5b28-112">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a5b28-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="43e4e-112">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="43e4e-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
