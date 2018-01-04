@@ -15,27 +15,28 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 37a811f8c3d4e7da82c24fa8f2147ee4cafe64c6
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0bdd08efff930b2ddb8b985376992dd895067cfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="events-how-to-topics"></a><span data-ttu-id="168c5-102">Разделы руководства, посвященные событиям</span><span class="sxs-lookup"><span data-stu-id="168c5-102">Events How-to Topics</span></span>
-<span data-ttu-id="168c5-103">В этом разделе описываются способы использования событий в WPF.</span><span class="sxs-lookup"><span data-stu-id="168c5-103">The topics in this section describe how to use events in WPF.</span></span>  
+# <a name="events-how-to-topics"></a><span data-ttu-id="8185f-102">Разделы руководства, посвященные событиям</span><span class="sxs-lookup"><span data-stu-id="8185f-102">Events How-to Topics</span></span>
+<span data-ttu-id="8185f-103">В этом разделе описываются способы использования событий в WPF.</span><span class="sxs-lookup"><span data-stu-id="8185f-103">The topics in this section describe how to use events in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="168c5-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="168c5-104">In This Section</span></span>  
- [<span data-ttu-id="168c5-105">Добавление обработчика событий с помощью кода</span><span class="sxs-lookup"><span data-stu-id="168c5-105">Add an Event Handler Using Code</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)  
- [<span data-ttu-id="168c5-106">Обработка перенаправленных событий</span><span class="sxs-lookup"><span data-stu-id="168c5-106">Handle a Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
- [<span data-ttu-id="168c5-107">Создание пользовательских перенаправленных событий</span><span class="sxs-lookup"><span data-stu-id="168c5-107">Create a Custom Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  
- [<span data-ttu-id="168c5-108">Поиск элемента источника в обработчике событий</span><span class="sxs-lookup"><span data-stu-id="168c5-108">Find the Source Element in an Event Handler</span></span>](../../../../docs/framework/wpf/advanced/how-to-find-the-source-element-in-an-event-handler.md)  
- [<span data-ttu-id="168c5-109">Добавление обработки классов для перенаправленных событий</span><span class="sxs-lookup"><span data-stu-id="168c5-109">Add Class Handling for a Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-class-handling-for-a-routed-event.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8185f-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="8185f-104">In This Section</span></span>  
+ [<span data-ttu-id="8185f-105">Добавление обработчика событий с помощью кода</span><span class="sxs-lookup"><span data-stu-id="8185f-105">Add an Event Handler Using Code</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)  
+ [<span data-ttu-id="8185f-106">Обработка перенаправленных событий</span><span class="sxs-lookup"><span data-stu-id="8185f-106">Handle a Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
+ [<span data-ttu-id="8185f-107">Создание пользовательских перенаправленных событий</span><span class="sxs-lookup"><span data-stu-id="8185f-107">Create a Custom Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  
+ [<span data-ttu-id="8185f-108">Поиск элемента источника в обработчике событий</span><span class="sxs-lookup"><span data-stu-id="8185f-108">Find the Source Element in an Event Handler</span></span>](../../../../docs/framework/wpf/advanced/how-to-find-the-source-element-in-an-event-handler.md)  
+ [<span data-ttu-id="8185f-109">Добавление обработки классов для перенаправленных событий</span><span class="sxs-lookup"><span data-stu-id="8185f-109">Add Class Handling for a Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-class-handling-for-a-routed-event.md)  
   
-## <a name="reference"></a><span data-ttu-id="168c5-110">Ссылка</span><span class="sxs-lookup"><span data-stu-id="168c5-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="8185f-110">Ссылка</span><span class="sxs-lookup"><span data-stu-id="8185f-110">Reference</span></span>  
  <xref:System.Windows.RoutedEvent>  
   
  <xref:System.Windows.EventManager>  
   
  <xref:System.Windows.RoutingStrategy>  
   
-## <a name="related-sections"></a><span data-ttu-id="168c5-111">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="168c5-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="8185f-111">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="8185f-111">Related Sections</span></span>

@@ -20,39 +20,40 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7f81cf7df0272a1b90de77332712b3b8a9e202de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e1b34881b86d9962603118b93c9dc5d866794397
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a><span data-ttu-id="91552-102">Практическое руководство. Выполнение пользовательских действий в ответ на изменение состояния ячеек элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="91552-102">How to: Perform a Custom Action Based on Changes in a Cell of a Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="91552-103"><xref:System.Windows.Forms.DataGridView> Управления имеет ряд событий, которые можно использовать для обнаружения изменений в состояние <xref:System.Windows.Forms.DataGridView> ячеек.</span><span class="sxs-lookup"><span data-stu-id="91552-103">The <xref:System.Windows.Forms.DataGridView> control has a number of events you can use to detect changes in the state of <xref:System.Windows.Forms.DataGridView> cells.</span></span> <span data-ttu-id="91552-104">Два наиболее часто используемых являются <xref:System.Windows.Forms.DataGridView.CellValueChanged> и <xref:System.Windows.Forms.DataGridView.CellStateChanged> события.</span><span class="sxs-lookup"><span data-stu-id="91552-104">Two of the most commonly used are the <xref:System.Windows.Forms.DataGridView.CellValueChanged> and <xref:System.Windows.Forms.DataGridView.CellStateChanged> events.</span></span>  
+# <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a><span data-ttu-id="be4bc-102">Практическое руководство. Выполнение пользовательских действий в ответ на изменение состояния ячеек элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="be4bc-102">How to: Perform a Custom Action Based on Changes in a Cell of a Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="be4bc-103"><xref:System.Windows.Forms.DataGridView> Управления имеет ряд событий, которые можно использовать для обнаружения изменений в состояние <xref:System.Windows.Forms.DataGridView> ячеек.</span><span class="sxs-lookup"><span data-stu-id="be4bc-103">The <xref:System.Windows.Forms.DataGridView> control has a number of events you can use to detect changes in the state of <xref:System.Windows.Forms.DataGridView> cells.</span></span> <span data-ttu-id="be4bc-104">Два наиболее часто используемых являются <xref:System.Windows.Forms.DataGridView.CellValueChanged> и <xref:System.Windows.Forms.DataGridView.CellStateChanged> события.</span><span class="sxs-lookup"><span data-stu-id="be4bc-104">Two of the most commonly used are the <xref:System.Windows.Forms.DataGridView.CellValueChanged> and <xref:System.Windows.Forms.DataGridView.CellStateChanged> events.</span></span>  
   
-### <a name="to-detect-changes-in-the-values-of-datagridview-cells"></a><span data-ttu-id="91552-105">Для обнаружения изменений в значения ячеек элемента управления DataGridView</span><span class="sxs-lookup"><span data-stu-id="91552-105">To detect changes in the values of DataGridView cells</span></span>  
+### <a name="to-detect-changes-in-the-values-of-datagridview-cells"></a><span data-ttu-id="be4bc-105">Для обнаружения изменений в значения ячеек элемента управления DataGridView</span><span class="sxs-lookup"><span data-stu-id="be4bc-105">To detect changes in the values of DataGridView cells</span></span>  
   
--   <span data-ttu-id="91552-106">Написание обработчика для <xref:System.Windows.Forms.DataGridView.CellValueChanged> события.</span><span class="sxs-lookup"><span data-stu-id="91552-106">Write a handler for the <xref:System.Windows.Forms.DataGridView.CellValueChanged> event.</span></span>  
+-   <span data-ttu-id="be4bc-106">Написание обработчика для <xref:System.Windows.Forms.DataGridView.CellValueChanged> события.</span><span class="sxs-lookup"><span data-stu-id="be4bc-106">Write a handler for the <xref:System.Windows.Forms.DataGridView.CellValueChanged> event.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#130](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#130)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#130](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#130)]  
   
-### <a name="to-detect-changes-in-the-states-of-datagridview-cells"></a><span data-ttu-id="91552-107">Для обнаружения изменений в состоянии ячеек элемента управления DataGridView</span><span class="sxs-lookup"><span data-stu-id="91552-107">To detect changes in the states of DataGridView cells</span></span>  
+### <a name="to-detect-changes-in-the-states-of-datagridview-cells"></a><span data-ttu-id="be4bc-107">Для обнаружения изменений в состоянии ячеек элемента управления DataGridView</span><span class="sxs-lookup"><span data-stu-id="be4bc-107">To detect changes in the states of DataGridView cells</span></span>  
   
--   <span data-ttu-id="91552-108">Написание обработчика для <xref:System.Windows.Forms.DataGridView.CellStateChanged> события.</span><span class="sxs-lookup"><span data-stu-id="91552-108">Write a handler for the <xref:System.Windows.Forms.DataGridView.CellStateChanged> event.</span></span>  
+-   <span data-ttu-id="be4bc-108">Написание обработчика для <xref:System.Windows.Forms.DataGridView.CellStateChanged> события.</span><span class="sxs-lookup"><span data-stu-id="be4bc-108">Write a handler for the <xref:System.Windows.Forms.DataGridView.CellStateChanged> event.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#135](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#135)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#135](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#135)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="91552-109">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="91552-109">Compiling the Code</span></span>  
- <span data-ttu-id="91552-110">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="91552-110">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="be4bc-109">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="be4bc-109">Compiling the Code</span></span>  
+ <span data-ttu-id="be4bc-110">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="be4bc-110">This example requires:</span></span>  
   
--   <span data-ttu-id="91552-111">элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`;</span><span class="sxs-lookup"><span data-stu-id="91552-111">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span> <span data-ttu-id="91552-112">Для C# обработчик событий должен быть подключен с соответствующими событиями.</span><span class="sxs-lookup"><span data-stu-id="91552-112">For C#, the event handlers must be connected to the corresponding events.</span></span>  
+-   <span data-ttu-id="be4bc-111">элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`;</span><span class="sxs-lookup"><span data-stu-id="be4bc-111">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span> <span data-ttu-id="be4bc-112">Для C# обработчик событий должен быть подключен с соответствующими событиями.</span><span class="sxs-lookup"><span data-stu-id="be4bc-112">For C#, the event handlers must be connected to the corresponding events.</span></span>  
   
--   <span data-ttu-id="91552-113">ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="91552-113">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
+-   <span data-ttu-id="be4bc-113">ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="be4bc-113">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="91552-114">См. также</span><span class="sxs-lookup"><span data-stu-id="91552-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="be4bc-114">См. также</span><span class="sxs-lookup"><span data-stu-id="be4bc-114">See Also</span></span>  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.CellValueChanged?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridView.CellStateChanged?displayProperty=nameWithType>  
- [<span data-ttu-id="91552-115">Программирование с использованием ячеек, строк и столбцов в элементе управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="91552-115">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
- [<span data-ttu-id="91552-116">Пример. Проверка данных элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="91552-116">Walkthrough: Validating Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+ [<span data-ttu-id="be4bc-115">Программирование с использованием ячеек, строк и столбцов в элементе управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="be4bc-115">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
+ [<span data-ttu-id="be4bc-116">Пример. Проверка данных элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="be4bc-116">Walkthrough: Validating Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)

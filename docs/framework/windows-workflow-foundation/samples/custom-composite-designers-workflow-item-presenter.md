@@ -12,31 +12,32 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bba89e9da78fd96d0cd7d61e825e4792729bae5b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b529d1c150f686fb4a39f968001c9ac03c7c1dc0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="custom-composite-designers---workflow-item-presenter"></a><span data-ttu-id="998d7-102">Пользовательские составные конструкторы - средство представления элементов рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="998d7-102">Custom Composite Designers - Workflow Item Presenter</span></span>
-<span data-ttu-id="998d7-103"><xref:System.Activities.Presentation.WorkflowItemPresenter> Является ключевым типом в модели программирования конструктора WF, позволяющей создавать «зону сброса» где могут размещаться произвольные действия.</span><span class="sxs-lookup"><span data-stu-id="998d7-103">The <xref:System.Activities.Presentation.WorkflowItemPresenter> is a key type in the WF designer programming model that allows for the creation of a "drop zone" where an arbitrary activity can be placed.</span></span> <span data-ttu-id="998d7-104">В этом примере показано, как построить конструктор действий, который предоставляет доступ к «зону перетаскивания.»</span><span class="sxs-lookup"><span data-stu-id="998d7-104">This sample shows how to build an activity designer that surfaces such a "drop zone."</span></span>  
+# <a name="custom-composite-designers---workflow-item-presenter"></a><span data-ttu-id="c9ff0-102">Пользовательские составные конструкторы - средство представления элементов рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="c9ff0-102">Custom Composite Designers - Workflow Item Presenter</span></span>
+<span data-ttu-id="c9ff0-103"><xref:System.Activities.Presentation.WorkflowItemPresenter> Является ключевым типом в модели программирования конструктора WF, позволяющей создавать «зону сброса» где могут размещаться произвольные действия.</span><span class="sxs-lookup"><span data-stu-id="c9ff0-103">The <xref:System.Activities.Presentation.WorkflowItemPresenter> is a key type in the WF designer programming model that allows for the creation of a "drop zone" where an arbitrary activity can be placed.</span></span> <span data-ttu-id="c9ff0-104">В этом примере показано, как построить конструктор действий, который предоставляет доступ к «зону перетаскивания.»</span><span class="sxs-lookup"><span data-stu-id="c9ff0-104">This sample shows how to build an activity designer that surfaces such a "drop zone."</span></span>  
   
- <span data-ttu-id="998d7-105">В этом образце показаны следующие действия.</span><span class="sxs-lookup"><span data-stu-id="998d7-105">This sample demonstrates:</span></span>  
+ <span data-ttu-id="c9ff0-105">В этом образце показаны следующие действия.</span><span class="sxs-lookup"><span data-stu-id="c9ff0-105">This sample demonstrates:</span></span>  
   
-## <a name="demonstrates"></a><span data-ttu-id="998d7-106">Демонстрации</span><span class="sxs-lookup"><span data-stu-id="998d7-106">Demonstrates</span></span>  
+## <a name="demonstrates"></a><span data-ttu-id="c9ff0-106">Демонстрации</span><span class="sxs-lookup"><span data-stu-id="c9ff0-106">Demonstrates</span></span>  
   
--   <span data-ttu-id="998d7-107">Создание настраиваемого конструктора действий с <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span><span class="sxs-lookup"><span data-stu-id="998d7-107">Creating a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>  
+-   <span data-ttu-id="c9ff0-107">Создание настраиваемого конструктора действий с <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span><span class="sxs-lookup"><span data-stu-id="c9ff0-107">Creating a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>  
   
--   <span data-ttu-id="998d7-108">Регистрация пользовательского конструктора с использованием хранилища метаданных.</span><span class="sxs-lookup"><span data-stu-id="998d7-108">Registering the custom designer using the metadata store.</span></span>  
+-   <span data-ttu-id="c9ff0-108">Регистрация пользовательского конструктора с использованием хранилища метаданных.</span><span class="sxs-lookup"><span data-stu-id="c9ff0-108">Registering the custom designer using the metadata store.</span></span>  
   
--   <span data-ttu-id="998d7-109">Программирование повторно размещенной области элементов декларативно и принудительно.</span><span class="sxs-lookup"><span data-stu-id="998d7-109">Programming the rehosted toolbox declaratively and imperatively.</span></span>  
+-   <span data-ttu-id="c9ff0-109">Программирование повторно размещенной области элементов декларативно и принудительно.</span><span class="sxs-lookup"><span data-stu-id="c9ff0-109">Programming the rehosted toolbox declaratively and imperatively.</span></span>  
   
-## <a name="sample-details"></a><span data-ttu-id="998d7-110">Подробные сведения об образце</span><span class="sxs-lookup"><span data-stu-id="998d7-110">Sample Details</span></span>  
- <span data-ttu-id="998d7-111">Код для этого образца показывает следующее:</span><span class="sxs-lookup"><span data-stu-id="998d7-111">The code for this sample shows:</span></span>  
+## <a name="sample-details"></a><span data-ttu-id="c9ff0-110">Подробные сведения об образце</span><span class="sxs-lookup"><span data-stu-id="c9ff0-110">Sample Details</span></span>  
+ <span data-ttu-id="c9ff0-111">Код для этого образца показывает следующее:</span><span class="sxs-lookup"><span data-stu-id="c9ff0-111">The code for this sample shows:</span></span>  
   
--   <span data-ttu-id="998d7-112">Для класса `SimpleNativeActivity` создается конструктор пользовательских действий.</span><span class="sxs-lookup"><span data-stu-id="998d7-112">The custom activity designer is built for the `SimpleNativeActivity` class.</span></span>  
+-   <span data-ttu-id="c9ff0-112">Для класса `SimpleNativeActivity` создается конструктор пользовательских действий.</span><span class="sxs-lookup"><span data-stu-id="c9ff0-112">The custom activity designer is built for the `SimpleNativeActivity` class.</span></span>  
   
--   <span data-ttu-id="998d7-113">Создание настраиваемого конструктора действий с <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span><span class="sxs-lookup"><span data-stu-id="998d7-113">The creation of a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>  
+-   <span data-ttu-id="c9ff0-113">Создание настраиваемого конструктора действий с <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span><span class="sxs-lookup"><span data-stu-id="c9ff0-113">The creation of a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>  
   
 ```xaml  
 <sap:ActivityDesigner x:Class="Microsoft.Samples.UsingWorkflowItemPresenter.SimpleNativeDesigner"  
@@ -72,23 +73,23 @@ ms.lasthandoff: 12/02/2017
 </sap:ActivityDesigner>  
 ```  
   
- <span data-ttu-id="998d7-114">Обратите внимание на использование привязки данных WPF для привязки к `ModelItem.Body`.</span><span class="sxs-lookup"><span data-stu-id="998d7-114">Note the use of WPF data binding to bind to `ModelItem.Body`.</span></span> <span data-ttu-id="998d7-115">`ModelItem`-Свойство <xref:System.Activities.Presentation.ActivityDesigner> , относится к базовому объекту, в которой используется конструктор, в этом случае **SimpleNativeActivity**.</span><span class="sxs-lookup"><span data-stu-id="998d7-115">`ModelItem` is the property on <xref:System.Activities.Presentation.ActivityDesigner> that refers to the underlying object the designer is being used for, in this case, **SimpleNativeActivity**.</span></span>  
+ <span data-ttu-id="c9ff0-114">Обратите внимание на использование привязки данных WPF для привязки к `ModelItem.Body`.</span><span class="sxs-lookup"><span data-stu-id="c9ff0-114">Note the use of WPF data binding to bind to `ModelItem.Body`.</span></span> <span data-ttu-id="c9ff0-115">`ModelItem`-Свойство <xref:System.Activities.Presentation.ActivityDesigner> , относится к базовому объекту, в которой используется конструктор, в этом случае **SimpleNativeActivity**.</span><span class="sxs-lookup"><span data-stu-id="c9ff0-115">`ModelItem` is the property on <xref:System.Activities.Presentation.ActivityDesigner> that refers to the underlying object the designer is being used for, in this case, **SimpleNativeActivity**.</span></span>  
   
-#### <a name="to-setup-build-and-run-the-sample"></a><span data-ttu-id="998d7-116">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="998d7-116">To setup, build, and run the sample</span></span>  
+#### <a name="to-setup-build-and-run-the-sample"></a><span data-ttu-id="c9ff0-116">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="c9ff0-116">To setup, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="998d7-117">Откройте решение в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="998d7-117">Open the solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
+1.  <span data-ttu-id="c9ff0-117">Откройте решение в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c9ff0-117">Open the solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  <span data-ttu-id="998d7-118">Чтобы скомпилировать и запустить приложение, нажмите клавишу F5.</span><span class="sxs-lookup"><span data-stu-id="998d7-118">Press F5 to compile and run the application.</span></span>  
+2.  <span data-ttu-id="c9ff0-118">Чтобы скомпилировать и запустить приложение, нажмите клавишу F5.</span><span class="sxs-lookup"><span data-stu-id="c9ff0-118">Press F5 to compile and run the application.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="998d7-119">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="998d7-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="998d7-120">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="998d7-120">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="c9ff0-119">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="c9ff0-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="c9ff0-120">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="c9ff0-120">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="998d7-121">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="998d7-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="998d7-122">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="998d7-122">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="c9ff0-121">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="c9ff0-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="c9ff0-122">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="c9ff0-122">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
   
-## <a name="see-also"></a><span data-ttu-id="998d7-123">См. также</span><span class="sxs-lookup"><span data-stu-id="998d7-123">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c9ff0-123">См. также</span><span class="sxs-lookup"><span data-stu-id="c9ff0-123">See Also</span></span>  
  <xref:System.Activities.Presentation.WorkflowItemPresenter>  
- [<span data-ttu-id="998d7-124">Разработка приложений с помощью конструктора рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="998d7-124">Developing Applications with the Workflow Designer</span></span>](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+ [<span data-ttu-id="c9ff0-124">Разработка приложений с помощью конструктора рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="c9ff0-124">Developing Applications with the Workflow Designer</span></span>](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

@@ -17,18 +17,19 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b0c283c58f2c39087c3d08b235b9056040971330
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 395d1a8d0536445cc1bcbc33b13d40c2bfc27fc8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="digital-ink"></a><span data-ttu-id="45161-102">Рукописный ввод</span><span class="sxs-lookup"><span data-stu-id="45161-102">Digital Ink</span></span>
-<span data-ttu-id="45161-103">В этом разделе обсуждается использование рукописного ввода в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="45161-103">This section discusses the use of digital ink in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="45161-104">В большинстве случаев найден только в SDK для планшетных ПК, рукописного теперь доступен в ядро Windows Presentation Foundation.</span><span class="sxs-lookup"><span data-stu-id="45161-104">Traditionally found only in the Tablet PC SDK, digital ink is now available in the core Windows Presentation Foundation.</span></span> <span data-ttu-id="45161-105">Это означает, что теперь можно разрабатывать полноценные приложений для планшетных ПК с помощью возможностей Windows Presentation Foundation.</span><span class="sxs-lookup"><span data-stu-id="45161-105">This means you can now develop full-fledged Tablet PC applications by using the power of Windows Presentation Foundation.</span></span>  
+# <a name="digital-ink"></a><span data-ttu-id="fb7ba-102">Рукописный ввод</span><span class="sxs-lookup"><span data-stu-id="fb7ba-102">Digital Ink</span></span>
+<span data-ttu-id="fb7ba-103">В этом разделе обсуждается использование рукописного ввода в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fb7ba-103">This section discusses the use of digital ink in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="fb7ba-104">В большинстве случаев найден только в SDK для планшетных ПК, рукописного теперь доступен в ядро Windows Presentation Foundation.</span><span class="sxs-lookup"><span data-stu-id="fb7ba-104">Traditionally found only in the Tablet PC SDK, digital ink is now available in the core Windows Presentation Foundation.</span></span> <span data-ttu-id="fb7ba-105">Это означает, что теперь можно разрабатывать полноценные приложений для планшетных ПК с помощью возможностей Windows Presentation Foundation.</span><span class="sxs-lookup"><span data-stu-id="fb7ba-105">This means you can now develop full-fledged Tablet PC applications by using the power of Windows Presentation Foundation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="45161-106">Содержание</span><span class="sxs-lookup"><span data-stu-id="45161-106">In This Section</span></span>  
- [<span data-ttu-id="45161-107">Разделы общих сведений</span><span class="sxs-lookup"><span data-stu-id="45161-107">Overviews</span></span>](../../../../docs/framework/wpf/advanced/digital-ink-overviews.md)  
-  [<span data-ttu-id="45161-108">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="45161-108">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/digital-ink-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="fb7ba-106">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="fb7ba-106">In This Section</span></span>  
+ [<span data-ttu-id="fb7ba-107">Разделы общих сведений</span><span class="sxs-lookup"><span data-stu-id="fb7ba-107">Overviews</span></span>](../../../../docs/framework/wpf/advanced/digital-ink-overviews.md)  
+  [<span data-ttu-id="fb7ba-108">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="fb7ba-108">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/digital-ink-how-to-topics.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="45161-109">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="45161-109">Related Sections</span></span>  
- [<span data-ttu-id="45161-110">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="45161-110">Windows Presentation Foundation</span></span>](../../../../docs/framework/wpf/index.md)
+## <a name="related-sections"></a><span data-ttu-id="fb7ba-109">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="fb7ba-109">Related Sections</span></span>  
+ [<span data-ttu-id="fb7ba-110">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="fb7ba-110">Windows Presentation Foundation</span></span>](../../../../docs/framework/wpf/index.md)

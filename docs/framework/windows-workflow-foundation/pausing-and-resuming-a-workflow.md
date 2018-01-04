@@ -12,17 +12,18 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0d7637a9d49100d3a46ceb3c49769cacae14b5e8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e51235105e9d2cdb1cad3847fb00ad5604061564
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="pausing-and-resuming-a-workflow"></a><span data-ttu-id="52c90-102">Приостановление и восстановление рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="52c90-102">Pausing and Resuming a Workflow</span></span>
-<span data-ttu-id="52c90-103">Выполнение рабочих процессов будет приостанавливаться и возобновляться при выполнении действий с закладками и блокировками, такими как <xref:System.Activities.Statements.Delay>. Кроме того, рабочие потоки можно будет явным образом приостановить, выгрузить и возобновить с использованием механизма сохраняемости.</span><span class="sxs-lookup"><span data-stu-id="52c90-103">Workflows will pause and resume in response to bookmarks and blocking activities such as <xref:System.Activities.Statements.Delay>, but a workflow can also be explicitly paused, unloaded, and resumed by using persistence.</span></span>  
+# <a name="pausing-and-resuming-a-workflow"></a><span data-ttu-id="65e5b-102">Приостановление и восстановление рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="65e5b-102">Pausing and Resuming a Workflow</span></span>
+<span data-ttu-id="65e5b-103">Выполнение рабочих процессов будет приостанавливаться и возобновляться при выполнении действий с закладками и блокировками, такими как <xref:System.Activities.Statements.Delay>. Кроме того, рабочие потоки можно будет явным образом приостановить, выгрузить и возобновить с использованием механизма сохраняемости.</span><span class="sxs-lookup"><span data-stu-id="65e5b-103">Workflows will pause and resume in response to bookmarks and blocking activities such as <xref:System.Activities.Statements.Delay>, but a workflow can also be explicitly paused, unloaded, and resumed by using persistence.</span></span>  
   
-## <a name="pausing-a-workflow"></a><span data-ttu-id="52c90-104">Приостановка рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="52c90-104">Pausing a Workflow</span></span>  
- <span data-ttu-id="52c90-105">Чтобы приостановить рабочий процесс, пользуйтесь вызовом <xref:System.Activities.WorkflowApplication.Unload%2A>.</span><span class="sxs-lookup"><span data-stu-id="52c90-105">To pause a workflow, use <xref:System.Activities.WorkflowApplication.Unload%2A>.</span></span>  <span data-ttu-id="52c90-106">Этот метод отправляет запрос на сохранение и выгрузку рабочего процесса. При этом, если рабочий процесс не будет выгружен в течение 30 секунд, будет вызвано исключение <xref:System.TimeoutException>.</span><span class="sxs-lookup"><span data-stu-id="52c90-106">This method requests that the workflow persist and unload, and will throw a <xref:System.TimeoutException> if the workflow does not unload in 30 seconds.</span></span>  
+## <a name="pausing-a-workflow"></a><span data-ttu-id="65e5b-104">Приостановка рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="65e5b-104">Pausing a Workflow</span></span>  
+ <span data-ttu-id="65e5b-105">Чтобы приостановить рабочий процесс, пользуйтесь вызовом <xref:System.Activities.WorkflowApplication.Unload%2A>.</span><span class="sxs-lookup"><span data-stu-id="65e5b-105">To pause a workflow, use <xref:System.Activities.WorkflowApplication.Unload%2A>.</span></span>  <span data-ttu-id="65e5b-106">Этот метод отправляет запрос на сохранение и выгрузку рабочего процесса. При этом, если рабочий процесс не будет выгружен в течение 30 секунд, будет вызвано исключение <xref:System.TimeoutException>.</span><span class="sxs-lookup"><span data-stu-id="65e5b-106">This method requests that the workflow persist and unload, and will throw a <xref:System.TimeoutException> if the workflow does not unload in 30 seconds.</span></span>  
   
 ```csharp  
 try  
@@ -36,8 +37,8 @@ catch (TimeoutException e)
 }  
 ```  
   
-## <a name="resuming-a-workflow"></a><span data-ttu-id="52c90-107">Возобновление рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="52c90-107">Resuming a Workflow</span></span>  
- <span data-ttu-id="52c90-108">Чтобы возобновить выполнение ранее приостановленного и выгруженного рабочего процесса, пользуйтесь вызовом <xref:System.Activities.WorkflowApplication.Load%2A>.</span><span class="sxs-lookup"><span data-stu-id="52c90-108">To resume a previously paused and unloaded workflow, use <xref:System.Activities.WorkflowApplication.Load%2A>.</span></span> <span data-ttu-id="52c90-109">Этот метод загружает рабочий процесс из хранилища сохраняемости в память.</span><span class="sxs-lookup"><span data-stu-id="52c90-109">This method loads a workflow from a persistence store into memory.</span></span>  
+## <a name="resuming-a-workflow"></a><span data-ttu-id="65e5b-107">Возобновление рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="65e5b-107">Resuming a Workflow</span></span>  
+ <span data-ttu-id="65e5b-108">Чтобы возобновить выполнение ранее приостановленного и выгруженного рабочего процесса, пользуйтесь вызовом <xref:System.Activities.WorkflowApplication.Load%2A>.</span><span class="sxs-lookup"><span data-stu-id="65e5b-108">To resume a previously paused and unloaded workflow, use <xref:System.Activities.WorkflowApplication.Load%2A>.</span></span> <span data-ttu-id="65e5b-109">Этот метод загружает рабочий процесс из хранилища сохраняемости в память.</span><span class="sxs-lookup"><span data-stu-id="65e5b-109">This method loads a workflow from a persistence store into memory.</span></span>  
   
 ```csharp  
 WorkflowApplication application = new WorkflowApplication(activity);  
@@ -45,8 +46,8 @@ application.InstanceStore = instanceStore;
 application.Load(id);  
 ```  
   
-## <a name="example"></a><span data-ttu-id="52c90-110">Пример</span><span class="sxs-lookup"><span data-stu-id="52c90-110">Example</span></span>  
- <span data-ttu-id="52c90-111">В следующем образце кода описывается приостановка и возобновление выполнения рабочего процесса с помощью механизма сохраняемости.</span><span class="sxs-lookup"><span data-stu-id="52c90-111">The following code sample demonstrates how to pause and resume a workflow by using persistence.</span></span>  
+## <a name="example"></a><span data-ttu-id="65e5b-110">Пример</span><span class="sxs-lookup"><span data-stu-id="65e5b-110">Example</span></span>  
+ <span data-ttu-id="65e5b-111">В следующем образце кода описывается приостановка и возобновление выполнения рабочего процесса с помощью механизма сохраняемости.</span><span class="sxs-lookup"><span data-stu-id="65e5b-111">The following code sample demonstrates how to pause and resume a workflow by using persistence.</span></span>  
   
 ```csharp  
 static string bkName = "bkName";  

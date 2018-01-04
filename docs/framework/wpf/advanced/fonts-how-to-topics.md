@@ -15,21 +15,22 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f0ff080218b459625bb98803216fae88c3aadd1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8e4df7bac45abe367f985167b354b515f247ae90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="fonts-how-to-topics"></a><span data-ttu-id="dd3a8-102">Разделы руководства, посвященные шрифтам</span><span class="sxs-lookup"><span data-stu-id="dd3a8-102">Fonts How-to Topics</span></span>
-<span data-ttu-id="dd3a8-103">В подразделах этого раздела демонстрируется использование возможностей шрифтов, входящий в состав [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="dd3a8-103">The topics in this section demonstrate how to use the font features included with [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="fonts-how-to-topics"></a><span data-ttu-id="c89e6-102">Разделы руководства, посвященные шрифтам</span><span class="sxs-lookup"><span data-stu-id="c89e6-102">Fonts How-to Topics</span></span>
+<span data-ttu-id="c89e6-103">В подразделах этого раздела демонстрируется использование возможностей шрифтов, входящий в состав [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c89e6-103">The topics in this section demonstrate how to use the font features included with [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="dd3a8-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="dd3a8-104">In This Section</span></span>  
- [<span data-ttu-id="dd3a8-105">Перечисление системных шрифтов</span><span class="sxs-lookup"><span data-stu-id="dd3a8-105">Enumerate System Fonts</span></span>](../../../../docs/framework/wpf/advanced/how-to-enumerate-system-fonts.md)  
- [<span data-ttu-id="dd3a8-106">Использование класса FontSizeConverter</span><span class="sxs-lookup"><span data-stu-id="dd3a8-106">Use the FontSizeConverter Class</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-the-fontsizeconverter-class.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c89e6-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="c89e6-104">In This Section</span></span>  
+ [<span data-ttu-id="c89e6-105">Перечисление системных шрифтов</span><span class="sxs-lookup"><span data-stu-id="c89e6-105">Enumerate System Fonts</span></span>](../../../../docs/framework/wpf/advanced/how-to-enumerate-system-fonts.md)  
+ [<span data-ttu-id="c89e6-106">Использование класса FontSizeConverter</span><span class="sxs-lookup"><span data-stu-id="c89e6-106">Use the FontSizeConverter Class</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-the-fontsizeconverter-class.md)  
   
-## <a name="see-also"></a><span data-ttu-id="dd3a8-107">См. также</span><span class="sxs-lookup"><span data-stu-id="dd3a8-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c89e6-107">См. также</span><span class="sxs-lookup"><span data-stu-id="c89e6-107">See Also</span></span>  
  <xref:System.Windows.FontStyle>  
  <xref:System.Windows.SystemFonts>  
- [<span data-ttu-id="dd3a8-108">Документы в WPF</span><span class="sxs-lookup"><span data-stu-id="dd3a8-108">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="dd3a8-109">Оформление в WPF</span><span class="sxs-lookup"><span data-stu-id="dd3a8-109">Typography in WPF</span></span>](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+ [<span data-ttu-id="c89e6-108">Документы в WPF</span><span class="sxs-lookup"><span data-stu-id="c89e6-108">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="c89e6-109">Оформление в WPF</span><span class="sxs-lookup"><span data-stu-id="c89e6-109">Typography in WPF</span></span>](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)

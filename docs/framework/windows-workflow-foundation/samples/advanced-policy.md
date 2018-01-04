@@ -12,81 +12,82 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9752b5779f4fbb525488e88f2f11c98de7b4ba8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c83f4167ce1947b10f97e0cab5b5ddd2f8e00c76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="advanced-policy"></a><span data-ttu-id="0417e-102">Дополнительная политика</span><span class="sxs-lookup"><span data-stu-id="0417e-102">Advanced Policy</span></span>
-<span data-ttu-id="0417e-103">Данный образец выступает как дополнение образца простой политики.</span><span class="sxs-lookup"><span data-stu-id="0417e-103">This sample extends the Simple Policy sample.</span></span> <span data-ttu-id="0417e-104">К правилам для скидок на жилье и коммерческих скидок, описанных в примере простой политики, добавлены несколько новых правил.</span><span class="sxs-lookup"><span data-stu-id="0417e-104">In addition to the residential discount and business discount rules from the Simple Policy example, several new rules have been added.</span></span>  
+# <a name="advanced-policy"></a><span data-ttu-id="6d325-102">Дополнительная политика</span><span class="sxs-lookup"><span data-stu-id="6d325-102">Advanced Policy</span></span>
+<span data-ttu-id="6d325-103">Данный образец выступает как дополнение образца простой политики.</span><span class="sxs-lookup"><span data-stu-id="6d325-103">This sample extends the Simple Policy sample.</span></span> <span data-ttu-id="6d325-104">К правилам для скидок на жилье и коммерческих скидок, описанных в примере простой политики, добавлены несколько новых правил.</span><span class="sxs-lookup"><span data-stu-id="6d325-104">In addition to the residential discount and business discount rules from the Simple Policy example, several new rules have been added.</span></span>  
   
- <span data-ttu-id="0417e-105">Добавлено правило высокой стоимости, которое предоставляет большую скидку на заказы высокой стоимости.</span><span class="sxs-lookup"><span data-stu-id="0417e-105">A high-value rule is added, which provides a bigger discount for high-value orders.</span></span> <span data-ttu-id="0417e-106">Это правило имеет более низкий приоритет, чем предыдущие два правила, чтобы повторно записывать поля скидки и быть приоритетными по отношению к правилам для скидок на жилье и коммерческих скидок.</span><span class="sxs-lookup"><span data-stu-id="0417e-106">It is given a priority value less than the previous two rules so that it will overwrite the discount field and take precedence over both the residential and business discount rules.</span></span>  
+ <span data-ttu-id="6d325-105">Добавлено правило высокой стоимости, которое предоставляет большую скидку на заказы высокой стоимости.</span><span class="sxs-lookup"><span data-stu-id="6d325-105">A high-value rule is added, which provides a bigger discount for high-value orders.</span></span> <span data-ttu-id="6d325-106">Это правило имеет более низкий приоритет, чем предыдущие два правила, чтобы повторно записывать поля скидки и быть приоритетными по отношению к правилам для скидок на жилье и коммерческих скидок.</span><span class="sxs-lookup"><span data-stu-id="6d325-106">It is given a priority value less than the previous two rules so that it will overwrite the discount field and take precedence over both the residential and business discount rules.</span></span>  
   
- <span data-ttu-id="0417e-107">Также добавлено правило расчета общей суммы, которое выполняет вычисление общей суммы в зависимости от уровня скидки.</span><span class="sxs-lookup"><span data-stu-id="0417e-107">A calculate total rule is also added, which computes the total based on the discount level.</span></span> <span data-ttu-id="0417e-108">Он демонстрирует создание ссылки на метод, определенный для действия рабочего процесса, а также использование остальных действий.</span><span class="sxs-lookup"><span data-stu-id="0417e-108">It shows how to reference a method defined on the workflow activity, as well as how to use else actions.</span></span> <span data-ttu-id="0417e-109">Данное правило также демонстрирует поведение последовательного соединения, поскольку его вычисление будет выполняться каждый раз при изменении полей скидки.</span><span class="sxs-lookup"><span data-stu-id="0417e-109">This rule also demonstrates chaining behavior since it will be evaluated anytime the discount field changes.</span></span> <span data-ttu-id="0417e-110">Кроме того, показано назначение для метода "CalculateTotal" атрибута "RuleWriteAttribute".</span><span class="sxs-lookup"><span data-stu-id="0417e-110">Furthermore, method attributing is shown with the RuleWriteAttribute on the CalculateTotal method.</span></span> <span data-ttu-id="0417e-111">По этим причинам для связанных правил (ErrorTotalRule) при каждом выполнении метода выполняется повторное вычисление.</span><span class="sxs-lookup"><span data-stu-id="0417e-111">This causes impacted rules (ErrorTotalRule) to be re-evaluated whenever the method gets executed.</span></span>  
+ <span data-ttu-id="6d325-107">Также добавлено правило расчета общей суммы, которое выполняет вычисление общей суммы в зависимости от уровня скидки.</span><span class="sxs-lookup"><span data-stu-id="6d325-107">A calculate total rule is also added, which computes the total based on the discount level.</span></span> <span data-ttu-id="6d325-108">Он демонстрирует создание ссылки на метод, определенный для действия рабочего процесса, а также использование остальных действий.</span><span class="sxs-lookup"><span data-stu-id="6d325-108">It shows how to reference a method defined on the workflow activity, as well as how to use else actions.</span></span> <span data-ttu-id="6d325-109">Данное правило также демонстрирует поведение последовательного соединения, поскольку его вычисление будет выполняться каждый раз при изменении полей скидки.</span><span class="sxs-lookup"><span data-stu-id="6d325-109">This rule also demonstrates chaining behavior since it will be evaluated anytime the discount field changes.</span></span> <span data-ttu-id="6d325-110">Кроме того, показано назначение для метода "CalculateTotal" атрибута "RuleWriteAttribute".</span><span class="sxs-lookup"><span data-stu-id="6d325-110">Furthermore, method attributing is shown with the RuleWriteAttribute on the CalculateTotal method.</span></span> <span data-ttu-id="6d325-111">По этим причинам для связанных правил (ErrorTotalRule) при каждом выполнении метода выполняется повторное вычисление.</span><span class="sxs-lookup"><span data-stu-id="6d325-111">This causes impacted rules (ErrorTotalRule) to be re-evaluated whenever the method gets executed.</span></span>  
   
- <span data-ttu-id="0417e-112">Последнее добавленное правило отвечает за обнаружение ошибок (в данном случае «Общая сумма меньше 0»).</span><span class="sxs-lookup"><span data-stu-id="0417e-112">The last rule added is one that detects errors (in this case, Total less than 0).</span></span> <span data-ttu-id="0417e-113">В этом случае выполнение политики приостанавливается.</span><span class="sxs-lookup"><span data-stu-id="0417e-113">If this occurs, the policy execution is halted.</span></span>  
+ <span data-ttu-id="6d325-112">Последнее добавленное правило отвечает за обнаружение ошибок (в данном случае «Общая сумма меньше 0»).</span><span class="sxs-lookup"><span data-stu-id="6d325-112">The last rule added is one that detects errors (in this case, Total less than 0).</span></span> <span data-ttu-id="6d325-113">В этом случае выполнение политики приостанавливается.</span><span class="sxs-lookup"><span data-stu-id="6d325-113">If this occurs, the policy execution is halted.</span></span>  
   
- <span data-ttu-id="0417e-114">И наконец, вызовы метода `Console.Writeline` добавлены как действия для каждого правила, которые помогают сделать выполнение правила более видимым, одновременно демонстрируя возможность доступа к статическим методам для ссылочных типов.</span><span class="sxs-lookup"><span data-stu-id="0417e-114">Finally, `Console.Writeline` calls are added as actions to each rule to provide more visibility into rule execution, while also showing that it is possible to access static methods on referenced types.</span></span> <span data-ttu-id="0417e-115">Также можно использовать отслеживание, чтобы повысить видимость выполняемых правил.</span><span class="sxs-lookup"><span data-stu-id="0417e-115">You could also use tracking to get visibility into the rules that are executed.</span></span>  
+ <span data-ttu-id="6d325-114">И наконец, вызовы метода `Console.Writeline` добавлены как действия для каждого правила, которые помогают сделать выполнение правила более видимым, одновременно демонстрируя возможность доступа к статическим методам для ссылочных типов.</span><span class="sxs-lookup"><span data-stu-id="6d325-114">Finally, `Console.Writeline` calls are added as actions to each rule to provide more visibility into rule execution, while also showing that it is possible to access static methods on referenced types.</span></span> <span data-ttu-id="6d325-115">Также можно использовать отслеживание, чтобы повысить видимость выполняемых правил.</span><span class="sxs-lookup"><span data-stu-id="6d325-115">You could also use tracking to get visibility into the rules that are executed.</span></span>  
   
- <span data-ttu-id="0417e-116">В данном образце используются приведенные ниже правила.</span><span class="sxs-lookup"><span data-stu-id="0417e-116">The rules used in this sample are:</span></span>  
+ <span data-ttu-id="6d325-116">В данном образце используются приведенные ниже правила.</span><span class="sxs-lookup"><span data-stu-id="6d325-116">The rules used in this sample are:</span></span>  
   
- <span data-ttu-id="0417e-117">**ResidentialDiscountRule:**</span><span class="sxs-lookup"><span data-stu-id="0417e-117">**ResidentialDiscountRule:**</span></span>  
+ <span data-ttu-id="6d325-117">**ResidentialDiscountRule:**</span><span class="sxs-lookup"><span data-stu-id="6d325-117">**ResidentialDiscountRule:**</span></span>  
   
- <span data-ttu-id="0417e-118">IF OrderValue > 500 AND CustomerType = Residential</span><span class="sxs-lookup"><span data-stu-id="0417e-118">IF OrderValue > 500 AND CustomerType = Residential</span></span>  
+ <span data-ttu-id="6d325-118">IF OrderValue > 500 AND CustomerType = Residential</span><span class="sxs-lookup"><span data-stu-id="6d325-118">IF OrderValue > 500 AND CustomerType = Residential</span></span>  
   
- <span data-ttu-id="0417e-119">THEN Discount = 5%</span><span class="sxs-lookup"><span data-stu-id="0417e-119">THEN Discount = 5%</span></span>  
+ <span data-ttu-id="6d325-119">THEN Discount = 5%</span><span class="sxs-lookup"><span data-stu-id="6d325-119">THEN Discount = 5%</span></span>  
   
- <span data-ttu-id="0417e-120">**BusinessDiscountRule:**</span><span class="sxs-lookup"><span data-stu-id="0417e-120">**BusinessDiscountRule:**</span></span>  
+ <span data-ttu-id="6d325-120">**BusinessDiscountRule:**</span><span class="sxs-lookup"><span data-stu-id="6d325-120">**BusinessDiscountRule:**</span></span>  
   
- <span data-ttu-id="0417e-121">IF OrderValue > 10000 AND CustomerType = Business</span><span class="sxs-lookup"><span data-stu-id="0417e-121">IF OrderValue > 10000 AND CustomerType = Business</span></span>  
+ <span data-ttu-id="6d325-121">IF OrderValue > 10000 AND CustomerType = Business</span><span class="sxs-lookup"><span data-stu-id="6d325-121">IF OrderValue > 10000 AND CustomerType = Business</span></span>  
   
- <span data-ttu-id="0417e-122">THEN Discount = 10%</span><span class="sxs-lookup"><span data-stu-id="0417e-122">THEN Discount = 10%</span></span>  
+ <span data-ttu-id="6d325-122">THEN Discount = 10%</span><span class="sxs-lookup"><span data-stu-id="6d325-122">THEN Discount = 10%</span></span>  
   
- <span data-ttu-id="0417e-123">**HighValueDiscountRule:**</span><span class="sxs-lookup"><span data-stu-id="0417e-123">**HighValueDiscountRule:**</span></span>  
+ <span data-ttu-id="6d325-123">**HighValueDiscountRule:**</span><span class="sxs-lookup"><span data-stu-id="6d325-123">**HighValueDiscountRule:**</span></span>  
   
- <span data-ttu-id="0417e-124">IF OrderValue > 20000</span><span class="sxs-lookup"><span data-stu-id="0417e-124">IF OrderValue > 20000</span></span>  
+ <span data-ttu-id="6d325-124">IF OrderValue > 20000</span><span class="sxs-lookup"><span data-stu-id="6d325-124">IF OrderValue > 20000</span></span>  
   
- <span data-ttu-id="0417e-125">THEN Discount = 15%</span><span class="sxs-lookup"><span data-stu-id="0417e-125">THEN Discount = 15%</span></span>  
+ <span data-ttu-id="6d325-125">THEN Discount = 15%</span><span class="sxs-lookup"><span data-stu-id="6d325-125">THEN Discount = 15%</span></span>  
   
- <span data-ttu-id="0417e-126">**TotalRule:**</span><span class="sxs-lookup"><span data-stu-id="0417e-126">**TotalRule:**</span></span>  
+ <span data-ttu-id="6d325-126">**TotalRule:**</span><span class="sxs-lookup"><span data-stu-id="6d325-126">**TotalRule:**</span></span>  
   
- <span data-ttu-id="0417e-127">IF Discount > 0</span><span class="sxs-lookup"><span data-stu-id="0417e-127">IF Discount > 0</span></span>  
+ <span data-ttu-id="6d325-127">IF Discount > 0</span><span class="sxs-lookup"><span data-stu-id="6d325-127">IF Discount > 0</span></span>  
   
- <span data-ttu-id="0417e-128">THEN CalculateTotal(OrderValue, Discount)</span><span class="sxs-lookup"><span data-stu-id="0417e-128">THEN CalculateTotal(OrderValue, Discount)</span></span>  
+ <span data-ttu-id="6d325-128">THEN CalculateTotal(OrderValue, Discount)</span><span class="sxs-lookup"><span data-stu-id="6d325-128">THEN CalculateTotal(OrderValue, Discount)</span></span>  
   
- <span data-ttu-id="0417e-129">ELSE Total = OrderValue</span><span class="sxs-lookup"><span data-stu-id="0417e-129">ELSE Total = OrderValue</span></span>  
+ <span data-ttu-id="6d325-129">ELSE Total = OrderValue</span><span class="sxs-lookup"><span data-stu-id="6d325-129">ELSE Total = OrderValue</span></span>  
   
- <span data-ttu-id="0417e-130">**Errortotalrule повторное вычисление:**</span><span class="sxs-lookup"><span data-stu-id="0417e-130">**ErrorTotalRule:**</span></span>  
+ <span data-ttu-id="6d325-130">**Errortotalrule повторное вычисление:**</span><span class="sxs-lookup"><span data-stu-id="6d325-130">**ErrorTotalRule:**</span></span>  
   
- <span data-ttu-id="0417e-131">Если общее \< 0</span><span class="sxs-lookup"><span data-stu-id="0417e-131">IF Total \< 0</span></span>  
+ <span data-ttu-id="6d325-131">Если общее \< 0</span><span class="sxs-lookup"><span data-stu-id="6d325-131">IF Total \< 0</span></span>  
   
- <span data-ttu-id="0417e-132">THEN Error = "Fired ErrorTotalRule"; Halt</span><span class="sxs-lookup"><span data-stu-id="0417e-132">THEN Error = "Fired ErrorTotalRule"; Halt</span></span>  
+ <span data-ttu-id="6d325-132">THEN Error = "Fired ErrorTotalRule"; Halt</span><span class="sxs-lookup"><span data-stu-id="6d325-132">THEN Error = "Fired ErrorTotalRule"; Halt</span></span>  
   
- <span data-ttu-id="0417e-133">Вычисление и выполнение правила также можно просмотреть посредством трассировки и отслеживания.</span><span class="sxs-lookup"><span data-stu-id="0417e-133">Rule evaluation and execution can also be seen through tracing and tracking.</span></span>  
+ <span data-ttu-id="6d325-133">Вычисление и выполнение правила также можно просмотреть посредством трассировки и отслеживания.</span><span class="sxs-lookup"><span data-stu-id="6d325-133">Rule evaluation and execution can also be seen through tracing and tracking.</span></span>  
   
-### <a name="to-build-the-sample"></a><span data-ttu-id="0417e-134">Сборка образца</span><span class="sxs-lookup"><span data-stu-id="0417e-134">To build the sample</span></span>  
+### <a name="to-build-the-sample"></a><span data-ttu-id="6d325-134">Сборка образца</span><span class="sxs-lookup"><span data-stu-id="6d325-134">To build the sample</span></span>  
   
-1.  <span data-ttu-id="0417e-135">Откройте решение в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0417e-135">Open the solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
+1.  <span data-ttu-id="6d325-135">Откройте решение в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6d325-135">Open the solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  <span data-ttu-id="0417e-136">Выполните сборку решения, нажав клавиши CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="0417e-136">Build the solution by pressing CTRL+SHIFT+B.</span></span>  
+2.  <span data-ttu-id="6d325-136">Выполните сборку решения, нажав клавиши CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="6d325-136">Build the solution by pressing CTRL+SHIFT+B.</span></span>  
   
-3.  <span data-ttu-id="0417e-137">Запустите решение без отладки, нажав сочетание клавиш CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="0417e-137">Run the solution without debugging by pressing CTRL+F5.</span></span>  
+3.  <span data-ttu-id="6d325-137">Запустите решение без отладки, нажав сочетание клавиш CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="6d325-137">Run the solution without debugging by pressing CTRL+F5.</span></span>  
   
-### <a name="to-run-the-sample"></a><span data-ttu-id="0417e-138">Выполнение образца</span><span class="sxs-lookup"><span data-stu-id="0417e-138">To run the sample</span></span>  
+### <a name="to-run-the-sample"></a><span data-ttu-id="6d325-138">Выполнение образца</span><span class="sxs-lookup"><span data-stu-id="6d325-138">To run the sample</span></span>  
   
--   <span data-ttu-id="0417e-139">В окне командной строки пакета SDK запустите файл с расширением EXE в папке «AdvancedPolicy\bin\debug» (или в папке «AdvancedPolicy\bin» для образца в Visual Basic), вложенной в главную папку образца.</span><span class="sxs-lookup"><span data-stu-id="0417e-139">In the SDK Command Prompt window, run the .exe file in the AdvancedPolicy\bin\debug folder (or the AdvancedPolicy \bin folder for the Visual Basic version of the sample), which is located below the main folder for the sample.</span></span>  
+-   <span data-ttu-id="6d325-139">В окне командной строки пакета SDK запустите файл с расширением EXE в папке «AdvancedPolicy\bin\debug» (или в папке «AdvancedPolicy\bin» для образца в Visual Basic), вложенной в главную папку образца.</span><span class="sxs-lookup"><span data-stu-id="6d325-139">In the SDK Command Prompt window, run the .exe file in the AdvancedPolicy\bin\debug folder (or the AdvancedPolicy \bin folder for the Visual Basic version of the sample), which is located below the main folder for the sample.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="0417e-140">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="0417e-140">The samples may already be installed on your computer.</span></span> <span data-ttu-id="0417e-141">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="0417e-141">Check for the following (default) directory before continuing:</span></span>  
+>  <span data-ttu-id="6d325-140">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="6d325-140">The samples may already be installed on your computer.</span></span> <span data-ttu-id="6d325-141">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="6d325-141">Check for the following (default) directory before continuing:</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="0417e-142">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="0417e-142">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="0417e-143">Этот образец находится в следующем каталоге:</span><span class="sxs-lookup"><span data-stu-id="0417e-143">This sample is located in the following directory:</span></span>  
+>  <span data-ttu-id="6d325-142">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="6d325-142">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="6d325-143">Этот образец находится в следующем каталоге:</span><span class="sxs-lookup"><span data-stu-id="6d325-143">This sample is located in the following directory:</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\AdvancedPolicy`  
   
-## <a name="see-also"></a><span data-ttu-id="0417e-144">См. также</span><span class="sxs-lookup"><span data-stu-id="0417e-144">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6d325-144">См. также</span><span class="sxs-lookup"><span data-stu-id="6d325-144">See Also</span></span>  
  <xref:System.Workflow.Activities.Rules.RuleSet>  
  <xref:System.Workflow.Activities.PolicyActivity>  
- [<span data-ttu-id="0417e-145">Простая политика</span><span class="sxs-lookup"><span data-stu-id="0417e-145">Simple Policy</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/simple-policy.md)
+ [<span data-ttu-id="6d325-145">Простая политика</span><span class="sxs-lookup"><span data-stu-id="6d325-145">Simple Policy</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/simple-policy.md)
