@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 02fb14b84341d594f35885be220027631999d202
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a913de1a6808c7e600a4f28ed58dedf93506466b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>Общие сведения о компоненте ImageList (Windows Forms)
 Компонент <xref:System.Windows.Forms.ImageList> в Windows Forms используется для хранения изображений, которые затем будут отображаться элементами управления. Список изображений позволяет написать код для создания единого согласованного каталога изображений. Например, можно поворачивать изображения, отображаемые элементом управления <xref:System.Windows.Forms.Button>, просто изменив свойство <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> или <xref:System.Windows.Forms.ButtonBase.ImageKey%2A> кнопки. Кроме того, можно связать один список изображений с несколькими элементами управления. Например, если вы используете оба элемента управления, <xref:System.Windows.Forms.ListView> и <xref:System.Windows.Forms.TreeView>, для отображения одного списка файлов, при изменении значка файла в списке изображений новый значок будет отображаться в обоих представлениях.  

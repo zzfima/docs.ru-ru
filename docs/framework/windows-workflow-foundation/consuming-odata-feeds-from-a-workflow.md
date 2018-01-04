@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c538ead434a7e5abe85f0d28ac7bf7edae98cbb8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9a01be08367fac1f7713f5db4953f67b0d32e073
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Использование каналов OData из рабочего процесса
 Службы WCF Data Services являются компонентом [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] , который позволяет создавать службы, использующие протокол Open Data Protocol (OData) для передачи и получения данных через Интернет или интрасеть с помощью семантики передачи репрезентативного состояния (REST). OData предоставляет доступ к данным в виде ресурсов, которые адресуются по URI. Со службами данных, основанными на OData, может взаимодействовать любое приложение, которое способно отправить HTTP-запрос и обработать канал OData, возвращаемый службой данных. Кроме того, службы данных WCF включают в себя клиентские библиотеки, расширяющие программные возможности для доступа к каналам OData из приложений [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] . В этом разделе представлены общие сведения об использовании каналов OData в рабочем процессе как с клиентскими библиотеками, так и без них.  

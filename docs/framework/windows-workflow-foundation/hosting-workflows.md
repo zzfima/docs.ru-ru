@@ -13,16 +13,17 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 229ca90aef5b91bfcd585221b6ad5c91ec91c0b9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4a4d6a80f51de36fe577dfc0d36a247f1747334e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-workflows"></a>Размещение рабочих процессов
 В этом разделе описывается размещение рабочих процессов.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Варианты размещения рабочих процессов](../../../docs/framework/windows-workflow-foundation/workflow-hosting-options.md)  
  Описывает способ выбора соответствующего узла для рабочих процессов.  
   

@@ -12,11 +12,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 12dd8ee58b577df1ef7d54e8f820ff183cef6084
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6798494e442b2e7633461fb821c56130a2af2508
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Отслеживание событий в системе трассировки событий Windows
 Этот образец демонстрирует включение отслеживания [!INCLUDE[wf](../../../../includes/wf-md.md)] в службе рабочего процесса и выдачу событий отслеживания в средстве отслеживания событий для Windows (ETW). Для создания записей отслеживания рабочих процессов в ETW в этом образце используется участник отслеживания трассировки событий Windows (<xref:System.Activities.Tracking.EtwTrackingParticipant>).  

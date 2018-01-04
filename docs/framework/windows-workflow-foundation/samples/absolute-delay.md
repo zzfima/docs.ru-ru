@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 94eb9f401786ef05beaa51077ff4ddc170595752
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f6974c7bb281aa6685725b65edd06bb40a907559
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="absolute-delay"></a>Абсолютная задержка
 Основной сценарий в этом образце - задержка до указанного значения <xref:System.DateTime> с помощью устойчивых таймеров в приложении рабочего процесса. Эффект будет отличаться от применения встроенного действия <xref:System.Activities.Statements.Delay>, так как в этом случае задержка возможна только в течение заданного значения <xref:System.TimeSpan> (или количества минут и секунд).  

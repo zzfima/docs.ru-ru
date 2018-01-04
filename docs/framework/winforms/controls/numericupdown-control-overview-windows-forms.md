@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e1afb128fd5e098a59fa2636f09998a2a463c926
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 067a8862ee991213e584819e1cf99eddde06e2bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="numericupdown-control-overview-windows-forms"></a>Общие сведения об элементе управления NumericUpDown (Windows Forms)
 <xref:System.Windows.Forms.NumericUpDown> Элемент управления выглядит как сочетание текстового поля и пары кнопок со стрелками для выбора значения пользователем. Он выводит и задает отдельное числовое значение в списке основных вариантов числовых значений. Пользователь может увеличить и уменьшить число вверх и Стрелка вниз, клавиши со стрелками вверх и вниз или введя число в части текстового поля элемента управления. Нажав клавишу со стрелкой вверх перемещает номер увеличивается до максимума; нажав клавишу со стрелкой вниз перемещение номера уменьшается до минимума.  

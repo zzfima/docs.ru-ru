@@ -14,11 +14,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 407fa758c6564c3b7a5a8573acef1b6e181399d2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d1219f2c1a173f454827c7450e66d90a500d87e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-message-contract"></a>Контракт сообщения по умолчанию
 Образец контракта сообщения по умолчанию демонстрирует службу, в которой пользовательское сообщение, определенное пользователем, передается в операции службы и из операций службы. Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующий интерфейс калькулятора как типизированные службы. Вместо отдельные операции служб для сложения, вычитания, умножения и деления, используемых в [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md), в этом примере передает пользовательское сообщение, содержащее операнды и оператор и возвращает результат арифметические операции.  

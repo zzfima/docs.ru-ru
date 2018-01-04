@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4dcaf023960aab1989493475fe4e5306623adf8e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 13c409865846acdf7b557c20330f9a2fd62d47d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-activity-to-switch-on-a-range-of-values"></a>Настраиваемое действие для переключения в диапазоне значений
 В этом образце демонстрируется создание настраиваемого действия, которое расширяет использование <xref:System.Activities.Statements.Switch%601>. Обычная инструкция <xref:System.Activities.Statements.Switch%601> позволяет выполнять переключение на основании одного значения. Но существуют бизнес-сценарии, в которых действие должно переключаться в зависимости от диапазона значений. Например, действие может выполнять одну операцию, если значение, по которому производится переключение, находится в диапазоне от 1 до 5, и другую операцию, если значение находится в диапазоне от 6 до 10, а также операцию по умолчанию для всех прочих значений. Это настраиваемое действие выполняет именно такую задачу.  

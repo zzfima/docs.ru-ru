@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ecc0fce00dbef1f5b91aad16f32cb7dd7759ac8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ccd63cb88661db7601b87eec6bdf3a959afb8bbf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Практическое руководство. Добавление кнопок в элемент управления ToolBar с помощью конструктора
 > [!NOTE]
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  Настройте свойства отдельных кнопок в **свойства** окно, которое появляется в области в правой части редактора. В следующей таблице показаны некоторые важные свойства.  
   
-    |Свойство|Описание|  
+    |Свойство.|Описание:|  
     |--------------|-----------------|  
     |<xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A>|Задает меню, отображаемое на кнопке панели инструментов, раскрывающийся список. Кнопки панели инструментов <xref:System.Windows.Forms.ToolBarButton.Style%2A> свойству необходимо присвоить значение <xref:System.Windows.Forms.ToolBarButtonStyle.DropDownButton>. Это свойство принимает экземпляр <xref:System.Windows.Forms.ContextMenu> класса в качестве ссылки.|  
     |<xref:System.Windows.Forms.ToolBarButton.PartialPush%2A>|Задает ли кнопка-переключатель в нейтральном положении. Кнопки панели инструментов <xref:System.Windows.Forms.ToolBarButton.Style%2A> свойству необходимо присвоить значение <xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton>.|  

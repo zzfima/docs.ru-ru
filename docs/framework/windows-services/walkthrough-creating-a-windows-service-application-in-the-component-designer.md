@@ -15,11 +15,12 @@ caps.latest.revision: "57"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: fb868aa38381294333538afcd99c030162d2f235
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
+ms.workload: dotnet
+ms.openlocfilehash: 42fc5f27f1c78e243ff1d3a705c61a20ff459937
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>Пошаговое руководство. Создание приложения служб Windows в конструкторе компонентов
 В этой статье описывается процедура создания простого приложения службы Windows в Visual Studio, которое записывает сообщения в журнал событий. Ниже приведены основные шаги, которые необходимо выполнить для создания и использования службы.  
@@ -480,7 +481,7 @@ End Sub
   
      Если служба удалена успешно, installutil.exe сообщит об этом. Для получения дополнительной информации см. [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  Можно создать автономную программу установки, которую могут использовать другие пользователи для установки вашей службы Windows, но для этого потребуется выполнить дополнительные операции. ClickOnce не поддерживает службы Windows, поэтому вы не сможете использовать мастер публикации. Можно использовать полный выпуск InstallShield, который не предоставляется корпорацией Майкрософт. Дополнительные сведения об InstallShield см. в разделе [InstallShield Limited Edition](/visualstudio/deployment/installshield-limited-edition). Для создания установщика службы Windows можно также использовать [Windows Installer XML Toolset](http://go.microsoft.com/fwlink/?LinkId=249067) .  
   
  Кроме того, можно изучить возможности компонента <xref:System.ServiceProcess.ServiceController> , который позволяет отправлять команды в установленную службу.  
@@ -490,5 +491,5 @@ End Sub
 ## <a name="see-also"></a>См. также  
  [Приложения служб Windows](../../../docs/framework/windows-services/index.md)  
  [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Как: отладка приложений служб Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
+ [Практическое руководство. Отладка приложений служб Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
  [Службы (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)

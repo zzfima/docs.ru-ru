@@ -1,5 +1,5 @@
 ---
-title: "Пошаговое руководство: Создание элемента управления Windows Forms, в котором используются преимущества функций Visual Studio, применяемых во время разработки"
+title: "Пошаговое руководство: Создание элемента управления Windows Forms, в котором используются преимущества возможностей Visual Studio, применяемых во время разработки"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -21,13 +21,14 @@ caps.latest.revision: "46"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ba195656363b15407aed6a4da0ab804421a3d964
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f7c875721436f0d6fe3f0cc57140a275e8d218f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Пошаговое руководство: Создание элемента управления Windows Forms, в котором используются преимущества функций Visual Studio, применяемых во время разработки
+# <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Пошаговое руководство: Создание элемента управления Windows Forms, в котором используются преимущества возможностей Visual Studio, применяемых во время разработки
 Возможности разработки для пользовательского элемента управления можно улучшить путем создания и настройки связанного с ним пользовательский конструктор.  
   
  В этом пошаговом руководстве показано, как создать пользовательский конструктор для пользовательского элемента управления. Следует реализовать `MarqueeControl` тип и связанный класс конструктора, называется `MarqueeControlRootDesigner`.  
@@ -467,7 +468,7 @@ using MarqueeControlLibrary;
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#560](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#560)]  
   
 ## <a name="adding-designer-verbs-to-your-custom-designer"></a>Добавление команд конструктора в пользовательский конструктор  
- Командой конструктора называется команда меню, связанная с обработчиком событий. Команды конструктора добавляются в контекстное меню компонента во время разработки. Для получения дополнительной информации см. <xref:System.ComponentModel.Design.DesignerVerb>.  
+ Командой конструктора называется команда меню, связанная с обработчиком событий. Команды конструктора добавляются в контекстное меню компонента во время разработки. Дополнительные сведения см. в разделе <xref:System.ComponentModel.Design.DesignerVerb>.  
   
  Вы добавите две команды в конструкторы: **запустить тест** и **Остановить тест**. Эти команды позволит просмотреть его поведение во время выполнения `MarqueeControl` во время разработки. Эти команды будут добавлены к `MarqueeControlRootDesigner`.  
   
@@ -629,7 +630,7 @@ private void stopButton_Click(object sender, System.EventArgs e)
   
 1.  Задать `MarqueeControlTest` проект в качестве запускаемого проекта и запустите его. Отобразится форма вашей `DemoMarqueeControl`. Нажмите кнопку **запустить** кнопку, чтобы запустить анимацию. Вы увидите мигающий текст и индикаторы перемещение вокруг границы.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  `MarqueeControlLibrary` Показан пример простой реализации пользовательских элементов управления и связанные с ним конструкторы. В этом примере можно делать более сложным несколькими способами:  
   
 -   Изменить значения свойств для `DemoMarqueeControl` в конструкторе. Добавить дополнительные `MarqueBorder` управляет и прикрепите их к родительским экземплярам для создания эффекта вложенной. Поэкспериментируйте с различными настройками для `UpdatePeriod` и свойствами, связанным с подсветкой.  

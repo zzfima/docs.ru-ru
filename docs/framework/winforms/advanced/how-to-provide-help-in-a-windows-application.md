@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0f407f1c17c67ec99f4499b89c49932a4ba6d32c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8d551a9d4ba6a66a02718f9184d962539361aa6c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Руководство: предоставление справки в приложении Windows
 Можно использовать из <xref:System.Windows.Forms.HelpProvider> компонента для присоединения разделов справки в файле справки для определенных элементов управления в формах Windows Forms. Файл справки может быть в формате HTML, HTMLHelp 1.x или следующих версий.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
      Этот параметр определяет способ, которым свойство **HelpKeyword** передается в справочную систему. В следующей таблице показаны возможные настройки и их описания.  
   
-    |Имя элемента|Описание|  
+    |Имя элемента|Описание:|  
     |-----------------|-----------------|  
     |AssociateIndex|Указывает, что индекс для данного раздела выполняется в заданном URL-адресе.|  
     |Find|Указывает, что отображается страница поиска заданного URL-адреса.|  

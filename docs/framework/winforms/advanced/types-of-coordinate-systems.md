@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be89584ee8e7a82c405bf8664bfad18ced6d989a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 287b1c9eddef882041d9e4eac44a06190f3585a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="types-of-coordinate-systems"></a>Типы систем координат
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]использует три координатных пространства: мировое, страницы и устройства. Мировых координатах являются координаты, используемые для моделирования определенного графического мира и которые можно передать методу в .NET Framework. Страничные координаты система координат, используемая на поверхности, таких как формы или элемента управления. Координаты устройства — координат, используемая отрисовывается, таких как экран или листе физического устройства. При вызове `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, точки, которые вы передаете в <xref:System.Drawing.Graphics.DrawLine%2A> метод —`(0, 0)` и `(160, 80)`— в мировом пространстве координат. Прежде чем [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] можно нарисовать линию на экране, координаты подвергнутся последовательности преобразований. Преобразует одно преобразование, вызывается мировое преобразование мировых координатах страничных координат и еще одно преобразование, страничное преобразование переводит страничные координаты в координаты устройства.  

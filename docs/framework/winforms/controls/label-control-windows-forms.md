@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 90a870c71bc7e5d853049d363c27a29d00be3f6b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 76c02e3ae30bc3699b6fcddc07709d4b419d2a7e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="label-control-windows-forms"></a>Элемент управления Label (Windows Forms)
 > [!IMPORTANT]
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/18/2017
   
  Windows Forms <xref:System.Windows.Forms.Label> элементы управления используются для отображения текста или изображений, которые не может быть изменена пользователем. Они используются для идентификации объектов в форме — для предоставления описание какие определенный элемент управления будет выполнять при щелчке, например или для отображения сведений в ответ на событие во время выполнения или процесса в приложении. Поскольку <xref:System.Windows.Forms.Label> элемент управления не может получать фокус, он может также использоваться для создания клавиш доступа для других элементов управления.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об элементе управления Label](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
  Описывается элемент управления, его основные возможности и свойства.  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.Label>  
- Описание класса и ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  

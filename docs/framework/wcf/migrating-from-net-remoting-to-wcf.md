@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f39a26d52d7002e793935135e0c5d5e8f11c3d8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b387e100ff881c5394b6a77716a733b3928eae9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Перенос из .NET на платформу WCF
 В этой статье описан процесс переноса приложения с переходом от использования удаленного взаимодействия .NET к использованию Windows Communication Foundation (WCF). В ней сравниваются сходные принципы работы с этими продуктами и описывается выполнение некоторых наиболее распространенных сценариев удаленного взаимодействия в WCF.  
@@ -155,7 +156,7 @@ Console.WriteLine(String.Format("  Customer {0} {1} received.",
   
  Это пример программирования на уровне канала, так как он обладает максимальным сходством с примером удаленного взаимодействия. Также доступен **добавить ссылку на службу** подход в Visual Studio, который создает код для упрощения программирования клиента. Дополнительные сведения см. в следующих разделах:  
   
--   [Программирование клиента на уровне канала](./extending/client-channel-level-programming.md)  
+-   [Программирование клиентов на уровне канала](./extending/client-channel-level-programming.md)  
   
 -   [Как: Добавление, обновление или удаление ссылки на службу](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
   

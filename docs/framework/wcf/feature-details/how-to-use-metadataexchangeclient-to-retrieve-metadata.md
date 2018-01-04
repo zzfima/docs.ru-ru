@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cccbf343acc74b3e0da0f55e497f19ca15e27892
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 119e23c5834fdc646a793a4e84f191a37bca2f63
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>Практическое руководство. Использование MetadataExchangeClient для получения метаданных
 Используйте класс <xref:System.ServiceModel.Description.MetadataExchangeClient> для загрузки метаданных по протоколу WS-MetadataExchange (MEX). Извлеченные файлы метаданных возвращаются в виде объекта <xref:System.ServiceModel.Description.MetadataSet>. Возвращенный объект <xref:System.ServiceModel.Description.MetadataSet> содержит коллекцию объектов <xref:System.ServiceModel.Description.MetadataSection>, каждый из которых содержит конкретный диалект метаданных и идентификатор. Возвращенные метаданные можно записать в файлы или (если метаданные содержат документы WSDL) импортировать с помощью <xref:System.ServiceModel.Description.WsdlImporter>.  

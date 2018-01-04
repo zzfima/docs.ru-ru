@@ -13,11 +13,12 @@ caps.latest.revision: "48"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fc30a755278251ac9e06f2ddd56e2c369b950af4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1933d216f991b78e21a56ec67826dce0b4a7b24a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-udp"></a>Транспорт: UDP
 В образце транспорта UDP демонстрируется реализация одноадресного и многоадресного протокола UDP в качестве пользовательского транспорта [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. В образце описана процедура, предлагаемая для создания пользовательского транспорта в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с помощью инфраструктуры канала и согласно рекомендациям [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Для создания пользовательского транспорта выполните следующие действия.  

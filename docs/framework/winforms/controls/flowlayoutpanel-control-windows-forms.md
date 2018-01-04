@@ -17,18 +17,19 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f901377af4faf907a9640c6931d10fc1710aa71a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d038790f47ab405504faed7fb8a1bc7948c9ea82
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flowlayoutpanel-control-windows-forms"></a>Элемент управления FlowLayoutPanel (Windows Forms)
-Элемент управления `FlowLayoutPanel` упорядочивает свое содержимое в горизонтальном или вертикальном направлении. Его содержимое может быть перенесено из одной строки в следующую или из одного столбца в следующий. Кроме того, вместо переноса содержимое может обрезаться.  
+Элемент управления `FlowLayoutPanel` упорядочивает содержимое в горизонтальном или вертикальном направлении. Его содержимое может быть перенесено из одной строки в следующую или из одного столбца в следующий. Кроме того, вместо переноса содержимое может обрезаться.  
   
  В подразделах этого раздела описываются принципы и методы реализации возможностей `FlowLayoutPanel` в приложениях.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об элементе управления TableLayoutPanel](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-overview.md)  
  Основные понятия, связанные с элементом управления `FlowLayoutPanel`, который позволяет создавать макет с горизонтальной или вертикальной ориентацией.  
   

@@ -17,16 +17,17 @@ caps.latest.revision: "74"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 86f812c233a161764836c54817dc616577a4bb5e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 84020af84822ca4a8815e516a882fb15100b22e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="element-tree-and-serialization-how-to-topics"></a>Разделы руководства по дереву элементов и сериализации
 В подразделах этого раздела описывается использование дерева элементов WPF.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Поиск элемента по его имени](../../../../docs/framework/wpf/advanced/how-to-find-an-element-by-its-name.md)  
  [Переопределение логического дерева](../../../../docs/framework/wpf/advanced/how-to-override-the-logical-tree.md)  
   

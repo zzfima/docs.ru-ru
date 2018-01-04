@@ -13,23 +13,24 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fdbd6260cc435094b499b9e4f3b7bf02f32e27a1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c8984016f1f8ad77ab41aa49f8bcc2583406a465
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-contracts"></a>Контракты служб
 В этот разделе содержатся образцы, которые демонстрируют контракты служб в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Дуплекс](../../../../docs/framework/wcf/samples/duplex.md)  
  Показано, как определить и реализовать двухсторонний контракт.  
   
- [Контракт сбоя](../../../../docs/framework/wcf/samples/fault-contract.md)  
+ [Контракт ошибок](../../../../docs/framework/wcf/samples/fault-contract.md)  
  Демонстрирует передачу информации об ошибке из службы клиенту.  
   
- [Односторонний](../../../../docs/framework/wcf/samples/one-way.md)  
+ [Одностороннее взаимодействие](../../../../docs/framework/wcf/samples/one-way.md)  
  Демонстрирует контакт службы с односторонними операциями службы.  
   
  [Сеанс](../../../../docs/framework/wcf/samples/session.md)  

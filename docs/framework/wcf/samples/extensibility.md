@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 28e6de46098a8309a17e0c264411f865fb9b1de2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d1d8ea4987d918da79dcf1f69b842f19901e63a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extensibility"></a>Расширение среды
 Этот раздел содержит образцы кода, связанные с настраиваемой расширяемостью и другими функциями [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Расширяемость каналов](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
  Демонстрирует настраиваемые каналы.  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/02/2017
  [Суррогат DataContract](../../../../docs/framework/wcf/samples/datacontract-surrogate.md)  
  Показывает, как настроить такие процессы, как сериализация, десериализация, экспорт схемы и импорт схемы, с помощью суррогатного класса контракта данных.  
   
- [Повышение управляемости обработки ошибок и отчетов](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+ [Повышение управляемости обработки ошибок и формирования сообщений об ошибках](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
  Демонстрируется, каким образом расширить управление обработкой ошибок и отчетами об ошибках в службе [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с помощью интерфейса <xref:System.ServiceModel.Dispatcher.IErrorHandler>.  
   
  [Инспекторы сообщений](../../../../docs/framework/wcf/samples/message-inspectors.md)  

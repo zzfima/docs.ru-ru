@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e45ddcec4459e376a5dab4eec36e51cc2e5e49c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 92c6881fe876bba3fe0224a358a9b12767d53f0b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Типы столбцов элемента управления DataGridView в Windows Forms
 <xref:System.Windows.Forms.DataGridView> Управления использует нескольких типов столбцов для отображения данных и позволяют пользователям изменять или добавлять данные.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
  В следующей таблице описаны доступные для использования в различных классов столбцов <xref:System.Windows.Forms.DataGridView> элемента управления.  
   
-|Класс|Описание|  
+|Класс|Описание:|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|Используется с текстовыми значениями. Создается автоматически при привязке к чисел и строк.|  
 |<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|При использовании <xref:System.Boolean> и <xref:System.Windows.Forms.CheckState> значения. Создается автоматически при привязке к значениям из этих типов.|  

@@ -17,16 +17,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 39d5f7763ac7b5923f0eaec757df13d675971789
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 399520738c53e149e7a5539a62a5d4599e26a8da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Ввод данных с помощью элемента управления DataGridView в Windows Forms
 `DataGridView` Управления предоставляет несколько функций, позволяющих настраивать способ добавления или изменения данных в элементе управления. Например ввод данных можно сделать более эффективным, путем предоставления значения по умолчанию для новых строк и уведомления пользователей о времени этой ошибки.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Определение режима редактирования для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
  Описывает, как изменить способ редактирования пользователями ячеек.  
   

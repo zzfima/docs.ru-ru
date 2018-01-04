@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 280445240dae215013069c65ab12b9e38227f5c1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e8861138f7763f413f06983bbfba5f6e0ec3c8b5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loosely-typed-extensions-sample"></a>Пример слабо типизированных расширений
 Объектная модель синдикации обеспечивает широкую поддержку работы с данными расширения - информацией, присутствующей в XML-представлении канала синдикации, но не предоставляемой в явном виде такими классами, как <xref:System.ServiceModel.Syndication.SyndicationFeed> и <xref:System.ServiceModel.Syndication.SyndicationItem>. Этот пример иллюстрирует основные приемы работы с данными расширения.  
@@ -167,4 +168,4 @@ foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<
   
 ## <a name="see-also"></a>См. также  
  [Строго типизированные расширения](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)  
- [Синдикации WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
+ [Синдикация WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)

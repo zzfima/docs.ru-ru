@@ -15,18 +15,19 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6fccf64215c38a3aee0b367866dd2371b483b0a7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5379da3361a8a4b2115f46d0d2db80a565f6bfc9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="soundplayer-class"></a>Класс SoundPlayer
 Класс `SoundPlayer` позволяет облегчить добавление звуков в приложениях.  
   
  Можно также использовать класс <xref:System.Media.SystemSounds> для воспроизведения системных звуков, в том числе звукового сигнала.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о классе SoundPlayer](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)  
  Представляет класс и описывает его часто используемые свойства, методы и события.  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/22/2017
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Media.SoundPlayer>  
- Описание класса и ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
