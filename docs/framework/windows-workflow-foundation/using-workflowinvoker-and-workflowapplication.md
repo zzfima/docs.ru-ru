@@ -12,11 +12,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f1e4bb05f1b5f14554ff5183b42bbc8884cb114f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 669e1bd1daeb8f2569a851e21d10f250d1bc2204
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>Использование WorkflowInvoker и WorkflowApplication
 [!INCLUDE[wf](../../../includes/wf-md.md)] предоставляет несколько методов размещения рабочих процессов. <xref:System.Activities.WorkflowInvoker> предоставляет простой способ вызова рабочего процесса аналогично вызову метода и может использоваться только для рабочих процессов, не использующих сохраняемость. <xref:System.Activities.WorkflowApplication> предоставляет улучшенную модель выполнения рабочих процессов, которая обеспечивает уведомления о событиях жизненного цикла, управление выполнением, возобновление закладок и сохраняемость. <xref:System.ServiceModel.Activities.WorkflowServiceHost> предоставляет поддержку для действий по обмену сообщениями и главным образом используется со службами Workflow Service. В этом разделе вы познакомитесь с размещением рабочих процессов в <xref:System.Activities.WorkflowInvoker> и <xref:System.Activities.WorkflowApplication>. [!INCLUDE[crabout](../../../includes/crabout-md.md)]размещение рабочих процессов с <xref:System.ServiceModel.Activities.WorkflowServiceHost>, в разделе [службы рабочего процесса](../../../docs/framework/wcf/feature-details/workflow-services.md) и [размещение Обзор служб рабочего процесса](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  

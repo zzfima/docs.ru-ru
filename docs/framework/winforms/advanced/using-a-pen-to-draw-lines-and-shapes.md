@@ -18,16 +18,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0913dc2745e1b244e4b03c0e6b946441a401c5b1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 35f43316e2535aae6622ccf7952f649cdb92fc81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-pen-to-draw-lines-and-shapes"></a>Рисование линий и фигур с помощью пера
 Используйте [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` объектов для рисования линейных сегментов, кривых и контуров фигур. В этом разделе *строки* ссылается на любой из них, если не указано означает сегмент линии. Настройка параметров пера для управления цвет, ширину, выравнивание и стиль линий, нарисованных при помощи этого пера.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Рисование линий с помощью пера](../../../../docs/framework/winforms/advanced/how-to-use-a-pen-to-draw-lines.md)  
  Описываются способы рисования линий.  
   
@@ -51,4 +52,4 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Drawing.Pen>  
- Описание класса и ссылки на все его члены.
+ Описание класса и всех его членов.

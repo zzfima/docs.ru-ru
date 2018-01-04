@@ -12,16 +12,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfd3075ef58114d50be07e4070cfaa4492408e83
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7ec3fe498bc76c5fe7221d14c8af219420037c14
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic"></a>Basic
 Образцы в этом разделе показывают основные функциональные возможности [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Встроенные действия](../../../../docs/framework/windows-workflow-foundation/samples/built-in-activities.md)  
  Содержит образцы, использующие встроенную библиотеку действий.  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 12/02/2017
  [Миграция](../../../../docs/framework/windows-workflow-foundation/samples/migration.md)  
  Содержит образцы переноса рабочих процессов, созданных с предыдущей версией [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
- [Сохранение состояния](../../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
+ [Сохраняемость](../../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
  Содержит образцы, показывающие сохранение рабочих процессов на постоянном носителе.  
   
  [Образцы правил](../../../../docs/framework/windows-workflow-foundation/samples/rules-samples.md)  

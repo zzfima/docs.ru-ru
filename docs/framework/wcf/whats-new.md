@@ -16,11 +16,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 362578e6e8066c0490e692d0cd9d637b05bb1fa0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fd36f012f614e08be131efb3791fd997d3668531
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-in-windows-communication-foundation-45"></a>Какой &#39; новые возможности Windows Communication Foundation 4.5
 В этом разделе рассматриваются новые возможности [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
@@ -72,7 +73,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="new-transport-default-values"></a>Новые значения по умолчанию для свойств транспорта  
  В следующей таблице описываются измененные настройки и разделы, в которых можно найти дополнительные сведения.  
   
-|Свойство|Включить|Новое значение по умолчанию|Дополнительные сведения см. в разделах|  
+|Свойство.|включить|Новое значение по умолчанию|Дополнительные сведения см. в разделах|  
 |--------------|--------|-----------------|------------------------------|  
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 секунд|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|  
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * количество процессоров|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|  
@@ -106,7 +107,7 @@ ms.lasthandoff: 12/02/2017
  Добавлена поддержка для транспорта UDP, что позволяет разработчикам писать службы, использующие «отправить и забыть» обмен сообщениями. Клиент отправляет сообщение службе, но не ожидает от нее ответа.  
   
 ## <a name="multiple-authentication-support"></a>Поддержка нескольких видов проверок подлинности  
- Была добавлена поддержка нескольких режимов проверок подлинности, поддерживаемых службами IIS, в одной конечной точке WCF при использовании транспорта HTTP и безопасности транспорта. Служба IIS позволяет включить несколько режимов проверки подлинности в виртуальном каталоге. Эта функция позволяет одной конечной точке WCF поддерживать несколько режимов проверки подлинности, разрешенных для виртуального каталога, в котором размещена служба WCF.  
+ Была добавлена поддержка нескольких режимов проверок подлинности, поддерживаемых службами IIS, в одной конечной точке WCF при использовании транспорта HTTP и безопасности транспорта. Служба IIS позволяет включить несколько режимов проверки подлинности в виртуальном каталоге. Эта возможность позволяет одной конечной точке WCF поддерживать несколько режимов проверки подлинности, разрешенных для виртуального каталога, в котором размещена служба WCF.  
   
 ## <a name="idn-support"></a>Поддержка IDN  
  Добавлена поддержка служб WCF с интернационализированными именами домена (IDN). Дополнительные сведения см. [WCF и международных доменных имен](../../../docs/framework/wcf/feature-details/wcf-and-internationalized-domain-names.md).  

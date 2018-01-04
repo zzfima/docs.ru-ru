@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b1957db5af18a571e209c62332e95d844fa866f4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bde3ab1049edf6cb52a221225321f1e505a2491b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-query-for-non-persisted-instances"></a>Как обращаться с запросом к несохраняемым экземплярам
 Когда новый экземпляр службы создан и для службы определено поведение хранилища экземпляров рабочих процессов SQL, узел службы создает начальную запись для экземпляра службы в хранилище экземпляров. Позднее, когда экземпляр службы материализуется в первый раз, поведение хранилища экземпляров рабочих процессов SQL сохраняет текущее состояние экземпляра вместе с дополнительными данными, необходимыми для его активации, восстановления и управления.  

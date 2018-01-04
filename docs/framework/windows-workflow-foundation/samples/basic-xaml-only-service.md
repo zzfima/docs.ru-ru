@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 06a302b13db3b82dabb43989ac272df0d9aac008
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db4110ca8ce72b43bf5771db5b1020a826bc058f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-xaml-only-service"></a>Базовая служба с использованием только XAML
 В этом образце демонстрируется создание службы, работающей только с языком XAML. В данном сценарии рассматривается диагностическая служба для автомобильных проблем. Служба реализована в виде рабочего процесса, задающего клиенту ряд вопросов для диагностики проблемы. Эта служба может выполнять диагностику двух типов проблем (машина не заводится, или система кондиционирования не работает). Для представления трех простых операций служб в рабочем процессе использует шаблон «Запрос-ответ» из конструктора. Служба размещается в службах IIS путем создания виртуального каталога в IIS и копирования service1.xamlx и файлов Web.config в виртуальный каталог, скомпилированный код не требуется. По умолчанию в этом примере автоматически скопирует необходимые файлы в виртуальный каталог, созданный при выполнении процедуры настройки для образцов WCF и WF: [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) при построении в Visual Studio 2010.  

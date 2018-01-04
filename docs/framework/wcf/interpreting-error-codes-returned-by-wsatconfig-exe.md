@@ -13,18 +13,19 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd37e88c581638e5ae11d85803fa3a970b4c8409
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 889a14d7d30c3c7750b38f55256ccc4ff004f10d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>Интерпретация кодов ошибок, возвращаемых wsatConfig.exe
 В данном разделе перечисляются все коды ошибок, создаваемые программой настройки WS-AtomicTransaction (wsatConfig.exe), и описываются действия, которые рекомендуется выполнить в каждом случае.  
   
 ## <a name="list-of-error-codes"></a>Список кодов ошибок  
   
-|Код ошибки|Описание|Рекомендуемое действие|  
+|Код ошибки|Описание:|Рекомендуемое действие|  
 |----------------|-----------------|------------------------------------|  
 |0|Операция выполнена успешно.|Нет|  
 |1|Непредвиденная ошибка.|Обратитесь в Майкрософт.|  

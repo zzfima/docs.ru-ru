@@ -31,11 +31,12 @@ caps.latest.revision: "17"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: d24daf5520c7bfe74c09abc24a4260266e5b9c1a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 613107a13820ad71b854dcba93f21c41f2a5fa5f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="introduction-to-windows-service-applications"></a>Знакомство с приложениями служб Windows
 Службы Microsoft Windows, ранее известные как службы NT, позволяют создавать долго выполняющихся исполняемыми приложениями, которые выполняются в собственных сеансах Windows. Эти службы могут запускаться автоматически при запуске компьютера, можно приостановить и перезапустить и не содержат элементов пользовательского интерфейса. Эти особенности делают службы идеальным для использования на сервере, или каждый раз, когда требуется длительное время, не влияют на работу других пользователей, работающих на том же компьютере. Службы могут выполняться в контексте безопасности определенной учетной записи пользователя, отличное от вошедшего в систему пользователя или учетной записи компьютера по умолчанию. Дополнительные сведения о службах и сеансах Windows см. в документации пакета SDK для Windows.  
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="services-and-the-servicecontroller-component"></a>Службы и с помощью компонента ServiceController  
  <xref:System.ServiceProcess.ServiceController> Компонент будет использоваться для подключения к установленной службе и изменения ее состояния; с помощью <xref:System.ServiceProcess.ServiceController> компонента, можно запустить и остановить службу, приостановить и продолжить выполнение и отправить службе пользовательские команды. Тем не менее, необходимо использовать <xref:System.ServiceProcess.ServiceController> компонента при создании приложения службы. Фактически в большинстве случаев вашей <xref:System.ServiceProcess.ServiceController> компонента должна находиться в отдельном приложении из приложения службы Windows, который определяет службу.  
   
- Для получения дополнительной информации см. <xref:System.ServiceProcess.ServiceController>.  
+ Дополнительные сведения см. в разделе <xref:System.ServiceProcess.ServiceController>.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -91,9 +92,9 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>См. также  
  [Приложения служб Windows](../../../docs/framework/windows-services/index.md)  
  [Программная архитектура приложений служб](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
- [Как: создание служб Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [Как: Установка и удаление служб](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [Как: запуск служб](../../../docs/framework/windows-services/how-to-start-services.md)  
- [Как: отладка приложений служб Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
- [Пошаговое руководство: Создание приложения службы Windows в конструкторе компонентов](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
- [Как: добавление установщиков в приложение службы](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+ [Практическое руководство. Создание служб Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ [Практическое руководство. Установка и удаление служб](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [Практическое руководство. Запуск служб](../../../docs/framework/windows-services/how-to-start-services.md)  
+ [Практическое руководство. Отладка приложений служб Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
+ [Пошаговое руководство. Создание приложения служб Windows в конструкторе компонентов](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
+ [Практическое руководство. Добавление установщиков в приложение служб](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

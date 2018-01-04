@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8a7dd9e0ccc29c81426064110eda3e00d2f27b99
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 54ed92ee666a55b52db22abbbe46922189b3f8fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="non-persisted-workflow-instances"></a>Экземпляры нематериализованного рабочего процесса
 При создании нового экземпляра рабочего процесса, состояние которого сохраняется в <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, узел службы создает запись для этой службы в хранилище экземпляров. Затем при первом сохранении экземпляра рабочего процесса <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> сохраняет текущее состояние экземпляра. Если рабочий процесс размещен в службе активации Windows, данные развертывания службы также записываются в хранилище экземпляров при первом сохранении экземпляра.  

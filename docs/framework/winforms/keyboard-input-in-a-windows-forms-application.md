@@ -17,16 +17,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e9d0c50fe8f99df471376d31a2258912c870dd37
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 256fb961c01b17c21613fe4ec60b8e7f68c2d8f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="keyboard-input-in-a-windows-forms-application"></a>Ввод с клавиатуры в приложении Windows Forms
 Windows Forms содержит стандартные события клавиатуры, которые позволяют реагировать на нажатия определенных клавиш, а также предоставляет способы для перехвата, изменить и получения нажатий клавиш на уровне приложения, формы, и управлять уровнем.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Принцип работы ввода с клавиатуры](../../../docs/framework/winforms/how-keyboard-input-works.md)  
  Описывает, как сообщения клавиатуры обрабатываются и преобразуются в события клавиатуры.  
   

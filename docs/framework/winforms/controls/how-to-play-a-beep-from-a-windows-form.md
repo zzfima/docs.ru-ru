@@ -22,11 +22,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e214b368b65797100722cb41ad6a77ecd16424de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c0c0c369756547231c0f8171bdfa940cb353544b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-play-a-beep-from-a-windows-form"></a>Практическое руководство. Подача звукового сигнала в Windows Forms
 В этом примере воспроизводится звуковой сигнал во время выполнения.  
@@ -47,7 +48,7 @@ public void onePing()
 ```  
   
 > [!NOTE]
->  Звук, воспроизводимый в примере кода C#, определяется <xref:System.Media.SystemSounds.Beep%2A> звуковые настройки системы. Для получения дополнительной информации см. <xref:System.Media.SystemSounds>.  
+>  Звук, воспроизводимый в примере кода C#, определяется <xref:System.Media.SystemSounds.Beep%2A> звуковые настройки системы. Дополнительные сведения см. в разделе <xref:System.Media.SystemSounds>.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для C# в этом примере требуется ссылка на <xref:System.Media?displayProperty=nameWithType> пространства имен.  

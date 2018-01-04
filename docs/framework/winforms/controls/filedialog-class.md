@@ -14,16 +14,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 432b9935113a700160f89ad427ebf5cade6d0e99
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 40c304ba3af28b20dfe158a40ef9cf2e7dd5b083
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="filedialog-class"></a>Класс FileDialog
 Windows Forms <xref:System.Windows.Forms.FileDialog> класс представляет общий базовый класс для <xref:System.Windows.Forms.OpenFileDialog> и <xref:System.Windows.Forms.SaveFileDialog> компонентов. Можно внести изменения в <xref:System.Windows.Forms.FileDialog> класс, который влияет на внешний вид и поведение этих диалоговых окон, в зависимости от версии Windows, приложение выполняется на.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Отказ от автоматического обновления диалоговых окон открытия и сохранения файла](../../../../docs/framework/winforms/controls/how-to-opt-out-of-file-dialog-box-automatic-upgrade.md)  
  Описывает, как отказ от автоматического обновления стиля в диалоговом окне файла.  
   

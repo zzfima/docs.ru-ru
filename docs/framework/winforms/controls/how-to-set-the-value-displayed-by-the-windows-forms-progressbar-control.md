@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d3fd66e10515e5135545f6fcfa64546141346519
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f6ebca02e2084fdb7a76a9a9d711a0b0180f7a7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>Практическое руководство. Установка значения, отображаемого c помощью элемента управления ProgressBar в Windows Forms
 > [!IMPORTANT]
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Предоставляет несколько способов отображения заданное значение в пределах <xref:System.Windows.Forms.ProgressBar> элемента управления. Выбор способа зависит от поставленной задачи или проблемы, которую требуется решить. В следующей таблице показаны подходы, доступные для выбора.  
   
-|Подход|Описание|  
+|Подход|Описание:|  
 |--------------|-----------------|  
 |Установите для параметра <xref:System.Windows.Forms.ProgressBar> управления напрямую.|Этот подход полезен для выполнения задач, когда вы знаете, общее количество элементов, который будет принимать участие, таких как чтение записей из источника данных. Кроме того Если требуется задать значение один или два раза, это простой способ сделать это. Наконец можно используйте этот процесс, если необходимо уменьшить значения, отображаемого в строке состояния.|  
 |Увеличьте <xref:System.Windows.Forms.ProgressBar> отображения фиксированным значением.|Этот подход полезен при отображении простого счета между минимум и максимум, такие как затраченное время и число файлов, которые были обработаны из известного общего.|  

@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72c9c2078f694a1739a7f33689a0d8275d786937
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: be885a964ad7e8d63045febfa279b23d0d85ab1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-hosting-options"></a>Варианты размещения рабочего процесса
 Большинство образцов [!INCLUDE[wf](../../../includes/wf-md.md)] используют рабочие процессы, размещенные в консольном приложении, но это не является реалистичным сценарием для реальных рабочих процессов. Рабочие процессы в реальных бизнес-приложениях будут задействованы в постоянных процессах: службе Windows, созданной разработчиком, или серверном приложении, например [!INCLUDE[iisver](../../../includes/iisver-md.md)] или AppFabric. Между этими подходами имеются следующие различия.  

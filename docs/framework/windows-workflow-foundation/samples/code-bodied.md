@@ -12,20 +12,21 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41d0b2ccd126416a625e37e6bfdca8f4fd96faf2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1e9c0cecbf398fb024bda672cf9085e9c779d620
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-bodied"></a>Образцы в коде
 В этом разделе содержатся образцы настраиваемых действий, созданные декларативно в коде.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Закладки](../../../../docs/framework/windows-workflow-foundation/samples/bookmarks.md)  
  В этом образце показано, как разработать настраиваемое действие, которое создает закладку для получения внешних входных данных.  
   
- [Пользовательское составное, использующее собственное действие](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-using-native-activity.md)  
+ [Пользовательское составное действие, использующее собственное действие](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-using-native-activity.md)  
  В этом образце показано, как разработать действие <xref:System.Activities.NativeActivity>, которое планирует другие объекты <xref:System.Activities.Activity> для управления потоком выполнения рабочего процесса.  
   
  [Свойства выполнения](../../../../docs/framework/windows-workflow-foundation/samples/execution-properties.md)  

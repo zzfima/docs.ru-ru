@@ -16,16 +16,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5efd63e971ea3ae2fa5cfd03a148fa453130c646
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 77bd9884681c632f0faa9279f63aea6eabfe076e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enhancing-windows-forms-applications"></a>Усовершенствование приложений Windows Forms
 Windows Forms содержит много возможностей, которые можно использовать для улучшения приложений Windows в целях удовлетворения конкретных потребностей пользователей. В перечисленных ниже разделах описываются эти возможности и способы их использования.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
  Ссылки на разделы, в которых описано и показано, как используется графический интерфейс в формах Windows Forms.  
   
