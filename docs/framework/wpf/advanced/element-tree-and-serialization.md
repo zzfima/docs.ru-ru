@@ -18,20 +18,21 @@ caps.latest.revision: "71"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9ebc62926efc09eb45e51ca9a7bf08527568929
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 13affab3e1e6a1a732231763219e9b419ea7ea51
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="element-tree-and-serialization"></a>Дерево элементов и сериализация
 Между элементами программирования WPF часто возникают отношения типа "дерево" в том или ином виде. Например, пользовательский интерфейс приложения, созданный в XAML, можно представить в виде дерева объектов. Дерево элементов можно разделить на два дискретных, но иногда существующих параллельно друг другу дерева: логическое дерево и визуальное дерево. Сериализация в WPF подразумевает сохранение состояния этих двух деревьев и состояния приложения и запись этих данных в файл (возможно, в формате XAML).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Деревья в WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
  [Ограничения сериализации в XamlWriter.Save](../../../../docs/framework/wpf/advanced/serialization-limitations-of-xamlwriter-save.md)  
  [Инициализация для объектных элементов, которые не находятся в дереве объектов](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
- [Практические руководства](../../../../docs/framework/wpf/advanced/element-tree-and-serialization-how-to-topics.md)  
+ [Разделы практического руководства](../../../../docs/framework/wpf/advanced/element-tree-and-serialization-how-to-topics.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Markup>  

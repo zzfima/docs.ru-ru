@@ -18,16 +18,17 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d2c61c4fd5651b8915971f67addeb162aca50108
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 051f37b0a7098cad5ac43766877cd973ca86e5b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-wpf-applications"></a>Размещение WPF-приложений
 Приложения браузера WPF XAML (XBAP) являются многофункциональных клиентских приложений, которые можно развернуть на веб-сервере и запускать в браузере. WPF узла (PresentationHost.exe) зарегистрирован в качестве оболочки и обработчика MIME для файлов XBAP и XAML. Таким образом Internet Explorer знает, что для запуска узла WPF, когда запускается приложение XBAP. Firefox пользователей можно установить дополнительные компоненты, позволяющие Firefox узел XBAP. XBAP может размещаться в других браузерах или автономных приложений с помощью собственного браузера API размещения, предоставляемых платформой WPF.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о приложениях браузера WPF XAML](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)  
    [Основное приложение WPF (PresentationHost.exe)](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md)  
   [Надстройки Firefox для поддержки развертывания приложений .NET](../../../../docs/framework/wpf/app-development/firefox-add-ons-to-support-net-application-deployment.md)  

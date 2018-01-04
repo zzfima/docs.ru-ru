@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1e007ae09e57353446feb13b3693e62c985f522d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d3b93de0089db58ed0a91aad4150432f8e7a1019
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="menu-styles-and-templates"></a>Стили и шаблоны элемента Menu
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.Menu> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="menu-states"></a>Состояния меню  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Menu> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание|  
+|Имя VisualState|Имя VisualStateGroup|Описание:|  
 |-|-|-|  
 |Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класса и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> вложенное свойство `false`.|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.|  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="menuitem-parts"></a>MenuItem частей  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.Menu> элемента управления.  
   
-|Отделение|Тип|Описание|  
+|Отделение|Тип|Описание:|  
 |-|-|-|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Область подменю.|  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="menuitem-states"></a>MenuItem состояний  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.MenuItem> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание|  
+|Имя VisualState|Имя VisualStateGroup|Описание:|  
 |-|-|-|  
 |Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класса и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> вложенное свойство `false`.|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.|  

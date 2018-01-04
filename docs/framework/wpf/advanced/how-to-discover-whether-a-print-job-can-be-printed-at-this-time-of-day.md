@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ac89b8dce67c95c78a5dd46e591d84730a68346
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ef9da205792823b7069024c5e4a3e9ac80d60a24
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Практическое руководство. Определение возможности печати в заданное время суток
 Очереди печати не всегда доступны на 24 часа в сутки. Они имеют свойства времени начала и окончания, можно задать, чтобы сделать недоступным в определенное время дня. Эта функция используется, например, чтобы зарезервировать принтер для монопольного использования определенным отделом после 17: 00. Этот отдел будет иметь другой очереди обслуживания принтера от других отделов используйте. Будет иметь значение в очередь для других отделов станет недоступной после 17: 00, пока очередь для привилегированного отдела может быть задано равным доступны в любое время.  

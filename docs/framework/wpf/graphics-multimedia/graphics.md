@@ -17,16 +17,17 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a86833f2b773f1724393de091bc65a5cbb75c9b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 157e7bf7ed481afc0b797a05721a4d7973b8790b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics"></a>Графика
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]обеспечивает интегрированную поддержку мультимедиа, векторную графику, анимацию и композицию содержимого, что облегчает разработчикам создание интересных пользовательских интерфейсов и содержимого.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Эффекты для точечных рисунков](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
  [Кисти](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
  [Объекты рисования](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  

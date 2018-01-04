@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 5c6e91fcecb60dee2577ea62c2313f8b2c7eecbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1d620b59208b9dc852abee3dd2e4d6c58b223d70
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xsubclass-directive"></a>Директива x:Subclass
 Изменяет поведение компиляции разметки XAML при `x:Class` также предоставляется. Вместо создания разделяемого класса, который основан на `x:Class`, предоставленный `x:Class` создается в качестве промежуточного класса, и затем предоставленный производный класс должен быть основан на `x:Class`.  
@@ -42,10 +43,10 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|`namespace`|Необязательно. Указывает пространство имен CLR, который содержит `classname`. Если `namespace` указан, точка (.) отделяет `namespace` и `classname`.|  
-|`classname`|Обязательный. Указывает имя CLR разделяемого класса, который соединяет загруженный XAML и вашего кода программной части для этого кода XAML. См. заметки.|  
-|`subclassNamespace`|Необязательно. Может отличаться от `namespace` если каждое пространство имен можно заменить другим. Указывает пространство имен CLR, который содержит `subclassName`. Если `subclassName` указан, точка (.) отделяет `subclassNamespace` и `subclassName`.|  
-|`subclassName`|Обязательный. Задает имя подкласса CLR.|  
+|`namespace`|Необязательный. Указывает пространство имен CLR, который содержит `classname`. Если `namespace` указан, точка (.) отделяет `namespace` и `classname`.|  
+|`classname`|Обязательно. Указывает имя CLR разделяемого класса, который соединяет загруженный XAML и вашего кода программной части для этого кода XAML. См. заметки.|  
+|`subclassNamespace`|Необязательный. Может отличаться от `namespace` если каждое пространство имен можно заменить другим. Указывает пространство имен CLR, который содержит `subclassName`. Если `subclassName` указан, точка (.) отделяет `subclassNamespace` и `subclassName`.|  
+|`subclassName`|Обязательно. Задает имя подкласса CLR.|  
   
 ## <a name="dependencies"></a>Зависимости  
  [Директива x: Class](../../../docs/framework/xaml-services/x-class-directive.md) также должен быть предоставлен в тот же объект, и этот объект должен быть корневым элементом рабочей среды XAML.  

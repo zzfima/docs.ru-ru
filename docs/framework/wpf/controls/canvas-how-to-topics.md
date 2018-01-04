@@ -17,16 +17,17 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7da9f53b291fb5a8f89c5e9ac15ffc082c976cdb
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f80b73952dc8949aac7b9106ab42388ddf2b4d40
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="canvas-how-to-topics"></a>Разделы руководства, посвященные холсту для рисования Canvas
 В подразделах этого раздела описывается использование <xref:System.Windows.Controls.Canvas> элемента абсолютное положение дочерних элементов.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Расположение границы вокруг содержимого холста](../../../../docs/framework/wpf/controls/how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
  [Получение или определение свойств размещения холста](../../../../docs/framework/wpf/controls/how-to-get-or-set-canvas-positioning-properties.md)  
  [Создание и использование холста](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-canvas.md)  

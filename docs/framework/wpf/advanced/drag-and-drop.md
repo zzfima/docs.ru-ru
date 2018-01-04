@@ -18,16 +18,17 @@ caps.latest.revision: "85"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d02a32eb2d27d6e8ace4e81703bfadbb3a1b1ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7a051002fb0dda77ee2e8a5d8ef95ae3ebf24cc9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drag-and-drop"></a>Перетаскивание
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]предоставляет очень гибкую и drop инфраструктуру, которая поддерживает перетаскивание данных как в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложений, а также другими [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] приложений.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о перетаскивании](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)  
  [Данные и объекты данных](../../../../docs/framework/wpf/advanced/data-and-data-objects.md)  
  [Пошаговое руководство. Включение перетаскивания для пользовательского элемента управления](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  

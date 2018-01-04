@@ -17,16 +17,17 @@ caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e58fbb6a577354f862d4b4d79e947e7618bd75a0
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 472bb286f57701342be82d4a981714236e147932
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flow-content-elements-how-to-topics"></a>Разделы пошагового руководства, посвященные элементам содержимого нефиксированного формата
 В этом разделе описываются способы выполнения типичных задач с использованием различных элементов содержимого нефиксированного формата и связанных функций.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Настройка интервалов между абзацами](../../../../docs/framework/wpf/advanced/how-to-adjust-spacing-between-paragraphs.md)  
  [Создание таблицы программным способом](../../../../docs/framework/wpf/advanced/how-to-build-a-table-programmatically.md)  
  [Изменение FlowDirection содержимого программным способом](../../../../docs/framework/wpf/advanced/how-to-change-the-flowdirection-of-content-programmatically.md)  

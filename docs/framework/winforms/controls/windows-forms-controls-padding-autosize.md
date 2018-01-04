@@ -26,11 +26,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2dce58776af84b1f4c733ddce2553e4b18b1b824
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 797a432bb8cfd3af3b5f030be8f71c78a1a393e9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>Пошаговое руководство. Создание структуры элементов управления Windows Forms с помощью свойств "Padding", "Margins" и "AutoSize"
 Точное расположение элементов управления на форме является важным для многих приложений. **Конструктор Windows Forms** дает много инструментов для выполнения этой задачи. Три наиболее важными являются <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, и <xref:System.Windows.Forms.Control.AutoSize%2A> свойства, которые присутствуют на все элементы управления Windows Forms.  
@@ -185,7 +186,7 @@ ms.lasthandoff: 11/21/2017
   
      <xref:System.Windows.Forms.Panel> Управления изменяет свой размер <xref:System.Windows.Forms.Button> новое положение элемента управления.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  Существует множество возможностей компоновки для упорядочивания элементов управления в приложениях Windows Forms. Ниже приведены некоторые сочетания, которые можно попробовать.  
   
 -   Создайте форму с помощью <xref:System.Windows.Forms.TableLayoutPanel> элемента управления. Дополнительные сведения см. в разделе [Пошаговое руководство: упорядочение элементов управления в Windows Forms с помощью элемента TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md). Попробуйте изменить значения <xref:System.Windows.Forms.TableLayoutPanel> элемента управления <xref:System.Windows.Forms.Control.Padding%2A> свойства, а также <xref:System.Windows.Forms.Control.Margin%2A> свойства дочерних элементов управления.  

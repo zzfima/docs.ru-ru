@@ -17,40 +17,41 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9275f1812111365ed6b0fb3be6957cd9ca883fdf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 62eb27919e762004667b3d5179c35cb04d9a9422
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Транспорты в Windows Communication Foundation
 Транспортный уровень является самым нижним уровнем стека каналов. Основными типами транспорта, используемыми в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], являются протоколы HTTP, HTTPS, TCP и именованные каналы. В подразделах данного раздела рассматриваются выбор типа транспорта среди названных выше типов, настройка транспорта и задание свойств настройки.  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] содержит дополнительные типы транспорта. Сведения о транспорта очереди сообщений (MSMQ) см. в разделе [очереди и надежные сеансы](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md). Сведения о транспорта одноранговая сеть, в разделе [-одноранговые сети](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Выбор транспорта](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
  Описываются три основных типа транспорта и рассматриваются вопросы выбора транспорта.  
   
  [Выбор кодировщика сообщений](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
  Описываются факторы, которые необходимо принять во внимание при выборе элемента привязки для кодирования сообщений.  
   
- [Потоковую передачу](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)  
+ [Потоковая передача сообщений](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)  
  Описывается настройка транспортного уровня для выполнения потоковой передачи.  
   
  [Настройка HTTP и HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)  
  Описывается настройка элементов привязки транспорта HTTP и HTTPS.  
   
- [Как: заменить WCF URL резервирование на ограниченное резервирование](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
+ [Практическое руководство. Замена резервирования URL с помощью WCF на ограниченное резервирование](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
  Описывает использование ограниченных резервирований URL [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  [Квоты транспорта](../../../../docs/framework/wcf/feature-details/transport-quotas.md)  
  Рассматриваются вопросы задания квот, доступных на транспортном уровне.  
   
- [Работа с NAT и брандмауэров](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md)  
+ [Работа со средствами NAT и брандмауэрами](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md)  
  Описывается настройка транспортного уровня при отправке или получении сообщений за брандмауэром или при использовании преобразования сетевых адресов (NAT).  
   
- [Общий доступ к портам Net.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
+ [Совместное использование портов Net.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
  Описывается использование компонента общего доступа к портам Net.TCP системы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
 ## <a name="reference"></a>Ссылка  

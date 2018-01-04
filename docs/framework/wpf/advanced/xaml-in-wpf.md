@@ -17,16 +17,17 @@ caps.latest.revision: "79"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 74f5a19e891bf0b86f91fcbe4f6b59b4d6acc8bb
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3735bfc7b759f48a9dc580210f3a6f1c89782d30
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-in-wpf"></a>XAML в WPF
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]язык разметки для приложения декларативного программирования. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]реализован обработчик и обеспечивает поддержку языка XAML. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Типы реализованы так, что они могут служить необходимой платформой типов для представления XAML. Как правило, можно создать большую часть вашей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] пользовательского интерфейса приложения на языке XAML.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о языке XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [Подробное описание синтаксиса XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
  [Код программной части и XAML в WPF](../../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  

@@ -17,16 +17,17 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2799bd6652c9f575be8758f47c9770d3fde93580
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 4b38cbe1bab4c3d2bf0c6ee518dd26df4ff440dc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms"></a>Windows Forms
 Так как формы являются основной частью приложения, необходимо уделить особое внимание их внешнему виду и функциям. В конечном счете форма представляет собой чистый лист, который разработчик оснащает элементами управления, формируя пользовательский интерфейс, и кодом для работы с данными. Для этого [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] предоставляет интегрированную среду разработки (IDE), упрощающую написание кода, а также широкий набор элементов управления [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Дополняя функциональные возможности этих элементов управления своим кодом, вы можете легко и быстро разработать нужное приложение.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Приступая к работе с Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
  Ссылки на разделы, посвященные использованию возможностей Windows Forms для отображения данных, обработки вводимых пользователями данных и более простого и безопасного развертывания приложений.  
   

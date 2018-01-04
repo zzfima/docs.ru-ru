@@ -20,11 +20,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f51505a2b532da47591f2be4d767247c519aec40
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f5f3bb1856a83309483119ded600396218b81fb7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-styles-and-templates"></a>Стили и шаблоны элемента Control
 Элементы управления в Windows Presentation Foundation (WPF) имеют <xref:System.Windows.Controls.ControlTemplate> , содержащий визуальное дерево этого элемента управления. Можно изменить структуру и внешний вид элемента управления, изменив <xref:System.Windows.Controls.ControlTemplate> этого элемента управления. Невозможно заменить только часть визуального дерева элемента управления; Чтобы изменить визуальное дерево элемента управления, необходимо задать <xref:System.Windows.Controls.Control.Template%2A> свойство элемента управления, его новый и завершенный <xref:System.Windows.Controls.ControlTemplate>.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/18/2017
 |Royale.NormalColor.xaml|Тема по умолчанию в ОС Windows XP Media Center Edition.|  
 |Aero.NormalColor.xaml|Тема по умолчанию в ОС Windows Vista.|  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Стили и шаблоны элемента Button](../../../../docs/framework/wpf/controls/button-styles-and-templates.md)  
  [Стили и шаблоны элемента Calendar](../../../../docs/framework/wpf/controls/calendar-styles-and-templates.md)  
  [Стили и шаблоны элемента CheckBox](../../../../docs/framework/wpf/controls/checkbox-styles-and-templates.md)  

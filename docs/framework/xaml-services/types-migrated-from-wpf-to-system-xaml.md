@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: db227b5c7915b6ce0b0fe8400a8545256ea6d6b3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 86dd2dc74903dfb889ab618622786f5349a5fb32
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>Типы, перенесенные из WPF в System.Xaml
 В [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] и [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]как [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] , так и [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] содержат реализацию языка XAML. Многие из открытых типов, которые обеспечивают расширение для реализации XAML в WPF, существовали в сборках WindowsBase PresentationCore и PresentationFramework. Аналогично, открытые типы, обеспечивающие расширение для XAML [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] , существовали в сборке System.Workflow.ComponentModel. В [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]некоторые типы, связанные с XAML, перенесены в сборку System.Xaml. Общая реализация служб языка XAML в .NET Framework поддерживает многие сценарии расширения XAML, которые первоначально определялись реализацией XAML конкретной платформы, а теперь в целом поддерживаются в [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] . В этом разделе перечислены перенесенные типы и обсуждаются вопросы, относящиеся к миграции.  

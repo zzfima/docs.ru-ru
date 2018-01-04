@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f50923d9e314d2f677e26416cef59fdf380213e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 79669bdc4b5f9cfb8bdac92efa07e932cc14ac57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="timing-events-overview"></a>Общие сведения о временных событиях
 В этом разделе описывается использование пять временных событий, доступных на <xref:System.Windows.Media.Animation.Timeline> и <xref:System.Windows.Media.Animation.Clock> объектов.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="public-events"></a>Открытые события  
  <xref:System.Windows.Media.Animation.Timeline> И <xref:System.Windows.Media.Animation.Clock> классы предоставляют пять временных событий. В следующей таблице перечислены эти события и условия, которые их вызывают.  
   
-|Событие|Интерактивная операция, вызывающая событие|Другие условия|  
+|событие|Интерактивная операция, вызывающая событие|Другие условия|  
 |-----------|--------------------------------------|--------------------|  
 |**Completed**|Переход к заполнению|Часы останавливаются.|  
 |**CurrentGlobalSpeedInvalidated**|Пауза, возобновление, поиск, установка соотношения скорости, переход к заполнению|Часы запускаются в обратном направлении, ускоряются, запускаются в обычном направлении или останавливаются.|  

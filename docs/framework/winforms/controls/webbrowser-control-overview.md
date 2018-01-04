@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c2dfae4cbd7f583ce69ff5591c24a573db0d4e4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d2c1ed93769cc91d9622a86ea2d894cea57f5bcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="webbrowser-control-overview"></a>Общие сведения об элементе управления WebBrowser
 <xref:System.Windows.Forms.WebBrowser> Управления предоставляет управляемую оболочку для элемента управления WebBrowser ActiveX. Управляемая оболочка позволяет отображать веб-страницы в клиентских приложениях Windows Forms. Можно использовать <xref:System.Windows.Forms.WebBrowser> управления дублировать возможности просмотра веб-обозревателя в приложении, либо можно отключить функциональные возможности Internet Explorer по умолчанию и использовать элемент управления в качестве простого просмотра документа HTML. Также можно использовать элемент управления для добавления в форму элементов интерфейса пользователя на основе DHTML и скрыть тот факт, что они размещаются в <xref:System.Windows.Forms.WebBrowser> элемента управления. Такой подход позволяет легко объединить веб-элементов управления с помощью элементов управления Windows Forms в одном приложении.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
  `Document` Свойство также можно вызывать методы, реализованные в скрипта кода из кода клиентского приложения веб-страницы. Для доступа к коду клиентского приложения из кода сценария, установите `ObjectForScripting` свойство. Объект, который указывается может осуществляться код скрипта как `window.external` объект.  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |Свойство <xref:System.Windows.Forms.WebBrowser.Document%2A>|Возвращает объект, который обеспечивает управляемый доступ к модели объекта документа HTML DOM текущей веб-страницы.|  
 |Событие <xref:System.Windows.Forms.WebBrowser.DocumentCompleted>|Происходит по завершении загрузки веб-страницы.|  

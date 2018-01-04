@@ -20,11 +20,14 @@ caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ab596fd10de81e60e6396268cbd5c5b31aa13078
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 869d35a15a028e6df09dea281ac653ab8b9a28d6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Пошаговое руководство. Создание криптографического приложения
 В этом пошаговом руководстве показано, как зашифровать и расшифровать содержимое. Пример кода предназначен для приложения Windows Forms. Это приложение не демонстрирует реальные сценарии, такие как использование смарт-карт. Вместо этого оно демонстрирует основные принципы шифрования и расшифровки.  
@@ -40,7 +43,7 @@ ms.lasthandoff: 10/18/2017
   
  В следующей таблице указаны задачи шифрования из этого раздела.  
   
-|Задача|Описание|  
+|Задача|Описание:|  
 |----------|-----------------|  
 |Создание приложения Windows Forms|Выводит список элементов управления, необходимых для запуска приложения.|  
 |Объявление глобальных объектов|Объявляет, что строковые переменные пути <xref:System.Security.Cryptography.CspParameters> и <xref:System.Security.Cryptography.RSACryptoServiceProvider> имеют глобальный контекст класса <xref:System.Windows.Forms.Form>.|  
@@ -60,7 +63,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="creating-a-windows-forms-application"></a>Создание приложения Windows Forms  
  Большинство примеров кода в этом пошаговом руководстве предназначено для использования в качестве обработчиков событий для элементов управления кнопок. В следующей таблице перечислены элементы управления, необходимые для образца приложения, и их имена в соответствии с примерами кода.  
   
-|Control|Имя|Текстовое свойство (при необходимости)|  
+|Элемент управления|name|Текстовое свойство (при необходимости)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|Шифрование файла|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|Расшифровка файла|  

@@ -17,11 +17,14 @@ caps.latest.revision: "95"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 697842906772c190c67e2f6ec1a4eb255229f289
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 893bbc94d909d5c94b7f8727912a298575617c2c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Кроссплатформенная разработка с переносной библиотекой классов
 Тип проекта "Переносимая библиотека классов .NET Framework" в Visual Studio позволяет быстро и легко создавать межплатформенные приложения и библиотеки для платформ Майкрософт.  
@@ -37,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 > [!WARNING]
 >  [Visual Studio 2013 с обновлением 2](http://go.microsoft.com/fwlink/p/?LinkId=393658) включает обновления для шаблонов переносимой библиотеки классов. При наличии более ранней версии Visual Studio и Visual Studio 2013 установлен на том же компьютере, и вы установили обновление 2, чтобы изменения **требуемой версии .NET Framework** вариантов, которые будут применяться к обеим версиям Visual Studio.  
   
- Содержание раздела  
+ В этом разделе.  
   
  [Поддержка Visual Studio](#vs_support)  
  [Создание проекта переносимой библиотеки классов](#create_pcl)  

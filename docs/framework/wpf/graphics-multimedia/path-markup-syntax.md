@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f2b04dfa51f578ba80e2b766f455719afbb86b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9cd8f9b14f114060ebec8e336c1212d61fa19c83
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="path-markup-syntax"></a>Синтаксис разметки пути
 Пути рассматриваются в [фигур и базовых средств рисования в общие сведения о WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) и [конфигурациях](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), однако в этом разделе подробно описываются мощное и сложное мини-язык, можно использовать для указания пути более [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/21/2017
 |-----------------------------------------------|  
 |`<`*объекта* *свойство* `="` `figureDescription`[ `figureDescription`] *`" ... />`|  
   
-|Термин|Описание|  
+|Термин|Описание:|  
 |----------|-----------------|  
 |*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Указывает, является ли <xref:System.Windows.Media.StreamGeometry> использует <xref:System.Windows.Media.FillRule.EvenOdd> или <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0`Указывает <xref:System.Windows.Media.FillRule.EvenOdd> правило заливки.<br />-   `F1`Указывает <xref:System.Windows.Media.FillRule.Nonzero> правило заливки.<br /><br /> Если опустить эту команду, во вложенном пути используется поведение по умолчанию, которое является <xref:System.Windows.Media.FillRule.EvenOdd>. Если эта команда используется, ее необходимо размещать вначале.|  
 |*figureDescription*|Фигура, состоящая из команды перемещения, команд рисования и необязательной команды закрытия.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/21/2017
 |------------|  
 |`M` *startPoint*<br /><br /> -или-<br /><br /> `m` *startPoint*|  
   
-|Термин|Описание|  
+|Термин|Описание:|  
 |----------|-----------------|  
 |*startPoint*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Начальная точка новой фигуры.|  
   
@@ -100,7 +101,7 @@ ms.lasthandoff: 11/21/2017
 |------------|  
 |`L` *endPoint*<br /><br /> -или-<br /><br /> `l` *endPoint*|  
   
-|Термин|Описание|  
+|Термин|Описание:|  
 |----------|-----------------|  
 |*endPoint*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Конечная точка строки.|  
 
@@ -114,7 +115,7 @@ ms.lasthandoff: 11/21/2017
 |------------|  
 |`H`  *x*<br /><br /> -или-<br /><br /> `h`  *x*|  
   
-|Термин|Описание|  
+|Термин|Описание:|  
 |----------|-----------------|  
 |*x*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Координата X конечной точки линии.|  
   
@@ -128,7 +129,7 @@ ms.lasthandoff: 11/21/2017
 |------------|  
 |`V`  *y*<br /><br /> -или-<br /><br /> `v`  *y*|  
   
-|Термин|Описание|  
+|Термин|Описание:|  
 |----------|-----------------|  
 |*y*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Координата Y конечной точки линии.|  
 
@@ -141,7 +142,7 @@ ms.lasthandoff: 11/21/2017
 |------------|  
 |`C` `controlPoint`1`controlPoint`2`endPoint`<br /><br /> -или-<br /><br /> `c` `controlPoint`1`controlPoint`2`endPoint`|  
   
-|Термин|Описание|  
+|Термин|Описание:|  
 |----------|-----------------|  
 |`controlPoint`1|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Первая контрольная точка кривой, которая определяет начальную касательную к кривой.|  
 |`controlPoint`2|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Вторая контрольная точка кривой, которая определяет конечную касательную к кривой.|  
@@ -154,7 +155,7 @@ ms.lasthandoff: 11/21/2017
 |------------|  
 |`Q` `controlPoint` `endPoint`<br /><br /> -или-<br /><br /> `q` `controlPoint` `endPoint`|  
   
-|Термин|Описание|  
+|Термин|Описание:|  
 |----------|-----------------|  
 |`controlPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Контрольная точка кривой, которая определяет начальную и конечную касательные к кривой.|  
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Точка для рисования кривой.|  
@@ -166,7 +167,7 @@ ms.lasthandoff: 11/21/2017
 |------------|  
 |`S` `controlPoint`2`endPoint`<br /><br /> -или-<br /><br /> `s` `controlPoint`2`endPoint`|  
   
-|Термин|Описание|  
+|Термин|Описание:|  
 |----------|-----------------|  
 |`controlPoint`2|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Контрольная точка кривой, которая определяет конечную касательную к кривой.|  
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Точка для рисования кривой.|  
@@ -178,7 +179,7 @@ ms.lasthandoff: 11/21/2017
 |------------|  
 |`T` `controlPoint` `endPoint`<br /><br /> -или-<br /><br /> `t` `controlPoint` `endPoint`|  
   
-|Термин|Описание|  
+|Термин|Описание:|  
 |----------|-----------------|  
 |`controlPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Контрольная точка кривой, которая определяет начальную касательную к кривой.|  
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Точка для рисования кривой.|  
@@ -190,7 +191,7 @@ ms.lasthandoff: 11/21/2017
 |------------|  
 |`A` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`<br /><br /> -или-<br /><br /> `a` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`|  
   
-|Термин|Описание|  
+|Термин|Описание:|  
 |----------|-----------------|  
 |`size`|<xref:System.Windows.Size?displayProperty=nameWithType><br /><br /> Радиусы арки X и Y.|  
 |`rotationAngle`|<xref:System.Double?displayProperty=nameWithType><br /><br /> Поворот эллипса в градусах.|  
@@ -214,7 +215,7 @@ ms.lasthandoff: 11/21/2017
 |------------|  
 |`x` `,` `y`<br /><br /> -или-<br /><br /> `x` `y`|  
   
-|Термин|Описание|  
+|Термин|Описание:|  
 |----------|-----------------|  
 |`x`|<xref:System.Double?displayProperty=nameWithType><br /><br /> Координата X точки.|  
 |`y`|<xref:System.Double?displayProperty=nameWithType><br /><br /> Координата Y точки.|  

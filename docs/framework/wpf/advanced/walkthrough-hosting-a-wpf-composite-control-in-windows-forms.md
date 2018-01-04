@@ -14,11 +14,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5dc0a0f7b579feca6150e299cd7f0ef3a6e7a5e3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 965136c94b696fc182537b60dde71ee4f02afe7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms
 Служба [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет среду с широкими возможностями для создания приложений. Однако, если имеются существенные преимущества [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] код, он может быть более эффективным, расширение существующего [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] приложение с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] вместо ее переписывания с нуля. Распространенный сценарий — Если требуется внедрить один или несколько элементов управления, реализованных с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] внутри вашей [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] приложения. Дополнительные сведения о настройке элементов управления WPF см. в разделе [настройки элемента управления](../../../../docs/framework/wpf/controls/control-customization.md).  
@@ -238,7 +239,7 @@ namespace MyControls
   
 4.  Добавьте следующие <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> элементов управления в форму.  
   
-    |Имя|Text|  
+    |name|Text|  
     |----------|----------|  
     |groupBox1|Цвет фона|  
     |groupBox2|Цвет переднего плана|  
@@ -250,7 +251,7 @@ namespace MyControls
   
 5.  Добавьте следующие <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> элементы управления <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> элементов управления.  
   
-    |GroupBox|Имя|Text|  
+    |GroupBox|name|Text|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|До преобразования|  
     |groupBox1|radioBackgroundLightGreen|LightGreen|  
@@ -271,7 +272,7 @@ namespace MyControls
   
 6.  Добавьте следующие <xref:System.Windows.Forms.Label?displayProperty=nameWithType> до конца управляет <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>. Эти элементы управления отображают данные, возвращенные [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] составного элемента управления.  
   
-    |GroupBox|Имя|Text|  
+    |GroupBox|name|Text|  
     |--------------|----------|----------|  
     |groupBox7|lblName|Имя.|  
     |groupBox7|lblAddress|Почтовый адрес:|  

@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f20881ed452f1ec78381d17a32b4cc2c77305e0e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 215e3583d50567a2bfec8226e006bc7398628299
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-navigate-through-the-objects-in-a-data-collectionview"></a>Практическое руководство. Перемещение по объектам в Data CollectionView
 Представления позволяют просматривать различными способами, в зависимости от сортировки, фильтрации и группирования же коллекцию данных. Представления также предоставляют понятием текущего указателя записи и включают перемещение указателя. В этом примере показано, как получить текущий объект, а также перемещение по объектам в коллекции данных, используя функциональные возможности, предоставляемые <xref:System.Windows.Data.CollectionView> класса.  

@@ -20,11 +20,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 82f5f69390f2b4d27f1f41050971afa9faede960
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c9a5f33ab22779002e85d7a73b29ae74dac81c26
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="layout"></a>Макет
 В этом разделе описывается система макета [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Для создания пользовательских интерфейсов в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] важно понимание того, как и когда происходят вычисления макета.  
@@ -115,7 +116,7 @@ ms.lasthandoff: 11/21/2017
   
  В следующей таблице перечислены доступные макета <xref:System.Windows.Controls.Panel> элементов.  
   
-|Имя панели|Описание|  
+|Имя панели|Описание:|  
 |----------------|-----------------|  
 |<xref:System.Windows.Controls.Canvas>|Определяет область, внутри которой можно явным образом разместить дочерние элементы при помощи относительных координат в <xref:System.Windows.Controls.Canvas> области.|  
 |<xref:System.Windows.Controls.DockPanel>|Определяет область, в которой можно горизонтально либо вертикально упорядочивать дочерние элементы относительно друг друга.|  

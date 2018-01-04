@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: e09279209bf3d6925b61d55d6988b5af658f5aab
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e4e94f116fa820d80e5e23833c20382591c5d479
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>Пространства имен языка XAML для служб .NET Framework XAML
 Пространства имен XAML — это понятие, расширяющее определение пространства имен XML. Как и пространство имен XML, можно определить пространства имен XAML с помощью `xmlns` атрибута в разметке. Пространства имен XAML также представлены в потоке узлов XAML и других API служб XAML. В этом разделе определяет понятие пространства имен XAML, а также описывается, как можно определить пространства имен языка XAML и используются контекстами схемы XAML и других аспектов служб XAML .NET Framework.  

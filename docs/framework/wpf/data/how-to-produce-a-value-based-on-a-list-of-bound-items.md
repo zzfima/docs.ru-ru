@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7d16a198ed78c1ffd9dcaad595e9cc9be3cb2de0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c3987690a1acb180ee22fa02e399accd9c5d481d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>Практическое руководство. Создание значений на основе списка связанных элементов
 <xref:System.Windows.Data.MultiBinding>можно привязать к целевому свойству привязки к списку свойств источника и затем применить логику для получения значения с заданными входными данными. В этом примере демонстрируется использование <xref:System.Windows.Data.MultiBinding>.  

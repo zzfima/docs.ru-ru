@@ -19,11 +19,14 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e1bddb7bb3559e6f39b7884b92f64bee8fbb3510
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b36f230c9a5f8653f3e252d26fe6464bb9cac4bb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="capitalization-conventions"></a>Соглашения о написании прописными буквами
 Правила, описанные в этой главе размещать простой способ проверки с помощью варианта, при применении единообразно идентификаторы делать для типов, членов и параметров, удобном для чтения.  
@@ -62,8 +65,8 @@ ms.lasthandoff: 11/21/2017
 |Тип|Pascal|`public class StreamReader { ... }`|  
 |Интерфейс|Pascal|`public interface IEnumerable { ... }`|  
 |Метод|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
-|Свойство|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
-|Событие|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
+|Свойство.|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
+|событие|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
 |Поле|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
 |Значение перечисления|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
 |Параметр|Стиль Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  

@@ -22,11 +22,14 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e5bd9abd37c7c70d03965698828e0adf64a8b1e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2f0e6091528987eb6798d3880bdb2190af337f8a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="introducing-xml-serialization"></a>Введение в сериализацию XML
 Сериализация представляет собой процесс преобразования объекта в форму, подготовленную для передачи. Например, можно сериализовать объект и передать его по Интернету с использованием протокола HTTP между клиентом и сервером. И наоборот, при десериализации объект воссоздается из потока.  

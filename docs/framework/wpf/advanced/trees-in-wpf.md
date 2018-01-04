@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56237bccb2bf61994c6114fa01d15c254267ca20
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 73c34f8edfa735e361bf294f08cefd285be3e898
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trees-in-wpf"></a>Деревья в WPF
 Во многих технологиях элементы и компоненты организованы в форме древовидной структуры, и разработчики могут напрямую управлять узлами объекта в дереве, чтобы повлиять на визуализацию или поведение приложения. В [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] часто используется несколько метафор древовидных структур, чтобы определить отношения между программными элементами. Для большей части WPF разработчики могут создать приложение в коде или определить части приложения в XAML и при этом концептуально думать о метафоре дерева объектов, но для этого им потребуется вызвать определенный интерфейс API или использовать конкретную разметку, а не интерфейс API управления деревом некоторых общих объектов, какой можно использовать в XML DOM. WPF предоставляет две вспомогательные классы, которые обеспечивают представление метафоры дерева <xref:System.Windows.LogicalTreeHelper> и <xref:System.Windows.Media.VisualTreeHelper>. Термины "логическое дерево" и "визуальное дерево" также используются в документации WPF, поскольку эти же деревья помогают понять поведение определенных ключевых функций WPF. В этом разделе определяет визуального дерева и логического дерева представляют обсуждается, как эти деревья связаны с общей концепции дерева объектов и вводит <xref:System.Windows.LogicalTreeHelper> и <xref:System.Windows.Media.VisualTreeHelper>s.  

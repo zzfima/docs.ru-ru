@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c8e042b3f7b0a2a2e40b8fba33fca6c147086df6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cd54855f7ee618915fea4fcb8f465cc8c1a68164
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Слияние элементов меню в элементе управления MenuStrip в Windows Forms
 Если у вас есть приложения многодокументного интерфейса (MDI), можно объединять пункты меню или целые меню из дочерней формы в меню родительской формы.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
  В следующей таблице описаны значения и типичные случаи использования доступных операций слияния.  
   
-|Значение MergeAction|Описание|Типичные случаи использования|  
+|Значение MergeAction|Описание:|Типичные случаи использования|  
 |-----------------------|-----------------|-----------------|  
 |<xref:System.Windows.Forms.MergeAction.Append>|(По умолчанию) Добавляет исходный элемент в конец коллекции целевого элемента.|Добавление пунктов меню в конец меню при активации определенной части программы.|  
 |<xref:System.Windows.Forms.MergeAction.Insert>|Добавляет элемент источника целевого элемента коллекции, в расположении, заданном <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> свойство, заданное для исходного элемента.|Добавление пунктов меню в середину или начало меню при активации определенной части программы.<br /><br /> Если значение <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> одинаково для обоих пунктов меню, они добавляются в обратном порядке. Задать <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> соответствующим образом для сохранения исходного порядка.|  

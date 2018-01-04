@@ -22,11 +22,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e027a5b60e066a8d38db530c37a394227f2e892
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c735d363af49688530e318680cbb4132fc747be7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Разрешение вопросов, связанных с созданием элементов управления и компонентов
 В этом разделе перечислены распространенные проблемы, возникающие при разработке компонентов и элементов управления. Дополнительные сведения см. в разделе [Программирование с использованием компонентов](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).  

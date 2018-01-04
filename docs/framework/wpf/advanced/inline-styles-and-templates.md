@@ -18,11 +18,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2acb455db8f8bdc5a95bfd2462b651cebbb692c3
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5dccf0b274121ff4fe88c9270119a2f631ffcf29
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inline-styles-and-templates"></a>Встроенные стили и шаблоны
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]предоставляет <xref:System.Windows.Style> объектов и объектов шаблона (<xref:System.Windows.FrameworkTemplate> подклассов) как способ определения внешнего вида элемента в ресурсах, так что они могут использоваться несколько раз. По этой причине атрибуты в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , принимающие аргументы типов <xref:System.Windows.Style> и <xref:System.Windows.FrameworkTemplate> почти всегда создают ресурсные ссылки на существующие стили и шаблоны вместо определения новых.  

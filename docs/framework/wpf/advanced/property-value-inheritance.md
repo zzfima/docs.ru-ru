@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 538b2e9cc1ce11dc336a8d90ec84ba504baa6f2b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eac3e03cfc0ca8bbb6f61f1bc6663c67fd6303f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="property-value-inheritance"></a>Наследование значения свойства
 Наследование значения свойства — это функция системы свойств [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Наследование значения свойства позволяет дочерним элементам в дереве элементов получать значение конкретного свойства из родительских элементов, наследуя это значение, настроенное в ближайшем родительском элементе. Родительский элемент также мог получить свое значение через наследование значения свойства, поэтому система потенциально рекурсивно проходит по элементам к корню страницы. Наследование значения свойства не является стандартным поведением системы свойств. Чтобы свойство инициировало наследование значения свойства для дочерних элементов, оно должно быть установлено с определенным параметром метаданных.  

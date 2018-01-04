@@ -16,11 +16,12 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a4dc6a35a0ff8586b91ab7d74abc182fa6002f88
-ms.sourcegitcommit: 281070dee88db86ec3bb4634d5f558d1a4e159dd
+ms.workload: dotnet
+ms.openlocfilehash: 8de8725bc48f69cdd18100d90a1bc610caa7ecfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-in-wpf-version-45"></a>Новые возможности WPF версии 4.5
 <a name="introduction"></a>Этот раздел содержит сведения о новых и усовершенствованных возможностях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] версии 4.5.  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/11/2017
   
 <a name="INotifyDataErrorInfo"></a>   
 ## <a name="synchronously-and-asynchronously-validating-data"></a>Синхронная и асинхронная проверка данных  
- <xref:System.ComponentModel.INotifyDataErrorInfo> Интерфейс позволяет классами сущностей данных для реализации пользовательских правил проверки и предоставляют результаты проверки асинхронно. Этот интерфейс также поддерживает объекты специальных ошибок, нескольких ошибок для каждого свойства, ошибок нескольких свойств и ошибок на уровне сущности.  Для получения дополнительной информации см. <xref:System.ComponentModel.INotifyDataErrorInfo>.  
+ <xref:System.ComponentModel.INotifyDataErrorInfo> Интерфейс позволяет классами сущностей данных для реализации пользовательских правил проверки и предоставляют результаты проверки асинхронно. Этот интерфейс также поддерживает объекты специальных ошибок, нескольких ошибок для каждого свойства, ошибок нескольких свойств и ошибок на уровне сущности.  Дополнительные сведения см. в разделе <xref:System.ComponentModel.INotifyDataErrorInfo>.  
   
 <a name="delay"></a>   
 ## <a name="automatically-updating-the-source-of-a-data-binding"></a>Автоматическое обновление источника привязки данных  

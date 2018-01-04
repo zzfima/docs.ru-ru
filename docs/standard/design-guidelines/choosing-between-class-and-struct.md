@@ -22,11 +22,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: df6659853e9c410ece3233cfa630c9066303a871
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 68a3d2c7335ff15706925f9a7986164e6d9c0c36
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="choosing-between-class-and-struct"></a>Выбор между классом и структурой
 Одним из основных проектных решений сталкивается каждый конструктор framework является разработки тип как класс (ссылочный тип) или как структура (тип значения). При этом важно понять различия в поведении ссылочных типов и типов значений.  
@@ -62,5 +65,5 @@ ms.lasthandoff: 11/21/2017
  *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также  
- [Рекомендации по проектированию типа](../../../docs/standard/design-guidelines/type.md)  
+ [Рекомендации по разработке типов](../../../docs/standard/design-guidelines/type.md)  
  [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)

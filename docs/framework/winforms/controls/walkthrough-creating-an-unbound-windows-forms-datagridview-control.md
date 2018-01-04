@@ -22,11 +22,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e2c57cfbab4d3af6cebff96517383999ae5b73d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d737959ee0ecab4c611cebf996741516fc7be031
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>Пример. Создание не связанного с данными элемента управления DataGridView в Windows Forms
 Часто можно отображать табличные данные, получен не из базы данных. Например может потребоваться отобразить содержимое двухмерного массива строк. <xref:System.Windows.Forms.DataGridView> Класс предоставляет удобный и настраиваемый способ отображения данных без привязки к источнику данных. В этом пошаговом руководстве показано, как для заполнения <xref:System.Windows.Forms.DataGridView> для управления добавлением и удалением строк в режиме «свободный». По умолчанию пользователь может добавлять новые строки. Чтобы запретить добавление строк, задайте <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> свойство `false`.  
@@ -89,7 +90,7 @@ ms.lasthandoff: 11/21/2017
   
      Вы увидите <xref:System.Windows.Forms.DataGridView> управления, отображающий музыкальные файлы, перечисленные в `PopulateDataGridView`. Можно добавлять новые строки с **добавить строку** кнопки и удалять выбранные строки с **удалить строку** кнопки. Свободные <xref:System.Windows.Forms.DataGridView> управления хранилищем данных и его данные не зависят от внешних источников, таких как <xref:System.Data.DataSet> или массив.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  Это приложение позволяет основные <xref:System.Windows.Forms.DataGridView> возможности элемента управления. Можно настроить внешний вид и поведение <xref:System.Windows.Forms.DataGridView> управления несколькими способами:  
   
 -   Изменение стилей границ и заголовка. Дополнительные сведения см. в разделе [как: изменения границ и стили линий сетки в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md).  

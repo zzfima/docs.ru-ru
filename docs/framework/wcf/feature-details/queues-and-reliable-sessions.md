@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9b2ad869e8127bcaf513bee82e3175b35349d922
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a9a78bab9f7c4af23cf01c44e1d22a41a87a96f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queues-and-reliable-sessions"></a>Очереди и надежные сеансы
 Очереди и надежные сеансы - функции [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], реализующие надежный обмен сообщениями. В подразделах данного раздела рассматриваются функции надежного обмена сообщениями [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -52,4 +53,4 @@ ms.lasthandoff: 12/02/2017
  [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
  [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [Надежные сеансы](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)  
- [Общие сведения о надежных сеансов](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)
+ [Общие сведения о надежных сеансах](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)

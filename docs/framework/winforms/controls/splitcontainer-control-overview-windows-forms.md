@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10f18c46c85ed840b6625d9ed754d1d036a80975
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c48950e43d253679eebe16bff1b6ee18966e2cc7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>Общие сведения об элементе управления SplitContainer (Windows Forms)
 Элемент управления Windows Forms <xref:System.Windows.Forms.SplitContainer> состоит из двух панелей, разделенных подвижной полосой. При наведении указателя мыши на полосу его форма изменяется, показывая, что полоса является перемещаемой.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="commonly-used-properties-methods-and-events"></a>Часто используемые свойства, методы и события  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |Свойство <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>|Определяет, какая панель останется тем же размером после <xref:System.Windows.Forms.SplitContainer> размер элемента управления.|  
 |Свойство <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>|Определяет, если разделитель может быть перемещен с помощью клавиатуры или мыши.|  

@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bf04af2baa037b2df9e2980cc2347460de961c39
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4d29fda788aa4ec79ad4278beefa16ee14208832
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Стилизация фокуса в элементах управления и FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет два параллельных механизма для изменения внешнего вида элемента управления при получении фокуса клавиатуры. Первый механизм предполагает использование методы задания свойств для свойств, таких как <xref:System.Windows.UIElement.IsKeyboardFocused%2A> внутри стиля или шаблона, который применяется к элементу управления. Второй механизм заключается в предоставлении отдельного стиля в качестве значения <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> свойства; «фокуса визуальный стиль» создает отдельное визуальное дерево для графического элемента, который рисует поверх элемента управления, вместо изменения визуального дерева элемента управления или другой пользовательский Интерфейс элемент, заменив его. В данном разделе рассматриваются сценарии, для которых подходит любой из этих механизмов.  

@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ec860cc9cc58febd98d8642c98a50ec296592d02
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2d57fb099fa364d34b7df5c5fce792eb42079a31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-binding-validation"></a>Практическое руководство. Реализация проверки привязки
 В этом примере показано, как использовать <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> и триггера стиля для предоставления визуальную обратную связь, чтобы информировать пользователей при вводе недопустимого значения на основании пользовательского правила проверки.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
  Полный пример см. в [Примере проверки привязки](http://go.microsoft.com/fwlink/?LinkID=159972).  
   
- Обратите внимание, что если не указать настраиваемый <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> отображается шаблон ошибки по умолчанию для предоставления пользователю визуальную обратную связь при ошибке проверки. См. "Проверка данных" в разделе [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md). Кроме того, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет встроенное правило проверки, которое отслеживает исключения, получаемые во время обновления свойства источника привязки. Для получения дополнительной информации см. <xref:System.Windows.Controls.ExceptionValidationRule>.  
+ Обратите внимание, что если не указать настраиваемый <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> отображается шаблон ошибки по умолчанию для предоставления пользователю визуальную обратную связь при ошибке проверки. См. "Проверка данных" в разделе [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md). Кроме того, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет встроенное правило проверки, которое отслеживает исключения, получаемые во время обновления свойства источника привязки. Дополнительные сведения см. в разделе <xref:System.Windows.Controls.ExceptionValidationRule>.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)  

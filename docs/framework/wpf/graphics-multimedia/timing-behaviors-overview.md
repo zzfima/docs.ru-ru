@@ -16,11 +16,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ac6671033a439051b062ddae70649a63bacd4979
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9305b69927a1ed0ad4f154ab972316f3dee951e9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="timing-behaviors-overview"></a>Общие сведения о характере поведения во времени
 В этом разделе описываются временные характеристики анимации и других <xref:System.Windows.Media.Animation.Timeline> объектов.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
   
  Классы, которые унаследованы от класса временной шкалы, предоставляют дополнительные функции, такие как анимация и воспроизведение мультимедиа. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]предоставляет следующие <xref:System.Windows.Media.Animation.Timeline> типов.  
   
-|Тип временной шкалы|Описание|  
+|Тип временной шкалы|Описание:|  
 |-------------------|-----------------|  
 |<xref:System.Windows.Media.Animation.AnimationTimeline>|Абстрактный базовый класс для <xref:System.Windows.Media.Animation.Timeline> объектов, для создания выходных значений для анимации свойства.|  
 |<xref:System.Windows.Media.MediaTimeline>|Формирует выходные данные из файла мультимедиа.|  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="properties-that-control-the-length-of-a-timeline"></a>Свойства, которые управляют длиной временной шкалы  
  Объект <xref:System.Windows.Media.Animation.Timeline> представляет сегмент времени и длину временной шкалы может называться по-разному. В следующей таблице приведены несколько терминов для описания длины временной шкалы.  
   
-|Термин|Описание|Свойства||||  
+|Термин|Описание:|Свойства||||  
 |----------|-----------------|----------------|-|-|-|  
 |Простая длительность|Длительность, необходимая для одной итерации временной шкалы вперед.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>||||  
 |Одно повторение|Время, необходимое для временной шкалы для воспроизведения вперед, после и, если <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> имеет значение true, воспроизведение в обратном направлении один раз.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>||||  

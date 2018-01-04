@@ -17,16 +17,17 @@ caps.latest.revision: "61"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c34bb03e27d223c09238f658563e8a368a0c6948
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b6aee3d6161d5a20a55e05e86c8479b9182d4e0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="image-how-to-topics"></a>Разделы пошагового руководства, посвященные изображениям
 В подразделах этого раздела описывается использование <xref:System.Windows.Controls.Image> элемента.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Использование элемента изображения](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
   [Преобразование изображения в оттенки серого](../../../../docs/framework/wpf/controls/how-to-convert-an-image-to-greyscale.md)  
   [Обрезка изображения](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  

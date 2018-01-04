@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 808d29292e176af8d3af1fc0f4a02c48ee05ea35
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c3b750e6ee21c8347d3896ec290f0ff564cc0a2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>Практическое руководство. Анимация свойства "Прозрачность" элемента или кисти
 Чтобы сделать элемент структуры исчезновения и появления, анимация его <xref:System.Windows.UIElement.Opacity%2A> свойство или анимировать <xref:System.Windows.Media.Brush.Opacity%2A> свойство <xref:System.Windows.Media.Brush> (или кисти) используется для рисования. Анимация прозрачности элемента упрощает исчезновения и появления его дочерних элементов, но анимации кисть, используемую для рисования элемента позволяет иметь большую избирательность о Плавное какая часть элемента. Например вы Анимация прозрачности кисть, используемую для рисования фона кнопки. Это приведет к тому и исчезновения представления, оставив его текст полностью непрозрачный фон кнопки.  

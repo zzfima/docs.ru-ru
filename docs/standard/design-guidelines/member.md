@@ -18,11 +18,14 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5df4ad5f6c947d8b3bf62c3bf7eb8426419e5f3f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ae69b77098c7f2e1de83eedd40cf0f0da9473326
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="member-design-guidelines"></a>Правила разработки членов
 Методы, свойства, события, конструкторы и поля называются членами. Члены могут в конечном счете средства, с помощью которого framework функциональность предоставляется пользователям платформы.  
@@ -31,10 +34,10 @@ ms.lasthandoff: 10/18/2017
   
  В этой главе предоставляет основные правила, которые следует выполнить при разработке члены любого типа.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Перегрузка членов](../../../docs/standard/design-guidelines/member-overloading.md)  
  [Разработка свойств](../../../docs/standard/design-guidelines/property.md)  
- [Разработка конструктора](../../../docs/standard/design-guidelines/constructor.md)  
+ [Разработка конструкторов](../../../docs/standard/design-guidelines/constructor.md)  
  [Разработка событий](../../../docs/standard/design-guidelines/event.md)  
  [Разработка полей](../../../docs/standard/design-guidelines/field.md)  
  [Методы расширения](../../../docs/standard/design-guidelines/extension-methods.md)  

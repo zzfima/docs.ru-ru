@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2573f342530e59fa05e7f24342f251990b2ce47d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 227ad36e87c3deceb7fefe3cd19013fc8e76c686
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Практическое руководство. Синхронизация элементов управления, связанных с одним источником данных
 Зачастую при работе с привязкой к данным в формах Windows Forms, несколько элементов управления привязаны к одному источнику данных. В некоторых случаях может потребоваться выполнить дополнительные действия для обеспечения синхронизация друг с другом и с источником данных связанных свойств элементов управления. Эти шаги необходимы в двух случаях:  

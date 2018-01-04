@@ -25,11 +25,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f1ee7c7b4e21d147bad1cd8e4b854c0ff4fe13aa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 588ab00d61a701dc43e2af5978a6023a93f367f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-dependency-properties"></a>Пользовательские свойства зависимостей
 В этом разделе описываются основания для создания настраиваемых свойств зависимостей для приложений [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], а также этапы и некоторые варианты реализации, которые могут повысить производительность, удобство использования и универсальность свойств.  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Требуется использовать установленные соглашения о метаданных, которые также используются процессами [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], такими как передача сведений о том, нужно ли системе макета перестраивать визуальные компоненты элемента при изменении значения свойства. Или требуется возможность использовать переопределения метаданных таким образом, чтобы производные классы могли изменять основанные на метаданных характеристики, такие как значение по умолчанию.  
   
--   Требуется, чтобы свойства пользовательского элемента управления получали поддержку [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)] [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)], например редактирование окна **Свойства**. Дополнительные сведения см. в разделе [Общие сведения о разработке элемента управления](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
+-   Требуется, чтобы свойства пользовательского элемента управления получали поддержку [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)] [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)], например редактирование окна **Свойства**. Дополнительные сведения см. в разделе [Общие сведения о разработке элементов управления](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
   
  Рекомендуется рассмотреть возможность реализации сценариев путем переопределения метаданных существующего свойства зависимостей, вместо реализации совершенно нового свойства. Практическая польза переопределения метаданных зависит от сценария и того, насколько этот сценарий схож с реализацией существующих свойств зависимостей и классов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Дополнительные сведения о переопределении метаданных для существующих свойств см. в разделе [Метаданные свойств зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md).  
   

@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8a39e09812c54df533fdac27b5bfcaedd3fb93ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 99150de10fcbd45d3617621a916793ad5cfe72db
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="groupbox-styles-and-templates"></a>Стили и шаблоны элемента GroupBox
 <a name="introduction"></a>В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.GroupBox> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="groupbox-states"></a>GroupBox состояний  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.GroupBox> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание|  
+|Имя VisualState|Имя VisualStateGroup|Описание:|  
 |-|-|-|  
 |Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класса и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> вложенное свойство `false`.|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.|  

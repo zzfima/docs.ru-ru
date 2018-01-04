@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8a8d858228630147e1fbcdfab6a52fba5a63a566
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e7cd45c85f155da975ca17961ca49a5dc89800a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="varieties-of-custom-controls"></a>Создание собственных элементов управления
 Платформа .NET Framework предоставляет возможности разработки и реализации новых элементов управления. С ее помощью можно расширить функциональные возможности привычных пользовательских элементов управления, а также уже существующих элементов управления через наследование. Кроме того, она позволяет писать настраиваемые элементы управления с собственной отрисовкой.  
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/21/2017
 -   — если требуется реализовать пользовательские функциональные возможности, которые недоступны в стандартных элементах управления.  
   
 ### <a name="activex-controls"></a>Элементы управления ActiveX  
- Несмотря на то что инфраструктура Windows Forms оптимизирована для размещения элементов управления Windows Forms, элементы управления ActiveX также можно использовать. Эта задача поддерживается в Visual Studio. Дополнительные сведения см. в разделе [Практическое руководство. Добавление элементов управления ActiveX в формы Windows Forms.](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md).  
+ Несмотря на то что инфраструктура Windows Forms оптимизирована для размещения элементов управления Windows Forms, элементы управления ActiveX также можно использовать. Эта задача поддерживается в Visual Studio. Дополнительные сведения см. в разделе [Практическое руководство. Добавление элементов управления ActiveX в формы Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md).  
   
 ### <a name="windowless-controls"></a>Элементы управления без окон  
  Технологии Microsoft Visual Basic® 6.0 и ActiveX поддерживают элементы управления *без окон*. В Windows Forms элементы управления без окон не поддерживаются.  

@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fb6f832b77404b57ab22e4ac472e7707f0e10dd5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 60135c09f63bd98f753e151c515938cbf13e70ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Ввод данных пользователем в приложении Windows Forms
 Ввод данных пользователем в Windows Forms, отправляется приложений в виде сообщения Windows. Серии переопределяемые методы обрабатывают эти сообщения в приложения, формы и уровень. Когда эти методы получают сообщения клавиатуры и мыши, они вызывают события, которые могут обрабатываться для получения сведения о мыши или клавиатуры входных данных. Во многих случаях приложения Windows Forms будут обрабатывать все входные данные пользователя путем обработки этих событий. В других случаях приложению может потребоваться переопределить один из методов, которые обрабатывают сообщения, чтобы перехватить конкретное сообщение перед его получением приложением, формы или элемента управления.  

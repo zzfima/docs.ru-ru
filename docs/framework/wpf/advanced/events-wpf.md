@@ -18,16 +18,17 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dda7f9497751356c4c650e7fb672f7721ec3dd09
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: cf622066bbfca8260670ca139f4acfe9affca07e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="events-wpf"></a>События (WPF)
 В [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] представлены перенаправленные события, которые могут вызывать обработчики, существующие в разных прослушивателях дерева элементов в приложении.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о перенаправленных событиях](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [Общие сведения о вложенных событиях](../../../../docs/framework/wpf/advanced/attached-events-overview.md)  
  [События времени жизни объекта](../../../../docs/framework/wpf/advanced/object-lifetime-events.md)  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/22/2017
  [События изменения свойств](../../../../docs/framework/wpf/advanced/property-change-events.md)  
  [Обработка событий в Visual Basic и WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)  
  [Шаблоны слабых событий](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)  
- [Практические руководства](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
+ [Разделы практического руководства](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.RoutedEvent>  

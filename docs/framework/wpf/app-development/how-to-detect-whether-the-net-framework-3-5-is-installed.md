@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b603bbd86bb5eb12782ff8aff7797b73444b8518
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3b095b1ba918f0a6cf52afa2d559beb2b8c81bc2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>Как: проверяет, установлена ли платформа .NET Framework 3.5
 Прежде чем развертывать [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] приложений в системе, предназначенного [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], необходимо сначала убедиться, [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] наличии среды выполнения. В этом разделе содержится скрипт, написанный на языке HTML/JavaScript, администраторы могут использовать для определения ли [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] присутствует в системе.  

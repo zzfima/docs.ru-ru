@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1116093ddcd95c99deac8a1e1b14fef3b0a458f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 50e36192198c172843d79a4195e894b848f84c90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textbox-overview"></a>Общие сведения о TextBox
 <xref:System.Windows.Controls.TextBox> Класс позволяет отображения или редактирования неформатированного текста. Обычно <xref:System.Windows.Controls.TextBox> редактирования неформатированного текста в форме. Например, форма запроса имени пользователя, номер телефона и т. д может использовать <xref:System.Windows.Controls.TextBox> элементы управления для ввода текста. В этом разделе описываются <xref:System.Windows.Controls.TextBox> класса и приводятся примеры того, как использовать его как [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] и [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)].  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="textbox-or-richtextbox"></a>TextBox или RichTextBox?  
  Оба <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.RichTextBox> позволяют пользователям вводить текст, но используются два элемента управления для различных сценариев. Объект <xref:System.Windows.Controls.TextBox> требует меньше системных ресурсов то <xref:System.Windows.Controls.RichTextBox> , это идеальный вариант, если требуется отредактировать только обычный текст (т. е. Использование в форме). Объект <xref:System.Windows.Controls.RichTextBox> является хорошим выбором при необходимости изменить форматированный текст, изображения, таблицы или другие поддерживаемые содержимого. Например, редактирование документа, статьи или блога, для которых требуются форматирование, изображений, и т.д., лучше всего выполнять с помощью <xref:System.Windows.Controls.RichTextBox>. В таблице ниже приведены основные возможности <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.TextBox>.  
   
-|Control|Проверка орфографии в режиме реального времени|Контекстное меню|Форматирование команд как <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (CTRL + B)|<xref:System.Windows.Documents.FlowDocument>содержимого, такого как изображения, абзацы, таблицы, и т. д.|  
+|Элемент управления|Проверка орфографии в режиме реального времени|Контекстное меню|Форматирование команд как <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (CTRL + B)|<xref:System.Windows.Documents.FlowDocument>содержимого, такого как изображения, абзацы, таблицы, и т. д.|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.TextBox>|Да|Да|Нет|Нет.|  
 |<xref:System.Windows.Controls.RichTextBox>|Да|Да|Да (см. раздел [Общие сведения о RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md))|Да (см. раздел [Общие сведения о RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md))|  

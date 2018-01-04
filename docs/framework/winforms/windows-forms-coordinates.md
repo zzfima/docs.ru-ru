@@ -18,11 +18,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5ecb47efdd69730350cf98e1c7b1e49150ad324d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8f4b42fd71dacb0071013067dc3c14add96c8aca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-coordinates"></a>Координаты Windows Forms
 Система координат для формы Windows Forms основана на координатах устройства, и основной единицей измерения при рисовании в формах Windows Forms является единица устройства (обычно точки). Точки на экране описываются парами координат x и y Координата x увеличивается вправо, а координата y увеличивается сверху вниз. Расположение источника, относительно экрана, будет зависеть от указываются ли экранные или клиентские координаты.  

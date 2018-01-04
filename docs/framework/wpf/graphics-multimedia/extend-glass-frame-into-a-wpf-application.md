@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d943d0b91d6f740144399d758a5ed80460f0eb6d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aad070bca408fc608eb000948c1b942d08f02018
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Использование стеклянной рамки в приложении WPF
 В этом разделе показано, как расширить стеклянную рамку [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] в клиентской области приложения [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  
@@ -155,7 +156,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
   
  На следующем рисунке показана стеклянная рамка, расширенная на приложение [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
- **Прозрачная рамка, расширенная на ** [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложение **.**  
+ **Прозрачная рамка, расширенная на**  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложение **.**  
   
  ![Прозрачная рамка, расширенная на приложение WPF.](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
   

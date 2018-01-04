@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 149f293616cfc2aa7b68377964c14a7cfa9e3edf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 946049cea6c9148d600cb50e6d49a4cc686c6d2d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Преобразователи типов или расширения разметки для XAML
 Преобразователи типов и расширения разметки — это два метода, используемых системами типов XAML и средствами записи XAML для создания компонентов графа объектов. Хотя они обладают общими характеристиками, преобразователи типов и расширения разметки представляются по-разному в потоке узлов XAML. В этой документации преобразователи типов, расширения разметки и аналогичные конструкции иногда называются преобразователями значений.  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>Сериализаторы значений  
- <xref:System.Windows.Markup.ValueSerializer> — это специализированные преобразователь типов, оптимизированный для преобразования объекта в строку. Объект <xref:System.Windows.Markup.ValueSerializer> для XAML не может реализовывать метод `ConvertFrom` . Реализация <xref:System.Windows.Markup.ValueSerializer> получает службы так, будто это реализация <xref:System.ComponentModel.TypeConverter> . Виртуальные методы предоставляют входной параметр `context` . Параметр `context` имеет тип <xref:System.Windows.Markup.IValueSerializerContext>, который наследуется от интерфейса <xref:System.IServiceProvider> и содержит метод <xref:System.IServiceProvider.GetService%2A> .  
+ <xref:System.Windows.Markup.ValueSerializer> — это специализированные преобразователь типов, оптимизированный для преобразования объекта в строку. Объект <xref:System.Windows.Markup.ValueSerializer> для XAML не может реализовывать метод `ConvertFrom` . Реализация <xref:System.Windows.Markup.ValueSerializer> получает службы так, будто это реализация <xref:System.ComponentModel.TypeConverter> . Виртуальные методы предоставляют входной параметр `context`. Параметр `context` имеет тип <xref:System.Windows.Markup.IValueSerializerContext>, который наследуется от интерфейса <xref:System.IServiceProvider> и содержит метод <xref:System.IServiceProvider.GetService%2A> .  
   
  В системе типов XAML и реализациях средств записи XAML, которые используют циклическую обработку узлов XAML для сериализации,преобразователь значений, связанный с типом или членом, доступен по собственному свойству <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType>. Для средств записи XAML, выполняющих сериализацию, это значит, что если <xref:System.Xaml.XamlType.TypeConverter%2A?displayProperty=nameWithType> и <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType> существуют, преобразователь типов можно использовать для пути загрузки, а сериализатор значений — для пути сохранения. Если <xref:System.Xaml.XamlType.TypeConverter%2A?displayProperty=nameWithType> существует, но <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType> — `null`, преобразователь типов также используется для пути сохранения.  
   

@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f4633a70f6c3d010e6cc75236778cf2fd59c0e05
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e349a33c90d08606da09ebdf32de6dedb8d6a52c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Использование строки элемента управления DataGridView, предназначенной для ввода новых данных, в Windows Forms
 При использовании <xref:System.Windows.Forms.DataGridView> для изменения данных в приложении, часто требуется предоставить пользователям возможность добавлять новые строки данных в хранилище данных. <xref:System.Windows.Forms.DataGridView> Элемент управления поддерживает эту функциональность путем предоставления строки для новых записей, которая всегда находится в последней строке. Он помечен с помощью символ звездочки (*) в заголовке строки. В следующих разделах рассматриваются некоторые из действий, рассмотрите возможность при включении программы со строкой для новых записей.  

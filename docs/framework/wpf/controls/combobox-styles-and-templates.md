@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd89d2150b2623a749614ab01aa767997dc4bdf3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e8c1a649597dd2b7e0d20f4b8dbc45adcd66eafa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="combobox-styles-and-templates"></a>Стили и шаблоны элемента ComboBox
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.ComboBox> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="combobox-parts"></a>Части поля со списком  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.ComboBox> элемента управления.  
   
-|Отделение|Тип|Описание|  
+|Отделение|Тип|Описание:|  
 |-|-|-|  
 |PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|Содержит текст <xref:System.Windows.Controls.ComboBox>.|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Раскрывающийся список, содержащий элементы в поле со списком.|  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="combobox-states"></a>Поле со списком состояний  
  В следующей таблице перечислены состояния для <xref:System.Windows.Controls.ComboBox> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание|  
+|Имя VisualState|Имя VisualStateGroup|Описание:|  
 |-|-|-|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |Отключено|CommonStates|Элемент управления отключен.|  
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="comboboxitem-states"></a>Состояния руководство.  
  В следующей таблице перечислены состояния для <xref:System.Windows.Controls.ComboBoxItem> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание|  
+|Имя VisualState|Имя VisualStateGroup|Описание:|  
 |-|-|-|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |Отключено|CommonStates|Элемент управления отключен.|  

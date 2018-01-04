@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 47fb0a871c3792450386c440629ead1ee3fbecdf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5eed85f982687bfc90f53e57ab1ec3949820097e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-whether-a-freezable-is-frozen"></a>Практическое руководство. Определение состояния объекта класса Freezable
 В этом примере показано, как определить, является ли <xref:System.Windows.Freezable> объект заморожен. При попытке изменения зафиксированного <xref:System.Windows.Freezable> объекта, он вызывает <xref:System.InvalidOperationException>. Чтобы избежать возникновения этого исключения, используйте <xref:System.Windows.Freezable.IsFrozen%2A> свойство <xref:System.Windows.Freezable> объекта, чтобы определить, зафиксирован ли он.  

@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0ae09df49b97cc2fe84285c3a37e1562da185f84
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 389ba73c4509f41f6c2cf86363e59ea720eb3c9f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="nested-types"></a>Вложенные типы
 Вложенный тип — это тип, определенный внутри области другого типа, который называется включающего типа. Вложенный тип имеет доступ ко всем членам включающего типа. Например он получает доступ к закрытым полям, определенных в включающего типа и полей, определенных в всех предков этого типа защищены.  
@@ -54,5 +57,5 @@ ms.lasthandoff: 11/21/2017
  *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также  
- [Рекомендации по проектированию типа](../../../docs/standard/design-guidelines/type.md)  
+ [Рекомендации по разработке типов](../../../docs/standard/design-guidelines/type.md)  
  [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)

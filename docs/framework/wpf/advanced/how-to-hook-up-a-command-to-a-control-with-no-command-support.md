@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6f38a6f900ee2b253708da4b63bdc2f474fa3ab1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 804c4ffd54a0f8cc94e8849a223b1af8b27a58b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a>Практическое руководство. Подключение команды к элементу управления, не поддерживающему команды
 Следующий пример показывает, как подключить <xref:System.Windows.Input.RoutedCommand> для <xref:System.Windows.Controls.Control> которого отсутствует встроенная поддержка команды.  Полный пример подключения команд к нескольким источникам см. в примере [Создание примера настраиваемой команды RoutedCommand](http://go.microsoft.com/fwlink/?LinkID=159980).  

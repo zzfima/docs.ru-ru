@@ -24,11 +24,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f447df16aab29b91da6f34b8afd812dea2d109ef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 14d003c36fd3733c329aad1362c01e91f108ec2f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Более безопасный доступ к файлам и данным в Windows Forms
 В [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] для защиты ресурсов и данных используются разрешения. То, какие данные может считывать или записывать приложение, зависит от предоставленных ему разрешений. Когда приложение работает в среде с частичным доверием, то доступ к данным может быть запрещен или может быть необходимо изменить способ доступа к данным.  

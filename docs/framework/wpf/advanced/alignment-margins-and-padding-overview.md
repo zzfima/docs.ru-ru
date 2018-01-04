@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c0a57018959aedc72e0fa02befa1733f66f265b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9d53ec57bdd6126aa1b82e3fa34d01b8907ca169
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Общие сведения о свойствах Alignment, Margin, Padding
 <xref:System.Windows.FrameworkElement> Класс содержит несколько свойств, которые используются для точного размещения дочерних элементов. В этом разделе обсуждаются четыре наиболее важных свойства: <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, и <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>. Очень важно иметь представление о результатах применения этих свойств, поскольку они обеспечивают основу для управления положением элементов в приложениях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="horizontalalignment-property"></a>Свойство HorizontalAlignment  
  <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> Свойство объявляет характеристик выравнивания по горизонтали для применения к дочерним элементам. В следующей таблице показаны каждого из возможных значений <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> свойство.  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |<xref:System.Windows.HorizontalAlignment.Left>|Дочерние элементы выравниваются по левому краю выделенного пространства макета родительского элемента.|  
 |<xref:System.Windows.HorizontalAlignment.Center>|Дочерние элементы выравниваются по центру выделенного пространства макета родительского элемента.|  
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="verticalalignment-property"></a>Свойство VerticalAlignment  
  <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> Свойство описывает характеристики выравнивания по вертикали для применения к дочерним элементам. В следующей таблице приведены все возможные значения для <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> свойства.  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |<xref:System.Windows.VerticalAlignment.Top>|Дочерние элементы выравниваются по верхнему краю выделенного пространства макета родительского элемента.|  
 |<xref:System.Windows.VerticalAlignment.Center>|Дочерние элементы выравниваются по центру выделенного пространства макета родительского элемента.|  

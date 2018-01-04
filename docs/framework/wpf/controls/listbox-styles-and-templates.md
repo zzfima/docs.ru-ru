@@ -20,11 +20,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: df974b2f6f89c3b62c5039be9cde144d9ef62d14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: edf8c50424a9694c4e00f5bf319d3122999bda85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listbox-styles-and-templates"></a>Стили и шаблоны элемента ListBox
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.ListBox> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="listbox-states"></a>Состояния ListBox  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.ListBox> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание|  
+|Имя VisualState|Имя VisualStateGroup|Описание:|  
 |-|-|-|  
 |Valid|ValidationStates|Элемент управления является допустимым.|  
 |InvalidFocused|ValidationStates|Элемент управления не является допустимым и имеет фокус.|  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="listboxitem-states"></a>Состояния ListBoxItem  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.ListBox> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание|  
+|Имя VisualState|Имя VisualStateGroup|Описание:|  
 |-|-|-|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши расположен над элементом управления.|  

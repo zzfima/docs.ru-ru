@@ -17,16 +17,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b29904954a593607a7872c0b59265bbf241dce98
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9df10ecabc8f61c3ef984adb6466f195395fd181
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-designer-with-the-windows-forms-datagridview-control"></a>Использование конструктора с элементом управления DataGridView Windows Forms
 Visual Studio обеспечивает поддержку конструктора для `DataGridView` элемент управления, который позволяет выполнять многие задачи установки без написания кода. Эти задачи включают привязки элемента управления к источнику данных, изменение столбцов, используемый для отображения данных и настройка внешнего вида и поведение элемента управления.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Добавление и удаление столбцов элемента управления DataGridView в формах Windows Forms с помощью конструктора](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)  
  Описывает использование **Добавление столбцов** и **Правка столбцов** диалоговыми окнами для заполнения и изменения набора столбцов.  
   

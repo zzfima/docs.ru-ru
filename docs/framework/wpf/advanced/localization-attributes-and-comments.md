@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5a603c854d389076d0054a43ebeb26f19145fa8e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 85584c17675167d374c595aa26288f550a033efb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="localization-attributes-and-comments"></a>Атрибуты и комментарии локализации
 Комментарии локализации [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] являются свойствами в исходном коде [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], предоставленными разработчиками для обеспечения правил и подсказок при локализации. Комментарии локализации [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] содержат два набора данных: атрибуты локализуемости и комментарии локализации в свободной форме. Атрибуты локализуемости используются API локализации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для указания того, какие ресурсы должны быть локализованы. Комментарии произвольной формы представляют собой любые сведения, которые автор приложения хочет указать.  
@@ -102,7 +103,7 @@ ms.lasthandoff: 11/21/2017
 |--------------|-------------|  
 |Нет|Целевое значение не имеет определенной категории.|  
 |Наследовать|Целевое значение наследует свои категории от родительского.|  
-|Ignore|Целевое значение не обрабатывается в процессе локализации. Не обрабатывается только текущее значение. Параметр не влияет на дочерние узлы.|  
+|Пропустить|Целевое значение не обрабатывается в процессе локализации. Не обрабатывается только текущее значение. Параметр не влияет на дочерние узлы.|  
 |NeverLocalize|Текущее значение не локализуется. Эта категория наследуется потомками элемента.|  
   
 <a name="Localization_Comments"></a>   

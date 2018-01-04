@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b02e492d0357c80776df0a1d0bd01ce228fa0b04
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2d2c1c021759c7032257e95eb2cad202a461dc05
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Источники данных, поддерживаемые Windows Forms
 В большинстве случаев привязка данных использовалась в приложениях для использования данных, хранящихся в базах данных. Привязки данных Windows Forms, предоставляет доступ к данным из баз данных, а также данные в другие структуры, таких как массивы и коллекции, при условии, что выполнены определенные минимальные требования.  

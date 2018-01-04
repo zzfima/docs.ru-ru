@@ -19,16 +19,17 @@ caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 61e2bc470641279b594b8f77eb924a47d8a063ac
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6a1b3e78bac5c388bbca4afa6354e5f9aee02c65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-wpf"></a>Свойства (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет набор служб, которые можно использовать для расширения функциональных возможностей свойства [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. В совокупности эти службы обычно называются системой свойств WPF. Свойство, обеспечиваемое системой свойств [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)], называется свойством зависимости.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [Общие сведения о присоединенных свойствах](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
  [Проверка и обратные вызовы свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/22/2017
  [Шаблоны безопасного конструктора для DependencyObjects](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)  
  [Свойства зависимостей типа коллекции](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)  
  [Загрузка кода XAML и свойства зависимостей](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)  
- [Практические руководства](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)  
+ [Разделы практического руководства](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.DependencyProperty>  

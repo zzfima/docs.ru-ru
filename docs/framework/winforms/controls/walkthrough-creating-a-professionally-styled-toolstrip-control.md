@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0fbc03ad16bcc0d63a75df5478f7da8abbf19193
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f3d47f285643f0b989db9419392eed736d0efbea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Пример. Создание профессионально оформленного элемента управления ToolStrip
 Можно создать для своего приложения <xref:System.Windows.Forms.ToolStrip> управляет профессиональный внешний вид и поведение, создайте собственный класс, производный от <xref:System.Windows.Forms.ToolStripProfessionalRenderer> типа.  
@@ -72,9 +73,9 @@ ms.lasthandoff: 11/21/2017
   
 2.  В **свойства** задайте <xref:System.Windows.Forms.ToolStrip> свойства элемента управления в соответствии со следующей таблицей.  
   
-    |Свойство|Значение|  
+    |Свойство.|Значение|  
     |--------------|-----------|  
-    |Имя|`stackStrip`|  
+    |name|`stackStrip`|  
     |CanOverflow|`false`|  
     |Закрепить|<xref:System.Windows.Forms.DockStyle.Bottom>|  
     |Шрифт|`Tahoma, 10pt, style=Bold`|  
@@ -87,9 +88,9 @@ ms.lasthandoff: 11/21/2017
   
 4.  В **свойства** задайте <xref:System.Windows.Forms.ToolStripButton> свойства элемента управления в соответствии со следующей таблицей.  
   
-    |Свойство|Значение|  
+    |Свойство.|Значение|  
     |--------------|-----------|  
-    |Имя|`mailStackButton`|  
+    |name|`mailStackButton`|  
     |CheckOnClick|true|  
     |Свойство CheckState|<xref:System.Windows.Forms.CheckState.Checked>|  
     |DisplayStyle|<xref:System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText>|  
@@ -185,7 +186,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  Переместите указатель над кнопками элемента `StackView` управления, а затем нажмите кнопку для просмотра внешнего вида выбранного состояния.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  В этом пошаговом руководстве вы создали для повторного использования пользовательский клиентский элемент управления с профессиональный внешний вид элемента управления Office XP. Можно использовать <xref:System.Windows.Forms.ToolStrip> семейства элементов управления для других целей:  
   
 -   Создать контекстное меню для элементов управления с <xref:System.Windows.Forms.ContextMenuStrip>. Дополнительные сведения см. в разделе [Общие сведения о компоненте ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).  

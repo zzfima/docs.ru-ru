@@ -17,16 +17,17 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d010e83b0bc5a3e69f8a0c205247681d2bb3d26
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: a947e1e7ccfe31ffcb638f8e09aae5cdd594b449
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stackpanel-how-to-topics"></a>Разделы руководства по StackPanel
 В подразделах этого раздела описывается использование <xref:System.Windows.Controls.StackPanel> элемента для расположения содержимого по горизонтали или вертикали.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Выбор между StackPanel и DockPanel](../../../../docs/framework/wpf/controls/how-to-choose-between-stackpanel-and-dockpanel.md)  
  [Создание StackPanel](../../../../docs/framework/wpf/controls/how-to-create-a-stackpanel.md)  
  [Выравнивание содержимого StackPanel по горизонтали или по вертикали](../../../../docs/framework/wpf/controls/how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  

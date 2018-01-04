@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10c6afbcde22a82e6227ce1d95d57749bee1a88c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 06c5bb1d4a36d51bb07d59b48c730f722af23f8c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Виртуальный режим элемента управления DataGridView в Windows Forms
 Виртуальный режим позволяет управлять взаимодействием между <xref:System.Windows.Forms.DataGridView> управления и пользовательские данные кэша. Чтобы реализовать виртуальный режим, задать <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> свойства `true` и обработать одно или несколько событий, описанные в этом разделе. Обычно используется, как минимум `CellValueNeeded` событие, которое позволяет производить поиск значений в кэше данных элемента управления.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
  Следующие события возникают только при <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> свойству `true`.  
   
-|Событие|Описание|  
+|событие|Описание:|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.CellValueNeeded>|Используется для извлечения значения ячейки из кэша данных для отображения элемента управления. Это событие происходит только для ячеек в несвязанных столбцов.|  
 |<xref:System.Windows.Forms.DataGridView.CellValuePushed>|Используется элементом управления для сохранения введенного пользователем для ячейки в кэш данных. Это событие происходит только для ячеек в несвязанных столбцов.<br /><br /> Вызовите <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A> метод при изменении кэшированное значение за пределами <xref:System.Windows.Forms.DataGridView.CellValuePushed> обработчик событий можно убедиться, что текущее значение в элементе управления и применить любые режима автоматического изменения размеров в данный момент.|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
  Следующие события полезны в виртуальном режиме, но может использоваться вне зависимости от <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> значение свойства.  
   
-|События|Описание|  
+|События|Описание:|  
 |------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.UserDeletingRow><br /><br /> <xref:System.Windows.Forms.DataGridView.UserDeletedRow><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsRemoved><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsAdded>|Чтобы указать, когда строки удаляются или добавлено, что соответствующим образом обновить кэш данных, используемые элементом управления.|  
 |<xref:System.Windows.Forms.DataGridView.CellFormatting><br /><br /> <xref:System.Windows.Forms.DataGridView.CellParsing><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidated><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidated>|Используется элементом управления для форматирования значений ячеек для отображения, а также для синтаксического анализа и проверки пользовательского ввода.|  

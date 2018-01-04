@@ -20,16 +20,17 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5cdac074b873d3a627e6971d440fdd1f98952b08
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f45d0fb6a2ffb2e20cc23e67de4cac6a2f2c81bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-security"></a>Безопасность Windows Forms
 Windows Forms представляют модель безопасности, основанная на коде (безопасности уровни заданы для кода, независимо от того, пользователь, запускающий код). Это дополнение всем схемам безопасности, которые могут быть выполнены уже на компьютерах пользователей. Сюда могут относиться в браузере (например, безопасность на основе зон в Internet Explorer) или для операционной системы (например, безопасность Windows NT, основанная на учетных данных).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о безопасности в Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
  Краткое описание модели безопасности .NET Framework и основные шаги, необходимые для обеспечения в приложении Windows Forms являются безопасными.  
   

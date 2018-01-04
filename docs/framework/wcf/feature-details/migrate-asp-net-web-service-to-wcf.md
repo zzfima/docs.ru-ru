@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1d6ed443d2b645687d59a3d795c706f303616cfb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e56d2481785a9a8486174e611001b9d800c7c869
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-migrate-aspnet-web-service-code-to-the-windows-communication-foundation"></a>Практическое руководство. Миграция кода веб-службы ASP.NET на платформу Windows Communication Foundation
 Ниже описано, как перенести веб-службу ASP.NET на платформу [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] .  
@@ -224,4 +225,4 @@ ms.lasthandoff: 12/02/2017
 19. Выполните набор тестов, чтобы убедиться, что все изменения работают.  
   
 ## <a name="see-also"></a>См. также  
- [Как: Миграция кода клиента службы ASP.NET на платформу Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)
+ [Практическое руководство. Миграция кода клиента веб-службы ASP.NET на платформу Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)

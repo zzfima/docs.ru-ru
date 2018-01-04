@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ac02896708744bc9b1c2d017da4e6f56ac32b53a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 74f8a693a143e1c6788dd79a1c1bbd1954f8cfd0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="scrollviewer-styles-and-templates"></a>Стили и шаблоны элемента ScrollViewer
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.ScrollViewer> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="scrollviewer-parts"></a>Элементы управления ScrollViewer  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.ScrollViewer> элемента управления.  
   
-|Отделение|Тип|Описание|  
+|Отделение|Тип|Описание:|  
 |-|-|-|  
 |PART_ScrollContentPresenter|<xref:System.Windows.Controls.ScrollContentPresenter>|Заполнитель для содержимого в <xref:System.Windows.Controls.ScrollViewer>.|  
 |PART_HorizontalScrollBar|<xref:System.Windows.Controls.Primitives.ScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar> Используется для прокрутки содержимого по горизонтали.|  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="scrollviewer-states"></a>ScrollViewer состояний  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.ScrollViewer> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание|  
+|Имя VisualState|Имя VisualStateGroup|Описание:|  
 |-|-|-|  
 |Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класса и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> вложенное свойство `false`.|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.|  

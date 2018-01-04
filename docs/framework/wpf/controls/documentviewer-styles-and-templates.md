@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7027fbee6a35b9219e65c9964db9a038e942f14e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 33631b0a63b69f848cb3f09b4dcb617fb328b06c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="documentviewer-styles-and-templates"></a>Стили и шаблоны элемента DocumentViewer
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.DocumentViewer> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="documentviewer-parts"></a>Части DocumentViewer  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.DocumentViewer> элемента управления.  
   
-|Отделение|Тип|Описание|  
+|Отделение|Тип|Описание:|  
 |-|-|-|  
 |PART_ContentHost|<xref:System.Windows.Controls.ScrollViewer>|Содержимое и область прокрутки.|  
 |PART_FindToolBarHost|<xref:System.Windows.Controls.ContentControl>|Поле поиска в нижней по умолчанию.|  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="documentviewer-states"></a>Состояния DocumentViewer  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.DocumentViewer> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание|  
+|Имя VisualState|Имя VisualStateGroup|Описание:|  
 |-|-|-|  
 |Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класса и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> вложенное свойство `false`.|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.|  

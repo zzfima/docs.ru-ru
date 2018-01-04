@@ -20,11 +20,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7c80769a1563953fc412afc6baeffcb91b49667d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6344fed6cf480e3d3f91a559c99b79f438afa985
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="opentype-font-features"></a>Возможности шрифта OpenType
 В этом разделе содержится обзор некоторых ключевых возможностей [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] технологии шрифтов в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -324,7 +325,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="typography-class-properties"></a>Свойства класса Typography  
  В следующей таблице перечислены свойства, значения и параметры по умолчанию <xref:System.Windows.Documents.Typography> объекта.  
   
-|Свойство|Значения|Значение по умолчанию|  
+|Свойство.|Значения|Значение по умолчанию|  
 |--------------|----------------|-------------------|  
 |<xref:System.Windows.Documents.Typography.AnnotationAlternates%2A>|Числовое значение — байт|0|  
 |<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; <xref:System.Windows.FontCapitals.Titling> &#124; <xref:System.Windows.FontCapitals.Unicase>|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  

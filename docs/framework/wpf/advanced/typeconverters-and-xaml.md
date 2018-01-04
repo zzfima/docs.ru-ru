@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 073730382f98a6c3d61ebdadf4f1f74411ba4e63
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1b7ee4b3b00a675cfafc884d41079b76656bdf49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters и XAML
 Этот раздел посвящен цели преобразования типов из строк — одной из основных функций языка XAML. В платформе .NET Framework <xref:System.ComponentModel.TypeConverter> класса служит конкретной цели как часть реализации для управляемых пользовательский класс, который можно использовать в качестве значения свойства в использование атрибута XAML. При написании пользовательского класса, и требуется, чтобы экземпляры класса можно использовать в качестве значения атрибута можно задать в XAML, может потребоваться применить <xref:System.ComponentModel.TypeConverterAttribute> к классу, написание пользовательского <xref:System.ComponentModel.TypeConverter> класса или оба.  

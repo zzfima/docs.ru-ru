@@ -19,16 +19,17 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ace9058a7f495a9cc2cf64398fd91338b7200f3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7fbe50f6a282f93ca4f0a2e2be74dbcefa604014
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="geometries"></a>Геометрия
 <xref:System.Windows.Media.Geometry>— Это универсальный класс, используемый для отрисовки [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] графики, объектов проверки нажатия и определения области отсечения  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Синтаксис разметки пути](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
  [Общие сведения о классе Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
  [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  

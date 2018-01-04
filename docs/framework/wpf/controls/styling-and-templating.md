@@ -26,11 +26,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5bd85383cc27687974fbf3689793a60569a4f97a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c33739d0e753146ffdc8b825d88c6ca7ba63fa1a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="styling-and-templating"></a>Стилизация и использование шаблонов
 Стилизация и использование шаблонов [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] относятся к набору возможностей (стили, шаблоны, триггеры и раскадровки), которые позволяют разработчикам и дизайнерам создавать визуально привлекательные эффекты, а также создавать согласованный внешний вид своих продуктов. Несмотря на то что разработчики и дизайнеры могут создавать внешний вид отдельно для каждого приложения, надежная модель стилизации и использования шаблонов необходима для поддержки и совместного использования внешнего вида как внутри одного приложения, так и в ряде приложений. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет такую модель.  
@@ -116,7 +117,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="bindings-dynamic-resources-and-event-handlers"></a>Привязки, динамические ресурсы и обработчики событий  
  Обратите внимание, что свойство `Setter.Value` можно использовать для задания [привязки расширения разметки](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) или [расширения разметки DynamicResource](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md). Дополнительные сведения см. в разделе примеры, приведенные для <xref:System.Windows.Setter.Value%2A?displayProperty=nameWithType> свойства.  
   
- На данный момент этот обзор касается только использования методов задания для установки значений свойств. В стиле также можно задать обработчики событий. Для получения дополнительной информации см. <xref:System.Windows.EventSetter>.  
+ На данный момент этот обзор касается только использования методов задания для установки значений свойств. В стиле также можно задать обработчики событий. Дополнительные сведения см. в разделе <xref:System.Windows.EventSetter>.  
   
 <a name="styling_datatemplates"></a>   
 ## <a name="data-templates"></a>Шаблоны данных  

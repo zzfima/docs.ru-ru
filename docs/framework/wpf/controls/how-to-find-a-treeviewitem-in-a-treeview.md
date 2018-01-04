@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a231f5eae92bff8e3d525579dae865aaa0d7e496
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 696a9e2d92b9c44e4aedbcc200b41e5548cd7411
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>Практическое руководство. Поиск элемента TreeViewItem в TreeView
 <xref:System.Windows.Controls.TreeView> Элемент управления предоставляет удобный способ отображения иерархических данных. Если ваш <xref:System.Windows.Controls.TreeView> привязан к источнику данных, <xref:System.Windows.Controls.TreeView.SelectedItem%2A> свойству предоставляет удобный способ для быстрого извлечения выбранного объекта данных. Обычно лучше всего работать с базовым объектом данных, но иногда необходимо программно манипулировать данных, содержащих <xref:System.Windows.Controls.TreeViewItem>. Например, может потребоваться программно разверните <xref:System.Windows.Controls.TreeViewItem>, или выберите другой элемент в <xref:System.Windows.Controls.TreeView>.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/22/2017
   
 ## <a name="example"></a>Пример  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  В следующем примере выполняется поиск <xref:System.Windows.Controls.TreeView> для указанного объекта и возвращает объект, содержащего <xref:System.Windows.Controls.TreeViewItem>. В примере проверяется, чтобы каждый <xref:System.Windows.Controls.TreeViewItem> создается, чтобы его дочерние элементы можно искать. В этом примере также работает, если <xref:System.Windows.Controls.TreeView> используются виртуализированные элементы.  
   
 > [!NOTE]

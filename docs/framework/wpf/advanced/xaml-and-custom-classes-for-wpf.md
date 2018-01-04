@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c494b386cc52786c5adfbcbbea78b912bbf9887d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: da599afc94fba617d4df17c57679d8ee4bb05c61
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>Код XAML и пользовательские классы для WPF
 Реализация языка XAML в платформах [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] поддерживает возможность определения пользовательского класса или структуры на любом языке [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и последующего доступа к этому классу с помощью разметки XAML. В одном файле разметки можно использовать сочетание определенных в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] типов и пользовательских типов, обычно сопоставляя пользовательские типы с префиксом пространства имен XAML. В этом разделе обсуждаются требования, которым должен соответствовать пользовательский класс, чтобы его можно было использовать в качестве элемента XAML.  

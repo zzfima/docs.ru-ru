@@ -23,11 +23,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c5455007e407bf4320355aebfd043bfc056d6d56
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0019b739c794cbffa62b49749371c2a19f752267
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate
 <a name="introduction"></a>Объект <xref:System.Windows.Controls.ControlTemplate> указывает визуальную структуру и визуальное поведение элемента управления. Можно настроить внешний вид элемента управления, предоставляя ему новый <xref:System.Windows.Controls.ControlTemplate>. При создании <xref:System.Windows.Controls.ControlTemplate>, замените внешний вид существующего элемента управления без изменения его функциональность. Например, можно сделать кнопки в приложении round, а не по умолчанию квадратных, но будет по-прежнему вызывать кнопки <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событий.  
@@ -102,7 +103,7 @@ ms.lasthandoff: 10/22/2017
   
  В следующей таблице перечислены визуальные свойства, наследуемые элементом управления от <xref:System.Windows.Controls.Control> класса. В таблице также указывается, использует ли шаблон элемента управления по умолчанию значение наследуемого свойства или оно должно быть привязано к шаблону.  
   
-|Свойство|Способ использования|  
+|Свойство.|Способ использования|  
 |--------------|------------------|  
 |<xref:System.Windows.Controls.Control.Background%2A>|Привязка к шаблону|  
 |<xref:System.Windows.Controls.Control.BorderThickness%2A>|Привязка к шаблону|  
@@ -141,7 +142,7 @@ ms.lasthandoff: 10/22/2017
   
  Элемент управления отвечает за определение состояний как часть своего контракта, что подробно рассматривается в подразделе [Настройка других элементов управления через понимание контракта элемента управления](#customizing_other_controls_by_understanding_the_control_contract) далее в этом разделе. В следующей таблице перечислены состояния, которые указаны для <xref:System.Windows.Controls.Button>.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание|  
+|Имя VisualState|Имя VisualStateGroup|Описание:|  
 |----------------------|---------------------------|-----------------|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши расположен в элементе управления.|  

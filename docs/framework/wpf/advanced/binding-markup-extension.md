@@ -17,11 +17,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7d2bbca799e1eda1abae3d199dd71e004b17c4c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc6a0616c6b462ffe6aca0a9adf27ac2ac7b7828
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="binding-markup-extension"></a>Привязка расширения разметки
 Определяет значение свойства на значение с привязкой к данным, создавая объект промежуточного выражения и интерпретируя контекст данных, который применяется к элементу и его привязке во время выполнения.  
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>: строка, определяющая группу возможных привязки. Это — это понятие относительно Расширенная привязка; в разделе справочника, посвященных <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>.  
   
--   <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`.  
+-   <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`.  
   
 -   <xref:System.Windows.Data.Binding.Converter%2A>: можно задать в качестве `bindProp` = `value` строки в выражении, но для этого требуется ссылка на объект для значения, такие как [StaticResource Markup Extension](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md). Значение в этом случае является экземпляром класса настраиваемого преобразователя.  
   
@@ -77,15 +78,15 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.Windows.Data.BindingBase.FallbackValue%2A>: можно задать в качестве `bindProp` = `value` строки в выражение, но это зависит от типа передаваемого значения. Если передача ссылочного типа, требуется ссылка на объект, например вложенный [StaticResource Markup Extension](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md).  
   
--   <xref:System.Windows.Data.Binding.IsAsync%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`.  
+-   <xref:System.Windows.Data.Binding.IsAsync%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`.  
   
 -   <xref:System.Windows.Data.Binding.Mode%2A>: *значение* является именем константы из <xref:System.Windows.Data.BindingMode> перечисления. Например, `{Binding Mode=OneWay}`.  
   
--   <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`.  
+-   <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`.  
   
--   <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`.  
+-   <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`.  
   
--   <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`.  
+-   <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`.  
   
 -   <xref:System.Windows.Data.Binding.Path%2A>: строка, описывающая пути в объект данных или общие объектной модели. Формат предоставляет несколько разных соглашений для обхода объектной модели, которая не может быть адекватно описан в данном разделе. В разделе [синтаксис PropertyPath XAML](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md).  
   
@@ -99,9 +100,9 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>: *значение* является именем константы из <xref:System.Windows.Data.UpdateSourceTrigger> перечисления. Например, `{Binding UpdateSourceTrigger=LostFocus}`. Потенциально определенные элементы управления имеют разные значения по умолчанию для этого свойства привязки. См. раздел <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
   
--   <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`. См. заметки.  
+-   <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`. См. заметки.  
   
--   <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`. См. заметки.  
+-   <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`. См. заметки.  
   
 -   <xref:System.Windows.Data.Binding.XPath%2A>: строка, описывающая путь в XMLDOM источника данных XML. В разделе [привязать к XML-данных с помощью XMLDataProvider и запросы XPath](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
   

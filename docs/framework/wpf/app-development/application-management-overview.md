@@ -17,11 +17,12 @@ caps.latest.revision: "56"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 09129f2dc2bac2bb17ebacd6d6db020288b6f616
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9651b55741a607b1c99a813c0011db380dfd38f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-management-overview"></a>Общие сведения об управлении приложением
 Все приложения имеют тенденцию совместно использовать общий набор функциональных возможностей, который применяется к реализации приложения и управлению им. Этот раздел содержит обзор функций в <xref:System.Windows.Application> класс для создания и управления приложениями.  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
 |Получение и задание свойств области определения приложения|Используйте свойство <xref:System.Windows.Application.Properties%2A?displayProperty=nameWithType>.|  
 |Получение и сохранение состояния приложения|В разделе [сохранение и восстановление свойств области приложения между сеансами приложения](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md).|  
 |Управление файлами данных без кода, включая файлы ресурсов, файлы содержимого и файлы исходного сайта.|В разделе [ресурса приложения WPF, содержимое и файлы данных](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).|  
-|Управление окнами в автономных приложениях|В разделе [Обзор Windows WPF](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).|  
+|Управление окнами в автономных приложениях|См. раздел [Общие сведения об окнах WPF](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).|  
 |Отслеживание навигации и управление ею|В разделе [Общие сведения о навигации](../../../../docs/framework/wpf/app-development/navigation-overview.md).|  
   
 <a name="The_Application_Definition"></a>   
@@ -330,7 +331,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationExitSnippets/CSharp/MainWindow.xaml.cs#appexitcode)]
  [!code-vb[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationExitSnippets/visualbasic/mainwindow.xaml.vb#appexitcode)]  
   
- Можно определить значение кода выхода и изменить его, обработав <xref:System.Windows.Application.Exit> событий. <xref:System.Windows.Application.Exit> Обработчик событий передается <xref:System.Windows.ExitEventArgs> , которые предоставляют доступ к коду выхода с <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> свойство. Для получения дополнительной информации см. <xref:System.Windows.Application.Exit>.  
+ Можно определить значение кода выхода и изменить его, обработав <xref:System.Windows.Application.Exit> событий. <xref:System.Windows.Application.Exit> Обработчик событий передается <xref:System.Windows.ExitEventArgs> , которые предоставляют доступ к коду выхода с <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> свойство. Дополнительные сведения см. в разделе <xref:System.Windows.Application.Exit>.  
   
 > [!NOTE]
 >  Можно задать код выхода в автономных приложениях и [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Однако значение кода выхода игнорируется для [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].  

@@ -16,16 +16,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0e1b26ec97f4b379e6b2d75a407408b8382bca52
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f43e8982dc9caaa57ffb6865bf9988243f42fa8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-controls-used-to-list-options"></a>Создание списка для выбора элементов в Windows Forms
 Если вы хотите предоставить пользователям список параметров для выбора можно добавить различные элементы управления в форму Windows Forms. В зависимости от того сколько вы хотите ограничить пользователей входных данных, можно добавить <xref:System.Windows.Forms.ListBox> управления <xref:System.Windows.Forms.ComboBox> управления, или <xref:System.Windows.Forms.CheckedListBox> элемента управления. Используйте следующие ссылки, чтобы определить, какой элемент управления следует соответствует вашим потребностям.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Применение элемента управления ComboBox вместо элемента управления ListBox в Windows Forms](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
  Корпорация Майкрософт рекомендует соответствующего основе списка элемента управления в зависимости от требований и ограничений формы Windows Forms.  
   
@@ -46,13 +47,13 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.CheckedListBox>  
- Описание класса и ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
  <xref:System.Windows.Forms.ComboBox>  
- Описание класса и ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
  <xref:System.Windows.Forms.ListBox>  
- Описание класса и ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Общие сведения об элементе управления CheckedListBox](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  

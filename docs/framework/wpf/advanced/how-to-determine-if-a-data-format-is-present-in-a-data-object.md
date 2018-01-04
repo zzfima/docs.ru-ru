@@ -20,18 +20,19 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9e5eaad64e18ff955340a8e91bfe8bd0e09dd8d7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: fb7b7bb0436ad00982f48a00b079e1f867922db5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-if-a-data-format-is-present-in-a-data-object"></a>Практическое руководство. Определение присутствия формата данных в объекте данных
 Следующие примеры показывают, как использовать различные <xref:System.Windows.DataObject.GetDataPresent%2A> запрос перегрузки метода, определенного формата данных существует ли в объект данных.  
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В следующем примере кода используется <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> перегрузка для запроса на наличие определенного формата данных по строке дескриптора.  
   
 ### <a name="code"></a>Код  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/22/2017
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В следующем примере кода используется <xref:System.Windows.DataObject.GetDataPresent%28System.Type%29> перегрузка для запроса на наличие определенного формата данных по типу.  
   
 ### <a name="code"></a>Код  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/22/2017
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В следующем примере кода используется <xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29> перегрузки для запроса к данным по строке дескриптора и указание того, как обрабатывать автоматически преобразуемые форматы данных.  
   
 ### <a name="code"></a>Код  

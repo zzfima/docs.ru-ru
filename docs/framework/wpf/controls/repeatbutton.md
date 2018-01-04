@@ -17,11 +17,12 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56edfe456dcb97b1d9de906ee3e3d1d09bfcf109
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 94f6b89b4e23f2610bdc3c834279eeb3eb9c9815
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="repeatbutton"></a>RepeatButton
 <xref:System.Windows.Controls.Primitives.RepeatButton> Аналогичен <xref:System.Windows.Controls.Button>. Тем не менее <xref:System.Windows.Controls.Primitives.RepeatButton> обеспечивает элементы, можно контролировать, когда и как <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событием.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/18/2017
  ![Повторите состояния кнопки](../../../../docs/framework/wpf/controls/media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")  
 Типичные RepeatButton  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.Primitives.RepeatButton>  

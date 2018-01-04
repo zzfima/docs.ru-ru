@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c611919b5702877db34e9a02e367312678a1b27
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 78846e2b6a1d73e011441b0ccb46b8aad365d5dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Практическое руководство. реализация проверки с помощью элемента управления DataGrid
 <xref:System.Windows.Controls.DataGrid> Управления позволяет выполнять проверку на уровне ячеек и строк. Когда пользователь обновляет значение проверки на уровне ячеек проверяются отдельные свойства объекта, привязанного к данным. Когда пользователь вносит изменения в строку проверки на уровне строк проверяются целые объекты данных. Также можно реализовать визуальную реакцию на ошибки проверки или использовать стандартные сигналы, <xref:System.Windows.Controls.DataGrid> предоставляет элемент управления.  

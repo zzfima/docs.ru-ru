@@ -19,11 +19,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23d234d97d6b25394df87016f0671d86b10a2853
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e05163bcbafd360e0929fe784ff1111bd0663ef3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-erase-ink-on-a-custom-control"></a>Практическое руководство. Удаление данных рукописного ввода в настраиваемом элементе управления
 <xref:System.Windows.Ink.IncrementalStrokeHitTester> Определяет, пересекается ли текущий росчерк stroke в другой.  Это полезно для создания элемента управления, который позволяет пользователю стирать части штриха, способ пользователь может выполнять на <xref:System.Windows.Controls.InkCanvas> при <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> равно <xref:System.Windows.Controls.InkCanvasEditingMode.EraseByPoint>.  

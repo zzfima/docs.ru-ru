@@ -15,16 +15,17 @@ caps.latest.revision: "90"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2ecb85c1cb6bca654433ccddfb895bc361a4e2b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bd866c67a5885a378dace6e14e280b5efe630695
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="typography-how-to-topics"></a>Разделы руководства, посвященные разметке текста
 В подразделах этого раздела описывается использование [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] поддержка форматированного представления текста в приложениях.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Создание оформления текста](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)  
  [Определение того, подчеркнута ли ссылка](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)  
  [Применение преобразования к тексту](../../../../docs/framework/wpf/advanced/how-to-apply-transforms-to-text.md)  

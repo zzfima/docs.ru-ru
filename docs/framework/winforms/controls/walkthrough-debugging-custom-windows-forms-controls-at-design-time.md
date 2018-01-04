@@ -26,11 +26,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc5f0fab7c380268dfc041d6105595858c2fed93
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7fd38f6246d44bd24753d9c86a5b0b08819d3db7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Пример. Отладка пользовательских элементов управления Windows Forms во время разработки
 При создании пользовательского элемента управления, вы обнаружите его необходимо выполнить отладку его поведение во время разработки. Это особенно важно при создании пользовательского конструктора для элемента управления. Дополнительные сведения см. в разделе [Пошаговое руководство: создание Windows Forms управления, принимает преимущества от возможности Visual Studio во время разработки](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
@@ -173,7 +174,7 @@ ms.lasthandoff: 11/21/2017
   
 6.  При завершении сеанса отладки можно остановить закрыв второй экземпляр Visual Studio или нажав **остановить отладку** кнопки в экземпляре отладки.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  Теперь, когда можно отлаживать пользовательских элементов управления во время разработки, существует множество возможностей для расширения элемента управления взаимодействием с Visual Studio IDE.  
   
 -   Можно использовать <xref:System.ComponentModel.Component.DesignMode%2A> свойство <xref:System.ComponentModel.Component> для написания кода, который будет выполняться только во время разработки. Дополнительные сведения см. в разделе <xref:System.ComponentModel.Component.DesignMode%2A>.  

@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be514f435b787c770eca114d42bee5c1424a40c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 028b66fea2b35e7b36760ec7c606f81ca2301620
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки
 Точное расположение элементов управления на форме является важным для многих приложений. Конструктор Windows Forms предоставляет много инструментов для выполнения этой задачи. Одним из наиболее важных является <xref:System.Windows.Forms.Design.Behavior.SnapLine> компонентов.  
@@ -240,7 +241,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  Выберите элемент управления на форму и перемещать других элементов управления. Обратите внимание, что линии привязки не отображаются.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  Линии привязки обеспечивают простой способ выравнивания элементов управления на форму. Рекомендуется также дополнительно исследовать следующие моменты.  
   
 -   Попытайтесь вложить <xref:System.Windows.Forms.GroupBox> управления в другом <xref:System.Windows.Forms.GroupBox> элемента управления. Место <xref:System.Windows.Forms.Button> управления в дочернем <xref:System.Windows.Forms.GroupBox> управления, а другой в родительском элементе <xref:System.Windows.Forms.GroupBox> элемента управления. Переместить <xref:System.Windows.Forms.Button> элементов управления, изучите, как линии привязки пересекают границы контейнера.  

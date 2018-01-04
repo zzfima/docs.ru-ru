@@ -14,11 +14,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: df0d1c5f8bff9d4cb546378f281a44c696246553
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3f0a38c69dc286587e702b80ef4093bb98d78b5a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="usage-guidelines"></a>Правила использования
 Этот раздел содержит рекомендации по использованию общих типов в общедоступный API. Он обрабатывает прямое использование встроенных типов (например, атрибуты сериализации) и Framework перегрузка общих операторов.  
@@ -28,7 +31,7 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 >  Инструкции и Дополнительные сведения о других типичных, встроенных типов .NET Framework в справочных разделах по следующим: <xref:System.DateTime?displayProperty=nameWithType>, <xref:System.DateTimeOffset?displayProperty=nameWithType>, <xref:System.ICloneable?displayProperty=nameWithType>, <xref:System.IComparable%601?displayProperty=nameWithType>, <xref:System.IEquatable%601?displayProperty=nameWithType>, <xref:System.Nullable%601?displayProperty=nameWithType>, <xref:System.Object?displayProperty=nameWithType> , <xref:System.Uri?displayProperty=nameWithType>.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Массивы](../../../docs/standard/design-guidelines/arrays.md)  
  [Атрибуты](../../../docs/standard/design-guidelines/attributes.md)  
  [Коллекции](/cpp/mfc/collections)  

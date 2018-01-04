@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f47f56e28064c852e5d8f721bdb3a0f73172c12a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6bdb140d90de02fa817c55a05f40e57fcd0d636c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="planning-for-application-performance"></a>Планирование производительности приложения
 Успех достижения целей по производительности зависит от того, насколько хорошо при разработке стратегии производительности. Планирование является первым этапом разработки любого продукта. В этом разделе описывается несколько очень простых правил разработки стратегии хорошую производительность.  
@@ -49,6 +50,6 @@ ms.lasthandoff: 11/21/2017
  [Двумерная графика и изображения](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
  [Поведение объекта](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
  [Ресурсы приложений](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
- [Текст](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
  [Привязка данных](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
  [Дополнительные рекомендации по повышению производительности](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

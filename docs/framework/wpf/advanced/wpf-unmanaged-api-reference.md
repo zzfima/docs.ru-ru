@@ -13,16 +13,17 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 02c0d41ccb21cb68c5cae3459a2d7518e98cda20
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 42843e4be907c7361f55a95abb4d91b4426a9f6c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-unmanaged-api-reference"></a>Справочник по API-Интерфейс неуправляемого WPF
 Библиотеки Windows Presentation Foundation (WPF) предоставляют ряд неуправляемые функции, которые предназначены только для внутреннего использования. Они не должны вызываться из кода пользователя.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Функция Activate](../../../../docs/framework/wpf/advanced/activate-function-wpf-unmanaged-api-reference.md)  
  [Функция CreateIDispatchSTAForwarder](../../../../docs/framework/wpf/advanced/createidispatchstaforwarder-function-wpf-unmanaged-api-reference.md)  
  [Функция Deactivate](../../../../docs/framework/wpf/advanced/deactivate-function-wpf-unmanaged-api-reference.md)  

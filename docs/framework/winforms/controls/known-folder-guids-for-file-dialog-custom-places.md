@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d32dfe359d4f51403c5aaaae319fe4cb52eed3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 913cccadc90eaef589f42d097a14b1472c7129fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>Известные GUID папок для пользовательских размещений, отображаемых в диалоговом окне открытия или сохранения файла
 Вы используете <xref:System.Guid> для указания [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] известные при добавлении папок в папке <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> коллекции. Известные GUID папок не учитывается регистр и определены в идентификаторах в [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  
@@ -179,7 +180,7 @@ ms.lasthandoff: 11/21/2017
  Programs  
  A77F5D77-2E2B-44C3-A6A2-ABA601054A51  
   
- Открытый  
+ Public  
  DFDF76A2-C82A-4D63-906A-5644AC457385  
   
  PublicDesktop  
@@ -272,7 +273,7 @@ ms.lasthandoff: 11/21/2017
  SyncSetup  
  0F214138-B1D3-4A90-BBA9-27CBC0C5389A  
   
- System  
+ Система  
  1AC14E77-02E7-4E5D-B744-2EB1AE5198B7  
   
  SystemX86  

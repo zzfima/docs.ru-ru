@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 6df7c6e8f7670648405400cf48e4a1d54cdd7e34
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b59b88c38b6fa7f810bb3a12de09a962eb5679c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="type-converters-for-xaml-overview"></a>Общие сведения о преобразователях типов для XAML
 Преобразователи типов предоставляют логику для средства записи объекта, преобразующую строку в разметке XAML в конкретные объекты в графе объектов. В службах XAML .NET Framework преобразователь типов должен быть классом, производным от <xref:System.ComponentModel.TypeConverter>. Некоторые преобразователи также поддерживают путь сохранения XAML и могут использоваться для сериализации объекта в виде строки в разметке сериализации. В этом разделе описывается, как и когда вызываются преобразователи типов в XAML, а также представлены рекомендации по реализации переопределений методов класса <xref:System.ComponentModel.TypeConverter>.  
@@ -93,7 +94,7 @@ ms.lasthandoff: 11/21/2017
   
  Если параметр `destinationType` не относится к типу <xref:System.String>, можно выбрать собственную обработку преобразователя. Как правило, вы возвращаетесь к базовой обработке реализации, которая с помощью <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> вызывает определенное исключение.  
   
- Можно вызывать исключение, если преобразователь типов должен иметь доступ к службе XAML из средства записи объектов служб XAML .NET Framework, но вызов <xref:System.IServiceProvider.GetService%2A> , который выполняется в контексте, не возвращает эту службу.  
+ Можно вызывать исключение, если преобразователь типов должен иметь доступ к службе XAML из средства записи объектов служб XAML .NET Framework, но вызов <xref:System.IServiceProvider.GetService%2A>, который выполняется в контексте, не возвращает эту службу.  
   
 ### <a name="implementing-canconvertfrom"></a>Реализация CanConvertFrom  
  Ваша реализация <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> должна возвращать `true` для `sourceType` типа <xref:System.String> , а в противном случае обращаться к базовой реализации. Не вызывайте исключения из <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>.  
