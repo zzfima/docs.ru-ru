@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5cb3afec00fea5432329bd30fc993ac0cafd8b10
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1d856af12269416b3303e617338165771ae4f2b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="access-control-mechanisms"></a>Механизмы управления доступом
 При помощи [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] можно контролировать доступ несколькими способами. В настоящем разделе кратко описываются различные механизмы и приводятся рассуждения о том, когда и какой способ использовать; раздел должен помочь пользователю выбрать правильный механизм использования. Технологии доступа перечислены в порядке сложности. Самым простым является <xref:System.Security.Permissions.PrincipalPermissionAttribute>; самым сложным - модель удостоверения.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/02/2017
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]с помощью атрибута, в разделе [как: ограничение доступа с использованием класса PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]удостоверение, в разделе [удостоверения службы и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="aspnet-membership-provider"></a>Поставщик участия ASP.NET  
- Функция [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] является поставщиком членства по умолчанию. Даже если поставщик членства технически не является механизмом контроля доступа, он позволяет контролировать доступ к службе путем ограничения набора возможных удостоверений, которые могут получить доступ к конечной точке службы. Функция членства включает в себя базу данных, которая может быть заполнена комбинациями имени/пароля, что позволяет пользователям веб-сайта создавать учетные записи на сайте. Для доступа к службе, которая использует поставщика членства, пользователь должен войти в систему со своими именем пользователя и паролем.  
+ Функция [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] является поставщиком членства по умолчанию. Даже если поставщик членства технически не является механизмом контроля доступа, он позволяет контролировать доступ к службе путем ограничения набора возможных удостоверений, которые могут получить доступ к конечной точке службы. Возможность членства включает в себя базу данных, которая может быть заполнена комбинациями имени/пароля, что позволяет пользователям веб-сайта создавать учетные записи на сайте. Для доступа к службе, которая использует поставщика членства, пользователь должен войти в систему со своими именем пользователя и паролем.  
   
 > [!NOTE]
 >  База данных должна быть заполнена при помощи функции [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], перед тем как она сможет использоваться службой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с целью авторизации.  
@@ -70,7 +71,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>См. также  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
  [Практическое руководство. Ограничение доступа с использованием класса PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
- [Как: использование поставщика ролей ASP.NET со службой](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
- [Как: использование поставщика ролей диспетчера авторизации ASP.NET со службой](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
+ [Практическое руководство. Использование поставщика ролей ASP.NET со службой](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
+ [Практическое руководство. Использование поставщика ролей диспетчера авторизации ASP.NET со службой](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
  [Управление утверждениями и авторизацией с помощью модели удостоверения](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
  [Делегирование и олицетворение](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

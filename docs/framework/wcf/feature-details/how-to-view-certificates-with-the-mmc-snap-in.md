@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5981e68ebe2870870fff5e92e87d7582ac2c42b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 582eaef518e10acb4c4c356226ce0be24d1b4c35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Практическое руководство. Просмотр сертификатов с помощью оснастки консоли MMC
 Распространенным типом учетных данных является сертификат X.509. При создании защищенных служб или клиентов задать сертификат для использования в качестве учетных данных клиента или службы можно с помощью таких методов, как <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>. Этот метод требует задания различных параметров, таких как хранилище, в котором находится сертификат, и значение, которое будет использоваться при поиске сертификата. В следующей процедуре показано, как просмотреть хранилища на компьютере для поиска соответствующего сертификата. Пример поиска отпечаток сертификата см. в разделе [как: извлечение отпечатка сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
@@ -47,9 +48,9 @@ ms.lasthandoff: 12/02/2017
   
 11. В **корень консоли** окно, нажмите кнопку **сертификаты (локальный компьютер)** для просмотра сертификата хранятся на компьютере.  
   
-12. Необязательно. Чтобы просмотреть сертификаты для своей учетной записи, повторите шаги 3 - 6. В шаге 7 вместо пункта **учетная запись компьютера**, нажмите кнопку **Моя учетная запись пользователя** и повторите шаги 8 – 10.  
+12. Необязательный. Чтобы просмотреть сертификаты для своей учетной записи, повторите шаги 3 - 6. В шаге 7 вместо пункта **учетная запись компьютера**, нажмите кнопку **Моя учетная запись пользователя** и повторите шаги 8 – 10.  
   
-13. Необязательно. На **файл** меню, нажмите кнопку **Сохранить** или **Сохранить как**. Сохраните файл консоли для использования в дальнейшем.  
+13. Необязательный. На **файл** меню, нажмите кнопку **Сохранить** или **Сохранить как**. Сохраните файл консоли для использования в дальнейшем.  
   
 ## <a name="viewing-certificates-with-internet-explorer"></a>Просмотр сертификатов с помощью Internet Explorer  
  Просматривать, экспортировать, импортировать и удалять сертификаты можно также с помощью Internet Explorer.  
@@ -66,5 +67,5 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>См. также  
  [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Как: создание временных сертификатов для использования во время разработки](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)  
- [Как: извлечение отпечатка сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+ [Практическое руководство. Создание временных сертификатов для использования во время разработки](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)  
+ [Практическое руководство. Извлечение отпечатка сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)

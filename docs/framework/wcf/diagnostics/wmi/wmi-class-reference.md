@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a74f1d7e70b8664df5022d6f9f42cf04b88f930
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e221c8197b9713dd5f4e35114ada3c63f4978ef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wmi-class-reference"></a>Справочные сведения по классам WMI
 В данном разделе перечислены все классы WMI, представленные поставщиком WMI [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
@@ -25,7 +26,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="accessing-wmi-instances"></a>Доступ к экземплярам WMI  
  Все классы, перечисленные в ссылках на объект WMI, невозможно создать напрямую, за исключением классов службы, домена приложения, контракта, ServiceToEndpointAssociation и конечной точки. Чтобы получить доступ к другим экземплярам, можно получить доступ к свойствам указанных выше классов верхнего уровня. Например, доступ к экземпляру TransportBindingElement можно получить следующим образом: экземпляр класса конечной точки -> привязка -> класс BindingElements.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [ActivityTransfer](../../../../../docs/framework/wcf/diagnostics/wmi/activitytransfer.md)  
   
  [AppDomainInfo](../../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md)  
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/02/2017
   
  [BinaryMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/binarymessageencodingbindingelement.md)  
   
- [Привязки](../../../../../docs/framework/wcf/diagnostics/wmi/binding.md)  
+ [Binding](../../../../../docs/framework/wcf/diagnostics/wmi/binding.md)  
   
  [BindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/bindingelement.md)  
   
@@ -56,13 +57,13 @@ ms.lasthandoff: 12/02/2017
   
  [ConnectionOrientedTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/connectionorientedtransportbindingelement.md)  
   
- [Контракт](../../../../../docs/framework/wcf/diagnostics/wmi/contract.md)  
+ [Contract](../../../../../docs/framework/wcf/diagnostics/wmi/contract.md)  
   
  [CustomBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/custombindingelement.md)  
   
- [Атрибут DeliveryRequirementsAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/deliveryrequirementsattribute.md)  
+ [DeliveryRequirementsAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/deliveryrequirementsattribute.md)  
   
- [Конечная точка](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)  
+ [Endpoint](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)  
   
  [HttpsTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/httpstransportbindingelement.md)  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 12/02/2017
   
  [LocalServiceSecuritySettings](../../../../../docs/framework/wcf/diagnostics/wmi/localservicesecuritysettings.md)  
   
- [Matchallendpointbehavior наследуется](../../../../../docs/framework/wcf/diagnostics/wmi/matchallendpointbehavior.md)  
+ [MatchAllEndpointBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/matchallendpointbehavior.md)  
   
  [MessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/messageencodingbindingelement.md)  
   
@@ -108,11 +109,11 @@ ms.lasthandoff: 12/02/2017
   
  [PrivacyNoticeBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/privacynoticebindingelement.md)  
   
- [Элемент ReliableSessionBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/reliablesessionbindingelement.md)  
+ [ReliableSessionBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/reliablesessionbindingelement.md)  
   
  [SecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/securitybindingelement.md)  
   
- [Службы](../../../../../docs/framework/wcf/diagnostics/wmi/service.md)  
+ [Service](../../../../../docs/framework/wcf/diagnostics/wmi/service.md)  
   
  [ServiceAppDomain](../../../../../docs/framework/wcf/diagnostics/wmi/serviceappdomain.md)  
   
@@ -138,7 +139,7 @@ ms.lasthandoff: 12/02/2017
   
  [SymmetricSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/symmetricsecuritybindingelement.md)  
   
- [Synchronousreceivebehavior наследуется](../../../../../docs/framework/wcf/diagnostics/wmi/synchronousreceivebehavior.md)  
+ [SynchronousReceiveBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/synchronousreceivebehavior.md)  
   
  [TcpConnectionPoolSettings](../../../../../docs/framework/wcf/diagnostics/wmi/tcpconnectionpoolsettings.md)  
   
@@ -146,7 +147,7 @@ ms.lasthandoff: 12/02/2017
   
  [TextMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/textmessageencodingbindingelement.md)  
   
- [Прослушиватель трассировки](../../../../../docs/framework/wcf/diagnostics/wmi/tracelistener.md)  
+ [TraceListener](../../../../../docs/framework/wcf/diagnostics/wmi/tracelistener.md)  
   
  [TraceListenerArgument](../../../../../docs/framework/wcf/diagnostics/wmi/tracelistenerargument.md)  
   

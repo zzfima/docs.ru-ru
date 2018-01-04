@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 53bb63fbbcf92650085514118a5e9464ab2dea30
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 16480996b96145873b1d1f84d56af6d1aa863710
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-sessions"></a>Надежные сеансы
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/02/2017
 
 Для применения надежных сеансов в приложении [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] следует использовать предоставляемые системой привязки в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], которые по умолчанию поддерживают надежные сеансы, либо можно создать собственную пользовательскую привязку, которая бы поддерживала такие сеансы.
 
-## <a name="in-this-section"></a>Содержание
+## <a name="in-this-section"></a>В этом разделе
 
 [Общие сведения о надежных сеансов](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)   
 Описание надежных сеансов, ситуаций, в которых они используются, различных привязок, которые поддерживают надежные сеансы, и принципы их работы.

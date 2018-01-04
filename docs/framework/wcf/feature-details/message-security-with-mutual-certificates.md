@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3d5e598fea118eb340b965d605f5fdeb9c479a4b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a60af220bf962e523a35bc5b8d8abca041a9fd46
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-with-mutual-certificates"></a>Безопасность сообщений с использованием взаимных сертификатов
 В следующем сценарии показано, как служба и клиент [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] защищаются с помощью режима безопасности сообщений. Проверка подлинности клиента и службы выполняется с помощью сертификатов.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 |--------------------|-----------------|  
 |Режим безопасности|Сообщение|  
 |Взаимодействие|Да, с клиентами и службами, совместимыми с профилем маркера WS-Security и сертификата X.509.|  
-|Аутентификация|Взаимная проверка подлинности сервера и клиента.|  
+|Проверка подлинности|Взаимная проверка подлинности сервера и клиента.|  
 |Целостность|Да|  
 |Конфиденциальность|Да|  
 |Transport|HTTP|  
@@ -100,7 +101,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="client"></a>Клиент  
+## <a name="client"></a>"Клиент";  
  Предполагается, что представленные ниже код и конфигурация выполняются независимо. Выполните одно из следующих действий.  
   
 -   Создайте автономный клиент, используя код (и код клиента).  

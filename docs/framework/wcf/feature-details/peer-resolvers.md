@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dbc09bd409dc106046d6c5e51dae8932c9eba326
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e946066a352fb29c593a7d84fd6e728c226a3175
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-resolvers"></a>Одноранговые распознаватели
 Чтобы подключиться к сетке, одноранговому узлу требуются IP-адреса других узлов. Получение IP-адресов обычно происходит в результате обращения к службе арбитра, которая принимает идентификатор сетки и возвращает список адресов, соответствующих узлам, зарегистрированным для конкретного идентификатора сетки. Арбитр сохраняет список зарегистрированных адресов, которые он создает при регистрации в службе всех узлов сетки.  
@@ -44,8 +45,8 @@ ms.lasthandoff: 12/02/2017
   
  Показывает, как реализовать пользовательский арбитр конфликтов, в разделе [однорангового канала пользовательского распознавателя одноранговых](http://msdn.microsoft.com/en-us/5b75a2bb-7ff1-4a14-abe7-3debf0537d23).  
   
-## <a name="in-this-section"></a>Содержание  
- [О custompeerresolverservice: регистрация клиентов](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Подробная информация о CustomPeerResolverService: регистрация клиентов](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
   
 ## <a name="see-also"></a>См. также  
  [Основные понятия одноранговых каналов](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)  

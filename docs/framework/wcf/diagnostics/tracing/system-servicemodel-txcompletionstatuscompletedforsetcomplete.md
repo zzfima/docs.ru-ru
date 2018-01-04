@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bb42cdf3961cd43f938d8acb212eb8d7d0c8de54
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c7b2fcef738ae204273cc3067859e9578233a1f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodeltxcompletionstatuscompletedforsetcomplete"></a>System.ServiceModel.TxCompletionStatusCompletedForSetComplete
 Заданная транзакция для заданной операции завершена в результате вызова метода SetTransactionComplete.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Трассируется, если пользователь явно решил завершить текущую транзакцию с помощью контекста OperationContext.  
   
 ## <a name="see-also"></a>См. также  

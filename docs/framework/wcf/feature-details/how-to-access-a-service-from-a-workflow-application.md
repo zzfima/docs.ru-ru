@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fed03374a21406866b19d0028ee24edfc7edb707
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0ffac399e3f7cb3f860128b072251131ac356a2a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Как получить доступ к службе из приложения рабочего процесса
 В этом разделе описывается вызов службы рабочего процесса из консольного приложения рабочего процесса. Зависит от выполнения [как: создание службы рабочего процесса с действиями обмена сообщениями](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) раздела. Хотя в этом разделе описывается вызов службы рабочего процесса из приложения рабочего процесса, эти же методы можно использовать для вызова любых служб [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] из приложения рабочего процесса.  
@@ -74,5 +75,5 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>См. также  
  [Службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Как: создание службы рабочего процесса с действиями обмена сообщениями](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
+ [Практическое руководство. Создание службы рабочего процесса с помощью действий обмена сообщениями](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
  [Использование службы WCF из рабочего процесса веб-проекта](http://go.microsoft.com/fwlink/?LinkId=207725)

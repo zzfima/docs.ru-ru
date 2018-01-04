@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ece49ed003508def00d3e109b7f9e02bc42f824c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9c726502076cc44ebcafd68e0f9a8dbb4f2cf2cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelcommunicationobjectopenfailed"></a>System.ServiceModel.CommunicationObjectOpenFailed
 Не удалось открыть объект связи.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Объект связи не удалось открыть, так как во время выполнения метода Open возникло исключение. Подробные сведения об этом исключении могут содержаться в соседней трассировке.  
   
 ## <a name="see-also"></a>См. также  

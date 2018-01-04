@@ -13,18 +13,19 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2cc98a6c6b0e8b552a7bf04d3fc1a97b41883677
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f25f0c9e773bbadd992284adf6c79d77aaa2441c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting"></a>Размещение
 В подразделах этого раздела описано размещение служб. Служба может размещаться Internet Information Services (IIS), служба активации Windows (WAS), Windows Server AppFabric, службе Windows или управляемом приложении — этот параметр часто называют *себя размещение*.  
   
  Важно отметить, что при запуске службы или любого расширения от недоверенного узла нарушается безопасность.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Размещение в службах IIS](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
  Описывает способ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] служба размещается в службах IIS или [Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=196496).  
   

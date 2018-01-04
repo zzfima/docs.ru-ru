@@ -17,23 +17,24 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fbf351f0d71893457419d3b8b0e2cfb9c96ad0b0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2aa8adc0ce197c3776b8314009fcaa061bed884d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-feature-details"></a>Подробные сведения о возможностях WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] обеспечивает всеобъемлющий контроль функций отправки сообщений приложения. В подразделах этого раздела подробно описываются имеющиеся возможности. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Основные программирования, см. в разделе [базовое Программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  Описывает создание и настройку служб рабочих процессов.  
   
- [Конечные точки: Адреса, привязки и контракты](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Конечные точки: адреса, привязки и контракты](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
  Описывает способ контроля нескольких аспектов службы.  
   
- [Передача данных и сериализации](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
+ [Передача данных и сериализация](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
  Описывает способ настройки сериализации данных для совместной работы или будущей совместимости.  
   
  [Сеансы, экземпляры и параллелизм](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/02/2017
  [Безопасность](../../../../docs/framework/wcf/feature-details/security.md)  
  Описывает, как безопасность [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] помогает создавать приложения с конфиденциальностью и целостностью. Кроме того, в качестве возможностей аудита имеются проверка подлинности и авторизация.  
   
- [Одноранговые сети](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
+ [Одноранговая сеть](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
  Подробная информация о способе создания одноранговых служб и клиентов.  
   
  [Метаданные](../../../../docs/framework/wcf/feature-details/metadata.md)  
@@ -66,10 +67,10 @@ ms.lasthandoff: 12/02/2017
  [Взаимодействие и интеграция](../../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)  
  Описывает использование [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для расширения существующей логики вместо ее переписывания при существенном изменении логики компонентно-ориентированного приложения, размещенного в COM+.  
   
- [Модель программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [Модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
  Описывает модель веб-программирования [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], позволяющую разработчикам предоставлять операции службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] конечным точкам, не являющимся конечными точками SOAP.  
   
- [Синдикации WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
+ [Синдикация WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
  Описывает поддержку простого экспонирования веб-каналов синдикации из службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  [Интеграция с AJAX и поддержка JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  

@@ -14,14 +14,15 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23cfa64aa698643f30409119e162b815e58e2379
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2444488418b7647111cf4b89db0c41a8e66470d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-clients"></a>Расширение клиентов
-В вызывающем приложении уровень модели службы отвечает за преобразование вызовов методов в коде приложения в исходящие сообщения, передачу их по соответствующим каналам, преобразование результатов обратно в возвращаемые значения и выходные параметры в коде приложения, а также за возврат результатов вызывающем объекту. Расширения модели службы изменяют или реализуют поведение и функции выполнения или взаимодействия, в том числе функции клиента или диспетчера, пользовательские поведения, перехват сообщений и параметров, а также другие функции расширяемости.  
+В вызывающем приложении уровень модели службы отвечает за преобразование вызовов методов в коде приложения в исходящие сообщения, передачу их по соответствующим каналам, преобразование результатов обратно в возвращаемые значения и выходные параметры в коде приложения, а также за возврат результатов вызывающем объекту. Расширения модели службы изменяют или реализуют поведение и возможности выполнения или взаимодействия, в том числе возможности клиента или диспетчера, пользовательские поведения, перехват сообщений и параметров, а также другие возможности расширяемости.  
   
  В этом разделе описано, как использовать классы <xref:System.ServiceModel.Dispatcher.ClientRuntime> и <xref:System.ServiceModel.Dispatcher.ClientOperation> в клиентском приложении [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], чтобы изменять поведение клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] по умолчанию или перехватывать или изменять сообщения, параметры и возвращаемые значения до или после их отправки и получения через канал. Дополнительные сведения о расширении среды выполнения службы см. в разделе [расширение диспетчеров](../../../../docs/framework/wcf/extending/extending-dispatchers.md). Дополнительные сведения о моделях поведения, изменять и вставлять объекты настройки в среду выполнения клиента см. в разделе [настройку и расширение среды выполнения с помощью поведений](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
@@ -126,5 +127,5 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Dispatcher.ClientRuntime>  
  <xref:System.ServiceModel.Dispatcher.ClientOperation>  
- [Как: проверка или изменение сообщений на стороне клиента](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)  
- [Как: проверка или изменение параметров](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
+ [Практическое руководство. Проверка или изменение сообщений на клиенте](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)  
+ [Практическое руководство. Проверка или изменение параметров](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)

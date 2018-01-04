@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a1771f5c69442ea4e95925339c28204663f78eb2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0725c4f4275853cce958072a57d7f6ca4059e8cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Конечные точки Windows Communication Foundation
 Вся связь со [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] службы осуществляется с помощью *конечные точки* службы. Конечные точки обеспечивают доступ клиентов к функциональным возможностям службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
@@ -39,17 +40,17 @@ ms.lasthandoff: 12/02/2017
   
 -   [Проектирование и реализация служб](../../../docs/framework/wcf/designing-and-implementing-services.md)  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о создании конечных точек](../../../docs/framework/wcf/endpoint-creation-overview.md)  
  Описывает структуру конечной точки и общие шаги по определению конечной точки в конфигурации и в коде, а также по использованию конечных точек по умолчанию, привязок и поведений, предоставляемых средой выполнения.  
   
  [Указание адреса конечной точки](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
  Описание взаимодействия со службой [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] с использованием конечных точек.  
   
- [Как: создать конечную точку службы в конфигурации](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Практическое руководство. Создание конечной точки службы в конфигурации](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Описание создания конечной точки службы в конфигурации.  
   
- [Как: создать конечную точку службы в коде](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [Практическое руководство. Создание конечной точки службы в коде](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  Описание создания конечной точки службы в коде.  
   
  [Публикация конечных точек метаданных](../../../docs/framework/wcf/publishing-metadata-endpoints.md)  

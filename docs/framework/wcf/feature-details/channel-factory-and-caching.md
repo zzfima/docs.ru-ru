@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1b06d290760afa9a52274c30899e25f00bc18af2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b92c94c6ae15684a087af07edd5801aa4bb9f671
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="channel-factory-and-caching"></a>Производство каналов и кэширование
 Клиентские приложения WCF используют класс <xref:System.ServiceModel.ChannelFactory%601> для создания коммуникационного канала со службой WCF.  Создание экземпляров класса <xref:System.ServiceModel.ChannelFactory%601> оказывает определенное влияние на производительность, поскольку выполняются следующие операции:  
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="specifying-caching-behavior"></a>Установка режима кэширования  
  Режим кэширования задается установкой свойства <xref:System.ServiceModel.ClientBase%601.CacheSetting> в одно из следующих значений.  
   
-|Значение параметра кэша|Описание|  
+|Значение параметра кэша|Описание:|  
 |-------------------------|-----------------|  
 |<xref:System.ServiceModel.CacheSetting.AlwaysOn>|Все экземпляры <xref:System.ServiceModel.ClientBase%601> в пределах домена приложения могут участвовать в кэшировании. Разработчик определил, что при кэшировании не будет неблагоприятных последствий для безопасности. Кэширование не отключается даже в том случае, если «секретным» свойств <xref:System.ServiceModel.ClientBase%601> осуществляется. Свойства «секретным» <xref:System.ServiceModel.ClientBase%601> , <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>, <xref:System.ServiceModel.ClientBase%601.Endpoint%2A> и <xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A>.|  
 |<xref:System.ServiceModel.CacheSetting.Default>|Только экземпляры <xref:System.ServiceModel.ClientBase%601>, созданные на основе конечных точек, определенных в файлах конфигурации, участвуют в кэшировании внутри домена приложения. Ни один экземпляр <xref:System.ServiceModel.ClientBase%601>, созданный программно внутри домена приложения, не будет участвовать в кэшировании. Кроме того, кэширование будет отключено для экземпляра <xref:System.ServiceModel.ClientBase%601> после любого из его свойств «секретным» осуществляется.|  
@@ -126,4 +127,4 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
  [Создание клиентов](../../../../docs/framework/wcf/building-clients.md)  
  [Клиенты](../../../../docs/framework/wcf/feature-details/clients.md)  
  [Обращение к службам с помощью клиента WCF](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [Как: использование ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+ [Практическое руководство. Использование ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6cba37a82174ab255cb6814e296154485fbdd54c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f0ea15e8fe9580f561eedf048ed2aaf2e2ed248f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Практическое руководство. Указание цепочки сертификатов центра сертификации, используемой для проверки сигнатур (WCF)
 Когда [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] получает сообщение SOAP, подписанное с помощью сертификата X.509, по умолчанию проверяется, что сертификат X.509 выдан надежным центром сертификации. Для этого выполняется поиск в хранилище сертификатов и проверяется, отмечен ли соответствующий центр сертификации как надежный. Для выполнения этой проверки, осуществляемой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], цепь сертификатов центра сертификации должна быть установлена в надлежащем хранилище сертификатов.  

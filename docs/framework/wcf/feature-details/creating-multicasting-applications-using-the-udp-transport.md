@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3dde7dc8b051c4238203173bd009a8f71dd9c6c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 57c30c8b6b381be931789f3f64cbd26943bb2b34
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>Создание приложений многоадресной рассылки с помощью транспорта определяемой пользователем функции
 Приложения многоадресной рассылки одновременно отправляют маленькие сообщения большому количеству получателей без необходимости установления прямого соединения. Подобные приложения прежде всего ориентируются на скорость выполнения, а не надежность. Другими словами, отправка данных точно в срок важнее обеспечения доставки конкретного сообщения. WCF теперь поддерживает создание приложений многоадресной рассылки с помощью <xref:System.ServiceModel.UdpBinding>. Этот транспорт может оказаться полезным в случаях, когда служба должна одновременно отправлять маленькие сообщения множеству клиентов. Пример подобной службы - приложение, работающее с биржевыми сводками.  

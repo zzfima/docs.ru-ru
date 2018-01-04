@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a80362f8cb7dce2853472b7f03c3586e33b8578
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ee974ee5a9f4564b0e44256bc4773f9898d89fc6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-a-service-reference-in-a-workflow-solution"></a>Добавление ссылки на службу в решение рабочего процесса
 Добавление ссылки на службу в приложение рабочего процесса работает несколько иначе, чем обычное приложение WCF. При выборе команды «Добавить ссылку на службу» и указании URL-адреса службы загружаются метаданные и создаются пользовательские действия, позволяющие вызывать службу WCF или службу рабочего процесса WCF, на которую была добавлена ссылка. После добавления ссылки на службу заново постройте решение, чтобы построить сформированные действия. После этого они отобразятся в области элементов конструктора рабочих процессов. Тем не менее обратите внимание, что это будет работать только при добавлении ссылки на службу в пределах решения рабочего процесса. Следующие веб-трансляции показано, как добавить ссылку на службу в других типов проектов: [вызова службы WCF из рабочего процесса в проекте веб-](http://go.microsoft.com/fwlink/?LinkId=207725).  
@@ -26,5 +27,5 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>См. также  
  [Службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Как: создание службы рабочего процесса, которая вызывает другую службу рабочих процессов](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-that-calls-another-workflow-service.md)  
+ [Практическое руководство. Создание службы рабочих процессов, которая вызывает другую службу рабочих процессов](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-that-calls-another-workflow-service.md)  
  [Вызов службы WCF из рабочего процесса в веб-проект](http://go.microsoft.com/fwlink/?LinkId=207725)

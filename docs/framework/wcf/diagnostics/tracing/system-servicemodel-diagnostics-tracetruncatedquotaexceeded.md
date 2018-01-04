@@ -13,16 +13,17 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3c5c8f2a34286c754c36038a2bfe6b407ecf9719
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: de666a81aa0595ab9cbe1640f893278c5793b70b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodeldiagnosticstracetruncatedquotaexceeded"></a>System.ServiceModel.Diagnostics.TraceTruncatedQuotaExceeded
 System.ServiceModel.Diagnostics.TraceTruncatedQuotaExceeded  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Превышен предельный размер трассировки. Трассировка усечена.  
   
 ## <a name="see-also"></a>См. также  

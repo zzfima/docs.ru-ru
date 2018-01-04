@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0a19c7e8dec9587816d78be8bea58fc4ca366d5e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 72c7233a1c667b7ee3a1f00cc2fdf3c78f58e789
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="content-based-correlation"></a>Корреляция по содержимому
 Когда службы рабочего процесса обмениваются данными с клиентами и другими службами, в сообщениях часто встречаются данные, уникальным образом направляющие сообщение в определенный экземпляр. При корреляции на основе содержимого эти данные в сообщении, например номер заказчика или идентификатор заказа, используются для маршрутизации сообщения в определенный экземпляр рабочего процесса. В этом разделе описывается использование корреляции на основе содержимого в рабочих процессах.  

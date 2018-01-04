@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d6fd1bf29af743e5bfcd466ffdf7430c389635de
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 977bc032d62856673994e07a71b77d3b668ce7af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communcation-foundation-bindings"></a>Привязки Windows Communication Foundation
 В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] способ реализации приложения отделяется от способа его взаимодействия с другим программным обеспечением. Привязки используются для указания транспорта, кодировки и данных протокола, требуемых для связи клиентов и служб. В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] привязки используются для создания базового описания конечной точки, поэтому большинство данных о привязке должно быть согласовано сторонами, обменивающимися информацией. Самым простым способом является использование клиентами службы той же привязки, которую использует конечная точка службы. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]как это сделать, см. [с помощью привязок для настройки служб Windows Communication Foundation и клиентов](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb).  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/02/2017
   
  Если потребуется коллекция элементов привязки, не предусмотренная в числе предоставляемых системой, можно создать пользовательскую привязку, содержащую требуемую коллекцию элементов привязки. Создавать эти пользовательские привязки очень просто, и для этого не требуется новый класс, однако в них отсутствуют свойства для управления элементами привязки или их параметрами. Обращаться к элементам привязки и изменять их параметры можно через содержащую их коллекцию. Дополнительные сведения см. в разделе [пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Настройка привязок, предоставляемых системой](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  Описание способов использования и изменения привязок, предусмотренных в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], для поддержки стандартных сценариев.  
   

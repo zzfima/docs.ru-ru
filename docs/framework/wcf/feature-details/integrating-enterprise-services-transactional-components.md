@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a236a34dd20661d62d59a3712a1800ff1f9a11ad
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b6ce82d100341fec4415cf9fdb7159706b2accc4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Интеграция транзакционных компонентов служб Enterprise Services
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]предоставляет механизм автоматического для интеграции с Enterprise Services (в разделе [интеграция с приложениями COM +](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). Однако для разработки служб, которые внутренне используют транзакционные компоненты, размещенные внутри служб Enterprise Services, может потребоваться гибкость. Поскольку [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] транзакций функция основана на <xref:System.Transactions> инфраструктуры, процесс Интеграция служб Enterprise Services с [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] идентична для указания демонстрацию взаимодействия между <xref:System.Transactions> и Enterprise Службы, как описано в [взаимодействие с Enterprise Services и транзакции COM +](http://go.microsoft.com/fwlink/?LinkId=94949).  
@@ -103,5 +104,5 @@ static void Main()
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Интеграция с приложениями COM +](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+ [Интеграция с приложениями COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
  [Интеграция с приложениями COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

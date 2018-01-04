@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 284e0851f08d8d06faaea1b6bd98d4b0b0af5130
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f3f6c34c02067c3cf6788dd98512941da5182b50
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodeltxsourcetxscoperequiredisattachedtransaction"></a>System.ServiceModel.TxSourceTxScopeRequiredIsAttachedTransaction
 Заданная транзакция получена для заданной операции из транзакции InstanceContext.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Трассируется, если транзакция, доступная для пользовательского кода, была оставлена методом AutoComplete=false, вызванным до выполнения этого вызова.  
   
 ## <a name="see-also"></a>См. также  

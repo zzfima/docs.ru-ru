@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 79b35fc63fa34bf6de462bad3c18d857215cbfa1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a12348c3c49c29812530bc568bb5873ec53f7eb5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web-hosting-a-queued-application"></a>Размещение веб-узлов в приложении, использующем очереди
 Служба активации Windows (WAS) управляет активацией и временем существования рабочих процессов, содержащих приложения, которые размещают службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Модель процесса WAS обобщает модель процесса [!INCLUDE[iis601](../../../../includes/iis601-md.md)] для HTTP-сервера путем устранения зависимости от HTTP. Это дает возможность службам [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] использовать как протокол HTTP, так и отличные от HTTP протоколы, такие как net.msmq и msmq.formatname, в среде размещения, которая поддерживает активацию на основе сообщений и предоставляет возможность размещать большое число приложений на данном компьютере.  

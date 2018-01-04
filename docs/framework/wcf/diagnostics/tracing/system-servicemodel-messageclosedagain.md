@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ec4a0acc70f1878756776d7ed8e8d8e5ee64035f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 57500bf3c66c0aec47150bb21cc8871738d4b72d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelmessageclosedagain"></a>System.ServiceModel.MessageClosedAgain
 System.ServiceModel.MessageClosedAgain  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Сообщение было снова закрыто.  
   
  Сообщение следует закрывать только один раз. Если эта трассировка выдается в пользовательском коде расширения, она показывает, что пользовательский код расширения закрывает сообщение, которое уже было закрыто. Если эта трассировка выдается посредством кода продукта, она показывает, что пользовательский код расширения может закрывать сообщение слишком рано.  

@@ -13,11 +13,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5300f22ba1cb44016fee64be4e85120da45a3edf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d71a373d3410c90f405a37e104e7d1b440a7aa14
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Объектная модель программирования WCF Web HTTP
 Модель программирования WCF WEB HTTP позволяет разработчикам предоставлять доступ к веб-службам [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] через базовые HTTP-запросы, не требуя использования SOAP. Модель программирования WCF WEB HTTP построена на базе существующей модели расширяемости [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Она определяет следующие классы.  
@@ -98,7 +99,7 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> - пример расширения <xref:System.ServiceModel.Description.WebHttpBehavior>. <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> позволяет конечным точкам [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] получать HTTP-запросы от браузерного клиента ASP.NET AJAX. [AJAX службы с помощью HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) приведен пример использования этой точки расширяемости.  
   
 > [!WARNING]
->  При использовании <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>					<xref:System.UriTemplate> не поддерживаются внутри атрибутов <xref:System.ServiceModel.Web.WebGetAttribute> или <xref:System.ServiceModel.Web.WebInvokeAttribute>.  
+>  При использовании <xref:System.ServiceModel.Description.WebScriptEnablingBehavior><xref:System.UriTemplate> не поддерживаются внутри атрибутов <xref:System.ServiceModel.Web.WebGetAttribute> или <xref:System.ServiceModel.Web.WebInvokeAttribute>.  
   
 ## <a name="webhttpdispatchoperationselector"></a>WebHttpDispatchOperationSelector  
  Класс <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector> использует классы <xref:System.UriTemplate> и <xref:System.UriTemplateTable> для распределения вызовов по операциям службы.  
@@ -115,4 +116,4 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Web.WebInvokeAttribute>  
  <xref:System.ServiceModel.Description.WebHttpBehavior>  
  <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
- [Общие сведения о модели программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+ [Общие сведения о модели веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
