@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 61d278ef00c3dc367c981692fbd21fe09667ee9e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3e604dfbaa473bcf72ad36a470323d1808267571
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="5406---getissuernamefailure"></a><span data-ttu-id="83b5e-102">5406 - GetIssuerNameFailure</span><span class="sxs-lookup"><span data-stu-id="83b5e-102">5406 - GetIssuerNameFailure</span></span>
-## <a name="properties"></a><span data-ttu-id="83b5e-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="83b5e-103">Properties</span></span>  
+# <a name="5406---getissuernamefailure"></a><span data-ttu-id="62693-102">5406 - GetIssuerNameFailure</span><span class="sxs-lookup"><span data-stu-id="62693-102">5406 - GetIssuerNameFailure</span></span>
+## <a name="properties"></a><span data-ttu-id="62693-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="62693-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="83b5e-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="83b5e-104">ID</span></span>|<span data-ttu-id="83b5e-105">5406</span><span class="sxs-lookup"><span data-stu-id="83b5e-105">5406</span></span>|  
-|<span data-ttu-id="83b5e-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="83b5e-106">Keywords</span></span>|<span data-ttu-id="83b5e-107">Безопасность</span><span class="sxs-lookup"><span data-stu-id="83b5e-107">Security</span></span>|  
-|<span data-ttu-id="83b5e-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="83b5e-108">Level</span></span>|<span data-ttu-id="83b5e-109">Ошибка</span><span class="sxs-lookup"><span data-stu-id="83b5e-109">Error</span></span>|  
-|<span data-ttu-id="83b5e-110">Канал</span><span class="sxs-lookup"><span data-stu-id="83b5e-110">Channel</span></span>|<span data-ttu-id="83b5e-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="83b5e-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="62693-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="62693-104">ID</span></span>|<span data-ttu-id="62693-105">5406</span><span class="sxs-lookup"><span data-stu-id="62693-105">5406</span></span>|  
+|<span data-ttu-id="62693-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="62693-106">Keywords</span></span>|<span data-ttu-id="62693-107">Безопасность</span><span class="sxs-lookup"><span data-stu-id="62693-107">Security</span></span>|  
+|<span data-ttu-id="62693-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="62693-108">Level</span></span>|<span data-ttu-id="62693-109">Ошибка</span><span class="sxs-lookup"><span data-stu-id="62693-109">Error</span></span>|  
+|<span data-ttu-id="62693-110">Канал</span><span class="sxs-lookup"><span data-stu-id="62693-110">Channel</span></span>|<span data-ttu-id="62693-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="62693-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="83b5e-112">Описание</span><span class="sxs-lookup"><span data-stu-id="83b5e-112">Description</span></span>  
- <span data-ttu-id="83b5e-113">Это событие создается при сбое получения имени поставщика.</span><span class="sxs-lookup"><span data-stu-id="83b5e-113">This event is emitted when the retrieval of the issuer name failed.</span></span>  
+## <a name="description"></a><span data-ttu-id="62693-112">Описание</span><span class="sxs-lookup"><span data-stu-id="62693-112">Description</span></span>  
+ <span data-ttu-id="62693-113">Это событие создается при сбое получения имени поставщика.</span><span class="sxs-lookup"><span data-stu-id="62693-113">This event is emitted when the retrieval of the issuer name failed.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="83b5e-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="83b5e-114">Message</span></span>  
- <span data-ttu-id="83b5e-115">Ошибка при получении имени поставщика из tokenId:%1.</span><span class="sxs-lookup"><span data-stu-id="83b5e-115">Retrieval of issuer name from tokenId:%1 failed.</span></span>  
+## <a name="message"></a><span data-ttu-id="62693-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="62693-114">Message</span></span>  
+ <span data-ttu-id="62693-115">Ошибка при получении имени поставщика из tokenId:%1.</span><span class="sxs-lookup"><span data-stu-id="62693-115">Retrieval of issuer name from tokenId:%1 failed.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="83b5e-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="83b5e-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="62693-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="62693-116">Details</span></span>

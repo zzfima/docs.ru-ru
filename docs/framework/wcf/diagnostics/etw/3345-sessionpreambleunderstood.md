@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 633763e536d790aacc52af3bfadadde3b6b9dc74
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ed82d96f7e48d9f719a87b606fa35b65508b839e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3345---sessionpreambleunderstood"></a><span data-ttu-id="eeaef-102">3345 - SessionPreambleUnderstood</span><span class="sxs-lookup"><span data-stu-id="eeaef-102">3345 - SessionPreambleUnderstood</span></span>
-## <a name="properties"></a><span data-ttu-id="eeaef-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="eeaef-103">Properties</span></span>  
+# <a name="3345---sessionpreambleunderstood"></a><span data-ttu-id="d97a8-102">3345 - SessionPreambleUnderstood</span><span class="sxs-lookup"><span data-stu-id="d97a8-102">3345 - SessionPreambleUnderstood</span></span>
+## <a name="properties"></a><span data-ttu-id="d97a8-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="d97a8-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="eeaef-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="eeaef-104">ID</span></span>|<span data-ttu-id="eeaef-105">3345</span><span class="sxs-lookup"><span data-stu-id="eeaef-105">3345</span></span>|  
-|<span data-ttu-id="eeaef-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="eeaef-106">Keywords</span></span>|<span data-ttu-id="eeaef-107">Канал</span><span class="sxs-lookup"><span data-stu-id="eeaef-107">Channel</span></span>|  
-|<span data-ttu-id="eeaef-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="eeaef-108">Level</span></span>|<span data-ttu-id="eeaef-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="eeaef-109">Verbose</span></span>|  
-|<span data-ttu-id="eeaef-110">Канал</span><span class="sxs-lookup"><span data-stu-id="eeaef-110">Channel</span></span>|<span data-ttu-id="eeaef-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="eeaef-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="d97a8-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="d97a8-104">ID</span></span>|<span data-ttu-id="d97a8-105">3345</span><span class="sxs-lookup"><span data-stu-id="d97a8-105">3345</span></span>|  
+|<span data-ttu-id="d97a8-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="d97a8-106">Keywords</span></span>|<span data-ttu-id="d97a8-107">Канал</span><span class="sxs-lookup"><span data-stu-id="d97a8-107">Channel</span></span>|  
+|<span data-ttu-id="d97a8-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="d97a8-108">Level</span></span>|<span data-ttu-id="d97a8-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="d97a8-109">Verbose</span></span>|  
+|<span data-ttu-id="d97a8-110">Канал</span><span class="sxs-lookup"><span data-stu-id="d97a8-110">Channel</span></span>|<span data-ttu-id="d97a8-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="d97a8-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="eeaef-112">Описание</span><span class="sxs-lookup"><span data-stu-id="eeaef-112">Description</span></span>  
- <span data-ttu-id="eeaef-113">Это событие отправляется, если начальная часть сеанса NetTcp была правильно распознана.</span><span class="sxs-lookup"><span data-stu-id="eeaef-113">This event is emitted when the NetTcp session preamble is understood.</span></span>  
+## <a name="description"></a><span data-ttu-id="d97a8-112">Описание</span><span class="sxs-lookup"><span data-stu-id="d97a8-112">Description</span></span>  
+ <span data-ttu-id="d97a8-113">Это событие отправляется, если начальная часть сеанса NetTcp была правильно распознана.</span><span class="sxs-lookup"><span data-stu-id="d97a8-113">This event is emitted when the NetTcp session preamble is understood.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="eeaef-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="eeaef-114">Message</span></span>  
- <span data-ttu-id="eeaef-115">Начальная часть сеанса для «%1» распознана.</span><span class="sxs-lookup"><span data-stu-id="eeaef-115">Session preamble for '%1' understood.</span></span>  
+## <a name="message"></a><span data-ttu-id="d97a8-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="d97a8-114">Message</span></span>  
+ <span data-ttu-id="d97a8-115">Начальная часть сеанса для «%1» распознана.</span><span class="sxs-lookup"><span data-stu-id="d97a8-115">Session preamble for '%1' understood.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="eeaef-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="eeaef-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="d97a8-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="d97a8-116">Details</span></span>

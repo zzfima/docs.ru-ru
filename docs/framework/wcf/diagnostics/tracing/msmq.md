@@ -13,17 +13,18 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15be4b6bfb84a0aa843e3d62861a9195e125a04e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e72d3e400440b830b689f476753a7c8c40fe2586
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="msmq"></a><span data-ttu-id="ceb70-102">MSMQ</span><span class="sxs-lookup"><span data-stu-id="ceb70-102">MSMQ</span></span>
-<span data-ttu-id="ceb70-103">В приложениях MSMQ никакие дополнительные действия не передаются из очереди канала в MSMQ и обратно.</span><span class="sxs-lookup"><span data-stu-id="ceb70-103">In an MSMQ application, no additional activity is transferred from the queued channel to MSMQ and from MSMQ to the queued channel.</span></span>  
+# <a name="msmq"></a><span data-ttu-id="7c5df-102">MSMQ</span><span class="sxs-lookup"><span data-stu-id="7c5df-102">MSMQ</span></span>
+<span data-ttu-id="7c5df-103">В приложениях MSMQ никакие дополнительные действия не передаются из очереди канала в MSMQ и обратно.</span><span class="sxs-lookup"><span data-stu-id="7c5df-103">In an MSMQ application, no additional activity is transferred from the queued channel to MSMQ and from MSMQ to the queued channel.</span></span>  
   
- <span data-ttu-id="ceb70-104">Кроме того, в рамках трассировки очереди канала во время операции Send отслеживаются идентификатор сообщения MSMQ, идентификатор сообщения SOAP (а также идентификатор действия, если он существует).</span><span class="sxs-lookup"><span data-stu-id="ceb70-104">In addition, MSMQ Message ID and SOAP message ID (along with Activity ID, if one exists) are traced as part of queued channel traces on a Send operation.</span></span>  
+ <span data-ttu-id="7c5df-104">Кроме того, в рамках трассировки очереди канала во время операции Send отслеживаются идентификатор сообщения MSMQ, идентификатор сообщения SOAP (а также идентификатор действия, если он существует).</span><span class="sxs-lookup"><span data-stu-id="7c5df-104">In addition, MSMQ Message ID and SOAP message ID (along with Activity ID, if one exists) are traced as part of queued channel traces on a Send operation.</span></span>  
   
- <span data-ttu-id="ceb70-105">Идентификатор сообщения MSMQ, идентификатор сообщения SOAP (а также идентификатор действия, если он существует) отслеживаются в рамках трассировки очереди канала во время операции Receive.</span><span class="sxs-lookup"><span data-stu-id="ceb70-105">MSMQ Message ID and SOAP message ID (along with activity ID, if one exists) are traced as part of queued channel traces on a Receive operation.</span></span>  
+ <span data-ttu-id="7c5df-105">Идентификатор сообщения MSMQ, идентификатор сообщения SOAP (а также идентификатор действия, если он существует) отслеживаются в рамках трассировки очереди канала во время операции Receive.</span><span class="sxs-lookup"><span data-stu-id="7c5df-105">MSMQ Message ID and SOAP message ID (along with activity ID, if one exists) are traced as part of queued channel traces on a Receive operation.</span></span>  
   
- <span data-ttu-id="ceb70-106">Необходимые действия по передаче во время операции Receive выполняются так же, как при любом другом транспорте (получение данных -> обработка сообщения -> операция).</span><span class="sxs-lookup"><span data-stu-id="ceb70-106">The required transfers on the Receive operation are executed similarly to any other transport (receive bytes->Process message-> operation).</span></span>
+ <span data-ttu-id="7c5df-106">Необходимые действия по передаче во время операции Receive выполняются так же, как при любом другом транспорте (получение данных -> обработка сообщения -> операция).</span><span class="sxs-lookup"><span data-stu-id="7c5df-106">The required transfers on the Receive operation are executed similarly to any other transport (receive bytes->Process message-> operation).</span></span>

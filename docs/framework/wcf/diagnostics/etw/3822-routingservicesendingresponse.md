@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5f5df3a90b74dbaf31ef728252b63880e067a2f4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0a4906036c446f9c5c3deac2ff65bc94b567dd77
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3822---routingservicesendingresponse"></a><span data-ttu-id="b2bed-102">3822 - RoutingServiceSendingResponse</span><span class="sxs-lookup"><span data-stu-id="b2bed-102">3822 - RoutingServiceSendingResponse</span></span>
-## <a name="properties"></a><span data-ttu-id="b2bed-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="b2bed-103">Properties</span></span>  
+# <a name="3822---routingservicesendingresponse"></a><span data-ttu-id="d1fdc-102">3822 - RoutingServiceSendingResponse</span><span class="sxs-lookup"><span data-stu-id="d1fdc-102">3822 - RoutingServiceSendingResponse</span></span>
+## <a name="properties"></a><span data-ttu-id="d1fdc-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="d1fdc-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="b2bed-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="b2bed-104">ID</span></span>|<span data-ttu-id="b2bed-105">3822</span><span class="sxs-lookup"><span data-stu-id="b2bed-105">3822</span></span>|  
-|<span data-ttu-id="b2bed-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="b2bed-106">Keywords</span></span>|<span data-ttu-id="b2bed-107">Службы маршрутизации</span><span class="sxs-lookup"><span data-stu-id="b2bed-107">RoutingServices</span></span>|  
-|<span data-ttu-id="b2bed-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="b2bed-108">Level</span></span>|<span data-ttu-id="b2bed-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="b2bed-109">Information</span></span>|  
-|<span data-ttu-id="b2bed-110">Канал</span><span class="sxs-lookup"><span data-stu-id="b2bed-110">Channel</span></span>|<span data-ttu-id="b2bed-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="b2bed-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="d1fdc-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="d1fdc-104">ID</span></span>|<span data-ttu-id="d1fdc-105">3822</span><span class="sxs-lookup"><span data-stu-id="d1fdc-105">3822</span></span>|  
+|<span data-ttu-id="d1fdc-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="d1fdc-106">Keywords</span></span>|<span data-ttu-id="d1fdc-107">Службы маршрутизации</span><span class="sxs-lookup"><span data-stu-id="d1fdc-107">RoutingServices</span></span>|  
+|<span data-ttu-id="d1fdc-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="d1fdc-108">Level</span></span>|<span data-ttu-id="d1fdc-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="d1fdc-109">Information</span></span>|  
+|<span data-ttu-id="d1fdc-110">Канал</span><span class="sxs-lookup"><span data-stu-id="d1fdc-110">Channel</span></span>|<span data-ttu-id="d1fdc-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="d1fdc-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="b2bed-112">Описание</span><span class="sxs-lookup"><span data-stu-id="b2bed-112">Description</span></span>  
- <span data-ttu-id="b2bed-113">Это событие создается, когда служба маршрутизации отправляет ответное сообщение.</span><span class="sxs-lookup"><span data-stu-id="b2bed-113">This event is emitted when the Routing Service is sending back a response message.</span></span>  
+## <a name="description"></a><span data-ttu-id="d1fdc-112">Описание</span><span class="sxs-lookup"><span data-stu-id="d1fdc-112">Description</span></span>  
+ <span data-ttu-id="d1fdc-113">Это событие создается, когда служба маршрутизации отправляет ответное сообщение.</span><span class="sxs-lookup"><span data-stu-id="d1fdc-113">This event is emitted when the Routing Service is sending back a response message.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="b2bed-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="b2bed-114">Message</span></span>  
- <span data-ttu-id="b2bed-115">Служба маршрутизации отправляет ответное сообщение с действием «%1».</span><span class="sxs-lookup"><span data-stu-id="b2bed-115">The Routing Service is sending back a response message with Action '%1'.</span></span>  
+## <a name="message"></a><span data-ttu-id="d1fdc-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="d1fdc-114">Message</span></span>  
+ <span data-ttu-id="d1fdc-115">Служба маршрутизации отправляет ответное сообщение с действием «%1».</span><span class="sxs-lookup"><span data-stu-id="d1fdc-115">The Routing Service is sending back a response message with Action '%1'.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="b2bed-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="b2bed-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="d1fdc-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="d1fdc-116">Details</span></span>

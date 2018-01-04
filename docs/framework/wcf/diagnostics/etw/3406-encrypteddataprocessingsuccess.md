@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f6f205cd06762eccc8180f409373ab13be1dd745
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4525285ab6ee283cf07851f488205d3640b1395a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3406---encrypteddataprocessingsuccess"></a><span data-ttu-id="49ad4-102">3406 - EncryptedDataProcessingSuccess</span><span class="sxs-lookup"><span data-stu-id="49ad4-102">3406 - EncryptedDataProcessingSuccess</span></span>
-## <a name="properties"></a><span data-ttu-id="49ad4-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="49ad4-103">Properties</span></span>  
+# <a name="3406---encrypteddataprocessingsuccess"></a><span data-ttu-id="ad27e-102">3406 - EncryptedDataProcessingSuccess</span><span class="sxs-lookup"><span data-stu-id="ad27e-102">3406 - EncryptedDataProcessingSuccess</span></span>
+## <a name="properties"></a><span data-ttu-id="ad27e-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="ad27e-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="49ad4-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="49ad4-104">ID</span></span>|<span data-ttu-id="49ad4-105">3406</span><span class="sxs-lookup"><span data-stu-id="49ad4-105">3406</span></span>|  
-|<span data-ttu-id="49ad4-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="49ad4-106">Keywords</span></span>|<span data-ttu-id="49ad4-107">Безопасность</span><span class="sxs-lookup"><span data-stu-id="49ad4-107">Security</span></span>|  
-|<span data-ttu-id="49ad4-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="49ad4-108">Level</span></span>|<span data-ttu-id="49ad4-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="49ad4-109">Verbose</span></span>|  
-|<span data-ttu-id="49ad4-110">Канал</span><span class="sxs-lookup"><span data-stu-id="49ad4-110">Channel</span></span>|<span data-ttu-id="49ad4-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="49ad4-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="ad27e-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="ad27e-104">ID</span></span>|<span data-ttu-id="ad27e-105">3406</span><span class="sxs-lookup"><span data-stu-id="ad27e-105">3406</span></span>|  
+|<span data-ttu-id="ad27e-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="ad27e-106">Keywords</span></span>|<span data-ttu-id="ad27e-107">Безопасность</span><span class="sxs-lookup"><span data-stu-id="ad27e-107">Security</span></span>|  
+|<span data-ttu-id="ad27e-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="ad27e-108">Level</span></span>|<span data-ttu-id="ad27e-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="ad27e-109">Verbose</span></span>|  
+|<span data-ttu-id="ad27e-110">Канал</span><span class="sxs-lookup"><span data-stu-id="ad27e-110">Channel</span></span>|<span data-ttu-id="ad27e-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="ad27e-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="49ad4-112">Описание</span><span class="sxs-lookup"><span data-stu-id="49ad4-112">Description</span></span>  
- <span data-ttu-id="49ad4-113">Это событие создается при удачном завершении обработки зашифрованных данных.</span><span class="sxs-lookup"><span data-stu-id="49ad4-113">This event is emitted when the encrypted data processing has succeeded.</span></span>  
+## <a name="description"></a><span data-ttu-id="ad27e-112">Описание</span><span class="sxs-lookup"><span data-stu-id="ad27e-112">Description</span></span>  
+ <span data-ttu-id="ad27e-113">Это событие создается при удачном завершении обработки зашифрованных данных.</span><span class="sxs-lookup"><span data-stu-id="ad27e-113">This event is emitted when the encrypted data processing has succeeded.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="49ad4-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="49ad4-114">Message</span></span>  
- <span data-ttu-id="49ad4-115">Шифрование данных выполнено успешно.</span><span class="sxs-lookup"><span data-stu-id="49ad4-115">Encrypted data processing succeeded.</span></span>  
+## <a name="message"></a><span data-ttu-id="ad27e-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="ad27e-114">Message</span></span>  
+ <span data-ttu-id="ad27e-115">Шифрование данных выполнено успешно.</span><span class="sxs-lookup"><span data-stu-id="ad27e-115">Encrypted data processing succeeded.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="49ad4-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="49ad4-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="ad27e-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="ad27e-116">Details</span></span>

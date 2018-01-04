@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6cb099fa47e7129b6044a73c969fcdb760b355d9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5eca7aa685ade16179a98ad0c02a9cc2397d70d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3800---routingserviceclosingclient"></a><span data-ttu-id="87143-102">3800 - RoutingServiceClosingClient</span><span class="sxs-lookup"><span data-stu-id="87143-102">3800 - RoutingServiceClosingClient</span></span>
-## <a name="properties"></a><span data-ttu-id="87143-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="87143-103">Properties</span></span>  
+# <a name="3800---routingserviceclosingclient"></a><span data-ttu-id="991d4-102">3800 - RoutingServiceClosingClient</span><span class="sxs-lookup"><span data-stu-id="991d4-102">3800 - RoutingServiceClosingClient</span></span>
+## <a name="properties"></a><span data-ttu-id="991d4-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="991d4-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="87143-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="87143-104">ID</span></span>|<span data-ttu-id="87143-105">3800</span><span class="sxs-lookup"><span data-stu-id="87143-105">3800</span></span>|  
-|<span data-ttu-id="87143-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="87143-106">Keywords</span></span>|<span data-ttu-id="87143-107">Службы маршрутизации</span><span class="sxs-lookup"><span data-stu-id="87143-107">RoutingServices</span></span>|  
-|<span data-ttu-id="87143-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="87143-108">Level</span></span>|<span data-ttu-id="87143-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="87143-109">Information</span></span>|  
-|<span data-ttu-id="87143-110">Канал</span><span class="sxs-lookup"><span data-stu-id="87143-110">Channel</span></span>|<span data-ttu-id="87143-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="87143-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="991d4-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="991d4-104">ID</span></span>|<span data-ttu-id="991d4-105">3800</span><span class="sxs-lookup"><span data-stu-id="991d4-105">3800</span></span>|  
+|<span data-ttu-id="991d4-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="991d4-106">Keywords</span></span>|<span data-ttu-id="991d4-107">Службы маршрутизации</span><span class="sxs-lookup"><span data-stu-id="991d4-107">RoutingServices</span></span>|  
+|<span data-ttu-id="991d4-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="991d4-108">Level</span></span>|<span data-ttu-id="991d4-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="991d4-109">Information</span></span>|  
+|<span data-ttu-id="991d4-110">Канал</span><span class="sxs-lookup"><span data-stu-id="991d4-110">Channel</span></span>|<span data-ttu-id="991d4-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="991d4-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="87143-112">Описание</span><span class="sxs-lookup"><span data-stu-id="87143-112">Description</span></span>  
- <span data-ttu-id="87143-113">Событие возникает, если служба маршрутизации закрывает клиента.</span><span class="sxs-lookup"><span data-stu-id="87143-113">This event is emitted when the Routing Service is closing the client.</span></span>  
+## <a name="description"></a><span data-ttu-id="991d4-112">Описание</span><span class="sxs-lookup"><span data-stu-id="991d4-112">Description</span></span>  
+ <span data-ttu-id="991d4-113">Событие возникает, если служба маршрутизации закрывает клиента.</span><span class="sxs-lookup"><span data-stu-id="991d4-113">This event is emitted when the Routing Service is closing the client.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="87143-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="87143-114">Message</span></span>  
- <span data-ttu-id="87143-115">Служба маршрутизации закрывает клиент «%1».</span><span class="sxs-lookup"><span data-stu-id="87143-115">The Routing Service is closing client '%1'.</span></span>  
+## <a name="message"></a><span data-ttu-id="991d4-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="991d4-114">Message</span></span>  
+ <span data-ttu-id="991d4-115">Служба маршрутизации закрывает клиент «%1».</span><span class="sxs-lookup"><span data-stu-id="991d4-115">The Routing Service is closing client '%1'.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="87143-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="87143-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="991d4-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="991d4-116">Details</span></span>

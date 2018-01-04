@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: abbaed33a2edc446ca1d36c0f1bd9b0ff6f42c1b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fbefc7131a80a77f7afd3a4b981b1df34fb3de9e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="4026---wasconnected"></a><span data-ttu-id="ad5b6-102">4026 - WasConnected</span><span class="sxs-lookup"><span data-stu-id="ad5b6-102">4026 - WasConnected</span></span>
-## <a name="properties"></a><span data-ttu-id="ad5b6-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="ad5b6-103">Properties</span></span>  
+# <a name="4026---wasconnected"></a><span data-ttu-id="339ab-102">4026 - WasConnected</span><span class="sxs-lookup"><span data-stu-id="339ab-102">4026 - WasConnected</span></span>
+## <a name="properties"></a><span data-ttu-id="339ab-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="339ab-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="ad5b6-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="ad5b6-104">ID</span></span>|<span data-ttu-id="ad5b6-105">4026</span><span class="sxs-lookup"><span data-stu-id="ad5b6-105">4026</span></span>|  
-|<span data-ttu-id="ad5b6-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="ad5b6-106">Keywords</span></span>|<span data-ttu-id="ad5b6-107">Службы активации</span><span class="sxs-lookup"><span data-stu-id="ad5b6-107">ActivationServices</span></span>|  
-|<span data-ttu-id="ad5b6-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="ad5b6-108">Level</span></span>|<span data-ttu-id="ad5b6-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="ad5b6-109">Verbose</span></span>|  
-|<span data-ttu-id="ad5b6-110">Канал</span><span class="sxs-lookup"><span data-stu-id="ad5b6-110">Channel</span></span>|<span data-ttu-id="ad5b6-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="ad5b6-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="339ab-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="339ab-104">ID</span></span>|<span data-ttu-id="339ab-105">4026</span><span class="sxs-lookup"><span data-stu-id="339ab-105">4026</span></span>|  
+|<span data-ttu-id="339ab-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="339ab-106">Keywords</span></span>|<span data-ttu-id="339ab-107">Службы активации</span><span class="sxs-lookup"><span data-stu-id="339ab-107">ActivationServices</span></span>|  
+|<span data-ttu-id="339ab-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="339ab-108">Level</span></span>|<span data-ttu-id="339ab-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="339ab-109">Verbose</span></span>|  
+|<span data-ttu-id="339ab-110">Канал</span><span class="sxs-lookup"><span data-stu-id="339ab-110">Channel</span></span>|<span data-ttu-id="339ab-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="339ab-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="ad5b6-112">Описание</span><span class="sxs-lookup"><span data-stu-id="ad5b6-112">Description</span></span>  
- <span data-ttu-id="ad5b6-113">Это событие отправляется при подключении службы активации Windows.</span><span class="sxs-lookup"><span data-stu-id="ad5b6-113">This event is emitted when Windows Activation Service is connected.</span></span>  
+## <a name="description"></a><span data-ttu-id="339ab-112">Описание</span><span class="sxs-lookup"><span data-stu-id="339ab-112">Description</span></span>  
+ <span data-ttu-id="339ab-113">Это событие отправляется при подключении службы активации Windows.</span><span class="sxs-lookup"><span data-stu-id="339ab-113">This event is emitted when Windows Activation Service is connected.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="ad5b6-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="ad5b6-114">Message</span></span>  
- <span data-ttu-id="ad5b6-115">WAS подключен.</span><span class="sxs-lookup"><span data-stu-id="ad5b6-115">WAS Connected.</span></span>  
+## <a name="message"></a><span data-ttu-id="339ab-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="339ab-114">Message</span></span>  
+ <span data-ttu-id="339ab-115">WAS подключен.</span><span class="sxs-lookup"><span data-stu-id="339ab-115">WAS Connected.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="ad5b6-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="ad5b6-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="339ab-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="339ab-116">Details</span></span>

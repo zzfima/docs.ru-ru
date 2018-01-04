@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e890f73351d8a1304a3beb0569eec97db7766bad
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fbfbc1e55274b84a6fbf07b81933a73703737359
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3819---routingservicemovedtobackup"></a><span data-ttu-id="8f72c-102">3819 - RoutingServiceMovedToBackup</span><span class="sxs-lookup"><span data-stu-id="8f72c-102">3819 - RoutingServiceMovedToBackup</span></span>
-## <a name="properties"></a><span data-ttu-id="8f72c-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="8f72c-103">Properties</span></span>  
+# <a name="3819---routingservicemovedtobackup"></a><span data-ttu-id="f5327-102">3819 - RoutingServiceMovedToBackup</span><span class="sxs-lookup"><span data-stu-id="f5327-102">3819 - RoutingServiceMovedToBackup</span></span>
+## <a name="properties"></a><span data-ttu-id="f5327-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="f5327-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="8f72c-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="8f72c-104">ID</span></span>|<span data-ttu-id="8f72c-105">3819</span><span class="sxs-lookup"><span data-stu-id="8f72c-105">3819</span></span>|  
-|<span data-ttu-id="8f72c-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="8f72c-106">Keywords</span></span>|<span data-ttu-id="8f72c-107">Службы маршрутизации</span><span class="sxs-lookup"><span data-stu-id="8f72c-107">RoutingServices</span></span>|  
-|<span data-ttu-id="8f72c-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="8f72c-108">Level</span></span>|<span data-ttu-id="8f72c-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="8f72c-109">Information</span></span>|  
-|<span data-ttu-id="8f72c-110">Канал</span><span class="sxs-lookup"><span data-stu-id="8f72c-110">Channel</span></span>|<span data-ttu-id="8f72c-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="8f72c-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="f5327-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="f5327-104">ID</span></span>|<span data-ttu-id="f5327-105">3819</span><span class="sxs-lookup"><span data-stu-id="f5327-105">3819</span></span>|  
+|<span data-ttu-id="f5327-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="f5327-106">Keywords</span></span>|<span data-ttu-id="f5327-107">Службы маршрутизации</span><span class="sxs-lookup"><span data-stu-id="f5327-107">RoutingServices</span></span>|  
+|<span data-ttu-id="f5327-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="f5327-108">Level</span></span>|<span data-ttu-id="f5327-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="f5327-109">Information</span></span>|  
+|<span data-ttu-id="f5327-110">Канал</span><span class="sxs-lookup"><span data-stu-id="f5327-110">Channel</span></span>|<span data-ttu-id="f5327-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="f5327-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="8f72c-112">Описание</span><span class="sxs-lookup"><span data-stu-id="8f72c-112">Description</span></span>  
- <span data-ttu-id="8f72c-113">Событие возникает, если служба маршрутизации обращается к резервным конечным точкам.</span><span class="sxs-lookup"><span data-stu-id="8f72c-113">This event is emitted when the Routing Service has moved to backup endpoints.</span></span>  
+## <a name="description"></a><span data-ttu-id="f5327-112">Описание</span><span class="sxs-lookup"><span data-stu-id="f5327-112">Description</span></span>  
+ <span data-ttu-id="f5327-113">Событие возникает, если служба маршрутизации обращается к резервным конечным точкам.</span><span class="sxs-lookup"><span data-stu-id="f5327-113">This event is emitted when the Routing Service has moved to backup endpoints.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="8f72c-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="8f72c-114">Message</span></span>  
- <span data-ttu-id="8f72c-115">Сообщение службы маршрутизации с идентификатором «%1» [операция %2] перемещено в резервную конечную точку «%3».</span><span class="sxs-lookup"><span data-stu-id="8f72c-115">Routing Service message with ID: '%1' [operation %2] moved to backup endpoint '%3'.</span></span>  
+## <a name="message"></a><span data-ttu-id="f5327-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="f5327-114">Message</span></span>  
+ <span data-ttu-id="f5327-115">Сообщение службы маршрутизации с идентификатором «%1» [операция %2] перемещено в резервную конечную точку «%3».</span><span class="sxs-lookup"><span data-stu-id="f5327-115">Routing Service message with ID: '%1' [operation %2] moved to backup endpoint '%3'.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="8f72c-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="8f72c-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="f5327-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="f5327-116">Details</span></span>

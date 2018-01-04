@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f2b5832b93db61ac42834569c5269e7a6933cc2f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ecb147e35b830322240f69f533de7a588064e9d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="4802---discoveryclientprotocolexceptionsuppressed"></a><span data-ttu-id="d5c4e-102">4802 - DiscoveryClientProtocolExceptionSuppressed</span><span class="sxs-lookup"><span data-stu-id="d5c4e-102">4802 - DiscoveryClientProtocolExceptionSuppressed</span></span>
-## <a name="properties"></a><span data-ttu-id="d5c4e-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="d5c4e-103">Properties</span></span>  
+# <a name="4802---discoveryclientprotocolexceptionsuppressed"></a><span data-ttu-id="71577-102">4802 - DiscoveryClientProtocolExceptionSuppressed</span><span class="sxs-lookup"><span data-stu-id="71577-102">4802 - DiscoveryClientProtocolExceptionSuppressed</span></span>
+## <a name="properties"></a><span data-ttu-id="71577-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="71577-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="d5c4e-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="d5c4e-104">ID</span></span>|<span data-ttu-id="d5c4e-105">4802</span><span class="sxs-lookup"><span data-stu-id="d5c4e-105">4802</span></span>|  
-|<span data-ttu-id="d5c4e-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="d5c4e-106">Keywords</span></span>|<span data-ttu-id="d5c4e-107">Обнаружение</span><span class="sxs-lookup"><span data-stu-id="d5c4e-107">Discovery</span></span>|  
-|<span data-ttu-id="d5c4e-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="d5c4e-108">Level</span></span>|<span data-ttu-id="d5c4e-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="d5c4e-109">Information</span></span>|  
-|<span data-ttu-id="d5c4e-110">Канал</span><span class="sxs-lookup"><span data-stu-id="d5c4e-110">Channel</span></span>|<span data-ttu-id="d5c4e-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="d5c4e-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="71577-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="71577-104">ID</span></span>|<span data-ttu-id="71577-105">4802</span><span class="sxs-lookup"><span data-stu-id="71577-105">4802</span></span>|  
+|<span data-ttu-id="71577-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="71577-106">Keywords</span></span>|<span data-ttu-id="71577-107">Обнаружение</span><span class="sxs-lookup"><span data-stu-id="71577-107">Discovery</span></span>|  
+|<span data-ttu-id="71577-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="71577-108">Level</span></span>|<span data-ttu-id="71577-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="71577-109">Information</span></span>|  
+|<span data-ttu-id="71577-110">Канал</span><span class="sxs-lookup"><span data-stu-id="71577-110">Channel</span></span>|<span data-ttu-id="71577-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="71577-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="d5c4e-112">Описание</span><span class="sxs-lookup"><span data-stu-id="d5c4e-112">Description</span></span>  
- <span data-ttu-id="d5c4e-113">Это событие создается, когда исключение ProtocolException было подавлено при закрытии DiscoveryClient.</span><span class="sxs-lookup"><span data-stu-id="d5c4e-113">This event is emitted when the a ProtocolException was suppressed while closing the DiscoveryClient.</span></span>  
+## <a name="description"></a><span data-ttu-id="71577-112">Описание</span><span class="sxs-lookup"><span data-stu-id="71577-112">Description</span></span>  
+ <span data-ttu-id="71577-113">Это событие создается, когда исключение ProtocolException было подавлено при закрытии DiscoveryClient.</span><span class="sxs-lookup"><span data-stu-id="71577-113">This event is emitted when the a ProtocolException was suppressed while closing the DiscoveryClient.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="d5c4e-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="d5c4e-114">Message</span></span>  
- <span data-ttu-id="d5c4e-115">Исключение ProtocolException было подавлено при закрытии DiscoveryClient.</span><span class="sxs-lookup"><span data-stu-id="d5c4e-115">A ProtocolException was suppressed while closing the DiscoveryClient.</span></span> <span data-ttu-id="d5c4e-116">Это могло произойти из-за того, что DiscoveryService по-прежнему пытается отправить ответ для DiscoveryClient.</span><span class="sxs-lookup"><span data-stu-id="d5c4e-116">This could be because a DiscoveryService is still trying to send response to the DiscoveryClient.</span></span>  
+## <a name="message"></a><span data-ttu-id="71577-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="71577-114">Message</span></span>  
+ <span data-ttu-id="71577-115">Исключение ProtocolException было подавлено при закрытии DiscoveryClient.</span><span class="sxs-lookup"><span data-stu-id="71577-115">A ProtocolException was suppressed while closing the DiscoveryClient.</span></span> <span data-ttu-id="71577-116">Это могло произойти из-за того, что DiscoveryService по-прежнему пытается отправить ответ для DiscoveryClient.</span><span class="sxs-lookup"><span data-stu-id="71577-116">This could be because a DiscoveryService is still trying to send response to the DiscoveryClient.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="d5c4e-117">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="d5c4e-117">Details</span></span>
+## <a name="details"></a><span data-ttu-id="71577-117">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="71577-117">Details</span></span>

@@ -13,31 +13,32 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c222efc0a23c6239dd2b03ff31c5279b2eda04cc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7238806a9f1a1726cf55c6b485ea52f62ca8f4f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="451---messageloginfo"></a><span data-ttu-id="9e1ee-102">451 - MessageLogInfo</span><span class="sxs-lookup"><span data-stu-id="9e1ee-102">451 - MessageLogInfo</span></span>
-## <a name="properties"></a><span data-ttu-id="9e1ee-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="9e1ee-103">Properties</span></span>  
+# <a name="451---messageloginfo"></a><span data-ttu-id="6b5b1-102">451 - MessageLogInfo</span><span class="sxs-lookup"><span data-stu-id="6b5b1-102">451 - MessageLogInfo</span></span>
+## <a name="properties"></a><span data-ttu-id="6b5b1-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="6b5b1-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="9e1ee-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="9e1ee-104">ID</span></span>|<span data-ttu-id="9e1ee-105">451</span><span class="sxs-lookup"><span data-stu-id="9e1ee-105">451</span></span>|  
-|<span data-ttu-id="9e1ee-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="9e1ee-106">Keywords</span></span>|<span data-ttu-id="9e1ee-107">Troubleshooting, WCFMessageLogging</span><span class="sxs-lookup"><span data-stu-id="9e1ee-107">Troubleshooting, WCFMessageLogging</span></span>|  
-|<span data-ttu-id="9e1ee-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="9e1ee-108">Level</span></span>|<span data-ttu-id="9e1ee-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="9e1ee-109">Information</span></span>|  
-|<span data-ttu-id="9e1ee-110">Канал</span><span class="sxs-lookup"><span data-stu-id="9e1ee-110">Channel</span></span>|<span data-ttu-id="9e1ee-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="9e1ee-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="6b5b1-104">ID</span><span class="sxs-lookup"><span data-stu-id="6b5b1-104">ID</span></span>|<span data-ttu-id="6b5b1-105">451</span><span class="sxs-lookup"><span data-stu-id="6b5b1-105">451</span></span>|  
+|<span data-ttu-id="6b5b1-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="6b5b1-106">Keywords</span></span>|<span data-ttu-id="6b5b1-107">Troubleshooting, WCFMessageLogging</span><span class="sxs-lookup"><span data-stu-id="6b5b1-107">Troubleshooting, WCFMessageLogging</span></span>|  
+|<span data-ttu-id="6b5b1-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="6b5b1-108">Level</span></span>|<span data-ttu-id="6b5b1-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="6b5b1-109">Information</span></span>|  
+|<span data-ttu-id="6b5b1-110">Канал</span><span class="sxs-lookup"><span data-stu-id="6b5b1-110">Channel</span></span>|<span data-ttu-id="6b5b1-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="6b5b1-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="9e1ee-112">Описание</span><span class="sxs-lookup"><span data-stu-id="9e1ee-112">Description</span></span>  
- <span data-ttu-id="9e1ee-113">Это событие формируется при отправке данных журнала сообщений.</span><span class="sxs-lookup"><span data-stu-id="9e1ee-113">This event is emitted when the message log information is sent.</span></span>  
+## <a name="description"></a><span data-ttu-id="6b5b1-112">Описание:</span><span class="sxs-lookup"><span data-stu-id="6b5b1-112">Description</span></span>  
+ <span data-ttu-id="6b5b1-113">Это событие формируется при отправке данных журнала сообщений.</span><span class="sxs-lookup"><span data-stu-id="6b5b1-113">This event is emitted when the message log information is sent.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="9e1ee-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="9e1ee-114">Message</span></span>  
- <span data-ttu-id="9e1ee-115">%1</span><span class="sxs-lookup"><span data-stu-id="9e1ee-115">%1</span></span>  
+## <a name="message"></a><span data-ttu-id="6b5b1-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="6b5b1-114">Message</span></span>  
+ <span data-ttu-id="6b5b1-115">%1</span><span class="sxs-lookup"><span data-stu-id="6b5b1-115">%1</span></span>  
   
-## <a name="details"></a><span data-ttu-id="9e1ee-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="9e1ee-116">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="6b5b1-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="6b5b1-116">Details</span></span>  
   
-|<span data-ttu-id="9e1ee-117">Имя элемента данных</span><span class="sxs-lookup"><span data-stu-id="9e1ee-117">Data Item Name</span></span>|<span data-ttu-id="9e1ee-118">Тип элемента данных</span><span class="sxs-lookup"><span data-stu-id="9e1ee-118">Data Item Type</span></span>|<span data-ttu-id="9e1ee-119">Описание</span><span class="sxs-lookup"><span data-stu-id="9e1ee-119">Description</span></span>|  
+|<span data-ttu-id="6b5b1-117">Имя элемента данных</span><span class="sxs-lookup"><span data-stu-id="6b5b1-117">Data Item Name</span></span>|<span data-ttu-id="6b5b1-118">Тип элемента данных</span><span class="sxs-lookup"><span data-stu-id="6b5b1-118">Data Item Type</span></span>|<span data-ttu-id="6b5b1-119">Описание:</span><span class="sxs-lookup"><span data-stu-id="6b5b1-119">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="9e1ee-120">data1</span><span class="sxs-lookup"><span data-stu-id="9e1ee-120">data1</span></span>|`xs:string`||  
-|<span data-ttu-id="9e1ee-121">AppDomain</span><span class="sxs-lookup"><span data-stu-id="9e1ee-121">AppDomain</span></span>|`xs:string`|<span data-ttu-id="9e1ee-122">Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="9e1ee-122">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="6b5b1-120">data1</span><span class="sxs-lookup"><span data-stu-id="6b5b1-120">data1</span></span>|`xs:string`||  
+|<span data-ttu-id="6b5b1-121">AppDomain</span><span class="sxs-lookup"><span data-stu-id="6b5b1-121">AppDomain</span></span>|`xs:string`|<span data-ttu-id="6b5b1-122">Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="6b5b1-122">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

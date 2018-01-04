@@ -13,14 +13,15 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 365ed993be6c21567090b51fd41b551240abd1e1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 489b2526ab91f03f420b7db6237d3e9cce62241f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="reliable-messaging-sessions-faulted"></a><span data-ttu-id="28496-102">Надежные сеансы обмена сообщениями, в которых произошел сбой</span><span class="sxs-lookup"><span data-stu-id="28496-102">Reliable Messaging Sessions Faulted</span></span>
-<span data-ttu-id="28496-103">Имя счетчика: Reliable Messaging Sessions Faulted.</span><span class="sxs-lookup"><span data-stu-id="28496-103">Counter Name: Reliable Messaging Sessions Faulted.</span></span>  
+# <a name="reliable-messaging-sessions-faulted"></a><span data-ttu-id="01cc1-102">Надежные сеансы обмена сообщениями, в которых произошел сбой</span><span class="sxs-lookup"><span data-stu-id="01cc1-102">Reliable Messaging Sessions Faulted</span></span>
+<span data-ttu-id="01cc1-103">Имя счетчика: Reliable Messaging Sessions Faulted.</span><span class="sxs-lookup"><span data-stu-id="01cc1-103">Counter Name: Reliable Messaging Sessions Faulted.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="28496-104">Описание</span><span class="sxs-lookup"><span data-stu-id="28496-104">Description</span></span>  
- <span data-ttu-id="28496-105">Количество надежных сеансов обмена сообщениями, в которых произошел сбой в этой службе.</span><span class="sxs-lookup"><span data-stu-id="28496-105">Number of reliable messaging sessions that are faulted in this service.</span></span>
+## <a name="description"></a><span data-ttu-id="01cc1-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="01cc1-104">Description</span></span>  
+ <span data-ttu-id="01cc1-105">Количество надежных сеансов обмена сообщениями, в которых произошел сбой в этой службе.</span><span class="sxs-lookup"><span data-stu-id="01cc1-105">Number of reliable messaging sessions that are faulted in this service.</span></span>

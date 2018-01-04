@@ -13,14 +13,15 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8e9469ba1332c142e2a7762cced59701d5191b45
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2371dfde8c82fbaa9a8ec7ece9085201b6e0f4fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="transacted-operations-aborted"></a><span data-ttu-id="a0f82-102">Количество прерванных операций с поддержкой транзакций</span><span class="sxs-lookup"><span data-stu-id="a0f82-102">Transacted Operations Aborted</span></span>
-<span data-ttu-id="a0f82-103">Имя счетчика: Количество прерванных операций с поддержкой транзакций.</span><span class="sxs-lookup"><span data-stu-id="a0f82-103">Counter Name: Transacted Operations Aborted.</span></span>  
+# <a name="transacted-operations-aborted"></a><span data-ttu-id="f3911-102">Количество прерванных операций с поддержкой транзакций</span><span class="sxs-lookup"><span data-stu-id="f3911-102">Transacted Operations Aborted</span></span>
+<span data-ttu-id="f3911-103">Имя счетчика: Количество прерванных операций с поддержкой транзакций.</span><span class="sxs-lookup"><span data-stu-id="f3911-103">Counter Name: Transacted Operations Aborted.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="a0f82-104">Описание</span><span class="sxs-lookup"><span data-stu-id="a0f82-104">Description</span></span>  
- <span data-ttu-id="a0f82-105">Количество транзакционных операций, прерванных в этой службе.</span><span class="sxs-lookup"><span data-stu-id="a0f82-105">Number of transactional operations that have been aborted in this service.</span></span>
+## <a name="description"></a><span data-ttu-id="f3911-104">Описание</span><span class="sxs-lookup"><span data-stu-id="f3911-104">Description</span></span>  
+ <span data-ttu-id="f3911-105">Количество транзакционных операций, прерванных в этой службе.</span><span class="sxs-lookup"><span data-stu-id="f3911-105">Number of transactional operations that have been aborted in this service.</span></span>

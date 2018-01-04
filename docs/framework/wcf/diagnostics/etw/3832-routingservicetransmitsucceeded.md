@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9212ecf97b994afeabdf080247c94e5c4daac02b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 64d22bd2e0ec5a9026f6ebc3ad8e244ac0fb4284
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3832---routingservicetransmitsucceeded"></a><span data-ttu-id="14e0a-102">3832 - RoutingServiceTransmitSucceeded</span><span class="sxs-lookup"><span data-stu-id="14e0a-102">3832 - RoutingServiceTransmitSucceeded</span></span>
-## <a name="properties"></a><span data-ttu-id="14e0a-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="14e0a-103">Properties</span></span>  
+# <a name="3832---routingservicetransmitsucceeded"></a><span data-ttu-id="b308d-102">3832 - RoutingServiceTransmitSucceeded</span><span class="sxs-lookup"><span data-stu-id="b308d-102">3832 - RoutingServiceTransmitSucceeded</span></span>
+## <a name="properties"></a><span data-ttu-id="b308d-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="b308d-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="14e0a-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="14e0a-104">ID</span></span>|<span data-ttu-id="14e0a-105">3832</span><span class="sxs-lookup"><span data-stu-id="14e0a-105">3832</span></span>|  
-|<span data-ttu-id="14e0a-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="14e0a-106">Keywords</span></span>|<span data-ttu-id="14e0a-107">Службы маршрутизации</span><span class="sxs-lookup"><span data-stu-id="14e0a-107">RoutingServices</span></span>|  
-|<span data-ttu-id="14e0a-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="14e0a-108">Level</span></span>|<span data-ttu-id="14e0a-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="14e0a-109">Information</span></span>|  
-|<span data-ttu-id="14e0a-110">Канал</span><span class="sxs-lookup"><span data-stu-id="14e0a-110">Channel</span></span>|<span data-ttu-id="14e0a-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="14e0a-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="b308d-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="b308d-104">ID</span></span>|<span data-ttu-id="b308d-105">3832</span><span class="sxs-lookup"><span data-stu-id="b308d-105">3832</span></span>|  
+|<span data-ttu-id="b308d-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="b308d-106">Keywords</span></span>|<span data-ttu-id="b308d-107">Службы маршрутизации</span><span class="sxs-lookup"><span data-stu-id="b308d-107">RoutingServices</span></span>|  
+|<span data-ttu-id="b308d-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="b308d-108">Level</span></span>|<span data-ttu-id="b308d-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="b308d-109">Information</span></span>|  
+|<span data-ttu-id="b308d-110">Канал</span><span class="sxs-lookup"><span data-stu-id="b308d-110">Channel</span></span>|<span data-ttu-id="b308d-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="b308d-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="14e0a-112">Описание</span><span class="sxs-lookup"><span data-stu-id="14e0a-112">Description</span></span>  
- <span data-ttu-id="14e0a-113">Это событие создается, когда служба маршрутизации успешно передала сообщение с указанным идентификатором.</span><span class="sxs-lookup"><span data-stu-id="14e0a-113">This event is emitted when the Routing Service successfully transmitted message with a specified ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="b308d-112">Описание</span><span class="sxs-lookup"><span data-stu-id="b308d-112">Description</span></span>  
+ <span data-ttu-id="b308d-113">Это событие создается, когда служба маршрутизации успешно передала сообщение с указанным идентификатором.</span><span class="sxs-lookup"><span data-stu-id="b308d-113">This event is emitted when the Routing Service successfully transmitted message with a specified ID.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="14e0a-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="14e0a-114">Message</span></span>  
- <span data-ttu-id="14e0a-115">Служба маршрутизации успешно передала сообщение с идентификатором: «%1 [операция %2] в "%3"».</span><span class="sxs-lookup"><span data-stu-id="14e0a-115">The Routing Service successfully transmitted Message with ID: '%1 [operation %2] to '%3'.</span></span>  
+## <a name="message"></a><span data-ttu-id="b308d-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="b308d-114">Message</span></span>  
+ <span data-ttu-id="b308d-115">Служба маршрутизации успешно передала сообщение с идентификатором: «%1 [операция %2] в "%3"».</span><span class="sxs-lookup"><span data-stu-id="b308d-115">The Routing Service successfully transmitted Message with ID: '%1 [operation %2] to '%3'.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="14e0a-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="14e0a-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="b308d-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="b308d-116">Details</span></span>

@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3721da780bc69e8935b27a5a7aaa31db20d4efe4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6a5685bd2bb72c7207acb0623e0ec700696fe663
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3367---connectionpoolpreamblefailed"></a><span data-ttu-id="0d4bd-102">3367 - ConnectionPoolPreambleFailed</span><span class="sxs-lookup"><span data-stu-id="0d4bd-102">3367 - ConnectionPoolPreambleFailed</span></span>
-## <a name="properties"></a><span data-ttu-id="0d4bd-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="0d4bd-103">Properties</span></span>  
+# <a name="3367---connectionpoolpreamblefailed"></a><span data-ttu-id="dd183-102">3367 - ConnectionPoolPreambleFailed</span><span class="sxs-lookup"><span data-stu-id="dd183-102">3367 - ConnectionPoolPreambleFailed</span></span>
+## <a name="properties"></a><span data-ttu-id="dd183-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="dd183-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="0d4bd-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="0d4bd-104">ID</span></span>|<span data-ttu-id="0d4bd-105">3367</span><span class="sxs-lookup"><span data-stu-id="0d4bd-105">3367</span></span>|  
-|<span data-ttu-id="0d4bd-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="0d4bd-106">Keywords</span></span>|<span data-ttu-id="0d4bd-107">Канал</span><span class="sxs-lookup"><span data-stu-id="0d4bd-107">Channel</span></span>|  
-|<span data-ttu-id="0d4bd-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="0d4bd-108">Level</span></span>|<span data-ttu-id="0d4bd-109">Ошибка</span><span class="sxs-lookup"><span data-stu-id="0d4bd-109">Error</span></span>|  
-|<span data-ttu-id="0d4bd-110">Канал</span><span class="sxs-lookup"><span data-stu-id="0d4bd-110">Channel</span></span>|<span data-ttu-id="0d4bd-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="0d4bd-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="dd183-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="dd183-104">ID</span></span>|<span data-ttu-id="dd183-105">3367</span><span class="sxs-lookup"><span data-stu-id="dd183-105">3367</span></span>|  
+|<span data-ttu-id="dd183-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="dd183-106">Keywords</span></span>|<span data-ttu-id="dd183-107">Канал</span><span class="sxs-lookup"><span data-stu-id="dd183-107">Channel</span></span>|  
+|<span data-ttu-id="dd183-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="dd183-108">Level</span></span>|<span data-ttu-id="dd183-109">Ошибка</span><span class="sxs-lookup"><span data-stu-id="dd183-109">Error</span></span>|  
+|<span data-ttu-id="dd183-110">Канал</span><span class="sxs-lookup"><span data-stu-id="dd183-110">Channel</span></span>|<span data-ttu-id="dd183-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="dd183-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="0d4bd-112">Описание</span><span class="sxs-lookup"><span data-stu-id="0d4bd-112">Description</span></span>  
- <span data-ttu-id="0d4bd-113">Это событие возникает из-за ошибки в ConnectionPoolPreamble.</span><span class="sxs-lookup"><span data-stu-id="0d4bd-113">This event is emitted when the ConnectionPoolPreamble has failed.</span></span>  
+## <a name="description"></a><span data-ttu-id="dd183-112">Описание</span><span class="sxs-lookup"><span data-stu-id="dd183-112">Description</span></span>  
+ <span data-ttu-id="dd183-113">Это событие возникает из-за ошибки в ConnectionPoolPreamble.</span><span class="sxs-lookup"><span data-stu-id="dd183-113">This event is emitted when the ConnectionPoolPreamble has failed.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="0d4bd-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="0d4bd-114">Message</span></span>  
- <span data-ttu-id="0d4bd-115">ConnectionPoolPreambleFailed.</span><span class="sxs-lookup"><span data-stu-id="0d4bd-115">ConnectionPoolPreambleFailed.</span></span>  
+## <a name="message"></a><span data-ttu-id="dd183-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="dd183-114">Message</span></span>  
+ <span data-ttu-id="dd183-115">ConnectionPoolPreambleFailed.</span><span class="sxs-lookup"><span data-stu-id="dd183-115">ConnectionPoolPreambleFailed.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="0d4bd-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="0d4bd-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="dd183-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="dd183-116">Details</span></span>

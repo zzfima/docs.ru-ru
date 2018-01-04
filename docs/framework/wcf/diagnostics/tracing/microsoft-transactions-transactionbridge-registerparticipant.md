@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6cc897ac40d059f19f799ac24919536217cbfc18
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d2aee72bfe2e5cf844731fd7c59a72c6c20f8790
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="microsofttransactionstransactionbridgeregisterparticipant"></a><span data-ttu-id="1b6cc-102">Microsoft.Transactions.TransactionBridge.RegisterParticipant</span><span class="sxs-lookup"><span data-stu-id="1b6cc-102">Microsoft.Transactions.TransactionBridge.RegisterParticipant</span></span>
-<span data-ttu-id="1b6cc-103">Служба протокола WS-Atomic Transaction успешно зарегистрировала участника для протокола управления.</span><span class="sxs-lookup"><span data-stu-id="1b6cc-103">The WS-Atomic Transaction protocol service successfully registered a participant for a control protocol.</span></span>  
+# <a name="microsofttransactionstransactionbridgeregisterparticipant"></a><span data-ttu-id="2d00a-102">Microsoft.Transactions.TransactionBridge.RegisterParticipant</span><span class="sxs-lookup"><span data-stu-id="2d00a-102">Microsoft.Transactions.TransactionBridge.RegisterParticipant</span></span>
+<span data-ttu-id="2d00a-103">Служба протокола WS-Atomic Transaction успешно зарегистрировала участника для протокола управления.</span><span class="sxs-lookup"><span data-stu-id="2d00a-103">The WS-Atomic Transaction protocol service successfully registered a participant for a control protocol.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="1b6cc-104">Описание</span><span class="sxs-lookup"><span data-stu-id="1b6cc-104">Description</span></span>  
- <span data-ttu-id="1b6cc-105">Трассируется, если локальный диспетчер транзакций успешно подтвердил запрос на регистрацию от участника для протокола 2pc.</span><span class="sxs-lookup"><span data-stu-id="1b6cc-105">Traced when the local Transaction Manager has successfully acknowledged a Register request from a participant for a 2pc protocol.</span></span>  
+## <a name="description"></a><span data-ttu-id="2d00a-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="2d00a-104">Description</span></span>  
+ <span data-ttu-id="2d00a-105">Трассируется, если локальный диспетчер транзакций успешно подтвердил запрос на регистрацию от участника для протокола 2pc.</span><span class="sxs-lookup"><span data-stu-id="2d00a-105">Traced when the local Transaction Manager has successfully acknowledged a Register request from a participant for a 2pc protocol.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1b6cc-106">См. также</span><span class="sxs-lookup"><span data-stu-id="1b6cc-106">See Also</span></span>  
- [<span data-ttu-id="1b6cc-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="1b6cc-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="1b6cc-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="1b6cc-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="1b6cc-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="1b6cc-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="2d00a-106">См. также</span><span class="sxs-lookup"><span data-stu-id="2d00a-106">See Also</span></span>  
+ [<span data-ttu-id="2d00a-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="2d00a-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="2d00a-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="2d00a-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="2d00a-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="2d00a-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

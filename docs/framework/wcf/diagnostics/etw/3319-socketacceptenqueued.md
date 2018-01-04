@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 03ad7b7282929a38b480ad9358037b1b6ec87575
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7134fcc889dc3c9386d45799ff868905f6d39d1d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3319---socketacceptenqueued"></a><span data-ttu-id="7f1de-102">3319 - SocketAcceptEnqueued</span><span class="sxs-lookup"><span data-stu-id="7f1de-102">3319 - SocketAcceptEnqueued</span></span>
-## <a name="properties"></a><span data-ttu-id="7f1de-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="7f1de-103">Properties</span></span>  
+# <a name="3319---socketacceptenqueued"></a><span data-ttu-id="3f9f4-102">3319 - SocketAcceptEnqueued</span><span class="sxs-lookup"><span data-stu-id="3f9f4-102">3319 - SocketAcceptEnqueued</span></span>
+## <a name="properties"></a><span data-ttu-id="3f9f4-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="3f9f4-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="7f1de-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="7f1de-104">ID</span></span>|<span data-ttu-id="7f1de-105">3319</span><span class="sxs-lookup"><span data-stu-id="7f1de-105">3319</span></span>|  
-|<span data-ttu-id="7f1de-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="7f1de-106">Keywords</span></span>|<span data-ttu-id="7f1de-107">TCP</span><span class="sxs-lookup"><span data-stu-id="7f1de-107">TCP</span></span>|  
-|<span data-ttu-id="7f1de-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="7f1de-108">Level</span></span>|<span data-ttu-id="7f1de-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="7f1de-109">Verbose</span></span>|  
-|<span data-ttu-id="7f1de-110">Канал</span><span class="sxs-lookup"><span data-stu-id="7f1de-110">Channel</span></span>|<span data-ttu-id="7f1de-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="7f1de-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="3f9f4-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="3f9f4-104">ID</span></span>|<span data-ttu-id="3f9f4-105">3319</span><span class="sxs-lookup"><span data-stu-id="3f9f4-105">3319</span></span>|  
+|<span data-ttu-id="3f9f4-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="3f9f4-106">Keywords</span></span>|<span data-ttu-id="3f9f4-107">TCP</span><span class="sxs-lookup"><span data-stu-id="3f9f4-107">TCP</span></span>|  
+|<span data-ttu-id="3f9f4-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="3f9f4-108">Level</span></span>|<span data-ttu-id="3f9f4-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="3f9f4-109">Verbose</span></span>|  
+|<span data-ttu-id="3f9f4-110">Канал</span><span class="sxs-lookup"><span data-stu-id="3f9f4-110">Channel</span></span>|<span data-ttu-id="3f9f4-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="3f9f4-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="7f1de-112">Описание</span><span class="sxs-lookup"><span data-stu-id="7f1de-112">Description</span></span>  
- <span data-ttu-id="7f1de-113">Событие возникает при запуске принятия соединения.</span><span class="sxs-lookup"><span data-stu-id="7f1de-113">This event is emitted when the connection accept started.</span></span>  
+## <a name="description"></a><span data-ttu-id="3f9f4-112">Описание</span><span class="sxs-lookup"><span data-stu-id="3f9f4-112">Description</span></span>  
+ <span data-ttu-id="3f9f4-113">Событие возникает при запуске принятия соединения.</span><span class="sxs-lookup"><span data-stu-id="3f9f4-113">This event is emitted when the connection accept started.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="7f1de-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="7f1de-114">Message</span></span>  
- <span data-ttu-id="7f1de-115">Запущено принятие соединения.</span><span class="sxs-lookup"><span data-stu-id="7f1de-115">Connection accept started.</span></span>  
+## <a name="message"></a><span data-ttu-id="3f9f4-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="3f9f4-114">Message</span></span>  
+ <span data-ttu-id="3f9f4-115">Запущено принятие соединения.</span><span class="sxs-lookup"><span data-stu-id="3f9f4-115">Connection accept started.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="7f1de-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="7f1de-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="3f9f4-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="3f9f4-116">Details</span></span>

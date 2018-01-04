@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 770e56a787f5f0806b8b968a6b45618cb7a6b60f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0fcc4d8761165400500bcfb30f5fee739b14b8d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3362---httpchannelresponseaborted"></a><span data-ttu-id="8656d-102">3362 - HttpChannelResponseAborted</span><span class="sxs-lookup"><span data-stu-id="8656d-102">3362 - HttpChannelResponseAborted</span></span>
-## <a name="properties"></a><span data-ttu-id="8656d-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="8656d-103">Properties</span></span>  
+# <a name="3362---httpchannelresponseaborted"></a><span data-ttu-id="20404-102">3362 - HttpChannelResponseAborted</span><span class="sxs-lookup"><span data-stu-id="20404-102">3362 - HttpChannelResponseAborted</span></span>
+## <a name="properties"></a><span data-ttu-id="20404-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="20404-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="8656d-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="8656d-104">ID</span></span>|<span data-ttu-id="8656d-105">3362</span><span class="sxs-lookup"><span data-stu-id="8656d-105">3362</span></span>|  
-|<span data-ttu-id="8656d-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="8656d-106">Keywords</span></span>|<span data-ttu-id="8656d-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="8656d-107">HTTP</span></span>|  
-|<span data-ttu-id="8656d-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="8656d-108">Level</span></span>|<span data-ttu-id="8656d-109">Предупреждение</span><span class="sxs-lookup"><span data-stu-id="8656d-109">Warning</span></span>|  
-|<span data-ttu-id="8656d-110">Канал</span><span class="sxs-lookup"><span data-stu-id="8656d-110">Channel</span></span>|<span data-ttu-id="8656d-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="8656d-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="20404-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="20404-104">ID</span></span>|<span data-ttu-id="20404-105">3362</span><span class="sxs-lookup"><span data-stu-id="20404-105">3362</span></span>|  
+|<span data-ttu-id="20404-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="20404-106">Keywords</span></span>|<span data-ttu-id="20404-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="20404-107">HTTP</span></span>|  
+|<span data-ttu-id="20404-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="20404-108">Level</span></span>|<span data-ttu-id="20404-109">Предупреждение</span><span class="sxs-lookup"><span data-stu-id="20404-109">Warning</span></span>|  
+|<span data-ttu-id="20404-110">Канал</span><span class="sxs-lookup"><span data-stu-id="20404-110">Channel</span></span>|<span data-ttu-id="20404-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="20404-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="8656d-112">Описание</span><span class="sxs-lookup"><span data-stu-id="8656d-112">Description</span></span>  
- <span data-ttu-id="8656d-113">Это событие создается при прерывании ответа HTTP-канала.</span><span class="sxs-lookup"><span data-stu-id="8656d-113">This event is emitted when the Http channel response is aborted.</span></span>  
+## <a name="description"></a><span data-ttu-id="20404-112">Описание</span><span class="sxs-lookup"><span data-stu-id="20404-112">Description</span></span>  
+ <span data-ttu-id="20404-113">Это событие создается при прерывании ответа HTTP-канала.</span><span class="sxs-lookup"><span data-stu-id="20404-113">This event is emitted when the Http channel response is aborted.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="8656d-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="8656d-114">Message</span></span>  
- <span data-ttu-id="8656d-115">Ответ на запрос канала HTTP прерван.</span><span class="sxs-lookup"><span data-stu-id="8656d-115">Http channel response aborted.</span></span>  
+## <a name="message"></a><span data-ttu-id="20404-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="20404-114">Message</span></span>  
+ <span data-ttu-id="20404-115">Ответ на запрос канала HTTP прерван.</span><span class="sxs-lookup"><span data-stu-id="20404-115">Http channel response aborted.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="8656d-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="8656d-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="20404-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="20404-116">Details</span></span>

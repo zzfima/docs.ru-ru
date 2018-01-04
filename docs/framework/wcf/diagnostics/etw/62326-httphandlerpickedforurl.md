@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 51a858afee290dc0d39e4a6663aad7e41986c623
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c49ca73d05873a825f71718b72de3df0f477ad22
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="62326---httphandlerpickedforurl"></a><span data-ttu-id="7a3c1-102">62326 - HttpHandlerPickedForUrl</span><span class="sxs-lookup"><span data-stu-id="7a3c1-102">62326 - HttpHandlerPickedForUrl</span></span>
-## <a name="properties"></a><span data-ttu-id="7a3c1-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="7a3c1-103">Properties</span></span>  
+# <a name="62326---httphandlerpickedforurl"></a><span data-ttu-id="baf44-102">62326 - HttpHandlerPickedForUrl</span><span class="sxs-lookup"><span data-stu-id="baf44-102">62326 - HttpHandlerPickedForUrl</span></span>
+## <a name="properties"></a><span data-ttu-id="baf44-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="baf44-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="7a3c1-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="7a3c1-104">ID</span></span>|<span data-ttu-id="7a3c1-105">62326</span><span class="sxs-lookup"><span data-stu-id="7a3c1-105">62326</span></span>|  
-|<span data-ttu-id="7a3c1-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="7a3c1-106">Keywords</span></span>|<span data-ttu-id="7a3c1-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="7a3c1-107">WebHost</span></span>|  
-|<span data-ttu-id="7a3c1-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="7a3c1-108">Level</span></span>|<span data-ttu-id="7a3c1-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="7a3c1-109">Information</span></span>|  
-|<span data-ttu-id="7a3c1-110">Канал</span><span class="sxs-lookup"><span data-stu-id="7a3c1-110">Channel</span></span>|<span data-ttu-id="7a3c1-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="7a3c1-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="baf44-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="baf44-104">ID</span></span>|<span data-ttu-id="baf44-105">62326</span><span class="sxs-lookup"><span data-stu-id="baf44-105">62326</span></span>|  
+|<span data-ttu-id="baf44-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="baf44-106">Keywords</span></span>|<span data-ttu-id="baf44-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="baf44-107">WebHost</span></span>|  
+|<span data-ttu-id="baf44-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="baf44-108">Level</span></span>|<span data-ttu-id="baf44-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="baf44-109">Information</span></span>|  
+|<span data-ttu-id="baf44-110">Канал</span><span class="sxs-lookup"><span data-stu-id="baf44-110">Channel</span></span>|<span data-ttu-id="baf44-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="baf44-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="7a3c1-112">Описание</span><span class="sxs-lookup"><span data-stu-id="7a3c1-112">Description</span></span>  
- <span data-ttu-id="7a3c1-113">Это событие создается при выборе обработчика HTTP-данных для обслуживания всех запросов по данному URL-адресу.</span><span class="sxs-lookup"><span data-stu-id="7a3c1-113">This event is emitted when the HTTP handler is picked to serve all the requests made to this URL.</span></span>  
+## <a name="description"></a><span data-ttu-id="baf44-112">Описание</span><span class="sxs-lookup"><span data-stu-id="baf44-112">Description</span></span>  
+ <span data-ttu-id="baf44-113">Это событие создается при выборе обработчика HTTP-данных для обслуживания всех запросов по данному URL-адресу.</span><span class="sxs-lookup"><span data-stu-id="baf44-113">This event is emitted when the HTTP handler is picked to serve all the requests made to this URL.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="7a3c1-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="7a3c1-114">Message</span></span>  
- <span data-ttu-id="7a3c1-115">URL-адрес «%1» содержит документ XAML с типом корневого элемента «%2».</span><span class="sxs-lookup"><span data-stu-id="7a3c1-115">The url '%1' hosts XAML document with root element type '%2'.</span></span> <span data-ttu-id="7a3c1-116">Выбран тип обработчика HTTP-данных «%3» для обслуживания всех запросов по этому URL-адресу.</span><span class="sxs-lookup"><span data-stu-id="7a3c1-116">The HTTP handler type '%3' is picked to serve all the requests made to this url.</span></span>  
+## <a name="message"></a><span data-ttu-id="baf44-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="baf44-114">Message</span></span>  
+ <span data-ttu-id="baf44-115">URL-адрес «%1» содержит документ XAML с типом корневого элемента «%2».</span><span class="sxs-lookup"><span data-stu-id="baf44-115">The url '%1' hosts XAML document with root element type '%2'.</span></span> <span data-ttu-id="baf44-116">Выбран тип обработчика HTTP-данных «%3» для обслуживания всех запросов по этому URL-адресу.</span><span class="sxs-lookup"><span data-stu-id="baf44-116">The HTTP handler type '%3' is picked to serve all the requests made to this url.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="7a3c1-117">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="7a3c1-117">Details</span></span>
+## <a name="details"></a><span data-ttu-id="baf44-117">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="baf44-117">Details</span></span>

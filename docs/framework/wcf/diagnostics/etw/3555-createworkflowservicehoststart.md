@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 743b6a2099dcce2de5e300af02a0f0575dc79933
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7c547930daed1182c836100951ffeefe2ea497f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3555---createworkflowservicehoststart"></a><span data-ttu-id="d21a1-102">3555 - CreateWorkflowServiceHostStart</span><span class="sxs-lookup"><span data-stu-id="d21a1-102">3555 - CreateWorkflowServiceHostStart</span></span>
-## <a name="properties"></a><span data-ttu-id="d21a1-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="d21a1-103">Properties</span></span>  
+# <a name="3555---createworkflowservicehoststart"></a><span data-ttu-id="ea8f2-102">3555 - CreateWorkflowServiceHostStart</span><span class="sxs-lookup"><span data-stu-id="ea8f2-102">3555 - CreateWorkflowServiceHostStart</span></span>
+## <a name="properties"></a><span data-ttu-id="ea8f2-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="ea8f2-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="d21a1-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="d21a1-104">ID</span></span>|<span data-ttu-id="d21a1-105">3555</span><span class="sxs-lookup"><span data-stu-id="d21a1-105">3555</span></span>|  
-|<span data-ttu-id="d21a1-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="d21a1-106">Keywords</span></span>|<span data-ttu-id="d21a1-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="d21a1-107">WebHost</span></span>|  
-|<span data-ttu-id="d21a1-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="d21a1-108">Level</span></span>|<span data-ttu-id="d21a1-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="d21a1-109">Information</span></span>|  
-|<span data-ttu-id="d21a1-110">Канал</span><span class="sxs-lookup"><span data-stu-id="d21a1-110">Channel</span></span>|<span data-ttu-id="d21a1-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="d21a1-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="ea8f2-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="ea8f2-104">ID</span></span>|<span data-ttu-id="ea8f2-105">3555</span><span class="sxs-lookup"><span data-stu-id="ea8f2-105">3555</span></span>|  
+|<span data-ttu-id="ea8f2-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="ea8f2-106">Keywords</span></span>|<span data-ttu-id="ea8f2-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="ea8f2-107">WebHost</span></span>|  
+|<span data-ttu-id="ea8f2-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="ea8f2-108">Level</span></span>|<span data-ttu-id="ea8f2-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="ea8f2-109">Information</span></span>|  
+|<span data-ttu-id="ea8f2-110">Канал</span><span class="sxs-lookup"><span data-stu-id="ea8f2-110">Channel</span></span>|<span data-ttu-id="ea8f2-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="ea8f2-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="d21a1-112">Описание</span><span class="sxs-lookup"><span data-stu-id="d21a1-112">Description</span></span>  
- <span data-ttu-id="d21a1-113">Это событие создается при запуске CreateWorkflowServiceHost.</span><span class="sxs-lookup"><span data-stu-id="d21a1-113">This event is emitted on CreateWorkflowServiceHost start.</span></span>  
+## <a name="description"></a><span data-ttu-id="ea8f2-112">Описание</span><span class="sxs-lookup"><span data-stu-id="ea8f2-112">Description</span></span>  
+ <span data-ttu-id="ea8f2-113">Это событие создается при запуске CreateWorkflowServiceHost.</span><span class="sxs-lookup"><span data-stu-id="ea8f2-113">This event is emitted on CreateWorkflowServiceHost start.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="d21a1-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="d21a1-114">Message</span></span>  
- <span data-ttu-id="d21a1-115">Запуск CreateWorkflowServiceHost</span><span class="sxs-lookup"><span data-stu-id="d21a1-115">CreateWorkflowServiceHost start</span></span>  
+## <a name="message"></a><span data-ttu-id="ea8f2-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="ea8f2-114">Message</span></span>  
+ <span data-ttu-id="ea8f2-115">Запуск CreateWorkflowServiceHost</span><span class="sxs-lookup"><span data-stu-id="ea8f2-115">CreateWorkflowServiceHost start</span></span>  
   
-## <a name="details"></a><span data-ttu-id="d21a1-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="d21a1-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="ea8f2-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="ea8f2-116">Details</span></span>

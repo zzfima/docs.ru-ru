@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e035568602ff6a759b96ac17b4136bc12ddbf810
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d0f6bff39e9a98bf2cf352dd4fda6b22e8b322b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="5015---dcjsongenwriterstop"></a><span data-ttu-id="2776b-102">5015 - DCJsonGenWriterStop</span><span class="sxs-lookup"><span data-stu-id="2776b-102">5015 - DCJsonGenWriterStop</span></span>
-## <a name="properties"></a><span data-ttu-id="2776b-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="2776b-103">Properties</span></span>  
+# <a name="5015---dcjsongenwriterstop"></a><span data-ttu-id="9b31a-102">5015 - DCJsonGenWriterStop</span><span class="sxs-lookup"><span data-stu-id="9b31a-102">5015 - DCJsonGenWriterStop</span></span>
+## <a name="properties"></a><span data-ttu-id="9b31a-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="9b31a-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="2776b-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="2776b-104">ID</span></span>|<span data-ttu-id="2776b-105">5015</span><span class="sxs-lookup"><span data-stu-id="2776b-105">5015</span></span>|  
-|<span data-ttu-id="2776b-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="2776b-106">Keywords</span></span>|<span data-ttu-id="2776b-107">Сериализация</span><span class="sxs-lookup"><span data-stu-id="2776b-107">Serialization</span></span>|  
-|<span data-ttu-id="2776b-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="2776b-108">Level</span></span>|<span data-ttu-id="2776b-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="2776b-109">Verbose</span></span>|  
-|<span data-ttu-id="2776b-110">Канал</span><span class="sxs-lookup"><span data-stu-id="2776b-110">Channel</span></span>|<span data-ttu-id="2776b-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="2776b-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="9b31a-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="9b31a-104">ID</span></span>|<span data-ttu-id="9b31a-105">5015</span><span class="sxs-lookup"><span data-stu-id="9b31a-105">5015</span></span>|  
+|<span data-ttu-id="9b31a-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="9b31a-106">Keywords</span></span>|<span data-ttu-id="9b31a-107">Сериализация</span><span class="sxs-lookup"><span data-stu-id="9b31a-107">Serialization</span></span>|  
+|<span data-ttu-id="9b31a-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="9b31a-108">Level</span></span>|<span data-ttu-id="9b31a-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="9b31a-109">Verbose</span></span>|  
+|<span data-ttu-id="9b31a-110">Канал</span><span class="sxs-lookup"><span data-stu-id="9b31a-110">Channel</span></span>|<span data-ttu-id="9b31a-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="9b31a-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="2776b-112">Описание</span><span class="sxs-lookup"><span data-stu-id="2776b-112">Description</span></span>  
- <span data-ttu-id="2776b-113">Это событие создается, если останавливается сформированный JSON модуль записи.</span><span class="sxs-lookup"><span data-stu-id="2776b-113">This event is emitted when the Json generated writer stops.</span></span>  
+## <a name="description"></a><span data-ttu-id="9b31a-112">Описание</span><span class="sxs-lookup"><span data-stu-id="9b31a-112">Description</span></span>  
+ <span data-ttu-id="9b31a-113">Это событие создается, если останавливается сформированный JSON модуль записи.</span><span class="sxs-lookup"><span data-stu-id="9b31a-113">This event is emitted when the Json generated writer stops.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="2776b-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="2776b-114">Message</span></span>  
- <span data-ttu-id="2776b-115">Остановка модуля записи, создаваемого JSON.</span><span class="sxs-lookup"><span data-stu-id="2776b-115">Json generate writer stop.</span></span>  
+## <a name="message"></a><span data-ttu-id="9b31a-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="9b31a-114">Message</span></span>  
+ <span data-ttu-id="9b31a-115">Остановка модуля записи, создаваемого JSON.</span><span class="sxs-lookup"><span data-stu-id="9b31a-115">Json generate writer stop.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="2776b-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="2776b-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="9b31a-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="9b31a-116">Details</span></span>

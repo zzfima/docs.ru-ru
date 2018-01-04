@@ -13,22 +13,23 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f79d0b4b35f241973b66093c832fb766ecf60dd3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ba4433b8f13c1c2b23edf3c9f6cd2c396ea40bb5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="impersonationsuccess"></a><span data-ttu-id="c25e4-102">ImpersonationSuccess</span><span class="sxs-lookup"><span data-stu-id="c25e4-102">ImpersonationSuccess</span></span>
-<span data-ttu-id="c25e4-103">Идентификатор: 175</span><span class="sxs-lookup"><span data-stu-id="c25e4-103">Id: 175</span></span>  
+# <a name="impersonationsuccess"></a><span data-ttu-id="b5306-102">ImpersonationSuccess</span><span class="sxs-lookup"><span data-stu-id="b5306-102">ImpersonationSuccess</span></span>
+<span data-ttu-id="b5306-103">Идентификатор: 175</span><span class="sxs-lookup"><span data-stu-id="b5306-103">Id: 175</span></span>  
   
- <span data-ttu-id="c25e4-104">Важность: информационное сообщение</span><span class="sxs-lookup"><span data-stu-id="c25e4-104">Severity: Informational</span></span>  
+ <span data-ttu-id="b5306-104">Важность: информационное сообщение</span><span class="sxs-lookup"><span data-stu-id="b5306-104">Severity: Informational</span></span>  
   
- <span data-ttu-id="c25e4-105">Категория: SecurityAudit</span><span class="sxs-lookup"><span data-stu-id="c25e4-105">Category: SecurityAudit</span></span>  
+ <span data-ttu-id="b5306-105">Категория: SecurityAudit</span><span class="sxs-lookup"><span data-stu-id="b5306-105">Category: SecurityAudit</span></span>  
   
-## <a name="description"></a><span data-ttu-id="c25e4-106">Описание</span><span class="sxs-lookup"><span data-stu-id="c25e4-106">Description</span></span>  
- <span data-ttu-id="c25e4-107">Это событие показывает, что олицетворение выполнено успешно, и содержит имя метода, учетную запись клиента и идентификатор действия.</span><span class="sxs-lookup"><span data-stu-id="c25e4-107">This event indicates that impersonation succeeded, listing the method name, client identity and activity Id.</span></span>  
+## <a name="description"></a><span data-ttu-id="b5306-106">Описание:</span><span class="sxs-lookup"><span data-stu-id="b5306-106">Description</span></span>  
+ <span data-ttu-id="b5306-107">Это событие показывает, что олицетворение выполнено успешно, и содержит имя метода, учетную запись клиента и идентификатор действия.</span><span class="sxs-lookup"><span data-stu-id="b5306-107">This event indicates that impersonation succeeded, listing the method name, client identity and activity Id.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c25e4-108">См. также</span><span class="sxs-lookup"><span data-stu-id="c25e4-108">See Also</span></span>  
- [<span data-ttu-id="c25e4-109">Ведение журнала событий</span><span class="sxs-lookup"><span data-stu-id="c25e4-109">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [<span data-ttu-id="c25e4-110">Общие справочные сведения события</span><span class="sxs-lookup"><span data-stu-id="c25e4-110">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="b5306-108">См. также</span><span class="sxs-lookup"><span data-stu-id="b5306-108">See Also</span></span>  
+ [<span data-ttu-id="b5306-109">Ведение журнала событий</span><span class="sxs-lookup"><span data-stu-id="b5306-109">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="b5306-110">Общие справочные сведения о событиях</span><span class="sxs-lookup"><span data-stu-id="b5306-110">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

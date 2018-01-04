@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15549f36be0373c89cb23230d11899a0385b0c70
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6c9b93c2bf31ad0b9655a08c72ac546eeacb007c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3308---clientbaseusinglocalchannelfactory"></a><span data-ttu-id="ce704-102">3308 - ClientBaseUsingLocalChannelFactory</span><span class="sxs-lookup"><span data-stu-id="ce704-102">3308 - ClientBaseUsingLocalChannelFactory</span></span>
-## <a name="properties"></a><span data-ttu-id="ce704-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="ce704-103">Properties</span></span>  
+# <a name="3308---clientbaseusinglocalchannelfactory"></a><span data-ttu-id="57319-102">3308 - ClientBaseUsingLocalChannelFactory</span><span class="sxs-lookup"><span data-stu-id="57319-102">3308 - ClientBaseUsingLocalChannelFactory</span></span>
+## <a name="properties"></a><span data-ttu-id="57319-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="57319-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="ce704-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="ce704-104">ID</span></span>|<span data-ttu-id="ce704-105">3308</span><span class="sxs-lookup"><span data-stu-id="ce704-105">3308</span></span>|  
-|<span data-ttu-id="ce704-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="ce704-106">Keywords</span></span>|<span data-ttu-id="ce704-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="ce704-107">ServiceModel</span></span>|  
-|<span data-ttu-id="ce704-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="ce704-108">Level</span></span>|<span data-ttu-id="ce704-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="ce704-109">Information</span></span>|  
-|<span data-ttu-id="ce704-110">Канал</span><span class="sxs-lookup"><span data-stu-id="ce704-110">Channel</span></span>|<span data-ttu-id="ce704-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="ce704-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="57319-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="57319-104">ID</span></span>|<span data-ttu-id="57319-105">3308</span><span class="sxs-lookup"><span data-stu-id="57319-105">3308</span></span>|  
+|<span data-ttu-id="57319-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="57319-106">Keywords</span></span>|<span data-ttu-id="57319-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="57319-107">ServiceModel</span></span>|  
+|<span data-ttu-id="57319-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="57319-108">Level</span></span>|<span data-ttu-id="57319-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="57319-109">Information</span></span>|  
+|<span data-ttu-id="57319-110">Канал</span><span class="sxs-lookup"><span data-stu-id="57319-110">Channel</span></span>|<span data-ttu-id="57319-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="57319-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="ce704-112">Описание</span><span class="sxs-lookup"><span data-stu-id="ce704-112">Description</span></span>  
- <span data-ttu-id="ce704-113">Это событие создается, если не используется фабрика каналов из кэша.</span><span class="sxs-lookup"><span data-stu-id="ce704-113">This event is emitted when not using channel factory from cache.</span></span>  
+## <a name="description"></a><span data-ttu-id="57319-112">Описание</span><span class="sxs-lookup"><span data-stu-id="57319-112">Description</span></span>  
+ <span data-ttu-id="57319-113">Это событие создается, если не используется фабрика каналов из кэша.</span><span class="sxs-lookup"><span data-stu-id="57319-113">This event is emitted when not using channel factory from cache.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="ce704-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="ce704-114">Message</span></span>  
- <span data-ttu-id="ce704-115">Не используется фабрика каналов из кэша, то есть кэширование отключено для экземпляра.</span><span class="sxs-lookup"><span data-stu-id="ce704-115">Not using channel factory from cache, i.e. caching disabled for instance.</span></span>  
+## <a name="message"></a><span data-ttu-id="57319-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="57319-114">Message</span></span>  
+ <span data-ttu-id="57319-115">Не используется фабрика каналов из кэша, то есть кэширование отключено для экземпляра.</span><span class="sxs-lookup"><span data-stu-id="57319-115">Not using channel factory from cache, i.e. caching disabled for instance.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="ce704-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="ce704-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="57319-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="57319-116">Details</span></span>

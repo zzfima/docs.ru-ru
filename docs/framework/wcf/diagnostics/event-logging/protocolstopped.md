@@ -13,22 +13,23 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e4c1616c056aa4b6804db4f5471d44f198ebca4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bd5ac21112c49c245fdb4a8c4bddf770a4ab3101
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="protocolstopped"></a><span data-ttu-id="03857-102">ProtocolStopped</span><span class="sxs-lookup"><span data-stu-id="03857-102">ProtocolStopped</span></span>
-<span data-ttu-id="03857-103">Идентификатор: 151</span><span class="sxs-lookup"><span data-stu-id="03857-103">Id: 151</span></span>  
+# <a name="protocolstopped"></a><span data-ttu-id="a376c-102">ProtocolStopped</span><span class="sxs-lookup"><span data-stu-id="a376c-102">ProtocolStopped</span></span>
+<span data-ttu-id="a376c-103">Идентификатор: 151</span><span class="sxs-lookup"><span data-stu-id="a376c-103">Id: 151</span></span>  
   
- <span data-ttu-id="03857-104">Важность: ошибка</span><span class="sxs-lookup"><span data-stu-id="03857-104">Severity: Error</span></span>  
+ <span data-ttu-id="a376c-104">Важность: ошибка</span><span class="sxs-lookup"><span data-stu-id="a376c-104">Severity: Error</span></span>  
   
- <span data-ttu-id="03857-105">Категория: TransactionBridge</span><span class="sxs-lookup"><span data-stu-id="03857-105">Category: TransactionBridge</span></span>  
+ <span data-ttu-id="a376c-105">Категория: TransactionBridge</span><span class="sxs-lookup"><span data-stu-id="a376c-105">Category: TransactionBridge</span></span>  
   
-## <a name="description"></a><span data-ttu-id="03857-106">Описание</span><span class="sxs-lookup"><span data-stu-id="03857-106">Description</span></span>  
- <span data-ttu-id="03857-107">Это событие показывает, что служба протокола WS-Atomic Transaction была остановлена.</span><span class="sxs-lookup"><span data-stu-id="03857-107">This event indicates that the WS-Atomic Transaction protocol service was stopped.</span></span> <span data-ttu-id="03857-108">В событии указаны идентификатор и имя протокола, идентификатор и имя процесса.</span><span class="sxs-lookup"><span data-stu-id="03857-108">The event lists the protocol ID, protocol name, process name and process ID.</span></span> <span data-ttu-id="03857-109">.</span><span class="sxs-lookup"><span data-stu-id="03857-109">.</span></span>  
+## <a name="description"></a><span data-ttu-id="a376c-106">Описание</span><span class="sxs-lookup"><span data-stu-id="a376c-106">Description</span></span>  
+ <span data-ttu-id="a376c-107">Это событие показывает, что служба протокола WS-Atomic Transaction была остановлена.</span><span class="sxs-lookup"><span data-stu-id="a376c-107">This event indicates that the WS-Atomic Transaction protocol service was stopped.</span></span> <span data-ttu-id="a376c-108">В событии указаны идентификатор и имя протокола, идентификатор и имя процесса.</span><span class="sxs-lookup"><span data-stu-id="a376c-108">The event lists the protocol ID, protocol name, process name and process ID.</span></span> <span data-ttu-id="a376c-109">.</span><span class="sxs-lookup"><span data-stu-id="a376c-109">.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="03857-110">См. также</span><span class="sxs-lookup"><span data-stu-id="03857-110">See Also</span></span>  
- [<span data-ttu-id="03857-111">Ведение журнала событий</span><span class="sxs-lookup"><span data-stu-id="03857-111">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [<span data-ttu-id="03857-112">Общие справочные сведения события</span><span class="sxs-lookup"><span data-stu-id="03857-112">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="a376c-110">См. также</span><span class="sxs-lookup"><span data-stu-id="a376c-110">See Also</span></span>  
+ [<span data-ttu-id="a376c-111">Ведение журнала событий</span><span class="sxs-lookup"><span data-stu-id="a376c-111">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="a376c-112">Общие справочные сведения о событиях</span><span class="sxs-lookup"><span data-stu-id="a376c-112">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

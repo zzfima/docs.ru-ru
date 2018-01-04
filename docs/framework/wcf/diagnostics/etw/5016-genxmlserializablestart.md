@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31a2f58cab8532e5dfe7d5b97bff32b586d0463f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 71b5a58a9aae9093aaac579c5c74c2af56a0a89d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="5016---genxmlserializablestart"></a><span data-ttu-id="3aaa8-102">5016 - GenXmlSerializableStart</span><span class="sxs-lookup"><span data-stu-id="3aaa8-102">5016 - GenXmlSerializableStart</span></span>
-## <a name="properties"></a><span data-ttu-id="3aaa8-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="3aaa8-103">Properties</span></span>  
+# <a name="5016---genxmlserializablestart"></a><span data-ttu-id="9b984-102">5016 - GenXmlSerializableStart</span><span class="sxs-lookup"><span data-stu-id="9b984-102">5016 - GenXmlSerializableStart</span></span>
+## <a name="properties"></a><span data-ttu-id="9b984-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="9b984-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="3aaa8-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="3aaa8-104">ID</span></span>|<span data-ttu-id="3aaa8-105">5016</span><span class="sxs-lookup"><span data-stu-id="3aaa8-105">5016</span></span>|  
-|<span data-ttu-id="3aaa8-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="3aaa8-106">Keywords</span></span>|<span data-ttu-id="3aaa8-107">Сериализация</span><span class="sxs-lookup"><span data-stu-id="3aaa8-107">Serialization</span></span>|  
-|<span data-ttu-id="3aaa8-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="3aaa8-108">Level</span></span>|<span data-ttu-id="3aaa8-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="3aaa8-109">Verbose</span></span>|  
-|<span data-ttu-id="3aaa8-110">Канал</span><span class="sxs-lookup"><span data-stu-id="3aaa8-110">Channel</span></span>|<span data-ttu-id="3aaa8-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="3aaa8-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="9b984-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="9b984-104">ID</span></span>|<span data-ttu-id="9b984-105">5016</span><span class="sxs-lookup"><span data-stu-id="9b984-105">5016</span></span>|  
+|<span data-ttu-id="9b984-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="9b984-106">Keywords</span></span>|<span data-ttu-id="9b984-107">Сериализация</span><span class="sxs-lookup"><span data-stu-id="9b984-107">Serialization</span></span>|  
+|<span data-ttu-id="9b984-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="9b984-108">Level</span></span>|<span data-ttu-id="9b984-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="9b984-109">Verbose</span></span>|  
+|<span data-ttu-id="9b984-110">Канал</span><span class="sxs-lookup"><span data-stu-id="9b984-110">Channel</span></span>|<span data-ttu-id="9b984-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="9b984-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="3aaa8-112">Описание</span><span class="sxs-lookup"><span data-stu-id="3aaa8-112">Description</span></span>  
- <span data-ttu-id="3aaa8-113">Это событие возникает при запуске создания сериализуемого XML.</span><span class="sxs-lookup"><span data-stu-id="3aaa8-113">This event is emitted when the generate Xml serializable starts.</span></span>  
+## <a name="description"></a><span data-ttu-id="9b984-112">Описание</span><span class="sxs-lookup"><span data-stu-id="9b984-112">Description</span></span>  
+ <span data-ttu-id="9b984-113">Это событие возникает при запуске создания сериализуемого XML.</span><span class="sxs-lookup"><span data-stu-id="9b984-113">This event is emitted when the generate Xml serializable starts.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="3aaa8-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="3aaa8-114">Message</span></span>  
- <span data-ttu-id="3aaa8-115">Запуск создания сериализуемого XML для «%1».</span><span class="sxs-lookup"><span data-stu-id="3aaa8-115">Generate Xml serializable for '%1' start.</span></span>  
+## <a name="message"></a><span data-ttu-id="9b984-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="9b984-114">Message</span></span>  
+ <span data-ttu-id="9b984-115">Запуск создания сериализуемого XML для «%1».</span><span class="sxs-lookup"><span data-stu-id="9b984-115">Generate Xml serializable for '%1' start.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="3aaa8-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="3aaa8-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="9b984-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="9b984-116">Details</span></span>

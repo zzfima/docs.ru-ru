@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 54c5ef63d44f380ce75b096eba51f8281a836c48
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 80455f88e85e018ef6217dbf7344dd521d742085
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="5403---tokenvalidationsuccess"></a><span data-ttu-id="ba2f9-102">5403 - TokenValidationSuccess</span><span class="sxs-lookup"><span data-stu-id="ba2f9-102">5403 - TokenValidationSuccess</span></span>
-## <a name="properties"></a><span data-ttu-id="ba2f9-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="ba2f9-103">Properties</span></span>  
+# <a name="5403---tokenvalidationsuccess"></a><span data-ttu-id="79fdb-102">5403 - TokenValidationSuccess</span><span class="sxs-lookup"><span data-stu-id="79fdb-102">5403 - TokenValidationSuccess</span></span>
+## <a name="properties"></a><span data-ttu-id="79fdb-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="79fdb-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="ba2f9-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="ba2f9-104">ID</span></span>|<span data-ttu-id="ba2f9-105">5403</span><span class="sxs-lookup"><span data-stu-id="ba2f9-105">5403</span></span>|  
-|<span data-ttu-id="ba2f9-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="ba2f9-106">Keywords</span></span>|<span data-ttu-id="ba2f9-107">Безопасность</span><span class="sxs-lookup"><span data-stu-id="ba2f9-107">Security</span></span>|  
-|<span data-ttu-id="ba2f9-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="ba2f9-108">Level</span></span>|<span data-ttu-id="ba2f9-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="ba2f9-109">Verbose</span></span>|  
-|<span data-ttu-id="ba2f9-110">Канал</span><span class="sxs-lookup"><span data-stu-id="ba2f9-110">Channel</span></span>|<span data-ttu-id="ba2f9-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="ba2f9-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="79fdb-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="79fdb-104">ID</span></span>|<span data-ttu-id="79fdb-105">5403</span><span class="sxs-lookup"><span data-stu-id="79fdb-105">5403</span></span>|  
+|<span data-ttu-id="79fdb-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="79fdb-106">Keywords</span></span>|<span data-ttu-id="79fdb-107">Безопасность</span><span class="sxs-lookup"><span data-stu-id="79fdb-107">Security</span></span>|  
+|<span data-ttu-id="79fdb-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="79fdb-108">Level</span></span>|<span data-ttu-id="79fdb-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="79fdb-109">Verbose</span></span>|  
+|<span data-ttu-id="79fdb-110">Канал</span><span class="sxs-lookup"><span data-stu-id="79fdb-110">Channel</span></span>|<span data-ttu-id="79fdb-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="79fdb-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="ba2f9-112">Описание</span><span class="sxs-lookup"><span data-stu-id="ba2f9-112">Description</span></span>  
- <span data-ttu-id="ba2f9-113">Это событие создается после успешной проверки SecurityToken.</span><span class="sxs-lookup"><span data-stu-id="ba2f9-113">This event is emitted when the SecurityToken validation succeeded.</span></span>  
+## <a name="description"></a><span data-ttu-id="79fdb-112">Описание</span><span class="sxs-lookup"><span data-stu-id="79fdb-112">Description</span></span>  
+ <span data-ttu-id="79fdb-113">Это событие создается после успешной проверки SecurityToken.</span><span class="sxs-lookup"><span data-stu-id="79fdb-113">This event is emitted when the SecurityToken validation succeeded.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="ba2f9-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="ba2f9-114">Message</span></span>  
- <span data-ttu-id="ba2f9-115">Проверка SecurityToken (тип «%1» и идентификатор «%2») выполнена успешно.</span><span class="sxs-lookup"><span data-stu-id="ba2f9-115">SecurityToken (type '%1' and id '%2') validation succeeded.</span></span>  
+## <a name="message"></a><span data-ttu-id="79fdb-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="79fdb-114">Message</span></span>  
+ <span data-ttu-id="79fdb-115">Проверка SecurityToken (тип «%1» и идентификатор «%2») выполнена успешно.</span><span class="sxs-lookup"><span data-stu-id="79fdb-115">SecurityToken (type '%1' and id '%2') validation succeeded.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="ba2f9-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="ba2f9-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="79fdb-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="79fdb-116">Details</span></span>

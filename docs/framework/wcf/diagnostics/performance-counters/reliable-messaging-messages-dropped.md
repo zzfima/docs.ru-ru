@@ -13,14 +13,15 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ce9f5fedf96245a7887364278854d521b378f207
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f327ce6411229767eb075e5e1d387441aacbf701
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="reliable-messaging-messages-dropped"></a><span data-ttu-id="19e86-102">Количество сброшенных сообщений, передаваемых по надежным каналам</span><span class="sxs-lookup"><span data-stu-id="19e86-102">Reliable Messaging Messages Dropped</span></span>
-<span data-ttu-id="19e86-103">Имя счетчика: Reliable Messaging Sessions Dropped.</span><span class="sxs-lookup"><span data-stu-id="19e86-103">Counter Name: Reliable Messaging Sessions Dropped.</span></span>  
+# <a name="reliable-messaging-messages-dropped"></a><span data-ttu-id="2fb76-102">Количество сброшенных сообщений, передаваемых по надежным каналам</span><span class="sxs-lookup"><span data-stu-id="2fb76-102">Reliable Messaging Messages Dropped</span></span>
+<span data-ttu-id="2fb76-103">Имя счетчика: Reliable Messaging Sessions Dropped.</span><span class="sxs-lookup"><span data-stu-id="2fb76-103">Counter Name: Reliable Messaging Sessions Dropped.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="19e86-104">Описание</span><span class="sxs-lookup"><span data-stu-id="19e86-104">Description</span></span>  
- <span data-ttu-id="19e86-105">Общее количество надежных сообщений, которое было отклонено в данной службе.</span><span class="sxs-lookup"><span data-stu-id="19e86-105">Total number of reliable messaging messages that have been dropped in this service.</span></span>
+## <a name="description"></a><span data-ttu-id="2fb76-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="2fb76-104">Description</span></span>  
+ <span data-ttu-id="2fb76-105">Общее количество надежных сообщений, которое было отброшено в данной службе.</span><span class="sxs-lookup"><span data-stu-id="2fb76-105">Total number of reliable messaging messages that have been dropped in this service.</span></span>

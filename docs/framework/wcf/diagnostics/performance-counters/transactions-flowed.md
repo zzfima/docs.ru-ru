@@ -13,14 +13,15 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1c06e08a0a2131c88ac16e5edd2e6dc6b6ab729c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 504fcc064e5cb4f23f2b0f6d523184badf5c7798
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="transactions-flowed"></a><span data-ttu-id="8f5d5-102">Количество поступивших транзакций</span><span class="sxs-lookup"><span data-stu-id="8f5d5-102">Transactions Flowed</span></span>
-<span data-ttu-id="8f5d5-103">Имя счетчика: Количество поступивших транзакций</span><span class="sxs-lookup"><span data-stu-id="8f5d5-103">Counter Name: Transactions Flowed</span></span>  
+# <a name="transactions-flowed"></a><span data-ttu-id="965ea-102">Количество поступивших транзакций</span><span class="sxs-lookup"><span data-stu-id="965ea-102">Transactions Flowed</span></span>
+<span data-ttu-id="965ea-103">Имя счетчика: Количество поступивших транзакций</span><span class="sxs-lookup"><span data-stu-id="965ea-103">Counter Name: Transactions Flowed</span></span>  
   
-## <a name="description"></a><span data-ttu-id="8f5d5-104">Описание</span><span class="sxs-lookup"><span data-stu-id="8f5d5-104">Description</span></span>  
- <span data-ttu-id="8f5d5-105">Количество транзакций, поступивших в данную операцию.</span><span class="sxs-lookup"><span data-stu-id="8f5d5-105">Number of transactions flowed to this operation.</span></span> <span data-ttu-id="8f5d5-106">Значение этого счетчика увеличивается при каждом сообщении, переданном операции и содержащем идентификатор транзакции.</span><span class="sxs-lookup"><span data-stu-id="8f5d5-106">This counter is incremented for any message that is sent to the operation and contains a transaction ID.</span></span>
+## <a name="description"></a><span data-ttu-id="965ea-104">Описание</span><span class="sxs-lookup"><span data-stu-id="965ea-104">Description</span></span>  
+ <span data-ttu-id="965ea-105">Количество транзакций, поступивших в данную операцию.</span><span class="sxs-lookup"><span data-stu-id="965ea-105">Number of transactions flowed to this operation.</span></span> <span data-ttu-id="965ea-106">Значение этого счетчика увеличивается при каждом сообщении, переданном операции и содержащем идентификатор транзакции.</span><span class="sxs-lookup"><span data-stu-id="965ea-106">This counter is incremented for any message that is sent to the operation and contains a transaction ID.</span></span>

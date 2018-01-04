@@ -13,26 +13,27 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9521d6a34d3f3d1f98d3d7618e456bbe280852a0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 105e93734c1cfd4c9e5769309ba9a0aed18f592e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="507---hostedtransportconfigurationmanagerconfiginitstart"></a><span data-ttu-id="fcd4b-102">507 - HostedTransportConfigurationManagerConfigInitStart</span><span class="sxs-lookup"><span data-stu-id="fcd4b-102">507 - HostedTransportConfigurationManagerConfigInitStart</span></span>
-## <a name="properties"></a><span data-ttu-id="fcd4b-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="fcd4b-103">Properties</span></span>  
+# <a name="507---hostedtransportconfigurationmanagerconfiginitstart"></a><span data-ttu-id="caab3-102">507 - HostedTransportConfigurationManagerConfigInitStart</span><span class="sxs-lookup"><span data-stu-id="caab3-102">507 - HostedTransportConfigurationManagerConfigInitStart</span></span>
+## <a name="properties"></a><span data-ttu-id="caab3-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="caab3-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="fcd4b-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="fcd4b-104">ID</span></span>|<span data-ttu-id="fcd4b-105">507</span><span class="sxs-lookup"><span data-stu-id="fcd4b-105">507</span></span>|  
-|<span data-ttu-id="fcd4b-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="fcd4b-106">Keywords</span></span>|<span data-ttu-id="fcd4b-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="fcd4b-107">WebHost</span></span>|  
-|<span data-ttu-id="fcd4b-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="fcd4b-108">Level</span></span>|<span data-ttu-id="fcd4b-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="fcd4b-109">Information</span></span>|  
-|<span data-ttu-id="fcd4b-110">Канал</span><span class="sxs-lookup"><span data-stu-id="fcd4b-110">Channel</span></span>|<span data-ttu-id="fcd4b-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="fcd4b-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="caab3-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="caab3-104">ID</span></span>|<span data-ttu-id="caab3-105">507</span><span class="sxs-lookup"><span data-stu-id="caab3-105">507</span></span>|  
+|<span data-ttu-id="caab3-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="caab3-106">Keywords</span></span>|<span data-ttu-id="caab3-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="caab3-107">WebHost</span></span>|  
+|<span data-ttu-id="caab3-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="caab3-108">Level</span></span>|<span data-ttu-id="caab3-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="caab3-109">Information</span></span>|  
+|<span data-ttu-id="caab3-110">Канал</span><span class="sxs-lookup"><span data-stu-id="caab3-110">Channel</span></span>|<span data-ttu-id="caab3-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="caab3-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="fcd4b-112">Описание</span><span class="sxs-lookup"><span data-stu-id="fcd4b-112">Description</span></span>  
- <span data-ttu-id="fcd4b-113">Это событие создается при начале инициализации HostedTransportConfigurationManager.</span><span class="sxs-lookup"><span data-stu-id="fcd4b-113">This event is emitted when HostedTransportConfigurationManager initialization starts.</span></span>  
+## <a name="description"></a><span data-ttu-id="caab3-112">Описание</span><span class="sxs-lookup"><span data-stu-id="caab3-112">Description</span></span>  
+ <span data-ttu-id="caab3-113">Это событие создается при начале инициализации HostedTransportConfigurationManager.</span><span class="sxs-lookup"><span data-stu-id="caab3-113">This event is emitted when HostedTransportConfigurationManager initialization starts.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="fcd4b-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="fcd4b-114">Message</span></span>  
- <span data-ttu-id="fcd4b-115">Запуск инициализации конфигурации HostedTransportConfigurationManager.</span><span class="sxs-lookup"><span data-stu-id="fcd4b-115">HostedTransportConfigurationManager begin configuration initialization.</span></span>  
+## <a name="message"></a><span data-ttu-id="caab3-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="caab3-114">Message</span></span>  
+ <span data-ttu-id="caab3-115">Запуск инициализации конфигурации HostedTransportConfigurationManager.</span><span class="sxs-lookup"><span data-stu-id="caab3-115">HostedTransportConfigurationManager begin configuration initialization.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="fcd4b-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="fcd4b-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="caab3-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="caab3-116">Details</span></span>

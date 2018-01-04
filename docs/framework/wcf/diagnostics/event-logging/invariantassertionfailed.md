@@ -13,22 +13,23 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f685b992281e28844eeec0b64ccfc5ef4e692303
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8a88cd6739fd4d0715a67403c6a71c78bc7ef967
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="invariantassertionfailed"></a><span data-ttu-id="038a6-102">InvariantAssertionFailed</span><span class="sxs-lookup"><span data-stu-id="038a6-102">InvariantAssertionFailed</span></span>
-<span data-ttu-id="038a6-103">Идентификатор: 106</span><span class="sxs-lookup"><span data-stu-id="038a6-103">Id: 106</span></span>  
+# <a name="invariantassertionfailed"></a><span data-ttu-id="5bce5-102">InvariantAssertionFailed</span><span class="sxs-lookup"><span data-stu-id="5bce5-102">InvariantAssertionFailed</span></span>
+<span data-ttu-id="5bce5-103">Идентификатор: 106</span><span class="sxs-lookup"><span data-stu-id="5bce5-103">Id: 106</span></span>  
   
- <span data-ttu-id="038a6-104">Важность: ошибка</span><span class="sxs-lookup"><span data-stu-id="038a6-104">Severity: Error</span></span>  
+ <span data-ttu-id="5bce5-104">Важность: ошибка</span><span class="sxs-lookup"><span data-stu-id="5bce5-104">Severity: Error</span></span>  
   
- <span data-ttu-id="038a6-105">Категория: Tracing</span><span class="sxs-lookup"><span data-stu-id="038a6-105">Category: Tracing</span></span>  
+ <span data-ttu-id="5bce5-105">Категория: Tracing</span><span class="sxs-lookup"><span data-stu-id="5bce5-105">Category: Tracing</span></span>  
   
-## <a name="description"></a><span data-ttu-id="038a6-106">Описание</span><span class="sxs-lookup"><span data-stu-id="038a6-106">Description</span></span>  
- <span data-ttu-id="038a6-107">Данное событие показывает, что инвариантное утверждение ложно.</span><span class="sxs-lookup"><span data-stu-id="038a6-107">This event indicates that an invariant assertion is false.</span></span> <span data-ttu-id="038a6-108">В событии указаны сообщение, имя и ИД процесса.</span><span class="sxs-lookup"><span data-stu-id="038a6-108">The event lists the message, process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="5bce5-106">Описание:</span><span class="sxs-lookup"><span data-stu-id="5bce5-106">Description</span></span>  
+ <span data-ttu-id="5bce5-107">Данное событие показывает, что инвариантное утверждение ложно.</span><span class="sxs-lookup"><span data-stu-id="5bce5-107">This event indicates that an invariant assertion is false.</span></span> <span data-ttu-id="5bce5-108">В событии указаны сообщение, имя и ИД процесса.</span><span class="sxs-lookup"><span data-stu-id="5bce5-108">The event lists the message, process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="038a6-109">См. также</span><span class="sxs-lookup"><span data-stu-id="038a6-109">See Also</span></span>  
- [<span data-ttu-id="038a6-110">Ведение журнала событий</span><span class="sxs-lookup"><span data-stu-id="038a6-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [<span data-ttu-id="038a6-111">Общие справочные сведения события</span><span class="sxs-lookup"><span data-stu-id="038a6-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="5bce5-109">См. также</span><span class="sxs-lookup"><span data-stu-id="5bce5-109">See Also</span></span>  
+ [<span data-ttu-id="5bce5-110">Ведение журнала событий</span><span class="sxs-lookup"><span data-stu-id="5bce5-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="5bce5-111">Общие справочные сведения о событиях</span><span class="sxs-lookup"><span data-stu-id="5bce5-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

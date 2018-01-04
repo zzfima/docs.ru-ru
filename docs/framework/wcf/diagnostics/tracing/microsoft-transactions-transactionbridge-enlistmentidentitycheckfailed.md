@@ -13,22 +13,23 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 05f20e90c372148a175ac49244a4df0dc32ffc89
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 89328fd0d4305c1f7572a8bb41e3793624110ce8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="microsofttransactionstransactionbridgeenlistmentidentitycheckfailed"></a><span data-ttu-id="211a8-102">Microsoft.Transactions.TransactionBridge.EnlistmentIdentityCheckFailed</span><span class="sxs-lookup"><span data-stu-id="211a8-102">Microsoft.Transactions.TransactionBridge.EnlistmentIdentityCheckFailed</span></span>
-<span data-ttu-id="211a8-103">Имя отправителя входящего сообщения не совпадает с именем, полученным из ссылки на конечную точку перечисления.</span><span class="sxs-lookup"><span data-stu-id="211a8-103">The identity of the incoming message sender did not match the identity derived from the enlistment's endpoint reference.</span></span>  
+# <a name="microsofttransactionstransactionbridgeenlistmentidentitycheckfailed"></a><span data-ttu-id="9cb63-102">Microsoft.Transactions.TransactionBridge.EnlistmentIdentityCheckFailed</span><span class="sxs-lookup"><span data-stu-id="9cb63-102">Microsoft.Transactions.TransactionBridge.EnlistmentIdentityCheckFailed</span></span>
+<span data-ttu-id="9cb63-103">Имя отправителя входящего сообщения не совпадает с именем, полученным из ссылки на конечную точку перечисления.</span><span class="sxs-lookup"><span data-stu-id="9cb63-103">The identity of the incoming message sender did not match the identity derived from the enlistment's endpoint reference.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="211a8-104">Описание</span><span class="sxs-lookup"><span data-stu-id="211a8-104">Description</span></span>  
- <span data-ttu-id="211a8-105">Трассируется в случае сбоя проверки безопасности сообщения.</span><span class="sxs-lookup"><span data-stu-id="211a8-105">Traced if message security validation has failed.</span></span>  
+## <a name="description"></a><span data-ttu-id="9cb63-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="9cb63-104">Description</span></span>  
+ <span data-ttu-id="9cb63-105">Трассируется в случае сбоя проверки безопасности сообщения.</span><span class="sxs-lookup"><span data-stu-id="9cb63-105">Traced if message security validation has failed.</span></span>  
   
-## <a name="troubleshooting"></a><span data-ttu-id="211a8-106">Устранение неполадок</span><span class="sxs-lookup"><span data-stu-id="211a8-106">Troubleshooting</span></span>  
- <span data-ttu-id="211a8-107">Убедитесь в правильности настройки безопасности транзакции на всех компьютерах, участвующих в транзакции.</span><span class="sxs-lookup"><span data-stu-id="211a8-107">Ensure that Transaction security is correctly configured for all machines participating in the transaction.</span></span>  
+## <a name="troubleshooting"></a><span data-ttu-id="9cb63-106">Устранение неполадок</span><span class="sxs-lookup"><span data-stu-id="9cb63-106">Troubleshooting</span></span>  
+ <span data-ttu-id="9cb63-107">Убедитесь в правильности настройки безопасности транзакции на всех компьютерах, участвующих в транзакции.</span><span class="sxs-lookup"><span data-stu-id="9cb63-107">Ensure that Transaction security is correctly configured for all machines participating in the transaction.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="211a8-108">См. также</span><span class="sxs-lookup"><span data-stu-id="211a8-108">See Also</span></span>  
- [<span data-ttu-id="211a8-109">Трассировка</span><span class="sxs-lookup"><span data-stu-id="211a8-109">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="211a8-110">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="211a8-110">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="211a8-111">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="211a8-111">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="9cb63-108">См. также</span><span class="sxs-lookup"><span data-stu-id="9cb63-108">See Also</span></span>  
+ [<span data-ttu-id="9cb63-109">Трассировка</span><span class="sxs-lookup"><span data-stu-id="9cb63-109">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="9cb63-110">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="9cb63-110">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="9cb63-111">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="9cb63-111">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

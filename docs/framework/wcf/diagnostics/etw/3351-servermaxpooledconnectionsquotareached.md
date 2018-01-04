@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5f248ec73bcaba1a1713c5cce0b8f273094483fd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 42a9dc55c558eaf9269e2ee21f678953b1f25b6f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3351---servermaxpooledconnectionsquotareached"></a><span data-ttu-id="26fb9-102">3351 - ServerMaxPooledConnectionsQuotaReached</span><span class="sxs-lookup"><span data-stu-id="26fb9-102">3351 - ServerMaxPooledConnectionsQuotaReached</span></span>
-## <a name="properties"></a><span data-ttu-id="26fb9-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="26fb9-103">Properties</span></span>  
+# <a name="3351---servermaxpooledconnectionsquotareached"></a><span data-ttu-id="9bb1a-102">3351 - ServerMaxPooledConnectionsQuotaReached</span><span class="sxs-lookup"><span data-stu-id="9bb1a-102">3351 - ServerMaxPooledConnectionsQuotaReached</span></span>
+## <a name="properties"></a><span data-ttu-id="9bb1a-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="9bb1a-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="26fb9-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="26fb9-104">ID</span></span>|<span data-ttu-id="26fb9-105">3351</span><span class="sxs-lookup"><span data-stu-id="26fb9-105">3351</span></span>|  
-|<span data-ttu-id="26fb9-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="26fb9-106">Keywords</span></span>|<span data-ttu-id="26fb9-107">Квота</span><span class="sxs-lookup"><span data-stu-id="26fb9-107">Quota</span></span>|  
-|<span data-ttu-id="26fb9-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="26fb9-108">Level</span></span>|<span data-ttu-id="26fb9-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="26fb9-109">Verbose</span></span>|  
-|<span data-ttu-id="26fb9-110">Канал</span><span class="sxs-lookup"><span data-stu-id="26fb9-110">Channel</span></span>|<span data-ttu-id="26fb9-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="26fb9-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="9bb1a-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="9bb1a-104">ID</span></span>|<span data-ttu-id="9bb1a-105">3351</span><span class="sxs-lookup"><span data-stu-id="9bb1a-105">3351</span></span>|  
+|<span data-ttu-id="9bb1a-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="9bb1a-106">Keywords</span></span>|<span data-ttu-id="9bb1a-107">Квота</span><span class="sxs-lookup"><span data-stu-id="9bb1a-107">Quota</span></span>|  
+|<span data-ttu-id="9bb1a-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="9bb1a-108">Level</span></span>|<span data-ttu-id="9bb1a-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="9bb1a-109">Verbose</span></span>|  
+|<span data-ttu-id="9bb1a-110">Канал</span><span class="sxs-lookup"><span data-stu-id="9bb1a-110">Channel</span></span>|<span data-ttu-id="9bb1a-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="9bb1a-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="26fb9-112">Описание</span><span class="sxs-lookup"><span data-stu-id="26fb9-112">Description</span></span>  
- <span data-ttu-id="26fb9-113">Это событие создается при достижении квоты максимального количества соединений в пуле сервера.</span><span class="sxs-lookup"><span data-stu-id="26fb9-113">This event is emitted when the server maximum pooled connections quota is reached.</span></span>  
+## <a name="description"></a><span data-ttu-id="9bb1a-112">Описание</span><span class="sxs-lookup"><span data-stu-id="9bb1a-112">Description</span></span>  
+ <span data-ttu-id="9bb1a-113">Это событие создается при достижении квоты максимального количества соединений в пуле сервера.</span><span class="sxs-lookup"><span data-stu-id="9bb1a-113">This event is emitted when the server maximum pooled connections quota is reached.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="26fb9-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="26fb9-114">Message</span></span>  
- <span data-ttu-id="26fb9-115">Достигнута квота максимального числа соединений в пуле.</span><span class="sxs-lookup"><span data-stu-id="26fb9-115">Server max pooled connections quota reached.</span></span>  
+## <a name="message"></a><span data-ttu-id="9bb1a-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="9bb1a-114">Message</span></span>  
+ <span data-ttu-id="9bb1a-115">Достигнута квота максимального числа соединений в пуле.</span><span class="sxs-lookup"><span data-stu-id="9bb1a-115">Server max pooled connections quota reached.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="26fb9-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="26fb9-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="9bb1a-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="9bb1a-116">Details</span></span>
