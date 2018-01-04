@@ -13,19 +13,20 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 683862eb4c40a13b87b0c99cced83416f29b142f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1a1fee565335a0dfc2182b1d8a350177b904ad83
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodeladministrationwmiput"></a><span data-ttu-id="738f9-102">System.ServiceModel.Administration.WmiPut</span><span class="sxs-lookup"><span data-stu-id="738f9-102">System.ServiceModel.Administration.WmiPut</span></span>
-<span data-ttu-id="738f9-103">System.ServiceModel.Administration.WmiPut</span><span class="sxs-lookup"><span data-stu-id="738f9-103">System.ServiceModel.Administration.WmiPut</span></span>  
+# <a name="systemservicemodeladministrationwmiput"></a><span data-ttu-id="dad68-102">System.ServiceModel.Administration.WmiPut</span><span class="sxs-lookup"><span data-stu-id="dad68-102">System.ServiceModel.Administration.WmiPut</span></span>
+<span data-ttu-id="dad68-103">System.ServiceModel.Administration.WmiPut</span><span class="sxs-lookup"><span data-stu-id="dad68-103">System.ServiceModel.Administration.WmiPut</span></span>  
   
-## <a name="description"></a><span data-ttu-id="738f9-104">Описание</span><span class="sxs-lookup"><span data-stu-id="738f9-104">Description</span></span>  
- <span data-ttu-id="738f9-105">Задание значения с помощью инструментария WMI.</span><span class="sxs-lookup"><span data-stu-id="738f9-105">Setting a value using WMI.</span></span>  
+## <a name="description"></a><span data-ttu-id="dad68-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="dad68-104">Description</span></span>  
+ <span data-ttu-id="dad68-105">Задание значения с помощью инструментария WMI.</span><span class="sxs-lookup"><span data-stu-id="dad68-105">Setting a value using WMI.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="738f9-106">См. также</span><span class="sxs-lookup"><span data-stu-id="738f9-106">See Also</span></span>  
- [<span data-ttu-id="738f9-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="738f9-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="738f9-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="738f9-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="738f9-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="738f9-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="dad68-106">См. также</span><span class="sxs-lookup"><span data-stu-id="dad68-106">See Also</span></span>  
+ [<span data-ttu-id="dad68-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="dad68-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="dad68-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="dad68-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="dad68-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="dad68-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

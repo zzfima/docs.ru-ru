@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 39efce36dc7259acc03e5b5c602040936deb68ca
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 33c755b4623d11b2acb5a91a375fec8fbba936b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationinstancecreationrequest"></a><span data-ttu-id="3d070-102">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest</span><span class="sxs-lookup"><span data-stu-id="3d070-102">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest</span></span>
-<span data-ttu-id="3d070-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest</span><span class="sxs-lookup"><span data-stu-id="3d070-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationinstancecreationrequest"></a><span data-ttu-id="0bf03-102">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest</span><span class="sxs-lookup"><span data-stu-id="0bf03-102">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest</span></span>
+<span data-ttu-id="0bf03-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest</span><span class="sxs-lookup"><span data-stu-id="0bf03-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest</span></span>  
   
-## <a name="description"></a><span data-ttu-id="3d070-104">Описание</span><span class="sxs-lookup"><span data-stu-id="3d070-104">Description</span></span>  
- <span data-ttu-id="3d070-105">ComPlus: Получен запрос на создание экземпляра.</span><span class="sxs-lookup"><span data-stu-id="3d070-105">ComPlus: Received instance creation request.</span></span>  
+## <a name="description"></a><span data-ttu-id="0bf03-104">Описание</span><span class="sxs-lookup"><span data-stu-id="0bf03-104">Description</span></span>  
+ <span data-ttu-id="0bf03-105">ComPlus: Получен запрос на создание экземпляра.</span><span class="sxs-lookup"><span data-stu-id="0bf03-105">ComPlus: Received instance creation request.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3d070-106">См. также</span><span class="sxs-lookup"><span data-stu-id="3d070-106">See Also</span></span>  
- [<span data-ttu-id="3d070-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="3d070-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="3d070-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="3d070-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="3d070-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="3d070-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="0bf03-106">См. также</span><span class="sxs-lookup"><span data-stu-id="0bf03-106">See Also</span></span>  
+ [<span data-ttu-id="0bf03-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="0bf03-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="0bf03-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="0bf03-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="0bf03-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="0bf03-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

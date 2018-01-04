@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 9549579af46a7fb81f7e789d790e9f093c5fba4e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4bbda7929522eda2314103fc356f885561a24f0b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecurityserversessionabortedfaultsent"></a><span data-ttu-id="1966b-102">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span><span class="sxs-lookup"><span data-stu-id="1966b-102">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span></span>
-<span data-ttu-id="1966b-103">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span><span class="sxs-lookup"><span data-stu-id="1966b-103">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span></span>  
+# <a name="systemservicemodelsecuritysecurityserversessionabortedfaultsent"></a><span data-ttu-id="f972a-102">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span><span class="sxs-lookup"><span data-stu-id="f972a-102">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span></span>
+<span data-ttu-id="f972a-103">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span><span class="sxs-lookup"><span data-stu-id="f972a-103">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span></span>  
   
-## <a name="description"></a><span data-ttu-id="1966b-104">Описание</span><span class="sxs-lookup"><span data-stu-id="1966b-104">Description</span></span>  
- <span data-ttu-id="1966b-105">Сеанс безопасности сервера отправил клиенту сообщение о сбое закрытия сеанса.</span><span class="sxs-lookup"><span data-stu-id="1966b-105">The server security session sent a session aborted fault to client.</span></span>  
+## <a name="description"></a><span data-ttu-id="f972a-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="f972a-104">Description</span></span>  
+ <span data-ttu-id="f972a-105">Сеанс безопасности сервера отправил клиенту сообщение о сбое закрытия сеанса.</span><span class="sxs-lookup"><span data-stu-id="f972a-105">The server security session sent a session aborted fault to client.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1966b-106">См. также</span><span class="sxs-lookup"><span data-stu-id="1966b-106">See Also</span></span>  
- [<span data-ttu-id="1966b-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="1966b-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="1966b-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="1966b-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="1966b-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="1966b-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="f972a-106">См. также</span><span class="sxs-lookup"><span data-stu-id="f972a-106">See Also</span></span>  
+ [<span data-ttu-id="f972a-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="f972a-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="f972a-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="f972a-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="f972a-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="f972a-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

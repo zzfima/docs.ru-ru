@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 7307c3cdd772ebbfe7d82dd4e62608eb6007a7fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1a26a12bc3ccabef83abf8e008910a9b6fdd4e00
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecuritysessiondemuxfailure"></a><span data-ttu-id="bb08a-102">System.ServiceModel.Security.SecuritySessionDemuxFailure</span><span class="sxs-lookup"><span data-stu-id="bb08a-102">System.ServiceModel.Security.SecuritySessionDemuxFailure</span></span>
-<span data-ttu-id="bb08a-103">System.ServiceModel.Security.SecuritySessionDemuxFailure</span><span class="sxs-lookup"><span data-stu-id="bb08a-103">System.ServiceModel.Security.SecuritySessionDemuxFailure</span></span>  
+# <a name="systemservicemodelsecuritysecuritysessiondemuxfailure"></a><span data-ttu-id="41abd-102">System.ServiceModel.Security.SecuritySessionDemuxFailure</span><span class="sxs-lookup"><span data-stu-id="41abd-102">System.ServiceModel.Security.SecuritySessionDemuxFailure</span></span>
+<span data-ttu-id="41abd-103">System.ServiceModel.Security.SecuritySessionDemuxFailure</span><span class="sxs-lookup"><span data-stu-id="41abd-103">System.ServiceModel.Security.SecuritySessionDemuxFailure</span></span>  
   
-## <a name="description"></a><span data-ttu-id="bb08a-104">Описание</span><span class="sxs-lookup"><span data-stu-id="bb08a-104">Description</span></span>  
- <span data-ttu-id="bb08a-105">Входящее сообщение не является частью существующего сеанса безопасности.</span><span class="sxs-lookup"><span data-stu-id="bb08a-105">The incoming message is not part of an existing security session.</span></span>  
+## <a name="description"></a><span data-ttu-id="41abd-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="41abd-104">Description</span></span>  
+ <span data-ttu-id="41abd-105">Входящее сообщение не является частью существующего сеанса безопасности.</span><span class="sxs-lookup"><span data-stu-id="41abd-105">The incoming message is not part of an existing security session.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bb08a-106">См. также</span><span class="sxs-lookup"><span data-stu-id="bb08a-106">See Also</span></span>  
- [<span data-ttu-id="bb08a-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="bb08a-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="bb08a-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="bb08a-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="bb08a-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="bb08a-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="41abd-106">См. также</span><span class="sxs-lookup"><span data-stu-id="41abd-106">See Also</span></span>  
+ [<span data-ttu-id="41abd-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="41abd-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="41abd-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="41abd-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="41abd-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="41abd-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

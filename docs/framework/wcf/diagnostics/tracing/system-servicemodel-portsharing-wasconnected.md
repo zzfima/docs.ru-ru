@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 651a60639a0b938009dace9b82202d862f294544
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e906a7c2ceefb08d7b2bd99c77fdc6aa7080f9bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelportsharingwasconnected"></a><span data-ttu-id="0efdc-102">System.ServiceModel.PortSharing.WasConnected</span><span class="sxs-lookup"><span data-stu-id="0efdc-102">System.ServiceModel.PortSharing.WasConnected</span></span>
-<span data-ttu-id="0efdc-103">System.ServiceModel.PortSharing.WasConnected</span><span class="sxs-lookup"><span data-stu-id="0efdc-103">System.ServiceModel.PortSharing.WasConnected</span></span>  
+# <a name="systemservicemodelportsharingwasconnected"></a><span data-ttu-id="c5aab-102">System.ServiceModel.PortSharing.WasConnected</span><span class="sxs-lookup"><span data-stu-id="c5aab-102">System.ServiceModel.PortSharing.WasConnected</span></span>
+<span data-ttu-id="c5aab-103">System.ServiceModel.PortSharing.WasConnected</span><span class="sxs-lookup"><span data-stu-id="c5aab-103">System.ServiceModel.PortSharing.WasConnected</span></span>  
   
-## <a name="description"></a><span data-ttu-id="0efdc-104">Описание</span><span class="sxs-lookup"><span data-stu-id="0efdc-104">Description</span></span>  
- <span data-ttu-id="0efdc-105">Служба активации Windows (WAS) подключена.</span><span class="sxs-lookup"><span data-stu-id="0efdc-105">Windows Process Activation Service (WAS) has connected.</span></span>  
+## <a name="description"></a><span data-ttu-id="c5aab-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="c5aab-104">Description</span></span>  
+ <span data-ttu-id="c5aab-105">Служба активации Windows (WAS) подключена.</span><span class="sxs-lookup"><span data-stu-id="c5aab-105">Windows Process Activation Service (WAS) has connected.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0efdc-106">См. также</span><span class="sxs-lookup"><span data-stu-id="0efdc-106">See Also</span></span>  
- [<span data-ttu-id="0efdc-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="0efdc-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="0efdc-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="0efdc-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="0efdc-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="0efdc-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="c5aab-106">См. также</span><span class="sxs-lookup"><span data-stu-id="c5aab-106">See Also</span></span>  
+ [<span data-ttu-id="c5aab-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="c5aab-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="c5aab-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="c5aab-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="c5aab-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="c5aab-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

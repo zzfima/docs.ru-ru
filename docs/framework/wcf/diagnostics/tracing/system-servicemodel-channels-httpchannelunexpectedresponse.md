@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfa4f5592e15f3cd9f76e35c02d12e038da3d422
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 19dd42c0ca019fe5ebcf86ef0d580dc49471f315
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelshttpchannelunexpectedresponse"></a><span data-ttu-id="f486e-102">System.ServiceModel.Channels.HttpChannelUnexpectedResponse</span><span class="sxs-lookup"><span data-stu-id="f486e-102">System.ServiceModel.Channels.HttpChannelUnexpectedResponse</span></span>
-<span data-ttu-id="f486e-103">System.ServiceModel.Channels.HttpChannelUnexpectedResponse</span><span class="sxs-lookup"><span data-stu-id="f486e-103">System.ServiceModel.Channels.HttpChannelUnexpectedResponse</span></span>  
+# <a name="systemservicemodelchannelshttpchannelunexpectedresponse"></a><span data-ttu-id="851d4-102">System.ServiceModel.Channels.HttpChannelUnexpectedResponse</span><span class="sxs-lookup"><span data-stu-id="851d4-102">System.ServiceModel.Channels.HttpChannelUnexpectedResponse</span></span>
+<span data-ttu-id="851d4-103">System.ServiceModel.Channels.HttpChannelUnexpectedResponse</span><span class="sxs-lookup"><span data-stu-id="851d4-103">System.ServiceModel.Channels.HttpChannelUnexpectedResponse</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f486e-104">Описание</span><span class="sxs-lookup"><span data-stu-id="f486e-104">Description</span></span>  
- <span data-ttu-id="f486e-105">Получен неправильный ответ HTTP.</span><span class="sxs-lookup"><span data-stu-id="f486e-105">Received a bad HTTP response.</span></span>  
+## <a name="description"></a><span data-ttu-id="851d4-104">Описание</span><span class="sxs-lookup"><span data-stu-id="851d4-104">Description</span></span>  
+ <span data-ttu-id="851d4-105">Получен неправильный ответ HTTP.</span><span class="sxs-lookup"><span data-stu-id="851d4-105">Received a bad HTTP response.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f486e-106">См. также</span><span class="sxs-lookup"><span data-stu-id="f486e-106">See Also</span></span>  
- [<span data-ttu-id="f486e-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="f486e-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="f486e-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="f486e-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="f486e-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="f486e-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="851d4-106">См. также</span><span class="sxs-lookup"><span data-stu-id="851d4-106">See Also</span></span>  
+ [<span data-ttu-id="851d4-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="851d4-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="851d4-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="851d4-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="851d4-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="851d4-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 9dd61980e4874988840d345e71b90b08400fe74c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4c321d9e84a18ba5cc01a3ef4386bdb273eb82f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecurityinactivesessionfaulted"></a><span data-ttu-id="97156-102">System.ServiceModel.Security.SecurityInactiveSessionFaulted</span><span class="sxs-lookup"><span data-stu-id="97156-102">System.ServiceModel.Security.SecurityInactiveSessionFaulted</span></span>
-<span data-ttu-id="97156-103">System.ServiceModel.Security.SecurityInactiveSessionFaulted</span><span class="sxs-lookup"><span data-stu-id="97156-103">System.ServiceModel.Security.SecurityInactiveSessionFaulted</span></span>  
+# <a name="systemservicemodelsecuritysecurityinactivesessionfaulted"></a><span data-ttu-id="83146-102">System.ServiceModel.Security.SecurityInactiveSessionFaulted</span><span class="sxs-lookup"><span data-stu-id="83146-102">System.ServiceModel.Security.SecurityInactiveSessionFaulted</span></span>
+<span data-ttu-id="83146-103">System.ServiceModel.Security.SecurityInactiveSessionFaulted</span><span class="sxs-lookup"><span data-stu-id="83146-103">System.ServiceModel.Security.SecurityInactiveSessionFaulted</span></span>  
   
-## <a name="description"></a><span data-ttu-id="97156-104">Описание</span><span class="sxs-lookup"><span data-stu-id="97156-104">Description</span></span>  
- <span data-ttu-id="97156-105">Сбой неактивного сеанса безопасности был вызван сервером.</span><span class="sxs-lookup"><span data-stu-id="97156-105">An inactive security session was faulted by the server.</span></span>  
+## <a name="description"></a><span data-ttu-id="83146-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="83146-104">Description</span></span>  
+ <span data-ttu-id="83146-105">Сбой неактивного сеанса безопасности был вызван сервером.</span><span class="sxs-lookup"><span data-stu-id="83146-105">An inactive security session was faulted by the server.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="97156-106">См. также</span><span class="sxs-lookup"><span data-stu-id="97156-106">See Also</span></span>  
- [<span data-ttu-id="97156-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="97156-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="97156-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="97156-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="97156-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="97156-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="83146-106">См. также</span><span class="sxs-lookup"><span data-stu-id="83146-106">See Also</span></span>  
+ [<span data-ttu-id="83146-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="83146-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="83146-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="83146-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="83146-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="83146-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

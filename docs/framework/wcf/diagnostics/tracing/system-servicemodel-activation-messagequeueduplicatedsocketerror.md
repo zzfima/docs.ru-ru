@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 71bc4dad8f0409b30b43f496f5bfee4c3d53c8a5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 91242969ab34937f238cf8b6d57b10be6ea2f15f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelactivationmessagequeueduplicatedsocketerror"></a><span data-ttu-id="77fa6-102">System.ServiceModel.Activation.MessageQueueDuplicatedSocketError</span><span class="sxs-lookup"><span data-stu-id="77fa6-102">System.ServiceModel.Activation.MessageQueueDuplicatedSocketError</span></span>
-<span data-ttu-id="77fa6-103">System.ServiceModel.Activation.MessageQueueDuplicatedSocketError</span><span class="sxs-lookup"><span data-stu-id="77fa6-103">System.ServiceModel.Activation.MessageQueueDuplicatedSocketError</span></span>  
+# <a name="systemservicemodelactivationmessagequeueduplicatedsocketerror"></a><span data-ttu-id="37a6d-102">System.ServiceModel.Activation.MessageQueueDuplicatedSocketError</span><span class="sxs-lookup"><span data-stu-id="37a6d-102">System.ServiceModel.Activation.MessageQueueDuplicatedSocketError</span></span>
+<span data-ttu-id="37a6d-103">System.ServiceModel.Activation.MessageQueueDuplicatedSocketError</span><span class="sxs-lookup"><span data-stu-id="37a6d-103">System.ServiceModel.Activation.MessageQueueDuplicatedSocketError</span></span>  
   
-## <a name="description"></a><span data-ttu-id="77fa6-104">Описание</span><span class="sxs-lookup"><span data-stu-id="77fa6-104">Description</span></span>  
- <span data-ttu-id="77fa6-105">Произошла ошибка при дублировании сокета.</span><span class="sxs-lookup"><span data-stu-id="77fa6-105">An error occurred while duplicating a socket.</span></span>  
+## <a name="description"></a><span data-ttu-id="37a6d-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="37a6d-104">Description</span></span>  
+ <span data-ttu-id="37a6d-105">Произошла ошибка при дублировании сокета.</span><span class="sxs-lookup"><span data-stu-id="37a6d-105">An error occurred while duplicating a socket.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="77fa6-106">См. также</span><span class="sxs-lookup"><span data-stu-id="77fa6-106">See Also</span></span>  
- [<span data-ttu-id="77fa6-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="77fa6-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="77fa6-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="77fa6-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="77fa6-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="77fa6-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="37a6d-106">См. также</span><span class="sxs-lookup"><span data-stu-id="37a6d-106">See Also</span></span>  
+ [<span data-ttu-id="37a6d-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="37a6d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="37a6d-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="37a6d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="37a6d-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="37a6d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

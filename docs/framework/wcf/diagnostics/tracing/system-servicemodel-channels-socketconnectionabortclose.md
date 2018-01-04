@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6f8d9c0180440417868e4dc4817f739ecf4cc2e1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 113253e49ce6d993e9b543f30f4d6a4a5887587d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelssocketconnectionabortclose"></a><span data-ttu-id="2eb44-102">System.ServiceModel.Channels.SocketConnectionAbortClose</span><span class="sxs-lookup"><span data-stu-id="2eb44-102">System.ServiceModel.Channels.SocketConnectionAbortClose</span></span>
-<span data-ttu-id="2eb44-103">System.ServiceModel.Channels.SocketConnectionAbortClose</span><span class="sxs-lookup"><span data-stu-id="2eb44-103">System.ServiceModel.Channels.SocketConnectionAbortClose</span></span>  
+# <a name="systemservicemodelchannelssocketconnectionabortclose"></a><span data-ttu-id="92002-102">System.ServiceModel.Channels.SocketConnectionAbortClose</span><span class="sxs-lookup"><span data-stu-id="92002-102">System.ServiceModel.Channels.SocketConnectionAbortClose</span></span>
+<span data-ttu-id="92002-103">System.ServiceModel.Channels.SocketConnectionAbortClose</span><span class="sxs-lookup"><span data-stu-id="92002-103">System.ServiceModel.Channels.SocketConnectionAbortClose</span></span>  
   
-## <a name="description"></a><span data-ttu-id="2eb44-104">Описание</span><span class="sxs-lookup"><span data-stu-id="2eb44-104">Description</span></span>  
- <span data-ttu-id="2eb44-105">SocketConnection прервано в Close.</span><span class="sxs-lookup"><span data-stu-id="2eb44-105">SocketConnection aborted under Close.</span></span>  
+## <a name="description"></a><span data-ttu-id="92002-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="92002-104">Description</span></span>  
+ <span data-ttu-id="92002-105">SocketConnection прервано в Close.</span><span class="sxs-lookup"><span data-stu-id="92002-105">SocketConnection aborted under Close.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2eb44-106">См. также</span><span class="sxs-lookup"><span data-stu-id="2eb44-106">See Also</span></span>  
- [<span data-ttu-id="2eb44-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="2eb44-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="2eb44-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="2eb44-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="2eb44-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="2eb44-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="92002-106">См. также</span><span class="sxs-lookup"><span data-stu-id="92002-106">See Also</span></span>  
+ [<span data-ttu-id="92002-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="92002-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="92002-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="92002-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="92002-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="92002-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

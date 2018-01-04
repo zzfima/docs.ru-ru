@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a2caa9d9806f4c9dcc2dbe5358766d87386d138c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4aac9c7184ea57d6d10ab4115fe12ee78e5d837f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelsopenedlistener"></a><span data-ttu-id="71a47-102">System.ServiceModel.Channels.OpenedListener</span><span class="sxs-lookup"><span data-stu-id="71a47-102">System.ServiceModel.Channels.OpenedListener</span></span>
-<span data-ttu-id="71a47-103">System.ServiceModel.Channels.OpenedListener</span><span class="sxs-lookup"><span data-stu-id="71a47-103">System.ServiceModel.Channels.OpenedListener</span></span>  
+# <a name="systemservicemodelchannelsopenedlistener"></a><span data-ttu-id="dacaa-102">System.ServiceModel.Channels.OpenedListener</span><span class="sxs-lookup"><span data-stu-id="dacaa-102">System.ServiceModel.Channels.OpenedListener</span></span>
+<span data-ttu-id="dacaa-103">System.ServiceModel.Channels.OpenedListener</span><span class="sxs-lookup"><span data-stu-id="dacaa-103">System.ServiceModel.Channels.OpenedListener</span></span>  
   
-## <a name="description"></a><span data-ttu-id="71a47-104">Описание</span><span class="sxs-lookup"><span data-stu-id="71a47-104">Description</span></span>  
- <span data-ttu-id="71a47-105">Транспорт ожидает передачи данных по базовому универсальному коду ресурса (URI).</span><span class="sxs-lookup"><span data-stu-id="71a47-105">Transport is listening at the base URI.</span></span>  
+## <a name="description"></a><span data-ttu-id="dacaa-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="dacaa-104">Description</span></span>  
+ <span data-ttu-id="dacaa-105">Транспорт ожидает передачи данных по базовому универсальному коду ресурса (URI).</span><span class="sxs-lookup"><span data-stu-id="dacaa-105">Transport is listening at the base URI.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="71a47-106">См. также</span><span class="sxs-lookup"><span data-stu-id="71a47-106">See Also</span></span>  
- [<span data-ttu-id="71a47-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="71a47-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="71a47-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="71a47-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="71a47-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="71a47-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="dacaa-106">См. также</span><span class="sxs-lookup"><span data-stu-id="dacaa-106">See Also</span></span>  
+ [<span data-ttu-id="dacaa-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="dacaa-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="dacaa-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="dacaa-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="dacaa-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="dacaa-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

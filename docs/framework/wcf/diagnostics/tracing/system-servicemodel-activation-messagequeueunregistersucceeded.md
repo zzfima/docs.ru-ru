@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 36dc0a86d521b25d05b19550a9626703a4422be6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 32bd5e52ce79043e0e795cd97968183d02e187f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelactivationmessagequeueunregistersucceeded"></a><span data-ttu-id="a8b9c-102">System.ServiceModel.Activation.MessageQueueUnregisterSucceeded</span><span class="sxs-lookup"><span data-stu-id="a8b9c-102">System.ServiceModel.Activation.MessageQueueUnregisterSucceeded</span></span>
-<span data-ttu-id="a8b9c-103">System.ServiceModel.Activation.MessageQueueUnregisterSucceeded</span><span class="sxs-lookup"><span data-stu-id="a8b9c-103">System.ServiceModel.Activation.MessageQueueUnregisterSucceeded</span></span>  
+# <a name="systemservicemodelactivationmessagequeueunregistersucceeded"></a><span data-ttu-id="6ea9a-102">System.ServiceModel.Activation.MessageQueueUnregisterSucceeded</span><span class="sxs-lookup"><span data-stu-id="6ea9a-102">System.ServiceModel.Activation.MessageQueueUnregisterSucceeded</span></span>
+<span data-ttu-id="6ea9a-103">System.ServiceModel.Activation.MessageQueueUnregisterSucceeded</span><span class="sxs-lookup"><span data-stu-id="6ea9a-103">System.ServiceModel.Activation.MessageQueueUnregisterSucceeded</span></span>  
   
-## <a name="description"></a><span data-ttu-id="a8b9c-104">Описание</span><span class="sxs-lookup"><span data-stu-id="a8b9c-104">Description</span></span>  
- <span data-ttu-id="a8b9c-105">Отмена регистрации очереди сообщений выполнена успешно.</span><span class="sxs-lookup"><span data-stu-id="a8b9c-105">Message queue unregister succeeded.</span></span>  
+## <a name="description"></a><span data-ttu-id="6ea9a-104">Описание</span><span class="sxs-lookup"><span data-stu-id="6ea9a-104">Description</span></span>  
+ <span data-ttu-id="6ea9a-105">Отмена регистрации очереди сообщений выполнена успешно.</span><span class="sxs-lookup"><span data-stu-id="6ea9a-105">Message queue unregister succeeded.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a8b9c-106">См. также</span><span class="sxs-lookup"><span data-stu-id="a8b9c-106">See Also</span></span>  
- [<span data-ttu-id="a8b9c-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="a8b9c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="a8b9c-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="a8b9c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="a8b9c-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="a8b9c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="6ea9a-106">См. также</span><span class="sxs-lookup"><span data-stu-id="6ea9a-106">See Also</span></span>  
+ [<span data-ttu-id="6ea9a-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="6ea9a-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="6ea9a-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="6ea9a-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="6ea9a-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="6ea9a-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

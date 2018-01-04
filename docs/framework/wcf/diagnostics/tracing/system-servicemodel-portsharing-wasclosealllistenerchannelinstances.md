@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 963e4a8467258b19ff1835c0054c1fc94b3c6770
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7038839cd329048c3d6dd079c68d5ba5a51aa83e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelportsharingwasclosealllistenerchannelinstances"></a><span data-ttu-id="70b86-102">System.ServiceModel.PortSharing.WasCloseAllListenerChannelInstances</span><span class="sxs-lookup"><span data-stu-id="70b86-102">System.ServiceModel.PortSharing.WasCloseAllListenerChannelInstances</span></span>
-<span data-ttu-id="70b86-103">System.ServiceModel.PortSharing.WasCloseAllListenerChannelInstances</span><span class="sxs-lookup"><span data-stu-id="70b86-103">System.ServiceModel.PortSharing.WasCloseAllListenerChannelInstances</span></span>  
+# <a name="systemservicemodelportsharingwasclosealllistenerchannelinstances"></a><span data-ttu-id="8ce40-102">System.ServiceModel.PortSharing.WasCloseAllListenerChannelInstances</span><span class="sxs-lookup"><span data-stu-id="8ce40-102">System.ServiceModel.PortSharing.WasCloseAllListenerChannelInstances</span></span>
+<span data-ttu-id="8ce40-103">System.ServiceModel.PortSharing.WasCloseAllListenerChannelInstances</span><span class="sxs-lookup"><span data-stu-id="8ce40-103">System.ServiceModel.PortSharing.WasCloseAllListenerChannelInstances</span></span>  
   
-## <a name="description"></a><span data-ttu-id="70b86-104">Описание</span><span class="sxs-lookup"><span data-stu-id="70b86-104">Description</span></span>  
- <span data-ttu-id="70b86-105">Закройте все экземпляры каналов прослушивателя с помощью службы активации Windows (WAS).</span><span class="sxs-lookup"><span data-stu-id="70b86-105">Close all listener channel instances using Windows Process Activation Service (WAS).</span></span>  
+## <a name="description"></a><span data-ttu-id="8ce40-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="8ce40-104">Description</span></span>  
+ <span data-ttu-id="8ce40-105">Закройте все экземпляры каналов прослушивателя с помощью службы активации Windows (WAS).</span><span class="sxs-lookup"><span data-stu-id="8ce40-105">Close all listener channel instances using Windows Process Activation Service (WAS).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="70b86-106">См. также</span><span class="sxs-lookup"><span data-stu-id="70b86-106">See Also</span></span>  
- [<span data-ttu-id="70b86-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="70b86-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="70b86-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="70b86-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="70b86-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="70b86-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="8ce40-106">См. также</span><span class="sxs-lookup"><span data-stu-id="8ce40-106">See Also</span></span>  
+ [<span data-ttu-id="8ce40-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="8ce40-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="8ce40-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="8ce40-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="8ce40-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="8ce40-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f4c3f3446a9e4cd30ea9a4ff2fb0ad6f3a2cb27
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ae44095f1c30437fc638b5893654e1d5017f2d04
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelsendpointlistenerclose"></a><span data-ttu-id="bb325-102">System.ServiceModel.Channels.EndpointListenerClose</span><span class="sxs-lookup"><span data-stu-id="bb325-102">System.ServiceModel.Channels.EndpointListenerClose</span></span>
-<span data-ttu-id="bb325-103">System.ServiceModel.Channels.EndpointListenerClose</span><span class="sxs-lookup"><span data-stu-id="bb325-103">System.ServiceModel.Channels.EndpointListenerClose</span></span>  
+# <a name="systemservicemodelchannelsendpointlistenerclose"></a><span data-ttu-id="7e0a3-102">System.ServiceModel.Channels.EndpointListenerClose</span><span class="sxs-lookup"><span data-stu-id="7e0a3-102">System.ServiceModel.Channels.EndpointListenerClose</span></span>
+<span data-ttu-id="7e0a3-103">System.ServiceModel.Channels.EndpointListenerClose</span><span class="sxs-lookup"><span data-stu-id="7e0a3-103">System.ServiceModel.Channels.EndpointListenerClose</span></span>  
   
-## <a name="description"></a><span data-ttu-id="bb325-104">Описание</span><span class="sxs-lookup"><span data-stu-id="bb325-104">Description</span></span>  
- <span data-ttu-id="bb325-105">Прослушиватель конечной точки закрыт.</span><span class="sxs-lookup"><span data-stu-id="bb325-105">Endpoint listener closed.</span></span>  
+## <a name="description"></a><span data-ttu-id="7e0a3-104">Описание</span><span class="sxs-lookup"><span data-stu-id="7e0a3-104">Description</span></span>  
+ <span data-ttu-id="7e0a3-105">Прослушиватель конечной точки закрыт.</span><span class="sxs-lookup"><span data-stu-id="7e0a3-105">Endpoint listener closed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bb325-106">См. также</span><span class="sxs-lookup"><span data-stu-id="bb325-106">See Also</span></span>  
- [<span data-ttu-id="bb325-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="bb325-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="bb325-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="bb325-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="bb325-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="bb325-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="7e0a3-106">См. также</span><span class="sxs-lookup"><span data-stu-id="7e0a3-106">See Also</span></span>  
+ [<span data-ttu-id="7e0a3-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="7e0a3-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="7e0a3-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="7e0a3-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="7e0a3-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="7e0a3-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
