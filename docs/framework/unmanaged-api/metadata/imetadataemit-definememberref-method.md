@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4dc4cd317e0e540aaa774cbf9c4c7a2a2ffa40be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 38c2c495bc88dadae2d71b1b3710f30998023516
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="imetadataemitdefinememberref-method"></a><span data-ttu-id="ec0db-102">Метод IMetaDataEmit::DefineMemberRef</span><span class="sxs-lookup"><span data-stu-id="ec0db-102">IMetaDataEmit::DefineMemberRef Method</span></span>
-<span data-ttu-id="ec0db-103">Определяет ссылку на член модуля вне текущей области и получает маркер для этого определения ссылки.</span><span class="sxs-lookup"><span data-stu-id="ec0db-103">Defines a reference to a member of a module outside the current scope, and gets a token to that reference definition.</span></span>  
+# <a name="imetadataemitdefinememberref-method"></a><span data-ttu-id="28c6b-102">Метод IMetaDataEmit::DefineMemberRef</span><span class="sxs-lookup"><span data-stu-id="28c6b-102">IMetaDataEmit::DefineMemberRef Method</span></span>
+<span data-ttu-id="28c6b-103">Определяет ссылку на член модуля вне текущей области и получает маркер для этого определения ссылки.</span><span class="sxs-lookup"><span data-stu-id="28c6b-103">Defines a reference to a member of a module outside the current scope, and gets a token to that reference definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ec0db-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ec0db-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="28c6b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="28c6b-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineMemberRef (   
@@ -42,31 +43,31 @@ HRESULT DefineMemberRef (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ec0db-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="ec0db-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="28c6b-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="28c6b-105">Parameters</span></span>  
  `tkImport`  
- <span data-ttu-id="ec0db-106">[in] Токен для целевого члена класса или интерфейса, если элемент не является общим; Если элемент является глобальным, `mdModuleRef` маркера для этого другого файла.</span><span class="sxs-lookup"><span data-stu-id="ec0db-106">[in] Token for the target member's class or interface, if the member is not global; if the member is global, the `mdModuleRef` token for that other file.</span></span>  
+ <span data-ttu-id="28c6b-106">[in] Токен для целевого члена класса или интерфейса, если элемент не является общим; Если элемент является глобальным, `mdModuleRef` маркера для этого другого файла.</span><span class="sxs-lookup"><span data-stu-id="28c6b-106">[in] Token for the target member's class or interface, if the member is not global; if the member is global, the `mdModuleRef` token for that other file.</span></span>  
   
  `szName`  
- <span data-ttu-id="ec0db-107">[in] Имя целевого элемента.</span><span class="sxs-lookup"><span data-stu-id="ec0db-107">[in] The name of the target member.</span></span>  
+ <span data-ttu-id="28c6b-107">[in] Имя целевого элемента.</span><span class="sxs-lookup"><span data-stu-id="28c6b-107">[in] The name of the target member.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="ec0db-108">[in] Сигнатура целевого элемента.</span><span class="sxs-lookup"><span data-stu-id="ec0db-108">[in] The signature of the target member.</span></span>  
+ <span data-ttu-id="28c6b-108">[in] Сигнатура целевого элемента.</span><span class="sxs-lookup"><span data-stu-id="28c6b-108">[in] The signature of the target member.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="ec0db-109">[in] Число байт в `pvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="ec0db-109">[in] The count of bytes in `pvSigBlob`.</span></span>  
+ <span data-ttu-id="28c6b-109">[in] Число байт в `pvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="28c6b-109">[in] The count of bytes in `pvSigBlob`.</span></span>  
   
  `pmr`  
- <span data-ttu-id="ec0db-110">[out] `mdMemberRef` Маркер, назначенный.</span><span class="sxs-lookup"><span data-stu-id="ec0db-110">[out] The `mdMemberRef` token assigned.</span></span>  
+ <span data-ttu-id="28c6b-110">[out] `mdMemberRef` Маркер, назначенный.</span><span class="sxs-lookup"><span data-stu-id="28c6b-110">[out] The `mdMemberRef` token assigned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ec0db-111">Требования</span><span class="sxs-lookup"><span data-stu-id="ec0db-111">Requirements</span></span>  
- <span data-ttu-id="ec0db-112">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ec0db-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="28c6b-111">Требования</span><span class="sxs-lookup"><span data-stu-id="28c6b-111">Requirements</span></span>  
+ <span data-ttu-id="28c6b-112">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="28c6b-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ec0db-113">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ec0db-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="28c6b-113">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="28c6b-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="ec0db-114">**Библиотека:** используется как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ec0db-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="28c6b-114">**Библиотека:** используется как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="28c6b-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ec0db-115">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ec0db-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="28c6b-115">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="28c6b-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ec0db-116">См. также</span><span class="sxs-lookup"><span data-stu-id="ec0db-116">See Also</span></span>  
- [<span data-ttu-id="ec0db-117">IMetaDataEmit-интерфейс</span><span class="sxs-lookup"><span data-stu-id="ec0db-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="ec0db-118">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="ec0db-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="28c6b-116">См. также</span><span class="sxs-lookup"><span data-stu-id="28c6b-116">See Also</span></span>  
+ [<span data-ttu-id="28c6b-117">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="28c6b-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
+ [<span data-ttu-id="28c6b-118">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="28c6b-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

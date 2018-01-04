@@ -21,16 +21,17 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a86a93db6058a8fda42e837388f7fa4cf5c765c0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0a50fe9d0fddc6239eb03c9007ec2ca64d7d27ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanagedvariablegetname-method"></a><span data-ttu-id="a576c-102">Метод ISymUnmanagedVariable::GetName</span><span class="sxs-lookup"><span data-stu-id="a576c-102">ISymUnmanagedVariable::GetName Method</span></span>
-<span data-ttu-id="a576c-103">Получает имя этой переменной.</span><span class="sxs-lookup"><span data-stu-id="a576c-103">Gets the name of this variable.</span></span>  
+# <a name="isymunmanagedvariablegetname-method"></a><span data-ttu-id="06ab5-102">Метод ISymUnmanagedVariable::GetName</span><span class="sxs-lookup"><span data-stu-id="06ab5-102">ISymUnmanagedVariable::GetName Method</span></span>
+<span data-ttu-id="06ab5-103">Получает имя этой переменной.</span><span class="sxs-lookup"><span data-stu-id="06ab5-103">Gets the name of this variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a576c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a576c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="06ab5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="06ab5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetName(  
@@ -40,21 +41,21 @@ HRESULT GetName(
         length_is(*pcchName)] WCHAR szName[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a576c-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a576c-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="06ab5-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="06ab5-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="a576c-106">[in] Длина буфера, `pcchName` указывает параметр.</span><span class="sxs-lookup"><span data-stu-id="a576c-106">[in] The length of the buffer that the `pcchName` parameter points to.</span></span>  
+ <span data-ttu-id="06ab5-106">[in] Длина буфера, `pcchName` указывает параметр.</span><span class="sxs-lookup"><span data-stu-id="06ab5-106">[in] The length of the buffer that the `pcchName` parameter points to.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="a576c-107">[out] Указатель на `ULONG32` , получающий размер в символах, буфера, должны содержать имя, включая нулем.</span><span class="sxs-lookup"><span data-stu-id="a576c-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the name, including the null termination.</span></span>  
+ <span data-ttu-id="06ab5-107">[out] Указатель на `ULONG32` , получающий размер в символах, буфера, должны содержать имя, включая нулем.</span><span class="sxs-lookup"><span data-stu-id="06ab5-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the name, including the null termination.</span></span>  
   
  `szName`  
- <span data-ttu-id="a576c-108">[out] Буфер, в которой хранится имя.</span><span class="sxs-lookup"><span data-stu-id="a576c-108">[out] The buffer that stores the name.</span></span>  
+ <span data-ttu-id="06ab5-108">[out] Буфер, в которой хранится имя.</span><span class="sxs-lookup"><span data-stu-id="06ab5-108">[out] The buffer that stores the name.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a576c-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="a576c-109">Return Value</span></span>  
- <span data-ttu-id="a576c-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="a576c-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="06ab5-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="06ab5-109">Return Value</span></span>  
+ <span data-ttu-id="06ab5-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="06ab5-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a576c-111">Требования</span><span class="sxs-lookup"><span data-stu-id="a576c-111">Requirements</span></span>  
- <span data-ttu-id="a576c-112">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a576c-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="06ab5-111">Требования</span><span class="sxs-lookup"><span data-stu-id="06ab5-111">Requirements</span></span>  
+ <span data-ttu-id="06ab5-112">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="06ab5-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a576c-113">См. также</span><span class="sxs-lookup"><span data-stu-id="a576c-113">See Also</span></span>  
- [<span data-ttu-id="a576c-114">ISymUnmanagedVariable-интерфейс</span><span class="sxs-lookup"><span data-stu-id="a576c-114">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+## <a name="see-also"></a><span data-ttu-id="06ab5-113">См. также</span><span class="sxs-lookup"><span data-stu-id="06ab5-113">See Also</span></span>  
+ [<span data-ttu-id="06ab5-114">Интерфейс ISymUnmanagedVariable</span><span class="sxs-lookup"><span data-stu-id="06ab5-114">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

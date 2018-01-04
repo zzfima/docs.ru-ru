@@ -21,16 +21,17 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6c47f1f491b184e9abe9d56d0729100b0d9b36a7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: dcddebbca74bb94bd2411038a02b900b2f64f2d5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanageddocumentgetsourcerange-method"></a><span data-ttu-id="df71a-102">Метод ISymUnmanagedDocument::GetSourceRange</span><span class="sxs-lookup"><span data-stu-id="df71a-102">ISymUnmanagedDocument::GetSourceRange Method</span></span>
-<span data-ttu-id="df71a-103">Возвращает заданный диапазон внедренного источника в заданный буфер.</span><span class="sxs-lookup"><span data-stu-id="df71a-103">Returns the specified range of the embedded source into the given buffer.</span></span> <span data-ttu-id="df71a-104">Размер буфера должен быть достаточно велик для хранения источника.</span><span class="sxs-lookup"><span data-stu-id="df71a-104">The buffer must be large enough to hold the source.</span></span>  
+# <a name="isymunmanageddocumentgetsourcerange-method"></a><span data-ttu-id="53701-102">Метод ISymUnmanagedDocument::GetSourceRange</span><span class="sxs-lookup"><span data-stu-id="53701-102">ISymUnmanagedDocument::GetSourceRange Method</span></span>
+<span data-ttu-id="53701-103">Возвращает заданный диапазон внедренного источника в заданный буфер.</span><span class="sxs-lookup"><span data-stu-id="53701-103">Returns the specified range of the embedded source into the given buffer.</span></span> <span data-ttu-id="53701-104">Размер буфера должен быть достаточно велик для хранения источника.</span><span class="sxs-lookup"><span data-stu-id="53701-104">The buffer must be large enough to hold the source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="df71a-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="df71a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="53701-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="53701-105">Syntax</span></span>  
   
 ```  
 HRESULT GetSourceRange(  
@@ -44,30 +45,30 @@ HRESULT GetSourceRange(
         length_is(*pcSourceBytes)] BYTE source[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="df71a-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="df71a-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="53701-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="53701-106">Parameters</span></span>  
  `startLine`  
- <span data-ttu-id="df71a-107">[in] Начальная строка текущего документа.</span><span class="sxs-lookup"><span data-stu-id="df71a-107">[in] The starting line in the current document.</span></span>  
+ <span data-ttu-id="53701-107">[in] Начальная строка текущего документа.</span><span class="sxs-lookup"><span data-stu-id="53701-107">[in] The starting line in the current document.</span></span>  
   
  `startColumn`  
- <span data-ttu-id="df71a-108">[in] Начальный столбец текущего документа.</span><span class="sxs-lookup"><span data-stu-id="df71a-108">[in] The starting column in the current document.</span></span>  
+ <span data-ttu-id="53701-108">[in] Начальный столбец текущего документа.</span><span class="sxs-lookup"><span data-stu-id="53701-108">[in] The starting column in the current document.</span></span>  
   
  `endLine`  
- <span data-ttu-id="df71a-109">[in] Последняя строка в текущем документе.</span><span class="sxs-lookup"><span data-stu-id="df71a-109">[in] The final line in the current document.</span></span>  
+ <span data-ttu-id="53701-109">[in] Последняя строка в текущем документе.</span><span class="sxs-lookup"><span data-stu-id="53701-109">[in] The final line in the current document.</span></span>  
   
  `endColumn`  
- <span data-ttu-id="df71a-110">[in] Последний столбец в текущем документе.</span><span class="sxs-lookup"><span data-stu-id="df71a-110">[in] The final column in the current document.</span></span>  
+ <span data-ttu-id="53701-110">[in] Последний столбец в текущем документе.</span><span class="sxs-lookup"><span data-stu-id="53701-110">[in] The final column in the current document.</span></span>  
   
  `cSourceBytes`  
- <span data-ttu-id="df71a-111">[in] Размер источника в байтах.</span><span class="sxs-lookup"><span data-stu-id="df71a-111">[in] The size of the source, in bytes.</span></span>  
+ <span data-ttu-id="53701-111">[in] Размер источника в байтах.</span><span class="sxs-lookup"><span data-stu-id="53701-111">[in] The size of the source, in bytes.</span></span>  
   
  `pcSourceBytes`  
- <span data-ttu-id="df71a-112">[out] Указатель на переменную, которая получает размер источника.</span><span class="sxs-lookup"><span data-stu-id="df71a-112">[out] A pointer to a variable that receives the source size.</span></span>  
+ <span data-ttu-id="53701-112">[out] Указатель на переменную, которая получает размер источника.</span><span class="sxs-lookup"><span data-stu-id="53701-112">[out] A pointer to a variable that receives the source size.</span></span>  
   
  `source`  
- <span data-ttu-id="df71a-113">[out] Размер и длина указанного диапазона исходного документа, в байтах.</span><span class="sxs-lookup"><span data-stu-id="df71a-113">[out] The size and length of the specified range of the source document, in bytes.</span></span>  
+ <span data-ttu-id="53701-113">[out] Размер и длина указанного диапазона исходного документа, в байтах.</span><span class="sxs-lookup"><span data-stu-id="53701-113">[out] The size and length of the specified range of the source document, in bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="df71a-114">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="df71a-114">Return Value</span></span>  
- <span data-ttu-id="df71a-115">Значение S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="df71a-115">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="53701-114">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="53701-114">Return Value</span></span>  
+ <span data-ttu-id="53701-115">Значение S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="53701-115">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="df71a-116">См. также</span><span class="sxs-lookup"><span data-stu-id="df71a-116">See Also</span></span>  
- [<span data-ttu-id="df71a-117">Интерфейс ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="df71a-117">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="53701-116">См. также</span><span class="sxs-lookup"><span data-stu-id="53701-116">See Also</span></span>  
+ [<span data-ttu-id="53701-117">Интерфейс ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="53701-117">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

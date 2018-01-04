@@ -21,16 +21,17 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 986c9ab7853324d1a2f0fc104399141068ae9a09
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5abd854e224b19efa72100db0163d61b42b0b63c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="iclrdebugmanagerisdebuggerattached-method"></a><span data-ttu-id="06d89-102">Метод ICLRDebugManager::IsDebuggerAttached</span><span class="sxs-lookup"><span data-stu-id="06d89-102">ICLRDebugManager::IsDebuggerAttached Method</span></span>
-<span data-ttu-id="06d89-103">Получает значение, показывающее, присоединен ли отладчик к процессу.</span><span class="sxs-lookup"><span data-stu-id="06d89-103">Gets a value that indicates whether a debugger is attached to the process.</span></span>  
+# <a name="iclrdebugmanagerisdebuggerattached-method"></a><span data-ttu-id="9559c-102">Метод ICLRDebugManager::IsDebuggerAttached</span><span class="sxs-lookup"><span data-stu-id="9559c-102">ICLRDebugManager::IsDebuggerAttached Method</span></span>
+<span data-ttu-id="9559c-103">Получает значение, показывающее, присоединен ли отладчик к процессу.</span><span class="sxs-lookup"><span data-stu-id="9559c-103">Gets a value that indicates whether a debugger is attached to the process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="06d89-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="06d89-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9559c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9559c-104">Syntax</span></span>  
   
 ```  
 HRESULT IsDebuggerAttached (  
@@ -38,34 +39,34 @@ HRESULT IsDebuggerAttached (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="06d89-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="06d89-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9559c-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="9559c-105">Parameters</span></span>  
  `pbAttached`  
- <span data-ttu-id="06d89-106">[out] `true` Если отладчик присоединен к процессу; в противном случае — `false`.</span><span class="sxs-lookup"><span data-stu-id="06d89-106">[out] `true` if a debugger is attached to the process; otherwise, `false`.</span></span>  
+ <span data-ttu-id="9559c-106">[out] `true` Если отладчик присоединен к процессу; в противном случае — `false`.</span><span class="sxs-lookup"><span data-stu-id="9559c-106">[out] `true` if a debugger is attached to the process; otherwise, `false`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="06d89-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="06d89-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9559c-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="9559c-107">Return Value</span></span>  
   
-|<span data-ttu-id="06d89-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="06d89-108">HRESULT</span></span>|<span data-ttu-id="06d89-109">Описание</span><span class="sxs-lookup"><span data-stu-id="06d89-109">Description</span></span>|  
+|<span data-ttu-id="9559c-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9559c-108">HRESULT</span></span>|<span data-ttu-id="9559c-109">Описание</span><span class="sxs-lookup"><span data-stu-id="9559c-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="06d89-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="06d89-110">S_OK</span></span>|<span data-ttu-id="06d89-111">`IsDebuggerAttached`успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="06d89-111">`IsDebuggerAttached` returned successfully.</span></span>|  
-|<span data-ttu-id="06d89-112">ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="06d89-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="06d89-113">Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.</span><span class="sxs-lookup"><span data-stu-id="06d89-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="06d89-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="06d89-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="06d89-115">Истекло время ожидания вызова.</span><span class="sxs-lookup"><span data-stu-id="06d89-115">The call timed out.</span></span>|  
-|<span data-ttu-id="06d89-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="06d89-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="06d89-117">Вызывающий объект не является владельцем блокировки.</span><span class="sxs-lookup"><span data-stu-id="06d89-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="06d89-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="06d89-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="06d89-119">Событие было отменено заблокированный поток или ожидал волокон.</span><span class="sxs-lookup"><span data-stu-id="06d89-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="06d89-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="06d89-120">E_FAIL</span></span>|<span data-ttu-id="06d89-121">Неизвестная Неустранимая ошибка.</span><span class="sxs-lookup"><span data-stu-id="06d89-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="06d89-122">После метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе.</span><span class="sxs-lookup"><span data-stu-id="06d89-122">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="06d89-123">Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="06d89-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="9559c-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="9559c-110">S_OK</span></span>|<span data-ttu-id="9559c-111">`IsDebuggerAttached`успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="9559c-111">`IsDebuggerAttached` returned successfully.</span></span>|  
+|<span data-ttu-id="9559c-112">ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="9559c-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="9559c-113">Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.</span><span class="sxs-lookup"><span data-stu-id="9559c-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="9559c-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="9559c-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="9559c-115">Истекло время ожидания вызова.</span><span class="sxs-lookup"><span data-stu-id="9559c-115">The call timed out.</span></span>|  
+|<span data-ttu-id="9559c-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="9559c-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="9559c-117">Вызывающий объект не является владельцем блокировки.</span><span class="sxs-lookup"><span data-stu-id="9559c-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="9559c-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="9559c-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="9559c-119">Событие было отменено заблокированный поток или ожидал волокон.</span><span class="sxs-lookup"><span data-stu-id="9559c-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="9559c-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="9559c-120">E_FAIL</span></span>|<span data-ttu-id="9559c-121">Неизвестная Неустранимая ошибка.</span><span class="sxs-lookup"><span data-stu-id="9559c-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="9559c-122">После метод вернет значение E_FAIL, среда CLR больше не может использоваться в процессе.</span><span class="sxs-lookup"><span data-stu-id="9559c-122">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="9559c-123">Последующие вызовы размещение методы возвращают значение HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="9559c-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="06d89-124">Примечания</span><span class="sxs-lookup"><span data-stu-id="06d89-124">Remarks</span></span>  
- <span data-ttu-id="06d89-125">`IsDebuggerAttached`предоставляет узлу возможность запрашивать средой CLR с целью определить, присоединен ли отладчик к процессу.</span><span class="sxs-lookup"><span data-stu-id="06d89-125">`IsDebuggerAttached` allows the host to query the CLR to determine whether a debugger is attached to the process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9559c-124">Примечания</span><span class="sxs-lookup"><span data-stu-id="9559c-124">Remarks</span></span>  
+ <span data-ttu-id="9559c-125">`IsDebuggerAttached`предоставляет узлу возможность запрашивать средой CLR с целью определить, присоединен ли отладчик к процессу.</span><span class="sxs-lookup"><span data-stu-id="9559c-125">`IsDebuggerAttached` allows the host to query the CLR to determine whether a debugger is attached to the process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="06d89-126">Требования</span><span class="sxs-lookup"><span data-stu-id="06d89-126">Requirements</span></span>  
- <span data-ttu-id="06d89-127">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="06d89-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9559c-126">Требования</span><span class="sxs-lookup"><span data-stu-id="9559c-126">Requirements</span></span>  
+ <span data-ttu-id="9559c-127">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9559c-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="06d89-128">**Заголовок:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="06d89-128">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="9559c-128">**Заголовок:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9559c-128">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="06d89-129">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="06d89-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="9559c-129">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9559c-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="06d89-130">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="06d89-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9559c-130">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9559c-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="06d89-131">См. также</span><span class="sxs-lookup"><span data-stu-id="06d89-131">See Also</span></span>  
- [<span data-ttu-id="06d89-132">ICLRControl-интерфейс</span><span class="sxs-lookup"><span data-stu-id="06d89-132">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
- [<span data-ttu-id="06d89-133">Iclrdebugmanager-интерфейс</span><span class="sxs-lookup"><span data-stu-id="06d89-133">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)  
- [<span data-ttu-id="06d89-134">IHostControl-интерфейс</span><span class="sxs-lookup"><span data-stu-id="06d89-134">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9559c-131">См. также</span><span class="sxs-lookup"><span data-stu-id="9559c-131">See Also</span></span>  
+ [<span data-ttu-id="9559c-132">Интерфейс ICLRControl</span><span class="sxs-lookup"><span data-stu-id="9559c-132">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
+ [<span data-ttu-id="9559c-133">Интерфейс ICLRDebugManager</span><span class="sxs-lookup"><span data-stu-id="9559c-133">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)  
+ [<span data-ttu-id="9559c-134">Интерфейс IHostControl</span><span class="sxs-lookup"><span data-stu-id="9559c-134">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

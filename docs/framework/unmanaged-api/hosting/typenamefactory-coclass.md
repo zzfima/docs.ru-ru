@@ -19,16 +19,17 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c02445a7a46bd9367b84edcf5ef5f012be5232e5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1ab7b6cc6360103c43430516490199cc278d2dfe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="typenamefactory-coclass"></a><span data-ttu-id="33d8f-102">Кокласс TypeNameFactory</span><span class="sxs-lookup"><span data-stu-id="33d8f-102">TypeNameFactory Coclass</span></span>
-<span data-ttu-id="33d8f-103">Предоставляет интерфейс для управления деконструкцией имени типа.</span><span class="sxs-lookup"><span data-stu-id="33d8f-103">Provides an interface for managing the deconstruction of a type name.</span></span>  
+# <a name="typenamefactory-coclass"></a><span data-ttu-id="42da4-102">Кокласс TypeNameFactory</span><span class="sxs-lookup"><span data-stu-id="42da4-102">TypeNameFactory Coclass</span></span>
+<span data-ttu-id="42da4-103">Предоставляет интерфейс для управления деконструкцией имени типа.</span><span class="sxs-lookup"><span data-stu-id="42da4-103">Provides an interface for managing the deconstruction of a type name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="33d8f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="33d8f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="42da4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="42da4-104">Syntax</span></span>  
   
 ```  
 coclass TypeNameFactory {  
@@ -36,20 +37,20 @@ coclass TypeNameFactory {
 };  
 ```  
   
-## <a name="interfaces"></a><span data-ttu-id="33d8f-105">Интерфейсы</span><span class="sxs-lookup"><span data-stu-id="33d8f-105">Interfaces</span></span>  
+## <a name="interfaces"></a><span data-ttu-id="42da4-105">интерфейсов,</span><span class="sxs-lookup"><span data-stu-id="42da4-105">Interfaces</span></span>  
   
-|<span data-ttu-id="33d8f-106">Интерфейс</span><span class="sxs-lookup"><span data-stu-id="33d8f-106">Interface</span></span>|<span data-ttu-id="33d8f-107">Описание</span><span class="sxs-lookup"><span data-stu-id="33d8f-107">Description</span></span>|  
+|<span data-ttu-id="42da4-106">Интерфейс</span><span class="sxs-lookup"><span data-stu-id="42da4-106">Interface</span></span>|<span data-ttu-id="42da4-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="42da4-107">Description</span></span>|  
 |---------------|-----------------|  
-|[<span data-ttu-id="33d8f-108">Itypenamefactory-интерфейс</span><span class="sxs-lookup"><span data-stu-id="33d8f-108">ITypeNameFactory Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)|<span data-ttu-id="33d8f-109">Этот интерфейс поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.</span><span class="sxs-lookup"><span data-stu-id="33d8f-109">This interface supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>|  
+|[<span data-ttu-id="42da4-108">Интерфейс ITypeNameFactory</span><span class="sxs-lookup"><span data-stu-id="42da4-108">ITypeNameFactory Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)|<span data-ttu-id="42da4-109">Этот интерфейс поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.</span><span class="sxs-lookup"><span data-stu-id="42da4-109">This interface supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="33d8f-110">Требования</span><span class="sxs-lookup"><span data-stu-id="33d8f-110">Requirements</span></span>  
- <span data-ttu-id="33d8f-111">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="33d8f-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="42da4-110">Требования</span><span class="sxs-lookup"><span data-stu-id="42da4-110">Requirements</span></span>  
+ <span data-ttu-id="42da4-111">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="42da4-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="33d8f-112">**Заголовок:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="33d8f-112">**Header:** MSCorEE.idl</span></span>  
+ <span data-ttu-id="42da4-112">**Заголовок:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="42da4-112">**Header:** MSCorEE.idl</span></span>  
   
- <span data-ttu-id="33d8f-113">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="33d8f-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="42da4-113">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="42da4-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="33d8f-114">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="33d8f-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="42da4-114">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="42da4-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="33d8f-115">См. также</span><span class="sxs-lookup"><span data-stu-id="33d8f-115">See Also</span></span>  
- [<span data-ttu-id="33d8f-116">Размещение компонентных классов</span><span class="sxs-lookup"><span data-stu-id="33d8f-116">Hosting Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+## <a name="see-also"></a><span data-ttu-id="42da4-115">См. также</span><span class="sxs-lookup"><span data-stu-id="42da4-115">See Also</span></span>  
+ [<span data-ttu-id="42da4-116">Размещение коклассов</span><span class="sxs-lookup"><span data-stu-id="42da4-116">Hosting Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d109d8e28f94edc3eeceeb22d2d0639d010b532e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0c2e0065b8dd16e32ed624dd073276e7885c1a52
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugenumskip-method"></a><span data-ttu-id="a3f09-102">Метод ICorDebugEnum::Skip</span><span class="sxs-lookup"><span data-stu-id="a3f09-102">ICorDebugEnum::Skip Method</span></span>
-<span data-ttu-id="a3f09-103">Перемещение курсора вперед в перечислении указанное число элементов.</span><span class="sxs-lookup"><span data-stu-id="a3f09-103">Moves the cursor forward in the enumeration by the specified number of items.</span></span>  
+# <a name="icordebugenumskip-method"></a><span data-ttu-id="ed1e0-102">Метод ICorDebugEnum::Skip</span><span class="sxs-lookup"><span data-stu-id="ed1e0-102">ICorDebugEnum::Skip Method</span></span>
+<span data-ttu-id="ed1e0-103">Перемещение курсора вперед в перечислении указанное число элементов.</span><span class="sxs-lookup"><span data-stu-id="ed1e0-103">Moves the cursor forward in the enumeration by the specified number of items.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a3f09-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a3f09-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ed1e0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ed1e0-104">Syntax</span></span>  
   
 ```  
 HRESULT Skip (  
@@ -38,18 +39,18 @@ HRESULT Skip (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a3f09-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a3f09-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ed1e0-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="ed1e0-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="a3f09-106">[in] Количество элементов, с помощью которого для перемещения курсора вперед.</span><span class="sxs-lookup"><span data-stu-id="a3f09-106">[in] The number of items by which to move the cursor forward.</span></span>  
+ <span data-ttu-id="ed1e0-106">[in] Количество элементов, с помощью которого для перемещения курсора вперед.</span><span class="sxs-lookup"><span data-stu-id="ed1e0-106">[in] The number of items by which to move the cursor forward.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a3f09-107">Требования</span><span class="sxs-lookup"><span data-stu-id="a3f09-107">Requirements</span></span>  
- <span data-ttu-id="a3f09-108">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a3f09-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ed1e0-107">Требования</span><span class="sxs-lookup"><span data-stu-id="ed1e0-107">Requirements</span></span>  
+ <span data-ttu-id="ed1e0-108">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ed1e0-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a3f09-109">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a3f09-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ed1e0-109">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ed1e0-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a3f09-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a3f09-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ed1e0-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ed1e0-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a3f09-111">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a3f09-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ed1e0-111">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ed1e0-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a3f09-112">См. также</span><span class="sxs-lookup"><span data-stu-id="a3f09-112">See Also</span></span>  
- [<span data-ttu-id="a3f09-113">ICorDebugEnum интерфейс1</span><span class="sxs-lookup"><span data-stu-id="a3f09-113">ICorDebugEnum Interface1</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)
+## <a name="see-also"></a><span data-ttu-id="ed1e0-112">См. также</span><span class="sxs-lookup"><span data-stu-id="ed1e0-112">See Also</span></span>  
+ [<span data-ttu-id="ed1e0-113">Интерфейс1 ICorDebugEnum</span><span class="sxs-lookup"><span data-stu-id="ed1e0-113">ICorDebugEnum Interface1</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)

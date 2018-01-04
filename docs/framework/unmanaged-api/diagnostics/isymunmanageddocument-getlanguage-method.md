@@ -21,28 +21,29 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: af0ffb422ec677997b6e2b6323b975ba4d69e5ae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 31fdd2caaf877372fa28693cdc5b09ddf601427c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanageddocumentgetlanguage-method"></a><span data-ttu-id="03c65-102">Метод ISymUnmanagedDocument::GetLanguage</span><span class="sxs-lookup"><span data-stu-id="03c65-102">ISymUnmanagedDocument::GetLanguage Method</span></span>
-<span data-ttu-id="03c65-103">Возвращает идентификатор языка в этом документе</span><span class="sxs-lookup"><span data-stu-id="03c65-103">Gets the language identifier of this document</span></span>  
+# <a name="isymunmanageddocumentgetlanguage-method"></a><span data-ttu-id="6b8a7-102">Метод ISymUnmanagedDocument::GetLanguage</span><span class="sxs-lookup"><span data-stu-id="6b8a7-102">ISymUnmanagedDocument::GetLanguage Method</span></span>
+<span data-ttu-id="6b8a7-103">Возвращает идентификатор языка в этом документе</span><span class="sxs-lookup"><span data-stu-id="6b8a7-103">Gets the language identifier of this document</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="03c65-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="03c65-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6b8a7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6b8a7-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLanguage(  
     [out, retval]  GUID*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="03c65-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="03c65-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="6b8a7-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="6b8a7-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="03c65-106">[out] Указатель на переменную, которая получает идентификатор языка.</span><span class="sxs-lookup"><span data-stu-id="03c65-106">[out] A pointer to a variable that receives the language identifier.</span></span>  
+ <span data-ttu-id="6b8a7-106">[out] Указатель на переменную, которая получает идентификатор языка.</span><span class="sxs-lookup"><span data-stu-id="6b8a7-106">[out] A pointer to a variable that receives the language identifier.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="03c65-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="03c65-107">Return Value</span></span>  
- <span data-ttu-id="03c65-108">Значение S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="03c65-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6b8a7-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="6b8a7-107">Return Value</span></span>  
+ <span data-ttu-id="6b8a7-108">Значение S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="6b8a7-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="03c65-109">См. также</span><span class="sxs-lookup"><span data-stu-id="03c65-109">See Also</span></span>  
- [<span data-ttu-id="03c65-110">Интерфейс ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="03c65-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6b8a7-109">См. также</span><span class="sxs-lookup"><span data-stu-id="6b8a7-109">See Also</span></span>  
+ [<span data-ttu-id="6b8a7-110">Интерфейс ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="6b8a7-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

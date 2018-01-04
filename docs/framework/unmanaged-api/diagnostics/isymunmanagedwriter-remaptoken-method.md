@@ -21,16 +21,17 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 857b68c0443e7b23af30ed64ecc9b78af0b40880
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 86d6c78a49c55bdc9093241952bee00ee331696e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanagedwriterremaptoken-method"></a><span data-ttu-id="219d5-102">Метод ISymUnmanagedWriter::RemapToken</span><span class="sxs-lookup"><span data-stu-id="219d5-102">ISymUnmanagedWriter::RemapToken Method</span></span>
-<span data-ttu-id="219d5-103">Уведомляет модуля записи символов о том, что маркер метаданных был повторно сопоставлен при выдаче метаданных.</span><span class="sxs-lookup"><span data-stu-id="219d5-103">Notifies the symbol writer that a metadata token has been remapped as the metadata was emitted.</span></span> <span data-ttu-id="219d5-104">Если модуль записи символов с сохраненными старый токен в хранилище символов, его необходимо либо обновить хранимые маркеры новое значение, либо сохранить сопоставление для соответствующего средства чтения символов для повторного сопоставления на этапе считывания.</span><span class="sxs-lookup"><span data-stu-id="219d5-104">If the symbol writer has stored the old token within the symbol store, it must either update the stored token with the new value, or it must save the map for the corresponding symbol reader to remap during the read phase.</span></span>  
+# <a name="isymunmanagedwriterremaptoken-method"></a><span data-ttu-id="7d294-102">Метод ISymUnmanagedWriter::RemapToken</span><span class="sxs-lookup"><span data-stu-id="7d294-102">ISymUnmanagedWriter::RemapToken Method</span></span>
+<span data-ttu-id="7d294-103">Уведомляет модуля записи символов о том, что маркер метаданных был повторно сопоставлен при выдаче метаданных.</span><span class="sxs-lookup"><span data-stu-id="7d294-103">Notifies the symbol writer that a metadata token has been remapped as the metadata was emitted.</span></span> <span data-ttu-id="7d294-104">Если модуль записи символов с сохраненными старый токен в хранилище символов, его необходимо либо обновить хранимые маркеры новое значение, либо сохранить сопоставление для соответствующего средства чтения символов для повторного сопоставления на этапе считывания.</span><span class="sxs-lookup"><span data-stu-id="7d294-104">If the symbol writer has stored the old token within the symbol store, it must either update the stored token with the new value, or it must save the map for the corresponding symbol reader to remap during the read phase.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="219d5-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="219d5-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7d294-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7d294-105">Syntax</span></span>  
   
 ```  
 HRESULT RemapToken(  
@@ -38,18 +39,18 @@ HRESULT RemapToken(
     [in] mdToken  newToken);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="219d5-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="219d5-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="7d294-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="7d294-106">Parameters</span></span>  
  `oldToken`  
- <span data-ttu-id="219d5-107">[in] Токен метаданных, которая была пересопоставлена.</span><span class="sxs-lookup"><span data-stu-id="219d5-107">[in] The metadata token that was remapped.</span></span>  
+ <span data-ttu-id="7d294-107">[in] Токен метаданных, которая была пересопоставлена.</span><span class="sxs-lookup"><span data-stu-id="7d294-107">[in] The metadata token that was remapped.</span></span>  
   
  `newToken`  
- <span data-ttu-id="219d5-108">[in] Токен метаданных для которой `oldToken` была пересопоставлена.</span><span class="sxs-lookup"><span data-stu-id="219d5-108">[in] The new metadata token to which `oldToken` was remapped.</span></span>  
+ <span data-ttu-id="7d294-108">[in] Токен метаданных для которой `oldToken` была пересопоставлена.</span><span class="sxs-lookup"><span data-stu-id="7d294-108">[in] The new metadata token to which `oldToken` was remapped.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="219d5-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="219d5-109">Return Value</span></span>  
- <span data-ttu-id="219d5-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="219d5-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7d294-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="7d294-109">Return Value</span></span>  
+ <span data-ttu-id="7d294-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="7d294-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="219d5-111">Требования</span><span class="sxs-lookup"><span data-stu-id="219d5-111">Requirements</span></span>  
- <span data-ttu-id="219d5-112">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="219d5-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7d294-111">Требования</span><span class="sxs-lookup"><span data-stu-id="7d294-111">Requirements</span></span>  
+ <span data-ttu-id="7d294-112">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="7d294-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="219d5-113">См. также</span><span class="sxs-lookup"><span data-stu-id="219d5-113">See Also</span></span>  
- [<span data-ttu-id="219d5-114">ISymUnmanagedWriter-интерфейс</span><span class="sxs-lookup"><span data-stu-id="219d5-114">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7d294-113">См. также</span><span class="sxs-lookup"><span data-stu-id="7d294-113">See Also</span></span>  
+ [<span data-ttu-id="7d294-114">Интерфейс ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="7d294-114">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

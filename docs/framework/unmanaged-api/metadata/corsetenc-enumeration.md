@@ -19,16 +19,17 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 85a909d92be8bfdb9ada709b54cf252183ff411e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0f39a1481361377fce3f6b55cf6c7daf8c075ce5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="corsetenc-enumeration"></a><span data-ttu-id="ac9c1-102">Перечисление CorSetENC</span><span class="sxs-lookup"><span data-stu-id="ac9c1-102">CorSetENC Enumeration</span></span>
-<span data-ttu-id="ac9c1-103">Содержит значения, используемые для оказания влияния на поведение во время создания метаданных.</span><span class="sxs-lookup"><span data-stu-id="ac9c1-103">Contains values used to influence behavior during the generation of metadata.</span></span>  
+# <a name="corsetenc-enumeration"></a><span data-ttu-id="7b12d-102">Перечисление CorSetENC</span><span class="sxs-lookup"><span data-stu-id="7b12d-102">CorSetENC Enumeration</span></span>
+<span data-ttu-id="7b12d-103">Содержит значения, используемые для оказания влияния на поведение во время создания метаданных.</span><span class="sxs-lookup"><span data-stu-id="7b12d-103">Contains values used to influence behavior during the generation of metadata.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ac9c1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ac9c1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7b12d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7b12d-104">Syntax</span></span>  
   
 ```  
 typedef enum CorSetENC {  
@@ -46,25 +47,25 @@ typedef enum CorSetENC {
 } CorSetENC;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ac9c1-105">Члены</span><span class="sxs-lookup"><span data-stu-id="ac9c1-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="7b12d-105">Участники</span><span class="sxs-lookup"><span data-stu-id="7b12d-105">Members</span></span>  
   
-|<span data-ttu-id="ac9c1-106">Член</span><span class="sxs-lookup"><span data-stu-id="ac9c1-106">Member</span></span>|<span data-ttu-id="ac9c1-107">Описание</span><span class="sxs-lookup"><span data-stu-id="ac9c1-107">Description</span></span>|  
+|<span data-ttu-id="7b12d-106">Член</span><span class="sxs-lookup"><span data-stu-id="7b12d-106">Member</span></span>|<span data-ttu-id="7b12d-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="7b12d-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDSetENCOn`|<span data-ttu-id="ac9c1-108">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="ac9c1-108">Obsolete.</span></span>|  
-|`MDSetENCOff`|<span data-ttu-id="ac9c1-109">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="ac9c1-109">Obsolete.</span></span>|  
-|`MDUpdateENC`|<span data-ttu-id="ac9c1-110">Указывает, тогда как метаданные могут быть обновлены, маркеров не может быть перемещен.</span><span class="sxs-lookup"><span data-stu-id="ac9c1-110">Indicates that whereas metadata can be updated, tokens cannot be moved.</span></span>|  
-|`MDUpdateFull`|<span data-ttu-id="ac9c1-111">Указывает, что токены можно переместить, во время обновления.</span><span class="sxs-lookup"><span data-stu-id="ac9c1-111">Indicates that tokens can be moved during updates.</span></span>|  
-|`MDUpdateExtension`|<span data-ttu-id="ac9c1-112">Указывает, что обновления могут состоять только из добавлений.</span><span class="sxs-lookup"><span data-stu-id="ac9c1-112">Indicates that updates can consist only of additions.</span></span> <span data-ttu-id="ac9c1-113">Маркеры не могут быть перемещены.</span><span class="sxs-lookup"><span data-stu-id="ac9c1-113">Tokens cannot be moved.</span></span>|  
-|`MDUpdateIncremental`|<span data-ttu-id="ac9c1-114">Указывает добавочной компиляции.</span><span class="sxs-lookup"><span data-stu-id="ac9c1-114">Indicates that compilation is incremental.</span></span>|  
-|`MDUpdateDelta`|<span data-ttu-id="ac9c1-115">Указывает, что только измененные метаданные должны сохраняться.</span><span class="sxs-lookup"><span data-stu-id="ac9c1-115">Indicates that only changed metadata should be saved.</span></span>|  
-|`MDUpdateMask`|<span data-ttu-id="ac9c1-116">Включает в себя `MDUpdateENC`, `MDUpdateFull` и `MDUpdateIncremental`.</span><span class="sxs-lookup"><span data-stu-id="ac9c1-116">Includes `MDUpdateENC`, `MDUpdateFull` and `MDUpdateIncremental`.</span></span>|  
+|`MDSetENCOn`|<span data-ttu-id="7b12d-108">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="7b12d-108">Obsolete.</span></span>|  
+|`MDSetENCOff`|<span data-ttu-id="7b12d-109">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="7b12d-109">Obsolete.</span></span>|  
+|`MDUpdateENC`|<span data-ttu-id="7b12d-110">Указывает, тогда как метаданные могут быть обновлены, маркеров не может быть перемещен.</span><span class="sxs-lookup"><span data-stu-id="7b12d-110">Indicates that whereas metadata can be updated, tokens cannot be moved.</span></span>|  
+|`MDUpdateFull`|<span data-ttu-id="7b12d-111">Указывает, что токены можно переместить, во время обновления.</span><span class="sxs-lookup"><span data-stu-id="7b12d-111">Indicates that tokens can be moved during updates.</span></span>|  
+|`MDUpdateExtension`|<span data-ttu-id="7b12d-112">Указывает, что обновления могут состоять только из добавлений.</span><span class="sxs-lookup"><span data-stu-id="7b12d-112">Indicates that updates can consist only of additions.</span></span> <span data-ttu-id="7b12d-113">Маркеры не могут быть перемещены.</span><span class="sxs-lookup"><span data-stu-id="7b12d-113">Tokens cannot be moved.</span></span>|  
+|`MDUpdateIncremental`|<span data-ttu-id="7b12d-114">Указывает добавочной компиляции.</span><span class="sxs-lookup"><span data-stu-id="7b12d-114">Indicates that compilation is incremental.</span></span>|  
+|`MDUpdateDelta`|<span data-ttu-id="7b12d-115">Указывает, что только измененные метаданные должны сохраняться.</span><span class="sxs-lookup"><span data-stu-id="7b12d-115">Indicates that only changed metadata should be saved.</span></span>|  
+|`MDUpdateMask`|<span data-ttu-id="7b12d-116">Включает в себя `MDUpdateENC`, `MDUpdateFull` и `MDUpdateIncremental`.</span><span class="sxs-lookup"><span data-stu-id="7b12d-116">Includes `MDUpdateENC`, `MDUpdateFull` and `MDUpdateIncremental`.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="ac9c1-117">Требования</span><span class="sxs-lookup"><span data-stu-id="ac9c1-117">Requirements</span></span>  
- <span data-ttu-id="ac9c1-118">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ac9c1-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7b12d-117">Требования</span><span class="sxs-lookup"><span data-stu-id="7b12d-117">Requirements</span></span>  
+ <span data-ttu-id="7b12d-118">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7b12d-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ac9c1-119">**Заголовок:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="ac9c1-119">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="7b12d-119">**Заголовок:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="7b12d-119">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="ac9c1-120">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ac9c1-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7b12d-120">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7b12d-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ac9c1-121">См. также</span><span class="sxs-lookup"><span data-stu-id="ac9c1-121">See Also</span></span>  
- [<span data-ttu-id="ac9c1-122">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="ac9c1-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="7b12d-121">См. также</span><span class="sxs-lookup"><span data-stu-id="7b12d-121">See Also</span></span>  
+ [<span data-ttu-id="7b12d-122">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="7b12d-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

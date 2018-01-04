@@ -21,16 +21,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ca4b53acc69d0a56b94526de0c3b16fd1abde077
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a461a9c05b18de45426247743c6e4ffca775025a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugmodule2setjmcstatus-method"></a><span data-ttu-id="6c0d8-102">Метод ICorDebugModule2::SetJMCStatus</span><span class="sxs-lookup"><span data-stu-id="6c0d8-102">ICorDebugModule2::SetJMCStatus Method</span></span>
-<span data-ttu-id="6c0d8-103">Задает состояние "только мой код (") все методы для всех классов в этом ICorDebugModule2 указанное значение, за исключением тех, в `pTokens` массив, который задает его значение с противоположным.</span><span class="sxs-lookup"><span data-stu-id="6c0d8-103">Sets the Just My Code (JMC) status of all methods of all the classes in this ICorDebugModule2 to the specified value, except those in the `pTokens` array, which it sets to the opposite value.</span></span>  
+# <a name="icordebugmodule2setjmcstatus-method"></a><span data-ttu-id="2f659-102">Метод ICorDebugModule2::SetJMCStatus</span><span class="sxs-lookup"><span data-stu-id="2f659-102">ICorDebugModule2::SetJMCStatus Method</span></span>
+<span data-ttu-id="2f659-103">Задает состояние "только мой код (") все методы для всех классов в этом ICorDebugModule2 указанное значение, за исключением тех, в `pTokens` массив, который задает его значение с противоположным.</span><span class="sxs-lookup"><span data-stu-id="2f659-103">Sets the Just My Code (JMC) status of all methods of all the classes in this ICorDebugModule2 to the specified value, except those in the `pTokens` array, which it sets to the opposite value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6c0d8-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6c0d8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2f659-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2f659-104">Syntax</span></span>  
   
 ```  
 HRESULT SetJMCStatus (  
@@ -40,28 +41,28 @@ HRESULT SetJMCStatus (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6c0d8-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="6c0d8-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2f659-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="2f659-105">Parameters</span></span>  
  `bIsJustMycode`  
- <span data-ttu-id="6c0d8-106">[in] Значение `true` при код отладки; в противном случае значение `false`.</span><span class="sxs-lookup"><span data-stu-id="6c0d8-106">[in] Set to `true` if the code is to be debugged; otherwise, set to `false`.</span></span>  
+ <span data-ttu-id="2f659-106">[in] Значение `true` при код отладки; в противном случае значение `false`.</span><span class="sxs-lookup"><span data-stu-id="2f659-106">[in] Set to `true` if the code is to be debugged; otherwise, set to `false`.</span></span>  
   
  `cTokens`  
- <span data-ttu-id="6c0d8-107">[in] Размер массива `pTokens`.</span><span class="sxs-lookup"><span data-stu-id="6c0d8-107">[in] The size of the `pTokens` array.</span></span>  
+ <span data-ttu-id="2f659-107">[in] Размер массива `pTokens`.</span><span class="sxs-lookup"><span data-stu-id="2f659-107">[in] The size of the `pTokens` array.</span></span>  
   
  `pTokens`  
- <span data-ttu-id="6c0d8-108">[in] Массив `mdToken` значений, каждое из которых ссылается на метод, который будет в состоянии его JMC!`bIsJustMycode`.</span><span class="sxs-lookup"><span data-stu-id="6c0d8-108">[in] An array of `mdToken` values, each of which refers to a method that will have its JMC status set to !`bIsJustMycode`.</span></span>  
+ <span data-ttu-id="2f659-108">[in] Массив `mdToken` значений, каждое из которых ссылается на метод, который будет в состоянии его JMC!`bIsJustMycode`.</span><span class="sxs-lookup"><span data-stu-id="2f659-108">[in] An array of `mdToken` values, each of which refers to a method that will have its JMC status set to !`bIsJustMycode`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6c0d8-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="6c0d8-109">Remarks</span></span>  
- <span data-ttu-id="6c0d8-110">Состояние JMC каждого метода, указанного в `pTokens` массива равен противоположность `bIsJustMycode` значение.</span><span class="sxs-lookup"><span data-stu-id="6c0d8-110">The JMC status of each method that is specified in the `pTokens` array is set to the opposite of the `bIsJustMycode` value.</span></span> <span data-ttu-id="6c0d8-111">Присвоено состояние всех методов в этом модуле `bIsJustMycode` значение.</span><span class="sxs-lookup"><span data-stu-id="6c0d8-111">The status of all other methods in this module is set to the `bIsJustMycode` value.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2f659-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="2f659-109">Remarks</span></span>  
+ <span data-ttu-id="2f659-110">Состояние JMC каждого метода, указанного в `pTokens` массива равен противоположность `bIsJustMycode` значение.</span><span class="sxs-lookup"><span data-stu-id="2f659-110">The JMC status of each method that is specified in the `pTokens` array is set to the opposite of the `bIsJustMycode` value.</span></span> <span data-ttu-id="2f659-111">Присвоено состояние всех методов в этом модуле `bIsJustMycode` значение.</span><span class="sxs-lookup"><span data-stu-id="2f659-111">The status of all other methods in this module is set to the `bIsJustMycode` value.</span></span>  
   
- <span data-ttu-id="6c0d8-112">`SetJMCStatus` Метод удаляет все предыдущие настройки JMC в этом модуле.</span><span class="sxs-lookup"><span data-stu-id="6c0d8-112">The `SetJMCStatus` method erases all previous JMC settings in this module.</span></span>  
+ <span data-ttu-id="2f659-112">`SetJMCStatus` Метод удаляет все предыдущие настройки JMC в этом модуле.</span><span class="sxs-lookup"><span data-stu-id="2f659-112">The `SetJMCStatus` method erases all previous JMC settings in this module.</span></span>  
   
- <span data-ttu-id="6c0d8-113">`SetJMCStatus` Метод возвращает значение HRESULT S_OK, если все функции успешно установлено.</span><span class="sxs-lookup"><span data-stu-id="6c0d8-113">The `SetJMCStatus` method returns an S_OK HRESULT if all functions were set successfully.</span></span> <span data-ttu-id="6c0d8-114">Он возвращает HRESULT CORDBG_E_FUNCTION_NOT_DEBUGGABLE, если некоторые функции, помеченные `true` не являются доступными для отладки.</span><span class="sxs-lookup"><span data-stu-id="6c0d8-114">It returns a CORDBG_E_FUNCTION_NOT_DEBUGGABLE HRESULT if some functions that are marked `true` are not debuggable.</span></span>  
+ <span data-ttu-id="2f659-113">`SetJMCStatus` Метод возвращает значение HRESULT S_OK, если все функции успешно установлено.</span><span class="sxs-lookup"><span data-stu-id="2f659-113">The `SetJMCStatus` method returns an S_OK HRESULT if all functions were set successfully.</span></span> <span data-ttu-id="2f659-114">Он возвращает HRESULT CORDBG_E_FUNCTION_NOT_DEBUGGABLE, если некоторые функции, помеченные `true` не являются доступными для отладки.</span><span class="sxs-lookup"><span data-stu-id="2f659-114">It returns a CORDBG_E_FUNCTION_NOT_DEBUGGABLE HRESULT if some functions that are marked `true` are not debuggable.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6c0d8-115">Требования</span><span class="sxs-lookup"><span data-stu-id="6c0d8-115">Requirements</span></span>  
- <span data-ttu-id="6c0d8-116">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6c0d8-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2f659-115">Требования</span><span class="sxs-lookup"><span data-stu-id="2f659-115">Requirements</span></span>  
+ <span data-ttu-id="2f659-116">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2f659-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6c0d8-117">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6c0d8-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2f659-117">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2f659-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6c0d8-118">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6c0d8-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2f659-118">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2f659-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6c0d8-119">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6c0d8-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="2f659-119">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2f659-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

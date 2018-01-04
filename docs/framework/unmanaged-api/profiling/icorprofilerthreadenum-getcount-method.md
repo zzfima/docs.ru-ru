@@ -21,35 +21,36 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ae6e5324328eef8d86e0202e30012ffaba45beab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: afbcb71fdaf48d07103d6ca2db48b46095dc3acd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icorprofilerthreadenumgetcount-method"></a><span data-ttu-id="26f96-102">Метод ICorProfilerThreadEnum::GetCount</span><span class="sxs-lookup"><span data-stu-id="26f96-102">ICorProfilerThreadEnum::GetCount Method</span></span>
-<span data-ttu-id="26f96-103">Возвращает число потоков, используемых приложением.</span><span class="sxs-lookup"><span data-stu-id="26f96-103">Gets the number of threads that are used by the application.</span></span>  
+# <a name="icorprofilerthreadenumgetcount-method"></a><span data-ttu-id="1df8f-102">Метод ICorProfilerThreadEnum::GetCount</span><span class="sxs-lookup"><span data-stu-id="1df8f-102">ICorProfilerThreadEnum::GetCount Method</span></span>
+<span data-ttu-id="1df8f-103">Возвращает число потоков, используемых приложением.</span><span class="sxs-lookup"><span data-stu-id="1df8f-103">Gets the number of threads that are used by the application.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="26f96-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="26f96-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1df8f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1df8f-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCount (    [out] ULONG * pcelt  
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="26f96-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="26f96-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="1df8f-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="1df8f-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="26f96-106">[out] Число потоков, используемых приложением.</span><span class="sxs-lookup"><span data-stu-id="26f96-106">[out] The number of threads used by the application.</span></span>  
+ <span data-ttu-id="1df8f-106">[out] Число потоков, используемых приложением.</span><span class="sxs-lookup"><span data-stu-id="1df8f-106">[out] The number of threads used by the application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="26f96-107">Требования</span><span class="sxs-lookup"><span data-stu-id="26f96-107">Requirements</span></span>  
- <span data-ttu-id="26f96-108">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="26f96-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1df8f-107">Требования</span><span class="sxs-lookup"><span data-stu-id="1df8f-107">Requirements</span></span>  
+ <span data-ttu-id="1df8f-108">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1df8f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="26f96-109">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="26f96-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="1df8f-109">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1df8f-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="26f96-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="26f96-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1df8f-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1df8f-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="26f96-111">**Версии платформы .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="26f96-111">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="1df8f-111">**Версии платформы .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1df8f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="26f96-112">См. также</span><span class="sxs-lookup"><span data-stu-id="26f96-112">See Also</span></span>  
- [<span data-ttu-id="26f96-113">Интерфейс ICorProfilerThreadEnum</span><span class="sxs-lookup"><span data-stu-id="26f96-113">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)  
- [<span data-ttu-id="26f96-114">Интерфейсы профилирования</span><span class="sxs-lookup"><span data-stu-id="26f96-114">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="1df8f-112">См. также</span><span class="sxs-lookup"><span data-stu-id="1df8f-112">See Also</span></span>  
+ [<span data-ttu-id="1df8f-113">Интерфейс ICorProfilerThreadEnum</span><span class="sxs-lookup"><span data-stu-id="1df8f-113">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)  
+ [<span data-ttu-id="1df8f-114">Интерфейсы профилирования</span><span class="sxs-lookup"><span data-stu-id="1df8f-114">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

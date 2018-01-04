@@ -21,16 +21,17 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 081e5bf9f119e1a2f2012166a5b27b34718751bd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d7b0c521f1b2c5a2c258738239696ad48d4e9350
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugmanagedcallbackbreakpoint-method"></a><span data-ttu-id="9ee4d-102">Метод ICorDebugManagedCallback::Breakpoint</span><span class="sxs-lookup"><span data-stu-id="9ee4d-102">ICorDebugManagedCallback::Breakpoint Method</span></span>
-<span data-ttu-id="9ee4d-103">Уведомляет отладчик о достижении точки останова.</span><span class="sxs-lookup"><span data-stu-id="9ee4d-103">Notifies the debugger when a breakpoint is encountered.</span></span>  
+# <a name="icordebugmanagedcallbackbreakpoint-method"></a><span data-ttu-id="c6d0c-102">Метод ICorDebugManagedCallback::Breakpoint</span><span class="sxs-lookup"><span data-stu-id="c6d0c-102">ICorDebugManagedCallback::Breakpoint Method</span></span>
+<span data-ttu-id="c6d0c-103">Уведомляет отладчик о достижении точки останова.</span><span class="sxs-lookup"><span data-stu-id="c6d0c-103">Notifies the debugger when a breakpoint is encountered.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9ee4d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9ee4d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c6d0c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c6d0c-104">Syntax</span></span>  
   
 ```  
 HRESULT Breakpoint (  
@@ -40,24 +41,24 @@ HRESULT Breakpoint (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9ee4d-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="9ee4d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c6d0c-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="c6d0c-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="9ee4d-106">[in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, который содержит точку останова.</span><span class="sxs-lookup"><span data-stu-id="9ee4d-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contains the breakpoint.</span></span>  
+ <span data-ttu-id="c6d0c-106">[in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, который содержит точку останова.</span><span class="sxs-lookup"><span data-stu-id="c6d0c-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contains the breakpoint.</span></span>  
   
  `pThread`  
- <span data-ttu-id="9ee4d-107">[in] Указатель на объект ICorDebugThread, представляющий поток, который содержит точку останова.</span><span class="sxs-lookup"><span data-stu-id="9ee4d-107">[in] A pointer to an ICorDebugThread object that represents the thread that contains the breakpoint.</span></span>  
+ <span data-ttu-id="c6d0c-107">[in] Указатель на объект ICorDebugThread, представляющий поток, который содержит точку останова.</span><span class="sxs-lookup"><span data-stu-id="c6d0c-107">[in] A pointer to an ICorDebugThread object that represents the thread that contains the breakpoint.</span></span>  
   
  `pBreakpoint`  
- <span data-ttu-id="9ee4d-108">[in] Указатель на объект ICorDebugBreakpoint, который представляет точку останова.</span><span class="sxs-lookup"><span data-stu-id="9ee4d-108">[in] A pointer to an ICorDebugBreakpoint object that represents the breakpoint.</span></span>  
+ <span data-ttu-id="c6d0c-108">[in] Указатель на объект ICorDebugBreakpoint, который представляет точку останова.</span><span class="sxs-lookup"><span data-stu-id="c6d0c-108">[in] A pointer to an ICorDebugBreakpoint object that represents the breakpoint.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9ee4d-109">Требования</span><span class="sxs-lookup"><span data-stu-id="9ee4d-109">Requirements</span></span>  
- <span data-ttu-id="9ee4d-110">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9ee4d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c6d0c-109">Требования</span><span class="sxs-lookup"><span data-stu-id="c6d0c-109">Requirements</span></span>  
+ <span data-ttu-id="c6d0c-110">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c6d0c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9ee4d-111">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9ee4d-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c6d0c-111">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c6d0c-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9ee4d-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9ee4d-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c6d0c-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c6d0c-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9ee4d-113">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9ee4d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c6d0c-113">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c6d0c-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9ee4d-114">См. также</span><span class="sxs-lookup"><span data-stu-id="9ee4d-114">See Also</span></span>  
- [<span data-ttu-id="9ee4d-115">ICorDebugManagedCallback-интерфейс</span><span class="sxs-lookup"><span data-stu-id="9ee4d-115">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c6d0c-114">См. также</span><span class="sxs-lookup"><span data-stu-id="c6d0c-114">See Also</span></span>  
+ [<span data-ttu-id="c6d0c-115">Интерфейс ICorDebugManagedCallback</span><span class="sxs-lookup"><span data-stu-id="c6d0c-115">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

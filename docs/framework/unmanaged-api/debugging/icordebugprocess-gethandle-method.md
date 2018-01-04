@@ -21,33 +21,34 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 139d9341e11b87aa0c10146fdfeaa3752e32467b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 28065bff38fdf8c7f69920be1f7c6704dd03d69d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugprocessgethandle-method"></a><span data-ttu-id="efb41-102">Метод ICorDebugProcess::GetHandle</span><span class="sxs-lookup"><span data-stu-id="efb41-102">ICorDebugProcess::GetHandle Method</span></span>
-<span data-ttu-id="efb41-103">Получает дескриптор процесса.</span><span class="sxs-lookup"><span data-stu-id="efb41-103">Gets a handle to the process.</span></span>  
+# <a name="icordebugprocessgethandle-method"></a><span data-ttu-id="07fb4-102">Метод ICorDebugProcess::GetHandle</span><span class="sxs-lookup"><span data-stu-id="07fb4-102">ICorDebugProcess::GetHandle Method</span></span>
+<span data-ttu-id="07fb4-103">Получает дескриптор процесса.</span><span class="sxs-lookup"><span data-stu-id="07fb4-103">Gets a handle to the process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="efb41-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="efb41-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="07fb4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="07fb4-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHandle([out] HPROCESS *phProcessHandle);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="efb41-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="efb41-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="07fb4-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="07fb4-105">Parameters</span></span>  
  `phProcessHandle`  
- <span data-ttu-id="efb41-106">[out] Указатель на `HPROCESS` это дескриптор процесса.</span><span class="sxs-lookup"><span data-stu-id="efb41-106">[out] A pointer to an `HPROCESS` that is the handle to the process.</span></span>  
+ <span data-ttu-id="07fb4-106">[out] Указатель на `HPROCESS` это дескриптор процесса.</span><span class="sxs-lookup"><span data-stu-id="07fb4-106">[out] A pointer to an `HPROCESS` that is the handle to the process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="efb41-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="efb41-107">Remarks</span></span>  
- <span data-ttu-id="efb41-108">Извлеченный дескриптор принадлежит интерфейсу отладки.</span><span class="sxs-lookup"><span data-stu-id="efb41-108">The retrieved handle is owned by the debugging interface.</span></span> <span data-ttu-id="efb41-109">Отладчик должен дублировать дескриптор перед его использованием.</span><span class="sxs-lookup"><span data-stu-id="efb41-109">The debugger should duplicate the handle before using it.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="07fb4-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="07fb4-107">Remarks</span></span>  
+ <span data-ttu-id="07fb4-108">Извлеченный дескриптор принадлежит интерфейсу отладки.</span><span class="sxs-lookup"><span data-stu-id="07fb4-108">The retrieved handle is owned by the debugging interface.</span></span> <span data-ttu-id="07fb4-109">Отладчик должен дублировать дескриптор перед его использованием.</span><span class="sxs-lookup"><span data-stu-id="07fb4-109">The debugger should duplicate the handle before using it.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="efb41-110">Требования</span><span class="sxs-lookup"><span data-stu-id="efb41-110">Requirements</span></span>  
- <span data-ttu-id="efb41-111">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="efb41-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="07fb4-110">Требования</span><span class="sxs-lookup"><span data-stu-id="07fb4-110">Requirements</span></span>  
+ <span data-ttu-id="07fb4-111">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="07fb4-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="efb41-112">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="efb41-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="07fb4-112">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="07fb4-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="efb41-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="efb41-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="07fb4-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="07fb4-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="efb41-114">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="efb41-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="07fb4-114">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="07fb4-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

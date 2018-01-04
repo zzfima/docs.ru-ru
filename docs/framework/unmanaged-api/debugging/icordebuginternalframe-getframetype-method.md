@@ -21,16 +21,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d9d3dd087662c938b2f733458d1e92cff577e9f7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 476903ae8f1461a46d685bc3e549c3b6553d5c68
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebuginternalframegetframetype-method"></a><span data-ttu-id="c17fc-102">Метод ICorDebugInternalFrame::GetFrameType</span><span class="sxs-lookup"><span data-stu-id="c17fc-102">ICorDebugInternalFrame::GetFrameType Method</span></span>
-<span data-ttu-id="c17fc-103">Получает тип данного внутреннего фрейма.</span><span class="sxs-lookup"><span data-stu-id="c17fc-103">Gets the type of this internal frame.</span></span>  
+# <a name="icordebuginternalframegetframetype-method"></a><span data-ttu-id="0fb7d-102">Метод ICorDebugInternalFrame::GetFrameType</span><span class="sxs-lookup"><span data-stu-id="0fb7d-102">ICorDebugInternalFrame::GetFrameType Method</span></span>
+<span data-ttu-id="0fb7d-103">Получает тип данного внутреннего фрейма.</span><span class="sxs-lookup"><span data-stu-id="0fb7d-103">Gets the type of this internal frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c17fc-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c17fc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0fb7d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0fb7d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFrameType (  
@@ -38,18 +39,18 @@ HRESULT GetFrameType (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c17fc-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="c17fc-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="0fb7d-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="0fb7d-105">Parameters</span></span>  
  `pType`  
- <span data-ttu-id="c17fc-106">[out] Указатель на значение перечисления CorDebugInternalFrameType, которое указывает тип внутреннего фрейма, представленный этим `ICorDebugInternalFrame` объекта.</span><span class="sxs-lookup"><span data-stu-id="c17fc-106">[out] A pointer to a value of the CorDebugInternalFrameType enumeration that indicates the type of internal frame represented by this `ICorDebugInternalFrame` object.</span></span>  
+ <span data-ttu-id="0fb7d-106">[out] Указатель на значение перечисления CorDebugInternalFrameType, которое указывает тип внутреннего фрейма, представленный этим `ICorDebugInternalFrame` объекта.</span><span class="sxs-lookup"><span data-stu-id="0fb7d-106">[out] A pointer to a value of the CorDebugInternalFrameType enumeration that indicates the type of internal frame represented by this `ICorDebugInternalFrame` object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c17fc-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="c17fc-107">Remarks</span></span>  
- <span data-ttu-id="c17fc-108">Тип внутреннего фрейма STUBFRAME_NONE никогда не будет.</span><span class="sxs-lookup"><span data-stu-id="c17fc-108">The internal frame type will never be STUBFRAME_NONE.</span></span> <span data-ttu-id="c17fc-109">Отладчики правильно учитывать типы нераспознанный внутреннего фрейма.</span><span class="sxs-lookup"><span data-stu-id="c17fc-109">Debuggers should gracefully ignore unrecognized internal frame types.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0fb7d-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="0fb7d-107">Remarks</span></span>  
+ <span data-ttu-id="0fb7d-108">Тип внутреннего фрейма STUBFRAME_NONE никогда не будет.</span><span class="sxs-lookup"><span data-stu-id="0fb7d-108">The internal frame type will never be STUBFRAME_NONE.</span></span> <span data-ttu-id="0fb7d-109">Отладчики правильно учитывать типы нераспознанный внутреннего фрейма.</span><span class="sxs-lookup"><span data-stu-id="0fb7d-109">Debuggers should gracefully ignore unrecognized internal frame types.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c17fc-110">Требования</span><span class="sxs-lookup"><span data-stu-id="c17fc-110">Requirements</span></span>  
- <span data-ttu-id="c17fc-111">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c17fc-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0fb7d-110">Требования</span><span class="sxs-lookup"><span data-stu-id="0fb7d-110">Requirements</span></span>  
+ <span data-ttu-id="0fb7d-111">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0fb7d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c17fc-112">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c17fc-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0fb7d-112">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0fb7d-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c17fc-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c17fc-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0fb7d-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0fb7d-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c17fc-114">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c17fc-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="0fb7d-114">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0fb7d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

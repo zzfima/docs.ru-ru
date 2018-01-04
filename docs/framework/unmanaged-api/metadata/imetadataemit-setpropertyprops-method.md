@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: fe79846b9fd576941c706b48a7aed0667c264a3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 47bbd703c0b1d1b2038b4a6e5dc3aa677e02babe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="imetadataemitsetpropertyprops-method"></a><span data-ttu-id="225c5-102">Метод IMetaDataEmit::SetPropertyProps</span><span class="sxs-lookup"><span data-stu-id="225c5-102">IMetaDataEmit::SetPropertyProps Method</span></span>
-<span data-ttu-id="225c5-103">Задает функции сохранения в метаданных для свойства, определенные во время предыдущего вызова для [метод DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).</span><span class="sxs-lookup"><span data-stu-id="225c5-103">Sets the features stored in metadata for a property defined by a prior call to [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).</span></span>  
+# <a name="imetadataemitsetpropertyprops-method"></a><span data-ttu-id="a4e95-102">Метод IMetaDataEmit::SetPropertyProps</span><span class="sxs-lookup"><span data-stu-id="a4e95-102">IMetaDataEmit::SetPropertyProps Method</span></span>
+<span data-ttu-id="a4e95-103">Задает функции сохранения в метаданных для свойства, определенные во время предыдущего вызова для [метод DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).</span><span class="sxs-lookup"><span data-stu-id="a4e95-103">Sets the features stored in metadata for a property defined by a prior call to [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="225c5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="225c5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a4e95-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a4e95-104">Syntax</span></span>  
   
 ```  
 HRESULT SetPropertyProps (   
@@ -45,40 +46,40 @@ HRESULT SetPropertyProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="225c5-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="225c5-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a4e95-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a4e95-105">Parameters</span></span>  
  `pr`  
- <span data-ttu-id="225c5-106">[in] Маркер для изменения свойства</span><span class="sxs-lookup"><span data-stu-id="225c5-106">[in] The token for the property to be changed</span></span>  
+ <span data-ttu-id="a4e95-106">[in] Маркер для изменения свойства</span><span class="sxs-lookup"><span data-stu-id="a4e95-106">[in] The token for the property to be changed</span></span>  
   
  `dwPropFlags`  
- <span data-ttu-id="225c5-107">[in] Флаги свойства.</span><span class="sxs-lookup"><span data-stu-id="225c5-107">[in] Property flags.</span></span>  
+ <span data-ttu-id="a4e95-107">[in] Флаги свойства.</span><span class="sxs-lookup"><span data-stu-id="a4e95-107">[in] Property flags.</span></span>  
   
  `dwCPlusTypeFlag`  
- <span data-ttu-id="225c5-108">[in] Тип значения по умолчанию этого свойства.</span><span class="sxs-lookup"><span data-stu-id="225c5-108">[in] The type of the property's default value.</span></span>  
+ <span data-ttu-id="a4e95-108">[in] Тип значения по умолчанию этого свойства.</span><span class="sxs-lookup"><span data-stu-id="a4e95-108">[in] The type of the property's default value.</span></span>  
   
  `pValue`  
- <span data-ttu-id="225c5-109">[in] Значение по умолчанию для свойства.</span><span class="sxs-lookup"><span data-stu-id="225c5-109">[in] The default value for the property.</span></span>  
+ <span data-ttu-id="a4e95-109">[in] Значение по умолчанию для свойства.</span><span class="sxs-lookup"><span data-stu-id="a4e95-109">[in] The default value for the property.</span></span>  
   
  `cchValue`  
- <span data-ttu-id="225c5-110">[in] Количество (Юникод) символы в `pValue`.</span><span class="sxs-lookup"><span data-stu-id="225c5-110">[in] The count of (Unicode) characters in `pValue`.</span></span>  
+ <span data-ttu-id="a4e95-110">[in] Количество (Юникод) символы в `pValue`.</span><span class="sxs-lookup"><span data-stu-id="a4e95-110">[in] The count of (Unicode) characters in `pValue`.</span></span>  
   
  `mdSetter`  
- <span data-ttu-id="225c5-111">[in] Метод, который задает значение свойства.</span><span class="sxs-lookup"><span data-stu-id="225c5-111">[in] The method that sets the property value.</span></span>  
+ <span data-ttu-id="a4e95-111">[in] Метод, который задает значение свойства.</span><span class="sxs-lookup"><span data-stu-id="a4e95-111">[in] The method that sets the property value.</span></span>  
   
  `mdGetter`  
- <span data-ttu-id="225c5-112">[in] Метод, который возвращает значение свойства.</span><span class="sxs-lookup"><span data-stu-id="225c5-112">[in] The method that gets the property value.</span></span>  
+ <span data-ttu-id="a4e95-112">[in] Метод, который возвращает значение свойства.</span><span class="sxs-lookup"><span data-stu-id="a4e95-112">[in] The method that gets the property value.</span></span>  
   
  `rmdOtherMethods[]`  
- <span data-ttu-id="225c5-113">[in] Массив из других методов, связанное со свойством.</span><span class="sxs-lookup"><span data-stu-id="225c5-113">[in] An array of other methods associated with the property.</span></span> <span data-ttu-id="225c5-114">Этот массив `mdTokenNil` токена.</span><span class="sxs-lookup"><span data-stu-id="225c5-114">Terminate this array with an `mdTokenNil` token.</span></span>  
+ <span data-ttu-id="a4e95-113">[in] Массив из других методов, связанное со свойством.</span><span class="sxs-lookup"><span data-stu-id="a4e95-113">[in] An array of other methods associated with the property.</span></span> <span data-ttu-id="a4e95-114">Этот массив `mdTokenNil` токена.</span><span class="sxs-lookup"><span data-stu-id="a4e95-114">Terminate this array with an `mdTokenNil` token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="225c5-115">Требования</span><span class="sxs-lookup"><span data-stu-id="225c5-115">Requirements</span></span>  
- <span data-ttu-id="225c5-116">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="225c5-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a4e95-115">Требования</span><span class="sxs-lookup"><span data-stu-id="a4e95-115">Requirements</span></span>  
+ <span data-ttu-id="a4e95-116">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a4e95-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="225c5-117">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="225c5-117">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a4e95-117">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a4e95-117">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="225c5-118">**Библиотека:** используется как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="225c5-118">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a4e95-118">**Библиотека:** используется как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a4e95-118">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="225c5-119">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="225c5-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a4e95-119">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a4e95-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="225c5-120">См. также</span><span class="sxs-lookup"><span data-stu-id="225c5-120">See Also</span></span>  
- [<span data-ttu-id="225c5-121">IMetaDataEmit-интерфейс</span><span class="sxs-lookup"><span data-stu-id="225c5-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="225c5-122">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="225c5-122">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a4e95-120">См. также</span><span class="sxs-lookup"><span data-stu-id="a4e95-120">See Also</span></span>  
+ [<span data-ttu-id="a4e95-121">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="a4e95-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
+ [<span data-ttu-id="a4e95-122">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="a4e95-122">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -19,24 +19,25 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0680e9e06e834c5e7be9d68307c4b93dbab7b0ce
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0f618901472ac1ab4a9ae86788582e8c9348a4a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanageddocumentwriter-interface"></a><span data-ttu-id="41e7a-102">Интерфейс ISymUnmanagedDocumentWriter</span><span class="sxs-lookup"><span data-stu-id="41e7a-102">ISymUnmanagedDocumentWriter Interface</span></span>
-<span data-ttu-id="41e7a-103">Предоставляет методы для записи в документ, на который ссылается хранилище символов.</span><span class="sxs-lookup"><span data-stu-id="41e7a-103">Provides methods for writing to a document referenced by a symbol store.</span></span>  
+# <a name="isymunmanageddocumentwriter-interface"></a><span data-ttu-id="90177-102">Интерфейс ISymUnmanagedDocumentWriter</span><span class="sxs-lookup"><span data-stu-id="90177-102">ISymUnmanagedDocumentWriter Interface</span></span>
+<span data-ttu-id="90177-103">Предоставляет методы для записи в документ, на который ссылается хранилище символов.</span><span class="sxs-lookup"><span data-stu-id="90177-103">Provides methods for writing to a document referenced by a symbol store.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="41e7a-104">Методы</span><span class="sxs-lookup"><span data-stu-id="41e7a-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="90177-104">Методы</span><span class="sxs-lookup"><span data-stu-id="90177-104">Methods</span></span>  
   
-|<span data-ttu-id="41e7a-105">Метод</span><span class="sxs-lookup"><span data-stu-id="41e7a-105">Method</span></span>|<span data-ttu-id="41e7a-106">Описание</span><span class="sxs-lookup"><span data-stu-id="41e7a-106">Description</span></span>|  
+|<span data-ttu-id="90177-105">Метод</span><span class="sxs-lookup"><span data-stu-id="90177-105">Method</span></span>|<span data-ttu-id="90177-106">Описание:</span><span class="sxs-lookup"><span data-stu-id="90177-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="41e7a-107">Метод SetCheckSum</span><span class="sxs-lookup"><span data-stu-id="41e7a-107">SetCheckSum Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|<span data-ttu-id="41e7a-108">Задает сведения о контрольной сумме.</span><span class="sxs-lookup"><span data-stu-id="41e7a-108">Sets checksum information.</span></span>|  
-|[<span data-ttu-id="41e7a-109">Метод SetSource</span><span class="sxs-lookup"><span data-stu-id="41e7a-109">SetSource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|<span data-ttu-id="41e7a-110">Устанавливает внедренный источник документа, который выполняется запись.</span><span class="sxs-lookup"><span data-stu-id="41e7a-110">Sets embedded source for a document that is being written.</span></span>|  
+|[<span data-ttu-id="90177-107">Метод SetCheckSum</span><span class="sxs-lookup"><span data-stu-id="90177-107">SetCheckSum Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|<span data-ttu-id="90177-108">Задает сведения о контрольной сумме.</span><span class="sxs-lookup"><span data-stu-id="90177-108">Sets checksum information.</span></span>|  
+|[<span data-ttu-id="90177-109">Метод SetSource</span><span class="sxs-lookup"><span data-stu-id="90177-109">SetSource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|<span data-ttu-id="90177-110">Устанавливает внедренный источник документа, который выполняется запись.</span><span class="sxs-lookup"><span data-stu-id="90177-110">Sets embedded source for a document that is being written.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="41e7a-111">Требования</span><span class="sxs-lookup"><span data-stu-id="41e7a-111">Requirements</span></span>  
- <span data-ttu-id="41e7a-112">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="41e7a-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="90177-111">Требования</span><span class="sxs-lookup"><span data-stu-id="90177-111">Requirements</span></span>  
+ <span data-ttu-id="90177-112">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="90177-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="41e7a-113">См. также</span><span class="sxs-lookup"><span data-stu-id="41e7a-113">See Also</span></span>  
- [<span data-ttu-id="41e7a-114">Интерфейсы хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="41e7a-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="90177-113">См. также</span><span class="sxs-lookup"><span data-stu-id="90177-113">See Also</span></span>  
+ [<span data-ttu-id="90177-114">Интерфейсы хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="90177-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

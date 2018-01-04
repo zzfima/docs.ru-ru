@@ -21,16 +21,17 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c4404977fab42fb46292440473cd30f6cb162d6b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9db8875acfd4df2cd889cc2e6d606aba252fa33f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanagedreadergetnamespaces-method"></a><span data-ttu-id="ae6b8-102">Метод ISymUnmanagedReader::GetNamespaces</span><span class="sxs-lookup"><span data-stu-id="ae6b8-102">ISymUnmanagedReader::GetNamespaces Method</span></span>
-<span data-ttu-id="ae6b8-103">Возвращает пространства имен, определенные в глобальной области в данном хранилище символов.</span><span class="sxs-lookup"><span data-stu-id="ae6b8-103">Gets the namespaces defined at global scope within this symbol store.</span></span>  
+# <a name="isymunmanagedreadergetnamespaces-method"></a><span data-ttu-id="ee0f1-102">Метод ISymUnmanagedReader::GetNamespaces</span><span class="sxs-lookup"><span data-stu-id="ee0f1-102">ISymUnmanagedReader::GetNamespaces Method</span></span>
+<span data-ttu-id="ee0f1-103">Возвращает пространства имен, определенные в глобальной области в данном хранилище символов.</span><span class="sxs-lookup"><span data-stu-id="ee0f1-103">Gets the namespaces defined at global scope within this symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ae6b8-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ae6b8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ee0f1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ee0f1-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNamespaces (  
@@ -41,21 +42,21 @@ HRESULT GetNamespaces (
         ISymUnmanagedNamespace*  namespaces[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ae6b8-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="ae6b8-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ee0f1-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="ee0f1-105">Parameters</span></span>  
  `cNameSpaces`  
- <span data-ttu-id="ae6b8-106">[in] Размер массива пространства имен.</span><span class="sxs-lookup"><span data-stu-id="ae6b8-106">[in] The size of the namespaces array.</span></span>  
+ <span data-ttu-id="ee0f1-106">[in] Размер массива пространства имен.</span><span class="sxs-lookup"><span data-stu-id="ee0f1-106">[in] The size of the namespaces array.</span></span>  
   
  `pcNameSpaces`  
- <span data-ttu-id="ae6b8-107">[out] Указатель на переменную, которая получает длину списка пространств имен.</span><span class="sxs-lookup"><span data-stu-id="ae6b8-107">[out] A pointer to a variable that receives the length of the namespace list.</span></span>  
+ <span data-ttu-id="ee0f1-107">[out] Указатель на переменную, которая получает длину списка пространств имен.</span><span class="sxs-lookup"><span data-stu-id="ee0f1-107">[out] A pointer to a variable that receives the length of the namespace list.</span></span>  
   
  `namespaces`  
- <span data-ttu-id="ae6b8-108">[out] Указатель на переменную, которая получает список пространств имен.</span><span class="sxs-lookup"><span data-stu-id="ae6b8-108">[out] A pointer to a variable that receives the namespace list.</span></span>  
+ <span data-ttu-id="ee0f1-108">[out] Указатель на переменную, которая получает список пространств имен.</span><span class="sxs-lookup"><span data-stu-id="ee0f1-108">[out] A pointer to a variable that receives the namespace list.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ae6b8-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="ae6b8-109">Return Value</span></span>  
- <span data-ttu-id="ae6b8-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="ae6b8-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ee0f1-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="ee0f1-109">Return Value</span></span>  
+ <span data-ttu-id="ee0f1-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="ee0f1-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ae6b8-111">Требования</span><span class="sxs-lookup"><span data-stu-id="ae6b8-111">Requirements</span></span>  
- <span data-ttu-id="ae6b8-112">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ae6b8-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ee0f1-111">Требования</span><span class="sxs-lookup"><span data-stu-id="ee0f1-111">Requirements</span></span>  
+ <span data-ttu-id="ee0f1-112">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ee0f1-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ae6b8-113">См. также</span><span class="sxs-lookup"><span data-stu-id="ae6b8-113">See Also</span></span>  
- [<span data-ttu-id="ae6b8-114">ISymUnmanagedReader-интерфейс</span><span class="sxs-lookup"><span data-stu-id="ae6b8-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ee0f1-113">См. также</span><span class="sxs-lookup"><span data-stu-id="ee0f1-113">See Also</span></span>  
+ [<span data-ttu-id="ee0f1-114">Интерфейс ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="ee0f1-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

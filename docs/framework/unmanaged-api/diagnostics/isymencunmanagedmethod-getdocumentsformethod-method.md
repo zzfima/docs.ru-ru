@@ -21,16 +21,17 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 951c80360153feb434d21fafe4d029a24f6cb362
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0593ea430d27641a57705f1ceb4805ab505ef25e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a><span data-ttu-id="29dd4-102">Метод ISymENCUnmanagedMethod::GetDocumentsForMethod</span><span class="sxs-lookup"><span data-stu-id="29dd4-102">ISymENCUnmanagedMethod::GetDocumentsForMethod Method</span></span>
-<span data-ttu-id="29dd4-103">Возвращает документы, которые этот метод имеет строки.</span><span class="sxs-lookup"><span data-stu-id="29dd4-103">Gets the documents that this method has lines in.</span></span>  
+# <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a><span data-ttu-id="ef2b5-102">Метод ISymENCUnmanagedMethod::GetDocumentsForMethod</span><span class="sxs-lookup"><span data-stu-id="ef2b5-102">ISymENCUnmanagedMethod::GetDocumentsForMethod Method</span></span>
+<span data-ttu-id="ef2b5-103">Возвращает документы, которые этот метод имеет строки.</span><span class="sxs-lookup"><span data-stu-id="ef2b5-103">Gets the documents that this method has lines in.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="29dd4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="29dd4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ef2b5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ef2b5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDocumentsForMethod(  
@@ -39,21 +40,21 @@ HRESULT GetDocumentsForMethod(
     [in, size_is(cDocs)] ISymUnmanagedDocument* documents[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="29dd4-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="29dd4-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ef2b5-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="ef2b5-105">Parameters</span></span>  
  `cDocs`  
- <span data-ttu-id="29dd4-106">[in] Размер буфера, на который указывает `pcDocs`.</span><span class="sxs-lookup"><span data-stu-id="29dd4-106">[in] The length of the buffer pointed to by `pcDocs`.</span></span>  
+ <span data-ttu-id="ef2b5-106">[in] Размер буфера, на который указывает `pcDocs`.</span><span class="sxs-lookup"><span data-stu-id="ef2b5-106">[in] The length of the buffer pointed to by `pcDocs`.</span></span>  
   
  `pcDocs`  
- <span data-ttu-id="29dd4-107">[out] Указатель на `ULONG32` , получающий размер в символах, буфера, необходимый для хранения документов.</span><span class="sxs-lookup"><span data-stu-id="29dd4-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the documents.</span></span>  
+ <span data-ttu-id="ef2b5-107">[out] Указатель на `ULONG32` , получающий размер в символах, буфера, необходимый для хранения документов.</span><span class="sxs-lookup"><span data-stu-id="ef2b5-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the documents.</span></span>  
   
  `documents`  
- <span data-ttu-id="29dd4-108">[in] Буфер, содержащий документы.</span><span class="sxs-lookup"><span data-stu-id="29dd4-108">[in] The buffer that contains the documents.</span></span>  
+ <span data-ttu-id="ef2b5-108">[in] Буфер, содержащий документы.</span><span class="sxs-lookup"><span data-stu-id="ef2b5-108">[in] The buffer that contains the documents.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="29dd4-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="29dd4-109">Return Value</span></span>  
- <span data-ttu-id="29dd4-110">Значение S_OK, если метод выполнен успешно; в противном случае — код ошибки.</span><span class="sxs-lookup"><span data-stu-id="29dd4-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ef2b5-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="ef2b5-109">Return Value</span></span>  
+ <span data-ttu-id="ef2b5-110">Значение S_OK, если метод выполнен успешно; в противном случае — код ошибки.</span><span class="sxs-lookup"><span data-stu-id="ef2b5-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="29dd4-111">Требования</span><span class="sxs-lookup"><span data-stu-id="29dd4-111">Requirements</span></span>  
- <span data-ttu-id="29dd4-112">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="29dd4-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ef2b5-111">Требования</span><span class="sxs-lookup"><span data-stu-id="ef2b5-111">Requirements</span></span>  
+ <span data-ttu-id="ef2b5-112">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ef2b5-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="29dd4-113">См. также</span><span class="sxs-lookup"><span data-stu-id="29dd4-113">See Also</span></span>  
- [<span data-ttu-id="29dd4-114">Интерфейс ISymENCUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="29dd4-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ef2b5-113">См. также</span><span class="sxs-lookup"><span data-stu-id="ef2b5-113">See Also</span></span>  
+ [<span data-ttu-id="ef2b5-114">Интерфейс ISymENCUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="ef2b5-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

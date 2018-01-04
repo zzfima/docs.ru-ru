@@ -19,30 +19,31 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8c7b3bd04b348912a6d45c4efb41dfb87e7b5998
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ca74970ea7c2b98ad65e279fc1cc128b2e55aeb5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="iassemblyenum-interface"></a><span data-ttu-id="cb2c4-102">Интерфейс IAssemblyEnum</span><span class="sxs-lookup"><span data-stu-id="cb2c4-102">IAssemblyEnum Interface</span></span>
-<span data-ttu-id="cb2c4-103">Представляет перечислитель для массива `IAssemblyName` объектов.</span><span class="sxs-lookup"><span data-stu-id="cb2c4-103">Represents an enumerator for an array of `IAssemblyName` objects.</span></span>  
+# <a name="iassemblyenum-interface"></a><span data-ttu-id="34484-102">Интерфейс IAssemblyEnum</span><span class="sxs-lookup"><span data-stu-id="34484-102">IAssemblyEnum Interface</span></span>
+<span data-ttu-id="34484-103">Представляет перечислитель для массива `IAssemblyName` объектов.</span><span class="sxs-lookup"><span data-stu-id="34484-103">Represents an enumerator for an array of `IAssemblyName` objects.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="cb2c4-104">Методы</span><span class="sxs-lookup"><span data-stu-id="cb2c4-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="34484-104">Методы</span><span class="sxs-lookup"><span data-stu-id="34484-104">Methods</span></span>  
   
-|<span data-ttu-id="cb2c4-105">Метод</span><span class="sxs-lookup"><span data-stu-id="cb2c4-105">Method</span></span>|<span data-ttu-id="cb2c4-106">Описание</span><span class="sxs-lookup"><span data-stu-id="cb2c4-106">Description</span></span>|  
+|<span data-ttu-id="34484-105">Метод</span><span class="sxs-lookup"><span data-stu-id="34484-105">Method</span></span>|<span data-ttu-id="34484-106">Описание:</span><span class="sxs-lookup"><span data-stu-id="34484-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="cb2c4-107">Метод Clone</span><span class="sxs-lookup"><span data-stu-id="cb2c4-107">Clone Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-clone-method.md)|<span data-ttu-id="cb2c4-108">Создает неполную копию `IAssemblyEnum` объекта.</span><span class="sxs-lookup"><span data-stu-id="cb2c4-108">Creates a shallow copy of this `IAssemblyEnum` object.</span></span>|  
-|[<span data-ttu-id="cb2c4-109">Метод GetNextAssembly</span><span class="sxs-lookup"><span data-stu-id="cb2c4-109">GetNextAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-getnextassembly-method.md)|<span data-ttu-id="cb2c4-110">Возвращает указатель на следующий `IAssemblyName` , содержащихся в данном `IAssemblyEnum` объекта.</span><span class="sxs-lookup"><span data-stu-id="cb2c4-110">Gets a pointer to the next `IAssemblyName` contained in this `IAssemblyEnum` object.</span></span>|  
-|[<span data-ttu-id="cb2c4-111">Reset-метод</span><span class="sxs-lookup"><span data-stu-id="cb2c4-111">Reset Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-reset-method.md)|<span data-ttu-id="cb2c4-112">Сбрасывает этот `IAssemblyEnum` объект в его начальное положение.</span><span class="sxs-lookup"><span data-stu-id="cb2c4-112">Resets this `IAssemblyEnum` object to its starting position.</span></span>|  
+|[<span data-ttu-id="34484-107">Метод Clone</span><span class="sxs-lookup"><span data-stu-id="34484-107">Clone Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-clone-method.md)|<span data-ttu-id="34484-108">Создает неполную копию `IAssemblyEnum` объекта.</span><span class="sxs-lookup"><span data-stu-id="34484-108">Creates a shallow copy of this `IAssemblyEnum` object.</span></span>|  
+|[<span data-ttu-id="34484-109">Метод GetNextAssembly</span><span class="sxs-lookup"><span data-stu-id="34484-109">GetNextAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-getnextassembly-method.md)|<span data-ttu-id="34484-110">Возвращает указатель на следующий `IAssemblyName` , содержащихся в данном `IAssemblyEnum` объекта.</span><span class="sxs-lookup"><span data-stu-id="34484-110">Gets a pointer to the next `IAssemblyName` contained in this `IAssemblyEnum` object.</span></span>|  
+|[<span data-ttu-id="34484-111">Метод Reset</span><span class="sxs-lookup"><span data-stu-id="34484-111">Reset Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-reset-method.md)|<span data-ttu-id="34484-112">Сбрасывает этот `IAssemblyEnum` объект в его начальное положение.</span><span class="sxs-lookup"><span data-stu-id="34484-112">Resets this `IAssemblyEnum` object to its starting position.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="cb2c4-113">Требования</span><span class="sxs-lookup"><span data-stu-id="cb2c4-113">Requirements</span></span>  
- <span data-ttu-id="cb2c4-114">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cb2c4-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="34484-113">Требования</span><span class="sxs-lookup"><span data-stu-id="34484-113">Requirements</span></span>  
+ <span data-ttu-id="34484-114">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="34484-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cb2c4-115">**Заголовок:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="cb2c4-115">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="34484-115">**Заголовок:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="34484-115">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="cb2c4-116">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb2c4-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="34484-116">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="34484-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cb2c4-117">См. также</span><span class="sxs-lookup"><span data-stu-id="cb2c4-117">See Also</span></span>  
- [<span data-ttu-id="cb2c4-118">Фьюжн-интерфейсы</span><span class="sxs-lookup"><span data-stu-id="cb2c4-118">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [<span data-ttu-id="cb2c4-119">IAssemblyName-интерфейс</span><span class="sxs-lookup"><span data-stu-id="cb2c4-119">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="34484-117">См. также</span><span class="sxs-lookup"><span data-stu-id="34484-117">See Also</span></span>  
+ [<span data-ttu-id="34484-118">Интерфейсы Fusion</span><span class="sxs-lookup"><span data-stu-id="34484-118">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [<span data-ttu-id="34484-119">Интерфейс IAssemblyName</span><span class="sxs-lookup"><span data-stu-id="34484-119">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

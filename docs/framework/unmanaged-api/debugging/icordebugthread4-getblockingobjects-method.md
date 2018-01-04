@@ -21,47 +21,48 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6783d7f9af67acdff147cc46ea4f856f9b10bf3a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 006535885868ef2778146f86e5395ea1f7605d6f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugthread4getblockingobjects-method"></a><span data-ttu-id="943c7-102">Метод ICorDebugThread4::GetBlockingObjects</span><span class="sxs-lookup"><span data-stu-id="943c7-102">ICorDebugThread4::GetBlockingObjects Method</span></span>
-<span data-ttu-id="943c7-103">Предоставляет перечисление упорядоченный [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) структуры, обеспечивающие поток сведений о блокировании.</span><span class="sxs-lookup"><span data-stu-id="943c7-103">Provides an ordered enumeration of [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) structures that provide thread blocking information.</span></span>  
+# <a name="icordebugthread4getblockingobjects-method"></a><span data-ttu-id="bb7c3-102">Метод ICorDebugThread4::GetBlockingObjects</span><span class="sxs-lookup"><span data-stu-id="bb7c3-102">ICorDebugThread4::GetBlockingObjects Method</span></span>
+<span data-ttu-id="bb7c3-103">Предоставляет перечисление упорядоченный [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) структуры, обеспечивающие поток сведений о блокировании.</span><span class="sxs-lookup"><span data-stu-id="bb7c3-103">Provides an ordered enumeration of [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) structures that provide thread blocking information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="943c7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="943c7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bb7c3-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bb7c3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetBlockingObjects (  
     [out] ICorDebugBlockingObjectEnum **ppBlockingObjectEnum  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="943c7-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="943c7-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="bb7c3-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="bb7c3-105">Parameters</span></span>  
  `ppBlockingObjectEnum`  
- <span data-ttu-id="943c7-106">[out] Указатель на перечисление упорядоченный [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) структуры.</span><span class="sxs-lookup"><span data-stu-id="943c7-106">[out] A pointer to an ordered enumeration of [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) structures.</span></span>  
+ <span data-ttu-id="bb7c3-106">[out] Указатель на перечисление упорядоченный [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) структуры.</span><span class="sxs-lookup"><span data-stu-id="bb7c3-106">[out] A pointer to an ordered enumeration of [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) structures.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="943c7-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="943c7-107">Remarks</span></span>  
- <span data-ttu-id="943c7-108">Первый элемент возвращенного перечисления соответствует первой структуре, блокирующей поток.</span><span class="sxs-lookup"><span data-stu-id="943c7-108">The first element in the returned enumeration corresponds to the first structure that is blocking the thread.</span></span> <span data-ttu-id="943c7-109">Второй элемент соответствует элементу блокировки, возникшей во время выполнения асинхронный вызов процедур (APC) при блокировке на первом и т. д.</span><span class="sxs-lookup"><span data-stu-id="943c7-109">The second element corresponds to a blocking item that is encountered while running an asynchronous procedure call (APC) when blocked on the first, and so on.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bb7c3-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="bb7c3-107">Remarks</span></span>  
+ <span data-ttu-id="bb7c3-108">Первый элемент возвращенного перечисления соответствует первой структуре, блокирующей поток.</span><span class="sxs-lookup"><span data-stu-id="bb7c3-108">The first element in the returned enumeration corresponds to the first structure that is blocking the thread.</span></span> <span data-ttu-id="bb7c3-109">Второй элемент соответствует элементу блокировки, возникшей во время выполнения асинхронный вызов процедур (APC) при блокировке на первом и т. д.</span><span class="sxs-lookup"><span data-stu-id="bb7c3-109">The second element corresponds to a blocking item that is encountered while running an asynchronous procedure call (APC) when blocked on the first, and so on.</span></span>  
   
- <span data-ttu-id="943c7-110">Перечисление является допустимым только в течение текущего синхронизированного состояния.</span><span class="sxs-lookup"><span data-stu-id="943c7-110">The enumeration is valid only for the duration of the current synchronized state.</span></span>  
+ <span data-ttu-id="bb7c3-110">Перечисление является допустимым только в течение текущего синхронизированного состояния.</span><span class="sxs-lookup"><span data-stu-id="bb7c3-110">The enumeration is valid only for the duration of the current synchronized state.</span></span>  
   
- <span data-ttu-id="943c7-111">Этот метод должен вызываться при нахождении отладчика в синхронизированном состоянии.</span><span class="sxs-lookup"><span data-stu-id="943c7-111">This method must be called while the debuggee is in a synchronized state.</span></span>  
+ <span data-ttu-id="bb7c3-111">Этот метод должен вызываться при нахождении отладчика в синхронизированном состоянии.</span><span class="sxs-lookup"><span data-stu-id="bb7c3-111">This method must be called while the debuggee is in a synchronized state.</span></span>  
   
- <span data-ttu-id="943c7-112">Если `ppBlockingObjectEnum` не является допустимым указателем, результат будет неопределенным.</span><span class="sxs-lookup"><span data-stu-id="943c7-112">If `ppBlockingObjectEnum` is not a valid pointer, the result is undefined.</span></span>  
+ <span data-ttu-id="bb7c3-112">Если `ppBlockingObjectEnum` не является допустимым указателем, результат будет неопределенным.</span><span class="sxs-lookup"><span data-stu-id="bb7c3-112">If `ppBlockingObjectEnum` is not a valid pointer, the result is undefined.</span></span>  
   
- <span data-ttu-id="943c7-113">Если ошибку не удается определить поток заблокирован, метод возвращает значение HRESULT, указывающее на сбой; в противном случае возвращается значение S_OK.</span><span class="sxs-lookup"><span data-stu-id="943c7-113">If a thread is blocked and the error cannot be determined, the method returns an HRESULT that indicates failure; otherwise, it returns S_OK.</span></span>  
+ <span data-ttu-id="bb7c3-113">Если ошибку не удается определить поток заблокирован, метод возвращает значение HRESULT, указывающее на сбой; в противном случае возвращается значение S_OK.</span><span class="sxs-lookup"><span data-stu-id="bb7c3-113">If a thread is blocked and the error cannot be determined, the method returns an HRESULT that indicates failure; otherwise, it returns S_OK.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="943c7-114">Требования</span><span class="sxs-lookup"><span data-stu-id="943c7-114">Requirements</span></span>  
- <span data-ttu-id="943c7-115">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="943c7-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bb7c3-114">Требования</span><span class="sxs-lookup"><span data-stu-id="bb7c3-114">Requirements</span></span>  
+ <span data-ttu-id="bb7c3-115">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bb7c3-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="943c7-116">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="943c7-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="bb7c3-116">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bb7c3-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="943c7-117">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="943c7-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="bb7c3-117">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bb7c3-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="943c7-118">**Версии платформы .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="943c7-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="bb7c3-118">**Версии платформы .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bb7c3-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="943c7-119">См. также</span><span class="sxs-lookup"><span data-stu-id="943c7-119">See Also</span></span>  
- [<span data-ttu-id="943c7-120">Интерфейс ICorDebugThread4</span><span class="sxs-lookup"><span data-stu-id="943c7-120">ICorDebugThread4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  
- [<span data-ttu-id="943c7-121">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="943c7-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="943c7-122">Отладка</span><span class="sxs-lookup"><span data-stu-id="943c7-122">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="bb7c3-119">См. также</span><span class="sxs-lookup"><span data-stu-id="bb7c3-119">See Also</span></span>  
+ [<span data-ttu-id="bb7c3-120">Интерфейс ICorDebugThread4</span><span class="sxs-lookup"><span data-stu-id="bb7c3-120">ICorDebugThread4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  
+ [<span data-ttu-id="bb7c3-121">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="bb7c3-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [<span data-ttu-id="bb7c3-122">Отладка</span><span class="sxs-lookup"><span data-stu-id="bb7c3-122">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

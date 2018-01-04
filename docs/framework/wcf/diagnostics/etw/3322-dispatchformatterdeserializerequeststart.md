@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff3eeeff0bc4814d39d3113abf6bc36d79704bbf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: df0060e4d569c0df67be4f9f7a730c3e74da4c20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3322---dispatchformatterdeserializerequeststart"></a><span data-ttu-id="1c7ac-102">3322 - DispatchFormatterDeserializeRequestStart</span><span class="sxs-lookup"><span data-stu-id="1c7ac-102">3322 - DispatchFormatterDeserializeRequestStart</span></span>
-## <a name="properties"></a><span data-ttu-id="1c7ac-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="1c7ac-103">Properties</span></span>  
+# <a name="3322---dispatchformatterdeserializerequeststart"></a><span data-ttu-id="9e59a-102">3322 - DispatchFormatterDeserializeRequestStart</span><span class="sxs-lookup"><span data-stu-id="9e59a-102">3322 - DispatchFormatterDeserializeRequestStart</span></span>
+## <a name="properties"></a><span data-ttu-id="9e59a-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="9e59a-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="1c7ac-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="1c7ac-104">ID</span></span>|<span data-ttu-id="1c7ac-105">3322</span><span class="sxs-lookup"><span data-stu-id="1c7ac-105">3322</span></span>|  
-|<span data-ttu-id="1c7ac-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="1c7ac-106">Keywords</span></span>|<span data-ttu-id="1c7ac-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="1c7ac-107">ServiceModel</span></span>|  
-|<span data-ttu-id="1c7ac-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="1c7ac-108">Level</span></span>|<span data-ttu-id="1c7ac-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="1c7ac-109">Verbose</span></span>|  
-|<span data-ttu-id="1c7ac-110">Канал</span><span class="sxs-lookup"><span data-stu-id="1c7ac-110">Channel</span></span>|<span data-ttu-id="1c7ac-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="1c7ac-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="9e59a-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="9e59a-104">ID</span></span>|<span data-ttu-id="9e59a-105">3322</span><span class="sxs-lookup"><span data-stu-id="9e59a-105">3322</span></span>|  
+|<span data-ttu-id="9e59a-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="9e59a-106">Keywords</span></span>|<span data-ttu-id="9e59a-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="9e59a-107">ServiceModel</span></span>|  
+|<span data-ttu-id="9e59a-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="9e59a-108">Level</span></span>|<span data-ttu-id="9e59a-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="9e59a-109">Verbose</span></span>|  
+|<span data-ttu-id="9e59a-110">Канал</span><span class="sxs-lookup"><span data-stu-id="9e59a-110">Channel</span></span>|<span data-ttu-id="9e59a-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="9e59a-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="1c7ac-112">Описание</span><span class="sxs-lookup"><span data-stu-id="1c7ac-112">Description</span></span>  
- <span data-ttu-id="1c7ac-113">Это событие создается, когда диспетчер начал десериализацию сообщения запроса.</span><span class="sxs-lookup"><span data-stu-id="1c7ac-113">This event is emitted when the dispatcher started deserialization of the request message.</span></span>  
+## <a name="description"></a><span data-ttu-id="9e59a-112">Описание</span><span class="sxs-lookup"><span data-stu-id="9e59a-112">Description</span></span>  
+ <span data-ttu-id="9e59a-113">Это событие создается, когда диспетчер начал десериализацию сообщения запроса.</span><span class="sxs-lookup"><span data-stu-id="9e59a-113">This event is emitted when the dispatcher started deserialization of the request message.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="1c7ac-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="1c7ac-114">Message</span></span>  
- <span data-ttu-id="1c7ac-115">Диспетчер начал десериализацию сообщения запроса.</span><span class="sxs-lookup"><span data-stu-id="1c7ac-115">Dispatcher started deserialization the request message.</span></span>  
+## <a name="message"></a><span data-ttu-id="9e59a-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="9e59a-114">Message</span></span>  
+ <span data-ttu-id="9e59a-115">Диспетчер начал десериализацию сообщения запроса.</span><span class="sxs-lookup"><span data-stu-id="9e59a-115">Dispatcher started deserialization the request message.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="1c7ac-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="1c7ac-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="9e59a-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="9e59a-116">Details</span></span>

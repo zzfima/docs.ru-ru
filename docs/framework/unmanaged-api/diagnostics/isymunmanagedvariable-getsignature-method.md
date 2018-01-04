@@ -21,16 +21,17 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1e29cd4a38e9abbe380b51b81fc2849b833d87e9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ee403a5f92ba4eb88eca880d9bf2f858b52d4f05
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanagedvariablegetsignature-method"></a><span data-ttu-id="0604c-102">Метод ISymUnmanagedVariable::GetSignature</span><span class="sxs-lookup"><span data-stu-id="0604c-102">ISymUnmanagedVariable::GetSignature Method</span></span>
-<span data-ttu-id="0604c-103">Возвращает подпись переменной.</span><span class="sxs-lookup"><span data-stu-id="0604c-103">Gets the signature of this variable.</span></span>  
+# <a name="isymunmanagedvariablegetsignature-method"></a><span data-ttu-id="838a7-102">Метод ISymUnmanagedVariable::GetSignature</span><span class="sxs-lookup"><span data-stu-id="838a7-102">ISymUnmanagedVariable::GetSignature Method</span></span>
+<span data-ttu-id="838a7-103">Возвращает подпись переменной.</span><span class="sxs-lookup"><span data-stu-id="838a7-103">Gets the signature of this variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0604c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0604c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="838a7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="838a7-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSignature(  
@@ -40,21 +41,21 @@ HRESULT GetSignature(
         length_is(*pcSig)] BYTE sig[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0604c-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="0604c-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="838a7-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="838a7-105">Parameters</span></span>  
  `cSig`  
- <span data-ttu-id="0604c-106">[in] Размер буфера, на который указывает `sig` параметра.</span><span class="sxs-lookup"><span data-stu-id="0604c-106">[in] The length of the buffer pointed to by the `sig` parameter.</span></span>  
+ <span data-ttu-id="838a7-106">[in] Размер буфера, на который указывает `sig` параметра.</span><span class="sxs-lookup"><span data-stu-id="838a7-106">[in] The length of the buffer pointed to by the `sig` parameter.</span></span>  
   
  `pcSig`  
- <span data-ttu-id="0604c-107">[out] Указатель на `ULONG32` , получающий размер в символах, буфера, необходимый для подписи.</span><span class="sxs-lookup"><span data-stu-id="0604c-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span></span>  
+ <span data-ttu-id="838a7-107">[out] Указатель на `ULONG32` , получающий размер в символах, буфера, необходимый для подписи.</span><span class="sxs-lookup"><span data-stu-id="838a7-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span></span>  
   
  `sig`  
- <span data-ttu-id="0604c-108">[out] Буфер, содержит подписи.</span><span class="sxs-lookup"><span data-stu-id="0604c-108">[out] The buffer that stores the signature.</span></span>  
+ <span data-ttu-id="838a7-108">[out] Буфер, содержит подписи.</span><span class="sxs-lookup"><span data-stu-id="838a7-108">[out] The buffer that stores the signature.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0604c-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="0604c-109">Return Value</span></span>  
- <span data-ttu-id="0604c-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="0604c-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="838a7-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="838a7-109">Return Value</span></span>  
+ <span data-ttu-id="838a7-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="838a7-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0604c-111">Требования</span><span class="sxs-lookup"><span data-stu-id="0604c-111">Requirements</span></span>  
- <span data-ttu-id="0604c-112">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="0604c-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="838a7-111">Требования</span><span class="sxs-lookup"><span data-stu-id="838a7-111">Requirements</span></span>  
+ <span data-ttu-id="838a7-112">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="838a7-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0604c-113">См. также</span><span class="sxs-lookup"><span data-stu-id="0604c-113">See Also</span></span>  
- [<span data-ttu-id="0604c-114">ISymUnmanagedVariable-интерфейс</span><span class="sxs-lookup"><span data-stu-id="0604c-114">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+## <a name="see-also"></a><span data-ttu-id="838a7-113">См. также</span><span class="sxs-lookup"><span data-stu-id="838a7-113">See Also</span></span>  
+ [<span data-ttu-id="838a7-114">Интерфейс ISymUnmanagedVariable</span><span class="sxs-lookup"><span data-stu-id="838a7-114">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

@@ -21,31 +21,32 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5aff1bcd98e67f381340ed81a187db591c0986be
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2244229b50a9944cefb5804720198bf391fd0e6b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanagedmethodgetnamespace-method"></a><span data-ttu-id="b08fe-102">Метод ISymUnmanagedMethod::GetNamespace</span><span class="sxs-lookup"><span data-stu-id="b08fe-102">ISymUnmanagedMethod::GetNamespace Method</span></span>
-<span data-ttu-id="b08fe-103">Возвращает пространство имен, в котором определен этот метод.</span><span class="sxs-lookup"><span data-stu-id="b08fe-103">Gets the namespace within which this method is defined.</span></span>  
+# <a name="isymunmanagedmethodgetnamespace-method"></a><span data-ttu-id="4e443-102">Метод ISymUnmanagedMethod::GetNamespace</span><span class="sxs-lookup"><span data-stu-id="4e443-102">ISymUnmanagedMethod::GetNamespace Method</span></span>
+<span data-ttu-id="4e443-103">Возвращает пространство имен, в котором определен этот метод.</span><span class="sxs-lookup"><span data-stu-id="4e443-103">Gets the namespace within which this method is defined.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b08fe-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b08fe-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4e443-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4e443-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNamespace(  
    [out] ISymUnmanagedNamespace  **pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b08fe-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="b08fe-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4e443-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="4e443-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="b08fe-106">[out] Указатель, который задается в возвращаемую [ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md) интерфейса.</span><span class="sxs-lookup"><span data-stu-id="b08fe-106">[out] A pointer that is set to the returned [ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md) interface.</span></span>  
+ <span data-ttu-id="4e443-106">[out] Указатель, который задается в возвращаемую [ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md) интерфейса.</span><span class="sxs-lookup"><span data-stu-id="4e443-106">[out] A pointer that is set to the returned [ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b08fe-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="b08fe-107">Return Value</span></span>  
- <span data-ttu-id="b08fe-108">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="b08fe-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4e443-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="4e443-107">Return Value</span></span>  
+ <span data-ttu-id="4e443-108">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="4e443-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b08fe-109">Требования</span><span class="sxs-lookup"><span data-stu-id="b08fe-109">Requirements</span></span>  
- <span data-ttu-id="b08fe-110">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="b08fe-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4e443-109">Требования</span><span class="sxs-lookup"><span data-stu-id="4e443-109">Requirements</span></span>  
+ <span data-ttu-id="4e443-110">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4e443-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b08fe-111">См. также</span><span class="sxs-lookup"><span data-stu-id="b08fe-111">See Also</span></span>  
- [<span data-ttu-id="b08fe-112">ISymUnmanagedMethod-интерфейс</span><span class="sxs-lookup"><span data-stu-id="b08fe-112">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4e443-111">См. также</span><span class="sxs-lookup"><span data-stu-id="4e443-111">See Also</span></span>  
+ [<span data-ttu-id="4e443-112">Интерфейс ISymUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="4e443-112">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

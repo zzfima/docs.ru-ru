@@ -21,16 +21,17 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 241421761b87bf9f3baf7315c2ac8e9ebd499486
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: df1bdb5d6d6018855cb76b48d58e557a61288a51
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="iclrstrongnamestrongnamekeyinstall-method"></a><span data-ttu-id="6b2de-102">Метод ICLRStrongName::StrongNameKeyInstall</span><span class="sxs-lookup"><span data-stu-id="6b2de-102">ICLRStrongName::StrongNameKeyInstall Method</span></span>
-<span data-ttu-id="6b2de-103">Импортирует пару открытого и закрытого ключей в контейнере.</span><span class="sxs-lookup"><span data-stu-id="6b2de-103">Imports a public/private key pair into a container.</span></span>  
+# <a name="iclrstrongnamestrongnamekeyinstall-method"></a><span data-ttu-id="4524a-102">Метод ICLRStrongName::StrongNameKeyInstall</span><span class="sxs-lookup"><span data-stu-id="4524a-102">ICLRStrongName::StrongNameKeyInstall Method</span></span>
+<span data-ttu-id="4524a-103">Импортирует пару открытого и закрытого ключей в контейнере.</span><span class="sxs-lookup"><span data-stu-id="4524a-103">Imports a public/private key pair into a container.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6b2de-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6b2de-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4524a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4524a-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameKeyInstall (  
@@ -40,31 +41,31 @@ HRESULT StrongNameKeyInstall (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6b2de-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="6b2de-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4524a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="4524a-105">Parameters</span></span>  
  `wszKeyContainer`  
- <span data-ttu-id="6b2de-106">[in] Имя контейнера ключа.</span><span class="sxs-lookup"><span data-stu-id="6b2de-106">[in] The name of the key container.</span></span> <span data-ttu-id="6b2de-107">`wszKeyContainer`должен быть непустой строкой.</span><span class="sxs-lookup"><span data-stu-id="6b2de-107">`wszKeyContainer` must be a non-empty string.</span></span>  
+ <span data-ttu-id="4524a-106">[in] Имя контейнера ключа.</span><span class="sxs-lookup"><span data-stu-id="4524a-106">[in] The name of the key container.</span></span> <span data-ttu-id="4524a-107">`wszKeyContainer`должен быть непустой строкой.</span><span class="sxs-lookup"><span data-stu-id="4524a-107">`wszKeyContainer` must be a non-empty string.</span></span>  
   
  `pbKeyBlob`  
- <span data-ttu-id="6b2de-108">[in] Двоичный пару ключей.</span><span class="sxs-lookup"><span data-stu-id="6b2de-108">[in] The binary key pair.</span></span>  
+ <span data-ttu-id="4524a-108">[in] Двоичный пару ключей.</span><span class="sxs-lookup"><span data-stu-id="4524a-108">[in] The binary key pair.</span></span>  
   
  `cbKeyBlob`  
- <span data-ttu-id="6b2de-109">[in] Размер в байтах для `pbKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="6b2de-109">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
+ <span data-ttu-id="4524a-109">[in] Размер в байтах для `pbKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="4524a-109">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="6b2de-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="6b2de-110">Return Value</span></span>  
- <span data-ttu-id="6b2de-111">`S_OK`Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (в разделе [часто встречающихся значений HRESULT](http://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="6b2de-111">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](http://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4524a-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="4524a-110">Return Value</span></span>  
+ <span data-ttu-id="4524a-111">`S_OK`Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (в разделе [часто встречающихся значений HRESULT](http://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="4524a-111">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](http://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6b2de-112">Примечания</span><span class="sxs-lookup"><span data-stu-id="6b2de-112">Remarks</span></span>  
- <span data-ttu-id="6b2de-113">Используйте [ICLRStrongName::StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) метода для удаления контейнера ключей.</span><span class="sxs-lookup"><span data-stu-id="6b2de-113">Use the [ICLRStrongName::StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) method to delete the key container.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4524a-112">Примечания</span><span class="sxs-lookup"><span data-stu-id="4524a-112">Remarks</span></span>  
+ <span data-ttu-id="4524a-113">Используйте [ICLRStrongName::StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) метода для удаления контейнера ключей.</span><span class="sxs-lookup"><span data-stu-id="4524a-113">Use the [ICLRStrongName::StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) method to delete the key container.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6b2de-114">Требования</span><span class="sxs-lookup"><span data-stu-id="6b2de-114">Requirements</span></span>  
- <span data-ttu-id="6b2de-115">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6b2de-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4524a-114">Требования</span><span class="sxs-lookup"><span data-stu-id="4524a-114">Requirements</span></span>  
+ <span data-ttu-id="4524a-115">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4524a-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6b2de-116">**Заголовок:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="6b2de-116">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="4524a-116">**Заголовок:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="4524a-116">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="6b2de-117">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6b2de-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="4524a-117">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4524a-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="6b2de-118">**Версии платформы .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6b2de-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="4524a-118">**Версии платформы .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4524a-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6b2de-119">См. также</span><span class="sxs-lookup"><span data-stu-id="6b2de-119">See Also</span></span>  
- [<span data-ttu-id="6b2de-120">Метод StrongNameKeyDelete</span><span class="sxs-lookup"><span data-stu-id="6b2de-120">StrongNameKeyDelete Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)  
- [<span data-ttu-id="6b2de-121">Iclrstrongname-интерфейс</span><span class="sxs-lookup"><span data-stu-id="6b2de-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4524a-119">См. также</span><span class="sxs-lookup"><span data-stu-id="4524a-119">See Also</span></span>  
+ [<span data-ttu-id="4524a-120">Метод StrongNameKeyDelete</span><span class="sxs-lookup"><span data-stu-id="4524a-120">StrongNameKeyDelete Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)  
+ [<span data-ttu-id="4524a-121">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="4524a-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

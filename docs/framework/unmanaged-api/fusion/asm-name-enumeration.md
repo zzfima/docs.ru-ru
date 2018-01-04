@@ -19,16 +19,17 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fb247f85984cff167e9e0ce729a5143633a3f7c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 153daddc0a5529d2c1cddc4669c3dbb098ce7bc2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="asmname-enumeration"></a><span data-ttu-id="c3d94-102">Перечисление ASM_NAME</span><span class="sxs-lookup"><span data-stu-id="c3d94-102">ASM_NAME Enumeration</span></span>
-<span data-ttu-id="c3d94-103">Указывает версию, сборки, язык и региональные параметры, подпись и сборка, свойства которого будут извлечены или заданы [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) методы.</span><span class="sxs-lookup"><span data-stu-id="c3d94-103">Indicates the version, build, culture, signature, and so on, of the assembly whose properties will be retrieved or set by [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) methods.</span></span>  
+# <a name="asmname-enumeration"></a><span data-ttu-id="e0e0c-102">Перечисление ASM_NAME</span><span class="sxs-lookup"><span data-stu-id="e0e0c-102">ASM_NAME Enumeration</span></span>
+<span data-ttu-id="e0e0c-103">Указывает версию, сборки, язык и региональные параметры, подпись и сборка, свойства которого будут извлечены или заданы [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) методы.</span><span class="sxs-lookup"><span data-stu-id="e0e0c-103">Indicates the version, build, culture, signature, and so on, of the assembly whose properties will be retrieved or set by [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) methods.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c3d94-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c3d94-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e0e0c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e0e0c-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -66,15 +67,15 @@ typedef enum {
 } ASM_NAME;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="c3d94-105">Требования</span><span class="sxs-lookup"><span data-stu-id="c3d94-105">Requirements</span></span>  
- <span data-ttu-id="c3d94-106">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c3d94-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e0e0c-105">Требования</span><span class="sxs-lookup"><span data-stu-id="e0e0c-105">Requirements</span></span>  
+ <span data-ttu-id="e0e0c-106">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e0e0c-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c3d94-107">**Заголовок:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="c3d94-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="e0e0c-107">**Заголовок:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="e0e0c-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="c3d94-108">**Библиотека:** включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c3d94-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e0e0c-108">**Библиотека:** включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e0e0c-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="c3d94-109">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3d94-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e0e0c-109">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e0e0c-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c3d94-110">См. также</span><span class="sxs-lookup"><span data-stu-id="c3d94-110">See Also</span></span>  
- [<span data-ttu-id="c3d94-111">IAssemblyName-интерфейс</span><span class="sxs-lookup"><span data-stu-id="c3d94-111">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
- [<span data-ttu-id="c3d94-112">Перечисления Fusion</span><span class="sxs-lookup"><span data-stu-id="c3d94-112">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="e0e0c-110">См. также</span><span class="sxs-lookup"><span data-stu-id="e0e0c-110">See Also</span></span>  
+ [<span data-ttu-id="e0e0c-111">Интерфейс IAssemblyName</span><span class="sxs-lookup"><span data-stu-id="e0e0c-111">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
+ [<span data-ttu-id="e0e0c-112">Перечисления Fusion</span><span class="sxs-lookup"><span data-stu-id="e0e0c-112">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

@@ -21,16 +21,17 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a7a6bfb8a8520d390844442665e4ba5feb4dcffb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2358a1d7af5d94bb58dd78ac5c898a06f305f6a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="itypenamegetmodifiers-method"></a><span data-ttu-id="abcf8-102">Метод ITypeName::GetModifiers</span><span class="sxs-lookup"><span data-stu-id="abcf8-102">ITypeName::GetModifiers Method</span></span>
-<span data-ttu-id="abcf8-103">Этот метод поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.</span><span class="sxs-lookup"><span data-stu-id="abcf8-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="itypenamegetmodifiers-method"></a><span data-ttu-id="48d9d-102">Метод ITypeName::GetModifiers</span><span class="sxs-lookup"><span data-stu-id="48d9d-102">ITypeName::GetModifiers Method</span></span>
+<span data-ttu-id="48d9d-103">Этот метод поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.</span><span class="sxs-lookup"><span data-stu-id="48d9d-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="abcf8-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="abcf8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="48d9d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="48d9d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetModifiers (  
@@ -40,14 +41,14 @@ HRESULT GetModifiers (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="abcf8-105">Требования</span><span class="sxs-lookup"><span data-stu-id="abcf8-105">Requirements</span></span>  
- <span data-ttu-id="abcf8-106">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="abcf8-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="48d9d-105">Требования</span><span class="sxs-lookup"><span data-stu-id="48d9d-105">Requirements</span></span>  
+ <span data-ttu-id="48d9d-106">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="48d9d-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="abcf8-107">**Заголовок:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="abcf8-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="48d9d-107">**Заголовок:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="48d9d-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="abcf8-108">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="abcf8-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="48d9d-108">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="48d9d-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="abcf8-109">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="abcf8-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="48d9d-109">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="48d9d-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="abcf8-110">См. также</span><span class="sxs-lookup"><span data-stu-id="abcf8-110">See Also</span></span>  
- [<span data-ttu-id="abcf8-111">Интерфейсы размещения</span><span class="sxs-lookup"><span data-stu-id="abcf8-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="48d9d-110">См. также</span><span class="sxs-lookup"><span data-stu-id="48d9d-110">See Also</span></span>  
+ [<span data-ttu-id="48d9d-111">Интерфейсы размещения</span><span class="sxs-lookup"><span data-stu-id="48d9d-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

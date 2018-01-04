@@ -19,32 +19,33 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 785e096bc01c9c4e1bbfe6a94338e782ad09bcad
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5a5d409f8a90994afc3e541bdbe4bbe1973dd9d5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ihostfilter-interface"></a><span data-ttu-id="6a53d-102">Интерфейс IHostFilter</span><span class="sxs-lookup"><span data-stu-id="6a53d-102">IHostFilter Interface</span></span>
-<span data-ttu-id="6a53d-103">Предоставляет метод, который указывает, что будет обрабатываться заданного маркера.</span><span class="sxs-lookup"><span data-stu-id="6a53d-103">Provides a method to indicate that a specified token will be processed.</span></span>  
+# <a name="ihostfilter-interface"></a><span data-ttu-id="65ddc-102">Интерфейс IHostFilter</span><span class="sxs-lookup"><span data-stu-id="65ddc-102">IHostFilter Interface</span></span>
+<span data-ttu-id="65ddc-103">Предоставляет метод, который указывает, что будет обрабатываться заданного маркера.</span><span class="sxs-lookup"><span data-stu-id="65ddc-103">Provides a method to indicate that a specified token will be processed.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="6a53d-104">`IHostFilter` Интерфейс должен быть реализован клиентом.</span><span class="sxs-lookup"><span data-stu-id="6a53d-104">The `IHostFilter` interface must be implemented by the client.</span></span>  
+>  <span data-ttu-id="65ddc-104">`IHostFilter` Интерфейс должен быть реализован клиентом.</span><span class="sxs-lookup"><span data-stu-id="65ddc-104">The `IHostFilter` interface must be implemented by the client.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="6a53d-105">Методы</span><span class="sxs-lookup"><span data-stu-id="6a53d-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="65ddc-105">Методы</span><span class="sxs-lookup"><span data-stu-id="65ddc-105">Methods</span></span>  
   
-|<span data-ttu-id="6a53d-106">Метод</span><span class="sxs-lookup"><span data-stu-id="6a53d-106">Method</span></span>|<span data-ttu-id="6a53d-107">Описание</span><span class="sxs-lookup"><span data-stu-id="6a53d-107">Description</span></span>|  
+|<span data-ttu-id="65ddc-106">Метод</span><span class="sxs-lookup"><span data-stu-id="65ddc-106">Method</span></span>|<span data-ttu-id="65ddc-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="65ddc-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="6a53d-108">Метод MarkToken</span><span class="sxs-lookup"><span data-stu-id="6a53d-108">MarkToken Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|<span data-ttu-id="6a53d-109">Указывает, что будет обрабатываться заданным токеном метаданных.</span><span class="sxs-lookup"><span data-stu-id="6a53d-109">Indicates that the specified metadata token will be processed.</span></span>|  
+|[<span data-ttu-id="65ddc-108">Метод MarkToken</span><span class="sxs-lookup"><span data-stu-id="65ddc-108">MarkToken Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|<span data-ttu-id="65ddc-109">Указывает, что будет обрабатываться заданным токеном метаданных.</span><span class="sxs-lookup"><span data-stu-id="65ddc-109">Indicates that the specified metadata token will be processed.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="6a53d-110">Требования</span><span class="sxs-lookup"><span data-stu-id="6a53d-110">Requirements</span></span>  
- <span data-ttu-id="6a53d-111">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6a53d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="65ddc-110">Требования</span><span class="sxs-lookup"><span data-stu-id="65ddc-110">Requirements</span></span>  
+ <span data-ttu-id="65ddc-111">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="65ddc-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6a53d-112">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6a53d-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="65ddc-112">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="65ddc-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="6a53d-113">**Библиотека:** используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6a53d-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="65ddc-113">**Библиотека:** используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="65ddc-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="6a53d-114">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6a53d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="65ddc-114">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="65ddc-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6a53d-115">См. также</span><span class="sxs-lookup"><span data-stu-id="6a53d-115">See Also</span></span>  
- [<span data-ttu-id="6a53d-116">Интерфейсы метаданных</span><span class="sxs-lookup"><span data-stu-id="6a53d-116">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="65ddc-115">См. также</span><span class="sxs-lookup"><span data-stu-id="65ddc-115">See Also</span></span>  
+ [<span data-ttu-id="65ddc-116">Интерфейсы метаданных</span><span class="sxs-lookup"><span data-stu-id="65ddc-116">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

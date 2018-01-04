@@ -21,16 +21,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7018dcb41f46d5407549f5c3d3029716781014e3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a8aa5a0c3740b6cf97d2a5d855343a36b90fd538
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugvaluegetaddress-method"></a><span data-ttu-id="cf958-102">Метод ICorDebugValue::GetAddress</span><span class="sxs-lookup"><span data-stu-id="cf958-102">ICorDebugValue::GetAddress Method</span></span>
-<span data-ttu-id="cf958-103">Возвращает адрес объекта «ICorDebugValue», который находится в отлаживаемом процессе.</span><span class="sxs-lookup"><span data-stu-id="cf958-103">Gets the address of this "ICorDebugValue" object, which is in the process of being debugged.</span></span>  
+# <a name="icordebugvaluegetaddress-method"></a><span data-ttu-id="d9171-102">Метод ICorDebugValue::GetAddress</span><span class="sxs-lookup"><span data-stu-id="d9171-102">ICorDebugValue::GetAddress Method</span></span>
+<span data-ttu-id="d9171-103">Возвращает адрес объекта «ICorDebugValue», который находится в отлаживаемом процессе.</span><span class="sxs-lookup"><span data-stu-id="d9171-103">Gets the address of this "ICorDebugValue" object, which is in the process of being debugged.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cf958-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="cf958-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d9171-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d9171-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAddress (  
@@ -38,21 +39,21 @@ HRESULT GetAddress (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cf958-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="cf958-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d9171-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d9171-105">Parameters</span></span>  
  `pAddress`  
- <span data-ttu-id="cf958-106">[out] Указатель на `CORDB_ADDRESS` объект, указывающий адрес, этот объект значения.</span><span class="sxs-lookup"><span data-stu-id="cf958-106">[out] Pointer to a `CORDB_ADDRESS` object that specifies the address of this value object.</span></span>  
+ <span data-ttu-id="d9171-106">[out] Указатель на `CORDB_ADDRESS` объект, указывающий адрес, этот объект значения.</span><span class="sxs-lookup"><span data-stu-id="d9171-106">[out] Pointer to a `CORDB_ADDRESS` object that specifies the address of this value object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cf958-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="cf958-107">Remarks</span></span>  
- <span data-ttu-id="cf958-108">Если значение недоступно, возвращается 0 (ноль).</span><span class="sxs-lookup"><span data-stu-id="cf958-108">If the value is unavailable, 0 (zero) is returned.</span></span> <span data-ttu-id="cf958-109">Это может произойти, если значение хотя бы частично находится в регистрах или хранится в дескрипторе сборщика мусора (`GCHandle`).</span><span class="sxs-lookup"><span data-stu-id="cf958-109">This could happen if the value is at least partly in registers or stored in a garbage collector handle (`GCHandle`).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d9171-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="d9171-107">Remarks</span></span>  
+ <span data-ttu-id="d9171-108">Если значение недоступно, возвращается 0 (ноль).</span><span class="sxs-lookup"><span data-stu-id="d9171-108">If the value is unavailable, 0 (zero) is returned.</span></span> <span data-ttu-id="d9171-109">Это может произойти, если значение хотя бы частично находится в регистрах или хранится в дескрипторе сборщика мусора (`GCHandle`).</span><span class="sxs-lookup"><span data-stu-id="d9171-109">This could happen if the value is at least partly in registers or stored in a garbage collector handle (`GCHandle`).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cf958-110">Требования</span><span class="sxs-lookup"><span data-stu-id="cf958-110">Requirements</span></span>  
- <span data-ttu-id="cf958-111">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cf958-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d9171-110">Требования</span><span class="sxs-lookup"><span data-stu-id="d9171-110">Requirements</span></span>  
+ <span data-ttu-id="d9171-111">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d9171-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cf958-112">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cf958-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d9171-112">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d9171-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="cf958-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cf958-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d9171-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d9171-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cf958-114">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cf958-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d9171-114">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d9171-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cf958-115">См. также</span><span class="sxs-lookup"><span data-stu-id="cf958-115">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d9171-115">См. также</span><span class="sxs-lookup"><span data-stu-id="d9171-115">See Also</span></span>  
  

@@ -14,28 +14,29 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 60c7e2ddd4d4d57b675f2c12f8c5f567e8d23020
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 65daceac9b865f3e8224c709d672344606905d9f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="controlling-auto-launching-of-wcf-service-host"></a><span data-ttu-id="4d037-102">Управление автозапуском узла службы WCF</span><span class="sxs-lookup"><span data-stu-id="4d037-102">Controlling Auto-launching of WCF Service Host</span></span>
-<span data-ttu-id="4d037-103">Можно управлять возможностью автозапуска узла службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] (WcfSvcHost.exe) для проекта библиотеки службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] при отладке другого проекта в одном решении [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], которое содержит несколько проектов.</span><span class="sxs-lookup"><span data-stu-id="4d037-103">You can control the auto-launching capability of [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Service Host (WcfSvcHost.exe) for a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Library project, when you debug another project in the same [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] solution containing multiple projects.</span></span>  
+# <a name="controlling-auto-launching-of-wcf-service-host"></a><span data-ttu-id="bdb5e-102">Управление автозапуском узла службы WCF</span><span class="sxs-lookup"><span data-stu-id="bdb5e-102">Controlling Auto-launching of WCF Service Host</span></span>
+<span data-ttu-id="bdb5e-103">Можно управлять возможностью автозапуска узла службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] (WcfSvcHost.exe) для проекта библиотеки службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] при отладке другого проекта в одном решении [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], которое содержит несколько проектов.</span><span class="sxs-lookup"><span data-stu-id="bdb5e-103">You can control the auto-launching capability of [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Service Host (WcfSvcHost.exe) for a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Library project, when you debug another project in the same [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] solution containing multiple projects.</span></span>  
   
- <span data-ttu-id="4d037-104">Чтобы сделать это, щелкните правой кнопкой мыши [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] проект службы в **обозревателе решений**, выберите **свойства**и нажмите кнопку **параметры WCF** вкладки. **Запуск узла службы WCF при отладке другого проекта того же решения** флажок установлен по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="4d037-104">To do so, right-click the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Project in **Solution Explorer**, choose **Properties**, and click **WCF Options** tab. The **Start WCF Service Host when debugging another project in the same solution** check box is enabled by default.</span></span> <span data-ttu-id="4d037-105">Можно снять этот флажок, чтобы узел службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] не запускался для заданного проекта при отладке другого проекта в одном решении.</span><span class="sxs-lookup"><span data-stu-id="4d037-105">You can clear the box so that [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Host for this specific project is not launched when another project is debugged in the same solution.</span></span>  
+ <span data-ttu-id="bdb5e-104">Чтобы сделать это, щелкните правой кнопкой мыши [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] проект службы в **обозревателе решений**, выберите **свойства**и нажмите кнопку **параметры WCF** вкладки. **Запуск узла службы WCF при отладке другого проекта того же решения** флажок установлен по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="bdb5e-104">To do so, right-click the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Project in **Solution Explorer**, choose **Properties**, and click **WCF Options** tab. The **Start WCF Service Host when debugging another project in the same solution** check box is enabled by default.</span></span> <span data-ttu-id="bdb5e-105">Можно снять этот флажок, чтобы узел службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] не запускался для заданного проекта при отладке другого проекта в одном решении.</span><span class="sxs-lookup"><span data-stu-id="bdb5e-105">You can clear the box so that [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Host for this specific project is not launched when another project is debugged in the same solution.</span></span>  
   
- <span data-ttu-id="4d037-106">Это поведение не оказывает влияние на отладку по клавише F5 или на функциональные возможности добавления ссылки на службу для этого проекта.</span><span class="sxs-lookup"><span data-stu-id="4d037-106">This behavior does not affect the F5 debugging, or Add Service Reference functionalities for this project.</span></span>  
+ <span data-ttu-id="bdb5e-106">Это поведение не оказывает влияние на отладку по клавише F5 или на функциональные возможности добавления ссылки на службу для этого проекта.</span><span class="sxs-lookup"><span data-stu-id="bdb5e-106">This behavior does not affect the F5 debugging, or Add Service Reference functionalities for this project.</span></span>  
   
- <span data-ttu-id="4d037-107">Эта возможность доступна в следующих проектах.</span><span class="sxs-lookup"><span data-stu-id="4d037-107">This option is available to the following projects:</span></span>  
+ <span data-ttu-id="bdb5e-107">Эта возможность доступна в следующих проектах.</span><span class="sxs-lookup"><span data-stu-id="bdb5e-107">This option is available to the following projects:</span></span>  
   
--   <span data-ttu-id="4d037-108">Проект библиотеки служб [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4d037-108">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Library Project.</span></span>  
+-   <span data-ttu-id="bdb5e-108">Проект библиотеки служб [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="bdb5e-108">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Library Project.</span></span>  
   
--   <span data-ttu-id="4d037-109">Проект библиотеки службы последовательного рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="4d037-109">Sequential Workflow Service Library Project.</span></span>  
+-   <span data-ttu-id="bdb5e-109">Проект библиотеки службы последовательного рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="bdb5e-109">Sequential Workflow Service Library Project.</span></span>  
   
--   <span data-ttu-id="4d037-110">Проект библиотеки рабочего процесса конечного автомата.</span><span class="sxs-lookup"><span data-stu-id="4d037-110">State Machine Workflow Service Library Project.</span></span>  
+-   <span data-ttu-id="bdb5e-110">Проект библиотеки рабочего процесса конечного автомата.</span><span class="sxs-lookup"><span data-stu-id="bdb5e-110">State Machine Workflow Service Library Project.</span></span>  
   
--   <span data-ttu-id="4d037-111">Проект библиотеки служб синдикации.</span><span class="sxs-lookup"><span data-stu-id="4d037-111">Syndication Service Library Project.</span></span>  
+-   <span data-ttu-id="bdb5e-111">Проект библиотеки служб синдикации.</span><span class="sxs-lookup"><span data-stu-id="bdb5e-111">Syndication Service Library Project.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4d037-112">См. также</span><span class="sxs-lookup"><span data-stu-id="4d037-112">See Also</span></span>  
- [<span data-ttu-id="4d037-113">Узел службы WCF (WcfSvcHost.exe)</span><span class="sxs-lookup"><span data-stu-id="4d037-113">WCF Service Host (WcfSvcHost.exe)</span></span>](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+## <a name="see-also"></a><span data-ttu-id="bdb5e-112">См. также</span><span class="sxs-lookup"><span data-stu-id="bdb5e-112">See Also</span></span>  
+ [<span data-ttu-id="bdb5e-113">Узел службы WCF (WcfSvcHost.exe)</span><span class="sxs-lookup"><span data-stu-id="bdb5e-113">WCF Service Host (WcfSvcHost.exe)</span></span>](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

@@ -21,16 +21,17 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6f2de9f683a9ce667b4b72c94204d39082cdaee4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1fcfeba065bcdc996b5bc742dfea33b4417a29f7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanagednamespacegetvariables-method"></a><span data-ttu-id="a90bf-102">Метод ISymUnmanagedNamespace::GetVariables</span><span class="sxs-lookup"><span data-stu-id="a90bf-102">ISymUnmanagedNamespace::GetVariables Method</span></span>
-<span data-ttu-id="a90bf-103">Возвращает все переменные, определенные в глобальной области видимости в пределах этого пространства имен.</span><span class="sxs-lookup"><span data-stu-id="a90bf-103">Returns all variables defined at global scope within this namespace.</span></span>  
+# <a name="isymunmanagednamespacegetvariables-method"></a><span data-ttu-id="62c52-102">Метод ISymUnmanagedNamespace::GetVariables</span><span class="sxs-lookup"><span data-stu-id="62c52-102">ISymUnmanagedNamespace::GetVariables Method</span></span>
+<span data-ttu-id="62c52-103">Возвращает все переменные, определенные в глобальной области видимости в пределах этого пространства имен.</span><span class="sxs-lookup"><span data-stu-id="62c52-103">Returns all variables defined at global scope within this namespace.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a90bf-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a90bf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="62c52-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="62c52-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVariables(  
@@ -40,21 +41,21 @@ HRESULT GetVariables(
         ISymUnmanagedVariable *pVars[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a90bf-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a90bf-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="62c52-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="62c52-105">Parameters</span></span>  
  `cVars`  
- <span data-ttu-id="a90bf-106">[in] Объект `ULONG32` указывает размер `pVars` массива.</span><span class="sxs-lookup"><span data-stu-id="a90bf-106">[in] A `ULONG32` that indicates the size of the `pVars` array.</span></span>  
+ <span data-ttu-id="62c52-106">[in] Объект `ULONG32` указывает размер `pVars` массива.</span><span class="sxs-lookup"><span data-stu-id="62c52-106">[in] A `ULONG32` that indicates the size of the `pVars` array.</span></span>  
   
  `pcVars`  
- <span data-ttu-id="a90bf-107">[out] Указатель на `ULONG32` , получающий размер буфера, необходимый для пространства имен.</span><span class="sxs-lookup"><span data-stu-id="a90bf-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
+ <span data-ttu-id="62c52-107">[out] Указатель на `ULONG32` , получающий размер буфера, необходимый для пространства имен.</span><span class="sxs-lookup"><span data-stu-id="62c52-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
   
  `pVars`  
- <span data-ttu-id="a90bf-108">[out] Указатель на буфер, который содержит пространства имен.</span><span class="sxs-lookup"><span data-stu-id="a90bf-108">[out] A pointer to a buffer that contains the namespaces.</span></span>  
+ <span data-ttu-id="62c52-108">[out] Указатель на буфер, который содержит пространства имен.</span><span class="sxs-lookup"><span data-stu-id="62c52-108">[out] A pointer to a buffer that contains the namespaces.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a90bf-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="a90bf-109">Return Value</span></span>  
- <span data-ttu-id="a90bf-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="a90bf-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="62c52-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="62c52-109">Return Value</span></span>  
+ <span data-ttu-id="62c52-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="62c52-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a90bf-111">Требования</span><span class="sxs-lookup"><span data-stu-id="a90bf-111">Requirements</span></span>  
- <span data-ttu-id="a90bf-112">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a90bf-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="62c52-111">Требования</span><span class="sxs-lookup"><span data-stu-id="62c52-111">Requirements</span></span>  
+ <span data-ttu-id="62c52-112">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="62c52-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a90bf-113">См. также</span><span class="sxs-lookup"><span data-stu-id="a90bf-113">See Also</span></span>  
- [<span data-ttu-id="a90bf-114">ISymUnmanagedNamespace-интерфейс</span><span class="sxs-lookup"><span data-stu-id="a90bf-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+## <a name="see-also"></a><span data-ttu-id="62c52-113">См. также</span><span class="sxs-lookup"><span data-stu-id="62c52-113">See Also</span></span>  
+ [<span data-ttu-id="62c52-114">Интерфейс ISymUnmanagedNamespace</span><span class="sxs-lookup"><span data-stu-id="62c52-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

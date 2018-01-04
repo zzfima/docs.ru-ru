@@ -21,20 +21,21 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 32efc50179b98d0c4f45b10eb46db1eddfe9578e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3cd44c2f21771ccda9a656bfe66f865e181fcee1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icatalogservicesautodone-method"></a><span data-ttu-id="9245e-102">Метод ICatalogServices::Autodone</span><span class="sxs-lookup"><span data-stu-id="9245e-102">ICatalogServices::Autodone Method</span></span>
-<span data-ttu-id="9245e-103">Этот метод поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.</span><span class="sxs-lookup"><span data-stu-id="9245e-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icatalogservicesautodone-method"></a><span data-ttu-id="3cf4e-102">Метод ICatalogServices::Autodone</span><span class="sxs-lookup"><span data-stu-id="3cf4e-102">ICatalogServices::Autodone Method</span></span>
+<span data-ttu-id="3cf4e-103">Этот метод поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.</span><span class="sxs-lookup"><span data-stu-id="3cf4e-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9245e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9245e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3cf4e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3cf4e-104">Syntax</span></span>  
   
 ```  
 HRESULT Autodone ( );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9245e-105">См. также</span><span class="sxs-lookup"><span data-stu-id="9245e-105">See Also</span></span>  
- [<span data-ttu-id="9245e-106">Интерфейсы размещения</span><span class="sxs-lookup"><span data-stu-id="9245e-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="3cf4e-105">См. также</span><span class="sxs-lookup"><span data-stu-id="3cf4e-105">See Also</span></span>  
+ [<span data-ttu-id="3cf4e-106">Интерфейсы размещения</span><span class="sxs-lookup"><span data-stu-id="3cf4e-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -19,18 +19,19 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3c8e84881822cbafa8c43c3669f7522c390d5c5e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: be7979eb0f7d32e02257cc0b3cb400263350f0bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="gethashfromfile-function"></a><span data-ttu-id="67666-102">Функция GetHashFromFile</span><span class="sxs-lookup"><span data-stu-id="67666-102">GetHashFromFile Function</span></span>
-<span data-ttu-id="67666-103">Создает хэш содержимого указанного файла.</span><span class="sxs-lookup"><span data-stu-id="67666-103">Generates a hash over the contents of the specified file.</span></span>  
+# <a name="gethashfromfile-function"></a><span data-ttu-id="e51f8-102">Функция GetHashFromFile</span><span class="sxs-lookup"><span data-stu-id="e51f8-102">GetHashFromFile Function</span></span>
+<span data-ttu-id="e51f8-103">Создает хэш содержимого указанного файла.</span><span class="sxs-lookup"><span data-stu-id="e51f8-103">Generates a hash over the contents of the specified file.</span></span>  
   
- <span data-ttu-id="67666-104">Эта функция устарела.</span><span class="sxs-lookup"><span data-stu-id="67666-104">This function has been deprecated.</span></span> <span data-ttu-id="67666-105">Используйте [ICLRStrongName::GetHashFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md) метод вместо него.</span><span class="sxs-lookup"><span data-stu-id="67666-105">Use the [ICLRStrongName::GetHashFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md) method instead.</span></span>  
+ <span data-ttu-id="e51f8-104">Эта функция устарела.</span><span class="sxs-lookup"><span data-stu-id="e51f8-104">This function has been deprecated.</span></span> <span data-ttu-id="e51f8-105">Используйте [ICLRStrongName::GetHashFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md) метод вместо него.</span><span class="sxs-lookup"><span data-stu-id="e51f8-105">Use the [ICLRStrongName::GetHashFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="67666-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="67666-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e51f8-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e51f8-106">Syntax</span></span>  
   
 ```  
 HRESULT GetHashFromFile (  
@@ -42,35 +43,35 @@ HRESULT GetHashFromFile (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="67666-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="67666-107">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e51f8-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="e51f8-107">Parameters</span></span>  
  `szFilePath`  
- <span data-ttu-id="67666-108">[in] Имя файла для хеширования.</span><span class="sxs-lookup"><span data-stu-id="67666-108">[in] The name of the file to hash.</span></span>  
+ <span data-ttu-id="e51f8-108">[in] Имя файла для хеширования.</span><span class="sxs-lookup"><span data-stu-id="e51f8-108">[in] The name of the file to hash.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="67666-109">[in, out] Алгоритм, используемый при создании хеша.</span><span class="sxs-lookup"><span data-stu-id="67666-109">[in, out] The algorithm to use when generating the hash.</span></span> <span data-ttu-id="67666-110">Допустимыми являются алгоритмы, определенные интерфейсом CryptoAPI в Win32.</span><span class="sxs-lookup"><span data-stu-id="67666-110">Valid algorithms are those defined by the Win32 CryptoAPI.</span></span> <span data-ttu-id="67666-111">Если `piHashAlg` имеет значение 0, алгоритм по умолчанию используется CALG_SHA-1.</span><span class="sxs-lookup"><span data-stu-id="67666-111">If `piHashAlg` is set to 0, the default algorithm CALG_SHA-1 is used.</span></span>  
+ <span data-ttu-id="e51f8-109">[in, out] Алгоритм, используемый при создании хеша.</span><span class="sxs-lookup"><span data-stu-id="e51f8-109">[in, out] The algorithm to use when generating the hash.</span></span> <span data-ttu-id="e51f8-110">Допустимыми являются алгоритмы, определенные интерфейсом CryptoAPI в Win32.</span><span class="sxs-lookup"><span data-stu-id="e51f8-110">Valid algorithms are those defined by the Win32 CryptoAPI.</span></span> <span data-ttu-id="e51f8-111">Если `piHashAlg` имеет значение 0, алгоритм по умолчанию используется CALG_SHA-1.</span><span class="sxs-lookup"><span data-stu-id="e51f8-111">If `piHashAlg` is set to 0, the default algorithm CALG_SHA-1 is used.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="67666-112">[out] Массив байтов, содержащий созданный хеш.</span><span class="sxs-lookup"><span data-stu-id="67666-112">[out] A byte array containing the generated hash.</span></span>  
+ <span data-ttu-id="e51f8-112">[out] Массив байтов, содержащий созданный хеш.</span><span class="sxs-lookup"><span data-stu-id="e51f8-112">[out] A byte array containing the generated hash.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="67666-113">[in] Максимальный размер буфера, `pbHash` указывает.</span><span class="sxs-lookup"><span data-stu-id="67666-113">[in] The maximum size of the buffer that `pbHash` points to.</span></span>  
+ <span data-ttu-id="e51f8-113">[in] Максимальный размер буфера, `pbHash` указывает.</span><span class="sxs-lookup"><span data-stu-id="e51f8-113">[in] The maximum size of the buffer that `pbHash` points to.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="67666-114">[out] Размер в байтах, возвращаемого `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="67666-114">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
+ <span data-ttu-id="e51f8-114">[out] Размер в байтах, возвращаемого `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="e51f8-114">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="67666-115">Примечания</span><span class="sxs-lookup"><span data-stu-id="67666-115">Remarks</span></span>  
- <span data-ttu-id="67666-116">Эта функция является таким же, как [GetHashFromFileW](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfilew-function.md), за исключением того, что спецификация имени файла — ANSI, а не в Юникоде.</span><span class="sxs-lookup"><span data-stu-id="67666-116">This function is the same as [GetHashFromFileW](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfilew-function.md), except that the file name specification is ANSI instead of Unicode.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e51f8-115">Примечания</span><span class="sxs-lookup"><span data-stu-id="e51f8-115">Remarks</span></span>  
+ <span data-ttu-id="e51f8-116">Эта функция является таким же, как [GetHashFromFileW](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfilew-function.md), за исключением того, что спецификация имени файла — ANSI, а не в Юникоде.</span><span class="sxs-lookup"><span data-stu-id="e51f8-116">This function is the same as [GetHashFromFileW](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfilew-function.md), except that the file name specification is ANSI instead of Unicode.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="67666-117">Требования</span><span class="sxs-lookup"><span data-stu-id="67666-117">Requirements</span></span>  
- <span data-ttu-id="67666-118">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="67666-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e51f8-117">Требования</span><span class="sxs-lookup"><span data-stu-id="e51f8-117">Requirements</span></span>  
+ <span data-ttu-id="e51f8-118">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e51f8-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="67666-119">**Заголовок:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="67666-119">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="e51f8-119">**Заголовок:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="e51f8-119">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="67666-120">**Библиотека:** включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="67666-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e51f8-120">**Библиотека:** включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e51f8-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="67666-121">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="67666-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e51f8-121">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e51f8-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="67666-122">См. также</span><span class="sxs-lookup"><span data-stu-id="67666-122">See Also</span></span>  
- [<span data-ttu-id="67666-123">Метод GetHashFromFile</span><span class="sxs-lookup"><span data-stu-id="67666-123">GetHashFromFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)  
- [<span data-ttu-id="67666-124">Метод GetHashFromFileW</span><span class="sxs-lookup"><span data-stu-id="67666-124">GetHashFromFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)  
- [<span data-ttu-id="67666-125">Iclrstrongname-интерфейс</span><span class="sxs-lookup"><span data-stu-id="67666-125">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e51f8-122">См. также</span><span class="sxs-lookup"><span data-stu-id="e51f8-122">See Also</span></span>  
+ [<span data-ttu-id="e51f8-123">Метод GetHashFromFile</span><span class="sxs-lookup"><span data-stu-id="e51f8-123">GetHashFromFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)  
+ [<span data-ttu-id="e51f8-124">Метод GetHashFromFileW</span><span class="sxs-lookup"><span data-stu-id="e51f8-124">GetHashFromFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)  
+ [<span data-ttu-id="e51f8-125">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="e51f8-125">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

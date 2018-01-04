@@ -21,16 +21,17 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b863031cae487a2c081f23aeada1971893aa339f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 890fd702bc2edb5714dc9c91a618c6420a11a27a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanagedmethodgetscopefromoffset-method"></a><span data-ttu-id="5cd48-102">Метод ISymUnmanagedMethod::GetScopeFromOffset</span><span class="sxs-lookup"><span data-stu-id="5cd48-102">ISymUnmanagedMethod::GetScopeFromOffset Method</span></span>
-<span data-ttu-id="5cd48-103">Возвращает наиболее узкая Внешняя лексическая область в этом методе, содержащую данное смещение.</span><span class="sxs-lookup"><span data-stu-id="5cd48-103">Gets the most enclosing lexical scope within this method that encloses the given offset.</span></span> <span data-ttu-id="5cd48-104">Может быть использован для запуска поиска локальной переменной.</span><span class="sxs-lookup"><span data-stu-id="5cd48-104">This can be used to start local variable searches.</span></span>  
+# <a name="isymunmanagedmethodgetscopefromoffset-method"></a><span data-ttu-id="3bbaa-102">Метод ISymUnmanagedMethod::GetScopeFromOffset</span><span class="sxs-lookup"><span data-stu-id="3bbaa-102">ISymUnmanagedMethod::GetScopeFromOffset Method</span></span>
+<span data-ttu-id="3bbaa-103">Возвращает наиболее узкая Внешняя лексическая область в этом методе, содержащую данное смещение.</span><span class="sxs-lookup"><span data-stu-id="3bbaa-103">Gets the most enclosing lexical scope within this method that encloses the given offset.</span></span> <span data-ttu-id="3bbaa-104">Может быть использован для запуска поиска локальной переменной.</span><span class="sxs-lookup"><span data-stu-id="3bbaa-104">This can be used to start local variable searches.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5cd48-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5cd48-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3bbaa-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3bbaa-105">Syntax</span></span>  
   
 ```  
 HRESULT GetScopeFromOffset(  
@@ -38,18 +39,18 @@ HRESULT GetScopeFromOffset(
     [out, retval] ISymUnmanagedScope**  pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5cd48-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="5cd48-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="3bbaa-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="3bbaa-106">Parameters</span></span>  
  `offset`  
- <span data-ttu-id="5cd48-107">[in] Объект `ULONG` , содержащий смещение.</span><span class="sxs-lookup"><span data-stu-id="5cd48-107">[in] A `ULONG` that contains the offset.</span></span>  
+ <span data-ttu-id="3bbaa-107">[in] Объект `ULONG` , содержащий смещение.</span><span class="sxs-lookup"><span data-stu-id="3bbaa-107">[in] A `ULONG` that contains the offset.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="5cd48-108">[out] Указатель, который задается в возвращаемую [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) интерфейса.</span><span class="sxs-lookup"><span data-stu-id="5cd48-108">[out] A pointer that is set to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.</span></span>  
+ <span data-ttu-id="3bbaa-108">[out] Указатель, который задается в возвращаемую [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) интерфейса.</span><span class="sxs-lookup"><span data-stu-id="3bbaa-108">[out] A pointer that is set to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5cd48-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="5cd48-109">Return Value</span></span>  
- <span data-ttu-id="5cd48-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="5cd48-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3bbaa-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="3bbaa-109">Return Value</span></span>  
+ <span data-ttu-id="3bbaa-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="3bbaa-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5cd48-111">Требования</span><span class="sxs-lookup"><span data-stu-id="5cd48-111">Requirements</span></span>  
- <span data-ttu-id="5cd48-112">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5cd48-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3bbaa-111">Требования</span><span class="sxs-lookup"><span data-stu-id="3bbaa-111">Requirements</span></span>  
+ <span data-ttu-id="3bbaa-112">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="3bbaa-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5cd48-113">См. также</span><span class="sxs-lookup"><span data-stu-id="5cd48-113">See Also</span></span>  
- [<span data-ttu-id="5cd48-114">ISymUnmanagedMethod-интерфейс</span><span class="sxs-lookup"><span data-stu-id="5cd48-114">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="3bbaa-113">См. также</span><span class="sxs-lookup"><span data-stu-id="3bbaa-113">See Also</span></span>  
+ [<span data-ttu-id="3bbaa-114">Интерфейс ISymUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="3bbaa-114">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

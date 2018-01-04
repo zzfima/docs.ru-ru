@@ -21,16 +21,17 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 810192848e15a200a4b2eb33eaf60ddbd7c7c607
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 32b75a0d9cbe783778678585a98b453418920e21
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="iassemblynamegetdisplayname-method"></a><span data-ttu-id="a2d4d-102">Метод IAssemblyName::GetDisplayName</span><span class="sxs-lookup"><span data-stu-id="a2d4d-102">IAssemblyName::GetDisplayName Method</span></span>
-<span data-ttu-id="a2d4d-103">Возвращает понятное имя сборки, упоминаемой в этом [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) объекта.</span><span class="sxs-lookup"><span data-stu-id="a2d4d-103">Gets the human-readable name of the assembly referenced by this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span>  
+# <a name="iassemblynamegetdisplayname-method"></a><span data-ttu-id="5ff21-102">Метод IAssemblyName::GetDisplayName</span><span class="sxs-lookup"><span data-stu-id="5ff21-102">IAssemblyName::GetDisplayName Method</span></span>
+<span data-ttu-id="5ff21-103">Возвращает понятное имя сборки, упоминаемой в этом [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) объекта.</span><span class="sxs-lookup"><span data-stu-id="5ff21-103">Gets the human-readable name of the assembly referenced by this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a2d4d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a2d4d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5ff21-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5ff21-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDisplayName (  
@@ -40,23 +41,23 @@ HRESULT GetDisplayName (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a2d4d-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a2d4d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5ff21-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="5ff21-105">Parameters</span></span>  
  `szDisplayName`  
- <span data-ttu-id="a2d4d-106">[out] Строковый буфер, который содержит имя сборки, на которую указывает ссылка.</span><span class="sxs-lookup"><span data-stu-id="a2d4d-106">[out] The string buffer that contains the name of the referenced assembly.</span></span>  
+ <span data-ttu-id="5ff21-106">[out] Строковый буфер, который содержит имя сборки, на которую указывает ссылка.</span><span class="sxs-lookup"><span data-stu-id="5ff21-106">[out] The string buffer that contains the name of the referenced assembly.</span></span>  
   
  `pccDisplayName`  
- <span data-ttu-id="a2d4d-107">[in, out] Размер `szDisplayName` из расширенных символов, включая символ завершения null.</span><span class="sxs-lookup"><span data-stu-id="a2d4d-107">[in, out] The size of `szDisplayName` in wide characters, including a null terminator character.</span></span>  
+ <span data-ttu-id="5ff21-107">[in, out] Размер `szDisplayName` из расширенных символов, включая символ завершения null.</span><span class="sxs-lookup"><span data-stu-id="5ff21-107">[in, out] The size of `szDisplayName` in wide characters, including a null terminator character.</span></span>  
   
  `dwDisplayFlags`  
- <span data-ttu-id="a2d4d-108">[in] Побитовое сочетание [ASM_DISPLAY_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-display-flags-enumeration.md) значения, которые влияют на возможности `szDisplayName`.</span><span class="sxs-lookup"><span data-stu-id="a2d4d-108">[in] A bitwise combination of [ASM_DISPLAY_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-display-flags-enumeration.md) values that influence the features of `szDisplayName`.</span></span>  
+ <span data-ttu-id="5ff21-108">[in] Побитовое сочетание [ASM_DISPLAY_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-display-flags-enumeration.md) значения, которые влияют на возможности `szDisplayName`.</span><span class="sxs-lookup"><span data-stu-id="5ff21-108">[in] A bitwise combination of [ASM_DISPLAY_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-display-flags-enumeration.md) values that influence the features of `szDisplayName`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a2d4d-109">Требования</span><span class="sxs-lookup"><span data-stu-id="a2d4d-109">Requirements</span></span>  
- <span data-ttu-id="a2d4d-110">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a2d4d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5ff21-109">Требования</span><span class="sxs-lookup"><span data-stu-id="5ff21-109">Requirements</span></span>  
+ <span data-ttu-id="5ff21-110">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5ff21-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a2d4d-111">**Заголовок:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="a2d4d-111">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="5ff21-111">**Заголовок:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="5ff21-111">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="a2d4d-112">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a2d4d-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5ff21-112">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5ff21-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a2d4d-113">См. также</span><span class="sxs-lookup"><span data-stu-id="a2d4d-113">See Also</span></span>  
- [<span data-ttu-id="a2d4d-114">IAssemblyName-интерфейс</span><span class="sxs-lookup"><span data-stu-id="a2d4d-114">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
- [<span data-ttu-id="a2d4d-115">Перечисления Fusion</span><span class="sxs-lookup"><span data-stu-id="a2d4d-115">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="5ff21-113">См. также</span><span class="sxs-lookup"><span data-stu-id="5ff21-113">See Also</span></span>  
+ [<span data-ttu-id="5ff21-114">Интерфейс IAssemblyName</span><span class="sxs-lookup"><span data-stu-id="5ff21-114">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
+ [<span data-ttu-id="5ff21-115">Перечисления Fusion</span><span class="sxs-lookup"><span data-stu-id="5ff21-115">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
