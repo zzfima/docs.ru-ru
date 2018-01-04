@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8d60d6061a8b6af00b38922dfbc3c1f2e1a1dcf0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 03eed22efe7c0c81faaa24239384e84427e7996d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transactionbridgerecoveryfailure"></a>TransactionBridgeRecoveryFailure
 Идентификатор: 146  
@@ -26,9 +27,9 @@ ms.lasthandoff: 12/02/2017
   
  Категория: TransactionBridge  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Это событие показывает, что произошла ошибка MSDTC TransactionBridge во время восстановления данных. Это неустранимая ошибка, поэтому служба MSDTC была остановлена. В событии указаны исключение, имя процесса и идентификатор процесса. .  
   
 ## <a name="see-also"></a>См. также  
  [Ведение журнала событий](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Общие справочные сведения события](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+ [Общие справочные сведения о событиях](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

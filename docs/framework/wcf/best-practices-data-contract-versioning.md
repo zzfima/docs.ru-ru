@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a84b671725ab41bc3287f184406ebec381f0a554
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 78373d482aaaa0121a6c2708f543188d9cc9464d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-data-contract-versioning"></a>Рекомендации. Управление версиями контракта данных
 В данном разделе приводятся рекомендации по созданию контрактов данных, которые можно легко развить со временем. [!INCLUDE[crabout](../../../includes/crabout-md.md)]контракты данных, см. в разделах [использование контрактов данных](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -113,5 +114,5 @@ ms.lasthandoff: 12/02/2017
  [Использование контрактов данных](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
  [Управление версиями контракта данных](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
  [Имена контрактов данных](../../../docs/framework/wcf/feature-details/data-contract-names.md)  
- [Контракты данных с прямой совместимостью](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
- [Обратных вызовов независимой от версий сериализации](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+ [Контракты данных, совместимые с любыми будущими изменениями](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
+ [Обратные вызовы сериализации, независимые от версий](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

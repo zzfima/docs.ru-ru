@@ -13,16 +13,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: baef18df3e1dda8725859c9529ab61c0668c8ff3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 002c1aeb2f81c242adee5174340ea638ed85287f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="calls-per-second"></a>Количество вызовов в секунду
 Имя счетчика: Calls Per Second  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Число вызовов данной операции в секунду.  
   
  Этот счетчик является счетчиком производительности типа [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по следующей формуле.  

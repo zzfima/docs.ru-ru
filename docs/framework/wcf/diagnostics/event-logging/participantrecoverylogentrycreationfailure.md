@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2bb339c0153c142d24ec2aaa3d836140107d789e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 075d4a31f592e15c8eaf801cf2f34b85c8f2dff1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="participantrecoverylogentrycreationfailure"></a>ParticipantRecoveryLogEntryCreationFailure
 Идентификатор: 141  
@@ -26,9 +27,9 @@ ms.lasthandoff: 12/02/2017
   
  Категория: TransactionBridge  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Это событие указывает, что не удалось создать запись журнала восстановления для зачисления участника. Транзакция будет прервана. В событии указываются идентификатор транзакции, идентификатор зачисления, исключение, имя и идентификатор процесса.  
   
 ## <a name="see-also"></a>См. также  
  [Ведение журнала событий](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Общие справочные сведения события](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+ [Общие справочные сведения о событиях](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

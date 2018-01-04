@@ -13,16 +13,17 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff48a1de4563bbbc73fa91359d6e8cb21bcf195a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7b78a97b6e73b3cee09fe6cc37152706df5de861
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="microsofttransactionstransactionbridgeregistrationcoordinatorresponseinvalidmetadata"></a>Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorResponseInvalidMetadata
 Служба протокола WS-Atomic Transaction получила от координатора сообщение RegisterResponse, в котором содержится ссылка на конечную точку с недействительными или несовместимыми метаданными.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Отслеживается, когда локальный диспетчер транзакций выполняет попытку регистрации посредством диспетчера транзакций более высокого уровня и последний возвращает недействительный адрес в сообщении RegisterResponse.  
   
 ## <a name="see-also"></a>См. также  

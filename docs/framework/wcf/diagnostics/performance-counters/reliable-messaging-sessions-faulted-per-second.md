@@ -13,16 +13,17 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6c176adceb2404037d22a1e9ad3cebae1a8ce83e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e3a63ba266de8cb4debd8ea43704f9b38049482c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-messaging-sessions-faulted-per-second"></a>Количество надежных сеансов обмена сообщениями, в которых произошел сбой, в секунду
 Имя счетчика: Reliable Messaging Sessions Faulted Per Second.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Количество надежных сессий обмена сообщениями этой службы, в которых произошел сбой в течение секунды.  
   
  Этот счетчик является счетчиком производительности типа [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по следующей формуле.  

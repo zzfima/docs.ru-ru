@@ -13,23 +13,24 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d56766dd32acf1ef71f7c06a5c3c94cc7510070
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 21ed3dc21d5caecd64cc3740e2a9a6e8a699bbd2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="222---operationfailed"></a>222 - OperationFailed
 ## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
-|Идентификатор|222|  
+|ID|222|  
 |Ключевые слова|EndToEndMonitoring, HealthMonitoring, Troubleshooting, ServiceModel|  
 |Уровень|Предупреждение|  
 |Канал|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Это событие создается в том случае, когда `OperationInvoker` модели службы по умолчанию обнаруживает исключение при вызове его метода. Обратите внимание, что исключения, производные от `FaultException`, не вызывают это событие.  
   
 ## <a name="message"></a>Сообщение  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="details"></a>Подробные сведения  
   
-|Имя элемента данных|Тип элемента данных|Описание|  
+|Имя элемента данных|Тип элемента данных|Описание:|  
 |--------------------|--------------------|-----------------|  
 |Имя метода|`xs:string`|Имя CLR метода, который был вызван `OperationInvoker`.|  
 |Длительность|`xs:long`|Время в миллисекундах, которое потребовалось `OperationInvoker`, чтобы вызвать метод.|  

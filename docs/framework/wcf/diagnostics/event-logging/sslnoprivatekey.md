@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aa13a304480368975aca15503ca4e8a9916df490
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 51110e3c758d32e771616ae1792eec7b1b2dabe7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sslnoprivatekey"></a>SslNoPrivateKey
 Идентификатор: 154  
@@ -26,9 +27,9 @@ ms.lasthandoff: 12/02/2017
   
  Категория: TransactionBridge  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Это событие показывает, что сертификат удостоверения с заданным именем субъекта и отпечатком не имеет закрытого ключа. В событии указаны имя и ИД процесса.  
   
 ## <a name="see-also"></a>См. также  
  [Ведение журнала событий](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Общие справочные сведения события](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+ [Общие справочные сведения о событиях](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

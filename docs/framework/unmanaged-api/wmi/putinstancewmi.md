@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b7a4ffce4789fb59d84778d02b41910c974216bd
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: b1996103eea87562226537f9aa90dc337c56313c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="putinstancewmi-function"></a>Функция PutInstanceWmi
 Создает или обновляет экземпляр существующего класса. Экземпляр записывается в репозиторий WMI. 
@@ -44,7 +45,7 @@ HRESULT PutInstanceWmi (
 `lFlags`   
 [in] Сочетание флагов, влияющих на поведение этой функции. Следующие значения определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде: 
 
-|Константа  |Значение  |Описание  |
+|Константа  |Значение  |Описание:  |
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Если задано, WMI не сохраняет любые квалификаторы с **Amended** flavor. </br> В противном случае набор, предполагается этот объект не локализован, что все квалификаторы — storedwith данного экземпляра. |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Создайте экземпляр, если она не существует, или перезаписать его, если он уже существует. |
@@ -62,7 +63,7 @@ HRESULT PutInstanceWmi (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |Значение  |Описание:  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | Пользователь не имеет разрешения на обновление экземпляра указанного класса. |
 | `WBEM_E_FAILED` | 0x80041001 | Произошла неизвестная ошибка. |

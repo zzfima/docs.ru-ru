@@ -13,16 +13,17 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ab8809b4285beadcf512cb71337b6f973782efa4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 842270d6e570767c25c414307be941f24b01dd07
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoint-calls-faulted-per-second"></a>Конечная точка: количество сбоев вызовов в секунду
 Имя счетчика: Calls Faulted Per Second.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Количество вызовов, которые возвратили сбой данной конечной точке в секунду.  
   
  Этот счетчик является счетчиком производительности типа [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по следующей формуле.  

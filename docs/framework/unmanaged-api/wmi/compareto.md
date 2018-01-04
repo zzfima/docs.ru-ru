@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dacb1516bebfc73ae9e16b03f3755ab49382e571
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 038074b5bb3adc816caa226d3167395758d2ae57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compareto-function"></a>Функции CompareTo
 Сравнивает объект с другим объектом управления Windows.  
@@ -55,7 +56,7 @@ HRESULT CompareTo (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |Значение  |Описание:  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Произошла неизвестная ошибка. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Недопустимый параметр. |
@@ -70,7 +71,7 @@ HRESULT CompareTo (
 
 Флаги, которые могут быть переданы как `lEnumFlags` аргумент определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде. Можно указать отдельные характеристики, участвующих в сравнении, указав побитовое сочетание следующих флагов:
 
-|Константа  |Значение  |Описание  |
+|Константа  |Значение  |Описание:  |
 |---------|---------|---------|
 | `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | Игнорируйте источника (сервера и пространства имен, из которых они происходят). |
 | `WBEM_FLAG_IGNORE_QUALIFIERS` | 1 | Игнорировать все квалификаторы (включая **ключ** и **динамическое**) |

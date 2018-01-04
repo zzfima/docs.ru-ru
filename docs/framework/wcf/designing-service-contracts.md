@@ -17,11 +17,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3204e4c280c6c1acd50062fa44b46344926c3908
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 293d7f8502b39eac6508ba10b2fac128c6aa4879
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="designing-service-contracts"></a>Создание контрактов служб
 Этот раздел описывает, что такое контракты служб, как они определяются, какие операции доступны (также описаны последствия обмена сообщениями, на которых они основаны), какие типы данных используются; кроме того, он содержит ответы на другие вопросы, которые помогут при разработке операций, удовлетворяющих требованиям вашего сценария.  
@@ -269,19 +270,19 @@ End Interface
  [!INCLUDE[crabout](../../../includes/crabout-md.md)]уровни защиты, а также способы их использовании см. в разделе [уровень защиты основные сведения о](../../../docs/framework/wcf/understanding-protection-level.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]безопасность, в разделе [Защита служб](../../../docs/framework/wcf/securing-services.md).  
   
 ##### <a name="other-operation-signature-requirements"></a>Другие требования к сигнатуре операции  
- Некоторые функции приложения требуют определенного вида сигнатуры операции. Например, привязка <xref:System.ServiceModel.NetMsmqBinding> поддерживает устойчивые службы и клиенты, позволяющие перезапуск приложения при установленном подключении, при этом приложение продолжит работу с того места, где остановилось, и ни одно сообщение не будет потеряно. ([!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Очереди в WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).) Однако устойчивые операции должны принимать только один параметр `in` и не должны иметь возвращаемого значения.  
+ Некоторые возможности приложения требуют определенного вида сигнатуры операции. Например, привязка <xref:System.ServiceModel.NetMsmqBinding> поддерживает устойчивые службы и клиенты, позволяющие перезапуск приложения при установленном подключении, при этом приложение продолжит работу с того места, где остановилось, и ни одно сообщение не будет потеряно. ([!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Очереди в WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).) Однако устойчивые операции должны принимать только один параметр `in` и не должны иметь возвращаемого значения.  
   
  Другой пример - использование типов <xref:System.IO.Stream> в операциях. Так как параметр <xref:System.IO.Stream> включает в себя тело сообщения целиком, если входные или выходные данные (то есть параметр `ref`, параметр `out` или возвращаемое значение) принадлежат типу <xref:System.IO.Stream>, это должны быть единственные входные и выходные данные, заданные для операции. Кроме того, параметр или тип возвращаемых данных должны являться объектами <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> или <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>. [!INCLUDE[crabout](../../../includes/crabout-md.md)]потоки, в разделе [большие объемы данных и потоковой передачи](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   
 ##### <a name="names-namespaces-and-obfuscation"></a>Имена, пространства имен и обфускация  
  Имена и пространства имен типов .NET в определениях контрактов и операций важны при преобразовании контрактов в WSDL и при создании и отправке сообщений контрактов. Поэтому рекомендуется явно задавать имена и пространства имен контракта службы с помощью свойств `Name` и `Namespace` всех поддерживающих атрибутов контракта, например <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute>, <xref:System.Runtime.Serialization.DataContractAttribute>, <xref:System.Runtime.Serialization.DataMemberAttribute> и других атрибутов контракта.  
   
- Одним из следствий этого является то, что если имена и пространства имен не заданы явно, применение запутывания IL для сборки изменяет имена типов и пространства имен контракта, что приводит к измененному коду WSDL и обмену сообщениями, который обычно завершается ошибкой. Если вы не задаете явно имена и пространства имен контракта, но планируете использовать запутывание, используйте атрибуты <xref:System.Reflection.ObfuscationAttribute> и <xref:System.Reflection.ObfuscateAssemblyAttribute>, чтобы предотвратить изменение имен и пространств имен контракта.  
+ Одним из следствий этого является то, что если имена и пространства имен не заданы явно, применение обфускации IL для сборки изменяет имена типов и пространства имен контракта, что приводит к измененному коду WSDL и обмену сообщениями, который обычно завершается ошибкой. Если вы не задаете явно имена и пространства имен контракта, но планируете использовать запутывание, используйте атрибуты <xref:System.Reflection.ObfuscationAttribute> и <xref:System.Reflection.ObfuscateAssemblyAttribute>, чтобы предотвратить изменение имен и пространств имен контракта.  
   
 ## <a name="see-also"></a>См. также  
- [Как: Создание контракта типа запрос ответ](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)  
- [Как: Создание одностороннего контракта](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)  
- [Как: создание дуплексного контракта](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [Практическое руководство. Создание контракта типа "запрос-ответ"](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)  
+ [Практическое руководство. Создание одностороннего контракта](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)  
+ [Практическое руководство. Создание дуплексного контракта](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
  [Задание передачи данных в контрактах служб](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
  [Указание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
  [Использование сеансов](../../../docs/framework/wcf/using-sessions.md)  

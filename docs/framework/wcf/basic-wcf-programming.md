@@ -19,16 +19,17 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 83404a56de68de8f8aec271c28e9896c4fa8702b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dfcd0a09f247077f299d8b9c14a07bdc667245b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-wcf-programming"></a>Базовое программирование WCF
 В данном разделе представлены основные принципы создания приложений [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Базовый жизненный цикл программирования](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
  Описание жизненного цикла разработки, создания и развертывания приложений служб и клиентских приложений [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   

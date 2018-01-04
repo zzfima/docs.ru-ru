@@ -13,14 +13,15 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 930e06a70bc7975b5370ab47050da929aa29e33c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3a57b3f29c1e7d187a803609c43ea48958c1850f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoint-transactions-flowed"></a>Конечная точка: количество поступивших транзакций
 Имя счетчика: Transactions Flowed.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Количество транзакций, поступивших в операции в этой конечной точке. Значение этого счетчика увеличивается каждый раз, когда в сообщении, отправленном в эту конечную точку, содержится идентификатор транзакции.

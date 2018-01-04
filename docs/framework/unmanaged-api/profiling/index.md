@@ -17,16 +17,17 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 26fa9471b46a7a963d66ebf0d5b3c6a0286ae640
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5583a9b81d81acfca80368ca54d5f97899daa1d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-unmanaged-api-reference"></a>Профилирование (справочник по неуправляемым интерфейсам API)
 API профилирования позволяет профилировщику отслеживать выполнение программы с общеязыковой среды выполнения (CLR).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о профилировании](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
  Описание служб и интерфейсов, предоставляемых средой CLR для поддержки профилирования в среде .NET Framework.  
   
@@ -36,7 +37,7 @@ API профилирования позволяет профилировщику
  [Настройка среды профилирования](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)  
  Описание действий, которые необходимо выполнить профилирование приложения .NET Framework.  
   
- [Профилировщик среды CLR и приложений для магазина Windows](../../../../docs/framework/unmanaged-api/profiling/clr-profilers-and-windows-store-apps.md)  
+ [Профилировщики CLR и приложения для Магазина Windows](../../../../docs/framework/unmanaged-api/profiling/clr-profilers-and-windows-store-apps.md)  
  Описывает, как перенести средства диагностики, которые используют API профилирования среды CLR для успешной работы с приложениями для магазина Windows.  
   
  [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)  

@@ -13,16 +13,17 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cefe433bf7b2fb489483962b5f5358897b4cfa6f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e911a6112901ee92cb60adb4d2a7b028218d722d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transacted-operations-in-doubt-per-second"></a>Количество операций с поддержкой транзакций с сомнительным результатом в секунду
 Имя счетчика: Количество операций с поддержкой транзакций с сомнительным результатом в секунду.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Количество операций с поддержкой транзакций, имеющих сомнительный результат, возникающих в данной службе за секунду.  
   
  Этот счетчик является счетчиком производительности типа [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по следующей формуле.  

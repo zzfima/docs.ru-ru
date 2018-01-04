@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 818e022e4dda190660a499ad781147c293a723ae
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 65772d0024e89f0d33f4c079442a14bc6f232168
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="failedtoinitializetracesource"></a>FailedToInitializeTraceSource
 Идентификатор: 101  
@@ -31,4 +32,4 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>См. также  
  [Ведение журнала событий](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Общие справочные сведения события](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+ [Общие справочные сведения о событиях](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

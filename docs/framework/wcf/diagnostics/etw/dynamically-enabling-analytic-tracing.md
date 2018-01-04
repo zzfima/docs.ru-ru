@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4984cb7fd89b69f0006c5294c24184bd8d1f1d09
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 18dda3f63a12a9f9a2320f413137943e5864ad27
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Динамическое включение аналитического отслеживания
 Средства, поставляемые в составе ОС Windows, позволяют включать или отключать динамическую трассировку с использованием трассировки событий Windows (ETW). Аналитическая трассировка может быть включена и отключена динамически, без изменения файла Web.config приложения или перезапуска службы для всех служб [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] . Это дает возможность не останавливать работу приложения, создающего события трассировки.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/02/2017
   
  Для аналитической трассировки [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] каждый из уровней трассировки содержит два типа ключевых слов. Во-первых, каждое событие имеет одно или несколько ключевых слов сценариев. Они указывают на сценарий, для которого предназначено данное событие. Существует три ключевых слова сценариев. Каждое из них предназначено для определенной цели, как показано в следующей таблице. Фильтрация по ключевым словам может быть изменена динамически, без нарушения работы службы [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] . Это означает, что можно динамически изменить текущий сценарий трассировки и количество собираемых сведений. Например, можно установить `HealthMonitoring` в значение `Troubleshooting` и увеличить частоту событий трассировки.  
   
-|Ключевое слово|Описание|  
+|Ключевое слово|Описание:|  
 |-------------|-----------------|  
 |`HealthMonitoring`|Очень простая минимальная трассировка, которая позволяет наблюдать за активностью службы.|  
 |`EndToEndMonitoring`|Для поддержки трассировки потока сообщений используются события.|  
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/02/2017
   
  Вторая группа ключевых слов определяет, каким из компонентов [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] создано данное событие.  
   
-|Ключевое слово|Описание|  
+|Ключевое слово|Описание:|  
 |-------------|-----------------|  
 |`UserEvents`|События, которые созданы пользовательским кодом, а не [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].|  
 |`ServiceModel`|События, которые созданы средой выполнения [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] .|  
@@ -51,4 +52,4 @@ ms.lasthandoff: 12/02/2017
 |`WCFMessageLogging`|События ведения журнала сообщений[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] .|  
   
 ## <a name="see-also"></a>См. также  
- [WCF Services and Event Tracing for Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)
+ [Службы WCF и трассировка событий для Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)

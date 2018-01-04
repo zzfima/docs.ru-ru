@@ -13,16 +13,17 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ae182f63ad4c53d59700041d94ea0426cdff75c4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b413c5076e41990a794b9aa33efd371480835353
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queued-rejected-messages-per-second"></a>Количество сообщений из очереди, отклоненных за секунду
 Имя счетчика: Queued Messages Rejected Per Second.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Количество сообщений, отклоненных транспортом очередей этой службы за секунду.  
   
  Этот счетчик является счетчиком производительности типа [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по следующей формуле.  

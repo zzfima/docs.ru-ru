@@ -13,23 +13,24 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a0bbe31095a59be4b091de6974ae0173753e240
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b1034ae6bd6072a3849d72fafcad55c61e500439
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="499---transferemitted"></a>499 - TransferEmitted
 ## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
-|Идентификатор|499|  
+|ID|499|  
 |Ключевые слова|Troubleshooting, UserEvents, EndToEndMonitoring, ServiceModel, WFTracking, ServiceHost, WCFMessageLogging|  
 |Уровень|LogAlways|  
 |Канал|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Это событие формируется при возникновении события передачи.  
   
 ## <a name="message"></a>Сообщение  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="details"></a>Подробные сведения  
   
-|Имя элемента данных|Тип элемента данных|Описание|  
+|Имя элемента данных|Тип элемента данных|Описание:|  
 |--------------------|--------------------|-----------------|  
 |HostReference|`xs:string`|Для служб, размещенных на веб-узле, это поле является уникальным идентификатором службы в веб-иерархии. Ее формат определяется как "веб-сайт имя виртуальный путь приложения &#124; Виртуальный путь службы &#124; ServiceName ". Пример: "по умолчанию веб-сайта или CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService ".|  
 |AppDomain|`xs:string`|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|

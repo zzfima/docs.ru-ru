@@ -13,23 +13,24 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0b286264cee3d9a0c2ef1df1c6f215240148f98
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 139ca9e0fbe4d3f59d3d593f7785d5fb65e64702
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="221---messagereceivedfromtransport"></a>221 - MessageReceivedFromTransport
 ## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
-|Идентификатор|221|  
+|ID|221|  
 |Ключевые слова|EndToEndMonitoring, Troubleshooting, ServiceModel|  
 |Уровень|Сведения|  
 |Канал|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Это событие вызывается при получении моделью службы сообщения от транспортной подсистемы.  
   
 ## <a name="message"></a>Сообщение  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="details"></a>Подробные сведения  
   
-|Имя элемента данных|Тип элемента данных|Описание|  
+|Имя элемента данных|Тип элемента данных|Описание:|  
 |--------------------|--------------------|-----------------|  
 |Идентификатор корреляции|`xs:GUID`|Идентификатор действия, используемый для корреляции события `MessageSentToTransport` из службы или клиента с соответствующим транспортом `MessageReceivedFromTransport` на другом конце.|  
 |HostReference|`xs:string`|Для служб, размещенных на веб-узле, это поле является уникальным идентификатором службы в веб-иерархии. Ее формат определяется как "веб-сайт имя виртуальный путь приложения &#124; Виртуальный путь службы &#124; ServiceName ". Пример: "по умолчанию веб-сайта или CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService ".|  

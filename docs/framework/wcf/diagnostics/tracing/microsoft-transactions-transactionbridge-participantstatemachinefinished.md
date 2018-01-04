@@ -13,16 +13,17 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 845b344cee6c47a0c2f125caab7965ef8f65f336
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 90989d6b83ea5b54d5ed476d58a5d7f6e32f1fed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="microsofttransactionstransactionbridgeparticipantstatemachinefinished"></a>Microsoft.Transactions.TransactionBridge.ParticipantStateMachineFinished
 Конечный автомат для перечисления участников перешел в конечное состояние.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Трассируется, когда перечисление подчиненных участников завершило обработку 2pc. Результатом для перечисления может быть значение Committed или Aborted. Кроме того, это событие регистрируется, если на этапе подготовки любой из участников голосует за режим ReadOnly.  
   
 ## <a name="see-also"></a>См. также  

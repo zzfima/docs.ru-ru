@@ -17,18 +17,19 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 86d741a16a0293892d0d6d90f1763d744ed3675d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2127cdb1178da37bcfe77a0e1a02ccd34be2d800
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Строгое именование (справочник по управляемым API)
 API со строгим именованием позволяет клиенту администрировать подписание сборки строгим именем.  
   
  При подписи сборки строгим именем в файл, содержащий манифест сборки, добавляется зашифрованный открытый ключ. Подпись строгим именем гарантирует уникальность имени, предотвращает подмену имени и после разрешения ссылки предоставляет вызывающим уникальный идентификатор. Тем не менее уровень доверия не связан со строгим именем.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Строгое именование глобальные статические функции](http://msdn.microsoft.com/en-us/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
  Описываются неуправляемые глобальные статические функции, которые использует API строгого именования.  
   
@@ -120,5 +121,5 @@ API со строгим именованием позволяет клиенту
  Представляет открытый ключ из пары открытого и закрытого ключей в двоичном формате.  
   
 ## <a name="see-also"></a>См. также  
- [Iclrstrongname-интерфейс](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)  
+ [Интерфейс ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)  
  [Справочник по неуправляемым API](../../../../docs/framework/unmanaged-api/index.md)

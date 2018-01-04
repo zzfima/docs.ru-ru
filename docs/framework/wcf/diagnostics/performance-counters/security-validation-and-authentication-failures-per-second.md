@@ -13,16 +13,17 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 39ddfd18caae33e7ac2b905488bdfe4a8c9dc520
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8159527f8f958c747a464641c69910c9df1b3d4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-validation-and-authentication-failures-per-second"></a>Количество сбоев при проверке безопасности и проверке подлинности в секунду
 Имя счетчика: Security Validation and Authentication Failures Per Second.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Значение этого счетчика увеличивается всякий раз, когда сообщение отклоняется из-за проблемы безопасности, не относящейся к счетчику "Security Calls Not Authorized". К таким проблемам относятся следующие.  
   
 -   Невозможно прочесть в этом сообщении маркер клиента.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/18/2017
   
 -   Произошел сбой при расшифровке.  
   
--   В сообщении отсутствуют некоторые обязательные элементы (например, отсутствует отметка времени или зашифрованный блок данных).  
+-   В сообщении отсутствуют некоторые обязательные элементы (например, отсутствует метка времени или зашифрованный блок данных).  
   
 -   Во время подтверждения TLSNEGO/SPNEGO произошли ошибки.  
   

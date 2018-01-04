@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a301e23ead8e52273ed4fe7a503f1fe11e2f1348
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e21dacd5f01ba956ba78456b8e325d0b7e767df7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Средство редактирования конфигурации (SvcConfigEditor.exe)
 Редактор конфигураций служб [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] (SvcConfigEditor.exe) позволяет администраторам и разработчикам создавать и изменять параметры конфигурации служб [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] с помощью графического пользовательского интерфейса. С помощью этого средства можно управлять параметрами привязок, поведений, служб и диагностики [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] без необходимости непосредственного редактирования XML-файлов конфигурации.  

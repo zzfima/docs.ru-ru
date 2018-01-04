@@ -13,23 +13,24 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd509ad0bc8e6f3bcd407cfc01b4c4d920733d1a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 28ca619fe629358084bc2b1c388fc0cd8167354e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="452---messagelogwarning"></a>452 - MessageLogWarning
 ## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
-|Идентификатор|452|  
+|ID|452|  
 |Ключевые слова|Troubleshooting, WCFMessageLogging|  
 |Уровень|Предупреждение|  
 |Канал|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Событие возникает при отправке предупреждения журнала сообщений.  
   
 ## <a name="message"></a>Сообщение  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="details"></a>Подробные сведения  
   
-|Имя элемента данных|Тип элемента данных|Описание|  
+|Имя элемента данных|Тип элемента данных|Описание:|  
 |--------------------|--------------------|-----------------|  
 |data1|`xs:string`||  
 |AppDomain|`xs:string`|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|

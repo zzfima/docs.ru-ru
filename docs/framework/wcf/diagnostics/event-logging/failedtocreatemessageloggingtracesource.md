@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33fb115ea77c255235218f17e643d4173b7bffbf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5dd1ed6572e105d33c1a87d2214cf03795c4f850
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="failedtocreatemessageloggingtracesource"></a>FailedToCreateMessageLoggingTraceSource
 Идентификатор: 115  
@@ -26,9 +27,9 @@ ms.lasthandoff: 12/02/2017
   
  Категория: ServiceModel  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Это событие показывает, что при регистрации сообщения не удалось создать источник трассировки. В событии указаны исключение, имя процесса и ИД процесса.  
   
 ## <a name="see-also"></a>См. также  
  [Ведение журнала событий](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Общие справочные сведения события](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+ [Общие справочные сведения о событиях](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

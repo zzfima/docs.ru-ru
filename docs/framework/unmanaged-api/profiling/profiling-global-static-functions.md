@@ -17,16 +17,17 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4da4509a6e8b87490cee076b403f3fa525de91e0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 66f22557dd6020ff5040d5aaf76cb12e9ae9965c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-global-static-functions"></a>Глобальные статические функции профилирования
 В этом разделе описаны неуправляемые функции API, которые использует API профилирования.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
   
 ## <a name="net-framework-version-1-profiling-functions"></a>Функции профилирования платформы .NET framework версии 1  
  [Функция FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)  
