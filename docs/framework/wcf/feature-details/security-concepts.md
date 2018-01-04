@@ -13,16 +13,17 @@ caps.latest.revision: "11"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3d589b5411da147b3ae8f17ab862d00026867822
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1ac16afc6ee22665188d5df5e79288341072026e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-concepts"></a>Основные понятия безопасности
 В этом разделе содержится краткое описание понятий, связанных с вопросом безопасности [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Основные понятия безопасности, используемые в WCF](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
  Высокоуровневый обзор принципов, используемых для реализации механизмов безопасности.  
   

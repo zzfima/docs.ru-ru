@@ -20,11 +20,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: acbe1fc52cec011863dea8f3ae81492e3661cd97
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7541f04279bbe9d85b7e2ecca841d9f5a14fc9a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-data-contracts"></a>Использование контрактов данных
 *Контракт данных* - формальное соглашение между службой и клиентом, абстрактно описывающее данные, обмен которыми происходит. Это значит, что для взаимодействия клиент и служба не обязаны совместно использовать одни и те же типы, достаточно совместно использовать одни и те же контракты данных. Контракт данных для каждого параметра и возвращаемого типа четко определяет, какие данные сериализуются (превращаются в XML) для обмена.  
@@ -84,9 +85,9 @@ ms.lasthandoff: 12/02/2017
  [Эквивалентность контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
  [Порядок членов данных](../../../../docs/framework/wcf/feature-details/data-member-order.md)  
  [Известные типы контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [Контракты данных с прямой совместимостью](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
+ [Контракты данных, совместимые с любыми будущими изменениями](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
  [Управление версиями контракта данных](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
- [Обратных вызовов независимой от версий сериализации](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)  
- [Значения по умолчанию для членов данных](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)  
+ [Обратные вызовы сериализации, независимые от версий](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)  
+ [Значения членов данных по умолчанию](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)  
  [Типы, поддерживаемые сериализатором контракта данных](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
- [Как: создание базового контракта данных для класса или структуры](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+ [Практическое руководство. Создание базового контракта данных для класса или структуры](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

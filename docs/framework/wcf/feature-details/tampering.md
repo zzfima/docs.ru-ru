@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 96ab38de1fb2a932fefd4e37cbfab3d9bfbea616
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6ee041de1a9e009ca68ecc8bba8bc2fa06ba6ca3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tampering"></a>Подделка
 *Подмены* — это процесс изменения сообщения или доставки сообщения и использования измененного сообщения в целях, отличных от он был предназначен для.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>См. также  
  [Вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
  [Раскрытие информации](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [Повышение прав доступа](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [Повышение привилегий](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
  [Отказ в обслуживании](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
  [Неподдерживаемые сценарии](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- [Атаки с повторением пакетов](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+ [Атаки с повторением](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

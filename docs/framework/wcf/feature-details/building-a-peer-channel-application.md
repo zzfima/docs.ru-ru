@@ -13,23 +13,24 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e1d533a1f559044caf3bc711e9401b75703254bc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1d3ca06c2e702ef64a05834116e1c89b4872b32b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-a-peer-channel-application"></a>Создание приложения одноранговых каналов
 В следующих разделах представлено руководство по разработке приложений одноранговых каналов.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Преобразование приложения NetTcpBinding в приложение одноранговых каналов](../../../../docs/framework/wcf/feature-details/converting-a-nettcpbinding-application-to-a-peer-channel-application.md)  
  Описывается, как преобразовать приложение NetTcpBinding в приложение одноранговых каналов.  
   
  [Ограничение распространения сообщений](../../../../docs/framework/wcf/feature-details/limiting-message-distribution.md)  
  Рассматривается использование управления пересылкой сообщений по сетке с помощью числа прыжков, фильтра распространения сообщений, локального фильтра или прямого подключения и приводятся общие рекомендации по выбору подхода.  
   
- [Добавление оперативный или автономный статус](../../../../docs/framework/wcf/feature-details/adding-online-and-offline-status.md)  
+ [Добавление подключенного и отключенного состояния](../../../../docs/framework/wcf/feature-details/adding-online-and-offline-status.md)  
  Описывается, как использовать интерфейс <xref:System.ServiceModel.IOnlineStatus> для отслеживания конкретных сведений об одноранговом канале в подключенном и автономном состоянии.  
   
  [Защита приложений одноранговых каналов](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  

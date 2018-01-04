@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5868e03ee05a744be3f1c3782613e11e71352024
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 50d4f92273a3e105fb83705bc138b06350910ccf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-http-and-https"></a>Настройка HTTP и HTTPS
 Службы и клиенты WCF могут взаимодействовать по протоколам HTTP и HTTPS. Параметры HTTP/HTTPS задаются с помощью служб IIS или посредством использования средства командной строки. Когда служба WCF размещается в службах IIS, параметры HTTP или HTTPS можно задать в службах IIS (с помощью средства inetmgr.exe). Если служба WCF является резидентной, параметры HTTP или HTTPS задаются с помощью средства командной строки.  
@@ -101,4 +102,4 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.WSDualHttpBinding>  
- [Как: Настройка порта с SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+ [Практическое руководство. Настройка порта с использованием SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

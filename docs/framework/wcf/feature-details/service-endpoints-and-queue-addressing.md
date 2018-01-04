@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b2c8b85c2920133e21e7659ca0c27e28ab4a8eae
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5605c90d5f63e0ed80ac5a47b36781c45b687cba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Конечные точки служб и адресация очереди
 В этом разделе рассматриваются принципы обращения клиентов к службам, выполняющим чтение из очередей, и сопоставления конечных точек служб с очередями. На следующем рисунке приведена схема классического развертывания приложения [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с использованием очередей.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/02/2017
   
  NET.MSMQ: / / \< *имя узла*> / [закрытый /] \< *имя очереди*>  
   
- где:  
+ Здесь:  
   
 -   \<*Имя узла*> — имя компьютера, на котором размещена целевая очередь.  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 12/02/2017
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
 |NET.MSMQ://\<имя компьютера >/private/abc|False (по умолчанию)|Native (по умолчанию)|DIRECT=OS:имя_компьютера\private$\abc|  
 |NET.MSMQ://\<имя компьютера >/private/abc|False|SRMP|DIRECT=http://компьютер/msmq/private$/abc|  
-|NET.MSMQ://\<имя компьютера >/private/abc|True|машинный код;|PUBLIC=guid (идентификатор GUID очереди)|  
+|NET.MSMQ://\<имя компьютера >/private/abc|Да|машинный код;|PUBLIC=guid (идентификатор GUID очереди)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Чтение сообщений из очереди недоставленных сообщений или из очереди подозрительных сообщений  
  Для чтения сообщений из очереди подозрительных сообщений, являющейся вложенной очередью целевой очереди, откройте `ServiceHost`, указав адрес вложенной очереди.  
@@ -115,4 +116,4 @@ ms.lasthandoff: 12/02/2017
  Обратите внимание, что нельзя использовать адресацию net.msmq:// вместе с `MsmqIntegrationBinding`. Поскольку `MsmqIntegrationBinding` поддерживает произвольную адресацию имен форматов MSMQ, можно с помощью службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], использующей эту привязку, использовать функции MSMQ «многоадресная рассылка» и «список рассылки». Единственное исключение: необходимо указать `CustomDeadLetterQueue` при использовании `MsmqIntegrationBinding`. Требуемая форма: net.msmq://, как и при указании с помощью `NetMsmqBinding`.  
   
 ## <a name="see-also"></a>См. также  
- [Веб-приложение с очередью размещения](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+ [Размещение веб-узлов в приложении, использующем очереди](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5886b327f1ea6d2866b9fc76bb29031ee870934e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3e6039567e4fad7fe4c014665dd3ae0c3082a9d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="supported-deployment-scenarios"></a>Поддерживаемые сценарии развертывания
 Подмножество функций [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] , которые поддерживаются для использования в частично доверенных приложениях, предназначено для обеспечения соответствия требованиям некоторых (но не всех) сценариев использования [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. На сервере [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] соответствует требованиям поставщиков услуг совместного размещения в сети Интернет, выполняющих сторонние приложения с наборами разрешений среднего уровня доверия [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] в целях безопасности. На клиенте поддержка частичного доверия [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] реализуется с целью обеспечения соответствия требованиям таких технологий развертывания, как [развертывание ClickOnce](http://go.microsoft.com/fwlink/?LinkId=83712) или технология приложения браузера XAML [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)], обеспечивающих беспрепятственное и безопасное развертывание классических приложений с ненадежных узлов.  

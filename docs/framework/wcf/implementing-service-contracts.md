@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 688637ae54e92296d103a681715dd491ba8782ba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1b4085e23120ad654121f33111eda68276259096
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-service-contracts"></a>Реализация контрактов служб
 Служба - это класс, который предоставляет клиентам имеющиеся функциональные возможности в одной или нескольких конечных точках. Для создания службы необходимо создать класс, реализующий контракт [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Это можно сделать одним из двух способов. Во-первых, можно определить контракт отдельно в качестве интерфейса, а затем создать класс, реализующий этот интерфейс. Во-вторых, можно непосредственно создать класс и контракт, разместив атрибут <xref:System.ServiceModel.ServiceContractAttribute> в самом классе, а атрибут <xref:System.ServiceModel.OperationContractAttribute> - в методах, доступных клиентам службы.  
@@ -68,6 +69,6 @@ class MathService
   
 ## <a name="see-also"></a>См. также  
  [Проектирование и реализация служб](../../../docs/framework/wcf/designing-and-implementing-services.md)  
- [Как: создание службы с помощью класса контракта](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)  
- [Как: создание службы с интерфейсом контракта](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)  
+ [Практическое руководство. Создание службы с помощью класса контракта](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)  
+ [Практическое руководство. Создание службы с помощью интерфейса контракта](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)  
  [Указание поведения службы во время выполнения](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

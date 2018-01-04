@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6a7ee646c2f6b20410c493ee139f08d11fc55d54
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: de9b67390d1260b5de26c146bd5afec7cfff4c42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="installing-message-queuing-msmq"></a>Установка системы очередей сообщений (MSMQ)
 В процедурах ниже показана методика установки очереди сообщений 4.0 и очереди сообщений 3.0.  
@@ -73,4 +74,4 @@ ms.lasthandoff: 12/02/2017
 6.  При появлении запроса на перезагрузку компьютера нажмите кнопку **ОК** для завершения установки.  
   
 ## <a name="see-also"></a>См. также  
- [Инструкции по установке](../../../../docs/framework/wcf/samples/set-up-instructions.md)
+ [Инструкции по настройке](../../../../docs/framework/wcf/samples/set-up-instructions.md)

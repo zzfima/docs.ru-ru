@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 7ae79ad13b360a61e1d9b10f94dff5a37aae1d89
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3ef101a9a5f78e1b85ac7cb983b4766088b83317
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing-scenarios"></a>Сценарии маршрутизации
 Хотя служба маршрутизации является настраиваемой, спроектировать эффективную логику маршрутизации при создании новой конфигурации с нуля может быть достаточно сложным.  Однако существует несколько типичных сценариев, которым следует большинство конфигураций службы маршрутизации. Хотя эти сценарии могут не применяться напрямую к определенной конфигурации, освоение способа настройки службы маршрутизации для управления этими сценариями поможет в понимании работы службы маршрутизации.  
@@ -76,14 +77,14 @@ ms.lasthandoff: 10/18/2017
   
  Действия, используемые для настройки обработки ошибок см. в разделе [How To: обработка ошибок](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md). Пример реализации обработки ошибок см. в разделе [мост и обработка ошибок](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md) и [Advanced обработка ошибок](../../../../docs/framework/wcf/samples/advanced-error-handling.md) образцов.  
   
-### <a name="in-this-section"></a>Содержание  
- [Практическое руководство: Управление версиями службы](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+### <a name="in-this-section"></a>В этом разделе  
+ [Практическое руководство. Управление версиями службы](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [Практическое руководство: Секционирование данных службы](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [Практическое руководство. Секционирование данных служб](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
- [Практическое руководство: Динамическое обновление](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
+ [Практическое руководство. Динамическое обновление](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
- [Практическое руководство: Обработка ошибок](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
+ [Практическое руководство. Обработка ошибок](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
 ## <a name="see-also"></a>См. также  
  [Введение в маршрутизацию](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

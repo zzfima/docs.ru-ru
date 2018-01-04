@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ae7ed7b1d01420c8e542d9ecce577995e927adc3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a872fbd5be56fed3d01481d1740c70932fd60c06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="importing-schema-to-generate-classes"></a>Импорт схемы для создания классов
 Чтобы создать классы из схем, которые могут использоваться в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], используйте класс <xref:System.Runtime.Serialization.XsdDataContractImporter>. В данном разделе описывается процесс и параметры импорта.  
@@ -196,6 +197,6 @@ ms.lasthandoff: 12/02/2017
  <xref:System.Runtime.Serialization.ImportOptions>  
  [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
  [Суррогаты контрактов данных](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)  
- [Импорт и Экспорт схемы](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
+ [Импорт и экспорт схемы](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
  [Экспорт схем из классов](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)  
  [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)

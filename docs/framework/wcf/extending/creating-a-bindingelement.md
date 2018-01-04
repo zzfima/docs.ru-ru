@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bdd547a62391d11050071e1ede648b28c28bd3f4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0184d07210322e6ed04441f7190857cf07205b15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-bindingelement"></a>Создание элемента привязки BindingElement
 С помощью привязок и элементов привязок (объектов, расширяющих <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> и <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>, соответственно) модель приложения [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] связывается с фабриками каналов и прослушивателями каналов. Без привязки, с помощью пользовательских каналов требует программирования на уровне канала как описано в [программирования на уровне канала службы](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) и [программирования на уровне канала клиента](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). В этом разделе обсуждаются минимальным требованием для использования канала в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], разработку <xref:System.ServiceModel.Channels.BindingElement> для канала и включить использование из приложения, как описано в шаге 4 [разработка каналов](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -55,7 +56,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
  Он также содержит члены для клонирования элемента `BindingElement` и возврата схемы (soap.udp).  
   
 #### <a name="protocol-binding-elements"></a>Элементы привязки протоколов  
- Новые элементы привязки могут заменять или дополнять любые из включенных элементов привязки, добавляя новые типы транспорта, кодирования или протоколы верхних уровней. Чтобы создать новый элемент привязки протокола, начните с расширения класса <xref:System.ServiceModel.Channels.BindingElement>. Как минимум, затем необходимо реализовать <xref:System.ServiceModel.Channels.BindingElement.Clone%2A?displayProperty=nameWithType> и реализовать `ChannelProtectionRequirements` с помощью <xref:System.ServiceModel.Channels.IChannel.GetProperty%2A?displayProperty=nameWithType>. В результате будут возвращены требования <xref:System.ServiceModel.Security.ChannelProtectionRequirements> для этого элемента привязки.  Для получения дополнительной информации см. <xref:System.ServiceModel.Security.ChannelProtectionRequirements>.  
+ Новые элементы привязки могут заменять или дополнять любые из включенных элементов привязки, добавляя новые типы транспорта, кодирования или протоколы верхних уровней. Чтобы создать новый элемент привязки протокола, начните с расширения класса <xref:System.ServiceModel.Channels.BindingElement>. Как минимум, затем необходимо реализовать <xref:System.ServiceModel.Channels.BindingElement.Clone%2A?displayProperty=nameWithType> и реализовать `ChannelProtectionRequirements` с помощью <xref:System.ServiceModel.Channels.IChannel.GetProperty%2A?displayProperty=nameWithType>. В результате будут возвращены требования <xref:System.ServiceModel.Security.ChannelProtectionRequirements> для этого элемента привязки.  Дополнительные сведения см. в разделе <xref:System.ServiceModel.Security.ChannelProtectionRequirements>.  
   
  Метод <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> должен вернуть новую копию данного элемента привязки. Авторам элемента привязки рекомендуется реализовать метод <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>, используя конструктор копии, который вызывает базовый конструктор копии и затем клонирует любые дополнительные поля в этом классе.  
   

@@ -13,16 +13,17 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33de75838c7a8df895fe385f2c7e18f31a22f774
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 69c7201e7d8f4778173bed0313e667dbd4bd4d81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-interoperability"></a>Взаимодействие служб
 Образцы в этом разделе демонстрируют взаимодействие [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с другими технологиями служб.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Использование моникера WCF с клиентами COM](../../../../docs/framework/wcf/samples/using-the-wcf-moniker-with-com-clients.md)  
  Демонстрирует использование моникера службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для интеграции веб-служб в среду разработки на основе COM, такую как Microsoft Office Visual Basic for Applications (Office VBA) или Visual Basic 6.0.  
   

@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c153fc3fa44b6f84d5aa11a7f20dcce3df533c8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b24d5a8ebccbd454579394a986614e0d40d8d0e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-windows-authentication-errors"></a>Отладка ошибок проверки подлинности Windows
 При использовании в качестве механизма обеспечения безопасности проверки подлинности Windows процессы безопасности обрабатываются интерфейсом поставщика поддержки безопасности SSPI. Если на уровне SSPI происходят ошибки безопасности, они регистрируются на уровне [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. В этом разделе описаны общие принципы и некоторые вопросы, помогающие диагностировать такие ошибки.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 12/02/2017
 ||Локальный пользователь|Локальная система|Пользователь домена|Компьютер домена|  
 |-|----------------|------------------|-----------------|--------------------|  
 |Локальный пользователь|NTLM|NTLM|NTLM|NTLM|  
-|Локальная система|Anonymous NTLM|Anonymous NTLM|Anonymous NTLM|Anonymous NTLM|  
+|локальная система;|Anonymous NTLM|Anonymous NTLM|Anonymous NTLM|Anonymous NTLM|  
 |Пользователь домена|NTLM|NTLM|Kerberos|Kerberos|  
 |Компьютер домена|NTLM|NTLM|Kerberos|Kerberos|  
   

@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33387a9b155a471209039e5977bc7134b1439ff3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3bfa798bf2f2c758905512df32e03214634b6c2e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Практическое руководство. Размещение службы WCF в WAS
 В настоящем разделе описаны основные этапы, требуемые для создания служб активации процесса Windows (также известных как WAS), размещенных в службе [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. WAS является службой активации нового процесса, представляющей собой обобщение функций Internet Information Services (IIS), которые работают с транспортными протоколами, отличными от HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] использует интерфейс адаптера прослушивателя для передачи запросов на активацию, полученных через протоколы, отличные от HTTP, которые поддерживаются [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], например такие как TCP, именованные каналы и MSMQ.  

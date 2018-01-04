@@ -19,16 +19,17 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 12599c0bdf249271e8cd28e5a7591c130b1fd920
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 978cb7dcfd132ea253fcb5f13174e14c7341f11a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guidelines-and-best-practices"></a>Правила и рекомендации
 В этом разделе содержатся рекомендации по созданию приложений [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Рекомендации. Управление версиями контракта данных](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
  Рассматривается, как и когда создавать контракты данных, которые не будут нарушены при создании новых версий.  
   

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 68edbf5a2c96893bdf0e3a7a923084adea9e3c21
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8bfcd632846510f8f62280bfb1620ba1f8c35ce3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-resource-service"></a>Основная служба ресурсов
 В этом образце демонстрируется реализация службы HTTP с использованием модели программирования REST [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], при использовании которой представляется доступ к коллекции клиентов, поддерживающей операции поиска, добавления, удаления и замены. Данный образец состоит из двух компонентов: резидентной службы HTTP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (Service.cs) и консольного приложения (program.cs), создающего службу и выполняющего вызовы в этой службе.  
@@ -49,5 +50,5 @@ ms.lasthandoff: 12/02/2017
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicResourceService`  
   
 ## <a name="see-also"></a>См. также  
- [Базовой службы HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md)  
+ [Базовая служба HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md)  
  [Автоматический выбор формата](../../../../docs/framework/wcf/samples/automatic-format-selection.md)

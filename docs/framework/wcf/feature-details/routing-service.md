@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: a4f58c5124e229f1692dabbb0abded0e21a346f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7214a14b11ae1f91906c8d2140bc82836988390
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing-service"></a>Служба маршрутизации
 Служба маршрутизации является универсальным посредником протокола SOAP, действующим в качестве маршрутизатора сообщений. Основной функцией службы маршрутизации является возможность перенаправлять сообщения, исходя из их содержимого, благодаря чему сообщение можно переслать конечной точке клиента в зависимости от значения в самом сообщении, находящемся в заголовке или в тексте сообщения.  

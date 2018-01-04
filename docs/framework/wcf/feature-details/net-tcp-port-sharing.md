@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c54ce56cccffa350479d0dd4dcec130ddd004764
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 013c9e963ca75cc612d869a55b33d69aebbcad33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="nettcp-port-sharing"></a>Совместное использование портов Net.TCP
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предоставляет новый сетевой протокол на базе TCP (net.tcp://) для высокопроизводительного обмена данными. Кроме того, в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] введен новый системный компонент: служба совместного использования портов Net.TCP, позволяющая разделять порты net.tcp между несколькими пользовательскими процессами.  
@@ -61,5 +62,5 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>См. также  
  [Настройка службы совместного использования портов Net.TCP](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)  
  [Размещение](../../../../docs/framework/wcf/feature-details/hosting.md)  
- [Как: Настройка службы WCF на совместное использование портов](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)  
- [Как: Включение службы совместного использования портов Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+ [Практическое руководство. Настройка службы WCF для совместного использования портов](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)  
+ [Практическое руководство. Включение службы совместного использования портов Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

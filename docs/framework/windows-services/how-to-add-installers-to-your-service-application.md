@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 8137e41f92335849916dfc9e9ce72afeb186e73c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0dcb666f317ab285ae0156d2df16947f71665aee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Практическое руководство. Добавление установщиков в приложение служб
 В состав Visual Studio входят компоненты установки, которые можно установить ресурсы, связанные с приложениями служб. Компоненты установки регистрируются в качестве отдельных службы в системе, к которой он устанавливается и. При работе с приложением службы, можно выбрать ссылку в окне «Свойства» для автоматического добавления соответствующих установщиков в проекте.  
@@ -71,6 +72,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Как: Установка и удаление служб](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [Как: запуск служб](../../../docs/framework/windows-services/how-to-start-services.md)  
- [Как: задать контекст безопасности для служб](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
+ [Практическое руководство. Установка и удаление служб](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [Практическое руководство. Запуск служб](../../../docs/framework/windows-services/how-to-start-services.md)  
+ [Практическое руководство. Назначение службам контекста безопасности](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)

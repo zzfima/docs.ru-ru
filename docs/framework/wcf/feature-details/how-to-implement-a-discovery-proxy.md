@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 90713d1779566448547265d6487c113abdc84e00
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 25db6b46758e11c194952fbca03286891a5914d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Как реализовать прокси-сервера обнаружения
 В этом разделе приведены сведения о реализации прокси-сервера обнаружения. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]функция обнаружения в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], в разделе [Общие сведения об обнаружении WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Прокси-сервер обнаружения реализуется созданием класса, расширяющего абстрактный класс <xref:System.ServiceModel.Discovery.DiscoveryProxy>. В этом образце определены и использованы несколько других вспомогательных классов. `OnResolveAsyncResult`, `OnFindAsyncResult` и `AsyncResult`. Эти классы реализуют интерфейс <xref:System.IAsyncResult>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.IAsyncResult> разделе [System.IAsyncResult интерфейс](xref:System.IAsyncResult).
@@ -329,7 +330,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
- Методы OnBegin.. / OnEnd… обеспечивают логику для последующих операций обнаружения. Например, методы <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> и <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> реализуют для прокси-сервера обнаружения логику поиска. Когда прокси-сервер обнаружения получает сообщение зонда, эти методы вызываются для отправки ответа клиенту. При необходимости логику поиска можно изменить. Например, можно включить в состав операции поиска поиск по пользовательской области путем анализа XML-метаданных, определяемых алгоритмами или приложениями.  
+ Методы OnBegin. / OnEnd… обеспечивают логику для последующих операций обнаружения. Например, методы <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> и <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> реализуют для прокси-сервера обнаружения логику поиска. Когда прокси-сервер обнаружения получает сообщение зонда, эти методы вызываются для отправки ответа клиенту. При необходимости логику поиска можно изменить. Например, можно включить в состав операции поиска поиск по пользовательской области путем анализа XML-метаданных, определяемых алгоритмами или приложениями.  
   
 ### <a name="to-implement-the-asyncresult-class"></a>Реализация класса AsyncResult  
   
@@ -989,6 +990,6 @@ namespace Microsoft.Samples.Discovery
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения об обнаружении WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Как: реализовать Обнаружимую службу, которая регистрирует с прокси-сервера обнаружения](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
- [Как: реализовать клиентское приложение, которое использует прокси-сервер обнаружения для поиска службы](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
- [Как: тестирования прокси-сервера обнаружения](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+ [Практическое руководство. Реализация обнаруживаемой службы, которая регистрируется в прокси-сервере обнаружения](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
+ [Практическое руководство. Реализация клиентского приложения, которое для поиска служб использует прокси-сервер обнаружения](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
+ [Практическое руководство. Тестирование прокси-сервера обнаружения](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

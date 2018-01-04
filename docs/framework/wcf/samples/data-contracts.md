@@ -13,17 +13,18 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 99c7c0e02d82b9c7d05ab04cd8896449f8a7de89
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: abc6aafc5b7676a76db3416d8c88b25a836d21ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contracts"></a>Контракты данных
 В этом разделе содержатся образцы, которые демонстрируют контракты данных в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
- [Базового контракта данных](../../../../docs/framework/wcf/samples/basic-data-contract.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Базовый контракт данных](../../../../docs/framework/wcf/samples/basic-data-contract.md)  
  Демонстрируется способ реализации контракта данных.  
   
  [Пример DataContractSerializer](../../../../docs/framework/wcf/samples/datacontractserializer-sample.md)  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/02/2017
  [Ссылки на объекты](../../../../docs/framework/wcf/samples/object-references.md)  
  Демонстрирует способ передачи объектов по ссылкам между сервером и клиентом.  
   
- [POCO поддержки](../../../../docs/framework/wcf/samples/poco-support.md)  
+ [Поддержка POCO](../../../../docs/framework/wcf/samples/poco-support.md)  
  Демонстрирует поддержку сериализации непомеченных типов, т. е. типов, к которым не применены атрибуты сериализации. Иногда такие типы называют типами POCO (Plain Old CLR Object).  
   
  [Использование средства привязки сериализации](../../../../docs/framework/wcf/samples/usage-of-serialization-binder.md)  

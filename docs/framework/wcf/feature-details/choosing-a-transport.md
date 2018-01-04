@@ -14,11 +14,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 620e039dd9a53a7c09eedd3d1a4892c5c43ffd2b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d41e9d2416ddbbd4c729b8c2a23754d19f0630d3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-transport"></a>Выбор транспортов
 В этом разделе описываются критерии выбора одного из трех основных транспортов, входящих в состав [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]: HTTP, TCP, именованные каналы. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] также включает транспорт очереди сообщений (известный как MSMQ), однако в этом документе не описываются очереди сообщений.  
@@ -59,7 +60,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="decision-points-for-choosing-a-transport"></a>Факторы, определяющие выбор транспорта  
  В следующей таблице описаны стандартные факторы, которые необходимо учитывать при выборе транспорта. Необходимо также рассмотреть все дополнительные атрибуты и транспорты, применимые к приложению. Определите важные для приложения атрибуты и транспорты, которые успешно связываются с каждым из атрибутов, затем выберите транспорты, которые лучше всего подходят к составленному набору атрибутов.  
   
-|Атрибут|Описание|Поддерживаемые транспорты|  
+|Атрибут|Описание:|Поддерживаемые транспорты|  
 |---------------|-----------------|------------------------|  
 |Диагностика|Диагностика позволяет автоматически выявлять проблемы с подключением транспорта. Все транспорты поддерживают возможность обратной отправки информации о сбоях подключения. Однако в состав [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не входят средства диагностики для исследования неполадок в сети.|Нет|  
 |Размещение|Все конечные точки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] должны размещаться внутри приложения. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] и более ранние версии поддерживают размещение приложений, использующих только HTTP-транспорт. В [!INCLUDE[wv](../../../../includes/wv-md.md)] добавлена поддержка размещения всех транспортов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], включая протокол TCP и именованные каналы. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Размещение в службах IIS](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) и [размещение в службе активации процессов Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).|HTTP|  

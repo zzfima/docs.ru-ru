@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ec78d6d8059e19671849ee50ede9b5e64964c362
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1ebbce3b48796e9ef2d2b4fa722a563dc8c133cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-string-and-connection-string-name"></a>Строка соединения и имя строки соединения
 **Строка подключения** свойства указывает строку подключения, которую должен использовать хранилище экземпляров рабочих процессов SQL для подключения к базе данных сохраняемости. Этот параметр является необязательным. **Имя строки подключения** указывает имя именованной строки соединения, следует использовать хранилище экземпляров рабочих процессов SQL для подключения к базе данных сохраняемости. Этот параметр является необязательным. Необходимо задать значение для свойства имя строки подключения или свойства строки подключения, если не хотите, чтобы хранилище экземпляров рабочих процессов SQL именованную строку соединения по умолчанию **DefaultSqlWorkflowInstanceStoreConnectionString** .

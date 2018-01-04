@@ -13,23 +13,24 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 541ddbcdaefc14c3b9915186761a7842959cd91e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 867d80ed54f4ee64f87938ac9af89e3e3b198d8c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web"></a>Интернет
 В этом разделе перечислены образцы, размещенные в Интернете.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Выбор дополнительного формата](../../../../docs/framework/wcf/samples/advanced-format-selection.md)  
  Демонстрирует расширение модели веб-программирования HTTP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для поддержки новых форматов исходящих ответов.  
   
  [Автоматический выбор формата](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
  Демонстрирует включение автоматического выбора формата (XML или JSON) при использовании модели веб-программирования HTTP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], а также явное задание формата в коде операции.  
   
- [Базовой службы HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md)  
+ [Базовая служба HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md)  
  Демонстрирует реализацию службы на основе HTTP, на основе RPC - часто обозначается как «POX» (Plain Old XML) службы — с помощью [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] модель программирования Web HTTP.  
   
  [Основная служба ресурсов](../../../../docs/framework/wcf/samples/basic-resource-service.md)  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/02/2017
  [Условные методы Get и Put](../../../../docs/framework/wcf/samples/conditional-get-and-put.md)  
  Демонстрирует использование новых API условного поиска и обновления для модели веб-программирования HTTP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Конечные точки HTTP SOAP и](../../../../docs/framework/wcf/samples/soap-and-http-endpoints.md)  
+ [Конечные точки SOAP и HTTP](../../../../docs/framework/wcf/samples/soap-and-http-endpoints.md)  
  Демонстрирует реализацию службы на основе RPC и предоставление ее в формате протокола SOAP и формат «Plain Old XML» (POX) с помощью [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] модель программирования Web HTTP.  
   
  [Интеграция кэширования ASP.NET](../../../../docs/framework/wcf/samples/aspnet-caching-integration.md)  
@@ -50,7 +51,7 @@ ms.lasthandoff: 12/02/2017
  [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
  Демонстрирует основные понятия, связанные с классом <xref:System.UriTemplate>.  
   
- [Таблицы UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
+ [Таблица UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
  Демонстрирует использование класса <xref:System.UriTemplateTable> как источника ассоциативной табличной структуры типа словаря для работы с набором экземпляров <xref:System.UriTemplate>.  
   
  [Диспетчер таблицы UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)  

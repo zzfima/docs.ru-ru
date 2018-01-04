@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ef0886fe5319d2ddd8c4c4be1b61f629f2aa6f4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 829635bd7fd73b58004c59862f4d589e95f67f9b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-transfer-architectural-overview"></a>Общие сведения об архитектуре передачи данных
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] можно рассматривать как инфраструктуру обмена сообщениями, где происходит получение, обработка и направление сообщений в пользовательский код для дальнейших действий или создание сообщений из данных, предоставленных пользовательским кодом, и доставка этих сообщений по назначению. В данном разделе, предназначенном для опытных программистов, описывается архитектура для обработки сообщений и данных, которые в них содержатся. Упрощенное изложение практических аспектов отправки и получения данных приводится в разделе [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -88,7 +89,7 @@ ms.lasthandoff: 12/02/2017
   
 |Тип сообщения|Данные основного текста в сообщении|Реализация записи (OnWriteBodyContents)|Реализация чтения (OnGetReaderAtBodyContents)|  
 |------------------|--------------------------|--------------------------------------------------|-------------------------------------------------------|  
-|Исходящие, созданные из непотоковой модели программирования|Данные, необходимые для записи сообщения (например, объект и экземпляр <xref:System.Runtime.Serialization.DataContractSerializer> , необходимый для его сериализации)*|Пользовательская логика для записи сообщения на основании сохраненных данных (например, вызов метода `WriteObject` сериализатора `DataContractSerializer` , если используется именно этот сериализатор)*|Вызов `OnWriteBodyContents`, буферизация результатов, возврат средства чтения XML над буфером|  
+|Исходящие, созданные из непотоковой модели программирования|Данные, необходимые для записи сообщения (например, объект и экземпляр <xref:System.Runtime.Serialization.DataContractSerializer> , необходимый для его сериализации)*|Пользовательская логика для записи сообщения на основании сохраненных данных (например, вызов метода `WriteObject` сериализатора `DataContractSerializer`, если используется именно этот сериализатор)*|Вызов `OnWriteBodyContents`, буферизация результатов, возврат средства чтения XML над буфером|  
 |Исходящие, созданные из потоковой модели программирования|Объект `Stream` с записываемыми данными*|Запись данных из сохраненного потока с помощью механизма <xref:System.Xml.IStreamProvider> *|Вызов `OnWriteBodyContents`, буферизация результатов, возврат средства чтения XML над буфером|  
 |Входящие из потокового стека каналов|Объект `Stream` , который представляет поступающие через сеть данные с помощью <xref:System.Xml.XmlReader> над ним|Запись содержимого из сохраненного `XmlReader` с помощью `WriteNode`|Возвращает сохраненное средство чтения `XmlReader`.|  
 |Входящие из непотокового стека каналов|Буфер, который содержит данные основного текста и `XmlReader` над ними|Записывает содержимое из сохраненного `XmlReader` с помощью `WriteNode`|Возвращает сохраненный атрибут lang|  
@@ -282,4 +283,4 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> и <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> - это поведения операции, ответственные за подключение модулей форматирования сообщений для `DataContractSerializer` и `XmlSerializer`соответственно. Фактически, поведение <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> может работать с любым сериализатором, наследуемым от <xref:System.Runtime.Serialization.XmlObjectSerializer>, включая <xref:System.Runtime.Serialization.NetDataContractSerializer> (подробное описание см. в разделе "Использование автономной сериализации"). Поведение вызывает одну из перегрузок виртуального метода `CreateSerializer` для получения сериализатора. Для подключения иного сериализатора необходимо создать новый подкласс <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> и переопределить обе перегрузки метода `CreateSerializer` .  
   
 ## <a name="see-also"></a>См. также  
- [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+ [Задание передачи данных в контрактах служб](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

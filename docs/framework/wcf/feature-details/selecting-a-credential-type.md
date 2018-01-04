@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 455dec4adefc479433945f9f9b02708c23437991
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 629d5c55bd679539220566db17401151a1339d18
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="selecting-a-credential-type"></a>Выбор типа учетных данных
 *Учетные данные* данные [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] использует для подтверждения заявленной идентификации или возможностей. Например, паспорт - это документ, выданный властями, в котором содержатся учетные данные, подтверждающие гражданство страны или региона. В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используются учетные данные различных видов, например маркеры имен пользователей и сертификаты X.509. В этом разделе рассматриваются учетные данные, их использование в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и выбор правильных учетных данных для приложения.  

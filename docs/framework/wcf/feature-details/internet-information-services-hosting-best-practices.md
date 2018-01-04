@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6b1139fe82bc0a02eafb274f13bfb7b39eeec609
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c8593b9ceb579f33ba3b37975d88b37f3f5ab628
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Рекомендации по размещению в службах IIS
 В этом разделе даются некоторые рекомендации по размещению служб [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -25,7 +26,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="implementing-wcf-services-as-dlls"></a>Реализация служб WCF в виде библиотек DLL  
  Реализация службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в виде библиотеки DLL, развернутой в каталог \bin веб-приложения, позволяет многократно использовать службу вне модели веб-приложения, например в тестовой среде, где развертывание IIS невозможно.  
   
-## <a name="service-hosts-in-iis-hosted-applications"></a>Основные приложения служб в приложениях, размещенных в IIS  
+## <a name="service-hosts-in-iis-hosted-applications"></a>Ведущие приложения служб в приложениях, размещенных в IIS  
  Не используйте императивные резидентные интерфейсы API для создания новых основных приложений служб, которые ожидают передачи данных различного сетевого транспорта, изначально не поддерживаемого средой размещения IIS (например, [!INCLUDE[iis601](../../../../includes/iis601-md.md)] для размещения служб TCP, поскольку связь по протоколу TCP изначально не поддерживается в [!INCLUDE[iis601](../../../../includes/iis601-md.md)]). Такой подход не рекомендуется. Основные приложения служб, созданные принудительно, в среде размещения IIS неизвестны. Ключевым пунктом является то, что обработка, выполненная принудительно созданными службами, не принимается во внимание системой IIS, когда она определяет, простаивает ли пул ведущих приложений. В результате приложения, где есть такие принудительно созданные основные приложения служб, имеют среду размещения IIS, которая агрессивно удаляет ведущие процессы IIS.  
   
 ## <a name="uris-and-iis-hosted-endpoints"></a>Универсальные коды ресурсов (URI) и размещенные в IIS конечные точки  

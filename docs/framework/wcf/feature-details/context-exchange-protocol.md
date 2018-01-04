@@ -13,14 +13,15 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ef5406831e1bfaa9c1c4f959363bc8b26cd3820
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8f19b228eadcf8dabfaba2fc31f4f49f1b4d149b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="context-exchange-protocol"></a>Протокол обмена контекстом
-В этом разделе описывается протокол обмена контекстом, впервые представленный в выпуске [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)][!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]. Этот протокол позволяет клиентскому каналу принимать контекст, предоставленный службой, и применять его ко всем последующим запросам, поступающим в эту службу через тот же экземпляр клиентского канала. Для распространения контекста между сервером и клиентом реализация протокола обмена контекстом может использовать один из двух механизмов: файлы cookie HTTP или заголовок SOAP.  
+В этом разделе описывается протокол обмена контекстом, представленные в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] выпуска. Этот протокол позволяет клиентскому каналу принимать контекст, предоставленный службой, и применять его ко всем последующим запросам, поступающим в эту службу через тот же экземпляр клиентского канала. Для распространения контекста между сервером и клиентом реализация протокола обмена контекстом может использовать один из двух механизмов: файлы cookie HTTP или заголовок SOAP.  
   
  Протокол обмена контекстом реализуется на уровне пользовательских каналов. Канал передает контекст на уровень приложения и обратно с помощью свойства <xref:System.ServiceModel.Channels.ContextMessageProperty>. Для передачи данных между конечными точками значение контекста либо сериализуется в качестве заголовка SOAP на уровне канала, либо преобразуется в свойства сообщения, представляющие HTTP-запрос и ответ. В последнем случае предполагается, что один из используемых уровней канала преобразует свойства сообщений HTTP-запроса и ответа в файлы cookie HTTP и обратно соответственно. Выбор механизма обмена контекстом осуществляется с помощью свойства <xref:System.ServiceModel.Channels.ContextExchangeMechanism> в элементе привязки <xref:System.ServiceModel.Channels.ContextBindingElement>. Допустимые значения - `HttpCookie` и `SoapHeader`.  
   
@@ -78,4 +79,4 @@ ms.lasthandoff: 12/02/2017
     ```  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по взаимодействию по протоколам веб служб](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)
+ [Руководство по взаимодействию протоколов веб-служб](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)

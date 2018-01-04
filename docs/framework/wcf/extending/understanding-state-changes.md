@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9f93b1e9fdb1569507937c5381b157204ac88f87
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ce0d3be43b8e50367d1cdd9b4e486a4154001624
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-state-changes"></a>Основные сведения об изменении состояния
 В данном разделе рассматриваются состояния и переходы каналов, а также типы, используемые для структуризации каналов, и способы их реализации.  
@@ -145,7 +146,7 @@ ms.lasthandoff: 12/02/2017
   
  Вызываемые исключения зависят от состояния. В следующей таблице показаны различные состояния и соответствующие типы исключений, которые метод ThrowIfXxx вызывает для них.  
   
-|Состояние|Вызван метод Abort?|Исключение|  
+|Регион|Вызван метод Abort?|Исключение|  
 |-----------|----------------------------|---------------|  
 |Создано|Н/Д|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Открытие|Н/Д|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  

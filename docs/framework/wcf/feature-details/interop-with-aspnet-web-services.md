@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fd30b2d62d3ecf21027c0225490da6f31113cb07
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ef174f457114003e5b2783b50040424d9a96945c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>Взаимодействие с веб-службами ASP.NET
 Взаимодействие между веб-службами [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и веб-службами [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] возможно, если обеспечить, чтобы службы, реализованные с помощью обеих технологий, соответствовали спецификации WS-I Basic Profile 1.1. Веб-службы [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], соответствующие спецификации WS-I Basic Profile 1.1, могут взаимодействовать с клиентами [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с помощью предоставляемой системой привязки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] - <xref:System.ServiceModel.BasicHttpBinding>.  
@@ -66,4 +67,4 @@ public class Service : IEcho
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Как: Настройка службы WCF для взаимодействия с клиентами ASP.NET веб-службы](../../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)
+ [Практическое руководство. Настройка службы WCF для взаимодействия с клиентами веб-службы ASP.NET](../../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)

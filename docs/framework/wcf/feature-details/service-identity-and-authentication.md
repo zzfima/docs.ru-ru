@@ -17,11 +17,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 19ff205fd1e76a5d2ee787522cc5d94916b0c11c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b741e421a8773e1a4b2d2ab7da5e119073e861ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-identity-and-authentication"></a>Идентификация и проверка подлинности службы
 Служба *удостоверение конечной точки*является значение, созданное из службы языка описания веб-служб (WSDL). Это значение распространяется по всем клиентам и используется для проверки подлинности службы. После того как клиент инициирует связь с конечной точкой и служба пройдет проверку подлинности на клиенте, клиент сравнивает значение удостоверения конечной точки с действительным значением, возвращенным процессом проверки подлинности конечной точки. Если значения совпадают, значит клиент связался с ожидаемой конечной точкой службы. Это действует как защиту от *фишинг* , так как клиента из перенаправления конечную точку, размещенную на вредоносной службе.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="identity-types"></a>Типы удостоверений  
  Служба может предоставлять удостоверения пяти типов. Каждый тип удостоверения соответствует элементу, который может содержаться в элементе `<identity>` в конфигурации. Используемый тип зависит от сценария и требований службы к безопасности. Типы удостоверений описаны в приведенной ниже таблице.  
   
-|Тип удостоверения|Описание|Типичный сценарий|  
+|Тип удостоверения|Описание:|Типичный сценарий|  
 |-------------------|-----------------|----------------------|  
 |Служба доменных имен (DNS)|Этот элемент следует использовать с сертификатами X.509 или учетными записями Windows. Он сравнивает DNS-имя, указанное в учетных данных, со значением, указанным в этом элементе.|Проверка DNS позволяет использовать сертификаты с DNS-именами или именами субъектов. Если сертификат повторно выдан с тем же DNS-именем или именем субъекта, тогда проверка удостоверения по-прежнему действительна. При повторной выдаче сертификата он получает новый ключ RSA, однако при этом сохраняется то же DNS-имя или имя субъекта. Это означает, что клиентам не нужно обновлять в удостоверении информацию о службе.|  
 |Сертификат. Используется по умолчанию, если параметру `ClientCredentialType` присвоено значение "Certificate".|Этот элемент задает значение сертификата X.509 в кодировке Base64 для сравнения с клиентом.<br /><br /> Этот элемент также следует применять при использовании [!INCLUDE[infocard](../../../../includes/infocard-md.md)] в качестве учетных данных для проверки подлинности службы.|Этот элемент ограничивает проверку подлинности одним сертификатом на основе значения отпечатка. Это обеспечивает более строгую проверку подлинности, поскольку значения отпечатков уникальны. При этом следует учитывать следующее: если сертификат был повторно выдан с тем же именем субъекта, у него тем не менее будет новый отпечаток. Следовательно, клиенты могут проверить службу только в том случае, когда известен новый отпечаток. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Поиск отпечатка сертификата, в разделе [как: извлечение отпечатка сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).|  
@@ -122,11 +123,11 @@ ms.lasthandoff: 12/02/2017
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]как стека привязки элементов правильно для пользовательской привязки см. в разделе [привязки привязанных к](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Создание пользовательской привязки с <xref:System.ServiceModel.Channels.SecurityBindingElement>, в разделе [как: создание SecurityBindingElement для режима проверки подлинности указан](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
 ## <a name="see-also"></a>См. также  
- [Как: Создание пользовательской привязки, с использованием элемента SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [Как: создание SecurityBindingElement для заданного режима проверки подлинности](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)  
- [Как: создать средство проверки удостоверения настраиваемые](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
- [При выборе типа учетных данных](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [Практическое руководство. Создание SecurityBindingElement для заданного режима проверки подлинности](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)  
+ [Практическое руководство. Создание пользовательского средства проверки идентификации клиентов](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
+ [Выбор типа учетных данных](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Служебная программа для метаданных ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [Создание пользовательских привязок](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)  
- [Как: извлечение отпечатка сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+ [Практическое руководство. Извлечение отпечатка сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)

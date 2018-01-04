@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a64c72a8f69abc220a311c2a204074ea83d0f58
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b9f1c57f067fa7c8bece3acaf0d51303b31d13bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Практическое руководство. Включение службы совместного использования портов Net.TCP
 Чтобы упростить совместное использование портов TCP в нескольких процессах, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] использует службу совместного использования портов Net.TCP Windows. Эта служба устанавливается как часть [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], однако из соображений безопасности служба не включается по умолчанию и перед первым использованием должна быть включена вручную. В настоящем разделе описывается настройка службы совместного использования портов Net.TCP с помощью оснастки консоли управления (MMC).  
@@ -44,5 +45,5 @@ ms.lasthandoff: 12/02/2017
 ## <a name="example"></a>Пример  
   
 ## <a name="see-also"></a>См. также  
- [Общий доступ к портам Net.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
+ [Совместное использование портов Net.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
  [Настройка службы совместного использования портов Net.TCP](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

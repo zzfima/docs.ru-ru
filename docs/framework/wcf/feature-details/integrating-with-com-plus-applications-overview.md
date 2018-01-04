@@ -16,11 +16,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 04de29891bcf5d8cdbac32ffc85d64a4003e3184
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0fbed530a1b968bb049ee20262eb2b8fa9ba13c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-with-com-applications-overview"></a>Общие сведения об интеграции с приложениями COM+
 Служба [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предоставляет среду с широкими возможностями для создания распределенных приложений. Если уже используется логика приложения на основе компонентов, размещенного на COM+, инфраструктура [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] позволит расширить существующую логику вместо ее переписывания. Стандартный сценарий - предоставление доступа существующему приложению COM+ или бизнес-логике Enterprise Services службы через веб-службы.  
@@ -112,4 +113,4 @@ ms.lasthandoff: 12/02/2017
  Функции перезапуска процессов COM+ невозможно использовать в интегрированных приложениях. Если приложение настроено на использование перезапуска процессов, а компоненты выполняются в процессе служб COM+, запустить службу не удастся. Это требование не распространяется на службы, использующие внутрипроцессное размещение на веб-сервере, поскольку параметры перезапуска процессов в этом случае не действуют.  
   
 ## <a name="see-also"></a>См. также  
- [Интеграция с Общие сведения о приложениях COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+ [Общие сведения об интеграции с приложениями COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

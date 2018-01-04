@@ -14,11 +14,12 @@ caps.latest.revision: "27"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 933f62e1921fe12255965567bbec0faf651e0ba2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cb8f112c71c743fd6650baf04b8db55ceaeef4ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="auditing-security-events"></a>Аудит событий безопасности
 Приложения, созданные с помощью [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], могут регистрировать в журнале события, связанные с безопасностью (успешно, сбой или оба), используя функцию аудита. События записываются в журнал системных событий Windows, и их можно просматривать при помощи средства просмотра событий.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="auditing-classes"></a>Классы аудита  
  В приведенной ниже таблице описаны классы и свойства, используемые для программирования поведения аудита.  
   
-|Класс|Описание|  
+|Класс|Описание:|  
 |-----------|-----------------|  
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>|Позволяет задавать параметры аудита в виде поведения службы.|  
 |<xref:System.ServiceModel.AuditLogLocation>|Перечисление для задания журнала, в который требуется производить запись. Предусмотрены значения Default, Application и Security. Если выбрано значение Default, фактическое расположение журнала определяется операционной системой. См. подраздел "Выбор журнала приложения или журнала безопасности" ниже в этом разделе.|  
@@ -94,7 +95,7 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="operating-system"></a>Операционная система  
   
-|System|Журнал приложения|Журнал безопасности|  
+|Система|Журнал приложения|Журнал безопасности|  
 |------------|---------------------|------------------|  
 |[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] или более поздняя версия|Поддерживается|Не поддерживается|  
 |[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] и [!INCLUDE[wv](../../../../includes/wv-md.md)].|Поддерживается|Контекст потока должен обладать привилегиями `SeAuditPrivilege`|  
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/21/2017
  <xref:System.ServiceModel.AuditLogLocation>  
  [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Базовое программирование для WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Как: аудит событий безопасности](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
+ [Практическое руководство. Аудит событий безопасности](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
  [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)  
  [\<поведения >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
  [Модель безопасности для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

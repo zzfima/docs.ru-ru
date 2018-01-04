@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f1595cbb1d225e3dd4e73a354028745d4cd0428
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: acc7131d02f1f4e3cde0df152bdfbc591724b600
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-syndication-overview"></a>Общие сведения о синдикации WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] поддерживает экспонирование веб-каналов синдикации из службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Синдикация - это механизм интеграции приложения, суть которого в том, что сервер предоставляет некоторые данные приложения в формате с возможностью взаимодействия, называемом веб-канал. Веб-канал - это коллекция данных приложения, которая состоит из метаданных уровня веб-канала (название, автор, URL-адрес и другие метаданные) и серии элементов веб-канала. В пределах веб-канала эти элементы, как правило, упорядочены по времени (в обратном хронологическом порядке). Элемент веб-канала состоит из стандартного набора метаданных уровня элемента (название, URL-адрес, дата создания, категория и другие метаданные уровня элемента) и данных приложения произвольного размера. Двумя наиболее часто используемыми типами веб-каналов синдикации являются RSS (Really Simple Syndication) 2.0 и Atom 1.0, оба типа поддерживаются [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -32,4 +33,4 @@ ms.lasthandoff: 12/02/2017
  Платформа синдикации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддерживает RSS 2.0 и Atom 1.0.  
   
 ## <a name="see-also"></a>См. также  
- [Модель программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+ [Модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

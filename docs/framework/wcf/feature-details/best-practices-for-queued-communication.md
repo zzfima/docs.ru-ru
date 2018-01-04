@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15de43cc83e92b781e44da703353bec98dbc2c6a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8c701b608071ebd9e8c29881000db8dcd2634f56
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-for-queued-communication"></a>Рекомендации по взаимодействию с использованием очередей
 В этом разделе приведены рекомендации по взаимодействию с использованием очередей в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. В последующих разделах рассматриваются рекомендации с точки зрения сценариев.  
@@ -93,13 +94,13 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>См. также  
  [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Как: обмен сообщениями с конечными точками WCF в очереди](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- [Как: обмена сообщениями с конечными точками WCF и приложениями очереди сообщений](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- [Группирование сообщений в очереди в сеансе](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
- [Пакетная обработка сообщений в одну транзакцию](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ [Практическое руководство. Обмен сообщениями в очереди с конечными точками WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [Практическое руководство. Обмен сообщениями с конечными точками WCF и приложениями очереди сообщений](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ [Группирование сообщений в очереди в рамках сеанса](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
+ [Объединение сообщений в одну транзакцию](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
  [Использование очередей недоставленных сообщений для обработки сбоев при передаче сообщений](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
  [Обработка подозрительных сообщений](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
  [Различия в возможностях очередей в Windows Vista, Windows Server 2003 и Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- [Защита сообщений с использованием безопасности транспорта](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
- [Защита сообщений с помощью безопасности сообщений](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
- [Устранение неполадок обмена сообщениями в очереди](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)
+ [Защита сообщений с использованием средств обеспечения безопасности транспорта](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
+ [Защита сообщений с использованием средств обеспечения безопасности сообщений](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
+ [Устранение неполадок обмена сообщениями с использованием очередей](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)

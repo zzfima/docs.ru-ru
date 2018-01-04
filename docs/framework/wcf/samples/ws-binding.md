@@ -13,23 +13,24 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef396a909b26110267b03f42728589640c7e2242
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f733aaf62d37f9c8ca853a0958e627a4f354121d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ws-binding"></a>Привязка WS
 Образцы в этом разделе демонстрируют привязку службы Windows в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Поток транзакций WS](../../../../docs/framework/wcf/samples/ws-transaction-flow.md)  
  Демонстрируется использование координируемой клиентом транзакции и параметры клиента и сервера для организации потока транзакции с использованием протокола WS-Atomic Transaction или OleTransactions.  
   
  [Привязка HTTP для федерации WS 2007](../../../../docs/framework/wcf/samples/ws-2007-federation-http-binding.md)  
  Демонстрирует использование <xref:System.ServiceModel.WS2007FederationHttpBinding>.  
   
- [Два двухъядерных WS Http](../../../../docs/framework/wcf/samples/ws-dual-http.md)  
+ [WS Dual Http](../../../../docs/framework/wcf/samples/ws-dual-http.md)  
  Демонстрируется настройка привязки `WSDualHttpBinding`.  
   
  [Кодирование MTOM](../../../../docs/framework/wcf/samples/mtom-encoding.md)  

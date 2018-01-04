@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91b03e29c2841434d4222f59ae62028bf2431a84
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a2785f74d9a07b267d836a9f6e6749d259a1ab21
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exporting-and-importing-metadata"></a>Экспорт и импорт метаданных
 В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] экспорт метаданных представляет собой процесс описания конечных точек службы и проецирования их в параллельное, стандартизованное представление, позволяющее клиентам понять, как использовать службу. Импорт метаданных службы - это процесс создания экземпляров <xref:System.ServiceModel.Description.ServiceEndpoint> или частей из метаданных службы.  
@@ -56,17 +57,17 @@ ms.lasthandoff: 12/02/2017
   
  Тип <xref:System.ServiceModel.Description.WsdlExporter> заново создает все исключения, перехваченные во время процесса экспорта. Эти исключения не записываются в виде ошибок в свойство `Errors`. После того, как <xref:System.ServiceModel.Description.WsdlExporter> создал исключение, он находится в состоянии ошибки и не может использоваться повторно. <xref:System.ServiceModel.Description.WsdlExporter> не добавляет предупреждения в свое свойство `Errors`, если экспорт операции невозможен из-за использования подстановочных действий или если обнаружены одинаковые имена привязок.  
   
-## <a name="in-this-section"></a>Содержание  
- [Как: Импорт метаданных в конечные точки службы](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Практическое руководство. Импорт метаданных в конечные точки службы](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
  Описание порядка импорта загруженных метаданных в объекты описания.  
   
- [Как: экспорта метаданных из конечных точек службы](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [Практическое руководство. Экспорт метаданных из конечных точек службы](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
  Описание порядка экспорта объектов описания в метаданные.  
   
- [ServiceDescription и ссылка на WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
+ [ServiceDescription и справочная информация о WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  Описание сопоставления объектов описания и языка WSDL.  
   
- [Как: использовать Svcutil.exe для экспорта метаданных из скомпилированного кода службы](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [Практическое руководство. Использование программы Svcutil.exe для экспорта метаданных из скомпилированного кода службы](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  Описание использования средства Svcutil.exe для экспорта метаданных служб, контрактов и типов данных в скомпилированных сборках.  
   
  [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  

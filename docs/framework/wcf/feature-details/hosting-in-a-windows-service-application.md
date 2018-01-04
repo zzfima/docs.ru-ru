@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1f411e0280a1f663e5e001e471eb836208083160
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d1a39162097c21f20c0dd04f3911442602871436
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Размещение в приложении службы Windows
 Службы Windows (ранее называвшиеся службами Windows NT) обеспечивают модель процессов, особенно подходящую для приложений, которые должны существовать в длительно исполняемом файле и не отображают никакой формы пользовательского интерфейса. Временем существования процессов приложений служб Windows управляет диспетчер служб, который позволяет запускать, останавливать и приостанавливать приложения служб Windows. Можно настроить автоматический запуск при запуске компьютера, сделав его подходящей средой размещения для приложения «always on» процесс службы Windows. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Приложения служб Windows, в разделе [приложения служб Windows](http://go.microsoft.com/fwlink/?LinkId=89450).  
@@ -48,8 +49,8 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceProcess>  
- [Пошаговое руководство: Создание приложения службы Windows в конструкторе компонентов](http://go.microsoft.com/fwlink/?LinkId=94875)  
- [Как: размещение службы WCF в управляемой службе Windows](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
+ [Пошаговое руководство. Создание приложения служб Windows в конструкторе компонентов](http://go.microsoft.com/fwlink/?LinkId=94875)  
+ [Практическое руководство. Размещение службы WCF в управляемой службе Windows](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
  [Узел службы Windows](../../../../docs/framework/wcf/samples/windows-service-host.md)  
  [Программная архитектура приложений служб](http://go.microsoft.com/fwlink/?LinkId=94876)  
  [Функции размещения Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201276)

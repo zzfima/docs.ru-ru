@@ -13,20 +13,21 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9d52b71fe783764dcdbf5acd2ffe0e0ee1e7e56d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3f6282dfbf5e67f91167e5abf0640641000994d5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-msmq-binding"></a>Привязка MSMQ на платформе .NET
 Этот раздел содержит образцы, которые демонстрируют использование привязки атрибутов MSMQ элемента конечной точки.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Привязка MSMQ с поддержкой транзакций](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
  Показывает, как осуществлять транзакционное взаимодействие с использованием очередей с помощью очереди сообщений (MSMQ).  
   
- [Volatile взаимодействия с использованием очередей](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
+ [Неустойчивое взаимодействие с использованием очереди](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
  Демонстрирует неустойчивое взаимодействие с использованием очередей через MSMQ.  
   
  [Очереди недоставленных сообщений](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
@@ -47,8 +48,8 @@ ms.lasthandoff: 12/02/2017
  [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
  Показывает, как осуществлять транзакционное взаимодействие по HTTP с помощью очереди сообщений (MSMQ).  
   
- [Безопасность сообщений через очереди сообщений](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
+ [Безопасность сообщений при использовании очереди сообщений](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
  Демонстрирует реализацию приложения, использующего протокол WS-Security и проверку подлинности с использованием сертификата X.509v3 для клиента и требующего проверки подлинности сервера с использованием сертификата X.509v3 сервера через MSMQ.  
   
- [Генератор товаров ReceiveContext](../../../../docs/framework/wcf/samples/receivecontext-enabled-wcf-channels.md)  
+ [Генератор продуктов ReceiveContext](../../../../docs/framework/wcf/samples/receivecontext-enabled-wcf-channels.md)  
  Демонстрирует использование поддерживающих <xref:System.ServiceModel.Channels.ReceiveContext> каналов WCF.

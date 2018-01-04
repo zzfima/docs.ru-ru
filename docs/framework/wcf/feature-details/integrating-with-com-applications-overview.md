@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6ae704ad9542c162b1c37f3eb9edf31f864cd42e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5b20ae5329f08e9391fd7b93218c44c3c1978a48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-with-com-applications-overview"></a>Общие сведения об интеграции с приложениями COM
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предоставляет разработчику управляемого кода среду с широкими возможностями для создания подключаемых приложений. Однако, если уже вложены существенные средства в неуправляемый код на основе модели COM и миграция нежелательна, веб-службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] можно интегрировать непосредственно в существующий код, используя моникер служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Моникер служб можно использовать в широком наборе сред разработки на базе модели COM, например в Office VBA, Visual Basic 6.0 и Visual C++ 6.0.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="parameters-supported-by-the-service-moniker"></a>Параметры, поддерживаемые моникером служб  
  В следующей таблице представлены параметры, поддерживаемые моникером служб.  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`address`|URL-адрес службы.|  
 |`binding`|Имя раздела привязки из конфигурации приложения.|  
@@ -75,4 +76,4 @@ ms.lasthandoff: 12/02/2017
 >  `</configuration>`  
   
 ## <a name="see-also"></a>См. также  
- [Как: регистрация и настройка моникера службы](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+ [Практическое руководство. Регистрация и настройка моникера службы](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

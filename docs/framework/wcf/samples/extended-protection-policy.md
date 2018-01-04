@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef77df0681f7177a3b006b84d5ed3b60b7954555
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e6c592e387668a51e44fd0ffc8987757c63b4e69
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extended-protection-policy"></a>Расширенная политика защиты
 Расширенная защита - это инициатива, направленная на отражение атак типа «злоумышленник в середине» (MITM). Атака MITM - это угроза безопасности, при которой злоумышленник перехватывает учетные данные клиента и переправляет их на сервер.  

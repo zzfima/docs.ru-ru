@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf74b38c15cf8dc68218c39246c8999c4ec44493
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e570185b7df06a47e8c7fb3319328e760079415d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>Использование в WCF нескольких схем проверки подлинности
 В WCF теперь можно указать несколько схем проверки подлинности на одной конечной точке. Кроме того, службы, размещенные на веб-серверах, могут наследовать свои параметры проверки подлинности непосредственно из IIS. Резидентные службы могут указывать, какие схемы проверки подлинности можно использовать. Дополнительные сведения о настройке параметров проверки подлинности в службах IIS см. в разделе [проверки подлинности IIS](http://go.microsoft.com/fwlink/?LinkId=232458)  
@@ -131,7 +132,7 @@ else
   
 ## <a name="see-also"></a>См. также  
  [Привязки и безопасность](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- [Конечные точки: Адреса, привязки и контракты](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Конечные точки: адреса, привязки и контракты](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
  [Настройка привязок, предоставляемых системой](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Возможности безопасности при использовании пользовательских привязок](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
  [Привязки](../../../../docs/framework/wcf/feature-details/bindings.md)  

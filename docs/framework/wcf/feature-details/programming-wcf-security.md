@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 5f61eb200c141f95b24fec1a424ce7b92d8559cc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4b296d9bf9b52dfc8e782f6e324be1de8c76d349
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-wcf-security"></a>Программирование безопасности WCF
 В данном разделе приводится описание основных задач программирования, используемых для создания безопасного приложения [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. В этом разделе рассматриваются только проверки подлинности, конфиденциальность и целостность, которые в совокупности называются *безопасность передачи*. В этом разделе не рассматривается авторизацию (Управление доступом к ресурсам и службам); сведения об авторизации см. в разделе [авторизации](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  

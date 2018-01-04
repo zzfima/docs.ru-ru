@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5587300edf739eedb99084735eda81538ab61ef7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cae680c8958c86dc57a2aff3c2d567e1fdac981d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-nats-and-firewalls"></a>Работа со средствами NAT и брандмауэрами
 Зачастую в сетевом подключении между клиентом и сервером отсутствует прямой и открытый путь для взаимодействия. Пакеты фильтруются, перенаправляются, анализируются и преобразуются как на конечных, так и на промежуточных компьютерах в сети. Типичными примерами промежуточных приложений, участвующих в сетевом взаимодействии, служат средства преобразования сетевых адресов (NAT) и брандмауэры.  

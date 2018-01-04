@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 007dec81766423ea2826e98ae0b6b399a1508f11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7031e222b152bfa61e13e0e4a44b5ad9418b07c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>Использование нескольких протоколов доверия в сценариях федерации
 Возможны сценарии, в которых федеративные клиенты взаимодействуют со службой и службой маркеров безопасности, версии доверия которых не совпадают. Код WSDL службы может содержать утверждение `RequestSecurityTokenTemplate` с элементами WS-Trust, версии которых не совпадают с версией службы маркеров безопасности. В этих случаях клиент [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] преобразует элементы WS-Trust, полученные из `RequestSecurityTokenTemplate`, для соответствия версии STS trust. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обрабатывает несовпадающие версии trust только для стандартных привязок. Все стандартные параметры алгоритмов, распознаваемые [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], являются частью стандартной привязки. В этом разделе описано поведение [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с различными параметрами доверия для службы и службы маркеров безопасности.  

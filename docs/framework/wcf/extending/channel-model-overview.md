@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9be7f226c331ad20c58a06b5c7497c7942db013d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7f6f45b788d825fed3c8f5d627190dd8911ec4c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="channel-model-overview"></a>Общие сведения о модели каналов
 Стек каналов [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - это многоуровневый стек связи с одним или несколькими каналами, которые обрабатывают сообщения. В нижней части стека находится канал транспорта, отвечающий за адаптацию стека каналов к используемому транспорту (например, TCP, HTTP, SMTP и другим типам транспорта). Каналы обеспечивают модель низкоуровневого программирования для передачи и приема сообщений. Эта модель программирования основывается на нескольких интерфейсах и ресурсах других типов, в совокупности называемых моделью каналов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. В данном разделе рассматриваются формы каналов, создание базового прослушивателя каналов (в службе) и фабрики каналов (на клиенте).  
@@ -79,11 +80,11 @@ ms.lasthandoff: 12/02/2017
   
  В следующих разделах описываются объектная модель каналов, а также различные области разработки, помогающие создавать пользовательские каналы.  
   
-|Раздел|Описание|  
+|Раздел|Описание:|  
 |-----------|-----------------|  
-|[Служба: Прослушиватели каналов и каналы](../../../../docs/framework/wcf/extending/service-channel-listeners-and-channels.md)|Описываются прослушиватели каналов, ожидающие передачи данных по входящим каналам в приложении службы.|  
-|[Клиент: Фабрики каналов и каналы](../../../../docs/framework/wcf/extending/client-channel-factories-and-channels.md)|Описываются фабрики каналов, которые создают каналы для подключения к приложению службы.|  
-|[Общие сведения о состоянии изменения](../../../../docs/framework/wcf/extending/understanding-state-changes.md)|Описывается, как модели интерфейса <xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType> изменяют состояния в каналах.|  
-|[Выбор шаблона обмена сообщениями](../../../../docs/framework/wcf/extending/choosing-a-message-exchange-pattern.md)|Описываются шесть базовых шаблонов обмена сообщениями, которые могут поддерживаться каналами.|  
+|[Служба: прослушиватели каналов и каналы](../../../../docs/framework/wcf/extending/service-channel-listeners-and-channels.md)|Описываются прослушиватели каналов, ожидающие передачи данных по входящим каналам в приложении службы.|  
+|[Клиент: фабрики каналов и каналы](../../../../docs/framework/wcf/extending/client-channel-factories-and-channels.md)|Описываются фабрики каналов, которые создают каналы для подключения к приложению службы.|  
+|[Основные сведения об изменении состояния](../../../../docs/framework/wcf/extending/understanding-state-changes.md)|Описывается, как модели интерфейса <xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType> изменяют состояния в каналах.|  
+|[Выбор схемы обмена сообщениями](../../../../docs/framework/wcf/extending/choosing-a-message-exchange-pattern.md)|Описываются шесть базовых шаблонов обмена сообщениями, которые могут поддерживаться каналами.|  
 |[Обработка исключений и сбоев](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)|Описываются способы обработки сбоев и исключений в пользовательских каналах.|  
 |[Конфигурация и поддержка метаданных](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)|Описываются поддержка использования пользовательских каналов из модели приложения, а также экспорт и импорт метаданных с использованием привязок и элементов привязок.|

@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 00c5b310fbda189cfffe74767c9d77ac86481afe
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 01030ed226a5cdc384db56933325d7c4eeade989
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>Сопоставление объектной модели синдикации WCF моделям Atom и RSS
 При разработке службы синдикации [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] создаются веб-каналы и элементы с использованием следующих классов.  
@@ -410,6 +411,6 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>См. также  
  [Общие сведения о синдикации WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
  [Архитектура синдикации](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
- [Как: создание базового RSS-канала](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
- [Как: создание базового канала Atom](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
- [Как: предоставить доступ к каналу в форматах Atom и RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+ [Практическое руководство. Создание базового RSS-канала](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
+ [Практическое руководство. Создание базового канала Atom](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
+ [Практическое руководство. Публикация канала в форматах Atom и RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)

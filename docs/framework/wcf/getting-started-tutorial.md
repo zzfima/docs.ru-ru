@@ -17,11 +17,12 @@ caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 649fc2572e809238977ca3deb5740ada2dd5dc14
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 182e82eec107c170a793d0d48bcfe5493c04d618
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-tutorial"></a>Учебник по началу работы
 Содержащиеся в этом разделе подразделы призваны кратко познакомить читателя с процессом программирования в [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Их нужно выполнять в том порядке, в котором они перечислены в конце этой страницы. Прохождение этих занятий позволит получить базовое представление об этапах, которые необходимы для создания служб и клиентских приложений [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Служба предоставляет одну или несколько конечных точек, каждая из которых предоставляет одну или несколько операций службы. *Конечная точка* службы задает адрес, где можно найти службу, привязку, которая содержит сведения, описывающие, как клиент должен обмениваться данными со службой и контракт, определяющий функцию предоставляемую службой клиентам.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/02/2017
   
  Более подробные сведения о создании служб и клиентов см. в разделе [базовое Программирование WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Определение контракта службы](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
  Создание контракта [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] с использованием определенного пользователем интерфейса. Контракт определяет функциональные возможности, предоставляемые службой.  
   

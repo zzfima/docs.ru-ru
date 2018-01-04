@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5657b48a648603f24e89c0eebd1285ed9a505e54
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a32c16067446459817e9943c2d729a67373a0333
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>Протокол надежного обмена сообщениями, версия 1.0
 В этом разделе описаны особенности реализации в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] протокола обмена сообщениями WS-Reliable (версия 1.0 от февраля 2005 года), необходимого для взаимодействия с использованием транспорта HTTP. В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] соблюдена спецификация обмена сообщениями WS-Reliable с определенными ограничениями и пояснениями, описанными далее в этом разделе. Обратите внимание, что протокол WS-ReliableMessaging версии 1.0 реализуется начиная с версии [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
@@ -47,7 +48,7 @@ ms.lasthandoff: 12/02/2017
   
 -   B1101: инициатор [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не создает необязательный элемент "Expires" в сообщении `CreateSequence` или, если сообщение `CreateSequence` содержит элемент `Offer`, необязательный элемент `Expires` в элементе `Offer`.  
   
--   B1102: при обращении к сообщению `CreateSequence` инициатор [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]`Responder` отправляет и получает оба элемента `Expires`, если они существуют, но не использует их значения.  
+-   B1102: При доступе к `CreateSequence` сообщение, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `Responder` отправляет и получает оба `Expires` элементов, если они существуют, но не использует их значения.  
   
  Протокол WS-Reliable Messaging использует механизм `Offer` для формирования двух коррелированных встречных последовательностей, которые составляют сеанс.  
   
@@ -284,7 +285,7 @@ ms.lasthandoff: 12/02/2017
   
 -   B3001: в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] к элементам `wsrm:RMAssertion` прикрепляется проверочное утверждение WS-Policy `wsdl:binding`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддерживает вложения в элементы `wsdl:binding` и `wsdl:port`.  
   
--   B3002: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддерживает следующие дополнительные свойства утверждения WS-Reliable Messaging и реализует контроль над ними через элемент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]`ReliableMessagingBindingElement`:  
+-   B3002: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддерживает следующие дополнительные свойства утверждения WS-Reliable Messaging и реализует контроль над ними на [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `ReliableMessagingBindingElement`:  
   
     -   `wsrm:InactivityTimeout`  
   

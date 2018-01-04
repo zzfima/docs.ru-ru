@@ -17,11 +17,12 @@ caps.latest.revision: "46"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 14020e62e936ae6a9acad25c6c24d937feb150af
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db19b5188c98d157b98d65422ee38d4ed59f733a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-message-contracts"></a>Использование контрактов сообщений
 Обычно при построении приложений [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] разработчики уделяют пристальное внимание структурам данных и вопросам сериализации, при этом им не требуется заниматься структурой сообщений, в которых передаются данные. Для таких приложений создание контрактов данных для параметров или возвращаемых значений представляет собой достаточно простую задачу. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Указание входящий трафик передачи данных в контрактах служб](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -210,7 +211,7 @@ public class BankingDepositLog
   
  В качестве имени записей массива по умолчанию используется имя члена, к которому применены атрибуты <xref:System.ServiceModel.MessageHeaderArrayAttribute>.  
   
- Атрибут <xref:System.ServiceModel.MessageHeaderArrayAttribute> наследуется от класса <xref:System.ServiceModel.MessageHeaderAttribute>. Он имеет тот же набор функций, что и атрибуты, не являющиеся массивами; например, можно задать порядок, имя и пространство имен для массива заголовков таким же образом, каким они задаются для отдельного заголовка. При использовании для массива свойство `Order` применяется ко всему массиву.  
+ Атрибут <xref:System.ServiceModel.MessageHeaderArrayAttribute> наследуется от класса <xref:System.ServiceModel.MessageHeaderAttribute>. Он имеет тот же набор возможностей, что и атрибуты, не являющиеся массивами; например, можно задать порядок, имя и пространство имен для массива заголовков таким же образом, каким они задаются для отдельного заголовка. При использовании для массива свойство `Order` применяется ко всему массиву.  
   
  Атрибут <xref:System.ServiceModel.MessageHeaderArrayAttribute> можно применять только к массивам, но не к коллекциям.  
   
@@ -222,9 +223,9 @@ public class BankingDepositLog
 ## <a name="signing-and-encrypting-parts-of-the-message"></a>Подписывание и шифрование частей сообщения  
  В контракте сообщения может быть указано, следует ли снабжать заголовки и/или тело сообщения цифровыми подписями и шифровать.  
   
- Это можно сделать, задав свойство <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType> атрибутов <xref:System.ServiceModel.MessageHeaderAttribute> и <xref:System.ServiceModel.MessageBodyMemberAttribute>. Это свойство является перечислением типа <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> и может принимать значения <xref:System.Net.Security.ProtectionLevel.None> (без шифрования или подписи), <xref:System.Net.Security.ProtectionLevel.Sign> (только цифровая подпись) или <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> (и шифрование, и цифровая подпись). Значение по умолчанию — <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
+ Это можно сделать, задав свойство <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType> атрибутов <xref:System.ServiceModel.MessageHeaderAttribute> и <xref:System.ServiceModel.MessageBodyMemberAttribute>. Это свойство является перечислением типа <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> и может принимать значения <xref:System.Net.Security.ProtectionLevel.None> (без шифрования или подписи), <xref:System.Net.Security.ProtectionLevel.Sign> (только цифровая подпись) или <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> (и шифрование, и цифровая подпись). Значение по умолчанию — <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
   
- Чтобы эти функции безопасности работали, необходимо надлежащим образом настроить привязку и расширения функциональности. При использовании этих функций безопасности без надлежащей настройки (например, при попытке подписать сообщение без предоставления учетных данных) во время проверки будет вызвано исключение.  
+ Чтобы эти возможности безопасности работали, необходимо надлежащим образом настроить привязку и расширения функциональности. При использовании этих функций безопасности без надлежащей настройки (например, при попытке подписать сообщение без предоставления учетных данных) во время проверки будет вызвано исключение.  
   
  Для заголовков сообщений уровень защиты определяется отдельно для каждого заголовка.  
   
@@ -368,7 +369,7 @@ public class PatientRecord : PersonRecord
  Класс `PatientRecord` описывает сообщение с одним заголовком с именем `ID`. Этот заголовок соответствует члену `personID`, а не члену `patientID`, поскольку выбирается самый базовый член. Следовательно, поле `patientID` в этом случае бесполезно. Тело сообщения содержит элемент `diagnosis`, за которым следует элемент `patientName` (алфавитный порядок). Обратите внимание, что в этом примере показана крайне нежелательная схема: и в базовом, и в производном контракте сообщения имеются разделы тела сообщения.  
   
 ## <a name="wsdl-considerations"></a>Замечания о WSDL  
- При создании контракта на языке WSDL из службы, в которой используются контракты сообщений, важно помнить, что в полученном WSDL-коде отражаются не все функции контракта сообщения. Необходимо учитывать следующее.  
+ При создании контракта на языке WSDL из службы, в которой используются контракты сообщений, важно помнить, что в полученном WSDL-коде отражаются не все возможности контракта сообщения. Необходимо учитывать следующее.  
   
 -   На языке WSDL нельзя выразить понятие массива заголовков. При создании сообщений с массивом заголовков с использованием атрибута <xref:System.ServiceModel.MessageHeaderArrayAttribute> в полученном WSDL-коде вместо массива отражается только один заголовок.  
   

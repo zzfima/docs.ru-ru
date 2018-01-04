@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 184c4a5c31969ee060f72d937ab02af733340ca4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aa762df1dbfe92102f8cd719613099b23986ed0c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-with-scopes-sample"></a>Образец обнаружения с помощью областей
 В образце описывается использование областей для категоризации конечных точек, доступных для обнаружения, а также способы использования <xref:System.ServiceModel.Discovery.DiscoveryClient> для выполнения асинхронного поиска конечных точек. В службе этот образец показывает, как настраивать обнаружение всех конечных точек, добавляя поведение обнаружения конечных точек и используя его для добавления области к конечной точке, а также управляя возможностью обнаружения конечных точек. В клиенте образец описывает способы создания клиентами <xref:System.ServiceModel.Discovery.DiscoveryClient> и настройки параметров поиска для включения областей в <xref:System.ServiceModel.Discovery.FindCriteria>. В этом образце также описываются способы ограничений клиентами ответов путем добавления критериев завершения.  

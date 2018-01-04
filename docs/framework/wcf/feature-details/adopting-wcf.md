@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e27ee5f2e1b2ad042fd8c0104e89b99eb5e4bc96
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 522d4d39df6df62a6bed2fdc9f6d72df1193faca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adopting-windows-communication-foundation"></a>Переход на платформу Windows Communication Foundation
 Можно использовать [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] для новых разработок, продолжая поддерживать существующие приложения, разработанные с использованием ASP.NET. Поскольку среда [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] рассчитана на то, чтобы быть самым подходящим выбором для обеспечения взаимодействия с приложениями, созданными с помощью платформы .NET Framework в любом сценарии, она может выполнять роль стандартного инструмента для решения широкого круга проблем обмена данными между программами способами, недоступными в ASP.NET.  
@@ -35,6 +36,6 @@ ms.lasthandoff: 12/02/2017
  Для полноты анализа по переносу существующих веб-служб ASP.NET в WCF см. в разделе [веб-служб ASP.NET и Windows Communication Foundation](http://go.microsoft.com/fwlink/?LinkID=71761). В данном разделе описывается порядок реализации совместимой службы WCF на основе метаданных для веб-службы ASP.NET, а также порядок миграции кода веб-службы и клиента ASP.NET в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
 ## <a name="see-also"></a>См. также  
- [Как: извлечение данных и реализация совместимой службы](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)  
- [Как: перенос кода службы ASP.NET на платформу Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-to-wcf.md)  
- [Как: Миграция кода клиента службы ASP.NET на платформу Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)
+ [Практическое руководство. Извлечение данных и реализация совместимой службы](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)  
+ [Практическое руководство. Миграция кода веб-службы ASP.NET на платформу Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-to-wcf.md)  
+ [Практическое руководство. Миграция кода клиента веб-службы ASP.NET на платформу Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)

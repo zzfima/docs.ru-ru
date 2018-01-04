@@ -13,11 +13,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c75a7cedac9d06c9f8da36dc131521053450a37
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8583ac00f1216e68f95c3d41d8c896b555d0aa8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stand-alone-json-serialization"></a>Автономная сериализация JSON
 JSON (JavaScript Object Notation, объектная нотация JavaScript) - формат данных, предназначенный специально для использования JavaScript-кодом, выполняемым на веб-страницах внутри браузера. Этот формат данных используется по умолчанию в службах ASP.NET AJAX, созданных в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -36,13 +37,13 @@ JSON (JavaScript Object Notation, объектная нотация JavaScript) 
 |Все числовые типы, например <xref:System.Int32>, <xref:System.Decimal> или <xref:System.Double>|Число|Специальные значения, такие как `Double.NaN`, `Double.PositiveInfinity` и `Double.NegativeInfinity`, не поддерживаются и приводят к получению недопустимых JSON-данных.|  
 |<xref:System.Enum>|Число|См. раздел «Перечисления и JSON» ниже.|  
 |<xref:System.Boolean>|Boolean|--|  
-|<xref:System.String>, <xref:System.Char>|Строка|--|  
-|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|Строка|Формат этих типов в JSON идентичен формату в XML (а именно: TimeSpan имеет формат длительности, описанный в ISO 8601, GUID имеет формат «12345678-ABCD-ABCD-ABCD-1234567890AB», а URI представляется в форме исходной строки, например «http://www.example.com»). Точные сведения в разделе [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).|  
-|<xref:System.Xml.XmlQualifiedName>|Строка|Формат - «имя:пространство_имен» (все до первого двоеточия является именем). Имя или пространство имен может отсутствовать. При отсутствии пространства имен можно также опустить двоеточие.|  
+|<xref:System.String>, <xref:System.Char>|String|--|  
+|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|Формат этих типов в JSON идентичен формату в XML (а именно: TimeSpan имеет формат длительности, описанный в ISO 8601, GUID имеет формат «12345678-ABCD-ABCD-ABCD-1234567890AB», а URI представляется в форме исходной строки, например «http://www.example.com»). Точные сведения в разделе [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).|  
+|<xref:System.Xml.XmlQualifiedName>|String|Формат - «имя:пространство_имен» (все до первого двоеточия является именем). Имя или пространство имен может отсутствовать. При отсутствии пространства имен можно также опустить двоеточие.|  
 |<xref:System.Array> типа <xref:System.Byte>|Массив чисел|Каждое число представляет значение одного байта.|  
 |<xref:System.DateTime>|DateTime или String|См. раздел «Даты-времена и JSON» ниже.|  
 |<xref:System.DateTimeOffset>|Сложный тип|См. раздел «Даты-времена и JSON» ниже.|  
-|Типы XML и ADO.NET (<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement>. Массивы <xref:System.Xml.XmlNode>,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|Строка|См. раздел «Типы XML и JSON» ниже.|  
+|Типы XML и ADO.NET (<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement>. Массивы <xref:System.Xml.XmlNode>,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|String|См. раздел «Типы XML и JSON» ниже.|  
 |<xref:System.DBNull>|Пустой сложный тип|--|  
 |Коллекции, словари и массивы|Массив|См. раздел «Коллекции, словари и массивы» ниже.|  
 |Сложные типы (с примененным атрибутом <xref:System.Runtime.Serialization.DataContractAttribute> или <xref:System.SerializableAttribute>)|Сложный тип|Элементы данных становятся элементами сложного типа JavaScript.|  
@@ -271,4 +272,4 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
  Сериализатор кодирует в XML имена ключей, не являющиеся допустимыми XML-именами. Например, в член данных с именем «123» будет иметь кодированное имя «_x0031\__x0032\__x0033\_", так как «123» является недопустимым именем элемента XML (начинается с цифры). Аналогичная ситуация может возникнуть с некоторыми международными кодировками, которые не допускаются в XML-именах. Объяснение этот эффект XML для обработки JSON. в разделе [сопоставление между JSON и XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
   
 ## <a name="see-also"></a>См. также  
- [Поддержка JSON и других данных форматов передачи](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)
+ [Поддержка JSON и других форматов передачи данных](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

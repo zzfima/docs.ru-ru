@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 12e6e2be3e01ea920b45cce7a27814dd19c00935
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 124c5dc0f6db94ae459fe140bd7a4290aa56e04a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-ws-atomictransaction"></a>Использование WS-AtomicTransaction
 WS-AtomicTransaction (WS-AT) - это протокол передачи транзакций с возможностью взаимодействия. Он позволяет передавать распределенные транзакции, используя сообщения веб-служб, и обеспечивать взаимодействие между разнородными инфраструктурами транзакций. WS-AT использует протокол двухфазной фиксации для передачи атомарного результата между распределенными приложениями, диспетчерами транзакций и диспетчерами ресурсов.  
@@ -36,4 +37,4 @@ WS-AtomicTransaction (WS-AT) - это протокол передачи тран
  Если сервер и клиент написаны с помощью [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], использовать WS-AT не требуется. Вместо этого воспользуйтесь параметрами по умолчанию привязки `NetTcpBinding` с включенным атрибутом `TransactionFlow`. При этом будет применяться протокол `OleTransactions`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md). В противном случае, если транзакции передаются в веб-службы, созданные на основе сторонних технологий, необходимо использовать протокол WS-AT.  
   
 ## <a name="see-also"></a>См. также  
- [Настройка поддержки транзакций WS-AT](../../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
+ [Настройка поддержки транзакций WS-Atomic](../../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)

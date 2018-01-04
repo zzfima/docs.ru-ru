@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d122512a16a0959d60bfa658d96aa87a52e40299
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ef5059a886012c00d3d33327baeaae49a9d5b54c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="soap-and-http-endpoints"></a>Конечные точки SOAP и HTTP
 Этот образец демонстрирует реализацию службы на основе RPC и предоставление ее в формате протокола SOAP и форматировать «Plain Old XML» (POX) с помощью [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] модели веб-программирования. В разделе [базовой службы HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) образец Дополнительные сведения о привязке HTTP для службы. В данном образце акцент сделан на особенностях предоставления одной и той же службы через протокол SOAP и HTTP с использованием разных привязок.  

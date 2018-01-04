@@ -18,11 +18,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e44ded58e7c48fae281030b5757d0d891d5600e6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0c05aa44a46b934a78af38c33ee34dd03f69e56d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Основные понятия Windows Communication Foundation
 В этом документе представлено общее описание архитектуры [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. В нем приводится объяснение ключевых понятий и их взаимосвязь. Учебник по созданию простой версии [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] службы и клиента см. в разделе [учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md). Чтобы узнать [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] программирования, в разделе [базовое Программирование WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  

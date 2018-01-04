@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0086dc0c82fefad3cb1e5a73ddd9ced909f05453
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1af5e2cbf7c124e490fea04deadd1afffcde5cbb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>Практическое руководство. Создание пользовательской политики авторизации
 Инфраструктура модели удостоверения в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] поддерживает модель авторизации, основанную на утверждениях. Утверждения извлекаются из маркеров, дополнительно обрабатываемых пользовательской политикой авторизации, и затем помещаются в контекст <xref:System.IdentityModel.Policy.AuthorizationContext>, который позже может проверяться для принятия решений по авторизации. Пользовательская политика может использоваться для преобразования утверждений из входящих маркеров в утверждения, ожидаемые приложением. Таким образом, прикладной уровень может быть изолирован от сведений различных утверждений, обслуживаемых разными типами маркеров, которые поддерживаются системой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. В данном разделе показываются реализация пользовательской политики авторизации и добавление этой политики в коллекцию политик, используемых службой.  
@@ -87,6 +88,6 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
- [Как: сравнение утверждений](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [Как: Создание пользовательского диспетчера авторизации для службы](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [Практическое руководство. Сравнение утверждений](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
+ [Практическое руководство. Создание пользовательского диспетчера авторизации для службы](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  [Политика авторизации](../../../../docs/framework/wcf/samples/authorization-policy.md)

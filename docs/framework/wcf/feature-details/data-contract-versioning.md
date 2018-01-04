@@ -20,11 +20,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 68d9d153127f3f34c6546cef9f2b3ab5fc668899
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e9773725a0d4626a8488249ead6440ad67a2a14a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-versioning"></a>Управление версиями контракта данных
 По мере развития приложений может возникнуть необходимость в изменении контрактов данных, используемых службами. В данном разделе описано, как создавать версии контрактов данных. В этом разделе описываются механизмы создания версий контрактов данных. Полный обзор и руководство по управлению версиями см. в разделе [рекомендации: управление версиями контракта данных](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -134,8 +135,8 @@ ms.lasthandoff: 12/02/2017
  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>  
  <xref:System.Runtime.Serialization.SerializationException>  
  <xref:System.Runtime.Serialization.IExtensibleDataObject>  
- [Обратных вызовов независимой от версий сериализации](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)  
+ [Обратные вызовы сериализации, независимые от версий](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)  
  [Рекомендации. Управление версиями контракта данных](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
  [Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
  [Эквивалентность контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [Контракты данных с прямой совместимостью](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+ [Контракты данных, совместимые с любыми будущими изменениями](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
