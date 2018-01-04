@@ -18,29 +18,30 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aa2da4bdc593296ff72251284bc04eb8552c999f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e85101524b641a8abd11d0e8c6291635ed8e5dca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="folderbrowserdialog-component-windows-forms"></a><span data-ttu-id="f1699-102">Компонент FolderBrowserDialog (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="f1699-102">FolderBrowserDialog Component (Windows Forms)</span></span>
-<span data-ttu-id="f1699-103">Windows Forms `FolderBrowserDialog` компонент отображает интерфейс, с помощью которого пользователи могут Обзор и выберите папку или создайте новую.</span><span class="sxs-lookup"><span data-stu-id="f1699-103">The Windows Forms `FolderBrowserDialog` component displays an interface with which users can browse and select a folder or create a new one.</span></span> <span data-ttu-id="f1699-104">Он является дополнением к [компонента OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md) компонент, который используется для просмотра и выбора файлов.</span><span class="sxs-lookup"><span data-stu-id="f1699-104">It is a complement to the [OpenFileDialog Component](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md) component, which is used for browsing and selecting files.</span></span>  
+# <a name="folderbrowserdialog-component-windows-forms"></a><span data-ttu-id="5d920-102">Компонент FolderBrowserDialog (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="5d920-102">FolderBrowserDialog Component (Windows Forms)</span></span>
+<span data-ttu-id="5d920-103">Windows Forms `FolderBrowserDialog` компонент отображает интерфейс, с помощью которого пользователи могут Обзор и выберите папку или создайте новую.</span><span class="sxs-lookup"><span data-stu-id="5d920-103">The Windows Forms `FolderBrowserDialog` component displays an interface with which users can browse and select a folder or create a new one.</span></span> <span data-ttu-id="5d920-104">Он является дополнением к [компонента OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md) компонент, который используется для просмотра и выбора файлов.</span><span class="sxs-lookup"><span data-stu-id="5d920-104">It is a complement to the [OpenFileDialog Component](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md) component, which is used for browsing and selecting files.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f1699-105">Содержание</span><span class="sxs-lookup"><span data-stu-id="f1699-105">In This Section</span></span>  
- [<span data-ttu-id="f1699-106">Общие сведения о компоненте FolderBrowserDialog (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="f1699-106">FolderBrowserDialog Component Overview (Windows Forms)</span></span>](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
- <span data-ttu-id="f1699-107">Описывается элемент управления, его основные возможности и свойства.</span><span class="sxs-lookup"><span data-stu-id="f1699-107">Explains what this control is and its key features and properties.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="5d920-105">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="5d920-105">In This Section</span></span>  
+ [<span data-ttu-id="5d920-106">Общие сведения о компоненте FolderBrowserDialog (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="5d920-106">FolderBrowserDialog Component Overview (Windows Forms)</span></span>](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="5d920-107">Описывается элемент управления, его основные возможности и свойства.</span><span class="sxs-lookup"><span data-stu-id="5d920-107">Explains what this control is and its key features and properties.</span></span>  
   
- [<span data-ttu-id="f1699-108">Практическое руководство. Выбор папки с помощью компонента FolderBrowserDialog в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f1699-108">How to: Choose Folders with the Windows Forms FolderBrowserDialog Component</span></span>](../../../../docs/framework/winforms/controls/how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)  
- <span data-ttu-id="f1699-109">Объясняется, как программным образом извлечь выбранную папку из диалогового окна, а также работать с некоторыми другие дополнительные свойства компонента.</span><span class="sxs-lookup"><span data-stu-id="f1699-109">Explains how to programmatically extract the selected folder from the dialog box, as well as work with some of the other, optional properties of the component.</span></span>  
+ [<span data-ttu-id="5d920-108">Практическое руководство. Выбор папки с помощью компонента FolderBrowserDialog в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5d920-108">How to: Choose Folders with the Windows Forms FolderBrowserDialog Component</span></span>](../../../../docs/framework/winforms/controls/how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)  
+ <span data-ttu-id="5d920-109">Объясняется, как программным образом извлечь выбранную папку из диалогового окна, а также работать с некоторыми другие дополнительные свойства компонента.</span><span class="sxs-lookup"><span data-stu-id="5d920-109">Explains how to programmatically extract the selected folder from the dialog box, as well as work with some of the other, optional properties of the component.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="f1699-110">Ссылка</span><span class="sxs-lookup"><span data-stu-id="f1699-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5d920-110">Ссылка</span><span class="sxs-lookup"><span data-stu-id="5d920-110">Reference</span></span>  
  <xref:System.Windows.Forms.FolderBrowserDialog>  
- <span data-ttu-id="f1699-111">Описание класса и ссылки на все его члены.</span><span class="sxs-lookup"><span data-stu-id="f1699-111">Describes this class and has links to all its members.</span></span>  
+ <span data-ttu-id="5d920-111">Описание класса и всех его членов.</span><span class="sxs-lookup"><span data-stu-id="5d920-111">Describes this class and has links to all its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="f1699-112">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="f1699-112">Related Sections</span></span>  
- [<span data-ttu-id="f1699-113">Диалоговые окна в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f1699-113">Dialog Boxes in Windows Forms</span></span>](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
- <span data-ttu-id="f1699-114">Список задач для диалоговых окон, в которых часто отображаются вкладки.</span><span class="sxs-lookup"><span data-stu-id="f1699-114">Provides a list of tasks for dialog boxes, which often display tabs.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="5d920-112">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="5d920-112">Related Sections</span></span>  
+ [<span data-ttu-id="5d920-113">Диалоговые окна в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5d920-113">Dialog Boxes in Windows Forms</span></span>](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
+ <span data-ttu-id="5d920-114">Список задач для диалоговых окон, в которых часто отображаются вкладки.</span><span class="sxs-lookup"><span data-stu-id="5d920-114">Provides a list of tasks for dialog boxes, which often display tabs.</span></span>  
   
- [<span data-ttu-id="f1699-115">Элементы управления для использования в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f1699-115">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="f1699-116">Полный список элементов управления Windows Forms со ссылками на информацию об их применении.</span><span class="sxs-lookup"><span data-stu-id="f1699-116">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>
+ [<span data-ttu-id="5d920-115">Элементы управления для использования в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5d920-115">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="5d920-116">Полный список элементов управления Windows Forms со ссылками на информацию об их применении.</span><span class="sxs-lookup"><span data-stu-id="5d920-116">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

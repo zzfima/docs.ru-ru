@@ -17,22 +17,23 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ad42bc9d6a2b925ab6724acb61e345ca2ba4223
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 918afb4ada6d47824cfa5184e4071ba4dbac06f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="flow-content"></a><span data-ttu-id="e45ac-102">Содержимое нефиксированного формата</span><span class="sxs-lookup"><span data-stu-id="e45ac-102">Flow Content</span></span>
-<span data-ttu-id="e45ac-103">Элементы содержимого нефиксированного формата предоставляют шаблоны для создания содержимого нефиксированного формата, подходящие для размещения в <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="e45ac-103">Flow content elements provide the building blocks for creating flow content suitable for hosting in a <xref:System.Windows.Documents.FlowDocument>.</span></span>  
+# <a name="flow-content"></a><span data-ttu-id="6c04d-102">Содержимое нефиксированного формата</span><span class="sxs-lookup"><span data-stu-id="6c04d-102">Flow Content</span></span>
+<span data-ttu-id="6c04d-103">Элементы содержимого нефиксированного формата предоставляют шаблоны для создания содержимого нефиксированного формата, подходящие для размещения в <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="6c04d-103">Flow content elements provide the building blocks for creating flow content suitable for hosting in a <xref:System.Windows.Documents.FlowDocument>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e45ac-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="e45ac-104">In This Section</span></span>  
- [<span data-ttu-id="e45ac-105">Общие сведения о документе нефиксированного формата</span><span class="sxs-lookup"><span data-stu-id="e45ac-105">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [<span data-ttu-id="e45ac-106">Общие сведения о модели содержимого TextElement</span><span class="sxs-lookup"><span data-stu-id="e45ac-106">TextElement Content Model Overview</span></span>](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
- [<span data-ttu-id="e45ac-107">Общие сведения о таблицах</span><span class="sxs-lookup"><span data-stu-id="e45ac-107">Table Overview</span></span>](../../../../docs/framework/wpf/advanced/table-overview.md)  
- [<span data-ttu-id="e45ac-108">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="e45ac-108">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6c04d-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="6c04d-104">In This Section</span></span>  
+ [<span data-ttu-id="6c04d-105">Общие сведения о документе нефиксированного формата</span><span class="sxs-lookup"><span data-stu-id="6c04d-105">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
+ [<span data-ttu-id="6c04d-106">Общие сведения о модели содержимого TextElement</span><span class="sxs-lookup"><span data-stu-id="6c04d-106">TextElement Content Model Overview</span></span>](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
+ [<span data-ttu-id="6c04d-107">Общие сведения о таблицах</span><span class="sxs-lookup"><span data-stu-id="6c04d-107">Table Overview</span></span>](../../../../docs/framework/wpf/advanced/table-overview.md)  
+ [<span data-ttu-id="6c04d-108">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="6c04d-108">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="e45ac-109">Ссылка</span><span class="sxs-lookup"><span data-stu-id="e45ac-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6c04d-109">Ссылка</span><span class="sxs-lookup"><span data-stu-id="6c04d-109">Reference</span></span>  
  <xref:System.Windows.Documents.FlowDocument>  
   <xref:System.Windows.Documents.Block>  
   <xref:System.Windows.Documents.List>  
@@ -47,5 +48,5 @@ ms.lasthandoff: 10/22/2017
   <xref:System.Windows.Documents.Span>  
   <xref:System.Windows.Documents.ListItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="e45ac-110">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="e45ac-110">Related Sections</span></span>  
- [<span data-ttu-id="e45ac-111">Документы в WPF</span><span class="sxs-lookup"><span data-stu-id="e45ac-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="6c04d-110">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="6c04d-110">Related Sections</span></span>  
+ [<span data-ttu-id="6c04d-111">Документы в WPF</span><span class="sxs-lookup"><span data-stu-id="6c04d-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

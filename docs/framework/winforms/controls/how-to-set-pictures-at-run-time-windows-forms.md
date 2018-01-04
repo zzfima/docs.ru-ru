@@ -24,20 +24,21 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 429c0c928d8bff4f837186040288d9447fc18687
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6fd0e990b494bc0b7a3008f211aa6ded9e04d732
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-set-pictures-at-run-time-windows-forms"></a><span data-ttu-id="5ccac-102">Практическое руководство. Установка изображений во время выполнения (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="5ccac-102">How to: Set Pictures at Run Time (Windows Forms)</span></span>
-<span data-ttu-id="5ccac-103">Рисунок, отображаемый на форму Windows Forms можно программно установить <xref:System.Windows.Forms.PictureBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5ccac-103">You can programmatically set the image displayed by a Windows Forms <xref:System.Windows.Forms.PictureBox> control.</span></span>  
+# <a name="how-to-set-pictures-at-run-time-windows-forms"></a><span data-ttu-id="0c8c8-102">Практическое руководство. Установка изображений во время выполнения (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="0c8c8-102">How to: Set Pictures at Run Time (Windows Forms)</span></span>
+<span data-ttu-id="0c8c8-103">Рисунок, отображаемый на форму Windows Forms можно программно установить <xref:System.Windows.Forms.PictureBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0c8c8-103">You can programmatically set the image displayed by a Windows Forms <xref:System.Windows.Forms.PictureBox> control.</span></span>  
   
-### <a name="to-set-a-picture-programmatically"></a><span data-ttu-id="5ccac-104">Задание рисунка программным способом</span><span class="sxs-lookup"><span data-stu-id="5ccac-104">To set a picture programmatically</span></span>  
+### <a name="to-set-a-picture-programmatically"></a><span data-ttu-id="0c8c8-104">Задание рисунка программным способом</span><span class="sxs-lookup"><span data-stu-id="0c8c8-104">To set a picture programmatically</span></span>  
   
--   <span data-ttu-id="5ccac-105">Задать <xref:System.Windows.Forms.PictureBox.Image%2A> свойства с помощью <xref:System.Drawing.Image.FromFile%2A> метод <xref:System.Drawing.Image> класса.</span><span class="sxs-lookup"><span data-stu-id="5ccac-105">Set the <xref:System.Windows.Forms.PictureBox.Image%2A> property using the <xref:System.Drawing.Image.FromFile%2A> method of the <xref:System.Drawing.Image> class.</span></span>  
+-   <span data-ttu-id="0c8c8-105">Задать <xref:System.Windows.Forms.PictureBox.Image%2A> свойства с помощью <xref:System.Drawing.Image.FromFile%2A> метод <xref:System.Drawing.Image> класса.</span><span class="sxs-lookup"><span data-stu-id="0c8c8-105">Set the <xref:System.Windows.Forms.PictureBox.Image%2A> property using the <xref:System.Drawing.Image.FromFile%2A> method of the <xref:System.Drawing.Image> class.</span></span>  
   
-     <span data-ttu-id="5ccac-106">В следующем примере в расположение образа выбрана папка «Мои документы».</span><span class="sxs-lookup"><span data-stu-id="5ccac-106">In the example below, the path set for the location of the image is the My Documents folder.</span></span> <span data-ttu-id="5ccac-107">Эта операция необходима, поскольку можно предположить, что большинство компьютеров под управлением операционной системы Windows включает этот каталог.</span><span class="sxs-lookup"><span data-stu-id="5ccac-107">This is done, because you can assume that most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="5ccac-108">Это также позволяет пользователям с минимальным уровнем доступа к системе безопасно запускать приложение.</span><span class="sxs-lookup"><span data-stu-id="5ccac-108">This also allows users with minimal system access levels to safely run the application.</span></span> <span data-ttu-id="5ccac-109">В приведенном ниже примере предполагается наличие формы с <xref:System.Windows.Forms.PictureBox> управления уже добавлен.</span><span class="sxs-lookup"><span data-stu-id="5ccac-109">The example below assumes a form with a <xref:System.Windows.Forms.PictureBox> control already added.</span></span>  
+     <span data-ttu-id="0c8c8-106">В следующем примере в расположение образа выбрана папка «Мои документы».</span><span class="sxs-lookup"><span data-stu-id="0c8c8-106">In the example below, the path set for the location of the image is the My Documents folder.</span></span> <span data-ttu-id="0c8c8-107">Эта операция необходима, поскольку можно предположить, что большинство компьютеров под управлением операционной системы Windows включает этот каталог.</span><span class="sxs-lookup"><span data-stu-id="0c8c8-107">This is done, because you can assume that most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="0c8c8-108">Это также позволяет пользователям с минимальным уровнем доступа к системе безопасно запускать приложение.</span><span class="sxs-lookup"><span data-stu-id="0c8c8-108">This also allows users with minimal system access levels to safely run the application.</span></span> <span data-ttu-id="0c8c8-109">В приведенном ниже примере предполагается наличие формы с <xref:System.Windows.Forms.PictureBox> управления уже добавлен.</span><span class="sxs-lookup"><span data-stu-id="0c8c8-109">The example below assumes a form with a <xref:System.Windows.Forms.PictureBox> control already added.</span></span>  
   
     ```vb  
     Private Sub LoadNewPict()  
@@ -75,9 +76,9 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-### <a name="to-clear-a-graphic"></a><span data-ttu-id="5ccac-110">Чтобы очистить рисунок</span><span class="sxs-lookup"><span data-stu-id="5ccac-110">To clear a graphic</span></span>  
+### <a name="to-clear-a-graphic"></a><span data-ttu-id="0c8c8-110">Чтобы очистить рисунок</span><span class="sxs-lookup"><span data-stu-id="0c8c8-110">To clear a graphic</span></span>  
   
--   <span data-ttu-id="5ccac-111">Во-первых освобождения памяти, используемой изображение, а затем снимите его.</span><span class="sxs-lookup"><span data-stu-id="5ccac-111">First, release the memory being used by the image, and then clear the graphic.</span></span> <span data-ttu-id="5ccac-112">Сборка мусора будет освободите память позже при управлении памятью становится проблемой.</span><span class="sxs-lookup"><span data-stu-id="5ccac-112">Garbage collection will free up the memory later if memory management becomes a problem.</span></span>  
+-   <span data-ttu-id="0c8c8-111">Во-первых освобождения памяти, используемой изображение, а затем снимите его.</span><span class="sxs-lookup"><span data-stu-id="0c8c8-111">First, release the memory being used by the image, and then clear the graphic.</span></span> <span data-ttu-id="0c8c8-112">Сборка мусора будет освободите память позже при управлении памятью становится проблемой.</span><span class="sxs-lookup"><span data-stu-id="0c8c8-112">Garbage collection will free up the memory later if memory management becomes a problem.</span></span>  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  
@@ -103,14 +104,14 @@ ms.lasthandoff: 11/21/2017
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="5ccac-113">Дополнительные сведения о том, почему следует использовать <xref:System.Drawing.Image.Dispose%2A> таким образом, см. в разделе [очистки неуправляемых ресурсов](../../../../docs/standard/garbage-collection/unmanaged.md).</span><span class="sxs-lookup"><span data-stu-id="5ccac-113">For more information on why you should use the <xref:System.Drawing.Image.Dispose%2A> method in this way, see [Cleaning Up Unmanaged Resources](../../../../docs/standard/garbage-collection/unmanaged.md).</span></span>  
+    >  <span data-ttu-id="0c8c8-113">Дополнительные сведения о том, почему следует использовать <xref:System.Drawing.Image.Dispose%2A> таким образом, см. в разделе [очистки неуправляемых ресурсов](../../../../docs/standard/garbage-collection/unmanaged.md).</span><span class="sxs-lookup"><span data-stu-id="0c8c8-113">For more information on why you should use the <xref:System.Drawing.Image.Dispose%2A> method in this way, see [Cleaning Up Unmanaged Resources](../../../../docs/standard/garbage-collection/unmanaged.md).</span></span>  
   
-     <span data-ttu-id="5ccac-114">Этот код удалит изображение, даже если рисунок был загружен в элемент управления во время разработки.</span><span class="sxs-lookup"><span data-stu-id="5ccac-114">This code will clear the image even if a graphic was loaded into the control at design time.</span></span>  
+     <span data-ttu-id="0c8c8-114">Этот код удалит изображение, даже если рисунок был загружен в элемент управления во время разработки.</span><span class="sxs-lookup"><span data-stu-id="0c8c8-114">This code will clear the image even if a graphic was loaded into the control at design time.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5ccac-115">См. также</span><span class="sxs-lookup"><span data-stu-id="5ccac-115">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="0c8c8-115">См. также</span><span class="sxs-lookup"><span data-stu-id="0c8c8-115">See Also</span></span>  
  <xref:System.Windows.Forms.PictureBox>  
  <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="5ccac-116">Общие сведения об элементе управления PictureBox</span><span class="sxs-lookup"><span data-stu-id="5ccac-116">PictureBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
- [<span data-ttu-id="5ccac-117">Практическое руководство. Загрузка изображения с помощью конструктора</span><span class="sxs-lookup"><span data-stu-id="5ccac-117">How to: Load a Picture Using the Designer</span></span>](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
- [<span data-ttu-id="5ccac-118">Практическое руководство. Изменение размера или размещения изображения во время выполнения</span><span class="sxs-lookup"><span data-stu-id="5ccac-118">How to: Modify the Size or Placement of a Picture at Run Time</span></span>](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
- [<span data-ttu-id="5ccac-119">Элемент управления PictureBox</span><span class="sxs-lookup"><span data-stu-id="5ccac-119">PictureBox Control</span></span>](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+ [<span data-ttu-id="0c8c8-116">Общие сведения об элементе управления PictureBox</span><span class="sxs-lookup"><span data-stu-id="0c8c8-116">PictureBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="0c8c8-117">Практическое руководство. Загрузка изображения с помощью конструктора</span><span class="sxs-lookup"><span data-stu-id="0c8c8-117">How to: Load a Picture Using the Designer</span></span>](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
+ [<span data-ttu-id="0c8c8-118">Практическое руководство. Изменение размера или размещения изображения во время выполнения</span><span class="sxs-lookup"><span data-stu-id="0c8c8-118">How to: Modify the Size or Placement of a Picture at Run Time</span></span>](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
+ [<span data-ttu-id="0c8c8-119">Элемент управления PictureBox</span><span class="sxs-lookup"><span data-stu-id="0c8c8-119">PictureBox Control</span></span>](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)

@@ -19,20 +19,21 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 24d9e4435362f5f87185d04f911caf76517a0de9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fdff97fdb48126f3a7b970c677cf96f9c2ddaf8a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-recognize-application-gestures"></a><span data-ttu-id="f4afc-102">Практическое руководство. Распознавание жестов приложений</span><span class="sxs-lookup"><span data-stu-id="f4afc-102">How To: Recognize Application Gestures</span></span>
-<span data-ttu-id="f4afc-103">Следующий пример демонстрирует стирания рукописного ввода, когда пользователь делает <xref:System.Windows.Ink.ApplicationGesture.ScratchOut> жестов на <xref:System.Windows.Controls.InkCanvas>.</span><span class="sxs-lookup"><span data-stu-id="f4afc-103">The following example demonstrates how to erase ink when a user makes a <xref:System.Windows.Ink.ApplicationGesture.ScratchOut> gesture on an <xref:System.Windows.Controls.InkCanvas>.</span></span> <span data-ttu-id="f4afc-104">В этом примере предполагается <xref:System.Windows.Controls.InkCanvas>, который называется `inkCanvas1`, объявленных в файле XAML.</span><span class="sxs-lookup"><span data-stu-id="f4afc-104">This example assumes an <xref:System.Windows.Controls.InkCanvas>, called `inkCanvas1`, is declared in the XAML file.</span></span>  
+# <a name="how-to-recognize-application-gestures"></a><span data-ttu-id="bb3e1-102">Практическое руководство. Распознавание жестов приложений</span><span class="sxs-lookup"><span data-stu-id="bb3e1-102">How To: Recognize Application Gestures</span></span>
+<span data-ttu-id="bb3e1-103">Следующий пример демонстрирует стирания рукописного ввода, когда пользователь делает <xref:System.Windows.Ink.ApplicationGesture.ScratchOut> жестов на <xref:System.Windows.Controls.InkCanvas>.</span><span class="sxs-lookup"><span data-stu-id="bb3e1-103">The following example demonstrates how to erase ink when a user makes a <xref:System.Windows.Ink.ApplicationGesture.ScratchOut> gesture on an <xref:System.Windows.Controls.InkCanvas>.</span></span> <span data-ttu-id="bb3e1-104">В этом примере предполагается <xref:System.Windows.Controls.InkCanvas>, который называется `inkCanvas1`, объявленных в файле XAML.</span><span class="sxs-lookup"><span data-stu-id="bb3e1-104">This example assumes an <xref:System.Windows.Controls.InkCanvas>, called `inkCanvas1`, is declared in the XAML file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f4afc-105">Пример</span><span class="sxs-lookup"><span data-stu-id="f4afc-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="bb3e1-105">Пример</span><span class="sxs-lookup"><span data-stu-id="bb3e1-105">Example</span></span>  
  [!code-csharp[HowToRecognizeGestures#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToRecognizeGestures/CSharp/Window1.xaml.cs#1)]
  [!code-vb[HowToRecognizeGestures#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HowToRecognizeGestures/VisualBasic/Window1.xaml.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="f4afc-106">См. также</span><span class="sxs-lookup"><span data-stu-id="f4afc-106">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="bb3e1-106">См. также</span><span class="sxs-lookup"><span data-stu-id="bb3e1-106">See Also</span></span>  
  <xref:System.Windows.Ink.ApplicationGesture>  
  <xref:System.Windows.Controls.InkCanvas>  
  <xref:System.Windows.Controls.InkCanvas.Gesture>

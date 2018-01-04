@@ -19,33 +19,34 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a2f2f6bd088ad58277839cf7e32a98d67ca3bd15
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6be28641073bf430b1dc51c428228d0fb114d4cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-align-drawn-text"></a><span data-ttu-id="5406c-102">Практическое руководство. Выравнивание рисуемого текста</span><span class="sxs-lookup"><span data-stu-id="5406c-102">How to: Align Drawn Text</span></span>
-<span data-ttu-id="5406c-103">При выполнении пользовательской отрисовки, часто требуется формируемого выравнивание текста по центру формы или элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5406c-103">When you perform custom drawing, you may often want to center drawn text on a form or control.</span></span> <span data-ttu-id="5406c-104">Выровнять текст, отображаемый с <xref:System.Drawing.Graphics.DrawString%2A> или <xref:System.Windows.Forms.TextRenderer.DrawText%2A> методы создания нужный объект форматирования и установив соответствующие параметры форматирования.</span><span class="sxs-lookup"><span data-stu-id="5406c-104">You can easily align text drawn with the <xref:System.Drawing.Graphics.DrawString%2A> or <xref:System.Windows.Forms.TextRenderer.DrawText%2A> methods by creating the correct formatting object and setting the appropriate format flags.</span></span>  
+# <a name="how-to-align-drawn-text"></a><span data-ttu-id="4a421-102">Практическое руководство. Выравнивание рисуемого текста</span><span class="sxs-lookup"><span data-stu-id="4a421-102">How to: Align Drawn Text</span></span>
+<span data-ttu-id="4a421-103">При выполнении пользовательской отрисовки, часто требуется формируемого выравнивание текста по центру формы или элемента управления.</span><span class="sxs-lookup"><span data-stu-id="4a421-103">When you perform custom drawing, you may often want to center drawn text on a form or control.</span></span> <span data-ttu-id="4a421-104">Выровнять текст, отображаемый с <xref:System.Drawing.Graphics.DrawString%2A> или <xref:System.Windows.Forms.TextRenderer.DrawText%2A> методы создания нужный объект форматирования и установив соответствующие параметры форматирования.</span><span class="sxs-lookup"><span data-stu-id="4a421-104">You can easily align text drawn with the <xref:System.Drawing.Graphics.DrawString%2A> or <xref:System.Windows.Forms.TextRenderer.DrawText%2A> methods by creating the correct formatting object and setting the appropriate format flags.</span></span>  
   
-### <a name="to-draw-centered-text-with-gdi-drawstring"></a><span data-ttu-id="5406c-105">Чтобы нарисовать по центру текста с использованием GDI + (DrawString)</span><span class="sxs-lookup"><span data-stu-id="5406c-105">To draw centered text with GDI+ (DrawString)</span></span>  
+### <a name="to-draw-centered-text-with-gdi-drawstring"></a><span data-ttu-id="4a421-105">Чтобы нарисовать по центру текста с использованием GDI + (DrawString)</span><span class="sxs-lookup"><span data-stu-id="4a421-105">To draw centered text with GDI+ (DrawString)</span></span>  
   
-1.  <span data-ttu-id="5406c-106">Используйте <xref:System.Drawing.StringFormat> с соответствующими <xref:System.Drawing.Graphics.DrawString%2A> метод, чтобы указать текст, выровненный по центру.</span><span class="sxs-lookup"><span data-stu-id="5406c-106">Use a <xref:System.Drawing.StringFormat> with the appropriate <xref:System.Drawing.Graphics.DrawString%2A> method to specify centered text.</span></span>  
+1.  <span data-ttu-id="4a421-106">Используйте <xref:System.Drawing.StringFormat> с соответствующими <xref:System.Drawing.Graphics.DrawString%2A> метод, чтобы указать текст, выровненный по центру.</span><span class="sxs-lookup"><span data-stu-id="4a421-106">Use a <xref:System.Drawing.StringFormat> with the appropriate <xref:System.Drawing.Graphics.DrawString%2A> method to specify centered text.</span></span>  
   
      [!code-csharp[System.Drawing.AlignDrawnText#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#10)]
      [!code-vb[System.Drawing.AlignDrawnText#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#10)]  
   
-### <a name="to-draw-centered-text-with-gdi-drawtext"></a><span data-ttu-id="5406c-107">Чтобы нарисовать по центру текста с использованием GDI (DrawText)</span><span class="sxs-lookup"><span data-stu-id="5406c-107">To draw centered text with GDI (DrawText)</span></span>  
+### <a name="to-draw-centered-text-with-gdi-drawtext"></a><span data-ttu-id="4a421-107">Чтобы нарисовать по центру текста с использованием GDI (DrawText)</span><span class="sxs-lookup"><span data-stu-id="4a421-107">To draw centered text with GDI (DrawText)</span></span>  
   
-1.  <span data-ttu-id="5406c-108">Используйте <xref:System.Windows.Forms.TextFormatFlags> перечисления для упаковки, а также по вертикали и горизонтали Центрирование текста с помощью соответствующих <xref:System.Windows.Forms.TextRenderer.DrawText%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="5406c-108">Use the <xref:System.Windows.Forms.TextFormatFlags> enumeration for wrapping as well as vertically and horizontally centering text with the appropriate <xref:System.Windows.Forms.TextRenderer.DrawText%2A> method.</span></span>  
+1.  <span data-ttu-id="4a421-108">Используйте <xref:System.Windows.Forms.TextFormatFlags> перечисления для упаковки, а также по вертикали и горизонтали Центрирование текста с помощью соответствующих <xref:System.Windows.Forms.TextRenderer.DrawText%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="4a421-108">Use the <xref:System.Windows.Forms.TextFormatFlags> enumeration for wrapping as well as vertically and horizontally centering text with the appropriate <xref:System.Windows.Forms.TextRenderer.DrawText%2A> method.</span></span>  
   
      [!code-csharp[System.Drawing.AlignDrawnText#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#20)]
      [!code-vb[System.Drawing.AlignDrawnText#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#20)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="5406c-109">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="5406c-109">Compiling the Code</span></span>  
- <span data-ttu-id="5406c-110">Предыдущий пример кода предназначен для работы с Windows Forms, и требуют <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="5406c-110">The preceding code examples are designed for use with Windows Forms, and they require <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="4a421-109">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="4a421-109">Compiling the Code</span></span>  
+ <span data-ttu-id="4a421-110">Предыдущий пример кода предназначен для работы с Windows Forms, и требуют <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="4a421-110">The preceding code examples are designed for use with Windows Forms, and they require <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5406c-111">См. также</span><span class="sxs-lookup"><span data-stu-id="5406c-111">See Also</span></span>  
- [<span data-ttu-id="5406c-112">Практическое руководство. Рисование текста с использованием GDI</span><span class="sxs-lookup"><span data-stu-id="5406c-112">How to: Draw Text with GDI</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  
- [<span data-ttu-id="5406c-113">Работами со шрифтами и текстом</span><span class="sxs-lookup"><span data-stu-id="5406c-113">Using Fonts and Text</span></span>](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
- [<span data-ttu-id="5406c-114">Практическое руководство. Разработка шрифтов и их семейств</span><span class="sxs-lookup"><span data-stu-id="5406c-114">How to: Construct Font Families and Fonts</span></span>](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)
+## <a name="see-also"></a><span data-ttu-id="4a421-111">См. также</span><span class="sxs-lookup"><span data-stu-id="4a421-111">See Also</span></span>  
+ [<span data-ttu-id="4a421-112">Практическое руководство. Рисование текста с использованием GDI</span><span class="sxs-lookup"><span data-stu-id="4a421-112">How to: Draw Text with GDI</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  
+ [<span data-ttu-id="4a421-113">Работами со шрифтами и текстом</span><span class="sxs-lookup"><span data-stu-id="4a421-113">Using Fonts and Text</span></span>](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
+ [<span data-ttu-id="4a421-114">Практическое руководство. Разработка шрифтов и их семейств</span><span class="sxs-lookup"><span data-stu-id="4a421-114">How to: Construct Font Families and Fonts</span></span>](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)

@@ -13,15 +13,16 @@ caps.latest.revision: "2"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 133275212fcc8b04045c9d5003c79e0e041ccf79
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e8898c0c341ac45df224082a3c447d4c8f21c444
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="service-security"></a><span data-ttu-id="4c43e-102">Безопасность службы</span><span class="sxs-lookup"><span data-stu-id="4c43e-102">Service Security</span></span>
-<span data-ttu-id="4c43e-103">В этом разделе содержатся образцы, демонстрирующие обеспечение безопасности службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4c43e-103">This section contains samples that demonstrate [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service security.</span></span>  
+# <a name="service-security"></a><span data-ttu-id="de07c-102">Безопасность службы</span><span class="sxs-lookup"><span data-stu-id="de07c-102">Service Security</span></span>
+<span data-ttu-id="de07c-103">В этом разделе содержатся образцы, демонстрирующие обеспечение безопасности службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="de07c-103">This section contains samples that demonstrate [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service security.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4c43e-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="4c43e-104">In This Section</span></span>  
- [<span data-ttu-id="4c43e-105">Образец идентификации службы</span><span class="sxs-lookup"><span data-stu-id="4c43e-105">Service Identity Sample</span></span>](../../../../docs/framework/wcf/samples/service-identity-sample.md)  
- <span data-ttu-id="4c43e-106">В этом образце демонстрируется, как назначить удостоверение для службы.</span><span class="sxs-lookup"><span data-stu-id="4c43e-106">This sample demonstrates how to set the identity for a service.</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="de07c-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="de07c-104">In This Section</span></span>  
+ [<span data-ttu-id="de07c-105">Образец идентификации службы</span><span class="sxs-lookup"><span data-stu-id="de07c-105">Service Identity Sample</span></span>](../../../../docs/framework/wcf/samples/service-identity-sample.md)  
+ <span data-ttu-id="de07c-106">В этом образце демонстрируется, как назначить удостоверение для службы.</span><span class="sxs-lookup"><span data-stu-id="de07c-106">This sample demonstrates how to set the identity for a service.</span></span>

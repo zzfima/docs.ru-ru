@@ -20,18 +20,19 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3bbdf2ec4f2353662f1077b9d95966e0a2ebd316
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f3f61828b4c8b65ae984685610d6d8609953376a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button"></a><span data-ttu-id="d2e2f-102">Практическое руководство. Создание кнопки "Отмена" в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d2e2f-102">How to: Designate a Windows Forms Button as the Cancel Button</span></span>
-<span data-ttu-id="d2e2f-103">В любой форме Windows Forms можно назначить <xref:System.Windows.Forms.Button> элемента управления "Отмена".</span><span class="sxs-lookup"><span data-stu-id="d2e2f-103">On any Windows Form, you can designate a <xref:System.Windows.Forms.Button> control to be the cancel button.</span></span> <span data-ttu-id="d2e2f-104">Каждый раз, когда пользователь нажимает клавишу ESC, независимо от других элементов управления в форме имеет фокус по нажатию кнопки "Отмена".</span><span class="sxs-lookup"><span data-stu-id="d2e2f-104">A cancel button is clicked whenever the user presses the ESC key, regardless of which other control on the form has the focus.</span></span> <span data-ttu-id="d2e2f-105">Такая кнопка обычно создается, чтобы пользователь мог быстро прервать операцию, не выполняя никаких действий.</span><span class="sxs-lookup"><span data-stu-id="d2e2f-105">Such a button is usually programmed to enable the user to quickly exit an operation without committing to any action.</span></span>  
+# <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button"></a><span data-ttu-id="8da78-102">Практическое руководство. Создание кнопки "Отмена" в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8da78-102">How to: Designate a Windows Forms Button as the Cancel Button</span></span>
+<span data-ttu-id="8da78-103">В любой форме Windows Forms можно назначить <xref:System.Windows.Forms.Button> элемента управления "Отмена".</span><span class="sxs-lookup"><span data-stu-id="8da78-103">On any Windows Form, you can designate a <xref:System.Windows.Forms.Button> control to be the cancel button.</span></span> <span data-ttu-id="8da78-104">Каждый раз, когда пользователь нажимает клавишу ESC, независимо от других элементов управления в форме имеет фокус по нажатию кнопки "Отмена".</span><span class="sxs-lookup"><span data-stu-id="8da78-104">A cancel button is clicked whenever the user presses the ESC key, regardless of which other control on the form has the focus.</span></span> <span data-ttu-id="8da78-105">Такая кнопка обычно создается, чтобы пользователь мог быстро прервать операцию, не выполняя никаких действий.</span><span class="sxs-lookup"><span data-stu-id="8da78-105">Such a button is usually programmed to enable the user to quickly exit an operation without committing to any action.</span></span>  
   
-### <a name="to-designate-the-cancel-button"></a><span data-ttu-id="d2e2f-106">Чтобы создать кнопку «Отмена»</span><span class="sxs-lookup"><span data-stu-id="d2e2f-106">To designate the cancel button</span></span>  
+### <a name="to-designate-the-cancel-button"></a><span data-ttu-id="8da78-106">Чтобы создать кнопку «Отмена»</span><span class="sxs-lookup"><span data-stu-id="8da78-106">To designate the cancel button</span></span>  
   
-1.  <span data-ttu-id="d2e2f-107">Формы задайте <xref:System.Windows.Forms.Form.CancelButton%2A> свойство к соответствующему <xref:System.Windows.Forms.Button> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="d2e2f-107">Set the form's <xref:System.Windows.Forms.Form.CancelButton%2A> property to the appropriate <xref:System.Windows.Forms.Button> control.</span></span>  
+1.  <span data-ttu-id="8da78-107">Формы задайте <xref:System.Windows.Forms.Form.CancelButton%2A> свойство к соответствующему <xref:System.Windows.Forms.Button> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="8da78-107">Set the form's <xref:System.Windows.Forms.Form.CancelButton%2A> property to the appropriate <xref:System.Windows.Forms.Button> control.</span></span>  
   
     ```vb  
     Private Sub SetCancelButton(ByVal myCancelBtn As Button)  
@@ -54,10 +55,10 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="d2e2f-108">См. также</span><span class="sxs-lookup"><span data-stu-id="d2e2f-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="8da78-108">См. также</span><span class="sxs-lookup"><span data-stu-id="8da78-108">See Also</span></span>  
  <xref:System.Windows.Forms.Form.CancelButton%2A>  
- [<span data-ttu-id="d2e2f-109">Общие сведения об элементе управления Button</span><span class="sxs-lookup"><span data-stu-id="d2e2f-109">Button Control Overview</span></span>](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
- [<span data-ttu-id="d2e2f-110">Способы активации элемента управления Button в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d2e2f-110">Ways to Select a Windows Forms Button Control</span></span>](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
- [<span data-ttu-id="d2e2f-111">Практическое руководство. Обработка события нажатия кнопки в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d2e2f-111">How to: Respond to Windows Forms Button Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
- [<span data-ttu-id="d2e2f-112">Практическое руководство. Создание кнопки принятия в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d2e2f-112">How to: Designate a Windows Forms Button as the Accept Button</span></span>](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-accept-button.md)  
- [<span data-ttu-id="d2e2f-113">Элемент управления Button</span><span class="sxs-lookup"><span data-stu-id="d2e2f-113">Button Control</span></span>](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+ [<span data-ttu-id="8da78-109">Общие сведения об элементе управления Button</span><span class="sxs-lookup"><span data-stu-id="8da78-109">Button Control Overview</span></span>](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
+ [<span data-ttu-id="8da78-110">Способы активации элемента управления Button в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8da78-110">Ways to Select a Windows Forms Button Control</span></span>](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
+ [<span data-ttu-id="8da78-111">Практическое руководство. Обработка события нажатия кнопки в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8da78-111">How to: Respond to Windows Forms Button Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
+ [<span data-ttu-id="8da78-112">Практическое руководство. Создание кнопки принятия в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8da78-112">How to: Designate a Windows Forms Button as the Accept Button</span></span>](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-accept-button.md)  
+ [<span data-ttu-id="8da78-113">Элемент управления Button</span><span class="sxs-lookup"><span data-stu-id="8da78-113">Button Control</span></span>](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

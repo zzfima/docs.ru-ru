@@ -22,30 +22,31 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dce1a8d1070ed1d016da0c94c1f3ecc1ed9df389
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 17d143c0c265fea876d084ebc21663d93553fe9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a><span data-ttu-id="4c6a3-102">Практическое руководство. Рисование заполненного прямоугольника в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4c6a3-102">How to: Draw a Filled Rectangle on a Windows Form</span></span>
-<span data-ttu-id="4c6a3-103">В этом примере Рисование закрашенного прямоугольника в форме.</span><span class="sxs-lookup"><span data-stu-id="4c6a3-103">This example draws a filled rectangle on a form.</span></span>  
+# <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a><span data-ttu-id="66cf9-102">Практическое руководство. Рисование заполненного прямоугольника в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="66cf9-102">How to: Draw a Filled Rectangle on a Windows Form</span></span>
+<span data-ttu-id="66cf9-103">В этом примере Рисование закрашенного прямоугольника в форме.</span><span class="sxs-lookup"><span data-stu-id="66cf9-103">This example draws a filled rectangle on a form.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4c6a3-104">Пример</span><span class="sxs-lookup"><span data-stu-id="4c6a3-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="66cf9-104">Пример</span><span class="sxs-lookup"><span data-stu-id="66cf9-104">Example</span></span>  
  [!code-cpp[System.Drawing.ConceptualHowTos#2](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#2)]
  [!code-csharp[System.Drawing.ConceptualHowTos#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#2)]
  [!code-vb[System.Drawing.ConceptualHowTos#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#2)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="4c6a3-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="4c6a3-105">Compiling the Code</span></span>  
- <span data-ttu-id="4c6a3-106">Этот метод нельзя вызывать <xref:System.Windows.Forms.Form.Load> обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="4c6a3-106">You cannot call this method in the <xref:System.Windows.Forms.Form.Load> event handler.</span></span> <span data-ttu-id="4c6a3-107">Если формы был изменен или скрыта другой формой, рисунок перерисовываться не будет.</span><span class="sxs-lookup"><span data-stu-id="4c6a3-107">The drawn content will not be redrawn if the form is resized or obscured by another form.</span></span> <span data-ttu-id="4c6a3-108">Чтобы сделать перерисовку автоматически, нужно переопределить <xref:System.Windows.Forms.Control.OnPaint%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="4c6a3-108">To make your content automatically repaint, you should override the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="66cf9-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="66cf9-105">Compiling the Code</span></span>  
+ <span data-ttu-id="66cf9-106">Этот метод нельзя вызывать <xref:System.Windows.Forms.Form.Load> обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="66cf9-106">You cannot call this method in the <xref:System.Windows.Forms.Form.Load> event handler.</span></span> <span data-ttu-id="66cf9-107">Если формы был изменен или скрыта другой формой, рисунок перерисовываться не будет.</span><span class="sxs-lookup"><span data-stu-id="66cf9-107">The drawn content will not be redrawn if the form is resized or obscured by another form.</span></span> <span data-ttu-id="66cf9-108">Чтобы сделать перерисовку автоматически, нужно переопределить <xref:System.Windows.Forms.Control.OnPaint%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="66cf9-108">To make your content automatically repaint, you should override the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="4c6a3-109">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="4c6a3-109">Robust Programming</span></span>  
- <span data-ttu-id="4c6a3-110">Следует всегда вызывать <xref:System.IDisposable.Dispose%2A> на все объекты, которые потребляют системные ресурсы, такие как <xref:System.Drawing.Brush> и <xref:System.Drawing.Graphics> объектов.</span><span class="sxs-lookup"><span data-stu-id="4c6a3-110">You should always call <xref:System.IDisposable.Dispose%2A> on any objects that consume system resources, such as <xref:System.Drawing.Brush> and <xref:System.Drawing.Graphics> objects.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="66cf9-109">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="66cf9-109">Robust Programming</span></span>  
+ <span data-ttu-id="66cf9-110">Следует всегда вызывать <xref:System.IDisposable.Dispose%2A> на все объекты, которые потребляют системные ресурсы, такие как <xref:System.Drawing.Brush> и <xref:System.Drawing.Graphics> объектов.</span><span class="sxs-lookup"><span data-stu-id="66cf9-110">You should always call <xref:System.IDisposable.Dispose%2A> on any objects that consume system resources, such as <xref:System.Drawing.Brush> and <xref:System.Drawing.Graphics> objects.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4c6a3-111">См. также</span><span class="sxs-lookup"><span data-stu-id="4c6a3-111">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="66cf9-111">См. также</span><span class="sxs-lookup"><span data-stu-id="66cf9-111">See Also</span></span>  
  <xref:System.Drawing.Graphics.FillRectangle%2A>  
  <xref:System.Windows.Forms.Control.OnPaint%2A>  
- [<span data-ttu-id="4c6a3-112">Приступая к программированию графики</span><span class="sxs-lookup"><span data-stu-id="4c6a3-112">Getting Started with Graphics Programming</span></span>](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- [<span data-ttu-id="4c6a3-113">Объекты Graphics и Drawing в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4c6a3-113">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [<span data-ttu-id="4c6a3-114">Рисование линий и фигур с помощью пера</span><span class="sxs-lookup"><span data-stu-id="4c6a3-114">Using a Pen to Draw Lines and Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
- [<span data-ttu-id="4c6a3-115">Кисти и закрашенные фигуры в GDI+</span><span class="sxs-lookup"><span data-stu-id="4c6a3-115">Brushes and Filled Shapes in GDI+</span></span>](../../../../docs/framework/winforms/advanced/brushes-and-filled-shapes-in-gdi.md)
+ [<span data-ttu-id="66cf9-112">Приступая к программированию графики</span><span class="sxs-lookup"><span data-stu-id="66cf9-112">Getting Started with Graphics Programming</span></span>](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
+ [<span data-ttu-id="66cf9-113">Объекты Graphics и Drawing в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="66cf9-113">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [<span data-ttu-id="66cf9-114">Рисование линий и фигур с помощью пера</span><span class="sxs-lookup"><span data-stu-id="66cf9-114">Using a Pen to Draw Lines and Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
+ [<span data-ttu-id="66cf9-115">Кисти и закрашенные фигуры в GDI+</span><span class="sxs-lookup"><span data-stu-id="66cf9-115">Brushes and Filled Shapes in GDI+</span></span>](../../../../docs/framework/winforms/advanced/brushes-and-filled-shapes-in-gdi.md)

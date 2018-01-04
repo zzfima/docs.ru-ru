@@ -12,27 +12,28 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 17abe368b8e1d9a5212b564d201d5d163d849e4d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 79ec9c423f86a0a736ed1b99d8ddf0f5a38160c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="tracking"></a><span data-ttu-id="4ee86-102">Отслеживание</span><span class="sxs-lookup"><span data-stu-id="4ee86-102">Tracking</span></span>
-<span data-ttu-id="4ee86-103">Образцы в этом разделе демонстрируют отслеживание рабочих процессов в [!INCLUDE[wf](../../../../includes/wf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4ee86-103">This section contains samples that demonstrate workflow tracking in [!INCLUDE[wf](../../../../includes/wf-md.md)].</span></span>  
+# <a name="tracking"></a><span data-ttu-id="3df0c-102">Отслеживание</span><span class="sxs-lookup"><span data-stu-id="3df0c-102">Tracking</span></span>
+<span data-ttu-id="3df0c-103">Образцы в этом разделе демонстрируют отслеживание рабочих процессов в [!INCLUDE[wf](../../../../includes/wf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3df0c-103">This section contains samples that demonstrate workflow tracking in [!INCLUDE[wf](../../../../includes/wf-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4ee86-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="4ee86-104">In This Section</span></span>  
- [<span data-ttu-id="4ee86-105">Настраиваемое отслеживание</span><span class="sxs-lookup"><span data-stu-id="4ee86-105">Custom Tracking</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md)  
- <span data-ttu-id="4ee86-106">Показывает, как создается настраиваемый участник отслеживания и выдаются данные отслеживания на консоль.</span><span class="sxs-lookup"><span data-stu-id="4ee86-106">Demonstrates how to create a custom tracking participant and write the contents of the tracking data to console.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="3df0c-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="3df0c-104">In This Section</span></span>  
+ [<span data-ttu-id="3df0c-105">Настраиваемое отслеживание</span><span class="sxs-lookup"><span data-stu-id="3df0c-105">Custom Tracking</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md)  
+ <span data-ttu-id="3df0c-106">Показывает, как создается настраиваемый участник отслеживания и выдаются данные отслеживания на консоль.</span><span class="sxs-lookup"><span data-stu-id="3df0c-106">Demonstrates how to create a custom tracking participant and write the contents of the tracking data to console.</span></span>  
   
- [<span data-ttu-id="4ee86-107">Отслеживание событий в системе трассировки событий Windows</span><span class="sxs-lookup"><span data-stu-id="4ee86-107">Tracking Events into Event Tracing in Windows</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/tracking-events-into-event-tracing-in-windows.md)  
- <span data-ttu-id="4ee86-108">Показывает, как включить отслеживание в [!INCLUDE[wf1](../../../../includes/wf1-md.md)] в службе рабочего процесса и создавать события отслеживания в средстве отслеживания событий для Windows (ETW).</span><span class="sxs-lookup"><span data-stu-id="4ee86-108">Demonstrates how to enable [!INCLUDE[wf1](../../../../includes/wf1-md.md)] tracking on a workflow service and emit the tracking events in Event Tracing for Windows (ETW).</span></span>  
+ [<span data-ttu-id="3df0c-107">Отслеживание событий в системе трассировки событий Windows</span><span class="sxs-lookup"><span data-stu-id="3df0c-107">Tracking Events into Event Tracing in Windows</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/tracking-events-into-event-tracing-in-windows.md)  
+ <span data-ttu-id="3df0c-108">Показывает, как включить отслеживание в [!INCLUDE[wf1](../../../../includes/wf1-md.md)] в службе рабочего процесса и создавать события отслеживания в средстве отслеживания событий для Windows (ETW).</span><span class="sxs-lookup"><span data-stu-id="3df0c-108">Demonstrates how to enable [!INCLUDE[wf1](../../../../includes/wf1-md.md)] tracking on a workflow service and emit the tracking events in Event Tracing for Windows (ETW).</span></span>  
   
- [<span data-ttu-id="4ee86-109">Трассировка SQL</span><span class="sxs-lookup"><span data-stu-id="4ee86-109">SQL Tracking</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)  
- <span data-ttu-id="4ee86-110">Показывает, как создать настраиваемый участник отслеживания SQL, который вносит записи отслеживания базу данных SQL.</span><span class="sxs-lookup"><span data-stu-id="4ee86-110">Demonstrates how to write a custom SQL tracking participant, that writes tracking records to a SQL database.</span></span>  
+ [<span data-ttu-id="3df0c-109">Отслеживание SQL</span><span class="sxs-lookup"><span data-stu-id="3df0c-109">SQL Tracking</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)  
+ <span data-ttu-id="3df0c-110">Показывает, как создать настраиваемый участник отслеживания SQL, который вносит записи отслеживания базу данных SQL.</span><span class="sxs-lookup"><span data-stu-id="3df0c-110">Demonstrates how to write a custom SQL tracking participant, that writes tracking records to a SQL database.</span></span>  
   
- [<span data-ttu-id="4ee86-111">Извлечение данных WF с использованием отслеживания</span><span class="sxs-lookup"><span data-stu-id="4ee86-111">Extract WF Data using Tracking</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/extract-wf-data-using-tracking.md)  
- <span data-ttu-id="4ee86-112">Показывает, как использовать отслеживание рабочего процесса для извлечения переменных и аргументов рабочего процесса из действий.</span><span class="sxs-lookup"><span data-stu-id="4ee86-112">Demonstrates how to use workflow tracking to extract workflow variables and arguments from activities.</span></span>  
+ [<span data-ttu-id="3df0c-111">Извлечение данных WF с использованием отслеживания</span><span class="sxs-lookup"><span data-stu-id="3df0c-111">Extract WF Data using Tracking</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/extract-wf-data-using-tracking.md)  
+ <span data-ttu-id="3df0c-112">Показывает, как использовать отслеживание рабочего процесса для извлечения переменных и аргументов рабочего процесса из действий.</span><span class="sxs-lookup"><span data-stu-id="3df0c-112">Demonstrates how to use workflow tracking to extract workflow variables and arguments from activities.</span></span>  
   
- [<span data-ttu-id="4ee86-113">Отслеживание с помощью текстового файла</span><span class="sxs-lookup"><span data-stu-id="4ee86-113">Tracking Using a Text File</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/tracking-using-a-text-file.md)  
- <span data-ttu-id="4ee86-114">Показывает, как расширить отслеживание в [!INCLUDE[wf1](../../../../includes/wf1-md.md)] путем создания настраиваемого участника отслеживания.</span><span class="sxs-lookup"><span data-stu-id="4ee86-114">Demonstrates how to extend tracking in [!INCLUDE[wf1](../../../../includes/wf1-md.md)] by creating a custom tracking participant.</span></span>
+ [<span data-ttu-id="3df0c-113">Отслеживание с помощью текстового файла</span><span class="sxs-lookup"><span data-stu-id="3df0c-113">Tracking Using a Text File</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/tracking-using-a-text-file.md)  
+ <span data-ttu-id="3df0c-114">Показывает, как расширить отслеживание в [!INCLUDE[wf1](../../../../includes/wf1-md.md)] путем создания настраиваемого участника отслеживания.</span><span class="sxs-lookup"><span data-stu-id="3df0c-114">Demonstrates how to extend tracking in [!INCLUDE[wf1](../../../../includes/wf1-md.md)] by creating a custom tracking participant.</span></span>

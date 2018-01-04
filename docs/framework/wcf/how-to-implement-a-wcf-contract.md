@@ -17,20 +17,21 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eabb1ed36ff6f653361a64960e4d02037ab42980
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4bf590b2f508cc6661b5acb045a7d66b38ed169c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a><span data-ttu-id="56935-102">Практическое руководство. Реализация контракта службы Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="56935-102">How to: Implement a Windows Communication Foundation Service Contract</span></span>
-<span data-ttu-id="56935-103">Это вторая из шести задач, выполнение которых необходимо для создания базовой службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] и клиента, который может вызывать службу.</span><span class="sxs-lookup"><span data-stu-id="56935-103">This is the second of six tasks required to create a basic [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] service and a client that can call the service.</span></span> <span data-ttu-id="56935-104">Обзор всех шести задач см. в разделе [учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md) раздела.</span><span class="sxs-lookup"><span data-stu-id="56935-104">For an overview of all six tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  
+# <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a><span data-ttu-id="71554-102">Практическое руководство. Реализация контракта службы Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="71554-102">How to: Implement a Windows Communication Foundation Service Contract</span></span>
+<span data-ttu-id="71554-103">Это вторая из шести задач, выполнение которых необходимо для создания базовой службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] и клиента, который может вызывать службу.</span><span class="sxs-lookup"><span data-stu-id="71554-103">This is the second of six tasks required to create a basic [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] service and a client that can call the service.</span></span> <span data-ttu-id="71554-104">Обзор всех шести задач см. в разделе [учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md) раздела.</span><span class="sxs-lookup"><span data-stu-id="71554-104">For an overview of all six tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  
   
- <span data-ttu-id="56935-105">Следующий шаг по созданию приложения WCF - это реализация интерфейса службы.</span><span class="sxs-lookup"><span data-stu-id="56935-105">The next step in creating a WCF application is to implement the service interface.</span></span> <span data-ttu-id="56935-106">Это предполагает создание класса с именем `CalculatorService`, реализующего пользовательский интерфейс `ICalculator`.</span><span class="sxs-lookup"><span data-stu-id="56935-106">This involves creating a class called `CalculatorService` that implements the user-defined `ICalculator` interface..</span></span>  
+ <span data-ttu-id="71554-105">Следующий шаг по созданию приложения WCF - это реализация интерфейса службы.</span><span class="sxs-lookup"><span data-stu-id="71554-105">The next step in creating a WCF application is to implement the service interface.</span></span> <span data-ttu-id="71554-106">Это предполагает создание класса с именем `CalculatorService`, реализующего пользовательский интерфейс `ICalculator`.</span><span class="sxs-lookup"><span data-stu-id="71554-106">This involves creating a class called `CalculatorService` that implements the user-defined `ICalculator` interface..</span></span>  
   
-### <a name="to-implement-a-wcf-service-contract"></a><span data-ttu-id="56935-107">Реализация контракта службы WCF</span><span class="sxs-lookup"><span data-stu-id="56935-107">To implement a WCF service contract</span></span>  
+### <a name="to-implement-a-wcf-service-contract"></a><span data-ttu-id="71554-107">Реализация контракта службы WCF</span><span class="sxs-lookup"><span data-stu-id="71554-107">To implement a WCF service contract</span></span>  
   
-1.  <span data-ttu-id="56935-108">Откройте файл Service1.cs или Service1.vb и добавьте следующий код:</span><span class="sxs-lookup"><span data-stu-id="56935-108">Open the Service1.cs or Service1.vb file and add the following code:</span></span>  
+1.  <span data-ttu-id="71554-108">Откройте файл Service1.cs или Service1.vb и добавьте следующий код:</span><span class="sxs-lookup"><span data-stu-id="71554-108">Open the Service1.cs or Service1.vb file and add the following code:</span></span>  
   
     ```csharp  
     //Service1.cs  
@@ -126,10 +127,10 @@ ms.lasthandoff: 12/02/2017
     End Namespace  
     ```  
   
-     <span data-ttu-id="56935-109">Каждый метод реализует операцию калькулятора и выводит на консоль некоторый текст, чтобы упростить тестирование.</span><span class="sxs-lookup"><span data-stu-id="56935-109">Each method implements the calculator operation and writes some text to the console to make testing easier.</span></span>  
+     <span data-ttu-id="71554-109">Каждый метод реализует операцию калькулятора и выводит на консоль некоторый текст, чтобы упростить тестирование.</span><span class="sxs-lookup"><span data-stu-id="71554-109">Each method implements the calculator operation and writes some text to the console to make testing easier.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="56935-110">Пример</span><span class="sxs-lookup"><span data-stu-id="56935-110">Example</span></span>  
- <span data-ttu-id="56935-111">В следующем коде показан интерфейс, определяющий контракт, и реализация этого интерфейса.</span><span class="sxs-lookup"><span data-stu-id="56935-111">The following code shows both the interface that defines the contract and the implementation of the interface.</span></span>  
+## <a name="example"></a><span data-ttu-id="71554-110">Пример</span><span class="sxs-lookup"><span data-stu-id="71554-110">Example</span></span>  
+ <span data-ttu-id="71554-111">В следующем коде показан интерфейс, определяющий контракт, и реализация этого интерфейса.</span><span class="sxs-lookup"><span data-stu-id="71554-111">The following code shows both the interface that defines the contract and the implementation of the interface.</span></span>  
   
 ```csharp
 // IService1.cs  
@@ -272,11 +273,11 @@ Namespace GettingStartedLib
 End Namespace  
 ```  
   
- <span data-ttu-id="56935-112">Теперь контракт службы был создан и реализован.</span><span class="sxs-lookup"><span data-stu-id="56935-112">Now the service contract is created and implemented.</span></span> <span data-ttu-id="56935-113">Постройте решение, чтобы убедиться в отсутствии ошибок компиляции, а затем продолжайте [как: размещение и запуск базовой службы](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md) для запуска службы.</span><span class="sxs-lookup"><span data-stu-id="56935-113">Build the solution to ensure there are no compilation errors and then proceed to [How to: Host and Run a Basic Service](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md) to run the service.</span></span> <span data-ttu-id="56935-114">Сведения об устранении неполадок в разделе [Устранение неполадок учебник по началу работы](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="56935-114">For troubleshooting information, see [Troubleshooting the Getting Started Tutorial](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).</span></span>  
+ <span data-ttu-id="71554-112">Теперь контракт службы был создан и реализован.</span><span class="sxs-lookup"><span data-stu-id="71554-112">Now the service contract is created and implemented.</span></span> <span data-ttu-id="71554-113">Постройте решение, чтобы убедиться в отсутствии ошибок компиляции, а затем продолжайте [как: размещение и запуск базовой службы](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md) для запуска службы.</span><span class="sxs-lookup"><span data-stu-id="71554-113">Build the solution to ensure there are no compilation errors and then proceed to [How to: Host and Run a Basic Service](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md) to run the service.</span></span> <span data-ttu-id="71554-114">Сведения об устранении неполадок в разделе [Устранение неполадок учебник по началу работы](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="71554-114">For troubleshooting information, see [Troubleshooting the Getting Started Tutorial](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="56935-115">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="56935-115">Compiling the Code</span></span>  
- <span data-ttu-id="56935-116">При использовании Visual Studio в меню «Построение» выберите Построить решение (или нажмите клавиши CTRL + SHIFT + B).</span><span class="sxs-lookup"><span data-stu-id="56935-116">If you are using Visual Studio, on the Build menu click Build Solution (or press CTRL+SHIFT+B).</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="71554-115">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="71554-115">Compiling the Code</span></span>  
+ <span data-ttu-id="71554-116">При использовании Visual Studio в меню «Построение» выберите Построить решение (или нажмите клавиши CTRL + SHIFT + B).</span><span class="sxs-lookup"><span data-stu-id="71554-116">If you are using Visual Studio, on the Build menu click Build Solution (or press CTRL+SHIFT+B).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="56935-117">См. также</span><span class="sxs-lookup"><span data-stu-id="56935-117">See Also</span></span>  
- [<span data-ttu-id="56935-118">Начало работы</span><span class="sxs-lookup"><span data-stu-id="56935-118">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)  
- [<span data-ttu-id="56935-119">Резидентное размещение</span><span class="sxs-lookup"><span data-stu-id="56935-119">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)
+## <a name="see-also"></a><span data-ttu-id="71554-117">См. также</span><span class="sxs-lookup"><span data-stu-id="71554-117">See Also</span></span>  
+ [<span data-ttu-id="71554-118">Начало работы</span><span class="sxs-lookup"><span data-stu-id="71554-118">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ [<span data-ttu-id="71554-119">Резидентное размещение</span><span class="sxs-lookup"><span data-stu-id="71554-119">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)

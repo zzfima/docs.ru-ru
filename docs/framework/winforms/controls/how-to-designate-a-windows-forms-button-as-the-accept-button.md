@@ -22,21 +22,22 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0bf5f8dbf8718cb6a30883395d54c5cbc6bafaff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 80503cd6fc2fc1c624cdd2aeb1ca3f699ffd9832
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a><span data-ttu-id="518d0-102">Практическое руководство. Назначение кнопок принятия в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="518d0-102">How to: Designate a Windows Forms Button as the Accept Button</span></span>
-<span data-ttu-id="518d0-103">В любой форме Windows Forms можно назначить <xref:System.Windows.Forms.Button> отображения элемента управления «принять», также известные как кнопка по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="518d0-103">On any Windows Form, you can designate a <xref:System.Windows.Forms.Button> control to be the accept button, also known as the default button.</span></span> <span data-ttu-id="518d0-104">Каждый раз, когда пользователь нажимает клавишу ВВОД, нажатии кнопки по умолчанию независимо от других элементов управления в форме имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="518d0-104">Whenever the user presses the ENTER key, the default button is clicked regardless of which other control on the form has the focus.</span></span>  
+# <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a><span data-ttu-id="976e5-102">Практическое руководство. Назначение кнопок принятия в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="976e5-102">How to: Designate a Windows Forms Button as the Accept Button</span></span>
+<span data-ttu-id="976e5-103">В любой форме Windows Forms можно назначить <xref:System.Windows.Forms.Button> отображения элемента управления «принять», также известные как кнопка по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="976e5-103">On any Windows Form, you can designate a <xref:System.Windows.Forms.Button> control to be the accept button, also known as the default button.</span></span> <span data-ttu-id="976e5-104">Каждый раз, когда пользователь нажимает клавишу ВВОД, нажатии кнопки по умолчанию независимо от других элементов управления в форме имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="976e5-104">Whenever the user presses the ENTER key, the default button is clicked regardless of which other control on the form has the focus.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="518d0-105">Исключение составляют при другой кнопки элемента управления с фокусом — в этом случае будет нажата кнопка с фокусом, многострочное текстовое поле, или пользовательский элемент управления, который перехватывает клавишу ВВОД.</span><span class="sxs-lookup"><span data-stu-id="518d0-105">The exceptions to this are when the control with focus is another button — in that case, the button with the focus will be clicked — or a multiline text box, or a custom control that traps the ENTER key.</span></span>  
+>  <span data-ttu-id="976e5-105">Исключение составляют при другой кнопки элемента управления с фокусом — в этом случае будет нажата кнопка с фокусом, многострочное текстовое поле, или пользовательский элемент управления, который перехватывает клавишу ВВОД.</span><span class="sxs-lookup"><span data-stu-id="976e5-105">The exceptions to this are when the control with focus is another button — in that case, the button with the focus will be clicked — or a multiline text box, or a custom control that traps the ENTER key.</span></span>  
   
-### <a name="to-designate-the-accept-button"></a><span data-ttu-id="518d0-106">Чтобы создать кнопку «принять»</span><span class="sxs-lookup"><span data-stu-id="518d0-106">To designate the accept button</span></span>  
+### <a name="to-designate-the-accept-button"></a><span data-ttu-id="976e5-106">Чтобы создать кнопку «принять»</span><span class="sxs-lookup"><span data-stu-id="976e5-106">To designate the accept button</span></span>  
   
-1.  <span data-ttu-id="518d0-107">Формы задайте <xref:System.Windows.Forms.Form.AcceptButton%2A> свойство к соответствующему <xref:System.Windows.Forms.Button> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="518d0-107">Set the form's <xref:System.Windows.Forms.Form.AcceptButton%2A> property to the appropriate <xref:System.Windows.Forms.Button> control.</span></span>  
+1.  <span data-ttu-id="976e5-107">Формы задайте <xref:System.Windows.Forms.Form.AcceptButton%2A> свойство к соответствующему <xref:System.Windows.Forms.Button> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="976e5-107">Set the form's <xref:System.Windows.Forms.Form.AcceptButton%2A> property to the appropriate <xref:System.Windows.Forms.Button> control.</span></span>  
   
     ```vb  
     Private Sub SetDefault(ByVal myDefaultBtn As Button)  
@@ -59,10 +60,10 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="518d0-108">См. также</span><span class="sxs-lookup"><span data-stu-id="518d0-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="976e5-108">См. также</span><span class="sxs-lookup"><span data-stu-id="976e5-108">See Also</span></span>  
  <xref:System.Windows.Forms.Form.AcceptButton%2A>  
- [<span data-ttu-id="518d0-109">Общие сведения об элементе управления Button</span><span class="sxs-lookup"><span data-stu-id="518d0-109">Button Control Overview</span></span>](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
- [<span data-ttu-id="518d0-110">Способы активации элемента управления Button в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="518d0-110">Ways to Select a Windows Forms Button Control</span></span>](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
- [<span data-ttu-id="518d0-111">Практическое руководство. Обработка события нажатия кнопки в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="518d0-111">How to: Respond to Windows Forms Button Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
- [<span data-ttu-id="518d0-112">Практическое руководство. Создание кнопки отмены в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="518d0-112">How to: Designate a Windows Forms Button as the Cancel Button</span></span>](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-cancel-button.md)  
- [<span data-ttu-id="518d0-113">Элемент управления Button</span><span class="sxs-lookup"><span data-stu-id="518d0-113">Button Control</span></span>](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+ [<span data-ttu-id="976e5-109">Общие сведения об элементе управления Button</span><span class="sxs-lookup"><span data-stu-id="976e5-109">Button Control Overview</span></span>](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
+ [<span data-ttu-id="976e5-110">Способы активации элемента управления Button в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="976e5-110">Ways to Select a Windows Forms Button Control</span></span>](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
+ [<span data-ttu-id="976e5-111">Практическое руководство. Обработка события нажатия кнопки в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="976e5-111">How to: Respond to Windows Forms Button Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
+ [<span data-ttu-id="976e5-112">Практическое руководство. Создание кнопки отмены в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="976e5-112">How to: Designate a Windows Forms Button as the Cancel Button</span></span>](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-cancel-button.md)  
+ [<span data-ttu-id="976e5-113">Элемент управления Button</span><span class="sxs-lookup"><span data-stu-id="976e5-113">Button Control</span></span>](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

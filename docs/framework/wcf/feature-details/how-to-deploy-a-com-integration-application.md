@@ -13,42 +13,43 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c63478620a2b604d27f2d9d154383cb0bae6b6da
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aca9df2be74dba308d3c4e4eb1c61b3e1afaa580
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-deploy-a-com-integration-application"></a><span data-ttu-id="dadb4-102">Практическое руководство. Развертывание приложения интеграции COM+</span><span class="sxs-lookup"><span data-stu-id="dadb4-102">How to: Deploy a COM+ Integration Application</span></span>
-<span data-ttu-id="dadb4-103">Написанное приложение интеграции COM+ может понадобиться развернуть на другом компьютере.</span><span class="sxs-lookup"><span data-stu-id="dadb4-103">Once you have written a COM+ integration application, you may want to deploy it on another machine.</span></span> <span data-ttu-id="dadb4-104">В этом разделе описывается перенос приложения COM+ с одного компьютера на другой.</span><span class="sxs-lookup"><span data-stu-id="dadb4-104">This topic describes how to move a COM+ integration application from one machine to another.</span></span>  
+# <a name="how-to-deploy-a-com-integration-application"></a><span data-ttu-id="9a41a-102">Практическое руководство. Развертывание приложения интеграции COM+</span><span class="sxs-lookup"><span data-stu-id="9a41a-102">How to: Deploy a COM+ Integration Application</span></span>
+<span data-ttu-id="9a41a-103">Написанное приложение интеграции COM+ может понадобиться развернуть на другом компьютере.</span><span class="sxs-lookup"><span data-stu-id="9a41a-103">Once you have written a COM+ integration application, you may want to deploy it on another machine.</span></span> <span data-ttu-id="9a41a-104">В этом разделе описывается перенос приложения COM+ с одного компьютера на другой.</span><span class="sxs-lookup"><span data-stu-id="9a41a-104">This topic describes how to move a COM+ integration application from one machine to another.</span></span>  
   
-### <a name="moving-a-com-hosted-integration-app"></a><span data-ttu-id="dadb4-105">Перенос размещенного в COM+ приложения интеграции</span><span class="sxs-lookup"><span data-stu-id="dadb4-105">Moving a COM+ hosted Integration App</span></span>  
+### <a name="moving-a-com-hosted-integration-app"></a><span data-ttu-id="9a41a-105">Перенос размещенного в COM+ приложения интеграции</span><span class="sxs-lookup"><span data-stu-id="9a41a-105">Moving a COM+ hosted Integration App</span></span>  
   
-1.  <span data-ttu-id="dadb4-106">Убедитесь, что на обоих компьютерах установлена платформа [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="dadb4-106">Ensure that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is installed on both machines.</span></span>  
+1.  <span data-ttu-id="9a41a-106">Убедитесь, что на обоих компьютерах установлена платформа [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9a41a-106">Ensure that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is installed on both machines.</span></span>  
   
-2.  <span data-ttu-id="dadb4-107">Экспортируйте приложение с компьютера A.</span><span class="sxs-lookup"><span data-stu-id="dadb4-107">Export the application from machine A.</span></span>  
+2.  <span data-ttu-id="9a41a-107">Экспортируйте приложение с компьютера A.</span><span class="sxs-lookup"><span data-stu-id="9a41a-107">Export the application from machine A.</span></span>  
   
-3.  <span data-ttu-id="dadb4-108">Импортируйте приложение на компьютер B.</span><span class="sxs-lookup"><span data-stu-id="dadb4-108">Import the application on machine B.</span></span>  
+3.  <span data-ttu-id="9a41a-108">Импортируйте приложение на компьютер B.</span><span class="sxs-lookup"><span data-stu-id="9a41a-108">Import the application on machine B.</span></span>  
   
-4.  <span data-ttu-id="dadb4-109">Задайте корневую папку приложения.</span><span class="sxs-lookup"><span data-stu-id="dadb4-109">Set the Application Root Directory.</span></span> <span data-ttu-id="dadb4-110">По традиции это %PROGRAMFILES%/ComPlus Applications/{GUID_приложения}.</span><span class="sxs-lookup"><span data-stu-id="dadb4-110">By convention, this is %PROGRAMFILES%/ComPlus Applications/{AppGUID}.</span></span>  
+4.  <span data-ttu-id="9a41a-109">Задайте корневую папку приложения.</span><span class="sxs-lookup"><span data-stu-id="9a41a-109">Set the Application Root Directory.</span></span> <span data-ttu-id="9a41a-110">По традиции это %PROGRAMFILES%/ComPlus Applications/{GUID_приложения}.</span><span class="sxs-lookup"><span data-stu-id="9a41a-110">By convention, this is %PROGRAMFILES%/ComPlus Applications/{AppGUID}.</span></span>  
   
-5.  <span data-ttu-id="dadb4-111">Скопируйте файлы Application.config и Application.manifest из корневой папки приложения на компьютере A в корневую папку приложения на компьютере B.</span><span class="sxs-lookup"><span data-stu-id="dadb4-111">Copy the Application.config and Application.manifest files from the application root directory on machine A to the application root directory on machine B.</span></span>  
+5.  <span data-ttu-id="9a41a-111">Скопируйте файлы Application.config и Application.manifest из корневой папки приложения на компьютере A в корневую папку приложения на компьютере B.</span><span class="sxs-lookup"><span data-stu-id="9a41a-111">Copy the Application.config and Application.manifest files from the application root directory on machine A to the application root directory on machine B.</span></span>  
   
-6.  <span data-ttu-id="dadb4-112">Отредактируйте адреса конечных точек службы в файле Application.config на компьютере B так, чтобы они указывали на соответствующий компьютер.</span><span class="sxs-lookup"><span data-stu-id="dadb4-112">Edit the service endpoint addresses in the Application.config file on machine B to identify the appropriate machine.</span></span> <span data-ttu-id="dadb4-113">Например, измените http://machineA/MyService на http://machineB/MyService.</span><span class="sxs-lookup"><span data-stu-id="dadb4-113">For example, change http://machineA/MyService to http://machineB/MyService.</span></span>  
+6.  <span data-ttu-id="9a41a-112">Отредактируйте адреса конечных точек службы в файле Application.config на компьютере B так, чтобы они указывали на соответствующий компьютер.</span><span class="sxs-lookup"><span data-stu-id="9a41a-112">Edit the service endpoint addresses in the Application.config file on machine B to identify the appropriate machine.</span></span> <span data-ttu-id="9a41a-113">Например, измените http://machineA/MyService на http://machineB/MyService.</span><span class="sxs-lookup"><span data-stu-id="9a41a-113">For example, change http://machineA/MyService to http://machineB/MyService.</span></span>  
   
-### <a name="moving-a-web-hosted-integration-application"></a><span data-ttu-id="dadb4-114">Перенос размещенного на веб-сервере приложения интеграции</span><span class="sxs-lookup"><span data-stu-id="dadb4-114">Moving a Web-hosted integration application</span></span>  
+### <a name="moving-a-web-hosted-integration-application"></a><span data-ttu-id="9a41a-114">Перенос размещенного на веб-сервере приложения интеграции</span><span class="sxs-lookup"><span data-stu-id="9a41a-114">Moving a Web-hosted integration application</span></span>  
   
-1.  <span data-ttu-id="dadb4-115">Убедитесь, что на обоих компьютерах установлена платформа [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="dadb4-115">Ensure that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is installed on both machines.</span></span>  
+1.  <span data-ttu-id="9a41a-115">Убедитесь, что на обоих компьютерах установлена платформа [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9a41a-115">Ensure that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is installed on both machines.</span></span>  
   
-2.  <span data-ttu-id="dadb4-116">Экспортируйте приложение с компьютера A.</span><span class="sxs-lookup"><span data-stu-id="dadb4-116">Export the application from machine A.</span></span>  
+2.  <span data-ttu-id="9a41a-116">Экспортируйте приложение с компьютера A.</span><span class="sxs-lookup"><span data-stu-id="9a41a-116">Export the application from machine A.</span></span>  
   
-3.  <span data-ttu-id="dadb4-117">Импортируйте приложение на компьютер B.</span><span class="sxs-lookup"><span data-stu-id="dadb4-117">Import the application on machine B.</span></span>  
+3.  <span data-ttu-id="9a41a-117">Импортируйте приложение на компьютер B.</span><span class="sxs-lookup"><span data-stu-id="9a41a-117">Import the application on machine B.</span></span>  
   
-4.  <span data-ttu-id="dadb4-118">Создайте виртуальный корневой каталог IIS на компьютере B.</span><span class="sxs-lookup"><span data-stu-id="dadb4-118">Create an IIS vroot on machine B.</span></span>  
+4.  <span data-ttu-id="9a41a-118">Создайте виртуальный корневой каталог IIS на компьютере B.</span><span class="sxs-lookup"><span data-stu-id="9a41a-118">Create an IIS vroot on machine B.</span></span>  
   
-5.  <span data-ttu-id="dadb4-119">Скопируйте файл .SVC (имя_компонента.svc) и файл Web.config из виртуального корневого каталога на компьютере A в только что созданный виртуальный корневой каталог на компьютере B.</span><span class="sxs-lookup"><span data-stu-id="dadb4-119">Copy the .svc file (componentName.svc) and the Web.config file from the vroot on machine A to the newly created vroot on machine B.</span></span>  
+5.  <span data-ttu-id="9a41a-119">Скопируйте файл .SVC (имя_компонента.svc) и файл Web.config из виртуального корневого каталога на компьютере A в только что созданный виртуальный корневой каталог на компьютере B.</span><span class="sxs-lookup"><span data-stu-id="9a41a-119">Copy the .svc file (componentName.svc) and the Web.config file from the vroot on machine A to the newly created vroot on machine B.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dadb4-120">См. также</span><span class="sxs-lookup"><span data-stu-id="dadb4-120">See Also</span></span>  
- [<span data-ttu-id="dadb4-121">Интеграция с Обзор приложений COM +</span><span class="sxs-lookup"><span data-stu-id="dadb4-121">Integrating with COM+ Applications Overview</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
- [<span data-ttu-id="dadb4-122">Как: Настройка параметров службы COM +</span><span class="sxs-lookup"><span data-stu-id="dadb4-122">How to: Configure COM+ Service Settings</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
- [<span data-ttu-id="dadb4-123">Как: средство настройки модели служб COM +</span><span class="sxs-lookup"><span data-stu-id="dadb4-123">How to: Use the COM+ Service Model Configuration Tool</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+## <a name="see-also"></a><span data-ttu-id="9a41a-120">См. также</span><span class="sxs-lookup"><span data-stu-id="9a41a-120">See Also</span></span>  
+ [<span data-ttu-id="9a41a-121">Общие сведения об интеграции с приложениями COM+</span><span class="sxs-lookup"><span data-stu-id="9a41a-121">Integrating with COM+ Applications Overview</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
+ [<span data-ttu-id="9a41a-122">Практическое руководство. Настройка параметров службы COM+</span><span class="sxs-lookup"><span data-stu-id="9a41a-122">How to: Configure COM+ Service Settings</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
+ [<span data-ttu-id="9a41a-123">Практическое руководство. Использование программы командной строки настройки модели служб COM+</span><span class="sxs-lookup"><span data-stu-id="9a41a-123">How to: Use the COM+ Service Model Configuration Tool</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

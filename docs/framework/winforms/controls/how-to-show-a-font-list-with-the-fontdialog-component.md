@@ -24,26 +24,27 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 781daeb43a952ef25e73edd577fa17c61b02b426
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dd04a44e6f6e3df26a643a8937e20e232e7471a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a><span data-ttu-id="097b8-102">Практическое руководство. Отображение списка шрифтов с помощью компонента FontDialog</span><span class="sxs-lookup"><span data-stu-id="097b8-102">How to: Show a Font List with the FontDialog Component</span></span>
-<span data-ttu-id="097b8-103">[FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) компонент позволяет пользователям выбрать шрифт, а также менять параметры его отображения, такие как вес и размер.</span><span class="sxs-lookup"><span data-stu-id="097b8-103">The [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) component allows users to select a font, as well as change its display aspects, such as its weight and size.</span></span>  
+# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a><span data-ttu-id="5f72a-102">Практическое руководство. Отображение списка шрифтов с помощью компонента FontDialog</span><span class="sxs-lookup"><span data-stu-id="5f72a-102">How to: Show a Font List with the FontDialog Component</span></span>
+<span data-ttu-id="5f72a-103">[FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) компонент позволяет пользователям выбрать шрифт, а также менять параметры его отображения, такие как вес и размер.</span><span class="sxs-lookup"><span data-stu-id="5f72a-103">The [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) component allows users to select a font, as well as change its display aspects, such as its weight and size.</span></span>  
   
- <span data-ttu-id="097b8-104">Шрифт, выбранный в диалоговом окне, возвращается в <xref:System.Windows.Forms.FontDialog.Font%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="097b8-104">The font selected in the dialog box is returned in the <xref:System.Windows.Forms.FontDialog.Font%2A> property.</span></span> <span data-ttu-id="097b8-105">Таким образом используя преимущества шрифта, выбранного пользователем так же легко, как и чтение свойство.</span><span class="sxs-lookup"><span data-stu-id="097b8-105">Thus, taking advantage of the font selected by the user is as easy as reading a property.</span></span>  
+ <span data-ttu-id="5f72a-104">Шрифт, выбранный в диалоговом окне, возвращается в <xref:System.Windows.Forms.FontDialog.Font%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="5f72a-104">The font selected in the dialog box is returned in the <xref:System.Windows.Forms.FontDialog.Font%2A> property.</span></span> <span data-ttu-id="5f72a-105">Таким образом используя преимущества шрифта, выбранного пользователем так же легко, как и чтение свойство.</span><span class="sxs-lookup"><span data-stu-id="5f72a-105">Thus, taking advantage of the font selected by the user is as easy as reading a property.</span></span>  
   
-### <a name="to-select-font-properties-using-the-fontdialog-component"></a><span data-ttu-id="097b8-106">Чтобы выбрать свойства шрифта с помощью компонента FontDialog</span><span class="sxs-lookup"><span data-stu-id="097b8-106">To select font properties using the FontDialog Component</span></span>  
+### <a name="to-select-font-properties-using-the-fontdialog-component"></a><span data-ttu-id="5f72a-106">Чтобы выбрать свойства шрифта с помощью компонента FontDialog</span><span class="sxs-lookup"><span data-stu-id="5f72a-106">To select font properties using the FontDialog Component</span></span>  
   
-1.  <span data-ttu-id="097b8-107">Отобразить диалоговое окно с помощью <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="097b8-107">Display the dialog box using the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method.</span></span>  
+1.  <span data-ttu-id="5f72a-107">Отобразить диалоговое окно с помощью <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="5f72a-107">Display the dialog box using the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method.</span></span>  
   
-2.  <span data-ttu-id="097b8-108">Используйте <xref:System.Windows.Forms.DialogResult> свойство, чтобы определить, как окно было закрыто.</span><span class="sxs-lookup"><span data-stu-id="097b8-108">Use the <xref:System.Windows.Forms.DialogResult> property to determine how the dialog box was closed.</span></span>  
+2.  <span data-ttu-id="5f72a-108">Используйте <xref:System.Windows.Forms.DialogResult> свойство, чтобы определить, как окно было закрыто.</span><span class="sxs-lookup"><span data-stu-id="5f72a-108">Use the <xref:System.Windows.Forms.DialogResult> property to determine how the dialog box was closed.</span></span>  
   
-3.  <span data-ttu-id="097b8-109">Используйте <xref:System.Windows.Forms.FontDialog.Font%2A> свойство, чтобы задать нужный шрифт.</span><span class="sxs-lookup"><span data-stu-id="097b8-109">Use the <xref:System.Windows.Forms.FontDialog.Font%2A> property to set the desired font.</span></span>  
+3.  <span data-ttu-id="5f72a-109">Используйте <xref:System.Windows.Forms.FontDialog.Font%2A> свойство, чтобы задать нужный шрифт.</span><span class="sxs-lookup"><span data-stu-id="5f72a-109">Use the <xref:System.Windows.Forms.FontDialog.Font%2A> property to set the desired font.</span></span>  
   
-     <span data-ttu-id="097b8-110">В следующем примере <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Click> обработчик событий открывает <xref:System.Windows.Forms.FontDialog> компонента.</span><span class="sxs-lookup"><span data-stu-id="097b8-110">In the example below, the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler opens a <xref:System.Windows.Forms.FontDialog> component.</span></span> <span data-ttu-id="097b8-111">Если шрифт является выбран и пользователь нажимает **ОК**, <xref:System.Windows.Forms.FontDialog.Font%2A> свойство <xref:System.Windows.Forms.TextBox> элемент управления на форме имеет значение выбранного шрифта.</span><span class="sxs-lookup"><span data-stu-id="097b8-111">When a font is chosen and the user clicks **OK**, the <xref:System.Windows.Forms.FontDialog.Font%2A> property of a <xref:System.Windows.Forms.TextBox> control that is on the form is set to the chosen font.</span></span> <span data-ttu-id="097b8-112">В этом примере предполагается, имеет форму <xref:System.Windows.Forms.Button> управления <xref:System.Windows.Forms.TextBox> управления и <xref:System.Windows.Forms.FontDialog> компонента.</span><span class="sxs-lookup"><span data-stu-id="097b8-112">The example assumes your form has a <xref:System.Windows.Forms.Button> control, a  <xref:System.Windows.Forms.TextBox> control, and a <xref:System.Windows.Forms.FontDialog> component.</span></span>  
+     <span data-ttu-id="5f72a-110">В следующем примере <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Click> обработчик событий открывает <xref:System.Windows.Forms.FontDialog> компонента.</span><span class="sxs-lookup"><span data-stu-id="5f72a-110">In the example below, the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler opens a <xref:System.Windows.Forms.FontDialog> component.</span></span> <span data-ttu-id="5f72a-111">Если шрифт является выбран и пользователь нажимает **ОК**, <xref:System.Windows.Forms.FontDialog.Font%2A> свойство <xref:System.Windows.Forms.TextBox> элемент управления на форме имеет значение выбранного шрифта.</span><span class="sxs-lookup"><span data-stu-id="5f72a-111">When a font is chosen and the user clicks **OK**, the <xref:System.Windows.Forms.FontDialog.Font%2A> property of a <xref:System.Windows.Forms.TextBox> control that is on the form is set to the chosen font.</span></span> <span data-ttu-id="5f72a-112">В этом примере предполагается, имеет форму <xref:System.Windows.Forms.Button> управления <xref:System.Windows.Forms.TextBox> управления и <xref:System.Windows.Forms.FontDialog> компонента.</span><span class="sxs-lookup"><span data-stu-id="5f72a-112">The example assumes your form has a <xref:System.Windows.Forms.Button> control, a  <xref:System.Windows.Forms.TextBox> control, and a <xref:System.Windows.Forms.FontDialog> component.</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-     <span data-ttu-id="097b8-113">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] и [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Поместите следующий код в конструктор формы для регистрации обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="097b8-113">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="5f72a-113">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] и [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Поместите следующий код в конструктор формы для регистрации обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="5f72a-113">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
@@ -86,6 +87,6 @@ ms.lasthandoff: 11/21/2017
     button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="097b8-114">См. также</span><span class="sxs-lookup"><span data-stu-id="097b8-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="5f72a-114">См. также</span><span class="sxs-lookup"><span data-stu-id="5f72a-114">See Also</span></span>  
  <xref:System.Windows.Forms.FontDialog>  
- [<span data-ttu-id="097b8-115">Компонент FontDialog</span><span class="sxs-lookup"><span data-stu-id="097b8-115">FontDialog Component</span></span>](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)
+ [<span data-ttu-id="5f72a-115">Компонент FontDialog</span><span class="sxs-lookup"><span data-stu-id="5f72a-115">FontDialog Component</span></span>](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)

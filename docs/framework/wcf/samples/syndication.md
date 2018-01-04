@@ -13,18 +13,19 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9666b4b0272dbd7e7da485108ebecfb911781bcd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8a438a16174343c785ecb68bf6d38e95f37af46f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="syndication"></a><span data-ttu-id="8a57b-102">Синдикация</span><span class="sxs-lookup"><span data-stu-id="8a57b-102">Syndication</span></span>
-<span data-ttu-id="8a57b-103">Образцы в этом разделе демонстрируют синдикацию в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8a57b-103">This section contains samples that demonstrate [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] syndication.</span></span>  
+# <a name="syndication"></a><span data-ttu-id="a04f6-102">Синдикация</span><span class="sxs-lookup"><span data-stu-id="a04f6-102">Syndication</span></span>
+<span data-ttu-id="a04f6-103">Образцы в этом разделе демонстрируют синдикацию в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a04f6-103">This section contains samples that demonstrate [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] syndication.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8a57b-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="8a57b-104">In This Section</span></span>  
- [<span data-ttu-id="8a57b-105">Автономный диагностики веб-канала</span><span class="sxs-lookup"><span data-stu-id="8a57b-105">Stand-Alone Diagnostics Feed</span></span>](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)  
- <span data-ttu-id="8a57b-106">Демонстрирует создание канала синдикации RSS/Atom для синдикации с помощью [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8a57b-106">Demonstrates how to create an RSS/Atom feed for syndication with [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="a04f6-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="a04f6-104">In This Section</span></span>  
+ [<span data-ttu-id="a04f6-105">Автономный веб-канал диагностики</span><span class="sxs-lookup"><span data-stu-id="a04f6-105">Stand-Alone Diagnostics Feed</span></span>](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)  
+ <span data-ttu-id="a04f6-106">Демонстрирует создание канала синдикации RSS/Atom для синдикации с помощью [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a04f6-106">Demonstrates how to create an RSS/Atom feed for syndication with [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- [<span data-ttu-id="8a57b-107">Слабо типизированные расширения</span><span class="sxs-lookup"><span data-stu-id="8a57b-107">Loosely-Typed Extensions</span></span>](../../../../docs/framework/wcf/samples/loosely-typed-extensions-sample.md)  
- <span data-ttu-id="8a57b-108">Иллюстрирует основные приемы работы с данными расширения.</span><span class="sxs-lookup"><span data-stu-id="8a57b-108">Demonstrates the basic techniques for working with extension data.</span></span>
+ [<span data-ttu-id="a04f6-107">Слабо типизированные расширения</span><span class="sxs-lookup"><span data-stu-id="a04f6-107">Loosely-Typed Extensions</span></span>](../../../../docs/framework/wcf/samples/loosely-typed-extensions-sample.md)  
+ <span data-ttu-id="a04f6-108">Иллюстрирует основные приемы работы с данными расширения.</span><span class="sxs-lookup"><span data-stu-id="a04f6-108">Demonstrates the basic techniques for working with extension data.</span></span>

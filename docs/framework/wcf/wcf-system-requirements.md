@@ -14,24 +14,25 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 65f5c2e8ac0a767d3ecc4d270ac9280a8cc78bfc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 81f79691424bb48679605e385785bd7bf11b4db5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="wcf-system-requirements"></a><span data-ttu-id="ed2dd-102">Требования WCF к системе</span><span class="sxs-lookup"><span data-stu-id="ed2dd-102">WCF System Requirements</span></span>
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]<span data-ttu-id="ed2dd-103"> является инфраструктурой связи, используемой для создания распределенных приложений.</span><span class="sxs-lookup"><span data-stu-id="ed2dd-103"> is a communication infrastructure that is used to create distributed applications.</span></span> <span data-ttu-id="ed2dd-104">Ниже перечисляются требования, необходимые для работы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ed2dd-104">The following lists the requirements that enable [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] to run.</span></span>  
+# <a name="wcf-system-requirements"></a><span data-ttu-id="3e3bd-102">Требования WCF к системе</span><span class="sxs-lookup"><span data-stu-id="3e3bd-102">WCF System Requirements</span></span>
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]<span data-ttu-id="3e3bd-103"> является инфраструктурой связи, используемой для создания распределенных приложений.</span><span class="sxs-lookup"><span data-stu-id="3e3bd-103"> is a communication infrastructure that is used to create distributed applications.</span></span> <span data-ttu-id="3e3bd-104">Ниже перечисляются требования, необходимые для работы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3e3bd-104">The following lists the requirements that enable [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] to run.</span></span>  
   
-## <a name="system-requirements"></a><span data-ttu-id="ed2dd-105">Требования к системе</span><span class="sxs-lookup"><span data-stu-id="ed2dd-105">System Requirements</span></span>  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="ed2dd-106"> по умолчанию устанавливается в составе [!INCLUDE[wv](../../../includes/wv-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ed2dd-106"> is installed by default on [!INCLUDE[wv](../../../includes/wv-md.md)].</span></span>  
+## <a name="system-requirements"></a><span data-ttu-id="3e3bd-105">Требования к системе</span><span class="sxs-lookup"><span data-stu-id="3e3bd-105">System Requirements</span></span>  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="3e3bd-106"> по умолчанию устанавливается в составе [!INCLUDE[wv](../../../includes/wv-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3e3bd-106"> is installed by default on [!INCLUDE[wv](../../../includes/wv-md.md)].</span></span>  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="ed2dd-107"> также может устанавливаться в системы [!INCLUDE[wxpsp2](../../../includes/wxpsp2-md.md)], [!INCLUDE[ws2003r2](../../../includes/ws2003r2-md.md)] или [!INCLUDE[ws2003sp1](../../../includes/ws2003sp1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ed2dd-107"> can also be installed on [!INCLUDE[wxpsp2](../../../includes/wxpsp2-md.md)], [!INCLUDE[ws2003r2](../../../includes/ws2003r2-md.md)], or [!INCLUDE[ws2003sp1](../../../includes/ws2003sp1-md.md)].</span></span>  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="3e3bd-107"> также может устанавливаться в системы [!INCLUDE[wxpsp2](../../../includes/wxpsp2-md.md)], [!INCLUDE[ws2003r2](../../../includes/ws2003r2-md.md)] или [!INCLUDE[ws2003sp1](../../../includes/ws2003sp1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3e3bd-107"> can also be installed on [!INCLUDE[wxpsp2](../../../includes/wxpsp2-md.md)], [!INCLUDE[ws2003r2](../../../includes/ws2003r2-md.md)], or [!INCLUDE[ws2003sp1](../../../includes/ws2003sp1-md.md)].</span></span>  
   
- <span data-ttu-id="ed2dd-108">**Примечание** функциональность очереди сообщений (MSMQ) [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] поддерживается только в [!INCLUDE[wv](../../../includes/wv-md.md)], [!INCLUDE[ws2003r2](../../../includes/ws2003r2-md.md)], [!INCLUDE[ws2003sp1](../../../includes/ws2003sp1-md.md)], и [!INCLUDE[wxppro](../../../includes/wxppro-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ed2dd-108">**Note** The Message Queuing (MSMQ) functionality of [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] is supported only on [!INCLUDE[wv](../../../includes/wv-md.md)], [!INCLUDE[ws2003r2](../../../includes/ws2003r2-md.md)], [!INCLUDE[ws2003sp1](../../../includes/ws2003sp1-md.md)], and [!INCLUDE[wxppro](../../../includes/wxppro-md.md)].</span></span>  
+ <span data-ttu-id="3e3bd-108">**Примечание** функциональность очереди сообщений (MSMQ) [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] поддерживается только в [!INCLUDE[wv](../../../includes/wv-md.md)], [!INCLUDE[ws2003r2](../../../includes/ws2003r2-md.md)], [!INCLUDE[ws2003sp1](../../../includes/ws2003sp1-md.md)], и [!INCLUDE[wxppro](../../../includes/wxppro-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3e3bd-108">**Note** The Message Queuing (MSMQ) functionality of [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] is supported only on [!INCLUDE[wv](../../../includes/wv-md.md)], [!INCLUDE[ws2003r2](../../../includes/ws2003r2-md.md)], [!INCLUDE[ws2003sp1](../../../includes/ws2003sp1-md.md)], and [!INCLUDE[wxppro](../../../includes/wxppro-md.md)].</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ed2dd-109">См. также</span><span class="sxs-lookup"><span data-stu-id="ed2dd-109">See Also</span></span>  
- [<span data-ttu-id="ed2dd-110">Концептуальный обзор</span><span class="sxs-lookup"><span data-stu-id="ed2dd-110">Conceptual Overview</span></span>](../../../docs/framework/wcf/conceptual-overview.md)  
- [<span data-ttu-id="ed2dd-111">Базовое программирование для WCF</span><span class="sxs-lookup"><span data-stu-id="ed2dd-111">Basic WCF Programming</span></span>](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [<span data-ttu-id="ed2dd-112">Подробные сведения о возможностях WCF</span><span class="sxs-lookup"><span data-stu-id="ed2dd-112">WCF Feature Details</span></span>](../../../docs/framework/wcf/feature-details/index.md)  
- [<span data-ttu-id="ed2dd-113">Правила и рекомендации</span><span class="sxs-lookup"><span data-stu-id="ed2dd-113">Guidelines and Best Practices</span></span>](../../../docs/framework/wcf/guidelines-and-best-practices.md)
+## <a name="see-also"></a><span data-ttu-id="3e3bd-109">См. также</span><span class="sxs-lookup"><span data-stu-id="3e3bd-109">See Also</span></span>  
+ [<span data-ttu-id="3e3bd-110">Концептуальный обзор</span><span class="sxs-lookup"><span data-stu-id="3e3bd-110">Conceptual Overview</span></span>](../../../docs/framework/wcf/conceptual-overview.md)  
+ [<span data-ttu-id="3e3bd-111">Базовое программирование для WCF</span><span class="sxs-lookup"><span data-stu-id="3e3bd-111">Basic WCF Programming</span></span>](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [<span data-ttu-id="3e3bd-112">Подробные сведения о возможностях WCF</span><span class="sxs-lookup"><span data-stu-id="3e3bd-112">WCF Feature Details</span></span>](../../../docs/framework/wcf/feature-details/index.md)  
+ [<span data-ttu-id="3e3bd-113">Правила и рекомендации</span><span class="sxs-lookup"><span data-stu-id="3e3bd-113">Guidelines and Best Practices</span></span>](../../../docs/framework/wcf/guidelines-and-best-practices.md)
