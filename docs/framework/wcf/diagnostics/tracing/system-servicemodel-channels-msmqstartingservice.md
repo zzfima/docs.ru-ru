@@ -13,16 +13,17 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3f326f08689a75c7931ad87dcccb6d42c715ea65
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7e15544217886c6ef13ec61c5a79033f8417617b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsmsmqstartingservice"></a>System.ServiceModel.Channels.MsmqStartingService
 System.ServiceModel.Channels.MsmqStartingService  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Среда размещения запустила службу.  
   
 ## <a name="see-also"></a>См. также  

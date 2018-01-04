@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4aa9cacfaa966bbe37618406f4b1413dec433726
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d26386a0669c92b1b21559474c8f5f61862e6de7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="administration-and-diagnostics"></a>Администрирование и диагностика
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предоставляет широкий набор функций, благодаря которому можно отслеживать разные этапы времени существования приложения. Например, можно использовать конфигурацию для настройки служб и клиентов при развертывании. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] содержит большой набор счетчиков производительности, с помощью которых можно измерять производительность приложения. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] также предоставляет данные проверки службы в среде выполнения с помощью поставщика инструментария управления Windows (WMI) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Когда в приложении происходит ошибка или оно начинает функционировать неверно, журнал событий позволяет понять, серьезны ли причины нарушения. Также можно использовать журнал сообщений и функцию трассировки сообщений для того, чтобы понять, какие события происходят в приложении на всех этапах его работы. Эти функции помогают разработчикам и ИТ-специалистам устранять неполадки в приложении [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в случае его неверного функционирования.  
@@ -54,11 +55,11 @@ ms.lasthandoff: 12/02/2017
  [Развертывание служб](../../../../docs/framework/wcf/diagnostics/deploying-services.md)  
  [Справочник по исключениям](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)  
  [Ведение журнала событий](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Ведение журнала сообщений](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
+ [Ведение журналов сообщений](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
  [Редактор конфигурации (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
  [Средство просмотра трассировки служб (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
  [Средство регистрации ServiceModel](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)  
  [Трассировка](../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [С помощью инструментария WMI для диагностики](../../../../docs/framework/wcf/diagnostics/wmi/index.md)  
+ [Использование инструментария управления Windows для диагностики](../../../../docs/framework/wcf/diagnostics/wmi/index.md)  
  [Счетчики производительности](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)  
  [Средства Windows Communication Foundation](../../../../docs/framework/wcf/tools.md)

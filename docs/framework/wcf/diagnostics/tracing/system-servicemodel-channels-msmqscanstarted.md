@@ -13,16 +13,17 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 071b7135f6c3a91442bf50be2bcc567464ae8e7d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 64cc3e8edb60e17e6511358c8c356593bd2024a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsmsmqscanstarted"></a>System.ServiceModel.Channels.MsmqScanStarted
 System.ServiceModel.Channels.MsmqScanStarted  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Служба активации MSMQ запустила сканирование очередей.  
   
 ## <a name="see-also"></a>См. также  

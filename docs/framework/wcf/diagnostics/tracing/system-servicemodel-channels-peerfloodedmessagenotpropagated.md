@@ -13,16 +13,17 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b4488fc641fdb2d9af378ae087506acd6feb3829
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b70cd20b4daea80db6094e5d570ef59a0556cdd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelspeerfloodedmessagenotpropagated"></a>System.ServiceModel.Channels.PeerFloodedMessageNotPropagated
 Сообщение получено равноправным узлом, но не распространено на соседние узлы.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Эта трассировка возникает при обработке входящего переполняющего сообщения.  
   
 ## <a name="troubleshooting"></a>Устранение неполадок  

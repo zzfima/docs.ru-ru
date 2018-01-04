@@ -13,16 +13,17 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b929f0991155c3a00b6953c203223d889649cb08
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2f624a247eb57e8d0f3b28c6ef3bfd9e35daafac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsmsmqqueueclosed"></a>System.ServiceModel.Channels.MsmqQueueClosed
 System.ServiceModel.Channels.MsmqQueueClosed  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Очередь MSMQ закрыта.  
   
 ## <a name="see-also"></a>См. также  

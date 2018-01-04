@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c61ed70af791518ef5e03a0683842ae259d0c77
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0eaf28e0472399d8526ec624bd5cb91d6512b37c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelspeernodeauthenticationtimeout"></a>System.ServiceModel.Channels.PeerNodeAuthenticationTimeout
 Подтверждение безопасности не было успешно завершено в течение заданного времени.  

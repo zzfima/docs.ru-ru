@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2ced290c0644fcf89fdf3f87778e705794164b0f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 67e856aff583513fa8a16d289cf5190a9698c52c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-framework"></a>Инфраструктура службы
 В этом разделе перечислены все исключения, вызываемые данными инфраструктуры службы.  
@@ -77,7 +78,7 @@ ms.lasthandoff: 12/02/2017
 |SFxCannotImportAsParameters_DifferentWrapperNs|Контракт генерации сообщений с пространством имен упаковщика указанного сообщения не соответствует значению по умолчанию.|  
 |SFxCannotImportAsParameters_ElementIsNotNillable|Контракт генерации сообщений с указанным именем элемента из указанного пространства имен не отмечен как обнуляемый.|  
 |SFxCannotImportAsParameters_HeadersAreUnsupported|Контракт генерации сообщений с указанным сообщением имеет заголовки.|  
-|SFxCannotImportAsParameters_Message|Контракт генерации сообщений с указанной операцией имеет нетипизированное сообщение в качестве аргумента или возвращаемого типа.|  
+|SFxCannotImportAsParameters_Message|Контракт генерации сообщений с указанной операцией имеет нетипизированное сообщение в качестве аргумента или типа возвращаемого значения.|  
 |SFxCannotImportAsParameters_MessageHasProtectionLevel|Контракт генерации сообщений с указанным сообщением требует защиты.|  
 |SFxCannotImportAsParameters_NamespaceMismatch|Контракт генерации сообщений с указанным пространством имен частей сообщения не соответствует значению по умолчанию.|  
 |SFxCannotRequireBothSessionAndDatagram3|Указанный контракт задает параметр SessionMode.NotAllowed, другой указанный контракт задает параметр SessionMode.Required. Необходимо изменить одно из значений SessionMode или указать другой адрес (или ListenURI) для каждой конечной точки.|  
@@ -106,7 +107,7 @@ ms.lasthandoff: 12/02/2017
 |SFxDataContractSerializerDoesNotSupportBareArray|DataContractSerializer не поддерживает коллекцию, заданную в указанном элементе.|  
 |SFxDictionaryIsEmpty|Невозможно выполнить операцию, поскольку словарь пуст.|  
 |SFxDocEncodedNotSupported|Ошибка при отражении указанного объекта. Document-Encoded не поддерживается. Задайте для Use значение Literal, а для Style - значение RPC.|  
-|SFxDuplicateInitiatingActionAtSameVia|Эта служба имеет несколько конечных точек, выполняющих указанное прослушивание. Конечные точки совместно используют одно и то же инициирующее действие. Сообщения с этим действием будут пропущены, так как диспетчер не может определить правильную конечную точку для обработки такого сообщения.|  
+|SFxDuplicateInitiatingActionAtSameVia|Эта служба имеет несколько конечных точек, выполняющих указанное прослушивание. Конечные точки совместно используют одно и то же инициирующее действие. Сообщения с этим действием будут отброшены, так как диспетчер не может определить правильную конечную точку для обработки такого сообщения.|  
 |SFXEndpointBehaviorUsedOnWrongSide|Указанное поведение IEndpointBehavior нельзя использовать на сервере. Его можно применять только к клиентам.|  
 |SFxEndpointNoMatchingScheme|Не удается найти базовый адрес, соответствующий указанной схеме для конечной точки с указанной привязкой. Заданы зарегистрированные схемы базовых адресов.|  
 |SFxErrorCreatingMtomReader|При создании средства чтения для сообщения MTOM произошла ошибка.|  
@@ -129,14 +130,14 @@ ms.lasthandoff: 12/02/2017
 |SFxInvalidMessageBodyErrorDeserializingParameter|При попытке десериализации указанного параметра произошла ошибка. Дополнительные сведения см. в разделе InnerException.|  
 |SFxInvalidMessageBodyErrorSerializingParameter|При попытке сериализации указанного параметра произошла ошибка. Указано сообщение InnerException.  Дополнительные сведения см. в разделе InnerException.|  
 |SFxInvalidMessageBodyUnexpectedNode|При десериализации параметров обнаружен указанный непредвиденный узел в указанном пространстве имен.|  
-|SFxInvalidMessageContractSignature|Указанная операция имеет параметр или возвращенный тип с атрибутом MessageContractAttribute. Чтобы представить сообщение запроса с помощью контракта сообщения, операция должна иметь один параметр с атрибутом MessageContractAttribute. Чтобы представить сообщение ответа с помощью контракта сообщения, возвращенное значение операции должно быть типом, имеющим атрибут MessageContractAttribute. Операция не должна иметь параметры out или ref.|  
+|SFxInvalidMessageContractSignature|Указанная операция имеет параметр или тип возвращаемого значения с атрибутом MessageContractAttribute. Чтобы представить сообщение запроса с помощью контракта сообщения, операция должна иметь один параметр с атрибутом MessageContractAttribute. Чтобы представить сообщение ответа с помощью контракта сообщения, возвращенное значение операции должно быть типом, имеющим атрибут MessageContractAttribute. Операция не должна иметь параметры out или ref.|  
 |SFxInvalidReplyAction|В исходящем сообщении ответа для операции указано действие Action, однако в контракте для этой операции указано другое действие ReplyAction. Действие Action в сообщении должно соответствовать действию ReplyAction в контракте, или в контракте операции должно быть задано действие ReplyAction='*'.|  
 |SFxInvalidRequestAction|В исходящем сообщении запроса для операции указано действие Action, однако в контракте для этой операции указано другое действие RequestAction. Действие Action в сообщении должно соответствовать действию RequestAction в контракте, или в контракте операции должно быть задано действие RequestAction='*'.|  
 |SFxInvalidStaticOverloadCalledForDuplexChannelFactory1|Нельзя использовать статический метод CreateChannel с указанным контрактом, так как контракт определяет контракт обратного вызова. Используйте один из статических перегрузок CreateChannel на производстве DuplexChannelFactory\<TChannel >.|  
 |SFxInvalidStreamInRequest|Чтобы запрос в указанной операции был потоком, операция должна иметь один параметр с типом Stream.|  
 |SFxInvalidStreamInResponse|Чтобы ответ в указанной операции был потоком, операция должна иметь один выходной параметр или возвращенное значение с типом Stream.|  
 |SFxInvalidStreamInTypedMessage|Чтобы использовать потоки в программной модели контракта сообщения, указанный тип должен иметь один член MessageBodyMember типа Stream.|  
-|SFxInvalidUseOfPrimitiveOperationFormatter|Объекту PrimitiveOperationFormatter предоставлен параметр или возвращаемый тип, который он не поддерживает.|  
+|SFxInvalidUseOfPrimitiveOperationFormatter|Объекту PrimitiveOperationFormatter предоставлен параметр или тип возвращаемого значения, который он не поддерживает.|  
 |SFxMessageContractBaseTypeNotValid|Указанный тип определяет MessageContract, но также является производным от другого указанного типа, который не определяет MessageContract. Все объекты в указанной иерархии наследования должны определить MessageContract.|  
 |SFxMethodNotSupported1|Указанный метод не поддерживается для этого объекта. Это может произойти, если метод не помечен атрибутом OperationContractAttribute или если тип интерфейса не помечен атрибутом ServiceContractAttribute.|  
 |SFxMethodNotSupportedByType2|Указанный тип реализации ServiceHost не реализует указанный контракт службы.|  

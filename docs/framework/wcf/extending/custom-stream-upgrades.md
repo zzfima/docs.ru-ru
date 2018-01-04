@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 20b061418ee2dc6c3adcde5553d29e680d739582
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 73359c293f7d29c16702e826ed6caa61149935bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-stream-upgrades"></a>Пользовательские обновления потоков
 Ориентированные на потоки виды транспорта, например TCP и именованные каналы, работают с непрерывным потоком данных, установленным между клиентом и сервером. Поток реализуется объектом <xref:System.IO.Stream>. при обновлении потока клиенту требуется добавить дополнительный уровень протокола в стек каналов и он отправляет соответствующий запрос другому участнику коммуникационного канала. Обновление канала предполагает замену исходного объекта <xref:System.IO.Stream> на обновленный.  

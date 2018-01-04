@@ -13,16 +13,17 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b69fced8012c578f4b2ec3ec70bdbf60dcb644e9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7f0750f32b65aeae645de27eadbddc86e9cdb412
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelservicehostfaulted"></a>System.ServiceModel.ServiceHostFaulted
 System.ServiceModel.ServiceHostFaulted  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Сбой ServiceHost.  
   
  Данная трассировка показывает, что произошел сбой в одном из прослушивателей. Эту трассировку удобно использовать для отладки.  

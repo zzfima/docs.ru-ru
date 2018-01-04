@@ -13,16 +13,17 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 02d34a2d3aca32141c20032c8db5f700848b1f1c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d80d1dfe2b692a89d2d4f0ac4aeabe146d9ec120
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelcommunicationobjectclosed"></a>System.ServiceModel.CommunicationObjectClosed
 System.ServiceModel.CommunicationObjectClosed  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Объект связи был закрыт.  
   
 ## <a name="see-also"></a>См. также  

@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2e40669baadf27ee8d10d84961f27bfea3c997d1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 428e8852c9b1706e88b1688b4a1f2e36c167fe28
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>Синхронные сценарии с использованием HTTP, TCP или именованного канала
 В этом разделе описываются действия и перенаправления для различных сценариев синхронных запросов/ответов (с однопотоковым клиентом, с использованием HTTP, TCP или именованного канала). В разделе [асинхронные сценарии с использованием HTTP, TCP или именованного канала](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) Дополнительные сведения о многопоточных запросов.  
@@ -25,7 +26,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="synchronous-requestreply-without-errors"></a>Синхронный запрос/ответ без ошибок  
  В этом разделе описываются действия и перенаправления для реального сценария синхронных запросов/ответов (с однопотоковым клиентом).  
   
-### <a name="client"></a>Клиент  
+### <a name="client"></a>"Клиент";  
   
 #### <a name="establishing-communication-with-service-endpoint"></a>Установка связи с конечной точкой службы  
  Создается и открывается клиент. Для каждого из этих действий, внешнее действие (A) перенаправляется действию «Создать клиент» (B) и «Открыть клиент» (C) соответственно. Для каждого действия, которому оно перенаправляется, внешнее действие приостанавливается до момента обратного перенаправления (т. е. до выполнения кода ServiceModel).  

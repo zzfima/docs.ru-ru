@@ -13,16 +13,17 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: a86dfc65882826e23d2b5e3e5b627cb7622efbbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 86f7076ba4c66a4b31004faaacb281078ee27091
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelsecuritynegotiationauthenticatorattached"></a>System.ServiceModel.Security.NegotiationAuthenticatorAttached
 System.ServiceModel.Security.NegotiationAuthenticatorAttached  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Прикреплен NegotiationTokenAuthenticator.  
   
 ## <a name="see-also"></a>См. также  

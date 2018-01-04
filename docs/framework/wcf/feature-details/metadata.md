@@ -14,16 +14,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: affc9ed8f9e16834af8d7281ce9a7eaedd7d5e8e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8e4b0a724653f5366d6da96f511fac9e62f64816
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata"></a>Метаданные
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] обеспечивает инфраструктуру для экспорта, публикации, получения и импорта метаданных служб. Службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используют метаданные для описания взаимодействия с конечными точками служб, чтобы такие средства, как Svcutil.exe, могли автоматически создавать клиентский код для обращения к службе.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об архитектуре метаданных](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
  Высокоуровневое общее описание архитектуры метаданных.  
   
@@ -36,7 +37,7 @@ ms.lasthandoff: 12/02/2017
  [Публикация метаданных](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
  Описание способов публикации метаданных в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Получение метаданных](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
+ [Извлечение метаданных](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
  Описание различных способов извлечения метаданных.  
   
  [Использование метаданных](../../../../docs/framework/wcf/feature-details/using-metadata.md)  

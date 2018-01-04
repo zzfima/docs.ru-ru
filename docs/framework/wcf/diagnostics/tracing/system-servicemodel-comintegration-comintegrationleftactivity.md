@@ -13,16 +13,17 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1605e54b3082e2594729cb48c58034fdecd51740
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 53c707b35942014fe5b587923d2f06ecaba30b36
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationleftactivity"></a>System.ServiceModel.ComIntegration.ComIntegrationLeftActivity
 System.ServiceModel.ComIntegration.ComIntegrationLeftActivity  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  ComPlus: Действие COM+ прекращено.  
   
 ## <a name="see-also"></a>См. также  

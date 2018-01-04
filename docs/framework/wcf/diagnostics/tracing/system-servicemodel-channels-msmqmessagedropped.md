@@ -13,17 +13,18 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1d4b819b47d682a81bdcc031cc6b09604b072be7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f2f905c345db89e909920334a7dbb524095bc46b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsmsmqmessagedropped"></a>System.ServiceModel.Channels.MsmqMessageDropped
 Сообщение удалено из очереди MSMQ.  
   
-## <a name="description"></a>Описание  
- Данная трассировка указывает, что сообщение MSMQ было удалено. Сообщения MSMQ могут быть удалены, если [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] (при использовании либо с классом NetMsmqBinding, либо с классом MsmqIntegrationBinding) не удается их обработать. Такие сообщения считаются подозрительными.  
+## <a name="description"></a>Описание:  
+ Данная трассировка указывает, что сообщение MSMQ было отброшено. Сообщения MSMQ могут быть удалены, если [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] (при использовании либо с классом NetMsmqBinding, либо с классом MsmqIntegrationBinding) не удается их обработать. Такие сообщения считаются подозрительными.  
   
  Подозрительное сообщение удаляется, если свойству `ReceiveErrorHandling` класса NetMsmqBinding или класса MsmqIntegrationBinding присвоено значение `Drop`. Такое сообщение удаляется из очереди, и восстановить его после этого невозможно.  
   

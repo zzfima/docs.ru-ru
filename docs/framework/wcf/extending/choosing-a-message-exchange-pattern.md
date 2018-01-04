@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ab9a894ad57a5324d466e0eb94e49e2cf6104a19
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 961f5e84fb46a791127a9d80c0f03d2b87fdea77
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Выбор шаблона обмена сообщениями
 Первым шагом в создании пользовательского транспорта является необходимо решить, какие *шаблоны обмена сообщениями* (или шаблонов обмена сообщениями) требуются для канала, вы разрабатываете. В этом разделе описаны возможные варианты и различные требования. Это первая задача в списке задач разработки канала, описанной в [разработка каналов](../../../../docs/framework/wcf/extending/developing-channels.md).  

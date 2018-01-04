@@ -13,16 +13,17 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 98cc097ed0adac41fe8843940c1e35aab4c0e7d3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ab3d76437b1424e737639834ad3804a324f5ffc4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodeloverridingduplicateconfigurationkey"></a>System.ServiceModel.OverridingDuplicateConfigurationKey
 System.ServiceModel.OverridingDuplicateConfigurationKey  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Система конфигурации определила повторяющийся ключ в другой области конфигурации и переопределяет на более новое значение.  
   
 ## <a name="see-also"></a>См. также  

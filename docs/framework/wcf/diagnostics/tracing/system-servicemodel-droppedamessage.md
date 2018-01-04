@@ -13,16 +13,17 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c1e367f30ecf30fb7c599b7340950be0886d5ee2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a0e1d7a09b3d991b2967e9eaa1547d8a270a1080
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodeldroppedamessage"></a>System.ServiceModel.DroppedAMessage
 System.ServiceModel.DroppedAMessage  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Ответное сообщение было получено, но нет необработанных запросов, ожидающих это сообщение. Сообщение удаляется средой выполнения [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
   
  Эта трассировка может использоваться для отладки проблемы потери сообщений.  

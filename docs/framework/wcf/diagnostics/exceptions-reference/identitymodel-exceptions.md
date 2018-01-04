@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f38d09ef9b1ee2e620b42082a05c6832eec7c746
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 26bf6cb88d77fc9890a23c482913514f1dc856aa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="identitymodel-exceptions"></a>Исключения IdentityModel
 В этом разделе перечислены все исключения, создаваемые IdentityModel.  
@@ -77,7 +78,7 @@ ms.lasthandoff: 12/02/2017
 |TraceCodeSecurityTokenProviderOpened|Открыт поставщик маркера безопасности.|  
 |PublicKeyNotRSA|Открытый ключ не является ключом RSA.|  
 |InvalidReaderState|Указанное состояние недопустимо для предоставленного средства чтения входных данных.|  
-|UnableToResolveReferenceUriForSignature|Невозможно разрешить указанный в сигнатуре универсальный код ресурса (URI) для вычисления дайджеста.|  
+|UnableToResolveReferenceUriForSignature|Невозможно разрешить указанный в сигнатуре универсальный код ресурса (URI) для вычисления хэш-кода.|  
 |EmptyBase64Attribute|Для имени и пространства имен обязательного атрибута в base64-кодировке найдено пустое значение.|  
 |SAMLSubjectRequiresConfirmationMethodWhenConfirmationDataOrKeyInfoIsSpecified|Конструкция SAML SubjectConfirmation требует использования метода подтверждения Confirmation, если указаны данные Confirmation Data или KeyInfo.|  
 |SAMLAudienceRestrictionShouldHaveOneAudienceOnRead|Считываемое условие SamlAudienceRestrictionCondition должно содержать как минимум одно значение "Audience". Ни одно не найдено.|  

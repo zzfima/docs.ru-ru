@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ff3524a0b3ccc6f892f50a93874cfff5d0e1b67
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6a2e98e210ac1f472b3b6ffebb37de68a47a3f68
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelspeerfloodedmessagenotmatched"></a>System.ServiceModel.Channels.PeerFloodedMessageNotMatched
 Узел PeerNode получил сообщение, не соответствующее ни одному локальному каналу.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Эта трассировка возникает при обработке входящего переполняющего сообщения.  
   
 ## <a name="see-also"></a>См. также  

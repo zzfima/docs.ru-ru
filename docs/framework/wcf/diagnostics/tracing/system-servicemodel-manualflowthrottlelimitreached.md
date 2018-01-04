@@ -13,16 +13,17 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49b41e27847005c7187435229e030994df10df26
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 35f149423fc8c0cd2a25834742d7c8b79ad8d8c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelmanualflowthrottlelimitreached"></a>System.ServiceModel.ManualFlowThrottleLimitReached
 System.ServiceModel.ManualFlowThrottleLimitReached  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Система достигла предела, заданного ограничителем ManualFlowControlLimit. Значение регулировки, в зависимости от конкретного случая, может быть изменено с помощью изменения свойства ManualFlowControlLimit либо в классе ServiceHost, либо в классе InstanceContext.  
   
  Такая трассировка выдается, если ручной предел управления потоками первоначально снижается до 0. Последующие изменения до 0 не трассируются. Предел управления потоками в контексте экземпляра трассируется один раз для каждого контекста.  

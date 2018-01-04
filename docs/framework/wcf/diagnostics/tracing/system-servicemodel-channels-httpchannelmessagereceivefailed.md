@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1bbad8d743ff64aea923e7fbf62871e495253aea
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 46bc39237f0a6f0b9b25b9616782ec3e97fa22ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelshttpchannelmessagereceivefailed"></a>System.ServiceModel.Channels.HttpChannelMessageReceiveFailed
 Сбой получения сообщения по каналу HTTP.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Данная трассировка может выдаваться в качестве предупреждения или ошибки. В обоих случаях трассировка выдается, если при входящем HTTP-запросе не найден совместимый прослушиватель и HTTP-запрос получил отказ. Это может произойти по той причине, что HTTP-команда запроса не была распознана прослушивателем HTTP, либо потому что прослушиватель ожидал передачи данных по адресу, на который был направлен запрос. Данная трассировка выдается как предупреждение при независимом размещении и как ошибка при размещении службы в IIS.  
   
 ## <a name="see-also"></a>См. также  

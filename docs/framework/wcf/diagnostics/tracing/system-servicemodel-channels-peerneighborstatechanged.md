@@ -13,16 +13,17 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1b7ee6cda688472ba3b038d1fa93fcb7b29565d8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0b483d93d83dedf1ccf6da06a415f24f911dbb2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelspeerneighborstatechanged"></a>System.ServiceModel.Channels.PeerNeighborStateChanged
 Состояние соседнего однорангового узла изменилось.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Эта трассировка появилась при попытке изменить состояние соседнего однорангового узла.  
   
 ## <a name="see-also"></a>См. также  

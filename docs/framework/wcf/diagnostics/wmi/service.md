@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 027366e7bf7abd285ef65da2040514b4b9908213
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f7b631ede7bd011a92003dc5f6083c1c427d990e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service"></a>Служба
 Служба  
@@ -55,7 +56,7 @@ class Service
   
  Базовые адреса, используемые службой.  
   
-### <a name="behaviors"></a>Расширения функциональности  
+### <a name="behaviors"></a>поведения  
  Тип данных: массив Behavior  
   
  Тип доступа: только для чтения  
@@ -97,7 +98,7 @@ class Service
   
  Параметры метаданных службы.  
   
-### <a name="name"></a>Имя  
+### <a name="name"></a>name  
  Тип данных: string  
   
  Тип доступа: только для чтения  

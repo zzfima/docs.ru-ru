@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1386d9ac7f58e4dd692bbca3ca3915bc3fe453f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e04ad6bd021acb6307fe6ccfe5d473b2c3541538
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsfailedpipeconnect"></a>System.ServiceModel.Channels.FailedPipeConnect
 Сбой попытки соединения с конечной точкой именованного канала. По истечении заданного промежутка времени выполнена еще одна попытка.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Данная информационная трассировка показывает сбой соединения с конечной точкой именованного канала. Возможная причина: не найдена или занята конечная точка именованного канала. Через короткие промежутки времени производится несколько дополнительных попыток, пока одна из них не будет успешной, или до истечения времени, заданного свойством OpenTimeout.  
   
 ## <a name="see-also"></a>См. также  

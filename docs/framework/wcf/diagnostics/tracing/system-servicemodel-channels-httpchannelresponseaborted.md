@@ -13,16 +13,17 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e1b52f70c4323227bbbd91047a82efcf1a89abec
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6a60e47193c069abc584007f27d0d1e5ecf1ee35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelshttpchannelresponseaborted"></a>System.ServiceModel.Channels.HttpChannelResponseAborted
 Сбой отправки сообщения ответа по каналу HTTP.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Данная трассировка-предупреждение показывает, что отправка ответа по каналу HTTP была прервана. В дополнительных сведениях этой трассировки содержится причина прерывания или сообщение, переданное методу Abort.  
   
 ## <a name="see-also"></a>См. также  
