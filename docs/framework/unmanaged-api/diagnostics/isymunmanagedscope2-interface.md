@@ -19,18 +19,19 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5eed6061c8108fcf91f8ac1ac9ff139da426f0e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f6d2ec846a34b2d3424f7bf8b54f1d4d12d4102e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="isymunmanagedscope2-interface"></a>Интерфейс ISymUnmanagedScope2
 Представляет лексическую область видимости в пределах одного метода. Этот интерфейс расширяет интерфейс [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) интерфейс с методами, которые получают сведения о константы, определенные в области.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод GetConstantCount](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-getconstantcount-method.md)|Возвращает количество констант, определенных в данной области.|  
 |[Метод GetConstants](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-getconstants-method.md)|Получает локальные константы, определенные в этой области.|  
@@ -40,4 +41,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Интерфейсы хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
- [ISymUnmanagedScope-интерфейс](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+ [Интерфейс ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

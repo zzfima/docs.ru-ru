@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 00cb6d92d23f3cb1bb4af8f24901ab5c23b8738b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8ddf1eab6ea4689e330137fba1a676fd86ed2187
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugregistersetsetregisters-method"></a>Метод ICorDebugRegisterSet::SetRegisters
 `SetRegisters`не реализован в .NET Framework версии 2.0. Не вызывайте этот метод.  
@@ -53,5 +54,5 @@ HRESULT SetRegisters (
  **Версии платформы .NET framework:** 1.1, 1.0  
   
 ## <a name="see-also"></a>См. также  
- [ICorDebugRegisterSet-интерфейс](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)  
- [ICorDebugRegisterSet2-интерфейс](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+ [Интерфейс ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)  
+ [Интерфейс ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)

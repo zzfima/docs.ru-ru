@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 59ff5cfd93d8077388694ee2e155133a88319c47
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9ad287fedbc06768dd683c254292e0c28760d59a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrpolicymanagersetunhandledexceptionpolicy-method"></a>Метод ICLRPolicyManager::SetUnhandledExceptionPolicy
 Определяет поведение среды common language runtime (CLR), при возникновении необработанного исключения.  
@@ -66,7 +67,7 @@ HRESULT SetUnhandledExceptionPolicy (
  **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Eclrunhandledexception-перечисление](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md)  
- [ICLRControl-интерфейс](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
+ [Перечисление EClrUnhandledException](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md)  
+ [Интерфейс ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
  [Интерфейс ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)  
- [IHostPolicyManager-интерфейс](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+ [Интерфейс IHostPolicyManager](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)

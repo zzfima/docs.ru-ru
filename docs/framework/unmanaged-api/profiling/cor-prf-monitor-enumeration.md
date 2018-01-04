@@ -19,11 +19,12 @@ caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c0e2f774bd178676494f24364c7b8890665c3810
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e6dc135681d11a496dbc27553d46a5d101b6d7b9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corprfmonitor-enumeration"></a>Перечисление COR_PRF_MONITOR
 Содержит значения, используемые для указания поведения, возможностей или событий, на которые желает подписаться профилировщик.  
@@ -101,7 +102,7 @@ typedef enum {
 } COR_PRF_MONITOR;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
  Ниже приводится список `COR_PRF_MONITOR` члены перечисления по категориям. Используются следующие категории:  
   
 -   [Нет установленных флагов](#None)  
@@ -124,7 +125,7 @@ typedef enum {
 <a name="Callback"></a>   
 ### <a name="callback-flags"></a>Флаги обратного вызова  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`COR_PRF_MONITOR_ALL`|Активирует все события обратного вызова.|  
 |`COR_PRF_MONITOR_APPDOMAIN_LOADS`|Элементы управления `AppDomainCreation*` и `AppDomainShutdown*` обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейса.|  
@@ -150,7 +151,7 @@ typedef enum {
 <a name="Feature"></a>   
 ### <a name="feature-enabling-flags"></a>Флаги включения компонентов  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`COR_PRF_ENABLE_FRAME_INFO`|Включает извлечение точного `ClassID` для базовой функции путем вызова [GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) метод с `COR_PRF_FRAME_INFO` значения, возвращенного [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) обратного вызова.|  
 |`COR_PRF_ENABLE_FUNCTION_ARGS`|Включает трассировку аргумента с помощью [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) обратного вызова или [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) обратного вызова и [GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) метод.|  
@@ -164,7 +165,7 @@ typedef enum {
 <a name="Config"></a>   
 ### <a name="configuration-flags"></a>Флаги конфигурации  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`COR_PRF_DISABLE_ALL_NGEN_IMAGES`|Запрещает загрузку всех машинных образов (включая образы, улучшенные профилировщиком).  Если этот флаг и флаг `COR_PRF_USE_PROFILE_IMAGES` указаны, используется `COR_PRF_DISABLE_ALL_NGEN_IMAGES`.|  
 |`COR_PRF_DISABLE_INLINING`|Отключает все встраивания.|  
@@ -175,7 +176,7 @@ typedef enum {
 <a name="Composite"></a>   
 ### <a name="composite-flags"></a>Составные флаги  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`COR_PRF_ALL`|Представляет все значения флагов `COR_PRF_MONITOR`.|  
 |`COR_PRF_ALLOWABLE_AFTER_ATTACH`|Представляет все флаги `COR_PRF_MONITOR`, которые могут быть установлены после присоединения профилировщика к выполняющемуся приложению. В разделе "Синтаксис" указываются отдельные флаги, которые присутствуют в этой битовой маске.|  

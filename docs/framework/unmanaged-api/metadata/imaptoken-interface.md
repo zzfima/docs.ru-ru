@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7181755517830a1034ce8c529a0c11ba05794f3f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 11c408506de2b2aa68c27c487e6a456a482468ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imaptoken-interface"></a>Интерфейс IMapToken
 Предоставляет возможности сопоставления между сборками.  
@@ -33,9 +34,9 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
-|[MAP-метод](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|Сопоставляет связь между двумя сборками, используя подписи метаданных.|  
+|[Метод Map](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|Сопоставляет связь между двумя сборками, используя подписи метаданных.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  

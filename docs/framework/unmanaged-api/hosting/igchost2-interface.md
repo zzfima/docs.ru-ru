@@ -19,11 +19,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c6706696e3fd5158d2b49a4d114d978a26510b67
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a616e724d6fb26734fcda48d6a9b39605e0284a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="igchost2-interface"></a>Интерфейс IGCHost2
 Предоставляет методы для получения сведений о системе сборки мусора, а также для управления некоторыми аспектами сбора мусора.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)|Задает размер сегмента и максимальный размер для поколения 0. Позволяет поколения 0 и больше размера сегментов `DWORD`.|  
   
@@ -49,4 +50,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>См. также  
  [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
  [Интерфейсы размещения CLR](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  
- [Компонентный класс CorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
+ [Кокласс CorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

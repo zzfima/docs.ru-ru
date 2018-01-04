@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 22bd851ded9b2aa3fd6d5b6bdf43bbf0be5b45af
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d7b6ec470fae6adb76a9b78fdab9b871edc0ca49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorthreadpool-interface"></a>Интерфейс ICorThreadpool
 Предоставляет методы для доступа к пулу потоков.  
@@ -33,19 +34,19 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
-|[Corregisterwaitforsingleobject-метод](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corregisterwaitforsingleobject-method.md)|Зарезервировано только для внутреннего использования.|  
-|[Corunregisterwait-метод](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corunregisterwait-method.md)|Зарезервировано только для внутреннего использования.|  
-|[Corqueueuserworkitem-метод](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md)|Зарезервировано только для внутреннего использования.|  
-|[Corcreatetimer-метод](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corcreatetimer-method.md)|Зарезервировано только для внутреннего использования.|  
-|[Corchangetimer-метод](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corchangetimer-method.md)|Зарезервировано только для внутреннего использования.|  
-|[Cordeletetimer-метод](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-cordeletetimer-method.md)|Зарезервировано только для внутреннего использования.|  
-|[Corbindiocompletioncallback-метод](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corbindiocompletioncallback-method.md)|Зарезервировано только для внутреннего использования.|  
-|[Corcallorqueueuserworkitem-метод](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corcallorqueueuserworkitem-method.md)|Зарезервировано только для внутреннего использования.|  
-|[Corsetmaxthreads-метод](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corsetmaxthreads-method.md)|Зарезервировано только для внутреннего использования.|  
-|[Corgetmaxthreads-метод](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetmaxthreads-method.md)|Зарезервировано только для внутреннего использования.|  
-|[Corgetavailablethreads-метод](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetavailablethreads-method.md)|Зарезервировано только для внутреннего использования.|  
+|[Метод CorRegisterWaitForSingleObject](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corregisterwaitforsingleobject-method.md)|Зарезервировано только для внутреннего использования.|  
+|[Метод CorUnregisterWait](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corunregisterwait-method.md)|Зарезервировано только для внутреннего использования.|  
+|[Метод CorQueueUserWorkItem](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md)|Зарезервировано только для внутреннего использования.|  
+|[Метод CorCreateTimer](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corcreatetimer-method.md)|Зарезервировано только для внутреннего использования.|  
+|[Метод CorChangeTimer](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corchangetimer-method.md)|Зарезервировано только для внутреннего использования.|  
+|[Метод CorDeleteTimer](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-cordeletetimer-method.md)|Зарезервировано только для внутреннего использования.|  
+|[Метод CorBindIoCompletionCallback](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corbindiocompletioncallback-method.md)|Зарезервировано только для внутреннего использования.|  
+|[Метод CorCallOrQueueUserWorkItem](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corcallorqueueuserworkitem-method.md)|Зарезервировано только для внутреннего использования.|  
+|[Метод CorSetMaxThreads](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corsetmaxthreads-method.md)|Зарезервировано только для внутреннего использования.|  
+|[Метод CorGetMaxThreads](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetmaxthreads-method.md)|Зарезервировано только для внутреннего использования.|  
+|[Метод CorGetAvailableThreads](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetavailablethreads-method.md)|Зарезервировано только для внутреннего использования.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  

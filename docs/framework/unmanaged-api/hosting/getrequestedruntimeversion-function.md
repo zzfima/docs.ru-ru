@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bfac4e32841b8a8332a1f4124c1326f1ef7da1f8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 13309a7362f468d3711176db2adc7a82e3b949d3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getrequestedruntimeversion-function"></a>Функция GetRequestedRuntimeVersion
 Возвращает номер версии общеязыковой среды выполнения (CLR), запрашиваемые указанного приложения. Если эта версия не установлена, Получает самую последнюю версию, установленную перед запрошенной версии.  
@@ -59,11 +60,11 @@ HRESULT GetRequestedRuntimeVersion (
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает стандартные коды ошибок модели объектов компонентов (COM), как определено в файле WinError.h, кроме следующих значений.  
   
-|Код возврата|Описание|  
+|Код возврата|Описание:|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
 |ERROR_INSUFFICIENT_BUFFER|Размер буфера версии недостаточен для хранения строки версии.|  
-|E_POINTER|Параметр `pdwLength` имеет значение NULL.|  
+|E_POINTER|Параметр `pdwLength` имеет значение null.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
@@ -75,6 +76,6 @@ HRESULT GetRequestedRuntimeVersion (
  **Версии платформы .NET framework:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [GetRequestedRuntimeInfo-функция](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
- [GetVersionFromProcess-функция](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)  
+ [Функция GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
+ [Функция GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)  
  [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

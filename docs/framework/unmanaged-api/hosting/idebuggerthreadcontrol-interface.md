@@ -19,22 +19,23 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7e3f8d04a47607958ff5d439b501a6de9bbc5b02
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 297a66f9466b00dec4d32f7d8a6e2bd13b6e5655
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebuggerthreadcontrol-interface"></a>Интерфейс IDebuggerThreadControl
 Предоставляет методы для уведомления узла о блокировании и разблокировании потоков службами отладки.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
-|[Threadisblockingfordebugger-метод](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-threadisblockingfordebugger-method.md)|Уведомляет узел, что поток, передающий данный обратный вызов о блок в службах отладки.|  
-|[Releaseallruntimethreads-метод](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-releaseallruntimethreads-method.md)|Уведомляет узел, что службы отладки собираются разблокировать все заблокированные потоки.|  
-|[Startblockingfordebugger-метод](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-startblockingfordebugger-method.md)|Уведомляет узел, что службы отладки собираются начать блокирование всех потоков.|  
+|[Метод ThreadIsBlockingForDebugger](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-threadisblockingfordebugger-method.md)|Уведомляет узел, что поток, передающий данный обратный вызов о блок в службах отладки.|  
+|[Метод ReleaseAllRuntimeThreads](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-releaseallruntimethreads-method.md)|Уведомляет узел, что службы отладки собираются разблокировать все заблокированные потоки.|  
+|[Метод StartBlockingForDebugger](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-startblockingfordebugger-method.md)|Уведомляет узел, что службы отладки собираются начать блокирование всех потоков.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  

@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 630dab4fec8c37bd776b68870a53ab20e4050e06
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9568d9420c686d5a906fb7f90570fe6a1d12046d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corbindtocurrentruntime-function"></a>Функция CorBindToCurrentRuntime
 Загружает общеязыковой среды выполнения (CLR) в процесс, используя сведения, хранящиеся в XML-файл. Формат XML-файла моделируется после стандартного файла конфигурации приложения. Дополнительные сведения о файлах конфигурации см. в разделе [Схема файла конфигурации](../../../../docs/framework/configure-apps/file-schema/index.md).  
@@ -70,9 +71,9 @@ HRESULT CorBindToCurrentRuntime (
  **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [CorBindToRuntime-функция](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)  
- [CorBindToRuntimeByCfg-функция](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)  
- [CorBindToRuntimeEx-функция](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)  
- [CorBindToRuntimeHost-функция](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)  
- [ICorRuntimeHost-интерфейс](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)  
+ [Функция CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)  
+ [Функция CorBindToRuntimeByCfg](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)  
+ [Функция CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)  
+ [Функция CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)  
+ [Интерфейс ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)  
  [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

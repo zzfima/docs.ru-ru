@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a9c854360881426f2fc7fc9e401da1dc93b9bd84
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4573ec44253b1b0f26ae62591db149f0447d3935
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corprfsnapshotinfo-enumeration"></a>Перечисление COR_PRF_SNAPSHOT_INFO
 Указывает, какой объем данных для обратной передачи со снимком стека в каждом вызове функции профилировщика [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) функции.  
@@ -38,9 +39,9 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
 } COR_PRF_SNAPSHOT_INFO;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Члены|Описание|  
+|Участники|Описание:|  
 |-------------|-----------------|  
 |`COR_PRF_SNAPSHOT_DEFAULT`|Указывает, что значения должны передаваться для всех `StackSnapshotCallback` параметров, за исключением `context` параметра.|  
 |`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|Указывает, что значения должны передаваться для всех `StackSnapshotCallback` параметров, включая `context` параметра.|  

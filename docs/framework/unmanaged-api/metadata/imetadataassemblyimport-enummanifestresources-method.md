@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 25d8b63e2f40566164274715e562960eafbb83e5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: fa31441d060744bb17fc26a61daa7e655aa378fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>Метод IMetaDataAssemblyImport::EnumManifestResources
 Получает указатель на перечислитель для ресурсов, на которые ссылается манифест текущей сборки.  
@@ -56,7 +57,7 @@ HRESULT EnumManifestResources (
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|HRESULT|Описание|  
+|HRESULT|Описание:|  
 |-------------|-----------------|  
 |`S_OK`|`EnumManifestResources`успешно возвращен.|  
 |`S_FALSE`|Существуют маркеры для перечисления отсутствуют. В этом случае `pcTokens` присваивается нулевое значение.|  
@@ -71,4 +72,4 @@ HRESULT EnumManifestResources (
  **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Imetadataassemblyimport-интерфейс](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+ [Интерфейс IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

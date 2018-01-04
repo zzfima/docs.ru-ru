@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e2396219a5e4bfd95a9dc7134e2e603ed7a15a3d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 03deb62a84a1e9c6cee898fe0023c34b8c538ece
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corvalidateimage-function"></a>Функция _CorValidateImage
 Проверяет образы управляемого модуля и уведомляет загрузчик операционной системы после их загрузки.  
@@ -47,7 +48,7 @@ STDAPI _CorValidateImage (
 ## <a name="return-value"></a>Возвращаемое значение  
  Эта функция возвращает стандартные значения `E_INVALIDARG`, `E_OUTOFMEMORY`, `E_UNEXPECTED`, и `E_FAIL`, а также следующие значения.  
   
-|Возвращаемое значение|Описание|  
+|Возвращаемое значение|Описание:|  
 |------------------|-----------------|  
 |`STATUS_INVALID_IMAGE_FORMAT`|Недопустимый образ. Это значение имеет HRESULT 0xC000007BL.|  
 |`STATUS_SUCCESS`|Образ является допустимым. Это значение имеет HRESULT 0x00000000L.|  

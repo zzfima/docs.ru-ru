@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c273a1690828e37c8f7fcf5071e42e5bb2c58228
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 889d8ca00726c0b271a1d43519803af73018b2a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrmetahostquerylegacyv2runtimebinding-method"></a>Метод ICLRMetaHost::QueryLegacyV2RuntimeBinding
 Возвращает интерфейс, представляющий среду выполнения, к которому устаревшей политике активации связывается, например, с помощью `useLegacyV2RuntimeActivationPolicy` атрибут [ \<запуска > элемент](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) запись файла конфигурации, напрямую используя Устаревшие интерфейсы API активации или вызывая [ICLRRuntimeInfo::BindAsLegacyV2Runtime](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-bindaslegacyv2runtime-method.md) метод.  
@@ -66,5 +67,5 @@ HRESULT QueryLegacyV2RuntimeBinding (
  **Версии платформы .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [ICLRMetaHost-интерфейс](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
+ [Интерфейс ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
  [Размещение](../../../../docs/framework/unmanaged-api/hosting/index.md)

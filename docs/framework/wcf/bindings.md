@@ -14,16 +14,17 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 36924bdc79a9789a991befb53c0025b7ea1fd601
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e878aadf1c7df6042323c008ff52a4be8a9d817f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-bindings"></a>Привязки Windows Communication Foundation
-Привязки указывают способ взаимодействия конечных точек службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] с другими конечными точками. В привязке должен быть указан как минимум используемый транспорт (например, HTTP или TCP). Через привязки также можно задать другие характеристики, такие как поддержка безопасности и транспорта.  
+Привязки указывают способ взаимодействия конечных точек службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] с другими конечными точками. В привязке должен быть указан как минимум используемый транспорт (например, HTTP или TCP). Через привязки также можно задать другие характеристики, такие как поддержка безопасности и транзакций.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о привязках WCF](../../../docs/framework/wcf/bindings-overview.md)  
  Общие сведения о функциях привязок [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], список предоставляемых системой привязок и способы их определения и изменения.  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Channels>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Конечные точки: Адреса, привязки и контракты](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Конечные точки: адреса, привязки и контракты](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
   
  [Привязки](../../../docs/framework/wcf/feature-details/bindings.md)  
   

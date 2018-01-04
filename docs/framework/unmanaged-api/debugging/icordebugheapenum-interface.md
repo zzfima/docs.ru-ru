@@ -19,18 +19,19 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dbc97aec2fc9758df17767188c6b4d044b5016fa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e317cb24e0eeaeaa38833433791eb546ee3c0478
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugheapenum-interface"></a>Интерфейс ICorDebugHeapEnum
 Предоставляет перечислитель для объектов в управляемой куче. Этот интерфейс является подклассом ICorDebugEnum-интерфейс.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод Next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md)|Возвращает заданное число [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) экземпляров, которые содержат сведения об объектах в управляемой куче.|  
   

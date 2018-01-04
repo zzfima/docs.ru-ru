@@ -19,18 +19,19 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c33eaa36313f0cf6aae904761fb40bb2dbf9d753
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f501d49f007e22c6f7db0e759ee19b40f87b4b33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugnativeframe2-interface"></a>Интерфейс ICorDebugNativeFrame2
 Предоставляет методы, проверяющие для кадров наличие взаимоотношений типа "дочерний-родительский".  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод IsChild](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ischild-method.md)|Определяет, является ли текущий кадр является дочерней рамкой.|  
 |[Метод IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)|Определяет, является ли указанный кадр родительским для текущего кадра.|  

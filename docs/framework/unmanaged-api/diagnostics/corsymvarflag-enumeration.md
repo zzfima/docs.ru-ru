@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: edbbc8109eb44494c7f4fac0ed8756e23bdc955b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b548a66f471eb3641da7407ed14d107c6b4fec8c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corsymvarflag-enumeration"></a>Перечисление CorSymVarFlag
 Указывает, является ли переменной компилятором.  
@@ -37,9 +38,9 @@ typedef enum CorSymVarFlag
 } CorSymVarFlag;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`VAR_IS_COMP_GEN`|Указывает, что данная переменная, созданная компилятором.|  
   

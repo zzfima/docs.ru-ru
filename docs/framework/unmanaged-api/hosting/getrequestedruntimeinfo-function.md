@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: cca74a1ff66392608802eacedcd74bb673919e8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 49459001d3764988eff7b7a4381a843c44e596cb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getrequestedruntimeinfo-function"></a>Функция GetRequestedRuntimeInfo
 Получает сведения о версии и каталоге о общеязыковой среды выполнения (CLR), запрошенный приложением.  
@@ -87,7 +88,7 @@ HRESULT GetRequestedRuntimeInfo (
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает стандартные коды ошибок модели объектов компонентов (COM), как определено в файле WinError.h, кроме следующих значений.  
   
-|Код возврата|Описание|  
+|Код возврата|Описание:|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
 |ERROR_INSUFFICIENT_BUFFER|Размер буфера каталога недостаточно велик для хранения путь к каталогу.<br /><br /> -или-<br /><br /> Размер буфера версии недостаточен для хранения строки версии.|  
@@ -127,6 +128,6 @@ HRESULT GetRequestedRuntimeInfo (
  **Версии платформы .NET framework:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [GetRequestedRuntimeVersion-функция](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
- [GetVersionFromProcess-функция](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)  
+ [Функция GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
+ [Функция GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)  
  [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

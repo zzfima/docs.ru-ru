@@ -20,16 +20,17 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 50ef54c90609bf8ef1e3a943664daef95f50d926
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9a9550bf1e3e5500356584b1bdd53f5d3061e190
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>Интерфейсы хранилища символов диагностики
 В этом разделе описываются неуправляемые интерфейсы, позволяющие компилятору генерировать символьную информацию для использования отладчиком.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Интерфейс IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)  
  Предоставляет методы для отображения текущих привязки сведений о выполняемом приложении.  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 10/18/2017
  [Интерфейс ISymUnmanagedBinder3](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)  
  Представляет модуль привязки символов для неуправляемого кода и расширяет `ISymUnmanagedBinder` интерфейса.  
   
- [Isymunmanagedconstant-интерфейс](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)  
+ [Интерфейс ISymUnmanagedConstant](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)  
  Предоставляет доступ к неуправляемым константам.  
   
  [Интерфейс ISymUnmanagedDispose](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)  
@@ -78,13 +79,13 @@ ms.lasthandoff: 10/18/2017
  [Интерфейс ISymUnmanagedENCUpdate](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)  
  Предоставляет методы для "Изменить и продолжить".  
   
- [ISymUnmanagedMethod-интерфейс](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)  
+ [Интерфейс ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)  
  Представляет метод в хранилище символов.  
   
- [ISymUnmanagedNamespace-интерфейс](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)  
+ [Интерфейс ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)  
  Представляет пространство имен.  
   
- [ISymUnmanagedReader-интерфейс](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)  
+ [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)  
  Представляет средство чтения символов, который предоставляет доступ к документам, методам и переменным в хранилище символов.  
   
  [Интерфейс ISymUnmanagedReader2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)  
@@ -93,7 +94,7 @@ ms.lasthandoff: 10/18/2017
  [Интерфейс ISymUnmanagedReaderSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)  
  Предоставляет методы, получающие сведения о поиске символов.  
   
- [ISymUnmanagedScope-интерфейс](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)  
+ [Интерфейс ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)  
  Представляет лексическую область видимости в пределах одного метода.  
   
  [Интерфейс ISymUnmanagedScope2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)  
@@ -105,16 +106,16 @@ ms.lasthandoff: 10/18/2017
  [Интерфейс ISymUnmanagedSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)  
  Предоставляет методы, получающие сведения о пути поиска.  
   
- [ISymUnmanagedVariable-интерфейс](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)  
+ [Интерфейс ISymUnmanagedVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)  
  Представляет переменную, например параметр, локальную переменную или поле.  
   
- [ISymUnmanagedWriter-интерфейс](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
+ [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
  Представляет модуль записи символов и предоставляет методы для определения документов, точек следования, лексические области и переменные.  
   
  [Интерфейс ISymUnmanagedWriter2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)  
  Представляет модуль записи символов и предоставляет методы для определения документов, точек следования, лексические области и переменные. Расширяет `ISymUnmanagedWriter` интерфейса.  
   
- [Isymunmanagedwriter3-интерфейс](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)  
+ [Интерфейс ISymUnmanagedWriter3](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)  
  Представляет модуль записи символов и предоставляет методы для определения документов, точек следования, лексические области и переменные. Расширяет `ISymUnmanagedWriter` интерфейса.  
   
  [Интерфейс ISymUnmanagedWriter4](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-interface.md)  
@@ -126,6 +127,6 @@ ms.lasthandoff: 10/18/2017
 ## <a name="related-sections"></a>Связанные разделы  
  [Перечисления хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
   
- [Структуры хранения символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
+ [Структуры хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
   
  [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

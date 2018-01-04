@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9952ea1d8c806c9d3ac5357d933092fb82351484
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 65025384aa94ac363336bae7f37f8ea88a3bab67
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corprfexclauseinfo-structure"></a>Структура COR_PRF_EX_CLAUSE_INFO
 Хранит сведения об определенном экземпляре исключительного предложения и связанном с ним кадре.  
@@ -39,9 +40,9 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
 } COR_PRF_EX_CLAUSE_INFO;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`clauseType`|Значение [COR_PRF_CLAUSE_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md) перечисления, которое указывает тип предложения исключения кода, который только что введен или удален.|  
 |`programCounter`|Точка входа в машинный код обработчика условий — например, содержимое регистра X86 EIP.|  

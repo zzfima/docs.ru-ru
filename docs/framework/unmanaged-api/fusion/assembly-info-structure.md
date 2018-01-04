@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d532bbd2d338f942c09c4213620468a3361db5f6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 215d80c3d207c2f50cfbd74386915b0467692b57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assemblyinfo-structure"></a>Структура ASSEMBLY_INFO
 Содержит сведения о сборке, которая зарегистрирована в глобальном кэше сборок.  
@@ -40,9 +41,9 @@ typedef struct _ASSEMBLY_INFO {
 } ASSEMBLY_INFO;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`cbAssemblyInfo`|Размер в байтах структуры. Это поле зарезервировано для будущего расширения.|  
 |`dwAssemblyFlags`|Флаги, указывающие установки сведений о сборке. Поддерживаются следующие значения:<br /><br /> -ASSEMBLYINFO_FLAG_INSTALLED значение, которое указывает, что сборка установлена. Текущую версию платформы .NET Framework, всегда устанавливает `dwAssemblyFlags` это значение.<br />-ASSEMBLYINFO_FLAG_PAYLOADRESIDENT значение, которое указывает, что сборка является резидентной полезных данных. Текущую версию платформы .NET Framework никогда не задает `dwAssemblyFlags` это значение.|  

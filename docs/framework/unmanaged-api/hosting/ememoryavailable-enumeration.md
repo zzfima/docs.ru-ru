@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c378f2cd9b033e578ff15472a10a6dc295ad6539
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 596b174fa4ebac7e54e2f6b5f3ed044686fa515f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ememoryavailable-enumeration"></a>Перечисление EMemoryAvailable
 Содержит значения, указывающие объем свободной физической памяти на компьютере. Эти значения логически сопоставления с событиями для высокой и низкой памяти возвращается из `CreateMemoryResourceNotification` функции Win32 API.  
@@ -38,9 +39,9 @@ typedef enum {
 } EMemoryAvailable;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`eMemoryAvailableHigh`|Доступно достаточное количество физической памяти.|  
 |`eMemoryAvailableLow`|Доступен физической памяти очень мало.|  
@@ -59,4 +60,4 @@ typedef enum {
  **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Перечисления размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+ [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -17,16 +17,17 @@ ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a7069762dd95636399c53c98e8bdef6f00be62c1
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 9836d8d02bb81fc19a5b3a1714e32fcefeb8791d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="unmanaged-api-reference"></a>Справочник по неуправляемым API
 В данном разделе содержатся сведения о неуправляемых API, которые могут использоваться приложениями, связанными с управляемым кодом, например хост-приложениями среды выполнения, компиляторами, дизассемблерами, средствами запутывания, отладчиками и профилировщиками.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие типы данных](../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)  
  Содержит список используемых общих типы данных, в частности в неуправляемых API профилирования и отладки.  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/15/2017
  [Отладка](../../../docs/framework/unmanaged-api/debugging/index.md)  
  Описывает API отладки, позволяющий отладчику производить отладку кода, который выполняется в среде CLR.  
   
- [Хранилище диагностических символов](../../../docs/framework/unmanaged-api/diagnostics/index.md)  
+ [Хранилище символов диагностики](../../../docs/framework/unmanaged-api/diagnostics/index.md)  
  Описывает API хранилища диагностических символов, который позволяет компилятору генерировать символьную информацию для ее использования отладчиком.  
   
  [Fusion](../../../docs/framework/unmanaged-api/fusion/index.md)  

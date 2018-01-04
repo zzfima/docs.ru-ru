@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 434d853aae2404bb907e06ebf021a6d04be20c31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 82805aab8f375206f520eb57a88a750fba346a31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-support-for-the-statusbar-control-type"></a>Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления StatusBar
 > [!NOTE]
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="required-ui-automation-properties"></a>Требуемые свойства модели автоматизации пользовательского интерфейса  
  В следующей таблице перечислены свойства [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , значения или определения которых особенно актуальны для элементов управления "Индикатор выполнения". Дополнительные сведения о свойствах [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. в разделе [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
-|Свойство[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|Значение|Примечания|  
+|Свойство[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Значение|Примечания|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|См. примечания.|Значение этого свойства должно быть уникальным среди всех элементов управления в приложении.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|См. примечания.|Ограничивающий прямоугольник строки состояния должен охватывать все элементы управления, содержащиеся в ней.|  
@@ -55,8 +56,8 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|Элемент управления "Строка состояния" обычно не имеет метки.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|StatusBar|Это значение одинаково для всех инфраструктур пользовательского интерфейса.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"строка состояния"|Локализованная строка, соответствующая типу элемента управления StatusBar.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Элемент управления "Строка состояния" всегда имеет содержимое.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Элемент управления "Строка состояния" всегда является элементом управления.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Да|Элемент управления "Строка состояния" всегда имеет содержимое.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Элемент управления "Строка состояния" всегда является элементом управления.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|Зависит от обстоятельств|Элемент управления "Строка состояния" возвратит значение True для этого свойства, если в текущий момент он не отображается на экране.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|Зависит от обстоятельств|Значение ориентации элемента управления: горизонтальная или вертикальная.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|False|Неприменимо|  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/21/2017
   
 |Шаблон элемента управления|Поддержка|Примечания|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|Необязательный|Элементы управления "Строка состояния" должны поддерживать шаблон элемента управления Grid, чтобы отдельные части можно было отслеживать и легко ссылаться на них для получения сведений.|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|Optional|Элементы управления "Строка состояния" должны поддерживать шаблон элемента управления Grid, чтобы отдельные части можно было отслеживать и легко ссылаться на них для получения сведений.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Необходимые события модели автоматизации пользовательского интерфейса  
@@ -79,10 +80,10 @@ ms.lasthandoff: 11/21/2017
 |Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> |Обязательно|Нет|  
 |Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> |Обязательно|Нет|  
 |Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> |Обязательно|Нет|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Обязательный|Нет|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Обязательный|Нет|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Обязательно|Нет|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Обязательно|Нет|  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Automation.ControlType.StatusBar>  
- [Общие сведения о типах элементов управления модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [Общие сведения о типах элементов управления автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
  [Общие сведения о модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-overview.md)

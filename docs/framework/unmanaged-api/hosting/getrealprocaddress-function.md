@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 53e51bcf72f1a59f5c471564022d0d8c415381a6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5ade1c902d00e991612406041ef0a0b2c1bb884e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getrealprocaddress-function"></a>Функция GetRealProcAddress
 Получает адрес указанной функции, экспортированные из последней установленной версии среды common language runtime (CLR).  
@@ -49,7 +50,7 @@ HRESULT GetRealProcAddress (
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает стандартные коды ошибок модели объектов компонентов (COM), как определено в файле WinError.h, кроме следующих значений, определенных в CorError.h.  
   
-|Код возврата|Описание|  
+|Код возврата|Описание:|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
 |E_POINTER|Недопустимый параметр `ppv`.|  

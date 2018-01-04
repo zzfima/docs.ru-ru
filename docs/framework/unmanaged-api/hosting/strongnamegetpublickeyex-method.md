@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f39c5c948d43fd0e9387c1cc0319a46d25ec86ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e94498cc8841a95e1918d3f26bd19256793564ab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="strongnamegetpublickeyex-method"></a>Метод StrongNameGetPublicKeyEx
 Возвращает открытый ключ из пары открытого и закрытого ключей и указывает хэш-алгоритм и алгоритм подписи.  
@@ -79,7 +80,7 @@ HRESULT StrongNameGetPublicKey (
 ## <a name="remarks"></a>Примечания  
  В следующей таблице показаны набор допустимых значений для `uHashAlgId` параметра.  
   
-|Имя|Значение|  
+|name|Значение|  
 |----------|-----------|  
 |Нет|0|  
 |SHA-1|0x8004|  
@@ -99,5 +100,5 @@ HRESULT StrongNameGetPublicKey (
 ## <a name="see-also"></a>См. также  
  [Метод StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)  
  [Структура PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
- [Iclrstrongname-интерфейс](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)  
+ [Интерфейс ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)  
  [Метод StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ebfb45e6d568b4fa1db209264e02332df636474f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ca2db0cd7082a596999f1d74c9092264a65692ea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="startupflags-enumeration"></a>Перечисление STARTUP_FLAGS
 Содержит значения, указывающие поведение при запуске среды common language runtime (CLR). По умолчанию сборщик мусора непараллельной и только в библиотеке базовых классов загружаются в область нейтральные к домену.  
@@ -55,9 +56,9 @@ typedef enum {
 } STARTUP_FLAGS;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`STARTUP_CONCURRENT_GC`|Указывает, что следует использовать параллельную сборку мусора. Если вызывающий объект запрашивает построение сервера и параллельная сборка мусора на однопроцессорного компьютера, вместо этого запускаются построение рабочей станции и непараллельная сборка мусора. **Примечание:** параллельная сборка мусора не поддерживается в приложениях, работающих под управлением WOW64 x86 эмулятора на 64-разрядных системах, которые реализуют архитектуру Intel Itanium (прежнее название — IA-64). Дополнительные сведения об использовании WOW64 в 64-разрядных систем Windows см. в разделе [под управлением 32-разрядных приложений](http://msdn.microsoft.com/library/windows/desktop/aa384249.aspx).|  
 |`STARTUP_LOADER_OPTIMIZATION_MASK`|Указывает, что этой оптимизации загрузчика.|  
@@ -86,4 +87,4 @@ typedef enum {
  **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Перечисления размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+ [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0229aa5a80100d9793459473794d341e7d548ca2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 41e9b9de120154fe90eb3e73ada2ced4fa3e4544
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrmetahostenumerateinstalledruntimes-method"></a>Метод ICLRMetaHost::EnumerateInstalledRuntimes
 Возвращает перечисление, содержащее допустимое [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) интерфейса для каждой версии среды common language runtime (CLR), установленного на компьютере.  
@@ -47,7 +48,7 @@ HRESULT EnumerateInstalledRuntimes (
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|E_POINTER|Параметр `ppEnumerator` имеет значение NULL.|  
+|E_POINTER|Параметр `ppEnumerator` имеет значение null.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
@@ -59,5 +60,5 @@ HRESULT EnumerateInstalledRuntimes (
  **Версии платформы .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [ICLRMetaHost-интерфейс](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
+ [Интерфейс ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
  [Размещение](../../../../docs/framework/unmanaged-api/hosting/index.md)

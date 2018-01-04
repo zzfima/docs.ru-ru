@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3c73d12731a5c72b8c0e724f74ee0aa9ebddeee9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: db5054ab9b71eb93005fc0315acba82d807487ec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getversionfromprocess-function"></a>Функция GetVersionFromProcess
 Получает номер версии среды common language runtime (CLR), связанный с заданным дескриптором процесса.  
@@ -59,10 +60,10 @@ HRESULT GetVersionFromProcess (
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает стандартные коды ошибок модели объектов компонентов (COM), как определено в файле WinError.h, кроме следующих значений.  
   
-|Код возврата|Описание|  
+|Код возврата|Описание:|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|E_INVALIDARG|`pVersion`имеет значение null и `cchBuffer` не равно null, или наоборот.<br /><br /> -или-<br /><br /> `hProcess`не является допустимым дескриптором для обработки.<br /><br /> -или-<br /><br /> Среда CLR не загружена.|  
+|E_INVALIDARG|`pVersion`имеет значение null и `cchBuffer` не равно null, или наоборот.<br /><br /> - или -<br /><br /> `hProcess`не является допустимым дескриптором для обработки.<br /><br /> - или -<br /><br /> Среда CLR не загружена.|  
 |ERROR_INSUFFICIENT_BUFFER|`cchBuffer`значение null или меньше, чем длина строки версии.|  
 |E_NOTIMPL|Этот метод недоступен в операционной системе Microsoft Windows 95, Microsoft Windows 98 или Microsoft Windows Millennium Edition.|  
   
@@ -76,6 +77,6 @@ HRESULT GetVersionFromProcess (
  **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [GetRequestedRuntimeInfo-функция](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
- [GetRequestedRuntimeVersion-функция](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
+ [Функция GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
+ [Функция GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
  [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

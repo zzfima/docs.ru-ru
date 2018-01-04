@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b15a6786cb99a64d441d7e05fb91cd8ff0f3af92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4fb279402b2b677546f775b9a8badfbe2095fe4f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ememorycriticallevel-enumeration"></a>Перечисление EMemoryCriticalLevel
 Содержит значения, указывающие влияние сбоя в случае, когда был запрошен определенного выделения памяти, но не может быть удовлетворен.  
@@ -38,9 +39,9 @@ typedef enum {
 } EMemoryCriticalLevel;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`eAppDomainCritical`|Указывает, что выделение крайне важен для выполнения управляемого кода в домене, который запросил распределения. Если не удается выделить память, среда CLR не может гарантировать, что домен является по-прежнему можно использовать. Основное приложение выбирает, какие действия предпринять, если выделение не может быть удовлетворено. Его можно указать среде CLR прерывание `AppDomain` автоматически, или разрешить его выполнение, вызывая методы [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md).|  
 |`eProcessCritical`|Указывает, что выделение крайне важен для выполнения управляемого кода в процессе. Это значение используется во время запуска и при выполнении методов завершения. Если не удается выделить память, среда CLR не может работать в процессе. В случае сбоя, среда CLR полностью отключается. Все последующие вызовы к CLR завершаться значение HOST_E_CLRNOTAVAILABLE.|  
@@ -59,5 +60,5 @@ typedef enum {
  **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Iclrmemorynotificationcallback-интерфейс](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)  
- [Перечисления размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+ [Интерфейс ICLRMemoryNotificationCallback](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)  
+ [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

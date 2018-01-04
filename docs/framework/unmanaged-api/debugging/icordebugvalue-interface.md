@@ -19,23 +19,24 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 01c94df1d8e6ddef0110268461a2b28f594201b6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c3464b4ad963b2fe764cefc5868440b7748f8c4d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugvalue-interface1"></a>ICorDebugValue интерфейс1
 Представляет значение в отлаживаемом процессе. Значение может быть чтения или записи.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод CreateBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-createbreakpoint-method.md)|В настоящее время этот метод не реализован.|  
-|[GetAddress-метод](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md)|Возвращает адрес этого `ICorDebugValue` объект, используемый в отлаживаемом процессе.|  
-|[GetSize-метод](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)|Возвращает размер в байтах этого `ICorDebugValue` объекта.|  
-|[GetType-метод](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md)|Возвращает тип-примитив `ICorDebugValue` объекта.|  
+|[Метод GetAddress](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md)|Возвращает адрес этого `ICorDebugValue` объект, используемый в отлаживаемом процессе.|  
+|[Метод GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)|Возвращает размер в байтах этого `ICorDebugValue` объекта.|  
+|[Метод GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md)|Возвращает тип-примитив `ICorDebugValue` объекта.|  
   
 ## <a name="remarks"></a>Примечания  
  Как правило владение объектом значение передается при возврате. Получатель отвечает за удаление ссылки из объекта при его завершении с объектом.  

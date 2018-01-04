@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c02445a7a46bd9367b84edcf5ef5f012be5232e5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1ab7b6cc6360103c43430516490199cc278d2dfe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="typenamefactory-coclass"></a>Кокласс TypeNameFactory
 Предоставляет интерфейс для управления деконструкцией имени типа.  
@@ -36,11 +37,11 @@ coclass TypeNameFactory {
 };  
 ```  
   
-## <a name="interfaces"></a>Интерфейсы  
+## <a name="interfaces"></a>интерфейсов,  
   
-|Интерфейс|Описание|  
+|Интерфейс|Описание:|  
 |---------------|-----------------|  
-|[Itypenamefactory-интерфейс](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)|Этот интерфейс поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.|  
+|[Интерфейс ITypeNameFactory](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)|Этот интерфейс поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
@@ -52,4 +53,4 @@ coclass TypeNameFactory {
  **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Размещение компонентных классов](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+ [Размещение коклассов](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

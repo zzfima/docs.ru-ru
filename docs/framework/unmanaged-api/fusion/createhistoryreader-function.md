@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4f4b09f592a27b7d3d25b2dbe13be7e261023bf5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ab5e54735c360cb7bd2e681c04b0b1ae491bd716
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="createhistoryreader-function"></a>Функция CreateHistoryReader
 Создает средство чтения журнала для указанного файла.  
@@ -47,7 +48,7 @@ HRESULT CreateHistoryReader (
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает стандартные коды ошибок COM, как определено в файле WinError.h, помимо значений, описанных в следующей таблице.  
   
-|Код возврата|Описание|  
+|Код возврата|Описание:|  
 |-----------------|-----------------|  
 |S_OK|Указывает на успешное завершение метода.|  
 |E_INVALIDARG|Указывает, что `wzFilePath` или `ppHistoryReader` присваивается указатель null.|  

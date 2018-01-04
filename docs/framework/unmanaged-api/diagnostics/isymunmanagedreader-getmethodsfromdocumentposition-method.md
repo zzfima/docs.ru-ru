@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7f82cf213e9bcc83055cfaa42b9acab9d395d405
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cdf3762c40e5ec4da84a27ed7abcb15981b81379
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a>Метод ISymUnmanagedReader::GetMethodsFromDocumentPosition
 Возвращает массив методов, каждый из которых содержит точку останова в заданной позиции в документе.  
@@ -69,4 +70,4 @@ HRESULT GetMethodsFromDocumentPosition (
  **Заголовок:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также  
- [ISymUnmanagedReader-интерфейс](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+ [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

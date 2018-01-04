@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8e821a9d4ffa5054f687eff7360bc8d7cefb9f09
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ed41538ae4c1e70843c613493eee9d632dff5f91
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corfieldoffset-structure"></a>Структура COR_FIELD_OFFSET
 Хранит смещение указанного поля в пределах класса.  
@@ -37,9 +38,9 @@ typedef struct COR_FIELD_OFFSET {
 } COR_FIELD_OFFSET;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`ridOfField`|`mdFieldDef` Токен метаданных, представляющий поле.|  
 |`ulOffset`|Смещение поля внутри класса.|  
@@ -56,5 +57,5 @@ typedef struct COR_FIELD_OFFSET {
   
 ## <a name="see-also"></a>См. также  
  [Структуры метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
- [IMetaDataEmit-интерфейс](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataImport-интерфейс](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+ [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
+ [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

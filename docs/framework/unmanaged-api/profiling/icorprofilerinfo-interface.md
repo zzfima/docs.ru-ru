@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: fadffa55541723b89d7a41178a5ac6506dd07d6c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 08852b10f59e9c400b60287d78c8eb8eed5f109f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilerinfo-interface"></a>Интерфейс ICorProfilerInfo
 Предоставляет методы для использования профилировщиками кода для взаимодействия с общеязыковой среды выполнения (CLR), целью управления мониторингом событий и запроса информации.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md)|Инициализирует внутрипроцессную поддержку отладки. Этот метод является устаревшим в .NET Framework версии 2.0.|  
 |[Метод EndInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-endinprocdebugging-method.md)|Завершает работу сеанса в процессе отладки. Этот метод является устаревшим в .NET Framework версии 2.0.|  
@@ -87,4 +88,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [ICorProfilerInfo2-интерфейс](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+ [Интерфейс ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

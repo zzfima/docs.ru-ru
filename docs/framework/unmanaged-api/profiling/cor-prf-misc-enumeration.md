@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 75e740a6ca17135a3de2e945e205f4581b2f32e0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: da858ecf9fc002061d663e8c8f4d4036ef134d5a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corprfmisc-enumeration"></a>Перечисление COR_PRF_MISC
 Содержит постоянные значения, которые указывают специальные идентификаторы.  
@@ -38,9 +39,9 @@ typedef enum {
 } COR_PRF_MISC;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`PROFILER_PARENT_UNKNOWN`|Идентификатор по умолчанию, используемый [ICorProfilerInfo::GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) для модуля, который еще не присоединена к сборке.|  
 |`PROFILER_GLOBAL_CLASS`|Идентификатор класса по умолчанию для глобальных констант, которые не принадлежат классу.|  

@@ -20,24 +20,25 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ea8f4033a6b0878288c49d6f6d964eb40675162d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a561360e7ea43945a3e12a73daba5063b3ad02f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugvariablehome-interface"></a>Интерфейс ICorDebugVariableHome
 Представляет локальную переменную или аргумент функции.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод GetArgumentIndex](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getargumentindex-method.md)|Возвращает индекс аргумента функции.|  
 |[Метод GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getcode-method.md)|Возвращает экземпляр «ICorDebugCode», содержащий это `ICorDebugVariableHome` объекта.|  
 |[Метод GetLiveRange](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getliverange-method.md)|Получает собственный диапазон, по которому эта переменная является динамической.|  
 |[Метод GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)|Возвращает тип собственного расположение переменной.|  
-|[GetOffset-метод](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getoffset-method.md)|Получает смещение от базового регистра для переменной.|  
+|[Метод GetOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getoffset-method.md)|Получает смещение от базового регистра для переменной.|  
 |[Метод GetRegister](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getregister-method.md)|Возвращает регистра, который содержит переменную с типом расположения `VLT_REGISTER`и базовым регистром для переменной с типом расположения `VLT_REGISTER_RELATIVE`.|  
 |[Метод GetSlotIndex](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getslotindex-method.md)|Возвращает управляемый индекс слота локальной переменной.|  
   

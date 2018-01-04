@@ -17,20 +17,21 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 876dfabd835fa96fd3661f4e91eeb661ddaf9c30
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 823f2e0b542f5a9d8868cd3b71adb9a8cca4ec6a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-unmanaged-api-reference"></a>Размещение (справочник по неуправляемым интерфейсам API)
 API размещения позволяет неуправляемым узлам интегрировать среду CLR в свои приложения.  
   
-## <a name="in-this-section"></a>Содержание  
- [Размещение компонентных классов](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Размещение коклассов](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  
  Описываются неуправляемые коклассы, которые использует API размещения.  
   
- [Перечисления размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)  
+ [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)  
  Описываются неуправляемые перечисления, которые использует API размещения.  
   
  [Глобальные статические функции размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)  

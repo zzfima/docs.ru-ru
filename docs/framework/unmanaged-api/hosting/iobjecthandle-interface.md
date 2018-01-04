@@ -19,20 +19,21 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5d229487bb09459bdc923128f4a3309412453c43
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3e7b5ed49b4769ba09d8d1f32ed4a66fa02e46be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iobjecthandle-interface"></a>Интерфейс IObjectHandle
 Предоставляет метод для распаковки маршалирования по значению объектов косвенного обращения.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
-|[Метод unwrap](../../../../docs/framework/unmanaged-api/hosting/iobjecthandle-unwrap-method.md)|Распаковывает маршалирования по значению объекта косвенного обращения.|  
+|[Метод Unwrap](../../../../docs/framework/unmanaged-api/hosting/iobjecthandle-unwrap-method.md)|Распаковывает маршалирования по значению объекта косвенного обращения.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  

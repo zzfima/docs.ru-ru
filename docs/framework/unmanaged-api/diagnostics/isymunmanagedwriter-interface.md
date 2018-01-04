@@ -19,21 +19,22 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1e74e625c911f35bdb7c20451b1babd02cdb7658
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f4996f0196df4c2bcf890df6ad972f313403e435
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="isymunmanagedwriter-interface"></a>Интерфейс ISymUnmanagedWriter
 Представляет модуль записи символов и предоставляет методы для определения документов, точек следования, лексические области и переменные.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
-|[Abort-метод](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md)|Закрывает средство записи символов без передачи символов в хранилище символов.|  
-|[Close-метод](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md)|Закрывает средство записи символов после передачи символов в хранилище символов.|  
+|[Метод Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md)|Закрывает средство записи символов без передачи символов в хранилище символов.|  
+|[Метод Close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md)|Закрывает средство записи символов после передачи символов в хранилище символов.|  
 |[Метод CloseMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)|Закрывает текущий метод. После закрытия метода отсутствуют дополнительные символы могут определяться внутри него.|  
 |[Метод CloseNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closenamespace-method.md)|Закрывает последнее открыть пространство имен.|  
 |[Метод CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md)|Закрывает текущую лексическую область видимости.|  
@@ -63,4 +64,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>См. также  
  [Интерфейсы хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
  [Интерфейс ISymUnmanagedWriter2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)  
- [Isymunmanagedwriter3-интерфейс](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+ [Интерфейс ISymUnmanagedWriter3](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)

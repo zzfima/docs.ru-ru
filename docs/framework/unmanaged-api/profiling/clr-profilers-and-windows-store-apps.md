@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: db1152e82edde34dc8dbaba09f20b9f769dffbca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d884b80ba8ccc42d1b6acc671db408305a095a7d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Профилировщик среды CLR и приложений для магазина Windows
 Здесь описывается, что необходимо рассматривать при написание средств диагностики анализа управляемого кода, выполняемым внутри приложения для магазина Windows.  Он также предоставляет инструкции для изменения существующих средств разработки, они продолжают работать при запуске для приложений для магазина Windows.  Чтобы понять эту информацию, она лучше всего подходит, если вы знакомы с общий язык времени выполнения профилирования API, вы уже использовали этот интерфейс API в диагностическое средство, будет работать правильно с настольных приложений Windows и вы являетесь теперь вам интересны изменение средство для правильной работы для приложений для магазина Windows.  
@@ -429,7 +430,7 @@ GetAppContainerFolderPath(acSid, out acDir);
  **Приложения для Магазина Windows**  
  -   [Доступ к файлам и разрешения (приложения среды выполнения Windows](https://msdn.microsoft.com/library/windows/apps/hh967755.aspx)  
   
--   [Получение лицензии разработчика](https://msdn.microsoft.com/library/windows/apps/Hh974578.aspx)  
+-   [Получить лицензию разработчика](https://msdn.microsoft.com/library/windows/apps/Hh974578.aspx)  
   
 -   [Интерфейс IPackageDebugSettings](https://msdn.microsoft.com/library/hh438393\(v=vs.85\).aspx)  
   

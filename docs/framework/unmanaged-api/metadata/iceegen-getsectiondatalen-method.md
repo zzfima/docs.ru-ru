@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7d119fdfe5c0202d08ca78026a6917bb4ef51422
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 217a6c87d5152b68e062d9c2a64ec78478f301cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iceegengetsectiondatalen-method"></a>Метод ICeeGen::GetSectionDataLen
 Получает длину указанного раздела.  
@@ -61,4 +62,4 @@ HRESULT GetSectionDataLen (
  **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [ICeeGen-интерфейс](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+ [Интерфейс ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -21,14 +21,15 @@ caps.latest.revision: "26"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 424694770bac05611288279b2b42992a17afaa6f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6d62fbdf4b6dd2acbb67b0655938990d625f8df8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilercallbackmovedreferences-method"></a>Метод ICorProfilerCallback::MovedReferences
-Вызывается для предоставления сведений о новой структуре объектов в куче в результате сжатия сборки мусора.  
+Вызывается для предоставления сведений о структуре объектов в куче в результате сжатия сборки мусора.  
   
 ## <a name="syntax"></a>Синтаксис  
   

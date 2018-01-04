@@ -19,22 +19,23 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8c7b3bd04b348912a6d45c4efb41dfb87e7b5998
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ca74970ea7c2b98ad65e279fc1cc128b2e55aeb5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iassemblyenum-interface"></a>Интерфейс IAssemblyEnum
 Представляет перечислитель для массива `IAssemblyName` объектов.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод Clone](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-clone-method.md)|Создает неполную копию `IAssemblyEnum` объекта.|  
 |[Метод GetNextAssembly](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-getnextassembly-method.md)|Возвращает указатель на следующий `IAssemblyName` , содержащихся в данном `IAssemblyEnum` объекта.|  
-|[Reset-метод](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-reset-method.md)|Сбрасывает этот `IAssemblyEnum` объект в его начальное положение.|  
+|[Метод Reset](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-reset-method.md)|Сбрасывает этот `IAssemblyEnum` объект в его начальное положение.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
@@ -44,5 +45,5 @@ ms.lasthandoff: 11/21/2017
  **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Фьюжн-интерфейсы](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [IAssemblyName-интерфейс](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+ [Интерфейсы Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [Интерфейс IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

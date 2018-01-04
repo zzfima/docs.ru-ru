@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7982ef2f272173e89434b64a4c296a2ce963594e
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: a97376b459a5d9cce9b18ff692ac4c7535a24a56
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getmethodorigin-function"></a>Функция GetMethodOrigin
 Определяет класс, в котором объявлен метод.
@@ -54,7 +55,7 @@ HRESULT GetMethodOrigin (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |Значение  |Описание:  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Указанный метод не найден. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Один или несколько параметров недопустимы. |

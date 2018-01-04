@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 54a8ee366431360f7b653b48f4ce407a35f8465b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 727816a674d2357c8a9ba1f19679c57669e92f50
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corprfmoduleflags-enumeration"></a>Перечисление COR_PRF_MODULE_FLAGS
 Указывает свойства модуля.  
@@ -43,9 +44,9 @@ typedef enum
 }   COR_PRF_MODULE_FLAGS;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |COR_PRF_MODULE_DISK|Модуль был загружен с диска.|  
 |COR_PRF_MODULE_NGEN|Модуль, созданных генератором образов в машинном коде (Ngen.exe).|  

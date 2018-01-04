@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3fc4d9f7a95a3283d87f036163592f43e87dd053
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2c0d09bf4c24f977a490f946cbc35b2b3f53dfc3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="identityattribute-structure"></a>Структура IDENTITY_ATTRIBUTE
 Содержит сведения об атрибутах метаданных о [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) экземпляра.  
@@ -38,9 +39,9 @@ typedef struct _IDENTITY_ATTRIBUTE {
 } IDENTITY_ATTRIBUTE;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`pszNamespace`|Указатель на завершающуюся значением null строка, содержащая пространство имен к которому принадлежит атрибут.|  
 |`pszName`|Указатель на завершающуюся значением null строка, содержащая имя атрибута.|  
@@ -60,5 +61,5 @@ typedef struct _IDENTITY_ATTRIBUTE {
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)  
- [IDENTITY_ATTRIBUTE_BLOB-структура](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)  
+ [Структура IDENTITY_ATTRIBUTE_BLOB](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)  
  [Структуры Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)

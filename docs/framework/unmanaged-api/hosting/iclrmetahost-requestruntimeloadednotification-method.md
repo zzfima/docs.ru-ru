@@ -21,11 +21,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 32eb92263685bc3be9f0c28dea88ecfa78c2b52c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b7866270d8c9234a375401dfd05b504a06ddbf4b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>Метод ICLRMetaHost::RequestRuntimeLoadedNotification
 Предоставляет функции обратного вызова, которое гарантированно вызывается при первой загрузке версия CLR (CLR), но еще не запущена. Этот метод заменяет [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) функции.  
@@ -47,7 +48,7 @@ HRESULT RequestRuntimeLoadedNotification (
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|E_POINTER|Параметр `pCallbackFunction` имеет значение NULL.|  
+|E_POINTER|Параметр `pCallbackFunction` имеет значение null.|  
   
 ## <a name="remarks"></a>Примечания  
  Функция обратного вызова работает следующим образом:  
@@ -102,5 +103,5 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
  **Версии платформы .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [ICLRMetaHost-интерфейс](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
+ [Интерфейс ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
  [Размещение](../../../../docs/framework/unmanaged-api/hosting/index.md)

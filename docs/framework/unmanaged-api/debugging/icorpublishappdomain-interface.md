@@ -19,20 +19,21 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e83a6e4ac64d4b47400a3cbb495169ae46298980
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fe8851e0b6e521a293612c140ab8d23e579a6b28
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorpublishappdomain-interface"></a>Интерфейс ICorPublishAppDomain
 Представляет и предоставляет информацию о домене приложения.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
-|[GetID-метод](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|Возвращает уникальный идентификатор для этого `ICorPublishAppDomain`.|  
+|[Метод GetID](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|Возвращает уникальный идентификатор для этого `ICorPublishAppDomain`.|  
 |[Метод GetName](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|Возвращает имя домена приложения, упоминаемой в этом `ICorPublishAppDomain`.|  
   
 ## <a name="requirements"></a>Требования  
@@ -46,4 +47,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Компонентный класс CorpubPublish](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+ [Кокласс CorpubPublish](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)

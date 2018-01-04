@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ac7ed77dd4cb141257a1b73ccd433c7d17ee1f38
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4f1a83db3a5fc7b5f8b4ad763208fa31ab8f840e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrruntimeinfoisloaded-method"></a>Метод ICLRRuntimeInfo::IsLoaded
 Указывает ли общеязыковой среды выполнения (CLR), связанные с [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) интерфейс загружается в процесс. Среда выполнения может быть загружен без ее запуск.  
@@ -51,7 +52,7 @@ HRESULT IsLoaded(
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|E_POINTER|Параметр `pbLoaded` имеет значение NULL.|  
+|E_POINTER|Параметр `pbLoaded` имеет значение null.|  
   
 ## <a name="remarks"></a>Примечания  
  Этот метод обеспечивает обратную совместимость со следующими функциями и интерфейсы:  
@@ -76,6 +77,6 @@ HRESULT IsLoaded(
  **Версии платформы .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [ICLRRuntimeInfo-интерфейс](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
+ [Интерфейс ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
  [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
  [Размещение](../../../../docs/framework/unmanaged-api/hosting/index.md)

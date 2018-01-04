@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7215ce1423e8541b23daae7b9e051ade6e25f1b7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6cc6c84d57e4114a28a8b363b99b98f3c4d21410
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrgcmanager-interface"></a>Интерфейс ICLRGCManager
 Предоставляет методы, позволяющие ведущему приложению взаимодействовать с системой сборки мусора среды CLR.  
@@ -33,9 +34,9 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
-|[Collect-метод](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-collect-method.md)|Принудительная сборка мусора для заданного поколения.|  
+|[Метод Collect](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-collect-method.md)|Принудительная сборка мусора для заданного поколения.|  
 |[Метод GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md)|Получает набор текущих статистических данных о системе сборки мусора.|  
 |[Метод SetGCStartupLimits](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-setgcstartuplimits-method.md)|Задает размер сегмент сборки мусора и максимальный размер в систему сбора мусора поколения 0.|  
   
@@ -53,8 +54,8 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Автоматическое управление памятью](../../../../docs/standard/automatic-memory-management.md)  
- [COR_GC_STATS-структура](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)  
- [ICLRControl-интерфейс](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
+ [Структура COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)  
+ [Интерфейс ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
  [Интерфейсы размещения CLR](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  
  [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
  [Размещение](../../../../docs/framework/unmanaged-api/hosting/index.md)

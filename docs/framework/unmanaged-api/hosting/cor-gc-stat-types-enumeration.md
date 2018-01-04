@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4cf66026ecf92d0158a1010e82c078478c280f9b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 86d0ce931518fa50dbd3b0d6d7f2755d19042eca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corgcstattypes-enumeration"></a>Перечисление COR_GC_STAT_TYPES
 Указывает статистику, записываемую для сборки мусора.  
@@ -40,9 +41,9 @@ typedef enum {
 ## <a name="remarks"></a>Примечания  
  Это перечисление указывает, какая именно статистика в [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) структуры должны задаваться [ICLRGCManager::GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) метод.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`COR_GC_COUNTS`|Записи количество сборок мусора, выполненных для каждого поколения.|  
 |`COR_GC_MEMORYUSAGE`|Записи об использовании и сборке мусора коллекции размер статистику памяти.|  
@@ -55,5 +56,5 @@ typedef enum {
  **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [COR_GC_STATS-структура](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)  
- [Перечисления размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+ [Структура COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)  
+ [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

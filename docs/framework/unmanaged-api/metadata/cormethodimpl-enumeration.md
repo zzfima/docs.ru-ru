@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 85ee55c0d4ec0d3fb8c18dff570afefeb2eaf25e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e82eb50e4850ffbb4d5fc67d9603a3128cf8bcf6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cormethodimpl-enumeration"></a>Перечисление CorMethodImpl
 Содержит значения, описывающие возможности реализации метода.  
@@ -56,9 +57,9 @@ typedef enum CorMethodImpl {
 } CorMethodImpl;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`miCodeTypeMask`|Флаги, описывающие тип кода.|  
 |`miIL`|Указывает, что реализация метода промежуточного языка Майкрософт (MSIL).|  
