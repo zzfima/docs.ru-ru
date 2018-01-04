@@ -17,16 +17,17 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 36e978aedd1f1259ff99703e0b94d623d565a8ee
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 761a3217aa78f33cd781b9a4581eb6e409a5ff85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trackbar-control-windows-forms"></a>Элемент управления TrackBar (Windows Forms)
 Windows Forms `TrackBar` управления (иногда называют также элемент управления «ползунок») используется для просмотра данные большого объема или для визуальной настройки числовых параметров. `TrackBar` Управления состоит из двух частей: ползунка и делений. Бегунка входит в состав, которое может быть настроено. Его положение соответствует <xref:System.Windows.Forms.TrackBar.Value%2A> свойство. Деления — это визуальные индикаторы, расположенные через равные промежутки времени. Перемещение бегунка на, могут быть выровнены по горизонтали или вертикали. Например, полосы прокрутки используется для задания мерцания курсора мыши или скоростью.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об элементе управления TrackBar](../../../../docs/framework/winforms/controls/trackbar-control-overview-windows-forms.md)  
  Основные понятия `TrackBar` элемента управления, который позволяет пользователям просматривать сведения, настраивая числовое значение.  
   

@@ -17,18 +17,19 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2bd5da2474c59b9ea893b90f6b5f15343769f80c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6941ce03764604fce504d8aa79d53892ef9fed08
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstripstatuslabel-control-overview"></a>Общие сведения об элементе управления ToolStripStatusLabel
 <xref:System.Windows.Forms.ToolStripStatusLabel> Это метка для <xref:System.Windows.Forms.StatusStrip>. Как <xref:System.Windows.Forms.Label> или <xref:System.Windows.Forms.ToolStripLabel>, <xref:System.Windows.Forms.ToolStripStatusLabel> предоставляет недоступную для щелчка отображаемую область для текста и изображений. <xref:System.Windows.Forms.ToolStripStatusLabel> Размещается <xref:System.Windows.Forms.StatusStrip>.  
   
 ### <a name="important-toolstripstatuslabel-members"></a>ToolStripStatusLabel важные члены  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>|Возвращает или задает значение, указывающее, является ли <xref:System.Windows.Forms.ToolStripStatusLabel> автоматически заполняет доступное пространство на <xref:System.Windows.Forms.StatusStrip> при изменении размера формы|  
 |<xref:System.Windows.Forms.ToolStripStatusLabel.BorderSides%2A>|Возвращает или задает значение, указывающее, какие стороны <xref:System.Windows.Forms.ToolStripStatusLabel> Показать границы.|  

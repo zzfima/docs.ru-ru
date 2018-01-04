@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fe2b54123e117f21f3bda7bc78bc9c5b45fc9ae3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 173af57f1ec5d9ed14afc0ef5d6ddd391e15d534
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Пример. Выполнение операции перетаскивания в Windows Forms
 Для выполнения операций перетаскивания и вставки в приложениях Windows необходимо обрабатывать последовательность событий, в частности <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, и <xref:System.Windows.Forms.Control.DragDrop> события. Работая со сведениями, доступными через аргументы этих событий, можно значительно упростить операции перетаскивания.  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  Задать <xref:System.Windows.Forms.Control.AllowDrop%2A> значение true.  
   
-2.  В `DragEnter` событий для элемента управления, в котором будет выполнено освобождение убедитесь, что перетаскиваемые данные допустимого типа (в данном случае <xref:System.Windows.Forms.Control.Text%2A>). Затем код задает эффект, который будет происходить со значением в случае удаления <xref:System.Windows.Forms.DragDropEffects> перечисления. Для получения дополнительной информации см. <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
+2.  В `DragEnter` событий для элемента управления, в котором будет выполнено освобождение убедитесь, что перетаскиваемые данные допустимого типа (в данном случае <xref:System.Windows.Forms.Control.Text%2A>). Затем код задает эффект, который будет происходить со значением в случае удаления <xref:System.Windows.Forms.DragDropEffects> перечисления. Дополнительные сведения см. в разделе <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
   
     ```vb  
     Private Sub TextBox1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragEnter  
@@ -93,9 +94,9 @@ ms.lasthandoff: 11/21/2017
     ```  
   
     > [!NOTE]
-    >  Можно определить собственные <xref:System.Windows.Forms.DataFormats> , указав собственный объект в качестве <xref:System.Object> параметр <xref:System.Windows.Forms.DataObject.SetData%2A> метода. При этом необходимо убедиться, что указанный объект является сериализуемым. Для получения дополнительной информации см. <xref:System.Runtime.Serialization.ISerializable>.  
+    >  Можно определить собственные <xref:System.Windows.Forms.DataFormats> , указав собственный объект в качестве <xref:System.Object> параметр <xref:System.Windows.Forms.DataObject.SetData%2A> метода. При этом необходимо убедиться, что указанный объект является сериализуемым. Дополнительные сведения см. в разделе <xref:System.Runtime.Serialization.ISerializable>.  
   
-3.  В <xref:System.Windows.Forms.Control.DragDrop> событий для элемента управления, в котором будет выполнено освобождение используйте <xref:System.Windows.Forms.DataObject.GetData%2A> метод для получения перетаскиваемых данных. Для получения дополнительной информации см. <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
+3.  В <xref:System.Windows.Forms.Control.DragDrop> событий для элемента управления, в котором будет выполнено освобождение используйте <xref:System.Windows.Forms.DataObject.GetData%2A> метод для получения перетаскиваемых данных. Дополнительные сведения см. в разделе <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
   
      В следующем примере <xref:System.Windows.Forms.TextBox> элемент управления, который переносятся данные (в котором будет выполнено освобождение данных). В коде устанавливается <xref:System.Windows.Forms.Control.Text%2A> свойство <xref:System.Windows.Forms.TextBox> управления перетаскиваемых данных.  
   

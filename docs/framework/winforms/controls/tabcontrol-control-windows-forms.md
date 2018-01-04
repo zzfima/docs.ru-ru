@@ -21,16 +21,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fdeb5011e5f44eb45d553045c2f89b97f9e4d100
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 705f9dbb8ea7f4d462a2b19cc0c6b845ae8f578b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tabcontrol-control-windows-forms"></a>Элемент управления TabControl (Windows Forms)
 Элемент управления `TabControl` Windows Forms используется для отображения нескольких вкладок, аналогичных разделителям в записной книжке или меткам в наборе папок в картотеке. Вкладки могут содержать изображения и другие элементы управления. Используйте элемент управления `TabControl` для создания страниц свойств.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об элементе управления TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
  Описывается элемент управления, его основные возможности и свойства.  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/22/2017
   
 ## <a name="reference"></a>Ссылка  
  Класс <xref:System.Windows.Forms.TabControl>  
- Описание класса и ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Диалоговые окна в Windows Forms](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  

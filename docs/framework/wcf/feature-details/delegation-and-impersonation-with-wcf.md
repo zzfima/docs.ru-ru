@@ -19,11 +19,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9cd9e5c4f978eb6e8492d9bd6c90a32f87cfbce9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6319a9793698e12a984c875670d71b2cbb0b00ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Делегирование и олицетворение с использованием WCF
 *Олицетворение* - это стандартная техника, которую службы используют для ограничения клиентского доступа к ресурсам домена службы. В роли ресурсов домена службы могут выступать ресурсы компьютера, например локальные файлы (олицетворение), или ресурсы, расположенные на другом компьютере, например общая папка (делегирование). Пример приложения см. в разделе [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Пример использования олицетворения см. в разделе [How to: Impersonate a Client on a Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -53,7 +54,7 @@ ms.lasthandoff: 12/02/2017
   
 -   любая привязка <xref:System.ServiceModel.Channels.CustomBinding>, использующая учетные данные клиента Windows, где свойство `requireCancellation` имеет значение `true`. (Свойство имеется в следующих классах: <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> и <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>.) При использовании в привязке безопасного обмена данными свойство `requireCancellation` также должно иметь значение `true`;  
   
--   любая привязка <xref:System.ServiceModel.Channels.CustomBinding>, в которой клиент представляет имя пользователя. При использовании в привязке безопасного обмена данными свойство `requireCancellation` также должно иметь значение `true`.  
+-   любая привязка <xref:System.ServiceModel.Channels.CustomBinding> , в которой клиент представляет имя пользователя. При использовании в привязке безопасного обмена данными свойство `requireCancellation` также должно иметь значение `true`.  
   
 ### <a name="s4u-based-impersonation"></a>Олицетворение на базе S4U  
  Для олицетворения на базе S4U используются следующие элементы:  
@@ -103,9 +104,9 @@ ms.lasthandoff: 12/02/2017
 |`ImpersonationOption`|`ImpersonateCallerForAllServiceOperations`|Поведение|  
 |---------------------------|------------------------------------------------|--------------|  
 |Обязательно|Н/Д|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] олицетворяет вызывающий объект|  
-|Allowed|false|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не олицетворяет вызывающий объект|  
+|Allowed|False|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не олицетворяет вызывающий объект|  
 |Allowed|true|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] олицетворяет вызывающий объект|  
-|NotAllowed|false|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не олицетворяет вызывающий объект|  
+|NotAllowed|False|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не олицетворяет вызывающий объект|  
 |NotAllowed|true|Disallowed. (Создается исключение <xref:System.InvalidOperationException> .)|  
   
 ## <a name="impersonation-level-obtained-from-windows-credentials-and-cached-token-impersonation"></a>Уровень олицетворения, получаемый на основании учетных данных Windows, и олицетворение с использованием кэшированного маркера  
@@ -229,7 +230,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
  <xref:System.ServiceModel.Security.WindowsClientCredential>  
  <xref:System.ServiceModel.ChannelFactory%601>  
  <xref:System.Security.Principal.TokenImpersonationLevel.Identification>  
- [Использование олицетворения с безопасностью транспорта](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
+ [Использование олицетворения при обеспечении безопасности транспорта](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
  [Олицетворение клиента](../../../../docs/framework/wcf/samples/impersonating-the-client.md)  
  [Практическое руководство. Олицетворение клиента в рамках службы](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
  [Служебная программа для метаданных ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

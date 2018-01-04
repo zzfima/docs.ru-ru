@@ -12,17 +12,18 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0849f1e086a99539978e2c3c978807d2f83ae7ed
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 30ae225ac5482bfd6955dd0e87cbfb4bbdae2b4a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="execution"></a>Выполнение
 Образцы в этом разделе демонстрируют выполнение рабочих процессов в [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
- [Образец конечной точки управления рабочего процесса](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Образец конечной точки управления рабочим процессом](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)  
  Показывает, как использовать конечную точку управления рабочего процесса для создания и запуска рабочих процессов как локально, так и удаленно.  
   
  [Использование класса WorkflowInvoker](../../../../docs/framework/windows-workflow-foundation/samples/using-the-workflowinvoker-class.md)  

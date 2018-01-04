@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 06cd4e812f4acf546dad577a2e1ddc571281ebe3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eb27503fffc798b644f95fd213f8f23bdb3e228a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="menustrip-control-overview-windows-forms"></a>Общие сведения об элементе управления MenuStrip (Windows Forms)
 Меню предоставляют функциональные возможности для пользователей, удерживая команды, сгруппированные по общей теме.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
  В следующей таблице показаны некоторые особенно важные свойства <xref:System.Windows.Forms.MenuStrip> и связанных классов.  
   
-|Свойство|Описание|  
+|Свойство.|Описание:|  
 |--------------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>|Возвращает или задает <xref:System.Windows.Forms.ToolStripMenuItem> , используемый для отображения списка дочерних MDI-форм.|  
 |<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A?displayProperty=nameWithType>|Возвращает или задает способ слияния дочерних меню с родительскими меню в приложениях MDI.|  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/21/2017
   
  В следующей таблице показаны важные <xref:System.Windows.Forms.MenuStrip> сопутствующих классов.  
   
-|Класс|Описание|  
+|Класс|Описание:|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripMenuItem>|Представляет отдельные пункты, отображаемые на <xref:System.Windows.Forms.MenuStrip> или <xref:System.Windows.Forms.ContextMenuStrip>.|  
 |<xref:System.Windows.Forms.ContextMenuStrip>|Представляет контекстное меню.|  

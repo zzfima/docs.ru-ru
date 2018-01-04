@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6657556ffb49c19e6ffc3ef5462de341a93112b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 685a62b885469a9cac8884cc045b67bac02bea80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="system-information-and-windows-forms"></a>Информация о системе и Windows Forms
 Иногда бывает необходимо собрать сведения о компьютере, на котором приложение выполняется на для принятия решений в коде. Например возможно, функция, которая применяется только при подключении к конкретному сетевому домену; в этом случае необходим способ для определения домена и отключить функцию, если домен не существует.  

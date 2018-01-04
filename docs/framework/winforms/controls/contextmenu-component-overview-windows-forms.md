@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f6c2542ca7ee27bec96bb5010bcdb2fcd7416f72
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b0db67e8da97f380c3bb2eb9aab951628c4b6487
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contextmenu-component-overview-windows-forms"></a>Общие сведения о компоненте ContextMenu (Windows Forms)
 > [!IMPORTANT]
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/21/2017
   
  С помощью Windows Forms <xref:System.Windows.Forms.ContextMenu> компонента, вы можете предоставить пользователям доступного контекстного меню часто используемых команд, связанных с выделенным объектом. Элементы контекстного меню часто представляют собой подмножество элементов из главного меню, которые отображаются в другом месте в приложении. Как правило, пользователь может открыть контекстное меню щелчком правой кнопки мыши. В формах Windows Forms контекстные меню связаны с элементами управления.  
   
-## <a name="key-properties"></a>Основные свойства  
+## <a name="key-properties"></a>Ключевые свойства  
  Контекстное меню можно связать с элементом управления, присвоив свойству элемента управления <xref:System.Windows.Forms.Control.ContextMenu%2A> свойства <xref:System.Windows.Forms.ContextMenu> компонента. Одно контекстное меню можно связать с несколькими элементами управления, но каждый элемент управления может иметь только одно контекстное меню.  
   
  Ключевое свойство <xref:System.Windows.Forms.ContextMenu> компонент является <xref:System.Windows.Forms.Menu.MenuItems%2A> свойства. Можно добавить элементы меню, создание программным путем <xref:System.Windows.Forms.MenuItem> объектов и добавления их в <xref:System.Windows.Forms.Menu.MenuItemCollection> контекстного меню. Так как элементы в контекстном меню, обычно являются производными от других меню, чаще всего будет добавления элементов в контекстном меню, скопировав их.  

@@ -20,16 +20,17 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 53dc25d6a23c5cdbba1c640905eadbdc6b1acb71
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 29c8a4ef0a495d63c0263262857002f09d8c885a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a>Работа с растровыми и векторными изображениями
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] предоставляет класс `Bitmap` для работы с растровыми изображениями и класс `Metafile` для работы с векторными изображениями. Классы `Bitmap` и `Metafile` являются производными от класса `Image`.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Рисование существующего растрового изображения на экране](../../../../docs/framework/winforms/advanced/how-to-draw-an-existing-bitmap-to-the-screen.md)  
  Описано, как загружать и отображать точечные рисунки.  
   

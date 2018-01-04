@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: e4f93da8a2a5be00d798d64caba0f54bfd71ceb2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8352edaa9386adc1fbf3057c6e98f5a9cf9ce4a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-start-services"></a>Практическое руководство. Запуск служб
 После установки службы ее необходимо запустить. Запуск вызовы <xref:System.ServiceProcess.ServiceBase.OnStart%2A> метод в классе службы. Как правило <xref:System.ServiceProcess.ServiceBase.OnStart%2A> полезные действия, служба выполнит определяет метод. После запуска служба остается активной до вручную приостановлена или остановлена.  
@@ -88,5 +89,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Как: создание служб Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [Как: добавление установщиков в приложение службы](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+ [Практическое руководство. Создание служб Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ [Практическое руководство. Добавление установщиков в приложение служб](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

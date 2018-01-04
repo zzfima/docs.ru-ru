@@ -17,11 +17,12 @@ caps.latest.revision: "51"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3a24f1bd921de848cb75a2c9f35fa3dd279bc741
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f5301bf3a2fed35dbdd0046e01eb2acb9083a290
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what-is-windows-communication-foundation"></a>Что такое Windows Communication Foundation
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] представляет платформу для построения сервисноориентированных приложений. С помощью [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]можно отправлять данные в виде асинхронных сообщений от одной конечной точки службы к другой. Конечная точка службы может входить в постоянно доступную службу, размещаемую в IIS, или представлять службу, размещаемую в приложении. Конечная точка может быть клиентом службы, которая запрашивает данные от конечной точки службы. Сообщения могут представлять одиночный символ или одно слово, отправляемое в формате XML, или иметь вид сложного потока двоичных данных. Далее представлено несколько образцов сценариев.  

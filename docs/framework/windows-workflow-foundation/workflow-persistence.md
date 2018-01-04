@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 769197b3f59c68c79f94c71c49ba4b1f4f98da2c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9e65f07fc01d0d364d7271c4f1378b968b687881
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-persistence"></a>Сохраняемость рабочего процесса
 Сохраняемость рабочего процесса - это постоянное отслеживание состояний экземпляра рабочего процесса независимо от выполняемого процесса или данных компьютера. Делается это для обеспечения хорошо известной точки восстановления для экземпляра рабочего процесса в случае сбоя системы или сохранения памяти путем выгрузки экземпляров рабочих процессов, которые в настоящий момент не выполняют активных действий, или переноса состояния экземпляра рабочего процесса с одного узла на другой узел в ферме серверов.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 12/02/2017
   
 -   Когда экземпляр рабочего процесса, разработанный с помощью прежней версии Windows Workflow Foundation, встречает точку сохранения при выполнении взаимодействия.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Хранилище экземпляров рабочих процессов SQL](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)  
   

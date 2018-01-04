@@ -21,14 +21,15 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3a4141a27a3b195dbb747a827d2bd9426a948f83
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 267a69b9470040dfc60f3c0b280b71e3f52dbc88
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Практическое руководство. Добавление кавычек в строку (Windows Forms)
-Бывает, что в строку текста нужно вставить кавычки (" "). Например:  
+Бывает, что в строку текста нужно вставить кавычки (" "). Пример:  
   
  Она сказала: "Ты этого заслуживаешь!"  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-     -или-  
+     - или -  
   
 2.  Вставьте для получения кавычки символ ASCII или Юникод. В [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] используйте символ ASCII (34). В [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] используйте символ Юникод (\u0022).  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/21/2017
     > [!NOTE]
     >  В данном примере использовать \u0022 нельзя, поскольку нельзя использовать универсальное имя символа, обозначающее символ в базовом наборе символов. В противном случае вы получите C3851. Дополнительные сведения см. в разделе [Ошибка компилятора C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).  
   
-     -или-  
+     - или -  
   
 3.  Также можно определить для символа константу и при необходимости использовать ее.  
   

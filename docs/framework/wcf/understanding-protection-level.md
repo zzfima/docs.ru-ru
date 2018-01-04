@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f107e4d1a9779c04a33060af34ee1fc873305eab
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c379cf39f30bf7e75907dba5fb06ba4e3862e299
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-protection-level"></a>Основные сведения об уровне защиты
 Свойство `ProtectionLevel` обнаруживается во многих классах, например в классах <xref:System.ServiceModel.ServiceContractAttribute> и <xref:System.ServiceModel.OperationContractAttribute>. Это свойство определяет, как защищается часть сообщения (или все сообщение). В данном разделе рассматривается эта функция [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] и принцип ее работы.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/02/2017
 >  Уровни защиты можно задавать только в коде, а не в конфигурации.  
   
 ## <a name="basics"></a>Основные сведения  
- Ниже приведены основные сведения о функции уровня защиты.  
+ Ниже приведены основные сведения о возможности уровня защиты.  
   
 -   Для любой части сообщения существуют три базовых уровня защиты. Для свойства (где бы оно ни появлялось) задается одно из значений перечисления <xref:System.Net.Security.ProtectionLevel>. Эти значения указаны ниже в порядке возрастания уровня защиты.  
   

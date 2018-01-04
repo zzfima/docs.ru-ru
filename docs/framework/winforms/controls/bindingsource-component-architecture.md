@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 127111df239cb042f8261acaa62c3798b99653ad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 25a69f31d8da8638cfc92ff94d8f90dbcb327158
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindingsource-component-architecture"></a>Архитектура компонента BindingSource
 С <xref:System.Windows.Forms.BindingSource> компонент глобально, все элементы управления Windows Forms можно привязать к источникам данных.  
@@ -173,7 +174,7 @@ ms.lasthandoff: 11/21/2017
 |Член|Описание|  
 |------------|-----------------|  
 |Свойство <xref:System.Windows.Forms.BindingSource.Filter%2A>|Если источником данных является <xref:System.ComponentModel.IBindingListView>, то возвращает или задает выражение, используемое для фильтрации просматриваемых строк.|  
-|Свойство <xref:System.Windows.Forms.BindingSource.Sort%2A>|Если источником данных является <xref:System.ComponentModel.IBindingList>, то возвращает или задает имя столбца, используемого для сортировки, и порядок сортировки.<br /><br /> -или-<br /><br /> Если источником данных является <xref:System.ComponentModel.IBindingListView> и поддерживается Расширенная сортировка, возвращает имена нескольких столбцов, используемые для сортировки и порядка сортировки|  
+|Свойство <xref:System.Windows.Forms.BindingSource.Sort%2A>|Если источником данных является <xref:System.ComponentModel.IBindingList>, то возвращает или задает имя столбца, используемого для сортировки, и порядок сортировки.<br /><br /> - или -<br /><br /> Если источником данных является <xref:System.ComponentModel.IBindingListView> и поддерживается Расширенная сортировка, возвращает имена нескольких столбцов, используемые для сортировки и порядка сортировки|  
   
 ### <a name="integration-with-bindingnavigator"></a>Интеграция с BindingNavigator  
  Можно использовать <xref:System.Windows.Forms.BindingSource> компонента для привязки любого элемента управления Windows Forms к источнику данных, но <xref:System.Windows.Forms.BindingNavigator> управления разработан специально для работы с <xref:System.Windows.Forms.BindingSource> компонента. <xref:System.Windows.Forms.BindingNavigator> Управления предоставляет пользовательский интерфейс для управления <xref:System.Windows.Forms.BindingSource> компонента текущего элемента. По умолчанию <xref:System.Windows.Forms.BindingNavigator> управления содержит кнопки, соответствующие методы навигации на <xref:System.Windows.Forms.BindingSource> компонента. Дополнительные сведения см. в разделе [как: перемещения данных с помощью элемента управления BindingNavigator в Windows Forms](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md).  

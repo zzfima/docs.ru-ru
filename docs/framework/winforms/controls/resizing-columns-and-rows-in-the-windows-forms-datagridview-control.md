@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3621b05f1faae671d93106f50dfef1311959e48e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c1c11ca487003e57a499b3ff46178350e6aad404
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Изменение размера столбцов и строк элемента управления DataGridView в Windows Forms
 `DataGridView` Элемент управления предоставляет множество возможностей для настройки поведения изменения размеров его столбцов и строк. Как правило `DataGridView` размер ячейки не изменяется в зависимости от их содержимого. Вместо этого они обрезает все отображаемое значение, превышающее ячейки. Содержимое можно отобразить в виде строки, в ячейке отображается во всплывающей подсказке.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/22/2017
   
  `DataGridView` Элемент управления предоставляет свойства, методы и события, которые позволяют настроить или отключить такое поведение, управляемое пользователем. Кроме того можно программно изменить размер строк, столбцов и заголовков в соответствии с содержимым, или можно настроить их автоматическое изменение при изменении содержимого. Можно также настроить столбцы для автоматического распределения ширины элемента управления в пропорций, указанных вами.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Изменение размеров управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)  
  Описание параметров для изменения размеров строк, столбцов и заголовков. Также предоставляет подробные сведения о связанных изменения размера свойства и методы и описываются распространенные сценарии использования.  
   

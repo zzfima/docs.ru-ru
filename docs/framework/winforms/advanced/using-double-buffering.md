@@ -18,16 +18,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b5ad51e27c3d31ece1d11831c953023bedba3a97
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 4d83846dcded620b74f7d276fd241a302cce1b60
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-double-buffering"></a>Двойная буферизация графики
 Двойная буферизация графики можно использовать для уменьшения мерцания в приложениях, которые содержат сложных операций рисования. Платформа .NET Framework содержит встроенную поддержку двойной буферизации или можно управлять и отображения графики вручную.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Двойная буферизация графики](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
  Вводит двойной буферизации поддержки .NET Framework и описание.  
   

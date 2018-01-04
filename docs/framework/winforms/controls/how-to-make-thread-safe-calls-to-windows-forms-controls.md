@@ -26,11 +26,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ca0bab0d10f8bc8c08e441b7e92f5f938d65dac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: db68fba51cd7ef9bad9ba6f7c4ba8d05a31c4371
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Практическое руководство. Осуществление потокобезопасных вызовов элементов управления Windows Forms.
 При использовании многопоточности для улучшения производительности приложений Windows Forms во время вызова элементов управления необходимо соблюдать принципы безопасности потоков.  
@@ -103,7 +104,7 @@ private:
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] помогает выявлять обращения к элементам управления, выполненные с нарушением безопасности потока. Если приложение выполняется в отладчике, а поток, отличный от создавшего элемент управления, пытается вызывать этот элемент управления, в отладчике создается исключение <xref:System.InvalidOperationException> с сообщением "Обращение к элементу управления *имя элемента управления* из потока, не являющегося создателем данного элемента управления".  
   
- Это исключение всегда возникает во время отладки, а в некоторых случаях во время выполнения. Исключение может появляться при отладке приложений, написанных с использованием версии [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , выпущенной ранее [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Эту проблему настоятельно рекомендуется устранить при ее обнаружении, но предупреждение об ошибке можно отключить, задав свойству <xref:System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls%2A> значение `false`. В результате элемент управления будет работать так же, как в Visual Studio .NET 2003 и [!INCLUDE[net_v11_short](../../../../includes/net-v11-short-md.md)].  
+ Это исключение всегда возникает во время отладки, а в некоторых случаях во время выполнения. Исключение может появляться при отладке приложений, написанных с использованием версии [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], выпущенной ранее [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Эту проблему настоятельно рекомендуется устранить при ее обнаружении, но предупреждение об ошибке можно отключить, задав свойству <xref:System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls%2A> значение `false`. В результате элемент управления будет работать так же, как в Visual Studio .NET 2003 и [!INCLUDE[net_v11_short](../../../../includes/net-v11-short-md.md)].  
   
 > [!NOTE]
 >  При использовании элементов управления ActiveX в форме может может возникнуть несколько исключений <xref:System.InvalidOperationException> в разных потоках, если выполнение осуществляется в отладчике. В таких случаях элемент управления ActiveX не поддерживает многопоточность. Дополнительные сведения об использовании элементов управления ActiveX в Windows Forms см. в разделе [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md). При использовании Visual Studio этого исключения можно избежать, отключив ведущий процесс Visual Studio. Сведения см. в разделе [How to: Disable the Hosting Process](/visualstudio/ide/how-to-disable-the-hosting-process).  

@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ddbb86ef98befda8a246bdded4f30cf93f02e727
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a733327145dd36fc36ab00bb58ca495b991e61fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control-using-the-designer"></a>Практическое руководство. Разрешение изменения порядка столбцов элемента управления DataGridView в формах Windows Forms с помощью конструктора
 При просмотре данных, отображаемых в Windows Forms <xref:System.Windows.Forms.DataGridView> управления, иногда пользователи хотят для сравнения значений в определенных столбцах. Это может быть неудобно, если столбцы находятся далеко друг от друга в элементе управления, особенно в том случае, если пользователи должны вперед и назад горизонтальной прокрутки для просмотра всех интересующих их столбцов. Можно сделать задачу сравнения значений столбца проще, позволяя пользователям изменять порядок столбцов. При включении изменения порядка столбцов пользователи могут переместить столбец в новое местоположение, перетащив заголовок столбца с помощью мыши.  

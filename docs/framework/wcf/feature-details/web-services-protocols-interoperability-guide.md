@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a7dfcd092cb7b21e31ec1098df5e9534cd27cfc9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b962452b6127d259733418969f1fb7b5036b1e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Руководство по взаимодействию по протоколам веб-служб
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] реализует ряд протоколов веб-служб. Многие из этих протоколов предусматривают ряд параметров и точек расширяемости, оставляемых на усмотрение реализующего субъекта. В этом подразделе приводится список протоколов веб-служб, реализуемых [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. В остальных подразделах содержатся подробности о реализации каждого поддерживаемого протокола.  
@@ -75,7 +76,7 @@ ms.lasthandoff: 12/02/2017
 |WS-Secure Conversation|[Язык веб-служб безопасного диалога](http://go.microsoft.com/fwlink/?LinkId=95317)|  
 |WS-Trust 1.4|[Язык доверять веб-служб](http://go.microsoft.com/fwlink/?LinkId=169514)|  
 |WS-SecurityPolicy 2005/07|[Язык веб-служб безопасного диалога](http://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> (С учетом списка ошибок, переданных в технический комитет OASIS WS-SX.)<br /><br /> [сообщение ws-sx](http://go.microsoft.com/fwlink/?LinkId=96700)|  
-|WS-ReliableMessaging 1.1|[Надежного протокола обмена сообщениями, версия 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)|  
+|WS-ReliableMessaging 1.1|[Протокол надежного обмена сообщениями версии 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)|  
   
  Элемент привязки <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> поддерживает спецификации, приведенные в следующей таблице.  
   
@@ -111,12 +112,12 @@ ms.lasthandoff: 12/02/2017
 -   [Профиля Basic Security Profile 1.0 рабочий черновик](http://go.microsoft.com/fwlink/?LinkId=96711)  
   
 ## <a name="see-also"></a>См. также  
- [Протоколы, поддерживаемые предоставляемыми системой привязками веб-служб](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+ [Протоколы веб-служб, поддерживаемые предоставляемыми системой привязками](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
  [Протоколы обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
  [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
  [WSDL и политика](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  
  [Протоколы безопасности](../../../../docs/framework/wcf/feature-details/security-protocols.md)  
- [Надежного протокола обмена сообщениями, версия 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)  
- [Надежного протокола обмена сообщениями, версия 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)  
+ [Протокол надежного обмена сообщениями версии 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)  
+ [Протокол надежного обмена сообщениями версии 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)  
  [Протоколы транзакций](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)  
  [Протокол обмена контекстом](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)

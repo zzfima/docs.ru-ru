@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a6fe8fb972f8080bbffeed5db2063d8c0484aec4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c14da85b377b3ef80d6accbc8b0319959a75bcd5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-wpf-controls"></a>Использование элементов управления WPF
 Элементы управления Windows Presentation Foundation (WPF) можно использовать в приложениях Windows Forms. Хотя эти две различные технологии, они взаимодействуют.  
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/22/2017
   
  Можно также использовать элементы управления Windows Forms в приложениях WPF. Дополнительные сведения см. в разделе [конструктор WPF](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Копирование и вставка элемента управления ElementHost во время разработки](../../../../docs/framework/winforms/advanced/how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  
  Показано, как скопировать элемент управления Windows Presentation Foundation в Windows Forms.  
   

@@ -14,11 +14,12 @@ caps.latest.revision: "58"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 062167742a70307949624066b8607a37d5c7ed71
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c69f79d8629acee80a2e59346032e7733ec37dea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-a-windows-communication-foundation-service-contract"></a>Практическое руководство. Определение контракта службы Windows Communication Foundation
 Это первый из шести шагов, необходимых для создания базового приложения [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Общие сведения обо всех шести задач см. в разделе [учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md) раздела.  
@@ -88,7 +89,7 @@ ms.lasthandoff: 12/02/2017
      В этом контракте определен калькулятор в сети. Обратите внимание, что интерфейс `ICalculator` помечен атрибутом <xref:System.ServiceModel.ServiceContractAttribute>. Этот атрибут определяет пространство имен, которое используется для устранения неоднозначности имени контракта. Каждая операция калькулятора помечена атрибутом <xref:System.ServiceModel.OperationContractAttribute>.  
   
     > [!NOTE]
-    >  При использовании атрибутов для аннотирования интерфейса, члена или класса в имени атрибута можно опускать часть Attribute. Таким образом, <xref:System.ServiceModel.ServiceContractAttribute> изменится на `[ServiceContract]` в C# или на `<ServiceContract>` в Visual Basic.  
+    >  При использовании атрибутов для добавления заметок к интерфейсу, члену или классу в имени атрибута можно опускать часть Attribute. Таким образом, <xref:System.ServiceModel.ServiceContractAttribute> изменится на `[ServiceContract]` в C# или на `<ServiceContract>` в Visual Basic.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.ServiceContractAttribute>  

@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da36f4f79d0016249dead686f305e1b93defceda
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9c9c82044e7136f05d64a20fb24ee0b209742caf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Практическое руководство. Форматирование элемента управления DataGrid в формах Windows Forms с помощью конструктора
 > [!NOTE]
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  В **свойства** задайте следующие свойства, соответствующим образом.  
   
-    |Свойство|Описание|  
+    |Свойство.|Описание:|  
     |--------------|-----------------|  
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|`BackColor` Свойство определяет цвет строк сетки с четными номерами. При задании <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> другой цвет, все остальные строки является свойство цветом (строки 1, 3, 5 и т. д.).|  
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Цвет фона строк сетки с четными номерами (строки 0, 2, 4, 6 и т. д.).|  

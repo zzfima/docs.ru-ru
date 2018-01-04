@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3b20c526b27eb185bf79eaf0ace47e5a9fded42a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4645e502544072cbc6268ae07e054ea5450d9c5c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Практическое руководство. Отображение полос прокрутки в элементе управления RichTextBox в Windows Forms
 По умолчанию в Windows Forms <xref:System.Windows.Forms.RichTextBox> элемент управления отображает горизонтальные и вертикальные полосы прокрутки при необходимости. Существует семь возможных значений для <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> свойства <xref:System.Windows.Forms.RichTextBox> элемента управления, которые описаны в следующей таблице.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  Задать <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> соответствующее значение свойства <xref:System.Windows.Forms.RichTextBoxScrollBars> перечисления.  
   
-    |Значение|Описание|  
+    |Значение|Описание:|  
     |-----------|-----------------|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (по умолчанию)|Отображение полос прокрутки по горизонтальной или вертикальной (или оба) только в том случае, если длина текста превышает ширину или длина элемента управления.|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.None>|Не отображаются ни полосы прокрутки.|  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
 3.  Присвойте свойству <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> соответствующее значение.  
   
-    |Значение|Описание|  
+    |Значение|Описание:|  
     |-----------|-----------------|  
     |`false`|Текст в элементе управления не настраивается автоматически по ширине элемента управления, поэтому будет прокрутите окно вправо до достижения конца строки. Это значение используется при выборе горизонтальные полосы прокрутки, или в оба выше.|  
     |`true` (по умолчанию)|Текст в элементе управления автоматически корректируется по ширине элемента управления. Горизонтальная полоса прокрутки отображаться не будут. Это значение используется в том случае, если вы выбрали вертикальных полос прокрутки или нет, выше, для отображения один или несколько абзацев.|  

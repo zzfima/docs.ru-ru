@@ -24,11 +24,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a4a16ee1ca39ffb0eb170e206467d612cb707e5a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 200c5bbb5a162c1e585fc35f9c8cb3f63eb0368e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Пример. Создание интерфейса в стиле проводника с использованием элементов управления ListView и TreeView с помощью конструктора
 Одно из преимуществ Visual Studio — возможность создавать профессионально оформленные приложения Windows Forms в короткие сроки. Типичный сценарий создает пользовательский интерфейс (UI) в <xref:System.Windows.Forms.ListView> и <xref:System.Windows.Forms.TreeView> элементов управления, который напоминает проводника операционных систем Windows. Проводник Windows отображает иерархическую структуру файлов и папок на компьютере пользователя.  
@@ -101,7 +102,7 @@ ms.lasthandoff: 11/21/2017
   
      Вы увидите разбиение форму, содержащую <xref:System.Windows.Forms.TreeView> управления, отображающий каталог проекта в левой и <xref:System.Windows.Forms.ListView> управления справа от оператора с тремя столбцами. Вы сможете просматривать <xref:System.Windows.Forms.TreeView> , выбрав узлы каталога и <xref:System.Windows.Forms.ListView> заполняется содержимым выбранного каталога.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  Это приложение служит примером способ использования <xref:System.Windows.Forms.TreeView> и <xref:System.Windows.Forms.ListView> управляет друг с другом. Дополнительные сведения об этих элементах управления см. в следующих разделах:  
   
 -   [Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или ListView (Windows Forms)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  

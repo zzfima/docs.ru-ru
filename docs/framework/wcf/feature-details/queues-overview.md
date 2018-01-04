@@ -14,11 +14,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c0952f238c34176112f6ec6a8520fb603cca4750
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f1d3f7ed4ebde0f607b3c86cf9879d219af85b20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queues-overview"></a>Общие сведения об очередях
 В этом разделе описаны общие и основные принципы, лежащие в основе взаимодействия с использованием очередей. В последующих подразделах содержатся подробные сведения о том, как описанные здесь принципы очередей представлены в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -87,9 +88,9 @@ ms.lasthandoff: 12/02/2017
  [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [Сеансы и очереди](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
  [Очереди недоставленных сообщений](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
- [Volatile взаимодействия с использованием очередей](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
- [Windows Communication Foundation для очереди сообщений](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
- [Установка очереди сообщений (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
+ [Неустойчивое взаимодействие с использованием очереди](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
+ [Отправка сообщений из приложения Windows Communication Foundation в приложение MSMQ](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
+ [Установка системы очередей сообщений (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
  [Образцы привязки интеграции очереди сообщений](http://msdn.microsoft.com/en-us/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
- [В Windows Communication Foundation очереди сообщений](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
- [Безопасность сообщений через очереди сообщений](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+ [Передача сообщений из приложения MSMQ в приложение Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
+ [Безопасность сообщений при использовании очереди сообщений](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

@@ -15,16 +15,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fded7335c616bdc4b98074f2734948a9ad000e9a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d6b61f5ae7d0e7f3102e0566fb1a6eff3ca072d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-workflow-foundation"></a>Windows Workflow Foundation
 В этом разделе описываются модель программирования, образцы и средства [!INCLUDE[wf](../../../includes/wf-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Руководство по документации Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/guide-to-the-documentation.md)  
  Список тем для ознакомления с учетом степени подготовленности (от новичка до хорошо ознакомленного с предметом разработчика) и требований.  
   

@@ -17,16 +17,17 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: efdde6367d54d4cdc8d9992d2b3f44a366227069
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 14a3f4ba9f57718e3ae4a3751f44e6257a335cfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstripstatuslabel-control"></a>Элемент управления ToolStripStatusLabel
 <xref:System.Windows.Forms.ToolStripStatusLabel> Содержит область отображения <xref:System.Windows.Forms.StatusStrip> для текста и изображений.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об элементе управления ToolStripStatusLabel](../../../../docs/framework/winforms/controls/toolstripstatuslabel-control-overview.md)  
  Приводятся разделы с описанием назначения элемента управления Windows Forms <xref:System.Windows.Forms.ToolStripStatusLabel> и основных понятий, связанных с ним.  
   

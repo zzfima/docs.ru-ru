@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 711d25c600c2144ad4b134984501f641be24ced2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 817f90194d73bf6608cccde0ce3917717d0b4878
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="about-gdi-managed-code"></a>Управляемый код GDI+
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] — это часть операционной системы Windows, предоставляющая возможности создания векторных изображений, рисования и оформления. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] улучшает [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (интерфейс графических устройств, входящий в состав более ранних версий Windows) путем добавления новых возможностей и оптимизации существующих.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/22/2017
   
  Этот раздел содержит сведения об API-интерфейсе [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] для программистов, использующих управляемый код.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Линии, кривые и фигуры](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
  Описывает векторную графику.  
   
@@ -42,10 +43,10 @@ ms.lasthandoff: 10/22/2017
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
- Описание класса и ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
  <xref:System.Drawing.Image?displayProperty=nameWithType>  
- Описание класса и ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
  <xref:System.Drawing.Bitmap?displayProperty=nameWithType>,  
  Описывает данный класс и содержит ссылки на все его члены.  
@@ -60,13 +61,13 @@ ms.lasthandoff: 10/22/2017
  Описывает данный класс и содержит ссылки на все его члены.  
   
  <xref:System.Drawing.Color?displayProperty=nameWithType>,  
- Описание класса и ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
  <xref:System.Drawing.Drawing2D.Matrix?displayProperty=nameWithType>  
- Описание класса и ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
  <xref:System.Windows.Forms.TextRenderer?displayProperty=nameWithType>  
- Описание класса и ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Использование управляемых графических классов](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md).  

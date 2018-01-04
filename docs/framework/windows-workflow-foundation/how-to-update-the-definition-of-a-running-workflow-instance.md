@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7cb2191482771647bcc2cd1003229e445c320e1a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 86a6e8d22d1e46407082af5d71cd83c179825bb9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Как обновить определение выполняющегося экземпляра рабочего процесса
 Динамическое обновление предоставляет разработчикам приложений рабочих процессов механизм обновления определения рабочего процесса для сохраненного экземпляра рабочего процесса. Это позволяет реализовать исправление ошибки, внедрение новых требований или учет непредвиденных изменений. На этом шаге учебника показано, как использовать динамическое обновление для изменения сохраненные экземпляры `v1` номер угадывания рабочий процесс для сопоставления новые функциональные возможности, появившиеся в [как: несколько версий рабочего процесса Side-by-Side узла ](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  

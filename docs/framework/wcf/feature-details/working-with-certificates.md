@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 63f9d22c571a007653fc794dc7638c8221a676aa
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 80bc22599a2c7b3478912453b3f90a563aec9c57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-certificates"></a>Работа с сертификатами
 Для программирования безопасности [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] обычно используются цифровые сертификаты X.509, с помощью которых выполняется проверка подлинности клиентов и серверов, шифрование, а сообщения подписываются цифровой подписью. В этом разделе содержится краткое описание функций для работы с цифровыми сертификатами X.509 и порядка использования этих функций в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Кроме того, этот раздел включает ссылки на другие разделы с более подробным объяснением основных понятий и порядка выполнения общих задач с использованием [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и сертификатов.  
@@ -74,7 +75,7 @@ ms.lasthandoff: 12/02/2017
 ### <a name="disabling-chain-trust"></a>Отключение механизма проверки цепочки доверия  
  При создании новой службы пользователь может использовать сертификат, который был выдан центром сертификации, отличным от доверенного, или сертификат издателя может отсутствовать в хранилище «Доверенные корневые центры сертификации». Предусмотрена возможность временного отключения механизма, проверяющего цепочку сертификатов для заданного сертификата; эта возможность должна использоваться только в процессе разработки. Чтобы отключить данный механизм, задайте для свойства `CertificateValidationMode` значение `PeerTrust` или `PeerOrChainTrust`. Эти режимы определяют, что сертификат может быть либо самостоятельно выданным (доверие одноранговой группы), либо являться частью цепочки доверия. Указанное свойство можно задать для любого из следующих классов.  
   
-|Класс|Свойство|  
+|Класс|Свойство.|  
 |-----------|--------------|  
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|  
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|  

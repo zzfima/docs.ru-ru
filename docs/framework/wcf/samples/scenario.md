@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08c722ad9256f16ead8947e793e64cef9763c512
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 94ff7c693824e721b17c79b921f4380dba7d04e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="scenario"></a>Сценарий
 В образцах из этого раздела показаны сценарии [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Сценарии привязки данных](../../../../docs/framework/wcf/samples/data-binding-scenarios.md)  
  Демонстрирует сценарии привязки данных [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
@@ -35,8 +36,8 @@ ms.lasthandoff: 12/02/2017
  [Сериализация слабо типизированных данных JSON (AJAX)](../../../../docs/framework/wcf/samples/weakly-typed-json-serialization-sample.md)  
  Демонстрирует механизм, позволяющий разработчикам [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] работать с произвольными десериализованными объектами JSON без создания определяемых пользователем типов.  
   
- [Доверенная Фасадная служба](../../../../docs/framework/wcf/samples/trusted-facade-service.md)  
+ [Доверенная фасадная служба](../../../../docs/framework/wcf/samples/trusted-facade-service.md)  
  Демонстрируется способ передачи данных идентификации вызывающей стороны от одной службы к другой с помощью инфраструктуры безопасности [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Шаблоны разработки: Публикация-подписка на основе списка](../../../../docs/framework/wcf/samples/design-patterns-list-based-publish-subscribe.md)  
+ [Шаблоны разработки: публикация-подписка на основе списка](../../../../docs/framework/wcf/samples/design-patterns-list-based-publish-subscribe.md)  
  Демонстрирует схему «публикация-подписка» на основе списка, реализованную в качестве программы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].

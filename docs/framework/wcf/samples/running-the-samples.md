@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a37c7b01d4ef40727c02e0782422776086b5297
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3003c89b0cfcda9866c5b1accd154900bc650454
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Выполнение примеров Windows Communication Foundation
 Примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] могут выполняться на одном или нескольких компьютерах. После передачи примеры готовы к выполнению на одном компьютере. При выполнении на нескольких компьютерах необходимо изменить параметры файла конфигурации примера. В следующих процедурах объясняется, как выполнить пример на одном компьютере или на нескольких компьютерах. Обратите внимание, что шаги, выполняемые для служб, размещенных в службах IIS, и шаги для резидентных примеров, отличаются. Большинство примеров размещаются в службах IIS; чтобы определить, как размещается пример, см. сведения в файле Readme.  
@@ -90,6 +91,6 @@ ms.lasthandoff: 12/02/2017
 -   Если служба размещается в службах IIS в целях безопасности, удалите определение виртуального каталога и разрешения, предоставленные на шагах установки, по завершении работы с примерами.  
   
 ## <a name="see-also"></a>См. также  
- [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
+ [Построение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
  [Выполнение примеров в рабочей группе и на нескольких компьютерах](http://msdn.microsoft.com/en-us/a451a525-e7ce-452d-9da9-620221260113)  
  [Советы по устранению неполадок](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)

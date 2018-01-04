@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6aa79e76bd81c0d56b30d4bac2edd4b9cbef6b33
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c12bd11cee62cd769f7dffc142806fa5ab1b0137
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>Сравнение веб-служб ASP.NET с веб-службами на основе WCF по процессу разработки
 В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предусмотрена возможность работы в режиме совместимости с ASP.NET, что позволяет программировать и настраивать приложения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] как веб-службы ASP.NET и имитировать их поведение. В следующих разделах приводится сравнение веб-служб ASP.NET и [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с точки зрения того, что необходимо для разработки приложений с использованием обеих технологий.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/02/2017
   
  Разработка приложений для [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обычно также начинается с определения сложных типов. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] может использовать те же типы .NET Framework, что и веб-службы ASP.NET.  
   
- В типы .NET Framework можно добавлять атрибуты [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.Runtime.Serialization.DataContractAttribute> и <xref:System.Runtime.Serialization.DataMemberAttribute>, чтобы указать, что экземпляры типа должны сериализоваться в XML, а также какие конкретные поля или свойства типа должны быть сериализованы, как показано в следующем примере кода.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.Runtime.Serialization.DataContractAttribute> И <xref:System.Runtime.Serialization.DataMemberAttribute> можно добавить в типы .NET Framework, чтобы указать, что экземпляры типа должны быть сериализованы в XML, а также какие конкретные поля или свойства типа должны быть сериализованы, как показано в следующем образце код.  
   
 ```  
 //Example One:   
@@ -761,4 +762,4 @@ public void Receive(Message input)
  Язык конфигурации ASP.NET позволяет задавать язык и региональные параметры для отдельных служб. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не поддерживает этот параметр конфигурации, за исключением работы в режиме совместимости с ASP.NET. Для локализации службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], работающей не в режиме совместимости с ASP.NET необходимо скомпилировать тип службы в сборки для конкретных языков и региональных параметров и предусмотреть для каждой такой сборки отдельную конечную точку с данным языком и региональными параметрами.  
   
 ## <a name="see-also"></a>См. также  
- [Сравнение веб-служб ASP.NET на основе WCF по назначению и используемым стандартам](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+ [Сравнение веб-служб ASP.NET с веб-службами на основе WCF по назначению и используемым стандартам](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)

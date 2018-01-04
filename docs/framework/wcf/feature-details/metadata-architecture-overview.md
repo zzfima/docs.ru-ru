@@ -14,11 +14,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc42aa130ce5da05739af43d287441d1644d55c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a8890cc05ec6b0b889dafcb787e216b50a681876
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-architecture-overview"></a>Общие сведения об архитектуре метаданных
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] обеспечивает широкие возможности для экспорта, публикации, получения и импорта метаданных служб. Службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используют метаданные для описания взаимодействия с конечными точками служб, чтобы такие средства, как Svcutil.exe, могли автоматически создавать клиентский код для обращения к службе.  
@@ -101,7 +102,7 @@ ms.lasthandoff: 12/02/2017
  [Форматы метаданных](../../../../docs/framework/wcf/feature-details/metadata-formats.md)  
  [Экспорт и импорт метаданных](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
  [Публикация метаданных](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
- [Получение метаданных](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
+ [Извлечение метаданных](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
  [Использование метаданных](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
  [Вопросы безопасности при использовании метаданных](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
  [Расширение системы метаданных](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

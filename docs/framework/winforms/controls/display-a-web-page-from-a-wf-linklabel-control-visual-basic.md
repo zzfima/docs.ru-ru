@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 38ef165dc655fedbf682a21220d6a76532b18f6a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ba5ba3b29bab148087e0f8b80b3f1c43aa74e761
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Практическое руководство. Отображение веб-страницы из элемента управления LinkLabel в Windows Forms (Visual Basic)
 Этот пример выводит на веб-страницу в браузере по умолчанию, когда пользователь щелкает Windows Forms <xref:System.Windows.Forms.LinkLabel> элемента управления.  
@@ -55,7 +56,7 @@ End Sub
 -   Активное подключение к Интернету.  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
- Вызов <xref:System.Diagnostics.Process.Start%2A> метод требует полного доверия. Для получения дополнительной информации см. <xref:System.Security.SecurityException>.  
+ Вызов <xref:System.Diagnostics.Process.Start%2A> метод требует полного доверия. Дополнительные сведения см. в разделе <xref:System.Security.SecurityException>.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Forms.LinkLabel>  

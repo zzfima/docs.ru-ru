@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52a599d9cba2e68fdb74d364dad562d2547ca020
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bb8971c344ff24120b5f85dceb518b0944bd5feb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Использование отслеживания для устранения неполадок приложений
 [!INCLUDE[wf](../../../includes/wf-md.md)] позволяет отслеживать данные, связанные с рабочим процессом, для последующей передачи подробных сведений в выполнение приложения [!INCLUDE[wf2](../../../includes/wf2-md.md)] или службы. Узлы [!INCLUDE[wf2](../../../includes/wf2-md.md)] могут захватывать события рабочего процесса во время выполнения экземпляра рабочего процесса. Если в рабочем процессе возникают ошибки или исключения, можно использовать данные отслеживания [!INCLUDE[wf2](../../../includes/wf2-md.md)] для устранения неполадок обработки.  

@@ -16,11 +16,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 42c6390fb2bd39a0003beecbbe10cd72a38ed63d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cd818a2342ff5b44e4e8ab1b237f7c657d3bf438
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-client-credential-values"></a>Практическое руководство. Задание значений учетных данных клиента
 Используя [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], служба может указать способ проверки подлинности клиента в службе. Например, в службе можно указать, что клиент проходит проверку подлинности с помощью сертификата.  
@@ -108,7 +109,7 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.ClientBase%601>  
  <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>  
  [Программирование безопасности WCF](../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
- [При выборе типа учетных данных](../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [Выбор типа учетных данных](../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [Служебная программа для метаданных ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [Работа с сертификатами](../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Практическое руководство. Создание клиента](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  

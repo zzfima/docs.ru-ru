@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 526544118432eb263cc856931d9f4943b9918d93
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4e3d86153d4192e04e55fb9e99ef588b45511560
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-service-publishing"></a>Публикация служб WCF
 Публикация служб [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] помогает в реализации от начальной среды разработки, предоставляемой узлом службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] и тестовым клиентом [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], до фактического развертывания приложения в производственной среде в целях его проверки. Перед тем как вводить итоговый план развертывания можно использовать службу публикации [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] для проверки правильности функционирования службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] и ее готовности к опубликованию. Также, в целях проверки, можно провести развертывание библиотек служб [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] в различных целевых размещениях.  

@@ -13,20 +13,21 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d68f1b6ecfb55a917dde97b395b4455930565409
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: edfd0670d951a07526454bc380cee91c66e4e7a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="services"></a>Службы
 В образцах из этого раздела показаны службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Размещение](../../../../docs/framework/wcf/feature-details/hosting.md)  
  Показывает размещение служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Взаимодействие со службой](../../../../docs/framework/wcf/samples/service-interoperability.md)  
+ [Взаимодействие служб](../../../../docs/framework/wcf/samples/service-interoperability.md)  
  Показывает взаимодействие между [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и другими технологиями служб.  
   
  [Поведения](../../../../docs/framework/wcf/samples/behaviors.md)  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/02/2017
  [Использование стандартных конечных точек](../../../../docs/framework/wcf/samples/usage-of-standard-endpoints.md)  
  Демонстрирует использование стандартных конечных точек в файлах конфигурации службы.  
   
- [Иерархической модели конфигурации](../../../../docs/framework/wcf/samples/hierarchical-configuration-model.md)  
+ [Иерархическая модель конфигурации](../../../../docs/framework/wcf/samples/hierarchical-configuration-model.md)  
  Демонстрирует реализацию иерархии файлов конфигурации для служб.  
   
  [Расширенная политика защиты](../../../../docs/framework/wcf/samples/extended-protection-policy.md)  
@@ -53,7 +54,7 @@ ms.lasthandoff: 12/02/2017
  [Адресация](../../../../docs/framework/wcf/samples/addressing.md)  
  Показаны различные аспекты и возможности адресов конечных точек.  
   
- [Принудительные](../../../../docs/framework/wcf/samples/imperative.md)  
+ [Императивное определение](../../../../docs/framework/wcf/samples/imperative.md)  
  Демонстрируется определение <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> для службы в коде, вместо того чтобы определять `wsHttpBinding` привязку в конфигурации.  
   
  [Несколько контрактов](../../../../docs/framework/wcf/samples/multiple-contracts.md)  

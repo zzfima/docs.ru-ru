@@ -19,16 +19,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c64715fbc976af5c765da2efe563acdc3d2ae13c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 4f62b4538b5f91c2f57cab52fa7563680016903a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printdialog-component-windows-forms"></a>Компонент PrintDialog (Windows Forms)
 Компонент `PrintDialog` Windows Forms является предварительно настроенным диалоговым окном, используемым для выбора принтера и печатаемых страниц, а также для определения других параметров печати в приложениях Windows. Он используется в качестве простого решения для выбора принтера и параметров печати вместо самостоятельной настройки диалогового окна. Пользователям можно предоставить различные варианты печати документов: печать всех страниц, указанного диапазона страниц или выделенного фрагмента текста. Использование стандартных диалоговых окон Windows помогает создавать приложения, основные функциональные возможности которых хорошо знакомы пользователям.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о компоненте PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-overview-windows-forms.md)  
  Основные понятия, связанные с компонентом `PrintDialog`, который служит для вывода стандартного диалогового окна для выбора принтера и печатаемых страниц, а также для задания параметров печати.  
   

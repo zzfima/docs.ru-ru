@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 852d689ff3159818fb25ecfd9b6e5df6df84470c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f3f045fd35ef57be51c10d7948275899c1ae4f01
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="introduction-to-extensibility"></a>Введение в расширяемость
 Модель приложений [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] предусматривает удовлетворение большей части связанных с обменом данных потребностей любого распределенного приложения. Однако всегда существуют сценарии, которые модель приложений по умолчанию и предоставленные системой реализации не поддерживают. Модель расширяемости [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] предназначена для поддержки пользовательских сценариев и позволяет изменять поведение системы на всех уровнях, вплоть до замены модели приложений целиком. В этом разделе кратко рассматриваются различные области расширения и даются ссылки на дополнительные сведения о каждой из них.  

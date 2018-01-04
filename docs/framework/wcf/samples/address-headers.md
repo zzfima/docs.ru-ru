@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8d46dac29157455f736e30515f4bc6b277b63694
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aafd6ec911464dcc2b936b9f9fc74b9bc39808bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="address-headers"></a>Заголовки адресов
 В образце заголовков адреса показан процесс передачи клиентами ссылочных параметров в службу с помощью [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -31,7 +32,7 @@ ms.lasthandoff: 12/02/2017
   
  В этом образце клиент добавляет ссылочный параметр в `EndpointAddress` конечной точки клиента. Служба ищет этот ссылочный параметр и использует его значение в логике операции службы "Привет".  
   
-## <a name="client"></a>Клиент  
+## <a name="client"></a>"Клиент";  
  Чтобы клиент мог отправить ссылочный параметр, он должен добавить заголовок `AddressHeader` в адрес `EndpointAddress` конечной точки `ServiceEndpoint`. Поскольку класс `EndpointAddress` является неизменным, изменение адреса конечной точки необходимо выполнить с помощью класса `EndpointAddressBuilder`. В следующем коде клиент инициализируется для отправки ссылочного параметра как часть сообщения.  
   
 ```  

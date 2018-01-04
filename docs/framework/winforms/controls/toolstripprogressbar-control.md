@@ -18,16 +18,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1bb7a1e74f1687a1549ab0780e2e2e773382f193
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 13dcd324772393e3746a6ea5c5cadca02d9a1bab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstripprogressbar-control"></a>Элемент управления ToolStripProgressBar
 <xref:System.Windows.Forms.ToolStripProgressBar> Объединяет <xref:System.Windows.Forms.ToolStrip> функции отрисовки и нависания с его обычные функциональные возможности отслеживания выполнения процесса.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Элемент управления ToolStripProgressBar](../../../../docs/framework/winforms/controls/toolstripprogressbar-control-overview.md)  
  Приводятся разделы с описанием назначения элемента управления Windows Forms <xref:System.Windows.Forms.ToolStripProgressBar> и основных понятий, связанных с ним.  
   

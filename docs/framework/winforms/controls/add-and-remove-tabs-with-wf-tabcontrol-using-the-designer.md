@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 02bcf434baee0c27ca2674817df0e4033effb125
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 666cade349220e9975a5770328e03db0e948d7d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Практическое руководство. Добавление и удаление вкладок с использованием элемента управления TabControl в формах Windows Forms с помощью конструктора
 При размещении <xref:System.Windows.Forms.TabControl> элемента управления в форме, оно содержит две вкладки по умолчанию. Можно добавить или удалить вкладки с помощью конструктора.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Щелкните смарт-тег элемента управления, **добавить вкладку** или **удалить вкладку**  
   
-     -или-  
+     - или -  
   
      В **свойства** окно, нажмите кнопку **многоточие** кнопки (![экрана VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) рядом с полем <xref:System.Windows.Forms.TabControl.TabPages%2A> свойства, чтобы открыть **редактор коллекции TabPage**. Нажмите кнопку **добавить** или **удалить** кнопки.  
   
