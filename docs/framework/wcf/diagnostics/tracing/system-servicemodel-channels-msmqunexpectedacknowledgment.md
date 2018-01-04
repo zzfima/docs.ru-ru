@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1e36695ca53a5f8bcf92b85d71333961b0648fbf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 309f59ae2c56acbc48f00471252ad3710b784544
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelsmsmqunexpectedacknowledgment"></a><span data-ttu-id="db554-102">System.ServiceModel.Channels.MsmqUnexpectedAcknowledgment</span><span class="sxs-lookup"><span data-stu-id="db554-102">System.ServiceModel.Channels.MsmqUnexpectedAcknowledgment</span></span>
-<span data-ttu-id="db554-103">System.ServiceModel.Channels.MsmqUnexpectedAcknowledgment</span><span class="sxs-lookup"><span data-stu-id="db554-103">System.ServiceModel.Channels.MsmqUnexpectedAcknowledgment</span></span>  
+# <a name="systemservicemodelchannelsmsmqunexpectedacknowledgment"></a><span data-ttu-id="baca4-102">System.ServiceModel.Channels.MsmqUnexpectedAcknowledgment</span><span class="sxs-lookup"><span data-stu-id="baca4-102">System.ServiceModel.Channels.MsmqUnexpectedAcknowledgment</span></span>
+<span data-ttu-id="baca4-103">System.ServiceModel.Channels.MsmqUnexpectedAcknowledgment</span><span class="sxs-lookup"><span data-stu-id="baca4-103">System.ServiceModel.Channels.MsmqUnexpectedAcknowledgment</span></span>  
   
-## <a name="description"></a><span data-ttu-id="db554-104">Описание</span><span class="sxs-lookup"><span data-stu-id="db554-104">Description</span></span>  
- <span data-ttu-id="db554-105">Непредвиденное значение подтверждения.</span><span class="sxs-lookup"><span data-stu-id="db554-105">Unexpected acknowledgment value.</span></span>  
+## <a name="description"></a><span data-ttu-id="baca4-104">Описание</span><span class="sxs-lookup"><span data-stu-id="baca4-104">Description</span></span>  
+ <span data-ttu-id="baca4-105">Непредвиденное значение подтверждения.</span><span class="sxs-lookup"><span data-stu-id="baca4-105">Unexpected acknowledgment value.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="db554-106">См. также</span><span class="sxs-lookup"><span data-stu-id="db554-106">See Also</span></span>  
- [<span data-ttu-id="db554-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="db554-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="db554-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="db554-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="db554-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="db554-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="baca4-106">См. также</span><span class="sxs-lookup"><span data-stu-id="baca4-106">See Also</span></span>  
+ [<span data-ttu-id="baca4-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="baca4-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="baca4-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="baca4-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="baca4-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="baca4-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

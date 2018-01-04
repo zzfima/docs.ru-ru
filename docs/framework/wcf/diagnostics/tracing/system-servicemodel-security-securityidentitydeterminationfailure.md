@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 905673e2ece8b51ffe4c2ee6717628747d1fa843
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: de160dde8244c0864421613f082482fded8d1972
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecurityidentitydeterminationfailure"></a><span data-ttu-id="803f5-102">System.ServiceModel.Security.SecurityIdentityDeterminationFailure</span><span class="sxs-lookup"><span data-stu-id="803f5-102">System.ServiceModel.Security.SecurityIdentityDeterminationFailure</span></span>
-<span data-ttu-id="803f5-103">System.ServiceModel.Security.SecurityIdentityDeterminationFailure</span><span class="sxs-lookup"><span data-stu-id="803f5-103">System.ServiceModel.Security.SecurityIdentityDeterminationFailure</span></span>  
+# <a name="systemservicemodelsecuritysecurityidentitydeterminationfailure"></a><span data-ttu-id="a9bdb-102">System.ServiceModel.Security.SecurityIdentityDeterminationFailure</span><span class="sxs-lookup"><span data-stu-id="a9bdb-102">System.ServiceModel.Security.SecurityIdentityDeterminationFailure</span></span>
+<span data-ttu-id="a9bdb-103">System.ServiceModel.Security.SecurityIdentityDeterminationFailure</span><span class="sxs-lookup"><span data-stu-id="a9bdb-103">System.ServiceModel.Security.SecurityIdentityDeterminationFailure</span></span>  
   
-## <a name="description"></a><span data-ttu-id="803f5-104">Описание</span><span class="sxs-lookup"><span data-stu-id="803f5-104">Description</span></span>  
- <span data-ttu-id="803f5-105">Невозможно определить идентификацию для EndpointAddress.</span><span class="sxs-lookup"><span data-stu-id="803f5-105">An identity cannot be determined for an EndpointAddress.</span></span>  
+## <a name="description"></a><span data-ttu-id="a9bdb-104">Описание</span><span class="sxs-lookup"><span data-stu-id="a9bdb-104">Description</span></span>  
+ <span data-ttu-id="a9bdb-105">Невозможно определить идентификацию для EndpointAddress.</span><span class="sxs-lookup"><span data-stu-id="a9bdb-105">An identity cannot be determined for an EndpointAddress.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="803f5-106">См. также</span><span class="sxs-lookup"><span data-stu-id="803f5-106">See Also</span></span>  
- [<span data-ttu-id="803f5-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="803f5-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="803f5-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="803f5-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="803f5-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="803f5-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="a9bdb-106">См. также</span><span class="sxs-lookup"><span data-stu-id="a9bdb-106">See Also</span></span>  
+ [<span data-ttu-id="a9bdb-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="a9bdb-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="a9bdb-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="a9bdb-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="a9bdb-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="a9bdb-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

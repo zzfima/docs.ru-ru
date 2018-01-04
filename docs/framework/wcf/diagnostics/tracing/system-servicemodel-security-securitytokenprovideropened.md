@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 356900a86d7362816cd16e4ed5341cfa11d6f8f6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5161e9522a3d0ee04df8e6a1c336ed6e1d65cd8e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecuritytokenprovideropened"></a><span data-ttu-id="731e6-102">System.ServiceModel.Security.SecurityTokenProviderOpened</span><span class="sxs-lookup"><span data-stu-id="731e6-102">System.ServiceModel.Security.SecurityTokenProviderOpened</span></span>
-<span data-ttu-id="731e6-103">System.ServiceModel.Security.SecurityTokenProviderOpened</span><span class="sxs-lookup"><span data-stu-id="731e6-103">System.ServiceModel.Security.SecurityTokenProviderOpened</span></span>  
+# <a name="systemservicemodelsecuritysecuritytokenprovideropened"></a><span data-ttu-id="43b8e-102">System.ServiceModel.Security.SecurityTokenProviderOpened</span><span class="sxs-lookup"><span data-stu-id="43b8e-102">System.ServiceModel.Security.SecurityTokenProviderOpened</span></span>
+<span data-ttu-id="43b8e-103">System.ServiceModel.Security.SecurityTokenProviderOpened</span><span class="sxs-lookup"><span data-stu-id="43b8e-103">System.ServiceModel.Security.SecurityTokenProviderOpened</span></span>  
   
-## <a name="description"></a><span data-ttu-id="731e6-104">Описание</span><span class="sxs-lookup"><span data-stu-id="731e6-104">Description</span></span>  
- <span data-ttu-id="731e6-105">Поставщик маркеров безопасности был открыт.</span><span class="sxs-lookup"><span data-stu-id="731e6-105">A security token provider was opened.</span></span>  
+## <a name="description"></a><span data-ttu-id="43b8e-104">Описание</span><span class="sxs-lookup"><span data-stu-id="43b8e-104">Description</span></span>  
+ <span data-ttu-id="43b8e-105">Поставщик маркеров безопасности был открыт.</span><span class="sxs-lookup"><span data-stu-id="43b8e-105">A security token provider was opened.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="731e6-106">См. также</span><span class="sxs-lookup"><span data-stu-id="731e6-106">See Also</span></span>  
- [<span data-ttu-id="731e6-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="731e6-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="731e6-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="731e6-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="731e6-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="731e6-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="43b8e-106">См. также</span><span class="sxs-lookup"><span data-stu-id="43b8e-106">See Also</span></span>  
+ [<span data-ttu-id="43b8e-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="43b8e-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="43b8e-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="43b8e-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="43b8e-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="43b8e-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

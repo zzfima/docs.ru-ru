@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 188d080d32a1f9463dd8d576fdd4154ad893c8ff
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c2f27c6d6f4970d8ea49af02355be95e5d66d77
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodeldiagnosticsmessagenotloggedquotaexceeded"></a><span data-ttu-id="55931-102">System.ServiceModel.Diagnostics.MessageNotLoggedQuotaExceeded</span><span class="sxs-lookup"><span data-stu-id="55931-102">System.ServiceModel.Diagnostics.MessageNotLoggedQuotaExceeded</span></span>
-<span data-ttu-id="55931-103">System.ServiceModel.Diagnostics.MessageNotLoggedQuotaExceeded</span><span class="sxs-lookup"><span data-stu-id="55931-103">System.ServiceModel.Diagnostics.MessageNotLoggedQuotaExceeded</span></span>  
+# <a name="systemservicemodeldiagnosticsmessagenotloggedquotaexceeded"></a><span data-ttu-id="a4559-102">System.ServiceModel.Diagnostics.MessageNotLoggedQuotaExceeded</span><span class="sxs-lookup"><span data-stu-id="a4559-102">System.ServiceModel.Diagnostics.MessageNotLoggedQuotaExceeded</span></span>
+<span data-ttu-id="a4559-103">System.ServiceModel.Diagnostics.MessageNotLoggedQuotaExceeded</span><span class="sxs-lookup"><span data-stu-id="a4559-103">System.ServiceModel.Diagnostics.MessageNotLoggedQuotaExceeded</span></span>  
   
-## <a name="description"></a><span data-ttu-id="55931-104">Описание</span><span class="sxs-lookup"><span data-stu-id="55931-104">Description</span></span>  
- <span data-ttu-id="55931-105">Сообщение не внесено в журнал, поскольку его размер превышает заданную квоту.</span><span class="sxs-lookup"><span data-stu-id="55931-105">Message not logged because its size exceeds the configured quota.</span></span>  
+## <a name="description"></a><span data-ttu-id="a4559-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="a4559-104">Description</span></span>  
+ <span data-ttu-id="a4559-105">Сообщение не внесено в журнал, поскольку его размер превышает заданную квоту.</span><span class="sxs-lookup"><span data-stu-id="a4559-105">Message not logged because its size exceeds the configured quota.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="55931-106">См. также</span><span class="sxs-lookup"><span data-stu-id="55931-106">See Also</span></span>  
- [<span data-ttu-id="55931-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="55931-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="55931-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="55931-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="55931-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="55931-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="a4559-106">См. также</span><span class="sxs-lookup"><span data-stu-id="a4559-106">See Also</span></span>  
+ [<span data-ttu-id="a4559-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="a4559-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="a4559-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="a4559-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="a4559-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="a4559-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

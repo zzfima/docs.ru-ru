@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 00b923ff1d6ec0ec790fda0616d32eb1fd008a28
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e8c31ed9b29b339e4fc32a30de5175cb81d510df
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcommunicationobjectaborted"></a><span data-ttu-id="f007a-102">System.ServiceModel.CommunicationObjectAborted</span><span class="sxs-lookup"><span data-stu-id="f007a-102">System.ServiceModel.CommunicationObjectAborted</span></span>
-<span data-ttu-id="f007a-103">System.ServiceModel.CommunicationObjectAborted</span><span class="sxs-lookup"><span data-stu-id="f007a-103">System.ServiceModel.CommunicationObjectAborted</span></span>  
+# <a name="systemservicemodelcommunicationobjectaborted"></a><span data-ttu-id="3dbf3-102">System.ServiceModel.CommunicationObjectAborted</span><span class="sxs-lookup"><span data-stu-id="3dbf3-102">System.ServiceModel.CommunicationObjectAborted</span></span>
+<span data-ttu-id="3dbf3-103">System.ServiceModel.CommunicationObjectAborted</span><span class="sxs-lookup"><span data-stu-id="3dbf3-103">System.ServiceModel.CommunicationObjectAborted</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f007a-104">Описание</span><span class="sxs-lookup"><span data-stu-id="f007a-104">Description</span></span>  
- <span data-ttu-id="f007a-105">Объект связи прерван.</span><span class="sxs-lookup"><span data-stu-id="f007a-105">A communication object was aborted.</span></span>  
+## <a name="description"></a><span data-ttu-id="3dbf3-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="3dbf3-104">Description</span></span>  
+ <span data-ttu-id="3dbf3-105">Объект связи прерван.</span><span class="sxs-lookup"><span data-stu-id="3dbf3-105">A communication object was aborted.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f007a-106">См. также</span><span class="sxs-lookup"><span data-stu-id="f007a-106">See Also</span></span>  
- [<span data-ttu-id="f007a-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="f007a-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="f007a-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="f007a-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="f007a-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="f007a-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="3dbf3-106">См. также</span><span class="sxs-lookup"><span data-stu-id="3dbf3-106">See Also</span></span>  
+ [<span data-ttu-id="3dbf3-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="3dbf3-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="3dbf3-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="3dbf3-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="3dbf3-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="3dbf3-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,22 +13,23 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f6a05f838e37d5cd56a572dc73b032bec2d2abea
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 25106bffe6d541a89c786035db3d3266d861fd5b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodeltxcompletionstatuscompletedforerror"></a><span data-ttu-id="276fd-102">System.ServiceModel.TxCompletionStatusCompletedForError</span><span class="sxs-lookup"><span data-stu-id="276fd-102">System.ServiceModel.TxCompletionStatusCompletedForError</span></span>
-<span data-ttu-id="276fd-103">Заданная транзакция для заданной операции завершена в результате необработанного исключения при выполнении.</span><span class="sxs-lookup"><span data-stu-id="276fd-103">The specified transaction for the specified operation was completed due to an unhandled execution exception.</span></span>  
+# <a name="systemservicemodeltxcompletionstatuscompletedforerror"></a><span data-ttu-id="3f3c2-102">System.ServiceModel.TxCompletionStatusCompletedForError</span><span class="sxs-lookup"><span data-stu-id="3f3c2-102">System.ServiceModel.TxCompletionStatusCompletedForError</span></span>
+<span data-ttu-id="3f3c2-103">Заданная транзакция для заданной операции завершена в результате необработанного исключения при выполнении.</span><span class="sxs-lookup"><span data-stu-id="3f3c2-103">The specified transaction for the specified operation was completed due to an unhandled execution exception.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="276fd-104">Описание</span><span class="sxs-lookup"><span data-stu-id="276fd-104">Description</span></span>  
- <span data-ttu-id="276fd-105">Трассируется, если при попытке завершить текущую транзакцию возникает ошибка.</span><span class="sxs-lookup"><span data-stu-id="276fd-105">Traced when an error occurs during an attempt to complete the current transaction.</span></span> <span data-ttu-id="276fd-106">Это происходит до того, как вызвавшему объекту отправляется ответ или ошибка.</span><span class="sxs-lookup"><span data-stu-id="276fd-106">This happens before a reply or fault is sent to the caller.</span></span>  
+## <a name="description"></a><span data-ttu-id="3f3c2-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="3f3c2-104">Description</span></span>  
+ <span data-ttu-id="3f3c2-105">Трассируется, если при попытке завершить текущую транзакцию возникает ошибка.</span><span class="sxs-lookup"><span data-stu-id="3f3c2-105">Traced when an error occurs during an attempt to complete the current transaction.</span></span> <span data-ttu-id="3f3c2-106">Это происходит до того, как вызвавшему объекту отправляется ответ или ошибка.</span><span class="sxs-lookup"><span data-stu-id="3f3c2-106">This happens before a reply or fault is sent to the caller.</span></span>  
   
-## <a name="troubleshooting"></a><span data-ttu-id="276fd-107">Устранение неполадок</span><span class="sxs-lookup"><span data-stu-id="276fd-107">Troubleshooting</span></span>  
- <span data-ttu-id="276fd-108">Проверьте трассируемое сообщение на предмет наличия сообщения об исключении и других элементов, с которыми можно произвести какие-либо действия.</span><span class="sxs-lookup"><span data-stu-id="276fd-108">Inspect the traced message for the exception message and any actionable items.</span></span>  
+## <a name="troubleshooting"></a><span data-ttu-id="3f3c2-107">Устранение неполадок</span><span class="sxs-lookup"><span data-stu-id="3f3c2-107">Troubleshooting</span></span>  
+ <span data-ttu-id="3f3c2-108">Проверьте трассируемое сообщение на предмет наличия сообщения об исключении и других элементов, с которыми можно произвести какие-либо действия.</span><span class="sxs-lookup"><span data-stu-id="3f3c2-108">Inspect the traced message for the exception message and any actionable items.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="276fd-109">См. также</span><span class="sxs-lookup"><span data-stu-id="276fd-109">See Also</span></span>  
- [<span data-ttu-id="276fd-110">Трассировка</span><span class="sxs-lookup"><span data-stu-id="276fd-110">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="276fd-111">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="276fd-111">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="276fd-112">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="276fd-112">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="3f3c2-109">См. также</span><span class="sxs-lookup"><span data-stu-id="3f3c2-109">See Also</span></span>  
+ [<span data-ttu-id="3f3c2-110">Трассировка</span><span class="sxs-lookup"><span data-stu-id="3f3c2-110">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="3f3c2-111">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="3f3c2-111">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="3f3c2-112">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="3f3c2-112">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

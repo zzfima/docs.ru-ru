@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d47c1d8950e1238d3ac33a44d497c1a6f8ae08a6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 43757972933fcd7e47a2b3fd51634621834c7b57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelportsharingroutingtablenamespaceconflict"></a><span data-ttu-id="f7f40-102">System.ServiceModel.PortSharing.RoutingTableNamespaceConflict</span><span class="sxs-lookup"><span data-stu-id="f7f40-102">System.ServiceModel.PortSharing.RoutingTableNamespaceConflict</span></span>
-<span data-ttu-id="f7f40-103">System.ServiceModel.PortSharing.RoutingTableNamespaceConflict</span><span class="sxs-lookup"><span data-stu-id="f7f40-103">System.ServiceModel.PortSharing.RoutingTableNamespaceConflict</span></span>  
+# <a name="systemservicemodelportsharingroutingtablenamespaceconflict"></a><span data-ttu-id="6af36-102">System.ServiceModel.PortSharing.RoutingTableNamespaceConflict</span><span class="sxs-lookup"><span data-stu-id="6af36-102">System.ServiceModel.PortSharing.RoutingTableNamespaceConflict</span></span>
+<span data-ttu-id="6af36-103">System.ServiceModel.PortSharing.RoutingTableNamespaceConflict</span><span class="sxs-lookup"><span data-stu-id="6af36-103">System.ServiceModel.PortSharing.RoutingTableNamespaceConflict</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f7f40-104">Описание</span><span class="sxs-lookup"><span data-stu-id="f7f40-104">Description</span></span>  
- <span data-ttu-id="f7f40-105">Это пространство имен уже зарегистрировано.</span><span class="sxs-lookup"><span data-stu-id="f7f40-105">The namespace was already registered.</span></span>  
+## <a name="description"></a><span data-ttu-id="6af36-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="6af36-104">Description</span></span>  
+ <span data-ttu-id="6af36-105">Это пространство имен уже зарегистрировано.</span><span class="sxs-lookup"><span data-stu-id="6af36-105">The namespace was already registered.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f7f40-106">См. также</span><span class="sxs-lookup"><span data-stu-id="f7f40-106">See Also</span></span>  
- [<span data-ttu-id="f7f40-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="f7f40-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="f7f40-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="f7f40-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="f7f40-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="f7f40-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="6af36-106">См. также</span><span class="sxs-lookup"><span data-stu-id="6af36-106">See Also</span></span>  
+ [<span data-ttu-id="6af36-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="6af36-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="6af36-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="6af36-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="6af36-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="6af36-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

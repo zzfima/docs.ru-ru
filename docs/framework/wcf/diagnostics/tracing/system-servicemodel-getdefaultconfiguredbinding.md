@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8377645d269f5f89650a339e4c02b86aed89551e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e1a6d56e926f61c245bd71cb7ca10a85b43f9d78
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelgetdefaultconfiguredbinding"></a><span data-ttu-id="5dd30-102">System.ServiceModel.GetDefaultConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="5dd30-102">System.ServiceModel.GetDefaultConfiguredBinding</span></span>
-<span data-ttu-id="5dd30-103">System.ServiceModel.GetDefaultConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="5dd30-103">System.ServiceModel.GetDefaultConfiguredBinding</span></span>  
+# <a name="systemservicemodelgetdefaultconfiguredbinding"></a><span data-ttu-id="5aabe-102">System.ServiceModel.GetDefaultConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="5aabe-102">System.ServiceModel.GetDefaultConfiguredBinding</span></span>
+<span data-ttu-id="5aabe-103">System.ServiceModel.GetDefaultConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="5aabe-103">System.ServiceModel.GetDefaultConfiguredBinding</span></span>  
   
-## <a name="description"></a><span data-ttu-id="5dd30-104">Описание</span><span class="sxs-lookup"><span data-stu-id="5dd30-104">Description</span></span>  
- <span data-ttu-id="5dd30-105">Получает сконфигурированную привязку, заданную по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="5dd30-105">Get the default configured binding.</span></span>  
+## <a name="description"></a><span data-ttu-id="5aabe-104">Описание</span><span class="sxs-lookup"><span data-stu-id="5aabe-104">Description</span></span>  
+ <span data-ttu-id="5aabe-105">Получает сконфигурированную привязку, заданную по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="5aabe-105">Get the default configured binding.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5dd30-106">См. также</span><span class="sxs-lookup"><span data-stu-id="5dd30-106">See Also</span></span>  
- [<span data-ttu-id="5dd30-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="5dd30-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="5dd30-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="5dd30-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="5dd30-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="5dd30-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="5aabe-106">См. также</span><span class="sxs-lookup"><span data-stu-id="5aabe-106">See Also</span></span>  
+ [<span data-ttu-id="5aabe-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="5aabe-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="5aabe-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="5aabe-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="5aabe-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="5aabe-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

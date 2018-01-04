@@ -13,22 +13,23 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 70dffacaab6ecd668a6398c008c0f1965ca7ed4f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 484eeee16d2af18471ea5bc312a07aab60a8871c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodeltxasyncabort"></a><span data-ttu-id="c8582-102">System.ServiceModel.TxAsyncAbort</span><span class="sxs-lookup"><span data-stu-id="c8582-102">System.ServiceModel.TxAsyncAbort</span></span>
-<span data-ttu-id="c8582-103">Заданная транзакция была асинхронно прервана.</span><span class="sxs-lookup"><span data-stu-id="c8582-103">The specified transaction was asynchronously aborted.</span></span>  
+# <a name="systemservicemodeltxasyncabort"></a><span data-ttu-id="66799-102">System.ServiceModel.TxAsyncAbort</span><span class="sxs-lookup"><span data-stu-id="66799-102">System.ServiceModel.TxAsyncAbort</span></span>
+<span data-ttu-id="66799-103">Заданная транзакция была асинхронно прервана.</span><span class="sxs-lookup"><span data-stu-id="66799-103">The specified transaction was asynchronously aborted.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="c8582-104">Описание</span><span class="sxs-lookup"><span data-stu-id="c8582-104">Description</span></span>  
- <span data-ttu-id="c8582-105">Текущая транзакция была прервана, потому что другой участник спровоцировал прерывание, истекло время ожидания или из-за внутренней ошибки участника транзакции.</span><span class="sxs-lookup"><span data-stu-id="c8582-105">The current transaction was aborted due to another participant voting for Abort, time-outs occurring, or another error inside the participant of a transaction.</span></span>  
+## <a name="description"></a><span data-ttu-id="66799-104">Описание</span><span class="sxs-lookup"><span data-stu-id="66799-104">Description</span></span>  
+ <span data-ttu-id="66799-105">Текущая транзакция была прервана, потому что другой участник спровоцировал прерывание, истекло время ожидания или из-за внутренней ошибки участника транзакции.</span><span class="sxs-lookup"><span data-stu-id="66799-105">The current transaction was aborted due to another participant voting for Abort, time-outs occurring, or another error inside the participant of a transaction.</span></span>  
   
-## <a name="troubleshooting"></a><span data-ttu-id="c8582-106">Устранение неполадок</span><span class="sxs-lookup"><span data-stu-id="c8582-106">Troubleshooting</span></span>  
- <span data-ttu-id="c8582-107">Проверьте все системные журналы, если это прерывание произошло неожиданно, чтобы определить истинную причину прерывания.</span><span class="sxs-lookup"><span data-stu-id="c8582-107">Check all system logs if this abort is unexpected to determine the real reason for the abort.</span></span>  
+## <a name="troubleshooting"></a><span data-ttu-id="66799-106">Устранение неполадок</span><span class="sxs-lookup"><span data-stu-id="66799-106">Troubleshooting</span></span>  
+ <span data-ttu-id="66799-107">Проверьте все системные журналы, если это прерывание произошло неожиданно, чтобы определить истинную причину прерывания.</span><span class="sxs-lookup"><span data-stu-id="66799-107">Check all system logs if this abort is unexpected to determine the real reason for the abort.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c8582-108">См. также</span><span class="sxs-lookup"><span data-stu-id="c8582-108">See Also</span></span>  
- [<span data-ttu-id="c8582-109">Трассировка</span><span class="sxs-lookup"><span data-stu-id="c8582-109">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="c8582-110">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="c8582-110">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="c8582-111">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="c8582-111">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="66799-108">См. также</span><span class="sxs-lookup"><span data-stu-id="66799-108">See Also</span></span>  
+ [<span data-ttu-id="66799-109">Трассировка</span><span class="sxs-lookup"><span data-stu-id="66799-109">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="66799-110">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="66799-110">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="66799-111">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="66799-111">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

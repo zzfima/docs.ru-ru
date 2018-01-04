@@ -13,16 +13,17 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 74eff3a6193e6507c1049accf4c43c3ecc8d30a6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f4cc5d0676ef397f67bd9d16b2b19c6f3ee2d57e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="localservicesecuritysettings"></a><span data-ttu-id="42dd7-102">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="42dd7-102">LocalServiceSecuritySettings</span></span>
-<span data-ttu-id="42dd7-103">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="42dd7-103">LocalServiceSecuritySettings</span></span>  
+# <a name="localservicesecuritysettings"></a><span data-ttu-id="6f84b-102">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="6f84b-102">LocalServiceSecuritySettings</span></span>
+<span data-ttu-id="6f84b-103">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="6f84b-103">LocalServiceSecuritySettings</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="42dd7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="42dd7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6f84b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6f84b-104">Syntax</span></span>  
   
 ```  
 class LocalServiceSecuritySettings  
@@ -44,115 +45,115 @@ class LocalServiceSecuritySettings
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="42dd7-105">Методы</span><span class="sxs-lookup"><span data-stu-id="42dd7-105">Methods</span></span>  
- <span data-ttu-id="42dd7-106">Класс LocalServiceSecuritySettings не определяет никаких методов.</span><span class="sxs-lookup"><span data-stu-id="42dd7-106">The LocalServiceSecuritySettings class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="6f84b-105">Методы</span><span class="sxs-lookup"><span data-stu-id="6f84b-105">Methods</span></span>  
+ <span data-ttu-id="6f84b-106">Класс LocalServiceSecuritySettings не определяет никаких методов.</span><span class="sxs-lookup"><span data-stu-id="6f84b-106">The LocalServiceSecuritySettings class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="42dd7-107">Свойства</span><span class="sxs-lookup"><span data-stu-id="42dd7-107">Properties</span></span>  
- <span data-ttu-id="42dd7-108">Класс LocalServiceSecuritySettings имеет следующие свойства.</span><span class="sxs-lookup"><span data-stu-id="42dd7-108">The LocalServiceSecuritySettings class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="6f84b-107">Свойства</span><span class="sxs-lookup"><span data-stu-id="6f84b-107">Properties</span></span>  
+ <span data-ttu-id="6f84b-108">Класс LocalServiceSecuritySettings имеет следующие свойства.</span><span class="sxs-lookup"><span data-stu-id="6f84b-108">The LocalServiceSecuritySettings class has the following properties:</span></span>  
   
-### <a name="detectreplays"></a><span data-ttu-id="42dd7-109">DetectReplays</span><span class="sxs-lookup"><span data-stu-id="42dd7-109">DetectReplays</span></span>  
- <span data-ttu-id="42dd7-110">Тип данных: boolean</span><span class="sxs-lookup"><span data-stu-id="42dd7-110">Data type: boolean</span></span>  
+### <a name="detectreplays"></a><span data-ttu-id="6f84b-109">DetectReplays</span><span class="sxs-lookup"><span data-stu-id="6f84b-109">DetectReplays</span></span>  
+ <span data-ttu-id="6f84b-110">Тип данных: boolean</span><span class="sxs-lookup"><span data-stu-id="6f84b-110">Data type: boolean</span></span>  
   
- <span data-ttu-id="42dd7-111">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="42dd7-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="6f84b-111">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="6f84b-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="42dd7-112">Логическое значение, показывающее, будут ли атаки с повторением обнаружены и ликвидированы на канале автоматически.</span><span class="sxs-lookup"><span data-stu-id="42dd7-112">A Boolean value that specifies whether replay attacks against the channel are detected and dealt with automatically.</span></span>  
+ <span data-ttu-id="6f84b-112">Логическое значение, показывающее, будут ли атаки с повторением обнаружены и ликвидированы на канале автоматически.</span><span class="sxs-lookup"><span data-stu-id="6f84b-112">A Boolean value that specifies whether replay attacks against the channel are detected and dealt with automatically.</span></span>  
   
-### <a name="inactivitytimeout"></a><span data-ttu-id="42dd7-113">InactivityTimeout</span><span class="sxs-lookup"><span data-stu-id="42dd7-113">InactivityTimeout</span></span>  
- <span data-ttu-id="42dd7-114">Тип данных: datetime</span><span class="sxs-lookup"><span data-stu-id="42dd7-114">Data type: datetime</span></span>  
+### <a name="inactivitytimeout"></a><span data-ttu-id="6f84b-113">InactivityTimeout</span><span class="sxs-lookup"><span data-stu-id="6f84b-113">InactivityTimeout</span></span>  
+ <span data-ttu-id="6f84b-114">Тип данных: datetime</span><span class="sxs-lookup"><span data-stu-id="6f84b-114">Data type: datetime</span></span>  
   
- <span data-ttu-id="42dd7-115">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="42dd7-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="6f84b-115">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="6f84b-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="42dd7-116">Максимальное количество ожидающих безопасных сеансов, поддерживаемое службой.</span><span class="sxs-lookup"><span data-stu-id="42dd7-116">The maximum number of pending security sessions that the service supports.</span></span>  
+ <span data-ttu-id="6f84b-116">Максимальное количество ожидающих безопасных сеансов, поддерживаемое службой.</span><span class="sxs-lookup"><span data-stu-id="6f84b-116">The maximum number of pending security sessions that the service supports.</span></span>  
   
-### <a name="issuedcookielifetime"></a><span data-ttu-id="42dd7-117">IssuedCookieLifetime</span><span class="sxs-lookup"><span data-stu-id="42dd7-117">IssuedCookieLifetime</span></span>  
- <span data-ttu-id="42dd7-118">Тип данных: datetime</span><span class="sxs-lookup"><span data-stu-id="42dd7-118">Data type: datetime</span></span>  
+### <a name="issuedcookielifetime"></a><span data-ttu-id="6f84b-117">IssuedCookieLifetime</span><span class="sxs-lookup"><span data-stu-id="6f84b-117">IssuedCookieLifetime</span></span>  
+ <span data-ttu-id="6f84b-118">Тип данных: datetime</span><span class="sxs-lookup"><span data-stu-id="6f84b-118">Data type: datetime</span></span>  
   
- <span data-ttu-id="42dd7-119">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="42dd7-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="6f84b-119">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="6f84b-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="42dd7-120">Значение типа TimeSpan, которое задает время существования для всех новых файлов безопасности cookie.</span><span class="sxs-lookup"><span data-stu-id="42dd7-120">A TimeSpan that specifies the lifetime issued to all new security cookies.</span></span>  
+ <span data-ttu-id="6f84b-120">Значение типа TimeSpan, которое задает время существования для всех новых файлов безопасности cookie.</span><span class="sxs-lookup"><span data-stu-id="6f84b-120">A TimeSpan that specifies the lifetime issued to all new security cookies.</span></span>  
   
-### <a name="maxcachedcookies"></a><span data-ttu-id="42dd7-121">MaxCachedCookies</span><span class="sxs-lookup"><span data-stu-id="42dd7-121">MaxCachedCookies</span></span>  
- <span data-ttu-id="42dd7-122">Тип данных: sint32</span><span class="sxs-lookup"><span data-stu-id="42dd7-122">Data type: sint32</span></span>  
+### <a name="maxcachedcookies"></a><span data-ttu-id="6f84b-121">MaxCachedCookies</span><span class="sxs-lookup"><span data-stu-id="6f84b-121">MaxCachedCookies</span></span>  
+ <span data-ttu-id="6f84b-122">Тип данных: sint32</span><span class="sxs-lookup"><span data-stu-id="6f84b-122">Data type: sint32</span></span>  
   
- <span data-ttu-id="42dd7-123">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="42dd7-123">Access type: Read-only</span></span>  
+ <span data-ttu-id="6f84b-123">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="6f84b-123">Access type: Read-only</span></span>  
   
- <span data-ttu-id="42dd7-124">Максимальное количество файлов cookie, которые могут быть кэшированы.</span><span class="sxs-lookup"><span data-stu-id="42dd7-124">The maximum number of cookies that can be cached.</span></span>  
+ <span data-ttu-id="6f84b-124">Максимальное количество файлов cookie, которые могут быть кэшированы.</span><span class="sxs-lookup"><span data-stu-id="6f84b-124">The maximum number of cookies that can be cached.</span></span>  
   
-### <a name="maxclockskew"></a><span data-ttu-id="42dd7-125">MaxClockSkew</span><span class="sxs-lookup"><span data-stu-id="42dd7-125">MaxClockSkew</span></span>  
- <span data-ttu-id="42dd7-126">Тип данных: datetime</span><span class="sxs-lookup"><span data-stu-id="42dd7-126">Data type: datetime</span></span>  
+### <a name="maxclockskew"></a><span data-ttu-id="6f84b-125">MaxClockSkew</span><span class="sxs-lookup"><span data-stu-id="6f84b-125">MaxClockSkew</span></span>  
+ <span data-ttu-id="6f84b-126">Тип данных: datetime</span><span class="sxs-lookup"><span data-stu-id="6f84b-126">Data type: datetime</span></span>  
   
- <span data-ttu-id="42dd7-127">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="42dd7-127">Access type: Read-only</span></span>  
+ <span data-ttu-id="6f84b-127">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="6f84b-127">Access type: Read-only</span></span>  
   
- <span data-ttu-id="42dd7-128">Значение типа TimeSpan, указывающее максимальный разброс времени между системными часами взаимодействующих сторон.</span><span class="sxs-lookup"><span data-stu-id="42dd7-128">A TimeSpan that specifies the maximum time difference between the system clocks of the two communicating parties.</span></span>  
+ <span data-ttu-id="6f84b-128">Значение типа TimeSpan, указывающее максимальный разброс времени между системными часами взаимодействующих сторон.</span><span class="sxs-lookup"><span data-stu-id="6f84b-128">A TimeSpan that specifies the maximum time difference between the system clocks of the two communicating parties.</span></span>  
   
-### <a name="maxpendingsessions"></a><span data-ttu-id="42dd7-129">MaxPendingSessions</span><span class="sxs-lookup"><span data-stu-id="42dd7-129">MaxPendingSessions</span></span>  
- <span data-ttu-id="42dd7-130">Тип данных: sint32</span><span class="sxs-lookup"><span data-stu-id="42dd7-130">Data type: sint32</span></span>  
+### <a name="maxpendingsessions"></a><span data-ttu-id="6f84b-129">MaxPendingSessions</span><span class="sxs-lookup"><span data-stu-id="6f84b-129">MaxPendingSessions</span></span>  
+ <span data-ttu-id="6f84b-130">Тип данных: sint32</span><span class="sxs-lookup"><span data-stu-id="6f84b-130">Data type: sint32</span></span>  
   
- <span data-ttu-id="42dd7-131">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="42dd7-131">Access type: Read-only</span></span>  
+ <span data-ttu-id="6f84b-131">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="6f84b-131">Access type: Read-only</span></span>  
   
- <span data-ttu-id="42dd7-132">Максимальное количество ожидающих подключений к службе.</span><span class="sxs-lookup"><span data-stu-id="42dd7-132">The maximum number of pending connections on the service.</span></span>  
+ <span data-ttu-id="6f84b-132">Максимальное количество ожидающих подключений к службе.</span><span class="sxs-lookup"><span data-stu-id="6f84b-132">The maximum number of pending connections on the service.</span></span>  
   
-### <a name="maxstatefulnegotiations"></a><span data-ttu-id="42dd7-133">MaxStatefulNegotiations</span><span class="sxs-lookup"><span data-stu-id="42dd7-133">MaxStatefulNegotiations</span></span>  
- <span data-ttu-id="42dd7-134">Тип данных: sint32</span><span class="sxs-lookup"><span data-stu-id="42dd7-134">Data type: sint32</span></span>  
+### <a name="maxstatefulnegotiations"></a><span data-ttu-id="6f84b-133">MaxStatefulNegotiations</span><span class="sxs-lookup"><span data-stu-id="6f84b-133">MaxStatefulNegotiations</span></span>  
+ <span data-ttu-id="6f84b-134">Тип данных: sint32</span><span class="sxs-lookup"><span data-stu-id="6f84b-134">Data type: sint32</span></span>  
   
- <span data-ttu-id="42dd7-135">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="42dd7-135">Access type: Read-only</span></span>  
+ <span data-ttu-id="6f84b-135">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="6f84b-135">Access type: Read-only</span></span>  
   
- <span data-ttu-id="42dd7-136">Количество одновременно выполняемых согласований режима безопасности.</span><span class="sxs-lookup"><span data-stu-id="42dd7-136">The number of security negotiations that can be active concurrently.</span></span>  
+ <span data-ttu-id="6f84b-136">Количество одновременно выполняемых согласований режима безопасности.</span><span class="sxs-lookup"><span data-stu-id="6f84b-136">The number of security negotiations that can be active concurrently.</span></span>  
   
-### <a name="negotiationtimeout"></a><span data-ttu-id="42dd7-137">NegotiationTimeout</span><span class="sxs-lookup"><span data-stu-id="42dd7-137">NegotiationTimeout</span></span>  
- <span data-ttu-id="42dd7-138">Тип данных: datetime</span><span class="sxs-lookup"><span data-stu-id="42dd7-138">Data type: datetime</span></span>  
+### <a name="negotiationtimeout"></a><span data-ttu-id="6f84b-137">NegotiationTimeout</span><span class="sxs-lookup"><span data-stu-id="6f84b-137">NegotiationTimeout</span></span>  
+ <span data-ttu-id="6f84b-138">Тип данных: datetime</span><span class="sxs-lookup"><span data-stu-id="6f84b-138">Data type: datetime</span></span>  
   
- <span data-ttu-id="42dd7-139">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="42dd7-139">Access type: Read-only</span></span>  
+ <span data-ttu-id="6f84b-139">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="6f84b-139">Access type: Read-only</span></span>  
   
- <span data-ttu-id="42dd7-140">Значение типа TimeSpan, указывающее максимальную длительность этапа согласования режима безопасности между сервером и клиентом.</span><span class="sxs-lookup"><span data-stu-id="42dd7-140">A TimeSpan that specifies the maximum duration for the security negotiation phase between server and client.</span></span>  
+ <span data-ttu-id="6f84b-140">Значение типа TimeSpan, указывающее максимальную длительность этапа согласования режима безопасности между сервером и клиентом.</span><span class="sxs-lookup"><span data-stu-id="6f84b-140">A TimeSpan that specifies the maximum duration for the security negotiation phase between server and client.</span></span>  
   
-### <a name="reconnecttransportonfailure"></a><span data-ttu-id="42dd7-141">ReconnectTransportOnFailure</span><span class="sxs-lookup"><span data-stu-id="42dd7-141">ReconnectTransportOnFailure</span></span>  
- <span data-ttu-id="42dd7-142">Тип данных: boolean</span><span class="sxs-lookup"><span data-stu-id="42dd7-142">Data type: boolean</span></span>  
+### <a name="reconnecttransportonfailure"></a><span data-ttu-id="6f84b-141">ReconnectTransportOnFailure</span><span class="sxs-lookup"><span data-stu-id="6f84b-141">ReconnectTransportOnFailure</span></span>  
+ <span data-ttu-id="6f84b-142">Тип данных: boolean</span><span class="sxs-lookup"><span data-stu-id="6f84b-142">Data type: boolean</span></span>  
   
- <span data-ttu-id="42dd7-143">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="42dd7-143">Access type: Read-only</span></span>  
+ <span data-ttu-id="6f84b-143">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="6f84b-143">Access type: Read-only</span></span>  
   
- <span data-ttu-id="42dd7-144">Логическое значение, указывающее, будут ли подключения, использующие режим обмена сообщениями WS-Reliable, пытаться восстановиться после транспортных сбоев.</span><span class="sxs-lookup"><span data-stu-id="42dd7-144">A Boolean value that specifies whether connections using WS-Reliable messaging attempt to reconnect after transport failures.</span></span>  
+ <span data-ttu-id="6f84b-144">Логическое значение, указывающее, будут ли подключения, использующие режим обмена сообщениями WS-Reliable, пытаться восстановиться после транспортных сбоев.</span><span class="sxs-lookup"><span data-stu-id="6f84b-144">A Boolean value that specifies whether connections using WS-Reliable messaging attempt to reconnect after transport failures.</span></span>  
   
-### <a name="replaycachesize"></a><span data-ttu-id="42dd7-145">ReplayCacheSize</span><span class="sxs-lookup"><span data-stu-id="42dd7-145">ReplayCacheSize</span></span>  
- <span data-ttu-id="42dd7-146">Тип данных: sint32</span><span class="sxs-lookup"><span data-stu-id="42dd7-146">Data type: sint32</span></span>  
+### <a name="replaycachesize"></a><span data-ttu-id="6f84b-145">ReplayCacheSize</span><span class="sxs-lookup"><span data-stu-id="6f84b-145">ReplayCacheSize</span></span>  
+ <span data-ttu-id="6f84b-146">Тип данных: sint32</span><span class="sxs-lookup"><span data-stu-id="6f84b-146">Data type: sint32</span></span>  
   
- <span data-ttu-id="42dd7-147">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="42dd7-147">Access type: Read-only</span></span>  
+ <span data-ttu-id="6f84b-147">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="6f84b-147">Access type: Read-only</span></span>  
   
- <span data-ttu-id="42dd7-148">Количество кэшированных параметров nonce, используемых для определения ответов.</span><span class="sxs-lookup"><span data-stu-id="42dd7-148">The number of cached nonces used for replay detection.</span></span>  
+ <span data-ttu-id="6f84b-148">Количество кэшированных параметров nonce, используемых для определения ответов.</span><span class="sxs-lookup"><span data-stu-id="6f84b-148">The number of cached nonces used for replay detection.</span></span>  
   
-### <a name="replaywindow"></a><span data-ttu-id="42dd7-149">ReplayWindow</span><span class="sxs-lookup"><span data-stu-id="42dd7-149">ReplayWindow</span></span>  
- <span data-ttu-id="42dd7-150">Тип данных: datetime</span><span class="sxs-lookup"><span data-stu-id="42dd7-150">Data type: datetime</span></span>  
+### <a name="replaywindow"></a><span data-ttu-id="6f84b-149">ReplayWindow</span><span class="sxs-lookup"><span data-stu-id="6f84b-149">ReplayWindow</span></span>  
+ <span data-ttu-id="6f84b-150">Тип данных: datetime</span><span class="sxs-lookup"><span data-stu-id="6f84b-150">Data type: datetime</span></span>  
   
- <span data-ttu-id="42dd7-151">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="42dd7-151">Access type: Read-only</span></span>  
+ <span data-ttu-id="6f84b-151">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="6f84b-151">Access type: Read-only</span></span>  
   
- <span data-ttu-id="42dd7-152">Значение типа TimeSpan, которое указывает срок действия параметров nonce отдельного сообщения.</span><span class="sxs-lookup"><span data-stu-id="42dd7-152">A TimeSpan that specifies the duration in which individual message nonces are valid.</span></span>  
+ <span data-ttu-id="6f84b-152">Значение типа TimeSpan, которое указывает срок действия параметров nonce отдельного сообщения.</span><span class="sxs-lookup"><span data-stu-id="6f84b-152">A TimeSpan that specifies the duration in which individual message nonces are valid.</span></span>  
   
-### <a name="sessionkeyrenewalinterval"></a><span data-ttu-id="42dd7-153">SessionKeyRenewalInterval</span><span class="sxs-lookup"><span data-stu-id="42dd7-153">SessionKeyRenewalInterval</span></span>  
- <span data-ttu-id="42dd7-154">Тип данных: datetime</span><span class="sxs-lookup"><span data-stu-id="42dd7-154">Data type: datetime</span></span>  
+### <a name="sessionkeyrenewalinterval"></a><span data-ttu-id="6f84b-153">SessionKeyRenewalInterval</span><span class="sxs-lookup"><span data-stu-id="6f84b-153">SessionKeyRenewalInterval</span></span>  
+ <span data-ttu-id="6f84b-154">Тип данных: datetime</span><span class="sxs-lookup"><span data-stu-id="6f84b-154">Data type: datetime</span></span>  
   
- <span data-ttu-id="42dd7-155">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="42dd7-155">Access type: Read-only</span></span>  
+ <span data-ttu-id="6f84b-155">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="6f84b-155">Access type: Read-only</span></span>  
   
- <span data-ttu-id="42dd7-156">Значение типа TimeSpan, которое задает интервал времени, по истечении которого инициатор обновляет ключ сеанса безопасности.</span><span class="sxs-lookup"><span data-stu-id="42dd7-156">A TimeSpan that specifies the duration after which the initiator renews the key for the security session.</span></span>  
+ <span data-ttu-id="6f84b-156">Значение типа TimeSpan, которое задает интервал времени, по истечении которого инициатор обновляет ключ сеанса безопасности.</span><span class="sxs-lookup"><span data-stu-id="6f84b-156">A TimeSpan that specifies the duration after which the initiator renews the key for the security session.</span></span>  
   
-### <a name="sessionkeyrolloverinterval"></a><span data-ttu-id="42dd7-157">SessionKeyRolloverInterval</span><span class="sxs-lookup"><span data-stu-id="42dd7-157">SessionKeyRolloverInterval</span></span>  
- <span data-ttu-id="42dd7-158">Тип данных: datetime</span><span class="sxs-lookup"><span data-stu-id="42dd7-158">Data type: datetime</span></span>  
+### <a name="sessionkeyrolloverinterval"></a><span data-ttu-id="6f84b-157">SessionKeyRolloverInterval</span><span class="sxs-lookup"><span data-stu-id="6f84b-157">SessionKeyRolloverInterval</span></span>  
+ <span data-ttu-id="6f84b-158">Тип данных: datetime</span><span class="sxs-lookup"><span data-stu-id="6f84b-158">Data type: datetime</span></span>  
   
- <span data-ttu-id="42dd7-159">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="42dd7-159">Access type: Read-only</span></span>  
+ <span data-ttu-id="6f84b-159">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="6f84b-159">Access type: Read-only</span></span>  
   
- <span data-ttu-id="42dd7-160">Значение типа TimeSpan, которое задает интервал времени, указывающий период, в течение которого предыдущий сеансовый ключ остается действительным для входящих сообщений, пока выполняется обновление ключа.</span><span class="sxs-lookup"><span data-stu-id="42dd7-160">A TimeSpan that specifies the time interval a previous session key is valid on incoming messages during a key renewal.</span></span>  
+ <span data-ttu-id="6f84b-160">Значение типа TimeSpan, которое задает интервал времени, указывающий период, в течение которого предыдущий сеансовый ключ остается действительным для входящих сообщений, пока выполняется обновление ключа.</span><span class="sxs-lookup"><span data-stu-id="6f84b-160">A TimeSpan that specifies the time interval a previous session key is valid on incoming messages during a key renewal.</span></span>  
   
-### <a name="timestampvalidityduration"></a><span data-ttu-id="42dd7-161">TimestampValidityDuration</span><span class="sxs-lookup"><span data-stu-id="42dd7-161">TimestampValidityDuration</span></span>  
- <span data-ttu-id="42dd7-162">Тип данных: datetime</span><span class="sxs-lookup"><span data-stu-id="42dd7-162">Data type: datetime</span></span>  
+### <a name="timestampvalidityduration"></a><span data-ttu-id="6f84b-161">TimestampValidityDuration</span><span class="sxs-lookup"><span data-stu-id="6f84b-161">TimestampValidityDuration</span></span>  
+ <span data-ttu-id="6f84b-162">Тип данных: datetime</span><span class="sxs-lookup"><span data-stu-id="6f84b-162">Data type: datetime</span></span>  
   
- <span data-ttu-id="42dd7-163">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="42dd7-163">Access type: Read-only</span></span>  
+ <span data-ttu-id="6f84b-163">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="6f84b-163">Access type: Read-only</span></span>  
   
- <span data-ttu-id="42dd7-164">Значение типа TimeSpan, которое определяет интервал времени, указывающий срок действия отметки времени.</span><span class="sxs-lookup"><span data-stu-id="42dd7-164">A TimeSpan that specifies the duration in which a time stamp is valid.</span></span>  
+ <span data-ttu-id="6f84b-164">Значение типа TimeSpan, которое определяет интервал времени, указывающий срок действия отметки времени.</span><span class="sxs-lookup"><span data-stu-id="6f84b-164">A TimeSpan that specifies the duration in which a time stamp is valid.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="42dd7-165">Требования</span><span class="sxs-lookup"><span data-stu-id="42dd7-165">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6f84b-165">Требования</span><span class="sxs-lookup"><span data-stu-id="6f84b-165">Requirements</span></span>  
   
-|<span data-ttu-id="42dd7-166">MOF</span><span class="sxs-lookup"><span data-stu-id="42dd7-166">MOF</span></span>|<span data-ttu-id="42dd7-167">Объявлено в файле Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="42dd7-167">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="6f84b-166">MOF</span><span class="sxs-lookup"><span data-stu-id="6f84b-166">MOF</span></span>|<span data-ttu-id="6f84b-167">Объявлено в файле Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="6f84b-167">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="42dd7-168">Пространство имен</span><span class="sxs-lookup"><span data-stu-id="42dd7-168">Namespace</span></span>|<span data-ttu-id="42dd7-169">Определено в root\ServiceModel.</span><span class="sxs-lookup"><span data-stu-id="42dd7-169">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="6f84b-168">Пространство имен</span><span class="sxs-lookup"><span data-stu-id="6f84b-168">Namespace</span></span>|<span data-ttu-id="6f84b-169">Определено в root\ServiceModel.</span><span class="sxs-lookup"><span data-stu-id="6f84b-169">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="42dd7-170">См. также</span><span class="sxs-lookup"><span data-stu-id="42dd7-170">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6f84b-170">См. также</span><span class="sxs-lookup"><span data-stu-id="6f84b-170">See Also</span></span>  
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>

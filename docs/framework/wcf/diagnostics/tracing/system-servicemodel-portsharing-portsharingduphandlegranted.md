@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3068d88e4f99f53c5fe8052d6ee375b5b6368003
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 82d54726b816a013bed233c21cb3c8436fae9014
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelportsharingportsharingduphandlegranted"></a><span data-ttu-id="f3840-102">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span><span class="sxs-lookup"><span data-stu-id="f3840-102">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span></span>
-<span data-ttu-id="f3840-103">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span><span class="sxs-lookup"><span data-stu-id="f3840-103">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span></span>  
+# <a name="systemservicemodelportsharingportsharingduphandlegranted"></a><span data-ttu-id="9c878-102">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span><span class="sxs-lookup"><span data-stu-id="9c878-102">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span></span>
+<span data-ttu-id="9c878-103">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span><span class="sxs-lookup"><span data-stu-id="9c878-103">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f3840-104">Описание</span><span class="sxs-lookup"><span data-stu-id="f3840-104">Description</span></span>  
- <span data-ttu-id="f3840-105">Право доступа PROCESS_DUP_HANDLE предоставлено указанной учетной записи с указанным SID.</span><span class="sxs-lookup"><span data-stu-id="f3840-105">The PROCESS_DUP_HANDLE access right has been granted to the specified service's account with the specified SID.</span></span>  
+## <a name="description"></a><span data-ttu-id="9c878-104">Описание</span><span class="sxs-lookup"><span data-stu-id="9c878-104">Description</span></span>  
+ <span data-ttu-id="9c878-105">Право доступа PROCESS_DUP_HANDLE предоставлено указанной учетной записи с указанным SID.</span><span class="sxs-lookup"><span data-stu-id="9c878-105">The PROCESS_DUP_HANDLE access right has been granted to the specified service's account with the specified SID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f3840-106">См. также</span><span class="sxs-lookup"><span data-stu-id="f3840-106">See Also</span></span>  
- [<span data-ttu-id="f3840-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="f3840-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="f3840-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="f3840-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="f3840-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="f3840-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="9c878-106">См. также</span><span class="sxs-lookup"><span data-stu-id="9c878-106">See Also</span></span>  
+ [<span data-ttu-id="9c878-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="9c878-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="9c878-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="9c878-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="9c878-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="9c878-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

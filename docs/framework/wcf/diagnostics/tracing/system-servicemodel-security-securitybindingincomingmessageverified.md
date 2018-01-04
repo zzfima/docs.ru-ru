@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 0f0f55c7c2c4e05a27bf6094dec98378d756cd8b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5b9fd62955bfd3f34d1600167ee2e94adc446245
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecuritybindingincomingmessageverified"></a><span data-ttu-id="3bf70-102">System.ServiceModel.Security.SecurityBindingIncomingMessageVerified</span><span class="sxs-lookup"><span data-stu-id="3bf70-102">System.ServiceModel.Security.SecurityBindingIncomingMessageVerified</span></span>
-<span data-ttu-id="3bf70-103">System.ServiceModel.Security.SecurityBindingIncomingMessageVerified</span><span class="sxs-lookup"><span data-stu-id="3bf70-103">System.ServiceModel.Security.SecurityBindingIncomingMessageVerified</span></span>  
+# <a name="systemservicemodelsecuritysecuritybindingincomingmessageverified"></a><span data-ttu-id="5c106-102">System.ServiceModel.Security.SecurityBindingIncomingMessageVerified</span><span class="sxs-lookup"><span data-stu-id="5c106-102">System.ServiceModel.Security.SecurityBindingIncomingMessageVerified</span></span>
+<span data-ttu-id="5c106-103">System.ServiceModel.Security.SecurityBindingIncomingMessageVerified</span><span class="sxs-lookup"><span data-stu-id="5c106-103">System.ServiceModel.Security.SecurityBindingIncomingMessageVerified</span></span>  
   
-## <a name="description"></a><span data-ttu-id="3bf70-104">Описание</span><span class="sxs-lookup"><span data-stu-id="3bf70-104">Description</span></span>  
- <span data-ttu-id="3bf70-105">Протокол безопасности проверил входящее сообщение.</span><span class="sxs-lookup"><span data-stu-id="3bf70-105">The security protocol verified the incoming message.</span></span>  
+## <a name="description"></a><span data-ttu-id="5c106-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="5c106-104">Description</span></span>  
+ <span data-ttu-id="5c106-105">Протокол безопасности проверил входящее сообщение.</span><span class="sxs-lookup"><span data-stu-id="5c106-105">The security protocol verified the incoming message.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3bf70-106">См. также</span><span class="sxs-lookup"><span data-stu-id="3bf70-106">See Also</span></span>  
- [<span data-ttu-id="3bf70-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="3bf70-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="3bf70-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="3bf70-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="3bf70-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="3bf70-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="5c106-106">См. также</span><span class="sxs-lookup"><span data-stu-id="5c106-106">See Also</span></span>  
+ [<span data-ttu-id="5c106-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="5c106-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="5c106-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="5c106-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="5c106-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="5c106-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
