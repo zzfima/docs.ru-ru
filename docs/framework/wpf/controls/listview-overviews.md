@@ -17,24 +17,25 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 07757f28c52705ec4d5ea7ed6356c28cc68bbe86
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e6dfa0e6c772fb4623c9717c1085ab862df74ca5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="listview-overviews"></a><span data-ttu-id="31662-102">Общие сведения о ListView</span><span class="sxs-lookup"><span data-stu-id="31662-102">ListView Overviews</span></span>
-<span data-ttu-id="31662-103">В подразделах этого раздела показано, как использовать <xref:System.Windows.Controls.ListView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="31662-103">The topics in this section show you how to use a <xref:System.Windows.Controls.ListView> control.</span></span>  
+# <a name="listview-overviews"></a><span data-ttu-id="8175f-102">Общие сведения о ListView</span><span class="sxs-lookup"><span data-stu-id="8175f-102">ListView Overviews</span></span>
+<span data-ttu-id="8175f-103">В подразделах этого раздела показано, как использовать <xref:System.Windows.Controls.ListView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="8175f-103">The topics in this section show you how to use a <xref:System.Windows.Controls.ListView> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="31662-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="31662-104">In This Section</span></span>  
- [<span data-ttu-id="31662-105">Общие сведения об элементе управления ListView</span><span class="sxs-lookup"><span data-stu-id="31662-105">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [<span data-ttu-id="31662-106">Общие сведения о GridView</span><span class="sxs-lookup"><span data-stu-id="31662-106">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [<span data-ttu-id="31662-107">Общие сведения о стилях заголовков столбцов GridView и шаблонах</span><span class="sxs-lookup"><span data-stu-id="31662-107">GridView Column Header Styles and Templates Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8175f-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="8175f-104">In This Section</span></span>  
+ [<span data-ttu-id="8175f-105">Общие сведения об элементе управления ListView</span><span class="sxs-lookup"><span data-stu-id="8175f-105">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)  
+ [<span data-ttu-id="8175f-106">Общие сведения о GridView</span><span class="sxs-lookup"><span data-stu-id="8175f-106">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)  
+ [<span data-ttu-id="8175f-107">Общие сведения о стилях заголовков столбцов GridView и шаблонах</span><span class="sxs-lookup"><span data-stu-id="8175f-107">GridView Column Header Styles and Templates Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="31662-108">Ссылка</span><span class="sxs-lookup"><span data-stu-id="31662-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="8175f-108">Ссылка</span><span class="sxs-lookup"><span data-stu-id="8175f-108">Reference</span></span>  
  <xref:System.Windows.Controls.ListView>  
   
  <xref:System.Windows.Controls.GridView>  
   
-## <a name="related-sections"></a><span data-ttu-id="31662-109">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="31662-109">Related Sections</span></span>  
- [<span data-ttu-id="31662-110">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="31662-110">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+## <a name="related-sections"></a><span data-ttu-id="8175f-109">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="8175f-109">Related Sections</span></span>  
+ [<span data-ttu-id="8175f-110">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="8175f-110">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

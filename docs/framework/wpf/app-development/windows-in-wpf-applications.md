@@ -17,27 +17,28 @@ caps.latest.revision: "67"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3046e88e26e16172a9c7e6c50123145ce7664f28
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0616507752c3053b71b2f050997eacfea22240a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="windows-in-wpf-applications"></a><span data-ttu-id="39f9d-102">Окна в приложениях WPF</span><span class="sxs-lookup"><span data-stu-id="39f9d-102">Windows in WPF Applications</span></span>
-<span data-ttu-id="39f9d-103">Пользователи взаимодействуют с приложениями при помощи окон.</span><span class="sxs-lookup"><span data-stu-id="39f9d-103">Users interact with applications through windows.</span></span> <span data-ttu-id="39f9d-104">Основным предназначением окна является размещение и отображение содержимого.</span><span class="sxs-lookup"><span data-stu-id="39f9d-104">The fundamental purpose of a window is to host and display content.</span></span> <span data-ttu-id="39f9d-105">Тип содержимого, размещаемого в окне зависит от типа данных, что приложение работает по, которые могут включать мультимедиа, страницы расширяемого языка разметки приложений (XAML), веб-страницы, документы, таблицы базы данных и записи и сведения о системе.</span><span class="sxs-lookup"><span data-stu-id="39f9d-105">The type of content that a window hosts depends on the type of data that an application operates over, which can include media, Extensible Application Markup Language (XAML) pages, Web pages, documents, database tables and records, and system information.</span></span>  
+# <a name="windows-in-wpf-applications"></a><span data-ttu-id="0aed2-102">Окна в приложениях WPF</span><span class="sxs-lookup"><span data-stu-id="0aed2-102">Windows in WPF Applications</span></span>
+<span data-ttu-id="0aed2-103">Пользователи взаимодействуют с приложениями при помощи окон.</span><span class="sxs-lookup"><span data-stu-id="0aed2-103">Users interact with applications through windows.</span></span> <span data-ttu-id="0aed2-104">Основным предназначением окна является размещение и отображение содержимого.</span><span class="sxs-lookup"><span data-stu-id="0aed2-104">The fundamental purpose of a window is to host and display content.</span></span> <span data-ttu-id="0aed2-105">Тип содержимого, размещаемого в окне зависит от типа данных, что приложение работает по, которые могут включать мультимедиа, страницы расширяемого языка разметки приложений (XAML), веб-страницы, документы, таблицы базы данных и записи и сведения о системе.</span><span class="sxs-lookup"><span data-stu-id="0aed2-105">The type of content that a window hosts depends on the type of data that an application operates over, which can include media, Extensible Application Markup Language (XAML) pages, Web pages, documents, database tables and records, and system information.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="39f9d-106">Содержание</span><span class="sxs-lookup"><span data-stu-id="39f9d-106">In This Section</span></span>  
- [<span data-ttu-id="39f9d-107">Общие сведения об окнах WPF</span><span class="sxs-lookup"><span data-stu-id="39f9d-107">WPF Windows Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
- [<span data-ttu-id="39f9d-108">Общие сведения о диалоговых окнах</span><span class="sxs-lookup"><span data-stu-id="39f9d-108">Dialog Boxes Overview</span></span>](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
- [<span data-ttu-id="39f9d-109">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="39f9d-109">How-to Topics</span></span>](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="0aed2-106">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="0aed2-106">In This Section</span></span>  
+ [<span data-ttu-id="0aed2-107">Общие сведения об окнах WPF</span><span class="sxs-lookup"><span data-stu-id="0aed2-107">WPF Windows Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
+ [<span data-ttu-id="0aed2-108">Общие сведения о диалоговых окнах</span><span class="sxs-lookup"><span data-stu-id="0aed2-108">Dialog Boxes Overview</span></span>](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
+ [<span data-ttu-id="0aed2-109">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="0aed2-109">How-to Topics</span></span>](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="39f9d-110">Ссылка</span><span class="sxs-lookup"><span data-stu-id="39f9d-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="0aed2-110">Ссылка</span><span class="sxs-lookup"><span data-stu-id="0aed2-110">Reference</span></span>  
  <xref:System.Windows.Window>  
   
  <xref:System.Windows.Navigation.NavigationWindow>  
   
-## <a name="related-sections"></a><span data-ttu-id="39f9d-111">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="39f9d-111">Related Sections</span></span>  
- [<span data-ttu-id="39f9d-112">Общие сведения об управлении приложением</span><span class="sxs-lookup"><span data-stu-id="39f9d-112">Application Management Overview</span></span>](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [<span data-ttu-id="39f9d-113">Общие сведения о переходах</span><span class="sxs-lookup"><span data-stu-id="39f9d-113">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [<span data-ttu-id="39f9d-114">Размещение</span><span class="sxs-lookup"><span data-stu-id="39f9d-114">Hosting</span></span>](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
-  [<span data-ttu-id="39f9d-115">Сборка и развертывание</span><span class="sxs-lookup"><span data-stu-id="39f9d-115">Build and Deploy</span></span>](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+## <a name="related-sections"></a><span data-ttu-id="0aed2-111">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="0aed2-111">Related Sections</span></span>  
+ [<span data-ttu-id="0aed2-112">Общие сведения об управлении приложением</span><span class="sxs-lookup"><span data-stu-id="0aed2-112">Application Management Overview</span></span>](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+  [<span data-ttu-id="0aed2-113">Общие сведения о переходах</span><span class="sxs-lookup"><span data-stu-id="0aed2-113">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+  [<span data-ttu-id="0aed2-114">Размещение</span><span class="sxs-lookup"><span data-stu-id="0aed2-114">Hosting</span></span>](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
+  [<span data-ttu-id="0aed2-115">Сборка и развертывание</span><span class="sxs-lookup"><span data-stu-id="0aed2-115">Build and Deploy</span></span>](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)

@@ -17,25 +17,26 @@ caps.latest.revision: "61"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 769c40434ecb0ac1bbae63f1697e5005c0de875b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 096773fd8cb303cc504bc956d500e8f1e55cda00
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="image"></a><span data-ttu-id="934f4-102">Изображение</span><span class="sxs-lookup"><span data-stu-id="934f4-102">Image</span></span>
-<span data-ttu-id="934f4-103"><xref:System.Windows.Controls.Image> Элемент используется для отображения точечных рисунков в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений.</span><span class="sxs-lookup"><span data-stu-id="934f4-103">The <xref:System.Windows.Controls.Image> element is used to display bitmap images in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
+# <a name="image"></a><span data-ttu-id="38ee1-102">Изображение</span><span class="sxs-lookup"><span data-stu-id="38ee1-102">Image</span></span>
+<span data-ttu-id="38ee1-103"><xref:System.Windows.Controls.Image> Элемент используется для отображения точечных рисунков в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений.</span><span class="sxs-lookup"><span data-stu-id="38ee1-103">The <xref:System.Windows.Controls.Image> element is used to display bitmap images in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="934f4-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="934f4-104">In This Section</span></span>  
- [<span data-ttu-id="934f4-105">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="934f4-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/image-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="38ee1-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="38ee1-104">In This Section</span></span>  
+ [<span data-ttu-id="38ee1-105">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="38ee1-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/image-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="934f4-106">Ссылка</span><span class="sxs-lookup"><span data-stu-id="934f4-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="38ee1-106">Ссылка</span><span class="sxs-lookup"><span data-stu-id="38ee1-106">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="934f4-107">См. также</span><span class="sxs-lookup"><span data-stu-id="934f4-107">See Also</span></span>  
- [<span data-ttu-id="934f4-108">Общие сведения об обработке изображений</span><span class="sxs-lookup"><span data-stu-id="934f4-108">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [<span data-ttu-id="934f4-109">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="934f4-109">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="38ee1-107">См. также</span><span class="sxs-lookup"><span data-stu-id="38ee1-107">See Also</span></span>  
+ [<span data-ttu-id="38ee1-108">Общие сведения об обработке изображений</span><span class="sxs-lookup"><span data-stu-id="38ee1-108">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
+ [<span data-ttu-id="38ee1-109">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="38ee1-109">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)

@@ -19,26 +19,27 @@ caps.latest.revision: "83"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7acf8f9dee0301ef7326f5bd688171adc13faea2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e4f15083cb3718134a3015d801be5f3c0b71bda8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="images"></a><span data-ttu-id="789ca-102">Изображения</span><span class="sxs-lookup"><span data-stu-id="789ca-102">Images</span></span>
-<span data-ttu-id="789ca-103">Платформа [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] обеспечивает встроенную поддержку большого числа разных форматов изображений, отрисовку изображений высокого качества и расширяемость кодеков.</span><span class="sxs-lookup"><span data-stu-id="789ca-103">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
+# <a name="images"></a><span data-ttu-id="54961-102">Изображения</span><span class="sxs-lookup"><span data-stu-id="54961-102">Images</span></span>
+<span data-ttu-id="54961-103">Платформа [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] обеспечивает встроенную поддержку большого числа разных форматов изображений, отрисовку изображений высокого качества и расширяемость кодеков.</span><span class="sxs-lookup"><span data-stu-id="54961-103">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="789ca-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="789ca-104">In This Section</span></span>  
- [<span data-ttu-id="789ca-105">Общие сведения об обработке изображений</span><span class="sxs-lookup"><span data-stu-id="789ca-105">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [<span data-ttu-id="789ca-106">Практические руководства</span><span class="sxs-lookup"><span data-stu-id="789ca-106">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="54961-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="54961-104">In This Section</span></span>  
+ [<span data-ttu-id="54961-105">Общие сведения об обработке изображений</span><span class="sxs-lookup"><span data-stu-id="54961-105">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
+ [<span data-ttu-id="54961-106">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="54961-106">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="789ca-107">Ссылка</span><span class="sxs-lookup"><span data-stu-id="789ca-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="54961-107">Ссылка</span><span class="sxs-lookup"><span data-stu-id="54961-107">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="789ca-108">См. также</span><span class="sxs-lookup"><span data-stu-id="789ca-108">See Also</span></span>  
- [<span data-ttu-id="789ca-109">Двумерная графика и изображения</span><span class="sxs-lookup"><span data-stu-id="789ca-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [<span data-ttu-id="789ca-110">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="789ca-110">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a><span data-ttu-id="54961-108">См. также</span><span class="sxs-lookup"><span data-stu-id="54961-108">See Also</span></span>  
+ [<span data-ttu-id="54961-109">Двумерная графика и изображения</span><span class="sxs-lookup"><span data-stu-id="54961-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="54961-110">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="54961-110">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

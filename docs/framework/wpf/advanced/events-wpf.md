@@ -18,41 +18,42 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dda7f9497751356c4c650e7fb672f7721ec3dd09
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: cf622066bbfca8260670ca139f4acfe9affca07e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="events-wpf"></a><span data-ttu-id="78428-102">События (WPF)</span><span class="sxs-lookup"><span data-stu-id="78428-102">Events (WPF)</span></span>
-<span data-ttu-id="78428-103">В [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] представлены перенаправленные события, которые могут вызывать обработчики, существующие в разных прослушивателях дерева элементов в приложении.</span><span class="sxs-lookup"><span data-stu-id="78428-103">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] introduces routed events that can invoke handlers that exist on various listeners in the element tree of an application.</span></span>  
+# <a name="events-wpf"></a><span data-ttu-id="d25c8-102">События (WPF)</span><span class="sxs-lookup"><span data-stu-id="d25c8-102">Events (WPF)</span></span>
+<span data-ttu-id="d25c8-103">В [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] представлены перенаправленные события, которые могут вызывать обработчики, существующие в разных прослушивателях дерева элементов в приложении.</span><span class="sxs-lookup"><span data-stu-id="d25c8-103">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] introduces routed events that can invoke handlers that exist on various listeners in the element tree of an application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="78428-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="78428-104">In This Section</span></span>  
- [<span data-ttu-id="78428-105">Общие сведения о перенаправленных событиях</span><span class="sxs-lookup"><span data-stu-id="78428-105">Routed Events Overview</span></span>](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [<span data-ttu-id="78428-106">Общие сведения о вложенных событиях</span><span class="sxs-lookup"><span data-stu-id="78428-106">Attached Events Overview</span></span>](../../../../docs/framework/wpf/advanced/attached-events-overview.md)  
- [<span data-ttu-id="78428-107">События времени жизни объекта</span><span class="sxs-lookup"><span data-stu-id="78428-107">Object Lifetime Events</span></span>](../../../../docs/framework/wpf/advanced/object-lifetime-events.md)  
- [<span data-ttu-id="78428-108">Маркировка перенаправленных событий как обработанных и обработка классов</span><span class="sxs-lookup"><span data-stu-id="78428-108">Marking Routed Events as Handled, and Class Handling</span></span>](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
- [<span data-ttu-id="78428-109">События предварительного просмотра</span><span class="sxs-lookup"><span data-stu-id="78428-109">Preview Events</span></span>](../../../../docs/framework/wpf/advanced/preview-events.md)  
- [<span data-ttu-id="78428-110">События изменения свойств</span><span class="sxs-lookup"><span data-stu-id="78428-110">Property Change Events</span></span>](../../../../docs/framework/wpf/advanced/property-change-events.md)  
- [<span data-ttu-id="78428-111">Обработка событий в Visual Basic и WPF</span><span class="sxs-lookup"><span data-stu-id="78428-111">Visual Basic and WPF Event Handling</span></span>](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)  
- [<span data-ttu-id="78428-112">Шаблоны слабых событий</span><span class="sxs-lookup"><span data-stu-id="78428-112">Weak Event Patterns</span></span>](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)  
- [<span data-ttu-id="78428-113">Практические руководства</span><span class="sxs-lookup"><span data-stu-id="78428-113">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d25c8-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="d25c8-104">In This Section</span></span>  
+ [<span data-ttu-id="d25c8-105">Общие сведения о перенаправленных событиях</span><span class="sxs-lookup"><span data-stu-id="d25c8-105">Routed Events Overview</span></span>](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [<span data-ttu-id="d25c8-106">Общие сведения о вложенных событиях</span><span class="sxs-lookup"><span data-stu-id="d25c8-106">Attached Events Overview</span></span>](../../../../docs/framework/wpf/advanced/attached-events-overview.md)  
+ [<span data-ttu-id="d25c8-107">События времени жизни объекта</span><span class="sxs-lookup"><span data-stu-id="d25c8-107">Object Lifetime Events</span></span>](../../../../docs/framework/wpf/advanced/object-lifetime-events.md)  
+ [<span data-ttu-id="d25c8-108">Маркировка перенаправленных событий как обработанных и обработка классов</span><span class="sxs-lookup"><span data-stu-id="d25c8-108">Marking Routed Events as Handled, and Class Handling</span></span>](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
+ [<span data-ttu-id="d25c8-109">События предварительного просмотра</span><span class="sxs-lookup"><span data-stu-id="d25c8-109">Preview Events</span></span>](../../../../docs/framework/wpf/advanced/preview-events.md)  
+ [<span data-ttu-id="d25c8-110">События изменения свойств</span><span class="sxs-lookup"><span data-stu-id="d25c8-110">Property Change Events</span></span>](../../../../docs/framework/wpf/advanced/property-change-events.md)  
+ [<span data-ttu-id="d25c8-111">Обработка событий в Visual Basic и WPF</span><span class="sxs-lookup"><span data-stu-id="d25c8-111">Visual Basic and WPF Event Handling</span></span>](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)  
+ [<span data-ttu-id="d25c8-112">Шаблоны слабых событий</span><span class="sxs-lookup"><span data-stu-id="d25c8-112">Weak Event Patterns</span></span>](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)  
+ [<span data-ttu-id="d25c8-113">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="d25c8-113">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="78428-114">Ссылка</span><span class="sxs-lookup"><span data-stu-id="78428-114">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d25c8-114">Ссылка</span><span class="sxs-lookup"><span data-stu-id="d25c8-114">Reference</span></span>  
  <xref:System.Windows.RoutedEvent>  
   
  <xref:System.Windows.EventManager>  
   
  <xref:System.Windows.RoutingStrategy>  
   
-## <a name="related-sections"></a><span data-ttu-id="78428-115">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="78428-115">Related Sections</span></span>  
- [<span data-ttu-id="78428-116">Архитектура WPF</span><span class="sxs-lookup"><span data-stu-id="78428-116">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [<span data-ttu-id="78428-117">XAML в WPF</span><span class="sxs-lookup"><span data-stu-id="78428-117">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [<span data-ttu-id="78428-118">Базовые элементы</span><span class="sxs-lookup"><span data-stu-id="78428-118">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [<span data-ttu-id="78428-119">Дерево элементов и сериализация</span><span class="sxs-lookup"><span data-stu-id="78428-119">Element Tree and Serialization</span></span>](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [<span data-ttu-id="78428-120">Свойства</span><span class="sxs-lookup"><span data-stu-id="78428-120">Properties</span></span>](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [<span data-ttu-id="78428-121">Ввод</span><span class="sxs-lookup"><span data-stu-id="78428-121">Input</span></span>](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [<span data-ttu-id="78428-122">Ресурсы</span><span class="sxs-lookup"><span data-stu-id="78428-122">Resources</span></span>](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [<span data-ttu-id="78428-123">Стилизация и использование шаблонов</span><span class="sxs-lookup"><span data-stu-id="78428-123">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [<span data-ttu-id="78428-124">Модель содержимого WPF</span><span class="sxs-lookup"><span data-stu-id="78428-124">WPF Content Model</span></span>](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [<span data-ttu-id="78428-125">Потоковая модель</span><span class="sxs-lookup"><span data-stu-id="78428-125">Threading Model</span></span>](../../../../docs/framework/wpf/advanced/threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="d25c8-115">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="d25c8-115">Related Sections</span></span>  
+ [<span data-ttu-id="d25c8-116">Архитектура WPF</span><span class="sxs-lookup"><span data-stu-id="d25c8-116">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
+  [<span data-ttu-id="d25c8-117">XAML в WPF</span><span class="sxs-lookup"><span data-stu-id="d25c8-117">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
+  [<span data-ttu-id="d25c8-118">Базовые элементы</span><span class="sxs-lookup"><span data-stu-id="d25c8-118">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)  
+  [<span data-ttu-id="d25c8-119">Дерево элементов и сериализация</span><span class="sxs-lookup"><span data-stu-id="d25c8-119">Element Tree and Serialization</span></span>](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
+  [<span data-ttu-id="d25c8-120">Свойства</span><span class="sxs-lookup"><span data-stu-id="d25c8-120">Properties</span></span>](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
+  [<span data-ttu-id="d25c8-121">Ввод</span><span class="sxs-lookup"><span data-stu-id="d25c8-121">Input</span></span>](../../../../docs/framework/wpf/advanced/input-wpf.md)  
+  [<span data-ttu-id="d25c8-122">Ресурсы</span><span class="sxs-lookup"><span data-stu-id="d25c8-122">Resources</span></span>](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
+  [<span data-ttu-id="d25c8-123">Стилизация и использование шаблонов</span><span class="sxs-lookup"><span data-stu-id="d25c8-123">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+  [<span data-ttu-id="d25c8-124">Модель содержимого WPF</span><span class="sxs-lookup"><span data-stu-id="d25c8-124">WPF Content Model</span></span>](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
+  [<span data-ttu-id="d25c8-125">Потоковая модель</span><span class="sxs-lookup"><span data-stu-id="d25c8-125">Threading Model</span></span>](../../../../docs/framework/wpf/advanced/threading-model.md)

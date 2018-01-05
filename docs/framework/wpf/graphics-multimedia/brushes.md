@@ -18,25 +18,26 @@ caps.latest.revision: "53"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ece5049f6749315e393aa0aad4e002fcb416ba7c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 9af3fcfc2e910a61e9ac1b999863e40bc26400da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="brushes"></a><span data-ttu-id="863f8-102">Кисти</span><span class="sxs-lookup"><span data-stu-id="863f8-102">Brushes</span></span>
-<span data-ttu-id="863f8-103">Ниже описаны способы использования [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] кисти для содержимого на экране «рисования»</span><span class="sxs-lookup"><span data-stu-id="863f8-103">The following topics describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes to "paint" content to the screen</span></span>  
+# <a name="brushes"></a><span data-ttu-id="04c35-102">Кисти</span><span class="sxs-lookup"><span data-stu-id="04c35-102">Brushes</span></span>
+<span data-ttu-id="04c35-103">Ниже описаны способы использования [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] кисти для содержимого на экране «рисования»</span><span class="sxs-lookup"><span data-stu-id="04c35-103">The following topics describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes to "paint" content to the screen</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="863f8-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="863f8-104">In This Section</span></span>  
- [<span data-ttu-id="863f8-105">Общие сведения о кистях WPF</span><span class="sxs-lookup"><span data-stu-id="863f8-105">WPF Brushes Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
- [<span data-ttu-id="863f8-106">Общие сведения о преобразованиях кистей</span><span class="sxs-lookup"><span data-stu-id="863f8-106">Brush Transformation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
- [<span data-ttu-id="863f8-107">Общие сведения о масках непрозрачности</span><span class="sxs-lookup"><span data-stu-id="863f8-107">Opacity Masks Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
- [<span data-ttu-id="863f8-108">Общие сведения о закраске сплошным цветом и градиентом</span><span class="sxs-lookup"><span data-stu-id="863f8-108">Painting with Solid Colors and Gradients Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [<span data-ttu-id="863f8-109">Заполнение с использованием изображений, рисунков и визуальных элементов</span><span class="sxs-lookup"><span data-stu-id="863f8-109">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [<span data-ttu-id="863f8-110">Общие сведения об объекте TileBrush</span><span class="sxs-lookup"><span data-stu-id="863f8-110">TileBrush Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
- [<span data-ttu-id="863f8-111">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="863f8-111">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="04c35-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="04c35-104">In This Section</span></span>  
+ [<span data-ttu-id="04c35-105">Общие сведения о кистях WPF</span><span class="sxs-lookup"><span data-stu-id="04c35-105">WPF Brushes Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
+ [<span data-ttu-id="04c35-106">Общие сведения о преобразованиях кистей</span><span class="sxs-lookup"><span data-stu-id="04c35-106">Brush Transformation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
+ [<span data-ttu-id="04c35-107">Общие сведения о масках непрозрачности</span><span class="sxs-lookup"><span data-stu-id="04c35-107">Opacity Masks Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
+ [<span data-ttu-id="04c35-108">Общие сведения о закраске сплошным цветом и градиентом</span><span class="sxs-lookup"><span data-stu-id="04c35-108">Painting with Solid Colors and Gradients Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
+ [<span data-ttu-id="04c35-109">Заполнение с использованием изображений, рисунков и визуальных элементов</span><span class="sxs-lookup"><span data-stu-id="04c35-109">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [<span data-ttu-id="04c35-110">Общие сведения об объекте TileBrush</span><span class="sxs-lookup"><span data-stu-id="04c35-110">TileBrush Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
+ [<span data-ttu-id="04c35-111">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="04c35-111">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="863f8-112">Ссылка</span><span class="sxs-lookup"><span data-stu-id="863f8-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="04c35-112">Ссылка</span><span class="sxs-lookup"><span data-stu-id="04c35-112">Reference</span></span>  
  <xref:System.Windows.Media.Brush>  
   
  <xref:System.Windows.Media.SolidColorBrush>  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Media.VisualBrush>  
   
-## <a name="related-sections"></a><span data-ttu-id="863f8-113">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="863f8-113">Related Sections</span></span>  
- [<span data-ttu-id="863f8-114">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="863f8-114">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="04c35-113">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="04c35-113">Related Sections</span></span>  
+ [<span data-ttu-id="04c35-114">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="04c35-114">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
   
- [<span data-ttu-id="863f8-115">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="863f8-115">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [<span data-ttu-id="04c35-115">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="04c35-115">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

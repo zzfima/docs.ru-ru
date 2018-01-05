@@ -17,27 +17,28 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a86833f2b773f1724393de091bc65a5cbb75c9b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 157e7bf7ed481afc0b797a05721a4d7973b8790b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="graphics"></a><span data-ttu-id="c2787-102">Графика</span><span class="sxs-lookup"><span data-stu-id="c2787-102">Graphics</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="c2787-103">обеспечивает интегрированную поддержку мультимедиа, векторную графику, анимацию и композицию содержимого, что облегчает разработчикам создание интересных пользовательских интерфейсов и содержимого.</span><span class="sxs-lookup"><span data-stu-id="c2787-103"> offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.</span></span>  
+# <a name="graphics"></a><span data-ttu-id="ff0f7-102">Графика</span><span class="sxs-lookup"><span data-stu-id="ff0f7-102">Graphics</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="ff0f7-103">обеспечивает интегрированную поддержку мультимедиа, векторную графику, анимацию и композицию содержимого, что облегчает разработчикам создание интересных пользовательских интерфейсов и содержимого.</span><span class="sxs-lookup"><span data-stu-id="ff0f7-103"> offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c2787-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="c2787-104">In This Section</span></span>  
- [<span data-ttu-id="c2787-105">Эффекты для точечных рисунков</span><span class="sxs-lookup"><span data-stu-id="c2787-105">Bitmap Effects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
- [<span data-ttu-id="c2787-106">Кисти</span><span class="sxs-lookup"><span data-stu-id="c2787-106">Brushes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
- [<span data-ttu-id="c2787-107">Объекты рисования</span><span class="sxs-lookup"><span data-stu-id="c2787-107">Drawings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
- [<span data-ttu-id="c2787-108">Геометрические объекты</span><span class="sxs-lookup"><span data-stu-id="c2787-108">Geometries</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
- [<span data-ttu-id="c2787-109">Изображения</span><span class="sxs-lookup"><span data-stu-id="c2787-109">Images</span></span>](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
- [<span data-ttu-id="c2787-110">Фигуры</span><span class="sxs-lookup"><span data-stu-id="c2787-110">Shapes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
- [<span data-ttu-id="c2787-111">Преобразования</span><span class="sxs-lookup"><span data-stu-id="c2787-111">Transformations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
- [<span data-ttu-id="c2787-112">Настройки реестра графической отрисовки</span><span class="sxs-lookup"><span data-stu-id="c2787-112">Graphics Rendering Registry Settings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
- [<span data-ttu-id="c2787-113">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="c2787-113">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="ff0f7-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="ff0f7-104">In This Section</span></span>  
+ [<span data-ttu-id="ff0f7-105">Эффекты для точечных рисунков</span><span class="sxs-lookup"><span data-stu-id="ff0f7-105">Bitmap Effects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
+ [<span data-ttu-id="ff0f7-106">Кисти</span><span class="sxs-lookup"><span data-stu-id="ff0f7-106">Brushes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
+ [<span data-ttu-id="ff0f7-107">Объекты рисования</span><span class="sxs-lookup"><span data-stu-id="ff0f7-107">Drawings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
+ [<span data-ttu-id="ff0f7-108">Геометрические объекты</span><span class="sxs-lookup"><span data-stu-id="ff0f7-108">Geometries</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
+ [<span data-ttu-id="ff0f7-109">Изображения</span><span class="sxs-lookup"><span data-stu-id="ff0f7-109">Images</span></span>](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
+ [<span data-ttu-id="ff0f7-110">Фигуры</span><span class="sxs-lookup"><span data-stu-id="ff0f7-110">Shapes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
+ [<span data-ttu-id="ff0f7-111">Преобразования</span><span class="sxs-lookup"><span data-stu-id="ff0f7-111">Transformations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
+ [<span data-ttu-id="ff0f7-112">Настройки реестра графической отрисовки</span><span class="sxs-lookup"><span data-stu-id="ff0f7-112">Graphics Rendering Registry Settings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
+ [<span data-ttu-id="ff0f7-113">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="ff0f7-113">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="c2787-114">См. также</span><span class="sxs-lookup"><span data-stu-id="c2787-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="ff0f7-114">См. также</span><span class="sxs-lookup"><span data-stu-id="ff0f7-114">See Also</span></span>  
  <xref:System.Windows.Shapes.Shape>  
  <xref:System.Windows.Media.Transform>  
  <xref:System.Windows.Media.Imaging.BitmapImage>  
@@ -45,6 +46,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Media.Drawing>  
  <xref:System.Windows.Media.Brush>  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
- [<span data-ttu-id="c2787-115">Двумерная графика и изображения</span><span class="sxs-lookup"><span data-stu-id="c2787-115">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [<span data-ttu-id="c2787-116">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="c2787-116">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="c2787-117">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="c2787-117">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [<span data-ttu-id="ff0f7-115">Двумерная графика и изображения</span><span class="sxs-lookup"><span data-stu-id="ff0f7-115">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="ff0f7-116">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="ff0f7-116">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [<span data-ttu-id="ff0f7-117">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="ff0f7-117">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

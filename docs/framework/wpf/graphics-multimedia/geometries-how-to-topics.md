@@ -15,34 +15,35 @@ caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9540de6140a9dbfdb0d7dd4ab5d9e461caec5268
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e0c75871074bc7e2bae4789a9f77525b9f09c61f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="geometries-how-to-topics"></a><span data-ttu-id="dfa61-102">Разделы руководства, посвященные геометрии</span><span class="sxs-lookup"><span data-stu-id="dfa61-102">Geometries How-to Topics</span></span>
-<span data-ttu-id="dfa61-103">В этом разделе демонстрируется использование <xref:System.Windows.Media.Geometry> объектов в приложениях.</span><span class="sxs-lookup"><span data-stu-id="dfa61-103">The topics in this section demonstrate how to use <xref:System.Windows.Media.Geometry> objects in your applications.</span></span>  
+# <a name="geometries-how-to-topics"></a><span data-ttu-id="c55e3-102">Разделы руководства, посвященные геометрии</span><span class="sxs-lookup"><span data-stu-id="c55e3-102">Geometries How-to Topics</span></span>
+<span data-ttu-id="c55e3-103">В этом разделе демонстрируется использование <xref:System.Windows.Media.Geometry> объектов в приложениях.</span><span class="sxs-lookup"><span data-stu-id="c55e3-103">The topics in this section demonstrate how to use <xref:System.Windows.Media.Geometry> objects in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="dfa61-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="dfa61-104">In This Section</span></span>  
- [<span data-ttu-id="dfa61-105">Анимация объекта EllipseGeometry</span><span class="sxs-lookup"><span data-stu-id="dfa61-105">Animate an EllipseGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-ellipsegeometry.md)  
- [<span data-ttu-id="dfa61-106">Анимация размера объекта ArcSegment</span><span class="sxs-lookup"><span data-stu-id="dfa61-106">Animate the Size of an ArcSegment</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-size-of-an-arcsegment.md)  
- [<span data-ttu-id="dfa61-107">Управление заливкой составных фигур</span><span class="sxs-lookup"><span data-stu-id="dfa61-107">Control the Fill of a Composite Shape</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md)  
- [<span data-ttu-id="dfa61-108">Создание объединенных геометрических объектов</span><span class="sxs-lookup"><span data-stu-id="dfa61-108">Create a Combined Geometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-combined-geometry.md)  
- [<span data-ttu-id="dfa61-109">Создание составной фигуры</span><span class="sxs-lookup"><span data-stu-id="dfa61-109">Create a Composite Shape</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
- [<span data-ttu-id="dfa61-110">Создание кривой Безье третьего порядка</span><span class="sxs-lookup"><span data-stu-id="dfa61-110">Create a Cubic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)  
- [<span data-ttu-id="dfa61-111">Создание линии с помощью объекта LineGeometry</span><span class="sxs-lookup"><span data-stu-id="dfa61-111">Create a Line Using a LineGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-line-using-a-linegeometry.md)  
- [<span data-ttu-id="dfa61-112">Создание LineSegment в PathGeometry</span><span class="sxs-lookup"><span data-stu-id="dfa61-112">Create a LineSegment in a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)  
- [<span data-ttu-id="dfa61-113">Создание фигуры с помощью объекта PathGeometry</span><span class="sxs-lookup"><span data-stu-id="dfa61-113">Create a Shape by Using a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)  
- [<span data-ttu-id="dfa61-114">Создание фигуры с помощью объекта StreamGeometry</span><span class="sxs-lookup"><span data-stu-id="dfa61-114">Create a Shape Using a StreamGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)  
- [<span data-ttu-id="dfa61-115">Создание кривой Безье второго порядка</span><span class="sxs-lookup"><span data-stu-id="dfa61-115">Create a Quadratic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
- [<span data-ttu-id="dfa61-116">Создание эллиптической дуги</span><span class="sxs-lookup"><span data-stu-id="dfa61-116">Create an Elliptical Arc</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
- [<span data-ttu-id="dfa61-117">Создание нескольких подконтуров внутри объекта PathGeometry</span><span class="sxs-lookup"><span data-stu-id="dfa61-117">Create Multiple Subpaths Within a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
- [<span data-ttu-id="dfa61-118">Определение прямоугольника с помощью объекта RectangleGeometry</span><span class="sxs-lookup"><span data-stu-id="dfa61-118">Define a Rectangle Using a RectangleGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
- [<span data-ttu-id="dfa61-119">Скругление углов объекта RectangleGeometry</span><span class="sxs-lookup"><span data-stu-id="dfa61-119">Round the Corners of a RectangleGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-round-the-corners-of-a-rectanglegeometry.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c55e3-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="c55e3-104">In This Section</span></span>  
+ [<span data-ttu-id="c55e3-105">Анимация объекта EllipseGeometry</span><span class="sxs-lookup"><span data-stu-id="c55e3-105">Animate an EllipseGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-ellipsegeometry.md)  
+ [<span data-ttu-id="c55e3-106">Анимация размера объекта ArcSegment</span><span class="sxs-lookup"><span data-stu-id="c55e3-106">Animate the Size of an ArcSegment</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-size-of-an-arcsegment.md)  
+ [<span data-ttu-id="c55e3-107">Управление заливкой составных фигур</span><span class="sxs-lookup"><span data-stu-id="c55e3-107">Control the Fill of a Composite Shape</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md)  
+ [<span data-ttu-id="c55e3-108">Создание объединенных геометрических объектов</span><span class="sxs-lookup"><span data-stu-id="c55e3-108">Create a Combined Geometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-combined-geometry.md)  
+ [<span data-ttu-id="c55e3-109">Создание составной фигуры</span><span class="sxs-lookup"><span data-stu-id="c55e3-109">Create a Composite Shape</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
+ [<span data-ttu-id="c55e3-110">Создание кривой Безье третьего порядка</span><span class="sxs-lookup"><span data-stu-id="c55e3-110">Create a Cubic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)  
+ [<span data-ttu-id="c55e3-111">Создание линии с помощью объекта LineGeometry</span><span class="sxs-lookup"><span data-stu-id="c55e3-111">Create a Line Using a LineGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-line-using-a-linegeometry.md)  
+ [<span data-ttu-id="c55e3-112">Создание LineSegment в PathGeometry</span><span class="sxs-lookup"><span data-stu-id="c55e3-112">Create a LineSegment in a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)  
+ [<span data-ttu-id="c55e3-113">Создание фигуры с помощью объекта PathGeometry</span><span class="sxs-lookup"><span data-stu-id="c55e3-113">Create a Shape by Using a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)  
+ [<span data-ttu-id="c55e3-114">Создание фигуры с помощью объекта StreamGeometry</span><span class="sxs-lookup"><span data-stu-id="c55e3-114">Create a Shape Using a StreamGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)  
+ [<span data-ttu-id="c55e3-115">Создание кривой Безье второго порядка</span><span class="sxs-lookup"><span data-stu-id="c55e3-115">Create a Quadratic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
+ [<span data-ttu-id="c55e3-116">Создание эллиптической дуги</span><span class="sxs-lookup"><span data-stu-id="c55e3-116">Create an Elliptical Arc</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
+ [<span data-ttu-id="c55e3-117">Создание нескольких подконтуров внутри объекта PathGeometry</span><span class="sxs-lookup"><span data-stu-id="c55e3-117">Create Multiple Subpaths Within a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
+ [<span data-ttu-id="c55e3-118">Определение прямоугольника с помощью объекта RectangleGeometry</span><span class="sxs-lookup"><span data-stu-id="c55e3-118">Define a Rectangle Using a RectangleGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
+ [<span data-ttu-id="c55e3-119">Скругление углов объекта RectangleGeometry</span><span class="sxs-lookup"><span data-stu-id="c55e3-119">Round the Corners of a RectangleGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-round-the-corners-of-a-rectanglegeometry.md)  
   
-## <a name="see-also"></a><span data-ttu-id="dfa61-120">См. также</span><span class="sxs-lookup"><span data-stu-id="dfa61-120">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c55e3-120">См. также</span><span class="sxs-lookup"><span data-stu-id="c55e3-120">See Also</span></span>  
  <xref:System.Windows.Media.Brushes>  
  <xref:System.Windows.Shapes.Shape>  
- [<span data-ttu-id="dfa61-121">Обзор фигур и базовых средств рисования в приложении WPF</span><span class="sxs-lookup"><span data-stu-id="dfa61-121">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [<span data-ttu-id="dfa61-122">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="dfa61-122">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [<span data-ttu-id="c55e3-121">Обзор фигур и базовых средств рисования в приложении WPF</span><span class="sxs-lookup"><span data-stu-id="c55e3-121">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [<span data-ttu-id="c55e3-122">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="c55e3-122">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

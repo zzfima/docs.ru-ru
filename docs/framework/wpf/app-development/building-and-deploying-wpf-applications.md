@@ -18,32 +18,33 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de9740d74b87de7b81da10b458a7e935a427af98
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6873de24e33876b7caaf9014ca7e9d6bc80375c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="building-and-deploying-wpf-applications"></a><span data-ttu-id="44140-102">Построение и развертывание приложений WPF</span><span class="sxs-lookup"><span data-stu-id="44140-102">Building and Deploying WPF Applications</span></span>
-<span data-ttu-id="44140-103">Сборки и развертывания модели предоставляет возможность создания и развертывания приложений локально и удаленно, включая следующие:</span><span class="sxs-lookup"><span data-stu-id="44140-103">The build and deployment model provides the capability to build and deploy applications locally and remotely, including the following:</span></span>  
+# <a name="building-and-deploying-wpf-applications"></a><span data-ttu-id="32074-102">Построение и развертывание приложений WPF</span><span class="sxs-lookup"><span data-stu-id="32074-102">Building and Deploying WPF Applications</span></span>
+<span data-ttu-id="32074-103">Сборки и развертывания модели предоставляет возможность создания и развертывания приложений локально и удаленно, включая следующие:</span><span class="sxs-lookup"><span data-stu-id="32074-103">The build and deployment model provides the capability to build and deploy applications locally and remotely, including the following:</span></span>  
   
--   <span data-ttu-id="44140-104">MSBuild: системы, расположенного в пространстве имен Microsoft.Build.Tasks.Windows сборки .NET.</span><span class="sxs-lookup"><span data-stu-id="44140-104">MSBuild: the .NET build system located in the Microsoft.Build.Tasks.Windows namespace.</span></span>  
+-   <span data-ttu-id="32074-104">MSBuild: системы, расположенного в пространстве имен Microsoft.Build.Tasks.Windows сборки .NET.</span><span class="sxs-lookup"><span data-stu-id="32074-104">MSBuild: the .NET build system located in the Microsoft.Build.Tasks.Windows namespace.</span></span>  
   
--   <span data-ttu-id="44140-105">Ресурсы: работа с ресурсами пользовательского интерфейса.</span><span class="sxs-lookup"><span data-stu-id="44140-105">Resources: working with UI resources.</span></span>  
+-   <span data-ttu-id="32074-105">Ресурсы: работа с ресурсами пользовательского интерфейса.</span><span class="sxs-lookup"><span data-stu-id="32074-105">Resources: working with UI resources.</span></span>  
   
--   <span data-ttu-id="44140-106">Развертывание ClickOnce: публикация и развертывание системы .NET.</span><span class="sxs-lookup"><span data-stu-id="44140-106">ClickOnce Deployment: the .NET publishing and deployment system.</span></span>  
+-   <span data-ttu-id="32074-106">Развертывание ClickOnce: публикация и развертывание системы .NET.</span><span class="sxs-lookup"><span data-stu-id="32074-106">ClickOnce Deployment: the .NET publishing and deployment system.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="44140-107">Содержание</span><span class="sxs-lookup"><span data-stu-id="44140-107">In This Section</span></span>  
- [<span data-ttu-id="44140-108">Построение приложения WPF</span><span class="sxs-lookup"><span data-stu-id="44140-108">Building a WPF Application</span></span>](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
- [<span data-ttu-id="44140-109">Развертывание приложений WPF</span><span class="sxs-lookup"><span data-stu-id="44140-109">Deploying a WPF Application</span></span>](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
- [<span data-ttu-id="44140-110">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="44140-110">How-to Topics</span></span>](../../../../docs/framework/wpf/app-development/build-and-deploy-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="32074-107">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="32074-107">In This Section</span></span>  
+ [<span data-ttu-id="32074-108">Построение приложения WPF</span><span class="sxs-lookup"><span data-stu-id="32074-108">Building a WPF Application</span></span>](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="32074-109">Развертывание приложений WPF</span><span class="sxs-lookup"><span data-stu-id="32074-109">Deploying a WPF Application</span></span>](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="32074-110">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="32074-110">How-to Topics</span></span>](../../../../docs/framework/wpf/app-development/build-and-deploy-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="44140-111">Ссылка</span><span class="sxs-lookup"><span data-stu-id="44140-111">Reference</span></span>  
- <span data-ttu-id="44140-112">MSBuild</span><span class="sxs-lookup"><span data-stu-id="44140-112">MSBuild</span></span>  
+## <a name="reference"></a><span data-ttu-id="32074-111">Ссылка</span><span class="sxs-lookup"><span data-stu-id="32074-111">Reference</span></span>  
+ <span data-ttu-id="32074-112">MSBuild</span><span class="sxs-lookup"><span data-stu-id="32074-112">MSBuild</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="44140-113">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="44140-113">Related Sections</span></span>  
- [<span data-ttu-id="44140-114">Общие сведения об управлении приложением</span><span class="sxs-lookup"><span data-stu-id="44140-114">Application Management Overview</span></span>](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [<span data-ttu-id="44140-115">Windows в WPF</span><span class="sxs-lookup"><span data-stu-id="44140-115">Windows in WPF</span></span>](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)  
-  [<span data-ttu-id="44140-116">Общие сведения о переходах</span><span class="sxs-lookup"><span data-stu-id="44140-116">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [<span data-ttu-id="44140-117">Общие сведения о приложениях браузера WPF XAML</span><span class="sxs-lookup"><span data-stu-id="44140-117">WPF XAML Browser Applications Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)  
-  [<span data-ttu-id="44140-118">Размещение</span><span class="sxs-lookup"><span data-stu-id="44140-118">Hosting</span></span>](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)
+## <a name="related-sections"></a><span data-ttu-id="32074-113">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="32074-113">Related Sections</span></span>  
+ [<span data-ttu-id="32074-114">Общие сведения об управлении приложением</span><span class="sxs-lookup"><span data-stu-id="32074-114">Application Management Overview</span></span>](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+  [<span data-ttu-id="32074-115">Windows в WPF</span><span class="sxs-lookup"><span data-stu-id="32074-115">Windows in WPF</span></span>](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)  
+  [<span data-ttu-id="32074-116">Общие сведения о переходах</span><span class="sxs-lookup"><span data-stu-id="32074-116">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+  [<span data-ttu-id="32074-117">Общие сведения о приложениях браузера WPF XAML</span><span class="sxs-lookup"><span data-stu-id="32074-117">WPF XAML Browser Applications Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)  
+  [<span data-ttu-id="32074-118">Размещение</span><span class="sxs-lookup"><span data-stu-id="32074-118">Hosting</span></span>](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)

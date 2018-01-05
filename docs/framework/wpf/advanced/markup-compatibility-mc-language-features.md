@@ -21,13 +21,14 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 550f861bc6774f13681beb27c704592d384ad9a4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 54774f2d9e854fefdafb0494ec8ca252419bd114
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="markup-compatibility-mc-language-features"></a><span data-ttu-id="6f062-102">Совместимость разметки (mc:) языковые компоненты</span><span class="sxs-lookup"><span data-stu-id="6f062-102">Markup Compatibility (mc:) Language Features</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="6f062-103">Содержание</span><span class="sxs-lookup"><span data-stu-id="6f062-103">In This Section</span></span>  
- [<span data-ttu-id="6f062-104">Атрибут mc: Ignorable</span><span class="sxs-lookup"><span data-stu-id="6f062-104">mc:Ignorable Attribute</span></span>](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md)  
-  [<span data-ttu-id="6f062-105">Атрибут mc: ProcessContent</span><span class="sxs-lookup"><span data-stu-id="6f062-105">mc:ProcessContent Attribute</span></span>](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md)
+# <a name="markup-compatibility-mc-language-features"></a><span data-ttu-id="5373b-102">Совместимость разметки (mc:) языковые компоненты</span><span class="sxs-lookup"><span data-stu-id="5373b-102">Markup Compatibility (mc:) Language Features</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="5373b-103">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="5373b-103">In This Section</span></span>  
+ [<span data-ttu-id="5373b-104">Атрибут mc: Ignorable</span><span class="sxs-lookup"><span data-stu-id="5373b-104">mc:Ignorable Attribute</span></span>](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md)  
+  [<span data-ttu-id="5373b-105">Атрибут mc: ProcessContent</span><span class="sxs-lookup"><span data-stu-id="5373b-105">mc:ProcessContent Attribute</span></span>](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md)

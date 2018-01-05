@@ -18,22 +18,23 @@ caps.latest.revision: "74"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b5393505a5824594850b682f5a0dd8d9cef76319
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 35048ae8298a75ad26d880909463ee1115056e38
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="printdialog"></a><span data-ttu-id="5ed27-102">PrintDialog</span><span class="sxs-lookup"><span data-stu-id="5ed27-102">PrintDialog</span></span>
-<span data-ttu-id="5ed27-103"><xref:System.Windows.Controls.PrintDialog> Управления используется для создания стандартных диалоговое окно печати, автоматически настраивает <xref:System.Printing.PrintTicket> и <xref:System.Printing.PrintQueue> согласно ввод данных пользователем.</span><span class="sxs-lookup"><span data-stu-id="5ed27-103">The <xref:System.Windows.Controls.PrintDialog> control is used to instantiate a standard print dialog box that automatically configures a <xref:System.Printing.PrintTicket> and <xref:System.Printing.PrintQueue> according to user input.</span></span>  
+# <a name="printdialog"></a><span data-ttu-id="a02df-102">PrintDialog</span><span class="sxs-lookup"><span data-stu-id="a02df-102">PrintDialog</span></span>
+<span data-ttu-id="a02df-103"><xref:System.Windows.Controls.PrintDialog> Управления используется для создания стандартных диалоговое окно печати, автоматически настраивает <xref:System.Printing.PrintTicket> и <xref:System.Printing.PrintQueue> согласно ввод данных пользователем.</span><span class="sxs-lookup"><span data-stu-id="a02df-103">The <xref:System.Windows.Controls.PrintDialog> control is used to instantiate a standard print dialog box that automatically configures a <xref:System.Printing.PrintTicket> and <xref:System.Printing.PrintQueue> according to user input.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="5ed27-104">Ссылка</span><span class="sxs-lookup"><span data-stu-id="5ed27-104">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a02df-104">Ссылка</span><span class="sxs-lookup"><span data-stu-id="a02df-104">Reference</span></span>  
  <xref:System.Windows.Controls.PrintDialog>  
   
  <xref:System.Printing.PrintTicket>  
   
  <xref:System.Printing.PrintQueue>  
   
-## <a name="see-also"></a><span data-ttu-id="5ed27-105">См. также</span><span class="sxs-lookup"><span data-stu-id="5ed27-105">See Also</span></span>  
- [<span data-ttu-id="5ed27-106">Общие сведения о печати</span><span class="sxs-lookup"><span data-stu-id="5ed27-106">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [<span data-ttu-id="5ed27-107">Документы в WPF</span><span class="sxs-lookup"><span data-stu-id="5ed27-107">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="a02df-105">См. также</span><span class="sxs-lookup"><span data-stu-id="a02df-105">See Also</span></span>  
+ [<span data-ttu-id="a02df-106">Общие сведения о печати</span><span class="sxs-lookup"><span data-stu-id="a02df-106">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)  
+ [<span data-ttu-id="a02df-107">Документы в WPF</span><span class="sxs-lookup"><span data-stu-id="a02df-107">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

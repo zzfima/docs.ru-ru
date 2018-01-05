@@ -17,25 +17,26 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cad3fd6a1bdecf9d6187f3592fe4771bbb0b0e98
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 214fdff11b5b64c78b2719e66813b5210884e318
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="tooltip-how-to-topics"></a><span data-ttu-id="e456f-102">Разделы руководства по ToolTip</span><span class="sxs-lookup"><span data-stu-id="e456f-102">ToolTip How-to Topics</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="e456f-103">Содержание</span><span class="sxs-lookup"><span data-stu-id="e456f-103">In This Section</span></span>  
- [<span data-ttu-id="e456f-104">Определение положения всплывающей подсказки</span><span class="sxs-lookup"><span data-stu-id="e456f-104">Position a ToolTip</span></span>](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md)  
-  [<span data-ttu-id="e456f-105">Использование свойства BetweenShowDelay</span><span class="sxs-lookup"><span data-stu-id="e456f-105">Use the BetweenShowDelay Property</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md)  
+# <a name="tooltip-how-to-topics"></a><span data-ttu-id="1115e-102">Разделы руководства по ToolTip</span><span class="sxs-lookup"><span data-stu-id="1115e-102">ToolTip How-to Topics</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="1115e-103">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="1115e-103">In This Section</span></span>  
+ [<span data-ttu-id="1115e-104">Определение положения всплывающей подсказки</span><span class="sxs-lookup"><span data-stu-id="1115e-104">Position a ToolTip</span></span>](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md)  
+  [<span data-ttu-id="1115e-105">Использование свойства BetweenShowDelay</span><span class="sxs-lookup"><span data-stu-id="1115e-105">Use the BetweenShowDelay Property</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md)  
   
-## <a name="reference"></a><span data-ttu-id="e456f-106">Ссылка</span><span class="sxs-lookup"><span data-stu-id="e456f-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="1115e-106">Ссылка</span><span class="sxs-lookup"><span data-stu-id="1115e-106">Reference</span></span>  
  <xref:System.Windows.Controls.ToolTip>  
   
  <xref:System.Windows.Controls.ToolTipService>  
   
  <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="e456f-107">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="e456f-107">Related Sections</span></span>  
- [<span data-ttu-id="e456f-108">Общие сведения о контекстном меню</span><span class="sxs-lookup"><span data-stu-id="e456f-108">Popup Overview</span></span>](../../../../docs/framework/wpf/controls/popup-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="1115e-107">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="1115e-107">Related Sections</span></span>  
+ [<span data-ttu-id="1115e-108">Общие сведения о контекстном меню</span><span class="sxs-lookup"><span data-stu-id="1115e-108">Popup Overview</span></span>](../../../../docs/framework/wpf/controls/popup-overview.md)  
   
- [<span data-ttu-id="e456f-109">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="e456f-109">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+ [<span data-ttu-id="1115e-109">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="1115e-109">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)

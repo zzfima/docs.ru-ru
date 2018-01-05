@@ -17,21 +17,22 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 46eadf0252675e07b67f961e2873394407d8fd78
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 218a6ad9c1a1a7e09fcd7dc8969ce6fe5bc372fa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-animate-a-3-d-rotation-using-rotation3danimation"></a><span data-ttu-id="07bf3-102">Практическое руководство. Анимация трехмерного поворота с помощью Rotation3DAnimation</span><span class="sxs-lookup"><span data-stu-id="07bf3-102">How to: Animate a 3-D Rotation Using Rotation3DAnimation</span></span>
-<span data-ttu-id="07bf3-103">Следующий пример показывает, как сделать трехмерный поворот во время его «качания» с помощью объекта <xref:System.Windows.Media.Animation.Rotation3DAnimation> для анимации <xref:System.Windows.Media.Media3D.RotateTransform3D.Rotation%2A> свойство <xref:System.Windows.Media.Media3D.RotateTransform3D> объекта применены 3D-объект.</span><span class="sxs-lookup"><span data-stu-id="07bf3-103">The following example shows how to make a 3D object rotate while it "wobbles" by using <xref:System.Windows.Media.Animation.Rotation3DAnimation> to animate the <xref:System.Windows.Media.Media3D.RotateTransform3D.Rotation%2A> property of the <xref:System.Windows.Media.Media3D.RotateTransform3D> object applied to the 3D object.</span></span>  
+# <a name="how-to-animate-a-3-d-rotation-using-rotation3danimation"></a><span data-ttu-id="f9d07-102">Практическое руководство. Анимация трехмерного поворота с помощью Rotation3DAnimation</span><span class="sxs-lookup"><span data-stu-id="f9d07-102">How to: Animate a 3-D Rotation Using Rotation3DAnimation</span></span>
+<span data-ttu-id="f9d07-103">Следующий пример показывает, как сделать трехмерный поворот во время его «качания» с помощью объекта <xref:System.Windows.Media.Animation.Rotation3DAnimation> для анимации <xref:System.Windows.Media.Media3D.RotateTransform3D.Rotation%2A> свойство <xref:System.Windows.Media.Media3D.RotateTransform3D> объекта применены 3D-объект.</span><span class="sxs-lookup"><span data-stu-id="f9d07-103">The following example shows how to make a 3D object rotate while it "wobbles" by using <xref:System.Windows.Media.Animation.Rotation3DAnimation> to animate the <xref:System.Windows.Media.Media3D.RotateTransform3D.Rotation%2A> property of the <xref:System.Windows.Media.Media3D.RotateTransform3D> object applied to the 3D object.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="07bf3-104">Пример</span><span class="sxs-lookup"><span data-stu-id="07bf3-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="f9d07-104">Пример</span><span class="sxs-lookup"><span data-stu-id="f9d07-104">Example</span></span>  
  [!code-xaml[Animation3DGallery_snip#Rotation3DAnimationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Rotation3DAnimationExample.xaml#rotation3danimationexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="07bf3-105">См. также</span><span class="sxs-lookup"><span data-stu-id="07bf3-105">See Also</span></span>  
- [<span data-ttu-id="07bf3-106">Обзор трехмерной графики</span><span class="sxs-lookup"><span data-stu-id="07bf3-106">3-D Graphics Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
- [<span data-ttu-id="07bf3-107">Анимация трехмерного поворота с помощью ключевых кадров (Rotation3DAnimationUsingKeyFrames)</span><span class="sxs-lookup"><span data-stu-id="07bf3-107">Animate a 3-D Rotation Using Key Frames (Rotation3DAnimationUsingKeyFrames)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-key-frames.md)  
- [<span data-ttu-id="07bf3-108">Анимация трехмерного вращения с помощью раскадровки</span><span class="sxs-lookup"><span data-stu-id="07bf3-108">Animate a 3-D Rotation Using Storyboards</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-storyboards.md)  
- [<span data-ttu-id="07bf3-109">Анимация трехмерного вращения с помощью кватернионов</span><span class="sxs-lookup"><span data-stu-id="07bf3-109">Animate a 3-D Rotation Using Quaternions</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-quaternions.md)  
- [<span data-ttu-id="07bf3-110">Общие сведения об эффектах анимации</span><span class="sxs-lookup"><span data-stu-id="07bf3-110">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="f9d07-105">См. также</span><span class="sxs-lookup"><span data-stu-id="f9d07-105">See Also</span></span>  
+ [<span data-ttu-id="f9d07-106">Обзор трехмерной графики</span><span class="sxs-lookup"><span data-stu-id="f9d07-106">3-D Graphics Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
+ [<span data-ttu-id="f9d07-107">Анимация трехмерного поворота с помощью ключевых кадров (Rotation3DAnimationUsingKeyFrames)</span><span class="sxs-lookup"><span data-stu-id="f9d07-107">Animate a 3-D Rotation Using Key Frames (Rotation3DAnimationUsingKeyFrames)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-key-frames.md)  
+ [<span data-ttu-id="f9d07-108">Анимация трехмерного вращения с помощью раскадровки</span><span class="sxs-lookup"><span data-stu-id="f9d07-108">Animate a 3-D Rotation Using Storyboards</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-storyboards.md)  
+ [<span data-ttu-id="f9d07-109">Анимация трехмерного вращения с помощью кватернионов</span><span class="sxs-lookup"><span data-stu-id="f9d07-109">Animate a 3-D Rotation Using Quaternions</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-quaternions.md)  
+ [<span data-ttu-id="f9d07-110">Общие сведения об эффектах анимации</span><span class="sxs-lookup"><span data-stu-id="f9d07-110">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

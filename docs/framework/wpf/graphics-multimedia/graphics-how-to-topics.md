@@ -18,24 +18,25 @@ caps.latest.revision: "56"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8717e4e1e54e07109d2e00d9bbf13dbd9d8dde8b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 03caea0247c387c7787838080cd473ccf2b49b4f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="graphics-how-to-topics"></a><span data-ttu-id="a3890-102">Разделы практического руководства, посвященные графике</span><span class="sxs-lookup"><span data-stu-id="a3890-102">Graphics How-to Topics</span></span>
-<span data-ttu-id="a3890-103">В следующих разделах демонстрируется способ использования графических возможностей [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a3890-103">The following topics demonstrate how to use the graphic capabilities of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="graphics-how-to-topics"></a><span data-ttu-id="eb74d-102">Разделы практического руководства, посвященные графике</span><span class="sxs-lookup"><span data-stu-id="eb74d-102">Graphics How-to Topics</span></span>
+<span data-ttu-id="eb74d-103">В следующих разделах демонстрируется способ использования графических возможностей [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="eb74d-103">The following topics demonstrate how to use the graphic capabilities of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a3890-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="a3890-104">In This Section</span></span>  
- [<span data-ttu-id="a3890-105">Анимация прямоугольника</span><span class="sxs-lookup"><span data-stu-id="a3890-105">Animate a Rectangle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle.md)  
- [<span data-ttu-id="a3890-106">Анимация расположения объекта с помощью PointAnimation</span><span class="sxs-lookup"><span data-stu-id="a3890-106">Animate the Position of an Object by Using PointAnimation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
- [<span data-ttu-id="a3890-107">Преобразование объектов Point и Vector</span><span class="sxs-lookup"><span data-stu-id="a3890-107">Transform Points and Vectors</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-points-and-vectors.md)  
- [<span data-ttu-id="a3890-108">Использование стеклянной рамки в приложении WPF</span><span class="sxs-lookup"><span data-stu-id="a3890-108">Extend Glass Frame Into a WPF Application</span></span>](../../../../docs/framework/wpf/graphics-multimedia/extend-glass-frame-into-a-wpf-application.md)  
- [<span data-ttu-id="a3890-109">Практическое руководство. Повышение производительности отрисовки за счет кэширования элемента</span><span class="sxs-lookup"><span data-stu-id="a3890-109">How to: Improve Rendering Performance by Caching an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)  
- [<span data-ttu-id="a3890-110">Практическое руководство. Использование кэшированного элемента в качестве кисти</span><span class="sxs-lookup"><span data-stu-id="a3890-110">How to: Use a Cached Element as a Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)  
+## <a name="in-this-section"></a><span data-ttu-id="eb74d-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="eb74d-104">In This Section</span></span>  
+ [<span data-ttu-id="eb74d-105">Анимация прямоугольника</span><span class="sxs-lookup"><span data-stu-id="eb74d-105">Animate a Rectangle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle.md)  
+ [<span data-ttu-id="eb74d-106">Анимация расположения объекта с помощью PointAnimation</span><span class="sxs-lookup"><span data-stu-id="eb74d-106">Animate the Position of an Object by Using PointAnimation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [<span data-ttu-id="eb74d-107">Преобразование объектов Point и Vector</span><span class="sxs-lookup"><span data-stu-id="eb74d-107">Transform Points and Vectors</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-points-and-vectors.md)  
+ [<span data-ttu-id="eb74d-108">Использование стеклянной рамки в приложении WPF</span><span class="sxs-lookup"><span data-stu-id="eb74d-108">Extend Glass Frame Into a WPF Application</span></span>](../../../../docs/framework/wpf/graphics-multimedia/extend-glass-frame-into-a-wpf-application.md)  
+ [<span data-ttu-id="eb74d-109">Практическое руководство. Повышение производительности отрисовки за счет кэширования элемента</span><span class="sxs-lookup"><span data-stu-id="eb74d-109">How to: Improve Rendering Performance by Caching an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [<span data-ttu-id="eb74d-110">Практическое руководство. Использование кэшированного элемента в качестве кисти</span><span class="sxs-lookup"><span data-stu-id="eb74d-110">How to: Use a Cached Element as a Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)  
   
-## <a name="see-also"></a><span data-ttu-id="a3890-111">См. также</span><span class="sxs-lookup"><span data-stu-id="a3890-111">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="eb74d-111">См. также</span><span class="sxs-lookup"><span data-stu-id="eb74d-111">See Also</span></span>  
  <xref:System.Windows.Shapes.Shape>  
  <xref:System.Windows.Media.Transform>  
  <xref:System.Windows.Media.Imaging.BitmapImage>  
@@ -43,5 +44,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Media.Drawing>  
  <xref:System.Windows.Media.Brush>  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
- [<span data-ttu-id="a3890-112">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="a3890-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="a3890-113">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="a3890-113">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [<span data-ttu-id="eb74d-112">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="eb74d-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [<span data-ttu-id="eb74d-113">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="eb74d-113">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

@@ -15,22 +15,23 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 18b393ca5048d9b96c6803cd536110ea2261daae
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 89c2e2fb12a91e06b3c4347b6f65c6fa91636911
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="base-elements"></a><span data-ttu-id="4557a-102">Базовые элементы</span><span class="sxs-lookup"><span data-stu-id="4557a-102">Base Elements</span></span>
-<span data-ttu-id="4557a-103">Четыре основные классы--<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, и <xref:System.Windows.FrameworkContentElement>--реализуют значительный процент общих элемент функций, доступных в программировании WPF.</span><span class="sxs-lookup"><span data-stu-id="4557a-103">Four key classes--<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, and <xref:System.Windows.FrameworkContentElement>--implement a substantial percentage of the common element functionality available in WPF programming.</span></span> <span data-ttu-id="4557a-104">Эти четыре класса, называются в этом пакете SDK на базовые классы элементов.</span><span class="sxs-lookup"><span data-stu-id="4557a-104">These four classes are referred to in this SDK as the base element classes.</span></span>  
+# <a name="base-elements"></a><span data-ttu-id="96a49-102">Базовые элементы</span><span class="sxs-lookup"><span data-stu-id="96a49-102">Base Elements</span></span>
+<span data-ttu-id="96a49-103">Четыре основные классы--<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, и <xref:System.Windows.FrameworkContentElement>--реализуют значительный процент общих элемент функций, доступных в программировании WPF.</span><span class="sxs-lookup"><span data-stu-id="96a49-103">Four key classes--<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, and <xref:System.Windows.FrameworkContentElement>--implement a substantial percentage of the common element functionality available in WPF programming.</span></span> <span data-ttu-id="96a49-104">Эти четыре класса, называются в этом пакете SDK на базовые классы элементов.</span><span class="sxs-lookup"><span data-stu-id="96a49-104">These four classes are referred to in this SDK as the base element classes.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4557a-105">Содержание</span><span class="sxs-lookup"><span data-stu-id="4557a-105">In This Section</span></span>  
- [<span data-ttu-id="4557a-106">Общие сведения о базовых элементах</span><span class="sxs-lookup"><span data-stu-id="4557a-106">Base Elements Overview</span></span>](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [<span data-ttu-id="4557a-107">Общие сведения об объектах класса Freezable</span><span class="sxs-lookup"><span data-stu-id="4557a-107">Freezable Objects Overview</span></span>](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [<span data-ttu-id="4557a-108">Общие сведения о свойствах Alignment, Margin, Padding</span><span class="sxs-lookup"><span data-stu-id="4557a-108">Alignment, Margins, and Padding Overview</span></span>](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [<span data-ttu-id="4557a-109">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="4557a-109">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="96a49-105">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="96a49-105">In This Section</span></span>  
+ [<span data-ttu-id="96a49-106">Общие сведения о базовых элементах</span><span class="sxs-lookup"><span data-stu-id="96a49-106">Base Elements Overview</span></span>](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
+ [<span data-ttu-id="96a49-107">Общие сведения об объектах класса Freezable</span><span class="sxs-lookup"><span data-stu-id="96a49-107">Freezable Objects Overview</span></span>](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [<span data-ttu-id="96a49-108">Общие сведения о свойствах Alignment, Margin, Padding</span><span class="sxs-lookup"><span data-stu-id="96a49-108">Alignment, Margins, and Padding Overview</span></span>](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
+ [<span data-ttu-id="96a49-109">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="96a49-109">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="4557a-110">Ссылка</span><span class="sxs-lookup"><span data-stu-id="4557a-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="96a49-110">Ссылка</span><span class="sxs-lookup"><span data-stu-id="96a49-110">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.ContentElement>  
@@ -39,13 +40,13 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.FrameworkContentElement>  
   
-## <a name="related-sections"></a><span data-ttu-id="4557a-111">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="4557a-111">Related Sections</span></span>  
- [<span data-ttu-id="4557a-112">Архитектура WPF</span><span class="sxs-lookup"><span data-stu-id="4557a-112">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [<span data-ttu-id="4557a-113">XAML в WPF</span><span class="sxs-lookup"><span data-stu-id="4557a-113">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [<span data-ttu-id="4557a-114">Дерево элементов и сериализация</span><span class="sxs-lookup"><span data-stu-id="4557a-114">Element Tree and Serialization</span></span>](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [<span data-ttu-id="4557a-115">Свойства</span><span class="sxs-lookup"><span data-stu-id="4557a-115">Properties</span></span>](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [<span data-ttu-id="4557a-116">События</span><span class="sxs-lookup"><span data-stu-id="4557a-116">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [<span data-ttu-id="4557a-117">Ввод</span><span class="sxs-lookup"><span data-stu-id="4557a-117">Input</span></span>](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [<span data-ttu-id="4557a-118">Ресурсы</span><span class="sxs-lookup"><span data-stu-id="4557a-118">Resources</span></span>](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [<span data-ttu-id="4557a-119">Стилизация и использование шаблонов</span><span class="sxs-lookup"><span data-stu-id="4557a-119">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [<span data-ttu-id="4557a-120">Потоковая модель</span><span class="sxs-lookup"><span data-stu-id="4557a-120">Threading Model</span></span>](../../../../docs/framework/wpf/advanced/threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="96a49-111">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="96a49-111">Related Sections</span></span>  
+ [<span data-ttu-id="96a49-112">Архитектура WPF</span><span class="sxs-lookup"><span data-stu-id="96a49-112">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
+  [<span data-ttu-id="96a49-113">XAML в WPF</span><span class="sxs-lookup"><span data-stu-id="96a49-113">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
+  [<span data-ttu-id="96a49-114">Дерево элементов и сериализация</span><span class="sxs-lookup"><span data-stu-id="96a49-114">Element Tree and Serialization</span></span>](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
+  [<span data-ttu-id="96a49-115">Свойства</span><span class="sxs-lookup"><span data-stu-id="96a49-115">Properties</span></span>](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
+  [<span data-ttu-id="96a49-116">События</span><span class="sxs-lookup"><span data-stu-id="96a49-116">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)  
+  [<span data-ttu-id="96a49-117">Ввод</span><span class="sxs-lookup"><span data-stu-id="96a49-117">Input</span></span>](../../../../docs/framework/wpf/advanced/input-wpf.md)  
+  [<span data-ttu-id="96a49-118">Ресурсы</span><span class="sxs-lookup"><span data-stu-id="96a49-118">Resources</span></span>](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
+  [<span data-ttu-id="96a49-119">Стилизация и использование шаблонов</span><span class="sxs-lookup"><span data-stu-id="96a49-119">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+  [<span data-ttu-id="96a49-120">Потоковая модель</span><span class="sxs-lookup"><span data-stu-id="96a49-120">Threading Model</span></span>](../../../../docs/framework/wpf/advanced/threading-model.md)

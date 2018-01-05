@@ -19,26 +19,27 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bbfb61db786286209ed24e79026d4759a46c84d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f645a5719425742ba02f8f9056ca788fd6fdb931
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="change-selection-in-a-richtextbox-programmatically"></a><span data-ttu-id="25043-102">Изменение выделения в RichTextBox программными средствами</span><span class="sxs-lookup"><span data-stu-id="25043-102">Change Selection in a RichTextBox Programmatically</span></span>
-<span data-ttu-id="25043-103">В этом примере показано, как программно изменить текущее выделение в <xref:System.Windows.Controls.RichTextBox>.</span><span class="sxs-lookup"><span data-stu-id="25043-103">This example shows how to programmatically change the current selection in a <xref:System.Windows.Controls.RichTextBox>.</span></span> <span data-ttu-id="25043-104">Этот параметр является таким же, как если бы пользователь выделил содержимое с помощью пользовательского интерфейса.</span><span class="sxs-lookup"><span data-stu-id="25043-104">This selection is the same as if the user had selected the content by using the user interface.</span></span>  
+# <a name="change-selection-in-a-richtextbox-programmatically"></a><span data-ttu-id="ae447-102">Изменение выделения в RichTextBox программными средствами</span><span class="sxs-lookup"><span data-stu-id="ae447-102">Change Selection in a RichTextBox Programmatically</span></span>
+<span data-ttu-id="ae447-103">В этом примере показано, как программно изменить текущее выделение в <xref:System.Windows.Controls.RichTextBox>.</span><span class="sxs-lookup"><span data-stu-id="ae447-103">This example shows how to programmatically change the current selection in a <xref:System.Windows.Controls.RichTextBox>.</span></span> <span data-ttu-id="ae447-104">Этот параметр является таким же, как если бы пользователь выделил содержимое с помощью пользовательского интерфейса.</span><span class="sxs-lookup"><span data-stu-id="ae447-104">This selection is the same as if the user had selected the content by using the user interface.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="25043-105">Пример</span><span class="sxs-lookup"><span data-stu-id="25043-105">Example</span></span>  
- <span data-ttu-id="25043-106">Следующие [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] код описывает именованного <xref:System.Windows.Controls.RichTextBox> управления с простым содержимым.</span><span class="sxs-lookup"><span data-stu-id="25043-106">The following [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] code describes a named <xref:System.Windows.Controls.RichTextBox> control with simple content.</span></span>  
+## <a name="example"></a><span data-ttu-id="ae447-105">Пример</span><span class="sxs-lookup"><span data-stu-id="ae447-105">Example</span></span>  
+ <span data-ttu-id="ae447-106">Следующие [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] код описывает именованного <xref:System.Windows.Controls.RichTextBox> управления с простым содержимым.</span><span class="sxs-lookup"><span data-stu-id="ae447-106">The following [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] code describes a named <xref:System.Windows.Controls.RichTextBox> control with simple content.</span></span>  
   
  [!code-xaml[RichTextBoxMiscSnippets_snip#ChangeSelectionProgrammaticalyExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/ChangeSelectionProgrammaticaly.xaml#changeselectionprogrammaticalyexamplewholepage)]  
   
-## <a name="example"></a><span data-ttu-id="25043-107">Пример</span><span class="sxs-lookup"><span data-stu-id="25043-107">Example</span></span>  
- <span data-ttu-id="25043-108">В следующем коде программно выбирается произвольный текст при щелчке внутри <xref:System.Windows.Controls.RichTextBox>.</span><span class="sxs-lookup"><span data-stu-id="25043-108">The following code programmatically selects some arbitrary text when the user clicks inside the <xref:System.Windows.Controls.RichTextBox>.</span></span>  
+## <a name="example"></a><span data-ttu-id="ae447-107">Пример</span><span class="sxs-lookup"><span data-stu-id="ae447-107">Example</span></span>  
+ <span data-ttu-id="ae447-108">В следующем коде программно выбирается произвольный текст при щелчке внутри <xref:System.Windows.Controls.RichTextBox>.</span><span class="sxs-lookup"><span data-stu-id="ae447-108">The following code programmatically selects some arbitrary text when the user clicks inside the <xref:System.Windows.Controls.RichTextBox>.</span></span>  
   
  [!code-csharp[RichTextBoxMiscSnippets_snip#ChangeSelectionProgrammaticalyCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/ChangeSelectionProgrammaticaly.xaml.cs#changeselectionprogrammaticalycodeexamplewholepage)]
  [!code-vb[RichTextBoxMiscSnippets_snip#ChangeSelectionProgrammaticalyCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/ChangeSelectionProgrammaticaly.xaml.vb#changeselectionprogrammaticalycodeexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="25043-109">См. также</span><span class="sxs-lookup"><span data-stu-id="25043-109">See Also</span></span>  
- [<span data-ttu-id="25043-110">Общие сведения о RichTextBox</span><span class="sxs-lookup"><span data-stu-id="25043-110">RichTextBox Overview</span></span>](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
- [<span data-ttu-id="25043-111">Общие сведения о TextBox</span><span class="sxs-lookup"><span data-stu-id="25043-111">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)
+## <a name="see-also"></a><span data-ttu-id="ae447-109">См. также</span><span class="sxs-lookup"><span data-stu-id="ae447-109">See Also</span></span>  
+ [<span data-ttu-id="ae447-110">Общие сведения о RichTextBox</span><span class="sxs-lookup"><span data-stu-id="ae447-110">RichTextBox Overview</span></span>](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
+ [<span data-ttu-id="ae447-111">Общие сведения о TextBox</span><span class="sxs-lookup"><span data-stu-id="ae447-111">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)

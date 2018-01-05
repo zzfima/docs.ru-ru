@@ -26,21 +26,22 @@ caps.latest.revision: "54"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1e04dc0cd878f4583fb4e0bd0ba5816ddfe0b358
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 1fa9592dd6f2f0cb3f6fc70f0cc5843ee3b76403
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="introduction-to-wpf-in-visual-studio-2015"></a><span data-ttu-id="a9765-102">Введение в WPF в Visual Studio 2015</span><span class="sxs-lookup"><span data-stu-id="a9765-102">Introduction to WPF in Visual Studio 2015</span></span>
-<span data-ttu-id="a9765-103">Windows Presentation Foundation (WPF) в Visual Studio 2015 предоставляет разработчикам унифицированную модель программирования для создания современных бизнес-приложений Windows для настольных систем.</span><span class="sxs-lookup"><span data-stu-id="a9765-103">Windows Presentation Foundation (WPF) in Visual Studio 2015 provides developers with a unified programming model for building modern line-of-business desktop applications on Windows.</span></span>  
+# <a name="introduction-to-wpf-in-visual-studio-2015"></a><span data-ttu-id="d3554-102">Введение в WPF в Visual Studio 2015</span><span class="sxs-lookup"><span data-stu-id="d3554-102">Introduction to WPF in Visual Studio 2015</span></span>
+<span data-ttu-id="d3554-103">Windows Presentation Foundation (WPF) в Visual Studio 2015 предоставляет разработчикам унифицированную модель программирования для создания современных бизнес-приложений Windows для настольных систем.</span><span class="sxs-lookup"><span data-stu-id="d3554-103">Windows Presentation Foundation (WPF) in Visual Studio 2015 provides developers with a unified programming model for building modern line-of-business desktop applications on Windows.</span></span>  
   
- [<span data-ttu-id="a9765-104">Создание современных приложений для настольных систем с помощью Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="a9765-104">Create Modern Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+ [<span data-ttu-id="d3554-104">Создание современных приложений для настольных систем с помощью Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="d3554-104">Create Modern Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
   
- [<span data-ttu-id="a9765-105">Разработка XAML в Visual Studio и Blend для Visual Studio</span><span class="sxs-lookup"><span data-stu-id="a9765-105">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
+ [<span data-ttu-id="d3554-105">Разработка XAML в Visual Studio и Blend для Visual Studio</span><span class="sxs-lookup"><span data-stu-id="d3554-105">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
- [<span data-ttu-id="a9765-106">Введение в WPF</span><span class="sxs-lookup"><span data-stu-id="a9765-106">Introduction to WPF</span></span>](/visualstudio/designers/introduction-to-wpf)  
+ [<span data-ttu-id="d3554-106">Введение в WPF</span><span class="sxs-lookup"><span data-stu-id="d3554-106">Introduction to WPF</span></span>](/visualstudio/designers/introduction-to-wpf)  
   
- <span data-ttu-id="a9765-107">[WPF в .NET Framework](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx)</span><span class="sxs-lookup"><span data-stu-id="a9765-107">[WPF in the .NET Framework](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx)</span></span>  
+ <span data-ttu-id="d3554-107">[WPF в .NET Framework](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx)</span><span class="sxs-lookup"><span data-stu-id="d3554-107">[WPF in the .NET Framework](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx)</span></span>  
   
- [<span data-ttu-id="a9765-108">Получить Visual Studio</span><span class="sxs-lookup"><span data-stu-id="a9765-108">Get Visual Studio</span></span>](https://www.visualstudio.com/features/wpf-vs)
+ [<span data-ttu-id="d3554-108">Получить Visual Studio</span><span class="sxs-lookup"><span data-stu-id="d3554-108">Get Visual Studio</span></span>](https://www.visualstudio.com/features/wpf-vs)

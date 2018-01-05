@@ -17,25 +17,26 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4288c2d9847edb38cec4d79e73ea713d3ab031f3
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 50820c87948fa9e1d81126a00b1b989e01242303
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="grid-how-to-topics"></a><span data-ttu-id="e13dd-102">Разделы практического руководства, посвященные объекту класса Grid</span><span class="sxs-lookup"><span data-stu-id="e13dd-102">Grid How-to Topics</span></span>
-<span data-ttu-id="e13dd-103">В этом разделе описываются способы расположения элементов с помощью <xref:System.Windows.Controls.Grid> элемента.</span><span class="sxs-lookup"><span data-stu-id="e13dd-103">The topics in this section describe how to position elements using the <xref:System.Windows.Controls.Grid> element.</span></span>  
+# <a name="grid-how-to-topics"></a><span data-ttu-id="b9d5c-102">Разделы практического руководства, посвященные объекту класса Grid</span><span class="sxs-lookup"><span data-stu-id="b9d5c-102">Grid How-to Topics</span></span>
+<span data-ttu-id="b9d5c-103">В этом разделе описываются способы расположения элементов с помощью <xref:System.Windows.Controls.Grid> элемента.</span><span class="sxs-lookup"><span data-stu-id="b9d5c-103">The topics in this section describe how to position elements using the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e13dd-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="e13dd-104">In This Section</span></span>  
- [<span data-ttu-id="e13dd-105">Создание стандартного диалогового окна пользовательского интерфейса с помощью сетки</span><span class="sxs-lookup"><span data-stu-id="e13dd-105">Build a Standard UI Dialog Box by Using Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
- [<span data-ttu-id="e13dd-106">Создание сложной сетки</span><span class="sxs-lookup"><span data-stu-id="e13dd-106">Create a Complex Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-complex-grid.md)  
- [<span data-ttu-id="e13dd-107">Создание элемента сетки</span><span class="sxs-lookup"><span data-stu-id="e13dd-107">Create a Grid Element</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)  
- [<span data-ttu-id="e13dd-108">Создание и использование объекта GridLengthConverter</span><span class="sxs-lookup"><span data-stu-id="e13dd-108">Create and Use a GridLengthConverter Object</span></span>](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-gridlengthconverter-object.md)  
- [<span data-ttu-id="e13dd-109">Управление столбцами и строками с помощью коллекций ColumnDefinitionsCollections и RowDefinitionsCollections</span><span class="sxs-lookup"><span data-stu-id="e13dd-109">Manipulate Columns and Rows by Using ColumnDefinitionsCollections and RowDefinitionsCollections</span></span>](../../../../docs/framework/wpf/controls/manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
- [<span data-ttu-id="e13dd-110">Размещение дочерних элементов сетки</span><span class="sxs-lookup"><span data-stu-id="e13dd-110">Position the Child Elements of a Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-position-the-child-elements-of-a-grid.md)  
- [<span data-ttu-id="e13dd-111">Совместное использование свойств размера между сетками</span><span class="sxs-lookup"><span data-stu-id="e13dd-111">Share Sizing Properties Between Grids</span></span>](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b9d5c-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="b9d5c-104">In This Section</span></span>  
+ [<span data-ttu-id="b9d5c-105">Создание стандартного диалогового окна пользовательского интерфейса с помощью сетки</span><span class="sxs-lookup"><span data-stu-id="b9d5c-105">Build a Standard UI Dialog Box by Using Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
+ [<span data-ttu-id="b9d5c-106">Создание сложной сетки</span><span class="sxs-lookup"><span data-stu-id="b9d5c-106">Create a Complex Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-complex-grid.md)  
+ [<span data-ttu-id="b9d5c-107">Создание элемента сетки</span><span class="sxs-lookup"><span data-stu-id="b9d5c-107">Create a Grid Element</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)  
+ [<span data-ttu-id="b9d5c-108">Создание и использование объекта GridLengthConverter</span><span class="sxs-lookup"><span data-stu-id="b9d5c-108">Create and Use a GridLengthConverter Object</span></span>](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-gridlengthconverter-object.md)  
+ [<span data-ttu-id="b9d5c-109">Управление столбцами и строками с помощью коллекций ColumnDefinitionsCollections и RowDefinitionsCollections</span><span class="sxs-lookup"><span data-stu-id="b9d5c-109">Manipulate Columns and Rows by Using ColumnDefinitionsCollections and RowDefinitionsCollections</span></span>](../../../../docs/framework/wpf/controls/manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
+ [<span data-ttu-id="b9d5c-110">Размещение дочерних элементов сетки</span><span class="sxs-lookup"><span data-stu-id="b9d5c-110">Position the Child Elements of a Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-position-the-child-elements-of-a-grid.md)  
+ [<span data-ttu-id="b9d5c-111">Совместное использование свойств размера между сетками</span><span class="sxs-lookup"><span data-stu-id="b9d5c-111">Share Sizing Properties Between Grids</span></span>](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
   
-## <a name="reference"></a><span data-ttu-id="e13dd-112">Ссылка</span><span class="sxs-lookup"><span data-stu-id="e13dd-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="b9d5c-112">Ссылка</span><span class="sxs-lookup"><span data-stu-id="b9d5c-112">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -50,9 +51,9 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="e13dd-113">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="e13dd-113">Related Sections</span></span>  
- [<span data-ttu-id="e13dd-114">Макет</span><span class="sxs-lookup"><span data-stu-id="e13dd-114">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="b9d5c-113">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="b9d5c-113">Related Sections</span></span>  
+ [<span data-ttu-id="b9d5c-114">Макет</span><span class="sxs-lookup"><span data-stu-id="b9d5c-114">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [<span data-ttu-id="e13dd-115">Пошаговое руководство. Создание первого классического приложения WPF</span><span class="sxs-lookup"><span data-stu-id="e13dd-115">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="b9d5c-115">Пошаговое руководство. Создание первого классического приложения WPF</span><span class="sxs-lookup"><span data-stu-id="b9d5c-115">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="e13dd-116">Общие сведения об элементе управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="e13dd-116">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="b9d5c-116">Общие сведения об элементе управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="b9d5c-116">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

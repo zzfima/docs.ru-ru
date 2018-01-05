@@ -18,21 +18,22 @@ caps.latest.revision: "52"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ba1092b9fd4a39a3e497ec31b9fd6bb1227f827
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 42ef2d29f7364d09c35dec27e0aa6f775dbc2982
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="wpf-xaml-extensions"></a><span data-ttu-id="47e6d-102">Расширения XAML WPF</span><span class="sxs-lookup"><span data-stu-id="47e6d-102">WPF XAML Extensions</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="47e6d-103">Содержание</span><span class="sxs-lookup"><span data-stu-id="47e6d-103">In This Section</span></span>  
- [<span data-ttu-id="47e6d-104">Привязка расширения разметки</span><span class="sxs-lookup"><span data-stu-id="47e6d-104">Binding Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)  
-  [<span data-ttu-id="47e6d-105">Расширение разметки ColorConvertedBitmap</span><span class="sxs-lookup"><span data-stu-id="47e6d-105">ColorConvertedBitmap Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md)  
-  [<span data-ttu-id="47e6d-106">Расширение разметки ComponentResourceKey</span><span class="sxs-lookup"><span data-stu-id="47e6d-106">ComponentResourceKey Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md)  
-  [<span data-ttu-id="47e6d-107">Расширение разметки DynamicResource</span><span class="sxs-lookup"><span data-stu-id="47e6d-107">DynamicResource Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
-  [<span data-ttu-id="47e6d-108">Расширение разметки RelativeSource</span><span class="sxs-lookup"><span data-stu-id="47e6d-108">RelativeSource MarkupExtension</span></span>](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)  
-  [<span data-ttu-id="47e6d-109">Расширение разметки StaticResource</span><span class="sxs-lookup"><span data-stu-id="47e6d-109">StaticResource Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
-  [<span data-ttu-id="47e6d-110">Расширение разметки TemplateBinding</span><span class="sxs-lookup"><span data-stu-id="47e6d-110">TemplateBinding Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)  
-  [<span data-ttu-id="47e6d-111">Расширение разметки ThemeDictionary</span><span class="sxs-lookup"><span data-stu-id="47e6d-111">ThemeDictionary Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/themedictionary-markup-extension.md)  
-  [<span data-ttu-id="47e6d-112">Синтаксис PropertyPath в XAML</span><span class="sxs-lookup"><span data-stu-id="47e6d-112">PropertyPath XAML Syntax</span></span>](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)  
-  [<span data-ttu-id="47e6d-113">Атрибут PresentationOptions: Freeze</span><span class="sxs-lookup"><span data-stu-id="47e6d-113">PresentationOptions:Freeze Attribute</span></span>](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)
+# <a name="wpf-xaml-extensions"></a><span data-ttu-id="e5385-102">Расширения XAML WPF</span><span class="sxs-lookup"><span data-stu-id="e5385-102">WPF XAML Extensions</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="e5385-103">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="e5385-103">In This Section</span></span>  
+ [<span data-ttu-id="e5385-104">Привязка расширения разметки</span><span class="sxs-lookup"><span data-stu-id="e5385-104">Binding Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)  
+  [<span data-ttu-id="e5385-105">Расширение разметки ColorConvertedBitmap</span><span class="sxs-lookup"><span data-stu-id="e5385-105">ColorConvertedBitmap Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md)  
+  [<span data-ttu-id="e5385-106">Расширение разметки ComponentResourceKey</span><span class="sxs-lookup"><span data-stu-id="e5385-106">ComponentResourceKey Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md)  
+  [<span data-ttu-id="e5385-107">Расширение разметки DynamicResource</span><span class="sxs-lookup"><span data-stu-id="e5385-107">DynamicResource Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
+  [<span data-ttu-id="e5385-108">Расширение разметки RelativeSource</span><span class="sxs-lookup"><span data-stu-id="e5385-108">RelativeSource MarkupExtension</span></span>](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)  
+  [<span data-ttu-id="e5385-109">Расширение разметки StaticResource</span><span class="sxs-lookup"><span data-stu-id="e5385-109">StaticResource Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
+  [<span data-ttu-id="e5385-110">Расширение разметки TemplateBinding</span><span class="sxs-lookup"><span data-stu-id="e5385-110">TemplateBinding Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)  
+  [<span data-ttu-id="e5385-111">Расширение разметки ThemeDictionary</span><span class="sxs-lookup"><span data-stu-id="e5385-111">ThemeDictionary Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/themedictionary-markup-extension.md)  
+  [<span data-ttu-id="e5385-112">Синтаксис PropertyPath в XAML</span><span class="sxs-lookup"><span data-stu-id="e5385-112">PropertyPath XAML Syntax</span></span>](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)  
+  [<span data-ttu-id="e5385-113">Атрибут PresentationOptions: Freeze</span><span class="sxs-lookup"><span data-stu-id="e5385-113">PresentationOptions:Freeze Attribute</span></span>](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)

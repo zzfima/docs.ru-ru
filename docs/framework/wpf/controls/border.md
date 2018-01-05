@@ -18,24 +18,25 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9ca2931b8eff6404ab79aa525eabcb46baa7cc8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d061bd77c2edc00a912f4d64bc7ef38b608f9066
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="border"></a><span data-ttu-id="cf202-102">Border</span><span class="sxs-lookup"><span data-stu-id="cf202-102">Border</span></span>
-<span data-ttu-id="cf202-103">В следующем образце показано, как динамически изменять свойства <xref:System.Windows.Controls.Border> элемента.</span><span class="sxs-lookup"><span data-stu-id="cf202-103">The following sample demonstrates how to dynamically change properties of the <xref:System.Windows.Controls.Border> element.</span></span>  
+# <a name="border"></a><span data-ttu-id="a84de-102">Border</span><span class="sxs-lookup"><span data-stu-id="a84de-102">Border</span></span>
+<span data-ttu-id="a84de-103">В следующем образце показано, как динамически изменять свойства <xref:System.Windows.Controls.Border> элемента.</span><span class="sxs-lookup"><span data-stu-id="a84de-103">The following sample demonstrates how to dynamically change properties of the <xref:System.Windows.Controls.Border> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="cf202-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="cf202-104">In This Section</span></span>  
- [<span data-ttu-id="cf202-105">Анимирование значения BorderThickness</span><span class="sxs-lookup"><span data-stu-id="cf202-105">Animate a BorderThickness Value</span></span>](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a84de-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="a84de-104">In This Section</span></span>  
+ [<span data-ttu-id="a84de-105">Анимирование значения BorderThickness</span><span class="sxs-lookup"><span data-stu-id="a84de-105">Animate a BorderThickness Value</span></span>](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)  
   
-## <a name="reference"></a><span data-ttu-id="cf202-106">Ссылка</span><span class="sxs-lookup"><span data-stu-id="cf202-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a84de-106">Ссылка</span><span class="sxs-lookup"><span data-stu-id="a84de-106">Reference</span></span>  
  <xref:System.Windows.Controls.Decorator>  
   
  <xref:System.Windows.Controls.Border>  
   
-## <a name="related-sections"></a><span data-ttu-id="cf202-107">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="cf202-107">Related Sections</span></span>  
- [<span data-ttu-id="cf202-108">Общие сведения о панелях</span><span class="sxs-lookup"><span data-stu-id="cf202-108">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="a84de-107">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="a84de-107">Related Sections</span></span>  
+ [<span data-ttu-id="a84de-108">Общие сведения о панелях</span><span class="sxs-lookup"><span data-stu-id="a84de-108">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
   
- [<span data-ttu-id="cf202-109">Общие сведения о свойствах Alignment, Margin, Padding</span><span class="sxs-lookup"><span data-stu-id="cf202-109">Alignment, Margins, and Padding Overview</span></span>](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+ [<span data-ttu-id="a84de-109">Общие сведения о свойствах Alignment, Margin, Padding</span><span class="sxs-lookup"><span data-stu-id="a84de-109">Alignment, Margins, and Padding Overview</span></span>](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)

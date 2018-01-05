@@ -19,23 +19,24 @@ caps.latest.revision: "71"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d226040e531b8e14ff3dae9df2d6353acbbead3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c7fb96bd78f2462ece3e1a7cb9f0dc8c5c0988f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="shapes-how-to-topics"></a><span data-ttu-id="3b588-102">Разделы практического руководства, посвященные объектам класса Shape</span><span class="sxs-lookup"><span data-stu-id="3b588-102">Shapes How-to Topics</span></span>
-<span data-ttu-id="3b588-103">В этом разделе демонстрируется использование <xref:System.Windows.Shapes.Shape> объектов для рисования основных фигур на экране.</span><span class="sxs-lookup"><span data-stu-id="3b588-103">The topics in this section demonstrate how to use <xref:System.Windows.Shapes.Shape> objects to draw basic shapes to the screen.</span></span>  
+# <a name="shapes-how-to-topics"></a><span data-ttu-id="c5fa4-102">Разделы практического руководства, посвященные объектам класса Shape</span><span class="sxs-lookup"><span data-stu-id="c5fa4-102">Shapes How-to Topics</span></span>
+<span data-ttu-id="c5fa4-103">В этом разделе демонстрируется использование <xref:System.Windows.Shapes.Shape> объектов для рисования основных фигур на экране.</span><span class="sxs-lookup"><span data-stu-id="c5fa4-103">The topics in this section demonstrate how to use <xref:System.Windows.Shapes.Shape> objects to draw basic shapes to the screen.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3b588-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="3b588-104">In This Section</span></span>  
- [<span data-ttu-id="3b588-105">Рисование замкнутой фигуры с помощью элемента Polygon</span><span class="sxs-lookup"><span data-stu-id="3b588-105">Draw a Closed Shape by Using the Polygon Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
- [<span data-ttu-id="3b588-106">Рисование эллипса или круга</span><span class="sxs-lookup"><span data-stu-id="3b588-106">Draw an Ellipse or a Circle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-ellipse-or-a-circle.md)  
- [<span data-ttu-id="3b588-107">Рисование линии</span><span class="sxs-lookup"><span data-stu-id="3b588-107">Draw a Line</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-line.md)  
- [<span data-ttu-id="3b588-108">Рисование ломаной с помощью элемента Polyline</span><span class="sxs-lookup"><span data-stu-id="3b588-108">Draw a Polyline by Using the Polyline Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-polyline-by-using-the-polyline-element.md)  
- [<span data-ttu-id="3b588-109">Рисование прямоугольника</span><span class="sxs-lookup"><span data-stu-id="3b588-109">Draw a Rectangle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
- [<span data-ttu-id="3b588-110">Изменение завершения отрезка в конце линии или сегмента</span><span class="sxs-lookup"><span data-stu-id="3b588-110">Modify the Cap at the End of a Line or Segment</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c5fa4-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="c5fa4-104">In This Section</span></span>  
+ [<span data-ttu-id="c5fa4-105">Рисование замкнутой фигуры с помощью элемента Polygon</span><span class="sxs-lookup"><span data-stu-id="c5fa4-105">Draw a Closed Shape by Using the Polygon Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
+ [<span data-ttu-id="c5fa4-106">Рисование эллипса или круга</span><span class="sxs-lookup"><span data-stu-id="c5fa4-106">Draw an Ellipse or a Circle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-ellipse-or-a-circle.md)  
+ [<span data-ttu-id="c5fa4-107">Рисование линии</span><span class="sxs-lookup"><span data-stu-id="c5fa4-107">Draw a Line</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-line.md)  
+ [<span data-ttu-id="c5fa4-108">Рисование ломаной с помощью элемента Polyline</span><span class="sxs-lookup"><span data-stu-id="c5fa4-108">Draw a Polyline by Using the Polyline Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-polyline-by-using-the-polyline-element.md)  
+ [<span data-ttu-id="c5fa4-109">Рисование прямоугольника</span><span class="sxs-lookup"><span data-stu-id="c5fa4-109">Draw a Rectangle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
+ [<span data-ttu-id="c5fa4-110">Изменение завершения отрезка в конце линии или сегмента</span><span class="sxs-lookup"><span data-stu-id="c5fa4-110">Modify the Cap at the End of a Line or Segment</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
-## <a name="see-also"></a><span data-ttu-id="3b588-111">См. также</span><span class="sxs-lookup"><span data-stu-id="3b588-111">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c5fa4-111">См. также</span><span class="sxs-lookup"><span data-stu-id="c5fa4-111">See Also</span></span>  
  <xref:System.Windows.Shapes.Shape>  
- [<span data-ttu-id="3b588-112">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="3b588-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [<span data-ttu-id="c5fa4-112">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="c5fa4-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

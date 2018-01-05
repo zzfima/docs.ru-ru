@@ -17,23 +17,24 @@ caps.latest.revision: "79"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 809f63d0057dd55d092343578d2952b2abdc0812
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 23fba12742943720f5b73db708015e798f0ac886
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="data-binding-wpf"></a><span data-ttu-id="2ce69-102">Привязка данных (WPF)</span><span class="sxs-lookup"><span data-stu-id="2ce69-102">Data Binding (WPF)</span></span>
-<span data-ttu-id="2ce69-103">Привязка данных Windows Presentation Foundation (WPF) обеспечивает простой и надежный способ представления и работать с данными о приложениях.</span><span class="sxs-lookup"><span data-stu-id="2ce69-103">Windows Presentation Foundation (WPF) data binding provides a simple and consistent way for applications to present and interact with data.</span></span> <span data-ttu-id="2ce69-104">Элементы можно привязать к данным из различных источников данных в виде объекта (CLR) среды CLR и XML.</span><span class="sxs-lookup"><span data-stu-id="2ce69-104">Elements can be bound to data from a variety of data sources in the form of common language runtime (CLR) objects and XML.</span></span>  
+# <a name="data-binding-wpf"></a><span data-ttu-id="916d7-102">Привязка данных (WPF)</span><span class="sxs-lookup"><span data-stu-id="916d7-102">Data Binding (WPF)</span></span>
+<span data-ttu-id="916d7-103">Привязка данных Windows Presentation Foundation (WPF) обеспечивает простой и надежный способ представления и работать с данными о приложениях.</span><span class="sxs-lookup"><span data-stu-id="916d7-103">Windows Presentation Foundation (WPF) data binding provides a simple and consistent way for applications to present and interact with data.</span></span> <span data-ttu-id="916d7-104">Элементы можно привязать к данным из различных источников данных в виде объекта (CLR) среды CLR и XML.</span><span class="sxs-lookup"><span data-stu-id="916d7-104">Elements can be bound to data from a variety of data sources in the form of common language runtime (CLR) objects and XML.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2ce69-105">Содержание</span><span class="sxs-lookup"><span data-stu-id="2ce69-105">In This Section</span></span>  
- [<span data-ttu-id="2ce69-106">Общие сведения о привязке данных</span><span class="sxs-lookup"><span data-stu-id="2ce69-106">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [<span data-ttu-id="2ce69-107">Общие сведения об источниках привязки</span><span class="sxs-lookup"><span data-stu-id="2ce69-107">Binding Sources Overview</span></span>](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
- [<span data-ttu-id="2ce69-108">Общие сведения о шаблонах данных</span><span class="sxs-lookup"><span data-stu-id="2ce69-108">Data Templating Overview</span></span>](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [<span data-ttu-id="2ce69-109">Общие сведения об объявлении привязок</span><span class="sxs-lookup"><span data-stu-id="2ce69-109">Binding Declarations Overview</span></span>](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [<span data-ttu-id="2ce69-110">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="2ce69-110">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="916d7-105">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="916d7-105">In This Section</span></span>  
+ [<span data-ttu-id="916d7-106">Общие сведения о привязке данных</span><span class="sxs-lookup"><span data-stu-id="916d7-106">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="916d7-107">Общие сведения об источниках привязки</span><span class="sxs-lookup"><span data-stu-id="916d7-107">Binding Sources Overview</span></span>](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
+ [<span data-ttu-id="916d7-108">Общие сведения о шаблонах данных</span><span class="sxs-lookup"><span data-stu-id="916d7-108">Data Templating Overview</span></span>](../../../../docs/framework/wpf/data/data-templating-overview.md)  
+ [<span data-ttu-id="916d7-109">Общие сведения об объявлении привязок</span><span class="sxs-lookup"><span data-stu-id="916d7-109">Binding Declarations Overview</span></span>](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
+ [<span data-ttu-id="916d7-110">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="916d7-110">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="2ce69-111">Ссылка</span><span class="sxs-lookup"><span data-stu-id="2ce69-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="916d7-111">Ссылка</span><span class="sxs-lookup"><span data-stu-id="916d7-111">Reference</span></span>  
  <xref:System.Windows.Data>  
   
  <xref:System.Windows.Data.Binding>  
@@ -42,9 +43,9 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
-## <a name="related-sections"></a><span data-ttu-id="2ce69-112">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="2ce69-112">Related Sections</span></span>  
- [<span data-ttu-id="2ce69-113">Перетаскивание</span><span class="sxs-lookup"><span data-stu-id="2ce69-113">Drag and Drop</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+## <a name="related-sections"></a><span data-ttu-id="916d7-112">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="916d7-112">Related Sections</span></span>  
+ [<span data-ttu-id="916d7-113">Перетаскивание</span><span class="sxs-lookup"><span data-stu-id="916d7-113">Drag and Drop</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
   
- [<span data-ttu-id="2ce69-114">Привязка данных</span><span class="sxs-lookup"><span data-stu-id="2ce69-114">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="916d7-114">Привязка данных</span><span class="sxs-lookup"><span data-stu-id="916d7-114">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
   
- [<span data-ttu-id="2ce69-115">Пошаговое руководство. Кэширование данных приложения WPF</span><span class="sxs-lookup"><span data-stu-id="2ce69-115">Walkthrough: Caching Application Data in a WPF Application</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+ [<span data-ttu-id="916d7-115">Пошаговое руководство. Кэширование данных приложения WPF</span><span class="sxs-lookup"><span data-stu-id="916d7-115">Walkthrough: Caching Application Data in a WPF Application</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

@@ -17,36 +17,37 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7da9803b6182ed21c25b0bb3a54cecd246587da7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5d42c65207cd6bec7f6af6936589cb86745028e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="3a6cf-102">Практические руководства, посвященные анимации по полным кадрам</span><span class="sxs-lookup"><span data-stu-id="3a6cf-102">Key-Frame Animation How-to Topics</span></span>
-<span data-ttu-id="3a6cf-103">В подразделах этого раздела демонстрируется использование анимации ключевого кадра для анимации более чем двух значений свойств и интерполяции элемента управления.</span><span class="sxs-lookup"><span data-stu-id="3a6cf-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
+# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="4a6d6-102">Практические руководства, посвященные анимации по полным кадрам</span><span class="sxs-lookup"><span data-stu-id="4a6d6-102">Key-Frame Animation How-to Topics</span></span>
+<span data-ttu-id="4a6d6-103">В подразделах этого раздела демонстрируется использование анимации ключевого кадра для анимации более чем двух значений свойств и интерполяции элемента управления.</span><span class="sxs-lookup"><span data-stu-id="4a6d6-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3a6cf-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="3a6cf-104">In This Section</span></span>  
- [<span data-ttu-id="3a6cf-105">Анимация объекта с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="3a6cf-105">Animate an Object by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
- [<span data-ttu-id="3a6cf-106">Анимация логического значения с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="3a6cf-106">Animate a Boolean by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-boolean-by-using-key-frames.md)  
- [<span data-ttu-id="3a6cf-107">Анимация типа Double с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="3a6cf-107">Animate a Double by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-double-by-using-key-frames.md)  
- [<span data-ttu-id="3a6cf-108">Анимация матрицы с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="3a6cf-108">Animate a Matrix by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-matrix-by-using-key-frames.md)  
- [<span data-ttu-id="3a6cf-109">Анимация точки с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="3a6cf-109">Animate a Point by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-point-by-using-key-frames.md)  
- [<span data-ttu-id="3a6cf-110">Анимация прямоугольника с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="3a6cf-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
- [<span data-ttu-id="3a6cf-111">Анимация строки с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="3a6cf-111">Animate a String by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-string-by-using-key-frames.md)  
- [<span data-ttu-id="3a6cf-112">Анимация цвета с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="3a6cf-112">Animate Color by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-color-by-using-key-frames.md)  
- [<span data-ttu-id="3a6cf-113">Анимация изменений размера с использованием ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="3a6cf-113">Animate Size Changes by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-size-changes-by-using-key-frames.md)  
- [<span data-ttu-id="3a6cf-114">Анимация толщины границы с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="3a6cf-114">Animate the Thickness of a Border by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
- [<span data-ttu-id="3a6cf-115">Распределение времени для анимации с полными кадрами</span><span class="sxs-lookup"><span data-stu-id="3a6cf-115">Control Key-Frame Animation Timing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-key-frame-animation-timing.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4a6d6-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="4a6d6-104">In This Section</span></span>  
+ [<span data-ttu-id="4a6d6-105">Анимация объекта с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="4a6d6-105">Animate an Object by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
+ [<span data-ttu-id="4a6d6-106">Анимация логического значения с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="4a6d6-106">Animate a Boolean by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-boolean-by-using-key-frames.md)  
+ [<span data-ttu-id="4a6d6-107">Анимация типа Double с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="4a6d6-107">Animate a Double by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-double-by-using-key-frames.md)  
+ [<span data-ttu-id="4a6d6-108">Анимация матрицы с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="4a6d6-108">Animate a Matrix by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-matrix-by-using-key-frames.md)  
+ [<span data-ttu-id="4a6d6-109">Анимация точки с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="4a6d6-109">Animate a Point by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-point-by-using-key-frames.md)  
+ [<span data-ttu-id="4a6d6-110">Анимация прямоугольника с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="4a6d6-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
+ [<span data-ttu-id="4a6d6-111">Анимация строки с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="4a6d6-111">Animate a String by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-string-by-using-key-frames.md)  
+ [<span data-ttu-id="4a6d6-112">Анимация цвета с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="4a6d6-112">Animate Color by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-color-by-using-key-frames.md)  
+ [<span data-ttu-id="4a6d6-113">Анимация изменений размера с использованием ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="4a6d6-113">Animate Size Changes by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-size-changes-by-using-key-frames.md)  
+ [<span data-ttu-id="4a6d6-114">Анимация толщины границы с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="4a6d6-114">Animate the Thickness of a Border by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
+ [<span data-ttu-id="4a6d6-115">Распределение времени для анимации с полными кадрами</span><span class="sxs-lookup"><span data-stu-id="4a6d6-115">Control Key-Frame Animation Timing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-key-frame-animation-timing.md)  
   
-## <a name="reference"></a><span data-ttu-id="3a6cf-116">Ссылка</span><span class="sxs-lookup"><span data-stu-id="3a6cf-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="4a6d6-116">Ссылка</span><span class="sxs-lookup"><span data-stu-id="4a6d6-116">Reference</span></span>  
  <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
  <xref:System.Windows.Media.Animation.KeyTime>  
   
-## <a name="see-also"></a><span data-ttu-id="3a6cf-117">См. также</span><span class="sxs-lookup"><span data-stu-id="3a6cf-117">See Also</span></span>  
- [<span data-ttu-id="3a6cf-118">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="3a6cf-118">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="3a6cf-119">Общие сведения об эффектах анимации</span><span class="sxs-lookup"><span data-stu-id="3a6cf-119">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [<span data-ttu-id="3a6cf-120">Общие сведения об анимации по ключевым кадрам</span><span class="sxs-lookup"><span data-stu-id="3a6cf-120">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a><span data-ttu-id="4a6d6-117">См. также</span><span class="sxs-lookup"><span data-stu-id="4a6d6-117">See Also</span></span>  
+ [<span data-ttu-id="4a6d6-118">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="4a6d6-118">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [<span data-ttu-id="4a6d6-119">Общие сведения об эффектах анимации</span><span class="sxs-lookup"><span data-stu-id="4a6d6-119">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="4a6d6-120">Общие сведения об анимации по ключевым кадрам</span><span class="sxs-lookup"><span data-stu-id="4a6d6-120">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

@@ -17,33 +17,34 @@ caps.latest.revision: "61"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 405c9485e61692df83337740c2ccdae0408c1c0b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cdf54273ba040b82a3e292f82680a480b8a807a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="xaml-namespace-x-language-features"></a><span data-ttu-id="6e18f-102">Возможности пространства имен языка XAML (x:)</span><span class="sxs-lookup"><span data-stu-id="6e18f-102">XAML Namespace (x:) Language Features</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="6e18f-103">Содержание</span><span class="sxs-lookup"><span data-stu-id="6e18f-103">In This Section</span></span>  
- [<span data-ttu-id="6e18f-104">x:Array - расширение разметки</span><span class="sxs-lookup"><span data-stu-id="6e18f-104">x:Array Markup Extension</span></span>](x-array-markup-extension.md)  
- [<span data-ttu-id="6e18f-105">Директива x:Class</span><span class="sxs-lookup"><span data-stu-id="6e18f-105">x:Class Directive</span></span>](x-class-directive.md)  
- [<span data-ttu-id="6e18f-106">Директива x:ClassModifier</span><span class="sxs-lookup"><span data-stu-id="6e18f-106">x:ClassModifier Directive</span></span>](x-classmodifier-directive.md)  
- [<span data-ttu-id="6e18f-107">Встроенный тип XAML x:Code</span><span class="sxs-lookup"><span data-stu-id="6e18f-107">x:Code Intrinsic XAML Type</span></span>](x-code-intrinsic-xaml-type.md)  
- [<span data-ttu-id="6e18f-108">Директива x:FieldModifier</span><span class="sxs-lookup"><span data-stu-id="6e18f-108">x:FieldModifier Directive</span></span>](x-fieldmodifier-directive.md)  
- [<span data-ttu-id="6e18f-109">Директива x:Key</span><span class="sxs-lookup"><span data-stu-id="6e18f-109">x:Key Directive</span></span>](x-key-directive.md)  
- [<span data-ttu-id="6e18f-110">Директива x:Member</span><span class="sxs-lookup"><span data-stu-id="6e18f-110">x:Member Directive</span></span>](x-member-directive.md)  
- [<span data-ttu-id="6e18f-111">Директива x:Members</span><span class="sxs-lookup"><span data-stu-id="6e18f-111">x:Members Directive</span></span>](x-members-directive.md)  
- [<span data-ttu-id="6e18f-112">Директива x:Name</span><span class="sxs-lookup"><span data-stu-id="6e18f-112">x:Name Directive</span></span>](x-name-directive.md)  
- [<span data-ttu-id="6e18f-113">Расширение разметки x:NULL</span><span class="sxs-lookup"><span data-stu-id="6e18f-113">x:Null Markup Extension</span></span>](x-null-markup-extension.md)  
- [<span data-ttu-id="6e18f-114">Атрибут x:Shared</span><span class="sxs-lookup"><span data-stu-id="6e18f-114">x:Shared Attribute</span></span>](x-shared-attribute.md)  
- [<span data-ttu-id="6e18f-115">Директива x:Property</span><span class="sxs-lookup"><span data-stu-id="6e18f-115">x:Property Directive</span></span>](x-property-directive.md)  
- [<span data-ttu-id="6e18f-116">Расширение разметки x:Static</span><span class="sxs-lookup"><span data-stu-id="6e18f-116">x:Static Markup Extension</span></span>](x-static-markup-extension.md)  
- [<span data-ttu-id="6e18f-117">Директива x:Subclass</span><span class="sxs-lookup"><span data-stu-id="6e18f-117">x:Subclass Directive</span></span>](x-subclass-directive.md)  
- [<span data-ttu-id="6e18f-118">Расширение разметки x:Type</span><span class="sxs-lookup"><span data-stu-id="6e18f-118">x:Type Markup Extension</span></span>](x-type-markup-extension.md)  
- [<span data-ttu-id="6e18f-119">Директива x:TypeArguments</span><span class="sxs-lookup"><span data-stu-id="6e18f-119">x:TypeArguments Directive</span></span>](x-typearguments-directive.md)  
- [<span data-ttu-id="6e18f-120">Директива x:Uid</span><span class="sxs-lookup"><span data-stu-id="6e18f-120">x:Uid Directive</span></span>](x-uid-directive.md)  
- [<span data-ttu-id="6e18f-121">Встроенный тип XAML x:XData</span><span class="sxs-lookup"><span data-stu-id="6e18f-121">x:XData Intrinsic XAML Type</span></span>](x-xdata-intrinsic-xaml-type.md)  
- [<span data-ttu-id="6e18f-122">Грамматика XamlName</span><span class="sxs-lookup"><span data-stu-id="6e18f-122">XamlName Grammar</span></span>](xamlname-grammar.md)  
- [<span data-ttu-id="6e18f-123">Escape-последовательности {} - расширение разметки</span><span class="sxs-lookup"><span data-stu-id="6e18f-123">{} Escape Sequence - Markup Extension</span></span>](escape-sequence-markup-extension.md)  
- [<span data-ttu-id="6e18f-124">Обработка xml:lang в XAML</span><span class="sxs-lookup"><span data-stu-id="6e18f-124">xml:lang Handling in XAML</span></span>](xml-lang-handling-in-xaml.md)  
- [<span data-ttu-id="6e18f-125">Обработка xml:space в языке XAML</span><span class="sxs-lookup"><span data-stu-id="6e18f-125">xml:space Handling in XAML</span></span>](xml-space-handling-in-xaml.md)
+# <a name="xaml-namespace-x-language-features"></a><span data-ttu-id="a5d29-102">Возможности пространства имен языка XAML (x:)</span><span class="sxs-lookup"><span data-stu-id="a5d29-102">XAML Namespace (x:) Language Features</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="a5d29-103">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="a5d29-103">In This Section</span></span>  
+ [<span data-ttu-id="a5d29-104">x:Array - расширение разметки</span><span class="sxs-lookup"><span data-stu-id="a5d29-104">x:Array Markup Extension</span></span>](x-array-markup-extension.md)  
+ [<span data-ttu-id="a5d29-105">Директива x:Class</span><span class="sxs-lookup"><span data-stu-id="a5d29-105">x:Class Directive</span></span>](x-class-directive.md)  
+ [<span data-ttu-id="a5d29-106">Директива x:ClassModifier</span><span class="sxs-lookup"><span data-stu-id="a5d29-106">x:ClassModifier Directive</span></span>](x-classmodifier-directive.md)  
+ [<span data-ttu-id="a5d29-107">Встроенный тип XAML x:Code</span><span class="sxs-lookup"><span data-stu-id="a5d29-107">x:Code Intrinsic XAML Type</span></span>](x-code-intrinsic-xaml-type.md)  
+ [<span data-ttu-id="a5d29-108">Директива x:FieldModifier</span><span class="sxs-lookup"><span data-stu-id="a5d29-108">x:FieldModifier Directive</span></span>](x-fieldmodifier-directive.md)  
+ [<span data-ttu-id="a5d29-109">Директива x:Key</span><span class="sxs-lookup"><span data-stu-id="a5d29-109">x:Key Directive</span></span>](x-key-directive.md)  
+ [<span data-ttu-id="a5d29-110">Директива x:Member</span><span class="sxs-lookup"><span data-stu-id="a5d29-110">x:Member Directive</span></span>](x-member-directive.md)  
+ [<span data-ttu-id="a5d29-111">Директива x:Members</span><span class="sxs-lookup"><span data-stu-id="a5d29-111">x:Members Directive</span></span>](x-members-directive.md)  
+ [<span data-ttu-id="a5d29-112">Директива x:Name</span><span class="sxs-lookup"><span data-stu-id="a5d29-112">x:Name Directive</span></span>](x-name-directive.md)  
+ [<span data-ttu-id="a5d29-113">Расширение разметки x:NULL</span><span class="sxs-lookup"><span data-stu-id="a5d29-113">x:Null Markup Extension</span></span>](x-null-markup-extension.md)  
+ [<span data-ttu-id="a5d29-114">Атрибут x:Shared</span><span class="sxs-lookup"><span data-stu-id="a5d29-114">x:Shared Attribute</span></span>](x-shared-attribute.md)  
+ [<span data-ttu-id="a5d29-115">Директива x:Property</span><span class="sxs-lookup"><span data-stu-id="a5d29-115">x:Property Directive</span></span>](x-property-directive.md)  
+ [<span data-ttu-id="a5d29-116">Расширение разметки x:Static</span><span class="sxs-lookup"><span data-stu-id="a5d29-116">x:Static Markup Extension</span></span>](x-static-markup-extension.md)  
+ [<span data-ttu-id="a5d29-117">Директива x:Subclass</span><span class="sxs-lookup"><span data-stu-id="a5d29-117">x:Subclass Directive</span></span>](x-subclass-directive.md)  
+ [<span data-ttu-id="a5d29-118">Расширение разметки x:Type</span><span class="sxs-lookup"><span data-stu-id="a5d29-118">x:Type Markup Extension</span></span>](x-type-markup-extension.md)  
+ [<span data-ttu-id="a5d29-119">Директива x:TypeArguments</span><span class="sxs-lookup"><span data-stu-id="a5d29-119">x:TypeArguments Directive</span></span>](x-typearguments-directive.md)  
+ [<span data-ttu-id="a5d29-120">Директива x:Uid</span><span class="sxs-lookup"><span data-stu-id="a5d29-120">x:Uid Directive</span></span>](x-uid-directive.md)  
+ [<span data-ttu-id="a5d29-121">Встроенный тип XAML x:XData</span><span class="sxs-lookup"><span data-stu-id="a5d29-121">x:XData Intrinsic XAML Type</span></span>](x-xdata-intrinsic-xaml-type.md)  
+ [<span data-ttu-id="a5d29-122">Грамматика XamlName</span><span class="sxs-lookup"><span data-stu-id="a5d29-122">XamlName Grammar</span></span>](xamlname-grammar.md)  
+ [<span data-ttu-id="a5d29-123">Escape-последовательности {} - расширение разметки</span><span class="sxs-lookup"><span data-stu-id="a5d29-123">{} Escape Sequence - Markup Extension</span></span>](escape-sequence-markup-extension.md)  
+ [<span data-ttu-id="a5d29-124">Обработка xml:lang в XAML</span><span class="sxs-lookup"><span data-stu-id="a5d29-124">xml:lang Handling in XAML</span></span>](xml-lang-handling-in-xaml.md)  
+ [<span data-ttu-id="a5d29-125">Обработка xml:space в языке XAML</span><span class="sxs-lookup"><span data-stu-id="a5d29-125">xml:space Handling in XAML</span></span>](xml-space-handling-in-xaml.md)

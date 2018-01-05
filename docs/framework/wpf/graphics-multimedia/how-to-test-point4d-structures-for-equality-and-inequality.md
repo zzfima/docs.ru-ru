@@ -20,21 +20,22 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 849082fc1b933c4172c0d22ec3c9c2a1644a32fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ac69ec232485ebd3097f2db3b31d3fd43d0ccc99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-test-point4d-structures-for-equality-and-inequality"></a><span data-ttu-id="d4819-102">Практическое руководство. Проверка структур Point4D на равенство и неравенство</span><span class="sxs-lookup"><span data-stu-id="d4819-102">How to: Test Point4D structures for equality and inequality</span></span>
-<span data-ttu-id="d4819-103">В этом примере показано, как проверить <xref:System.Windows.Media.Media3D.Point4D> структуры на равенство и неравенство.</span><span class="sxs-lookup"><span data-stu-id="d4819-103">This example shows how to test <xref:System.Windows.Media.Media3D.Point4D> structures for equality and inequality.</span></span>  
+# <a name="how-to-test-point4d-structures-for-equality-and-inequality"></a><span data-ttu-id="e8679-102">Практическое руководство. Проверка структур Point4D на равенство и неравенство</span><span class="sxs-lookup"><span data-stu-id="e8679-102">How to: Test Point4D structures for equality and inequality</span></span>
+<span data-ttu-id="e8679-103">В этом примере показано, как проверить <xref:System.Windows.Media.Media3D.Point4D> структуры на равенство и неравенство.</span><span class="sxs-lookup"><span data-stu-id="e8679-103">This example shows how to test <xref:System.Windows.Media.Media3D.Point4D> structures for equality and inequality.</span></span>  
   
- <span data-ttu-id="d4819-104">Следующий код иллюстрирует, как проверить <xref:System.Windows.Media.Media3D.Point4D> структуры на равенство и неравенство с помощью <xref:System.Windows.Media.Media3D.Point4D> методов проверки на равенство.</span><span class="sxs-lookup"><span data-stu-id="d4819-104">The following code illustrates how to test <xref:System.Windows.Media.Media3D.Point4D> structures for equality and inequality using the <xref:System.Windows.Media.Media3D.Point4D> equality methods.</span></span>  <span data-ttu-id="d4819-105"><xref:System.Windows.Media.Media3D.Point4D> Структуры проверяются на равенство с помощью перегруженного равенства (`==`) оператор, затем на неравенство с помощью перегруженного оператора неравенства (`!=`) оператор и, наконец, <xref:System.Windows.Media.Media3D.Point3D> структуры и <xref:System.Windows.Media.Media3D.Point4D> Структура проверяются на равенство с помощью статического <xref:System.Windows.Media.Media3D.Point4D.Equals%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="d4819-105">The <xref:System.Windows.Media.Media3D.Point4D> structures are tested for equality using the overloaded equality (`==`) operator, then for inequality using the overloaded inequality (`!=`) operator, and finally a <xref:System.Windows.Media.Media3D.Point3D> structure and a <xref:System.Windows.Media.Media3D.Point4D> structure are checked for equality using the static <xref:System.Windows.Media.Media3D.Point4D.Equals%2A> method.</span></span>  
+ <span data-ttu-id="e8679-104">Следующий код иллюстрирует, как проверить <xref:System.Windows.Media.Media3D.Point4D> структуры на равенство и неравенство с помощью <xref:System.Windows.Media.Media3D.Point4D> методов проверки на равенство.</span><span class="sxs-lookup"><span data-stu-id="e8679-104">The following code illustrates how to test <xref:System.Windows.Media.Media3D.Point4D> structures for equality and inequality using the <xref:System.Windows.Media.Media3D.Point4D> equality methods.</span></span>  <span data-ttu-id="e8679-105"><xref:System.Windows.Media.Media3D.Point4D> Структуры проверяются на равенство с помощью перегруженного равенства (`==`) оператор, затем на неравенство с помощью перегруженного оператора неравенства (`!=`) оператор и, наконец, <xref:System.Windows.Media.Media3D.Point3D> структуры и <xref:System.Windows.Media.Media3D.Point4D> Структура проверяются на равенство с помощью статического <xref:System.Windows.Media.Media3D.Point4D.Equals%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="e8679-105">The <xref:System.Windows.Media.Media3D.Point4D> structures are tested for equality using the overloaded equality (`==`) operator, then for inequality using the overloaded inequality (`!=`) operator, and finally a <xref:System.Windows.Media.Media3D.Point3D> structure and a <xref:System.Windows.Media.Media3D.Point4D> structure are checked for equality using the static <xref:System.Windows.Media.Media3D.Point4D.Equals%2A> method.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d4819-106">Пример</span><span class="sxs-lookup"><span data-stu-id="d4819-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="e8679-106">Пример</span><span class="sxs-lookup"><span data-stu-id="e8679-106">Example</span></span>  
  [!code-csharp[3DGallery_procedural_snip#Point4DEqualityExample_csharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Misc3DOperationsExample.cs#point4dequalityexample_csharp)]  
   
-## <a name="see-also"></a><span data-ttu-id="d4819-107">См. также</span><span class="sxs-lookup"><span data-stu-id="d4819-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e8679-107">См. также</span><span class="sxs-lookup"><span data-stu-id="e8679-107">See Also</span></span>  
  <xref:System.Windows.Media.Media3D.Point4D.op_Equality%2A>  
  <xref:System.Windows.Media.Media3D.Point4D.op_Inequality%2A>  
  <xref:System.Windows.Media.Media3D.Point4D.Equals%2A>

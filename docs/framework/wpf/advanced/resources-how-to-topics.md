@@ -17,24 +17,25 @@ caps.latest.revision: "74"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4403d508f0a99b4cefd3ef59e6d1caf746f31fec
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 38da15eee931d2519efa0c502cfaa61ed0691a8f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="resources-how-to-topics"></a><span data-ttu-id="74977-102">Разделы руководства, посвященные ресурсам</span><span class="sxs-lookup"><span data-stu-id="74977-102">Resources How-to Topics</span></span>
-<span data-ttu-id="74977-103">В подразделах этого раздела описывается использование [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] ресурсов.</span><span class="sxs-lookup"><span data-stu-id="74977-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] resources.</span></span>  
+# <a name="resources-how-to-topics"></a><span data-ttu-id="5f72d-102">Разделы руководства, посвященные ресурсам</span><span class="sxs-lookup"><span data-stu-id="5f72d-102">Resources How-to Topics</span></span>
+<span data-ttu-id="5f72d-103">В подразделах этого раздела описывается использование [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] ресурсов.</span><span class="sxs-lookup"><span data-stu-id="5f72d-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] resources.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="74977-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="74977-104">In This Section</span></span>  
- [<span data-ttu-id="74977-105">Определение и создание ссылки на ресурс</span><span class="sxs-lookup"><span data-stu-id="74977-105">Define and Reference a Resource</span></span>](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [<span data-ttu-id="74977-106">Использование ресурсов приложения</span><span class="sxs-lookup"><span data-stu-id="74977-106">Use Application Resources</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)  
- [<span data-ttu-id="74977-107">Использование SystemFonts</span><span class="sxs-lookup"><span data-stu-id="74977-107">Use SystemFonts</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
- [<span data-ttu-id="74977-108">Использование разделов системных шрифтов</span><span class="sxs-lookup"><span data-stu-id="74977-108">Use System Fonts Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)  
- [<span data-ttu-id="74977-109">Использование SystemParameters</span><span class="sxs-lookup"><span data-stu-id="74977-109">Use SystemParameters</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)  
- [<span data-ttu-id="74977-110">Использование разделов системных параметров</span><span class="sxs-lookup"><span data-stu-id="74977-110">Use System Parameters Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5f72d-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="5f72d-104">In This Section</span></span>  
+ [<span data-ttu-id="5f72d-105">Определение и создание ссылки на ресурс</span><span class="sxs-lookup"><span data-stu-id="5f72d-105">Define and Reference a Resource</span></span>](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
+ [<span data-ttu-id="5f72d-106">Использование ресурсов приложения</span><span class="sxs-lookup"><span data-stu-id="5f72d-106">Use Application Resources</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)  
+ [<span data-ttu-id="5f72d-107">Использование SystemFonts</span><span class="sxs-lookup"><span data-stu-id="5f72d-107">Use SystemFonts</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
+ [<span data-ttu-id="5f72d-108">Использование разделов системных шрифтов</span><span class="sxs-lookup"><span data-stu-id="5f72d-108">Use System Fonts Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)  
+ [<span data-ttu-id="5f72d-109">Использование SystemParameters</span><span class="sxs-lookup"><span data-stu-id="5f72d-109">Use SystemParameters</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)  
+ [<span data-ttu-id="5f72d-110">Использование разделов системных параметров</span><span class="sxs-lookup"><span data-stu-id="5f72d-110">Use System Parameters Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
   
-## <a name="reference"></a><span data-ttu-id="74977-111">Ссылка</span><span class="sxs-lookup"><span data-stu-id="74977-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5f72d-111">Ссылка</span><span class="sxs-lookup"><span data-stu-id="5f72d-111">Reference</span></span>  
  <xref:System.Windows.FrameworkTemplate.Resources%2A>  
   
  <xref:System.Windows.SystemColors>  
@@ -43,5 +44,5 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.SystemFonts>  
   
-## <a name="related-sections"></a><span data-ttu-id="74977-112">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="74977-112">Related Sections</span></span>  
- [<span data-ttu-id="74977-113">Ресурсы XAML</span><span class="sxs-lookup"><span data-stu-id="74977-113">XAML Resources</span></span>](../../../../docs/framework/wpf/advanced/xaml-resources.md)
+## <a name="related-sections"></a><span data-ttu-id="5f72d-112">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="5f72d-112">Related Sections</span></span>  
+ [<span data-ttu-id="5f72d-113">Ресурсы XAML</span><span class="sxs-lookup"><span data-stu-id="5f72d-113">XAML Resources</span></span>](../../../../docs/framework/wpf/advanced/xaml-resources.md)

@@ -18,26 +18,27 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e4d52fab42dabeaa8ef51812308fe5807030184e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 63efdae02dd14e1a2692ebb6ee00c7d56c8b04c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="efaf6-102">Практические руководства, посвященные программированию уровня визуализации</span><span class="sxs-lookup"><span data-stu-id="efaf6-102">Visual Layer Programming How-to Topics</span></span>
-<span data-ttu-id="efaf6-103">В подразделах этого раздела демонстрируется использование слоя визуализации для проверки попадания и низкоуровневой композиции.</span><span class="sxs-lookup"><span data-stu-id="efaf6-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
+# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="ab220-102">Практические руководства, посвященные программированию уровня визуализации</span><span class="sxs-lookup"><span data-stu-id="ab220-102">Visual Layer Programming How-to Topics</span></span>
+<span data-ttu-id="ab220-103">В подразделах этого раздела демонстрируется использование слоя визуализации для проверки попадания и низкоуровневой композиции.</span><span class="sxs-lookup"><span data-stu-id="ab220-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="efaf6-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="efaf6-104">In This Section</span></span>  
- [<span data-ttu-id="efaf6-105">Получение смещения визуального объекта</span><span class="sxs-lookup"><span data-stu-id="efaf6-105">Get the Offset of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
- [<span data-ttu-id="efaf6-106">Перечисление содержимого изображения визуального элемента</span><span class="sxs-lookup"><span data-stu-id="efaf6-106">Enumerate Drawing Content of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-enumerate-drawing-content-of-a-visual.md)  
- [<span data-ttu-id="efaf6-107">Проверка попадания геометрического объекта в визуальный объект</span><span class="sxs-lookup"><span data-stu-id="efaf6-107">Hit Test Geometry in a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
- [<span data-ttu-id="efaf6-108">Проверка нажатия с использованием геометрии в качестве параметра</span><span class="sxs-lookup"><span data-stu-id="efaf6-108">Hit Test Using Geometry as a Parameter</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)  
- [<span data-ttu-id="efaf6-109">Проверка попадания с использованием контейнера узла Win32</span><span class="sxs-lookup"><span data-stu-id="efaf6-109">Hit Test Using a Win32 Host Container</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
- [<span data-ttu-id="efaf6-110">Визуализация каждого кадра с помощью CompositionTarget</span><span class="sxs-lookup"><span data-stu-id="efaf6-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
+## <a name="in-this-section"></a><span data-ttu-id="ab220-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="ab220-104">In This Section</span></span>  
+ [<span data-ttu-id="ab220-105">Получение смещения визуального объекта</span><span class="sxs-lookup"><span data-stu-id="ab220-105">Get the Offset of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
+ [<span data-ttu-id="ab220-106">Перечисление содержимого изображения визуального элемента</span><span class="sxs-lookup"><span data-stu-id="ab220-106">Enumerate Drawing Content of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-enumerate-drawing-content-of-a-visual.md)  
+ [<span data-ttu-id="ab220-107">Проверка попадания геометрического объекта в визуальный объект</span><span class="sxs-lookup"><span data-stu-id="ab220-107">Hit Test Geometry in a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
+ [<span data-ttu-id="ab220-108">Проверка нажатия с использованием геометрии в качестве параметра</span><span class="sxs-lookup"><span data-stu-id="ab220-108">Hit Test Using Geometry as a Parameter</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)  
+ [<span data-ttu-id="ab220-109">Проверка попадания с использованием контейнера узла Win32</span><span class="sxs-lookup"><span data-stu-id="ab220-109">Hit Test Using a Win32 Host Container</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
+ [<span data-ttu-id="ab220-110">Визуализация каждого кадра с помощью CompositionTarget</span><span class="sxs-lookup"><span data-stu-id="ab220-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
-## <a name="see-also"></a><span data-ttu-id="efaf6-111">См. также</span><span class="sxs-lookup"><span data-stu-id="efaf6-111">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="ab220-111">См. также</span><span class="sxs-lookup"><span data-stu-id="ab220-111">See Also</span></span>  
  <xref:System.Windows.Media.Visual>  
  <xref:System.Windows.Media.VisualTreeHelper>  
  <xref:System.Windows.Media.DrawingVisual>  
- [<span data-ttu-id="efaf6-112">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="efaf6-112">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [<span data-ttu-id="efaf6-113">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="efaf6-113">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [<span data-ttu-id="ab220-112">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="ab220-112">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [<span data-ttu-id="ab220-113">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="ab220-113">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
