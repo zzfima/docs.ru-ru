@@ -17,13 +17,13 @@
 ### [Микрослужбы .NET: архитектура контейнерных приложений .NET](standard/microservices-architecture/)
 ## [Выбор между .NET Core и .NET Framework для серверных приложений](standard/choosing-core-framework-server.md)
 ## [Что такое "управляемый код"?](standard/managed-code.md)
-### [Автоматическое управление памятью](standard/automatic-memory-management.md) 
+### [Автоматическое управление памятью](standard/automatic-memory-management.md)
 ## [Среда CLR](standard/clr.md)
 ## [Независимость от языка](standard/language-independence.md)
 ### [Независимость от языка и независимые от языка компоненты](standard/language-independence-and-language-independent-components.md)
 ## [Библиотеки платформы](standard/framework-libraries.md)
-### [Общие сведения о библиотеке классов](standard/class-library-overview.md)  
-### [Базовые типы](standard/base-types/)  
+### [Общие сведения о библиотеке классов](standard/class-library-overview.md)
+### [Базовые типы](standard/base-types/)
 ## [Библиотеки классов .NET](standard/class-libraries.md)
 ## [Анализатор переносимости](standard/portability-analyzer.md)
 ## [Обработка и создание исключений](standard/exceptions/)
@@ -101,10 +101,15 @@
 ### [Создание образов Docker для приложений .NET Core](core/docker/building-net-docker-images.md)
 ### [Инструменты Visual Studio для Docker](/aspnet/core/publishing/visual-studio-tools-for-docker)
 ## [Модульное тестирование](core/testing/index.md)
-### [Модульное тестирование с помощью команды dotnet test и xUnit](core/testing/unit-testing-with-dotnet-test.md)
-### [Модульное тестирование с помощью команды dotnet test и MSTest](core/testing/unit-testing-with-mstest.md)
-### [Модульное тестирование в F# с помощью команды dotnet test и xUnit](core/testing/unit-testing-fsharp-with-dotnet-test.md)
-### [Модульное тестирование в F# с помощью команды dotnet test и MSTest](core/testing/unit-testing-fsharp-with-mstest.md)
+### [Модульное тестирование в C# с использованием xUnit](core/testing/unit-testing-with-dotnet-test.md)
+### [Модульное тестирование в C# с использованием NUnit](core/testing/unit-testing-with-nunit.md)
+### [Модульное тестирование в C# с использованием MSTest](core/testing/unit-testing-with-mstest.md)
+### [Модульное тестирование в F# с использованием xUnit](core/testing/unit-testing-fsharp-with-dotnet-test.md)
+### [Модульное тестирование в F# с использованием NUnit](core/testing/unit-testing-fsharp-with-nunit.md)
+### [Модульное тестирование в F# с использованием MSTest](core/testing/unit-testing-fsharp-with-mstest.md)
+### [Модульное тестирование в Visual Basic с использованием xUnit](core/testing/unit-testing-visual-basic-with-dotnet-test.md)
+### [Модульное тестирование в Visual Basic с использованием NUnit](core/testing/unit-testing-visual-basic-with-nunit.md)
+### [Модульное тестирование в Visual Basic с использованием MSTest](core/testing/unit-testing-visual-basic-with-mstest.md)
 ### [Выполнение выборочных модульных тестов](core/testing/selective-unit-tests.md)
 ### [Модульное тестирование опубликованных выходных данных](core/testing/unit-testing-published-output.md)
 ### [Live Unit Testing в проектах .NET Core с использованием Visual Studio](/visualstudio/test/live-unit-testing-start)
@@ -204,7 +209,7 @@
 ## [Обзор языка C#](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
-## [Новые возможности C#](csharp/whats-new/index.md) 
+## [Новые возможности C#](csharp/whats-new/index.md)
 ### [Новые возможности C# 7.2](csharp/whats-new/csharp-7-2.md)
 ### [Новые возможности C# 7.1](csharp/whats-new/csharp-7-1.md)
 ### [Новые возможности C# 7](csharp/whats-new/csharp-7.md)
@@ -212,8 +217,6 @@
 ### [Журнал версий C#](csharp/whats-new/csharp-version-history.md)
 ### [Связи между языком и платформой](csharp/whats-new/relationships-between-language-and-library.md)
 <!-- End What's New -->
-<!--## [🔧 C# Interactive](csharp/interactive/)-->
-<!-- Do this section later, once master redirects are in place -->
 ## Основные понятия C#
 ### [ Система типов C#](csharp/programming-guide/types/index.md)
 ### [Пространства имен](csharp/programming-guide/namespaces/index.md)
@@ -223,8 +226,7 @@
 ### [Кортежи](csharp/tuples.md)
 ### [Деконструкция кортежей и других типов](csharp/deconstruct.md)
 ### [Интерфейсы](csharp/programming-guide/interfaces/index.md)
-<!--### [🔧 Methods and Lambda Expressions](csharp/methods-lambda-expressions.md)-->
-### [Методы](csharp/methods.md)
+#### [Методы](csharp/methods.md)
 #### [Лямбда-выражения](csharp/lambda-expressions.md)
 ### [Свойства](csharp/properties.md)
 ### [Индексаторы](csharp/indexers.md)
@@ -242,7 +244,6 @@
 #### [Различия между делегатами и событиями](csharp/distinguish-delegates-events.md)
 ### [LINQ](csharp/linq/)
 ### [Асинхронное программирование](csharp/async.md)
-<!--### [🔧 Parallel programming](csharp/parallel.md)-->
 ### [Соответствие шаблону](csharp/pattern-matching.md)
 ### [Семантика ссылок с типами значений](csharp/reference-semantics-with-value-types.md)
 ### [Деревья выражений](csharp/expression-trees.md)
@@ -254,11 +255,10 @@
 #### [Преобразование выражений](csharp/expression-trees-translating.md)
 #### [Сводка](csharp/expression-trees-summary.md)
 ### [Взаимодействие на уровне машинного кода](csharp/programming-guide/interop/index.md)
-<!--### [🔧 Reflection & code generation](csharp/reflection.md)-->
 ### [Документирование кода](csharp/codedoc.md)
 ### [Управление версиями](csharp/versioning.md)
 <!-- End of C# Concepts section -->
-<!--## [🔧 Using the .NET Compiler Platform](csharp/roslyn/index.md)-->
+## [Пакет SDK для платформы компилятора .NET (API-интерфейсы Roslyn)](csharp/roslyn-sdk/)
 ## [Руководство по программированию на C#](csharp/programming-guide/)
 ## [Справочник по языку](csharp/language-reference/)
 ## [Пошаговые руководства](csharp/walkthroughs.md)

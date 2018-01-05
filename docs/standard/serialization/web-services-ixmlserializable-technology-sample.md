@@ -12,46 +12,49 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 73ce34f101efc4f439b83e9a1ed69d286971486e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: be0c76371bda9e91e0becf8a9e09beb44e44dd3c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="web-services-ixmlserializable-technology-sample"></a><span data-ttu-id="8273c-102">Образец технологии веб-служб IXmlSerializable</span><span class="sxs-lookup"><span data-stu-id="8273c-102">Web Services IXmlSerializable Technology Sample</span></span>
-[<span data-ttu-id="8273c-103">Скачать образец</span><span class="sxs-lookup"><span data-stu-id="8273c-103">Download Sample</span></span>](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/IXmlSerializable.zip.exe)  
+# <a name="web-services-ixmlserializable-technology-sample"></a><span data-ttu-id="132d4-102">Образец технологии веб-служб IXmlSerializable</span><span class="sxs-lookup"><span data-stu-id="132d4-102">Web Services IXmlSerializable Technology Sample</span></span>
+[<span data-ttu-id="132d4-103">Скачать образец</span><span class="sxs-lookup"><span data-stu-id="132d4-103">Download Sample</span></span>](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/IXmlSerializable.zip.exe)  
   
- <span data-ttu-id="8273c-104">В этом образце показано, как использовать объект <xref:System.Xml.Serialization.IXmlSerializable> для управления сериализацией пользовательских типов в веб-службах ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="8273c-104">This sample shows how to use <xref:System.Xml.Serialization.IXmlSerializable> to control the serialization of custom types in ASP.NET Web Services.</span></span>  
+ <span data-ttu-id="132d4-104">В этом образце показано, как использовать объект <xref:System.Xml.Serialization.IXmlSerializable> для управления сериализацией пользовательских типов в веб-службах ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="132d4-104">This sample shows how to use <xref:System.Xml.Serialization.IXmlSerializable> to control the serialization of custom types in ASP.NET Web Services.</span></span>  
   
-### <a name="to-build-the-sample-using-visual-studio"></a><span data-ttu-id="8273c-105">Сборка образца с использованием Visual Studio</span><span class="sxs-lookup"><span data-stu-id="8273c-105">To build the sample using Visual Studio</span></span>  
+### <a name="to-build-the-sample-using-visual-studio"></a><span data-ttu-id="132d4-105">Сборка образца с использованием Visual Studio</span><span class="sxs-lookup"><span data-stu-id="132d4-105">To build the sample using Visual Studio</span></span>  
   
-1.  <span data-ttu-id="8273c-106">Откройте [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] и выберите в меню **Файл** пункт **Новый веб-сайт**.</span><span class="sxs-lookup"><span data-stu-id="8273c-106">Open [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] and select **New Web Site** from the **File** menu.</span></span>  
+1.  <span data-ttu-id="132d4-106">Откройте [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] и выберите в меню **Файл** пункт **Новый веб-сайт**.</span><span class="sxs-lookup"><span data-stu-id="132d4-106">Open [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] and select **New Web Site** from the **File** menu.</span></span>  
   
-2.  <span data-ttu-id="8273c-107">В левой области диалогового окна **Новый веб-сайт** выберите нужный язык программирования, а затем в правой области выберите **Веб-служба ASP.NET**.</span><span class="sxs-lookup"><span data-stu-id="8273c-107">In the left pane of the **New Web Site** dialog, select your desired programming language, then from the right pane, select **ASP.NET Web Service**.</span></span>  
+2.  <span data-ttu-id="132d4-107">В левой области диалогового окна **Новый веб-сайт** выберите нужный язык программирования, а затем в правой области выберите **Веб-служба ASP.NET**.</span><span class="sxs-lookup"><span data-stu-id="132d4-107">In the left pane of the **New Web Site** dialog, select your desired programming language, then from the right pane, select **ASP.NET Web Service**.</span></span>  
   
-3.  <span data-ttu-id="8273c-108">Введите **IXmlSerializable** в качестве имени новой веб-службы.</span><span class="sxs-lookup"><span data-stu-id="8273c-108">Type **IXmlSerializable** as the name of the new Web service.</span></span>  
+3.  <span data-ttu-id="132d4-108">Введите **IXmlSerializable** в качестве имени новой веб-службы.</span><span class="sxs-lookup"><span data-stu-id="132d4-108">Type **IXmlSerializable** as the name of the new Web service.</span></span>  
   
-4.  <span data-ttu-id="8273c-109">В окне обозревателя решений щелкните правой кнопкой мыши значок файла Service.asmx и выберите команду **Удалить**. Повторите это действие для файла с кодом программной части Service.asmx.</span><span class="sxs-lookup"><span data-stu-id="8273c-109">In the Solution Explorer window, right-click the icon for Service.asmx and select **Delete**; repeat this step for the Service.asmx codebehind file.</span></span>  
+4.  <span data-ttu-id="132d4-109">В окне обозревателя решений щелкните правой кнопкой мыши значок файла Service.asmx и выберите команду **Удалить**. Повторите это действие для файла с кодом программной части Service.asmx.</span><span class="sxs-lookup"><span data-stu-id="132d4-109">In the Solution Explorer window, right-click the icon for Service.asmx and select **Delete**; repeat this step for the Service.asmx codebehind file.</span></span>  
   
-5.  <span data-ttu-id="8273c-110">Щелкните правой кнопкой мыши каталог проекта и выберите пункт **Добавить существующий элемент**.</span><span class="sxs-lookup"><span data-stu-id="8273c-110">Right-click the project directory and select **Add Existing Item**.</span></span> <span data-ttu-id="8273c-111">В диалоговом окне перейдите во вложенную папку "Служба" языкового каталога.</span><span class="sxs-lookup"><span data-stu-id="8273c-111">In the dialog, navigate to the Service subdirectory of the language-specific directory.</span></span>  
+5.  <span data-ttu-id="132d4-110">Щелкните правой кнопкой мыши каталог проекта и выберите пункт **Добавить существующий элемент**.</span><span class="sxs-lookup"><span data-stu-id="132d4-110">Right-click the project directory and select **Add Existing Item**.</span></span> <span data-ttu-id="132d4-111">В диалоговом окне перейдите во вложенную папку "Служба" языкового каталога.</span><span class="sxs-lookup"><span data-stu-id="132d4-111">In the dialog, navigate to the Service subdirectory of the language-specific directory.</span></span>  
   
-6.  <span data-ttu-id="8273c-112">Выберите Service.asmx, затем повторите этот шаг для файла фонового кода Service.asmx.</span><span class="sxs-lookup"><span data-stu-id="8273c-112">Select Service.asmx, then repeat this step for the Service.asmx codebehind file.</span></span>  
+6.  <span data-ttu-id="132d4-112">Выберите Service.asmx, затем повторите этот шаг для файла фонового кода Service.asmx.</span><span class="sxs-lookup"><span data-stu-id="132d4-112">Select Service.asmx, then repeat this step for the Service.asmx codebehind file.</span></span>  
   
-7.  <span data-ttu-id="8273c-113">Откройте [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] и перейдите в каталог, который содержит каталог IXmlSerializable, созданный в шаге 3 выше.</span><span class="sxs-lookup"><span data-stu-id="8273c-113">Open [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to the directory that contains IXmlSerializable directory that you created in step 3 above.</span></span>  
+7.  <span data-ttu-id="132d4-113">Откройте [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] и перейдите в каталог, который содержит каталог IXmlSerializable, созданный в шаге 3 выше.</span><span class="sxs-lookup"><span data-stu-id="132d4-113">Open [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to the directory that contains IXmlSerializable directory that you created in step 3 above.</span></span>  
   
-8.  <span data-ttu-id="8273c-114">Щелкните правой кнопкой мыши значок каталога IXmlSerializable и выберите пункт **Общий доступ и безопасность**.</span><span class="sxs-lookup"><span data-stu-id="8273c-114">Right-click the icon for the IXmlSerializable directory and select **Sharing and Security**.</span></span>  
+8.  <span data-ttu-id="132d4-114">Щелкните правой кнопкой мыши значок каталога IXmlSerializable и выберите пункт **Общий доступ и безопасность**.</span><span class="sxs-lookup"><span data-stu-id="132d4-114">Right-click the icon for the IXmlSerializable directory and select **Sharing and Security**.</span></span>  
   
-9. <span data-ttu-id="8273c-115">На вкладке "Общий доступ в Интернете" выберите **Открыть общий доступ к этой папке** и подтвердите параметры по умолчанию, включая имя IXmlSerializable.</span><span class="sxs-lookup"><span data-stu-id="8273c-115">In the Web Sharing tab, select **Share this Folder**, and confirm the default settings, including the name IXmlSerializable.</span></span>  
+9. <span data-ttu-id="132d4-115">На вкладке "Общий доступ в Интернете" выберите **Открыть общий доступ к этой папке** и подтвердите параметры по умолчанию, включая имя IXmlSerializable.</span><span class="sxs-lookup"><span data-stu-id="132d4-115">In the Web Sharing tab, select **Share this Folder**, and confirm the default settings, including the name IXmlSerializable.</span></span>  
   
-10. <span data-ttu-id="8273c-116">Нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="8273c-116">Click **OK**.</span></span>  
+10. <span data-ttu-id="132d4-116">Нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="132d4-116">Click **OK**.</span></span>  
   
-### <a name="to-run-the-sample"></a><span data-ttu-id="8273c-117">Выполнение образца</span><span class="sxs-lookup"><span data-stu-id="8273c-117">To run the sample</span></span>  
+### <a name="to-run-the-sample"></a><span data-ttu-id="132d4-117">Выполнение образца</span><span class="sxs-lookup"><span data-stu-id="132d4-117">To run the sample</span></span>  
   
-1.  <span data-ttu-id="8273c-118">Откройте окно браузера и выделите адресную строку.</span><span class="sxs-lookup"><span data-stu-id="8273c-118">Open a browser window and select its address bar.</span></span>  
+1.  <span data-ttu-id="132d4-118">Откройте окно браузера и выделите адресную строку.</span><span class="sxs-lookup"><span data-stu-id="132d4-118">Open a browser window and select its address bar.</span></span>  
   
-2.  <span data-ttu-id="8273c-119">Введите адрес **http://localhost/IXmlSerializable/Service.asmx**.</span><span class="sxs-lookup"><span data-stu-id="8273c-119">Type **http://localhost/IXmlSerializable/Service.asmx**.</span></span>  
+2.  <span data-ttu-id="132d4-119">Введите адрес **http://localhost/IXmlSerializable/Service.asmx**.</span><span class="sxs-lookup"><span data-stu-id="132d4-119">Type **http://localhost/IXmlSerializable/Service.asmx**.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8273c-120">См. также</span><span class="sxs-lookup"><span data-stu-id="8273c-120">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="132d4-120">См. также</span><span class="sxs-lookup"><span data-stu-id="132d4-120">See Also</span></span>  
  <xref:System.Xml.Serialization.IXmlSerializable>  
  <xref:System.Xml.Serialization>  
  <xref:System.Xml.XmlConvert>  

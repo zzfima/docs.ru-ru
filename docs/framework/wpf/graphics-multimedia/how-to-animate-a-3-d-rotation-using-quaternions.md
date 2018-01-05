@@ -17,32 +17,33 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4485e7dfc6a72f559f6df69f77e7afd98ab8aaf5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4301f4ffc935c6c72509638561ffa40b7744b94a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-animate-a-3-d-rotation-using-quaternions"></a><span data-ttu-id="d08fd-102">Практическое руководство. Анимация трехмерного вращения с помощью кватернионов</span><span class="sxs-lookup"><span data-stu-id="d08fd-102">How to: Animate a 3-D Rotation Using Quaternions</span></span>
-<span data-ttu-id="d08fd-103">В этом примере показано, как анимация поворота трехмерного объекта с помощью кватернионов.</span><span class="sxs-lookup"><span data-stu-id="d08fd-103">This example shows how to animate a rotation of a 3-D object using quaternions.</span></span>  
+# <a name="how-to-animate-a-3-d-rotation-using-quaternions"></a><span data-ttu-id="86fee-102">Практическое руководство. Анимация трехмерного вращения с помощью кватернионов</span><span class="sxs-lookup"><span data-stu-id="86fee-102">How to: Animate a 3-D Rotation Using Quaternions</span></span>
+<span data-ttu-id="86fee-103">В этом примере показано, как анимация поворота трехмерного объекта с помощью кватернионов.</span><span class="sxs-lookup"><span data-stu-id="86fee-103">This example shows how to animate a rotation of a 3-D object using quaternions.</span></span>  
   
- <span data-ttu-id="d08fd-104">Ниже показан код <xref:System.Windows.Media.Media3D.QuaternionRotation3D> используется в качестве значения для <xref:System.Windows.Media.Media3D.RotateTransform3D.Rotation%2A> свойство <xref:System.Windows.Media.Media3D.RotateTransform3D>.</span><span class="sxs-lookup"><span data-stu-id="d08fd-104">The code below shows a <xref:System.Windows.Media.Media3D.QuaternionRotation3D> used as the value for the <xref:System.Windows.Media.Media3D.RotateTransform3D.Rotation%2A> property of a <xref:System.Windows.Media.Media3D.RotateTransform3D>.</span></span>  
+ <span data-ttu-id="86fee-104">Ниже показан код <xref:System.Windows.Media.Media3D.QuaternionRotation3D> используется в качестве значения для <xref:System.Windows.Media.Media3D.RotateTransform3D.Rotation%2A> свойство <xref:System.Windows.Media.Media3D.RotateTransform3D>.</span><span class="sxs-lookup"><span data-stu-id="86fee-104">The code below shows a <xref:System.Windows.Media.Media3D.QuaternionRotation3D> used as the value for the <xref:System.Windows.Media.Media3D.RotateTransform3D.Rotation%2A> property of a <xref:System.Windows.Media.Media3D.RotateTransform3D>.</span></span>  
   
  [!code-xaml[Animation3DGallery_snip#QuaternionAnimationExampleInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/QuaternionAnimationExample.xaml#quaternionanimationexampleinline1)]  
   
- <span data-ttu-id="d08fd-105">Это <xref:System.Windows.Media.Media3D.QuaternionRotation3D> анимировано с <xref:System.Windows.Media.Animation.QuaternionAnimation> в <xref:System.Windows.Media.Animation.Storyboard> ниже коде.</span><span class="sxs-lookup"><span data-stu-id="d08fd-105">This <xref:System.Windows.Media.Media3D.QuaternionRotation3D> is animated with a <xref:System.Windows.Media.Animation.QuaternionAnimation> within a <xref:System.Windows.Media.Animation.Storyboard> using the code below.</span></span>  
+ <span data-ttu-id="86fee-105">Это <xref:System.Windows.Media.Media3D.QuaternionRotation3D> анимировано с <xref:System.Windows.Media.Animation.QuaternionAnimation> в <xref:System.Windows.Media.Animation.Storyboard> ниже коде.</span><span class="sxs-lookup"><span data-stu-id="86fee-105">This <xref:System.Windows.Media.Media3D.QuaternionRotation3D> is animated with a <xref:System.Windows.Media.Animation.QuaternionAnimation> within a <xref:System.Windows.Media.Animation.Storyboard> using the code below.</span></span>  
   
  [!code-xaml[Animation3DGallery_snip#QuaternionAnimationExampleInline2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/QuaternionAnimationExample.xaml#quaternionanimationexampleinline2)]  
   
-## <a name="example"></a><span data-ttu-id="d08fd-106">Пример</span><span class="sxs-lookup"><span data-stu-id="d08fd-106">Example</span></span>  
- <span data-ttu-id="d08fd-107">Ниже приведен пример целиком.</span><span class="sxs-lookup"><span data-stu-id="d08fd-107">The following code shows the entire sample.</span></span>  
+## <a name="example"></a><span data-ttu-id="86fee-106">Пример</span><span class="sxs-lookup"><span data-stu-id="86fee-106">Example</span></span>  
+ <span data-ttu-id="86fee-107">Ниже приведен пример целиком.</span><span class="sxs-lookup"><span data-stu-id="86fee-107">The following code shows the entire sample.</span></span>  
   
  [!code-xaml[Animation3DGallery_snip#QuaternionAnimationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/QuaternionAnimationExample.xaml#quaternionanimationexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="d08fd-108">См. также</span><span class="sxs-lookup"><span data-stu-id="d08fd-108">See Also</span></span>  
- [<span data-ttu-id="d08fd-109">Общие сведения об эффектах анимации</span><span class="sxs-lookup"><span data-stu-id="d08fd-109">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [<span data-ttu-id="d08fd-110">Создание трехмерной сцены</span><span class="sxs-lookup"><span data-stu-id="d08fd-110">Create a 3-D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
- [<span data-ttu-id="d08fd-111">Обзор трехмерной графики</span><span class="sxs-lookup"><span data-stu-id="d08fd-111">3-D Graphics Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
- [<span data-ttu-id="d08fd-112">Общие сведения о классах Transform</span><span class="sxs-lookup"><span data-stu-id="d08fd-112">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [<span data-ttu-id="d08fd-113">Анимация трехмерного вращения с помощью раскадровки</span><span class="sxs-lookup"><span data-stu-id="d08fd-113">Animate a 3-D Rotation Using Storyboards</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-storyboards.md)  
- [<span data-ttu-id="d08fd-114">Анимация трехмерного поворота с помощью Rotation3DAnimation</span><span class="sxs-lookup"><span data-stu-id="d08fd-114">Animate a 3-D Rotation Using Rotation3DAnimation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-rotation3danimation.md)
+## <a name="see-also"></a><span data-ttu-id="86fee-108">См. также</span><span class="sxs-lookup"><span data-stu-id="86fee-108">See Also</span></span>  
+ [<span data-ttu-id="86fee-109">Общие сведения об эффектах анимации</span><span class="sxs-lookup"><span data-stu-id="86fee-109">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="86fee-110">Создание трехмерной сцены</span><span class="sxs-lookup"><span data-stu-id="86fee-110">Create a 3-D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
+ [<span data-ttu-id="86fee-111">Обзор трехмерной графики</span><span class="sxs-lookup"><span data-stu-id="86fee-111">3-D Graphics Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
+ [<span data-ttu-id="86fee-112">Общие сведения о классах Transform</span><span class="sxs-lookup"><span data-stu-id="86fee-112">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
+ [<span data-ttu-id="86fee-113">Анимация трехмерного вращения с помощью раскадровки</span><span class="sxs-lookup"><span data-stu-id="86fee-113">Animate a 3-D Rotation Using Storyboards</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-storyboards.md)  
+ [<span data-ttu-id="86fee-114">Анимация трехмерного поворота с помощью Rotation3DAnimation</span><span class="sxs-lookup"><span data-stu-id="86fee-114">Animate a 3-D Rotation Using Rotation3DAnimation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-rotation3danimation.md)
