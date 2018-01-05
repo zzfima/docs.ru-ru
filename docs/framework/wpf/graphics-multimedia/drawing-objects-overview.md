@@ -20,11 +20,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: acdbcac957f8dc682e0038600afa90ccdfd0fe14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: abdc98a6fbf48a30f2f5702e7c2d78396381de6c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drawing-objects-overview"></a>Обзор объектов Drawing
 В этом разделе описываются <xref:System.Windows.Media.Drawing> объектов и описывается, как их использовать для эффективного рисования фигур, точечных рисунков, текста и мультимедиа. Используйте <xref:System.Windows.Media.Drawing> объектов при создании коллекции картинок, рисование с <xref:System.Windows.Media.DrawingBrush>, или используйте <xref:System.Windows.Media.Visual> объектов.  
@@ -188,7 +189,7 @@ ImageDrawing размером 100 на 100
   
  В следующей таблице описаны свойства, можно использовать для управления <xref:System.Windows.Media.DrawingGroup> содержимое объекта.  
   
-|Свойство|Описание|Рисунки|  
+|Свойство.|Описание:|Рисунки|  
 |--------------|-----------------|------------------|  
 |<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|Изменяет непрозрачность отдельные фрагменты <xref:System.Windows.Media.DrawingGroup> содержимое. Пример см. в разделе [Практическое руководство. Управление прозрачностью рисунка](http://msdn.microsoft.com/en-us/68580652-7d32-4d27-93cc-a5148cf4d5ee).|![DrawingGroup с маской непрозрачности ](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opmask.png "graphicsmm_opmask")|  
 |<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|Однородно изменяет непрозрачность <xref:System.Windows.Media.DrawingGroup> содержимое. Это свойство используется, чтобы сделать <xref:System.Windows.Media.Drawing> прозрачным или полупрозрачным. Пример см. в разделе [Практическое руководство. Применение маски непрозрачности к рисунку](http://msdn.microsoft.com/en-us/d77b420b-9be2-479c-a45e-82f4da30eb9f).|![DrawingGroups с различными параметрами прозрачности ](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opacity.png "graphicsmm_opacity")|  

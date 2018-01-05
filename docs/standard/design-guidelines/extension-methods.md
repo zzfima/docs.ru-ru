@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b7edc3420eabe4de20a2fe39f38ae5eee53b593c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 28ce4451f9f8cc634ab76b3b4ef845103ea55e35
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="extension-methods"></a>Методы расширения
 Методы расширения являются функция языка, позволяющая статических методов, вызываемых с помощью синтаксиса вызова метода экземпляра. Эти методы необходимо выполнить по крайней мере один параметр, который представляет экземпляр, который имеет метод для выполнения операций над.  
@@ -55,5 +58,5 @@ ms.lasthandoff: 11/21/2017
  *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также  
- [Рекомендации по разработке членов](../../../docs/standard/design-guidelines/member.md)  
+ [Правила разработки членов](../../../docs/standard/design-guidelines/member.md)  
  [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)

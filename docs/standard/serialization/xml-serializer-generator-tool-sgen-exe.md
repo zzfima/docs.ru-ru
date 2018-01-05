@@ -12,11 +12,14 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41f71519ee8945ae93b85e7f6ac2725bf50d4913
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 005e78c32d49c8c1b204a3ac9376d943311868fd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Инструмент создания XML-сериализатора (Sgen.exe)
 Генератор XML-сериализатора создает сборку сериализации XML для типов в указанной сборке, чтобы повысить производительность при запуске <xref:System.Xml.Serialization.XmlSerializer> во время сериализации или десериализации объектов указанных типов.  
@@ -29,7 +32,7 @@ sgen [options]
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
 |**/a**[**ssembly**]**:***имя_файла*|Создает код сериализации для всех типов, содержащихся в сборке, или исполняемого файла *имя_файла*. Можно указать только одно имя файла. Если этот аргумент повторяется, используется последнее имя файла.|  
 |**/c[ompiler]:** *параметры*|Задает параметры, которые следует передать компилятору C#. Поддерживаются все параметры csc.exe по мере их передачи компилятору. Этот параметр можно использовать для указания того, что сборка должна быть подписана, и для указания файла ключа.|  

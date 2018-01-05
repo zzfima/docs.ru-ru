@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 56838fc4c1c1e7cb8723beee3f0e6b23515d43f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 692a5803ddb538de6dc5f061c18cc0b250d0f4ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="virtual-members"></a>Виртуальные члены
 Виртуальные члены могут быть переопределены, таким образом, изменения поведения подкласса. Они похожи на обратные вызовы с точки зрения расширения, предоставляемых ими, но они являются более высокую производительность выполнения и потребления памяти. Кроме того виртуальные члены более естественным в случаях, когда требуется создавать специальный вид существующего типа (специализации).  
@@ -48,4 +51,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  
- [Разработка для расширяемости](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+ [Разработка с обеспечением расширяемости](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

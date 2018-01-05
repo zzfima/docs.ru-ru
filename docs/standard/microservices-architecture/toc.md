@@ -41,6 +41,7 @@
 ### [Реализация шины событий с помощью RabbitMQ для среды разработки или тестирования](multi-container-microservice-net-applications/rabbitmq-event-bus-development-test-environment.md)
 ### [Подписка на события](multi-container-microservice-net-applications/subscribe-events.md)
 ### [Тестирование служб и веб-приложений ASP.NET Core](multi-container-microservice-net-applications/test-aspnet-core-services-web-apps.md)
+### [Implement background tasks in microservices with IHostedService and the BackgroundService class](multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md) (Реализация фоновых задач в микрослужбах с помощью IHostedService и класса BackgroundService)
 ## [Использование микрослужб с шаблонами DDD и CQRS для решения сложных бизнес-задач](microservice-ddd-cqrs-patterns/index.md)
 ### [Применение в микрослужбе упрощенных шаблонов CQRS и DDD](microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns.md)
 ### [Применение подходов CQRS и CQS в микрослужбе DDD в eShopOnContainers](microservice-ddd-cqrs-patterns/eshoponcontainers-cqrs-ddd-microservice.md)

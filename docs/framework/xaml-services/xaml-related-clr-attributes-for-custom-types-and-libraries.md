@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 9a445d7e730ecb743d5e4086ec682b12a7bf3ff9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 25aac1d4478279561cbcdda6c1cf912c3c3b2cde
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Относящиеся к XAML атрибуты среды CLR для пользовательских типов и библиотек
 В этом разделе описаны общие атрибуты языка среды CLR, определенные в службах XAML .NET Framework. Здесь также описываются другие атрибуты среды CLR, которые определены в .NET Framework, которые ситуации, связанные с XAML, для приложения для сборки или типы. Присвоение атрибутов сборки, типы или члены этих атрибутов CLR предоставляет о системе типов XAML, связанную с пользовательскими типами. Сведения предоставляются потребителю XAML, использующий служб XAML .NET Framework для обработки потока узлов XAML напрямую или через выделенные средства чтения и записи XAML.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  **Аргументы:** строка, указывающая имя свойства, которое соответствует аргументу один конструктор.  
   
- <xref:System.Windows.Markup.ConstructorArgumentAttribute>Указывает, что объект можно инициализировать с помощью синтаксиса конструктора не по умолчанию, и что свойство с указанным именем предоставляет информацию о конструкции. Эта информация предназначена главным образом для сериализации XAML. Для получения дополнительной информации см. <xref:System.Windows.Markup.ConstructorArgumentAttribute>.  
+ <xref:System.Windows.Markup.ConstructorArgumentAttribute>Указывает, что объект можно инициализировать с помощью синтаксиса конструктора не по умолчанию, и что свойство с указанным именем предоставляет информацию о конструкции. Эта информация предназначена главным образом для сериализации XAML. Дополнительные сведения см. в разделе <xref:System.Windows.Markup.ConstructorArgumentAttribute>.  
   
 ### <a name="contentpropertyattribute"></a>Атрибут ContentPropertyAttribute  
  **Справочная документация:**  <xref:System.Windows.Markup.ContentPropertyAttribute>  
@@ -160,7 +161,7 @@ ms.lasthandoff: 11/21/2017
   
  **Аргументы:** логическое значение. Если используемое предназначению атрибута, это должно всегда указываться как `true`.  
   
- Указывает, строится ли этот тип сверху вниз в ходе создания графа объекта XAML. Это сложное понятие, которое может быть тесно связано определение модель программирования. Для получения дополнительной информации см. <xref:System.Windows.Markup.UsableDuringInitializationAttribute>.  
+ Указывает, строится ли этот тип сверху вниз в ходе создания графа объекта XAML. Это сложное понятие, которое может быть тесно связано определение модель программирования. Дополнительные сведения см. в разделе <xref:System.Windows.Markup.UsableDuringInitializationAttribute>.  
   
 ### <a name="valueserializerattribute"></a>ValueSerializerAttribute  
  **Справочная документация:**  <xref:System.Windows.Markup.ValueSerializerAttribute>  

@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: faa74e982fb114d041468c53dde2f978bb3faa35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0feef370e6b09d2f58a33f2142bd654e1d7e3402
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Общие сведения о расширениях разметки для XAML
 Расширения разметки — это методика языка XAML для получения значения, которое не является ни примитивом, ни определенным типом XAML. Для использования атрибутов расширения разметки используют известную последовательность символов из открывающей фигурной скобки `{` для входа в область расширения разметки и закрывающей фигурной скобки `}` для выхода из нее. При использовании служб XAML .NET Framework можно применять некоторые предопределенные расширения разметки языка XAML из сборки System.Xaml. Можно также создать подкласс из класса <xref:System.Windows.Markup.MarkupExtension> , определенного в System.Xaml, и определить собственные расширения разметки. Или же можно использовать расширения разметки, определенные конкретной платформой, если вы уже ссылаетесь на нее.  
