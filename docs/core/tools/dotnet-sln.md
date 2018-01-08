@@ -7,21 +7,22 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 5071cb80be0fb14829a0fdffd0f5a2d2371b6ba8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: c90cfec0e2197e2519bf3f7aae1c9569db79aadf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="dotnet-sln"></a><span data-ttu-id="eeda0-103">dotnet sln</span><span class="sxs-lookup"><span data-stu-id="eeda0-103">dotnet sln</span></span>
+# <a name="dotnet-sln"></a><span data-ttu-id="efd4d-103">dotnet sln</span><span class="sxs-lookup"><span data-stu-id="efd4d-103">dotnet sln</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="eeda0-104">Имя</span><span class="sxs-lookup"><span data-stu-id="eeda0-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="efd4d-104">name</span><span class="sxs-lookup"><span data-stu-id="efd4d-104">Name</span></span>
 
-<span data-ttu-id="eeda0-105">`dotnet-sln` — изменяет файл решений .NET Core.</span><span class="sxs-lookup"><span data-stu-id="eeda0-105">`dotnet-sln` - Modifies a .NET Core solution file.</span></span>
+<span data-ttu-id="efd4d-105">`dotnet-sln` — изменяет файл решений .NET Core.</span><span class="sxs-lookup"><span data-stu-id="efd4d-105">`dotnet-sln` - Modifies a .NET Core solution file.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="eeda0-106">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="eeda0-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="efd4d-106">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="efd4d-106">Synopsis</span></span>
 
 ```
 dotnet sln [<SOLUTION_NAME>] add <PROJECT> <PROJECT> ...
@@ -32,62 +33,62 @@ dotnet sln [<SOLUTION_NAME>] list
 dotnet sln [-h|--help]
 ```
 
-## <a name="description"></a><span data-ttu-id="eeda0-107">Описание</span><span class="sxs-lookup"><span data-stu-id="eeda0-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="efd4d-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="efd4d-107">Description</span></span>
 
-<span data-ttu-id="eeda0-108">Команда `dotnet sln` предоставляет удобный способ добавлять проекты в файл решений, удалять или перечислять их.</span><span class="sxs-lookup"><span data-stu-id="eeda0-108">The `dotnet sln` command provides a convenient way to add, remove, and list projects in a solution file.</span></span>
+<span data-ttu-id="efd4d-108">Команда `dotnet sln` предоставляет удобный способ добавлять проекты в файл решений, удалять или перечислять их.</span><span class="sxs-lookup"><span data-stu-id="efd4d-108">The `dotnet sln` command provides a convenient way to add, remove, and list projects in a solution file.</span></span>
 
-## <a name="commands"></a><span data-ttu-id="eeda0-109">Команды</span><span class="sxs-lookup"><span data-stu-id="eeda0-109">Commands</span></span>
+## <a name="commands"></a><span data-ttu-id="efd4d-109">Команды</span><span class="sxs-lookup"><span data-stu-id="efd4d-109">Commands</span></span>
 
 `add <PROJECT> ...`
 
 `add <GLOBBING_PATTERN>`
 
-<span data-ttu-id="eeda0-110">Добавляет один или несколько проектов в файл решений.</span><span class="sxs-lookup"><span data-stu-id="eeda0-110">Adds a project or multiple projects to the solution file.</span></span> <span data-ttu-id="eeda0-111">[Стандартные маски](https://en.wikipedia.org/wiki/Glob_(programming)) поддерживаются в терминалах на основе Unix или Linux.</span><span class="sxs-lookup"><span data-stu-id="eeda0-111">[Globbing patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are supported on Unix/Linux based terminals.</span></span>
+<span data-ttu-id="efd4d-110">Добавляет один или несколько проектов в файл решений.</span><span class="sxs-lookup"><span data-stu-id="efd4d-110">Adds a project or multiple projects to the solution file.</span></span> <span data-ttu-id="efd4d-111">[Стандартные маски](https://en.wikipedia.org/wiki/Glob_(programming)) поддерживаются в терминалах на основе Unix или Linux.</span><span class="sxs-lookup"><span data-stu-id="efd4d-111">[Globbing patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are supported on Unix/Linux based terminals.</span></span>
 
 `remove <PROJECT> ...`
 
 `remove <GLOBBING_PATTERN>`
 
-<span data-ttu-id="eeda0-112">Удаляет один или несколько проектов из файла решений.</span><span class="sxs-lookup"><span data-stu-id="eeda0-112">Removes a project or multiple projects from the solution file.</span></span> <span data-ttu-id="eeda0-113">[Стандартные маски](https://en.wikipedia.org/wiki/Glob_(programming)) поддерживаются в терминалах на основе Unix или Linux.</span><span class="sxs-lookup"><span data-stu-id="eeda0-113">[Globbing patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are supported on Unix/Linux based terminals.</span></span>
+<span data-ttu-id="efd4d-112">Удаляет один или несколько проектов из файла решений.</span><span class="sxs-lookup"><span data-stu-id="efd4d-112">Removes a project or multiple projects from the solution file.</span></span> <span data-ttu-id="efd4d-113">[Стандартные маски](https://en.wikipedia.org/wiki/Glob_(programming)) поддерживаются в терминалах на основе Unix или Linux.</span><span class="sxs-lookup"><span data-stu-id="efd4d-113">[Globbing patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are supported on Unix/Linux based terminals.</span></span>
 
 `list`
 
-<span data-ttu-id="eeda0-114">Перечисляет все проекты в файле решения.</span><span class="sxs-lookup"><span data-stu-id="eeda0-114">Lists all projects in a solution file.</span></span>
+<span data-ttu-id="efd4d-114">Перечисляет все проекты в файле решения.</span><span class="sxs-lookup"><span data-stu-id="efd4d-114">Lists all projects in a solution file.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="eeda0-115">Аргументы</span><span class="sxs-lookup"><span data-stu-id="eeda0-115">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="efd4d-115">Аргументы</span><span class="sxs-lookup"><span data-stu-id="efd4d-115">Arguments</span></span>
 
 `SOLUTION_NAME`
 
-<span data-ttu-id="eeda0-116">Используемый файл решений.</span><span class="sxs-lookup"><span data-stu-id="eeda0-116">Solution file to use.</span></span> <span data-ttu-id="eeda0-117">Если он не указан, команда ищет текущий каталог для него.</span><span class="sxs-lookup"><span data-stu-id="eeda0-117">If not specified, the command searches the current directory for one.</span></span> <span data-ttu-id="eeda0-118">Если файлов решений в каталоге несколько, нужно указать один.</span><span class="sxs-lookup"><span data-stu-id="eeda0-118">If there are multiple solution files in the directory, one must be specified.</span></span>
+<span data-ttu-id="efd4d-116">Используемый файл решений.</span><span class="sxs-lookup"><span data-stu-id="efd4d-116">Solution file to use.</span></span> <span data-ttu-id="efd4d-117">Если он не указан, команда ищет текущий каталог для него.</span><span class="sxs-lookup"><span data-stu-id="efd4d-117">If not specified, the command searches the current directory for one.</span></span> <span data-ttu-id="efd4d-118">Если файлов решений в каталоге несколько, нужно указать один.</span><span class="sxs-lookup"><span data-stu-id="efd4d-118">If there are multiple solution files in the directory, one must be specified.</span></span>
 
-## <a name="options"></a><span data-ttu-id="eeda0-119">Параметры</span><span class="sxs-lookup"><span data-stu-id="eeda0-119">Options</span></span>
+## <a name="options"></a><span data-ttu-id="efd4d-119">Параметры</span><span class="sxs-lookup"><span data-stu-id="efd4d-119">Options</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="eeda0-120">Выводит краткую справку по команде.</span><span class="sxs-lookup"><span data-stu-id="eeda0-120">Prints out a short help for the command.</span></span>
+<span data-ttu-id="efd4d-120">Выводит краткую справку по команде.</span><span class="sxs-lookup"><span data-stu-id="efd4d-120">Prints out a short help for the command.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="eeda0-121">Примеры</span><span class="sxs-lookup"><span data-stu-id="eeda0-121">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="efd4d-121">Примеры</span><span class="sxs-lookup"><span data-stu-id="efd4d-121">Examples</span></span>
 
-<span data-ttu-id="eeda0-122">Добавление проекта C# в решение:</span><span class="sxs-lookup"><span data-stu-id="eeda0-122">Add a C# project to a solution:</span></span>
+<span data-ttu-id="efd4d-122">Добавление проекта C# в решение:</span><span class="sxs-lookup"><span data-stu-id="efd4d-122">Add a C# project to a solution:</span></span>
 
 `dotnet sln todo.sln add todo-app/todo-app.csproj`
 
-<span data-ttu-id="eeda0-123">Удаление проекта C# из решения:</span><span class="sxs-lookup"><span data-stu-id="eeda0-123">Remove a C# project from a solution:</span></span>
+<span data-ttu-id="efd4d-123">Удаление проекта C# из решения:</span><span class="sxs-lookup"><span data-stu-id="efd4d-123">Remove a C# project from a solution:</span></span>
 
 `dotnet sln todo.sln remove todo-app/todo-app.csproj`
 
-<span data-ttu-id="eeda0-124">Добавление нескольких проектов C# в решение:</span><span class="sxs-lookup"><span data-stu-id="eeda0-124">Add multiple C# projects to a solution:</span></span>
+<span data-ttu-id="efd4d-124">Добавление нескольких проектов C# в решение:</span><span class="sxs-lookup"><span data-stu-id="efd4d-124">Add multiple C# projects to a solution:</span></span>
 
 `dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj`
 
-<span data-ttu-id="eeda0-125">Удаление нескольких проектов C# из решения:</span><span class="sxs-lookup"><span data-stu-id="eeda0-125">Remove multiple C# projects from a solution:</span></span>
+<span data-ttu-id="efd4d-125">Удаление нескольких проектов C# из решения:</span><span class="sxs-lookup"><span data-stu-id="efd4d-125">Remove multiple C# projects from a solution:</span></span>
 
 `dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj`
 
-<span data-ttu-id="eeda0-126">Добавление нескольких проектов C# в решение с помощью шаблона глобализации:</span><span class="sxs-lookup"><span data-stu-id="eeda0-126">Add multiple C# projects to a solution using a globbing pattern:</span></span>
+<span data-ttu-id="efd4d-126">Добавление нескольких проектов C# в решение с помощью шаблона глобализации:</span><span class="sxs-lookup"><span data-stu-id="efd4d-126">Add multiple C# projects to a solution using a globbing pattern:</span></span>
 
 `dotnet sln todo.sln add **/*.csproj`
 
-<span data-ttu-id="eeda0-127">Удаление нескольких проектов C# из решения с помощью шаблона глобализации:</span><span class="sxs-lookup"><span data-stu-id="eeda0-127">Remove multiple C# projects from a solution using a globbing pattern:</span></span>
+<span data-ttu-id="efd4d-127">Удаление нескольких проектов C# из решения с помощью шаблона глобализации:</span><span class="sxs-lookup"><span data-stu-id="efd4d-127">Remove multiple C# projects from a solution using a globbing pattern:</span></span>
 
 `dotnet sln todo.sln remove **/*.csproj`

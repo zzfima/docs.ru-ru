@@ -24,29 +24,30 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dd4472587cabc0ebfb2cb64e0bdc15a8d4778507
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bd9f2bab23fff1bbc4ebb521b167ac8031af3bc7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-build-a-single-file-assembly"></a><span data-ttu-id="2efe7-102">Практическое руководство. Построение однофайловой сборки</span><span class="sxs-lookup"><span data-stu-id="2efe7-102">How to: Build a Single-File Assembly</span></span>
-<span data-ttu-id="2efe7-103">Однофайловая сборка, являясь простейшим типом сборки, содержит данные о типе и реализации, а также [манифест сборки](../../../docs/framework/app-domains/assembly-manifest.md).</span><span class="sxs-lookup"><span data-stu-id="2efe7-103">A single-file assembly, which is the simplest type of assembly, contains type information and implementation, as well as the [assembly manifest](../../../docs/framework/app-domains/assembly-manifest.md).</span></span> <span data-ttu-id="2efe7-104">Для создания однофайловой сборки можно использовать компиляторы командной строки или [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2efe7-104">You can use command-line compilers or [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] to create a single-file assembly.</span></span> <span data-ttu-id="2efe7-105">По умолчанию компилятор создает файл сборки с расширением .exe.</span><span class="sxs-lookup"><span data-stu-id="2efe7-105">By default, the compiler creates an assembly file with an .exe extension.</span></span>  
+# <a name="how-to-build-a-single-file-assembly"></a><span data-ttu-id="19c25-102">Практическое руководство. Построение однофайловой сборки</span><span class="sxs-lookup"><span data-stu-id="19c25-102">How to: Build a Single-File Assembly</span></span>
+<span data-ttu-id="19c25-103">Однофайловая сборка, являясь простейшим типом сборки, содержит данные о типе и реализации, а также [манифест сборки](../../../docs/framework/app-domains/assembly-manifest.md).</span><span class="sxs-lookup"><span data-stu-id="19c25-103">A single-file assembly, which is the simplest type of assembly, contains type information and implementation, as well as the [assembly manifest](../../../docs/framework/app-domains/assembly-manifest.md).</span></span> <span data-ttu-id="19c25-104">Для создания однофайловой сборки можно использовать компиляторы командной строки или [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)].</span><span class="sxs-lookup"><span data-stu-id="19c25-104">You can use command-line compilers or [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] to create a single-file assembly.</span></span> <span data-ttu-id="19c25-105">По умолчанию компилятор создает файл сборки с расширением .exe.</span><span class="sxs-lookup"><span data-stu-id="19c25-105">By default, the compiler creates an assembly file with an .exe extension.</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]<span data-ttu-id="2efe7-106"> для C# и Visual Basic можно использовать только для создания однофайловых сборок.</span><span class="sxs-lookup"><span data-stu-id="2efe7-106"> for C# and Visual Basic can be used only to create single-file assemblies.</span></span> <span data-ttu-id="2efe7-107">Чтобы создать многофайловую сборку, необходимо использовать компиляторы командной строки или [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] для Visual C++.</span><span class="sxs-lookup"><span data-stu-id="2efe7-107">If you want to create multifile assemblies, you must use command-line compilers or [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] for Visual C++.</span></span>  
+>  [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]<span data-ttu-id="19c25-106"> для C# и Visual Basic можно использовать только для создания однофайловых сборок.</span><span class="sxs-lookup"><span data-stu-id="19c25-106"> for C# and Visual Basic can be used only to create single-file assemblies.</span></span> <span data-ttu-id="19c25-107">Чтобы создать многофайловую сборку, необходимо использовать компиляторы командной строки или [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] для Visual C++.</span><span class="sxs-lookup"><span data-stu-id="19c25-107">If you want to create multifile assemblies, you must use command-line compilers or [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] for Visual C++.</span></span>  
   
- <span data-ttu-id="2efe7-108">В следующих процедурах показано создани6 однофайловых сборок с помощью компиляторов, работающих в режиме командной строки.</span><span class="sxs-lookup"><span data-stu-id="2efe7-108">The following procedures show how to create single-file assemblies using command-line compilers.</span></span>  
+ <span data-ttu-id="19c25-108">В следующих процедурах показано создани6 однофайловых сборок с помощью компиляторов, работающих в режиме командной строки.</span><span class="sxs-lookup"><span data-stu-id="19c25-108">The following procedures show how to create single-file assemblies using command-line compilers.</span></span>  
   
-### <a name="to-create-an-assembly-with-an-exe-extension"></a><span data-ttu-id="2efe7-109">Создание сборки с расширением .exe</span><span class="sxs-lookup"><span data-stu-id="2efe7-109">To create an assembly with an .exe extension</span></span>  
+### <a name="to-create-an-assembly-with-an-exe-extension"></a><span data-ttu-id="19c25-109">Создание сборки с расширением .exe</span><span class="sxs-lookup"><span data-stu-id="19c25-109">To create an assembly with an .exe extension</span></span>  
   
-1.  <span data-ttu-id="2efe7-110">В командной строке введите следующую команду:</span><span class="sxs-lookup"><span data-stu-id="2efe7-110">At the command prompt, type the following command:</span></span>  
+1.  <span data-ttu-id="19c25-110">В командной строке введите следующую команду:</span><span class="sxs-lookup"><span data-stu-id="19c25-110">At the command prompt, type the following command:</span></span>  
   
-     <span data-ttu-id="2efe7-111">\<*команда компилятора*> \<*имя модуля*></span><span class="sxs-lookup"><span data-stu-id="2efe7-111">\<*compiler command*> \<*module name*></span></span>  
+     <span data-ttu-id="19c25-111">\<*команда компилятора*> \<*имя модуля*></span><span class="sxs-lookup"><span data-stu-id="19c25-111">\<*compiler command*> \<*module name*></span></span>  
   
-     <span data-ttu-id="2efe7-112">В этой команде *команда компилятора* — команда компилятора для языка, используемого в модуле кода, а *имя модуля* — имя компилируемого в сборку модуля кода.</span><span class="sxs-lookup"><span data-stu-id="2efe7-112">In this command, *compiler command* is the compiler command for the language used in your code module, and *module name* is the name of the code module to compile into the assembly.</span></span>  
+     <span data-ttu-id="19c25-112">В этой команде *команда компилятора* — команда компилятора для языка, используемого в модуле кода, а *имя модуля* — имя компилируемого в сборку модуля кода.</span><span class="sxs-lookup"><span data-stu-id="19c25-112">In this command, *compiler command* is the compiler command for the language used in your code module, and *module name* is the name of the code module to compile into the assembly.</span></span>  
   
- <span data-ttu-id="2efe7-113">В следующем примере создается сборка с именем `myCode.exe` из модуля кода с именем `myCode`.</span><span class="sxs-lookup"><span data-stu-id="2efe7-113">The following example creates an assembly named `myCode.exe` from a code module called `myCode`.</span></span>  
+ <span data-ttu-id="19c25-113">В следующем примере создается сборка с именем `myCode.exe` из модуля кода с именем `myCode`.</span><span class="sxs-lookup"><span data-stu-id="19c25-113">The following example creates an assembly named `myCode.exe` from a code module called `myCode`.</span></span>  
   
 ```csharp  
 csc myCode.cs  
@@ -56,15 +57,15 @@ csc myCode.cs
 vbc myCode.vb  
 ```  
   
-#### <a name="to-create-an-assembly-with-an-exe-extension-and-specify-the-output-file-name"></a><span data-ttu-id="2efe7-114">Создание сборки с расширением .exe и указание имени выходного файла</span><span class="sxs-lookup"><span data-stu-id="2efe7-114">To create an assembly with an .exe extension and specify the output file name</span></span>  
+#### <a name="to-create-an-assembly-with-an-exe-extension-and-specify-the-output-file-name"></a><span data-ttu-id="19c25-114">Создание сборки с расширением .exe и указание имени выходного файла</span><span class="sxs-lookup"><span data-stu-id="19c25-114">To create an assembly with an .exe extension and specify the output file name</span></span>  
   
-1.  <span data-ttu-id="2efe7-115">В командной строке введите следующую команду:</span><span class="sxs-lookup"><span data-stu-id="2efe7-115">At the command prompt, type the following command:</span></span>  
+1.  <span data-ttu-id="19c25-115">В командной строке введите следующую команду:</span><span class="sxs-lookup"><span data-stu-id="19c25-115">At the command prompt, type the following command:</span></span>  
   
-     <span data-ttu-id="2efe7-116">\<*команда компилятора*> **/out:**\<*имя файла*> \<*имя модуля*></span><span class="sxs-lookup"><span data-stu-id="2efe7-116">\<*compiler command*> **/out:**\<*file name*> \<*module name*></span></span>  
+     <span data-ttu-id="19c25-116">\<*команда компилятора*> **/out:**\<*имя файла*> \<*имя модуля*></span><span class="sxs-lookup"><span data-stu-id="19c25-116">\<*compiler command*> **/out:**\<*file name*> \<*module name*></span></span>  
   
-     <span data-ttu-id="2efe7-117">В этой команде *команда компилятора* — команда компилятора для языка, используемого в модуле кода, *имя файла* — имя выходного файла, а *имя модуля* — имя компилируемого в сборку модуля кода.</span><span class="sxs-lookup"><span data-stu-id="2efe7-117">In this command, *compiler command* is the compiler command for the language used in your code module, *file name* is the output file name, and *module name* is the name of the code module to compile into the assembly.</span></span>  
+     <span data-ttu-id="19c25-117">В этой команде *команда компилятора* — команда компилятора для языка, используемого в модуле кода, *имя файла* — имя выходного файла, а *имя модуля* — имя компилируемого в сборку модуля кода.</span><span class="sxs-lookup"><span data-stu-id="19c25-117">In this command, *compiler command* is the compiler command for the language used in your code module, *file name* is the output file name, and *module name* is the name of the code module to compile into the assembly.</span></span>  
   
- <span data-ttu-id="2efe7-118">В следующем примере создается сборка с именем `myAssembly.exe` из модуля кода с именем `myCode`.</span><span class="sxs-lookup"><span data-stu-id="2efe7-118">The following example creates an assembly named `myAssembly.exe` from a code module called `myCode`.</span></span>  
+ <span data-ttu-id="19c25-118">В следующем примере создается сборка с именем `myAssembly.exe` из модуля кода с именем `myCode`.</span><span class="sxs-lookup"><span data-stu-id="19c25-118">The following example creates an assembly named `myAssembly.exe` from a code module called `myCode`.</span></span>  
   
 ```csharp  
 csc /out:myAssembly.exe myCode.cs  
@@ -74,18 +75,18 @@ csc /out:myAssembly.exe myCode.cs
 vbc /out:myAssembly.exe myCode.vb  
 ```  
   
-## <a name="creating-library-assemblies"></a><span data-ttu-id="2efe7-119">Создание библиотечных сборок</span><span class="sxs-lookup"><span data-stu-id="2efe7-119">Creating Library Assemblies</span></span>  
- <span data-ttu-id="2efe7-120">Библиотечная сборка аналогична библиотеке классов.</span><span class="sxs-lookup"><span data-stu-id="2efe7-120">A library assembly is similar to a class library.</span></span> <span data-ttu-id="2efe7-121">Библиотечная сборка аналогична библиотеке классов. Она содержит типы, на которые имеются ссылки в других сборках, но не имеет точки входа, с которой начинается выполнение.</span><span class="sxs-lookup"><span data-stu-id="2efe7-121">It contains types that will be referenced by other assemblies, but it has no entry point to begin execution.</span></span>  
+## <a name="creating-library-assemblies"></a><span data-ttu-id="19c25-119">Создание библиотечных сборок</span><span class="sxs-lookup"><span data-stu-id="19c25-119">Creating Library Assemblies</span></span>  
+ <span data-ttu-id="19c25-120">Библиотечная сборка аналогична библиотеке классов.</span><span class="sxs-lookup"><span data-stu-id="19c25-120">A library assembly is similar to a class library.</span></span> <span data-ttu-id="19c25-121">Библиотечная сборка аналогична библиотеке классов. Она содержит типы, на которые имеются ссылки в других сборках, но не имеет точки входа, с которой начинается выполнение.</span><span class="sxs-lookup"><span data-stu-id="19c25-121">It contains types that will be referenced by other assemblies, but it has no entry point to begin execution.</span></span>  
   
-#### <a name="to-create-a-library-assembly"></a><span data-ttu-id="2efe7-122">Создание библиотечной сборки</span><span class="sxs-lookup"><span data-stu-id="2efe7-122">To create a library assembly</span></span>  
+#### <a name="to-create-a-library-assembly"></a><span data-ttu-id="19c25-122">Создание библиотечной сборки</span><span class="sxs-lookup"><span data-stu-id="19c25-122">To create a library assembly</span></span>  
   
-1.  <span data-ttu-id="2efe7-123">В командной строке введите следующую команду:</span><span class="sxs-lookup"><span data-stu-id="2efe7-123">At the command prompt, type the following command:</span></span>  
+1.  <span data-ttu-id="19c25-123">В командной строке введите следующую команду:</span><span class="sxs-lookup"><span data-stu-id="19c25-123">At the command prompt, type the following command:</span></span>  
   
-     <span data-ttu-id="2efe7-124">\<*команда компилятора*> **/t:library** \<*имя модуля*></span><span class="sxs-lookup"><span data-stu-id="2efe7-124">\<*compiler command*> **/t:library** \<*module name*></span></span>  
+     <span data-ttu-id="19c25-124">\<*команда компилятора*> **/t:library** \<*имя модуля*></span><span class="sxs-lookup"><span data-stu-id="19c25-124">\<*compiler command*> **/t:library** \<*module name*></span></span>  
   
-     <span data-ttu-id="2efe7-125">В этой команде *команда компилятора* — команда компилятора для языка, используемого в модуле кода, а *имя модуля* — имя компилируемого в сборку модуля кода.</span><span class="sxs-lookup"><span data-stu-id="2efe7-125">In this command, *compiler command* is the compiler command for the language used in your code module, and *module name* is the name of the code module to compile into the assembly.</span></span> <span data-ttu-id="2efe7-126">Можно также использовать другие параметры компилятора, такие как **/out:**.</span><span class="sxs-lookup"><span data-stu-id="2efe7-126">You can also use other compiler options, such as the **/out:** option.</span></span>  
+     <span data-ttu-id="19c25-125">В этой команде *команда компилятора* — команда компилятора для языка, используемого в модуле кода, а *имя модуля* — имя компилируемого в сборку модуля кода.</span><span class="sxs-lookup"><span data-stu-id="19c25-125">In this command, *compiler command* is the compiler command for the language used in your code module, and *module name* is the name of the code module to compile into the assembly.</span></span> <span data-ttu-id="19c25-126">Можно также использовать другие параметры компилятора, такие как **/out:**.</span><span class="sxs-lookup"><span data-stu-id="19c25-126">You can also use other compiler options, such as the **/out:** option.</span></span>  
   
- <span data-ttu-id="2efe7-127">В следующем примере создается библиотечная сборка с именем `myCodeAssembly.dll` из модуля кода с именем `myCode`.</span><span class="sxs-lookup"><span data-stu-id="2efe7-127">The following example creates a library assembly named `myCodeAssembly.dll` from a code module called `myCode`.</span></span>  
+ <span data-ttu-id="19c25-127">В следующем примере создается библиотечная сборка с именем `myCodeAssembly.dll` из модуля кода с именем `myCode`.</span><span class="sxs-lookup"><span data-stu-id="19c25-127">The following example creates a library assembly named `myCodeAssembly.dll` from a code module called `myCode`.</span></span>  
   
 ```csharp  
 csc /out:myCodeLibrary.dll /t:library myCode.cs  
@@ -95,8 +96,8 @@ csc /out:myCodeLibrary.dll /t:library myCode.cs
 vbc /out:myCodeLibrary.dll /t:library myCode.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2efe7-128">См. также</span><span class="sxs-lookup"><span data-stu-id="2efe7-128">See Also</span></span>  
- [<span data-ttu-id="2efe7-129">Создание сборок</span><span class="sxs-lookup"><span data-stu-id="2efe7-129">Creating Assemblies</span></span>](../../../docs/framework/app-domains/create-assemblies.md)  
- [<span data-ttu-id="2efe7-130">Многофайловые сборки</span><span class="sxs-lookup"><span data-stu-id="2efe7-130">Multifile Assemblies</span></span>](../../../docs/framework/app-domains/multifile-assemblies.md)  
- [<span data-ttu-id="2efe7-131">Практическое руководство. Создание многофайловой сборки</span><span class="sxs-lookup"><span data-stu-id="2efe7-131">How to: Build a Multifile Assembly</span></span>](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
- [<span data-ttu-id="2efe7-132">Программирование с использованием сборок</span><span class="sxs-lookup"><span data-stu-id="2efe7-132">Programming with Assemblies</span></span>](../../../docs/framework/app-domains/programming-with-assemblies.md)
+## <a name="see-also"></a><span data-ttu-id="19c25-128">См. также</span><span class="sxs-lookup"><span data-stu-id="19c25-128">See Also</span></span>  
+ [<span data-ttu-id="19c25-129">Создание сборок</span><span class="sxs-lookup"><span data-stu-id="19c25-129">Creating Assemblies</span></span>](../../../docs/framework/app-domains/create-assemblies.md)  
+ [<span data-ttu-id="19c25-130">Многофайловые сборки</span><span class="sxs-lookup"><span data-stu-id="19c25-130">Multifile Assemblies</span></span>](../../../docs/framework/app-domains/multifile-assemblies.md)  
+ [<span data-ttu-id="19c25-131">Практическое руководство. Создание многофайловой сборки</span><span class="sxs-lookup"><span data-stu-id="19c25-131">How to: Build a Multifile Assembly</span></span>](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
+ [<span data-ttu-id="19c25-132">Программирование с использованием сборок</span><span class="sxs-lookup"><span data-stu-id="19c25-132">Programming with Assemblies</span></span>](../../../docs/framework/app-domains/programming-with-assemblies.md)
