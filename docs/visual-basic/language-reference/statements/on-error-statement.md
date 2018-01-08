@@ -29,16 +29,16 @@ ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e1039359145902bffe3f91aa654a43790d16b887
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96baa5d91d0a600b84ed832fb1e3b1ed71a9d89d
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="on-error-statement-visual-basic"></a>Оператор On Error (Visual Basic)
 Включает процедуру обработки ошибок и определяет местоположение этой подпрограммы в процедуре. может также использоваться для отключения подпрограммы обработки ошибок.  
   
- Без `On Error` инструкции, любая ошибка во время выполнения, возникает неустранимая: отображается сообщение об ошибке, и выполнение будет остановлено.  
+ Без обработки ошибок, любая ошибка во время выполнения, возникает неустранимая: отображается сообщение об ошибке, и выполнение будет остановлено.  
   
  По возможности рекомендуется использовать структурированных исключений в коде обработку, вместо использования неструктурированной обработки исключений и `On Error` инструкции. Дополнительные сведения см. в разделе [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
