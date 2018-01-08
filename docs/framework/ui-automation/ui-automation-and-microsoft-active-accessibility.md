@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: dd3adbeebc0cc2a9e201bbe6492eb311f18a711d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b826bff9f16dcd564e9b5bd91aab8b2170db6ce3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Модель автоматизации пользовательского интерфейса и Microsoft Active Accessibility
 > [!NOTE]
@@ -170,7 +171,7 @@ ms.lasthandoff: 10/18/2017
   
  Следующие состояния либо не реализованы большинством серверов управления [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] , либо не имеют эквивалента в [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
-|Состояние[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] |Заметки|  
+|Состояние[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] |Примечания|  
 |-----------------------------------------------------------------------|-------------|  
 |STATE_SYSTEM_BUSY|Недоступно в [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |STATE_SYSTEM_DEFAULT|Недоступно в [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
@@ -236,8 +237,8 @@ ms.lasthandoff: 10/18/2017
 |EVENT_SYSTEM_MINIMIZESTART|Изменение свойства<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty> |  
 |EVENT_SYSTEM_MOVESIZEEND|Изменение свойства<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> |  
 |EVENT_SYSTEM_MOVESIZESTART|Изменение свойства<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> |  
-|EVENT_SYSTEM_SCROLLINGEND|Изменение свойства<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> или <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> |  
-|EVENT_SYSTEM_SCROLLINGSTART|Изменение свойства<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> или <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> |  
+|EVENT_SYSTEM_SCROLLINGEND|Изменение свойства<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> или <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty>|  
+|EVENT_SYSTEM_SCROLLINGSTART|Изменение свойства<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> или <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty>|  
 |EVENT_SYSTEM_SOUND|Эквивалент отсутствует|  
 |EVENT_SYSTEM_SWITCHEND|Нет эквивалента, но событие <xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent> сигнализирует, что новое приложение получило фокус|  
 |EVENT_SYSTEM_SWITCHSTART|Эквивалент отсутствует|  

@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 12b0317503a907700099b1594b8b33799938f752
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b6524f0e32d5876851ce89b01a439ed1d1d09da3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Практическое руководство. Включение обнаружения повтора сообщений
 Атака воспроизведения заключается в том, что злоумышленник копирует поток сообщений между двумя сторонами и воспроизводит его для одной или нескольких сторон. Если не приняты ответные меры, атакованные компьютеры обрабатывают этот поток как надлежащие сообщения, что приводит к ряду негативных последствий, таких как повторные заказы одного элемента.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/02/2017
   
 2.  С помощью свойства <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> получите ссылку на класс <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> и задайте некоторые из следующих свойств согласно необходимости:  
   
-    1.  `DetectReplay`. Значение типа Boolean. Управляет тем, пытается ли клиент обнаружить воспроизведение сообщений сервера. Значение по умолчанию — `true`.  
+    1.  `DetectReplay`. Значение типа Boolean. Управляет тем, пытается ли клиент обнаружить воспроизведение сообщений сервера. Значение по умолчанию — `true`.  
   
     2.  `MaxClockSkew`. Значение <xref:System.TimeSpan>. Задает максимальную разницу по времени, допускаемую механизмом обнаружения воспроизведения между клиентом и сервером. Механизм безопасности проверяет отправленную отметку времени и определяет, не слишком ли давно она отправлена. Значение по умолчанию — 5 минут.  
   
@@ -117,4 +118,4 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
  [Безопасные диалоги и безопасные сеансы](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)  
  [\<localClientSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)  
- [Как: Создание пользовательской привязки, с использованием элемента SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+ [Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

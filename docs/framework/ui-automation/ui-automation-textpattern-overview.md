@@ -17,11 +17,12 @@ caps.latest.revision: "38"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 56b0774db462c92c6ab0d66ab7158dcc01da0c9e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 610b2d44fca43f2745b7b423a5cdb73c5a7d74d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-textpattern-overview"></a>Общие сведения о TextPattern модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -116,7 +117,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="Glossary"></a>   
 ## <a name="textpattern-terminology"></a>Терминология TextPattern  
- **Атрибут**  
+ **Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))  
  Характеристика форматирования текстового диапазона (например, <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> или <xref:System.Windows.Automation.TextPattern.FontNameAttribute>).  
   
  **Вырожденный диапазон**  
@@ -142,6 +143,6 @@ ms.lasthandoff: 11/21/2017
  [Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
  [Общие сведения о дереве модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
  [Использование кэширования в модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [Поддержка шаблонов элементов управления в поставщике модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
  [Сопоставление шаблона элемента управления для клиентов автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
  [Платформа текстовых служб](http://msdn.microsoft.com/library/default.asp?url=/library/tsf/tsf/text_services_framework.asp)

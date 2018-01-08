@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5ce75aba79af617b7c3b342a25f2ac8f8ab0f672
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ae9ee83802b71eeab63fe5305b49d79a5cfaaf39
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Сортировка с использованием объекта DataView (LINQ to DataSet)
 Возможность сортировки данных на основе заданных критериев и их предоставление клиенту с помощью элемента управления в пользовательском интерфейсе - это важный аспект привязки данных. Объект <xref:System.Data.DataView> предоставляет несколько способов сортировки и возврата строк данных, упорядоченных по определенным критериям. В дополнение к основе строк возможностей, сортировки <xref:System.Data.DataView> также позволяет использовать [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] выражения для условия сортировки. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]выражения позволяют выполнять гораздо более сложные и мощные операции сортировки, чем сортировка на основе строки. В этом разделе описываются оба подхода к сортировке с помощью объекта <xref:System.Data.DataView>.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[DP DataView Samples#CreateLDVFromQueryOrderBy](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromqueryorderby)]  
   
 ### <a name="example"></a>Пример  
- В следующем примере выполняется запрос к таблице SalesOrderHeader, а полученные строки упорядочиваются по общей стоимости; на основе этого запроса создается объект <xref:System.Data.DataView> и привязывается к <xref:System.Data.DataView><xref:System.Windows.Forms.BindingSource>.  
+ В следующем примере запрашивает таблицу SalesOrderHeader и упорядочивает возвращенную строку по Итого к оплате; Создает <xref:System.Data.DataView> из запроса; и привязывает <xref:System.Data.DataView> для <xref:System.Windows.Forms.BindingSource>.  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryOrderBy2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromqueryorderby2)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryOrderBy2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromqueryorderby2)]  
