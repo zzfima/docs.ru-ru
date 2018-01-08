@@ -17,11 +17,12 @@ caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6da580d208736a64e2094f701fb4c1241a488322
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e92bc1ab55674a39331cef5d0450cd8e28ef55f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>Устранение рисков. Сериализация управляющих символов с помощью DataContractJsonSerializer
 
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/18/2017
 - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A>
 - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A>
 
-## <a name="mitigation"></a>Уменьшение
+## <a name="mitigation"></a>Устранение рисков
 
 Для приложений, предназначенных для версий платформы .NET Framework, начиная с .NET Framework 4.7, такое поведение включено по умолчанию.
 

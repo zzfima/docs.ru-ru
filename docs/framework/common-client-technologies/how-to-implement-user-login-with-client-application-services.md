@@ -20,16 +20,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 909fbaa4e7dc1d384b5085d71cec346bde44cf14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2bf073b6db0a69cfda0c69ae34df0396f5dea35c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-user-login-with-client-application-services"></a>Практическое руководство. Реализация входа пользователя с помощью служб клиентских приложений
 Службы клиентских приложений можно использовать для проверки подлинности пользователей с помощью существующей службы профилей [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]. Сведения о настройке службы профилей [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] см. в разделе [Использование проверки подлинности с помощью форм в Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e).  
   
- В приведенных ниже процедурах описываются способы проверки пользователей с помощью службы проверки подлинности в случае, если приложение настроено на использование одного из поставщиков служб проверки подлинности клиента. Для получения дополнительной информации см. [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
+ В приведенных ниже процедурах описываются способы проверки пользователей с помощью службы проверки подлинности в случае, если приложение настроено на использование одного из поставщиков служб проверки подлинности клиента. Дополнительные сведения см. в разделе [Практическое руководство. Настройка служб клиентских приложений](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
   
  Все проверки обычно выполняются с помощью метода <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType> (`static`). Этот метод управляет взаимодействием со службой проверки подлинности посредством настроенного поставщика проверки подлинности. Дополнительные сведения см. в разделе [Общие сведения о службах клиентских приложений](../../../docs/framework/common-client-technologies/client-application-services-overview.md).  
   

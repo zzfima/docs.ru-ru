@@ -10,11 +10,12 @@ ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e6cea26c07bc9c9d7d8bd590e5fbb13cf6d01a9e
-ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+ms.workload: dotnet
+ms.openlocfilehash: 5875e5900f925e29fec303d276483947c994da8e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Версии и зависимости платформы .NET Framework
 В каждую версию платформы .NET Framework входит среда CLR, библиотеки базовых классов и другие управляемые библиотеки. В этом разделе описаны основные особенности различных версий платформы .NET Framework, приведены сведения о базовых версиях среды CLR и соответствующих средах разработки, а также указаны версии, устанавливаемые системой Windows.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/01/2017
 |3.0|2.0|– WPF, WCF, WF, CardSpace|-|✓ Vista|✓2008 R2 с пакетом обновления 1 (SP1)*<br />✓ 2008 с пакетом обновления 2 (SP2)\*<br />+ 2003|См. [инструкции](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
 |2.0|2.0|– Универсальные шаблоны<br />– Добавления ASP.NET<br />-   [Подробнее...](http://msdn.microsoft.com/library/t357fb32\(v=vs.80\).aspx)|2005|-|✓ 2008 R2 с пакетом обновления 1 (SP1)<br />✓ 2008 с пакетом обновления 2 (SP2)<br />✓ 2003|См. [инструкции](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
 |1.1|1.1|– Обновления ASP.NET и ADO.NET<br />– Параллельное выполнение<br />-   [Подробнее...](http://msdn.microsoft.com/library/9wtde3k4\(v=vs.80\).aspx)|2003|-|✓ 2003|См. [инструкции](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
-|1,0|1,0|Первая версия .NET Framework.|Visual Studio .NET|-|-|См. [инструкции](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
+|1.0|1.0|Первая версия .NET Framework.|Visual Studio .NET|-|-|См. [инструкции](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
   
  Как правило, не требуется удалять какие-либо версии .NET Framework, уже установленные на вашем компьютере, потому что используемое приложение может зависеть от конкретной версии. В случае удаления какой-либо версии его исполнение может завершиться ошибкой. Можно загружать несколько версий платформы .NET Framework на одном компьютере одновременно. Это значит, что можно установить платформу .NET Framework без удаления предыдущих версий. Дополнительные сведения см. в разделе [Начало работы](../../../docs/framework/get-started/index.md).  
   

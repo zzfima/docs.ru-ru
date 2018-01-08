@@ -15,11 +15,11 @@ ms.assetid: 8371ce2c-e1c7-476b-a86d-9afc2614b6b7
 caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6939dee58051e9a97fa704f063f35ff0ac440036
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a58ce248404bfe4d6c55bba741b332acd7fcbf5c
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>Практическое руководство. Получение строк из последовательных портов в Visual Basic
 В этом разделе описывается, как использовать `My.Computer.Ports` для получения строк из последовательных портов компьютера в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  Определите, какой последовательный порт должен предоставлять строки. В этом примере предполагается, что это `COM1`.  
   
-3.  Воспользуйтесь методом `My.Computer.Ports.OpenSerialPort`, чтобы получить ссылку на порт. Для получения дополнительной информации см. <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+3.  Воспользуйтесь методом `My.Computer.Ports.OpenSerialPort`, чтобы получить ссылку на порт. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
      Блок `Try...Catch...Finally` позволяет приложению закрыть последовательный порт даже в том случае, если он создает исключение. В этом блоке должен отображаться весь код, управляющий последовательным портом.  
   
@@ -42,11 +42,11 @@ ms.lasthandoff: 11/21/2017
   
      [!code-vb[VbVbalrMyComputer#40](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_3.vb)]  
   
-5.  Используйте метод <xref:System.IO.Ports.SerialPort.ReadLine%2A> для чтения следующей доступной строки текста из последовательного порта.  
+5.  Используйте метод <xref:System.IO.Ports.SerialPort.ReadLine> для чтения следующей доступной строки текста из последовательного порта.  
   
      [!code-vb[VbVbalrMyComputer#41](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_4.vb)]  
   
-6.  С помощью оператора `If` проверьте, возвращает ли метод <xref:System.IO.Ports.SerialPort.ReadLine%2A> значение `Nothing` (которое означает, что больше нет доступного текста). Если он возвращает `Nothing`, завершите цикл `Do`.  
+6.  С помощью оператора `If` проверьте, возвращает ли метод <xref:System.IO.Ports.SerialPort.ReadLine> значение `Nothing` (которое означает, что больше нет доступного текста). Если он возвращает `Nothing`, завершите цикл `Do`.  
   
      [!code-vb[VbVbalrMyComputer#42](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_5.vb)]  
   

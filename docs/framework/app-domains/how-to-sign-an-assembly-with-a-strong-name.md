@@ -22,11 +22,12 @@ caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: babd0f6a9b1babf02677d6c6c41c664e0a6541b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6fe5fbb5299c8e9c130538f99fe13081f8f26a55
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Практическое руководство. Подписание сборки строгим именем
 Существует несколько способов подписать сборку строгим именем:  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  Перейдите на вкладку **Подписывание** .  
   
-3.  Выберите поле **Подписать сборку**.  
+3.  Выберите поле **Подписать сборку** .  
   
 4.  В поле **Выберите файл ключей строгого имени** нажмите **\<Обзор…>**, после чего выберите файл ключей. Чтобы создать новый файл ключей, выберите **\<Создать…>** и введите его имя в диалоговом окне **Создание ключа строгого имени**.  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/21/2017
   
      **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
   
-     где:  
+     Здесь:  
   
      *имя_сборки*  
      Имя строго подписанной сборки (файл DLL или EXE), которая будет создана компоновщиком сборок.  

@@ -26,11 +26,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 99d8da622b23a98b8a48ad6fcdb82c270d24ed22
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2c6ace8f34999a6d98fc6784dd21ce88baf2af42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reflection-and-generic-types"></a>Отражение и универсальные типы
 <a name="top"></a> С точки зрения отражения различие между универсальным типом и обычным заключается в том, что с универсальным типом связан набор параметров типа (если это определение универсального типа) или аргументы типа (если это сконструированный тип). Универсальный метод отличается от обычного тем же.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/18/2017
   
  Пример кода, демонстрирующий описанные здесь методы, см. в статье [Практическое руководство. Изучение универсальных типов и создание их экземпляров с помощью отражения](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md).  
   
- В следующем обсуждении предполагается, что вы знакомы с терминологией универсальности, то есть понимаете различия между параметрами типа и аргументами, а также открытыми и закрытыми сконструированными типами. Дополнительные сведения см. в разделе [Универсальные типы](../../../docs/standard/generics/index.md).  
+ В следующем обсуждении предполагается, что вы знакомы с терминологией универсальности, то есть понимаете различия между параметрами типа и аргументами, а также открытыми и закрытыми сконструированными типами. Дополнительные сведения см. в статье [Универсальные шаблоны](../../../docs/standard/generics/index.md).  
   
  Этот обзор состоит из следующих разделов.  
   
@@ -153,9 +154,9 @@ generic<typename V, typename W> ref class D : B<int, V> {};
  [К началу](#top)  
   
 <a name="related_topics"></a>   
-## <a name="related-topics"></a>Связанные разделы  
+## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание|  
+|Заголовок|Описание:|  
 |-----------|-----------------|  
 |[Практическое руководство. Изучение универсальных типов и создание их экземпляров с помощью отражения](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|Показано использование свойств и методов <xref:System.Type> и <xref:System.Reflection.MethodInfo> для изучения универсальных типов.|  
 |[Универсальные шаблоны](../../../docs/standard/generics/index.md)|Описана универсальность и поддержка этой технологии в .NET Framework.|  

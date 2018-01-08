@@ -7,17 +7,18 @@ ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: b2b625729b5db22bc7b69194f20963857004e3e7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 403dc2262e2aba29fc432581a4b325092cdfb25e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-build"></a>dotnet-build
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Имя
+## <a name="name"></a>name
 
 `dotnet build` — собирает проект и все его зависимости.
 
@@ -35,7 +36,7 @@ dotnet build [-h|--help]
 ```
 ---
 
-## <a name="description"></a>Описание
+## <a name="description"></a>Описание:
 
 Команда `dotnet build` выполняет сборку проекта и его зависимостей в набор двоичных файлов. Эти двоичные файлы содержат код проекта в виде файлов на промежуточном языке с расширением *DLL*, а также файлы символов для отладки с расширением *PDB*. Создается JSON-файл зависимостей (*\*.deps.json*), содержащий список зависимостей приложения. Создает файл *\*.runtimeconfig.json*, указывающий общую среду выполнения и ее версию для приложения.
 

@@ -14,16 +14,16 @@ ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e71e70734de24dab62f7fbad4359e3040d1cba51
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: e50a1e1e849052dbc5da62f434539fab478bd26d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-the-computer39s-ports-visual-basic"></a>Доступ к портам компьютера (Visual Basic)
 Объект `My.Computer.Ports` предоставляет свойство и метод для доступа к последовательным портам компьютера.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Отображение доступных последовательных портов](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
  Демонстрация отображения доступных последовательных портов.  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 10/22/2017
  <xref:Microsoft.VisualBasic.Devices.Ports>  
  Описание объекта `My.Computer.Ports` и его членов.  
   
- <xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames%2A>  
+ <xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames>  
  Описание свойства `SerialPortNames`, которое получает коллекцию имен последовательных портов на компьютере.  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>  

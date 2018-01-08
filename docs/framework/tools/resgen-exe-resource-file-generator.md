@@ -26,11 +26,12 @@ caps.latest.revision: "46"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c9ece6deab2fa414861bdb7c76a2093464156395
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ca54817183b5e659b62ef04b1693698bd689370b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (генератор файлов ресурсов)
 Генератор файлов ресурсов (Resgen.exe) преобразует текстовые файлы (TXT или RESTEXT) и файлы ресурсов на основе XML (RESX) в двоичные файлы среды CLR (RESOURCES), которые можно внедрить в двоичный исполняемый файл среды выполнения или вспомогательную сборку. (См. раздел [Создание файлов ресурсов](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
@@ -79,7 +80,7 @@ resgen filename.extension [outputDirectory]
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр или ключ|Описание|  
+|Параметр или ключ|Описание:|  
 |-------------------------|-----------------|  
 |`/define:` *symbol1*[, *symbol2*,...]|Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], поддерживается условная компиляция в файлы ресурсов на основе текста (TXT или RESTEXT). Если *symbol* соответствует символу, включенному во входной текстовый файл в конструкции `#ifdef`, соответствующий строковый ресурс включается в RESOURCES-файл. Если входной текстовый файл содержит оператор `#if !` с символом, который не определен ключом `/define`, соответствующий строковый ресурс включается в файл ресурсов.<br /><br /> Параметр `/define` игнорируется, если он применяется для нетекстовых файлов. В символах учитывается регистр.<br /><br /> Дополнительные сведения об этом параметре см. в разделе [Условная компиляция ресурсов](#Conditional) ниже.|  
 |`useSourcePath`|Задает использование текущего каталога входного файла для разрешения относительных путей к файлам.|  

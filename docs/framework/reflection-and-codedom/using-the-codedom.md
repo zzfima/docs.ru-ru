@@ -31,11 +31,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 939a64919e9982232f6e8bd99070fe96e242b9bd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0bb3ab57d78e1a7b6d53261af50d4698ab1a4ff2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-codedom"></a>Использование CodeDOM
 CodeDOM содержит типы, представляющие многие общие типы элементов исходного кода. Вы можете разработать программу, которая будет строить модель исходного кода, используя элементы CodeDOM для создания графа объектов. Этот граф объектов может быть воспроизведен в виде исходного кода с помощью генератора кода CodeDOM для поддерживаемого языка программирования. CodeDOM можно также использовать для компиляции исходного кода в двоичную сборку.  

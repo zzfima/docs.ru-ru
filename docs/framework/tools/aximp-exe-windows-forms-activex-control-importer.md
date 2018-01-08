@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 61f0fc0a157e80499bbc4da4d99bcd6ed15ddefd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ebde5bd48b02c20f7d607ebcda2b18ed0830c569
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (программа импорта элементов ActiveX форм Windows)
 Программа для импорта элементов управления ActiveX преобразует определения типов в библиотеке типов COM для элемента управления ActiveX в элемент управления Windows Forms.  
@@ -44,11 +45,11 @@ aximp [options]{file.dll | file.ocx}
   
 ## <a name="remarks"></a>Примечания  
   
-|Аргумент|Описание|  
+|Аргумент|Описание:|  
 |--------------|-----------------|  
 |*file*|Имя исходного файла, содержащего преобразуемый элемент управления ActiveX. Аргумент файла должен иметь расширение DLL или OCX.|  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
 |`/delaysign`|Указывает программе Aximp.exe подписывать полученный элемент управления отложенной подписью. Этот параметр необходимо задавать вместе с параметром `/keycontainer:`, `/keyfile:` или `/publickey:`. Дополнительные сведения о процессе отложенной подписи см. в разделе [Отложенная подпись сборки](../../../docs/framework/app-domains/delay-sign-assembly.md).|  
 |`/help`|Отображает синтаксис команд и параметров программы.|  

@@ -14,11 +14,11 @@ ms.assetid: 6d31a3d2-d860-459d-9d13-3aa192d62ba2
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c4d46bbd3e432e2551c60f9e2996cadeda39c8d7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: e36652e50a9708ef523babde9372702dfcc3829c
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-the-mouse-visual-basic"></a>Доступ к мыши (Visual Basic)
 Объект `My.Computer.Mouse` предоставляет способ поиска сведений о компьютерной мыши компьютера, таких как ее наличие, количество кнопок и информация о колесике мыши.  
@@ -26,11 +26,11 @@ ms.lasthandoff: 10/22/2017
 ## <a name="remarks"></a>Примечания  
  В этой таблице перечислены задачи, связанные с объектом `My.Computer.Mouse`, и разделы, в которых демонстрируется их выполнение.  
   
-|Целевой тип|См.|  
+|Кому|См.|  
 |--------|---------|  
-|Определяет, есть ли у мыши колесо прокрутки.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists%2A>|  
-|Определяет, не поменяли ли левую и правую кнопки мыши местами.|<xref:Microsoft.VisualBasic.Devices.Mouse.ButtonsSwapped%2A>|  
-|Определяет длину прокрутки при повороте колесика мыши на одно деление.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines%2A>|  
+|Определяет, есть ли у мыши колесо прокрутки.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists>|  
+|Определяет, не поменяли ли левую и правую кнопки мыши местами.|<xref:Microsoft.VisualBasic.Devices.Mouse.ButtonsSwapped>|  
+|Определяет длину прокрутки при повороте колесика мыши на одно деление.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines>|  
   
 ## <a name="see-also"></a>См. также  
  <xref:Microsoft.VisualBasic.Devices.Mouse>

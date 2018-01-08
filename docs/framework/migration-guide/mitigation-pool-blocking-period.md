@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8749e2d7b91e611ee153c6f36708fa34a44ecccd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 42eaddeb2714a8c294f45d24eb7e6d9cf216fecc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mitigation-pool-blocking-period"></a>Устранение рисков: период блокировки пула
 Период блокировки пула подключений был удален для подключений к базам данных Azure SQL.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="impact"></a>Последствия  
  Это изменение позволяет немедленно повторять попытку открытого подключения к базам данных Azure SQL, повышая тем самым производительность облачных приложений.  
   
-## <a name="mitigation"></a>Уменьшение  
+## <a name="mitigation"></a>Устранение рисков  
  Для приложений, на которые это изменение оказывает существенное влияние, можно отдельно настроить интервал блокировки пула подключений, задав новое свойство <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A>.  Значение этого свойства является членом перечисления <xref:System.Data.SqlClient.PoolBlockingPeriod?displayProperty=nameWithType>, которое принимает одно из трех значений:  
   
 -   `PoolBlockingPeriod.AlwaysBlock` 

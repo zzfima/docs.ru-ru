@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ddbbf9fda01328986bf586203116fdabbcd9b55e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8903f7da1c945ff927ad6dfe0a92650849a36439
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-view-assembly-contents"></a>Практическое руководство. Просмотр содержимого сборок
 Можно использовать [Ildasm.exe (дизассемблер IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) для просмотра сведений промежуточного языка MSIL в файле. Если анализируемый файл является сборкой, то эти данные могут включать в себя атрибуты сборки, а также ссылки на другие модули и сборки. Эти данные полезны для определения того, является ли файл сборкой или частью сборки и имеет ли он ссылки на другие модули и сборки.  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/21/2017
   
  В следующей таблице описаны все директивы в манифесте сборки Hello.exe, используемой в этом примере.  
   
-|Директива|Описание|  
+|Директива|Описание:|  
 |---------------|-----------------|  
 |**.assembly extern \<** *имя_сборки* **>**|Определяет другую сборку, содержащую элементы, на которые имеются ссылки в текущем модуле (в этом примере — `mscorlib`).|  
 |**.publickeytoken \<** *маркер* **>**|Определяет маркер действующего ключа сборки, на которую имеется ссылка.|  

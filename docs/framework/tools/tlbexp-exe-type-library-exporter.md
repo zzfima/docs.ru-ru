@@ -19,11 +19,12 @@ caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6bee059891cb2e0d572d97823ec6b1f8b29a4238
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a76d85fa19fc7869ff4298867286592583e86a12
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (программа экспорта библиотек типов)
 Программа экспорта библиотек типов создает библиотеку типов, описывающую типы, определенные в сборке среды CLR.  
@@ -40,11 +41,11 @@ tlbexp assemblyName [options]
   
 #### <a name="parameters"></a>Параметры  
   
-|Аргумент|Описание|  
+|Аргумент|Описание:|  
 |--------------|-----------------|  
 |*имя_сборки*|Сборка, для которой экспортируется библиотека типов.|  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
 |**/asmpath:** *directory*|Задает место поиска сборок. При использовании этого параметра необходимо явно указать места поиска указанных сборок, включая текущий каталог.<br /><br /> При использовании параметра **asmpath** программа экспорта библиотек типов не будет искать сборку в глобальном кэше сборок.|  
 |**/help**|Отображает синтаксис команд и параметров программы.|  

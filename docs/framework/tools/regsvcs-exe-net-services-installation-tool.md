@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ddd937ec891f5e00410b74fffd152e23431652f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dd7f50d591232feda0259ecefdb5b9e39514ccb2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (программа установки служб .NET)
 Программа установки служб .NET выполняет следующие действия.  
@@ -49,11 +50,11 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="parameters"></a>Параметры  
   
-|Аргумент|Описание|  
+|Аргумент|Описание:|  
 |--------------|-----------------|  
 |*assemblyFile.dll*|Исходный файл сборки. Сборка должна быть подписана с использованием строгого имени. Дополнительные сведения см. в разделе [Подпись сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).|  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
 |**/appdir:** *path*|Определяет корневой каталог приложения.|  
 |**/appname:** *applicationName*|Задает имя приложения COM+, которое следует найти или создать.|  

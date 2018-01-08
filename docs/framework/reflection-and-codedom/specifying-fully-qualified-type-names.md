@@ -26,11 +26,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6759e7b62f4083f6d53663385398baf098f2676f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e19aebbeee7fd65e27704af49185a1b8d48b9639
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Указание полных имен типов
 Для выполнения различных операций отражения необходимо задавать имена типов. Полное имя типа состоит из спецификации имени сборки, спецификации пространства имен и имени типа. Спецификации имен типов используются такими методами, как <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> и <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.  
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="specifying-assembly-names"></a>Указание имен сборок  
  Единственным обязательным компонентом спецификации имени сборки является текстовое имя сборки (IDENTIFIER). За ним может следовать список разделенных запятыми пар "свойство/значение", как показано в таблице ниже. Имя IDENTIFIER должно удовлетворять правилам именования файлов. Регистр символов в имени IDENTIFIER не учитывается.  
   
-|Имя свойства.|Описание|Допустимые значения|  
+|Имя свойства.|Описание:|Допустимые значения|  
 |-------------------|-----------------|----------------------|  
 |**Версия**|Номер версии сборки|*Major.Minor.Build.Revision*, где *Major*, *Minor*, *Build* и *Revision* являются целочисленными значениями в диапазоне от 0 до 65 535 включительно.|  
 |**PublicKey**|Полный открытый ключ|Строковое значение полного открытого ключа в шестнадцатеричном формате. Чтобы явным образом описать сборку как закрытую, необходимо задать пустую ссылку (**Nothing** в Visual Basic).|  

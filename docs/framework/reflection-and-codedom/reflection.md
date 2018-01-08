@@ -32,11 +32,12 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7c2d95bfae212f658945904a647885ebd303cbc7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: df2f376da61f49bd00ea39783bc62015b31ba402
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reflection-in-the-net-framework"></a>Отражение в .NET Framework
 Классы в пространстве имен <xref:System.Reflection> вместе с <xref:System.Type?displayProperty=nameWithType> позволяют получить информацию о загруженных [сборках](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) и типах, определенных в них, таких как [классы](http://msdn.microsoft.com/en-us/ad7d3561-271e-4546-82fc-e00b059f27a9), [интерфейсы](http://msdn.microsoft.com/en-us/fd9d5975-5363-4bc9-b883-609f887895e5) и [типы значений](http://msdn.microsoft.com/en-us/c9c567f8-8ab1-4d88-834d-00f7d92418de). Отражение можно также использовать для создания экземпляров типов во время выполнения, для вызова этих экземпляров и получения доступа к ним. Разделы, в которых описываются отдельные аспекты отражения, можно найти в подразделе [Связанные подразделы](#related_topics) в конце этого обзора.  
@@ -79,7 +80,7 @@ ms.lasthandoff: 10/18/2017
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание|  
+|Заголовок|Описание:|  
 |-----------|-----------------|  
 |[Просмотр сведений о типах](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|Описывается класс <xref:System.Type> и приводятся примеры кода, иллюстрирующие использование <xref:System.Type> с несколькими классами отражения для получения информации о конструкторах, методах, полях, свойствах и событиях.|  
 |[Отражение и универсальные типы](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)|Объясняется обработка отражением параметров и аргументов типа для универсальных типов и методов.|  

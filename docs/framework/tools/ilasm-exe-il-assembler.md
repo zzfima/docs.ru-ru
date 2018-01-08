@@ -22,11 +22,12 @@ caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4b95f3d70c7329efd1affcb333ac6eee08cc29d3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2507acc7ddf41d921af0b86622b1e85208191767
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (ассемблер IL)
 
@@ -44,11 +45,11 @@ ilasm [options] filename [[options]filename...]
 
 #### <a name="parameters"></a>Параметры
 
-| Аргумент | Описание |
+| Аргумент | Описание: |
 | -------- | ----------- |
 |`filename`|Имя исходного файла с расширением IL. В этом файле содержатся директивы объявления метаданных и символические инструкции IL. Программа *Ilasm.exe* может создать один PE-файл из нескольких исходных файлов, для чего следует указать несколько аргументов исходных файлов. **Примечание.** Убедитесь, что последняя строка кода в исходном IL-файле имеет либо конечный пробел, либо символ конца строки.|
 
-| Параметр | Описание |
+| Параметр | Описание: |
 | ------ | ----------- |
 |**/32bitpreferred**|Создает предпочтительно 32-разрядный образ (PE32).|
 |**/alignment:** `integer`|Параметр `integer` задает значение "FileAlignment" в необязательном заголовке NT. Если в файле указана IL-директива ALIGNMENT, этот параметр ее переопределяет.|
