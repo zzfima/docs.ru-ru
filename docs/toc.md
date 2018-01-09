@@ -257,6 +257,7 @@
 ### [Взаимодействие на уровне машинного кода](csharp/programming-guide/interop/index.md)
 ### [Документирование кода](csharp/codedoc.md)
 ### [Управление версиями](csharp/versioning.md)
+## [Практические руководства по языку C#](csharp/how-to/index.md)
 <!-- End of C# Concepts section -->
 ## [Пакет SDK для платформы компилятора .NET (API-интерфейсы Roslyn)](csharp/roslyn-sdk/)
 ## [Руководство по программированию на C#](csharp/programming-guide/)
