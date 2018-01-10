@@ -17,18 +17,18 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: dotnet
-ms.openlocfilehash: 7765779187156866c20374b60a4b541d36ac9a5b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3b56d61593aed1a0cdce2fd45d902d9f4ac00cda
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Интеграция System.Transactions с SQL Server
 Платформа [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 2.0 включает новую платформу транзакций, к которой можно обращаться через пространство имен <xref:System.Transactions> . Возможности работы с транзакциями в этой платформе полностью интегрированы с [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], включая [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
  Помимо расширенных возможностей программирования, пространство имен <xref:System.Transactions> и [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] можно использовать вместе, чтобы координировать оптимизацию при работе с транзакциями. Повышаемая транзакция — это упрощенная (локальная) транзакция, которая по необходимости может быть автоматически повышена до полностью распределенной транзакции.  
   
- Начиная с [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, объект <xref:System.Data.SqlClient> поддерживает при работе с [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]повышаемые транзакции. Повышаемая транзакция не вызывает дополнительную нагрузку распределенной транзакции, если таковая не требуется. Повышаемые транзакции являются автоматическими, они не требуют вмешательства разработчика.  
+ Начиная с [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, объект <xref:System.Data.SqlClient> поддерживает при работе с [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]повышаемые транзакции. Повышаемая транзакция не вызывает дополнительную нагрузку распределенной транзакции, если таковая не требуется. Повышаемые транзакции являются автоматическими и не требуют вмешательства разработчика.  
   
  Повышаемые транзакции доступны только при использовании поставщика данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для SQL Server (`SqlClient`) в сочетании с [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
   

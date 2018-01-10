@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6dccf9d70772c4eaa8818388ad662b1f93804431
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f11daa93aa4e1cbddd0fa0e9f065295f42c820d5
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Поддержка приложений для Магазина Windows и среды выполнения Windows в .NET Framework
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] поддерживает несколько способов разработки программного обеспечения для [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Эти способы можно разделить на три категории.  
@@ -160,5 +160,5 @@ ms.lasthandoff: 12/23/2017
 |[Схема создания приложений для магазина Windows с помощью C# или Visual Basic](http://go.microsoft.com/fwlink/p/?LinkId=242212)|Предоставляет основные ресурсы, помогающие начать разрабатывать приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] с помощью C# или Visual Basic, а также многие разделы краткого руководства, правила и рекомендации. (В Центре разработки для Windows.)|  
 |[Разработка приложений для магазина Windows (VB / C# и C++ и XAML)](http://go.microsoft.com/fwlink/p/?LinkId=238311)|Предоставляет основные ресурсы, помогающие начать разрабатывать приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] с помощью C# или Visual Basic, а также многие разделы краткого руководства, правила и рекомендации. (В Центре разработки для Windows.)|  
 |[Создание компонентов среды выполнения Windows на C# и Visual Basic](http://go.microsoft.com/fwlink/p/?LinkId=238313)|Описывает процесс создания компонента [!INCLUDE[wrt](../../../includes/wrt-md.md)] с помощью платформы .NET Framework, объясняет, как использовать его как часть приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], созданного для Windows с использованием JavaScript, а также описывает процесс отладки с помощью Visual Studio. (В Центре разработки для Windows.)|  
-|[Ссылки среды выполнения Windows](http://go.microsoft.com/fwlink/?LinkId=238319)|Справочная документация по [!INCLUDE[wrt](../../../includes/wrt-md.md)]. (В Центре разработки для Windows.)|  
+|[Ссылки среды выполнения Windows](/uwp/api/)|Справочная документация по [!INCLUDE[wrt](../../../includes/wrt-md.md)]. (В Центре разработки для Windows.)|  
 |[Передача URI в среду выполнения Windows](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|Описывает проблемы, которые могут возникнуть при передаче адреса URI из управляемого кода в [!INCLUDE[wrt](../../../includes/wrt-md.md)], а также содержит сведения о способах их устранения.|
