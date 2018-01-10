@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 88f1a22fc15e85e687c7b7eeb0a6e01445277d09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b603599232a5cb4d33e2b7c9ad00e7ab3a24649
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="binding-sources-overview"></a>Общие сведения об источниках привязки
 В привязке данных объект источника привязки (источник) ссылается на объект, из которого вы получаете данные. В этом разделе рассматриваются типы объектов, которые можно использовать в качестве источника привязки.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 |динамические объекты|Можно привязать к доступные свойства и индексаторы объект, реализующий интерфейс <xref:System.Dynamic.IDynamicMetaObjectProvider> интерфейс. Если можно обратиться к члену кода, к нему можно выполнить привязку. Например, если динамический объект позволяет получить доступ к члену в коде с помощью `someObjet.AProperty`, к нему можно выполнить привязку, задав в качестве пути привязки `AProperty`.|  
 |Объекты [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)].|Можно привязать к [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] объекты, такие как <xref:System.Data.DataTable>. [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] <xref:System.Data.DataView> Реализует <xref:System.ComponentModel.IBindingList> интерфейс, который предоставляет уведомления об изменениях, которые механизм привязки прослушивает.|  
 |Объекты [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].|Можно привязать к и запустить `XPath` запросы на <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>, или <xref:System.Xml.XmlElement>. Удобный способ доступа к [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] данных, являющийся источником привязки в разметке заключается в использовании <xref:System.Windows.Data.XmlDataProvider> объекта. Дополнительные сведения см. в разделе [Привязка к XML-данным с помощью XMLDataProvider и запросов XPath](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> Также можно привязать к <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XDocument>, или выполнить привязку для результатов запросов, выполняемых для объектов этих типов с помощью LINQ to XML. Удобный способ использования LINQ to XML для доступа к данным XML, который является источником привязки в разметке, — использовать <xref:System.Windows.Data.ObjectDataProvider> объекта. Дополнительные сведения см. в разделе [Привязка к XDocument, XElement или LINQ для результатов запросов XML](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|  
-|Объекты <xref:System.Windows.DependencyObject>.|Можно привязать к propertiesof зависимостей любой <xref:System.Windows.DependencyObject>. Пример см. в разделе [Как привязать свойства двух элементов управления](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md).|  
+|Объекты <xref:System.Windows.DependencyObject>.|Можно привязать к свойствам зависимостей любых <xref:System.Windows.DependencyObject>. Пример см. в разделе [Как привязать свойства двух элементов управления](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md).|  
   
 <a name="classes"></a>   
 ## <a name="implementing-a-class-for-the-binding-source"></a>Использование класса в качестве источника привязки  
