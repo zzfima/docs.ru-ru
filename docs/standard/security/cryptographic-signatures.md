@@ -33,11 +33,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 866d31662b8ae7d5c887af7d86007cb93a57d88f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c4e460c11e0e78d56a54da1dd178b3f8e9f381b6
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cryptographic-signatures"></a>Криптографические подписи
 <a name="top"></a> Криптографические цифровые подписи используют алгоритмы с открытым ключом для обеспечения целостности данных. Если вы подписываете данные с помощью цифровой подписи, другая сторона может проверить подпись и убедиться в том, что данные поступили от вас и не были изменены после подписывания. Подробнее о цифровых подписях см. в разделе [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md).  
@@ -115,7 +115,7 @@ class Class1
 ### <a name="signing-xml-files"></a>Подписывание XML-файлов  
  .NET Framework предоставляет пространство имен <xref:System.Security.Cryptography.Xml> , которое позволяет подписывать XML. Подписывание XML имеет важное значение в случае, если вы хотите убедиться в том, что XML-файл исходит от конкретного источника. Например, если вы пользуетесь службой котировки акций, которая использует XML, вы можете проверить источник XML-файла, если он подписан.  
   
- Классы в этом пространстве имен следуют рекомендации консорциума W3C относительно синтаксиса и обработки XML-подписей [XML-Signature Syntax and Processing](http://go.microsoft.com/fwlink/?LinkId=136777) .  
+ Классы в этом пространстве имен следуют [XML-Signature Syntax and Processing рекомендация](http://www.w3.org/TR/xmldsig-core/) из консорциума W3c.  
   
  [К началу](#top)  
   

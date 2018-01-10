@@ -1,7 +1,7 @@
 ---
 title: "&lt;AppContextSwitchOverrides&gt; элемент"
 ms.custom: 
-ms.date: 10/17/2017
+ms.date: 01/08/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9cc68f4be869a4773b8a6b932d1f6363855fe584
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71888febdc42f0ee65bdcd55a761700eda065bc1
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; элемент
 Определяет один или несколько коммутаторов, используемых классом <xref:System.AppContext> для предоставления механизма отказа от новых функциональных возможностей.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  
@@ -79,6 +79,7 @@ ms.lasthandoff: 12/22/2017
 |`Switch.System.Activities.`<br/>`UseMD5CryptoServiceProviderForWFDebugger`|Если задано значение `false`, позволяет выполнить отладку рабочего процесса на основе XAML проектов с помощью Visual Studio, при включении FIPS. Без него <xref:System.NullReferenceException> вызывается в вызовы методов в сборке System.Activities.|.NET Framework 4.7|
 |`Switch.System.Activities.`<br/>`UseMD5ForWFDebugger`|Определяет, использует ли контрольная сумма для экземпляра рабочего процесса в отладчике MD5 или SHA1. | .NET Framework 4.7|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|Элементы управления ли <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> метод создает исключение при <xref:System.Drawing.Icon> наличии кадров PNG в объекте. Дополнительные сведения см. в разделе [Устранение рисков: кадры PNG кадров в объектах Icon](~/docs/framework/migration-guide/mitigation-png-frames-in-icon-objects.md).|.NET Framework 4.6|  
+|`Switch.System.Drawing.Printing.`</br>`OptimizePrintPreview`|Элементы управления ли производительность <xref:System.Windows.Forms.PrintPreviewDialog> оптимизирован для сетевых принтеров. Дополнительные сведения см. в разделе [Обзор элемента управления PrintPreviewDialog](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md).|.NET Framework 4.6|
 |`Switch.System.Globalization.NoAsyncCurrentCulture`|Управляет ли асинхронные операции не проходят из контекста вызывающего потока. Дополнительные сведения см. в разделе [CurrentCulture и CurrentUICulture проходят через задачи](~/docs/framework/migration-guide/retargeting/4.5.2-4.6.md#currentculture-and-currentuiculture-flow-across-tasks).|.NET Framework 4.6|  
 |`Switch.System.IdentityModel.`<br/>`DisableMultipleDNSEntriesInSANCertificate`|Элементы управления ли <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> метод пытается сопоставить тип утверждения только с последней записью DNS. Дополнительные сведения см. в разделе [Устранение рисков: метод X509CertificateClaimSet.FindClaims](~/docs/framework/migration-guide/mitigation-x509certificateclaimset-findclaims-method.md).|.NET Framework 4.6.1|  
 |`Switch.System.IO.BlockLongPaths`|Элементы управления ли пути длиной более `MAX_PATH` throw (260 символов) <xref:System.IO.PathTooLongException>. Дополнительные сведения см. в разделе [длинные пути поддержки](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#long-path-support).|.NET Framework 4.6.2|  
