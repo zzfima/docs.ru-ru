@@ -14,11 +14,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: d669152a699ae8586114a12ff46b49f41c6d4475
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e35f10071f8931c551645d4d07ca0f2113c52002
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="ltsecuritygt-of-ltcustombindinggt"></a>&lt;security&gt; для &lt;customBinding&gt;
 Задает параметры безопасности для пользовательской привязки.  
@@ -45,8 +45,7 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
    requireSecurityContextCancellation="Boolean"  
    requireSignatureConfirmation="Boolean"  
       securityHeaderLayout=  
-              "Strict/Lax/LaxTimestampFirst/LaxTimestampLast"  
-   includeTimestamp="Boolean">  
+              "Strict/Lax/LaxTimestampFirst/LaxTimestampLast">  
    <issuedTokenParameters />  
    <localClientSettings />  
    <localServiceSettings />  
@@ -65,13 +64,13 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
 |authenticationMode|Необязательно. Указывает режим проверки подлинности, используемый между инициатором и отвечающим устройством. Список значений приведен ниже.<br /><br /> Значение по умолчанию — `sspiNegotiated`.|  
 |defaultAlgorithmSuite|Необязательно. Задает алгоритмы шифрования сообщений и ключей. Алгоритмы и размеры ключей определяются классом <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Эти алгоритмы соответствуют алгоритмам, заданным в спецификации языка политики безопасности (WS-SecurityPolicy).<br /><br /> Допустимые значения приведены ниже. Значение по умолчанию — `Basic256`.<br /><br /> Этот атрибут используется при работе с другой платформой, которая использует набор алгоритмов, отличный от набора по умолчанию. При внесении изменений в параметры настройки необходимо знать о сильных и слабых сторонах соответствующих алгоритмов. Это атрибут типа <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.|  
 |includeTimestamp|Логическое значение, определяющее, включается ли в каждое сообщение отметка времени. Значение по умолчанию — `true`.|  
-|keyEntropyMode|Указывает способ вычисления ключей для защиты сообщений. Ключи могут быть основаны только на данных ключа клиента, только на данных ключа службы или на сочетании обоих типов данных. Допустимы следующие значения:<br /><br /> -   `ClientEntropy`: Сеансовый ключ основывается на данных ключа, предоставленных клиентом.<br />-   `ServerEntropy`: Сеансовый ключ основывается на данных ключа, предоставленных сервером.<br />-   `CombinedEntropy`: Сеансовый ключ основывается на данных ключа, предоставленных клиентом и службой.<br /><br /> Значение по умолчанию — `CombinedEntropy`.<br /><br /> Это атрибут типа <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
+|keyEntropyMode|Указывает способ вычисления ключей для защиты сообщений. Ключи могут быть основаны только на данных ключа клиента, только на данных ключа службы или на сочетании обоих типов данных. Допустимы следующие значения:<br /><br /> -   `ClientEntropy`: Сеансовый ключ основывается на данных ключа, предоставленных клиентом.<br />-   `ServerEntropy`: Сеансовый ключ основывается на данных ключа, предоставленных сервером.<br />-   `CombinedEntropy`: Сеансовый ключ основывается на данных ключа, предоставленных клиентом и службой.<br /><br /> Значение по умолчанию — `CombinedEntropy`.<br /><br /> Это атрибут типа <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
 |messageProtectionOrder|Определяет порядок, в котором к сообщению применяются алгоритмы безопасности уровня сообщения. Допустимы следующие значения:<br /><br /> -   `SignBeforeEncrypt`: Сначала подпись, затем шифрование.<br />-   `SignBeforeEncryptAndEncryptSignature`: Сначала подпись, шифрование, затем шифрование сигнатуры.<br />-   `EncryptBeforeSign`: Сначала шифрование, затем входа.<br /><br /> Значение по умолчанию зависит от используемой версии WS-Security. Значение по умолчанию - `SignBeforeEncryptAndEncryptSignature`, если используется WS-Security 1,1. Значение по умолчанию - `SignBeforeEncrypt`, если используется WS-Security 1.0.<br /><br /> Это атрибут типа <xref:System.ServiceModel.Security.MessageProtectionOrder>.|  
 |messageSecurityVersion|Необязательно. Задает используемую версию WS-Security. Допустимы следующие значения:<br /><br /> -Wssecurity11wstrustfebruary2005wssecureconversationfebruary2005wssecuritypolicy11, которое<br />-WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br />-WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br /><br /> Значение по умолчанию - WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11, которое может быть выражено в формате XML просто как `Default`. Это атрибут типа <xref:System.ServiceModel.MessageSecurityVersion>.|  
 |requireDerivedKeys|Логическое значение, которое указывает, могут ли ключи быть производными от исходных ключей проверки. Значение по умолчанию — `true`.|  
 |requireSecurityContextCancellation|Необязательно. Логическое значение, определяющее, следует ли отменять и завершать контекст безопасности, когда он больше не нужен. Значение по умолчанию — `true`.|  
 |requireSignatureConfirmation|Необязательно. Логическое значение, определяющее, включено ли подтверждение сигнатуры WS-Security. Если установлено значение `true`, то сигнатуры сообщений подтверждаются респондентом.  Если пользовательская привязка настроена для использования взаимных сертификатов или выданных маркеров (привязки WSS 1.1), то этот атрибут имеет значение по умолчанию `true`. В противном случае значением по умолчанию будет `false`.<br /><br /> Подтверждение сигнатуры используется для подтверждения того, что служба отвечает, получив запрос полностью.|  
-|securityHeaderLayout|Необязательно. Определяет порядок расположения элементов в заголовке безопасности. Допустимы следующие значения:<br /><br /> -   `Strict`: Элементы добавляются в заголовок безопасности в соответствии с общим принципом «объявить перед использованием».<br />-   `Lax`: Элементы добавляются в заголовок безопасности в любом порядке, отвечающем WSS: SOAP Message security.<br />-   `LaxWithTimestampFirst`: Элементы добавляются в заголовок безопасности в любом порядке, отвечающем WSS: SOAP Message security за исключением того, что первый элемент в заголовке безопасности должен быть элемент wsse: timestamp.<br />-   `LaxWithTimestampLast`: Элементы добавляются в заголовок безопасности в любом порядке, отвечающем WSS: SOAP Message security за исключением того, что последним элементом в заголовке безопасности должен быть элемент wsse: timestamp.<br /><br /> Значение по умолчанию — `Strict`.<br /><br /> Это элемент типа <xref:System.ServiceModel.Channels.SecurityHeaderLayout>.|  
+|securityHeaderLayout|Необязательно. Определяет порядок расположения элементов в заголовке безопасности. Допустимы следующие значения:<br /><br /> -   `Strict`: Элементы добавляются в заголовок безопасности в соответствии с общим принципом «объявить перед использованием».<br />-   `Lax`: Элементы добавляются в заголовок безопасности в любом порядке, отвечающем WSS: SOAP Message security.<br />-   `LaxWithTimestampFirst`: Элементы добавляются в заголовок безопасности в любом порядке, отвечающем WSS: SOAP Message security за исключением того, что первый элемент в заголовке безопасности должен быть элемент wsse: timestamp.<br />-   `LaxWithTimestampLast`: Элементы добавляются в заголовок безопасности в любом порядке, отвечающем WSS: SOAP Message security за исключением того, что последним элементом в заголовке безопасности должен быть элемент wsse: timestamp.<br /><br /> Значение по умолчанию — `Strict`.<br /><br /> Это элемент типа <xref:System.ServiceModel.Channels.SecurityHeaderLayout>.|  
   
 ## <a name="authenticationmode-attribute"></a>Атрибут authenticationMode  
   

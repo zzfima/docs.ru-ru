@@ -20,11 +20,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 893bbc94d909d5c94b7f8727912a298575617c2c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ea0a111727093cb65a98e48255b06b3c4516d258
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Кроссплатформенная разработка с переносной библиотекой классов
 Тип проекта "Переносимая библиотека классов .NET Framework" в Visual Studio позволяет быстро и легко создавать межплатформенные приложения и библиотеки для платформ Майкрософт.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/23/2017
   
 |Visual Studio SKU|Поддержка создания переносимой библиотеки классов|  
 |-----------------------|---------------------------------------------------|  
-|Visual Studio 2010 Professional, Premium или Ultimate|Да, при установке [Portable Library Tools](http://go.microsoft.com/fwlink/?LinkId=210823).|  
+|Visual Studio 2010 Professional, Premium или Ultimate|Да, при установке [Portable Library Tools](https://marketplace.visualstudio.com/items?itemName=BCLTeam.PortableLibraryTools2).|  
 |Версии Visual Studio Express 2010|Нет.|  
 |Visual Studio 2012 Professional, Premium или Ultimate|Да. Техническая поддержка по телефону, установите [Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=265772).|  
 |Версии Visual Studio Express 2012|Нет.|  
@@ -171,7 +171,7 @@ ms.lasthandoff: 12/23/2017
   
  Например, переносимая библиотека классов содержит типы, связанные с пользовательским интерфейсом, только если в качестве целевых платформ выбраны Windows 8.1 и Windows Phone 8.1. Кроме того, столкнуться с ограничениями также можно при нацеливании на платформы (такие как Xbox, .NET Framework 4 и Windows Phone 7), выпущенные до выхода переносимой библиотеки классов. Через NuGet выпускаются пакеты .NET Framework, которые улучшает поддержку переносимой библиотеки классов для некоторых из более старых платформ. Дополнительные сведения и список пакетов NuGet см. в разделе [.NET Framework и выпуски по каналу](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).  
   
- Если член поддерживается в переносимой библиотеке классов и для выбранных целевых платформ, он будет показан в IntelliSense в вашем проекте. Кроме того, значок переносимой библиотеки классов ![поддерживается переносимой библиотекой](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon") появится в таблицах членов в [библиотекиклассов.NETFramework](http://go.microsoft.com/fwlink/?LinkId=211358) рядом с поддерживаемыми членами. Например, в следующей таблице показано, что свойство <xref:System.String.Chars%2A> класса <xref:System.String> поддерживается в переносимой библиотеке классов:  
+ Если член поддерживается в переносимой библиотеке классов и для выбранных целевых платформ, он будет показан в IntelliSense в вашем проекте. Кроме того, значок переносимой библиотеки классов ![поддерживается переносимой библиотекой](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon") появится в таблицах членов в [библиотекиклассов.NETFramework](https://msdn.microsoft.com/library/mt472912.aspx) рядом с поддерживаемыми членами. Например, в следующей таблице показано, что свойство <xref:System.String.Chars%2A> класса <xref:System.String> поддерживается в переносимой библиотеке классов:  
   
  ![Значок поддерживаемого члена](../../../docs/standard/cross-platform/media/plibsupportedmemberlist.png "PlibSupportedMemberList")  
 Значок переносимой библиотеки классов  
