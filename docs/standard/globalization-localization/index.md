@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7e176ebf6660e1c517e5ef7a505c259666bb30a0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 63f0e001280773c55f18f0604ca93986acbb9674
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="globalizing-and-localizing-net-framework-applications"></a>Глобализация и локализация приложений .NET Framework
 Разработка [международного приложения](http://msdn.microsoft.com/goglobal/bb978433.aspx), в том числе приложения, которое можно локализовать на один или несколько языков, включает следующие шаги: глобализацию, анализ локализуемости и локализацию.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/23/2017
   
  .NET Framework предоставляет широкие возможности для разработки международных и локализованных приложений. В частности, многие члены типов в библиотеке классов .NET Framework упрощают глобализацию, возвращая значения, отражающие соглашения либо языка и региональных параметров текущего пользователя, либо заданных языка и региональных параметров. Кроме того, платформа .NET Framework поддерживает вспомогательные сборки, которые упрощают процесс локализации приложений.  
   
- Дополнительные сведения см. здесь: [Go Global Developer Center](http://go.microsoft.com/fwlink/?LinkId=235015).  
+ Дополнительные сведения см. в [документации по глобализации](/globalization/).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Глобализация](../../../docs/standard/globalization-localization/globalization.md)  

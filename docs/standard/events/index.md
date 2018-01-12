@@ -23,11 +23,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 80f95099644552aed34553385544f21d07b29114
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 49355c4271efc37a40c025c0f8275ec42e13723e
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="handling-and-raising-events"></a>Обработка и вызов событий
 События на платформе .NET Framework основаны на модели делегата. Модель делегата соответствует шаблону разработки наблюдателя, который позволяет подписчику зарегистрироваться у поставщика и получать от него уведомления. Отправитель события отправляет уведомление о событии, а приемник событий получает уведомление и определяет ответ на него. В этом разделе описываются основные компоненты модели делегата, использование событий в приложениях и реализация событий в коде.  
@@ -102,6 +102,6 @@ ms.lasthandoff: 12/23/2017
  <xref:System.EventHandler%601>  
  <xref:System.EventArgs>  
  <xref:System.Delegate>  
- [Общие сведения о событиях и перенаправленных событиях (приложения для Магазина Windows)](http://go.microsoft.com/fwlink/?LinkId=261485)  
+ [Общие сведения о событиях и перенаправленных событиях (приложения для UWP)](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
  [События (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
  [События (Руководство по программированию в C#)](../../csharp/programming-guide/events/index.md)
