@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 04c780980ef0665b40a0c3a698193fc9fa738424
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: cfe7115717fcca834d87b7bcdc64ddd1df8ef843
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-c"></a>Практическое руководство (C#)
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/06/2018
 - [Сравнение строк](../programming-guide/strings/how-to-compare-strings.md).
 - [Изменение содержимого строки](../programming-guide/strings/how-to-modify-string-contents.md).
 - [Определение того, представляет ли строка число](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
-- [Использование <xref:System.String.Split%2A> для разделения строк](../programming-guide/strings/how-to-parse-strings-using-string-split.md).
+- [Использование `String.Split` для разделения строк](parse-strings-using-split.md).
 - [Объединение нескольких строк в одну](../programming-guide/strings/how-to-concatenate-multiple-strings.md).
 - [Поиск текста в строке](../programming-guide/strings/how-to-search-strings-using-string-methods.md).
 - [Поиск строк с помощью регулярных выражений](../programming-guide/strings/how-to-search-strings-using-regular-expressions.md).
