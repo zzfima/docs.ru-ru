@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 855a1122eb4507912adca80878f78258b37d202d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f5d9adcfe701b5897c434dc1479b9692448d8b98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (средство PEVerify)
 Средство PEVerify помогает разработчикам, создающим код на языке CIL — авторам компиляторов, обработчиков скриптов и т. д. — определить, соответствует ли этот код и связанные с ним метаданные требованиям безопасности типов. Некоторые компиляторы создают проверяемый типобезопасный код только в том случае, если разработчик не применяет определенные языковые конструкции. При работе с таким компилятором разработчику иногда требуется проверить, сохранена ли в коде безопасность типов. В этом случае для проверки CIL и метаданных в файлах можно использовать инструмент PEVerify.  
@@ -42,11 +43,11 @@ peverify filename [options]
   
 #### <a name="parameters"></a>Параметры  
   
-|Аргумент|Описание|  
+|Аргумент|Описание:|  
 |--------------|-----------------|  
 |*filename*|Переносимый исполняемый файл (PE-файл), который требуется проверить на корректность CIL и метаданных.|  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
 |**/break=** *maxErrorCount*|Прекращает проверку, если число ошибок в файле достигло значения параметра *maxErrorCount*.<br /><br /> Этот параметр не поддерживается в .NET Framework 2.0 и более поздних версий.|  
 |**/clock**|Измеряет и выводит значения времени следующих проверок (в миллисекундах):<br /><br /> **MD Val. cycle**<br /> Цикл проверки метаданных<br /><br /> **MD Val. pure**<br /> Чистое время проверки метаданных<br /><br /> **IL Ver. cycle**<br /> Цикл проверки языка CIL<br /><br /> **IL Ver pure**<br /> Чистое время проверки языка CIL<br /><br /> Значения **MD Val. cycle** и **IL Ver. cycle** включают время, затраченное на необходимые процедуры запуска и завершения проверки. Значения **MD Val. pure** и **IL Ver pure** отражают время, требуемое только для проверки.|  
@@ -130,6 +131,6 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
   
 ## <a name="see-also"></a>См. также  
  [Инструменты](../../../docs/framework/tools/index.md)  
- [NIB: Написание проверяемого строго типизированного кода](http://msdn.microsoft.com/en-us/d18f10ef-3b48-4f47-8726-96714021547b)  
- [Строгая типизация и безопасность](http://msdn.microsoft.com/en-us/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc)  
+ [NIB. Написание проверяемого типобезопасного кода](http://msdn.microsoft.com/en-us/d18f10ef-3b48-4f47-8726-96714021547b)  
+ [Безопасность типа и безопасность](http://msdn.microsoft.com/en-us/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc)  
  [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

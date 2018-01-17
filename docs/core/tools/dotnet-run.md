@@ -7,17 +7,18 @@ ms.date: 09/24/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 7670934199d7d4b8a7c5e598142366ef1eb3ef1c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 1f5a3927859f89bef6c50d3d31b73de43cd1cd31
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-run"></a>dotnet run
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Имя
+## <a name="name"></a>name
 
 `dotnet run` — выполняет исходный код без дополнительных явных команд компиляции или запуска.
 
@@ -39,7 +40,7 @@ dotnet run [-h|--help]
 
 ---
 
-## <a name="description"></a>Описание
+## <a name="description"></a>Описание:
 
 `dotnet run` — это удобное средство для запуска приложения из исходного кода одной командой. Это полезно для быстрой последовательной разработки из командной строки. В отношении сборки кода эта команда зависима от команды [`dotnet build`](dotnet-build.md). Любые требования к сборке, например, то, что проект сначала нужно восстановить, применяются и к `dotnet run`. 
 
@@ -75,7 +76,7 @@ dotnet myapp.dll
 
 `--force`
 
-Принудительное разрешение всех зависимостей, даже если последнее восстановление прошло успешно. Это эквивалентно удалению *project.assets.json*.
+Принудительное разрешение всех зависимостей, даже если последнее восстановление прошло успешно. Равносильно удалению файла *project.assets.json*.
 
 `-h|--help`
 

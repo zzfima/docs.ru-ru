@@ -10,11 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a19545d3-24af-4a32-9778-cfb5ae938287
-ms.openlocfilehash: a3e5bda5c99144c9ab5bbaf5e2f5566261af4813
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 40479d85f9b31fcc80e3d12537126941878a09a4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="publish-your-hello-world-application-with-visual-studio-2017"></a>Публикация приложения Hello World с помощью Visual Studio 2017
 
@@ -39,11 +40,11 @@ ms.lasthandoff: 10/18/2017
 
       * *HelloWorld.deps.json*
 
-         Файл зависимости среды выполнения приложения. Он определяет компоненты .NET Core и библиотек (включая библиотеку динамической компоновки, содержащий приложение), необходимые для запуска приложения. Дополнительные сведения см. в разделе [файлы конфигурации среды выполнения](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
+         Файл зависимостей времени выполнения для приложения. Он определяет библиотеки и компоненты .NET Core (включая библиотеку DLL, содержащую приложение), необходимые для запуска приложения. Дополнительные сведения см. в разделе [Файлы конфигурации среды выполнения](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
  
       * *HelloWorld.dll*
 
-         Файл, содержащий приложение. Это библиотеки DLL, которая может быть выполнена путем ввода `dotnet HelloWorld.dll` команду в окне консоли. 
+         Файл, содержащий ваше приложение. Это библиотеки DLL, которую можно выполнить, введя команду `dotnet HelloWorld.dll` в окне консоли. 
 
       * *HelloWorld.pdb* (необязателен для развертывания)
 
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/18/2017
 
       * *HelloWorld.runtimeconfig.json*
 
-         Файл конфигурации приложения среды выполнения. Он определяет версию платформы .NET Core, которое было создано приложение для запуска. Дополнительные сведения см. в разделе [файлы конфигурации среды выполнения](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).  
+         Файл конфигурации времени выполнения для приложения. Он определяет версию платформы .NET Core, для которой предназначено приложение. Дополнительные сведения см. в разделе [Файлы конфигурации среды выполнения](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).  
 
    ![Окно консоли с опубликованными файлами](media/publishing-with-visual-studio/publishedfiles.png)
 

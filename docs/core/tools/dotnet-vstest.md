@@ -7,17 +7,18 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: c5a7ee0ba306cea641b0ff34f0b521c92bd03719
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: f2ad875430b2dc7f0ffbadfb9a39dd83854557cb
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Имя
+## <a name="name"></a>name
 
 `dotnet-vstest` — запускает тесты из указанных файлов.
 
@@ -25,7 +26,7 @@ ms.lasthandoff: 10/18/2017
 
 `dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath] [--Platform|/Platform] [--Framework|/Framework] [--Parallel|/Parallel] [--TestCaseFilter|/TestCaseFilter] [--logger|/logger] [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [[--] <args>...]] [-?|--Help|/?|/Help]`
 
-## <a name="description"></a>Описание
+## <a name="description"></a>Описание:
 
 Команда `dotnet-vstest` запускает приложение командной строки `VSTest.Console` для выполнения автоматического модульного тестирования и закодированных тестов пользовательского интерфейса.
 
@@ -117,6 +118,10 @@ ms.lasthandoff: 10/18/2017
 
 `dotnet vstest mytestproject.dll`
 
+Запуск тестов в `mytestproject.dll` с экспортом в настраиваемую папку с пользовательским именем:
+
+`dotnet vstest mytestproject.dll --logger:"trx;LogFileName=custom_file_name.trx" --ResultsDirectory:custom/file/path`
+
 Запуск тестов в `mytestproject.dll` и `myothertestproject.exe`:
 
 `dotnet vstest mytestproject.dll myothertestproject.exe`
@@ -128,3 +133,4 @@ ms.lasthandoff: 10/18/2017
 Запуск тестов `TestMethod1` и `TestMethod2`:
 
 `dotnet vstest /Tests:TestMethod1,TestMethod2`
+

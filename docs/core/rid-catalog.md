@@ -6,11 +6,12 @@ ms.author: mairaw
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net-core
-ms.openlocfilehash: 067f9cfc283a14b7ea59a7454b7f593ce6eb5806
-ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
+ms.workload: dotnetcore
+ms.openlocfilehash: 180aac7635746f9ede146c3e561deb9bba9a61ab
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-core-rid-catalog"></a>Каталог идентификаторов сред выполнения (RID) в .NET Core
 
@@ -85,7 +86,7 @@ RID — это сокращение от *Runtime IDentifier* (идентифи
 Для использования идентификаторов RID необходимо знать, какие идентификаторы RID существуют. В платформу регулярно добавляются новые идентификаторы.
 Последнюю и полную версию см. в файле [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) в репозитории CoreFX.
 
-SDK для .NET Core 2.0 представляет концепцию переносных идентификаторов RID. Это новые значения, добавленными в схему RID, которые не привязаны к конкретной версии или дистрибутиву ОС. Они особенно полезна при работе с несколькими дистрибутивы Linux.
+SDK для .NET Core 2.0 представляет концепцию переносных идентификаторов RID. Это новые значения, добавленными в схему RID, которые не привязаны к конкретной версии или дистрибутиву ОС. Их особенно удобно использовать при работе с несколькими дистрибутивами Linux.
 
 Ниже представлен список наиболее распространенных RID, используемых для каждой ОС. Он не охватывает значения `arm` или `corert`.
 
@@ -111,7 +112,7 @@ SDK для .NET Core 2.0 представляет концепцию перен
   - `win10-arm`
   - `win10-arm64`
 
-В разделе [необходимых компонентов для .NET Core в Windows](windows-prerequisites.md) для получения дополнительной информации.
+Дополнительные сведения см. в разделе [Необходимые компоненты для .NET Core в Windows](windows-prerequisites.md).
 
 ## <a name="linux-rids"></a>Идентификаторы RID для Linux
 
@@ -165,19 +166,19 @@ SDK для .NET Core 2.0 представляет концепцию перен
   - `linuxmint.18-x64`
   - `linuxmint.18.1-x64` (.NET Core 2.0 или более поздние версии)
 
-В разделе [необходимых компонентов для .NET Core для Linux](linux-prerequisites.md) для получения дополнительной информации.
+Дополнительные сведения см. в разделе [Необходимые компоненты для .NET Core в Linux](linux-prerequisites.md).
 
-## <a name="macos-rids"></a>идентификаторы RID macOS
+## <a name="macos-rids"></a>Относительные идентификаторы macOS
 
-идентификаторы RID macOS использовать старые «OSX» фирменной символики.
+Относительные идентификаторы macOS используют старую фирменную символику "OSX".
 
-- `osx-x64`(.NET core 2.0 или более поздней версии, минимальная версия — `osx.10.12-x64`)
+- `osx-x64` (.NET Core 2.0 или более поздние версии, минимальная версия — `osx.10.12-x64`)
 - `osx.10.10-x64`
 - `osx.10.11-x64`
 - `osx.10.12-x64` (.NET Core 1.1 или более поздние версии)
 - `osx.10.13-x64`
 
-В разделе [необходимых компонентов для .NET Core на macOS](macos-prerequisites.md) для получения дополнительной информации.
+Дополнительные сведения см. в разделе [Необходимые компоненты для .NET Core в macOS](macos-prerequisites.md).
 
 ## <a name="android-rids-net-core-20-or-later-versions"></a>Идентификаторы RID для Android (.NET Core 2.0 или более поздние версии)
 

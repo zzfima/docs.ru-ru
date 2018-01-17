@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8233db6bdf8c07bcc62f2e0f3819afb72dc10f5a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc41a51a9c85b84f2f5365eb1650ebec37888652
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-core-and-open-source"></a>Ядро .NET и открытый исходный код
 В этом разделе приводится краткий обзор .NET Core и указываются ресурсы с дополнительными сведениями. Полный список разделов по .NET Core см. в [Руководстве по .NET Core](../../core/index.md).
@@ -54,6 +55,6 @@ ms.lasthandoff: 11/21/2017
 -   [ASP.NET Core](https://github.com/aspnet/home)  
   
 ## <a name="see-also"></a>См. также  
- [Домашняя страница .NET core](https://www.microsoft.com/net/core)  
+ [Домашняя страница .NET Core](https://www.microsoft.com/net/core)  
  [Руководство по .NET Core](../../core/index.md)  
  [Документация по ASP.NET Core](/aspnet/core/)

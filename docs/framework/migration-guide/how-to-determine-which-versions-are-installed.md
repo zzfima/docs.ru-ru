@@ -15,11 +15,12 @@ ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: edd5a8e8cc32037d45d95d544f6eae5097d0c468
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 83de6036a9b86478546cdb8356ce132ef32e6be2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Практическое руководство.Определение установленных версий платформы .NET Framework
 На компьютере можно установить и запустить несколько версий платформы .NET Framework. При разработке или развертывании приложения могут потребоваться сведения о том, какие версии .NET Framework установлены на компьютере пользователя. Учтите, что платформа .NET Framework состоит из основных компонентов, версии которым присваиваются отдельно:  
@@ -96,7 +97,7 @@ ms.lasthandoff: 11/21/2017
     |В системах Windows 10 с ноябрьским обновлением: 394254<br /><br /> Во всех других версиях ОС: 394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
     |В юбилейном обновлении Windows 10 Anniversary Update: 394802<br /><br /> Во всех других версиях ОС: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
     |В обновлении Windows 10 Creators Update: 460798<br/><br/> Во всех других версиях ОС: 460805 | .NET Framework 4.7 |
-    |В Windows 10 попадают создатели обновления: 461308<br/><br/> Во всех остальных версиях ОС: 461310 | .NET framework 4.7.1 |
+    |В Windows 10 Fall Creators Update: 461308<br/><br/> Во всех других версиях ОС: 461310 | .NET Framework 4.7.1 |
 <a name="net_c"></a> 
 #### <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>Поиск версий .NET Framework путем отправки запроса в реестр (.NET Framework 1–4)
 
@@ -134,16 +135,16 @@ ms.lasthandoff: 11/21/2017
     |Платформа .NET Framework 4.5.1, установленная с Windows 8.1|378675|
     |Платформа .NET Framework 4.5.1, установленная в Windows 8, Windows 7 с пакетом обновления 1 (SP1) или Windows Vista с пакетом обновления 2 (SP2)|378758|
     |.NET Framework 4.5.2|379893|
-    |Платформа [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], установленная с Windows 10|393295|
-    |Платформа [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], установленная во всех остальных версиях ОС Windows|393297|
-    |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] установлена в Windows 10|394254|
-    |Платформа [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], установленная во всех остальных версиях ОС Windows|394271|
-    |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] установлена в юбилейном обновлении Windows 10 Anniversary Update|394802|
-    |Платформа [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], установленная во всех остальных версиях ОС Windows|394806|
+    |Платформа .NET Framework 4.6, установленная с Windows 10|393295|
+    |Платформа .NET Framework 4.6, установленная во всех остальных версиях ОС Windows|393297|
+    |Платформа .NET Framework 4.6.1, установленная в Windows 10|394254|
+    |Платформа .NET Framework 4.6.1, установленная во всех остальных версиях ОС Windows|394271|
+    |Платформа .NET Framework 4.6.2, установленная в юбилейном обновлении Windows 10|394802|
+    |Платформа .NET Framework 4.6.2, установленная во всех остальных версиях ОС Windows|394806|
     |.NET Framework 4.7 установлена в обновлении Windows 10 Creators Update|460798|
     |Платформа .NET Framework 4.7, установленная во всех остальных версиях ОС Windows|460805|
-    |.NET framework установлены в центре обновления Windows 10 Осень создатели 4.7.1|461308|
-    |.NET framework установлены на всех остальных версиях ОС Windows 4.7.1|461310|
+    |Платформа .NET Framework 4.7.1 установлена в обновлении Windows 10 Creators Update|461308|
+    |Платформа .NET Framework 4.7.1, установленная во всех остальных версиях ОС Windows|461310|
 
      В следующем примере проверяется значение `Release` в реестре, чтобы определить, установлена ли [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] или более поздняя версия .NET Framework.
 
@@ -169,14 +170,14 @@ ms.lasthandoff: 11/21/2017
   
     |Версия|Минимальное значение DWORD "Release"|
     |-------------|--------------------------------|
-    |.NET Framework 4.5|378389|
+    |.NET Framework 4,5|378389|
     |.NET Framework 4.5.1|378675|
     |.NET Framework 4.5.2|379893|
     |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|393295|
     |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|394254|
     |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|394802|
     |.NET Framework 4.7|460798|
-    |.NET framework 4.7.1|461308|
+    |.NET Framework 4.7.1|461308|
     
 <a name="clr_a"></a> 
 #### <a name="to-find-the-current-runtime-version-by-using-the-clrver-tool"></a>Поиск текущей версии среды выполнения с помощью средства Clrver
@@ -216,5 +217,5 @@ ms.lasthandoff: 11/21/2017
 
 ## <a name="see-also"></a>См. также
  [Практическое руководство. Определение установленных обновлений платформы .NET Framework](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
- [Установите .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md)  
+ [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md)  
  [Версии и зависимости](~/docs/framework/migration-guide/versions-and-dependencies.md)

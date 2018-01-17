@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-ms.openlocfilehash: 04fdf26e150e6d489c0641588563f69f24835615
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: ec08d9fa3ad672400b61c269da0c6a70ed9ef2f5
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Необходимые компоненты для .NET Core в Linux
 
@@ -62,7 +63,7 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="linux-distribution-dependencies"></a>Зависимости дистрибутивов Linux
 
-Ниже должны быть примеры. Точные версии и имена могут немного отличаться на Ваш дистрибутив Linux, по выбору.
+Ниже представлены примеры. Точные версии и имена могут немного отличаться в зависимости от используемого дистрибутива Linux.
 
 ### <a name="ubuntu"></a>Ubuntu
 
@@ -84,11 +85,11 @@ ms.lasthandoff: 10/18/2017
 Для дистрибутивов CentOS должны быть установлены следующие библиотеки:
 
 * libunwind
-* изменить lttng
+* lttng-ust
 * libcurl
-* библиотеки OpenSSL
+* openssl-libs
 * libuuid
-* krb5 библиотеки
+* krb5-libs
 * libicu
 * zlib
 
@@ -105,7 +106,7 @@ ms.lasthandoff: 10/18/2017
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>Установка с помощью скрипта установщика .NET Core
 
-Скрипты `dotnet-install` служат для установки цепочки инструментов CLI и общей среды выполнения без прав администратора. Можно загрузить скрипт из: https://dot.net/v1/dotnet-install.sh
+Скрипты `dotnet-install` служат для установки цепочки инструментов CLI и общей среды выполнения без прав администратора. Вы можете скачать скрипт по адресу: https://dot.net/v1/dotnet-install.sh
 
 Скрипт bash установщика используется в сценариях автоматизации и установки без прав администратора. Скрипт также считывает параметры PowerShell, чтобы их можно было использовать с этим скриптом в системах Linux и OS X.
 
@@ -211,6 +212,12 @@ ms.lasthandoff: 10/18/2017
 
 3. Установите веб-канал пакета узла требуемой версии.
 
+   **Ubuntu 17.10**
+
+   ```bash
+   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-artful-prod artful main" > /etc/apt/sources.list.d/dotnetdev.list'
+   sudo apt-get update
+   ```
    **Ubuntu 17.04**
 
    ```bash
@@ -235,7 +242,7 @@ ms.lasthandoff: 10/18/2017
 4. Установите .NET Core.
 
    ```bash
-   sudo apt-get install dotnet-sdk-2.0.0
+   sudo apt-get install dotnet-sdk-2.1.3
    ```
 
 4. Чтобы проверить, успешно ли завершилась установка, выполните команду `dotnet --version`.

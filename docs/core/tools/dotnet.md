@@ -7,17 +7,18 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: bba8d77cda7538bf008dc0f510f9279d3c695c3d
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.workload: dotnetcore
+ms.openlocfilehash: 6db2bb6003e630aab900222eb20e33af287cf9c5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-command"></a>Команда dotnet
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Имя
+## <a name="name"></a>name
 
 `dotnet` — универсальный драйвер для выполнения команд командной строки.
 
@@ -33,7 +34,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 ```
 ---
 
-## <a name="description"></a>Описание
+## <a name="description"></a>Описание:
 
 `dotnet` — это универсальный драйвер для цепочки инструментов интерфейса командной строки (CLI). Если вызвать его без указания команды, выводятся краткие инструкции по использованию.
 
@@ -47,7 +48,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--additionaldeps <PATH>`
 
-Путь к дополнительной *deps.json* файла.
+Путь к дополнительному файлу *deps.json*.
 
 `--additionalprobingpath <PATH>`
 

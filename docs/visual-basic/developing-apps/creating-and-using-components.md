@@ -9,11 +9,11 @@ ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 453d341961207dd851136aa47a52759b0841424d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 17c9b7440d60c38ba30d230f8412c3ca1a21830a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Создание и использование компонентов в Visual Basic
 *Компонент* — это класс, который реализует интерфейс <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> или прямо либо косвенно наследуется из класса, реализующего <xref:System.ComponentModel.IComponent>. Компонент [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] является объектом, допускающим повторное использование, который может взаимодействовать с другими объектами и обеспечивает контроль над внешними ресурсами и поддержку во время разработки.  
@@ -32,8 +32,6 @@ ms.lasthandoff: 11/21/2017
 -   Если для компонента необходимо выполнить маршалинг по значению, он должен быть производным от <xref:System.ComponentModel.MarshalByValueComponent>.  
   
 -   Если компонент не может быть производным от одной из базовых реализаций из-за одиночного наследования, реализуйте <xref:System.ComponentModel.IComponent>.  
-  
- Дополнительные сведения о поддержке во время разработки см. в разделе [Атрибуты времени разработки для компонентов](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3) и [Расширение поддержки времени разработки](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
   
 ## <a name="component-classes"></a>Классы компонентов  
  Пространство имен <xref:System.ComponentModel> предоставляет классы, используемые для реализации поведения компонентов и элементов управления во время разработки и выполнения. Это пространство имен содержит базовые классы и интерфейсы для реализации атрибутов и преобразователей типов, привязки к источникам данных и лицензирования компонентов.  
@@ -65,22 +63,9 @@ ms.lasthandoff: 11/21/2017
 -   <xref:System.ComponentModel.PropertyDescriptor>. Предоставляет сведения о свойстве.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Выбор между классом компонентом и элементом управления](http://msdn.microsoft.com/library/db8b842e-44d9-40cc-a0f8-70fd189632c3)  
- Определение *компонента* и *элемента управления* и описание различий между ними и классами.  
-  
- [Создание компонентов](http://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)  
- Путеводитель по началу работы с компонентами.  
-  
- [Примеры создания компонентов](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
- Ссылки на разделы, содержащие пошаговые инструкции по программированию компонентов.  
-  
- [Классы компонентов](http://msdn.microsoft.com/library/ce2e5647-e673-4c2b-8125-ffebbd9d71bc)  
- Сведения о том, что делает класс компонентом, а также описание способов предоставления функций компонента, управления доступом к компонентам и управления созданием экземпляров компонента.  
-  
  [Разрешение вопросов, связанных с созданием элементов управления и компонентов](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  Способы решения распространенных проблем.  
   
 ## <a name="see-also"></a>См. также  
- [Как: доступ к услугам поддержки во время разработки в Windows Forms](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)  
- [Как: расширить внешний вид и поведение элементов управления в режиме конструктора](http://msdn.microsoft.com/library/68f85054-2253-47f5-a4f2-3f1ac8c9f27b)  
- [Практическое руководство. Выполнение настраиваемой инициализации для элементов управления в режиме конструктора](http://msdn.microsoft.com/library/914eaa03-092f-4556-9160-b8a2a40641d9)
+ [Практическое руководство. Доступ к поддержке во время разработки в Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ 

@@ -21,11 +21,12 @@ caps.latest.revision: "29"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e87568cc6ac86e7bdc24fd7e31f5b8c3ed260c88
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9a9774a9811d5c53d44d66fba452098367846bf6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (программа экспорта библиотек типов)
 Программа импорта библиотек типов преобразует определения типов, содержащиеся в библиотеке типов COM, в эквивалентные определения сборки среды CLR. Tlbimp.exe выводит двоичный файл (сборку), содержащий метаданные среды выполнения для типов, определенных в исходной библиотеке типов. Этот файл можно просмотреть с помощью таких средств, как [Ildasm.exe](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).  
@@ -42,11 +43,11 @@ tlbimp tlbFile [options]
   
 #### <a name="parameters"></a>Параметры  
   
-|Аргумент|Описание|  
+|Аргумент|Описание:|  
 |--------------|-----------------|  
 |*tlbFile*|Имя любого файла, содержащего библиотеку типов COM.|  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
 |**/asmversion:** *номер_версии*|Задает номер версии создаваемой сборки. Аргумент *номер_версии* задается в формате *главная.вспомогательная.сборка.редакция*.|  
 |**/company:** `companyinformation`|Добавляет сведения об организации в выходную сборку.|  

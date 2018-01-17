@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4571d7576bc81432c87e0371ae0b6df3261f5f08
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 91edc97794f66edd3a3db7892d57ef5f0c8265c7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (средство экспорта метаданных среды выполнения Windows)
 Программа экспорта метаданных (Winmdexp.exe) [!INCLUDE[wrt](../../../includes/wrt-md.md)] преобразует модуль .NET Framework в файл, содержащий метаданные [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Несмотря на то что сборки .NET Framework и файлы метаданных [!INCLUDE[wrt](../../../includes/wrt-md.md)] используют один и тот же физический формат, существуют различия в содержимом таблиц метаданных, то есть сборки .NET Framework невозможно автоматически использовать как компоненты [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Процесс преобразования модуля .NET Framework в компонент [!INCLUDE[wrt](../../../includes/wrt-md.md)] называется *экспортированием*. В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] конечный файл метаданных Windows (WINMD) содержит и метаданные, и реализацию.  
@@ -39,9 +40,9 @@ winmdexp [options] winmdmodule
   
 #### <a name="parameters"></a>Параметры  
   
-|Аргумент или параметр|Описание|  
+|Аргумент или параметр|Описание:|  
 |------------------------|-----------------|  
-|`winmdmodule`|Задает экспортируемый модуль (WINMDOBJ). Допускается только один модуль. Чтобы создать этот модуль, следует использовать параметр компилятора `/target` с целевым объектом `winmdobj`. В разделе [/target: winmdobj (параметры компилятора C#)](~/docs/csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) или [/Target (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/target.md).|  
+|`winmdmodule`|Задает экспортируемый модуль (WINMDOBJ). Допускается только один модуль. Чтобы создать этот модуль, следует использовать параметр компилятора `/target` с целевым объектом `winmdobj`. См. статью [/target:winmdobj (параметры компилятора C#)](~/docs/csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) или [/target (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/target.md).|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Задает выходной файл документации XML, который создаст программа Winmdexp.exe. В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] выходной файл совпадает со входным файлом XML документации.|  
 |`/moduledoc:` `docfile`<br /><br /> `/md:` `docfile`|Задает имя файла документации XML, который компилятор создает с использованием `winmdmodule`.|  
 |`/modulepdb:` `symbolfile`<br /><br /> `/mp:` `symbolfile`|Задает имя файла базы данных программы (PDB), содержащего символы для `winmdmodule`.|  
@@ -60,6 +61,6 @@ winmdexp [options] winmdmodule
   
 ## <a name="see-also"></a>См. также  
  [Поддержка платформы .NET Framework для приложений магазина Windows и среды выполнения Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
- [Создание компонентов среды выполнения Windows на C# и Visual Basic](http://go.microsoft.com/fwlink/p/?LinkID=238313)  
+ [Создание компонентов среды выполнения Windows в C# и Visual Basic](http://go.microsoft.com/fwlink/p/?LinkID=238313)  
  [Сообщения об ошибках Winmdexp.exe](../../../docs/framework/tools/winmdexp-exe-error-messages.md)  
  [Средства построения, развертывания и конфигурирования (платформа .NET Framework)](http://msdn.microsoft.com/en-us/b8c921be-6012-4181-b8d4-ab15813fc9a7)
