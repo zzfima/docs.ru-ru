@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: b1cc02d1-23b1-4439-a998-0da1899f3442
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 53cbfc5097c28c0677a164f817cfe14927814d75
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1a8529c317025dbabd9c7467557b244b2f452a77
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="creating-a-dataview"></a>Создание DataView
 Есть два способа создания представления данных <xref:System.Data.DataView>. Можно использовать **DataView** конструктору, или вы можете создать ссылку на <xref:System.Data.DataTable.DefaultView%2A> свойство <xref:System.Data.DataTable>. **DataView** конструктор может быть пустым либо может принимать **DataTable** как один аргумент или **DataTable** вместе с критериями фильтрации, сортировки и строки фильтр состояния. Дополнительные сведения о дополнительных аргументов для использования с **DataView**, в разделе [Сортировка и фильтрация данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  

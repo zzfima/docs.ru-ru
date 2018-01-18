@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 90c3b7d639ea6fafd570b44ee40c0567e264ea91
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3f80ec1ac51dded1f91d1a18c4d4e24836cf92cd
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Отличия Entity SQL от Transact-SQL
 В этом разделе описываются различия между [!INCLUDE[esql](../../../../../../includes/esql-md.md)] и [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  
@@ -161,7 +161,7 @@ select a, sum(t.b) from T as t group by t.a as a
 ```  
   
 ## <a name="order-by-clause-usage"></a>Использование предложения ORDER BY  
- В языке [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] предложения ORDER BY могут быть указаны только в самом верхнем блоке инструкции SELECT . FROM . WHERE. В языке [!INCLUDE[esql](../../../../../../includes/esql-md.md)] можно использовать вложенное выражение ORDER BY, которое может быть размещено в любом месте запроса, однако упорядочение во вложенном запросе не сохраняется.  
+ В языке [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] предложения ORDER BY могут быть указаны только в самом верхнем блоке инструкции SELECT .. FROM . WHERE. В языке [!INCLUDE[esql](../../../../../../includes/esql-md.md)] можно использовать вложенное выражение ORDER BY, которое может быть размещено в любом месте запроса, однако упорядочение во вложенном запросе не сохраняется.  
   
 ```  
 -- The following query will order the results by the last name  

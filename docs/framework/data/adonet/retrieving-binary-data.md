@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 43e937836911808789e2cad8affb395cc73ceb68
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b32002b8bb9b1eaf7a72a8fac306ecdd5f2e5931
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="retrieving-binary-data"></a>Извлечение двоичных данных
 По умолчанию **DataReader** загружает входящие данные как строку сразу целую строку данных доступной. Однако для больших двоичных объектов (BLOB) требуется другая процедура, поскольку они могут содержать гигабайты данных, которые невозможно уместить в одной строке. **Command.ExecuteReader** имеет перегрузку, которая принимает <xref:System.Data.CommandBehavior> аргумент для изменения поведения по умолчанию **DataReader**. Можно передать <xref:System.Data.CommandBehavior.SequentialAccess> для **ExecuteReader** метод для изменения поведения по умолчанию **DataReader** , чтобы вместо загрузки строк данных, он будет загружать данные последовательно мере их получения. Это идеально подходит для загрузки больших двоичных объектов или других больших структур данных. Отметим, что этот характер действий может зависеть от источника данных. Например, при возвращении большого двоичного объекта из Microsoft Access он загружается в память целиком, а не последовательно по мере поступления.  

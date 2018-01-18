@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 184a55c3c5479f1999057e55dcc761a250051e5e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f2f50f5306904a2a1b42a3abbe9071c33847c66
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entity-key"></a>ключ сущности
 *Ключ сущности* — [свойство](../../../../docs/framework/data/adonet/property.md) или набор свойств [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) , которые используются для установления личности. Свойства, составляющие ключ сущности, выбираются во время разработки. Значения свойств ключа сущности должен однозначно идентифицировать экземпляр типа сущности внутри [набора сущностей](../../../../docs/framework/data/adonet/entity-set.md) во время выполнения. Свойства, составляющие ключ сущности, должны гарантировать уникальность экземпляра набора сущностей.  

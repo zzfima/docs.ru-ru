@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e9bf1298a5e3fbac82a931abcfb0919238d81bfb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f25c94582ade23b645942a13829a5aa559e3e4f6
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entity-data-model-primitive-data-types"></a>Модель EDM. Примитивные типы данных
 Модель данных сущности (EDM) поддерживает набор абстрактных примитивных типов данных (например, строка, логическое значение, Int32 и так далее), используемые для определения [свойства](../../../../docs/framework/data/adonet/property.md) в концептуальной модели. Эти примитивные типы данных являются посредниками для фактических примитивных типов данных, которые поддерживаются в среде хранения или размещения, такой как база данных сервера SQL или среда CLR. Модель EDM не определяет семантику операций или преобразований для примитивных типов данных; такая семантика определяется средой хранения или размещения. Обычно примитивные типы данных в модели EDM сопоставляются соответствующим примитивным типам данных в среде хранения или размещения. Сведения о как Entity Framework сопоставляет типы-примитивы в модели EDM с типами данных SQL Server см. в разделе [SqlClient для Entity Framework](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  

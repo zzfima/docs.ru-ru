@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 77658b1c4b40090b8e532f1a0566ecb927328d65
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6593e075d1a9d672f414cfa0cd8652f760b084e1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-express-security"></a>Безопасность SQL Server, экспресс-выпуск
 Выпуск Microsoft SQL Server Express (SQL Server Express) основан на версии Microsoft SQL Server и поддерживает большинство средств ядра базы данных этой версии. Этот выпуск спроектирован так, что несущественные функции и средства обеспечения сетевого взаимодействия отменены по умолчанию. Благодаря этому уменьшается контактная зона, доступная для атаки со стороны злонамеренного пользователя.  

@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 84a72642636be2238a81f1b9c00e3ac4e7037272
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6cdf1a859595c82b8eea60311c3c96353849e3dc
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Извлечение данных и операции создания, обновления и удаления в N-уровневых приложениях (LINQ to SQL)
 При сериализации объектов сущностей, например объектов "Customers" или "Orders", на клиент по сети эти сущности отсоединяются от своего контекста данных. Контекст данных более не отслеживает их изменения или их связи с другими объектами. Это не вызывает проблемы, если клиент осуществляет только чтение данных. Также довольно просто реализовать добавление клиентами строк в базу данных. Однако если приложению требуется, чтобы клиенты имели возможность обновлять или удалять данные, то перед вызовом метода <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType> необходимо присоединить сущности к новому контексту данных. Кроме того, если используется проверка оптимистического параллелизма на основе исходных значений, также требуется реализовать способ предоставления базе данных исходной сущности и сущности после изменения. С помощью методов `Attach` можно поместить сущности в новый контекст данных после их отсоединения.  

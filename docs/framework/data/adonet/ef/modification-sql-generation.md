@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 4ed5c6fd4e8bdbf148a57401163936631236b46b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6696d80246d61cc2eac47266837d79661141b9b0
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="modification-sql-generation"></a>Создание кода SQL для изменения данных
 В этом разделе приведено описание разработки модуля создания кода SQL для изменения данных для конкретного поставщика (базы данных, совместимой с SQL:1999). Этот модуль обеспечивает преобразование дерева команд изменения в соответствующие инструкции INSERT, UPDATE или DELETE языка SQL.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
  DbModificationCommandTree и его реализации, созданные с помощью [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] всегда представляют операцию из одной строки. В настоящем разделе рассматриваются указанные типы и их ограничения в .NET Framework версии 3.5.  
   
- ![Схема](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
   
  DbModificationCommandTree имеет свойство Target, которое представляет набор целей для операции изменения. Свойство Expression свойства Target, которое определяет входной набор, всегда имеет тип DbScanExpression.  DbScanExpression может представлять таблицу или представление, или набор данных, определенный с запросом, если свойство метаданных «Defining Query» его свойства Target имеет отличное от null.  
   

@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 37dfeec82339ed4381d158b1bd5ac442223bfe50
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a24b8fe5d0da4b3fa3a13db15bd91be83f102dcf
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>N-уровневое использование LINQ to SQL с веб-службами
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]предназначена специально для использования на среднем уровне в слабо связанных доступа к данным (DAL), например веб-службы. Если уровнем представления данных является веб-страница ASP.NET, то для управления передачей данных между пользовательским интерфейсом и <xref:System.Web.UI.WebControls.LinqDataSource> на среднем уровне используется серверный веб-элемент управления [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Если уровень представления данных не является страницей ASP.NET, то и на среднем уровне, и на уровне представления данных необходимо выполнить дополнительные действия по управлению сериализацией и десериализацией данных.  

@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b36f76516d4ddf94e177a5ecbb705e1d729318b8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd44502b5aa07e1421b6b226188155cac56d3473
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="retrieving-data-using-a-datareader"></a>Извлечение данных с помощью объекта DataReader
 Получение данных с помощью **DataReader** включает в себя создание экземпляра **команда** объекта, а затем создать **DataReader** путем вызова  **Command.ExecuteReader** для получения строк из источника данных. В следующем примере демонстрируется использование **DataReader** где `reader` представляет допустимый DataReader и `command` представляет допустимый объект Command.  

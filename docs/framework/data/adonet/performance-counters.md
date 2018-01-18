@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: fe3005b3dbfa1a2f0018dd7b6049ab65d68b8e40
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 729c9d5d6841b5cfcae175d8984302ac816ed8b8
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="performance-counters-in-adonet"></a>Счетчики производительности в ADO.NET
 В ADO.NET 2.0 появилась расширенная поддержка счетчиков производительности, включая поддержку как <xref:System.Data.SqlClient>, так и <xref:System.Data.OracleClient>. Счетчики производительности <xref:System.Data.SqlClient> предыдущих версий ADO.NET устарели и заменены новыми счетчиками производительности, которые рассматриваются в этом разделе. Счетчики производительности ADO.NET можно использовать для контроля состояния приложения и используемых им ресурсов соединения. Показания счетчиков производительности можно отслеживать с помощью системного монитора Windows или получить к ним доступ программным путем с помощью класса <xref:System.Diagnostics.PerformanceCounter> в пространстве имен <xref:System.Diagnostics>.  

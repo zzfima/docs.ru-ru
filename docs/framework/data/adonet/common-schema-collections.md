@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2b3d1a42430a02e4b3dd4a715ef27acd3e46b8ea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 893093900b3fc4276f9bd7143b1f235a5ba98f90
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="common-schema-collections"></a>Общие коллекции схемы
 Стандартные коллекции схем - это коллекции схем, реализуемые каждым из управляемых поставщиков .NET Framework. Можно запросить управляемый поставщик .NET Framework для определения списка поддерживаемых коллекций схем, вызвав **GetSchema** без аргументов или с именем коллекции схем «MetaDataCollections». При этом будет возвращена <xref:System.Data.DataTable> со списком поддерживаемых коллекций схем, число ограничений, которые каждая из них поддерживает, и число идентификационных частей, которые в них используются. Данные коллекции описывают все требуемые столбцы. По желанию в поставщиках может быть предусмотрено добавление дополнительных столбцов. Например, поставщики `SqlClient` и `OracleClient` добавляют к коллекции ограничений столбец ParameterName.  

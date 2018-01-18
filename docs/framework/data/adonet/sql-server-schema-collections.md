@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 76d9b8fab965523852adafb6b7d858c34e72d408
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e95c6dc6bceb367000f4aa174a368bf046bc1b93
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-schema-collections"></a>Коллекции схемы SQL Server
 Поставщик данных Microsoft .NET Framework для SQL Server поддерживает дополнительные коллекции схем помимо общих коллекций. Коллекции схем незначительно меняются в зависимости от используемой версии SQL Server. Чтобы получить список поддерживаемых коллекций схем, вызовите **GetSchema** без аргументов или с именем коллекции схем «MetaDataCollections». При этом будет возвращена <xref:System.Data.DataTable> со списком поддерживаемых коллекций схем, число ограничений, которые каждая из них поддерживает, и число идентификационных частей, которые в них используются.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/22/2017
   
 |ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
-|type_desc|Строковое|Индекс имеет один из указанных ниже типов.<br /><br /> -HEAP<br />-КЛАСТЕР<br />-НЕКЛАСТЕРИЗОВАННЫЙ<br />-XML<br />-ПРОСТРАНСТВЕННЫХ|  
+|type_desc|Строковое|Индекс имеет один из указанных ниже типов.<br /><br /> -HEAP<br />-КЛАСТЕР<br />-НЕКЛАСТЕРИЗОВАННЫЙ<br />-   XML<br />-ПРОСТРАНСТВЕННЫХ|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -223,7 +223,7 @@ ms.lasthandoff: 12/22/2017
 |ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
 |uid|Int16|Идентификатор пользователя, уникальный в этой базе данных. 1 — это владелец базы данных.|  
-|имя_пользователя|String|Имя пользователя или имя группы, уникальные в этой базе данных.|  
+|user_name|String|Имя пользователя или имя группы, уникальные в этой базе данных.|  
 |createdate|DateTime|Дата добавления этой учетной записи.|  
 |updatedate|DateTime|Дата последнего изменения учетной записи.|  
   

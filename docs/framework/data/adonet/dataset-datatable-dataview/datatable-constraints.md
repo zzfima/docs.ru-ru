@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3767467024d6c0d0dfbf1be8829d77ba3f7fa439
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 500dad1699843bae04aea6d5c16a1ccf53bb102a
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="datatable-constraints"></a>Ограничения таблиц данных
 Ограничения позволяют принудительно поддерживать целостность данных <xref:System.Data.DataTable>. Ограничение представляет собой автоматическое правило, применяемое к столбцу или связанным столбцам и определяющее порядок действий при каком-либо изменении содержимого строки. Ограничения применяются при `System.Data.DataSet.EnforceConstraints` свойство <xref:System.Data.DataSet> — **true**. Пример кода, показывающий, как установить свойство `EnforceConstraints`, см. в разделе справки <xref:System.Data.DataSet.EnforceConstraints%2A>.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/22/2017
   
 |Установка правил|Описание:|  
 |------------------|-----------------|  
-|**CASCADE**|Удалить или обновить связанные строки.|  
+|**Cascade**|Удалить или обновить связанные строки.|  
 |**SetNull**|Значения в связанных строках **DBNull**.|  
 |**SetDefault**|Присвоить столбцам в связанных строках значение по умолчанию.|  
 |**None**|Не выполнять никаких действий в связанных строках. Это значение по умолчанию.|  
@@ -71,7 +71,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
   
 |Установка правил|Описание:|  
 |------------------|-----------------|  
-|**CASCADE**|Принять или отклонить изменения в дочерних строках.|  
+|**Cascade**|Принять или отклонить изменения в дочерних строках.|  
 |**None**|Не выполнять никаких действий в дочерних строках. Это значение по умолчанию.|  
   
 ### <a name="example"></a>Пример  

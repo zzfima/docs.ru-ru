@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 8467d1748cec216c01756049d889ea29f02c3c7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 23a502cc3a286ed5cb47c7bbe21253f312722409
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="handling-null-values"></a>Обработка значений NULL
 Значение NULL в реляционной базе данных используется, если значение в столбце неизвестно или отсутствует. Значение Null не является ни пустой строкой (для символьного типа данных или типа данных datetime), ни нулевым значением (для числовых типов данных). Спецификация ANSI SQL-92 устанавливает, что значение NULL должно быть одинаково для всех типов данных, так чтобы все значения NULL обрабатывались согласованно. Пространство имен <xref:System.Data.SqlTypes> предоставляет семантику NULL при реализации интерфейса <xref:System.Data.SqlTypes.INullable>. Каждый из типов данных в <xref:System.Data.SqlTypes> имеет свое собственное свойство `IsNull` и значение `Null`, которое может быть присвоено экземпляру этого типа данных.  
@@ -129,7 +129,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>Сравнение значений NULL с типами SqlType и CLR  
- При сравнении значений NULL важно понимать разницу между способом, которым метод `Equals` оценивает значения NULL в <xref:System.Data.SqlTypes>, и способом его работы с типами среды CLR. Все методы <xref:System.Data.SqlTypes>`Equals` используют семантику базы данных для оценки значений NULL: если одно из значений или оба значения равны NULL, то результатом сравнения является NULL. С другой стороны, результатом использования метода среды CLR `Equals` на двух <xref:System.Data.SqlTypes> является true, если оба значения являются NULL. Это отражает разницу между использованием метода экземпляра, например метода среды CLR `String.Equals`, и использованием статического или общего метода `SqlString.Equals`.  
+ При сравнении значений NULL важно понимать разницу между способом, которым метод `Equals` оценивает значения NULL в <xref:System.Data.SqlTypes>, и способом его работы с типами среды CLR. Все <xref:System.Data.SqlTypes> `Equals` методы используют семантику базы данных для оценки значений null: Если один или оба значения null, то результатом сравнения является null. С другой стороны, результатом использования метода среды CLR `Equals` на двух <xref:System.Data.SqlTypes> является true, если оба значения являются NULL. Это отражает разницу между использованием метода экземпляра, например метода среды CLR `String.Equals`, и использованием статического или общего метода `SqlString.Equals`.  
   
  Следующий пример демонстрирует разницу в результатах методов `SqlString.Equals` и `String.Equals`, если каждому посылается пара значений NULL, а затем пара пустых строк.  
   

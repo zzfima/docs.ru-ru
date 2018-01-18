@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e083d805-dcf6-459d-b9af-9ef0563f2dd7
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a2fa902cfbea3c6eb15e1832231bb3ed83de5497
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6ff0ee9019f8c61ad2fc18c5d22240abb2dc6b9b
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="linq-to-sql-with-tightly-coupled-client-server-applications"></a>LINQ to SQL и тесно связанные клиентские/серверные приложения
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]может использоваться на среднем уровне с тесно связанными интеллектуальными клиентами на уровне представления данных. Реализация сценариев, в которых используется доступ к данным только для чтения и не выполняются проверки оптимистического параллелизма на основе исходных значений или меток времени, представляет собой не более сложную задачу, чем сценарии без удаленного взаимодействия. Однако, если база данных требует выполнения проверки оптимистического параллелизма на основе исходных значений, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не предоставляет того уровня поддержки кругового пути данных, который обеспечивается DataSets. Тем не менее, средний уровень [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] может обмениваться данными с клиентами на любой платформе.  

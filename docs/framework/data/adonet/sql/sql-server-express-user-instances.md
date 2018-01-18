@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 9cd5dc57a9e7d164ec7ca1ebcc1e6d2cc2a5a6cd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 55f3393c84ec08d3c3944552ac2bed7d15dd025f
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-express-user-instances"></a>Пользовательские экземпляры SQL Server, экспресс-выпуск
 Выпуск Microsoft SQL Server Express Edition (SQL Server Express) поддерживает пользовательский экземпляр, который доступен только при использовании поставщика данных .NET Framework для SQL Server (`SqlClient`). Пользовательским экземпляром является отдельный экземпляр компонента SQL Server Express Database Engine, который формируется родительским экземпляром. Пользовательские экземпляры позволяют пользователям, не являющимся администраторами на их локальных компьютерах, присоединяться и подключаться к базам данных SQL Server Express. Каждый экземпляр выполняется в контексте безопасности отдельного пользователя, один экземпляр на одного пользователя.  
@@ -69,7 +69,7 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  Свойства <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> и <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> также можно использовать для создания строки подключения во время выполнения.  
+>  Можно также использовать <xref:System.Data.SqlClient.SqlConnectionStringBuilder> <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> и <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> свойства для создания строки подключения во время выполнения.  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>С помощью &#124; DataDirectory &#124; Строка подстановки  
  Свойство `AttachDbFileName` в ADO.NET 2.0 было расширено, в нем появилась строка подстановки `|DataDirectory|` (заключается в символы прямой черты). `DataDirectory` в сочетании со свойством `AttachDbFileName` позволяет указать относительный путь к файлу данных, тем самым позволяя разработчикам создавать строки соединения без указания полного пути к источнику данных.  

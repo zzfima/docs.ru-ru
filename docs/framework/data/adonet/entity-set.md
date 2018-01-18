@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 9d0cef0247c36f3c7819e37f8144635ebdbf610b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 050c73d3fd9146c8eee83baf1bd504acc18c8718
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entity-set"></a>набор сущностей
 *Набора сущностей* — это логический контейнер для экземпляров [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) и экземпляров любого типа, производного от этого типа сущности. (Сведения о производных типов см. в разделе [модель EDM: наследование](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).) Связь между типом сущности и набором сущностей схожа со связью между строкой и таблицей в реляционной базе данных. Как и строка, тип сущности описывает структуру данных, и, как и таблица, набор сущностей содержит экземпляры данной структуры. Набор сущностей не является конструктом моделирования данных; он не описывает структуру данных. Вместо этого набор сущностей обеспечивает конструкт для среды размещения или хранения (например, для среды CLR или базы данных сервера SQL), позволяя группировать экземпляры типа сущности так, чтобы они были сопоставлены хранилищу данных.  

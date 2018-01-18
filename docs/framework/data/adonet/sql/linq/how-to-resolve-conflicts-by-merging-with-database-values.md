@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 1988b79c-3bfc-4c5c-a08a-86cf638bbe17
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ee1016a6dc20e58bfafc434617a36f8f8703a3bc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 942313f87f19345b3656ec241e4c673d3f12601d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-resolve-conflicts-by-merging-with-database-values"></a>Практическое руководство. Разрешение конфликтов за счет слияния со значениями баз данных
 Чтобы согласовать различия между ожидаемыми и фактическими значениями базы данных до повторной отправки изменений, можно воспользоваться <xref:System.Data.Linq.RefreshMode.KeepChanges> для объединения значений базы данных с текущими значениями члена клиента. Дополнительные сведения см. в разделе [оптимистичного параллелизма: Обзор](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  

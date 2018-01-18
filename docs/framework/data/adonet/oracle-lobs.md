@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6aa72d4c3ac27b3be6704943819596ad628e4f7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0586a3cb658acb0732add3e78f68344d887646fc
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="oracle-lobs"></a>Большие двоичные объекты (LOB) Oracle
 Поставщик данных .NET Framework для Oracle содержит <xref:System.Data.OracleClient.OracleLob> класс, который используется для работы с Oracle **LOB** типов данных.  
@@ -27,8 +27,8 @@ ms.lasthandoff: 12/22/2017
   
 |Тип данных|Описание:|  
 |---------------|-----------------|  
-|**BLOB-объект**|Oracle **большого двоичного ОБЪЕКТА** тип данных, который содержит двоичные данные с максимальным размером 4 гигабайта. Он сопоставляется с **массива** типа **байтов**.|  
-|**CLOB**|Oracle **CLOB** тип данных, содержащий символьные данные, в зависимости от символа по умолчанию, установленной на сервере, с максимальным размером 4 гигабайта. Он сопоставляется с **строка**.|  
+|**Blob**|Oracle **большого двоичного ОБЪЕКТА** тип данных, который содержит двоичные данные с максимальным размером 4 гигабайта. Он сопоставляется с **массива** типа **байтов**.|  
+|**Clob**|Oracle **CLOB** тип данных, содержащий символьные данные, в зависимости от символа по умолчанию, установленной на сервере, с максимальным размером 4 гигабайта. Он сопоставляется с **строка**.|  
 |**NClob**|Oracle **NCLOB** тип данных, содержащий символьные данные на основании национальной кодировки сервера размером до 4 гигабайт. Он сопоставляется с **строка**.|  
   
  **OracleLob** отличается от <xref:System.Data.OracleClient.OracleBFile> в том, что данные хранятся на сервере, а не в физическом файле в операционной системе. Это также может быть объект чтения и записи, в отличие от **OracleBFile**, который всегда доступен только для чтения.  

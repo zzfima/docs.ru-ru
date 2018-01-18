@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ab7a60b4195f3d8976a61e3909682b3748e30341
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2576c95ad7739d28e2ca822fd13fb6f176900814
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="viewing-data-in-a-datatable"></a>Просмотр данных в таблице данных
 Можно получить содержимое из <xref:System.Data.DataTable> с помощью **строк** и **столбцы** коллекции **DataTable**. Можно также использовать <xref:System.Data.DataTable.Select%2A> метод для возврата подмножества данных в **DataTable** в соответствии с условиями поиска, порядок сортировки и состоянием строк. Кроме того, можно использовать <xref:System.Data.DataRowCollection.Find%2A> метод **DataRowCollection** при поиске конкретной строки, используя значение первичного ключа.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 |Значение DataViewRowState|Описание:|  
 |----------------------------|-----------------|  
 |**CurrentRows**|Текущие строки, включая не изменившиеся, добавленные и измененные.|  
-|**Удален**|Удаленная строка.|  
+|**Deleted**|Удаленная строка.|  
 |**ModifiedCurrent**|Текущая версия, которая является измененной версией исходных данных. (См. **ModifiedOriginal**.)|  
 |**ModifiedOriginal**|Исходная версия всех измененных строк. Текущая версия — доступны с помощью **ModifiedCurrent**.|  
 |**Добавить**|Новая строка.|  

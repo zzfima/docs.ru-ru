@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 4528393d3d9491d9c1f12a867eb093e75d028f3d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc09f3f9b43b70b7f9b302d7a9d75428b5a0e6c7
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="annotating-typed-datasets"></a>Создание примечаний к типизированным наборам данных
 Заметки дают возможность изменять имена элементов в типизированных <xref:System.Data.DataSet> без изменения базовой схемы. Изменить имена элементов в базовой схеме, типизированные **набора данных** для ссылки на объекты, которые не существуют в источнике данных, а также потеряют ссылки на объекты, которые существуют в источнике данных.  

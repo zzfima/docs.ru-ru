@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6956d48163f9b9da66258c0dbb3452beab5420d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8a955f62aa1e7b2f025a621840753e2213fcefe7
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="database-mirroring-in-sql-server"></a>Зеркальное отображение баз данных в SQL Server
 Зеркальное отображение базы данных в SQL Server позволяет сохранять копию или зеркальную копию базы данных SQL Server на резервном сервере. Зеркальное отображение гарантирует постоянное существование двух отдельных копий данных, обеспечивая тем самым высокий уровень доступности и полную избыточность данных. Поставщик данных .NET для SQL Server предоставляет неявную поддержку зеркального отображения базы данных, поэтому разработчику не надо предпринимать никаких действий или писать код, если он настроен для работы с базой данных SQL Server. Кроме того, объект <xref:System.Data.SqlClient.SqlConnection> поддерживает режим явного подключения, в котором в строке подключения <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> можно указать имя резервного сервера-участника.  

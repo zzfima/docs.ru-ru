@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e46783c627657f1185e93b4ddbb7f996df064250
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f60a26d94734dacaba7e540c0584c8eb1ada803
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Потребление набора данных из веб-службы XML
 Объект <xref:System.Data.DataSet> не имеет привязки к каким-либо источникам, что позволяет частично упростить передачу данных через Интернет. **DataSet** сериализуется «» в том, что он может быть указан в качестве входного или выходные данные веб-служб XML без дополнительного кодирования, необходимых для потоковой передачи содержимого **DataSet** из веб-служб XML Клиент и обратно. **DataSet** неявно преобразуется в поток XML с помощью формата DiffGram, отправляемых по сети и затем восстанавливается из потока XML в виде **DataSet** на принимающей стороне. Это обеспечивает очень простой и гибкий метод передачи и получения реляционных данных с помощью веб-служб XML. Дополнительные сведения о формате см. в разделе [дельты](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  

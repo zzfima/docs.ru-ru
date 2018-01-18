@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a42c8d24a2817fb0a4118927722e7ac1887517a6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c086ad08e4170d0033ae32bd730b239d5541d541
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Предоставление разрешений уровня строки в SQL Server
 В некоторых случаях требуется более точное управление доступом к данным, чем простое предоставление, отзыв или отклонение предоставленных разрешений. Например, в приложении базы данных больницы может требоваться ограничение доступа отдельных врачей, чтобы они имели доступ к сведениям только о своих пациентах. Подобные требования существуют во многих областях, включая финансовые, юридические, правительственные и военные приложения. SQL Server 2016 помогает реализовать эти сценарии, предоставляя функциональность [безопасности на уровне строк](https://msdn.microsoft.com/library/dn765131.aspx) , которая упрощает и централизует логику доступа на уровне строк в политике безопасности. В более ранних версиях SQL Server аналогичная функциональность достигается путем использования представлений для внедрения фильтрации на уровне строк.  

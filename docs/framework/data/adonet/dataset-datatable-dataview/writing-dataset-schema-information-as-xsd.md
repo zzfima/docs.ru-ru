@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 4e530831-695e-49ff-8f0b-e5b0c526b8eb
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 95f8a5d4d03c349467cbd13976ca9023470735aa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bea961310c838068a54f15f7b05186ab56721dc2
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="writing-dataset-schema-information-as-xsd"></a>Запись сведений о схеме набора данных как XSD
 Можно записать схему набора данных <xref:System.Data.DataSet> в виде схемы на языке XSD, чтобы можно было передать ее в XML-документ с взаимосвязанными данными или без них. XML-схемы, которые могут записываться в файл, поток, <xref:System.Xml.XmlWriter>, или строку; она может использоваться для создания строго типизированного **набора данных**. Дополнительные сведения о строго типизированных **DataSet** объектов, в разделе [типизированных наборов данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  

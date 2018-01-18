@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 8c28dee75d5371da50dec1d3b73ec6c305176582
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b1250d616ad5835fccd1a3acbf0b8a759c34181
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>Запись содержимого набора как данных XML
 В ADO.NET можно записать XML-представление объекта <xref:System.Data.DataSet> вместе со схемой или без нее. Если информация схемы встраивается внутрь XML, она записываются на языке XSD. Схема содержит определения таблиц для <xref:System.Data.DataSet>, а также определения связей и ограничений.  

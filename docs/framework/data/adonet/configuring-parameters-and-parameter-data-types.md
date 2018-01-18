@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 0f5aed56ba4958d44e0628f55115308751afae55
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a71ba7ed12196184b7e826ed70c92a9873efdb0c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Настройка параметров и типы данных параметров
 Объекты команды используют параметры для передачи значений в выражения SQL или хранимые процедуры, обеспечивая проверку типов и правильности. В отличие от текста команд, входные параметры обрабатываются как буквенные значения, а не как исполняемый код. Это помогает защищаться от атак путем внедрения кода SQL, при которых злоумышленник вставляет в инструкцию SQL команду, ставящую под угрозу безопасность сервера.  
@@ -71,7 +71,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Int32>|Int32|Int|Int|Int|Int32|  
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Числовой|  
 |<xref:System.Object>|Объект|Вариант|Вариант|Вывод типа OdbcType из типа Object не поддерживается.|Blob|  
-|<xref:System.String>|Строка|NVarChar. Это неявное преобразование завершится ошибкой, если строка превышает максимальный размер для типа NVarChar (4000 символов). Для строк длиннее 4000 символов явно установите значение <xref:System.Data.SqlDbType>.|VarWChar|NVarChar|NVarChar|  
+|<xref:System.String>|Строковое|NVarChar. Это неявное преобразование завершится ошибкой, если строка превышает максимальный размер для типа NVarChar (4000 символов). Для строк длиннее 4000 символов явно установите значение <xref:System.Data.SqlDbType>.|VarWChar|NVarChar|NVarChar|  
 |<xref:System.TimeSpan>|Время|Тип Time в SQL Server 2008. Вывод типа <xref:System.Data.SqlDbType> из типа TimeSpan не поддерживается в версиях SQL Server до SQL Server 2008.|DBTime|Время|DateTime|  
 |<xref:System.UInt16>|UInt16|Вывод типа <xref:System.Data.SqlDbType> из типа UInt16 не поддерживается.|UnsignedSmallInt|Int|UInt16|  
 |<xref:System.UInt32>|UInt32|Вывод типа <xref:System.Data.SqlDbType> из типа UInt32 не поддерживается.|UnsignedInt|BigInt|UInt32|  

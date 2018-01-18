@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: c33d74b3-530d-421b-a121-96786dd263a5
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d03dc5a3775ee9396573d58637c32f824760768f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a5447ce64803405668a2d486c7b3071b5ff923cb
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-connect-to-a-database"></a>Практическое руководство. Подключение к базе данных
 Основным каналом, через который выполняется подключение к базе данных, извлекаются объекты и отправляются изменения обратно в базу данных, является класс <xref:System.Data.Linq.DataContext>. Вы используете <xref:System.Data.Linq.DataContext> так же, как использовалась бы [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] <xref:System.Data.SqlClient.SqlConnection>. В действительности класс <xref:System.Data.Linq.DataContext> инициализируется с помощью предоставляемого пользователем подключения или строки подключения. Дополнительные сведения см. в разделе [методы DataContext (O/R-конструктор)](/visualstudio/data-tools/datacontext-methods-o-r-designer).  

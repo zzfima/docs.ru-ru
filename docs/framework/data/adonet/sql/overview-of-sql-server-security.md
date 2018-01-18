@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ff0a78a852bdbf2fa1eb075273cad317c21fb182
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a8f44b69f177584bb3680f68c50ff054c6b805ed
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="overview-of-sql-server-security"></a>Общие сведения о безопасности SQL Server
 Стратегия всесторонней защиты с перекрывающимися уровнями безопасности - это лучший способ борьбы с угрозами безопасности. SQL Server предоставляет архитектуру безопасности, которая позволяет администраторам баз данных и разработчикам создавать защищенные приложения баз данных и бороться с угрозами. В каждой версии SQL Server имеются усовершенствования по сравнению с предыдущими версиями в виде добавления новых функций и возможностей. Однако система безопасности не поставляется в готовом виде. Каждое приложение уникально по своим требованиям к безопасности. Разработчики должны понимать, какое сочетание функций и возможностей является наиболее подходящим для борьбы с известными угрозами и предупреждения угроз, которые могу появиться в будущем.  

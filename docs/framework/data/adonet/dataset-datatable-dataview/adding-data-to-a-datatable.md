@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 91aa84b0a3d381512faf74f350dc4b43e9a3c598
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 29ba4a62b2c896e4ce5fa01929307ee82753495f
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="adding-data-to-a-datatable"></a>Добавление данных в таблицу данных
 После создания объекта <xref:System.Data.DataTable> и определения его структуры с использованием столбцов и ограничений к созданной таблице можно добавлять новые строки данных. Чтобы добавить новую строку, объявите новую переменную типа <xref:System.Data.DataRow>. Новый **DataRow** объект возвращается при вызове <xref:System.Data.DataTable.NewRow%2A> метода. **DataTable** создает **DataRow** объекта на основе структуры таблицы, в соответствии с определением <xref:System.Data.DataColumnCollection>.  

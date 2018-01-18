@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 971762d0-663b-4b64-8c61-352a8e6d3949
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 559d6c8bf6abb0dd021784046b3161c799b58df4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e68a78a3a24bf6da4e9827cb17d4715b6d60d0b8
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="date-and-time-functions"></a>Функции даты и времени
 Поставщик данных .NET Framework для SQL Server (SqlClient) предоставляет функции даты и времени, которые выполняют операции с входным значением типа `System.DateTime` и возвращают значение типа `string` `System.DateTime` или числовое значение. Эти функции находятся в пространстве имен SqlServer, которое доступно при использовании SqlClient. Свойство пространства имен поставщика позволяет платформе Entity Framework узнать, какой префикс используется этим поставщиком для конкретных конструкций, таких как типы или функции. В следующей таблице приведены функции даты и времени SqlClient.  

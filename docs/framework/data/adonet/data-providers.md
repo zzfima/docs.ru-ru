@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
 caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ff16c00f1e0e87c9f046c1f5944e11a9111f6e1a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ec484bc544f2889d6f37055cb9863b4806ec20c8
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="net-framework-data-providers"></a>Поставщики данных .NET Framework
 Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] используется для установления соединения с базой данных, выполнения команд и получения результатов. Эти результаты обрабатываются непосредственно, помещаются в <xref:System.Data.DataSet> , чтобы по мере необходимости они были доступны для пользователей вместе с данными из нескольких источников, либо распределяются между уровнями. Источники данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] являются упрощенными и создают минимальный уровень между источником данных и кодом, увеличивая тем самым производительность без ущерба для функциональных возможностей.  

@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 62c5cef51e125443d87c47f7f62dc76aa5d352b8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3a13d6ee9345731e097d0bdc9b6e59772d29b554
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Выполнение запроса XPath к набору данных
 Связь между синхронизированным <xref:System.Data.DataSet> и <xref:System.Xml.XmlDataDocument> позволяет использовать XML-служб, таких как запрос языка XML Path (XPath), которые обращаются к **XmlDataDocument** и выполнять некоторые функции более удобным, чем доступ к **DataSet** напрямую. Например, вместо использования **выберите** метод <xref:System.Data.DataTable> для перехода по связям к другим таблицам в **DataSet**, можно выполнить запрос XPath к **XmlDataDocument**  , синхронизируется с **DataSet**, чтобы получить список XML-элементов в виде <xref:System.Xml.XmlNodeList>. Узлы в **XmlNodeList**, приведенное <xref:System.Xml.XmlElement> узлов, может быть передан **GetRowFromElement** метод **XmlDataDocument**, чтобы вернуть совпадающие <xref:System.Data.DataRow> ссылки на строки таблицы в синхронизированном **набора данных**.  

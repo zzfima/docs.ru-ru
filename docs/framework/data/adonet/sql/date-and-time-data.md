@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a547bbb38d58d5b4c22e78bfd64fef4094865143
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a146cf50639351479d42bff684ea7db21ecf5d3b
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="date-and-time-data"></a>Данные даты и времени
 В SQL Server 2008 появились указанные ниже новые типы данных для обработки сведений о дате и времени. Новые типы данных включают отдельные типы для даты и времени, а также расширенные типы данных, обладающие большим диапазоном, большей точностью и учитывающие часовые пояса. Начиная с .NET Framework 3.5 с пакетом обновления 1 (SP1), поставщик данных .NET Framework для SQL Server (<xref:System.Data.SqlClient>) полностью поддерживает все новые возможности ядра СУБД SQL Server 2008. Для использования новых возможностей с SqlClient необходимо установить .NET Framework 3.5 с пакетом обновления 1 (SP1) или более поздней версии.  

@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: f3e80b5bb62cc785c220e2baeb773e6990c5fee1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e478f145511266a919b1bc948e3218b60f3de993
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="provider-manifest-specification"></a>Спецификация манифеста поставщика
 В этом разделе описывается поддержка типов и функций в хранилище данных, представляемая поставщиком хранилища данных.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="provider-manifest-discoverability"></a>Возможность обнаружения манифеста поставщика  
  Манифест неявно используется несколькими типами компонентов в службах сущностей (например, средствами и запросами), а также непосредственно используется в метаданных с помощью загрузчика метаданных хранилища.  
   
- ![dfb3d02b &#45; 7a8c &#45; 4d 51 &#45; ac5a &#45; a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
+ ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
   
  При этом заданный поставщик может поддерживать различные хранилища или различные версии одного хранилища. Поэтому поставщик должен передавать различный манифест для каждого из поддерживаемых хранилищ данных.  
   
@@ -88,7 +88,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="provider-manifest-programming-model"></a>Модель программирования манифеста поставщика  
  Поставщики являются производными от класса <xref:System.Data.Common.DbXmlEnabledProviderManifest> и поэтому могут указывать манифесты декларативно. На следующем рисунке показана иерархия классов поставщика.  
   
- ![Нет](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
+ ![None](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
   
 ### <a name="discoverability-api"></a>API обнаружения  
  Манифест поставщика загружается загрузчиком метаданных хранилища (StoreItemCollection) с помощью соединения с хранилищем данных или маркера манифеста поставщика.  

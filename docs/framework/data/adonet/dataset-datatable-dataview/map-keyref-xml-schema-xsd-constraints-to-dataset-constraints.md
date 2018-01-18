@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: f888a682510dbf768e5eab2ffdd530e2ac7cf635
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e364efe0856a5291fc8157ef6ab185c2438a3347
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Сопоставление ограничений XML-схемы (XSD) keyref с ограничениями набора данных
 **Keyref** элемент позволяет устанавливать ссылки между элементами внутри документа. Это похоже на связь по внешнему ключу в реляционной базе данных. Если в схеме **keyref** элемент преобразуется в процессе сопоставления схемы в соответствующие ограничения внешнего ключа на столбцы в таблицах с <xref:System.Data.DataSet>. По умолчанию **keyref** элемент также формирует связь с **ParentTable**, **ChildTable**, **ParentColumn**и  **ChildColumn** свойства, указанные в этой связи.  
@@ -28,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 |Имя атрибута|Описание:|  
 |--------------------|-----------------|  
 |**msdata: constraintonly**|Если **ConstraintOnly = «true»** указано на **keyref** элемент в схеме, создается ограничение, но не создается связь. Если этот атрибут не указан (или имеет значение **False**), ограничения и связи, создаются в **набора данных**.|  
-|**msdata: ConstraintName**|Если **ConstraintName** атрибут указан, его значение используется в качестве имени ограничения. В противном случае **имя** атрибут **keyref** элемент в схеме предоставляет имя ограничения в **набора данных**.|  
+|**msdata:ConstraintName**|Если **ConstraintName** атрибут указан, его значение используется в качестве имени ограничения. В противном случае **имя** атрибут **keyref** элемент в схеме предоставляет имя ограничения в **набора данных**.|  
 |**msdata:UpdateRule**|Если **UpdateRule** задан в **keyref** элемента в схеме, его значение будет назначено **UpdateRule** свойства ограничения в  **Набор данных**. В противном случае **UpdateRule** свойству **Cascade**.|  
 |**msdata:DeleteRule**|Если **DeleteRule** задан в **keyref** элемента в схеме, его значение будет назначено **DeleteRule** свойства ограничения в  **Набор данных**. В противном случае **DeleteRule** свойству **Cascade**.|  
 |**msdata:AcceptRejectRule**|Если **AcceptRejectRule** задан в **keyref** элемента в схеме, его значение будет назначено **AcceptRejectRule** свойства ограничения в  **Набор данных**. В противном случае **AcceptRejectRule** свойству **нет**.|  

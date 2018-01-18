@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
 caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 679196a6cc21705c8cc07e373a928f3c77c6befb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b0a81fd9b92e626b52c5a74c65798ddedbd94a9
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Перечисление экземпляров SQL Server (ADO.NET)
 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] позволяет приложениям находить экземпляры [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] в существующей сети. Класс <xref:System.Data.Sql.SqlDataSourceEnumerator> обеспечивает доступ к этим сведениям разработчику приложения, предоставляя объект <xref:System.Data.DataTable> с данными обо всех видимых серверах. Эта возвращенная таблица содержит список экземпляров сервера, доступен в сети, который совпадает со списком, предоставляемым при попытке пользователя создать новое соединение и дополняет раскрывающегося списка, содержащий все доступные серверы в **подключения Свойства** диалоговое окно. Отображаемые результаты не всегда являются полными.  
@@ -56,8 +56,8 @@ System.Data.DataTable dataTable = instance.GetDataSources();
   
 |Столбец|Описание:|  
 |------------|-----------------|  
-|**Имя сервера**|Имя сервера.|  
-|**Имя_экземпляра**|Имя экземпляра сервера. Является пустым, если сервер работает в качестве экземпляра по умолчанию.|  
+|**ServerName**|Имя сервера.|  
+|**InstanceName**|Имя экземпляра сервера. Является пустым, если сервер работает в качестве экземпляра по умолчанию.|  
 |**IsClustered**|Показывает, является ли сервер частью кластера.|  
 |**Version**|Версия сервера. Пример:<br /><br /> -9, 00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-11.0.xx ([!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 г.)|  
   

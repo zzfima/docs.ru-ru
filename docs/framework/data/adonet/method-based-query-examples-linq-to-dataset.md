@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d340775c-7f39-4087-a290-5cbec6cfa68e
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 313364f71c463a320816bb92113f3b720146fe25
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1c34420d567e030eb681dbe90a4154e7b709daf7
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="method-based-query-examples-linq-to-dataset"></a>Примеры запросов на основе методов (LINQ to DataSet)
 В этом разделе приведены примеры программирования [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] с использованием синтаксиса запросов на основе методов, в которых используются стандартные операторы запросов. <xref:System.Data.DataSet> Используется в этих примерах заполняется с помощью `FillDataSet` метод, который указывается в [загрузка данных в наборе данных](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Дополнительные сведения см. в разделе [Общие сведения о стандартных операторах запроса](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  

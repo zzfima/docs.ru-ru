@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4735a220-3301-4ec4-8833-7209abb7208f
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 32b994c7ccf09377973d78f6f198fd1aea322889
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0796d3523038895ddbd4d1fb6129a0cb6dc0382a
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="getting-started-entity-framework"></a>Начало работы (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Поддерживает ориентированных на данные приложений и служб, а также предоставляет платформу для программирования для данных, которая повышает уровень абстракции с логического реляционного до концептуального уровня. Обеспечивая разработчикам возможность работать с данными на более высоком уровне абстракции, платформа [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] поддерживает код, который является независимым от конкретного типа подсистемы хранилища данных или реляционной схемы. Дополнительные сведения см. в разделе [Общие сведения об Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md).  

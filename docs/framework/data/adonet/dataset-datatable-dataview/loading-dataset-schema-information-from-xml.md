@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e41eb1168774a5ebfc17147f65901de0e432789f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b814715782710994f18163ccfcd3db342199145
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>Загрузка сведений о схеме набора данных из XML
 Схема <xref:System.Data.DataSet> (его таблиц, столбцов, связей и ограничений) можно определить программно, созданные **заполнения** или **FillSchema** методы <xref:System.Data.Common.DataAdapter>, или загрузке из XML-документ. Для загрузки **DataSet** данные схемы из XML-документа, можно использовать **ReadXmlSchema** или **InferXmlSchema** метод **набораданных**. **ReadXmlSchema** позволяет загружать или выводить **DataSet** сведений о схеме из документа, содержащего схемы языка определения схемы XML или XML-документа со встроенной схемой XML. **InferXmlSchema** дает возможность выводить схему из XML-документ, учитывая некоторые указанные пространства имен XML.  

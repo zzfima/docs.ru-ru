@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 5276697ebdc065965d970afc4ac2ef6be61c8f20
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3700e4010176abed05677043469476fe34cd564c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>Сопоставление уникальных ограничений XML-схемы (XSD) с ограничениями набора данных
 В схему языка определения схемы XML **уникальный** элемент указывает на элемент или атрибут ограничение уникальности. В процессе преобразования схемы XML в реляционную схему наложенное на элемент или атрибут ограничение, гарантирующее уникальность, в XML-схеме сопоставляется с ограничением уникальности в объекте <xref:System.Data.DataTable> в соответствующем объекте <xref:System.Data.DataSet>, который формируется.  
@@ -27,8 +27,8 @@ ms.lasthandoff: 12/22/2017
   
 |Имя атрибута|Описание:|  
 |--------------------|-----------------|  
-|**msdata: ConstraintName**|Если этот атрибут указан, его значение используется в качестве имени ограничения. В противном случае **имя** атрибут содержит значение имени ограничения.|  
-|**msdata: PrimaryKey**|Если `PrimaryKey="true"` присутствует в **уникальный** , ограничения unique создается элемент с **IsPrimaryKey** свойство **true**.|  
+|**msdata:ConstraintName**|Если этот атрибут указан, его значение используется в качестве имени ограничения. В противном случае **имя** атрибут содержит значение имени ограничения.|  
+|**msdata:PrimaryKey**|Если `PrimaryKey="true"` присутствует в **уникальный** , ограничения unique создается элемент с **IsPrimaryKey** свойство **true**.|  
   
  В следующем примере показано схему XML, который использует **уникальный** элемента, чтобы указать ограничение уникальности.  
   
