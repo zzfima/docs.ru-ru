@@ -10,69 +10,69 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 33b41121ff70eaba07e5d3e14f3b828a3d35d34c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cecb38e13a9539dcf92f1dcc7eecbd35c493a3f9
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="adonet"></a><span data-ttu-id="a49ce-102">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="a49ce-102">ADO.NET</span></span>
-<span data-ttu-id="a49ce-103">ADO.NET — это набор классов, предоставляющих службы доступа к данным программистам, которые используют платформу .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a49ce-103">ADO.NET is a set of classes that expose data access services for .NET Framework programmers.</span></span> <span data-ttu-id="a49ce-104">ADO.NET имеет богатый набор компонентов для создания распределенных приложений, совместно использующих данные.</span><span class="sxs-lookup"><span data-stu-id="a49ce-104">ADO.NET provides a rich set of components for creating distributed, data-sharing applications.</span></span> <span data-ttu-id="a49ce-105">Это неотъемлемая часть платформы .NET Framework, которая предоставляет доступ к реляционным данным, XML-данным и данным приложений.</span><span class="sxs-lookup"><span data-stu-id="a49ce-105">It is an integral part of the .NET Framework, providing access to relational, XML, and application data.</span></span> <span data-ttu-id="a49ce-106">ADO.NET удовлетворяет различные потребности разработчиков, включая создание клиентских приложений баз данных, а также бизнес-объектов среднего уровня, используемых приложениями, средствами, языками и браузерам.</span><span class="sxs-lookup"><span data-stu-id="a49ce-106">ADO.NET supports a variety of development needs, including the creation of front-end database clients and middle-tier business objects used by applications, tools, languages, or Internet browsers.</span></span>  
+# <a name="adonet"></a><span data-ttu-id="46adb-102">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="46adb-102">ADO.NET</span></span>
+<span data-ttu-id="46adb-103">ADO.NET — это набор классов, предоставляющих службы доступа к данным программистам, которые используют платформу .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="46adb-103">ADO.NET is a set of classes that expose data access services for .NET Framework programmers.</span></span> <span data-ttu-id="46adb-104">ADO.NET имеет богатый набор компонентов для создания распределенных приложений, совместно использующих данные.</span><span class="sxs-lookup"><span data-stu-id="46adb-104">ADO.NET provides a rich set of components for creating distributed, data-sharing applications.</span></span> <span data-ttu-id="46adb-105">Это неотъемлемая часть платформы .NET Framework, которая предоставляет доступ к реляционным данным, XML-данным и данным приложений.</span><span class="sxs-lookup"><span data-stu-id="46adb-105">It is an integral part of the .NET Framework, providing access to relational, XML, and application data.</span></span> <span data-ttu-id="46adb-106">ADO.NET удовлетворяет различные потребности разработчиков, включая создание клиентских приложений баз данных, а также бизнес-объектов среднего уровня, используемых приложениями, средствами, языками и браузерам.</span><span class="sxs-lookup"><span data-stu-id="46adb-106">ADO.NET supports a variety of development needs, including the creation of front-end database clients and middle-tier business objects used by applications, tools, languages, or Internet browsers.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a49ce-107">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="a49ce-107">In This Section</span></span>  
- [<span data-ttu-id="a49ce-108">Новые возможности в ADO.NET</span><span class="sxs-lookup"><span data-stu-id="a49ce-108">What's New in ADO.NET</span></span>](../../../../docs/framework/data/adonet/whats-new.md)  
- <span data-ttu-id="a49ce-109">Представляет новые возможности ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="a49ce-109">Introduces features that are new in ADO.NET.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="46adb-107">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="46adb-107">In This Section</span></span>  
+ [<span data-ttu-id="46adb-108">Новые возможности в ADO.NET</span><span class="sxs-lookup"><span data-stu-id="46adb-108">What's New in ADO.NET</span></span>](../../../../docs/framework/data/adonet/whats-new.md)  
+ <span data-ttu-id="46adb-109">Представляет новые возможности ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="46adb-109">Introduces features that are new in ADO.NET.</span></span>  
   
- [<span data-ttu-id="a49ce-110">Общие сведения об ADO.NET</span><span class="sxs-lookup"><span data-stu-id="a49ce-110">ADO.NET Overview</span></span>](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- <span data-ttu-id="a49ce-111">Содержит введение в структуру и компоненты ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="a49ce-111">Provides an introduction to the design and components of ADO.NET.</span></span>  
+ [<span data-ttu-id="46adb-110">Общие сведения об ADO.NET</span><span class="sxs-lookup"><span data-stu-id="46adb-110">ADO.NET Overview</span></span>](../../../../docs/framework/data/adonet/ado-net-overview.md)  
+ <span data-ttu-id="46adb-111">Содержит введение в структуру и компоненты ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="46adb-111">Provides an introduction to the design and components of ADO.NET.</span></span>  
   
- [<span data-ttu-id="a49ce-112">Entity Framework</span><span class="sxs-lookup"><span data-stu-id="a49ce-112">Entity Framework</span></span>](http://go.microsoft.com/fwlink/?LinkID=213876)  
- <span data-ttu-id="a49ce-113">Описывается процесс создания приложений с помощью платформы Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="a49ce-113">Describes how to create applications using the Entity Framework.</span></span>  
+ [<span data-ttu-id="46adb-112">Entity Framework</span><span class="sxs-lookup"><span data-stu-id="46adb-112">Entity Framework</span></span>](http://go.microsoft.com/fwlink/?LinkID=213876)  
+ <span data-ttu-id="46adb-113">Описывается процесс создания приложений с помощью платформы Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="46adb-113">Describes how to create applications using the Entity Framework.</span></span>  
   
- [<span data-ttu-id="a49ce-114">Защита приложений ADO.NET</span><span class="sxs-lookup"><span data-stu-id="a49ce-114">Securing ADO.NET Applications</span></span>](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- <span data-ttu-id="a49ce-115">Описывает приемы безопасного программирования при использовании ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="a49ce-115">Describes secure coding practices when using ADO.NET.</span></span>  
+ [<span data-ttu-id="46adb-114">Защита приложений ADO.NET</span><span class="sxs-lookup"><span data-stu-id="46adb-114">Securing ADO.NET Applications</span></span>](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ <span data-ttu-id="46adb-115">Описывает приемы безопасного программирования при использовании ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="46adb-115">Describes secure coding practices when using ADO.NET.</span></span>  
   
- [<span data-ttu-id="a49ce-116">Сопоставления типов данных в ADO.NET</span><span class="sxs-lookup"><span data-stu-id="a49ce-116">Data Type Mappings in ADO.NET</span></span>](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- <span data-ttu-id="a49ce-117">Описывается сопоставление между типами данных .NET Framework и поставщиками данных .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a49ce-117">Describes data type mappings between .NET Framework data types and the .NET Framework data providers.</span></span>  
+ [<span data-ttu-id="46adb-116">Сопоставления типов данных в ADO.NET</span><span class="sxs-lookup"><span data-stu-id="46adb-116">Data Type Mappings in ADO.NET</span></span>](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
+ <span data-ttu-id="46adb-117">Описывается сопоставление между типами данных .NET Framework и поставщиками данных .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="46adb-117">Describes data type mappings between .NET Framework data types and the .NET Framework data providers.</span></span>  
   
- [<span data-ttu-id="a49ce-118">Наборы данных, таблицы данных и объекты DataView</span><span class="sxs-lookup"><span data-stu-id="a49ce-118">DataSets, DataTables, and DataViews</span></span>](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- <span data-ttu-id="a49ce-119">Описывает процесс создания и использования объектов `DataSets`, типизированных объектов `DataSets`, а также объектов `DataTables` и `DataViews`.</span><span class="sxs-lookup"><span data-stu-id="a49ce-119">Describes how to create and use `DataSets`, typed `DataSets`, `DataTables`, and `DataViews`.</span></span>  
+ [<span data-ttu-id="46adb-118">Наборы данных, таблицы данных и объекты DataView</span><span class="sxs-lookup"><span data-stu-id="46adb-118">DataSets, DataTables, and DataViews</span></span>](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ <span data-ttu-id="46adb-119">Описывает процесс создания и использования объектов `DataSets`, типизированных объектов `DataSets`, а также объектов `DataTables` и `DataViews`.</span><span class="sxs-lookup"><span data-stu-id="46adb-119">Describes how to create and use `DataSets`, typed `DataSets`, `DataTables`, and `DataViews`.</span></span>  
   
- [<span data-ttu-id="a49ce-120">LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="a49ce-120">LINQ to DataSet</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset.md)  
- <span data-ttu-id="a49ce-121">Содержит сведения о технологии LINQ to DataSet, в том числе примеры программирования.</span><span class="sxs-lookup"><span data-stu-id="a49ce-121">Provides information about LINQ to DataSet, including programming examples.</span></span>  
+ [<span data-ttu-id="46adb-120">LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="46adb-120">LINQ to DataSet</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset.md)  
+ <span data-ttu-id="46adb-121">Содержит сведения о технологии LINQ to DataSet, в том числе примеры программирования.</span><span class="sxs-lookup"><span data-stu-id="46adb-121">Provides information about LINQ to DataSet, including programming examples.</span></span>  
   
- [<span data-ttu-id="a49ce-122">Извлечение и изменение данных в ADO.NET</span><span class="sxs-lookup"><span data-stu-id="a49ce-122">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- <span data-ttu-id="a49ce-123">Описывается подключение к источнику данных, а также способ извлечения и изменения данных с помощью объектов `Commands`, `DataReaders` и `DataAdapters`.</span><span class="sxs-lookup"><span data-stu-id="a49ce-123">Describes how to connect to a data source and how to retrieve and modify data using `Commands`, `DataReaders` and `DataAdapters`.</span></span>  
+ [<span data-ttu-id="46adb-122">Извлечение и изменение данных в ADO.NET</span><span class="sxs-lookup"><span data-stu-id="46adb-122">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ <span data-ttu-id="46adb-123">Описывается подключение к источнику данных, а также способ извлечения и изменения данных с помощью объектов `Commands`, `DataReaders` и `DataAdapters`.</span><span class="sxs-lookup"><span data-stu-id="46adb-123">Describes how to connect to a data source and how to retrieve and modify data using `Commands`, `DataReaders` and `DataAdapters`.</span></span>  
   
- [<span data-ttu-id="a49ce-124">SQL Server и ADO.NET</span><span class="sxs-lookup"><span data-stu-id="a49ce-124">SQL Server and ADO.NET</span></span>](../../../../docs/framework/data/adonet/sql/index.md)  
- <span data-ttu-id="a49ce-125">Описывает процесс работы со специальными возможностями и возможностями SQL Server.</span><span class="sxs-lookup"><span data-stu-id="a49ce-125">Describes how to work with features and functionality that are specific to SQL Server.</span></span>  
+ [<span data-ttu-id="46adb-124">SQL Server и ADO.NET</span><span class="sxs-lookup"><span data-stu-id="46adb-124">SQL Server and ADO.NET</span></span>](../../../../docs/framework/data/adonet/sql/index.md)  
+ <span data-ttu-id="46adb-125">Описывает процесс работы со специальными возможностями и возможностями SQL Server.</span><span class="sxs-lookup"><span data-stu-id="46adb-125">Describes how to work with features and functionality that are specific to SQL Server.</span></span>  
   
- [<span data-ttu-id="a49ce-126">Oracle и ADO.NET</span><span class="sxs-lookup"><span data-stu-id="a49ce-126">Oracle and ADO.NET</span></span>](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- <span data-ttu-id="a49ce-127">Описывает возможности и варианты поведения, характерные для поставщика данных .NET Framework для Oracle.</span><span class="sxs-lookup"><span data-stu-id="a49ce-127">Describes features and behaviors that are specific to the .NET Framework Data Provider for Oracle.</span></span>  
+ [<span data-ttu-id="46adb-126">Oracle и ADO.NET</span><span class="sxs-lookup"><span data-stu-id="46adb-126">Oracle and ADO.NET</span></span>](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
+ <span data-ttu-id="46adb-127">Описывает возможности и варианты поведения, характерные для поставщика данных .NET Framework для Oracle.</span><span class="sxs-lookup"><span data-stu-id="46adb-127">Describes features and behaviors that are specific to the .NET Framework Data Provider for Oracle.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="a49ce-128">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="a49ce-128">Related Sections</span></span>  
- [<span data-ttu-id="a49ce-129">Безопасность PAVE в машинном коде и коде .NET Framework</span><span class="sxs-lookup"><span data-stu-id="a49ce-129">PAVE Security in Native and .NET Framework Code</span></span>](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
- <span data-ttu-id="a49ce-130">Приводит ссылки на разделы, посвященные безопасности в Visual Studio и .NET Framework, а также шифрованию.</span><span class="sxs-lookup"><span data-stu-id="a49ce-130">Provides links to security topics for Visual Studio, the .NET Framework, and cryptography.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="46adb-128">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="46adb-128">Related Sections</span></span>  
+ [<span data-ttu-id="46adb-129">Безопасность PAVE в машинном коде и коде .NET Framework</span><span class="sxs-lookup"><span data-stu-id="46adb-129">PAVE Security in Native and .NET Framework Code</span></span>](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
+ <span data-ttu-id="46adb-130">Приводит ссылки на разделы, посвященные безопасности в Visual Studio и .NET Framework, а также шифрованию.</span><span class="sxs-lookup"><span data-stu-id="46adb-130">Provides links to security topics for Visual Studio, the .NET Framework, and cryptography.</span></span>  
   
- [<span data-ttu-id="a49ce-131">Встроенный язык запросов LINQ</span><span class="sxs-lookup"><span data-stu-id="a49ce-131">LINQ (Language-Integrated Query)</span></span>](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- <span data-ttu-id="a49ce-132">Приводит ссылки на разделы о LINQ и образцы применения.</span><span class="sxs-lookup"><span data-stu-id="a49ce-132">Provides links to LINQ topics and samples.</span></span>  
+ [<span data-ttu-id="46adb-131">Встроенный язык запросов LINQ</span><span class="sxs-lookup"><span data-stu-id="46adb-131">LINQ (Language-Integrated Query)</span></span>](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ <span data-ttu-id="46adb-132">Приводит ссылки на разделы о LINQ и образцы применения.</span><span class="sxs-lookup"><span data-stu-id="46adb-132">Provides links to LINQ topics and samples.</span></span>  
   
- [<span data-ttu-id="a49ce-133">Службы данных WCF 4.5</span><span class="sxs-lookup"><span data-stu-id="a49ce-133">WCF Data Services 4.5</span></span>](../../../../docs/framework/data/wcf/index.md)  
- <span data-ttu-id="a49ce-134">Описывает, как использовать [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для развертывания служб данных в Интернете или интрасети, которые реализуют протокол Open Data Protocol (OData).</span><span class="sxs-lookup"><span data-stu-id="a49ce-134">Describes how to use [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] to deploy data services on the Web or an intranet that implement the Open Data Protocol (OData).</span></span>  
+ [<span data-ttu-id="46adb-133">Службы данных WCF 4.5</span><span class="sxs-lookup"><span data-stu-id="46adb-133">WCF Data Services 4.5</span></span>](../../../../docs/framework/data/wcf/index.md)  
+ <span data-ttu-id="46adb-134">Описывает, как использовать [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для развертывания служб данных в Интернете или интрасети, которые реализуют протокол Open Data Protocol (OData).</span><span class="sxs-lookup"><span data-stu-id="46adb-134">Describes how to use [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] to deploy data services on the Web or an intranet that implement the Open Data Protocol (OData).</span></span>  
   
- [<span data-ttu-id="a49ce-135">Основные технологии разработки</span><span class="sxs-lookup"><span data-stu-id="a49ce-135">Core Development Technologies</span></span>](https://msdn.microsoft.com/library/csxbhtye.aspx)  
- <span data-ttu-id="a49ce-136">Приводит ссылки на сведения о стандартных задачах разработки с применением платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a49ce-136">Provides links to information about standard development tasks in the .NET Framework.</span></span>  
+ [<span data-ttu-id="46adb-135">Основные технологии разработки</span><span class="sxs-lookup"><span data-stu-id="46adb-135">Core Development Technologies</span></span>](https://msdn.microsoft.com/library/csxbhtye.aspx)  
+ <span data-ttu-id="46adb-136">Приводит ссылки на сведения о стандартных задачах разработки с применением платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="46adb-136">Provides links to information about standard development tasks in the .NET Framework.</span></span>  
   
- [<span data-ttu-id="a49ce-137">Расширенные технологии разработки</span><span class="sxs-lookup"><span data-stu-id="a49ce-137">Advanced Development Technologies</span></span>](https://msdn.microsoft.com/library/a493kdy6.aspx)  
- <span data-ttu-id="a49ce-138">Приводятся ссылки на сведения о сложных задачах разработки и приемах их решения на платформе .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a49ce-138">Provides links to information about sophisticated development tasks and techniques in the .NET Framework.</span></span>  
+ [<span data-ttu-id="46adb-137">Расширенные технологии разработки</span><span class="sxs-lookup"><span data-stu-id="46adb-137">Advanced Development Technologies</span></span>](https://msdn.microsoft.com/library/a493kdy6.aspx)  
+ <span data-ttu-id="46adb-138">Приводятся ссылки на сведения о сложных задачах разработки и приемах их решения на платформе .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="46adb-138">Provides links to information about sophisticated development tasks and techniques in the .NET Framework.</span></span>  
   
- [<span data-ttu-id="a49ce-139">Образцы и примеры использования</span><span class="sxs-lookup"><span data-stu-id="a49ce-139">Samples and Quickstarts</span></span>](https://msdn.microsoft.com/library/ms184422.aspx)  
- <span data-ttu-id="a49ce-140">Приводит полный листинг всех образцов, а также образцов из краткого руководства, связанных с платформой .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a49ce-140">Provides complete listings of all samples and QuickStart samples associated with the .NET Framework.</span></span>  
+ [<span data-ttu-id="46adb-139">Образцы и примеры использования</span><span class="sxs-lookup"><span data-stu-id="46adb-139">Samples and Quickstarts</span></span>](https://msdn.microsoft.com/library/ms184422.aspx)  
+ <span data-ttu-id="46adb-140">Приводит полный листинг всех образцов, а также образцов из краткого руководства, связанных с платформой .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="46adb-140">Provides complete listings of all samples and QuickStart samples associated with the .NET Framework.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a49ce-141">См. также</span><span class="sxs-lookup"><span data-stu-id="a49ce-141">See Also</span></span>  
- [<span data-ttu-id="a49ce-142">Доступ к данным в Visual Studio</span><span class="sxs-lookup"><span data-stu-id="a49ce-142">Accessing data in Visual Studio</span></span>](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- [<span data-ttu-id="a49ce-143">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="a49ce-143">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="46adb-141">См. также</span><span class="sxs-lookup"><span data-stu-id="46adb-141">See Also</span></span>  
+ [<span data-ttu-id="46adb-142">Доступ к данным в Visual Studio</span><span class="sxs-lookup"><span data-stu-id="46adb-142">Accessing data in Visual Studio</span></span>](/visualstudio/data-tools/accessing-data-in-visual-studio)  
+ [<span data-ttu-id="46adb-143">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="46adb-143">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -13,24 +13,24 @@ dev_langs:
 - vb
 ms.assetid: 2b224a84-bad5-4843-adcc-14e784d280f5
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 844b9cc43755041ebccae63f477b4f1b21bd69c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3f3196b07c84ac5c63d883eef35d29b450c3b285
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="eliminate-duplicate-elements-from-a-sequence"></a><span data-ttu-id="cf18b-102">Удаление дубликатов элементов из последовательности</span><span class="sxs-lookup"><span data-stu-id="cf18b-102">Eliminate Duplicate Elements from a Sequence</span></span>
-<span data-ttu-id="cf18b-103">Чтобы исключить элементы-дубликаты из последовательности, воспользуйтесь оператором <xref:System.Linq.Queryable.Distinct%2A>.</span><span class="sxs-lookup"><span data-stu-id="cf18b-103">Use the <xref:System.Linq.Queryable.Distinct%2A> operator to eliminate duplicate elements from a sequence.</span></span>  
+# <a name="eliminate-duplicate-elements-from-a-sequence"></a><span data-ttu-id="4cd4e-102">Удаление дубликатов элементов из последовательности</span><span class="sxs-lookup"><span data-stu-id="4cd4e-102">Eliminate Duplicate Elements from a Sequence</span></span>
+<span data-ttu-id="4cd4e-103">Чтобы исключить элементы-дубликаты из последовательности, воспользуйтесь оператором <xref:System.Linq.Queryable.Distinct%2A>.</span><span class="sxs-lookup"><span data-stu-id="4cd4e-103">Use the <xref:System.Linq.Queryable.Distinct%2A> operator to eliminate duplicate elements from a sequence.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cf18b-104">Пример</span><span class="sxs-lookup"><span data-stu-id="cf18b-104">Example</span></span>  
- <span data-ttu-id="cf18b-105">В следующем примере для выбора последовательности уникальных городов, в которых находятся клиенты, используется метод <xref:System.Linq.Queryable.Distinct%2A>.</span><span class="sxs-lookup"><span data-stu-id="cf18b-105">The following example uses <xref:System.Linq.Queryable.Distinct%2A> to select a sequence of the unique cities that have customers.</span></span>  
+## <a name="example"></a><span data-ttu-id="4cd4e-104">Пример</span><span class="sxs-lookup"><span data-stu-id="4cd4e-104">Example</span></span>  
+ <span data-ttu-id="4cd4e-105">В следующем примере для выбора последовательности уникальных городов, в которых находятся клиенты, используется метод <xref:System.Linq.Queryable.Distinct%2A>.</span><span class="sxs-lookup"><span data-stu-id="4cd4e-105">The following example uses <xref:System.Linq.Queryable.Distinct%2A> to select a sequence of the unique cities that have customers.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#36](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#36)]
  [!code-vb[DLinqQueryExamples#36](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#36)]  
   
-## <a name="see-also"></a><span data-ttu-id="cf18b-106">См. также</span><span class="sxs-lookup"><span data-stu-id="cf18b-106">See Also</span></span>  
- [<span data-ttu-id="cf18b-107">Примеры запросов</span><span class="sxs-lookup"><span data-stu-id="cf18b-107">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+## <a name="see-also"></a><span data-ttu-id="4cd4e-106">См. также</span><span class="sxs-lookup"><span data-stu-id="4cd4e-106">See Also</span></span>  
+ [<span data-ttu-id="4cd4e-107">Примеры запросов</span><span class="sxs-lookup"><span data-stu-id="4cd4e-107">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
