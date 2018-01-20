@@ -20,105 +20,105 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 6980097c074e10efae7fc6ee77c6c9835c3b1b00
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b0e85c715db30c6e577980376d25d56238e2835a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="walkthrough-hosting-an-activex-control-in-wpf"></a><span data-ttu-id="ae84c-102">Пошаговое руководство. Размещение элемента управления ActiveX в приложении WPF</span><span class="sxs-lookup"><span data-stu-id="ae84c-102">Walkthrough: Hosting an ActiveX Control in WPF</span></span>
-<span data-ttu-id="ae84c-103">Для улучшенного взаимодействия с браузерами, можно использовать [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] элементы управления в вашей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-приложения.</span><span class="sxs-lookup"><span data-stu-id="ae84c-103">To enable improved interaction with browsers, you can use [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] controls in your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-based application.</span></span> <span data-ttu-id="ae84c-104">В этом пошаговом руководстве показано, как разместить [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] как элемент управления на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] страницы.</span><span class="sxs-lookup"><span data-stu-id="ae84c-104">This walkthrough demonstrates how you can host the [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] as a control on a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] page.</span></span>  
+# <a name="walkthrough-hosting-an-activex-control-in-wpf"></a><span data-ttu-id="591d7-102">Пошаговое руководство. Размещение элемента управления ActiveX в приложении WPF</span><span class="sxs-lookup"><span data-stu-id="591d7-102">Walkthrough: Hosting an ActiveX Control in WPF</span></span>
+<span data-ttu-id="591d7-103">Для улучшенного взаимодействия с браузерами, можно использовать [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] элементы управления в вашей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-приложения.</span><span class="sxs-lookup"><span data-stu-id="591d7-103">To enable improved interaction with browsers, you can use [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] controls in your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-based application.</span></span> <span data-ttu-id="591d7-104">В этом пошаговом руководстве показано, как разместить [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] как элемент управления на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] страницы.</span><span class="sxs-lookup"><span data-stu-id="591d7-104">This walkthrough demonstrates how you can host the [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] as a control on a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] page.</span></span>  
   
- <span data-ttu-id="ae84c-105">В данном пошаговом руководстве представлены следующие задачи.</span><span class="sxs-lookup"><span data-stu-id="ae84c-105">Tasks illustrated in this walkthrough include:</span></span>  
+ <span data-ttu-id="591d7-105">В данном пошаговом руководстве представлены следующие задачи.</span><span class="sxs-lookup"><span data-stu-id="591d7-105">Tasks illustrated in this walkthrough include:</span></span>  
   
--   <span data-ttu-id="ae84c-106">Создание проекта.</span><span class="sxs-lookup"><span data-stu-id="ae84c-106">Creating the project.</span></span>  
+-   <span data-ttu-id="591d7-106">Создание проекта.</span><span class="sxs-lookup"><span data-stu-id="591d7-106">Creating the project.</span></span>  
   
--   <span data-ttu-id="ae84c-107">Создание элемента управления ActiveX.</span><span class="sxs-lookup"><span data-stu-id="ae84c-107">Creating the ActiveX control.</span></span>  
+-   <span data-ttu-id="591d7-107">Создание элемента управления ActiveX.</span><span class="sxs-lookup"><span data-stu-id="591d7-107">Creating the ActiveX control.</span></span>  
   
--   <span data-ttu-id="ae84c-108">Размещение элемента управления ActiveX на странице WPF.</span><span class="sxs-lookup"><span data-stu-id="ae84c-108">Hosting the ActiveX control on a WPF Page.</span></span>  
+-   <span data-ttu-id="591d7-108">Размещение элемента управления ActiveX на странице WPF.</span><span class="sxs-lookup"><span data-stu-id="591d7-108">Hosting the ActiveX control on a WPF Page.</span></span>  
   
- <span data-ttu-id="ae84c-109">По завершении данного пошагового руководства будет понять, как использовать [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] элементы управления в вашей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-приложения.</span><span class="sxs-lookup"><span data-stu-id="ae84c-109">When you have completed this walkthrough, you will understand how to use [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] controls in your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-based application.</span></span>  
+ <span data-ttu-id="591d7-109">По завершении данного пошагового руководства будет понять, как использовать [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] элементы управления в вашей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-приложения.</span><span class="sxs-lookup"><span data-stu-id="591d7-109">When you have completed this walkthrough, you will understand how to use [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] controls in your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-based application.</span></span>  
   
-## <a name="prerequisites"></a><span data-ttu-id="ae84c-110">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="ae84c-110">Prerequisites</span></span>  
- <span data-ttu-id="ae84c-111">Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.</span><span class="sxs-lookup"><span data-stu-id="ae84c-111">You need the following components to complete this walkthrough:</span></span>  
+## <a name="prerequisites"></a><span data-ttu-id="591d7-110">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="591d7-110">Prerequisites</span></span>  
+ <span data-ttu-id="591d7-111">Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.</span><span class="sxs-lookup"><span data-stu-id="591d7-111">You need the following components to complete this walkthrough:</span></span>  
   
--   [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)]<span data-ttu-id="ae84c-112">установлены на компьютере, где [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] установлен.</span><span class="sxs-lookup"><span data-stu-id="ae84c-112"> installed on the computer where [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] is installed.</span></span>  
+-   [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)]<span data-ttu-id="591d7-112">установлены на компьютере, где [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] установлен.</span><span class="sxs-lookup"><span data-stu-id="591d7-112"> installed on the computer where [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] is installed.</span></span>  
   
--   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)]<span data-ttu-id="ae84c-113">.</span><span class="sxs-lookup"><span data-stu-id="ae84c-113">.</span></span>  
+-   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)]<span data-ttu-id="591d7-113">.</span><span class="sxs-lookup"><span data-stu-id="591d7-113">.</span></span>  
   
-## <a name="creating-the-project"></a><span data-ttu-id="ae84c-114">Создание проекта</span><span class="sxs-lookup"><span data-stu-id="ae84c-114">Creating the Project</span></span>  
+## <a name="creating-the-project"></a><span data-ttu-id="591d7-114">Создание проекта</span><span class="sxs-lookup"><span data-stu-id="591d7-114">Creating the Project</span></span>  
   
-#### <a name="to-create-and-set-up-the-project"></a><span data-ttu-id="ae84c-115">Создание и настройка проекта</span><span class="sxs-lookup"><span data-stu-id="ae84c-115">To create and set up the project</span></span>  
+#### <a name="to-create-and-set-up-the-project"></a><span data-ttu-id="591d7-115">Создание и настройка проекта</span><span class="sxs-lookup"><span data-stu-id="591d7-115">To create and set up the project</span></span>  
   
-1.  <span data-ttu-id="ae84c-116">Создание проекта приложения WPF с именем `HostingAxInWpf`.</span><span class="sxs-lookup"><span data-stu-id="ae84c-116">Create a WPF Application project named `HostingAxInWpf`.</span></span>  
+1.  <span data-ttu-id="591d7-116">Создание проекта приложения WPF с именем `HostingAxInWpf`.</span><span class="sxs-lookup"><span data-stu-id="591d7-116">Create a WPF Application project named `HostingAxInWpf`.</span></span>  
   
-2.  <span data-ttu-id="ae84c-117">Добавьте в решение проект библиотеки элементов управления Windows Forms и назовите проект `WmpAxLib`.</span><span class="sxs-lookup"><span data-stu-id="ae84c-117">Add a Windows Forms Control Library project to the solution, and name the project `WmpAxLib`.</span></span>  
+2.  <span data-ttu-id="591d7-117">Добавьте в решение проект библиотеки элементов управления Windows Forms и назовите проект `WmpAxLib`.</span><span class="sxs-lookup"><span data-stu-id="591d7-117">Add a Windows Forms Control Library project to the solution, and name the project `WmpAxLib`.</span></span>  
   
-3.  <span data-ttu-id="ae84c-118">В проекте WmpAxLib добавьте ссылку на сборку проигрыватель Windows Media, которая называется wmp.dll.</span><span class="sxs-lookup"><span data-stu-id="ae84c-118">In the WmpAxLib project, add a reference to the Windows Media Player assembly, which is named wmp.dll.</span></span>  
+3.  <span data-ttu-id="591d7-118">В проекте WmpAxLib добавьте ссылку на сборку проигрыватель Windows Media, которая называется wmp.dll.</span><span class="sxs-lookup"><span data-stu-id="591d7-118">In the WmpAxLib project, add a reference to the Windows Media Player assembly, which is named wmp.dll.</span></span>  
   
-4.  <span data-ttu-id="ae84c-119">Откройте **элементов**.</span><span class="sxs-lookup"><span data-stu-id="ae84c-119">Open the **Toolbox**.</span></span>  
+4.  <span data-ttu-id="591d7-119">Откройте **элементов**.</span><span class="sxs-lookup"><span data-stu-id="591d7-119">Open the **Toolbox**.</span></span>  
   
-5.  <span data-ttu-id="ae84c-120">Щелкните правой кнопкой мыши **элементов**, а затем нажмите кнопку **Выбор элементов**.</span><span class="sxs-lookup"><span data-stu-id="ae84c-120">Right-click in the **Toolbox**, and then click **Choose Items**.</span></span>  
+5.  <span data-ttu-id="591d7-120">Щелкните правой кнопкой мыши **элементов**, а затем нажмите кнопку **Выбор элементов**.</span><span class="sxs-lookup"><span data-stu-id="591d7-120">Right-click in the **Toolbox**, and then click **Choose Items**.</span></span>  
   
-6.  <span data-ttu-id="ae84c-121">Нажмите кнопку **COM-компоненты** выберите **проигрыватель Windows Media** управления и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="ae84c-121">Click the **COM Components** tab, select the **Windows Media Player** control, and then click **OK**.</span></span>  
+6.  <span data-ttu-id="591d7-121">Нажмите кнопку **COM-компоненты** выберите **проигрыватель Windows Media** управления и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="591d7-121">Click the **COM Components** tab, select the **Windows Media Player** control, and then click **OK**.</span></span>  
   
-     <span data-ttu-id="ae84c-122">Добавляемый элемент управления Windows Media Player **элементов**.</span><span class="sxs-lookup"><span data-stu-id="ae84c-122">The Windows Media Player control is added to the **Toolbox**.</span></span>  
+     <span data-ttu-id="591d7-122">Добавляемый элемент управления Windows Media Player **элементов**.</span><span class="sxs-lookup"><span data-stu-id="591d7-122">The Windows Media Player control is added to the **Toolbox**.</span></span>  
   
-7.  <span data-ttu-id="ae84c-123">В обозревателе решений щелкните правой кнопкой мыши **UserControl1** файла и нажмите кнопку **переименование**.</span><span class="sxs-lookup"><span data-stu-id="ae84c-123">In Solution Explorer, right-click the **UserControl1** file, and then click **Rename**.</span></span>  
+7.  <span data-ttu-id="591d7-123">В обозревателе решений щелкните правой кнопкой мыши **UserControl1** файла и нажмите кнопку **переименование**.</span><span class="sxs-lookup"><span data-stu-id="591d7-123">In Solution Explorer, right-click the **UserControl1** file, and then click **Rename**.</span></span>  
   
-8.  <span data-ttu-id="ae84c-124">Измените имя на `WmpAxControl.vb` или `WmpAxControl.cs`, в зависимости от языка.</span><span class="sxs-lookup"><span data-stu-id="ae84c-124">Change the name to `WmpAxControl.vb` or `WmpAxControl.cs`, depending on the language.</span></span>  
+8.  <span data-ttu-id="591d7-124">Измените имя на `WmpAxControl.vb` или `WmpAxControl.cs`, в зависимости от языка.</span><span class="sxs-lookup"><span data-stu-id="591d7-124">Change the name to `WmpAxControl.vb` or `WmpAxControl.cs`, depending on the language.</span></span>  
   
-9. <span data-ttu-id="ae84c-125">Если вы получили запрос на переименование всех ссылок, нажмите кнопку **Да**.</span><span class="sxs-lookup"><span data-stu-id="ae84c-125">If you are prompted to rename all references, click **Yes**.</span></span>  
+9. <span data-ttu-id="591d7-125">Если вы получили запрос на переименование всех ссылок, нажмите кнопку **Да**.</span><span class="sxs-lookup"><span data-stu-id="591d7-125">If you are prompted to rename all references, click **Yes**.</span></span>  
   
-## <a name="creating-the-activex-control"></a><span data-ttu-id="ae84c-126">Создание элемента управления ActiveX</span><span class="sxs-lookup"><span data-stu-id="ae84c-126">Creating the ActiveX Control</span></span>  
- [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]<span data-ttu-id="ae84c-127">автоматически создает <xref:System.Windows.Forms.AxHost> класс-оболочку для [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] управления, когда элемент управления добавляется в рабочую область конструирования.</span><span class="sxs-lookup"><span data-stu-id="ae84c-127"> automatically generates an <xref:System.Windows.Forms.AxHost> wrapper class for a [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] control when the control is added to a design surface.</span></span> <span data-ttu-id="ae84c-128">В следующей процедуре создается управляемая сборка с именем AxInterop.WMPLib.dll.</span><span class="sxs-lookup"><span data-stu-id="ae84c-128">The following procedure creates a managed assembly named AxInterop.WMPLib.dll.</span></span>  
+## <a name="creating-the-activex-control"></a><span data-ttu-id="591d7-126">Создание элемента управления ActiveX</span><span class="sxs-lookup"><span data-stu-id="591d7-126">Creating the ActiveX Control</span></span>  
+ [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]<span data-ttu-id="591d7-127">автоматически создает <xref:System.Windows.Forms.AxHost> класс-оболочку для [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] управления, когда элемент управления добавляется в рабочую область конструирования.</span><span class="sxs-lookup"><span data-stu-id="591d7-127"> automatically generates an <xref:System.Windows.Forms.AxHost> wrapper class for a [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] control when the control is added to a design surface.</span></span> <span data-ttu-id="591d7-128">В следующей процедуре создается управляемая сборка с именем AxInterop.WMPLib.dll.</span><span class="sxs-lookup"><span data-stu-id="591d7-128">The following procedure creates a managed assembly named AxInterop.WMPLib.dll.</span></span>  
   
-#### <a name="to-create-the-activex-control"></a><span data-ttu-id="ae84c-129">Создание элемента управления ActiveX</span><span class="sxs-lookup"><span data-stu-id="ae84c-129">To create the ActiveX control</span></span>  
+#### <a name="to-create-the-activex-control"></a><span data-ttu-id="591d7-129">Создание элемента управления ActiveX</span><span class="sxs-lookup"><span data-stu-id="591d7-129">To create the ActiveX control</span></span>  
   
-1.  <span data-ttu-id="ae84c-130">Откройте WmpAxControl.vb или WmpAxControl.cs в конструкторе Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="ae84c-130">Open WmpAxControl.vb or WmpAxControl.cs in the Windows Forms Designer.</span></span>  
+1.  <span data-ttu-id="591d7-130">Откройте WmpAxControl.vb или WmpAxControl.cs в конструкторе Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="591d7-130">Open WmpAxControl.vb or WmpAxControl.cs in the Windows Forms Designer.</span></span>  
   
-2.  <span data-ttu-id="ae84c-131">Из **элементов**, добавьте элемент управления проигрывателя Windows Media в область конструктора.</span><span class="sxs-lookup"><span data-stu-id="ae84c-131">From the **Toolbox**, add the Windows Media Player control to the design surface.</span></span>  
+2.  <span data-ttu-id="591d7-131">Из **элементов**, добавьте элемент управления проигрывателя Windows Media в область конструктора.</span><span class="sxs-lookup"><span data-stu-id="591d7-131">From the **Toolbox**, add the Windows Media Player control to the design surface.</span></span>  
   
-3.  <span data-ttu-id="ae84c-132">В окне свойств установите для параметра управления проигрывателя Windows Media <xref:System.Windows.Forms.Control.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.Fill>.</span><span class="sxs-lookup"><span data-stu-id="ae84c-132">In the Properties window, set the value of the Windows Media Player control's <xref:System.Windows.Forms.Control.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Fill>.</span></span>  
+3.  <span data-ttu-id="591d7-132">В окне свойств установите для параметра управления проигрывателя Windows Media <xref:System.Windows.Forms.Control.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.Fill>.</span><span class="sxs-lookup"><span data-stu-id="591d7-132">In the Properties window, set the value of the Windows Media Player control's <xref:System.Windows.Forms.Control.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Fill>.</span></span>  
   
-4.  <span data-ttu-id="ae84c-133">Постройте проект библиотеки элементов управления WmpAxLib.</span><span class="sxs-lookup"><span data-stu-id="ae84c-133">Build the WmpAxLib control library project.</span></span>  
+4.  <span data-ttu-id="591d7-133">Постройте проект библиотеки элементов управления WmpAxLib.</span><span class="sxs-lookup"><span data-stu-id="591d7-133">Build the WmpAxLib control library project.</span></span>  
   
-## <a name="hosting-the-activex-control-on-a-wpf-page"></a><span data-ttu-id="ae84c-134">Размещение элемента управления ActiveX в страницу WPF</span><span class="sxs-lookup"><span data-stu-id="ae84c-134">Hosting the ActiveX Control on a WPF Page</span></span>  
+## <a name="hosting-the-activex-control-on-a-wpf-page"></a><span data-ttu-id="591d7-134">Размещение элемента управления ActiveX в страницу WPF</span><span class="sxs-lookup"><span data-stu-id="591d7-134">Hosting the ActiveX Control on a WPF Page</span></span>  
   
-#### <a name="to-host-the-activex-control"></a><span data-ttu-id="ae84c-135">Чтобы разместить элемент управления ActiveX</span><span class="sxs-lookup"><span data-stu-id="ae84c-135">To host the ActiveX control</span></span>  
+#### <a name="to-host-the-activex-control"></a><span data-ttu-id="591d7-135">Чтобы разместить элемент управления ActiveX</span><span class="sxs-lookup"><span data-stu-id="591d7-135">To host the ActiveX control</span></span>  
   
-1.  <span data-ttu-id="ae84c-136">В проекте HostingAxInWpf добавьте ссылку на созданный [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] сборки взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="ae84c-136">In the HostingAxInWpf project, add a reference to the generated [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] interoperability assembly.</span></span>  
+1.  <span data-ttu-id="591d7-136">В проекте HostingAxInWpf добавьте ссылку на созданный [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] сборки взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="591d7-136">In the HostingAxInWpf project, add a reference to the generated [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] interoperability assembly.</span></span>  
   
-     <span data-ttu-id="ae84c-137">Эта сборка имеет имя AxInterop.WMPLib.dll и добавлен папка отладки проекта WmpAxLib при импорте управления проигрывателя Windows Media.</span><span class="sxs-lookup"><span data-stu-id="ae84c-137">This assembly is named AxInterop.WMPLib.dll and was added to the Debug folder of the WmpAxLib project when you imported the Windows Media Player control.</span></span>  
+     <span data-ttu-id="591d7-137">Эта сборка имеет имя AxInterop.WMPLib.dll и добавлен папка отладки проекта WmpAxLib при импорте управления проигрывателя Windows Media.</span><span class="sxs-lookup"><span data-stu-id="591d7-137">This assembly is named AxInterop.WMPLib.dll and was added to the Debug folder of the WmpAxLib project when you imported the Windows Media Player control.</span></span>  
   
-2.  <span data-ttu-id="ae84c-138">Добавьте ссылку на сборку WindowsFormsIntegration, которая называется WindowsFormsIntegration.dll.</span><span class="sxs-lookup"><span data-stu-id="ae84c-138">Add a reference to the WindowsFormsIntegration assembly, which is named WindowsFormsIntegration.dll.</span></span>  
+2.  <span data-ttu-id="591d7-138">Добавьте ссылку на сборку WindowsFormsIntegration, которая называется WindowsFormsIntegration.dll.</span><span class="sxs-lookup"><span data-stu-id="591d7-138">Add a reference to the WindowsFormsIntegration assembly, which is named WindowsFormsIntegration.dll.</span></span>  
   
-3.  <span data-ttu-id="ae84c-139">Добавьте ссылку на [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] сборку, которая называется System.Windows.Forms.dll.</span><span class="sxs-lookup"><span data-stu-id="ae84c-139">Add a reference to the [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] assembly, which is named System.Windows.Forms.dll.</span></span>  
+3.  <span data-ttu-id="591d7-139">Добавьте ссылку на [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] сборку, которая называется System.Windows.Forms.dll.</span><span class="sxs-lookup"><span data-stu-id="591d7-139">Add a reference to the [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] assembly, which is named System.Windows.Forms.dll.</span></span>  
   
-4.  <span data-ttu-id="ae84c-140">Откройте файл MainWindow.xaml в конструкторе WPF.</span><span class="sxs-lookup"><span data-stu-id="ae84c-140">Open MainWindow.xaml in the WPF Designer.</span></span>  
+4.  <span data-ttu-id="591d7-140">Откройте файл MainWindow.xaml в конструкторе WPF.</span><span class="sxs-lookup"><span data-stu-id="591d7-140">Open MainWindow.xaml in the WPF Designer.</span></span>  
   
-5.  <span data-ttu-id="ae84c-141">Имя <xref:System.Windows.Controls.Grid> элемент `grid1`.</span><span class="sxs-lookup"><span data-stu-id="ae84c-141">Name the <xref:System.Windows.Controls.Grid> element `grid1`.</span></span>  
+5.  <span data-ttu-id="591d7-141">Имя <xref:System.Windows.Controls.Grid> элемент `grid1`.</span><span class="sxs-lookup"><span data-stu-id="591d7-141">Name the <xref:System.Windows.Controls.Grid> element `grid1`.</span></span>  
   
      [!code-xaml[HostingAxInWpf#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingAxInWpf/CSharp/HostingAxInWpf/window1.xaml#1)]  
   
-6.  <span data-ttu-id="ae84c-142">В режиме конструктора или XAML, выберите <xref:System.Windows.Window> элемент.</span><span class="sxs-lookup"><span data-stu-id="ae84c-142">In Design view or XAML view, select the <xref:System.Windows.Window> element.</span></span>  
+6.  <span data-ttu-id="591d7-142">В режиме конструктора или XAML, выберите <xref:System.Windows.Window> элемент.</span><span class="sxs-lookup"><span data-stu-id="591d7-142">In Design view or XAML view, select the <xref:System.Windows.Window> element.</span></span>  
   
-7.  <span data-ttu-id="ae84c-143">В окне «Свойства» щелкните **события** вкладки.</span><span class="sxs-lookup"><span data-stu-id="ae84c-143">In the Properties window, click the **Events** tab.</span></span>  
+7.  <span data-ttu-id="591d7-143">В окне «Свойства» щелкните **события** вкладки.</span><span class="sxs-lookup"><span data-stu-id="591d7-143">In the Properties window, click the **Events** tab.</span></span>  
   
-8.  <span data-ttu-id="ae84c-144">Дважды щелкните <xref:System.Windows.FrameworkElement.Loaded> событий.</span><span class="sxs-lookup"><span data-stu-id="ae84c-144">Double-click the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>  
+8.  <span data-ttu-id="591d7-144">Дважды щелкните <xref:System.Windows.FrameworkElement.Loaded> событий.</span><span class="sxs-lookup"><span data-stu-id="591d7-144">Double-click the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>  
   
-9. <span data-ttu-id="ae84c-145">Вставьте следующий код для обработки <xref:System.Windows.FrameworkElement.Loaded> событий.</span><span class="sxs-lookup"><span data-stu-id="ae84c-145">Insert the following code to handle the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>  
+9. <span data-ttu-id="591d7-145">Вставьте следующий код для обработки <xref:System.Windows.FrameworkElement.Loaded> событий.</span><span class="sxs-lookup"><span data-stu-id="591d7-145">Insert the following code to handle the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>  
   
-     <span data-ttu-id="ae84c-146">Этот код создает экземпляр <xref:System.Windows.Forms.Integration.WindowsFormsHost> управления и добавляет экземпляр `AxWindowsMediaPlayer` элемента управления в качестве дочернего.</span><span class="sxs-lookup"><span data-stu-id="ae84c-146">This code creates an instance of the <xref:System.Windows.Forms.Integration.WindowsFormsHost> control and adds an instance of the `AxWindowsMediaPlayer` control as its child.</span></span>  
+     <span data-ttu-id="591d7-146">Этот код создает экземпляр <xref:System.Windows.Forms.Integration.WindowsFormsHost> управления и добавляет экземпляр `AxWindowsMediaPlayer` элемента управления в качестве дочернего.</span><span class="sxs-lookup"><span data-stu-id="591d7-146">This code creates an instance of the <xref:System.Windows.Forms.Integration.WindowsFormsHost> control and adds an instance of the `AxWindowsMediaPlayer` control as its child.</span></span>  
   
      [!code-csharp[HostingAxInWpf#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingAxInWpf/CSharp/HostingAxInWpf/window1.xaml.cs#11)]
      [!code-vb[HostingAxInWpf#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HostingAxInWpf/VisualBasic/HostingAxInWpf/window1.xaml.vb#11)]  
   
-10. <span data-ttu-id="ae84c-147">Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="ae84c-147">Press F5 to build and run the application.</span></span>  
+10. <span data-ttu-id="591d7-147">Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="591d7-147">Press F5 to build and run the application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ae84c-148">См. также</span><span class="sxs-lookup"><span data-stu-id="ae84c-148">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="591d7-148">См. также</span><span class="sxs-lookup"><span data-stu-id="591d7-148">See Also</span></span>  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [<span data-ttu-id="ae84c-149">Конструктор WPF</span><span class="sxs-lookup"><span data-stu-id="ae84c-149">WPF Designer</span></span>](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
- [<span data-ttu-id="ae84c-150">Пошаговое руководство. Размещение составного элемента управления Windows Forms в приложении WPF</span><span class="sxs-lookup"><span data-stu-id="ae84c-150">Walkthrough: Hosting a Windows Forms Composite Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [<span data-ttu-id="ae84c-151">Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ae84c-151">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+ [<span data-ttu-id="591d7-149">Конструктор WPF</span><span class="sxs-lookup"><span data-stu-id="591d7-149">WPF Designer</span></span>](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [<span data-ttu-id="591d7-150">Пошаговое руководство. Размещение составного элемента управления Windows Forms в приложении WPF</span><span class="sxs-lookup"><span data-stu-id="591d7-150">Walkthrough: Hosting a Windows Forms Composite Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
+ [<span data-ttu-id="591d7-151">Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms</span><span class="sxs-lookup"><span data-stu-id="591d7-151">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
