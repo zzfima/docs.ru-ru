@@ -16,38 +16,38 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 77886cef1a8dbd320223526b86f86fa9cee6a9f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b0967790f2bbf8fa9a889c56fa9c5168f7523bd
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; элемент
+
 Указывает, какие версии среды CLR поддерживает приложение. Этот элемент должен использоваться всеми приложениями, собранными с применением версии 1.1 или более поздней версии .NET Framework.  
   
 [\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
-
-[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+&nbsp;&nbsp;[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
   
-**\<supportedRuntime>**  
-  
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Синтаксис
   
 ```xml  
 <supportedRuntime version="runtime version" sku="sku id"/>  
 ```  
   
-## <a name="attributes"></a>Атрибуты  
+## <a name="attributes"></a>Атрибуты
   
 |Атрибут|Описание:|  
 |---------------|-----------------|  
 |**version**|Необязательный атрибут.<br /><br /> Строковое значение, задающее версию среды CLR, которая поддерживается данным приложением. Допустимые значения `version` см. в разделе [значения «runtime version»](#version) раздела. **Примечание:** через .NET Framework 3.5»*версии среды выполнения*» значение принимает форму *основных*. *дополнительный номер*. *Построение*. Начиная с [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], требуются только основной и дополнительный номера версии (то есть "v4.0" вместо "v4.0.30319"). Рекомендуется использовать более короткие строки.|  
-|**номер SKU**|Необязательный атрибут.<br /><br /> Строковое значение, которое указывает единицу складского хранения (SKU), которая, в свою очередь, указывает выпуск .NET Framework, поддерживаемый этим приложением.<br /><br /> Начиная с .NET Framework 4.0, использование `sku` рекомендуется использовать атрибут.  Если он присутствует, он указывает целевую версию .NET Framework приложения.<br /><br /> Допустимые значения атрибута sku см [значения «sku id»](#sku) раздела.|  
+|**sku**|Необязательный атрибут.<br /><br /> Строковое значение, которое указывает единицу складского хранения (SKU), которая, в свою очередь, указывает выпуск .NET Framework, поддерживаемый этим приложением.<br /><br /> Начиная с .NET Framework 4.0, использование `sku` рекомендуется использовать атрибут.  Если он присутствует, он указывает целевую версию .NET Framework приложения.<br /><br /> Допустимые значения атрибута sku см [значения «sku id»](#sku) раздела.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Примечания
+
 Если  **\<supportedRuntime >** элемент отсутствует в файле конфигурации приложения, используется версия среды выполнения, используемые для построения приложения.  
 
- **\<SupportedRuntime >** элемент должен использоваться всеми приложениями, собранными с помощью версии 1.1 или более поздней версии среды выполнения. Приложения, созданные для поддержки только версии 1.0 среды выполнения, должны использовать [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) элемента.  
+**\<SupportedRuntime >** элемент должен использоваться всеми приложениями, собранными с помощью версии 1.1 или более поздней версии среды выполнения. Приложения, созданные для поддержки только версии 1.0 среды выполнения, должны использовать [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) элемента.  
   
 > [!NOTE]
 >  Если вы используете [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) для указания файла конфигурации, необходимо использовать `<requiredRuntime>` элемент для всех версий среды выполнения. `<supportedRuntime>` Элемент игнорируется при использовании [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md).  
@@ -72,9 +72,9 @@ ms.lasthandoff: 12/22/2017
 |3.5|"v2.0.50727"|  
 |4.0-4.7.1|"v4.0"|  
 
-  
 <a name="sku"></a>   
-## <a name="sku-id-values"></a>Значения "sku id"  
+## <a name="sku-id-values"></a>Значения "sku id"
+
 `sku` Использует атрибут target framework моникером для указания версии .NET Framework, которая обращается и для запуска приложения. В следующей таблице перечислены допустимые значения, которые поддерживаются `sku` атрибут, начиная с .NET Framework 4.
   
 |Версия платформы .NET Framework|Атрибут `sku`|  
@@ -93,8 +93,8 @@ ms.lasthandoff: 12/22/2017
 |4.6|".NETFramework,Version=v4.6"|  
 |4.6.1|".NETFramework,Version=v4.6.1"|  
 |4.6.2|". NETFramework, версия = v4.6.2»|  
-|4.7|". NETFramework, версия = v4.7»|
-|4.7.1|". NETFramework, версия = 4.7.1"|
+|4.7|".NETFramework,Version=v4.7"|
+|4.7.1|".NETFramework,Version=v4.7.1"|
 
 ## <a name="example"></a>Пример  
  В следующем примере показано задание в файле конфигурации поддерживаемых версий среды выполнения. В файле конфигурации указано, что приложение предназначено 4.7 .NET Framework.  
@@ -107,10 +107,12 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="configuration-file"></a>Файл конфигурации  
- Этот элемент может использоваться в файле конфигурации приложения.  
-  
-## <a name="see-also"></a>См. также  
+## <a name="configuration-file"></a>файл конфигурации
+
+Этот элемент может использоваться в файле конфигурации приложения.
+
+## <a name="see-also"></a>См. также
+
  [Схема параметров запуска](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Внутрипроцессное параллельное выполнение](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)
+ [Внутрипроцессное параллельное выполнение](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)  
