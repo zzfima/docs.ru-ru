@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f5301bf3a2fed35dbdd0046e01eb2acb9083a290
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ae43f65c104376ea1e7cfc036a57c728c90ac12
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Что такое Windows Communication Foundation
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] представляет платформу для построения сервисноориентированных приложений. С помощью [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]можно отправлять данные в виде асинхронных сообщений от одной конечной точки службы к другой. Конечная точка службы может входить в постоянно доступную службу, размещаемую в IIS, или представлять службу, размещаемую в приложении. Конечная точка может быть клиентом службы, которая запрашивает данные от конечной точки службы. Сообщения могут представлять одиночный символ или одно слово, отправляемое в формате XML, или иметь вид сложного потока двоичных данных. Далее представлено несколько образцов сценариев.  
@@ -111,4 +111,4 @@ ms.lasthandoff: 12/22/2017
  [Руководство по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md)  
  [Руководство по работе с документацией](../../../docs/framework/wcf/guide-to-the-documentation.md)  
  [Базовое программирование для WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Примеры Windows Communication Foundation](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+ [Примеры Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)

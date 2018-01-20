@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 73c34f8edfa735e361bf294f08cefd285be3e898
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 363d81ff0e4262ce0c8252ada3625bb9a157f5a1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="trees-in-wpf"></a>Деревья в WPF
 Во многих технологиях элементы и компоненты организованы в форме древовидной структуры, и разработчики могут напрямую управлять узлами объекта в дереве, чтобы повлиять на визуализацию или поведение приложения. В [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] часто используется несколько метафор древовидных структур, чтобы определить отношения между программными элементами. Для большей части WPF разработчики могут создать приложение в коде или определить части приложения в XAML и при этом концептуально думать о метафоре дерева объектов, но для этого им потребуется вызвать определенный интерфейс API или использовать конкретную разметку, а не интерфейс API управления деревом некоторых общих объектов, какой можно использовать в XML DOM. WPF предоставляет две вспомогательные классы, которые обеспечивают представление метафоры дерева <xref:System.Windows.LogicalTreeHelper> и <xref:System.Windows.Media.VisualTreeHelper>. Термины "логическое дерево" и "визуальное дерево" также используются в документации WPF, поскольку эти же деревья помогают понять поведение определенных ключевых функций WPF. В этом разделе определяет визуального дерева и логического дерева представляют обсуждается, как эти деревья связаны с общей концепции дерева объектов и вводит <xref:System.Windows.LogicalTreeHelper> и <xref:System.Windows.Media.VisualTreeHelper>s.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="logical_tree"></a>   
 ## <a name="the-logical-tree"></a>Логическое дерево  
- В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержимое добавляется в элементы пользовательского интерфейса путем задания свойств объектов, которые поддерживают эти элементы. Например, добавление элементов для <xref:System.Windows.Controls.ListBox> управления путем изменения его <xref:System.Windows.Controls.ItemsControl.Items%2A> свойство. Таким образом, вы элементы помещаются в <xref:System.Windows.Controls.ItemCollection> , <xref:System.Windows.Controls.ItemsControl.Items%2A> значение свойства. Аналогично, для добавления объектов <xref:System.Windows.Controls.DockPanel>, работать с его <xref:System.Windows.Controls.Panel.Children%2A> значение свойства. Здесь происходит добавление объектов <xref:System.Windows.Controls.UIElementCollection>. Пример кода см. в разделе [Практическое руководство. Динамическое добавление элемента](http://msdn.microsoft.com/en-us/d00f258a-7973-4de7-bc54-a3fc1f638419).  
+ В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержимое добавляется в элементы пользовательского интерфейса путем задания свойств объектов, которые поддерживают эти элементы. Например, добавление элементов для <xref:System.Windows.Controls.ListBox> управления путем изменения его <xref:System.Windows.Controls.ItemsControl.Items%2A> свойство. Таким образом, вы элементы помещаются в <xref:System.Windows.Controls.ItemCollection> , <xref:System.Windows.Controls.ItemsControl.Items%2A> значение свойства. Аналогично, для добавления объектов <xref:System.Windows.Controls.DockPanel>, работать с его <xref:System.Windows.Controls.Panel.Children%2A> значение свойства. Здесь происходит добавление объектов <xref:System.Windows.Controls.UIElementCollection>. Пример кода см. в разделе [Практическое руководство. Динамическое добавление элемента](http://msdn.microsoft.com/library/d00f258a-7973-4de7-bc54-a3fc1f638419).  
   
  В [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], при размещении элементов списка в <xref:System.Windows.Controls.ListBox> или элементы управления или другие элементы пользовательского интерфейса в <xref:System.Windows.Controls.DockPanel>, можно также использовать <xref:System.Windows.Controls.ItemsControl.Items%2A> и <xref:System.Windows.Controls.Panel.Children%2A> свойства, явно или неявно, как показано в следующем примере.  
   

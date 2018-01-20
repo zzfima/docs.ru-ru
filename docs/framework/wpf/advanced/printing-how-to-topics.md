@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: dd76921059222c9c5b8958ce8e1761a3f04cb037
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9647ce04528df390620dba67619a538d96aa7068
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="printing-how-to-topics"></a>Разделы руководства по печати
 В подразделах этого раздела демонстрируют использование печати и включенные функции управления системы печати с [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] а также новый [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] путь печати.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/22/2017
  [Перечисление подмножества очередей печати](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  Инструкции по созданию списка принтеров, имеющих определенные характеристики.  
   
- [Не в СБОРКЕ: Практическое: расширение схемы печати и создание новых классов системы печати](http://msdn.microsoft.com/en-us/a3600218-1ea5-478a-9853-6560464f2885)  
+ [Не в СБОРКЕ: Практическое: расширение схемы печати и создание новых классов системы печати](http://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
  Подробное обсуждение того, как управляемый код программиста может расширить схему печати устройств специальной печати или принтеров с новыми или необычными возможностями.  
   
  [Получение свойств объекта системы печати без отражения](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  
@@ -63,4 +63,4 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Printing.Interop>  
  [Общие сведения о печати](../../../../docs/framework/wpf/advanced/printing-overview.md)  
  [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [РАСШИРЕННЫЕ ХРАНИМЫЕ ПРОЦЕДУРЫ](http://www.microsoft.com/xps)
+ [XPS](http://www.microsoft.com/xps)

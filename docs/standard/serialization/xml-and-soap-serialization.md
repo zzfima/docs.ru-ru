@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 006727e70c58834a4e628f584a28302a62363844
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1ac5e83d6daf9654c541dcd8a748717be3ed05d0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-and-soap-serialization"></a>Сериализация XML и SOAP
 При сериализации XML открытые поля и свойства объекта или параметры и возвращаемые значения методов преобразуются (сериализуются) в поток XML в соответствии со специальным документом, составленном на языке XSD (язык определения схемы XML). XML-сериализация приводит к образованию строго типизированных классов с открытыми свойствами и полями, которые преобразуются в серийный формат (в данном случае - XML) для хранения и передачи.  
@@ -93,10 +93,10 @@ ms.lasthandoff: 12/23/2017
  Добавляет типы, используемые классом <xref:System.Xml.Serialization.XmlSchemaImporter>.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Расширенные технологии разработки](http://msdn.microsoft.com/en-us/c4a7e341-f0c6-4df4-a74f-223387ac6e4e)  
+ [Расширенные технологии разработки](http://msdn.microsoft.com/library/c4a7e341-f0c6-4df4-a74f-223387ac6e4e)  
  Содержит ссылки на дополнительные сведения о сложных задачах и методиках разработки приложений в платформе .NET Framework.  
   
- [Веб-службы XML, созданные с помощью ASP.NET, и клиенты веб-служб с поддержкой XML](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)  
+ [Веб-службы XML, созданные с помощью ASP.NET, и клиенты веб-служб с поддержкой XML](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
  Содержит разделы с описаниями и объяснением программирования XML-веб-служб с помощью ASP.NET.  
   
 ## <a name="see-also"></a>См. также  

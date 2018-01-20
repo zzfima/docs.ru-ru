@@ -23,11 +23,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9bc771b81e1db87f3d881dc2a0ab84f7aad93247
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8328bc705349ffeaa78d95e95ed0955ac6faa5c3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="listview-control-windows-forms"></a>Элемент управления ListView (Windows Forms)
 Элемент управления `ListView` Windows Forms отображает список элементов со значками. Представление списка можно использовать для создания пользовательского интерфейса, аналогичного правой области окна проводника.  
@@ -93,7 +93,7 @@ ms.lasthandoff: 12/22/2017
  [Практическое руководство. Создание пользовательского интерфейса с несколькими областями с помощью Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Инструкции по компоновке формы Windows Forms с несколькими панелями.  
   
- [Возможности Windows XP и элементы управления Windows Forms](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
+ [Возможности Windows XP и элементы управления Windows Forms](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
  Объясняется, как использовать преимущества Windows XP, относящиеся к элементу управления <xref:System.Windows.Forms.ListView>.  
   
 ## <a name="see-also"></a>См. также  

@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4e3d86153d4192e04e55fb9e99ef588b45511560
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 823edadf7d387d1a509edbdf839ac6eeece5d41f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-service-publishing"></a>Публикация служб WCF
 Публикация служб [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] помогает в реализации от начальной среды разработки, предоставляемой узлом службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] и тестовым клиентом [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], до фактического развертывания приложения в производственной среде в целях его проверки. Перед тем как вводить итоговый план развертывания можно использовать службу публикации [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] для проверки правильности функционирования службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] и ее готовности к опубликованию. Также, в целях проверки, можно провести развертывание библиотек служб [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] в различных целевых размещениях.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Библиотека служб синдикации.  
   
- Эти шаблоны служб можно найти, выбрав **файл** -> **новый проект** -> **Visual Basic** или **Visual C#**  ->  **WCF**. Другие шаблоны WCF в этом расположении (включая приложение службы рабочего процесса WCF и приложение службы WCF) можно опубликовать с помощью [публикации для веб-приложения одним щелчком](https://msdn.microsoft.com/en-us/library/dd465337\(v=vs.110\).aspx).  
+ Эти шаблоны служб можно найти, выбрав **файл** -> **новый проект** -> **Visual Basic** или **Visual C#**  ->  **WCF**. Другие шаблоны WCF в этом расположении (включая приложение службы рабочего процесса WCF и приложение службы WCF) можно опубликовать с помощью [публикации для веб-приложения одним щелчком](https://msdn.microsoft.com/library/dd465337\(v=vs.110\).aspx).  
   
  Служба может быть опубликована в следующих целевых расположениях.  
   

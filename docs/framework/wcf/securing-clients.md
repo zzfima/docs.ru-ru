@@ -15,11 +15,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: a30f42c88e2478341737b99ad239d37c87a1063e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 611272f9d0369a89d401315e9b6379d2e8cd27c0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="securing-clients"></a>Обеспечение безопасности клиентов
 В [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] требования безопасности для клиентов определяются службой. Это означает, что служба указывает используемый режим безопасности и определяет, должен ли клиент предоставить учетные данные. Таким образом, процесс обеспечения безопасности клиента прост: используйте метаданные, полученные от службы (если она опубликована), и создайте клиент. Метаданные указывают, как настроить клиент. Если служба требует, чтобы клиент предоставлял учетные данные, необходимо получить учетные данные, удовлетворяющие требованиям. В этом разделе подробно описан данный процесс. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Создание службы безопасности, в разделе [Защита служб](../../../docs/framework/wcf/securing-services.md).  
@@ -117,7 +117,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
- Чтобы задать учетные данные клиента в конфигурации, добавьте [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) в файле конфигурации. Кроме того, добавлены поведение элемента должны быть связаны с конечной точки службы с помощью `behaviorConfiguration` атрибут [ \<endpoint >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемента, как показано в следующем примере. Значение атрибута `behaviorConfiguration` должно соответствовать значению атрибута `name` расширения функциональности.  
+ Чтобы задать учетные данные клиента в конфигурации, добавьте [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) в файле конфигурации. Кроме того, добавлены поведение элемента должны быть связаны с конечной точки службы с помощью `behaviorConfiguration` атрибут [ \<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемента, как показано в следующем примере. Значение атрибута `behaviorConfiguration` должно соответствовать значению атрибута `name` расширения функциональности.  
   
  `<configuration>`  
   
@@ -168,7 +168,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.Description.ClientCredentials>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
- [\<привязки >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
  [Редактор конфигурации (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
  [Защита служб](../../../docs/framework/wcf/securing-services.md)  
  [Обращение к службам с помощью клиента WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  

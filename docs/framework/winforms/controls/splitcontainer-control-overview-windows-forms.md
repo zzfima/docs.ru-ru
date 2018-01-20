@@ -16,11 +16,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c48950e43d253679eebe16bff1b6ee18966e2cc7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7d2e538241cca8288158628df777895fae9aa756
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>Общие сведения об элементе управления SplitContainer (Windows Forms)
 Элемент управления Windows Forms <xref:System.Windows.Forms.SplitContainer> состоит из двух панелей, разделенных подвижной полосой. При наведении указателя мыши на полосу его форма изменяется, показывая, что полоса является перемещаемой.  
@@ -61,4 +61,4 @@ ms.lasthandoff: 12/22/2017
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Forms.SplitContainer>  
  [Элемент управления SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- [Пример элемента управления SplitContainer](http://msdn.microsoft.com/en-us/9015fad0-7108-4d85-a83a-a72d038c4f65)
+ [Пример элемента управления SplitContainer](http://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)

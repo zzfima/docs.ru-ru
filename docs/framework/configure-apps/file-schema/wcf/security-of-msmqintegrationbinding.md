@@ -14,16 +14,16 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: 92b496833cebbefbb97dd576ef3549d15b489aae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94f6bf63a1da5385b884d67c582cd7d6577a6b67
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltsecuritygt-of-ltmsmqintegrationbindinggt"></a>&lt;security&gt; для &lt;msmqIntegrationBinding&gt;
 Определяет параметры безопасности транспорта для канала интеграции очереди сообщений (MSMQ).  
   
- \<система. ServiceModel >  
+ \<system.ServiceModel>  
 \<привязки >  
 msmqIntegrationBinding  
 \<Привязка >  
@@ -60,7 +60,7 @@ msmqIntegrationBinding
   
 |Элемент|Описание:|  
 |-------------|-----------------|  
-|[\<Транспорт >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-msmqintegrationbinding.md)|Определяет параметры безопасности для транспорта интеграции очереди сообщений. Это элемент типа <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
+|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-msmqintegrationbinding.md)|Определяет параметры безопасности для транспорта интеграции очереди сообщений. Это элемент типа <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -77,6 +77,6 @@ msmqIntegrationBinding
  [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Привязки](../../../../../docs/framework/wcf/bindings.md)  
  [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб Windows Communication Foundation и клиентов](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Использование привязок для настройки служб Windows Communication Foundation и клиентов](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Привязка >](../../../../../docs/framework/misc/binding.md)  
- [\<msmqIntegrationBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)
+ [\<msmqIntegrationBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)

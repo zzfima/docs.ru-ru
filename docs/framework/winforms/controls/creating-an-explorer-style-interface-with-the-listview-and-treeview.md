@@ -25,17 +25,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 200c5bbb5a162c1e585fc35f9c8cb3f63eb0368e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d8d7991f706f8098e4ac475ae057771de200197
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Пример. Создание интерфейса в стиле проводника с использованием элементов управления ListView и TreeView с помощью конструктора
 Одно из преимуществ Visual Studio — возможность создавать профессионально оформленные приложения Windows Forms в короткие сроки. Типичный сценарий создает пользовательский интерфейс (UI) в <xref:System.Windows.Forms.ListView> и <xref:System.Windows.Forms.TreeView> элементов управления, который напоминает проводника операционных систем Windows. Проводник Windows отображает иерархическую структуру файлов и папок на компьютере пользователя.  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>Чтобы создать форму, содержащую элемент управления ListView и TreeView  
   

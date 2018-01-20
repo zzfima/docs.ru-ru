@@ -12,11 +12,11 @@ ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 42ed9866f168c06e8641ace712da58e953951676
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 7872d3c7b19ec9cd7059cccf41e5fab50d85123b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Основы разработки приложений Windows Forms (Visual Basic)
 Важной частью [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] является возможность создания приложений Windows Forms, выполняемых локально на пользовательских компьютерах. Visual Studio можно использовать для создания приложений и пользовательский интерфейс, с помощью Windows Forms. Приложение Windows Forms строится на основе классов из <xref:System.Windows.Forms> пространства имен.  
@@ -50,9 +50,9 @@ ms.lasthandoff: 12/21/2017
   
  Пошаговые инструкции по использованию этих функций см. в следующих разделах справки.  
   
-|Целевой тип|См.|  
+|Кому|См.|  
 |--------|---------|  
-|Создайте новое приложение Windows Forms с помощью[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[Пошаговое руководство: Создание простого Windows Form](http://msdn.microsoft.com/en-us/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Создайте новое приложение Windows Forms с помощью[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[Пошаговое руководство: Создание простого Windows Form](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |Использование элементов управления в формах|[Практическое руководство. Добавление элементов управления в формы Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |Создание рисунков с помощью<xref:System.Drawing>|[Приступая к программированию графики](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Создание пользовательских элементов управления|[Практическое руководство. Наследование класса UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/21/2017
   
  Пошаговые инструкции по использованию этих функций см. в следующих разделах справки.  
   
-|Целевой тип|См.|  
+|Кому|См.|  
 |--------|---------|  
 |Используйте <xref:System.Windows.Forms.BindingSource> компонента|[Практическое руководство. Связывание элементов управления Windows Forms с компонентом BindingSource с помощью конструктора](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
 |Работать с [!INCLUDE[vstecado](~/includes/vstecado-md.md)] источники данных|[Практическое руководство. Сортировка и фильтрация данных ADO.NET с помощью компонента BindingSource в Windows Forms](https://msdn.microsoft.com/library/ya3sah92.aspx)|  
@@ -85,7 +85,7 @@ ms.lasthandoff: 12/21/2017
   
  Общие сведения о [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] можно найти в разделе [Развертывание и безопасность технологии ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Пошаговые инструкции по использованию этих функций см. в следующих разделах справки:  
   
-|Целевой тип|См.|  
+|Кому|См.|  
 |--------|---------|  
 |Развертывание приложения с[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Практическое руководство. Публикация приложения ClickOnce с помощью мастера публикации](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Разбор примера: развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
 |Обновление [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] развертывания|[Практическое руководство. Управление обновлениями для ClickOnce-приложения](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
@@ -96,7 +96,7 @@ ms.lasthandoff: 12/21/2017
   
  Пошаговые инструкции по использованию этих функций см. в следующих разделах справки:  
   
-|Целевой тип|См.|  
+|Кому|См.|  
 |--------|---------|  
 |Печать содержимого формы|[Практическое руководство. Печать графических изображений в Windows Forms](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Практическое руководство. Печать многостраничных текстовых файлов в Windows Forms](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|   
 |Дополнительные сведения о безопасности форм Windows Forms|[Общие сведения о безопасности в Windows Forms](../../../framework/winforms/security-in-windows-forms-overview.md)|  

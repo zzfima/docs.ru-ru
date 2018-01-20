@@ -18,11 +18,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: e776b04c626fac134e2fc9c1b9fd0ae63a50b5d3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 37e7f9541457c475bfe187485520df63a84f7555
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Практическое руководство. Создание пользовательского поставщика маркеров безопасности
 В этом разделе показано, как создавать новые типы маркеров с помощью поставщика пользовательских маркеров безопасности и как интегрировать поставщик с диспетчером пользовательских маркеров безопасности.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
  Дополнительные сведения о пользовательских учетных данных и диспетчера маркеров безопасности. в разделе [Пошаговое руководство: Создание настраиваемых клиентских учетных данных и службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
- Дополнительные сведения об учетных данных безопасности маркера manager поставщика классов и проверки подлинности, в разделе [архитектуры безопасности](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f).  
+ Дополнительные сведения об учетных данных безопасности маркера manager поставщика классов и проверки подлинности, в разделе [архитектуры безопасности](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
 ### <a name="to-create-a-custom-security-token-provider"></a>Создание поставщика пользовательских маркеров безопасности  
   
@@ -71,4 +71,4 @@ ms.lasthandoff: 12/22/2017
  <xref:System.IdentityModel.Tokens.X509SecurityToken>  
  [Пошаговое руководство. Создание пользовательских учетных данных для клиента и службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
  [Практическое руководство. Создание пользовательской структуры проверки подлинности маркера безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
- [Архитектура безопасности](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)
+ [Архитектура безопасности](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

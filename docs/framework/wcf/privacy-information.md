@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f66f773551f45f9e4c5978ef09bbe4061a3326bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2d0172b91393e4e9e373a247c33be938a3160e14
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Сведения о политике конфиденциальности Windows Communication Foundation
 Корпорация Майкрософт стремится защитить конфиденциальные данные конечных пользователей. При создании приложения с использованием [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] версии 3.0 оно может повлиять на конфиденциальность информации конечных пользователей. Например, приложение может явным образом собирать контактные данные пользователей или запрашивать/отправлять информацию через Интернет на свой веб-сайт. Если в приложение внедряется технология Майкрософт, у этой технологии может быть свое поведение, которое способно повлиять на конфиденциальность данных приложения. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] отправляет информацию из приложения в корпорацию Майкрософт, только если это требуется разработчику или конечному пользователю.  
@@ -178,7 +178,7 @@ ms.lasthandoff: 12/22/2017
   
  \<AudienceRestrictionCondition >  
   
- \<Аудитория > [uri]\</Audience > +  
+ \<Audience>[uri]\</Audience>+  
   
  \</ AudienceRestrictionCondition > *  
   
@@ -194,13 +194,13 @@ ms.lasthandoff: 12/22/2017
   
  \<Совет >  
   
- \<AssertionIDReference > [ID]\</AssertionIDReference > *  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>*  
   
  \<Утверждение > [утверждение]\</Assertion > *  
   
  [any]*  
   
- \</ Рекомендации >?  
+ \</Advice>?  
   
  <\!--Абстрактных базовых типов  
   
@@ -228,7 +228,7 @@ ms.lasthandoff: 12/22/2017
   
  \<SubjectConfirmationData > [any]\</SubjectConfirmationData >?  
   
- \<DS:KeyInfo >... \</ds:KeyInfo >?  
+ \<ds:KeyInfo>...\</ds:KeyInfo>?  
   
  \</ SubjectConfirmation >?  
   
@@ -282,7 +282,7 @@ ms.lasthandoff: 12/22/2017
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</ Атрибут > +  
+ \</Attribute>+  
   
  \</ AttributeStatement > *  
   
@@ -304,7 +304,7 @@ ms.lasthandoff: 12/22/2017
   
  \<Утверждение > [утверждение]\</Assertion > +  
   
- \</ Свидетельства >?  
+ \</Evidence>?  
   
  \</ AuthorizationDecisionStatement > *  
   
@@ -413,5 +413,5 @@ ms.lasthandoff: 12/22/2017
  Язык описания веб-служб (WSDL) содержит определение порта. У каждого порта имеется адрес конечной точки и привязка, представляющая службы, используемые приложением. Предоставление WSDL можно отключить в конфигурации. Информация на компьютере не сохраняется.  
   
 ## <a name="see-also"></a>См. также  
- [Windows Communication Foundation](http://msdn.microsoft.com/en-us/fd327ade-0260-4c40-adbe-b74645ba3277)  
+ [Windows Communication Foundation](http://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
  [Безопасность](../../../docs/framework/wcf/feature-details/security.md)

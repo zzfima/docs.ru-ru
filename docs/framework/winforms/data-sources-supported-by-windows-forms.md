@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2d2c1c021759c7032257e95eb2cad202a461dc05
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5a0a4c2bca136377b9c6812008189dae009e195f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Источники данных, поддерживаемые Windows Forms
 В большинстве случаев привязка данных использовалась в приложениях для использования данных, хранящихся в базах данных. Привязки данных Windows Forms, предоставляет доступ к данным из баз данных, а также данные в другие структуры, таких как массивы и коллекции, при условии, что выполнены определенные минимальные требования.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/22/2017
  Windows Forms поддерживает свойства элемента управления привязки данных к общим свойствам экземпляра объекта с помощью <xref:System.Windows.Forms.Binding> типа. Windows Forms также поддерживает привязка элементов управления на основе списка, например <xref:System.Windows.Forms.ListControl> на объект экземпляра, когда <xref:System.Windows.Forms.BindingSource> используется.  
   
  массив или коллекция  
- В качестве источника данных, список должен реализовывать <xref:System.Collections.IList> интерфейса; один примеров можно привести массив, который является экземпляром класса <xref:System.Array> класса. Дополнительные сведения о массивах см. в разделе [как: создать массив объектов (Visual Basic)](http://msdn.microsoft.com/en-us/6b64e069-0387-400c-9081-3bdc581020c3).  
+ В качестве источника данных, список должен реализовывать <xref:System.Collections.IList> интерфейса; один примеров можно привести массив, который является экземпляром класса <xref:System.Array> класса. Дополнительные сведения о массивах см. в разделе [как: создать массив объектов (Visual Basic)](http://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
   
  В общем случае следует использовать <xref:System.ComponentModel.BindingList%601> при создании списков объектов для привязки данных. <xref:System.ComponentModel.BindingList%601>— универсальная версия <xref:System.ComponentModel.IBindingList> интерфейса. <xref:System.ComponentModel.IBindingList> Расширяет интерфейс <xref:System.Collections.IList> интерфейс, добавляя свойства, методы и события, необходимые для двусторонней привязки данных.  
   

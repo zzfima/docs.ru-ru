@@ -25,11 +25,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b9be47fd57e49973c0f77a069c4f3371e4f63194
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ca0892e9d384eefb0fec87a7717222fefb779d12
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>Пример. Фоновое выполнение операции
 Если какая-либо операция будет выполняться в течение долгого времени и при этом требуется не допустить задержек в работе пользовательского интерфейса, можно использовать класс <xref:System.ComponentModel.BackgroundWorker> для выполнения операции в другом потоке.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/22/2017
  Полный код, используемый в этом примере, в разделе [как: выполнение операции в фоновом режиме](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-run-an-operation-in-the-background"></a>Для запуска операции в фоновом режиме  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/22/2017
     |Кнопка|Имя|Text|  
     |------------|----------|----------|  
     |`button1`|`startBtn`|**Start**|  
-    |`button2`|`cancelBtn`|**Отмена**|  
+    |`button2`|`cancelBtn`|**Cancel**|  
   
 2.  Откройте **элементов**, нажмите кнопку **компоненты** , а затем перетащите <xref:System.ComponentModel.BackgroundWorker> в форму компонент.  
   

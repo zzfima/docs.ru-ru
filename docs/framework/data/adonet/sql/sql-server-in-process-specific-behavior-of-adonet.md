@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: caafafe1efb7715722fddf8df79f6e84dd01ece7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: a71d450753fca7d2b3535233f7528c442ec0532a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sql-server-in-process-specific-behavior-of-adonet"></a>Внутрипроцессное поведение ADO.NET в SQL Server
 В пространстве имен <xref:Microsoft.SqlServer.Server> существует четыре основных функциональных расширения для ADO.NET, которые специально предназначены для внутрипроцессного использования: <xref:Microsoft.SqlServer.Server.SqlContext>, <xref:Microsoft.SqlServer.Server.SqlPipe>, <xref:Microsoft.SqlServer.Server.SqlTriggerContext> и <xref:Microsoft.SqlServer.Server.SqlDataRecord>.  
@@ -30,5 +30,5 @@ ms.lasthandoff: 01/17/2018
 1.  [SQL Server в процессе определенного расширения для ADO.NET](http://go.microsoft.com/fwlink/?LinkId=115403)  
   
 ## <a name="see-also"></a>См. также  
- [Создание объектов SQL Server 2005 в управляемом коде](http://msdn.microsoft.com/en-us/5358a825-e19b-49aa-8214-674ce5fed1da)  
+ [Создание объектов SQL Server 2005 в управляемом коде](http://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
  [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

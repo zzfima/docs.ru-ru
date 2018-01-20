@@ -23,11 +23,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 060f411dfc7c3153fdf0e0d6e19781f0d60b141b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0267020f7e7a52e92b05a0bda0ee397e5c3393fc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>Пошаговое руководство. Сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute
 Пользовательские элементы управления, иногда будет предоставлять коллекции как свойство. В этом пошаговом руководстве демонстрируется использование <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> класса для управления способом сериализации коллекции во время разработки. Применение <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> значение к свойству коллекции гарантирует, что будет сериализовано свойство.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  Скопируйте код из этой темы, в разделе [как: сериализации коллекций из стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute](http://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9).  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения данного пошагового руководства требуется:  
@@ -47,9 +47,9 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-a-control-with-a-serializable-collection"></a>Создание элемента управления с сериализуемой коллекцией  
   
-1.  Создайте проект библиотеки элементов управления Windows с именем `SerializationDemoControlLib`. Дополнительные сведения см. в разделе [шаблон библиотеки элементов управления Windows](http://msdn.microsoft.com/en-us/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Создайте проект библиотеки элементов управления Windows с именем `SerializationDemoControlLib`. Дополнительные сведения см. в разделе [шаблон библиотеки элементов управления Windows](http://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
   
-2.  Переименуйте `UserControl1` для `SerializationDemoControl`. Дополнительные сведения см. в разделе [как: переименовать идентификаторы](http://msdn.microsoft.com/en-us/2430f732-2b70-4516-8cf6-a7bb71cc9724).  
+2.  Переименуйте `UserControl1` для `SerializationDemoControl`. Дополнительные сведения см. в разделе [как: переименовать идентификаторы](http://msdn.microsoft.com/library/2430f732-2b70-4516-8cf6-a7bb71cc9724).  
   
 3.  В **свойства** задайте значение <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> свойства `10`.  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/22/2017
     |--------------|---------------|  
     |**Multiline**|`true`|  
     |**Закрепление**|<xref:System.Windows.Forms.DockStyle.Fill>|  
-    |**Полосы прокрутки**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
+    |**ScrollBars**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
     |**ReadOnly**|`true`|  
   
 6.  В **редактор кода**, объявите поле строкового массива с именем `stringsValue` в `SerializationDemoControl`.  

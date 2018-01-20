@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f3d47f285643f0b989db9419392eed736d0efbea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab9adb72a174da25298b6ea104b002914de0cc40
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Пример. Создание профессионально оформленного элемента управления ToolStrip
 Можно создать для своего приложения <xref:System.Windows.Forms.ToolStrip> управляет профессиональный внешний вид и поведение, создайте собственный класс, производный от <xref:System.Windows.Forms.ToolStripProfessionalRenderer> типа.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/22/2017
  Скопируйте код из этой темы, в разделе [как: создание профессионально оформленного элемента управления ToolStrip](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md).  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения данного пошагового руководства требуется:  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  В **обозревателе решений**, удалите элемент управления проекта по умолчанию, удаляя исходный файл «UserControl1.cs» или «UserControl1.vb» в зависимости от выбранного языка.  
   
-     Дополнительные сведения см. в разделе [NIB: Практическое: удаление, Delete и исключить элементы](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+     Дополнительные сведения см. в разделе [NIB: Практическое: удаление, Delete и исключить элементы](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
   
 3.  Добавьте новый <xref:System.Windows.Forms.UserControl> элемент **StackViewLibrary** проекта. Присвойте имя базовой новый исходный файл `StackView`.  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 12/22/2017
   
 8.  Переименуйте `mailStackButton_Click` обработчик событий `stackButton_Click`.  
   
-     Дополнительные сведения см. в разделе [как: переименовать идентификатор (Visual Basic)](http://msdn.microsoft.com/en-us/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
+     Дополнительные сведения см. в разделе [как: переименовать идентификатор (Visual Basic)](http://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
   
 9. Вставьте следующий код в `stackButton_Click` обработчика событий.  
   
@@ -146,7 +146,7 @@ ms.lasthandoff: 12/22/2017
 12. Повторите шаги 10 и 11 for `contactsStackButton` и `tasksStackButton` элементов управления.  
   
 ## <a name="defining-icons"></a>Определение значков  
- Каждый `StackView` кнопка имеет значок. Для удобства каждый значок представлен как строка в кодировке Base64, которая десериализуется до <xref:System.Drawing.Bitmap> созданные из нее. В рабочей среде данные точечных рисунков хранятся как ресурс, и значки отображаются в конструкторе Windows Forms. Дополнительные сведения см. в разделе [как: добавление фоновых изображений в Windows Forms](http://msdn.microsoft.com/en-us/7a509ba2-055c-4ae6-b88a-54625c6d9aff).  
+ Каждый `StackView` кнопка имеет значок. Для удобства каждый значок представлен как строка в кодировке Base64, которая десериализуется до <xref:System.Drawing.Bitmap> созданные из нее. В рабочей среде данные точечных рисунков хранятся как ресурс, и значки отображаются в конструкторе Windows Forms. Дополнительные сведения см. в разделе [как: добавление фоновых изображений в Windows Forms](http://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff).  
   
 #### <a name="to-define-icons"></a>Чтобы определить значки  
   

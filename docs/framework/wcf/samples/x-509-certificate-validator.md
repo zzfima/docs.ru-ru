@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0717aae2c13c9fa5fcbf0ea47d344cac5675fbea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 08ccbbf50db089841d2af2205c7a7cb289a8767c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="x509-certificate-validator"></a>Проверяющий элемент управления для сертификатов X.509
 В этом образце показано, как реализовать пользовательский проверяющий элемент управления для сертификатов X.509. Это бывает полезным в случаях, когда ни один из встроенных режимов проверки сертификатов X.509 не соответствует требованиям приложения. В этом образце показана служба, содержащая пользовательский проверяющий элемент управления, который принимает самостоятельно выданные сертификаты. Клиент использует такие сертификаты для проверки подлинности службы.  
@@ -328,7 +328,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
 3.  Запустите программу Client.exe из каталога \client\bin. Действия клиента отображаются в консольном приложении клиента.  
   
-4.  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Если клиенту и службе не удается взаимодействовать, см. раздел [советы по устранению неполадок](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Запуск образца на нескольких компьютерах  
   
@@ -358,7 +358,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
 13. На сервере запустите из окна командной строки программу Service.exe.  
   
-14. На клиентском компьютере из окна командной строки запустите программу Client.exe. Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+14. На клиентском компьютере из окна командной строки запустите программу Client.exe. Если клиенту и службе не удается взаимодействовать, см. раздел [советы по устранению неполадок](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Очистка после образца  
   

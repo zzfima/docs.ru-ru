@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 27e9391b72ccb65e50ce3154cf7a1c97d796ebd7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfeacc0d4fb736c523538896246b0f406f995fa7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>Данные и модели в .NET Framework
 Этот раздел содержит сведения о доступе к данным с использованием ADO.NET, LINQ, служб данных WCF и XML.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/22/2017
  [ADO.NET](../../../docs/framework/data/adonet/index.md)  
  Описание архитектуры ADO.NET и способов использования классов ADO.NET для управления данными приложения и взаимодействия с источниками данных, включая Microsoft SQL Server, источники данных OLE DB и XML.  
   
- [Портал LINQ](http://msdn.microsoft.com/en-us/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
+ [Портал LINQ](http://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
  Содержит ссылки на важную документацию по LINQ.  
   
  [Обработка транзакций](../../../docs/framework/data/transactions/index.md)  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/22/2017
  [XML-документы и данные](../../../docs/standard/data/xml/index.md)  
  Здесь приводится обзор обширного и встроенного набора классов, предназначенных для работы с XML-документами и данными в .NET Framework.  
   
- [Справочник по XML-стандартам](http://msdn.microsoft.com/en-us/79c78508-c9d0-423a-a00f-672e855de401)  
+ [Справочник по XML-стандартам](http://msdn.microsoft.com/library/79c78508-c9d0-423a-a00f-672e855de401)  
  Справочная информация об основанных на XML стандартах, поддерживаемых корпорацией Майкрософт.  
   
 ## <a name="related-sections"></a>Связанные разделы  

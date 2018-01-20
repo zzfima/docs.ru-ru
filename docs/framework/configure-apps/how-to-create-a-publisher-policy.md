@@ -19,11 +19,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 182882d33772054c7ac4208ca9571fa8018c2a07
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ccd490f6d31ad1d20128497e5115147eddb3df4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Практическое руководство. Создание политики издателя
 Поставщики сборок можно указать, что приложений следует использовать более новой версии сборки, включая файл политики издателя с обновленной сборкой. Файл политики издателя задает перенаправление сборки и параметры базового каталога кода и используется тот же формат в файле конфигурации приложения. Файл политики издателя компилируется в сборку и помещен в глобальном кэше сборок.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  В командной строке введите следующую команду:  
   
-     **/ LINK AL:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:**  *keyPairFile* **/Platform:** *processorArchitecture*  
+     **al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*  
   
      В этой команде:  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 12/22/2017
  [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Настройка приложений](../../../docs/framework/configure-apps/index.md)  
- [Настройка приложений .NET Framework](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [Настройка приложений .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [Схема параметров среды выполнения](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Схема файла конфигурации](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Перенаправление версий сборки](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

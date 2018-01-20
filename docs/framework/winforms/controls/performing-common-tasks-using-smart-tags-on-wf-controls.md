@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a7a29b7224a3f4b692fdfb3afaf58d9744bafcc1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e2fb4e8bf710e55be0a817a4154dfbce114db191
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Пошаговое руководство. Выполнение типичных задач с помощью смарт-тегов в элементах управления Windows Forms
 При разработке форм и элементов управления для приложения Windows Forms, существует много задач, которые выполняются несколько раз. Ниже приведено несколько наиболее типичных задач, которые указываются:  
@@ -48,14 +48,14 @@ ms.lasthandoff: 12/22/2017
  После завершения вы будете понимать роль, которую играют эти важные функции макета.  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="creating-the-project"></a>Создание проекта  
  Первым шагом является создание проекта и настройка формы.  
   
 #### <a name="to-create-the-project"></a>Создание проекта  
   
-1.  Создайте проект приложения Windows с названием «SmartTagsExample». Дополнительные сведения см. в разделе [Практическое руководство. Создание проекта приложения Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  Создайте проект приложения Windows с названием «SmartTagsExample». Дополнительные сведения см. в разделе [Практическое руководство. Создание проекта приложения Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 2.  Выберите форму в **конструктор Windows Forms**.  
   

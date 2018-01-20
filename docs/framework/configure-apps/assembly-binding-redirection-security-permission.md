@@ -17,11 +17,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 1bd25dd0444c428e000371abe494e62b258eaa63
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2593df04b93db17f9ca61a98b21aaec1d534d46
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>Разрешение безопасности перенаправления привязки сборок
 Для явного перенаправления привязки сборки в файле конфигурации приложения необходимо разрешение безопасности. Это относится к перенаправлению как сборок платформы .NET Framework, так и сторонних сборок. Разрешение можно получить, установив <xref:System.Security.Permissions.SecurityPermissionFlag> флаг <xref:System.Security.Permissions.SecurityPermission>. Управляемые сборки не имеют разрешений по умолчанию.  
@@ -36,12 +36,12 @@ ms.lasthandoff: 12/22/2017
 |----------|-----------------------------------|  
 |Зоны надежных узлов (локальный компьютер)|**ON**|  
 |Зоны интрасети|**ON**|  
-|Зона Интернета|**ОТКЛЮЧЕНИЕ**|  
-|Зоны без доверия|**ОТКЛЮЧЕНИЕ**|  
+|Зона Интернета|**OFF**|  
+|Зоны без доверия|**OFF**|  
   
  Администратор может изменить эти параметры безопасности, чтобы разрешить или запретить определенные сценарии на данном компьютере. Нет средств для изменения **BindingRedirects** установку по умолчанию; флагов администратору необходимо вручную изменить файл Security.config на компьютере пользователя.  
   
 ## <a name="see-also"></a>См. также  
- [Файлы политики издателя и выполнения Side-by-Side](http://msdn.microsoft.com/en-us/97a042be-4d72-40c3-91c0-76fd36bdf133)  
+ [Файлы политики издателя и выполнения Side-by-Side](http://msdn.microsoft.com/library/97a042be-4d72-40c3-91c0-76fd36bdf133)  
  [Практическое руководство. Включение и отключение автоматического перенаправления привязки](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)  
  [Параллельное выполнение](../../../docs/framework/deployment/side-by-side-execution.md)

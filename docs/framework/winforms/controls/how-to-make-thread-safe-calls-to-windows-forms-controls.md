@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: db68fba51cd7ef9bad9ba6f7c4ba8d05a31c4371
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7cca363be57e5c5022c70c62d876f62cebc6e9c0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Практическое руководство. Осуществление потокобезопасных вызовов элементов управления Windows Forms.
 При использовании многопоточности для улучшения производительности приложений Windows Forms во время вызова элементов управления необходимо соблюдать принципы безопасности потоков.  
@@ -415,7 +415,7 @@ private:
  В следующем примере кода представлено полное приложение Windows Forms, состоящее из формы с тремя кнопками и одного текстового поля. Первая кнопка показывает доступ с нарушением принципов безопасности нескольких потоков, вторая кнопка показывает безопасный доступ с использованием <xref:System.Windows.Forms.Control.Invoke%2A>, а третья кнопка показывает безопасный доступ с использованием <xref:System.ComponentModel.BackgroundWorker>.  
   
 > [!NOTE]
->  Инструкции по запуску этого примера см. в разделе [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/en-us/cc447f7e-4c3b-4397-9d05-aeba3ca49416). Для этого примера требуются ссылки на сборки System.Drawing и System.Windows.Forms.  
+>  Инструкции по запуску этого примера см. в разделе [Практическое руководство. Компиляция и выполнение откомпилированного примера кода формы Windows Forms с помощью Visual Studio](http://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). Для этого примера требуются ссылки на сборки System.Drawing и System.Windows.Forms.  
   
 ```csharp  
 using System;  

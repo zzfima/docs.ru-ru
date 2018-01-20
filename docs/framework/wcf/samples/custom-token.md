@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9509cb2c6478cf82cebd696ab92cd69a7e5b4097
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 53242a7411d261a6f2860fcf319725e40cfb6dcf
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="custom-token"></a>Пользовательский маркер
 В этом образце показано добавление пользовательской реализации маркера в приложение [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. В этом примере маркер `CreditCardToken` используется для безопасной передачи информации о кредитных картах клиента в службу. Маркер передается в заголовок сообщения WS-Security, подписывается и шифруется с помощью симметричного элемента привязки безопасности вместе с телом и другими заголовками сообщения. Это полезно в случаях, когда встроенных маркеров недостаточно. В этом образце показано, как предоставить пользовательский маркер безопасности службы вместо того, чтобы использовать встроенные маркеры. Служба реализует контракт, определяющий шаблон взаимодействия "запрос-ответ".  
@@ -617,7 +617,7 @@ string GetCallerCreditCardNumber()
   
 1.  Запустите Client.exe из каталога \client\bin. Действия клиента отображаются в консольном приложении клиента.  
   
-2.  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+2.  Если клиенту и службе не удается взаимодействовать, см. раздел [советы по устранению неполадок](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computer"></a>Выполнение образца на нескольких компьютерах  
   
@@ -639,7 +639,7 @@ string GetCallerCreditCardNumber()
   
 9. На клиентском компьютере из окна командной строки запустите программу Client.exe.  
   
-10. Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Если клиенту и службе не удается взаимодействовать, см. раздел [советы по устранению неполадок](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Очистка после образца  
   

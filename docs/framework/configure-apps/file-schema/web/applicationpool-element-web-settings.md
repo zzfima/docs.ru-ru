@@ -17,11 +17,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 70119b3067342dc9bc93e0fb8a43a3242f2dacc8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d75e9eedf42523301b3c1745c05d90bcdafbdbf5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;пул приложений&gt; элемент (веб-параметров)
 Задает параметры конфигурации, используемого ASP.NET для управления поведением всего процесса, когда приложение ASP.NET выполняется в режиме интеграции с [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] или более поздней версии.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/22/2017
   
  Для `maxConcurrentRequestsPerCPU` параметр, значение по умолчанию «5000» в [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] эффективно отключает регулирование запросов, управляемое ASP.NET, если не требуется фактически 5000 или более запросов на один ЦП. Значение по умолчанию вместо зависит от пула потоков CLR автоматическое управление параллелизмом для каждого ЦП. Приложения, предусматривают широкое использование обработку асинхронного запроса или в которых много долго выполняющихся запросов, заблокированных в сетевых операций ввода-вывода, будет обеспечен предел увеличения по умолчанию в [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]. Параметр `maxConcurrentRequestsPerCPU` ноль отключается использование управляемых потоков для обработки запросов ASP.NET. Если приложение выполняется в пуле приложений IIS, запросы остаются в потоке ввода-вывода в IIS, и таким образом, параллелизм регулируется параметрами потоков IIS.  
   
- `requestQueueLimit` Параметр работает так же, как `requestQueueLimit` атрибут [processModel](http://msdn.microsoft.com/en-us/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d) элемент, который задается в файлах Web.config для приложений ASP.NET. Тем не менее `requestQueueLimit` переопределяет параметр в файле aspnet.config `requestQueueLimit` в файле Web.config. Другими словами Если заданы оба атрибута (по умолчанию это значение true), `requestQueueLimit` приоритет имеет параметр в файле aspnet.config.  
+ `requestQueueLimit` Параметр работает так же, как `requestQueueLimit` атрибут [processModel](http://msdn.microsoft.com/library/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d) элемент, который задается в файлах Web.config для приложений ASP.NET. Тем не менее `requestQueueLimit` переопределяет параметр в файле aspnet.config `requestQueueLimit` в файле Web.config. Другими словами Если заданы оба атрибута (по умолчанию это значение true), `requestQueueLimit` приоритет имеет параметр в файле aspnet.config.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как настроить поведение всего процесса ASP.NET в файле aspnet.config в следующих случаях:  

@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 638a439a663925be6eea230984310f7b86b81030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a126d3b21ddd4bd31e168726c3538de21fb7d956
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="control-type-recommendations"></a>Рекомендации относительно типов элементов управления
 Платформа .NET Framework предоставляет возможности разработки и реализации новых элементов управления. Помимо обычных пользовательских элементов, теперь можно создавать нестандартные элементы управления с собственным оформлением, а также расширять функциональный диапазон существующих элементов управления путем наследования. Выбор типа создаваемого элемента управления может быть затруднителен. В этом разделе описываются различия между типами элементов управления, которые можно наследовать, а также даются рекомендации касательно того, как выбрать тип для конкретного проекта.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [Пошаговое руководство. Сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute](http://msdn.microsoft.com/library/ms171731\(v=vs.110\))  
   
--   [Пошаговое руководство. Наследование элементов управления форм Windows Forms с помощью Visual C#](http://msdn.microsoft.com/en-us/library/5h0k2e6x\(v=vs.110\))  
+-   [Пошаговое руководство. Наследование элементов управления форм Windows Forms с помощью Visual C#](http://msdn.microsoft.com/library/5h0k2e6x\(v=vs.110\))  
   
 -   [Практическое руководство. Предоставление точечного рисунка панели элементов для элемента управления](http://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [Пошаговое руководство. Создание составного элемента управления с помощью Visual Basic](http://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
   
--   [Пошаговое руководство. Создание составного элемента управления с помощью C#](http://msdn.microsoft.com/en-us/library/a6h7e207\(v=vs.110\))  
+-   [Пошаговое руководство. Создание составного элемента управления с помощью C#](http://msdn.microsoft.com/library/a6h7e207\(v=vs.110\))  
   
 -   [Пошаговое руководство. Наследование элементов управления форм Windows Forms с помощью Visual Basic](http://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
   

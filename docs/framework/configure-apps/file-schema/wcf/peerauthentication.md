@@ -14,20 +14,20 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b1de8b8ceaf56931dfd3f09e5cc21ac939c49b4a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a900a1f3fc2e07cffe04833cc3c7d3ccd063e24a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltpeerauthenticationgt"></a>&lt;peerAuthentication&gt;
 Задает параметры проверки подлинности для сертификата однорангового узла, используемого одноранговым узлом.  
   
- \<система. ServiceModel >  
+ \<system.ServiceModel>  
 \<поведения >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<поведение >  
-\<serviceCredentials >  
+\<serviceCredentials>  
 \<Одноранговый >  
 \<peerAuthentication >  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/22/2017
   
 |Элемент|Описание:|  
 |-------------|-----------------|  
-|[\<Одноранговый >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|Задает текущие учетные данные для однорангового узла.|  
+|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|Задает текущие учетные данные для однорангового узла.|  
   
 ## <a name="remarks"></a>Примечания  
  Элемент `<authentication>` соответствует классу <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>. Этот элемент задает модуль проверки, который вызывается во время проверки подлинности «от соседа к соседу» в сетке. Когда новый одноранговый узел пытается установить соединение с соседним узлом, он передает свои учетные данные в отвечающий одноранговый узел. Для проверки учетных данных удаленной стороны вызывается проверяющий элемент управления отвечающего узла. Как только в сетке устанавливается одноранговое соединение, оба одноранговых узла выполняют взаимную проверку подлинности. Это означает, что вызываются проверяющие элементы управления на обоих концах.  
@@ -74,6 +74,6 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>  
  [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Одноранговая сеть](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [Проверка подлинности сообщения одноранговых каналов](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [Нестандартная проверка подлинности одноранговых каналов](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [Проверка подлинности сообщения одноранговых каналов](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [Нестандартная проверка подлинности одноранговых каналов](http://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
  [Защита приложений одноранговых каналов](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

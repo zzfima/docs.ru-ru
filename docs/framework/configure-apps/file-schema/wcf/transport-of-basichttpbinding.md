@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 575bd9491573be949a2a8ea0d0b6a22cb399b977
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c6c0cf1b6eef441958931e4d722ba97980e5682
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="lttransportgt-of-ltbasichttpbindinggt"></a>&lt;transport&gt; для &lt;basicHttpBinding&gt;
 Определяет свойства, которые управляют параметрами проверки подлинности для транспорта HTTP.  
   
- \<система. ServiceModel >  
+ \<system.ServiceModel>  
 \<привязки >  
-\<basicHttpBinding >  
+\<basicHttpBinding>  
 \<Привязка >  
 \<Безопасность >  
 \<Транспорт >  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|clientCredentialType|— Указывает тип учетных данных для использования при проверке подлинности клиента с проверкой подлинности HTTP.  Значение по умолчанию — `None`. Это атрибут типа <xref:System.ServiceModel.HttpClientCredentialType>.|  
+|clientCredentialType|— Указывает тип учетных данных для использования при проверке подлинности клиента с проверкой подлинности HTTP.  Значение по умолчанию — `None`. Это атрибут типа <xref:System.ServiceModel.HttpClientCredentialType>.|  
 |proxyCredentialType|— Указывает тип учетных данных для использования при проверке подлинности клиента из домена с использованием прокси-сервер по протоколу HTTP. Этот атрибут применим, только если атрибут `mode` родительского элемента `security` имеет значение `Transport` или `TransportCredentialsOnly`. Это атрибут типа <xref:System.ServiceModel.HttpProxyCredentialType>.|  
 |realm|Строка, указывающая область, используемую схемой проверки подлинности HTTP для обычной проверки подлинности или дайджест-проверки подлинности. Значение по умолчанию - пустая строка.|  
 |policyEnforcement|Это перечисление указывает, когда следует применять <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>.<br /><br /> 1.  Never - политика никогда не применяется (расширенная защита отключена).<br />2.  WhenSupported - политика применяется только тогда, когда клиент поддерживает расширенную защиту.<br />3.  Always - политика применяется всегда. Клиенты, которые не поддерживают расширенную защиту, не смогут пройти проверку подлинности.|  
@@ -136,5 +136,5 @@ ms.lasthandoff: 12/22/2017
  [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Привязки](../../../../../docs/framework/wcf/bindings.md)  
  [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб Windows Communication Foundation и клиентов](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Использование привязок для настройки служб Windows Communication Foundation и клиентов](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Привязка >](../../../../../docs/framework/misc/binding.md)

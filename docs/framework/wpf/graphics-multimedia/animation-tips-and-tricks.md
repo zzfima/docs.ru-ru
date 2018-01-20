@@ -26,11 +26,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4fceebbd3da7a0643e744d80a55cb1c953eba3bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 210f8ff8840f579d352cc579f80f38488b998c5a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="animation-tips-and-tricks"></a>Советы и рекомендации по анимации
 При работе с анимации в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], существует ряд советы и рекомендации помогут улучшить анимациями высокую производительность и сократить число трудностей.  
@@ -116,7 +116,7 @@ ms.lasthandoff: 12/22/2017
   
  Анимацию можно удалить разными способами. Следующие методы можно использовать для удаления анимации, принадлежащих <xref:System.Windows.Media.Animation.Storyboard>.  
   
--   Чтобы удалить <xref:System.Windows.Media.Animation.Storyboard> запуска с помощью триггера событий см. в разделе [как: Удаление раскадровки](http://msdn.microsoft.com/en-us/7fe39531-de2f-46a0-a69f-b783d04235ee).  
+-   Чтобы удалить <xref:System.Windows.Media.Animation.Storyboard> запуска с помощью триггера событий см. в разделе [как: Удаление раскадровки](http://msdn.microsoft.com/library/7fe39531-de2f-46a0-a69f-b783d04235ee).  
   
 -   Чтобы использовать код для удаления <xref:System.Windows.Media.Animation.Storyboard>, в разделе <xref:System.Windows.Media.Animation.Storyboard.Remove%2A> метод.  
   

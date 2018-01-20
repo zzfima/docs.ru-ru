@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3c8ed596706c8d656842191262c25301db595ee3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0397206a05ef47a7fc9b130fbd13fa19a0d766fa
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Пошаговое руководство. Отображение данных из базы данных SQL Server в элементе управления DataGrid
 В этом пошаговом руководстве, получения данных из базы данных SQL Server и отображение их в <xref:System.Windows.Controls.DataGrid> элемента управления. Использовать ADO.NET Entity Framework для создания классов сущностей, которые представляют данные, а также написать запрос, извлекающий указанные данные из класса сущностей с помощью LINQ.  
@@ -88,7 +88,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  Выберите <xref:System.Windows.Window>.  
   
-5.  С помощью окна свойств или редактора XAML создайте обработчик событий для <xref:System.Windows.Window> с именем `Window_Loaded` для <xref:System.Windows.FrameworkElement.Loaded> события. Дополнительные сведения см. в разделе [как: создание простого обработчика событий](http://msdn.microsoft.com/en-us/b1456e07-9dec-4354-99cf-18666b64f480).  
+5.  С помощью окна свойств или редактора XAML создайте обработчик событий для <xref:System.Windows.Window> с именем `Window_Loaded` для <xref:System.Windows.FrameworkElement.Loaded> события. Дополнительные сведения см. в разделе [как: создание простого обработчика событий](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).  
   
      Ниже показан код XAML для файла MainWindow.xaml.  
   

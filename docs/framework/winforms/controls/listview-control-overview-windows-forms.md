@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9bc0f887743e9e129319ca9241203905670334cf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b79fecb0a537f4c568b4a57e9ce2bfab8d8e1005
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="listview-control-overview-windows-forms"></a>Общие сведения об элементе управления ListView (Windows Forms)
 Элемент управления <xref:System.Windows.Forms.ListView> Windows Forms отображает список элементов со значками. Представление списка можно использовать для создания пользовательского интерфейса, аналогичного правой области окна проводника. Элемент управления имеет четыре режима представления: LargeIcon, SmallIcon, списка и сведений.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.Windows.Forms.ListView.Activation%2A> Свойство определяет, какой тип действия должен выполнить пользователь для активации элемента в списке: параметры <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, и <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick>для активации требуется одним щелчком для активации элемента. <xref:System.Windows.Forms.ItemActivation.TwoClick>Активация требует от пользователя, дважды щелкните для активации элемента; одним щелчком изменяет цвет текста элемента. <xref:System.Windows.Forms.ItemActivation.Standard>Активация требует от пользователя, щелкните дважды, чтобы активировать элемент, но элемент не изменяет внешний вид.  
   
- <xref:System.Windows.Forms.ListView> Управления также поддерживает визуальные стили и другие средства, доступные на платформе Windows XP, включая группирование, мозаичное представление и метки вставки. Дополнительные сведения см. в разделе [возможности Windows XP и элементы управления Windows Forms](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0).  
+ <xref:System.Windows.Forms.ListView> Управления также поддерживает визуальные стили и другие средства, доступные на платформе Windows XP, включая группирование, мозаичное представление и метки вставки. Дополнительные сведения см. в разделе [возможности Windows XP и элементы управления Windows Forms](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Forms.ListView>  

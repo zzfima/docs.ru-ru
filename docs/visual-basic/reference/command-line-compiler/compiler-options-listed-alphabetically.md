@@ -11,16 +11,16 @@ ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0bcb3b182ee224457165be2177dd90ad48b00e56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92678a09f9b4dd9f35f4f5c0e5ecb00385b703d1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic Compiler Options Listed Alphabetically
 Компилятор командной строки [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] служит альтернативой программам компиляции в составе интегрированной среды разработки [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Ниже приведен список параметров компилятора командной строки [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], отсортированных по алфавиту.  
   
-|Параметр|Назначение|  
+|Параметр|Цель|  
 |------------|-------------|  
 |[@ (указание файла ответов)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|Указывает файл ответа.|  
 |[/?](../../../visual-basic/reference/command-line-compiler/help.md)|Отображает параметры компилятора. Эта команда аналогична параметру `/help`. Компиляция не происходит.|  
@@ -83,6 +83,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Параметры компилятора Visual Basic по категориям](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
- [Знакомство с конструктором проектов](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
+ [Знакомство с конструктором проектов](http://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
  [Параметры компилятора C# в алфавитном порядке](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [Параметры компилятора C#, упорядоченные по категориям](../../../csharp/language-reference/compiler-options/listed-by-category.md)

@@ -11,11 +11,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 76946ed1b714ba0bd01c79bb772524c84cf8b2ca
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 84bb6b4d80d59a09a1daa808cbfed60c2464ec19
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="serialization-concepts"></a>Концепции сериализации
 Для чего нужна сериализация? Двумя наиболее важными причинами являются сохранение состояния объекта в среде хранения, чтобы впоследствии можно было воссоздать точную копию, и отправить объект по значению из одного домена приложения в другой. Например, сериализация используется, чтобы сохранить состояние сеанса в ASP.NET и скопировать объекты в буфер обмена в Windows Forms. Она также используется при удаленном взаимодействии для передачи объектов по значению с одного домена приложения в другой.
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/23/2017
  [Двоичная сериализация](../../../docs/standard/serialization/binary-serialization.md)  
  Описывает механизм двоичной сериализации, входящий в среду CLR.  
   
- [Удаленные объекты](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)  
+ [Удаленные объекты](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
  Описывает различные методы взаимодействия, доступные в платформе .NET Framework для удаленного взаимодействия.  
   
  [Сериализация XML и SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  

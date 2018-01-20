@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ab5d1bd8116c2f5c07c9e91bbf0a5168c6d075d0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba83265b8bd533101fcde785566b9774df588c46
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Сценарии приложений (службы данных WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]поддерживают базовый набор сценариев предоставления и использования данных в виде [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-каналов. В этом подразделе описываются разделы, относящиеся к этим сценариям.  
@@ -48,11 +48,11 @@ ms.lasthandoff: 12/22/2017
 -   [Библиотека клиентов служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
  Использование канала [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] в клиентском приложении Silverlight.  
- -   [Службы WCF Data Services (Silverlight)](http://msdn.microsoft.com/en-us/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+ -   [Службы WCF Data Services (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
 -   [Асинхронные операции](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [Как: привязки данных службы данных к элементам управления (данных WCF служб или Silverlight)](http://msdn.microsoft.com/en-us/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
+-   [Как: привязки данных службы данных к элементам управления (данных WCF служб или Silverlight)](http://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
   
  Использование канала [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] в клиентском приложении AJAX.  
  -   [Использование служб данных в клиентском приложении](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [Асинхронные операции](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [Службы WCF Data Services (Silverlight)](http://msdn.microsoft.com/en-us/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+-   [Службы WCF Data Services (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
  Предоставления и получения [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канал с большой двоичный объект, доступ и изменить в виде потока.  
  -   [Поставщик потоковых данных](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  

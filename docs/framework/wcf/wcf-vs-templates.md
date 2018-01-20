@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 75723b03468c2e7aeda765f2dabfc30e394c8c88
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2bb195af180ab9d840f91fe82f9f643119663374
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>Шаблоны WCF в Visual Studio
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] шаблоны представляют собой предопределенные шаблоны проектов и элементов можно использовать в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] для быстрого создания [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] службы и окружающих приложений.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/22/2017
  Если существующий проект является веб-проектом, то также создается файл узла службы (service1.svc).  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>Шаблон элемента и проект службы WF WCF.  
- Эти шаблоны создают службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], которые содержат службу рабочего процесса, с помощью которой к рабочему процессу можно получить доступ как к веб-службе. Для моделей императивного программирования и XAML существуют отдельные шаблоны. Используя эти шаблоны, можно создать последовательный рабочий процесс или рабочий процесс конечного автомата. Дополнительные сведения об этих типах рабочих процессов см. в разделе [Windows Workflow Foundation учебники](http://msdn.microsoft.com/en-us/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)]Создание проектов рабочих процессов, в разделе [Создание проектов рабочих процессов прежних версий](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Эти шаблоны создают службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], которые содержат службу рабочего процесса, с помощью которой к рабочему процессу можно получить доступ как к веб-службе. Для моделей императивного программирования и XAML существуют отдельные шаблоны. Используя эти шаблоны, можно создать последовательный рабочий процесс или рабочий процесс конечного автомата. Дополнительные сведения об этих типах рабочих процессов см. в разделе [Windows Workflow Foundation учебники](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)]Создание проектов рабочих процессов, в разделе [Создание проектов рабочих процессов прежних версий](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
  Время отклика конструктора [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] сокращается при использовании рабочих процессов с типом XOML, вместо рабочих процессов, использующих код. Рабочий процесс XOML - это создаваемый по умолчанию тип рабочего процесса.  
   

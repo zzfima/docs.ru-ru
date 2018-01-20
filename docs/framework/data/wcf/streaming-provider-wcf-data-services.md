@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: fc3e7d545a502c040e7e3ee5140d385b60e82d5c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f965bc46c62742c0e2ffb0a7f8ae2e09eca5dc1c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Потоковый поставщик (службы WCF Data Services)
 Служба данных может обеспечивать доступ к данным больших двоичных объектов. Эти двоичные данные могут представлять видео- и аудиопотоки, изображения, файлы документов или двоичные данные медиаресурсов других типов. Когда сущность в модели данных включает одно или несколько двоичных свойств, служба данных возвращает двоичные данные в кодировке base-64 в записи в канале ответа. Так как загрузка и сериализация больших объемов двоичных данных, таким образом может повлиять на производительность, [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] определяет механизм получения двоичных данных независимо от сущности, к которой он принадлежит. Это достигается отделением двоичных данных от сущности с последующим разделением их на один или несколько потоков данных.  
@@ -100,7 +100,7 @@ ms.lasthandoff: 12/22/2017
   
  Дополнительные сведения см. в разделе [потоковая передача сообщений](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) и [квоты транспорта](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
- По умолчанию службы IIS также накладывают на размер запроса ограничение в 4 МБ. Чтобы включить службу данных для получения потоков, размер которых превышает 4 МБ, при выполнении с IIS, необходимо также задать `maxRequestLength` атрибут [httpRuntime (схема параметров ASP.NET) элемент](http://msdn.microsoft.com/en-us/e9b81350-8aaf-47cc-9843-5f7d0c59f369) в `<system.web />` раздел конфигурации, как показано в следующем примере:  
+ По умолчанию службы IIS также накладывают на размер запроса ограничение в 4 МБ. Чтобы включить службу данных для получения потоков, размер которых превышает 4 МБ, при выполнении с IIS, необходимо также задать `maxRequestLength` атрибут [httpRuntime (схема параметров ASP.NET) элемент](http://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369) в `<system.web />` раздел конфигурации, как показано в следующем примере:  
   
   
   
@@ -130,7 +130,7 @@ ms.lasthandoff: 12/22/2017
   
 -   При реализации методов <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> или <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> необходимо использовать значения eTag и Content-Type, предоставляемые в качестве параметров метода. Не устанавливайте заголовки eTag или Content-Type в реализации поставщика <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.  
   
--   По умолчанию клиент отправляет большие двоичные потоки, используя фрагментированный HTTP Transfer-Encoding. Поскольку [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server не поддерживает данный тип кодировки, нельзя использовать этот веб-сервер для размещения потоковой службы данных, предназначенной для приема больших двоичных потоков. Дополнительные сведения о [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server. в разделе [веб-серверов в Visual Studio для веб-проектов ASP.NET](http://msdn.microsoft.com/en-us/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
+-   По умолчанию клиент отправляет большие двоичные потоки, используя фрагментированный HTTP Transfer-Encoding. Поскольку [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server не поддерживает данный тип кодировки, нельзя использовать этот веб-сервер для размещения потоковой службы данных, предназначенной для приема больших двоичных потоков. Дополнительные сведения о [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server. в разделе [веб-серверов в Visual Studio для веб-проектов ASP.NET](http://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
   
 <a name="versioning"></a>   
 ## <a name="versioning-requirements"></a>Требования к управлению версиями  

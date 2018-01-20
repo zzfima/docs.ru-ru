@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 56346b562489b82800421e91201a76bf7f74e5b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a8318c3c0d4d4321f84b936949fdb2474b1d05b4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="runtime-settings-schema"></a>Схема параметров среды выполнения
 Параметры среды выполнения используются средой CLR для настройки приложений, предназначенных для .NET Framework.  
@@ -136,5 +136,5 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Как: отключить параллельная сборка мусора](http://msdn.microsoft.com/en-us/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
+ [Как: отключить параллельная сборка мусора](http://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
  [Перенаправление версий сборки](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

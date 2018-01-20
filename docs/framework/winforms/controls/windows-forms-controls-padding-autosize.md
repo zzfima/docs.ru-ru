@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 797a432bb8cfd3af3b5f030be8f71c78a1a393e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9ccd5379d9594ccab02b80fd5fbdba0b202e1c69
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>Пошаговое руководство. Создание структуры элементов управления Windows Forms с помощью свойств "Padding", "Margins" и "AutoSize"
 Точное расположение элементов управления на форме является важным для многих приложений. **Конструктор Windows Forms** дает много инструментов для выполнения этой задачи. Три наиболее важными являются <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, и <xref:System.Windows.Forms.Control.AutoSize%2A> свойства, которые присутствуют на все элементы управления Windows Forms.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/22/2017
  После завершения вы будете понимать роль, которую играют эти важные функции макета.  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения данного пошагового руководства требуется:  
@@ -71,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-the-project"></a>Создание проекта  
   
-1.  Создание **приложение Windows** проект с именем `LayoutExample`. Дополнительные сведения см. в разделе [как: Создание проекта приложения Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) .  
+1.  Создание **приложение Windows** проект с именем `LayoutExample`. Дополнительные сведения см. в разделе [как: Создание проекта приложения Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) .  
   
 2.  Выберите форму в **конструктор Windows Forms**.  
   

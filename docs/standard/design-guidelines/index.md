@@ -20,11 +20,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 38c344e4f4ede58fcb39dd638f6aa8e896e63da0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c48b3cbaae4155a894ba77263505b2ca85238427
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="framework-design-guidelines"></a>Рекомендации по разработке платформы
 Этот раздел содержит рекомендации по разработке библиотек, которые расширяют и взаимодействия с платформой .NET Framework. Цель — помочь разработчикам библиотек гарантировать согласованность API и удобства использования, предоставляя унифицированную модель программирования, не зависящий от языка программирования, который используется для разработки. Корпорация Майкрософт рекомендует следовать этим правилам при разработке классов и компонентов, расширяющих возможности .NET Framework. Несогласованные библиотеки конструктора отрицательно влияет на производительность и не рекомендует внедрения.  
@@ -61,5 +61,5 @@ ms.lasthandoff: 12/23/2017
   
 ## <a name="see-also"></a>См. также  
  [Обзор набора средств Visual Studio для Unity](../../../docs/framework/get-started/overview.md)  
- [Стратегия для платформы .NET Framework](http://msdn.microsoft.com/en-us/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
+ [Стратегия для платформы .NET Framework](http://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
  [Руководство по разработке](../../../docs/framework/development-guide.md)

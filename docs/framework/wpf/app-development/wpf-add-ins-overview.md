@@ -24,11 +24,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 76a836e2699617803b78f76f90b27452bd0cdd0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffd45957b41cdfd8488aedd865aa70ef5b2634b2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wpf-add-ins-overview"></a>Общие сведения о надстройках WPF
 <a name="Introduction"></a> [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] включает модель надстроек, которую разработчики могут использовать для создания приложений, поддерживающих расширения среды с использованием надстроек. Эта модель позволяет создавать надстройки, которые интегрируются с функциональностью приложения и расширяют ее. В некоторых сценариях приложения также должны отображать [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], которые предоставляются надстройками. В данном разделе показано, как [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] расширяет модель надстроек [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для поддержки этих сценариев, описаны ее архитектура, преимущества и ограничения.  
@@ -111,7 +111,7 @@ ms.lasthandoff: 12/22/2017
 -   Имеет <xref:System.SerializableAttribute> применен атрибут.  
   
 > [!NOTE]
->  Дополнительные сведения о создании удаленных объектов [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] см. в разделе [Обеспечение поддержки удаленного взаимодействия с объектами](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a).  
+>  Дополнительные сведения о создании удаленных объектов [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] см. в разделе [Обеспечение поддержки удаленного взаимодействия с объектами](http://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
   
  Типы [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] не поддерживают удаленное взаимодействие. Для решения этой проблемы [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] расширяет модель надстроек [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], чтобы разрешить отображение [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], созданных надстройками, из ведущих приложений. Эта поддержка обеспечивается [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] двух типов: <xref:System.AddIn.Contract.INativeHandleContract> интерфейс и два статических методов, реализованных <xref:System.AddIn.Pipeline.FrameworkElementAdapters> класса: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> и <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. На высоком уровне эти типы и методы используются следующим образом:  
   
@@ -297,6 +297,6 @@ ms.lasthandoff: 12/22/2017
  <xref:System.LoaderOptimizationAttribute>  
  [Надстройки и расширения среды](../../../../docs/framework/add-ins/index.md)  
  [Домены приложений](../../../../docs/framework/app-domains/application-domains.md)  
- [Обзор удаленного взаимодействия .NET framework](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
- [Создание удаленных объектов](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a)  
+ [Обзор удаленного взаимодействия .NET framework](http://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
+ [Создание удаленных объектов](http://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  
  [Разделы практического руководства](../../../../docs/framework/wpf/app-development/how-to-topics.md)

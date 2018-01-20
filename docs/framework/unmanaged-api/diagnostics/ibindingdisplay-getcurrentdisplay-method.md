@@ -22,11 +22,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7013b07d0ebf2709d6c2b6f791960a8e7d35d678
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cce7638bfe6ffe0d4b5f7f9a64aaff0c59c860cb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ibindingdisplaygetcurrentdisplay-method"></a>Метод IBindingDisplay::GetCurrentDisplay
 Возвращает сведения об отображении текущей привязки.  
@@ -46,7 +46,7 @@ HRESULT GetCurrentDisplay (
 ## <a name="remarks"></a>Примечания  
  [IBindingDisplay::InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) метод должен ранее успешно завершена, и программа должна быть остановлена с помощью отладчика.  
   
- Вызывающий объект должен освободить возвращаемый `SAFEARRAY` памяти с помощью [SafeArrayDestroy](http://msdn.microsoft.com/en-us/fc94f7e7-b903-4c78-905c-54df1f8d13fa).  
+ Вызывающий объект должен освободить возвращаемый `SAFEARRAY` памяти с помощью [SafeArrayDestroy](http://msdn.microsoft.com/library/fc94f7e7-b903-4c78-905c-54df1f8d13fa).  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  

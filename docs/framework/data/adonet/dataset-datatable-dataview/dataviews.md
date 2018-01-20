@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ad24de9fd003637d1c6e31841da209346a872143
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5b79461a6fc3314ca4178e0f9b1cff1c468cc3e6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dataviews"></a>Объекты DataView
 <xref:System.Data.DataView> позволяет создавать различные представления данных, которые хранятся в <xref:System.Data.DataTable>. Эта возможность часто используется в приложениях связывания данных. С помощью **DataView**, можно представить данные в таблице с различными порядками сортировки, и можно фильтровать данные по состоянию строки или на основе критерия фильтра.  
@@ -55,10 +55,10 @@ ms.lasthandoff: 01/17/2018
  Описывает использование **DataViewManager** для управления **DataView** параметры для каждой таблицы в **набора данных**.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Веб-приложений ASP.NET](http://msdn.microsoft.com/en-us/a812d7b7-049e-4234-a4c2-6acf690301f6)  
+ [Веб-приложений ASP.NET](http://msdn.microsoft.com/library/a812d7b7-049e-4234-a4c2-6acf690301f6)  
  Описывает обзоры и подробные пошаговые инструкции по созданию приложений ASP.NET, Web Forms и веб-служб.  
   
- [Приложения Windows](http://msdn.microsoft.com/en-us/a6bb2180-09b1-4738-b9fd-7fb05fc92f23)  
+ [Приложения Windows](http://msdn.microsoft.com/library/a6bb2180-09b1-4738-b9fd-7fb05fc92f23)  
  Содержит подробные сведения о работе с консольными приложениями и Windows Forms.  
   
  [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  

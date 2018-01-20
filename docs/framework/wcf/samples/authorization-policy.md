@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 98d39bdc366eb6b5d757057c3d0e519d81aedd43
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ba4548e6ea62f408fddf3629eca1318c482f728
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="authorization-policy"></a>Политика авторизации
 В этом образце показано, как реализовать пользовательскую политику авторизации утверждений и связанный с ней пользовательский диспетчер авторизации службы. Это бывает удобно, если служба осуществляет проверку прав доступа к операциям службы на основании утверждений и предоставляет вызывающей стороне определенные права, прежде чем проверить права доступа. В этом образце показан процесс добавления утверждений, а также процесс проверки прав доступа с использованием готового набора утверждений. Все сообщения приложений, которыми обмениваются служба и клиент, подписываются и шифруются. По умолчанию при использовании привязки `wsHttpBinding` для входа от имени действующей учетной записи Windows NT используются предоставляемые клиентом имя пользователя и пароль. В этом примере показано, как использовать пользовательский <!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>--> `System.IdentityModel.Selectors.UsernamePasswordValidator` для проверки подлинности клиента. Кроме того, в этом образце показана проверка подлинности клиента на стороне службы с использованием сертификата X.509. Этот образец показывает реализацию объектов <xref:System.IdentityModel.Policy.IAuthorizationPolicy> и <xref:System.ServiceModel.ServiceAuthorizationManager>, которые между собой предоставляют заданным пользователям доступ к определенным методам службы. Этот пример построен на [имя пользователя безопасности сообщения](../../../../docs/framework/wcf/samples/message-security-user-name.md), но показано, как выполнить преобразование утверждений до <xref:System.ServiceModel.ServiceAuthorizationManager> вызова.  
@@ -471,7 +471,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
   
 4.  Запустите программу Client.exe из каталога \client\bin. Действия клиента отображаются в консольном приложении клиента.  
   
-5.  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+5.  Если клиенту и службе не удается взаимодействовать, см. раздел [советы по устранению неполадок](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Запуск образца на нескольких компьютерах  
   
@@ -501,7 +501,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
   
 13. На сервере запустите из окна командной строки программу Service.exe.  
   
-14. На клиентском компьютере из окна командной строки запустите программу Client.exe. Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+14. На клиентском компьютере из окна командной строки запустите программу Client.exe. Если клиенту и службе не удается взаимодействовать, см. раздел [советы по устранению неполадок](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Очистка после образца  
   

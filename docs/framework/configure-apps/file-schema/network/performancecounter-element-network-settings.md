@@ -20,19 +20,19 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 669811b20fd9980b6876683ec7eff4c235a676ef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c50bf9e882ade86e70db217a75fef2a893c45572
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltperformancecountergt-element-network-settings"></a>&lt;performanceCounter&gt; элемент (параметры сети)
 Включает или отключает счетчики производительности сети.  
   
  \<configuration>  
-\<System.NET >  
+\<system.net>  
 \<Параметры >  
-\<performanceCounters >  
+\<performanceCounters>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -58,12 +58,12 @@ ms.lasthandoff: 12/22/2017
   
 |Элемент|Описание:|  
 |-------------|-----------------|  
-|[Параметры](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Примечания  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
- Счетчики производительности сети необходимо включить для использования в файле конфигурации. Все счетчики производительности сети включаются и отключаются с помощью одного параметра в файле конфигурации. Включить или отключить отдельные счетчики производительности сети невозможно. Дополнительные сведения о конкретных сетевых счетчиках производительности см. в разделе [счетчики производительности сети](http://msdn.microsoft.com/en-us/d1860235-f643-46ae-846c-ff0ed8b0e3cd).  
+ Счетчики производительности сети необходимо включить для использования в файле конфигурации. Все счетчики производительности сети включаются и отключаются с помощью одного параметра в файле конфигурации. Включить или отключить отдельные счетчики производительности сети невозможно. Дополнительные сведения о конкретных сетевых счетчиках производительности см. в разделе [счетчики производительности сети](http://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd).  
   
  Значение по умолчанию — что производительности сети счетчики отключены.  
   
@@ -88,4 +88,4 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
  <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
  [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
- [Счетчики производительности сети](http://msdn.microsoft.com/en-us/d1860235-f643-46ae-846c-ff0ed8b0e3cd)
+ [Счетчики производительности сети](http://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd)

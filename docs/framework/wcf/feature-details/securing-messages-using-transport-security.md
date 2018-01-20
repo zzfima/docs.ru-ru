@@ -14,11 +14,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: d40dc1540e4270fc0f80178207edf7b8277d7a73
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 461ec7d3cda41194317054ca2413b99f39ebda2c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="securing-messages-using-transport-security"></a>Защита сообщений с использованием средств обеспечения безопасности транспорта
 В этом разделе рассматривается механизм безопасности транспорта очереди сообщений MSMQ, который может быть использован для защиты сообщений, отправленных в очередь.  
@@ -108,6 +108,6 @@ ms.lasthandoff: 12/22/2017
  Поддерживаются алгоритмы: `MD5`, `SHA1`, `SHA256` и `SHA512`. Значение по умолчанию — `SHA1`.  
   
 ## <a name="see-also"></a>См. также  
- [Очереди сообщений](http://msdn.microsoft.com/en-us/ff917e87-05d5-478f-9430-0f560675ece1)  
+ [Очереди сообщений](http://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)  
  [Основные понятия безопасности](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
  [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

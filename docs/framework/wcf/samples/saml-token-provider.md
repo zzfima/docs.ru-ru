@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7afdbcde68a811dd8fb2be84c1ae298496992c9f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d5c1fdb3801762f20dd99c0f2d9e6835eb98d0d1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="saml-token-provider"></a>Поставщик маркеров SAML
 В этом образце демонстрируется, как реализовать пользовательский поставщик маркеров SAML клиента. Поставщик маркеров в среде [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] используется для передачи учетных данных в инфраструктуру безопасности. Поставщик токенов осуществляет общую проверку цели и выдает соответствующие учетные данные, чтобы инфраструктура безопасности смогла обеспечить защиту сообщения. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поставляется с поставщиком токенов учетных данных по умолчанию. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] также поставляется с поставщиком токенов [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Пользовательские поставщики маркеров полезны в следующих случаях:  
@@ -382,7 +382,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  Запустите программу Client.exe из каталога \client\bin. Действия клиента отображаются в консольном приложении клиента.  
   
-4.  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Если клиенту и службе не удается взаимодействовать, см. раздел [советы по устранению неполадок](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Запуск образца на нескольких компьютерах  
   
@@ -404,7 +404,7 @@ ms.lasthandoff: 12/22/2017
   
 9. На клиентском компьютере из командной строки запустите программу `Client.exe`.  
   
-10. Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Если клиенту и службе не удается взаимодействовать, см. раздел [советы по устранению неполадок](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Очистка после образца  
   

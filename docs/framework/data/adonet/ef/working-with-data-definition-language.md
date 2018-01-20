@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 8b363105f0dd6978d4e59678fb7cd1b3f1d721df
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: dc2642df7cfe0f0a4b56537d0b2ebeae34304145
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="working-with-data-definition-language"></a>Работа с языком описания данных DDL
 Начиная с [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] версии 4, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] поддерживает язык описания данных (DDL). Это позволяет создавать и удалять экземпляры базы данных с использованием строки подключения и метаданных модели хранения (SSDL).  
@@ -51,11 +51,11 @@ ms.lasthandoff: 01/17/2018
   
 2.  Добавьте существующую модель в приложение.  
   
-    1.  Добавьте пустую модель с именем `SchoolModel`. Чтобы создать пустую модель, см. [как: Создание нового .edmx файл](http://msdn.microsoft.com/en-us/beb8189e-e51c-4051-839c-9902c224abf2) раздела.  
+    1.  Добавьте пустую модель с именем `SchoolModel`. Чтобы создать пустую модель, см. [как: Создание нового .edmx файл](http://msdn.microsoft.com/library/beb8189e-e51c-4051-839c-9902c224abf2) раздела.  
   
      В проект будет добавлен файл SchoolModel.edmx.  
   
-    1.  Скопируйте концептуальные, хранения и сопоставления содержимого для модели School из [модели School](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac) раздела.  
+    1.  Скопируйте концептуальные, хранения и сопоставления содержимого для модели School из [модели School](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac) раздела.  
   
     2.  Откройте файл SchoolModel.edmx и вставьте нужное содержимое в тегах `edmx:Runtime`.  
   
