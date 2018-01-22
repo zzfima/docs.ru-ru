@@ -11,11 +11,11 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 ms.workload: dotnetcore
-ms.openlocfilehash: f5815e1ad2a36a8ef3279f6ff83465dba9ec5d50
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cf65dc80f135badcb1580726a12a9ae9d94ae3d7
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -58,43 +58,43 @@ dotnet new [-h|--help]
 
 Команда содержит список шаблонов по умолчанию. Используйте `dotnet new -l`, чтобы получить список доступных шаблонов. В приведенной ниже таблице представлены шаблоны, которые устанавливаются вместе с пакетом SDK для .NET Core 2.0. Язык по умолчанию для шаблона указан внутри квадратных скобок.
 
-|Описание шаблона                          | Имя шаблона  | Языки     |
-|----------------------------------------------|----------------|---------------|
-| Консольное приложение                          | консоль        | [C#], F#, VB  |
-| Библиотека классов                                | classlib       | [C#], F#, VB  |
-| Проект модульного теста                            | mstest         | [C#], F#, VB  |
-| Проект теста xUnit                           | xunit          | [C#], F#, VB  |
-| Пустой ASP.NET Core                           | web            | [C#], F#      |
-| Веб-приложение ASP.NET Core (Model-View-Controller) | mvc            | [C#], F#      |
-| Веб-приложение ASP.NET Core                         | razor          | [C#]          |
-| ASP.NET Core с Angular                    | angular        | [C#]          |
-| ASP.NET Core с React.js                   | react          | [C#]          |
-| ASP.NET Core с React.js и Redux         | reactredux     | [C#]          |
-| Веб-API ASP.NET Core                         | webapi         | [C#], F#      |
-| Файл global.json                             | globaljson     |               |
-| Конфигурация Nuget                                 | nugetconfig    |               |
-| Веб-конфигурация                                   | webconfig      |               |
-| Файл решения                                | sln            |               |
-| Страница Razor                                   | страница           |               |
-| MVC/ViewImports                              | viewimports    |               |
-| MVC ViewStart                                | viewstart      |               |
+|Описание шаблона                          | Имя шаблона | Языки     |
+|----------------------------------------------|---------------|---------------|
+| Консольное приложение                          | `console`     | [C#], F#, VB  |
+| Библиотека классов                                | `classlib`    | [C#], F#, VB  |
+| Проект модульного теста                            | `mstest`      | [C#], F#, VB  |
+| Проект теста xUnit                           | `xunit`       | [C#], F#, VB  |
+| Пустой ASP.NET Core                           | `web`         | [C#], F#      |
+| Веб-приложение ASP.NET Core (Model-View-Controller) | `mvc`         | [C#], F#      |
+| Веб-приложение ASP.NET Core                         | `razor`       | [C#]          |
+| ASP.NET Core с Angular                    | `angular`     | [C#]          |
+| ASP.NET Core с React.js                   | `react`       | [C#]          |
+| ASP.NET Core с React.js и Redux         | `reactredux`  | [C#]          |
+| Веб-API ASP.NET Core                         | `webapi`      | [C#], F#      |
+| Файл global.json                             | `globaljson`  |               |
+| Конфигурация Nuget                                 | `nugetconfig` |               |
+| Веб-конфигурация                                   | `webconfig`   |               |
+| Файл решения                                | `sln`         |               |
+| Страница Razor                                   | `page`        |               |
+| MVC/ViewImports                              | `viewimports` |               |
+| MVC ViewStart                                | `viewstart`   |               |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 Команда содержит список шаблонов по умолчанию. Используйте `dotnet new -all`, чтобы получить список доступных шаблонов. В приведенной ниже таблице представлены шаблоны, которые устанавливаются вместе с пакетом SDK для .NET Core 1.x. Язык по умолчанию для шаблона указан внутри квадратных скобок.
 
-|Описание шаблона  | Имя шаблона  | Языки |
-|----------------------|----------------|-----------|
-| Консольное приложение  | console        | [C#], F#  |
-| Библиотека классов        | classlib       | [C#], F#  |
-| Проект модульного теста    | mstest         | [C#], F#  |
-| Проект теста xUnit   | xunit          | [C#], F#  |
-| Пустой ASP.NET Core   | web            | [C#]      |
-| Веб-приложение ASP.NET Core | mvc            | [C#], F#  |
-| Веб-API ASP.NET Core | webapi         | [C#]      |
-| Конфигурация Nuget         | nugetconfig    |           |
-| Веб-конфигурация           | webconfig      |           |
-| Файл решения        | sln            |           |
+|Описание шаблона  | Имя шаблона | Языки |
+|----------------------|---------------|-----------|
+| Консольное приложение  | `console`     | [C#], F#  |
+| Библиотека классов        | `classlib`    | [C#], F#  |
+| Проект модульного теста    | `mstest`      | [C#], F#  |
+| Проект теста xUnit   | `xunit`       | [C#], F#  |
+| Пустой ASP.NET Core   | `web`         | [C#]      |
+| Веб-приложение ASP.NET Core | `mvc`         | [C#], F#  |
+| Веб-API ASP.NET Core | `webapi`      | [C#]      |
+| Конфигурация Nuget         | `nugetconfig` |           |
+| Веб-конфигурация           | `webconfig`   |           |
+| Файл решения        | `sln`         |           |
 
 ---
 
