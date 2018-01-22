@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c87e384b3186a1dd4b53ba6c21d92bf4d0e6a8c7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4dfc78d355db4bd8c9d43541545e6fac35086b39
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Очереди в Windows Communication Foundation
 В подразделах этого раздела рассматривается поддержка очередей в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обеспечивает поддержку организации очереди с помощью технологии службу очередей сообщений (Майкрософт) (ранее носившей название MSMQ) в качестве транспорта и позволяет осуществить следующие сценарии:  
@@ -75,4 +75,4 @@ ms.lasthandoff: 12/22/2017
  Рекомендации по применению взаимодействия с использованием очередей [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
 ## <a name="see-also"></a>См. также  
- [Очереди сообщений](http://msdn.microsoft.com/en-us/ff917e87-05d5-478f-9430-0f560675ece1)
+ [Очереди сообщений](http://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)

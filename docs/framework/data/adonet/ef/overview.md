@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d8d47b578d60d2c53aaa4b1f47e86430d3495ed1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2bfccccbcfa41f8ed67cb309a0e4a3dd9dda6b90
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="entity-framework-overview"></a>Общие сведения об Entity Framework
 Платформа [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] представляет собой набор технологий ADO.NET, обеспечивающих разработку приложений, связанных с обработкой данных. Архитекторам и разработчикам приложений, ориентированных на обработку данных, приходится учитывать необходимость достижения двух совершенно различных целей. Они должны моделировать сущности, связи и логику решаемых бизнес-задач, а также работать с ядрами СУБД, используемыми для сохранения и получения данных. Данные могут распределяться по нескольким системам хранения данных, в каждой из которых применяются свои протоколы, но даже в приложениях, работающих с одной системой хранения данных, необходимо поддерживать баланс между требованиями системы хранения данных и требованиями написания эффективного и удобного для обслуживания кода приложения.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/17/2018
  В следующих разделах приводятся подробные сведения о службах [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
  [Начало работы](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- Приводятся сведения о том, как получить и быстро с [краткое руководство](http://msdn.microsoft.com/en-us/0bc534be-789f-4819-b9f6-76e51d961675), который показывает, как создать простой [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] приложения.  
+ Приводятся сведения о том, как получить и быстро с [краткое руководство](http://msdn.microsoft.com/library/0bc534be-789f-4819-b9f6-76e51d961675), который показывает, как создать простой [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] приложения.  
   
  [Терминология платформы Entity Framework](../../../../../docs/framework/data/adonet/ef/terminology.md)  
  Определяет многие термины, представленные в модели EDM и [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] и используемые в документации [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  

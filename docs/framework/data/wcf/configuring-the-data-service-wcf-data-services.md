@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ff15e43156293a3bdd4c48b82fba224444d1885a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d9dd82926385ee97b05694d954b94d7821a1e638
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Настройка службы данных (службы данных WCF)
 С [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], можно создавать службы данных, которые предоставляют [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-каналов. В этих каналах могут находиться данные из различных источников данных. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]использует поставщики данных для предоставления этих данных в виде [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала. В число таких поставщиков входят [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], поставщик отражения, а также набор пользовательских интерфейсов поставщиков служб данных. Реализация поставщика определяет модель данных для службы. Дополнительные сведения см. в разделе [поставщики служб данных](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
@@ -79,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - и -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Не поддерживается|Не поддерживается|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|Не поддерживается|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - и -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Не поддерживается|Не поддерживается|Не поддерживается|Не поддерживается|  
   
- <sup>1</sup> в этом примере `Address` представляет свойство сложного типа `Customers` сущность, которая имеет свойство с именем `StreetAddress`. Модель, которая используется службой данных Northwind, не определяет этот сложный тип явно. Если модель данных определяется с помощью поставщика [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], такой сложный тип можно определить с помощью средств модели [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)]. Дополнительные сведения см. в разделе [как: Создание и изменение сложных типов](http://msdn.microsoft.com/en-us/afb8e206-0ffe-4597-b6d4-6ab566897e1d).  
+ <sup>1</sup> в этом примере `Address` представляет свойство сложного типа `Customers` сущность, которая имеет свойство с именем `StreetAddress`. Модель, которая используется службой данных Northwind, не определяет этот сложный тип явно. Если модель данных определяется с помощью поставщика [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], такой сложный тип можно определить с помощью средств модели [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)]. Дополнительные сведения см. в разделе [как: Создание и изменение сложных типов](http://msdn.microsoft.com/library/afb8e206-0ffe-4597-b6d4-6ab566897e1d).  
   
  <sup>2</sup> этот URI поддерживается, если свойство, возвращающее большой двоичный объект (BLOB) определен как ресурс мультимедиа, принадлежащий сущности, которая является ссылкой на носитель, который в данном случае является `Customers`. Дополнительные сведения см. в разделе [потокового поставщика](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
   

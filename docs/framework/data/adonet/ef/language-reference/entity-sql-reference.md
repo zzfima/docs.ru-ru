@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: f92fbcf1aaa8f5d2c856fe1acdbc6d3886fa0c25
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ac05ec8a8732da383a4e33e84c669aa29660a0da
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="entity-sql-reference"></a>Справочник по Entity SQL
 В этом разделе представлена справочная документация по [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. В этом разделе операторы [!INCLUDE[esql](../../../../../../includes/esql-md.md)] сведены и сгруппированы по категориям.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 01/17/2018
 |[! (Логическое НЕ)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|Логическое НЕ.|  
 |[&#124; &#124; (Логическое или)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|Логическое ИЛИ.|  
 |[CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|Вычисляет набор логических выражений для определения результата.|  
-|[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|Результат [при](http://msdn.microsoft.com/en-us/6233fe9f-00b0-460e-8372-64e138a5f998) предложения, если значение равно true.|  
+|[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|Результат [при](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) предложения, если значение равно true.|  
   
 ## <a name="query-operators"></a>Операторы запроса  
  С помощью операторов запросов определяются выражения запроса, возвращающие данные сущности. Операторы запросов приведены в следующей таблице.  

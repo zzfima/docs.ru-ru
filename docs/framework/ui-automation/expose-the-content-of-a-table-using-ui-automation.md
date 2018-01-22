@@ -21,11 +21,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: acc6bee115548ca1f3ba676c4d09b83d4f40e52e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1fcd56e1563b1fcd400d3c1d68b2675efaac3200
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a>Представление содержимого таблицы с помощью автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/22/2017
  В следующем примере кода показано, как получить <xref:System.Windows.Automation.AutomationElement> , представляющий содержимое ячейки таблицы; также извлекаются свойства ячейки, например индексы строки и столбца, диапазоны строк и столбцов и строк и столбцов сведения заголовка. В этом примере используется обработчик событий изменения фокуса для имитации прохождения с помощью клавиатуры табличного элемента управления, реализующий [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Сведения для каждого элемента таблицы предоставляются на событие изменения фокуса.  
   
 > [!NOTE]
->  Поскольку глобальные рабочего стола события изменения фокуса, события изменения фокуса вне таблицы должны быть отфильтрованы. В разделе [реализации](http://msdn.microsoft.com/en-us/4a91c0af-6bb5-4d38-a743-cf136f268fc9) для связанной реализации.  
+>  Поскольку глобальные рабочего стола события изменения фокуса, события изменения фокуса вне таблицы должны быть отфильтрованы. В разделе [реализации](http://msdn.microsoft.com/library/4a91c0af-6bb5-4d38-a743-cf136f268fc9) для связанной реализации.  
   
  [!code-csharp[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#starttarget)]
  [!code-vb[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#starttarget)]  

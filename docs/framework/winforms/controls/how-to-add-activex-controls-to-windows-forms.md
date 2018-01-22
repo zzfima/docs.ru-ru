@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e9328400917208dde9f81b493fbf26c6080dc9c7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 940dd21fc48c23ce623280aab2c487db5810057c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-activex-controls-to-windows-forms"></a>Практическое руководство. Добавление элементов управления ActiveX в формы Windows Forms.
 Хотя конструктор Windows Forms оптимизирован для размещения элементов управления Windows Forms, можно также поместить элементы управления ActiveX в формах Windows Forms.  
@@ -30,10 +30,10 @@ ms.lasthandoff: 12/22/2017
 > [!CAUTION]
 >  Существуют ограничения производительности для форм Windows Forms, когда к ним добавляются элементы управления ActiveX.  
   
- Прежде чем добавлять элементы управления ActiveX в форму, необходимо добавить их в область элементов. Дополнительные сведения см. в разделе [COM-компонентов, Настройка области элементов диалоговое окно](http://msdn.microsoft.com/en-us/171333f3-f207-4e02-bbdc-17862556212c).  
+ Прежде чем добавлять элементы управления ActiveX в форму, необходимо добавить их в область элементов. Дополнительные сведения см. в разделе [COM-компонентов, Настройка области элементов диалоговое окно](http://msdn.microsoft.com/library/171333f3-f207-4e02-bbdc-17862556212c).  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-add-an-activex-control-to-your-windows-form"></a>Добавление элемента управления ActiveX в форме Windows Forms  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
- [Сравнение элементов управления и программируемых объектов в разных языках и библиотеках](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [Сравнение элементов управления и программируемых объектов в разных языках и библиотеках](http://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
  [Практическое руководство. Добавление элементов управления в формы Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
  [Упорядочение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
  [Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  

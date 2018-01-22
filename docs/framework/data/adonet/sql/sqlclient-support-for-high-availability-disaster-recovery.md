@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d2a444440af9dfaa2b084a55db9348fa48df7b54
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4f6ede253f52682cfe5a698cf4fb02841dc4c1e0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Поддержка SqlClient для высокого уровня доступности, аварийного восстановления
 В данном разделе рассматривается поддержка групп доступности AlwaysOn (высокая доступность, аварийное восстановление) в SqlClient, которая появилась в [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)].  Группы доступности AlwaysOn появились в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012. Дополнительные сведения о группах обеспечения доступности AlwaysOn см. в электронной документации по [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
@@ -41,6 +41,9 @@ ms.lasthandoff: 01/17/2018
 1.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
 2.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
+
+> [!NOTE]
+>  Установка `MultiSubnetFailover` для `true` не обязательно с [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)]) или более поздней версии.
   
 ## <a name="connecting-with-multisubnetfailover"></a>Соединение с MultiSubnetFailover  
  При соединении с прослушивателем группы доступности `MultiSubnetFailover=True` 2012 или с экземпляром отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 всегда указывайте [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. `MultiSubnetFailover` уменьшает время отработки отказа для всех групп доступности или экземпляров отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 и значительно уменьшит время отработки отказа для топологий AlwaysOn с одной или несколькими подсетями. Во время отработки отказа в топологии с несколькими подсетями клиент будет пытаться установить соединения параллельно. Во время отработки отказа в топологии с одной подсетью клиент будет агрессивно пытаться восстановить соединение TCP.  

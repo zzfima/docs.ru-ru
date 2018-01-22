@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 358bc0428a53817e85d5a5e278d8da4e1a8b6927
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 447b2d6c0e5eeafeaff89aa1d6430eec72d59a4d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="connection-strings-and-configuration-files"></a>Строки подключения и файлы конфигурации
 Внедрение строк соединения в код приложения может привести к появлению уязвимых мест в системе безопасности и проблем с обслуживанием. Незашифрованные строки соединения компилируются в исходном коде приложения можно просмотреть при помощи [Ildasm.exe (дизассемблер IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) средства. Кроме того, после изменения строки соединения необходимо перекомпилировать приложение. По этим причинам рекомендуется хранить строки соединения в файле конфигурации приложения.  
@@ -156,7 +156,7 @@ ms.lasthandoff: 01/17/2018
  Пространство имен <xref:System.Configuration> предоставляет классы для программной обработки параметров конфигурации. Класс <xref:System.Configuration.ConfigurationManager> обеспечивает доступ к компьютеру, приложению и пользовательским файлам конфигурации. Если вы создаете приложения ASP.NET, можно использовать <xref:System.Web.Configuration.WebConfigurationManager> класса, который предоставляет те же функциональные возможности, а также позволяет получить доступ к параметрам, которые являются уникальными для приложений ASP.NET, например те, найденные в  **\< System.Web >**.  
   
 > [!NOTE]
->  Пространство имен <xref:System.Security.Cryptography> содержит классы, которые предоставляют дополнительные возможности шифрования и расшифровки данных. Эти классы можно использовать в том случае, если требуются криптографические службы, недоступные с использованием защищенной конфигурации. Некоторые из этих классов являются оболочками для Microsoft CryptoAPI, а другие представляют собой реализации полностью на управляемом коде. Дополнительные сведения см. в разделе [Службы криптографии](http://msdn.microsoft.com/en-us/68a1e844-c63c-44af-9247-f6716eb23781).  
+>  Пространство имен <xref:System.Security.Cryptography> содержит классы, которые предоставляют дополнительные возможности шифрования и расшифровки данных. Эти классы можно использовать в том случае, если требуются криптографические службы, недоступные с использованием защищенной конфигурации. Некоторые из этих классов являются оболочками для Microsoft CryptoAPI, а другие представляют собой реализации полностью на управляемом коде. Дополнительные сведения см. в разделе [Службы криптографии](http://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781).  
   
 ### <a name="appconfig-example"></a>Пример App.config  
  Этот пример демонстрирует переключение шифрования **connectionStrings** статьи **app.config** файла для приложения Windows. В этом примере процедура принимает имя приложения в качестве аргумента, например, «MyApplication.exe». **App.config** файл будет зашифровывается и копируется в папку, которая содержит исполняемый файл с именем «MyApplication.exe.config»».  
@@ -178,7 +178,7 @@ ms.lasthandoff: 01/17/2018
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- Дополнительные сведения, обеспечение безопасности приложений ASP.NET см. в разделе [NIB: безопасность ASP.NET](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d) и [по обеспечению безопасности ASP.NET 2.0 с первого взгляда](http://go.microsoft.com/fwlink/?LinkId=59997) в центре разработчиков ASP.NET.  
+ Дополнительные сведения, обеспечение безопасности приложений ASP.NET см. в разделе [NIB: безопасность ASP.NET](http://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d) и [по обеспечению безопасности ASP.NET 2.0 с первого взгляда](http://go.microsoft.com/fwlink/?LinkId=59997) в центре разработчиков ASP.NET.  
   
 ## <a name="see-also"></a>См. также  
  [Построители строк подключения](../../../../docs/framework/data/adonet/connection-string-builders.md)  

@@ -15,16 +15,16 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 59c1c6be1f02477c7ad2d4c90d09173f9296d1e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0715952077db755386a0381f68ccc6e33705a031
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmsmqintegrationbindinggt"></a>&lt;msmqIntegrationBinding&gt;
 Определяет привязку, предоставляющую поддержку очередей путем маршрутизации сообщений с помощью MSMQ.  
   
- \<система. ServiceModel >  
+ \<system.ServiceModel>  
 \<привязки >  
 msmqIntegrationBinding  
   
@@ -102,7 +102,7 @@ msmqIntegrationBinding
   
 |Элемент|Описание:|  
 |-------------|-----------------|  
-|[\<привязки >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
   
 ## <a name="remarks"></a>Примечания  
  Этот элемент привязки может использоваться для приложений Windows Communication Foundation (WCF) можно отправлять и получать сообщения от существующих приложений MSMQ, использующих COM, собственные API-интерфейсы MSMQ или типы, определенные в <xref:System.Messaging?displayProperty=nameWithType> пространства имен можно можно использовать этот элемент конфигурации для указания способа адресации очереди, передачи гарантий ли постоянного хранения сообщений и как следует защиты и проверки подлинности сообщений. Дополнительные сведения см. в разделе [как: обмена сообщениями с конечными точками WCF и приложениями очереди сообщений](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
@@ -147,5 +147,5 @@ msmqIntegrationBinding
  [\<Привязка >](../../../../../docs/framework/misc/binding.md)  
  [Привязки](../../../../../docs/framework/wcf/bindings.md)  
  [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб Windows Communication Foundation и клиентов](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Использование привязок для настройки служб Windows Communication Foundation и клиентов](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [Очереди в WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

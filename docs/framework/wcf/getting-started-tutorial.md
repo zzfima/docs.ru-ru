@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 182e82eec107c170a793d0d48bcfe5493c04d618
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74a322730c5e9fc205097da310a8db1fd7c50f82
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="getting-started-tutorial"></a>Учебник по началу работы
 Содержащиеся в этом разделе подразделы призваны кратко познакомить читателя с процессом программирования в [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Их нужно выполнять в том порядке, в котором они перечислены в конце этой страницы. Прохождение этих занятий позволит получить базовое представление об этапах, которые необходимы для создания служб и клиентских приложений [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Служба предоставляет одну или несколько конечных точек, каждая из которых предоставляет одну или несколько операций службы. *Конечная точка* службы задает адрес, где можно найти службу, привязку, которая содержит сведения, описывающие, как клиент должен обмениваться данными со службой и контракт, определяющий функцию предоставляемую службой клиентам.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  Если вы используете [!INCLUDE[wv](../../../includes/wv-md.md)] или более поздних версиях операционной системы Windows, необходимо запустить [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] , перейдите в меню "Пуск" и щелкните правой кнопкой мыши Visual Studio 2011 и выбрав **Запуск от имени администратора**. Чтобы всегда запускать Visual Studio 2011 от имени администратора, можно создать ярлык, щелкните ярлык правой кнопкой мыши, выберите пункт Свойства, выберите **совместимости** и проверьте **запускать эту программу от имени администратора** флажок. При запуске среды Visual Studio 2011 с помощью этого ярлыка, она будет выполняться от имени администратора.  
   
- Образцы приложений, которые можно загрузить на жесткий диск и запуска, см. в разделах [образцов Windows Communication Foundation](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). Для этого раздела см. в разделе, в частности, [Приступая к работе](../../../docs/framework/wcf/samples/getting-started-sample.md).  
+ Образцы приложений, которые можно загрузить на жесткий диск и запуска, см. в разделах [образцов Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). Для этого раздела см. в разделе, в частности, [Приступая к работе](../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
  Более подробные сведения о создании служб и клиентов см. в разделе [базовое Программирование WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.OperationContractAttribute>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Примеры Windows Communication Foundation](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Примеры Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
  [Базовый жизненный цикл программирования](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
   

@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: eb84ce5bec2808b0149a5ca44b05a9c99143d580
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b899ed162fa626f8c378923907f275cebf9a7db4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="com-wrappers"></a>Оболочки COM
 Модель COM имеет несколько важных отличий от объектной модели .NET Framework:  
@@ -44,8 +44,8 @@ ms.lasthandoff: 12/22/2017
  В большинстве случаев стандартная вызываемая оболочка времени выполнения или вызываемая оболочка COM, создаваемая средой выполнения, реализует маршалинг вызовов, которые выполняются между средами COM и .NET Framework. С помощью настраиваемых атрибутов при необходимости можно определить способ представления управляемого и неуправляемого кода в среде выполнения.  
   
 ## <a name="see-also"></a>См. также  
- [Расширенное COM-взаимодействие](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
+ [Расширенное COM-взаимодействие](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
  [Вызываемая оболочка времени выполнения](../../../docs/framework/interop/runtime-callable-wrapper.md)  
  [Вызываемая оболочка COM](../../../docs/framework/interop/com-callable-wrapper.md)  
- [Настройка стандартных оболочек](http://msdn.microsoft.com/en-us/c40d089b-6a3c-41b5-a20d-d760c215e49d)  
- [Практическое руководство. Настройка вызываемых оболочек времени выполнения](http://msdn.microsoft.com/en-us/4a4bb3da-4d60-4517-99f2-78d46a681732)
+ [Настройка стандартных оболочек](http://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d)  
+ [Практическое руководство. Настройка вызываемых оболочек времени выполнения](http://msdn.microsoft.com/library/4a4bb3da-4d60-4517-99f2-78d46a681732)

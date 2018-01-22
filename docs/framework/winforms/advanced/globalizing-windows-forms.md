@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2337de6889a92b295e0a4f3a88d2a5039e583508
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fa21433979d955603c67bc2822676f56e855d098
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="globalizing-windows-forms"></a>Глобализация Windows Forms
 *Глобализация* — это процесс проектирования и разработки программных продуктов, которые работают в нескольких языков и региональных параметров.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [Пошаговое руководство: Локализация форм Windows Forms](http://msdn.microsoft.com/library/y99d1cd3\(v=vs.110\))  
   
--   [Пошаговое руководство: Создание структуры, сохраняющей пропорции при локализации](http://msdn.microsoft.com/en-us/library/7k9fa71y\(v=vs.110\))  
+-   [Пошаговое руководство: Создание структуры, сохраняющей пропорции при локализации](http://msdn.microsoft.com/library/7k9fa71y\(v=vs.110\))  
   
 -   [Как: Создание окон сообщений для форм Windows с двунаправленным письмом](http://msdn.microsoft.com/library/k1689bxh\(v=vs.110\))  
   

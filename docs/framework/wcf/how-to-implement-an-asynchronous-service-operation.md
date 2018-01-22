@@ -17,14 +17,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 276dd3cc84c15c66adeab30f86583e6d9eec4144
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ba82242d0d3d42d4a2e3774186f2a282e279938
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Практическое руководство. Асинхронная реализация операции службы
-В приложениях [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] операция службы может быть реализована асинхронно или синхронно без жесткого задания способа вызова клиентом. Например, асинхронные операции службы могут вызываться синхронно или синхронные операции службы могут вызываться асинхронно. Пример, демонстрирующий способы асинхронного вызова операции в клиентском приложении см. в разделе [как: асинхронно вызывать операции службы](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]синхронные и асинхронные операции в разделе [проектирование контрактов службы](../../../docs/framework/wcf/designing-service-contracts.md) и [синхронной и асинхронной операции](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). В этом разделе описывается базовая структура асинхронной операции службы, код не завершен. Полный пример клиенту и службе сторон см [асинхронной](http://msdn.microsoft.com/en-us/833db946-f511-4f64-a26f-2759a11217c7).  
+В приложениях [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] операция службы может быть реализована асинхронно или синхронно без жесткого задания способа вызова клиентом. Например, асинхронные операции службы могут вызываться синхронно или синхронные операции службы могут вызываться асинхронно. Пример, демонстрирующий способы асинхронного вызова операции в клиентском приложении см. в разделе [как: асинхронно вызывать операции службы](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]синхронные и асинхронные операции в разделе [проектирование контрактов службы](../../../docs/framework/wcf/designing-service-contracts.md) и [синхронной и асинхронной операции](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). В этом разделе описывается базовая структура асинхронной операции службы, код не завершен. Полный пример клиенту и службе сторон см [асинхронной](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7).  
   
 ### <a name="implement-a-service-operation-asynchronously"></a>Асинхронная реализация операции службы  
   

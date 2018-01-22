@@ -24,11 +24,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e8c39d3c84fe24f86692c289860f22381a3cf5a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 65d09b33982f62b965d6907902ded98f87d9a97e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="com-callable-wrapper"></a>Вызываемая оболочка COM
 Когда клиент COM вызывает объект .NET, среда CLR создает для этого объекта управляемый объект и вызываемую оболочку COM. Не имея возможности обращаться к объекту .NET напрямую, клиенты COM используют вызываемую оболочку COM в качестве посредника для управляемого объекта.  
@@ -190,6 +190,6 @@ public class LoanApp : IAnother {
  [Вызываемая оболочка COM](../../../docs/framework/interop/com-callable-wrapper.md)  
  [Oболочки COM](../../../docs/framework/interop/com-wrappers.md)  
  [Предоставление компонентов .NET Framework клиентам COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Имитация COM-интерфейсов](http://msdn.microsoft.com/en-us/ad2ab959-e2be-411b-aaff-275c3fba606c)  
+ [Имитация COM-интерфейсов](http://msdn.microsoft.com/library/ad2ab959-e2be-411b-aaff-275c3fba606c)  
  [Oпределение типов .NET для взаимодействия](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
  [Вызываемая оболочка времени выполнения](../../../docs/framework/interop/runtime-callable-wrapper.md)

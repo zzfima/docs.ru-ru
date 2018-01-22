@@ -14,11 +14,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: 254cc241edf2d1c53ce9dd14eee41cd8bf6eaa76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2604b9dacf11b9971b10d23d9a807092ddf07830
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-secure-messages-within-reliable-sessions"></a>Практическое руководство. Защита сообщений с помощью надежных сеансов
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/22/2017
 
 1. необходимо задать тип учетных данных клиента, который должен использоваться при проверке подлинности клиента в службе.
 
-Очень важно в первой задаче, которая содержит элемент конфигурации конечной точки `bindingConfiguration` атрибут, ссылающийся на конфигурацию привязки с именем (в данном примере) `MessageSecurity`. [  **\<Привязки >** ](../../../../docs/framework/misc/binding.md) элемента конфигурации, затем ссылается на это имя, чтобы разрешить надежные сеансы, задав `enabled` атрибут [  **\<reliableSession >** ](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) элемент `true`. Можно потребовать гарантии упорядоченной доставки сообщений в ходе надежного сеанса, присвоив атрибуту `ordered` значение `true`.
+Очень важно в первой задаче, которая содержит элемент конфигурации конечной точки `bindingConfiguration` атрибут, ссылающийся на конфигурацию привязки с именем (в данном примере) `MessageSecurity`. [  **\<Привязки >** ](../../../../docs/framework/misc/binding.md) элемента конфигурации, затем ссылается на это имя, чтобы разрешить надежные сеансы, задав `enabled` атрибут [  **\<reliableSession >** ](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) элемент `true`. Можно потребовать гарантии упорядоченной доставки сообщений в ходе надежного сеанса, присвоив атрибуту `ordered` значение `true`.
 
 Исходная копия примера, лежащие в основе этой процедуры настройки в разделе [надежный сеанс WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md).
 

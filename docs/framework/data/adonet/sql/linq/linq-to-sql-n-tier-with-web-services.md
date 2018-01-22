@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a24b8fe5d0da4b3fa3a13db15bd91be83f102dcf
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 79b9b1270f99720dec6b6369706f8a2f601d249e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>N-уровневое использование LINQ to SQL с веб-службами
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]предназначена специально для использования на среднем уровне в слабо связанных доступа к данным (DAL), например веб-службы. Если уровнем представления данных является веб-страница ASP.NET, то для управления передачей данных между пользовательским интерфейсом и <xref:System.Web.UI.WebControls.LinqDataSource> на среднем уровне используется серверный веб-элемент управления [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Если уровень представления данных не является страницей ASP.NET, то и на среднем уровне, и на уровне представления данных необходимо выполнить дополнительные действия по управлению сериализацией и десериализацией данных.  
@@ -49,4 +49,4 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="see-also"></a>См. также  
  [N-уровневые и удаленные приложения и LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
- [NIB: Обзор управления веб-элемента управления LinqDataSource сервера](http://msdn.microsoft.com/en-us/104cfc3f-7385-47d3-8a51-830dfa791136)
+ [NIB: Обзор управления веб-элемента управления LinqDataSource сервера](http://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)

@@ -22,11 +22,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 5198de558d24770c8fdd4bfc10ce4a9199eeff47
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb33d3175cf9e43797125b47c811042771e45782
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Модель автоматизации пользовательского интерфейса и масштабирование экрана
 > [!NOTE]
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     Эта функция включает поддержку [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]во всем процессе, что означает, что все окна, принадлежащие к процессу, являются немасштабируемыми. Например, в [Highlighter Sample](http://msdn.microsoft.com/en-us/19ba4577-753e-4efd-92cc-c02ee67c1b69)четыре окна, входящие в прямоугольник выделения, располагаются в физических координатах, полученных из [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], а не в логических координатах. Если бы в этом примере не была включена поддержка [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], то выделение выполнялось бы в логических координатах на рабочем столе, что привело бы к неверному размещению в среде с разрешением, отличным от 96- [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] .  
+     Эта функция включает поддержку [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]во всем процессе, что означает, что все окна, принадлежащие к процессу, являются немасштабируемыми. В [маркер-пример](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69), например, четыре окна, входящие в прямоугольник выделения приведены в физических координатах, полученных из [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], не в логических координатах. Если бы в этом примере не была включена поддержка [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], то выделение выполнялось бы в логических координатах на рабочем столе, что привело бы к неверному размещению в среде с разрешением, отличным от 96- [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] .  
   
 2.  Чтобы получить координаты курсора, вызовите функцию [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `GetPhysicalCursorPos`. В следующем примере показано, как объявлять и использовать эту функцию.  
   
@@ -87,4 +87,4 @@ ms.lasthandoff: 12/22/2017
  Если приложение выполняет прямое межпроцессное взаимодействие с приложениями без поддержки [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], то возможно придется выполнять преобразование между логическими и физическими координатами с помощью функций [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `PhysicalToLogicalPoint` и `LogicalToPhysicalPoint`.  
   
 ## <a name="see-also"></a>См. также  
- [Highlighter Sample](http://msdn.microsoft.com/en-us/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+ [Пример маркера](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)

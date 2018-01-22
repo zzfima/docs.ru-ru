@@ -28,11 +28,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 72b9237a8abeee936070799c5087abc6b45ff3b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79c0d8ff3d6f66ad3abf23cd371f86bb74edf78e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="packaging-an-assembly-for-com"></a>Упаковка сборки для модели COM
 Разработчики приложений на основе модели COM могут использовать следующую информацию об управляемых типах, которые они планируют включать в свои приложения:  
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
      В отношении управления версиями управляемых классов, которые реализуют интерфейс класса (создаваемые в результате COM-взаимодействия класс), действуют определенные ограничения.  
   
-     Рекомендации по использованию интерфейса класса см. в разделе [Введение в интерфейс класса](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
+     Рекомендации по использованию интерфейса класса см. в разделе [Введение в интерфейс класса](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
   
 -   Инструкции по развертыванию  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 12/22/2017
   
      Независимо от выбранного механизма, в созданную библиотеку типов включаются только открытые типы, определенные в предоставленной сборке.  
   
-     Библиотеку типов можно упаковать в отдельный файл или внедрить в виде файла ресурсов Win32 в приложение на основе платформе .NET. В Microsoft Visual Basic 6.0 эта задача выполняется автоматически, однако при использовании [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] внедрение библиотеки типов осуществляется вручную. Инструкции см. в разделе [Практическое руководство. Встраивание библиотек типов как ресурсов Win32 в приложения на основе платформы .NET](http://msdn.microsoft.com/en-us/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44).  
+     Библиотеку типов можно упаковать в отдельный файл или внедрить в виде файла ресурсов Win32 в приложение на основе платформе .NET. В Microsoft Visual Basic 6.0 эта задача выполняется автоматически, однако при использовании [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] внедрение библиотеки типов осуществляется вручную. Инструкции см. в разделе [Практическое руководство. Встраивание библиотек типов как ресурсов Win32 в приложения на основе платформы .NET](http://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44).  
   
 <a name="cpconpackagingassemblyforcomanchor1"></a>   
 ## <a name="type-library-exporter"></a>программа экспорта библиотек типов  
@@ -94,8 +94,8 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Runtime.InteropServices.ITypeLibConverter>  
  [Предоставление компонентов .NET Framework клиентам COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [Oпределение типов .NET для взаимодействия](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
- [Введение в интерфейс класса](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
+ [Введение в интерфейс класса](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
  [Вопросы безопасности сборок](../../../docs/framework/app-domains/assembly-security-considerations.md)  
  [Tlbexp.exe (программа экспорта библиотек типов)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
  [Регистрация сборок в COM](../../../docs/framework/interop/registering-assemblies-with-com.md)  
- [Практическое руководство. Встраивание библиотек типов как ресурсов Win32 в приложения](http://msdn.microsoft.com/en-us/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)
+ [Практическое руководство. Встраивание библиотек типов как ресурсов Win32 в приложения](http://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)

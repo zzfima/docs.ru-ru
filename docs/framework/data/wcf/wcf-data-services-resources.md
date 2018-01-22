@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: accbc05018644e3ead4ee0c08f44ec39cad8f036
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5c43c195411b07467f1041ecc5ed55239a1327dc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-data-services-resources"></a>Ресурсы служб данных WCF
 Вводные разделы по службам [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] можно найти в следующих местах. Во многих из них также есть ссылки на связанные разделы, содержащие более подробные сведения.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/22/2017
  [Сценарии приложения](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
  Описывает подход на основе задач для создания [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] и приложений, обращающихся к [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-каналов.  
   
- [Visual Studio и .NET Framework глоссарий](http://msdn.microsoft.com/en-us/6529d7c6-7e25-4426-a120-d57b239ca4eb)  
+ [Visual Studio и .NET Framework глоссарий](http://msdn.microsoft.com/library/6529d7c6-7e25-4426-a120-d57b239ca4eb)  
  Содержит термины, используемые в [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] и [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] документации.  
   
 ## <a name="external-resources"></a>Внешние ресурсы  

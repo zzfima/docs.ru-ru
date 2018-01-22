@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1d4161d1fd0f78dcd59c650b08bb336a48d381c6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ffd77bb1875b2de47602a6bd766463b0a274fadc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="protecting-connection-information"></a>Защита сведений о подключении
 Защита доступа к источникам данным - одна из важнейших целей защиты приложения. Строка соединения представляет собой потенциальную уязвимость, если она не защищена. Сохранение сведений о соединении в виде простого текста или сохранение их в памяти представляет угрозу безопасности всей системы. Строки соединения, внедренные в исходный код можно считать с помощью [Ildasm.exe (дизассемблер IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) Просмотр промежуточного языка Майкрософт (MSIL) в скомпилированной сборке.  
@@ -53,5 +53,5 @@ ms.lasthandoff: 01/17/2018
 ## <a name="see-also"></a>См. также  
  [Защита приложений ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Шифрование данных конфигурации с помощью защищенной конфигурации](http://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)  
- [Безопасность PAVE в машинном коде и коде .NET Framework](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
+ [Безопасность PAVE в машинном коде и коде .NET Framework](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
  [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

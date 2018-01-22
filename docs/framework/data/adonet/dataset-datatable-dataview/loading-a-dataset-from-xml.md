@@ -17,16 +17,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1d0c98224b8b508fec5fe584388872757a9dfdf3
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 1d17bb97811bb3a2ae979e5a05b8d39baf2b9c63
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="loading-a-dataset-from-xml"></a>Загрузка набора данных из XML
 Содержимое объекта <xref:System.Data.DataSet> технологии ADO.NET может быть создано на основе XML-потока или XML-документа. Кроме того, использование .NET Framework обеспечивает большую гибкость при выборе сведений, загружаемых из XML, а также способа создания схемы или реляционной структуры <xref:System.Data.DataSet>.  
   
- Для заполнения <xref:System.Data.DataSet> с данными из XML следует использовать **ReadXml** метод <xref:System.Data.DataSet> объекта. **ReadXml** метод выполняет чтение из файла, потока или **XmlReader**, а в качестве аргумента принимает источник XML и еще один дополнительный **XmlReadMode** аргумент. (Дополнительные сведения о **XmlReader**, в разделе [NIB: чтение данных XML с помощью XmlTextReader](http://msdn.microsoft.com/en-us/762c069b-b50c-41b8-936e-39eacfb0d540).) **ReadXml** метод считывает содержимое XML-потока или документа и загружает <xref:System.Data.DataSet> с данными. Он также создаст реляционную схему <xref:System.Data.DataSet> в зависимости от **XmlReadMode** указан и ли реляционной схемы уже существует.  
+ Для заполнения <xref:System.Data.DataSet> с данными из XML следует использовать **ReadXml** метод <xref:System.Data.DataSet> объекта. **ReadXml** метод выполняет чтение из файла, потока или **XmlReader**, а в качестве аргумента принимает источник XML и еще один дополнительный **XmlReadMode** аргумент. (Дополнительные сведения о **XmlReader**, в разделе [NIB: чтение данных XML с помощью XmlTextReader](http://msdn.microsoft.com/library/762c069b-b50c-41b8-936e-39eacfb0d540).) **ReadXml** метод считывает содержимое XML-потока или документа и загружает <xref:System.Data.DataSet> с данными. Он также создаст реляционную схему <xref:System.Data.DataSet> в зависимости от **XmlReadMode** указан и ли реляционной схемы уже существует.  
   
  В следующей таблице описаны параметры для **XmlReadMode** аргумент.  
   

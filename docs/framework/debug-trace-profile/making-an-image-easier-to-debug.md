@@ -18,11 +18,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 86dd0c4349dce8dd9e50fdd44c38a08ec39d90bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e05af51010e92586a9f1de423f6304ea8db78168
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="making-an-image-easier-to-debug"></a>Упрощение отладки образов
 При компиляции неуправляемого кода можно настроить исполняемый образ для отладки, задав параметры командной строки или интегрированной среды разработки. Например, параметр командной строки /**Zi** в Visual C++ служит для создания файлов с отладочными символами (с расширением PDB). Аналогичным образом параметр командной строки /**Od** отключает оптимизацию компилятора. В результате выполнение кода происходит медленнее, однако это упрощает его отладку, если она понадобится.  
@@ -67,4 +67,4 @@ AllowOptimize=0
 ## <a name="see-also"></a>См. также  
  [Отладка, трассировка и профилирование](../../../docs/framework/debug-trace-profile/index.md)  
  [Включение отладки с JIT-присоединением](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)  
- [Включение профилирования](http://msdn.microsoft.com/en-us/3b669676-f0e0-4ebf-8674-68986dd2020d)
+ [Включение профилирования](http://msdn.microsoft.com/library/3b669676-f0e0-4ebf-8674-68986dd2020d)

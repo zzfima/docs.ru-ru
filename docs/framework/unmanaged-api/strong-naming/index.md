@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2127cdb1178da37bcfe77a0e1a02ccd34be2d800
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce89e27089ea2f0c918d0fe37c4eea141698f9be
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Строгое именование (справочник по управляемым API)
 API со строгим именованием позволяет клиенту администрировать подписание сборки строгим именем.  
@@ -30,7 +30,7 @@ API со строгим именованием позволяет клиенту
  При подписи сборки строгим именем в файл, содержащий манифест сборки, добавляется зашифрованный открытый ключ. Подпись строгим именем гарантирует уникальность имени, предотвращает подмену имени и после разрешения ссылки предоставляет вызывающим уникальный идентификатор. Тем не менее уровень доверия не связан со строгим именем.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Строгое именование глобальные статические функции](http://msdn.microsoft.com/en-us/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
+ [Строгое именование глобальные статические функции](http://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
  Описываются неуправляемые глобальные статические функции, которые использует API строгого именования.  
   
 > [!NOTE]
@@ -114,7 +114,7 @@ API со строгим именованием позволяет клиенту
  [Функция StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
  Возвращает токен, представляющий открытый ключ. Устаревшими, начиная с [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [Строгое именование структуры](http://msdn.microsoft.com/en-us/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
+ [Строгое именование структуры](http://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
  Описываются неуправляемые структуры, использующего API со строгим именованием администрировать подписание сборки строгим именем...  
   
  [Структура PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  

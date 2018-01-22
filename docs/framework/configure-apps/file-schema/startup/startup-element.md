@@ -21,11 +21,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 4a502cb309bce3a1a2fb55c9e5477b7a6a395960
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4299775cd23162839ab9846adc7d2c64cc18a404
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltstartupgt-element"></a>&lt;При запуске&gt; элемент
 Указывает информация запуска среды CLR.  
@@ -65,12 +65,12 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
   
 ## <a name="remarks"></a>Примечания  
-  **\<SupportedRuntime >** элемент должен использоваться всеми приложениями, собранными с помощью версии 1.1 или более поздней версии среды выполнения. Приложения, созданные для поддержки только версии 1.0 среды выполнения, должны использовать  **\<requiredRuntime >** элемента.  
+ **\<SupportedRuntime >** элемент должен использоваться всеми приложениями, собранными с помощью версии 1.1 или более поздней версии среды выполнения. Приложения, созданные для поддержки только версии 1.0 среды выполнения, должны использовать  **\<requiredRuntime >** элемента.  
   
  Код запуска для приложения, размещенного в Internet Explorer не учитывает  **\<запуска >** и его дочерних элементов.  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 12/22/2017
  Этот атрибут полезен, если приложение использует устаревшие активации пути, такие как [функция CorBindToRuntimeEx](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), и нужно, чтобы эти пути для активации версии 4 среды CLR вместо более ранней версии, или если ваше приложение созданные с помощью [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] но имеет зависимость от сборки смешанного режима, созданного с помощью более ранней версии платформы .NET Framework. В этих сценариях, присвойте атрибуту значение `true`.  
   
 > [!NOTE]
->  Присвоение атрибуту `true` запрещает загрузку в один процесс, эффективно отключив функцию-process side-by-side CLR версии 1.1 или среда CLR версии 2.0 (в разделе [Side-by-Side выполнение COM-взаимодействия](http://msdn.microsoft.com/en-us/4302318c-3586-49bf-8620-b9a39cdf4a32)).  
+>  Присвоение атрибуту `true` запрещает загрузку в один процесс, эффективно отключив функцию-process side-by-side CLR версии 1.1 или среда CLR версии 2.0 (в разделе [Side-by-Side выполнение COM-взаимодействия](http://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)).  
   
 ## <a name="example"></a>Пример  
  Приведенный ниже показано, как указать версию среды выполнения в файле конфигурации.  
@@ -102,6 +102,6 @@ ms.lasthandoff: 12/22/2017
 ## <a name="see-also"></a>См. также  
  [Схема параметров запуска](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver> Указание используемой версии среды выполнения](http://msdn.microsoft.com/en-us/c376208d-980d-42b4-865b-fbe0d9cc97c2)  
- [Выполнение Side-by-Side COM-взаимодействия](http://msdn.microsoft.com/en-us/4302318c-3586-49bf-8620-b9a39cdf4a32)  
+ [\<PaveOver> Указание используемой версии среды выполнения](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)  
+ [Выполнение Side-by-Side COM-взаимодействия](http://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)  
  [Внутрипроцессное параллельное выполнение](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

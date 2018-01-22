@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3003c89b0cfcda9866c5b1accd154900bc650454
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 603a6dce17d527a3f14e408da19006509514df52
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Выполнение примеров Windows Communication Foundation
 Примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] могут выполняться на одном или нескольких компьютерах. После передачи примеры готовы к выполнению на одном компьютере. При выполнении на нескольких компьютерах необходимо изменить параметры файла конфигурации примера. В следующих процедурах объясняется, как выполнить пример на одном компьютере или на нескольких компьютерах. Обратите внимание, что шаги, выполняемые для служб, размещенных в службах IIS, и шаги для резидентных примеров, отличаются. Большинство примеров размещаются в службах IIS; чтобы определить, как размещается пример, см. сведения в файле Readme.  
@@ -30,13 +30,13 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Запуск образца на том же компьютере  
   
-1.  Если служба размещена в IIS, убедитесь в наличии доступа к службе с помощью браузера, введя следующий адрес: http://localhost/servicemodelsamples/service.svc. Должна отобразиться страница подтверждения. Если страница подтверждения не отображается, см. раздел [советы по устранению неполадок](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+1.  Если служба размещена в IIS, убедитесь в наличии доступа к службе с помощью браузера, введя следующий адрес: http://localhost/servicemodelsamples/service.svc. Должна отобразиться страница подтверждения. Если страница подтверждения не отображается, см. раздел [советы по устранению неполадок](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 2.  Если служба является резидентной, запустите программу Service.exe из папки \service\bin\ в языковой папке. Действия службы отображаются в окне консоли службы.  
   
 3.  Запустите Client.exe из \client\bin\\, \service\bin\ в языковой папке. Действия клиента отображаются в окне консоли клиента.  
   
-4.  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Если клиенту и службе не удается взаимодействовать, см. раздел [советы по устранению неполадок](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Выполнение примера на нескольких компьютерах  
   
@@ -92,5 +92,5 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Построение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
- [Выполнение примеров в рабочей группе и на нескольких компьютерах](http://msdn.microsoft.com/en-us/a451a525-e7ce-452d-9da9-620221260113)  
- [Советы по устранению неполадок](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)
+ [Выполнение примеров в рабочей группе и на нескольких компьютерах](http://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)  
+ [Советы по устранению неполадок](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
