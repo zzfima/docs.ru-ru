@@ -18,22 +18,22 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0717e3b7f4dc72c2e5a75149b88f1f1d1285dad1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0969a9e88dee4a8d7e298ff4510211f49e8a6e35
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="combobox"></a><span data-ttu-id="244fd-102">ComboBox</span><span class="sxs-lookup"><span data-stu-id="244fd-102">ComboBox</span></span>
-<span data-ttu-id="244fd-103"><xref:System.Windows.Controls.ComboBox> Управления предоставляет пользователям список параметров.</span><span class="sxs-lookup"><span data-stu-id="244fd-103">The <xref:System.Windows.Controls.ComboBox> control presents users with a list of options.</span></span> <span data-ttu-id="244fd-104">Список отображения или скрытия как элемент управления развернут и свернут.</span><span class="sxs-lookup"><span data-stu-id="244fd-104">The list is shown and hidden as the control expands and collapses.</span></span> <span data-ttu-id="244fd-105">В состоянии по умолчанию список свернут, отображая только один вариант.</span><span class="sxs-lookup"><span data-stu-id="244fd-105">In its default state, the list is collapsed, displaying only one choice.</span></span> <span data-ttu-id="244fd-106">Пользователь нажимает кнопку, чтобы увидеть полный список параметров.</span><span class="sxs-lookup"><span data-stu-id="244fd-106">The user clicks a button to see the complete list of options.</span></span>  
+# <a name="combobox"></a><span data-ttu-id="41ea1-102">ComboBox</span><span class="sxs-lookup"><span data-stu-id="41ea1-102">ComboBox</span></span>
+<span data-ttu-id="41ea1-103"><xref:System.Windows.Controls.ComboBox> Управления предоставляет пользователям список параметров.</span><span class="sxs-lookup"><span data-stu-id="41ea1-103">The <xref:System.Windows.Controls.ComboBox> control presents users with a list of options.</span></span> <span data-ttu-id="41ea1-104">Список отображения или скрытия как элемент управления развернут и свернут.</span><span class="sxs-lookup"><span data-stu-id="41ea1-104">The list is shown and hidden as the control expands and collapses.</span></span> <span data-ttu-id="41ea1-105">В состоянии по умолчанию список свернут, отображая только один вариант.</span><span class="sxs-lookup"><span data-stu-id="41ea1-105">In its default state, the list is collapsed, displaying only one choice.</span></span> <span data-ttu-id="41ea1-106">Пользователь нажимает кнопку, чтобы увидеть полный список параметров.</span><span class="sxs-lookup"><span data-stu-id="41ea1-106">The user clicks a button to see the complete list of options.</span></span>  
   
- <span data-ttu-id="244fd-107">На следующем рисунке показана <xref:System.Windows.Controls.ComboBox> в различных состояниях.</span><span class="sxs-lookup"><span data-stu-id="244fd-107">The following illustration shows a <xref:System.Windows.Controls.ComboBox> in different states.</span></span>  
+ <span data-ttu-id="41ea1-107">На следующем рисунке показана <xref:System.Windows.Controls.ComboBox> в различных состояниях.</span><span class="sxs-lookup"><span data-stu-id="41ea1-107">The following illustration shows a <xref:System.Windows.Controls.ComboBox> in different states.</span></span>  
   
- <span data-ttu-id="244fd-108">![Поле со списком в состоянии по умолчанию и нажато](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")</span><span class="sxs-lookup"><span data-stu-id="244fd-108">![Combo boxes in default and pressed states](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")</span></span>  
-<span data-ttu-id="244fd-109">Свернутое и развернутое</span><span class="sxs-lookup"><span data-stu-id="244fd-109">Collapsed and expanded</span></span>  
+ <span data-ttu-id="41ea1-108">![Поле со списком в состоянии по умолчанию и нажато](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")</span><span class="sxs-lookup"><span data-stu-id="41ea1-108">![Combo boxes in default and pressed states](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")</span></span>  
+<span data-ttu-id="41ea1-109">Свернутое и развернутое</span><span class="sxs-lookup"><span data-stu-id="41ea1-109">Collapsed and expanded</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="244fd-110">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="244fd-110">In This Section</span></span>  
- [<span data-ttu-id="244fd-111">Как: руководство.</span><span class="sxs-lookup"><span data-stu-id="244fd-111">How to: Get a ComboBoxItem</span></span>](http://msdn.microsoft.com/en-us/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
+## <a name="in-this-section"></a><span data-ttu-id="41ea1-110">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="41ea1-110">In This Section</span></span>  
+ [<span data-ttu-id="41ea1-111">Как: руководство.</span><span class="sxs-lookup"><span data-stu-id="41ea1-111">How to: Get a ComboBoxItem</span></span>](http://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
   
-## <a name="reference"></a><span data-ttu-id="244fd-112">Ссылка</span><span class="sxs-lookup"><span data-stu-id="244fd-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="41ea1-112">Ссылка</span><span class="sxs-lookup"><span data-stu-id="41ea1-112">Reference</span></span>  
  <xref:System.Windows.Controls.ComboBox>
