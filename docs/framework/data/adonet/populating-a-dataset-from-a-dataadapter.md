@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6df0b6a06240a5f59c888ddcfb2b34764fd888fa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c0991398a28e491d381d10dea8a14ed463c67c89
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>Заполнение набора данных с помощью адаптера данных DataAdapter
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataSet> является резидентным представлением данных, предоставляющим согласованную реляционную программную модель, независимую от источника данных. Набор данных `DataSet` представляет собой полную совокупность данных, которая включает таблицы, ограничения и связи между таблицами. Набор данных `DataSet` является независимым от источника данных, поэтому `DataSet` может включать данные, локальные по отношению к приложению, а также данные из нескольких источников данных. Управление взаимодействием с существующими источниками данных осуществляется с помощью `DataAdapter`.  

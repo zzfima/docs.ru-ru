@@ -15,20 +15,20 @@ ms.assetid: d3403556-1816-4546-a782-e8223a772e44
 caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 28878fca5bccf23f906395298c8b2b5b7499fd40
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 59000f60acdc8ada11bc5abb9e91b5f53d42b9ae
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="c-compiler-options"></a>Параметры компилятора C#
 Компилятор создает исполняемые файлы (EXE-файлы), библиотеки динамической компоновки (DLL-файлы) или модули кода (.netmodule).  
   
- Каждый параметр компилятора можно использовать в двух формах записи: **-параметр** или **/параметр**. В документации используется только вариант **/параметр**.  
+ Каждый параметр компилятора можно использовать в двух формах записи: **-параметр** или **/параметр**. В документации показана только форма **-<параметр>**.  
   
  В Visual Studio параметры компилятора задаются в файле web.config. Дополнительные сведения см. в разделе [\<компилятор> Элемент](../../../framework/configure-apps/file-schema/compiler/compiler-element.md).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Сборка из командной строки с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
  Сведения о сборке приложения Visual C# из командной строки.  
   

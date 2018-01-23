@@ -18,11 +18,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 610b2d44fca43f2745b7b423a5cdb73c5a7d74d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dbf3e125d911a407be3b07d0ce93d5c17bd8a0b7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ui-automation-textpattern-overview"></a>Общие сведения о TextPattern модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/22/2017
  Предоставление текстового содержимого элемента управления осуществляется с помощью шаблона элемента управления <xref:System.Windows.Automation.TextPattern> , который представляет содержимое текстового контейнера в качестве текстового потока. В свою очередь <xref:System.Windows.Automation.TextPattern> требует поддержки класса <xref:System.Windows.Automation.Text.TextPatternRange> для предоставления атрибутов формата и стиля. <xref:System.Windows.Automation.Text.TextPatternRange> поддерживает <xref:System.Windows.Automation.TextPattern> , предоставляя непрерывный текст или несколько раздельных фрагментов текста в текстовый контейнер с коллекцией конечных точек <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> и <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> . <xref:System.Windows.Automation.Text.TextPatternRange> поддерживает такие функциональные возможности, как выбор, сравнение, извлечение и обход.  
   
 > [!NOTE]
->  Классы <xref:System.Windows.Automation.TextPattern> не предоставляют средства для вставки или изменения текста. Тем не менее в зависимости от элемента управления это может выполняться [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> или посредством прямого ввода с клавиатуры. Пример см. в разделе [TextPattern Insert Text Sample](http://msdn.microsoft.com/en-us/67353f93-7ee2-42f2-ab76-5c078cf6ca16) .  
+>  Классы <xref:System.Windows.Automation.TextPattern> не предоставляют средства для вставки или изменения текста. Тем не менее в зависимости от элемента управления это может выполняться [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> или посредством прямого ввода с клавиатуры. В разделе [пример текста вставить TextPattern](http://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16) в качестве примера.  
   
  Функции, описанные в этом обзоре, исключительно важны для поставщиков вспомогательных технологий и их пользователей. Вспомогательные технологии могут использовать [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] для сбора полных сведений о форматировании текста для пользователя и предоставления программной навигации и выбора текста с помощью <xref:System.Windows.Automation.Text.TextUnit> (символа, слова, строки или абзаца).  
   

@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ae9ee83802b71eeab63fe5305b49d79a5cfaaf39
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e8eda365fa1970f4fa836440151cc1ba0d3ae9dd
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Сортировка с использованием объекта DataView (LINQ to DataSet)
 Возможность сортировки данных на основе заданных критериев и их предоставление клиенту с помощью элемента управления в пользовательском интерфейсе - это важный аспект привязки данных. Объект <xref:System.Data.DataView> предоставляет несколько способов сортировки и возврата строк данных, упорядоченных по определенным критериям. В дополнение к основе строк возможностей, сортировки <xref:System.Data.DataView> также позволяет использовать [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] выражения для условия сортировки. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]выражения позволяют выполнять гораздо более сложные и мощные операции сортировки, чем сортировка на основе строки. В этом разделе описываются оба подхода к сортировке с помощью объекта <xref:System.Data.DataView>.  

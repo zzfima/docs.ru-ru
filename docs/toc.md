@@ -151,6 +151,9 @@
 ##### [dotnet add package](core/tools/dotnet-add-package.md)
 ##### [dotnet remove package](core/tools/dotnet-remove-package.md)
 ### [global.json](core/tools/global-json.md)
+## [Дополнительные инструменты .NET Core](core/additional-tools/index.md)
+### [поставщик WCF Web Service Reference](core/additional-tools/wcf-web-service-reference-guide.md)
+### [Генератор сериализации XML](core/additional-tools/xml-serializer-generator.md)
 ## [Перенос из .NET Framework](core/porting/index.md)
 ### [Организация проектов для .NET Core](core/porting/project-structure.md)
 ### [Анализ зависимостей сторонних разработчиков](core/porting/third-party-deps.md)
@@ -259,6 +262,7 @@
 ### [Управление версиями](csharp/versioning.md)
 ## [Практические руководства по языку C#](csharp/how-to/index.md)
 ### [Как выполнять синтаксический анализ строк с помощью `String.Split`](csharp/how-to/parse-strings-using-split.md)
+### [Как выполнять сцепление строк](csharp/how-to/concatenate-multiple-strings.md)
 <!-- End of C# Concepts section -->
 ## [Пакет SDK для платформы компилятора .NET (API-интерфейсы Roslyn)](csharp/roslyn-sdk/)
 ## [Руководство по программированию на C#](csharp/programming-guide/)
