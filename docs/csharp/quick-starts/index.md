@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 4443609c9494ca93cbc5934dd62fedf434599962
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 7847d21e3529de1a84ef17486710d10256003ce9
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="c-quick-starts"></a>Краткие руководства по C# #
 
@@ -39,6 +39,12 @@ ms.lasthandoff: 12/12/2017
 Краткое руководство [Ветви и циклы](branches-and-loops.yml) покажет вам общие принципы выбора различных путей выполнения кода в зависимости от значений, хранящихся в переменных. Вы узнаете, что такое поток управления, являющийся основой принятия решений и выбора различных действий в программах. Это краткое руководство можно [запустить локально на компьютере](branches-and-loops-local.md).
 
 В этом занятии начального уровня предполагается, что вы изучили руководства [Hello World](hello-world.yml) и [Числа в C#](numbers-in-csharp.yml).
+
+## <a name="interpolated-stringsinterpolated-stringsyml"></a>[Интерполированные строки](interpolated-strings.yml)
+
+В кратком руководстве по [интерполированным строкам](interpolated-strings.yml) показано, как вставить выражение в длинную строку. Вы узнаете, как определить интерполированное выражение, создать результирующую строку из интерполированной строки с одним или несколькими интерполированными выражениями, а также управлять форматированием, шириной столбца и выравниванием выражений, включенных в результирующую строку. 
+
+В этом занятии начального уровня предполагается, что вы прошли уроки по [Hello World](hello-world.yml) и [числам в C#](numbers-in-csharp.yml), а также [ветвям и циклам](branches-and-loops.yml).
 
 ## <a name="list-collectionlist-collectionyml"></a>[Коллекция списков](list-collection.yml)
 
