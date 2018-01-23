@@ -258,6 +258,7 @@
 ### [Документирование кода](csharp/codedoc.md)
 ### [Управление версиями](csharp/versioning.md)
 ## [Практические руководства по языку C#](csharp/how-to/index.md)
+### [Как выполнять синтаксический анализ строк с помощью `String.Split`](csharp/how-to/parse-strings-using-split.md)
 <!-- End of C# Concepts section -->
 ## [Пакет SDK для платформы компилятора .NET (API-интерфейсы Roslyn)](csharp/roslyn-sdk/)
 ## [Руководство по программированию на C#](csharp/programming-guide/)
