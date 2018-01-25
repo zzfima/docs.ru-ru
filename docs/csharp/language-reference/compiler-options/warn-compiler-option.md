@@ -17,19 +17,19 @@ ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
 caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ab5748f43777ec545e76100543473785894461cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6a1f2c55aa078adb213a93dc5aff7ced40793bfa
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="warn-c-compiler-options"></a>/warn (параметры компилятора C#)
-Параметр **/warn** задает уровень предупреждений, которые должны отображаться компилятором.  
+# <a name="-warn-c-compiler-options"></a>-warn (параметры компилятора C#)
+Параметр **-warn** задает уровень предупреждений, которые должны отображаться компилятором.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```console  
-/warn:option  
+-warn:option  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -47,9 +47,9 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>Примечания  
  Чтобы получить сведения об ошибке или предупреждении, выполните поиск по соответствующему коду в указателе справочной системы. Дополнительные сведения о других способах получить информацию об ошибках и предупреждениях см. в разделе [Ошибки компилятора C#](../../../csharp/language-reference/compiler-messages/index.md).  
   
- Параметр [/warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) позволяет обрабатывать все предупреждения как ошибки. Параметр [/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) позволяет отключать определенные предупреждения.  
+ Параметр [-warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) позволяет обрабатывать все предупреждения как ошибки. Параметр [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) позволяет отключать определенные предупреждения.  
   
- **/w** является краткой формой **/warn**.  
+ **-w** является краткой формой **-warn**.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/21/2017
  Компиляция файла `in.cs` с отображением только предупреждений уровня 1:  
   
 ```console  
-csc /warn:1 in.cs  
+csc -warn:1 in.cs  
 ```  
   
 ## <a name="see-also"></a>См. также  

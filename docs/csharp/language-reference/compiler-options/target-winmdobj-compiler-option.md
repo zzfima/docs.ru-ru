@@ -8,29 +8,29 @@ ms.assetid: 1819a045-659d-498a-9457-c466e902986f
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f690591b79159a0196a1637903f2cc53442976e3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 444fcd69db327ea9d9c3dc739b42520bb9472c4d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="targetwinmdobj-c-compiler-options"></a>/target:winmdobj (параметры компилятора C#)
-Если используется параметр компилятора **/target:winmdobj**, компилятор создает промежуточный WINMDOBJ-файл, который можно преобразовать в бинарный WINMD-файл среды выполнения Windows. Затем WINMD-файл можно использовать в программах на языках JavaScript и C++ в дополнение к программам, использующим управляемые языки.  
+# <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (параметры компилятора C#)
+Если используется параметр компилятора **-target:winmdobj**, компилятор создает промежуточный WINMDOBJ-файл, который можно преобразовать в двоичный WINMD-файл среды выполнения Windows. Затем WINMD-файл можно использовать в программах на языках JavaScript и C++ в дополнение к программам, использующим управляемые языки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```console  
-/target:winmdobj  
+-target:winmdobj  
 ```  
   
 ## <a name="remarks"></a>Примечания  
  Параметр **winmdobj** сигнализирует компилятору, что необходим промежуточный модуль. В результате Visual Studio компилирует библиотеку классов C# в виде WINMDOBJ-файла. Затем WINMDOBJ-файл можно обработать с помощью инструмента экспорта <xref:Microsoft.Build.Tasks.WinMDExp> для создания файла метаданных Windows (WINCMD-файл). WINMD-файл содержит код из исходной библиотеки и метаданные WinMD, используемые JavaScript, C++ и средой выполнения Windows.  
   
- Выходные данные файла, скомпилированного с помощью параметра **/target:winmdobj**, предназначены только для использования в качестве входных данных инструментом экспорта WimMDExp (на WINMDOBJ-файл нет прямой ссылки).  
+ Выходные данные файла, скомпилированного с помощью параметра **-target:winmdobj**, предназначены только для использования в качестве входных данных инструментом экспорта WimMDExp (на WINMDOBJ-файл нет прямой ссылки).  
   
- Выходной файл получает имя первого входного файла, если только с помощью параметра [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) не указано иное. Метод [Main](../../../csharp/programming-guide/main-and-command-args/index.md) не требуется.  
+ Выходной файл получает имя первого входного файла, если только с помощью параметра [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) не указано иное. Метод [Main](../../../csharp/programming-guide/main-and-command-args/index.md) не требуется.  
   
- Если параметр /target:winmdobj указан в командной строке, все файлы до следующего параметра **/out** или [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) будут использоваться для создания программы Windows.  
+ Если параметр -target:winmdobj указан в командной строке, все файлы до следующего параметра **-out** или [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) будут использоваться для создания программы Windows.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a>Установка данного параметра компилятора в интегрированной среде разработки Visual Studio для приложения для Магазина Windows  
   
@@ -48,9 +48,9 @@ ms.lasthandoff: 11/21/2017
  Следующая команда компилирует `filename.cs` в промежуточный WINMDOBJ-файл.  
   
 ```console  
-csc /target:winmdobj filename.cs  
+csc -target:winmdobj filename.cs  
 ```  
   
 ## <a name="see-also"></a>См. также  
- [/ Target (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+ [-target (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
  [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)

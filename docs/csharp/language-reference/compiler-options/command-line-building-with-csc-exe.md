@@ -11,11 +11,11 @@ ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
 caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5ac357ab20f44de4e0613a7af863ad6789e84ec8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5fe7b735977b0cde0bed266815987b773be6bdbe
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="command-line-build-with-cscexe"></a>Построение из командной строки с помощью csc.exe
 Чтобы вызвать компилятор C#, следует ввести имя соответствующего исполняемого файла (*csc.exe*) в командной строке.
@@ -70,31 +70,31 @@ csc File.cs
 - Компиляция *File.cs* и создание *File.dll*:
 
 ```console
-csc /target:library File.cs
+csc -target:library File.cs
 ```
 
 - Компиляция *File.cs* и создание *My.exe*:
 
 ```console
-csc /out:My.exe File.cs
+csc -out:My.exe File.cs
 ```
 
 - Компиляция всех файлов C# в текущем каталоге с включенными оптимизациями и определение символа DEBUG. Выводится файл *File2.exe*:
 
 ```console
-csc /define:DEBUG /optimize /out:File2.exe *.cs
+csc -define:DEBUG -optimize -out:File2.exe *.cs
 ```
 
 - Компиляция всех файлов C# в текущем каталоге с созданием отладочной версии *File2.dll*. Логотипы и предупреждения не отображаются:
 
 ```console
-csc /target:library /out:File2.dll /warn:0 /nologo /debug *.cs
+csc -target:library -out:File2.dll -warn:0 -nologo -debug *.cs
 ```
 
 - Компиляция всех файлов C# в текущем каталоге в файл *Something.xyz* (библиотеку DLL):
 
 ```console
-csc /target:library /out:Something.xyz *.cs
+csc -target:library -out:Something.xyz *.cs
 ```
 
 ## <a name="differences-between-c-compiler-and-c-compiler-output"></a>Различия между выходными данными компилятора C# и компилятора C++
@@ -106,6 +106,6 @@ csc /target:library /out:Something.xyz *.cs
  [Параметры компилятора C#, упорядоченные по категориям](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
  [Main() и аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/index.md)  
  [Аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
- [Как: отображение аргументов командной строки](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+ [Практическое руководство. Отображение аргументов командной строки](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
  [Практическое руководство. Доступ к аргументам командной строки с помощью оператора foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
  [Значения, возвращаемые методом main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

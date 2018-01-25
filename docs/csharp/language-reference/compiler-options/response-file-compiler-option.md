@@ -12,11 +12,11 @@ ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
 caps.latest.revision: "9"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d4dc8c81a9afd60add4c2a62be6804a0f6446124
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fbb95e0619857f38260ae74366ba4bb860779530
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="-c-compiler-options"></a>@ (параметры компилятора C#)
 С помощью параметра @ можно указать файл, содержащий параметры компилятора и файлы исходного кода, которые требуется компилировать.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="remarks"></a>Примечания  
  Параметры компилятора и файлы исходного кода будут обрабатываться компилятором таким образом, как если бы они были указаны в командной строке.  
   
- Чтобы задать несколько файлов ответов для компиляции, используйте соответствующее число параметров файла ответов. Например:  
+ Чтобы задать несколько файлов ответов для компиляции, используйте соответствующее число параметров файла ответов. Пример:  
   
 ```  
 @file1.rsp @file2.rsp  
@@ -46,7 +46,7 @@ ms.lasthandoff: 10/18/2017
   
  Компилятор обрабатывает параметры команд в том порядке, в котором они встречаются. Таким образом, аргументы командной строки могут переопределять параметры, заданные ранее в файле ответов. Аналогичным образом, параметры в файле ответов будут переопределять параметры, ранее заданные в командной строке или в других файлах ответов.  
   
- В C# представлен файл csc.rsp, который находится в одном каталоге с файлом csc.exe. Дополнительные сведения о файле csc.rsp см. в разделе [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md).  
+ В C# представлен файл csc.rsp, который находится в одном каталоге с файлом csc.exe. Дополнительные сведения о файле csc.rsp см. в описании [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md).  
   
  Этот параметр компилятора нельзя задать в среде разработки Visual Studio или изменить программными средствами.  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 10/18/2017
   
 ```console  
 # build the first output file  
-/target:exe /out:MyExe.exe source1.cs source2.cs  
+-target:exe -out:MyExe.exe source1.cs source2.cs  
 ```  
   
 ## <a name="see-also"></a>См. также  

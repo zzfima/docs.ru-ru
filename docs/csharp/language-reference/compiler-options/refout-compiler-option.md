@@ -11,20 +11,20 @@ helpviewer_keywords:
 - -refout compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: dc78165fc8f273948111c174ae0bf0af6591a8ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fbae6f461304c37ba2ef10da16b5d520377bb225
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="refout-c-compiler-options"></a>/refout (параметры компилятора C#)
+# <a name="-refout-c-compiler-options"></a>-refout (параметры компилятора C#)
 
-Параметр **/refout** указывает путь к файлу, в который должны помещаться выходные данные базовой сборки. В API Emit он преобразуется в `metadataPeStream`.
+Параметр **-refout** указывает путь к файлу, в который нужно выводить базовую сборку. В API Emit он преобразуется в `metadataPeStream`.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```console
-/refout:filepath
+-refout:filepath
 ```
 
 ## <a name="arguments"></a>Аргументы
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/21/2017
 - Сохраняются все виртуальные методы. Сохраняются явные реализации интерфейса. Явно реализованные свойства и события сохраняются, так как их методы доступа являются виртуальными (и, следовательно, сохраняются).
 - Сохраняются все поля структуры. (Возможно, это будет изменено в версиях после C# 7.1.)
 
-Параметры `/refout` и [`/refonly`](refonly-compiler-option.md) являются взаимоисключающими.
+Параметры `-refout` и [`-refonly`](refonly-compiler-option.md) являются взаимоисключающими.
 
 ## <a name="see-also"></a>См. также
  [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)  

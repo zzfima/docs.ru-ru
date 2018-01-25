@@ -16,19 +16,19 @@ ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
 caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d478c42141288cc3a1478ecf43f50c961a9d2246
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7da5a55fa96c11d79f8c616cf0f1f4e0ed109bfa
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="linkresource-c-compiler-options"></a>/linkresource (параметры компилятора C#)
-Создает в выходном файле ссылку на ресурс платформы .NET Framework. Файл ресурсов не добавляется в выходной файл. Этот параметр отличается от параметра [/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md), который внедряет файл ресурсов в выходной файл.  
+# <a name="-linkresource-c-compiler-options"></a>-linkresource (параметры компилятора C#)
+Создает в выходном файле ссылку на ресурс платформы .NET Framework. Файл ресурсов не добавляется в выходной файл. Этот параметр отличается от параметра [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md), который внедряет файл ресурсов в выходной файл.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```console  
-/linkresource:filename[,identifier[,accessibility-modifier]]  
+-linkresource:filename[,identifier[,accessibility-modifier]]  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -44,13 +44,13 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>Примечания  
  По умолчанию связанные ресурсы в сборке открыты, если они создавались с помощью компилятора C#. Чтобы сделать ресурс закрытым, укажите параметр `private` в качестве модификатора доступа. Модификаторы, отличные от `public` или `private`, не допускаются.  
   
- Параметр **/linkresource** требует одного из параметров [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md), отличного от **/target:module**.  
+ Параметр **-linkresource** требует один из параметров [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md), отличный от **-target:module**.  
   
- Если `filename` является файлом ресурсов .NET Framework, созданным, например, с помощью [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) или в среде разработки, то к нему можно обращаться с помощью членов пространства имен <xref:System.Resources>. Для получения дополнительной информации см. <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Другие ресурсы, используйте `GetManifestResource` методы в <xref:System.Reflection.Assembly> класса доступа к ресурсам во время выполнения.  
+ Если `filename` является файлом ресурсов .NET Framework, созданным, например, с помощью [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) или в среде разработки, то к нему можно обращаться с помощью членов пространства имен <xref:System.Resources>. Дополнительные сведения см. в разделе <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Чтобы получить доступ ко всем остальным ресурсам во время выполнения, используйте методы `GetManifestResource` в классе <xref:System.Reflection.Assembly>.  
   
  Файл, указанный в параметре `filename`, может иметь любой формат. Например, может потребоваться сделать имеющуюся на компьютере библиотеку DLL частью сборки, поэтому ее можно разместить в глобальном кэше сборок и обеспечить к ней доступ из управляемого кода сборки. Во втором из следующих примеров показывается, как это сделать. Это действие можно также выполнить в компоновщике сборок. В третьем из следующих примеров показывается, как это сделать. Дополнительные сведения см. в разделах [Al.exe (компоновщик сборок)](../../../framework/tools/al-exe-assembly-linker.md) и [Работа со сборками и глобальным кэшем сборок](../../../framework/app-domains/working-with-assemblies-and-the-gac.md).  
   
- **/linkres** является краткой формой **/linkresource**.  
+ **-linkres** является краткой формой **-linkresource**.  
   
  Этот параметр компилятора недоступен в Visual Studio и не может быть изменен программным способом.  
   
@@ -58,14 +58,14 @@ ms.lasthandoff: 11/21/2017
  Компиляция `in.cs` и создание ссылки на файл ресурсов `rf.resource`:  
   
 ```console  
-csc /linkresource:rf.resource in.cs  
+csc -linkresource:rf.resource in.cs  
 ```  
   
 ## <a name="example"></a>Пример  
  Скомпилируйте `A.cs` в библиотеку DLL, создайте ссылку на машинную библиотеку N.dll и поместите выходные данные в глобальный кэш сборок (GAC). В этом примере оба файла A.dll и N.dll будут расположены в глобальном кэше сборок.  
   
 ```console  
-csc /linkresource:N.dll /t:library A.cs  
+csc -linkresource:N.dll -t:library A.cs  
 gacutil -i A.dll  
 ```  
   
@@ -73,8 +73,8 @@ gacutil -i A.dll
  В этом примере выполняются те же действия, что и в предыдущем примере, но с использованием параметров компоновщика сборок.  
   
 ```console  
-csc /t:module A.cs  
-al /out:A.dll A.netmodule /link:N.dll   
+csc -t:module A.cs  
+al -out:A.dll A.netmodule -link:N.dll   
 gacutil -i A.dll  
 ```  
   

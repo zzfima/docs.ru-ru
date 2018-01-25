@@ -16,19 +16,19 @@ ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
 caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 726956275436e22723bc32b98b2b8b7c7df5fb12
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c20de499ae0fd5f8869c9b6e78a308fde9787ef9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="resource-c-compiler-options"></a>/resource (параметры компилятора C#)
+# <a name="-resource-c-compiler-options"></a>-resource (параметры компилятора C#)
 Внедряет указанный ресурс в выходной файл.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```console  
-/resource:filename[,identifier[,accessibility-modifier]]  
+-resource:filename[,identifier[,accessibility-modifier]]  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -46,9 +46,9 @@ ms.lasthandoff: 11/21/2017
   
  По умолчанию ресурсы в сборке открыты, если они создавались с помощью компилятора C#. Чтобы сделать ресурс закрытым, укажите параметр `private` в качестве модификатора доступа. Уровни доступности, отличные от `public` или `private`, не допускаются.  
   
- Если `filename` является файлом ресурсов .NET Framework, созданным, например, с помощью [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) или в среде разработки, то к нему можно обращаться с помощью членов пространства имен <xref:System.Resources>. Для получения дополнительной информации см. <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Другие ресурсы, используйте `GetManifestResource` методы в <xref:System.Reflection.Assembly> класса доступа к ресурсам во время выполнения.  
+ Если `filename` является файлом ресурсов .NET Framework, созданным, например, с помощью [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) или в среде разработки, то к нему можно обращаться с помощью членов пространства имен <xref:System.Resources>. Дополнительные сведения см. в разделе <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Чтобы получить доступ ко всем остальным ресурсам во время выполнения, используйте методы `GetManifestResource` в классе <xref:System.Reflection.Assembly>.  
   
- **/res** является краткой формой **/resource**.  
+ **-res** является краткой формой **-resource**.  
   
  Порядок расположения ресурсов в выходном файле будет определяться порядком, указанным в командной строке.  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/21/2017
  Компиляция `in.cs` и привязка файла ресурсов `rf.resource`:  
   
 ```console  
-csc /resource:rf.resource in.cs  
+csc -resource:rf.resource in.cs  
 ```  
   
 ## <a name="see-also"></a>См. также  
