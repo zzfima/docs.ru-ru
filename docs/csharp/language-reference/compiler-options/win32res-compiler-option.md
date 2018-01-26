@@ -14,19 +14,19 @@ ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
 caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 96583542c62305cbaa5a24f66e9e54ec9b525c90
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4c24da8bb745847612d882d00eff7f03dbc60475
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="win32res-c-compiler-options"></a>/win32res (параметры компилятора C#)
-Параметр **/win32res** вставляет файл ресурсов Win32 в выходной файл.  
+# <a name="-win32res-c-compiler-options"></a>-win32res (параметры компилятора C#)
+Параметр **-win32res** вставляет ресурс Win32 в выходной файл.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```console  
-/win32res:filename  
+-win32res:filename  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -36,9 +36,9 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>Примечания  
  Файл ресурсов Win32 можно создать с помощью [компилятора ресурсов](../../language-reference/compiler-options/resource-compiler-option.md). Компилятор ресурсов вызывается при компиляции программы Visual C++; RES-файл создается из RC-файла.  
   
- Ресурс Win32 может содержать сведения о версии или точечный рисунок (значок) для упрощения идентификации приложения в проводнике. Если параметр **/win32res** не задан, компилятор будет создавать сведения о версии на основе версии сборки.  
+ Ресурс Win32 может содержать сведения о версии или точечный рисунок (значок) для упрощения идентификации приложения в проводнике. Если параметр **-win32res** не задан, компилятор будет создавать сведения о версии на основе версии сборки.  
   
- Дополнительные сведения о ссылках на файлы ресурсов .NET Framework и их присоединении см. в разделах [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) и [/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) соответственно.  
+ Дополнительные сведения о ссылках на файлы ресурсов .NET Framework и их присоединении см. в разделах [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) и [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) соответственно.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/21/2017
  Скомпилируйте `in.cs` и присоедините файл ресурсов Win32 `rf.res`, чтобы создать `in.exe`:  
   
 ```console  
-csc /win32res:rf.res in.cs  
+csc -win32res:rf.res in.cs  
 ```  
   
 ## <a name="see-also"></a>См. также  

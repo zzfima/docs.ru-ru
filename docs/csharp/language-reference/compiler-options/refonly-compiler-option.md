@@ -8,22 +8,23 @@ f1_keywords: /refonly
 helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
+- refonly compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4c745416bda56f5f1b1b4ab8267274d972a990d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 25b0f6e024e194dff641fd5069755d0ea112a50b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="refonly-c-compiler-options"></a>/refonly (параметры компилятора C#)
+# <a name="-refonly-c-compiler-options"></a>-refonly (параметры компилятора C#)
 
-**/Refonly** параметр указывает, что ссылочную сборку должны выводиться вместо реализации сборки, как основные выходные файлы. Параметр `/refonly` автоматически отключает вывод файлов PDB, так как базовые сборки не могут выполняться.
+Параметр **-refonly** указывает на то, что в качестве основных выходных данных должна быть выведена базовая сборка, а не сборка реализации. Параметр `-refonly` автоматически отключает вывод файлов PDB, так как базовые сборки не могут выполняться.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```console
-/refonly
+-refonly
 ```
 
 ## <a name="remarks"></a>Примечания
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 - Сохраняются все виртуальные методы. Сохраняются явные реализации интерфейса. Явно реализованные свойства и события сохраняются, так как их методы доступа являются виртуальными (и, следовательно, сохраняются).
 - Сохраняются все поля структуры. (Возможно, это будет изменено в версиях после C# 7.1.)
 
-Параметры `/refonly` и [`/refout`](refout-compiler-option.md) являются взаимоисключающими.
+Параметры `-refonly` и [`-refout`](refout-compiler-option.md) являются взаимоисключающими.
 
 ## <a name="see-also"></a>См. также
  [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)  

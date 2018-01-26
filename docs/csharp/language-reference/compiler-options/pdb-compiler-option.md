@@ -13,19 +13,19 @@ ms.assetid: e9d0f96a-5b75-45d6-9765-92538dd5f823
 caps.latest.revision: "8"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 108244d7de49c2ff4df1ac7202e77958743b32df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7528283765c2b6f4a9d5e84015526a95938a6281
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="pdb-c-compiler-options"></a>/pdb (параметры компилятора C#)
-Параметр компилятора **/pdb** задает имя и расположение файла отладочных символов.  
+# <a name="-pdb-c-compiler-options"></a>-pdb (параметры компилятора C#)
+Параметр компилятора **-pdb** задает имя и расположение файла отладочных символов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```console  
-/pdb:filename  
+-pdb:filename  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -33,9 +33,9 @@ ms.lasthandoff: 11/21/2017
  Имя и расположение файла отладочных символов.  
   
 ## <a name="remarks"></a>Примечания  
- Если указан параметр [/debug (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/debug-compiler-option.md), компилятор создаст в каталоге с выходным файлом (EXE или DLL) PDB-файл с тем же именем.  
+ Если указан параметр [-debug (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/debug-compiler-option.md), компилятор создаст в каталоге с выходным файлом (EXE или DLL) PDB-файл с тем же именем.  
   
- С помощью параметра **/pdb** можно задать имя PDB-файла, отличающееся от используемого по умолчанию.  
+ С помощью параметра **-pdb** можно задать имя PDB-файла, отличающееся от используемого по умолчанию.  
   
  Этот параметр компилятора нельзя задать в среде разработки Visual Studio или изменить программными средствами.  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
  Компиляция файла `t.cs` и создание файла tt.pdb:  
   
 ```console  
-csc /debug /pdb:tt t.cs  
+csc -debug -pdb:tt t.cs  
 ```  
   
 ## <a name="see-also"></a>См. также  

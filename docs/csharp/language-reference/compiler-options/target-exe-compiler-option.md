@@ -13,31 +13,31 @@ ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
 caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b66ab51b30e17ab2f34f88158c3f6095e185468d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 515359b7a8a76e20896389b308df34db03f3798d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="targetexe-c-compiler-options"></a>/target:exe (параметры компилятора C#)
-Параметр **/target:exe** предписывает компилятору создать исполняемое (EXE) консольное приложение.  
+# <a name="-targetexe-c-compiler-options"></a>-target:exe (параметры компилятора C#)
+Параметр **-target:exe** предписывает компилятору создать исполняемое (EXE) консольное приложение.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```console  
-/target:exe  
+-target:exe  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Параметр **/target:exe** действует по умолчанию. Исполняемый файл создается с расширением ЕХЕ.  
+ Параметр **-target:exe** действует по умолчанию. Исполняемый файл создается с расширением ЕХЕ.  
   
- Используйте параметр [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) для создания исполняемого файла программы Windows.  
+ Используйте параметр [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) для создания исполняемого файла программы Windows.  
   
- Если не указано иное с помощью параметра [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), имя выходного файла совпадает с именем входного файла, который содержит метод [Main](../../../csharp/programming-guide/main-and-command-args/index.md).  
+ Если не указано иное с помощью параметра [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), имя выходного файла совпадает с именем входного файла, который содержит метод [Main](../../../csharp/programming-guide/main-and-command-args/index.md).  
   
- Для создания EXE-файла используются все файлы, указанные в командной строке до следующего параметра **/out** или **/target:module**.  
+ Для создания EXE-файла используются все файлы, указанные в командной строке до следующего параметра **-out** или **-target:module**.  
   
- В файлах исходного кода, который компилируется в EXE-файл, должен содержаться один и только один метод **Main**. Если код содержит несколько классов с методом **Main**, то указать, какой класс содержит метод **Main**, можно с помощью параметра компилятора [/main](../../../csharp/language-reference/compiler-options/main-compiler-option.md).  
+ В файлах исходного кода, который компилируется в EXE-файл, должен содержаться один и только один метод **Main**. Если код содержит несколько классов с методом **Main**, то указать, какой класс содержит метод **Main**, можно с помощью параметра компилятора [-main](../../../csharp/language-reference/compiler-options/main-compiler-option.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
@@ -53,10 +53,10 @@ ms.lasthandoff: 11/21/2017
  В каждой из представленных ниже команд командной строки выполняется компиляция файла `in.cs` для создания файла `in.exe`.  
   
 ```console  
-csc /target:exe in.cs  
+csc -target:exe in.cs  
 csc in.cs  
 ```  
   
 ## <a name="see-also"></a>См. также  
- [/ Target (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+ [-target (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
  [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)

@@ -16,19 +16,19 @@ ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
 caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d4c7e4e646e6796cff6bbfbe05038ff361fa80c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 273437a4250a393274fa20ad4c02b61dce35ed34
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="define-c-compiler-options"></a>/define (параметры компилятора C#)
-Параметр **/define** определяет `name` как символ во всех файлах исходного кода программы.  
+# <a name="-define-c-compiler-options"></a>-define (параметры компилятора C#)
+Параметр **-define** определяет `name` как символ во всех файлах исходного кода программы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```console  
-/define:name[;name2]  
+-define:name[;name2]  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -36,16 +36,16 @@ ms.lasthandoff: 11/21/2017
  Имя одного или нескольких символов, которые требуется определить.  
   
 ## <a name="remarks"></a>Примечания  
- Параметр компилятора **/define** действует так же, как директива препроцессора [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md), однако, в отличие от нее, применяется ко всем файлам проекта. Символ остается определенным в файле исходного кода до тех пор, пока определение не будет отменено с помощью директивы [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) в файле исходного кода. При использовании параметра /define директива `#undef` в одном файле не действует для других файлов исходного кода в проекте.  
+ Параметр компилятора **-define** действует так же, как директива препроцессора [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md), однако, в отличие от нее, применяется ко всем файлам проекта. Символ остается определенным в файле исходного кода до тех пор, пока определение не будет отменено с помощью директивы [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) в файле исходного кода. При использовании параметра -define директива `#undef` в одном файле не действует для других файлов исходного кода в проекте.  
   
  Вы можете использовать символы, созданные этим параметром, с директивами [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) и [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) для условной компиляции исходных файлов.  
   
- **/d** является краткой формой **/define**.  
+ **-d** является краткой формой **-define**.  
   
- Вы можете определить несколько символов с помощью **/define**, разделяя их имена точкой с запятой или запятой. Пример:  
+ Вы можете определить несколько символов с помощью **-define**, разделяя их имена точкой с запятой или запятой. Пример:  
   
 ```console  
-/define:DEBUG;TUESDAY  
+-define:DEBUG;TUESDAY  
 ```  
   
  Компилятор C# сам по себе не определяет символы и макросы, которые можно использовать в исходном коде. Все такие определения задаются пользователем.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/21/2017
   
 ```csharp  
 // preprocessor_define.cs  
-// compile with: /define:xx  
+// compile with: -define:xx  
 // or uncomment the next line  
 // #define xx  
 using System;  

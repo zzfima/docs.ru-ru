@@ -13,19 +13,19 @@ ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
 caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 356502b8528e22a5b5ff9a28a3f82d5f9c0a72f9
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 2ec19bacb975732f2ae04b8cefbfaeaa518b6f15
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="win32icon-c-compiler-options"></a>/win32icon (параметры компилятора C#)
-Параметр **/win32icon** вставляет в выходной файл ICO-файл, который придает выходному файлу необходимый вид в проводнике.  
+# <a name="-win32icon-c-compiler-options"></a>-win32icon (параметры компилятора C#)
+Параметр **-win32icon** вставляет в выходной файл ICO-файл, который придает выходному файлу необходимый вид в проводнике.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```console  
-/win32icon:filename  
+-win32icon:filename  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/06/2017
 ## <a name="remarks"></a>Примечания  
  ICO-файл можно создать с помощью [компилятора ресурсов](https://msdn.microsoft.com/library/aa381042.aspx). Компилятор ресурсов вызывается при компиляции программы Visual C++; ICO-файл создается из RC-файла.  
   
- Дополнительные сведения о ссылках на файлы ресурсов .NET Framework и их присоединении см. в разделах [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) и [/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) соответственно. Дополнительные сведения об импорте RES-файла см. в разделе [/win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md).  
+ Дополнительные сведения о ссылках на файлы ресурсов .NET Framework и их присоединении см. в разделах [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) и [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) соответственно. Дополнительные сведения об импорте RES-файла см. в разделе [-win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/06/2017
  Скомпилируйте `in.cs` и присоедините ICO-файл `rf.ico`, чтобы получить файл `in.exe`:  
   
 ```console  
-csc /win32icon:rf.ico in.cs  
+csc -win32icon:rf.ico in.cs  
 ```  
   
 ## <a name="see-also"></a>См. также  

@@ -21,19 +21,19 @@ ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
 caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: fe2d1df6d88baa2957068514abe728f29cb74636
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f00db0cfd191de060b67aee4618d99740cb81248
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="filealign-c-compiler-options"></a>/filealign (параметры компилятора C#)
-Параметр **/filealign** позволяет указать размер разделов в выходном файле.  
+# <a name="-filealign-c-compiler-options"></a>-filealign (параметры компилятора C#)
+Параметр **-filealign** позволяет указать размер разделов в выходном файле.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```console  
-/filealign:number  
+-filealign:number  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
  Значение, которое задает размер разделов в выходном файле. Допустимые значения: 512, 1024, 2048, 4096 и 8192. Эти значения указаны в байтах.  
   
 ## <a name="remarks"></a>Примечания  
- Каждый раздел выравнивается по границе, кратной значению **/filealign**. Фиксированный размер по умолчанию не предусмотрен. Если значение **/filealign** не указано, среда CLR выбирает значение по умолчанию во время компиляции.  
+ Каждый раздел выравнивается по границе, кратной значению **-filealign**. Фиксированный размер по умолчанию не предусмотрен. Если значение **-filealign** не указано, среда CLR выбирает значение по умолчанию во время компиляции.  
   
  Указанный размер раздела влияет на размер выходного файла. Изменение размера раздела может применяться для программ, выполняющихся на небольших устройствах.  
   

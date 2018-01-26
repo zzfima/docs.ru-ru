@@ -4,16 +4,16 @@ description: "В рамках этого краткого руководства
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 7954475616b122f8bb96ad00d05b476b3beeb52c
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 609c8625b19025a20c1da1e767870eafbab4c4a0
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="branches-and-loops"></a>Ветви и циклы
 
@@ -254,7 +254,7 @@ for(int index = 0; index < 10; index++)
 
 Вы ознакомились с кратким руководством по ветвям и циклам.
 
-Вы можете продолжить обучение в своей среде разработки и перейти к краткому руководству по [массивам и коллекциям](arrays-and-collections.md).
+Можете продолжить обучение в своей среде разработки и перейти к краткому руководству [Интерполированные строки](interpolated-strings-local.md).
 
 Дополнительные сведения об этих понятиях см. в следующих разделах:
 

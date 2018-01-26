@@ -18,19 +18,19 @@ ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
 caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ae3d6e1ffdaaa3245a51005070b16041c16dadae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c668c79ca2c68d1a497521581857085e57c71f5c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="doc-c-compiler-options"></a>/doc (параметры компилятора C#)
-Параметр **/doc** позволяет поместить комментарии документации в XML-файл.  
+# <a name="-doc-c-compiler-options"></a>-doc (параметры компилятора C#)
+Параметр **-doc** позволяет поместить комментарии документации в XML-файл.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```console  
-/doc:file  
+-doc:file  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -48,10 +48,10 @@ ms.lasthandoff: 11/21/2017
   
  Чтобы использовать созданный XML-файл с помощью функции [IntelliSense](/visualstudio/ide/using-intellisense), имя XML-файла должно совпадать с именем сборки, а сам XML-файл должен находиться в одном каталоге со сборкой. Таким образом, если в проект Visual Studio добавляется ссылка на сборку, то XML-файл также будет найден. Дополнительные сведения см. в разделе [Создание XML-примечаний к коду](/visualstudio/ide/supplying-xml-code-comments).  
   
- Если при компиляции не используется параметр [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), `file` будет содержать теги \<assembly>\</assembly>, которые указывают имя файла, содержащего манифест сборки для выходного файла компиляции.  
+ Если при компиляции не используется параметр [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), `file` будет содержать теги \<assembly>\</assembly>, которые указывают имя файла, содержащего манифест сборки для выходного файла компиляции.  
   
 > [!NOTE]
->  Параметр /doc применяется ко всем входным файлам или (если он установлен в параметрах проекта) ко всем файлам проекта. Чтобы отключить предупреждения, связанные с комментариями документации для определенного файла или раздела кода, используйте директиву [#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md).  
+>  Параметр -doc применяется ко всем входным файлам или (если он установлен в параметрах проекта) ко всем файлам проекта. Чтобы отключить предупреждения, связанные с комментариями документации для определенного файла или раздела кода, используйте директиву [#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md).  
   
  Способы создания документации из комментариев в коде описаны в разделе [Рекомендуемые теги для комментариев документации](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).  
   

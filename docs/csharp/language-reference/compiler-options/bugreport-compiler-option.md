@@ -13,19 +13,19 @@ ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
 caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d1341383d48a28966a0873f3124cdc3567ec3f76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d2a6c27454cc8f95b9662d6ae688471849c5cee0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="bugreport-c-compiler-options"></a>/bugreport (параметры компилятора C#)
+# <a name="-bugreport-c-compiler-options"></a>-bugreport (параметры компилятора C#)
 Указывает, что отладочную информацию следует поместить в файл для последующего анализа.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```console  
-/bugreport:file  
+-bugreport:file  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/21/2017
  Имя файла, который будет содержать отчет об ошибках.  
   
 ## <a name="remarks"></a>Примечания  
- Параметр **/bugreport** указывает, что в `file` необходимо поместить следующую информацию:  
+ Параметр **-bugreport** указывает, что в `file` нужно поместить следующую информацию:  
   
 -   Копия всех файлов исходного кода, включенных в компиляцию.  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Описание предполагаемого способа разрешения проблемы, которое вам потребуется предоставить.  
   
- Если этот параметр используется с параметром **/errorreport:prompt** или **/errorreport:send**, содержимое файла будет передано в корпорацию Майкрософт.  
+ Если этот параметр используется с параметром **-errorreport:prompt** или **-errorreport:send**, содержимое файла будет передано в корпорацию Майкрософт.  
   
  Поскольку в `file` будут помещены копии всех файлов исходного кода, рекомендуется воспроизводить предполагаемую ошибку в коде с использованием максимально короткой программы.  
   
@@ -59,5 +59,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)  
- [/ ERRORREPORT (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)  
+ [-errorreport (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)  
  [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
