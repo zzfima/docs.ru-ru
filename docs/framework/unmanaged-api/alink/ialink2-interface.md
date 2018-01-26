@@ -15,16 +15,17 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cd350f7a215af4692bb2384012699812bc50528c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: de0ff924e2c9ae20b9796fbcae2df0fd858295dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ialink2-interface"></a>Интерфейс IALink2
 Дополняет [интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) путем объявления методов, которые работают на более новых интерфейсах метаданных, таких как [IMetaDataEmit2-интерфейс](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md). Кроме того IALink2 объявляет методы, которые обеспечивают дополнительную гибкость использования через интерфейсами IALink.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Метод AddFile2](../../../../docs/framework/unmanaged-api/alink/addfile2-method.md)  
   
  [Метод EmitAssembly](../../../../docs/framework/unmanaged-api/alink/emitassembly-method.md)  
@@ -48,6 +49,6 @@ ms.lasthandoff: 11/21/2017
  [Метод SetPEKind](../../../../docs/framework/unmanaged-api/alink/setpekind-method.md)  
   
 ## <a name="see-also"></a>См. также  
- [ALink-интерфейс API](../../../../docs/framework/unmanaged-api/alink/index.md)  
+ [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)  
  [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
  [Al.exe (компоновщик сборок)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

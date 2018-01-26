@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 48dab533e26d6353c29667d81ea547f4b15d280f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 8a6ae2334c879733e964014716c2b67e77f271d5
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="constructing-types-entity-sql"></a>Сборка типов (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]предоставляет три типа конструкторов: конструкторы строк, конструкторы именованных типов и конструкторы коллекций.  

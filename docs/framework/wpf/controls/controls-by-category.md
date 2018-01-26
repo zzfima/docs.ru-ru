@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6616ba0cc6a1c584834b9bef56da05c4461876b6
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 26cd5c40a68b42b16fd2b7aacfcd84fdce483ee8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="controls-by-category"></a>Категории элементов управления
 Элементы управления [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] могут быть логически сгруппированы в несколько категорий. Эти категории можно использовать для выбора соответствующего элемента управления для сценария, что поможет увидеть, какие элементы управления имеют схожие шаблоны использования или функциональные возможности.  
@@ -161,7 +162,7 @@ ms.lasthandoff: 10/22/2017
   
 -   <xref:System.Windows.Controls.StickyNoteControl>  
   
-## <a name="input"></a>Ввод  
+## <a name="input"></a>Входные данные  
  Элементы управления вводом позволяют пользователю вводить текст и другое содержимое.  
   
 -   <xref:System.Windows.Controls.TextBox>  

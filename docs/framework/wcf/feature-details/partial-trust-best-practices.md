@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: cbe782d117fee7c1cd8b8cb6fd3710e2adac77e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 817f7aeeb7adece1c375bb8b0cc455a17fb54185
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="partial-trust-best-practices"></a>Рекомендации по частичному доверию
 В этом разделе описываются рекомендации по использованию [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] в среде с частичным доверием.  

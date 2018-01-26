@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e480cfb5-697e-42c8-bed5-9264c945c4f9
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6dd8ccebd278fdc36c536c49f7f1d4262b2de8c1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: b54bac0c9ce0b473ef8d86b039ef638b79af784f
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="unsupported-functionality"></a>Неподдерживаемые функциональные возможности
 В LINQ to SQL следующие функции SQL недоступны путем преобразования существующих конструкций среды CLR и .NET Framework.  

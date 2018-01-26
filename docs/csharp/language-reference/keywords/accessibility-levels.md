@@ -1,6 +1,6 @@
 ---
 title: "Уровни доступности (Справочник по C#)"
-ms.date: 07/20/2015
+ms.date: 12/06/2017
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.topic: article
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 77124554d7a0b38414e154e024aceddbfffcfbd4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 816ee0fab3fae21bff2ffbfcbfe39d04dcf95025
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="accessibility-levels-c-reference"></a>Уровни доступности (Справочник по C#)
+
 Модификаторы доступа [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) или [private](../../../csharp/language-reference/keywords/private.md) используются для указания одного из следующих объявленных уровней доступности к членам.  
   
 |Объявленная доступность|Значение|  
@@ -27,9 +27,9 @@ ms.lasthandoff: 11/21/2017
 |`internal`|Доступ ограничен текущей сборкой.|  
 |`protected internal`|Доступ ограничен текущей сборкой или типами, которые являются производными от содержащего класса.|  
 |`private`|Доступ ограничен содержащим типом.|  
-|`private protected`|Доступ ограничен для содержащего класса или типам, производным от содержащего класса в текущей сборке.|  
+|`private protected`|Доступ ограничен содержащим классом или типами, которые являются производными от содержащего класса в текущей сборке. Доступно с версии C# 7.2. |  
   
- Только один модификатор доступа может для элемента или типа, за исключением того, при использовании `protected internal` или `private protected` сочетания.  
+ Вы можете указать для члена или типа только один модификатор доступа, за исключением случаев использования сочетаний `protected internal` или `private protected`.  
   
  Модификаторы доступа не могут быть указаны для пространств имен. Пространства имен не имеют ограничений доступа.  
   

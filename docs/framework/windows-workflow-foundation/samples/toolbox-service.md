@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 742212d0-445e-41ed-9739-9ee848ce7f1b
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 816fb3a8964e5f990c496c73624ebb8c9c1053a4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: b800f2d250a918ea2b6c49b121c4ca9040b20631
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolbox-service"></a>Служба области элементов
 Этот образец демонстрирует, как обновлять действия области элементов [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] на базе контекста рабочего процесса. Образец содержит рабочий процесс, изменяющий содержание области элементов в зависимости от выбранного пользовательского действия.  

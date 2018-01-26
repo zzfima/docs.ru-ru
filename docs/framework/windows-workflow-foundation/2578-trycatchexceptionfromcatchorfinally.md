@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4803fee6-b8d8-4937-9907-d5c5fd5299db
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 22a798dabd2253d340d7fb3dffb9f95fc66d0a9a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 340f8fa140f44e4a85f9b19259dc0a9f49b9b08e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="2578---trycatchexceptionfromcatchorfinally"></a>2578 - TryCatchExceptionFromCatchOrFinally
 ## <a name="properties"></a>Свойства  

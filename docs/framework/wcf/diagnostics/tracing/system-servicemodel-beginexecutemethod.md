@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2dd7d9ec-745e-4463-8494-7f534a598b74
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 93984426eb44d32f0439f2e3c147188c3f8a6572
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 6fbe1a44817c8864d03b909a221a58c94d51f218
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelbeginexecutemethod"></a>System.ServiceModel.BeginExecuteMethod
 System.ServiceModel.BeginExecuteMethod  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Начало выполнения метода.  
   
 ## <a name="see-also"></a>См. также  

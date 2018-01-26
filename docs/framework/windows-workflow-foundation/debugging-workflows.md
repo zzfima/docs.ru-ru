@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b23b4814-ebb1-4c51-b7a9-469f4da7a96d
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9304622ff4243f7f885de2175a66cfae1c192aeb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 44814be3a21e9c0ca9ba2b09a5309661a939bbdd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-workflows"></a>Отладка рабочих процессов
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] обеспечивает несколько возможностей отладки выполняемых рабочих процессов из среды разработки. Отладку рабочих процессов можно выполнять в конструкторе, XAML или в коде.  

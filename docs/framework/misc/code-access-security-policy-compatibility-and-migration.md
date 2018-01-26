@@ -1,12 +1,8 @@
 ---
 title: "Совместимость политики разграничения доступа кода и ее миграция"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - policy migration, compatibility
@@ -16,11 +12,12 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 29e81f5e83bc3cbf9467c7940ba6acfd0a8c99b7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9feb4553b1b9e013c5c299d867d74499a09e1434
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Совместимость политики разграничения доступа кода и ее миграция
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -150,4 +147,5 @@ ms.lasthandoff: 10/18/2017
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Практическое руководство. Выполнение не вполне безопасного кода в изолированной среде](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+ [Практическое руководство. Выполнение не вполне безопасного кода в изолированной среде](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
+ [Правила написания безопасного кода](../../standard/security/secure-coding-guidelines.md)

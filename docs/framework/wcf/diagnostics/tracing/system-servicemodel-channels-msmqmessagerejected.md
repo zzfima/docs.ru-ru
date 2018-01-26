@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9b7c10a7-2af6-44a2-8b1a-90bba0c7cf26
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ecbbd8bc0e798388f994432ea2d3f25396f7de97
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: b433e5e3c0a961098f82ad601d127290b1d6bd73
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsmsmqmessagerejected"></a>System.ServiceModel.Channels.MsmqMessageRejected
 MSMQ отклонила сообщение.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Эта трассировка указывает, что сообщение MSMQ было отклонено.  
   
  Сообщения MSMQ могут быть отклонены, если [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] (используемый либо с классом NetMsmqBinding, либо с классом MsmqIntegrationBinding) не способен их обработать. Такие сообщения считаются подозрительными. Подозрительное сообщение отклоняется, если свойству `ReceiveErrorHandling` класса NetMsmqBinding или класса MsmqIntegrationBinding присвоено значение `Reject`. Отклоненные сообщение доставляется отправителя [очереди недоставленных сообщений](http://go.microsoft.com/fwlink/?LinkID=99544).  

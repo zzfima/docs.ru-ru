@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f36351c04b3849b5364e00cec55769628d89af11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 461ec7d3cda41194317054ca2413b99f39ebda2c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="securing-messages-using-transport-security"></a>Защита сообщений с использованием средств обеспечения безопасности транспорта
 В этом разделе рассматривается механизм безопасности транспорта очереди сообщений MSMQ, который может быть использован для защиты сообщений, отправленных в очередь.  
@@ -104,9 +105,9 @@ ms.lasthandoff: 11/21/2017
 ### <a name="msmq-hash-algorithm"></a>Алгоритм хэширования MSMQ  
  Алгоритм хэширования задает алгоритм, который используется для создания цифровой подписи сообщения MSMQ. Диспетчер принимающей очереди использует тот же алгоритм для проверки подлинности сообщения MSMQ. Это свойство используется, только если для свойства <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> установлено значение <xref:System.Net.Security.ProtectionLevel.Sign> или <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
   
- Поддерживаются алгоритмы: `MD5`, `SHA1`, `SHA256` и `SHA512`. Значение по умолчанию — `SHA1`.  
+ Поддерживаются алгоритмы: `MD5`, `SHA1`, `SHA256` и `SHA512`. Значение по умолчанию — `SHA1`.  
   
 ## <a name="see-also"></a>См. также  
- [Очереди сообщений](http://msdn.microsoft.com/en-us/ff917e87-05d5-478f-9430-0f560675ece1)  
+ [Очереди сообщений](http://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)  
  [Основные понятия безопасности](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
  [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c4c17b41f9bee3ce43b7627343fec2b5a69dbba8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 7724586c33c19654c3657a5a4604a3c74f2c8756
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Практическое руководство. Проверка внешних файлов сопоставления и DBML-файлов
 После внесения изменений во внешние файлы сопоставлений и DBML-файлы их необходимо проверить на соответствие определениям схемы. Этот раздел предоставляет пользователям [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] шаги по реализации процесса проверки.  

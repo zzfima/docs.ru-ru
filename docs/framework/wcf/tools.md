@@ -13,14 +13,15 @@ helpviewer_keywords:
 - Windows Communication Foundation, tools
 ms.assetid: 399a47b4-bfea-434b-8e83-f76b5063d79d
 caps.latest.revision: "34"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9039ae27ea02b16b9b476c7c94856ea438176dad
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 6e28158076fcedf8c7d14d598b1c2ba0a25ff1f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-tools"></a>Средства Windows Communication Foundation
 Средства Microsoft [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] позволяют упростить создание и развертывание приложений [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], а также управление ими. Данный раздел содержит подробные сведения об этих средствах. Обратите внимание, что некоторые средства могут не поддерживаться.  
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/18/2017
   
  В следующей таблице представлены средства и их краткое описание.  
   
-|Средство|Описание|  
+|Средство|Описание:|  
 |----------|-----------------|  
 |[Служебная программа для метаданных ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)|Создает код модели службы из документов метаданных и документы метаданных из кода модели службы.|  
 |[Средство поиска закрытых ключей (FindPrivateKey.exe)](../../../docs/framework/wcf/find-private-key-tool-findprivatekey-exe.md)|Извлекает закрытый ключ из указанного хранилища.|  

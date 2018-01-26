@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 61a5231b-4385-4a49-b676-a8e60cda96c3
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c73ddded14bb1532933b45dab58b7ed93a570181
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 71c7fe649f4e3151b593a7f8925c7435756bd8e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelextensioncollectiondoesnotexist"></a>System.ServiceModel.ExtensionCollectionDoesNotExist
 System.ServiceModel.ExtensionCollectionDoesNotExist  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Коллекция расширений не существует.  
   
 ## <a name="see-also"></a>См. также  

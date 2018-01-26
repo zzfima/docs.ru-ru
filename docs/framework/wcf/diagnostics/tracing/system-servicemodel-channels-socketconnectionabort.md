@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5e1a7716-b23a-46c5-952a-19c53b447a71
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b4b4f0bfa7e85b9bb562fda27f8a37700e33dc46
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 94c90e0dd4982de2afc733fd4f94baa7aeda3e51
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelssocketconnectionabort"></a>System.ServiceModel.Channels.SocketConnectionAbort
 System.ServiceModel.Channels.SocketConnectionAbort  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Прервано подключение SocketConnection.  
   
 ## <a name="see-also"></a>См. также  

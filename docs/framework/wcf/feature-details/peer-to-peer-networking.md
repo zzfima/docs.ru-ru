@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ad6cb67b-fd1c-4ca1-a767-b410da2e16ca
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7e66a2f87d69ddba1676ed5e210859edfb5d8e41
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: a26f10a323b44e7954245ab90a02f62745e84e87
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="peer-to-peer-networking"></a>Одноранговая сеть
 Одноранговый канал — это многопользовательская одноранговая (P2P) технология связи в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Она предоставляет надежный и масштабируемый одноранговый канал связи на основе обмена сообщениями для разработчиков приложений. Одним из типичных примеров многопользовательского приложения, в котором могут использоваться преимущества однорангового канала, является приложение для совместной работы, такое как разговор, в котором группа людей общается друг с другом по одноранговой сети без использования серверов. Одноранговый канал поддерживает одноранговую совместную работу, распространение содержимого, балансировку нагрузки и распределенную обработку сценариев потребителя и предприятия.  
@@ -26,7 +27,7 @@ ms.lasthandoff: 10/18/2017
   
  В следующих разделах содержится информация об одноранговых сетях и использовании классов одноранговых каналов для создания сетевых приложений с поддержкой одноранговых объектов.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Сценарии одноранговых каналов](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md): описание сценариев разработки, поддерживаемых интерфейсов API одноранговых каналов, например публикации или подписки обмена сообщениями и совместной работы, распределенная обработка и игры.  
   
  [Основные понятия одноранговых каналов](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md): описываются одноранговые сетки, одноранговые узлы, безопасность одноранговых каналов и одноранговые распознаватели.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/18/2017
  [Создание приложения одноранговых каналов](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md): руководство по разработке приложений одноранговых каналов.  
   
 ## <a name="peer-channel-code-examples"></a>Примеры кода одноранговых каналов  
- [Одноранговый канал настраиваемого распознавателя одноранговых узлов](http://msdn.microsoft.com/en-us/5b75a2bb-7ff1-4a14-abe7-3debf0537d23)  
+ [Одноранговый канал настраиваемого распознавателя одноранговых узлов](http://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23)  
   
 ## <a name="peer-channel-team-blog"></a>Блог команды разработчиков одноранговых каналов  
  [Блог команды разработчиков одноранговых каналов](http://go.microsoft.com/fwlink/?LinkID=114530) (http://go.microsoft.com/fwlink/?LinkID=114530)

@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e153ff0fd89259dafedf6f8abb669090a944e91
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d56858f3785a4d4d49a0781fbf4c19397a3bb375
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolbar-styles-and-templates"></a>Стили и шаблоны элемента ToolBar
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.ToolBar> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="toolbar-parts"></a>Элементы панели инструментов  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.ToolBar> элемента управления.  
   
-|Отделение|Тип|Описание|  
+|Отделение|Тип|Описание:|  
 |-|-|-|  
 |PART_ToolBarPanel|<xref:System.Windows.Controls.Primitives.ToolBarPanel>|Объект, содержащий элементы управления на <xref:System.Windows.Controls.ToolBar>.|  
 |PART_ToolBarOverflowPanel|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Объект, содержащий элементы, находящиеся в области переполнения <xref:System.Windows.Controls.ToolBar>.|  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="toolbar-states"></a>Панель инструментов состояния  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.ToolBar> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание|  
+|Имя VisualState|Имя VisualStateGroup|Описание:|  
 |-|-|-|  
 |Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класса и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> вложенное свойство `false`.|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.|  

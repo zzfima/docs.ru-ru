@@ -15,19 +15,20 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8864e33fa281f69b72af12276ed31e5e543045ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4c58c3aa5ca1ec2d8b3bc820b2b7a500604b4b7d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ialink-interface"></a>Интерфейс IALink
 Помогает при конструировании сборок платформы .NET Framework. Помимо прочего интерфейс содержит методы, которые помогают в написании манифеста многомодульных сборок, подписывание сборок со строгими именами и создании модулей NETMODULE.  
   
-## <a name="in-this-section"></a>Содержание  
- [Метод AddFile 1](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Метод1 AddFile](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
   
- [Метод AddImport 1](../../../../docs/framework/unmanaged-api/alink/addimport-method.md)  
+ [Метод1 AddImport](../../../../docs/framework/unmanaged-api/alink/addimport-method.md)  
   
  [Метод CloseAssembly](../../../../docs/framework/unmanaged-api/alink/closeassembly-method.md)  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
  [Метод GetResolutionScope](../../../../docs/framework/unmanaged-api/alink/getresolutionscope-method.md)  
   
- [Метод GetScope 1](../../../../docs/framework/unmanaged-api/alink/getscope-method.md)  
+ [Метод1 GetScope](../../../../docs/framework/unmanaged-api/alink/getscope-method.md)  
   
  [Метод GetWin32ResBlob](../../../../docs/framework/unmanaged-api/alink/getwin32resblob-method.md)  
   
@@ -82,6 +83,6 @@ ms.lasthandoff: 11/21/2017
  [Метод SetNonAssemblyFlags](../../../../docs/framework/unmanaged-api/alink/setnonassemblyflags-method.md)  
   
 ## <a name="see-also"></a>См. также  
- [ALink-интерфейс API](../../../../docs/framework/unmanaged-api/alink/index.md)  
+ [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)  
  [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
  [Al.exe (компоновщик сборок)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

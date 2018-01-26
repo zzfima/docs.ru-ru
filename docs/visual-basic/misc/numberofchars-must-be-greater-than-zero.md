@@ -9,11 +9,11 @@ ms.assetid: 3eea4bbf-cd49-4d19-adfb-0e2adf087065
 caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6ca97d27d0ffb57b198c76efdb569d8adc8751bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2390d003797af83f71534290e5e840a309b0e9e7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="numberofchars-must-be-greater-than-zero"></a>Значение NumberOfChars должно быть больше нуля
 При использовании метода `PeekChars` объекта `TextFieldParser` необходимо указать значение `NumberOfChars` больше `0`.  
@@ -24,7 +24,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Практическое руководство. Чтение из текстовых файлов различных форматов](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
- [Метод My.Computer.FileSystem.OpenTextFieldParser](http://msdn.microsoft.com/en-us/e5869f85-c078-485f-8323-8dc716494546)  
- [Метод TextFieldParser.PeekChars](http://msdn.microsoft.com/en-us/4a180d26-d46d-4cc1-9af7-d23abe27c89b)  
+ [My.Computer.FileSystem.OpenTextFieldParser](xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A)  
+ [Метод TextFieldParser.PeekChars](http://msdn.microsoft.com/library/4a180d26-d46d-4cc1-9af7-d23abe27c89b)  
  [Анализ текстовых файлов с помощью объекта TextFieldParser](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
  [Объект TextFieldParser](../../visual-basic/language-reference/objects/textfieldparser-object.md)

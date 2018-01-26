@@ -20,17 +20,18 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 417fea4dcbb5a8d0a27f9605be19de5921aaf0ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 04dbcfb0fa16ceb4d6778ef611e926894d7840e9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-use-an-application-scope-resource-dictionary"></a>Практическое руководство. Использование словаря ресурсов области определения приложения
 В этом примере показано, как определить и использовать пользовательский словарь ресурсов области определения приложения.  
   
 ## <a name="example"></a>Пример  
- <xref:System.Windows.Application>предоставляет хранилище области приложения для общих ресурсов: <xref:System.Windows.Application.Resources%2A>. По умолчанию <xref:System.Windows.Application.Resources%2A> с помощью экземпляра инициализируется свойство <xref:System.Windows.ResourceDictionary> типа. Этот экземпляр используется при получение и задание свойств области приложения с помощью <xref:System.Windows.Application.Resources%2A>. Дополнительные сведения см. в разделе [как: получение и задание ресурсов области приложения](http://msdn.microsoft.com/en-us/39e0420c-c9fc-47dc-8956-fdd95b214095).
+ <xref:System.Windows.Application>предоставляет хранилище области приложения для общих ресурсов: <xref:System.Windows.Application.Resources%2A>. По умолчанию <xref:System.Windows.Application.Resources%2A> с помощью экземпляра инициализируется свойство <xref:System.Windows.ResourceDictionary> типа. Этот экземпляр используется при получение и задание свойств области приложения с помощью <xref:System.Windows.Application.Resources%2A>. Дополнительные сведения см. в разделе [как: получение и задание ресурсов области приложения](http://msdn.microsoft.com/library/39e0420c-c9fc-47dc-8956-fdd95b214095).
   
  Если имеется несколько ресурсов, которые можно задать с помощью <xref:System.Windows.Application.Resources%2A>, словарь пользовательских ресурсов вместо этого можно использовать для хранения этих ресурсов и установки <xref:System.Windows.Application.Resources%2A> с ним вместо него. Ниже показано, как объявить словарь пользовательских ресурсов с помощью XAML.
   

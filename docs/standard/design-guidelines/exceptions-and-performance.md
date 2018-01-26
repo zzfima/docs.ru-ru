@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9c2d7cfcb228c492d2adbe614d0ed88a3b02bb68
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9a876a818086e0d54251f53a1e8f83cc74a574ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exceptions-and-performance"></a>Исключения и производительность
 Одна из распространенных проблем, связанных с исключениями установлено, если они используются для кода, который регулярно завершается с ошибкой, производительность реализации неприемлемо. Это обоснованное предположение. При создании исключения члена, ее производительность может быть порядков медленнее. Тем не менее можно добиться оптимальной производительности, предназначенных только для исключение рекомендации, которые запрещено использовать коды ошибок. Два шаблона, описанные в этом разделе касаются способов это сделать.  

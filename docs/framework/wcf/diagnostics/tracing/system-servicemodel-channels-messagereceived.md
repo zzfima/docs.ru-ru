@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9e6942a4-051f-416c-9674-7e729b9edd33
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 944fd4c2453db45f7999282e429a88b6e37ddc5f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: d23623be9a8c360a84094e874eed93a5f8a25552
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsmessagereceived"></a>System.ServiceModel.Channels.MessageReceived
 System.ServiceModel.Channels.MessageReceived  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Получено сообщение по каналу.  
   
  Эта трассировка выдается при получении сообщения [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], если источник трассировки `System.ServiceModel` включен на уровне "Данные" или "Подробно". Эта трассировка позволяет просматривать путь корреляции сообщений в представлении графика действий.  

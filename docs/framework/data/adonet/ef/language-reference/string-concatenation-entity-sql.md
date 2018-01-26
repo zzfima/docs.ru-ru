@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 580130fa-6c7c-4f76-a47d-d22c27ccadf6
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 60661a592e23e230c32b1fd7093f5dfd8e6ed87e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 24591b54af97eaad705e4914764c7b2c21e5ed0e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="-string-concatenation-entity-sql"></a>+ (объединение строк) (Entity SQL)
 Объединяет две строки.  
@@ -46,4 +47,4 @@ expression + expression
   
 ## <a name="see-also"></a>См. также  
  [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Типы концептуальной модели (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4)
+ [Типы концептуальной модели (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)

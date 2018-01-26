@@ -11,14 +11,15 @@ ms.topic: article
 helpviewer_keywords: bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
 caps.latest.revision: "33"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 49c5a778bf44fa4e997b3c93ced4b51452a46862
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: e63bb0b44e19ec9186096a819801ea05195b5523
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Использование привязок для настройки служб и клиентов
 Привязки - это объекты, которые указывают подробные сведения о связи, требуемые для подключения к конечной точке. В частности, привязки содержат информацию о конфигурации, используемую для создания среды выполнения клиента или службы путем определения подробной информации о транспорте, форматах подключения (кодировка сообщения) и протоколах, используемых для соответствующей конечной точки или канала клиента. Для создания функционирующей службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] каждая конечная точка в службе требует привязки. В настоящем разделе описывается, что такое привязки, как они определяются и как для конечной точки указывается конкретная привязка.  

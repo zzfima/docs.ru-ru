@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7fd7a35d-3ade-44c2-b40e-2236c3ff18c5
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 472961b2a06d92ebda2b10bffc05b79d6306dc8f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 3154e68e9a08c839319238bf7fd23347cf8e86a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelportsharingportsharingduplicatedsocket"></a>System.ServiceModel.PortSharing.PortSharingDuplicatedSocket
 System.ServiceModel.PortSharing.PortSharingDuplicatedSocket  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Сокет продублирован успешно.  
   
 ## <a name="see-also"></a>См. также  

@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ccdffa07-9503-4eea-a61b-17f1564368b7
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 478dc783f5bb80283e431817433616b4bdada099
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: bb1b48bf06d024183a22027cb12dbca78f272085
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>Определение области и видимости действия
 Определение области и видимость определения действия, как и область и видимость объекта, ― это возможность других объектов или действий работать с элементами этого действия. Определение действия выполняется следующими реализациями.  

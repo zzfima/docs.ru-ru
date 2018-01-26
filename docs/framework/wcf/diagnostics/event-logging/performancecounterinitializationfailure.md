@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 85050ac6-7f7b-4dd3-8e5e-f5116d7c9906
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: bae3d18f4929a741a5bead5c3c150f50d189f3a3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: e209318054d23e81a6739fe906a335a770cd5e7d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performancecounterinitializationfailure"></a>PerformanceCounterInitializationFailure
 Идентификатор: 149  
@@ -26,9 +27,9 @@ ms.lasthandoff: 11/21/2017
   
  Категория: TransactionBridge  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Это событие указывает о сбое при инициализации счетчика производительности. В событии указаны имя счетчика, исключение, имя процесса и идентификатор процесса.  
   
 ## <a name="see-also"></a>См. также  
  [Ведение журнала событий](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Общие справочные сведения события](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+ [Общие справочные сведения о событиях](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

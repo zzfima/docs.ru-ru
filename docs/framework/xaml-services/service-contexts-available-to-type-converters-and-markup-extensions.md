@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 229601515442b5e84f6c4278b17db7ae25945a42
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4a75a5e6c6e6f627606ef5883655b6780e7519bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>Служебные контексты, доступные для расширений разметки и преобразователей типов
 Авторам типов, поддерживающих использование преобразователей типов и расширений разметки, часто необходимы контекстные сведения о расположении использования в разметке или в окружающей структуре графа объектов. Сведения могут понадобиться, чтобы правильно создать экземпляр предоставленного объекта или чтобы объект ссылался на существующие объекты в графе объектов. При использовании служб XAML .NET Framework контекст, который может потребоваться, указывается в виде набора интерфейсов служб. Код поддержки преобразователей типов или разметки расширения может запросить службу, используя контекст поставщика службы, доступный и переданный из <xref:System.Xaml.XamlObjectWriter> или связанных типов. Контекст схемы XAML доступен напрямую через одну такую службу. В этом разделе описывается порядок доступа к контексту службы из реализации преобразователя значений и указывается список доступных служб и их роли.  
@@ -99,7 +100,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="ixamltyperesolver"></a>IXamlTypeResolver  
  **Справочная документация**: <xref:System.Windows.Markup.IXamlTypeResolver>  
   
- **Определяется:** <xref:System.Windows.Markup> пространства имен, сборка System.Xaml    
+ **Определяется:** <xref:System.Windows.Markup> пространства имен, сборка System.Xaml  
   
  **Область применения:** сценарии пути загрузки и взаимодействие с контекстом схемы языка XAML  
   
@@ -110,7 +111,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="iuricontext"></a>IUriContext  
  **Справочная документация**: <xref:System.Windows.Markup.IUriContext>  
   
- **Определяется:** <xref:System.Windows.Markup> пространства имен, сборка System.Xaml    
+ **Определяется:** <xref:System.Windows.Markup> пространства имен, сборка System.Xaml  
   
  **Область применения:** обработка пути загрузки и сохранения значений элементов, которые представляют собой URI или значения `x:Uri` .  
   
@@ -121,7 +122,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="iambientprovider"></a>IAmbientProvider  
  **Справочная документация**: <xref:System.Xaml.IAmbientProvider>  
   
- **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml    
+ **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml  
   
  **Область применения:** обработки пути загрузки и задержка или оптимизация поиска типов.  
   
@@ -132,7 +133,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="ixamlschemacontextprovider"></a>IXamlSchemaContextProvider  
  **Справочная документация**: <xref:System.Xaml.IXamlSchemaContextProvider>  
   
- **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml    
+ **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml  
   
  **Область применения:** путь загрузки и любые операции, которым необходимо разрешить тип XAML в базовый тип.  
   
@@ -143,7 +144,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="irootobjectprovider"></a>IRootObjectProvider  
  **Справочная документация**: <xref:System.Xaml.IRootObjectProvider>  
   
- **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml    
+ **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml  
   
  **Область применения:** путь загрузки.  
   
@@ -154,7 +155,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="ixamlnamespaceresolver"></a>IXamlNamespaceResolver  
  **Справочная документация**: <xref:System.Xaml.IXamlNamespaceResolver>  
   
- **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml    
+ **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml  
   
  **Область применения:** путь загрузки, путь сохранения.  
   
@@ -165,7 +166,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="iprovidevaluetarget"></a>IProvideValueTarget  
  **Справочная документация**: <xref:System.Windows.Markup.IProvideValueTarget>  
   
- **Определяется:** <xref:System.Windows.Markup> пространства имен, сборка System.Xaml    
+ **Определяется:** <xref:System.Windows.Markup> пространства имен, сборка System.Xaml  
   
  **Область применения:** путь загрузки, путь сохранения.  
   
@@ -176,7 +177,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="ixamlnameresolver"></a>IXamlNameResolver  
  **Справочная документация**: <xref:System.Xaml.IXamlNameResolver>  
   
- **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml    
+ **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml  
   
  **Область применения:** определение графа пути загрузки, разрешение объектов, обозначенных `x:Name`, `x:Reference`или методы, связанные с определенной платформой.  
   
@@ -187,7 +188,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="idestinationtypeprovider"></a>IDestinationTypeProvider  
  **Справочная документация**: <xref:System.Xaml.IDestinationTypeProvider>  
   
- **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml    
+ **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml  
   
  **Область применения:** разрешение пути загрузки дополнительных сведений о типе CLR.  
   

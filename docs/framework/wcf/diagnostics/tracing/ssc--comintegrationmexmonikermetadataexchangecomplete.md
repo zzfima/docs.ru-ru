@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0fd35dff-e1ff-4902-a89b-093f0e34466f
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 32399567401d5b64884af52e35a6bf24afd3949a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: d1bf6b68f5ddb2bd2af535e751f1a7d6fc4ee06f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationmexmonikermetadataexchangecomplete"></a>System.ServiceModel.ComIntegration.ComIntegrationMexMonikerMetadataExchangeComplete
 System.ServiceModel.ComIntegration.ComIntegrationMexMonikerMetadataExchangeComplete  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Моникер службы завершил извлечение метаданных  
   
 ## <a name="see-also"></a>См. также  

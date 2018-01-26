@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 75191aa28be76da549d38403c4a6f019c6f54bc2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 098b31e479322d9de3a299f06652e819a5388c42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-with-metadata"></a>Вопросы безопасности при использовании метаданных
 При использовании в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] функций метаданных следует помнить об обеспечении безопасности публикации, извлечения и использования метаданных служб.  
@@ -49,5 +50,5 @@ ms.lasthandoff: 11/21/2017
  Файл конфигурации приложения службы может определять, каким образом будут публиковаться метаданные и будут ли они публиковаться в принципе. Рекомендуется защищать файлы конфигурации приложений с помощью списков управления доступом, чтобы злоумышленники не могли изменить параметры в этих файлах.  
   
 ## <a name="see-also"></a>См. также  
- [Как: защита конечных точек метаданных](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)  
+ [Практическое руководство. Защита конечных точек метаданных](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)  
  [Безопасность](../../../../docs/framework/wcf/feature-details/security.md)

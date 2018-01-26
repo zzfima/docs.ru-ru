@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d985edf0-e648-439f-8f03-910eb386dad7
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f3a856542421d62b039c2ee75b6f64e8933f649b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 507cdb561e9280245d0333d722d6492527f42710
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelactivationmessagequeueregisterfailed"></a>System.ServiceModel.Activation.MessageQueueRegisterFailed
 System.ServiceModel.Activation.MessageQueueRegisterFailed  

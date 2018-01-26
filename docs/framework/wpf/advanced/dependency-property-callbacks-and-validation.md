@@ -22,11 +22,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0d1b62c7f49653627c626bce2583b2799df931dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 15ba7f3315b2ce71357bd4735e2dfca1b3de616d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>Проверка и обратные вызовы свойства зависимостей
 В этом разделе описывается создание свойства зависимостей с помощью альтернативных пользовательских реализаций функций, связанных со свойствами, таких как определение проверки, обратные вызовы, которые совершаются при каждом изменении эффективного значения свойства, и переопределение возможных внешних влияний на определение значения. В этом разделе также рассматриваются сценарии, в которых подходит расширение стандартных правил для системы свойств с помощью этих методов.  

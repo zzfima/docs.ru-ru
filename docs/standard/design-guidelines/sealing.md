@@ -18,11 +18,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8caa253a3f17c58f542317de579c4f7832c4efac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 39bb29d36b6d81464b1213ebc0bf7aee6ceb5713
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="sealing"></a>Запечатывание
 Одной из функций платформ объектно ориентированного — что разработчики могут расширять и настраивать их способами, непредвиденных конструкторами framework. Это возможности и опасность расширяемой архитектуры. При проектировании вашей платформы это, поэтому очень важно тщательно разработке для расширяемости его при необходимости и ограничить расширяемости, когда это опасно.  
@@ -57,5 +60,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  
- [Разработка для расширяемости](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+ [Разработка с обеспечением расширяемости](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
  [Незапечатанные классы](../../../docs/standard/design-guidelines/unsealed-classes.md)

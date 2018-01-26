@@ -12,14 +12,15 @@ dev_langs:
 - vb
 ms.assetid: 786a12c2-d530-49f4-9c59-5c973e15a11d
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: abd80187d6dac9f94aa49d9cd9b9eb94671a7c66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 270b3755901e3c5bc95352b5f3d07a338e73a90e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enlisting-resources-as-participants-in-a-transaction"></a>Зачисление ресурсов в транзакцию в качестве участников
 Каждым участвующим в транзакции ресурсом управляет диспетчер ресурсов, действия которого координируются диспетчером транзакций. Координация осуществляется посредством уведомлений, которые передаются подписчикам, зачисленным в транзакцию с помощью диспетчера транзакций.  
@@ -58,5 +59,5 @@ ms.lasthandoff: 11/21/2017
  Класс <xref:System.Transactions.Transaction> также предоставляет метод <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> для PSPE-зачисления. Это позволяет диспетчеру устойчивых ресурсов "владеть" и управлять транзакцией, которая затем при необходимости может быть повышена до транзакции MSDTC. Дополнительные сведения см. в разделе [Оптимизация с помощью одного двухфазной фиксации и однофазной](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
 ## <a name="see-also"></a>См. также  
- [С помощью одного двухфазной фиксации и однофазной оптимизации](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
- [Фиксация транзакции в однофазной и двухфазной](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)
+ [Оптимизация производительности с помощью механизмов уведомления об однофазной фиксации и повышаемого однофазного присоединения](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
+ [Однофазная и многофазная фиксация транзакции](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)

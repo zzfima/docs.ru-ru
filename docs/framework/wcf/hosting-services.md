@@ -11,14 +11,15 @@ ms.topic: article
 helpviewer_keywords: hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
 caps.latest.revision: "31"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c0d3cd2f53b81ae6114baa3c7eedd899126ed579
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: b23dac1db5252d3ce2bd60e4f8525dd89d9127b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-services"></a>Размещение служб
 Для активации службы ее необходимо разместить в среде выполнения, которая создает эту службу и управляет ее контекстом и временем существования. Службы[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] предназначены для выполнения в любом процессе Windows, который поддерживает управляемый код.  
@@ -76,5 +77,5 @@ ms.lasthandoff: 11/21/2017
  [Реализация контрактов служб](../../../docs/framework/wcf/implementing-service-contracts.md)  
  [Практическое руководство. Размещение службы WCF в IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
  [Практическое руководство. Размещение службы WCF в WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
- [Как: размещение службы WCF в управляемой службе Windows](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
+ [Практическое руководство. Размещение службы WCF в управляемой службе Windows](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
  [Практическое руководство. Размещение службы WCF в управляемом приложении](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)

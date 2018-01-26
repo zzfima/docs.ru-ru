@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6f16f32128c7223fa600802ae593d36286847dc8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: ee79900b52ae0fa58e8fb9a5cbbf50f5a882c295
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-client-behaviors"></a>Настройка поведений клиентов
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] настраивает поведение двумя способами: путем ссылки на конфигурации поведения (которые определяются в разделе `<behavior>` файла конфигурации приложения) или программным образом в вызывающем приложении. В этом разделе описываются оба подхода.  

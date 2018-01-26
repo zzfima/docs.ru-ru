@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1f6598b1aff20a8b3471ca1ccb59bb5c6576efdc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 71beb254bf258da97207f14afca73cd68c6927ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Доступ к службе из веб-браузера (краткое руководство по службе данных WCF)
 В этой задаче необходимо запустить [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] из [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] и отключить чтение потока в веб-браузере. Вам будет затем извлечем документ определения службы а также доступ к ресурсам службы данных, отправляя запросы HTTP GET через веб-браузер к предоставляемым ресурсам.  
@@ -78,10 +79,10 @@ ms.lasthandoff: 10/18/2017
   
      При этом будут отфильтрованы заказы, принадлежащие конкретному клиенту `ALFKI`, в результате чего будет возвращен только конкретный заказ на основе переданного значения `OrderID`.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  Итак, мы успешно обратились к службам [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] из веб-браузера, отправляя через браузер запросы HTTP GET к указанным ресурсам. Веб-браузер предоставляет простой способ проведения экспериментов с синтаксисом адресации запросов и просмотра результатов. Однако к производственной службе данных таким способом обычно не обращаются. Как правило, взаимодействие приложений со службой данных осуществляется через программный код или языки сценариев. Далее мы создадим клиентское приложение, которое использует клиентские библиотеки для обращения к ресурсам службы данных, как если бы они являлись объектами CLR.  
   
  [Создание клиентского приложения .NET Framework](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)  
   
 ## <a name="see-also"></a>См. также  
- [Доступ к ресурсам службы данных](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
+ [Доступ к ресурсам служб данных](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)

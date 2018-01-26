@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 228a6faca43ed121de59ed35c5a186294b41d147
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 6b387e100ff881c5394b6a77716a733b3928eae9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Перенос из .NET на платформу WCF
 В этой статье описан процесс переноса приложения с переходом от использования удаленного взаимодействия .NET к использованию Windows Communication Foundation (WCF). В ней сравниваются сходные принципы работы с этими продуктами и описывается выполнение некоторых наиболее распространенных сценариев удаленного взаимодействия в WCF.  
@@ -155,7 +156,7 @@ Console.WriteLine(String.Format("  Customer {0} {1} received.",
   
  Это пример программирования на уровне канала, так как он обладает максимальным сходством с примером удаленного взаимодействия. Также доступен **добавить ссылку на службу** подход в Visual Studio, который создает код для упрощения программирования клиента. Дополнительные сведения см. в следующих разделах:  
   
--   [Программирование клиента на уровне канала](./extending/client-channel-level-programming.md)  
+-   [Программирование клиентов на уровне канала](./extending/client-channel-level-programming.md)  
   
 -   [Как: Добавление, обновление или удаление ссылки на службу](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
   

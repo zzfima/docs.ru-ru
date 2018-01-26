@@ -19,16 +19,17 @@ caps.latest.revision: "82"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a8935616159d2ea55e5616b6d7f4ebc4ff2c61e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2952c1c59e5a60cbc51d505d3a53e063ec3351d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="advanced-windows-presentation-foundation"></a>Дополнительные сведения (Windows Presentation Foundation)
 В этом разделе описываются некоторые из дополнительных областей в WPF.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Архитектура WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
  [Базовые элементы](../../../../docs/framework/wpf/advanced/base-elements.md)  
  [Дерево элементов и сериализация](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  

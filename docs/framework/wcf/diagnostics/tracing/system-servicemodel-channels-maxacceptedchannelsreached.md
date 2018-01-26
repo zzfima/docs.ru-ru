@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 13d15194-a04f-4a5a-9d85-23ad350fdc7e
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b08764f0200d09fcf26793b98ca0173b599682e3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: d3dd372949528f9ab81bc37d9bd592b299c6804d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsmaxacceptedchannelsreached"></a>System.ServiceModel.Channels.MaxAcceptedChannelsReached
 System.ServiceModel.Channels.MaxAcceptedChannelsReached  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Достигнуто максимальное число каналов входящих сеансов.  
   
 ## <a name="see-also"></a>См. также  

@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
-ms.openlocfilehash: 6e614986dc91310dea40971987969e7433cb79e8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 599f46253a29db5dfd21d0d44ecf67654b6d2eb3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Пакеты, метапакеты и платформы
 
@@ -129,10 +130,8 @@ ms.lasthandoff: 10/18/2017
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard1.3</TargetFramework>
+    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <NetStandardImplicitPackageVersion Include="NetStandardLibrary" Version="1.6.0" />
-  </ItemGroup>
 </Project>
 ```
 

@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 98124b7b9efb2c92ebee6b6e99f73edc6cf173a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 092024f3f4e6fc1bc923ae2a299c5d9c21f1b1b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clrdebuggingversion-structure"></a>Структура CLR_DEBUGGING_VERSION
 Определяет версию продукта среды CLR, предназначенную для отладки.  
@@ -41,9 +42,9 @@ WORD wRevision;
 }  CLR_DEBUGGING_VERSION;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`wStructVersion`|Номер версии структуры.|  
 |`wMajor`|Основной номер версии.|  

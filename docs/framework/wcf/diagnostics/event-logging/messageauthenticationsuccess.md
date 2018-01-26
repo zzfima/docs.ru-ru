@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 75974896-9d26-4586-92fb-578f6c71f0e1
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ea2092fcada369c359154c55af558d7eb062c714
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 0a56e9416d3e43b6789d56eb87a0bccffbd6fcb5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="messageauthenticationsuccess"></a>MessageAuthenticationSuccess
 Идентификатор: 169  
@@ -26,9 +27,9 @@ ms.lasthandoff: 11/21/2017
   
  Категория: SecurityAudit  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Это событие показывает, что проверка подлинности сообщения выполнена успешно. В событии указаны служба, операция, учетная запись клиента и идентификатор действия.  
   
 ## <a name="see-also"></a>См. также  
  [Ведение журнала событий](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Общие справочные сведения события](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+ [Общие справочные сведения о событиях](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

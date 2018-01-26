@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ce3eb2c5f154cec9e6a4d3b7c2a256f4678eea34
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 75b594d01c8a9297f3383c2648b3853c2c024b9b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="client-configuration"></a>Конфигурация клиента
-Конфигурацию клиента [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] можно использовать для задания адреса, привязки, поведения и контракта - основополагающих свойств конечной точки клиента, которая используется клиентом для подключения к конечным точкам службы. [ \<Клиента >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) элемент имеет [ \<endpoint >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент, атрибуты которого используются для настройки основополагающих свойств конечной точки. Эти атрибуты обсуждаются в подразделе "Настройка конечных точек" данного раздела.  
+Конфигурацию клиента [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] можно использовать для задания адреса, привязки, поведения и контракта - основополагающих свойств конечной точки клиента, которая используется клиентом для подключения к конечным точкам службы. [ \<Клиента >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) элемент имеет [ \<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент, атрибуты которого используются для настройки основополагающих свойств конечной точки. Эти атрибуты обсуждаются в подразделе "Настройка конечных точек" данного раздела.  
   
- [ \<Endpoint >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент также содержит [ \<метаданных >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) элемент, используемый для задания параметров импорта и экспорта метаданных, [ \<заголовки >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) элемент, содержащий коллекцию заголовков настраиваемый адрес, и [ \<удостоверение >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) элемент, который позволяет выполнять проверку подлинности конечной точки другими конечными точками обмен сообщениями с ним. [ \<Заголовки >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) и [ \<удостоверение >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) элементы являются частью <xref:System.ServiceModel.EndpointAddress> и обсуждаются в [адреса](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md) раздела. Ссылки на разделы, в которых рассматривается использование расширений метаданных, приведены в подразделе "Настройка метаданных" данного раздела.  
+ [ \<Endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент также содержит [ \<метаданных >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) элемент, используемый для задания параметров импорта и экспорта метаданных, [ \<заголовки >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) элемент, содержащий коллекцию заголовков настраиваемый адрес, и [ \<удостоверение >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) элемент, который позволяет выполнять проверку подлинности конечной точки другими конечными точками обмен сообщениями с ним. [ \<Заголовки >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) и [ \<удостоверение >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) элементы являются частью <xref:System.ServiceModel.EndpointAddress> и обсуждаются в [адреса](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md) раздела. Ссылки на разделы, в которых рассматривается использование расширений метаданных, приведены в подразделе "Настройка метаданных" данного раздела.  
   
 ## <a name="configuring-endpoints"></a>Настройка конечных точек  
  Конфигурация клиента позволяет клиенту задавать одну или несколько конечных точек, каждая со своим именем, адресом и контрактом, ссылающихся на [ \<привязки >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) и [ \< поведения >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) элементов в конфигурации клиента, который будет использоваться для настройки этих конечных точек. Файл конфигурации клиента должен называться "App.config", так как это имя ожидается средой выполнения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. В следующем примере показан файл конфигурации клиента.  
@@ -104,5 +105,5 @@ ms.lasthandoff: 11/21/2017
  [ \<Метаданных >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) элемент используется для задания параметров, используемых для регистрации метаданных расширений импорта. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]расширение системы метаданных см. в разделе[расширение системы метаданных](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
 ## <a name="see-also"></a>См. также  
- [Конечные точки: Адреса, привязки и контракты](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Конечные точки: адреса, привязки и контракты](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
  [Настройка поведения клиентов](../../../../docs/framework/wcf/configuring-client-behaviors.md)

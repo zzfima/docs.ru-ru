@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e7d24213-471d-4807-b85e-570375df89b5
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 098f9a09ba4fe114a3ad63f6d98efcd6bb090ac4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: a132968c69320cdae1824bebdf51b764202084b1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="ampamp-and-entity-sql"></a>&amp;&amp;(И) (Язык entity SQL)
 Возвращает значение `true` если оба выражения `true`; в противном случае возвращает значение `false` или `NULL`.  
@@ -41,8 +42,8 @@ boolean_expression && boolean_expression
   
 ||`TRUE`|`FALSE`|`NULL`|  
 |-|------------|-------------|------------|  
-|`TRUE`|true|false|NULL|  
-|`FALSE`|false|false|false|  
+|`TRUE`|TRUE|FALSE|NULL|  
+|`FALSE`|FALSE|FALSE|FALSE|  
 |`NULL`|NULL|false|NULL|  
   
 ## <a name="example"></a>Пример  

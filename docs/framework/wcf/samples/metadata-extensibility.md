@@ -10,20 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f92fcc76-0806-4c84-9d63-7aae0d3899de
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 36eb5940fa1d869948a94fcbbb1945aea1c534ac
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: eb1ee59e2feca3344aabc4be81ae1d5637b3d545
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-extensibility"></a>Расширяемость метаданных
 В этом разделе содержатся образцы, демонстрирующие пользовательские метаданные.  
   
-## <a name="in-this-section"></a>Содержание  
- [Пользовательские защищенной конечной точки метаданных](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Пользовательская конечная точка защищенных метаданных](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)  
  Демонстрирует реализацию службы, конечную точку метаданных, безопасности, использующий одну из привязок, не принадлежащий метаданным exchange и настройте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) или клиенты для извлечения метаданных из такой конечной точки метаданных.  
   
  [Пользовательская публикация WSDL](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  

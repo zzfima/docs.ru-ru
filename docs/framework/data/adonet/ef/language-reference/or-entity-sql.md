@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8e649648-eb9a-4380-9d74-36e62260628c
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ba0c376bc0b57013fe4701a1f9e84fdd9a5ed62a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: b44934aa0db73f872f0ab27a4c36c5c615855de1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="-or-entity-sql"></a>|| (ИЛИ) (Entity SQL)
 Объединяет два выражения типа `Boolean` .  
@@ -46,9 +47,9 @@ boolean_expression || boolean_expression
   
 ||`TRUE`|`FALSE`|`NULL`|  
 |-|------------|-------------|------------|  
-|`TRUE`|true|true|true|  
-|`FALSE`|true|false|NULL|  
-|`NULL`|true|NULL|NULL|  
+|`TRUE`|true|TRUE|TRUE|  
+|`FALSE`|TRUE|FALSE|NULL|  
+|`NULL`|TRUE|NULL|NULL|  
   
 ## <a name="example"></a>Пример  
  Следующий запрос Entity SQL использует оператор OR, чтобы объединить два выражения типа `Boolean` . Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  

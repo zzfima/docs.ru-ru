@@ -24,16 +24,17 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: daf09f94b4c0854365274773f8c426cc07e8c6dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f90cbac0e7f78d8965a75df281c0db6b213d9e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>Разработка клиентских приложений с использованием .NET Framework
 Существует несколько способов разработки приложений Windows с помощью платформы .NET Framework, которые будут выполняться на пользовательских компьютерах и устройствах. В этом разделе поясняются способы создания приложений Windows с помощью Windows Presentation Foundation (WPF) и Windows Forms. Однако с помощью .NET Framework вы можете создавать и веб-приложения, а также клиентские приложения для компьютеров и устройств, которые можно предоставлять пользователям через Магазин Windows и Магазин Windows Phone.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Windows Presentation Foundation](../../docs/framework/wpf/index.md)  
  Сведения о разработке приложений с помощью WPF.  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
  [.NET API для Windows Phone Silverlight](http://msdn.microsoft.com/library/windows/apps/xaml/jj207211\(v=vs.105\).aspx)  
  Список API .NET Framework, которые можно использовать для создания приложений с помощью Windows Phone Silverlight  
   
- [Разработка для нескольких платформ с помощью .NET Framework](../../docs/standard/cross-platform/index.md)  
+ [Разработка для нескольких платформ](../../docs/standard/cross-platform/index.md)  
  Описание методов, которыми можно использовать .NET Framework для разных типов клиентских приложений.  
   
  [Начало работы с веб-страницами ASP.NET](http://www.asp.net/get-started/websites)  
@@ -63,5 +64,5 @@ ms.lasthandoff: 11/21/2017
  [Переносимая библиотека классов](../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)  
  [Обзор набора средств Visual Studio для Unity](../../docs/framework/get-started/overview.md)  
  [Руководство по разработке](../../docs/framework/development-guide.md)  
- [Как: создание классического приложения Windows](http://msdn.microsoft.com/library/47021403-eaca-4c34-946a-a26c42a64148)  
+ [Практическое руководство. Создание классического приложения Windows](http://msdn.microsoft.com/library/47021403-eaca-4c34-946a-a26c42a64148)  
  [Приложения служб Windows](../../docs/framework/windows-services/index.md)

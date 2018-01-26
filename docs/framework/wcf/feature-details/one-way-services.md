@@ -14,14 +14,15 @@ helpviewer_keywords:
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 53c5b42e1bc247c5c0e087a7f63a3ecf550af77d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 0d023d3623777a93cf72715410aed87fe8a63ee5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="one-way-services"></a>Односторонние службы
 По умолчанию операция службы выполняется по шаблону "запрос-ответ". В соответствии с шаблоном "запрос-ответ" клиент ждет ответного сообщения, даже если операция службы представлена в коде в виде метода `void`. В случае односторонних операций передается только одно сообщение. Получатель не отправляет ответное сообщение, а отправитель не ожидает получения этого сообщения.  
@@ -65,4 +66,4 @@ public interface IOneWayCalculator
  Вместо этого рекомендуется изучить различные элементы управления службы и клиента и испытать различные сценарии работы приложения, чтобы определить наилучшую конфигурацию на каждой из сторон. Например, если использование сеансов блокирует обработку сообщений на стороне службы, можно установить для свойства <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> значение <xref:System.ServiceModel.InstanceContextMode.PerCall>, чтобы каждое сообщение обрабатывалось отдельным экземпляром службы, а также установить свойство <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> равным <xref:System.ServiceModel.ConcurrencyMode.Multiple>, чтобы одновременно распределять сообщения могло более одного потока. Еще одно возможное решение - увеличить квоты чтения привязок службы и клиента.  
   
 ## <a name="see-also"></a>См. также  
- [Односторонний](../../../../docs/framework/wcf/samples/one-way.md)
+ [Одностороннее взаимодействие](../../../../docs/framework/wcf/samples/one-way.md)

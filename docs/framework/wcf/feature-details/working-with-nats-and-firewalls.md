@@ -13,14 +13,15 @@ helpviewer_keywords:
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a8fd5058179d9e7974e725d69bb2bf0740ab7f00
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: cae680c8958c86dc57a2aff3c2d567e1fdac981d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-nats-and-firewalls"></a>Работа со средствами NAT и брандмауэрами
 Зачастую в сетевом подключении между клиентом и сервером отсутствует прямой и открытый путь для взаимодействия. Пакеты фильтруются, перенаправляются, анализируются и преобразуются как на конечных, так и на промежуточных компьютерах в сети. Типичными примерами промежуточных приложений, участвующих в сетевом взаимодействии, служат средства преобразования сетевых адресов (NAT) и брандмауэры.  

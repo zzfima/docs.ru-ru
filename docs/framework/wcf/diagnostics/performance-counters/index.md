@@ -11,14 +11,15 @@ ms.topic: article
 helpviewer_keywords: performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
 caps.latest.revision: "37"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2136b4f9ab97f7ed0e4c31e6ffc26f788546419b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: be4ffac8444f6365dacb2b20db6abbb6792c2239
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-performance-counters"></a>Счетчики производительности WCF
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] содержит большой набор счетчиков производительности, с помощью которых можно измерять производительность приложения.  
@@ -83,7 +84,7 @@ config.Save();
 ## <a name="types-of-performance-counters"></a>Типы счетчиков производительности  
  Счетчики производительности группируются по трем различным уровням: служба, конечная точка и операция.  
   
- Можно использовать инструментарий WMI, чтобы получить имя экземпляра счетчика производительности. Например:  
+ Можно использовать инструментарий WMI, чтобы получить имя экземпляра счетчика производительности. Например, примененная к объекту директива  
   
 -   Имя экземпляра счетчика службы можно получить с помощью WMI [службы](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) свойство экземпляра «CounterInstanceName».  
   

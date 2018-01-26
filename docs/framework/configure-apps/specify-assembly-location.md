@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f747d921e9c131edaa8a1749c5adc5eae14623c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4cfe8752ce3a562e1e4b576c63b56ff56255ff62
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specifying-an-assembly39s-location"></a>Указание сборки &#39; расположение s
 Указание расположения сборки двумя способами.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/21/2017
   
 -   С помощью [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) элемента.  
   
- Можно также использовать [средства настройки .NET Framework (Mscorcfg.msc)](http://msdn.microsoft.com/en-us/a7106c52-68da-490e-b129-971b2c743764) чтобы задавать расположение сборки или расположения для поиск сборок CLR.  
+ Можно также использовать [средства настройки .NET Framework (Mscorcfg.msc)](http://msdn.microsoft.com/library/a7106c52-68da-490e-b129-971b2c743764) чтобы задавать расположение сборки или расположения для поиск сборок CLR.  
   
 ## <a name="using-the-codebase-element"></a>С помощью \<codeBase > элемент  
  Можно использовать  **\<codeBase >** элемент только в машине конфигурации или файле политики издателя, также предоставляют перенаправление версии сборки. Среда выполнения определяет, какие версии сборки для использования, применяется параметр базы кода из файла, который определяет версию. Если база кода не указана, среда выполнения проверяет наличие сборки обычным способом. Дополнительные сведения см. в разделе [как среда выполнения находит сборки](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
@@ -79,4 +80,4 @@ ms.lasthandoff: 11/21/2017
  [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Настройка приложений .NET Framework](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+ [Настройка приложений .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

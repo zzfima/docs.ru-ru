@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b770e042-0555-4668-9b41-e20da092c16a
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 41def429e248fb9b9489138a9a4f45d29bc5a1aa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 2b9a4388f9ee86777aaea45f7ae24ddeffc1d0f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelspnrpregisteredaddresses"></a>System.ServiceModel.Channels.PnrpRegisteredAddresses
 Распознаватель Pnrp зарегистрировал адреса локального узла.  

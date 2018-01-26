@@ -9,11 +9,12 @@ ms.topic: get-started-article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
-ms.openlocfilehash: b172e5fc4fcf9dd5c1e6f268f3c046e77592ebd3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 5a8f1fca7623763d43b977d0cc44396de249c62e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>Начало работы с .NET Core в Mac OS
 
@@ -80,7 +81,7 @@ dotnet add library package Newtonsoft.Json
 </ItemGroup>
 ```
 
-Выполнение [ `dotnet restore` ](../tools/dotnet-restore.md), ([см. Примечание](#dotnet-restore-note)) который восстанавливает зависимости и создает *obj* папки *библиотеки* с тремя в нем файлов, включая *project.assets.json* файла:
+Выполните команду [`dotnet restore`](../tools/dotnet-restore.md) ([см. примечание](#dotnet-restore-note)), которая восстанавливает зависимости и создает подкаталог *obj* в каталоге *library*. Этот подкаталог содержит три файла, в том числе файл *project.assets.json*:
 
 ```console
 dotnet restore
@@ -194,7 +195,7 @@ dotnet sln add app/app.csproj
 dotnet add app/app.csproj reference library/library.csproj
 ```
 
-Запустите `dotnet restore` ([см. Примечание](#dotnet-restore-note)) для восстановления зависимостей из трех проектов в решении. Откройте файл *Program.cs* и замените содержимое метода `Main` следующей строкой:
+Выполните команду `dotnet restore` ([см. примечание](#dotnet-restore-note)), чтобы восстановить зависимости для трех проектов в решении. Откройте файл *Program.cs* и замените содержимое метода `Main` следующей строкой:
 
 ```csharp
 WriteLine($"The answer is {new Thing().Get(19, 23)}");

@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bef8cfc13727913e9311b5ce847190fe5544dc18
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6c095afd0513360876e5330a130a4d938e30f8db
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>Метод ICorDebugStackWalk::GetFrame
 Получает текущий кадр [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) объекта.  
@@ -48,7 +49,7 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
 |S_OK|Среда выполнения успешно возвращен текущего кадра.|  
 |E_FAIL|Текущий кадр не возвращен.|  
 |S_FALSE|Текущий кадр является собственным кадром стека.|  
-|E_INVALIDARG|Параметр `pFrame` имеет значение NULL.|  
+|E_INVALIDARG|Параметр `pFrame` имеет значение null.|  
 |CORDBG_E_PAST_END_OF_STACK|Указатель кадра уже находится в конце стека; Таким образом может осуществляться без дополнительных кадров.|  
   
 ## <a name="exceptions"></a>Исключения  
@@ -66,6 +67,6 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
  **Версии платформы .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [ICorDebugStackWalk-интерфейс](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)  
+ [Интерфейс ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)  
  [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

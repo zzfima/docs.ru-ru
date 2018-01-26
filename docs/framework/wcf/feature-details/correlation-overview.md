@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3d4320c088c66abdc2c4ff226eb99d66fcbd3b38
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: a29f761b4a3718293c1786d23d425265603f8c84
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="correlation-overview"></a>Общие сведения о корреляции
 Корреляция - это механизм связи сообщений службы рабочего процесса друг с другом или с состоянием экземпляра приложения, таким как ответ на начальный запрос, или с определенным идентификатором запроса к сохраненному состоянию рабочего процесса обработки запросов. В данном разделе приведены общие сведения о корреляции. В других подразделах этого раздела содержатся дополнительные сведения о каждом из видов корреляции.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="protocol-based-correlation"></a>Корреляция, основанная на протоколе  
  Основанная на протоколе корреляция использует транспортный механизм для связи сообщений друг с другом и с соответствующим экземпляром. Некоторые предоставляемые системой корреляции на основе протокола включают корреляции типа «запрос-ответ» и корреляции на основе контекста. Корреляции «запрос-ответ» используются для сопоставления пары действий обмена сообщениями с операцией двунаправленной формы, например действие <xref:System.ServiceModel.Activities.Send> может составлять пару с действием <xref:System.ServiceModel.Activities.ReceiveReply>, а действие <xref:System.ServiceModel.Activities.Receive> может составлять пару с действием <xref:System.ServiceModel.Activities.SendReply>. Конструктор рабочих процессов среды [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] также предоставляет набор шаблонов действия, позволяющих быстро реализовать эту схему. Корреляция на основе контекста основана на механизме обмена контекстом, описанной в [спецификации протокола обмена контекстом .NET](http://go.microsoft.com/fwlink/?LinkID=166059). Для использования корреляции на основе контекста в конечной точке необходимо использовать привязку на основе контекста, например <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> или <xref:System.ServiceModel.NetTcpContextBinding>.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]протокол корреляции см. в разделе [обмен контекстом](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md), [устойчивый дуплекс](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md), и [запрос-ответ](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]с помощью [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] шаблонов действия конструктора рабочих процессов, см. раздел [действий обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-activities.md). Пример кода, в разделе [устойчивый дуплекс &#91; Образцы WF &#93; ](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md) и [NetContextExchangeCorrelation](http://msdn.microsoft.com/en-us/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) образцов.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]протокол корреляции см. в разделе [обмен контекстом](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md), [устойчивый дуплекс](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md), и [запрос-ответ](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]с помощью [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] шаблонов действия конструктора рабочих процессов, см. раздел [действий обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-activities.md). Пример кода, в разделе [устойчивый дуплекс &#91; Образцы WF &#93; ](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md) и [NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) образцов.  
   
 ## <a name="content-based-correlation"></a>Корреляция по содержимому  
  При корреляции, основанной на содержимом, для сопоставления сообщения с конкретным экземпляром используется часть содержащихся в сообщении данных. В отличие от корреляции на основе протокола, при использовании корреляции на основе содержимого разработчик приложения должен явно указать, где в каждом из сопоставляемых сообщений находится такая часть данных. В действиях, использующих корреляцию на основе содержимого, эти данные сообщения задаются с помощью набора <xref:System.ServiceModel.MessageQuerySet>. Корреляция на основе содержимого полезна при взаимодействии со службами, в которых не применяется ни одна из контекстных привязок, таких как <xref:System.ServiceModel.BasicHttpContextBinding>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]корреляции на основе содержимого см. в разделе [на основе содержимого](../../../../docs/framework/wcf/feature-details/content-based-correlation.md). Пример кода, в разделе [корреляция по содержимому](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md) и [коррелированных калькулятора](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) образцы.  
@@ -39,4 +40,4 @@ ms.lasthandoff: 11/21/2017
  [Корреляция по содержимому](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
  [Калькулятор с корреляцией](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)  
  [Сохраняемый дуплекс &#91; Образцы WF &#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)  
- [NetContextExchangeCorrelation](http://msdn.microsoft.com/en-us/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)
+ [NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)

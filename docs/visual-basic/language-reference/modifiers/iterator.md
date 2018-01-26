@@ -11,11 +11,11 @@ ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 503d586c0515b4cb53f8ec5656e5fe765cc094a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fd6c0b1fa422dc4ab659d8c59472e5c098c729bc
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iterator-visual-basic"></a>Итератор (Visual Basic)
 Указывает, что функция или `Get` метод доступа является итератором.  
@@ -33,9 +33,7 @@ ms.lasthandoff: 11/21/2017
   
  Итератор не может использоваться в событии, конструкторе экземпляра, статическом конструкторе или статическом деструкторе.  
   
- Итератор может быть анонимной функции. Дополнительные сведения см. в разделе [Итераторы](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
-  
- Дополнительные сведения об итераторах см. в разделе [Итераторы](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Итератор может быть анонимной функции. Дополнительные сведения см. в разделе [Итераторы](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="usage"></a>Использование  
  Модификатор `Iterator` можно использовать в следующих контекстах:  
@@ -54,9 +52,9 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_2.vb)]  
   
- Дополнительные примеры см. в разделе [итераторы](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Дополнительные примеры см. в разделе [итераторы](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Runtime.CompilerServices.IteratorStateMachineAttribute>  
- [Итераторы](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)  
+ [Итераторы](../../programming-guide/concepts/iterators.md)  
  [Оператор Yield](../../../visual-basic/language-reference/statements/yield-statement.md)

@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 48849ef4-d0af-45f1-b320-1a1280404e45
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6453a2d68e94ce11e273c45590e269205b0f0977
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: f3a7dfbb9b88a09588b4d62e1da5a4211d1035c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelerrorinvokingusercode"></a>System.ServiceModel.ErrorInvokingUserCode
 System.ServiceModel.ErrorInvokingUserCode  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  При вызове пользовательского кода произошла ошибка.  
   
 ## <a name="see-also"></a>См. также  

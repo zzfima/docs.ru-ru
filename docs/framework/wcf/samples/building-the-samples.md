@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
 caps.latest.revision: "33"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: efb45a09fd74d397ceb95fc7e1bad7a0a5f80309
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: d5de916aa5825625f29efe316571ad5085afb431
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Построение примеров Windows Communication Foundation
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Образцы, которые могут быть построены с использованием Visual Studio 2010 или **msbuild** команду из командной строки. В этом разделе описаны обе эти процедуры.  
@@ -91,5 +92,5 @@ ms.lasthandoff: 11/21/2017
     >  Чтобы пропустить создание конфигурации клиента добавьте **/noconfig** параметр.  
   
 ## <a name="see-also"></a>См. также  
- [Выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md)  
+ [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md)  
  [Служебная программа для метаданных ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

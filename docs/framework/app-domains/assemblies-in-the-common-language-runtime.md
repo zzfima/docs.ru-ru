@@ -23,11 +23,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7dfa8bab1d142462d49524495e3e5dc0b4960a4d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a4123ea28b317d432f9a36ea0c084d7fdacc7ffe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Сборки в среде CLR
 Сборки являются структурными элементами приложений .NET Framework; они составляют основную единицу развертывания, управления версиями, повторного использования, областей действия активации и разрешений безопасности. Сборка представляет собой коллекцию типов и ресурсов, собранных для совместной работы и образующих логическую функциональную единицу. Сборка предоставляет среде CLR сведения, необходимые для распознавания реализаций типов. Для среды выполнения тип не существует вне контекста сборки.  
@@ -52,9 +53,9 @@ ms.lasthandoff: 10/18/2017
   
  Существует несколько способов создания сборок. Можно использовать средства разработки, такие как Visual Studio, которые раньше использовались для создания DLL- или EXE-файлов. Чтобы создать сборки с использованием модулей, созданных в других средствах разработки, можно воспользоваться средствами [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. Для создания динамических сборок также можно использовать интерфейсы CLR такие, как <xref:System.Reflection.Emit?displayProperty=nameWithType>.  
   
-## <a name="related-topics"></a>Связанные разделы  
+## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание|  
+|Заголовок|Описание:|  
 |-----------|-----------------|  
 |[Содержимое сборок](../../../docs/framework/app-domains/assembly-contents.md)|Описание составляющих элементов сборки.|  
 |[Манифест сборки](../../../docs/framework/app-domains/assembly-manifest.md)|Описание данных в манифесте сборки и их хранения в сборках.|  
@@ -68,5 +69,5 @@ ms.lasthandoff: 10/18/2017
 |[Предоставление динамических методов и сборок](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Описание способов создания динамических сборок.|  
 |[Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Описание способов разрешения платформой .NET Framework ссылок на сборки во время выполнения.|  
   
-## <a name="reference"></a>Ссылки  
+## <a name="reference"></a>Ссылка  
  <xref:System.Reflection.Assembly?displayProperty=nameWithType>

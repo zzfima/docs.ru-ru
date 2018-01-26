@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c77b8029-64f4-48c6-a67a-2999f417495d
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4331dd001e92bd14ad17bf640f738311e07577da
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 1ed77cd4c41293241f85b83bb26728f4b293d05a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="events-general-reference"></a>Общие справочные сведения о событиях
 В данном разделе приведен список всех событий, создаваемых [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].

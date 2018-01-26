@@ -10,24 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f752d2aa2621ff650c864b2aca0928c5244c4917
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 7d253f38fab21496dd305cc67e7b6e84846579f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-wcf-development-tools"></a>Использование средств разработки WCF
-В этом разделе описаны средства разработки [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)][!INCLUDE[indigo1](../../../includes/indigo1-md.md)], которые могут помочь в разработке службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+В этом разделе описываются [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] средства разработки, которые могут помочь в разработке вашей [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]службы.  
   
- Эти шаблоны [!INCLUDE[indigo2](../../../includes/indigo2-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] можно использовать как основу для быстрого создания собственной службы, далее для ее отладки и проверки используется средство Service Auto Host [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] и тестовый клиент [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Оба этих инструмента обеспечивают быстрый и удобный цикл отладки и тестирования и исключают необходимость фиксации модели размещения на ранней стадии.  
+ Можно использовать [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] шаблоны как основу для быстрого создания собственной службы, затем с помощью [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Auto Host и [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] тестовый клиент для отладки и тестирования службы. Оба этих инструмента обеспечивают быстрый и удобный цикл отладки и тестирования и исключают необходимость фиксации модели размещения на ранней стадии.  
   
 ## <a name="the-wcf-developer-tools"></a>Инструменты разработчика WCF  
  [Шаблоны WCF в Visual Studio](../../../docs/framework/wcf/wcf-vs-templates.md)  
   
- Можно использовать предопределенный проект и шаблоны элементов [!INCLUDE[indigo2](../../../includes/indigo2-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] для быстрого создания служб [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] и окружающих приложений.  
+ Можно использовать предопределенный [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] шаблонов проектов и элементов в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] для быстрого создания [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] службы и окружающих приложений.  
   
  [Узел службы WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
   

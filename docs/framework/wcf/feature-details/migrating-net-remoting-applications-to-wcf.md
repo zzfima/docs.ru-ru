@@ -11,14 +11,15 @@ ms.topic: article
 helpviewer_keywords: ',NET remoting [WCF]'
 ms.assetid: 24793465-65ae-4308-8c12-dce4fd12a583
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: dff06fbc52c0f4371abf0bcc465fd6a6d8be5859
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: b7d305adf1810832016cdafbb60fc025f17e0786
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-net-remoting-applications-to-wcf"></a>Перенос приложений удаленного взаимодействия .NET на платформу WCF
 **Этот раздел относится к технологии прежних версий, которая сохраняется для обеспечения обратной совместимости с существующими приложениями и не рекомендуется для разработки новых приложений. Теперь распределенные приложения разрабатываются при помощи платформы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].**  

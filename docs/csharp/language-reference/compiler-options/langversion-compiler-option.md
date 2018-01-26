@@ -13,19 +13,19 @@ ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
 caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d034958b14c54540aa175a23067d47bd5d850bab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 11aab223ee70ff69d8c3470e747738bfe44540ea
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="langversion-c-compiler-options"></a>/langversion (параметры компилятора C#)
+# <a name="-langversion-c-compiler-options"></a>-langversion (параметры компилятора C#)
 Инструктирует компилятор принимать только синтаксис, включенный в заданную спецификацию языка C#.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```console  
-/langversion:option  
+-langversion:option  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -52,13 +52,13 @@ ms.lasthandoff: 11/21/2017
 
   
 ## <a name="remarks"></a>Примечания  
- Параметр компилятора **/langversion** не влияет на метаданные, на которые ссылается ваше приложение C#.  
+ Параметр компилятора **-langversion** не влияет на метаданные, на которые ссылается ваше приложение C#.  
   
- Поскольку каждая версия компилятора C# содержит расширения для спецификации языка, параметр **/langversion** не позволяет получить функциональные возможности, аналогичные более ранней версии компилятора.  
+ Так как каждая версия компилятора C# содержит расширения для спецификации языка, параметр **-langversion** не позволяет получить функциональные возможности, аналогичные более ранней версии компилятора.  
  
  Кроме того, в отличие от обновлений версии C#, которые обычно совпадают с основными выпусками платформы .Net Framework, новые функции и возможности синтаксиса могут быть не привязаны к конкретной версии этой платформы. Для работы с новыми версиями требуется обновление компилятора, которое также выпускается с новой редакцией C#. Тем не менее для каждой функции определен собственный набор минимальных требований к API .Net или общеязыковой среде выполнения, в результате чего их можно выполнять на более ранних версиях платформы, добавив необходимые пакеты NuGet или другие библиотеки.
   
- Независимо от того, какой параметр **/langversion** вы задали, для создания файлов с расширением EXE или DLL будет использоваться текущая версия общеязыковой среды выполнения. Единственным исключением являются дружественные сборки и [/moduleassemblyname (параметр компилятора C#)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md), которые работают при установке параметра **/langversion:ISO-1**.  
+ Независимо от того, какой параметр **-langversion** вы задали, для создания файлов с расширением EXE или DLL будет использоваться текущая версия общеязыковой среды выполнения. Единственным исключением являются дружественные сборки и [-moduleassemblyname (параметр компилятора C#)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md), которые работают при установке параметра **-langversion:ISO-1**.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/21/2017
  [Справочник по спецификации языка C#](../../../csharp/language-reference/language-specification/index.md): .NET Foundation  
  Информационные технологии C# 1.0/1.1 [ISO/IEC 23270:2003](https://www.iso.org/standard/36768.html) — спецификация языка C#: каталог ISO  
  Информационные технологии C# 2.0 [ISO/IEC 23270:2006](https://www.iso.org/standard/42926.html) — спецификация языка C#: каталог ISO  
- C# 2.0 [c042926_ISO_IEC_23270_2006(E).zip](http://go.microsoft.com/fwlink/?LinkId=144406) ISO/IEC 23270:2006 в формате PDF: общедоступные стандарты ISO  
+ C# 2.0 [c042926_ISO_IEC_23270_2006(E).zip](http://standards.iso.org/ittf/PubliclyAvailableStandards/c042926_ISO_IEC_23270_2006(E).zip) ISO/IEC 23270:2006 в формате PDF: общедоступные стандарты ISO  
  C# 3.0 [CSharp Language Specification.doc](http://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc) — спецификация языка C# версии 3.0: корпорация Майкрософт  
  C# 4.0 [Ecma-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf) — стандарт ECMA-334, 4-й выпуск    
  C# 5.0 [CSharp Language Specification.docx](https://www.microsoft.com/download/details.aspx?id=7029) — спецификация языка C# версии 5.0: корпорация Майкрософт  

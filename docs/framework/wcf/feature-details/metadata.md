@@ -11,19 +11,20 @@ ms.topic: article
 helpviewer_keywords: metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 36428e30f19de438ce78f2af24fe0865120e5b2b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 8e4b0a724653f5366d6da96f511fac9e62f64816
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata"></a>Метаданные
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] обеспечивает инфраструктуру для экспорта, публикации, получения и импорта метаданных служб. Службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используют метаданные для описания взаимодействия с конечными точками служб, чтобы такие средства, как Svcutil.exe, могли автоматически создавать клиентский код для обращения к службе.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об архитектуре метаданных](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
  Высокоуровневое общее описание архитектуры метаданных.  
   
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/18/2017
  [Публикация метаданных](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
  Описание способов публикации метаданных в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Получение метаданных](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
+ [Извлечение метаданных](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
  Описание различных способов извлечения метаданных.  
   
  [Использование метаданных](../../../../docs/framework/wcf/feature-details/using-metadata.md)  

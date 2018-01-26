@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 03ef815f03a65cbf7e2dc936b21848e206132add
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 11966eccfdbbdbab29d305915afd904a54f9c57b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="emitmanifest-method"></a>Метод EmitManifest
 Выпускает конечный манифест. Этот метод вызывается после импорта все файлы и настройки всех параметров. Не вызывайте этот метод для несвязанных модулей.  
@@ -59,4 +60,4 @@ HRESULT EmitManifest(
 ## <a name="see-also"></a>См. также  
  [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
  [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink-интерфейс API](../../../../docs/framework/unmanaged-api/alink/index.md)
+ [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

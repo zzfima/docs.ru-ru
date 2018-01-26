@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1da8b8d0-7c5b-40bb-b177-29bbd67245e0
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3bf69b76ff3d8469cfc346e5908e16cdfc62cdee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 97f347708a66db9a3d1d90dae8414a83b54bd75f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelservicechannellifetime"></a>System.ServiceModel.ServiceChannelLifetime
 System.ServiceModel.ServiceChannelLifetime  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Сведения о канале служб.  
   
 ## <a name="see-also"></a>См. также  

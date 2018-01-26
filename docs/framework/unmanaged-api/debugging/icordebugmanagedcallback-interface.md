@@ -19,21 +19,22 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1b72a2814ee2276363152052c7bf734104d4f395
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fd864cbb5a95143f6dd7f55fc1b1fc57f9f42e98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugmanagedcallback-interface"></a>Интерфейс ICorDebugManagedCallback
 Предоставляет методы для обработки обратных вызовов отладчика.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
-|[Break-метод](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-break-method.md)|Уведомляет отладчик при <xref:System.Reflection.Emit.OpCodes.Break> инструкции в поток кода.|  
-|[Метод точки останова](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-breakpoint-method.md)|Уведомляет отладчик о достижении точки останова.|  
+|[Метод Break](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-break-method.md)|Уведомляет отладчик при <xref:System.Reflection.Emit.OpCodes.Break> инструкции в поток кода.|  
+|[Метод Breakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-breakpoint-method.md)|Уведомляет отладчик о достижении точки останова.|  
 |[Метод BreakpointSetError](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-breakpointseterror-method.md)|Уведомляет отладчик, общеязыковой среды выполнения (CLR) не удалось точно привязать точку останова, который был установлен до функции just-in-time (JIT) компиляции.|  
 |[Метод ControlCTrap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-controlctrap-method.md)|Уведомляет отладчик о том, сочетание клавиш CTRL + C, представленные в отлаживаемом процессе.|  
 |[Метод CreateAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createappdomain-method.md)|Уведомляет отладчик, что домен приложения был создан.|  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 |[Метод EditAndContinueRemap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md)|Не рекомендуется. Уведомляет отладчик о том, что события повторного сопоставления было отправлено в интегрированную среду разработки.|  
 |[Метод EvalComplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-evalcomplete-method.md)|Уведомляет отладчик о завершении вычисления.|  
 |[Метод EvalException](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-evalexception-method.md)|Уведомляет отладчик, что оценку завершен с необработанным исключением.|  
-|[Метод исключений](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exception-method.md)|Уведомляет отладчик о том, что исключение из управляемого кода.|  
+|[Метод Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exception-method.md)|Уведомляет отладчик о том, что исключение из управляемого кода.|  
 |[Метод ExitAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md)|Уведомляет отладчик о завершении домена приложения.|  
 |[Метод ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)|Уведомляет отладчик о том, что процесс завершен.|  
 |[Метод ExitThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md)|Уведомляет отладчик о завершении выполнения потока, выполняющего управляемый код.|  
@@ -79,6 +80,6 @@ ms.lasthandoff: 11/21/2017
  **Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [ICorDebug-интерфейс](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
- [ICorDebugManagedCallback2-интерфейс](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
+ [Интерфейс ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
+ [Интерфейс ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
  [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ebd69e9a-7a89-4a42-8f68-e756f8807a1a
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 33912153a0617dd224fa7fe24ffac33fd9348516
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: bc87a427a0a44f28ba7bfe4f2d71fa43768b4b76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="microsofttransactionstransactionbridgeregistercoordinator"></a>Microsoft.Transactions.TransactionBridge.RegisterCoordinator
 Служба протокола WS-AT успешно зарегистрирована своим координатором для протокола управления.  

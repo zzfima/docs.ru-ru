@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f86ff2fbb3944ce2ed381cb29e2b3c6df39b62bf
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 86234aca209c5533abf9025911b22c391b0ef22b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Функциональная возможность перетаскивания в Windows Forms
 Windows Forms включает набор методов, событий и классов, реализующих режим перетаскивания. В этом разделе приводится обзор поддержки перетаскивания в Windows Forms.  См. также [и-операции перетаскивания и поддержка буфера обмена](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  
@@ -34,7 +35,7 @@ Windows Forms включает набор методов, событий и кл
 ### <a name="events-on-the-current-target"></a>События в текущем целевом объекте  
  В приведенной ниже таблице перечислены события, возникающие в текущем целевом объекте операции перетаскивания.  
   
-|Событие мыши|Описание|  
+|Событие мыши|Описание:|  
 |-----------------|-----------------|  
 |<xref:System.Windows.Forms.Control.DragEnter>|Это событие происходит при перетаскивании объекта внутрь границ элемента управления. Обработчик этого события принимает аргумент типа <xref:System.Windows.Forms.DragEventArgs>.|  
 |<xref:System.Windows.Forms.Control.DragOver>|Это событие происходит при перетаскивании объекта, пока указатель мыши находится в пределах границ элемента управления. Обработчик этого события принимает аргумент типа <xref:System.Windows.Forms.DragEventArgs>.|  
@@ -46,7 +47,7 @@ Windows Forms включает набор методов, событий и кл
 ### <a name="events-on-the-source"></a>События в исходном объекте  
  В таблице ниже приведены события, возникающие в исходном объекте операции перетаскивания.  
   
-|Событие мыши|Описание|  
+|Событие мыши|Описание:|  
 |-----------------|-----------------|  
 |<xref:System.Windows.Forms.Control.GiveFeedback>|Это событие возникает во время операции перетаскивания. Оно позволяет дать пользователю визуальную подсказку о том, что происходит операция перетаскивания, в виде, например, изменения указателя мыши. Обработчик этого события принимает аргумент типа <xref:System.Windows.Forms.GiveFeedbackEventArgs>.|  
 |<xref:System.Windows.Forms.Control.QueryContinueDrag>|Это событие возникает во время операции перетаскивания и позволяет исходному объекту определить, следует ли отменить эту операцию. Обработчик этого события принимает аргумент типа <xref:System.Windows.Forms.QueryContinueDragEventArgs>.|  

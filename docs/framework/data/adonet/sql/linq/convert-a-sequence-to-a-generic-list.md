@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 7ab76d93-6898-4e75-b76f-290a66ecead8
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e563e0ed46bfdadca9923b582f2c30e12701d992
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 066ea4d3c4232137fa6dbd758c8a3be1feec9e61
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="convert-a-sequence-to-a-generic-list"></a>Преобразование последовательности в универсальный список
 Для создания универсального списка из последовательности используется <xref:System.Linq.Enumerable.ToList%2A>.  

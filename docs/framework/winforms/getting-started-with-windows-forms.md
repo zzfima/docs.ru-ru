@@ -19,16 +19,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7735e721917c5f78b791a200a670599fe3cff310
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d5d81497872e231fb1b235d9707b9a36505d3165
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-windows-forms"></a>Приступая к работе с Windows Forms
 С помощью Windows Forms можно создать мощные приложения Windows. Следующие разделы подробно описываются способы использования возможностей Windows Forms для отображения данных, обработки вводимых пользователем данных и легко и безопасного развертывания приложений.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о Windows Forms](../../../docs/framework/winforms/windows-forms-overview.md)  
  Содержит общие сведения о Windows Forms и интеллектуальных клиентских приложений.  
   

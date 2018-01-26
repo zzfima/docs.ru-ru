@@ -11,14 +11,15 @@ ms.topic: article
 helpviewer_keywords: message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
 caps.latest.revision: "40"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 866a53af52ac43363ff195dde84092df61deb339
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: a867d5f85177ad9a19a5766c65a8f1f98c04cd17
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-message-logging"></a>Настройка ведения журналов сообщений
 В этом разделе описывается, как настроить ведение журнала сообщений для различных сценариев.  
@@ -174,5 +175,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [\<messageLogging >](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)  
- [Ведение журнала сообщений](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
- [Рекомендуемые параметры для трассировки и ведения журнала сообщений](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)
+ [Ведение журналов сообщений](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
+ [Рекомендуемые параметры для трассировки и ведения журналов сообщений](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)

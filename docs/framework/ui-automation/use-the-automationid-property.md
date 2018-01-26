@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 1a0613ecc6693b12dc76b77d6a634aafa599d5ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fdd26f335fb2f9b8072103def5b00d91a6740817
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-the-automationid-property"></a>Использование свойства AutomationID
 > [!NOTE]
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Использование постоянного пути для возврата к ранее идентифицированному AutomationElement  
   
--   Клиентским приложениям, от простых тестовых скриптов до до надежных программ записи и воспроизведения, может потребоваться доступ к элементам, в текущий момент не реализованным, таким как диалоговое окно открытия файла или пункт меню, и поэтому не существующим в дереве модели автоматизации пользовательского интерфейса. Эти элементы могут быть созданы только воспроизведением определенной последовательности действий [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] с помощью свойств [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , таких как AutomationID, шаблонов элементов управления и прослушивателей событий. Пример, в котором с помощью [TLA#tla_uiautomation](http://msdn.microsoft.com/en-us/028467fd-2980-4691-9522-0131dcef23a0) создаются тестовые скрипты на основе взаимодействия пользователя с [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] , см. в разделе [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
+-   Клиентским приложениям, от простых тестовых скриптов до до надежных программ записи и воспроизведения, может потребоваться доступ к элементам, в текущий момент не реализованным, таким как диалоговое окно открытия файла или пункт меню, и поэтому не существующим в дереве модели автоматизации пользовательского интерфейса. Эти элементы могут быть созданы только воспроизведением определенной последовательности действий [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] с помощью свойств [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , таких как AutomationID, шаблонов элементов управления и прослушивателей событий. В разделе [тестирования образец скрипта генератор](http://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0) пример, использующий [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] создаются тестовые скрипты на основе взаимодействия пользователя с [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  
@@ -69,4 +70,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>  
  [Общие сведения о дереве модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [Нахождение элемента автоматизации пользовательского интерфейса, в зависимости от состояния свойства](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+ [Нахождение элемента модели автоматизации пользовательского интерфейса в зависимости от состояния свойства](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)

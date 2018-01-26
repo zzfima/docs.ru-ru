@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 99a3b127-0513-48f0-9af4-83b1b40716b1
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0b3d51375f3169c06489fd11fdc9f5b24440f95d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 4f4bf30d87065679d5222a92628cc6007a673ce5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemidentitymodelauthorizationpolicyevaluated"></a>System.IdentityModel.AuthorizationPolicyEvaluated
 System.IdentityModel.AuthorizationPolicyEvaluated  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Политика с указанным ИД выполнена.  
   
 ## <a name="see-also"></a>См. также  

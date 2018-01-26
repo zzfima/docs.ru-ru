@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ebfe9af1-76f7-4416-abf9-1d777708e0f1
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f34a99d2eb6e0a635cdd01fa67128f87f110dbff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: e1b5e7f687c4a9fa4b9b079c05d1bcf8c1302d47
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelactivationmessagequeueduplicatedpipeerror"></a>System.ServiceModel.Activation.MessageQueueDuplicatedPipeError
 System.ServiceModel.Activation.MessageQueueDuplicatedPipeError  

@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 734d1cac-9f9c-472c-bcf7-bed23454c82c
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e939ba60180608de443abdc910c7b94e88a0648c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: fd31041d32a5aa6e71554f9fcab2972b559c2c47
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelserviceoperationmissingreply"></a>System.ServiceModel.ServiceOperationMissingReply
 System.ServiceModel.ServiceOperationMissingReply  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Операция типа запрос-ответ не сопровождается ответным сообщением.  
   
  Это двусторонняя операция, однако клиенту не был отправлен ответ. Эту трассировку можно использовать для отладки во время разработки.  

@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bba612da-25ab-4051-916a-c0fba1ae6189
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 30a5f44d456011b283cf7fe39ddacbe789aa75a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 430f537facb273193d0c7b265766f08d51312b56
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsconnectionpoolleasetimeoutreached"></a>System.ServiceModel.Channels.ConnectionPoolLeaseTimeoutReached
 System.ServiceModel.Channels.ConnectionPoolLeaseTimeoutReached  

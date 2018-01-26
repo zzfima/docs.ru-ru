@@ -13,19 +13,19 @@ ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
 caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0292ff38b1d03f5960a20858fbb9c42a6aff1f43
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 944a9b4dbbed76f388642d67be9518343f750de5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="keycontainer-c-compiler-options"></a>/keycontainer (параметры компилятора C#)
+# <a name="-keycontainer-c-compiler-options"></a>-keycontainer (параметры компилятора C#)
 Задает имя контейнера криптографического ключа.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```console  
-/keycontainer:string  
+-keycontainer:string  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -33,13 +33,13 @@ ms.lasthandoff: 11/21/2017
  Имя контейнера ключа строгого имени.  
   
 ## <a name="remarks"></a>Примечания  
- При использовании параметра **/keycontainer** компилятор создает компонент, который можно сделать общим, вставляя в манифест сборки открытый ключ из указанного контейнера и подписывая окончательную сборку закрытым ключом. Чтобы создать файл ключа, введите в командной строке sn -k `file`. Параметр sn -i устанавливает пару ключей в контейнер.  
+ При использовании параметра **-keycontainer** компилятор создает компонент, который можно сделать общим, вставляя в манифест сборки открытый ключ из указанного контейнера и подписывая окончательную сборку закрытым ключом. Чтобы создать файл ключа, введите в командной строке sn -k `file`. Параметр sn -i устанавливает пару ключей в контейнер.  
   
- При компиляции с параметром [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) имя файла ключа сохраняется в модуле и включается в сборку при компиляции этого модуля с параметром [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).  
+ При компиляции с параметром [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) имя файла ключа сохраняется в модуле и включается в сборку при компиляции этого модуля с параметром [-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).  
   
  Этот параметр можно также указать в исходном коде любого модуля MSIL в качестве настраиваемого атрибута (<xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=nameWithType>).  
   
- Также можно передать сведения о шифровании компилятору с помощью параметра [/keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md). Если необходимо добавить в манифест сборки открытый ключ, но отложить подпись сборки до завершения ее тестирования, используйте параметр [/delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md).  
+ Также можно передать сведения о шифровании компилятору с помощью параметра [-keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md). Если нужно добавить в манифест сборки открытый ключ, но при этом отложить подпись сборки до завершения ее тестирования, используйте параметр [-delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md).  
   
  Дополнительные сведения см. в разделах [Создание и использование сборок со строгими именами](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) и [Отложенная подпись сборки](../../../framework/app-domains/delay-sign-assembly.md).  
   

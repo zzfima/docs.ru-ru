@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 201ffd59-df9e-40d9-9697-7de442ab8b35
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d0b02494f416467dfe66ecd67a893543d0ed04f4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: c7b2fcef738ae204273cc3067859e9578233a1f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodeltxcompletionstatuscompletedforsetcomplete"></a>System.ServiceModel.TxCompletionStatusCompletedForSetComplete
 Заданная транзакция для заданной операции завершена в результате вызова метода SetTransactionComplete.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Трассируется, если пользователь явно решил завершить текущую транзакцию с помощью контекста OperationContext.  
   
 ## <a name="see-also"></a>См. также  

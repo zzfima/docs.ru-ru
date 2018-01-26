@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f59fddb1add29d52ccba6fc8b8ce84938b53a1c2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 396e2c51894ad5ed11f8953bceb1bd36899cfc62
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-receive-notification-when-a-clock39s-state-changes"></a>Как: уведомить при часов &#39; s изменения состояния
 Часы <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> событие возникает при его <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> становится недействительным, например при запуске или остановке часов. Можно зарегистрировать для этого события непосредственно с помощью <xref:System.Windows.Media.Animation.Clock>, или можно зарегистрировать с помощью <xref:System.Windows.Media.Animation.Timeline>.  
@@ -45,13 +46,13 @@ ms.lasthandoff: 10/22/2017
 ||||||||  
 |-|-|-|-|-|-|-|  
 |Время (в секундах)|1|10|19|21|30|39|  
-|Регион|Активно|Активно|Остановлено|Активно|Активно|Остановлено|  
+|Регион|Активная|Активная|Остановлено|Активная|Активная|Остановлено|  
   
  В следующей таблице показаны значения времени, по которому *Animation2* <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> события:  
   
 ||||||||||  
 |-|-|-|-|-|-|-|-|-|  
 |Время (в секундах)|1|9|11|19|21|29|31|39|  
-|Регион|Активно|Заполнение|Активно|Остановлено|Активно|Заполнение|Активно|Остановлено|  
+|Регион|Активная|Заполнение|Активная|Остановлено|Активная|Заполнение|Активная|Остановлено|  
   
  Обратите внимание, что *Animation1* <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> событие запускается через 10 секунд, даже если его состояние остается <xref:System.Windows.Media.Animation.ClockState.Active>. Это, так как ее состояние изменилось на 10 секунд, но ее изменить <xref:System.Windows.Media.Animation.ClockState.Active> для <xref:System.Windows.Media.Animation.ClockState.Filling> и обратно <xref:System.Windows.Media.Animation.ClockState.Active> в же делений.

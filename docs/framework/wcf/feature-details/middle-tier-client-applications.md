@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 893fa027d2f1eb4fa3782b9119f6ae2d4a78d700
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 13399243994943ddf853447e2e29f3695702aa35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="middle-tier-client-applications"></a>Клиентские приложения среднего уровня
 В данном разделе описываются различные вопросы, связанные с клиентскими приложениями среднего уровня, использующими [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  

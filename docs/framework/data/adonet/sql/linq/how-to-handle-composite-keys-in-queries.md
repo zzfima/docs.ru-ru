@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: ce2f14fd-1038-458a-91e3-a078c61f0d10
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 168e721eee7f5253412438a2185934f01bf081c1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 0267cba0d20ac77a938c64cfa87e750f690471f8
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-handle-composite-keys-in-queries"></a>Практическое руководство. Обработка составных ключей в запросах
 Некоторые операторы могут принимать только один аргумент. Если аргумент должен содержать несколько столбцов базы данных, необходимо создать анонимный тип для представления комбинации столбцов.  

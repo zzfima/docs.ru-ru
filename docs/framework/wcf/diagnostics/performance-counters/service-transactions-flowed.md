@@ -10,17 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7c564d7d-60d3-45a4-a9a1-c78f62ace57f
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 87a1b0493582c86b0f75f381928d5aaeada85d6a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: e6eb5e06f253e0deb63fa15c770ea49aeee5e2f7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-transactions-flowed"></a>Служба: количество поступивших транзакций
 Имя счетчика: Transactions Flowed.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Количество транзакций в операциях для данной службы.

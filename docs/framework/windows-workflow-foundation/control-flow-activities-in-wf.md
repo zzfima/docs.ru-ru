@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6892885b-f7c5-4aea-8f5e-28863fb4ae75
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 825f2487a89805365d3376986af0b0d098c20bca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 1e8520e34cf9bd9d31e9b877849e7c9611d6d989
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-flow-activities-in-wf"></a>Действия потока управления потока в WF
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] содержит несколько действий для управления потоком выполнения внутри рабочего процесса. Некоторые из этих действий (например, `Switch` и `If`) реализуют структуры управления потоком управления, аналогичные доступным в средах программирования, таких как [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]; другие (например, `Pick`) моделируют новые структуры программирования.  

@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 86a6e12f-73b5-450e-8725-f4ca5fe0702c
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 03881ccef47cab6e7136afbe2a5584b4647fa252
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: bfd61ea70fcae443d4a76403ed6c10c874407c4d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuration"></a>Конфигурация
 В этом разделе перечислены все исключения, вызываемые конфигурацией [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  

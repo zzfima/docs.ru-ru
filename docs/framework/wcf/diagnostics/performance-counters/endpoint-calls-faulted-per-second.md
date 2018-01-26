@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9840fc0a-0e4d-4638-96fd-40e3ab9e4667
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4f52a0f0b44a788bd5c2d34c125e31884c2a9afb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 842270d6e570767c25c414307be941f24b01dd07
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoint-calls-faulted-per-second"></a>Конечная точка: количество сбоев вызовов в секунду
 Имя счетчика: Calls Faulted Per Second.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Количество вызовов, которые возвратили сбой данной конечной точке в секунду.  
   
  Этот счетчик является счетчиком производительности типа [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по следующей формуле.  

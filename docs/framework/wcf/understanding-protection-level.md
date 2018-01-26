@@ -16,14 +16,15 @@ helpviewer_keywords:
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
 caps.latest.revision: "22"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 21820333cf9b07ea9ac6883f6aa7b16ebc2d807e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: c379cf39f30bf7e75907dba5fb06ba4e3862e299
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-protection-level"></a>Основные сведения об уровне защиты
 Свойство `ProtectionLevel` обнаруживается во многих классах, например в классах <xref:System.ServiceModel.ServiceContractAttribute> и <xref:System.ServiceModel.OperationContractAttribute>. Это свойство определяет, как защищается часть сообщения (или все сообщение). В данном разделе рассматривается эта функция [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] и принцип ее работы.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 >  Уровни защиты можно задавать только в коде, а не в конфигурации.  
   
 ## <a name="basics"></a>Основные сведения  
- Ниже приведены основные сведения о функции уровня защиты.  
+ Ниже приведены основные сведения о возможности уровня защиты.  
   
 -   Для любой части сообщения существуют три базовых уровня защиты. Для свойства (где бы оно ни появлялось) задается одно из значений перечисления <xref:System.Net.Security.ProtectionLevel>. Эти значения указаны ниже в порядке возрастания уровня защиты.  
   

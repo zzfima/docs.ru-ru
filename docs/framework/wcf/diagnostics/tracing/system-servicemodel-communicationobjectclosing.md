@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2b395653-7615-4dbe-8ee6-2dc11b659221
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: aaab116637179eae1e90964f0c478eb11dc3f550
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 3554e6724b73ed9099d0eab22f5fbd7e0a1ba76c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelcommunicationobjectclosing"></a>System.ServiceModel.CommunicationObjectClosing
 System.ServiceModel.CommunicationObjectClosing  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Объект связи закрывается.  
   
 ## <a name="see-also"></a>См. также  

@@ -17,11 +17,14 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a812207fb58e6c87c263966081060d02f8038963
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c48b3cbaae4155a894ba77263505b2ca85238427
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="framework-design-guidelines"></a>Рекомендации по разработке платформы
 Этот раздел содержит рекомендации по разработке библиотек, которые расширяют и взаимодействия с платформой .NET Framework. Цель — помочь разработчикам библиотек гарантировать согласованность API и удобства использования, предоставляя унифицированную модель программирования, не зависящий от языка программирования, который используется для разработки. Корпорация Майкрософт рекомендует следовать этим правилам при разработке классов и компонентов, расширяющих возможности .NET Framework. Несогласованные библиотеки конструктора отрицательно влияет на производительность и не рекомендует внедрения.  
@@ -30,26 +33,26 @@ ms.lasthandoff: 11/21/2017
   
  Эти правила являются отрывок из книги *Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание*, Krzysztof Cwalina и Брэд Абрамс.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Правила именования](../../../docs/standard/design-guidelines/naming-guidelines.md)  
  Рекомендации по именованию сборок, пространств имен, типов и членов в библиотеках классов.  
   
- [Рекомендации по проектированию типа](../../../docs/standard/design-guidelines/type.md)  
+ [Рекомендации по разработке типов](../../../docs/standard/design-guidelines/type.md)  
  Инструкции по использованию статических и абстрактных классов, интерфейсов, перечислений, структур и других типов.  
   
- [Рекомендации по разработке членов](../../../docs/standard/design-guidelines/member.md)  
+ [Правила разработки членов](../../../docs/standard/design-guidelines/member.md)  
  Содержит рекомендации по разработке и использовании свойства, методы, конструкторы, поля, события, операторы и параметры.  
   
- [Разработка для расширяемости](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+ [Разработка с обеспечением расширяемости](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
  Описывает механизмы расширяемости, таких как создание подклассов, с помощью событий, виртуальные члены и обратные вызовы и объясняется, как выбрать механизмов, которые лучше всего соответствует требованиям вашей платформы.  
   
  [Правила разработки исключений](../../../docs/standard/design-guidelines/exceptions.md)  
  Описывает рекомендации по проектированию для разработки, создания и перехвата исключений.  
   
- [Рекомендации по использованию](../../../docs/standard/design-guidelines/usage-guidelines.md)  
+ [Правила использования](../../../docs/standard/design-guidelines/usage-guidelines.md)  
  Описывает правила использования общих типов, таких как массивы, атрибуты и коллекции, поддерживающих сериализацию и перегрузка операторов равенства.  
   
- [Общие принципы проектирования](../../../docs/standard/design-guidelines/common-design-patterns.md)  
+ [Обычные шаблоны разработки](../../../docs/standard/design-guidelines/common-design-patterns.md)  
  Рекомендации по выбору и реализации шаблона удаления и свойства зависимостей.  
   
  *Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*  
@@ -58,5 +61,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Обзор набора средств Visual Studio для Unity](../../../docs/framework/get-started/overview.md)  
- [Стратегия для платформы .NET Framework](http://msdn.microsoft.com/en-us/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
+ [Стратегия для платформы .NET Framework](http://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
  [Руководство по разработке](../../../docs/framework/development-guide.md)

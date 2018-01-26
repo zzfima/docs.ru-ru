@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9dffd071-0b79-4e10-9027-06760b4cc3ca
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b53c08a2f3500974a477b2a8dad8ef8e37c4f531
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 40fbc768f060dc7f3d602ab625d3e71808868346
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="missingnecessaryenhancedkeyusage"></a>MissingNecessaryEnhancedKeyUsage
 Идентификатор: 157  
@@ -26,9 +27,9 @@ ms.lasthandoff: 11/21/2017
   
  Категория: TransactionBridge  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Это событие показывает, что сертификат удостоверения с заданным именем субъекта и отпечатком не предоставляет заданных данных из числа его EnhancedKeyUsages. В событии указаны имя и ИД процесса.  
   
 ## <a name="see-also"></a>См. также  
  [Ведение журнала событий](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Общие справочные сведения события](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+ [Общие справочные сведения о событиях](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

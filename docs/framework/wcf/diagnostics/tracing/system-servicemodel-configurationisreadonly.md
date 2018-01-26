@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a6734380-8ecf-454a-ab45-8832d6a27871
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a56451b2ec000c7fed6cfc6b8b37d10b0e983b47
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 8bdebc05c67cca0d037a2b178a7ee373d3c93052
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelconfigurationisreadonly"></a>System.ServiceModel.ConfigurationIsReadOnly
 System.ServiceModel.ConfigurationIsReadOnly  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Конфигурация доступна только для чтения.  
   
 ## <a name="see-also"></a>См. также  

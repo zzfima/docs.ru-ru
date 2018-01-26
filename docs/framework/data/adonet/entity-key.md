@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d0d7df7ff1a0e8e732688e10befb4bffa86599d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 1f2f50f5306904a2a1b42a3abbe9071c33847c66
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entity-key"></a>ключ сущности
 *Ключ сущности* — [свойство](../../../../docs/framework/data/adonet/property.md) или набор свойств [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) , которые используются для установления личности. Свойства, составляющие ключ сущности, выбираются во время разработки. Значения свойств ключа сущности должен однозначно идентифицировать экземпляр типа сущности внутри [набора сущностей](../../../../docs/framework/data/adonet/entity-set.md) во время выполнения. Свойства, составляющие ключ сущности, должны гарантировать уникальность экземпляра набора сущностей.  
@@ -50,5 +51,5 @@ ms.lasthandoff: 11/21/2017
  Использование в качестве ключа сущности параметров `Name` и `Address` является неплохим выбором, поскольку маловероятно, что у двух авторов с одинаковыми именами будет один и тот же адрес. Однако такой выбор ключа сущности не гарантирует уникальность ключей сущности в наборе сущностей. В данном случае рекомендуется добавить свойство, такое как `AuthorId`, которое может быть использовано для уникальной идентификации автора.  
   
 ## <a name="see-also"></a>См. также  
- [Основные понятия модели данных сущности](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Модель EDM](../../../../docs/framework/data/adonet/entity-data-model.md)
+ [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [Сущностная модель данных](../../../../docs/framework/data/adonet/entity-data-model.md)

@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0d9e883d-181d-407f-ad79-c90035dcfc25
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4897a69c6a2a2396e0bbd769e2834da0f2976aaa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 496fdfd45f7f871da3be232afae94c454d771f86
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelactivationservicestartpipeerror"></a>System.ServiceModel.Activation.ServiceStartPipeError
 System.ServiceModel.Activation.ServiceStartPipeError  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  При запуске службы NT произошла обработанная ошибка.  
   
 ## <a name="see-also"></a>См. также  

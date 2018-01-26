@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 76e1af87-f5f2-4974-acfa-868b56cfa450
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0543c01a76c012b4441ee599eb06b0f3910c281d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 95afe78288f10123bcecfcf42fe64e03f7df2bfe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsmsmqstartingapplication"></a>System.ServiceModel.Channels.MsmqStartingApplication
 System.ServiceModel.Channels.MsmqStartingApplication  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Служба активации MSMQ запустила приложение.  
   
 ## <a name="see-also"></a>См. также  

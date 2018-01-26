@@ -19,22 +19,23 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7f6596918819294f0ab68735cec12f9eab8bf83e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 751cca87962473501ef29a4deb99d9d24be33396
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugenum-interface1"></a>ICorDebugEnum интерфейс1
 Служит абстрактным базовым интерфейсом для перечислителей, которые используются приложением для отладки.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод Clone](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Создает копию объекта `ICorDebugEnum` объекта.|  
-|[GetCount-метод](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|Получает число элементов в перечислении.|  
-|[Reset-метод](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|Перемещает курсор в начало перечисления.|  
+|[Метод GetCount](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|Получает число элементов в перечислении.|  
+|[Метод Reset](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|Перемещает курсор в начало перечисления.|  
 |[Метод Skip](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Перемещение курсора вперед в перечислении указанное число элементов.|  
   
 ## <a name="remarks"></a>Примечания  

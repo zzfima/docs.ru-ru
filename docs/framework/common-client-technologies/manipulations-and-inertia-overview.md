@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: b9cfd81b966e2bab95aa780a4fbde26abec74b00
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d6a0b8b62b997ab0dc7ff21375e82bda7e05d3c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="manipulations-and-inertia-overview"></a>Общие сведения о манипуляциях и инерции
 *Манипуляции* предоставляют пользователям возможность перемещать, поворачивать и изменять размеры элементов пользовательского интерфейса с помощью *манипуляторов*. Манипулятором является мышь или (в сценарии с поддержкой сенсорного ввода) перо либо палец.  

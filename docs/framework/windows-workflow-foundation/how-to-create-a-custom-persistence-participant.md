@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4c690a0233a425a706ead7441447f589d8330bc0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: ebc83f100b4303b73ba2e6d3dc41d0f82e8f2c22
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-persistence-participant"></a>Как создать настраиваемого участника сохраняемости
 В следующей процедуре содержаться шаги для создания участника сохраняемости. В разделе [участия в сохраняемости](http://go.microsoft.com/fwlink/?LinkID=177735) образца и [расширения хранилища](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) раздел, описывающий образец реализации участников сохраняемости.  

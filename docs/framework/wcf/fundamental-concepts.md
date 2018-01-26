@@ -15,14 +15,15 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
 caps.latest.revision: "39"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4f791d6cd5b16b77a407130fe9c887fbd6f09b8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 651515095a0c9f9e970fff2d77421cfa804fa701
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Основные понятия Windows Communication Foundation
 В этом документе представлено общее описание архитектуры [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. В нем приводится объяснение ключевых понятий и их взаимосвязь. Учебник по созданию простой версии [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] службы и клиента см. в разделе [учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md). Чтобы узнать [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] программирования, в разделе [базовое Программирование WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -165,4 +166,4 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ## <a name="see-also"></a>См. также  
  [Что такое Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
  [Архитектура Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)  
- [Архитектура безопасности](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)
+ [Архитектура безопасности](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

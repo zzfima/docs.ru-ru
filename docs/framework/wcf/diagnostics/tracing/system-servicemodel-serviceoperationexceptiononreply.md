@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b68bba58-495a-4b13-bc4f-b663136f3c44
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 41da5fc076f176b0798acbf187df9dbf5290f013
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 330fc1fdd015b61be1e17adcf09dc8d5deece75c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelserviceoperationexceptiononreply"></a>System.ServiceModel.ServiceOperationExceptionOnReply
 System.ServiceModel.ServiceOperationExceptionOnReply  

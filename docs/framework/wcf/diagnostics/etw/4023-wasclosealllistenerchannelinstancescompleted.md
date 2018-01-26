@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 95dd5810-78a5-4183-98ef-77267dd64aac
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 551f528b61ff0c0bfb6589f45cf185fa5e5238ad
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: dd9c8deee8162ad94fbd5d5a37e862e8334a35d2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="4023---wasclosealllistenerchannelinstancescompleted"></a>4023 - WasCloseAllListenerChannelInstancesCompleted
 ## <a name="properties"></a>Свойства  

@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 22ef6afa36c7fc46713ec5c0940c305fc967e91b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: d30b28e2a875e64e2c0d1cad43f101cf5fa2f489
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB, ODBC и объединение подключений в пул в Oracle
 Организация пулов соединений может существенно улучшить производительность и масштабируемость приложения. В этом разделе обсуждаются пулы соединений поставщиков данных .NET Framework для OLE DB ODBC и Oracle.  
@@ -81,6 +82,6 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 |`Pooling`|'true'|При значении `true` соединение извлекается из соответствующего пула или при необходимости создается и добавляется в соответствующий пул.|  
   
 ## <a name="see-also"></a>См. также  
- [Организация пулов соединений](../../../../docs/framework/data/adonet/connection-pooling.md)  
+ [Объединение подключений в пул](../../../../docs/framework/data/adonet/connection-pooling.md)  
  [Счетчики производительности](../../../../docs/framework/data/adonet/performance-counters.md)  
  [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

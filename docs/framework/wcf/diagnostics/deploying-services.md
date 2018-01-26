@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ac361bfb-017d-4da9-a2d7-fc0fb72d65bb
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 75069b00fa07078ff0eb2d49e64f046d5415d154
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 6e32570b381d6cab4326a13246dfe053b5032589
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-services"></a>Развертывание служб
 В этом разделе описывается развертывание приложения [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] в среде выполнения.  

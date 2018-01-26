@@ -17,14 +17,15 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1013b7567fbd80d8d1ee55ac81e00c7b29635bac
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c790ec775740bf53e3c68a1c8834df9e13339c38
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="digital-ink-how-to-topics"></a>Разделы руководства по рукописному вводу
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Выбор рукописного ввода из пользовательского элемента управления](../../../../docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)  
   [Добавление пользовательских данных в данные рукописного ввода](../../../../docs/framework/wpf/advanced/how-to-add-custom-data-to-ink-data.md)  
   [Удаление рукописного ввода в пользовательском элементе управления](../../../../docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md)  

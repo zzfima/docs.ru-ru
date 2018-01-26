@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a4dfc51c-7148-4181-81c3-7b424b4c43db
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: aa9444adb7b4c08983d26b02b2d353dd61a1166a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 0200567b47e6f7d3baf3e25aa296052e2497dd8f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodeldidnotunderstandmessageheader"></a>System.ServiceModel.DidNotUnderstandMessageHeader
 System.ServiceModel.DidNotUnderstandMessageHeader  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Не понят заголовок сообщения.  
   
 ## <a name="see-also"></a>См. также  

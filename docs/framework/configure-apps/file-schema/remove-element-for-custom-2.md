@@ -12,11 +12,12 @@ ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: decf0ca5f9f743a2a2884c06777b7ee9d6d6a8ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 27b01120cb279dc23b3b081e35f17addc6d1897d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Удалите > элемент NameValueSectionHandler и DictionarySectionHandler
 
@@ -34,13 +35,13 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="attribute"></a>Атрибут
 
-|           | Описание |
+|           | Описание: |
 | --------- | ----------- |
 | **key**   | Обязательный атрибут.<br><br>Задает имя удаляемого параметра. |
 
 ## <a name="parent-element"></a>Родительский элемент
 
-| Элемент | Описание |
+| Элемент | Описание: |
 | ------- | ------------|
 | [**\<sectionName >** элемент](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Определяет параметры для пользовательских разделов конфигурации, использующие <xref:System.Configuration.NameValueSectionHandler> и <xref:System.Configuration.DictionarySectionHandler> классы. |
 

@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7cd561cf0e0a9e080b150bdaa412686126423c91
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b6231f362a30f4766ccf5a43d33fa0dc7257ad57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltuserandomizedstringhashalgorithmgt-element"></a>&lt;UseRandomizedStringHashAlgorithm&gt; элемент
 Определяет, вычисляет ли среда хэш-кодов для строк для каждого домена приложения.  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`0`|Общеязыковая среда выполнения не вычисляет хэш-кодов для строк для каждого домена приложения; один алгоритм используется для вычисления хэш-кодов строки. Это значение по умолчанию.|  
 |`1`|Общеязыковая среда выполнения вычисляет хэш-кодов для строк для каждого домена приложения. Одинаковых строк в различных доменах приложений и в разных процессах будет иметь другой хэш-кодов.|  

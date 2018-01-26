@@ -17,11 +17,12 @@ caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 659028e56849af1404768afff2de3ae95fb3aba8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f30b9e245ad38b0e861590e9b2ca3658a2b5e967
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Устаревшие типы в платформе .NET Framework
 <a name="introduction"></a>В таблицах этой статьи перечислены типы, которые являются устаревшими в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Они сгруппированы по сборкам. Используйте следующие ссылки для просмотра списка устаревших типов и рекомендованных альтернатив в каждой сборке. Поскольку эти типы считаются устаревшими, все их члены также являются устаревшими. Список дополнительных устаревших членов в библиотеке классов платформы .NET Framework см. в разделе [Устаревшие члены](../../../docs/framework/whats-new/obsolete-members.md).  
@@ -93,51 +94,51 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=nameWithType>|Класс <xref:System.Configuration.Assemblies.AssemblyHash> не рекомендуется к использованию.|  
 |<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5. Вместо этого используйте класс <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=nameWithType> в пространстве имен System.Runtime.CompilerServices.|  
 |<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|Также доступен альтернативный API: в этом качестве можно выпустить настраиваемый атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>.|  
-|<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.CONNECTDATA?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.CONNECTDATA?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.DESCKIND?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.DESCKIND?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.DISPPARAMS?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.DISPPARAMS?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.ELEMDESC?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.ELEMDESC?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.EXCEPINFO?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.EXCEPINFO?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.FILETIME?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.FILETIME?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.FUNCDESC?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.FUNCDESC?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.FUNCFLAGS?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.FUNCFLAGS?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.FUNCKIND?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.FUNCKIND?displayProperty=nameWithType> .|  
+|<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.CONNECTDATA?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.CONNECTDATA?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.DESCKIND?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.DESCKIND?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.DISPPARAMS?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.DISPPARAMS?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.ELEMDESC?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.ELEMDESC?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.EXCEPINFO?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.EXCEPINFO?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.FILETIME?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.FILETIME?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.FUNCDESC?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.FUNCDESC?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.FUNCFLAGS?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.FUNCFLAGS?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.FUNCKIND?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.FUNCKIND?displayProperty=nameWithType>.|  
 |<xref:System.Runtime.InteropServices.IDispatchImplAttribute?displayProperty=nameWithType>|Этот атрибут не рекомендуется к использованию и будет удален в будущей версии.|  
 |<xref:System.Runtime.InteropServices.IDispatchImplType?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.IDispatchImplAttribute?displayProperty=nameWithType> не рекомендуется к использованию.|  
-|<xref:System.Runtime.InteropServices.IDLDESC?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IDLDESC?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.IDLFLAG?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IDLFLAG?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.IMPLTYPEFLAGS?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.INVOKEKIND?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.INVOKEKIND?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.LIBFLAGS?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.LIBFLAGS?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.PARAMDESC?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.PARAMDESC?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.PARAMFLAG?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.PARAMFLAG?displayProperty=nameWithType> .|  
+|<xref:System.Runtime.InteropServices.IDLDESC?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IDLDESC?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.IDLFLAG?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IDLFLAG?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.IMPLTYPEFLAGS?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.INVOKEKIND?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.INVOKEKIND?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.LIBFLAGS?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.LIBFLAGS?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.PARAMDESC?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.PARAMDESC?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.PARAMFLAG?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.PARAMFLAG?displayProperty=nameWithType>.|  
 |<xref:System.Runtime.InteropServices.SetWin32ContextInIDispatchAttribute?displayProperty=nameWithType>|Этот атрибут является устаревшим. Домены приложений теперь не учитывают ограничений контекста активации в вызовах IDispatch.|  
-|<xref:System.Runtime.InteropServices.STATSTG?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.STATSTG?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.SYSKIND?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.SYSKIND?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.TYPEATTR?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.TYPEATTR?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.TYPEDESC?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.TYPEDESC?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.TYPEFLAGS?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.TYPEFLAGS?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.TYPEKIND?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.TYPEKIND?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.TYPELIBATTR?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.TYPELIBATTR?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIBindCtx?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IBindCtx?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIConnectionPoint?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIConnectionPointContainer?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumConnectionPoints?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumConnections?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IEnumConnections?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumMoniker?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IEnumMoniker?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumString?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IEnumString?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumVARIANT?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIMoniker?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IMoniker?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIPersistFile?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IPersistFile?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIRunningObjectTable?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IRunningObjectTable?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIStream?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMITypeComp?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.ITypeComp?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType> .|  
+|<xref:System.Runtime.InteropServices.STATSTG?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.STATSTG?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.SYSKIND?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.SYSKIND?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.TYPEATTR?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.TYPEATTR?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.TYPEDESC?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.TYPEDESC?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.TYPEFLAGS?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.TYPEFLAGS?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.TYPEKIND?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.TYPEKIND?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.TYPELIBATTR?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.TYPELIBATTR?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIBindCtx?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IBindCtx?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIConnectionPoint?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIConnectionPointContainer?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumConnectionPoints?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumConnections?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IEnumConnections?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumMoniker?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IEnumMoniker?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumString?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IEnumString?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumVARIANT?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIMoniker?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IMoniker?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIPersistFile?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IPersistFile?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIRunningObjectTable?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IRunningObjectTable?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIStream?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMITypeComp?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.ITypeComp?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType>.|  
 |<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType> .|  
 |<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope> применяется только для обеспечения прозрачной совместимости с .NET 2.0.|  
 |<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute> применяется только для обеспечения прозрачной совместимости с .NET 2.0. Взамен рекомендуется использовать <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType>.|  
@@ -189,7 +190,7 @@ ms.lasthandoff: 11/21/2017
   
 |Тип|Сообщение|  
 |----------|-------------|  
-|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=nameWithType>|Этот класс не рекомендуется к использованию. Взамен рекомендуется использовать <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=nameWithType> .|  
+|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=nameWithType>|Этот класс не рекомендуется к использованию. Взамен рекомендуется использовать <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=nameWithType>.|  
 |<xref:System.Web.UI.Design.DataBindingCollectionConverter?displayProperty=nameWithType>|Этот тип использовать не рекомендуется, поскольку редактирование привязок данных осуществляется не по таблице свойств, а посредством запуска <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=nameWithType>.|  
 |<xref:System.Web.UI.Design.DataBindingCollectionEditor?displayProperty=nameWithType>|Этот тип использовать не рекомендуется, поскольку редактирование привязок данных осуществляется не по таблице свойств, а посредством запуска <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=nameWithType>.|  
 |<xref:System.Web.UI.Design.IControlDesignerBehavior?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Web.UI.Design.IControlDesignerTag?displayProperty=nameWithType> и <xref:System.Web.UI.Design.IControlDesignerView?displayProperty=nameWithType>.|  
@@ -259,7 +260,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.ServiceModel.Configuration.NetPeerTcpBindingCollectionElement?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Функция одноранговых каналов является устаревшей и будет удалена в будущем.|  
 |<xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Функция одноранговых каналов является устаревшей и будет удалена в будущем.|  
 |<xref:System.ServiceModel.Configuration.PeerTransportElement?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Функция одноранговых каналов является устаревшей и будет удалена в будущем.|  
-|<xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Возможность одноранговых каналов является устаревшей и будет удалена в будущем.|  
+|<xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Функция одноранговых каналов является устаревшей и будет удалена в будущем.|  
   
  [К началу](#introduction)  
   
@@ -489,11 +490,11 @@ ms.lasthandoff: 11/21/2017
   
 |Тип|Сообщение|  
 |----------|-------------|  
-|Все типы в пространстве имен <xref:System.Workflow.Activities?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Rules.RuleActionTrackingEvent?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Rules.RuleConditionReference?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Rules.RuleSetReference?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
+|Все типы в пространстве имен <xref:System.Workflow.Activities?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|  
+|<xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|  
+|<xref:System.Workflow.Activities.Rules.RuleActionTrackingEvent?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|  
+|<xref:System.Workflow.Activities.Rules.RuleConditionReference?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|  
+|<xref:System.Workflow.Activities.Rules.RuleSetReference?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|  
   
  [К началу](#introduction)  
   
@@ -502,16 +503,16 @@ ms.lasthandoff: 11/21/2017
   
 |Тип|Сообщение|  
 |----------|-------------|  
-|Все типы в пространстве имен <xref:System.Workflow.ComponentModel>, кроме <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=nameWithType> и <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|Все типы в пространстве имен <xref:System.Workflow.ComponentModel.Compiler>, кроме <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=nameWithType> и <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|Все типы в пространстве имен <xref:System.Workflow.ComponentModel.Design>, кроме <xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityTypeCodeDomSerializer?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
+|Все типы в пространстве имен <xref:System.Workflow.ComponentModel>, кроме <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=nameWithType> и <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|  
+|Все типы в пространстве имен <xref:System.Workflow.ComponentModel.Compiler>, кроме <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=nameWithType> и <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|  
+|Все типы в пространстве имен <xref:System.Workflow.ComponentModel.Design>, кроме <xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityTypeCodeDomSerializer?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|  
   
  [К началу](#introduction)  
   
@@ -520,13 +521,13 @@ ms.lasthandoff: 11/21/2017
   
 |Тип|Сообщение|  
 |----------|-------------| 
-|<xref:System.Activities.Statements.Interop>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br />Типы Workflow Foundation 3.0 являются устаревшими. Вместо них используйте типы Workflow 4.0 из <xref:System.Activities>.\*.|  
-|<xref:System.Activities.Tracking.InteropTrackingRecord>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br />Типы Workflow Foundation 3.0 являются устаревшими. Вместо них используйте типы Workflow 4.0 из <xref:System.Activities>.\*.|   
-|Все типы в пространстве имен <xref:System.Workflow.Runtime>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|Все типы в пространстве имен <xref:System.Workflow.Runtime.Configuration>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|Все типы в пространстве имен <xref:System.Workflow.Runtime.DebugEngine>, кроме <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|Все типы в пространстве имен <xref:System.Workflow.Runtime.Hosting>, кроме <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|Все типы в пространстве имен <xref:System.Workflow.Runtime.Tracking>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
+|<xref:System.Activities.Statements.Interop>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br />Типы Workflow Foundation 3.0 являются устаревшими. Вместо них используйте типы Workflow 4.0 из <xref:System.Activities>\*.|  
+|<xref:System.Activities.Tracking.InteropTrackingRecord>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br />Типы Workflow Foundation 3.0 являются устаревшими. Вместо них используйте типы Workflow 4.0 из <xref:System.Activities>\*.|   
+|Все типы в пространстве имен <xref:System.Workflow.Runtime>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|  
+|Все типы в пространстве имен <xref:System.Workflow.Runtime.Configuration>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|  
+|Все типы в пространстве имен <xref:System.Workflow.Runtime.DebugEngine>, кроме <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|  
+|Все типы в пространстве имен <xref:System.Workflow.Runtime.Hosting>, кроме <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|  
+|Все типы в пространстве имен <xref:System.Workflow.Runtime.Tracking>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|  
   
  [К началу](#introduction)  
   
@@ -535,27 +536,27 @@ ms.lasthandoff: 11/21/2017
   
 |Тип|Сообщение|  
 |----------|-------------|  
-|<xref:System.ServiceModel.WorkflowServiceHost?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Activation.WorkflowServiceHostFactory?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Activities.Description.WorkflowRuntimeEndpoint?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Configuration.ExtendedWorkflowRuntimeServiceElementCollection?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Configuration.PersistenceProviderElement?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Configuration.WorkflowRuntimeElement?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.DurableOperationAttribute?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.DurableServiceAttribute?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.PersistenceProviderBehavior?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.UnknownExceptionAction?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.WorkflowRuntimeBehavior?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Dispatcher.DurableOperationContext?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.InstanceLockException?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.InstanceNotFoundException?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.LockingPersistenceProvider?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.PersistenceException?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.PersistenceProvider?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.PersistenceProviderFactory?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.SqlPersistenceProviderFactory?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>.\*.|  
-|Все типы в пространстве имен <xref:System.Workflow.Activities?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Runtime.Hosting.ChannelManagerService?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>.\*.|  
+|<xref:System.ServiceModel.WorkflowServiceHost?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Activation.WorkflowServiceHostFactory?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Activities.Description.WorkflowRuntimeEndpoint?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Configuration.ExtendedWorkflowRuntimeServiceElementCollection?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Configuration.PersistenceProviderElement?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Configuration.WorkflowRuntimeElement?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Description.DurableOperationAttribute?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Description.DurableServiceAttribute?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Description.PersistenceProviderBehavior?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Description.UnknownExceptionAction?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Description.WorkflowRuntimeBehavior?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Dispatcher.DurableOperationContext?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.InstanceLockException?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.InstanceNotFoundException?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.LockingPersistenceProvider?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.PersistenceException?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.PersistenceProvider?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.PersistenceProviderFactory?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.SqlPersistenceProviderFactory?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>\*.|  
+|Все типы в пространстве имен <xref:System.Workflow.Activities?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>\*.|  
+|<xref:System.Workflow.Runtime.Hosting.ChannelManagerService?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>\*.|  
   
  [К началу](#introduction)  
   
@@ -638,7 +639,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="VBCompat"></a>   
 ### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>Сборка: Microsoft.VisualBasic.Compatibility.dll  
-  Сведения о миграции с Visual Basic 6 в разделе [Центр ресурсов Visual Basic 6.0](https://msdn.microsoft.com/library/windows/desktop/ms788229).
+  Сведения о миграции с Visual Basic 6 см. в разделе [Центр ресурсов по Visual Basic 6.0](https://msdn.microsoft.com/library/windows/desktop/ms788229).
 |Тип|Сообщение|  
 |----------|-------------|  
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray?displayProperty=nameWithType>|Этот элемент устарел.|  

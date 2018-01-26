@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b97c53225afdc2710db26720ed3f28c12a322d8b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 6f67a7f6ac423bd66d9d25b834edc9cf55a5d6a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="filtering"></a>Фильтрация
 Система фильтрации [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] может использовать декларативные фильтры для сопоставления сообщений и принятия операционных решений. Фильтры можно использовать для определения того, что делать с сообщением, основываясь на проверке части сообщения. Процесс организации очереди, например, может использовать запрос XPath 1.0 для проверки элемента приоритета заданного заголовка, чтобы определить, требуется ли переместить сообщение вперед по очереди.  
@@ -94,4 +95,4 @@ ms.lasthandoff: 10/18/2017
 -   остальным параметрам конечной точки в `EndpointAddress`, как указано в объекте <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>.  
   
 ## <a name="see-also"></a>См. также  
- [Передача данных и сериализации](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+ [Передача данных и сериализация](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

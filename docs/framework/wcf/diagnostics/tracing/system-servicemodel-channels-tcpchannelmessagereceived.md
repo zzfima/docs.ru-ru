@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: eb896d04-e4a5-404f-9df6-5fcaa93e5b60
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a636b6195aa050f75489ee43c5b67ac861ccfc76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 819237265701c7b00efd817618bb08479b95b3d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelstcpchannelmessagereceived"></a>System.ServiceModel.Channels.TcpChannelMessageReceived
 System.ServiceModel.Channels.TcpChannelMessageReceived  

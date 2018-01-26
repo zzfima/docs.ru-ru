@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: c0e6cf23-63ac-47dd-bfe9-d5bdca826fac
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c29b590e1e8e046ad9d052dff561661a87932e00
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: db246037c388408e5722582049cf7a2b902caa18
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="query-execution"></a>Выполнение запроса
 После создания пользователем запрос LINQ преобразуется в дерево команд. Дерево команд является представлением запроса, совместимым с платформой Entity Framework. Затем дерево команд выполняется в источнике данных. Во время выполнения запроса вычисляются все включенные в него выражения (компоненты запроса), в том числе выражения для материализации запроса.  

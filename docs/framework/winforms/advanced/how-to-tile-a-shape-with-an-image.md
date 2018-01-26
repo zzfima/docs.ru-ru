@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f825371d3849e96ace627e660fd7c59bd290185
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d8726322e9443042b76c28e7b4b22ebc51c871bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-tile-a-shape-with-an-image"></a>Практическое руководство. Мозаичное заполнение фигуры заданным изображением
 Аналогично плитки можно поместить рядом друг с другом пола, чтобы заполнить фигуру прямоугольные изображения можно поместить рядом друг с другом. Для мозаичного заполнения внутренней области фигуры, используйте кисти текстуры. При построении <xref:System.Drawing.TextureBrush> объекта, один из аргументов, можно передать конструктору <xref:System.Drawing.Image> объекта. При использовании кисти текстуры для рисования внутренней части фигуры заполнение повторяющиеся копии изображения.  

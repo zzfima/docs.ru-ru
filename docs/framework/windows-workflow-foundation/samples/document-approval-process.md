@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b3b436d1f01e1ddb2f8f8058acfbbbdc7dcae12f
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 6b46597e16156db3d36fef97040104d8497294ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="document-approval-process"></a>Процесс утверждения документа
 В данном образце демонстрируется, как совместно использовать функции [!INCLUDE[wf](../../../../includes/wf-md.md)] и [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Вместе они реализуют сценарий утверждения документов. Клиентское приложение может представлять документы на утверждение и утверждать документы. Диспетчер утверждений облегчает взаимодействие между клиентами и обеспечивает соблюдение порядка утверждения. Утверждение - это рабочий процесс, который может выполняться несколькими способами. Поддерживается единичное утверждение, утверждение кворумом (частью группы утверждающих) и составное утверждение, состоящее из утверждения кворумом и следующего за ним единичного утверждения.  

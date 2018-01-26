@@ -16,16 +16,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4800b06b5d0bbc5ce51d7cf00798ca98ef8bf656
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d606140a5be2b1770bc5a16159e96e20b0fccdd9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textbox-control-windows-forms"></a>Элемент управления TextBox (Windows Forms)
 Windows Forms текстовые поля используются для получения входных данных от пользователя или для отображения текста. `TextBox` Управления обычно используется для редактируемого текста, хотя его можно также сделать доступным только для чтения. Текстовые поля можно отобразить несколько строк, переноса текста по размеру элемента управления и добавлять основные элементы форматирования. `TextBox` Управления позволяет вводить в элементе управления или отображать текст только в одном формате.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об элементе управления TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
  Описывается элемент управления, его основные возможности и свойства.  
   
@@ -49,7 +50,7 @@ Windows Forms текстовые поля используются для пол
   
 ## <a name="reference"></a>Ссылка  
  Класс <xref:System.Windows.Forms.TextBox>  
- Описание класса и ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  

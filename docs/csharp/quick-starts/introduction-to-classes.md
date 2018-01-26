@@ -4,20 +4,20 @@ description: "Создайте свою первую программу на C# 
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/11/2017
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 0ddb7508841087571c0cd095b1d1518e4aad50ff
-ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
+ms.openlocfilehash: 4e15b1b12b9420ca1781eca3f2578fa24c9ec82a
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="introduction-to-classes"></a>Общие сведения о классах
 
-В этом руководстве предполагается, что вы установили [пакет SDK для .NET Core](http://dot.net/core) и любой редактор по своему выбору. Если у вас нет редактора, попробуйте использовать [Visual Studio Code](https://code.visualstudio.com/) или [Visual Studio](https://www.visualstudio.com/) для Mac или Windows.
+Для работы с этим кратким руководством вам потребуется компьютер, который можно использовать для разработки. В руководстве по [началу работы с .NET за 10 минут](https://www.microsoft.com/net/core) содержатся инструкции по настройке локальной среды разработки на компьютерах Mac, Windows или Linux. Краткий обзор команд, которые будут использоваться, и ссылки на дополнительные сведения представлены в [вводной статье к руководствам по локальным средам](local-environment.md).
 
 ## <a name="create-your-application"></a>Создание приложения
 
@@ -69,7 +69,7 @@ namespace classes
         {
         }
 
-        public void MakeWithdrawal(decimal amount, DateTime date, string payee, string note)
+        public void MakeWithdrawal(decimal amount, DateTime date, string note)
         {
         }
     }
@@ -97,7 +97,7 @@ public BankAccount(string name, decimal initialBalance)
 Конструкторы вызываются при создании объекта с помощью [`new`](../language-reference/keywords/new.md). Замените строку `Console.WriteLine("Hello World!");` в файле ***program.cs*** следующей строкой (замените `<name>` своим именем):
 
 ```csharp
-var account = new BankAccount("<name", 1000);
+var account = new BankAccount("<name>", 1000);
 Console.WriteLine($"Account {account.Number} was created for {account.Owner} with {account.Balance} initial balance.");
 ```
 
@@ -169,9 +169,11 @@ Console.WriteLine(account.Balance);
 
 ```csharp
 // Test that the initial balances must be positive:
-try {
+try
+{
     var invalidAccount = new BankAccount("invalid", -55);
-} catch (ArgumentOutOfRangeException e)
+}
+catch (ArgumentOutOfRangeException e)
 {
     Console.WriteLine("Exception caught creating account with negative balance");
     Console.WriteLine(e.ToString());
@@ -182,9 +184,11 @@ try {
 
 ```csharp
 // Test for a negative balance
-try {
+try
+{
     account.MakeWithdrawal(750, DateTime.Now, "Attempt to overdraw");
-} catch (InvalidOperationException e)
+}
+catch (InvalidOperationException e)
 {
     Console.WriteLine("Exception caught trying to overdraw");
     Console.WriteLine(e.ToString());
@@ -209,7 +213,7 @@ Console.WriteLine(account.GetAccountHistory());
 
 Введите `dotnet run`, чтобы просмотреть результаты.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 Если у вас возникли вопросы, см. оригинал этого руководства [в нашем репозитории GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/classes-quickstart/).
 

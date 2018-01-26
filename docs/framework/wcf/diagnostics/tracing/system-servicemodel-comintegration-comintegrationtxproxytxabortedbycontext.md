@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e783e3cb-b011-4a3b-890b-8c710978cbc8
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 741766a1233e0b6f5a103caa0100c5b8b037b73a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 442101464b603438e4b08b69cdca4a5679d18471
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationtxproxytxabortedbycontext"></a>System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByContext
 System.ServiceModel.ComIntegration.ComIntegrationTxProxyTxAbortedByContext  

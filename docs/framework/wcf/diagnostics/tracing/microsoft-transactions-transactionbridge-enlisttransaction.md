@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ba793c1d-6b2f-43da-b14d-a825c6c31b01
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6a49db3864541d6a06d64c5f5bff3b361e1a87f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 584507df6338a94980b5262d568c615421b851c4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="microsofttransactionstransactionbridgeenlisttransaction"></a>Microsoft.Transactions.TransactionBridge.EnlistTransaction
 Служба протокола WS-Atomic Transaction успешно зачислена в транзакцию, использующую предоставленный контекст координации.  

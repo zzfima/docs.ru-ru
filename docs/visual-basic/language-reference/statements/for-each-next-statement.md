@@ -30,11 +30,11 @@ ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 caps.latest.revision: "56"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4aefacd33e0b3c8f64fd26929af06469136237f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 11601eb1caad1c6cc6d9898f590436a977a78fa1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>Оператор For Each...Next (Visual Basic)
 Повторяет группу операторов для каждого элемента в коллекции.  
@@ -57,11 +57,11 @@ Next [ element ]
 |---|---|  
 |`element`|Требуется в `For Each` инструкции. Необязательно для `Next` инструкции. Переменная. Используется для итерации элементов коллекции.|  
 |`datatype`|Обязателен, если `element` уже не объявлен. Тип данных `element`.|  
-|`group`|Обязательный. Переменная с типом, который является типом коллекции или объекта. Относится к коллекции, по которому `statements` будут повторяться.|  
-|`statements`|Необязательно. Один или несколько операторов между `For Each` и `Next` , запустите на каждый элемент `group`.|  
-|`Continue For`|Необязательно. Передает управление в начало `For Each` цикла.|  
-|`Exit For`|Необязательно. Передает управление из `For Each` цикла.|  
-|`Next`|Обязательный. Завершает определение `For Each` цикла.|  
+|`group`|Обязательно. Переменная с типом, который является типом коллекции или объекта. Относится к коллекции, по которому `statements` будут повторяться.|  
+|`statements`|Необязательный. Один или несколько операторов между `For Each` и `Next` , запустите на каждый элемент `group`.|  
+|`Continue For`|Необязательный. Передает управление в начало `For Each` цикла.|  
+|`Exit For`|Необязательный. Передает управление из `For Each` цикла.|  
+|`Next`|Обязательно. Завершает определение `For Each` цикла.|  
   
 ## <a name="simple-example"></a>Простой пример  
  Используйте `For Each`... `Next` цикл, повторяемый набор инструкций для каждого элемента коллекции или массива.  
@@ -73,7 +73,7 @@ Next [ element ]
   
  [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_1.vb)]  
   
- Дополнительные примеры см. в разделе [коллекций](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) и [массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Дополнительные примеры см. в разделе [коллекций](../../../standard/collections/index.md) и [массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="nested-loops"></a>Вложенные циклы  
  Можно вложить `For Each` циклы, поместив цикл один в другой.  
@@ -114,7 +114,7 @@ Next [ element ]
   
  [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_4.vb)]  
   
- Дополнительные сведения см. в разделе [итераторы](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7), [оператор Yield](../../../visual-basic/language-reference/statements/yield-statement.md), и [итератор](../../../visual-basic/language-reference/modifiers/iterator.md).  
+ Дополнительные сведения см. в разделе [итераторы](../../programming-guide/concepts/iterators.md), [оператор Yield](../../../visual-basic/language-reference/statements/yield-statement.md), и [итератор](../../../visual-basic/language-reference/modifiers/iterator.md).  
   
 ## <a name="technical-implementation"></a>Техническая реализация  
  Когда `For Each`...`Next` выполняется инструкция, Visual Basic вычисляет коллекцию только один раз, до начала цикла. Если в блоке операторов изменяется `element` или `group`, эти изменения не влияют на итерацию цикла.  
@@ -180,7 +180,7 @@ End Sub
  [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
   
 ## <a name="see-also"></a>См. также  
- [Коллекции](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [Коллекции](../../../standard/collections/index.md)  
  [Оператор For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)  
  [Циклические структуры](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
  [Оператор While...End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  

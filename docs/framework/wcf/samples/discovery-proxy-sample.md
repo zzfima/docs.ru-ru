@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1dfa02df-15b1-4e97-9c8e-f5f2772711b0
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f16cf2ffc9e03308ce3b8a5e967c29e624ffd1af
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 4b6e24c72002c7eef0e03af18f43992cc93b1d5c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-proxy-sample"></a>Образец прокси-сервера обнаружения
 Этот образец демонстрирует создание реализации прокси-сервера обнаружения для хранения сведений о существующих службах, а также то, как клиенты могут запрашивать сведения у этого прокси-сервера. Этот образец состоит из трех проектов.  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="service"></a>Служба  
  В проекте «Служба» из файла Program.cs для конечной точки объявлений используется такой же URI, как и для прокси-сервера обнаружения. Сделано это потому, что служба использует конечную точку для отправки объявлений, а прокси-сервер с ее помощью получает эти сообщения. Служба использует объект <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> и добавляет в него конечную точку объявлений.  
   
-## <a name="client"></a>Клиент  
+## <a name="client"></a>"Клиент";  
  В проекте «Клиент» для конечной точки зонда используется такой же URI, как и для прокси-сервера. Сделано это потому, что в этом сценарии зонды также одноадресно доставляются именно в конечную точку, имеющуюся на прокси-сервере. Клиент соединяется с этим хорошо известным адресом, а затем запрашивает службу. Обнаружив службу, он устанавливает соединение с ней.  
   
 #### <a name="to-use-this-sample"></a>Использование этого образца  

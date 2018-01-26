@@ -18,16 +18,16 @@ ms.assetid: 53c66373-ff43-431f-b4bb-f98362830279
 caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 02672e88709dbe01aedcc31c76819728ca30dfb9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 718eff92a2ba472661f0067e1766e63e0703178a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>Приступая к работе с LINQ в Visual Basic
 Этот раздел содержит общие сведения, примеры и общие сведения, которые помогут освоить и использовать Visual Basic и встроенных в язык запросы (LINQ).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Написание первого запроса LINQ](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)  
  Описание трех этапов в написании базового запроса LINQ: получение источника данных, написание запроса и выполнения запроса.  
   
@@ -50,10 +50,10 @@ ms.lasthandoff: 10/18/2017
  [Общие сведения о LINQ to XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
  Описывает, как Visual Basic поддерживает LINQ to XML.  
   
- [LINQ to DataSet Обзор](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
+ [Общие сведения о LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
  Предоставляет общие сведения о LINQ to DataSet.  
   
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
  Содержит описание LINQ к технологии SQL и предоставляет ссылки на разделы, помогающие использовать LINQ to SQL.  
   
  [Инструменты для поддержки LINQ в IDE Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  

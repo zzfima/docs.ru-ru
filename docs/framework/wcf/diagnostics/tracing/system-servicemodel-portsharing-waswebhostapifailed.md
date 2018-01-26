@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 31a3ed07-16dc-4aa2-8cd7-6974ef75432b
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6e596591e8900c6173219060bfc8865d1826a0c6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 7029a7d21a6e0618394010e043033c72b2e409e3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelportsharingwaswebhostapifailed"></a>System.ServiceModel.PortSharing.WasWebHostAPIFailed
 System.ServiceModel.PortSharing.WasWebHostAPIFailed  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Не удалось осуществить вызов API указанной службы активации Windows (WAS), см. указанный код ошибки.  
   
 ## <a name="see-also"></a>См. также  

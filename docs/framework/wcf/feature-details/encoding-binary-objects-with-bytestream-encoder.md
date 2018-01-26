@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 020ee981-c889-4b12-a3ea-91823ef46444
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: acf9d2ace66702c5f0bc522d97ae92869891a38b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 2cf68356ffa5fe20de7bd417c77388cd214ca718
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="encoding-binary-objects-with-bytestream-encoder"></a>Кодирование двоичных объектов при помощи кодировщика ByteStream
 Отправка и получение необработанных двоичных данных через [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] настраиваются с помощью <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>.  

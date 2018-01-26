@@ -24,11 +24,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9b7abab8747272fcf23611539c29ab476c5bed48
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fae5c8553cc395268b1c6afb1b64727014756975
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-wpf"></a>Безопасность (WPF)
 <a name="introduction"></a>При разработке [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] автономных приложений и приложений, размещенных в веб-браузере, необходимо учитывать модели безопасности. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]Автономные приложения выполняются с неограниченными разрешениями ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** набор разрешений) независимо от способа развертывания с помощью установщика Windows (.msi) XCopy, или [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Развертывание автономных приложений WPF с частичным доверием с помощью ClickOnce не поддерживается. Тем не менее, ведущее приложение с полным доверием можно создать с частичным доверием <xref:System.AppDomain> с помощью модели надстроек .NET Framework. Дополнительные сведения см. в разделе [Общие сведения о надстройках WPF](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
@@ -67,12 +68,12 @@ ms.lasthandoff: 11/21/2017
 ### <a name="application-navigation-security"></a>Безопасность навигации в приложениях  
  Переход в приложении считается безопасным, если его можно с помощью пакета [!INCLUDE[TLA2#tla_uri](../../../includes/tla2sharptla-uri-md.md)], который поддерживает четыре типа содержимого:  
   
-|Тип содержимого|Описание|Пример URI|  
+|Тип содержимого|Описание:|Пример URI|  
 |------------------|-----------------|-----------------|  
 |Ресурс|Файлы, добавленные в проект с типом построения **ресурсов**.|`pack://application:,,,/MyResourceFile.xaml`|  
 |Content|Файлы, добавленные в проект с типом построения **содержимого**.|`pack://application:,,,/MyContentFile.xaml`|  
 |Исходный веб-сайт|Файлы, добавленные в проект с типом построения **нет**.|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
-|Код приложения|Ресурсы XAML, имеющие скомпилированный код программной части.<br /><br /> -или-<br /><br /> XAML-файлов, которые были добавлены в проект с типом построения **страницы**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
+|Код приложения|Ресурсы XAML, имеющие скомпилированный код программной части.<br /><br /> - или -<br /><br /> XAML-файлов, которые были добавлены в проект с типом построения **страницы**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
 >  Дополнительные сведения о файлах данных и пакет [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)], в разделе [ресурса приложения WPF, содержимое и файлы данных](../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).  

@@ -23,11 +23,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b460afb393c1b88b34281a8db1b61203e5c5962
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b2ede616b311119d174534e53cb3aaf9e366c7c4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Пример. Проверка данных элемента управления DataGridView в Windows Forms
 При отображении функциональных возможностей ввода данных, пользователям необходимо часто проверки данных, введенных в форму. <xref:System.Windows.Forms.DataGridView> Класс предоставляет удобный способ выполнять проверку перед данные передаются в хранилище данных. Вы можете проверять данные, обрабатывая <xref:System.Windows.Forms.DataGridView.CellValidating> событие, которое вызывается <xref:System.Windows.Forms.DataGridView> при изменении текущей ячейки.  
@@ -85,7 +86,7 @@ ms.lasthandoff: 11/21/2017
   
      Вы увидите <xref:System.Windows.Forms.DataGridView> с данными из `Customers` таблицы. Если дважды щелкнуть ячейку в `CompanyName` столбца, можно изменить значение. Если удалить все символы и нажать клавишу TAB, чтобы выйти из ячейки, <xref:System.Windows.Forms.DataGridView> предотвращает выход. При вводе непустой строкой в ячейке, <xref:System.Windows.Forms.DataGridView> управления служит для выхода из ячейки.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  Это приложение позволяет основные <xref:System.Windows.Forms.DataGridView> возможности элемента управления. Можно настроить внешний вид и поведение <xref:System.Windows.Forms.DataGridView> управления несколькими способами:  
   
 -   Изменение стилей границ и заголовка. Дополнительные сведения см. в разделе [как: изменения границ и стили линий сетки в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md).  

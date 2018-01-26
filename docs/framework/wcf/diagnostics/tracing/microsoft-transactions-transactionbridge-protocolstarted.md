@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ac770da2-218e-4708-aeb5-465369c94a8d
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b9046bcf4382ba664b85e033fad1a221189bbadf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 1cc0b784105199d341b4646cb09d8f1a7751aa28
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="microsofttransactionstransactionbridgeprotocolstarted"></a>Microsoft.Transactions.TransactionBridge.ProtocolStarted
 Была запущена служба протокола WS-Atomic Transaction.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Трассируется во время запуска диспетчера транзакций, чтобы показать, какой протокол был успешно запущен.  
   
 ## <a name="see-also"></a>См. также  

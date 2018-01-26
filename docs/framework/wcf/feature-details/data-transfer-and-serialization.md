@@ -13,20 +13,21 @@ helpviewer_keywords:
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 41357c9a039414ac692bac69337b2963d5c6b341
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 8daadec1eef20e62747cdbfcafd1fd13cfc16093
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-transfer-and-serialization"></a>Передача данных и сериализация
 В распределенных системах для выполнения каких-либо задач клиенты и службы обмениваются данными. Разработчики служб и клиентов должны понимать принципы обработки и сериализации данных в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], чтобы создавать эффективные и простые в обслуживании приложения.  
   
-## <a name="in-this-section"></a>Содержание  
- [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Задание передачи данных в контрактах служб](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
  Базовые принципы передачи данных в службах.  
   
  [Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
  [Сериализатор контракта данных](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
  Сериализация данных с помощью класса <xref:System.Runtime.Serialization.DataContractSerializer> и каких-либо расширений класса <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
   
- [С помощью класса XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  
+ [Использование класса XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  
  Способы и причины использования класса <xref:System.Xml.Serialization.XmlSerializer> в качестве альтернативы классу <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
  [Использование контрактов сообщений](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
  [Фильтрация](../../../../docs/framework/wcf/feature-details/filtering.md)  
  Фильтрация, позволяющая выполнять предварительную обработку сообщений на основе различных критериев.  
   
- [Большие объемы данных и потоковой передачи](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
+ [Большие наборы данных и потоковая передача](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
  Отправка больших фрагментов данных, например двоичных файлов.  
   
  [Вопросы безопасности для данных](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  

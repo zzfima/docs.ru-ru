@@ -21,11 +21,12 @@ caps.latest.revision: "23"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8009f832434d6bbad2ad7bee9cbfd62c81d623c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: efdb5055197611baf56fdc25fe7c0700c1a06dfd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe (редактор ресурсов Windows Forms)
 Редактор ресурсов Windows Forms (Winres.exe) — это программа визуальной разметки, используемая при локализации ресурсов пользовательского интерфейса Windows Forms. Файлы RESX и RESOURCES, используемые как входные для программы Winres.exe, могут быть созданы с использованием среды визуального проектирования, такой как Microsoft Visual Studio. Информацию о развертывании ресурсов в приложениях .NET Framework см. в разделе [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md).  
@@ -43,11 +44,11 @@ winres /?
   
 ## <a name="remarks"></a>Примечания  
   
-|Аргумент|Описание|  
+|Аргумент|Описание:|  
 |--------------|-----------------|  
 |`resourceFile`|Файл ресурсов, который требуется локализовать. Это должен быть файл ресурсов Windows Forms с расширением RESX или RESOURCES, созданный с помощью конструктора Visual Studio. Программа Winres.exe не может открывать универсальные RESX-файлы и RESOURCES-файлы.|  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
 |**/?**|Отображает синтаксис команд и параметров программы.|  
   
@@ -95,7 +96,7 @@ winres /?
   
 |Visual Studio|.NET Framework|Winres.exe|  
 |-------------------|--------------------|----------------|  
-|Visual Studio .NET 2002|1,0|1,0|  
+|Visual Studio .NET 2002|1.0|1.0|  
 |Visual Studio .NET 2003|1.1|1.1|  
 |Visual Studio 2005|2.0|2.0|  
 |Visual Studio 2008|3.0 и 3.5|3.0 и 3.5|  
@@ -116,7 +117,7 @@ winres /?
   
 2.  Чтобы открыть ресурсы по умолчанию для локализуемой формы, выберите команду **Открыть** в меню **Файл** и найдите нужный файл.  
   
-     -или-  
+     - или -  
   
      При запуске программы Winres.exe в командной строке укажите файл, который требуется открыть.  
   

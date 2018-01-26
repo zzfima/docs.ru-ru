@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8bb2edc8-e8e7-44c2-adc7-f44e11bda4f0
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8e311d6e9c67a30636bdeaea7982057605678684
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: e1c9d438840a0b9c15597177ca4e6d870d526756
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="model-defined-function"></a>функция определенной модели
 Объект *определяемой моделью функции* — это функция, которая определена в концептуальной модели. Тело функции, определенной модели представляется в формате [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md), что позволяет выполнять функцию должна быть представлена независимо от правил или языков, поддерживаемых в источнике данных.  
@@ -47,6 +48,6 @@ ms.lasthandoff: 11/21/2017
  [!code-xml[EDM_Example_Model#ModelDefinedFunction](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#modeldefinedfunction)]  
   
 ## <a name="see-also"></a>См. также  
- [Основные понятия модели данных сущности](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Модель EDM](../../../../docs/framework/data/adonet/entity-data-model.md)  
- [Модель данных сущности: Примитивные типы данных](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)
+ [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [Сущностная модель данных](../../../../docs/framework/data/adonet/entity-data-model.md)  
+ [Модель EDM. Примитивные типы данных](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)

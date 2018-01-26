@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 431ccb35-b593-4157-8e4d-f20e579630fd
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6092bd0a4272678c9fc2a714e81eb248c624415c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 26f755ffcf38a54a06646eb1bc848fc70d4e7789
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelcommunicationobjectopened"></a>System.ServiceModel.CommunicationObjectOpened
 System.ServiceModel.CommunicationObjectOpened  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Объект связи был открыт.  
   
 ## <a name="see-also"></a>См. также  

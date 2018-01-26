@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 18aff4d8-bde8-461b-9960-ccabb24e9d22
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c5ae3ace43aeaf13f26724f5edb88dd447603161
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 780ac9087a235cee1539dfcb591d99542c68efbb
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-retrieve-many-objects-at-once"></a>Практическое руководство. Извлечение нескольких объектов одновременно
 Для извлечения нескольких объектов из одного запроса используется <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.  

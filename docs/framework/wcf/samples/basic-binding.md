@@ -10,23 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2a0e8ac4-23e7-45ef-98dc-40691aac530a
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0d971cb50ad52b9a9fd913d4c10714eee1eed444
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 89fb080a890ee866ab16882065bd35495fadfddb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-binding"></a>Простая привязка
 Этот раздел содержит базовые образцы, которые демонстрируют использование атрибутов пользовательской привязки элемента конечной точки.  
   
-## <a name="in-this-section"></a>Содержание  
- [Образец безопасности сообщений](../../../../docs/framework/wcf/samples/message-security-sample.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Пример безопасности сообщений](../../../../docs/framework/wcf/samples/message-security-sample.md)  
  Демонстрирует реализацию приложения, в котором используется `basicHttpBinding` и безопасность сообщений.  
   
- [Basicbinding с безопасность транспорта обеспечением](../../../../docs/framework/wcf/samples/basicbinding-with-transport-security.md)  
+ [BasicBinding с обеспечением безопасности транспорта](../../../../docs/framework/wcf/samples/basicbinding-with-transport-security.md)  
  Демонстрирует использование безопасности транспорта SSL с базовой привязкой.  
   
  [BasicBinding](../../../../docs/framework/wcf/samples/basicbinding.md)  

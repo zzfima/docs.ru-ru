@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1e6e97bf935d37f9a39569190b7393a47a54781a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: cbcf33aa734cde1d2458e46cd161f9ea5197a827
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity"></a>Действие
 В этом разделе описываются трассировки действий в модели трассировки [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]. Действия — это блоки обработки, позволяющие пользователю сузить область сбоя. Ошибки, возникающие в одном действии, напрямую связаны между собой. Например, операция заканчивается неудачей в результате сбоя при расшифровывании сообщения. Трассировки операции и расшифровывания сообщения появляются в том же действии и показывают прямую связь между ошибкой расшифровывания и ошибкой запроса.  
@@ -110,6 +111,6 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 ## <a name="see-also"></a>См. также  
  [Настройка трассировки](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
  [Использование программы Service Trace Viewer для просмотра скоррелированных трассировок и устранения неполадок](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [Сценарии трассировки конца в конец](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
+ [Сценарии сквозной трассировки](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
  [Средство просмотра трассировки служб (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [Выдача сообщений трассировки пользовательского кода](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)
+ [Создание трассировки пользовательского кода](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)

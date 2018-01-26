@@ -10,17 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 823b1287-002b-4a3a-81fd-183f15a482ca
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c5fc180a756245410e8fceae2adccad4068ebfd5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 2e878a0a0e4946ab6070cdd2c08a0e09a3af0b1d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="percent-of-max-concurrent-sessions"></a>Процент максимального количества одновременных сеансов
 Имя счетчика: «Процент максимального количества одновременных сеансов»  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Количество одновременных сеансов как процент максимального количества одновременных сеансов.

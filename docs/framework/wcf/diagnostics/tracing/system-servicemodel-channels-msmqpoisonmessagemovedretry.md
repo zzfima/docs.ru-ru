@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5c6c0a55-f92d-442c-a61e-7841341a79df
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7d63638a3ae8829179cf95d8465bcd5daa7fb453
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 566c35e9906b38a9c8fc3ccd39071127f7780e6a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsmsmqpoisonmessagemovedretry"></a>System.ServiceModel.Channels.MsmqPoisonMessageMovedRetry
 System.ServiceModel.Channels.MsmqPoisonMessageMovedRetry  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Подозрительное сообщение перемещено в подочередь повторных попыток.  
   
 ## <a name="see-also"></a>См. также  

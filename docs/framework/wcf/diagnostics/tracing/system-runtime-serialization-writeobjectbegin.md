@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1f4cb7f1-8bf2-4b6d-b693-43a83c74260a
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ef72ae09925a2bb7420f802448adcd36a43eacac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: f07120c66f4774e8bff283bc00dab1d957bc1d45
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemruntimeserializationwriteobjectbegin"></a>System.Runtime.Serialization.WriteObjectBegin
 System.Runtime.Serialization.WriteObjectBegin  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Запуск метода WriteObject.  
   
 ## <a name="see-also"></a>См. также  

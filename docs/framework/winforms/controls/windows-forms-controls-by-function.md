@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c49c42b02511fea66c88544bf689b2b05e788ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a48e1e728e3ded58b0045554a81588933027074c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-controls-by-function"></a>Функциональная классификация элементов управления Windows Forms
 В Windows Forms существуют элементы управления и компоненты, которые выполняют ряд функций. В следующей таблице перечислены элементы управления Windows Forms и компонентов в соответствии с основной функцией. Кроме того где находятся несколько элементов управления, которые выполняют одинаковую функцию, рекомендуемые элементы управления перечислены с указанием использовавшихся ранее устаревших элемента управления. В отдельной таблице с их рекомендуемые замены перечислены устаревшие элементы управления.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="recommended-controls-and-components-by-function"></a>Рекомендуемые элементы управления и компоненты по функциям  
   
-|Функция|Control|Описание|  
+|Функция|Элемент управления|Описание:|  
 |--------------|-------------|-----------------|  
 |Отображение данных|Элемент управления <xref:System.Windows.Forms.DataGridView>|<xref:System.Windows.Forms.DataGridView> Управления предоставляет настраиваемую таблицу для отображения данных. <xref:System.Windows.Forms.DataGridView> Класс позволяет настраивать ячеек, строк, столбцов и границ. **Примечание:** <xref:System.Windows.Forms.DataGridView> управления предоставляет множество основных и дополнительных компонентов, отсутствующих в <xref:System.Windows.Forms.DataGrid> элемента управления. Дополнительные сведения см. в разделе [различия между Windows Forms DataGridView и элементам управления DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
 |Привязка данных и перемещение|<xref:System.Windows.Forms.BindingSource>компонент|Упрощает привязку элементов управления в форме к данным за счет управления, уведомления об изменениях и другие службы.|  

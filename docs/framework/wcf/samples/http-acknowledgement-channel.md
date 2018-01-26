@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 469f3056-5ef2-4753-8acf-b574d23d83cf
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: bf8e62d99ffc0a7296d83685dfeb15993afff934
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: d07a17c5ed4302657671e0247e44ac0ef6e75518
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="http-acknowledgement-channel"></a>Канал подтверждений HTTP
 Канал подтверждения HTTP - это пример многоуровневого канала, который изменяет односторонний шаблон обмена сообщениями, позволяя службе подтверждать получение сообщений или повторно использовать входящие сообщения, а не отправлять подтверждение автоматически при получении. Канал подтверждения HTTP также позволяет службе задерживать подтверждение до получения гарантии обработки сообщения на уровне бизнеса.  

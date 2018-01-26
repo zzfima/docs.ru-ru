@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c254865800694af8eb754c3e8d4072688fd7e89a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: f5b004b70716c61af8ac37fef76f660c488e5a74
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="schema-restrictions"></a>Ограничения схемы
 Вторым необязательным параметром метода **GetSchema** в противном случае возвращается ограничений, которые используются для ограничения объема сведений о схеме, и оно передается **GetSchema** метод как массив строк . Позиция в массиве определяет значения, которые можно передать, и она эквивалентна номеру ограничения.  
@@ -153,7 +154,7 @@ class Program
   
 |Имя ограничения|Имя параметра|Значение ограничения по умолчанию|Номер ограничения|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Имя|@Name|Имя|1|  
+|name|@Name|name|1|  
   
 ### <a name="tables"></a>Таблицы  
   
@@ -205,7 +206,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|SPECIFIC_CATALOG|1|  
 |Владелец|@Owner|SPECIFIC_SCHEMA|2|  
-|Имя|@Name|SPECIFIC_NAME|3|  
+|name|@Name|SPECIFIC_NAME|3|  
 |Параметр|@Parameter|PARAMETER_NAME|4|  
   
 ### <a name="procedures"></a>Процедуры  
@@ -214,7 +215,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|SPECIFIC_CATALOG|1|  
 |Владелец|@Owner|SPECIFIC_SCHEMA|2|  
-|Имя|@Name|SPECIFIC_NAME|3|  
+|name|@Name|SPECIFIC_NAME|3|  
 |Тип|@Type|ROUTINE_TYPE|4|  
   
 ### <a name="indexcolumns"></a>IndexColumns  
@@ -249,7 +250,7 @@ class Program
 |Catalog|@Catalog|CONSTRAINT_CATALOG|1|  
 |Владелец|@Owner|CONSTRAINT_SCHEMA|2|  
 |Таблица|@Table|TABLE_NAME|3|  
-|Имя|@Name|CONSTRAINT_NAME|4|  
+|name|@Name|CONSTRAINT_NAME|4|  
   
 ## <a name="sql-server-2008-schema-restrictions"></a>Ограничения схемы SQL Server 2008  
  В приведенных ниже таблицах перечислены ограничения коллекций схем SQL Server 2008. Эти ограничения действуют, начиная с версии .NET Framework 3.5 с пакетом обновления 1 (SP1) и SQL Server 2008. Они не поддерживаются в предыдущих версиях .NET Framework и SQL Server.  

@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f04ad0fd-edc7-4cbc-8979-356f2a1131c4
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: acdc4f7d58eb0f5737adb59b113ea24d723d3b61
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: f2687d045db28974e99b2f2b6a3222924a520720
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="determining-workflow-execution-duration-using-tracing"></a>Определение времени выполнения рабочего процесса с помощью трассировки
 В этом разделе демонстрируется, как определить время, которое требуется для выполнения успешно созданного резидентного рабочего процесса с помощью трассировки рабочего процесса.  

@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a81101acbf65546ea068e6b5a0e8d9045aaadc71
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: f53ee18345347f506a404a22bf5bfea6af037463
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="getdemultiplexedstub-function"></a>Функция GetDemultiplexedStub
 Создает приемник объект сервера пересылки для клиента при получении асинхронные вызовы от управления Windows.
@@ -38,7 +39,7 @@ HRESULT GetDemultiplexedStub (
 ## <a name="parameters"></a>Параметры
 
 `pObject`  
-[in] Указатель на реализацию клиента в процессе [IWbemObjectSink](https://msdn.microsoft.com/en-us/library/aa391787(v=vs.85).aspx).
+[in] Указатель на реализацию клиента в процессе [IWbemObjectSink](https://msdn.microsoft.com/library/aa391787(v=vs.85).aspx).
 
 `isLocal`  
 [in] Флаг, который указывает, является ли событие локального (`true`); в противном случае `false`.

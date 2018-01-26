@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b864ebc9-ed8e-4059-85fd-36d9198f5521
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f40fa8a29ea1c4204c6c3c9aa10507bd0a8a4789
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: ba8a81c4506d3dfa06d749859246d41fc726e5ed
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-data-operations-in-adonet"></a>Операции данных SQL Server Data в ADO.NET
 В данном разделе описываются возможности и функции SQL Server, характерные для поставщика данных .NET Framework для SQL Server (<xref:System.Data.SqlClient>).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Операции массового копирования в SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
  Описание возможности массового копирования для поставщика данных .NET Framework для SQL Server.  
   
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
  [Асинхронные операции](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
  Описывается выполнения асинхронных операций с базой данных с помощью API-интерфейса, созданного по асинхронной модели, используемой в платформе .NET Framework.  
   
- [Возвращающие табличные значения параметров](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  
+ [Возвращающие табличное значение параметры](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  
  Описывается работа с возвращающими табличное значение параметрами, появившимися в SQL Server 2008.  
   
 ## <a name="see-also"></a>См. также  

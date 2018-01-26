@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 725718f5-da29-4841-9f53-aafef64ba977
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 24211e82633e41256a8c801000c4d3e17d9d8612
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: c2a11ae83be1c7f75c5bc440c5f8162877106b07
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-return-rowsets"></a>Практическое руководство. Возврат наборов строк
 В данном примере показано возвращение набора строк из базы данных и включение входного параметра в результаты фильтрации.  

@@ -19,18 +19,19 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 62c290ec0784187cc45b463af60280d2619738d8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e9980881ff68513e8283886b78e0f7a707417fa7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugthreadenum-interface1"></a>ICorDebugThreadEnum интерфейс1
 Реализует методы ICorDebugEnum и выполняет перечисление массивов ICorDebugThread.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод Next](../../../../docs/framework/unmanaged-api/debugging/icordebugthreadenum-next-method.md)|Возвращает заданное число `ICorDebugThread` экземпляров из перечисления, начиная с текущей позиции.|  
   

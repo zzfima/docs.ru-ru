@@ -14,11 +14,11 @@ ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c85936d366f377b3da45b4e342c3373aae959984
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5a1edd7976f1e22117e1f4f31354388d5257ffc1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="events-visual-basic"></a>События (Visual Basic)
 Возможно, вы воспринимаете проект [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] как набор процедур, выполняемых в определенной последовательности. Но на практике большинство программ управляются событиями, то есть поток выполнения определяется внешними воздействиями, которые называются *событиями*.  
@@ -105,7 +105,7 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="related-sections"></a>Связанные разделы  
   
-|Заголовок|Описание|  
+|Заголовок|Описание:|  
 |-----------|-----------------|  
 |[Пошаговое руководство. Объявление и создание событий](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)|Предоставляет пошаговую инструкцию для объявления и создания событий класса.|  
 |[Пошаговое руководство. Обработка событий](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)|Описывает способ создания процедуры обработчика событий.|  
@@ -113,5 +113,5 @@ ms.lasthandoff: 10/18/2017
 |[Практическое руководство. Объявление пользовательских событий для экономии памяти](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Показывает, как определить пользовательское событие, которое использует память только при обработке события.|  
 |[Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|Перечисляет распространенные проблемы, возникающие для обработчиков событий в наследуемых компонентах.|  
 |[События](../../../../standard/events/index.md)|Предоставляет обзор модели событий в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].|  
-|[Создание обработчиков событий в Windows Forms](https://msdn.microsoft.com/library/dacysss4.aspx)|Описывает, как работать с событиями, связанными с объектами Windows Forms.|  
+|[Создание обработчиков событий в Windows Forms](../../../../framework/winforms/creating-event-handlers-in-windows-forms.md)|Описывает, как работать с событиями, связанными с объектами Windows Forms.|  
 |[Делегаты](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Предоставляет обзор делегатов в Visual Basic.|

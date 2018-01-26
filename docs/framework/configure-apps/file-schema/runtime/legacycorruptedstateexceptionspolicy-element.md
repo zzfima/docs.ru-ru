@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e4379f6f38c886504905483cefd7c7a6bbd519ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f09d6cf256e072d01f3cfc79987aa4d240f96235
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltlegacycorruptedstateexceptionspolicygt-element"></a>&lt;legacyCorruptedStateExceptionsPolicy&gt; элемент
 Указывает, допускает ли среда управляемому коду перехватывать нарушения прав доступа и другие исключения поврежденного состояния.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`false`|Приложение не будет перехватывать сбои поврежденного состояния исключения например нарушения прав доступа. Это значение по умолчанию.|  
 |`true`|Приложение будет перехватывать сбои поврежденного состояния исключения например нарушения прав доступа.|  

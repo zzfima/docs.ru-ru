@@ -15,11 +15,11 @@ ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 99f5129d5cb43cddfb17731f337a72fae22d3626
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0bc2f5c2dca1fbd6039f10ddd6204673f60a679d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="yield-statement-visual-basic"></a>Оператор Yield (Visual Basic)
 Отправляет следующий элемент коллекции, которая будет `For Each...Next` инструкции.  
@@ -34,7 +34,7 @@ Yield expression
   
 |Термин|Определение|  
 |---|---|  
-|`expression`|Обязательный. Выражение, которое может быть неявно преобразован в тип функции итератора или `Get` доступа, который содержит `Yield` инструкции.|  
+|`expression`|Обязательно. Выражение, которое может быть неявно преобразован в тип функции итератора или `Get` доступа, который содержит `Yield` инструкции.|  
   
 ## <a name="remarks"></a>Примечания  
  `Yield` Инструкция возвращает один элемент из коллекции по одному. `Yield` Включаются инструкции в функции итератора или `Get` доступа, который будет выполнять пользовательские итерации по коллекции.  
@@ -47,7 +47,7 @@ Yield expression
   
  «Yield» не является зарезервированным словом и имеет специальное значение только в том случае, если он используется в `Iterator` функции или `Get` метода доступа.  
   
- Дополнительные сведения о функции итератора и `Get` доступа к свойствам в разделе [итераторы](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Дополнительные сведения о функции итератора и `Get` доступа к свойствам в разделе [итераторы](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="iterator-functions-and-get-accessors"></a>Функции итератора и методы доступа Get  
  Объявление функции итератора или `Get` метод доступа должен соответствовать следующим требованиям:  
@@ -60,7 +60,7 @@ Yield expression
   
  Функции итератора не может содержаться событие, конструктор экземпляра, статический конструктор или деструктор статический.  
   
- Функции итератора может быть анонимной функции. Дополнительные сведения см. в разделе [Итераторы](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Функции итератора может быть анонимной функции. Дополнительные сведения см. в разделе [Итераторы](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="exception-handling"></a>Обработка исключений  
  Объект `Yield` инструкции могут находиться внутри `Try` блока [Try... CATCH... Оператор Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). Объект `Try` блок, который имеет `Yield` инструкция может иметь `Catch` блокируется и может иметь `Finally` блока.  
@@ -97,8 +97,7 @@ Next
   
  [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_2.vb)]  
   
- Дополнительные примеры см. в разделе [итераторы](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Дополнительные примеры см. в разделе [итераторы](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="see-also"></a>См. также  
- [Итераторы](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)  
  [Операторы](../../../visual-basic/language-reference/statements/index.md)

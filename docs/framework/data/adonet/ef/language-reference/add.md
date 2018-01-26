@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 51769b02-a8f7-4177-9e99-bbd10e77092c
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 32c661ff36e3dcdcdadfc892267cc9e5354cbe5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 6014b2b37d3574af8462ec178f943340af6d7146
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="-add"></a>+ (сложение)
 Складывает два числа.  
@@ -49,4 +50,4 @@ expression + expression
   
 ## <a name="see-also"></a>См. также  
  [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Типы концептуальной модели (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4)
+ [Типы концептуальной модели (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)

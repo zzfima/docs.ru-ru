@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e9f2db66-5b7d-49e1-b198-0846551c6e8e
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 01b7ab60775df5aaf003956db82bb3ad0235a471
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 53dc01ed079168671d6d68aba65d5cb0591e9906
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemidentitymodelselectorsstorecommittransaction"></a>System.IdentityModel.Selectors.StoreCommitTransaction
 System.IdentityModel.Selectors.StoreCommitTransaction  

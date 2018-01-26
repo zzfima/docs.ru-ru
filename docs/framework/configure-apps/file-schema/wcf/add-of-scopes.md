@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0563a7d8-fc84-4c85-9066-af32665857c2
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c720d99a5abee00eeb52f91586503e0a8a89027b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 012d86297f75874b57231d7c347c7412ad04aa1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltscopesgt"></a>&lt;add&gt; для &lt;scopes&gt;
 Добавляет URI пользовательский области, который при выполнении запроса можно использовать для фильтрации конечных точек службы.  
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/18/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<области >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Содержит коллекцию элементов конфигурации, указывающие идентификаторы URI пользовательских областей, которые можно использовать для фильтрации конечных точек службы во время выполнения запроса.|  
   

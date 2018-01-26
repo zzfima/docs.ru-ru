@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 14ab8f84-ab3e-47cd-8ac5-dd68af940175
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 31e10bade2b467b01b47f01f894fee438f523e44
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 43ca027a4696feeab1c0a1400b7f43a6d2b1e2fa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="core-communications-named-pipe-transport-channels"></a>Основное взаимодействие: именованные каналы конвейерной передачи
 В этом разделе перечислены все исключения, создаваемые транспортными каналами именованных каналов.  

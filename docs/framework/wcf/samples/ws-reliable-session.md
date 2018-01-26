@@ -11,14 +11,15 @@ ms.topic: article
 helpviewer_keywords: Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
 caps.latest.revision: "30"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ec04c91237516bcf535963c2d5ff7b0584c52be2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: c07130715b0416e7a8603b46a1c39c2f22dd7d2e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ws-reliable-session"></a>Надежный сеанс WS
 Данный образец демонстрирует использование надежных сеансов. Надежные сеансы предоставляют поддержку для надежных сеансов и обмена сообщениями. При надежном обмене сообщениями в случае сбоя предпринимается повторная попытка передачи и задаются такие гарантии доставки, как соблюдение порядка получения сообщений. Сеансы поддерживают состояние для клиентов между вызовами. Пример реализует сеансы для поддержки состояния клиента и задает гарантии соблюдения очередности доставки сообщений.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/18/2017
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Конечная точка содержит атрибут `bindingConfiguration`, ссылающийся на конфигурацию привязки с именем "Binding1". Конфигурация привязки включает надежные сеансы, задав `enabled` атрибут [ \<reliableSession >](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md) для `true`. Гарантии доставки для упорядоченных сеансов контролируются путем присвоения атрибуту упорядочивания значений `true` или `false`. Значение по умолчанию — `true`.  
+ Конечная точка содержит атрибут `bindingConfiguration`, ссылающийся на конфигурацию привязки с именем "Binding1". Конфигурация привязки включает надежные сеансы, задав `enabled` атрибут [ \<reliableSession >](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md) для `true`. Гарантии доставки для упорядоченных сеансов контролируются путем присвоения атрибуту упорядочивания значений `true` или `false`. Значение по умолчанию — `true`.  
   
 ```xml  
 <bindings>  

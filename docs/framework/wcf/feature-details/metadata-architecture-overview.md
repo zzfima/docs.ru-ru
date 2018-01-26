@@ -11,14 +11,15 @@ ms.topic: article
 helpviewer_keywords: metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
 caps.latest.revision: "24"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1fa7fea1709f2664abe45ebdb916183a46885612
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: a8890cc05ec6b0b889dafcb787e216b50a681876
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-architecture-overview"></a>Общие сведения об архитектуре метаданных
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] обеспечивает широкие возможности для экспорта, публикации, получения и импорта метаданных служб. Службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используют метаданные для описания взаимодействия с конечными точками служб, чтобы такие средства, как Svcutil.exe, могли автоматически создавать клиентский код для обращения к службе.  
@@ -101,7 +102,7 @@ ms.lasthandoff: 11/21/2017
  [Форматы метаданных](../../../../docs/framework/wcf/feature-details/metadata-formats.md)  
  [Экспорт и импорт метаданных](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
  [Публикация метаданных](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
- [Получение метаданных](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
+ [Извлечение метаданных](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
  [Использование метаданных](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
  [Вопросы безопасности при использовании метаданных](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
  [Расширение системы метаданных](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5d1e6a1cc362663be3aa6c6084f658eba25dfe54
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 29f0c8e663dad2eaa849137e1d02d24b9cef398b
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Сопоставление методов CLR с каноническими функциями
 Платформа Entity Framework предоставляет набор канонических функций, которые реализуют операции над строками, математические функции и другую общую функциональность для многих систем баз данных. Это позволяет разработчикам работать с широким кругом систем баз данных. При вызове из технологии запросов (например, из LINQ to Entities) канонические функции преобразуются в соответствующую функцию хранилища для используемого поставщика. Это позволяет для различных источников данных выражать вызовы функций в общей форме, обеспечивая согласованность при применении запросов. Битовые операторы AND, OR, NOT и XOR также сопоставляются с каноническими функциями, если операнд имеет числовой тип. Для операндов логического типа битовые операторы AND, OR, NOT и XOR выполняют логические операции «И», «ИЛИ», «НЕ» и «Исключающее ИЛИ». Дополнительные сведения см. в разделе [канонические функции](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/18/2017
 |Метод System.String (экземпляр)|Каноническая функция|Примечания|  
 |---------------------------------------|------------------------|-----------|  
 |Boolean Contains(String `value`)|`this` LIKE '%`value`%'|Если `value` не является константой, от он сопоставляется с IndexOf(`this`, `value`) > 0|  
-|Boolean EndsWith(String `value`)|`this`КАК `'` % `value`"|Если `value` не является константой, от он сопоставляется с Right(`this`, length(`value`)) = `value`.|  
+|Boolean EndsWith(String `value`)|`this` LIKE `'`%`value`'|Если `value` не является константой, от он сопоставляется с Right(`this`, length(`value`)) = `value`.|  
 |Boolean StartsWith(String `value`)|`this` LIKE '`value`%'|Если `value` не является константой, от он сопоставляется с IndexOf(`this`, `value`) = 1.|  
 |Длина|Length(`this`)||  
 |Int32 IndexOf(String `value`)|IndexOf(`this`, `value`) - 1||  
@@ -84,7 +85,7 @@ ms.lasthandoff: 10/18/2017
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||  
 |Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||  
 |Microsoft.VisualBasic.DateAndTime.Month(DateTime `TimeValue`)|Month()||  
-сообщению. VisualBasic.DateAndTime.Day (DateTime `TimeValue`)|Day()||  
+icrosoft.VisualBasic.DateAndTime.Day(DateTime `TimeValue`)|Day()||  
 |Microsoft.VisualBasic.DateAndTime.Hour(DateTime `TimeValue`)|Hour()||  
 |Microsoft.VisualBasic.DateAndTime.Minute(DateTime `TimeValue`)|Minute()||  
 |Microsoft.VisualBasic.DateAndTime.Second(DateTime `TimeValue`)|Second()||  

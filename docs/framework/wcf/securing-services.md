@@ -17,11 +17,12 @@ caps.latest.revision: "28"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 509da8b697f38ea75d9509a8243f3e9e09cc661b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2b8e84fe75f812cdcb97dcc24a0edad2d238515b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-services"></a>Защита служб
 Для обеспечения безопасности службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] необходимо выполнение двух основных требований - обеспечение безопасности передачи и выполнение авторизации. (Третье требование, аудит событий безопасности описана в [аудита](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Вкратце, для обеспечения безопасности передачи должна быть выполнена проверка подлинности (проверка идентификации как службы, так и клиента) и обеспечены конфиденциальность (шифрование сообщений) и целостность (цифровая подпись для обнаружения подделки). Авторизация - это управление доступом к ресурсам, например разрешение чтение файла только привилегированным пользователям. С помощью функций [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]два основных требования легко реализуются.  
@@ -113,7 +114,7 @@ ms.lasthandoff: 11/21/2017
  <xref:System.ServiceModel.Description.ServiceCredentials>  
  <xref:System.ServiceModel.ServiceContractAttribute>  
  <xref:System.ServiceModel.OperationContractAttribute>  
- [Службы идентификации и проверки подлинности](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [Идентификация и проверка подлинности службы](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [Основные сведения об уровне защиты](../../../docs/framework/wcf/understanding-protection-level.md)  
  [Делегирование и олицетворение](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
  [Разработка контрактов службы](../../../docs/framework/wcf/designing-service-contracts.md)  

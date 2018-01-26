@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f52ff1d8-7b0d-421c-bf08-a9fbd0e76968
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5b4c0b9f9724f131ce88e1bc80e79b1e936d908f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 6f750971eb606500c544995072de07f60a7895b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemruntimeserializationxsdimportannotationfailed"></a>System.Runtime.Serialization.XsdImportAnnotationFailed
 System.Runtime.Serialization.XsdImportAnnotationFailed  

@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 75ff3e7e-ad6a-4ac2-a094-4247f523c5f5
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4e742e0e042ca65f921b6400dd5f8245a7040dae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 7f060641b3e52dcdce98faf1e1d8a52024ed3e85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelslistenerdisposed"></a>System.ServiceModel.Channels.ListenerDisposed
 System.ServiceModel.Channels.ListenerDisposed  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Прослушиватель освобожден.  
   
 ## <a name="see-also"></a>См. также  

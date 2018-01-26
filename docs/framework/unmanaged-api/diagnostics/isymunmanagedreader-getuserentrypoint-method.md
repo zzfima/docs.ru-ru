@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 08a89ba20b48c3d7faa3f3d27d4c57c55b33c355
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 328f44e797a49a899545fa43d940a3b0399ee8c1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="isymunmanagedreadergetuserentrypoint-method"></a>Метод ISymUnmanagedReader::GetUserEntryPoint
 Возвращает метод, заданный в качестве точки входа пользователя для модуля, если таковые имеются. Например этот метод может быть основного метода пользователя, а не созданные компилятором заглушки перед основным методом.  
@@ -48,4 +49,4 @@ HRESULT GetUserEntryPoint (
  **Заголовок:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>См. также  
- [ISymUnmanagedReader-интерфейс](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+ [Интерфейс ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

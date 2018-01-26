@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5302af2a-8c00-4651-837f-3348df44e98c
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0170ea95fb31b777e0f2ca3b29a134feb634243b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 39f283d913083eb2648c377c8e2d9120339df870
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelssocketconnectionclose"></a>System.ServiceModel.Channels.SocketConnectionClose
 System.ServiceModel.Channels.SocketConnectionClose  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Закрытие SocketConnection.  
   
 ## <a name="see-also"></a>См. также  

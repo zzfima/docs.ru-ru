@@ -19,11 +19,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 932223a48500d8a0df5be6ae1ca08e1f333fc711
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 921f8c7791620d51107fa2ff31a637094fc0c633
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>Общие сведения об элементе управления BindingNavigator (Windows Forms)
 Элемент управления <xref:System.Windows.Forms.BindingNavigator> можно использовать для создания стандартных средств поиска и изменения данных в форме Windows Forms. Элемент управления <xref:System.Windows.Forms.BindingNavigator> часто используется с компонентом <xref:System.Windows.Forms.BindingSource>, позволяя пользователям переходить по записям данных в форме и взаимодействовать с ними.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 |Кнопка <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A>|Переход к первому элементу базового источника данных.|  
 |Кнопка <xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A> |Переход к последнему элементу базового источника данных.|  
 |Кнопка <xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A>|Переход к следующему элементу базового источника данных.|  
-|Кнопка <xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A> |Переход к предыдущему элементу базового источника данных.|  
+|Кнопка <xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A>|Переход к предыдущему элементу базового источника данных.|  
 |Текстовое поле <xref:System.Windows.Forms.BindingNavigator.PositionItem%2A> |Возвращает текущую позицию в базовом источнике данных.|  
 |Текстовое поле <xref:System.Windows.Forms.BindingNavigator.CountItem%2A>|Возвращает общее число элементов в базовом источнике данных.|  
   

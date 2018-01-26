@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
 caps.latest.revision: "36"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b727f391abfeb1112de1b6cde3ceb564d3860974
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 2684091d15a4c0796a0b8fb85952c0f902c1f545
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="virtual-directory-setup-instructions"></a>Инструкции по настройке виртуальных каталогов
 В примерах [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] используется общий виртуальный каталог с именем servicemodelsamples, сопоставленный с папкой %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
@@ -201,4 +202,4 @@ ms.lasthandoff: 10/18/2017
     3.  В **группы** столбца, убедитесь, что значение для **ASPNET** — «Пользователи».  
   
 ## <a name="see-also"></a>См. также  
- [Инструкции по размещению IIS службы Интернета](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
+ [Инструкции по размещению в службах IIS](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

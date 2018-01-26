@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5252e639-ff11-4818-82e7-07221ed6ae23
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f52ab1be62f6e196bc1c8aa8874d5aa440ba606f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 751df1483bab40feb5fa9d336edbac07f76d66cb
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entity-framework-data-providers"></a>Поставщики данных Entity Framework
 В данном разделе содержатся сведения о поставщиках данных, поддерживающих [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Поставщик EntityClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)  
  Описывает поставщик данных EntityClient. Этот поставщик преобразует запросы к модели данных в каноническое дерево команд. В дальнейшем это дерево команд может быть обработано поставщиком данных [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] для платформы [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   

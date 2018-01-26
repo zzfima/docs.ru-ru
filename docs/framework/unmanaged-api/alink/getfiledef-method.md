@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a31dee6bb1af4f555211822a3b7ec108353214a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 473cbaba8712ee247733ba3075c0163e259cf4dc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getfiledef-method"></a>Метод GetFileDef
 Извлекает фактический маркер FileDef, используемый в метаданных (в отличие от маркера, присвоенному ALink).  
@@ -57,4 +58,4 @@ HRESULT GetFileDef(
 ## <a name="see-also"></a>См. также  
  [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
  [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [ALink-интерфейс API](../../../../docs/framework/unmanaged-api/alink/index.md)
+ [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

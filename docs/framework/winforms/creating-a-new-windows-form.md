@@ -16,16 +16,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f373696f4d3a92f15ab7c8641e02303da4a54e6d
-ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
+ms.workload: dotnet
+ms.openlocfilehash: e5f2769921241216d60c3ed1bb25edcf238830d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-new-windows-form"></a>Создание новой формы Windows Forms
 В этом разделе содержатся ссылки на разделы, описывающие процедуру создания вашего первого приложения Windows Forms. Кроме того в подразделах этого раздела представлены некоторые основные термины и правила, которые следует понять перед началом создания приложения Windows Forms. Для получения дополнительных сведений о приложениях Windows Forms, элементы управления, можно использовать на их, события и обработка событий и как обрабатывать входные данные пользователя, см. список связанных разделов.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Координаты Windows Forms](../../../docs/framework/winforms/windows-forms-coordinates.md).  
  Описывает координаты клиентского приложения и экранные координаты.  
   

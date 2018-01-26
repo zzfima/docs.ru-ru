@@ -10,17 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c27ee94e-babd-459b-9574-2a6d67d11314
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7cdc85c23202154728610ab4721bf830004928c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 7a1870a8c331aae16ab14da62c64d6fb15ecd3bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltclientviagt"></a>&lt;clientVia&gt;
-Задает универсальный код ресурса (URI), для которого необходимо создать канал транспорта. Для получения дополнительной информации см. <xref:System.ServiceModel.Description.ClientViaBehavior>.  
+Задает универсальный код ресурса (URI), для которого необходимо создать канал транспорта. Дополнительные сведения см. в разделе <xref:System.ServiceModel.Description.ClientViaBehavior>.  
   
  \<система. ServiceModel >  
 \<поведения >  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<поведение >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Задает поведение конечной точки.|  
   

@@ -9,14 +9,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0202d3f1-a50b-427d-a5bb-79208b8f1c22
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 72c7e9e1cbf47dd54726a16ddeb58a193d62dc31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: be0c76371bda9e91e0becf8a9e09beb44e44dd3c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="web-services-ixmlserializable-technology-sample"></a>Образец технологии веб-служб IXmlSerializable
 [Скачать образец](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/IXmlSerializable.zip.exe)  

@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7c6c6b1b-51b8-4f45-bf76-62d816a1fc0a
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: adad42a51a8aa18dd411e5ca971f8d31602a30b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: f4a670cfc72fbbc34d3540d8f45691424ffad526
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelfailedtoopenincomingchannel"></a>System.ServiceModel.FailedToOpenIncomingChannel
 System.ServiceModel.FailedToOpenIncomingChannel  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Входящий канал удален, поскольку при попытке отрыть его произошла ошибка.  
   
 ## <a name="see-also"></a>См. также  

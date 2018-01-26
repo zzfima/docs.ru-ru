@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4eefab1dccc295557d95485d6f38add41e634fa4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 519053576aac0f55dfbfa4c87dbed6096f45abca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Автоматическое масштабирование в Windows Forms
 Автоматическое масштабирование позволяет форме и ее элементам управления, разработанным на одном компьютере с использованием определенного разрешения или системных шрифтов, правильно отображаться на другом компьютере с другим разрешением или системным шрифтом. Оно гарантирует, что размеры формы и ее элементов управления будут изменяться автоматически в соответствии с приложениями Windows и другими приложениями на компьютерах пользователя и разработчика. Поддержка автоматического масштабирования и стилей оформления в [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] позволяет приложениям [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] сохранять согласованный внешний вид и поведение на различных компьютерах пользователей, так же как в случае с обычными приложениями Windows.

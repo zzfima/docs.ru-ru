@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 95bf16a4e243d82b9b8fe83b306284335ae0bd16
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: e616f989416fcee77caa9b9a5d87cfa6812eab32
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-protocols-version-10"></a>Протоколы транзакций версии 1.0
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] версии 1 реализует версию 1.0 протоколов WS-Atomic Transaction и WS-Coordination. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]версии 1.1, в разделе [протоколов транзакций](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  

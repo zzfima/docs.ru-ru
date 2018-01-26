@@ -26,11 +26,12 @@ caps.latest.revision: "54"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1e04dc0cd878f4583fb4e0bd0ba5816ddfe0b358
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: b1e3a91c4943a4f052d8136eaf32c0c431dd4924
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="introduction-to-wpf-in-visual-studio-2015"></a>Введение в WPF в Visual Studio 2015
 Windows Presentation Foundation (WPF) в Visual Studio 2015 предоставляет разработчикам унифицированную модель программирования для создания современных бизнес-приложений Windows для настольных систем.  
@@ -41,6 +42,6 @@ Windows Presentation Foundation (WPF) в Visual Studio 2015 предоставл
   
  [Введение в WPF](/visualstudio/designers/introduction-to-wpf)  
   
- [WPF в .NET Framework](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx)  
+ [WPF в .NET Framework](https://msdn.microsoft.com/library/ms754130\(v=vs.100\).aspx)  
   
  [Получить Visual Studio](https://www.visualstudio.com/features/wpf-vs)

@@ -8,11 +8,12 @@ ms.date: 11/06/2017
 ms.topic: article-type-from-white-list
 ms.prod: .net-framework
 ms.devlang: cpp
-ms.openlocfilehash: 461d90aaf5beca1c0f1d1965ce0ea07411e56e79
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.workload: dotnet
+ms.openlocfilehash: 466ba410f7d6c13eb5f1949bf3aa32c3951a8ba7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Инструментарий управления Windows (WMI) и счетчиков производительности (Справочник по неуправляемым API)
 
@@ -22,33 +23,33 @@ ms.lasthandoff: 11/22/2017
   
 API-Интерфейс включает следующие функции:
 
-| Функция | Описание |
+| Функция | Описание: |
 |---------|---------|
 | [Функция BeginEnumeration](beginenumeration.md) | Устанавливает перечислитель в начало перечисления свойств объекта WMI. |
 | [Функция BeginMethodEnumeration](beginmethodenumeration.md) |  Начинает перечисление методов, доступных для объекта. |
 | [Функция BlessIWbemServices](blessiwbemservices.md) | Указывает, разрешить ли учетные данные пользователя доступ к указанному классу IWbemServices. |
 | [Функция BlessIWbemServicesObject](blessiwbemservicesobject.md) | Указывает, является ли учетные данные пользователя предоставление доступа к объекту службы IWbem. |
-| [Функция клонирования](clone.md) | Возвращает новый объект, который представляет собой полный клон текущего объекта. |
+| [Функция Clone](clone.md) | Возвращает новый объект, который представляет собой полный клон текущего объекта. |
 | [Функция CloneEnumWbemClassObject](cloneenumwbemclassobject.md) | Создается копия логического перечислителя, сохраняя его текущую позицию в перечислении. |
-| [Функции CompareTo](compareto.md) | Сравнивает объект с другим объектом управления Windows. |
+| [Функция CompareTo](compareto.md) | Сравнивает объект с другим объектом управления Windows. |
 | [Функция ConnectServerWmi](connectserverwmi.md) | Создает подключается через DCOM с пространством имен WMI на указанном компьютере. |
 | [Функция CreateClassEnumWmi](createclassenumwmi.md) | Возвращает перечислитель для всех классов, которые удовлетворяют указанные критерии выбора. |
 | [Функция CreateInstanceEnumWmi](createinstanceenumwmi.md) | Возвращает перечислитель, который возвращает принимаемые экземпляры указанного класса, который отвечает указанные критерии выбора. |
-| [Удаление функции](delete.md) | Удаляет указанное свойство из определения класса и все его квалификаторов. |
+| [Функция Delete](delete.md) | Удаляет указанное свойство из определения класса и все его квалификаторов. |
 | [Функция DeleteMethod](deletemethod.md) | Удаляет указанный метод из определения класса CIM. |
 | [Функция EndEnumeration](endenumeration.md) | Завершает последовательность перечисления. | 
 | [Функция EndMethodEnumeration](endmethodenumeration.md) | Завершает последовательность перечисления запущен с помощью вызова [BeginMethodEnumeration функция](beginmethodenumeration.md). |
 | [Функция ExecNotificationQueryWmi](execnotificationquerywmi.md) | Выполняет запрос для получения событий. |
 | [Функция ExecQueryWmi](execquerywmi.md) | Выполняет запрос для получения объектов. |
 | [Функция FormatFromRawValue](formatfromrawvalue.md) | Преобразует одно значение данных оценки производительности в указанный формат или два значения данных для оценки производительности, если преобразование формата выполняется на основе времени. | 
-| [Функция get](get.md) | Получает значение указанного свойства, если он существует. |
+| [Функция Get](get.md) | Получает значение указанного свойства, если он существует. |
 | [Функция GetCurrentApartmentType](getcurrentapartmenttype.md) | Возвращает тип подразделения, в котором выполняется вызывающего объекта. |
 | [Функция GetDemultiplexedStub](getdemultiplexedstub.md) | Создает приемник объект сервера пересылки для клиента при получении асинхронные вызовы от управления Windows. |
 | [GetErrorInfo-функция](geterrorinfo.md) | Извлекает сведения об ошибках в предыдущем вызове функции. | 
-| [GetMethod-функция](getmethod.md) | Возвращает сведения об указанном методе. | 
+| [Функция GetMethod](getmethod.md) | Возвращает сведения об указанном методе. | 
 | [Функция GetMethodOrigin](getmethodorigin.md) | Определяет класс, в котором объявлен метод. |
 | [Функция GetMethodQualifierSet](getmethodqualifierset.md) | Извлекает квалификатор для конкретного метода. |
-| [GetNames-функция](getnames.md) | Возвращает подмножество или все имена свойств объекта. |
+| [Функция GetNames](getnames.md) | Возвращает подмножество или все имена свойств объекта. |
 | [Функция GetObjectText](getobjecttext.md) | Возвращает текстовое отображение объекта с помощью синтаксиса MOF. | 
 | [Функция GetPropertyHandle](getpropertyhandle.md) | Возвращает уникальный дескриптор, который определяет свойство. |
 | [Функция GetPropertyOrigin](getpropertyorigin.md) | Определяет класс, в котором объявлено свойство. |

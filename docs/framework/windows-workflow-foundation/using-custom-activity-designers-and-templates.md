@@ -9,19 +9,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1aab82e7-7f89-4255-be46-526b09ceeb8b
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6c07855537e7fdbd2d2323c00b7fe8f5c7cb1d4f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 7d83731fcf9bde8642dcdc0291142885068d532b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-custom-activity-designers-and-templates"></a>Использование шаблонов и конструкторов настраиваемых действий
 Здесь перечислены разделы, в которых описывается создание настраиваемых конструкторов действий и настраиваемых шаблонов действий.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Создание настраиваемого конструктора действий](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md)  
  Описывает создание настраиваемого конструктора действий для случая, когда конструкторы, предоставляемые рабочим процессом, не подходят для задач разработки.  
   

@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 336243cc4db7039225ba272cac1ba7a3f173f361
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 66eb0e8fc630696c86c8b85c85b67023bd568dc1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="splitcontainer-control-windows-forms"></a>Элемент управления SplitContainer (Windows Forms)
 Элемент управления Windows Forms `SplitContainer` состоит из двух панелей, разделенных подвижной полосой. При наведении указателя мыши на полосу его форма изменяется, показывая, что полоса является перемещаемой.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/18/2017
   
  С помощью элемента управления `SplitContainer` можно создавать сложные пользовательские интерфейсы. Часто выбор на одной панели определяет объекты, отображаемые на другой. Такой подход является весьма эффективным для отображения и просмотра информации. Две панели позволяют группировать информацию, а полоса или разделитель упрощают изменение размера панелей.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о компоненте SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-overview-windows-forms.md)  
  Приводятся основные сведения об элементе управления `SplitContainer`, и описываются его часто используемые свойства, методы и события.  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="reference"></a>Ссылка  
  Класс <xref:System.Windows.Forms.SplitContainer>  
- Описание класса и ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)  

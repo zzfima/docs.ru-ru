@@ -11,14 +11,15 @@ ms.topic: article
 helpviewer_keywords: Windows Communication Foundation, requirements
 ms.assetid: c43918db-9a36-426c-9e8a-e1bd6688a5b7
 caps.latest.revision: "20"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 64f1d2c25f9689f6915d0e29ad66fc65b42aa965
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 81f79691424bb48679605e385785bd7bf11b4db5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-system-requirements"></a>Требования WCF к системе
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] является инфраструктурой связи, используемой для создания распределенных приложений. Ниже перечисляются требования, необходимые для работы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  

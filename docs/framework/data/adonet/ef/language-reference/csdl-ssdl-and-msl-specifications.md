@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bbdc9237-ff4c-4441-9565-31ebc29743e9
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d4a11afef526d013e5674b172377ecb9db9b0e1c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 17f16ee0657e5e7c1bd04dc64b74ad109f590061
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="csdl-ssdl-and-msl-specifications"></a>Спецификации CSDL, SSDL и MSL
 [Msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) сайт теперь является главной расположение содержимого для Entity Framework.  

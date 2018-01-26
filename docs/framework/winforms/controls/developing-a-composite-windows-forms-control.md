@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da180f888031aace892efc770184be53e9341047
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 06ad98fef8c51cb995644c3b29236a9b0f8cfe29
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>Разработка составного элемента Windows Forms
 Можно разработать составной элемент управления Windows Forms, объединив другие элементы управления Windows Forms. Составные элементы управления, которые являются производными от <xref:System.Web.UI.UserControl> называются пользовательскими элементами управления. Базовый класс <xref:System.Windows.Forms.UserControl> обеспечивает маршрутизацию событий клавиатуры для дочерних элементов управления, это гарантирует, что дочерние элементы управления смогут получать фокус ввода. Пример пользовательского элемента управления см. в разделе <xref:System.Windows.Forms.UserControl> в [как: применение атрибутов в элементах управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [Пошаговое руководство. Сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute](http://msdn.microsoft.com/library/ms171731\(v=vs.110\))  
   
--   [Пример. Наследование элементов управления форм Windows Forms с помощью Visual C#](http://msdn.microsoft.com/en-us/09476da0-8d4c-4a4c-b969-649519dfb438)  
+-   [Пример. Наследование элементов управления форм Windows Forms с помощью Visual C#](http://msdn.microsoft.com/library/09476da0-8d4c-4a4c-b969-649519dfb438)  
   
 -   [Практическое руководство. Предоставление точечного рисунка панели элементов для элемента управления](http://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [Пошаговое руководство. Создание составного элемента управления с помощью Visual Basic](http://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
   
--   [Пример. Создание составного элемента управления с помощью C#](http://msdn.microsoft.com/en-us/f88481a8-c746-4a36-9479-374ce5f2e91f)  
+-   [Пример. Создание составного элемента управления с помощью C#](http://msdn.microsoft.com/library/f88481a8-c746-4a36-9479-374ce5f2e91f)  
   
 -   [Пошаговое руководство. Наследование элементов управления форм Windows Forms с помощью Visual Basic](http://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
   

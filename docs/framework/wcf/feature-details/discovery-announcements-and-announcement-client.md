@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 426c6437-f8d2-4968-b23a-18afd671aa4b
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 36003933a9fb49fe4fe4f0b677ee584066d415ac
-ms.sourcegitcommit: ea1fd4ff4c36169fc722ef263e24884c5cd431a2
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 67eab6a5b35e29fe3df09ab286090433d25e8ca3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>Объявления обнаружения и клиент объявления
 Функция обнаружения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] позволяет компонентам объявлять свою доступность. При соответствующей настройке служба отправляет объявления Hello и Bye. Клиенты или другие компоненты могут прослушивать данные сообщения с объявлениями и действовать необходимым образом. Это дает клиенту альтернативный метод получения данных о службах. Функция объявлений может использоваться несколькими разными способами. Например, если службы часто входят в сеть и выходят из сети, то объявления могут стать альтернативой их поиску. Такой подход дает возможность снизить нагрузку на сеть, а клиенту - получать больше сведений о наличии или отсутствии службы по мере получения объявлений.  

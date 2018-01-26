@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: baad1e68-28fc-4a6a-8a43-75e47e7fa871
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d250b57282d24780dcdd1e045f18d7528bd86a90
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 0b7812023fbe2159daba205727e20e1b69b84686
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-formats"></a>Форматы метаданных
 В следующей таблице перечислены форматы метаданных, поддерживаемые [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -34,5 +35,5 @@ ms.lasthandoff: 11/21/2017
 |Привязка WS Addressing для WSDL|[Web Services Addressing 1.0 - привязка WSDL](http://go.microsoft.com/fwlink/?LinkId=94869)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] реализует спецификацию привязки WS-Addressing для WSDL для вложения сведений об адресации в WSDL.|  
   
 ## <a name="see-also"></a>См. также  
- [Протоколы, поддерживаемые предоставляемыми системой привязками веб-служб](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+ [Протоколы веб-служб, поддерживаемые предоставляемыми системой привязками](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
  [WSDL и политика](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)

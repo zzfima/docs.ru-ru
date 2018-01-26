@@ -18,18 +18,19 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b89a94fd0223d817b0dee37f7a3ed84dcbacbbec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f36ee150e4dcca74141b644a55451abd4a4fd21
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="more-secure-printing-in-windows-forms"></a>Более безопасная печать в Windows Forms
 Приложения Windows Forms часто предусмотрена возможность печати. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Использует <xref:System.Drawing.Printing.PrintingPermission> класса для управления доступом к возможностям печати и связанное с ним <xref:System.Drawing.Printing.PrintingPermissionLevel> значение перечисления, указывающее уровень доступа. По умолчанию печать включена по умолчанию в зонах локальной интрасети и Интернета; Однако уровень доступа ограничен в обеих зонах. Ли печать из этого приложения, требует взаимодействия с пользователем, или не может печати зависит от разрешения, предоставленного в приложение. По умолчанию зона локальной интрасети получает <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> получает доступ и интрасеть <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> доступа.  
   
  В следующей таблице показаны функциональные возможности, доступные на каждой печати уровне разрешений.  
   
-|PrintingPermissionLevel|Описание|  
+|PrintingPermissionLevel|Описание:|  
 |-----------------------------|-----------------|  
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>|Предоставляет полный доступ для всех установленных принтеров.|  
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>|Позволяет программную печать на принтере по умолчанию и более безопасную печать через диалоговое окно печати. <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> является подмножеством <xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>.|  

@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 706b870d51f2120f373b356d2fb71bd79bde8fdf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 65bbc7d8b6b4cb74be12e9460b173e73e1873765
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="udp-activation"></a>Активация UDP
 Этот пример построен на [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца. Он расширяет [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) пример поддержки активацию с помощью службы активации процессов Windows (WAS).  

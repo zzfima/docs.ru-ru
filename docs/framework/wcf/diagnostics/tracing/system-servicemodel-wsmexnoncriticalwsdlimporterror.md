@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d6535153-b160-4584-8d5d-1186423a0bc3
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f6d7c9d66e23b5c36f35e82c23584a4e4bf272df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: b1330d4e94ae6e9e8d1a7f6bcc338204bcb4f14d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelwsmexnoncriticalwsdlimporterror"></a>System.ServiceModel.WsmexNonCriticalWsdlImportError
 System.ServiceModel.WsmexNonCriticalWsdlImportError  

@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ffcd4dc32f2f509dd9421b2c24781fb2819418b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2e2772833d75ced2209896ca37cf6cf37fb965f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corilmap-structure"></a>Структура COR_IL_MAP
 Указывает изменения в относительном смещении функции.  
@@ -38,9 +39,9 @@ typedef struct _COR_IL_MAP {
 } COR_IL_MAP;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`oldOffset`|Старый промежуточный язык Майкрософт (MSIL) смещение относительно начала функции.|  
 |`newOffset`|Новое смещение MSIL относительно начала функции.|  

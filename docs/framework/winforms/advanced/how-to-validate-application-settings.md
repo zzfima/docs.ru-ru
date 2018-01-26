@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 309429c2481bad3a8dff4708d9e2ea8a03057a4e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e12620a5079efaba4faa9101253a3a586965b7e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-validate-application-settings"></a>Практическое руководство. Проверка параметров приложения
 В этом разделе показано, как проверить параметры приложения перед их сохранением.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
  Используемое событие зависит от времени, когда необходимо проверить параметры, как описано в следующей таблице.  
   
-|Событие|Вхождение и использование|  
+|событие|Вхождение и использование|  
 |-----------|------------------------|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|Возникает после начальной загрузки группы свойств параметров.<br /><br /> Используйте это событие для проверки начальных значений для всей группы свойств перед их применением в приложении.|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|Происходит перед изменением значения одного свойства параметров.<br /><br /> Используйте это событие для проверки одного свойства до его изменения. Оно позволяет пользователям немедленно получить сведения о своих действиях и решениях.|  
@@ -68,11 +69,11 @@ ms.lasthandoff: 11/21/2017
         MySettings.Default   
         ```  
   
-         -или-  
+         - или -  
   
     -   Если вы являетесь разработчиком на Visual Basic и создали параметры приложения с помощью конструктора проектов, для извлечения параметров можно использовать [объект My.Settings](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
   
-         -или-  
+         - или -  
   
     -   Если параметры были созданы путем наследования от <xref:System.Configuration.ApplicationSettingsBase> напрямую, необходимо создать экземпляр класса вручную.  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  Если разработка осуществляется на C#, в формы или элемента управления `Load` события, добавьте обработчик событий для <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> события.  
   
-     -или-  
+     - или -  
   
      Если вы являетесь разработчиком на Visual Basic, объявите переменную `Settings` с помощью ключевого слова `WithEvents`.  
   

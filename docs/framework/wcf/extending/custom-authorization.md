@@ -10,32 +10,33 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4f90311a-2593-462e-9174-2f7ac78217b9
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d6eaa86880f8c867ecc7d219f5c0c4bc453e893d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 35994b76498d9287f5f0c22c024afc176d1f9260
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-authorization"></a>Пользовательская авторизация
 Авторизация - это процесс управления доступом к ресурсам и задачам. Подразделы этого раздела содержат сведения по созданию (реализации) различных типов утверждений или политик.  
   
-## <a name="in-this-section"></a>Содержание  
- [Как: Создание пользовательской политики авторизации](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Практическое руководство. Создание пользовательской политики авторизации](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
  Описывается порядок создания пользовательской политики.  
   
- [Как: Создание пользовательского диспетчера авторизации для службы](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [Практическое руководство. Создание пользовательского диспетчера авторизации для службы](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  Описывается порядок создания пользовательского диспетчера.  
   
- [Как: Создание пользовательского утверждения](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
+ [Практическое руководство. Создание пользовательского утверждения](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
  Описывается порядок создания пользовательского утверждения.  
   
- [Как: сравнение утверждений](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
+ [Практическое руководство. Сравнение утверждений](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
  Описывается порядок сравнения утверждений.  
   
- [Как: Создание пользовательского идентификатора участника](../../../../docs/framework/wcf/extending/how-to-create-a-custom-principal-identity.md)  
+ [Практическое руководство. Создание пользовательского идентификатора участника](../../../../docs/framework/wcf/extending/how-to-create-a-custom-principal-identity.md)  
  Приводится иллюстрация сценария, в котором <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom> используется совместно с пользовательской политикой авторизации и пользовательским участником.  
   
 ## <a name="reference"></a>Ссылка  

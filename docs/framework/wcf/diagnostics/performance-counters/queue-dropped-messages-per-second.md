@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 74540f52-8762-4147-b5ba-e171180515a3
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4d7386b2f7c6d78dde41c88c66d216b99cc21050
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 8512c757f7a18172b267fe7d3469b1a2749818aa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queue-dropped-messages-per-second"></a>Количество удаленных из очереди сообщений в секунду
 Имя счетчика: Queued Messages Dropped Per Second.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Количество сообщений, отброшенных транспортом очередей этой службы за секунду.  
   
  Этот счетчик является счетчиком производительности типа [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по следующей формуле.  

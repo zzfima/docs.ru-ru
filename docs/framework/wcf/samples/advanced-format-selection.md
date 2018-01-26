@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5b3c1bd6c63188b9b812248b8d815237832a4aad
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 124bf59f29ff04e643200edf686f79f573937a03
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="advanced-format-selection"></a>Выбор дополнительного формата
 Данный образец демонстрирует расширение программной модели [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST для поддержки новых форматов исходящих ответов. Кроме того, образец использует шаблон T4 для возврата ответов в виде страницы XHTML, показывая, как можно реализовать наглядную программную модель.  

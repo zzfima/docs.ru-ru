@@ -1,5 +1,5 @@
 ---
-title: "Начало работы с C# и Visual Studio Code - руководство по C#"
+title: "Начало работы с C# и Visual Studio Code — руководство по языку C#"
 description: "Узнайте, как создать и отладить в Visual Studio Code свое первое приложение .NET Core на языке C#."
 keywords: "C#, приступая к работе, получение, установка, Visual Studio Code, кроссплатформенный"
 author: kendrahavens
@@ -10,11 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
-ms.openlocfilehash: 3a9de689946507e4b6d89f684461d65049b3375a
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnetcore
+ms.openlocfilehash: 95052da1688ec1026f11ff679dda6aad50a340fa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Начало работы с C# и Visual Studio Code
 
@@ -34,20 +35,20 @@ ms.lasthandoff: 11/15/2017
 
     * Откройте Visual Studio Code.
     * Щелкните значок обозревателя в расположенном слева меню, затем щелкните**Открыть папку**.
-    * Выберите **файл** > **открыть папку** в главном меню, чтобы открыть папку нужно проект C# в и нажмите кнопку **Выбор папки**. В нашем примере мы создаем папку для проекта с именем *HelloWorld*.
+    * Выберите **Файл** > **Открыть папку** в главном меню, чтобы открыть папку, в которой вы хотите разместить проект C#, и щелкните **Выбрать папку**. В нашем примере мы создаем для проекта папку с именем *HelloWorld*.
 
       ![VSCodeOpenFolder](media/with-visual-studio-code/vscodeopenfolder.png)
 
 2. Инициализируйте проект C#.
-    * Откройте интеграции терминалов из кода Visual Studio, выбрав **представление** > **интеграции терминалов** в главном меню.
+    * Откройте в Visual Studio Code интегрированный терминал, выбрав **Просмотр** > **Интегрированный терминал** в главном меню.
     * В окне терминала введите `dotnet new console`.
-    * Эта команда создает `Program.cs` файл в папке с программой простой «Hello World», уже написанный вместе с файлом проекта C# с именем `HelloWorld.csproj`.
+    * Эта команда создает в выбранной папке файл `Program.cs` с уже готовой простой программой Hello World, а также файл проекта C# с именем `HelloWorld.csproj`.
 
       ![Команда dotnet new](media/with-visual-studio-code/dotnetnew.png)
 
 3. Выполните разрешение для средств сборки:
 
-    * Для **.NET Core 1.x**, тип `dotnet restore`. Команда `dotnet restore` предоставляет доступ к пакетам .NET Core, которые необходимы для сборки этого проекта.
+    * Для **.NET Core 1.x** введите `dotnet restore`. Команда `dotnet restore` предоставляет доступ к пакетам .NET Core, которые необходимы для сборки этого проекта.
 
       ![Команда dotnet restore](media/with-visual-studio-code/dotnetrestore.png)
 
@@ -63,11 +64,11 @@ ms.lasthandoff: 11/15/2017
 
 ## <a name="debug"></a>Отладка
 
-1. Откройте файл *Program.cs*, щелкнув его. При первом открытии файла C# в Visual Studio Code [OmniSharp](http://www.omnisharp.net/) загружает в редакторе.
+1. Откройте файл *Program.cs*, щелкнув его. Когда вы в первый раз открываете файл C# в Visual Studio Code, в редакторе загружается [OmniSharp](http://www.omnisharp.net/).
 
     ![Откройте файл Program.cs](media/with-visual-studio-code/opencs.png)
 
-2. Visual Studio Code запросит отсутствующих ресурсов для построения и отладки приложения. Выберите ответ **Да**. 
+2. Visual Studio Code предлагает добавить недостающие ресурсы для сборки и отладки приложения. Выберите ответ **Да**. 
 
     ![Предупреждение о недостающих ресурсах](media/with-visual-studio-code/missing-assets.png)
 
@@ -79,12 +80,12 @@ ms.lasthandoff: 11/15/2017
 
     ![Выбор .NET Core](media/with-visual-studio-code/selectcore.png)
 
-5. Добавьте точку останова в проект, щелкнув **поле редактора**, это место в левой части номера строк в редакторе, рядом с строке 9.
+5. Добавьте в проект точку останова, щелкнув **поле редактора** (пустое пространство слева от номеров строк) в строке 9.
 
     ![Установка точки останова](media/with-visual-studio-code/setbreakpoint.png)
 
-6. Чтобы начать отладку, выберите <kbd>F5</kbd> или зеленой стрелкой. Отладчик останавливает выполнение программы, когда достигнет точки останова, которую вы только что установили.
-    * Во время отладки можно просматривать локальных переменных в левой верхней панели или с помощью консоли отладки.
+6. Чтобы начать отладку, нажмите клавишу <kbd>F5</kbd> или щелкните зеленую стрелку. Отладчик останавливает выполнение программы, когда достигнет точки останова, которую вы только что установили.
+    * Во время отладки вы можете просматривать локальные переменные в верхней левой области или в консоли отладки.
 
     ![Запуск и отладка](media/with-visual-studio-code/rundebug.png)
 

@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 36f9e0650055c22d9a4e8c457a5ba01c295e4324
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d92c484c8cb0142f59c26270674af73da5fbfa95
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corpubenumprocess-enumeration"></a>Перечисление COR_PUB_ENUMPROCESS
 Идентифицирует тип процесса для перечисления.  
@@ -36,9 +37,9 @@ typedef enum {
 } COR_PUB_ENUMPROCESS;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Имя члена|Описание|  
+|Имя члена|Описание:|  
 |-----------------|-----------------|  
 |`COR_PUB_MANAGEDONLY`|Управляемого процесса.|  
   

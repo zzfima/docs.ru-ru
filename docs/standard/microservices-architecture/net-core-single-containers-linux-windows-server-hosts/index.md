@@ -8,12 +8,14 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f85b3db6b4ca6d22c4b855c8b96051c1c31350a6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: a50c2ad3183c80fd76e6db042674e49367d7ffc9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Развертывание одноконтейнерных веб-приложений .NET Core на узлах Linux или Windows Nano Server
 
@@ -112,12 +114,14 @@ version: '2'
   
 services:
   ci-build:
-    image: microsoft/aspnetcore-build:1.0-1.1
+    image: microsoft/aspnetcore-build:latest
     volumes:
       - .:/src
     working_dir: /src
   command: /bin/bash -c "dotnet restore ./eShopWeb.sln && dotnet publish  ./eShopWeb.sln -c Release -o ./obj/Docker/publish"
 ```
+
+**Примечание**. Начиная с .NET 2.0, команда dotnet restore автоматически выполняется при выполнении команды dotnet publish.
 
 Обратите внимание на то, что образ представляет собой образ сборки ASP.NET Core. Он включает в себя пакет SDK и средства, требуемые для сборки приложения и создания необходимых образов. Если запустить проект **docker-compose** с помощью этого файла, будет запущен контейнер сборки из образа, а затем в этом контейнере будет выполнена сборка образа приложения. Для сборки приложения в контейнере Docker и его последующего запуска нужно указать файл docker-compose в командной строке.
 
@@ -145,4 +149,3 @@ services:
 
 >[!div class="step-by-step"]
 [Назад] (../docker-application-development-process/docker-app-development-workflow.md) [Далее] (../containerize-net-framework-applications/index.md)
-

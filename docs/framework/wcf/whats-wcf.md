@@ -14,14 +14,15 @@ helpviewer_keywords:
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
 caps.latest.revision: "51"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 81e149292757b320d4c29975de1abb69eb1f8b9a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 5ae43f65c104376ea1e7cfc036a57c728c90ac12
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Что такое Windows Communication Foundation
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] представляет платформу для построения сервисноориентированных приложений. С помощью [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]можно отправлять данные в виде асинхронных сообщений от одной конечной точки службы к другой. Конечная точка службы может входить в постоянно доступную службу, размещаемую в IIS, или представлять службу, размещаемую в приложении. Конечная точка может быть клиентом службы, которая запрашивает данные от конечной точки службы. Сообщения могут представлять одиночный символ или одно слово, отправляемое в формате XML, или иметь вид сложного потока двоичных данных. Далее представлено несколько образцов сценариев.  
@@ -110,4 +111,4 @@ ms.lasthandoff: 11/21/2017
  [Руководство по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md)  
  [Руководство по работе с документацией](../../../docs/framework/wcf/guide-to-the-documentation.md)  
  [Базовое программирование для WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Примеры Windows Communication Foundation](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+ [Примеры Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)

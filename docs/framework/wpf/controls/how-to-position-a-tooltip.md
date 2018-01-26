@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0e8345b74cf9269bca21e1e5698de974109c2aee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc81fa247f21448a4ccbd62baccb72c0ec14bb31
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-position-a-tooltip"></a>Практическое руководство. Задание положения всплывающей подсказки
 В этом примере показано, как указать позицию всплывающей подсказки на экране.  
@@ -73,4 +74,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Controls.ToolTipService>  
  [Разделы практического руководства](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
  [Общие сведения о всплывающих подсказках](../../../../docs/framework/wpf/controls/tooltip-overview.md)  
- [Используйте ContextMenuService и ToolTipService](http://msdn.microsoft.com/en-us/809b0e9c-d612-4cda-b8af-1a698c68f4d1)
+ [Используйте ContextMenuService и ToolTipService](http://msdn.microsoft.com/library/809b0e9c-d612-4cda-b8af-1a698c68f4d1)

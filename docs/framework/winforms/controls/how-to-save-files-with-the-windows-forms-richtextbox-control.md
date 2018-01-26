@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d28aeaefca6f8aa13607f1c1e6f72557ef536754
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7fece6685c1ac71d6ddc152e25c22010e6d579c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Практическое руководство. Сохранение файлов с помощью элемента управления RichTextBox в Windows Forms
 Windows Forms <xref:System.Windows.Forms.RichTextBox> управления может записывать информацию, он отображается в одном из следующих форматов:  
@@ -45,7 +46,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> управления мо�
   
 -   Обычный текст с текстовым представлением объектов OLE  
   
- Чтобы сохранить файл, вызовите <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> метод. Можно также использовать **SaveFile** метод для сохранения данных в поток. Для получения дополнительной информации см. <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
+ Чтобы сохранить файл, вызовите <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> метод. Можно также использовать **SaveFile** метод для сохранения данных в поток. Дополнительные сведения см. в разделе <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
   
 ### <a name="to-save-the-contents-of-the-control-to-a-file"></a>Чтобы сохранить содержимое элемента управления в файл  
   

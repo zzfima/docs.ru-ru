@@ -10,23 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 955c057f-aea8-4ba8-aa6d-e3dfa18ba8d5
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c7398fbea3b59cafed6f9a7f2f4f0440ef29b80a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 7205bc307af6a4a9f307b84a7b3875b77dadb765
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="connection-pooling"></a>Объединение подключений в пул
 На соединение с источником данных может требоваться значительное время. Чтобы свести к минимуму затраты на открытие соединения, в ADO.NET используется техника *организация пулов соединений*, которая позволяет минимизировать затраты на часто открываемые и закрываемые соединения. Пулы соединений обрабатываются для поставщиков данных .NET Framework по-разному.  
   
-## <a name="in-this-section"></a>Содержание  
- [SQL Server пулы соединений (ADO.NET)](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Объединение подключений в пул в SQL Server (ADO.NET)](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)  
  Общие сведения о пулах соединений и описание принципов работы пулов соединений в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
   
- [OLE DB, ODBC и Oracle подключения пулов](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
+ [Организация пулов соединений OLE DB, ODBC и Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
  Описание пулов соединений для поставщика данных .NET Framework для OLE DB, поставщика данных .NET Framework для ODBC и поставщика данных .NET Framework для Oracle.  
   
 ## <a name="see-also"></a>См. также  

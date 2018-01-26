@@ -16,16 +16,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ee1da95a61153b3a2a8478e63bac21271120890d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 946f024ee0c0bf421a00ef2708c436003949f3b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imagelist-component-windows-forms"></a>Компонент ImageList (Windows Forms)
 Компонент `ImageList` в Windows Forms используется для хранения изображений, которые затем будут отображаться элементами управления. Список изображений позволяет написать код для создания единого согласованного каталога изображений.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о компоненте ImageList](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)  
  Описание компонента, его основных возможностей и свойств.  
   
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.ImageList>  
- Описание класса и ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  

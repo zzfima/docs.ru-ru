@@ -11,14 +11,15 @@ ms.topic: article
 helpviewer_keywords: bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a131574e0e3de8507a91807d5de2899238c14628
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 4bc4fc7559872a808c2de87e4926075614351030
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Общие сведения о привязках Windows Communication Foundation
 Привязки - это объекты, используемые для задания сведений о связи, необходимых для подключения к конечной точке службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Каждая конечная точка службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] требует точного задания привязки. В этом разделе описываются типы сведений о связи, определяемых привязками, элементы привязки и привязки, входящие в состав [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], а также демонстрируется задание привязки для конечной точки.  

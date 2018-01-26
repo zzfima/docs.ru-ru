@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: c4ee8833578b082f25c427b13d77072d1954197f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ae572ff3a8a2335a4259bdce2af5f6922fb0596f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltclaimtypegt"></a>&lt;claimType&gt;
 Указывает один обязательный или необязательный утверждений входящие маркеры безопасности.  
@@ -47,14 +48,14 @@ ms.lasthandoff: 10/18/2017
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|type|Тип утверждения. Обычно URI. Обязательный.|  
-|необязательные|Логическое значение, указывающее, является ли тип утверждения является необязательным. Необязательно.|  
+|type|Тип утверждения. Обычно URI. Обязательно.|  
+|необязательные|Логическое значение, указывающее, является ли тип утверждения является необязательным. Необязательный.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Нет  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<claimTypeRequired >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Указывает набор утверждений, необходимых для входящих токенов безопасности.|

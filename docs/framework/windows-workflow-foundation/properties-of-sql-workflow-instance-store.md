@@ -9,19 +9,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5bf75f3c-8f33-450d-967f-6ee862c14c67
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 91a2711fae91c09df0a62759edaa41483eb4ea28
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 368e6a4514eafdf4d3c5b38c5e31ff21e56f67e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-of-sql-workflow-instance-store"></a>Свойства хранилища экземпляров рабочего процесса SQL
 В этом подразделе приводятся подробные сведения о свойствах хранилища экземпляров рабочих процессов SQL.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Возможность кодирования экземпляров](../../../docs/framework/windows-workflow-foundation/instance-encoding-option.md)  
   

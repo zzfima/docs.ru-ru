@@ -10,17 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 223aefec-3011-4f35-afa7-a34c76708d52
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 16bc20afc586213f5b1018fcfeceda0e0a98cfc4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: a87e9c4447ca5cfc084ed44a25d934dd5a2bca7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoint-calls"></a>Конечная точка: вызовы
 Имя счетчика: Calls  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Количество вызовов данной конечной точки.

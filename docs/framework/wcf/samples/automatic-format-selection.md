@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: dab51e56-8517-4a6a-bb54-b55b15ab37bb
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5c3465611fcf418e194c44815c765f8823d8ad83
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: da09df968bffee9a07f1c03d5b771271a9d44129
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="automatic-format-selection"></a>Автоматический выбор формата
 Данный образец демонстрирует включение автоматического выбора формата (XML или JSON) при использовании программной модели [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST, а также явное задание формата в коде операции.  

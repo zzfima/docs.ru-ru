@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d3ba5ac792169cc076f9621025f35444281cec6e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1dcbe970281f3d9cf3b8ffe9adb543afc120ae6b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mitigation-wpf-layout"></a>Устранение рисков. Макет WPF
 Макет элементов управления WPF может немного изменяться.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/18/2017
   
  По умолчанию новый макет включен только для приложений, предназначенных для .NET Framework 4.6.  
   
-## <a name="mitigation"></a>Уменьшение  
+## <a name="mitigation"></a>Устранение рисков  
  Поскольку это изменение, как правило, приводит к устранению обрезки правых или нижних элементов управления WPF при высоком разрешении, для приложений, предназначенных для более ранних версий .NET Framework, но выполняющихся в .NET Framework 4.6, можно выбрать это новое поведение, добавив следующую строку в раздел `<runtime>` файла app.config.  
   
 ```xml  

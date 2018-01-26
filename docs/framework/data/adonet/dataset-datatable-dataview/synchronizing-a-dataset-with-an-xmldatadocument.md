@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bea557d8a09ba874fb4b6a3f3a54c09dac4778cc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: c09ddd9ad4d945fc0704e25400dc8c94bdacb933
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Синхронизация набора данных с XmlDataDocument
 В этом разделе демонстрируется один шаг обработки заказа на покупку с использованием <xref:System.Data.DataSet> со строгой типизацией, синхронизированного с <xref:System.Xml.XmlDataDocument>. Следующие примеры создания **набора данных** с минимальной схемой, который соответствует только часть исходного XML-документа. В примерах используется **XmlDataDocument** совпадения из исходного XML-документа, включение **набора данных** для предоставления доступа к подмножеству XML-документа.  
@@ -242,5 +243,5 @@ public class Sample
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Набор данных и XmlDataDocument синхронизации](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
+ [Синхронизация DataSet и XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
  [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

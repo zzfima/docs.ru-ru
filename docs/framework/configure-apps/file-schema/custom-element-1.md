@@ -10,11 +10,12 @@ ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 496967bc3638344d2b39d428b85270b575b325ed
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8ee722c7d5db9d58ab1a91f4b1299912981510af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>Пользовательский элемент для SingleTagSectionHandler
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="parent-element"></a>Родительский элемент
 
-|     | Описание |
+|     | Описание: |
 | --- | ----------- |
 | [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework. |
 
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="remarks"></a>Примечания
 
-**\<SectionName >** элемент является пользовательским элементом определяется [  **\<раздел >** ](~/docs/framework/configure-apps/file-schema/section-element.md) тегом [  **\<configSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) элемента. Система конфигурации возвращает <xref:System.Collections.IDictionary> объект при вызове <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
+ **\<SectionName >** элемент является пользовательским элементом определяется [  **\<раздел >** ](~/docs/framework/configure-apps/file-schema/section-element.md) тегом [  **\<configSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) элемента. Система конфигурации возвращает <xref:System.Collections.IDictionary> объект при вызове <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Пример
 

@@ -7,25 +7,25 @@ ms.topic: article
 f1_keywords: /dllbase
 helpviewer_keywords:
 - baseaddress compiler option [C#]
-- /baseaddress compiler option [C#]
 - -baseaddress compiler option [C#]
+- /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
 caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7cd3269754f783ab8b26683f5215aa81825673e6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4e4b4964d587bfdf95949ebd6f0028a25988c2ea
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="baseaddress-c-compiler-options"></a>/baseaddress (параметры компилятора C#)
-Параметр **/baseaddress** позволяет указать предпочтительный базовый адрес для загрузки библиотеки DLL. Дополнительные сведения о когда и почему следует использовать этот параметр, см. в разделе [блога Ларри Osterman](http://go.microsoft.com/fwlink/?LinkId=107044).  
+# <a name="-baseaddress-c-compiler-options"></a>-baseaddress (параметры компилятора C#)
+Параметр **-baseaddress** позволяет указать предпочтительный базовый адрес для загрузки библиотеки DLL. Дополнительные сведения о случаях использования этого параметра см. в [блоге Ларри Остермана (Larry Osterman)](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/).  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```console  
-/baseaddress:address  
+-baseaddress:address  
 ```  
   
 ## <a name="arguments"></a>Аргументы  

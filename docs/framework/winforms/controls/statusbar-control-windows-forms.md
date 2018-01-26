@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 775d1a350075811dc02ae33efd1a6ae05328c4ff
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 945d9a658dd3d75dd0edb9f4eaca78334ee4d652
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="statusbar-control-windows-forms"></a>Элемент управления StatusBar (Windows Forms)
 > [!NOTE]
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/22/2017
   
  Элемент управления Windows Forms <xref:System.Windows.Forms.StatusBar> используется в формах в качестве области, обычно отображаемой в нижней части окна, в которой выводятся различные сведения о состоянии приложения. <xref:System.Windows.Forms.StatusBar>элементы управления могут включать панели строки состояния, на которых отображаются значки, показывающие состояние, или набор значков в анимации, указывающие, что процесс работает; например Microsoft Word, означает, что документ сохраняется.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об элементе управления StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)  
  Основные понятия <xref:System.Windows.Forms.StatusBar> элемента управления, который позволяет пользователям видеть соответствующие сведения для элемента управления, который имеет фокус.  
   

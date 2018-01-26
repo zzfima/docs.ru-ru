@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 47956848079e6094dc000d95ec4066f814a70e35
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 6e881213979d32cb9335f01d2804c35c19856b5e
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="table-valued-parameters"></a>Возвращающие табличное значение параметры
 Возвращающие табличное значение параметры обеспечивают легкий способ упаковки строк данных из клиентского приложения в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], не требуя многочисленных циклов приема-передачи или специальной логики на стороне сервера для обработки данных. Возвращающие табличное значение параметры можно использовать для инкапсуляции строк данных в клиентском приложении и отправки данных на сервер с помощью одной параметризированной команды. Входящие строки данных сохраняются в табличной переменной, с которой затем можно работать, используя язык [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/28/2017
   
  Дополнительные сведения о возвращающих табличное значение параметрах см. в приведенных ниже ресурсах.  
   
-|Ресурс|Описание|  
+|Ресурс|Описание:|  
 |--------------|-----------------|  
 |[Возвращающие табличные значения параметров (компонент Database Engine)](http://go.microsoft.com/fwlink/?LinkId=98363) в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] электронной документации|Описывается создание и использование возвращающих табличное значение параметров.|  
 |[Определяемые пользователем табличные типы](http://go.microsoft.com/fwlink/?LinkId=98364) в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] электронной документации|Описывается использование определяемых пользователем табличных типов, предназначенных для объявления возвращающих табличное значение параметров.|  
@@ -281,7 +282,7 @@ insertCommand.ExecuteNonQuery()
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Настройка параметров и типов данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
+ [Настройка параметров и типы данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  [Команды и параметры](../../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [Параметры DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  [Операции данных SQL Server Data в ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  

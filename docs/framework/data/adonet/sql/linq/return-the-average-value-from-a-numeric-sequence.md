@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 87a23bce302ac7eed3081b5670cb8c532a550cde
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: e7c53eafdc8805dce07ccde6b0cf01438fbd3ccf
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a>Возврат среднего значения из числовой последовательности
 Оператор <xref:System.Linq.Enumerable.Average%2A> вычисляет среднее последовательности числовых значений.  

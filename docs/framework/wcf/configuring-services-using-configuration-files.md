@@ -11,14 +11,15 @@ ms.topic: article
 helpviewer_keywords: configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
 caps.latest.revision: "29"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 480cdb83248dc1cf9dd90c0f654aa4f269318c4a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 93dc8119e76f5c9cbff5c91a7e5d0cde3b0072f2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Настройка служб с использованием файлов конфигурации
 Настройка службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] с помощью файла конфигурации обеспечивает гибкость предоставления данных по конечной точке и поведению службы непосредственно в точке развертывания, а не во время разработки. В этой теме представлено описание основных доступных методов.  
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="the-services-element"></a>\<Службы > элемент  
  Элемент `services` содержит спецификации для всех служб, которые размещает приложение. Начиная с упрощенной модели настройки в [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], этот раздел задавать необязательно.  
   
- [\<службы >](../../../docs/framework/configure-apps/file-schema/wcf/services.md)  
+ [\<services>](../../../docs/framework/configure-apps/file-schema/wcf/services.md)  
   
 ### <a name="the-service-element"></a>\<Службы > элемент  
  Каждая служба имеет следующие атрибуты:  
@@ -87,7 +88,7 @@ ms.lasthandoff: 11/21/2017
   
 -   `behaviorConfiguration`. Задает имя одного из элементов `behavior` , найденных в `behaviors` . Заданное поведение управляет действиями, например, разрешает ли служба олицетворение. Если значением является пустое имя, или объект `behaviorConfiguration` не указан, то в службу добавляется набор поведений службы по умолчанию.  
   
--   [\<Служба >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
+-   [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
   
 ### <a name="the-endpoint-element"></a>\<Endpoint > элемент  
  Для каждой конечной точки требуется адрес, привязка и контракт, представленные следующими атрибутами:  
@@ -100,24 +101,24 @@ ms.lasthandoff: 11/21/2017
   
 -   `contract`. Задает интерфейс, определяющий контракт. Это интерфейс, реализованный в типе CLR, который задан атрибутом `name` элемента `service` .  
   
--   [\<Конечная точка > Справочник по элементам](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
+-   [\<Конечная точка > Справочник по элементам](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
   
 ### <a name="the-bindings-element"></a>\<Привязки > элемент  
  Элемент `bindings` содержит спецификации для всех привязок, которые могут использоваться любой конечной точкой, заданной в любой службе.  
   
- [\<привязки >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
   
 ### <a name="the-binding-element"></a>\<Привязки > элемент  
  Элемент `binding` , содержащиеся в элементе `bindings` , могут являться одной из предоставленных системой привязок (см. раздел [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)) или пользовательской привязкой (см. раздел [Custom Bindings](../../../docs/framework/wcf/extending/custom-bindings.md)). Элемент `binding` имеет атрибут `name` , сопоставляющий привязку с конечной точкой, заданной в атрибуте `bindingConfiguration` элемента `endpoint` . Если имя не указано, то привязка будет соответствовать значению по умолчанию для этого типа привязки.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] настройке служб и клиентов см. в разделе [Configuring Windows Communication Foundation Applications](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)]Настройка служб и клиентов, в разделе [Настройка приложений Windows Communication Foundation](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
  [\<Привязка >](../../../docs/framework/misc/binding.md)  
   
 ### <a name="the-behaviors-element"></a>\<Поведения > элемент  
  Это элемент контейнера для элементов `behavior` , задающих поведение службы.  
   
- [\<поведения >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+ [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
   
 ### <a name="the-behavior-element"></a>\<Поведение > элемент  
  Каждый элемент `behavior` определяется атрибутом `name` и обеспечивает либо предоставленное системой поведение (например <`throttling`>), либо пользовательское поведение. Если имя не задано, то элемент behavior будет соответствовать поведению по умолчанию для службы или конечной точки.  
@@ -273,6 +274,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Упрощенная конфигурация](../../../docs/framework/wcf/simplified-configuration.md)  
- [Настройка приложений Windows Communication Foundation](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- [\<Служба >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
+ [Настройка приложений Windows Communication Foundation](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
  [\<Привязка >](../../../docs/framework/misc/binding.md)

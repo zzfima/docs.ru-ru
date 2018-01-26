@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8e188528-c4f4-499e-9ac2-a2fac4742f29
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f1e7d4aecff1da27a7a980ad3eec17c3a82e5862
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 9c726502076cc44ebcafd68e0f9a8dbb4f2cf2cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelcommunicationobjectopenfailed"></a>System.ServiceModel.CommunicationObjectOpenFailed
 Не удалось открыть объект связи.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Объект связи не удалось открыть, так как во время выполнения метода Open возникло исключение. Подробные сведения об этом исключении могут содержаться в соседней трассировке.  
   
 ## <a name="see-also"></a>См. также  

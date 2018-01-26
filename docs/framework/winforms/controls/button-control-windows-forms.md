@@ -16,16 +16,17 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1dd584896dd8698dc881eb00186c6a550f36c75f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e4f9720f26458f3dd9cb2411d123fa830b20f3fd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="button-control-windows-forms"></a>Элемент управления Button (Windows Forms)
 Элемент управления Windows Forms `Button` позволяет пользователю щелкнуть его для выполнения действия. На элементе управления `Button` могут отображаться текст и изображения. При щелчке кнопки мышью элемент управления выглядит так, как будто его нажимают и отпускают.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об элементе управления Button](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
  Описывается элемент управления, его основные возможности и свойства.  
   
@@ -45,10 +46,10 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="reference"></a>Ссылка  
  Класс <xref:System.Windows.Forms.Button>  
- Описание класса и ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.  
   
- См. также [ввод данных пользователем в диалоговые окна](http://msdn.microsoft.com/en-us/63ad8645-6842-45e8-b215-73f778e29a55) и [как: закрыть диалоговые окна и сохранение введенных пользователем данных](http://msdn.microsoft.com/en-us/9e118fad-3bf4-4f70-a3de-a0cda2b0229d).
+ См. также [ввод данных пользователем в диалоговые окна](http://msdn.microsoft.com/library/63ad8645-6842-45e8-b215-73f778e29a55) и [как: закрыть диалоговые окна и сохранение введенных пользователем данных](http://msdn.microsoft.com/library/9e118fad-3bf4-4f70-a3de-a0cda2b0229d).

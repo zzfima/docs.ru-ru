@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 21bb762e-c43e-4b0c-887b-5e434d665838
 caps.latest.revision: "26"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: db67447ce262949c9ad302a37420fc7023264bd2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: d520a46bc3380fc5dff76f5df866ae3411d5a6a7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuration-based-activation"></a>Активация на основе конфигурации
 В этом образце показывается способ активации служб [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] без использования SVC-файла.  

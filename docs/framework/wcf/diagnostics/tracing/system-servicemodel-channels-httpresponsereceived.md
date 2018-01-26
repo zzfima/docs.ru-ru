@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 23101c3b-c1c2-4544-bb2f-aceec3e4e724
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: dec86ca25e4e0ced92090b3f42aa46099dcc0dbe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 3846700a4e6d8c5e26168c24f64127e7cb1b5dd0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelshttpresponsereceived"></a>System.ServiceModel.Channels.HttpResponseReceived
 System.ServiceModel.Channels.HttpResponseReceived  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Получен ответ HTTP.  
   
 ## <a name="see-also"></a>См. также  

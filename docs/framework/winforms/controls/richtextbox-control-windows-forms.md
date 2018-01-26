@@ -17,16 +17,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 80621a12a4ccd5008a0331af005629d45f60abdf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4325fd3eb2e3d7179ddb5270d073c7ba5f0f383f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="richtextbox-control-windows-forms"></a>Элемент управления RichTextBox (Windows Forms)
 Windows Forms `RichTextBox` элемент управления используется для отображения, ввода и изменения текста с форматированием. `RichTextBox` Элемент управления выполняет все, что <xref:System.Windows.Forms.TextBox> делает элемент управления, но можно также отображать шрифты, цвета и ссылки; загрузить из файла; действия отмены и повтора операций; изменения текста и внедренные изображения и поиск определенных символов. `RichTextBox` Элемент управления обычно используется для работы с текстом и отображения функций, как для текстовых редакторов, таких как Microsoft Word. Как <xref:System.Windows.Forms.TextBox> управления `RichTextBox` элемент управления может отображать полосы прокрутки; но в отличие от <xref:System.Windows.Forms.TextBox> элемента управления, он отображает горизонтальные и вертикальные полосы прокрутки по умолчанию и параметры дополнительной полосы прокрутки.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об элементе управления RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-overview-windows-forms.md)  
  Основные понятия `RichTextBox` управления, который позволяет пользователям вводить, отображать и изменять текст с помощью операций форматирования.  
   
@@ -56,7 +57,7 @@ Windows Forms `RichTextBox` элемент управления использу
   
 ## <a name="reference"></a>Ссылка  
  Класс <xref:System.Windows.Forms.RichTextBox>  
- Описание класса и ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  

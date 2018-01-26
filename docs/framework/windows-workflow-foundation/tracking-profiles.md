@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
 caps.latest.revision: "21"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: eb5686cac4ac7f23890a169d7875669a4e067193
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: a3b1e96451eb89544d0902a1f3498263dec981a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracking-profiles"></a>Профили отслеживания
 Профили отслеживания содержат запросы отслеживания, позволяющие участнику подписываться на события рабочего потока, создаваемые в момент изменения состояния экземпляра рабочего процесса во время выполнения.  
@@ -390,6 +391,6 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Трассировка SQL](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)  
+ [Отслеживание SQL](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)  
  [Наблюдение за Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201273)  
  [Мониторинг приложений с](http://go.microsoft.com/fwlink/?LinkId=201275)

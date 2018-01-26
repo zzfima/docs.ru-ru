@@ -10,23 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b0885b65-4e74-4bc9-bbf0-eb7ebe566da1
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b69e061820cc2a45e4b42490a4e2724beef2c2b1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 0d4c3a91d69fd7adc863c6e947b72aa9134c376b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="behaviors"></a>поведения
 В этом разделе содержатся образцы, демонстрирующие различное поведение служб [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Параллелизм](../../../../docs/framework/wcf/samples/concurrency.md)  
  Демонстрирует использование атрибута <xref:System.ServiceModel.ServiceBehaviorAttribute> с перечислением <xref:System.ServiceModel.ConcurrencyMode>, который определяет, как экземпляр службы будет обрабатывать сообщения: последовательно или параллельно.  
   
- [Поведения службы по умолчанию](../../../../docs/framework/wcf/samples/default-service-behavior.md)  
+ [Поведение служб по умолчанию](../../../../docs/framework/wcf/samples/default-service-behavior.md)  
  Показывает, как настроить параметры поведения службы.  
   
  [Создание экземпляров](../../../../docs/framework/wcf/samples/instancing.md)  
@@ -44,5 +45,5 @@ ms.lasthandoff: 10/18/2017
  [Регулирование](../../../../docs/framework/wcf/samples/throttling.md)  
  Демонстрирует использование элементов управления регулированием.  
   
- [Поведение безопасности](../../../../docs/framework/wcf/samples/behavior-security.md)  
+ [Безопасность поведений](../../../../docs/framework/wcf/samples/behavior-security.md)  
  Демонстрируется, как настроить параметры безопасности поведения службы.

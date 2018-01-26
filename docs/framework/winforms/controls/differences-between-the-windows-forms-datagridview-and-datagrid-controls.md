@@ -17,18 +17,19 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 38373b8e3201ea0a6c32d972c7ac9c72888d5eae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3bc6d1fa2450d0aba52bd6a5a030c025fede0cb2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="differences-between-the-windows-forms-datagridview-and-datagrid-controls"></a>Различия элементов управления DataGridView и DataGrid в Windows Forms
 <xref:System.Windows.Forms.DataGridView> Управления имеет элемент управления, который заменяет <xref:System.Windows.Forms.DataGrid> элемента управления. <xref:System.Windows.Forms.DataGridView> Управления предоставляет множество основных и дополнительных компонентов, отсутствующих в <xref:System.Windows.Forms.DataGrid> элемента управления. Кроме того, архитектура <xref:System.Windows.Forms.DataGridView> управления позволяет легко можно расширять и настраивать чем <xref:System.Windows.Forms.DataGrid> элемента управления.  
   
  В следующей таблице описаны некоторые основные функции, доступные в <xref:System.Windows.Forms.DataGridView> управления, отсутствуют <xref:System.Windows.Forms.DataGrid> элемента управления.  
   
-|Функция управления DataGridView|Описание|  
+|Функция управления DataGridView|Описание:|  
 |----------------------------------|-----------------|  
 |Несколько типов столбцов|<xref:System.Windows.Forms.DataGridView> Управления предоставляет больше встроенных типов столбцов, чем <xref:System.Windows.Forms.DataGrid> элемента управления. Типы столбцов соответствуют наиболее распространенных сценариев, но могут оказаться легче расширять или заменять, чем типов столбцов в <xref:System.Windows.Forms.DataGrid> элемента управления. Дополнительные сведения см. в разделе [типов столбцов в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md).|  
 |Различные способы отображения данных|<xref:System.Windows.Forms.DataGrid> Управления может размещать данные из внешнего источника данных. <xref:System.Windows.Forms.DataGridView> Управления, тем не менее, могут отображать данные, хранящиеся в элемент управления, данные из связанного источника данных или данных, присоединенных и свободных друг с другом. Вы также можете реализовать виртуальный режим в <xref:System.Windows.Forms.DataGridView> управления для управления данными. Дополнительные сведения см. в разделе [режимы отображения данных в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md).|  

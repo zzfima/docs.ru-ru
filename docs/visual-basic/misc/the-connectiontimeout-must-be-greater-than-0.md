@@ -9,22 +9,22 @@ ms.assetid: 15ac09a7-47f0-44f3-9e84-5bd10bd07450
 caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4cb1d68a0277ecb1a0dbf5fca46fab5960dd863b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 49e52d7b219d834609658b652f78629c36f79e59
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="the-connectiontimeout-must-be-greater-than-0"></a>Значение ConnectionTimeout должно быть больше 0.
-При отправке и загрузке файлов с помощью [My.Computer.Network Object](../../visual-basic/language-reference/objects/my-computer-network-object.md)необходимо указать `connectionTimeout` больше `0`.  
+При отправке и загрузке файлов с [My.Computer.Network](xref:Microsoft.VisualBasic.Devices.Network), необходимо указать `connectionTimeout` больше `0`.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
 -   Укажите `connectionTimeout` больше `0`.  
   
 ## <a name="see-also"></a>См. также  
- [Метод My.Computer.Network.UploadFile](http://msdn.microsoft.com/en-us/5505ea3e-3dbd-460b-9f8f-62c84c0a4de6)  
- [Метод My.Computer.Network.DownloadFile](http://msdn.microsoft.com/en-us/aeb7ed8f-1ac9-4242-ae57-9f35914eb329)  
+ [My.Computer.Network.UploadFile](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)  
+ [My.Computer.Network.DownloadFile](xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A)  
  [Практическое руководство. Передача файла](../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
  [Практическое руководство. Скачивание файла](../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
- [Сетевые операции в .NET Framework с Visual Basic](http://msdn.microsoft.com/en-us/c5379021-44ef-4d6a-acf5-e951fdcab6b2)
+ [Сетевые операции в .NET Framework с Visual Basic](http://msdn.microsoft.com/library/c5379021-44ef-4d6a-acf5-e951fdcab6b2)

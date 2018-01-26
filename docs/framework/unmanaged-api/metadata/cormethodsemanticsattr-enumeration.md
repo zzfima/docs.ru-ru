@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c6dca24aad06b1c07c86cb716f4be344c8458471
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 09e0c1397a94b75a812e6cbdc52e612a930edae9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>Перечисление CorMethodSemanticsAttr
 Содержит значения, описывающие связь между методом и соответствующим свойством или событием.  
@@ -43,9 +44,9 @@ typedef enum CorMethodSemanticsAttr {
 } CorMethodSemanticsAttr;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`msSetter`|Указывает, что метод является `set` метод доступа для свойства.|  
 |`msGetter`|Указывает, что метод является `get` метод доступа для свойства.|  

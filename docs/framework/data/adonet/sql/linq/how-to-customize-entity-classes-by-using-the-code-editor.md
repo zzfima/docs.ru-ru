@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ec28332f-9f3c-4e0a-baca-60f9141a68c0
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d5586e28e784c43488245db814abf32d863232fc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 0bb8f0e7116c1a2e0856ca72b618eb6607a654be
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>Практическое руководство. Настройка классов сущностей с использованием редактора кода
 Пользователи среды [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] могут воспользоваться [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для создания и настройки своих классов сущностей.  
@@ -26,43 +27,43 @@ ms.lasthandoff: 10/18/2017
   
  В подразделах данного раздела описаны способы настройки объектной модели.  
   
- [Как: Указание имен баз данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-names.md)  
+ [Практическое руководство. Указание имен баз данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-names.md)  
  Описание использования <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>.  
   
- [Как: представление таблиц как классов](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-tables-as-classes.md)  
+ [Практическое руководство. Представление таблиц как классов](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-tables-as-classes.md)  
  Описание использования <xref:System.Data.Linq.Mapping.TableAttribute>.  
   
- [Как: представление столбцов как членов класса](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-class-members.md)  
+ [Практическое руководство. Представление столбцов как членов класса](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-class-members.md)  
  Описание использования <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
- [Как: представление первичных ключей](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-primary-keys.md)  
+ [Практическое руководство. Представление первичных ключей](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-primary-keys.md)  
  Описание использования <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>.  
   
- [Как: сопоставление связей базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)  
+ [Практическое руководство. Сопоставление отношений базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)  
  Содержатся примеры использования атрибута <xref:System.Data.Linq.Mapping.AssociationAttribute>.  
   
- [Как: представление столбцов как созданные базой данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-database-generated.md)  
+ [Практическое руководство. Представление столбцов как столбцов, созданных базой данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-database-generated.md)  
  Описание использования <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>.  
   
- [Как: представление столбцов как меток времени или столбцов версии](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-timestamp-or-version-columns.md)  
+ [Практическое руководство. Представление столбцов как меток времени или столбцов версии](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-timestamp-or-version-columns.md)  
  Описание использования <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>.  
   
- [Как: укажите типы данных базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-data-types.md)  
+ [Практическое руководство. Указание типов данных базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-data-types.md)  
  Описание использования <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>.  
   
- [Как: представление вычисляемых столбцов](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-computed-columns.md)  
+ [Практическое руководство. Представление вычисляемых столбцов](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-computed-columns.md)  
  Описание использования <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>.  
   
- [Как: задание частных полей хранения](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-private-storage-fields.md)  
+ [Практическое руководство. Задание частных полей хранения](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-private-storage-fields.md)  
  Описание использования <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>.  
   
- [Как: представлять столбцы, допускающие значения Null](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-allowing-null-values.md)  
+ [Практическое руководство. Представление столбцов как столбцов, допускающих значения NULL](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-allowing-null-values.md)  
  Описание использования <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>.  
   
- [Как: сопоставление иерархий наследования](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md)  
+ [Практическое руководство. Сопоставление иерархий наследования](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md)  
  Описываются сопоставления, необходимые для определения иерархии наследования.  
   
- [Как: задания проверки конфликт параллелизма](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-concurrency-conflict-checking.md)  
+ [Практическое руководство. Задание проверки на конфликты параллельности](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-concurrency-conflict-checking.md)  
  Описание использования <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>.  
   
 ## <a name="see-also"></a>См. также  

@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9a0baeb7-a05c-4fac-b905-252758cb71bb
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f0dae84428f079dc3efb0c7ee620fa8c6ff87a8f
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: bfc651403988fa7558f79a4c99e42fb776efec4d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="nopersistscope-activity"></a>Действие NoPersistScope
 В этом образце показано, как обрабатывать несериализуемое и высвобождаемое состояние в рабочем процессе. Важно заметить, что попыток сохранения несериализуемого состояния в рабочих процессах не происходит. Кроме того, необходимо очищать высвобождаемые объекты после их использования в рабочем процессе.  

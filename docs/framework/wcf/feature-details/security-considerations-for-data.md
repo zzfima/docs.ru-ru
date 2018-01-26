@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 98bce70d7092a8ce9b9244479f7ff6d999bb0825
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bb7a40bc38a3fdf3f7be2b31e30e768e26be2d15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-for-data"></a>Вопросы безопасности для данных
 При работе с данными в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]следует учитывать ряд категорий угроз. В следующей таблице представлен список наиболее важных классов угроз, относящихся к обработке данных. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предоставляет средства для борьбы с такими угрозами.  
@@ -202,7 +203,7 @@ ms.lasthandoff: 11/21/2017
  В следующих разделах приводится подробное описание таких классов угроз.  
   
 ## <a name="datacontractserializer"></a>DataContractSerializer  
- (Дополнительные сведения о безопасности <xref:System.Xml.Serialization.XmlSerializer> см. в соответствующей документации.) Модель безопасности <xref:System.Xml.Serialization.XmlSerializer> аналогична модели <xref:System.Runtime.Serialization.DataContractSerializer> и в основном различается в деталях. Например, для включения типа используется атрибут <xref:System.Xml.Serialization.XmlIncludeAttribute> вместо атрибута <xref:System.Runtime.Serialization.KnownTypeAttribute>. Однако далее в этой теме рассматриваются угрозы, уникальные для <xref:System.Xml.Serialization.XmlSerializer> .  
+ (Дополнительные сведения о безопасности <xref:System.Xml.Serialization.XmlSerializer> см. в соответствующей документации.) Модель безопасности <xref:System.Xml.Serialization.XmlSerializer> аналогична модели <xref:System.Runtime.Serialization.DataContractSerializer> и в основном различается в деталях. Например, для включения типа используется атрибут <xref:System.Xml.Serialization.XmlIncludeAttribute> вместо атрибута <xref:System.Runtime.Serialization.KnownTypeAttribute> . Однако далее в этой теме рассматриваются угрозы, уникальные для <xref:System.Xml.Serialization.XmlSerializer> .  
   
 ### <a name="preventing-unintended-types-from-being-loaded"></a>Предотвращение загрузки непредусмотренных типов  
  Загрузка непредусмотренных типов может привести к серьезным последствиям, будь этот тип вредоносным или всего лишь косвенно влияющим на безопасность. Тип может содержать уязвимость системы безопасности, выполнять действия, относящиеся к безопасности, в конструкторе или конструкторе класса, занимать большой объем памяти, что способствует атакам типа "отказ в обслуживании", или выводить неустранимые исключения. Типы могут содержать конструкторы классов, которые начинают работать сразу после загрузки типа и до создания каких-либо экземпляров. По этим причинам важно контролировать набор типов, которые может загружать десериализатор.  
@@ -264,7 +265,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Соблюдайте осторожность при использовании устаревших типов, отмеченных атрибутом <xref:System.SerializableAttribute> . Многие из них созданы для работы с удаленным взаимодействием [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] и должны использоваться только с надежными данными. Существующие типы, отмеченные этим атрибутом, могут быть созданы и без учета обеспечения безопасности состояния.  
   
--   Чтобы гарантировать наличие данных с учетом обеспечения безопасности состояния, не следует полагаться на свойство <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> атрибута `DataMemberAttribute` . Данные всегда могут быть `null`, `zero`или `invalid`.  
+-   Чтобы гарантировать наличие данных с учетом обеспечения безопасности состояния, не следует полагаться на свойство <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> атрибута `DataMemberAttribute` . Данные всегда могут быть `null`, `zero` или `invalid`.  
   
 -   Никогда не доверяйте графу объекта, десериализованному из источника ненадежных данных, не определив сначала его действительность. Каждый отдельный объект может находиться в согласованном состоянии, однако весь граф объекта в таком состоянии может и не находиться. Более того, даже если выключен режим сохранения графа объекта, десериализованный граф может содержать несколько ссылок на небольшой объект или содержать циклические ссылки. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Сериализации и десериализации](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   

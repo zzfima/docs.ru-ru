@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a9287a5a-a36b-4659-8c87-13962b1c225c
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 902f0f9c824dc07facbee07c97668f22c983ae7c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 7159c5cad5de815ef32da874d55b1510b183aedf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemidentitymodelselectorsstoreloading"></a>System.IdentityModel.Selectors.StoreLoading
 System.IdentityModel.Selectors.StoreLoading  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Инициализирует указанное хранилище.  
   
 ## <a name="see-also"></a>См. также  

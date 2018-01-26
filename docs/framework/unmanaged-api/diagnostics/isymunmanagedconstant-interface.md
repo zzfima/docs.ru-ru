@@ -19,22 +19,23 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 21ea3a7ddf7a03ec33d461fef58c5d4149c4b62f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 41100fe6e85e09b45078587d75f61cbf9953dadf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="isymunmanagedconstant-interface"></a>Интерфейс ISymUnmanagedConstant
 Предоставляет доступ к неуправляемым константам.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод GetName](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)|Возвращает имя константы.|  
 |[Метод GetSignature](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)|Возвращает подпись константы.|  
-|[GetValue-метод](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)|Возвращает значение константы.|  
+|[Метод GetValue](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)|Возвращает значение константы.|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** CorSym.idl, CorSym.h  

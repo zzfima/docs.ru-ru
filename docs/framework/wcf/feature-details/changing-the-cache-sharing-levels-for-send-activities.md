@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 321daca64218bfe2d8644c31df68b80aa8c775d1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 59c6ae1ae31a5aa256844e6efca158e4702b6aba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Изменение уровней совместного использования кэша для действий «Send»
 Расширение <xref:System.ServiceModel.Activities.SendMessageChannelCache> позволяет изменить уровни доступа к кэшу, настройки кэша фабрик каналов и настройки кэша канала для рабочих потоков, направляющих сообщения в конечные точки с использованием действий обмена сообщениями <xref:System.ServiceModel.Activities.Send>. Эти рабочие процессы обычно являются клиентскими, но также могут быть службами рабочих процессов, размещенными в <xref:System.ServiceModel.WorkflowServiceHost>. Кэш фабрик каналов содержит кэшированные объекты <xref:System.ServiceModel.ChannelFactory%601>. Кэш каналов содержит кэшированные каналы.  
@@ -47,7 +48,7 @@ static SendMessageChannelCache sharedChannelCacheExtension =
     new SendMessageChannelCache();  
 ```  
   
- Затем добавьте модуль кэша каждому экземпляру клиентского рабочего процесса.  
+ Затем добавьте расширение кэша каждому экземпляру клиентского рабочего процесса.  
   
 ```  
 WorkflowApplication clientInstance1 = new WorkflowApplication(new clientWorkflow1());  

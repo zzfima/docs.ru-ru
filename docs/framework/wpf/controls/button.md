@@ -17,18 +17,19 @@ caps.latest.revision: "80"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 551813a2e5209d1c0ed9fdd124586f98508a0f42
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 65243113b0d186d6f391b2e39d776141ffa9922f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="button"></a>Кнопка
 Объект <xref:System.Windows.Controls.Button> управления реагирует на ввод данных пользователем от мыши, клавиатуры, перо, или другое устройство ввода и вызывает <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событий. Объект <xref:System.Windows.Controls.Button> простой [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] компонент, который может содержать простым содержимым, такие как текст и может также содержать сложного содержимого, такие как изображения и <xref:System.Windows.Controls.Panel> элементов управления.  
   
  ![Кнопку состояний](../../../../docs/framework/wpf/controls/media/ss-ctl-buttons.bmp "SS_CTL_buttons")  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Создание кнопки, содержащей изображение](../../../../docs/framework/wpf/controls/how-to-create-a-button-that-has-an-image.md)  
   
 ## <a name="reference"></a>Ссылка  

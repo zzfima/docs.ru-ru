@@ -13,14 +13,15 @@ helpviewer_keywords:
 - WCF [WCF], glossary
 ms.assetid: 39cd36f4-8a28-4d0b-a830-98d55c9d30ae
 caps.latest.revision: "243"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1f78b919a93bcf0bce5e326f7664caf7529d3e04
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 76cc8f456701d65b675ce7b89436da5213ea9430
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-glossary-for-net-framework-45"></a>Глоссарий Windows Communication Foundation для .NET Framework 4.5
 Для документации по Windows Communication Foundation определяются следующие термины.  

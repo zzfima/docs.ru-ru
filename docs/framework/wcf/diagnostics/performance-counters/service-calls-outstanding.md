@@ -10,17 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 88eb4019-b99b-491d-bfd6-15129bb32821
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6f038be7f701a872247d61b827dcd26eb6c664bb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 83986f52f629d68014ee27ae27d50614894435c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-calls-outstanding"></a>Служба: количество незавершенных вызовов
 Имя счетчика: Calls Outstanding  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Количество выполняемых вызовов данной службы.

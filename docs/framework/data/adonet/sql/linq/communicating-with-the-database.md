@@ -10,26 +10,27 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 659d9817-bcaa-457f-9639-169394177274
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4b7c59096f1decc57b5d8aa4194cbb838c358042
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 6ec6a93f2a6eed130d5b7a65cc8780b365715f17
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="communicating-with-the-database"></a>Установка связи с базой данных
 В темах этого раздела описываются некоторые основные аспекты по установке и поддержке подключения к базе данных.  
   
-## <a name="in-this-section"></a>Содержание  
- [Как: подключение к базе данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Практическое руководство. Подключение к базе данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md)  
  Содержит сведения по использованию класса <xref:System.Data.Linq.DataContext> для подключения к базе данных.  
   
- [Как: непосредственное выполнение команд SQL](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-commands.md)  
+ [Практическое руководство. Непосредственное выполнение команд SQL](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-commands.md)  
  Содержит сведения по использованию <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> для отправки команд языка SQL.  
   
- [Как: повторного использования подключения между командой ADO.NET и контекстом DataContext](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)  
+ [Практическое руководство. Повторное использование соединения между командой ADO.NET и контекстом DataContext](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)  
  Содержит примеры использования существующих подключений [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] в приложении [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
 ## <a name="see-also"></a>См. также  

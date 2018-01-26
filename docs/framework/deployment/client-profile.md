@@ -20,11 +20,12 @@ caps.latest.revision: "44"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0c93019b2024029fd27d78ac191f0f99bc9b0ce9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f05290486b107f325e61cfffad052311258eee3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework (клиентский профиль)
 Клиентский профиль .NET — это подмножество платформы .NET Framework, которое предоставлялось с [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] и более ранними версиями и было оптимизировано для клиентских приложений. .NET Framework — это платформа разработки для Windows, Windows Phone и Microsoft Azure, которая включает в себя управляемую среду выполнения приложений и библиотеку классов .NET Framework. В [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] и более ранних версиях предоставлялось два варианта развертывания: полная платформа .NET Framework и клиентский профиль. Клиентский профиль позволял ускорить развертывание и уменьшить установочные пакеты приложений по сравнению с полной платформой .NET Framework.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
  При установке [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] клиентский профиль платформы .NET Framework 4 обновляется до полной версии платформы .NET Framework. Сведения об установке [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] см. в разделе [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md).  
   
 ## <a name="see-also"></a>См. также  
- [Клиентский профиль .NET framework (.NET Framework 4)](http://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx)  
+ [Клиентский профиль .NET Framework (.NET Framework 4)](http://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx)  
  [Обзор настройки для различных версий в Visual Studio](http://msdn.microsoft.com/library/b1702c33-0672-4ebc-b779-2b324d6ea880)  
  [Устранение неполадок, связанных с настройкой для определенных версий платформы .NET Framework](http://msdn.microsoft.com/library/830e3e45-9a93-4279-a249-75b84599aefb)  
  [Практическое руководство. Определение целевой версии .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)

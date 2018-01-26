@@ -11,14 +11,15 @@ ms.topic: article
 helpviewer_keywords: WCF Data Services, configuring
 ms.assetid: 62c6f318-3ee1-433a-b7a3-efa234c3034c
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a8fb075bdb17f0d562d752bc4125141bb0bb2ab9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 1fa20e9ed0cefbe587bba90ad25d5460592e3ecf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-a-data-service-reference-wcf-data-services"></a>Практическое руководство. Добавление ссылки на службу данных (службы данных WCF)
 Можно использовать **добавить ссылку на службу** диалогового окна в Visual Studio, чтобы добавить ссылку на [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Это позволяет упростить доступ к службе данных в клиентском приложении, разрабатываемом в среде Visual Studio. По завершении этой процедуры формируются классы данных на основе метаданных, полученных от службы данных. Дополнительные сведения см. в разделе [Создание библиотеки клиентов службы данных](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md).  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/18/2017
   
 3.  Если служба данных является частью текущего решения, нажмите кнопку **Discover**.  
   
-     -или-  
+     - или -  
   
      В **адрес** текстовом поле Введите базовый URL-адрес службы данных, таких как `http://localhost:1234/Northwind.svc`, а затем нажмите кнопку **Go**.  
   

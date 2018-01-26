@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 14bd4be6-1ff1-4df5-b89f-af7950f62ef4
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 699266dfd878762f88143660cd9b61e74e29a0fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 556ea6e75c7704208a864518df7f2748ef614f79
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelspeernodeaddresschanged"></a>System.ServiceModel.Channels.PeerNodeAddressChanged
 Изменились один или более адресов PeerNode.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Эта трассировка возникает при завершении обратного вызова уведомления об изменении адреса.  
   
 ## <a name="see-also"></a>См. также  

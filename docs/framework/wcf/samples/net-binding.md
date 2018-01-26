@@ -10,20 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4d10072a-ae0a-486a-b713-49703e26d9bf
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a02a6526d6299545f8d943472e9eafafb698eab5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 0559920a78003fa5b77ef7e966aeed0cd553444f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-binding"></a>Привязка на платформе .NET
 Этот раздел содержит образцы, которые демонстрируют использование атрибутов сетевой привязки элемента конечной точки.  
   
-## <a name="in-this-section"></a>Содержание  
- [Привязка MSMQ на Платформе .NET](../../../../docs/framework/wcf/samples/net-msmq-binding.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Привязка MSMQ на платформе .NET](../../../../docs/framework/wcf/samples/net-msmq-binding.md)  
  Показывает использование атрибутов привязки MSMQ элемента конечной точки.  
   
  [Интеграция очередей сообщений](../../../../docs/framework/wcf/samples/message-queueing-integration.md)  

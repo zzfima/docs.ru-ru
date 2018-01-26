@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ec1a7bb1-c787-45ec-8292-73d104f3d7bb
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 86d457202b062f28a2a3a183f717f2e4471e28e9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 55348c8c9961fcd15556feb7dca2f42b471fcf12
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelperformancecountersfailedonrelease"></a>System.ServiceModel.PerformanceCountersFailedOnRelease
 System.ServiceModel.PerformanceCountersFailedOnRelease  

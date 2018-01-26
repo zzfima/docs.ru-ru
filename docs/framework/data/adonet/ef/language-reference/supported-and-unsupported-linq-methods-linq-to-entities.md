@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 73b0c48b4aa4b4f54090e380e85bd35b89cc3f25
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 58fa10c62819979bfad15e4cae49118d25ed8670
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Поддерживаемые и неподдерживаемые методы LINQ (LINQ to Entities)
 В данном разделе приводятся сведения о стандартных операторах запросов LINQ, поддерживаемых или неподдерживаемых в запросах [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. У многих стандартных операторов запросов LINQ существуют перегруженные версии, принимающие целочисленный аргумент. Целочисленный аргумент соответствует отсчитываемый от нуля индекс в последовательности, выполняется операция, <xref:System.Collections.Generic.IEqualityComparer%601>, или <xref:System.Collections.Generic.IComparer%601>. Если не указано обратное, эти перегруженные версии стандартных операторов LINQ не поддерживаются и при попытке их использования будет вызвано исключение.  
@@ -155,7 +156,7 @@ ms.lasthandoff: 10/18/2017
 |<xref:System.Linq.Queryable.Sum%2A>|Не поддерживается|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Decimal))) _ ) As Nullable(Of Decimal)`|`Nullable<decimal> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<decimal>>> selector )`|  
   
 ## <a name="type-methods"></a>Методы типов  
- Стандартные операторы запросов LINQ, использующие преобразование и проверку типов CLR, поддерживаются в платформе [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. В языке LINQ to Entities поддерживаются только те типы CLR, которые сопоставляются с типами концептуальной модели. Список типов концептуальной модели, см. в разделе [типы концептуальной модели (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4). В следующей таблице перечислены поддерживаемые и неподдерживаемые методы типа.  
+ Стандартные операторы запросов LINQ, использующие преобразование и проверку типов CLR, поддерживаются в платформе [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. В языке LINQ to Entities поддерживаются только те типы CLR, которые сопоставляются с типами концептуальной модели. Список типов концептуальной модели, см. в разделе [типы концептуальной модели (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). В следующей таблице перечислены поддерживаемые и неподдерживаемые методы типа.  
   
 |Метод|Поддержка|Сигнатура функции Visual Basic|Сигнатура метода C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -189,4 +190,4 @@ ms.lasthandoff: 10/18/2017
 |<xref:System.Linq.Queryable.TakeWhile%2A>|Не поддерживается|`Function TakeWhile(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> TakeWhile<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
   
 ## <a name="see-also"></a>См. также  
- [Стандартные операторы запросов в запросах LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)
+ [Стандартные операторы запроса в запросах LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)

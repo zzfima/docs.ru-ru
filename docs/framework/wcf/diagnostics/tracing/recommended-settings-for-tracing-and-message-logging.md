@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b6986c775db50ea5b763288f8f3b9bdcf1bf7e67
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: bca09510a73a74b039ec18934c0be39629c4ce39
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>Рекомендуемые параметры для трассировки и ведения журналов сообщений
 Этот раздел содержит описание рекомендуемых параметров трассировки и регистрации сообщений для различных операционных сред.  
@@ -123,4 +124,4 @@ logman stop mytrace -ets
 ```  
   
 ## <a name="see-also"></a>См. также  
- [С помощью инструментария WMI для диагностики](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+ [Использование инструментария управления Windows для диагностики](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)

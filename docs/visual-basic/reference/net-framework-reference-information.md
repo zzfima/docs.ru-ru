@@ -12,11 +12,11 @@ ms.assetid: 8b202505-608b-4223-bbd9-2ace3d73e6cd
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c5c2824b3af8753dbb90577fe47cf63d2dc793ff
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 320d9c88bde76ec27fa23c97de78122d88cb6824
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="net-framework-reference-information-visual-basic"></a>Справочные сведения о платформе .NET Framework (Visual Basic)
 В этом разделе приведены ссылки на сведения о работе с [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] библиотеки классов.  
@@ -25,16 +25,16 @@ ms.lasthandoff: 10/22/2017
  [Начало работы](../../framework/get-started/index.md)  
  Здесь содержится комплексный обзор платформы .NET Framework и ссылки на дополнительные ресурсы.  
   
- [Общие сведения о библиотеке классов](https://msdn.microsoft.com/library/hfa3fa08)  
+ [Общие сведения о библиотеке классов](../../standard/class-library-overview.md)  
  Предоставляет классы, интерфейсы и типы значений, помогающие облегчают и оптимизируют процесс разработки, а также обеспечивают доступ к функциональным возможностям системы.  
   
- [Руководство по разработке](https://msdn.microsoft.com/library/hh156542)  
+ [Руководство по разработке](../../framework/development-guide.md)  
  Руководство по всем ключевым технологическим областям и задачам для разработки приложений, включая создание, настройку, отладку, защита и развертывание приложения. Здесь также приведены сведения о динамическое программирование, взаимодействие, расширяемость, управление памятью и работа с потоками.  
   
- [Инструменты](https://msdn.microsoft.com/library/d9kh6s92)  
+ [Инструменты](../../framework/tools/index.md)  
  Описывает средства, которые можно использовать для разработки, настройки и развертывания приложений с помощью технологий .NET Framework.  
   
- [Примеры по платформе .NET Framework](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)  
+ [Примеры по платформе .NET Framework](http://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
  Ссылки на примеры приложений, демонстрирующие технологии .NET Framework.  
   
  [Библиотека классов .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)  

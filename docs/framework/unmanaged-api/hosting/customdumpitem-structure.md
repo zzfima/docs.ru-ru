@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 547204385b20d5b7e64bda9ea0a9e790f2ba3471
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 47fd4e1dd3889cc7eeaa37457b47d9b2fd6dd8b5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customdumpitem-structure"></a>Структура CustomDumpItem
 Описывает элемент, добавляемый в пользовательский дамп отчеты об ошибках.  
@@ -39,9 +40,9 @@ struct {
 } CustomDumpItem;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`itemKind`|[ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) значение, указывающее тип элемента для добавления.|  
 |`pReserved`|В настоящее время не используется. Все элементы, добавленные на объединения не должен превышать размер указателя. Если `struct` — требуется, необходимо выделить его отдельно и выберите его.|  

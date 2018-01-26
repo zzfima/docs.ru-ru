@@ -19,26 +19,27 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7813381c345db3d14318dddd93df1b491b46549e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 86659b624ef01922b6c5d1db9b3ae3697d0128b3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugcode-interface1"></a>ICorDebugCode интерфейс1
 Представляет сегмент кода на языке MSIL или сегмент машинного кода.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод CreateBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-createbreakpoint-method.md)|Создает точку останова с указанным смещением.|  
-|[GetAddress-метод](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getaddress-method.md)|Получает относительный виртуальный адрес (RVA) сегмента кода, это `ICorDebugCode` представляет.|  
+|[Метод GetAddress](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getaddress-method.md)|Получает относительный виртуальный адрес (RVA) сегмента кода, это `ICorDebugCode` представляет.|  
 |[Метод GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md)|Возвращает весь код для заданной функции, отформатированной для дизассемблирования. Этот метод является устаревшим; Используйте [ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) вместо него.|  
 |[Метод GetEnCRemapSequencePoints](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getencremapsequencepoints-method.md)|Не реализовано.|  
 |[Метод GetFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getfunction-method.md)|Возвращает «ICorDebugFunction», связанный с этим `ICorDebugCode`.|  
 |[Метод GetILToNativeMapping](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)|Возвращает массив экземпляров «COR_DEBUG_IL_TO_NATIVE_MAP», представляющих сопоставления из смещений MSIL в собственные смещения.|  
-|[GetSize-метод](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getsize-method.md)|Возвращает размер в байтах двоичного кода, представленный этим `ICorDebugCode`.|  
+|[Метод GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getsize-method.md)|Возвращает размер в байтах двоичного кода, представленный этим `ICorDebugCode`.|  
 |[Метод GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md)|Возвращает число от единицы, определяющее версию кода этим `ICorDebugCode` представляет.|  
 |[Метод IsIL](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-isil-method.md)|Возвращает значение, указывающее, является ли это `ICorDebugCode` скомпилированные в MSIL.|  
   

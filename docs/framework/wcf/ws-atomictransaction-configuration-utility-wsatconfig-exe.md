@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c84a0ddd05de3a28a6c38bc63151c8cec35bdd2e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: adb44bfee98d01594c9babcf19e19fbf11ba3878
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>Программа конфигурации WS-AtomicTransaction (wsatConfig.exe)
 Программа настройки WS-AtomicTransaction используется для настройки основных параметров поддержки WS-AtomicTransaction.  
@@ -42,7 +43,7 @@ wsatConfig [Options]
 > [!NOTE]
 >  При задании SSL-сертификата для выбранного порта выполняется перезапись исходного SSL-сертификата (если он существует), связанного с этим портом.  
   
-|Параметры|Описание|  
+|Параметры|Описание:|  
 |-------------|-----------------|  
 |— учетные записи:\<учетной записи >|Позволяет указать список разделенных запятыми учетных записей, которые могут участвовать в WS-AtomicTransaction. Проверка допустимости этих учетных записей не выполняется.|  
 |-accountsCerts:\<thumb > &#124;» Issuer\SubjectName» >|Позволяет указать список разделенных запятыми сертификатов, которые могут участвовать в WS-AtomicTransaction. Сертификаты указываются отпечатком или парой Issuer\SubjectName. В качестве пустого имени субъекта используйте {EMPTY}.|  
@@ -60,5 +61,5 @@ wsatConfig [Options]
 |-Виртуальный_сервер:\<Виртуальный_сервер >|Позволяет указать имя кластера ресурсов DTC.|  
   
 ## <a name="see-also"></a>См. также  
- [С помощью WS-AtomicTransaction](../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)  
- [Настройка поддержки транзакций WS-AT](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
+ [Использование WS-AtomicTransaction](../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)  
+ [Настройка поддержки транзакций WS-Atomic](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)

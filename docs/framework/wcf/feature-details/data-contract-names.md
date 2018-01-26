@@ -14,14 +14,15 @@ dev_langs:
 helpviewer_keywords: data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
 caps.latest.revision: "27"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a52deae243e4f28e82eebd99e926ac8aeba4f02d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 56744318e6ea29350fd02d1cb35e49e566894a23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-names"></a>Имена контрактов данных
 Иногда клиент и служба поддерживают разные типы. Они все равно могут передавать данные друг другу при условии, что контракты данных эквивалентны на обеих сторонах. [Эквивалентность контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) на основе контракта данных и имена членов данных, и поэтому предоставляется механизм для сопоставления типов и членов, эти имена. В этом разделе поясняются правила именования контрактов данных и описывается поведение по умолчанию инфраструктуры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] при создании имен.  

@@ -10,29 +10,30 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 535e6611-02de-484c-b5ff-6ffeed04d740
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd7bad0734007b68fe6089a11b6b59d5d22e9954
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 6d0d1a4a604549f18e48d690753451be4c98f280
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="development-and-deployment-considerations"></a>Вопросы разработки и развертывания
 В этом разделе приводятся рекомендации, которые следует учесть при разработке или развертывании приложений, основанных на платформе ADO.NET Entity Framework.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Вопросы безопасности](../../../../../docs/framework/data/adonet/ef/security-considerations.md)  
   
- [Вопросы производительности](../../../../../docs/framework/data/adonet/ef/performance-considerations.md)  
+ [Особенности производительности](../../../../../docs/framework/data/adonet/ef/performance-considerations.md)  
   
  [Вопросы миграции](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)  
   
- [Вопросы развертывания](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
+ [Требования к развертыванию](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
   
 ## <a name="see-also"></a>См. также  
- [Платформа ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
+ [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
  [Общие сведения об Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)  
  [Начало работы](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- [Средства работы с моделью EDM ADO.NET](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)
+ [Средства работы с моделью EDM ADO.NET](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)

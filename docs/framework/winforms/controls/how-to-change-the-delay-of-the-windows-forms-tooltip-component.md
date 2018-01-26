@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 48bb8c08fa02a54f9bfd3febbe99f683fd68d7f8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f8506df062729a98adc1aa1e0dcb524aa4ec812c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-delay-of-the-windows-forms-tooltip-component"></a>Практическое руководство. Изменение значения задержки для компонента ToolTip в Windows Forms
 Существует несколько значений задержек, которые можно задать для Windows Forms <xref:System.Windows.Forms.ToolTip> компонента. Единицы измерения для этих свойств — миллисекунд. <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> Свойство определяет, как долго пользователь должен указывать на элементом управления, чтобы появилась строка ToolTip. <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> Свойство задает время в миллисекундах, затрачиваемое строки ToolTip отображаться при перемещении мыши с одного элемента управления связанный всплывающей подсказки в другую. <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> Свойство определяет время строки всплывающей подсказки. Эти значения можно задать по отдельности или установив значение <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> свойство; другие свойства задаются с учетом на значение, присваиваемое задержка <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> свойство. Например, если <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> присваивается значение N, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> равно N, <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> присвоено значение <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> деленное на пять (или N-5), и <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> присвоено значение, которое является пять раз значение <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> свойства (5N).  

@@ -17,11 +17,12 @@ caps.latest.revision: "56"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 09129f2dc2bac2bb17ebacd6d6db020288b6f616
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a881793c50a4ce506e752774e70e0904e30525c1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="application-management-overview"></a>Общие сведения об управлении приложением
 Все приложения имеют тенденцию совместно использовать общий набор функциональных возможностей, который применяется к реализации приложения и управлению им. Этот раздел содержит обзор функций в <xref:System.Windows.Application> класс для создания и управления приложениями.  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
 |Получение и задание свойств области определения приложения|Используйте свойство <xref:System.Windows.Application.Properties%2A?displayProperty=nameWithType>.|  
 |Получение и сохранение состояния приложения|В разделе [сохранение и восстановление свойств области приложения между сеансами приложения](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md).|  
 |Управление файлами данных без кода, включая файлы ресурсов, файлы содержимого и файлы исходного сайта.|В разделе [ресурса приложения WPF, содержимое и файлы данных](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).|  
-|Управление окнами в автономных приложениях|В разделе [Обзор Windows WPF](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).|  
+|Управление окнами в автономных приложениях|См. раздел [Общие сведения об окнах WPF](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).|  
 |Отслеживание навигации и управление ею|В разделе [Общие сведения о навигации](../../../../docs/framework/wpf/app-development/navigation-overview.md).|  
   
 <a name="The_Application_Definition"></a>   
@@ -330,7 +331,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationExitSnippets/CSharp/MainWindow.xaml.cs#appexitcode)]
  [!code-vb[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationExitSnippets/visualbasic/mainwindow.xaml.vb#appexitcode)]  
   
- Можно определить значение кода выхода и изменить его, обработав <xref:System.Windows.Application.Exit> событий. <xref:System.Windows.Application.Exit> Обработчик событий передается <xref:System.Windows.ExitEventArgs> , которые предоставляют доступ к коду выхода с <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> свойство. Для получения дополнительной информации см. <xref:System.Windows.Application.Exit>.  
+ Можно определить значение кода выхода и изменить его, обработав <xref:System.Windows.Application.Exit> событий. <xref:System.Windows.Application.Exit> Обработчик событий передается <xref:System.Windows.ExitEventArgs> , которые предоставляют доступ к коду выхода с <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> свойство. Дополнительные сведения см. в разделе <xref:System.Windows.Application.Exit>.  
   
 > [!NOTE]
 >  Можно задать код выхода в автономных приложениях и [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Однако значение кода выхода игнорируется для [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].  
@@ -380,5 +381,5 @@ ms.lasthandoff: 11/21/2017
  [Общие сведения о переходах](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
  [Файлы ресурсов, содержимого и данных WPF-приложения](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
  [URI типа "pack" в WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
- [Модели приложения: Разделы руководства по](http://msdn.microsoft.com/en-us/76771b09-3688-4d1c-8818-9b3f4cf39a30)  
+ [Модели приложения: Разделы руководства по](http://msdn.microsoft.com/library/76771b09-3688-4d1c-8818-9b3f4cf39a30)  
  [Разработка приложений](../../../../docs/framework/wpf/app-development/index.md)

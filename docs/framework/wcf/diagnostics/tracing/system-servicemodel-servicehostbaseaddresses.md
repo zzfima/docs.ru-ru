@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a36b8d38-8719-4d51-923a-420ec6c009e7
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d200a7601b30b3f8d1d9323360290ff1a8c76fa7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: c4fbc88b2044caa67e4934abb5a7b998b6789924
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelservicehostbaseaddresses"></a>System.ServiceModel.ServiceHostBaseAddresses
 System.ServiceModel.ServiceHostBaseAddresses  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Пользователи могут просматривать все базовые адреса, регистрируемые службой.  
   
 ## <a name="see-also"></a>См. также  

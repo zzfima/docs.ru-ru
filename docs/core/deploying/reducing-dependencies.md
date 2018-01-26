@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
-ms.openlocfilehash: e09b6f9124ec7614ab2e847d686435d74b00b336
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 858fc77d9652bfa59ed0bb3159260f40c76156a4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Сокращение зависимостей пакетов с помощью файла project.json
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/18/2017
 В настоящее время нет официальной команды `dotnet`, которая усекает ссылки на пакеты.  Вам потребуется сделать это вручную.  Ниже описывается общая процедура:
 
 1. Укажите ссылку на `NETStandard.Library` версии `1.6.0` в разделе `dependencies` файла `project.json`.
-2. Восстановление пакетов с помощью `dotnet restore` ([см. Примечание](#dotnet-restore-note)) из командной строки.
+2. Восстановите пакеты, выполнив команду `dotnet restore` ([см. примечание](#dotnet-restore-note)) в командной строке.
 3. Просмотрите файл `project.lock.json` и найдите раздел `NETSTandard.Library`.  Он находится ближе к началу файла.
 4. Скопируйте все пакеты, перечисленные в разделе `dependencies`.
 5. Удалите ссылку на `.NETStandard.Library` и замените ее скопированными пакетами.
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/18/2017
 }
 ```
 
-После этого восстановить пакеты с `dotnet restore` ([см. Примечание](#dotnet-restore-note)), проверки `project.lock.json` правой кнопкой мыши и найти все пакеты, которые были восстановлены для `NETSTandard.Library`.
+Затем следует восстановить пакеты с помощью команды `dotnet restore` ([см. примечание](#dotnet-restore-note)), просмотреть файл `project.lock.json` и найти все пакеты, восстановленные для `NETSTandard.Library`.
 
 Вот как выглядит соответствующий раздел в файле `project.lock.json` при нацеливании на `netstandard1.0`.
 

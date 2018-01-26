@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a70f7b3c-e3fc-44e7-aace-32fb0086a566
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 95187b705f87c9405da892cec08fc4d6f8b5924d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 75ccf124de91c9df9b918a64d94c58aca289c821
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="microsofttransactionstransactionbridgecoordinatorrecovered"></a>Microsoft.Transactions.TransactionBridge.CoordinatorRecovered
 Перечисление координатора восстановлено из журнала диспетчера транзакций.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Трассируется, когда локальный диспетчер транзакций успешно выполнил восстановление для перечисления вышестоящего координатора.  
   
 ## <a name="see-also"></a>См. также  

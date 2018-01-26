@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 60eff0ce-cf24-49d0-bc62-66bc8f684322
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 176841a0e5f1629e66770ec1a8c6ee505640140e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 5a79888a12ea8b0975aa5ef60d2cc6098a634a97
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemidentitymodelselectorsgeneralinformation"></a>System.IdentityModel.Selectors.GeneralInformation
 System.IdentityModel.Selectors.GeneralInformation  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Это общие сведения.  
   
 ## <a name="see-also"></a>См. также  

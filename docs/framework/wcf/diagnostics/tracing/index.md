@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e0a291e3ca277bc58f69b8016c523b383b3cece8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 75870850a7df01d255d3512dde2a550e2a6c205a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracing"></a>Трассировка
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] предоставляет данные инструментирования приложений и диагностические данные для мониторинга и анализа сбоев. Трассировку можно использовать вместо отладчика для понимания того, как ведет себя приложение или почему оно дает сбои. Можно также устанавливать корреляцию между сбоями и обработкой, выполняемой различными компонентами, для сквозного анализа работы приложения.  
@@ -28,12 +29,12 @@ ms.lasthandoff: 10/18/2017
   
 -   События ошибок Windows при сбоях возможности трассировки.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Настройка трассировки](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
   
  В этом разделе описывается, как настраивать трассировку на разных уровнях в соответствии с конкретными потребностями.  
   
- [End-to-End трассировки](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)  
+ [Сквозная трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)  
   
  В этом разделе описывается использование распространения и трассировки действий для сквозной корреляции, полезной при отладке.  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/18/2017
   
  В этом разделе описывается использование трассировки для отладки приложения.  
   
- [Вопросы безопасности и полезные советы при трассировке](../../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)  
+ [Проблемы безопасности и полезные советы при трассировке](../../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)  
   
  В этом разделе описываются способы защиты конфиденциальных сведений от раскрытия, а также приводятся полезные советы по использованию WebHost.  
   

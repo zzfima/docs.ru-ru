@@ -9,29 +9,30 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 31e1b8c2-7f74-458a-b2e2-fddc5b10eac1
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 65eab701db6385f4dbd3da3482398611d8777387
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 15282ae7d1988e560877d10c249fa026510e1d64
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="built-in-activities"></a>Встроенные действия
 В этом разделе содержатся образцы, демонстрирующие встроенные действия [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Обработка ошибок в действии блок-схемы с помощью TryCatch](../../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
  Показано использование действия <xref:System.Activities.Statements.TryCatch> в рамках сложного действия потока управления.  
   
- [Эмуляция прерывания в то время как действие](../../../../docs/framework/windows-workflow-foundation/samples/emulating-breaking-in-a-while-activity.md)  
+ [Эмуляция прерывания в действии While](../../../../docs/framework/windows-workflow-foundation/samples/emulating-breaking-in-a-while-activity.md)  
  Показано, как прервать механизм цикла в следующих действиях: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While>, и <xref:System.Activities.Statements.ParallelForEach%601>.  
   
  [Создание действия DynamicActivity](../../../../docs/framework/windows-workflow-foundation/samples/dynamicactivity-creation.md)  
  Показаны два разных способа создания действия во время выполнения с использованием действия <xref:System.Activities.DynamicActivity>.  
   
- [Использование переменных с Ruleset .NET Framework 3.5](../../../../docs/framework/windows-workflow-foundation/samples/using-variables-with-dotnet-ruleset.md)  
+ [Использование переменных с набором правил из .NET Framework 3.5](../../../../docs/framework/windows-workflow-foundation/samples/using-variables-with-dotnet-ruleset.md)  
  Продемонстрировано создание рабочего процесса, использующего действие <xref:System.Activities.Statements.Interop> для интеграции настраиваемого действия, написанного на [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], с использованием политики и правил.  
   
  [Загрузка из XAML](../../../../docs/framework/windows-workflow-foundation/samples/load-from-xaml.md)  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/18/2017
  [Использование CancellationScope](../../../../docs/framework/windows-workflow-foundation/samples/using-cancellationscope.md)  
  Показано использование действия <xref:System.Activities.Statements.CancellationScope> для отмены работы в приложении.  
   
- [Метод InvokeMethod](../../../../docs/framework/windows-workflow-foundation/samples/invokemethod.md)  
+ [InvokeMethod](../../../../docs/framework/windows-workflow-foundation/samples/invokemethod.md)  
  Демонстрируются разные способы использования действия <xref:System.Activities.Statements.InvokeMethod> для вызова методов класса.  
   
  [Использование действия Switch с пользовательскими типами](../../../../docs/framework/windows-workflow-foundation/samples/usage-of-the-switch-activity-with-custom-types.md)  

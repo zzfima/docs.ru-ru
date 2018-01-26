@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 58cf2adc-a6ef-46d8-8e73-e127287b42a2
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4392891b941dbb8d3ab987b7469fda3aa7286a8f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 7f0750f32b65aeae645de27eadbddc86e9cdb412
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelservicehostfaulted"></a>System.ServiceModel.ServiceHostFaulted
 System.ServiceModel.ServiceHostFaulted  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Сбой ServiceHost.  
   
  Данная трассировка показывает, что произошел сбой в одном из прослушивателей. Эту трассировку удобно использовать для отладки.  

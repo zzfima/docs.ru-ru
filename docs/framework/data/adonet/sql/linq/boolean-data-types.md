@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fb9c76193203255b943b1f1e5f8109b4bdd4bd40
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: a3a11b4dfde2afcf738f125a1fd7324ceff74669
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="boolean-data-types"></a>Логические типы данных
 Логические операторы работают в среде (CLR) соответствующим образом, за исключением отсутствия преобразования сокращенной обработки. Например, оператор `AndAlso` Visual Basic действует так же, как оператор `And`. Оператор `&&` C# действует как оператор `&`.  

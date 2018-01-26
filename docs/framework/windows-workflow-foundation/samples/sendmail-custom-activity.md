@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: bffca162bfa7bf5a4d2b1bf23566f2b039391f4c
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 8a6d0338b7c460d7053af9264527a6cd6d263673
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sendmail-custom-activity"></a>Настраиваемое действие SendMail
 В образце описывается создание настраиваемого действия, которое является производным от <xref:System.Activities.AsyncCodeActivity>, для отправки почты с помощью SMTP для работы в приложении рабочего процесса. В настраиваемом действии для асинхронной отправки электронной почты и отправки почты с проверкой подлинности используются функции <xref:System.Net.Mail.SmtpClient>. При этом также обеспечивается возможность использования таких функций конечных пользователей, как тестовый режим, замена маркеров, шаблоны файлов и тестовый путь размещения файла.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/28/2017
 |UserName|Строковое|Имя пользователя для настройки учетных данных для проверки подлинности свойства <xref:System.Net.Mail.SmtpClient.Credentials%2A> отправителя.|  
 |Пароль|Строковое|Пароль для настройки учетных данных для проверки подлинности свойства <xref:System.Net.Mail.SmtpClient.Credentials%2A> отправителя.|  
 |Субъект|<xref:System.Activities.InArgument%601>\<строка >|Тема сообщения.|  
-|Body|<xref:System.Activities.InArgument%601>\<строка >|Текст сообщения.|  
+|Текст|<xref:System.Activities.InArgument%601>\<строка >|Текст сообщения.|  
 |Вложения|<xref:System.Activities.InArgument%601>\<строка >|Коллекция вложений, используемая для хранения данных, вложенных в это сообщение электронной почты.|  
 |Исходный тип|<xref:System.Net.Mail.MailAddress>|Адрес электронной почты отправителя для этого сообщения.|  
 |Кому|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Коллекция адресов получателей данного сообщения электронной почты.|  

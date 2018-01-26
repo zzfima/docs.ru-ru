@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c3311ac88355ac0d7214ec932719e1445757d9e1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: d7e2b25788b088d9da49bad206f8f2f11d0104a2
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="the-shape-of-the-command-trees"></a>Форма деревьев команд
 Модуль создания кода SQL отвечает за создание кода SQL, зависящего от конкретного сервера запроса, на основе данного входного выражения дерева команд запроса. В этом разделе описываются характеристики, свойства и структура деревьев команд запроса.  
@@ -116,4 +117,4 @@ ms.lasthandoff: 10/18/2017
  Если в деревьях выходных команд имеются ссылки на примитивные типы, они, как правило, упоминаются в примитивных типах концептуальной модели. Однако, применительно к определенным выражениям, поставщикам требуется соответствующий примитивный тип хранилища. Примеры таких выражений включают DbCastExpression и, возможно, DbNullExpression, если поставщик должен привести значение NULL к соответствующему типу. В этих случаях поставщики должны выполнить сопоставление с типом поставщика с учетом разновидности примитивного типа и его аспектов.  
   
 ## <a name="see-also"></a>См. также  
- [Создание кода SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+ [Создание SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

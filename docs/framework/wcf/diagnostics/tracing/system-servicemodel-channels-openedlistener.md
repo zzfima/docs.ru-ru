@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 474830b3-b76c-4f3c-a363-20d9124fece5
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 34ee228ccea95e1cc8aff8e7bff166eaca7e6512
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 4aac9c7184ea57d6d10ab4115fe12ee78e5d837f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsopenedlistener"></a>System.ServiceModel.Channels.OpenedListener
 System.ServiceModel.Channels.OpenedListener  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Транспорт ожидает передачи данных по базовому универсальному коду ресурса (URI).  
   
 ## <a name="see-also"></a>См. также  

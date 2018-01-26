@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e38339eceef97c4d6f64dffdea9ac04c598b70a3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc2e9f81094d16030dbe4595a8132569edab782a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-resize-windows-forms"></a>Практическое руководство. Изменение размера формы в Windows Forms
 Размер формы Windows Forms можно указать несколькими способами. Вы можете изменить высоту и ширину формы программными средствами, задав новое значение для свойства <xref:System.Windows.Forms.Form.Size%2A> или изменив свойства <xref:System.Windows.Forms.Control.Height%2A> или <xref:System.Windows.Forms.Control.Width%2A> по отдельности. Если используется [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], вы можете изменить размеры с помощью конструктора Windows Forms. См. также [как: изменение размера Windows Forms с помощью конструктора](http://msdn.microsoft.com/library/37k2zkwx\(v=vs.110\)).  

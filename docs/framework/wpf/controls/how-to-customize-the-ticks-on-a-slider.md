@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d266d85e10ca8e77cd32338096cf3a3b761c188
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d21d2950ed228bf588a202419c222ee86dde5b0d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-customize-the-ticks-on-a-slider"></a>Практическое руководство. Настройка делений на ползунке
 В этом примере показано, как создать <xref:System.Windows.Controls.Slider> элемента управления, содержащего деления.  
@@ -38,4 +39,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Controls.Slider>  
  <xref:System.Windows.Controls.Primitives.TickBar>  
  <xref:System.Windows.Controls.Slider.TickPlacement%2A>  
- [Практические руководства, посвященные элементу управления Slider](http://msdn.microsoft.com/en-us/534be86c-afb2-425d-8186-631278a9925e)
+ [Практические руководства, посвященные элементу управления Slider](http://msdn.microsoft.com/library/534be86c-afb2-425d-8186-631278a9925e)

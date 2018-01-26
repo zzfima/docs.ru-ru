@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3bad93be-60bb-4f89-96ab-a1c3dc7c0fad
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d8852c4d19c48af2beee598f4ddfae7b775a025f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 6ee041de1a9e009ca68ecc8bba8bc2fa06ba6ca3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tampering"></a>Подделка
 *Подмены* — это процесс изменения сообщения или доставки сообщения и использования измененного сообщения в целях, отличных от он был предназначен для.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>См. также  
  [Вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
  [Раскрытие информации](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [Повышение прав доступа](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [Повышение привилегий](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
  [Отказ в обслуживании](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
  [Неподдерживаемые сценарии](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- [Атаки с повторением пакетов](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+ [Атаки с повторением](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

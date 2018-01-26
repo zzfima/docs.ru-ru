@@ -11,19 +11,20 @@ ms.topic: article
 helpviewer_keywords: extending channels [WCF]
 ms.assetid: 4238db74-2fb6-4dc8-a326-f58527230810
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 80b3734507de64ae4076b6ad12dbcfd9e0084f02
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 5a1a1bb0b1f2c5e6b42ee793f18f5ad442b1fe8e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-the-channel-layer"></a>Расширение уровня каналов
 Уровень канала отвечает за обмен сообщениями между клиентами и службами. Расширения каналов могут реализовывать новые функциональные возможности протокола, такие как безопасность, или транспортные функциональные возможности, такие как реализация нового сетевого транспорта для передачи сообщений SOAP.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о модели каналов](../../../../docs/framework/wcf/extending/channel-model-overview.md)  
  Высокоуровневый обзор каналов, предоставляемых ими возможностей и принципов работы в службе и клиентском приложении.  
   

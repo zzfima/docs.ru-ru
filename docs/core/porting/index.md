@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 00d00d38-99af-44f4-a75f-defcd9729dc5
-ms.openlocfilehash: 4fc68a3dbdec634d8e92a066a46939ba19c65db7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 3413b73c2a0a3c3ebf49b0b3ec81d00c6558d9a8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="porting-to-net-core-from-net-framework"></a>Перенос кода в .NET Core из .NET Framework
 
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/18/2017
 * Анализатор переносимости API — [программа командной строки](https://github.com/Microsoft/dotnet-apiport/releases) или [расширение для Visual Studio Extension](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b) — цепочка инструментов, позволяющая создавать отчеты о переносимости кода между .NET Framework и .NET Core с разбивкой проблем по сборкам.  Дополнительные сведения см. в разделе [Полезные инструменты](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/).
 * Reverse Package Search — [полезная веб-служба](https://packagesearch.azurewebsites.net), которая позволяет выполнять поиск типа и находить пакеты, содержащие его.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 [Анализ сторонних зависимостей.](third-party-deps.md)
    

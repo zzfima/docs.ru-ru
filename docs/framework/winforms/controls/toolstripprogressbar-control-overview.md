@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0db69185df691fe13781e5aed96dedee239d7c9d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3ee73d87a65e9febed6ebd5ad981dcd548fc2404
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstripprogressbar-control-overview"></a>Общие сведения об элементе управления ToolStripProgressBar
 <xref:System.Windows.Forms.ToolStripProgressBar> Объединяет нависание и функциональные возможности визуализации всех <xref:System.Windows.Forms.ToolStrip> элементов управления с его обычные функциональные возможности отслеживания выполнения процесса. Объект <xref:System.Windows.Forms.ToolStripProgressBar> наиболее обычно размещается <xref:System.Windows.Forms.StatusStrip>и менее часто, <xref:System.Windows.Forms.ToolStrip>.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/22/2017
   
 ### <a name="important-toolstripprogressbar-members"></a>ToolStripProgressBar важные члены  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripProgressBar.MarqueeAnimationSpeed%2A>|Возвращает или задает значение, представляющее задержку между каждым <xref:System.Windows.Forms.ProgressBarStyle.Marquee> отображения обновления, в миллисекундах.|  
 |<xref:System.Windows.Forms.ProgressBar.Maximum%2A>|Возвращает или задает верхнюю границу диапазона, определенные для данного <xref:System.Windows.Forms.ToolStripProgressBar>.|  

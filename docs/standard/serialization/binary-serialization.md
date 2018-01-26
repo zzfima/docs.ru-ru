@@ -1,6 +1,6 @@
 ---
 title: "Двоичная сериализация"
-ms.date: 11/20/2017
+ms.date: 01/02/2018
 ms.prod: .net
 ms.topic: article
 helpviewer_keywords:
@@ -14,11 +14,14 @@ ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 caps.latest.revision: "5"
 author: ViktorHofer
 ms.author: mairaw
-ms.openlocfilehash: b29435b3e9918caf130bb9a0a3a81707a069b4c7
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7d67bacab3f8f8f4c21c5048d3ffb332ae6e8d77
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="binary-serialization"></a>Двоичная сериализация
 
@@ -183,6 +186,7 @@ ms.lasthandoff: 11/28/2017
 - <xref:System.DuplicateWaitObjectException?displayProperty=nameWithType>(доступно в .NET Core 2.0.4 и более поздние версии)
 - <xref:System.EntryPointNotFoundException?displayProperty=nameWithType>(доступно в .NET Core 2.0.4 и более поздние версии)
 - <xref:System.Enum?displayProperty=nameWithType>   
+- <xref:System.EventArgs?displayProperty=nameWithType>(доступно в .NET Core 2.0.6 и более поздние версии)
 - <xref:System.Exception?displayProperty=nameWithType>   
 - <xref:System.ExecutionEngineException?displayProperty=nameWithType>(доступно в .NET Core 2.0.4 и более поздние версии)
 - <xref:System.FieldAccessException?displayProperty=nameWithType>(доступно в .NET Core 2.0.4 и более поздние версии)
@@ -371,8 +375,8 @@ ms.lasthandoff: 11/28/2017
  [Безопасность и сериализация](../../../docs/framework/misc/security-and-serialization.md)  
  Содержит рекомендации по написанию безопасного кода, выполняющего сериализацию.  
   
- [Удаленные объекты](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)  
+ [Удаленные объекты](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
  Описывает различные методы взаимодействия, доступные в платформе .NET Framework для удаленного взаимодействия.  
   
- [Веб-службы XML, созданные с помощью ASP.NET, и клиенты веб-служб с поддержкой XML](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)  
+ [Веб-службы XML, созданные с помощью ASP.NET, и клиенты веб-служб с поддержкой XML](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
  Содержит разделы, посвященные программированию XML-веб-служб, созданных с помощью ASP.NET.

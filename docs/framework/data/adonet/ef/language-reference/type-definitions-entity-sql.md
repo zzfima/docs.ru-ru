@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b890a56daeab1c3a0fbb8c95ec29a81cb7689e9d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 3a1321ae85b1f4952334672e7333e80094ad2e31
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="type-definitions-entity-sql"></a>Определения типов (Entity SQL)
 Определение типа используется в операторе объявления встроенной функции [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  

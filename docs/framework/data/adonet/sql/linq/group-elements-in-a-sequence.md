@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 1d50c8b4-f550-4775-bbb6-eab6e874cb43
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9a398bb7b951fcf2dd2449b6468a19d39a134a4a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: b3cf24760c826cf3dac75305eedb33b732869ff1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="group-elements-in-a-sequence"></a>Группировка элементов последовательности
 Оператор <xref:System.Linq.Enumerable.GroupBy%2A> группирует элементы последовательности. В следующем примере используется база данных Northwind.  

@@ -16,17 +16,18 @@ helpviewer_keywords:
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
 caps.latest.revision: "20"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a5734065a82c6b45b837c9cb5a74ba6e46207fb7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: db0a304a908e906b635672eed1a84f0277284ad7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Управление утверждениями и авторизацией с помощью модели удостоверения
-Авторизация - это процесс определения сущностей, имеющих право изменять, просматривать компьютерный ресурс или получать доступ к нему. Например, в организации только менеджерам может быть разрешен доступ к файлам их сотрудников. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] поддерживает два механизма выполнения авторизации. Первый механизм позволяет управлять авторизацией с помощью существующих конструкций среды CLR. Второй — модель на основе утверждений, известных как *модель удостоверения*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] использует модель удостоверения для создания утверждений из входящих сообщений. Классы модели удостоверения могут быть расширены с целью поддержки новых типов утверждений в пользовательских схемах авторизации. В этом разделе приводятся общие сведения об основных принципах программирования функции "Модель удостоверения", а также перечисляются наиболее важные классы, используемые этой функцией.  
+Авторизация - это процесс определения сущностей, имеющих право изменять, просматривать компьютерный ресурс или получать доступ к нему. Например, в организации только менеджерам может быть разрешен доступ к файлам их сотрудников. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] поддерживает два механизма выполнения авторизации. Первый механизм позволяет управлять авторизацией с помощью существующих конструкций среды CLR. Второй — модель на основе утверждений, известных как *модель удостоверения*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] использует модель удостоверения для создания утверждений из входящих сообщений. Классы модели удостоверения могут быть расширены с целью поддержки новых типов утверждений в пользовательских схемах авторизации. В этом разделе приводятся общие сведения об основных принципах программирования возможности "Модель удостоверения", а также перечисляются наиболее важные классы, используемые этой возможностью.  
   
 ## <a name="identity-model-scenarios"></a>Сценарии модели удостоверения  
  Использование модели удостоверения представляется следующими сценариями.  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
  Защищенный ресурс  
  Ресурс в системе, который может использоваться или обрабатываться или к которому может предоставляться доступ, только если удовлетворены определенные требования.  
   
- Справа  
+ Правый  
  Возможность в отношении ресурса. Права, определенные интерфейсом API модели удостоверения, являются свойствами класса <xref:System.IdentityModel.Claims.Rights>. Примеры прав, обеспечиваемых системой: <xref:System.IdentityModel.Claims.Rights.Identity%2A> и <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.  
   
  Значение  
@@ -140,7 +141,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="identity-model-programming"></a>Программирование модели удостоверения  
  В приведенной ниже таблице описана объектная модель для программирования расширений модели удостоверения. Все указанные классы существуют в пространстве имен <xref:System.IdentityModel.Policy> или <xref:System.IdentityModel.Claims>.  
   
-|Класс|Описание|  
+|Класс|Описание:|  
 |-----------|-----------------|  
 |Компонент авторизации|Класс модели удостоверения, реализующий интерфейс <xref:System.IdentityModel.Policy.IAuthorizationComponent>.|  
 |<xref:System.IdentityModel.Policy.IAuthorizationComponent>|Интерфейс, обеспечивающий единственное свойство доступной только для чтения строки: идентификатор. Значение этого свойства уникально для каждого экземпляра в системе, которая реализует данный интерфейс.|  
@@ -154,7 +155,7 @@ ms.lasthandoff: 11/21/2017
   
  Представленные ниже классы также используются для программирования модели удостоверения, но в пространствах имен <xref:System.IdentityModel.Policy> и <xref:System.IdentityModel.Claims> отсутствуют.  
   
-|Класс|Описание|  
+|Класс|Описание:|  
 |-----------|-----------------|  
 |<xref:System.ServiceModel.ServiceAuthorizationManager>|Класс, предоставляющий метод (<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>) для выполнения проверок авторизации на основе утверждений для каждой операции в службе. Необходимо выполнить наследование от этого класса и переопределить данный метод.|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>|Запечатанный класс, предоставляющий различные свойства, связанные с поведением службы, когда оно относится к авторизации.|  
@@ -163,7 +164,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="significant-members"></a>Важные члены  
  Представленные ниже члены обычно используются для создания новых типов утверждений.  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|Производные классы реализуют этот метод для выполнения проверок доступа на основе утверждений до выполнения операций в службе. При принятии решения по проверке доступа могут рассматриваться любые или все сведения в предоставленном контексте <xref:System.ServiceModel.OperationContext> или где-то в другом месте. Если <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> возвращает значение `true`, доступ предоставляется и разрешается выполнение операции. Если `CheckAccessCore` возвращает значение `false`, доступ отклоняется и операция не выполняется. Пример см. в разделе [как: Создание пользовательского диспетчера авторизации для службы](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>|Возвращает <xref:System.ServiceModel.ServiceAuthorizationManager> для службы. <xref:System.ServiceModel.ServiceAuthorizationManager> отвечает за принятие решений по авторизации.|  
@@ -183,9 +184,9 @@ ms.lasthandoff: 11/21/2017
  [Утверждения и маркеры](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
  [Утверждения и запрет доступа к ресурсам](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)  
  [Создание утверждений и значения ресурсов](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
- [Как: Создание пользовательского утверждения](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
- [Как: сравнение утверждений](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [Как: Создание пользовательской политики авторизации](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
- [Как: Создание пользовательского диспетчера авторизации для службы](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [Практическое руководство. Создание пользовательского утверждения](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
+ [Практическое руководство. Сравнение утверждений](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
+ [Практическое руководство. Создание пользовательской политики авторизации](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
+ [Практическое руководство. Создание пользовательского диспетчера авторизации для службы](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Авторизация](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

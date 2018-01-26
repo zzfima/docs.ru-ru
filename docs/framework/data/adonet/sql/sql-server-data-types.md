@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 16c675491a378d72d82a252d79a73379f494893c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: b8ecdffc8e2dc9795a3bc9623c5e0127e068cc4f
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-data-types-and-adonet"></a>Типы данных SQL Server и ADO.NET
 В SQL Server и .NET Framework используются различные системы типов, что может привести к потенциальной потере данных. Чтобы сохранить целостность данных, поставщик данных .NET Framework для SQL Server (<xref:System.Data.SqlClient>) предоставляет типизированные методы доступа для работы с данными SQL Server. Для указания типов данных <xref:System.Data.SqlDbType> можно использовать перечисления классов <xref:System.Data.SqlClient.SqlParameter>.  
@@ -32,23 +33,23 @@ ms.lasthandoff: 11/21/2017
   
 1.  [Типы данных (ядро СУБД)](http://go.microsoft.com/fwlink/?LinkID=107468)  
   
-## <a name="in-this-section"></a>Содержание  
- [Типы SQLType и набор данных](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Типы SqlType и набор данных](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
  Описывается поддержка типов для объекта `SqlTypes` в объекте `DataSet`.  
   
- [Обработка значений Null](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)  
+ [Обработка значений NULL](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)  
  Демонстрируется работа со значениями NULL и тройственной логикой.  
   
- [Сравнение GUID и uniqueidentifier значения](../../../../../docs/framework/data/adonet/sql/comparing-guid-and-uniqueidentifier-values.md)  
+ [Сравнение значений идентификатора GUID и uniqueidentifier](../../../../../docs/framework/data/adonet/sql/comparing-guid-and-uniqueidentifier-values.md)  
  Демонстрируется работа со значениями GUID и uniqueidentifier в SQL Server и .NET Framework.  
   
- [Данных даты и времени](../../../../../docs/framework/data/adonet/sql/date-and-time-data.md)  
+ [Данные даты и времени](../../../../../docs/framework/data/adonet/sql/date-and-time-data.md)  
  Описывается использование новых типов данных даты и времени, появившихся в SQL Server 2008.  
   
- [Больших определяемых пользователем типов](../../../../../docs/framework/data/adonet/sql/large-udts.md)  
+ [Большие определяемые пользователем типы](../../../../../docs/framework/data/adonet/sql/large-udts.md)  
  Демонстрируется извлечение данных из определяемых пользователем типов данных большого размера, появившихся в SQL Server 2008.  
   
- [XML-данных в SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
+ [Данные XML в SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
  Описание работы с данными XML, извлеченными из SQL Server.  
   
 ## <a name="reference"></a>Ссылка  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Сопоставления типов данных SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [Настройка параметров и типов данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [Возвращающие табличные значения параметров](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  
+ [Настройка параметров и типы данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
+ [Возвращающие табличное значение параметры](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  
  [Двоичные данные и данные большого объема SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

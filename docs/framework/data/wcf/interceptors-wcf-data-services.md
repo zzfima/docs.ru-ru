@@ -16,14 +16,15 @@ helpviewer_keywords:
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7aad516b819723c97a40a016a46ddcbe0fcdf4d2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 8c72d4ba56859e0afec4b26d7ce81668b443a4ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interceptors-wcf-data-services"></a>Перехватчики (службы данных WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]позволяет приложению перехватывать сообщения запросов, так что можно добавить пользовательскую логику в операцию. Эта пользовательская логика можно использовать для проверки данных во входящих сообщениях. Можно также дальнейшим образом ограничить область запроса, например вставить специализированные правила проверки подлинности на основе отдельных запросов.  
@@ -59,4 +60,4 @@ ms.lasthandoff: 10/18/2017
  Дополнительные сведения см. в разделе [как: перехват сообщений службы данных](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
   
 ## <a name="see-also"></a>См. также  
- [Операции службы](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)
+ [Операции служб](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)

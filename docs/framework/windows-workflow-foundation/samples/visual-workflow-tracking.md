@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 87858af7c3d040a5eef9a12512e79217aa49cffb
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 687cc2acbff7c85b89c4502fff863e48dada97de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-workflow-tracking"></a>Визуальное отслеживание рабочего процесса
 В этом образце показано, как подготовить приложение для визуального отслеживания рабочих процессов с использованием функции отладки, доступной через [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].  

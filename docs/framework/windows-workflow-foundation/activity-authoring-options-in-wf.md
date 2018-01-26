@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b9061f5f-12c3-47f0-adbe-1330e2714c94
 caps.latest.revision: "20"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: fd3d86510300095d2d8950199fa01f06cee7cfd7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 0422b7b433c8c2a6889e00d559207d25ed42eff1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity-authoring-options-in-wf"></a>Параметры разработки действий в WF
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] обеспечивает несколько вариантов разработки настраиваемых действий. Выбор правильного метода создания определенного действия зависит от требований функций времени выполнения.  

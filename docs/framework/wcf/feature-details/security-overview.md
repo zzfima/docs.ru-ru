@@ -16,11 +16,12 @@ caps.latest.revision: "37"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 74a2e5c15b25dc9958b74ddeb0abf9adcad10bc0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c4c6ecbfc3407e3ebc321e92cd9e78dc2d80a3a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-overview"></a>Общие сведения о безопасности
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] - платформа распределенного программирования на основе технологии SOAP, и защита сообщений между клиентами и службами является важным компонентом защиты данных. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обеспечивает универсальную и гибкую платформу для безопасного обмена сообщениями на основе существующей инфраструктуры безопасности и зарекомендовавших себя стандартов безопасности для сообщений SOAP.  
@@ -117,7 +118,7 @@ ms.lasthandoff: 11/21/2017
  [Авторизация](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
  [Федерация и выданные маркеры](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
  [Аудит](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Рекомендации по обеспечению безопасности и рекомендации](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [Руководство и рекомендации по безопасности](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  [Настройка служб с использованием файлов конфигурации](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
  [Привязки, предоставляемые системой](../../../../docs/framework/wcf/system-provided-bindings.md)  
  [Общие сведения о создании конечных точек](../../../../docs/framework/wcf/endpoint-creation-overview.md)  

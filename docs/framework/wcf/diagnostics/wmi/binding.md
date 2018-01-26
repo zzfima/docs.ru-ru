@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 09511c6c-5749-4bb0-874e-0f0be36bfe04
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6505fa08ca43e64df224b75500aacbc903783398
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: f6553d1e1c030a30eed74ff81d3e07e28a9f25b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="binding"></a>Привязка
 wmi Binding  
@@ -58,7 +59,7 @@ class Binding
   
  Интервал времени, предусмотренный для завершения операции закрытия.  
   
-### <a name="name"></a>Имя  
+### <a name="name"></a>name  
  Тип данных: string  
   
  Тип доступа: только для чтения  

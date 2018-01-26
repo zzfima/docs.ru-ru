@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ff52165ca4ff79d652eb1cd509bcd6898005650b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: d1d8ea4987d918da79dcf1f69b842f19901e63a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extensibility"></a>Расширение среды
 Этот раздел содержит образцы кода, связанные с настраиваемой расширяемостью и другими функциями [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Расширяемость каналов](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
  Демонстрирует настраиваемые каналы.  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/18/2017
  [Суррогат DataContract](../../../../docs/framework/wcf/samples/datacontract-surrogate.md)  
  Показывает, как настроить такие процессы, как сериализация, десериализация, экспорт схемы и импорт схемы, с помощью суррогатного класса контракта данных.  
   
- [Повышение управляемости обработки ошибок и отчетов](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+ [Повышение управляемости обработки ошибок и формирования сообщений об ошибках](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
  Демонстрируется, каким образом расширить управление обработкой ошибок и отчетами об ошибках в службе [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с помощью интерфейса <xref:System.ServiceModel.Dispatcher.IErrorHandler>.  
   
  [Инспекторы сообщений](../../../../docs/framework/wcf/samples/message-inspectors.md)  

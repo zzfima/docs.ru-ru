@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: eac01ce31e850eb02af84c0b84e58c1f0142242d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c35bbfef62f65a9a401d00f9ae56e2f4c00bb0b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corlocalrefpreservation-enumeration"></a>Перечисление CorLocalRefPreservation
 Содержит значения флага для обработки локальных ссылок.  
@@ -39,9 +40,9 @@ typedef enum CorLocalRefPreservation
 } CorLocalRefPreservation;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`MDPreserveLocalRefsNone`|Сохранить нет локальных ссылок.|  
 |`MDPreserveLocalTypeRef`|Сохраняет ссылки на локальный тип.|  

@@ -19,16 +19,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4a111a600230bda529362ac19969a8a4b7d32916
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: fa21433979d955603c67bc2822676f56e855d098
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="globalizing-windows-forms"></a>Глобализация Windows Forms
 *Глобализация* — это процесс проектирования и разработки программных продуктов, которые работают в нескольких языков и региональных параметров.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Кодировка и глобализация Windows Forms](../../../../docs/framework/winforms/advanced/encoding-and-windows-forms-globalization.md)  
  Полностью описывается поддержка Юникода и ее особенности.  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/22/2017
   
 -   [Пошаговое руководство: Локализация форм Windows Forms](http://msdn.microsoft.com/library/y99d1cd3\(v=vs.110\))  
   
--   [Пошаговое руководство: Создание структуры, сохраняющей пропорции при локализации](http://msdn.microsoft.com/en-us/library/7k9fa71y\(v=vs.110\))  
+-   [Пошаговое руководство: Создание структуры, сохраняющей пропорции при локализации](http://msdn.microsoft.com/library/7k9fa71y\(v=vs.110\))  
   
 -   [Как: Создание окон сообщений для форм Windows с двунаправленным письмом](http://msdn.microsoft.com/library/k1689bxh\(v=vs.110\))  
   

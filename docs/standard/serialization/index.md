@@ -15,14 +15,17 @@ helpviewer_keywords:
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6c97dc9b98f90af31c86af5295a7a4ad9894b428
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1a0d9f5fd32b5610e3d7b05455c7bd3c55b5b77e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization-in-net"></a>Сериализация в .NET
 Сериализация представляет собой процесс преобразования состояния объекта в форму, пригодную для сохранения или передачи. Дополнением к сериализации служит десериализация, при которой осуществляется преобразование потока в объект. Вместе они обеспечивают простое хранение и передачу данных.  
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/18/2017
   
 -   При XML-сериализации сериализуются только открытые свойства и поля, а правильность типов не сохраняется. Этот метод полезен для предоставления или использования данных без ограничений работающего с ними приложения. Будучи открытым стандартом, XML привлекателен для совместного использования данных в Интернете. Аналогичным образом и SOAP представляет собой открытый стандарт, использование которого эффективно и удобно.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
 [Практические руководства по сериализации](../../../docs/standard/serialization/serialization-how-to-topics.md)  
 Ссылки на подразделы "Практическое руководство" данного раздела.
   

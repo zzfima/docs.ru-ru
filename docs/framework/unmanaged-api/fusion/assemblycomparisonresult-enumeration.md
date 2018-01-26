@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 75c53e750ad031ccec944625be130547404767bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f2c38561a804a331df102a600d4b0b0f6312aaa6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assemblycomparisonresult-enumeration"></a>Перечисление AssemblyComparisonResult
 Указывает на эквивалентность два идентификатора сборки, что определяется [CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md) функции.  
@@ -47,9 +48,9 @@ typedef enum _tagAssemblyComparisonResult {
 } AssemblyComparisonResult;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Имя члена|Описание|  
+|Имя члена|Описание:|  
 |-----------------|-----------------|  
 |`ACR_EquivalentFullMatch`|Указывает, что все поля сборки совпали при сравнении.|  
 |`ACR_EquivalentFXUnified`|Указывает, что сборки эквивалентны на основе общих языка среды выполнения (CLR) версии унификации для номеров версии сборок в платформе .NET Framework версии 2.0.|  

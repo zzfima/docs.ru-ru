@@ -1,12 +1,8 @@
 ---
 title: "Общие сведения о среде DLR | Документация Майкрософт"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - dynamic language runtime
@@ -18,11 +14,12 @@ caps.latest.revision: "26"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b62a737a5106c64d08a342365867c460075011b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 54ea1f9f071d749058450487d25bdff13ca04549
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="dynamic-language-runtime-overview"></a>Общие сведения о среде DLR
 *Среда DLR* представляет собой среду выполнения, которая добавляет набор служб для динамических языков в среду CLR. Среда DLR упрощает разработку динамических языков, используемых в .NET Framework, и добавление динамических функций в языки со статической типизацией.  
@@ -51,10 +48,10 @@ ms.lasthandoff: 11/21/2017
   
  `scriptobj.Count += 1;`  
   
- Как и CLR, среда DLR является частью .NET Framework и поставляется в установочных пакетах .NET Framework и Visual Studio. Версия среды DLR с открытым исходным кодом доступна для скачивания на веб-сайте [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028).  
+ Как и CLR, среда DLR является частью .NET Framework и поставляется в установочных пакетах .NET Framework и Visual Studio. Версия среды DLR с открытым исходным кодом доступна для скачивания в репозитории [IronLanguages/dlr](https://github.com/IronLanguages/dlr) на сайте GitHub.  
   
 > [!NOTE]
->  Версия среды DLR с открытым исходным кодом обладает той же функциональностью, что и среда DLR, входящая в Visual Studio и .NET Framework. Она также обеспечивает дополнительную поддержку для разработчиков языков. Дополнительные сведения см. в документации на веб-сайте [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028).  
+>  Версия среды DLR с открытым исходным кодом обладает той же функциональностью, что и среда DLR, входящая в Visual Studio и .NET Framework. Она также обеспечивает дополнительную поддержку для разработчиков языков. Дополнительные сведения см. в документации по репозиторию [IronLanguages/dlr](https://github.com/IronLanguages/dlr) на сайте GitHub. 
   
  Примеры языков, разработанных с помощью среды DLR, включают перечисленные ниже.  
   
@@ -97,7 +94,7 @@ ms.lasthandoff: 11/21/2017
  Среда DLR использует модули привязки в местах вызова для связи не только с .NET Framework, но и с другими инфраструктурами и службами, включая Silverlight и COM. Модули привязки инкапсулируют семантику языка и указывают способ выполнения операций в месте вызова с помощью деревьев выражений. Это обеспечивает для языков с динамической и статической типизацией, использующих среду DLR, совместный доступ к библиотекам и всем технологиям, поддерживаемым средой DLR.  
   
 ## <a name="dlr-documentation"></a>Документация по среде DLR  
- Дополнительные сведения об использовании версии среды DLR с открытым исходным кодом для добавления динамических функций в язык или об использовании динамического языка с .NET Framework см. в документации на сайте [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028).  
+ Дополнительные сведения об использовании версии среды DLR с открытым исходным кодом для добавления динамических функций в язык или об использовании динамического языка с .NET Framework см. в документации в репозитории [IronLanguages/dlr](https://github.com/IronLanguages/dlr/tree/master/Docs) на сайте GitHub.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Dynamic.ExpandoObject>  

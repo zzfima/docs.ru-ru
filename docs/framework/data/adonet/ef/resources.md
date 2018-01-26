@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0bb04c18-4a14-42a4-baa9-a63d556c9f49
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 928934070cfb428f467ddf9ee89e01af1f605328
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 81553f8d99bf58c87035aca02fcaee712635bc0a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="entity-framework-resources"></a>Ресурсы Entity Framework
 Следующие внешние ресурсы предоставляют дополнительные сведения и поддержку для создания приложений Entity Framework.  
@@ -41,4 +42,4 @@ ms.lasthandoff: 11/21/2017
  [Общие сведения об Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)  
  [Начало работы](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
  [Терминология платформы Entity Framework](../../../../../docs/framework/data/adonet/ef/terminology.md)  
- [Средства работы с моделью EDM ADO.NET](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)
+ [Средства работы с моделью EDM ADO.NET](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)

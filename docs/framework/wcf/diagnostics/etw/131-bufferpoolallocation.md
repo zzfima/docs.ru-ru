@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1ddaf86a-a453-4862-9269-8fa38a47c8b9
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f47eaccd7ff5e4f86462cb17120558c8c04412ba
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 01d765ee2cee02b72984fee7d8cc3bb0a309d431
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="131---bufferpoolallocation"></a>131 - BufferPoolAllocation
 BufferPoolAllocation  
@@ -26,12 +27,12 @@ BufferPoolAllocation
   
 |||  
 |-|-|  
-|Идентификатор|131|  
+|ID|131|  
 |Ключевые слова|Инфраструктура|  
 |Уровень|Verbose|  
 |Канал|ОТЛАДКА|  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Это событие создается, когда BufferPool выделяет память для буферов  
   
 ## <a name="message"></a>Сообщение  

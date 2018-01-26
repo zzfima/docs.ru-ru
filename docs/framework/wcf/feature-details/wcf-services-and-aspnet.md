@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
 caps.latest.revision: "24"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c86ab6996b85e679fc5c15d85e86d25eaa8b1844
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: be497a1b12164fcca66314921e14d22bb96c20b5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-services-and-aspnet"></a>Службы WCF и ASP.NET
 В данном разделе описано параллельное размещение служб [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и ASP.NET и их размещение в режиме совместимости ASP.NET.  

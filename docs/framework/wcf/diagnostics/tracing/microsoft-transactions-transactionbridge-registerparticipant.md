@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8888fd0a-d454-4123-88de-fa3290102306
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4c7eb6eb7e27b5643db15efe6669ab7020900a74
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: d2aee72bfe2e5cf844731fd7c59a72c6c20f8790
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="microsofttransactionstransactionbridgeregisterparticipant"></a>Microsoft.Transactions.TransactionBridge.RegisterParticipant
 Служба протокола WS-Atomic Transaction успешно зарегистрировала участника для протокола управления.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Трассируется, если локальный диспетчер транзакций успешно подтвердил запрос на регистрацию от участника для протокола 2pc.  
   
 ## <a name="see-also"></a>См. также  

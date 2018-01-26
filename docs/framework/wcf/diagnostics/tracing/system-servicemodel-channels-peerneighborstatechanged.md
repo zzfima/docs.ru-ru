@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 94a30661-7177-4a63-ad07-54457137e9f2
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3cc26e26a9b26d7a0d124303df859cd6f727fd04
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 0b483d93d83dedf1ccf6da06a415f24f911dbb2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelspeerneighborstatechanged"></a>System.ServiceModel.Channels.PeerNeighborStateChanged
 Состояние соседнего однорангового узла изменилось.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Эта трассировка появилась при попытке изменить состояние соседнего однорангового узла.  
   
 ## <a name="see-also"></a>См. также  

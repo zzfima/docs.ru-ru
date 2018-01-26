@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 89c9a692-4a42-4704-b0dd-c4c5f78498b1
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: cfec0e08f1e13fc40ec0648e6f2e1804e89a36db
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: f5c1bc81fb6fe4808c3f54c2e99b3c9953f37132
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelportsharingtransportlistenerlistening"></a>System.ServiceModel.PortSharing.TransportListenerListening
 System.ServiceModel.PortSharing.TransportListenerListening  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  В данный момент TransportListener выполняет прослушивание.  
   
 ## <a name="see-also"></a>См. также  

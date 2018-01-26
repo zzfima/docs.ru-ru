@@ -14,21 +14,22 @@ dev_langs:
 helpviewer_keywords: configuration [WCF], interoperable services
 ms.assetid: 91b70a21-8f5c-4679-808c-2ed5fa6b2013
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a725f1cbe50bcad5247e727efcffbad62985a01a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: d6bef68c8ba433e902cfd50e59a3b343e3af08cd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>Создание служб, поддерживающих взаимодействие с базовым профилем WS-I 1.1
 Для настройки конечной точки службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] таким образом, чтобы она могла взаимодействовать с клиентами веб-службы [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], необходимо:  
   
 -   использовать в качестве типа привязки для конечной точки службы тип <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>;  
   
--   не использовать функции обратного вызова и сеансового контракта и не управлять поведением транзакций на конечной точке службы.  
+-   не использовать возможности обратного вызова и сеансового контракта и не управлять поведением транзакций на конечной точке службы.  
   
  В привязке можно дополнительно включить поддержку протокола HTTPS и проверку подлинности клиента на транспортном уровне.  
   
@@ -38,11 +39,11 @@ ms.lasthandoff: 11/21/2017
   
 -   Безопасность сообщения управляется значением <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> и обеспечивает поддержку WS-Security, совместимую с основным профилем безопасности WS-I версии 1.0. Не изменяйте значение этого свойства по умолчанию - <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType> (не использовать WS-Security).  
   
- Чтобы сделать метаданные для [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] службу, доступную [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], используйте инструменты создания клиента службы Web: [инструмент языка описания веб-служб (Wsdl.exe)](http://msdn.microsoft.com/en-us/b9210348-8bc2-4367-8c91-d1a04b403e88), [(средство обнаружения веб-служб DISCO.exe)](http://msdn.microsoft.com/en-us/acd88078-c581-42bc-94ca-6633e2851979)и `Add Web Reference` компонентов в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]; необходимо включить публикацию метаданных. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Публикации конечных точек метаданных](../../../docs/framework/wcf/publishing-metadata-endpoints.md).  
+ Чтобы сделать метаданные для [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] службу, доступную [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], используйте инструменты создания клиента службы Web: [инструмент языка описания веб-служб (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88), [(средство обнаружения веб-служб DISCO.exe)](http://msdn.microsoft.com/library/acd88078-c581-42bc-94ca-6633e2851979)и `Add Web Reference` компонентов в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]; необходимо включить публикацию метаданных. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Публикации конечных точек метаданных](../../../docs/framework/wcf/publishing-metadata-endpoints.md).  
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В следующем примере кода показано, как добавить [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] конечную точку, совместимую с [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] клиентами веб-службы в коде и, кроме того, в файле конфигурации.  
   
 ### <a name="code"></a>Код  
@@ -51,4 +52,4 @@ ms.lasthandoff: 11/21/2017
  [!code-xml[C_HowTo-WCFServiceAndASMXClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/common/app.config#1)]  
   
 ## <a name="see-also"></a>См. также  
- [Взаимодействие с веб-служб ASP.NET](../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)
+ [Взаимодействие с веб-службами ASP.NET](../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)

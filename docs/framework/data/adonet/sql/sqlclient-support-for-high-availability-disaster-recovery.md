@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cf17253478def72fe4fdc24de0a67c26fcbba0bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 4f6ede253f52682cfe5a698cf4fb02841dc4c1e0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Поддержка SqlClient для высокого уровня доступности, аварийного восстановления
 В данном разделе рассматривается поддержка групп доступности AlwaysOn (высокая доступность, аварийное восстановление) в SqlClient, которая появилась в [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)].  Группы доступности AlwaysOn появились в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012. Дополнительные сведения о группах обеспечения доступности AlwaysOn см. в электронной документации по [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
@@ -40,6 +41,9 @@ ms.lasthandoff: 11/21/2017
 1.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
 2.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
+
+> [!NOTE]
+>  Установка `MultiSubnetFailover` для `true` не обязательно с [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)]) или более поздней версии.
   
 ## <a name="connecting-with-multisubnetfailover"></a>Соединение с MultiSubnetFailover  
  При соединении с прослушивателем группы доступности `MultiSubnetFailover=True` 2012 или с экземпляром отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 всегда указывайте [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. `MultiSubnetFailover` уменьшает время отработки отказа для всех групп доступности или экземпляров отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 и значительно уменьшит время отработки отказа для топологий AlwaysOn с одной или несколькими подсетями. Во время отработки отказа в топологии с несколькими подсетями клиент будет пытаться установить соединения параллельно. Во время отработки отказа в топологии с одной подсетью клиент будет агрессивно пытаться восстановить соединение TCP.  

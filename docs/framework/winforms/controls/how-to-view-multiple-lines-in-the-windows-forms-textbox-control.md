@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0e8f39e031835275818504151e66834f0634b7f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5dca8d0f869702dee50bf851a2099317c45aa842
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Практическое руководство. Многострочные элементы управления TextBox в Windows Forms
 По умолчанию в Windows Forms <xref:System.Windows.Forms.TextBox> выводит одну строку текста и полос прокрутки. Если текст длиннее, чем свободное пространство, отображается только часть текста. Это поведение по умолчанию можно изменить, задав <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, и <xref:System.Windows.Forms.TextBox.ScrollBars%2A> соответствующие значения свойств.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  Присвойте свойству <xref:System.Windows.Forms.TextBox.ScrollBars%2A> соответствующее значение.  
   
-    |Значение|Описание|  
+    |Значение|Описание:|  
     |-----------|-----------------|  
     |<xref:System.Windows.Forms.ScrollBars.None>|Это значение следует использовать, если текст будет абзаца, почти всегда помещается элемент управления. Пользователь может использовать указатель мыши для перемещения по внутри элемента управления, если текст имеет слишком большую длину, чтобы отобразить все сразу.|  
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|Это значение используется, если требуется отобразить список строк, некоторые из которых может превышать ширину <xref:System.Windows.Forms.TextBox> элемента управления.|  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
 3.  Присвойте свойству <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> соответствующее значение.  
   
-    |Значение|Описание|  
+    |Значение|Описание:|  
     |-----------|-----------------|  
     |`false`|Текст в элементе управления будет не переносится автоматически, поэтому будет прокрутите окно вправо до достижения конца строки. Используйте это значение, если вы выбрали <xref:System.Windows.Forms.ScrollBars.Horizontal> полосы прокрутки или <xref:System.Windows.Forms.ScrollBars.Both>выше.|  
     |`true` (по умолчанию)|Горизонтальная полоса прокрутки отображаться не будут. Используйте это значение, если вы выбрали <xref:System.Windows.Forms.ScrollBars.Vertical> полосы прокрутки или <xref:System.Windows.Forms.ScrollBars.None>выше для отображения один или несколько абзацев.|  

@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8e2d4bb918946d618aa9253f2c1e27a4566d3d6f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 6dc6ad423010cf881c62e2c22570c080cad6a1e0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="guidelines-and-best-practices"></a>Правила и рекомендации
 В этом разделе содержатся рекомендации по созданию приложений [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Рекомендации. Управление версиями контракта данных](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
  Рассматривается, как и когда создавать контракты данных, которые не будут нарушены при создании новых версий.  
   
@@ -56,6 +57,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Что такое Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Примеры Windows Communication Foundation](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Примеры Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
  [Концептуальный обзор](../../../docs/framework/wcf/conceptual-overview.md)  
  [Создание клиентов](../../../docs/framework/wcf/building-clients.md)

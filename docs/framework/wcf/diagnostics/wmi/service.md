@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 999806e1-6376-409e-b998-b0af391adfe7
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: bd784b470810e16b86ba7537b1f45681ac3e1ed1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: f7b631ede7bd011a92003dc5f6083c1c427d990e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service"></a>Служба
 Служба  
@@ -55,7 +56,7 @@ class Service
   
  Базовые адреса, используемые службой.  
   
-### <a name="behaviors"></a>Расширения функциональности  
+### <a name="behaviors"></a>поведения  
  Тип данных: массив Behavior  
   
  Тип доступа: только для чтения  
@@ -97,7 +98,7 @@ class Service
   
  Параметры метаданных службы.  
   
-### <a name="name"></a>Имя  
+### <a name="name"></a>name  
  Тип данных: string  
   
  Тип доступа: только для чтения  

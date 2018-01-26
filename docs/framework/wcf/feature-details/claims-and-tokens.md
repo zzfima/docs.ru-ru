@@ -11,14 +11,15 @@ ms.topic: article
 helpviewer_keywords: claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5df0845a341dc557627210c7f84fc59b4fadfd10
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: b2e571e8526581269cedb65b83c9ea0d8a81e280
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="claims-and-tokens"></a>Утверждения и маркеры
 В этом разделе описываются различные типы утверждений, создаваемые [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] из поддерживаемых маркеров по умолчанию.  

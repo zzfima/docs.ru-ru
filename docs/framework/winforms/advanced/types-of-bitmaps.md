@@ -31,11 +31,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b33e710e7f57e1a84372dc556d904e32584a75ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6af28e7b50cb7e4a2a90153a053a83931c738214
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="types-of-bitmaps"></a>Типы точечных рисунков
 Битовая карта представляет собой массив битов, задающих цвет каждого пикселя в прямоугольном массиве точек. Количество битов, задающих цвет одного пикселя определяет количество цветов, которые можно назначить для этой точки. Например, если каждая точка, представленная 4 битам, затем произвольной точки можно задать один из 16 различных цветов (2 ^ 4 = 16). Ниже приведены несколько примеров число цветов, которые можно назначить для точки, представляемого заданное число бит.  

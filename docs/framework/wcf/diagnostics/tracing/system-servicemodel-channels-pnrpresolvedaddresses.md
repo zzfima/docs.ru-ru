@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 57618b91-d2bd-4915-adb9-972868abba3b
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8c3b3e974c781a59683dc5cc63b77cc29486fb37
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 27b9f4b5ad080c93aca29812e8c68bf0b7c40865
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelspnrpresolvedaddresses"></a>System.ServiceModel.Channels.PnrpResolvedAddresses
 Распознаватель Pnrp завершил операцию распознавания.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Эта предупредительная трассировка показывает, что распознаватель Pnrp не нашел никаких адресов. Эта трассировка возникает во время разрешения конфликта распознавателем PNRP.  
   
 ## <a name="see-also"></a>См. также  

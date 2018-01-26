@@ -11,19 +11,20 @@ ms.topic: article
 helpviewer_keywords: bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b458c0491ec91cd528b40fb19e93b7948f8c059a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: e878aadf1c7df6042323c008ff52a4be8a9d817f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-bindings"></a>Привязки Windows Communication Foundation
-Привязки указывают способ взаимодействия конечных точек службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] с другими конечными точками. В привязке должен быть указан как минимум используемый транспорт (например, HTTP или TCP). Через привязки также можно задать другие характеристики, такие как поддержка безопасности и транспорта.  
+Привязки указывают способ взаимодействия конечных точек службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] с другими конечными точками. В привязке должен быть указан как минимум используемый транспорт (например, HTTP или TCP). Через привязки также можно задать другие характеристики, такие как поддержка безопасности и транзакций.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о привязках WCF](../../../docs/framework/wcf/bindings-overview.md)  
  Общие сведения о функциях привязок [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], список предоставляемых системой привязок и способы их определения и изменения.  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/18/2017
  <xref:System.ServiceModel.Channels>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Конечные точки: Адреса, привязки и контракты](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Конечные точки: адреса, привязки и контракты](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
   
  [Привязки](../../../docs/framework/wcf/feature-details/bindings.md)  
   

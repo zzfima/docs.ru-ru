@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 221df2e7-0931-4cbc-93b9-dfffd0fdf4c8
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 01a27e211d79053dbce3b815cbfc7df8e0b95bdd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 1aca6f0b4bcbafae06f6bc66c2ec0d8cadf5b380
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemidentitymodelselectorsstorebegintransaction"></a>System.IdentityModel.Selectors.StoreBeginTransaction
 System.IdentityModel.Selectors.StoreBeginTransaction  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Начало заданной транзакции с хранилищем.  
   
 ## <a name="see-also"></a>См. также  

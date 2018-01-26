@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4e8b111f-79dc-4898-bb4a-e9b36f69420f
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 54ef06c3aded628e18325b78f55e80e4470ecd01
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: e3f025be90a997839eec2edfea12a099b4c58f0b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="1002---workflowapplicationterminated"></a>1002 - WorkflowApplicationTerminated
 ## <a name="properties"></a>Свойства  
@@ -40,4 +41,4 @@ ms.lasthandoff: 10/18/2017
 |--------------------|--------------------|-----------------|  
 |WorkflowApplicationId|`xs:string`|Идентификатор приложения рабочего процесса|  
 |Исключение|`xs:string`|Сведения об исключении|  
-|Домен приложения|`xs:string`|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|
+|AppDomain|`xs:string`|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|

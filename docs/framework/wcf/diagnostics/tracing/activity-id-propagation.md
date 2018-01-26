@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cd1c1ae5-cc8a-4f51-90c9-f7b476bcfe70
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6c61087102148688678d868ce25a9cb63315ed65
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 1f7543a79f351cf1f1e9c6d8c316684d9bfc3155
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity-id-propagation"></a>Распространение ИД действия
 Распространение происходит при включении трассировки действий ServiceModel (распространение ServiceModel) или ее выключении (распространение действий от пользователя к пользователю).  

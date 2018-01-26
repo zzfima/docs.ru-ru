@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c67fe25e405b81b3e48aa861dc4d6af837835226
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 30425680333bfebddcd7a34ac1cd2a07b1556d91
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="handling-datatable-events"></a>Обработка событий таблиц данных
 Объект <xref:System.Data.DataTable> предоставляет ряд событий, которые может обрабатывать приложение. В следующей таблице приводится описание событий `DataTable`.  
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[DataWorks DataTable.Events#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTable.Events/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>См. также  
- [Обработка данных в объект DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [Управление данными в DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  [Обработка событий DataAdapter](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
  [Обработка событий наборов данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)  
  [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

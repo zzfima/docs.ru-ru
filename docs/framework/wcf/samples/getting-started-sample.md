@@ -14,14 +14,15 @@ dev_langs:
 helpviewer_keywords: basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
 caps.latest.revision: "60"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: dda172904f55330700d1cf3e6e5e2c3462118c91
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 2f97ad418f3d5ed197e8c35edf9e897eb393ef18
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-sample"></a>Пример для начала работы
 В образце "Начало работы" показано, как с помощью [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] реализовать типовую службу и типовой клиент. Этот образец является основой для всех остальных базовых образцов технологий.  

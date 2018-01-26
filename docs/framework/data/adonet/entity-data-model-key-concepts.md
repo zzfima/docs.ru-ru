@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f820ad757fa6bf5b8367c5c39beff5cc680e519a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: f75a4fc0e529b602aca91aa3cfd2dff35e4fe640
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entity-data-model-key-concepts"></a>Основные понятия модели EDM
 Модель данных сущности (EDM) использует три основных понятия для описания структуры данных: *тип сущности*, *тип ассоциации*, и *свойства*. Это самые важные основные понятия в описании структуры данных в любой реализации модели EDM.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/18/2017
   
  В приложении экземпляр ассоциации представляет собой специфическую ассоциацию (такую как ассоциация между экземпляром клиента и экземплярами заказа). Экземпляры ассоциации логически сгруппированы в [набора ассоциаций](../../../../docs/framework/data/adonet/association-set.md). Наборы ассоциаций (и [наборов сущностей](../../../../docs/framework/data/adonet/entity-set.md)) логически сгруппированы в [контейнер сущностей](../../../../docs/framework/data/adonet/entity-container.md).  
   
-## <a name="property"></a>Свойство  
+## <a name="property"></a>Свойство.  
  [Типы сущностей](../../../../docs/framework/data/adonet/entity-type.md) содержат [свойства](../../../../docs/framework/data/adonet/property.md) , которые определяют их структуру и характеристики. Например, тип сущности «Клиент» может иметь свойства, такие как идентификатор клиента, имя и адрес.  
   
  Свойства в концептуальной модели аналогичны свойствам, которые определены применительно к классу в компьютерной программе. По такому же принципу, как свойства, относящиеся к классу, определяют форму класса и несут информацию об объектах, свойства в концептуальной модели определяют форму типа сущности и несут информацию об экземплярах типа сущности.  
@@ -49,4 +50,4 @@ ms.lasthandoff: 10/18/2017
  [!code-xml[EDM_Example_Model#EDMExampleCSDL](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#edmexamplecsdl)]  
   
 ## <a name="see-also"></a>См. также  
- [Модель EDM](../../../../docs/framework/data/adonet/entity-data-model.md)
+ [Сущностная модель данных](../../../../docs/framework/data/adonet/entity-data-model.md)

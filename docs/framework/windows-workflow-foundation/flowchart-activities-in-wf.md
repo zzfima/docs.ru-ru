@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e80d9734-b43a-4d21-a250-74400330a4c0
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e54065f0877e8df410b91f9b4e25c9cb6120d718
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 73203a1279594375c14e6a62e3790e02d8c30aea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flowchart-activities-in-wf"></a>Действия «Flowchart» в WF
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] содержит несколько действий, предоставляемых системой для управления выполнением и ветвлением внутри Flowchart.  

@@ -9,19 +9,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 22d27e12-ab04-432b-9695-9f74e098cff3
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8f71b07f34a0bd110c1c0f6202ca4962de9d8109
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 2b3037f6229c16ef6a5164cb0e7053f5993d2a9c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application"></a>Приложение
 В этом разделе содержатся образцы, связанные с приложениями рабочих процессов в [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Процесс утверждения документа](../../../../docs/framework/windows-workflow-foundation/samples/document-approval-process.md)  
  Демонстрируется использование рабочих процессов в бизнес-приложениях.  
   
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/18/2017
  [Процесс найма](../../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
  Демонстрируется, как реализовать бизнес-процесс, используя действия обмена сообщениями и два рабочих процесса, размещенные как службы рабочих процессов.  
   
- [Визуальное Отслеживание рабочего процесса](../../../../docs/framework/windows-workflow-foundation/samples/visual-workflow-tracking.md)  
+ [Визуальное отслеживание рабочего процесса](../../../../docs/framework/windows-workflow-foundation/samples/visual-workflow-tracking.md)  
  Демонстрируется, как реализовать бизнес-процесс, используя действия обмена сообщениями и два рабочих процесса, размещенные как службы рабочих процессов.  
   
  [Управление приостановленным экземпляром](../../../../docs/framework/windows-workflow-foundation/samples/suspended-instance-management.md)  

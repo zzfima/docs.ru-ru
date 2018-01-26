@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2d654ad24f8d23a47d2a3be3b07c42c104bb9b70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 563d08a5907c8248a74ba992de17ac3dd0679827
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Создание клиентского приложения .NET Framework (краткое руководство по службам данных WCF)
 Это последняя задача [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] краткое руководство. В этой задаче будет добавить в решение консольное приложение, добавьте ссылку на [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канала в новое клиентское приложение, а доступ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала из клиентского приложения с помощью сформированных клиентских классов службы данных и клиента библиотеки.  
@@ -87,7 +88,7 @@ ms.lasthandoff: 11/21/2017
     > [!NOTE]
     >  Эта версия приложения NorthwindClient не поддерживает добавление и удаление сущностей.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  Итак, мы успешно создали клиентское приложение, обращающееся к образцу канала Northwind [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Также мы ознакомились с кратким руководством по службам [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]доступ к [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] канала из [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] приложения, в разделе [клиентскую библиотеку служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).  
   
 ## <a name="see-also"></a>См. также  

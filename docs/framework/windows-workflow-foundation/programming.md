@@ -13,19 +13,20 @@ helpviewer_keywords:
 - WF [WF], programming
 ms.assetid: f62354e2-6a2b-4e8c-a4bc-533fb96267a4
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 952f1f16ff610282f2f15c9d78bf3d45d5c354da
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 7ad763512a4f39f2d0b2e2f03b052de5b8dcc031
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-workflow-foundation-programming"></a>Программирование в Windows Workflow Foundation
 Этот раздел содержит набор разделов, которые нужно понять, чтобы стать опытным программистом [!INCLUDE[wf](../../../includes/wf-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Разработка рабочих процессов](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
  Разделы, которые описывают парадигмы управления потоками, используемые в разработке рабочих процессов.  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/18/2017
  Разделы, описывающие перенос рабочих процессов из предыдущих версий [!INCLUDE[wf](../../../includes/wf-md.md)].  
   
  [Отслеживание и трассировка рабочих процессов](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- Разделы, описывающие отслеживание, трассировку рабочих процессов и способ использования этих функций для мониторинга рабочих процессов.  
+ Разделы, описывающие отслеживание, трассировку рабочих процессов и способ использования этих возможностей для мониторинга рабочих процессов.  
   
  [Безопасность рабочих процессов](../../../docs/framework/windows-workflow-foundation/workflow-security.md)  
  Описывает, как обеспечить безопасность рабочего потока, если используется SQL и [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  

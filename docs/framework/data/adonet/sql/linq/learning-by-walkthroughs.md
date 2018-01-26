@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 38961451a51ae47d05d7625ee0e83da97261eb0b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: c49ecfec032a20090e8eca1c94efe9e1f35cce7d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="learning-by-walkthroughs"></a>Обучение с использованием пошаговых руководств
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Документации представлено несколько пошаговых руководств. В данном разделе рассматриваются общие вопросы пошаговых руководств (включая устранение неполадок) и предоставляются ссылки на некоторые пошаговые руководства для начинающих изучать [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -32,10 +33,10 @@ ms.lasthandoff: 10/18/2017
   
 |Цель|Visual Basic|C#|  
 |---------------|------------------|---------|  
-|Создание класса сущности и выполнение простого запроса.|[Пошаговое руководство: Простая модель объектов и запрос (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[Пошаговое руководство: Простая модель объектов и запросов (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
-|Добавление второго класса и выполнение более сложного запроса.<br /><br /> (Требуется выполнение предыдущего пошагового руководства.)|[Пошаговое руководство: Запросы по связям (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[Пошаговое руководство: Запросы по связям (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
-|Добавление, изменение и удаление элементов в базе данных.|[Пошаговое руководство: Обработка данных (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[Пошаговое руководство: Обработка данных (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
-|Использование хранимых процедур.|[Пошаговое руководство: Применение только хранимых процедур (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[Пошаговое руководство: Применение только хранимых процедур (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
+|Создание класса сущности и выполнение простого запроса.|[Пошаговое руководство. Простая модель объектов и простой запрос (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[Пошаговое руководство. Простая модель объектов и простой запрос (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
+|Добавление второго класса и выполнение более сложного запроса.<br /><br /> (Требуется выполнение предыдущего пошагового руководства.)|[Пошаговое руководство. Запросы по связям (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[Пошаговое руководство. Запросы по связям (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
+|Добавление, изменение и удаление элементов в базе данных.|[Пошаговое руководство. Управление данными (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[Пошаговое руководство. Управление данными (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
+|Использование хранимых процедур.|[Пошаговое руководство. Использование только хранимых процедур (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[Пошаговое руководство. Применение только хранимых процедур (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
   
 ## <a name="general"></a>Общие  
  Ниже представлены общие сведения, которые касаются всех этих пошаговых руководств.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/18/2017
   
 -   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Пошаговые руководства обычно требуется образец базы данных "Борей". Дополнительные сведения см. в разделе [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
--   Диалоговые окна и команды меню, отображаемые в данных пошаговых руководствах, могут отличаться от описанных в справке в зависимости от текущих параметров или версии [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+-   Диалоговые окна и команды меню, отображаемые в данных пошаговых руководствах, могут отличаться от описанных в справке в зависимости от текущих параметров или версии [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 -   Для пошаговых руководств, в которых рассматриваются многоуровневые сценарии, сервер должен быть установлен на компьютере, отличном от компьютера разработки, и у пользователя должны быть соответствующие права доступа к этому серверу.  
   

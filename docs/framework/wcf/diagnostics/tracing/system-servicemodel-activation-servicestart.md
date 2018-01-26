@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 29203bbc-db8d-4bb9-a614-351579902ca6
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 45ef7ee5e50d7101a951325eb0a193c6138cdc50
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: f1ca7c46906e7ffc5e325bdb1f345e52e1a2167e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelactivationservicestart"></a>System.ServiceModel.Activation.ServiceStart
 System.ServiceModel.Activation.ServiceStart  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Получен запрос на запуск этой службы.  
   
 ## <a name="see-also"></a>См. также  

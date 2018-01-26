@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4b9496d471ca262e640c927619ccea8e4b4f4145
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: cfb168ae60765a57017aaec6bdedaf796491f602
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Инструкции по установке сертификата сервера в службах IIS
 Чтобы запускать примеры, которые безопасным образом взаимодействуют со службами IIS, необходимо создать и установить сертификат сервера.  
@@ -42,7 +43,7 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
 4.  Нажмите кнопку **сертификат сервера** кнопки. Будет запущен мастер сертификатов веб-сервера.  
   
-5.  Выполните указания мастера. Выберите назначение сертификата. Из отображаемого списка сертификатов выберите сертификат ServiceModelSamples-HTTPS-Server.  
+5.  Завершите работу мастера. Выберите назначение сертификата. Из отображаемого списка сертификатов выберите сертификат ServiceModelSamples-HTTPS-Server.  
   
      ![Мастер сертификатов IIS](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
   

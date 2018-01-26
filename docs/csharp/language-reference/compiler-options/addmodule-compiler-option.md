@@ -13,19 +13,19 @@ ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
 caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2652102682de9dff24c66180dde36f33b4b6bbfc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: db440b58862e372e443c9c51961b0c3cc2dd211e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="addmodule-c-compiler-options"></a>/addmodule (параметры компилятора C#)
+# <a name="-addmodule-c-compiler-options"></a>-addmodule (параметры компилятора C#)
 Установка этого параметра приводит к добавлению модуля, созданного с помощью параметра target:module для текущей компиляции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```console  
-/addmodule:file[;file2]  
+-addmodule:file[;file2]  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -33,11 +33,11 @@ ms.lasthandoff: 11/21/2017
  Выходной файл, содержащий метаданные. В данный файл не может входить манифест сборки. Чтобы импортировать несколько файлов, разделите их имена запятыми или точками с запятой.  
   
 ## <a name="remarks"></a>Примечания  
- Все модули, добавленные с помощью **/addmodule**, во время выполнения должны находиться в том же каталоге, что и выходной файл. То есть во время компиляции можно указать модуль в любом каталоге, но во время выполнения он должен находиться в каталоге приложения. Если во время выполнения модуль отсутствует в каталоге приложения, возникнет <xref:System.TypeLoadException>.  
+ Все модули, добавленные с помощью **-addmodule**, во время выполнения должны находиться в том же каталоге, что и выходной файл. То есть во время компиляции можно указать модуль в любом каталоге, но во время выполнения он должен находиться в каталоге приложения. Если во время выполнения модуль отсутствует в каталоге приложения, возникнет <xref:System.TypeLoadException>.  
   
- `file` не может содержать сборку. Например, если выходной файл был создан с помощью [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), для импорта его метаданных можно использовать **/addmodule**.  
+ `file` не может содержать сборку. Например, если выходной файл был создан с помощью [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), для импорта его метаданных можно использовать **-addmodule**.  
   
- Если выходной файл был создан с помощью параметра **/target**, отличного от **/target:module**, для импорта его метаданных нельзя использовать **/addmodule**, но можно [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
+ Если выходной файл был создан с помощью параметра **-target**, отличного от **-target:module**, для импорта его метаданных запрещено использовать **-addmodule**, но можно [-reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
   
  Этот параметр компилятора недоступен в Visual Studio; проект не может ссылаться на модуль. Кроме того, этот параметр компилятора нельзя изменить программным способом.  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/21/2017
  Скомпилируйте исходный файл `input.cs` и добавьте метаданные из `metad1.netmodule` и `metad2.netmodule`, чтобы создать `out.exe`.  
   
 ```console  
-csc /addmodule:metad1.netmodule;metad2.netmodule /out:out.exe input.cs  
+csc -addmodule:metad1.netmodule;metad2.netmodule -out:out.exe input.cs  
 ```  
   
 ## <a name="see-also"></a>См. также  

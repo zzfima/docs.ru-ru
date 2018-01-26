@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5efe784f434ff357120343061c1c4b9447cc8cd1
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: f8426dd3835f53eeb85711a691c878ce2b877d09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflowapplication-readline-host"></a>Узел ReadLine экземпляра WorkflowApplication
 Этот образец представляет собой универсальный узел ReadLine. С помощью имеющегося действия `ReadLine` (или других действий, подобных тем, которые возвращают данные из закладок, возобновленных со строками) можно загружать и запускать любой рабочий процесс. Выходные данные из действия `WriteLine` или любого другого, выполняющего запись в расширение <xref:System.Activities.Statements.WriteLine.TextWriter%2A>, направляются в окно узла. Если экземпляр бездействует, в поле со списком отображаются имеющиеся в нем закладки. Если выбрать закладку, ввести некоторый текст и нажать кнопку возобновления закладки, то выполнение рабочего процесса будет продолжено. Можно также отменить, прервать или завершить выбранный рабочий процесс. По умолчанию сохраняемость включена - можно остановить узел и снова его запустить, список экземпляров при этом будет заполнен экземплярами, сохраненными в базе данных. Отслеживание используется для передачи событий уровня <xref:System.Activities.WorkflowApplication> узлу с возможностью добавления подробного отслеживания на уровне действия.  

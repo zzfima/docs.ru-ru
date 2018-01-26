@@ -11,25 +11,26 @@ ms.topic: article
 helpviewer_keywords: WCF Data Services, getting started
 ms.assetid: c832fa5b-cf86-4690-be5a-a226c0e49530
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 124e0fe04293c52fb152ef76e7f93f00c679c9f8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 7f3593b6d7f8778ae8d74e779d3446403b99b655
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-wcf-data-services"></a>Начало работы со службами данных WCF
 В подразделах этого раздела помогут быстро понять [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] и способ использования [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для предоставления и получения [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] каналов Описание базовых технологий. Этот раздел включает как концептуальное содержимое и [краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) учебника.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  В следующих разделах описывается создание служб данных с использованием служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Предоставление данных как службы](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
  Описывает этапы создания службы данных с помощью служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
- [Доступ к ресурсам службы данных](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
+ [Доступ к ресурсам служб данных](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
  Описывает, как работать с [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-каналов.  
   
  [Использование служб данных в клиентском приложении](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  

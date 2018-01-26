@@ -19,18 +19,19 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50d1952632b29450a441d3cf0c7d66bffc000ea5
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e6cec2356159b59e58ac6785a2988df7b2fac0e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="constructing-and-drawing-paths"></a>Построение и рисование контуров
 Путь — это последовательность графических примитивов (линии, прямоугольники, кривых, текста и т. д.), которые обрабатываются и отображаются как один объект. Путь можно разделить на *фигур* , открытые или закрытые. Фигура может содержать несколько примитивов.  
   
  Контур можно нарисовать путем вызова <xref:System.Drawing.Graphics.DrawPath%2A> метод <xref:System.Drawing.Graphics> класса и Заливка контура, вызвав <xref:System.Drawing.Graphics.FillPath%2A> метод <xref:System.Drawing.Graphics> класса.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Создание изображений из прямых и кривых линий и геометрических фигур](../../../../docs/framework/winforms/advanced/how-to-create-figures-from-lines-curves-and-shapes.md)  
  Показано, как использовать <xref:System.Drawing.Drawing2D.GraphicsPath> для создания фигур.  
   

@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7c0d4c95-6ab4-49c2-ad1d-f52035ea4827
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 57bef0f2353edd4ad712ecae847da76cbcf94bb5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 0b06086cf0f5c040d224d654e4713b10478a14b3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationchannelcreated"></a>System.ServiceModel.ComIntegration.ComIntegrationChannelCreated
 System.ServiceModel.ComIntegration.ComIntegrationChannelCreated  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  ComPlus: создан канал.  
   
 ## <a name="see-also"></a>См. также  

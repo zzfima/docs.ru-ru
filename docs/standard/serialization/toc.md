@@ -9,6 +9,7 @@
 ### [Независимая от версий сериализация](version-tolerant-serialization.md)
 ### [Правила сериализации](serialization-guidelines.md)
 ### [Практическое руководство. Фрагментация сериализованных данных](how-to-chunk-serialized-data.md)
+### [Практическое руководство. Определение сериализуемости объекта .NET Standard](how-to-determine-if-netstandard-object-is-serializable.md)
 ## [Сериализация XML и SOAP](xml-and-soap-serialization.md)
 ### [Практическое руководство. Управление сериализацией производных классов](how-to-control-serialization-of-derived-classes.md)
 ### [Введение в сериализацию XML](introducing-xml-serialization.md)

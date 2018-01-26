@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 809b48a27e5923db585d6125df0d2f55c96a4765
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: cb8924cc04442e3b9eda5e251e6dcdc57f5660c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Службы WCF и средство отслеживания событий для Windows
 Этот образец демонстрирует использование аналитического отслеживания в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] для передачи событий в средство отслеживания событий для Windows (ETW). Аналитические трассировки представляют собой события, возникающие в ключевых точках стека [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и позволяющие отлаживать службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в рабочей среде.  

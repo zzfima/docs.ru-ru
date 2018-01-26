@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 99ebe70b-8980-447f-b785-ecfcbdbaea72
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: abb1de726cda4ff6707369c0f328c48e98c4be7a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: e6681850fdc13a56e245d1362c2af4a38be6e6cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="microsofttransactionstransactionbridgerecoveredcoordinatorinvalidmetadata"></a>Microsoft.Transactions.TransactionBridge.RecoveredCoordinatorInvalidMetadata
 Ссылка на конечную точку, найденная в записи журнала регистрации транзакций координатора, содержала неверные или несовместимые метаданные.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Система не может создать прокси для восстановленного перечисления координатора.  
   
 ## <a name="troubleshooting"></a>Устранение неполадок  

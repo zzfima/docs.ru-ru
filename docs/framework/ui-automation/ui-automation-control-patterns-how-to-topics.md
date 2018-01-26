@@ -17,11 +17,12 @@ caps.latest.revision: "62"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 10af8087eb72577dfabef261544cb2363ba17a0c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9960c55e5a47271c0d7091deb61a29daa9ae3433
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>Разделы руководства, посвященные шаблонам элементов управления для автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -29,9 +30,9 @@ ms.lasthandoff: 10/18/2017
   
  В этом разделе содержатся подробные сведения о реализации шаблонов элементов управления.  
   
-## <a name="in-this-section"></a>Содержание  
- [Expose the Content of a Table Using UI Automation](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
- [Получение шаблонов элементов управления модели автоматизации пользовательского интерфейса поддерживаемых](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
- [Получение состояния флажка с использованием автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Представление содержимого таблицы с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
+ [Получение шаблонов элементов управления, поддерживающих модель автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
+ [Получение состояния флажка с использованием модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
  [Вызов элемента управления с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
  [Перемещение элемента модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)

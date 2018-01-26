@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1d2690ae-0afb-4cb1-ab62-a1a0ceba8521
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b78d429a0ba683ecbf14b44a5f82cb631f45cacf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: e3c7661339a7a1645de30dcd0b1f9fad54dac5dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationinvokingmethodcontexttransaction"></a>System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction
 System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Complus: метод, вызываемый с транзакцией в контексте COM+.  
   
 ## <a name="see-also"></a>См. также  

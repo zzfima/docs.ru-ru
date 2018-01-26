@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
 caps.latest.revision: "23"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: dbd11f3dad60463a5650d7aa6e53f9e8f3f5021e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 87d8e3e09618b214dcafb7afd82970dde54fc4fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transacted-batching"></a>Пакетирование с поддержкой транзакций
 В этом образце показано, как пакетировать операции чтения с поддержкой транзакций с помощью очереди сообщений (MSMQ). Пакетирование с поддержкой транзакций - это функция оптимизации производительности для чтения с поддержкой транзакций при взаимодействии с использованием очередей.  

@@ -9,11 +9,11 @@ ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
 caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8886f7601ce4d1de4a6b277a803ff87eb67bee78
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ac9b0ad47dc9608c3082167493caa7c4bc966497
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Общая структура программы на C# (Руководство по программированию на C#)
 Программа на языке C# может состоять из одного или нескольких файлов. Каждый файл может содержать нуль или несколько пространств имен. Пространство имен может содержать типы, такие как классы, структуры, интерфейсы, перечисления и делегаты, а также другие пространства имен. Ниже приведена структура программы на C#, содержащей все эти элементы.  
@@ -40,4 +40,4 @@ ms.lasthandoff: 11/21/2017
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
  [Структура программы C#](../../../csharp/programming-guide/inside-a-program/index.md)  
  [Справочник по C#](../../../csharp/language-reference/index.md)  
- [\<paveover>Примеры приложений на C#](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)
+ [\<paveover>Примеры приложений на C#](http://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)

@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0638ce0e-d053-47df-a447-688e447a03fb
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b54de1c495dee466475979db7e6ba8d8ff9cf55b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: bf4f96116e8a4e687e7818796fa4b95e1b9b171a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
 Этот образец демонстрирует размещение службы REST [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с помощью маршрутов ASP.NET. [Базовой службы ресурсов](../../../../docs/framework/wcf/samples/basic-resource-service.md) образца показано резидентной версию этого сценария и обсуждается реализация service в глубину. В этом разделе основное внимание уделено возможности интеграции с ASP.NET. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] о маршрутизации ASP.NET см. в разделе <xref:System.Web.Routing>.  
@@ -38,10 +39,10 @@ ms.lasthandoff: 10/18/2017
  Служба  
  Проект веб-приложения, в который включена служба WCF HTTP, размещенная в ASP.NET.  
   
- Клиент  
+ "Клиент";  
  Проект консольного приложения, вызывающий службу.  
   
- Общие  
+ Common  
  Общая библиотека, содержащая тип `Customer`, который используется клиентом и службой. Во время выполнения клиентского консольного приложения клиент совершает запросы к службе и выводит в окно консоли нужные сведения из ответов.  
   
 #### <a name="to-use-this-sample"></a>Использование этого образца  

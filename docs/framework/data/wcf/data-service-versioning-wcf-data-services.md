@@ -14,14 +14,15 @@ helpviewer_keywords:
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 228b8d40b14781496b2c71a715008e8bf9caf86b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 73e394c4d0a7f78fca7c8c70f68bfc16da556d8d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Управление версиями службы данных (службы WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Позволяет создавать службы данных, чтобы клиенты могут обращаться к данным как ресурсам по идентификатору URI, основанные на модели данных. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] также поддерживает определение операций службы. После первоначального развертывания служб и, возможно, несколько раз на протяжении времени их существования возникает потребность в изменении этих служб. Причин тому немало: изменяющиеся потребности бизнеса, требования информационных технологий или необходимость решить какие-либо другие проблемы. При внесении изменений в существующую службу данных необходимо принять решение, следует ли определить новую версию службы данных и как оптимальным способом свести к минимуму воздействие на существующие клиентские приложения. Этот раздел содержит указания о том, когда и как следует создавать новую версию службы данных. В нем также описывается, как [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] обеспечивает обмен между клиентами и службами данных, которые поддерживают разные версии протокола [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/21/2017
 |Версия 3|— Можно загрузить и установить предварительную версию, которая поддерживает [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] версии 3 из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkId=203885).|  
   
 ### <a name="metadata-versions"></a>Версии метаданных  
- По умолчанию службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для представления модели данных используют CSDL версии 1.1. Это всегда справедливо для моделей данных, основанных на поставщике отражения или на специализированном поставщике служб данных. Но если модель данных определена с помощью платформы [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], возвращаемая версия CSDL та же, что и версия, используемая платформой [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]. Версия CSDL определяется пространство имен [элемент схемы](http://msdn.microsoft.com/en-us/396074d8-f99c-4f50-a073-68bce848224f). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]спецификации [ \[MC-CSDL\]: формат файла определения концептуальной схемы](http://go.microsoft.com/fwlink/?LinkId=159072).  
+ По умолчанию службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для представления модели данных используют CSDL версии 1.1. Это всегда справедливо для моделей данных, основанных на поставщике отражения или на специализированном поставщике служб данных. Но если модель данных определена с помощью платформы [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], возвращаемая версия CSDL та же, что и версия, используемая платформой [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]. Версия CSDL определяется пространство имен [элемент схемы](http://msdn.microsoft.com/library/396074d8-f99c-4f50-a073-68bce848224f). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]спецификации [ \[MC-CSDL\]: формат файла определения концептуальной схемы](http://go.microsoft.com/fwlink/?LinkId=159072).  
   
  Элемент `DataServices` возвращаемых метаданных содержит также атрибут `DataServiceVersion`, имеющий то же значение, что и заголовок `DataServiceVersion` в ответном сообщении. Клиентские приложения, такие как **добавить ссылку на службу** диалоговое окно в [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], эти сведения можно использовать для создания клиентские классы службы данных, правильно работающих с версией [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] , где размещена служба данных. Дополнительные сведения см. в разделе [OData: управление версиями протокола](http://go.microsoft.com/fwlink/?LinkId=186071).  
   

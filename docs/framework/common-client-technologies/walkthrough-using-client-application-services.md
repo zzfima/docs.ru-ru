@@ -19,11 +19,12 @@ caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fba53a19810a91a2e679616e73ea8c5fc8d38da1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 124c9321623fd6fe9c5414fc1eed2e41be1e75f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-using-client-application-services"></a>Пошаговое руководство. Использование служб клиентских приложений
 В этой статье описывается создание приложения Windows, в котором для проверки подлинности пользователей и извлечения их ролей и параметров используются службы клиентских приложений.  
@@ -374,7 +375,7 @@ ms.lasthandoff: 11/21/2017
   
 3.  В окне **Свойства** задайте следующие свойства кнопки.  
   
-  	|Свойство|Значение|  
+  	|Свойство.|Значение|  
   	|--------------|-----------|  
   	|**(Name)**|managerOnlyButton|  
   	|**Text**|&Manager task|  
@@ -394,7 +395,7 @@ ms.lasthandoff: 11/21/2017
      Если пользователю назначена роль "manager", метод `DisplayButtonForManagerRole` присваивает свойству <xref:System.Windows.Forms.Control.Visible%2A> кнопки `managerOnlyButton` значение `true`. При вызове исключения <xref:System.Net.WebException> этот метод также отображает сообщение об ошибке, означающее, что служба ролей недоступна.  
   
     > [!NOTE]
-    >  При истечении допустимого времени в системе метод <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> всегда возвращает значение `false` . Этого не происходит, если приложение вызывает метод <xref:System.Security.Principal.IPrincipal.IsInRole%2A> один раз вскоре после проверки подлинности, как показано в примере кода, который используется в этом руководстве. Если необходимо, чтобы приложение извлекало роли пользователей в другое время, вы можете добавить код для повторной проверки пользователей, чье допустимое время в системе истекло. Если всем допустимым пользователям назначены роли, вы можете выявлять истечение допустимого времени, вызывая метод <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=nameWithType> . Если роли не возвращаются, значит время истекло. Пример реализации этой возможности — метод <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A> . Данная функция необходима лишь в случае, если в параметрах приложения вы выбрали пункт **Требовать, чтобы пользователи повторяли вход, если у файла cookie сервера истек срок действия** . Для получения дополнительной информации см. [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
+    >  При истечении допустимого времени в системе метод <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> всегда возвращает значение `false` . Этого не происходит, если приложение вызывает метод <xref:System.Security.Principal.IPrincipal.IsInRole%2A> один раз вскоре после проверки подлинности, как показано в примере кода, который используется в этом руководстве. Если необходимо, чтобы приложение извлекало роли пользователей в другое время, вы можете добавить код для повторной проверки пользователей, чье допустимое время в системе истекло. Если всем допустимым пользователям назначены роли, вы можете выявлять истечение допустимого времени, вызывая метод <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=nameWithType> . Если роли не возвращаются, значит время истекло. Пример реализации этой возможности — метод <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A> . Данная функция необходима лишь в случае, если в параметрах приложения вы выбрали пункт **Требовать, чтобы пользователи повторяли вход, если у файла cookie сервера истек срок действия** . Дополнительные сведения см. в разделе [Практическое руководство. Настройка служб клиентских приложений](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
   
      [!code-csharp[ClientApplicationServices#030](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#030)]
      [!code-vb[ClientApplicationServices#030](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#030)]  
@@ -456,7 +457,7 @@ ms.lasthandoff: 11/21/2017
   
      Обработчик события <xref:System.Windows.Forms.Form.FormClosing> вызывает метод `SaveSettings` , также используемый функцией выхода, которая будет добавлена в следующем разделе. Метод `SaveSettings` сначала проверяет, не вышел ли пользователь из системы. Это достигается путем проверки свойства <xref:System.Security.Principal.IIdentity.AuthenticationType%2A> <xref:System.Security.Principal.IIdentity>, возвращенного текущим субъектом. Текущий субъект извлекается с помощью свойства <xref:System.Threading.Thread.CurrentPrincipal%2A> (`static`). Если пользователь прошел проверку подлинности служб клиентских приложений, используется проверка подлинности типа "ClientForms". Метод `SaveSettings` не может просто проверить свойство <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A?displayProperty=nameWithType> , поскольку после выхода у пользователя может иметься допустимое удостоверение Windows.  
   
-     Если пользователь не выходил из системы, метод `SaveSettings` вызывает метод <xref:System.Configuration.ApplicationSettingsBase.Save%2A> , принадлежащий классу `Settings` . Создание этого класса описывалось выше. При истечении срока действия файла cookie проверки подлинности этот метод может вызвать исключение <xref:System.Net.WebException> . Это возможно лишь в случае, если в параметрах приложения вы выбрали пункт **Требовать, чтобы пользователи повторяли вход, если у файла cookie сервера истек срок действия** . Для получения дополнительной информации см. [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md). При истечении срока действия файлов cookie метод `SaveSettings` вызывает метод <xref:System.Web.Security.Membership.ValidateUser%2A> для отображения диалогового окна входа в систему. В случае успешного входа пользователя метод `SaveSettings` вызывает сам себя, предпринимая попытку повторного сохранения параметров.  
+     Если пользователь не выходил из системы, метод `SaveSettings` вызывает метод <xref:System.Configuration.ApplicationSettingsBase.Save%2A> , принадлежащий классу `Settings` . Создание этого класса описывалось выше. При истечении срока действия файла cookie проверки подлинности этот метод может вызвать исключение <xref:System.Net.WebException> . Это возможно лишь в случае, если в параметрах приложения вы выбрали пункт **Требовать, чтобы пользователи повторяли вход, если у файла cookie сервера истек срок действия** . Дополнительные сведения см. в разделе [Практическое руководство. Настройка служб клиентских приложений](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md). При истечении срока действия файлов cookie метод `SaveSettings` вызывает метод <xref:System.Web.Security.Membership.ValidateUser%2A> для отображения диалогового окна входа в систему. В случае успешного входа пользователя метод `SaveSettings` вызывает сам себя, предпринимая попытку повторного сохранения параметров.  
   
      Как и в предшествующем коде, если удаленная служба недоступна, метод `SaveSettings` отображает сообщение об ошибке. Если поставщик параметров не может получить доступ к удаленной службе, параметры сохраняются в локальном кэше и перезагружаются при повторном запуске приложения.  
   
@@ -539,7 +540,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="summary"></a>Сводка  
  В этом пошаговом руководстве вы узнали, как включить и использовать службы клиентских приложений в программе Windows Forms. После настройки тестового сервера вы добавили в свое приложение код для проверки подлинности пользователей и для извлечения с сервера пользовательских ролей и параметров приложения. Вы также узнали, как включить автономный режим, чтобы вместо удаленных служб приложение использовало данные из локального кэша, если установить подключение невозможно.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  В реальности удаленный сервер с используемыми данными множества пользователей может быть не всегда доступен или неожиданно прекратить работу. Для создания надежных приложений необходимо предусмотреть ситуации, когда служба недоступна. В этом пошаговом руководстве приводятся блоки try/catch для перехвата исключений <xref:System.Net.WebException> и отображения сообщений об ошибке, если служба недоступна. В рабочем коде на этот случай может потребоваться возможность перехода в автономный режим, выхода из приложения или блокирования определенных функций.  
   
  Чтобы повысить безопасность ваших приложений, тщательно тестируйте программы и серверы перед развертыванием.  
@@ -548,6 +549,6 @@ ms.lasthandoff: 11/21/2017
  [Службы клиентских приложений](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [Общие сведения о службах клиентских приложений](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  [Практическое руководство. Настройка служб клиентских приложений](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
- [ASP.NET Web Site Administration Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
+ [Средство администрирования веб-сайта ASP.NET](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
  [Создание и настройка базы данных служб приложений для SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
  [Пошаговое руководство. Использование служб приложений ASP.NET](http://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)

@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
 caps.latest.revision: "27"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9f13979c7d44b06a820e3524081457e1afef2b28
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: fca570f661b1867737cc3af295aff5fd8d4cd5ec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Основные понятия рабочих процессов Windows
 При разработке рабочих процессов в [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] используются концепции, которые могут быть незнакомы некоторым разработчикам. В этом разделе описаны некоторые концепции, а также их реализация.  

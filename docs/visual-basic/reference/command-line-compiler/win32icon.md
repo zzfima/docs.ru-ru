@@ -14,11 +14,11 @@ ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
 caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 65149c617220966bc3bb6897d757a71cd60167d6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4fc5210d2dcf30d9c4603b67b890c78510af1338
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="win32icon"></a>/win32icon
 Внедряет ICO-файл в выходной файл. ICO-файл представляет выходной файл в **проводнике**.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   
 |Чтобы задать/win32icon в Интегрированной среде разработки Visual Studio|  
 |---|  
-|1.  Выберите проект в **Обозревателе решений**. В меню **Проект** выберите пункт **Свойства**. Дополнительные сведения см. в разделе [Знакомство с конструктором проектов](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Перейдите на вкладку **Приложение** .<br />3.  Измените значение в **значок** поле.|  
+|1.  Выберите проект в **Обозревателе решений**. В меню **Проект** выберите пункт **Свойства**. <br />2.  Перейдите на вкладку **Приложение** .<br />3.  Измените значение в **значок** поле.|  
   
 ## <a name="example"></a>Пример  
  Следующий код компилирует `In.vb` и присоединяет ICO-файл `Rf.ico`.  

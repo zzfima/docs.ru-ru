@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 51788083-310c-4c36-a9a1-f1089a1e2687
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5d2e26300f807338790d29b3da9756e7ce99b78a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: e5555dcaf418c3b768ee24f0c91a79dc415314cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelportsharingroutingtablelookup"></a>System.ServiceModel.PortSharing.RoutingTableLookup
 System.ServiceModel.PortSharing.RoutingTableLookup  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Запрошена операция поиска.  
   
 ## <a name="see-also"></a>См. также  

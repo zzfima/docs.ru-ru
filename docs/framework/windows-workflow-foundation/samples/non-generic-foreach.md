@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 234e5a7ef9591c1e943484402bc235b62ad7fb87
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 090aeda13081dc87b37cf0a18955cbd239720870
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="non-generic-foreach"></a>Неуниверсальное действие ForEach
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]поставляется в область элементов набор действий потока управления, включая <xref:System.Activities.Statements.ForEach%601>, который позволяет проходить по <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` коллекций.  

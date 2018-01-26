@@ -16,16 +16,17 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d71be02173bfcfeace5412e22e51f4fc0b247a5f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f6ff2a99f6cf39fd18c19156535f9c1fea63bdb8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a>Динамическое программирование в .NET Framework
 Этот раздел документации содержит сведения о динамическом программировании на платформе .NET Framework.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Отражение](../../../docs/framework/reflection-and-codedom/reflection.md)  
  Описание использования отражения для работы с объектами во время выполнения.  
   
@@ -41,4 +42,4 @@ ms.lasthandoff: 10/18/2017
 ## <a name="related-sections"></a>Связанные разделы  
  [Руководство по разработке](../../../docs/framework/development-guide.md)  
   
- [Дополнительные сведения о .NET Framework](http://msdn.microsoft.com/en-us/faae8083-fecb-4514-b133-b0a5a32a7c3c)
+ [Дополнительные сведения о .NET Framework](http://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)

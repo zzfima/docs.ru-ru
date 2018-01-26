@@ -20,31 +20,31 @@ ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8012e310bb04ec3acef0790f9cd50ed42dd9286a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: afab503719f67cf7ad1762370ed3062e12ad88e9
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Практическое руководство. Настройка переменных среды для командной строки Visual Studio
 
-Файл VsDevCmd.bat устанавливает соответствующие переменные среды для включения сборки из командной строки. Дополнительные сведения о VsDevCmd.bat см. в разделе [статье базы знаний Q248802](http://go.microsoft.com/fwlink/?LinkId=225042).  
+Файл VsDevCmd.bat задает переменные среды для поддержки построения из командной строки. Дополнительные сведения о файле VsDevCmd.bat см. в [статье базы знаний Q248802](https://support.microsoft.com/help/248802/you-receive-the-out-of-environment-space-error-message-when-you-execut).  
 
 > [!NOTE]
-> Файл VsDevCmd.bat является новый файл в комплекте с Visual Studio 2017 г. Visual Studio 2015 и более ранних версий использовать файл VSVARS32.bat для той же цели. Этот файл был сохранен в Visual Studio \Program Files\Microsoft\\*версии*\Common7\Tools или Program Files (x86) \Microsoft Visual Studio\\*версии*\Common7\Tools.
+> В состав Visual Studio 2017 включен новый файл VsDevCmd.bat. В Visual Studio 2015 и более ранних версий для этих целей использовался файл VSVARS32.bat. Этот файл располагался в каталоге \Program Files\Microsoft Visual Studio\\*Version*\Common7\Tools или Program Files (x86)\Microsoft Visual Studio\\*Version*\Common7\Tools.
   
-Если текущая версия Visual Studio установлена на компьютере с более ранней версии Visual Studio, не следует запускать VsDevCmd.bat и VSVARS32. BAT из разных версий в том же окне командной строки. Вместо этого необходимо выполнить команду для каждой версии в отдельном окне.
+Если текущая версия Visual Studio установлена на компьютере, на котором также имеется более ранняя версия Visual Studio, не запускайте файл VsDevCmd.bat или VSVARS32.BAT из других версий в том же окне командной строки. Вместо этого необходимо выполнять команду для каждой версии в отдельном окне.
   
-### <a name="to-run-vsdevcmdbat"></a>Для запуска VsDevCmd.BAT  
+### <a name="to-run-vsdevcmdbat"></a>Выполнение файла VsDevCmd.BAT  
   
-1.  Из **запустить** выберите пункт **Командная строка разработчика для VS 2017 г**.  Он находится в **2017 г. Visual Studio** папки.
+1.  В меню **Пуск** выберите пункт **Командная строка разработчика для VS 2017**.  Он находится в папке **Visual Studio 2017**.
   
-2.  Изменения в \Program Files\Microsoft Visual Studio\\*версии*\\*предложения*\Common7\Tools или \Program файлы (x86) \Microsoft Visual Studio\\ *Версии*\\*предложения*\Common7\Tools установочного каталога.  (*Версии* — *2017 г* для текущей версии. *Предложения* является одним из *Enterprise*, *Professional* или *сообщества*.)
+2.  Перейдите в подкаталог \Program Files\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools или \Program Files (x86)\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools в зависимости от вашей установки.  (Текущая версия: *Версия* — *2017*. *Предложение* — *Enterprise*, *Professional* или *Community*.)
   
-3.  Для запуска VsDevCmd.bat введите **VsDevCmd**.  
+3.  Чтобы выполнить файл VsDevCmd.bat, введите **VsDevCmd**.  
   
     > [!CAUTION]
-    >  VsDevCmd.bat могут различаться на разных компьютерах. Не заменяйте отсутствующий или поврежденный файл VsDevCmd.bat с VsDevCmd.bat с другого компьютера. Вместо этого повторите установку, чтобы заменить отсутствующий файл.  
+    >  Файл VsDevCmd.bat может иметь отличия на разных компьютерах. Не заменяйте отсутствующий или поврежденный файл VsDevCmd.bat файлом VsDevCmd.bat с другого компьютера. Вместо этого повторите установку, чтобы заменить отсутствующий файл.  
   
 ## <a name="see-also"></a>См. также  
  [Сборка из командной строки с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

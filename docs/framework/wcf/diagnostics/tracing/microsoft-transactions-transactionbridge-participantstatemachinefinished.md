@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 54b677f7-03ad-40f2-9c5d-297a8ad9bf90
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 53ac142c8c7d8004020210ffb3c0dcb2355a5b61
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 90989d6b83ea5b54d5ed476d58a5d7f6e32f1fed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="microsofttransactionstransactionbridgeparticipantstatemachinefinished"></a>Microsoft.Transactions.TransactionBridge.ParticipantStateMachineFinished
 Конечный автомат для перечисления участников перешел в конечное состояние.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Трассируется, когда перечисление подчиненных участников завершило обработку 2pc. Результатом для перечисления может быть значение Committed или Aborted. Кроме того, это событие регистрируется, если на этапе подготовки любой из участников голосует за режим ReadOnly.  
   
 ## <a name="see-also"></a>См. также  

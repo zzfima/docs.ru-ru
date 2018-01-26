@@ -17,23 +17,24 @@ caps.latest.revision: "66"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3c271d1c90d36832e36d042a83a0fdbcc6c79a14
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8f8e38dc9560e2e5a35c709572333d0f84f38cda
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="label"></a>Метка
 <xref:System.Windows.Controls.Label>элементы управления обычно предоставляют информацию в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Исторически <xref:System.Windows.Controls.Label> содержал только текст, но поскольку <xref:System.Windows.Controls.Label> , которая поставляется с [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] — <xref:System.Windows.Controls.ContentControl>, он может содержать текст или <xref:System.Windows.UIElement>.  
   
  Объект <xref:System.Windows.Controls.Label> обеспечивает функциональную и визуальную поддержку клавиш доступа. Он часто используется для включения быстрый доступ к элементам управления, такие как <xref:System.Windows.Controls.TextBox>. Чтобы назначить <xref:System.Windows.Controls.Label> для <xref:System.Windows.Controls.Control>, задайте <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> свойства в элемент управления, который должен получить фокус, когда пользователь нажимает клавишу доступа.  
   
- На следующем рисунке показана <xref:System.Windows.Controls.Label> «Темы», указывающие <xref:System.Windows.Controls.ComboBox>.  Когда пользователь нажимает кнопку, <xref:System.Windows.Controls.ComboBox> получает фокус.  Дополнительные сведения см. в разделе [как: задать целевое свойство метки](http://msdn.microsoft.com/en-us/b24c6977-ebcb-4855-a9bb-3fd4435af8f8).  
+ На следующем рисунке показана <xref:System.Windows.Controls.Label> «Темы», указывающие <xref:System.Windows.Controls.ComboBox>.  Когда пользователь нажимает кнопку, <xref:System.Windows.Controls.ComboBox> получает фокус.  Дополнительные сведения см. в разделе [как: задать целевое свойство метки](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8).  
   
  ![Свойства отображения помеченные по использованию](../../../../docs/framework/wpf/controls/media/labeledby.JPG "LabeledBy")  
   
-## <a name="in-this-section"></a>Содержание  
- [Практическое руководство. Установка целевого свойства метки](http://msdn.microsoft.com/en-us/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Практическое руководство. Установка целевого свойства метки](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.Label>

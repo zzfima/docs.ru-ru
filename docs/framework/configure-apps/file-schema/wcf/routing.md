@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a210c209-3940-4288-9a8e-39b1e62606bc
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ed2dd4e68584d6e79e18fc9b61fcc8f078615dac
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 6ef71753a4b0ff20a966842119adb6e637ded1f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltroutinggt"></a>&lt;Маршрутизация&gt;
 
@@ -60,14 +61,14 @@ ms.lasthandoff: 10/18/2017
 
 ### <a name="child-elements"></a>Дочерние элементы
 
-|     | Описание |
+|     | Описание: |
 | --- | ----------- |
 | [**\<Фильтры >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md) | Содержит набор фильтров маршрутизации, которые определяет тип [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] MessageFilter, который будет использован при вычислении входящих сообщений. |
 | [**\<filterTables >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md) | Содержит сопоставление между фильтрами маршрутизации и целевыми конечными точками для определения того, какие конечные точки будут использоваться при совпадении с критериями фильтра. |
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-|     | Описание |
+|     | Описание: |
 | --- | ----------- |
 | **\<система. ServiceModel >** | Корневой элемент всех элементов конфигурации WCF. |
 

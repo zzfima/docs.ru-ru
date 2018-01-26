@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c4b0c97d-2aab-42c3-a921-724a11e40fce
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 48b4e0e2d03c339e5db2fcee26c4117e6f9d1831
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 8193d79a31bb9cafc7a3de69c129ecbd78619962
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemruntimeserializationxsdimportbegin"></a>System.Runtime.Serialization.XsdImportBegin
 System.Runtime.Serialization.XsdImportBegin  

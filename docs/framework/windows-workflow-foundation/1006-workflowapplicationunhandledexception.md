@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: dfe0f316-e03b-47fb-b6a3-622c56bfd753
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a03809be5e5d61c505e295e2f769a0298f770f7f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 842d6bb6172eed5f7382633119045ea7507fb955
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="1006---workflowapplicationunhandledexception"></a>1006 - WorkflowApplicationUnhandledException
 ## <a name="properties"></a>Свойства  
@@ -40,4 +41,4 @@ ms.lasthandoff: 10/18/2017
 |--------------------|--------------------|-----------------|  
 |WorkflowInstanceId|`xs:string`|Идентификатор экземпляра для рабочего процесса.|  
 |Исключение|`xs:string`|Сведения об исключении|  
-|Домен приложения|`xs:string`|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|
+|AppDomain|`xs:string`|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|

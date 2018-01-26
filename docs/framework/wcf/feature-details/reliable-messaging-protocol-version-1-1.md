@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0da47b82-f8eb-42da-8bfe-e56ce7ba6f59
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 98fe8ac04b7ac811802466cf63c58ea4cebd791e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 67df8b539109d7e4dafcbc42ad7679643767021a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-messaging-protocol-version-11"></a>Протокол надежного обмена сообщениями, версия 1,1
 В этом разделе описаны особенности реализации в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] протокола WS-ReliableMessaging (версия 1.1 от февраля 2007 года), необходимого для взаимодействия с использованием транспорта HTTP. В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] соблюдена спецификация WS-ReliableMessaging с определенными ограничениями и пояснениями, описанными далее в этом разделе. Обратите внимание, что реализуется начиная с версии 1.1 протокола WS-ReliableMessaging [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)].  
@@ -381,7 +382,7 @@ Example TerminateSequenceResponse message:
   
 -   B3006: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] всегда задает гарантию доставки `wsrmp:ExactlyOnce`.  
   
--   B3007: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] создает и считывает следующие свойства утверждения WS-ReliableMessaging и реализует управление над ними через элемент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]`ReliableSessionBindingElement`.  
+-   B3007: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] приводит к возникновению ошибки и считывает следующие свойства утверждения WS-ReliableMessaging и реализует контроль над ними на [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `ReliableSessionBindingElement`:  
   
     -   `netrmp:InactivityTimeout`  
   

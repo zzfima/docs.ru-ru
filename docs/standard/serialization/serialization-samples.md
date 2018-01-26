@@ -9,19 +9,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6a56f66d-c80a-43e9-8e50-fb9b61120222
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 866294ebef7d16848f4fde28c05c6b3455969893
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cae2d60e6997271ad32271d0e21dc0894def485e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization-samples-for-the-net-framework"></a>Образцы сериализации для платформы .NET Framework
 В этом разделе показана сериализация объектов на платформе .NET Framework.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Образец технологии базовой сериализации](../../../docs/standard/serialization/basic-serialization-technology-sample.md)  
  Демонстрирует, как сериализовать граф объекта в памяти в поток.  
   

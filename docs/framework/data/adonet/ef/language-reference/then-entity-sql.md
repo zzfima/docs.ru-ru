@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 54222642-23c6-4f61-9861-67caca53ac5f
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 99fd941c963ff87203d7b315beb606d40001224d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: d7a669cc87c14e4213d702b639a1956f04cb485d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="then-entity-sql"></a>THEN (Entity SQL)
 Результат предложения WHEN, если оно оценивается как значение `true`.  
@@ -50,5 +51,5 @@ WHEN when_expression THEN then_expression
  [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
   
 ## <a name="see-also"></a>См. также  
- [РЕГИСТР](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)  
+ [CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)  
  [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

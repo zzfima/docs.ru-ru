@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
 caps.latest.revision: "21"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 64a66b1ce04f6c644eef266fee1c89366f1fb707
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 3c50bbc54d56d3fdc7a848af0e77cfbb2c15c9bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queuing-in-wcf"></a>Очереди в WCF
 В данном разделе описывается применение взаимодействия с использованием очередей в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -115,15 +116,15 @@ ms.lasthandoff: 11/21/2017
 ### <a name="sample-code"></a>Пример кода  
  Пошаговые инструкции по созданию служб WCF, использующих MSMQ, см. в следующих разделах.  
   
--   [Как: обмена сообщениями с конечными точками WCF и приложениями очереди сообщений](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+-   [Практическое руководство. Обмен сообщениями с конечными точками WCF и приложениями очереди сообщений](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [Как: обмен сообщениями с конечными точками WCF в очереди](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+-   [Практическое руководство. Обмен сообщениями в очереди с конечными точками WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  Полный образец кода, демонстрирующий использование MSMQ в WCF, см. в следующих разделах.  
   
 -   [Привязка MSMQ с поддержкой транзакций](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
   
--   [Volatile взаимодействия с использованием очередей](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
+-   [Неустойчивое взаимодействие с использованием очереди](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
   
 -   [Очереди недоставленных сообщений](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
   
@@ -135,8 +136,8 @@ ms.lasthandoff: 11/21/2017
   
 -   [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
   
--   [Безопасность сообщений через очереди сообщений](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
+-   [Безопасность сообщений при использовании очереди сообщений](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
 ## <a name="see-also"></a>См. также  
  [Конечные точки служб и адресация очереди](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)  
- [Веб-приложение с очередью размещения](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+ [Размещение веб-узлов в приложении, использующем очереди](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

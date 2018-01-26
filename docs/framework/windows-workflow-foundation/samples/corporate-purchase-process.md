@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: cd5b8749ef2637dd1e9616257b5321ae7504dedd
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: bbbed0209eec95ec452385b6c78b1beb2ddfcd75
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corporate-purchase-process"></a>Процесс корпоративных закупок
 Этот образец показывает, как создать очень простой запрос предложений на основе процесса покупки с автоматическим выбором наилучшего предложения. В нем совместно применяются операторы <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> и <xref:System.Activities.Statements.ForEach%601>, а также пользовательское действие для создания рабочего потока, который представляет процесс.  

@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0e68207f-1756-49e2-ac3a-04a881241f8a
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 71cfdad8be727bdf74d571ea6f1c62de02ffbee9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: d0a038fd7c6a2da6e980888297e90cb7c42c3386
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelendexecutemethod"></a>System.ServiceModel.EndExecuteMethod
 System.ServiceModel.EndExecuteMethod  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Завершение выполнения метода.  
   
 ## <a name="see-also"></a>См. также  

@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3e758e9f-92b5-4b25-bcf4-e5e2a5893bb9
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b8b1dceeb2081446850a59e2deb7292de415ef62
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: eaf9df4d90579856773b26c8ebbe902961a001a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodeltxsourcetxscoperequirediscreatenewtransaction"></a>System.ServiceModel.TxSourceTxScopeRequiredIsCreateNewTransaction
 Заданная транзакция была заново создана для заданной операции.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Отслеживается, была ли транзакция, доступная для пользовательского кода, заново создана инфраструктурой.  
   
 ## <a name="see-also"></a>См. также  

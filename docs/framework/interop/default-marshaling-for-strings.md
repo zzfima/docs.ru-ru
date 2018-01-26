@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 34cd8194f5f36c2f9c93517403aa27f6bbbcb698
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3d219ad68d125e2b90197fc7703ccfc0a1c857d2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="default-marshaling-for-strings"></a>Маршалинг по умолчанию для строк
 Классы <xref:System.String?displayProperty=nameWithType> и <xref:System.Text.StringBuilder?displayProperty=nameWithType> ведут себя при маршалинге одинаково.  
@@ -272,5 +273,5 @@ public class Window {
 ## <a name="see-also"></a>См. также  
  [Характеристики маршалинга по умолчанию](../../../docs/framework/interop/default-marshaling-behavior.md)  
  [Преобразуемые и непреобразуемые типы](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Атрибуты направления](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
+ [Атрибуты направления](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [Копирование и закрепление](../../../docs/framework/interop/copying-and-pinning.md)

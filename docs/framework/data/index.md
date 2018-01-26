@@ -14,23 +14,24 @@ helpviewer_keywords:
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3edf0cbe10361b456469714747c074ba054e16a4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: cfeacc0d4fb736c523538896246b0f406f995fa7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>Данные и модели в .NET Framework
 Этот раздел содержит сведения о доступе к данным с использованием ADO.NET, LINQ, служб данных WCF и XML.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [ADO.NET](../../../docs/framework/data/adonet/index.md)  
  Описание архитектуры ADO.NET и способов использования классов ADO.NET для управления данными приложения и взаимодействия с источниками данных, включая Microsoft SQL Server, источники данных OLE DB и XML.  
   
- [Портал LINQ](http://msdn.microsoft.com/en-us/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
+ [Портал LINQ](http://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
  Содержит ссылки на важную документацию по LINQ.  
   
  [Обработка транзакций](../../../docs/framework/data/transactions/index.md)  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/18/2017
  [XML-документы и данные](../../../docs/standard/data/xml/index.md)  
  Здесь приводится обзор обширного и встроенного набора классов, предназначенных для работы с XML-документами и данными в .NET Framework.  
   
- [Справочник по XML-стандартам](http://msdn.microsoft.com/en-us/79c78508-c9d0-423a-a00f-672e855de401)  
+ [Справочник по XML-стандартам](http://msdn.microsoft.com/library/79c78508-c9d0-423a-a00f-672e855de401)  
  Справочная информация об основанных на XML стандартах, поддерживаемых корпорацией Майкрософт.  
   
 ## <a name="related-sections"></a>Связанные разделы  

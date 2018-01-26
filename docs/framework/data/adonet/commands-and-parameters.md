@@ -10,34 +10,35 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b623f810-d871-49a5-b0f5-078cc3c34db6
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e1bfd3e88df4bd90cbcebfa645c2a50159f836db
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 1086a8775c2bc478c91d74656cfbebc5408727ce
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="commands-and-parameters"></a>Команды и параметры
 После установки соединения с источником данных при помощи объекта <xref:System.Data.Common.DbCommand> можно выполнять команды и возвращать результаты из источника данных. Команду можно создать с помощью одного из используемых конструкторов команд для поставщика данных .NET Framework. Конструкторы могут принимать необязательные аргументы, например инструкцию SQL для выполнения в источнике данных, объект <xref:System.Data.Common.DbConnection> или объект <xref:System.Data.Common.DbTransaction>. Эти объекты также можно настроить как свойства команды. При помощи метода <xref:System.Data.Common.DbConnection.CreateCommand%2A> объекта `DbConnection` также можно создать команду для конкретного соединения. Инструкцию SQL, выполняемую командой, можно настроить с помощью свойства <xref:System.Data.Common.DbCommand.CommandText%2A>.  
   
  У каждого поставщика данных .NET Framework, имеющегося в платформе .NET Framework, есть объект `Command`. Поставщик данных .NET Framework для OLE DB содержит объект <xref:System.Data.OleDb.OleDbCommand>, поставщик данных .NET Framework для SQL Server - объект <xref:System.Data.SqlClient.SqlCommand>, поставщик данных .NET Framework для ODBC - объект <xref:System.Data.Odbc.OdbcCommand>, а поставщик данных .NET Framework для Oracle - объект <xref:System.Data.OracleClient.OracleCommand>.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Выполнение команды](../../../../docs/framework/data/adonet/executing-a-command.md)  
  Описание объекта ADO.NET `Command` и его использования для выполнения запросов и команд в источнике данных.  
   
- [Настройка параметров и типов данных параметров](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
+ [Настройка параметров и типы данных параметров](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  Описание работы с параметрами `Command`, включая направление, типы данных и синтаксис параметров.  
   
- [Создание команд с помощью построителей команд](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md)  
+ [Создание команд с помощью построителей CommandBuilder](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md)  
  Описание использования построителей команд для автоматического формирования команд INSERT, UPDATE и DELETE для адаптера `DataAdapter`, у которого имеется команда SELECT с одной таблицей.  
   
- [Получение одиночного значения из базы данных](../../../../docs/framework/data/adonet/obtaining-a-single-value-from-a-database.md)  
+ [Получение одного значения из базы данных](../../../../docs/framework/data/adonet/obtaining-a-single-value-from-a-database.md)  
  Описывается использование метода `ExecuteScalar` объекта `Command` для возврата из запроса к базе данных одиночного значения.  
   
- [Изменение данных с помощью команды](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
+ [Использование команд для изменения данных](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
  Описывается использование поставщика данных для выполнения хранимых процедур или инструкций языка описания данных DDL.  
   
 ## <a name="see-also"></a>См. также  

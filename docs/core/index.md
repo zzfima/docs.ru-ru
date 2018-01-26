@@ -9,14 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
+ms.workload: dotnetcore
+ms.openlocfilehash: de71e043533d7a7d3d7d3fd3af0a8530c0e145b6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
-ms.sourcegitcommit: 9f2128080d34e78733cec926e59ee5dbe9b98a0d
-ms.openlocfilehash: 14e72dad71b8d99cea947e14f2ac77aedcfb5672
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/23/2017
 ---
-
 # <a name="net-core-guide"></a>Руководство по .NET Core
 
 > Ознакомьтесь с [учебниками по началу работы](get-started.md), чтобы узнать, как создать простое приложение .NET Core. На создание и запуск первого приложения потребуется буквально несколько минут.
@@ -43,9 +42,9 @@ ms.lasthandoff: 08/07/2017
 
 ### <a name="languages"></a>Языки
 
-Языки C# и F# (ожидается поддержка Visual Basic) можно использовать для создания приложений и библиотек для .NET Core. Компиляторы выполняются в .NET Core, что позволяет осуществлять разработку для .NET Core везде, где есть эта среда. Как правило, компиляторы используются не напрямую, а посредством пакета SDK.
+Языки C#, Visual Basic и F# можно использовать для создания приложений и библиотек для .NET Core. Компиляторы выполняются в .NET Core, что позволяет осуществлять разработку для .NET Core везде, где есть эта среда. Как правило, компиляторы используются не напрямую, а посредством пакета SDK.
 
-Компиляторы C# и F#, а также средства .NET Core можно интегрировать в несколько текстовых редакторов и интегрированных сред разработки (IDE), включая Visual Studio, [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text и Vim, что делает разработку для .NET Core доступной в вашей любимой среде и операционной системе. Эта интеграция отчасти обеспечивает участниками [проекта OmniSharp](http://www.omnisharp.net/).
+Компиляторы C# , Visual Basic и F#, а также средства .NET Core можно интегрировать в несколько текстовых редакторов и интегрированных сред разработки (IDE), включая Visual Studio, [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text и Vim, что делает разработку для .NET Core доступной в вашей любимой среде и операционной системе. Эта интеграция отчасти обеспечивает участниками [проекта OmniSharp](http://www.omnisharp.net/).
 
 ### <a name="net-apis-and-compatibility"></a>Интерфейсы API .NET и совместимость
 
@@ -153,4 +152,3 @@ ms.lasthandoff: 08/07/2017
 - **Платформы**. Mono поддерживает множество платформ и ЦП.
 - **Открытый исходный код**. Как Mono, так и .NET Core распространяются по лицензии MIT и являются проектами .NET Foundation.
 - **Направленность**. Основной направленностью платформы Mono в последние годы являются мобильные платформы, в то время как платформа .NET Core ориентирована на облачные рабочие нагрузки.
-

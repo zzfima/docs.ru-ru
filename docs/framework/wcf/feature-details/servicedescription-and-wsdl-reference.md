@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 26babd473ca78d6b55ada6c0505ec2f94214448b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 7eadfaaae920071092f569fe2b8882875ed9497f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription и справочная информация о WSDL
 В этом разделе описывается, как [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] сопоставляет документы на языке WSDL с экземплярами <xref:System.ServiceModel.Description.ServiceDescription> и наоборот.  

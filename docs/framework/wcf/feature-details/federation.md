@@ -16,14 +16,15 @@ helpviewer_keywords:
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
 caps.latest.revision: "26"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 71b685b372edc99ffa8ea00180cdf622c5e48632
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 3c87fa08a698350d601f72d5d19ef353bd4257a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="federation"></a>Федерация
 В этом разделе приведен краткий обзор концепции федеративной безопасности. Кроме того, описывается предусмотренная в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] поддержка развертывания архитектур федеративной безопасности. Образец приложения, демонстрирующий федерации, в разделе [пример федерации](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/18/2017
 ### <a name="elements-of-a-federated-security-architecture"></a>Элементы архитектуры федеративной безопасности  
  Архитектура федеративной безопасности включает три основных элемента, рассмотренных в следующей таблице.  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |Домен/область|Единица администрирования безопасности или доверия. Типичный домен может включать одну организацию.|  
 |Федерация|Совокупность доменов, между которыми установлено отношение доверия. Уровень доверия может быть разным, но обычно предусматривает проверку подлинности и почти всегда предусматривает авторизацию. Типичная федерация может включать ряд организаций, между которыми установлено отношение доверия для общего доступа к некоторому набору ресурсов.|  

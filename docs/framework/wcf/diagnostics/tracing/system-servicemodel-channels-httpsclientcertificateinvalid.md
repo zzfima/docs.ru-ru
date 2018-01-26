@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8884dda1-fa0e-4d2a-8079-7042c51b64ef
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d4cbde90cbd6c526b30f822e565f2cb792c95eef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: e798c0be052dc0d7987d99263117bf21a93ba9c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelshttpsclientcertificateinvalid"></a>System.ServiceModel.Channels.HttpsClientCertificateInvalid
 Сертификат клиента недействителен.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Эта трассировка указывает, что прослушиватель HTTPS выявил недействительность сертификата, предоставленного клиентом. Прослушиватель HTTPS попытался проверить подлинность клиента с помощью этого сертификата. Сертификат может быть недействительным, если его центр сертификации не распознан сервером, на котором размещена служба.  
   
 ## <a name="see-also"></a>См. также  

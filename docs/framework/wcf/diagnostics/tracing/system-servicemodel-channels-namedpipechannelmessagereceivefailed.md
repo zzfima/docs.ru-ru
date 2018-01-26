@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 20e65df6-4539-428d-bf61-92e05c405bef
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: bbd4482f93b25c351c3311b5d74ddb40e208af8a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 71fc7111e4f2dc4c93529c87823065f38386bce4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsnamedpipechannelmessagereceivefailed"></a>System.ServiceModel.Channels.NamedPipeChannelMessageReceiveFailed
 System.ServiceModel.Channels.NamedPipeChannelMessageReceiveFailed  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Не удалось найти канал, чтобы получить входящее сообщение. Конечная точка или SOAP-действие не найдены.  
   
 ## <a name="see-also"></a>См. также  

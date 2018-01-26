@@ -17,29 +17,30 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f1742025bed977dfd377a78db42df42c1bc43966
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9226eba1b9f03138180430b2abb960f43f4b4260
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fusion-interfaces"></a>Fusion-интерфейсы
 В этом разделе описываются неуправляемые интерфейсы, используемые API Fusion для доступа к свойствам ресурсов приложения и найти правильные версии этих ресурсов для приложения.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Интерфейс IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)  
  Предоставляет методы, создающие и сравнения ключей для идентификаторов и ссылок приложения.  
   
  [Интерфейс IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)  
  Предоставляет представление глобального кэша сборок.  
   
- [IAssemblyCacheItem-интерфейс](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)  
+ [Интерфейс IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)  
  Представляет одну сборку в глобальный кэш сборок.  
   
- [IAssemblyEnum-интерфейс](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)  
+ [Интерфейс IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)  
  Представляет перечислитель для массива `IAssemblyName` объектов.  
   
- [IAssemblyName-интерфейс](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
+ [Интерфейс IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
  Предоставляет методы для описания и работы с уникальный идентификатор сборки.  
   
  [Интерфейс IDefinitionAppId](../../../../docs/framework/unmanaged-api/fusion/idefinitionappid-interface.md)  

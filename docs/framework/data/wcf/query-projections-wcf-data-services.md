@@ -18,14 +18,15 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a3546bf13eefd14f6bdc119541262cdfdc25e863
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 6cd775ed31d0457308f86b3d5b6f40092bfa9690
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="query-projections-wcf-data-services"></a>Проекции запросов (службы данных WCF)
 Проекция представляет собой механизм в [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] для уменьшения объема данных в веб-канале, возвращаемые запросом, указав в ответе возвращаются только определенные свойства сущности. Дополнительные сведения см. в разделе [OData: параметр системного запроса ($select)](http://go.microsoft.com/fwlink/?LinkId=186076).  

@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4cc3b20b-778a-4ae8-b58c-a3822fb13065
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7e0cf92edc4ec05df3e5e8c25b90bcf253e94ed6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 541770db6b9cc624fd08ab4db275bc63fa5deca9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="channels-extensibility"></a>Расширяемость каналов
 В этом разделе содержатся образцы, демонстрирующие пользовательские каналы.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Локальный канал](../../../../docs/framework/wcf/samples/local-channel.md)  
  Демонстрирует локальный канал транспорта [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], который используется для связи внутри одного домена приложения.  
   
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/18/2017
  [Фрагментирование канала](../../../../docs/framework/wcf/samples/chunking-channel.md)  
  Показывает способы ограничения объема памяти, используемого для буферизации больших сообщений, отправляемых с помощью [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Канал подтверждения HTTP](../../../../docs/framework/wcf/samples/http-acknowledgement-channel.md)  
+ [Канал подтверждений HTTP](../../../../docs/framework/wcf/samples/http-acknowledgement-channel.md)  
  Демонстрирует многоуровневый канал, изменяющий односторонний шаблон обмена сообщениями.  
   
  [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md)  

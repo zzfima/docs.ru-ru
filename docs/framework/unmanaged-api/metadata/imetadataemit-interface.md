@@ -19,18 +19,19 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b62e11f8237330122ccd2bd8775f8d113545dd95
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 856b4c42b018d6b1cefe6b61e21a15e7212f9541
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataemit-interface"></a>Интерфейс IMetaDataEmit
 Предоставляет методы для создания, изменения и сохранить метаданные о сборке в текущей заданной области. Метаданные можно хранить в памяти или на жестком диске.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод ApplyEditAndContinue](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-applyeditandcontinue-method.md)|Обновляет текущую область сборки изменениями, внесенными в указанном `pImport`.|  
 |[Метод DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md)|Создает определение настраиваемого атрибута с заданной подписью метаданных, подключен к указанного объекта и возвращает маркер для этого определения настраиваемого атрибута.|  
@@ -58,9 +59,9 @@ ms.lasthandoff: 11/21/2017
 |[Метод GetSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-getsavesize-method.md)|Получает приблизительный двоичный размер сборки в текущей области.|  
 |[Метод GetTokenFromSig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md)|Возвращает маркер для заданной подписью метаданных.|  
 |[Метод GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md)|Получает маркер метаданных для типа с заданной подписью метаданных.|  
-|[Merge-метод](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)|Добавляет заданную импортируемую область в список объединяемых областей.|  
+|[Метод Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)|Добавляет заданную импортируемую область в список объединяемых областей.|  
 |[Метод MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md)|Выполняет слияние в текущей области видимости всех областей метаданных, заданных один или несколько предыдущих вызовами `IMetaDataEmit::Merge`.|  
-|[Save-метод](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-save-method.md)|Сохраняет все метаданные в текущей области в файле по указанному адресу.|  
+|[Метод Save](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-save-method.md)|Сохраняет все метаданные в текущей области в файле по указанному адресу.|  
 |[Метод SaveToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetomemory-method.md)|Сохраняет все метаданные в текущей области в указанной области памяти.|  
 |[Метод SaveToStream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md)|Сохраняет все метаданные в текущей области в указанный `IStream`.|  
 |[Метод SetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md)|Задает или обновляет подпись структуры класса для типа, определенного во время предыдущего вызова `IMetaDataEmit::DefineTypeDef`.|  

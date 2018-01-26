@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 70d7c058-0280-4815-a008-6f290093591a
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 06c8d2b2eedc2d3684ef44f028cd73e80a8da5cc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 028a8e4a7fa215b0bdbce1de92c20dc51a15faa6
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="find-the-maximum-value-in-a-numeric-sequence"></a>Нахождение максимального значения в числовой последовательности
 Используйте оператор <xref:System.Linq.Enumerable.Max%2A> для нахождения максимального значения в числовой последовательности.  

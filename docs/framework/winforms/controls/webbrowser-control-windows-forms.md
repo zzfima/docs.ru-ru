@@ -17,16 +17,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0a87c1cd87b21b10404ae4a19ee931cc5f69ece
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 65c92a64619ae993671f7669117e852994072047
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="webbrowser-control-windows-forms"></a>Общие сведения об элементе управления WebBrowser (Windows Forms)
 Windows Forms `WebBrowser` элемент управления содержит веб-страницы и предоставляет приложению возможности работы в Интернете.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об элементе управления WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)  
  Описывается элемент управления, его основные возможности и свойства.  
   
@@ -53,10 +54,10 @@ Windows Forms `WebBrowser` элемент управления содержит 
   
 ## <a name="reference"></a>Ссылка  
  Класс <xref:System.Windows.Forms.WebBrowser>  
- Описание класса и ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
  <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventArgs>  
- Описание класса и ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
  <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventHandler>  
  Описание этого делегата.  
@@ -65,19 +66,19 @@ Windows Forms `WebBrowser` элемент управления содержит 
  Описание этого перечисления и все ее значения.  
   
  <xref:System.Windows.Forms.WebBrowserNavigatedEventArgs>  
- Описание класса и ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
  <xref:System.Windows.Forms.WebBrowserNavigatedEventHandler>  
  Описание этого делегата.  
   
  <xref:System.Windows.Forms.WebBrowserNavigatingEventArgs>  
- Описание класса и ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
  <xref:System.Windows.Forms.WebBrowserNavigatingEventHandler>  
  Описание этого делегата.  
   
  <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>  
- Описание класса и ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
  <xref:System.Windows.Forms.WebBrowserProgressChangedEventHandler>  
  Описание этого делегата.  

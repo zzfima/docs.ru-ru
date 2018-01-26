@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e559e87b-6aed-491d-9546-e92bcec16fdf
 caps.latest.revision: "30"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ba537273bb309ae8efee52d1ef17c94908357fe9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: cabff74808b25ba523d61931afc624d0353b2be1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-45-built-in-activity-library"></a>Встроенная библиотека действий .NET Framework 4.5
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] включает новую библиотеку действий с расширенными функциональными возможностями. Типы действий включают следующее:  

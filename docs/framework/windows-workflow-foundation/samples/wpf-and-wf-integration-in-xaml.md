@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 11ffdca834ba267fdd10ecb968699615089c6170
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 327efb0b829e2628328d2e324c0736f8cb423b75
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>Интеграция WPF и WF в XAML
 Этот образец демонстрирует, как создать приложение, которое использует функциональность [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] и [!INCLUDE[wf](../../../../includes/wf-md.md)] в единственном документе XAML. Для этого в образце используется расширяемость XAML и [!INCLUDE[wf](../../../../includes/wf-md.md)].  

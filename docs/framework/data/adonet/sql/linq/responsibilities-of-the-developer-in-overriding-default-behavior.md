@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c6909ddd-e053-46a8-980c-0e12a9797be1
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4792967bb21912e475c32c0f37149b89a838b133
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 7de5dbcad14ebfd253ba99f03a8d77e768f29941
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>Ответственность разработчика при переопределении поведения по умолчанию
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]не обеспечивают следующие требования, но поведение не определено, если эти требования не выполнены.  
@@ -37,4 +38,4 @@ ms.lasthandoff: 10/18/2017
 -   Наконец, ожидается, что метод переопределения выполняет объявленную операцию. Семантика операций [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], таких как безотложная загрузка, отложенная загрузка и <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, требует, чтобы переопределения предоставляли объявленные службы. Например, переопределение загрузки, которое лишь возвращает пустую коллекцию без проверки содержимого в базе данных, скорее всего, приведет к несогласованности данных.  
   
 ## <a name="see-also"></a>См. также  
- [Настройка вставки, обновления и удаления](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)
+ [Настройка операций вставки, обновления и удаления](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

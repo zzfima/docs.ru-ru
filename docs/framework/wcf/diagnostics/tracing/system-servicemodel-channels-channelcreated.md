@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6406f162-a53d-487e-b281-3f232fce15f1
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f2582508bc7c88be0df759c1c6e78a3647c20594
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 22b33f0ec44226c5e59b4f5ad19178b66766907f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelschannelcreated"></a>System.ServiceModel.Channels.ChannelCreated
 System.ServiceModel.Channels.ChannelCreated  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Создан канал.  
   
 ## <a name="see-also"></a>См. также  

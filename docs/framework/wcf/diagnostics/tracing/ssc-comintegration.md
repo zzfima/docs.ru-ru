@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d88b4823-08a4-4126-8304-d2c4c9d35b3e
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: dff87d3cad14951390e89c701cd1070d902fd881
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 26d49a7c1dccab2d8c3712a3592c778d814292cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationservicehoststartedservicedetails"></a>System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedServiceDetails
 System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedServiceDetails  

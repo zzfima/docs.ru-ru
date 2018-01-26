@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4d54c015-226e-40c6-8c54-1773b342a9b6
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a1a1436bfc2d4f96696a15405f51a5de5c98995e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 19509b5a9b23a975fbee58858d6bd7b3d28db852
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelactivationmessagequeueduplicatedsocket"></a>System.ServiceModel.Activation.MessageQueueDuplicatedSocket
 System.ServiceModel.Activation.MessageQueueDuplicatedSocket  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Дескриптор сокета был дублирован.  
   
 ## <a name="see-also"></a>См. также  

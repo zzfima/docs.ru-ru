@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 70780ac4-0123-4da8-b731-8af856daffe3
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7b16845fc205ef7812a4e903b02fb90bae44e0c3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: b176e1efdc17b58083234d0437033bd43775f604
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="gt-greater-than-or-equal-to-entity-sql"></a>&gt;= (больше или равно) (Entity SQL)
 Сравнивает два выражения и определяет, имеет ли левое выражение значение, большее или равное значению правого выражения.  

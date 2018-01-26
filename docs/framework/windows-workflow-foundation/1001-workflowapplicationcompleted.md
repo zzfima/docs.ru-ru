@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7a2ab59a-cf66-437a-b01e-f8f7268a3f7a
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a62a8448319e7b07a3ea302f00f2fa269bf654ae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: ded4558b937a23fbe90d2bca55e6d5e4be0f0290
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="1001---workflowapplicationcompleted"></a>1001 - WorkflowApplicationCompleted
 ## <a name="properties"></a>Свойства  
@@ -39,4 +40,4 @@ ms.lasthandoff: 10/18/2017
 |Имя элемента данных|Тип элемента данных|Описание|  
 |--------------------|--------------------|-----------------|  
 |WorkflowInstanceId|`xs:string`|Идентификатор экземпляра для рабочего процесса.|  
-|Домен приложения|`xs:string`|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|
+|AppDomain|`xs:string`|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|

@@ -14,14 +14,15 @@ helpviewer_keywords:
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0b53ec29f973760237133003c2f582e1a33a9f83
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: f3f045fd35ef57be51c10d7948275899c1ae4f01
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="introduction-to-extensibility"></a>Введение в расширяемость
 Модель приложений [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] предусматривает удовлетворение большей части связанных с обменом данных потребностей любого распределенного приложения. Однако всегда существуют сценарии, которые модель приложений по умолчанию и предоставленные системой реализации не поддерживают. Модель расширяемости [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] предназначена для поддержки пользовательских сценариев и позволяет изменять поведение системы на всех уровнях, вплоть до замены модели приложений целиком. В этом разделе кратко рассматриваются различные области расширения и даются ссылки на дополнительные сведения о каждой из них.  

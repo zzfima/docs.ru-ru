@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f8ba94fc-27e0-4d8e-8f85-50a6d2a3cd43
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: fd93e2672851cc0111af6610ade70aebab14442d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: b7447d11e93cf33e69bc52d2cdec239c1be55bcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="host-lock-renewal-period"></a>Период обновления блокировки узла
 **Период обновления блокировки узла** хранилища экземпляров рабочих процессов SQL позволяет задать период времени, в течение которого узел обновляет блокировку экземпляра рабочего процесса. Блокировка действует в течение периода обновления блокировки узла + 30 секунд. Если узел не обновляет блокировку в течение этого периода времени (иными словами, не продлевает аренду), срок действия блокировки прекращается и поставщик сохраняемости разблокирует экземпляр. Значение этого свойства имеет тип TimeSpan в формате «чч». Минимальное допустимое значение равно «00: 00:01» (1 секунда). Значение по умолчанию этого свойства равно «00: 00:30» (30 секунд).  

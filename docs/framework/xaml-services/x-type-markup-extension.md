@@ -25,11 +25,12 @@ caps.latest.revision: "27"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: ed0372349a08687fd83b0fc989cc4cb88c29d96c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a4d645d5c953c0ff33435a5648024ace099455e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xtype-markup-extension"></a>Расширение разметки x:Type
 Среда CLR предоставляет <xref:System.Type> объект, который является базовым типом для указанного типа XAML.  
@@ -50,8 +51,8 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|`prefix`|Необязательно. Префикс, который сопоставляет пространство имен XAML не по умолчанию. Указание префикса часто не является обязательным. См. заметки.|  
-|`typeNameValue`|Обязательный. Имя типа, которое разрешается до текущего пространства имен XAML по умолчанию; или указанного сопоставленного префикса, если `prefix` предоставляется.|  
+|`prefix`|Необязательный. Префикс, который сопоставляет пространство имен XAML не по умолчанию. Указание префикса часто не является обязательным. См. заметки.|  
+|`typeNameValue`|Обязательно. Имя типа, которое разрешается до текущего пространства имен XAML по умолчанию; или указанного сопоставленного префикса, если `prefix` предоставляется.|  
   
 ## <a name="remarks"></a>Примечания  
  `x:Type` Расширение разметки получает аналогичные функции для `typeof()` оператор в [!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)] или `GetType` оператор в [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)].  

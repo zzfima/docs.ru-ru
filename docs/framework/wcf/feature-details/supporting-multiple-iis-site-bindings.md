@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ebe433d1c18d46e0868f9566a273124e6bd63f1c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 8dcd6a5e6204b1a629c1ee1e2ddfb9b263fa8054
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>Поддержка нескольких привязок узла IIS
 При размещении службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] в каталоге служб IIS 7.0 может понадобиться предоставить несколько базовых адресов, использующих один и тот же протокол на одном и том же узле. Это позволяет одной и той же службе отвечать на несколько разных URI. Это может оказаться полезным в том случае, если необходимо разместить службу, следящую за http://www.contoso.com и http://contoso.com, Также может использоваться при создании службы, имеющей базовый адрес для внутренних пользователей и отдельный базовый адрес для внешних пользователей. Пример: http://internal.contoso.com и http://www.contoso.com.  

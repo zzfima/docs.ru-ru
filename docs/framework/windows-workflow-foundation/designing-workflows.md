@@ -10,19 +10,20 @@ ms.topic: article
 helpviewer_keywords: programming [WF], designing workflows
 ms.assetid: 41f727b5-b142-4c1b-b046-492b96135ae6
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: aff3f8108eb5cbe254575c73a5022e8dd1f99db1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 15e2a70b89c3ea42442262cc41c03e78de596ffe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="designing-workflows"></a>Разработка рабочих процессов
 Подразделы данного раздела описывают принципы управления потоками, используемые при разработке рабочих процессов.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Рабочие процессы с блок-схемой](../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)  
  Демонстрирует процесс моделирования рабочих процессов с помощью известных принципов блок-схем.  
   

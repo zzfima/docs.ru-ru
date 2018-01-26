@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6334a5b866d239dc5f961ce4f1c89eac5b6ed3b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: a73fa30f1ebae805abd6f3e7e397d005d5b7130d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="serialization-and-deserialization"></a>Сериализация и десериализация
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] включает новый модуль сериализации - <xref:System.Runtime.Serialization.DataContractSerializer>. Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> преобразует объекты [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] в формат XML и обратно. В данном разделе объясняется, как работает сериализатор.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] также включает сопровождающий сериализатор - <xref:System.Runtime.Serialization.NetDataContractSerializer>. Сериализатор <xref:System.Runtime.Serialization.NetDataContractSerializer> аналогичен сериализаторам <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> и <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> в том, что он отображает имена типов [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] как часть сериализованных данных. Он применяется при совместном использовании одних и тех же типов на концах сериализации и десериализации. Оба сериализатора ( <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.NetDataContractSerializer> ) являются производными от общего базового класса <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
   
 > [!WARNING]
->  Класс <xref:System.Runtime.Serialization.DataContractSerializer> сериализует строки, содержащие управляющие символы с шестнадцатеричным значением меньше 20 в виде сущностей XML. При этом может возникнуть проблема отправки клиентами не WCF таких данных в службу WCF.  
+>  Класс <xref:System.Runtime.Serialization.DataContractSerializer> сериализует строки, содержащие управляющие символы с шестнадцатеричным значением меньше 20 в виде сущностей XML. Это может вызвать проблемы с клиентом не WCF при отправке в службу WCF таких данных.  
   
 ## <a name="creating-a-datacontractserializer-instance"></a>Создание экземпляра DataContractSerializer  
  Создание экземпляра <xref:System.Runtime.Serialization.DataContractSerializer> является важным этапом. После создания экземпляра невозможно менять какие-либо настройки.  
@@ -89,7 +90,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="round-trips"></a>Циклы обработки  
  *Цикл обработки* совершается, когда объект десериализуется и повторно сериализуется за одну операцию. Таким образом, он перемещается от XML-кода к экземпляру объекта, а затем возвращается в поток XML.  
   
- Некоторые перегрузки конструктора `DataContractSerializer` имеют параметр `ignoreExtensionDataObject` , для которого по умолчанию задано значение `false` . В этом режиме по умолчанию данные можно без потерь отправлять в цикл обработки от новой версии контракта данных через старую версию обратно к новой при условии, что контракт данных реализует интерфейс <xref:System.Runtime.Serialization.IExtensibleDataObject> . Предположим, например, что версия 1 контракта данных `Person` содержит члены данных `Name` и `PhoneNumber` , а версия 2 добавляет член `Nickname` . Если реализуется объект `IExtensibleDataObject` , то при отправке информации из версии 2 в версию 1 данные `Nickname` сохраняются, а затем снова выдаются при повторной сериализации данных, поэтому данные не теряются при прохождении цикла обработки. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Контракты данных, совместимые с любыми будущими](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) и [управление версиями контракта данных](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).  
+ Некоторые перегрузки конструктора `DataContractSerializer` имеют параметр `ignoreExtensionDataObject` , для которого по умолчанию задано значение `false` . В этом режиме по умолчанию данные можно без потерь отправлять в цикл обработки от новой версии контракта данных через старую версию обратно к новой при условии, что контракт данных реализует интерфейс <xref:System.Runtime.Serialization.IExtensibleDataObject> . Предположим, например, что версия 1 контракта данных `Person` содержит члены данных `Name` и `PhoneNumber`, а версия 2 добавляет член `Nickname`. Если реализуется объект `IExtensibleDataObject` , то при отправке информации из версии 2 в версию 1 данные `Nickname` сохраняются, а затем снова выдаются при повторной сериализации данных, поэтому данные не теряются при прохождении цикла обработки. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Контракты данных, совместимые с любыми будущими](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) и [управление версиями контракта данных](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).  
   
 #### <a name="security-and-schema-validity-concerns-with-round-trips"></a>Проблемы безопасности и допустимости схемы в циклах обработки  
  Циклы обработки влияют на безопасность. Например, десериализация и сохранение больших объемов лишних данных могут представлять угрозу безопасности. Проблемы безопасности при повторной выдаче этих данных обусловлены невозможностью провести проверку, особенно если в процессе задействованы цифровые сигнатуры. Например, в вышеприведенном сценарии конечная точка версии 1 могла бы подписать значение `Nickname` , которое содержит вредоносные данные. Наконец, могут возникнуть проблемы с допустимостью схемы: конечная точка может всегда выдавать только данные, которые строго соответствуют ее заявленному контракту, и не поддерживать других значений. В предыдущем примере в контракте конечной точки версии 1 говорится, что точка выдает только данные `Name` и `PhoneNumber`, а при использовании проверки допустимости схемы выдача дополнительного значения `Nickname` приводит к сбою проверки.  

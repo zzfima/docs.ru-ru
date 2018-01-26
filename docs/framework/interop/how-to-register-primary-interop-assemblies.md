@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1b72a24f349237aa35ccae295e9e552facc21ddd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 40414f39a1b84e7d07086d0634898de5171db590
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Практическое руководство. Регистрация основных сборок взаимодействия
 Маршалинг классов может выполняться только с помощью COM-взаимодействия и только в качестве интерфейсов. Иногда интерфейс, используемый для маршалинга класса, называют интерфейсом класса. Сведения о переопределении интерфейса класса выбранным интерфейсом см. в разделе [Вызываемая оболочка COM](../../../docs/framework/interop/com-callable-wrapper.md).  
@@ -57,6 +58,6 @@ regasm CompanyA.UtilLib.dll
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Программирование с использованием основных сборок взаимодействия](http://msdn.microsoft.com/en-us/306fa1d6-0703-4004-9e93-d0a57f1be81e)  
- [Обнаружение основных сборок взаимодействия](http://msdn.microsoft.com/en-us/d6768e4b-cd80-414d-a4f8-05d979eb393b)  
- [Распространение основных сборок взаимодействия](http://msdn.microsoft.com/en-us/e76384f0-d631-474c-bdbd-13884cba0265)
+ [Программирование с использованием основных сборок взаимодействия](http://msdn.microsoft.com/library/306fa1d6-0703-4004-9e93-d0a57f1be81e)  
+ [Обнаружение основных сборок взаимодействия](http://msdn.microsoft.com/library/d6768e4b-cd80-414d-a4f8-05d979eb393b)  
+ [Распространение основных сборок взаимодействия](http://msdn.microsoft.com/library/e76384f0-d631-474c-bdbd-13884cba0265)

@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7404a8e8-55c2-4b48-943d-a5df22ae79f9
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3484e7db981b7bb90ff93102ad612e0c9b92aaa2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 94d91ab278ae4f99ad184f7d1ac885665823a0aa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelportsharingtransportlistenerstop"></a>System.ServiceModel.PortSharing.TransportListenerStop
 System.ServiceModel.PortSharing.TransportListenerStop  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  TransportListener завершает прослушивание.  
   
 ## <a name="see-also"></a>См. также  

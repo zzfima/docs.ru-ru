@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 89d81a25da6494fc9cbf041ae68f2985b5c90a81
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: de9b67390d1260b5de26c146bd5afec7cfff4c42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="installing-message-queuing-msmq"></a>Установка системы очередей сообщений (MSMQ)
 В процедурах ниже показана методика установки очереди сообщений 4.0 и очереди сообщений 3.0.  
@@ -73,4 +74,4 @@ ms.lasthandoff: 10/18/2017
 6.  При появлении запроса на перезагрузку компьютера нажмите кнопку **ОК** для завершения установки.  
   
 ## <a name="see-also"></a>См. также  
- [Инструкции по установке](../../../../docs/framework/wcf/samples/set-up-instructions.md)
+ [Инструкции по настройке](../../../../docs/framework/wcf/samples/set-up-instructions.md)

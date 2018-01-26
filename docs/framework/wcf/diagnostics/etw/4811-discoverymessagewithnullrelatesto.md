@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: dab901e8-a2b3-41c1-a76b-bcd8b3c7c29a
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 79e0b1e0a0d155cd640c567059d0d505117d208b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: b81fbdd2d03cd26e9c0f8b23a5d2cfb5e4bcdf66
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="4811---discoverymessagewithnullrelatesto"></a>4811 - DiscoveryMessageWithNullRelatesTo
 ## <a name="properties"></a>Свойства  

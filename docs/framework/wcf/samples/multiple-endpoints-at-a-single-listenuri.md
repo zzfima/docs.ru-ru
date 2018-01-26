@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 12d7d763f25fe27ce23cf57cfcfa9a23a47d85ef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 909fb35f9b8e4628df06918f207c3c86770a2d4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>Несколько конечных точек по одному ListenUri
 В этом образце показана служба, в которой размещается несколько конечных точек по одному адресу `ListenUri`. Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующий службу калькулятора.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/18/2017
   
  Таким образом, комбинация фильтра адресов и фильтра контрактов позволяет направлять каждое сообщение, поступающее по адресу `ListenUri` данной службы, в правильную конечную точку. Третья конечная точка отличается от других двух, поскольку она принимает сообщения, отправляемые по другому адресу из других конечных точек. Первая и вторая конечные точки отличаются друг от друга своими контрактами (действием исходящего сообщения).  
   
-## <a name="client"></a>Клиент  
+## <a name="client"></a>"Клиент";  
  Как и в случае конечных точек сервера у конечных точек клиента имеется два адреса. Логический адрес на сервере и на клиенте называется `EndpointAddress`. Однако на сервере физический адрес называется `ListenUri`, в то время как на клиенте он называется `Via`.  
   
  Аналогично серверу по умолчанию эти два адреса одинаковы. Для задания на клиенте адреса `Via`, отличающегося от адреса конечной точки, используется `ClientViaBehavior`:  

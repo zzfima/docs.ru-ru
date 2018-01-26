@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: bf0af444-890d-43e2-aeca-98589dd74ddf
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea3db4a6e035a0a17d078908e06a7997d7c87ad6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: c4846a45b0a49de102cab05857a69476680198a0
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="convert-a-sequence-to-an-array"></a>Преобразование последовательности в массив
 Для создания массива из последовательности используется метод <xref:System.Linq.Enumerable.ToArray%2A>.  

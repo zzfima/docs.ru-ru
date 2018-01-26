@@ -24,11 +24,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e415d5ab46bc354198135fc4e0902e3017923e20
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 46a11b072731daf420e35bc9c9cfd7d4fced1fe5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="property-change-events"></a>События изменения свойств
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] определяет несколько событий, которые возникают в ответ на изменение значения свойства. Часто этим свойством является свойство зависимостей. Самим событием иногда является перенаправляемое событие, а иногда — стандартное событие [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Определение события зависит от сценария, так как некоторые изменения свойств лучше перенаправлять через дерево элементов, тогда как другие в основном влияют только на объект, в котором это свойство изменено.  

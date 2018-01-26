@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 17e74e8b39ff9079973063f4ea703607411ab93d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 840e3c3c155a383f94051940b6d63dea3412bf63
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clsidresolutionflags-enumeration"></a>Перечисление CLSID_RESOLUTION_FLAGS
 Содержит значения, указывающие способ разрешения общеязыковой среды выполнения (CLR) `CLSID`.  
@@ -37,9 +38,9 @@ typedef enum {
 } CLSID_RESOLUTION_FLAGS;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`CLSID_RESOLUTION_DEFAULT`|Задает поведение по умолчанию.|  
 |`CLSID_RESOLUTION_REGISTERED`|Указывает, что среда выполнения ищет в реестре и применяет политику оболочки.|  
@@ -52,4 +53,4 @@ typedef enum {
  **Версии платформы .NET framework:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Перечисления размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+ [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

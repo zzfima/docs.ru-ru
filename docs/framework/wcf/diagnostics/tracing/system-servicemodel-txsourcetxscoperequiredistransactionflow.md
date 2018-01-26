@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 41a3a5d7-bb16-4d16-bb51-db7ac0cfb748
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 95063dc787e76faacdbdfd47e13f5600acf6999a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 1652f5db781ef8e69d31c7a40ebc602333bba753
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodeltxsourcetxscoperequiredistransactionflow"></a>System.ServiceModel.TxSourceTxScopeRequiredIsTransactionFlow
 Заданная транзакция предназначена для заданной операции.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Трассируется, если транзакция, доступная для пользовательского кода, поступила из внешнего источника.  
   
 ## <a name="see-also"></a>См. также  

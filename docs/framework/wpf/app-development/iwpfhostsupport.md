@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 85d4ed09d6c5ca17e148d531e6aac483ff737d51
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: a516d5917c2106bc83842befac9b506312fcce1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iwpfhostsupport"></a>Интерфейс IWpfHostSupport
 Приложения, размещающие [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] содержимым при помощи PresentationHost.exe реализуют этот интерфейс для предоставления точки интеграции между узлом и PresentationHost.exe.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/22/2017
   
 ## <a name="members"></a>Члены  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |[GetRawInputDevices](../../../../docs/framework/wpf/app-development/getrawinputdevices.md)|Позволяет программе PresentationHost.exe обнаруживать устройства необработанного ввода (устройства HID), которые интересуют ведущее приложение.|  
 |[FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md)|Вызывается программой PresentationHost.exe всякий раз при получении сообщения, пока не будет возвращено E_NOTIMPL.|  

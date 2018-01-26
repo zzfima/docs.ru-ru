@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 632d8084-f492-47bd-a40d-f9281c130149
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f8b4c295afdd0bc8470cf7bc12702c345c7c70c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 74277b04237cfcbe5de9e36cb9d98c4476a5a765
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelactivationwebhostdebugrequest"></a>System.ServiceModel.Activation.WebHostDebugRequest
 System.ServiceModel.Activation.WebHostDebugRequest  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Запрос команды DEBUG.  
   
 ## <a name="see-also"></a>См. также  

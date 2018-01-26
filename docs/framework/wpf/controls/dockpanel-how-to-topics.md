@@ -17,16 +17,17 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 11ea55c807bdf939d2cca6fb90591f814361ce96
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: a1236755a3df5074387652049847e979653eefcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dockpanel-how-to-topics"></a>Разделы руководства DockPanel
 В подразделах этого раздела описывается использование <xref:System.Windows.Controls.DockPanel> элемент для размещения дочерних элементов вдоль края контейнера макета.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Получение или определение значения Dock](../../../../docs/framework/wpf/controls/how-to-get-or-set-a-dock-value.md)  
  [Создание элемента DockPanel](../../../../docs/framework/wpf/controls/how-to-create-a-dockpanel.md)  
  [Разделение пространства с помощью элемента DockPanel](../../../../docs/framework/wpf/controls/how-to-partition-space-by-using-the-dockpanel-element.md)  

@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 8137e41f92335849916dfc9e9ce72afeb186e73c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 15487d4311f896aa09c1c7712292058086a49b50
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Практическое руководство. Добавление установщиков в приложение служб
 В состав Visual Studio входят компоненты установки, которые можно установить ресурсы, связанные с приложениями служб. Компоненты установки регистрируются в качестве отдельных службы в системе, к которой он устанавливается и. При работе с приложением службы, можно выбрать ссылку в окне «Свойства» для автоматического добавления соответствующих установщиков в проекте.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
  Необходимо сделать любое специальное кодирование установщиков для правильной установки служб. Однако иногда может потребоваться изменить содержимое установщики, если вам нужно добавить специальные функции в процессе установки.  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-add-installers-to-your-service-application"></a>Добавление установщиков в приложение службы  
   
@@ -71,6 +72,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Как: Установка и удаление служб](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [Как: запуск служб](../../../docs/framework/windows-services/how-to-start-services.md)  
- [Как: задать контекст безопасности для служб](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
+ [Практическое руководство. Установка и удаление служб](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [Практическое руководство. Запуск служб](../../../docs/framework/windows-services/how-to-start-services.md)  
+ [Практическое руководство. Назначение службам контекста безопасности](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)

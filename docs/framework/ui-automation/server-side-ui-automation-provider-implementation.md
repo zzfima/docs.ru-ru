@@ -17,11 +17,12 @@ caps.latest.revision: "39"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 079a778a3518e6632f429a261ee229db0b46d9b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d25f561444cd672e8842711025f4299c375d6bb4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Реализация поставщика автоматизации пользовательского интерфейса на стороне сервера
 > [!NOTE]
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="provider-interfaces"></a>Интерфейсы поставщика  
  Каждый поставщик [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] должен реализовывать один из следующих интерфейсов.  
   
-|Интерфейс|Описание|  
+|Интерфейс|Описание:|  
 |---------------|-----------------|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>|Предоставляет функциональные возможности для простого элемента управления, размещенного в окне, включая поддержку для шаблонов и свойств элементов управления.|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>|Наследует от <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>. Добавляет функциональные возможности для элемента в сложном элементе управления, включая навигацию внутри фрагмента, установку фокуса и возврат ограничивающего прямоугольника элемента.|  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
   
  Следующие интерфейсы поддерживают добавленные функциональные возможности, но необязательно должны быть реализованы.  
   
-|Интерфейс|Описание|  
+|Интерфейс|Описание:|  
 |---------------|-----------------|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|Позволяет поставщику отслеживать запросы событий.|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride>|Позволяет изменять положение элементов на основе окна в дереве [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] фрагмента.|  
@@ -125,7 +126,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="events-in-non-wpf-providers"></a>События в поставщиках, отличных от WPF  
  Поставщики[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] должны вызывать события, чтобы уведомлять клиентские приложения об изменениях состояния пользовательского интерфейса. Для создания событий используются следующие методы.  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationEvent%2A>|Создает различные события, включая события, вызываемые шаблонами элементов управления.|  
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent%2A>|Вызывает событие при изменении свойства [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
@@ -135,7 +136,7 @@ ms.lasthandoff: 11/21/2017
   
  Для оптимизации производительности поставщик можно выборочно вызывать события или вообще не создавать события, если отсутствует клиентское приложение, зарегистрированное для их получения. Для оптимизации используются следующие методы.  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A>|Это статическое свойство указывает, подписано ли какое-либо клиентское приложение на события [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|Реализация поставщика этого интерфейса в корневом элементе фрагмента позволяет ему знать, когда клиенты регистрируют и отменяют регистрацию обработчиков событий для событий в фрагменте.|  
@@ -181,10 +182,10 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о поставщиках автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
- [Предоставление поставщика автоматизации пользовательского интерфейса на стороне сервера](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  
+ [Предоставление серверного поставщика автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  
  [Возврат свойств от поставщика автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
  [Вызов событий из поставщика автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
  [Включение навигации в поставщике фрагментов автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
- [Поддержка шаблонов элементов управления в поставщике модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [Пример простого поставщика](http://msdn.microsoft.com/en-us/c10a6255-e8dc-494b-a051-15111b47984a)  
- [Пример поставщика фрагмента](http://msdn.microsoft.com/en-us/778ef1bc-8610-4bc9-886e-aeff94a8a13e)
+ [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [Пример простого поставщика](http://msdn.microsoft.com/library/c10a6255-e8dc-494b-a051-15111b47984a)  
+ [Пример поставщика фрагмента](http://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)

@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1690b42f-acfd-4bb3-8f0d-0b17cd5ca36c
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e32c302b3ac0849da5349a65dacbb9efa2740026
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: ca7ec090fbac492d4b180eebbfefc42404636135
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="nettcpbinding"></a>NetTCPBinding
 Образцы в этом разделе демонстрируют привязку TCP в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Привязка NetTcpBinding по умолчанию](../../../../docs/framework/wcf/samples/default-nettcpbinding.md)  
  Демонстрирует использование привязки <xref:System.ServiceModel.NetTcpBinding>.  
   

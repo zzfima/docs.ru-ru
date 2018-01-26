@@ -12,19 +12,20 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF]
 ms.assetid: 9a23ea6b-d600-483e-89cd-8889cfec5f66
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d01680c038f075db4bdb9151a86d51820615a068
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: d6b61f5ae7d0e7f3102e0566fb1a6eff3ca072d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-workflow-foundation"></a>Windows Workflow Foundation
 В этом разделе описываются модель программирования, образцы и средства [!INCLUDE[wf](../../../includes/wf-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Руководство по документации Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/guide-to-the-documentation.md)  
  Список тем для ознакомления с учетом степени подготовленности (от новичка до хорошо ознакомленного с предметом разработчика) и требований.  
   

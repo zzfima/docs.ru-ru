@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: ad712fa1-2baf-462a-b163-574cce6d376a
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd78b4f47d7f48d7b4cbacdf53140758a05b7869
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: fff678a54416e72f4be8c3fdfdcacec5a7d90af7
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="querying-typed-datasets"></a>Запросы к типизированным наборам данных
 Если схема объекта <xref:System.Data.DataSet> известна во время разработки приложения, при создании запроса <xref:System.Data.DataSet> рекомендуется использовать типизированный объект [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Типизированный <xref:System.Data.DataSet> — это класс, производный от <xref:System.Data.DataSet>. Поэтому он наследует все методы, события и свойства класса <xref:System.Data.DataSet>. Кроме того, типизированный <xref:System.Data.DataSet> предоставляет строго типизированные методы, события и свойства. Это означает, что доступ к таблицам и столбцам можно получить по имени, не используя методы на основе коллекций. Это упрощает запросы и повышает их читаемость. Дополнительные сведения см. в разделе [типизированных наборов данных](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  
@@ -67,6 +68,6 @@ Next
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Запросы к наборам данных](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
+ [Запросы к DataSet](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
  [Запросы между таблицами](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)  
  [Запросы к одной таблице](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)

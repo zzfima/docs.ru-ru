@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7eff41d26c03fab2f87db096905b7f4584309d33
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 8a3504e275c2c5c5f9b98d4a78e08f718f8875b8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-simplification-features"></a>Возможности упрощения WCF
 В этом разделе описываются новые возможности, упрощающие написание приложений WCF.  
@@ -98,13 +99,13 @@ ms.lasthandoff: 10/18/2017
 ## <a name="new-transport-default-values"></a>Новые значения по умолчанию для свойств транспорта  
  В следующей таблице описываются измененные настройки и разделы, в которых можно найти дополнительные сведения.  
   
-|Свойство|Включить|Новое значение по умолчанию|Дополнительные сведения|  
+|Свойство.|включить|Новое значение по умолчанию|Дополнительные сведения|  
 |--------------|--------|-----------------|----------------------|  
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 секунд|Это свойство задает время, в течение которого подключение TCP может выполнить свою проверку подлинности с помощью протокола кадрирования .Net. Клиенту необходимо отправить некоторые исходные данные, прежде чем сервер получит достаточно сведений для аутентификации. Это время ожидания специально сделано меньше значения параметра ReceiveTimeout (10 мин) для того, чтобы непроверенные вредоносные клиенты не сохраняли соединение с сервером в течение долгого времени. Значение по умолчанию - 30 секунды. [!INCLUDE[crdefault](../../../includes/crabout-md.md)] <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|  
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * количество процессоров|Это свойство уровня сокетов, которое описывает количество допустимых, ожидающих подтверждения запросов в очереди. Если очередь по невыполненной работе по ожиданию передачи данных заполнится полностью, новые запросы будут отклоняться. [!INCLUDE[crdefault](../../../includes/crabout-md.md)] <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|  
-|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * количество процессоров для транспорта<br /><br /> 4 \* количество процессоров для SMSvcHost.exe|Это свойство ограничивает число каналов, которое может прослушиваться в режиме ожидания на сервере. Когда параметру MaxPendingAccepts задано слишком маленькое значение, возникает небольшой промежуток времени, в течение которого ожидающие каналы начнут обслуживать подключения, но новые каналы прослушиваться не будут. Соединение может произойти именно в этот интервал, и оно не будет установлено, потому что на сервере нет ожидающих каналов. Это свойство может быть сконфигурировано путем задания свойству <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A> большего значения. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> и [Настройка службы совместного использования портов Net.TCP](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
+|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * количество процессоров для транспорта<br /><br /> 4 \* количество процессоров для SMSvcHost.exe|Это свойство ограничивает число каналов, которое может прослушиваться в режиме ожидания на сервере. Когда параметру MaxPendingAccepts задано слишком маленькое значение, возникает небольшой промежуток времени, в течение которого ожидающие каналы начнут обслуживать подключения, но новые каналы прослушиваться не будут. Соединение может произойти именно в этот интервал, и оно не будет установлено, потому что на сервере нет ожидающих каналов. Это свойство может быть сконфигурировано путем задания свойству <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A> большего значения. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> и [Настройка службы совместного использования портов Net.TCP](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * количество процессоров|Это свойство определяет количество соединений, которое может быть принято транспортом, но которое не было принято диспетчером ServiceModel. Для настройки этого значения используйте свойство `MaxConnections` привязки или свойство `maxOutboundConnectionsPerEndpoint` элемента привязки. [!INCLUDE[crdefault](../../../includes/crabout-md.md)] <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|  
-|receiveTimeout|SMSvcHost.exe|30 секунд|Это свойство определяет время ожидания для чтения данных кадрирования TCP и проведения распределения подключений из базовых подключений. Это выполняется, чтобы ограничить время, которое служба SMSvcHost.exe тратит на считывание начальных данных из входящего соединения. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Настройка службы совместного использования портов Net.TCP](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0).|  
+|receiveTimeout|SMSvcHost.exe|30 секунд|Это свойство определяет время ожидания для чтения данных кадрирования TCP и проведения распределения подключений из базовых подключений. Это выполняется, чтобы ограничить время, которое служба SMSvcHost.exe тратит на считывание начальных данных из входящего соединения. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Настройка службы совместного использования портов Net.TCP](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0).|  
   
 > [!NOTE]
 >  Эти новые значения по умолчанию используются только при развертывании службы WCF на компьютере с платформой .NET Framework 4.5. При развертывании той же службы на компьютере с платформой .NET Framework 4.0 используются значения по умолчанию платформы .NET 4.0. В таких случаях рекомендуется настроить эти параметры явно.  
@@ -112,7 +113,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas  
  <xref:System.Xml.XmlDictionaryReaderQuotas> содержит настраиваемые значения квот для средств чтения словаря XML, которые ограничивают объем памяти, используемый кодировщиком при создании сообщения. Хотя эти квоты и можно изменить, значения по умолчанию были изменены так, чтобы разработчикам редко приходилось их менять. Квота `MaxReceivedMessageSize` не была изменена, и с ее помощью можно по-прежнему ограничить потребление памяти, избегнув таким образом работы со сложными <xref:System.Xml.XmlDictionaryReaderQuotas>. В следующей таблице приведены квоты, их новые значения по умолчанию и краткое описание, для чего используется каждая квота.  
   
-|Имя квоты|Значение по умолчанию|Описание|  
+|Имя квоты|Значение по умолчанию|Описание:|  
 |----------------|-------------------|-----------------|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>|Int32.MaxValue|Возвращает и задает максимально допустимую длину массива. Эта квота ограничивает максимальный размер массива примитивов, возвращаемых средством чтения XML, включая байтовые массивы. Эта квота ограничивает потребление памяти не в самом средстве чтения XML, а в компоненте, использующем средство чтения. Например, когда <xref:System.Runtime.Serialization.DataContractSerializer> использует средство чтения, защищенное <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>, оно не десериализует байтовые массивы, чей размер превышает указанное в этой квоте значение.|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>|Int32.MaxValue|Возвращает и задает максимально допустимое число байтов, возвращаемых для каждой операции чтения. Эта квота ограничивает число байтов, которые считываются за одну операцию считывания при чтении открывающего тега элемента и его атрибутов. (В случае непотоковой передачи данных само имя элемента не входит в квоту.) Наличие слишком большого числа атрибутов XML может привести к неоправданно большому времени обработки, поскольку требуется проверка уникальности имен атрибутов. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> устраняет эту возможную проблему.|  

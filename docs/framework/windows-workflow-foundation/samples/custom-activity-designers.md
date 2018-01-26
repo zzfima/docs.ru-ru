@@ -9,29 +9,30 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: dcf14dca-ce6d-4278-96ba-062f0a679075
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 953ee102c910fbdf120136493fa6e2a89e7e9936
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 8d94ad8974562872687889ef74efa6106c62c0f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-activity-designers"></a>Пользовательские конструкторы действий
 В данном разделе содержатся образцы действий, использующих пользовательские конструкторы для отображения в конструкторе рабочих процессов.  
   
-## <a name="in-this-section"></a>Содержание  
- [Пользовательские составные конструкторы - средство представления элементов рабочего процесса](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Пользовательские составные конструкторы — средство представления элементов рабочего процесса](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md)  
  В этом примере показано, как построить конструктор действий, который предоставляет доступ к «зону перетаскивания.»  
   
- [Пользовательские составные конструкторы - средство представления элементов рабочего процесса](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md)  
+ [Пользовательские составные конструкторы — средства представления элементов рабочего процесса](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md)  
  В этом образце показано, как построить конструктор действий, который предоставляет доступ к такой изменяемой коллекции.  
   
  [Программируемость хранилища метаданных](../../../../docs/framework/windows-workflow-foundation/samples/metadata-store-programmability.md)  
  Этот образец демонстрирует программирование хранилища метаданных путем применения атрибутов к типам времени выполнения, для которых отсутствует управление их источником.  
   
- [Использование ExpressionTextBox в конструкторе пользовательских действий](../../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)  
+ [Использование ExpressionTextBox в пользовательском конструкторе действия](../../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)  
  В этом образце показано, как использовать <xref:System.Activities.Presentation.View.ExpressionTextBox> в настраиваемом конструкторе действий.  
   
  [Использование области редактирования](../../../../docs/framework/windows-workflow-foundation/samples/using-editing-scope.md)  

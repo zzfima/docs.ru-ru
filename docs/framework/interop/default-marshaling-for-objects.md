@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c5bfafcad5f1f60e7e763b69f220188517d29f17
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b49575bb7f16b942a56a48e9ad3f5a44edfb373a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="default-marshaling-for-objects"></a>Маршалинг по умолчанию для объектов
 Параметры и поля, типизированные как <xref:System.Object?displayProperty=nameWithType>, могут предоставляться в неуправляемый код в виде одного из следующих типов:  
@@ -329,7 +330,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
   
  В следующей таблице описываются общие правила распространения для вариантов и объектов.  
   
-|Исходный тип|Целевой тип|Возвращаемые изменения|  
+|Исходный тип|Кому|Возвращаемые изменения|  
 |----------|--------|-----------------------------|  
 |**Вариант**  *v*|**Объект**  *o*|Никогда|  
 |**Объект**  *o*|**Вариант**  *v*|Никогда|  
@@ -341,5 +342,5 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 ## <a name="see-also"></a>См. также  
  [Характеристики маршалинга по умолчанию](../../../docs/framework/interop/default-marshaling-behavior.md)  
  [Преобразуемые и непреобразуемые типы](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Атрибуты направления](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
+ [Атрибуты направления](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [Копирование и закрепление](../../../docs/framework/interop/copying-and-pinning.md)

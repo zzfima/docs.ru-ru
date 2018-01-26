@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5d8ce118-acdc-429c-ac89-34e943267c99
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3d533772f5966160d819817b8dc7583706677e2c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 011c20fc60fc29b0ce3383608328923792f7f1f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelmessagewritten"></a>System.ServiceModel.MessageWritten
 System.ServiceModel.MessageWritten  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Сообщение записано.  
   
 ## <a name="see-also"></a>См. также  

@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 722e9766-48d7-456c-9496-d7c5c8f0fa76
 caps.latest.revision: "26"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 338eb9f39034bbc9daf184d691cc1bb535326a45
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 7dd56b41b7b661b58446219d426be1a19edba059
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compensation"></a>Компенсация
 Компенсация в [!INCLUDE[wf](../../../includes/wf-md.md)] - это механизм, с помощью которого можно отменить или компенсировать выполненные ранее действия (в соответствии с логикой, определенной приложением), если они привели к возникновению ошибки. В данном разделе описывается применение компенсации в рабочих процессах.  
@@ -336,4 +337,4 @@ Activity wf = new Sequence()
  <xref:System.Activities.Statements.Compensate>  
  <xref:System.Activities.Statements.Confirm>  
  <xref:System.Activities.Statements.CompensationToken>  
- [Действия, подлежащего компенсации](../../../docs/framework/windows-workflow-foundation/samples/compensable-activity-sample.md)
+ [Компенсируемое действие](../../../docs/framework/windows-workflow-foundation/samples/compensable-activity-sample.md)

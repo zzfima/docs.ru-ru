@@ -1,12 +1,8 @@
 ---
 title: "Уточнение типов .NET для взаимодействия"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -16,24 +12,24 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b6487c151f49f6084977deb600e7f93e5eb7acee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a05330a6834b4775e62b7b55aee03526b2a9bbda
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Уточнение типов .NET для взаимодействия
 Если вы планируете предоставлять типы в сборке COM-приложениям, во время разработки необходимо учитывать требования COM-взаимодействия. Управляемые типы (класс, интерфейс, структура и перечисление) легко интегрируются с COM-типами, если следовать приведенным ниже рекомендациям:  
   
 -   Классы должны явным образом реализовывать интерфейсы.  
   
-     Несмотря на то, что COM-взаимодействие предоставляет механизм для автоматического создания интерфейса, содержащего все члены класса и члены его базового класса, гораздо эффективнее предоставлять явные интерфейсы. Автоматически создаваемый интерфейс называется интерфейсом класса. См. рекомендации в разделе [Введение в интерфейс класса](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
+     Несмотря на то, что COM-взаимодействие предоставляет механизм для автоматического создания интерфейса, содержащего все члены класса и члены его базового класса, гораздо эффективнее предоставлять явные интерфейсы. Автоматически создаваемый интерфейс называется интерфейсом класса. Рекомендации см. в разделе [введение в интерфейс класса](com-callable-wrapper.md#introducing-the-class-interface).  
   
-     В [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# и C++ можно внедрять определения интерфейса в код вместо использования языка IDL или его эквивалента. Дополнительные сведения о синтаксисе см. в документации по соответствующему языку.  
+     Visual Basic, C# и C++ можно использовать для включения определений интерфейса в коде, вместо того чтобы использовать языка определения интерфейса (IDL) или его эквивалент. Дополнительные сведения о синтаксисе см. в документации по соответствующему языку.  
   
 -   Управляемые типы должны быть открытыми.  
   
@@ -58,6 +54,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>См. также  
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>  
  [Предоставление компонентов .NET Framework клиентам COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Введение в интерфейс класса](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
+ [Введение в интерфейс класса](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
  [Применение атрибутов взаимодействия](../../../docs/framework/interop/applying-interop-attributes.md)  
  [Упаковка сборки для модели COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 80535b67-f196-467b-93aa-ea9de902a2e5
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 36370b11217c3746c0e85608f5a8027527ccbab5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 3df6deecf78eff0dac8095d41d9fc1bfc6a80030
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelgetserviceelement"></a>System.ServiceModel.GetServiceElement
 System.ServiceModel.GetServiceElement  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Эта трассировка создается при создании узла службы на уровне "Данные". В ней описывается контракт службы и привязка.  
   
 ## <a name="see-also"></a>См. также  

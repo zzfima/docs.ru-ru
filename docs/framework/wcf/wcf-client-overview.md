@@ -14,14 +14,15 @@ dev_langs:
 helpviewer_keywords: clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7434e0ea112a6641e356a1ec3da3a4bd6524bdda
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 2d6dd9e34561f397c581e148a549ad85762c81e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-client-overview"></a>Общие сведения о клиентах WCF
 В данном разделе описывается назначение клиентских приложений, способы настройки, создания и использования клиента [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], а также приводятся сведения об обеспечении безопасности клиентских приложений.  

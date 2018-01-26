@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fb1fd2c7aa057fcc83c82ab9d72129db2cac680e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 500dad1699843bae04aea6d5c16a1ccf53bb102a
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="datatable-constraints"></a>Ограничения таблиц данных
 Ограничения позволяют принудительно поддерживать целостность данных <xref:System.Data.DataTable>. Ограничение представляет собой автоматическое правило, применяемое к столбцу или связанным столбцам и определяющее порядок действий при каком-либо изменении содержимого строки. Ограничения применяются при `System.Data.DataSet.EnforceConstraints` свойство <xref:System.Data.DataSet> — **true**. Пример кода, показывающий, как установить свойство `EnforceConstraints`, см. в разделе справки <xref:System.Data.DataSet.EnforceConstraints%2A>.  
@@ -32,9 +33,9 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A> И <xref:System.Data.ForeignKeyConstraint.UpdateRule%2A> свойства **ForeignKeyConstraint** определить действие, выполняемое в случае, когда пользователь пытается удалить или обновить строку в связанной таблице. В следующей таблице описаны различные параметры, доступные для **DeleteRule** и **UpdateRule** свойства **ForeignKeyConstraint**.  
   
-|Установка правил|Описание|  
+|Установка правил|Описание:|  
 |------------------|-----------------|  
-|**CASCADE**|Удалить или обновить связанные строки.|  
+|**Cascade**|Удалить или обновить связанные строки.|  
 |**SetNull**|Значения в связанных строках **DBNull**.|  
 |**SetDefault**|Присвоить столбцам в связанных строках значение по умолчанию.|  
 |**None**|Не выполнять никаких действий в связанных строках. Это значение по умолчанию.|  
@@ -68,9 +69,9 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
   
  В следующей таблице перечислены доступные параметры для **AcceptRejectRule**.  
   
-|Установка правил|Описание|  
+|Установка правил|Описание:|  
 |------------------|-----------------|  
-|**CASCADE**|Принять или отклонить изменения в дочерних строках.|  
+|**Cascade**|Принять или отклонить изменения в дочерних строках.|  
 |**None**|Не выполнять никаких действий в дочерних строках. Это значение по умолчанию.|  
   
 ### <a name="example"></a>Пример  
@@ -107,6 +108,6 @@ custDS.Tables["Customers"].Constraints.Add(custUnique);
  <xref:System.Data.DataTable>  
  <xref:System.Data.ForeignKeyConstraint>  
  <xref:System.Data.UniqueConstraint>  
- [Определение схемы таблицы данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
+ [Определение схемы DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
  [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 24b68bd3-cef5-4413-ab82-2e2625f209aa
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: bcb006f649fe0d2a92b4c789c435ba33916d140f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 96a868cd28823c3185d1297f7709dcfdc28a14a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="error-handling-activities-in-wf"></a>Действия по обработке ошибок в WF
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] содержит несколько предоставляемых системой действий для реализации обработки ошибок и восстановления. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Исключения](../../../docs/framework/windows-workflow-foundation/exceptions.md).  

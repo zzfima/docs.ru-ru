@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 973a70fdb655ab069d6ecdafd0e017324720e57a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e81af51be3e281faa94bcea17ff75b41341abb33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-filter"></a>Выбор фильтра
 При настройке службы маршрутизации важно выбрать правильные фильтры сообщений и настроить их таким образом, чтобы полученное сообщение всегда определялось одним из них. Если выбранные фильтры допускают избыточные совпадения или неверно настроены, то сообщения будут маршрутизироваться неправильно. Если фильтры слишком строги, то это может привести к тому, что для некоторых сообщений не окажется ни одного допустимого маршрута.  
@@ -89,7 +90,7 @@ StrictAndMessageFilter and1=new StrictAndMessageFilter(address1, action1);
   
  Этот фильтр должен использоваться в тех случаях, когда необходимо логически объединить несколько фильтров. Например, если существует несколько целевых объектов, которые должны получать только определенные сочетания действий и сообщений по определенным адресам, то можно объединить фильтры Action и Address с помощью фильтра AND.  
   
-### <a name="custom"></a>Пользовательский  
+### <a name="custom"></a>Другой  
  При выборе типа фильтра Custom необходимо указать значение customType, содержащее тип сборки, содержащей **MessageFilter** реализации для использования этого фильтра. Кроме того, filterData должно содержать все значения, которые пользовательскому фильтру могут потребоваться для проверки сообщений. В следующем примере определяется `FilterElement`, который использует реализацию класса MessageFilter - `CustomAssembly.MyCustomMsgFilter`.  
   
 ```xml  
@@ -147,4 +148,4 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
 ## <a name="see-also"></a>См. также  
  [Фильтры сообщений](../../../../docs/framework/wcf/feature-details/message-filters.md)  
- [Практическое руководство: Использование фильтров](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
+ [Практическое руководство. Использование фильтров](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)

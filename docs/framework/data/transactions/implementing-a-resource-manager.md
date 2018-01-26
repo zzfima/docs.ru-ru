@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d5c153f6-4419-49e3-a5f1-a50ae4c81bf3
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b72b1bf68fa445a188c327098295d76815a80b16
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 25a45626564bb58950b251ae5e9041609d96a207
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-a-resource-manager"></a>Реализация диспетчера ресурсов
 Каждым используемым в транзакции ресурсом управляет диспетчер ресурсов, действия которого координируются диспетчером транзакций. Диспетчеры ресурсов работают совместно с диспетчером транзакций для предоставления приложения, гарантирующего атомарность и изоляцию. Примерами диспетчеров ресурсов являются Microsoft SQL Server, устойчивые очереди сообщений и расположенные в оперативной памяти хэш-таблицы.  
@@ -41,14 +42,14 @@ ms.lasthandoff: 10/18/2017
   
  Класс <xref:System.Transactions.Transaction> также предоставляет метод <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> для PSPE-зачисления. Это позволяет диспетчеру устойчивых ресурсов "владеть" и управлять транзакцией, которая затем при необходимости может быть повышена до транзакции MSDTC. Дополнительные сведения см. в разделе [Оптимизация с помощью одного двухфазной фиксации и однофазной](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  Действия, обычно выполняемые диспетчером ресурсов, описываются в следующих разделах.  
   
- [Прикрепление ресурсов в качестве участников в транзакции](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
+ [Зачисление ресурсов в транзакцию в качестве участников](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
   
  Описывает порядок зачисления устойчивого или неустойчивого ресурса в транзакцию.  
   
- [Фиксация транзакции в однофазной и двухфазной](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)  
+ [Однофазная и многофазная фиксация транзакции](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)  
   
  Описывает, как диспетчер ресурсов отвечает на уведомление о фиксации и подготавливает фиксацию.  
   
@@ -56,10 +57,10 @@ ms.lasthandoff: 10/18/2017
   
  Описывает порядок восстановления диспетчера устойчивых ресурсов после сбоя.  
   
- [Уровни доверия безопасности при доступе к ресурсам](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md)  
+ [Уровни доверия, используемые при доступе к ресурсам](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md)  
   
  Описывает, как три уровня доверия для System.Transactions ограничивают доступ к ресурсам различных типов, используемым инфраструктурой <xref:System.Transactions>.  
   
- [С помощью одного двухфазной фиксации и однофазной оптимизации](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
+ [Оптимизация производительности с помощью механизмов уведомления об однофазной фиксации и повышаемого однофазного присоединения](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
   
  Описывает способы оптимизации, доступные реализациям диспетчеров ресурсов.

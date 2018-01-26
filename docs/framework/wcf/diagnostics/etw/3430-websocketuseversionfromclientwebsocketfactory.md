@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fb04adb2-e629-4ae7-b3a6-5512f3927cb2
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 68c2102c278bd64f79e13ea92160f30cb1cda402
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 1c4d8aba7f2144f7550ba8fb30947d4d839d55b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="3430---websocketuseversionfromclientwebsocketfactory"></a>3430 - WebSocketUseVersionFromClientWebSocketFactory
 ## <a name="properties"></a>Свойства  

@@ -16,11 +16,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2c9f5b9a6665778bc313febb039aeeeb2e484a6c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 75066b59d0f3a686c66fdbdd187ba4c18e786e6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="use-automatic-layout-overview"></a>Обзор использования автоматической разметки
 В этом разделе представлены рекомендации для разработчиков по написанию [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений с локализуемыми [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. В прошлом локализации [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] было много времени. Каждый язык, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] адаптирован для обязательного корректировку размера x. Сегодня при правом разработки и кодирования стандартов, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] могут создаваться таким образом, что локализаторам меньше изменений размеров и положения делать. Подход к написанию приложений, которые могут быть легко изменять размер и положение называется автоматической разметкой и может осуществляться с помощью [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] разработки приложения.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-xaml[LocalizationBtn_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
   
- В этом примере все, что нужно сделать, чтобы подпись кнопки была на испанском языке, — это изменить текст. Например:  
+ В этом примере все, что нужно сделать, чтобы подпись кнопки была на испанском языке, — это изменить текст. Например, примененная к объекту директива  
   
  [!code-xaml[LocalizationBtn#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="automatic-layout-and-coding-standards"></a>Автоматическая разметка и стандарты кодирования  
  С помощью автоматического макета требуется набор стандартов программирования и проектирования и правила для создания полностью локализуемый [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Следующие рекомендации предназначены для помощи в кодировании автоматической разметки.  
   
-|Стандарты кодирования|Описание|  
+|Стандарты кодирования|Описание:|  
 |----------------------|-----------------|  
 |Не используйте абсолютное позиционирование.|-Не используйте <xref:System.Windows.Controls.Canvas> , так как он применяет абсолютное позиционирование элементов.<br />-Используйте <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, и <xref:System.Windows.Controls.Grid> для размещения элементов управления.<br />-Обсуждение различных типов панелей см. в разделе [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md).|  
 |Не устанавливайте фиксированный размер окна.|-Используйте <xref:System.Windows.Window.SizeToContent%2A>.<br />— Пример.<br /><br /> [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]|  

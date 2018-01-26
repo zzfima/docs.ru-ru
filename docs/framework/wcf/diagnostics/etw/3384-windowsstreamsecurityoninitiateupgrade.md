@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9a9f6b38-5ee7-45f3-9d87-556045d15e09
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 08776a0a1e6f85adfd6f346dbe0ee0eeffeec6ba
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 927a93af123949ad19400430ff3dc74b6aea4af8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="3384---windowsstreamsecurityoninitiateupgrade"></a>3384 - WindowsStreamSecurityOnInitiateUpgrade
 ## <a name="properties"></a>Свойства  

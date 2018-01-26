@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 41557327-504e-4394-a3e6-1f076a7c35e6
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a58cf5c0c5b44bce6276f12589396d75b86b2736
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 8860a7f83b5658d35d5dfe886e0bded6149f487c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsmsmqmatchedapplicationfound"></a>System.ServiceModel.Channels.MsmqMatchedApplicationFound
 System.ServiceModel.Channels.MsmqMatchedApplicationFound  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Служба активации MSMQ обнаружила приложение, соответствующее очереди.  
   
 ## <a name="see-also"></a>См. также  

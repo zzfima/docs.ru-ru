@@ -13,14 +13,15 @@ helpviewer_keywords:
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a5223f9b6e7854ec6575e8673bb874a1b9b60df7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: fa6711ef5591110c74a1da95358aac4d8a8da655
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="quickstart-wcf-data-services"></a>Краткое руководство (службы данных WCF)
 Это краткое руководство поможет вам ознакомиться с [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] и [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] через последовательность задач, которые поддерживают подразделы [Приступая к работе](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md).  
@@ -54,4 +55,4 @@ ms.lasthandoff: 10/18/2017
  [Начало выполнения краткого руководства](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
   
 ## <a name="see-also"></a>См. также  
- [Платформа ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)
+ [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)

@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d68c2dc3-99b3-49ab-b547-2ca5b386429a
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cb52916e8e0948725a2eeb15cf78410077c7dca1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: d4f1a2a3f64302e1ef65bb341d56832a5fd93e82
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="making-and-submitting-data-changes"></a>Внесение и отправка изменений данных
 В подразделах данного раздела описывается, как выполнять изменения и передавать их в базу данных, а также обрабатывать конфликты оптимистического параллелизма.  
@@ -27,24 +28,24 @@ ms.lasthandoff: 10/18/2017
 >   
 >  Пользователи среды [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] могут воспользоваться [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для разработки хранимых процедур, выполняющих те же задачи.  
   
-## <a name="in-this-section"></a>Содержание  
- [Как: вставка строк в базе данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-insert-rows-into-the-database.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Практическое руководство. Вставка строк в базу данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-insert-rows-into-the-database.md)  
  Описывает, как вставлять строки в базу данных путем добавления объектов в модель объектов.  
   
- [Как: обновление строк в базе данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-update-rows-in-the-database.md)  
+ [Практическое руководство. Обновление строк в базе данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-update-rows-in-the-database.md)  
  Описывается, как обновлять строки в базе данных путем обновления объектов в объектной модели.  
   
- [Как: удаление строк из базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)  
+ [Практическое руководство. Удаление строк из базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)  
  Описывается, как удалять строки из базы данных путем удаления объектов из объектной модели.  
   
- [Как: Отправка изменений в базу данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-submit-changes-to-the-database.md)  
+ [Практическое руководство. Отправка изменений в базу данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-submit-changes-to-the-database.md)  
  Описывается, как отправлять изменения объектной модели в базу данных.  
   
- [Как: группировка отправок данных с помощью транзакций](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)  
+ [Практическое руководство. Группировка отправок данных с использованием транзакций](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)  
  Описывается, как включать операции в транзакцию.  
   
- [Как: динамическое создание базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md)  
+ [Практическое руководство. Динамическое создание базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md)  
  Описывается динамическое создание баз данных и типичные сценарии использования этого метода.  
   
- [Как: управление конфликтами изменений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)  
+ [Практическое руководство. Управление конфликтами изменений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)  
  Описываются методы устранения проблем оптимистического параллелизма.

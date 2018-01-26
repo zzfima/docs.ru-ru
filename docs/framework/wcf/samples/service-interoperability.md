@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3628557f-b8b3-47fc-8fdc-0c7d2e4268bd
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ba423b1b05e303bf112d7713ed969a4f8fbc85c4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 69c7201e7d8f4778173bed0313e667dbd4bd4d81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-interoperability"></a>Взаимодействие служб
 Образцы в этом разделе демонстрируют взаимодействие [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с другими технологиями служб.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Использование моникера WCF с клиентами COM](../../../../docs/framework/wcf/samples/using-the-wcf-moniker-with-com-clients.md)  
  Демонстрирует использование моникера службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для интеграции веб-служб в среду разработки на основе COM, такую как Microsoft Office Visual Basic for Applications (Office VBA) или Visual Basic 6.0.  
   

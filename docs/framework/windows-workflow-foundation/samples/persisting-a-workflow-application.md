@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: abcff14c-f047-4195-ba26-d27f4a82c24e
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 16251bcf5ceb9660fc4854c8e46bc376de9f01ef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: cf23b8e33766ea7a15135418142082a0e7b715ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="persisting-a-workflow-application"></a>Сохранение приложения рабочего процесса
 Этот образец демонстрирует, как запускать приложение <xref:System.Activities.WorkflowApplication>, выгружать его при переходе в состояние бездействия и снова загружать для продолжения выполнения.  

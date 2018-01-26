@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d8beae85b2cee8956efd160b8540e76f04dd7ee7
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: b1298f150709b48f18de654be2ab17adfdcbf42a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="durable-duplex"></a>Сохраняемый дуплекс
 В данном образце показана организация и настройка устойчивого дуплексного обмена сообщениями с помощью действий по обмену сообщениями в [!INCLUDE[wf](../../../../includes/wf-md.md)]. Устойчивый дуплексный обмен сообщениями - это двусторонний обмен сообщениями в течение длительного времени. Длительность обмена сообщениями может превышать время существования коммуникационного канала и время существования экземпляров службы в памяти.  

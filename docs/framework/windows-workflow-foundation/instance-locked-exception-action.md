@@ -9,19 +9,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 164a5419-315c-4987-ad72-54cbdb88d402
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6a5a0d805d5c8cbae67b97afa220ad769179e198
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 6b221b0eef1e132789ef04fb59b56126f023bc43
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="instance-locked-exception-action"></a>Действие в случае исключения «Экземпляр заблокирован»
 Свойство <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceLockedExceptionAction%2A> хранилища экземпляров рабочего процесса SQL позволяет указать, какое действие должен выполнить поставщик сохраняемости SQL при получении <xref:System.Runtime.DurableInstancing.InstanceLockedException>. Поставщик сохраняемости получает это исключение, когда пытается заблокировать экземпляр службы рабочего процесса, который в настоящий момент заблокирован другим узлом службы. Возможные значения этого свойства: <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>, <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.BasicRetry> и <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.AggressiveRetry>. Значение по умолчанию — <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>. В следующем списке приводится описание этих трех параметров.  
   
--   <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>. Узел службы не пытается заблокировать экземпляр службы рабочего процесса и передает исключение <xref:System.Runtime.DurableInstancing.InstanceLockedException> в вызывающий объект.  Если рабочий процесс остается в памяти в течение которых превышает 60 секунд, используйте <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry> как повторы. Значение по умолчанию — <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>.  
+-   <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>. Узел службы не пытается заблокировать экземпляр службы рабочего процесса и передает исключение <xref:System.Runtime.DurableInstancing.InstanceLockedException> в вызывающий объект.  Если рабочий процесс остается в памяти в течение которых превышает 60 секунд, используйте <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry> как повторы. Значение по умолчанию — <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>.  
   
 -   <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.BasicRetry>. Узел службы повторно пытается заблокировать экземпляр службы Workflow Service с линейными интервалами между попытками повтора и передает исключение <xref:System.Runtime.DurableInstancing.InstanceLockedException> вызывающему объекту в конце последовательности. Если рабочий процесс остается в памяти в течение приблизительно 5–60 секунд, а сообщения поступают пакетами, когда более вероятна отправка всех сообщений на обработку в один и тот же экземпляр на одном и том же узле до выгрузки рабочего процесса, используйте <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.BasicRetry> для достижения оптимальной задержки без ненужной затраты ресурсов.  
   

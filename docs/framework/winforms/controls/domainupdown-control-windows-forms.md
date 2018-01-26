@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 37cec82876edadfed5cda338ca12775ad19ae732
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 485640dc320809e9be5550d380b4fc9a2326e027
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="domainupdown-control-windows-forms"></a>Элемент управления DomainUpDown (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.DomainUpDown> элемент управления выглядит как сочетание текстового поля и пары кнопок для перемещения вверх или вниз по списку. Он выводит и задает текстовую строку в списке вариантов. Пользователь может выбрать строку, щелкнув кнопок со стрелками вверх по списку, клавиши со стрелками вверх и вниз или введя строку, совпадающую с элементом в списке. Того, можно использовать для этого элемента управления можно выбрать элементы из списка имен в алфавитном порядке сортировки. (Чтобы отсортировать список, установите <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> свойства `true`.) Функции данного элемента управления очень похож на список или поле со списком, но оно занимает мало места.  
@@ -32,7 +33,7 @@ Windows Forms <xref:System.Windows.Forms.DomainUpDown> элемент управ
   
  Этот элемент управления отображает только текстовые строки. Если требуется, чтобы элемент управления, отображающий числовые значения, используйте <xref:System.Windows.Forms.NumericUpDown> элемента управления. Дополнительные сведения см. в разделе [управления NumericUpDown](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md) .  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об элементе управления DomainUpDown](../../../../docs/framework/winforms/controls/domainupdown-control-overview-windows-forms.md)  
  Основные понятия <xref:System.Windows.Forms.DomainUpDown> элемента управления, который позволяет пользователям просматривать и выбирать из списка текстовых строк.  
   
@@ -44,7 +45,7 @@ Windows Forms <xref:System.Windows.Forms.DomainUpDown> элемент управ
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.DomainUpDown>  
- Описание класса и ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
  <xref:System.Windows.Forms.NumericUpDown>  
  Описывает данный класс и содержит ссылки на все его члены...  

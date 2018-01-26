@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
 caps.latest.revision: "45"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: dc189ab1c68edfc41267e493a6ca6bccf9fe519a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 18866260c5d14cf27634afcd8391b159abac1dd1
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Тестовый клиент WCF (WcfTestClient.exe)
 Тестовый клиент [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] (WcfTestClient.exe) представляет собой средство с графическим интерфейсом пользователя, позволяющее вводить тестовые параметры, отправлять их в службу и просматривать ответную реакцию службы. При совместном использовании с узлом службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] это обеспечивает удобную практику тестирования служб.  
   
- Тестовый клиент [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (WcfTestClient.exe) находится в следующей папке: C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\.  
+ Обычно можно найти [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] тестовый клиент (WcfTestClient.exe в следующей папке): C:\Program Files (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE - сообщества может быть «Фейерверк», «Professional» или «Сообщество» в зависимости от того, который устанавливается уровень Visual Studio.
   
 ## <a name="scenarios-for-using-test-client"></a>Сценарии использования тестового клиента  
  В последующих разделах рассматриваются наиболее часто встречающиеся сценарии, в которых можно использовать тестовый клиент [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] для упрощения процесса разработки.  

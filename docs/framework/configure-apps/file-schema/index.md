@@ -32,11 +32,12 @@ caps.latest.revision: "20"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 7f2dec0d71c1a0822bf39ae420d4e56bdaf99e0d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4af28280de24f3e25362f18985c209b1a2f29523
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>Схема файлов конфигурации для .NET Framework
 
@@ -85,10 +86,10 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="related-sections"></a>Связанные разделы
 
-[Схема параметров удаленного взаимодействия](http://msdn.microsoft.com/en-us/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e). Описание элементов, настраивающих клиентские и серверные приложения, реализующие удаленное взаимодействие.
+[Схема параметров удаленного взаимодействия](http://msdn.microsoft.com/library/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e). Описание элементов, настраивающих клиентские и серверные приложения, реализующие удаленное взаимодействие.
 
 [Схема параметров ASP.NET](http://msdn.microsoft.com/library/b5ysx397\(v=vs.100\).aspx). Описание элементов, управляющих поведением веб-приложений ASP.NET.
 
-[Схема параметров веб-служб](http://msdn.microsoft.com/en-us/f84d6d55-1add-4eb7-ae46-33df5833ea2e). Описание элементов, которые управляют поведением веб-служб ASP.NET и их клиентов.
+[Схема параметров веб-служб](http://msdn.microsoft.com/library/f84d6d55-1add-4eb7-ae46-33df5833ea2e). Описание элементов, которые управляют поведением веб-служб ASP.NET и их клиентов.
 
-[Настройка приложений .NET Framework](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42). Описание способов настройки безопасности, привязки сборок и удаленного взаимодействия в платформе .NET Framework.
+[Настройка приложений .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42). Описание способов настройки безопасности, привязки сборок и удаленного взаимодействия в платформе .NET Framework.

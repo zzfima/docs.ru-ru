@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 22479cc6-72d1-48df-912c-fc37bddeb043
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9283df9b38b2ad42ecd48bf54ec5bacbbca88c4e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 8d7efae4ce7fb3efa4c3964c70a735b304867c65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="3809---routingservicemessageroutedtoendpoints"></a>3809 - RoutingServiceMessageRoutedToEndpoints
 ## <a name="properties"></a>Свойства  

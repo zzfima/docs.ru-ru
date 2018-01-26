@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1373c661-e63a-4e11-a635-689451450274
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5061169cab2a51189bd793e34c5ad7eb47840951
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: f6b30bce3c9a33d9ceeea71030fb113bde092bb0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelserviceoperationmissingreplycontext"></a>System.ServiceModel.ServiceOperationMissingReplyContext
 System.ServiceModel.ServiceOperationMissingReplyContext  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Для двусторонней операции ReplyContext имеет значение Null. Данные трассировки содержат следующее сообщение: "Операция ответа не имеет контекста IRequestContext, используемого для ответа".  
   
  Эту трассировку удобно использовать для отладки во время разработки.  

@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 81c88073-8e32-4520-a71a-2c56b71ee515
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2e60ad3d7e9155eecfead38aca080a3044b0efce
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 0979fdb6746a563d263b24ffc2fd83363cc98e74
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="calls-faulted-per-second"></a>Количество сбоев вызовов в секунду
 Имя счетчика: Calls Faulted Per Second  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Число вызовов, возвращающих ошибки этой операции за секунду.  
   
  Этот счетчик является счетчиком производительности типа [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по следующей формуле.  

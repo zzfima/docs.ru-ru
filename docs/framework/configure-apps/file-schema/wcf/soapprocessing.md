@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e53225399e3acba275d2d95533c4baad20386a4a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 1aeb100e1b8e160d30566cd43d67cbf49c6b5c4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsoapprocessinggt"></a>&lt;soapProcessing&gt;
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/18/2017
 
 ### <a name="attributes"></a>Атрибуты
 
-|                   | Описание |
+|                   | Описание: |
 | ----------------- | ----------- |
 | `processMessages` | Логическое значение, указывающее, нужно ли выполнять упаковку сообщений между различными версиями SOAP. |
 
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/18/2017
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-|     | Описание |
+|     | Описание: |
 | --- | ----------- |
 | [**\<поведение >**](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) | Задает поведение конечной точки. |
 

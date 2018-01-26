@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 691f29a04b1b1f997be501330ec887d6815d7531
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 8d75d8c96d1cc028bed8beea16e2728e5654a12c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="input-character-set-entity-sql"></a>Набор символов ввода (Entity SQL)
 В [!INCLUDE[esql](../../../../../../includes/esql-md.md)] допускается использование символов Юникода в кодировке UTF-16.  

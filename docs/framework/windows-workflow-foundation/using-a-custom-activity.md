@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8f356419-681a-4175-ae93-878eee970249
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e534f9a3e8d0a7d675e43bc03266e4863f95d45d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 7558ca965af6cc9acd35ecab47bf9f66f592b15f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-custom-activity"></a>Применение пользовательского действия
 Действия, которые являются производными от <xref:System.Activities.Activity> или его подклассов, можно составить в более крупные рабочие процессы или создать непосредственно в коде. В этом разделе описано, как использовать пользовательские действия в рабочих процессах, созданных в коде или в конструкторе.  

@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 79aa2eee-b65d-4ae3-971a-acb5db4547b9
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d80aa6510a15f55581df0c37722e8b38e68e2110
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 9e0c9d8e5f58296b9913eb06177cbd60963e2269
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationservicehostcreatedserviceendpoint"></a>System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceEndpoint
 System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceEndpoint  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  ComPlus: создана конечная точка службы.  
   
 ## <a name="see-also"></a>См. также  

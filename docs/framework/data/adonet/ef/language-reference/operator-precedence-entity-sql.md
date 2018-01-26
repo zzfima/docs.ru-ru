@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e92e4ca5-2889-4266-9625-47f0eb01a948
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 484eedffeaffb625cd43352dadedb8c99fbc65ed
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 537c9ae7c92c6abcbe597970f2b0ec29e399bc62
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="operator-precedence-entity-sql"></a>Приоритет операторов (Entity SQL)
 Когда [!INCLUDE[esql](../../../../../../includes/esql-md.md)] запроса содержит несколько операторов, приоритет операторов определяет последовательность, в которой выполняются операции. Порядок выполнения может существенно повлиять на результат выполнения запроса.  

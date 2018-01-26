@@ -8,14 +8,15 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 289f34b12cc0278212ceb737c2b9cb3f2ff986c1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 4307c21f32e914118c03393be7ed7a632c7a7f0b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
-
 ![](./media/cover.png)
 
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Микрослужбы .NET. Архитектура контейнерных приложений .NET
@@ -64,7 +65,7 @@ Mac и macOS являются товарными знаками Apple Inc.
 
 Участники и рецензенты:
 
-> **Джеффри Ритчер** (Jeffrey Ritcher), партнер по разработке программного обеспечения, команда Azure, корпорация Майкрософт
+> **Джеффри Рихтер** (Jeffrey Richter), партнер по разработке программного обеспечения, команда Azure, корпорация Майкрософт
 >
 > **Джимми Богард** (Jimmy Bogard), главный архитектор Headspring
 >
@@ -158,4 +159,3 @@ eShopOnContainers — это пример приложения для .NET Core
 
 >[!div class="step-by-step"]
 [Далее] (container-docker-introduction/index.md)
-

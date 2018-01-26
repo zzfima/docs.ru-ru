@@ -10,38 +10,39 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7b05c766-f181-425d-9a3d-2a5e150c85f7
 caps.latest.revision: "20"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8eeb446687b2aa75c90ec02995319fc5a0cbebf3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 0e33915105ca9ff095f09bcd52431212e7c8e927
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-services"></a>Службы рабочего процесса
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] позволяет описать службу на основе рабочего процесса полностью декларативно на языке XAML. Рабочий процесс, реализующий службу, и описание конечных точек, предоставляемых службой, можно полностью определить на языке XAML. Подразделы, содержащиеся в этом разделе, подробно описывают модель программирования, декларативную поддержку создания служб.  
   
-## <a name="in-this-section"></a>Содержание  
- [Обзор служб рабочего процесса](../../../../docs/framework/wcf/feature-details/workflow-services-overview.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Общие сведения о службах рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services-overview.md)  
  Описывает компоненты, участвующие в создании и размещении службы рабочего процесса.  
   
  [Действия обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-activities.md)  
  Описывает действия, которые позволяют рабочим потокам отправлять или получать сообщения.  
   
- [Как: создание службы рабочего процесса с действиями обмена сообщениями](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
+ [Практическое руководство. Создание службы рабочего процесса с помощью действий обмена сообщениями](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
  Описывает, как использовать действия обмена сообщениями для создания службы рабочего процесса.  
   
- [Практическое руководство: Доступ к службе из приложения рабочего процесса](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)  
+ [Практическое руководство. Получение доступа к службе из приложения рабочего процесса](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)  
  Описывает, как вызвать службу из приложения рабочего процесса.  
   
- [Корреляции](../../../../docs/framework/wcf/feature-details/correlation.md)  
+ [Корреляция](../../../../docs/framework/wcf/feature-details/correlation.md)  
  Описывает, как корреляция сопоставляет сообщения друг с другом и с экземплярами.  
   
- [Обработка сообщений из внеочередной](../../../../docs/framework/wcf/feature-details/out-of-order-message-processing.md)  
+ [Обработка неупорядоченных сообщений](../../../../docs/framework/wcf/feature-details/out-of-order-message-processing.md)  
  Описывает, как настроить службу для принятия несогласованных сообщений.  
   
- [Как: создание службы рабочего процесса, которая вызывает другую службу рабочих процессов](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-that-calls-another-workflow-service.md)  
+ [Практическое руководство. Создание службы рабочих процессов, которая вызывает другую службу рабочих процессов](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-that-calls-another-workflow-service.md)  
  Описывается синхронный вызов службы рабочего процесса из другой службы рабочего процесса.  
   
  [Разработка служб рабочих процессов с первоочередным назначением контрактов](../../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md)  
@@ -53,5 +54,5 @@ ms.lasthandoff: 10/18/2017
  [Общие сведения о размещении служб рабочих процессов](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
  Описывает различные аспекты размещения службы рабочего процесса.  
   
- [Использование контрактов в рабочем процессе](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)  
+ [Использование контрактов в рабочих процессах](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)  
  Описывает различные типы контрактов и вывод контракта.

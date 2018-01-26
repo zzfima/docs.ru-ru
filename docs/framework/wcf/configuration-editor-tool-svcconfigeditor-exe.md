@@ -15,14 +15,15 @@ helpviewer_keywords:
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
 caps.latest.revision: "45"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 27c1a240817be169decbb0bbbac9fc78b189fc2d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: e21dacd5f01ba956ba78456b8e325d0b7e767df7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Средство редактирования конфигурации (SvcConfigEditor.exe)
 Редактор конфигураций служб [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] (SvcConfigEditor.exe) позволяет администраторам и разработчикам создавать и изменять параметры конфигурации служб [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] с помощью графического пользовательского интерфейса. С помощью этого средства можно управлять параметрами привязок, поведений, служб и диагностики [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] без необходимости непосредственного редактирования XML-файлов конфигурации.  

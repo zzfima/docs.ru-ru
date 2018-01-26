@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 39fbd38549a791a761c633dca90dbdeeeefce10b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f3a087f296a742bc9f0f5672d9bf0cb73c836121
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>Создание и использование сборок со строгими именами
 <a name="top"></a> Строгое имя состоит из удостоверения сборки, включающего ее простое текстовое имя, номер версии и сведения о языке и региональных параметрах (если они имеются), а также открытый ключ и цифровую подпись. Оно создается из файла сборки с использованием соответствующего закрытого ключа. (В файле сборки содержится манифест сборки, в котором указаны имена и хэши всех файлов, составляющих эту сборку.)  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/18/2017
   
 -   [Обход проверки подписей в доверенных сборках](#bypassing_signature_verification)  
   
--   [См. также](#related_topics)  
+-   [Связанные разделы](#related_topics)  
   
 <a name="strong_name_scenario"></a>   
 ## <a name="strong-name-scenario"></a>Сценарий со строгим именем  
@@ -78,9 +79,9 @@ ms.lasthandoff: 10/18/2017
  [К началу](#top)  
   
 <a name="related_topics"></a>   
-## <a name="related-topics"></a>Связанные разделы  
+## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание|  
+|Заголовок|Описание:|  
 |-----------|-----------------|  
 |[Практическое руководство. Создание пары открытого и закрытого ключей](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|Описывает способ создания пары криптографических ключей для подписи сборки.|  
 |[Практическое руководство. Подписание сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|Описывает способ создания сборки со строгим именем.|  

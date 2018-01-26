@@ -7,13 +7,12 @@ ms.author: ronpet
 ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
-ms.devlang: dotnet
+ms.workload: dotnetcore
+ms.openlocfilehash: 749f0502b5c80ed3d6b81d2036e7591e3f1fe08a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
-ms.sourcegitcommit: b47d4c74a01b99d743b69328c201096bc8d89794
-ms.openlocfilehash: e43f72ebd26c34636c239d8ac9f749d52d3f60a0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="whats-new-in-net-core"></a>Новые возможности .NET Core
 
@@ -24,19 +23,21 @@ ms.lasthandoff: 08/14/2017
 - [улучшения платформы](#platform-improvements);
 - [изменения API](#api-changes-and-library-support);
 - [интеграция Visual Studio](#visual-studio-integration);
-- [усовершенствования документации](#documentation-improvements). 
+- [усовершенствования документации](#documentation-improvements).
 
 ## <a name="tooling"></a>Инструментарий
 
 ### <a name="dotnet-restore-runs-implicitly"></a>Явное выполнение команды dotnet restore
 
-В предыдущих версиях .NET Core сразу после создания проекта с помощью команды [dotnet new](../tools/dotnet-new.md), а также после добавления новой зависимости в проект требовалось выполнять команду [dotnet restore](../tools/dotnet-restore.md). В .NET Core 2.0 команда `dotnet restore` выполняется неявно при выполнении команды `dotnet new`. Она также выполняется неявно, если нужно обновить зависимости при выполнении других команд, таких как `run`, `build` и `publish`.
+В предыдущих версиях .NET Core сразу после создания проекта с помощью команды [dotnet new](../tools/dotnet-new.md), а также после добавления новой зависимости в проект требовалось выполнять команду [dotnet restore](../tools/dotnet-restore.md).
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 Вы также можете отключить автоматический вызов команды `dotnet restore`. Для этого передайте параметр `--no-restore` команде `new`, `run`, `build`, `publish`, `pack` и `test`. 
 
 ### <a name="retargeting-to-net-core-20"></a>Изменение целевой платформы на .NET Core 2.0
 
-Если установлен пакет SDK для .NET Core 2.0, для проектов, предназначенных для .NET Core 1.x, можно изменить целевую платформу на .NET Core 2.0. 
+Если установлен пакет SDK для .NET Core 2.0, для проектов, предназначенных для .NET Core 1.x, можно изменить целевую платформу на .NET Core 2.0.
 
 Чтобы изменить целевую платформу на .NET Core 2.0, измените файл проекта. Для этого измените значение элемента `<TargetFramework>` или `<TargetFrameworks>` (при наличии нескольких целевых платформ в файле проекта) с 1.x на 2.0:
 
@@ -68,7 +69,7 @@ ms.lasthandoff: 08/14/2017
 - библиотеки классов .NET Core;
 - библиотеки классов .NET Standard;
 - проекты модульных тестов .NET Core;
-- тестовые проекты xUnit .NET Core. 
+- тестовые проекты xUnit .NET Core.
 
 Например, для создания приложения Visual Basic Hello World в командной строке сделайте следующее:
 
@@ -77,7 +78,7 @@ ms.lasthandoff: 08/14/2017
 1. Введите команду `dotnet new console -lang vb`.
 
    Команда создает файл проекта с расширением `.vbproj`, а также файл исходного кода Visual Basic *Program.vb*. Этот файл содержит исходный код для записи строки Hello World! в окно консоли.
-  
+
 1.  Введите команду `dotnet run`. [Средства интерфейса командной строки .NET Core](../tools/index.md) автоматически компилируют и выполняют приложение, которое выводит сообщение Hello World! в окне консоли.
 
 ### <a name="support-for-c-71"></a>Поддержка C# 7.1
@@ -98,11 +99,11 @@ ms.lasthandoff: 08/14/2017
 
 .NET Core 2.0 предлагает единую реализацию Linux, которую можно использовать в нескольких дистрибутивах Linux. Для .NET Core 1.x требовалось, чтобы вы загрузили реализацию Linux для конкретного дистрибутива.
 
-Кроме того, предусмотрена возможность разработки приложений, предназначенных исключительно для ОС Linux. В .NET Core 1.x требовалось выбирать целевую среду для каждого дистрибутива Linux отдельно. 
+Кроме того, предусмотрена возможность разработки приложений, предназначенных исключительно для ОС Linux. В .NET Core 1.x требовалось выбирать целевую среду для каждого дистрибутива Linux отдельно.
 
 ### <a name="support-for-the-apple-cryptographic-libraries"></a>Поддержка библиотек шифрования Apple
 
-В .NET Core 1.x на macOS требовалась библиотека шифрования для набора средств OpenSSL. .NET Core 2.0 использует библиотеки шифрования Apple и не требует OpenSSL, поэтому больше не нужно устанавливать это решение. 
+В .NET Core 1.x на macOS требовалась библиотека шифрования для набора средств OpenSSL. .NET Core 2.0 использует библиотеки шифрования Apple и не требует OpenSSL, поэтому больше не нужно устанавливать это решение.
 
 ## <a name="api-changes-and-library-support"></a>Изменения в API и поддержка библиотек
 
@@ -118,7 +119,9 @@ ms.lasthandoff: 08/14/2017
 
 ### <a name="expanded-surface-area"></a>Увеличение количества компонентов
 
-Общее количество API-интерфейсов, доступных в .NET Core 2.0, удвоилось по сравнению с .NET Core 1.1. 
+Общее количество API-интерфейсов, доступных в .NET Core 2.0, удвоилось по сравнению с .NET Core 1.1.
+
+[Пакет обеспечения совместимости Windows](../porting/windows-compat-pack.md) существенно упрощает перенос из .NET Framework.
 
 ### <a name="support-for-net-framework-libraries"></a>Поддержка библиотек .NET Framework
 
@@ -130,13 +133,13 @@ ms.lasthandoff: 08/14/2017
 
 ### <a name="retargeting-net-core-apps-and-net-standard-libraries"></a>Изменение целевой платформы приложений .NET Core и библиотек .NET Standard
 
-Если установлен пакет SDK для .NET Core 2.0, можно изменить целевую платформу проектов .NET Core 1.x на .NET Core 2.0, а библиотек .NET Standard 1.x — на .NET Standard 2.0. 
+Если установлен пакет SDK для .NET Core 2.0, можно изменить целевую платформу проектов .NET Core 1.x на .NET Core 2.0, а библиотек .NET Standard 1.x — на .NET Standard 2.0.
 
 Чтобы изменить целевую платформу проекта в Visual Studio, в диалоговом окне свойств проекта откройте вкладку **Приложение** и измените значение **целевой платформы** на **.NET Core 2.0** или **.NET Standard 2.0**. Ее также можно изменить, щелкнув проект правой кнопкой мыши и выбрав пункты **Изменить \*CSPROJ-файл**. Дополнительные сведения см. в разделе [Инструментарий](#tooling) выше.
 
 ### <a name="live-unit-testing-support-for-net-core"></a>Поддержка динамического модульного тестирования для .NET Core
 
-При изменении кода функция Live Unit Testing автоматически запускает все затронутые модульные тесты в фоновом режиме и отображает результаты и объем протестированного кода в активном состоянии в среде Visual Studio. Теперь .NET Core 2.0 поддерживает функцию Live Unit Testing. Ранее функция Live Unit Testing была доступна только для приложений .NET Framework. 
+При изменении кода функция Live Unit Testing автоматически запускает все затронутые модульные тесты в фоновом режиме и отображает результаты и объем протестированного кода в активном состоянии в среде Visual Studio. Теперь .NET Core 2.0 поддерживает функцию Live Unit Testing. Ранее функция Live Unit Testing была доступна только для приложений .NET Framework.
 
 Дополнительные сведения см. в статье [Функция Live Unit Testing в Visual Studio 2017](/visualstudio/test/live-unit-testing) и [Часто задаваемые вопросы о функции Live Unit Testing](/visualstudio/test/live-unit-testing-faq).
 
@@ -144,7 +147,7 @@ ms.lasthandoff: 08/14/2017
 
 При создании проекта для различных целевых платформ теперь целевую платформу можно выбрать в меню верхнего уровня. На следующем рисунке показано, что целевой платформой проекта SCD1 является 64-разрядная Mac OS X 10.11 (`osx.10.11-x64`) и 64-разрядная Windows 10 и Windows Server 2016 (`win10-x64`). Целевую платформу можно выбрать, прежде чем нажать кнопку проекта (в этом случае — для выполнения отладочной сборки).
 
-![Выбор целевой платформы при создании проекта](media/multitarget.png) 
+![Выбор целевой платформы при создании проекта](media/multitarget.png)
 
 ### <a name="side-by-side-support-for-net-core-sdks"></a>Поддержка параллельного выполнения для пакетов SDK для .NET Core
 
@@ -163,4 +166,3 @@ ms.lasthandoff: 08/14/2017
 
 ## <a name="see-also"></a>См. также
  [What's new in ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0) (Новые возможности ASP.NET Core 2.0)
-

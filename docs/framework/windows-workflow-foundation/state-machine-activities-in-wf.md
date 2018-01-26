@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 93312eaf-07e0-4a55-b4f7-4cdbbc4dee2d
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5056557c9fee74e9a16b235220c797e1f6356ce3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 62a211b51f37b306ffcc6b3b9a1ac65ccadd9db5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="state-machine-activities-in-wf"></a>Действия конечного автомата в WF
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] предусматривает несколько системных действий и конструкторов действий для создания рабочих процессов конечного автомата.  

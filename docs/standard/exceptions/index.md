@@ -17,16 +17,18 @@ helpviewer_keywords:
 - exceptions [.NET Framework]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 82e314dacc9fb2657a3a7088a928b59d00282a5d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5d44996042d167c029291f2b454dc1a22cfbcfb4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Обработка и создание исключений в .NET
 
@@ -36,7 +38,7 @@ ms.lasthandoff: 09/05/2017
 
 Исключение — это любое состояние ошибки или непредвиденное поведение, возникающее при выполнении программы. Исключения могут возникать из-за сбоя в вашем или вызываемом коде (например, в общей библиотеке), недоступности ресурсов ОС, неожиданных состояний, возникающих в среде выполнения (например, код, который невозможно проверить), и так далее. После некоторых из этих состояний приложение может восстановиться, после других — нет. Несмотря на то что можно выполнить восстановление после большинства исключений приложения, выполнить восстановление после большинства исключений среды выполнения невозможно.
 
-В .NET исключение — это объект, наследуемый от класса [System.Exception](xref:System.Exception). Исключение создается из области кода, где произошла проблема. Исключение передается вверх по стеку до тех пор, пока его не обработает приложение либо программа не завершится.
+В .NET исключение — это объект, наследуемый от класса <xref:System.Exception?displayProperty=nameWithType>. Исключение создается из области кода, где произошла проблема. Исключение передается вверх по стеку до тех пор, пока его не обработает приложение либо программа не завершится.
 
 ## <a name="exceptions-vs-traditional-error-handling-methods"></a>Исключения и традиционные методы обработки ошибок
 
@@ -58,13 +60,13 @@ ms.lasthandoff: 09/05/2017
 
 | Тип исключения | Базовый тип | Описание | Пример |
 | -------------- | --------- | ----------- | ------- |
-| @System.Exception | @System.Object | Базовый класс для всех исключений. | Отсутствует (используйте производный класс этого исключения). |
-| @System.IndexOutOfRangeException | @System.Exception | Вызывается средой выполнения только при неправильной индексации массива. | Индексирование массива вне допустимого диапазона: `arr[arr.Length+1]` |
-| @System.NullReferenceException | @System.Exception | Вызывается средой выполнения только в том случае, если имеется ссылка на пустой объект. | `object o = null; o.ToString();` |
-| @System.InvalidOperationException | @System.Exception | Вызывается методами в недопустимом состоянии. | Вызов `Enumerator.GetNext()` после удаления элемента из базовой коллекции. |
-| @System.ArgumentException | @System.Exception | Базовый класс для всех исключений аргументов. | Отсутствует (используйте производный класс этого исключения). |
-| @System.ArgumentNullException | @System.Exception | Вызывается методами, которые не допускают пустой аргумент. | `String s = null; "Calculate".IndexOf (s);` |
-| @System.ArgumentOutOfRangeException | @System.Exception | Вызывается методами, проверяющими попадание аргументов в заданный диапазон. | `String s = "string"; s.Substring(s.Length+1);` |
+| <xref:System.Exception> | <xref:System.Object> | Базовый класс для всех исключений. | Отсутствует (используйте производный класс этого исключения). |
+| <xref:System.IndexOutOfRangeException> | <xref:System.Exception> | Вызывается средой выполнения только при неправильной индексации массива. | Индексирование массива вне допустимого диапазона: `arr[arr.Length+1]` |
+| <xref:System.NullReferenceException> | <xref:System.Exception> | Вызывается средой выполнения только в том случае, если имеется ссылка на пустой объект. | `object o = null; o.ToString();` |
+| <xref:System.InvalidOperationException> | <xref:System.Exception> | Вызывается методами в недопустимом состоянии. | Вызов `Enumerator.GetNext()` после удаления элемента из базовой коллекции. |
+| <xref:System.ArgumentException> | <xref:System.Exception> | Базовый класс для всех исключений аргументов. | Отсутствует (используйте производный класс этого исключения). |
+| <xref:System.ArgumentNullException> | <xref:System.Exception> | Вызывается методами, которые не допускают пустой аргумент. | `String s = null; "Calculate".IndexOf (s);` |
+| <xref:System.ArgumentOutOfRangeException> | <xref:System.Exception> | Вызывается методами, проверяющими попадание аргументов в заданный диапазон. | `String s = "string"; s.Substring(s.Length+1);` |
 
 ## <a name="see-also"></a>См. также
 
@@ -79,4 +81,3 @@ ms.lasthandoff: 09/05/2017
 * [Рекомендации по обработке исключений](best-practices-for-exceptions.md)
 
 Дополнительные сведения о работе исключений в .NET см. в разделе [Что должен знать любой разработчик об исключениях в среде выполнения](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md).
-

@@ -14,14 +14,15 @@ dev_langs:
 helpviewer_keywords: XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
 caps.latest.revision: "26"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5adcf8e6e992d0ae6f6de487b8e671a0b2db16f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: bc1ede649a68747461882dfe607214bfb06b2ec3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-xmlserializer-class"></a>Использование класса XmlSerializer
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] может использовать две разные технологии сериализации для преобразования данных в приложении в XML-код, который передается между клиентами и службами - этот процесс называется сериализацией.  
@@ -172,7 +173,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Созданная схема может не быть действительной схемой контракта данных. Например, метод поставщика схемы может создать схему, которая включает XML-атрибуты, не поддерживаемые в модели контракта данных. В данном случае можно импортировать схему как типы `IXmlSerializable`. Этот режим импорта по умолчанию не установлен, но можно легко включить — например, с `/importXmlTypes` используйте параметр командной строки [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Это подробно описан в [Импорт схемы для создания классов](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md). Обратите внимание, что работать нужно непосредственно с XML собственных экземпляров типа. Кроме того, следует принимать во внимание другую технологию сериализации, поддерживающую широкий диапазон схем - см. раздел, посвященный использованию `XmlSerializer`.  
   
--   Возможно, вам понадобится повторно использовать существующие типы `IXmlSerializable` в прокси, вместо того чтобы создавать новые. В таком случае для указания типа для повторного использования может использоваться функция ссылочных типов, описанная в разделе «Импорт схемы для создания типов». Это соответствует использованию `/reference` переключиться на svcutil.exe, указывающего на сборку, содержащую типы для повторного использования.  
+-   Возможно, вам понадобится повторно использовать существующие типы `IXmlSerializable` в прокси, вместо того чтобы создавать новые. В таком случае для указания типа для повторного использования может использоваться возможность ссылочных типов, описанная в разделе «Импорт схемы для создания типов». Это соответствует использованию `/reference` переключиться на svcutil.exe, указывающего на сборку, содержащую типы для повторного использования.  
   
 ### <a name="xmlserializer-legacy-behavior"></a>Поведение предыдущих версий XmlSerializer  
  В .NET Framework 4.0 и более ранних версиях XmlSerializer формировал временные сборки сериализации путем записи кода C# в файл. Затем файл компилировался в сборку.  Это имело некоторые нежелательные последствия, например замедление времени запуска для сериализатора. В .NET Framework 4.5 сборки формируются без использования компилятора. Некоторым разработчикам может потребоваться просмотр сформированного кода C#. Вернуться к поведению предыдущих версий можно с помощью следующих настроек:  
@@ -219,6 +220,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Xml.Serialization.XmlSerializer>  
  <xref:System.ServiceModel.MessageHeaderArrayAttribute>  
- [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
+ [Задание передачи данных в контрактах служб](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
  [Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Как: улучшения запуска время клиентских приложений WCF с помощью класса XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+ [Практическое руководство. Сокращение времени запуска клиентских приложений WCF с использованием XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)

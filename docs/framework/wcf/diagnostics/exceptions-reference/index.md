@@ -10,41 +10,42 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: adc19950-5f79-4045-8403-bf6310118ee3
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2f21511fc95860c2513af96e1cb368a75e13386c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 7b82c1821362b874f38f9419269708a7f61ab690
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exceptions-reference"></a>Справочник по исключениям
 В данном разделе перечислены все исключения, создаваемые [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] в следующих областях:  
   
  [IdentityModel](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/identitymodel-exceptions.md)  
   
- [Интеграция с COM +](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/com-integration.md)  
+ [Интеграция с COM+](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/com-integration.md)  
   
  [Конфигурация](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)  
   
- [Основное взаимодействие: Структура каналов](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-channel-framework.md)  
+ [Основное взаимодействие: структура каналов](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-channel-framework.md)  
   
- [Основное взаимодействие: Структура подключения](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-connection-framework.md)  
+ [Основное взаимодействие: структура подключения](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-connection-framework.md)  
   
  Основное взаимодействие: транспортные каналы HTTP/HTTPS  
   
- [Основное взаимодействие: Внутренние дуплексные транспортные каналы](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-internal-duplex-transport-channels.md)  
+ [Основное взаимодействие: внутренние дуплексные транспортные каналы](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-internal-duplex-transport-channels.md)  
   
- [Основное взаимодействие: Именованные каналы конвейерной передачи](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
+ [Основное взаимодействие: именованные каналы конвейерной передачи](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
   
- [Основное взаимодействие: Каналами транспорта TCP](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-tcp-transport-channels.md)  
+ [Основное взаимодействие: транспортные каналы TCP](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-tcp-transport-channels.md)  
   
- [Основное взаимодействие: Структура транспорта](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-transport-framework.md)  
+ [Основное взаимодействие: структура транспорта](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-transport-framework.md)  
   
  [Основное взаимодействие: служебные программы](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-utilities.md)  
   
- [Основное взаимодействие: Поддержка Webhost](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-webhost-support.md)  
+ [Основное взаимодействие: поддержка Webhost](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-webhost-support.md)  
   
  [Транзакция](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/transaction-exceptions.md)  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/18/2017
   
  [Одноранговый канал](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/peer-channel.md)  
   
- [Транспортом интеграции MSMQ](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-integration-transport.md)  
+ [Транспорт интеграции с MSMQ](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-integration-transport.md)  
   
  [Транспорт MSMQ](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-transport.md)  
   

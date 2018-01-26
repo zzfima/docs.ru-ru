@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 84915ecf08c9ef5471ec3a48685893c42ef13013
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aad7c24027b7b1d45d1042d1125ee24a87bf3c15
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>Практическое руководство. Изменение размера элементов управления в формах Windows Forms
 Вы можете изменить размер отдельных элементов управления, и вы можете изменить размер набора элементов управления одного или разных типов, таких как <xref:System.Windows.Forms.Button> и <xref:System.Windows.Forms.GroupBox> элементов управления.  
@@ -48,4 +49,4 @@ ms.lasthandoff: 11/21/2017
  [Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
  [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  [Функциональная классификация элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
- [Как: изменение размера с помощью конструктора Windows Forms](http://msdn.microsoft.com/en-us/3fe57c94-851c-45d7-a6f6-6b85f3c4a104)
+ [Как: изменение размера с помощью конструктора Windows Forms](http://msdn.microsoft.com/library/3fe57c94-851c-45d7-a6f6-6b85f3c4a104)

@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 594f6046-4752-4a54-9374-b256f8dd1431
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b4112c8d414d60dd90f34c58f63e36e8bdd1709d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 44b675ad4d4b9cf33a3869722c1ff1c97abcea3f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clientviabehavior"></a>ClientViaBehavior
 ClientViaBehavior  
@@ -37,7 +38,7 @@ class ClientViaBehavior : Behavior
 ## <a name="properties"></a>Свойства  
  Класс ClientViaBehavior содержит следующие свойства.  
   
-### <a name="uri"></a>Uri  
+### <a name="uri"></a>URI  
  Тип данных: string  
   
  Тип доступа: только для чтения  

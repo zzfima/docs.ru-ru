@@ -17,17 +17,18 @@ caps.latest.revision: "66"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 877367098baf6e50b18ecfba2e6b20cdbe29313d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 8585840f57d75220d9c616eee1e90006f604adf4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="panel-how-to-topics"></a>Разделы руководства по Panel
 В подразделах этого раздела описывается использование <xref:System.Windows.Controls.Panel> элемент и связанных [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
- [Как: применить к элементу LayoutTransform](http://msdn.microsoft.com/en-us/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Как: применить к элементу LayoutTransform](http://msdn.microsoft.com/library/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
  [Создание пользовательского элемента панели](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
  [Переопределение метода панели OnRender](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
  [Определение свойств высоты элемента](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  

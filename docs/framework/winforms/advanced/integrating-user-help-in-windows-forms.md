@@ -20,18 +20,19 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b7ec4d32c5f025cb3e48b1403387273268d83fb8
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 9563ce0ca95a728cc1a9aaa219fbc9fea2cd7153
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-user-help-in-windows-forms"></a>Интеграция справки пользователя в формы Windows Forms
 Важным аспектом построения приложений Windows essential, но часто уделяется недостаточно внимания представлены справочной системы, где пользователи обращаются за помощью в недоразумений. Windows Forms поддерживает два типа справки, в каждом предоставляемые [компонент HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md). Первый направляет пользователя на файл справки HTML или HTML Help 1. *x* или следующих версий. Второй может отображать краткую «Что это такое» — введите Help для отдельных элементов управления; Это особенно удобно в диалоговых окнах. Оба типа справки можно использовать в той же форме.  
   
  Кроме того [компонент ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md) может использоваться для предоставления отдельной справки для элементов управления в формах Windows Forms.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Руководство: предоставление справки в приложении Windows](../../../../docs/framework/winforms/advanced/how-to-provide-help-in-a-windows-application.md)  
  Описание способов использования `HelpProvider` компонента, чтобы связать элементы управления с файлами справочной системы.  
   

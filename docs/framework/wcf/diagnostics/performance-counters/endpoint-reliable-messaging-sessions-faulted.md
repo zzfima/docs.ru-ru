@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 63eb536f-cb9d-4c9a-b620-947d1828b1ce
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a3cfa39ebda6315b0fc4aa6f43b7596d0a3ed6ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 5283522ac0e3868960b439ed012b6862b8a5cbaa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoint-reliable-messaging-sessions-faulted"></a>Конечная точка: надежные сеансы обмена сообщениями, в которых произошел сбой
 Имя счетчика: Reliable Messaging Sessions Faulted Per Second.  

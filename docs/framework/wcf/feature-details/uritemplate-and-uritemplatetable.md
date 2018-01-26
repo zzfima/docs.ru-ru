@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
 caps.latest.revision: "24"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7ef3f2a71280595d58291863a1852cc4c590008c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate и UriTemplateTable
 Веб-разработчикам необходима возможность описания формы и структуры универсальных кодов ресурса (URI), на которые отвечают их службы. В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] появились два новых класса, позволяющие разработчикам контролировать свои URI. Классы <xref:System.UriTemplate> и <xref:System.UriTemplateTable> формируют основу модуля отправки данных на основе URI, который используется в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Эти классы могут также использоваться сами по себе, позволяя разработчиками воспользоваться преимуществами шаблонов и механизма сопоставления универсального кода ресурса (URI) без реализации службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -343,8 +344,8 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 >  Буквы "á" и "Á" считаются разными символами, если они используются в пути универсального кода ресурса (URI) или в литерале сегмента пути <xref:System.UriTemplate> (но буквы "a" и "A" считаются одинаковыми). Буквы "á" и "Á" считаются одинаковыми символами, если они используются в <xref:System.UriTemplate> {имя_переменной} или строке запроса (а буквы "a" и "A" также считаются одинаковыми).  
   
 ## <a name="see-also"></a>См. также  
- [Общие сведения о модели программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- [Объектная модель программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
+ [Общие сведения о модели веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
+ [Объектная модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
  [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
- [Таблицы UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
+ [Таблица UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
  [Диспетчер таблицы UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

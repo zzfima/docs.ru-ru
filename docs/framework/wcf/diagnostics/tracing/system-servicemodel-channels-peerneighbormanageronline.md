@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b758d4e8-f54f-43a4-ae4f-4b98996d4c40
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 13409ddfb0f976d3023bdfec5502f1b6a80f01c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: e32c0c5ba6546458cb8bcd3705339ce19c2f6031
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelspeerneighbormanageronline"></a>System.ServiceModel.Channels.PeerNeighborManagerOnline
 Узел PeerNode находится в сети, что указывает на наличие одного или нескольких установленных подключений к соседним узлам.  

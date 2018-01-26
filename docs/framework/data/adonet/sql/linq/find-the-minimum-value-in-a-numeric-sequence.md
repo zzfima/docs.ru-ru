@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 78203093-f242-4572-9b31-9495b10926aa
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c040b2a9a4c806d6e0f82ea2b22113b44df7d4c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 9cc16b09912cb9cc695fc350d9fd4530ea99e794
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="find-the-minimum-value-in-a-numeric-sequence"></a>Нахождение минимального значения в числовой последовательности
 Для возвращения минимального значения из последовательности числовых значений используется оператор <xref:System.Linq.Enumerable.Min%2A>.  

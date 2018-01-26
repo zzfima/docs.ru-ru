@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 743db7f1-32cc-4a3b-8d1a-5d1cf25e439c
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: edbfbd3d938bece688996e078d6663199d4cd563
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: fbdc6c4a45c944b23a56778b26e3c29fac6da8bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="messagequeueduplicatedpipeleak"></a>MessageQueueDuplicatedPipeLeak
 Идентификатор: 166  
@@ -26,9 +27,9 @@ ms.lasthandoff: 11/21/2017
   
  Категория: SMSvcHost  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Это событие указывает, что произошла ошибка при диспетчеризации дублированного именованного канала. В данном процессе происходит утечка этого дескриптора. В событии указаны источник, исключение, имя процесса и идентификатор процесса.  
   
 ## <a name="see-also"></a>См. также  
  [Ведение журнала событий](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Общие справочные сведения события](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+ [Общие справочные сведения о событиях](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

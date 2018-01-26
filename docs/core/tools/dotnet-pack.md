@@ -3,21 +3,22 @@ title: "Команда dotnet pack — CLI .NET Core"
 description: "Команда dotnet pack создает пакеты NuGet для проекта .NET Core."
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 12/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 8594c863d67baf0237b63e61f28ca9ee315eeddf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 28cd05db0643097a7271fd0488354846598ba493
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Имя
+## <a name="name"></a>name
 
 `dotnet pack` — упаковывает код в пакет NuGet.
 
@@ -37,7 +38,7 @@ dotnet pack [-h|--help]
 ```
 ---
 
-## <a name="description"></a>Описание
+## <a name="description"></a>Описание:
 
 Команда `dotnet pack` выполняет сборку проекта и создает пакеты NuGet. Результат выполнения команды — пакет NuGet. При наличии параметра `--include-symbols` создается другой пакет, содержащий отладочные символы.
 
@@ -45,7 +46,7 @@ dotnet pack [-h|--help]
 
 `dotnet pack` по умолчанию сначала выполняет сборку проекта. Чтобы избежать этого, передайте параметр `--no-build`. Это часто бывает полезно, например, в сценариях сборки с непрерывной интеграцией (CI), когда вы знаете, что код был собран недавно.
 
-Может предоставлять свойства MSBuild команде `dotnet pack` для процесса упаковки. Дополнительные сведения см. в разделах [Свойства метаданных NuGet](csproj.md#nuget-metadata-properties) и [Справочник по командной строке MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
+Может предоставлять свойства MSBuild команде `dotnet pack` для процесса упаковки. Дополнительные сведения см. в разделах [Свойства метаданных NuGet](csproj.md#nuget-metadata-properties) и [Справочник по командной строке MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). В разделе [Примеры](#examples) показано, как использовать параметр MSBuild /p в различных сценариях.
 
 ## <a name="arguments"></a>Аргументы
 
@@ -172,3 +173,7 @@ dotnet pack [-h|--help]
 Устанавливает версию пакета в `2.1.0` с использованием свойства MSBuild `PackageVersion`:
 
 `dotnet pack /p:PackageVersion=2.1.0`
+
+Упакуйте проект для [требуемой версии .NET Framework](../../standard/frameworks.md):
+
+`dotnet pack /p:TargetFrameworks=net45`

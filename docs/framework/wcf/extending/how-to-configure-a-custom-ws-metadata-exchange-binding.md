@@ -13,14 +13,15 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4202c0471c681257fa1ab1153d363e59615e10c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 7bfa4ab0696083c78578517748cfdc2e79e001d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Практическое руководство. Настройка пользовательской привязки для обмена WS-Metadata
 В этом разделе объясняется, как настроить пользовательскую привязку обмена WS-Metadata. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] включает в себя четыре привязки метаданных, определенные системой, однако для публикации метаданных можно использовать любую привязку. В этой теме рассказывается, как опубликовать метаданные с помощью `wsHttpBinding`. Эта привязка позволяет предоставлять метаданные безопасным способом. Код в этой статье, основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -125,7 +126,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Поведение публикации метаданных](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)  
- [Получение метаданных](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
+ [Извлечение метаданных](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
  [Метаданные](../../../../docs/framework/wcf/feature-details/metadata.md)  
  [Публикация метаданных](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
  [Публикация конечных точек метаданных](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)

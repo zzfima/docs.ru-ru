@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
 caps.latest.revision: "31"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: fa43705fd20a60512ca4c460bb3048220aa1e193
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: a0635ff85c89f2e2758dc156bcb31e4cfeaf2466
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="basic-wcf-programming"></a>Базовое программирование WCF
 В данном разделе представлены основные принципы создания приложений [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Базовый жизненный цикл программирования](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
  Описание жизненного цикла разработки, создания и развертывания приложений служб и клиентских приложений [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 10/18/2017
   
  [Средства Windows Communication Foundation](../../../docs/framework/wcf/tools.md)  
   
- [Примеры Windows Communication Foundation](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Примеры Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
  [Начало работы](../../../docs/framework/wcf/samples/getting-started-sample.md)  
   

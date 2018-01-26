@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f963aba983379d1474c3eedc348860751306a1bf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 4b8b795454ab038b9e992c5e1187a0c4dcb46c76
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sql-server-express-user-instances"></a>Пользовательские экземпляры SQL Server, экспресс-выпуск
 Выпуск Microsoft SQL Server Express Edition (SQL Server Express) поддерживает пользовательский экземпляр, который доступен только при использовании поставщика данных .NET Framework для SQL Server (`SqlClient`). Пользовательским экземпляром является отдельный экземпляр компонента SQL Server Express Database Engine, который формируется родительским экземпляром. Пользовательские экземпляры позволяют пользователям, не являющимся администраторами на их локальных компьютерах, присоединяться и подключаться к базам данных SQL Server Express. Каждый экземпляр выполняется в контексте безопасности отдельного пользователя, один экземпляр на одного пользователя.  
@@ -68,7 +69,7 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  Свойства <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> и <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> также можно использовать для создания строки подключения во время выполнения.  
+>  Можно также использовать <xref:System.Data.SqlClient.SqlConnectionStringBuilder> <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> и <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> свойства для создания строки подключения во время выполнения.  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>С помощью &#124; DataDirectory &#124; Строка подстановки  
  Свойство `AttachDbFileName` в ADO.NET 2.0 было расширено, в нем появилась строка подстановки `|DataDirectory|` (заключается в символы прямой черты). `DataDirectory` в сочетании со свойством `AttachDbFileName` позволяет указать относительный путь к файлу данных, тем самым позволяя разработчикам создавать строки соединения без указания полного пути к источнику данных.  
@@ -156,7 +157,7 @@ private static void OpenSqlConnection()
   
 -   Однопользовательское приложение, в котором обмен данными не требуется.  
   
--   Развертывание ClickOnce. Если .NET Framework 2.0 (или более поздняя версия) и SQL Server Express уже установлены на целевом компьютере, пакет установки, загруженный как результат действия ClickOnce, может быть установлен и использован пользователями, не имеющими административных привилегий. Следует отметить, что администратор должен установить SQL Server Express, если он является частью установки. Дополнительные сведения см. в разделе [ClickOnce развертывания для приложения Windows Forms](http://msdn.microsoft.com/en-us/34d8c770-48f2-460c-8d67-4ea5684511df).  
+-   Развертывание ClickOnce. Если .NET Framework 2.0 (или более поздняя версия) и SQL Server Express уже установлены на целевом компьютере, пакет установки, загруженный как результат действия ClickOnce, может быть установлен и использован пользователями, не имеющими административных привилегий. Следует отметить, что администратор должен установить SQL Server Express, если он является частью установки. Дополнительные сведения см. в разделе [ClickOnce развертывания для приложения Windows Forms](http://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df).  
   
 -   Специальное размещение ASP.NET с использованием проверки подлинности Windows. Один экземпляр SQL Server Express может быть размещен в интрасети. Приложение подключается с использованием учетной записи ASPNET Windows, а не при помощи олицетворения. Пользовательские экземпляры не должны использоваться для сценариев сторонних производителей или общего размещения, где все приложения используют общий пользовательский экземпляр и больше не остаются изолированными друг от друга.  
   

@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85999a6aa15b04ffa2751d7312f71aaab1582ea3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: f870bab357db7a425378afcfb0bedd19b0359ce1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlclient-streaming-support"></a>Поддержка потоковой передачи SqlClient
 Поддержка потоковой передачи данных между [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] и приложением (новое в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) поддерживает неструктурированные данные на сервере (документы, образы и файлы носителя). База данных [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] может хранить большие двоичные объекты (BLOB), но для выборки BLOB может потребоваться много памяти.  

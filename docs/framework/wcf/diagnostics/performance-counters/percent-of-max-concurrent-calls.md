@@ -10,17 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 22f18a91-1188-4c4e-9ad1-93f0dc180858
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8633cbbc84800abe0ee60cc7258ca1cd7673b372
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: b83f4bd56b9f677ea7bab0e52c30adf9e691954e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="percent-of-max-concurrent-calls"></a>Процент максимального количества одновременных вызовов
 Имя счетчика: «Процент максимального количества одновременных вызовов»  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Количество одновременных вызовов как процент максимального количества одновременных вызовов.

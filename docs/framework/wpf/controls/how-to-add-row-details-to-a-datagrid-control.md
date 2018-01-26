@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 036e06d110df8900ab46f0d501f30b4a163c8eb9
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f65eb9e916fad83deb1476c1d8f0def4981d08d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-row-details-to-a-datagrid-control"></a>Добавление сведений о строках в элемент управления DataGrid
 При использовании <xref:System.Windows.Controls.DataGrid> элемента управления, можно настраивать представление данных путем добавления раздела сведений о строке. Добавление раздела сведений о строке позволяет группировать некоторые данные в шаблоне, который при необходимости видима или свернута. Например, можно добавить сведения о строке в <xref:System.Windows.Controls.DataGrid> , представляющие только сводку данных для каждой строки в <xref:System.Windows.Controls.DataGrid>, но предоставляет дополнительные поля данных, когда пользователь выбирает строку. Определить шаблон для раздела сведений о строке в <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> свойство. Ниже показан пример раздела сведений о строке.  

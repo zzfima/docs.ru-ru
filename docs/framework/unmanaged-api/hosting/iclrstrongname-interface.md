@@ -19,18 +19,19 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f8e8a3c9ff4ec3d6b124f95edd31e277db3eb872
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9b8859cf507fb81f07b85b055380ba86aae471b5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrstrongname-interface"></a>Интерфейс ICLRStrongName
 Предоставляет базовые глобальные статические функции для подписи сборки со строгими именами. Все `ICLRStrongName` методы возвращают стандартные результаты COM HRESULT.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод GetHashFromAssemblyFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)|Возвращает хэш файла указанную сборку, с помощью указанного хэш-алгоритма.|  
 |[Метод GetHashFromAssemblyFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)|Возвращает хэш файла сборки, указанного как строка Юникода, с помощью указанного хэш-алгоритма.|  

@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: dea076f0-1c05-40af-a329-c3e3f7a805c1
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2ca8bd1312f9ecde4a79691b8b4b1104cc823b30
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 56de1120d145fe7185f6ca4b84aa4d5d70d146e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationinvokingmethod"></a>System.ServiceModel.ComIntegration.ComIntegrationInvokingMethod
 System.ServiceModel.ComIntegration.ComIntegrationInvokingMethod  

@@ -17,16 +17,17 @@ caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 46e54e05d30e14ad89454a627a7436fbd3cbedbe
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 1a39badbd6e7ddfc445d674a719ba9fe82f554d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="input-wpf"></a>Ввод (WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]поддерживает несколько типов входных данных. Этот входной включает текст, сенсорный ввод, мыши, команды, фокус, сенсорный ввод, и перетащите и рукописного ввода. В этом разделе описываются темы, связанные с входных данных в WPF.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о входных данных](../../../../docs/framework/wpf/advanced/input-overview.md)  
  [Общие сведения о системе команд](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
  [Общие сведения о фокусе](../../../../docs/framework/wpf/advanced/focus-overview.md)  

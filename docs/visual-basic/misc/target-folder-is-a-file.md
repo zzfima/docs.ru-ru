@@ -8,11 +8,11 @@ ms.assetid: c5e40bcb-2414-4484-b2b9-a9c391ad0029
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8abf176d335dd9cb825cd7f668d8e36318d58959
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fb3625c032ecb7ef440dc4b8bf0ad2a552b62943
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="target-folder-is-a-file"></a>Целевая папка является файлом
 Вы указываете файл при попытке выполнить действие, связанное с папкой.  
@@ -23,7 +23,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Практическое руководство. Анализ путей к файлам](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
- [Объект My.Computer.FileSystem](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)  
+ [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)  
  [Создание, удаление и перемещение файлов и каталогов](../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
- [Файл, каталог и свойства диска в Visual Basic](http://msdn.microsoft.com/en-us/131593e9-d1b0-4c89-9c03-ae8afc458829)  
- [Как: определение абсолютного пути файла в Visual Basic](http://msdn.microsoft.com/en-us/4c6769df-e9b9-4b69-bfdf-ce4cfbda30ff)
+ [Файл, каталог и свойства диска в Visual Basic](http://msdn.microsoft.com/library/131593e9-d1b0-4c89-9c03-ae8afc458829)  
+ [Как: определение абсолютного пути файла в Visual Basic](http://msdn.microsoft.com/library/4c6769df-e9b9-4b69-bfdf-ce4cfbda30ff)

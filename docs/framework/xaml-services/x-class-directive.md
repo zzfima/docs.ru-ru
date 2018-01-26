@@ -21,11 +21,12 @@ caps.latest.revision: "27"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 1828ef3614cc1f3a81d8aeff62c15ed5accfe380
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b894a56caa3644bae140e7ec37cf5b55ab093a59
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xclass-directive"></a>Директива x:Class
 Настраивает компиляции разметки XAML для объединения разделяемых классов разметки и кода. Разделяемый класс кода определяется в отдельном файле кода в [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] языка, тогда как разделяемый класс разметки обычно создается путем создания кода во время компиляции XAML.  
@@ -42,8 +43,8 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|`namespace`|Необязательно. Указывает [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] пространство имен, содержащее разделяемый класс, определяемый `classname`. Если `namespace` указан, точка (.) отделяет `namespace` и `classname`. См. заметки.|  
-|`classname`|Обязательный. Указывает [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] имя разделяемого класса, который соединяет загруженный XAML и вашего кода программной части для этого кода XAML.|  
+|`namespace`|Необязательный. Указывает [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] пространство имен, содержащее разделяемый класс, определяемый `classname`. Если `namespace` указан, точка (.) отделяет `namespace` и `classname`. См. заметки.|  
+|`classname`|Обязательно. Указывает [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] имя разделяемого класса, который соединяет загруженный XAML и вашего кода программной части для этого кода XAML.|  
   
 ## <a name="dependencies"></a>Зависимости  
  `x:Class`можно указать только в корневом элементе рабочей среды XAML. `x:Class`Недопустимый для любого объекта, есть родительский элемент в создании XAML. Дополнительные сведения см. в разделе [ \[MS-XAML\] раздел 4.3.1.6](http://go.microsoft.com/fwlink/?LinkId=114525).  

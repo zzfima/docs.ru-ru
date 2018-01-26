@@ -19,11 +19,12 @@ caps.latest.revision: "26"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 7446c43deff85e1a15288c0c847c9e3646870b72
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 26475a543950b4f7161243d72252cc1982adf93f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="redirecting-assembly-versions"></a>Перенаправление версий сборки
 Вы можете перенаправлять привязанные во время компиляции ссылки на сборки .NET Framework, сторонние сборки или сборки вашего собственного приложения. Вы можете перенаправлять свое приложение, чтобы оно использовало другую версию сборки, несколькими способами: через политику издателя, с помощью файла конфигурации приложения или с помощью файла конфигурации компьютера. В этой статье показывается, как привязка сборок работает в .NET Framework и как ее можно настроить.  
@@ -169,7 +170,7 @@ ms.lasthandoff: 11/21/2017
  [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Настройка приложений](../../../docs/framework/configure-apps/index.md)  
- [Настройка приложений .NET Framework](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [Настройка приложений .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [Схема параметров среды выполнения](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Схема файла конфигурации](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Практическое руководство. Создание политики издателя](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

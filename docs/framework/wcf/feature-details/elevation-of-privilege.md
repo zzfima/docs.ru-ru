@@ -13,14 +13,15 @@ helpviewer_keywords:
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ce245335fecd0f8735759135989bcd49ca6bf18b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 4225460698d36b3b56b9b0b03cde34e4502b13c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="elevation-of-privilege"></a>Повышение привилегий
 *Несанкционированное получение прав* полученный в результате, когда злоумышленник права по сравнению с были предоставлены изначально. Например, злоумышленник, ранее имевший разрешение «только для чтения», может каким-либо образом расширить его до уровня «чтение и запись».  
@@ -96,6 +97,6 @@ ms.lasthandoff: 11/21/2017
  [Вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
  [Раскрытие информации](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
  [Отказ в обслуживании](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Атаки с повторением пакетов](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- [Изменение данных](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ [Атаки с повторением](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
+ [Подделка](../../../../docs/framework/wcf/feature-details/tampering.md)  
  [Неподдерживаемые сценарии](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

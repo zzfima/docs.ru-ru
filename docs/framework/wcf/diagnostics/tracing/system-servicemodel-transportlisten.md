@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a5e6438c-6562-42f2-8a3b-2bdecf9dc4af
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: efe1dac3da3cbb3068b300e142f5abb9121301ae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: fda921cb60f25fea0cdf411fcd0904d7bb848cba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodeltransportlisten"></a>System.ServiceModel.TransportListen
 System.ServiceModel.TransportListen  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Ожидать передачи данных по указанному адресу.  
   
 ## <a name="see-also"></a>См. также  

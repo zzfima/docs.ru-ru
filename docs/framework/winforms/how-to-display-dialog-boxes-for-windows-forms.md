@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a3f827e9052260c1b836246d38c55e2cb2a9e5cc
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 46e4d019bbd586c0ed46794f55c65da7bcc657f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-dialog-boxes-for-windows-forms"></a>Практическое руководство. Отображение диалоговых окон для Windows Forms
 Отобразить диалоговое окно в так же, как любой другой форме отображения в приложении. Начальная форма загружается автоматически при запуске приложения. Чтобы сделать вторую форму или диалоговое окно отображается в приложении, напишите код для загрузки и отображения. Аналогичным образом чтобы форма или диалогового окна поле исчезают, напишите код для выгрузки его или скрывать.  

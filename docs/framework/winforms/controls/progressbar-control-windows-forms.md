@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d46c27e57a7d71992a0b1378e0987a2c48a66ab6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e34c86d63cc4d9eb2d6ba08466e72086719d880a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="progressbar-control-windows-forms"></a>Элемент управления ProgressBar (Windows Forms)
 > [!IMPORTANT]
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/18/2017
   
  Windows Forms <xref:System.Windows.Forms.ProgressBar> элемент управления показывает ход выполнения действия, выражается в соответствующем числе прямоугольников, расположенных на горизонтальной полосе. По завершении действия заполняется строке. Индикаторы выполнения обычно используются для предоставления пользователю работы времени ожидания до завершения длительного действия, например при загрузке большого файла.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об элементе управления ProgressBar](../../../../docs/framework/winforms/controls/progressbar-control-overview-windows-forms.md)  
  Основные понятия <xref:System.Windows.Forms.ProgressBar> управления, благодаря чему можно графически отобразить ход выполнения операции.  
   

@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4e06f54ed27a555daa30f16f452cd03c8e188a0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 6e6dfa946313bb9d43077bad68b761e8f03c175c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="transactions-and-concurrency"></a>Транзакции и параллельность
 Транзакция состоит из одной команды или группы команд, которые выполняются как пакет. Транзакции позволяют объединить несколько операций в одну единицу работы. Если в какой-либо точке транзакции возникает ошибка, может быть выполнен откат всех обновлений к их состоянию до начала транзакции.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
  Если для выполнения транзакций требуются различные диспетчеры ресурсов, например для транзакций между [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] и Oracle, необходимо использовать распределенную транзакцию.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Локальные транзакции](../../../../docs/framework/data/adonet/local-transactions.md)  
  Демонстрирует выполнение транзакций на базе данных.  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
  [Интеграция System.Transactions с SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
  Описывает интеграцию <xref:System.Transactions> с [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] для работы с распределенными транзакциями.  
   
- [Оптимистический параллелизм](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
+ [Оптимистическая блокировка](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
  Описывается оптимистичный и пессимистичный параллелизм и проверка на выявление нарушений параллелизма.  
   
 ## <a name="see-also"></a>См. также  

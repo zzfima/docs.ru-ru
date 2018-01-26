@@ -20,11 +20,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2a759011425a3f09a7b91b728442f8e8ea7b92fa
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c8ef62b06e97e5db22fde0085e21d7a998bfdf22
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>Практическое руководство. Создание элемента управления, имеющего клавишу доступа и поддерживающего перенос текста
 В этом примере показано, как создать элемент управления, который имеет клавишу доступа и поддерживает обтекание текстом. В этом примере <xref:System.Windows.Controls.Label> управления для иллюстрации этих основных понятий.  
@@ -47,4 +48,4 @@ ms.lasthandoff: 10/22/2017
  [!code-xaml[LabelSnippet#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
   
 ## <a name="see-also"></a>См. также  
- [Практическое руководство. Установка целевого свойства метки](http://msdn.microsoft.com/en-us/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)
+ [Практическое руководство. Установка целевого свойства метки](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)

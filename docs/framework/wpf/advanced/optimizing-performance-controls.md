@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1b414aee19082196ab242706c7730c031cf3a76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1b8008d104437454f36f6f425634c40968d5481a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimizing-performance-controls"></a>Оптимизация производительности: элементы управления
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] включает множество общих компонентов пользовательского интерфейса (UI), которые используются в большинстве приложений Windows. В этом разделе описываются методы повышения производительности пользовательского интерфейса.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Установка <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> для `false`.  
   
--   Установка <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A>--> `IsVirtualizing` для `false`.    
+-   Установка <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A>--> `IsVirtualizing` для `false`.  
   
  Важным аспектом при виртуализации контейнеров элементов является наличие информации о дополнительном состоянии, связанной с контейнером элемента, принадлежащим этому элементу. В этом случае необходимо сохранить это дополнительное состояние. Например, может потребоваться элемента, содержащегося в <xref:System.Windows.Controls.Expander> управления и <xref:System.Windows.Controls.Expander.IsExpanded%2A> состояние привязанного элемента контейнера, а не сам элемент. Когда контейнер используется повторно для нового элемента, текущее значение <xref:System.Windows.Controls.Expander.IsExpanded%2A> используется для нового элемента. Кроме того, старый элемент теряет правильное <xref:System.Windows.Controls.Expander.IsExpanded%2A> значение.  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="controls-that-implement-performance-features"></a>Элементы управления, реализующие функции производительности  
  В следующей таблице приведены общие элементы управления для отображения данных и их поддержка функций производительности.  Сведения о том, как включать эти функции, см. в предыдущих разделах.  
   
-|Control|Виртуализация|Повторное использование контейнера|Отложенная прокрутка|  
+|Элемент управления|Виртуализация|Повторное использование контейнера|Отложенная прокрутка|  
 |-------------|--------------------|-------------------------|------------------------|  
 |<xref:System.Windows.Controls.ComboBox>|Можно включить|Можно включить|Можно включить|  
 |<xref:System.Windows.Controls.ContextMenu>|Можно включить|Можно включить|Можно включить|  

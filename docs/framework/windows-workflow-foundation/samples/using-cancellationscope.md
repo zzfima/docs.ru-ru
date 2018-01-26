@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 39c5c338-b316-43d6-b7fe-a543281dd1ec
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6f8fcd972b31490142f94581c664ca2988237684
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: ae41255cea4621cbcd4050a5ebb04e662102bf77
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-cancellationscope"></a>Использование CancellationScope
 В данном образце показывается, как с помощью действия <xref:System.Activities.Statements.CancellationScope> отменять работу в приложении.  

@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31bd56323e90368f850ae54854e6f50b63d5f7fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7c945d23def3bbf6284e7e0db95d391066256df6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="tooltip-overview"></a>Общие сведения о всплывающих подсказках
 Всплывающая подсказка представляет небольшое всплывающее окно, которое появляется при наведении указателя мыши на элемент, например, на <xref:System.Windows.Controls.Button>. В этом разделе рассказывается о всплывающих подсказках и о том, как создавать и настраивать их содержимое.  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="using-the-time-interval-properties-of-tooltipservice"></a>Использование свойств интервала времени элемента ToolTipService  
  <xref:System.Windows.Controls.ToolTipService> Класс предоставляет следующие свойства для задания подсказки отображения времени: <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>, <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>, и <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>.  
   
- Используйте <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> и <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> свойства для указания задержки, как правило, короткой, перед <xref:System.Windows.Controls.ToolTip> отображается и Кроме того, чтобы указать, как долго <xref:System.Windows.Controls.ToolTip> остается видимым. Подробнее см. в разделе [Практическое руководство. Задержка отображения всплывающей подсказки](http://msdn.microsoft.com/en-us/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).  
+ Используйте <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> и <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> свойства для указания задержки, как правило, короткой, перед <xref:System.Windows.Controls.ToolTip> отображается и Кроме того, чтобы указать, как долго <xref:System.Windows.Controls.ToolTip> остается видимым. Подробнее см. в разделе [Практическое руководство. Задержка отображения всплывающей подсказки](http://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).  
   
  <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> Свойство определяет, если подсказки для различных элементов управления отображаются без начальной задержки при наведении указателя мыши быстро между ними. Дополнительные сведения о <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> свойство, в разделе [руководство](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md).  
   

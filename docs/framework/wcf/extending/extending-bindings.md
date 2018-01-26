@@ -11,21 +11,22 @@ ms.topic: article
 helpviewer_keywords: extending bindings [WCF]
 ms.assetid: 5e40d306-b3c1-4429-80c4-fbb1d956856c
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7f51aea5451f4f74c6658e16c4aced6e76ecbb3b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 5d0be5e799137d24c2d6e53f4b6846007f3a2a79
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-bindings"></a>Расширение привязок
 Привязки задают транспорт, кодирование и протокол, необходимые для подключения к конечной точке. Расширения привязки и пользовательские привязки реализуют пользовательскую функциональность связи, необходимую для поддержки возможностей приложения.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Описание:|  
 |-----------|-----------------|  
 |[Привязки и элементы привязки](../../../../docs/framework/wcf/extending/bindings-and-binding-elements.md)|Описание привязок, элементов привязок, а также порядка их использования и расширения.|  
 |[Пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md)|Описание порядка использования класса <xref:System.ServiceModel.Channels.CustomBinding> для создания пользовательских привязок с помощью элементов привязки, определенных системой и предоставляемых независимыми разработчиками.|  

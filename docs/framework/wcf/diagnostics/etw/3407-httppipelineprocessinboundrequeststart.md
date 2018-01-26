@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f9cc34e8-f4e1-43c8-823f-6186ee5e676f
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2f5f6cd6df2bd054d8eb57d2beb31f3c131b59e5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: c9061ec1b32a795f56c5183d7b3cc96d54a9deaf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="3407---httppipelineprocessinboundrequeststart"></a>3407 - HttpPipelineProcessInboundRequestStart
 ## <a name="properties"></a>Свойства  

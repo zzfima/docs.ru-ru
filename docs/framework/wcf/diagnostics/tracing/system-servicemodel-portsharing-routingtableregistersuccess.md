@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7f9441ce-5f4a-4080-9be5-c3c08a87bb21
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 19534c389b8602e19c770fce33e3b615fe071527
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: f55ec715dd69b76a710ede839c16589d103eb7a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelportsharingroutingtableregistersuccess"></a>System.ServiceModel.PortSharing.RoutingTableRegisterSuccess
 System.ServiceModel.PortSharing.RoutingTableRegisterSuccess  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Пространство имен зарегистрировано успешно.  
   
 ## <a name="see-also"></a>См. также  

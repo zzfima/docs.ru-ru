@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a11b0b80-b242-48e1-b0bb-7f756db5486b
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 06df77ae14dbe4980ae54cc09a0822f59731bf1c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: dbae9414c4ce5394fc0d4a83589e2e5e10ffcc8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-messaging-messages-dropped-per-second"></a>Количество отброшенных сообщений, передаваемых по надежным каналам, в секунду
 Имя счетчика: Reliable Messaging Sessions Dropped Per Second.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Общее количество надежных сообщений, которые были отклонены в данной службе в течение секунды.  
   
  Этот счетчик является счетчиком производительности типа [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по следующей формуле.  

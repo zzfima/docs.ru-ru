@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f950d8de2681868fe28e09e4b51bd8156cd12e94
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ec66fb3dea74e6f738ec308ce0f88945526a0a77
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="unsealed-classes"></a>Незапечатанные классы
 Невозможно наследовать запечатанные классы и не позволяют расширяемости. В противоположность этому классы, которые могут наследоваться от называются незапечатанных классов.  
@@ -38,5 +41,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  
- [Разработка для расширяемости](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+ [Разработка с обеспечением расширяемости](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
  [Запечатывание](../../../docs/standard/design-guidelines/sealing.md)

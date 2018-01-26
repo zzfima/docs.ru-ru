@@ -10,26 +10,27 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ad207f04-b038-4f33-95e9-27a361df8ecd
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5062d2c2146dae8b22165cfbea0c6a78241d17b8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 3e1b4e3aab6a6a7f94bfb3783c9e32f83557db19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="217---clientoperationprepared"></a>217 - ClientOperationPrepared
 ## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
-|Идентификатор|217|  
+|ID|217|  
 |Ключевые слова|Troubleshooting, ServiceModel|  
 |Уровень|Сведения|  
 |Канал|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Это событие создается клиентом непосредственно перед отправкой операции службе.  
   
 ## <a name="message"></a>Сообщение  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="details"></a>Подробные сведения  
   
-|Имя элемента данных|Тип элемента данных|Описание|  
+|Имя элемента данных|Тип элемента данных|Описание:|  
 |--------------------|--------------------|-----------------|  
 |Действие|`xs:string`|Заголовок действия SOAP исходящего сообщения.|  
 |Contract Name|`xs:string`|Имя контракта. Пример: ICalculator.|  

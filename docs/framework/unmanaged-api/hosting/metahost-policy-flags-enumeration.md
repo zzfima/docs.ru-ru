@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8946fdcc7c23e11a3f3d78070532ac0bf72b33b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 80abed08cc7659d4218dce445be81481bb5a665b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metahostpolicyflags-enumeration"></a>Перечисление METAHOST_POLICY_FLAGS
 Предоставляет политики привязки, которые являются общими для большинства сред выполнения. Это перечисление используется методом [ICLRMetaHostPolicy::GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) метод.  
@@ -43,9 +44,9 @@ typedef enum {
 } METAHOST_POLICY_FLAGS;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`METAHOST_POLICY_HIGHCOMPAT`|Определяет политику высокой совместимости, которая не учитывает любые общеязыковая среда выполнения (CLR), который загружается текущего процесса. Вместо этого она рассматривает только установленные среды CLR и предпочтения компонента, как производный от самого файла сборки, объявленного построения для версии или в файле конфигурации.|  
 |`METAHOST_POLICY_APPLY_UPGRADE_POLICY`|Применяет политику обновления результат привязки версии, если точное соответствие не найдено, на основе содержимого реестр\\. NETFramework\Policy\Upgrades. Это действует так же, как [RUNTIME_INFO_UPGRADE_VERSION](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md).|  
@@ -68,5 +69,5 @@ typedef enum {
  **Версии платформы .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Перечисления размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)  
- [GetRequestedRuntime-метод](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)
+ [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)  
+ [Метод GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)

@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9087bf09-cb15-41ec-bd7a-6338789953d0
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8fa7df7152abe52a9fcfadd85fb803e7823d16ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: f495ac2a5dc5ee329ad0a36ce8584d6354d4f3c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemidentitymodelselectorsstoresignaturenotvalid"></a>System.IdentityModel.Selectors.StoreSignatureNotValid
 System.IdentityModel.Selectors.StoreSignatureNotValid  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Недопустимая подпись файла.  
   
 ## <a name="see-also"></a>См. также  

@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7405cf37aaa21f8773952c9e7ed941bc8ae3150b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: bb7562c2f6fab7ce496fd87ecdd891531589abfa
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="data-binding"></a>Привязка данных
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]поддерживает привязку к распространенным элементам управления, такие как элементы управления сетки. В частности [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] определяет основные шаблоны для привязки к сетке данных и обработки привязки основной подробности, как в отношении отображения и обновления.  
@@ -117,4 +118,4 @@ ms.lasthandoff: 10/18/2017
 -   Если сущность привязана в двух отдельных сетках (например, в основной сетке и в сетке подробных сведений), операция `Delete` в основной сетке не распространяется на сетку подробных сведений.  
   
 ## <a name="see-also"></a>См. также  
- [Общие сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+ [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

@@ -10,20 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8b6e644d-fa68-4be7-abe9-3659671a37c1
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 55b489bcad85eff5adba16f6f40493c88e476505
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: f2f905c345db89e909920334a7dbb524095bc46b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsmsmqmessagedropped"></a>System.ServiceModel.Channels.MsmqMessageDropped
 Сообщение удалено из очереди MSMQ.  
   
-## <a name="description"></a>Описание  
- Данная трассировка указывает, что сообщение MSMQ было удалено. Сообщения MSMQ могут быть удалены, если [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] (при использовании либо с классом NetMsmqBinding, либо с классом MsmqIntegrationBinding) не удается их обработать. Такие сообщения считаются подозрительными.  
+## <a name="description"></a>Описание:  
+ Данная трассировка указывает, что сообщение MSMQ было отброшено. Сообщения MSMQ могут быть удалены, если [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] (при использовании либо с классом NetMsmqBinding, либо с классом MsmqIntegrationBinding) не удается их обработать. Такие сообщения считаются подозрительными.  
   
  Подозрительное сообщение удаляется, если свойству `ReceiveErrorHandling` класса NetMsmqBinding или класса MsmqIntegrationBinding присвоено значение `Drop`. Такое сообщение удаляется из очереди, и восстановить его после этого невозможно.  
   

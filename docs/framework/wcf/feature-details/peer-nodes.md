@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0732b314-6006-4ec6-999d-ec9476c9e5bb
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 89450b76ceb22faf8663ce84298d2b47477c05d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 0a79503b8f0d56402b2e32b4f54e7f7b143a1f92
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-nodes"></a>Одноранговые узлы
 PeerNode - единственная конечная точка в сетке одноранговых каналов. Приложение может иметь несколько одноранговых узлов, участвующих в разных сетках. Например, приложение однорангового разговора может быть частью двух отдельных сеток: одной - для разговора со школьными друзьями, и другой - для разговора с коллегами по работе.  

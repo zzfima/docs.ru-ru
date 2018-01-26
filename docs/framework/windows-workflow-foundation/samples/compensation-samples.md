@@ -9,20 +9,21 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3bf46970-d40c-4cf1-b8a7-b1ff46b2af82
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a21b09c90528b76b0bc8fe855474880b7bb460fb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 4b32ab84a3585fc7c1a4638851f5f78eebd41358
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compensation-samples"></a>Компенсация (образцы)
 В этом разделе содержатся образцы, описывающие компенсацию в [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
- [Действия, подлежащего компенсации](../../../../docs/framework/windows-workflow-foundation/samples/compensable-activity-sample.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Компенсируемое действие](../../../../docs/framework/windows-workflow-foundation/samples/compensable-activity-sample.md)  
  Показано использование действия <xref:System.Activities.Statements.CompensableActivity> для определения работы, которая должна быть выполнена для заданного действия при обычном протекании, и работы, которую необходимо выполнить для компенсации этого действия позднее, если требуется.  
   
  [Настраиваемая компенсация](../../../../docs/framework/windows-workflow-foundation/samples/custom-compensation-sample.md)  

@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e167bad3-861f-43e4-9e78-9c275cf64a29
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 93bdcebc4fe37dd8aa52861b1ee358ceefa6c716
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: f18c88ff7ace079b9e6c09f405b01d0417d295ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodeltxreleaseserviceinstanceoncompletion"></a>System.ServiceModel.TxReleaseServiceInstanceOnCompletion
 Экземпляр службы освобожден при завершении транзакции "{0}", так как атрибут ReleaseServiceInstanceOnTransactionComplete ServiceBehaviorAttribute имел значение true.  

@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d743ae68955bba844f84fed71047d9331fd349af
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: a71ab8d8b4f96900e6d0f83541b6ae17f09ddeee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="emitting-user-code-traces"></a>Создание трассировки пользовательского кода
 Помимо возможности включения трассировки для сбора данных инструментирования, создаваемых [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], в конфигурации также существует возможность создавать трассировки программно в пользовательском коде. Таким образом можно заранее создавать данные инструментирования для их последующего использования в диагностических целях. В этом разделе описывается, как это сделать.  

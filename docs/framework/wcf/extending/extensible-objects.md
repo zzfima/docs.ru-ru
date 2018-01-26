@@ -1,24 +1,20 @@
 ---
 title: "Расширяемые объекты"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 24482f97f5869def79ce2a24d33b3f9345d1c7c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: a1bb341d9e164b1ce232f238f8ddf4a0cf807363
+ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="extensible-objects"></a>Расширяемые объекты
 Шаблон расширяемого объекта используется для расширения существующих классов среды выполнения при помощи новых функций или добавления нового состояния к объекту. Расширения, привязанные к одному из расширяемых объектов, позволяют использовать поведения на различных этапах обработки для получения доступа к общему состоянию и функциональности, привязанным к общему расширяемому объекту, к которому они могут получить доступ.  
@@ -47,15 +43,15 @@ where T : IExtensibleObject<T>
   
  Если расширение добавляется в коллекцию <xref:System.ServiceModel.IExtension%601.Attach%2A> вызывается перед отправкой его в коллекцию. При удалении расширения из коллекции, <xref:System.ServiceModel.IExtension%601.Detach%2A> вызывается после его удаления. Это означает (при условии, что синхронизацией) расширения может рассчитывать на только найден в коллекции, когда элемент находится в диапазоне от <xref:System.ServiceModel.IExtension%601.Attach%2A> и <xref:System.ServiceModel.IExtension%601.Detach%2A>.  
   
- Нет необходимости, чтобы объект, переданный методу <xref:System.ServiceModel.IExtensionCollection%601.FindAll%60%601%2A> или методу <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A>, был объектом <xref:System.ServiceModel.IExtension%601> (например, можно передать любой объект), но возвращенное расширение должно быть расширением <xref:System.ServiceModel.IExtension%601>.  
+ Нет необходимости, чтобы объект, переданный методу <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> или методу <xref:System.ServiceModel.IExtensionCollection%601.Find%2A>, был объектом <xref:System.ServiceModel.IExtension%601> (например, можно передать любой объект), но возвращенное расширение должно быть расширением <xref:System.ServiceModel.IExtension%601>.  
   
- Если расширение в коллекции не является <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A> возвращает значение null, и <xref:System.ServiceModel.IExtensionCollection%601.FindAll%60%601%2A> возвращает пустую коллекцию. Если реализуется несколькими расширениями <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A> возвращает одно из них. Значение, возвращаемое методом <xref:System.ServiceModel.IExtensionCollection%601.FindAll%60%601%2A>, является моментальным снимком.  
+ Если расширение в коллекции не является <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> возвращает значение null, и <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> возвращает пустую коллекцию. Если реализуется несколькими расширениями <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> возвращает одно из них. Значение, возвращаемое методом <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A>, является моментальным снимком.
   
  Имеется два основных сценария. В первом сценарии свойство <xref:System.ServiceModel.IExtensibleObject%601.Extensions%2A> используется как основанный на типах словарь для вставки состояния в объект с целью предоставления другому компоненту возможности просматривать его с помощью типа.  
   
  Во втором сценарии свойства <xref:System.ServiceModel.IExtension%601.Attach%2A> и <xref:System.ServiceModel.IExtension%601.Detach%2A> используются для предоставления объекту возможности участвовать в пользовательском поведении, таком как регистрация событий, наблюдение за переходами между состояниями и т. д.  
   
- Интерфейс <xref:System.ServiceModel.IExtensionCollection%601> - это коллекция объектов <xref:System.ServiceModel.IExtension%601>, которая позволяет получить экземпляр <xref:System.ServiceModel.IExtension%601> по его типу. Метод <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A?displayProperty=nameWithType> возвращает последний добавленный объект <xref:System.ServiceModel.IExtension%601> данного типа.  
+ Интерфейс <xref:System.ServiceModel.IExtensionCollection%601> - это коллекция объектов <xref:System.ServiceModel.IExtension%601>, которая позволяет получить экземпляр <xref:System.ServiceModel.IExtension%601> по его типу. Метод <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType> возвращает последний добавленный объект <xref:System.ServiceModel.IExtension%601> данного типа.  
   
 ### <a name="extensible-objects-in-windows-communication-foundation"></a>Расширяемые объекты в Windows Communication Foundation  
  Существуют четыре расширяемых объекта в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  

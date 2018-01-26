@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b6643550-d043-4ac7-8069-9c55ebbb4233
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: aacc20bf483877ac501fd8b35c04f6e3f9311afb
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: c5d3f6734f9d6a3b0e2279b2bb6cca71141c8f5f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-invokemethod-activity"></a>Использование действия InvokeMethod
 В этом примере демонстрируется использование <!--zz <xref:System.Activities.Statements.InvokeMethod%601> --> [ <code>System.Activities.Statements.InvokeMethod\`1</code> ](https://msdn.microsoft.com/library/dd647677.aspx) действию для вызова открытых методов открытых классов. <!--zz <xref:System.Activities.Statements.InvokeMethod%601> --> [ <code>System.Activities.Statements.InvokeMethod\`1</code> ](https://msdn.microsoft.com/library/dd647677.aspx) Действия позволяет рабочему процессу вызывать методы для объектов, передавать параметры, получения возвращаемого значения, задавать типы универсальных методов и указать, является ли метод синхронным или асинхронные. 

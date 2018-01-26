@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b6ae53f4-34f8-4510-ad98-ff1e46621526
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e9b24821be32226d5d7920e8821161e4b06dd88
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 3c78170c01cbc0711f79ef554d2a3da585b41d6d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="working-with-data-providers"></a>Работа с поставщиками данных
 Подразделы в этом разделе описывают службы и поставщики, преобразующие запросы к концептуальной модели в собственные запросы к источнику данных, которые поддерживаются платформой Entity Framework.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Строки подключения](../../../../../docs/framework/data/adonet/ef/connection-strings.md)  
   
  [Поставщики данных Entity Framework](../../../../../docs/framework/data/adonet/ef/data-providers.md)  
@@ -31,4 +32,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Язык Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
- [Платформа ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
+ [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)

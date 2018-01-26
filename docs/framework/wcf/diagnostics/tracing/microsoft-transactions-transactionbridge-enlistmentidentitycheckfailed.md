@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 74aeb3e7-f9eb-4491-9e78-5f8c9cbcb434
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 42fd204b000cb78b4ebf1ef7b4a92493d9f4e6fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 89328fd0d4305c1f7572a8bb41e3793624110ce8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="microsofttransactionstransactionbridgeenlistmentidentitycheckfailed"></a>Microsoft.Transactions.TransactionBridge.EnlistmentIdentityCheckFailed
 Имя отправителя входящего сообщения не совпадает с именем, полученным из ссылки на конечную точку перечисления.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Трассируется в случае сбоя проверки безопасности сообщения.  
   
 ## <a name="troubleshooting"></a>Устранение неполадок  

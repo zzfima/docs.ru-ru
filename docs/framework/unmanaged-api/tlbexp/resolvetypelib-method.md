@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b430b050117243ced9d764045075071278841da2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 72d1cedbfc1a1ec6c3588a7b0be9cf657d7369fd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="resolvetypelib-method"></a>Метод ResolveTypeLib
 Разрешает простое имя библиотеки типов путем возвращения ее полного пути.  
@@ -44,7 +45,7 @@ HRESULT ResolveTypeLib(
   
 #### <a name="parameters"></a>Параметры  
  `bstrSimpleName`  
- [in] Объект [BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228) , содержащий простое имя библиотеки типов.  
+ [in] Объект [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) , содержащий простое имя библиотеки типов.  
   
  `tlbid`  
  [in] Идентификатор GUID, назначенный в библиотеку типов в реестре.  
@@ -59,15 +60,15 @@ HRESULT ResolveTypeLib(
  [in] Дополнительный номер версии библиотеки типов. Например, для версии *x.y*, дополнительный номер версии — *y*.  
   
  `syskind`  
- [in] Объект [SYSKIND](http://msdn.microsoft.com/en-us/662048b2-59a8-48ca-9e4f-2f9a5306faa1) флаг, определяющий операционная среда. Общие значения: SYS_WIN32 и SYS_WIN64.  
+ [in] Объект [SYSKIND](http://msdn.microsoft.com/library/662048b2-59a8-48ca-9e4f-2f9a5306faa1) флаг, определяющий операционная среда. Общие значения: SYS_WIN32 и SYS_WIN64.  
   
  `pbstrResolvedTlbName`  
- [out] Указатель на [BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228) , содержащее полный путь к библиотеке типов в `bstrSimpleName` параметра.  
+ [out] Указатель на [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) , содержащее полный путь к библиотеке типов в `bstrSimpleName` параметра.  
   
 ## <a name="remarks"></a>Примечания  
  `ResolveTypeLib` Метод вызывается методом [функция LoadTypeLibWithResolver](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) во время [Tlbexp.exe (программа экспорта библиотек типов)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) обработки.  
   
- Пользовательские реализации этого интерфейса должны возвращать [BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228) , содержащее полный путь к библиотеке типов в `bstrSimpleName` параметра.  
+ Пользовательские реализации этого интерфейса должны возвращать [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) , содержащее полный путь к библиотеке типов в `bstrSimpleName` параметра.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
@@ -80,4 +81,4 @@ HRESULT ResolveTypeLib(
   
 ## <a name="see-also"></a>См. также  
  [Вспомогательные функции Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx](http://msdn.microsoft.com/en-us/56a7f9e1-810b-4a42-aa4d-691f4304f5ef)
+ [LoadTypeLibEx](http://msdn.microsoft.com/library/56a7f9e1-810b-4a42-aa4d-691f4304f5ef)

@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c1f7e42d0da5a0265ef4fb63dfe59e050784e959
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 26bf6cb88d77fc9890a23c482913514f1dc856aa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="identitymodel-exceptions"></a>Исключения IdentityModel
 В этом разделе перечислены все исключения, создаваемые IdentityModel.  
@@ -77,7 +78,7 @@ ms.lasthandoff: 10/18/2017
 |TraceCodeSecurityTokenProviderOpened|Открыт поставщик маркера безопасности.|  
 |PublicKeyNotRSA|Открытый ключ не является ключом RSA.|  
 |InvalidReaderState|Указанное состояние недопустимо для предоставленного средства чтения входных данных.|  
-|UnableToResolveReferenceUriForSignature|Невозможно разрешить указанный в сигнатуре универсальный код ресурса (URI) для вычисления дайджеста.|  
+|UnableToResolveReferenceUriForSignature|Невозможно разрешить указанный в сигнатуре универсальный код ресурса (URI) для вычисления хэш-кода.|  
 |EmptyBase64Attribute|Для имени и пространства имен обязательного атрибута в base64-кодировке найдено пустое значение.|  
 |SAMLSubjectRequiresConfirmationMethodWhenConfirmationDataOrKeyInfoIsSpecified|Конструкция SAML SubjectConfirmation требует использования метода подтверждения Confirmation, если указаны данные Confirmation Data или KeyInfo.|  
 |SAMLAudienceRestrictionShouldHaveOneAudienceOnRead|Считываемое условие SamlAudienceRestrictionCondition должно содержать как минимум одно значение "Audience". Ни одно не найдено.|  

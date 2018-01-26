@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5c1e4b58-b76b-472b-9635-2f80d42a0734
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 95016b658a679a47b6b37d0c4130ef8e816165c2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: d4b34cc564dea5f189de29c9425c840ec96c80fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-export-custom-wsdl"></a>Практическое руководство. Экспорт пользовательской информации WSDL
 В этом разделе рассматривается, как экспортировать пользовательскую информацию WSDL. Для этого будет определен новый атрибут кода с названием `WsdlDocumentationAttribute`, добавляющий пользовательскую информацию в WSDL, создаваемый службой.  

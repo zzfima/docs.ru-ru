@@ -13,14 +13,15 @@ helpviewer_keywords:
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
 caps.latest.revision: "29"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d1c4488421f4162d70fc47f8dd4d04c9374f25fc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 0fbed530a1b968bb049ee20262eb2b8fa9ba13c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-with-com-applications-overview"></a>Общие сведения об интеграции с приложениями COM+
 Служба [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предоставляет среду с широкими возможностями для создания распределенных приложений. Если уже используется логика приложения на основе компонентов, размещенного на COM+, инфраструктура [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] позволит расширить существующую логику вместо ее переписывания. Стандартный сценарий - предоставление доступа существующему приложению COM+ или бизнес-логике Enterprise Services службы через веб-службы.  
@@ -112,4 +113,4 @@ ms.lasthandoff: 10/18/2017
  Функции перезапуска процессов COM+ невозможно использовать в интегрированных приложениях. Если приложение настроено на использование перезапуска процессов, а компоненты выполняются в процессе служб COM+, запустить службу не удастся. Это требование не распространяется на службы, использующие внутрипроцессное размещение на веб-сервере, поскольку параметры перезапуска процессов в этом случае не действуют.  
   
 ## <a name="see-also"></a>См. также  
- [Интеграция с Общие сведения о приложениях COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+ [Общие сведения об интеграции с приложениями COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8ce70dcd749f31d77061b4669d83d2e0b83726c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c2445eba7556822c8265337ec97c2f0a9f1d5042
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-use-a-thicknessconverter-object"></a>Практическое руководство. Использование объекта ThicknessConverter
 ## <a name="example"></a>Пример  
@@ -40,6 +41,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Thickness>  
  <xref:System.Windows.ThicknessConverter>  
  <xref:System.Windows.Controls.Border>  
- [Способ: измените Margin-свойство](http://msdn.microsoft.com/en-us/8a313efd-5f99-4097-b4c1-8fa49d8379a2)  
- [Как: преобразование ListBoxItem в новый тип данных](http://msdn.microsoft.com/en-us/7a080b88-184e-4b27-bb61-d42bafba9727)  
+ [Способ: измените Margin-свойство](http://msdn.microsoft.com/library/8a313efd-5f99-4097-b4c1-8fa49d8379a2)  
+ [Как: преобразование ListBoxItem в новый тип данных](http://msdn.microsoft.com/library/7a080b88-184e-4b27-bb61-d42bafba9727)  
  [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md)

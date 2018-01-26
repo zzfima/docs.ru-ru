@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7d11700b-c035-467e-af02-686bca3b207a
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a38d1b4a3efb213d2e57eb9f9bb52c253b9e2bbc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: ab3d76437b1424e737639834ad3804a324f5ffc4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodeloverridingduplicateconfigurationkey"></a>System.ServiceModel.OverridingDuplicateConfigurationKey
 System.ServiceModel.OverridingDuplicateConfigurationKey  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Система конфигурации определила повторяющийся ключ в другой области конфигурации и переопределяет на более новое значение.  
   
 ## <a name="see-also"></a>См. также  

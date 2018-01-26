@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 067f27ba-4d9e-4efb-8fa7-c23d2654d967
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f4044b4578fd6ec5aa270a32219137c1cb003a9d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: ebf0b26e445968374afc0fe011ae920dbc7fe77c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodeldiagnosticsfilternotmatchednodequotaexceeded"></a>System.ServiceModel.Diagnostics.FilterNotMatchedNodeQuotaExceeded
 System.ServiceModel.Diagnostics.FilterNotMatchedNodeQuotaExceeded  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Оценка фильтра ведения журнала сообщений в отношении превышения сообщением квоты узла, заданной в этом фильтре.  
   
 ## <a name="see-also"></a>См. также  

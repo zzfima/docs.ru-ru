@@ -18,23 +18,24 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ab199f390fa6a704ad3b3d2a17387d034cf2e57
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 166ccba959bd9facb8e24d580d47577a0c8746a8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Практическое руководство. Упорядочение элементов управления с помощью линий привязки и сетки в формах Windows Forms
 С помощью возможности макета элемента [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], можно точно указать расположение элементов управления на форме. Элементы управления, добавляемых на форму или перемещен в форме автоматически выравниваются в строки и столбцы сетки в конструкторе Windows Forms, или можно выравнивать элементы управления с помощью линий привязки.  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-snap-all-controls-to-the-grid"></a>Чтобы привязать все элементы управления к сетке  
   
 -   Выберите **SnapToGrid** режим макета в конструкторе Windows Forms **параметры** диалоговое окно.  
   
-     Дополнительные сведения см. в разделе [Общие, конструктор Windows Forms, диалоговое окно «Параметры»](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834). Теперь все элементы управления выравниваются автоматически по точкам сетки.  
+     Дополнительные сведения см. в разделе [Общие, конструктор Windows Forms, диалоговое окно «Параметры»](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834). Теперь все элементы управления выравниваются автоматически по точкам сетки.  
   
      Можно привязать отдельные элементы управления к сетке путем блокировки их на месте. Тем не менее пока они будут заблокированы, их нельзя переместить или изменения размера. Дополнительные сведения о блокировке элементов управления см. в разделе [как: блокировать элементы управления в Windows Forms](../../../../docs/framework/winforms/controls/how-to-lock-controls-to-windows-forms.md).  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
      Дополнительные сведения см. в разделе [Пошаговое руководство: упорядочение элементов управления в формах Windows Forms с помощью линий привязки](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md). Теперь можно использовать линии привязки для выравнивания и упорядочения элементов управления в форме.  
   
 ## <a name="see-also"></a>См. также  
- [Общие, конструктор Windows Forms, диалоговое окно «Параметры»](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [Общие, конструктор Windows Forms, диалоговое окно «Параметры»](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
  [Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
  [Практическое руководство. Добавление элементов управления в формы Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  

@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 745742df-0eda-479b-83f8-29bd8a80db96
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8afd48c6ce7c6313e82a7b74c2271f52833d1f5e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 67c196b5c693e36e45d4cad4fa75e08145dd699d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="formulate-projections"></a>Формулировка проекций
 В следующем примере показано сочетание оператора `select` в C# и оператора `Select` в [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] с другими возможностями для создания проекций запросов.  

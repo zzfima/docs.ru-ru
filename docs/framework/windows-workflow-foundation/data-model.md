@@ -10,19 +10,20 @@ ms.topic: article
 helpviewer_keywords: programming [WF], data model
 ms.assetid: d5752e51-cfc9-4499-af71-53b6daae9879
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 019e4fd5dc506970829fd9505038b71b23574c02
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: dffdadf9b6896e61dfa23c17ef4d17180be99259
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-workflow-foundation-data-model"></a>Модель данных Windows Workflow Foundation
 Модель данных Windows Workflow Foundation состоит из трех понятий: переменные, аргументы и выражения. Переменные представляют хранилище данных, а аргументы представляют поток данных в действие и из действия. Аргументы привязываются (им присваивается значение) с помощью выражений, которые могут ссылаться на переменные.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Переменные и аргументы](../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).  
  Описывает понятия переменных и аргументов и способ их использования.  
   

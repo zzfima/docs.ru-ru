@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: bcd7b699-4e50-4523-8c33-2f54a103d94e
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 32133d1b6fce619fb9990ab89820b7f19b6a5926
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: d2e8dc70007a0f3a411c4c8e48015f98c23da573
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="query-results"></a>Результаты запроса
 После преобразования запроса [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] в деревья команд и последующего выполнения результаты запроса обычно возвращаются в одной из следующих форм.  

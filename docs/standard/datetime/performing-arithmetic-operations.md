@@ -24,11 +24,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: def43f84186b53f9b0d2ade0a5a92e59606ee2af
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: edad8fc6643b90afc8327b574e19b178270829b3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>Выполнение арифметических операций с датами и временем
 
@@ -43,7 +46,7 @@ ms.lasthandoff: 10/18/2017
 
 <xref:System.DateTime.CompareTo%28System.DateTime%29> Метод сообщает, что местное время предшествует (или менее) в формате UTC, а операция вычитания указывает, что разница между временем UTC и местным временем для системы в США. США составляет семь часов. Тем не менее, поскольку эти значения дают различные представления одного и того же момента времени, в данном случае очевидно, что причина этого различия целиком кроется в смещении местного часового пояса относительно времени в формате UTC.
 
-Как правило <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> свойства не влияет на результаты, возвращенные <xref:System.DateTime.Kind> методы сравнения и арифметических (как показывает результат сравнения двух идентичных моментов времени), несмотря на то, что может повлиять на интерпретацию этих результатов. Например:
+Как правило <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> свойства не влияет на результаты, возвращенные <xref:System.DateTime.Kind> методы сравнения и арифметических (как показывает результат сравнения двух идентичных моментов времени), несмотря на то, что может повлиять на интерпретацию этих результатов. Пример:
 
 * Выполнить результатом любой арифметической операции над двумя значениями даты и времени, <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> свойства обоих равно <xref:System.DateTimeKind> отражает фактический интервал времени между двумя значениями. Аналогичным образом результат сравнения двух таких значений даты и времени будет точно отражать соотношение между временами.
 

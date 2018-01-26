@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 633769573253d7516bc50f0210c30376e6aa230a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2e864eec2ddf51d5cc88110654f6c23f146938d5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt; элемент
 Указывает, что приложение поддерживает только версию 1.0 среды CLR. Этот элемент устарел и больше не может использоваться. [ `supportedRuntime` ](supportedruntime-element.md) Следует использовать элемент.
@@ -53,7 +54,7 @@ safemode="true|false"/>
   
 ## <a name="safemode-attribute"></a>безопасный режим атрибута  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`false`|Код запуска среды выполнения ищет в реестре. Это значение по умолчанию.|  
 |`true`|Код запуска среды выполнения не проверяет реестр.|  
@@ -63,7 +64,7 @@ safemode="true|false"/>
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`startup`|Содержит `<requiredRuntime>` элемента.|  
@@ -93,4 +94,4 @@ safemode="true|false"/>
 ## <a name="see-also"></a>См. также  
  [Схема параметров запуска](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver> Указание используемой версии среды выполнения](http://msdn.microsoft.com/en-us/c376208d-980d-42b4-865b-fbe0d9cc97c2)
+ [\<PaveOver> Указание используемой версии среды выполнения](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)

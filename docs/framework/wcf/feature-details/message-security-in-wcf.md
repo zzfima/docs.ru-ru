@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0948c7447bcfd32ad666072ce6f74b1f6fd8aed8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 92422e40742909dbf338ec2660e5494ffcdd31cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-in-wcf"></a>Безопасность сообщений в WCF
 В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] имеется два основных режима для обеспечения безопасности (`Transport` и `Message`), а также третий режим (`TransportWithMessageCredential`), объединяющий в себе два предыдущих. В данном разделе рассматривается безопасность сообщения и причины для ее использования.  
@@ -71,5 +72,5 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>См. также  
  [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Безопасность транспорта](../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [Как: использование безопасности транспорта и учетных данных сообщения](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
+ [Практическое руководство. Использование средств обеспечения безопасности транспорта и учетных данных сообщения](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
  [Рекомендации, Глава 3: реализации транспорта и сообщений уровня безопасности](http://go.microsoft.com/fwlink/?LinkId=88897)

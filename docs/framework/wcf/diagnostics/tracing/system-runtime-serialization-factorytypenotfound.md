@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e0ab341a-4000-4076-87cc-ffe332266658
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: bc0c0aeaf9999bb6e6ffc2b02c9e33e9fb849f28
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 8899c3cad5865f49fbd89a3e04f7ec8ba3b91352
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemruntimeserializationfactorytypenotfound"></a>System.Runtime.Serialization.FactoryTypeNotFound
 System.Runtime.Serialization.FactoryTypeNotFound  

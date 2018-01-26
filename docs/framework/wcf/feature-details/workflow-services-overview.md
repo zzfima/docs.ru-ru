@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
 caps.latest.revision: "30"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f33920dbad701d803b9cb062cdd2b11aa1346df4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 0c38abe8ab0ac99a7e5bd0499ff826a00730b211
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-services-overview"></a>Общие сведения о службах рабочих процессов
 Службы рабочих процессов - это службы на основе [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], которые реализованы с помощью рабочих процессов. Службы Workflow Services являются рабочими процессами, использующими действия обмена сообщениями для отправки и получения сообщений [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. В.NET Framework 4.5 появилось несколько действий обмена сообщениями, позволяющих отправлять и получать сообщения из рабочего процесса. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]действия обмена сообщениями и как они могут использоваться для реализации различных шаблонов обмена сообщениями, в разделе [действий обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  

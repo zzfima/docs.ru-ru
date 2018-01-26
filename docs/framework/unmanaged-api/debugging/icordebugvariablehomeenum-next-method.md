@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 480317a4ec0515411f1ca8156a5bc4d06aa3f38a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3bab158cbbe2eaf6e52ae0df6a0eed86d3d0b8ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugvariablehomeenumnext-method"></a>Метод ICorDebugVariableHomeEnum::Next
 Возвращает заданное число [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) экземпляров, которые содержат сведения о локальных переменных и аргументов в функции.  
@@ -53,7 +54,7 @@ HRESULT Next(
 ## <a name="return-value"></a>Возвращаемое значение  
  Метод возвращает следующие значения.  
   
-|HRESULT|Описание|  
+|HRESULT|Описание:|  
 |-------------|-----------------|  
 |`S_OK`|Метод завершился успешно.|  
 |`S_FALSE`|Получить фактическое количество экземпляров, как отражено в `pceltFetched`, меньше, чем количество экземпляров, запрошенных.|  

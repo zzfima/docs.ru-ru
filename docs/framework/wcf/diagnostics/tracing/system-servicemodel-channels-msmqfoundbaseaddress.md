@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5431889d-c296-44f3-a54d-a356e9f1eb5e
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4b946c96de93dd524c157dd5e347149a63b06c4c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 9cddb2209fd6958fbca8018603b7d15b36aff575
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsmsmqfoundbaseaddress"></a>System.ServiceModel.Channels.MsmqFoundBaseAddress
 System.ServiceModel.Channels.MsmqFoundBaseAddress  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Среда размещения нашла базовый адрес для службы.  
   
 ## <a name="see-also"></a>См. также  

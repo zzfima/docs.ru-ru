@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 889e84db39af1257d709ef049e18d4397ea700d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 45cfed80decc2336c5a2bacf24fd075c2b81c531
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="odbc-schema-collections"></a>Коллекции схемы ODBC
 В данном разделе рассматривается поддержка коллекций схем для драйверов ODBC для Microsoft SQL Server, Oracle и Microsoft Jet.  
@@ -340,7 +341,7 @@ ms.lasthandoff: 10/18/2017
 |SQL_DATETIME_SUB|Int16|  
 |CHAR_OCTET_LENGTH|Int32|  
 |ORDINAL_POSITION|Int32|  
-|IS_NULLABLE|Строка|  
+|IS_NULLABLE|String|  
   
 ## <a name="see-also"></a>См. также  
  [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

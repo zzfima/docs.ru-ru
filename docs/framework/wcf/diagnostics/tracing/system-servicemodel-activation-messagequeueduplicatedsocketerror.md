@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5d039e48-8188-4f43-a9bd-d6c58c075173
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2b257a3dc460a271f07066c88c925c1c646e7cba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 91242969ab34937f238cf8b6d57b10be6ea2f15f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelactivationmessagequeueduplicatedsocketerror"></a>System.ServiceModel.Activation.MessageQueueDuplicatedSocketError
 System.ServiceModel.Activation.MessageQueueDuplicatedSocketError  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Произошла ошибка при дублировании сокета.  
   
 ## <a name="see-also"></a>См. также  

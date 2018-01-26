@@ -10,21 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b6e69a9dbc204cfa8f0abc7e641b0784a08d747c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 33c8b500002b46d720533f681807889955de5982
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="math-canonical-functions"></a>Математические канонические функции
 Язык [!INCLUDE[esql](../../../../../../includes/esql-md.md)] включает математические канонические функции.  
   
  В следующей таблице приведены математические канонические функции языка [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
-|Функция|Описание|  
+|Функция|Описание:|  
 |--------------|-----------------|  
 |`Abs(` `value` `)`|Возвращает абсолютное значение `value`.<br /><br /> **Аргументы**<br /><br /> `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, И `Decimal`.<br /><br /> **Возвращаемое значение**<br /><br /> Тип параметра `value`.<br /><br /> **Пример**<br /><br /> `Abs(-2)`|  
 |`Ceiling(` `value` `)`|Возвращает наименьшее целое число, которое не меньше значения `value`.<br /><br /> **Аргументы**<br /><br /> Объект `Single`, `Double`, и `Decimal`.<br /><br /> **Возвращаемое значение**<br /><br /> Тип параметра `value`.<br /><br /> **Пример**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_CEILING](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_ceiling)]

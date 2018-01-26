@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d3791ea4084a6ae568fef1e76680f91434284639
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 6207bc570dd8182b351a945a36d5f80c14a8dd4c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>Сценарии безопасности приложений в SQL Server
 Не существует одного правильного способа создания безопасного клиентского приложения SQL Server. Каждое приложение уникально своими требованиями, средой развертывания и количеством пользователей. Приложение, довольно хорошо защищенное при начальном развертывании, с течением времени может стать менее защищенным. Невозможно точно предсказать, какие угрозы могут возникнуть в будущем.  
@@ -44,8 +45,8 @@ ms.lasthandoff: 11/21/2017
   
  Всегда задавайте надежный пароль учетной записи `sa`, даже если используется проверка подлинности Windows.  
   
-## <a name="in-this-section"></a>Содержание  
- [Управление разрешениями с помощью хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Управление разрешениями с использованием хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  Описывает, как использовать хранимые процедуры для управления разрешениями и контроля доступа к данным. Использование хранимых процедур является эффективным способом ответа на многие угрозы системе безопасности.  
   
  [Написание безопасного динамического кода SQL в SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
  [Создание ролей приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)  
  Описывает возможности и возможности ролей приложения.  
   
- [Включение доступа между базами данных в SQL Server](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
+ [Организация межбазового доступа в SQL Server](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
  Описывает, как включить перекрестный доступ между базами данных, не ухудшая безопасность.  
   
 ## <a name="see-also"></a>См. также  

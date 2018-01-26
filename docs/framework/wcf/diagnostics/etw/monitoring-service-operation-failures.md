@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 59472ba3-8ebf-4479-bd7b-f440d5e636cb
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 42506f7f32d0174b4f980f4e94d370cf4c137276
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: ce62eb348cb57ce6137c58fbc50a32e829980c0c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="monitoring-service-operation-failures"></a>Наблюдение за сбоями в работе службы
 Если для приложения включено аналитическое отслеживание, сбои в работе службы можно легко отслеживать в обозревателе событий.  В этом разделе показано, как определить момент, в который произошел сбой операции службы, и как определить причину сбоя.  

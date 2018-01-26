@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2c69a7ef-2f5a-438d-bcaf-b3e4c79f0ab7
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9ce985ac26acdaa4be55e20344084ccd94b64a2f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 8aaf42d420fe21f51b94e89dc6e0ec915efabe9a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="4805---discoverymessagewithinvalidcontent"></a>4805 - DiscoveryMessageWithInvalidContent
 ## <a name="properties"></a>Свойства  

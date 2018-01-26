@@ -17,31 +17,31 @@ ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d74a338336d5878cb8d6f212076bb9f1eb7ef768
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2cf6919ee2d4f0a4031e18d46b9e5ebaf816b120
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="optimize-c-compiler-options"></a>/optimize (параметры компилятора C#)
-Параметр **/optimize** включает или отключает оптимизацию кода компилятором, чтобы сделать код более быстрым, коротким и эффективным.  
+# <a name="-optimize-c-compiler-options"></a>-optimize (параметры компилятора C#)
+Параметр **-optimize** включает или отключает оптимизацию кода компилятором, чтобы сделать код более быстрым, коротким и эффективным.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```console  
-/optimize[+ | -]  
+-optimize[+ | -]  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Кроме того, параметр **/optimize** включает оптимизацию кода во время выполнения в общеязыковой среде выполнения (CLR).  
+ Кроме того, параметр **-optimize** включает оптимизацию кода во время выполнения в общеязыковой среде выполнения (CLR).  
   
- По умолчанию оптимизация отключена. Чтобы включить оптимизацию, укажите **/optimize+**.  
+ По умолчанию оптимизация отключена. Чтобы включить оптимизацию, укажите **-optimize+**.  
   
- При построения модуля для сборки используйте те же настройки параметра **/optimize**, что и для сборки.  
+ При создании модуля для сборки используйте те же настройки параметра **-optimize**, что и для сборки.  
   
- **/o** является краткой формой параметра **/optimize**.  
+ **-o** является краткой формой параметра **-optimize**.  
   
- Параметры **/optimize** и [/debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md) можно объединять.  
+ Параметры **-optimize** и [-debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md) можно объединять.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/21/2017
  Скомпилируйте `t2.cs` и включите выполняемую компилятором оптимизацию:  
   
 ```console  
-csc t2.cs /optimize  
+csc t2.cs -optimize  
 ```  
   
 ## <a name="see-also"></a>См. также  

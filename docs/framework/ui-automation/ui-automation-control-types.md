@@ -17,57 +17,58 @@ caps.latest.revision: "61"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: e521f07048e37533e052dc8a43fb2c522750f92a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 658c5aca3dc8d70400cdd26d9e0af1e253e175c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-control-types"></a>Типы элементов управления автоматизации пользовательского интерфейса
 **Примечание** эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] классы, определенные в <xref:System.Windows.Automation> пространства имен. Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
  В этом разделе содержатся сведения о поддержке для типов элементов управления в [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
- [Общие сведения о типах элементов управления модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления Button](../../../docs/framework/ui-automation/ui-automation-support-for-the-button-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления Calendar](../../../docs/framework/ui-automation/ui-automation-support-for-the-calendar-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления CheckBox](../../../docs/framework/ui-automation/ui-automation-support-for-the-checkbox-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления ComboBox](../../../docs/framework/ui-automation/ui-automation-support-for-the-combobox-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления DataGrid](../../../docs/framework/ui-automation/ui-automation-support-for-the-datagrid-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для элемента управления типа DataItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления Document](../../../docs/framework/ui-automation/ui-automation-support-for-the-document-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления](../../../docs/framework/ui-automation/ui-automation-support-for-the-edit-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления Group](../../../docs/framework/ui-automation/ui-automation-support-for-the-group-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления Header](../../../docs/framework/ui-automation/ui-automation-support-for-the-header-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления HeaderItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-headeritem-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления Hyperlink](../../../docs/framework/ui-automation/ui-automation-support-for-the-hyperlink-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления изображения](../../../docs/framework/ui-automation/ui-automation-support-for-the-image-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления список](../../../docs/framework/ui-automation/ui-automation-support-for-the-list-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления ListItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления меню](../../../docs/framework/ui-automation/ui-automation-support-for-the-menu-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления MenuBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-menubar-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления MenuItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-menuitem-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления Pane](../../../docs/framework/ui-automation/ui-automation-support-for-the-pane-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления ProgressBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-progressbar-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для элемента управления типа RadioButton](../../../docs/framework/ui-automation/ui-automation-support-for-the-radiobutton-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления ScrollBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-scrollbar-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления Separator](../../../docs/framework/ui-automation/ui-automation-support-for-the-separator-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления "ползунок"](../../../docs/framework/ui-automation/ui-automation-support-for-the-slider-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления "Счетчик"](../../../docs/framework/ui-automation/ui-automation-support-for-the-spinner-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления SplitButton](../../../docs/framework/ui-automation/ui-automation-support-for-the-splitbutton-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления StatusBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-statusbar-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления Tab](../../../docs/framework/ui-automation/ui-automation-support-for-the-tab-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления TabItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-tabitem-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления Table](../../../docs/framework/ui-automation/ui-automation-support-for-the-table-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления Text](../../../docs/framework/ui-automation/ui-automation-support-for-the-text-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для элемента управления типа Thumb](../../../docs/framework/ui-automation/ui-automation-support-for-the-thumb-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления "заголовок окна"](../../../docs/framework/ui-automation/ui-automation-support-for-the-titlebar-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления ToolBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-toolbar-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления ToolTip](../../../docs/framework/ui-automation/ui-automation-support-for-the-tooltip-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для древовидного типа элемента управления](../../../docs/framework/ui-automation/ui-automation-support-for-the-tree-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления TreeItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md)  
- [Поддержка автоматизации пользовательского интерфейса для типа элемента управления Window](../../../docs/framework/ui-automation/ui-automation-support-for-the-window-control-type.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Общие сведения о типах элементов управления автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления кнопки](../../../docs/framework/ui-automation/ui-automation-support-for-the-button-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления Calendar](../../../docs/framework/ui-automation/ui-automation-support-for-the-calendar-control-type.md)  
+ [Поддержка модели автоматизированного пользовательского интерфейса для типа элемента управления CheckBox](../../../docs/framework/ui-automation/ui-automation-support-for-the-checkbox-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления ComboBox](../../../docs/framework/ui-automation/ui-automation-support-for-the-combobox-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления DataGrid](../../../docs/framework/ui-automation/ui-automation-support-for-the-datagrid-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления типа DataItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления Document](../../../docs/framework/ui-automation/ui-automation-support-for-the-document-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления Edit](../../../docs/framework/ui-automation/ui-automation-support-for-the-edit-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления Group](../../../docs/framework/ui-automation/ui-automation-support-for-the-group-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления Header](../../../docs/framework/ui-automation/ui-automation-support-for-the-header-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса типа элемента управления HeaderItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-headeritem-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления типа Hyperlink](../../../docs/framework/ui-automation/ui-automation-support-for-the-hyperlink-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления изображения](../../../docs/framework/ui-automation/ui-automation-support-for-the-image-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления List](../../../docs/framework/ui-automation/ui-automation-support-for-the-list-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления ListItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления Menu](../../../docs/framework/ui-automation/ui-automation-support-for-the-menu-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления MenuBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-menubar-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления MenuItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-menuitem-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления Pane](../../../docs/framework/ui-automation/ui-automation-support-for-the-pane-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления ProgressBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-progressbar-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления RadioButton](../../../docs/framework/ui-automation/ui-automation-support-for-the-radiobutton-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления ScrollBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-scrollbar-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления Separator](../../../docs/framework/ui-automation/ui-automation-support-for-the-separator-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления Slider](../../../docs/framework/ui-automation/ui-automation-support-for-the-slider-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления Spinner](../../../docs/framework/ui-automation/ui-automation-support-for-the-spinner-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления SplitButton](../../../docs/framework/ui-automation/ui-automation-support-for-the-splitbutton-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления StatusBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-statusbar-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления Tab](../../../docs/framework/ui-automation/ui-automation-support-for-the-tab-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления TabItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-tabitem-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления Table](../../../docs/framework/ui-automation/ui-automation-support-for-the-table-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления Text](../../../docs/framework/ui-automation/ui-automation-support-for-the-text-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления Thumb](../../../docs/framework/ui-automation/ui-automation-support-for-the-thumb-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления TitleBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-titlebar-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления ToolBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-toolbar-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления ToolTip](../../../docs/framework/ui-automation/ui-automation-support-for-the-tooltip-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса типа элемента управления Tree](../../../docs/framework/ui-automation/ui-automation-support-for-the-tree-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления TreeItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md)  
+ [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления Window](../../../docs/framework/ui-automation/ui-automation-support-for-the-window-control-type.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Automation.ControlType>  

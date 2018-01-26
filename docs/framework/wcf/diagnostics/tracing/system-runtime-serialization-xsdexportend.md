@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 406169f7-dc69-4e02-8a22-b38049dab995
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5f175d2f2b211fd1d72074324241425c10ea3dc7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 5b8cc5dc0c92aae16fbeb06f4e9ab2c110e365a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemruntimeserializationxsdexportend"></a>System.Runtime.Serialization.XsdExportEnd
 System.Runtime.Serialization.XsdExportEnd  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Экспорт схемы завершен.  
   
 ## <a name="see-also"></a>См. также  

@@ -13,16 +13,17 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3d34ef9c88cb3db6afc0a01fa5bda3580c529ef9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b05d1c898fe3a0292eb667e2269008aac0451280
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelsecuritysecurityserversessionkeyupdated"></a>System.ServiceModel.Security.SecurityServerSessionKeyUpdated
 System.ServiceModel.Security.SecurityServerSessionKeyUpdated  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Сеансовый ключ безопасности был обновлен сервером.  
   
 ## <a name="see-also"></a>См. также  

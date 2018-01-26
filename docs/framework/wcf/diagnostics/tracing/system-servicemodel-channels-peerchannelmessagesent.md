@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7aa50d9d-37ee-454c-8746-e3c3857edd07
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 85dbf79aec820f59b431a900405d00cc561fb2d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: c80ecb08f15b43a4f323c45d8518beb3988b4b51
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelspeerchannelmessagesent"></a>System.ServiceModel.Channels.PeerChannelMessageSent
 Выполняется отправка нового сообщения PeerChannel.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Эта трассировка возникает при отправке сообщения PeerChannel.  
   
 ## <a name="see-also"></a>См. также  

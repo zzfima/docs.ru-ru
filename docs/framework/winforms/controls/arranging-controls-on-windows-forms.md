@@ -17,16 +17,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b5709f07edc90b9094561870d31fbe28697974ac
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6f590080d1a3898e84df30f0fb690c3d18905f8e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="arranging-controls-on-windows-forms"></a>Расположение элементов управления в формах Windows Forms
 Размещая элементы управления в формах и управляя ими различными способами, можно создать пользовательские интерфейсы, которые будут удобны и понятны пользователям.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Выравнивание нескольких элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-align-multiple-controls-on-windows-forms.md)  
  Инструкции по настройке положения нескольких элементов управления в форме Windows Forms.  
   

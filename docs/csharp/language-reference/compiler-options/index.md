@@ -1,14 +1,10 @@
 ---
 title: "Параметры компилятора C#"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.build.options
-dev_langs:
-- CSharp
+f1_keywords: cs.build.options
 helpviewer_keywords:
 - compiler options [C#]
 - csc.exe
@@ -16,38 +12,23 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 59000f60acdc8ada11bc5abb9e91b5f53d42b9ae
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
-ms.sourcegitcommit: 02cfb7708959057de593506db55e4f31f5ab4fd0
-ms.openlocfilehash: 7c5f5274a5685e50fb7f1d06771b0340200d1c3f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="c-compiler-options"></a>Параметры компилятора C#
 Компилятор создает исполняемые файлы (EXE-файлы), библиотеки динамической компоновки (DLL-файлы) или модули кода (.netmodule).  
   
- Каждый параметр компилятора можно использовать в двух формах записи: **-параметр** или **/параметр**. В документации используется только вариант **/параметр**.  
+ Каждый параметр компилятора можно использовать в двух формах записи: **-параметр** или **/параметр**. В документации показана только форма **-<параметр>**.  
   
- В Visual Web Developer 2008 параметры компилятора задаются в файле web.config. Дополнительные сведения см. в разделе [\<компилятор> Элемент](https://msdn.microsoft.com/library/y9x69bzw).  
+ В Visual Studio параметры компилятора задаются в файле web.config. Дополнительные сведения см. в разделе [\<компилятор> Элемент](../../../framework/configure-apps/file-schema/compiler/compiler-element.md).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Сборка из командной строки с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
  Сведения о сборке приложения Visual C# из командной строки.  
   
@@ -69,4 +50,3 @@ ms.lasthandoff: 08/28/2017
   
  [Preparing and Managing Builds](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) (Подготовка к сборке и управление сборкой)  
  Процедуры выполнения сборки в среде разработки Visual Studio.
-

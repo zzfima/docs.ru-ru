@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ad963bf04cfbf057128421d0808a2f6b6a78c2bd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tools"></a>Инструменты
 В этом разделе перечислены все исключения, генерируемые средствами [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/18/2017
 |WrnNoServiceContractTypes|Не удается создать типы XmlSerializer для указанной сборки. Типы контракта службы не найдены.|  
 |WrnCouldNotLoadTypesFromReferenceAssemblyAt|Ошибка при загрузке типов в сборке, загруженной из указанного объекта. Некоторые типы в сборке не удается загрузить, и они недоступны средству.|  
 |ErrDirectoryPointsToAFile|Указанному параметру передано указанное недопустимое значение. Указанное значение представляет собой путь к файлу.|  
-|Ошибка|Ошибка:|  
+|Error|Ошибка:|  
 |ErrDuplicateReferenceValues|Указанная сборка загружена дважды с использованием указанного параметра. Сборку можно указать только один раз.|  
 |WrnNoXmlSerializerOperationBehavior|Не удается создать XmlSerializer для указанной сборки. В сборке отсутствует контракт службы, содержащий операцию с XmlSerializerOperationBehavior.|  
 |ErrCannotCreateDirectory|Не удается создать указанный каталог.|  

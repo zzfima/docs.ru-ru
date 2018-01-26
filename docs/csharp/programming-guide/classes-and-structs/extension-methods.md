@@ -12,11 +12,11 @@ ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
 caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 30058a461dddb872e76bef574273c62910e8b2c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4c94e6cd2894959d64fe463c85b4460893f2bf96
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="extension-methods-c-programming-guide"></a>Методы расширения (Руководство по программированию в C#)
 Методы расширения позволяют "добавлять" методы в существующие типы без создания нового производного типа, перекомпиляции и иного изменения первоначального типа. Методы расширения представляют собой особую разновидность статического метода, но вызываются так же, как методы экземпляра в расширенном типе. Для клиентского кода, написанного на языках C#, F# и Visual Basic, нет видимого различия между вызовом метода расширения и вызовом методов, фактически определенных в типе.  
@@ -84,14 +84,14 @@ using System.Linq;
   
 -   Методы расширения вводятся в область действия на уровне пространства имен. Например, при наличии нескольких статических классов, содержащих методы расширения в единственном пространстве имен с именем `Extensions`, все они будут введены в область действия директивой `using Extensions;`.  
   
- Для реализованной библиотеки классов не следует использовать методы расширения во избежание увеличения номера версии сборки. Если требуется добавить значительную функциональность в библиотеку, владельцем исходного кода которой вы являетесь, необходимо соблюдать стандартные правила .NET Framework по управлению версиями сборок. Дополнительные сведения см. в разделе [Версии сборок](https://msdn.microsoft.com/library/51ket42z).  
+ Для реализованной библиотеки классов не следует использовать методы расширения во избежание увеличения номера версии сборки. Если требуется добавить значительную функциональность в библиотеку, владельцем исходного кода которой вы являетесь, необходимо соблюдать стандартные правила .NET Framework по управлению версиями сборок. Дополнительные сведения см. в разделе [Версии сборок](../../../../docs/framework/app-domains/assembly-versioning.md).  
   
 ## <a name="see-also"></a>См. также  
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Parallel Образцы программирования (к ним относятся многие примеры методов расширения)](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
+ [Parallel Programming Samples (Образцы параллельного программирования, включают множество примеров методов расширения)](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
  [Лямбда-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
  [Общие сведения о стандартных операторах запроса](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- [Правила преобразования для экземпляра параметров и их влияние](http://go.microsoft.com/fwlink/?LinkId=112385)  
- [Методы расширения взаимодействие между языками](http://go.microsoft.com/fwlink/?LinkId=112386)  
- [Методы расширения и делегаты, каррированные](http://go.microsoft.com/fwlink/?LinkId=112387)  
- [Extension method Binding and Error reporting](http://go.microsoft.com/fwlink/?LinkId=112388)
+ [Conversion Rules for Instance Parameters and their Impact (Правила преобразования для параметров экземпляра и их влияние)](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/conversion-rules-for-instance-parameters-and-their-impact)  
+ [Extension Methods Interoperability between Languages (Взаимодействие между языками с помощью методов расширения)](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/extension-methods-interoperability-between-languages)  
+ [Extension Methods and Curried Delegates (Методы расширения и каррированные делегаты)](https://blogs.msdn.microsoft.com/sreekarc/2007/05/01/extension-methods-and-curried-delegates)  
+ [Extension method Binding and Error reporting](https://blogs.msdn.microsoft.com/sreekarc/2007/04/26/extension-method-binding-and-error-reporting)

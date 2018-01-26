@@ -9,11 +9,11 @@ ms.assetid: 8d2bac12-bc6a-42ae-b28b-80b026dfabce
 caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 117e3c91e4ec837ac629af54a952118670425a08
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 057cb9f0fee4f6cee30348edc248121feab0b310
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="unable-to-ping-because-a-network-connection-is-not-available"></a>Не удается отправить запрос отклика: отсутствует сетевое соединение.
 Не удается выполнить операцию, поскольку отсутствует доступное сетевое соединение.  
@@ -23,7 +23,7 @@ ms.lasthandoff: 11/21/2017
 -   Подключитесь к сети и повторите операцию.  
   
 ## <a name="see-also"></a>См. также  
- [Метод My.Computer.Network.Ping](http://msdn.microsoft.com/en-us/5f1eff72-3882-44a4-8234-ac21daac464c)  
- [Свойство My.Computer.Network.IsAvailable](http://msdn.microsoft.com/en-us/29f9361e-8c62-4d2e-a4f0-44b2dc43b9aa)  
- [Сетевые операции в .NET Framework с Visual Basic](http://msdn.microsoft.com/en-us/c5379021-44ef-4d6a-acf5-e951fdcab6b2)  
- [Объект My.Computer.Network](../../visual-basic/language-reference/objects/my-computer-network-object.md)
+ [My.Computer.Network.Ping](xref:Microsoft.VisualBasic.Devices.Network.Ping%2A)  
+ [My.Computer.Network.IsAvailable](xref:Microsoft.VisualBasic.Devices.Network.IsAvailable)  
+ [Сетевые операции в .NET Framework с Visual Basic](http://msdn.microsoft.com/library/c5379021-44ef-4d6a-acf5-e951fdcab6b2)  
+ [My.Computer.Network](xref:Microsoft.VisualBasic.Devices.Network)

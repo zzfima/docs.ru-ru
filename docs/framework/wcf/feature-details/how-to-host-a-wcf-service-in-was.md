@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
 caps.latest.revision: "25"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3069dfbde9fedc0a0c89d8f55ba1adcc852d5c24
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 3bfa798bf2f2c758905512df32e03214634b6c2e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Практическое руководство. Размещение службы WCF в WAS
 В настоящем разделе описаны основные этапы, требуемые для создания служб активации процесса Windows (также известных как WAS), размещенных в службе [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. WAS является службой активации нового процесса, представляющей собой обобщение функций Internet Information Services (IIS), которые работают с транспортными протоколами, отличными от HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] использует интерфейс адаптера прослушивателя для передачи запросов на активацию, полученных через протоколы, отличные от HTTP, которые поддерживаются [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], например такие как TCP, именованные каналы и MSMQ.  

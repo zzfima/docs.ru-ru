@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a704fb1d-6cf8-4fd1-9aee-e70d7055c812
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 64c180d992c9a07afa22338002f957a406e64145
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: c568c60ca964fc9f95747e5b70fa31bb3be1214b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelunhandledaction"></a>System.ServiceModel.UnhandledAction
 System.ServiceModel.UnhandledAction  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Для обработки данного действия нет доступных служб.  
   
  Все трассировки для счетчика производительности можно использовать для отладки связанных с ним проблем.  

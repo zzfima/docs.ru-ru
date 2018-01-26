@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c7599a4b85a166aedd7a2293b79699b3ef03d14d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4447f648277576169c9004d1880283728639c8f3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="coropenflags-enumeration"></a>Перечисление CorOpenFlags
 Содержит значения флага, которые управляют поведением метаданных при открытии файлов манифеста.  
@@ -50,7 +51,7 @@ typedef enum CorOpenFlags
 } CorOpenFlags;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 |Член|Описание|  
 |------------|-----------------|  
@@ -61,7 +62,7 @@ typedef enum CorOpenFlags
 |`ofCacheImage`|Является устаревшей. Этот флаг отклонен.|  
 |`ofManifestMetadata`|Является устаревшей. Этот флаг отклонен.|  
 |`ofReadOnly`|Указывает, что файл должен быть открыт для чтения, а вызов `QueryInterface` для [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) нельзя сделать.|  
-|`ofTakeOwnership`|Указывает, что память была выделена с помощью вызова [CoTaskMemAlloc](http://msdn.microsoft.com/en-us/c4cb588d-9482-4f90-a92e-75b604540d5c) и будет освобождена метаданными.|  
+|`ofTakeOwnership`|Указывает, что память была выделена с помощью вызова [CoTaskMemAlloc](http://msdn.microsoft.com/library/c4cb588d-9482-4f90-a92e-75b604540d5c) и будет освобождена метаданными.|  
 |`ofNoTypeLib`|Является устаревшей. Этот флаг отклонен.|  
 |`ofNoTransform`|Указывает, что автоматические преобразования из файла .WINMD следует отключить. Другими словами, проекцию типа среды выполнения Windows на тип платформы .NET Framework следует отключить. Дополнительные сведения см. в разделе [под изнутри .NET и среды выполнения Windows](http://msdn.microsoft.com/magazine/jj651569.aspx).|  
 |`ofReserved1`|Зарезервировано для внутреннего использования.|  

@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8af0f73f-3718-4dc8-93f4-638e2465da21
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c6e8d9efee7c6cc3295fd7b9ebb89d45e2764fbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: e906a7c2ceefb08d7b2bd99c77fdc6aa7080f9bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelportsharingwasconnected"></a>System.ServiceModel.PortSharing.WasConnected
 System.ServiceModel.PortSharing.WasConnected  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Служба активации Windows (WAS) подключена.  
   
 ## <a name="see-also"></a>См. также  

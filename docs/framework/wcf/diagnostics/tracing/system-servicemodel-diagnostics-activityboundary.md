@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a24e3076-0c14-4271-9990-090c0dfed07f
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 97913b50d9b97919aefbcb666e4f557dd91a2818
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 5a0e0b01df5cf40d69fd242db71a85e86a5da938
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodeldiagnosticsactivityboundary"></a>System.ServiceModel.Diagnostics.ActivityBoundary
 System.ServiceModel.Diagnostics.ActivityBoundary  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Граница действия.  
   
 ## <a name="see-also"></a>См. также  

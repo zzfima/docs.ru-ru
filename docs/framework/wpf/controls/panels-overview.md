@@ -20,11 +20,12 @@ caps.latest.revision: "48"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f89ea3308d0e6cffc3ed50809f0e87e7ba854ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d25c6d9e4e6d067ad2107df2374329d84300c015
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="panels-overview"></a>Общие сведения о панелях
 <xref:System.Windows.Controls.Panel>элементы являются компонентами, которые управляют отображением элементов — их размер и измерения, их положение и расположение их дочернего содержимого. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Предоставляет ряд предопределенных <xref:System.Windows.Controls.Panel> элементы, а также возможность создания пользовательских <xref:System.Windows.Controls.Panel> элементов.  
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/21/2017
   
  Каждый элемент панели имеет собственные специальные возможности, представленные в следующей таблице.  
   
-|Имя элемента|Панель пользовательского интерфейса?|Описание|  
+|Имя элемента|Панель пользовательского интерфейса?|Описание:|  
 |------------------|---------------|-----------------|  
 |<xref:System.Windows.Controls.Canvas>|Да|Определяет область, внутри которой можно явным образом разместить дочерние элементы при помощи относительных координат в <xref:System.Windows.Controls.Canvas> области.|  
 |<xref:System.Windows.Controls.DockPanel>|Да|Определяет область, в которой можно горизонтально либо вертикально упорядочивать дочерние элементы относительно друг друга.|  
@@ -254,7 +255,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="localizationglobalization-support"></a>Поддержка локализации и глобализации  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживает ряд возможностей для создания локализуемого [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
- Все элементы panel изначально поддерживают <xref:System.Windows.FrameworkElement.FlowDirection%2A> свойство, которое может использоваться для динамического содержимого на основе параметров пользователя язык или язык. Для получения дополнительной информации см. <xref:System.Windows.FrameworkElement.FlowDirection%2A>.  
+ Все элементы panel изначально поддерживают <xref:System.Windows.FrameworkElement.FlowDirection%2A> свойство, которое может использоваться для динамического содержимого на основе параметров пользователя язык или язык. Дополнительные сведения см. в разделе <xref:System.Windows.FrameworkElement.FlowDirection%2A>.  
   
  <xref:System.Windows.Window.SizeToContent%2A> Свойство предоставляет механизм, позволяющий разработчикам приложений предвидеть потребности локализованные [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. С помощью <xref:System.Windows.SizeToContent.WidthAndHeight> значения данного свойства является родительским <xref:System.Windows.Window> всегда изменяет свой размер динамически по размеру содержимого и не ограничивается искусственный ограничения высоты или ширины.  
   

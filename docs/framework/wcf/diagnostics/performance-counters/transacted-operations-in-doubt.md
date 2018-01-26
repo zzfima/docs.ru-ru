@@ -10,17 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 83c7a86d-37de-4c6a-aa09-5d53fc4476b6
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9be788495f69718cf317ea695e76874075e67e28
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: f01caf603f515a2bb628c81d690b539655912f97
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transacted-operations-in-doubt"></a>Количество операций с поддержкой транзакций с сомнительным результатом
 Имя счетчика: Количество операций с поддержкой транзакций с сомнительным результатом.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Количество операций с поддержкой транзакций, имеющих сомнительный результат, произошедших в данной службе.

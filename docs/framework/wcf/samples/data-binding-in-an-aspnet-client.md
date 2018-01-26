@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
 caps.latest.revision: "23"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7ceb63315d94c0deed161bb294e8f61bf523bb63
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 8f7a3c4adb1a72a31029da7f73778a5ed407b2f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>Привязка данных в клиенте ASP.NET
 В этом примере показано, как выполнить привязку к данным, обычно возвращаемым службой [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] в приложении веб-форм.  

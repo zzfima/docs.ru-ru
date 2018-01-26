@@ -12,14 +12,15 @@ dev_langs:
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 713417131338dd683906eb2de56e615d4aa13c10
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 96ae4d3e02b923187b3e0f88a7b18e84094fa584
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Как разместить параллельно несколько версий рабочего процесса
 `WorkflowIdentity` предоставляет разработчикам приложений рабочих процессов способ связать имя и версию с определением рабочего процесса, а также связать эти сведения с сохраненным экземпляром рабочего процесса. Эти идентификационные данные могут быть использованы разработчиками приложений рабочего процесса для поддержки таких сценариев, как параллельное выполнение нескольких версий определения рабочего процесса, и являются ключевым элементом для других функциональных возможностей, таких как динамическое обновление. Этот шаг в учебнике показывает, как использовать `WorkflowIdentity` для размещения нескольких версий рабочих процессов одновременно.  
@@ -142,7 +143,7 @@ ms.lasthandoff: 11/21/2017
     Guess + " is too high."  
     ```  
   
-4.  Перетащите **WriteLine** действия из **примитивы** раздел **элементов** и поместите его на точку удаления действия `True` самого верхнего `FlowDecision` . Действие `WriteLine` добавляется к блок-схеме и связывается с действием `True` `FlowDecision`.  
+4.  Перетащите **WriteLine** действия из **примитивы** раздел **элементов** и поместите его на точку удаления действия `True` самого верхнего `FlowDecision` . Действие `WriteLine` добавляется к блок-схеме и связывается с действием `True``FlowDecision`.  
   
 5.  В поле свойств `Text` введите следующее выражение.  
   

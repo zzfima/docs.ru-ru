@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 9ce3dc97e27ab76024c989e1b7208d388312c6b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0dd130785734ef81948346f020c984d654b04542
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-specification-and-community-promise"></a>Спецификация модели автоматизации пользовательского интерфейса и обязательство сообщества
 Модели автоматизации пользовательского интерфейса предоставляет программный доступ к большинству элементов пользовательского интерфейса (UI) на рабочем столе Включение продуктов поддержки специальных возможностей, таких как средства чтения с экрана для предоставления сведений о пользовательском Интерфейсе для конечных пользователей и управлять средствами, отличными от стандартного ввода пользовательского интерфейса .  

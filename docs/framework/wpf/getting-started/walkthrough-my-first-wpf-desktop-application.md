@@ -19,11 +19,12 @@ caps.latest.revision: "71"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9818231a68f5c2ac2a6852f27e4876baa9728e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 16ed99181f8462e805638b5d3881464b16f21177
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Пошаговое руководство: Мои первого классического приложения WPF
 В этом пошаговом руководстве представляет собой введение в разработку [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] приложения, которое содержит элементы, которые являются общими для большинства [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложений: [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] разметки, кода, определения приложения, элементы управления, макет, Привязка данных и стили. 
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="creating-the-application-project"></a>Создание проекта приложения  
  В этом разделе вы создадите инфраструктуру приложения, включающую в себя определение приложения, две страницы и изображение. 
   
-1. Создайте проект приложения WPF на Visual Basic или Visual C# с именем `ExpenseIt`. Дополнительные сведения см. в разделе [Практическое руководство. Создание нового проекта приложения WPF](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82). 
+1. Создайте проект приложения WPF на Visual Basic или Visual C# с именем `ExpenseIt`. Дополнительные сведения см. в разделе [Практическое руководство. Создание нового проекта приложения WPF](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82). 
   
     > [!NOTE]
     >  В этом пошаговом руководстве используется <xref:System.Windows.Controls.DataGrid> управления, доступных в .NET Framework 4. Быть в том, что проект предназначен для .NET Framework 4 или более поздней версии. Дополнительные сведения см. в разделе[как: целевой версии платформы .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework). 
@@ -114,7 +115,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="adding-files-to-the-application"></a>Добавление файлов в приложение  
  В этом разделе в приложение добавляются две страницы и изображение. 
   
-1. Добавление новой страницы (WPF) в проект с именем `ExpenseItHome.xaml`. Дополнительные сведения см. в разделе [как: Добавление новых элементов в проект WPF](http://msdn.microsoft.com/en-us/17e6b238-fc32-4385-98ef-2f66ca09d9ad). 
+1. Добавление новой страницы (WPF) в проект с именем `ExpenseItHome.xaml`. Дополнительные сведения см. в разделе [как: Добавление новых элементов в проект WPF](http://msdn.microsoft.com/library/17e6b238-fc32-4385-98ef-2f66ca09d9ad). 
   
      Эта страница отображается первой при запуске приложения. На ней выводится список, в котором можно выбрать человека и просмотреть отчет о его затратах. 
   
@@ -170,7 +171,7 @@ ms.lasthandoff: 11/21/2017
     [!code-csharp[ExpenseIt#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/ExpenseReportPage.xaml.cs#5)]
     [!code-vb[ExpenseIt#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml.vb#5)]  
   
-10. Добавьте в проект изображение с именем watermark.png. Можно создать собственное изображение или скопировать файл из образца кода. Дополнительные сведения см. в разделе [NIB: Практическое: Добавление существующих элементов в проект](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3). 
+10. Добавьте в проект изображение с именем watermark.png. Можно создать собственное изображение или скопировать файл из образца кода. Дополнительные сведения см. в разделе [NIB: Практическое: Добавление существующих элементов в проект](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3). 
 
 ## <a name="building-and-running-the-application"></a>Построение и запуск приложения  
  В этом разделе выполняются сборка и запуск приложения. 
@@ -279,7 +280,7 @@ ms.lasthandoff: 11/21/2017
   
 1. Откройте файл ExpenseItHome.xaml. 
   
-2. Добавить <xref:System.Windows.Controls.Primitives.ButtonBase.Click> обработчик событий <xref:System.Windows.Controls.Button> элемента. Дополнительные сведения см. в разделе [как: создание простого обработчика событий](http://msdn.microsoft.com/en-us/b1456e07-9dec-4354-99cf-18666b64f480). 
+2. Добавить <xref:System.Windows.Controls.Primitives.ButtonBase.Click> обработчик событий <xref:System.Windows.Controls.Button> элемента. Дополнительные сведения см. в разделе [как: создание простого обработчика событий](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480). 
   
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]  
   

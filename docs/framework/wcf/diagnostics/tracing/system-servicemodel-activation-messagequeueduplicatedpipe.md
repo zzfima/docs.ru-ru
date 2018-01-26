@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 97c4e6a3-6673-4eb7-a8b2-fc8c6d782ddf
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c1c070a8a7a630ef071e5f5f9db6d255aa032952
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 4f2e26e9b3541251b1ebebaa3deb08bd0a356f83
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelactivationmessagequeueduplicatedpipe"></a>System.ServiceModel.Activation.MessageQueueDuplicatedPipe
 System.ServiceModel.Activation.MessageQueueDuplicatedPipe  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Дублирован дескриптор именованного канала.  
   
 ## <a name="see-also"></a>См. также  

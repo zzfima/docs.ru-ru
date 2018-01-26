@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 85ccad3e2c3b237e286f3737589a5e58994521bf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 38ffe6728ca05022caca8f5973b546f2b17412d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;servicePointManager&gt; элемент (параметры сети)
 Настраивает подключения к сетевым ресурсам.  
@@ -54,13 +55,13 @@ ms.lasthandoff: 11/21/2017
   
 |**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
 |-------------------|---------------------|  
-|`checkCertificateName`|Указывает, должен ли система проверить соответствие имени узла сервера перед использованием сертификата имя сертификата. Значение по умолчанию — `true`.|  
-|`checkCertificateRevocationList`|Указывает, должна ли система проверять был отозван ли сертификат, перед использованием сертификата. Значение по умолчанию — `false`.|  
+|`checkCertificateName`|Указывает, должен ли система проверить соответствие имени узла сервера перед использованием сертификата имя сертификата. Значение по умолчанию — `true`.|  
+|`checkCertificateRevocationList`|Указывает, должна ли система проверять был отозван ли сертификат, перед использованием сертификата. Значение по умолчанию — `false`.|  
 |`dnsRefreshTimeout`|Указывает срок службы доменных имен (DNS) разрешений кэшируются в сочетании с параметром циклического перебора DNS, в миллисекундах. По умолчанию установлено значение 120 000 миллисекунд (2 минуты).|  
-|`enableDnsRoundRobin`|Указывает имена ли разрешенные DNS-узла с помощью нескольких адресов протокола IP (Internet) возвращаемого все адреса или только первый из них. Значение по умолчанию — `false`.|  
-|`encryptionPolicy`|Указывает политики шифрования, примененные к сеанса SSL/TLS на <xref:System.Net.ServicePointManager> экземпляра. Возможные значения равны значениям для <xref:System.Net.Security.EncryptionPolicy> перечисления. Использование <xref:System.Security.Authentication.CipherAlgorithmType.Null> является обязательным, если политика шифрования `NoEncryption`. Значение по умолчанию — `RequireEncryption`.|  
-|`expect100Continue`|Указывает ли методам POST ожидать получения `100-continue` ответа от сервера. Значение по умолчанию — `true`.|  
-|`useNagleAlgorithm`|Указывает, управляемых диспетчером службы точки подключения использовать алгоритм Nagle. Значение по умолчанию — `true`.|  
+|`enableDnsRoundRobin`|Указывает имена ли разрешенные DNS-узла с помощью нескольких адресов протокола IP (Internet) возвращаемого все адреса или только первый из них. Значение по умолчанию — `false`.|  
+|`encryptionPolicy`|Указывает политики шифрования, примененные к сеанса SSL/TLS на <xref:System.Net.ServicePointManager> экземпляра. Возможные значения равны значениям для <xref:System.Net.Security.EncryptionPolicy> перечисления. Использование <xref:System.Security.Authentication.CipherAlgorithmType.Null> является обязательным, если политика шифрования `NoEncryption`. Значение по умолчанию — `RequireEncryption`.|  
+|`expect100Continue`|Указывает ли методам POST ожидать получения `100-continue` ответа от сервера. Значение по умолчанию — `true`.|  
+|`useNagleAlgorithm`|Указывает, управляемых диспетчером службы точки подключения использовать алгоритм Nagle. Значение по умолчанию — `true`.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  

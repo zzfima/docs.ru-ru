@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 10366d183ed7fd7386609e4c5726df0cea4e29a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 266352984cf50dc906e77598e8dcc9216526ce17
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corgcthreadstats-structure"></a>Структура COR_GC_THREAD_STATS
 Содержит статистику потоков сборки мусора.  
@@ -37,9 +38,9 @@ typedef struct _COR_GC_THREAD_STATS {
 } COR_GC_THREAD_STATS;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`PerThreadAllocation`|Число байтов памяти, выделенной в потоке, который связан с текущим `COR_GC_THREAD_STATS` экземпляра. Это число обнуляется каждый раз, когда выполняется сборка мусора нулевого поколения.|  
 |`Flags`|Число байтов продвигаются в поколение более высокого уровня при самой последней сборки мусора.|  
@@ -58,4 +59,4 @@ typedef struct _COR_GC_THREAD_STATS {
   
 ## <a name="see-also"></a>См. также  
  [Структуры размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
- [IHostTask-интерфейс](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+ [Интерфейс IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

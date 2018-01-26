@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 09240dce-9e62-4f00-9f37-9dbe90a09af2
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b5308c1eae7907de4d07321488b0126085bf8b08
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: c0f6b47f5a7c449ef63c1476dacb3e95ab429df2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemidentitymodelselectorsstorerollbacktransaction"></a>System.IdentityModel.Selectors.StoreRollbackTransaction
 System.IdentityModel.Selectors.StoreRollbackTransaction  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Откат транзакции, см. предыдущую ошибку.  
   
 ## <a name="see-also"></a>См. также  

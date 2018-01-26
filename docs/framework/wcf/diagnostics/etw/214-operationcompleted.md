@@ -10,26 +10,27 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a6287eef-023f-4816-813c-1802c82366df
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c6ef1eb398a0146e619cbcb85fe2761306aba4fc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 823207f4225252d94bd8fba450eb63edd00068ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="214---operationcompleted"></a>214 - OperationCompleted
 ## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
-|Идентификатор|214|  
+|ID|214|  
 |Ключевые слова|HealthMonitoring, EndToEndMonitoring, Troubleshooting, ServiceModel|  
 |Уровень|Сведения|  
 |Канал|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Данное событие создается, когда `OperationInvoker` по умолчанию модели завершает вызов метода, который не сформировал исключение.  
   
 ## <a name="message"></a>Сообщение  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="details"></a>Подробные сведения  
   
-|Имя элемента данных|Тип элемента данных|Описание|  
+|Имя элемента данных|Тип элемента данных|Описание:|  
 |--------------------|--------------------|-----------------|  
 |Имя метода|`xs:string`|Имя CLR метода, который был вызван `OperationInvoker`.|  
 |Длительность|`xs:long`|Время в миллисекундах, которое потребовалось `OperationInvoker`, чтобы вызвать метод.|  

@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: afd98bee-eccf-47e9-99c9-27cea84ce5ce
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 64d594711a805f75e1d76e59579032b0dc73dc93
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 7f0f8e05d9a43b02412e7445480f7204fd2e7e13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cancellation-handler-on-compensable-activity"></a>Обработчик отмены действия, подлежащего компенсации
 В этом образце показано использование обработчика отмены в <xref:System.Activities.Statements.CompensableActivity>.  

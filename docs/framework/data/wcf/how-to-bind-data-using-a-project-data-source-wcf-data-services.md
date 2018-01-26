@@ -16,14 +16,15 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5b56fecef5ace38f728d8cc68df4dcfeb71bfedf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 94ca7614e6df2d82216fa869309dff2da8eee634
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Как привязать данные с помощью источника данных проекта (службы данных WCF Data Services)
 Существует возможность создания источников данных на основе объектов данных, формируемых клиентским приложением [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. При добавлении ссылки на службу данных с помощью **добавить ссылку на службу** диалогового окна, вместе с сформированных клиентских классов данных создается источник данных проекта. Для каждого набора сущностей, предоставляемого службой данных, создается один источник данных. Можно создавать формы для отображения данных из службы, перетащив этих элементов источника данных из **источники данных** на окно конструктора. Эти элементы становятся элементами управления, привязанными к источнику данных. Во время выполнения, этот источник данных привязывается к экземпляру <xref:System.Data.Services.Client.DataServiceCollection%601> класс, который заполняется с помощью объектов, возвращенных запросом к службе данных. Дополнительные сведения см. в разделе [привязка данных к элементам управления](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  

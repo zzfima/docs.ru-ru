@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2e92c5d804fca3c04506e951a5c341c89eed1c54
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 04a5cb87b9ed61fd278ce0f2e05e5f1c954de5b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contract"></a>Контракт
 Контракт  
@@ -59,7 +60,7 @@ class Contract
   
  Поведения, связанные с этим контрактом.  
   
-### <a name="name"></a>Имя  
+### <a name="name"></a>name  
  Тип данных: string  
   
  Тип доступа: только для чтения  

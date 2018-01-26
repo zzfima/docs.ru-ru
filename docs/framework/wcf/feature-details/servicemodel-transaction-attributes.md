@@ -11,14 +11,15 @@ ms.topic: article
 helpviewer_keywords: transactions [WCF], ServiceModel attributes
 ms.assetid: 1e0d2436-6ae5-439b-9765-a448d6f60000
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4857c6e9f77e8cf201c47814405e4db9f08ae2d8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: aac52f3c542f88adbca40c6cbbdddc734e12903b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicemodel-transaction-attributes"></a>Атрибуты транзакции ServiceModel
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предоставляет свойства в трех стандартных атрибутах <xref:System.ServiceModel>, которые позволяют настроить поведение транзакций для службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/18/2017
   
 -   <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> указывает, освобождать ли базовый экземпляр службы при завершении транзакции. Значение по умолчанию для этого свойства — `true`. При поступлении следующего входящего сообщения создается новый базовый экземпляр, и любое записанное в предыдущий экземпляр связанное с транзакцией состояние сбрасывается. Освобождение экземпляра службы - это внутреннее предпринимаемое службой действие, которое не затрагивает никакие существующие подключения или сеансы, установленные клиентами. Эта функциональность эквивалентна JIT-активации, обеспечиваемой COM+. Если свойство имеет значение `true`, свойство <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> должно быть равно <xref:System.ServiceModel.ConcurrencyMode.Single>. В противном случае при запуске служба вызывает исключение проверки "недопустимая конфигурация".  
   
--   <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> задает уровень изоляции, используемый для транзакций в рамках службы; это свойство принимает одно из значений перечисления <xref:System.Transactions.IsolationLevel>. Если локальное свойство уровня изоляции имеет значение, отличное от <xref:System.Transactions.IsolationLevel.Unspecified>, уровень изоляции входящей транзакции должен соответствовать значению этого локального свойства. В противном случае входящая транзакция отклоняется, и клиенту отправляется ошибка. Если свойство <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> имеет значение `true` и нет поточных транзакций, это свойство определяет значение перечисления <xref:System.Transactions.IsolationLevel>, которое будет использоваться для локально созданной транзакции. Если <xref:System.Transactions.IsolationLevel> имеет значение <xref:System.Transactions.IsolationLevel.Unspecified>, используется значение <xref:System.Transactions.IsolationLevel> перечисления <xref:System.Transactions.IsolationLevel.Serializable>.  
+-   <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> задает уровень изоляции, используемый для транзакций в рамках службы; это свойство принимает одно из значений перечисления <xref:System.Transactions.IsolationLevel>. Если локальное свойство уровня изоляции имеет значение, отличное от <xref:System.Transactions.IsolationLevel.Unspecified>, уровень изоляции входящей транзакции должен соответствовать значению этого локального свойства. В противном случае входящая транзакция отклоняется, и клиенту отправляется ошибка. Если свойство <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> имеет значение `true` и нет поточных транзакций, это свойство определяет значение перечисления <xref:System.Transactions.IsolationLevel>, которое будет использоваться для локально созданной транзакции. Если <xref:System.Transactions.IsolationLevel> равно <xref:System.Transactions.IsolationLevel.Unspecified>, <xref:System.Transactions.IsolationLevel> <xref:System.Transactions.IsolationLevel.Serializable> используется.  
   
 -   <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> задает период времени, в течение которого созданная в службе новая транзакция должна быть завершена. Если по истечении этого времени транзакция не завершена, она будет прервана. Структура <xref:System.TimeSpan> используется в качестве времени ожидания <xref:System.Transactions.TransactionScope> для любых операций, у которых свойству <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> присвоено значение `true` и для которых была создана новая транзакция. Время ожидания - это максимально допустимый промежуток от создания транзакции до завершения фазы 1 в протоколе двухфазной фиксации. В качестве времени ожидания всегда используется меньшее из значений свойства <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> и параметра конфигурации `transactionTimeout`.  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/18/2017
   
  Этот атрибут имеет следующие относящиеся к транзакциям свойства.  
   
--   <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> указывает, должен ли метод выполняться в области активной транзакции. Значение по умолчанию — `false`. Если для метода не задан атрибут <xref:System.ServiceModel.OperationBehaviorAttribute>, это также подразумевает, что метод не будет выполняться в транзакции. Если для операции не требуется область транзакции, любая транзакция, присутствующая в заголовке сообщения, не активируется и остается элементом свойства <xref:System.ServiceModel.OperationContext.IncomingMessageProperties%2A> класса <xref:System.ServiceModel.OperationContext>. Если для операции требуется область транзакции, источник транзакции определяется одним из следующих способов.  
+-   <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> указывает, должен ли метод выполняться в области активной транзакции. Значение по умолчанию — `false`. Если для метода не задан атрибут <xref:System.ServiceModel.OperationBehaviorAttribute>, это также подразумевает, что метод не будет выполняться в транзакции. Если для операции не требуется область транзакции, любая транзакция, присутствующая в заголовке сообщения, не активируется и остается элементом свойства <xref:System.ServiceModel.OperationContext.IncomingMessageProperties%2A> класса <xref:System.ServiceModel.OperationContext>. Если для операции требуется область транзакции, источник транзакции определяется одним из следующих способов.  
   
     -   Если транзакция передается в потоке от клиента, метод выполняется в области транзакции, созданной с использованием этой распределенной транзакции.  
   

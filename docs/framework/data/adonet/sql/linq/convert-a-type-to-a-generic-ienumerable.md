@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 64774fb5-7447-4296-ad3b-8a94346f99a1
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f2e91a5fe4b27891b1750b0d74a8e9b01ad68449
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: fa15e1336c31aec47fb2255f224146b9ac7e429d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="convert-a-type-to-a-generic-ienumerable"></a>Практическое руководство. Преобразование типа в универсальный интерфейс IEnumerable
 Для возвращения аргумента с типом универсальный <xref:System.Linq.Enumerable.AsEnumerable%2A> используется `IEnumerable`.  

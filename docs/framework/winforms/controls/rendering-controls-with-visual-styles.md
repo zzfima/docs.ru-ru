@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e463e1571b33e8ed877bd79d980e2f24d336a7df
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 127e3c411b4c75e5a2bd9f133defc447992b95f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Отрисовка элементов управления с применением визуальных стилей
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] обеспечивает поддержку для отрисовки элементов управления и других элементов пользовательского интерфейса Windows с использованием стилей оформления в операционных системах, поддерживающих их. В этом разделе описано несколько уровней поддержки в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для отрисовки элементов управления и других элементов пользовательского интерфейса с учетом текущего стиля оформления операционной системы.  
@@ -71,7 +72,7 @@ ms.lasthandoff: 10/22/2017
  Дополнительные сведения об использовании <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> и <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>см. в разделе [How to: Render a Visual Style Element](../../../../docs/framework/winforms/controls/how-to-render-a-visual-style-element.md).  
   
 ## <a name="enabling-visual-styles"></a>Включение стилей оформления  
- Чтобы включить стили оформления для приложения, написанного для [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 1.0, программистам следует включить манифест приложения, указывающий, что для рисования элементов управления будет использоваться ComCtl32.dll версии 6 или более поздней. Приложения, созданные на базе [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 1.1 или более поздней, могут использовать метод <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> класса <xref:System.Windows.Forms.Application>.  
+ Чтобы включить стили оформления для приложения, написанного для [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 1.0, программистам следует включить манифест приложения, указывающий, что для рисования элементов управления будет использоваться ComCtl32.dll версии 6 или более поздней. Приложения, созданные на базе [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 1.1 или более поздней, могут использовать метод <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> класса <xref:System.Windows.Forms.Application>.  
   
 ## <a name="checking-for-visual-styles-support"></a>Проверка поддержки стилей оформления  
  Свойство <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> класса <xref:System.Windows.Forms.Application> указывает, будет ли текущее приложение рисовать элементы управления с помощью стилей оформления. При рисовании пользовательского элемента управления можно проверить значение <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> , чтобы определить, следует ли учитывать стили оформления при отрисовке элемента управления. В следующей таблице перечислены четыре условия, которые должны выполняться, чтобы <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> возвратил `true`.  

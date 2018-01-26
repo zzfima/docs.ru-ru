@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 568212f7-1060-4f5c-a7a0-1352c7cc743b
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ce1371df6015f6f6faa48ba2a1cddabf2ef12a5b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: ecb147e35b830322240f69f533de7a588064e9d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="4802---discoveryclientprotocolexceptionsuppressed"></a>4802 - DiscoveryClientProtocolExceptionSuppressed
 ## <a name="properties"></a>Свойства  

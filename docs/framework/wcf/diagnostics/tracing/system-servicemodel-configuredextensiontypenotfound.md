@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ef1c72d7-35c4-4886-80bb-b0a368da77e2
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 091c48d971548cb366b7fe3e230505b581c22c5f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 227543e265d1975664f9989c303c2b349e481362
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelconfiguredextensiontypenotfound"></a>System.ServiceModel.ConfiguredExtensionTypeNotFound
 System.ServiceModel.ConfiguredExtensionTypeNotFound  

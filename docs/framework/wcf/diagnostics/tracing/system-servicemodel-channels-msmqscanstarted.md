@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 56046431-94fc-4b04-a0fb-4b3f3e31a26f
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1c42fd58c0874db20d1e3c0fb78b2d62d58869ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 64cc3e8edb60e17e6511358c8c356593bd2024a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsmsmqscanstarted"></a>System.ServiceModel.Channels.MsmqScanStarted
 System.ServiceModel.Channels.MsmqScanStarted  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Служба активации MSMQ запустила сканирование очередей.  
   
 ## <a name="see-also"></a>См. также  

@@ -14,14 +14,15 @@ dev_langs:
 helpviewer_keywords: data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
 caps.latest.revision: "21"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d7a0153533ce5ec748c6396676988fcdc73eae6e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 5ffd4a09de508a2353af356863f9e4f41fc253e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="forward-compatible-data-contracts"></a>Контракты данных, совместимые с любыми будущими изменениями
 Одной из функций системы контрактов данных [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] является развитие контрактов без внесения критических изменений. Это значит, что клиент, использующий старую версию контракта данных, может взаимодействовать со службой, использующей новую версию того же контракта данных, или клиент, использующий новую версию контракта данных, может взаимодействовать со службой, использующей старую версию того же контракта данных. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Советы и рекомендации: управление версиями контракта данных](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  

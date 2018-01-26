@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a3254ef2-cd3d-4a8a-ae3d-a51fc389af53
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a80f17f4955c43fee2cc6e59e2084b675c70525d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: ed8a161ab1b6c62048155d82f3b444e9e6a6e6d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelshttpauthfailed"></a>System.ServiceModel.Channels.HttpAuthFailed
 System.ServiceModel.Channels.HttpAuthFailed  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  При проверке подлинности HTTP(S)-соединения произошел сбой.  
   
 ## <a name="see-also"></a>См. также  

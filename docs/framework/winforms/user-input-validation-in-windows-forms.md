@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 48a28db24731f9aa248bb149c9f19a57cf76bbf1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1eba92d764e73360b1cd58957ea5318c5b263b8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Проверка введенных пользователем данных в Windows Forms
 После ввода данных в приложение, может потребоваться Проверьте допустимость данных перед вашим приложением. Может потребоваться, что некоторые текстовые поля не нулевой длины, отформатированы как номер телефона или другой тип данных поля, или что строка содержит любые небезопасных символов, которые могут использоваться для нарушения безопасности базы данных. Windows Forms предоставляет несколько способов для проверки входных данных в приложении.  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/21/2017
 #### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>Неявная проверка по умолчанию для Windows Forms, элементы управления  
  Различные элементы управления Windows Forms имеют различные значения по умолчанию для их <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> свойство. В следующей таблице показаны наиболее распространенных элементов управления и их значения по умолчанию.  
   
-|Control|Поведение проверки по умолчанию|  
+|Элемент управления|Поведение проверки по умолчанию|  
 |-------------|---------------------------------|  
 |<xref:System.Windows.Forms.ContainerControl>|<xref:System.Windows.Forms.AutoValidate.Inherit>|  
 |<xref:System.Windows.Forms.Form>|<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>|  

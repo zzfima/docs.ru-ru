@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 959861be-4f2d-4666-a2b9-200a9125fad7
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9a04c41ef97a6c1215bfde4397f9e6ed787b9716
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 00ade0dc7a859a7974184eecd33dd1fe210f4841
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemruntimeserializationxsdexportdupitems"></a>System.Runtime.Serialization.XsdExportDupItems
 System.Runtime.Serialization.XsdExportDupItems  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Обнаружены дублирующиеся объекты при генерировании схем во время экспорта XSD.  
   
 ## <a name="see-also"></a>См. также  

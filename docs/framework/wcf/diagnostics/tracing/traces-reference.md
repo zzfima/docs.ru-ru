@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bd960851-162d-4dcc-8c0c-0ec8f455d56d
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9e86953d250002b0cc630e864f79cddd221cdd03
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 15b4add8e40d59c86c1cc9c53fd58eed8788935d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="traces-reference"></a>Справочные сведения о трассировке
 В данном разделе приводится список всех трассировок, созданных [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  `Administration`  
   
  [System.ServiceModel.Administration.WmiPut](../../../../../docs/framework/wcf/diagnostics/tracing/system-servicemodel-administration-wmiput.md)  

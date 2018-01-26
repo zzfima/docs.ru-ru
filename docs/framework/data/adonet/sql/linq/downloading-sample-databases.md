@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9749a5fb3db0efff54409e51c30c6e5f95f10008
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 3b0dccd831591946684fb0087f33563b87ee6ba7
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="downloading-sample-databases"></a>Загрузка примеров баз данных
 В ряде примеров и пошаговых руководств документации [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] используется база данных «Northwind» и выпуск SQL Server Express Edition. Эти продукты можно бесплатно загрузить в Центре загрузки Майкрософт.  

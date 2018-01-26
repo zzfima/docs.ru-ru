@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e3d5edc4f469b59ff787e500ad447fe0076c332c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: a68d4a10b01285a7e1b33238409351ca04d0aeb4
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="typed-datasets"></a>Типизированные наборы данных
 Наряду с доступом к значениям с поздним связыванием через слабо типизированные переменные, в объекте <xref:System.Data.DataSet> предоставляется доступ к данным на основе принципа строгой типизации. Таблицы и столбцы, которые являются частью **набора данных** может осуществляться с использованием понятных имен и строго типизированных переменных.  
@@ -26,11 +27,11 @@ ms.lasthandoff: 11/21/2017
   
  Кроме того, строго типизированные **DataSet** предоставляет доступ к значениям правильных типов во время компиляции. Благодаря использованию строго типизированного **набора данных**, ошибки несоответствия типов выявляются при компилируется код, а не во время выполнения.  
   
-## <a name="in-this-section"></a>Содержание  
- [Создание строго типизированных наборов данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-strongly-typed-datasets.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Создание объектов DataSet со строгой типизацией](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-strongly-typed-datasets.md)  
  Описывает способы создания и использования строго типизированного **набора данных**.  
   
- [Создание примечаний к типизированным наборам данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  
+ [Добавление заметок к типизированным объектам DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  
  Описание добавления заметок к схему языка определения схемы XML используется для создания строго типизированного **DataSet**, что позволяет присваивать **набора данных** элементы понятные имена без изменения базовой схемы.  
   
 ## <a name="see-also"></a>См. также  

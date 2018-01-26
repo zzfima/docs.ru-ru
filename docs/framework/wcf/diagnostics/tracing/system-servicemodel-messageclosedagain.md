@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 24c274d4-65cd-4c91-9869-bc6eb34ef979
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7f3963fe28ccaf55b3946254e395b770619c8f22
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 57500bf3c66c0aec47150bb21cc8871738d4b72d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelmessageclosedagain"></a>System.ServiceModel.MessageClosedAgain
 System.ServiceModel.MessageClosedAgain  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Сообщение было снова закрыто.  
   
  Сообщение следует закрывать только один раз. Если эта трассировка выдается в пользовательском коде расширения, она показывает, что пользовательский код расширения закрывает сообщение, которое уже было закрыто. Если эта трассировка выдается посредством кода продукта, она показывает, что пользовательский код расширения может закрывать сообщение слишком рано.  

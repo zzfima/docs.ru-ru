@@ -11,11 +11,11 @@ ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: da2fb9171a6b09ad94cea62877445bcb77c521ee
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ae0611fdadabd6ab684f3f97995f3be3e348e648
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Доступ к данным в приложениях Visual Basic
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] включает несколько новых возможностей для разработки приложений, обращающихся к данным. Формы с привязкой к данным для приложений Windows создаются путем перетаскивания элементов из [окна "Источники данных"](/visualstudio/data-tools/add-new-data-sources) на форму. Привязка элементов управления к данным осуществляется путем перетаскивания элементов из **окна "Источники данных"** на форму.  
@@ -30,11 +30,11 @@ ms.lasthandoff: 10/18/2017
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  Содержит ссылки на разделы, описывающие использование LINQ с Visual Basic.  
   
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md)  
  Содержит сведения о [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]. Включает примеры программирования.  
   
  [Средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
- Содержит ссылки на разделы, посвященные созданию объектной модели [LINQ to SQL](https://msdn.microsoft.com/library/bb386976) в приложениях.  
+ Содержит ссылки на разделы, посвященные созданию объектной модели [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md) в приложениях.  
   
  [Работа с наборами данных в N-уровневых приложениях](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
  Содержит ссылки на разделы о создании многоуровневых приложений для работы с данными.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 10/18/2017
  [Сохранение данных обратно в базу данных](/visualstudio/data-tools/save-data-back-to-the-database)  
  Содержит ссылки на страницы с объяснением процедуры отправки обновленных данных из приложения в базу данных.  
   
- [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)  
+ [ADO.NET](../../framework/data/adonet/index.md)  
  Описание классов ADO.NET, которые предоставляют программистам .NET Framework службы доступа к данным.
 
  [Данные в решениях Office](https://msdn.microsoft.com/library/xx069ybh)  

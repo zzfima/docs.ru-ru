@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5166f7859bb3e914de8313de08427cda9bc06d6f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 956134f0db25055fb9a2f9317a770989cfdab67f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltserviceactivationsgt"></a>&lt;add&gt; для &lt;serviceActivations&gt;
 Элемент конфигурации, позволяющий настраивать параметры определения активации виртуальной службы, которые сопоставляются с типами служб [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]. Это позволяет активировать службы, расположенные в WAS/IIS, без SVC-файла.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Раздел конфигурации, в котором описываются параметры активации.|  
   

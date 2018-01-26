@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
 caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e3b597d04ee53a094d9c50dff406f57e5fd57b00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: fa9a23f00e7ce3b52c2ff64c8b22e1b4b8727b97
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="authentication-in-sql-server"></a>Аутентификация в SQL Server
 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] поддерживает два режима проверки подлинности: режим проверки подлинности Windows и режим смешанной проверки подлинности.  
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="external-resources"></a>Внешние ресурсы  
  Дополнительные сведения см. в следующих ресурсах.  
   
-|Ресурс|Описание|  
+|Ресурс|Описание:|  
 |--------------|-----------------|  
 |[Субъекты](http://msdn.microsoft.com/library/bb543165.aspx) в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] электронной документации|Описывает имена входа и других участников безопасности, имеющихся в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].|  
   

@@ -16,11 +16,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 80cc1418418518efdccbb6dc0429b1ac61b56420
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9958af954675784e9cbdec4c26605fb83ffa0005
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Элементы управления для использования в формах Windows Forms
 Ниже приведен алфавитный список элементов управления и компонентов, используемых в формах Windows Forms. Помимо элементов управления Windows Forms, описанных в этом разделе, в формы Windows Forms можно добавлять элементы управления ActiveX и пользовательские элементы управления. Если вам не удается найти нужный элемент управления в этом списке, вы можете создать свой собственный. См. раздел [Создание элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Дополнительные сведения о выборе необходимого элемента управления см. в разделе [Функциональная классификация элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 >  Элементы управления [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] основаны на классах, предоставляемых [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Функциональная классификация элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
  Список и описание элементов управления Windows Forms на основе [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
@@ -83,9 +84,8 @@ ms.lasthandoff: 10/18/2017
  [Компонент ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md)  
  Отображает сведения об ошибке для пользователя в фоновом режиме.  
   
- Класс FileDialog  
- Предоставляет функциональные возможности базового класса для диалоговых окон открытия и сохранения файлов.  
-  
+ [Класс FileDialog](../../../../docs/framework/winforms/controls/filedialog-class.md) предоставляет функциональность базового класса для диалоговых окон файлов.
+
  [Элемент управления FlowLayoutPanel](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)  
  Представляет панель, которая динамически располагает содержимое по горизонтали или вертикали.  
   
@@ -173,8 +173,7 @@ ms.lasthandoff: 10/18/2017
  [Компонент SaveFileDialog](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)  
  Служит для выбора сохраняемых файлов и места их сохранения.  
   
- Класс SoundPlayer  
- Упрощает добавление звуков в приложениях.  
+ [Класс SoundPlayer](../../../../docs/framework/winforms/controls/soundplayer-class.md) позволяет облегчить добавление звуков в приложениях.
   
  [Элемент управления SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
  Позволяет пользователю изменять размер закрепленного элемента управления.  
@@ -240,7 +239,7 @@ ms.lasthandoff: 10/18/2017
  [Создание элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
  Ссылки на разделы с инструкциями, рекомендации по выбору создаваемого элемента управления, а также другие сведения о создании собственных элементов управления.  
   
- [Сравнение элементов управления и программируемых объектов в разных языках и библиотеках](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [Сравнение элементов управления и программируемых объектов в разных языках и библиотеках](http://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
  Содержит таблицу, в которой элементы управления Visual Basic 6.0 сопоставляются с соответствующими элементами управления в [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)]. Обратите внимание, что элементы управления теперь являются классами в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
  [Практическое руководство. Добавление элементов управления ActiveX в формы Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  

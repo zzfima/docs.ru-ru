@@ -11,14 +11,15 @@ ms.topic: article
 helpviewer_keywords: event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
 caps.latest.revision: "22"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ccdecb1aae193ffecdd6ec1d4eae4289f6ac7eb9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 4028772caef8e5c0301ab3a6a0bde2f180d821ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="event-logging-in-wcf"></a>Ведение журнала событий в WCF
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] отслеживает внутренние события в журнале событий Windows.  
@@ -58,4 +59,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Администрирование и диагностика](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [Общие справочные сведения события](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+ [Общие справочные сведения о событиях](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

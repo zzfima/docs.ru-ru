@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 143447020f41368a3553a0c8cda78e80806b75ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 75d78c505c81ce688e0ba0110c76712c71db1c4f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="securing-adonet-applications"></a>Защита приложений ADO.NET
 При написании безопасного приложения ADO.NET следует не просто избегать обычных проблем кодирования, таких как отсутствие проверки входных данных пользователя. В приложении, в котором выполняется обращение к данным, много потенциально уязвимых мест, которые атакующий может использовать для получения конфиденциальных данных, манипулирования ими или их уничтожения. Поэтому важно понимать все аспекты безопасности, от моделирования угроз на этапе проектирования приложения до развертывания и текущего обслуживания.  
@@ -26,17 +27,17 @@ ms.lasthandoff: 11/21/2017
   
  Написание безопасного кода не защищает от брешей в безопасности при работе с неуправляемыми ресурсами, такими как базы данных. Большинство баз данных, таких как SQL Server, имеют свои собственные системы безопасности, повышающие защиту при правильной их реализации. Но даже источник данных с надежной системой безопасности может быть подвержен атакам, если он не будет настроен должным образом.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о безопасности](../../../../docs/framework/data/adonet/security-overview.md)  
  Предоставляет рекомендации по проектированию безопасных приложений ADO.NET.  
   
  [Безопасный доступ к данным](../../../../docs/framework/data/adonet/secure-data-access.md)  
  Описывает, как работать с данными из защищенного источника данных.  
   
- [Защищенные клиентские приложения](../../../../docs/framework/data/adonet/secure-client-applications.md)  
+ [Безопасные клиентские приложения](../../../../docs/framework/data/adonet/secure-client-applications.md)  
  Описывает вопросы безопасности для клиентских приложений.  
   
- [Безопасность доступа кода и ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)  
+ [Управление доступом для кода и ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)  
  Описывает, как CAS может способствовать защите кода ADO.NET. Также рассматриваются способы работы с частичным уровнем доверия.  
   
  [Конфиденциальность и безопасность данных](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  
@@ -52,10 +53,10 @@ ms.lasthandoff: 11/21/2017
  [Безопасность](../../../../docs/standard/security/index.md)  
  Содержит ссылки на разделы, в которых описываются все аспекты безопасности в .NET Framework.  
   
- [Средства обеспечения безопасности](http://msdn.microsoft.com/en-us/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
+ [Средства обеспечения безопасности](http://msdn.microsoft.com/library/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
  Средства .NET Framework для безопасности и администрирования политики безопасности.  
   
- [Ресурсы для создания безопасных приложений](http://msdn.microsoft.com/en-us/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
+ [Ресурсы для создания безопасных приложений](http://msdn.microsoft.com/library/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
  Предоставляет ссылки на разделы, посвященные созданию безопасных приложений.  
   
  [Библиография по вопросам безопасности](/visualstudio/ide/security-bibliography)  

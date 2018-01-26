@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
 caps.latest.revision: "21"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 11ccb40fb4c29678ce0552da2dd8eb29c1ae561e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 4df9060f173647767a3a070a451e0f2d3e02cf0d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>Клиент ASMX со службой WCF
 В этом образце показано, как создать службу с помощью [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], а затем получать доступ к службе из клиента, не являющегося [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-клиентом, например из клиента ASMX.  

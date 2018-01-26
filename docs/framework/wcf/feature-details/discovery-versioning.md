@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f91c6d0a-3af2-45c5-9a5c-e75390619836
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: bb9855f590fd02cc11448568b211f85ee6a951cd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: df5a15f740e9db4eb58ec4e410db9ef5e014fe0a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-versioning"></a>Управление версиями обнаружения
 В этом разделе приведены общие сведения о реализации некоторых новых возможностей обнаружения. Также приводятся общие сведения о выборе версии обнаружения.  

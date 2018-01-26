@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 15b19e0f-cee5-49ff-8498-f404c39b712f
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9b4621dc2a823fdc47f13a4dc25df2e6fb9a1487
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: e299e7d3b539cd3f1190767aa17a4c8ab9fb7098
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelspeerneighbormanageroffline"></a>System.ServiceModel.Channels.PeerNeighborManagerOffline
 Узел PeerNode находится вне сети, что указывает на отсутствие установленных подключений к соседним узлам.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Эта трассировка возникает при удалении соседа из списка соседей локального узла.  
   
 ## <a name="see-also"></a>См. также  

@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9dfa340cf42e5e7ed105bf14eb0f7a24ea85a1b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9ffbc5d2aa6e401dffb06f1695a5299a99ef90a7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="slider-styles-and-templates"></a>Стили и шаблоны элемента Slider
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.Slider> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="slider-parts"></a>Ползунок частей  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.Slider> элемента управления.  
   
-|Отделение|Тип|Описание|  
+|Отделение|Тип|Описание:|  
 |-|-|-|  
 |PART_Track|<xref:System.Windows.Controls.Primitives.Track>|Контейнер для элемента, который указывает положение <xref:System.Windows.Controls.Slider>.|  
 |PART_SelectionRange|<xref:System.Windows.FrameworkElement>|Элемент, который отображает диапазон выбора вдоль <xref:System.Windows.Controls.Slider>.  Диапазон выбора отображается только тогда, когда <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> свойство `true`.|  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="slider-states"></a>Ползунок состояний  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Slider> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание|  
+|Имя VisualState|Имя VisualStateGroup|Описание:|  
 |----------------------|---------------------------|-----------------|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши расположен над элементом управления.|  

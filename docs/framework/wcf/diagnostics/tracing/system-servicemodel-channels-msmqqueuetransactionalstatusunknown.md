@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 193a1a73-42b8-4a98-9a72-ec06ad6b3073
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 494a2d6d60c0e2a17ce452040e9024ea3c5e3c97
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: c415621011d0da3dcc641e29b533cbc2f97dd6b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsmsmqqueuetransactionalstatusunknown"></a>System.ServiceModel.Channels.MsmqQueueTransactionalStatusUnknown
 System.ServiceModel.Channels.MsmqQueueTransactionalStatusUnknown  

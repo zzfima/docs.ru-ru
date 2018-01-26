@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 923a6b6cf1523c8a11cb509679443b9658e07ce5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 9cdfdf01b950d13ba77f76b126fe6d2ff430ef07
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>Синхронизация набора данных и XmlDataDocument
 ADO.NET <xref:System.Data.DataSet> обеспечивает реляционное представление данных. Для доступа к иерархическим данным можно использовать классы XML, доступные на платформе .NET Framework. Исторически эти два представления данных использовались раздельно. Тем не менее, платформа .NET Framework обеспечивает динамический синхронный доступ в реляционном и иерархическом представлении данных с помощью **DataSet** объекта и <xref:System.Xml.XmlDataDocument> соответственно.  
@@ -99,21 +100,21 @@ ADO.NET <xref:System.Data.DataSet> обеспечивает реляционно
   
  При синхронизации **DataSet** с **XmlDataDocument**, результаты могут отличаться в зависимости от того, нужно ли ваш <xref:System.Data.DataRelation> вложенные объекты. Дополнительные сведения см. в разделе [вложение отношений DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Синхронизация DataSet с XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
  Демонстрирует синхронизацию строго типизированного **DataSet**, с минимальной схемой, с **XmlDataDocument**.  
   
- [Выполнение запроса XPath к набору данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
+ [Выполнение запроса XPath к DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
  Демонстрирует выполнение запроса XPath к содержимому **набора данных**.  
   
- [Применение преобразования XSLT к набору данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
+ [Применение преобразования XSLT к DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
  Демонстрирует применение XSLT-преобразования к содержимому **набора данных**.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Использование XML в наборах данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  Описывает способ **DataSet** взаимодействует с XML в качестве источника данных, включая загрузку и сохранение содержимого **набора данных** как XML-данных.  
   
- [Вложение отношений DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
+ [Вложенность объектов DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
  Объясняет значение вложенных **DataRelation** при представлении содержимого **DataSet** как XML-данных и описывает создание этих связей.  
   
  [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  

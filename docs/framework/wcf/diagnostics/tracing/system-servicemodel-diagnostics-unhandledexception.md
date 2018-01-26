@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6807fdfc-1e7e-42ca-8efe-a05b51de2f8f
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d9305a6c5e653fc1ff4b8756c9b6324ded177c23
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 8cc368d5574d6e21a8bcaa5384f9d139038cfaff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodeldiagnosticsunhandledexception"></a>System.ServiceModel.Diagnostics.UnhandledException
 System.ServiceModel.Diagnostics.UnhandledException  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Необработанное исключение.  
   
 ## <a name="see-also"></a>См. также  

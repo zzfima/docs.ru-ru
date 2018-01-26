@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: de2152e557ccfe19c47247e2501f2e2d62253e81
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 41615618857c804c37f00e9d20a031a6d17bcab3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="instance-activation"></a>Активация экземпляров
 Хранилище экземпляров рабочих процессов SQL работает как внутренняя задача, которая периодически активируется и обнаруживает запускаемые или доступные для действий экземпляры рабочих процессов в базе данных сохраняемости. Если запускаемый экземпляр рабочего процесса найден, хранилище уведомит узел рабочих процессов, который может активировать этот экземпляр. Если хранилище экземпляров найдет доступный экземпляр рабочего процесса, оно уведомит общий узел, который активирует узел рабочих процессов, который в свою очередь запустит экземпляр рабочего процесса. В следующих подразделах этого раздела приводится подробное объяснение процесса активации экземпляра.  

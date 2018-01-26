@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1d27ed51-7eda-477f-9eca-94fa129f3e07
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: be53af47aef4d42ddd2c77fbd29c8c9e9961c47b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 4f13a39c251afd55dbb1f0d2dde4fc66fe38d30a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-exceptions"></a>Исключения при обработке транзакций
 В этом разделе перечислены все исключения, создаваемые транзакцией [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  

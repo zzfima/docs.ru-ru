@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 67b26f93-2e85-4a56-b103-6e8db149191c
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7ed63c5cb2b8a80b956bbfea446e239900f59d40
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 985456a7a62c1720a38f3defdb715f3dfcea3de6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelextensioncollectionnamenotfound"></a>System.ServiceModel.ExtensionCollectionNameNotFound
 System.ServiceModel.ExtensionCollectionNameNotFound  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Элемент расширения не связан с коллекцией расширений.  
   
 ## <a name="see-also"></a>См. также  

@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e458cef9-63b5-4401-b448-1536dcd9d9e5
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: be3e2fec5d6859b38ae149e50fd1fe82838d8e08
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 1170adc2fb2ede41e9e111e9d7dd6612f06676a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="features-provided-by-systemtransactions"></a>Функциональные возможности, предоставляемые пространством имен System.Transactions
 В этом разделе описывается, как можно использовать функциональные возможности, предоставляемые пространством имен <xref:System.Transactions>, для создания собственного транзакционного приложения и диспетчера ресурсов. В частности, в этом разделе показано, как создавать транзакции и участвовать в транзакциях (локальных и распределенных) с одним или несколькими участниками.  

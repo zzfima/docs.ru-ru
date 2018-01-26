@@ -14,16 +14,17 @@ caps.latest.revision: "13"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: ed37992b5488d33b9292bdd54eef47f9eb12f225
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 52e07a83f5a1b84abc46f00e6fd6e80e4b9a2622
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-services-and-clients"></a>Защита служб и клиентов
 Этот раздел посвящен безопасности программирования в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Обычно обеспечение безопасности включает выбор подходящей предоставляемой системой привязки, задание свойств элемента безопасности и задание свойств поведений службы, управляющих извлечением учетных данных для использования службой или клиентом. Эти методы рассматриваются требования безопасности для большинства пользователей для большинства сценариев, как показано в [типовые сценарии безопасности](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Если сценарий требует больше возможностей, сначала узнать [возможности безопасности при использовании пользовательских привязок](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md), если решение не является очевидным, см. [расширение безопасности](../../../../docs/framework/wcf/extending/extending-security.md). При создании (или взаимодействие с) системы, где используется форматированного утверждений см. в разделах [авторизации](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Программирование безопасности WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
  Общие сведения о модели программирования, используемой для защиты сообщений.  
   

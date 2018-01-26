@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3a4ead79-8550-4037-84e3-fd70ff56e001
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2e3cbe9443f32ec9752198646e96cc1012d7343c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 02831a83103f5a6bd83fc2aed474245bdeda65d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="microsofttransactionstransactionbridgeregisterparticipantfailure"></a>Microsoft.Transactions.TransactionBridge.RegisterParticipantFailure
 Службе протокола WS-AT не удалось зарегистрировать участника для протокола управления.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Отслеживается, обнаруживает ли MSDTC недопустимый запрос на регистрацию. Это может происходить из-за множественных запросов на регистрацию завершения и внутренних ошибок.  
   
 ## <a name="troubleshooting"></a>Устранение неполадок  

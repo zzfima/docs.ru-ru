@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
 caps.latest.revision: "22"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1742caba38dc0b2cc4b53dbc0c3ffcf595cf7f9c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 13c862c8191a9bc312de743fc3ed99396c600f8f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Использование программы Service Trace Viewer для просмотра скоррелированных трассировок и устранения неполадок
 В этом разделе описываются формат данных трассировки, способ просмотра этих данных, а также подходы, в которых используется программа Service Trace Viewer для устранения неполадок приложения.  
@@ -209,6 +210,6 @@ ms.lasthandoff: 11/21/2017
 Чтобы начать поиск неполадок, можно также выбрать красную или желтую трассировку сообщений и дважды щелкнуть ее для отслеживания первопричины  
   
 ## <a name="see-also"></a>См. также  
- [Сценарии трассировки конца в конец](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
+ [Сценарии сквозной трассировки](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
  [Средство просмотра трассировки служб (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
  [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

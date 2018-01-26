@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e8a93a2c-2c20-48b3-8986-57e90e9aa908
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 63a8c92713ee452da2439475ac526229d1e5741c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 2c96aa6752feca637f89ed309d1a5c87cea4a3a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="determining-service-operation-duration"></a>Определение продолжительности выполнения для операции службы
 Если в приложении [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] включена аналитическая трассировка, то продолжительность выполнения операции службы легко определить по журналу событий.  В этом разделе показано, как определить время, затраченное на выполнение операции службы.  

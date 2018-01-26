@@ -35,11 +35,11 @@ ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
 caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 667ab7ceb54e1f339fd645883ca2686c0cbb72b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 52e9210f9e715b6055e6ed199ef1aa4b919c6dd6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-statement-visual-basic"></a>Оператор Function (Visual Basic)
 Объявляет имя, параметры и код, определяющие `Function` процедуры.  
@@ -59,11 +59,11 @@ End Function
   
 -   `attributelist`  
   
-     Необязательно. В разделе [список атрибутов](attribute-list.md).  
+     Необязательный. В разделе [список атрибутов](attribute-list.md).  
   
 -   `accessmodifier`  
   
-     Необязательно. Ниже указаны доступные значения.  
+     Необязательный. Ниже указаны доступные значения.  
   
     -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -79,7 +79,7 @@ End Function
   
 -   `proceduremodifiers`  
   
-     Необязательно. Ниже указаны доступные значения.  
+     Необязательный. Ниже указаны доступные значения.  
   
     -   [Перегрузки](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
@@ -97,31 +97,31 @@ End Function
   
 -   `Shared`  
   
-     Необязательно. В разделе [общих](../../../visual-basic/language-reference/modifiers/shared.md).  
+     Необязательный. В разделе [общих](../../../visual-basic/language-reference/modifiers/shared.md).  
   
 -   `Shadows`  
   
-     Необязательно. В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+     Необязательный. В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
 -   `Async`  
   
-     Необязательно. В разделе [Async](../../../visual-basic/language-reference/modifiers/async.md).  
+     Необязательный. В разделе [Async](../../../visual-basic/language-reference/modifiers/async.md).  
   
 -   `Iterator`  
   
-     Необязательно. В разделе [итератор](../../../visual-basic/language-reference/modifiers/iterator.md).  
+     Необязательный. В разделе [итератор](../../../visual-basic/language-reference/modifiers/iterator.md).  
   
 -   `name`  
   
-     Обязательный. Имя процедуры. В разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+     Обязательно. Имя процедуры. В разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 -   `typeparamlist`  
   
-     Необязательно. Список параметров типа для универсальной процедуры. В разделе [введите список](type-list.md).  
+     Необязательный. Список параметров типа для универсальной процедуры. В разделе [введите список](type-list.md).  
   
 -   `parameterlist`  
   
-     Необязательно. Список имен локальных переменных, представляющих параметры этой процедуры. В разделе [список параметров](parameter-list.md).  
+     Необязательный. Список имен локальных переменных, представляющих параметры этой процедуры. В разделе [список параметров](parameter-list.md).  
   
 -   `returntype`  
   
@@ -129,7 +129,7 @@ End Function
   
 -   `Implements`  
   
-     Необязательно. Указывает, что эта процедура реализует один или несколько `Function` процедуры, каждая из которых определена в интерфейс, реализуемый этой процедуры классом или структурой. В разделе [реализует оператор](implements-statement.md).  
+     Необязательный. Указывает, что эта процедура реализует один или несколько `Function` процедуры, каждая из которых определена в интерфейс, реализуемый этой процедуры классом или структурой. В разделе [реализует оператор](implements-statement.md).  
   
 -   `implementslist`  
   
@@ -141,14 +141,14 @@ End Function
   
      `interface.definedname`  
   
-    |Отделение|Описание|  
+    |Отделение|Описание:|  
     |---|---|  
-    |`interface`|Обязательный. Имя интерфейса, реализуемого данной процедурой, содержащего класса или структуры.|  
-    |`definedname`|Обязательный. Имя, под которым процедура определена в `interface`.|  
+    |`interface`|Обязательно. Имя интерфейса, реализуемого данной процедурой, содержащего класса или структуры.|  
+    |`definedname`|Обязательно. Имя, под которым процедура определена в `interface`.|  
   
 -   `Handles`  
   
-     Необязательно. Указывает, что эта процедура может обрабатывать одно или несколько конкретных событий. В разделе [обрабатывает](handles-clause.md).  
+     Необязательный. Указывает, что эта процедура может обрабатывать одно или несколько конкретных событий. В разделе [обрабатывает](handles-clause.md).  
   
 -   `eventlist`  
   
@@ -160,14 +160,14 @@ End Function
   
      `eventvariable.event`  
   
-    |Отделение|Описание|  
+    |Отделение|Описание:|  
     |---|---|  
-    |`eventvariable`|Обязательный. Объектная переменная объявлена с типом данных класса или структуры, который инициирует событие.|  
-    |`event`|Обязательный. Имя события, которое обрабатывает данная процедура.|  
+    |`eventvariable`|Обязательно. Объектная переменная объявлена с типом данных класса или структуры, который инициирует событие.|  
+    |`event`|Обязательно. Имя события, которое обрабатывает данная процедура.|  
   
 -   `statements`  
   
-     Необязательно. Блок операторов для выполнения этой процедуры.  
+     Необязательный. Блок операторов для выполнения этой процедуры.  
   
 -   `End Function`  
   
@@ -239,7 +239,7 @@ End Function
   
  Тип возвращаемого значения функции итератора может быть <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, или <xref:System.Collections.Generic.IEnumerator%601>.  
   
- Дополнительные сведения см. в разделе [Итераторы](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Дополнительные сведения см. в разделе [Итераторы](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере используется `Function` инструкции для объявления имени, параметров и кода, образующих текст `Function` процедуры. `ParamArray` Модификатор разрешает функции принимать переменное число аргументов.  

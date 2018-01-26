@@ -18,11 +18,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2b24a934285f88386daa764c5b28bd82cf5d39a9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6b02abef0180b6de82e26837863849cce35c994f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="type-design-guidelines"></a>Правила разработки типов
 С точки зрения среды CLR, есть только две категории типов — ссылочные типы и типы значений, но с целью обсуждение разработки решений, типы разделен на несколько логических групп, каждая из которых собственные правила по разработке.  
@@ -41,13 +44,13 @@ ms.lasthandoff: 10/18/2017
   
  **✓ СДЕЛАТЬ** убедитесь, что каждый тип четко определенный набор связанных элементов не только случайных коллекции другие функции.  
   
-## <a name="in-this-section"></a>Содержание  
- [Выбор между класса и структуры](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
- [Абстрактный класс конструирования](../../../docs/standard/design-guidelines/abstract-class.md)  
- [Статический класс конструирования](../../../docs/standard/design-guidelines/static-class.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Выбор между классом и структурой](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
+ [Разработка абстрактных классов](../../../docs/standard/design-guidelines/abstract-class.md)  
+ [Разработка статических классов](../../../docs/standard/design-guidelines/static-class.md)  
  [Разработка интерфейса](../../../docs/standard/design-guidelines/interface.md)  
- [Структура конструирования](../../../docs/standard/design-guidelines/struct.md)  
- [Перечисление разработки](../../../docs/standard/design-guidelines/enum.md)  
+ [Разработка структур](../../../docs/standard/design-guidelines/struct.md)  
+ [Разработка перечислений](../../../docs/standard/design-guidelines/enum.md)  
  [Вложенные типы](../../../docs/standard/design-guidelines/nested-types.md)  
  *Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*  
   

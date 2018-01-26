@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f26038aba792d8b5dd51d1b47156adcfe4882121
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 1cbe73468e2ce1c8a4fe81a676c819b04d2ef760
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-lifetime"></a>Пользовательские службы времени существования
 Этот образец демонстрирует написание расширения [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] для предоставления пользовательских служб времени существования для экземпляров общих служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  

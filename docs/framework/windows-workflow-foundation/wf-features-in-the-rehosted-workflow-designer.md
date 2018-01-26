@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 346dc5f06fd5f655426d8f41164a9a2f24acdb5b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: ee8467eaeaef490f4c7a8bfbcb204506d71f5500
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Поддержка новых возможностей Workflow Foundation 4.5 во вновь размещенном конструкторе рабочих процессов
 В [!INCLUDE[wf](../../../includes/wf-md.md)] на платформе [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] появилось множество новых функций, в том числе некоторые улучшения работы конструктора рабочих процессов. В этом разделе подробно описываются те возможности, которые поддерживаются в повторно размещенном конструкторе, и те, которые в настоящее время не поддерживаются.  
@@ -122,7 +123,7 @@ ms.lasthandoff: 10/18/2017
 ### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a>Состояние просмотра в отдельном расположении в файлах XAML  
  В [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] данные о состоянии просмотра для рабочего процесса хранились по всему файлу XAML во множестве различных мест. Это неудобно для разработчиков, которым требуется прочитать язык XAML напрямую или написать код для извлечения информации о состоянии просмотра. В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], сведения о состоянии представления в XAML-файле сериализуется как отдельный элемент в XAML-файле.  Разработчики можно найти и изменить сведения о состоянии представления действия или полностью удалить состояние представления.  
   
- Эта функция поддерживается в повторно размещенном конструкторе рабочих процессов.  
+ Эта возможность поддерживается в повторно размещенном конструкторе рабочих процессов.  
   
 ### <a name="opt-in-for-workflow-45-features-in-rehosted-designer"></a>Включаемые по требованию функции рабочего процесса 4.5 в повторно размещенном конструкторе  
  Для сохранения обратной совместимости некоторые новые функции, которые входят в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], не включены по умолчанию в повторно размещенном конструкторе. Таким образом, работа существующих приложений, использующих повторно размещенный конструктор, не нарушается обновлением до последней версии. Чтобы включить новые функции в повторно размещенном конструкторе, задайте для <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> значение «.NET Framework 4.5» или задайте отдельные элементы <xref:System.Activities.Presentation.DesignerConfigurationService>, чтобы включить отдельные функции.  

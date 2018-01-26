@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 21518cad85ebcfc4c326e99d615b4f2dfccf6a2d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 18bfb654a6f116f87ae7eeb6059fe994b9084c19
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="identifiers-entity-sql"></a>Идентификаторы (Entity SQL)
 В языке [!INCLUDE[esql](../../../../../../includes/esql-md.md)] идентификаторы используются для представления псевдонимов выражений запросов, ссылок на переменные, свойств объектов, функций и т. д. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]предоставляет два вида идентификаторов: простые идентификаторы и заключенные в кавычки идентификаторы.  

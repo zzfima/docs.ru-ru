@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 107b222d37d62505c021f277a660741b52a9cdbb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 68b077ec6c7edd30882c9c84a10aa14060a589e8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="security-considerations-entity-framework"></a>Вопросы безопасности (Entity Framework)
 В этом разделе приводятся сведения по безопасности, связанные с разработкой, развертыванием и запуском приложений [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Необходимо также следовать инструкциям по созданию безопасных приложений [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Дополнительные сведения см. в разделе [Общие сведения о безопасности](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -108,7 +109,7 @@ ms.lasthandoff: 11/21/2017
   
      Атаки путем внедрения кода SQL осуществляются на языке [!INCLUDE[esql](../../../../../includes/esql-md.md)] путем предоставления вредоносных входных значений в составе предикатов запросов и имен параметров. Для предотвращения атак путем внедрения кода SQL ни в коем случае нельзя объединять входные данные пользователя с текстом команд [!INCLUDE[esql](../../../../../includes/esql-md.md)].  
   
-     Запросы [!INCLUDE[esql](../../../../../includes/esql-md.md)] принимают параметры во всех случаях, где допускаются литералы. Необходимо использовать параметризованные запросы, а не внедрять литералы, полученные от внешних агентов, непосредственно в запрос. Также следует рассмотреть возможность использования методов построителя запросов для безопасного создания [Entity SQL](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+     Запросы [!INCLUDE[esql](../../../../../includes/esql-md.md)] принимают параметры во всех случаях, где допускаются литералы. Необходимо использовать параметризованные запросы, а не внедрять литералы, полученные от внешних агентов, непосредственно в запрос. Также следует рассмотреть возможность использования методов построителя запросов для безопасного создания [Entity SQL](http://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
   
 -   Атаки путем внедрения кода [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]:  
   
@@ -142,7 +143,7 @@ ms.lasthandoff: 11/21/2017
  Следующие рекомендации по безопасности применимы при формировании типов сущностей и работе с ними.  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>Не следует совместно использовать контекст ObjectContext во всех доменах приложений  
- Совместное использование <xref:System.Data.Objects.ObjectContext> в нескольких доменах приложений может создать предпосылки получения доступа к данным в строке соединения. Вместо этого следует передать сериализованные объекты или графы объектов в домен другого приложения, а затем присоединить эти объекты к <xref:System.Data.Objects.ObjectContext> в этом домене приложения. Дополнительные сведения см. в разделе [сериализация объектов](http://msdn.microsoft.com/en-us/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
+ Совместное использование <xref:System.Data.Objects.ObjectContext> в нескольких доменах приложений может создать предпосылки получения доступа к данным в строке соединения. Вместо этого следует передать сериализованные объекты или графы объектов в домен другого приложения, а затем присоединить эти объекты к <xref:System.Data.Objects.ObjectContext> в этом домене приложения. Дополнительные сведения см. в разделе [сериализация объектов](http://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
   
 #### <a name="prevent-type-safety-violations"></a>Предотвращение нарушений безопасности типов  
  При нарушении безопасности типов [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] не может гарантировать целостность данных в объектах. Нарушения безопасности типов могут происходить, если разрешается эксплуатация ненадежных приложений с полным уровнем доверия для управления доступом для кода.  
@@ -173,5 +174,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Вопросы развертывания](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
+ [Требования к развертыванию](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
  [Вопросы миграции](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)

@@ -11,14 +11,15 @@ ms.topic: article
 dev_langs: vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 05ae619a4d3a31c83a740572eae13fe7ef883a40
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: fef9880d5f9fa652eab2eb0d17bbf782dc64773d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>Пошаговое руководство. Запросы по связям (Visual Basic)
 В этом пошаговом руководстве демонстрируется использование [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *ассоциации* для представления связей внешних ключей в базе данных.  
@@ -97,8 +98,8 @@ ms.lasthandoff: 10/18/2017
   
 5.  На **файл** меню, нажмите кнопку **сохранить все** Если вы хотите сохранить это приложение.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  Следующего пошагового руководства ([Пошаговое руководство: управление данными (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) демонстрирует способ обработки данных. Для этого пошагового руководства не требуется сохранять два пошаговых руководства, которые уже выполнены в этой серии.  
   
 ## <a name="see-also"></a>См. также  
- [Обучение с помощью пошаговых руководств](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+ [Обучение с использованием пошаговых руководств](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

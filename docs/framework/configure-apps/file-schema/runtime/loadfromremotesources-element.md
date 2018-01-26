@@ -1,5 +1,5 @@
 ---
-title: "&lt;loadFromRemoteSources&gt; элемент"
+title: '&lt;loadFromRemoteSources&gt; Element'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -16,21 +16,22 @@ caps.latest.revision: "31"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 959073381ef936fa7c0b248419c8529deaee969f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 13b42405a0faf721c46476aadaa0cff8163883c1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; элемент
+# <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; Element
 Указывает, следует ли предоставлять полный уровень доверия сборки из удаленных источников.  
   
 > [!NOTE]
->  Если вы перешли на этот раздел из-за сообщения об ошибке в списке ошибок проекта Visual Studio или ошибку построения, в разделе [как: использовать сборку из Интернета в Visual Studio](http://msdn.microsoft.com/en-us/d8635b63-89a0-41aa-90f4-f351b2111070).  
+>  Если вы перешли на этот раздел из-за сообщения об ошибке в списке ошибок проекта Visual Studio или ошибку построения, в разделе [как: использовать сборку из Интернета в Visual Studio](http://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070).  
   
  \<configuration>  
 \<Среда выполнения >  
-\<loadFromRemoteSources >  
+\<loadFromRemoteSources>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`false`|Не предоставляйте полное доверие приложениям из удаленных источников. Это значение по умолчанию.|  
 |`true`|Предоставить полное доверие приложениям из удаленных источников.|  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  

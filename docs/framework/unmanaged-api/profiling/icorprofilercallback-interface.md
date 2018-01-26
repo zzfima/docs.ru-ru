@@ -19,18 +19,19 @@ caps.latest.revision: "29"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3370dade937d67aa40be263faf3a433d142d932c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c4a53687c473a87edae38207c44f89f0140f8ccd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilercallback-interface"></a>Интерфейс ICorProfilerCallback
 Предоставляет методы, используемые средой CLR (CLR) для уведомления профилировщика кода при событиях, на которые подписан профилировщик.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |[Метод AppDomainCreationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md)|Уведомляет профилировщик, что домен приложения был создан.|  
 |[Метод AppDomainCreationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationstarted-method.md)|Уведомляет профилировщик создания домена приложения.|  
@@ -96,7 +97,7 @@ ms.lasthandoff: 11/21/2017
 |[Метод RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md)|Уведомляет профилировщик, что среда выполнения собирается приостановить все потоки во время выполнения.|  
 |[Метод RuntimeThreadResumed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadresumed-method.md)|Уведомляет профилировщик о том, что указанный поток возобновлен после приостановки.|  
 |[Метод RuntimeThreadSuspended](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)|Уведомляет профилировщик был указанный поток или быть, приостановлено.|  
-|[Shutdown-метод](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-shutdown-method.md)|Уведомляет профилировщик о том, что приложение завершает работу.|  
+|[Метод Shutdown](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-shutdown-method.md)|Уведомляет профилировщик о том, что приложение завершает работу.|  
 |[Метод ThreadAssignedToOSThread](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadassignedtoosthread-method.md)|Уведомляет профилировщик о том, что управляемый поток реализуется с помощью определенного потока операционной системы (ОС).|  
 |[Метод ThreadCreated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md)|Уведомляет профилировщик, что был создан поток.|  
 |[Метод ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md)|Уведомляет профилировщик о том, что поток был удален.|  

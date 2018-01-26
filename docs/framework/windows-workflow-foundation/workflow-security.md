@@ -10,14 +10,15 @@ ms.topic: article
 helpviewer_keywords: programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7b9afd82e90aa8a951f8d78535958723f8c632dd
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: dbb1d1efc0758410f12f2c669cca85b9f0e38406
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-security"></a>Безопасность рабочих процессов
 [!INCLUDE[wf](../../../includes/wf-md.md)] объединяется с несколькими разными технологиями, например Microsoft SQL Server и [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. В случае неправильной настройки взаимодействие с этими технологиями может вызвать проблемы безопасности в рабочем процессе.  

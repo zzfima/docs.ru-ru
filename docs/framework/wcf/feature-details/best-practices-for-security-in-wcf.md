@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 441b3a72d5b0a9e63d6093bc130335801503489e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ad5e459e7dc070b9412de860048c840f677421f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Рекомендации по безопасности при использовании WCF
 В следующих разделах приводятся рекомендации по созданию безопасных приложений с помощью [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]безопасность, в разделе [вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [вопросы безопасности для данных](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), и [вопросы безопасности при использовании метаданных](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
  Общие сведения о NTLM атак перенаправления, перейдите к [http://msdn.microsoft.com/msdnmag/issues/06/09/SecureByDesign/default.aspx](http://go.microsoft.com/fwlink/?LinkId=109571).  
   
 ## <a name="always-revert-after-impersonation"></a>Всегда отменяйте изменения после олицетворения  
- При использовании интерфейсов API, которые разрешают олицетворение клиента, не забудьте вернуться к исходной идентификации. Например, при работе с <xref:System.Security.Principal.WindowsIdentity> и <xref:System.Security.Principal.WindowsImpersonationContext> воспользуйтесь оператором C# `using` или оператором [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]`Using`, как показано в следующем примере кода. Класс <xref:System.Security.Principal.WindowsImpersonationContext> реализует интерфейс <xref:System.IDisposable>, следовательно, среда CLR автоматически возвращается к исходной идентификации после того, как код выводится из блока `using`.  
+ При использовании интерфейсов API, которые разрешают олицетворение клиента, не забудьте вернуться к исходной идентификации. Например, при использовании <xref:System.Security.Principal.WindowsIdentity> и <xref:System.Security.Principal.WindowsImpersonationContext>, с помощью C# `using` инструкции или [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] `Using` инструкции, как показано в следующем коде. Класс <xref:System.Security.Principal.WindowsImpersonationContext> реализует интерфейс <xref:System.IDisposable>, следовательно, среда CLR автоматически возвращается к исходной идентификации после того, как код выводится из блока `using`.  
   
  [!code-csharp[c_SecurityBestPractices#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securitybestpractices/cs/source.cs#1)]
  [!code-vb[c_SecurityBestPractices#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securitybestpractices/vb/source.vb#1)]  

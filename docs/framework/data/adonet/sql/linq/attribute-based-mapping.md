@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a8397c106ec45d9e6e1e9ec513536142d3048bd7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: a7a66b165e5bcfc605842b96295ae1721e7b3af5
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="attribute-based-mapping"></a>Сопоставление, основанное на атрибутах
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]сопоставляет базу данных SQL Server для [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] объектной модели, либо путем применения атрибутов или с помощью внешнего файла сопоставления. В этом разделе представлен подход на основе атрибутов.  
@@ -150,7 +151,7 @@ ms.lasthandoff: 10/18/2017
 |<xref:System.Data.Linq.Mapping.DataAttribute.Name%2A>|Строковое|Строка, соответствующая имени базы данных|Указывает имя таблицы, столбца и т. д.|  
 |<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>|Строковое|Открытые методы доступа|Указывает имя базового поля хранения.|  
   
- Для получения дополнительной информации см. <xref:System.Data.Linq.Mapping.DataAttribute>.  
+ Дополнительные сведения см. в разделе <xref:System.Data.Linq.Mapping.DataAttribute>.  
   
 ## <a name="see-also"></a>См. также  
  [Ссылки](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

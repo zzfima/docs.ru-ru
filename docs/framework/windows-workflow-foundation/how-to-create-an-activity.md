@@ -12,14 +12,15 @@ dev_langs:
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
 caps.latest.revision: "39"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6b52daa513bad9d0cb05fcabb27ff5755f8dba2a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 4a3b9698d6a060120addff52e6600916a2de19fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-activity"></a>Как создать действие
 Действия являются базовой единицей режима работы в [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Логика выполнения действия может быть реализована в управляемом коде или с помощью других действий. В этом разделе показано создание двух действий. Первое действие - простое действие с использованием кода для реализации логики выполнения. Реализация второго действия определяется с помощью других действий. Эти действия используются в следующих шагах учебника.  
@@ -121,4 +122,4 @@ ms.lasthandoff: 11/21/2017
  [Разработка и реализация настраиваемых действий](../../../docs/framework/windows-workflow-foundation/designing-and-implementing-custom-activities.md)  
  [Руководство по началу работы](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
  [Практическое руководство. Создание рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)  
- [Использование ExpressionTextBox в конструкторе пользовательских действий](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+ [Использование ExpressionTextBox в пользовательском конструкторе действия](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

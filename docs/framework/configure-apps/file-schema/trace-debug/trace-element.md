@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 157adb6c7317aa047976cdb9e30711d20c9e543b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d7ddcbdbdbbc2924d4f725d2fd401f873a4cfb0b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lttracegt-element"></a>&lt;трассировки&gt; элемент
 Содержит прослушиватели, которые собирают, хранят и маршрутизируют сообщения трассировки.  
@@ -55,21 +56,21 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="autoflush-attribute"></a>Автоматическая запись атрибута  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`false`|Не сбрасывает автоматически выходного буфера. Это значение по умолчанию.|  
 |`true`|Автоматически очищает выходной буфер.|  
   
 ## <a name="usegloballock-attribute"></a>useGlobalLock атрибута  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`false`|Не использовать глобальную блокировку, если прослушиватель потокобезопасен; в противном случае использует глобальную блокировку.|  
 |`true`|Использует глобальную блокировку, независимо от того, прослушиватель потокобезопасным. Это значение по умолчанию.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|Задает прослушиватель, собирающий, хранилища и маршрутизирует сообщения.|  
   

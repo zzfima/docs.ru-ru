@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7d4c509a710637e335f80257fb3984f164d83a51
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: ad6ad6f71ef015ad97a2688a7334e8a0c6e5af44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltbaseaddressprefixfiltergt"></a>&lt;add&gt; для &lt;baseAddressPrefixFilter&gt;
 Представляет собой элемент конфигурации, который задает проходной фильтр, выбирающий соответствующие привязки IIS при размещении приложения [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] в IIS.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<baseAddressPrefixFilters >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Коллекция элементов конфигурации, которые задают проходные фильтры, выбирающие нужные привязки IIS при размещении приложения [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] в IIS.|  
   

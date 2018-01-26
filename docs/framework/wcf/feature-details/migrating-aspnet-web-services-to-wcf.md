@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e2051de2c0cef9a31337b320c347bb7d85dbadae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: f90f7dd508e2ff4058b787fc29d152abc18f24fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>Миграция веб-служб ASP.NET на платформу WCF
 Платформа ASP.NET предоставляет библиотеки классов .NET Framework и средства для построения веб-служб, а также возможности для их размещения в службах Internet Information Services (IIS). [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предоставляет библиотеки классов .NET Framework, средства и возможности размещения, позволяющие программным компонентам взаимодействовать с использованием любых протоколов, в том числе протоколов, используемых веб-службами.  Перенос веб-служб ASP.NET на платформу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] позволяет приложениями использовать преимущества новых компонентов и усовершенствований, которые являются уникальными для [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -48,6 +49,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>См. также  
  [Планирование перехода на платформу Windows Communication Foundation: упрощение будущей миграции](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)  
  [Планирование перехода на платформу Windows Communication Foundation: упрощение будущей интеграции](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)  
- [Перехода на платформу Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/adopting-wcf.md)  
- [Сравнение веб-служб ASP.NET на основе WCF по назначению и используемым стандартам](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)  
- [Сравнение веб-служб ASP.NET на основе WCF по разработке](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)
+ [Переход на платформу Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/adopting-wcf.md)  
+ [Сравнение веб-служб ASP.NET с веб-службами на основе WCF по назначению и используемым стандартам](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)  
+ [Сравнение веб-служб ASP.NET с веб-службами на основе WCF по процессу разработки](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)

@@ -13,21 +13,22 @@ dev_langs:
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2299a974fc9c6af9e5fba0de6e16ab72de8b5e10
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 21924441c091c53a79d4b7bf8a683f8a7c74bd07
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Интеграция System.Transactions с SQL Server
 Платформа [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 2.0 включает новую платформу транзакций, к которой можно обращаться через пространство имен <xref:System.Transactions> . Возможности работы с транзакциями в этой платформе полностью интегрированы с [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], включая [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
  Помимо расширенных возможностей программирования, пространство имен <xref:System.Transactions> и [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] можно использовать вместе, чтобы координировать оптимизацию при работе с транзакциями. Повышаемая транзакция — это упрощенная (локальная) транзакция, которая по необходимости может быть автоматически повышена до полностью распределенной транзакции.  
   
- Начиная с [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, объект <xref:System.Data.SqlClient> поддерживает при работе с [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]повышаемые транзакции. Повышаемая транзакция не вызывает дополнительную нагрузку распределенной транзакции, если таковая не требуется. Повышаемые транзакции являются автоматическими, они не требуют вмешательства разработчика.  
+ Начиная с [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, объект <xref:System.Data.SqlClient> поддерживает при работе с [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]повышаемые транзакции. Повышаемая транзакция не вызывает дополнительную нагрузку распределенной транзакции, если таковая не требуется. Повышаемые транзакции являются автоматическими и не требуют вмешательства разработчика.  
   
  Повышаемые транзакции доступны только при использовании поставщика данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для SQL Server (`SqlClient`) в сочетании с [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
   
@@ -239,5 +240,5 @@ End Function
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Транзакции и параллелизм](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
+ [Транзакции и параллельность](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

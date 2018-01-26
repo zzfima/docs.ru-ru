@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7b6312575dbf44b7c4ae872fbb87df41eb2e32ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6022f4a521fa64246a24b7aab21c368f5f72af8d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-define-a-groupbox-template"></a>Практическое руководство. Определение шаблона GroupBox
 В этом примере показано, как создать шаблон для <xref:System.Windows.Controls.GroupBox> элемента управления.  
@@ -32,4 +33,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Controls.GroupBox>  
- [Разделы руководства, посвященные GroupBox](http://msdn.microsoft.com/en-us/7692e155-a4c6-428c-b7e0-64b3740daca7)
+ [Разделы руководства, посвященные GroupBox](http://msdn.microsoft.com/library/7692e155-a4c6-428c-b7e0-64b3740daca7)

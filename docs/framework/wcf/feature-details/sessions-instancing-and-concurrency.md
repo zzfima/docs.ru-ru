@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f188bc85ae3c2601e98ad29b275c6bb8b698522f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 5d4559f177b05f7d238c9f30649a5b01af7fb6f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Сеансы, экземпляры и параллелизм
 Под *сеансом* понимается скоррелированный набор всех сообщений, переданных между двумя конечными точками. *Создание экземпляров* означает управление временем жизни определенных пользователем объектов службы и связанных с ними объектов <xref:System.ServiceModel.InstanceContext> . Термин*параллелизм* означает управление количеством потоков, одновременно выполняющихся в некотором контексте <xref:System.ServiceModel.InstanceContext> .  
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
  Зная особенности класса <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> в приложениях [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и обеспечиваемые им функциональные возможности, можно отметить следующие различия между его сеансами и сеансами [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
   
--   Сеансы[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] всегда инициируются сервером.  
+-   Сеансы [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] всегда инициируются сервером.  
   
 -   Сеансы[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] явным образом неупорядочены.  
   
@@ -119,8 +120,8 @@ public class CalculatorService : ICalculatorConcurrency
   
 ## <a name="see-also"></a>См. также  
  [Использование сеансов](../../../../docs/framework/wcf/using-sessions.md)  
- [Как: создать службу, которой требуются сеансы](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)  
- [Как: управление созданием экземпляров служб](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)  
+ [Практическое руководство. Создание службы, для которой требуются сеансы](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)  
+ [Практическое руководство. Управление созданием экземпляров служб](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)  
  [Параллелизм](../../../../docs/framework/wcf/samples/concurrency.md)  
  [Создание экземпляров](../../../../docs/framework/wcf/samples/instancing.md)  
  [Сеанс](../../../../docs/framework/wcf/samples/session.md)

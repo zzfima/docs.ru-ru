@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: edb9ab8c-0b9a-488d-aa96-9c8c7984b53c
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7394ebbcb14850af89d906b0b573c4f677346825
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: cc940e1781f821f12efb42c5198e77eb0451a164
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="1004---workflowinstanceaborted"></a>1004 ― WorkflowInstanceAborted
 ## <a name="properties"></a>Свойства  
@@ -40,4 +41,4 @@ ms.lasthandoff: 10/18/2017
 |--------------------|--------------------|-----------------|  
 |WorkflowInstanceId|`xs:string`|Идентификатор экземпляра для рабочего процесса.|  
 |Исключение|`xs:string`|Сведения об исключении|  
-|Домен приложения|`xs:string`|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|
+|AppDomain|`xs:string`|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|

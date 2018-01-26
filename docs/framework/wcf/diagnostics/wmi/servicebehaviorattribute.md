@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5faa266f-587f-4e03-828d-1c7dd5acfe65
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f7401acd5aefcb7a8c02ea6c05a94374e41d9b9d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 7d6b0620e9cb2575bcfe9cd6f01b5d87669df69b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicebehaviorattribute"></a>ServiceBehaviorAttribute
 ServiceBehaviorAttribute  
@@ -99,7 +100,7 @@ class ServiceBehaviorAttribute : Behavior
   
  Максимальное количество элементов, допустимое в сериализованном объекте.  
   
-### <a name="name"></a>Имя  
+### <a name="name"></a>name  
  Тип данных: string  
   
  Тип доступа: только для чтения  

@@ -10,14 +10,17 @@ ms.topic: article
 helpviewer_keywords: serialization, how-tos
 ms.assetid: 46c972ab-2193-4f72-9413-eca4521ed4b0
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0abaa3bfd85316d61a5d48b0af9cd7ec2a6bf366
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 462812070446e9013c2cf2c4d3e2f15831e84e70
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization-how-to-topics"></a>Практические руководства по сериализации
 Ниже приведены ссылки на разделы руководства по сериализации, находящиеся в основной документации.  

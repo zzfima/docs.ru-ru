@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c82a77ff3d643afc0ddd542868a96c17d31ef336
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 81b022011bd5613b8e956aa83482d2836508a4f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-rotate-colors"></a>Практическое руководство. Поворот цветов
 Угол поворота в четырехмерный цветовое пространство сложно визуализировать. Мы можно упростить, если договориться сохранять один из компонентов цвета неизменным. Предположим, нам требуется сохранить альфа-компонент неизменным и равным 1 (полная непрозрачность). Тогда можно представить трехмерное цветовое пространство с осями красного, зеленого и синего как показано на следующем рисунке.  
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[System.Drawing.RotateColors#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, и для него необходим объект <xref:System.Windows.Forms.PaintEventArgs>`e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.Control.Paint>. Замените `RotationInput.bmp` в вашей системе путь и имя файла изображения.  
+ Предыдущий пример предназначен для работы с Windows Forms, и для него необходим <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчика событий. Замените `RotationInput.bmp` в вашей системе путь и имя файла изображения.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Drawing.Imaging.ColorMatrix>  

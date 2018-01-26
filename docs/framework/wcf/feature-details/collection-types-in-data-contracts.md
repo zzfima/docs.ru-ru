@@ -17,14 +17,15 @@ helpviewer_keywords:
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8591f1c7c3aa123acd17a9e3ab22cf950275f588
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: e74bd7d90d5653890fd5cf48e76c81d0227c6172
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="collection-types-in-data-contracts"></a>Типы коллекций в контрактах данных
 Под *коллекцией* понимается список элементов определенного типа. В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]такие списки могут быть представлены с помощью массивов или других типов (универсальный список, универсальные <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>или <xref:System.Collections.ArrayList>). Например, в коллекции может содержаться список адресов конкретного клиента. Такие коллекции называются *коллекциями списков*, независимо от их фактического типа.  
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/28/2017
  [!code-csharp[c_collection_types_in_data_contracts#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#1)]
  [!code-vb[c_collection_types_in_data_contracts#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#1)]  
   
- Во время сериализации, если объявленный тип является интерфейсом, текущий используемый тип экземпляра может быть любым типом, реализующим этот интерфейс. Описанные ранее ограничения (имеющие конструктор по умолчанию и метод `Add` ) не применяются. Например, можно задать адреса в Customer2 в экземпляре универсального <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> значения Address, даже несмотря на то что непосредственно объявить элемент данных универсального класса <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>невозможно.  
+ Во время сериализации, если объявленный тип является интерфейсом, текущий используемый тип экземпляра может быть любым типом, реализующим этот интерфейс. Описанные ранее ограничения (имеющие конструктор по умолчанию и метод `Add`) не применяются. Например, можно задать адреса в Customer2 в экземпляре универсального <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> значения Address, даже несмотря на то что непосредственно объявить элемент данных универсального класса <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>невозможно.  
   
  Во время десериализации, если объявленный тип является интерфейсом, ядро сериализации выбирает тип, который реализует объявленный интерфейс, и создается экземпляр типа. Механизм известных типов (описанный в [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) в данном случае не дает результата; выбор типа интегрирован в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
@@ -236,7 +237,7 @@ ms.lasthandoff: 11/28/2017
   
  По умолчанию в импортированном коде типы для ненастроенных коллекций не создаются. Элементы данных коллекций списков импортируются как массивы, а элементы данных коллекций-словарей импортируются как универсальный словарь.  
   
- Тем не менее, для настроенных коллекций создаются отдельные типы, отмеченные атрибутом <xref:System.Runtime.Serialization.CollectionDataContractAttribute>. (Тип настроенной коллекции в схеме является типом, который не использует пространство имен, имя, имя повторяющегося элемента или имена ключа/значения элемента по умолчанию). Данные типы являются пустыми типами, наследованными от универсального <xref:System.Collections.Generic.List%601> для типов списков и универсальным словарем для типов словаря.  
+ Тем не менее, для настроенных коллекций создаются отдельные типы, отмеченные атрибутом <xref:System.Runtime.Serialization.CollectionDataContractAttribute> . (Тип настроенной коллекции в схеме является типом, который не использует пространство имен, имя, имя повторяющегося элемента или имена ключа/значения элемента по умолчанию). Данные типы являются пустыми типами, наследованными от универсального <xref:System.Collections.Generic.List%601> для типов списков и универсальным словарем для типов словаря.  
   
  Например, на сервере могут быть следующие типы.  
   

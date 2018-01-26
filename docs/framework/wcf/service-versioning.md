@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 73b7fd7564fea065167978deaad21bb533dbef0c
-ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 791e201907f72f9d590f6d835fd6ec1bfc25633f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-versioning"></a>Управление версиями службы
 После первоначального развертывания служб и, возможно, несколько раз на протяжении времени их существования возникает потребность в изменении этих служб (и предоставляемых ими конечных точек). Причин тому немало: изменяющиеся потребности бизнеса, требования информационных технологий или необходимость решить какие-либо другие проблемы. В результате каждого изменения создается новая версия службы. В этом разделе описываются принципы управления версиями в [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
@@ -197,4 +198,4 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
  <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>  
  <xref:System.Xml.Serialization.XmlSerializer>  
  [Эквивалентность контрактов данных](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [Обратных вызовов независимой от версий сериализации](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+ [Обратные вызовы сериализации, независимые от версий](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ba41bd63f1dc23441cc7f265a8b1339d0b1194d5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 61a0811176a5db17e040073d031fa50865a09857
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Атрибуты ServiceModel и справочная информация ServiceDescription
 *Дерево описания* иерархия типов (начиная с <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> класса), которые вместе описывают каждый аспект службы. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] использует дерево описания для сборки допустимой среды выполнения службы, для публикации схем на языке WSDL, схем XSD и утверждений политики (метаданные) о службе, которые клиенты могут использовать для подключения и использования службы, а также для создания различных файлов конфигурации представления и кода на основе значений из дерева описания.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/18/2017
   
 |Свойство ServiceBehaviorAttribute|Изменяемое значение дерева описания|  
 |---------------------------------------|-------------------------------------|  
-|Имя|<xref:System.ServiceModel.Description.ServiceDescription.Name%2A>|  
+|name|<xref:System.ServiceModel.Description.ServiceDescription.Name%2A>|  
 |Пространство имен|<xref:System.ServiceModel.Description.ServiceDescription.Namespace%2A>|  
 |ConfigurationName|<xref:System.ServiceModel.Description.ServiceDescription.ConfigurationName%2A>|  
 |IgnoreExtensionDataObject|Задает свойство <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.IgnoreExtensionDataObject%2A> для всех операций.|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/18/2017
 |IsOneWay|Сопоставляется одному описанию <xref:System.ServiceModel.Description.MessageDescription> в <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>|  
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
 |IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
-|Имя|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
+|name|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> и, возможно, дочерние уровни защиты. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Иерархия уровень защиты, в разделе [уровень защиты основные сведения о](../../../../docs/framework/wcf/understanding-protection-level.md).|  
 |ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> для исходящего или входящего сообщения, в зависимости от контракта/контракта обратного вызова.|  
   
@@ -65,18 +66,18 @@ ms.lasthandoff: 10/18/2017
 |----------------------------------|-------------------------------------|  
 |Действие|<xref:System.ServiceModel.Description.FaultDescription.Action%2A>, в зависимости от контракта/контракта обратного вызова.|  
 |DetailType|<xref:System.ServiceModel.Description.FaultDescription.DetailType%2A>|  
-|Имя|<xref:System.ServiceModel.Description.FaultDescription.Name%2A>|  
+|name|<xref:System.ServiceModel.Description.FaultDescription.Name%2A>|  
 |Пространство имен|<xref:System.ServiceModel.Description.FaultDescription.Namespace%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.FaultDescription.ProtectionLevel%2A>|  
   
 |Значение DataContractFormatAttribute|Изменяемое значение дерева описания|  
 |---------------------------------------|-------------------------------------|  
-|Применение|Задается значение <xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> в <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> для операции.|  
+|Использовать|Задается значение <xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> в <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> для операции.|  
   
 |Значение XmlSerializerFormatAttribute|Изменяемое значение дерева описания|  
 |----------------------------------------|-------------------------------------|  
 |Стиль|Это свойство <xref:System.ServiceModel.XmlSerializerFormatAttribute> задается в <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> для операции.|  
-|Применение|<xref:System.ServiceModel.XmlSerializerFormatAttribute> задается в <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> для операции.|  
+|Использовать|<xref:System.ServiceModel.XmlSerializerFormatAttribute> задается в <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> для операции.|  
   
 |Значение TransactionFlowAttribute|Изменяемое значение дерева описания|  
 |------------------------------------|-------------------------------------|  
@@ -92,14 +93,14 @@ ms.lasthandoff: 10/18/2017
 |----------------------------------|-------------------------------------|  
 |Actor|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A>для соответствующего заголовка в<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A>для соответствующего заголовка в<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|Имя|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>для соответствующего заголовка в<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>для соответствующего заголовка в<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |Пространство имен|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>для соответствующего заголовка в<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>для соответствующего заголовка в<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A>для соответствующего заголовка в<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
   
 |Значение MessageBodyMemberAttribute|Изменяемое значение дерева описания|  
 |--------------------------------------|-------------------------------------|  
-|Имя|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>для соответствующей части в<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>для соответствующей части в<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |Пространство имен|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>для соответствующей части в<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |Номер|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A>для соответствующей части в<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>для соответствующей части в<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
@@ -108,20 +109,20 @@ ms.lasthandoff: 10/18/2017
 |---------------------------------------|-------------------------------------|  
 |Actor|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A>|  
 |MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A>|  
-|Имя|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
+|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
 |Пространство имен|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>|  
 |Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A>|  
   
 |Значение MessagePropertyAttribute|Изменяемое значение дерева описания|  
 |------------------------------------|-------------------------------------|  
-|Имя|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
+|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
   
 |Значение MessageParameterAttribute|Изменяемое значение дерева описания|  
 |-------------------------------------|-------------------------------------|  
-|Имя|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>для соответствующей части в<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>для соответствующей части в<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]значений дерево описания преобразуются в метаданных, в статье [Справочник WSDL и ServiceDescription](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
 ## <a name="see-also"></a>См. также  
- [ServiceDescription и ссылка на WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)
+ [ServiceDescription и справочная информация о WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)

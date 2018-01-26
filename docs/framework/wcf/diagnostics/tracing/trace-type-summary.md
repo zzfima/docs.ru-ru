@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d8e82f153e996ffebc2aba614f42c5cfa949e7ec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: fe4222ac124174341a28035c955a2a9bef4a167c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trace-type-summary"></a>Сводка типов трассировок
 [Уровни источника](http://go.microsoft.com/fwlink/?LinkID=94943) определяются различные уровни трассировки: критическое, ошибка, предупреждение, сведения и подробные сведения, а также приводится описание `ActivityTracing` границ и действие передачи событий трассировки флага, которые выводом.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/18/2017
 |Verbose|Трассировка отладки.|  
 |Запуск|Начало логического блока обработки.|  
 |Suspend|Приостановка обработки логическую единицу.|  
-|Возобновить|Возобновление логический блок обработки.|  
+|возобновление|Возобновление логический блок обработки.|  
 |Остановить|Остановка логический блок обработки.|  
 |Transfer|Изменение идентификации взаимосвязей.|  
   

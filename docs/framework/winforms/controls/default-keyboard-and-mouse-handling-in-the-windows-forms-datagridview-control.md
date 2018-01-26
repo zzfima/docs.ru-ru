@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d0f1ec3f1fe0b078da92c93cbb928075d7d462c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 627784f3d68ddf03f1f6c94975405dded3163c06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>Выполняемая по умолчанию обработка событий мыши и клавиатуры элементом управления DataGridView в Windows Forms
 В следующих таблицах описаны способы взаимодействия пользователей с <xref:System.Windows.Forms.DataGridView> управления посредством клавиатуры и мыши.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="basic-navigation-and-entry-keys"></a>Основные клавиши перехода и ввода  
   
-|Клавиши или сочетания клавиш|Описание|  
+|Клавиши или сочетания клавиш|Описание:|  
 |----------------------------|-----------------|  
 |СТРЕЛКА ВНИЗ|Перемещение фокуса к ячейке, расположенной непосредственно под текущей ячейкой. Если фокус находится в последней строке, ничего не делает.|  
 |СТРЕЛКА ВЛЕВО|Переход к предыдущей ячейке в строке. Если фокус находится в первой ячейке в строке, ничего не делает.|  
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
  Если <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> равно <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> или <xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>, такое же поведение наблюдается, но со следующими дополнениями.  
   
-|Клавиши или сочетания клавиш|Описание|  
+|Клавиши или сочетания клавиш|Описание:|  
 |----------------------------|-----------------|  
 |SHIFT + ПРОБЕЛ|Выбор всей строки или столбца (то же, как при щелчке заголовка строки или столбца).|  
 |Клавиша навигации (клавиша со стрелкой, PAGE UP/DOWN, HOME, END)|Если выбран полной строки или столбца, изменение текущей ячейки в новой строки или столбца выделяет всей новой строки или столбца (в зависимости от режима выделения).|  
@@ -89,7 +90,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  Щелчок по ячейке левой кнопки мыши всегда изменяет текущую ячейку. Щелчок по ячейке правой кнопкой мыши открывается контекстное меню, если она доступна.  
   
-|Действие мыши|Описание|  
+|Действие мыши|Описание:|  
 |------------------|-----------------|  
 |Левой кнопки мыши|Обеспечивает выбранная ячейка текущей ячейки, а также вызывает <xref:System.Windows.Forms.DataGridView.CellMouseDown?displayProperty=nameWithType> событий.|  
 |Левая кнопка мыши вверх|Вызывает событие <xref:System.Windows.Forms.DataGridView.CellMouseUp?displayProperty=nameWithType>.|  
@@ -101,7 +102,7 @@ ms.lasthandoff: 11/21/2017
   
  Если <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> свойству `false` и <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> свойству <xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>, происходит следующее.  
   
-|Действие мыши|Описание|  
+|Действие мыши|Описание:|  
 |------------------|-----------------|  
 |Щелчок левой кнопкой мыши|Выделение только текущей ячейки, если пользователь щелкает ячейку. Нет выбора поведения при щелчке заголовка строки или столбца.|  
 |Щелкните правой кнопкой мыши|Отображает контекстное меню, если он доступен.|  

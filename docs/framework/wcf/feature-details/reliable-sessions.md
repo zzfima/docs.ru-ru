@@ -17,14 +17,15 @@ helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 143951b3-3aa0-4540-b4b7-d33e77e874a1
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 659309ff5560480c423fc9b0adab5e93eac05ce5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 16480996b96145873b1d1f84d56af6d1aa863710
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-sessions"></a>Надежные сеансы
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/18/2017
 
 Для применения надежных сеансов в приложении [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] следует использовать предоставляемые системой привязки в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], которые по умолчанию поддерживают надежные сеансы, либо можно создать собственную пользовательскую привязку, которая бы поддерживала такие сеансы.
 
-## <a name="in-this-section"></a>Содержание
+## <a name="in-this-section"></a>В этом разделе
 
 [Общие сведения о надежных сеансов](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)   
 Описание надежных сеансов, ситуаций, в которых они используются, различных привязок, которые поддерживают надежные сеансы, и принципы их работы.

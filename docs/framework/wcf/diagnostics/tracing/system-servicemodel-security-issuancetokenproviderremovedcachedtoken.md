@@ -13,16 +13,17 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 09c19165f95c33b165051616425930470fa628bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c23d69e0a6ddbc38db55d7656f49f406b575b9ac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelsecurityissuancetokenproviderremovedcachedtoken"></a>System.ServiceModel.Security.IssuanceTokenProviderRemovedCachedToken
 System.ServiceModel.Security.IssuanceTokenProviderRemovedCachedToken  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  IssuanceTokenProvider удалил маркер службы с истекшим сроком действия.  
   
 ## <a name="see-also"></a>См. также  

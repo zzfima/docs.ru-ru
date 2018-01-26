@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 81bca4572b6c4845674c63284f93c86fe5925bdf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: df2a7a78e876ec3228491569c918ad9add2e080d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="replay-attacks"></a>Атаки с повторением
 Объект *атака воспроизведения* возникает, когда злоумышленник копирует поток сообщений между двумя сторонами и воспроизводит его для одного или нескольких сторон. Если не приняты ответные меры, атакованные компьютеры обрабатывают этот поток как допустимые сообщения, что приводит к ряду негативных последствий, таких как повторные заказы одного элемента.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
   
  Единственным типом привязок, чувствительных к атакам отражения, являются специальные привязки, в которых отключен протокол WS-Addressing и в которых используется защита на основе симметричного ключа. В привязке <xref:System.ServiceModel.BasicHttpBinding> по умолчанию не используется протокол WS-Addressing, однако защита на основе симметричных ключей используется таким образом, что привязка не является уязвимой для атаки такого типа.  
   
- Для защиты специальных привязок следует не устанавливать контекст безопасности или требовать использования заголовков WS-Addressing.  
+ Для устранения рисков специальных привязок следует не устанавливать контекст безопасности или требовать использования заголовков WS-Addressing.  
   
 ## <a name="web-farm-attacker-replays-request-to-multiple-nodes"></a>Веб-ферма: злоумышленник воспроизводит запрос на нескольких узлах  
  Клиент использует службу, которая реализована на веб-ферме. Злоумышленник воспроизводит запрос, отправленный на один узел фермы, на другом узле фермы. Кроме того, в случае перезапуска службы кэш воспроизведения очищается, что позволяет злоумышленнику воспроизвести запрос. (В кэше содержатся использованные ранее значения подписи сообщения. Кэш не позволяет воспроизводить их, так что такие подписи могут использоваться только один раз. Кэш воспроизведения не является общим в масштабах веб-фермы.)  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>См. также  
  [Вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
  [Раскрытие информации](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [Повышение прав доступа](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [Повышение привилегий](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
  [Отказ в обслуживании](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Изменение данных](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ [Подделка](../../../../docs/framework/wcf/feature-details/tampering.md)  
  [Неподдерживаемые сценарии](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

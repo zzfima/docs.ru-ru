@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cc1458996e70e8af05c4e2bc9e6c61a5d8a9f87d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 6a027bd898409708dd6800908a6736f5853058df
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-clr-type-mismatches"></a>Несоответствия типов SQL-CLR
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] автоматизирует большую часть преобразований между объектной моделью и SQL Server. Однако существуют ситуации, препятствующие точному преобразованию. Эти основные несоответствия между типами среды CLR и типами баз данных SQL Server перечислены в следующих разделах. Дополнительные сведения о сопоставлении конкретных типов и о преобразовании функций [сопоставление типов SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) и [типы данных и функции](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
@@ -304,4 +305,4 @@ Where Col1 + Col2 > 4
  Наряду с семантическими различиями при переходах между системами типов SQL Server и CLR важно учитывать изменение производительности. Для больших наборов данных подобные проблемы производительности могут определить, является ли приложение развертываемым.  
   
 ## <a name="see-also"></a>См. также  
- [Общие сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+ [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6d8745b8a27ac0e7c301eceda9664f9fc30ce0ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 79c26ca9e167455dfbd664ea96e574c130cdc3d2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="peer-resolvers"></a>Одноранговые распознаватели
 Чтобы подключиться к сетке, одноранговому узлу требуются IP-адреса других узлов. Получение IP-адресов обычно происходит в результате обращения к службе арбитра, которая принимает идентификатор сетки и возвращает список адресов, соответствующих узлам, зарегистрированным для конкретного идентификатора сетки. Арбитр сохраняет список зарегистрированных адресов, которые он создает при регистрации в службе всех узлов сетки.  
@@ -42,10 +43,10 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  При использовании локальных или импровизированных сетей с пользовательским распознавателем настоятельно рекомендуется включать в приложения, которые используют или поддерживают локальные и импровизированные сети, механизм для выбора при подключении одного локального адреса. Это позволит избежать ошибок, связанных с компьютерами с несколькими локальными адресами. Поэтому одноранговый канал поддерживает одновременное использование только одного локального адреса. Этот адрес можно указать в свойстве `ListenIpAddress` привязки <xref:System.ServiceModel.NetPeerTcpBinding>.  
   
- Показывает, как реализовать пользовательский арбитр конфликтов, в разделе [однорангового канала пользовательского распознавателя одноранговых](http://msdn.microsoft.com/en-us/5b75a2bb-7ff1-4a14-abe7-3debf0537d23).  
+ Показывает, как реализовать пользовательский арбитр конфликтов, в разделе [однорангового канала пользовательского распознавателя одноранговых](http://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23).  
   
-## <a name="in-this-section"></a>Содержание  
- [О custompeerresolverservice: регистрация клиентов](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Подробная информация о CustomPeerResolverService: регистрация клиентов](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
   
 ## <a name="see-also"></a>См. также  
  [Основные понятия одноранговых каналов](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)  

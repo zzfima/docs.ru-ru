@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a782f971-0195-4bad-a151-55d35656ae86
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a69119ded8ff181d3b92307553bc8fd3a96d9e9a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: c06fd73aa718640c09749fc83b52c14ee713dd2d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelportsharingreadnetpipeconfig"></a>System.ServiceModel.PortSharing.ReadNetPipeConfig
 System.ServiceModel.PortSharing.ReadNetPipeConfig  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Данные конфигурации для NetPipeSection были прочитаны с указанными данными: maxConnectionsPendingDispatch, maxPendingAccepts и receiveTimeout.  
   
 ## <a name="see-also"></a>См. также  

@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5b670c80-a119-4114-8b1d-2b2034e5cb19
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1413c157bd82b28f420d13826b210783d8d6f596
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: e922b749792b541083b991340731796be1772c61
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationservicehostcreatedservicecontract"></a>System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceContract
 System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceContract  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  ComPlus: создан контракт службы.  
   
 ## <a name="see-also"></a>См. также  

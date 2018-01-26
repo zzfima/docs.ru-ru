@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4c2632b1-ea67-4feb-88f9-d00874842eb9
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 553b7c1f52d78686c8457aeec3f3beadf79f5ab2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 8cc37273b7808c90833a0f765a7731ddacef7a23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelportsharingroutingtablecannotlisten"></a>System.ServiceModel.PortSharing.RoutingTableCannotListen
 System.ServiceModel.PortSharing.RoutingTableCannotListen  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Таблица маршрутизации не может ожидать передачи данных.  
   
 ## <a name="see-also"></a>См. также  

@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: dd33f987ab28b42c16aa4798c59675225dcaf520
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 42c89ae71078a3ddfbe7e85273a6f62879781c80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-channels"></a>Разработка каналов
 Для разработки протокола или канала транспорта, который может использоваться с [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], прикладной уровень требует выполнения нескольких действий. В этом разделе описываются эти действия и указываются конкретные разделы для получения дополнительных сведений. Чтобы понять модель канала и различных типов, описанных в этом разделе, см. [Общие сведения о модели каналов](../../../../docs/framework/wcf/extending/channel-model-overview.md). Пример завершения транспорта канала, см. [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  

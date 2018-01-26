@@ -17,26 +17,27 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 555f9a216c8e28f7f4fcd79babce77f929ecc072
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 18a5257dbc0272aedb8fe5c7ddec601b999c609b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-structures"></a>Структуры метаданных
 В этом разделе описаны неуправляемые структуры, которые использует API метаданных.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  ASSEMBLYMETADATA  
  Хранит метаданные сборки для дальнейшего использования.  
   
- [Cor_field_offset-структура](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)  
+ [Структура COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)  
  Хранит смещение указанного поля в пределах класса.  
   
- [Cor_native_link-структура](../../../../docs/framework/unmanaged-api/metadata/cor-native-link-structure.md)  
+ [Структура COR_NATIVE_LINK](../../../../docs/framework/unmanaged-api/metadata/cor-native-link-structure.md)  
  Содержит сведения, используемые для связи с машинным кодом.  
   
- [Cvstruct-структура](../../../../docs/framework/unmanaged-api/metadata/cvstruct-structure.md)  
+ [Структура CVStruct](../../../../docs/framework/unmanaged-api/metadata/cvstruct-structure.md)  
  Содержит сведения, используемые при установке модуля или составного образа.  
   
  [Структура OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)  

@@ -10,20 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6207b526aa98fd01892b493ab5b6ad6a58abc3c0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: ba3948ef52e6ce527b0bdba77652949e43d05eb2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Практическое руководство. Обмен сообщениями в рамках надежного сеанса
 
 В этом разделе описываются действия, необходимые, чтобы разрешить надежные сеансы с помощью одной из привязок, предоставляемых системой, которая поддерживает такие сеансы, но не по умолчанию. Включение надежного сеанса императивно с помощью кода или декларативно в файле конфигурации. Эта процедура использует файлы конфигурации клиента и службы для включения надежного сеанса и обеспечивается доставка сообщений в том же порядке, в котором они были отправлены.
 
-Ключевой момент данной процедуры заключается в том, что элемент конфигурации конечной точки содержат `bindingConfiguration` атрибут, ссылающийся на конфигурацию привязки с именем `Binding1`. [  **\<Привязки >** ](../../../../docs/framework/misc/binding.md) элемент конфигурации ссылается на это имя, чтобы разрешить надежные сеансы, задав `enabled` атрибут [  **\<reliableSession >** ](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) элемент `true`. Можно обеспечить доставку сообщений в порядке их отправки для надежного сеанса, присвоив атрибуту `ordered` значение `true`.
+Ключевой момент данной процедуры заключается в том, что элемент конфигурации конечной точки содержат `bindingConfiguration` атрибут, ссылающийся на конфигурацию привязки с именем `Binding1`. [  **\<Привязки >** ](../../../../docs/framework/misc/binding.md) элемент конфигурации ссылается на это имя, чтобы разрешить надежные сеансы, задав `enabled` атрибут [  **\<reliableSession >** ](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) элемент `true`. Можно обеспечить доставку сообщений в порядке их отправки для надежного сеанса, присвоив атрибуту `ordered` значение `true`.
 
 Исходная копия в этом примере в разделе [надежный сеанс WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md).
 
@@ -77,7 +78,7 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="example"></a>Пример
 
-Некоторые привязки, предоставляемые системой, по умолчанию поддерживают надежные сеансы. К ним относятся следующие методы.
+Некоторые привязки, предоставляемые системой, по умолчанию поддерживают надежные сеансы. Сюда входит следующее.
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 

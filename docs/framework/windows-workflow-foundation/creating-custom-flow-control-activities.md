@@ -9,14 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 27f409f6-2d1d-4cfb-9765-93eb2ad667d5
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 12b5c8db096c0261041c29385b0ebe2e1569078c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 57c347043d1bbcf239841bc57c6a406cfc9af7f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-custom-flow-control-activities"></a>Создание пользовательских действий управления потоком
 Среда .Net Framework содержит набор действий для управления потоком данных, которые работают так же, как и абстрактные программные структуры (например, <xref:System.Activities.Statements.Flowchart>) или стандартные программные инструкции (например, <xref:System.Activities.Statements.If>). В этом разделе обсуждается архитектура одного из образцов проектов [ForEach неуниверсальные](../../../docs/framework/windows-workflow-foundation/samples/non-generic-foreach.md).  

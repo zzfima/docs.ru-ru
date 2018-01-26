@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: dde8a393-f31a-4e6d-b483-001b389e2df9
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 72dc4a90acfc004200ce9af2b17b0529aa01e566
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 82d54726b816a013bed233c21cb3c8436fae9014
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelportsharingportsharingduphandlegranted"></a>System.ServiceModel.PortSharing.PortSharingDupHandleGranted
 System.ServiceModel.PortSharing.PortSharingDupHandleGranted  

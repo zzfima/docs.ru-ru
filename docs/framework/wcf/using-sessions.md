@@ -14,14 +14,15 @@ dev_langs:
 helpviewer_keywords: sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
 caps.latest.revision: "32"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c78363a1a31a1b5f0ac3cc154c1ad53962d0e7de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: f5f6df22918dedf32738a8cb9d73af2e625923a4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-sessions"></a>Использование сеансов
 В приложениях [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] *сеанс* объединяет группу сообщений в диалоге. Сеансы в[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] отличаются от объектов сеансов, имеющихся в приложениях [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] , поддерживают различные виды поведения, а также управляются разными способами. В этом разделе описаны возможности приложений [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , обеспечиваемые сеансами, и способы их использования.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   
  Зная особенности класса <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> в приложениях [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] и обеспечиваемые им функциональные возможности, можно отметить следующие различия между его сеансами и сеансами [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]:  
   
--   Сеансы[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] всегда инициируются сервером.  
+-   Сеансы [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] всегда инициируются сервером.  
   
 -   Сеансы[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] явным образом неупорядочены.  
   
@@ -146,7 +147,7 @@ ms.lasthandoff: 11/21/2017
  Перечисление <xref:System.ServiceModel.SessionMode> контракта взаимодействует со свойством <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType>, управляющим связью между каналами и определенными объектами службы. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Сеансы, экземпляры и параллелизм](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
   
 ### <a name="sharing-instancecontext-objects"></a>Совместное использование объектов InstanceContext  
- Также можно задать для каждого вызова или канала, основанного на сеансе, с каким именно объектом <xref:System.ServiceModel.InstanceContext> он будет ассоциирован, самостоятельно назначив ассоциацию. Полный пример содержится в разделе [InstanceContextSharing](http://msdn.microsoft.com/en-us/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230).  
+ Также можно задать для каждого вызова или канала, основанного на сеансе, с каким именно объектом <xref:System.ServiceModel.InstanceContext> он будет ассоциирован, самостоятельно назначив ассоциацию. Полный пример см. в разделе [InstanceContextSharing](http://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230).  
   
 ## <a name="sessions-and-streaming"></a>Сеансы и потоковая передача  
  Если требуется передать значительный объем данных, режим потоковой передачи в [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] является выгодной альтернативой поведению по умолчанию, при котором сообщения буферизуются и обрабатываются в памяти целиком. При потоковой передаче вызовов с привязкой, основанной на сеансе, может возникнуть непредвиденное поведение. Все потоковые вызовы выполняются через один канал (канал датаграммы), который не поддерживает сеансы, даже если используемая привязка настроена так, чтобы она использовала сеансы. Если несколько клиентов выполняют потоковые вызовы одного объекта службы через привязку, основанную на сеансе, и задан "одиночный" режим параллелизма объекта службы и задан режим контекста его экземпляра `PerSession`, все вызовы должны проходить через канал датаграммы, а потому может обрабатываться не более одного вызова одновременно. При этом может истечь время ожидания для одного или нескольких клиентов. Эту проблему можно обойти, присвоив значение `InstanceContextMode` свойству `PerCall` или выбрав "множественный" режим параллелизма.  

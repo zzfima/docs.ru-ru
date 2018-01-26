@@ -12,21 +12,21 @@ ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: abb2291ce797f3630eebd24e563994a2d86242bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 08fd340e895376b43f95a767992ef0d3c0c819c6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Классы, используемые при файловом вводе-выводе в .NET Framework, и файловая система (Visual Basic)
 В приведенных ниже таблицах перечислены классы, обычно используемые для файлового ввода-вывода в .NET Framework. Они разделены на классы файлового ввода-вывода, классы для создания потоков и классы для чтения и записи в поток.  
   
- Документацию по [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] и более полный список см. в разделе [Общие сведения о библиотеке классов](https://msdn.microsoft.com/library/hfa3fa08).  
+ Документацию по [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] и более полный список см. в разделе [Общие сведения о библиотеке классов](../../../../standard/class-library-overview.md).  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Основные классы ввода-вывода для файлов, каталогов и дисков  
  В приведенной ниже таблице перечислены и описаны основные классы, используемые для файлового ввода-вывода.  
   
-|Класс|Описание|  
+|Класс|Описание:|  
 |-----------|-----------------|  
 |<xref:System.IO.Directory?displayProperty=nameWithType>|Предоставляет статические методы для создания, перемещения и перечисления в каталогах и подкаталогах.|  
 |<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Предоставляет методы экземпляра для создания, перемещения и перечисления в каталогах и подкаталогах.|  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="classes-used-to-create-streams"></a>Классы, используемые для создания потоков  
  В приведенной ниже таблице перечислены и описаны основные классы, используемые для создания потоков.  
   
-|Класс|Описание|  
+|Класс|Описание:|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Добавляет уровень буферизации в операциях чтения и записи в другие потоки.|  
 |<xref:System.IO.FileStream?displayProperty=nameWithType>|Поддерживает произвольный доступ к файлам с помощью метода <xref:System.IO.FileStream.Seek%2A>. <xref:System.IO.FileStream> по умолчанию открывает файлы синхронно, но поддерживает и асинхронные операции.|  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Записывает символы в `String`. Вывод может быть либо потоком в любой кодировке, либо `String`.|  
   
 ## <a name="see-also"></a>См. также  
- [Составление потоков](https://msdn.microsoft.com/library/e4y2dch9)  
- [Файловый и потоковый ввод-вывод](https://msdn.microsoft.com/library/k3352a4t)  
- [Асинхронный файловый ввод-вывод](https://msdn.microsoft.com/library/kztecsys)  
+ [Составление потоков](../../../../standard/io/composing-streams.md)  
+ [Файловый и потоковый ввод-вывод](../../../../standard/io/index.md)  
+ [Асинхронный файловый ввод-вывод](../../../../standard/io/asynchronous-file-i-o.md)  
  [Основы файлового ввода-вывода и файловой системы в .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

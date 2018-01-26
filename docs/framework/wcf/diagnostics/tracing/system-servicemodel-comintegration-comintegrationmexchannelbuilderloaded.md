@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 107160a1-1f19-4c5d-9a74-fe1f398aa8c4
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: fec75babfa61fb8c2143fd72be4578152657d055
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 3add02b185fbb9650a10fab830d044e4c62b2d3f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationmexchannelbuilderloaded"></a>System.ServiceModel.ComIntegration.ComIntegrationMexChannelBuilderLoaded
 System.ServiceModel.ComIntegration.ComIntegrationMexChannelBuilderLoaded  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Complus: загружен загрузчик канала Mex.  
   
 ## <a name="see-also"></a>См. также  

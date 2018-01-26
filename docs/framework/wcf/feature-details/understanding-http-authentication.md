@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8e1c299e58f83807689f71ded2dec569e6c70015
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 32d7df95c6acbe34a677cbd2951fd912466d015f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-http-authentication"></a>Основные сведения о проверке подлинности HTTP
 Проверка подлинности - это процесс проверки наличия у клиента права доступа к ресурсу. Протокол HTTP поддерживает проверку подлинности как средство согласования доступа к защищенному ресурсу.  
@@ -27,7 +28,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="http-authentication-schemes"></a>Схемы проверки подлинности HTTP  
  Сервер можно указать несколько схем проверки подлинности для клиента для выбора. В следующей таблице описаны некоторые схемы проверки подлинности, часто встречаются в приложениях Windows.  
   
-|Схема проверки подлинности|Описание|  
+|Схема проверки подлинности|Описание:|  
 |---------------------------|-----------------|  
 |Anonymous|Анонимный запрос не содержит информацию для проверки подлинности. Это эквивалентно предоставлению доступа к ресурсу без ограничений.|  
 |Basic|Обычная проверка подлинности заключается в передаче строки в кодировке Base64, которая содержит имя пользователя и пароль для клиента. Base64 не является формой шифрования, ее следует рассматривать как передачу пароля и имени пользователя открытым текстом. Если требуется защита ресурса, настоятельно рекомендуется использовать схему проверку подлинности, отличную от обычной.|  
@@ -47,5 +48,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о безопасности транспорта](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
- [Использование олицетворения с безопасностью транспорта](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
+ [Использование олицетворения при обеспечении безопасности транспорта](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
  [Делегирование и олицетворение](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

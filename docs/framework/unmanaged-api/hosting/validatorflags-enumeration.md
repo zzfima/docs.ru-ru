@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f283beb79ec47454185800bd772904c3c696c7c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 952944e9ae9a8186a182796deb587b6fa6a0d6a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="validatorflags-enumeration"></a>Перечисление ValidatorFlags
 Содержит значения, указывающие тип проверки, которые должны быть выполнены при обращении к [ICLRValidator::Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) метод.  
@@ -40,9 +41,9 @@ enum ValidatorFlags {
 };  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`VALIDATOR_CHECK_ILONLY`|Указывает, что должны быть проверены только промежуточный язык Майкрософт (MSIL) в исполняемом файле.|  
 |`VALIDATOR_CHECK_PEFORMAT_ONLY`|Указывает, что должны быть проверены только формат исполняемого файла.|  
@@ -60,5 +61,5 @@ enum ValidatorFlags {
  **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Iclrerrorreportingmanager-интерфейс](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
- [Перечисления размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+ [Интерфейс ICLRErrorReportingManager](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
+ [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

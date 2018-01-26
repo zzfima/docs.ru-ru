@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26df55c9658721eb907db5837ac467a5899e84eb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 45053762a4782544531a09c92531b26f99663016
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="maximize-wpf-3d-performance"></a>Достижение максимальной производительности WPF 3D
 При использовании [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] для построения трехмерных элементов управления и включения трехмерных сцен в приложении, необходимо рассмотреть вопрос оптимизации производительности. Здесь представлен список 3D классов и свойств, которые влияют на производительность приложения, а также рекомендации по оптимизации производительности при их использовании.  
@@ -27,7 +28,7 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="performance-impact-high"></a>Влияние на производительность: высокий  
   
-|Свойство|Рекомендация|  
+|Свойство.|Рекомендация|  
 |-|-|  
 |<xref:System.Windows.Media.Brush>|Скорость кисти (от самой быстрой к самой медленной):<br /><br /> <xref:System.Windows.Media.SolidColorBrush><br /><br /> <xref:System.Windows.Media.LinearGradientBrush><br /><br /> <xref:System.Windows.Media.ImageBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush>(с кэшированием)<br /><br /> <xref:System.Windows.Media.VisualBrush>(с кэшированием)<br /><br /> <xref:System.Windows.Media.RadialGradientBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush>(без кэш-памяти)<br /><br /> <xref:System.Windows.Media.VisualBrush>(без кэш-памяти)|  
 |<xref:System.Windows.UIElement.ClipToBoundsProperty>|Задать `Viewport3D.ClipToBounds` значение false, если необходимо иметь [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] явно усечение содержимого <xref:System.Windows.Controls.Viewport3D> Viewport3D прямоугольник. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Сглаженный обрезки может вычисляться очень медленно, и `ClipToBounds` (медленно) включено по умолчанию в <xref:System.Windows.Controls.Viewport3D>.|  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="performance-impact-medium"></a>Влияние на производительность: средний  
   
-|Свойство|Рекомендация|  
+|Свойство.|Рекомендация|  
 |-|-|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Когда сетка определяется как соседними треугольники с общими вершинами, и эти вершины имеют одинаковые позиции, normal и координаты текстуры, определите каждую общую вершину только один раз и затем определите треугольники по индексу с помощью <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>.|  
 |<xref:System.Windows.Media.ImageBrush>|Попробуйте уменьшить размеры текстуры при наличии явного управления размером (при использовании <xref:System.Windows.Media.Imaging.RenderTargetBitmap> или <xref:System.Windows.Media.ImageBrush>).  Обратите внимание, что текстуры более низкого разрешения могут снизить качество изображения, поэтому следует найти правильный баланс между качеством и производительностью.|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="performance-impact-low"></a>Влияние на производительность: низкий  
   
-|Свойство|Рекомендация|  
+|Свойство.|Рекомендация|  
 |-|-|  
 |<xref:System.Windows.Media.Media3D.Transform3DGroup>|При анимации не требуется или привязки данных, вместо использования преобразования группы, содержащей несколько преобразований, использовании один <xref:System.Windows.Media.Media3D.MatrixTransform3D>, задание будет произведением всех преобразований, которые в противном случае будут существовать независимо друг от друга в группе преобразования.|  
 |<xref:System.Windows.Media.Media3D.Light>|Минимальное число источники света в сцене. Слишком большое количество источников света в сцене заставит [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] переход к программной отрисовки.  Максимально допустимо около 110 <xref:System.Windows.Media.Media3D.DirectionalLight> объектов 70 <xref:System.Windows.Media.Media3D.PointLight> объектов или 40 <xref:System.Windows.Media.Media3D.SpotLight> объектов.|  

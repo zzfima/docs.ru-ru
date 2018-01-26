@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 19a7291ce13221e85b49c6ef97c6b375b8b71014
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: aafd6ec911464dcc2b936b9f9fc74b9bc39808bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="address-headers"></a>Заголовки адресов
 В образце заголовков адреса показан процесс передачи клиентами ссылочных параметров в службу с помощью [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/18/2017
   
  В этом образце клиент добавляет ссылочный параметр в `EndpointAddress` конечной точки клиента. Служба ищет этот ссылочный параметр и использует его значение в логике операции службы "Привет".  
   
-## <a name="client"></a>Клиент  
+## <a name="client"></a>"Клиент";  
  Чтобы клиент мог отправить ссылочный параметр, он должен добавить заголовок `AddressHeader` в адрес `EndpointAddress` конечной точки `ServiceEndpoint`. Поскольку класс `EndpointAddress` является неизменным, изменение адреса конечной точки необходимо выполнить с помощью класса `EndpointAddressBuilder`. В следующем коде клиент инициализируется для отправки ссылочного параметра как часть сообщения.  
   
 ```  

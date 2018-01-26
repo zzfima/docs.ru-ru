@@ -18,11 +18,11 @@ ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2575598577820bd7a72fae2d9b8ba52978f5952d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e6ba5ce4b009e0d8c675db07b56b9811c595ae2f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="raiseevent-statement"></a>Оператор RaiseEvent
 Вызывает событие, объявленное на уровне модуля в классе, форме или документе.  
@@ -35,10 +35,10 @@ RaiseEvent eventname[( argumentlist )]
   
 ## <a name="parts"></a>Части  
  `eventname`  
- Обязательный. Имя события.  
+ Обязательно. Имя события.  
   
  `argumentlist`  
- Необязательно. Разделенный запятыми список переменных, массивов и выражений. `argumentlist` Аргумент должен быть заключен в круглые скобки. Если не указаны аргументы, следует опустить круглые скобки.  
+ Необязательный. Разделенный запятыми список переменных, массивов и выражений. `argumentlist` Аргумент должен быть заключен в круглые скобки. Если не указаны аргументы, следует опустить круглые скобки.  
   
 ## <a name="remarks"></a>Примечания  
  Необходимая `eventname` является именем события, объявленного внутри модуля. Следует правилам именования переменных Visual Basic.  
@@ -80,7 +80,7 @@ RaiseEvent eventname[( argumentlist )]
  Нажмите клавишу F5 для запуска примера и нажмите кнопку с многоточием **запустить**. Первое текстовое поле начинает обратный отсчет. По истечении всего времени (10 секунд) в первом текстовом поле отображается надпись Done.  
   
 > [!NOTE]
->  `My.Application.DoEvents` Метод отличается от обработки событий в точно так же, как и в форме. Чтобы разрешить форме обрабатывать события напрямую, можно использовать многопоточность. Дополнительные сведения см. в разделе [потоки](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c).  
+>  `My.Application.DoEvents` Метод отличается от обработки событий в точно так же, как и в форме. Чтобы разрешить форме обрабатывать события напрямую, можно использовать многопоточность. Дополнительные сведения см. в разделе [потоки](../../programming-guide/concepts/threading/index.md).  
   
 ## <a name="see-also"></a>См. также  
  [События](../../../visual-basic/programming-guide/language-features/events/index.md)  

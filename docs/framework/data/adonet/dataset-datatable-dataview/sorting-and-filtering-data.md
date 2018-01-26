@@ -13,14 +13,15 @@ dev_langs:
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 01c09d94fd3224e8fd875b7f6eea06b2d2c35cca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: dotnet
+ms.openlocfilehash: 2411307623c714ae521d00dcffca05d3569a656e
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sorting-and-filtering-data"></a>Сортировка и фильтрация данных
 <xref:System.Data.DataView> предоставляет несколько способов сортировки и фильтрации данных в <xref:System.Data.DataTable>.  
@@ -37,11 +38,11 @@ ms.lasthandoff: 11/21/2017
   
      В следующей таблице показаны параметры для **DataViewRowState**.  
   
-    |Параметры DataViewRowState|Описание|  
+    |Параметры DataViewRowState|Описание:|  
     |------------------------------|-----------------|  
     |**CurrentRows**|**Текущей** из всех **Unchanged**, **Added**, и **Modified** строк. Это значение по умолчанию.|  
     |**Добавить**|**Текущей** из всех **Added** строк.|  
-    |**Удален**|**Исходного** из всех **Deleted** строк.|  
+    |**Deleted**|**Исходного** из всех **Deleted** строк.|  
     |**ModifiedCurrent**|**Текущей** из всех **Modified** строк.|  
     |**ModifiedOriginal**|**Исходного** из всех **Modified** строк.|  
     |**None**|Нет строк.|  

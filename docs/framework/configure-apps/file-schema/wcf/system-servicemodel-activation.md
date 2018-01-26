@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c0cae85f-56cb-4030-8807-6f96edff8d2d
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 18376f3553bc0a39b82cb0f223081c09a674e062
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: ae6fb19fe956d819337c7c06a0c5b58ac70c8327
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsystemservicemodelactivationgt"></a>&lt;system.serviceModel.activation&gt;
 В данном разделе конфигурации представлены параметры конфигурации для средства SMSvcHost.exe. Элементы конфигурации можно задать в файле SMSvcHost.exe.config. В частности в нем содержатся все параметры компьютера, которые необходимо настроить.  

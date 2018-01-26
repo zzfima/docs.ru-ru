@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: adbdbda0-de52-448c-a938-cc9f5db2980e
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: dd9e2235aefb2ef1cc9b9db44b02e806f25d3fa0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: e7aa191d643fb421fb0fbf896c9560437f61e1a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transportauthenticationfailure"></a>TransportAuthenticationFailure
 Идентификатор: 174  
@@ -26,9 +27,9 @@ ms.lasthandoff: 11/21/2017
   
  Категория: SecurityAudit  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Данное событие показывает, что не удалось выполнить проверку подлинности транспорта, и содержит удостоверение клиента и идентификатор действия.  
   
 ## <a name="see-also"></a>См. также  
  [Ведение журнала событий](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Общие справочные сведения события](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+ [Общие справочные сведения о событиях](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

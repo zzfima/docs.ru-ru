@@ -17,11 +17,11 @@ ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
 caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c0c826e1ba592dfc4f2899a26102466d2e7df54f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c363b41bb7a409c490a6e07d4a1a4f1bb44c1438
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="synclock-statement"></a>Оператор SyncLock
 Получает монопольную блокировку для блока операторов перед выполнением блока.  
@@ -36,10 +36,10 @@ End SyncLock
   
 ## <a name="parts"></a>Части  
  `lockobject`  
- Обязательный. Выражение, возвращающее ссылку на объект.  
+ Обязательно. Выражение, возвращающее ссылку на объект.  
   
  `block`  
- Необязательно. Блок операторов, которые должны выполняться, когда блокировка получена.  
+ Необязательный. Блок операторов, которые должны выполняться, когда блокировка получена.  
   
  `End SyncLock`  
  Завершает `SyncLock` блока.  
@@ -90,7 +90,7 @@ End SyncLock
 ### <a name="code"></a>Код  
  [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_1.vb)]  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В следующем примере используется потоков и `SyncLock`. При условии, что `SyncLock` присутствует оператор, блок операторов является критической секции и `balance` никогда не будет отрицательным числом. Вы можете закомментировать `SyncLock` и `End SyncLock` инструкции, чтобы выявить эффект от пропускают `SyncLock` ключевое слово.  
   
 ### <a name="code"></a>Код  
@@ -101,5 +101,5 @@ End SyncLock
 ## <a name="see-also"></a>См. также  
  <xref:System.Threading>  
  <xref:System.Threading.Monitor>  
- [Синхронизация потоков](http://msdn.microsoft.com/library/413e1f28-a2c5-4eec-8338-aa43e7982ff4)  
- [Работа с потоками](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)
+ [Синхронизация потоков](../../programming-guide/concepts/threading/thread-synchronization.md)  
+ [Работа с потоками](../../programming-guide/concepts/threading/index.md)

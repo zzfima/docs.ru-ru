@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a34377403a55ba42d9d3f2946ef26ea48982f5d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9716d91a99eb79e38b729424389b2962d1eb6b1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>Практическое руководство. Сохранение пропорций изображения, используемого в качестве фона
 В этом примере показано, как использовать <xref:System.Windows.Media.TileBrush.Stretch%2A> свойство <xref:System.Windows.Media.ImageBrush> чтобы сохранить соотношение сторон изображения.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
  Обратите внимание, что <xref:System.Windows.Media.TileBrush.Stretch%2A> свойство ведет себя одинаково для других <xref:System.Windows.Media.TileBrush> объектов, то есть для <xref:System.Windows.Media.DrawingBrush> и <xref:System.Windows.Media.VisualBrush>. Дополнительные сведения о <xref:System.Windows.Media.ImageBrush> , а другой <xref:System.Windows.Media.TileBrush> объектов, в разделе [Рисование с помощью изображения, рисунки и визуальные элементы](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
   
- Обратите внимание, что, несмотря на то что <xref:System.Windows.Media.TileBrush.Stretch%2A> отображается свойство для указания как <xref:System.Windows.Media.TileBrush> содержимое увеличивается до размеров выходной области, оно фактически указывает как <xref:System.Windows.Media.TileBrush> содержимого растягивается до его базового фрагмента. Для получения дополнительной информации см. <xref:System.Windows.Media.TileBrush>.  
+ Обратите внимание, что, несмотря на то что <xref:System.Windows.Media.TileBrush.Stretch%2A> отображается свойство для указания как <xref:System.Windows.Media.TileBrush> содержимое увеличивается до размеров выходной области, оно фактически указывает как <xref:System.Windows.Media.TileBrush> содержимого растягивается до его базового фрагмента. Дополнительные сведения см. в разделе <xref:System.Windows.Media.TileBrush>.  
   
  Данный пример кода является частью большего примера, приведенного для <xref:System.Windows.Media.ImageBrush> класса. Полный пример см. в разделе [ImageBrush образец](http://go.microsoft.com/fwlink/?LinkID=160005).  
   

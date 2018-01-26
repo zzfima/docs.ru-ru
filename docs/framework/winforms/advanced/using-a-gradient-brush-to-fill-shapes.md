@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5a1c4ab7c2ee6f7164b6158dcb4ca4721be12650
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6a84a68f9082d00559938c2710b6574690fa6ab4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-gradient-brush-to-fill-shapes"></a>Заливка фигур с помощью градиентной кисти
 Можно использовать градиентной кисти для заливки фигуры плавно меняющимся цветом. Например можно использовать горизонтальный градиент для заливки фигуры цвет, который постепенно при переходе от левого края фигуры по правому краю. Примером может послужить прямоугольник с черным левым краем (представленным красного, зеленого и синего компонентов 0, 0, 0) и правым краем красный (представленным 255, 0, 0). Если прямоугольника равна 256 пикселей в ширину, красный компонент произвольной точки будет больше, чем красный компонент пикселя слева от него. Самый левый пиксель в строке имеет компоненты цвета (0, 0, 0), вторая (1, 0, 0), либо третья — (2, 0, 0) и т. д., пока не дойдете до крайней правой точки, который имеет компоненты цвета (255, 0, 0). Эти интерполированные значения цветовых составляют цветового градиента.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/22/2017
   
  ![Градиент](../../../../docs/framework/winforms/advanced/media/gradient2.png "gradient2")  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Создание линейного градиента](../../../../docs/framework/winforms/advanced/how-to-create-a-linear-gradient.md)  
  Показано, как создать линейный градиент с помощью <xref:System.Drawing.Drawing2D.LinearGradientBrush> класса.  
   

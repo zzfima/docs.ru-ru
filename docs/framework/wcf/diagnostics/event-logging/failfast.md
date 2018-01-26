@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4fc4e476-997b-4166-90af-8d164f775924
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7bc464717445fb4082905a33e3c5eaea368ff322
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 08fb7dada59ed01c30caba02f522cf3ee6e2d0f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="failfast"></a>FailFast
 Идентификатор: 102  
@@ -26,9 +27,9 @@ ms.lasthandoff: 11/21/2017
   
  Категория: Tracing  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Запущен режим FailFast. В событии указаны сообщение, трассировка стека, имя процесса и ИД процесса.  
   
 ## <a name="see-also"></a>См. также  
  [Ведение журнала событий](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Общие справочные сведения события](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+ [Общие справочные сведения о событиях](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

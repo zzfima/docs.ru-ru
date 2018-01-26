@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 827bf29b-bb7d-4f45-86ea-92752f656f5a
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a1cc2382469099463991b06bc095114c4df8667a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 054c9b82057ef1dc9a34a44efc8bb9e55dbb1b54
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationservicemonikerparsed"></a>System.ServiceModel.ComIntegration.ComIntegrationServiceMonikerParsed
 System.ServiceModel.ComIntegration.ComIntegrationServiceMonikerParsed  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  ComPlus: моникер службы проанализирован.  
   
 ## <a name="see-also"></a>См. также  

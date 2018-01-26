@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
 caps.latest.revision: "83"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7f2cb8d8376447de12f324719e39f575df8f33a3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: bab723e4e52db9936e635f1348dff86d75de274d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Процедура однократной настройки образцов Windows Communication Foundation
 Большинство примеров [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] размещаются в службах IIS и выполняются из общего виртуального каталога. Эта процедура однократной настройки создает папку на диске. Он также добавляет виртуальный каталог IIS с именем **ServiceModelSamples**.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/18/2017
   
 3.  Если [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] не установлен, и операционная система не Windows Server 2008 SP2 или более поздней версии, установите [251798 исправление](http://go.microsoft.com/fwlink/?LinkId=184693).  
   
-4.  Выполните следующие команды. Дополнительные сведения о том, почему необходимо запустить эти команды см. в разделе [сбое размещенной службы IIS](http://msdn.microsoft.com/en-us/ee5499fc-1b10-4cda-a9b1-13dba70f05f8).  
+4.  Выполните следующие команды. Дополнительные сведения о том, почему необходимо запустить эти команды см. в разделе [сбое размещенной службы IIS](http://msdn.microsoft.com/library/ee5499fc-1b10-4cda-a9b1-13dba70f05f8).  
   
     > [!WARNING]
     >  Если IIS был переустановлен, необходимо вновь выполнить следующие команды.  

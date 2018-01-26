@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 55204da3-fb36-4ab0-9d23-73e533ba8969
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0f3b48316465e6a56b58b56ddebcc91b8df0c980
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: d8cbb42e4840a6c89a410879bb8a1ce1c53d4ca4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicemodel-registration-tool"></a>Средство регистрации ServiceModel
 Программа командной строки ServiceModel Registration Tool позволяет управлять регистрацией ServiceModel на одном компьютере. Дополнительные сведения об этом средстве см. в разделе [средство регистрации ServiceModel (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md).

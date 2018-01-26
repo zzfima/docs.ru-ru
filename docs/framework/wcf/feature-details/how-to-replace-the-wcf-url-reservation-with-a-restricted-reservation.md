@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9dd631f08f9367576adf97f9139348bfce69a92f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: e4cfae36dfcb65dfd93dfc4fb1d6b64ba01e1b11
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Как заменить WCF URL резервирование на ограниченное резервирование
 Резервирование URL-адреса позволяет ограничить список тех, кто может получать сообщения с URL-адреса или набора URL-адресов. Резервирование включает шаблон URL-адреса, список управления доступом (ACL) и набор флагов. Шаблон URL-адреса определяет, какие URL-адреса будут затронуты резервированием. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]как обрабатываются шаблоны URL-адрес, в разделе [маршрутизации входящих запросов](http://go.microsoft.com/fwlink/?LinkId=136764). Список управления доступом (ACL) управляет тем, какой пользователь или группа пользователей может получать сообщения с указанных URL-адресов. Флаги указывают, разрешает ли резервирование пользователю или группе отслеживать URL-адрес напрямую или делегирует это разрешение какому-либо другому процессу.  

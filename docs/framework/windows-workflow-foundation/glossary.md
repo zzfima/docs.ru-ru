@@ -12,14 +12,15 @@ helpviewer_keywords:
 - WF [WF], glossary
 ms.assetid: ab682b2f-3779-45ca-b831-b7c03d7dbb3a
 caps.latest.revision: "259"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c0c1e6fa7eee64283dce20b24a1a957f1d2d8f8f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 54a0cc6d9a0c922e57bf00b649894f26b42a64f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-workflow-foundation-glossary-for-net-framework-45"></a>Глоссарий Windows Workflow Foundation для .NET Framework 4.5
 Следующие термины используются в документации по Windows Workflow Foundation.  

@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b6df44df3582ed806d338e2d4565c5c11f69ce21
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3dc355fbe0d8262cb24779b99375d6075f758bbc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="soundplayer-class-overview"></a>Общие сведения о классе SoundPlayer
 Класс <xref:System.Media.SoundPlayer> позволяет облегчить добавление звуков в приложениях.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="commonly-used-properties-methods-and-events"></a>Часто используемые свойства, методы и события  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |Свойство <xref:System.Media.SoundPlayer.SoundLocation%2A>|Путь к файлу или веб-адресу звука. Допустимые значения включают UNC- или HTTP-путь.|  
 |Свойство <xref:System.Media.SoundPlayer.LoadTimeout%2A>|Время ожидания программой загрузки звука (в миллисекундах), прежде чем будет создано исключение. По умолчанию используется значение 10 секунд.|  

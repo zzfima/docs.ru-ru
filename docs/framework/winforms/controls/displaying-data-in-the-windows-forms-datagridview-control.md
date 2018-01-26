@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 839a4fd8052578e32e4d46d10e07aa52a1f23d90
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 193562b5dd00950ec483da94e2ea6ea059e88805
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="displaying-data-in-the-windows-forms-datagridview-control"></a>Отображение данных с помощью элемента управления DataGridView в Windows Forms
 `DataGridView` Элемент управления используется для отображения данных из различных внешних источников данных. Кроме того можно добавить строки и столбцы в элемент управления и вручную заполнить его данными.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
  Кроме того можно отображать данные с использованием стандартных форматов (например, формат денежной единицы), или можно настроить отображение, форматирование представления данных, однако необходимо (например, изменение цвета фона для отрицательных чисел или заменить строковые значения с рисунками).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Режимы отображения данных в элементе управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)  
  Описание параметров заполнения элемента управления данными.  
   

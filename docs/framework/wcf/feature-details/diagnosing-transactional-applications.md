@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 81c16e8a1b61a408abe92cd346c84d0a4fb6ff44
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 0826881bac88f2bfa933ae71b798186dafc55303
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diagnosing-transactional-applications"></a>Диагностика транзакционных приложений
 В этом разделе рассматривается использование функции управления и диагностики [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] для устранения неполадок транзакционного приложения.  

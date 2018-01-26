@@ -13,16 +13,17 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 2d3a35839aaf980331b3b84181027d9c170c619d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: eb9038ee6e28cdb5fbf213d56542419e7cdf36c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-extensibility"></a>Расширяемость средств обеспечения безопасности
 Образцы в этом разделе демонстрируют пользовательский режим безопасности в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Пользовательский поставщик маркеров](../../../../docs/framework/wcf/samples/durable-issued-token-provider.md)  
  Демонстрируется, как реализовать пользовательский поставщик маркеров, выданных клиентом.  
   
@@ -32,16 +33,16 @@ ms.lasthandoff: 10/18/2017
  [Вспомогательные маркеры](../../../../docs/framework/wcf/samples/supporting-tokens.md)  
  Демонстрируется, как добавить дополнительные маркеры в сообщение, использующее WS-Security.  
   
- [Средство проверки подлинности маркеров](../../../../docs/framework/wcf/samples/token-authenticator.md)  
+ [Структура проверки подлинности маркера](../../../../docs/framework/wcf/samples/token-authenticator.md)  
  Демонстрируется, как реализовать пользовательскую структуру проверки подлинности маркеров.  
   
  [Поставщик маркеров](../../../../docs/framework/wcf/samples/token-provider.md)  
  Демонстрируется, как реализовать пользовательский поставщик маркеров.  
   
- [Проверяющий элемент управления пароль для имени пользователя](../../../../docs/framework/wcf/samples/user-name-password-validator.md)  
+ [Проверяющий элемент управления для имен пользователей и паролей](../../../../docs/framework/wcf/samples/user-name-password-validator.md)  
  Демонстрируется, как реализовать пользовательский проверяющий элемент управления для имени пользователя и пароля.  
   
- [Средство проверки сертификатов X.509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md)  
+ [Проверяющий элемент управления для сертификатов X.509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md)  
  Демонстрируется, как реализовать пользовательскую структуру проверки подлинности сертификатов X.509.  
   
  [Политика авторизации](../../../../docs/framework/wcf/samples/authorization-policy.md)  

@@ -10,14 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 24838d74-05e4-4860-876e-428f947dc7ca
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d66b4dc072b93ec8dd864f56c3afcd464e67a20e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: d3a41aac16c912eb2a040d9d28f896f3c8f1d22b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="508---hostedtransportconfigurationmanagerconfiginitstop"></a>508 - HostedTransportConfigurationManagerConfigInitStop
 ## <a name="properties"></a>Свойства  

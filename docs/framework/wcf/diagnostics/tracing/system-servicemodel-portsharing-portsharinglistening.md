@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 05528126-de72-4801-93ab-397f3c32b809
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ac5fc8ff61195f79ae532305be2baa56662886e3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 2ef033ca6eed84c89f32194fd26784293a3f58df
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelportsharingportsharinglistening"></a>System.ServiceModel.PortSharing.PortSharingListening
 System.ServiceModel.PortSharing.PortSharingListening  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  TransportManager сейчас успешно ожидает передачи данных.  
   
 ## <a name="see-also"></a>См. также  

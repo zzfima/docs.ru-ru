@@ -10,19 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 393fa3d0-a4bb-4c00-947d-84c5e860c681
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 264b83627b261f2b30e7b7cf80d4553e0c1fed5e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 0efbfe329b91c37f90e8dac32f0736ad3f073b98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemruntimeserializationxsdexporterror"></a>System.Runtime.Serialization.XsdExportError
 System.Runtime.Serialization.XsdExportError  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Ошибка экспорта схемы.  
   
 ## <a name="see-also"></a>См. также  

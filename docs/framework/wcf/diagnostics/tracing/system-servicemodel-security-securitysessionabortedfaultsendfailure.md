@@ -13,16 +13,17 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: befb15a97dee3ac2f420e5b7a7592e252c8966d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 948d18677dee3e0586292bb40d1498ace49be72b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelsecuritysecuritysessionabortedfaultsendfailure"></a>System.ServiceModel.Security.SecuritySessionAbortedFaultSendFailure
 System.ServiceModel.Security.SecuritySessionAbortedFaultSendFailure  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Невозможность отправки сеанса безопасности, вызвавшая прерывание операции с отправкой информации об ошибке на клиент.  
   
 ## <a name="see-also"></a>См. также  

@@ -10,17 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0b8a694a-92fa-498b-b5d6-fcf75e4d329d
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 873e5cf3f3441707f92de124eaa44262796b6823
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.workload: dotnet
+ms.openlocfilehash: 489b2526ab91f03f420b7db6237d3e9cce62241f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-messaging-sessions-faulted"></a>Надежные сеансы обмена сообщениями, в которых произошел сбой
 Имя счетчика: Reliable Messaging Sessions Faulted.  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  Количество надежных сеансов обмена сообщениями, в которых произошел сбой в этой службе.
