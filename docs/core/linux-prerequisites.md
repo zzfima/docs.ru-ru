@@ -1,4 +1,4 @@
----
+﻿---
 title: "Необходимые компоненты для .NET Core в Linux"
 description: "Поддерживаемые версии Linux и зависимости .NET Core для разработки, развертывания и запуска приложений .NET Core на компьютерах с Linux."
 keywords: .NET, .NET Core, Linux, debian, ubuntu, RHEL, centOS,
