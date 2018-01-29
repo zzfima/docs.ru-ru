@@ -12,12 +12,13 @@ ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.custom: mvc
 manager: wpickett
-ms.workload: dotnetcore
-ms.openlocfilehash: cb438957a6519cf503e5bcaf85f2bc82fa18a047
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 2b1a57fe264eda0a4d3186c7be8b0de01bd5f0a9
+ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>Создание образов Docker для приложений .NET Core
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 12/23/2017
 > * получите пример приложения ASP.NET Core для добавления в Docker;
 > * запустите пример приложения ASP.NET локально;
 > * создадите и запустите пример с Docker для контейнеров Linux;
-> * создадите и запустите пример с Docker для контейнеров Windows.
+> * Создание и запуск примера с Docker для контейнеров Windows
 
 ## <a name="docker-image-optimizations"></a>Оптимизация образов Docker
 
@@ -101,7 +102,7 @@ ms.lasthandoff: 12/23/2017
 * сборки примера в контейнере на основе **большего по размеру** базового образа Docker сборки ASP.NET Core; 
 * копирование итогового результата сборки в образ Docker на основе **меньшего по размеру** базового образа среды выполнения Docker для ASP.NET Core.
 
-> [!Note]
+> [!NOTE]
 > Образ сборки содержит необходимые средства для создания приложений, а образ среды выполнения — нет.
 
 ### <a name="prerequisites"></a>Предварительные требования
@@ -174,7 +175,8 @@ docker build -t aspnetapp .
 docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
 ```
 
-> [!Note] Аргумент `docker run` "-p" сопоставляет порт 5000 на локальном компьютере с портом 80 в контейнере (форма сопоставления порта — `host:container`). Дополнительные сведения см. в справочнике по команде [docker run](https://docs.docker.com/engine/reference/commandline/exec/) с описанием параметров командной строки.
+> [!NOTE]
+> Аргумент `docker run` "-p" сопоставляет порт 5000 на локальном компьютере с портом 80 в контейнере (форма сопоставления порта — `host:container`). Дополнительные сведения см. в справочнике по команде [docker run](https://docs.docker.com/engine/reference/commandline/exec/) с описанием параметров командной строки.
 
 После запуска приложения перейдите по адресу **http://localhost:5000** в веб-браузере.
 
@@ -196,7 +198,7 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 * Запустите `docker exec aspnetcore_sample ipconfig`.
 * Скопируйте IP-адрес контейнера и вставьте в адресную строку браузера (например, 172.29.245.43).
 
-> [!Note]
+> [!NOTE]
 > Исполняемый файл Docker поддерживает идентификацию контейнеров по имени или хэшу. В нашем примере используется имя (aspnetcore_sample).
 
 См. следующий пример, показывающий, как получить IP-адрес запущенного контейнера Windows.
@@ -215,7 +217,7 @@ Ethernet adapter Ethernet:
    Default Gateway . . . . . . . . . : 172.29.240.1
 ```
 
-> [!Note]
+> [!NOTE]
 > Исполняемый файл Docker выполняет новую команду в запущенном контейнере. Дополнительные сведения см. в справочнике по команде [docker exec](https://docs.docker.com/engine/reference/commandline/exec/) с описанием параметров командной строки.
 
 Вы можете создать приложение, готовое к развертыванию в рабочей среде, локально с помощью команды [dotnet publish](../tools/dotnet-publish.md).
@@ -224,7 +226,7 @@ Ethernet adapter Ethernet:
 dotnet publish -c release -o published
 ```
 
-> [!Note]
+> [!NOTE]
 > Аргумент выпуска -c приводит к сборке приложения в режиме выпуска (по умолчанию используется режим отладки). Дополнительные сведения см. в справочнике по команде [dotnet run](../tools/dotnet-run.md) с описанием параметров командной строки.
 
 Запустить приложение в **Windows** можно с помощью приведенной ниже команды.
@@ -265,5 +267,5 @@ dotnet published/aspnetapp.dll
 * [Getting hands on with Visual Studio for Mac, containers, and serverless code in the cloud](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments) (Получение практических навыков по работе с Visual Studio для Mac, контейнерами и бессерверным кодом в облаке)
 * [Getting started integrating with Docker containers in Visual Studio for Mac](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started) (Приступая к интеграции с контейнерами Docker в Visual Studio для Mac)
 
-> [!Note]
+> [!NOTE]
 > Если у вас нет подписки Azure, [зарегистрируйте сейчас](https://azure.microsoft.com/free/?b=16.48) бесплатную учетную запись на 30 дней и получите 200 долл. США на счет в Azure, чтобы опробовать любое сочетание служб Azure.

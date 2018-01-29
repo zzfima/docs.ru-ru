@@ -3,7 +3,8 @@ title: "Практическое руководство. Анализ строк
 description: "Метод String.Split возвращает массив строк, разбитых по набору разделителей. Это простой и удобный способ анализа строк."
 ms.date: 01/03/2018
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - splitting strings [C#]
@@ -14,18 +15,19 @@ ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 author: BillWagner
 ms.author: wiwagn
 ms.custom: mvc
-ms.openlocfilehash: fc1032f2cdf6706ec933323643dbf6ecff3e9f6f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9dd5b1204986bd9b181c033d254bb41e8cc894da
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Практическое руководство. Анализ строк с помощью метода String.Split (руководство по программированию на C#)
 
 Метод <xref:System.String.Split%2A?displayProperty=nameWithType> создает массив подстрок, разбивая входную строку по одному или нескольким разделителям. Часто это самый простой способ разделить строку по границам слов. Он также используется для разбиения строк по другим конкретным символам или строкам.
 
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
+
 Следующий код разбивает обычную фразу на массив строк для каждого слова.
-Попробуйте сами, нажав копку *Запуск*.
 
 [!code-csharp-interactive[split strings on word boundaries](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#1)]
 

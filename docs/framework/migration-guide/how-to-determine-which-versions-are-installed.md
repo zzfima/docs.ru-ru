@@ -1,8 +1,9 @@
 ---
 title: "Практическое руководство. Определение установленных версий платформы .NET Framework"
-ms.date: 10/17/2017
+ms.date: 01/24/2018
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,12 +16,13 @@ ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83de6036a9b86478546cdb8356ce132ef32e6be2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dd257e7d481a12389f8a47921ab985ca82a157fc
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Практическое руководство.Определение установленных версий платформы .NET Framework
 На компьютере можно установить и запустить несколько версий платформы .NET Framework. При разработке или развертывании приложения могут потребоваться сведения о том, какие версии .NET Framework установлены на компьютере пользователя. Учтите, что платформа .NET Framework состоит из основных компонентов, версии которым присваиваются отдельно:  
@@ -87,6 +89,8 @@ ms.lasthandoff: 12/22/2017
 
      Значение DWORD `Release` показывает, какая версия .NET Framework установлена.
 
+    [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
+
     |Значение DWORD "Release"|Версия|
     |--------------------------------|-------------|
     |378389|.NET Framework 4,5|
@@ -128,6 +132,8 @@ ms.lasthandoff: 12/22/2017
 1. Наличие значения DWORD `Release` указывает, что на компьютере установлена платформа .NET Framework 4.5 или более поздней версии. Значение ключевого слова указывает на установленную версию. Чтобы проверить это ключевое слово, используйте методы <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A> и <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> класса <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> для доступа к подразделу Software\Microsoft\NET Framework Setup\NDP\v4\Full в разделе HKEY_LOCAL_MACHINE реестра Windows.
 
 2. Проверьте значение ключевого слова `Release`, чтобы определить установленную версию. Для обеспечения совместимости с последующими версиями значение должно быть больше или равно значениям, указанным в таблице. Ниже приведен список версий .NET Framework и соответствующих ключевых слов `Release`.
+
+    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
     |Версия|Значение DWORD "Release"|
     |-------------|--------------------------------|
