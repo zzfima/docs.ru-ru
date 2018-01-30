@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c79326634a24ddcc9aed71fca018c69c36c94db0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 83c3688afb3fe509d9a57eba8765cbd13bf581c8
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework и внештатные выпуски
 .NET Framework эволюционирует, чтобы обеспечивать поддержку различных платформ, например приложений Windows Phone и Магазина Windows, традиционных приложений для настольных компьютеров (классических приложений) и веб-приложений, а также чтобы сделать возможным максимальное повторное использование кода. В дополнение к обычным выпускам .NET Framework, мы выпускаем новые функции в виде внештатных выпусков (OOB) для совершенствования кроссплатформенной разработки или добавления новых функциональных возможностей. В этом разделе обсуждаются направления развития платформы .NET Framework и ее внештатных выпусков.  
@@ -61,7 +63,7 @@ ms.lasthandoff: 12/22/2017
   
  Чтобы найти и стабильные пакеты, и пакеты с предварительным выпуском, в диспетчере пакетов NuGet выберите вариант **Включить предварительные выпуски**.  
   
- Чтобы получать уведомления о выпуске стабильных пакетов, подпишитесь на [веб-канал .NET Framework](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).  
+ Чтобы получать уведомления о стабильных выпусках пакетов, подпишитесь на [веб-канал .NET Framework](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).  
   
 ## <a name="see-also"></a>См. также  
  [Начало работы](../../../docs/framework/get-started/index.md)

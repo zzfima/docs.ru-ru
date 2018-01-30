@@ -2,9 +2,11 @@
 title: "-resource (параметры компилятора C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: /resource
+f1_keywords:
+- /resource
 helpviewer_keywords:
 - -resource compiler option [C#]
 - /resource compiler option [C#]
@@ -13,14 +15,14 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c20de499ae0fd5f8869c9b6e78a308fde9787ef9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a305f98b09d390afbeba7b55ab44ff09abc74617
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (параметры компилятора C#)
 Внедряет указанный ресурс в выходной файл.  
@@ -42,7 +44,7 @@ ms.lasthandoff: 01/19/2018
  Доступность ресурса: "public" (открытый) или "private" (закрытый). Значение по умолчанию — "public" (открытый).  
   
 ## <a name="remarks"></a>Примечания  
- С помощью параметра [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) можно связать ресурс со сборкой, в результате чего не потребуется добавлять файл ресурсов в выходной файл.  
+ Используйте [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md), чтобы связать ресурс со сборкой и не добавлять файл ресурсов в выходной файл.  
   
  По умолчанию ресурсы в сборке открыты, если они создавались с помощью компилятора C#. Чтобы сделать ресурс закрытым, укажите параметр `private` в качестве модификатора доступа. Уровни доступности, отличные от `public` или `private`, не допускаются.  
   

@@ -2,21 +2,22 @@
 title: "Разделители для тегов в документации (Руководство по программированию на C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - XML [C#], delimiters
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a6ab03d220d1ef71605b83c529595dd986ea922a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0c72ee03ff8a2e28bec1ba83e42cd7f201b140ed
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Разделители для тегов в документации (Руководство по программированию на C#)
 Для создания комментариев в документах XML необходимо использовать разделители, по которым компилятор определяет начало и конец комментария. С тегами в XML-документации можно использовать следующие виды разделителей:  
@@ -25,7 +26,7 @@ ms.lasthandoff: 11/21/2017
  Однострочный разделитель. Это форма, представленная в примерах документов и используемая в шаблонах проектов Visual C#. Если после разделителя имеется символ пробела, этот символ не включается в выходные данные XML.  
   
 > [!NOTE]
->  В интегрированной среде разработки Visual Studio имеется функция автоматического редактирования комментариев Smart Comment Editing, которая автоматически вставляет теги \<summary> и \</summary> и перемещает курсор в этих тегах после ввода разделителя `///` в редакторе кода. Доступ к этой функции используйте ["Параметры", "Текстовый редактор", C#, "Форматирование"](/visualstudio/ide/reference/options-text-editor-csharp-formatting) на страницах свойств проекта.  
+>  В интегрированной среде разработки Visual Studio имеется функция автоматического редактирования комментариев Smart Comment Editing, которая автоматически вставляет теги \<summary> и \</summary> и перемещает курсор в этих тегах после ввода разделителя `///` в редакторе кода. Вы можете включить или отключить эту функцию в [диалоговом окне "Параметры"](/visualstudio/ide/reference/options-text-editor-csharp-advanced).  
   
  `/** */`  
  Многострочные разделители.  
@@ -85,5 +86,5 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>См. также  
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
  [Комментарии XML-документации](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
- [/ doc (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+ [/doc (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
  [Комментарии XML-документации](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

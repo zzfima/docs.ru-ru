@@ -2,21 +2,23 @@
 title: "enum (Справочник по C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - enum
 - enum_CSharpKeyword
-helpviewer_keywords: enum keyword [C#]
+helpviewer_keywords:
+- enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 00ae9b555ae73db445fe4a4facf00753bf8c759a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 36d33387dda68270e0490eaa6c792f95d058651e
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="enum-c-reference"></a>enum (Справочник по C#)
 Ключевое слово `enum` используется для объявления перечисления — отдельного типа, который состоит из набора именованных констант, называемого списком перечислителей.  
@@ -26,13 +28,13 @@ ms.lasthandoff: 11/21/2017
  По умолчанию первый перечислитель имеет значение 0, и значение каждого последующего перечислителя увеличивается на 1. Например, в следующем перечислении `Sat` — `0`, `Sun` — `1`, `Mon` — `2`и т. д.  
   
 ```  
-enum Days {Sat, Sun, Mon, Tue, Wed, Thu, Fri};  
+enum Day {Sat, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
  Перечисления могут использовать инициализаторы для переопределения значений по умолчанию, как показано в следующем примере.  
   
 ```  
-enum Days {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
+enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
  В этом перечислении последовательность элементов принудительно начинается с `1` вместо `0`. Тем не менее рекомендуется, включая константу, которая имеет значение “0”. Дополнительные сведения см. в разделе [Типы перечислений](../../../csharp/programming-guide/enumeration-types.md).  
@@ -40,12 +42,12 @@ enum Days {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
  Каждый тип перечисления имеет базовый тип, который может быть любым целочисленным типом за исключением [char](../../../csharp/language-reference/keywords/char.md). Базовым типом перечисления элементов по умолчанию является [int](../../../csharp/language-reference/keywords/int.md). Чтобы объявить перечисление другого целого типа, например [byte](../../../csharp/language-reference/keywords/byte.md), используется двоеточие после идентификатора, за которым следует тип, как показано в следующем примере.  
   
 ```  
-enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
+enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
- Утвержденные типы для перечисления: `byte`, [sbyte](../../../csharp/language-reference/keywords/sbyte.md), [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md)и [ulong](../../../csharp/language-reference/keywords/ulong.md).  
+ Утвержденные типы для перечисления: [byte](../../../csharp/language-reference/keywords/byte.md), [sbyte](../../../csharp/language-reference/keywords/sbyte.md), [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md) и [ulong](../../../csharp/language-reference/keywords/ulong.md).  
   
- Переменной типа `Days` может быть присвоено любое значение в диапазоне базового типа; значения не ограничиваются именованными константами.  
+ Переменной типа `Day` может быть присвоено любое значение в диапазоне базового типа; значения не ограничиваются именованными константами.  
   
  Значение по умолчанию `enum E` является значением, полученным с помощью выражения `(E)0`.  
   
@@ -55,7 +57,7 @@ enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
  Базовый тип указывает, какой объем хранилища выделяется для каждого перечислителя. Тем не менее необходимо явное приведение, чтобы преобразовывать из типа `enum` в целочисленный тип. Например, следующий оператор назначает перечислитель `Sun` для переменной типа [int](../../../csharp/language-reference/keywords/int.md) с помощью приведения, чтобы преобразовать `enum` в `int`.  
   
 ```  
-int x = (int)Days.Sun;  
+int x = (int)Day.Sun;  
 ```  
   
  При применении <xref:System.FlagsAttribute?displayProperty=nameWithType> к перечислению, содержащему элементы, которые могут быть объединены с помощью побитовой операции `OR` , атрибут влияет на поведение `enum` при использовании с некоторыми средствами. Эти изменения можно заметить при использовании таких средств, как методы класса <xref:System.Console> и вычислитель выражений. (См. третий пример.)  
@@ -68,7 +70,7 @@ int x = (int)Days.Sun;
  Если другие разработчики используют ваш код, необходимо предоставить рекомендации о том, как их код должен реагировать при добавлении новых элементов к любому типу `enum` .  
   
 ## <a name="example"></a>Пример  
- В следующем примере объявлено перечисление `Days`. Два перечислителя явно преобразуются в целое число и назначаются для целочисленных переменных.  
+ В следующем примере объявлено перечисление `Day`. Два перечислителя явно преобразуются в целое число и назначаются для целочисленных переменных.  
   
  [!code-csharp[csrefKeywordsTypes#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_1.cs)]  
   
@@ -99,4 +101,5 @@ int x = (int)Days.Sun;
  [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)  
  [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)  
  [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
- [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+ [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+ [Соглашения об именовании перечислений](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/names-of-classes-structs-and-interfaces#naming-enumerations)

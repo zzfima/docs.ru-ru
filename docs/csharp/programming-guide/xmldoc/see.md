@@ -2,7 +2,8 @@
 title: "&lt;see&gt; (руководство по программированию на C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - <see>
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 065c85ba411794858c8c4d70de0ac1467da1fe56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 959da56269081ebee036c620e535185609c5bff3
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ltseegt-c-programming-guide"></a>&lt;see&gt; (руководство по программированию на C#)
 ## <a name="syntax"></a>Синтаксис  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>Примечания  
  Тег \<see> позволяет задать ссылку из текста. С помощью тега [\<seealso>](../../../csharp/programming-guide/xmldoc/seealso.md) можно указать, что текст должен быть размещен в разделе "См. также". Используйте [cref Attribute](../../../csharp/programming-guide/xmldoc/cref-attribute.md) для создания внутренних гиперссылок на страницы документации для элементов кода.  
   
- Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md).  
+ Чтобы обработать комментарии документации и сохранить их в файл, выполняйте сборку с параметром [-doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md).  
   
  В следующем примере показан тег \<see> в разделе сводки.  
   

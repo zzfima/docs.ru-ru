@@ -2,7 +2,8 @@
 title: "Параметры компилятора C# в алфавитном порядке"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - compiler options [C#], listed alpabetically
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 07ca6b9473a4a3401742d05aa7c880da5ac43ad0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f4d7f1b122d3481dc8c3c5256ee361965846a830
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Параметры компилятора C# в алфавитном порядке
 Следующие параметры компилятора приведены в алфавитном порядке. Список параметров по категориям см. в разделе [Параметры компилятора C#, упорядоченные по категориям](../../../csharp/language-reference/compiler-options/listed-by-category.md).  
@@ -28,10 +29,10 @@ ms.lasthandoff: 01/19/2018
 |[-?](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|Отображает сообщение об использовании в stdout.|  
 |-additionalfile|Имена дополнительных файлов, которые непосредственно не влияют на создание кода, но могут использоваться анализаторами для выдачи ошибок или предупреждений.|  
 |[-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md)|Включает указанные модули в эту сборку.|  
-|-analyzer|Запускает анализаторы из этой сборки (краткая форма: /a)|  
+|-analyzer|Запускает анализаторы из этой сборки (краткая форма: -a)|  
 |[/appconfig](../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)|Указывает расположение файла app.config во время привязки сборки.|  
 |[-baseaddress](../../../csharp/language-reference/compiler-options/baseaddress-compiler-option.md)|Задает базовый адрес библиотеки для сборки.|  
-|[-bugreport](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|Создает файл отчета об ошибках. Этот файл будет отправляться вместе со сведениями о сбое, если параметр используется с /errorreport:prompt или /errorreport:send.|  
+|[-bugreport](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|Создает файл отчета об ошибках. Этот файл будет отправляться вместе со сведениями о сбое, если использовать параметр с -errorreport:prompt или -errorreport:send.|  
 |[/checked](../../../csharp/language-reference/compiler-options/checked-compiler-option.md)|Указывает компилятору создавать проверки переполнения.|  
 |-checksumalgorithm:\<алгоритм>|Указывает алгоритм для расчета контрольной суммы файла источника, хранящегося в PDB.  Поддерживаемые значения: SHA1 (по умолчанию) или SHA256.|  
 |[-codepage](../../../csharp/language-reference/compiler-options/codepage-compiler-option.md)|Указывает кодовую страницу, используемую при открытии исходных файлов.|  
