@@ -25,7 +25,9 @@
 ### [Общие сведения о библиотеке классов](standard/class-library-overview.md)
 ### [Базовые типы](standard/base-types/)
 ## [Библиотеки классов .NET](standard/class-libraries.md)
-## [Анализатор переносимости](standard/portability-analyzer.md)
+## Анализаторы
+### [Анализатор API](standard/analyzers/api-analyzer.md) 
+### [Анализатор переносимости](standard/analyzers/portability-analyzer.md)
 ## [Обработка и создание исключений](standard/exceptions/)
 ## [Формат файла сборки .NET](standard/assembly-format.md)
 ## [Сборка мусора](standard/garbage-collection/)
@@ -282,7 +284,6 @@
 <!--## [Tutorials](fsharp/tutorials/index.md)-->
 ## Учебники
 ### [Окно "Интерактивный F#"](fsharp/tutorials/fsharp-interactive/index.md)
-#### [Параметры окна "Интерактивный F#"](fsharp/tutorials/fsharp-interactive/fsharp-interactive-options.md)
 ### [Поставщики типов](fsharp/tutorials/type-providers/index.md)
 #### [Доступ к базе данных SQL с помощью поставщиков типов](fsharp/tutorials/type-providers/accessing-a-sql-database.md)
 #### [Доступ к базе данных SQL с помощью поставщиков типов и сущностей](fsharp/tutorials/type-providers/accessing-a-sql-database-entities.md)
@@ -408,6 +409,7 @@
 ### [Исправлена ключевое-слово](fsharp/language-reference/fixed.md)
 ### [Директивы компилятора](fsharp/language-reference/compiler-directives.md)
 ### [Параметры компилятора](fsharp/language-reference/compiler-options.md)
+### [Параметры окна "Интерактивный F#"](fsharp/language-reference/fsharp-interactive-options.md)
 ### [Идентификаторы Source Line, File и Path](fsharp/language-reference/source-line-file-path-identifiers.md)
 ### [Сведения о вызывающем объекте](fsharp/language-reference/caller-information.md)
 ### [Подробный синтаксис](fsharp/language-reference/verbose-syntax.md)

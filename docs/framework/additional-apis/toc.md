@@ -4,8 +4,12 @@
 #### [Поле m_WriteList](m_writelist.md)
 ### [Класс ConnectionGroup](connectiongroup.md)
 #### [Поле m_ConnectionList](m_connectionlist.md)
+### [Класс CoreResponseData](coreresponsedata.md)
+#### [Поле m_ResponseHeaders](coreresponsedata_m_responseheaders.md)
+#### [Поле m_StatusCode](coreresponsedata_m_statuscode.md)
 ### Класс HttpWebRequest
 #### [Поле _AutoRedirects](_autoredirects.md)
+#### [Поле _CoreResponse](httpwebrequest__coreresponse.md)
 #### [Поле _HttpResponse](_httpresponse.md)
 ### Класс ServicePoint
 #### [Поле m_ConnectionGroupList](m_connectiongrouplist.md)
