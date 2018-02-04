@@ -1,11 +1,12 @@
 ---
 title: "Символы типов (Visual Basic)"
 ms.custom: 
-ms.date: 07/20/2015
+ms.date: 01/31/2018
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - '&H prefix for hexadecimal values'
@@ -42,26 +43,26 @@ helpviewer_keywords:
 - UL literal type characters [Visual Basic]
 - literal types [Visual Basic], default
 ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2bd017db40fc28c78e960a889947cc7323e3e156
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.manager: wpickett
+ms.openlocfilehash: bdb675b9605d03829c95897382daa6d03cf1b041
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="type-characters-visual-basic"></a><span data-ttu-id="24e09-102">Введите символы (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="24e09-102">Type characters (Visual Basic)</span></span>
+# <a name="type-characters-visual-basic"></a><span data-ttu-id="148aa-102">Введите символы (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="148aa-102">Type characters (Visual Basic)</span></span>
 
-<span data-ttu-id="24e09-103">В дополнение к определению типов данных в операторе объявления, можно задать тип данных некоторых элементов программирования с *символ типа*.</span><span class="sxs-lookup"><span data-stu-id="24e09-103">In addition to specifying a data type in a declaration statement, you can force the data type of some programming elements with a *type character*.</span></span> <span data-ttu-id="24e09-104">Символ типа следует непосредственно за элементом без какого-промежуточные знака.</span><span class="sxs-lookup"><span data-stu-id="24e09-104">The type character must immediately follow the element, with no intervening characters of any kind.</span></span>
+<span data-ttu-id="148aa-103">В дополнение к определению типов данных в операторе объявления, можно задать тип данных некоторых элементов программирования с *символ типа*.</span><span class="sxs-lookup"><span data-stu-id="148aa-103">In addition to specifying a data type in a declaration statement, you can force the data type of some programming elements with a *type character*.</span></span> <span data-ttu-id="148aa-104">Символ типа следует непосредственно за элементом без какого-промежуточные знака.</span><span class="sxs-lookup"><span data-stu-id="148aa-104">The type character must immediately follow the element, with no intervening characters of any kind.</span></span>
 
-<span data-ttu-id="24e09-105">Символ типа не является частью имени элемента.</span><span class="sxs-lookup"><span data-stu-id="24e09-105">The type character is not part of the name of the element.</span></span> <span data-ttu-id="24e09-106">Ссылка на элемент с символом типа можно без знака типа.</span><span class="sxs-lookup"><span data-stu-id="24e09-106">An element defined with a type character can be referenced without the type character.</span></span>
+<span data-ttu-id="148aa-105">Символ типа не является частью имени элемента.</span><span class="sxs-lookup"><span data-stu-id="148aa-105">The type character is not part of the name of the element.</span></span> <span data-ttu-id="148aa-106">Ссылка на элемент с символом типа можно без знака типа.</span><span class="sxs-lookup"><span data-stu-id="148aa-106">An element defined with a type character can be referenced without the type character.</span></span>
 
-## <a name="identifier-type-characters"></a><span data-ttu-id="24e09-107">Символы типа идентификатора</span><span class="sxs-lookup"><span data-stu-id="24e09-107">Identifier type characters</span></span>
+## <a name="identifier-type-characters"></a><span data-ttu-id="148aa-107">Символы типа идентификатора</span><span class="sxs-lookup"><span data-stu-id="148aa-107">Identifier type characters</span></span>
 
-<span data-ttu-id="24e09-108">В Visual Basic предусмотрен набор *символы типа идентификатора* , можно использовать в объявлении для указания типа данных переменной или константы.</span><span class="sxs-lookup"><span data-stu-id="24e09-108">Visual Basic supplies a set of *identifier type characters* that you can use in a declaration to specify the data type of a variable or constant.</span></span> <span data-ttu-id="24e09-109">В следующей таблице показаны допустимые символы типа идентификатора с примерами использования.</span><span class="sxs-lookup"><span data-stu-id="24e09-109">The following table shows the available identifier type characters with examples of usage.</span></span>
+<span data-ttu-id="148aa-108">В Visual Basic предусмотрен набор *символы типа идентификатора* , можно использовать в объявлении для указания типа данных переменной или константы.</span><span class="sxs-lookup"><span data-stu-id="148aa-108">Visual Basic supplies a set of *identifier type characters* that you can use in a declaration to specify the data type of a variable or constant.</span></span> <span data-ttu-id="148aa-109">В следующей таблице показаны допустимые символы типа идентификатора с примерами использования.</span><span class="sxs-lookup"><span data-stu-id="148aa-109">The following table shows the available identifier type characters with examples of usage.</span></span>
   
-|<span data-ttu-id="24e09-110">Знак типа идентификатора</span><span class="sxs-lookup"><span data-stu-id="24e09-110">Identifier type character</span></span>|<span data-ttu-id="24e09-111">Тип данных</span><span class="sxs-lookup"><span data-stu-id="24e09-111">Data type</span></span>|<span data-ttu-id="24e09-112">Пример</span><span class="sxs-lookup"><span data-stu-id="24e09-112">Example</span></span>|  
+|<span data-ttu-id="148aa-110">Знак типа идентификатора</span><span class="sxs-lookup"><span data-stu-id="148aa-110">Identifier type character</span></span>|<span data-ttu-id="148aa-111">Тип данных</span><span class="sxs-lookup"><span data-stu-id="148aa-111">Data type</span></span>|<span data-ttu-id="148aa-112">Пример</span><span class="sxs-lookup"><span data-stu-id="148aa-112">Example</span></span>|  
 |-------------------------------|---------------|-------------|  
 |`%`|`Integer`|`Dim L%`|  
 |`&`|`Long`|`Dim M&`|  
@@ -70,33 +71,33 @@ ms.lasthandoff: 11/21/2017
 |`#`|`Double`|`Dim X#`|  
 |`$`|`String`|`Dim V$ = "Secret"`|  
   
- <span data-ttu-id="24e09-113">Для символов типа идентификатора не существует `Boolean`, `Byte`, `Char`, `Date`, `Object`, `SByte`, `Short`, `UInteger`, `ULong`, или `UShort` типов данных или других составные типы данных, таких как массивы и структуры.</span><span class="sxs-lookup"><span data-stu-id="24e09-113">No identifier type characters exist for the `Boolean`, `Byte`, `Char`, `Date`, `Object`, `SByte`, `Short`, `UInteger`, `ULong`, or `UShort` data types, or for any composite data types such as arrays or structures.</span></span>
+ <span data-ttu-id="148aa-113">Для символов типа идентификатора не существует `Boolean`, `Byte`, `Char`, `Date`, `Object`, `SByte`, `Short`, `UInteger`, `ULong`, или `UShort` типов данных или других составные типы данных, таких как массивы и структуры.</span><span class="sxs-lookup"><span data-stu-id="148aa-113">No identifier type characters exist for the `Boolean`, `Byte`, `Char`, `Date`, `Object`, `SByte`, `Short`, `UInteger`, `ULong`, or `UShort` data types, or for any composite data types such as arrays or structures.</span></span>
 
-<span data-ttu-id="24e09-114">В некоторых случаях можно добавить `$` символ для функции Visual Basic, например `Left$` вместо `Left`, для получения возвращаемого значения типа `String`.</span><span class="sxs-lookup"><span data-stu-id="24e09-114">In some cases, you can append the `$` character to a Visual Basic function, for example `Left$` instead of `Left`, to obtain a returned value of type `String`.</span></span>
+<span data-ttu-id="148aa-114">В некоторых случаях можно добавить `$` символ для функции Visual Basic, например `Left$` вместо `Left`, для получения возвращаемого значения типа `String`.</span><span class="sxs-lookup"><span data-stu-id="148aa-114">In some cases, you can append the `$` character to a Visual Basic function, for example `Left$` instead of `Left`, to obtain a returned value of type `String`.</span></span>
 
-<span data-ttu-id="24e09-115">Во всех случаях знак типа идентификатора должен следовать непосредственно за имя идентификатора.</span><span class="sxs-lookup"><span data-stu-id="24e09-115">In all cases, the identifier type character must immediately follow the identifier name.</span></span>
+<span data-ttu-id="148aa-115">Во всех случаях знак типа идентификатора должен следовать непосредственно за имя идентификатора.</span><span class="sxs-lookup"><span data-stu-id="148aa-115">In all cases, the identifier type character must immediately follow the identifier name.</span></span>
 
-## <a name="literal-type-characters"></a><span data-ttu-id="24e09-116">Символы типа литерала</span><span class="sxs-lookup"><span data-stu-id="24e09-116">Literal type characters</span></span>
+## <a name="literal-type-characters"></a><span data-ttu-id="148aa-116">Символы типа литерала</span><span class="sxs-lookup"><span data-stu-id="148aa-116">Literal type characters</span></span>
 
-<span data-ttu-id="24e09-117">Объект *литерала* является текстовым представлением отдельного значения типа данных.</span><span class="sxs-lookup"><span data-stu-id="24e09-117">A *literal* is a textual representation of a particular value of a data type.</span></span>  
+<span data-ttu-id="148aa-117">Объект *литерала* является текстовым представлением отдельного значения типа данных.</span><span class="sxs-lookup"><span data-stu-id="148aa-117">A *literal* is a textual representation of a particular value of a data type.</span></span>  
 
-### <a name="default-literal-types"></a><span data-ttu-id="24e09-118">Типы литералов по умолчанию</span><span class="sxs-lookup"><span data-stu-id="24e09-118">Default literal types</span></span>
+### <a name="default-literal-types"></a><span data-ttu-id="148aa-118">Типы литералов по умолчанию</span><span class="sxs-lookup"><span data-stu-id="148aa-118">Default literal types</span></span>
 
-<span data-ttu-id="24e09-119">Форма литерала, как оно отображается в коде, обычно определяет его тип данных.</span><span class="sxs-lookup"><span data-stu-id="24e09-119">The form of a literal as it appears in your code ordinarily determines its data type.</span></span> <span data-ttu-id="24e09-120">В следующей таблице показаны эти типы по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="24e09-120">The following table shows these default types.</span></span>  
+<span data-ttu-id="148aa-119">Форма литерала, как оно отображается в коде, обычно определяет его тип данных.</span><span class="sxs-lookup"><span data-stu-id="148aa-119">The form of a literal as it appears in your code ordinarily determines its data type.</span></span> <span data-ttu-id="148aa-120">В следующей таблице показаны эти типы по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="148aa-120">The following table shows these default types.</span></span>  
   
-|<span data-ttu-id="24e09-121">Текстовая форма литерала</span><span class="sxs-lookup"><span data-stu-id="24e09-121">Textual form of literal</span></span>|<span data-ttu-id="24e09-122">Тип данных по умолчанию</span><span class="sxs-lookup"><span data-stu-id="24e09-122">Default data type</span></span>|<span data-ttu-id="24e09-123">Пример</span><span class="sxs-lookup"><span data-stu-id="24e09-123">Example</span></span>|  
+|<span data-ttu-id="148aa-121">Текстовая форма литерала</span><span class="sxs-lookup"><span data-stu-id="148aa-121">Textual form of literal</span></span>|<span data-ttu-id="148aa-122">Тип данных по умолчанию</span><span class="sxs-lookup"><span data-stu-id="148aa-122">Default data type</span></span>|<span data-ttu-id="148aa-123">Пример</span><span class="sxs-lookup"><span data-stu-id="148aa-123">Example</span></span>|  
 |-----------------------------|-----------------------|-------------|  
-|<span data-ttu-id="24e09-124">Числовые без дробной части</span><span class="sxs-lookup"><span data-stu-id="24e09-124">Numeric, no fractional part</span></span>|`Integer`|`2147483647`|  
-|<span data-ttu-id="24e09-125">Числовые без дробной части, слишком велик для`Integer`</span><span class="sxs-lookup"><span data-stu-id="24e09-125">Numeric, no fractional part, too large for `Integer`</span></span>|`Long`|`2147483648`|  
-|<span data-ttu-id="24e09-126">Числовые дробной части</span><span class="sxs-lookup"><span data-stu-id="24e09-126">Numeric, fractional part</span></span>|`Double`|`1.2`|  
-|<span data-ttu-id="24e09-127">Заключено в двойные кавычки</span><span class="sxs-lookup"><span data-stu-id="24e09-127">Enclosed in double quotation marks</span></span>|`String`|`"A"`|  
-|<span data-ttu-id="24e09-128">Заключенные в решетки</span><span class="sxs-lookup"><span data-stu-id="24e09-128">Enclosed within number signs</span></span>|`Date`|`#5/17/1993 9:32 AM#`|  
+|<span data-ttu-id="148aa-124">Числовые без дробной части</span><span class="sxs-lookup"><span data-stu-id="148aa-124">Numeric, no fractional part</span></span>|`Integer`|`2147483647`|  
+|<span data-ttu-id="148aa-125">Числовые без дробной части, слишком велик для`Integer`</span><span class="sxs-lookup"><span data-stu-id="148aa-125">Numeric, no fractional part, too large for `Integer`</span></span>|`Long`|`2147483648`|  
+|<span data-ttu-id="148aa-126">Числовые дробной части</span><span class="sxs-lookup"><span data-stu-id="148aa-126">Numeric, fractional part</span></span>|`Double`|`1.2`|  
+|<span data-ttu-id="148aa-127">Заключено в двойные кавычки</span><span class="sxs-lookup"><span data-stu-id="148aa-127">Enclosed in double quotation marks</span></span>|`String`|`"A"`|  
+|<span data-ttu-id="148aa-128">Заключенные в решетки</span><span class="sxs-lookup"><span data-stu-id="148aa-128">Enclosed within number signs</span></span>|`Date`|`#5/17/1993 9:32 AM#`|  
 
-### <a name="forced-literal-types"></a><span data-ttu-id="24e09-129">Принудительные типы литерала</span><span class="sxs-lookup"><span data-stu-id="24e09-129">Forced literal types</span></span>
+### <a name="forced-literal-types"></a><span data-ttu-id="148aa-129">Принудительные типы литерала</span><span class="sxs-lookup"><span data-stu-id="148aa-129">Forced literal types</span></span>
 
-<span data-ttu-id="24e09-130">В Visual Basic предусмотрен набор *символы типа литерала*, указывает, который можно использовать для принудительного присвоения литералу тип данных, отличной от той, содержащей его формы.</span><span class="sxs-lookup"><span data-stu-id="24e09-130">Visual Basic supplies a set of *literal type characters*, which you can use to force a literal to assume a data type other than the one its form indicates.</span></span> <span data-ttu-id="24e09-131">Это делается путем добавления символа в конец литерала.</span><span class="sxs-lookup"><span data-stu-id="24e09-131">You do this by appending the character to the end of the literal.</span></span> <span data-ttu-id="24e09-132">В следующей таблице показаны допустимые символы типа литерала с примерами использования.</span><span class="sxs-lookup"><span data-stu-id="24e09-132">The following table shows the available literal type characters with examples of usage.</span></span>
+<span data-ttu-id="148aa-130">В Visual Basic предусмотрен набор *символы типа литерала*, указывает, который можно использовать для принудительного присвоения литералу тип данных, отличной от той, содержащей его формы.</span><span class="sxs-lookup"><span data-stu-id="148aa-130">Visual Basic supplies a set of *literal type characters*, which you can use to force a literal to assume a data type other than the one its form indicates.</span></span> <span data-ttu-id="148aa-131">Это делается путем добавления символа в конец литерала.</span><span class="sxs-lookup"><span data-stu-id="148aa-131">You do this by appending the character to the end of the literal.</span></span> <span data-ttu-id="148aa-132">В следующей таблице показаны допустимые символы типа литерала с примерами использования.</span><span class="sxs-lookup"><span data-stu-id="148aa-132">The following table shows the available literal type characters with examples of usage.</span></span>
   
-|<span data-ttu-id="24e09-133">Знак типа литерала</span><span class="sxs-lookup"><span data-stu-id="24e09-133">Literal type character</span></span>|<span data-ttu-id="24e09-134">Тип данных</span><span class="sxs-lookup"><span data-stu-id="24e09-134">Data type</span></span>|<span data-ttu-id="24e09-135">Пример</span><span class="sxs-lookup"><span data-stu-id="24e09-135">Example</span></span>|  
+|<span data-ttu-id="148aa-133">Знак типа литерала</span><span class="sxs-lookup"><span data-stu-id="148aa-133">Literal type character</span></span>|<span data-ttu-id="148aa-134">Тип данных</span><span class="sxs-lookup"><span data-stu-id="148aa-134">Data type</span></span>|<span data-ttu-id="148aa-135">Пример</span><span class="sxs-lookup"><span data-stu-id="148aa-135">Example</span></span>|  
 |----------------------------|---------------|-------------|  
 |`S`|`Short`|`I = 347S`|
 |`I`|`Integer`|`J = 347I`|
@@ -109,43 +110,51 @@ ms.lasthandoff: 11/21/2017
 |`UL`|`ULong`|`N = 347UL`|
 |`C`|`Char`|`Q = "."C`|
 
-<span data-ttu-id="24e09-136">Символы типа литерала существует для `Boolean`, `Byte`, `Date`, `Object`, `SByte`, или `String` типы данных, или для любых составных типов данных, таких как массивы и структуры.</span><span class="sxs-lookup"><span data-stu-id="24e09-136">No literal type characters exist for the `Boolean`, `Byte`, `Date`, `Object`, `SByte`, or `String` data types, or for any composite data types such as arrays or structures.</span></span>
+<span data-ttu-id="148aa-136">Символы типа литерала существует для `Boolean`, `Byte`, `Date`, `Object`, `SByte`, или `String` типы данных, или для любых составных типов данных, таких как массивы и структуры.</span><span class="sxs-lookup"><span data-stu-id="148aa-136">No literal type characters exist for the `Boolean`, `Byte`, `Date`, `Object`, `SByte`, or `String` data types, or for any composite data types such as arrays or structures.</span></span>
 
-<span data-ttu-id="24e09-137">Литералы также можно использовать символы типа идентификатора (`%`, `&`, `@`, `!`, `#`, `$`), как и переменные, константы и выражения.</span><span class="sxs-lookup"><span data-stu-id="24e09-137">Literals can also use the identifier type characters (`%`, `&`, `@`, `!`, `#`, `$`), as can variables, constants, and expressions.</span></span> <span data-ttu-id="24e09-138">Тем не менее, символы типа литерала (`S`, `I`, `L`, `D`, `F`, `R`, `C`) можно использовать только с литералами.</span><span class="sxs-lookup"><span data-stu-id="24e09-138">However, the literal type characters (`S`, `I`, `L`, `D`, `F`, `R`, `C`) can be used only with literals.</span></span>
+<span data-ttu-id="148aa-137">Литералы также можно использовать символы типа идентификатора (`%`, `&`, `@`, `!`, `#`, `$`), как и переменные, константы и выражения.</span><span class="sxs-lookup"><span data-stu-id="148aa-137">Literals can also use the identifier type characters (`%`, `&`, `@`, `!`, `#`, `$`), as can variables, constants, and expressions.</span></span> <span data-ttu-id="148aa-138">Тем не менее, символы типа литерала (`S`, `I`, `L`, `D`, `F`, `R`, `C`) можно использовать только с литералами.</span><span class="sxs-lookup"><span data-stu-id="148aa-138">However, the literal type characters (`S`, `I`, `L`, `D`, `F`, `R`, `C`) can be used only with literals.</span></span>
 
-<span data-ttu-id="24e09-139">Во всех случаях знак типа литерала должен следовать непосредственно за литеральное значение.</span><span class="sxs-lookup"><span data-stu-id="24e09-139">In all cases, the literal type character must immediately follow the literal value.</span></span>
+<span data-ttu-id="148aa-139">Во всех случаях знак типа литерала должен следовать непосредственно за литеральное значение.</span><span class="sxs-lookup"><span data-stu-id="148aa-139">In all cases, the literal type character must immediately follow the literal value.</span></span>
 
-## <a name="hexadecimal-binary-and-octal-literals"></a><span data-ttu-id="24e09-140">Шестнадцатеричные, двоичные и восьмеричные литералы</span><span class="sxs-lookup"><span data-stu-id="24e09-140">Hexadecimal, binary, and octal literals</span></span>
+## <a name="hexadecimal-binary-and-octal-literals"></a><span data-ttu-id="148aa-140">Шестнадцатеричные, двоичные и восьмеричные литералы</span><span class="sxs-lookup"><span data-stu-id="148aa-140">Hexadecimal, binary, and octal literals</span></span>
 
-<span data-ttu-id="24e09-141">Как правило, компилятор интерпретирует целочисленный литерал в системе счисления десятичным (основание 10).</span><span class="sxs-lookup"><span data-stu-id="24e09-141">The compiler normally interprets an integer literal to be in the decimal (base 10) number system.</span></span> <span data-ttu-id="24e09-142">Можно также определить целочисленный литерал в шестнадцатеричном формате (основание 16) число с `&H` префикс как число двоичного файла (по основанию 2) с `&B` префикс и в качестве восьмеричным (основание 8) число с `&O` префикс.</span><span class="sxs-lookup"><span data-stu-id="24e09-142">You can also define an integer literal as a hexadecimal (base 16) number with the `&H` prefix, as a binary (base 2) number with the `&B` prefix, and as an octal (base 8) number with the `&O` prefix.</span></span> <span data-ttu-id="24e09-143">Цифры, выполните префикс должна соответствовать системе счисления.</span><span class="sxs-lookup"><span data-stu-id="24e09-143">The digits that follow the prefix must be appropriate for the number system.</span></span> <span data-ttu-id="24e09-144">Это показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="24e09-144">The following table illustrates this.</span></span>  
+<span data-ttu-id="148aa-141">Как правило, компилятор интерпретирует целочисленный литерал в системе счисления десятичным (основание 10).</span><span class="sxs-lookup"><span data-stu-id="148aa-141">The compiler normally interprets an integer literal to be in the decimal (base 10) number system.</span></span> <span data-ttu-id="148aa-142">Можно также определить целочисленный литерал в шестнадцатеричном формате (основание 16) число с `&H` префикс как число двоичного файла (по основанию 2) с `&B` префикс и в качестве восьмеричным (основание 8) число с `&O` префикс.</span><span class="sxs-lookup"><span data-stu-id="148aa-142">You can also define an integer literal as a hexadecimal (base 16) number with the `&H` prefix, as a binary (base 2) number with the `&B` prefix, and as an octal (base 8) number with the `&O` prefix.</span></span> <span data-ttu-id="148aa-143">Цифры, выполните префикс должна соответствовать системе счисления.</span><span class="sxs-lookup"><span data-stu-id="148aa-143">The digits that follow the prefix must be appropriate for the number system.</span></span> <span data-ttu-id="148aa-144">Это показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="148aa-144">The following table illustrates this.</span></span>  
   
-|<span data-ttu-id="24e09-145">Основание системы счисления</span><span class="sxs-lookup"><span data-stu-id="24e09-145">Number base</span></span>|<span data-ttu-id="24e09-146">Префикс</span><span class="sxs-lookup"><span data-stu-id="24e09-146">Prefix</span></span>|<span data-ttu-id="24e09-147">Допустимые числовые значения</span><span class="sxs-lookup"><span data-stu-id="24e09-147">Valid digit values</span></span>|<span data-ttu-id="24e09-148">Пример</span><span class="sxs-lookup"><span data-stu-id="24e09-148">Example</span></span>|
+|<span data-ttu-id="148aa-145">Основание системы счисления</span><span class="sxs-lookup"><span data-stu-id="148aa-145">Number base</span></span>|<span data-ttu-id="148aa-146">Префикс</span><span class="sxs-lookup"><span data-stu-id="148aa-146">Prefix</span></span>|<span data-ttu-id="148aa-147">Допустимые числовые значения</span><span class="sxs-lookup"><span data-stu-id="148aa-147">Valid digit values</span></span>|<span data-ttu-id="148aa-148">Пример</span><span class="sxs-lookup"><span data-stu-id="148aa-148">Example</span></span>|
 |-----------------|------------|------------------------|-------------|
-|<span data-ttu-id="24e09-149">16 (основание 16)</span><span class="sxs-lookup"><span data-stu-id="24e09-149">Hexadecimal (base 16)</span></span>|`&H`|<span data-ttu-id="24e09-150">0-9 или A-F</span><span class="sxs-lookup"><span data-stu-id="24e09-150">0-9 and A-F</span></span>|`&HFFFF`|
-|<span data-ttu-id="24e09-151">Двоичный файл (по основанию 2)</span><span class="sxs-lookup"><span data-stu-id="24e09-151">Binary (base 2)</span></span>|`0B`|<span data-ttu-id="24e09-152">0—1</span><span class="sxs-lookup"><span data-stu-id="24e09-152">0-1</span></span>|`&B01111100`|
-|<span data-ttu-id="24e09-153">8 (основание 8)</span><span class="sxs-lookup"><span data-stu-id="24e09-153">Octal (base 8)</span></span>|`&O`|<span data-ttu-id="24e09-154">0-7</span><span class="sxs-lookup"><span data-stu-id="24e09-154">0-7</span></span>|`&O77`|
+|<span data-ttu-id="148aa-149">16 (основание 16)</span><span class="sxs-lookup"><span data-stu-id="148aa-149">Hexadecimal (base 16)</span></span>|`&H`|<span data-ttu-id="148aa-150">0-9 или A-F</span><span class="sxs-lookup"><span data-stu-id="148aa-150">0-9 and A-F</span></span>|`&HFFFF`|
+|<span data-ttu-id="148aa-151">Двоичный файл (по основанию 2)</span><span class="sxs-lookup"><span data-stu-id="148aa-151">Binary (base 2)</span></span>|`0B`|<span data-ttu-id="148aa-152">0—1</span><span class="sxs-lookup"><span data-stu-id="148aa-152">0-1</span></span>|`&B01111100`|
+|<span data-ttu-id="148aa-153">8 (основание 8)</span><span class="sxs-lookup"><span data-stu-id="148aa-153">Octal (base 8)</span></span>|`&O`|<span data-ttu-id="148aa-154">0-7</span><span class="sxs-lookup"><span data-stu-id="148aa-154">0-7</span></span>|`&O77`|
 
-<span data-ttu-id="24e09-155">Начиная с Visual Basic 2017 г., можно использовать символ подчеркивания (`_`) как разделитель групп, чтобы повысить удобочитаемость используется целочисленный литерал.</span><span class="sxs-lookup"><span data-stu-id="24e09-155">Starting in Visual Basic 2017, you can use the underscore character (`_`) as a group separator to enhance the readability of an integral literal.</span></span> <span data-ttu-id="24e09-156">В следующем примере используется `_` знак, который необходимо объединить двоичный литерал в 8-разрядное группы:</span><span class="sxs-lookup"><span data-stu-id="24e09-156">The following example uses the `_` character to group a binary literal into 8-bit groups:</span></span>
+<span data-ttu-id="148aa-155">Начиная с Visual Basic 2017 г., можно использовать символ подчеркивания (`_`) как разделитель групп, чтобы повысить удобочитаемость используется целочисленный литерал.</span><span class="sxs-lookup"><span data-stu-id="148aa-155">Starting in Visual Basic 2017, you can use the underscore character (`_`) as a group separator to enhance the readability of an integral literal.</span></span> <span data-ttu-id="148aa-156">В следующем примере используется `_` знак, который необходимо объединить двоичный литерал в 8-разрядное группы:</span><span class="sxs-lookup"><span data-stu-id="148aa-156">The following example uses the `_` character to group a binary literal into 8-bit groups:</span></span>
 
 ```vb
 Dim number As Integer = &B00100010_11000101_11001111_11001101
 ```
 
-<span data-ttu-id="24e09-157">Вы можете использовать литерал с префиксом, знак типа литерала.</span><span class="sxs-lookup"><span data-stu-id="24e09-157">You can follow a prefixed literal with a literal type character.</span></span> <span data-ttu-id="24e09-158">Это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="24e09-158">The following example shows this.</span></span>
+<span data-ttu-id="148aa-157">Вы можете использовать литерал с префиксом, знак типа литерала.</span><span class="sxs-lookup"><span data-stu-id="148aa-157">You can follow a prefixed literal with a literal type character.</span></span> <span data-ttu-id="148aa-158">Это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="148aa-158">The following example shows this.</span></span>
 
 ```vb
 Dim counter As Short = &H8000S
 Dim flags As UShort = &H8000US
 ```
 
-<span data-ttu-id="24e09-159">В предыдущем примере `counter` имеет десятичное значение от -32768, и `flags` имеет десятичное значение + 32768.</span><span class="sxs-lookup"><span data-stu-id="24e09-159">In the previous example, `counter` has the decimal value of -32768, and `flags` has the decimal value of +32768.</span></span>
+<span data-ttu-id="148aa-159">В предыдущем примере `counter` имеет десятичное значение от -32768, и `flags` имеет десятичное значение + 32768.</span><span class="sxs-lookup"><span data-stu-id="148aa-159">In the previous example, `counter` has the decimal value of -32768, and `flags` has the decimal value of +32768.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="24e09-160">См. также</span><span class="sxs-lookup"><span data-stu-id="24e09-160">See Also</span></span>
+<span data-ttu-id="148aa-160">Начиная с Visual Basic 15,5, можно также использовать символ подчеркивания (`_`) в качестве начальных разделителя между префиксом и двоичное, шестнадцатеричное или восьмеричное цифры.</span><span class="sxs-lookup"><span data-stu-id="148aa-160">Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits.</span></span> <span data-ttu-id="148aa-161">Пример:</span><span class="sxs-lookup"><span data-stu-id="148aa-161">For example:</span></span>
 
- [<span data-ttu-id="24e09-161">Типы данных</span><span class="sxs-lookup"><span data-stu-id="24e09-161">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [<span data-ttu-id="24e09-162">Простые типы данных</span><span class="sxs-lookup"><span data-stu-id="24e09-162">Elementary Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [<span data-ttu-id="24e09-163">Типы значений и ссылочные типы</span><span class="sxs-lookup"><span data-stu-id="24e09-163">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [<span data-ttu-id="24e09-164">Преобразования типов в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="24e09-164">Type Conversions in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [<span data-ttu-id="24e09-165">Устранение неполадок, связанных с типами данных</span><span class="sxs-lookup"><span data-stu-id="24e09-165">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [<span data-ttu-id="24e09-166">Объявление переменных</span><span class="sxs-lookup"><span data-stu-id="24e09-166">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [<span data-ttu-id="24e09-167">Типы данных</span><span class="sxs-lookup"><span data-stu-id="24e09-167">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/data-type-summary.md)
+```vb
+Dim number As Integer = &H_C305_F860
+```
+
+[!INCLUDE [supporting-underscores](../../../../../includes/vb-separator-langversion.md)]
+
+## <a name="see-also"></a><span data-ttu-id="148aa-162">См. также</span><span class="sxs-lookup"><span data-stu-id="148aa-162">See Also</span></span>
+
+ [<span data-ttu-id="148aa-163">Типы данных</span><span class="sxs-lookup"><span data-stu-id="148aa-163">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [<span data-ttu-id="148aa-164">Простые типы данных</span><span class="sxs-lookup"><span data-stu-id="148aa-164">Elementary Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [<span data-ttu-id="148aa-165">Типы значений и ссылочные типы</span><span class="sxs-lookup"><span data-stu-id="148aa-165">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [<span data-ttu-id="148aa-166">Преобразования типов в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="148aa-166">Type Conversions in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [<span data-ttu-id="148aa-167">Устранение неполадок, связанных с типами данных</span><span class="sxs-lookup"><span data-stu-id="148aa-167">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="148aa-168">Объявление переменных</span><span class="sxs-lookup"><span data-stu-id="148aa-168">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [<span data-ttu-id="148aa-169">Типы данных</span><span class="sxs-lookup"><span data-stu-id="148aa-169">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/data-type-summary.md)
