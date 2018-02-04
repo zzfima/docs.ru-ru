@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 6d7059c5209dc95ce68f28e0f32db929e7c97271
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1bd84e6a1e6fb0d4808dca42af2e2916be1133a3
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="wif-claims-programming-model"></a>Модель программирования требований WIF
 Для работы с удостоверениями пользователей разработчики на ASP.NET и Windows Communication Foundation (WCF) обычно используют интерфейсы IIdentity и IPrincipal. В .NET 4.5 интегрирована платформа Windows Identity Foundation (WIF), благодаря чему утверждения теперь всегда присутствуют для любого субъекта, как показано на схеме ниже.  
@@ -29,9 +31,9 @@ ms.lasthandoff: 12/22/2017
   
  Утверждение представлено классом <xref:System.Security.Claims.Claim>. Ниже перечислены его важные свойства.  
   
--   <xref:System.Security.Claims.Claim.Type%2A> представляет тип утверждения. Обычно это универсальный код ресурса (URI). Например, утверждение адреса электронной почты представляется как `http://schemas.microsoft.com/ws/2008/06/identity/claims/email`.  
+-   <xref:System.Security.Claims.Claim.Type%2A> представляет тип утверждения. Обычно это универсальный код ресурса (URI). Например, утверждение адрес электронной почты представляется в виде `http://schemas.microsoft.com/ws/2008/06/identity/claims/email`.  
   
--   <xref:System.Security.Claims.Claim.Value%2A> содержит значение утверждения в виде строки. Например, адрес электронной почты может быть представлен как "someone@contoso.com".  
+-   <xref:System.Security.Claims.Claim.Value%2A> содержит значение утверждения в виде строки. Например, адрес электронной почты может быть представлено как «someone@contoso.com».  
   
 -   <xref:System.Security.Claims.Claim.ValueType%2A> представляет тип значения утверждения. Обычно это универсальный код ресурса (URI). Например, строковый тип представляется как `http://www.w3.org/2001/XMLSchema#string`. Согласно схеме XML тип значения должен быть QName. Чтобы платформа WIF могла вывести допустимое значение QName, это значение должно иметь формат `namespace#format`. Если пространство имен не определено четко, проверка создаваемого кода XML схемой может оказаться невозможной, так как для этого пространства имен может отсутствовать опубликованный XSD-файл. Тип значения по умолчанию — `http://www.w3.org/2001/XMLSchema#string`. Известные типы значений, которые можно использовать без опасений, см. на странице по адресу [http://www.w3.org/2001/XMLSchema](http://go.microsoft.com/fwlink/?LinkId=209155).  
   
@@ -55,7 +57,7 @@ ms.lasthandoff: 12/22/2017
 ClaimsPrincipal claimsPrincipal = Thread.CurrentPrincipal as ClaimsPrincipal;  
 ```  
   
- Для получения дополнительной информации см. <xref:System.Security.Claims>.  
+ Дополнительные сведения см. в разделе <xref:System.Security.Claims>.  
   
 ### <a name="role-claim-type"></a>Тип утверждения роли  
  При настройке приложения проверяющей стороны необходимо выбрать тип утверждения роли. Этот тип утверждения используется методом System.Security.Claims.ClaimsPrincipal.IsInRole(System.String). Тип утверждения по умолчанию — `http://schemas.microsoft.com/ws/2008/06/identity/claims/role`.  

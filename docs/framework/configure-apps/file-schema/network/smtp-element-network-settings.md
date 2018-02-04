@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,22 +16,23 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 598fe3dc2a49187e923cd689f863d0a3327e735f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f5b2a3b7eec17fbdd12181c29f610d2b2ad32bd4
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="ltsmtpgt-element-network-settings"></a>&lt;SMTP&gt; элемент (параметры сети)
-Настраивает формат и способ доставки и адрес отправителя для отправки сообщений электронной почты.  
+Настраивает формат доставки инструкций, метод доставки и адрес отправителя для отправки сообщений электронной почты.  
   
  \<configuration>  
-\<System.NET >  
+\<system.net>  
 \<mailSettings >  
 \<SMTP >  
   
@@ -53,9 +55,9 @@ ms.lasthandoff: 12/22/2017
   
 |Атрибут|Описание:|  
 |---------------|-----------------|  
-|`deliveryFormat`|Определяет формат доставки для исходящих сообщений электронной почты. Допустимые значения: SevenBit и International.|  
+|`deliveryFormat`|Указывает формат доставки для исходящих сообщений электронной почты. Допустимые значения: SevenBit и International.|  
 |`deliveryMethod`|Указывает способ доставки сообщений электронной почты. Допустимые значения: сеть, pickupDirectoryFromIis и specifiedPickupDirectory.|  
-|`from`|Задает адрес отправителя для исходящих сообщений электронной почты.|  
+|`from`|Указывает адрес отправителя для исходящих сообщений электронной почты.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 12/22/2017
 |[Элемент \<mailSettings> (параметры сети)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Настраивает параметры отправки сообщений.|  
   
 ## <a name="example"></a>Пример  
- Следующий пример указывает соответствующие параметры SMTP для отправки электронной почты с помощью сетевые учетные данные по умолчанию.  
+ Следующий пример указывает соответствующие параметры SMTP для отправки электронной почты, используя сетевые учетные данные по умолчанию.  
   
 ```xml  
 <configuration>  

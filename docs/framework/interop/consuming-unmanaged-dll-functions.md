@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,21 +21,22 @@ helpviewer_keywords:
 - platform invoke
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dd1e5f4fc03da2310022efdeb4530440b5e07f3d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4133cfbdf4c9f164ae9ba42a6bbba94ce019e0be
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Использование неуправляемых функций DLL
-Вызов неуправляемого кода — это служба, позволяющая управляемому коду вызывать неуправляемые функции, реализованные в библиотеках динамической компоновки (DLL), например функции библиотек Win32 API. Он обнаруживает и вызывает экспортированную функцию и при необходимости маршалирует ее аргументы (целые числа, строки, массивы, структуры и так далее) через границы взаимодействия. Дополнительные сведения об этой службе см. в разделе [Подробный обзор вызова неуправляемого кода](http://msdn.microsoft.com/library/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243).  
+Вызов неуправляемого кода — это служба, позволяющая управляемому коду вызывать неуправляемые функции, реализованные в библиотеках динамической компоновки (DLL), например функции библиотек Win32 API. Он обнаруживает и вызывает экспортированную функцию и при необходимости маршалирует ее аргументы (целые числа, строки, массивы, структуры и так далее) через границы взаимодействия.  
   
- В этом разделе представлено несколько задач, связанных с использованием неуправляемых функций DLL. Кроме того, раздел содержит общие сведения и ссылки на дополнительную информацию и примеры.  
+ В этом разделе представлены задачи, связанные с использованием неуправляемых функций DLL и предоставляет дополнительные сведения о платформе вызова. Кроме того, раздел содержит общие сведения и ссылки на дополнительную информацию и примеры.  
   
 #### <a name="to-consume-exported-dll-functions"></a>Использование экспортированных функций DLL  
   
@@ -85,4 +87,3 @@ ms.lasthandoff: 01/19/2018
  [Взаимодействие с неуправляемым кодом](../../../docs/framework/interop/index.md)  
  [Примеры вызовов неуправляемого кода](../../../docs/framework/interop/platform-invoke-examples.md)  
  [Маршалинг взаимодействия](../../../docs/framework/interop/interop-marshaling.md)  
- [Использование неуправляемых функций DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)

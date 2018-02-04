@@ -1,11 +1,13 @@
 ---
 title: "Тип данных UShort (Visual Basic)"
-ms.date: 04/20/2017
+ms.date: 01/31/2018
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.ushort
+f1_keywords:
+- vb.ushort
 helpviewer_keywords:
 - numbers [Visual Basic], whole
 - literal type characters [Visual Basic], US
@@ -19,14 +21,13 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 513e8ce4694788d33c5aa14e34b95e88b6d37ff1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 958c7c74822d3b5cb311d22977b1b1f8bda04cd7
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="ushort-data-type-visual-basic"></a>Тип данных UShort (Visual Basic)
 
@@ -53,10 +54,18 @@ ms.lasthandoff: 11/21/2017
 
 [!code-vb[UShort](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UShortS)]
 
+Начиная с Visual Basic 15,5, можно также использовать символ подчеркивания (`_`) в качестве начальных разделителя между префиксом и двоичное, шестнадцатеричное или восьмеричное цифры. Пример:
+
+```vb
+Dim number As UShort = &H_FF8C
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 Можно также включать числовые литералы `US` или `us` [символ типа](../../programming-guide\language-features\data-types/type-characters.md) для обозначения `UShort` тип данных, как показано в следующем примере.
 
 ```vb
-Dim number = &H035826us
+Dim number = &H_5826us
 ```
 
 ## <a name="programming-tips"></a>Советы по программированию

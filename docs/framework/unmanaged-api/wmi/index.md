@@ -5,15 +5,16 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.date: 11/06/2017
-ms.topic: article-type-from-white-list
+ms.topic: reference
 ms.prod: .net-framework
 ms.devlang: cpp
-ms.workload: dotnet
-ms.openlocfilehash: 466ba410f7d6c13eb5f1949bf3aa32c3951a8ba7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c7959d6b6b7bafd728db5a579ff1376e686c5b74
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Инструментарий управления Windows (WMI) и счетчиков производительности (Справочник по неуправляемым API)
 
@@ -32,8 +33,8 @@ API-Интерфейс включает следующие функции:
 | [Функция Clone](clone.md) | Возвращает новый объект, который представляет собой полный клон текущего объекта. |
 | [Функция CloneEnumWbemClassObject](cloneenumwbemclassobject.md) | Создается копия логического перечислителя, сохраняя его текущую позицию в перечислении. |
 | [Функция CompareTo](compareto.md) | Сравнивает объект с другим объектом управления Windows. |
-| [Функция ConnectServerWmi](connectserverwmi.md) | Создает подключается через DCOM с пространством имен WMI на указанном компьютере. |
-| [Функция CreateClassEnumWmi](createclassenumwmi.md) | Возвращает перечислитель для всех классов, которые удовлетворяют указанные критерии выбора. |
+| [ConnectServerWmi function](connectserverwmi.md) | Создает подключается через DCOM с пространством имен WMI на указанном компьютере. |
+| [CreateClassEnumWmi function](createclassenumwmi.md) | Возвращает перечислитель для всех классов, которые удовлетворяют указанные критерии выбора. |
 | [Функция CreateInstanceEnumWmi](createinstanceenumwmi.md) | Возвращает перечислитель, который возвращает принимаемые экземпляры указанного класса, который отвечает указанные критерии выбора. |
 | [Функция Delete](delete.md) | Удаляет указанное свойство из определения класса и все его квалификаторов. |
 | [Функция DeleteMethod](deletemethod.md) | Удаляет указанный метод из определения класса CIM. |
@@ -63,11 +64,11 @@ API-Интерфейс включает следующие функции:
 | [Функция PutClassWmi](putclasswmi.md) | Создает новый класс, или обновляет существующую. |
 | [Функция PutInstanceWmi](putinstancewmi.md) | Создает или обновляет экземпляр существующего класса. Экземпляр записывается в репозиторий WMI. |
 | [Функция PutMethod](putmethod.md) | Создает метод. |
-| [Функция QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) | Возвращает перечислитель квалификаторы объект в начало перечисления. |
+| [QualifierSet_BeginEnumeration function](qualifierset-beginenumeration.md) | Возвращает перечислитель квалификаторы объект в начало перечисления. |
 | [Функция QualifierSet_Delete](qualifierset-delete.md) | Удаляет указанный квалификатор по имени.  |
-| [Функция QualifierSet_EndEnumeration](qualifierset-endenumeration.md) | Завершается перечисление начался вызовом `QualifierSet_BeginEnumeration` функции. |
+| [QualifierSet_EndEnumeration function](qualifierset-endenumeration.md) | Завершается перечисление начался вызовом `QualifierSet_BeginEnumeration` функции. |
 | [Функция QualifierSet_Get](qualifierset-get.md) | Возвращает указанный именованный квалификатор.  |
-| [Функция QualifierSet_GetNames](qualifierset-getnames.md) | Получает имена всех квалификаторов, или указанный квалификаторов, которые доступны из текущего объекта или свойства. |
+| [QualifierSet_GetNames function](qualifierset-getnames.md) | Получает имена всех квалификаторов, или указанный квалификаторов, которые доступны из текущего объекта или свойства. |
 | [Функция QualifierSet_Next](qualifierset-next.md) | Извлекает следующий квалификатор в перечислении, работы с помощью вызова [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) функции. |
 | [Функция QualifierSet_Put](qualifierset-put.md) | Записывает именованный квалификатор и значение. |
 | [Функция ResetSecurity](resetsecurity.md) | Присваивает указанный олицетворения текущего потока. |

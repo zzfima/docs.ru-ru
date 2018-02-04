@@ -1,11 +1,13 @@
 ---
 title: "Тип данных Long (Visual Basic)"
-ms.date: 04/20/2017
+ms.date: 01/31/2018
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.Long
+f1_keywords:
+- vb.Long
 helpviewer_keywords:
 - identifier type characters [Visual Basic], &
 - numbers [Visual Basic], whole
@@ -25,11 +27,11 @@ helpviewer_keywords:
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e21ed43ddc6efb018df0581faed1ebf270ab3ca
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 51cf03afc6b2e77ccca74fc26365fc50110e1f71
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="long-data-type-visual-basic"></a>Тип данных Long (Visual Basic)
 
@@ -56,10 +58,18 @@ ms.lasthandoff: 10/22/2017
 
 [!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
+Начиная с Visual Basic 15,5, можно также использовать символ подчеркивания (`_`) в качестве начальных разделителя между префиксом и двоичное, шестнадцатеричное или восьмеричное цифры. Пример:
+
+```vb
+Dim number As Long = &H_0FAC_0326_1489_D68C
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 Можно также включать числовые литералы `L` [символ типа](../../programming-guide\language-features\data-types/type-characters.md) для обозначения `Long` тип данных, как показано в следующем примере.
 
 ```vb
-Dim number = &H0FAC0326L
+Dim number = &H_0FAC_0326_1489_D68CL
 ```
 
 ## <a name="programming-tips"></a>Советы по программированию

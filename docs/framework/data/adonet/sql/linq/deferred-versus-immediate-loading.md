@@ -5,28 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f40f6c3d94aeeae41c4cce00bac8de863226f287
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8a4fa1574b8e25a5d98f9547ad916a3c84f10b01
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="deferred-versus-immediate-loading"></a>Отложенная и немедленная загрузка
 При запросе объекта фактически извлекается только запрошенный объект. *Связанные* объекты не извлекаются автоматически одновременно. (Дополнительные сведения см. в разделе [выполнение запросов в связях](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) Пользователь не может определить, что связанные объекты еще не загружены, поскольку попытка получить к ним доступ приводит к выполнению запроса, который их извлекает.  
   
- Например, может возникнуть потребность выполнить запрос на получение определенного набора заказов и затем лишь при необходимости отправлять уведомления по электронной почте отдельным клиентам. В этом случае не требуется сразу извлекать все данные о клиентах вместе с каждым заказом. Можно использовать отложенную загрузку для получения дополнительной информации только тогда, когда она действительно необходима. Рассмотрим следующий пример.  
+ Например может потребоваться запрос для определенного набора заказов и затем лишь при необходимости отправлять уведомления по электронной почте отдельным клиентам. В этом случае не требуется сразу извлекать все данные о клиентах вместе с каждым заказом. Можно использовать отложенную загрузку для получения дополнительной информации только тогда, когда она действительно необходима. Рассмотрим следующий пример.  
   
  [!code-csharp[DLinqQueryConcepts#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#1)]
  [!code-vb[DLinqQueryConcepts#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#1)]  
