@@ -2,20 +2,21 @@
 title: "Перегружаемые операторы (Руководство по программированию в C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - C# language, operator overloading
 - operator overloading [C#]
 ms.assetid: 390d9d01-79fc-40ab-9ed3-0bf448da1b6a
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 92dde781aa258267b7140228bc87621d26713f6d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7487f398ec412c4a302054ade20800f431e2c793
+ms.sourcegitcommit: 22a48b64a0150a60b00b4fc4d8c62cde7f1670c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="overloadable-operators-c-programming-guide"></a>Перегружаемые операторы (Руководство по программированию в C#)
 
@@ -62,4 +63,4 @@ public override string ToString() => $"{this.real} + {this.imaginary}";
 [Инструкции, выражения и операторы](../../../csharp/programming-guide/statements-expressions-operators/index.md)  
 [Операторы](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
 [Операторы в C#](../../../csharp/language-reference/operators/index.md)  
-[Почему перегруженные операторы всегда являются статическими в C#?](http://go.microsoft.com/fwlink/?LinkId=112383)
+[Почему перегруженные операторы всегда являются статическими в C#?](https://blogs.msdn.microsoft.com/ericlippert/2007/05/14/why-are-overloaded-operators-always-static-in-c/)

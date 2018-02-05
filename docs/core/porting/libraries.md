@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
-ms.workload: dotnetcore
-ms.openlocfilehash: c2cc62d1f7babb09eeccf0422bb4b3022d77ce02
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 24c74f0396dd7bfdf19fc0e11a29110fdbf27173
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="porting-to-net-core---libraries"></a>Перенос в .NET Core — библиотеки
 
@@ -123,7 +124,7 @@ ms.lasthandoff: 12/23/2017
 
 Следующий шаг — запуск анализатора переносимости API (ApiPort) для создания отчета о переносимости и его анализа.
 
-Для работы с .NET Core вам потребуются навыки использования [ApiPort](~/docs/standard/portability-analyzer.md) и создания отчетов о переносимости. Процедура зависит от ваших потребностей и личных предпочтений. Ниже описано несколько подходов. Вы можете использовать их в различных сочетаниях в зависимости от структуры кода.
+Для работы с .NET Core вам потребуются навыки использования [ApiPort](../../standard/analyzers/portability-analyzer.md) и создания отчетов о переносимости. Процедура зависит от ваших потребностей и личных предпочтений. Ниже описано несколько подходов. Вы можете использовать их в различных сочетаниях в зависимости от структуры кода.
 
 ### <a name="dealing-primarily-with-the-compiler"></a>Работа в первую очередь с компилятором
 

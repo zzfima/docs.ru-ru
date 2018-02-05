@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: fa3b7af871380d4f18ebe7ef4f5bc5963cc247c4
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 09d07e6257ad7d32d75328a8c1850888b4d0b937
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="work-with-syntax"></a>Работа с синтаксисом
 
@@ -89,7 +89,7 @@ ms.lasthandoff: 01/05/2018
 
 ## <a name="kinds"></a>Типы
 
-Каждый узел, токен или элемент trivia имеет свойство <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> типа <xref:System.Int32?displayProperty=fullName>, определяющее конкретный представленный элемент синтаксиса. Это значение можно привести к перечислению конкретного языка. Каждый язык, C# или VB имеет одно перечисление `SyntaxKind` (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=fullName> и <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=fullName>, соответственно), содержащее все возможные узлы, токены и элементы trivia в грамматике. Такое преобразование можно выполнить автоматически, обратившись к методам расширения <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> или <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
+Каждый узел, токен или элемент trivia имеет свойство <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> типа <xref:System.Int32?displayProperty=nameWithType>, определяющее конкретный представленный элемент синтаксиса. Это значение можно привести к перечислению конкретного языка. Каждый язык, C# или VB имеет одно перечисление `SyntaxKind` (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> и <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>, соответственно), содержащее все возможные узлы, токены и элементы trivia в грамматике. Такое преобразование можно выполнить автоматически, обратившись к методам расширения <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> или <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
 
 Свойство <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> позволяет легко устранить неоднозначность типов синтаксических узлов, которые используют один класс узлов. Для токенов и элементов trivia это свойство является единственным способом отличить один тип элемента от другого. 
 
