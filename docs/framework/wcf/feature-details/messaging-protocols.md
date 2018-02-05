@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 600a1bd57015c6a64a51bf99f3ded35a375e62fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 75a39fa1d0301a48cec7ad61c968ee3fc82d189c
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="messaging-protocols"></a>Протоколы обмена сообщениями
 Стек каналов [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] использует шифрование и транспортные каналы для преобразования внутренних представлений сообщений в формат для передачи по линиям связи и отправки этих сообщений с помощью определенного транспорта. Для взаимодействия веб-служб чаще всего используется транспорт HTTP, а в качестве кодировок в веб-службах чаще всего используются основанные на XML протоколы SOAP 1.1, SOAP 1.2 и механизм оптимизации передачи сообщений (MTOM).  
@@ -61,7 +63,7 @@ W3C Web Services Addressing 1.0 - метаданные|http://www.w3.org/TR/ws-a
 |------------|---------------------------------------------------|  
 |s11|http://schemas.xmlsoap.org/soap/envelope|  
 |s12|http://www.w3.org/2003/05/soap-envelope|  
-|wsa|http://www.w3.org/2004/08/Addressing|  
+|wsa|http://www.w3.org/2004/08/addressing|  
 |wsam|http://www.w3.org/2007/05/addressing/metadata|  
 |wsap|http://schemas.xmlsoap.org/ws/2004/09/policy/addressing|  
 |wsa10|http://www.w3.org/2005/08/addressing|  
@@ -73,12 +75,12 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 и SOAP 1.2  
   
 ### <a name="envelope-and-processing-model"></a>Конверт и модель обработки  
- В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] реализована обработка конверта SOAP 1.1 в соответствии с профилями Basic Profile 1.1 (BP11) и Basic Profile 1.0 (SSBP10). Обработка конверта SOAP 1.2 реализована в соответствии со спецификацией SOAP12-Part1.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] реализует обработка конверта SOAP 1.1, следуя Basic Profile 1.1 (BP11) и Basic Profile 1.0 (SSBP10). Обработка конверта SOAP 1.2 реализована в соответствии со спецификацией SOAP12-Part1.  
   
  В этом разделе рассматриваются некоторые варианты реализации, выбранные в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в отношении спецификаций BP11 и SOAP12-Part1.  
   
 #### <a name="mandatory-header-processing"></a>Обработка обязательных заголовков  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] следует правилам по обработке заголовков, помеченных как `mustUnderstand`, описанным в спецификациях SOAP 1.1 и SOAP 1.2, со следующими вариациями.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] следует правилам по обработке заголовков помечен `mustUnderstand` описано в спецификации SOAP 1.1 и SOAP 1.2, со следующими вариациями.  
   
  Сообщение, которое поступает в стек каналов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], обрабатывается отдельными каналами, настроенными с помощью связанных элементов привязки, таких как кодирование текстовых сообщений, безопасность, надежный обмен сообщениями и транзакции. Каждый канал распознает заголовки из связанного пространства имен и помечает их как распознанные. После поступления сообщения в диспетчер модуль форматирования операций считывает заголовки, ожидаемые соответствующим контрактом сообщения/операции, и помечает их как распознанные. Затем диспетчер проверяет, не остались ли нераспознанные заголовки, помеченные как `mustUnderstand`, и создает исключение. Сообщения, содержащие заголовки `mustUnderstand` и предназначенные получателю, не обрабатываются кодом приложения получателя.  
   
@@ -100,14 +102,14 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ### <a name="http-binding"></a>Привязка HTTP  
   
 #### <a name="soap-11-http-binding"></a>Привязка SOAP 1.1 HTTP  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] реализует привязку SOAP1.1 HTTP в соответствии с разделом 3.4 спецификации Basic Profile 1.1 со следующими уточнениями:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] реализует привязку SOAP1.1 HTTP в спецификации Basic Profile 1.1 раздел 3.4 со следующими уточнениями:  
   
 -   B2211: служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не реализует перенаправление запросов HTTP POST.  
   
 -   B2212: клиенты [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддерживают файлы cookie HTTP в соответствии с 3.4.8.  
   
 #### <a name="soap-12-http-binding"></a>Привязка SOAP 1,2 HTTP  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] реализует привязку SOAP 1.2 HTTP в соответствии со спецификацией SOAP 1.2-part 2 (SOAP12Part2) со следующими уточнениями.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] реализует привязку SOAP 1.2 HTTP, как описано в спецификацией SOAP 1.2-part 2 (SOAP12Part2) со следующими уточнениями.  
   
  В SOAP 1.2 введен необязательный параметр действия для типа носителя `application/soap+xml`. Этот параметр полезен для оптимизации распределения сообщений без необходимости анализа тела сообщения SOAP, если не используется протокол WS-Addressing.  
   
@@ -118,7 +120,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  Если привязка WS-Addressing отключена, а входящий запрос не содержит параметра действия, параметр `Action` сообщения считается неуказанным.  
   
 ## <a name="ws-addressing"></a>WS-Addressing  
- В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] реализованы 3 версии привязки WS-Addressing.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] реализованы 3 версии привязки WS-Addressing:  
   
 -   WS-Addressing 2004/08  
   
@@ -130,7 +132,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  Во всех версиях WS-Addressing, реализованных в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], для описания конечных точек используются ссылки на конечные точки.  
   
 #### <a name="endpoint-references-and-ws-addressing-versions"></a>Ссылки на конечные точки и версии WS-Addressing  
- В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] реализован ряд протоколов инфраструктуры, использующих WS-Addressing, в частности элемент `EndpointReference` и класс `W3C.WsAddressing.EndpointReferenceType` (например, WS-ReliableMessaging, WS-SecureConversation и WS-Trust). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддерживает использование обеих версий WS-Addressing с другими протоколами инфраструктуры. Конечные точки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддерживают одну версию WS-Addressing для каждой конечной точки.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] реализует ряд протоколов инфраструктуры, использующих WS-Addressing и в частности `EndpointReference` элемент и `W3C.WsAddressing.EndpointReferenceType` класса (например, WS-ReliableMessaging, WS-SecureConversation и WS-Trust). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддерживает использование обеих версий WS-Addressing с другими протоколами инфраструктуры. Конечные точки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддерживают одну версию WS-Addressing для каждой конечной точки.  
   
  Для R3111 пространство имен элемента `EndpointReference` или тип, используемый в сообщениях при обмене данными с конечной точкой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], должен соответствовать версии WS-Addressing, реализованной в данной конечной точке.  
   
@@ -232,7 +234,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ### <a name="wsdl-11-binding-and-ws-policy-assertions"></a>Привязка WSDL 1.1 и утверждения WS-Policy  
   
 #### <a name="indicating-use-of-ws-addressing"></a>Указание использования WS-Addressing  
- В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для указания определенной версии WS-Addressing, поддерживаемой конечной точкой, используются утверждения политики.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] использует утверждения политики для указания определенной версии WS-Addressing, поддерживаемой конечной точкой.  
   
  Следующее утверждение политики имеет субъект политики конечной точки [WS-PA] и указывает, что в сообщениях, отправляемых и принимаемых с конечной точки, должна использоваться спецификация WS-Addressing 2004/08.  
   
@@ -276,7 +278,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  Тем не менее при использовании некоторых схем обмена сообщениями удобно использовать два независимых HTTP-соединения, установленные между запрашивающей и отвечающей сторонами. Например, это позволяет принимать незапрошенные односторонние сообщения, отправленные отвечающей стороной.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предоставляет возможность формирования на основе двух транспортных каналов составного дуплексного канала, в котором один канал используется для входящих сообщений, а другой - для исходящих. В случае транспорта HTTP составной дуплексный канал обеспечивает два встречных HTTP-подключения. Запрашивающая сторона использует одно соединение для отправки сообщений отвечающей стороне, а отвечающая сторона использует другой канал для отправки сообщений обратно запрашивающей стороне.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предоставляет возможность с помощью которого основе двух транспортных каналов формирования составного дуплексного канала, где один канал используется для входящих сообщений, а другой используется для выходных сообщений. В случае транспорта HTTP составной дуплексный канал обеспечивает два встречных HTTP-подключения. Запрашивающая сторона использует одно соединение для отправки сообщений отвечающей стороне, а отвечающая сторона использует другой канал для отправки сообщений обратно запрашивающей стороне.  
   
  Для ответов на отдельные запросы http используется следующее утверждение WS-AM.  
   
@@ -519,7 +521,7 @@ Content-Length: 0
 msg-id    =       [CFWS] "<" id-left "@" id-right ">" [CFWS]  
 ```  
   
- и эффективно адрес электронной почты заключен в «\<» и «>». Префикс и суффикс `[CFWS]` были добавлены в RFC 2822 для внесения комментариев и не должны использоваться, чтобы не нарушать совместимость.  
+ и эффективно адрес эл. почты заключен в «\<» и «>». Префикс и суффикс `[CFWS]` были добавлены в RFC 2822 для внесения комментариев и не должны использоваться, чтобы не нарушать совместимость.  
   
  R4143: значение заголовка Content-ID для части Infoset MIME должно задаваться в соответствии с правилами для `msg-id` из RFC 2822 без частей с префиксом и суффиксом `[CFWS]`.  
   
@@ -574,7 +576,7 @@ mail-address   =     id-left "@" id-right
  Конечная точка [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], настроенная для использования механизма MTOM, будет всегда передавать сообщения с кодировкой MTOM. Даже если ни одна из частей не удовлетворяет требуемым критериям, сообщение все равно является MTOM-кодированным (сериализованным в виде пакета MIME с единственной частью MIME, содержащей конверт SOAP).  
   
 ### <a name="ws-policy-assertion-for-mtom"></a>Утверждение WS-Policy для MTOM  
- В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для указания того, что в конечной точке применяется механизм MTOM, используется приведенное ниже утверждение политики.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] следующее утверждение политики используется для указания использования MTOM конечной точкой:  
   
 ```xml  
 <wsoma:OptimizedMimeSerialization ... />  
