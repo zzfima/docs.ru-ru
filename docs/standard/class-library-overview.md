@@ -41,15 +41,18 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 05af1b2a881cabb418adcaaee44a819ae323e62a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 607ef0020e15581c6ccca8f232eaea6be547f63b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-framework-class-library-overview"></a>Общие сведения о библиотеке классов .NET Framework
 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] содержит классы, интерфейсы и типы значений, которые облегчают и оптимизируют процесс разработки, а также обеспечивают доступ к функциям системы. Для упрощения взаимодействия между языками большинство типов платформы .NET Framework являются CLS-совместимыми, и поэтому их можно использовать в любом языке программирования, компилятор которого соответствует спецификации CLS.  
@@ -88,15 +91,15 @@ ms.lasthandoff: 11/21/2017
   
  В следующей таблице перечислены базовые типы, предоставляемые в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], кратко описывается каждый тип и указывается соответствующий тип в Visual Basic, C#, C++ и JScript.  
   
-|Категория|Имя класса|Описание|Тип данных в Visual Basic|Тип данных в C#|Тип данных в C++|Тип данных в JScript|  
+|Категория|Имя класса|Описание:|Тип данных в Visual Basic|Тип данных в C#|Тип данных в C++|Тип данных в JScript|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Целое число|<xref:System.Byte>|8-разрядное целое число без знака.|**Byte**|**byte**|**unsigned char**|**Byte**|  
-||<xref:System.SByte>|8-битовое целое число со знаком.<br /><br /> Не является CLS-совместимым.|**SByte**|**sbyte**|**char**<br /><br /> -или-<br /><br /> **signed** **char**|**SByte**|  
+||<xref:System.SByte>|8-битовое целое число со знаком.<br /><br /> Не является CLS-совместимым.|**SByte**|**sbyte**|**char**<br /><br /> - или -<br /><br /> **signed** **char**|**SByte**|  
 ||<xref:System.Int16>|16-разрядное знаковое целое число.|**Short**|**short**|**short**|**short**|  
-||<xref:System.Int32>|32-разрядное знаковое целое число.|**Integer**|**int**|**int**<br /><br /> -или-<br /><br /> **long**|**int**|  
+||<xref:System.Int32>|32-разрядное знаковое целое число.|**Integer**|**int**|**int**<br /><br /> - или -<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|64-разрядное целое число со знаком.|**Long**|**long**|**__int64**|**long**|  
 ||<xref:System.UInt16>|16-разрядное целое число без знака.<br /><br /> Не является CLS-совместимым.|**UShort**|**ushort**|**unsigned short**|**UInt16**|  
-||<xref:System.UInt32>|32-разрядное целое число без знака.<br /><br /> Не является CLS-совместимым.|**UInteger**|**uint**|**unsigned int**<br /><br /> -или-<br /><br /> **unsigned long**|**UInt32**|  
+||<xref:System.UInt32>|32-разрядное целое число без знака.<br /><br /> Не является CLS-совместимым.|**UInteger**|**uint**|**unsigned int**<br /><br /> - или -<br /><br /> **unsigned long**|**UInt32**|  
 ||<xref:System.UInt64>|64-разрядное целое число без знака.<br /><br /> Не является CLS-совместимым.|**ULong**|**ulong**|**unsigned __int64**|**UInt64**|  
 |С плавающей запятой|<xref:System.Single>|Число с плавающей запятой с обычной точностью (32-разрядное).|**Single**|**float**|**float**|**float**|  
 ||<xref:System.Double>|Число с плавающей запятой с двойной точностью (64-разрядное).|**Double**|**double**|**double**|**double**|  

@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b899ae870fe92b31d7f4fcd088531f63694bd233
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9e9f934d6bff2c9ff3733551bca89b43920f3104
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="load-data-from-a-reader"></a>Загрузка данных из модуля чтения
 Если XML-документ загружен с помощью метода <xref:System.Xml.XmlDocument.Load%2A> и параметра <xref:System.Xml.XmlReader>, его поведение отличается от поведения загруженных данных других форматов. Если модуль чтения находится в начальном состоянии, метод <xref:System.Xml.XmlDocument.Load%2A> получает все его содержимое и строит модель XML DOM на основе всех данных модуля чтения.  
@@ -37,4 +40,4 @@ ms.lasthandoff: 10/18/2017
  По умолчанию метод <xref:System.Xml.XmlDocument.Load%2A> не проверяет допустимость XML с помощью определения типа документа (DTD) или проверки схемы. Он только проверяет правильность формата XML-документа. Чтобы выполнялась проверка, необходимо создать объект <xref:System.Xml.XmlReader> с помощью класса <xref:System.Xml.XmlReaderSettings>. Класс <xref:System.Xml.XmlReader> может применять проверку с помощью DTD или XSD-схемы. Свойство <xref:System.Xml.ValidationType> класса <xref:System.Xml.XmlReaderSettings> определяет, применяет ли экземпляр <xref:System.Xml.XmlReader> принудительную проверку. Дополнительные сведения о проверке данных XML см. в подразделе примечаний на справочной странице <xref:System.Xml.XmlReader>.  
   
 ## <a name="see-also"></a>См. также  
- [Модель объектов XML-документов (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

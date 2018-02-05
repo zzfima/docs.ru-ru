@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.openlocfilehash: 9c2cc090dfd5405def0cd6ab9ec1771be4a332a5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d7626b0a6a902465416187b2c09d624dfe9a9773
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-type-system--common-language-specification"></a>Система общих типов CTS и спецификация CLS
 
@@ -41,8 +44,8 @@ ms.lasthandoff: 10/18/2017
 
 *   Классы
 *   Структуры
-*   Перечисления
-*   Интерфейсы
+*   перечислениям;
+*   интерфейсов,
 *   Делегаты
 
 Система CTS также определяет все другие свойства типов, такие как модификаторы доступа, которые являются допустимыми членами типа, порядок наследования и перегрузки и т. п. К сожалению, детальное рассмотрение этих аспектов выходит за рамки данной вводной статьи, но вы можете обратиться к разделу [Дополнительные ресурсы](#more-resources) в конце статьи, где приведены ссылки на более подробные материалы по этой теме.
@@ -57,5 +60,5 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="more-resources"></a>Дополнительные ресурсы
 
-*   [Система общих типов CTS](https://msdn.microsoft.com/library/zcx1eb1e.aspx)
-*   [Спецификация CLS](https://msdn.microsoft.com/library/12a7a7h3.aspx)
+*   [Система общих типов CTS](./base-types/common-type-system.md)
+*   [Спецификация CLS](language-independence-and-language-independent-components.md)
