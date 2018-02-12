@@ -9,15 +9,15 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-ms.openlocfilehash: 5c8b6e2d14a14724a040bed5cc58c5ffef3ce520
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d800d861f65779a73f83cf44e8884566eb7adee4
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="samples-and-tutorials"></a>Примеры и руководства
+# <a name="samples-and-tutorials"></a>примеры и учебники;
 
-Документация по .NET содержит набор примеров и руководств, которые помогают изучить .NET. Из этой статьи вы узнаете, как находить, просматривать и скачивать примеры и руководства для .NET Core, ASP.NET Core и C#. Ресурсы, посвященные языку программирования F#, доступны на [сайте F# Foundation](http://fsharp.org/learn.html). Если вы хотите изучать язык C# в интерактивном редакторе кода, воспользуйтесь нашими [интерактивными руководствами](http://go.microsoft.com/fwlink/p/?LinkId=817234). Инструкции по просмотру и скачиванию примеров кода см. в разделе [Просмотр и скачивание примеров](#viewing-and-downloading-samples).
+Документация по .NET содержит набор примеров и руководств, которые помогают изучить .NET. Из этой статьи вы узнаете, как находить, просматривать и скачивать примеры и руководства для .NET Core, ASP.NET Core и C#. Ресурсы, посвященные языку программирования F#, доступны на [сайте F# Foundation](http://fsharp.org/learn.html). Если вы хотите изучать язык C# в интерактивном редакторе кода, ознакомьтесь с этим [интерактивным руководством](https://www.microsoft.com/net/learn/in-browser-tutorial/1), а затем переходите к [следующим](../csharp/quick-starts/index.md). Инструкции по просмотру и скачиванию примеров кода см. в разделе [Просмотр и скачивание примеров](#viewing-and-downloading-samples).
 
 ## <a name="net-core"></a>.NET Core
 
