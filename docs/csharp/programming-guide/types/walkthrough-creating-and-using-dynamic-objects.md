@@ -2,7 +2,8 @@
 title: "Пошаговое руководство. Создание и использование динамических объектов (C# и Visual Basic)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 dev_langs:
 - csharp
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ab1e245ed806cf0ea6346c76c6ade83273eed7be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eca6da96d3bf9c5c25216e442999be77a332b5c9
+ms.sourcegitcommit: 70dcc89737127e4d5f20500242409b687e51b07e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Пошаговое руководство. Создание и использование динамических объектов (C# и Visual Basic)
 
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 -   Создание проекта, использующего библиотеку `IronPython`.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
-Требуется [IronPython](http://ironpython.net/) для .NET для выполнения данного пошагового руководства. Перейдите на их [страницы загрузки](http://ironpython.net/download/) для получения последней версии.
+Для выполнения инструкций этого пошагового руководства потребуется установить [IronPython](http://ironpython.net/) для .NET. Перейдите на [страницу загрузки](http://ironpython.net/download/) для получения последней версии.
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -178,4 +179,4 @@ ms.lasthandoff: 11/21/2017
  [Использование типа dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
  [Раннее и позднее связывание](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
  [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
- [Реализация динамических интерфейсов (внешний блог)](http://go.microsoft.com/fwlink/?LinkId=230895)
+ [Реализация динамических интерфейсов (документ в формате PDF на сайте Microsoft TechNet)](http://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)
