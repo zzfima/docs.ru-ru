@@ -9,23 +9,26 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a897a599-ffd1-43f9-8807-e58c8a7194cd
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 44ce1337e347020926fe2dee29d70fe226ad087a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b11fc10128807dfbd0082bbc1884068c5cde7d32
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-schema-object-model-som"></a>Модель объектов схемы XML (SOM)
 Схема XML - это мощное и сложное средство создания и проверки структуры в совместимых XML-документах. Схема, так же как и моделирование данных в реляционной базе данных, позволяет определять структуру XML-документов путем указания элементов, которые могут использоваться в документах, а также структуры и типов, которых эти элементы должны придерживаться, чтобы быть допустимыми с точки зрения этой конкретной схемы.  
   
  Модель SOM предоставляет набор классов в пространстве имен <xref:System.Xml.Schema?displayProperty=nameWithType>, которые позволяют считывать схему из файла или программно создавать схему в памяти. После этого схему можно будет просматривать, изменять, компилировать, проверять или записывать в файл.  
   
-## <a name="in-this-section"></a>Содержание  
- [Общие сведения о модели объектов схемы XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Общие сведения об модели объектов XML-схемы](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
  Описывает модель SOM и ее возможности и классы.  
   
  [Чтение и запись XML-схем](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  

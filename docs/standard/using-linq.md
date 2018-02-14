@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 1478b5dc5844cef0abfea44eba88a12801d32bd4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: eb9bc30c31ab02df7c04c885f59cadfcc1f00253
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="linq-language-integrated-query"></a>Встроенный язык запросов LINQ
 
@@ -80,7 +83,7 @@ public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement docume
 
 Написать код для просмотра XML-документа вручную будет намного сложнее.
 
-Поставщики LINQ можно использовать для реализации целого ряда задач, не ограничиваясь только взаимодействием с XML. [LINQ to SQL](https://msdn.microsoft.com/library/bb386976.aspx) является довольно минималистичным инструментом объектно-реляционного сопоставления (ORM) для базы данных сервера MSSQL. Библиотека [JSON.NET](http://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) предоставляет эффективные возможности просмотра документов JSON с помощью LINQ. Кроме того, если библиотека с необходимыми вам функциями отсутствует, можно [написать собственный поставщик LINQ](https://msdn.microsoft.com/library/Bb546158.aspx)!
+Поставщики LINQ можно использовать для реализации целого ряда задач, не ограничиваясь только взаимодействием с XML. [LINQ to SQL](../../docs/framework/data/adonet/sql/linq/index.md) является довольно минималистичным инструментом объектно-реляционного сопоставления (ORM) для базы данных сервера MSSQL. Библиотека [JSON.NET](http://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) предоставляет эффективные возможности просмотра документов JSON с помощью LINQ. Кроме того, если библиотека с необходимыми вам функциями отсутствует, можно [написать собственный поставщик LINQ](https://msdn.microsoft.com/library/Bb546158.aspx)!
 
 ## <a name="why-use-the-query-syntax"></a>Зачем нужно использовать синтаксис запроса?
 
@@ -254,7 +257,7 @@ public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> fa
 
 ![Схема PLINQ](./media/using-linq/plinq-diagram.png)
 
-Параллелизуемые задания, использующие ресурсы ЦП, которые можно легко выразить через LINQ (другими словами, чистые функции без побочных эффектов) являются отличным кандидатом для PLINQ. Для работы с заданиями, которые _имеют_ побочный эффект, рекомендуется рассмотреть возможность использования [библиотеки параллельных задач](https://msdn.microsoft.com/library/dd460717.aspx).
+Параллелизуемые задания, использующие ресурсы ЦП, которые можно легко выразить через LINQ (другими словами, чистые функции без побочных эффектов) являются отличным кандидатом для PLINQ. Для работы с заданиями, которые _имеют_ побочный эффект, рекомендуется рассмотреть возможность использования [библиотеки параллельных задач](./parallel-programming/task-parallel-library-tpl.md).
 
 ## <a name="further-resources"></a>Дополнительные ресурсы:
 

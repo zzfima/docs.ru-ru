@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: ccb44b94f1b3ce2fb369de368454679b25ed351f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9c0d375f160b886b104daeb68b88c25264e3e78f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -80,7 +83,7 @@ ms.lasthandoff: 10/18/2017
 
 ### <a name="official-artifacts"></a>Официальные артефакты
 
-Официальная спецификация — это набор CS-файлов, которые определяют API, входящие в стандарт. [ref directory](https://github.com/dotnet/standard/tree/master/netstandard/ref) в [репозиторий dotnet/standard](https://github.com/dotnet/corefx/tree/master/src) определяет стандартные API-интерфейсы .NET.
+Официальная спецификация — это набор CS-файлов, которые определяют API, входящие в стандарт. [ref directory](https://github.com/dotnet/standard/tree/master/netstandard/ref) в [репозиторий dotnet/standard](https://github.com/dotnet/standard) определяет стандартные API-интерфейсы .NET.
 
 Метапакет [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) ([источник](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props)) описывает набор библиотек, определяющих (частично) одну версию .NET Standard.или несколько.
 
@@ -98,7 +101,7 @@ ms.lasthandoff: 10/18/2017
 
 Основным средством распространения ссылочных сборок .NET Standard являются [пакеты NuGet](../core/packages.md). Соответствующие реализации будут предоставлены различными способами, наиболее уместными для каждой реализации .NET.
 
-Пакеты NuGet нацелены на одну или несколько [платформ](frameworks.md). Пакеты библиотеки .NET Standard нацелены на платформу ".NET Standard". Ориентироваться на платформу .NET Standard можно с помощью [компактного моникера целевой платформы](frameworks.md) `netstandard` (например, `netstandard1.4`). Библиотеки, предназначенные для запуска в различных средах выполнения, должны быть нацелены на эту платформу. 
+Пакеты NuGet нацелены на одну или несколько [платформ](frameworks.md). Пакеты библиотеки .NET Standard нацелены на платформу ".NET Standard". Ориентироваться на платформу .NET Standard можно с помощью [компактного моникера целевой платформы](frameworks.md) `netstandard` (например, `netstandard1.4`). Библиотеки, предназначенные для различных сред выполнения, должны быть нацелены на эту платформу. 
 
 Метапакет `NETStandard.Library` ссылается на полный набор пакетов NuGet, определяющих библиотеку .NET Standard.  Наиболее распространенным способом нацеливания на `netstandard` является ссылка на этот метапакет. Он описывает и предоставляет доступ примерно к 40 библиотекам .NET и связанным интерфейсам API, которые определяют библиотеку .NET Standard. Вы можете ссылаться на другие пакеты, предназначенные для `netstandard`, чтобы получить доступ к дополнительным интерфейсам API. 
 
@@ -132,16 +135,16 @@ API, добавляемые в любую из реализаций (напри�
 | Профиль PCL | .NET Standard | Платформы PCL
 |:-----------:|:-------------:|------------------------------------------------------------------------------
 | Profile7    | 1.1           | .NET Framework 4.5, Windows 8
-| Profile31   | 1,0           | Windows 8.1, Windows Phone Silverlight 8.1
+| Profile31   | 1.0           | Windows 8.1, Windows Phone Silverlight 8.1
 | Profile32   | 1.2           | Windows 8.1, Windows Phone 8.1
 | Profile44   | 1.2           | .NET Framework 4.5.1, Windows 8.1
-| Profile49   | 1,0           | .NET Framework 4.5, Windows Phone Silverlight 8
+| Profile49   | 1.0           | .NET Framework 4.5, Windows Phone Silverlight 8
 | Profile78   | 1,0           | .NET Framework 4.5, Windows 8, Windows Phone Silverlight 8
-| Profile84   | 1,0           | Windows Phone 8.1, Windows Phone Silverlight 8.1
+| Profile84   | 1.0           | Windows Phone 8.1, Windows Phone Silverlight 8.1
 | Profile111  | 1.1           | .NET Framework 4.5, Windows 8, Windows Phone 8.1
 | Profile151  | 1.2           | .NET Framework 4.5.1, Windows 8.1, Windows Phone 8.1
-| Profile157  | 1,0           | Windows 8.1, Windows Phone 8.1, Windows Phone Silverlight 8.1
-| Profile259  | 1,0           | .NET Framework 4.5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8
+| Profile157  | 1.0           | Windows 8.1, Windows Phone 8.1, Windows Phone Silverlight 8.1
+| Profile259  | 1.0           | .NET Framework 4.5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8
 
 
 ## <a name="targeting-net-standard"></a>Нацеливание на .NET Standard

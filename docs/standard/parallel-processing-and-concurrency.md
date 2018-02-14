@@ -14,20 +14,23 @@ helpviewer_keywords:
 - concurrency [.NET Framework]
 - .NET Framework, concurrency
 ms.assetid: e573faa8-0212-44b1-a850-ce85dc54f47f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 589bb8fc36d95a48930e4b51a096e7db18905397
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ab15fd38a467eec398f8383e40067d2135c042b5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="parallel-processing-and-concurrency-in-the-net-framework"></a>Параллельная обработка и параллелизм в .NET Framework
 Платформа .NET Framework предоставляет различные способы использования нескольких потоков выполнения для того, чтобы приложение могло отвечать на действия пользователя, в то время как производительность компьютера пользователя оставалась максимальной.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Работа с потоками](../../docs/standard/threading/index.md)  
  Описывает основные механизмы параллелизма и синхронизации, предоставляемые платформой .NET Framework.  
   

@@ -9,30 +9,33 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c57b46e6-5c77-408f-bc4e-67a5dcc9cc05
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 27f5bccc2ab5f229e8b726b3bff18ea7a590f5c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9e0b6d8545fccf9148aaa317b6d936c5c9f02775
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a>Доступ к XML-данным с помощью класса XPathNavigator
 Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет методы для перемещения по узлам, извлечения XML-данных, доступа к строго типизированным XML-данным в объектах <xref:System.Xml.XPath.XPathDocument> и <xref:System.Xml.XmlDocument>.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Навигация в наборе узлов с помощью XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
  Описываются методы класса <xref:System.Xml.XPath.XPathNavigator>, используемые для перемещения по наборам узлов в объектах <xref:System.Xml.XPath.XPathDocument> и <xref:System.Xml.XmlDocument>.  
   
- [Атрибут и навигации узла пространства имен с помощью XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
+ [Навигация по узлам атрибутов и пространств имен с помощью XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
  Описывает методы класса <xref:System.Xml.XPath.XPathNavigator> для перемещения по наборам узлов атрибутов и пространств имен.  
   
  [Извлечение XML-данных с помощью XPathNavigator](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)  
  Описывает различные методы извлечения XML-данных из объектов <xref:System.Xml.XPath.XPathDocument> и <xref:System.Xml.XmlDocument>.  
   
- [Доступ к строго типизированным XML-данных с помощью XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)  
+ [Доступ к XML-данным со строгой типизацией с помощью XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)  
  Описывает методы доступа к строго типизированным XML-данным в объекте <xref:System.Xml.XPath.XPathDocument> или <xref:System.Xml.XmlDocument> с помощью класса <xref:System.Xml.XPath.XPathNavigator>.  
   
  [Определяемые пользователем функции и переменные](../../../../docs/standard/data/xml/user-defined-functions-and-variables.md)  
@@ -46,4 +49,4 @@ ms.lasthandoff: 11/21/2017
  [Чтение XML-данных с помощью XPathDocument и XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
  [Выбор, вычисление и отбор XML-данных с помощью XPathNavigator](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)  
  [Изменение XML-данных с помощью XPathNavigator](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
- [Проверка схемы с помощью XPathNavigator](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)
+ [Проверка по схеме с помощью XPathNavigator](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)

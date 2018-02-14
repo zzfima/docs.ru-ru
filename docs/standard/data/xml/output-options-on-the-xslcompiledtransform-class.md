@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 61f59c1be3376fb76c91994996840b915cd662ae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 84171c92a56a9970b5ffc16ce8f30c85d61cc678
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>Параметры вывода в классе XslCompiledTransform
 В этом разделе рассматриваются доступные параметры вывода XSLT. Параметры вывода можно указать в таблице стилей или методе <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
@@ -49,7 +52,7 @@ ms.lasthandoff: 10/18/2017
 #### <a name="xmlwriter"></a>XmlWriter  
  Класс <xref:System.Xml.XmlWriter> записывает потоки или файлы XML. С помощью класса <xref:System.Xml.XmlWriter> можно указать функции, поддерживающие объект <xref:System.Xml.XmlWriterSettings>, включая параметры вывода. Класс <xref:System.Xml.XmlWriter> представляет собой неотъемлемую часть платформы <xref:System.Xml>. Используйте этот тип вывода для передачи выходных результатов в другой процесс XML.  
   
-#### <a name="string"></a>Строковое  
+#### <a name="string"></a>String  
  Используйте этот тип вывода, чтобы указать URI выходного файла.  
   
 #### <a name="stream"></a>Поток  

@@ -12,15 +12,18 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 13f89749a4df3496b8c169e67c2f221a940568bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e1cf3475ded3582cdf0754e68d13c97bd87b06a8
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="garbage-collection-and-performance"></a>Сборка мусора и производительность
 <a name="top"></a> В этом разделе описаны вопросы, связанные со сборкой мусора и использованием памяти. Здесь рассматриваются проблемы, относящиеся к управляемой куче, и объясняется, как свести к минимуму влияние сборки мусора на работу приложений. Для каждого аспекта приводятся ссылки на процедуры, которые можно использовать для анализа проблем.  
@@ -45,7 +48,7 @@ ms.lasthandoff: 10/18/2017
   
 <a name="sos"></a>   
 ### <a name="debugging-with-sos"></a>Отладка с помощью расширения SOS  
- Для проверки объектов в управляемой куче можно использовать [отладчик Windows (WinDbg)](http://go.microsoft.com/fwlink/?LinkId=186482).  
+ Для проверки объектов в управляемой куче можно использовать [отладчик Windows (WinDbg)](/windows-hardware/drivers/debugger/index).  
   
  Чтобы установить WinDbg, установите средства отладки для Windows с [веб-сайта загрузки комплекта WDK и средств разработчика](http://go.microsoft.com/fwlink/?LinkID=103787).  
   
@@ -330,7 +333,7 @@ ms.lasthandoff: 10/18/2017
   
      В этом примере размер самой крупной свободной области составляет приблизительно 24 000 КБ (3A980 в шестнадцатеричном формате). Эта область гораздо меньше, чем требуется сборщику мусора для сегмента.  
   
-     -или-  
+     - или -  
   
 -   Используйте команду **vmstat**:  
   
@@ -422,7 +425,7 @@ ms.lasthandoff: 10/18/2017
   
      Если управляемая куча имеет большой размер, выполнение команды **dumpheap** может занять некоторое время.  
   
-     Вы можете начать анализ с последних нескольких строк вывода, поскольку в них перечислены объекты, занимающие наибольшее пространство. Например:  
+     Вы можете начать анализ с последних нескольких строк вывода, поскольку в них перечислены объекты, занимающие наибольшее пространство. Пример:  
   
     ```  
     2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo  

@@ -24,21 +24,24 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4279e7933a88a060de52199d9ea0e9f54863fb11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0048c1946e5df59340bed211c5dbb81075047260
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="isolated-storage"></a>Изолированное хранилище
 <a name="top"></a> Для приложений [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] изолированное хранилище — это механизм хранения данных, обеспечивающий изоляцию и безопасность данных путем определения стандартизованных способов для сопоставления кода с сохраненными данными. Стандартизация также имеет и другие преимущества. Администраторы могут использовать инструменты управления изолированным хранением для конфигурирования пространства хранения файлов, установки политики безопасности и удаления неиспользуемых данных. При изолированном хранении нет необходимости указывать уникальные пути для безопасного размещения кода в файловой системе, и данные защищены от других приложений, имеющих доступ только к изолированному хранению. Нет необходимости в аппаратно закодированной информации, указывающей место размещения области хранения данных приложения.  
   
 > [!IMPORTANT]
->  Изолированное хранилище недоступно для приложений Windows [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Вместо этого используйте классы данных приложений в пространствах имен `Windows.Storage` , включенных в API [!INCLUDE[wrt](../../../includes/wrt-md.md)] для хранения локальных данных и файлов. Дополнительные сведения см. в статье [Доступ к данным приложения](http://go.microsoft.com/fwlink/?LinkId=229175) в Центре разработки для Windows.  
+>  Изолированное хранилище недоступно для приложений Windows [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Вместо этого используйте классы данных приложений в пространствах имен `Windows.Storage` , включенных в API [!INCLUDE[wrt](../../../includes/wrt-md.md)] для хранения локальных данных и файлов. Дополнительные сведения см. в статье [Данные приложения](/previous-versions/windows/apps/hh464917(v=win.10)) в Центре разработки для Windows.  
   
  В этом разделе содержатся следующие подразделы.  
   
@@ -161,9 +164,9 @@ ms.lasthandoff: 10/18/2017
   
   
 <a name="related_topics"></a>   
-## <a name="related-topics"></a>Связанные разделы  
+## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание|  
+|Заголовок|Описание:|  
 |-----------|-----------------|  
 |[Типы изоляции](../../../docs/standard/io/types-of-isolation.md)|Описание различных типов изоляции.|  
 |[Практическое руководство. Получение хранилищ для изолированного хранения](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|Пример использования класса <xref:System.IO.IsolatedStorage.IsolatedStorageFile> для получения хранилища, изолированного по пользователю и сборке.|  
