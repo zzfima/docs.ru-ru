@@ -9,13 +9,16 @@ ms.technology: dotnet-docker
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 44864274a86634c0199885b5507124f2f54ce0f6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: db9f0ddd875df1f84bcc5681ee1383b0185f8b7e
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Разработка современных веб-приложений с помощью ASP.NET Core и Azure
+
+![изображение обложки](./media/cover.jpg)
+
 
 .NET Core и ASP.NET Core имеют ряд преимуществ по сравнению с традиционной разработкой .NET. Используйте .NET Core для серверных приложений, если для их успешной работы вам важны некоторые или все приведенные далее аспекты:
 
