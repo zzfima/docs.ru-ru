@@ -1,4 +1,4 @@
-# [Расширение WCF](extending-wcf.md)
+# [Расширение WCF](index.md)
 ## [Расширение ServiceHost и уровень модели службы](extending-servicehost-and-the-service-model-layer.md)
 ### [Расширение клиентов](extending-clients.md)
 #### [Практическое руководство. Проверка или изменение сообщений на клиенте](how-to-inspect-or-modify-messages-on-the-client.md)
