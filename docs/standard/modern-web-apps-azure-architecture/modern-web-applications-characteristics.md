@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 9ff9380b318457a842dec4e41b9b74dcddcda3d3
-ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ecef23870ac547f4b4066628da71f8af98c91b27
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Характеристики современных веб-приложений
 
 > "… правильный подход поступать экономно функции. Этот подход трудным, но продолжает успешно».  
-> _\-Ричи Деннис_
+> _\- Ричи Деннис_
 
 ## <a name="summary"></a>Сводка
 
@@ -33,7 +36,7 @@ ASP.NET Core оптимизирован для современных веб-п�
 
 > ### <a name="reference-application"></a>Ссылка приложения
 > - **eShopOnWeb**  
-> <https://github.com/DotNet/eShopOnWeb>
+> <https://github.com/dotnet/eShopOnWeb>
 
 ## <a name="cloud-hosted-and-scalable"></a>Размещенных в облаке и масштабируемость
 
@@ -41,7 +44,7 @@ ASP.NET Core оптимизирован для облака (общедосту�
 
 ## <a name="cross-platform"></a>Кроссплатформенные
 
-ASP.NET Core между различными платформами и может работать на ОС Linux и MacOS, а также Windows. Это открывает множество новых возможностей для разработки и развертывания приложений, созданных с помощью ASP.NET Core. Контейнеры docker, которые обычно выполняются Linux в настоящее время можно размещать приложения ASP.NET Core, позволяет воспользоваться преимуществами [контейнеры и микрослужбами](../microservices-architecture).
+ASP.NET Core между различными платформами и может работать на ОС Linux и MacOS, а также Windows. Это открывает множество новых возможностей для разработки и развертывания приложений, созданных с помощью ASP.NET Core. Контейнеры docker, которые обычно выполняются Linux в настоящее время можно размещать приложения ASP.NET Core, позволяет воспользоваться преимуществами [контейнеры и микрослужбами](../microservices-architecture/index.md).
 
 ## <a name="modular-and-loosely-coupled"></a>Модульная и слабо связанных
 
@@ -71,11 +74,11 @@ ASP.NET Core также полностью поддерживает внедре
 
 > ### <a name="references--modern-web-applications"></a>Ссылки — современных веб-приложений
 > - **Введение в ASP.NET Core**  
-> <https://docs.Microsoft.com/ASPNET/Core/>
+> <https://docs.microsoft.com/aspnet/core/>
 > - **Шесть ключ преимущества из ASP.NET Core которых позволяют различать и лучше**  
-> <https://Blog.trigent.com/Six-Key-Benefits-of-ASP-NET-Core-1-0-which-Make-IT-different-Better/>
+> <https://blog.trigent.com/six-key-benefits-of-asp-net-core-1-0-which-make-it-different-better/>
 > - **Тестирование в ASP.NET Core**  
-> <https://docs.Microsoft.com/ASPNET/Core/Testing/>
+> <https://docs.microsoft.com/aspnet/core/testing/>
 
 >[!div class="step-by-step"]
 [Предыдущие] (index.md) [Далее] (choose-between-traditional-web-and-single-page-apps.md)

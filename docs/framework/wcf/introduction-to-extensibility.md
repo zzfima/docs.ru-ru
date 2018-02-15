@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,16 +14,17 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f3f045fd35ef57be51c10d7948275899c1ae4f01
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3e16ed674c87bdb1418257a30f7f79b970127b06
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="introduction-to-extensibility"></a>Введение в расширяемость
 Модель приложений [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] предусматривает удовлетворение большей части связанных с обменом данных потребностей любого распределенного приложения. Однако всегда существуют сценарии, которые модель приложений по умолчанию и предоставленные системой реализации не поддерживают. Модель расширяемости [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] предназначена для поддержки пользовательских сценариев и позволяет изменять поведение системы на всех уровнях, вплоть до замены модели приложений целиком. В этом разделе кратко рассматриваются различные области расширения и даются ссылки на дополнительные сведения о каждой из них.  
@@ -41,27 +43,27 @@ ms.lasthandoff: 12/22/2017
   
  Сообщения приложения содержат данные, предназначенные для операции службы или клиента, созданной разработчиком или его заказчиком. Эти сообщения доступны системе расширения уровня приложения в виде сообщений или в виде объектов, в зависимости от конкретных потребностей.  
   
- Все сообщения проходят через систему каналов; только сообщения приложения передаются из системы каналов в приложение. Для создания новой функциональности уровня канала необходимо расширить систему каналов. Для создания новой функциональности уровня приложения необходимо расширить среду выполнения службы или клиента (соответственно диспетчеры и фабрики каналов). [!INCLUDE[crabout](../../../includes/crabout-md.md)]расширение среды выполнения приложения в разделе [расширение ServiceHost и уровень модели службы](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Все сообщения проходят через систему каналов; только сообщения приложения передаются из системы каналов в приложение. Для создания новой функциональности уровня канала необходимо расширить систему каналов. Для создания новой функциональности уровня приложения необходимо расширить среду выполнения службы или клиента (соответственно диспетчеры и фабрики каналов). [!INCLUDE[crabout](../../../includes/crabout-md.md)] расширение среды выполнения приложения в разделе [расширение ServiceHost и уровень модели службы](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
 #### <a name="extending-security"></a>Расширение безопасности  
- Для построения пользовательских механизмов безопасности, таких как маркеры и учетные данные, необходимо расширить систему безопасности. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Расширение безопасности](../../../docs/framework/wcf/extending/extending-security.md).  
+ Для построения пользовательских механизмов безопасности, таких как маркеры и учетные данные, необходимо расширить систему безопасности. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Расширение безопасности](../../../docs/framework/wcf/extending/extending-security.md).  
   
 #### <a name="extending-metadata"></a>Расширение системы метаданных  
- Чтобы предоставлять метаданные способом, отличным от предусмотренного по умолчанию, необходимо расширить систему метаданных. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Расширение системы метаданных](../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
+ Чтобы предоставлять метаданные способом, отличным от предусмотренного по умолчанию, необходимо расширить систему метаданных. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Расширение системы метаданных](../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
 #### <a name="extending-serialization"></a>Расширение системы сериализации  
- Для построения пользовательских кодировщиков, создания суррогатов данных или выполнения какой-либо иной обработки, подразумевающей настройку передаваемых данных, необходимо расширить систему сериализации. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Расширение кодировщиков и сериализаторов](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md).  
+ Для построения пользовательских кодировщиков, создания суррогатов данных или выполнения какой-либо иной обработки, подразумевающей настройку передаваемых данных, необходимо расширить систему сериализации. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Расширение кодировщиков и сериализаторов](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md).  
   
 #### <a name="extending-bindings"></a>Расширение привязок  
- Для связывания каналов транспорта или протокола с уровнем приложения необходимо расширить систему привязок. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Расширение привязок](../../../docs/framework/wcf/extending/extending-bindings.md).  
+ Для связывания каналов транспорта или протокола с уровнем приложения необходимо расширить систему привязок. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Расширение привязок](../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 ### <a name="extending-the-channel-system"></a>Расширение системы каналов  
  Для создания каналов, которые поддерживают пользовательский транспорт или функциональные возможности протокола, в разделе [расширение уровня каналов](../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
   
 ### <a name="extending-the-service-hosting-system"></a>Расширение системы размещения службы  
- Для изменения модели приложений в масштабе всей службы необходимо расширить класс <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Расширение ServiceHost и уровень модели службы](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Для изменения модели приложений в масштабе всей службы необходимо расширить класс <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Расширение ServiceHost и уровень модели службы](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
- Для изменения связи между доменом приложения размещения и узлом службы необходимо расширить класс <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Расширение размещения с использованием ServiceHostFactory](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md).  
+ Для изменения связи между доменом приложения размещения и узлом службы необходимо расширить класс <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Расширение размещения с использованием ServiceHostFactory](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md).  
   
 ## <a name="see-also"></a>См. также  
- [Расширение WCF](../../../docs/framework/wcf/extending/extending-wcf.md)
+ [Расширение WCF](../../../docs/framework/wcf/extending/index.md)

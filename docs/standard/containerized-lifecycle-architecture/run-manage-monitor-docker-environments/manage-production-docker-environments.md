@@ -1,15 +1,18 @@
 ---
 title: "Управление Docker рабочих сред"
-description: "Жизненный цикл приложений контейнерного Docker с помощью платформы Майкрософт и средств"
+description: "Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт"
 keywords: "Docker, микрослужбы, ASP.NET, контейнер"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 5686dcb0932d4a8580fd5ad3daf9e3f5cf52fff8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c962543004c88b0a6413cc22d8bdddf954af66f8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="manage-production-docker-environments"></a>Управление Docker рабочих сред
 
@@ -26,7 +29,7 @@ ms.lasthandoff: 11/21/2017
 Средства управления Docker таблица 6-1.
 
 
-| Средства управления      | Описание           | Связанные orchestrators |
+| Средства управления      | Описание:           | Связанные orchestrators |
 |-----------------------|-----------------------|-----------------------|
 | Контейнер службы\(управления пользовательского интерфейса на портале Azure) | [Контейнер службы](https://azure.microsoft.com/en-us/services/container-service/) предоставляет удобно получать способ работы [развернуть кластер контейнера в Azure](https://docs.microsoft.com/azure/container-service/dcos-swarm/container-service-deployment) основании популярных orchestrators как Mesosphere DC/OS, Kubernetes и помощью Docker Swarm. <br /><br /> Контейнер службы оптимизирует конфигурацию этих платформ. Необходимо выбрать размер, количество узлов, а также инструменты orchestrator и контейнер службы обрабатывает все остальное. | Mesosphere DC/OS <br /><br /> Kubernetes <br /><br /> Docker группу мелких объектов |
 | Docker универсальной плоскости управления\(локально или в облаке) | [Docker универсальной плоскости управления](https://docs.docker.com/v1.11/ucp/overview/) — решение управления кластера корпоративного уровня с Docker. Он позволяет управлять весь кластер из одного места. <br /><br /> Docker универсальной плоскости управления включен в состав коммерческого продукт с именем Docker центра обработки данных, который предоставляет помощью Docker Swarm, универсальной плоскости управления Docker и доверенный реестр Docker. <br /><br /> Docker центра обработки данных может быть установленный в локальной или подготовить из общедоступного облака, таких как Azure. | Помощью docker Swarm\(поддерживается службой контейнера) |

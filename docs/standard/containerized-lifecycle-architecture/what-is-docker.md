@@ -1,15 +1,18 @@
 ---
 title: "Что такое Docker?"
-description: "Жизненный цикл приложений контейнерного Docker с помощью платформы Майкрософт и средств"
+description: "Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт"
 keywords: "Docker, микрослужбы, ASP.NET, контейнер"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 7b429f84f7714454d49be1cfa4f450d99fc47f66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c75b2fa87e5aad93693c76c3bbd135044b36525f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="what-is-docker"></a>Что такое Docker?
 
@@ -25,13 +28,13 @@ ms.lasthandoff: 11/21/2017
 
 Для размещения контейнеры в средах разработки и предоставляют средства для разработчиков дополнительных, поставляется Docker [Docker Community Edition (CE)](https://www.docker.com/community-edition) для Windows или macOS. Эти продукты установите необходимые виртуальной Машины (узел Docker) для размещения контейнеров. Docker делает доступными [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition), который предназначен для разработки корпоративных приложений и используется в ИТ-отделов, которые занимаются созданием, поставляемых и запуска крупных корпоративных приложений в производственной среде.
 
-Для запуска [контейнеры Windows](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview), существует два типа сред:
+Для запуска [контейнеры Windows](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview), существует два типа сред:
 
 -   **Контейнер Windows Server** эта среда выполнения обеспечивает изоляцию приложений благодаря изоляции процессов и пространств имен. Контейнер Windows Server использует ядро с узлом контейнера и всеми остальными контейнерами на узле.
 
 -   **Контейнер Hyper-V** это расширяет возможности изоляции по контейнеры Windows Server, каждый контейнер запускается в оптимизированную виртуальную Машину. В этой конфигурации ядро узла контейнера не используется совместно с контейнерами Hyper-V, обеспечивая более высокую изоляцию.
 
-Образы для этих контейнеров создаются таким же образом и одно и то же. Разница заключается в том, как контейнер создается из образа — запуск контейнера Hyper-V требует дополнительного параметра. Дополнительные сведения см. в разделе [контейнеры Hyper-V](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview).
+Образы для этих контейнеров создаются таким же образом и одно и то же. Разница заключается в том, как контейнер создается из образа — запуск контейнера Hyper-V требует дополнительного параметра. Дополнительные сведения см. в разделе [контейнеры Hyper-V](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview).
 
 ## <a name="comparing-docker-containers-with-vms"></a>Сравнение контейнеров Docker с виртуальными машинами
 

@@ -1,15 +1,18 @@
 ---
 title: "Проектирование приложений Docker"
-description: "Жизненный цикл приложений контейнерного Docker с помощью платформы Майкрософт и средств"
+description: "Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт"
 keywords: "Docker, микрослужбы, ASP.NET, контейнер"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: db8376abf95aab51fad23f4b351cb772351117ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: aeddd3a4b7ebd3c917fba46e048fbab5a77dda19
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="design-docker-applications"></a>Проектирование приложений Docker
 

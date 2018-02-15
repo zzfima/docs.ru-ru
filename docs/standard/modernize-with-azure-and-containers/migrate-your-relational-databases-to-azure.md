@@ -4,11 +4,14 @@ description: "Модернизировать существующие прило
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 2cd52bff0f4e812b3e701ff61eeb4526b98ec6fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 221d8c2b837fb738425e26f3af4da895e4987212
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Перенести реляционной базы данных azure
 
@@ -107,23 +110,23 @@ ms.lasthandoff: 11/21/2017
 
 -   **Выберите облако параметр SQL Server: база данных SQL Azure (PaaS) или SQL Server на виртуальной Машине Azure (IaaS)**
 
-    [https://docs.Microsoft.com/Azure/SQL-Database/SQL-Database-PaaS-VS-SQL-Server-IaaS](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
+    [https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
 
 -   **Получить в облаке быстрее при использовании Azure DB управляемого экземпляра SQL Server и службу миграции базы данных**
 
-    [https://Channel9.MSDN.com/Events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
+    [https://channel9.msdn.com/Events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
 
 -   **Миграция базы данных SQL Server к базе данных SQL в облаке**
 
-    [https://docs.Microsoft.com/Azure/SQL-Database/SQL-Database-Cloud-Migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
+    [https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
 
--   **База данных Azure SQL**
+-   **База данных SQL Azure**
 
-    [https://Azure.Microsoft.com/Services/SQL-Database/?v=16.50](https://azure.microsoft.com/services/sql-database/?v=16.50)
+    [https://azure.microsoft.com/services/sql-database/?v=16.50](https://azure.microsoft.com/services/sql-database/?v=16.50)
 
 -   **SQL Server на виртуальных машинах**
 
-    [https://Azure.Microsoft.com/Services/Virtual-Machines/SQL-Server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
+    [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 
 >[!div class="step-by-step"]
 [Назад](lift-and-shift-existing-apps-azure-iaas.md)

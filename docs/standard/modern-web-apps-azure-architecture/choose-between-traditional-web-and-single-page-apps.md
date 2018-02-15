@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 5bae77fc4e0df9d0bc7fecfad25adfcee2419084
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: eb830ede1b644700a80f0e9fac2f3608deb88276
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Выбор между традиционными веб-приложениями и приложениями на одной странице (SPAs)
 
 > «Атвуда по закону: любое приложение, которое может быть написан на JavaScript, в конечном итоге записывается на языке JavaScript.»  
-> _\-Джефф Атвуда_
+> _\- Джефф Атвуда_
 
 ## <a name="summary"></a>Сводка
 
@@ -75,7 +78,7 @@ SPAs может поддерживать форматированного фун
 > - **AngularJS**  
 > <https://angularjs.org/>
 > - **Сравнение 4 платформы популярных JavaScript**  
-> <https://www.developereconomics.com/Feature-comparison-of-4-popular-js-MV-Frameworks>
+> <https://www.developereconomics.com/feature-comparison-of-4-popular-js-mv-frameworks>
 
 **Приложение уже должен предоставлять интерфейс API для других клиентов (внутренняя или общедоступная)**
 
@@ -85,12 +88,12 @@ SPAs может поддерживать форматированного фун
 
 В следующей таблице принятия решений представлены основные факторы, которые следует учитывать при выборе между традиционной веб-приложения и SPA.
 
-  | **Коэффициент** | **Традиционные веб-приложения** | **Приложение на одной странице** |
+  | **Коэффициент** | **Традиционные веб-приложения** | **Одностраничное приложение** |
   |---|---|---|
-  | Необходимо выполнить команде Знакомство с JavaScript или TypeScript | **Минимальный** | **Обязательное** |
-  | Поддержка браузеров без сценариев | **Поддерживается** | **Не поддерживается** |
-  | Поведение минимального клиентского приложения | **Хорошо подходит** | **Избыточным** |
-  | Требования к мощные, сложные пользовательскому интерфейсу | **Ограниченные** | **Хорошо подходит** |
+  | Необходимо выполнить команде Знакомство с JavaScript или TypeScript | **Minimal** | **Обязательное** |
+  | Поддержка браузеров без сценариев | **Поддерживается** | Не поддерживается |
+  | Поведение минимального клиентского приложения | **Well-Suited** | **Overkill** |
+  | Требования к мощные, сложные пользовательскому интерфейсу | **Ограниченные** | **Well-Suited** |
 
 >[!div class="step-by-step"]
 [Предыдущие] (современный веб приложения characteristics.md) [Далее](architectural-principles.md)

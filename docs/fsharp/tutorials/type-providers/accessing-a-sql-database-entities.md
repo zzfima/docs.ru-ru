@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: dc82a932-5401-4d19-9fb3-92c50d8db514
-ms.openlocfilehash: 770d405921758eeb7e8d7ea98b95c29c99631475
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e0e78e06fa1129ba5eeb73bc36c14343c93d6927
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-accessing-a-sql-database-by-using-type-providers-and-entities"></a>Пошаговое руководство. Доступ к базе данных SQL с помощью поставщиков типов и сущностей
 
@@ -66,7 +66,7 @@ ms.lasthandoff: 10/18/2017
 3. Откройте контекстное меню для нового узла подключения и выберите **новый запрос**.
 <br />
 
-4. Откройте [Создание образца базы данных School](http://go.microsoft.com/fwlink/?LinkID=237278) в веб-сайте Майкрософт, а затем скопировать и вставить скрипт базы данных, создает студента базу данных в окно редактора.
+4. Откройте [Создание образца базы данных School](https://msdn.microsoft.com/library/bb399731(v=vs.100).aspx) в веб-сайте Майкрософт, а затем скопировать и вставить скрипт базы данных, создает базу данных School в окно редактора.
 <br />
 
 
@@ -235,19 +235,14 @@ deleteInstructor("Parker", "Darren")
 При использовании выражения запроса необходимо помнить, что такой запрос подвержен отложенным вычислениям. Поэтому база данных остается открытой для чтения при выполнении всех цепочек вычислений, например блоков лямбда-выражений после каждого выражения запроса. Любая операция базы данных, явно или неявно использующая транзакцию, должна произойти после завершения операций чтения.
 
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 Исследовать другие параметры запроса, просмотрев операторы запроса, доступные в [выражения запросов](../../language-reference/query-expressions.md), а также просмотреть [ADO.NET Entity Framework](https://msdn.microsoft.com/library/bb399572) чтобы понять, какие функции доступны при можно использовать этот поставщик типов.
 
 
 ## <a name="see-also"></a>См. также
-[Поставщики типов](index.md)
-
-[Поставщик типов SqlEntityConnection](https://msdn.microsoft.com/visualfsharpdocs/conceptual/sqlentityconnection-type-provider-%5bfsharp%5d)
-
-[Пошаговое руководство: Создание типов F # из файла схемы EDMX](generating-fsharp-types-from-edmx.md)
-
-[Платформа ADO.NET Entity Framework](https://msdn.microsoft.com/library/bb399572)
-
-[Общие сведения о файлах .edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
-
-[Генератор модели EDM &#40; EdmGen.exe &#41;](https://msdn.microsoft.com/library/bb387165)
+[Поставщики типов](index.md)  
+[Поставщик типов SqlEntityConnection](https://msdn.microsoft.com/visualfsharpdocs/conceptual/sqlentityconnection-type-provider-%5bfsharp%5d)  
+[Пошаговое руководство: Создание типов F # из файла схемы EDMX](generating-fsharp-types-from-edmx.md)  
+[ADO.NET Entity Framework](https://msdn.microsoft.com/library/bb399572)  
+[Общие сведения о файлах .edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+[Генератор модели EDM &#40; EdmGen.exe &#41;](https://msdn.microsoft.com/library/bb387165)  

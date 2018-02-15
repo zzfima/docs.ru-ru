@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 20524c8aa0e64fd40a1a4a6811063557f74074d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bdb215d64253fb7d22ae2c5648030336850006b5
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/29/2018
 ---
-#<a name="architectural-principles"></a>Архитектурные принципы
+# <a name="architectural-principles"></a>Архитектурные принципы
 
 > «При построители зданий программистов способом написал программы, а затем первый woodpecker, поставляемой вместе бы уничтожить цивилизации.»  
-> _\-Такого Weinberg_
+> _\- Такого Weinberg_
 
 ## <a name="summary"></a>Сводка
 
@@ -103,19 +106,19 @@ ms.lasthandoff: 11/21/2017
 Как минимум отдельные веб-приложений следует стремиться к быть собственный ограниченной контекст с их собственных хранилище сохраняемости для своей бизнес-модели, а не общий доступ к базе данных с другими приложениями. Взаимодействие между контекстами ограниченной происходит через программные интерфейсы, а не через общую базу данных, что позволяет бизнес-логики и события, чтобы занять поместите в ответ на изменения, выполняемые. Тесно связанный контексты карты с микрослужбами, в которой также в идеале реализуются как свои собственные отдельных ограниченной контекстов.
 
 > ### <a name="references--modern-web-applications"></a>Ссылки — современных веб-приложений
-> - **Разделение областей ответственности**  
+> - Разделение областей ответственности  
 > <http://deviq.com/separation-of-concerns/>
-> - **Инкапсуляция** <http://deviq.com/encapsulation/>
+> - **Encapsulation** <http://deviq.com/encapsulation/>
 > - **Принципом инверсии зависимостей**  
-> <http://deviq.com/dependency-Inversion-Principle/>
-> - **Принцип явные зависимости**  
-> <http://deviq.com/Explicit-DEPENDENCIES-Principle/>
+> <http://deviq.com/dependency-inversion-principle/>
+> - **Принцип явных зависимостей**  
+> <http://deviq.com/explicit-dependencies-principle/>
 > - **Не повторять самостоятельно**  
-> <http://deviq.com/Don-t-Repeat-yourself/>
-> - **Пропуск сохраняемости**  
-> <http://deviq.com/Persistence-Ignorance/>
+> <http://deviq.com/don-t-repeat-yourself/>
+> - Пропуск сохраняемости  
+> <http://deviq.com/persistence-ignorance/>
 > - **Предельная контекста**  
-> <https://martinfowler.com/bliki/BoundedContext.HTML>
+> <https://martinfowler.com/bliki/BoundedContext.html>
 
 > [!div class="step-by-step"]
 [Предыдущие] (choose-between-traditional-web-and-single-page-apps.md) [Далее] (общий веб приложения architectures.md)

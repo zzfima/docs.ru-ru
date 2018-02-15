@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: bcb8f7bbfa83db9c86cd1278a89750b9f02061d9
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 648e0a4cdd388cf4a322f0fc049d5dcfca53d54b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Работа с данными в приложениях ASP.NET Core
 
@@ -199,11 +202,11 @@ await strategy.ExecuteAsync(async () =>
 
 > ### <a name="references--entity-framework-core"></a>Ссылки — Entity Framework Core
 > - **EF базовые документы**  
-> <https://docs.Microsoft.com/EF/>
+> <https://docs.microsoft.com/ef/>
 > - **EF ядром: Связанные данные**  
-> <https://docs.Microsoft.com/EF/Core/querying/RELATED-Data>
+> <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **Избегайте отложенную загрузку сущностей в приложениях ASPNET**  
-> <http://ardalis.com/avoid-Lazy-Loading-Entities-in-ASP-NET-Applications>
+> <http://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>EF Core или микро ORM?
 
@@ -283,7 +286,7 @@ Azure DocumentDB является полностью управляемая сл
 **Ссылки — DocumentDB**
 
 -   DocumentDB Introduction\
-    <https://docs.Microsoft.com/Azure/documentdb/documentdb-Introduction>
+    <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
 
 ## <a name="other-persistence-options"></a>Другие параметры сохраняемости
 
@@ -300,7 +303,7 @@ Azure DocumentDB является полностью управляемая сл
 **Ссылки — хранилища Azure**
 
 -   Introduction\ хранилища Azure
-    <https://docs.Microsoft.com/Azure/Storage/Storage-Introduction>
+    <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>Кэширование
 

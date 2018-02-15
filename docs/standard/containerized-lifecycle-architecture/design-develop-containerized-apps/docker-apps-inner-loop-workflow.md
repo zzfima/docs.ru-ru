@@ -1,19 +1,22 @@
 ---
 title: "Внутренний цикл разработки рабочего процесса для Docker приложений"
-description: "Жизненный цикл приложений контейнерного Docker с помощью платформы Майкрософт и средств"
+description: "Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт"
 keywords: "Docker, микрослужбы, ASP.NET, контейнер"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 30c10b2407ab643e04eb44c00ddf4a89d369a025
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3605a6cd53db695de3af015a777e3c1a0e92af58
+ms.sourcegitcommit: 672c9cd122c13c9813f57f022c86ebdf6dd69b4f
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Внутренний цикл разработки рабочего процесса для Docker приложений
 
-Перед тем как запускать внешнего цикла рабочего процесса, охвата всего DevOps цикл, начинаются все процессы на компьютере каждый разработчик, кодирования само приложение, используя его основной языков или платформ и локального тестирования (рис. 4-14). Но в любом случае имеется очень важно в том случае, независимо от того, какой язык, framework или платформ выберите. В этом конкретного рабочего процесса вы всегда разработки и тестирования контейнеры Docker, а на локальном компьютере.
+Перед тем как запускать внешнего цикла рабочего процесса, охвата всего DevOps цикл, начинаются все процессы на компьютере каждый разработчик, кодирование само приложение, с помощью предпочитаемых языков или платформ и локального тестирования (рис. 4-14). Но в любом случае имеется очень важно в том случае, независимо от того, какой язык, framework или платформ выберите. В этом конкретного рабочего процесса вы всегда разработки и тестирования контейнеры Docker, а на локальном компьютере.
 
 ![](./media/image18.png)
 
@@ -255,7 +258,7 @@ cesardl/netcore-webapi-microservice-docker:first
 
 Также можно отлаживать .NET Core контейнеры Docker при использовании Visual Studio, как описано в следующем разделе.
 
-**Дополнительные сведения:** Дополнительные сведения об отладке контейнеры Node.js Docker, перейдите к <https://blog.docker.com/2016/07/live-debugging-docker/> и [https://blogs.msdn.microsoft.com/ \ пользователя\_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
+**Дополнительные сведения:** Дополнительные сведения об отладке контейнеры Node.js Docker, перейдите к <https://blog.docker.com/2016/07/live-debugging-docker/> и [https://blogs.msdn.microsoft.com/ \ пользователь\_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
 
 
 >[!div class="step-by-step"]

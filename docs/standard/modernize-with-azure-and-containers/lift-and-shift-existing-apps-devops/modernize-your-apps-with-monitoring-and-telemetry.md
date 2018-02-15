@@ -4,11 +4,14 @@ description: "Архитектура Микрослужбами .NET для пр
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 03a6f2be9dc6c020cfe93a2597d1288943e527c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1535951eb648deab17cf8c2fe64db6ddf7df4cb5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Модернизировать приложений с помощью мониторинга и данные телеметрии
 
@@ -36,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 
 -   Docker группу мелких объектов
 
--   КОНТРОЛЛЕР ДОМЕНА/OS
+-   DC/OS
 
 -   Kubernetes
 
@@ -68,31 +71,31 @@ ms.lasthandoff: 11/21/2017
 
 -   **Обзор наблюдения за Microsoft Azure**
 
-[https://docs.Microsoft.com/Azure/Monitoring-and-Diagnostics/Monitoring-Overview](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)
+[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)
 
 -   **Что такое Application Insights?**
 
-[https://docs.Microsoft.com/Azure/Application-Insights/App-Insights-Overview](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
+[https://docs.microsoft.com/azure/application-insights/app-insights-overview](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
 
 -   **Новые возможности анализа журналов**
 
-[https://docs.Microsoft.com/Azure/log-Analytics/log-Analytics-Overview](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)
+[https://docs.microsoft.com/azure/log-analytics/log-analytics-overview](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)
 
 -   **Решение мониторинг контейнера в службе анализа журналов**
 
-[https://docs.Microsoft.com/Azure/log-Analytics/log-Analytics-Containers](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)
+[https://docs.microsoft.com/azure/log-analytics/log-analytics-containers](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)
 
 -   **Общие сведения о мониторе Azure**
 
-[https://docs.Microsoft.com/Azure/Monitoring-and-Diagnostics/Monitoring-Overview-Azure-Monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)
+[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)
 
 -   **Новые возможности Operations Management Suite (OMS)**
 
-[https://docs.Microsoft.com/Azure/Operations-Management-Suite/Operations-Management-Suite-Overview](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview)
+[https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview)
 
 -   **Наблюдение за контейнеры Windows Server в Service Fabric с OMS**
 
-[https://docs.Microsoft.com/Azure/Service-Fabric/Service-Fabric-Diagnostics-Containers-WindowsServer](https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver)
+[https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver](https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver)
 
 >[!div class="step-by-step"]
 [Назад](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

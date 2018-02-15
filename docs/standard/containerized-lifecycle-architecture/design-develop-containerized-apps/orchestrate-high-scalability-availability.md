@@ -1,15 +1,18 @@
 ---
 title: "Оркестрация микрослужбами и multicontainer приложений высокий уровень масштабируемости и доступности"
-description: "Жизненный цикл приложений контейнерного Docker с помощью платформы Майкрософт и средств"
+description: "Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт"
 keywords: "Docker, микрослужбы, ASP.NET, контейнер"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
-ms.openlocfilehash: ea492de1c4709eb7bafe65fcf288482da9855240
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4345fe8f36ecc32a7dd8e72fce5338bff308ffdf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>Оркестрация микрослужбами и multicontainer приложений высокий уровень масштабируемости и доступности
 
@@ -37,12 +40,12 @@ ms.lasthandoff: 11/23/2017
 
 Таблица 4-1: платформы программное обеспечение для кластеризации контейнера, управление и планирование
 
-| Платформа | Описание |
+| Platform | Описание: |
 |---|---|
-| Docker группу мелких объектов<br/> ![http://rancher.com/WP-Content/Themes/rancher-2016/Assets/Images/swarm.PNG?v=2016-07-10-AM](./media/image7.png) | Docker группу мелких объектов дает возможность кластера и запланировать контейнеры Docker. С помощью группу мелких объектов, можно включить пул узлах Docker в один, виртуальный узел Docker. Клиенты могут выполнять запросы API для группу мелких объектов, таким же образом, как и на узлах, это означает, что группу мелких объектов позволяет масштабировать приложения с несколькими узлами. <br /><br /> Docker группу мелких объектов — это продукт из Docker компании. <br /><br /> Docker v1.12 или более поздней версии может выполнять собственный и встроенные скапливаются режим. |
-| Mesosphere DC/OS<br/>![https://mesosphere.com/WP-Content/uploads/2016/04/Logo-Horizontal-styled.PNG](./media/image8.png) |  Mesosphere DC/OS предприятия (с учетом Apache Mesos) — это платформа готов для выполнения контейнеров и распределенных приложений. <br /><br /> Контроллер домена/OS осуществляется посредством абстрагирования коллекцию ресурсов, доступных в кластере и предоставление доступа к этим ресурсам компоненты, созданные на основе. Как планировщик, интегрированные с контроллера домена/OS обычно используется Marathon. |
-| Google Kubernetes<br />![https://PBS.twimg.com/Media/BT\_pEfqCAAAiVyz.png](./media/image9.png) | Kubernetes — это продукт с открытым исходным кодом, предоставляет функциональные возможности, в диапазоне от инфраструктуры кластера и контейнера, по возможности, управляя операциями. С его помощью можно автоматизировать развертывание, масштабирование и операций контейнеров приложения ко всем кластерам узлов. <br /><br /> Kubernetes предоставляет ориентированные на контейнер инфраструктуру, которая группирует контейнеров приложений в логические устройства для упрощения управления и обнаружения. |
-| Azure Service Fabric<br />![https://Azure.Microsoft.com/svghandler/Service-Fabric?Width=600&Height=315](./media/image10.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) — это платформа микрослужбами Microsoft для создания приложений. Это [orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) из службы и создает кластеры компьютеров. По умолчанию Service Fabric развертывает и активирует службы как процессы, но Service Fabric можно развернуть службы в образы контейнеров Docker. Более важно, можно комбинировать службами в процессах со службами в контейнерах в одном приложении. <br /><br /> По состоянию на май 2017 г. компонент Service Fabric, поддерживающего развертывание службы как контейнеры Docker находится в состоянии предварительной версии. <br /><br /> Можно разработать служб Service Fabric различными способами, с помощью [Service Fabric модели программирования](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) до развертывания [гостевой исполняемые файлы](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-existing-app) и контейнеры. Service Fabric поддерживает модели конкретные приложения как [служб с отслеживанием состояния](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) и [службы Reliable Actor](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
+| Docker группу мелких объектов<br/> ![http://rancher.com/wp-content/themes/rancher-2016/assets/images/swarm.png?v=2016-07-10-am](./media/image7.png) | Docker группу мелких объектов дает возможность кластера и запланировать контейнеры Docker. С помощью группу мелких объектов, можно включить пул узлах Docker в один, виртуальный узел Docker. Клиенты могут выполнять запросы API для группу мелких объектов, таким же образом, как и на узлах, это означает, что группу мелких объектов позволяет масштабировать приложения с несколькими узлами. <br /><br /> Docker группу мелких объектов — это продукт из Docker компании. <br /><br /> Docker v1.12 или более поздней версии может выполнять собственный и встроенные скапливаются режим. |
+| Mesosphere DC/OS<br/>![https://mesosphere.com/wp-content/uploads/2016/04/logo-horizontal-styled.png](./media/image8.png) |  Mesosphere DC/OS предприятия (с учетом Apache Mesos) — это платформа готов для выполнения контейнеров и распределенных приложений. <br /><br /> Контроллер домена/OS осуществляется посредством абстрагирования коллекцию ресурсов, доступных в кластере и предоставление доступа к этим ресурсам компоненты, созданные на основе. Как планировщик, интегрированные с контроллера домена/OS обычно используется Marathon. |
+| Google Kubernetes<br />![https://pbs.twimg.com/media/Bt\_pEfqCAAAiVyz.png](./media/image9.png) | Kubernetes — это продукт с открытым исходным кодом, предоставляет функциональные возможности, в диапазоне от инфраструктуры кластера и контейнера, по возможности, управляя операциями. С его помощью можно автоматизировать развертывание, масштабирование и операций контейнеров приложения ко всем кластерам узлов. <br /><br /> Kubernetes предоставляет ориентированные на контейнер инфраструктуру, которая группирует контейнеров приложений в логические устройства для упрощения управления и обнаружения. |
+| Azure Service Fabric<br />![https://azure.microsoft.com/svghandler/service-fabric?width=600&height=315](./media/image10.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) — это платформа микрослужбами Microsoft для создания приложений. Это [orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) из службы и создает кластеры компьютеров. По умолчанию Service Fabric развертывает и активирует службы как процессы, но Service Fabric можно развернуть службы в образы контейнеров Docker. Более важно, можно комбинировать службами в процессах со службами в контейнерах в одном приложении. <br /><br /> По состоянию на май 2017 г. компонент Service Fabric, поддерживающего развертывание службы как контейнеры Docker находится в состоянии предварительной версии. <br /><br /> Можно разработать служб Service Fabric различными способами, с помощью [Service Fabric модели программирования](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) до развертывания [гостевой исполняемые файлы](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-existing-app) и контейнеры. Service Fabric поддерживает модели конкретные приложения как [служб с отслеживанием состояния](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) и [службы Reliable Actor](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
 
 ## <a name="using-container-based-orchestrators-in-azure"></a>С помощью orchestrators на основе контейнера в Azure
 
@@ -89,19 +92,19 @@ ms.lasthandoff: 11/23/2017
 Ниже перечислены расположения, где можно найти дополнительные сведения:
 
 -   Введение в контейнер Docker размещения решений с помощью контейнера службы.  
-    https://docs.Microsoft.com/Azure/Container-Service/kubernetes/Container-Service-Intro-kubernetes>
+    https://docs.microsoft.com/azure/container-service/kubernetes/container-service-intro-kubernetes>
 
 -   Общие сведения о docker группу мелких объектов:  
-    <https://docs.docker.com/swarm/Overview/>
+    <https://docs.docker.com/swarm/overview/>
 
 -   Общие сведения о режиме группу мелких объектов:  
-    <https://docs.docker.com/Engine/swarm/>
+    <https://docs.docker.com/engine/swarm/>
 
 -   Общие сведения о mesosphere DC/OS:    
-    <https://docs.mesosphere.COM/1.7/Overview/>
+    <https://docs.mesosphere.com/1.7/overview/>
 
 -   Kubernetes (официальный сайт):  
-    <http://kubernetes.IO/>
+    <http://kubernetes.io/>
 
 ## <a name="using-service-fabric"></a>С помощью Service Fabric
 

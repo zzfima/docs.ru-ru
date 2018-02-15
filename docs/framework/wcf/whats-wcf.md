@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +14,20 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5ae43f65c104376ea1e7cfc036a57c728c90ac12
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7aecddc617afcaf197aa212e8eea7e1342c029fa
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Что такое Windows Communication Foundation
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] представляет платформу для построения сервисноориентированных приложений. С помощью [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]можно отправлять данные в виде асинхронных сообщений от одной конечной точки службы к другой. Конечная точка службы может входить в постоянно доступную службу, размещаемую в IIS, или представлять службу, размещаемую в приложении. Конечная точка может быть клиентом службы, которая запрашивает данные от конечной точки службы. Сообщения могут представлять одиночный символ или одно слово, отправляемое в формате XML, или иметь вид сложного потока двоичных данных. Далее представлено несколько образцов сценариев.  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] — Это платформа для построения сервисноориентированных приложений. С помощью [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]можно отправлять данные в виде асинхронных сообщений от одной конечной точки службы к другой. Конечная точка службы может входить в постоянно доступную службу, размещаемую в IIS, или представлять службу, размещаемую в приложении. Конечная точка может быть клиентом службы, которая запрашивает данные от конечной точки службы. Сообщения могут представлять одиночный символ или одно слово, отправляемое в формате XML, или иметь вид сложного потока двоичных данных. Далее представлено несколько образцов сценариев.  
   
 -   Защищенная служба для обработки бизнес-транзакций.  
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 01/19/2018
  Такие приложения можно было создавать и до появления [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], однако [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] существенно упрощает разработку конечных точек. Таким образом, платформа [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] реализует управляемый подход к созданию веб-служб и клиентов веб-служб.  
   
 ## <a name="features-of-wcf"></a>Возможности WCF  
- В[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] входит следующий набор возможностей. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF Feature Details](../../../docs/framework/wcf/feature-details/index.md).  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] включает следующий набор функций. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF Feature Details](../../../docs/framework/wcf/feature-details/index.md).  
   
 -   **Сервис-ориентированность**  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 01/19/2018
   
 -   **Взаимодействие**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] реализует современные отраслевые стандарты для совместимости с веб-службой. [!INCLUDE[crabout](../../../includes/crabout-md.md)] поддерживаемых стандартах см. в разделе [Interoperability and Integration](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] реализует современные отраслевые стандарты для совместимости веб-службой. [!INCLUDE[crabout](../../../includes/crabout-md.md)] поддерживаемых стандартах см. в разделе [Interoperability and Integration](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).  
   
 -   **Несколько шаблонов сообщений**  
   
@@ -70,11 +72,11 @@ ms.lasthandoff: 01/19/2018
   
 -   **Несколько транспортов и кодировок**  
   
-     Сообщения могут отправляться по любому из нескольких встроенных транспортных протоколов в различных кодировках. Самым распространенным вариантом является передача сообщений SOAP в текстовой кодировке по протоколу HTTP для использования в Интернете. Кроме того, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] позволяет отправлять сообщения по протоколу TCP, через именованные каналы или MSMQ. Сообщения можно кодировать в виде текста или использовать оптимизированный двоичный формат.  Двоичные данные можно эффективно отправлять с использованием стандарта MTOM. Если ни один из предоставляемых транспортов и кодировок не подходит к текущим требованиям, вы можете создать собственный пользовательский транспорт или кодировку. [!INCLUDE[crabout](../../../includes/crabout-md.md)]транспортах и кодировках, поддерживаемых [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] разделе [транспортов](../../../docs/framework/wcf/feature-details/transports.md).  
+     Сообщения могут отправляться по любому из нескольких встроенных транспортных протоколов в различных кодировках. Самым распространенным вариантом является передача сообщений SOAP в текстовой кодировке по протоколу HTTP для использования в Интернете. Кроме того, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] позволяет отправлять сообщения по протоколу TCP, через именованные каналы или MSMQ. Сообщения можно кодировать в виде текста или использовать оптимизированный двоичный формат.  Двоичные данные можно эффективно отправлять с использованием стандарта MTOM. Если ни один из предоставляемых транспортов и кодировок не подходит к текущим требованиям, вы можете создать собственный пользовательский транспорт или кодировку. [!INCLUDE[crabout](../../../includes/crabout-md.md)] транспортах и кодировках, поддерживаемых [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] разделе [транспортов](../../../docs/framework/wcf/feature-details/transports.md).  
   
 -   **Надежные сообщения и сообщения в очереди**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] поддерживает надежный обмен сообщениями с использованием надежных сеансов, реализованных на базе схемы WS-Reliable, и обмен с использованием MSMQ. [!INCLUDE[crabout](../../../includes/crabout-md.md)] надежной поддержке обмена сообщениями в очереди в [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] см. в разделе [Queues and Reliable Sessions](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] поддерживает надежный обмен сообщениями с использованием надежных сеансов, которые реализованы через WS-Reliable Messaging и с использованием MSMQ. [!INCLUDE[crabout](../../../includes/crabout-md.md)] надежной поддержке обмена сообщениями в очереди в [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] см. в разделе [Queues and Reliable Sessions](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).  
   
 -   **Устойчивые сообщения**  
   
@@ -90,10 +92,10 @@ ms.lasthandoff: 01/19/2018
   
 -   **Расширение среды**  
   
-     Архитектура [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] предусматривает ряд точек для расширения. Если требуются дополнительные возможности, поддерживаются точки входа, посредством которых можно настроить поведение службы. [!INCLUDE[crabout](../../../includes/crabout-md.md)] доступных точках расширяемости см. в разделе [Extending WCF](../../../docs/framework/wcf/extending/extending-wcf.md).  
+     Архитектура [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] предусматривает ряд точек для расширения. Если требуются дополнительные возможности, поддерживаются точки входа, посредством которых можно настроить поведение службы. [!INCLUDE[crabout](../../../includes/crabout-md.md)] доступных точках расширяемости см [расширение WCF](../../../docs/framework/wcf/extending/index.md).  
   
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>Интеграция WCF с другими технологиями Майкрософт  
- Платформа[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] обладает исключительной гибкостью. и поэтому [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] применяется в ряде других продуктов Майкрософт. Владение основами [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]дает непосредственное преимущество в случае использования любых таких продуктов.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] — Это гибкая платформа. и поэтому [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] применяется в ряде других продуктов Майкрософт. Владение основами [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]дает непосредственное преимущество в случае использования любых таких продуктов.  
   
  Первой технологией, используемой в сочетании с [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , была Windows Workflow Foundation (WF). Рабочие процессы упрощают разработку приложений путем инкапсуляции этапов в рабочем процессе, как «действия». В первой версии [!INCLUDE[wf2](../../../includes/wf2-md.md)]разработчик должен был создавать узел для рабочего процесса. Следующая версия [!INCLUDE[wf2](../../../includes/wf2-md.md)] была интегрирована с [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Такая интеграция позволяла легко размещать любой рабочий процесс в службе [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Для этого автоматически выбирался тип проекта WF/WCF в [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   

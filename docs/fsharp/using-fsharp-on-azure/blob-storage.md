@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c5b74a4f-dcd1-4849-930c-904b6c8a04e1
-ms.openlocfilehash: 92e26aff605d3bed89e388dd3616a2a9a3a96081
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9011bdceabd1b5e0541ecb94f3e812871688025b
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Начало работы с хранилищем больших двоичных объектов Azure с помощью F # #
 
@@ -111,10 +111,10 @@ ms.lasthandoff: 10/18/2017
 *photo1.jpg*
 *2015/architecture/description.txt*
 *2015/architecture/photo3.jpg*
-*2015 или Архитектура/photo4.jpg*
+*2015/architecture/photo4.jpg*
 *2016/architecture/photo5.jpg*
-*2016/architecture/photo6.jpg* 
- *2016/architecture/description.txt*
+*2016/architecture/photo6.jpg*
+*2016/architecture/description.txt*
 *2016/photo7.jpg*
 
 При вызове `ListBlobs` в контейнере (как в приведенном выше примере), возвращается иерархический список. Если он содержит оба `CloudBlobDirectory` и `CloudBlockBlob` объекты, представляющие каталоги и большие двоичные объекты в контейнере, соответственно, а затем полученный результат выглядит примерно так:
@@ -242,12 +242,13 @@ Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/
 
 ### <a name="blob-storage-reference"></a>Справочник по хранилища больших двоичных объектов
 
-- [Клиентская библиотека хранилища для Справочник по .NET](http://go.microsoft.com/fwlink/?LinkID=390731&clcid=0x409)
-- [Справочник по REST API](http://msdn.microsoft.com/library/azure/dd179355)
+- [API-интерфейсов хранилища Azure для .NET](/dotnet/api/overview/azure/storage)
+- [Справочник по API REST служб хранилища Azure](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)
 
 ### <a name="related-guides"></a>Связанные направляющие
 
 - [Приступая к работе с хранилищем BLOB-объектов Azure в C#](https://azure.microsoft.com/documentation/samples/storage-blob-dotnet-getting-started/)
-- [Перенесите данные с помощью программы командной строки AzCopy](/azure/storage/storage-use-azcopy)
-- [Настройка строк подключения](http://msdn.microsoft.com/library/azure/ee758697.aspx)
+- [Перенесите данные с помощью программы командной строки AzCopy в Windows](/azure/storage/common/storage-use-azcopy)
+- [Перенесите данные с помощью программы командной строки AzCopy в Linux](/azure/storage/common/storage-use-azcopy-linux)
+- [Настройка строки подключения хранилища Azure](/azure/storage/common/storage-configure-connection-string)
 - [Блог группы разработчиков хранилища Azure](http://blogs.msdn.com/b/windowsazurestorage/)

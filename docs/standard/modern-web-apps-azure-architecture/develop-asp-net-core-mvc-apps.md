@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 54e7ed6fff9ac709e411d0ac1e345c63fd753201
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c10bf66dd37f0d99c038db7f95999d84986152fa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Разработка приложений MVC ASP.NET Core
 
@@ -74,7 +77,7 @@ public class ProductsController : Controller
 > - **Привязки модели** https://docs.microsoft.com/aspnet/core/mvc/models/model-binding
 > - **Проверка модели**
 > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
-> - **Фильтры** https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
+> - **Filters** https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
 
 ## <a name="working-with-dependencies"></a>Работа с зависимостями
 
@@ -204,11 +207,11 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 ASP.NET Core MVC также используется соглашение для поиска представления. Его можно переопределить с помощью пользовательского соглашения, чтобы представления будет находиться в папках функции (с помощью имя функции, предоставляемые FeatureConvention выше). Можно узнать больше об этом подходе и загрузить рабочий образец из статьи MSDN [фрагментов функции для ASP.NET Core MVC](https://msdn.microsoft.com/magazine/mt763233.aspx).
 
-### <a name="cross-cutting-concerns"></a>Проблемы пересечения
+### <a name="cross-cutting-concerns"></a>Сквозная функциональность
 
 По мере роста приложения становится все более важными вынести решении общих задач, чтобы избежать дублирования и поддержания согласованности. Некоторые примеры перекрестными проблемы в приложениях ASP.NET Core, проверки подлинности, правила проверки модели, кэширование вывода и обработки ошибок, хотя и существуют многие другие. ASP.NET Core MVC [фильтры](https://docs.microsoft.com/aspnet/core/mvc/controllers/filters) позволяют выполнять код до или после определенных действий в конвейер обработки запросов. Например фильтр можно запустить до и после привязки модели, до и после действия, или перед и после результата действия. Также можно использовать фильтр авторизации для управления доступом к оставшуюся часть конвейера. Рисунки 7-2 показывает способ запроса выполнения потоков фильтры, если настроен.
 
-![Запрос обрабатывается через фильтры авторизации, фильтры ресурсов, привязки модели, фильтры действий, выполнение действия и преобразование результата действия, фильтры исключений, фильтры результатов и результат выполнения. На способ ожидания запрос только обрабатывается результат фильтры и фильтры ресурсов перед тем как стать ответ, отправляемый клиенту.](./media/image7-2.png)
+![Запрос обрабатывается посредством фильтров авторизации, фильтров ресурсов, привязки модели, фильтров действий, выполнения действия и преобразования результата действия, фильтров исключений, фильтров результатов и выполнения результатов. На обратном пути запрос обрабатывается только фильтрами результатов и фильтрами ресурсов, прежде чем стать ответом, отправляемым клиенту.](./media/image7-2.png)
 
 Выполнение запроса на рис. 7-2 через фильтры и конвейер обработки запросов.
 
@@ -279,13 +282,13 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 
 > ### <a name="references--structuring-applications"></a>Ссылки — структуризации приложений
 > - **Области**  
-> <https://docs.Microsoft.com/ASPNET/Core/MVC/Controllers/Areas>
+> <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN — функция срезов для основных компонентов ASP.NET MVC**
 >  <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **Фильтры**  
-> <https://docs.Microsoft.com/ASPNET/Core/MVC/Controllers/filters>
+> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN — фильтры MVC ASP.NET Core реального мира**  
-> <https://MSDN.Microsoft.com/magazine/mt767699.aspx>
+> <https://msdn.microsoft.com/magazine/mt767699.aspx>
 
 ## <a name="security"></a>Безопасность
 
@@ -385,15 +388,15 @@ public void ConfigureServices(IServiceCollection services)
 
 > ### <a name="references--security"></a>Ссылки — безопасности
 > - **Обзор документации о безопасности**  
-> https://docs.Microsoft.com/ASPNET/Core/Security/
+> https://docs.microsoft.com/aspnet/core/security/
 > - **Применение протокола SSL в приложении ASP.NET Core**  
-> <https://docs.Microsoft.com/ASPNET/Core/Security/enforcing-SSL>
+> <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
 > - **Общие сведения об Identity**  
-> <https://docs.Microsoft.com/ASPNET/Core/Security/Authentication/IDENTITY>
+> <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
 > - **Общие сведения об авторизации**  
-> <https://docs.Microsoft.com/ASPNET/Core/Security/Authorization/Introduction>
+> <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
 > - **Проверка подлинности и авторизация для приложений API в службе приложений Azure**  
-> <https://docs.Microsoft.com/Azure/App-Service-API/App-Service-API-Authentication>
+> <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
 
 ## <a name="client-communication"></a>Взаимодействие с клиентскими
 
@@ -452,9 +455,9 @@ public class Program
 
 > ### <a name="references--client-communication"></a>Ссылки — обмена данными с клиентами
 > - **ASP.NET Core SignalR**  
-> <https://github.com/ASPNET/SignalR>
+> <https://github.com/aspnet/SignalR>
 > - **Диспетчер WebSocket**  
-> https://github.com/radu-matei/WebSocket-Manager
+> https://github.com/radu-matei/websocket-manager
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>Домен Driven Design – следует применить ее?
 
@@ -502,7 +505,7 @@ DDD подразумевает вложений для моделировани�
 
 > ### <a name="references--domain-driven-design"></a>Ссылки — разработки на основе домена
 > - **DDD на английском (StackOverflow ответов)**  
-> <https://StackOverflow.com/questions/1222392/CAN-someone-Explain-Domain-Driven-Design-ddd-in-plain-English-Please/1222488#1222488>
+> <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
 
 ## <a name="deployment"></a>Развертывание
 
@@ -544,13 +547,13 @@ DDD подразумевает вложений для моделировани�
 
 > ### <a name="references--deployment"></a>Ссылки — развертывания
 > - **Размещение и общие сведения о развертывании**  
-> <https://docs.Microsoft.com/ASPNET/Core/Publishing/>
-> - **Когда следует использовать Kestrel с обратного прокси-сервера**  
-> <https://docs.Microsoft.com/ASPNET/Core/Fundamentals/Servers/kestrel#When-to-Use-kestrel-with-a-Reverse-Proxy>
+> <https://docs.microsoft.com/aspnet/core/publishing/>
+> - Когда следует использовать Kestrel с обратного прокси-сервера  
+> <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
 > - **Узел приложения ASP.NET Core в Docker**  
-> <https://docs.Microsoft.com/ASPNET/Core/Publishing/docker>
+> <https://docs.microsoft.com/aspnet/core/publishing/docker>
 > - **Знакомство с приложением шлюза приложения Azure**  
-> <https://docs.Microsoft.com/Azure/Application-Gateway/Application-Gateway-Introduction>
+> <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
 [Предыдущие] (Общие клиент стороны web-technologies.md) [Далее] (work-with-data-in-asp-net-core-apps.md)

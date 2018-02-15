@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 9e5d6cea-a98c-461e-a5cc-75f1d154eafd
-ms.openlocfilehash: bf833a96809768011f26df35332ab2372ced2aaf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e003f537c6f0f85b3b0ba932655ae2a54c980bc5
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-azure-table-storage-using-f"></a>Начало работы с хранилищем таблиц Azure, с помощью F # #
 
@@ -186,8 +186,8 @@ ms.lasthandoff: 10/18/2017
 
 Теперь, когда вы узнали основы хранилище таблиц, выполните эти ссылки на дополнительные сведения о более сложных задач хранилища.
 
-- [Клиентская библиотека хранилища для Справочник по .NET](http://go.microsoft.com/fwlink/?LinkID=390731&clcid=0x409)
+- [API-интерфейсов хранилища Azure для .NET](/dotnet/api/overview/azure/storage)
 - [Тип поставщика хранилища Azure](http://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Блог группы разработчиков хранилища Azure](http://blogs.msdn.com/b/windowsazurestorage/)
-- [Настройка строк подключения](http://msdn.microsoft.com/library/azure/ee758697.aspx)
+- [Настройка строки подключения хранилища Azure](/azure/storage/common/storage-configure-connection-string)
 - [Приступая к работе с хранилищем таблиц Azure в .NET](https://azure.microsoft.com/documentation/samples/storage-table-dotnet-getting-started/)

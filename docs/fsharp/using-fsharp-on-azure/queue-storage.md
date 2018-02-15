@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 70dc554c-8f4d-42a7-8e2a-6438657d012a
-ms.openlocfilehash: f5ebdb3f3b50996a397c8420b773178493744d70
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8ec4652bab591dedc687d22c617b9466bc351f10
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>Начало работы с хранилищем очередей Azure, с помощью F # #
 
@@ -142,8 +142,8 @@ Azure хранилище очередей обеспечивает обмен с
 
 Теперь, когда вы узнали основы очереди хранилища, перейдите по соответствующей ссылке для получения сведений о более сложных задач хранилища.
 
-- [Клиентская библиотека хранилища для Справочник по .NET](http://go.microsoft.com/fwlink/?LinkID=390731&clcid=0x409)
+- [API-интерфейсов хранилища Azure для .NET](/dotnet/api/overview/azure/storage)
 - [Тип поставщика хранилища Azure](https://github.com/fsprojects/AzureStorageTypeProvider)
 - [Блог группы разработчиков хранилища Azure](http://blogs.msdn.com/b/windowsazurestorage/)
-- [Настройка строк подключения](http://msdn.microsoft.com/library/azure/ee758697.aspx)
-- [Справочник по REST API](http://msdn.microsoft.com/library/azure/dd179355)
+- [Настройка строки подключения хранилища Azure](/azure/storage/common/storage-configure-connection-string)
+- [Справочник по API REST служб хранилища Azure](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)

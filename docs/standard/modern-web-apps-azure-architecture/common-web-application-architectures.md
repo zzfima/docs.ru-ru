@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: b6236cfab290211f930d6a1987075abeade4fd6d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dc5580d38ac29a5e923a4b7d84f9d7e077d5cdb2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 #<a name="common-web-application-architectures"></a>Общие архитектурах веб-приложений
 
@@ -153,7 +156,7 @@ ms.lasthandoff: 11/21/2017
 
 > ### <a name="application-core-types"></a>Типы основных приложений
 > -   Сущности (business классов модели, которые сохраняются)
-> -   Интерфейсы
+> -   интерфейсов,
 > -   Службы
 > -   Спроектируйте
 
@@ -216,11 +219,11 @@ ms.lasthandoff: 11/21/2017
 
 > ### <a name="references--common-web-architectures"></a>Ссылки — общих архитектур Web
 > - **Очистить архитектуры**  
-> <https://8thlight.com/blog/uncle-Bob/2012/08/13/the-Clean-Architecture.HTML>
+> <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **Архитектура режим**  
-> <http://jeffreypalermo.com/blog/the-Onion-Architecture-Part-1/>
+> <http://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 > - **Шаблон репозитория**  
-> <http://deviq.com/Repository-pattern/>
+> <http://deviq.com/repository-pattern/>
 > - **Образец чистой архитектура решения**  
 > <https://github.com/ardalis/cleanarchitecture>
 > - **Проектирование архитектуры электронная книга Микрослужбами** <http://aka.ms/MicroservicesEbook>

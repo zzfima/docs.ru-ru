@@ -1,15 +1,18 @@
 ---
 title: "С помощью средств Visual Studio для Docker (Visual Studio в Windows)"
-description: "Жизненный цикл приложений контейнерного Docker с помощью платформы Майкрософт и средств"
+description: "Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт"
 keywords: "Docker, микрослужбы, ASP.NET, контейнер"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: d7a24633f5857bc5b72ebab42020627c645f4302
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 717675170f19f18fb48c4cea3ddd15bcd9648d71
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>С помощью средств Visual Studio для Docker (Visual Studio в Windows)
 
@@ -35,7 +38,7 @@ ms.lasthandoff: 11/23/2017
 
 Если вы используете один контейнер, первое, что необходимо начать — включить поддержку Docker в проект .NET Core. Для этого щелкните правой кнопкой мыши файл проекта, как показано на рисунке 4 — 25.
 
-![https://I1.visualstudiogallery.MSDN.s-MSFT.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4/Image/File/205468/1/Add-docker-support.PNG](./media/image31.png)
+![https://i1.visualstudiogallery.msdn.s-msft.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4/image/file/205468/1/add-docker-support.png](./media/image31.png)
 
 На рисунке 4-25: Включение поддержки Docker для проекта Visual Studio
 

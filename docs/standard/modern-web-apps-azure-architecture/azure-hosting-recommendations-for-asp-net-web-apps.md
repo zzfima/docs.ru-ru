@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: c361a28321ec9dcbfee1db8036757632a5d81f7c
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 868f1b7ce452be9e29b921888f90d128e074ba13
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Рекомендации для веб-приложений ASP.NET Core размещения Azure
 
 > «Бизнес-заполнители везде обход ИТ-отделы получение приложений из облака (также называемого SaaS) и оплата их, как это было бы подписки на журнал. И если служба больше не требуется, их отменить подписку с оборудованием, не осталось, неиспользуемые в углу».  
-> _\-Plummer Дэрил, Gartner аналитик_
+> _\- Plummer Дэрил, Gartner аналитик_
 
 ## <a name="summary"></a>Сводка
 
@@ -115,16 +118,16 @@ Azure предлагает широкий спектр параметров хр
 **Ссылки — размещения рекомендации Azure**
 
 -   Architectures\ решения Azure
-    <https://Azure.Microsoft.com/Solutions/Architecture/>
+    <https://azure.microsoft.com/solutions/architecture/>
 
 -   Guide\ разработчика Azure
-    <https://Azure.Microsoft.com/campaigns/Developer-Guide/>
+    <https://azure.microsoft.com/campaigns/developer-guide/>
 
 -   Что такое служба приложений Azure? \
-    <https://docs.Microsoft.com/Azure/App-Service/App-Service-value-prop-What-is>
+    <https://docs.microsoft.com/azure/app-service/app-service-value-prop-what-is>
 
 -   Служба приложений Azure, виртуальные машины, Service Fabric и Comparison\ облачные службы
-    <https://docs.Microsoft.com/Azure/App-Service-Web/Choose-Web-Site-Cloud-Service-VM>
+    <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
 
 >[!div class="step-by-step"]
 [Предыдущие] (разработки процесс для azure.md)

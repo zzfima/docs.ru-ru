@@ -4,11 +4,14 @@ description: "Архитектура Микрослужбами .NET для пр
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: c83703c6f3dede0f92263e0d46bf48525c3eefaf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 84bffe7aad6bbffb40519c9146d8156159d55850
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-deploy-existing-net-apps-to-azure-app-service"></a>Развертывание существующего приложения .NET для службы приложений Azure 
 
@@ -22,7 +25,7 @@ ms.lasthandoff: 11/21/2017
 
 Azure приложение службы помощник по миграции поддерживает миграцию с IIS, работающем на Windows Server в облако. Службы приложений поддерживает Windows Server 2003 и более поздних версиях.
 
-> ![https://www.migratetoazure.NET/Images/ImageCanvas.PNG](./media/image5.png)
+> ![https://www.migratetoazure.net/Images/ImageCanvas.png](./media/image5.png)
 >
 > **Рис. 4-5.** Используя помощник по миграции службы приложений Azure
 
@@ -36,7 +39,7 @@ Azure приложение службы помощник по миграции �
 
 -   **Помощник по миграции службы приложений Azure**
 
-    [https://www.migratetoazure.NET/](https://www.migratetoazure.net/)
+    [https://www.migratetoazure.net/](https://www.migratetoazure.net/)
 
 >[!div class="step-by-step"]
 [Назад](what-about-cloud-optimized-applications.md)

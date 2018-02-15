@@ -1,15 +1,18 @@
 ---
 title: "Монитор контейнерных приложений служб"
-description: "Жизненный цикл приложений контейнерного Docker с помощью платформы Майкрософт и средств"
+description: "Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт"
 keywords: "Docker, микрослужбы, ASP.NET, контейнер"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3e4a78eb47d0e6712919c89b6f52ec8e4248fb23
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 58bf96dfa06a78892563698200e6f4df5f371346
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="monitor-containerized-application-services"></a>Монитор контейнерных приложений служб
 
@@ -45,10 +48,10 @@ ms.lasthandoff: 11/23/2017
 [https://Hub.docker.com/r/Microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) и <https://github.com/Microsoft/ApplicationInsights-Docker>
 
 -   **Настройте Application Insights для ASP.NET:**  
-[https://docs.Microsoft.com/Azure/Application-Insights/App-Insights-ASP-NET](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)
+[https://docs.microsoft.com/azure/application-insights/app-insights-asp-net](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)
 
 -   **Application Insights для веб-страниц:**  
-<https://docs.Microsoft.com/Azure/Application-Insights/App-Insights-JavaScript>
+<https://docs.microsoft.com/azure/application-insights/app-insights-javascript>
 
 ## <a name="microsoft-operations-management-suite"></a>Microsoft Operations Management Suite
 
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/23/2017
 
 ### <a name="operations-management-suitehttpmicrosoftcomoms-container-solution-for-docker"></a>[Operations Management Suite](http://microsoft.com/oms) решение контейнера для Docker
 
-Помимо ценных сам по себе, решение контейнера набор операций управления можно управлять и отслеживать узлах Docker и контейнеры, отображая сведения о размещении контейнеры и узлы контейнера, какие контейнеры запущены или в состоянии сбоя, Docker daemon контейнера и журналы и отправляемые *stdout* и *stderr*. Он также показывает метрики производительности, такие как ЦП, памяти, сети и хранилища для контейнера и узлы для помогают устранить ошибки и найти шумный сосед контейнеров.
+Помимо ценных сам по себе, решение контейнера набор операций управления можно управлять и отслеживать узлах Docker и контейнеры, отображая сведения о размещении контейнеры и узлы контейнера, какие контейнеры запущены или в состоянии сбоя, Docker daemon контейнера и журналы и отправляемые *stdout* и *stderr*. Оно также показывает метрики производительности, такие как загрузка ЦП, объем памяти, характеристики сети и хранилища для контейнера и узлов, чтобы помочь устранить ошибки и обнаружить конфликтующие соседние контейнеры.
 
 ![](./media/image2.png)
 
@@ -94,7 +97,7 @@ Operations Management Suite, реализованные в виде облачн
 
 Сохранение запросов также является стандартным компонентом в Operations Management Suite и помогут вам поддерживать запросы нахожу полезным и трендов в системе.
 
-**Дополнительные сведения о** для поиска сведений об установке и настройке Docker решение контейнера в [Operations Management Suite](http://microsoft.com/oms), перейдите в меню <https://docs.microsoft.com/azure/ Журнал analytics/журнала аналитика контейнеры>.
+**Дополнительные сведения о** для поиска сведений об установке и настройке Docker решение контейнера в [Operations Management Suite](http://microsoft.com/oms), перейдите в меню <https://docs.microsoft.com/azure/log-analytics /log-Analytics-Containers>.
 
 >[!div class="step-by-step"]
 [Предыдущие] (Управление производственного docker-environments.md) [Далее] (.. /Key-takeaways/index.MD)
