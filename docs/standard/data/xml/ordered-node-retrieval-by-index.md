@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 13d3077b1536d4e96cb9e4f1f09313dd793a906e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 780af689f6aff86e2e96738c356df4a81128f4ef
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="ordered-node-retrieval-by-index"></a>Упорядоченное извлечение узлов по индексу
-World Wide Web Consortium (W3C) XML документа объектной модели (DOM) также описывает класс NodeList, который позволяет обрабатывать упорядоченные списки узлов, в отличие от неупорядоченного набора, обрабатываемого с **XmlNamedNodeMap**. Класс NodeList в платформе Microsoft .NET Framework называется **XmlNodeList**. Методы и свойства, которые возвращают **XmlNodeList** являются:  
+Модель DOM XML-документа консорциума W3C описывает класс NodeList, который позволяет обрабатывать упорядоченные списки узлов, в отличие от неупорядоченного набора, обрабатываемого с помощью класса **XmlNamedNodeMap**. Класс NodeList в платформе Microsoft .NET Framework называется **XmlNodeList**. Методы и свойства, которые возвращают класс **XmlNodeList**:  
   
 -   XmlNode.ChildNodes  
   
@@ -33,7 +36,7 @@ World Wide Web Consortium (W3C) XML документа объектной мод
   
 -   XmlNode.SelectNodes  
   
- **XmlNodeList** имеет **число** свойство, которое можно использовать для создания циклов для выполнения итерации по узлам в **XmlNodeList**, как показано в следующем образце кода:  
+ Класс **XmlNodeList** имеет свойство **Count**, с помощью которого можно создавать циклы для выполнения итерации по узлам объекта **XmlNodeList**, как показано в следующем примере кода:  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -62,7 +65,7 @@ for (int i=0; i < elemList.Count; i++)
 }   
 ```  
   
- В дополнение к **число** свойства, имеется **GetEnumerator** метод, предоставляющий, `foreach` стиля итерации по коллекции узлов в **XmlNodeList**. В следующем примере кода показано использование инструкции `foreach`.  
+ В дополнение к свойству **Count**, доступен метод **GetEnumerator**, который обеспечивает итерацию в стиле `foreach` по коллекции узлов в объекте **XmlNodeList**. В следующем примере кода показано использование инструкции `foreach`.  
   
 ```vb  
 Dim doc As New XmlDocument()  
@@ -99,7 +102,7 @@ End While
   }  
 ```  
   
- Дополнительные сведения о доступных методах и свойствах, доступных **XmlNodeList**, в разделе <xref:System.Xml.XmlNodeList>.  
+ Дополнительные сведения о доступных методах и свойствах класса **XmlNodeList** см. в описании <xref:System.Xml.XmlNodeList>.  
   
 ## <a name="see-also"></a>См. также  
- [Модель объектов XML-документов (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
