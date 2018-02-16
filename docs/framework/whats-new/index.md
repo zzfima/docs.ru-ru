@@ -3,22 +3,25 @@ title: "Новые возможности .NET Framework"
 ms.custom: updateeachrelease
 ms.date: 05/02/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: what's new [.NET Framework]
+helpviewer_keywords:
+- what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e2aa6e67fc45aa02421433a295fdbf5657e4e551
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.workload:
+- dotnet
+ms.openlocfilehash: 86f1884749b5fdf93254985ab3e163dca0562648
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>Новые возможности .NET Framework
 <a name="introduction"></a>В этой статье кратко излагаются ключевые новые возможности и усовершенствования в следующих версиях .NET Framework:  
@@ -80,15 +83,15 @@ ms.lasthandoff: 01/05/2018
 
 **Обнаружение функций во время выполнения** 
 
-Класс <xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=fullName> предоставляет механизм, позволяющий определить, поддерживается ли предопределенная функция в данной реализации .NET во время компиляции или во время выполнения. Во время компиляции компилятор может проверить наличие указанного поля, чтобы определить, поддерживается ли эта функция. Если да, он может вывести код, использующий эту функцию. Во время выполнения приложение может вызвать метод <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported%2A?displayProperty=nameWithType> до создания кода. Дополнительные сведения см. в статье [Добавление вспомогательного метода для описания функций, поддерживаемых средой выполнения](https://github.com/dotnet/corefx/issues/17116).
+Класс <xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=nameWithType> предоставляет механизм, позволяющий определить, поддерживается ли предопределенная функция в данной реализации .NET во время компиляции или во время выполнения. Во время компиляции компилятор может проверить наличие указанного поля, чтобы определить, поддерживается ли эта функция. Если да, он может вывести код, использующий эту функцию. Во время выполнения приложение может вызвать метод <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported%2A?displayProperty=nameWithType> до создания кода. Дополнительные сведения см. в статье [Добавление вспомогательного метода для описания функций, поддерживаемых средой выполнения](https://github.com/dotnet/corefx/issues/17116).
 
 **Типы кортежей значений являются сериализуемыми**
 
-Начиная с .NET Framework 4.7.1, <xref:System.ValueTuple?displayProperty=fullName> и связанные универсальные типы помечаются как [Сериализуемые](xref:System.SerializableAttribute), что обеспечивает двоичную сериализацию. Эта возможность должна упростить миграцию типов кортежей, таких как <xref:System.Tuple%603> и <xref:System.Tuple%604>, в типы кортежей значений. Дополнительные сведения см. в разделе о сериализации ValueTuple в записи блога [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features) (Возможности среды выполнения .NET Framework 4.7.1 и компилятора).
+Начиная с .NET Framework 4.7.1, <xref:System.ValueTuple?displayProperty=nameWithType> и связанные универсальные типы помечаются как [Сериализуемые](xref:System.SerializableAttribute), что обеспечивает двоичную сериализацию. Эта возможность должна упростить миграцию типов кортежей, таких как <xref:System.Tuple%603> и <xref:System.Tuple%604>, в типы кортежей значений. Дополнительные сведения см. в разделе о сериализации ValueTuple в записи блога [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features) (Возможности среды выполнения .NET Framework 4.7.1 и компилятора).
 
 **Поддержка ссылок только для чтения**
 
-В .NET Framework 4.7.1 добавлен <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=fullName>. Этот атрибут используется компиляторами языка для пометки членов, имеющих типы возвращаемые ссылочные значения (или параметры) только для чтения. Дополнительные сведения см. в разделе о поддержке ReadOnlyReferences в записи блога [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features) (Возможности среды выполнения .NET Framework 4.7.1 и компилятора). Сведения о возвращаемых ссылочных значениях см. в разделах [Возвращаемые ссылочные значения и ссылочные локальные переменные (справочник по C#)](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) и [Возвращаемые ссылочные значения (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md).
+В .NET Framework 4.7.1 добавлен <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>. Этот атрибут используется компиляторами языка для пометки членов, имеющих типы возвращаемые ссылочные значения (или параметры) только для чтения. Дополнительные сведения см. в разделе о поддержке ReadOnlyReferences в записи блога [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features) (Возможности среды выполнения .NET Framework 4.7.1 и компилятора). Сведения о возвращаемых ссылочных значениях см. в разделах [Возвращаемые ссылочные значения и ссылочные локальные переменные (справочник по C#)](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) и [Возвращаемые ссылочные значения (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md).
 
 <a name="clr" />
 #### <a name="common-language-runtime-clr"></a>Среда CLR
@@ -97,12 +100,6 @@ ms.lasthandoff: 01/05/2018
 
 Изменения функции сборки мусора (GC) в .NET Framework 4.7.1 повышают общую производительность, особенно для выделений кучи больших объектов (LOH). В .NET Framework 4.7.1 для выделений SOH и LOH используются отдельные блокировки, что позволяет выполнять выделения LOH в случае, когда фоновый сборщик мусора очищает SOH. В результате в приложениях с большим количеством операций выделения LOH сократится число конфликтов при блокировках выделений и улучшится производительность. Дополнительные сведения см. в разделе о повышении производительности сборки мусора в записи блога [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features/) (Возможности среды выполнения .NET Framework 4.7.1 и компилятора). 
 
-**Поддержка переносимых PDB-файлов**
-
-Платформа .NET Framework, начиная с версии 4.7.1, поддерживает переносимые PDB-файлы. Хотя стандартные PDB-файлы поддерживаются только в Windows, переносимые PDB-файлы можно создавать и считывать на всех платформах. В большинстве случаев формат файла прозрачен для приложения, работающего в конкретной реализации .NET. Исключением является приложение, которое динамически создает сборку во время выполнения. В этом случае возможность создания переносимого PDB-файла позволит добиться повышения производительности и сокращения объема используемой памяти приложения. 
-
-Во время выполнения можно определить, поддерживаются ли переносимые PDB-файлы в текущей реализации .NET. Для этого следует передать строку "PortablePdb" в метод <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported(System.String)?displayProperty=nameWithType> до выдачи сборки.  
- 
 <a name="net471"/>
 #### <a name="networking"></a>Сетевое взаимодействие
 
@@ -1446,7 +1443,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
 <a name="tailored"></a> 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
- Приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] разрабатываются для конкретных форм-факторов и в полной мере используют возможности операционной системы Windows. Подмножество [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] или 4.5.1 доступно для разработки приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] для Windows с использованием C# или Visual Basic. Это подмножество называется [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] и рассматривается в [обзорной статье](http://go.microsoft.com/fwlink/?LinkId=228491) в Центре разработки для Windows.
+ [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] Приложения разрабатываются для конкретных форм-факторов и в полной мере используют возможности операционной системы Windows. Подмножество [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] или 4.5.1 доступно для разработки приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] для Windows с использованием C# или Visual Basic. Это подмножество называется [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] и рассматривается в [обзорной статье](http://go.microsoft.com/fwlink/?LinkId=228491) в Центре разработки для Windows.
 
 <a name="portable"></a> 
 ### <a name="portable-class-libraries"></a>Переносимые библиотеки классов
