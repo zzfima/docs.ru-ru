@@ -42,7 +42,7 @@ ms.lasthandoff: 12/23/2017
 
 Чтобы создать ресурс Application Insights, следуйте инструкциям в статьях, представленных в списке ниже. Портал Azure создаст необходимый скрипт для вас.
 
--   **Наблюдение за приложениями Docker в Application Insights:**[https://docs.microsoft.com/azure/application-insights/app-insights-docker  ](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
+-   **Наблюдение за приложениями Docker в Application Insights:**[https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
 
 -   **Образ Docker аналитики приложений в Docker Hub и Github:**  
 [https://Hub.docker.com/r/Microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) и <https://github.com/Microsoft/ApplicationInsights-Docker>
