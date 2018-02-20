@@ -10,7 +10,7 @@
 ### [Сборки и параллельное выполнение](assemblies-and-side-by-side-execution.md)
 ## [Домены приложений](application-domains.md)
 ## [Руководства по работе с доменами приложений и сборками](application-domains-and-assemblies-how-to-topics.md)
-## [Использование доменов приложений](application-domains.md)
+## [Использование доменов приложений](use.md)
 ### [Практическое руководство. Создание домена приложения](how-to-create-an-application-domain.md)
 ### [Практическое руководство. Выгрузка домена приложения](how-to-unload-an-application-domain.md)
 ### [Практическое руководство. Настройка домена приложения](how-to-configure-an-application-domain.md)

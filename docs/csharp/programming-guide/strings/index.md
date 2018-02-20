@@ -2,20 +2,21 @@
 title: "Строки (Руководство по программированию на C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 45dd48a53d3fae58596d9328ef8daba566b2ded1
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 24a030bb43d49615a7487ce10ad2347fdfd8a290
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="strings-c-programming-guide"></a>Строки (Руководство по программированию на C#)
 Строка — это объект типа <xref:System.String>, значением которого является текст. Внутри программы текст хранится в виде упорядоченной коллекции объектов <xref:System.Char> только для чтения. В конце строки C# нет нуль-символов. Поэтому строка C# может содержать любое число внедренных нуль-символов ('\0'). Свойство <xref:System.String.Length%2A> строки соответствует числу содержащихся в ней объектов `Char`, но не числу символов Юникода. Для доступа к отдельным кодовым точкам Юникода в строке используйте объект <xref:System.Globalization.StringInfo>.  
@@ -118,14 +119,14 @@ string s = String.Empty;
 ## <a name="strings-extension-methods-and-linq"></a>Строки, методы расширения и LINQ  
  Так как тип <xref:System.String> использует <xref:System.Collections.Generic.IEnumerable%601>, вы можете применять методы расширения, определенные для строк в классе <xref:System.Linq.Enumerable>. Чтобы избежать визуального загромождения, эти методы исключены из IntelliSense для типа <xref:System.String>, но все равно доступны. Можно также использовать выражения запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] в строках. Дополнительные сведения см. в документации по [LINQ и строкам](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md).  
   
-## <a name="related-topics"></a>Связанные разделы  
+## <a name="related-topics"></a>См. также  
   
-|Раздел|Описание|  
+|Раздел|Описание:|  
 |-----------|-----------------|  
 |[Практическое руководство. Изменение содержимого строки](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)|Содержит пример кода, иллюстрирующий изменение содержимого строк.|  
 |[Практическое руководство. Сцепка нескольких строк](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|Иллюстрирует использование оператора `+` и класса `Stringbuilder` для соединения строк во время компиляции и во время выполнения.|  
 |[Практическое руководство. Сравнение строк](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|Показывает, как выполнять сравнение строк по порядковому номеру.|  
-|[How to: Parse Strings Using String.Split (C# Programming Guide)](../../../csharp/programming-guide/strings/how-to-parse-strings-using-string-split.md) (Практическое руководство. Анализ строк с помощью метода String.Split (руководство по программированию на C#))|Содержит пример кода, демонстрирующий использование метода `String.Split` для анализа строк.|  
+|[How to: Parse Strings Using String.Split (C# Programming Guide)](../../how-to/parse-strings-using-split.md) (Практическое руководство. Анализ строк с помощью метода String.Split (руководство по программированию на C#))|Содержит пример кода, демонстрирующий использование метода `String.Split` для анализа строк.|  
 |[Практическое руководство. Поиск строк с помощью строковых методов](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md)|Объясняет, как использовать конкретные методы для поиска строк.|  
 |[Практическое руководство. Поиск строк с помощью регулярных выражений](../../../csharp/programming-guide/strings/how-to-search-strings-using-regular-expressions.md)|Объясняет, как использовать регулярные выражения для поиска строк.|  
 |[Практическое руководство. Определение представления числового значения в строке](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Объясняет, как безопасно проанализировать строку, чтобы проверить, содержит ли она допустимое числовое значение.|  

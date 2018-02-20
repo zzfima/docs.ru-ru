@@ -1,5 +1,4 @@
 # [Строки](index.md)
-## [Практическое руководство. Сцепка нескольких строк](how-to-concatenate-multiple-strings.md)
 ## [Практическое руководство. Изменение содержимого строки](how-to-modify-string-contents.md)
 ## [Практическое руководство. Сравнение строк](how-to-compare-strings.md)
 ## [Практическое руководство. Поиск строк с помощью строковых методов](how-to-search-strings-using-string-methods.md)
