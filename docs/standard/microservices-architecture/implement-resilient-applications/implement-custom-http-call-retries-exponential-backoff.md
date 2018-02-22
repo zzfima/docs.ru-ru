@@ -1,6 +1,6 @@
 ---
-title: "Реализация пользовательских повторные попытки вызова HTTP с экспоненциально растущим"
-description: "Архитектура Микрослужбами .NET для приложений .NET в контейнерах | Реализация пользовательских повторные попытки вызова HTTP с экспоненциально растущим"
+title: "Реализация настраиваемых повторных попыток HTTP-вызова с экспоненциальной выдержкой"
+description: "Архитектура микрослужб .NET для контейнерных приложений .NET | Реализация настраиваемых повторных попыток HTTP-вызова с экспоненциальной выдержкой"
 keywords: "Docker, микрослужбы, ASP.NET, контейнер"
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,19 +8,22 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 4449e5d7e0ca3c81aead26fac653de3ba2187a92
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 477b77f4c4768ed98f730b0f5360761b0b54b10c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-custom-http-call-retries-with-exponential-backoff"></a><span data-ttu-id="8b428-104">Реализация пользовательских повторные попытки вызова HTTP с экспоненциально растущим</span><span class="sxs-lookup"><span data-stu-id="8b428-104">Implementing custom HTTP call retries with exponential backoff</span></span>
+# <a name="implementing-custom-http-call-retries-with-exponential-backoff"></a><span data-ttu-id="1cdcd-104">Реализация настраиваемых повторных попыток HTTP-вызова с экспоненциальной выдержкой</span><span class="sxs-lookup"><span data-stu-id="1cdcd-104">Implementing custom HTTP call retries with exponential backoff</span></span>
 
-<span data-ttu-id="8b428-105">Чтобы создать устойчивым микрослужбами, необходимо обрабатывать возможные сценарии сбоев HTTP.</span><span class="sxs-lookup"><span data-stu-id="8b428-105">In order to create resilient microservices, you need to handle possible HTTP failure scenarios.</span></span> <span data-ttu-id="8b428-106">Для этой цели можно создать собственную реализацию повторные попытки с экспоненциально растущим.</span><span class="sxs-lookup"><span data-stu-id="8b428-106">For that purpose, you could create your own implementation of retries with exponential backoff.</span></span>
+<span data-ttu-id="1cdcd-105">Для создания устойчивых микрослужб необходимо обрабатывать возможные сценарии сбоев HTTP.</span><span class="sxs-lookup"><span data-stu-id="1cdcd-105">In order to create resilient microservices, you need to handle possible HTTP failure scenarios.</span></span> <span data-ttu-id="1cdcd-106">Для этой цели можно создать собственную реализацию повторных попыток с экспоненциальной выдержкой.</span><span class="sxs-lookup"><span data-stu-id="1cdcd-106">For that purpose, you could create your own implementation of retries with exponential backoff.</span></span>
 
-<span data-ttu-id="8b428-107">В дополнение к обработке ресурсов Временная недоступность, экспоненциальное увеличение задержки необходимо также учитывать, что поставщика облачных служб может регулировать доступность ресурсов, чтобы предотвратить использование перегрузки.</span><span class="sxs-lookup"><span data-stu-id="8b428-107">In addition to handling temporal resource unavailability, the exponential backoff also needs to take into account that the cloud provider might throttle availability of resources to prevent usage overload.</span></span> <span data-ttu-id="8b428-108">Например, очень быстро создать слишком много запросов на подключение может рассматриваться как отказ в обслуживании ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) атаки поставщиком облачных.</span><span class="sxs-lookup"><span data-stu-id="8b428-108">For example, creating too many connection requests very quickly might be viewed as a Denial of Service ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) attack by the cloud provider.</span></span> <span data-ttu-id="8b428-109">В результате необходимо предоставить механизм масштабирования запросов на подключение, возникших порога емкости.</span><span class="sxs-lookup"><span data-stu-id="8b428-109">As a result, you need to provide a mechanism to scale back connection requests when a capacity threshold has been encountered.</span></span>
+<span data-ttu-id="1cdcd-107">Наряду с временной недоступностью ресурсов экспоненциальная выдержка также должна учитывать ту ситуацию, когда облачный провайдер может регулировать доступность ресурсов, чтобы предотвратить чрезмерное использование ресурсов.</span><span class="sxs-lookup"><span data-stu-id="1cdcd-107">In addition to handling temporal resource unavailability, the exponential backoff also needs to take into account that the cloud provider might throttle availability of resources to prevent usage overload.</span></span> <span data-ttu-id="1cdcd-108">Например, быстрое создание слишком большого числа запросов на подключение может расцениваться облачным провайдером как атака типа "отказ в обслуживании" ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)-атака).</span><span class="sxs-lookup"><span data-stu-id="1cdcd-108">For example, creating too many connection requests very quickly might be viewed as a Denial of Service ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) attack by the cloud provider.</span></span> <span data-ttu-id="1cdcd-109">Поэтому необходимо предоставить механизм для сокращения числа запросов на подключение при достижении порогового значения.</span><span class="sxs-lookup"><span data-stu-id="1cdcd-109">As a result, you need to provide a mechanism to scale back connection requests when a capacity threshold has been encountered.</span></span>
 
-<span data-ttu-id="8b428-110">Как первоначального исследования, можно реализовать собственный код служебный класс для экспоненциальной отсрочки, как и в [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), а также код, аналогичный следующему (который также доступен в [в репозитории GitHub ](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)).</span><span class="sxs-lookup"><span data-stu-id="8b428-110">As an initial exploration, you could implement your own code with a utility class for exponential backoff as in [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), plus code like the following (which is also available on a [GitHub repo](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)).</span></span>
+<span data-ttu-id="1cdcd-110">В качестве первоначального исследования можно реализовать собственный код вспомогательного класса для экспоненциальной выдержки, взяв код из файла [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260) и добавив в него следующий код (который также доступен в [репозитории GitHub](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)).</span><span class="sxs-lookup"><span data-stu-id="1cdcd-110">As an initial exploration, you could implement your own code with a utility class for exponential backoff as in [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), plus code like the following (which is also available on a [GitHub repo](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)).</span></span>
 
 ```csharp
 public sealed class RetryWithExponentialBackoff
@@ -93,7 +96,7 @@ public struct ExponentialBackoff
 }
 ```
 
-<span data-ttu-id="8b428-111">С помощью следующего кода в клиенте C\# приложения (микрослужбу клиента другой веб-API, приложения ASP.NET MVC или даже C\# приложения Xamarin) нетрудно.</span><span class="sxs-lookup"><span data-stu-id="8b428-111">Using this code in a client C\# application (another Web API client microservice, an ASP.NET MVC application, or even a C\# Xamarin application) is straightforward.</span></span> <span data-ttu-id="8b428-112">В следующем примере показан способ, с помощью класса HttpClient.</span><span class="sxs-lookup"><span data-stu-id="8b428-112">The following example shows how, using the HttpClient class.</span></span>
+<span data-ttu-id="1cdcd-111">Вы можете использовать следующий простой код в приложении C\# (а также в другой микрослужбе клиента веб-API, в приложении MVC ASP.NET и даже в приложении C\# Xamarin).</span><span class="sxs-lookup"><span data-stu-id="1cdcd-111">Using this code in a client C\# application (another Web API client microservice, an ASP.NET MVC application, or even a C\# Xamarin application) is straightforward.</span></span> <span data-ttu-id="1cdcd-112">В следующем примере показано, как это сделать с помощью класса HttpClient.</span><span class="sxs-lookup"><span data-stu-id="1cdcd-112">The following example shows how, using the HttpClient class.</span></span>
 
 ```csharp
 public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? type)
@@ -116,8 +119,8 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 }
 ```
 
-<span data-ttu-id="8b428-113">Тем не менее этот код подходит только в качестве эксперимента.</span><span class="sxs-lookup"><span data-stu-id="8b428-113">However, this code is suitable only as a proof of concept.</span></span> <span data-ttu-id="8b428-114">Следующий раздел объясняет, как использовать более сложные и проверенные библиотеки.</span><span class="sxs-lookup"><span data-stu-id="8b428-114">The next topic explains how to use more sophisticated and proven libraries.</span></span>
+<span data-ttu-id="1cdcd-113">Тем не менее этот код подходит только для иллюстрации идеи.</span><span class="sxs-lookup"><span data-stu-id="1cdcd-113">However, this code is suitable only as a proof of concept.</span></span> <span data-ttu-id="1cdcd-114">В следующем разделе показано, как использовать более сложные и проверенные библиотеки.</span><span class="sxs-lookup"><span data-stu-id="1cdcd-114">The next topic explains how to use more sophisticated and proven libraries.</span></span>
 
 
 >[!div class="step-by-step"]
-<span data-ttu-id="8b428-115">[Предыдущие] (implement-resilient-entity-framework-core-sql-connections.md) [Далее] (implement-http-call-retries-exponential-backoff-polly.md)</span><span class="sxs-lookup"><span data-stu-id="8b428-115">[Previous] (implement-resilient-entity-framework-core-sql-connections.md) [Next] (implement-http-call-retries-exponential-backoff-polly.md)</span></span>
+<span data-ttu-id="1cdcd-115">[Назад] (implement-resilient-entity-framework-core-sql-connections.md) [Далее] (implement-http-call-retries-exponential-backoff-polly.md)</span><span class="sxs-lookup"><span data-stu-id="1cdcd-115">[Previous] (implement-resilient-entity-framework-core-sql-connections.md) [Next] (implement-http-call-retries-exponential-backoff-polly.md)</span></span>

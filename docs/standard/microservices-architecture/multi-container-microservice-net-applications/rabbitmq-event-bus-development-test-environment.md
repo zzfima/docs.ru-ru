@@ -1,30 +1,35 @@
 ---
-title: "Реализация событий шины с помощью RabbitMQ для среды разработки или тестирования"
-description: "Архитектура Микрослужбами .NET для приложений .NET в контейнерах | Реализация событий шины с помощью RabbitMQ для среды разработки или тестирования"
+title: "Реализация шины событий с помощью RabbitMQ для среды разработки или тестирования"
+description: "Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Реализация шины событий с помощью RabbitMQ для среды разработки или тестирования"
 keywords: "Docker, микрослужбы, ASP.NET, контейнер"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: f58d355b6f5fd31a21791d3b072c77f70f90c387
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3505cb993c736165d4aff4ce8fad38cfa14ed417
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a><span data-ttu-id="f7b62-104">Реализация событий шины с помощью RabbitMQ для среды разработки или тестирования</span><span class="sxs-lookup"><span data-stu-id="f7b62-104">Implementing an event bus with RabbitMQ for the development or test environment</span></span>
+# <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a><span data-ttu-id="ecb25-104">Реализация шины событий с помощью RabbitMQ для среды разработки или тестирования</span><span class="sxs-lookup"><span data-stu-id="ecb25-104">Implementing an event bus with RabbitMQ for the development or test environment</span></span>
 
-<span data-ttu-id="f7b62-105">Нам необходимо начать с о том, что при создании вашего пользовательского события шина на RabbitMQ, выполняющийся в контейнере, как и приложение eShopOnContainers, его следует использовать только для разработки и тестовых средах.</span><span class="sxs-lookup"><span data-stu-id="f7b62-105">We should start by saying that if you create your custom event bus based on RabbitMQ running in a container, as the eShopOnContainers application does, it should be used only for your development and test environments.</span></span> <span data-ttu-id="f7b62-106">Не следует использовать его для производственной среды, если вы создаете его как часть рабочей среде service bus.</span><span class="sxs-lookup"><span data-stu-id="f7b62-106">You should not use it for your production environment, unless you are building it as a part of a production-ready service bus.</span></span> <span data-ttu-id="f7b62-107">Готовый важных возможностей, коммерческих служебной шины имеет могут отсутствовать шины простое пользовательское событие.</span><span class="sxs-lookup"><span data-stu-id="f7b62-107">A simple custom event bus might be missing many production-ready critical features that a commercial service bus has.</span></span>
+<span data-ttu-id="ecb25-105">Начать следует с того, что если вы создаете пользовательскую шину событий на основе RabbitMQ в контейнере, как это делается в приложении eShopOnContainers, ее следует использовать только в средах разработки и тестирования.</span><span class="sxs-lookup"><span data-stu-id="ecb25-105">We should start by saying that if you create your custom event bus based on RabbitMQ running in a container, as the eShopOnContainers application does, it should be used only for your development and test environments.</span></span> <span data-ttu-id="ecb25-106">Ее не следует применять в рабочей среде, если только вы не разрабатываете ее в рамках служебной шины, готовой к развертыванию в рабочей среде.</span><span class="sxs-lookup"><span data-stu-id="ecb25-106">You should not use it for your production environment, unless you are building it as a part of a production-ready service bus.</span></span> <span data-ttu-id="ecb25-107">Простая пользовательская шина событий может быть лишена многих критически важных для рабочей среды возможностей, которыми обладают коммерческие служебные шины.</span><span class="sxs-lookup"><span data-stu-id="ecb25-107">A simple custom event bus might be missing many production-ready critical features that a commercial service bus has.</span></span>
 
-<span data-ttu-id="f7b62-108">Пользовательская реализация eShopOnContainers шины события, по сути, представляет библиотеку с помощью RabbitMQ API.</span><span class="sxs-lookup"><span data-stu-id="f7b62-108">The eShopOnContainers custom implementation of an event bus is basically a library using the RabbitMQ API.</span></span> <span data-ttu-id="f7b62-109">Реализация позволяет микрослужбами подписаться на события, публиковать события и получать события, как показано на рисунке 8-21.</span><span class="sxs-lookup"><span data-stu-id="f7b62-109">The implementation lets microservices subscribe to events, publish events, and receive events, as shown in Figure 8-21.</span></span>
+<span data-ttu-id="ecb25-108">Одна из пользовательских реализаций шины событий в eShopOnContainers по сути представляет собой библиотеку, использующую интерфейс API RabbitMQ (есть и еще одна реализация на основе служебной шины Azure).</span><span class="sxs-lookup"><span data-stu-id="ecb25-108">One of the event bus custom implementation in eShopOnContainers is basically a library using the RabbitMQ API (There’s another implementation based on Azure Service Bus).</span></span> 
+
+<span data-ttu-id="ecb25-109">Реализация шины событий с помощью RabbitMQ позволяет микрослужбам подписываться на события, публиковать и принимать их, как показано на рисунке 8-21.</span><span class="sxs-lookup"><span data-stu-id="ecb25-109">The event bus implementation with RabbitMQ lets microservices subscribe to events, publish events, and receive events, as shown in Figure 8-21.</span></span>
 
 ![](./media/image22.png)
 
-<span data-ttu-id="f7b62-110">**На рисунке 8-21.**</span><span class="sxs-lookup"><span data-stu-id="f7b62-110">**Figure 8-21.**</span></span> <span data-ttu-id="f7b62-111">Реализация RabbitMQ шине событий</span><span class="sxs-lookup"><span data-stu-id="f7b62-111">RabbitMQ implementation of an event bus</span></span>
+<span data-ttu-id="ecb25-110">**Рис. 8-21**.</span><span class="sxs-lookup"><span data-stu-id="ecb25-110">**Figure 8-21.**</span></span> <span data-ttu-id="ecb25-111">Реализация шины событий на основе RabbitMQ</span><span class="sxs-lookup"><span data-stu-id="ecb25-111">RabbitMQ implementation of an event bus</span></span>
 
-<span data-ttu-id="f7b62-112">В коде класс EventBusRabbitMQ реализует универсальный интерфейс IEventBus.</span><span class="sxs-lookup"><span data-stu-id="f7b62-112">In the code, the EventBusRabbitMQ class implements the generic IEventBus interface.</span></span> <span data-ttu-id="f7b62-113">Следующий пример основан на внедрение зависимостей так, что можно менять из этой версии для разработки и тестирования в рабочей версии.</span><span class="sxs-lookup"><span data-stu-id="f7b62-113">This is based on Dependency Injection so that you can swap from this dev/test version to a production version.</span></span>
+<span data-ttu-id="ecb25-112">В коде класс EventBusRabbitMQ реализует универсальный интерфейс IEventBus.</span><span class="sxs-lookup"><span data-stu-id="ecb25-112">In the code, the EventBusRabbitMQ class implements the generic IEventBus interface.</span></span> <span data-ttu-id="ecb25-113">Для этого применяется внедрение зависимостей, что позволяет переходить от этой версии для разработки и тестирования к рабочей версии.</span><span class="sxs-lookup"><span data-stu-id="ecb25-113">This is based on Dependency Injection so that you can swap from this dev/test version to a production version.</span></span>
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -33,11 +38,11 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
     //...
 ```
 
-<span data-ttu-id="f7b62-114">Реализация RabbitMQ шиной образец разработки и тестирования событий является стандартный код.</span><span class="sxs-lookup"><span data-stu-id="f7b62-114">The RabbitMQ implementation of a sample dev/test event bus is boilerplate code.</span></span> <span data-ttu-id="f7b62-115">При этом приходится обрабатывать соединение с сервером RabbitMQ и выполнять код для публикации событий сообщение в очереди.</span><span class="sxs-lookup"><span data-stu-id="f7b62-115">It has to handle the connection to the RabbitMQ server and provide code for publishing a message event to the queues.</span></span> <span data-ttu-id="f7b62-116">Он также должен реализовать словарь коллекций интеграции обработчиков событий для каждого типа события; Эти типы событий может иметь разные подписок для каждого получателя микрослужбу и другой экземпляр, как показано на рисунке 8-21.</span><span class="sxs-lookup"><span data-stu-id="f7b62-116">It also has to implement a dictionary of collections of integration event handlers for each event type; these event types can have a different instantiation and different subscriptions for each receiver microservice, as shown in Figure 8-21.</span></span>
+<span data-ttu-id="ecb25-114">Реализация образца шины событий для разработки и тестирования на основе RabbitMQ представляет собой стандартный код.</span><span class="sxs-lookup"><span data-stu-id="ecb25-114">The RabbitMQ implementation of a sample dev/test event bus is boilerplate code.</span></span> <span data-ttu-id="ecb25-115">Она должна обрабатывать подключение к серверу RabbitMQ и предоставлять код для публикации события сообщения в очередях.</span><span class="sxs-lookup"><span data-stu-id="ecb25-115">It has to handle the connection to the RabbitMQ server and provide code for publishing a message event to the queues.</span></span> <span data-ttu-id="ecb25-116">Кроме того, должен быть реализован словарь коллекций, содержащий обработчики событий интеграции для каждого типа событий. Для каждого из этих типов событий могут применяться разные способы создания экземпляра и подписки для каждой микрослужбы-получателя, как показано на рисунке 8-21.</span><span class="sxs-lookup"><span data-stu-id="ecb25-116">It also has to implement a dictionary of collections of integration event handlers for each event type; these event types can have a different instantiation and different subscriptions for each receiver microservice, as shown in Figure 8-21.</span></span>
 
-## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a><span data-ttu-id="f7b62-117">Реализация простой метод с RabbitMQ "публикации"</span><span class="sxs-lookup"><span data-stu-id="f7b62-117">Implementing a simple publish method with RabbitMQ</span></span>
+## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a><span data-ttu-id="ecb25-117">Реализация простого метода публикации с помощью RabbitMQ</span><span class="sxs-lookup"><span data-stu-id="ecb25-117">Implementing a simple publish method with RabbitMQ</span></span>
 
-<span data-ttu-id="f7b62-118">Следующий код является частью реализации eShopOnContainers событий шины RabbitMQ, поэтому обычно не нужно закодировать, за исключением усовершенствования.</span><span class="sxs-lookup"><span data-stu-id="f7b62-118">The following code is part of the eShopOnContainers event bus implementation for RabbitMQ, so you usually do not need to code it unless you are making improvements.</span></span> <span data-ttu-id="f7b62-119">Код получает подключение и канал RabbitMQ, создает сообщение и затем публикует сообщение в очередь.</span><span class="sxs-lookup"><span data-stu-id="f7b62-119">The code gets a connection and channel to RabbitMQ, creates a message, and then publishes the message into the queue.</span></span>
+<span data-ttu-id="ecb25-118">Приведенный ниже код представляет собой часть упрощенной реализации шины событий для RabbitMQ, которая улучшена в [реальном коде](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) проекта eShopOnContainers.</span><span class="sxs-lookup"><span data-stu-id="ecb25-118">The following code is part is a simplified event bus implementation for RabbitMQ, improved in the [actual code](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) of eShopOnContainers.</span></span> <span data-ttu-id="ecb25-119">Изменять этот код обычно не нужно, если в него не требуется внести улучшения.</span><span class="sxs-lookup"><span data-stu-id="ecb25-119">You usually do not need to code it unless you are making improvements.</span></span> <span data-ttu-id="ecb25-120">Код получает соединение и канал с RabbitMQ, создает сообщение, а затем публикует его в очереди.</span><span class="sxs-lookup"><span data-stu-id="ecb25-120">The code gets a connection and channel to RabbitMQ, creates a message, and then publishes the message into the queue.</span></span>
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -65,45 +70,51 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 }
 ```
 
-<span data-ttu-id="f7b62-120">[Фактический код](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) публикации метод в приложении eShopOnContainers повышается с помощью [Polly](https://github.com/App-vNext/Polly) повторите политику, которая повторных определенное число раз в случае, если контейнер RabbitMQ — не готов.</span><span class="sxs-lookup"><span data-stu-id="f7b62-120">The [actual code](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) of the Publish method in the eShopOnContainers application is improved by using a [Polly](https://github.com/App-vNext/Polly) retry policy, which retries the task a certain number of times in case the RabbitMQ container is not ready.</span></span> <span data-ttu-id="f7b62-121">Это может произойти, когда docker составления запускается контейнеры; Например контейнер RabbitMQ начать медленнее, чем другие контейнеры.</span><span class="sxs-lookup"><span data-stu-id="f7b62-121">This can occur when docker-compose is starting the containers; for example, the RabbitMQ container might start more slowly than the other containers.</span></span>
+<span data-ttu-id="ecb25-121">[Реальный код](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) метода Publish в приложении eShopOnContainers улучшен с помощью политики повтора [Polly](https://github.com/App-vNext/Polly), которая пытается выполнить задачу повторно некоторое число раз, если контейнер RabbitMQ не готов.</span><span class="sxs-lookup"><span data-stu-id="ecb25-121">The [actual code](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) of the Publish method in the eShopOnContainers application is improved by using a [Polly](https://github.com/App-vNext/Polly) retry policy, which retries the task a certain number of times in case the RabbitMQ container is not ready.</span></span> <span data-ttu-id="ecb25-122">Это может произойти, если контейнеры запускаются с помощью docker-compose. Например, контейнер RabbitMQ может запускаться медленнее других.</span><span class="sxs-lookup"><span data-stu-id="ecb25-122">This can occur when docker-compose is starting the containers; for example, the RabbitMQ container might start more slowly than the other containers.</span></span>
 
-<span data-ttu-id="f7b62-122">Как упоминалось ранее, существует множество возможных конфигураций в RabbitMQ, поэтому этот код следует использовать только для сред разработки и тестирования.</span><span class="sxs-lookup"><span data-stu-id="f7b62-122">As mentioned earlier, there are many possible configurations in RabbitMQ, so this code should be used only for dev/test environments.</span></span>
+<span data-ttu-id="ecb25-123">Как было сказано ранее, в RabbitMQ возможно множество конфигураций, поэтому этот код следует использовать только в средах разработки и тестирования.</span><span class="sxs-lookup"><span data-stu-id="ecb25-123">As mentioned earlier, there are many possible configurations in RabbitMQ, so this code should be used only for dev/test environments.</span></span>
 
-## <a name="implementing-the-subscription-code-with-the-rabbitmq-api"></a><span data-ttu-id="f7b62-123">Реализация кода подписки с помощью API RabbitMQ</span><span class="sxs-lookup"><span data-stu-id="f7b62-123">Implementing the subscription code with the RabbitMQ API</span></span>
+## <a name="implementing-the-subscription-code-with-the-rabbitmq-api"></a><span data-ttu-id="ecb25-124">Реализация кода подписки с помощью интерфейса API RabbitMQ</span><span class="sxs-lookup"><span data-stu-id="ecb25-124">Implementing the subscription code with the RabbitMQ API</span></span>
 
-<span data-ttu-id="f7b62-124">Как опубликовать кодом, следующий код — это упрощение часть реализации шины событий для RabbitMQ.</span><span class="sxs-lookup"><span data-stu-id="f7b62-124">As with the publish code, the following code is a simplification of part of the event bus implementation for RabbitMQ.</span></span> <span data-ttu-id="f7b62-125">Опять же обычно не необходимо изменить его, если он повышается.</span><span class="sxs-lookup"><span data-stu-id="f7b62-125">Again, you usually do not need to change it unless you are improving it.</span></span>
+<span data-ttu-id="ecb25-125">Так же как и в случае с кодом публикации, приведенный ниже код представляет собой часть упрощенной реализации шины событий для RabbitMQ.</span><span class="sxs-lookup"><span data-stu-id="ecb25-125">As with the publish code, the following code is a simplification of part of the event bus implementation for RabbitMQ.</span></span> <span data-ttu-id="ecb25-126">Изменять его также обычно не нужно, если его не требуется улучшить.</span><span class="sxs-lookup"><span data-stu-id="ecb25-126">Again, you usually do not need to change it unless you are improving it.</span></span>
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
 {
     // Member objects and other methods ...
     // ...
-    public void Subscribe<T>(IIntegrationEventHandler<T> handler)
+
+    public void Subscribe<T, TH>()
         where T : IntegrationEvent
+        where TH : IIntegrationEventHandler<T>
     {
-        var eventName = typeof(T).Name;
-        if (_handlers.ContainsKey(eventName))
+        var eventName = _subsManager.GetEventKey<T>();
+        
+        var containsKey = _subsManager.HasSubscriptionsForEvent(eventName);
+        if (!containsKey)
         {
-            _handlers[eventName].Add(handler);
+            if (!_persistentConnection.IsConnected)
+            {
+                _persistentConnection.TryConnect();
+            }
+
+            using (var channel = _persistentConnection.CreateModel())
+            {
+                channel.QueueBind(queue: _queueName,
+                                    exchange: BROKER_NAME,
+                                    routingKey: eventName);
+            }
         }
-        else
-        {
-            var channel = GetChannel();
-            channel.QueueBind(queue: _queueName,
-                exchange: _brokerName,
-                routingKey: eventName);
-            _handlers.Add(eventName, new List<IIntegrationEventHandler>());
-            _handlers[eventName].Add(handler);
-            _eventTypes.Add(typeof(T));
-        }
+
+        _subsManager.AddSubscription<T, TH>();
     }
 }
 ```
 
-<span data-ttu-id="f7b62-126">Каждый тип событий имеет связанные канала для получения событий из RabbitMQ.</span><span class="sxs-lookup"><span data-stu-id="f7b62-126">Each event type has a related channel to get events from RabbitMQ.</span></span> <span data-ttu-id="f7b62-127">Может иметь любое количество обработчиков событий каждого типа событий и канала при необходимости.</span><span class="sxs-lookup"><span data-stu-id="f7b62-127">You can then have as many event handlers per channel and event type as needed.</span></span>
+<span data-ttu-id="ecb25-127">С каждым типом событий связан канал для получения событий из RabbitMQ.</span><span class="sxs-lookup"><span data-stu-id="ecb25-127">Each event type has a related channel to get events from RabbitMQ.</span></span> <span data-ttu-id="ecb25-128">Для каждого канала и типа событий может быть столько обработчиков событий, сколько требуется.</span><span class="sxs-lookup"><span data-stu-id="ecb25-128">You can then have as many event handlers per channel and event type as needed.</span></span>
 
-<span data-ttu-id="f7b62-128">Метод Subscribe принимает объект IIntegrationEventHandler, который похож на метод обратного вызова в текущем микрослужбу, и его связанный объект IntegrationEvent.</span><span class="sxs-lookup"><span data-stu-id="f7b62-128">The Subscribe method accepts an IIntegrationEventHandler object, which is like a callback method in the current microservice, plus its related IntegrationEvent object.</span></span> <span data-ttu-id="f7b62-129">Затем код добавляет в список обработчиков событий, которые может включать каждого типа события интеграции на клиентом микрослужбу этого обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="f7b62-129">The code then adds that event handler to the list of event handlers that each integration event type can have per client microservice.</span></span> <span data-ttu-id="f7b62-130">Если клиентский код не уже подписался на событие, код создает канал для типа событий, он может получать события в стиле push из RabbitMQ при публикации события из любой другой службы.</span><span class="sxs-lookup"><span data-stu-id="f7b62-130">If the client code has not already been subscribed to the event, the code creates a channel for the event type so it can receive events in a push style from RabbitMQ when that event is published from any other service.</span></span>
+<span data-ttu-id="ecb25-129">Метод Subscribe принимает объект IIntegrationEventHandler, который похож на метод обратного вызова в текущей микрослужбе, а также связанный с ним объект IntegrationEvent.</span><span class="sxs-lookup"><span data-stu-id="ecb25-129">The Subscribe method accepts an IIntegrationEventHandler object, which is like a callback method in the current microservice, plus its related IntegrationEvent object.</span></span> <span data-ttu-id="ecb25-130">Затем добавляется обработчик событий в список обработчиков событий, которые может иметь каждый тип событий интеграции в клиентской микрослужбе.</span><span class="sxs-lookup"><span data-stu-id="ecb25-130">The code then adds that event handler to the list of event handlers that each integration event type can have per client microservice.</span></span> <span data-ttu-id="ecb25-131">Если код клиента еще не подписался на событие, для данного типа событий создается канал, который позволяет получать события из RabbitMQ принудительным образом, когда они публикуются из любой другой службы.</span><span class="sxs-lookup"><span data-stu-id="ecb25-131">If the client code has not already been subscribed to the event, the code creates a channel for the event type so it can receive events in a push style from RabbitMQ when that event is published from any other service.</span></span>
 
 
 >[!div class="step-by-step"]
-<span data-ttu-id="f7b62-131">[Предыдущие] (интеграция событие основе микрослужбу communications.md) [Далее] (подписаться events.md)</span><span class="sxs-lookup"><span data-stu-id="f7b62-131">[Previous] (integration-event-based-microservice-communications.md) [Next] (subscribe-events.md)</span></span>
+<span data-ttu-id="ecb25-132">[Назад] (integration-event-based-microservice-communications.md) [Далее] (subscribe-events.md)</span><span class="sxs-lookup"><span data-stu-id="ecb25-132">[Previous] (integration-event-based-microservice-communications.md) [Next] (subscribe-events.md)</span></span>
