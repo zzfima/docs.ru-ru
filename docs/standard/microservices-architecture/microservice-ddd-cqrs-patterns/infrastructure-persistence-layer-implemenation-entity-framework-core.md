@@ -1,56 +1,59 @@
 ---
-title: "Реализация уровня инфраструктуры сохраняемости с Entity Framework Core"
-description: "Архитектура Микрослужбами .NET для приложений .NET в контейнерах | Реализация уровня инфраструктуры сохраняемости с Entity Framework Core"
+title: "Реализация уровня сохраняемости инфраструктуры с помощью Entity Framework Core"
+description: "Архитектура микрослужб .NET для контейнерных приложений .NET | Реализация уровня сохраняемости инфраструктуры с помощью Entity Framework Core"
 keywords: "Docker, микрослужбы, ASP.NET, контейнер"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 508d60d73eb7c0f0cc2cc909613cc4f8712b4aba
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 67f89b4ee42d896497f462b80d41afff6b347e05
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Реализация уровня инфраструктуры сохраняемости с Entity Framework Core
+# <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Реализация уровня сохраняемости инфраструктуры с помощью Entity Framework Core
 
-При использовании реляционных баз данных, например SQL Server, Oracle или PostgreSQL, рекомендуемый подход заключается в реализации на уровне хранения на основе на Entity Framework (EF). EF поддерживает LINQ и предоставляет строго типизированных объектов для модели, а также упрощенное сохраняемости в базу данных.
+При использовании реляционных баз данных, таких как SQL Server, Oracle или PostgreSQL, рекомендуемый подход заключается в реализации уровня сохраняемости на основе Entity Framework (EF). EF поддерживает LINQ и предоставляет строго типизированные объекты для вашей модели, а также упрощенную сохраняемость в базу данных.
 
-Платформа Entity Framework имеет длинную историю в составе .NET Framework. При использовании .NET Core, следует также использовать Entity Framework Core, который выполняется на Windows или Linux в так же, как .NET Core. EF лежит полностью переписан платформы Entity Framework реализована с помощью намного меньше памяти и важные улучшения в производительности.
+Entity Framework имеет длинную историю в составе .NET Framework. При использовании .NET Core следует также использовать технологию Entity Framework Core, которая работает в Windows или Linux таким же образом, как .NET Core. EF Core — это полностью переработанная технология Entity Framework, реализованная с гораздо меньшими требованиями по ресурсам и важными улучшениями в производительности.
 
-## <a name="introduction-to-entity-framework-core"></a>Общие сведения об Entity Framework Core
+## <a name="introduction-to-entity-framework-core"></a>Знакомство с Entity Framework Core
 
-Core Entity Framework (EF) является упрощенным, расширяемым, и технология доступа к версии кросс платформенных популярных данных Entity Framework. Она появилась в .NET Core в середине 2016.
+Entity Framework (EF) — это упрощенная, расширяемая и кроссплатформенная версия популярной технологии для доступа к данным Entity Framework. Она появилась в .NET Core в середине 2016 г.
 
-Поскольку введение в основные EF недоступные в документации Microsoft, здесь просто содержатся ссылки на эти сведения.
+Поскольку общие сведения о EF Core уже доступны в документации Майкрософт, здесь будут просто приведены ссылки на эту информацию.
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
 -   **Entity Framework Core**
     [*https://docs.microsoft.com/ef/core/*](https://docs.microsoft.com/ef/core/)
 
--   **Приступая к работе с ASP.NET Core и Entity Framework с помощью Visual Studio**
+-   **Начало работы с ASP.NET Core и Entity Framework Core с помощью Visual Studio**
     [*https://docs.microsoft.com/aspnet/core/data/ef-mvc/*](https://docs.microsoft.com/aspnet/core/data/ef-mvc/)
 
 -   **Класс DbContext**
     [*https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext*](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext)
 
--   **Сравнение основных EF & EF6.x**
+-   **Сравнение EF Core и EF6.x**
     [*https://docs.microsoft.com/ef/efcore-and-ef6/index*](https://docs.microsoft.com/ef/efcore-and-ef6/index)
 
-## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>С точки зрения DDD инфраструктуры Entity Framework Core
+## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Инфраструктура в Entity Framework Core с точки зрения DDD
 
-С точки зрения DDD являются важной характеристикой EF является возможность использования сущности POCO домена, в терминологии EF как POCO также называется *сначала код сущности*. При использовании домена сущности POCO, ваши классы модели домена сохраняемость, следуя [сохраняемости](http://deviq.com/persistence-ignorance/) и [пропуск инфраструктуры](https://ayende.com/blog/3137/infrastructure-ignorance) принципы.
+С точки зрения DDD важной особенностью EF является возможность использования сущностей предметной области POCO, которые в терминологии EF также называются *сущностями code-first*. При использовании сущностей предметной области POCO ваши классы модели предметной области являются неустойчивыми, следуя принципам [Persistence Ignorance](http://deviq.com/persistence-ignorance/) (независимости сохраняемости) и [Infrastructure Ignorance](https://ayende.com/blog/3137/infrastructure-ignorance) (независимости инфраструктуры).
 
-В шаблонах DDD следует инкапсулируют поведение домена и правил в класс сущностей, благодаря чему можно контролировать инварианты, проверки и правила, при доступе к любой коллекции. Таким образом это не рекомендуется в ддд, чтобы разрешить общий доступ к коллекции дочерних сущностей или объектов значение. Вместо этого необходимо предоставлять методы, определяющие, как и когда поля и коллекциях свойств могут обновляться, и какое поведение, а также действия должно выполняться, когда это происходит.
+В шаблонах DDD вы должны инкапсулировать правила и поведение домена в самом классе сущностей, чтобы он мог управлять инвариантами, проверками и правилами при доступе к любой коллекции. Таким образом, в DDD не рекомендуется разрешать общий доступ к коллекциям дочерних сущностей или объектов значений. Вместо этого следует предоставить методы, определяющие, как и когда могут обновляться поля и коллекции свойств, и какое поведение и действия должны осуществляться, когда это происходит.
 
-В EF Core 1.1 для удовлетворения этих требований DDD могут иметь простых полей в сущностях вместо свойств с помощью открытые и закрытые методы задания. Если не хотите, чтобы поле сущности для будет доступен, достаточно просто создать атрибут или поле, а не свойства. Нет необходимости использовать частного задания, если вы предпочитаете такой подход очистки.
+Начиная с EF Core 1.1, для удовлетворения этих требований DDD можно создавать в своих сущностях простые поля вместо общедоступных свойств. Если вы не хотите, чтобы поле сущности было доступно извне, можно просто создать атрибут или поле вместо свойства. Можно также использовать методы задания закрытых свойств.
 
-Аналогичным образом, теперь вы можете открыть доступ только для чтения к коллекциям с помощью открытые свойства, типизированное как IEnumerable&lt;T&gt;, который резервируется членом закрытое поле для коллекции (такие как список&lt;&gt;) в вашей сущность, использующая EF для сохраняемости. Предыдущие версии платформы Entity Framework требуют наличия свойства коллекции для поддержки ICollection&lt;T&gt;, которой означает, что любому разработчику, использующему родительского класса сущности может добавлять или удалять элементы из коллекции его свойства. Чтобы можно было бы от рекомендуемых шаблонов в ддд.
+Аналогичным образом, теперь вы можете иметь доступ к коллекциям только на чтение, используя общедоступное свойство, написанное как `IReadOnlyCollection<T>`, которое поддерживается закрытым членом поля для коллекции (например `List<T>`) в вашей сущности, основанной на EF для сохраняемости. В предыдущих версиях Entity Framework требовалось наличие свойств коллекции для поддержки `ICollection<T>`, что означало, что любой разработчик, использующий родительский класс сущностей, может добавлять или удалять элементы с помощью его коллекций свойств. Эта возможность противоречила бы рекомендуемым шаблонам в DDD.
 
-Можно использовать частной коллекции при предоставлении доступа к объект IEnumerable, только для чтения, как показано в следующем примере кода:
+Вы можете использовать закрытую коллекцию при предоставлении объекта `IReadOnlyCollection<T>` только для чтения, как показано в следующем примере кода.
 
 ```csharp
 public class Order : Entity
@@ -58,9 +61,9 @@ public class Order : Entity
     // Using private fields, allowed since EF Core 1.1
     private DateTime _orderDate;
     // Other fields ...
-    private readonly List<OrderItem> _orderItems;
 
-    public IEnumerable<OrderItem> OrderItems => _orderItems.AsReadOnly();
+    private readonly List<OrderItem> _orderItems; 
+    public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
 
     protected Order() { }
 
@@ -70,44 +73,56 @@ public class Order : Entity
     }
 
     public void AddOrderItem(int productId, string productName,
-        decimal unitPrice, decimal discount,
-        string pictureUrl, int units = 1)
+                             decimal unitPrice, decimal discount,
+                             string pictureUrl, int units = 1)
     {
         // Validation logic...
-        var orderItem = new OrderItem(productId, productName, unitPrice, discount,
-            pictureUrl, units);
+
+        var orderItem = new OrderItem(productId, productName, 
+                                      unitPrice, discount,
+                                      pictureUrl, units);
         _orderItems.Add(orderItem);
     }
 }
 ```
 
-Обратите внимание, что свойство OrderItems только доступно только для чтения с помощью списка&lt;&gt;. AsReadOnly(). Этот метод создает оболочку закрытого списка только для чтения, чтобы он защищен от внешних обновлений. Это значительно дешевле, чем с помощью метода ToList, так как не включает копирование всех элементов в коллекции; Вместо этого он выполняет только для одной операции выделения кучи для экземпляра оболочки.
+Обратите внимание, что свойство `OrderItems` может быть доступно только для чтения с помощью `IReadOnlyCollection<OrderItem>`. Этот тип доступен только для чтения, поэтому он защищен от обычных внешних обновлений. 
 
-EF Core предоставляет способ для сопоставления модели домена физическую базу данных без что засоряет модели домена. Это чисто .NET POCO код, так как сопоставление это реализовано в уровне сохраняемости. В данному действию сопоставления необходимо настроить сопоставления полей для базы данных. В следующем примере метод OnModelCreating выделенный код сообщает EF ядер и доступ к свойству OrderItems через его поля.
+EF Core предоставляет способ сопоставления модели предметной области с физической базой данных без "засорения" этой модели предметной области. Это чистый код POCO .NET, так как действие сопоставления реализовано на уровне сохраняемости. В данном действии сопоставления необходимо настроить сопоставление полей с базой данных. В следующем примере метода OnModelCreating выделенный код указывает EF Core получить доступ к свойству OrderItems через его поле.
 
 ```csharp
+// At OrderingContext.cs from eShopOnContainers
 protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
-    // ...
-    modelBuilder.Entity<Order>(ConfigureOrder);
-    // Other entities ...
+   // ...
+   modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
+   // Other entities’ configuration ...
 }
 
-void ConfigureOrder(EntityTypeBuilder<Order> orderConfiguration)
+// At OrderEntityTypeConfiguration.cs from eShopOnContainers
+class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 {
-    // Other configuration ...
-    var navigation = orderConfiguration.Metadata.
-    FindNavigation(nameof(Order.OrderItems));
-    navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
-    // Other configuration ...
+    public void Configure(EntityTypeBuilder<Order> orderConfiguration)
+    {
+        orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
+        // Other configuration
+
+        var navigation = 
+              orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
+
+        //EF access the OrderItem collection property through its backing field
+        navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+
+        // Other configuration
+    }
 }
 ```
 
-При использовании полей вместо свойств сущности OrderItem сохраняется, как если бы оно находилось список&lt;OrderItem&gt; свойство. Однако он предоставляет один метод доступа (метод AddOrderItem) для добавления новых элементов в порядке. В результате поведение и данных связаны друг с другом и будет несогласованной в код приложения, использующего модель домена.
+При использовании полей вместо свойств сущность OrderItem сохраняется так же, как если бы она имела свойство List&lt;OrderItem&gt;. Однако она предоставляет единственный метод доступа `AddOrderItem` для добавления в заказ новых элементов. В результате поведение и данные оказываются связаны друг с другом и будут согласованными во всем коде приложения, использующем модель предметной области.
 
-## <a name="implementing-custom-repositories-with-entity-framework-core"></a>Реализация пользовательских репозиториев с Entity Framework Core
+## <a name="implementing-custom-repositories-with-entity-framework-core"></a>Реализация пользовательских репозиториев с помощью Entity Framework Core
 
-На уровне реализации репозитория является просто классом с кодом сохраняемости данных, координируемое единица работы (DBContext ядра EF) при выполнении обновления, как показано в следующем классе:
+На уровне реализации репозиторий является просто классом с кодом сохраняемости данных, координируемым единицей работы (DBContext в EF Core) при выполнении обновлений, как показано в следующем классе:
 
 ```csharp
 // using statements...
@@ -116,7 +131,6 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
     public class BuyerRepository : IBuyerRepository
     {
         private readonly OrderingContext _context;
-
         public IUnitOfWork UnitOfWork
         {
             get
@@ -124,70 +138,67 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
                 return _context;
             }
         }
-    }
 
-    public BuyerRepository(OrderingContext context)
-    {
-        if (context == null)
+        public BuyerRepository(OrderingContext context)
         {
-            throw new ArgumentNullException(
-                nameof(context));
+            _context = context ?? throw new ArgumentNullException(nameof(context));
         }
-        _context = context;
-    }
 
-    public Buyer Add(Buyer buyer)
-    {
-        return _context.Buyers.Add(buyer).Entity;
-    }
+        public Buyer Add(Buyer buyer)
+        {
+            return _context.Buyers.Add(buyer).Entity; 
+        }
 
-    public async Task<Buyer> FindAsync(string BuyerIdentityGuid)
-    {
-        var buyer = await _context.Buyers.Include(b => b.Payments)
-            .Where(b => b.FullName == BuyerIdentityGuid)
-            .SingleOrDefaultAsync();
-        return buyer;
+        public async Task<Buyer> FindAsync(string BuyerIdentityGuid)
+        {
+            var buyer = await _context.Buyers
+                .Include(b => b.Payments)
+                .Where(b => b.FullName == BuyerIdentityGuid)
+                .SingleOrDefaultAsync();
+
+            return buyer;
+        }
     }
 }
 ```
 
-Обратите внимание, что интерфейс IBuyerRepository поступают из уровня модели домена. Однако реализация репозитория выполняется в сохраняемости и уровень инфраструктуры.
+Обратите внимание, что интерфейс IBuyerRepository поступает из уровня модели предметной области как контракт. Однако реализация репозитория выполняется на уровне сохраняемости и инфраструктуры.
 
-EF DbContext поступает через конструктор через внедрения зависимостей. Используется совместно несколькими репозиториями внутри одной области запроса HTTP, благодаря существования по умолчанию (ServiceLifetime.Scoped) в контейнер IoC (их можно также явно задать со службами. AddDbContext&lt;&gt;).
+DbContext EF поступает через конструктор путем внедрения зависимостей. Он совместно используется несколькими репозиториями внутри одной области запроса HTTP благодаря его времени существования по умолчанию (ServiceLifetime.Scoped) в контейнере IoC (что также можно явно задать с помощью services.AddDbContext&lt;&gt;).
 
-### <a name="methods-to-implement-in-a-repository-updates-or-transactions-versus-queries"></a>Методы, реализуемые в репозитории (обновления или транзакций и запросы)
+### <a name="methods-to-implement-in-a-repository-updates-or-transactions-versus-queries"></a>Методы, реализуемые в репозитории (обновления или транзакции по отношению к запросам)
 
-В каждом классе репозитория следует разместить методы сохраняемости, обновляющих состояние сущности его связанные агрегатной функции. Помните, что имеется однозначное соответствие между статистическое выражение и его связанные репозитория. Принять во внимание, что объект сущности статистические корневой могут внедрять дочерних сущностей в его графе EF. Например покупатель может быть несколько способов оплаты связанных дочерних сущностей.
+В каждом классе репозитория следует поместить методы сохраняемости, которые обновляют состояние сущностей, содержащихся в связанном с ним агрегате. Помните, что имеется однозначное соответствие между агрегатом и связанным с ним репозиторием. Также учитывайте, что корневой объект сущности агрегата может иметь внедренные дочерние сущности в своем графе EF. Например, покупатель может иметь несколько способов оплаты в виде связанных дочерних сущностей.
 
-Поскольку подход для упорядочивания микрослужбу в eShopOnContainers также основана на CQS/CQRS, большинство запросов не реализованы в пользовательские репозитории. Разработчики имеют возможность создавать запросы и соединения, необходимые для уровня представления без ограничений, установленных для статистических выражений, пользовательские репозитории каждого статистического выражения и DDD в целом. Большинство пользовательских репозиториев, предлагаемые в данном руководстве имеют несколько обновлений или методы транзакций, но только методы запросов, необходимых для получения данных для обновления. Например репозитории BuyerRepository реализует метод FindAsync, так как приложению нужно знать, существует ли определенный покупатель перед созданием нового покупатель порядка.
+Поскольку этот подход для микрослужбы заказов в eShopOnContainers также основан на CQS/CQRS, большинство запросов не реализуется в пользовательских репозиториях. Разработчики имеют право создавать нужные им запросы и соединения для уровня представления данных без ограничений, установленных агрегатами, пользовательскими репозиториями в агрегатах и DDD в целом. Большинство пользовательских репозиториев, предлагаемых в данном руководстве, имеют несколько методов обновления или транзакций, но только те методы запросов, которые необходимы для получения обновляемых данных. Например, репозиторий BuyerRepository реализует метод FindAsync, так как приложению нужно узнать, существует ли конкретный покупатель, прежде чем создавать нового покупателя, связанного с заказом.
 
-Однако методы реальные запросов для получения данных для отправки презентации слоя или клиентского приложения реализации, как упоминалось в CQRS запросы, основанные на гибкие запросы, с помощью Dapper.
+Однако реальные методы запросов для получения данных для отправки на уровень представления данных или в клиентские приложения реализуются, как было указано, в запросах CQRS на основе гибких запросов с помощью Dapper.
 
-### <a name="using-a-custom-repository-versus-using-ef-dbcontext-directly"></a>С помощью пользовательского репозитория или непосредственно с помощью EF DbContext
+### <a name="using-a-custom-repository-versus-using-ef-dbcontext-directly"></a>Применение пользовательского репозитория по сравнению с непосредственным применением DbContext EF
 
-Класс Entity Framework DbContext основана на шаблонах единицей работы и репозитория, а также можно использовать напрямую из кода приложения, такие как с помощью контроллера ASP.NET Core MVC. То есть способ вы можете создать простой код, как микрослужбу каталога CRUD в eShopOnContainers. В случаях возникает необходимость простой кода невозможно можно непосредственно с помощью класса DbContext, как и многие разработчики.
+Класс DbContext Entity Framework основан на шаблонах Unit of Work (единицы работы) и Repository (репозитория); его можно использовать непосредственно из кода приложения, например из контроллера MVC ASP.NET Core. Именно так можно создать простейший код, как в микрослужбе каталога CRUD в eShopOnContainers. В случаях, когда требуется создать максимально простой код, вы можете захотеть напрямую воспользоваться классом DbContext, как делают многие разработчики.
 
-Однако реализация пользовательских репозиториев предоставляет несколько преимуществ при реализации более сложной микрослужбами или приложений. Единица работы и репозитория шаблоны предназначены для инкапсуляции уровень сохраняемости инфраструктуры, поэтому оно связано с уровнями модели домена приложения и. Реализация этих шаблонах позволяет упростить использование макетов репозиториев имитация доступ к базе данных.
+Однако реализация пользовательских репозиториев обеспечивает определенные преимущества при реализации более сложных микрослужб или приложений. Шаблоны Unit of Work и Repository предназначены для инкапсуляции уровня сохраняемости инфраструктуры, поэтому он отделен от уровней приложения и модели предметной области. Реализация этих шаблонов позволяет упростить использование макетов репозиториев, моделирующих доступ к базе данных.
 
-На рисунке 9-18 можно увидеть различия между не с помощью репозиториев (непосредственно с помощью EF DbContext) сравнению с репозиториев, которые облегчают макета таких репозиториев.
+На рисунке 9-18 можно увидеть различия между отсутствием использования репозиториев (применением класса DbContext EF напрямую) и использованием репозиториев, что упрощает макетирование таких репозиториев.
 
 ![](./media/image19.png)
 
-**На рисунке 9-18**. С помощью пользовательских репозиториев и простой DbContext
+**Рис. 9-18**. Применение пользовательских репозиториев по сравнению с простым DbContext
 
-Существует несколько вариантов при имитации. Удалось макета просто репозиториев или удалось макета всей единица работы. Обычно имитации просто репозиториев достаточно и сложности для выделения и макета всей единица работы обычно не требуется.
+Существует несколько вариантов макетирования. Можно макетировать только репозитории или макетировать всю единицу работы. Как правило, достаточно макетирования только репозиториев, и сложность абстрагирования и макетирования всей единицы работы обычно не требуется.
 
-Позже когда мы сосредоточим внимание на уровне приложения, вы увидите как работает внедрение зависимостей в ASP.NET Core, и его реализация при использовании репозиториев.
+Позднее, когда мы будем рассматривать уровень приложения, вы увидите, как работает внедрение зависимостей в ASP.NET Core и как оно реализуется при использовании репозиториев.
 
-Иными словами пользовательские репозитории позволяют упростить тестирование кода с модульными тестами, которые не влияет на состояние уровня данных. При выполнении тестов, которые также обращаться к реальной базы данных через Entity Framework, они не являются модульные тесты, но интеграции тестов, которые выполняются гораздо медленнее.
+Короче говоря, пользовательские репозитории позволяют упростить тестирование кода с помощью модульных тестов, на которые не влияет состояние уровня данных. Если выполняются тесты, которые также обращаются к реальной базе данных через Entity Framework, то это не модульные тесты, а интеграционные тесты, которые выполняются гораздо медленнее.
 
-Если вы использовали непосредственно DbContext, единственным вариантом нужно было бы будет для выполнения модульных тестов с помощью SQL Server в памяти с прогнозируемых данных для модульных тестов. Управлять таким же образом на уровне репозитория макетов объектов и фальшивых данных будет невозможно. Конечно вы всегда тестировать контроллеров MVC.
+Если вы использовали DbContext напрямую, то единственным вариантом мог быть запуск модульных тестов с помощью SQL Server в памяти с прогнозируемыми данными для модульных тестов. Вы не сможете таким же образом управлять макетами объектов и фиктивными данными на уровне репозитория. Конечно, вы всегда можете тестировать контроллеры MVC.
 
-## <a name="ef-dbcontext-and-iunitofwork-instance-lifetime-in-your-ioc-container"></a>Время существования экземпляра EF DbContext и IUnitOfWork в контейнер IoC
+## <a name="ef-dbcontext-and-iunitofwork-instance-lifetime-in-your-ioc-container"></a>Время существования экземпляра IUnitOfWork и DbContext EF в контейнере IoC
 
-Объект DbContext (доступный в виде объекта IUnitOfWork), необходимо быть общим для нескольких репозиториев в той же области запроса HTTP. Например, это справедливо при выполняемой операции приходится иметь дело с нескольких статистических выражений или просто потому, что вы используете несколько экземпляров репозитория. Это также необходимо упомянуть, интерфейс IUnitOfWork входит в состав домена, а не тип EF.
+Может потребоваться общий доступ к объекту DbContext (предоставляемому как объект IUnitOfWork) из нескольких репозиториев в рамках одной и той же области запроса HTTP. Например, это может требоваться, когда выполняемая операция должна иметь дело с несколькими агрегаторами, или просто потому, что вы используете несколько экземпляров репозитория. Также важно упомянуть, что интерфейс IUnitOfWork является частью уровня домена, а не типом EF Core.
 
-Для этого экземпляра объекта DbContext должна иметь время существования службы присвоено значение ServiceLifetime.Scoped. Это время жизни по умолчанию, когда регистрация DbContext с службы. AddDbContext в контейнер IoC из метода ConfigureServices файла Startup.cs файла в проекте веб-API ASP.NET Core. Это проиллюстрировано в следующем коде.
+Для этого время существования службы экземпляра объекта DbContext должно быть установлено в значение ServiceLifetime.Scoped. Это время существования по умолчанию при регистрации DbContext с помощью services.AddDbContext в контейнере IoC из метода ConfigureServices файла Startup.cs в проекте веб-API ASP.NET Core. Это проиллюстрировано в следующем коде.
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -199,24 +210,24 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
     }).AddControllersAsServices();
 
     services.AddEntityFrameworkSqlServer()
-    .AddDbContext<OrderingContext>(options =>
-    {
-        options.UseSqlServer(Configuration["ConnectionString"],
-        sqlop => sqlop.MigrationsAssembly(typeof(Startup).GetTypeInfo().
-        Assembly.GetName().Name));
-    },
-    ServiceLifetime.Scoped // Note that Scoped is the default choice
-    // in AddDbContext. It is shown here only for
-    // pedagogic purposes.
-    );
+      .AddDbContext<OrderingContext>(options =>
+      {
+          options.UseSqlServer(Configuration["ConnectionString"],
+                               sqlOptions => sqlOptions.MigrationsAssembly(typeof(Startup).GetTypeInfo().
+                                                                                    Assembly.GetName().Name));
+      },
+      ServiceLifetime.Scoped // Note that Scoped is the default choice
+                             // in AddDbContext. It is shown here only for
+                             // pedagogic purposes.
+      );
 }
 ```
 
-Не следует настраивать режим при создании экземпляра DbContext как ServiceLifetime.Transient или ServiceLifetime.Singleton.
+Режим создания экземпляра DbContext не должен быть настроен как ServiceLifetime.Transient или ServiceLifetime.Singleton.
 
-## <a name="the-repository-instance-lifetime-in-your-ioc-container"></a>Время существования экземпляра репозитория в контейнер IoC
+## <a name="the-repository-instance-lifetime-in-your-ioc-container"></a>Время существования экземпляра репозитория в контейнере IoC
 
-Аналогичным образом время существования репозитория обычно должна быть задана как области (InstancePerLifetimeScope в Autofac). Также это может быть временной (InstancePerDependency в Autofac), но служба будет более эффективным в отношении памяти, при использовании с областью времени существования.
+Аналогичным образом время существования репозитория обычно должно быть задано как scoped — ограниченное областью (InstancePerLifetimeScope в Autofac). Оно также может быть задано как transient — временное (InstancePerDependency в Autofac), но служба будет более эффективной в отношении памяти при использовании времени существования, ограниченного областью.
 
 ```csharp
 // Registering a Repository in Autofac IoC container
@@ -225,158 +236,245 @@ builder.RegisterType<OrderRepository>()
     .InstancePerLifetimeScope();
 ```
 
-Следует отметить, что время жизни singleton для репозитория может привести к вам параллелизма серьезных проблем при вашей DbContext равно времени существования (InstancePerLifetimeScope) (по умолчанию время существования для DBContext) в области видимости.
+Обратите внимание, что использование для репозитория времени существования singleton может вызвать серьезные проблемы с параллелизмом, если для DbContext установлено время существования scoped (InstancePerLifetimeScope) (время существования по умолчанию для DBContext).
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Реализация репозитория и единицы шаблонов рабочих элементов в приложении ASP.NET MVC**
-    [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/ Implementing-the-Repository-and-Unit-of-work-Patterns-in-an-ASP-NET-MVC-Application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+-   **Реализация шаблонов репозиториев и единиц работы в приложении MVC ASP.NET**
+    [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
--   **Аллен Джонатан. Стратегии реализации для репозитория с Entity Framework Dapper, шаблон и прикрепить**
+-   **Джонатан Аллен (Jonathan Allen). Стратегии реализации для шаблона репозитория в Entity Framework, Dapper и Chain**
     [*https://www.infoq.com/articles/repository-implementation-strategies*](https://www.infoq.com/articles/repository-implementation-strategies)
 
--   **Сезар де ла Торре (Cesar de la Torre). Сравнение времени существования службы контейнер ASP.NET Core IoC с областями экземпляр контейнер Autofac IoC**
-    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/ Comparing-ASP-NET-Core-IoC-Service-Life-Times-and-autofac-IoC-Instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
+-   **Сезар де ла Торре (Cesar de la Torre). Сравнение времени существования служб контейнеров IoC в ASP.NET Core с областями экземпляров контейнеров IoC в Autofac**
+    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
 ## <a name="table-mapping"></a>Сопоставление таблиц
 
-Сопоставление таблиц определяет данные таблицы должны запрашиваться из и сохранены в базе данных. Ранее было показано, как сущности домена (например, домен продукта или заказа) может использоваться для создания схемы связанной базы данных. EF строго построена на концепции *соглашения*. Соглашения о решать вопросы, например «Как имя таблицы будет?» или «какое свойство является первичным ключом?» Соглашения обычно основаны на обычные имена — например, он является типичным для первичного ключа, как свойство, которое заканчивается на идентификатор.
+Сопоставление таблиц определяет таблицы, данные которых должны запрашиваться и сохраняться в базе данных. Ранее было показано, как сущности предметной области (например, предметная область продуктов или заказов) могут использоваться для создания схемы связанной базы данных. Технология EF строго построена на концепции *соглашений*. Соглашения разрешают, например, такие вопросы, как "Каким будет имя таблицы?" или "Какое свойство является первичным ключом?" Как правило, соглашения основываются на условных именованиях — например, первичный ключ обычно является свойством, которое заканчивается на Id.
 
-По соглашению, каждая сущность будет настроен для сопоставления с таблицей с тем же именем, что DbSet&lt;TEntity&gt; свойство, которое предоставляет сущности в контексте производной. Если не DbSet&lt;TEntity&gt; значение предоставляется для заданной сущности, используется имя класса.
+По соглашению каждая сущность будет настроена для сопоставления с таблицей с именем, указанным в свойстве DbSet&lt;TEntity&gt;, которое предоставляет сущность в производном контексте. Если для конкретной сущности значение свойства DbSet&lt;TEntity&gt; не задано, то используется имя класса.
 
-### <a name="data-annotations-versus-fluent-api"></a>Заметок к данным или Fluent API
+### <a name="data-annotations-versus-fluent-api"></a>Заметки к данным и текучий API
 
-Существует множество дополнительных соглашения EF Core, и большинство из них может быть изменен с помощью заметок к данным или Fluent API-Интерфейс, реализованный в методе OnModelCreating.
+Существует множество дополнительных соглашений EF Core, и большинство из них можно изменить с помощью заметок к данным или текучего API, реализованного в методе OnModelCreating.
 
-Заметок к данным необходимо использовать в классы сущностей модели самостоятельно, что является более активное вмешательство с точки зрения DDD способом. Это происходит потому что засоряет модели с заметками данные, относящиеся к базе данных инфраструктуры. С другой стороны Fluent API является удобным способом изменить большинство соглашения и сопоставления в вашей инфраструктуре уровень сохраняемости данных, таким образом модели сущности, очистить и отделенный от инфраструктуры сохраняемости.
+Заметки к данным необходимо использовать в самих классах модели сущностей, что является более навязчивым способом с точки зрения DDD. Это связано с тем, что вы засоряете модель заметками к данным, относящимися к базе данных инфраструктуры. С другой стороны, текучий API представляет удобный способ изменения большинства соглашений и сопоставлений на уровне инфраструктуры сохраняемости данных; таким образом, модель сущностей будет чистой и отделенной от инфраструктуры сохраняемости.
 
-### <a name="fluent-api-and-the-onmodelcreating-method"></a>Fluent API и методе OnModelCreating
+### <a name="fluent-api-and-the-onmodelcreating-method"></a>Текучий API и метод OnModelCreating
 
-Как уже упоминалось, чтобы изменить сопоставления и соглашения можно использовать метод OnModelCreating класса DbContext. В следующем примере показано, как это делается в упорядочивания микрослужбу в eShopOnContainers.
+Как уже упоминалось, для изменения соглашений и сопоставлений можно использовать метод OnModelCreating класса DbContext. 
+
+Микрослужба заказов в eShopOnContainers реализует явное сопоставление и конфигурацию, когда это необходимо, как показано в следующем коде.
 
 ```csharp
+// At OrderingContext.cs from eShopOnContainers
 protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
-    //Other entities
-    modelBuilder.Entity<OrderStatus>(ConfigureOrderStatus);
-    //Other entities
+   // ...
+   modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
+   // Other entities’ configuration ...
 }
 
-void ConfigureOrder(EntityTypeBuilder<Order> orderConfiguration)
+// At OrderEntityTypeConfiguration.cs from eShopOnContainers
+class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 {
-    orderConfiguration.ToTable("orders", DEFAULT_SCHEMA);
-    orderConfiguration.HasKey(o => o.Id);
-    orderConfiguration.Property(o => o.Id).ForSqlServerUseSequenceHiLo("orderseq", DEFAULT_SCHEMA);
-    orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
-    orderConfiguration.Property<string>("Street").IsRequired();
-    orderConfiguration.Property<string>("State").IsRequired();
-    orderConfiguration.Property<string>("City").IsRequired();
-    orderConfiguration.Property<string>("ZipCode").IsRequired();
-    orderConfiguration.Property<string>("Country").IsRequired();
-    orderConfiguration.Property<int>("BuyerId").IsRequired();
-    orderConfiguration.Property<int>("OrderStatusId").IsRequired();
-    orderConfiguration.Property<int>("PaymentMethodId").IsRequired();
+    public void Configure(EntityTypeBuilder<Order> orderConfiguration)
+    {
+            orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
 
-    var navigation =
-    orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
-    // DDD Patterns comment:
-    // Set as Field (new since EF 1.1) to access
-    // the OrderItem collection property as a field
-    navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+            orderConfiguration.HasKey(o => o.Id);
 
-    orderConfiguration.HasOne(o => o.PaymentMethod)
-        .WithMany()
-        .HasForeignKey("PaymentMethodId")
-        .OnDelete(DeleteBehavior.Restrict);
-        orderConfiguration.HasOne(o => o.Buyer)
-        .WithMany()
-        .HasForeignKey("BuyerId");
-        orderConfiguration.HasOne(o => o.OrderStatus)
-        .WithMany()
-        .HasForeignKey("OrderStatusId");
+            orderConfiguration.Ignore(b => b.DomainEvents);
+
+            orderConfiguration.Property(o => o.Id)
+                .ForSqlServerUseSequenceHiLo("orderseq", OrderingContext.DEFAULT_SCHEMA);
+
+            //Address Value Object persisted as owned entity type supported since EF Core 2.0
+            orderConfiguration.OwnsOne(o => o.Address);
+
+            orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
+            orderConfiguration.Property<int?>("BuyerId").IsRequired(false);
+            orderConfiguration.Property<int>("OrderStatusId").IsRequired();
+            orderConfiguration.Property<int?>("PaymentMethodId").IsRequired(false);
+            orderConfiguration.Property<string>("Description").IsRequired(false);
+
+            var navigation = orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
+            
+            // DDD Patterns comment:
+            //Set as field (New since EF 1.1) to access the OrderItem collection property through its field
+            navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+
+            orderConfiguration.HasOne<PaymentMethod>()
+                .WithMany()
+                .HasForeignKey("PaymentMethodId")
+                .IsRequired(false)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            orderConfiguration.HasOne<Buyer>()
+                .WithMany()
+                .IsRequired(false)
+                .HasForeignKey("BuyerId");
+
+            orderConfiguration.HasOne(o => o.OrderStatus)
+                .WithMany()
+                .HasForeignKey("OrderStatusId");
+    }
 }
 ```
 
-Можно задать все сопоставления Fluent API в один и тот же метод OnModelCreating, но рекомендуется для разделения кода и имеют несколько submethods, по одному на сущности, как показано в примере. Для моделей, особенно большой он даже может рекомендуется иметь отдельным файлам исходного кода (статические классы) для настройки различных типов сущностей.
+Можно задать все сопоставления текучего API в одном и том же методе OnModelCreating, но рекомендуется разбить этот код на несколько классов конфигурации, по одному на сущность, как показано в примере. В первую очередь отдельные классы конфигурации для настройки разных типов сущностей рекомендуется использовать для особо больших моделей.
 
-Код в примере является явным. EF Core соглашения выполнить, большая часть этой автоматически, поэтому фактический код, необходимо написать для достижения то же самое будет намного меньше.
+В примере кода показано несколько явных объявлений и сопоставлений. Однако соглашения EF Core выполняют многие из этих сопоставлений автоматически, так что фактический код, который понадобится в вашем случае, может иметь меньший размер.
 
-### <a name="the-hilo-algorithm-in-ef-core"></a>Алгоритм Hi/Lo EF ядра
 
-Интересным аспектом кода в предыдущем примере является применение [алгоритм Hi/Lo](https://vladmihalcea.com/2014/06/23/the-hilo-algorithm/) в рамках стратегии создания ключей.
+### <a name="the-hilo-algorithm-in-ef-core"></a>Алгоритм Hi/Lo в EF Core
 
-Алгоритм Hi/Lo полезен в тех случаях, когда требуется уникальные ключи. В сводке алгоритм Hi-Lo присваивает уникальные идентификаторы строк таблицы пока не в зависимости от немедленно хранения строк в базе данных. Это позволяет запустить прямо сейчас, используя идентификаторы, как происходит с обычной базой данных последовательные идентификаторы.
+Интересным аспектом кода в предыдущем примере является применение [алгоритма Hi/Lo](https://vladmihalcea.com/2014/06/23/the-hilo-algorithm/) в качестве стратегии создания ключей.
 
-Алгоритм Hi/Lo описывает механизм для создания безопасного ID на стороне клиента, а не в базе данных. *Безопасный* в данном контексте означает без конфликтов. Этот алгоритм является интересные по следующим причинам:
+Алгоритм Hi/Lo удобно использовать в тех случаях, когда требуются уникальные ключи. Вкратце, алгоритм Hi-Lo присваивает строкам таблицы уникальные идентификаторы, которые не зависят от немедленного сохранения строк в базе данных. Это позволяет начинать использовать идентификаторы сразу, как это происходит с обычными последовательными идентификаторами базы данных.
 
--   Он не прерывает шаблон единицу работы.
+Алгоритм Hi/Lo описывает механизм создания безопасных идентификаторов на стороне клиента, а не в базе данных. *Безопасность* в данном контексте означает отсутствие конфликтов. Этот алгоритм представляет интерес по следующим причинам.
 
--   Не требуется выполнять циклов приема-передачи генераторы последовательности как в других СУБД.
+-   Он не нарушает шаблон единицы работы.
 
--   Он создает удобочитаемый идентификатор, в отличие от методов, которые используют идентификаторы GUID.
+-   Он не требует круговых путей, как это делают генераторы последовательностей как в других СУБД.
 
-EF Core поддерживает [HiLo](http://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) с помощью метода ForSqlServerUseSequenceHiLo, как показано в предыдущем примере.
+-   Он создает удобный для восприятия идентификатор, в отличие от методов, в которых используются идентификаторы GUID.
+
+EF Core поддерживает алгоритм [HiLo](http://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) с помощью метода ForSqlServerUseSequenceHiLo, как показано в предыдущем примере.
 
 ### <a name="mapping-fields-instead-of-properties"></a>Сопоставление полей вместо свойств
 
-С помощью функции EF Core 1.1, которая сопоставляет столбцы с полями можно не использовать какие-либо свойства в класс сущностей и просто для сопоставления столбцов таблицы с полями. Обычно используются, будет закрытым полям для любого внутреннего состояния, которые не обязательно должны быть доступны извне сущности.
+Эта функция, появившаяся в EF Core 1.1, позволяет сопоставлять столбцы с полями напрямую. Теперь существует возможность не использовать свойства в классе сущностей, а просто сопоставлять столбцы таблицы с полями. Эта возможность часто используется в закрытых полях для хранения внутреннего состояния, доступ к которому не должен осуществляться извне сущности. 
 
-EF 1.1 поддерживает сопоставление поля без связанного свойства со столбцом в базе данных. Это можно сделать с одного поля или также коллекций, такие как список&lt; &gt; поля. Эта точка упомянутая ранее, когда мы рассмотрели моделирования классы модели домена, но здесь можно увидеть, как это сопоставление выполняется с конфигурацией PropertyAccessMode.Field, выделяются в предыдущем примере кода.
+Это можно делать как с отдельными полями, так и с коллекциями, например с `List<>`. Этот момент упоминался ранее, когда мы обсуждали моделирование классов модели предметной области, но здесь можно видеть, как это сопоставление выполняется для конфигурации `PropertyAccessMode.Field`, выделенной в предыдущем коде.
 
-### <a name="using-shadow-properties-in-value-objects-for-hidden-ids-at-the-infrastructure-level"></a>С помощью замещения свойств в объектах значение скрытого удостоверений на уровне инфраструктуры
+### <a name="using-shadow-properties-in-ef-core-hidden-at-the-infrastructure-level"></a>Использование теневых свойств в EF Core, скрытых на уровне инфраструктуры
 
-Свойства, которые не существуют в модели сущности класса свойства тени EF ядра: Значения и состояния эти свойства сохраняются только в [ChangeTracker](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.changetracking.changetracker) класса на уровне инфраструктуры.
+Теневые свойства в EF Core — это свойства, которые не существуют в вашей модели классов сущностей. Значения и состояния этих свойств сохраняются только в классе [ChangeTracker](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.changetracking.changetracker) на уровне инфраструктуры.
 
-С точки зрения DDD замещения свойств — удобный способ реализации значение объектов, скрывая ID в качестве первичного ключа свойства тени. Это важно, так как объект значения не следует идентификаторов (по крайней мере, не должно быть идентификатор в уровне модели домена при формировании значения объектов). Это значит, начиная с текущей версии ядра EF EF Core у способ реализации объектов значение как [сложных типов](https://msdn.microsoft.com/library/jj680147(v=vs.113).aspx), насколько это возможно в EF 6.x. Именно поэтому в настоящее время необходимо реализовать объект значения, как сущность с Идентификатором скрытый (первичный ключ) установлено в качестве свойства тени.
 
-Как видно в [объект значение адреса](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs) в eShopOnContainers, в модели адрес отсутствует идентификатор:
+## <a name="implementing-the-specification-pattern"></a>Реализация шаблона спецификации
+
+Как говорилось ранее в разделе, посвященном проектированию, шаблон спецификации (полностью — шаблон спецификации запроса) — это шаблон предметно-ориентированного проектирования, в котором можно поместить определение запроса с дополнительной логикой сортировки и разбиения на страницы. Шаблон спецификации определяет запрос в объекте. Например, чтобы инкапсулировать постраничный запрос, который выполняет поиск некоторых продуктов, вы можете создать спецификацию PagedProduct, которая принимает необходимые входные параметры (номер страницы, размер страницы, фильтр и т. д.). Затем в любом методе репозитория (обычно в перегрузке List()) вы можете принять ISpecification и запустить ожидаемый запрос на основе этой спецификации.
+
+Пример универсального интерфейса спецификации приведен в следующем коде из [eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb). 
 
 ```csharp
-public class Address : ValueObject
+// GENERIC SPECIFICATION INTERFACE
+// https://github.com/dotnet-architecture/eShopOnWeb 
+
+public interface ISpecification<T>
 {
-    public String Street { get; private set; }
-    public String City { get; private set; }
-    public String State { get; private set; }
-    public String Country { get; private set; }
-    public String ZipCode { get; private set; }
-    //Constructor initializing, etc
+    Expression<Func<T, bool>> Criteria { get; }
+    List<Expression<Func<T, object>>> Includes { get; }
+    List<string> IncludeStrings { get; }
 }
 ```
 
-Но на самом деле, необходимо указать ИД таким образом, чтобы основные EF возможность сохранить эти данные в таблицах базы данных. Что мы делаем в методе ConfigureAddress [OrderingContext.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Infrastructure/OrderingContext.cs) класса на уровне инфраструктуры, поэтому мы не засоряет моделью домена с кодом EF инфраструктуры.
+Реализация базового класса универсальной спецификации выглядит следующим образом.
 
 ```csharp
-void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
+// GENERIC SPECIFICATION IMPLEMENTATION (BASE CLASS)
+// https://github.com/dotnet-architecture/eShopOnWeb
+ 
+public abstract class BaseSpecification<T> : ISpecification<T>
 {
-    addressConfiguration.ToTable("address", DEFAULT_SCHEMA);
-    // DDD pattern comment:
-    // Implementing the Address ID as a shadow property, because the
-    // address is a value object and an identity is not required for a
-    // value object
-    // EF Core just needs the ID so it can store it in a database table
-    // See: https://docs.microsoft.com/ef/core/modeling/shadow-properties
-    addressConfiguration.Property<int>("Id").IsRequired();
-    addressConfiguration.HasKey("Id");
+    public BaseSpecification(Expression<Func<T, bool>> criteria)
+    {
+        Criteria = criteria;
+    }
+    public Expression<Func<T, bool>> Criteria { get; }
+
+    public List<Expression<Func<T, object>>> Includes { get; } = 
+                                           new List<Expression<Func<T, object>>>();
+
+    public List<string> IncludeStrings { get; } = new List<string>();
+ 
+    protected virtual void AddInclude(Expression<Func<T, object>> includeExpression)
+    {
+        Includes.Add(includeExpression);
+    }
+    
+    // string-based includes allow for including children of children
+    // e.g. Basket.Items.Product
+    protected virtual void AddInclude(string includeString)
+    {
+        IncludeStrings.Add(includeString);
+    }
 }
 ```
+
+Следующая спецификация загружает одну сущность корзины, заданную идентификатором корзины или идентификатором покупателя, которому принадлежит корзина. Она будет [безотложно загружать](https://docs.microsoft.com/en-us/ef/core/querying/related-data) коллекцию Items корзины.
+
+```csharp
+// SAMPLE QUERY SPECIFICATION IMPLEMENTATION
+
+public class BasketWithItemsSpecification : BaseSpecification<Basket>
+{
+    public BasketWithItemsSpecification(int basketId)
+        : base(b => b.Id == basketId)
+    {
+        AddInclude(b => b.Items);
+    }
+    public BasketWithItemsSpecification(string buyerId)
+        : base(b => b.BuyerId == buyerId)
+    {
+        AddInclude(b => b.Items);
+    }
+}
+```
+
+И, наконец, ниже вы видите, как универсальный репозиторий EF может использовать такую спецификацию для фильтрации и безотложной загрузки данных, связанных с типом T заданной сущности.
+
+```csharp
+// GENERIC EF REPOSITORY WITH SPECIFICATION
+// https://github.com/dotnet-architecture/eShopOnWeb
+
+public IEnumerable<T> List(ISpecification<T> spec)
+{
+    // fetch a Queryable that includes all expression-based includes
+    var queryableResultWithIncludes = spec.Includes
+        .Aggregate(_dbContext.Set<T>().AsQueryable(),
+            (current, include) => current.Include(include));
+ 
+    // modify the IQueryable to include any string-based include statements
+    var secondaryResult = spec.IncludeStrings
+        .Aggregate(queryableResultWithIncludes,
+            (current, include) => current.Include(include));
+ 
+    // return the result of the query using the specification's criteria expression
+    return secondaryResult
+                    .Where(spec.Criteria)
+                    .AsEnumerable();
+}
+```
+Помимо инкапсуляции логики фильтрации, эта спецификация может указывать форму возвращаемых данных, включая свойства, которые следует заполнить. 
+
+Хотя не рекомендовалось возвращать IQueryable из репозитория, совершенно нормально использовать их в репозитории для создания набора результатов. Вы видели применение этого подхода в методе List выше, где промежуточные выражения IQueryable использовались для построения списка Includes запроса перед выполнением запроса с условиями спецификации в последней строке.
+
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Таблица сопоставления**
+-   **Сопоставление таблиц**
     [*https://docs.microsoft.com/ef/core/modeling/relational/tables*](https://docs.microsoft.com/ef/core/modeling/relational/tables)
 
--   **Использовать для создания ключей с Entity Framework Core HiLo**
+-   **Использование алгоритма HiLo для создания ключей в Entity Framework Core**
     [*http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/*](http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/)
 
--   **Резервного поля**
+-   **Резервные поля**
     [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
 
--   **Стив Смит. Инкапсулированный коллекций в Entity Framework Core**
+-   **Стив Смит (Steve Smith). Инкапсулированные коллекции в Entity Framework Core**
     [*http://ardalis.com/encapsulated-collections-in-entity-framework-core*](http://ardalis.com/encapsulated-collections-in-entity-framework-core)
 
--   **Скрывать свойства**
+-   **Теневые свойства**
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
+-   **Шаблон спецификации**
+    [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
+    
 
 >[!div class="step-by-step"]
-[Предыдущие] (инфраструктуры сохраняемости слоя design.md) [Далее] (nosql-базы данных сохраняемости infrastructure.md)
+[Назад] (infrastructure-persistence-layer-design.md) [Далее] (nosql-database-persistence-infrastructure.md)

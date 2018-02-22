@@ -1,30 +1,35 @@
 ---
-title: "Реализация событий шины с помощью RabbitMQ для среды разработки или тестирования"
-description: "Архитектура Микрослужбами .NET для приложений .NET в контейнерах | Реализация событий шины с помощью RabbitMQ для среды разработки или тестирования"
+title: "Реализация шины событий с помощью RabbitMQ для среды разработки или тестирования"
+description: "Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Реализация шины событий с помощью RabbitMQ для среды разработки или тестирования"
 keywords: "Docker, микрослужбы, ASP.NET, контейнер"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: f58d355b6f5fd31a21791d3b072c77f70f90c387
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3505cb993c736165d4aff4ce8fad38cfa14ed417
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Реализация событий шины с помощью RabbitMQ для среды разработки или тестирования
+# <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Реализация шины событий с помощью RabbitMQ для среды разработки или тестирования
 
-Нам необходимо начать с о том, что при создании вашего пользовательского события шина на RabbitMQ, выполняющийся в контейнере, как и приложение eShopOnContainers, его следует использовать только для разработки и тестовых средах. Не следует использовать его для производственной среды, если вы создаете его как часть рабочей среде service bus. Готовый важных возможностей, коммерческих служебной шины имеет могут отсутствовать шины простое пользовательское событие.
+Начать следует с того, что если вы создаете пользовательскую шину событий на основе RabbitMQ в контейнере, как это делается в приложении eShopOnContainers, ее следует использовать только в средах разработки и тестирования. Ее не следует применять в рабочей среде, если только вы не разрабатываете ее в рамках служебной шины, готовой к развертыванию в рабочей среде. Простая пользовательская шина событий может быть лишена многих критически важных для рабочей среды возможностей, которыми обладают коммерческие служебные шины.
 
-Пользовательская реализация eShopOnContainers шины события, по сути, представляет библиотеку с помощью RabbitMQ API. Реализация позволяет микрослужбами подписаться на события, публиковать события и получать события, как показано на рисунке 8-21.
+Одна из пользовательских реализаций шины событий в eShopOnContainers по сути представляет собой библиотеку, использующую интерфейс API RabbitMQ (есть и еще одна реализация на основе служебной шины Azure). 
+
+Реализация шины событий с помощью RabbitMQ позволяет микрослужбам подписываться на события, публиковать и принимать их, как показано на рисунке 8-21.
 
 ![](./media/image22.png)
 
-**На рисунке 8-21.** Реализация RabbitMQ шине событий
+**Рис. 8-21**. Реализация шины событий на основе RabbitMQ
 
-В коде класс EventBusRabbitMQ реализует универсальный интерфейс IEventBus. Следующий пример основан на внедрение зависимостей так, что можно менять из этой версии для разработки и тестирования в рабочей версии.
+В коде класс EventBusRabbitMQ реализует универсальный интерфейс IEventBus. Для этого применяется внедрение зависимостей, что позволяет переходить от этой версии для разработки и тестирования к рабочей версии.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -33,11 +38,11 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
     //...
 ```
 
-Реализация RabbitMQ шиной образец разработки и тестирования событий является стандартный код. При этом приходится обрабатывать соединение с сервером RabbitMQ и выполнять код для публикации событий сообщение в очереди. Он также должен реализовать словарь коллекций интеграции обработчиков событий для каждого типа события; Эти типы событий может иметь разные подписок для каждого получателя микрослужбу и другой экземпляр, как показано на рисунке 8-21.
+Реализация образца шины событий для разработки и тестирования на основе RabbitMQ представляет собой стандартный код. Она должна обрабатывать подключение к серверу RabbitMQ и предоставлять код для публикации события сообщения в очередях. Кроме того, должен быть реализован словарь коллекций, содержащий обработчики событий интеграции для каждого типа событий. Для каждого из этих типов событий могут применяться разные способы создания экземпляра и подписки для каждой микрослужбы-получателя, как показано на рисунке 8-21.
 
-## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>Реализация простой метод с RabbitMQ "публикации"
+## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>Реализация простого метода публикации с помощью RabbitMQ
 
-Следующий код является частью реализации eShopOnContainers событий шины RabbitMQ, поэтому обычно не нужно закодировать, за исключением усовершенствования. Код получает подключение и канал RabbitMQ, создает сообщение и затем публикует сообщение в очередь.
+Приведенный ниже код представляет собой часть упрощенной реализации шины событий для RabbitMQ, которая улучшена в [реальном коде](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) проекта eShopOnContainers. Изменять этот код обычно не нужно, если в него не требуется внести улучшения. Код получает соединение и канал с RabbitMQ, создает сообщение, а затем публикует его в очереди.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -65,45 +70,51 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 }
 ```
 
-[Фактический код](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) публикации метод в приложении eShopOnContainers повышается с помощью [Polly](https://github.com/App-vNext/Polly) повторите политику, которая повторных определенное число раз в случае, если контейнер RabbitMQ — не готов. Это может произойти, когда docker составления запускается контейнеры; Например контейнер RabbitMQ начать медленнее, чем другие контейнеры.
+[Реальный код](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) метода Publish в приложении eShopOnContainers улучшен с помощью политики повтора [Polly](https://github.com/App-vNext/Polly), которая пытается выполнить задачу повторно некоторое число раз, если контейнер RabbitMQ не готов. Это может произойти, если контейнеры запускаются с помощью docker-compose. Например, контейнер RabbitMQ может запускаться медленнее других.
 
-Как упоминалось ранее, существует множество возможных конфигураций в RabbitMQ, поэтому этот код следует использовать только для сред разработки и тестирования.
+Как было сказано ранее, в RabbitMQ возможно множество конфигураций, поэтому этот код следует использовать только в средах разработки и тестирования.
 
-## <a name="implementing-the-subscription-code-with-the-rabbitmq-api"></a>Реализация кода подписки с помощью API RabbitMQ
+## <a name="implementing-the-subscription-code-with-the-rabbitmq-api"></a>Реализация кода подписки с помощью интерфейса API RabbitMQ
 
-Как опубликовать кодом, следующий код — это упрощение часть реализации шины событий для RabbitMQ. Опять же обычно не необходимо изменить его, если он повышается.
+Так же как и в случае с кодом публикации, приведенный ниже код представляет собой часть упрощенной реализации шины событий для RabbitMQ. Изменять его также обычно не нужно, если его не требуется улучшить.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
 {
     // Member objects and other methods ...
     // ...
-    public void Subscribe<T>(IIntegrationEventHandler<T> handler)
+
+    public void Subscribe<T, TH>()
         where T : IntegrationEvent
+        where TH : IIntegrationEventHandler<T>
     {
-        var eventName = typeof(T).Name;
-        if (_handlers.ContainsKey(eventName))
+        var eventName = _subsManager.GetEventKey<T>();
+        
+        var containsKey = _subsManager.HasSubscriptionsForEvent(eventName);
+        if (!containsKey)
         {
-            _handlers[eventName].Add(handler);
+            if (!_persistentConnection.IsConnected)
+            {
+                _persistentConnection.TryConnect();
+            }
+
+            using (var channel = _persistentConnection.CreateModel())
+            {
+                channel.QueueBind(queue: _queueName,
+                                    exchange: BROKER_NAME,
+                                    routingKey: eventName);
+            }
         }
-        else
-        {
-            var channel = GetChannel();
-            channel.QueueBind(queue: _queueName,
-                exchange: _brokerName,
-                routingKey: eventName);
-            _handlers.Add(eventName, new List<IIntegrationEventHandler>());
-            _handlers[eventName].Add(handler);
-            _eventTypes.Add(typeof(T));
-        }
+
+        _subsManager.AddSubscription<T, TH>();
     }
 }
 ```
 
-Каждый тип событий имеет связанные канала для получения событий из RabbitMQ. Может иметь любое количество обработчиков событий каждого типа событий и канала при необходимости.
+С каждым типом событий связан канал для получения событий из RabbitMQ. Для каждого канала и типа событий может быть столько обработчиков событий, сколько требуется.
 
-Метод Subscribe принимает объект IIntegrationEventHandler, который похож на метод обратного вызова в текущем микрослужбу, и его связанный объект IntegrationEvent. Затем код добавляет в список обработчиков событий, которые может включать каждого типа события интеграции на клиентом микрослужбу этого обработчика событий. Если клиентский код не уже подписался на событие, код создает канал для типа событий, он может получать события в стиле push из RabbitMQ при публикации события из любой другой службы.
+Метод Subscribe принимает объект IIntegrationEventHandler, который похож на метод обратного вызова в текущей микрослужбе, а также связанный с ним объект IntegrationEvent. Затем добавляется обработчик событий в список обработчиков событий, которые может иметь каждый тип событий интеграции в клиентской микрослужбе. Если код клиента еще не подписался на событие, для данного типа событий создается канал, который позволяет получать события из RabbitMQ принудительным образом, когда они публикуются из любой другой службы.
 
 
 >[!div class="step-by-step"]
-[Предыдущие] (интеграция событие основе микрослужбу communications.md) [Далее] (подписаться events.md)
+[Назад] (integration-event-based-microservice-communications.md) [Далее] (subscribe-events.md)

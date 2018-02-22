@@ -1,28 +1,33 @@
 ---
 title: "Использование классов перечисления вместо типов перечисления"
-description: "Архитектура Микрослужбами .NET для приложений .NET в контейнерах | Использование классов перечисления вместо типов перечисления"
+description: "Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Использование классов перечисления вместо типов перечисления"
 keywords: "Docker, микрослужбы, ASP.NET, контейнер"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 1745198720fd12a9d26aab2d2afb2c5dd6b6b49d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4b190ee9dde5628bf16fe9c483d3636539c29361
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-enumeration-classes-instead-of-enum-types"></a>Использование классов перечисления вместо типов перечисления
 
-[Перечисления](https://msdn.microsoft.com/en-us/library/sbbt4032.aspx) (*перечисления* сокращенно) — это язык тонкой оболочкой целочисленный тип. Может потребоваться ограничить их использование до при сохранении одного значения из закрытых набор значений. Хорошими примерами могут классификации на основе пола (например, Мужской, Женский, неизвестный) или размеров (S, M, L, XL). С помощью перечисления для потока управления или более надежными абстракции может быть [кода Запах](http://deviq.com/code-smells/). Использование этого типа приведет к уязвимости кода с многих операторах потока управления, проверка значений перечисления.
+[Перечисления](../../../../docs/csharp/language-reference/keywords/enum.md) (или *типы перечисления*) — это тонкая языковая оболочка вокруг целочисленного типа. Лучше всего использовать их при сохранении одного значения из закрытого набора значений. Хорошим примером является классификация по полу (например, мужской, женский, неизвестно) или размеру (малый, средний, большой). Использование перечислений для потока управления или более устойчивых абстракций может быть [признаком плохого кода](http://deviq.com/code-smells/). При таком использовании код будет недолговечным, поскольку множество операторов потока управления будут проверять значения перечисления.
 
-Вместо этого можно создать перечисления классов, обеспечивающих широкие возможности объектно ориентированного языка. Однако это не критична и во многих случаях для простоты можно по-прежнему использовать обычных перечислений в случае предпочтения.
+Вместо этого можно создавать классы перечисления, позволяющие использовать широкие возможности объектно-ориентированного языка.
 
-## <a name="implementing-enumeration-classes"></a>Реализация классов перечисления
+Как правило, это не критично, и для простоты вы можете по-прежнему использовать обычные [типы перечисления](../../../../docs/csharp/language-reference/keywords/enum.md), если вам так удобно.
 
-Упорядочивания микрослужбу в eShopOnContainers предоставляет реализацию базового класса пример перечисления, как показано в следующем примере:
+## <a name="implementing-an-enumeration-base-class"></a>Применение базового класса перечисления
+
+Микрослужба для заказа в eShopOnContainers содержит образец базового класса перечисления, как показано на следующем примере:
 
 ```csharp
 public abstract class Enumeration : IComparable
@@ -83,7 +88,7 @@ public abstract class Enumeration : IComparable
 }
 ```
 
-Этот класс можно использовать как тип в любой сущности или значение объекта, как для следующий класс CardType перечисления.
+Этот класс можно использовать как тип в любой сущности или объекте значения, как в следующем классе перечисления CardType:
 
 ```csharp
 public class CardType : Enumeration
@@ -99,7 +104,6 @@ public class CardType : Enumeration
     {
     }
 
-
     public static IEnumerable<CardType> List()
     {
         return new[] { Amex, Visa, MasterCard };
@@ -110,23 +114,23 @@ public class CardType : Enumeration
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Перечисления злонамеренный — обновление**
+-   **Enum’s are evil—update**
     [*http://www.planetgeek.ch/2009/07/01/enums-are-evil/*](http://www.planetgeek.ch/2009/07/01/enums-are-evil/)
 
--   **Дэниела Hardman. Порядок перечисления распределения болезни — И как ее исправить**
+-   **Дэниэл Хардман (Daniel Hardman). How Enums Spread Disease — And How To Cure It**
     [*https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/*](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)
 
--   **Джимми Богард (Jimmy Bogard). Перечисление классов**
+-   **Джимми Богард (Jimmy Bogard). Enumeration classes**
     [*https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/*](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)
 
--   **Стив Смит. Альтернативные варианты перечислений в C#**
+-   **Стив Смит (Steve Smith). Enum Alternatives in C#**
     [*http://ardalis.com/enum-alternatives-in-c*](http://ardalis.com/enum-alternatives-in-c)
 
 -   **Enumeration.cs.** Базовый класс перечисления в eShopOnContainers [ *https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
 
--   **CardType.cs**. Пример перечисления класса в eShopOnContainers.
-    [*https://github.com/DotNet/eShopOnContainers/BLOB/master/src/Services/Ordering/Ordering.domain/AggregatesModel/BuyerAggregate/CardType.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)
+-   **CardType.cs**. Пример класса перечисления в eShopOnContainers.
+    [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)
 
 
 >[!div class="step-by-step"]
-[Предыдущие] (реализация — значение objects.md) [Далее] (домен модели слоя validations.md)
+[Назад] (implement-value-objects.md) [Далее] (domain-model-layer-validations.md)

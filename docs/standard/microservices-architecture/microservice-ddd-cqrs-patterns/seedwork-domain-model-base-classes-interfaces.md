@@ -1,43 +1,46 @@
 ---
-title: "Seedwork (многократно используемые базовые классы и интерфейсы для модели домена)"
-description: "Архитектура Микрослужбами .NET для приложений .NET в контейнерах | Seedwork (многократно используемые базовые классы и интерфейсы для модели домена)"
+title: "Seedwork (многократно используемые базовые классы и интерфейсы для модели предметной области)"
+description: "Архитектура микрослужб .NET для контейнерных приложений .NET | Seedwork (многократно используемые базовые классы и интерфейсы для модели предметной области)"
 keywords: "Docker, микрослужбы, ASP.NET, контейнер"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 17602d94ea167997389a77f0d2358326258a8219
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: aba336676a558f50a2669eb3ca096effb8387916
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (многократно используемые базовые классы и интерфейсы для модели домена)
+# <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (многократно используемые базовые классы и интерфейсы для модели предметной области)
 
-Папка решения содержит *SeedWork* папки. *SeedWork* папка содержит пользовательские базовые классы, которые можно использовать в качестве базы для вашего домена сущностей и объектов значение. Используйте эти базовые классы, поэтому нет избыточный код в класс объекта для каждого домена. Папка для этих типов классов называется *SeedWork* , а не то, как *Framework*. Он вызывается *SeedWork* , так как папка содержит только небольшое подмножество многократно используемые классы, которые действительно не может считаться платформу. *Seedwork* термин введенный [Майкла Физерса](http://www.artima.com/forums/flat.jsp?forum=106&thread=8826) и Кроме того, [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) , но можно также назвать эту папку Общие, SharedKernel, или же.
+В папке решения имеется папка *SeedWork*. В папке*SeedWork* содержатся пользовательские базовые классы, которые можно использовать в качестве основы для сущностей предметной области и объектов значений. Используйте эти базовые классы, чтобы не было избыточного кода в классе объектов каждого домена. Папка для этих типов классов называется *SeedWork*, а не как-нибудь похоже на *Framework*. Эта папка называется *SeedWork*, так как в ней содержится только небольшое подмножество многократно используемых классов, которое в действительности не может считаться структурой. Термин *Seedwork* был введен [Майклом Фезерсом (Michael Feathers)](http://www.artima.com/forums/flat.jsp?forum=106&thread=8826) и получил распространение благодаря [Мартину Фаулеру (Martin Fowler)](https://martinfowler.com/bliki/Seedwork.html), но можно также назвать эту папку Common, SharedKernel или аналогичным образом.
 
-Рис. 9-12 показывает классы, формирующие seedwork модели домена в микрослужбу порядка сортировки. Он имеет несколько пользовательских базовых классов сущностей, ValueObject и перечисления, а также несколько интерфейсов. Эти интерфейсы (IRepository и IUnitOfWork) уровень инфраструктуры сообщают о том, что должен быть реализован. Эти интерфейсы также используются через внедрения зависимости от уровня приложения.
+На рисунке 9-12 показаны классы, формирующие набор seedwork модели предметной области в микрослужбе заказов. В нем имеется несколько пользовательских базовых классов, таких как Entity, ValueObject и Enumeration, а также несколько интерфейсов. Эти интерфейсы (IRepository и IUnitOfWork) информируют уровень инфраструктуры о том, что должно быть реализовано. Эти интерфейсы также используются через внедрение зависимостей из прикладного уровня.
 
 ![](./media/image13.PNG)
 
-**Рис. 9-12**. Образец набора домена модели «seedwork» базовые классы и интерфейсы
+**Рис. 9-12**. Пример набора базовых классов и интерфейсов "seedwork" модели предметной области
 
-Это тип, копировать и вставить многократного использования, многие разработчики совместно использовать проектов, не формальных framework. Может иметь seedworks в любой уровень или в библиотеке. Тем не менее если набор классов и интерфейсов получает достаточно большой, может потребоваться создание одной библиотеке классов.
+Это разновидность копирования и вставки, которую многие разработчики используют в проектах, а не формальная структура. Вы можете иметь наборы seedwork на любом уровне или в любой библиотеке. Однако если набор классов и интерфейсов становится достаточно большим, вам может понадобиться создать единую библиотеку классов.
 
-## <a name="the-custom-entity-base-class"></a>Пользовательские сущности базового класса
+## <a name="the-custom-entity-base-class"></a>Пользовательский базовый класс Entity
 
-Ниже приведен пример базового класса сущности расположения кода, который может использоваться так же, как любой сущности домена, такие как идентификатор сущности, [операторы равенства](https://msdn.microsoft.com/en-us/library/c35t2ffz.aspx)и т. д.
+Следующий код представляет пример базового класса Entity, где можно разместить код, который может многократно использоваться тем же способом в любой сущности предметной области, например идентификатор сущности, [операторы равенства](/cpp/cpp/equality-operators-equal-equal-and-exclpt-equal), список событий предметной области по сущностям и т. п.
 
 ```csharp
-// ENTITY FRAMEWORK CORE 1.1
+// COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)
 public abstract class Entity
 {
     int? _requestedHashCode;
-    int _Id;
-
-    public virtual int Id
+    int _Id;    
+    private List<INotification> _domainEvents;
+    public virtual int Id 
     {
         get
         {
@@ -47,6 +50,18 @@ public abstract class Entity
         {
             _Id = value;
         }
+    }
+
+    public List<INotification> DomainEvents => _domainEvents;        
+    public void AddDomainEvent(INotification eventItem)
+    {
+        _domainEvents = _domainEvents ?? new List<INotification>();
+        _domainEvents.Add(eventItem);
+    }
+    public void RemoveDomainEvent(INotification eventItem)
+    {
+        if (_domainEvents is null) return;
+        _domainEvents.Remove(eventItem);
     }
 
     public bool IsTransient()
@@ -68,13 +83,13 @@ public abstract class Entity
         else
             return item.Id == this.Id;
     }
-  
+
     public override int GetHashCode()
     {
         if (!IsTransient())
         {
             if (!_requestedHashCode.HasValue)
-                _requestedHashCode = this.Id.GetHashCode() \^ 31;
+                _requestedHashCode = this.Id.GetHashCode() ^ 31; 
             // XOR for random distribution. See:
             // http://blogs.msdn.com/b/ericlippert/archive/2011/02/28/guidelines-and-rules-for-gethashcode.aspx
             return _requestedHashCode.Value;
@@ -82,7 +97,6 @@ public abstract class Entity
         else
             return base.GetHashCode();
     }
-
     public static bool operator ==(Entity left, Entity right)
     {
         if (Object.Equals(left, null))
@@ -90,7 +104,6 @@ public abstract class Entity
         else
             return left.Equals(right);
     }
-
     public static bool operator !=(Entity left, Entity right)
     {
         return !(left == right);
@@ -98,22 +111,32 @@ public abstract class Entity
 }
 ```
 
-## <a name="repository-contracts-interfaces-in-the-domain-model-layer"></a>Репозиторий контрактов (интерфейсы), в уровне модели домена
+Предыдущий код, использующий список событий предметной области по сущностям, будет рассматриваться в следующих разделах при изучении событий предметной области. 
 
-Репозиторий контракты являются просто интерфейсы платформы .NET, представляющие контрактом требований репозиториями для каждого статистического выражения. Сами репозиториями с EF основного кода или другие зависимости инфраструктуры и кодом, не должен быть реализован в пределах модели домена; репозиториями только должен реализовывать интерфейсы, определенных пользователем.
+## <a name="repository-contracts-interfaces-in-the-domain-model-layer"></a>Контракты репозиториев (интерфейсы) на уровне модели предметной области
 
-Разделенные интерфейс является шаблон, связанные с такой подход (разместите интерфейсы репозитория в уровне модели домена). Как [описано](http://www.martinfowler.com/eaaCatalog/separatedInterface.html) по Martin Fowler «интерфейс Separated используется для определения интерфейса в одном пакета, но реализовать его в другой. Таким образом клиент, который требуется зависимостей на интерфейс может быть малейшего реализации.»
+Контракты репозиториев являются просто интерфейсами .NET, выражающими требования контрактов репозиториев, которые должны использоваться для каждого агрегата. 
 
-Следующий шаблон запятыми интерфейс позволяет на уровне приложения (в данном случае проект веб-API для микрослужбу) на зависимость для требований, которые определены в модели домена, а не прямой зависимости инфраструктуры и сохраняемости слой. Кроме того, можно использовать для изоляции реализацию, которая реализована в инфраструктуре внедрения зависимостей и уровень сохраняемости с помощью репозиториев.
+Сами по себе репозитории, с кодом EF Core или с любыми другими зависимостями инфраструктуры и кодом (Linq, SQL и т. п.), не должны реализовываться в рамках модели предметной области; репозитории должны только реализовывать определенные вами интерфейсы. 
 
-Например в следующем примере с помощью интерфейса IOrderRepository определяется какие операции OrderRepository класс должен реализовывать на уровне инфраструктуры. В текущей реализации приложения код просто необходимо добавить порядок в базе данных, так как запросы являются следующие разбиение CQS подход и обновления заказов не реализована.
+С этим подходом (размещение интерфейсов репозиториев на уровне модели предметной области) связан шаблон Separated Interface (разделенного интерфейса). Как [объяснил](http://www.martinfowler.com/eaaCatalog/separatedInterface.html) Мартин Фаулер, "используйте шаблон Separated Interface для определения интерфейса в одном пакете и реализации его в другом. Таким образом, клиент, которому требуется зависимость от интерфейса, может ничего не знать о реализации".
+
+Использование шаблона Separated Interface позволяет прикладному уровню (в данном случае это проект веб-API для микрослужбы) иметь зависимость от требований, определенных в модели предметной области, но не прямую зависимость от уровня инфраструктуры или существования. Кроме того, вы можете использовать внедрение зависимостей для изоляции реализации, которая реализована на уровне инфраструктуры или существования с помощью репозиториев.
+
+Например, в следующем примере с интерфейсом IOrderRepository определяется, какие операции класс OrderRepository должен будет реализовывать на уровне инфраструктуры. В текущей реализации приложения код должен просто добавлять или обновлять заказы в базе данных, так как согласно упрощенному подходу CQRS запросы разделяются.
 
 ```csharp
+// Defined at IOrderRepository.cs
 public interface IOrderRepository : IRepository<Order>
 {
     Order Add(Order order);
+        
+    void Update(Order order);
+
+    Task<Order> GetAsync(int orderId);
 }
 
+// Defined at IRepository.cs (Part of the Domain Seedwork)
 public interface IRepository<T> where T : IAggregateRoot
 {
     IUnitOfWork UnitOfWork { get; }
@@ -122,9 +145,9 @@ public interface IRepository<T> where T : IAggregateRoot
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Мартин Фоулер (Martin Fowler). Интерфейс, разделенных запятыми. ** 
-     [ *http://www.martinfowler.com/eaaCatalog/separatedInterface.html*](http://www.martinfowler.com/eaaCatalog/separatedInterface.html%20)
+-   **Мартин Фоулер (Martin Fowler). Шаблон Separated Interface.** 
+     [ *http://www.martinfowler.com/eaaCatalog/separatedInterface.html*](http://www.martinfowler.com/eaaCatalog/separatedInterface.html)
 
 
 >[!div class="step-by-step"]
-[Предыдущие] (net-core микрослужбу домена model.md) [Далее] (objects.md реализуйте значение)
+[Назад] (net-core-microservice-domain-model.md) [Далее] (implement-value-objects.md)

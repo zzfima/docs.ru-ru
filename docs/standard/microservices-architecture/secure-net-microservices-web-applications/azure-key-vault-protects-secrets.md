@@ -1,6 +1,6 @@
 ---
-title: "С помощью хранилища ключей Azure для защиты секретной информации во время производства"
-description: "Архитектура Микрослужбами .NET для приложений .NET в контейнерах | С помощью хранилища ключей Azure для защиты секретной информации во время производства"
+title: "Использование Azure Key Vault для защиты секретов в рабочей среде"
+description: "Архитектура микрослужб .NET для контейнерных приложений .NET | Использование Azure Key Vault для защиты секретов в рабочей среде"
 keywords: "Docker, микрослужбы, ASP.NET, контейнер"
 author: mjrousos
 ms.author: wiwagn
@@ -8,32 +8,35 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 7f922997e8d0c63e206cd68f4efda14985c86b72
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cb289c7361362c225eac8b9898bac276c4b623b4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>С помощью хранилища ключей Azure для защиты секретной информации во время производства
+# <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Использование Azure Key Vault для защиты секретов в рабочей среде
 
-Секретные данные хранятся в переменных среды или средством секрет Manager по-прежнему хранятся локально и на компьютере в незашифрованном виде. — Это более безопасный вариант для хранения секретов [хранилище ключей Azure](https://azure.microsoft.com/services/key-vault/), который предоставляет безопасное централизованного хранения для хранения, ключи и секретные коды.
+Секреты, которые сохраняются в переменных среды или с помощью диспетчера секретов, хранятся на компьютере в локальном и незашифрованном виде. Более безопасный способ хранения секретов — хранилище [Azure Key Vault](https://azure.microsoft.com/services/key-vault/), которое предоставляет безопасное централизованное расположение для хранения ключей и секретов.
 
-Пакет Microsoft.Extensions.Configuration.AzureKeyVault позволяет приложению ASP.NET Core для считывания данных конфигурации из хранилища ключей Azure. Чтобы начать использовать секретные данные из хранилища ключей Azure, выполните следующие действия.
+С помощью пакета Microsoft.Extensions.Configuration.AzureKeyVault приложение ASP.NET Core может считывать сведения о конфигурации из Azure Key Vault. Чтобы приступить к работе с секретами из Azure Key Vault, выполните следующие действия:
 
-Во-первых необходимо зарегистрируйте приложение как приложение Azure AD. (Доступ к ключа хранилища осуществляется с Azure AD). Это можно сделать с помощью портала управления Azure.
+Во-первых, зарегистрируйте свое приложение как приложение Azure AD. (Доступом к хранилищам ключей управляет Azure AD.) Это можно сделать с помощью портала управления Azure.
 
-Кроме того, если требуется, чтобы приложение для проверки подлинности с помощью сертификата вместо секрета пароль или клиента, можно использовать [New AzureRmADApplication](https://docs.microsoft.com/powershell/resourcemanager/azurerm.resources/v3.3.0/new-azurermadapplication) командлета PowerShell. Сертификат, который зарегистрирован в хранилище ключей Azure должен только открытый ключ. (Приложение будет использовать закрытый ключ).
+Кроме того, если приложение должно проходить проверку подлинности с помощью сертификата, а не с помощью пароля или секрета клиента, можете использовать командлет PowerShell [New-AzureRmADApplication](https://docs.microsoft.com/powershell/resourcemanager/azurerm.resources/v3.3.0/new-azurermadapplication). Для сертификата, который зарегистрирован в хранилище ключей Azure Key Vault, необходим только ваш открытый ключ. (Приложение будет использовать закрытый ключ.)
 
-Во-вторых предоставьте доступ зарегистрированного приложения хранилища ключей путем создания нового субъекта-службы. Это можно сделать с помощью следующих команд PowerShell:
+Во-вторых, предоставьте зарегистрированному приложению доступ к хранилищу ключей, создав новый субъект-службу. Это можно сделать с помощью следующих команд PowerShell:
 
 ```powershell
 $sp = New-AzureRmADServicePrincipal -ApplicationId "<Application ID guid>"
 Set-AzureRmKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
 ```
 
-В-третьих включите хранилище ключей источник конфигурации приложения путем вызова метода расширения IConfigurationBuilder.AddAzureKeyVault при создании экземпляра IConfigurationRoot. Обратите внимание, что вызов AddAzureKeyVault потребуется идентификатор приложения, который был зарегистрирован и получает доступ к хранилищу ключей в предыдущих шагах.
+В-третьих, включите хранилище ключей как источник конфигурации в своем приложении. Для этого вызовите метод расширения IConfigurationBuilder.AddAzureKeyVault при создании экземпляра IConfigurationRoot. Обратите внимание, что для вызова метода AddAzureKeyVault потребуется идентификатор приложения, которое было зарегистрировано и которому был предоставлен доступ к хранилищу ключей в предыдущих шагах.
 
-  В настоящее время стандартных .NET и .NET Core поддерживает получение сведений конфигурации из хранилища ключей Azure с помощью идентификатора клиента и секрет клиента. Приложения .NET framework можно использовать перегрузку IConfigurationBuilder.AddAzureKeyVault, принимающий сертификата вместо секрет клиента. На момент написания этой статьи, работа, [выполняется](https://github.com/aspnet/Configuration/issues/605) для предоставления этой перегрузки в стандартных .NET и .NET Core. Пока AddAzureKeyVault перегрузку, которая принимает данные о наличии сертификата, ASP.NET Core приложения могут обращаться к хранилище ключей Azure с проверкой подлинности на основе сертификата путем явного создания объекта KeyVaultClient, как показано в следующем примере:
+  Сейчас .NET Standard и .NET Core поддерживают получение сведений о конфигурации из Azure Key Vault с помощью идентификатора клиента и секрета клиента. В приложениях .NET можно использовать перегрузку метода IConfigurationBuilder.AddAzureKeyVault, который принимает сертификат вместо секрета клиента. На момент написания этой статьи мы [работаем](https://github.com/aspnet/Configuration/issues/605) над тем, чтобы сделать эту перегрузку доступной в NET Standard и .NET Core. Пока перегрузка метода AddAzureKeyVault, которая принимает сертификат, не стала доступной, приложения ASP.NET Core могут подключаться к Azure Key Vault с помощью проверки подлинности на основе сертификатов путем явного создания объекта KeyVaultClient, как показано в следующем примере:
 
 ```csharp
 // Configure Key Vault client
@@ -58,24 +61,24 @@ var kvClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(asyn
         new DefaultKeyVaultSecretManager());
 ```
 
-В этом примере вызов AddAzureKeyVault поставляется в конце регистрацию поставщика конфигурации. Рекомендуется зарегистрировать хранилище ключей Azure в качестве последнего поставщика конфигурации, чтобы он имел возможность переопределения значений конфигурации из предыдущей поставщиков, а не значения конфигурации из других источников переопределяют параметры из хранилища ключей.
+В этом примере вызов метода AddAzureKeyVault осуществляется в конце регистрации поставщика конфигурации. Рекомендуется зарегистрировать Azure Key Vault в качестве последнего поставщика конфигурации, чтобы иметь возможность переопределить значения параметров конфигурации от предыдущих поставщиков и чтобы никакие значения параметров конфигурации из других источников не перегружали значения параметров конфигурации из хранилища ключей.
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **С помощью хранилища ключей Azure для защиты приложения секреты**
+-   **Использование Azure Key Vault для защиты секретов приложений**
     [*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault)
 
--   **Безопасного хранения секрета приложения во время разработки**
+-   **Безопасное хранение секретов приложений во время разработки**
     [*https://docs.microsoft.com/aspnet/core/security/app-secrets*](https://docs.microsoft.com/aspnet/core/security/app-secrets)
 
 -   **Настройка защиты данных**
     [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview)
 
--   **Ключ, управления и временем существования**
-    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#-параметров защиты данных — по умолчанию —*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
+-   **Управление ключами и временем существования**
+    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
 
--   **Microsoft.Extensions.Configuration.DockerSecrets.** В репозитории GitHub.
-    [*https://github.com/ASPNET/Configuration/Tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets*](https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets)
+-   **Microsoft.Extensions.Configuration.DockerSecrets.** Репозиторий GitHub.
+    [*https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets*](https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets)
 
 >[!div class="step-by-step"]
-[Предыдущие] (разработчик app секреты storage.md) [Далее] (.. / takeaways.md ключ)
+[Назад] (developer-app-secrets-storage.md) [Далее] (../key-takeaways.md)

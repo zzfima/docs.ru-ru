@@ -1,46 +1,49 @@
 ---
-title: "Создание простой микрослужбу CRUD управляемые данными"
-description: "Архитектура Микрослужбами .NET для приложений .NET в контейнерах | Создание простой микрослужбу CRUD управляемые данными"
+title: "Создание простой микрослужбы CRUD на основе данных"
+description: "Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Создание простой микрослужбы CRUD на основе данных"
 keywords: "Docker, микрослужбы, ASP.NET, контейнер"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: b814d344f2c78e7cf57f9e2896cf1d6b52db38d9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: be8644e45be8db88c99332476e74c5c968764c74
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
-# <a name="creating-a-simple-data-driven-crud-microservice"></a>Создание простой микрослужбу CRUD управляемые данными
+# <a name="creating-a-simple-data-driven-crud-microservice"></a>Создание простой микрослужбы CRUD на основе данных
 
-Этот раздел контуров как создать простой микрослужбу, которая выполняет создание, чтение, обновление и операции удаления (CRUD) в источнике данных.
+В этом разделе показывается создание простой микрослужбы, которая выполняет операции create, read, update и delete (CRUD) в источнике данных.
 
-## <a name="designing-a-simple-crud-microservice"></a>Разработка простого микрослужбу CRUD
+## <a name="designing-a-simple-crud-microservice"></a>Разработка простой микрослужбы CRUD
 
-С точки зрения проектирования этот тип контейнерного микрослужбу очень проста. Возможно, проблема является простой или может быть реализован только эксперимента.
+С точки зрения проектирования этот тип контейнерной микрослужбы очень прост. Возможно, решаемая проблема не представляет особой сложности, или реализация является лишь проверкой концепции.
 
 ![](./media/image4.png)
 
-**Рис. 8-4**. Внутренняя структура простой микрослужбами CRUD
+**Рис. 8-4**. Внутренняя структура простой микрослужбы CRUD
 
-Пример такого рода службы простой-диск с данными — микрослужбу каталога из eShopOnContainers образца приложения. Этот тип службы реализует все функции в одном проекте веб-API ASP.NET Core, которая содержит классы для своей модели данных, его бизнес-логики и его код доступа к данным. Также связанные данные хранятся в базе данных, выполняющемся на SQL Server (как в другой контейнер для целей разработки и тестирования), но также может быть любой регулярного узла SQL Server, как показано на рисунке 8-5.
+Примером простой службы на основе данных такого рода является микрослужба каталога из эталонного приложения eShopOnContainers. Служба такого типа реализует все свои функции в одном проекте веб-API ASP.NET Core, который включает классы для своей модели данных, бизнес-логику и код доступа к данным. Она хранит свои связанные данные в базе данных, работающей в SQL Server (в качестве другого контейнера для целей разработки и тестирования), но это может также быть любой обычный узел SQL Server, как показано на рисунке 8-5.
 
 ![](./media/image5.png)
 
-**Рис. 8-5**. Простой микрослужбу данных управляемых/CRUD разработки
+**Рис. 8-5**. Структура простой микрослужбы CRUD на основе данных
 
-При разработке такого рода службы требуется только [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) и API доступа к данным или ORM, например [Entity Framework Core](https://docs.microsoft.com/ef/core/index). Можно также создать [Swagger](http://swagger.io/) автоматически посредством метаданных [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) для описания возможностях службы, как описано в следующем разделе.
+При разработке такого рода службы требуется только [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) и ORM или API для доступа к данным, например [Entity Framework Core](https://docs.microsoft.com/ef/core/index). Можно также автоматически создать метаданные [Swagger](http://swagger.io/) посредством [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore), чтобы предоставить описание возможностей службы, как показано в следующем разделе.
 
-Обратите внимание, что запущен сервер базы данных, как SQL Server в контейнер Docker отлично подходит для сред разработки, так как все зависимости может находиться до, а без необходимости предоставления в облаке или локальной базы данных. Это очень удобно, если выполнение интеграции тестов. Однако для производственных сред, сервер базы данных в контейнер не рекомендуется, поскольку обычно не дает высокий уровень доступности такого подхода. Для производственной среды в Azure рекомендуется использовать базу данных SQL Azure или любую другую технологию базы данных, который может предоставить высокую доступность и масштабируемость, высокий уровень. Например для подход NoSQL, может выбрать DocumentDB.
+Обратите внимание, что запуск сервера базы данных, такого как SQL Server, в контейнере Docker отлично подходит для сред разработки, так как вы можете получить все нужные зависимости в полной готовности без необходимости подготовки базы данных в облаке или локально. Это очень удобно при выполнении интеграционных тестов. Однако для рабочих сред запуск сервера базы данных в контейнере не рекомендуется, так как при таком подходе обычно не удается добиться высокой доступности. Для рабочей среды в Azure рекомендуется использовать базу данных SQL Azure или любую другую технологию базы данных, которая может обеспечить высокий уровень доступности и масштабируемости. Например, для варианта NoSQL можно выбрать DocumentDB.
 
-Наконец, путем редактирования метаданных файлов Dockerfile и docker compose.yml, можно настроить как будет создан образ этого контейнера, какой базовый образ, он будет использовать, а также создать параметры, такие как внутренние и внешние имена и TCP-порты. 
+Наконец, путем редактирования файлов метаданных Dockerfile и docker-compose.yml можно настроить порядок создания образа этого контейнера — какой базовый образ будет использоваться, а также конструктивные параметры, такие как внутренние и внешние имена и порты TCP. 
 
-## <a name="implementing-a-simple-crud-microservice-with-aspnet-core"></a>Реализация простого микрослужбу CRUD с ASP.NET Core
+## <a name="implementing-a-simple-crud-microservice-with-aspnet-core"></a>Реализация простой микрослужбы CRUD в ASP.NET Core
 
-Чтобы реализовать простой микрослужбу CRUD с помощью Visual Studio и .NET Core, начинается с создания простого проекта веб-API ASP.NET Core (под управлением на основе .NET Core, он может работать на узле Linux Docker), как показано на рисунке 8-6.
+Чтобы реализовать простую микрослужбу CRUD с помощью Visual Studio и .NET Core, начните с создания простого проекта веб-API ASP.NET Core (работающего в .NET Core, чтобы его можно было запустить на узле Linux Docker), как показано на рисунке 8-6.
 
   ------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------
   ![](./media/image6.png)   ![](./media/image7.png)
@@ -48,29 +51,22 @@ ms.lasthandoff: 10/18/2017
 
 **Рис. 8-6**. Создание проекта веб-API ASP.NET Core в Visual Studio
 
-После создания проекта, вы можете реализовать ваших контроллеров MVC, как и в любой другой проект веб-API, с помощью API-Интерфейс Entity Framework или другие API. В проекте eShopOnContainers.Catalog.API видно, основные зависимости для этого микрослужбу просто ASP.NET Core сам Entity Framework и Swashbuckle, как показано на рисунке 8-7.
+После создания проекта вы можете реализовать свои контроллеры MVC, как это делается в любом другом проекте веб-API, с помощью API Entity Framework или другого API. В новом проекте веб-API видно, что единственная имеющаяся в микрослужбе зависимость — в самом ASP.NET Core. Внутренним образом зависимость `Microsoft.AspNetCore.All` ссылается на Entity Framework и многие другие пакеты Nuget .NET Core, как показано на рисунке 8-7.
 
 ![](./media/image8.PNG)
 
-**Рис. 8-7**. Зависимости в простой микрослужбу CRUD веб-API
+**Рис. 8-7**. Зависимости в простой микрослужбе CRUD веб-API
 
-### <a name="implementing-crud-web-api-services-with-entity-framework-core"></a>Реализация служб CRUD веб-API с Entity Framework Core
+### <a name="implementing-crud-web-api-services-with-entity-framework-core"></a>Реализация служб CRUD веб-API с помощью Entity Framework Core
 
-Core Entity Framework (EF) является упрощенным, расширяемым, и технология доступа к версии кросс платформенных популярных данных Entity Framework. EF лежит объектно реляционного сопоставления (ORM), которая позволяет разработчикам .NET для работы с базой данных с помощью объектов .NET.
+Entity Framework (EF) — это упрощенная, расширяемая и кроссплатформенная версия популярной технологии для доступа к данным Entity Framework. EF Core является объектно-реляционным модулем сопоставления (ORM), который позволяет разработчикам .NET работать с базой данных, используя объекты .NET.
 
-Каталог микрослужбу использует EF и поставщик SQL Server, так как его база данных работает в контейнере с SQL Server для образа Linux Docker. Однако базы данных может быть развернута в любой SQL Server, например Windows в локальной или базу данных SQL Azure. Единственное, что необходимо изменить является строка подключения в микрослужбу веб-API ASP.NET.
+Микрослужба каталога использует EF и поставщик SQL Server, так как его база данных работает в контейнере с образом Docker SQL Server для Linux . Тем не менее база данных может быть развернута в любом SQL Server, например локально в Windows или в базе данных SQL Azure. Единственное, что потребуется изменить, — это строку подключения в микрослужбе веб-API ASP.NET.
 
-#### <a name="add-entity-framework-core-to-your-dependencies"></a>Добавление зависимостей Entity Framework Core
-
-Можно установить пакет NuGet для поставщика базы данных, которую вы хотите использовать, в данном случае SQL Server из в Интегрированной среде разработки Visual Studio или с помощью консоли NuGet. Используйте следующую команду:
-
-```
-  Install-Package Microsoft.EntityFrameworkCore.SqlServer
-```
 
 #### <a name="the-data-model"></a>Модель данных
 
-С основными EF доступ к данным выполняется с помощью модели. Модель состоит из классов сущностей и производных контекст, который представляет сеанс с базой данных, что позволяет запрашивать и сохранения данных. Можно создать модель на основе существующей базы данных, вручную кода модели для обеспечения соответствия базе данных или использовать миграции EF создать базу данных из модели (и его меняются при изменении модели). Для каталога микрослужбу мы используем последний подход. Можно ознакомиться с примером CatalogItem класс сущностей в следующем примере кода, является простой простой старый объект среды CLR ([POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)) класса сущностей.
+В EF Core доступ к данным осуществляется с помощью модели. Модель состоит из классов сущностей и производного контекста, который представляет сеанс взаимодействия с базой данных, позволяя запрашивать и сохранять данные. Вы можете создать модель из существующей базы данных, вручную создать код модели, соответствующей вашей базе данных, при помощи миграций EF создать базу данных из своей модели (и развивать ее по мере изменения модели). Для микрослужбы каталога мы используем последний подход. Пример класса CatalogItem можно увидеть в следующем примере кода, который представляет простой класс сущностей Plain Old CLR ([POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)).
 
 ```csharp
 public class CatalogItem
@@ -79,16 +75,24 @@ public class CatalogItem
     public string Name { get; set; }
     public string Description { get; set; }
     public decimal Price { get; set; }
+    public string PictureFileName { get; set; }
     public string PictureUri { get; set; }
     public int CatalogTypeId { get; set; }
     public CatalogType CatalogType { get; set; }
     public int CatalogBrandId { get; set; }
     public CatalogBrand CatalogBrand { get; set; }
+    public int AvailableStock { get; set; }
+    public int RestockThreshold { get; set; }
+    public int MaxStockThreshold { get; set; }
+
+    public bool OnReorder { get; set; }
     public CatalogItem() { }
+
+    // Additional code ...
 }
 ```
 
-Необходимо также DbContext, который представляет сеанс с базой данных. Для каталога микрослужбу, CatalogContext класс является производным от базового класса DbContext, как показано в следующем примере:
+Также потребуется DbContext, который представляет сеанс работы с базой данных. Для микрослужбы каталога класс CatalogContext является производным от базового класса DbContext, как показано в следующем примере.
 
 ```csharp
 public class CatalogContext : DbContext
@@ -96,7 +100,6 @@ public class CatalogContext : DbContext
     public CatalogContext(DbContextOptions<CatalogContext> options) : base(options)
     {
     }
-
     public DbSet<CatalogItem> CatalogItems { get; set; }
     public DbSet<CatalogBrand> CatalogBrands { get; set; }
     public DbSet<CatalogType> CatalogTypes { get; set; }
@@ -106,13 +109,11 @@ public class CatalogContext : DbContext
 }
 ```
 
-Может иметь дополнительный код в реализации DbContext. Например в образце приложения, у нас есть метод OnModelCreating в классе CatalogContext, который автоматически заполняет образец данных впервые, она попытается получить доступ к базе данных. Этот метод полезен для демонстрационных данных. Можно также использовать метод OnModelCreating для настройки базы данных объекта сопоставления сущности с множество других [точек расширяемости EF](https://blogs.msdn.microsoft.com/dotnet/2016/09/29/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/).
+У вас могут быть дополнительные реализации `DbContext`. Например, в примере микрослужбы Catalog.API образца имеется второй `DbContext` с именем `CatalogContextSeed`, где он автоматически заполняет демонстрационные данные при первой попытке получения доступа к базе данных. Этот метод полезен для демонстрационных данных, а также в сценариях автоматических тестов. В `DbContext` используется метод `OnModelCreating` для настройки сопоставлений сущностей объектов или базы данных, а также других [точек расширяемости EF](https://blogs.msdn.microsoft.com/dotnet/2016/09/29/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/).
 
-Можно просмотреть дополнительные сведения о OnModelCreating в [реализации уровня инфраструктуры сохраняемости с Entity Framework Core](#implementing_infrastructure_persistence) далее в этой книге.
+##### <a name="querying-data-from-web-api-controllers"></a>Запрос данных из контроллеров веб-API
 
-##### <a name="querying-data-from-web-api-controllers"></a>Запросы данных из контроллеров веб-API
-
-Экземпляры классов сущностей обычно извлекаются из базы данных, используя интегрированные запросы языка (LINQ), как показано в следующем примере:
+Экземпляры классов сущностей обычно извлекаются из базы данных с помощью LINQ, как показано в следующем примере.
 
 ```csharp
 [Route("api/v1/[controller]")]
@@ -122,13 +123,13 @@ public class CatalogController : ControllerBase
     private readonly CatalogSettings _settings;
     private readonly ICatalogIntegrationEventService _catalogIntegrationEventService;
 
-    public CatalogController(CatalogContext context,
-        IOptionsSnapshot<CatalogSettings> settings,
-        ICatalogIntegrationEventService catalogIntegrationEventService)
+    public CatalogController(CatalogContext context, 
+                             IOptionsSnapshot<CatalogSettings> settings,
+                             ICatalogIntegrationEventService catalogIntegrationEventService)
     {
         _catalogContext = context ?? throw new ArgumentNullException(nameof(context));
-        _catalogIntegrationEventService = catalogIntegrationEventService ??
-           throw new ArgumentNullException(nameof(catalogIntegrationEventService));
+        _catalogIntegrationEventService = catalogIntegrationEventService ?? throw new ArgumentNullException(nameof(catalogIntegrationEventService));
+
         _settings = settings.Value;
         ((DbContext)context).ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
     }
@@ -136,46 +137,53 @@ public class CatalogController : ControllerBase
     // GET api/v1/[controller]/items[?pageSize=3&pageIndex=10]
     [HttpGet]
     [Route("[action]")]
-    public async Task<IActionResult> Items([FromQuery]int pageSize = 10,
-    [FromQuery]int pageIndex = 0)
+    [ProducesResponseType(typeof(PaginatedItemsViewModel<CatalogItem>), (int)HttpStatusCode.OK)]
+    public async Task<IActionResult> Items([FromQuery]int pageSize = 10, 
+                                           [FromQuery]int pageIndex = 0)
+
     {
         var totalItems = await _catalogContext.CatalogItems
             .LongCountAsync();
+
         var itemsOnPage = await _catalogContext.CatalogItems
             .OrderBy(c => c.Name)
             .Skip(pageSize * pageIndex)
             .Take(pageSize)
             .ToListAsync();
+
         itemsOnPage = ChangeUriPlaceholder(itemsOnPage);
+
         var model = new PaginatedItemsViewModel<CatalogItem>(
             pageIndex, pageSize, totalItems, itemsOnPage);
+
         return Ok(model);
     } 
-
     //...
 }
 ```
 
 ##### <a name="saving-data"></a>Сохранение данных
 
-Данных создается, удалить и изменить в базе данных, с помощью экземпляров классов сущностей. Можно добавить код имеет следующий вид жестко (макета данных в данном случае) к контроллерам веб-API.
+Для создания, удаления и изменения данных в базе данных используются экземпляры классов сущностей. К своим контроллерам веб-API можно добавить код, как в следующем примере с жестким заданием (макета данных в этом случае).
 
 ```csharp
 var catalogItem = new CatalogItem() {CatalogTypeId=2, CatalogBrandId=2,
-   Name="Roslyn T-Shirt", Price = 12};
+                                     Name="Roslyn T-Shirt", Price = 12};
 _context.Catalog.Add(catalogItem);
 _context.SaveChanges();
 ```
 
-##### <a name="dependency-injection-in-aspnet-core-and-web-api-controllers"></a>Внедрение зависимостей в ASP.NET Core и веб-API устройства
+##### <a name="dependency-injection-in-aspnet-core-and-web-api-controllers"></a>Внедрение зависимостей в ASP.NET Core и контроллеры веб-API
 
-В ASP.NET Core внедрения зависимости (DI) можно использовать без дополнительной настройки. Необходимо настроить контейнер инверсии управления (IoC) сторонних разработчиков, несмотря на то, что основной контейнер IoC может подключаться к инфраструктуре ASP.NET Core, если требуется. В этом случае это означает, что напрямую можно ввести необходимые DBContext EF или дополнительных репозиториев через конструктор контроллера. В приведенном выше примере класса CatalogController мы вводится CatalogContext тип объекта, а также других объектов через конструктор CatalogController.
+В ASP.NET Core можно использовать внедрение зависимостей (DI) без дополнительной настройки. Не требуется настраивать сторонний контейнер инверсии управления (IoC), хотя при желании можно включить в инфраструктуру ASP.NET Core свой предпочитаемый контейнер IoC. В данном случае это означает, что вы можете напрямую внедрить требуемый DBContext EF или дополнительные репозитории с помощью конструктора контроллера. В приведенном выше примере класса `CatalogController` мы внедряли объект типа `CatalogContext` и другие объекты с помощью конструктора `CatalogController()`.
 
-Важные настройку в проект веб-API является регистрация класса DbContext в контейнер IoC службы. Это обычно выполняется в класс Startup путем вызова службы. Метод AddDbContext внутри метода ConfigureServices, как показано в следующем примере:
+Важной конфигурацией для настройки в проекте веб-API является регистрация класса DbContext в контейнере IoC службы. Обычно это делается в классе `Startup` путем вызова метода `services.AddDbContext<DbContext>()` в методе `ConfigureServices()`, как показано в следующем примере.
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
+    // Additional code...
+
     services.AddDbContext<CatalogContext>(options =>
     {
         options.UseSqlServer(Configuration["ConnectionString"],
@@ -183,10 +191,10 @@ public void ConfigureServices(IServiceCollection services)
         {
            sqlOptions.
                MigrationsAssembly(
-               typeof(Startup).
-               GetTypeInfo().
-               Assembly.
-               GetName().Name);
+                   typeof(Startup).
+                    GetTypeInfo().
+                     Assembly.
+                      GetName().Name);
 
            //Configuring Connection Resiliency:
            sqlOptions.
@@ -209,15 +217,15 @@ public void ConfigureServices(IServiceCollection services)
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Запрос данных**
+-   **Запросы данных**
     [*https://docs.microsoft.com/ef/core/querying/index*](https://docs.microsoft.com/ef/core/querying/index)
 
 -   **Сохранение данных**
     [*https://docs.microsoft.com/ef/core/saving/index*](https://docs.microsoft.com/ef/core/saving/index)
 
-## <a name="the-db-connection-string-and-environment-variables-used-by-docker-containers"></a>DB соединения строки и среда переменных, используемых в контейнеры Docker
+## <a name="the-db-connection-string-and-environment-variables-used-by-docker-containers"></a>Строка подключения к базе данных и переменные среды, используемые контейнерами Docker
 
-Можно использовать параметры ASP.NET Core и добавить свойство ConnectionString в файл settings.json, как показано в следующем примере:
+Вы можете использовать параметры ASP.NET Core и добавить свойство ConnectionString в файл settings.json, как показано в следующем примере.
 
 ```csharp
 {
@@ -234,9 +242,9 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-Файл settings.json может иметь значения по умолчанию для свойства ConnectionString или любого другого свойства. Тем не менее эти свойства будут переопределяться значения переменных среды, заданные в файле docker compose.override.yml.
+Файл settings.json может иметь значения по умолчанию для свойства ConnectionString или любого другого свойства. Однако при использовании Docker эти свойства будут переопределяться значениями переменных среды, заданными в файле docker-compose.override.yml.
 
-Из файлов docker compose.yml или docker compose.override.yml можно инициализировать этих переменных среды, что Docker будет настроить их как переменные среды операционной системы, как показано в следующем файле docker compose.override.yml (соединение строки и других строк по словам в этом примере, но будет переноситься в свой собственный файл).
+Из файлов docker-compose.yml или docker-compose.override.yml можно инициализировать эти переменные среды, чтобы Docker устанавливал их в качестве переменных среды операционной системы, как показано в следующем файле docker-compose.override.yml (в этом примере строка подключения и другие строки переносятся, но в вашем собственном файле кода они не будут переноситься).
 
 ```yml
 # docker-compose.override.yml
@@ -245,36 +253,34 @@ public void ConfigureServices(IServiceCollection services)
 catalog.api:
   environment:
     - ConnectionString=Server=sql.data;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word
-    - ExternalCatalogBaseUrl=http://10.0.75.1:5101
-    #- ExternalCatalogBaseUrl=http://dockerhoststaging.westus.cloudapp.azure.com:5101
-  
+    # Additional environment variables for this service
   ports:
-    - "5101:5101"
+    - "5101:80"
 ```
 
-Файлы docker compose.yml на уровне решения не только более гибким, чем файлы конфигурации на уровне проекта или микрослужбу, но также более безопасная. Рассмотрим, не содержат образы Docker, создаваемые на микрослужбу docker-compose.yml файлы только двоичные файлы и файлы конфигурации для каждого микрослужбу, включая файл Dockerfile. Но файл docker compose.yml не устанавливается вместе с приложением; он используется только во время развертывания. Таким образом помещение значений переменных среды в этих файлах docker compose.yml (даже без шифрования значений) является более безопасны, чем размещение этих значений в обычных файлов конфигурации .NET, развернутых с помощью кода.
+Файлы docker-compose.yml на уровне решения не только более гибкие, чем файлы конфигурации на уровне проекта или микрослужбы, но также и более безопасные, если вы переопределяете переменные среды, объявленные в файлах docker-compose, значениями, установленными из инструментов развертывания, например из задач развертывания VSTS Docker. 
 
-Наконец, можно получить это значение в коде с помощью конфигурации\[«ConnectionString»\], как показано в методе ConfigureServices в предыдущем примере кода.
+Наконец, можно получить это значение из кода с помощью Configuration\["ConnectionString"\], как показано в методе ConfigureServices в предыдущем примере кода.
 
-Однако в рабочей среде может потребоваться обозреватель дополнительные возможности по хранению секретные данные, такие как строки подключения. Обычно, будут находиться под управлением вашей выбранной orchestrator, как с [помощью Docker Swarm управления секреты](https://docs.docker.com/engine/swarm/secrets/).
+Однако для рабочей среды вы можете захотеть исследовать дополнительные возможности по хранению секретных данных, таких как строки подключения. Обычно это будет управляться выбранным вами оркестратором, как вы это можете делать с помощью [управления секретами Docker Swarm](https://docs.docker.com/engine/swarm/secrets/).
 
 ### <a name="implementing-versioning-in-aspnet-web-apis"></a>Реализация управления версиями в веб-API ASP.NET
 
-По мере изменения бизнес-требования могут быть добавлены новые коллекции ресурсов, связи между ресурсами могут меняться и структуры данных в ресурсах может быть изменен. Обновление веб-API для обработки новых требований выполняется относительно просто, однако необходимо учитывать эффекты, которые будут иметь такие изменения в клиентские приложения, использующие веб-API. Несмотря на то, что разработчик проектирование и реализация веб-API имеет полный контроль над API-Интерфейс, разработчик имеет ту же степень контроля над клиентских приложений, которые могут быть построены сторонними организациями удаленно операционной.
+По мере изменения бизнес-требований может происходить добавление новых коллекций ресурсов, изменение связей между ресурсами и совершенствование структуры данных в ресурсах. Обновление веб-API для обработки новых требований выполняется относительно просто, однако необходимо учитывать воздействие, которое такие изменения будут оказывать на клиентские приложения, использующие веб-API. Несмотря на то, что разработчик, разрабатывающий и реализующий веб-API, имеет полный контроль над этим API, у него нет той же степени контроля над клиентскими приложениями, которые могут быть созданы сторонними организациями, работающими удаленно.
 
-Управление версиями позволяет веб-API указать компоненты и ресурсы, которые он предоставляет. Клиентское приложение затем можно отправлять запросы на определенную версию функции или ресурсов. Существует несколько подходов к реализации управления версиями.
+Управление версиями позволяет веб-API указать компоненты и ресурсы, которые он предоставляет. Затем клиентское приложение может отправлять запросы к определенной версии функции или ресурса. Существует несколько методов реализации управления версиями:
 
--   Управление версиями URI
+-   управление версиями с помощью URI;
 
--   Управление версиями строки запроса
+-   управление версиями с помощью строки запроса;
 
--   Заголовок управления версиями
+-   управление версиями с помощью заголовка.
 
-Строка запроса и управление версиями URI являются наиболее простым в реализации. Заголовок управления версиями является хорошим подходом. Однако заголовок управления версиями не как явные и простой задачей, как управление версиями URI. Поскольку управление версиями URL-адрес является простейшим и наиболее явного, образец приложения eShopOnContainers использует управление версиями URI.
+Проще всего реализовать управление версиями с помощью строки заголовка и URI. Управление версиями с помощью заголовка — хороший метод. Но он не настолько явный и простой, как управление версиями с помощью URI. Так как управление версиями с помощью URI является самым простым и очевидным методом, в эталонном приложении eShopOnContainers используется именно управление версиями с помощью URI.
 
-С управлением версиями URI, как и образец приложения eShopOnContainers каждый раз, изменить веб-API или изменить схему ресурсов, добавляемый номер версии URI для каждого ресурса. Существующие идентификаторы URI должны продолжать работать как и прежде, возвращая ресурсы, которые соответствуют схеме, которая совпадает с запрошенной версией.
+При использовании управления версиями с помощью URI, как в эталонном приложении eShopOnContainers, при каждом изменении веб-API или схемы ресурсов в URI для каждого ресурса добавляется номер версии. Существующие URI должны продолжать работать как и прежде, возвращая ресурсы, которые подходят для схемы, соответствующей запрошенной версии.
 
-Как показано в следующем примере кода, версию можно задать с помощью атрибута маршрута в веб-API, благодаря чему версии в явном виде в URI (v1 в данном случае).
+Как показано в следующем примере кода, версию можно устанавливать с помощью атрибута Route в веб-API, что делает версию в URI явной (в данном случае это v1).
 
 ```csharp
 [Route("api/v1/[controller]")]
@@ -283,71 +289,66 @@ public class CatalogController : ControllerBase
     // Implementation ...
 ```
 
-Этот механизм управления версиями является простым и зависит от сервера, маршрутизация запроса соответствующей конечной точке. Однако для более сложных версий и наиболее подходящего метода при использовании REST, следует использовать гипермедиа и реализовать [HATEOAS (Hypertext как состояние обработчика приложения)](https://docs.microsoft.com/azure/architecture/best-practices/api-design#using-the-hateoas-approach-to-enable-navigation-to-related-resources).
+Этот механизм управления версиями прост и зависит от сервера, направляющего запрос в соответствующую конечную точку. Однако для более сложного управления версиями и наиболее подходящего метода при использовании REST следует использовать гиперсредства и реализовать подход [HATEOAS (гипертекст как обработчик состояния приложения)](https://docs.microsoft.com/azure/architecture/best-practices/api-design#using-the-hateoas-approach-to-enable-navigation-to-related-resources).
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Скотт Хансельман. Управление версиями основных RESTful веб-API ASP.NET, стало проще**
+-   **Скотт Ханселман (Scott Hanselman). Управление версиями веб-API RESTful ASP.NET Core стало проще**
     [*http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
--   **Управление версиями RESTful веб-API**
+-   **Управление версиями веб-API RESTful**
+    [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
-    [*https://docs.Microsoft.com/Azure/Architecture/Best-Practices/API-Design#Versioning-a-RESTful-Web-API*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
-
--   **Roy Fielding. Управление версиями, гипермедиа и REST**
+-   **Рой Филдинг (Roy Fielding). Управление версиями, гиперсредства и REST**
     [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
-## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Создание метаданных Swagger описание из веб-API ASP.NET Core 
+## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Создание метаданных описания Swagger из веб-API ASP.NET Core 
 
-[Swagger](http://swagger.io/) — framework часто используемые открытой поддерживаемый больших экосистема средства, помогающая разработки, построения, документ и использовать ваш RESTful интерфейсы API. Он становится стандарт для домена метаданных описание API-интерфейсы. Следует включить описание метаданных Swagger с любой микрослужбу микрослужбами данными или для более сложных микрослужбами на основе домена (как описано в следующем разделе).
+[Swagger](http://swagger.io/) — это распространенная платформа с открытым исходным кодом, поддерживаемая большой экосистемой инструментов, помогающих разрабатывать, собирать, документировать и использовать ваши API RESTful. Она становится стандартом для домена метаданных описания API. Следует включать метаданные описания Swagger в микрослужбы любого вида — и в микрослужбы на основе данных, и в более сложные предметно-ориентированные микрослужбы (как описывается в следующем разделе).
 
-Основа Swagger имеет спецификацию Swagger в метаданных описание API в файле JSON или YAML. Спецификации создает RESTful контракт для интерфейса API, с подробными сведениями о всех ресурсов и операций в обоих человека и machine readable формате для упрощения разработки, обнаружения и интеграции.
+Основу Swagger составляет спецификация Swagger, представляющая собой метаданные описания API в файле JSON или YAML. Эта спецификация создает контракт RESTful для вашего API, детализируя все его ресурсы и операции как в форме, удобной для восприятия человеком, так и в машинно-распознаваемой форме для упрощения разработки, обнаружения и интеграции.
 
-Спецификация является основой спецификации OpenAPI (OAS) и разработанных в сообществе откройте прозрачным и совместной работы стандартизировать определяются RESTful интерфейсы.
+Спецификация является основой спецификации OpenAPI (OAS) и разрабатывается в открытом, прозрачном, совместно работающем сообществе для стандартизации способа определения интерфейсов RESTful.
 
-Спецификация определяет структуру для как можно обнаружить службы и как его возможности поняты. Дополнительные сведения, включая редактор web и примеры спецификаций Swagger из компании, например Spotify, Slack, полный и Майкрософт, см. на сайте Swagger (<http://swagger.io>).
+Спецификация определяет структуру способа обнаружения службы и понимания ее возможностей. Дополнительные сведения, включая веб-редактор и примеры спецификаций Swagger из таких компаний, как Spotify, Slack и Майкрософт, см. на сайте Swagger (<http://swagger.io>).
 
-### <a name="why-use-swagger"></a>Зачем использовать Swagger?
+### <a name="why-use-swagger"></a>Почему следует использовать Swagger?
 
-Ниже перечислены основных причин для создания метаданных Swagger для собственные интерфейсы API.
+Ниже перечислены основные причины создания метаданных Swagger для ваших API.
 
-**Возможность для других продуктов, автоматически использовать и интегрировать собственные интерфейсы API**. Десятки продуктов и [Средства профессиональной](http://swagger.io/commercial-tools/) и много [библиотек и платформ](http://swagger.io/open-source-integrations/) поддерживает Swagger. Корпорация Майкрософт предоставляет высокоуровневый продуктов и средства, которые автоматически могут использовать API на основе Swagger, например следующие:
+**Возможность для других продуктов автоматически использовать и интегрировать ваши API**. Десятки продуктов и [коммерческих инструментов](http://swagger.io/commercial-tools/), а также множество [библиотек и платформ](http://swagger.io/open-source-integrations/) поддерживают Swagger. Корпорация Майкрософт предоставляет высокоуровневые продукты и инструменты, которые могут автоматически использовать API на основе Swagger, например следующие.
 
--   [AutoRest](https://github.com/Azure/AutoRest). Можно автоматически создать клиентские классы .NET для вызова Swagger. Это
+-   [AutoRest](https://github.com/Azure/AutoRest). Вы можете автоматически создавать клиентские классы .NET для вызова Swagger. Этот инструмент можно использовать из CLI, и он также интегрируется с Visual Studio для упрощения использования через графический интерфейс пользователя.
 
--   средство можно использовать из CLI и она также интегрируется с Visual Studio позволяет упростить их использование через графический интерфейс пользователя.
+-   [Microsoft Flow](https://flow.microsoft.com/en-us/). Вы можете автоматически [использовать и интегрировать свои API](https://flow.microsoft.com/en-us/blog/integrating-custom-api/) в высокоуровневый процесс Microsoft Flow без каких-либо навыков программирования.
 
--   [Microsoft Flow](https://flow.microsoft.com/en-us/). Вы можете автоматически [применении и интеграции API](https://flow.microsoft.com/en-us/blog/integrating-custom-api/) в Microsoft Flow рабочий процесс высокого уровня, которых не навыки программирования требуется.
+-   [Microsoft PowerApps](https://powerapps.microsoft.com/en-us/). Вы можете автоматически использовать свои API из [мобильных приложений PowerApps](https://powerapps.microsoft.com/en-us/blog/register-and-use-custom-apis-in-powerapps/), созданных с помощью [PowerApps Studio](https://powerapps.microsoft.com/en-us/guided-learning/learning-powerapps-parts/), без каких-либо навыков программирования.
 
--   [Microsoft PowerApps](https://powerapps.microsoft.com/en-us/). Можно автоматически будет использовать API из [PowerApps мобильных приложений](https://powerapps.microsoft.com/en-us/blog/register-and-use-custom-apis-in-powerapps/) с использованием [PowerApps Studio](https://powerapps.microsoft.com/en-us/guided-learning/learning-powerapps-parts/), с, навыки программирования не требуется.
+-   [Приложения логики службы приложений Azure](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-what-are-logic-apps). Вы можете автоматически [использовать и интегрировать свои API в приложение логики службы приложений Azure ](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-custom-hosted-api) без каких-либо навыков программирования.
 
--   [Служба приложений Azure Logic Apps](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-what-are-logic-apps). Вы можете автоматически [использовать и интеграции API в Azure приложение службы логику приложений](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-custom-hosted-api), с, навыки программирования не требуется.
+**Возможность автоматического создания документации по API**. При создании крупномасштабных API RESTful, например сложных приложений на основе микрослужб, необходимо обрабатывать много конечных точек с разными моделями данных, используемых в полезной нагрузке запросов и ответов. Наличие соответствующей документации и надежного обозревателя API, что можно получить с помощью Swagger, является ключом для успеха API и внедрения разработчиками.
 
-**Возможность автоматического создания документации по API**. При создании крупномасштабных API RESTful, например сложных приложений с микрослужбу необходимо обрабатывать много конечных точек с моделями данных, используемый в полезных данных запроса и ответа. Наличие правильной документации и необходимости сплошной обозреватель API, как вы получаете с Swagger, является ключом для успеха API и внедрения разработчиками.
+Метаданные Swagger используются Microsoft Flow, PowerApps и приложениями логики Azure для понимания, как следует использовать API и подключаться к ним.
 
-Метаданные swagger — что Microsoft Flow, PowerApps и приложения логики Azure позволяет понять, как использовать API-интерфейсы и подключаться к ним.
+### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Автоматизация создания метаданных Swagger API с помощью пакета NuGet Swashbuckle
 
-### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Автоматизация API Swagger Создание метаданных с помощью пакета Swashbuckle NuGet
+Создание метаданных Swagger вручную (в файле JSON или YAML) может быть утомительным. Однако вы можете автоматизировать обнаружение API службами веб-API ASP.NET с помощью [пакета NuGet Swashbuckle](http://aka.ms/swashbuckledotnetcore) для динамического создания метаданных Swagger API.
 
-Создание метаданных Swagger вручную (в файле JSON или YAML) может быть утомительным работы. Тем не менее, можно автоматизировать с помощью API обнаружение служб веб-API ASP.NET [пакет Swashbuckle NuGet](http://aka.ms/swashbuckledotnetcore) для динамического формирования Swagger API метаданных.
+Swashbuckle автоматически создает метаданные Swagger для проектов веб-API ASP.NET. Он поддерживает проекты веб-API ASP.NET Core, классические веб-API ASP.NET и любые разновидности, такие как приложение API Azure, мобильное приложение Azure, микрослужбы Azure Service Fabric на основе ASP.NET. Он также поддерживает простой веб-API, развертываемый в контейнерах, как в эталонном приложении.
 
-Swashbuckle автоматически создает метаданные Swagger для проектов веб-API ASP.NET. Он поддерживает любой разновидности, таких как приложения API Azure, мобильное приложение Azure, Azure Service Fabric микрослужбами на базе ASP.NET и веб-API ASP.NET Core проектов и традиционные веб-API ASP.NET. Оно также поддерживает развертывания в контейнерах, а в качестве заявлению простой веб-API.
+Swashbuckle объединяет обозреватель API и Swagger или [пользовательский интерфейс Swagger](https://github.com/swagger-api/swagger-ui) для обеспечения вашим клиентам API широких возможностей использования обнаружения и документации. Помимо своей подсистемы создания метаданных Swagger, Swashbuckle также содержит встроенную версию пользовательского интерфейса swagger, которую он будет автоматически обслуживать после установки Swashbuckle.
 
-Swashbuckle объединяет обозреватель API-Интерфейсов и Swagger или [пользовательского интерфейса swagger](https://github.com/swagger-api/swagger-ui) для обеспечения взаимодействия с широкие возможности обнаружения и документацию для API потребителей. В дополнение к его механизм генератора метаданных Swagger Swashbuckle также содержит встроенной версии swagger интерфейсе, он автоматически обслуживает копии после установки Swashbuckle.
-
-Это означает, что могут дополнять API с низким приоритетом обнаружения пользовательского интерфейса, чтобы помочь разработчикам использовать API. Его требуется очень небольшой объем кода и обслуживание, так как оно создается автоматически, что позволяет сосредоточиться на построении API. Результат для обозреватель API выглядит как на рисунке 8-8.
+Это означает, что вы можете дополнять свой API отличным пользовательским интерфейсом обнаружения, чтобы помочь разработчикам использовать этот API. Для него требуется совсем немного кода и поддержки, так как он создается автоматически, что позволяет сосредоточиться на построении API. Результат в обозревателе API выглядит подобно показанному на рисунке 8-8.
 
 ![](./media/image9.png)
 
-**Рис. 8-8**. Обозреватель API Swashbuckle на основе Swagger метаданных — eShopOnContainers каталога микрослужбу
+**Рис. 8-8**. Обозреватель API Swashbuckle на основе метаданных Swagger — микрослужба каталога eShopOnContainers
 
-Обозреватель API-Интерфейсов не самое главное здесь. При наличии веб-API, могут описывать себя в метаданных Swagger API можно использовать без проблем с помощью средств Swagger, включая генераторы кода клиентского прокси класса, предназначенных для многих платформ. Например, как упоминалось [AutoRest](https://github.com/Azure/AutoRest) автоматически создает клиентские классы .NET. Однако дополнительные средства, например [swagger codegen](https://github.com/swagger-api/swagger-codegen) доступны, которая допускает создания кода клиента API библиотеки, заглушки сервера и документация автоматически.
+Обозреватель API здесь не самое главное. При наличии веб-API, который может описать сам себя в метаданных Swagger, ваш API можно без проблем использовать в инструментах на основе Swagger, включая генераторы кода клиентского прокси-класса, предназначенные для многих платформ. Например, как упоминалось ранее, [AutoRest](https://github.com/Azure/AutoRest) автоматически создает клиентские классы .NET. Однако доступны также и дополнительные средства, например [swagger-codegen](https://github.com/swagger-api/swagger-codegen), что позволяет автоматически создавать код клиентских библиотек API, заглушки сервера и документацию.
 
-В настоящее время Swashbuckle состоит из двух пакетов NuGet: Swashbuckle.SwaggerGen и Swashbuckle.SwaggerUi. Первый метод предоставляет функциональные возможности для создания одного или нескольких документов Swagger непосредственно из реализации API и предоставьте их как конечные точки JSON. Предоставляет встроенной версии средство пользовательского интерфейса swagger, обслуживаемых приложения и на платформе создаваемые документы Swagger для описания API. Тем не менее последние версии Swashbuckle переносить их с Swashbuckle.AspNetCore metapackage.
+В настоящее время Swashbuckle состоит из двух независимых внутренних пакетов NuGet в высокоуровневом метапакете [Swashbuckle.Swashbuckle.AspNetCoreSwaggerGen](https://www.nuget.org/packages/Swashbuckle.AspNetCore/) версии 1.0.0 или более поздней версии для приложений ASP.NET Core.
 
-Обратите внимание, что для проектов веб-API .NET Core, необходимо использовать [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore/1.0.0) версии 1.0.0 или более поздней версии.
-
-После установки этих пакетов NuGet в проекте веб-API, необходимо настроить Swagger в классе запуска, как показано в следующем коде:
+После установки этих пакетов NuGet в проекте веб-API необходимо настроить Swagger в классе Startup, как показано в следующем коде:
 
 ```csharp
 public class Startup
@@ -358,18 +359,20 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         // Other ConfigureServices() code...
-        services.AddSwaggerGen();
-        services.ConfigureSwaggerGen(options =>
+
+        // Add framework services.
+        services.AddSwaggerGen(options =>
         {
             options.DescribeAllEnumsAsStrings();
-            options.SingleApiVersion(new Swashbuckle.Swagger.Model.Info()
+            options.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
             {
                 Title = "eShopOnContainers - Catalog HTTP API",
                 Version = "v1",
-                Description = "The Catalog Microservice HTTP API",
-                TermsOfService = "eShopOnContainers terms of service"
+                Description = "The Catalog Microservice HTTP API. This is a Data-Driven/CRUD microservice sample",
+                TermsOfService = "Terms Of Service"
             });
         });
+
         // Other ConfigureServices() code...
     }
 
@@ -380,38 +383,41 @@ public class Startup
         // Other Configure() code...
         // ...
         app.UseSwagger()
-            .UseSwaggerUi();
+            .UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
     }
 }
 ```
 
-После этого можно запустить приложение и перейдите следующих Swagger JSON и пользовательского интерфейса конечных точек с помощью URL-адреса, подобные этим:
+После этого можно запустить приложение и перейти к следующим конечным точкам пользовательского интерфейса и JSON Swagger, используя URL-адреса, подобные приведенным ниже.
 
 ```json
   http://<your-root-url>/swagger/v1/swagger.json
   
-  http://<your-root-url>/swagger/ui
+  http://<your-root-url>/swagger/
 ```
 
-Ранее вы видели, созданного пользовательского интерфейса, созданные Swashbuckle для URL-адреса, например, http://&lt;-корневого-URL-адрес &gt; /swagger/пользовательского интерфейса. На рисунке 8 – 9 можно выполнить как можно проверить любой метод API.
+Ранее вы видели произведенный пользовательский интерфейс, созданный Swashbuckle для URL-адреса, такого как http://&lt;your-root-url&gt;/swagger/ui. На рисунке 8-9 показано, как можно тестировать любой метод API.
 
 ![](./media/image10.png)
 
-**На рисунке 8 – 9**. Метод элементы каталога или API тестирования пользовательского интерфейса Swashbuckle
+**Рис. 8-9**. Тестирование метода API Catalog/Items в пользовательском интерфейсе Swashbuckle
 
-Рис. 8-10 показывает метаданных Swagger JSON, созданных из микрослужбу eShopOnContainers (то есть использовать средства под) при запросе &lt;-корневого-URL-адрес&gt;/swagger/v1/swagger.json с помощью [почтальон](https://www.getpostman.com/).
+На рисунке 8-10 показаны метаданные JSON Swagger, созданные из микрослужбы eShopOnContainers (это то, что инструменты используют внутри) при запросе &lt;your-root-url&gt;/swagger/v1/swagger.json using [Postman](https://www.getpostman.com/).
 
 ![](./media/image11.png)
 
-**Рис. 8-10**. Метаданные swagger JSON
+**Рис. 8-10**. Метаданные JSON Swagger
 
-Это очень просто. И так как оно генерируется автоматически, метаданные Swagger будет увеличиваться при добавлении дополнительные функции к вашему API.
+Это так просто. И так как они создаются автоматически, метаданные Swagger будет увеличиваться при добавлении дополнительных функций к вашему API.
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Веб-API справки страниц ASP.NET с помощью Swagger**
+-   **Страницы справки веб-API ASP.NET с помощью Swagger**
     [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
 
 >[!div class="step-by-step"]
-[Предыдущие] (микрослужбу приложения design.md) [Далее] (несколькими-container-приложения docker-compose.md)
+[Назад] (microservice-application-design.md) [Далее] (multi-container-applications-docker-compose.md)
