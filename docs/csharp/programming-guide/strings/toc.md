@@ -4,4 +4,3 @@
 ## [Практическое руководство. Поиск строк с помощью строковых методов](how-to-search-strings-using-string-methods.md)
 ## [Практическое руководство. Поиск строк с помощью регулярных выражений](how-to-search-strings-using-regular-expressions.md)
 ## [Практическое руководство. Определение представления числового значения в строке](how-to-determine-whether-a-string-represents-a-numeric-value.md)
-## [Практическое руководство. Преобразование строки в значение типа "DateTime"](how-to-convert-a-string-to-a-datetime.md)
