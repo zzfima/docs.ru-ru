@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: d1bef5813df40fb5c6e6b96e0042a682022beb8d
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.openlocfilehash: 918dfeceb0bfd8ee808e5615df014973dedf5cc1
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="how-to-c"></a>Практическое руководство (C#)
 
@@ -68,7 +68,7 @@ ms.lasthandoff: 01/23/2018
 
 - [Определение того, представляет ли строка число](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [Преобразование строк, представляющих шестнадцатеричные значения, и числа](../programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).
-- [Преобразование строки в <xref:System.DateTime>](../programming-guide/strings/how-to-convert-a-string-to-a-datetime.md).
+- [Преобразование строки в `DateTime`](../../standard/base-types/parsing-datetime.md).
 - [Преобразование массива байтов в значение типа int](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md).
 - [Преобразование строки в число](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
 - [Использование `as` и `is` для безопасного приведения к другому типу](../programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md).
