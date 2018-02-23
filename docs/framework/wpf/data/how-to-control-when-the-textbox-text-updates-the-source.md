@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9c503eb3300aba4a44c5a013c62942e7a171ae96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 00fc64938e6a063ffbda77961f967e08c169ebd7
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Практическое руководство. Управление обновлением источника из поля TextBox
 В этом разделе описывается использование <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> свойства для управления синхронизацией обновлений источника привязки. В этом разделе используются <xref:System.Windows.Controls.TextBox> элемента управления в качестве примера.  
@@ -33,9 +35,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="example"></a>Пример  
  <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> Свойство имеет значение по умолчанию <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> значение <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>. Это означает, что если приложение имеет <xref:System.Windows.Controls.TextBox> с привязкой к данным <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> свойство, текст, вводимый в <xref:System.Windows.Controls.TextBox> обновляет источник до <xref:System.Windows.Controls.TextBox> теряет фокус (например, если щелкнуть вне <xref:System.Windows.Controls.TextBox>).  
   
- Если нужно Источник обновлялся при вводе, задайте <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> привязки <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>. В следующем примере `Text` свойства обоих <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.TextBlock> связаны с теми же свойствами источника. <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Свойство <xref:System.Windows.Controls.TextBox> привязки имеет значение <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>.  
+ Источник обновляться по мере ввода, установите <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> привязки <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>. В следующем примере выделенные строки кода показывают, что `Text` свойства обоих <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.TextBlock> связаны с теми же свойствами источника. <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Свойство <xref:System.Windows.Controls.TextBox> привязки имеет значение <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>.  
   
- [!code-xaml[SimpleBinding#USTHowTo](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml#usthowto)]  
+ [!code-xaml[SimpleBinding#USTHowTo](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml?highlight=33-39,41-42)]  
   
  В результате <xref:System.Windows.Controls.TextBlock> отображает текст (поскольку источник изменяется), как пользователь вводит в <xref:System.Windows.Controls.TextBox>, как показано на следующем снимке экрана образца:  
   

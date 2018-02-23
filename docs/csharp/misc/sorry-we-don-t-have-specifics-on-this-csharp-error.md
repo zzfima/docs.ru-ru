@@ -2,7 +2,8 @@
 title: "К сожалению, мы больше не &#39; t имеют подробные сведения об этой ошибке C#"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - CS1583
@@ -882,27 +883,28 @@ f1_keywords:
 - CS8168
 - CS8172
 - CS8179
-helpviewer_keywords: errors [C#], additional information
+helpviewer_keywords:
+- errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 312bcc963e2e444bb5125124a0cb690126c0a770
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5f6224f661aff817b4314d832fcc2ff3938644c0
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>К сожалению, мы больше не &#39; t имеют подробные сведения об этой ошибке C#
 Подробные сведения об этой ошибке отсутствуют. Можно выполнить поиск по номеру ошибки и тексту сообщения об ошибке в Интернете. Или вы можете запросить другим разработчикам на следующих форумах:  
   
- [Язык Visual C#](http://go.microsoft.com/fwlink/?LinkId=146921)  
+ [Язык Visual C#](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
  Форум для вопросов и общих обсуждений проблем, связанных с синтаксисом и компилятором языка [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
- [Visual C# IDE](http://go.microsoft.com/fwlink/?LinkId=146922)  
+ [Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
  Форум предназначен для вопросов о работе в среде [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
- [Общие сведения о Visual C#](http://go.microsoft.com/fwlink/?LinkId=146920)  
+ [Общие сведения о Visual C#](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
  Форум предназначен для вопросов по работе [!INCLUDE[csprcs](~/includes/csprcs-md.md)] и соответствующим проблемам, которые не обсуждаются на других форумах.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
@@ -915,4 +917,3 @@ ms.lasthandoff: 11/21/2017
  [Руководство по программированию на C#](../../csharp/programming-guide/index.md)  
  [Справочник по C#](../../csharp/language-reference/index.md)  
  [Обращайтесь к нам](/visualstudio/ide/talk-to-us)  
- [Обращайтесь к нам](/visualstudio/ide/talk-to-us)

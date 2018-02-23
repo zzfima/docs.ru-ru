@@ -1,12 +1,9 @@
 ---
-title: "Выполняемая по умолчанию обработка событий мыши и клавиатуры элементом управления DataGridView в Windows Forms"
-ms.custom: 
-ms.date: 03/30/2017
+title: "В элементе управления Windows Forms DataGridView обработка событий мыши и клавиатуры по умолчанию"
+ms.date: 02/13/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], mouse handling
@@ -17,18 +14,19 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], mouse handling
 - navigation keys [Windows Forms], DataGridView control
 ms.assetid: 4519b928-bfc8-4e8b-bb9c-b1e76a0ca552
-caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 627784f3d68ddf03f1f6c94975405dded3163c06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 29e8afaefd35951288a4d8f5e5df2e3b5fbc4356
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
-# <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>Выполняемая по умолчанию обработка событий мыши и клавиатуры элементом управления DataGridView в Windows Forms
+# <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>В элементе управления Windows Forms DataGridView обработка событий мыши и клавиатуры по умолчанию
+
 В следующих таблицах описаны способы взаимодействия пользователей с <xref:System.Windows.Forms.DataGridView> управления посредством клавиатуры и мыши.  
   
 > [!NOTE]
@@ -52,11 +50,12 @@ ms.lasthandoff: 12/22/2017
 |SHIFT+TAB|Если <xref:System.Windows.Forms.DataGridView.StandardTab%2A> значение свойства `false`, фокус перемещается к предыдущей ячейке в текущей строке. Если фокус находится в первой ячейке строки, фокус перемещается в последнюю ячейку в предыдущей строке. Если фокус находится в первой ячейке в элементе управления, фокус перемещается к предыдущему элементу управления в последовательности табуляции родительского контейнера.<br /><br /> Если <xref:System.Windows.Forms.DataGridView.StandardTab%2A> значение свойства `true`, фокус перемещается к предыдущему элементу управления в последовательности табуляции родительского контейнера.|  
 |CTRL + TAB|Если <xref:System.Windows.Forms.DataGridView.StandardTab%2A> значение свойства `false`, фокус перемещается к следующему элементу управления в последовательности табуляции родительского контейнера.<br /><br /> Если <xref:System.Windows.Forms.DataGridView.StandardTab%2A> значение свойства `true`, фокус перемещается к следующей ячейке в текущей строке. Если фокус находится в последней ячейке строки, фокус перемещается к первой ячейке в следующей строке. Если фокус находится в последней ячейке в элементе управления, фокус перемещается к следующему элементу управления в последовательности табуляции родительского контейнера.|  
 |CTRL+SHIFT+TAB|Если <xref:System.Windows.Forms.DataGridView.StandardTab%2A> значение свойства `false`, фокус перемещается к предыдущему элементу управления в последовательности табуляции родительского контейнера.<br /><br /> Если <xref:System.Windows.Forms.DataGridView.StandardTab%2A> значение свойства `true`, фокус перемещается к предыдущей ячейке в текущей строке. Если фокус находится в первой ячейке строки, фокус перемещается в последнюю ячейку в предыдущей строке. Если фокус находится в первой ячейке в элементе управления, фокус перемещается к предыдущему элементу управления в последовательности табуляции родительского контейнера.|  
-|CTRL + СТРЕЛКА|Передает фокус самой крайней ячейке в направлении стрелки.|  
+|CTRL+ARROW|Передает фокус самой крайней ячейке в направлении стрелки.|  
 |CTRL + HOME|Переход к первой ячейке в элементе управления.|  
 |CTRL + END|Перемещение фокуса в последнюю ячейку в элементе управления.|  
 |CTRL + PAGE ВНИЗ ИЛИ ВВЕРХ|То же, как страница вниз или PAGE UP.|  
-|F2|Переводит текущую ячейку в режим редактирования ячейки, если <xref:System.Windows.Forms.DataGridView.EditMode%2A> значение свойства <xref:System.Windows.Forms.DataGridViewEditMode.EditOnF2> или <xref:System.Windows.Forms.DataGridViewEditMode.EditOnKeystrokeOrF2>.|  
+|F2|Переводит текущую ячейку в режим редактирования ячейки, если <xref:System.Windows.Forms.DataGridView.EditMode%2A> значение свойства <xref:System.Windows.Forms.DataGridViewEditMode.EditOnF2> или <xref:System.Windows.Forms.DataGridViewEditMode.EditOnKeystrokeOrF2>.|
+|F3|Сортирует текущий столбец, если <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType> значение свойства <xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>. Это аналогично щелчку текущего заголовка столбца. Доступно с версии .NET Framework 4.7.2. Чтобы включить эту функцию, приложений целевой платформы .NET Framework 4.7.2 или более поздней версии или явно согласиться на более удобным, с помощью параметров AppContext ключей.|  
 |F4|Если текущая ячейка находится <xref:System.Windows.Forms.DataGridViewComboBoxCell>, она переходит в режим редактирования и отображается список раскрывающегося списка.|  
 |ALT + СТРЕЛКА ВВЕРХ ИЛИ ВНИЗ СТРЕЛКИ|Если текущая ячейка находится <xref:System.Windows.Forms.DataGridViewComboBoxCell>, она переходит в режим редактирования и отображается список раскрывающегося списка.|  
 |ПРОБЕЛ|Если текущая ячейка находится <xref:System.Windows.Forms.DataGridViewButtonCell>, <xref:System.Windows.Forms.DataGridViewLinkCell>, или <xref:System.Windows.Forms.DataGridViewCheckBoxCell>, вызывает <xref:System.Windows.Forms.DataGridView.CellClick> и <xref:System.Windows.Forms.DataGridView.CellContentClick> события. Если текущая ячейка находится <xref:System.Windows.Forms.DataGridViewButtonCell>, также нажимает кнопку. Если текущая ячейка находится <xref:System.Windows.Forms.DataGridViewCheckBoxCell>, также изменяет состояние флажка.|  
@@ -67,14 +66,15 @@ ms.lasthandoff: 12/22/2017
 |CTRL+ВВОД|Фиксирует все изменения в текущей ячейке без перемещения фокуса. Также фиксирует все изменения для текущей строки, если элемент управления привязан к источнику данных, которая поддерживает режим редактирования или виртуальной реализации с уровня строк области фиксации.|  
 |CTRL+0|Вводит <xref:System.DBNull.Value?displayProperty=nameWithType> значение в текущей ячейке, если ячейки могут изменяться. По умолчанию, отображаемое значение для <xref:System.DBNull> значение ячейки является значение <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> свойство <xref:System.Windows.Forms.DataGridViewCellStyle> действует для текущей ячейки.|  
   
-### <a name="selection-keys"></a>Выбор ключей  
+### <a name="selection-keys"></a>Выбор ключей
+
  Если <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> свойству `false` и <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> свойству <xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>, изменения в текущей ячейке с помощью клавиши навигации изменении выбора элементов в новую ячейку. SHIFT, CTRL и ALT не влияют на это поведение.  
   
  Если <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> равно <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> или <xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>, такое же поведение наблюдается, но со следующими дополнениями.  
   
 |Клавиши или сочетания клавиш|Описание:|  
 |----------------------------|-----------------|  
-|SHIFT + ПРОБЕЛ|Выбор всей строки или столбца (то же, как при щелчке заголовка строки или столбца).|  
+|SHIFT+SPACEBAR|Выбор всей строки или столбца (то же, как при щелчке заголовка строки или столбца).|  
 |Клавиша навигации (клавиша со стрелкой, PAGE UP/DOWN, HOME, END)|Если выбран полной строки или столбца, изменение текущей ячейки в новой строки или столбца выделяет всей новой строки или столбца (в зависимости от режима выделения).|  
   
  Если <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> равно `false` и <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> равно <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> или <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>, изменение текущей ячейки в новую строку или столбец с помощью клавиатуры выделяет всей новой строки или столбца. SHIFT, CTRL и ALT не влияют на это поведение.  
@@ -83,9 +83,9 @@ ms.lasthandoff: 12/22/2017
   
  Если <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> равно `true` и <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> равно <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> или <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>, текущей ячейки и ячейки привязки происходит так же, но только полной строки или столбцы становится выбранным или невыбранным.  
   
-## <a name="default-mouse-handling"></a>Стандартная обработка событий мыши  
+## <a name="default-mouse-handling"></a>Стандартная обработка событий мыши
   
-### <a name="basic-mouse-handling"></a>Обработка основных событий мыши  
+### <a name="basic-mouse-handling"></a>Обработка основных событий мыши
   
 > [!NOTE]
 >  Щелчок по ячейке левой кнопки мыши всегда изменяет текущую ячейку. Щелчок по ячейке правой кнопкой мыши открывается контекстное меню, если она доступна.  
@@ -97,7 +97,8 @@ ms.lasthandoff: 12/22/2017
 |Щелчок левой кнопкой мыши|Вызывает <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> и <xref:System.Windows.Forms.DataGridView.CellMouseClick?displayProperty=nameWithType> события|  
 |Левой кнопки мыши и перетащите на ячейки заголовка столбца|Если <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> свойство `true`, перемещает столбец, чтобы его можно перетащить в новое место.|  
   
-### <a name="mouse-selection"></a>Выделение мышью  
+### <a name="mouse-selection"></a>Выделение мышью
+
  Поведение выделения не связан с средней кнопки мыши или колесиком мыши.  
   
  Если <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> свойству `false` и <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> свойству <xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>, происходит следующее.  
@@ -121,6 +122,7 @@ ms.lasthandoff: 12/22/2017
   
  Если <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> равно `true` и <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> равно <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> или <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>, удерживая нажатой клавишу SHIFT или CTRL при щелчке ячейки ведет себя так же, за исключением того, что только полных строк и влияют на столбцы.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.DataGridView>  
+## <a name="see-also"></a>См. также
+
+<xref:System.Windows.Forms.DataGridView>  
  [Элемент управления DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

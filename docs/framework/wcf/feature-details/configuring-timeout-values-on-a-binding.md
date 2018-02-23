@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 164b4e3bff3e327b82c78c403a0e65ec8db744ff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ce70b8bca923645ea1e00a55ec4d41903d828a99
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>Настройка значений времени ожидания для привязки
 Существует ряд настроек параметров времени ожидания, доступных в привязках WCF. Правильная установка этих параметров времени ожидания может не только повысить производительность службы, но и внести вклад в удобство использования и безопасность службы. Доступны следующие значения времени ожидания для привязок WCF.  
@@ -90,15 +92,15 @@ public static void Main()
   
 1.  Значение SendTimeout используется для инициализации значения OperationTimeout, которое управляет всем процессом отправки сообщения, включая получение ответного сообщения для операции службы типа «запрос-ответ». Это время ожидания применяется также при отправке ответного сообщения из метода обратного вызова контракта.  
   
-2.  Значение OpenTimeout используется при открытии каналов, если для этого процесса не указано явное значение времени ожидания.  
+2.  OpenTimeout используется при открытии каналов, если не задан явно заданным временем ожидания.  
   
-3.  Значение CloseTimeout используется при закрытии каналов, если для этого процесса не указано явное значение времени ожидания.  
+3.  CloseTimeout используется при закрытии каналов, если не задан явно заданным временем ожидания.  
   
 4.  Значение ReceiveTimeout не используется.  
   
 ### <a name="service-side-timeouts"></a>Время ожидания на стороне службы  
  На стороне службы:  
   
-1.  Значения времени ожидания SendTimeout, OpentTimeout, CloseTimeout такие же, как и на стороне клиента  
+1.  SendTimeout, OpenTimeout, CloseTimeout одинаковы как на стороне клиента.  
   
 2.  Значение ReceiveTimeout используется на уровне платформы службы для инициализации времени ожидания бездействующего сеанса. Это время ожидания определяет, как долго сеанс может находиться в бездействии до истечения времени ожидания.

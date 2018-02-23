@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2fc90769b1524ec93fd3df6a9b8be3eb28de8195
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 615b92d264b91ab5b267d5e79ab829b8afa489cd
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="binding-declarations-overview"></a>Общие сведения об объявлении привязок
 В этом разделе описываются различные способы объявления привязок.  
@@ -51,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
  При создании строк объявления привязки в разметке они должны быть присоединены к конкретному свойству зависимостей целевого объекта. Следующий пример показывает, как привязать <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> свойства с помощью расширения привязки, указав <xref:System.Windows.Data.Binding.Source%2A> и <xref:System.Windows.Data.Binding.Path%2A> свойства.  
   
- [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
+ [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
   
  Большинство свойств можно указать <xref:System.Windows.Data.Binding> таким способом. Дополнительные сведения о расширении привязки, а также список <xref:System.Windows.Data.Binding> свойства, которые нельзя задать с помощью расширения привязки в разделе [расширение разметки со связыванием](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) Обзор.  
   
@@ -69,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="MBandPB"></a>   
 ### <a name="multibinding-and-prioritybinding"></a>Классы MultiBinding и PriorityBinding  
- <xref:System.Windows.Data.MultiBinding>и <xref:System.Windows.Data.PriorityBinding> не поддерживают синтаксис расширения XAML. Таким образом, необходимо использовать синтаксис элемента объекта, если вы объявляете <xref:System.Windows.Data.MultiBinding> или <xref:System.Windows.Data.PriorityBinding> в XAML.  
+ <xref:System.Windows.Data.MultiBinding> и <xref:System.Windows.Data.PriorityBinding> не поддерживают синтаксис расширения XAML. Таким образом, необходимо использовать синтаксис элемента объекта, если вы объявляете <xref:System.Windows.Data.MultiBinding> или <xref:System.Windows.Data.PriorityBinding> в XAML.  
   
 <a name="BindinginCode"></a>   
 ## <a name="creating-a-binding-in-code"></a>Создание привязки в коде  
@@ -77,8 +79,6 @@ ms.lasthandoff: 12/22/2017
   
  [!code-csharp[BindConversion#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
  [!code-vb[BindConversion#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
-[!code-csharp[BindConversion#end1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#end1)]
-[!code-vb[BindConversion#end1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#end1)]  
   
  Если объект выполняется привязка <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement> можно вызвать `SetBinding` метод объекта напрямую, а не с помощью <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>. Пример см. в разделе [Создание привязки в коде](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md).  
   

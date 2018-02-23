@@ -1,11 +1,12 @@
 ---
 title: "Практическое руководство. Обеспечение доступности данных для привязки в XAML"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 01/29/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -15,37 +16,33 @@ helpviewer_keywords:
 - data binding [WPF], making data available for binding
 - binding data [WPF], making data available for
 ms.assetid: 7103c2e8-0e31-4a13-bf12-ca382221a8d5
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0c342f0d635a9220a88a2af79c76e2c1580dee2f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4f4e8e785b246e191ae8052f676331ea116b8c0d
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="how-to-make-data-available-for-binding-in-xaml"></a>Практическое руководство. Обеспечение доступности данных для привязки в XAML
 В этом разделе обсуждаются различные способы, вы можете сделать данные доступными для привязки в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], в зависимости от требований приложения.  
   
 ## <a name="example"></a>Пример  
- Если у вас есть [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] объекта вы бы хотели привязки из [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], один из способов сделать объект доступен для привязки является определение его в качестве ресурса и присвоить ему `x:Key`. В следующем примере у вас есть `Person` объект с строковое свойство с именем `PersonName`. `Person` Объект определен в пространстве имен `SDKSample`.  
+ Если у вас есть [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] объекта вы бы хотели привязки из [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], один из способов сделать объект доступен для привязки является определение его в качестве ресурса и присвоить ему `x:Key`. В следующем примере у вас есть `Person` объект с строковое свойство с именем `PersonName`. `Person` Объекта, который отображается по выделенная строка, содержащий `<src>` элемент, определен в пространстве имен `SDKSample`.  
   
- [!code-xaml[SimpleBinding#Instantiation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#instantiation)]  
-[!code-xaml[SimpleBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#2)]  
+ [!code-xaml[SimpleBinding#Instantiation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
   
- Затем можно привязать к объекту в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], как показано в следующем примере.  
+ После этого можно связать <xref:System.Windows.Controls.TextBlock> управления к объекту в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], как выделенная строка содержит `<TextBlock>` показывает элемент. 
   
- [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
+ Кроме того, можно использовать <xref:System.Windows.Data.ObjectDataProvider> класса, как показано в следующем примере:  
   
- Кроме того, можно использовать <xref:System.Windows.Data.ObjectDataProvider> класса, как показано в следующем примере.  
+ [!code-xaml[ObjectDataProvider}](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml?highlight=10-14,42)]  
   
- [!code-xaml[SimpleBinding#ODPCP](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml#odpcp)]  
-  
- Привязка определяется так же, как:  
-  
- [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
+ Привязка определяется так же, как выделенная строка, содержащий `<TextBlock>` показывает элемент.  
   
  В этом примере, результат будет такой же: у вас есть <xref:System.Windows.Controls.TextBlock> с текстовым содержимым `Joe`. Тем не менее <xref:System.Windows.Data.ObjectDataProvider> класс предоставляет функциональные возможности, такие как возможность привязки к результату метода. Вы можете использовать <xref:System.Windows.Data.ObjectDataProvider> класса, если требуется, чтобы он предоставляет функциональные возможности.  
   

@@ -24,11 +24,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 30fff79b163136b4405b8fe7a5dfffeda532525d
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: fc62422125d6a9a17aa353cccec6ab23eca2008b
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="control-styles-and-templates"></a>Стили и шаблоны элемента Control
 Элементы управления в Windows Presentation Foundation (WPF) имеют <xref:System.Windows.Controls.ControlTemplate> , содержащий визуальное дерево этого элемента управления. Можно изменить структуру и внешний вид элемента управления, изменив <xref:System.Windows.Controls.ControlTemplate> этого элемента управления. Невозможно заменить только часть визуального дерева элемента управления; Чтобы изменить визуальное дерево элемента управления, необходимо задать <xref:System.Windows.Controls.Control.Template%2A> свойство элемента управления, его новый и завершенный <xref:System.Windows.Controls.ControlTemplate>.  
@@ -63,18 +63,18 @@ ms.lasthandoff: 02/19/2018
  [Стили и шаблоны элемента ListView](../../../../docs/framework/wpf/controls/listview-styles-and-templates.md)  
  [Стили и шаблоны элемента Menu](../../../../docs/framework/wpf/controls/menu-styles-and-templates.md)  
  [Стили и шаблоны элемента NavigationWindow](../../../../docs/framework/wpf/controls/navigationwindow-styles-and-templates.md)  
- [Стили и шаблоны элемента PasswordBox](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
+ [Поле пароля стили и шаблоны](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
  [Стили и шаблоны элемента ProgressBar](../../../../docs/framework/wpf/controls/progressbar-styles-and-templates.md)  
  [Стили и шаблоны элемента RadioButton](../../../../docs/framework/wpf/controls/radiobutton-styles-and-templates.md)  
- [Стили и шаблоны элемента RepeatButton](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
+ [RepeatButton стили и шаблоны](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
  [Стили и шаблоны элемента ScrollBar](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
  [Стили и шаблоны элемента ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)  
  [Стили и шаблоны элемента Slider](../../../../docs/framework/wpf/controls/slider-styles-and-templates.md)  
  [Стили и шаблоны элемента StatusBar](../../../../docs/framework/wpf/controls/statusbar-styles-and-templates.md)  
  [Стили и шаблоны элемента TabControl](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
  [Стили и шаблоны элемента TextBox](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
- [Стили и шаблоны элемента Thumb](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
- [Стили и шаблоны элемента ToggleButton](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
+ [Бегунок стили и шаблоны](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
+ [Элемент управления ToggleButton стили и шаблоны](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
  [Стили и шаблоны элемента ToolBar](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
  [Стили и шаблоны элемента ToolTip](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  
  [Стили и шаблоны элемента TreeView](../../../../docs/framework/wpf/controls/treeview-styles-and-templates.md)  
