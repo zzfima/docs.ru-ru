@@ -1,10 +1,9 @@
 ---
-title: "Компилятор Visual Basic с интерфейсом командной строки"
-ms.date: 07/20/2015
+title: "Компилятор командной строки Visual Basic"
+ms.date: 02/20/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - compilers [Visual Basic], Visual Basic options
@@ -13,28 +12,32 @@ helpviewer_keywords:
 - compiler options, Visual Basic
 - Visual Basic compiler, options
 ms.assetid: 6b57c444-50c7-4b88-8f59-ed65cff5e05c
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7230e62a6ce201209df41ad457fbd93f3a5c866f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: mairaw
+ms.author: mairaw
+ms.openlocfilehash: 3b1219a5965352057ab6fe564282394e14f6d063
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="visual-basic-command-line-compiler"></a><span data-ttu-id="48dd8-102">Компилятор Visual Basic с интерфейсом командной строки</span><span class="sxs-lookup"><span data-stu-id="48dd8-102">Visual Basic Command-Line Compiler</span></span>
-<span data-ttu-id="48dd8-103">Компилятор командной строки [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] служит альтернативой программам компиляции в составе интегрированной среды разработки [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="48dd8-103">The [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] command-line compiler provides an alternative to compiling programs from within the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] integrated development environment (IDE).</span></span> <span data-ttu-id="48dd8-104">В этом разделе содержится описание параметров компилятора [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="48dd8-104">This section contains descriptions for the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler options.</span></span>  
+# <a name="visual-basic-command-line-compiler"></a><span data-ttu-id="2fe98-102">Компилятор командной строки Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2fe98-102">Visual Basic command-line compiler</span></span>
+
+<span data-ttu-id="2fe98-103">Компилятор командной строки Visual Basic представляет собой альтернативу компиляции в среде разработки Visual Studio (IDE).</span><span class="sxs-lookup"><span data-stu-id="2fe98-103">The Visual Basic command-line compiler provides an alternative to compiling programs from within the Visual Studio integrated development environment (IDE).</span></span> <span data-ttu-id="2fe98-104">Этот раздел содержит описания для параметров компилятора Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="2fe98-104">This section contains descriptions for the Visual Basic compiler options.</span></span>
+
+<span data-ttu-id="2fe98-105">Каждый параметр компилятора доступен в двух формах:-option и/Option.</span><span class="sxs-lookup"><span data-stu-id="2fe98-105">Every compiler option is available in two forms: -option and /option.</span></span> <span data-ttu-id="2fe98-106">В документации по Visual Basic отображаются только форма/Option.</span><span class="sxs-lookup"><span data-stu-id="2fe98-106">The Visual Basic documentation only shows the /option form.</span></span>
   
-## <a name="in-this-section"></a><span data-ttu-id="48dd8-105">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="48dd8-105">In This Section</span></span>  
- [<span data-ttu-id="48dd8-106">Построение из командной строки</span><span class="sxs-lookup"><span data-stu-id="48dd8-106">Building from the Command Line</span></span>](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
- <span data-ttu-id="48dd8-107">Описание компилятора командной строки [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], который служит альтернативой программам компиляции в составе интегрированной среды разработки [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="48dd8-107">Describes the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] command-line compiler, which is provided as an alternative to compiling programs from within the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IDE.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="2fe98-107">Содержание раздела</span><span class="sxs-lookup"><span data-stu-id="2fe98-107">In this section</span></span>
+
+[<span data-ttu-id="2fe98-108">Построение из командной строки</span><span class="sxs-lookup"><span data-stu-id="2fe98-108">Building from the Command Line</span></span>](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
+<span data-ttu-id="2fe98-109">Описание компилятора командной строки Visual Basic, который предоставляется в качестве альтернативы компилятору в Интегрированной среде разработки Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="2fe98-109">Describes the Visual Basic command-line compiler, which is provided as an alternative to compiling programs from within the Visual Studio IDE.</span></span>
+
+[<span data-ttu-id="2fe98-110">Параметры компилятора Visual Basic в алфавитном порядке</span><span class="sxs-lookup"><span data-stu-id="2fe98-110">Visual Basic Compiler Options Listed Alphabetically</span></span>](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
+<span data-ttu-id="2fe98-111">Список параметров компилятора в алфавитной таблице</span><span class="sxs-lookup"><span data-stu-id="2fe98-111">Lists compiler options in an alphabetical table</span></span>
+
+[<span data-ttu-id="2fe98-112">Параметры компилятора Visual Basic по категориям</span><span class="sxs-lookup"><span data-stu-id="2fe98-112">Visual Basic Compiler Options Listed by Category</span></span>](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
+<span data-ttu-id="2fe98-113">Параметры компилятора в виде функциональных групп.</span><span class="sxs-lookup"><span data-stu-id="2fe98-113">Presents compiler options in functional groups.</span></span>
   
- [<span data-ttu-id="48dd8-108">Параметры компилятора Visual Basic в алфавитном порядке</span><span class="sxs-lookup"><span data-stu-id="48dd8-108">Visual Basic Compiler Options Listed Alphabetically</span></span>](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
- <span data-ttu-id="48dd8-109">Список параметров компилятора в алфавитной таблице.</span><span class="sxs-lookup"><span data-stu-id="48dd8-109">Lists compiler options in an alphabetical table.</span></span>  
-  
- [<span data-ttu-id="48dd8-110">Параметры компилятора Visual Basic по категориям</span><span class="sxs-lookup"><span data-stu-id="48dd8-110">Visual Basic Compiler Options Listed by Category</span></span>](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
- <span data-ttu-id="48dd8-111">Параметры компилятора в виде функциональных групп.</span><span class="sxs-lookup"><span data-stu-id="48dd8-111">Presents compiler options in functional groups.</span></span>  
-  
-## <a name="related-sections"></a><span data-ttu-id="48dd8-112">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="48dd8-112">Related Sections</span></span>  
- [<span data-ttu-id="48dd8-113">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="48dd8-113">Visual Basic</span></span>](../../../visual-basic/index.md)  
- <span data-ttu-id="48dd8-114">Начальная точка работы со справкой [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="48dd8-114">The starting point for the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Help.</span></span>
+## <a name="related-sections"></a><span data-ttu-id="2fe98-114">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="2fe98-114">Related sections</span></span>
+
+[<span data-ttu-id="2fe98-115">Руководство по Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2fe98-115">Visual Basic Guide</span></span>](../../index.md)  
+<span data-ttu-id="2fe98-116">Начальная точка для документации Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="2fe98-116">The starting point for the Visual Basic documentation.</span></span>
