@@ -2,21 +2,22 @@
 title: "События (Руководство по программированию в C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - classes [C#], events
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5ab40de46bf198cf683ec4847a42d88b3d4807e0
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 72563b9e37c26257a2bf5939f63ece050ec003ab
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="events-c-programming-guide"></a>События (Руководство по программированию в C#)
 События позволяют [классу](../../../csharp/language-reference/keywords/class.md) или объекту уведомлять другие классы или объекты о возникновении каких-либо ситуаций. Класс, отправляющий (или *порождающий*) событие, называется *издателем* , а классы, принимающие (или *обрабатывающие*) событие, называются *подписчиками*.  
@@ -59,9 +60,9 @@ ms.lasthandoff: 12/09/2017
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="featured-book-chapters"></a>Главы в популярных книгах  
- [Делегаты, события и лямбда-выражения](http://go.microsoft.com/fwlink/?LinkId=195395) в [справочном руководстве по C# 3.0, третье издание: более 250 решений для программистов на C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195369)  
+ [Делегаты, события и лямбда-выражения](https://msdn.microsoft.com/library/orm-9780596516109-03-09.aspx) в [справочном руководстве по C# 3.0, третье издание: более 250 решений для программистов на C# 3.0](https://msdn.microsoft.com/library/orm-9780596516109-03.aspx)  
   
- [Делегаты и события](http://go.microsoft.com/fwlink/?LinkId=195418) в статье [Изучение C# 3.0: овладение основными понятиями C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195412)  
+ [Делегаты и события](https://msdn.microsoft.com/library/orm-9780596521066-01-17.aspx) в статье [Изучение C# 3.0: овладение основными понятиями C# 3.0](https://msdn.microsoft.com/library/orm-9780596521066-01.aspx)  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.EventHandler>  
