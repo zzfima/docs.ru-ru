@@ -4,11 +4,11 @@ hide_bc:
 title: "Документация по .NET"
 description: "Сведения об использовании .NET для создания различных приложений на любой платформе с помощью C#, Visual Basic и F#. Ознакомьтесь со справочником по API, образцами кода, учебниками и другими материалами."
 ms.custom: updateeachrelease
-ms.openlocfilehash: 9e2ed008752d37d79cabc8c9d341e797a715294c
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: 65d0a7681c8210ee458112a5486f36ceac7f65e4
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/24/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -256,9 +256,9 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/aspnet/core/">
-                                                    <h3>Использование ASP.NET Core</h3>
-                                                    <p>Сведения о создании современных веб-приложений с помощью ASP.NET Core.</p>
+                                                <a href="/aspnet/core/tutorials/">
+                                                    <h3>Учебники по ASP.NET Core</h3>
+                                                    <p>Предлагаем вам разнообразные пошаговые руководства, которые помогут научиться разрабатывать приложения ASP.NET Core.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -275,7 +275,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://www.asp.net/learn">
+                                                <a href="/aspnet/overview">
                                                     <h3>Что такое ASP.NET?</h3>
                                                     <p>Сведения о создании веб-приложений ASP.NET.</p>
                                                 </a>
@@ -296,7 +296,7 @@ ms.lasthandoff: 02/09/2018
                                             <div class="cardText">
                                                 <a href="/aspnet/core/tutorials/first-mvc-app/start-mvc">
                                                     <h3>ASP.NET Core в Visual Studio</h3>
-                                                    <p>Основы создания веб-приложений MVC ASP.NET Core с помощью Visual Studio 2015.</p>
+                                                    <p>Узнайте основы создания веб-приложений ASP.NET Core по схеме MVC с помощью Visual Studio.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -313,9 +313,9 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/dotnet/framework/docker/aspnetmvc">
-                                                    <h3>Приложения ASP.NET в контейнерах</h3>
-                                                    <p>Сведения о развертывании приложений ASP.NET с помощью Docker.</p>
+                                                <a href="/aspnet/mvc/overview/deployment/docker-aspnetmvc">
+                                                    <h3>MVC-приложения ASP.NET в контейнерах Windows</h3>
+                                                    <p>Научитесь развертывать MVC-приложения ASP.NET с использованием Docker.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -332,9 +332,9 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/aspnet/core/tutorials/your-first-mac-aspnet">
-                                                    <h3>ASP.NET в macOS и Visual Studio Code</h3>
-                                                    <p>Сведения о настройке, создании и развертывании приложений ASP.NET Core в macOS с помощью Visual Studio Code.</p>
+                                                <a href="/aspnet/core/tutorials/xplat">
+                                                    <h3>Руководства по кроссплатформенности в ASP.NET Core</h3>
+                                                    <p>Узнайте, как создавать веб-приложения и веб-API с помощью ASP.NET Core.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -356,8 +356,8 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://azure.microsoft.com/develop/net">
-                                                    <h3>Документация по .NET Azure</h3>
+                                                <a href="/dotnet/azure/">
+                                                    <h3>Документация по Azure для .NET</h3>
                                                     <p>Сведения о службах Azure, таких как веб-приложения, веб-задания, облачные службы и виртуальные машины.</p>
                                                 </a>
                                             </div>
@@ -413,7 +413,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://docs.microsoft.com/azure/storage/">
+                                                <a href="/azure/storage/">
                                                     <h3>Хранилище Azure</h3>
                                                     <p>Сведения о службе хранилища Azure и создании приложений с помощью BLOB-объектов, таблиц, очередей и файлов Azure.</p>
                                                 </a>
@@ -519,7 +519,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://msdn.microsoft.com/library/ms754130.aspx">
+                                                <a href="/dotnet/framework/wpf/index">
                                                     <h3>Windows Presentation Foundation (WPF)</h3>
                                                     <p>WPF предоставляет разработчикам модель на основе XAML для создания классических приложений на Windows.</p>
                                                 </a>
@@ -538,7 +538,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://msdn.microsoft.com/library/dd30h2yb.aspx">
+                                                <a href="/dotnet/framework/winforms/index">
                                                     <h3>Windows Forms</h3>
                                                     <p>Быстрая разработка бизнес-приложений для настольных систем с Windows.</p>
                                                 </a>
