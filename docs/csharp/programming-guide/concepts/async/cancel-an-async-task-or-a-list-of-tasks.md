@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 78becece40b4b527869c593f8a1fe1eeba1f1f51
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3003c7b4a10890ddf7faa098ed672ef40b591b30
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Отмена асинхронной задачи или списка задач (C#)
 Вы можете настроить кнопку, которая позволит отменить асинхронное приложение в случае, если вы не захотите дожидаться его завершения. Выполнив код в приведенных ниже примерах, вы сможете добавить в приложение кнопку отмены, загружающую содержимое одного веб-сайта или список веб-сайтов.  
@@ -29,7 +30,7 @@ ms.lasthandoff: 11/21/2017
  Код в первом примере связывает кнопку **Отмена** с отдельной задачей загрузки. Если нажать эту кнопку, когда приложение загружает содержимое, загрузка будет отменена.  
   
 ### <a name="downloading-the-example"></a>Загрузка примера  
- Вы можете скачать весь проект Windows Presentation Foundation (WPF) со страницы [Пример асинхронности. Тонкая настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046), а затем выполнить необходимые действия.  
+ Вы можете скачать весь проект Windows Presentation Foundation (WPF) со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea), а затем выполнить необходимые действия.  
   
 1.  Распакуйте загруженный файл, а затем запустите Visual Studio.  
   
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/21/2017
  Вы можете расширить предыдущий пример до отмены сразу нескольких задач, связав с каждой из них один и тот же экземпляр `CancellationTokenSource`. В этом случае кнопка **Отмена** отменяет сразу все незавершенные задачи.  
   
 ### <a name="downloading-the-example"></a>Загрузка примера  
- Вы можете скачать весь проект Windows Presentation Foundation (WPF) со страницы [Пример асинхронности. Тонкая настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046), а затем выполнить необходимые действия.  
+ Вы можете скачать весь проект Windows Presentation Foundation (WPF) со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea), а затем выполнить необходимые действия.  
   
 1.  Распакуйте загруженный файл, а затем запустите Visual Studio.  
   
@@ -262,7 +263,7 @@ ms.lasthandoff: 11/21/2017
 ##  <a name="BKMK_CompleteExamples"></a> Полные примеры  
  Следующие разделы содержат код каждого из приведенных выше примеров. Обратите внимание на то, что необходимо добавить ссылку для <xref:System.Net.Http>.  
   
- Проекты можно загрузить со страницы [Пример асинхронности. Тонкая настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046).  
+ Проекты можно загрузить со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ### <a name="cancel-a-task-example"></a>Пример отмены задачи  
  Приведенный ниже код представляет собой полный файл MainWindow.xaml.cs, демонстрирующий отмену отдельной задачи.  
@@ -523,6 +524,6 @@ namespace CancelAListOfTasks
 ## <a name="see-also"></a>См. также  
  <xref:System.Threading.CancellationTokenSource>  
  <xref:System.Threading.CancellationToken>  
- [Асинхронное программирование с использованием ключевых слов Async и Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+ [Асинхронное программирование с использованием ключевых слов async и await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
  [Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Тонкая настройка асинхронного приложения в C#)  
- [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Пример использования async. Тонкая настройка асинхронного приложения)
+ [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Пример использования async. Тонкая настройка асинхронного приложения)

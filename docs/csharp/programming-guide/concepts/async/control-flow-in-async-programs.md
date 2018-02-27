@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7a13763b2eeec93e7db7ca770c4d52b4a2ba768c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8b975b75f9ff31f43e722d3ceb28d08ed3b6ce11
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="control-flow-in-async-programs-c"></a>Поток управления в асинхронных программах (C#)
 Можно намного проще создавать и обслуживать асинхронные программы с помощью ключевых слов `async` и `await`. Однако при непонимании механизма работы асинхронной программы результаты могут удивить. В этом разделе выполняется трассировка потока управления с помощью простой асинхронной программы, чтобы продемонстрировать переход потока управления от одного метода к другому, включая данные, передаваемые в каждом случае.  
@@ -105,7 +106,7 @@ Length of the downloaded string: 33946.
 >  Для выполнения этого примера на компьютере должны быть установлены Visual Studio 2012 или более поздней версии и .NET Framework 4.5 или более поздней версии.  
   
 ### <a name="download-the-program"></a>Скачайте программу  
- Вы можете скачать приложение для этого раздела на странице примеров [Async Sample: Control Flow in Async Programs](http://go.microsoft.com/fwlink/?LinkId=255285). Следующие шаги описывают процесс открытия и запуска программы.  
+ Вы можете скачать приложение для этого раздела на странице примеров [Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Следующие шаги описывают процесс открытия и запуска программы.  
   
 1.  Распакуйте загруженный файл, а затем запустите Visual Studio.  
   
@@ -388,7 +389,7 @@ int contentLength = await getLengthTask;
  ![Шаг SIX (шесть)](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")  
   
 ## <a name="see-also"></a>См. также  
- [Асинхронное программирование с использованием ключевых слов Async и Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+ [Асинхронное программирование с использованием ключевых слов async и await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
  [Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md) (Типы возвращаемых значений асинхронных операций в C#)  
  [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Пошаговое руководство. Обращение к веб-сайтам с помощью async и await в C#)  
- [Пример асинхронности. Поток управления в асинхронных программах (C# и Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255285)
+ [Пример асинхронности. Поток управления в асинхронных программах (C# и Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

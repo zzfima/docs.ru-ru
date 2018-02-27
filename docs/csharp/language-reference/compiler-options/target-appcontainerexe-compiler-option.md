@@ -2,17 +2,18 @@
 title: "-target:appcontainerexe (параметры компилятора C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e49047ee5a639189331b89f3c5e16f6a1f1d4cd5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 61fc914b0d956bcca8e0d574296fa0723b0e1406
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe (параметры компилятора C#)
 Если используется параметр компилятора **-target:appcontainerexe**, компилятор создает исполняемый файл Windows (EXE-файл), который должен запускаться в контейнере приложения. Этот параметр аналогичен [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), но предназначен для приложений [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
@@ -24,7 +25,7 @@ ms.lasthandoff: 01/19/2018
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Этот параметр устанавливает бит в [переносимом исполняемом](http://go.microsoft.com/fwlink/p/?LinkId=236960) файле (PE), чтобы обеспечить запуск приложения в контейнере. Если он установлен, при попытке запустить исполняемый файл вне контейнера приложения методом CreateProcess будет возникать ошибка.  
+ Этот параметр устанавливает бит в [переносимом исполняемом](https://msdn.microsoft.com/library/windows/desktop/ms680547(v=vs.85).aspx?id=19509) файле (PE), чтобы обеспечить запуск приложения в контейнере. Если он установлен, при попытке запустить исполняемый файл вне контейнера приложения методом CreateProcess будет возникать ошибка.  
   
  Выходной файл получает имя входного файла, содержащего метод [Main](../../../csharp/programming-guide/main-and-command-args/index.md), если только с помощью параметра [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) не указано иное.  
   
