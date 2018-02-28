@@ -5,48 +5,53 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1718ea9c6ea1e029b66955e88fd54e20db1a3527
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: de8869956a59cb47623dbc4d84763e19d6f181bf
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="systemwebrouting-integration-sample"></a>Образец интеграции с SystemWebRouting
-Этот образец показывает интеграцию уровня размещения с классами в пространстве имен <xref:System.Web.Routing>. Классы в пространстве имен <xref:System.Web.Routing> позволяют приложению использовать URL-адреса, которые не соответствуют непосредственно физическому ресурсу. С помощью веб-маршрутизации разработчик может создавать виртуальные адреса протокола HTTP, которые затем сопоставляются с действительными службами [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Это может быть полезно, когда службу WCF необходимо разместить без обязательного выделения физического файла или ресурса или к службам необходимо получать доступ по URL-адресам, не содержащим файлов, например HTML или ASPX. Этот образец показывает использование класса <xref:System.Web.Routing.RouteTable> для создания виртуальных URI-адресов, связанных с выполняющимися службами, которые определены в файле global.asax. В данном примере с помощью WCF создаются два RSS-канала: канал `movies` и канал `channels`. URL-адреса для запуска служб не содержат расширений и зарегистрированы в `Application_Start` метод `Global` класс, производный от <xref:System.Web.HttpApplication.Application_Start> класса.  
-  
+Этот образец показывает интеграцию уровня размещения с классами в пространстве имен <xref:System.Web.Routing>. Классы в пространстве имен <xref:System.Web.Routing> позволяют приложению использовать URL-адреса, которые не соответствуют непосредственно физическому ресурсу. С помощью веб-маршрутизации разработчик может создавать виртуальные адреса протокола HTTP, которые затем сопоставляются с действительными службами [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Это может быть полезно, когда службу WCF необходимо разместить без обязательного выделения физического файла или ресурса или к службам необходимо получать доступ по URL-адресам, не содержащим файлов, например HTML или ASPX. Этот образец показывает использование класса <xref:System.Web.Routing.RouteTable> для создания виртуальных URI-адресов, связанных с выполняющимися службами, которые определены в файле global.asax. 
+
 > [!NOTE]
 >  Классы в пространстве имен <xref:System.Web.Routing> работают только со службами, размещаемыми по протоколу HTTP.  
   
-> [!NOTE]
->  Этот образец работает лишь в [!INCLUDE[iisver](../../../../includes/iisver-md.md)], так как [!INCLUDE[iis60](../../../../includes/iis60-md.md)] использует другой метод поддержки URL-адресов без расширений файлов.  
+В этом примере используется WCF для создания двух RSS-каналы: `movies` веб-канала и `channels` веб-канала. URL-адреса для запуска служб не содержат расширений и зарегистрированы в `Application_Start` метод `Global` класс, производный от <xref:System.Web.HttpApplication> класса.  
   
-> [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
+> [!NOTE]
+>  Этот образец работает только в Internet Information Services (IIS) 7.0 и более поздней версии, как службы IIS 6.0 использует другой метод поддержки URL-адресов без расширений.  
+
+#### <a name="to-download-this-sample"></a>Чтобы загрузить этот образец
+  
+В этом примере, уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
+   
+`<InstallDrive>:\WF_WCF_Samples`  
+   
+ Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+   
+`<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
   
 #### <a name="to-use-this-sample"></a>Использование этого образца  
   
-1.  Откройте файл WebRoutingIntegration.sln в среде [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+1.  Откройте файл WebRoutingIntegration.sln в среде Visual Studio.  
   
 2.  Нажмите клавишу F5, чтобы выполнить решение и запустить веб-сервер разработки.  
   
      Отобразится список каталогов для образца. Обратите внимание, что файлы с расширением SVC отсутствуют.  
   
-3.  В адресной строке добавьте в URL-адрес слово `movies` (он будет выглядеть как http://localhost:[порт]/movies) и нажмите клавишу ВВОД.  
+3.  В адресной строке добавьте `movies` URL-адрес, так что он считывает http://localhost: [порт] / movies и нажмите клавишу ВВОД.  
   
      В браузере откроется пакет фильмов.  
   
@@ -60,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-use-this-sample-when-hosted-in-iis"></a>Использование этого образца в случае размещения на IIS  
   
-1.  Откройте файл WebRoutingIntegration.sln в среде [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+1.  Откройте файл WebRoutingIntegration.sln в среде Visual Studio.  
   
 2.  Постройте проект, нажав клавиши CTRL+SHIFT+B.  
   
@@ -89,7 +94,7 @@ ms.lasthandoff: 12/22/2017
  Этот образец демонстрирует, что уровень размещения может взаимодействовать с классами в пространстве имен <xref:System.Web.Routing> для маршрутизации запросов служб, размещенных через протокол HTTP.  
   
 > [!NOTE]
->  Обновите версию пула приложений по умолчанию до [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)], если установлена версия 2.  
+>  Необходимо обновить версию пула приложений по умолчанию [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] Если значение версии 2.  
   
 ## <a name="see-also"></a>См. также  
  [Образцы размещения и сохраняемости образцы](http://go.microsoft.com/fwlink/?LinkId=193961)
