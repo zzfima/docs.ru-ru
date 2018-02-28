@@ -2,20 +2,21 @@
 title: "Практическое руководство. Перебор дерева папок (Руководство по программированию на C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4851938aafefd93aa9189aecbb3f5cdd9a09ea0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7f45bdc4a08922842b079be3ef9d112693ca5d7a
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Практическое руководство. Перебор дерева папок (Руководство по программированию на C#)
 Под фразой "итерация дерева каталога" подразумевается доступ к каждому файлу в каждом вложенном подкаталоге в заданной корневой папке на любую глубину. Необязательно открывать каждый файл. Можно просто извлечь имя файла или подкаталога в виде значения `string` или получить дополнительную информацию в форме объекта <xref:System.IO.FileInfo?displayProperty=nameWithType> или <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  
@@ -59,9 +60,9 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  Если необходимо сохранить содержимое дерева каталога либо в памяти, либо на диске, наилучшим вариантом будет сохранение только свойства <xref:System.IO.FileSystemInfo.FullName%2A> (типа `string`) для каждого файла. Затем можно использовать эту строку для создания объекта <xref:System.IO.FileInfo> или <xref:System.IO.DirectoryInfo> по мере необходимости или открыть любой файл, для которого требуется дополнительная обработка.  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
- Надежный код итерации файлов должен учитывать сложности файловой системы. Дополнительные сведения см. в разделе [техническом справочнике по NTFS](http://go.microsoft.com/fwlink/?LinkId=79488).  
+ Надежный код итерации файлов должен учитывать сложности файловой системы. Дополнительные сведения о файловой системе Windows см. в разделе [Технический справочник NTFS](https://technet.microsoft.com/library/81cc8a8a-bd32-4786-a849-03245d68d8e4).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.IO>  
- [LINQ и каталоги файлов](http://msdn.microsoft.com/library/5a5d516c-0279-4a84-ac84-b87f54caa808)  
+ [LINQ и каталоги файлов](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
  [Файловая система и реестр (руководство по программированию на C#)](../../../csharp/programming-guide/file-system/index.md)

@@ -1,23 +1,25 @@
 ---
 title: "Новые возможности Visual Basic"
-ms.date: 04/27/2017
+ms.date: 02/15/2018
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: VB.StartPage.WhatsNew
+f1_keywords:
+- VB.StartPage.WhatsNew
 helpviewer_keywords:
 - new features, Visual Basic
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: "145"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d26eb23aae6e5baec98e27a246d06af6b78e0802
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4df9a34e078de9daeff85c894afbbf4d60501f6b
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Новые возможности Visual Basic
 
@@ -25,10 +27,13 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="current-version"></a>Текущая версия
 
-Visual Basic/Visual Studio .NET 2017   
-Описание новых функций см. в статье [Visual Basic 2017](#visual-basic-2017)
+Visual Basic 15.5   
+Описание новых функций см. в статье [Visual Basic 15.5](#visual-basic-155)
 
 ## <a name="previous-versions"></a>Предыдущие версии
+
+Visual Basic 15.3   
+Описание новых функций см. в статье [Visual Basic 15.3](#visual-basic-153)
 
 Visual Basic/Visual Studio .NET 2015   
 Описание новых функций см. в статье [Visual Basic 14](#visual-basic-14)
@@ -53,6 +58,41 @@ Visual Basic/Visual Studio .NET 2003
 
 Visual Basic/Visual Studio .NET 2002   
 Первый выпуск Visual Basic .NET
+
+## <a name="visual-basic-155"></a>Visual Basic 15.5
+
+[Неконечные именованные аргументы](../programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md#mixing-arguments-by-position-and-by-name)
+
+В Visual Basic 15.3 и более ранних версиях при включении в вызов метода аргументов по положению и по имени позиционные аргументы должны были предшествовать именованным. Начиная с Visual Basic 15.5, позиционные и именованные аргументы могут появляться в любом порядке при условии, что все аргументы до последнего позиционного аргумента находятся в правильном положении. Это особенно полезно, если именованные аргументы используются, чтобы сделать код более удобочитаемым.
+
+Например, следующий вызов метода имеет два позиционных аргумента между именованным аргументом. Именованный аргумент показывает, что значение 19 представляет возраст.
+
+```vb
+StudentInfo.Display("Mary", age:=19, #9/21/1998#)
+```
+
+**Начальный шестнадцатеричный/двоичный/восьмеричный разделитель**
+
+В Visual Basic 2017 поддерживается использование подчеркивания (`_`) в качестве разделителя цифр. Начиная с Visual Basic 15.5, в качестве начального разделителя между префиксом и двоичными, шестнадцатеричными или восьмеричными цифрами можно использовать знак подчеркивания. В следующем примере начальный разделитель цифр используется для определения 3 271 948 384 в качестве шестнадцатеричного числа:
+
+```vb
+Dim number As Integer = &H_C305_F860
+``` 
+Чтобы использовать символ подчеркивания в качестве начального разделителя, необходимо добавить в файл проекта Visual Basic (*.vbproj) следующий элемент:
+
+```xml
+<PropertyGroup>
+  <LangVersion>15.5</LangVersion>
+</PropertyGroup>
+```
+
+## <a name="visual-basic-153"></a>Visual Basic 15.3
+
+[Вывод именованного кортежа](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
+
+При присвоении значения элементов кортежа из переменных Visual Basic выводит имя элементов кортежа из соответствующих имен переменных; нет необходимости явно называть элемент кортежа. В следующем примере вывод используется для создания кортежа с тремя именованными элементами: `state`, `stateName` и `capital`.
+
+[!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 

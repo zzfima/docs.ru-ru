@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-bcl
+ms.technology:
+- dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -33,16 +34,17 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f170c3e7174b231153a9e201f617faa786291056
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3ab23b263d572a5573de5fc21f15b56e784a9a94
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Упаковка и развертывание ресурсов в приложениях для настольных систем
 Приложения зависят от диспетчера ресурсов платформы .NET Framework, представленного классом <xref:System.Resources.ResourceManager>, для извлечения локализованных ресурсов. Диспетчер ресурсов предполагает, что модель "звезда" используется для упаковки и развертывания ресурсов. Центр в этой модели — основная сборка, которая содержит нелокализуемый исполняемый код и ресурсы для единственного языка и региональных параметров, называемого нейтральным или языком и региональными параметрами по умолчанию. Язык и региональные параметры по умолчанию являются резервными языком и региональными параметрами; это язык и региональные параметры, чьи ресурсы используются при невозможности найти локализованные ресурсы. Каждый луч звезды ведет к вспомогательной сборке, которая содержит ресурсы для одного языка и региональных параметров, но не содержит кода.  

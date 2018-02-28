@@ -3,19 +3,22 @@ title: "Версии и зависимости платформы .NET Framework
 ms.custom: updateeachrelease
 ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
-helpviewer_keywords: versions, .NET Framework
+helpviewer_keywords:
+- versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5875e5900f925e29fec303d276483947c994da8e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b6c5699fdcf68e99cd3049cf3150e44d14f4e614
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Версии и зависимости платформы .NET Framework
 В каждую версию платформы .NET Framework входит среда CLR, библиотеки базовых классов и другие управляемые библиотеки. В этом разделе описаны основные особенности различных версий платформы .NET Framework, приведены сведения о базовых версиях среды CLR и соответствующих средах разработки, а также указаны версии, устанавливаемые системой Windows.  
@@ -48,7 +51,7 @@ ms.lasthandoff: 12/22/2017
 |1.1|1.1|– Обновления ASP.NET и ADO.NET<br />– Параллельное выполнение<br />-   [Подробнее...](http://msdn.microsoft.com/library/9wtde3k4\(v=vs.80\).aspx)|2003|-|✓ 2003|См. [инструкции](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
 |1.0|1.0|Первая версия .NET Framework.|Visual Studio .NET|-|-|См. [инструкции](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
   
- Как правило, не требуется удалять какие-либо версии .NET Framework, уже установленные на вашем компьютере, потому что используемое приложение может зависеть от конкретной версии. В случае удаления какой-либо версии его исполнение может завершиться ошибкой. Можно загружать несколько версий платформы .NET Framework на одном компьютере одновременно. Это значит, что можно установить платформу .NET Framework без удаления предыдущих версий. Дополнительные сведения см. в разделе [Начало работы](../../../docs/framework/get-started/index.md).  
+ Как правило, не требуется удалять какие-либо версии .NET Framework, уже установленные на вашем компьютере, потому что используемое приложение может зависеть от конкретной версии. В случае удаления какой-либо версии его исполнение может завершиться ошибкой. Можно загружать несколько версий платформы .NET Framework на одном компьютере одновременно. Это значит, что можно установить платформу .NET Framework, не удаляя предыдущие версии. Дополнительные сведения см. в разделе [Начало работы](../../../docs/framework/get-started/index.md).  
   
 ## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>Выбор целевой платформы и запуск приложений .NET Framework для версии 4.5 и более поздних  
  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] — это обновление на месте, которое заменяет [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] на компьютере, и аналогично [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 и 4.7.1 — это обновления на месте для [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Это означает, что они используют ту же версию среды выполнения, но версии сборок обновлены и содержат новые типы и члены. После установки одного из этих обновлений приложения [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], .NET Framework 4.6 и .NET Framework 4.7 должны продолжать работу без повторной компиляции. Однако обратное неверно. Не рекомендуется запускать приложения, предназначенные для более поздней версии .NET Framework, в более ранней версии .NET Framework. Например, не рекомендуется запускать приложение, предназначенное для [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], на [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Применяются следующие правила.  

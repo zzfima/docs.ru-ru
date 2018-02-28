@@ -2,25 +2,26 @@
 title: "Универсальные классы (Руководство по программированию на C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c92efd63f7b24917dc50ca0864f1a132c5c2bf00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: afeca9fc49221551470f90f6f57d1b40e0142521
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="generic-classes-c-programming-guide"></a>Универсальные классы (Руководство по программированию на C#)
 Универсальные классы инкапсулируют операции, которые не относятся к конкретному типу данных. Универсальные классы чаще всего используются для работы с коллекциями, такими как связанные списки, хэш-таблицы, стеки, очереди, деревья и т. д. Такие операции, как добавление и удаление элементов коллекции, по существу выполняются одинаково, независимо от типа хранимых данных.  
   
- В большинстве случаев для этого используются классы коллекций. Рекомендуется выбирать те из них, которые представлены в библиотеке классов платформы .NET Framework. Дополнительные сведения об использовании этих классов см. в разделе [Универсальные шаблоны в библиотеке классов платформы .NET Framework](../../../csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md).  
+ В большинстве случаев для этого используются классы коллекций. Рекомендуется выбирать те из них, которые представлены в библиотеке классов платформы .NET. Дополнительные сведения об использовании этих классов см. в разделе [Универсальные коллекции в .NET](../../../standard/generics/collections.md).  
   
  Как правило, при создании универсального класса сначала определяется конкретный класс, после чего его типы поочередно заменяются параметрами типов до тех пор, пока не будет достигнут необходимый баланс между степенью обобщения и удобством работы. При создании собственных универсальных классов необходимо учитывать следующие важные моменты:  
   
@@ -74,5 +75,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Collections.Generic>  
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
  [Универсальные шаблоны](../../../csharp/programming-guide/generics/index.md)  
- [Сохранение состояния перечислителей](http://go.microsoft.com/fwlink/?LinkId=112390)  
- [Загадка по наследованию, часть 1](http://go.microsoft.com/fwlink/?LinkId=112380)
+ [Сохранение состояния перечислителей](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)  
+ [Загадка по наследованию, часть 1](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)
