@@ -2,11 +2,13 @@
 title: "Аргумент &#39; &lt;аргумент1&gt;&#39; должно быть меньше или равен длине аргумента &#39;&lt; аргумент2&gt;&#39;"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrArgument_IndexLELength2
+f1_keywords:
+- vbrArgument_IndexLELength2
 ms.assetid: 10765f81-79c5-44c2-89c5-888253105b78
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 78d240fef3388c53fdb79b2a56fbbbbd7b665c7d
