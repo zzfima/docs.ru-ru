@@ -50,7 +50,7 @@ ms.lasthandoff: 01/19/2018
 |<xref:System.Windows.Forms.FontDialog>|Эквивалент отсутствует.||  
 |<xref:System.Windows.Forms.Form>|<xref:System.Windows.Window>|<xref:System.Windows.Window>не поддерживает дочерние окна.|  
 |<xref:System.Windows.Forms.GroupBox>|<xref:System.Windows.Controls.GroupBox>||  
-|<xref:System.Windows.Forms.HelpProvider>|Эквивалент отсутствует.|Отсутствует справка F1. Справка «Что это такое» заменяется всплывающей подсказкой.|  
+|<xref:System.Windows.Forms.HelpProvider>|Эквивалент отсутствует.|Отсутствует справка F1. Справка "Что это такое" заменяется всплывающей подсказкой.| 
 |<xref:System.Windows.Forms.HScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar>|Прокрутка встроена в контейнерные элементы управления.|  
 |<xref:System.Windows.Forms.ImageList>|Эквивалент отсутствует.||  
 |<xref:System.Windows.Forms.Label>|<xref:System.Windows.Controls.Label>||  
@@ -62,7 +62,7 @@ ms.lasthandoff: 01/19/2018
 |<xref:System.Windows.Forms.MonthCalendar>|<xref:System.Windows.Controls.Calendar>||  
 |<xref:System.Windows.Forms.NotifyIcon>|Эквивалент отсутствует.||  
 |<xref:System.Windows.Forms.NumericUpDown>|<xref:System.Windows.Controls.TextBox> с двумя элементами управления <xref:System.Windows.Controls.Primitives.RepeatButton>.||  
-|<xref:System.Windows.Forms.OpenFileDialog>|<xref:Microsoft.Win32.OpenFileDialog>|Класс <xref:Microsoft.Win32.OpenFileDialog> в   [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] является оберткой для [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] элемента управления.|  
+|<xref:System.Windows.Forms.OpenFileDialog>|<xref:Microsoft.Win32.OpenFileDialog>|Класс <xref:Microsoft.Win32.OpenFileDialog> — оболочка [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для элемента управления [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].| 
 |<xref:System.Windows.Forms.PageSetupDialog>|Эквивалент отсутствует.||  
 |<xref:System.Windows.Forms.Panel>|<xref:System.Windows.Controls.Canvas>||  
 |<xref:System.Windows.Forms.PictureBox>|<xref:System.Windows.Controls.Image>||  
@@ -74,7 +74,7 @@ ms.lasthandoff: 01/19/2018
 |<xref:System.Windows.Forms.PropertyGrid>|Эквивалент отсутствует.||  
 |<xref:System.Windows.Forms.RadioButton>|<xref:System.Windows.Controls.RadioButton>||  
 |<xref:System.Windows.Forms.RichTextBox>|<xref:System.Windows.Controls.RichTextBox>||  
-|<xref:System.Windows.Forms.SaveFileDialog>|<xref:Microsoft.Win32.SaveFileDialog>|Класс <xref:Microsoft.Win32.SaveFileDialog>  в  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] является оберткой для [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] элемента управления.|  
+|<xref:System.Windows.Forms.SaveFileDialog>|<xref:Microsoft.Win32.SaveFileDialog>|Класс <xref:Microsoft.Win32.SaveFileDialog> — оболочка [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для элемента управления [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].| 
 |<xref:System.Windows.Forms.ScrollableControl>|<xref:System.Windows.Controls.ScrollViewer>||  
 |<xref:System.Media.SoundPlayer>|<xref:System.Windows.Media.MediaPlayer>||  
 |<xref:System.Windows.Forms.SplitContainer>|<xref:System.Windows.Controls.GridSplitter>||  
