@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 5c26a0aa-186e-476c-9f87-e0191754579e
-ms.openlocfilehash: 66b2503744e9024deac3d6dabea57da4fd393bd8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5e1f6914acad5ae8c7148a7238e2d1d6a8ca5867
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>Начало работы с хранилищем файлов Azure, с помощью F # #
 
@@ -97,7 +97,7 @@ ms.lasthandoff: 10/18/2017
 
 ### <a name="set-the-maximum-size-for-a-file-share"></a>Установить максимальный размер для общей папки
 
-В приведенном ниже примере показано, как проверить текущее использование для общей папки и как задать квоту для общей папки. `FetchAttributes`необходимо вызвать, чтобы заполнить общую папку `Properties`, и `SetProperties` переносить локальные изменения в хранилище файлов Azure.
+В приведенном ниже примере показано, как проверить текущее использование для общей папки и как задать квоту для общей папки. `FetchAttributes` необходимо вызвать, чтобы заполнить общую папку `Properties`, и `SetProperties` переносить локальные изменения в хранилище файлов Azure.
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L62-L72)]
 
@@ -161,5 +161,5 @@ ms.lasthandoff: 10/18/2017
 
 - [Хранилище файлов Azure теперь стал общедоступным](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
 - [Хранение файлов в Azure](https://azure.microsoft.com/blog/inside-azure-file-storage/) 
-- [Знакомство с приложением службы файлов Microsoft Azure](http://blogs.msdn.com/b/windowsazurestorage/archive/2014/05/12/introducing-microsoft-azure-file-service.aspx)
-- [Сохранение подключения к Microsoft Azure](http://blogs.msdn.com/b/windowsazurestorage/archive/2014/05/27/persisting-connections-to-microsoft-azure-files.aspx)
+- [Знакомство с приложением службы файлов Microsoft Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/12/introducing-microsoft-azure-file-service/)
+- [Сохранение подключения к Microsoft Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/26/persisting-connections-to-microsoft-azure-files/)

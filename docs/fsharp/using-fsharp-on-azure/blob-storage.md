@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c5b74a4f-dcd1-4849-930c-904b6c8a04e1
-ms.openlocfilehash: 9011bdceabd1b5e0541ecb94f3e812871688025b
-ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
+ms.openlocfilehash: 5be948e100c496bc6613f1fdfb826ece5de6df8e
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Начало работы с хранилищем больших двоичных объектов Azure с помощью F # #
 
@@ -236,7 +236,7 @@ Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/
 Теперь, когда вы узнали основы хранилища больших двоичных объектов, приведены по следующим ссылкам, чтобы получить дополнительные сведения.
 
 ### <a name="tools"></a>Инструменты
-- [F # AzureStorageTypeProvider](http://fsprojects.github.io/AzureStorageTypeProvider/) поставщик типа F #, который можно использовать для изучения средств Blob, таблицы и очереди хранилища Azure и легко применять операции CRUD над ними.
+- [F # AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) поставщик типа F #, который можно использовать для изучения средств Blob, таблицы и очереди хранилища Azure и легко применять операции CRUD над ними.
 - [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) API F # для использования службы хранилища таблиц Microsoft Azure
 - [Обозреватель хранилища Microsoft Azure (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer) является бесплатно, отдельное приложение от Майкрософт, которая позволяет визуально работать с данными в хранилище Azure в Windows, Linux и OS X.
 
@@ -251,4 +251,4 @@ Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/
 - [Перенесите данные с помощью программы командной строки AzCopy в Windows](/azure/storage/common/storage-use-azcopy)
 - [Перенесите данные с помощью программы командной строки AzCopy в Linux](/azure/storage/common/storage-use-azcopy-linux)
 - [Настройка строки подключения хранилища Azure](/azure/storage/common/storage-configure-connection-string)
-- [Блог группы разработчиков хранилища Azure](http://blogs.msdn.com/b/windowsazurestorage/)
+- [Блог группы разработчиков хранилища Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/)

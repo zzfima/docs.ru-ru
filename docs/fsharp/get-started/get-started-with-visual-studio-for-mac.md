@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 8db75596-19a9-4eda-b20d-a12d517c8cc1
-ms.openlocfilehash: beee874e3a549531b520d4ac2150bc10dcab7725
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 776a2ddf5563a954e462b3888ebf05da90241e4b
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Начало работы с F # в Visual Studio для Mac
 
-F # и инструменты Visual F # поддерживаются в Visual Studio для Mac интегрированной среды разработки.  Для начала следует [скачать Visual Studio для Mac](https://www.visualstudio.com/downloads/download-visual-studio-vs), если это еще не сделано.  В этой статье используется сообщества Visual Studio 2017 г. для Mac, но можно использовать F # с версией по своему усмотрению.
+F # и инструменты Visual F # поддерживаются в Visual Studio для Mac интегрированной среды разработки.  Для начала следует [скачать Visual Studio для Mac](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs), если это еще не сделано.  В этой статье используется сообщества Visual Studio 2017 г. для Mac, но можно использовать F # с версией по своему усмотрению.
 
 ## <a name="installing-f"></a>Установка F # #
 

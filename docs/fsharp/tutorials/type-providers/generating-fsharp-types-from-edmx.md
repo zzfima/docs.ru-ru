@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 81adb2eb-625f-4ad8-aeaa-8f672a6d79a2
-ms.openlocfilehash: 1df0344e8dab2b40d82d1b9c61ccd2f026906243
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 901457dce358f768b4f4c980703e09f6c744918e
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-generating-f-types-from-an-edmx-schema-file"></a>Пошаговое руководство. Создание типов F# из файла схемы EDMX
 
 > [!NOTE]
-В этом руководстве, была написана для F # 3.0 и будут обновлены.  Актуальные сведения о кроссплатформенных поставщиках типов см. в описании [FSharp.Data](http://fsharp.github.io/FSharp.Data/).
+В этом руководстве, была написана для F # 3.0 и будут обновлены.  Актуальные сведения о кроссплатформенных поставщиках типов см. в описании [FSharp.Data](https://fsharp.github.io/FSharp.Data/).
 
 > [!NOTE]
 Справочные ссылки API, вы перейдете MSDN.  Работа над справочником по API docs.microsoft.com не завершена.
@@ -222,7 +222,7 @@ changeHireDate("Abercrombie", "Kim", DateTime.Parse("1/12/1998"))
 1. В строке меню выберите **SQL**, **редактора Transact-SQL**, **новый запрос** для создания базы данных. В случае получения запроса укажите сервер и экземпляр базы данных.
 <br />
 
-2. Скопируйте и вставьте содержимое скрипта базы данных, который создает базу данных студентов, как описано в [документации по Entity Framework](http://msdn.microsoft.com/data/JJ614587.aspx) в центр разработчиков данных.
+2. Скопируйте и вставьте содержимое скрипта базы данных, который создает базу данных студентов, как описано в [документации по Entity Framework](https://msdn.microsoft.com/data/JJ614587.aspx) в центр разработчиков данных.
 <br />
 
 3. Запустите скрипт SQL, выбрав кнопку панели инструментов с треугольником, или нажмите клавиши Ctrl + Q.
@@ -264,7 +264,7 @@ changeHireDate("Abercrombie", "Kim", DateTime.Parse("1/12/1998"))
 <br />
 
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 Изучение других запросов, просмотрев доступны операторы, перечисленные в [выражения запросов](../../language-reference/query-expressions.md).
 
 
@@ -275,7 +275,7 @@ changeHireDate("Abercrombie", "Kim", DateTime.Parse("1/12/1998"))
 
 [Пошаговое руководство. Доступ к базе данных SQL с помощью поставщиков типов и сущностей](accessing-a-sql-database-entities.md)
 
-[Entity Framework](http://msdn.microsoft.com/data/ef)
+[Entity Framework](https://msdn.microsoft.com/data/ef)
 
 [Общие сведения о файлах .edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
 

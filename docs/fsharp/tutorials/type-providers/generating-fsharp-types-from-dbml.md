@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 6fbb6ccc-248f-4226-95e9-f6f99541dbe4
-ms.openlocfilehash: a919c2acb2b5b8c2ce93124f2f541bd092d15c35
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 3cd8df9becac0d1a8842eb22e2f772eee6307acf
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-generating-f-types-from-a-dbml-file"></a>Пошаговое руководство. Создание типов F# из файла схемы DBML
 
 > [!NOTE]
-В этом руководстве, была написана для F # 3.0 и будут обновлены.  Актуальные сведения о кроссплатформенных поставщиках типов см. в описании [FSharp.Data](http://fsharp.github.io/FSharp.Data/).
+В этом руководстве, была написана для F # 3.0 и будут обновлены.  Актуальные сведения о кроссплатформенных поставщиках типов см. в описании [FSharp.Data](https://fsharp.github.io/FSharp.Data/).
 
 > [!NOTE]
 Справочные ссылки API, вы перейдете MSDN.  Работа над справочником по API docs.microsoft.com не завершена.
@@ -150,7 +150,7 @@ let db = new dbml.MyDataContext(connectionString)
   } |> Seq.iter (fun row -> printfn "%d %s" row.TestData1 row.Name)
 ```
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 Можно продолжить использовать другие выражения запроса, или получить из контекста данных подключения к базе данных и выполнения обычных операций с данными ADO.NET. Для выполнения дополнительных действий см. в разделах после «Запроса данных» в [Пошаговое руководство: доступ к базе данных SQL с помощью поставщиков типов](accessing-a-sql-database.md).
 
 
