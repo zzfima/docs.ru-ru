@@ -11,30 +11,34 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: cancellation, how to poll for requests
+helpviewer_keywords:
+- cancellation, how to poll for requests
 ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3f0e05e3f66d591a28d7e84d358934959764dab6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 56a927e10cb026814302728a72acb2f32223b29b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Практическое руководство. Прослушивание запросов на отмену посредством опросов
-В следующем примере показано одним из способов пользовательский код может выполнять опрос токена отмены через регулярные интервалы, чтобы увидеть, есть ли запрос на отмену из вызывающего потока. В этом примере используется <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> типа, но тот же принцип применяется к асинхронных операций, которые созданы напрямую с помощью <xref:System.Threading.ThreadPool?displayProperty=nameWithType> типа или <xref:System.Threading.Thread?displayProperty=nameWithType> типа.  
+В примере ниже показан один из способов для регулярного опроса маркера отмены из пользовательского кода, чтобы отслеживать запросы на отмену из вызывающего потока. Мы применили здесь тип <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, но вы можете использовать такой же подход и к асинхронным операциям, для которых прямо указан тип <xref:System.Threading.ThreadPool?displayProperty=nameWithType> или <xref:System.Threading.Thread?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Пример  
- Опроса необходим циклический или рекурсивный код, который может периодически считывать значение логического <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> свойство. Если вы используете <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> типа и ожидается для задачи завершения в вызывающем потоке, можно использовать <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> метода проверьте свойство, и выдается исключение. При использовании этого метода убедитесь, что правильно исключение вызывается в ответ на запрос. Если вы используете <xref:System.Threading.Tasks.Task>, то вызов этого метода лучше, чем вручную вызов <xref:System.OperationCanceledException>. Если нет необходимости создавать исключение, то можно просто проверить свойство и возврата из метода, если свойство `true`.  
+ Опросы выполняются из циклического или рекурсивного кода, который может периодически считывать логическое значение свойства <xref:System.Threading.CancellationToken.IsCancellationRequested%2A>. Если вы используете тип <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> и вызывающий поток ожидает, пока завершится задача, вы можете применить метод <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> для проверки свойства и создания исключений. Этот метод позволяет гарантировать, что в ответ на запрос создается правильное исключение. Если вы используете <xref:System.Threading.Tasks.Task>, то лучше вызвать этот метод, чем создать исключение <xref:System.OperationCanceledException> вручную. Если нет необходимости создавать исключение, вы можете просто проверить свойство и выполнить выход из метода, когда свойство получит значение `true`.  
   
  [!code-csharp[Cancellation#11](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex11.cs#11)]
  [!code-vb[Cancellation#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex11.vb#11)]  
   
- Вызов <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> выполняется очень быстро и не вносит в циклы существенную нагрузку.  
+ Вызов <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> выполняется крайне быстро и не повышает нагрузку на циклы.  
   
- При вызове <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>, необходимо явно проверить <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> свойства, если у вас есть другие типы работ, действие в ответ на отмену, помимо создания исключения. В этом примере видно, что код фактически обращается к свойству дважды: один раз в явный доступ и снова <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> метод. Но поскольку в действии по считыванию <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> свойство используется только одна временная, инструкция чтения для каждого доступа, двойной доступ не важен с точки зрения производительности. По-прежнему рекомендуется, чтобы вызвать метод, не вызывая вручную <xref:System.OperationCanceledException>.  
+ При вызове <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> вам следует явным образом проверить свойство <xref:System.Threading.CancellationToken.IsCancellationRequested%2A>, если при отмене нужно выполнять какие-то еще действия помимо создания исключения. В нашем примере код фактически обращается к свойству дважды: один раз явным образом и второй раз в методе <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>. Но так как при считывании свойства <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> используется только одна инструкция чтения из временного объекта для каждого доступа, двойной доступ не влияет на производительность существенным образом. Даже в этом случае вызов метода предпочтительнее, чем создание исключения <xref:System.OperationCanceledException> вручную.  
   
 ## <a name="see-also"></a>См. также  
  [Отмена в управляемых потоках](../../../docs/standard/threading/cancellation-in-managed-threads.md)

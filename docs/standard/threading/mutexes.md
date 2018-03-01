@@ -14,47 +14,50 @@ helpviewer_keywords:
 - Mutex class, about Mutex class
 - threading [.NET Framework], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a1d69c1b943d15b9ad8c80b4d7dbafebc54990ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2804d0c60657623b558d86386c5e1043422b648c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="mutexes"></a>Mutexes
-Можно использовать <xref:System.Threading.Mutex> для получения монопольного доступа к ресурсу. <xref:System.Threading.Mutex> Класс использует больше системных ресурсов, чем <xref:System.Threading.Monitor> класса, но может быть маршалирован через границы домена приложения, он может использоваться с несколькими ожиданиями, а также он может использоваться для синхронизации потоков в различных процессах. Сравнение механизмов управляемой синхронизации см. в разделе [Обзор примитивов синхронизации](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
+Объект <xref:System.Threading.Mutex> можно использовать для получения монопольного доступа к ресурсу. Класс <xref:System.Threading.Mutex> использует больше системных ресурсов, чем класс <xref:System.Threading.Monitor>, но он может маршалироваться между доменами приложений, использоваться с несколькими ожиданиями и синхронизировать потоки в нескольких процессах. Сравнение механизмов управляемой синхронизации см. в разделе [Обзор примитивов синхронизации](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
   
- Примеры кода см. в справочной документации по <xref:System.Threading.Mutex.%23ctor%2A> конструкторы.  
+ Примеры кода см. в справочной документации по конструкторам <xref:System.Threading.Mutex.%23ctor%2A>.  
   
 ## <a name="using-mutexes"></a>Использование мьютексов  
- Поток вызывает метод <xref:System.Threading.WaitHandle.WaitOne%2A> метод мьютекса, который запросит владение. Вызов блокируется до тех пор, пока мьютекс на будет доступен или пока не истечет дополнительное время ожидания. Если мьютексом не владеет ни один поток, сообщается состояние мьютекса.  
+ Поток вызывает метод <xref:System.Threading.WaitHandle.WaitOne%2A> из мьютекса, чтобы затребовать владение. Вызов блокируется до тех пор, пока мьютекс на будет доступен или пока не истечет дополнительное время ожидания. Если мьютексом не владеет ни один поток, сообщается состояние мьютекса.  
   
- Поток освобождает мьютекс путем вызова его <xref:System.Threading.Mutex.ReleaseMutex%2A> метод. Мьютексы поддерживают сходство потоков, т. е. мьютекс может быть освобожден только тем потоком, который им владеет. Если поток освобождает мьютекс не владеет, <xref:System.ApplicationException> исключение в потоке.  
+ Поток освобождает мьютекс, вызывая его метод <xref:System.Threading.Mutex.ReleaseMutex%2A>. Мьютексы поддерживают сходство потоков, т. е. мьютекс может быть освобожден только тем потоком, который им владеет. Если поток освобождает мьютекс, которым он не владеет, в потоке создается исключение <xref:System.ApplicationException>.  
   
- Поскольку <xref:System.Threading.Mutex> класс является производным от <xref:System.Threading.WaitHandle>, вы также можете вызвать статический <xref:System.Threading.WaitHandle.WaitAll%2A> или <xref:System.Threading.WaitHandle.WaitAny%2A> методы <xref:System.Threading.WaitHandle> который запросит владение <xref:System.Threading.Mutex> в сочетании с другими дескрипторы ожидания.  
+ Так как класс <xref:System.Threading.Mutex> является производным от <xref:System.Threading.WaitHandle>, вы также можете вызвать статические методы <xref:System.Threading.WaitHandle.WaitAll%2A> или <xref:System.Threading.WaitHandle.WaitAny%2A> объекта <xref:System.Threading.WaitHandle>, чтобы запросить владение <xref:System.Threading.Mutex> в сочетании с другими дескрипторами ожидания.  
   
- Если поток владеет <xref:System.Threading.Mutex>, что поток может указывать тот же <xref:System.Threading.Mutex> при вызове повторного запроса ожидания, не прерывая выполнения; тем не менее, его нужно освободить <xref:System.Threading.Mutex> количество раз для освобождения владения.  
+ Если поток владеет <xref:System.Threading.Mutex>, он может указывать этот же <xref:System.Threading.Mutex> в повторных запросах ожидания, не прерывая выполнение. Но в этом случае, чтобы отказаться от владения, потребуется освободить <xref:System.Threading.Mutex> столько же раз, сколько он был вызван.  
   
 ## <a name="abandoned-mutexes"></a>Брошенные мьютексы  
- Если поток завершается без освобождения <xref:System.Threading.Mutex>, мьютекс называется к прерыванию. Это часто указывает на серьезную ошибку программирования, поскольку ресурс, защищаемый мьютексом, может остаться в несогласованном состоянии. В .NET Framework версии 2.0 <xref:System.Threading.AbandonedMutexException> вызывается в следующий поток, который получает объект взаимного исключения.  
+ Если поток завершается без освобождения <xref:System.Threading.Mutex>, мьютекс считается отмененным. Это часто указывает на серьезную ошибку программирования, поскольку ресурс, защищаемый мьютексом, может остаться в несогласованном состоянии. На платформе .NET Framework версии 2.0 в такой ситуации создается исключение <xref:System.Threading.AbandonedMutexException> в следующем потоке, который завладеет этим мьютексом.  
   
 > [!NOTE]
->  В .NET Framework версий 1.0 и 1.1, прерванное <xref:System.Threading.Mutex> сигнальное состояние и следующий ожидающий поток-владелец получает. Если ни один поток не находится в состоянии ожидания, <xref:System.Threading.Mutex> остается в состоянии получения сигнала. Исключение не возникает.  
+>  На платформе .NET Framework версий 1.0 и 1.1 отмененный объект <xref:System.Threading.Mutex> переходит в сигнальное состояние, а владение переходит к следующему ожидающему потоку. Если отсутствуют потоки в состоянии ожидания, <xref:System.Threading.Mutex> остается в сигнальном состоянии. Исключение не возникает.  
   
  В случае системного мьютекса брошенный мьютекс может указывать на то, что работа приложения была внезапно прекращена (например, с помощью диспетчера задач Windows).  
   
 ## <a name="local-and-system-mutexes"></a>Локальные и системные мьютексы  
- Мьютексы бывают двух типов: локальные и именованные системные. Если вы создаете <xref:System.Threading.Mutex> объекта, используя конструктор, который принимает имя, она связана с объектом операционной системы с тем же именем. Именованные системные мьютексы доступны во всей операционной системе и могут использоваться для синхронизации действий процессов. Можно создать несколько <xref:System.Threading.Mutex> объекты, представляющие же именованный системный мьютекс, и можно использовать <xref:System.Threading.Mutex.OpenExisting%2A> метод, чтобы открыть существующий именованный системный мьютекс.  
+ Мьютексы бывают двух типов: локальные и именованные системные. Если объект <xref:System.Threading.Mutex> создается с помощью конструктора, который принимает имя, мьютекс сопоставляется с объектом операционной системы, имеющим это имя. Именованные системные мьютексы доступны во всей операционной системе и могут использоваться для синхронизации действий процессов. Вы можете создать сразу несколько объектов <xref:System.Threading.Mutex>, представляющих один и тот именованный системный мьютекс, а также открывать именованный системный мьютекс с помощью метода <xref:System.Threading.Mutex.OpenExisting%2A>.  
   
- Локальный мьютекс существует только в вашем процессе. Он может использоваться любым потоком в процессе, имеющим ссылку на локальный <xref:System.Threading.Mutex> объекта. Каждый <xref:System.Threading.Mutex> объект является отдельным локальным мьютекс.  
+ Локальный мьютекс существует только в вашем процессе. Его может использовать любой поток в вашем процессе, имеющий ссылку на локальный объект <xref:System.Threading.Mutex>. Каждый объект <xref:System.Threading.Mutex> является отдельным локальным мьютексом.  
   
 ### <a name="access-control-security-for-system-mutexes"></a>Безопасность управления доступом для системных мьютексов  
  Платформа .NET Framework версии 2.0 позволяет запрашивать и настраивать безопасность управления доступом Windows для именованных системных объектов. Системные мьютексы рекомендуется защищать с момента создания, поскольку системные объекты глобальны, а значит, могут быть заблокированы не вашим кодом.  
   
- Сведения о безопасности управления доступом для мьютексов см. в разделе <xref:System.Security.AccessControl.MutexSecurity> и <xref:System.Security.AccessControl.MutexAccessRule> классы, <xref:System.Security.AccessControl.MutexRights> перечисления, <xref:System.Threading.Mutex.GetAccessControl%2A>, <xref:System.Threading.Mutex.SetAccessControl%2A>, и <xref:System.Threading.Mutex.OpenExisting%2A> методы <xref:System.Threading.Mutex> класс и <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29> конструктор.  
+ Сведения о защите и управлении доступом для мьютексов вы найдете в описаниях классов <xref:System.Security.AccessControl.MutexSecurity> и <xref:System.Security.AccessControl.MutexAccessRule>, перечисления <xref:System.Security.AccessControl.MutexRights>, методов <xref:System.Threading.Mutex.GetAccessControl%2A>, <xref:System.Threading.Mutex.SetAccessControl%2A> и <xref:System.Threading.Mutex.OpenExisting%2A> класса <xref:System.Threading.Mutex> и описании конструктора <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29>.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Threading.Mutex>  

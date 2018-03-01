@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ad656e2db17e44733b5718fe2e3a2a48afcb1381
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2138b9c47c6e41cd94e775eaed005d8a6fd976c9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="saving-and-writing-a-document"></a>Сохранение и запись документа
 При загрузке и сохранении <xref:System.Xml.XmlDocument> между сохраненным и исходным документами возможны следующие различия:  
@@ -29,7 +32,7 @@ ms.lasthandoff: 10/18/2017
   
 -   Все пробелы между атрибутами сокращаются до одного символа пробела.  
   
--   Пробелы между элементами изменяются. Значащие пробелы сохраняются, а незначащие - нет. Но когда документ сохраняется, он будет использовать <xref:System.Xml.XmlTextWriter> **отступы** режим по умолчанию, чтобы аккуратно печати и сделать код более удобочитаемым.  
+-   Пробелы между элементами изменяются. Значащие пробелы сохраняются, а незначащие - нет. Но при сохранении документа по умолчанию используется режим <xref:System.Xml.XmlTextWriter> **Отступ**, обеспечивающий аккуратный внешний вид при печати и удобство чтения.  
   
 -   Символ кавычки вокруг значений атрибута по умолчанию заменяется символом двойной кавычки. Выбрать в качестве символа кавычки двойную кавычку или одинарную кавычку можно с помощью свойства <xref:System.Xml.XmlTextReader.QuoteChar%2A> класса <xref:System.Xml.XmlTextWriter>.  
   
@@ -98,4 +101,4 @@ string xml = mydoc.DocumentElement.OuterXml;
  Однако если требуется содержимое дочерних узлов, можно использовать свойство <xref:System.Xml.XmlNode.InnerText%2A>.  
   
 ## <a name="see-also"></a>См. также  
- [Модель объектов XML-документов (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

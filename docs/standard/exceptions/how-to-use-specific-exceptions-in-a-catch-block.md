@@ -17,19 +17,22 @@ helpviewer_keywords:
 - try/catch blocks
 - catch blocks
 ms.assetid: 12af9ff3-8587-4f31-90cf-6c2244e0fdae
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 94e5840ca4bb5f871a0ae91f53404de6a60d749d
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ebc59035140ff0464cd959129fdf48a4e9a269f5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="how-to-use-specific-exceptions-in-a-catch-block"></a>Использование определенных исключений в блоке catch
+# <a name="how-to-use-specific-exceptions-in-a-catch-block"></a>Практическое руководство. Использование определенных исключений в блоке catch
 
-Как правило, целесообразно выполнять перехват определенного типа исключения, а не использовать basic `catch` инструкции.
+В общем случае вместо использования базового оператора `catch` рекомендуется перехватывать исключения определенного типа.
 
 При возникновении исключения оно передается вверх по стеку, и каждый блок catch получает возможность обработать его. Важен порядок операторов catch. Размещайте блоки catch, предназначенные для определенных исключений, до общего блока перехвата исключений. В противном случае компилятор может выдать ошибку. Соответствующий блок catch определяется путем соотнесения типа исключения с именем исключения, указанным в блоке catch. Когда специальный блок catch отсутствует, исключение перехватывается общим блоком catch, если он существует.
 

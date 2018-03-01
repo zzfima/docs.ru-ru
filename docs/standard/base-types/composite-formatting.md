@@ -19,15 +19,18 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1f4b311d6e933f6c653fd7ab189c2e644021970d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dae73a7ace3aac4e7d89ccba186fceacfe9898ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="composite-formatting"></a>Составное форматирование
 В качестве входных данных для составного форматирования в .NET Framework используется список объектов и строка составного формата. Строка составного формата состоит из фиксированного текста, в который включены индексированные местозаполнители, которые называются элементами форматирования и соответствуют объектам из списка. Операция форматирования создает результирующую строку, состоящую из исходного фиксированного текста, в который включено строковое представление объектов из списка.  
@@ -87,13 +90,13 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>Компонент строки формата  
- Необязательный компонент *formatString* — это строка формата, соответствующая типу форматируемого объекта. Укажите строку стандартного или пользовательского числового формата если соответствующий объект является числовым значением, стандартного или пользовательского формата даты и времени если соответствующий объект является <xref:System.DateTime> объекта, или [строка формата перечисления](../../../docs/standard/base-types/enumeration-format-strings.md)Если соответствующий объект является значением перечисления. Если компонент *formatString* не задан, то для числовых значений, значений даты и времени, а также перечислений используется общий формат ("G"). При использовании компонента *formatString* необходимо двоеточие.  
+ Необязательный компонент *formatString* — это строка формата, соответствующая типу форматируемого объекта. Если соответствующий объект является объектом <xref:System.DateTime>, используется строка стандартного или настраиваемого формата чисел, а если соответствующий объект является значением перечисления, используется [строка формата перечисления](../../../docs/standard/base-types/enumeration-format-strings.md). Если компонент *formatString* не задан, то для числовых значений, значений даты и времени, а также перечислений используется общий формат ("G"). При использовании компонента *formatString* необходимо двоеточие.  
   
  В следующей таблице перечислены типы и категории типов в библиотеке классов .NET Framework, которые поддерживают предопределенный набор строк формата, а также ссылки на разделы, в которых перечисляются поддерживаемые строки формата. Обратите внимание, что форматирование строк — это расширяемый механизм, который позволяет определять новые строки формата для всех существующих типов, а также определять набор строк формата, поддерживаемых прикладным типом. Подробнее см. в разделах, посвященных интерфейсам <xref:System.IFormattable> и <xref:System.ICustomFormatter>.  
   
 |Тип или категория типов|См.|  
 |---------------------------|---------|  
-|Типы даты и времени (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
+|Типы даты и времени (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Строки стандартных форматов даты и времени](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Строки настраиваемых форматов даты и времени](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
 |Типы перечисления (все типы, производные от <xref:System.Enum?displayProperty=nameWithType>)|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|  
 |Числовые типы (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
@@ -126,7 +129,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  Если форматируемое значение является значением `null`, возвращается пустая строка ("").  
   
-2.  Если реализация <xref:System.ICustomFormatter> доступна, среда выполнения вызывает ее метод <xref:System.ICustomFormatter.Format%2A>. Она передает в метод элемент формата *formatString* значение, если он имеется, или `null` Если нет, вместе с <xref:System.IFormatProvider> реализации.  
+2.  Если реализация <xref:System.ICustomFormatter> доступна, среда выполнения вызывает ее метод <xref:System.ICustomFormatter.Format%2A>. Она передает в метод значение элемента форматирования *formatString* (при его наличии) или значение `null` (в случае его отсутствия) вместе с реализацией <xref:System.IFormatProvider>.  
   
 3.  Если значение реализует интерфейс <xref:System.IFormattable>, вызывается метод <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> этого интерфейса. Методу передается значение *formatString* (при его наличии в элементе форматирования) или значение `null` (в случае его отсутствия). Аргумент <xref:System.IFormatProvider> определяется следующим образом:  
   

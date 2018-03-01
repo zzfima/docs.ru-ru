@@ -13,20 +13,23 @@ helpviewer_keywords:
 - arrays [.NET Framework], culture-insensitive string operations
 - comparer parameter
 ms.assetid: f12922e1-6234-4165-8896-63f0653ab478
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1b4e040ed379cdbf43fbe8b2c4379fdd4dc781f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d273fbaa792092f5ea56bfa59392794b6728ed67
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>Выполнение в массивах строковых операций, не зависящих от языка и региональных параметров
-Перегруженные версии <xref:System.Array.Sort%2A?displayProperty=nameWithType> и <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> методы выполняют операции сортировки язык и региональные параметры по умолчанию с помощью <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> свойство. Результат, возвращаемый этими методами меняется в зависимости от языка и региональных параметров, из-за различий в порядках сортировки. Чтобы зависел от языка и региональных параметров, используйте одну из перегрузок метода, принимающую `comparer` параметра. `comparer` Указывает <xref:System.Collections.IComparer> реализацию, которая используется при сравнении элементов в массиве. Для параметра, укажите пользовательский инвариантный класс сравнения, использующий <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Пример настраиваемого инвариантного класса сравнения предоставляется в подразделе «Использование класса SortedList» из [выполнение операций над строками в коллекциях без учета языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) раздела.  
+Перегруженные версии методов <xref:System.Array.Sort%2A?displayProperty=nameWithType> и <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> выполняют сортировку с учетом языка и региональных параметров, используя свойство <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>. Результат, возвращаемый этими методами, зависит от порядка сортировки в параметрах языка и региональных параметров. Чтобы результат не зависел от языка и региональных параметров, используйте перегрузки этого метода, которые принимают параметр `comparer`. Параметр `comparer` указывает реализацию <xref:System.Collections.IComparer>, которую нужно использовать при сравнении элементов массива. Укажите в этом параметре пользовательский инвариантный класс сравнения, который использует <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Пример настраиваемого инвариантного класса сравнения предлагается в подразделе "Использование класса SortedList" статьи [Выполнение в коллекциях строковых операций, не зависящих от языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md).  
   
- **Примечание** передачи **CultureInfo.InvariantCulture** для сравнения метод сравнения без учета языка и региональных параметров. Однако при этом не выполняется нелингвистическое сравнение, например для путей к файлам, разделов реестра и переменных среды. Также не поддерживается принятие решений по безопасности на основе результата сравнения. Для принятия решений системы безопасности на основе результатов или нелингвистическое сравнение, приложение должно использовать метод сравнения, который принимает <xref:System.StringComparison> значение. Приложение должно передавать <xref:System.StringComparison.Ordinal>.  
+ **Примечание**. Если передать в метод сравнения **CultureInfo.InvariantCulture**, сравнение выполняется без учета языка и региональных параметров. Однако при этом не выполняется нелингвистическое сравнение, например для путей к файлам, разделов реестра и переменных среды. Также не поддерживается принятие решений по безопасности на основе результата сравнения. Для нелингвистического сравнения и (или) поддержки принятия решений по безопасности в приложении следует использовать метод сравнения, который принимает значение <xref:System.StringComparison>. Приложение должно передавать <xref:System.StringComparison.Ordinal>.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Array.Sort%2A?displayProperty=nameWithType>  

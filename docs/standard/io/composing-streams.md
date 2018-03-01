@@ -19,28 +19,31 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 75800210a52620c5b08a01c5f8fa888bf40843fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d49661e93675b80bcd579a6cd341b3dc88a688c2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="composing-streams"></a>Составление потоков
-Резервное хранилище — это устройство хранения информации, например диск или память. Каждый из резервных хранилищ используется собственный поток как реализация <xref:System.IO.Stream> класса. Каждый тип потока считывает и записывает байты в собственное резервное хранилище. Потоки, которые связаны с резервными хранилищами, называются базовыми. Базовые потоки имеют конструкторы, которые имеют параметры, необходимые для подключения к резервному хранилищу потока. Например <xref:System.IO.FileStream> имеет конструктор, задающий путь, который определяет порядок совместного использования файла процессами и т. д.  
+Резервное хранилище — это устройство хранения информации, например диск или память. Каждое из резервных хранилищ использует собственную реализацию потока, основанную на классе <xref:System.IO.Stream>. Каждый тип потока считывает и записывает байты в собственное резервное хранилище. Потоки, которые связаны с резервными хранилищами, называются базовыми. Базовые потоки имеют конструкторы, которые используют параметры для подключения к соответствующему резервному хранилищу. Например, конструкторы класса <xref:System.IO.FileStream> задают параметр пути, который определяет порядок совместного использования этого файла в процессах.  
   
- В структуре <xref:System.IO> классы предоставляет упрощенное составление потоков. Базовые потоки могут прикрепляться в один или несколько транзитных потоки, которые предоставляют функциональные возможности, которые нужно. Средство чтения или записи могут прикрепляться в конце цепочки, чтобы прочитать или записать легко предпочитаемых типов.  
+ В структуре классов <xref:System.IO> реализовано упрощенное составление потоков. Базовые потоки могут присоединяться к одному или нескольким транзитным потокам, которые предоставляют нужные возможности. В конце цепочки можно прикрепить средство чтения или записи, что позволяет удобно читать и записывать нужные типы.  
   
- В следующем примере кода создается **FileStream** для существующего `MyFile.txt` в порядке буфер `MyFile.txt`. (Обратите внимание, что **файловых групп FileStream** буферизуется по умолчанию.) Далее, <xref:System.IO.StreamReader> создается для чтения символов из **FileStream**, который передается **StreamReader** аргументом конструктора. <xref:System.IO.StreamReader.ReadLine%2A>выполняет чтение до <xref:System.IO.StreamReader.Peek%2A> находит больше нет символов.  
+ В следующем примере кода создается поток **FileStream** на основе существующего `MyFile.txt`, предназначенный для буферизации `MyFile.txt`. (Обратите внимание, что потоки **FileStream** буферизуются по умолчанию.) Далее создается <xref:System.IO.StreamReader> для чтения символов из **FileStream** и передается в качестве аргумента конструктору **StreamReader**. <xref:System.IO.StreamReader.ReadLine%2A> выполняет чтение, пока <xref:System.IO.StreamReader.Peek%2A> обнаруживает символы.  
   
  [!code-cpp[System.IO.StreamReader#20](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.StreamReader/CPP/source2.cpp#20)]
  [!code-csharp[System.IO.StreamReader#20](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source2.cs#20)]
  [!code-vb[System.IO.StreamReader#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamReader/VB/source2.vb#20)]  
   
- В следующем примере кода создается **FileStream** для существующего `MyFile.txt` в порядке буфер `MyFile.txt`. (Обратите внимание, что **файловых групп FileStream** буферизуется по умолчанию.) Далее, **BinaryReader** для чтения байтов из **FileStream**, который передается **BinaryReader** аргументом конструктора. <xref:System.IO.BinaryReader.ReadByte%2A>выполняет чтение до <xref:System.IO.BinaryReader.PeekChar%2A> находит не большее число байтов.  
+ В следующем примере кода создается поток **FileStream** на основе существующего `MyFile.txt`, предназначенный для буферизации `MyFile.txt`. (Обратите внимание, что потоки **FileStream** буферизуются по умолчанию.) Далее создается **BinaryReader** для чтения байтов из **FileStream** и передается в качестве аргумента конструктору **BinaryReader**. <xref:System.IO.BinaryReader.ReadByte%2A> выполняет чтение, пока <xref:System.IO.BinaryReader.PeekChar%2A> обнаруживает байты.  
   
  [!code-cpp[System.IO.StreamReader#21](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.StreamReader/CPP/source3.cpp#21)]
  [!code-csharp[System.IO.StreamReader#21](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source3.cs#21)]

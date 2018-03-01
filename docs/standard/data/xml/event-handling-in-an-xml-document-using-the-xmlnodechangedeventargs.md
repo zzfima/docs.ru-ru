@@ -12,20 +12,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2bfd6eee5831b6bb92c0274fe5925184c80a92e2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cc74b13fd4771cc4f00500ff3253795f45db2b40
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Обработка событий в XML-документе с помощью XmlNodeChangedEventArgs
-**XmlNodeChangedEventArgs** инкапсулирует аргументы, передаваемые обработчикам событий, зарегистрированных на **XmlDocument** для обработки событий. События и описания условий их срабатывания приведены в следующей таблице.  
+Класс **XmlNodeChangedEventArgs** инкапсулирует аргументы, передаваемые обработчикам событий, которые зарегистрированы в объекте **XmlDocument** для обработки событий. События и описания условий их срабатывания приведены в следующей таблице.  
   
-|Событие|Срабатывание|  
+|событие|Срабатывание|  
 |-----------|-----------|  
 |<xref:System.Xml.XmlDocument.NodeInserting>|Перед вставкой узла, принадлежащего текущему документу, в другой узел.|  
 |<xref:System.Xml.XmlDocument.NodeInserted>|После вставки узла, принадлежащего текущему документу, в другой узел.|  
@@ -35,7 +38,7 @@ ms.lasthandoff: 10/18/2017
 |<xref:System.Xml.XmlDocument.NodeChanged>|После изменения значения узла.|  
   
 > [!NOTE]
->  Если **XmlDataDocument** использование памяти полностью оптимизирован для использования **DataSet** хранилища, **XmlDataDocument** не могут вызывать события, перечисленные выше, если изменения в базовом **набора данных**. Если эти события нужны, то необходимо просмотреть весь **XmlDocument** один раз, чтобы полностью оптимизировать использование памяти.  
+>  Если использование памяти **XmlDataDocument** полностью оптимизировано для работы хранилища **DataSet**, **XmlDataDocument** может не инициировать приведенные выше события при внесении изменений в базовом хранилище **DataSet**. Если вам нужны эти события, просмотрите один раз весь **XmlDocument**, чтобы полностью оптимизировать использование памяти.  
   
  В следующем примере кода показано, как определить обработчик событий, и как добавить его к событию.  
   
@@ -80,9 +83,9 @@ void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)
 }  
 ```  
   
- Некоторые операции модели DOM представляют собой составные операции, которые могут вызвать срабатывание нескольких событий. Например **AppendChild** также может потребоваться удалить узел, добавляемый из его предыдущего родителя. В этом случае вы видите **NodeRemoved** во-первых, сработавшего события, за которым следует **NodeInserted** событий. Операции, такие как параметр **InnerXml** может привести к несколько событий.  
+ Некоторые операции модели DOM представляют собой составные операции, которые могут вызвать срабатывание нескольких событий. Например, **AppendChild** может также удалить узел, добавляемый из его предыдущего родительского узла. В этом случае сначала активируется событие **NodeRemoved**, а затем — событие **NodeInserted**. Такие операции, как настройка **InnerXml**, могут вызывать активацию нескольких событий.  
   
- В следующем примере кода показано создание обработчика события и обработка **NodeInserted** событий.  
+ В следующем примере кода показано создание обработчика события и обработка события **NodeInserted**.  
   
 ```vb  
 Imports System  
@@ -216,4 +219,4 @@ public class Sample
  Дополнительные сведения см. в разделах <xref:System.Xml.XmlNodeChangedEventArgs> и <xref:System.Xml.XmlNodeChangedEventHandler>.  
   
 ## <a name="see-also"></a>См. также  
- [Модель объектов XML-документов (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

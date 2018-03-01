@@ -16,15 +16,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9b33d196a7af9bc5a1f81c1624bbd98fea074319
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7a7c577c617ca8f40d64548f9f0f2d103c5887e1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Другие конструкции в регулярных выражениях
 Регулярные выражения в .NET поддерживают три различные языковые конструкции. Одна позволяет включать или отключать определенные параметры соответствия в середине шаблона регулярного выражения. Оставшиеся две позволяют включать комментарии в регулярное выражение.  
@@ -38,7 +41,7 @@ ms.lasthandoff: 10/18/2017
   
  Параметры, которые нужно включить, указываются после вопросительного знака, а параметры, которые требуется отключить, перечисляются после знака минус. В таблице ниже представлено описание каждого из этих параметров. Дополнительные сведения о каждом параметре см. в разделе [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md).  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
 |`i`|Сопоставление без учета регистра.|  
 |`m`|Многострочный режим.|  
@@ -46,33 +49,33 @@ ms.lasthandoff: 10/18/2017
 |`s`|Однострочный режим.|  
 |`x`|Игнорировать не преобразованные в escape-последовательность пробелы и разрешить комментарии в режиме x.|  
   
- Любое изменение параметров регулярных выражений определяются `(?imnsx-imnsx)` создания остается в силе до завершения внешней группы.  
+ Любое изменение параметров регулярных выражений, заданное конструкцией `(?imnsx-imnsx)`, остается в силе до конца содержащей ее группы.  
   
 > [!NOTE]
->  `(?imnsx-imnsx:` *Часть выражения* `)` конструкция группирования обеспечивает одинаковую функциональность для части выражения. Дополнительные сведения см. в разделе [Конструкции группировки](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+>  Конструкция группирования `(?imnsx-imnsx:`*subexpression*`)` предоставляет для части выражения одинаковые функциональные возможности. Дополнительные сведения см. в разделе [Конструкции группировки](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
- В следующем примере используется `i`, `n`, и `x` параметры включить учет регистра и явные захваты и игнорировать пробелы в шаблоне регулярного выражения во время регулярного выражения.  
+ В следующем примере параметры `i`, `n` и `x` используются для отключения учета регистра и включения явных захватов, а также для пропуска пробелов в шаблоне в середине регулярного выражения.  
   
  [!code-csharp[RegularExpressions.Language.Miscellaneous#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.miscellaneous/cs/miscellaneous1.cs#1)]
  [!code-vb[RegularExpressions.Language.Miscellaneous#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous1.vb#1)]  
   
  В примере определяются два регулярных выражения. Первое `\b(D\w+)\s(d\w+)\b` выделяет два последовательных слова, начинающихся с прописной буквы "D" и строчной буквы "d". Во втором регулярном выражении `\b(D\w+)(?ixn) \s (d\w+) \b` используются встроенные параметры для изменения этого шаблона, как описано в следующей таблице. Сравнение результатов подтверждает влияние конструкции `(?ixn)`.  
   
-|Шаблон|Описание|  
+|Шаблон|Описание:|  
 |-------------|-----------------|  
 |`\b`|Начало на границе слова.|  
 |`(D\w+)`|Совпадение с прописной буквой "D", за которой следует один или более словообразующих символов. Это первая захватываемая группа.|  
 |`(?ixn)`|С этого момента рекомендуется делать сравнения без учета регистра, делать только явные захваты и игнорировать пробелы в шаблоне регулярного выражения.|  
 |`\s`|Соответствует пробелу.|  
-|`(d\w+)`|Совпадение с прописной или строчной буквой "d", за которой следует один или более словообразующих символов. Эта группа не записывается, поскольку `n` был включен (явный захват)...|  
+|`(d\w+)`|Совпадение с прописной или строчной буквой "d", за которой следует один или более словообразующих символов. Эта группа не захватывается, так как включен параметр `n` (явный захват).|  
 |`\b`|Соответствует границе слова.|  
   
 ## <a name="inline-comment"></a>Встроенный комментарий  
- `(?#` *Комментарий* `)` конструкция позволяет включить встроенные комментарии в регулярном выражении. Обработчик регулярных выражений не использует любой части комментария в сопоставлении шаблонов, хотя комментарий включается в строку, которая возвращается методом <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> метод. Примечание заканчивается первой закрывающей скобкой.  
+ Конструкция `(?#` *comment*`)` позволяет включать в регулярное выражение встроенные комментарии. Обработчик регулярных выражений не использует какую-либо часть комментария при сопоставлении шаблонов, хотя комментарий включается в строку, которая возвращается методом <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType>. Примечание заканчивается первой закрывающей скобкой.  
   
  В следующем примере повторяется первый шаблон регулярного выражения из примера, указанного в предыдущем разделе. В регулярное выражение добавляются два встроенных комментария, чтобы указать, учитывается ли в сравнении регистр. Шаблон регулярного выражения `\b((?# case-sensitive comparison)D\w+)\s((?#case-insensitive comparison)d\w+)\b` определяется, как показано ниже.  
   
-|Шаблон|Описание|  
+|Шаблон|Описание:|  
 |-------------|-----------------|  
 |`\b`|Начало на границе слова.|  
 |`(?# case-sensitive comparison)`|Комментарий. Не влияет на алгоритм соответствия шаблону.|  
@@ -87,13 +90,13 @@ ms.lasthandoff: 10/18/2017
  [!code-vb[RegularExpressions.Language.Miscellaneous#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous2.vb#2)]  
   
 ## <a name="end-of-line-comment"></a>Комментарий в конце строки  
- Знак решетки (`#`) помечает комментарий режима x, который начинается с символа # без escape-последовательности в конце шаблона регулярного выражения и продолжается до конца строки. Чтобы использовать этот конструктор, необходимо включить `x` параметр (через встроенные параметры) или указать <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> значение `option` параметр при создании экземпляра <xref:System.Text.RegularExpressions.Regex> объекта или вызов статического <xref:System.Text.RegularExpressions.Regex> метод.  
+ Символ решетки (`#`) помечает комментарий режима x, который начинается с неэкранированного символа # в конце шаблона регулярного выражения и продолжается до конца строки. Для использования этой конструкции следует включить параметр `x` во встроенных параметрах или передать значение <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> в параметр `option` при создании объекта <xref:System.Text.RegularExpressions.Regex> или вызове статического метода <xref:System.Text.RegularExpressions.Regex>.  
   
  В следующем примере показана конструкция комментария в конце строки. Она определяет, является ли строка составного форматирования строкой, которая содержит по крайней мере один элемент формата. В следующей таблице описаны конструкции в шаблоне регулярного выражения.  
   
  `\{\d+(,-*\d+)*(\:\w{1,4}?)*\}(?x) # Looks for a composite format item.`  
   
-|Шаблон|Описание|  
+|Шаблон|Описание:|  
 |-------------|-----------------|  
 |`\{`|Совпадение с открывающей скобкой.|  
 |`\d+`|Совпадение с одной или несколькими десятичными цифрами.|  
@@ -107,7 +110,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[RegularExpressions.Language.Miscellaneous#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.miscellaneous/cs/miscellaneous3.cs#3)]
  [!code-vb[RegularExpressions.Language.Miscellaneous#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous3.vb#3)]  
   
- Обратите внимание, что вместо предоставления `(?x)` создать в регулярном выражении комментарий может также распознанных путем вызова <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> метод и передает его <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> значение перечисления.  
+ Обратите внимание, что вместо конструкции `(?x)` в регулярном выражении для распознавания комментария можно вызвать метод <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>, передав ему значение перечисления <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также  
  [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

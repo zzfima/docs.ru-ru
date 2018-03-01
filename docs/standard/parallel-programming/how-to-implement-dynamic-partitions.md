@@ -11,28 +11,32 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, how to create a dynamic partitioner
+helpviewer_keywords:
+- tasks, how to create a dynamic partitioner
 ms.assetid: c875ad12-a161-43e6-ad1c-3d6927c536a7
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d1e5dc93997918e0f7da29fa1f94c434a556f19f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9b08c387c9b10a9d6fa8728a7fce87a7894a37fa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-implement-dynamic-partitions"></a>Практическое руководство. Реализация динамических разделов
-В следующем примере показано, как реализовать пользовательский <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> , реализует динамическое секционирование и может использоваться посредством определенных перегрузок <xref:System.Threading.Tasks.Parallel.ForEach%2A> и PLINQ.  
+Приведенный ниже пример демонстрирует, как реализовать пользовательский <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> с реализацией динамического секционирования, который можно использовать из некоторых перегрузок <xref:System.Threading.Tasks.Parallel.ForEach%2A> и из PLINQ.  
   
 ## <a name="example"></a>Пример  
- Каждый раз раздел вызывает <xref:System.Collections.IEnumerator.MoveNext%2A> в перечислителе, перечислитель предоставляет раздел с одним элементом списка. В случае с PLINQ и <xref:System.Threading.Tasks.Parallel.ForEach%2A>, секция является <xref:System.Threading.Tasks.Task> экземпляра. Поскольку запросы возникают параллельно в нескольких потоках, доступ к текущему индексу синхронизируется.  
+ Каждый раз, когда секция вызывает для перечислителя <xref:System.Collections.IEnumerator.MoveNext%2A>, этот перечислитель предоставляет ей один элемент списка. При работе с PLINQ и <xref:System.Threading.Tasks.Parallel.ForEach%2A> секция реализована в виде экземпляра <xref:System.Threading.Tasks.Task>. Поскольку запросы возникают параллельно в нескольких потоках, доступ к текущему индексу синхронизируется.  
   
  [!code-csharp[TPL_Partitioners#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_partitioners/cs/partitioners.cs#04)]
  [!code-vb[TPL_Partitioners#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_partitioners/vb/dynamicpartitioner.vb#04)]  
   
- Это пример разделения по блокам, где каждый блок состоит из одного элемента. Предоставляя несколько элементов одновременно, можно уменьшить конфликты через блокировку и теоретически увеличить производительность. Однако в определенный момент большими частями может потребоваться дополнительная логика балансировки нагрузки для поддержания нагрузки всех потоков до завершения всех действий.  
+ Здесь представлен пример блочного секционирования, в котором каждый блок состоит из одного элемента. Передавая несколько элементов на один запрос, вы снизите риск конфликтов блокировки и, возможно, увеличите производительность. Но использование больших блоков в определенный момент потребует дополнительной логики для балансировки нагрузки, чтобы все потоки оставались равномерно загруженными до полного завершения всех действий.  
   
 ## <a name="see-also"></a>См. также  
  [Пользовательские разделители для PLINQ и TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)  

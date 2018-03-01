@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 18f8f9c76a1842517340eaa3f74b4778f869403e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2f270b58d20b3fe9dbc514657def90776bdfe2b5
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="xml-processing-options"></a>Параметры обработки XML
 В следующих таблицах приведен список технологий Microsoft, с помощью которых можно обрабатывать XML-данные.  
@@ -26,21 +29,21 @@ ms.lasthandoff: 11/21/2017
   
 |**Параметр**|**Тип обработки**|**Описание**|  
 |----------------|-------------------------|---------------------|  
-|[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br />(пространство имен <xref:System.Xml.Linq>)|In-memory|-Основаны на технологии технологии запросов (LINQ).<br />-Обеспечивает функционирование запросов, которая похожа на SQL для объектов, реляционных данных и XML-данных.<br />-Предоставляет наглядные возможности по созданию и преобразованию документа.<br />-Используйте этот вариант при написании нового кода.|  
-|<xref:System.Xml.XmlReader?displayProperty=nameWithType>|На основе потоков|-Обеспечивает быстрое, без кэширования, прямой способ доступа к данным XML.<br />— Можно создать объекты с помощью <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> метода и указать набор функций, которые включены для объекта с помощью <xref:System.Xml.XmlReaderSettings> класса.|  
-|<xref:System.Xml.XmlWriter?displayProperty=nameWithType>|На основе потоков|-Обеспечивает быстрое, без кэширования, прямой способ создания XML-данных.<br />— Можно создать объекты с помощью <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> метода и указать набор функций, которые включены для объекта с помощью <xref:System.Xml.XmlWriterSettings> класса.|  
-|<xref:System.Xml.XmlDocument?displayProperty=nameWithType>|In-memory|-Реализует [базового уровня 1 W3C объекта модели (DOM)](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) и [DOM Level 2 Core](http://www.w3.org/TR/DOM-Level-2-Core/) рекомендации.<br />— Можно создать, вставки, удаления и изменения узлов с помощью методов и свойств, основанных на знакомой модели DOM..<br />— Используйте этот вариант при изменении существующего кода, в котором используется W3C DOM.|  
-|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|In-memory|-Обеспечивает несколько вариантов редактирования и возможностей перемещения с помощью модели курсора.<br />-XML документы могут содержаться в <xref:System.Xml.XPath.XPathDocument> или <xref:System.Xml.XmlDocument> объекта.<br />-Обеспечивает превосходную производительность для обработки только для чтения XML.<br />-Используйте этот параметр, при изменении существующего кода с помощью запросов XPath или преобразований XSLT.|  
-|<xref:System.Xml.Xsl.XslCompiledTransform>|In-memory|-Предоставляет параметры для преобразования XML-данных с помощью преобразований XSL.<br />- [XSLT-компилятор (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md) ссылке позволяет предварительно компилируется преобразований в вашем приложении.|  
+|[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br />(пространство имен <xref:System.Xml.Linq>)|In-memory|— На основе технологии LINQ платформы .NET Framework.<br />— Позволяет создавать запросы в стиле SQL для обращения к объектам, реляционным данным и XML-данным.<br />— Предоставляет удобные возможности для создания и преобразования документов.<br />— Используйте этот вариант, если вы создаете новый код.|  
+|<xref:System.Xml.XmlReader?displayProperty=nameWithType>|На основе потоков|— Предоставляет быстрый последовательный доступ к XML-данным без кэширования.<br />— Вы можете создавать объекты с помощью метода <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType>, указывая набор поддерживаемых объектом компонентов с помощью класса <xref:System.Xml.XmlReaderSettings>.|  
+|<xref:System.Xml.XmlWriter?displayProperty=nameWithType>|На основе потоков|— Предоставляет быстрый способ последовательного формирования XML-данных без кэширования.<br />— Вы можете создавать объекты с помощью метода <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType>, указывая набор поддерживаемых объектом компонентов с помощью класса <xref:System.Xml.XmlWriterSettings>.|  
+|<xref:System.Xml.XmlDocument?displayProperty=nameWithType>|In-memory|— Реализует рекомендации модели W3C [DOM базового уровня 1](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) и [DOM базового уровня 2](http://www.w3.org/TR/DOM-Level-2-Core/).<br />— Узлы можно создавать, вставлять, удалять и изменять с помощью методов и свойств, основанных на знакомой модели DOM.<br />— Используйте этот вариант, если вы дорабатываете существующий код, в котором используется W3C DOM.|  
+|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|In-memory|— Предлагает несколько вариантов для редактирования и навигации на основе модели курсора.<br />— XML-документы могут содержаться в объекте <xref:System.Xml.XPath.XPathDocument> или <xref:System.Xml.XmlDocument>.<br />— Обеспечивает превосходную производительность при обработке XML в режиме чтения.<br />— Используйте этот вариант, если вы редактируете существующий код, в котором применяются запросы XPath или преобразования XSLT.|  
+|<xref:System.Xml.Xsl.XslCompiledTransform>|In-memory|— Предоставляет возможности для преобразования XML-данных с помощью преобразований XSL.<br />— [Компилятор XSLT (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md) позволяет задавать в приложении ссылки на готовые преобразования.|  
   
 ## <a name="win32-and-com-based-options"></a>Win32 и параметры, основанные на технологии COM  
   
 |**Параметр**|**Описание**|  
 |----------------|---------------------|  
-|[XmlLite](http://go.microsoft.com/fwlink/?LinkId=93723)|-Быстрый и надежный, без кэширования, только вперед синтаксического анализа XML, которая помогает создавать высокопроизводительные приложения XML.<br />-Работает с любым языком, можно использовать библиотеки динамической компоновки (DLL); Мы рекомендуем использовать C++.|  
-|[MSXML](http://go.microsoft.com/fwlink/?LinkId=93722)|-Основанной на COM технология обработки XML, который входит в состав операционной системы Windows.<br />-Обеспечивает собственную реализацию DOM с поддержкой XPath и XSLT.<br />-Содержит средство синтаксического анализа SAX2 на основе событий.|  
+|[XmlLite](https://msdn.microsoft.com/library/ms752872.aspx)|— Быстрое и безопасное средство последовательного синтаксического анализа XML, которое позволяет создавать высокопроизводительные XML-приложения.<br />— Работает с любым языком, который поддерживает динамически загружаемые библиотеки (DLL); мы рекомендуем использовать C++.|  
+|[MSXML](https://msdn.microsoft.com/library/ms763742.aspx)|— Основанная на модели COM технология обработки XML, включенная в операционную систему Windows.<br />— Обеспечивает собственную реализацию DOM с поддержкой XPath и XSLT.<br />— Содержит основанное на событиях средство синтаксического анализа SAX2.|  
   
 ## <a name="see-also"></a>См. также  
- [Обработка XML-данных с помощью модели DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
+ [Обработка XML-данных с использованием модели DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
  [Обработка XML-данных с использованием модели данных XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [XSLT-компилятор (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
+ [Компилятор XSLT (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)

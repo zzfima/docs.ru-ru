@@ -19,39 +19,42 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 10ab05ac8b24c0658be2f27809137c6b0bd4834f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 62931273acd41768d131c08510e14ff187d64296
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Практическое руководство. Извлечение протокола и номера порта из URL-адреса
 В следующем примере выполняется извлечение протокола и номера порта из URL-адреса.  
   
 ## <a name="example"></a>Пример  
- В этом примере <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> метод для возврата протокола и двоеточие, за которым следует номер порта.  
+ Этот пример использует метод <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>, чтобы вернуть имя протокола и номер порта, разделенные двоеточием.  
   
  [!code-csharp[RegularExpressions.Examples.Protocol#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/cs/Example.cs#1)]
  [!code-vb[RegularExpressions.Examples.Protocol#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/vb/Example.vb#1)]  
   
  Возможные интерпретации шаблона регулярного выражения `^(?<proto>\w+)://[^/]+?(?<port>:\d+)?/` показаны в следующей таблице.  
   
-|Шаблон|Описание|  
+|Шаблон|Описание:|  
 |-------------|-----------------|  
 |`^`|Соответствие должно обнаруживаться в начале строки.|  
-|`(?<proto>\w+)`|Совпадение с одним или несколькими символами слова. Имя этой группы `proto`.|  
+|`(?<proto>\w+)`|Совпадение с одним или несколькими символами слова. Присвойте этой группе имя `proto`.|  
 |`://`|Совпадение с двоеточием, за которым следуют две косые черты.|  
 |`[^/]+?`|Совпадение с одним или несколькими вхождениями (но как можно меньшему числу) любого символа, отличного от косой черты.|  
-|`(?<port>:\d+)?`|Совпадение с вхождениями в количестве 0 или 1 двоеточия, за которым следует одна или несколько цифр. Имя этой группы `port`.|  
+|`(?<port>:\d+)?`|Совпадение с вхождениями в количестве 0 или 1 двоеточия, за которым следует одна или несколько цифр. Присвойте этой группе имя `port`.|  
 |`/`|Совпадение с косой чертой.|  
   
- <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> Метод развертывает `${proto}${port}` замены последовательности, который объединяет значение две именованные группы, в шаблоне регулярного выражения. Он является удобной альтернативой явно сцепления строк, полученных из коллекции объект, возвращаемый <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> свойство.  
+ Метод <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> разворачивает последовательность замены `${proto}${port}`, которая объединяет захваченное значение из двух именованных групп в шаблоне регулярного выражения. Это удобная альтернатива явному объединению строк, извлеченных из объекта коллекции, который был возвращен свойством <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>.  
   
- В этом примере <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> метод с двумя подстановками `${proto}` и `${port}`, включаемых в выходной строке записанной группы. Захватываемым группам можно получить из соответствующего <xref:System.Text.RegularExpressions.GroupCollection> вместо этого, как показано в следующем коде.  
+ В примере используется метод <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> с двумя подстановками `${proto}` и `${port}` для включения захваченных групп в выходную строку. Вместо этого вы можете извлечь захваченные группы из объекта <xref:System.Text.RegularExpressions.GroupCollection> в сопоставлении, как показано в следующем примере кода.  
   
  [!code-csharp[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/cs/example2.cs#2)]
  [!code-vb[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/vb/example2.vb#2)]  

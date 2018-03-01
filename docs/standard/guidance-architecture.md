@@ -1,31 +1,34 @@
 ---
 title: "Руководство по архитектуре .NET"
-description: "Дополнительные сведения о recoommended и рекомендации для архитектуры, проектирования и создания программного обеспечения .NET."
-keywords: "Docker, Микрослужбами, ASP.NET, контейнер, архитектура"
+description: "Сведения о рекомендуемых методиках проектирования, разработки и создания программного обеспечения на .NET."
+keywords: "Docker, микрослужбы, ASP.NET, контейнер, архитектура"
 author: BillWagner
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
 ms.technology: dotnet
-ms.openlocfilehash: 008ab640c7708e0ae692ce30e77f34ba53f6c07e
-ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 24c02dfec62304293ab574b90c24c1332ce78108
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-architecture-guidance"></a>Руководство по архитектуре .NET
 
-## <a name="containerized-docker-application-lifecycle-with-the-microsoft-platform-and-toolscontainerized-lifecycle-architectureindexmd"></a>[Жизненный цикл приложений контейнерного Docker с помощью платформы Майкрософт и средств](./containerized-lifecycle-architecture/index.md)
+## <a name="containerized-docker-application-lifecycle-with-the-microsoft-platform-and-toolscontainerized-lifecycle-architectureindexmd"></a>[Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт](./containerized-lifecycle-architecture/index.md)
 
-В этом руководстве, сведения о рекомендуемых конца в конец жизненного цикла процессов, используемой для разработки, проверки и развертывания приложений Docker в контейнерах с помощью Visual Studio и Microsoft Azure.
+Это руководство предоставляет вводные сведения о рекомендациях по процессам жизненного цикла, на основе которых вы будете разрабатывать, проверять и развертывать приложения Docker в контейнерах с помощью Visual Studio и Microsoft Azure.
 
-## <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containersmodernize-with-azure-and-containersindexmd"></a>[Модернизировать существующие приложения .NET с облако Azure и контейнеров Windows](./modernize-with-azure-and-containers/index.md)
+## <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containersmodernize-with-azure-and-containersindexmd"></a>[Модернизация существующих приложений .NET с помощью облака Azure и контейнеров Windows](./modernize-with-azure-and-containers/index.md)
 
-Это руководство предназначено введение в стратегии, вам потребуется выполнить миграцию существующих веб-приложений в облако Azure и контейнеров Windows. Вы узнаете о стратегиях кода, перенос данных, orchestrators и обрабатывает CI или компакт-диска.
+Это руководство даст вам вводную информацию о стратегиях миграции существующих веб-приложений в облако Azure и контейнеры Windows. Вы узнаете, как правильно разрабатывать код, переносить данные, оркестрировать работу и организовывать непрерывную интеграцию и доставку.
 
-## <a name="architect-modern-web-applications-with-aspnet-core-and-azuremodern-web-apps-azure-architectureindexmd"></a>[Архитектор современных веб-приложений с помощью ASP.NET Core и Azure](modern-web-apps-azure-architecture/index.md)
+## <a name="architect-modern-web-applications-with-aspnet-core-and-azuremodern-web-apps-azure-architectureindexmd"></a>[Разработка современных веб-приложений с помощью ASP.NET Core и Azure](modern-web-apps-azure-architecture/index.md)
 
-В этом руководстве, сведения о рекомендуемой архитектуры, проектирования и процессов развертывания, который будет использоваться для создания приложений ASP.NET и ASP.NET Core и размещения этих приложений в Azure.
+Это руководство познакомит вас с рекомендациями по процессам проектирования, разработки и развертывания, на основе которых вы будете создавать приложения ASP.NET и ASP.NET Core и размещать их в Azure.
 
 ## <a name="architecting-container-and-microservice-based-applicationsmicroservices-architectureindexmd"></a>[Проектирование архитектуры приложений на основе контейнеров и микрослужб](microservices-architecture/index.md)
 

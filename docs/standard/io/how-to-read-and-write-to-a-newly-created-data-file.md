@@ -19,18 +19,21 @@ helpviewer_keywords:
 - I/O [.NET Framework], writing data
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b547f2c85495a497e5fc384f9a2ea44de7bf861c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 04ded71a23ba4cabab0a22e0d66c1084a726d8c8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Практическое руководство. Считывание из нового файла данных и запись в этот файл
-<xref:System.IO.BinaryWriter> И <xref:System.IO.BinaryReader?displayProperty=nameWithType> классы используются для записи и чтения данных вместо строк символов. Следующий пример демонстрирует запись данных и чтение данных из нового пустого файлового потока вызывается `Test.data`. После создания файла данных в текущем каталоге, связанный с ним <xref:System.IO.BinaryWriter> и <xref:System.IO.BinaryReader> создаются объекты и <xref:System.IO.BinaryWriter> объект используется для записи целые числа, 0-10, чтобы `Test.data`, оставляет указатель файла в конце файл. После установки указателя файла источника, <xref:System.IO.BinaryReader> объект считывает указанное содержимое.  
+Классы <xref:System.IO.BinaryWriter> И <xref:System.IO.BinaryReader?displayProperty=nameWithType> используются для записи и чтения данных вместо строк символов. Следующий пример демонстрирует запись данных в новый пустой файловый поток с именем `Test.data` и чтение данных из него. Этот код создает файл данных в текущем каталоге, создает связанные с ним объекты <xref:System.IO.BinaryWriter> и <xref:System.IO.BinaryReader>, а затем применяет объект <xref:System.IO.BinaryWriter> для записи в `Test.data` целых чисел с 0 до 10. По завершении этих действий указатель файла остается в конце файла. Затем пример кода возвращает указатель файла в начало и через объект <xref:System.IO.BinaryReader> считывает его содержимое.  
   
 ## <a name="example"></a>Пример  
  [!code-cpp[System.IO.BinaryReaderWriter#7](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/CPP/source6.cpp#7)]
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[System.IO.BinaryReaderWriter#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source6.vb#7)]  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
- Если `Test.data` уже существует в текущем каталоге <xref:System.IO.IOException> исключения. Используйте параметр <xref:System.IO.FileMode.Create?displayProperty=nameWithType> файлового режима при инициализации файлового потока, чтобы всегда создавать новый файл без появления исключения.  
+ Если `Test.data` уже существует в текущем каталоге, создается исключение <xref:System.IO.IOException>. Используйте параметр <xref:System.IO.FileMode.Create?displayProperty=nameWithType> файлового режима при инициализации файлового потока, чтобы всегда создавать новый файл без появления исключения.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.IO.BinaryReader>  

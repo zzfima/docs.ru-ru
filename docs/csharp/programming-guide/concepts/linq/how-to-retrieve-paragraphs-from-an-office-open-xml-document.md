@@ -5,22 +5,23 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e6014b7cf4dc02c2818dd4b9bf5fadfcbd82e3d4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c48ab7189840b7d22c53c4f379ab6d8a30d8be88
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>Практическое руководство. Извлечение абзацев из документа в формате Office Open XML (C#)
 В этом разделе представлен пример, открывающий документ Office Open XML и получающий коллекцию всех абзацев документа.  
   
- Дополнительные сведения об Office Open XML см. на веб-сайте [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
+ Дополнительные сведения об Office Open XML см. в руководстве по [пакету SDK для Open XML](https://github.com/OfficeDev/Open-XML-SDK) и на сайте [www.ericwhite.com](http://ericwhite.com/).  
   
 ## <a name="example"></a>Пример  
  В этом примере открывается пакет Office Open XML и используются связи внутри пакета Open XML для поиска документа и секций стилей. Затем в этом примере выполняется запрос к документу и создается проекция коллекции анонимного типа, содержащая узел <xref:System.Xml.Linq.XElement> абзаца, имя стиля каждого абзаца и текст каждого абзаца.  

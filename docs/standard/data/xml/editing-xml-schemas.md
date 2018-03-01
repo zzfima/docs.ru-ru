@@ -13,15 +13,18 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b9505f60b2000ef227463404dab051ecb7fa3cc5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dd2c5a0e4625a348daad9eccb7bae0e4788cab71
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="editing-xml-schemas"></a>Изменение XML-схем
 Изменение схем XML является одной из самых важных возможностей модели SOM. Все свойства модели SOM, относящиеся к работе перед компиляцией схемы, можно использовать для изменения существующих значений в схеме XML. Затем можно повторно скомпилировать схему XML, чтобы изменения вступили в силу.  
@@ -29,7 +32,7 @@ ms.lasthandoff: 11/21/2017
  Первым шагом в изменении схемы, загруженной в модель SOM, является обзор схемы. Перед изменением схемы следует ознакомиться с обзором схемы, в котором используется API модели SOM. Также следует ознакомиться со свойствами информационного набора PSCI, относящиеся к работе перед компиляцией схемы и после нее.  
   
 ## <a name="editing-an-xml-schema"></a>Изменение схемы XML  
- В этом разделе приведены два примера кода, которые изменить пользовательской схемы, созданные в [построение XML-схем](../../../../docs/standard/data/xml/building-xml-schemas.md) раздела. В первом примере кода добавляется новый элемент `PhoneNumber` в элемент `Customer`, а во втором примере кода добавляется новый атрибут `Title` в элемент `FirstName`. В первом образце для обзора пользовательской схемы используется коллекция <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> типа «после компиляции схемы», а во втором примере кода используется коллекция <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> типа «перед компиляцией схемы».  
+ В этом разделе приводятся два примера кода, в которых изменяется пользовательская схема, созданная в руководстве по [созданию схем XML](../../../../docs/standard/data/xml/building-xml-schemas.md). В первом примере кода добавляется новый элемент `PhoneNumber` в элемент `Customer`, а во втором примере кода добавляется новый атрибут `Title` в элемент `FirstName`. В первом образце для обзора пользовательской схемы используется коллекция <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> типа «после компиляции схемы», а во втором примере кода используется коллекция <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> типа «перед компиляцией схемы».  
   
 ### <a name="phonenumber-element-example"></a>Пример элемента PhoneNumber  
  В первом примере кода добавляется новый элемент `PhoneNumber` в элемент `Customer` пользовательской схемы. Пример кода изменяет пользовательскую схему посредством следующих шагов.  
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[XmlSchemaEditExample1#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample1/CS/XmlSchemaEditExample1.cs#1)]
  [!code-vb[XmlSchemaEditExample1#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample1/VB/XmlSchemaEditExample1.vb#1)]  
   
- Ниже приводится измененный пользовательской схемы, созданные в [построение XML-схем](../../../../docs/standard/data/xml/building-xml-schemas.md) раздела.  
+ Ниже приведена измененная пользовательская [схема XML](../../../../docs/standard/data/xml/building-xml-schemas.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -118,7 +121,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[XmlSchemaEditExample2#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample2/CS/XmlSchemaEditExample2.cs#1)]
  [!code-vb[XmlSchemaEditExample2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample2/VB/XmlSchemaEditExample2.vb#1)]  
   
- Ниже приводится измененный пользовательской схемы, созданные в [построение XML-схем](../../../../docs/standard/data/xml/building-xml-schemas.md) раздела.  
+ Ниже приведена измененная пользовательская [схема XML](../../../../docs/standard/data/xml/building-xml-schemas.md).  
   
 ```xml  
 <?xml version="1.0" encoding=" utf-8"?>  
@@ -143,10 +146,10 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Общие сведения о модели объектов схемы XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [Общие сведения об модели объектов XML-схемы](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
  [Чтение и запись XML-схем](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
  [Построение XML-схем](../../../../docs/standard/data/xml/building-xml-schemas.md)  
  [Обход XML-схем](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
  [Включение или импорт XML-схем](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
  [XmlSchemaSet для компиляции схемы](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Информационный набор после компиляции схемы](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+ [Набор сведений для постсхемной компиляции](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

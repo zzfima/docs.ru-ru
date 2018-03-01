@@ -21,25 +21,28 @@ helpviewer_keywords:
 - String.ToUpper method
 - culture parameter
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c500b882c335572b8b458ba515b282e9f5362b85
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e65eb85e1355d3aa98e04e7bd73f0194243dcdb1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Выполнение смены регистра независимо от языка и региональных параметров
-<xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>, И <xref:System.Char.ToLower%2A?displayProperty=nameWithType> методы предоставляют перегрузки, которые не принимают параметры. По умолчанию эти перегрузки без параметров выполняют изменения регистра, основанные на значении <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Это приводит к результатам, с учетом регистра, которые может зависеть от языка и региональных параметров. Для того чтобы ясно показать изменение регистра для языка и региональных параметров с учетом или без учета языка и региональных параметров, следует использовать перегрузки этих методов, которые требуют явного задания `culture` параметра. Для изменения регистра с учетом языка и региональных параметров, укажите `CultureInfo.CurrentCulture` для `culture` параметра. Без учета языка и региональных параметров изменения регистра, укажите `CultureInfo.InvariantCulture` для `culture` параметра.  
+Методы <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType> и <xref:System.Char.ToLower%2A?displayProperty=nameWithType> предоставляют перегрузки, которые не принимают параметры. По умолчанию эти перегрузки без параметров выполняют изменения регистра на основе значения <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Результат преобразования чувствителен к регистру и может быть разным для языков и региональных параметров. Чтобы четко указать, нужно ли учитывать язык и региональные параметры при изменении регистра, используйте перегрузки этих методов, принимающие параметр `culture` явным образом. Чтобы изменить регистр с учетом языка и региональных параметров, укажите значение `CultureInfo.CurrentCulture` для параметра `culture`. Чтобы изменить регистр без учета языка и региональных параметров, укажите значение `CultureInfo.InvariantCulture` для параметра `culture`.  
   
- Часто строки преобразуются в стандартный обращение, чтобы включить упрощает поиск более поздней версии. При использовании строки таким образом, следует указать `CultureInfo.InvariantCulture` для `culture` параметра, так как значение <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> может измениться между моментом изменения регистра и время поиска.  
+ Обычно строки преобразуются в стандартный регистр, чтобы упростить поиск по этим значениям. Если вы намерены применить такой подход, укажите значение `CultureInfo.InvariantCulture` для параметра `culture`, так как значение <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> может быть разным в момент преобразования регистра и в момент поиска.  
   
- Если решение безопасности зависит от операции изменения регистра, операции должно быть от языка и региональных параметров, чтобы гарантировать, что результат не повлияет значение `CultureInfo.CurrentCulture`. В разделе «Строка сравнения, текущего языка и региональных параметров» [советы и рекомендации по использованию строк](../../../docs/standard/base-types/best-practices-strings.md) статью для пример, демонстрирующий зависящие от языка и региональных параметров строковые операции может привести к непредсказуемым результатам.  
+ Если регистр важен для работы системы безопасности, такие операции ни в коем случае не должны зависеть от языка и региона, чтобы значение параметра `CultureInfo.CurrentCulture` не влияло на результат. Пример строковых операций с учетом языка и региональных параметров, дающих противоречивые результаты, см. в разделе "Сравнение строк с использованием текущего языка и региональных параметров" статьи [Советы и рекомендации по использованию строк в .NET](../../../docs/standard/base-types/best-practices-strings.md).  
   
-## <a name="using-the-stringtoupper-and-stringtolower-methods"></a>Используя String.ToUpper и String.ToLower методы  
- Для получения более понятного кода рекомендуется всегда использовать перегрузки `String.ToUpper` и `String.ToLower` методы, которые позволяют указать `culture` параметр явным образом. Например следующий код производит поиск идентификатора. `key.ToLower` Операция язык и региональные параметры по умолчанию, но это поведение не ясно из в коде.  
+## <a name="using-the-stringtoupper-and-stringtolower-methods"></a>Использование методов String.ToUpper и String.ToLower  
+ Чтобы повысить читаемость кода, мы рекомендуем всегда использовать перегрузки методов `String.ToUpper` и `String.ToLower`, позволяющие явным образом указать параметр `culture`. Например, приведенный ниже код выполняет поиск идентификатора. Операция `key.ToLower` по умолчанию зависит от языка и региональных параметров, но это поведение никак не отражено в коде.  
   
 ### <a name="example"></a>Пример  
   
@@ -56,7 +59,7 @@ static object LookupKey(string key)
 }  
 ```  
   
- Если вы хотите `key.ToLower` операции зависеть от языка и региональных параметров, следует изменить приведенный выше пример следующим образом, чтобы явно указать `CultureInfo.InvariantCulture` при изменении регистра.  
+ Если нужно, чтобы операция `key.ToLower` зависела от языка и региональных параметров, измените приведенный выше пример так, чтобы явно указать `CultureInfo.InvariantCulture` для изменения регистра.  
   
 ```vb  
 Shared Function LookupKey(key As String) As Object  
@@ -71,8 +74,8 @@ static object LookupKey(string key)
 }  
 ```  
   
-## <a name="using-the-chartoupper-and-chartolower-methods"></a>С помощью Char.ToUpper и Char.ToLower методов  
- Несмотря на то что `Char.ToUpper` и `Char.ToLower` методы имеют те же характеристики, что `String.ToUpper` и `String.ToLower` методы только языки и региональные параметры, которые подпадают под, турецкий (Турция) и Азербайджанский (латиница, Азербайджан). Это единственные языки и региональные параметры регистра одного символа отличается. Дополнительные сведения об этом уникальном сопоставлении регистра см. в разделе "Регистр" описания класса <xref:System.String>. Для получения более понятного кода и добиться согласованных результатов, рекомендуется всегда использовать перегрузки этих методов, которые позволяют явным образом указывать `culture` параметра.  
+## <a name="using-the-chartoupper-and-chartolower-methods"></a>Использование методов Char.ToUpper и Char.ToLower  
+ Методы `Char.ToUpper` и `Char.ToLower` действуют точно так же, как и методы `String.ToUpper` и `String.ToLower`, за исключением турецкого (Турция) и азербайджанского (латиница, Азербайджан) языков. Только для этих значений языка и региональных параметров изменяется применение регистра для одиночных символов. Дополнительные сведения об этом уникальном сопоставлении регистра см. в разделе "Регистр" описания класса <xref:System.String>. Чтобы повысить читаемость кода и стабильность результатов, мы рекомендуем всегда использовать перегрузки этих методов, позволяющие явным образом указать параметр `culture`.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.String.ToUpper%2A?displayProperty=nameWithType>  

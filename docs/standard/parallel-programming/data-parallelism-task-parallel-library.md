@@ -11,22 +11,26 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: parallelism, data
+helpviewer_keywords:
+- parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 13788542fa368bd5bcf1c2f277c9d83f84b35cdb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0644e2d9e7a52dd5747c9442a4771aa7400cdcb0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Параллелизм данных (библиотека параллельных задач)
 Понятие *Параллелизм данных* относится к сценариям, в которых одна и та же операция выполняется одновременно (то есть параллельно) для элементов в исходной коллекции или массиве. В параллельных операциях с данными исходная коллекция секционируются таким образом, чтобы несколько потоков могли одновременно работать в разных сегментах.  
   
- Библиотека параллельных задач (TPL) поддерживает параллелизм данных с помощью класса <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>. Этот класс предоставляет параллельные реализации на основе методов циклов [for](~/docs/csharp/language-reference/keywords/for.md) и [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) (`For` и `For Each` в Visual Basic). Вы пишете логику цикла для <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> или <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> в значительной степени так же, как пишете последовательный цикл. Нет необходимости создавать потоки или очередь рабочих элементов. В базовых циклах нет необходимости применять блокировки. Библиотека параллельных задач обрабатывает все низкоуровневые работы. Подробные сведения об использовании <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>, загрузите документ [шаблоны параллельного программирования: Общие сведения и применение параллельных шаблонов с платформой .NET Framework 4](http://www.microsoft.com/download/details.aspx?id=19222). В следующем примере кода показан простой цикл `foreach` и его параллельный эквивалент.  
+ Библиотека параллельных задач (TPL) поддерживает параллелизм данных с помощью класса <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>. Этот класс предоставляет параллельные реализации на основе методов циклов [for](~/docs/csharp/language-reference/keywords/for.md) и [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) (`For` и `For Each` в Visual Basic). Вы пишете логику цикла для <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> или <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> в значительной степени так же, как пишете последовательный цикл. Нет необходимости создавать потоки или очередь рабочих элементов. В базовых циклах нет необходимости применять блокировки. Библиотека параллельных задач обрабатывает все низкоуровневые работы. Чтобы получить дополнительные сведения об использовании <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> скачайте документацию по [шаблонам параллельного программирования и общим сведениям о применении параллельных шаблонов с платформой .NET Framework 4](http://www.microsoft.com/download/details.aspx?id=19222). В следующем примере кода показан простой цикл `foreach` и его параллельный эквивалент.  
   
 > [!NOTE]
 >  В этой документации для определения делегатов в библиотеке параллельных задач используются лямбда-выражения. Если вы не знакомы с лямбда-выражениями в C# или Visual Basic, см. раздел [Лямбда-выражения в PLINQ и TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
@@ -45,13 +49,13 @@ ms.lasthandoff: 10/18/2017
   
  Параллелизм данных с декларативным или подобным запросу синтаксисом поддерживается в PLINQ. Дополнительные сведения см. в разделе [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
-## <a name="related-topics"></a>Связанные разделы  
+## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание|  
+|Заголовок|Описание:|  
 |-----------|-----------------|  
 |[Практическое руководство. Написание простого цикла Parallel.For](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md)|Описание способа написания цикла <xref:System.Threading.Tasks.Parallel.For%2A> по какому-либо массиву или индексируемой исходной коллекции <xref:System.Collections.Generic.IEnumerable%601>.|  
 |[Практическое руководство. Написание простого цикла Parallel.ForEach](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md)|Описание способа написания цикла <xref:System.Threading.Tasks.Parallel.ForEach%2A> по какой-либо исходной коллекции <xref:System.Collections.Generic.IEnumerable%601>.|  
-|[Практическое руководство. Остановка цикла Parallel.For или выход из этого цикла](http://msdn.microsoft.com/en-us/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e)|В этом руководстве описывается, как остановить или приостановить параллельный цикл, чтобы все потоки были информированы об этом действии.|  
+|[Практическое руководство. Остановка цикла Parallel.For или выход из этого цикла](http://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e)|В этом руководстве описывается, как остановить или приостановить параллельный цикл, чтобы все потоки были информированы об этом действии.|  
 |[Практическое руководство. Написание цикла Parallel.For и локальными переменными потока](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|В этом руководстве рассматривается написание цикла <xref:System.Threading.Tasks.Parallel.For%2A>, в котором каждый поток поддерживает частную переменную, которая не видна другим потокам, и синхронизация результатов из всех потоков после завершения цикла.|  
 |[Практическое руководство. Написание цикла Parallel.ForEach и локальными переменными потока](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)|В этом руководстве рассматривается написание цикла <xref:System.Threading.Tasks.Parallel.ForEach%2A>, в котором каждый поток поддерживает частную переменную, которая не видна другим потокам, и синхронизация результатов из всех потоков после завершения цикла.|  
 |[Практическое руководство. Отмена цикла Parallel.For или Parallel.ForEach](../../../docs/standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md)|В этом руководстве описывается, как отменить параллельный цикл с помощью <xref:System.Threading.CancellationToken?displayProperty=nameWithType>|  

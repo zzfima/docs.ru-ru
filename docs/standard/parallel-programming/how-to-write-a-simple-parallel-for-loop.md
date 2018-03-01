@@ -16,15 +16,18 @@ helpviewer_keywords:
 - for loop, parallel construction in .NET
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ed621f41e76addde777b974732470fcfbc903563
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3a70dcb5e3811a18e23aeb2ebf0940d2c52f49a9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>Практическое руководство. Написание простого цикла Parallel.For
 Этот раздел содержит два примера, иллюстрирующих использование метода <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Первый использует перегрузку метода <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType>, а второй — перегрузку <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType>, которые являются двумя простейшими перегрузками метода <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Эти две перегрузки метода <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> можно использовать, когда не требуется отменять цикл, прерывать итерации цикла или сохранять локальное состояние по отношению к потоку.  
@@ -49,7 +52,7 @@ ms.lasthandoff: 11/21/2017
  При параллелизации любого кода, включая циклы, одна из важнейших целей — достижение максимального уровня использования процессоров без чрезмерной параллелизации до точки, где издержки параллельной обработки нивелируют выигрыш в производительности. В данном конкретном примере параллелизации подвергается только внешний цикл, так как во внутреннем цикле выполняется не очень большой объем работы. Сочетание небольшого объема работы и нежелательного влияния кэша может привести к снижению производительности во вложенных параллельных циклах. Таким образом, параллелизация только внешнего цикла является лучшим способом обеспечить максимальную выгоду от параллелизма в большинстве систем.  
   
 ## <a name="the-delegate"></a>Делегат  
- Третий параметр этой перегрузки <xref:System.Threading.Tasks.Parallel.For%2A> — делегат типа `Action<int>` в C# или `Action(Of Integer)` в Visual Basic. Делегат `Action` всегда возвращает значение void независимо от того, сколько параметров типа он имеет. В Visual Basic поведение `Action` определяется `Sub`. Пример использует для создания делегата лямбда-выражение, но этот делегат можно создать и другими способами. Дополнительные сведения см. в разделе [лямбда-выражения в PLINQ и TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
+ Третий параметр этой перегрузки <xref:System.Threading.Tasks.Parallel.For%2A> — делегат типа `Action<int>` в C# или `Action(Of Integer)` в Visual Basic. Делегат `Action` всегда возвращает значение void независимо от того, сколько параметров типа он имеет. В Visual Basic поведение `Action` определяется `Sub`. Пример использует для создания делегата лямбда-выражение, но этот делегат можно создать и другими способами. См. дополнительные сведения см. в руководстве по [лямбда-выражениям в PLINQ и TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
   
 ## <a name="the-iteration-value"></a>Значение итерации  
  Этот делегат принимает один входной параметр, значение которого является текущей итерацией. Это значение итерации предоставляется средой выполнения, а его начальным значением является индекс первого элемента в сегменте (части) источника, который обрабатывается в текущем потоке.  

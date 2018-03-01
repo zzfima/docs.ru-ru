@@ -16,53 +16,56 @@ helpviewer_keywords:
 - providers [.NET Framework], in observer design pattern
 - observables [.NET Framework], in observer design pattern
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b9d8f96de8cb3d13568e755f1d5e885e0474d891
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0f99a611de4bc344a0fd35130a59d496126e3af5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-implement-a-provider"></a>Практическое руководство. Реализация поставщика
-Шаблон разработки наблюдателя требует различения поставщика, который проверяет данные и отправляет уведомления, и одного или нескольких наблюдателей, которые получают уведомления (обратные вызовы) от поставщика. В этом разделе описывается создание поставщика. Связанный раздел, [как: реализация объекта Observer](../../../docs/standard/events/how-to-implement-an-observer.md), рассматривается способ создания наблюдателя.  
+Шаблон разработки наблюдателя подразумевает разделение ролей поставщика, который отслеживает данные и отправляет уведомления, и одного или нескольких наблюдателей, которые получают от поставщика уведомления (обратные вызовы). В этой статье описан процесс создания поставщика. Создание наблюдателя рассматривается в схожей статье [Практическое руководство. Реализация объекта Observer](../../../docs/standard/events/how-to-implement-an-observer.md).  
   
-### <a name="to-create-a-provider"></a>Для создания поставщика  
+### <a name="to-create-a-provider"></a>Создание поставщика  
   
-1.  Определяют данные, которые поставщик отвечает за отправку наблюдателям. Несмотря на то, что поставщик и данные, отправляемые им наблюдателям могут быть одного типа, они обычно представлены различные типы. Например, в приложении контроля температуры `Temperature` структура определяет данные, поставщик (представленный `TemperatureMonitor` класс, определенный в следующем шаге) отслеживает и на которые подписываются наблюдатели.  
+1.  Определите данные, за отправку которых наблюдателям будет отвечать этот поставщик. Сам поставщик и отправляемые им данные могут иметь одинаковый тип, но обычно они представлены разными типами. Например, в приложении контроля температуры структура `Temperature` определяет данные, которые отслеживаются поставщиком (он представлен классом `TemperatureMonitor`, который мы определим на следующем этапе) и на которые подписываются наблюдатели.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/data.cs#1)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/data.vb#1)]  
   
-2.  Определите поставщик данных, то есть тип, реализующий <xref:System.IObservable%601?displayProperty=nameWithType> интерфейса. Аргумент универсального типа поставщика является типом, которые поставщик отправляет наблюдателям. В следующем примере определяется `TemperatureMonitor` класс, представляющий собой созданную <xref:System.IObservable%601?displayProperty=nameWithType> реализации с помощью аргумента универсального типа `Temperature`.  
+2.  Определите поставщик данных в виде типа, реализующего интерфейс <xref:System.IObservable%601?displayProperty=nameWithType>. Аргумент универсального типа для поставщика определяет тип данных, отправляемых наблюдателям. В следующем примере определяется класс `TemperatureMonitor`, который представляет собой реализацию <xref:System.IObservable%601?displayProperty=nameWithType> с аргументом универсального типа `Temperature`.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#2)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#2)]  
   
-3.  Определите способ хранения поставщиком ссылок на наблюдатели, чтобы каждого наблюдателя можно получать уведомления, когда это необходимо. Чаще всего объект коллекции, например универсальный <xref:System.Collections.Generic.List%601> объект используется для этой цели. В следующем примере определяется закрытый <xref:System.Collections.Generic.List%601> объекта, экземпляр которого создается в `TemperatureMonitor` конструктора класса.  
+3.  Выберите способ, который поставщик будет использовать для хранения ссылок на наблюдатели, которые он должен извещать при соответствующих условиях. Чаще всего для этого используется объект коллекции, например универсальный объект <xref:System.Collections.Generic.List%601>. В следующем примере определяется закрытый объект <xref:System.Collections.Generic.List%601>, экземпляр которого создается в конструкторе класса `TemperatureMonitor`.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#3)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#3)]  
   
-4.  Определение <xref:System.IDisposable> реализацию, поставщик может возвращать подписчикам, чтобы они могли прекратить получение уведомлений в любое время. В следующем примере определяется вложенный `Unsubscriber` класс, который передается ссылка на коллекцию подписчиков и подписчика, когда экземпляр класса. Этот код позволяет подписчику вызвать объекта <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> реализацию, чтобы удалить себя из коллекции подписчиков.  
+4.  Определите реализацию <xref:System.IDisposable>, которую поставщик передает подписчикам, чтобы они могли в любой момент отключить отправку уведомлений. В следующем примере определяется вложенный класс `Unsubscriber`, в который передается ссылка на коллекцию подписчиков и на отдельного подписчика при создании экземпляра класса. Этот код позволяет подписчику вызвать для объекта реализацию <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>, чтобы удалить себя из коллекции подписчиков.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#4)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#4)]  
   
-5.  Выполните метод <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>. Метод передает ссылку на <xref:System.IObserver%601?displayProperty=nameWithType> интерфейс и должны быть сохранены в объекте, созданном для этой цели в шаге 3. Затем следует вернуть метод <xref:System.IDisposable> реализацию, разработанных на шаге 4. В следующем примере показана реализация <xref:System.IObservable%601.Subscribe%2A> метод `TemperatureMonitor` класса.  
+5.  Выполните метод <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>. В этот метод передается ссылка на интерфейс <xref:System.IObserver%601?displayProperty=nameWithType>, которую нужно сохранить в объекте, созданном для этой цели на шаге 3. Затем метод должен возвращать реализацию <xref:System.IDisposable>, разработанную на шаге 4. Ниже представлен пример реализации метода <xref:System.IObservable%601.Subscribe%2A> в классе `TemperatureMonitor`.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#5)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#5)]  
   
-6.  Уведомите наблюдатели соответствующим образом, вызвав их <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>, <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>, и <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> реализации. В некоторых случаях поставщик может не вызывать <xref:System.IObserver%601.OnError%2A> метод при возникновении ошибки. Например, следующая `GetTemperature` метод моделирует монитор, считывающий температурные данные каждые пять секунд и уведомляющий наблюдатели, если температура изменилась по крайней мере.1 градусов с момента предыдущего измерения. Если устройство не сообщает температуру (то есть, если его значение равно null), поставщик уведомляет наблюдатели, что передача завершена. Обратите внимание, что, помимо вызова каждого наблюдателя <xref:System.IObserver%601.OnCompleted%2A> метода `GetTemperature` метод очищает <xref:System.Collections.Generic.List%601> коллекции. В этом случае поставщик не производит вызовы <xref:System.IObserver%601.OnError%2A> метод своих наблюдателей.  
+6.  Организуйте уведомление наблюдателей, вызывая их реализации методов <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>, <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType> и <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>. В некоторых случаях поставщик может не вызывать метод <xref:System.IObserver%601.OnError%2A> при возникновении ошибки. Например, при помощи указанного ниже метода `GetTemperature` моделируется монитор, который считывает температурные данные каждые пять секунд и уведомляет наблюдателей, если температура изменилась по крайней мере на 0,1 градуса с момента предыдущего измерения. Если устройство не передает данные о температуре (то есть получено значение null), поставщик уведомляет наблюдатели о завершении передачи. Обратите внимание, что помимо вызова метода <xref:System.IObserver%601.OnCompleted%2A> для каждого наблюдателя, метод `GetTemperature` инициирует очистку коллекции <xref:System.Collections.Generic.List%601>. В этом случае поставщик не вызывает метод <xref:System.IObserver%601.OnError%2A> для своих наблюдателей.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#6)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#6)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере содержится полный исходный код для определения <xref:System.IObservable%601> реализацию для приложения контроля температуры. Он включает `Temperature` структуру, которая представляет собой данные, отправляемые наблюдателям, и `TemperatureMonitor` класса, который является <xref:System.IObservable%601> реализации.  
+ Ниже представлен полный пример исходного кода, определяющий реализацию <xref:System.IObservable%601> для приложения контроля температуры. Он содержит структуру `Temperature` для данных, отправляемых наблюдателям, и класс `TemperatureMonitor`, который является реализацией <xref:System.IObservable%601>.  
   
  [!code-csharp[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#7)]
  [!code-vb[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#7)]  

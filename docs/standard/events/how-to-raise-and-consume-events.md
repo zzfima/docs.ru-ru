@@ -17,20 +17,23 @@ helpviewer_keywords:
 - raising events
 - events [.NET Framework], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d052c865a554977ce5c8b0a347337d9d9b92fc57
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8efdef82cf98f4f1758cb941dc4610ebf575490c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-raise-and-consume-events"></a>Практическое руководство. Вызов и прием событий
 В примерах в этом разделе показано, как работать с событиями. Даны примеры делегата <xref:System.EventHandler>, делегата <xref:System.EventHandler%601> и пользовательского делегата, иллюстрирующие события как с данными, так и без.  
   
- В примерах используются понятия, описанные в [события](../../../docs/standard/events/index.md) статьи.  
+ В примерах используются понятия, описанные в руководстве по [событиям](../../../docs/standard/events/index.md).  
   
 ## <a name="example"></a>Пример  
  В первом примере показано, как вызывать и использовать событие, не содержащее данные. Он содержит класс `Counter` с событием `ThresholdReached`. Это событие возникает, когда значение счетчика больше порогового значения или равно ему. Делегат <xref:System.EventHandler> связан с событием, потому что данные события не предоставляются.  

@@ -16,25 +16,28 @@ helpviewer_keywords:
 - threading [.NET Framework], timers
 - timers, about timers
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fca27cf5261e253c2bb3d3a10fa3db31f28a2415
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 80b4cee03e934d3aec98ca323aac43f934c56455
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="timers"></a>таймеры
-Таймеры являются простые объекты, которые позволяют указать делегат, вызываемый в указанное время. Поток в пуле потоков выполняет операцию ожидания.  
+Таймеры являются простыми объектами, которые позволяют указать делегат для вызова в заданное время. Поток в пуле потоков выполняет операцию ожидания.  
   
- С помощью <xref:System.Threading.Timer?displayProperty=nameWithType> класса выполняется просто. Вы создаете **таймера**, передав <xref:System.Threading.TimerCallback> делегат для метода обратного вызова, объект, представляющий состояние, которое будет передано обратного вызова, raise начальное время и время, представляющий время обратного вызова. Чтобы отменить ожидающие таймера, вызовите **Timer.Dispose** функции.  
+ Работа с классом <xref:System.Threading.Timer?displayProperty=nameWithType> не имеет никаких сложностей. Вы создаете **таймер**, передав делегат <xref:System.Threading.TimerCallback> для метода обратного вызова, объект состояния, который будет передан при обратном вызове, время первого вызова и длительность периода между последующими обратными вызовами. Чтобы отменить ожидающий таймер, вызовите функцию **Timer.Dispose**.  
   
 > [!NOTE]
->  Существует два других класса таймера. <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> Элемент управления, который используется в конструкторах visual и предназначен для использования в контекстах пользовательского интерфейса; он создает события в потоке пользовательского интерфейса. <xref:System.Timers.Timer?displayProperty=nameWithType> Класс является производным от <xref:System.ComponentModel.Component>, поэтому он может использоваться с визуальными конструкторами; он также создает события, но делает это в <xref:System.Threading.ThreadPool> потока. <xref:System.Threading.Timer?displayProperty=nameWithType> Класс выполняет обратные вызовы <xref:System.Threading.ThreadPool> потоков и вообще не использовать модель событий. Он также предоставляет объект состояния методу обратного вызова, который другие таймеры этого не делают. Он является очень облегченным.  
+>  Есть еще два класса таймера с другими возможностями. Класс <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> представляет собой элемент управления, который используется в визуальных конструкторах, то есть в контекстах пользовательского интерфейса. Он создает события в потоке пользовательского интерфейса. Класс <xref:System.Timers.Timer?displayProperty=nameWithType> является производным от <xref:System.ComponentModel.Component>, а значит может использоваться в визуальных конструкторах. Он также создает события, но уже в потоке <xref:System.Threading.ThreadPool>. Класс <xref:System.Threading.Timer?displayProperty=nameWithType> выполняет обратные вызовы в потоке <xref:System.Threading.ThreadPool> и никак не использует модель события. Он также передает в метод обратного вызова объект состояния, чего не делают другие таймеры. Он требует совсем немного ресурсов.  
   
- В следующем примере кода запускается таймер, который начинает работу после одной секунды (1000 миллисекунд) и отсчитывает каждую секунду до нажатия клавиши **ввод** ключа. Переменная, содержащая ссылку на таймер является полем уровня класса, чтобы убедиться, что таймер не подвергаются сборке мусора пока она продолжает работать. Дополнительные сведения об агрессивной сборке мусора см. в разделе <xref:System.GC.KeepAlive%2A>.  
+ В следующем примере кода запускается таймер, который начинает работу через одну секунду (1000 миллисекунд) и срабатывает каждую секунду, пока пользователь не нажмет клавишу **ВВОД**. Переменная со ссылкой на таймер является полем уровня класса, чтобы таймер не пострадал от сборки мусора, пока не закончит свою работу. Дополнительные сведения об агрессивной сборке мусора см. в статье <xref:System.GC.KeepAlive%2A>.  
   
  [!code-cpp[System.Threading.Timer#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Timer/CPP/source2.cpp#2)]
  [!code-csharp[System.Threading.Timer#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Timer/CS/source2.cs#2)]

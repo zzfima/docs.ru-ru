@@ -16,15 +16,18 @@ helpviewer_keywords:
 - threading [.NET Framework], pausing
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b146987d2491f044e1f5794eba17d02d8f5e478c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4b87fbb51dbdcd5226a902e8b7ee5aeb7e126b7e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="pausing-and-resuming-threads"></a>Приостановка и возобновление потоков
 Наиболее распространенными способами синхронизации действий потоков являются блокировка и освобождение потоков или блокировка объектов или областей кода. Подробнее об этих механизмах фиксации и блокировки см. в разделе [Обзор примитивов синхронизации](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
@@ -32,26 +35,26 @@ ms.lasthandoff: 11/21/2017
  Также можно организовать перевод потоков в спящий режим. Если потоки заблокированы или находятся в спящем режиме, можно использовать <xref:System.Threading.ThreadInterruptedException> для вывода потоков из состояния ожидания.  
   
 ## <a name="the-threadsleep-method"></a>Метод Thread.Sleep  
- Вызов <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> метод приводит к немедленной блокировке количество миллисекунд или интервал времени, который передается методу текущего потока и выдает оставшуюся часть своего интервала времени в другой поток. По истечении этого интервала времени спящий поток возобновляет выполнение.  
+ Вызов метода <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> приводит к немедленной блокировке текущего потока на определенное количество миллисекунд, переданное этому методу, вследствие чего остаток среза времени передается другому потоку. По истечении этого интервала времени спящий поток возобновляет выполнение.  
   
- Поток не может вызвать метод <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> для другого потока.  <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>представляет статический метод, который всегда вызывает текущий поток в спящий режим.  
+ Поток не может вызвать метод <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> для другого потока.  Статический метод <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> всегда переводит текущий поток в спящий режим.  
   
- Вызов <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> со значением <xref:System.Threading.Timeout.Infinite?displayProperty=nameWithType> вынуждает поток в спящий режим, пока будет прерван другим потоком, который вызывает <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> методом в потоке находится в спящем режиме или до его завершения путем вызова его <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> метод.  В следующем примере показаны оба метода прерывания спящего потока.  
+ Вызов метода <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> с аргументом <xref:System.Threading.Timeout.Infinite?displayProperty=nameWithType> переводит поток в спящий режим до того момента, пока он не будет прерван другим потоком путем вызова метода <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> или завершен путем вызова метода <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  В следующем примере показаны оба метода прерывания спящего потока.  
   
  [!code-csharp[Conceptual.Threading.Resuming#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.Threading.Resuming/cs/Sleep1.cs#1)]
  [!code-vb[Conceptual.Threading.Resuming#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.Threading.Resuming/vb/Sleep1.vb#1)]  
   
 ## <a name="interrupting-threads"></a>Прерывание потоков  
- Можно прервать ожидающий поток путем вызова <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> метод для заблокированного потока для вызова <xref:System.Threading.ThreadInterruptedException>, которое выводит поток из вызова блокировки. Поток должен перехватить исключение <xref:System.Threading.ThreadInterruptedException> и выполнить соответствующие действия для продолжения работы. Если поток пропускает исключение, среда выполнения перехватывает его и останавливает поток.  
+ Ожидающий поток можно прервать, вызвав метод <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> для заблокированного потока. Это действие создает исключение <xref:System.Threading.ThreadInterruptedException>, которое выводит поток из вызова блокировки. Поток должен перехватить исключение <xref:System.Threading.ThreadInterruptedException> и выполнить соответствующие действия для продолжения работы. Если поток пропускает исключение, среда выполнения перехватывает его и останавливает поток.  
   
 > [!NOTE]
 >  Если целевой поток не заблокирован при вызове метода <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>, поток не прерывается до блокировки. Если поток никогда не блокируется, он может завершиться, не будучи прерванным.  
   
- Если ожидание является управляемым, методы <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> и <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> незамедлительно выводят поток из спящего режима. Если ожидание является неуправляемым (например, вызов Win32 неуправляемого [WaitForSingleObject](https://msdn.microsoft.com/library/windows/desktop/ms687032\(v=vs.85\).aspx) функции), ни <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> , ни <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> может занять управлять потоком до его возврата или входа в управляемый код. В управляемом коде это поведение выглядит следующим образом:  
+ Если ожидание является управляемым, методы <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> и <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> незамедлительно выводят поток из спящего режима. Если ожидание является неуправляемым (как, например, вызов неуправляемого кода функции Win32 [WaitForSingleObject](https://msdn.microsoft.com/library/windows/desktop/ms687032\(v=vs.85\).aspx)), то методы <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> и <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> не могут управлять потоком, пока он не вернется в управляемый код или не вызовет управляемый код. В управляемом коде это поведение выглядит следующим образом:  
   
 -   <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> выводит поток из состояния ожидания, в котором он может находиться, и приводит к созданию исключения <xref:System.Threading.ThreadInterruptedException> в целевом потоке.  
   
--   <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>выводит поток из состояния ожидания, он может находиться в и вызывает <xref:System.Threading.ThreadAbortException> исключение в потоке. Подробнее см. в разделе [Уничтожение потоков](../../../docs/standard/threading/destroying-threads.md).  
+-   <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> выводит поток из состояния ожидания, в котором он может находиться, и приводит к созданию исключения <xref:System.Threading.ThreadAbortException> в этом потоке. Подробнее см. в разделе [Уничтожение потоков](../../../docs/standard/threading/destroying-threads.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Threading.Thread>  

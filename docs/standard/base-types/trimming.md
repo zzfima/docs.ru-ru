@@ -1,5 +1,5 @@
 ---
-title: "Сокращение и удаление знаков из строк в .NET"
+title: "Сокращение и удаление символов из строк в .NET"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -21,20 +21,23 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fde24a97234d275d3d599f13bfc4063af939507b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dac047c7efefcacb959401aedcb96080810f2278
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="trimming-and-removing-characters-from-strings-in-net"></a>Сокращение и удаление знаков из строк в .NET
+# <a name="trimming-and-removing-characters-from-strings-in-net"></a>Сокращение и удаление символов из строк в .NET
 При разборе предложения на отдельные слова может оказаться, что в начале или в конце некоторых слов стоят пробелы. В этом случае можно воспользоваться методами сокращения в классе **System.String**, чтобы удалить любое количество пробелов или других символов из указанной позиции в строке. В таблице ниже описаны доступны методы сокращения.  
   
-|Имя метода|Применение|  
+|Имя метода|Использовать|  
 |-----------------|---------|  
 |<xref:System.String.Trim%2A?displayProperty=nameWithType>|Удаление пробелов или знаков, указанных в массиве знаков, из начала и конца строки.|  
 |<xref:System.String.TrimEnd%2A?displayProperty=nameWithType>|Удаление символов, указанных в массиве символов, в конце строки.|  
@@ -56,7 +59,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="trimend"></a>TrimEnd  
  Метод **String.TrimEnd** удаляет символы в конце строки, создавая новый строковый объект. Для указания символов, которые следует удалять, в этот метод передается массив символов. Порядок элементов в массиве символов не влияет на выполнение операции сокращения. В случае обнаружения символа, который отсутствует в массиве, операция останавливается.  
   
- В следующем примере удаляются последние буквы строки с помощью **TrimEnd** метод. В этом примере положение символов `'r'` и `'W'` изменено для иллюстрации того, что порядок символов в массиве не имеет значения. Обратите внимание, что этот код удаляет последнее слово `MyString` и часть первого.  
+ Ниже приведен пример удаления последних букв строки с помощью метода **TrimEnd**. В этом примере положение символов `'r'` и `'W'` изменено для иллюстрации того, что порядок символов в массиве не имеет значения. Обратите внимание, что этот код удаляет последнее слово `MyString` и часть первого.  
   
  [!code-cpp[Conceptual.String.BasicOps#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#18)]
  [!code-csharp[Conceptual.String.BasicOps#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#18)]

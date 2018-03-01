@@ -9,23 +9,26 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9d187d4f-c76e-4223-a670-cc290783ce47
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6dec61860fba5815b1dae802d280e8df6628ab91
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4d2ffaa994ce3c9b02ed0937967845be1b803f6d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-document-object-model-dom-hierarchy"></a>Иерархия модели объектов (DOM) XML-документа
 Следующая иллюстрация показывает иерархию классов для модели XML DOM с именем W3C в скобках наряду с именем класса, где это уместно.  
   
- ![Модель объектов XML-документов &#40; DOM &#41; Иерархия](../../../../docs/standard/data/xml/media/dom-class-hierarchy.gif "Dom_class_hierarchy")  
+ ![Иерархия в модели объектов XML-документов &#40;DOM&#41;](../../../../docs/standard/data/xml/media/dom-class-hierarchy.gif "Dom_class_hierarchy")  
 Иерархия объектной модели (DOM) XML-документа  
   
- Следующие классы не наследуют от **XmlNode**:  
+ Следующие классы не наследуют от класса **XmlNode**:  
   
 -   **XmlImplementation**  
   
@@ -35,15 +38,15 @@ ms.lasthandoff: 10/18/2017
   
 -   **XmlNodeChangedEventArgs**  
   
- **XmlImplementation** класс используется для создания XML-документа. Дополнительные сведения см. в разделе [Создание XML-документа](../../../../docs/standard/data/xml/xml-document-creation.md).  
+ Класс **XmlImplementation** используется для создания XML-документа. Дополнительные сведения см. в статье [Создание XML-документа](../../../../docs/standard/data/xml/xml-document-creation.md).  
   
- **XmlNamedNodeMap** класс обрабатывает неупорядоченный набор узлов. Дополнительные сведения см. в разделе [получение неупорядоченных узлов по имени или индексу](../../../../docs/standard/data/xml/unordered-node-retrieval-by-name-or-index.md).  
+ Класс **XmlNamedNodeMap** обрабатывает неупорядоченный набор узлов. Дополнительные сведения см. в статье [Неупорядоченное извлечение узлов по имени или индексу](../../../../docs/standard/data/xml/unordered-node-retrieval-by-name-or-index.md).  
   
- **XmlNodeList** класс обрабатывает неупорядоченный список узлов. Дополнительные сведения см. в разделе [получение упорядоченных узлов по индексу](../../../../docs/standard/data/xml/ordered-node-retrieval-by-index.md).  
+ Класс **XmlNamedNodeMap** обрабатывает упорядоченный набор узлов. Дополнительные сведения см. в статье [Упорядоченное извлечение узлов по индексу](../../../../docs/standard/data/xml/ordered-node-retrieval-by-index.md).  
   
- **XmlNodeChangedEventArgs** класс обрабатывает обработчики событий, зарегистрированных на **XmlDocument**. Дополнительные сведения см. в разделе [обработка событий в XML-документа с помощью XmlNodeChangedEventArgs](../../../../docs/standard/data/xml/event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs.md).  
+ Класс **XmlNodeChangedEventArgs** управляет обработчиками событий, которые зарегистрированы в объекте **XmlDocument**. Дополнительные сведения см. в статье [Обработка событий в XML-документе с помощью XmlNodeChangedEventArgs](../../../../docs/standard/data/xml/event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs.md).  
   
- **XmlLinkedNode** класс наследует от **XmlNode**. Он предназначен для переопределения двух методов **XmlNode**: **PreviousSibling** и **NextSibling** методы. Эти переопределенные методы затем наследуются и используемые **XmlCharacterData**, **XmlDeclaration**, **XmlDocumentType**, **XmlElement**, **XmlEntityReference**, и **XmlProcessingInstruction**, которые являются классы, которые имеют предыдущие и следующие одноуровневые элементы.  
+ Класс **XmlLinkedNode** наследует от класса **XmlNode**. Он предназначен для того, чтобы переопределять два метода **XmlNode**, а именно: **PreviousSibling** и **NextSibling**. Эти переопределенные методы затем наследуются и используются классами **XmlCharacterData**, **XmlDeclaration**, **XmlDocumentType**, **XmlElement**, **XmlEntityReference** и **XmlProcessingInstruction**, для которых существуют предыдущие и следующие одноуровневые элементы.  
   
 ## <a name="see-also"></a>См. также  
- [Модель объектов XML-документов (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

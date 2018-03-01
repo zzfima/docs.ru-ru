@@ -12,41 +12,44 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 901c3fdc8fdc80cc7c3bf13170646de857a5e009
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c891736534741d1d3d3edb93d75d9f191c2dd573
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>Компиляция схемы XmlSchemaCollection
-**XmlSchemaCollection** кэша или библиотеки, где хранятся и проверки схемы языка XSD определения XML-Data Reduced (XDR) и XML-схемы. **XmlSchemaCollection** повышает производительность за счет кэширования схем в памяти вместо обращения к ним из файла или URL-адрес.  
+Объект **XmlSchemaCollection** является кэшем или библиотекой, где можно хранить и проверять схемы XDR и XSD. Использование **XmlSchemaCollection** повышает производительность, поскольку схемы кэшируются в памяти и их не нужно каждый раз получать из файла или по URL-адресу.  
   
 > [!NOTE]
->  Несмотря на то что **XmlSchemaCollection** класс хранит XDR-схемы и XML-схем, любые методы и свойства, которое принимает или возвращает **XmlSchema** объектов поддерживает только схемы XML.  
+>  Класс **XmlSchemaCollection** хранит и схемы XDR, и схемы XML, но все методы и свойства, которые принимают или возвращают объект **XmlSchema**, поддерживают только схемы XML.  
   
 > [!IMPORTANT]
->  Класс <xref:System.Xml.Schema.XmlSchemaCollection> устарел и заменен классом <xref:System.Xml.Schema.XmlSchemaSet>. Дополнительные сведения о <xref:System.Xml.Schema.XmlSchemaSet> см. класс, [XmlSchemaSet для компиляции схемы](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
+>  Класс <xref:System.Xml.Schema.XmlSchemaCollection> устарел и заменен классом <xref:System.Xml.Schema.XmlSchemaSet>. Дополнительные сведения о классе <xref:System.Xml.Schema.XmlSchemaSet> см. в руководстве по [использованию XmlSchemaSet для компиляции схемы](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
   
 ## <a name="add-schemas-to-the-collection"></a>Добавление схем в коллекцию  
- Схемы загружаются в коллекцию с помощью **добавить** метод **XmlSchemaCollection**, во время работы которого схема связывается с URI пространства имен. Для схем XML URI-код пространства имен обычно является целевым пространством имен для схемы. Для схем XDR URI-код пространства имен будет задаваться во время добавления схемы в коллекцию.  
+ Схемы загружаются в коллекцию с помощью метода **Add** класса **XmlSchemaCollection**, и одновременно с этим схема связывается с URI пространства имен. Для схем XML URI-код пространства имен обычно является целевым пространством имен для схемы. Для схем XDR URI-код пространства имен будет задаваться во время добавления схемы в коллекцию.  
   
 ## <a name="check-for-a-schema-in-the-collection"></a>Проверка наличия схемы в коллекции  
- Можно проверить, находится ли схема в коллекции с помощью **Contains** метод. **Contains** метод принимает либо **XmlSchema** объекта (только для схем XML) или строка, представляющая пространство имен URI, связанное со схемой (для схем XML и XDR).  
+ Наличие схемы в коллекции вы можете проверить с помощью метода **Contains**. Метод **Contains** принимает объект **XmlSchema** (только для схем XML) или строку, представляющую URI пространства имен, связанного со схемой (для схем XML и XDR).  
   
 ## <a name="retrieve-a-schema-from-the-collection"></a>Получение схемы из коллекции  
- Можно получить схему из коллекции с помощью **элемент** свойство. **Элемент** свойство принимает строку, представляющую пространство имен URI, связанное со схемой, обычно целевое пространство имен и возвращает **XmlSchema** объекта. **Элемент** свойство применяется только к XML-схем. Для схем XDR всегда возвращается ссылка NULL, поскольку для них нет доступной модели объектов.  
+ Схему из коллекции можно получить с помощью свойства **Item**. Свойство **Item** принимает строку, представляющую URI пространства имен, связанного со схемой (обычно это целевое пространство имен), и возвращает объект **XmlSchema**. Свойство **Item** применимо только к схемам XML. Для схем XDR всегда возвращается ссылка NULL, поскольку для них нет доступной модели объектов.  
   
 ## <a name="validate-xml-documents-using-xmlschemacollection"></a>Проверка XML-документов с помощью XmlSchemaCollection  
- Можно проверить экземпляр XML-документа при помощи **XmlSchemaCollection** путем создания **XmlSchemaCollection** объекта, добавив схемы в коллекцию и задание **схемы**  свойство **XmlValidatingReader** Чтобы назначить созданную **XmlSchemaCollection** для **XmlValidatingReader**.  
+ Чтобы проверить экземпляр XML-документа с помощью **XmlSchemaCollection**, создайте объект **XmlSchemaCollection**, добавьте в эту коллекцию схемы и задайте свойство **Schemas** для объекта **XmlValidatingReader**, чтобы назначить созданную коллекцию **XmlSchemaCollection** для объекта **XmlValidatingReader**.  
   
 ### <a name="improved-performance"></a>Повышенная производительность  
- Рекомендуется, если проверяются более одного документа по одной схеме, которая используется **XmlSchemaCollection** из-за счет кэширования схем в памяти, он обеспечивает более высокую производительность.  
+ Если вы проверяете несколько документов по одной схеме, мы рекомендуем использовать объект **XmlSchemaCollection**, поскольку его производительность выше благодаря кэшированию схем в памяти.  
   
- В следующем примере кода создается **XmlSchemaCollection** , схемы добавляются в коллекцию и задается **схемы** свойство.  
+ Следующий пример кода создает объект **XmlSchemaCollection**, добавляет схемы в коллекцию и задает свойство **Schemas**.  
   
 ```vb  
 Dim tr as XmlTextReader = new XmlTextReader("Books.xml")  
@@ -65,5 +68,5 @@ vr.Schemas.Add(xsc);
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Проверка XDR с помощью XmlSchemaCollection](../../../../docs/standard/data/xml/xdr-validation-with-xmlschemacollection.md)  
- [Проверка схемы (XSD) XML с помощью XmlSchemaCollection](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemacollection.md)
+ [XDR-проверка с помощью XmlSchemaCollection](../../../../docs/standard/data/xml/xdr-validation-with-xmlschemacollection.md)  
+ [Проверка по XML-схеме (XSD) с помощью XmlSchemaCollection](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemacollection.md)

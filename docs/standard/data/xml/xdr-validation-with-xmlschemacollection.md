@@ -12,29 +12,32 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: fab67e10aa0562b59f8c7704a5ca1feeb66d6208
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f875169d43a2f733050b46c76cea0891b4cfabf7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>XDR-проверка с помощью XmlSchemaCollection
-Если выполняется проверка схемы XML-Data Reduced (XDR) хранится в **XmlSchemaCollection**, она связана с пространством имен URI, указанный во время добавления схемы в коллекцию. **XmlValidatingReader** URI пространства имен в XML-документа сопоставляется со схемой, соответствующей этому URI-коду в коллекции.  
+Схема XDR, по которой выполняется проверка, хранится в коллекции **XmlSchemaCollection**. Она связана с URI-кодом пространства имен, который был указан во время добавления схемы в коллекцию. Объект **XmlValidatingReader** сопоставляет URI-код пространства имен в XML-документе со схемой, соответствующей этому URI-коду в коллекции.  
   
 > [!IMPORTANT]
->  Класс <xref:System.Xml.Schema.XmlSchemaCollection> устарел и заменен классом <xref:System.Xml.Schema.XmlSchemaSet>. Дополнительные сведения о <xref:System.Xml.Schema.XmlSchemaSet> см. класс, [XmlSchemaSet для компиляции схемы](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
+>  Класс <xref:System.Xml.Schema.XmlSchemaCollection> устарел и заменен классом <xref:System.Xml.Schema.XmlSchemaSet>. Дополнительные сведения о классе <xref:System.Xml.Schema.XmlSchemaSet> см. в руководстве по [использованию XmlSchemaSet для компиляции схемы](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
   
- Например, если корневой элемент XML-документа — `<bookstore xmlns="urn:newbooks-schema">`, при добавлении схемы в **XmlSchemaCollection** ссылается то же пространство имен, как показано ниже:  
+ Например, если корневым элементом XML-документа является `<bookstore xmlns="urn:newbooks-schema">`, при добавлении схемы в коллекцию **XmlSchemaCollection** она будет ссылаться на то же пространство имен следующим образом:  
   
 ```  
 xsc.Add("urn:newbooks-schema", "newbooks.xdr")  
 ```  
   
- В следующем примере кода создается **XmlValidatingReader** , который принимает **XmlTextReader** и добавляет схему XDR HeadCount.xdr в **XmlSchemaCollection**.  
+ В следующем примере кода создается объект **XmlValidatingReader**, который принимает объект **XmlTextReader** и добавляет схему XDR HeadCount.xdr в коллекцию **XmlSchemaCollection**.  
   
 ```vb  
 Imports System  

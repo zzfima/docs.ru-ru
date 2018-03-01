@@ -41,34 +41,37 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e8784ed31de4a511f9eee361a4becee3d080298a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f1918788a571e9626554eaeec9fdd3f1686d4cc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="the-regular-expression-object-model"></a>Объектная модель регулярных выражений
-<a name="introduction"></a>В этом разделе описывается объектная модель, используемая при работе с регулярными выражениями .NET. Он содержит следующие подразделы:  
+<a name="introduction"></a> В этом разделе описывается объектная модель, используемая при работе с регулярными выражениями в .NET. Он содержит следующие подразделы:  
   
--   [Обработчик регулярных выражений](#Engine)  
+-   [Механизм регулярных выражений](#Engine)  
   
 -   [Объекты MatchCollection и Match](#Match_and_MCollection)  
   
 -   [Коллекция Group](#GroupCollection)  
   
--   [Захватываемой группы](#the_captured_group)  
+-   [Захватываемая группа](#the_captured_group)  
   
 -   [Коллекция Capture](#CaptureCollection)  
   
--   [Отдельное выделение](#the_individual_capture)  
+-   [Отдельный захват](#the_individual_capture)  
   
 <a name="Engine"></a>   
 ## <a name="the-regular-expression-engine"></a>Механизм регулярных выражений  
- Обработчик регулярных выражений в .NET представляется <xref:System.Text.RegularExpressions.Regex> класса. Механизм отвечает за синтаксический анализ и компиляцию регулярного выражение, а также выполнение операций, которые сопоставляют шаблон регулярного выражения с входной строкой. Обработчик является центральным компонентом в объектной модели регулярных выражений .NET.  
+ Механизм регулярных выражений в .NET представлен классом <xref:System.Text.RegularExpressions.Regex>. Механизм отвечает за синтаксический анализ и компиляцию регулярного выражение, а также выполнение операций, которые сопоставляют шаблон регулярного выражения с входной строкой. Этот механизм представляет центральный компонент объектной модели регулярных выражений .NET.  
   
  Вы можете использовать механизм регулярных выражений одним из двух способов:  
   
@@ -98,7 +101,7 @@ ms.lasthandoff: 11/21/2017
   
  Возможные интерпретации шаблона регулярного выражения `^\d{3}-\d{2}-\d{4}$` показаны в следующей таблице.  
   
-|Шаблон|Описание|  
+|Шаблон|Описание:|  
 |-------------|-----------------|  
 |`^`|Выделение начала входной строки.|  
 |`\d{3}`|Совпадение с тремя десятичными цифрами.|  
@@ -116,7 +119,7 @@ ms.lasthandoff: 11/21/2017
   
  Возможные интерпретации шаблона регулярного выражения `\b(\w+)\W+(\1)\b` показаны в следующей таблице.  
   
-|Шаблон|Описание|  
+|Шаблон|Описание:|  
 |-------------|-----------------|  
 |`\b`|Сопоставление начинается на границе слова.|  
 |`(\w+)`|Совпадение с одним или несколькими символами слова. Это первая группа записи.|  
@@ -138,7 +141,7 @@ ms.lasthandoff: 11/21/2017
   
  Возможные интерпретации шаблона регулярного выражения `\b\d+\.\d{2}\b` показаны в следующей таблице.  
   
-|Шаблон|Описание|  
+|Шаблон|Описание:|  
 |-------------|-----------------|  
 |`\b`|Совпадение должно начинаться на границе слова.|  
 |`\d+`|Совпадение с одной или несколькими десятичными цифрами.|  
@@ -161,7 +164,7 @@ ms.lasthandoff: 11/21/2017
   
  Возможные интерпретации шаблона регулярного выражения `\b\d{1,2}\.\s` показаны в следующей таблице.  
   
-|Шаблон|Описание|  
+|Шаблон|Описание:|  
 |-------------|-----------------|  
 |`\b`|Совпадение должно начинаться на границе слова.|  
 |`\d{1,2}`|Совпадение с одной или двумя десятичными цифрами.|  
@@ -176,7 +179,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="the-match-collection"></a>Коллекция Match  
  Метод <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> возвращает объект <xref:System.Text.RegularExpressions.MatchCollection>, содержащий объекты <xref:System.Text.RegularExpressions.Match>, которые представляют все сопоставления, найденных механизмом регулярных выражений, в том порядке, в котором они присутствуют во входной строке. Если соответствий нет, метод возвращает объект <xref:System.Text.RegularExpressions.MatchCollection> без членов. Свойство <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> позволяет получить доступ к отдельным членам коллекции по индексу (от нуля до значения свойства <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> минус 1). <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> — это индексатор коллекции (для C#) и свойство по умолчанию (для Visual Basic).  
   
- По умолчанию вызов метода <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> использует отложенные вычисления для заполнения объекта <xref:System.Text.RegularExpressions.MatchCollection>. Доступ к свойствам, которым требуется полностью заполненная коллекция, например свойства <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> и <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>, может быть связан с дополнительными затратами. Поэтому мы рекомендуем обращаться к коллекции, используя объект <xref:System.Collections.IEnumerator>, возвращаемый методом <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType>. Некоторые языки предоставляют конструкции, такие как `For``Each` в Visual Basic и `foreach` в C#, которые создают оболочку коллекции <xref:System.Collections.IEnumerator> интерфейса.  
+ По умолчанию вызов метода <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> использует отложенные вычисления для заполнения объекта <xref:System.Text.RegularExpressions.MatchCollection>. Доступ к свойствам, которым требуется полностью заполненная коллекция, например свойства <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> и <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>, может быть связан с дополнительными затратами. Поэтому мы рекомендуем обращаться к коллекции, используя объект <xref:System.Collections.IEnumerator>, возвращаемый методом <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType>. Некоторые языки предоставляют конструкции, такие как `For``Each` в Visual Basic и `foreach` в C#, которые создают оболочку для интерфейса <xref:System.Collections.IEnumerator> коллекции.  
   
  Следующий пример использует метод <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%29?displayProperty=nameWithType> для заполнения объекта <xref:System.Text.RegularExpressions.MatchCollection> всеми соответствиями, найденными во входной строке. Пример перечисляет коллекцию, копирует соответствия в массив строк и записывает позиции символов в целочисленный массив.  
   
@@ -224,7 +227,7 @@ ms.lasthandoff: 11/21/2017
   
  Шаблон регулярного выражения `\b\d+(,\d{3})*\.\d{2}\b` определяется, как показано в следующей таблице.  
   
-|Шаблон|Описание|  
+|Шаблон|Описание:|  
 |-------------|-----------------|  
 |`\b`|Совпадение должно начинаться на границе слова.|  
 |`\d+`|Совпадение с одной или несколькими десятичными цифрами.|  
@@ -255,7 +258,7 @@ ms.lasthandoff: 11/21/2017
   
  Шаблон регулярного выражения `\b(\w+)\s(\d{1,2}),\s(\d{4})\b` определяется, как показано в следующей таблице.  
   
-|Шаблон|Описание|  
+|Шаблон|Описание:|  
 |-------------|-----------------|  
 |`\b`|Совпадение должно начинаться на границе слова.|  
 |`(\w+)`|Совпадение с одним или несколькими символами слова. Это первая группа записи.|  
@@ -270,7 +273,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="the_captured_group"></a>   
 ## <a name="the-captured-group"></a>Захватываемая группа  
- Класс <xref:System.Text.RegularExpressions.Group> представляет результат одной захватываемой группы. Объекты Group, представляющие захватываемые группы, заданные в регулярном выражении, возвращаются свойством <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> объекта <xref:System.Text.RegularExpressions.GroupCollection>, который возвращается свойством <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. Свойство <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> — это индексатор (для C#) и свойство по умолчанию (для Visual Basic) класса <xref:System.Text.RegularExpressions.Group>. Отдельные элементы можно получить с помощью итерации коллекции с помощью `foreach` или `For``Each` построения. Пример см. в предыдущем разделе.  
+ Класс <xref:System.Text.RegularExpressions.Group> представляет результат одной захватываемой группы. Объекты Group, представляющие захватываемые группы, заданные в регулярном выражении, возвращаются свойством <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> объекта <xref:System.Text.RegularExpressions.GroupCollection>, который возвращается свойством <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. Свойство <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> — это индексатор (для C#) и свойство по умолчанию (для Visual Basic) класса <xref:System.Text.RegularExpressions.Group>. Вы также можете извлечь отдельные члены, циклически перебирая коллекцию с помощью конструкции `foreach` или `For``Each`. Пример см. в предыдущем разделе.  
   
  В следующем примере вложенные конструкции группировки используются для записи подстрок в группы. Шаблон регулярного выражения `(a(b))c` сопоставляет строку "abc". Он назначает подстроку "ab" первой захватываемой группе, а подстроку "b" — второй захватываемой группе.  
   
@@ -284,7 +287,7 @@ ms.lasthandoff: 11/21/2017
   
  Шаблон регулярного выражения `^(?<name>\w+):(?<value>\w+)` определяется, как показано в следующей таблице.  
   
-|Шаблон|Описание|  
+|Шаблон|Описание:|  
 |-------------|-----------------|  
 |`^`|Начало совпадения в начале входной строки.|  
 |`(?<name>\w+)`|Совпадение с одним или несколькими символами слова. Имя захватываемой группы — `name`.|  
@@ -293,7 +296,7 @@ ms.lasthandoff: 11/21/2017
   
  Свойства класса <xref:System.Text.RegularExpressions.Group> предоставляют сведения о захватываемой группе: свойство `Group.Value` содержит выделенную подстроку, свойство `Group.Index` указывает начальную позицию захватываемой группы во входном тексте, свойство `Group.Length` содержит длину выделенного текста, а свойство `Group.Success` указывает, соответствует ли подстрока шаблону, заданному захватываемой группой.  
   
- Применение квантификаторов к группе (Дополнительные сведения см. в разделе [квантификаторы](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) изменяет связь одного выделения в захватываемой группе двумя способами:  
+ Применение квантификаторов к группе (см. раздел [Квантификаторы](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) изменяет связь одного выделения в захватываемой группе двумя способами:  
   
 -   Если квантификатор `*` или `*?` (который указывает ноль или больше соответствий) применен к группе, во входной строке может отсутствовать соответствие захватываемой группе. Если выделенного текста нет, свойства объекта <xref:System.Text.RegularExpressions.Group> задаются, как показано в следующей таблице.  
   
@@ -348,7 +351,7 @@ ms.lasthandoff: 11/21/2017
   
  Определение регулярного выражения показано в следующей таблице.  
   
-|Шаблон|Описание|  
+|Шаблон|Описание:|  
 |-------------|-----------------|  
 |`\w+`|Совпадение с одним или несколькими символами слова.|  
 |`(\s\w+)*`|Сопоставляется ноль или несколько экземпляров пробела, за которыми следует один или несколько словообразующих символов. Этот шаблон выделяет названия городов из нескольких слов. Это третья группа записи.|  

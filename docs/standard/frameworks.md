@@ -8,11 +8,14 @@ ms.topic: article
 ms.custom: updateeachrelease
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.openlocfilehash: 20152a951f11b1b923209b56b31663a9a8a81587
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 838f4f6d78b4544a538e9c4bd6c487bcc731270b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="target-frameworks"></a>Требуемые версии .NET Framework
 
@@ -30,7 +33,7 @@ ms.lasthandoff: 10/18/2017
 
 В приведенной ниже таблице определены наиболее распространенные целевые платформы, способы их указания и реализованные в них версии [.NET Standard](~/docs/standard/net-standard.md). Эти версии целевой платформ являются последними стабильными версиями. Предварительные версии здесь не упоминаются. Моникер целевой платформы (TFM) является стандартизированный форматом маркера для указания целевой платформы приложения или библиотеки .NET. 
 
-| Требуемая версия .NET Framework      | Последняя версия | Моникер целевой платформы (TFM) | Реализации <br/> Версия .NET Standard |
+| Требуемая версия .NET Framework      | Последняя версия | Моникер целевой платформы (TFM) | Реализовано <br/> Версия .NET Standard |
 | :-------------------: | :------------: | :----------------------------: | :-------------------------------------: |
 | .NET Standard         | 2.0            | netstandard2.0                 | Н/Д                                     |
 | Приложение .NET Core | 2.0            | netcoreapp2.0                  | 2.0                                     |

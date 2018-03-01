@@ -8,28 +8,32 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: synchronization primitives, SpinLock
+helpviewer_keywords:
+- synchronization primitives, SpinLock
 ms.assetid: f9af93bb-7a0d-4ba5-afe8-74f48b6b6958
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: efe9b3126b3c952ab156f9ca40752ad8d3fddcd1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e83505a36252457d286bc7fbc6bbe442732229a4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="spinlock"></a>SpinLock
-<xref:System.Threading.SpinLock> Структуры — это низкоуровневые взаимного исключения примитив синхронизации, который выполняет цикл в ожидании получения блокировки. На многоядерных компьютерах, если предполагается, что время ожидания короткий и будет минимально и <xref:System.Threading.SpinLock> можно выполнить быстрее, чем другие виды блокировок. Тем не менее, мы рекомендуем использовать <xref:System.Threading.SpinLock> только при определении профилирования показывают, что <xref:System.Threading.Monitor?displayProperty=nameWithType> метода или <xref:System.Threading.Interlocked> методы значительно снижают производительность программы.  
+Структура <xref:System.Threading.SpinLock> — это примитив низкоуровневой синхронизации со взаимоисключающей блокировкой, которая выполняет цикл ожидания, пока не получит блокировку. На многоядерных компьютерах, если предполагается короткое время ожидания и минимальный риск состязаний, <xref:System.Threading.SpinLock> может выполняться быстрее, чем другие виды блокировок. Но мы рекомендуем использовать <xref:System.Threading.SpinLock> только в том случае, если в ходе профилирования подтверждается существенное ухудшение производительности при работе с методом <xref:System.Threading.Monitor?displayProperty=nameWithType> и методами <xref:System.Threading.Interlocked>.  
   
- <xref:System.Threading.SpinLock>может привести временной срез потока, даже если он ещё не получила блокировку. Это делается во избежание инверсии приоритет потока, а также поддерживать сборщик мусора прогресса. При использовании <xref:System.Threading.SpinLock>, убедитесь, что ни один поток не может быть установлена блокировка более короткая временной интервал, и что ни один поток можно заблокировать во время удержания блокировки.  
+ <xref:System.Threading.SpinLock> может освободить квант процессорного времени для потока, даже не создав блокировку. Такое поведение позволяет избежать инверсии приоритетов потока, а также не мешать работе сборщика мусора. При работе с <xref:System.Threading.SpinLock> важно гарантировать, чтобы ни один поток не устанавливал блокировку дольше, чем на очень короткий промежуток времени, и чтобы ни один поток не мог заблокироваться в режиме удержания блокировки.  
   
- Поскольку SpinLock является типом значения, необходимо явным образом передать его по ссылке, если планируется две копии для ссылки на ту же блокировку.  
+ Поскольку SpinLock является типом значения, его необходимо явным образом передавать по ссылке, если две копии значения должны указывать на одну и ту же блокировку.  
   
- Дополнительные сведения об использовании этого типа см. в разделе <xref:System.Threading.SpinLock?displayProperty=nameWithType>. Пример см. в разделе [как: SpinLock используется для синхронизации нижнего уровня](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md).  
+ Дополнительные сведения об использовании этого типа см. в статье о структуре <xref:System.Threading.SpinLock?displayProperty=nameWithType>. Некоторые примеры есть в статье [Практическое руководство. SpinLock и низкоуровневая синхронизация](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md).  
   
- <xref:System.Threading.SpinLock>поддерживает *поток*-*отслеживания* режим, который можно использовать на этапе разработки для отслеживания потока, который удерживает блокировку в определенное время. Режим отслеживания потоков очень полезен для отладки, но мы рекомендуем отключить его в окончательной версии программы, так как может привести к снижению производительности. Дополнительные сведения см. в разделе [как: режим включить поток отслеживания в SpinLock](../../../docs/standard/threading/how-to-enable-thread-tracking-mode-in-spinlock.md).  
+ <xref:System.Threading.SpinLock> поддерживает режим *отслеживания*-*потоков*, удобный на этапе разработки для выявления потока, который удерживает блокировку в конкретный момент времени. Режим отслеживания потоков очень полезен для отладки, но мы рекомендуем отключать его в рабочей версии программы, чтобы не снижать производительность. Дополнительные сведения см. в статье [Практическое руководство. Включение режима отслеживания потоков в SpinLock](../../../docs/standard/threading/how-to-enable-thread-tracking-mode-in-spinlock.md).  
   
 ## <a name="see-also"></a>См. также  
  [Объекты и функциональные возможности работы с потоками](../../../docs/standard/threading/threading-objects-and-features.md)

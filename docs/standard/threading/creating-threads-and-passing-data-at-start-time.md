@@ -17,46 +17,49 @@ helpviewer_keywords:
 - threading [.NET Framework], passing data to threads
 - threading [.NET Framework], retrieving data from threads
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 61808dc804cc627ab368a5250414dfcc5f54c87e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d17ef8a199061f56f00e39fa887e2e64f64427ec
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>Создание потоков и передача данных во время запуска
-При создании процесса операционной системы, операционная система включается поток для выполнения кода в этом процессе, включая исходным доменом приложения. С этого момента домены приложений могут создаваться и уничтожаться, без каких-либо потоков операционной системы, обязательно создается или уничтожается. Если выполняемый код является управляемым кодом, то <xref:System.Threading.Thread> объекта для потока, выполняющегося в текущем домене приложения можно получить посредством статического <xref:System.Threading.Thread.CurrentThread%2A> свойство типа <xref:System.Threading.Thread>. В этом разделе описывается создание потока и обсуждаются альтернативные способы передачи данных в процедуру потока.  
+При создании процесса в операционной системе она добавляет поток для выполнения кода этого процесса, включая все исходные домены приложений. С этого момента домены приложений могут создаваться и уничтожаться, что не обязательно сопровождается созданием или уничтожением потоков операционной системы. Если выполняемый код является управляемым, то вы можете получить объект <xref:System.Threading.Thread> для потока, выполняющегося в текущем домене приложения. Для этого получите статическое свойство <xref:System.Threading.Thread.CurrentThread%2A> типа <xref:System.Threading.Thread>. В этой статье описано создание потока и несколько способов передачи данных в процедуру потока.  
   
 ## <a name="creating-a-thread"></a>Создание потока  
- Создание нового <xref:System.Threading.Thread> объект создает нового управляемого потока. <xref:System.Threading.Thread> Класс имеет конструкторы, принимающие <xref:System.Threading.ThreadStart> делегата или <xref:System.Threading.ParameterizedThreadStart> делегата; делегат инкапсулирует метод, который может быть вызван с новым потоком при вызове <xref:System.Threading.Thread.Start%2A> метода. Вызов <xref:System.Threading.Thread.Start%2A> несколько раз вызывает <xref:System.Threading.ThreadStateException> исключение.  
+ Создание нового объекта <xref:System.Threading.Thread> приводит к созданию нового управляемого потока. Класс <xref:System.Threading.Thread> имеет конструкторы, которые принимают делегат <xref:System.Threading.ThreadStart> или <xref:System.Threading.ParameterizedThreadStart>. Этот делегат инкапсулирует метод, который вызывается новым потоком при вызове метода <xref:System.Threading.Thread.Start%2A>. Повторный вызов <xref:System.Threading.Thread.Start%2A> приводит к созданию исключения <xref:System.Threading.ThreadStateException>.  
   
- <xref:System.Threading.Thread.Start%2A> Метод возвращается немедленно, часто до действительно был запущен новый поток. Можно использовать <xref:System.Threading.Thread.ThreadState%2A> и <xref:System.Threading.Thread.IsAlive%2A> свойства, чтобы определить состояние потока в настоящий момент, но эти свойства никогда не должен использоваться для синхронизации действий потоков.  
+ Метод <xref:System.Threading.Thread.Start%2A> завершается немедленно, часто даже до запуска нового потока. Вы можете использовать свойства <xref:System.Threading.Thread.ThreadState%2A> и <xref:System.Threading.Thread.IsAlive%2A>, чтобы определить состояние потока в настоящий момент, но эти свойства ни в коем случае нельзя использовать для синхронизации действий потоков.  
   
 > [!NOTE]
->  После запуска потока, нет необходимости сохранять ссылку на <xref:System.Threading.Thread> объекта. Поток продолжает выполняться до завершения потоковой процедуры.  
+>  После запуска потока не нужно сохранять ссылку на объект <xref:System.Threading.Thread>. Поток продолжит выполняться, пока не завершится запущенная в нем процедура.  
   
- В следующем примере кода создается два новых потоков для вызова экземпляра и статические методы в другой объект.  
+ В следующем примере кода создается два новых потока для вызова метода экземпляра и статического метода из другого объекта.  
   
  [!code-cpp[System.Threading.ThreadStart2#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CPP/source2.cpp#2)]
  [!code-csharp[System.Threading.ThreadStart2#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source2.cs#2)]
  [!code-vb[System.Threading.ThreadStart2#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadStart2/VB/source2.vb#2)]  
   
 ## <a name="passing-data-to-threads-and-retrieving-data-from-threads"></a>Передача данных в потоки и получение данных из потоков  
- В .NET Framework версии 2.0 <xref:System.Threading.ParameterizedThreadStart> делегат предоставляет простой способ передачи объекта, содержащего данные в поток при вызове <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> перегрузки метода. См. пример кода в <xref:System.Threading.ParameterizedThreadStart>.  
+ На платформе .NET Framework версии 2.0 делегат <xref:System.Threading.ParameterizedThreadStart> предоставляет простой способ передать в поток объект с данными при вызове перегрузки метода <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>. См. пример кода в <xref:System.Threading.ParameterizedThreadStart>.  
   
- С помощью <xref:System.Threading.ParameterizedThreadStart> делегат несовместим типобезопасный способ передачи данных, так как <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> перегруженный метод принимает любой объект. Альтернативой является инкапсуляция процедуры потока и данных во вспомогательном классе и использование <xref:System.Threading.ThreadStart> делегат для выполнения процедуры потока. Этот способ показан в приведенных ниже примерах кода.  
+ Делегат <xref:System.Threading.ParameterizedThreadStart> не является типобезопасным способом передачи данных, так как перегруженный метод <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> принимает любой объект. Вместо этого можно инкапсулировать процедуру потока и данные во вспомогательный класс и выполнять процедуру потока при помощи делегата <xref:System.Threading.ThreadStart>. Этот подход демонстрируют приведенные ниже примеры кода.  
   
- Ни один из этих делегатов не имеет возвращаемого значения, поскольку нет места для возвращения данных после асинхронного вызова. Для получения результатов метода потока, можно использовать метод обратного вызова, как показано во втором примере кода.  
+ Ни один из этих делегатов не имеет возвращаемого значения, так как им некуда возвращать данные после асинхронного вызова. Чтобы получить результаты из метода потока, вы можете использовать метод обратного вызова, как показано во втором примере кода.  
   
  [!code-cpp[System.Threading.ThreadStart2#3](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CPP/source3.cpp#3)]
  [!code-csharp[System.Threading.ThreadStart2#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source3.cs#3)]
  [!code-vb[System.Threading.ThreadStart2#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadStart2/VB/source3.vb#3)]  
   
 ### <a name="retrieving-data-with-callback-methods"></a>Извлечение данных с помощью методов обратного вызова  
- В следующем примере показано, метод обратного вызова, который получает данные из потока. Конструктор для класса, содержащего данные и метод потока также принимает делегат, представляющий метод обратного вызова; Перед завершением работы метод потока, он вызывает делегат обратного вызова.  
+ Приведенный ниже пример демонстрирует метод обратного вызова, который получает данные из потока. Конструктор класса, содержащего данные и метод потока, также принимает делегат, который представляет метод обратного вызова. Метод потока перед завершением своей работы вызывает этот делегат обратного вызова.  
   
  [!code-cpp[System.Threading.ThreadStart2#4](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CPP/source4.cpp#4)]
  [!code-csharp[System.Threading.ThreadStart2#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source4.cs#4)]

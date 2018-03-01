@@ -12,15 +12,18 @@ helpviewer_keywords:
 - exceptions, Exception class
 - Exception class
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 253a9846e484aa4e54c3433b0bbc8623519bbb7e
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 120d56832aad5024ee607d6e3114f164c967a12f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exception-class-and-properties"></a>Класс и свойства исключений
 
@@ -35,7 +38,7 @@ Object
 
 Класс <xref:System.Exception> имеет следующие свойства, которые облегчают анализ исключения.
 
-| Имя свойства | Описание |
+| Имя свойства | Описание: |
 | ------------- | ----------- |
 | <xref:System.Exception.Data> | Свойство <xref:System.Collections.IDictionary>, которое содержит произвольные данные в парах "ключ–значение". |
 | <xref:System.Exception.HelpLink> | Может содержать URL-адрес (или URN) файла справки, который предоставляет подробные сведения о причине возникновения исключения. |
@@ -46,7 +49,7 @@ Object
 
 Большинство классов, унаследованных от <xref:System.Exception>, не реализуют дополнительные элементы и не предоставляют дополнительные функции. Они просто наследуются от <xref:System.Exception>. Таким образом, наиболее важные сведения для исключения можно найти в иерархии классов исключений, имени исключения и информации, содержащейся в самом исключении.
 
-Рекомендуется создавать и перехватывать только те объекты, которые являются производными от <xref:System.Exception>, но можно создавать любой объект, который является производным от <xref:System.Object> класса в список исключений. Обратите внимание, что не все языки поддерживают создание и перехват объектов, не являющихся производными от <xref:System.Exception>.
+Мы рекомендуем создавать и перехватывать только те объекты, которые являются производными от <xref:System.Exception>, но в качестве исключения можно создать любой объект, производный от класса <xref:System.Object>. Обратите внимание, что не все языки поддерживают создание и перехват объектов, не являющихся производными от <xref:System.Exception>.
   
 ## <a name="see-also"></a>См. также  
 [Исключения](index.md)

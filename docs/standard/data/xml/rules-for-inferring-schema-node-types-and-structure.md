@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c28c0f21b03fe7db014f118251363230a6ffc591
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2f4a50fcd3e3ee56ded97edef08c2ee08f4a7233
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Правила выведения структуры и типов узлов схемы
 В данном разделе описывается, как в процессе вывода схемы различные типы узлов XML-документа преобразуются в структуру языка XSD.  
@@ -44,12 +47,12 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  Все декларации элементов `complexType` выводятся как анонимные типы. Единственный выводимый глобальный элемент - корневой элемент; все остальные элементы локальны.  
   
- Дополнительные сведения о процессе вывода схемы см. в разделе [Выведение схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ См. дополнительные сведения о [выведении схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
 ### <a name="simple-typed-element"></a>Простой типизированный элемент  
  В следующей таблице показаны входные XML-данные для метода <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> и созданная XML-схема. Элемент, выделенный полужирным шрифтом, показывает схему, выведенную для элемента простого типа.  
   
- Дополнительные сведения о процессе вывода схемы см. в разделе [Выведение схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ См. дополнительные сведения о [выведении схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
 |XML|Схема|  
 |---------|------------|  
@@ -58,7 +61,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="empty-element"></a>Пустой элемент  
  В следующей таблице показаны входные XML-данные для метода <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> и созданная XML-схема. Элемент, выделенный полужирным шрифтом, показывает схему, выведенную для пустого элемента.  
   
- Дополнительные сведения о процессе вывода схемы см. в разделе [Выведение схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ См. дополнительные сведения о [выведении схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
 |XML|Схема|  
 |---------|------------|  
@@ -67,7 +70,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="empty-element-with-attributes"></a>Пустой элемент с атрибутами  
  В следующей таблице показаны входные XML-данные для метода <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> и созданная XML-схема. Элементы, выделенные полужирным шрифтом, показывают схему, выведенную для пустого элемента с атрибутами.  
   
- Дополнительные сведения о процессе вывода схемы см. в разделе [Выведение схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ См. дополнительные сведения о [выведении схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
 |XML|Схема|  
 |---------|------------|  
@@ -76,7 +79,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="element-with-attributes-and-simple-content"></a>Элемент с атрибутами и простым содержимым  
  В следующей таблице показаны входные XML-данные для метода <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> и созданная XML-схема. Элементы, выделенные полужирным шрифтом, показывают схему, выведенную для элемента с атрибутами и простым содержимым.  
   
- Дополнительные сведения о процессе вывода схемы см. в разделе [Выведение схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ См. дополнительные сведения о [выведении схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
 |XML|Схема|  
 |---------|------------|  
@@ -88,7 +91,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  Даже если элемент содержит только один дочерний элемент, он все равно интерпретируется как последовательность.  
   
- Дополнительные сведения о процессе вывода схемы см. в разделе [Выведение схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ См. дополнительные сведения о [выведении схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
 |XML|Схема|  
 |---------|------------|  
@@ -100,7 +103,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  Даже если элемент содержит только один дочерний элемент, он все равно интерпретируется как последовательность.  
   
- Дополнительные сведения о процессе вывода схемы см. в разделе [Выведение схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ См. дополнительные сведения о [выведении схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
 |XML|Схема|  
 |---------|------------|  
@@ -112,7 +115,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  Для атрибута `maxOccurs` элемента `xs:choice` устанавливается в выводимой схеме значение `"unbounded"`.  
   
- Дополнительные сведения о процессе вывода схемы см. в разделе [Выведение схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ См. дополнительные сведения о [выведении схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
 |XML|Схема|  
 |---------|------------|  
@@ -124,7 +127,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  Для атрибута `maxOccurs` элемента `xs:choice` устанавливается в выводимой схеме значение `"unbounded"`.  
   
- Дополнительные сведения о процессе вывода схемы см. в разделе [Выведение схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ См. дополнительные сведения о [выведении схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
 |XML|Схема|  
 |---------|------------|  
@@ -151,11 +154,11 @@ ms.lasthandoff: 11/21/2017
 |Тип документа|Не обрабатывается.|  
 |Пространства имен|Не обрабатывается.|  
   
- Дополнительные сведения о процессе вывода схемы см. в разделе [Выведение схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
+ См. дополнительные сведения о [выведении схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Xml.Schema.XmlSchemaInference>  
  [Модель объектов схемы XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
- [Определение схемы XML](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
+ [Выведение XML-схемы](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
  [Выведение схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
  [Правила выведения простых типов](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

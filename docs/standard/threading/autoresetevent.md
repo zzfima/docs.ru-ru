@@ -12,22 +12,25 @@ helpviewer_keywords:
 - threading [.NET Framework], AutoResetEvent class
 - AutoResetEvent class
 ms.assetid: 6d39c48d-6b37-4a9b-8631-f2924cfd9c18
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 69d16e8c6491b4c66ab5a5452762e73172ebbb77
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 71933d0be804fdf68b0dc602902343f2d88b8c82
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="autoresetevent"></a>AutoResetEvent
-<xref:System.Threading.AutoResetEvent> Класс представляет событие дескриптора ожидания, которое сбрасывается автоматически при получении сигнала после освобождения одного ожидающего потока. Этот класс представляет специальное использование базового класса, <xref:System.Threading.EventWaitHandle>. Основную документацию по использованию и функциональным возможностям событий автоматического сброса см. в разделе [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md).  
+Класс <xref:System.Threading.AutoResetEvent> предоставляет событие локального дескриптора ожидания, которое автоматически сбрасывается после создания, освободив один поток ожидания. Этот класс представляет отдельный сценарий применения базового класса <xref:System.Threading.EventWaitHandle>. Основную документацию по использованию и функциональным возможностям событий автоматического сброса см. в разделе [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md).  
   
- <xref:System.Threading.AutoResetEvent> Сбрасывается автоматически несигнальное системой после выпуска одного ожидающего потока. Если ожидающих потоков нет, состояние объекта события остается сигнальным. <xref:System.Threading.AutoResetEvent>соответствует Win32 `CreateEvent` вызвать, указав `false` для `bManualReset` аргумент.  
+ Освободив один поток в состоянии ожидания, система автоматически сбрасывает сигнальное состояние объекта <xref:System.Threading.AutoResetEvent>. Если ожидающих потоков нет, состояние объекта события остается сигнальным. <xref:System.Threading.AutoResetEvent> соответствует вызову Win32 `CreateEvent`, где указано значение `false` для аргумента `bManualReset`.  
   
- Пример, использующий <xref:System.Threading.AutoResetEvent>, в разделе [монитора](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
+ Пример использования <xref:System.Threading.AutoResetEvent> см. в описании [класса Monitor](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Threading.ManualResetEvent>  

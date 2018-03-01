@@ -12,15 +12,18 @@ helpviewer_keywords:
 - garbage collection, intrusiveness
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 439fdd8fe78a0c0f0fda4ac7e759a4a780bb9b58
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d0ac0db376ad7cd4aa139ed0eb065a5ba33836c8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="latency-modes"></a>Режимы задержки
 Чтобы освободить объекты, сборщик мусора должен остановить все выполняющиеся потоки приложения. В некоторых ситуациях, например, когда приложение получает данные или отображает содержимое, полная сборка мусора может произойти в критическое время и снизить производительность. Степень вмешательства сборщика мусора можно настроить, присвоив свойству <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> одно из значений <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>.  
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Не забывайте про потоки, которые могут выделять память. Поскольку свойство <xref:System.Runtime.GCSettings.LatencyMode%2A> относится ко всему процессу, то можно создать <xref:System.OutOfMemoryException> в любом потоке, выделяющем память.  
   
--   Поместите код с низкой задержкой в области с ограничением выполнения (Дополнительные сведения см. в разделе [области с ограничением выполнения](../../../docs/framework/performance/constrained-execution-regions.md)).  
+-   Поместите код с небольшим временем ожидания в области с ограничением выполнения (см. дополнительные сведения об [областях с ограничением выполнения](../../../docs/framework/performance/constrained-execution-regions.md)).  
   
 -   Можно принудительно запускать освобождение объектов поколения 2 в периоды небольшого времени ожидания путем вызова метода <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType>.  
   

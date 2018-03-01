@@ -12,21 +12,24 @@ helpviewer_keywords:
 - observer design pattern [.NET Framework], best practices
 - best practices [.NET Framework], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0edba44efcaa46812f535b39364c2f5e4e3a1afe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dc42ccd425b52719b2b69525d2bbbe4607a19982
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="observer-design-pattern-best-practices"></a>Рекомендации по шаблону разработки Observer
 На платформе .NET Framework шаблон разработки наблюдателя реализован в виде набора интерфейсов. Интерфейс <xref:System.IObservable%601?displayProperty=nameWithType> представляет поставщик данных, который также отвечает за предоставление реализации <xref:System.IDisposable>, позволяющей наблюдателям отменять подписку на уведомления. Интерфейс <xref:System.IObserver%601?displayProperty=nameWithType> представляет наблюдателя. В этом разделе содержатся рекомендации, которым должны следовать разработчики при реализации шаблона разработки наблюдателя с помощью этих интерфейсов.  
   
 ## <a name="threading"></a>Потоки  
- Как правило, поставщик реализует метод <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> путем добавления определенного наблюдателя в список подписчиков, представленный неким объектом коллекции, и он реализует метод <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> путем удаления определенного наблюдателя из списка подписчиков. Наблюдатель может вызвать эти методы в любое время. Кроме того, поскольку в контракте поставщика и наблюдателя не указано, кто несет ответственность за отмену подписки после реализации метода обратного вызова <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, попытаться удалить тот же самый элемент из списка может как поставщик, так и наблюдатель. В связи с этим методы <xref:System.IObservable%601.Subscribe%2A> и <xref:System.IDisposable.Dispose%2A> должны быть потокобезопасными. Как правило, при этом используется [параллельной сборки](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md) или блокировки. Реализации, которые не являются потокобезопасными, должны явным образом сообщать об этом.  
+ Как правило, поставщик реализует метод <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> путем добавления определенного наблюдателя в список подписчиков, представленный неким объектом коллекции, и он реализует метод <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> путем удаления определенного наблюдателя из списка подписчиков. Наблюдатель может вызвать эти методы в любое время. Кроме того, поскольку в контракте поставщика и наблюдателя не указано, кто несет ответственность за отмену подписки после реализации метода обратного вызова <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, попытаться удалить тот же самый элемент из списка может как поставщик, так и наблюдатель. В связи с этим методы <xref:System.IObservable%601.Subscribe%2A> и <xref:System.IDisposable.Dispose%2A> должны быть потокобезопасными. Как правило, в этом случае предполагается использование [параллельной коллекции](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md) или блокировки. Реализации, которые не являются потокобезопасными, должны явным образом сообщать об этом.  
   
  Любые дополнительные гарантии должны быть указаны на уровне выше контракта поставщика и наблюдателя. Чтобы избежать недоразумений, связанных с контрактом наблюдателя, разработчики должны четко сообщать о введении дополнительных требований.  
   

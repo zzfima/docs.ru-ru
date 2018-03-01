@@ -12,42 +12,45 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 80eb4c3bb98acdd1f83dbf5bcf57b2f7b295742b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5bed13950a29cfa787ef8c9eb2608c6d74dfd49f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-threads-and-threading"></a>Использование потоков и работа с потоками
-В подразделах этого раздела обсуждается создание и управление управляемыми потоками, способы передачи данных в управляемые потоки и получение результатов и уничтожения потоков и обработки <xref:System.Threading.ThreadAbortException>.  
+В статьях этого раздела мы обсуждаем создание управляемых потоков и управление ими, передачу данных в управляемые потоки и получение из них результатов, а также уничтожение потоков и обработку <xref:System.Threading.ThreadAbortException>.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Создание потоков и передача данных во время запуска](../../../docs/standard/threading/creating-threads-and-passing-data-at-start-time.md)  
- Обсуждение и демонстрация создания управляемых потоков, включая способы передачи данных в новые потоки и возврата данных.  
+ Обсуждается и демонстрируется создание управляемых потоков, в том числе способы передать данные в новые потоки и получить данные из них.  
   
  [Приостановка и возобновление потоков](../../../docs/standard/threading/pausing-and-resuming-threads.md)  
- Обсуждение последствий приостановки и возобновления управляемых потоков.  
+ Обсуждаются сложности при приостановке и возобновлении управляемых потоков.  
   
  [Удаление потоков](../../../docs/standard/threading/destroying-threads.md)  
- Описание последствий уничтожения управляемых потоков и как обрабатывать <xref:System.Threading.ThreadAbortException>.  
+ Обсуждаются сложности при уничтожении управляемых потоков и обработка <xref:System.Threading.ThreadAbortException>.  
   
  [Планирование потоков](../../../docs/standard/threading/scheduling-threads.md)  
- Описание свойств потоков и их влиянии на расписание потоков.  
+ Обсуждаются приоритеты потоков и их влияние на выполнение потоков.  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Threading.Thread>  
- Содержит справочную документацию по <xref:System.Threading.Thread> класс, который представляет управляемый поток, созданный в управляемом приложении или он получен из неуправляемого кода.  
+ Справочная документация по классу <xref:System.Threading.Thread>, который представляет управляемый поток, созданный из неуправляемого кода или в управляемом приложении.  
   
  <xref:System.Threading.ThreadStart>  
- Содержит справочную документацию по <xref:System.Threading.ThreadStart> делегат, который представляет процедуры без параметров потока.  
+ Справочная документация по делегату <xref:System.Threading.ThreadStart>, который представляет процедуры потоков без параметров.  
   
  <xref:System.Threading.ParameterizedThreadStart>  
- Предоставляет простой способ передачи данных в процедуру потока, однако без строгой типизации.  
+ Предоставляет простой способ передать данные в процедуру потока, но не поддерживает строгую типизацию.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Потоки и работа с потоками](../../../docs/standard/threading/threads-and-threading.md)  
- Знакомство с управляемыми потоками.
+ Общие сведения о работе с управляемыми потоками.

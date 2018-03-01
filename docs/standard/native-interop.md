@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.openlocfilehash: 9652986491f087b8fa175e2b4041063c71211178
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 11a93f4014734130f7c4e33cf215c6d49d2554c5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="native-interoperability"></a>Взаимодействие на уровне машинного кода
 
@@ -71,7 +74,7 @@ using System.Runtime.InteropServices;
 namespace PInvokeSamples {
     public static class Program {
 
-        // Import the libc and define the method corresponding to the native function.
+        // Import the libSystem shared library and define the method corresponding to the native function.
         [DllImport("libSystem.dylib")]
         private static extern int getpid();
 
@@ -84,7 +87,7 @@ namespace PInvokeSamples {
 }
 ```
 
-В Linux это осуществляется аналогично. Имя функции такое же, так как `getpid(2)` является системным вызовом [POSIX](https://en.wikipedia.org/wiki/POSIX).
+В Linux это осуществляется аналогичным образом. Имя функции такое же, так как `getpid(2)` является стандартным системным вызовом [POSIX](https://en.wikipedia.org/wiki/POSIX).
 
 ```csharp
 using System;
@@ -93,7 +96,7 @@ using System.Runtime.InteropServices;
 namespace PInvokeSamples {
     public static class Program {
 
-        // Import the libc and define the method corresponding to the native function.
+        // Import the libc shared library and define the method corresponding to the native function.
         [DllImport("libc.so.6")]
         private static extern int getpid();
 
@@ -263,7 +266,7 @@ namespace PInvokeSamples {
 
 **Маршалинг** — это процесс преобразования типов, когда им требуется перейти из управляемого кода в машинный и наоборот.
 
-Необходимость в маршалинге вызвана тем, что типы в управляемом и неуправляемом коде различаются. Например, в управляемом коде имеется `String`, а в неуправляемом строки могут иметь различный формат: Юникод, отличный от Юникода, с конечным символом NULL, ASCII и т. д. По умолчанию подсистема P/Invoke пытается выбрать правильное решение на основе поведения по умолчанию, о чем можно узнать на сайте [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx). Однако в ситуациях, когда требуется дополнительный контроль, можно применить атрибут `MarshalAs`, чтобы указать ожидаемый тип на стороне неуправляемого кода. Например, если строка должна передаваться в виде строки ANSI с конечным символом NULL, это можно сделать следующим образом:
+Необходимость в маршалинге вызвана тем, что типы в управляемом и неуправляемом коде различаются. Например, в управляемом коде имеется `String`, а в неуправляемом строки могут иметь различный формат: Юникод, отличный от Юникода, с конечным символом NULL, ASCII и т. д. По умолчанию подсистема P/Invoke пытается выбрать правильное решение на основе поведения по умолчанию, о чем можно узнать на сайте [MSDN](../../docs/framework/interop/default-marshaling-behavior.md). Однако в ситуациях, когда требуется дополнительный контроль, можно применить атрибут `MarshalAs`, чтобы указать ожидаемый тип на стороне неуправляемого кода. Например, если строка должна передаваться в виде строки ANSI с конечным символом NULL, это можно сделать следующим образом:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]

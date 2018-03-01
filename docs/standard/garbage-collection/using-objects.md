@@ -16,19 +16,22 @@ helpviewer_keywords:
 - try/finally block
 - garbage collection, encapsulating resources
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fd78c2f99ca5c8ffe3c753e158ceba3e0c458c5b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 47ff64cab098425c5369773f792d586b65658d0f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-objects-that-implement-idisposable"></a>Использование объектов, реализующих IDisposable
 
-Сборщик мусора среды CLR освобождает память, используемую с управляемыми объектами, но реализуют типы, которые используют неуправляемые ресурсы <xref:System.IDisposable> интерфейс, позволяющий память, выделенную для этих неуправляемые ресурсы, которые нужно освободить. По окончании использования объекта, который реализует интерфейс <xref:System.IDisposable>, необходимо вызвать реализацию объекта <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>. Это можно сделать одним из двух способов.  
+Сборщик мусора среды CLR освобождает память, используемую управляемыми объектами, но типы, которые используют неуправляемые ресурсы, реализуют интерфейс <xref:System.IDisposable>, который позволяет освободить память, выделенную таким неуправляемым ресурсам. По окончании использования объекта, который реализует интерфейс <xref:System.IDisposable>, необходимо вызвать реализацию объекта <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>. Это можно сделать одним из двух способов.  
   
 * С помощью оператора `using` (C#) или `Using` (Visual Basic).  
   
@@ -48,7 +51,7 @@ ms.lasthandoff: 10/18/2017
 [!code-csharp[Conceptual.Disposable#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using3.cs#3)]
 [!code-vb[Conceptual.Disposable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using3.vb#3)]  
   
-C# `using` инструкция также позволяет присоединять несколько ресурсов в одной инструкции, что эквивалентно внутри вложенной `using` инструкции. В следующем примере создается два объекта <xref:System.IO.StreamReader> для чтения содержимого двух разных файлов.  
+Оператор `using` в C# позволяет присоединять несколько ресурсов в одном операторе, что эквивалентно использованию вложенных инструкций `using`. В следующем примере создается два объекта <xref:System.IO.StreamReader> для чтения содержимого двух разных файлов.  
   
 [!code-csharp[Conceptual.Disposable#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using4.cs#4)]
 
@@ -60,15 +63,15 @@ C# `using` инструкция также позволяет присоедин
   
 * Чтобы создать экземпляр объекта, реализующего интерфейс <xref:System.IDisposable>, область действия которого не является локальной для блока, в котором он объявлен.  
   
-Следующий пример аналогичен предыдущему примеру, за исключением того, что он использует `try/catch/finally` блок для создания экземпляра, использования и удаления <xref:System.IO.StreamReader> объекта и для обработки исключения, вызываемые <xref:System.IO.StreamReader> конструктор и его <xref:System.IO.StreamReader.ReadToEnd%2A> метод. Обратите внимание, что перед вызовом метода `finally` код в блоке <xref:System.IDisposable> проверяет, имеет ли объект, реализующий интерфейс `null`, значение <xref:System.IDisposable.Dispose%2A>. Если этого сделать не удастся, это может привести к исключению <xref:System.NullReferenceException> во время выполнения.  
+Следующий пример похож на предыдущий с тем отличием, что в нем используется блок `try/catch/finally`для создания, использования и удаления экземпляра объекта <xref:System.IO.StreamReader>, а также для обработки исключений, создаваемых конструктором <xref:System.IO.StreamReader> и его методом <xref:System.IO.StreamReader.ReadToEnd%2A>. Обратите внимание, что перед вызовом метода `finally` код в блоке <xref:System.IDisposable> проверяет, имеет ли объект, реализующий интерфейс `null`, значение <xref:System.IDisposable.Dispose%2A>. Если этого сделать не удастся, это может привести к исключению <xref:System.NullReferenceException> во время выполнения.  
   
 [!code-csharp[Conceptual.Disposable#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using5.cs#6)]
 [!code-vb[Conceptual.Disposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using5.vb#6)]  
   
-Можно следовать этому простому шаблону, если выбрать для реализации или если необходимо реализовать `try/finally` блокируются, поскольку язык программирования не поддерживает `using` инструкции, но разрешает прямые вызовы <xref:System.IDisposable.Dispose%2A> метод. 
+Вы можете применить этот базовый шаблон, если есть желание или необходимость реализовать блок `try/finally` на языке программирования, который не поддерживает оператор `using`, но допускает прямые вызовы метода <xref:System.IDisposable.Dispose%2A>. 
   
 ## <a name="see-also"></a>См. также
 
 [Очистка неуправляемых ресурсов](../../../docs/standard/garbage-collection/unmanaged.md)   
 [Оператор using (Справочник по C#)](~/docs/csharp/language-reference/keywords/using-statement.md)   
-[С помощью оператора (Visual Basic)](~/docs/visual-basic/language-reference/statements/using-statement.md)
+[Оператор Using (Visual Basic)](~/docs/visual-basic/language-reference/statements/using-statement.md)

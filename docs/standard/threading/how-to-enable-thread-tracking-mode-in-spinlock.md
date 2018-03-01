@@ -11,27 +11,31 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: SpinLock, how to enable thread-tracking
+helpviewer_keywords:
+- SpinLock, how to enable thread-tracking
 ms.assetid: 62ee2e68-0bdd-4869-afc9-f0a57a11ae01
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ca5f1b6eace7a24a6bbb7fd541858246828fa757
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f3d5b40f1f7b4b7534a44f4f7ab542d33d373702
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-enable-thread-tracking-mode-in-spinlock"></a>Практическое руководство. Включение режима отслеживания потоков в SpinLock
-<xref:System.Threading.SpinLock?displayProperty=nameWithType>Это низкоуровневая взаимно исключающая блокировка, который можно использовать для сценариев с очень короткими временами ожидания. <xref:System.Threading.SpinLock>не является реентерабельным. После поток вошел в блокировку, его необходимо закрыть блокировки правильно, прежде чем он сможет войти повторно. Как правило любая попытка повторно войти в блокировку может привести к взаимоблокировке и взаимоблокировки может быть очень трудно отлаживать. Как вспомогательное средство для разработки <xref:System.Threading.SpinLock?displayProperty=nameWithType> поддерживает режим отслеживания потоков, который вызывает исключение, если поток пытается повторно войти, уже удерживает блокировку. Это позволяет более легко обнаружить точку с которой блокировка была не завершен правильно. Режим отслеживания потоков можно включить с помощью <xref:System.Threading.SpinLock> конструктора, принимающего логический входной параметр и передачи аргумента `true`. После завершения разработки и тестирования, отключите режим отслеживания потоков для повышения производительности.  
+<xref:System.Threading.SpinLock?displayProperty=nameWithType> реализует низкоуровневую взаимоисключающую блокировку, которая применима для сценариев с очень коротким временем ожидания. <xref:System.Threading.SpinLock> не допускает повторный вход. После входа потока в блокировку он обязан правильно завершить блокировку, прежде чем входить в нее повторно. Как правило, любая попытка повторно войти в блокировку приводит к взаимоблокировке, что иногда очень трудно подвергается отладке. Для помощи разработчикам <xref:System.Threading.SpinLock?displayProperty=nameWithType> поддерживает режим отслеживания потоков, в котором создается исключение, когда поток пытается повторно войти в уже открытую блокировку. Это позволяет быстрее найти точку, в которой неправильно выполнен выход из блокировки. Чтобы включить режим отслеживания потоков, используйте конструктор <xref:System.Threading.SpinLock>, который принимает на вход логический параметр, в котором следует передать значение `true`. Завершив все этапы разработки и тестирования, обязательно отключите режим отслеживания потоков, чтобы он не влиял на производительность.  
   
 ## <a name="example"></a>Пример  
- Ниже приведен пример режима отслеживания потоков. Строки, которые правильно выходит из нее, закомментированы, чтобы сымитировать ошибку кода, приводящую к одному из следующих результатов:  
+ В примере ниже демонстрируется режим отслеживания потоков. Здесь закомментированы строки, в которых блокировка завершена правильно, чтобы смоделировать ошибку, приводящую к одному из следующих результатов:  
   
--   Исключение возникает, если <xref:System.Threading.SpinLock> была создана с помощью аргумента `true` (`True` в Visual Basic).  
+-   Создается исключение, если <xref:System.Threading.SpinLock> создан с аргументом `true` (`True` в Visual Basic).  
   
--   Взаимоблокировки <xref:System.Threading.SpinLock> была создана с помощью аргумента `false` (`False` в Visual Basic).  
+-   Возникает взаимоблокировка, если <xref:System.Threading.SpinLock> создан с аргументом `false` (`False` в Visual Basic).  
   
  [!code-csharp[CDS_SpinLock#01](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinlock/cs/spinlockdemo.cs#01)]
  [!code-vb[CDS_SpinLock#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinlock/vb/spinlock_threadtracking.vb#01)]  

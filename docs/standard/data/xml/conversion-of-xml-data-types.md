@@ -12,21 +12,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d2f5f5d27b3d21ff12f5eea7613e80e73c5b6597
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d18b69c2d5baeac77cbdf45bebd6f0c9d5c94d9f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="conversion-of-xml-data-types"></a>Преобразование типов XML-данных
-Большинство методов найден в **XmlConvert** класса используются для преобразования данных между строками и строго типизированными форматами. Методы не зависят от языковых стандартов. Это означает, что при преобразовании они не принимают во внимание параметры языковых стандартов.  
+Большая часть методов класса **XmlConvert** используются для преобразования данных в строки и строго типизированные форматы. Методы не зависят от языковых стандартов. Это означает, что при преобразовании они не принимают во внимание параметры языковых стандартов.  
   
 ## <a name="reading-string-as-types"></a>Считывание строк как типов  
- Следующий пример считывает строку и преобразует ее в **DateTime** типа.  
+ Следующий образец считывает строку и преобразует ее в тип **DateTime**.  
   
  Заданы следующие входные XML-данные:  
   
@@ -36,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 <Element>2001-02-27T11:13:23</Element>  
 ```  
   
- Этот код преобразует строку в **DateTime** формат:  
+ Этот код преобразует строку в формат **DateTime**:  
   
 ```vb  
 reader.ReadStartElement()  
@@ -51,7 +54,7 @@ Console.WriteLine(vDateTime);
 ```  
   
 ## <a name="writing-strings-as-types"></a>Запись строк как типов  
- Следующий образец считывает **Int32** и преобразуется в строку.  
+ Следующий пример считывает значение типа **Int32** и преобразует его в строку.  
   
  Заданы следующие входные XML-данные:  
   
@@ -61,7 +64,7 @@ Console.WriteLine(vDateTime);
 <TestInt32>-2147483648</TestInt32>  
 ```  
   
- Этот код преобразует **Int32** в **строка**:  
+ Этот код преобразует данные типа **Int32** в тип **String**:  
   
 ```vb  
 Dim vInt32 As Int32 = -2147483648  

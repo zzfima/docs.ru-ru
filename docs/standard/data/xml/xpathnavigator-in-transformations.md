@@ -12,22 +12,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 09f89708607ada18181bc6605994c7908e1dd14b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c492d470fe29041f32039d98ecb854e18f40423c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xpathnavigator-in-transformations"></a>XPathNavigator в преобразованиях
 Класс <xref:System.Xml.XPath.XPathNavigator> обеспечивает случайный доступ только для чтения и предназначен для использования в качестве входа в языке XSLT. Он реализован в <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument> и <xref:System.Xml.XmlDocument>. Класс <xref:System.Xml.XPath.XPathNavigator> основан на модели данных консорциума World Wide Web Consortium (W3C), описанной в разделе 5 рекомендаций по языку XPath.  
   
  Класс <xref:System.Xml.XPath.XPathNavigator> определяет модель курсора в любом хранилище и обеспечивает быстрые запросы XPath только для чтения к любому хранилищу данных. <xref:System.Xml.XPath.XPathNavigator> также является классом, который используется для перебора фрагментов результирующего дерева.  
   
- API-интерфейс позволяет получить данные из текущего узла в хранилище и перейти в связанные узлы. <xref:System.Xml.XPath.XPathNavigator> Модель стиля курсора, которая выполняет обход хранилища с помощью набора **переместить** методы. <xref:System.Xml.XPath.XPathNavigator> всегда размещается на узле. Любой **переместить** метод, не оставляет <xref:System.Xml.XPath.XPathNavigator> без изменений.  
+ API-интерфейс позволяет получить данные из текущего узла в хранилище и перейти в связанные узлы. <xref:System.Xml.XPath.XPathNavigator> — модель стиля курсора, которая просматривает хранилище с помощью набора методов **Move**. <xref:System.Xml.XPath.XPathNavigator> всегда размещается на узле. Любой неудачно примененный метод **Move** оставляет <xref:System.Xml.XPath.XPathNavigator> без изменений.  
   
  <xref:System.Xml.XPath.XPathNavigator> является классом, который используется для перебора фрагментов результирующего дерева. Следующий образец кода создает фрагмент результирующего дерева в таблице стилей путем вызова функции с параметром `fragment`, который содержит XML.  
   
@@ -70,7 +73,7 @@ ms.lasthandoff: 10/18/2017
 <root>Some text</root>  
 ```  
   
- В следующем коде используется **test.xsl** таблицы стилей и **test.xml** входные данные.  
+ Следующий код использует таблицу стилей **test.xsl** и входные данные **test.xml**.  
   
 ```vb  
 Imports System  
@@ -124,4 +127,4 @@ public class sample
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Реализуемых классом XslTransform XSLT-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [Реализация классом XslTransform XSLT-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

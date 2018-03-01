@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a4fb291f-5630-49ba-a49a-5b66c3b71e49
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b8844705b492574443ff4f37de33ccaf1f5fedd7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bbbd61cbe22eb2c8e54daad863ad35ef076c1bc3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a>Считывание XML-документа в DOM
 XML-данные считываются в память из разных форматов. Они могут быть считаны из строки, URL-адреса, модуля чтения текста или класса, производного от класса <xref:System.Xml.XmlReader>.  
@@ -31,9 +34,9 @@ XML-данные считываются в память из разных фор
   
 |Субъект|Раздел|  
 |-------------|-----------|  
-|Создание узлов пробелов|Объект, используемый для загрузки модели DOM, влияет на узлы пробелов и значащих пробелов, формируемые в модели DOM. Дополнительные сведения см. в разделе [пробелы обработка и значимых пробелов при загрузке модели DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).|  
-|Загрузка XML-данных, начиная с определенного узла, или загрузка всего XML-документа|С помощью <xref:System.Xml.XmlDocument.Load%2A?displayProperty=nameWithType> данных метода можно загрузить из отдельных узлов в модели DOM. Дополнительные сведения см. в разделе [загрузка данных из средства чтения](../../../../docs/standard/data/xml/load-data-from-a-reader.md).|  
-|Проверка XML-данных по мере загрузки|Можно проводить проверку XML-данных, загружаемых в модель DOM, по мере их загрузки. Делается это с помощью проверяющего объекта <xref:System.Xml.XmlReader>. Дополнительные сведения о проверке XML при его загрузке см. в разделе [проверки XML-документа в DOM](../../../../docs/standard/data/xml/validating-an-xml-document-in-the-dom.md).|  
+|Создание узлов пробелов|Объект, используемый для загрузки модели DOM, влияет на узлы пробелов и значащих пробелов, формируемые в модели DOM. Дополнительные сведения см. в руководстве по [обработке незначимых и значимых пробелов при загрузке модели DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).|  
+|Загрузка XML-данных, начиная с определенного узла, или загрузка всего XML-документа|С помощью метода <xref:System.Xml.XmlDocument.Load%2A?displayProperty=nameWithType> данные в модель DOM можно загружать с определенного узла. Дополнительные сведения см. в руководстве по [загрузке данных из модуля чтения](../../../../docs/standard/data/xml/load-data-from-a-reader.md).|  
+|Проверка XML-данных по мере загрузки|Можно проводить проверку XML-данных, загружаемых в модель DOM, по мере их загрузки. Делается это с помощью проверяющего объекта <xref:System.Xml.XmlReader>. Дополнительные сведения о проверке XML-данных по мере их загрузки см. в руководстве по [проверке документа XML в модели DOM](../../../../docs/standard/data/xml/validating-an-xml-document-in-the-dom.md).|  
   
  В следующем примере показаны XML-данные, загружаемые с помощью метода <xref:System.Xml.XmlDocument.LoadXml%2A>, а также данные, которые затем сохраняются в текстовый файл `data.xml`.  
   
@@ -78,4 +81,4 @@ public class Sample
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Модель объектов XML-документов (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

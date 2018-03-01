@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: "Числа в C#"
 metadata:
-  title: "Числа в C#"
+  title: "Краткие руководства по C#. Интерактивное руководство по числам в C#"
   description: "В этом кратком руководстве по числовым типам в C# для интерактивного изучения используется браузер. Вы напишете код C# и сможете просмотреть результаты его компиляции и выполнения непосредственно в браузере."
   audience: Developer
   ms.topic: get-started-article
@@ -13,11 +13,11 @@ metadata:
   interactive: csharp
   ms.prod: .net
   ms.technology: devlang-csharp
-  ms.openlocfilehash: 7d18240b2871b5322c767287a737deda0b2ddefc
-  ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+  ms.openlocfilehash: d611f2796471fbb094020caaa70a754c093a833c
+  ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 01/20/2018
+  ms.lasthandoff: 02/01/2018
 items:
 - durationInMinutes: 1
   content: "Это краткое руководство поможет в интерактивном изучении числовых типов в C#. С помощью браузера вы напишете код C# и сможете просмотреть результаты его компиляции и выполнения. Руководство содержит ряд уроков, в которых рассматриваются числа и математические операции в C#. В рамках этих занятий вы ознакомитесь с основами языка C#.\n"

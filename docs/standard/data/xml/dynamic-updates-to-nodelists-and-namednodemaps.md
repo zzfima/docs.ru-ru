@@ -9,18 +9,21 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76c511fd-6704-4ca4-8078-860a68d898ad
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 459d746ff278ac4affa0318c1fad0aeb6a73e560
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8a7abbb7344530ca993b8d07b774da17e6d0349b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dynamic-updates-to-nodelists-and-namednodemaps"></a>Динамические обновления объектов NodeList и NamedNodeMap
-Поскольку **XmlNodeList** и **XmlNamedNodeMap** содержат набор узлов, но XML-документ загружается в память и изменяется, консорциума World Wide Web (W3C), указывающее, что эти объекты содержащие наборы узлов должны быть динамическими. Это значит, что изменение базового документа должно вызывать изменение этих двух объектов. Таким образом Если у вас есть **XmlNodeList** , содержащий все дочерние элементы определенного элемента (например, элемента X), а затем добавьте дополнительный элемент Q, в документ из элемента X. **XmlNodeList** также должен быть новый элемент Q, добавленный в коллекцию. Правило работает и в обратном направлении: Если узел добавляется в **XmlNodeList**, базовый документ также обновляется.  
+Так как объекты **XmlNodeList** и **XmlNamedNodeMap** содержат набор узлов, но XML-документ загружается в память и изменяется, консорциум W3C требует, чтобы такие объекты, содержащие наборы узлов, были динамическими. Это значит, что изменение базового документа должно вызывать изменение этих двух объектов. Таким образом, если у вас есть объект **XmlNodeList**, содержащий все дочерние элементы некоторого элемента (например, элемента X), и затем в документ добавляется дополнительный элемент Q, дочерний относительно элемента X, то в коллекцию объекта **XmlNodeList** также должен быть добавлен новый элемент Q. Правило работает и в обратном направлении: если узел добавляется в объект **XmlNodeList**, необходимо обновить базовый документ.  
   
 ## <a name="see-also"></a>См. также  
- [Модель объектов XML-документов (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

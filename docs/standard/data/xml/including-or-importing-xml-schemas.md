@@ -13,21 +13,24 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d3b336b0ac4ca4fd02950a572404a117d4c193f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a8c9b513f47fcb07f987b1e17f0b7f485cef3143
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="including-or-importing-xml-schemas"></a>Включение или импорт XML-схем
 Схема XML может содержать элементы `<xs:import />`, `<xs:include />` и `<xs:redefine />`. Эти элементы схемы ссылаются на другие схемы XML, которые можно использовать в дополнение к структуре схемы, их включающей или импортирующей. Классы <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> и <xref:System.Xml.Schema.XmlSchemaRedefine> сопоставляются с этими элементами в API модели SOM.  
   
 ## <a name="including-or-importing-an-xml-schema"></a>Включение или импорт схемы XML  
- В следующем примере кода дополняет пользовательской схемы, созданные в [построение XML-схем](../../../../docs/standard/data/xml/building-xml-schemas.md) раздела схемы адресов. Добавление к пользовательской схеме схемы адресов делает типы адресов доступными в пользовательской схеме.  
+ В следующем примере кода [пользовательская схема XML](../../../../docs/standard/data/xml/building-xml-schemas.md) дополняется схемой адресов. Добавление к пользовательской схеме схемы адресов делает типы адресов доступными в пользовательской схеме.  
   
  Схему адресов можно добавить с помощью элементов `<xs:include />` или `<xs:import />`, использующих компоненты схемы адресов без изменения, или с помощью элемента `<xs:redefine />`, который изменяет компоненты схемы в соответствии с задачами пользовательской схемы. Поскольку схема адресов имеет пространство имен `targetNamespace`, которое отличается от пользовательской схемы, используется элемент `<xs:import />` и семантика импорта.  
   
@@ -105,10 +108,10 @@ ms.lasthandoff: 11/21/2017
 </schema>  
 ```  
   
- Дополнительные сведения о `<xs:import />`, `<xs:include />`, и `<xs:redefine />` элементы и <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> и <xref:System.Xml.Schema.XmlSchemaRedefine> классы, в разделе [XML-схемы W3C](http://go.microsoft.com/fwlink/?LinkId=45242) и <xref:System.Xml.Schema?displayProperty=nameWithType> Справочная документация классов пространства имен.  
+ Дополнительные сведения об элементах `<xs:import />`, `<xs:include />` и `<xs:redefine />`, а также классах <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> и <xref:System.Xml.Schema.XmlSchemaRedefine> см. в [документации консорциума W3C по схемам XML](http://www.w3.org/XML/Schema) и в справочной документации по классу пространства имен <xref:System.Xml.Schema?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также  
- [Общие сведения о модели объектов схемы XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [Общие сведения об модели объектов XML-схемы](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
  [Чтение и запись XML-схем](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
  [Построение XML-схем](../../../../docs/standard/data/xml/building-xml-schemas.md)  
  [Обход XML-схем](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  

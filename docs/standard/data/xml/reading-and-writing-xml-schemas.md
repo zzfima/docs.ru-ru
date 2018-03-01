@@ -13,15 +13,18 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: b5757c4a-ea59-467e-ac62-be2bfe24eb77
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: aaf63acbb58fd86f7fa9a5dc3dce7508d90cfada
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 96f8cf924ffe510e1fea4d21fe86ca860fe8fab0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="reading-and-writing-xml-schemas"></a>Чтение и запись XML-схем
 API модели SOM можно использовать для чтения и записи схем на языке XSD из файлов или других источников, а также строить схемы XML в памяти с помощью классов в пространстве имен <xref:System.Xml.Schema?displayProperty=nameWithType>, которые сопоставляются со структурами, определенными в рекомендациях W3C по схемам XML.  
@@ -29,7 +32,7 @@ API модели SOM можно использовать для чтения и 
 ## <a name="reading-and-writing-xml-schemas"></a>Чтение и запись XML-схем  
  Класс <xref:System.Xml.Schema.XmlSchema> предоставляет методы <xref:System.Xml.Schema.XmlSchema.Read%2A> и <xref:System.Xml.Schema.XmlSchema.Write%2A> для чтения и записи схем XML. Метод <xref:System.Xml.Schema.XmlSchema.Read%2A> возвращает объект <xref:System.Xml.Schema.XmlSchema>, представляющий схему XML, и принимает необязательный объект <xref:System.Xml.Schema.ValidationEventHandler> в качестве параметра для обработки предупреждений и ошибок проверки схемы, обнаруженных при чтении схемы XML.  
   
- Метод <xref:System.Xml.Schema.XmlSchema.Write%2A> записывает схемы XML в объекты <xref:System.IO.Stream>, <xref:System.IO.TextWriter> и <xref:System.Xml.XmlWriter> и может принимать в качестве параметра необязательный объект <xref:System.Xml.XmlNamespaceManager>. Объект <xref:System.Xml.XmlNamespaceManager> используется, чтобы обрабатывать пространства имен, обнаруженные в схеме XML. Дополнительные сведения о <xref:System.Xml.XmlNamespaceManager> см. в описании [управление пространствами имен в XML-документ](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md).  
+ Метод <xref:System.Xml.Schema.XmlSchema.Write%2A> записывает схемы XML в объекты <xref:System.IO.Stream>, <xref:System.IO.TextWriter> и <xref:System.Xml.XmlWriter> и может принимать в качестве параметра необязательный объект <xref:System.Xml.XmlNamespaceManager>. Объект <xref:System.Xml.XmlNamespaceManager> используется, чтобы обрабатывать пространства имен, обнаруженные в схеме XML. Дополнительные сведения о классе <xref:System.Xml.XmlNamespaceManager>см. в руководству по [пространствах имен в документе XML](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md).  
   
  Следующий пример кода иллюстрирует чтение из файла и запись в файл схем XML. Пример кода берет файл `example.xsd`, считывает его в объект <xref:System.Xml.Schema.XmlSchema> с помощью метода `static`<xref:System.Xml.Schema.XmlSchema.Read%2A>, а затем записывает файл в консоль и новый файл `new.xsd`. Кроме того, в этом примере кода методу <xref:System.Xml.Schema.ValidationEventHandler>`static` в качестве параметра передается объект <xref:System.Xml.Schema.XmlSchema.Read%2A> для обработки любых предупреждений и ошибок проверки схемы, обнаруженных при чтении схемы XML. Если объект <xref:System.Xml.Schema.ValidationEventHandler> не указан (значение `null`), об ошибках или предупреждениях сообщаться не будет.  
   
@@ -55,11 +58,11 @@ API модели SOM можно использовать для чтения и 
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Общие сведения о модели объектов схемы XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [Общие сведения об модели объектов XML-схемы](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
  [Построение XML-схем](../../../../docs/standard/data/xml/building-xml-schemas.md)  
  [Обход XML-схем](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
  [Изменение XML-схем](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
  [Включение или импорт XML-схем](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
  [XmlSchemaSet для компиляции схемы](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Информационный набор после компиляции схемы](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)  
+ [Набор сведений для постсхемной компиляции](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)  
  [Управление пространствами имен в XML-документе](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)

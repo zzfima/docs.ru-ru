@@ -20,15 +20,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f0346de00988a6863c212a95be3ffa9d356fe5ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 503f9d593235cc81c6e2ecf43b93abb2105e0adf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-date-and-time-format-strings"></a>Строки настраиваемых форматов даты и времени
 Строки форматов даты и времени определяют текстовое представление значений <xref:System.DateTime> и <xref:System.DateTimeOffset>, получаемое после операции форматирования. Также они могут определять представление значения даты и времени, необходимое при операции синтаксического анализа для успешного преобразования строки в дату и время. Строка настраиваемого формата состоит из одного или нескольких настраиваемых описателей формата даты и времени. Любая строка, не являющаяся [строкой стандартного формата даты и времени](../../../docs/standard/base-types/standard-date-and-time-format-strings.md), воспринимается как строка настраиваемого формата даты и времени.  
@@ -50,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
  В следующей таблице приведены настраиваемые описатели формата даты и времени с примерами строк, формируемых каждым описателем формата. По умолчанию результирующие строки отражают соглашения о форматировании для языка и региональных параметров en-US. Если конкретный описатель формата создает локализованную строку, то в примере также указываются язык и региональные параметры, для которых применяется полученная строка. Дополнительные сведения об использовании настраиваемых строк формата даты и времени см. в подразделе Примечания.  
   
-|Описатель формата|Описание|Примеры|  
+|Описатель формата|Описание:|Примеры|  
 |----------------------|-----------------|--------------|  
 |"d"|День месяца, в диапазоне от 1 до 31.<br /><br /> Дополнительные сведения см. в подразделе [Настраиваемый описатель формата d](#dSpecifier).|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 15|  
 |"dd"|День месяца, в диапазоне от 01 до 31.<br /><br /> Дополнительные сведения см. в подразделе [Настраиваемый описатель формата dd](#ddSpecifier).|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 15|  
@@ -358,7 +361,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Для времени в неопределенном часовом поясе (времени, свойство <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> которого имеет значение <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>) результат равен <xref:System.String.Empty?displayProperty=nameWithType>.  
   
- Для <xref:System.DateTimeOffset> значения, описатель формата «K» равнозначен описателю описатель формата «zzz» и формирует результирующую строку, содержащую <xref:System.DateTimeOffset> смещение значения от времени UTC.  
+ Для значений <xref:System.DateTimeOffset> описатель формата K равнозначен описателю формата zz, который формирует результирующую строку, содержащую смещение значения от времени UTC в виде <xref:System.DateTimeOffset>.  
   
  Если описатель формата "K" используется без других настраиваемых описателей формата, то он интерпретируется как описатель стандартного формата даты и времени, и возникает исключение <xref:System.FormatException>. Дополнительные сведения об использовании единичных описателей форматов см. в подразделе [Использование единичных настраиваемых описателей форматов](#UsingSingleSpecifiers) ниже.  
   
@@ -634,9 +637,9 @@ ms.lasthandoff: 11/21/2017
   
 ||||||  
 |-|-|-|-|-|  
-|F|H|K|M|d|  
+|C|H|K|M|d|  
 |f|н|h|m|s|  
-|т|Y|з|%|:|  
+|т|y|з|%|:|  
 |/|"|'|\||  
   
  Все остальные символы всегда интерпретируется как символьные литералы. В операции форматирования они включаются в результирующую строку без изменений.  В операции анализа они должны точно соответствовать символам во входной строке. При сравнении учитывается регистр.  
@@ -691,7 +694,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="control-panel-settings"></a>Параметры панели управления  
  На результирующую строку, отформатированную с большим количеством описателей формата даты и времени, влияют параметры, задаваемые в разделе **Язык и региональные стандарты** панели управления. Эти параметры используются для инициализации объекта <xref:System.Globalization.DateTimeFormatInfo>, связанного с текущими региональными параметрами потока, который предоставляет значения, используемые для управления форматированием. Результирующие строки будут различаться на компьютерах с разными параметрами.  
   
- Кроме того, если вы используете <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> конструктор для создания нового <xref:System.Globalization.CultureInfo> , представляющий язык и региональные параметры, как текущую культуру системы, настройки, заданные в **язык и региональные стандарты** на панели управления будут применяться к новому <xref:System.Globalization.CultureInfo> объекта. Можно воспользоваться конструктором <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> для создания объекта <xref:System.Globalization.CultureInfo>, который не отражает настройки системы.  
+ Кроме того, если конструктор <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> используется для создания экземпляра объекта <xref:System.Globalization.CultureInfo>, который представляет язык и региональные параметры, аналогичные текущему языку и региональным параметрам системы, все настройки, заданные в разделе **Язык и региональные стандарты** панели управления, будут применяться к новому объекту <xref:System.Globalization.CultureInfo>. Можно воспользоваться конструктором <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> для создания объекта <xref:System.Globalization.CultureInfo>, который не отражает настройки системы.  
   
 ### <a name="datetimeformatinfo-properties"></a>Свойства DateTimeFormatInfo  
  На форматирование влияют свойства текущего объекта <xref:System.Globalization.DateTimeFormatInfo>, которые задаются либо неявно, языком и региональными параметрами текущего потока, либо явно, параметром <xref:System.IFormatProvider> метода, который вызывает форматирование. Для параметра <xref:System.IFormatProvider> необходимо указать объект <xref:System.Globalization.CultureInfo>, представляющий язык и региональные параметры, или объект <xref:System.Globalization.DateTimeFormatInfo>.  
@@ -702,5 +705,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.DateTime?displayProperty=nameWithType>  
  <xref:System.IFormatProvider?displayProperty=nameWithType>  
  [Типы форматирования](../../../docs/standard/base-types/formatting-types.md)  
- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+ [Строки стандартных форматов даты и времени](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
  [Пример. Служебная программа форматирования для .NET Framework 4](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

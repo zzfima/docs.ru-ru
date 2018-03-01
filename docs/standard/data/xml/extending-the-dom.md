@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b91c49be9268d8dc967daeac116cf67b2ed7d742
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 06cac8d76b17f3ef32931ea21d0556085f05d7b1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="extending-the-dom"></a>Расширение модели DOM
-Microsoft .NET Framework включает в себя базовый набор классов, обеспечивающих реализацию модели объектов XML документа (DOM). Объект <xref:System.Xml.XmlNode> и его производные классы предоставляют методы и свойства, позволяющие переходить по содержимому и структуре XML-документа, запрашивать и изменять это содержимое и структуру.  
+Платформа Microsoft .NET Framework включает базовый набор классов, обеспечивающих реализацию модели DOM. Объект <xref:System.Xml.XmlNode> и его производные классы предоставляют методы и свойства, позволяющие переходить по содержимому и структуре XML-документа, запрашивать и изменять это содержимое и структуру.  
   
  Если содержимое XML загружается в память с помощью модели DOM, созданные узлы содержат такие сведения, как имя узла, тип узла и так далее. Могут быть случаи, когда необходимы конкретные данные об узле, которые не предоставляют базовые классы. Например, может потребоваться узнать номер строки и позицию узла. В этом случае можно произвести новые классы из существующих классов DOM, создав для них дополнительные возможности.  
   
@@ -226,7 +229,7 @@ public class Test {
 }   
 ```  
   
-##### <a name="input"></a>Ввод  
+##### <a name="input"></a>Входные данные  
  book.xml  
   
 ```xml  
@@ -250,10 +253,10 @@ Number of elements in book.xml: 3
   
  В производных классах процесс обработки событий протекает точно так же, как в исходных классах модели DOM.  
   
- Дополнительные сведения о узла обработки событий в разделе [событий](../../../../docs/standard/events/index.md) и <xref:System.Xml.XmlNodeChangedEventHandler>.  
+ Дополнительные сведения об обработке событий узлов см. в руководствах по [событиям ](../../../../docs/standard/events/index.md) и <xref:System.Xml.XmlNodeChangedEventHandler>.  
   
 ## <a name="default-attributes-and-the-createelement-method"></a>Атрибуты по умолчанию и метод CreateElement  
- При переопределении метода <xref:System.Xml.XmlDocument.CreateElement%2A> в производном классе, если во время изменения документа создаются новые элементы, атрибуты по умолчанию не добавляются. Это верно только при выполнении изменений. Так как метод <xref:System.Xml.XmlDocument.CreateElement%2A> отвечает за добавление атрибутов по умолчанию в класс <xref:System.Xml.XmlDocument>, необходимо запрограммировать эту функциональность в методе <xref:System.Xml.XmlDocument.CreateElement%2A>. При загрузке объекта <xref:System.Xml.XmlDocument>, который содержит атрибуты по умолчанию, они будут обработаны правильно. Дополнительные сведения об атрибутах по умолчанию см. в разделе [создание новых атрибутов для элементов в модели DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md).  
+ При переопределении метода <xref:System.Xml.XmlDocument.CreateElement%2A> в производном классе, если во время изменения документа создаются новые элементы, атрибуты по умолчанию не добавляются. Это верно только при выполнении изменений. Так как метод <xref:System.Xml.XmlDocument.CreateElement%2A> отвечает за добавление атрибутов по умолчанию в класс <xref:System.Xml.XmlDocument>, необходимо запрограммировать эту функциональность в методе <xref:System.Xml.XmlDocument.CreateElement%2A>. При загрузке объекта <xref:System.Xml.XmlDocument>, который содержит атрибуты по умолчанию, они будут обработаны правильно. См. дополнительные сведения по [созданию атрибутов для элементов в модели DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md).  
   
 ## <a name="see-also"></a>См. также  
- [Модель объектов XML-документов (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e66d98501bb0bd3a5d5cd5eacc0b09405c158522
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b16ad921e5b16ab7564b2ceedab91c6b6073537d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xslt-parameters"></a>Параметры XSLT
 Параметры XSLT добавляются в <xref:System.Xml.Xsl.XsltArgumentList> с помощью метода <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>. В это время с объектом параметра связываются полное имя и URI-код пространства имен.  
@@ -43,11 +46,11 @@ ms.lasthandoff: 10/18/2017
 |`Number`|<xref:System.Double?displayProperty=nameWithType>|XPath|  
 |`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XSLT|  
 |`Node*`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XPath|  
-|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **XPathNavigator]**|XPath|  
+|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **XPathNavigator[]**|XPath|  
   
  *Это эквивалентно набору узлов, содержащему единственный узел.  
   
- Если объект параметра не принадлежит ни к одному из приведенных выше классов, он преобразуется по следующим правилам. Числовые типы среды CLR преобразуются в <xref:System.Double>. Тип <xref:System.DateTime> преобразуется в тип <xref:System.String>. Типы <xref:System.Xml.XPath.IXPathNavigable> преобразуются в типы <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator []** преобразуется в <xref:System.Xml.XPath.XPathNodeIterator>.  
+ Если объект параметра не принадлежит ни к одному из приведенных выше классов, он преобразуется по следующим правилам. Числовые типы среды CLR преобразуются в <xref:System.Double>. Тип <xref:System.DateTime> преобразуется в тип <xref:System.String>. Типы <xref:System.Xml.XPath.IXPathNavigable> преобразуются в типы <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator[]** преобразуется в <xref:System.Xml.XPath.XPathNodeIterator>.  
   
  Все другие типы вызывают ошибку.  
   
@@ -57,7 +60,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[XSLT_Param#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Param/CS/xsltparam.cs#1)]
  [!code-vb[XSLT_Param#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XSLT_Param/VB/xsltparam.vb#1)]  
   
-### <a name="input"></a>Ввод  
+### <a name="input"></a>Входные данные  
   
 ##### <a name="orderxml"></a>order.xml  
  [!code-xml[XSLT_Param#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/order.xml#2)]  

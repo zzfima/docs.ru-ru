@@ -18,20 +18,23 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET Framework], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 026f6ae4dd9aee340d6a9ffb931d0525ae75654a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6fbf9c910847986af1c02b5848c81266009e2e07
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-read-text-from-a-file"></a>Практическое руководство. Считывание текста из файла
 В следующих примерах демонстрируется синхронное и асинхронное чтение текста из текстового файла с использованием .NET для классических приложений. В обоих примерах при создании экземпляра класса <xref:System.IO.StreamReader> указывается относительный или абсолютный путь к файлу. В следующих примерах предполагается, что файл с именем TestFile.txt находится в той же папке, что и приложение.  
   
- Эти примеры кода не относятся к разработке приложений для Магазина Windows, поскольку в среде выполнения Windows используются разные типы потоков для чтения и записи файлов. Пример, демонстрирующий чтение текста из файла в контексте приложения для магазина Windows см. в разделе [краткое руководство: чтение и запись файлов](http://msdn.microsoft.com/library/windows/apps/hh758325.aspx). Примеры, демонстрирующие преобразование между потоками .NET Framework и потоками среды выполнения Windows см. в разделе [как: преобразование между потоками .NET Framework и потоками среды выполнения Windows](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
+ Эти примеры кода не относятся к разработке приложений для Магазина Windows, поскольку в среде выполнения Windows используются разные типы потоков для чтения и записи файлов. См. дополнительные сведения [чтении текста из файла в контексте приложения для Магазина Windows](http://msdn.microsoft.com/library/windows/apps/hh758325.aspx). См. дополнительные сведения о [преобразовании потоков .NET Framework в потоки среды выполнения Windows и наоборот](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
   
 ## <a name="example"></a>Пример  
  Первый пример иллюстрирует синхронную операцию чтения в консольном приложении. В этом примере текстовый файл открывается с помощью модуля чтения потока, содержимое копируется в строку, а строка выводится на консоль.  
@@ -50,8 +53,8 @@ ms.lasthandoff: 11/21/2017
  <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>  
  <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
  [Асинхронный файловый ввод-вывод](../../../docs/standard/io/asynchronous-file-i-o.md)  
- [NIB: Практическое: Создание списка каталогов](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69)  
- [Краткое руководство: Чтение и запись файлов](http://msdn.microsoft.com/library/windows/apps/hh758325.aspx)  
+ [Практическое руководство. Создание списка каталогов](http://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
+ [Краткое руководство. Чтение и запись файлов](http://msdn.microsoft.com/library/windows/apps/hh758325.aspx)  
  [Практическое руководство. Преобразование между потоками .NET Framework и потоками среды выполнения Windows](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)  
  [Практическое руководство. Считывание из нового файла данных и запись в этот файл](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
  [Практическое руководство. Открытие файла журнала и добавление в него данных](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  

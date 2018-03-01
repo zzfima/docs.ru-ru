@@ -9,20 +9,23 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d818a29a-6ee5-4725-97c4-78cf60a156b6
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5bc8d7712693ba200e9e7e2a91af9015579193f1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6d33a3f18617eb7f3fc083f29439f11eb81a7761
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="removing-nodes-content-and-values-from-an-xml-document"></a>Удаление узлов, содержимого и значений из XML-документа
-Как только в памяти создана модель XML DOM, можно удалить узлы дерева или удалить содержимое и значения из узлов определенного типа. Сведения о том, как удалить конечный узел или целое поддерево узлов из документа см. в разделе [удаление узлов из DOM](../../../../docs/standard/data/xml/removing-nodes-from-the-dom.md). Сведения о том, как удалять атрибуты для элемента в разделе [удаление атрибутов из узла элемента в DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md). Сведения об удалении содержимого узла с сохранением узла в дереве см. в разделе [удаление содержимого узла в модели DOM](../../../../docs/standard/data/xml/removing-node-content-in-the-dom.md).  
+Как только в памяти создана модель XML DOM, можно удалить узлы дерева или удалить содержимое и значения из узлов определенного типа. См. дополнительные сведения о [полном удалении листового узла или поддерева узлов из модели DOM](../../../../docs/standard/data/xml/removing-nodes-from-the-dom.md). См. дополнительные сведения об [удалении атрибутов из узла элемента в модели DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md). См. дополнительные сведения об [удалении содержимого узла с сохранением узла в дереве в модели DOM](../../../../docs/standard/data/xml/removing-node-content-in-the-dom.md).  
   
 ## <a name="see-also"></a>См. также  
- [Модель объектов XML-документов (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)  
- [Вставка узлов в XML-документа](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md)  
- [Изменение узлов, содержимого и значений в XML-документа](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md)
+ [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)  
+ [Вставка узлов в XML-документ](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md)  
+ [Изменение узлов, содержимого и значений в XML-документе](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md)

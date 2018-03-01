@@ -23,25 +23,28 @@ helpviewer_keywords:
 - locating directories in isolated storage file
 - storing data using isolated storage, finding files and directories
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 656c390358b6f6a671cf3ef11ea7be75f897d21c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8d460f07e7558fdf9190561b1cac4307767ff245
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Практическое руководство. Поиск существующих файлов и каталоги в изолированном хранилище
-Поиск каталогов в изолированном хранилище, используйте <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> метод. Этот метод принимает строку, представляющую шаблон поиска. Можно использовать одного знака (?) и нескольких символов (*) подстановочные знаки в шаблон поиска, но символы-шаблоны, должен быть указан в последней части имени. Например `directory1/*ect*` имеет допустимую строку поиска, но `*ect*/directory2` не является.  
+Чтобы выполнить поиск по каталогу в изолированном хранилище, используйте метод <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType>. Этот метод принимает строку, которая представляет шаблон для поиска. В шаблоне поиска вы можете использовать как одиночные (?), так и многосимвольные (*) подстановочные знаки, но они должны находиться только в последней части имени. Например, допустимой строкой для поиска является `directory1/*ect*`, но не `*ect*/directory2`.  
   
- Чтобы найти файл, используйте <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A?displayProperty=nameWithType> метод. Ограничения проверки подстановочные знаки в строке поиска, к которым применяется <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> также применяется к <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A>.  
+ Чтобы выполнить поиск файла, используйте метод <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A?displayProperty=nameWithType>. Ограничение на использование подстановочных знаков в строках для поиска, которое задано для <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A>, применяется и к <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A>.  
   
- Ни один из этих методов является рекурсивной. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> класс не предоставляет методы для перечисления всех каталогов или файлов в хранилище. Тем не менее в следующем примере кода показаны методы рекурсивной.  
+ Ни один из этих методов не является рекурсивным. Класс <xref:System.IO.IsolatedStorage.IsolatedStorageFile> не предоставляет никаких методов для перечисления всех каталогов или файлов в хранилище. Но в примере кода ниже мы предлагаем вам несколько рекурсивных методов.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода показано создание файлов и каталогов в изолированном хранилище. Во-первых, извлекается и помещен в хранилище, — изолированное по пользователю, домену и сборке `isoStore` переменной. <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A> Метод используется для настройки нескольких разных каталогах и <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.%23ctor%28System.String%2CSystem.IO.FileMode%2CSystem.IO.IsolatedStorage.IsolatedStorageFile%29> конструктор создает некоторые файлы в этих каталогах. Затем код выполняет цикл по результатам `GetAllDirectories` метод. Этот метод использует <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> для поиска всех имен каталогов в текущем каталоге. Эти имена хранятся в виде массива, а затем `GetAllDirectories` вызывает себя, передавая в каждом каталоге, он найден. В результате всех имен каталогов, возвращаются в виде массива. Затем код вызывает `GetAllFiles` метод. Этот метод вызывает метод `GetAllDirectories` для поиска всех имен каталогов, а затем проверяет каждый каталог для файлов с помощью <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A> метод. Результат возвращается в виде массива для вывода.  
+ В примере кода ниже показано, как создавать файлы и каталоги в изолированном хранилище. Сначала код получает данные о хранилище, изолированном по пользователю, домену и сборке, и помещает его в переменную `isoStore`. С помощью метода <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A> создаются несколько разных каталогов, а конструктор <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.%23ctor%28System.String%2CSystem.IO.FileMode%2CSystem.IO.IsolatedStorage.IsolatedStorageFile%29> создает в них файлы. Затем код в цикле обрабатывает результаты выполнения метода `GetAllDirectories`. Этот метод использует <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> для поиска всех имен каталогов в текущем каталоге. Эти имена сохраняются в массиве, а затем `GetAllDirectories` вызывает сам себя и передает в качестве параметра каждый найденный каталог. В конечном счете возвращается массив с именами всех каталогов. Затем этот код вызывает метод `GetAllFiles`. Он, в свою очередь, вызывает `GetAllDirectories` для поиска всех имен каталогов и ищет файлы в каждом из каталогов с помощью метода <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A>. Результат возвращается в виде массива для отображения.  
   
  [!code-cpp[Conceptual.IsolatedStorage#9](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source8.cpp#9)]
  [!code-csharp[Conceptual.IsolatedStorage#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source8.cs#9)]

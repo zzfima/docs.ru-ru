@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81fa0e41-d9c9-46f0-b22b-50da839c77f5
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 91ad5c2e6f8af7f2c3709b9dff65bd728de08e5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d06b82998deba05abe0fca1d4e93cd5c5ea319eb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>Проверка по схеме с помощью XPathNavigator
 С помощью класса <xref:System.Xml.XmlDocument> можно проверять XML-содержимое в объекте <xref:System.Xml.XmlDocument> двумя способами. Первый способ проверки XML- содержимого заключается в использовании проверяющего объекта <xref:System.Xml.XmlReader>, а второй - в вызове метода <xref:System.Xml.XmlDocument.Validate%2A> класса <xref:System.Xml.XmlDocument>. Можно также выполнить проверку XML-содержимого «только для чтения» с помощью класса <xref:System.Xml.XPath.XPathDocument>.  
@@ -357,14 +360,14 @@ class ValidatingReaderExample
   
  Изменения, сделанные методом <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> класса <xref:System.Xml.XPath.XPathNavigator>, вызвали исключение <xref:System.InvalidCastException>, поскольку новое значение недопустимо с точки зрения типа схемы узла.  
   
- Дополнительные сведения об изменении значений с помощью <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> метод, в разделе [изменить XML-данных с помощью класса XPathNavigator](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md) раздела.  
+ Дополнительные сведения об изменении значений с помощью метода <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> см. в руководстве по [изменению данных XML с помощью XPathNavigator](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md).  
   
 ### <a name="read-only-validation"></a>Проверка «только для чтения»  
  Класс <xref:System.Xml.XPath.XPathDocument> является доступным только для чтения, хранящимся в памяти представлением XML-документа. Классы <xref:System.Xml.XPath.XPathDocument> и <xref:System.Xml.XmlDocument> создают объекты <xref:System.Xml.XPath.XPathNavigator> для перехода по XML-документам и их изменения. Поскольку класс <xref:System.Xml.XPath.XPathDocument> доступен только для чтения, объект <xref:System.Xml.XPath.XPathNavigator>, возвращенный из объекта <xref:System.Xml.XPath.XPathDocument>, не может изменять XML-документ, содержащийся в объекте <xref:System.Xml.XPath.XPathDocument>.  
   
  Для проверки можно создать объект <xref:System.Xml.XPath.XPathDocument> точно так же, как создается объект <xref:System.Xml.XmlDocument>, используя проверяющий объект <xref:System.Xml.XmlReader>, как описано выше в этом разделе. Объект <xref:System.Xml.XPath.XPathDocument> проверяет XML-документ во время загрузки, но, поскольку в объекте <xref:System.Xml.XPath.XPathDocument> нельзя изменять XML-данные, повторно проверить этот XML-документ невозможно.  
   
- Дополнительные сведения о доступных только для чтения и редактирования <xref:System.Xml.XPath.XPathNavigator> объектов, в разделе [чтения XML-данных с помощью XPathDocument и XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md) раздела.  
+ Дополнительные сведения о доступных только для чтения и изменяемых объектах <xref:System.Xml.XPath.XPathNavigator> см. в руководстве по [чтению данных XML с помощью XPathDocument и XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Xml.XmlDocument>  
@@ -373,5 +376,5 @@ class ValidatingReaderExample
  [Обработка XML-данных с использованием модели данных XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
  [Чтение XML-данных с помощью XPathDocument и XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
  [Выбор, вычисление и отбор XML-данных с помощью XPathNavigator](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)  
- [Доступ к данным XML с помощью XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+ [Доступ к XML-данным с помощью класса XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
  [Изменение XML-данных с помощью XPathNavigator](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)

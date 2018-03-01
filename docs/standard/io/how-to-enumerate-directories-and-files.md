@@ -11,62 +11,66 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: I/O [.NET Framework], enumerating directories and files
+helpviewer_keywords:
+- I/O [.NET Framework], enumerating directories and files
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: caf9bdec017a5466269ff7fe97be4d0243035b4a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5d0f22853210144881e49c4192ea38a5c3e57cda
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>Практическое руководство. Перечисление каталогов и файлов
-Можно перечислить каталоги и файлы с помощью методов, которые возвращают перечисляемую коллекцию строк, представляющих их имена. Можно также использовать методы, которые возвращают перечисляемую коллекцию <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo>, или <xref:System.IO.FileSystemInfo> объектов. Перечисляемые коллекции обеспечивают лучшую производительность, чем массивы, при работе с большими коллекциями файлов и каталогов.  
+Чтобы перечислить все каталоги и файлы, вы можете применить методы, которые возвращают перечислимую коллекцию строк с именами объектов. Также можно использовать методы, которые возвращают перечислимую коллекцию объектов <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo> или <xref:System.IO.FileSystemInfo>. Перечислимые коллекции дают более высокую производительность, чем массивы, если вы работаете с большими коллекциями файлов и каталогов.  
   
- Можно также использовать перечислимые коллекции, полученные из этих методов для предоставления <xref:System.Collections.Generic.IEnumerable%601> параметр для конструкторов коллекции классов, таких как <xref:System.Collections.Generic.List%601> класса.  
+ Кроме того, можно использовать перечислимые коллекции, полученные из этих методов, чтобы передавать параметр <xref:System.Collections.Generic.IEnumerable%601> в конструкторы классов коллекций, таких как класс <xref:System.Collections.Generic.List%601>.  
   
- Если вы хотите получить только имена каталогов или файлов, используйте методы перечисления <xref:System.IO.Directory> класса. Если вы хотите получить другие свойства каталогов или файлов, используйте <xref:System.IO.DirectoryInfo> и <xref:System.IO.FileSystemInfo> классы.  
+ Если вы хотите только получить имена каталогов или файлов, используйте методы перечисления из класса <xref:System.IO.Directory>. Если вы хотите получить другие свойства каталогов или файлов, используйте классы <xref:System.IO.DirectoryInfo> и <xref:System.IO.FileSystemInfo>.  
   
- Ниже приводится руководство по методы, которые возвращают перечислимые коллекции.  
+ Следующая таблица содержит рекомендации по работе с методами, которые возвращают перечислимые коллекции.  
   
-|Для перечисления|Перечисляемая коллекция для возврата|Метод, используемый|  
+|Объект для перечисления|Возвращаемая перечислимая коллекция|Используемый метод|  
 |------------------|-------------------------------------|-------------------|  
 |Каталоги|Имена каталогов|<xref:System.IO.Directory.EnumerateDirectories%2A?displayProperty=nameWithType>|  
-||Сведения о каталоге (<xref:System.IO.DirectoryInfo>)|<xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType>|  
+||Сведения о каталогах (<xref:System.IO.DirectoryInfo>)|<xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType>|  
 |Файлы|Имена файлов|<xref:System.IO.Directory.EnumerateFiles%2A?displayProperty=nameWithType>|  
 ||Сведения о файлах (<xref:System.IO.FileInfo>)|<xref:System.IO.DirectoryInfo.EnumerateFiles%2A?displayProperty=nameWithType>|  
-|Сведения о файловой системе|Элементы системного файла|<xref:System.IO.Directory.EnumerateFileSystemEntries%2A?displayProperty=nameWithType>|  
-||Файл сведений о системе (<xref:System.IO.FileSystemInfo>)|<xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A?displayProperty=nameWithType>|  
+|Сведения о файловой системе|Элементы файловой системы|<xref:System.IO.Directory.EnumerateFileSystemEntries%2A?displayProperty=nameWithType>|  
+||Сведения о файловой системе (<xref:System.IO.FileSystemInfo>)|<xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A?displayProperty=nameWithType>|  
   
- Несмотря на то, что можно немедленно выполнить перечисление всех файлов во вложенных каталогах родительского каталога с помощью <xref:System.IO.SearchOption.AllDirectories> поиска, предоставляемые параметр <xref:System.IO.SearchOption> перечисления, исключения несанкционированного доступа (<xref:System.UnauthorizedAccessException>) может привести к перечисления не была завершена. Если эти исключения возможны, можно перехватить и продолжить, сначала перечисление каталогов и затем перечисление файлов.  
+ Несмотря на то, что у вас есть возможность немедленно перечислить все файлы во вложенных каталогах родительского каталога, применив функцию поиска <xref:System.IO.SearchOption.AllDirectories> из перечисления <xref:System.IO.SearchOption>, это перечисление может оказаться неполным из-за исключений несанкционированного доступа (<xref:System.UnauthorizedAccessException>). Если есть риск таких исключений, следует организовать их перехват, и для продолжения работы сначала перечислить каталоги, а затем файлы в них.  
   
 ### <a name="to-enumerate-directory-names"></a>Перечисление имен каталогов  
   
--   Используйте <xref:System.IO.Directory.EnumerateDirectories%28System.String%29?displayProperty=nameWithType> метод, чтобы получить список имен каталогов верхнего уровня по указанному пути.  
+-   Используйте метод <xref:System.IO.Directory.EnumerateDirectories%28System.String%29?displayProperty=nameWithType>, чтобы получить список имен каталогов верхнего уровня из указанного пути.  
   
      [!code-csharp[System.IO.EnumDirs1#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.enumdirs1/cs/program.cs#1)]
      [!code-vb[System.IO.EnumDirs1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.enumdirs1/vb/program.vb#1)]  
   
 ### <a name="to-enumerate-file-names-in-a-directory-and-subdirectories"></a>Перечисление имен файлов в каталоге и подкаталогах  
   
--   Используйте <xref:System.IO.Directory.EnumerateFiles%28System.String%2CSystem.String%2CSystem.IO.SearchOption%29?displayProperty=nameWithType> метод для поиска и (необязательно) его подкаталогов каталога и получить список имен файлов, соответствующих указанному шаблону поиска.  
+-   Используйте метод <xref:System.IO.Directory.EnumerateFiles%28System.String%2CSystem.String%2CSystem.IO.SearchOption%29?displayProperty=nameWithType>, чтобы выполнить поиск в каталоге и (необязательно) его подкаталогах и получить список имен файлов, соответствующих указанному шаблону поиска.  
   
      [!code-csharp[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/cs/program.cs#1)]
      [!code-vb[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/vb/program.vb#1)]  
   
 ### <a name="to-enumerate-a-collection-of-directoryinfo-objects"></a>Перечисление коллекции объектов DirectoryInfo  
   
--   Используйте <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType> метод для получения коллекции каталогов верхнего уровня.  
+-   Используйте метод <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType>, чтобы получить коллекцию каталогов верхнего уровня.  
   
      [!code-csharp[System.IO.DirectoryInfo.EnumDirs#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumdirs/cs/program.cs#1)]
      [!code-vb[System.IO.DirectoryInfo.EnumDirs#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumdirs/vb/module1.vb#1)]  
   
-### <a name="to-enumerate-a-collection-of-fileinfo-objects-in-all-directories"></a>Перечисление коллекции объектов FileInfo во всех каталогах  
+### <a name="to-enumerate-a-collection-of-fileinfo-objects-in-all-directories"></a>Перечисление коллекции объектов FileInfo из всех каталогов  
   
--   Используйте <xref:System.IO.DirectoryInfo.EnumerateFiles%2A?displayProperty=nameWithType> метод, чтобы получить коллекцию файлов, которые соответствуют указанному шаблону поиска во всех каталогах. В этом примере сначала Перечисляет каталоги верхнего уровня для перехвата возможных исключений несанкционированного доступа и затем выполняется перечисление файлов.  
+-   Используйте метод <xref:System.IO.DirectoryInfo.EnumerateFiles%2A?displayProperty=nameWithType>, чтобы получить коллекцию файлов, имена которых соответствуют указанному шаблону поиска, расположенных из всех каталогов. В этом примере поиска сначала перечисляются каталоги верхнего уровня, чтобы перехватить все возможные исключения несанкционированного доступа, а затем перечисляются файлы.  
   
      [!code-csharp[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/cs/program.cs#1)]
      [!code-vb[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/vb/program.vb#1)]  

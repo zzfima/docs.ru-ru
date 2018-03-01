@@ -14,84 +14,87 @@ helpviewer_keywords:
 - memory use, monitoring
 - application domains, resource monitoring
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 62a514f94857044af5020d36a1cfd6ce06741ac7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 648f8b86ecf73a7da5f3f33d71fb8617bacccee1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="application-domain-resource-monitoring"></a>Отслеживание ресурсов домена приложения
-Домен отслеживания ресурсов приложения (ARM) позволяет узлам отслеживать использование ресурсов ЦП и памяти доменом приложения. Это полезно для узлов, например ASP.NET, использующие нескольких доменов приложений в процессе длительное время. Узел можно выгрузить домен приложения, который отрицательно влияет на производительность всего процесса, но только если оно может определить проблемное приложение. ARM предоставляет сведения, которые можно использовать для помощи в принятии таких решений.  
+Функция наблюдения за ресурсами доменов приложений (ARM) позволяет узлам отслеживать загрузку ЦП и использование памяти доменом приложения. Это полезно для некоторых узлов, таких как ASP.NET, которые используют несколько доменов приложений в длительных процессах. Узел может выгрузить домен приложения, если его работа понижает производительность процесса в целом. Но для нужно определить проблемное приложение. ARM предоставляет сведения, которые помогут решить эту задачу.  
   
- Например услуги размещения может иметь несколько приложений, выполняемых на сервере ASP.NET. Если одно приложение в процессе начинает потреблять слишком много памяти или слишком много процессорного времени, службы размещения позволяют ARM определить домен приложения, который вызывает проблему.  
+ Например, на сервере ASP.NET службы размещения может выполняться несколько приложений. Если одно из приложений процесса потребляет слишком много памяти или процессорного времени, служба размещения с помощью ARM может определить проблемный домен приложения.  
   
- ARM очень достаточно прост для использования в работающих приложениях. Информацию можно получить с помощью трассировки событий для Windows (ETW) или напрямую с помощью управляемых и неуправляемых интерфейсов API.  
+ Функция ARM достаточно нетребовательна к ресурсам, что позволяет применять ее в работающих приложениях. Нужную информацию можно получить с помощью трассировки событий для Windows (ETW), а также управляемых или собственных интерфейсов API.  
   
-## <a name="enabling-resource-monitoring"></a>Включение отслеживания ресурсов  
- ARM можно включить четырьмя способами: путем указания файла конфигурации при запуске общеязыковой среды выполнения (CLR), с помощью неуправляемого интерфейса API размещения, с помощью управляемого кода или путем прослушивания события трассировки событий Windows ARM.  
+## <a name="enabling-resource-monitoring"></a>Включение наблюдения за ресурсами  
+ ARM можно включить четырьмя способами: в файле конфигурации при запуске общеязыковой среды выполнения (CLR), через неуправляемый интерфейс API размещения, в управляемом коде или ожидая передачи событий трассировки событий Windows ARM.  
   
- Сразу после включения ARM начинает сбор данных для всех доменов приложений в процессе. Если домен приложения был создан до включения ARM, накопление данных начинается после включения ARM, а не при создании домена приложения. После включения ARM отключить нельзя.  
+ Сразу после включения ARM начинает сбор данных всех доменов приложений в процессе. Если домен приложения создан до включения ARM, данные накапливаются лишь с момента включения ARM, но не с момента создания домена приложения. После включения ARM отключить нельзя.  
   
--   Можно включить ARM при запуске среды CLR, добавив [ \<appDomainResourceMonitoring >](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md) элемент в файл конфигурации и параметр `enabled` атрибут `true`. Значение `false` (по умолчанию) означает только, что ARM не включается при запуске, можно сделать это позже с помощью одного из других механизмов активации.  
+-   Вы можете включить ARM при запуске среды CLR. Для этого добавьте элемент [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md) в файл конфигурации и присвойте атрибуту `enabled` значение `true`. Значение `false` (по умолчанию) просто означает, что ARM не включается автоматически при запуске. ARM можно включить позже с помощью любого другого механизма активации.  
   
--   Узел можно включить ARM, запрашивая [ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) размещение интерфейса. После успешного получения этого интерфейса ARM включен.  
+-   Узел может включить ARM, подав запрос на интерфейс размещения [ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md). ARM включается после успешного получения этого интерфейса.  
   
--   Управляемый код можно включить ARM путем задания статического (`Shared` в Visual Basic) <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> свойства `true`. Как только это свойство задано, включения ARM.  
+-   Чтобы включить ARM из управляемого кода, задайте для статического свойства <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> (`Shared` в Visual Basic) значение `true`. ARM включается сразу после изменения этого свойства.  
   
--   Можно включить ARM после запуска, прослушивание событий трассировки событий Windows. ARM включается и начинает создавать события для всех доменов приложений, при включении общего поставщика `Microsoft-Windows-DotNETRuntime` с помощью `AppDomainResourceManagementKeyword` ключевое слово. Чтобы связать данные с потоками и доменами приложений, необходимо также включить `Microsoft-Windows-DotNETRuntimeRundown` поставщика с `ThreadingKeyword` ключевое слово.  
+-   Чтобы включить ARM после запуска, используйте ожидание передачи данных от функции трассировки событий Windows. ARM включается и начинает создавать события для всех доменов приложений при активации общего поставщика `Microsoft-Windows-DotNETRuntime` с помощью ключевого слова `AppDomainResourceManagementKeyword`. Чтобы связать данные с потоками и доменами приложений, также нужно включить поставщик `Microsoft-Windows-DotNETRuntimeRundown` с помощью ключевого слова `ThreadingKeyword`.  
   
 ## <a name="using-arm"></a>Использование ARM  
- ARM предоставляет полное время процессора, используемый для домена приложения и три вида данных об использовании памяти.  
+ ARM передает данные общего процессорного времени, используемого доменом приложения, а также три параметра использования памяти.  
   
--   **Общее время процессора для домена приложения, в секундах**: рассчитывается путем сложения времен потоков данным операционной системы для всех потоков, выполнявшихся в домене приложения во время существования. Заблокированные или находится в спящем режиме потоки не используют время процессора. Если поток выполняет вызов в машинном коде, время, затрачиваемое потока в машинном коде включается в число для домена приложения, где был выполнен вызов.  
+-   **Общее процессорное время для домена приложения, в секундах.** Результат вычисляется путем сложения значений времени для всех потоков операционной системы, выполнявшихся в домене приложения за весь период его существования. Заблокированные потоки и потоки в спящем режиме не используют процессорное время. Если поток вызывает машинный код, время нового потока в машинном коде включается в статистику по домену приложения, из которого он был вызван.  
   
-    -   Управляемый интерфейс API: <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType> свойство.  
+    -   Управляемый интерфейс API: свойство <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType>.  
   
-    -   API размещения: [ICLRAppDomainResourceMonitor::GetCurrentCpuTime](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md) метод.  
+    -   Интерфейс API размещения: метод [ICLRAppDomainResourceMonitor::GetCurrentCpuTime](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md).  
   
-    -   События трассировки событий Windows: `ThreadCreated`, `ThreadAppDomainEnter`, и `ThreadTerminated` события. Сведения о поставщиках и ключевые слова, в разделе «Ресурса события мониторинга домена приложения» в [события трассировки событий Windows среды CLR](../../../docs/framework/performance/clr-etw-events.md).  
+    -   События трассировки событий Windows: события `ThreadCreated`, `ThreadAppDomainEnter` и `ThreadTerminated`. Сведения о поставщиках и ключевые слова вы найдете в разделе о событиях ресурсов для доменов приложения в статье [CLR ETW Events](../../../docs/framework/performance/clr-etw-events.md) (События трассировки событий Windows в среде CLR).  
   
--   **Общее число управляемых выделений, сделанных домен приложения во время существования, в байтах**: общие выделения не всегда отражают использование памяти доменом приложения, так как распределенные объекты могут быть короткоживущими. Тем не менее если приложение выделяет и освобождает большое количество объектов, стоимость распределений может быть значительно.  
+-   **Общий объем выделенной управляемой памяти для домена приложения за все время его существования (в байтах).** Общий объем выделенной памяти не всегда правильно отражает использование памяти доменом приложения, так как объекты могут выделяться на короткий промежуток времени. Но накладные расходы могут оказаться существенными, если приложение часто выделяет и освобождает большое количество объектов.  
   
-    -   Управляемый интерфейс API: <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> свойство.  
+    -   Управляемый интерфейс API: свойство <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType>.  
   
-    -   API размещения: [ICLRAppDomainResourceMonitor::GetCurrentAllocated](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md) метод.  
+    -   Интерфейс API размещения: метод [ICLRAppDomainResourceMonitor::GetCurrentAllocated](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md).  
   
-    -   События трассировки событий Windows: `AppDomainMemAllocated` событий, `Allocated` поля.  
+    -   События трассировки событий Windows: событие `AppDomainMemAllocated`, поле `Allocated`.  
   
--   **Управляемая память, в байтах, на который ссылается домен приложения и, оставшихся после последней полной блокирующей коллекции**: это число является точным только после полной блокирующей сборки. (Это отличается от параллельных сборок мусора, которые в фоновом режиме и не блокирует работу приложения.) Например <xref:System.GC.Collect?displayProperty=nameWithType> перегрузка метода вызывает полной блокирующей сборки.  
+-   **Управляемая память (в байтах), которая используется доменом приложения и осталась выделенной после последней полной блокирующей сборки мусора.** Этот параметр имеет смысл, только если выполнялась полная блокирующая сборка (в отличие от параллельных операций сборки, которые выполняются в фоновом режиме и не блокируют работу приложения). Например, перегрузка метода <xref:System.GC.Collect?displayProperty=nameWithType> вызывает полную блокирующую сборку мусора.  
   
-    -   Управляемый интерфейс API: <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> свойство.  
+    -   Управляемый интерфейс API: свойство <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>.  
   
-    -   API размещения: [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) метода `pAppDomainBytesSurvived` параметра.  
+    -   Интерфейс API размещения: метод [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md), параметр `pAppDomainBytesSurvived`.  
   
-    -   События трассировки событий Windows: `AppDomainMemSurvived` событий, `Survived` поля.  
+    -   События трассировки событий Windows: событие `AppDomainMemSurvived`, поле `Survived`.  
   
--   **Общее число управляемой памяти, в байтах, на который ссылается процесс и, оставшихся после последней полной блокирующей коллекции**: с этим числом можно сравнить память, сохранившуюся для отдельных доменов приложений.  
+-   **Общий объем управляемой памяти (в байтах), которая используется процессом и осталась выделенной после последней полной блокирующей сборки мусора.** Это значение можно сравнить с объемами памяти, которая осталась выделенной для отдельных доменов приложений.  
   
-    -   Управляемый интерфейс API: <xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType> свойство.  
+    -   Управляемый интерфейс API: свойство <xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType>.  
   
-    -   API размещения: [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) метода `pTotalBytesSurvived` параметра.  
+    -   Интерфейс API размещения: метод [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md), параметр `pTotalBytesSurvived`.  
   
-    -   События трассировки событий Windows: `AppDomainMemSurvived` событий, `ProcessSurvived` поля.  
+    -   События трассировки событий Windows: событие `AppDomainMemSurvived`, поле `ProcessSurvived`.  
   
-### <a name="determining-when-a-full-blocking-collection-occurs"></a>Определение момента выполнения полной, блокирующей сборки мусора  
- Чтобы определить, когда точны счетчиков памяти, необходимо знать, когда просто произошла полную блокирующую сборку. Для этого метод зависит от API-интерфейса можно использовать для получения статистики ARM.  
+### <a name="determining-when-a-full-blocking-collection-occurs"></a>Как определить время полной блокирующей сборки мусора  
+ Чтобы определить точность сведений об оставшемся объеме памяти, нужно узнать время последней полной блокирующей сборки. Метод определения времени зависит от того, какой API-интерфейс вы используете для изучения статистики ARM.  
   
-#### <a name="managed-api"></a>Управляемый API-Интерфейс  
- Если вы используете свойства <xref:System.AppDomain> , можно использовать <xref:System.GC.RegisterForFullGCNotification%2A?displayProperty=nameWithType> метода для регистрации для получения уведомлений о полная сборка мусора. Пороговое значение, используемого не имеет значения, так как ожидается завершение сборки мусора, а не подход коллекции. Затем можно вызвать <xref:System.GC.WaitForFullGCComplete%2A?displayProperty=nameWithType> метод, который блокируется до завершения полной сборки мусора. Можно создать поток, который вызывает метод в цикле и выполняющий весь необходимый анализ всякий раз, когда метод возвращает.  
+#### <a name="managed-api"></a>Управляемый API  
+ Если вы используете свойства класса <xref:System.AppDomain>, метод <xref:System.GC.RegisterForFullGCNotification%2A?displayProperty=nameWithType> позволяет зарегистрироваться для получения уведомлений о полных сборках. Указываемое здесь пороговое значение не играет роли, так как вас интересует только завершение сборки, а не ее приближение. После этого вызовите метод <xref:System.GC.WaitForFullGCComplete%2A?displayProperty=nameWithType>, который блокируется до завершения полной сборки. Вы можете создать отдельный поток, который вызывает этот метод в цикле и проводит анализ данных при каждом завершении метода.  
   
- Кроме того, можно вызвать метод <xref:System.GC.CollectionCount%2A?displayProperty=nameWithType> метод периодически для просмотра, если увеличилось количество поколения 2. В зависимости от частоты опроса этот метод может не отображают точное вхождения полной сборки мусора.  
+ Кроме того, вы можете периодически вызвать метод <xref:System.GC.CollectionCount%2A?displayProperty=nameWithType>, чтобы отслеживать увеличение количества сборок для поколения 2. В зависимости от частоты опроса такой подход не всегда будет давать точные сведения о времени выполнения полной сборки мусора.  
   
-#### <a name="hosting-api"></a>API размещения  
- При использовании неуправляемого API размещения ведущее приложение должно передать среде CLR реализация [IHostGCManager](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md) интерфейса. Среда CLR вызывает [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) метод, когда он возобновляет выполнение потоков, которые были приостановлены, пока идет коллекцию. Среда CLR передает поколение выполненной сборки мусора как параметр метода, поэтому узла можно определить, была ли коллекция полной или частичной. Реализация [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) метода можно запросить память, сохранившуюся, чтобы гарантировать получение счетчиков сразу же после их обновления.  
+#### <a name="hosting-api"></a>Интерфейс API размещения  
+ Если вы используете API размещения, а не управляемый API, узел должен передать в среду CLR реализацию интерфейса [IHostGCManager](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md). Среда CLR вызывает метод [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) из этого интерфейса, когда возобновляет выполнение потоков, приостановленных на время сбора мусора. Среда CLR передает в параметре этого метода номер поколения выполненной сборки. Это позволяет узлу определить тип сборки (полная или частичная). Вы можете поместить запросы данных оставшейся памяти в реализацию метода [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md), чтобы получать их сразу же по мере обновления.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
- [ICLRAppDomainResourceMonitor-интерфейс](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
+ [Интерфейс ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
  [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
  [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)

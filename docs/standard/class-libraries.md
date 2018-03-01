@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: c72cdcbbe20c3c7a6890cdacb446e3db8de1b37a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5445c6971e243e9fc2eea34937683a5c3c432c01
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-class-libraries"></a>Библиотеки классов .NET
 
@@ -24,7 +27,7 @@ ms.lasthandoff: 10/18/2017
 
 *   **Специфические для платформы** библиотеки классов имеют доступ ко всем API данной платформы (например, .NET Framework, Xamarin iOS), но могут использоваться только приложениями и библиотеками, предназначенными для этой платформы.
 *   **Переносимые** библиотеки классов имеют доступ к подмножеству API и могут использоваться приложениями и библиотеками, предназначенными для нескольких платформ.
-*   Библиотеки классов **.NET Core** являются объединением специфических для платформы и переносимых библиотек и сочетают лучшие характеристики обоих типов.
+*   Библиотеки классов **.NET Standard** являются объединением специфических для платформы и переносимых библиотек и сочетают лучшие характеристики обоих типов.
 
 ## <a name="platform-specific-class-libraries"></a>Специфические для платформы библиотеки классов
 

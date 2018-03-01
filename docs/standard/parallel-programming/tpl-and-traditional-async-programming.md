@@ -11,24 +11,28 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, with other asynchronous models
+helpviewer_keywords:
+- tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0f29ca819fa7a59edeb105720d74a25512e95bdc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 50c4f9cfeb135f1046fbb427585897ca99248afd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>Библиотека параллельных задач и традиционное асинхронное программирование .NET Framework
 Платформа .NET Framework предоставляет следующие две стандартные модели для выполнения асинхронных операций ввода-вывода и вычислений.  
   
 -   Асинхронная модель программирования (APM), в которой асинхронные операции представляются с помощью пары методов Begin и End, таких как <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> и <xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>.  
   
--   Событие асинхронную модель на основе (EAP), в которой асинхронные операции представлены с помощью пары метода и события, называемых *OperationName*Async и *Имя_операции*Completed, например, <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> и <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>. (Модель EAP появилась в .NET Framework версии 2.0.)  
+-   Асинхронная модель на основе событий (EAP), в которой асинхронные операции представлены с помощью пары метода и события, называемых *имя_операции*Async и *имя_операции*Completed, например, <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> и <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>. (Модель EAP появилась в .NET Framework версии 2.0.)  
   
  Библиотека параллельных задач (TPL) может использоваться различными способами вместе с любой из асинхронных моделей. Вы можете предоставлять операции APM и EAP как задачи для пользователей библиотеки или предоставлять модели APM, но использовать объекты задач для их внутренней реализации. В обоих случаях с помощью объектов задач можно упростить код и использовать преимущества следующих полезных функций.  
   
@@ -110,7 +114,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- Более полный пример, включающий дополнительную обработку исключений и показано, как вызвать метод из клиентского кода, в разделе [как: перенос шаблонов EAP в задаче](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
+ Более полный пример, включающий дополнительную обработку исключений и показывающий, как вызывать этот метод из клиентского кода, см. в руководстве по [созданию шаблонов оболочки EAP в задаче](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
   
  Следует помнить, что любая задача, созданная объектом <xref:System.Threading.Tasks.TaskCompletionSource%601>, будет запущена этим TaskCompletionSource, и, таким образом, пользовательский код не должен вызывать метод Start в этой задаче.  
   
@@ -123,7 +127,7 @@ ms.lasthandoff: 10/18/2017
  [!code-vb[FromAsync#09](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#09)]  
   
 ## <a name="using-the-streamextensions-sample-code"></a>Использование примера кода StreamExtensions  
- Файл streamextensions.cs в разделе, в [примеры параллельного программирования в .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=165717) на сайте MSDN содержит несколько справочных реализаций, в которых используются объекты задач для асинхронных операций файлового и сетевого ввода-вывода.  
+ Файл Streamextensions.cs (см. [примеры параллельного программирования в .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=165717) на веб-сайте MSDN) содержит несколько базовых реализаций, в которых используются объекты задачи для асинхронных операций с файлами и сетевых операций ввода-вывода.  
   
 ## <a name="see-also"></a>См. также  
  [Библиотека параллельных задач (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

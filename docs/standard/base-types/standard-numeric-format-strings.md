@@ -21,11 +21,14 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 81547bbcdbae5b4cc8dc1f20e829dfb5ede08963
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9416bff21607d8e37f9e7dbc270477539043fe8b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="standard-numeric-format-strings"></a>Строки стандартных числовых форматов
 Строки стандартных числовых форматов служат для форматирования стандартных числовых типов. Строка стандартных числовых форматов использует формат `Axx`, где:  
@@ -34,34 +37,34 @@ ms.lasthandoff: 11/21/2017
   
 -   `xx` — это необязательное целое число, которое называют *описателем точности*. Спецификатор точности находится в диапазоне от 0 до 99 и влияет на число цифр в результате. Описатель точности управляет количеством цифр в строковом представлении числа. Он не округляет само число. Для выполнения операции округления используйте метод <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> или <xref:System.Math.Round%2A?displayProperty=nameWithType>.  
   
-     Когда *описатель точности* определяет количество цифр дробной части в результирующей строке, в итоговых строках содержатся числа, округляемые (то есть с использованием <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).  
+     Если *указатель точности* ограничивает число цифр дробной части в итоговой строке, числа в итоговых строках округляются к большему по модулю (то есть с использованием <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).  
   
     > [!NOTE]
     >  Описатель точности определяет число цифр в результирующей строке. Чтобы заполнить строку результата начальными или конечными пробелами, используйте функцию [составного форматирования](../../../docs/standard/base-types/composite-formatting.md) и определите  *компонент выравнивания* в элементе форматирования.  
   
-Строки стандартного числового формата поддерживаются:
+Строки стандартных числовых форматов поддерживаются в следующих сценариях.
 
-- Некоторые перегрузки `ToString` метод всех числовых типов. Например, можно задать строку числового формата для <xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType> и <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> методы. 
+- Некоторые перегрузки метода `ToString` для всех числовых типов. Например, можно задать строку числового формата для методов <xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType> и <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>. 
  
-- .NET [составного форматирования](../../../docs/standard/base-types/composite-formatting.md), который используется для некоторых `Write` и `WriteLine` методы <xref:System.Console> и <xref:System.IO.StreamWriter> классы, <xref:System.String.Format%2A?displayProperty=nameWithType> метода и <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> метод. Композитный формат позволяет включить строковое представление нескольких элементов данных в одну строку, чтобы задать ширину поля и выровнять числа в поле. Дополнительные сведения см. в разделе [Составное форматирование](../../../docs/standard/base-types/composite-formatting.md).  
+- [Функция составного форматирования](../../../docs/standard/base-types/composite-formatting.md) .NET, которая используется некоторыми методами `Write` и `WriteLine` классов <xref:System.Console> и <xref:System.IO.StreamWriter>, методом <xref:System.String.Format%2A?displayProperty=nameWithType> и методом <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Композитный формат позволяет включить строковое представление нескольких элементов данных в одну строку, чтобы задать ширину поля и выровнять числа в поле. Дополнительные сведения см. в разделе [Составное форматирование](../../../docs/standard/base-types/composite-formatting.md).  
 
-- [Интерполируются строки](../../csharp/language-reference/keywords/interpolated-strings.md) в C# и Visual Basic, которые предоставляют упрощенный синтаксис по сравнению с строк составного формата.
+- [Интерполированные строки](../../csharp/language-reference/keywords/interpolated-strings.md) в C# и Visual Basic, которые предоставляют упрощенный синтаксис по сравнению со строками составного формата.
  
 > [!TIP]
 >  Вы можете загрузить [служебную программу форматирования](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)— приложение, позволяющее применять строки формата к значениям даты и времени и числовым значениям и отображающее результирующую строку.  
   
 <a name="table"></a> В следующей таблице приведены описатели стандартного числового формата и примеры выходных данных, формируемых каждым описателем формата. Дополнительные сведения о использовании строк стандартных числовых форматов см. в разделе [Примечания](#NotesStandardFormatting). Обширную демонстрацию их использования см. в разделе [Пример](#example).  
   
-|Описатель формата|Имя|Описание|Примеры|  
+|Описатель формата|name|Описание:|Примеры|  
 |----------------------|----------|-----------------|--------------|  
 |"C" или "c"|Валюта|Результат: значение валюты.<br /><br /> Поддерживается: всеми числовыми типами данных.<br /><br /> Описатель точности: количество цифр в дробной части.<br /><br /> Описатель точности по умолчанию: определяется <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Дополнительные сведения см. в подразделе [Описатель формата валюты (C)](#CFormatString).|123.456 ("C", en-US) -> $123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> ($123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|  
 |"D" или "d"|Десятичное число|Результат: целочисленные цифры с необязательным отрицательным знаком.<br /><br /> Поддерживается: только целочисленными типами данных.<br /><br /> Описатель точности: минимальное число цифр.<br /><br /> Описатель точности по умолчанию: минимальное необходимое число цифр.<br /><br /> Дополнительные сведения см. в подразделе [Описатель десятичного формата (D)](#DFormatString).|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|  
 |"E" или "e"|Экспоненциальный (научный)|Результат: экспоненциальная нотация.<br /><br /> Поддерживается: всеми числовыми типами данных.<br /><br /> Описатель точности: количество цифр дробной части.<br /><br /> Описатель точности по умолчанию: 6.<br /><br /> Дополнительные сведения см. в подразделе [Описатель экспоненциального формата (E)](#EFormatString).|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr_FR) -> -1,05E+003|  
 |"F" или "f"|С фиксированной запятой|Результат: цифры целой и дробной частей с необязательным отрицательным знаком.<br /><br /> Поддерживается: всеми числовыми типами данных.<br /><br /> Описатель точности: количество цифр в дробной части.<br /><br /> Описатель точности по умолчанию: определяется <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Дополнительные сведения см. в подразделе [Описатель формата с фиксированной запятой (F)](#FFormatString).|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|  
 |"G" или "g"|Общие|Результат: наиболее компактная запись из двух вариантов — экспоненциального и с фиксированной запятой.<br /><br /> Поддерживается: для всех числовых типов данных.<br /><br /> Описатель точности: количество значащих цифр.<br /><br /> Описатель точности по умолчанию: определяется численным типом.<br /><br /> Дополнительные сведения см. в подразделе [Описатель общего формата (G)](#GFormatString).|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|  
-|"N" или "n"|Числовой|Результат: цифры целой и дробной частей, разделители групп и разделитель целой и дробной частей с необязательным отрицательным знаком.<br /><br /> Поддерживается: всеми числовыми типами данных.<br /><br /> Описатель точности: желаемое число знаков дробной части.<br /><br /> Описатель точности по умолчанию: определяется <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Дополнительные сведения см. в подразделе [Описатель числового формата (N)](#NFormatString).|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
-|"P" или "p"|Процент|Результат: число, умноженное на 100 и отображаемое с символом процента.<br /><br /> Поддерживается: всеми числовыми типами данных.<br /><br /> Описатель точности: желаемое число знаков дробной части.<br /><br /> Описатель точности по умолчанию: определяется <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Дополнительные сведения см. в подразделе [Описатель формата процента (P)](#PFormatString).|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|  
-|"R" или "r"|Приемо-передача|Результат: строка, дающая при обратном преобразовании идентичное число.<br /><br /> Поддерживается: <xref:System.Single>, <xref:System.Double> и <xref:System.Numerics.BigInteger>.<br /><br /> Примечание: Рекомендуется для <xref:System.Numerics.BigInteger> только типа. Для <xref:System.Double> типов, используйте «G17»; для <xref:System.Single> типов, используйте «G9». </br> Описатель точности: игнорируется.<br /><br /> Дополнительные сведения см. в подразделе [Описатель формата обратного преобразования (R)](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
+|"N" или "n"|Число|Результат: цифры целой и дробной частей, разделители групп и разделитель целой и дробной частей с необязательным отрицательным знаком.<br /><br /> Поддерживается: всеми числовыми типами данных.<br /><br /> Описатель точности: желаемое число знаков дробной части.<br /><br /> Описатель точности по умолчанию: определяется <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Дополнительные сведения см. в подразделе [Описатель числового формата (N)](#NFormatString).|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
+|"P" или "p"|Процент|Результат: число, умноженное на 100 и отображаемое с символом процента.<br /><br /> Поддерживается: всеми числовыми типами данных.<br /><br /> Описатель точности: желаемое число знаков дробной части.<br /><br /> Описатель точности по умолчанию: определяется значением <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Дополнительные сведения см. в подразделе [Описатель формата процента (P)](#PFormatString).|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|  
+|"R" или "r"|Приемо-передача|Результат: строка, дающая при обратном преобразовании идентичное число.<br /><br /> Поддерживается: <xref:System.Single>, <xref:System.Double> и <xref:System.Numerics.BigInteger>.<br /><br /> Примечание. Мы рекомендуем использовать только для типа <xref:System.Numerics.BigInteger>. Для типов <xref:System.Double> используйте "G17", а для типов <xref:System.Single> — "G9". </br> Описатель точности: игнорируется.<br /><br /> Дополнительные сведения см. в подразделе [Описатель формата обратного преобразования (R)](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
 |"X" или "x"|Шестнадцатеричный|Результат: шестнадцатеричная строка.<br /><br /> Поддерживается: только целочисленными типами данных.<br /><br /> Описатель точности: число цифр в результирующей строке.<br /><br /> Дополнительные сведения см. в подразделе [Описатель шестнадцатеричного формата (X)](#XFormatString).|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|  
 |Любой другой символ|Неизвестный описатель|Результат: порождение исключения <xref:System.FormatException> во время выполнения.||  
   
@@ -69,19 +72,19 @@ ms.lasthandoff: 11/21/2017
 ## <a name="using-standard-numeric-format-strings"></a>Использование строк стандартных числовых форматов  
  Строку стандартного числового формата можно использовать для определения форматирования числового значения одним из двух следующих способов:  
   
--   Ее можно передать перегруженному методу `ToString`, у которого есть параметр `format`. Следующий пример форматирует числовое значение валюты в виде строки текущего языка и региональных параметров (в данном случае en-US).  
+-   Ее можно передать перегруженному методу `ToString`, у которого есть параметр `format`. В следующем примере осуществляется форматирование числового значения в качестве строки со значением валюты для текущего языка и региональных параметров (en-US).  
   
      [!code-cpp[Formatting.Numeric.Standard#10](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#10)]
      [!code-csharp[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
      [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]  
   
--   Он может быть передано в качестве `formatString` аргумент в элементе форматирования, используемый с такими методами как <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, и <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [Составное форматирование](../../../docs/standard/base-types/composite-formatting.md). В следующем примере элемент форматирования используется для вставки значения валюты в строку.  
+-   Эту строку можно передать в качестве аргумента `formatString` в элемент форматирования, используемый с методами <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> и <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [Составное форматирование](../../../docs/standard/base-types/composite-formatting.md). В следующем примере элемент форматирования используется для вставки значения валюты в строку.  
   
      [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
      [!code-csharp[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
      [!code-vb[Formatting.Numeric.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#11)]  
   
-     При необходимости можно указать `alignment` аргумент, чтобы указать ширину числового поля и является оно справа или по левому краю. В следующем примере денежное значение в поле длиной 28 символов выравнивается по левому краю, а денежное значение в поле длиной 14 символов выравнивается по правому краю.  
+     При желании вы можете передать аргумент `alignment`, чтобы указать ширину числового поля и установить выравнивание по правому или левому краю. В следующем примере денежное значение в поле длиной 28 символов выравнивается по левому краю, а денежное значение в поле длиной 14 символов выравнивается по правому краю.  
   
      [!code-cpp[Formatting.Numeric.Standard#12](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#12)]
      [!code-csharp[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
@@ -97,11 +100,11 @@ ms.lasthandoff: 11/21/2017
   
  Форматирование результирующей строки определяется сведениями о форматировании в текущем объекте <xref:System.Globalization.NumberFormatInfo>. В следующей таблице представлены свойства <xref:System.Globalization.NumberFormatInfo>, обеспечивающие управление форматированием возвращаемой строки.  
   
-|Свойство NumberFormatInfo|Описание|  
+|Свойство NumberFormatInfo|Описание:|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern%2A>|Определяет положение символа валюты в положительных значениях.|  
 |<xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A>|Определяет положение символа валюты в отрицательных значениях и указывает, как именно представляется отрицательный знак: круглыми скобками или свойством <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>.|  
-|<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Задает отрицательный знак, если <xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A> указывает, что скобки не применяются.|  
+|<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Задает отрицательный знак, используемый в случае, если свойство <xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A> указывает на то, что скобки для отрицания не используются.|  
 |<xref:System.Globalization.NumberFormatInfo.CurrencySymbol%2A>|Определяет символ валюты.|  
 |<xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A>|Определяет количество цифр дробной части в значении валюты по умолчанию. Это значение можно переопределить с помощью описателя точности.|  
 |<xref:System.Globalization.NumberFormatInfo.CurrencyDecimalSeparator%2A>|Определяет строку, разделяющую целую и дробную части числа.|  
@@ -124,7 +127,7 @@ ms.lasthandoff: 11/21/2017
   
  Форматирование результирующей строки определяется сведениями о форматировании в текущем объекте <xref:System.Globalization.NumberFormatInfo>. Как показано в следующей таблице, управление форматированием результирующей строки осуществляется с помощью одного свойства.  
   
-|Свойство NumberFormatInfo|Описание|  
+|Свойство NumberFormatInfo|Описание:|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Определяет строку, указывающую, что число является отрицательным.|  
   
@@ -146,7 +149,7 @@ ms.lasthandoff: 11/21/2017
   
  Форматирование результирующей строки определяется сведениями о форматировании в текущем объекте <xref:System.Globalization.NumberFormatInfo>. В следующей таблице представлены свойства <xref:System.Globalization.NumberFormatInfo>, обеспечивающие управление форматированием возвращаемой строки.  
   
-|Свойство NumberFormatInfo|Описание|  
+|Свойство NumberFormatInfo|Описание:|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Определяет строку, указывающую на то, что число является отрицательным (как мантисса, так и экспонента).|  
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Определяет строку, разделяющую целую и дробную части мантиссы.|  
@@ -162,13 +165,13 @@ ms.lasthandoff: 11/21/2017
   
 <a name="FFormatString"></a>   
 ## <a name="the-fixed-point-f-format-specifier"></a>Описатель формата с фиксированной запятой ("F")  
- Описатель формата с фиксированной запятой («F») число преобразуется в строку вида «-ддд...» где каждое "d" обозначает цифру (0–9). Если число отрицательное, в начале строки ставится отрицательный знак.  
+ При использовании описателя формата с фиксированной точкой ("F") число преобразуется в строку формата "-ddd.ddd…", где каждое "d" обозначает цифру (0–9). Если число отрицательное, в начале строки ставится отрицательный знак.  
   
  Требуемое число знаков дробной части задается спецификатором точности. Если описатель точности отсутствует, то используется численная точность, определяемая текущим значением свойства <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.  
   
  Форматирование результирующей строки определяется сведениями о форматировании в текущем объекте <xref:System.Globalization.NumberFormatInfo>. В следующей таблице представлены свойства объекта <xref:System.Globalization.NumberFormatInfo>, обеспечивающие управление форматированием результирующей строки.  
   
-|Свойство NumberFormatInfo|Описание|  
+|Свойство NumberFormatInfo|Описание:|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Определяет строку, указывающую, что число является отрицательным.|  
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Определяет строку, разделяющую целую и дробную части числа.|  
@@ -204,16 +207,16 @@ ms.lasthandoff: 11/21/2017
   
  Если используется экспоненциальная нотация, регистр буквы, стоящей перед экспонентой, определяется регистром описателя формата (буква "E" соответствует "G", "e" соответствует "g"). Экспонента содержит не менее двух цифр. Это отличает данный формат от экспоненциальной записи, создаваемой при использовании описателя экспоненциального формата, поскольку в последнем случае экспонента содержит не менее трех цифр.  
  
-Обратите внимание, что при использовании с <xref:System.Double> значение, описатель формата «G17» гарантирует, что исходный <xref:System.Double> успешно возвращено значение циклов приема-передачи. Это вызвано <xref:System.Double> является IEEE 754 2008-совместимое с двойной точностью (`binary64`) число с плавающей запятой, дает более 17 значащих цифр точности. Использовать его вместо рекомендуется [описатель формата «R»](#RFormatString), поскольку в некоторых случаях «R» не удается успешно выполнить обратное преобразование числа двойной точности значений с плавающей запятой. В следующем примере демонстрируется Подобная ситуация.
+Обратите внимание, что при использовании совместно со значением <xref:System.Double> описатель формата G17 гарантирует обратимость преобразования исходного значения <xref:System.Double>. Это связано с тем, что <xref:System.Double> совместим со стандартом IEEE 754-2008 для чисел двойной точности (`binary64`) с плавающей запятой, в котором определена точность до 17 значащих цифр. Мы рекомендуем использовать этот формат вместо [описателя формата "R"](#RFormatString), который в некоторых случаях не гарантирует обратимость преобразования чисел двойной точности с плавающей запятой. В следующем примере представлен один такой случай.
 
 [!code-csharp[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/csharp/g17.cs)]   
 [!code-vb[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/vb/g17.vb)]   
 
-При использовании с <xref:System.Single> значение, описатель формата «G9» гарантирует, что исходный <xref:System.Single> успешно возвращено значение циклов приема-передачи. Это вызвано <xref:System.Single> является IEEE 754 2008-совместимое с двойной точностью (`binary32`) число с плавающей запятой, предоставляющий до девяти значащих цифр точности. Использовать его вместо рекомендуется [описатель формата «R»](#RFormatString), поскольку в некоторых случаях «R» не удается успешно приема-передачи одинарной точности значений с плавающей запятой.
+При использовании со значением <xref:System.Single> описатель формата G9 гарантирует обратимость преобразования исходного значения <xref:System.Single>. Это связано с тем, что <xref:System.Single> совместим со стандартом IEEE 754-2008 для чисел одиночной точности (`binary32`) с плавающей запятой, в котором определена точность до 9 значащих цифр. Мы рекомендуем использовать этот формат вместо [описателя формата "R"](#RFormatString), который в некоторых случаях не гарантирует обратимость преобразования чисел одиночной точности с плавающей запятой.
 
  Форматирование результирующей строки определяется сведениями о форматировании в текущем объекте <xref:System.Globalization.NumberFormatInfo>. В следующей таблице представлены свойства <xref:System.Globalization.NumberFormatInfo>, обеспечивающие управление форматированием результирующей строки.  
   
-|Свойство NumberFormatInfo|Описание|  
+|Свойство NumberFormatInfo|Описание:|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Определяет строку, указывающую, что число является отрицательным.|  
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Определяет строку, разделяющую целую и дробную части числа.|  
@@ -233,7 +236,7 @@ ms.lasthandoff: 11/21/2017
   
  Форматирование результирующей строки определяется сведениями о форматировании в текущем объекте <xref:System.Globalization.NumberFormatInfo>. В следующей таблице представлены свойства <xref:System.Globalization.NumberFormatInfo>, обеспечивающие управление форматированием результирующей строки.  
   
-|Свойство NumberFormatInfo|Описание|  
+|Свойство NumberFormatInfo|Описание:|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Определяет строку, указывающую, что число является отрицательным.|  
 |<xref:System.Globalization.NumberFormatInfo.NumberNegativePattern%2A>|Определяет формат отрицательных значений и указывает, как именно представляется отрицательный знак: круглыми скобками или свойством <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>.|  
@@ -256,7 +259,7 @@ ms.lasthandoff: 11/21/2017
   
  В следующей таблице представлены свойства <xref:System.Globalization.NumberFormatInfo>, обеспечивающие управление форматированием возвращаемой строки.  
   
-|Свойство NumberFormatInfo|Описание|  
+|Свойство NumberFormatInfo|Описание:|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.PercentPositivePattern%2A>|Определяет положение символа процента в положительных значениях.|  
 |<xref:System.Globalization.NumberFormatInfo.PercentNegativePattern%2A>|Определяет положение символа процента и отрицательного знака в отрицательных значениях.|  
@@ -277,22 +280,22 @@ ms.lasthandoff: 11/21/2017
   
 <a name="RFormatString"></a>   
 ## <a name="the-round-trip-r-format-specifier"></a>Описатель формата обратного преобразования ("R")  
- Описатель формата обратного преобразования («R») пытается убедитесь, что числовое значение, которое преобразуется в строку анализируется обратно в то же числовое значение. Этот формат поддерживается только для типов <xref:System.Single>, <xref:System.Double> и <xref:System.Numerics.BigInteger>.  
+ Описатель формата обратного преобразования ("R") пытается выполнить преобразование числового значения в строку так, чтобы при обратном преобразовании этой строки можно было получить то же самое числовое значение. Этот формат поддерживается только для типов <xref:System.Single>, <xref:System.Double> и <xref:System.Numerics.BigInteger>.  
 
-Для <xref:System.Double> и <xref:System.Single> значения, описатель формата «R» в некоторых случаях не удается успешного обратного преобразования исходного значения и также предлагает относительно низкой производительности. Вместо этого рекомендуется использовать [«G17»](#GFormatString) описатель для формата <xref:System.Double> значения и [«G9»](#GFormatString) описатель формата для успешного обратного преобразования <xref:System.Single> значения.
+Для значений <xref:System.Double> и <xref:System.Single> описатель формата "R" в некоторых случаях не может гарантировать правильное обратное преобразование, а также он имеет относительно низкую производительность. Вместо него мы рекомендуем использовать описатель формата [G17](#GFormatString) для значений <xref:System.Double> и описатель формата [G9](#GFormatString) для значений <xref:System.Single>, которые гарантируют правильное обратное преобразование.
 
  Если с помощью этого описателя форматируется значение типа <xref:System.Numerics.BigInteger>, то его строковое представление будет содержать все значащие цифры <xref:System.Numerics.BigInteger>.  
   
  Хотя описатель точности можно указать, он будет проигнорирован. Приведенные указатели приема-передачи в данном случае имеют преимущество перед указателем точности.    
  Форматирование результирующей строки определяется сведениями о форматировании в текущем объекте <xref:System.Globalization.NumberFormatInfo>. В следующей таблице представлены свойства <xref:System.Globalization.NumberFormatInfo>, обеспечивающие управление форматированием результирующей строки.  
   
-|Свойство NumberFormatInfo|Описание|  
+|Свойство NumberFormatInfo|Описание:|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Определяет строку, указывающую, что число является отрицательным.|  
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Определяет строку, разделяющую целую и дробную части числа.|  
 |<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|Определяет строку, указывающую, что экспонента является положительной.|  
   
- Следующие форматы пример <xref:System.Numerics.BigInteger> с помощью спецификатора формата приема-передачи.  
+ В следующем примере форматируется значение <xref:System.Numerics.BigInteger> с применением спецификатора формата обратного преобразования.  
   
  [!code-cpp[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cpp)]
  [!code-csharp[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cs)]
@@ -330,7 +333,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="control-panel-settings"></a>Настройки панели управления  
  Параметры элемента панели управления **Язык и региональные стандарты** влияют на выходную строку, получаемую в результате операции форматирования. Эти параметры используются для инициализации объекта <xref:System.Globalization.NumberFormatInfo>, связанного с языком и региональными параметрами текущего потока, откуда берутся значения, используемые для управления форматированием. Результирующие строки будут различаться на компьютерах с разными параметрами.  
   
- Кроме того Если <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> конструктор используется для создания нового экземпляра <xref:System.Globalization.CultureInfo> , представляющий язык и региональные параметры, как текущую культуру системы, настройки, заданные в **язык и региональные стандарты** на панели управления будут применяться к новому <xref:System.Globalization.CultureInfo> объекта. Можно воспользоваться конструктором <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> для создания объекта <xref:System.Globalization.CultureInfo>, который не отражает настройки системы.  
+ Кроме того, если конструктор <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> используется для создания нового объекта <xref:System.Globalization.CultureInfo>, представляющего язык и региональные параметры, аналогичные текущим в системе, то все настройки, заданные в разделе **Язык и региональные стандарты** на панели управления, будут применяться к новому объекту <xref:System.Globalization.CultureInfo>. Можно воспользоваться конструктором <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> для создания объекта <xref:System.Globalization.CultureInfo>, который не отражает настройки системы.  
   
 ### <a name="numberformatinfo-properties"></a>Свойства NumberFormatInfo  
  На форматирование влияют свойства текущего объекта <xref:System.Globalization.NumberFormatInfo>, который неявно определяется на основе языка и региональных параметров текущего потока или явно задается параметром <xref:System.IFormatProvider> метода, который вызывает форматирование. Укажите объект <xref:System.Globalization.NumberFormatInfo> или объект <xref:System.Globalization.CultureInfo> для этого параметра.  

@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 193a9980bba423292921beff6c4c3172ce02fd92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a834fe8764744f5b2dd41de1f4fe1479059b87bb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>XmlSchemaSet для компиляции схемы
 Описывает класс <xref:System.Xml.Schema.XmlSchemaSet>, который представляет собой кэш, в котором можно хранить и проверять схемы XSD.  
@@ -256,7 +259,7 @@ foreach (XmlSchema schema in schemaSet.Schemas())
 ## <a name="validating-xml-documents"></a>Проверка XML-документов  
  XML-документы могут быть проверены путем сопоставления со схемами в классе <xref:System.Xml.Schema.XmlSchemaSet>. Для проверки XML-документа нужно добавить схему в свойство <xref:System.Xml.Schema.XmlSchemaSet><xref:System.Xml.XmlReaderSettings.Schemas%2A> объекта <xref:System.Xml.XmlReaderSettings>, или добавить класс <xref:System.Xml.Schema.XmlSchemaSet> к свойству <xref:System.Xml.XmlReaderSettings.Schemas%2A> объекта <xref:System.Xml.XmlReaderSettings>. Затем объект <xref:System.Xml.XmlReaderSettings> используется методом <xref:System.Xml.XmlReader.Create%2A> класса <xref:System.Xml.XmlReader>, чтобы создать объект <xref:System.Xml.XmlReader> и проверить XML-документ.  
   
- Дополнительные сведения о проверке XML документы с помощью <xref:System.Xml.Schema.XmlSchemaSet>, в разделе [проверка схемы XML (XSD) с помощью XmlSchemaSet](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md).  
+ Дополнительные сведения о проверке XML-документов с использованием класса <xref:System.Xml.Schema.XmlSchemaSet> см. в руководстве по [проверке схем XML (XSD) с помощью XmlSchemaSet](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>  
@@ -266,5 +269,5 @@ foreach (XmlSchema schema in schemaSet.Schemas())
  <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>  
  <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>  
  <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>  
- [XmlSchemaSet как кэша схем](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Проверка схемы (XSD) XML с помощью XmlSchemaSet](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)
+ [Использование XmlSchemaSet как кэша схемы](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [Проверка по XML-схеме (XSD) с помощью XmlSchemaSet](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)

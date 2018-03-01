@@ -14,15 +14,18 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8a50080fa4b84abe84fbb1a44f18e1fb680a07c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1fbdbe2596f44a6efda35b8c3e3aace303d79364
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Рекомендации по разработке международных приложений
 В этом разделе описаны рекомендации по разработке международных приложений.  
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
 9. Протестируйте функциональность приложения в версиях операционных систем на других языках с использованием данных на других языках.  
   
-10. Если решение системы безопасности принимается на основе результатов операций сравнения строк или изменения регистра, приложение должно выполнять эти операции без учета языка и региональных параметров. Это гарантирует, что значение свойства `CultureInfo.CurrentCulture` не повлияет на результат. В разделе «Строка сравнения, текущего языка и региональных параметров» [советы и рекомендации по использованию строк](../../../docs/standard/base-types/best-practices-strings.md) пример, демонстрирующий строк с учетом языка и региональных параметров сравнения может привести к непредсказуемым результатам.  
+10. Если решение системы безопасности принимается на основе результатов операций сравнения строк или изменения регистра, приложение должно выполнять эти операции без учета языка и региональных параметров. Это гарантирует, что значение свойства `CultureInfo.CurrentCulture` не повлияет на результат. Пример строковых операций с учетом языка и региональных параметров, дающих противоречивые результаты, см. в сравнении строк с использованием текущего языка и региональных параметров в списке [рекомендаций по использованию строк](../../../docs/standard/base-types/best-practices-strings.md).  
   
 ## <a name="localization-best-practices"></a>Рекомендации по локализации  
   
@@ -77,11 +80,11 @@ ms.lasthandoff: 11/21/2017
   
 8.  Для извлечения ресурсов для конкретного языка и региона следует использовать класс <xref:System.Resources.ResourceManager?displayProperty=nameWithType>.  
   
-9. Используйте Visual Studio для создания диалоговых окон Windows Forms, чтобы их можно локализовать с помощью [редактор ресурсов Windows Forms (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md). Не следует кодировать диалоговые окна форм Windows Forms вручную.  
+9. Используйте Visual Studio для создания диалоговых окон Windows Forms, чтобы эти диалоговые окна можно было локализовать с помощью [редактора ресурсов форм Windows (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md). Не следует кодировать диалоговые окна форм Windows Forms вручную.  
   
 10. Следует систематизировать создаваемое приложение с учетом возможности профессиональной локализации (перевода).  
   
-11. Полное описание создания и локализации ресурсов см. в разделе [ресурсы в приложениях](../../../docs/framework/resources/index.md).  
+11. См. дополнительные сведения о создания и локализации [ресурсов в приложениях](../../../docs/framework/resources/index.md).  
   
 ## <a name="globalization-best-practices-for-aspnet-applications"></a>Рекомендации по глобализации приложений ASP.NET  
   
@@ -99,7 +102,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  Следует задать значения для атрибутов requestEncoding, responseEncoding, fileEncoding, culture и uiCulture в следующих трех местах в приложении ASP.NET.  
   
-    -   В разделе глобализации файла Web.config. Это внешний файл приложения ASP.NET. Дополнительные сведения см. в разделе [ \<глобализации > элемент](http://msdn.microsoft.com/en-us/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7).  
+    -   В разделе глобализации файла Web.config. Это внешний файл приложения ASP.NET. Дополнительные сведения см. в описании [\<элемента <globalization>](http://msdn.microsoft.com/library/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7).  
   
     -   В директиве страницы. Обратите внимание, что когда приложение находится на странице, файл уже считан. Следовательно, уже поздно задавать атрибуты fileEncoding и requestEncoding. В директиве страницы могут задаваться только атрибуты uiCulture, Culture и responseEncoding.  
   

@@ -6,11 +6,14 @@ ms.author: mairaw
 ms.date: 08/15/2016
 ms.topic: article
 ms.prod: .net
-ms.openlocfilehash: fa001492aa76c4690faca23cb2a1e0467a857a6d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2108125b9c01a2686d66b0ebd4e43e7ac863e223
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Выбор между .NET Core и .NET Framework для серверных приложений
 
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 
 Если вам нужно создать приложение (веб-приложение или службу) с поддержкой разных платформ (Windows, Linux и macOS), рекомендуется использовать .NET Core.
 
-В среде .NET Core также можно использовать упомянутые ранее операционные системы в качестве рабочих станций для разработки. Visual Studio предоставляет интегрированной среды разработки (IDE) для Windows и macOS. Можно также использовать редактор Visual Studio Code, который выполняется на платформах macOS, Linux и Windows. Visual Studio Code поддерживает .NET Core, включая технологию IntelliSense и отладку. С .NET Core работает большинство сторонних редакторов, например Sublime, Emacs и VI. Эти сторонние редакторы получают доступ к функциям в редакторе IntelliSense с помощью [Omnisharp](http://www.omnisharp.net/). Платформа .NET Core полагается не только на редакторы. Приложения здесь можно создавать непосредственно с помощью [средств командной строки](../core/tools/index.md), доступных для всех поддерживаемых платформ.
+В среде .NET Core также можно использовать упомянутые ранее операционные системы в качестве рабочих станций для разработки. Visual Studio предоставляет интегрированную среду разработки (IDE) для Windows и macOS. Можно также использовать редактор Visual Studio Code, который выполняется на платформах macOS, Linux и Windows. Visual Studio Code поддерживает .NET Core, включая технологию IntelliSense и отладку. С .NET Core работает большинство сторонних редакторов, например Sublime, Emacs и VI. Эти сторонние редакторы получают доступ к функциям в редакторе IntelliSense с помощью [Omnisharp](http://www.omnisharp.net/). Платформа .NET Core полагается не только на редакторы. Приложения здесь можно создавать непосредственно с помощью [средств командной строки](../core/tools/index.md), доступных для всех поддерживаемых платформ.
 
 ### <a name="microservices-architecture"></a>Архитектура микрослужб
 

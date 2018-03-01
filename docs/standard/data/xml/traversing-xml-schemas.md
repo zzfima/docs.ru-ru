@@ -13,15 +13,18 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cc1883e8503567bdf2f6e0bda20cea777a12c7cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ceca36b5e988751dff34b5574978aa0ae2da1259
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="traversing-xml-schemas"></a>Обход XML-схем
 Обзор схемы XML с помощью API-интерфейса объектной модели схемы XML (SOM) предоставляет доступ к элементам, атрибутам и типам, хранящимся в модели SOM. Проход по схеме XML, загружаемой в SOM, представляет собой также первый шаг в изменении схемы XML с помощью SOM API.  
@@ -29,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="traversing-an-xml-schema"></a>Обзор схемы XML  
  Следующие свойства класса <xref:System.Xml.Schema.XmlSchema> предоставляют доступ к коллекции глобальных объектов, добавляемых к схеме XML.  
   
-|Свойство|Тип объекта, хранимого в коллекции или массиве|  
+|Свойство.|Тип объекта, хранимого в коллекции или массиве|  
 |--------------|---------------------------------------------------|  
 |<xref:System.Xml.Schema.XmlSchema.Elements%2A>|<xref:System.Xml.Schema.XmlSchemaElement>|  
 |<xref:System.Xml.Schema.XmlSchema.Attributes%2A>|<xref:System.Xml.Schema.XmlSchemaAttribute>|  
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/21/2017
 >   
 >  Свойство <xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A> предоставляет доступ ко всем атрибутам, не принадлежащим к пространству имен схемы. Эти атрибуты не обрабатываются обработчиком схемы.  
   
- В примере кода ниже просматривается пользовательской схемы, созданные в [построение XML-схем](../../../../docs/standard/data/xml/building-xml-schemas.md) раздела. Приводится пример кода, в котором схема просматривается с помощью коллекций, описанных выше, и все элементы и атрибуты схемы выводятся в консоль.  
+ Ниже приведен пример кода, демонстрирующий обзор [пользовательской схемы XML](../../../../docs/standard/data/xml/building-xml-schemas.md). Приводится пример кода, в котором схема просматривается с помощью коллекций, описанных выше, и все элементы и атрибуты схемы выводятся в консоль.  
   
  В данном примере схема Customer просматривается с помощью следующих шагов.  
   
@@ -72,13 +75,13 @@ ms.lasthandoff: 11/21/2017
   
  Свойство <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A?displayProperty=nameWithType> может иметь тип <xref:System.Xml.Schema.XmlSchemaSimpleType> или <xref:System.Xml.Schema.XmlSchemaComplexType> если это определенный пользователем простой тип или сложный тип. Оно может также иметь тип <xref:System.Xml.Schema.XmlSchemaDatatype>, если это один из встроенных типов данных, описанных в рекомендациях схемы XML W3C. В схеме «Заказчик» тип <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> элемента `Customer` представляет собой <xref:System.Xml.Schema.XmlSchemaComplexType>, а тип элементов `FirstName` и `LastName` - <xref:System.Xml.Schema.XmlSchemaSimpleType>.  
   
- В примере кода в [построение XML-схем](../../../../docs/standard/data/xml/building-xml-schemas.md) разделе используется <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> коллекции для добавления атрибута `CustomerId` для `Customer` элемента. Это свойство доступно до компиляции схемы. Соответствующее свойство PSCI (доступное только после компиляции схемы) представляет собой коллекцию <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType>, которая хранит все атрибуты сложного типа, в том числе унаследованные.  
+ Пример кода в руководстве по [созданию схемы XML](../../../../docs/standard/data/xml/building-xml-schemas.md) использует коллекцию <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> для добавления атрибута `CustomerId` к элементу `Customer`. Это свойство доступно до компиляции схемы. Соответствующее свойство PSCI (доступное только после компиляции схемы) представляет собой коллекцию <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType>, которая хранит все атрибуты сложного типа, в том числе унаследованные.  
   
 ## <a name="see-also"></a>См. также  
- [Общие сведения о модели объектов схемы XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [Общие сведения об модели объектов XML-схемы](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
  [Чтение и запись XML-схем](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
  [Построение XML-схем](../../../../docs/standard/data/xml/building-xml-schemas.md)  
  [Изменение XML-схем](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
  [Включение или импорт XML-схем](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
  [XmlSchemaSet для компиляции схемы](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Информационный набор после компиляции схемы](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+ [Набор сведений для постсхемной компиляции](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

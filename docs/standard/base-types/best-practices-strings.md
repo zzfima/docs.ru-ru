@@ -1,5 +1,5 @@
 ---
-title: "Советы и рекомендации по использованию строк в .NET"
+title: "Рекомендации по использованию строк в .NET"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -23,20 +23,23 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d187096fee5119a22d886029cd63173e4ca1c8ec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a4b92cd9d6b880f23d6acaf9e38e685184ec3bfe
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="best-practices-for-using-strings-in-net"></a>Советы и рекомендации по использованию строк в .NET
-<a name="top"></a>Платформа .NET предоставляет расширенную поддержку разработки локализованных и глобализованных приложений и упрощает применение правил текущего языка и региональных параметров или определенного языка и региональных параметров, при выполнении общих операций, таких как сортировка строк и их отображение. Однако сортировка и сравнение строк не всегда выполняется с учетом языка и региональных параметров. Например, строки, которые используются внутри приложения, как правило, должны обрабатываться одинаково независимо от выбранного языка и региональных параметров. Если независимые от языка и региональных параметров строковые данные, такие как теги XML, теги HTML, имена пользователей, пути к файлам и имена системных объектов, интерпретируются как зависимые от языка и региональных параметров, в коде приложения могут возникать незначительные ошибки, может наблюдаться низкая производительность, а в некоторых случаях и проблемы безопасности.  
+# <a name="best-practices-for-using-strings-in-net"></a>Рекомендации по использованию строк в .NET
+<a name="top"></a> .NET предоставляет широкие возможности для разработки локализованных и глобализованных приложений и позволяет легко применять правила для текущего или какого-то определенного языка и региональных параметров при выполнении типичных операций, таких как сортировка и отображение строк. Однако сортировка и сравнение строк не всегда выполняется с учетом языка и региональных параметров. Например, строки, которые используются внутри приложения, как правило, должны обрабатываться одинаково независимо от выбранного языка и региональных параметров. Если независимые от языка и региональных параметров строковые данные, такие как теги XML, теги HTML, имена пользователей, пути к файлам и имена системных объектов, интерпретируются как зависимые от языка и региональных параметров, в коде приложения могут возникать незначительные ошибки, может наблюдаться низкая производительность, а в некоторых случаях и проблемы безопасности.  
   
- В этом разделе просматривает сортировки, сравнения и строчных букв в .NET, даются рекомендации по выбору подходящего метода обработки строк и предоставляет дополнительные сведения о способах обработки строк. Кроме того, рассматривается отображение и хранение форматированных данных, например числовых данных или даты и времени.  
+ В этой статье рассматриваются методы .NET для сортировки, сравнения строк и изменения регистра, представлены рекомендации по выбору подходящего метода обработки строк и дополнительная информация об этих методах. Кроме того, рассматривается отображение и хранение форматированных данных, например числовых данных или даты и времени.  
   
  В этом разделе содержатся следующие подразделы.  
   
@@ -48,7 +51,7 @@ ms.lasthandoff: 10/18/2017
   
 -   [Выбор элемента StringComparison для своего вызова метода](#choosing_a_stringcomparison_member_for_your_method_call)  
   
--   [Общие методы сравнения строк в .NET](#common_string_comparison_methods_in_the_net_framework)  
+-   [Распространенные методы сравнения строк в .NET](#common_string_comparison_methods_in_the_net_framework)  
   
 -   [Методы, выполняющие сравнение строк опосредованно](#methods_that_perform_string_comparison_indirectly)  
   
@@ -92,7 +95,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="specifying-string-comparisons-explicitly"></a>Явное задание сравнений строк  
  Большинство методов обработки строк в .NET являются перегруженными. Как правило, одна или несколько перегрузок принимают настройки по умолчанию, а другие — нет и вместо этого определяют требуемый точный способ сравнения и обработки строк. Большинство методов, не использующих значения по умолчанию, включают параметр типа <xref:System.StringComparison>, который представляет собой перечисление, явно задающее правила сравнения строк по языку, региональным параметрам и регистру. В следующей таблице описаны элементы перечисления <xref:System.StringComparison> .  
   
-|Элемент StringComparison|Описание|  
+|Элемент StringComparison|Описание:|  
 |-----------------------------|-----------------|  
 |<xref:System.StringComparison.CurrentCulture>|Выполняет сравнение с учетом регистра, используя текущий язык и региональные параметры.|  
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|Выполняет сравнение без учета регистра, используя текущий язык и региональные параметры.|  
@@ -148,9 +151,9 @@ ms.lasthandoff: 10/18/2017
   
 -   Перегрузки <xref:System.String.CompareTo%2A?displayProperty=nameWithType>.  
   
--   Значение по умолчанию <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> метода и <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> метод с `null` <xref:System.Globalization.CultureInfo> параметра.  
+-   Метод <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> по умолчанию и метод <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> с параметром `null`<xref:System.Globalization.CultureInfo>.  
   
--   Значение по умолчанию <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> метода и <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> метод с `null` <xref:System.Globalization.CultureInfo> параметра.  
+-   Метод <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> по умолчанию и метод <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> с параметром `null`<xref:System.Globalization.CultureInfo>.  
   
 -   Перегрузки <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, принимающие в качестве параметра поиска <xref:System.String> и не имеющие параметра <xref:System.StringComparison>.  
   
@@ -225,7 +228,7 @@ ms.lasthandoff: 10/18/2017
   
  InvariantCulture: a + ̊ = å  
   
- Латинская строчная буква А, а (\u0061), находясь рядом с объединяющим кольцом над символом «+» , « ̊» (\u030a), интерпретируется как строчная латинская буква а с кольцом над ней, å (\u00e5). Как показано в следующем примере, это поведение отличается от порядкового сравнения.  
+ Латинская строчная буква А, а (\u0061), расположенная рядом с объединяющим кольцом над символом "+ " ̊"(\u030a), интерпретируется как строчная латинская буква а с кольцом над ней, å (\u00e5). Как показано в следующем примере, это поведение отличается от порядкового сравнения.  
   
  [!code-csharp[Conceptual.Strings.BestPractices#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/comparison3.cs#15)]
  [!code-vb[Conceptual.Strings.BestPractices#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/comparison3.vb#15)]  
@@ -244,13 +247,13 @@ ms.lasthandoff: 10/18/2017
 |----------|--------------|-----------------------------------------------------|  
 |Внутренние идентификаторы с учетом регистра<br /><br /> Идентификаторы с учетом регистра в таких стандартах, как XML и HTTP.<br /><br /> Параметры безопасности с учетом регистра.|Нелингвистические идентификаторы с точным соответствием байтов.|<xref:System.StringComparison.Ordinal>|  
 |Внутренние идентификаторы без учета регистра.<br /><br /> Идентификаторы без учета регистра в таких стандартах, как XML и HTTP.<br /><br /> Пути к файлам.<br /><br /> Ключи реестра и значения.<br /><br /> Переменные среды.<br /><br /> Идентификаторы ресурсов (например, имена дескрипторов).<br /><br /> Параметры безопасности без учета регистра.|Нелингвистический идентификатор, в котором регистр не учитывается; особенно данные, хранящиеся в большинстве системных служб Windows.|<xref:System.StringComparison.OrdinalIgnoreCase>|  
-|Некоторые сохраненные лингвистически релевантные данные.<br /><br /> Отображение лингвистических данных, требующее фиксированного порядка сортировки.|Лингвистически релевантные данные без учета языка и региональных параметров.|<xref:System.StringComparison.InvariantCulture><br /><br /> -или-<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
-|Данные, отображаемые пользователю.<br /><br /> Пользовательский ввод в большинстве случаев.|Данные, требующие местных лингвистических правил.|<xref:System.StringComparison.CurrentCulture><br /><br /> -или-<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
+|Некоторые сохраненные лингвистически релевантные данные.<br /><br /> Отображение лингвистических данных, требующее фиксированного порядка сортировки.|Лингвистически релевантные данные без учета языка и региональных параметров.|<xref:System.StringComparison.InvariantCulture><br /><br /> - или -<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
+|Данные, отображаемые пользователю.<br /><br /> Пользовательский ввод в большинстве случаев.|Данные, требующие местных лингвистических правил.|<xref:System.StringComparison.CurrentCulture><br /><br /> - или -<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
   
  [К началу](#top)  
   
 <a name="common_string_comparison_methods_in_the_net_framework"></a>   
-## <a name="common-string-comparison-methods-in-net"></a>Общие методы сравнения строк в .NET  
+## <a name="common-string-comparison-methods-in-net"></a>Распространенные методы сравнения строк в .NET  
  В следующих разделах описываются методы, которые чаще всего используются для сравнения строк.  
   
 ### <a name="stringcompare"></a>String.Compare  

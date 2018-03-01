@@ -19,27 +19,30 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8b03dec350d38d15faaa6a0afc6a1f2c31d5c58f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a3d845f53238f3b5b1744c13de9800e0d8f65dbc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="changing-case-in-net"></a>Смена регистра в .NET
 При написании приложения, которое принимает входные данные от пользователя, невозможно предугадать, какой регистр будет использоваться для ввода данных. Часто требуется обеспечить согласованность регистра строк, особенно если они отображаются в пользовательском интерфейсе. В таблице ниже описаны три метода изменения регистра. Для первых двух методов имеются перегруженные варианты, учитывающие язык и региональные параметры.  
   
-|Имя метода|Применение|  
+|Имя метода|Использовать|  
 |-----------------|---------|  
 |<xref:System.String.ToUpper%2A?displayProperty=nameWithType>|Преобразует все символы в строке в верхний регистр.|  
 |<xref:System.String.ToLower%2A?displayProperty=nameWithType>|Преобразует все символы в строке в нижний регистр.|  
 |<xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType>|Преобразует первые символы всех слов в строке в заглавные.|  
   
 > [!WARNING]
->  Обратите внимание, что методы <xref:System.String.ToUpper%2A?displayProperty=nameWithType> и <xref:System.String.ToLower%2A?displayProperty=nameWithType> не следует использовать для преобразования строк с целью их сравнения или проверки на равенство. Дополнительные сведения см. в разделе [сравнение строк в разных регистрах](#Comparing) раздела.  
+>  Обратите внимание, что методы <xref:System.String.ToUpper%2A?displayProperty=nameWithType> и <xref:System.String.ToLower%2A?displayProperty=nameWithType> не следует использовать для преобразования строк с целью их сравнения или проверки на равенство. См. дополнительные сведения о [сравнении строк, содержащих символы в разных регистрах](#Comparing).  
   
 <a name="Comparing"></a>   
 ## <a name="comparing-strings-of-mixed-case"></a>Сравнение строк, содержащих символы в разных регистрах  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Strings.ChangingCase#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#1)]
  [!code-vb[Strings.ChangingCase#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#1)]  
   
- В предыдущем примере по умолчанию учитываются язык и региональные параметры. В нем применяются соглашения об использовании регистров, действующие для текущих языка и региональных параметров. Для изменения регистра без учета языка и региональных параметров или применить правила регистра определенного языка и региональных параметров, используйте <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> перегрузки метода и укажите в качестве параметра <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> или <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> объект, представляющий указанного языка и региональных параметров в *языка и региональных параметров* параметра. Пример, демонстрирующий способ использования <xref:System.String.ToUpper%2A> для выполнения изменения регистра без учета языка и региональных параметров, см. в разделе [выполнение изменения регистра без учета языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
+ В предыдущем примере по умолчанию учитываются язык и региональные параметры. В нем применяются соглашения об использовании регистров, действующие для текущих языка и региональных параметров. Чтобы изменить регистр с учетом языка и региональных параметров или применить соглашения об использовании регистров, принятые для определенного языка и региональных параметров, воспользуйтесь перегрузку метода <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> и укажите в качестве параметра *culture* значение <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> или <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>, определяющее язык и региональные параметры. Пример, демонстрирующий использование метода <xref:System.String.ToUpper%2A> для изменения регистра без учета языка и региональных параметров, см. в инструкциях по [изменению регистра без учета языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
   
 ## <a name="tolower"></a>ToLower  
  Метод <xref:System.String.ToLower%2A?displayProperty=nameWithType> аналогичен предыдущему методу, однако преобразует все символы в строке в нижний регистр. В примере ниже смешанный регистр строки "Hello World!" изменяется на нижний.  
@@ -63,7 +66,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Strings.ChangingCase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#2)]
  [!code-vb[Strings.ChangingCase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#2)]  
   
- В предыдущем примере по умолчанию учитываются язык и региональные параметры. В нем применяются соглашения об использовании регистров, действующие для текущих языка и региональных параметров. Для изменения регистра без учета языка и региональных параметров или применить правила регистра определенного языка и региональных параметров, используйте <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> перегрузки метода и укажите в качестве параметра <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> или <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> объект, представляющий указанного языка и региональных параметров в *языка и региональных параметров* параметра. Пример, демонстрирующий способ использования <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> для выполнения изменения регистра без учета языка и региональных параметров, см. в разделе [выполнение изменения регистра без учета языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
+ В предыдущем примере по умолчанию учитываются язык и региональные параметры. В нем применяются соглашения об использовании регистров, действующие для текущих языка и региональных параметров. Чтобы изменить регистр с учетом языка и региональных параметров или применить соглашения об использовании регистров, принятые для определенного языка и региональных параметров, воспользуйтесь перегрузку метода <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> и укажите в качестве параметра *culture* значение <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> или <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>, определяющее язык и региональные параметры. Пример, демонстрирующий использование метода <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> для изменения регистра без учета языка и региональных параметров, см. в инструкциях по [изменению регистра без учета языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
   
 ## <a name="totitlecase"></a>ToTitleCase  
  Метод <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> преобразует первый символ каждого слова в верхний регистр, а остальные символы — в нижний. Однако слова, состоящие только из прописных букв, считаются сокращениями и не преобразуются.  

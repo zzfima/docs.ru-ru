@@ -15,28 +15,31 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b5a304c48a953b172cbcc3aa1c717a660298d36a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 404fdece284accf305ef3cf2324be2e37a8da4b6
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="implementing-a-dispose-method"></a>Реализация метода Dispose
 
-Реализации <xref:System.IDisposable.Dispose%2A> метод для освобождения неуправляемых ресурсов, используемых приложением. Сборщик мусора .NET не выделяет и не выпускает неуправляемую память.  
+Вы создадите метод <xref:System.IDisposable.Dispose%2A> для освобождения неуправляемых ресурсов, которые используются вашим приложением. Сборщик мусора .NET не выделяет и не выпускает неуправляемую память.  
   
-Шаблон удаления объекта, называют [шаблон удаления](../../../docs/standard/design-guidelines/dispose-pattern.md), упорядочивает жизненный цикл объекта. Шаблон удаления используется только для объектов, осуществляющих доступ к неуправляемым ресурсам, таких как дескрипторы файлов и канала, дескрипторы реестра, дескрипторы ожидания и указатели на блоки неуправляемой памяти. Это вызвано тем, что сборщик мусора очень эффективно удаляет неиспользуемые управляемые объекты, но не может удалить неуправляемые объекты.  
+Шаблон ликвидации объекта, именуемый также [шаблоном удаления](../../../docs/standard/design-guidelines/dispose-pattern.md), налагает определенные правила на жизненный цикл объекта. Шаблон удаления используется только для объектов, осуществляющих доступ к неуправляемым ресурсам, таких как дескрипторы файлов и канала, дескрипторы реестра, дескрипторы ожидания и указатели на блоки неуправляемой памяти. Это вызвано тем, что сборщик мусора очень эффективно удаляет неиспользуемые управляемые объекты, но не может удалить неуправляемые объекты.  
   
 Существует два варианта шаблона удаления:  
   
 * Заключение в оболочку каждого неуправляемого ресурса, используемого типом в безопасном дескрипторе (то есть в классе, производном от <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>). В этом случае необходимо реализовать интерфейс <xref:System.IDisposable> и дополнительный метод `Dispose(Boolean)`. Это рекомендуемый вариант, не требующий переопределения метода <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.  
   
   > [!NOTE]
-  > <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> Пространство имен предоставляет набор классов, производных от <xref:System.Runtime.InteropServices.SafeHandle>, перечислены в [использование безопасных дескрипторов](#SafeHandles) раздела. Если не удается найти класс, способный освободить неуправляемый ресурс, можно реализовать собственный подкласс <xref:System.Runtime.InteropServices.SafeHandle>.  
+  > Пространство имен <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> содержит набор классов, производных от <xref:System.Runtime.InteropServices.SafeHandle>. Эти классы перечислены в разделе [Использование безопасных дескрипторов](#SafeHandles). Если не удается найти класс, способный освободить неуправляемый ресурс, можно реализовать собственный подкласс <xref:System.Runtime.InteropServices.SafeHandle>.  
   
 * Реализация интерфейса <xref:System.IDisposable> и дополнительного метода `Dispose(Boolean)`, а также переопределение метода <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. Необходимо переопределить метод <xref:System.Object.Finalize%2A>, чтобы убедиться, что неуправляемые ресурсы удаляются, если реализация <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> не вызывается объектом-получателем типа. При использовании рекомендуемого метода, описанного в предыдущем пункте, класс <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> делает это от вашего имени.  
   
@@ -67,7 +70,7 @@ ms.lasthandoff: 10/18/2017
   
 ### <a name="the-disposeboolean-overload"></a>Перегрузка Dispose(Boolean)
 
-Во второй перегрузке *disposing* параметр <xref:System.Boolean> , указывающее, является ли метод вызывается из <xref:System.IDisposable.Dispose%2A> метода (его значением является `true`) или из метода завершения (его значение равно `false`).  
+Во второй перегрузке *disposing* используется параметр типа <xref:System.Boolean>, который указывает, откуда осуществляется вызов метода: из метода <xref:System.IDisposable.Dispose%2A> (значение `true`) или из метода завершения (значение `false`).  
   
 Тело метода состоит из двух блоков кода:  
   
@@ -108,13 +111,13 @@ ms.lasthandoff: 10/18/2017
 [!code-vb[System.IDisposable#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base2.vb#5)]  
   
 > [!NOTE]
-> В C# переопределение <xref:System.Object.Finalize%2A?displayProperty=nameWithType> путем определения [деструктор](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
+> В C# переопределение <xref:System.Object.Finalize%2A?displayProperty=nameWithType> выполняется путем определения [деструктора](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
   
 ## <a name="implementing-the-dispose-pattern-for-a-derived-class"></a>Реализация шаблона удаления для производного класса
 
 Класс, производный от класса, реализующего интерфейс <xref:System.IDisposable>, не должен реализовывать интерфейс <xref:System.IDisposable>, поскольку реализация метода <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> базового класса наследуется производными классами. Вместо этого, чтобы реализовать шаблон удаления для базового класса, необходимо следующее:  
   
-* Метод `protected``Dispose(Boolean)`, который переопределяет метод базового класса и выполняет фактическую работу по освобождению ресурсов производного класса. Этот метод должен также вызывать метод `Dispose(Boolean)` базового класса и передавать в него значение `true` для аргумента *disposing*.  
+* Метод `protected Dispose(Boolean)`, который переопределяет метод базового класса и выполняет фактическую работу по освобождению ресурсов производного класса. Этот метод должен также вызывать метод `Dispose(Boolean)` базового класса и передавать в него значение `true` для аргумента *disposing*.  
   
 * Любой класс, производный от класса <xref:System.Runtime.InteropServices.SafeHandle>, который создает оболочку для неуправляемого ресурс (рекомендуется), или переопределенный метод <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. Класс <xref:System.Runtime.InteropServices.SafeHandle> содержит метод завершения, что освобождает разработчика от необходимости создавать его вручную. Если есть метод завершения, он должен вызывать перегруженный метод `Dispose(Boolean)`, указывая при этом аргумент *disposing* со значением `false`.  
   
@@ -132,7 +135,7 @@ ms.lasthandoff: 10/18/2017
 [!code-vb[System.IDisposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived2.vb#6)]  
   
 > [!NOTE]
-> В C# переопределение <xref:System.Object.Finalize%2A?displayProperty=nameWithType> путем определения [деструктор](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
+> В C# переопределение <xref:System.Object.Finalize%2A?displayProperty=nameWithType> выполняется путем определения [деструктора](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
   
 <a name="SafeHandles"></a>   
 ## <a name="using-safe-handles"></a>Использование безопасных дескрипторов
@@ -175,5 +178,5 @@ ms.lasthandoff: 10/18/2017
 <xref:Microsoft.Win32.SafeHandles>   
 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>   
 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>   
-[Как: определение и использование классов и структур (C + +/ CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)   
-[Шаблон удаления](../../../docs/standard/design-guidelines/dispose-pattern.md)
+[Практическое руководство. Определение и использование классов и структур (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)   
+[Шаблон ликвидации](../../../docs/standard/design-guidelines/dispose-pattern.md)

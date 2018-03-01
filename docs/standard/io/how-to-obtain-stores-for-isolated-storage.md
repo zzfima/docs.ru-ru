@@ -19,45 +19,48 @@ helpviewer_keywords:
 - data stores, obtaining
 - data storage using isolated storage, obtaining stores
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: bb0b877aa0f4cee36bd1f8c1cea624cf9368fbaa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 61f183398c3f8c93ead965036e1edeb200dd8cb1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>Практическое руководство. Получение хранилищ для изолированного хранения
-Изолированное хранилище предоставляет виртуальную файловую систему в ячейке данных. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> Класс предоставляет ряд методов для взаимодействия с помощью изолированного хранилища. Для создания и получения хранилищ <xref:System.IO.IsolatedStorage.IsolatedStorageFile> содержит три статических методов:  
+Изолированное хранилище предоставляет виртуальную файловую систему в секции данных. Класс <xref:System.IO.IsolatedStorage.IsolatedStorageFile> предоставляет ряд методов для взаимодействия с изолированным хранилищем. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> содержит три статических метода, позволяющих создать и получить хранилище:  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>Возвращает хранилища, изолированного по пользователю и сборке.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> возвращает хранилище, изолированное по пользователю и сборке.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A>Возвращает хранилища, в котором изолирована, домена и сборки.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> возвращает хранилище, изолированное по домену и сборке.  
   
-     Оба метода получения хранилища, к которому принадлежит код, из которого они вызываются.  
+     Хранилище, полученное любым из этих двух методов, принадлежит коду, из которого они вызваны.  
   
--   Статический метод <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> Возвращает изолированное хранилище, указанное посредством передачи в комбинации параметров области.  
+-   Статический метод <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> возвращает изолированное хранилище, которое определяется комбинацией переданных параметров области.  
   
- Следующий код возвращает хранилища, изолированного по пользователю, сборке и домену.  
+ Следующий код возвращает хранилище, изолированное по пользователю, сборке и домену.  
   
  [!code-cpp[Conceptual.IsolatedStorage#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source6.cpp#6)]
  [!code-csharp[Conceptual.IsolatedStorage#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source6.cs#6)]
  [!code-vb[Conceptual.IsolatedStorage#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source6.vb#6)]  
   
- Можно использовать <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> метод, чтобы указать, что хранилище должно перемещаться вместе с перемещаемым профилем пользователя. Дополнительные сведения о том, как настроить эту функцию, в разделе [типа изоляции](../../../docs/standard/io/types-of-isolation.md).  
+ Вы можете использовать метод <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>, чтобы определить перемещаемое хранилище для перемещаемого профиля пользователя. Дополнительные сведения о такой настройке см. в статье [о типах изоляции](../../../docs/standard/io/types-of-isolation.md).  
   
- Изолированные хранилища, полученные из разных сборок, по умолчанию, различные хранилища. Можно использовать хранилище другой сборки или домена путем передачи в свидетельство сборки или домена в параметрах <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> метод. Это разрешение для доступа к изолированному хранилищу по идентификатору домена приложения. Дополнительные сведения см. в разделе <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> перегруженных версий метода.  
+ Как очевидно из названия, изолированные хранилища из разных сборок являются разными хранилищами. Вы можете получить доступ к хранилищу другой сборки или другого домена, передав свидетельство сборки или домена в параметрах метода <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>. Для такого действия вам потребуются права на доступ к изолированному хранилищу по идентификатору домена приложения. Дополнительную информацию см. в описании перегрузок метода <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>.  
   
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A>, И <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> методы возвращают <xref:System.IO.IsolatedStorage.IsolatedStorageFile> объекта. Сведения о выборе типа изоляции лучше всего подходит для конкретной ситуации, в разделе [типа изоляции](../../../docs/standard/io/types-of-isolation.md). При наличии объект файла изолированного хранилища, можно использовать методы изолированного хранилища для чтения, записи, создания и удаления файлов и каталогов.  
+ Методы <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> и <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> возвращают объект <xref:System.IO.IsolatedStorage.IsolatedStorageFile>. Чтобы правильно выбрать тип изоляции для конкретного случая, изучите статью о [типах изоляции](../../../docs/standard/io/types-of-isolation.md). Получив объект файла изолированного хранилища, вы можете использовать методы изолированного хранилища для чтения, записи, создания и удаления файлов и каталогов в нем.  
   
- Отсутствует механизм предотвращения передачи кодом <xref:System.IO.IsolatedStorage.IsolatedStorageFile> объект на код, который не имеет необходимых прав доступа для получения само хранилище. Идентификаторы доменов и сборок и разрешения изолированного хранения проверяются только при получении ссылки на <xref:System.IO.IsolatedStorage.IsolatedStorage> будет получен, обычно в <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A>, или <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> метод. Защиту ссылок на <xref:System.IO.IsolatedStorage.IsolatedStorageFile> объектов отвечает, поэтому код, использующий эти ссылки.  
+ Не существует механизмов защиты, препятствующих передаче объекта <xref:System.IO.IsolatedStorage.IsolatedStorageFile> в код, который не имеет соответствующих прав для доступа к этому хранилищу. Идентификаторы доменов и сборок, а также разрешения для изолированного хранилища проверяются только при получении ссылки на объект <xref:System.IO.IsolatedStorage.IsolatedStorage>, то есть обычно в методах <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> или <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>. Таким образом, защита ссылок на объекты <xref:System.IO.IsolatedStorage.IsolatedStorageFile> возлагается на код, использующий такие ссылки.  
   
 ## <a name="example"></a>Пример  
- Ниже приведен простой пример получения классом хранилища, изолированного по пользователю и сборке. Код может быть изменен для получения хранилища, изолированного по пользователю, домену и сборке, путем добавления <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Domain?displayProperty=nameWithType> к аргументам, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> метод передает.  
+ Ниже приведен простой пример класса, который получает хранилище, изолированное по пользователю и сборке. Чтобы получить хранилище, изолированное по пользователю, домену и сборке, измените приведенный код, добавив <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Domain?displayProperty=nameWithType> в аргументы, которые передает метод <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>.  
   
- После выполнения кода можно убедиться, что хранилище создано, введя **StoreAdm/LIST** из командной строки. Эта процедура выполняется [средство изолированного хранилища (Storeadm.exe)](../../../docs/framework/tools/storeadm-exe-isolated-storage-tool.md) и выводит все текущие изолированные хранилища для пользователя.  
+ Когда выполните этот код, проверьте успешно ли создано хранилище. Для этого введите в командной строке команду **StoreAdm /LIST**. Она запустит [средство изолированного хранилища (Storeadm.exe)](../../../docs/framework/tools/storeadm-exe-isolated-storage-tool.md) и выведет полный список выделенных пользователю изолированных хранилищ.  
   
  [!code-cpp[Conceptual.IsolatedStorage#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source6.cpp#7)]
  [!code-csharp[Conceptual.IsolatedStorage#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source6.cs#7)]

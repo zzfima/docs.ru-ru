@@ -5,22 +5,23 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 481e0751c45054a9f99b8302ed3c2d12abc052ea
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a6bfa60cce332deef2a72da836f96dbe37e65d2a
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a>Практическое руководство. Изменение документа в формате Office Open XML (C#)
 В этом разделе представлен пример, в котором открывается документ Office Open XML, затем он изменяется и сохраняется.  
   
- Дополнительные сведения об Office Open XML см. на веб-сайте [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
+ Дополнительные сведения об Office Open XML см. в руководстве по [пакету SDK для Open XML](https://github.com/OfficeDev/Open-XML-SDK) и на сайте [www.ericwhite.com](http://ericwhite.com/).  
   
 ## <a name="example"></a>Пример  
  В этом примере осуществляется поиск первого абзаца документа. В примере происходит получение текста из этого абзаца, а затем все текстовые прогоны в абзаце удаляются. Создается новый текстовый прогон, состоящий из текста первого абзаца, преобразованного в верхний регистр. Затем измененный XML сериализуется в пакет Open XML и закрывается.  

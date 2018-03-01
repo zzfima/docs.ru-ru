@@ -22,18 +22,21 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0205edba221b833625becbe6a1f2fdda2f9409a2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d3fb814d6b458de90d684a3ac92e22a62e290a9a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="writing-custom-attributes"></a>Написание настраиваемых атрибутов
-Чтобы создавать собственные атрибуты, совсем не обязательно в совершенстве овладевать множеством новых понятий. Если вы знакомы с объектно-ориентированным программированием и знаете, как создавать классы, вы уже обладаете почти всеми нужными знаниями. Пользовательские атрибуты — традиционные классы, прямо или косвенно наследующие <xref:System.Attribute?displayProperty=nameWithType>. Подобно традиционным классам настраиваемые атрибуты содержат методы, хранящие и извлекающие данные.  
+Чтобы создавать собственные атрибуты, совсем не обязательно в совершенстве овладевать множеством новых понятий. Если вы знакомы с объектно-ориентированным программированием и знаете, как создавать классы, вы уже обладаете почти всеми нужными знаниями. Настраиваемые атрибуты — это традиционные классы, прямо или косвенно наследующие от <xref:System.Attribute?displayProperty=nameWithType>. Подобно традиционным классам настраиваемые атрибуты содержат методы, хранящие и извлекающие данные.  
   
  Ниже приведены основные этапы правильно выстроенного процесса разработки классов настраиваемых атрибутов.  
   
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.Attributes.Usage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#5)]
  [!code-vb[Conceptual.Attributes.Usage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#5)]  
   
- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType> Имеет три члена, которые важны для создания настраиваемых атрибутов: [AttributeTargets](#cpconwritingcustomattributesanchor1), [Inherited](#cpconwritingcustomattributesanchor2), и [AllowMultiple](#cpconwritingcustomattributesanchor3).  
+ В <xref:System.AttributeUsageAttribute?displayProperty=nameWithType> есть три члена, которые важны для создания настраиваемых атрибутов: [AttributeTargets](#cpconwritingcustomattributesanchor1), [Inherited](#cpconwritingcustomattributesanchor2)и [AllowMultiple](#cpconwritingcustomattributesanchor3).  
   
 <a name="cpconwritingcustomattributesanchor1"></a>   
 ### <a name="attributetargets-member"></a>Член AttributeTargets  
@@ -69,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="cpconwritingcustomattributesanchor2"></a>   
 ### <a name="inherited-property"></a>Свойство Inherited  
- <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> Указывает ли атрибут быть унаследован классами, производными от классов, к которым применяется этот атрибут. Это свойство принимает значение **true** (по умолчанию) или **false** . Например, в следующем примере свойству `MyAttribute` атрибута <xref:System.AttributeUsageAttribute.Inherited%2A> задано значение по умолчанию **true**, в то время как свойство `YourAttribute` атрибута <xref:System.AttributeUsageAttribute.Inherited%2A> имеет значение **false**.  
+ Свойство <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> указывает, может ли атрибут быть унаследован классами, производными от класса, к которому этот атрибут применен. Это свойство принимает значение **true** (по умолчанию) или **false** . Например, в следующем примере свойству `MyAttribute` атрибута <xref:System.AttributeUsageAttribute.Inherited%2A> задано значение по умолчанию **true**, в то время как свойство `YourAttribute` атрибута <xref:System.AttributeUsageAttribute.Inherited%2A> имеет значение **false**.  
   
  [!code-cpp[Conceptual.Attributes.Usage#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#7)]
  [!code-csharp[Conceptual.Attributes.Usage#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#7)]
@@ -89,7 +92,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="cpconwritingcustomattributesanchor3"></a>   
 ### <a name="allowmultiple-property"></a>Свойство AllowMultiple  
- <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=nameWithType> Свойство указывает, является ли на элемент может существовать несколько экземпляров атрибута. Если его значение равно **true**, допускается существование нескольких экземпляров. Если значение равно **false** (по умолчанию), можно использовать только один экземпляр.  
+ Свойство <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=nameWithType> указывает, можно ли применять к элементу несколько экземпляров атрибута. Если его значение равно **true**, допускается существование нескольких экземпляров. Если значение равно **false** (по умолчанию), можно использовать только один экземпляр.  
   
  В следующем примере свойство `MyAttribute` атрибута <xref:System.AttributeUsageAttribute.AllowMultiple%2A> имеет значение по умолчанию **false**, в то время как для атрибута `YourAttribute` это свойство имеет значение **true**.  
   

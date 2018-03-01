@@ -16,15 +16,18 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 039dee4df1a6d06fa1833eae077817ff5eca3ea3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3c7d196b54a831c807b7181c1c810c3e78a463a2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Классы Semaphore и SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> Класс представляет собой именованный (общесистемный) или локальный семафор. Он является тонкой оболочкой вокруг объекта семафора Win32. Семафоры Win32 являются семафорами счета, которые могут быть использованы для управления доступом к пулу ресурсов.  
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="semaphores-and-thread-identity"></a>Семафоры и идентификация потоков  
  Типы два семафора не обеспечивают идентификацию потоков по вызовам методов <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.SemaphoreSlim.Wait%2A>, <xref:System.Threading.Semaphore.Release%2A> и <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType>. Например, обычным сценарием использования семафора является наличие потока производителя и потока получателя. При этом один поток всегда увеличивает счетчик семафора, а другой всегда уменьшает его.  
   
- Программист должен обеспечить, чтобы поток не освобождал семафор слишком много раз. Например предположим, что семафор имеет максимальное значение счетчика равное двум, а два потока A и B входят в семафор. Если ошибка программирования в потоке B заставляет его вызывать метод `Release` дважды, оба вызова оканчиваются успешно. Счетчик на семафоре переполнен и если поток A вызывает `Release`, <xref:System.Threading.SemaphoreFullException> возникает исключение.  
+ Программист должен обеспечить, чтобы поток не освобождал семафор слишком много раз. Например предположим, что семафор имеет максимальное значение счетчика равное двум, а два потока A и B входят в семафор. Если ошибка программирования в потоке B заставляет его вызывать метод `Release` дважды, оба вызова оканчиваются успешно. Счетчик на семафоре переполнен, и если поток A вызывает `Release`, <xref:System.Threading.SemaphoreFullException> создается исключение.  
   
 ## <a name="named-semaphores"></a>Именованные семафоры  
  Операционная система Windows позволяет присваивать семафорам имена. Именованный семафор относится ко всей системе. То есть после создания именованный семафор становится видимым для всех потоков во всех процессах. Таким образом именованный семафор может использоваться для синхронизации действий процессов, а также потоков.  

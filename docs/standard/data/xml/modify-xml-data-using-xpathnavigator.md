@@ -13,22 +13,25 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ec2846dcac6bfe14746e038d592b7dfe49374993
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cc46aeda6efe9f21bc094a4bc9d211fc282e9b65
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>Изменение XML-данных с помощью класса XPathNavigator
 Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет набор методов для изменения узлов и значений в XML-документе. Для использования этих методов необходимо сделать редактируемым объект <xref:System.Xml.XPath.XPathNavigator>, то есть установить для свойства <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> значение `true`.  
   
  Объекты <xref:System.Xml.XPath.XPathNavigator> для правки XML-документа создаются с помощью метода <xref:System.Xml.XmlDocument.CreateNavigator%2A> класса <xref:System.Xml.XmlDocument>. Объекты <xref:System.Xml.XPath.XPathNavigator>, созданные классом <xref:System.Xml.XPath.XPathDocument>, доступны только для чтения, и любая попытка вызова методов редактирования объекта <xref:System.Xml.XPath.XPathNavigator>, созданного объектом <xref:System.Xml.XPath.XPathDocument>, приводит к возникновению исключения <xref:System.NotSupportedException>.  
   
- Дополнительные сведения о создании редактируемой <xref:System.Xml.XPath.XPathNavigator> объектов, в разделе [чтения XML-данных с помощью XPathDocument и XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md).  
+ Дополнительные сведения о доступных только для чтения и изменяемых объектах <xref:System.Xml.XPath.XPathNavigator> см. в руководстве по [чтению данных XML с помощью XPathDocument и XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md).  
   
 ## <a name="modifying-nodes"></a>Изменение узлов  
  Удобнее всего изменять значение узла с помощью методов <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> и <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> класса <xref:System.Xml.XPath.XPathNavigator>.  
@@ -48,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  Изменение узлов <xref:System.Xml.XPath.XPathNodeType.Namespace> и узла <xref:System.Xml.XPath.XPathNodeType.Root> не поддерживается.  
   
- Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет также набор методов для вставки и удаления узлов. Дополнительные сведения о вставке и удалении узлов из XML-документа см. в разделе [вставить XML-данных с помощью класса XPathNavigator](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md) и [удалить XML-данных с помощью класса XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md) разделы.  
+ Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет также набор методов для вставки и удаления узлов. Дополнительные сведения о вставке и удалении узлов в XML-документах вы найдете в статьях [Вставка XML-данных с помощью XPathNavigator](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md) и [Удаление XML-данных с помощью XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md).  
   
 ### <a name="modifying-untyped-values"></a>Изменение нетипизированных значений  
  Метод <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> просто вставляет нетипизированное значение `string`, переданное в качестве параметра, как значение узла, на котором в данный момент позиционируется объект <xref:System.Xml.XPath.XPathNavigator>. Значение вставляется без какого-либо типа и без проверки допустимости нового значения в соответствии с типом узла, если доступны сведения о схеме.  
@@ -122,7 +125,7 @@ navigator.SetTypedValue(DateTime.Now);
   
  Поскольку соответствие элемента зависит от соответствия его дочерних элементов и атрибутов, их изменения могут повлиять на соответствие элемента, который ранее соответствовал. Конкретнее, если дочерние элементы или атрибуты элемента добавляются, изменяются или удаляются, элемент переходит в состояние неустановленного соответствия. Чтобы отразить этот факт, свойство <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> свойства <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> элемента получает значение <xref:System.Xml.Schema.XmlSchemaValidity.NotKnown>. Затем этот эффект рекурсивно распространяется вверх по XML-документу, поскольку соответствие родительского элемента данного элемента (и его родительского элемента и т. п.) также приходит в неустановленное состояние.  
   
- Дополнительные сведения о проверке схемы и <xref:System.Xml.XPath.XPathNavigator> см. в описании [проверки схемы с помощью класса XPathNavigator](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md).  
+ Дополнительные сведения о проверке схемы и классе <xref:System.Xml.XPath.XPathNavigator> см. в статье [Проверка по схеме с помощью XPathNavigator](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md).  
   
 ### <a name="modifying-attributes"></a>Изменение атрибутов  
  Для изменения узлов типизированных и нетипизированных атрибутов, а также других типов узлов, перечисленных в разделе «Изменение узлов», применяются методы <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> и <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A>.  
@@ -253,7 +256,7 @@ Console.WriteLine(navigator.OuterXml);
 >  Если содержимое элемента с атрибутом `xsi:nil`, значение которого равно `false`, удалить, значение атрибута не будет изменено на `true`.  
   
 ## <a name="saving-an-xml-document"></a>Сохранение XML-документа  
- Сохранение изменений, внесенных в объект <xref:System.Xml.XmlDocument> с помощью описанных в данном разделе методов, выполняется с помощью методов класса <xref:System.Xml.XmlDocument>. Дополнительные сведения о сохранении изменений, внесенных в <xref:System.Xml.XmlDocument> см. в разделе [сохранение и запись документа](../../../../docs/standard/data/xml/saving-and-writing-a-document.md).  
+ Сохранение изменений, внесенных в объект <xref:System.Xml.XmlDocument> с помощью описанных в данном разделе методов, выполняется с помощью методов класса <xref:System.Xml.XmlDocument>. Дополнительные сведения о сохранении изменений, внесенных в объект <xref:System.Xml.XmlDocument>, см. в руководстве по [созданию и сохранению документов](../../../../docs/standard/data/xml/saving-and-writing-a-document.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Xml.XmlDocument>  
