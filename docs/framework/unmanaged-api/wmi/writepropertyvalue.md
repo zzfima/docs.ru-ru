@@ -3,18 +3,26 @@ title: "Функция WritePropertyValue (Справочник по неупр�
 description: "Функция WritePropertyValue записывает байты свойство."
 ms.date: 11/06/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: reference
-api_name: WritePropertyValue
-api_location: WMINet_Utils.dll
-api_type: DLLExport
-f1_keywords: WritePropertyValue
-helpviewer_keywords: WritePropertyValue function [.NET WMI and performance counters]
-topic_type: Reference
+api_name:
+- WritePropertyValue
+api_location:
+- WMINet_Utils.dll
+api_type:
+- DLLExport
+f1_keywords:
+- WritePropertyValue
+helpviewer_keywords:
+- WritePropertyValue function [.NET WMI and performance counters]
+topic_type:
+- Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 7221c9e0f1cb49ab0e27130ce69c0527ba903148
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT

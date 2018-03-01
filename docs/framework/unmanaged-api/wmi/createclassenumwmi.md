@@ -3,18 +3,26 @@ title: "Функция CreateClassEnumWmi (Справочник по неупр�
 description: "Функция CreateClassEnumWmi Возвращает перечислитель для всех классов, которые удовлетворяют заданным условиям."
 ms.date: 11/06/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: reference
-api_name: CreateClassEnumWmi
-api_location: WMINet_Utils.dll
-api_type: DLLExport
-f1_keywords: CreateClassEnumWmi
-helpviewer_keywords: CreateClassEnumWmi function [.NET WMI and performance counters]
-topic_type: Reference
+api_name:
+- CreateClassEnumWmi
+api_location:
+- WMINet_Utils.dll
+api_type:
+- DLLExport
+f1_keywords:
+- CreateClassEnumWmi
+helpviewer_keywords:
+- CreateClassEnumWmi function [.NET WMI and performance counters]
+topic_type:
+- Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 2058bad61af79244d211afb6a7661ca1642db070
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT

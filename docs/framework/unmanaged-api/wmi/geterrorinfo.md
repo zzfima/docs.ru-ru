@@ -3,18 +3,26 @@ title: "Функция GetErrorInfo (Справочник по неуправл�
 description: "Функция GetErrorInfo извлекает сведения об ошибках в предыдущем вызове функции."
 ms.date: 11/06/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: reference
-api_name: GetErrorInfo
-api_location: WMINet_Utils.dll
-api_type: DLLExport
-f1_keywords: GetErrorInfo
-helpviewer_keywords: GetErrorInfo function [.NET WMI and performance counters]
-topic_type: Reference
+api_name:
+- GetErrorInfo
+api_location:
+- WMINet_Utils.dll
+api_type:
+- DLLExport
+f1_keywords:
+- GetErrorInfo
+helpviewer_keywords:
+- GetErrorInfo function [.NET WMI and performance counters]
+topic_type:
+- Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: d4b4acde080c61fbfd5cec319c1986b8c86352c4
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT

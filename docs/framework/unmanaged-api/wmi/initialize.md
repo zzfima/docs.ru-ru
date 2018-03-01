@@ -3,18 +3,26 @@ title: "Initialize-функция (Справочник по неуправля�
 description: "Функцию инициализации выполняет инициализацию WMI."
 ms.date: 11/06/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: reference
-api_name: Initialize
-api_location: WMINet_Utils.dll
-api_type: DLLExport
-f1_keywords: Initialize
-helpviewer_keywords: Initialize function [.NET WMI and performance counters]
-topic_type: Reference
+api_name:
+- Initialize
+api_location:
+- WMINet_Utils.dll
+api_type:
+- DLLExport
+f1_keywords:
+- Initialize
+helpviewer_keywords:
+- Initialize function [.NET WMI and performance counters]
+topic_type:
+- Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: d62d959c5dfeac237abb20b86df87ae07a077dbd
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
