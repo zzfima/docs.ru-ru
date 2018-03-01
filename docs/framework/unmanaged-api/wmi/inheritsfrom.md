@@ -3,18 +3,26 @@ title: "Функция раскрывшемся списке (Справочни
 description: "Функция раскрывшемся списке определяет, является ли класс или экземпляр является производным от определенного родительского класса."
 ms.date: 11/06/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: reference
-api_name: InheritsFrom
-api_location: WMINet_Utils.dll
-api_type: DLLExport
-f1_keywords: InheritsFrom
-helpviewer_keywords: InheritsFrom function [.NET WMI and performance counters]
-topic_type: Reference
+api_name:
+- InheritsFrom
+api_location:
+- WMINet_Utils.dll
+api_type:
+- DLLExport
+f1_keywords:
+- InheritsFrom
+helpviewer_keywords:
+- InheritsFrom function [.NET WMI and performance counters]
+topic_type:
+- Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 0dce964829399e6761152a8ff424671b47cc6eb3
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
