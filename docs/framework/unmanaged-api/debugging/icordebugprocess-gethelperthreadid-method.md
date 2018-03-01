@@ -5,23 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: reference
-api_name: ICorDebugProcess.GetHelperThreadID
-api_location: mscordbi.dll
-api_type: COM
-f1_keywords: ICorDebugProcess::GetHelperThreadID
+api_name:
+- ICorDebugProcess.GetHelperThreadID
+api_location:
+- mscordbi.dll
+api_type:
+- COM
+f1_keywords:
+- ICorDebugProcess::GetHelperThreadID
 helpviewer_keywords:
 - GetHelperThreadID method [.NET Framework debugging]
 - ICorDebugProcess::GetHelperThreadID method [.NET Framework debugging]
 ms.assetid: 84e1e605-37c1-49a5-8e12-35db85654622
-topic_type: apiref
-caps.latest.revision: "11"
+topic_type:
+- apiref
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 03e801cb58b8f5c3f658085fcee4288278e545c5
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -44,7 +51,7 @@ HRESULT GetHelperThreadID (
  <span data-ttu-id="69dd2-106">[out] Указатель на ОС потока идентификатор вспомогательный внутренний поток отладчика.</span><span class="sxs-lookup"><span data-stu-id="69dd2-106">[out] A pointer to the OS thread ID of the debugger's internal helper thread.</span></span>  
   
 ## <a name="remarks"></a><span data-ttu-id="69dd2-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="69dd2-107">Remarks</span></span>  
- <span data-ttu-id="69dd2-108">При отладке управляемого и неуправляемого кода это отладчик обязан гарантировать непрерывное потока с указанным Идентификатором, если он попадает на точку останова размещенную отладчиком.</span><span class="sxs-lookup"><span data-stu-id="69dd2-108">During managed and unmanaged debugging, it is the debugger's responsibility to ensure that the thread with the specified ID remains running if it hits a breakpoint placed by the debugger.</span></span> <span data-ttu-id="69dd2-109">Отладчик может возникнуть необходимость скрыть этот поток от пользователя.</span><span class="sxs-lookup"><span data-stu-id="69dd2-109">A debugger may also wish to hide this thread from the user.</span></span> <span data-ttu-id="69dd2-110">Если ни один вспомогательный поток существует в процессе, `GetHelperThreadID` метод возвращает нуль в *`pThreadID`.</span><span class="sxs-lookup"><span data-stu-id="69dd2-110">If no helper thread exists in the process yet, the `GetHelperThreadID` method returns zero in *`pThreadID`.</span></span>  
+ <span data-ttu-id="69dd2-108">При отладке управляемого и неуправляемого кода это отладчик обязан гарантировать непрерывное потока с указанным Идентификатором, если он попадает на точку останова размещенную отладчиком.</span><span class="sxs-lookup"><span data-stu-id="69dd2-108">During managed and unmanaged debugging, it is the debugger's responsibility to ensure that the thread with the specified ID remains running if it hits a breakpoint placed by the debugger.</span></span> <span data-ttu-id="69dd2-109">Отладчик может возникнуть необходимость скрыть этот поток от пользователя.</span><span class="sxs-lookup"><span data-stu-id="69dd2-109">A debugger may also wish to hide this thread from the user.</span></span> <span data-ttu-id="69dd2-110">Если ни один вспомогательный поток существует в процессе, `GetHelperThreadID` метод возвращает нуль в \*`pThreadID`.</span><span class="sxs-lookup"><span data-stu-id="69dd2-110">If no helper thread exists in the process yet, the `GetHelperThreadID` method returns zero in \*`pThreadID`.</span></span>  
   
  <span data-ttu-id="69dd2-111">Идентификатор потока вспомогательного потока кэшировать нельзя, поскольку со временем может меняться.</span><span class="sxs-lookup"><span data-stu-id="69dd2-111">You cannot cache the thread ID of the helper thread, because it may change over time.</span></span> <span data-ttu-id="69dd2-112">Необходимо повторно запросить идентификатор потока при каждом событии остановки.</span><span class="sxs-lookup"><span data-stu-id="69dd2-112">You must re-query the thread ID at every stopping event.</span></span>  
   

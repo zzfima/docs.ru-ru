@@ -1,6 +1,4 @@
 # [Строки](index.md)
 ## [Практическое руководство. Изменение содержимого строки](how-to-modify-string-contents.md)
 ## [Практическое руководство. Сравнение строк](how-to-compare-strings.md)
-## [Практическое руководство. Поиск строк с помощью строковых методов](how-to-search-strings-using-string-methods.md)
-## [Практическое руководство. Поиск строк с помощью регулярных выражений](how-to-search-strings-using-regular-expressions.md)
 ## [Практическое руководство. Определение представления числового значения в строке](how-to-determine-whether-a-string-represents-a-numeric-value.md)
