@@ -2,11 +2,13 @@
 title: "Преобразования указателей (Руководство по программированию на C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: pointers [C#], conversions
+helpviewer_keywords:
+- pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 36589d139c91e04d9e3d8b31281a91c26b85a5d5
@@ -22,7 +24,7 @@ ms.lasthandoff: 11/21/2017
   
 |<span data-ttu-id="402c0-106">Исходный тип</span><span class="sxs-lookup"><span data-stu-id="402c0-106">From</span></span>|<span data-ttu-id="402c0-107">Целевой тип</span><span class="sxs-lookup"><span data-stu-id="402c0-107">To</span></span>|  
 |----------|--------|  
-|<span data-ttu-id="402c0-108">Любой тип указателя</span><span class="sxs-lookup"><span data-stu-id="402c0-108">Any pointer type</span></span>|<span data-ttu-id="402c0-109">void*</span><span class="sxs-lookup"><span data-stu-id="402c0-109">void*</span></span>|  
+|<span data-ttu-id="402c0-108">Любой тип указателя</span><span class="sxs-lookup"><span data-stu-id="402c0-108">Any pointer type</span></span>|<span data-ttu-id="402c0-109">void\*</span><span class="sxs-lookup"><span data-stu-id="402c0-109">void\*</span></span>|  
 |<span data-ttu-id="402c0-110">null</span><span class="sxs-lookup"><span data-stu-id="402c0-110">null</span></span>|<span data-ttu-id="402c0-111">Любой тип указателя</span><span class="sxs-lookup"><span data-stu-id="402c0-111">Any pointer type</span></span>|  
   
  <span data-ttu-id="402c0-112">Явное преобразование указателя используется для выполнения преобразований, для которых отсутствует неявное преобразование, с помощью выражения приведения.</span><span class="sxs-lookup"><span data-stu-id="402c0-112">Explicit pointer conversion is used to perform conversions, for which there is no implicit conversion, by using a cast expression.</span></span> <span data-ttu-id="402c0-113">Эти преобразования показаны в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="402c0-113">The following table shows these conversions.</span></span>  

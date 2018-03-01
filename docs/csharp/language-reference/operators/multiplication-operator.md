@@ -2,14 +2,16 @@
 title: "* Оператор (ссылка C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: '*_CSharpKeyword'
+f1_keywords:
+- '*_CSharpKeyword'
 helpviewer_keywords:
 - multiplication operator (*) [C#]
 - '* operator [C#]'
 ms.assetid: abd9a5f0-9b24-431e-971a-09ee1c45c50e
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 64c32def0935f4347f9aaccc2865b9cd33dd8a70
@@ -18,7 +20,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="60462-102">Оператор * (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="60462-102">* Operator (C# Reference)</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="60462-102">Оператор \* (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="60462-102">\* Operator (C# Reference)</span></span>
 <span data-ttu-id="60462-103">Оператор умножения (`*`), который вычисляет произведение двух операндов.</span><span class="sxs-lookup"><span data-stu-id="60462-103">The multiplication operator (`*`), which computes the product of its operands.</span></span>  <span data-ttu-id="60462-104">Кроме того, это оператор разыменования, позволяющий выполнять чтение и запись в указателе.</span><span class="sxs-lookup"><span data-stu-id="60462-104">Also, the dereference operator, which allows reading and writing to a pointer.</span></span>  
   
 ## <a name="remarks"></a><span data-ttu-id="60462-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="60462-105">Remarks</span></span>  

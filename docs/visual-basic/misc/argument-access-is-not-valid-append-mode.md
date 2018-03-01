@@ -2,11 +2,13 @@
 title: "Аргумент &#39; Доступ к &#39; не допускается. Допустимые значения находятся в режиме Append &#39;OpenAccess.Write &#39; и &#39;OpenAccess.Default &#39;"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrFileSystem_IllegalAppendAccess
+f1_keywords:
+- vbrFileSystem_IllegalAppendAccess
 ms.assetid: f584056e-5eb7-401f-b43d-d08252e66d1c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 37e7beae2f39245fff77c32623fd8a2541966c45

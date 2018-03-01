@@ -2,11 +2,13 @@
 title: "Практическое руководство. Доступ к элементу массива с использованием указателя (Руководство по программированию в C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: pointers [C#], array access
+helpviewer_keywords:
+- pointers [C#], array access
 ms.assetid: 6c46f2af-a730-4855-8638-f136d9abaa12
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 737c1d7fc0bc0a739de5c0a6cbc5dc09f813133e
@@ -26,7 +28,7 @@ for (int i = 65; i < 123; i++)
 }  
 ```  
   
- <span data-ttu-id="2b077-104">Выражение в квадратных скобках должно допускать неявное преобразование в `int`, `uint`, `long` или `ulong`.</span><span class="sxs-lookup"><span data-stu-id="2b077-104">The expression in square brackets must be implicitly convertible to `int`, `uint`, `long`, or `ulong`.</span></span> <span data-ttu-id="2b077-105">Операция p[e] эквивалентна *(p+e).</span><span class="sxs-lookup"><span data-stu-id="2b077-105">The operation p[e] is equivalent to *(p+e).</span></span> <span data-ttu-id="2b077-106">Как и в C или C++, при доступе к элементу указателя не выполняется проверка на ошибки выхода за пределы диапазона.</span><span class="sxs-lookup"><span data-stu-id="2b077-106">Like C and C++, the pointer element access does not check for out-of-bounds errors.</span></span>  
+ <span data-ttu-id="2b077-104">Выражение в квадратных скобках должно допускать неявное преобразование в `int`, `uint`, `long` или `ulong`.</span><span class="sxs-lookup"><span data-stu-id="2b077-104">The expression in square brackets must be implicitly convertible to `int`, `uint`, `long`, or `ulong`.</span></span> <span data-ttu-id="2b077-105">Операция p[e] эквивалентна \*(p+e).</span><span class="sxs-lookup"><span data-stu-id="2b077-105">The operation p[e] is equivalent to \*(p+e).</span></span> <span data-ttu-id="2b077-106">Как и в C или C++, при доступе к элементу указателя не выполняется проверка на ошибки выхода за пределы диапазона.</span><span class="sxs-lookup"><span data-stu-id="2b077-106">Like C and C++, the pointer element access does not check for out-of-bounds errors.</span></span>  
   
 ## <a name="example"></a><span data-ttu-id="2b077-107">Пример</span><span class="sxs-lookup"><span data-stu-id="2b077-107">Example</span></span>  
  <span data-ttu-id="2b077-108">В этом примере для массива символов `charPointer` выделено 123 расположения в памяти.</span><span class="sxs-lookup"><span data-stu-id="2b077-108">In this example, 123 memory locations are allocated to a character array, `charPointer`.</span></span> <span data-ttu-id="2b077-109">Этот массив использует два цикла [for](../../../csharp/language-reference/keywords/for.md) для отображения строчных и прописных букв.</span><span class="sxs-lookup"><span data-stu-id="2b077-109">The array is used to display the lowercase letters and the uppercase letters in two [for](../../../csharp/language-reference/keywords/for.md) loops.</span></span>  
