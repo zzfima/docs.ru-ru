@@ -1,12 +1,8 @@
 ---
 title: "Практическое руководство. Указание планировщика задач в блоке потока данных"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,34 +12,35 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - task scheduler, linking from TPL
 ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 20faebc8bda3b50c4f762615d84b7a449ae61c6f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 592b6c5c92a2c752fa0d2694cdb477423b15eb0d
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Практическое руководство. Указание планировщика задач в блоке потока данных
-В этом документе приводятся способы привязки определенного планировщика задач при использовании потока данных в приложении. В этом пример используется класс <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> в приложении Windows Forms для указания того, когда активна задача чтения и когда активна задача записи. Здесь также используется метод <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>, чтобы позволить блоку потока данных выполняться в потоке пользовательского интерфейса.  
+В этом документе приводятся способы привязки определенного планировщика задач при использовании потока данных в приложении. В этом пример используется класс <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> в приложении Windows Forms для указания того, когда активна задача чтения и когда активна задача записи. Здесь также используется метод <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>, чтобы позволить блоку потока данных выполняться в потоке пользовательского интерфейса.
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
+## <a name="to-create-the-windows-forms-application"></a>Создание приложения Windows Forms  
   
-> [!TIP]
->  Библиотека потоков данных TPL (пространство имен <xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType>) не поставляется с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Чтобы установить <xref:System.Threading.Tasks.Dataflow> пространства имен, откройте проект в [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], выберите **управление пакетами NuGet** меню проекта и выполните поиск в Интернете `Microsoft.Tpl.Dataflow` пакета.  
+1.  Создайте [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] или проект **Приложение Windows Forms** на Visual Basic. На следующих этапах проекту дается название `WriterReadersWinForms`.  
   
-### <a name="to-create-the-windows-forms-application"></a>Создание приложения Windows Forms  
-  
-1.  Создание [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] или Visual Basic **приложение Windows Forms** проекта. На следующих этапах проекту дается название `WriterReadersWinForms`.  
-  
-2.  В конструкторе форм главной формы Form1.cs (Form1.vb для [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) добавьте четыре элемента управления <xref:System.Windows.Forms.CheckBox>. Задать <xref:System.Windows.Forms.Control.Text%2A> свойства **читатель 1** для `checkBox1`, **читатель 2** для `checkBox2`, **читатель 3** для `checkBox3`, и  **Модуль записи** для `checkBox4`. Задайте свойству <xref:System.Windows.Forms.Control.Enabled%2A> каждого элемента управления значение `False`.  
+2.  В конструкторе форм главной формы Form1.cs (Form1.vb для [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) добавьте четыре элемента управления <xref:System.Windows.Forms.CheckBox>. Установите свойству <xref:System.Windows.Forms.Control.Text%2A> значение **Reader 1** для `checkBox1`, **Reader 2** для `checkBox2`, **Reader 3** для `checkBox3` и **Writer** для `checkBox4`. Задайте свойству <xref:System.Windows.Forms.Control.Enabled%2A> каждого элемента управления значение `False`.  
   
 3.  Добавьте на форму элемент управления <xref:System.Windows.Forms.Timer>. Задайте для свойства <xref:System.Windows.Forms.Timer.Interval%2A> значение `2500`.  
   
 ## <a name="adding-dataflow-functionality"></a>Добавление функциональных возможностей потока данных  
  В этом разделе описываются способы создания блоков потока данных, участвующих в приложении, и привязки каждого из них к планировщику заданий.  
   
-#### <a name="to-add-dataflow-functionality-to-the-application"></a>Добавление функциональных возможностей потока данных в приложение  
+### <a name="to-add-dataflow-functionality-to-the-application"></a>Добавление функциональных возможностей потока данных в приложение  
   
 1.  В проекте добавьте ссылку на System.Threading.Tasks.Dataflow.dll.  
   

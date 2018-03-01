@@ -8,30 +8,34 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: tasks, further reading
+helpviewer_keywords:
+- tasks, further reading
 ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5a2477458273e5beef6b67069dce7e818906b8b6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 304522aa791e78dda6a67ed4f4e9b6cc33505dff
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="for-further-reading-parallel-programming"></a>Дополнительные сведения (параллельное программирование)
-Следующие ресурсы содержат дополнительные сведения о параллельном программировании в платформе .NET Framework.  
+Следующие ресурсы содержат дополнительные сведения о параллельном программировании на платформе .NET Framework.  
   
--   [Центр разработчиков параллельного вычисления](http://go.microsoft.com/fwlink/?LinkID=160570) на MSDN веб-сайт содержит ссылки на последнее содержимое и сообщения форумов об параллельного программирования в .NET Framework и в машинном коде C++.  
+-   [Центр разработчика параллельных вычислений](http://go.microsoft.com/fwlink/?LinkID=160570) на веб-сайте MSDN перечисляет ссылки на новейшие статьи и сообщения форума о параллельном программировании на платформе .NET Framework и на машинном C++.  
   
--   [Параллельного программирования .NET блог](http://go.microsoft.com/fwlink/?LinkID=169627) на MSDN блог содержит много подробные статьи о параллельном программировании в платформе .NET Framework.  
+-   [Блог параллельного программирования на .NET](http://go.microsoft.com/fwlink/?LinkID=169627) на сайте блога MSDN предлагает множество подробных статей о параллельном программировании на платформе .NET Framework.  
   
--   [Визуализатор параллелизма блог](http://go.microsoft.com/fwlink/?LinkID=169630) в блоге MSDN узел входят новые профилирования, включенный в некоторые выпуски производительности [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)].  
+-   [Блог визуализатора одновременного выполнения](http://go.microsoft.com/fwlink/?LinkID=169630) на сайте блога MSDN описывает новое средство профилирования производительности, включенное в некоторые выпуски [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)].  
   
--   [Параллельные расширения форум](http://go.microsoft.com/fwlink/?LinkID=169628) на MSDN Форумы сайт находится где можно задавать вопросы о параллельном программировании и отвечать.  
+-   [Форум параллельных расширений](http://go.microsoft.com/fwlink/?LinkID=169628) на сайте форумов MSDN позволяет задать вопросы и получить ответы о параллельном программировании.  
   
--   [Примеры параллельных расширений](http://go.microsoft.com/fwlink/?LinkID=165717) коллекции кода MSDN веб-сайта содержит несколько примеров, демонстрирующих заранее методики параллельного программирования.  
+-   Страница [Примеры параллельных расширений](http://go.microsoft.com/fwlink/?LinkID=165717) на веб-сайте коллекции кода MSDN содержит много примеров, демонстрирующих использование методов параллельного программирования на среднем и продвинутом уровнях сложности.  
   
 ## <a name="see-also"></a>См. также  
  [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)  

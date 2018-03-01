@@ -19,15 +19,18 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a60284bf2db8f47dd17c04fad5cbd6db4970a8a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 357d18843af0af2869d0ec98def6c733e51f9a4c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="globalization"></a>Глобализация
 Глобализация предполагает проектирование и разработку готовых к использованию во всем мире приложений, поддерживающих локализованные интерфейсы и региональные данные для пользователей разных культур. Перед началом проектирования необходимо определить, какие языки и региональные параметры будет поддерживать приложение. Хотя приложение нацелено на один язык или страну по умолчанию, его можно спроектировать и создать так, чтобы его могли использовать пользователи в других странах.  
@@ -44,21 +47,21 @@ ms.lasthandoff: 11/21/2017
   
     -   [Поиск и сравнение строк](../../../docs/standard/globalization-localization/globalization.md#Strings_Searching)  
   
-    -   [Тестирование на равенство строк](../../../docs/standard/globalization-localization/globalization.md#Strings_Equality)  
+    -   [Проверка строк на равенство](../../../docs/standard/globalization-localization/globalization.md#Strings_Equality)  
   
     -   [Упорядочивание и сортировка строк](../../../docs/standard/globalization-localization/globalization.md#Strings_Ordering)  
   
-    -   [Избегайте объединения строк](../../../docs/standard/globalization-localization/globalization.md#Strings_Concat)  
+    -   [Предотвращение объединения строк](../../../docs/standard/globalization-localization/globalization.md#Strings_Concat)  
   
 -   [Обработка дат и времени](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes)  
   
     -   [Сохранение дат и времени](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Persist)  
   
-    -   [Отображение даты и времени](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Display)  
+    -   [Отображение дат и времени](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Display)  
   
-    -   [Сериализации и часовых поясов](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_TimeZones)  
+    -   [Поддержка сериализации и часовых поясов](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_TimeZones)  
   
-    -   [Выполнение даты и времени арифметические операции](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Arithmetic)  
+    -   [Выполнение арифметических операций с датами и временем](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Arithmetic)  
   
 -   [Обработка числовых значений](../../../docs/standard/globalization-localization/globalization.md#Numbers)  
   
@@ -66,7 +69,7 @@ ms.lasthandoff: 11/21/2017
   
     -   [Сохранение числовых значений](../../../docs/standard/globalization-localization/globalization.md#Numbers_Persist)  
   
--   [Работа с языком и региональными параметрами](../../../docs/standard/globalization-localization/globalization.md#Cultures)  
+-   [Работа с параметрами, специфичными для языков и региональных параметров](../../../docs/standard/globalization-localization/globalization.md#Cultures)  
   
 <a name="HandlingStrings"></a>   
 ## <a name="handling-strings"></a>Обработка строк  
@@ -97,7 +100,7 @@ ms.lasthandoff: 11/21/2017
   
  Использование файлов ресурсов имеет определенные преимущества при создании локализованного приложения. При развертывании ресурсов во вспомогательных сборках среда CLR автоматически выбирает соответствующий языку и региональным параметрам ресурс на основе текущего языка пользовательского интерфейса, как определено свойством <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>. Если требуется предоставить подходящий ресурс для конкретного языка и региональных параметров и правильно создать экземпляр объекта <xref:System.Resources.ResourceManager> или использовать строго типизированный класс ресурса, среда выполнения обрабатывает сведения о получении соответствующих ресурсов.  
   
- Дополнительные сведения о создании файлов ресурсов см. в разделе [Создание файлов ресурсов](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md). Сведения о создании и развертывании вспомогательных сборок см. в разделе [Создание вспомогательных сборок](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) и [упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
+ Дополнительные сведения о создании файлов ресурсов см. в статье [Создание файлов ресурсов для приложений для настольных систем](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md). Сведения о создании и развертывании вспомогательных сборок см. в статьях [Создание вспомогательных сборок для приложений для настольных систем](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) и [Упаковка и развертывание ресурсов в приложениях для настольных систем](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
   
 <a name="Strings_Searching"></a>   
 ### <a name="searching-and-comparing-strings"></a>Поиск и сравнение строк  
@@ -150,8 +153,8 @@ ms.lasthandoff: 11/21/2017
 |.NET Framework 3.0|Все операционные системы|Юникод 4.1|  
 |.NET Framework 3,5|Все операционные системы|Юникод 4.1|  
 |.NET Framework 4|Все операционные системы|Юникод 5.0|  
-|.NET Framework 4.5|[!INCLUDE[win7](../../../includes/win7-md.md)]|Юникод 5.0|  
-|.NET Framework 4.5|[!INCLUDE[win8](../../../includes/win8-md.md)]|Юникод 6.0|  
+|.NET Framework 4,5|[!INCLUDE[win7](../../../includes/win7-md.md)]|Юникод 5.0|  
+|.NET Framework 4,5|[!INCLUDE[win8](../../../includes/win8-md.md)]|Юникод 6.0|  
   
  В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] сравнение и сортировка строк зависит от операционной системы. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], запущенная в [!INCLUDE[win7](../../../includes/win7-md.md)], извлекает данные из собственных таблиц, реализующих Юникод 5.0. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], запущенная в [!INCLUDE[win8](../../../includes/win8-md.md)], извлекает данные из таблиц операционных систем, реализующих Юникод 6.0. Если вы сериализуете чувствительные к культуре отсортированные данные, можно использовать класс <xref:System.Globalization.SortVersion>, чтобы определить, когда сериализованные данные должны быть отсортированы, чтобы порядок был согласован с порядком сортировки платформы .NET Framework и операционной системы. Пример см. в разделе с описанием класса <xref:System.Globalization.SortVersion>.  
   
@@ -163,7 +166,7 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[Conceptual.Globalization#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/sortkey1.vb#15)]  
   
 <a name="Strings_Concat"></a>   
-### <a name="avoid-string-concatenation"></a>Избегайте объединения строк  
+### <a name="avoid-string-concatenation"></a>Как избежать объединения строк  
  Если это возможно, никогда не следует использовать составные строки, полученные во время выполнения программы при помощи соединения фраз. Составные строки трудно локализовать, потому что они часто используют грамматический порядок исходного языка приложения, который не может быть применен для других языков локализации.  
   
 <a name="DatesAndTimes"></a>   
@@ -182,7 +185,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Метод <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>, который включает строку формата  
   
--   [Составное форматирование](../../../docs/standard/base-types/composite-formatting.md) функции, если она используется с датами  
+-   Функция [составного форматирования](../../../docs/standard/base-types/composite-formatting.md), когда она используется с датами.  
   
  Следующий пример выводит данные о восходе и заходе солнца дважды для 11 октября 2012 г. Сначала он устанавливает текущий язык и региональные параметры как хорватский (Хорватия), а затем как английский язык (Великобритания). В каждом случае дата и время отображаются в формате, который подходит для этого языка и региональных параметров.  
   
@@ -213,7 +216,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="serialization-and-time-zone-awareness"></a>Поддержка сериализации и часовых поясов  
  Значение даты и времени может иметь несколько интерпретаций, от общего времени ("Магазины открываются 2-го января 2013 г. в 9:00") до определенного момента времени ("Дата рождения: 2-е января 2013 г. 6:32"). Если значение времени представляет определенный момент времени и восстанавливается из сериализуемого значения, необходимо убедиться, что оно представляет тот же момент времени независимо от географического положения пользователя или часового пояса.  
   
- Приведенный ниже пример иллюстрирует данную проблему. Сохраняет одной локальной даты и времени значение как строка в трех [стандартные форматы](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) («G», для даты долго времени «s» для сортировки даты и времени и «o» для обратного преобразования даты и времени), а также в двоичном формате.  
+ Приведенный ниже пример иллюстрирует данную проблему. В нем одиночное значение локальных даты и времени сохраняется в виде строки в трех [стандартных форматах](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) ("G" для общего длинного формата даты и времени, "s" для сортируемого формата даты и времени и "o" для обратимого преобразования даты и времени), а также в двоичном формате.  
   
  [!code-csharp[Conceptual.Globalization#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates4.cs#10)]
  [!code-vb[Conceptual.Globalization#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates4.vb#10)]  
@@ -263,13 +266,13 @@ ms.lasthandoff: 11/21/2017
 3/31/2013 3:00:00 AM Local  
 ```  
   
- Дополнительные сведения см. в разделе [преобразование раз между часовых поясов](../../../docs/standard/datetime/converting-between-time-zones.md).  
+ Дополнительные сведения см. в статье [Преобразование времени из одного часового пояса в другой](../../../docs/standard/datetime/converting-between-time-zones.md).  
   
 <a name="DatesAndTimes_Arithmetic"></a>   
 ### <a name="performing-date-and-time-arithmetic"></a>Выполнение арифметических операций с датами и временем  
  Типы <xref:System.DateTime> и <xref:System.DateTimeOffset> поддерживают арифметические операции. Можно вычислить разницу между двумя значениями дат или добавить или вычесть конкретные временные интервалы в или из значения даты. Однако арифметические операции над значениями даты и времени не принимают в расчет часовые пояса и правила коррекции часового пояса. Вследствие этого арифметические операции даты и времени на значениях, представляющих моменты времени, могут возвращать неточные результаты.  
   
- Например, переход со стандартного тихоокеанского времени на тихоокеанское летнее время происходит во второе воскресенье марта, то есть 10 марта 2013 г. В следующем примере показано, если вы вычисления даты и времени, — 48 часов после 9 марта 2013 г. в 10:30 в системе в тихоокеанском стандартном часовом поясе результат 11 марта 2013 г. в 10:30, не принимает промежуточные времени настройки в учетную запись.  
+ Например, переход со стандартного тихоокеанского времени на тихоокеанское летнее время происходит во второе воскресенье марта, то есть 10 марта 2013 г. В следующем примере показан расчет даты и времени на момент через 48 часов после 10:30 9 марта 2013 г. в системе, использующей стандартный тихоокеанский часовой пояс. Мы получаем результат 11 марта 2013 г. 10:30 без учета корректировки времени, которая происходит в этот период.  
   
  [!code-csharp[Conceptual.Globalization#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates5.cs#8)]
  [!code-vb[Conceptual.Globalization#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates5.vb#8)]  
@@ -287,7 +290,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.Globalization#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates6.cs#9)]
  [!code-vb[Conceptual.Globalization#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates6.vb#9)]  
   
- Дополнительные сведения см. в разделе [Выполнение арифметических операций с датами и временем](../../../docs/standard/datetime/performing-arithmetic-operations.md).  
+ Подробнее см. в статье [Выполнение арифметических операций с датами и временем](../../../docs/standard/datetime/performing-arithmetic-operations.md).  
   
 ### <a name="using-culture-sensitive-names-for-date-elements"></a>Использование имен, чувствительные к языковым и региональным параметрам, для элементов дат  
  Возможно, приложению нужно отобразить название месяца или дня недели. Для этого обычно используют код, аналогичный следующему.  
@@ -297,7 +300,7 @@ ms.lasthandoff: 11/21/2017
   
  Однако этот код всегда возвращает имена дней недели на английском языке. Код, который извлекает имя месяца, часто бывает еще более жестким. Он часто предполагает использование календаря с 12 месяцами с именами месяцев на конкретном языке.  
   
- С помощью [настраиваемых форматов даты и времени строки](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) или свойства <xref:System.Globalization.DateTimeFormatInfo> объекта, можно легко для извлечения строк, которые отражают названия дней недели или месяцы в язык и региональные параметры пользователя, как показано в следующем примере. Он изменяет текущий язык на французский (Франция) и отображает название дня недели и название месяца для 1-го июля 2013 г.  
+ С помощью [строк даты и времени пользовательского формата](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) или свойств объекта <xref:System.Globalization.DateTimeFormatInfo> можно легко извлечь строки с названиями дней недели или месяцев с учетом языка и региональных параметров пользователя, как показано в примере ниже. Он изменяет текущий язык на французский (Франция) и отображает название дня недели и название месяца для 1-го июля 2013 г.  
   
  [!code-csharp[Conceptual.Globalization#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/monthname2.cs#20)]
  [!code-vb[Conceptual.Globalization#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/monthname2.vb#20)]  
@@ -317,7 +320,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Метод `ToString(String)` любого числового типа, включающий строку формата в качестве аргумента  
   
--   [Составное форматирование](../../../docs/standard/base-types/composite-formatting.md) функции, если она используется с числовыми значениями  
+-   Функция [составного форматирования](../../../docs/standard/base-types/composite-formatting.md), когда она используется с числовыми значениями.  
   
  В следующем примере выводится средняя температура для каждого месяца в Париж, Франция. Перед отображением данных он устанавливает текущий язык и региональные параметры как французский (Франция), а затем задает английский язык (США). В каждом случае имена месяцев и температуры отображаются в формате, который подходит для данного языка и региональных параметров. Обратите внимание, что в двух языках и региональных параметрах используются разные десятичные разделители в значении температуры. Также обратите внимание, что в примере используется строка пользовательского формата даты и времени "MMMM" для отображения полного названия месяца и что он выделяет необходимый объем пространства для названия месяца в результирующей строке, указав длину самого длинного названия месяца в массиве <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType>.  
   
@@ -374,7 +377,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Платформа .NET Framework поддерживает заменяющие языки и региональные параметры. Это позволяет определить новые пользовательские язык и региональные параметры, которые либо дополняют существующие стандартные языки и региональные параметры, либо полностью заменяют существующие стандартные язык и региональные параметры.  
   
--   Пользователь может настроить параметры конкретного языка и региональных параметров с помощью **язык и региональные стандарты** приложение панели управления. При создании экземпляра объекта <xref:System.Globalization.CultureInfo> можно указать, отражает ли он эти настройки пользователя, вызвав конструктор <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>. Обычно для приложений, предназначенных для конечных пользователей, необходимо учитывать предпочтения пользователя и предоставлять пользователю данные в том формате, в котором он ожидает их увидеть.  
+-   Пользователь может настроить язык и региональные параметры с помощью приложения **Язык и региональные стандарты** на панели управления. При создании экземпляра объекта <xref:System.Globalization.CultureInfo> можно указать, отражает ли он эти настройки пользователя, вызвав конструктор <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>. Обычно для приложений, предназначенных для конечных пользователей, необходимо учитывать предпочтения пользователя и предоставлять пользователю данные в том формате, в котором он ожидает их увидеть.  
   
 ## <a name="see-also"></a>См. также  
  [Глобализация и локализация](../../../docs/standard/globalization-localization/index.md)  

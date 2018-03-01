@@ -12,27 +12,30 @@ helpviewer_keywords:
 - ReaderWriterLock class, about ReaderWriterLock class
 - threading [.NET Framework], ReaderWriterLock class
 ms.assetid: 8c71acf2-2c18-4f4d-8cdb-0728639265fd
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: df06e83165906199774f99de4140ace9b7396cbb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d005442ee74b46a0ecb1eaafe214e7190330cfe7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="reader-writer-locks"></a>Блокировки чтения и записи
-<xref:System.Threading.ReaderWriterLockSlim> Класс позволяет нескольким потокам чтение ресурса, но требует поток ждать монопольную блокировку для записи ресурса.  
+Класс <xref:System.Threading.ReaderWriterLockSlim> позволяет нескольким потокам одновременно считывать данные из одного ресурса, но требует предоставить потоку монопольную блокировку для записи в этот ресурс.  
   
- Можно использовать <xref:System.Threading.ReaderWriterLockSlim> в приложении для обеспечения синхронизации доступа к общему ресурсу между потоками. Блокировки <xref:System.Threading.ReaderWriterLockSlim> сам.  
+ Вы можете применить <xref:System.Threading.ReaderWriterLockSlim> в приложении для координированной синхронизации доступа к общему ресурсу между потоками. Блокировки выполняются непосредственно в <xref:System.Threading.ReaderWriterLockSlim>.  
   
- Как в любом механизме синхронизации, необходимо убедиться, что потоки не обходят блокировку, предоставляемая <xref:System.Threading.ReaderWriterLockSlim>. Один из способов сделать это является разработка класса, который инкапсулирует общий ресурс. Этот класс должен предоставлять элементы, доступ к закрытому общему ресурсу и используют закрытый <xref:System.Threading.ReaderWriterLockSlim> для синхронизации. Например, см. пример кода для <xref:System.Threading.ReaderWriterLockSlim> класса. <xref:System.Threading.ReaderWriterLockSlim>является эффективным, который будет использоваться для синхронизации отдельных объектов.  
+ Как и для любого другого механизма синхронизации, нужно гарантировать невозможность обойти блокировку, организованную в <xref:System.Threading.ReaderWriterLockSlim>. Для этого можно, например, разработать класс, который инкапсулирует общий ресурс. Этот класс будет предоставлять элементы, которые получают доступ к закрытому общему ресурсу и используют закрытый <xref:System.Threading.ReaderWriterLockSlim> для синхронизации. В качестве примера изучите код класса <xref:System.Threading.ReaderWriterLockSlim>. <xref:System.Threading.ReaderWriterLockSlim> достаточно эффективен и может применяться для синхронизации отдельных объектов.  
   
- Приложение для уменьшить время чтения и записи операций. Длительные операции записи непосредственно влияет пропускной способности, поскольку блокировка записи является взаимоисключающей. Длинная чтение операций блокируют ожидающие средства записи, а если хотя бы один поток для записи, потоки, запрашивающие доступ для чтения также будут заблокированы.  
+ Оптимизируйте приложение так, чтобы снизить продолжительность операций чтения и записи. Длительные операции записи напрямую ухудшают пропускную способность, поскольку блокировки записи являются взаимоисключающими. Длительные операции чтения блокируют потоки, ожидающие записи. Если же появится хотя бы один поток, ожидающий записи, то заблокируются и те потоки, которые запрашивают доступ на чтение.  
   
 > [!NOTE]
->  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Имеет два блокировки чтения и записи, <xref:System.Threading.ReaderWriterLockSlim> и <xref:System.Threading.ReaderWriterLock>. <xref:System.Threading.ReaderWriterLockSlim>рекомендуется для всех новых разработках. <xref:System.Threading.ReaderWriterLockSlim>Аналогично <xref:System.Threading.ReaderWriterLock>, но использует упрощенные правила рекурсии и повышения или понижения уровня состояния блокировки. <xref:System.Threading.ReaderWriterLockSlim>позволяет избежать многих случаях потенциальной взаимоблокировки. Кроме того, производительность <xref:System.Threading.ReaderWriterLockSlim> значительно лучше, чем <xref:System.Threading.ReaderWriterLock>.  
+>  Класс [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] использует две блокировки чтения и записи: <xref:System.Threading.ReaderWriterLockSlim> и <xref:System.Threading.ReaderWriterLock>. Мы рекомендуем применять <xref:System.Threading.ReaderWriterLockSlim> при любых новых разработках. <xref:System.Threading.ReaderWriterLockSlim> действует так же, как и <xref:System.Threading.ReaderWriterLock>, но с более простыми правилами рекурсии и изменения состояния блокировки. <xref:System.Threading.ReaderWriterLockSlim> позволяет избежать многих ситуаций взаимоблокировки. Кроме того, производительность <xref:System.Threading.ReaderWriterLockSlim> значительно выше, чем у <xref:System.Threading.ReaderWriterLock>.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Threading.ReaderWriterLockSlim>  

@@ -1,12 +1,8 @@
 ---
 title: "Практическое руководство. Использование JoinBlock для чтения данных из нескольких источников"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,22 +12,23 @@ helpviewer_keywords:
 - TPL dataflow library, joining blocks in
 - dataflow blocks, joining in TPL
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 41445e4874b94809840ecf9ebda6f27ccc955c9b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f7d4e552404f99580bceafe7f900db4607201c3d
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Практическое руководство. Использование JoinBlock для чтения данных из нескольких источников
-В этом документе объясняется, как использовать класс <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> для выполнения операции, если данные доступны из нескольких источников. Также здесь показано, как использовать нежадный режим, чтобы разрешить нескольким блокам соединения совместно использовать источник данных более эффективно.  
-  
-> [!TIP]
->  Библиотека потоков данных TPL (пространство имен <xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType>) не поставляется с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Чтобы установить <xref:System.Threading.Tasks.Dataflow> пространства имен, откройте проект в [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], выберите **управление пакетами NuGet** меню проекта и выполните поиск в Интернете `Microsoft.Tpl.Dataflow` пакета.  
-  
+В этом документе объясняется, как использовать класс <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> для выполнения операции, если данные доступны из нескольких источников. Также здесь показано, как использовать нежадный режим, чтобы разрешить нескольким блокам соединения совместно использовать источник данных более эффективно.
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
 ## <a name="example"></a>Пример  
  В следующем примере определяется три типа ресурсов: `NetworkResource`, `FileResource` и `MemoryResource`, и выполняются операции, когда ресурсы становятся доступными. В этом примере требуется пара `NetworkResource` и `MemoryResource` для выполнения первой операции и пара `FileResource` и `MemoryResource` для выполнения второй операции. Чтобы позволить выполнение этих операций, когда доступны все необходимые ресурсы, в этом примере используется класс <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>. Если объект <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> получает данные из всех источников, он распространяет эти данные по целевым объектам, в этом примере — объекту <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>. Оба объекта <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> выполняют чтение из общего пула объектов `MemoryResource`.  
   
@@ -45,14 +42,14 @@ ms.lasthandoff: 10/18/2017
   
  [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
   
- **CSC.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.cs**  
+ **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.cs**  
   
  [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
   
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.vb**  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
- Использование нежадных соединений также может помочь предотвратить взаимоблокировку в приложении. В приложении программного обеспечения *взаимоблокировки* возникает, когда два или несколько процессов каждая удерживает ресурс и ожидает освобождения другого ресурса другим процессом. Рассмотрим приложение, определяющее два объекта <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>. Оба объекта считывают данные из двух общих блоков источника. В жадном режиме, если один блок соединения считывает из первого источника, а второй блок соединения считывает из второго источника, в приложении может произойти взаимоблокировка, поскольку оба блока соединения ожидают освобождения ресурса другим блоком. В нежадном режиме каждый блок соединения считывает из своих источников, только если все данные доступны, и таким образом устраняется риск взаимоблокировки.  
+ Использование нежадных соединений также может помочь предотвратить взаимоблокировку в приложении. В приложении программного обеспечения *взаимоблокировка* возникает, когда два или несколько процессов используют ресурс и одновременно ожидают, пока другой процесс не освободит какой-либо из ресурсов. Рассмотрим приложение, определяющее два объекта <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>. Оба объекта считывают данные из двух общих блоков источника. В жадном режиме, если один блок соединения считывает из первого источника, а второй блок соединения считывает из второго источника, в приложении может произойти взаимоблокировка, поскольку оба блока соединения ожидают освобождения ресурса другим блоком. В нежадном режиме каждый блок соединения считывает из своих источников, только если все данные доступны, и таким образом устраняется риск взаимоблокировки.  
   
 ## <a name="see-also"></a>См. также  
  [Поток данных](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

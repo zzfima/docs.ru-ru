@@ -1,12 +1,8 @@
 ---
 title: "Пошаговое руководство. Повышение эффективности с помощью BatchBlock и BatchedJoinBlock"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,44 +11,45 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, improving efficiency
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bc74b4acc5b29395c05e7c8302caefeb51718282
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 49056607d84b48584660ff62bba13147d6aa43ec
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Пошаговое руководство. Повышение эффективности с помощью BatchBlock и BatchedJoinBlock
-Библиотека потоков данных TPL предоставляет классы <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType>, чтобы пользователь мог получать и помещать в буфер данные из одного или нескольких источников и затем передавать эти помещенные в буфер данные в виде одной коллекции. Этот механизм пакетной обработки полезен при сборе данных из одного или нескольких источников и дальнейшей обработке различных элементов данных в пакетном режиме. Например, рассмотрим приложение, использующее поток данных для вставки записей в базу данных. Эта операция может быть эффективнее, если несколько элементов добавляются одновременно, а не последовательно по одному. В этом документе описано, как использовать класс <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> для увеличения эффективности подобных операций вставки в базу данных. Также здесь приводится способ использования класса <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> для перехвата и результатов, и всех исключений, возникающих при выполнении программой считывания из базы данных.  
-  
-> [!TIP]
->  Библиотека потоков данных TPL (пространство имен <xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType>) не поставляется с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Чтобы установить <xref:System.Threading.Tasks.Dataflow> пространства имен, откройте проект в [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], выберите **управление пакетами NuGet** меню проекта и выполните поиск в Интернете `Microsoft.Tpl.Dataflow` пакета.  
-  
+Библиотека потоков данных TPL предоставляет классы <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType>, чтобы пользователь мог получать и помещать в буфер данные из одного или нескольких источников и затем передавать эти помещенные в буфер данные в виде одной коллекции. Этот механизм пакетной обработки полезен при сборе данных из одного или нескольких источников и дальнейшей обработке различных элементов данных в пакетном режиме. Например, рассмотрим приложение, использующее поток данных для вставки записей в базу данных. Эта операция может быть эффективнее, если несколько элементов добавляются одновременно, а не последовательно по одному. В этом документе описано, как использовать класс <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> для увеличения эффективности подобных операций вставки в базу данных. Также здесь приводится способ использования класса <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> для перехвата и результатов, и всех исключений, возникающих при выполнении программой считывания из базы данных.
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
 ## <a name="prerequisites"></a>Предварительные требования  
   
-1.  Ознакомьтесь с разделом соединение блоков в [потока данных](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) документов перед выполнением этого пошагового руководства.  
+1.  Прочитайте описание блоков объединения в документации по [потокам данных](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md), прежде чем приступать к этому руководству.  
   
-2.  Убедитесь, что на вашем компьютере есть копия базы данных Northwind, Northwind.sdf. Этот файл обычно находится в папке % Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\.  
+2.  Убедитесь, что на вашем компьютере есть копия базы данных Northwind, Northwind.sdf. Этот файл обычно находится в папке %Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\.  
   
     > [!IMPORTANT]
-    >  В некоторых версиях Windows невозможно подключиться к Northwind.sdf, если [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] не работает в режиме администратора. Чтобы подключиться к Northwind.sdf запустите [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] или [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] в командной строке **Запуск от имени администратора** режим.  
+    >  В некоторых версиях Windows невозможно подключиться к Northwind.sdf, если [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] не работает в режиме администратора. Для подключения к Northwind.sdf **запустите от имени администратора** командную строку [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] или [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
   
  Это пошаговое руководство содержит следующие разделы:  
   
 -   [Создание консольного приложения](#creating)  
   
--   [Определение класса "Сотрудник"](#employeeClass)  
+-   [Определение класса сотрудников](#employeeClass)  
   
 -   [Определение операций базы данных сотрудников](#operations)  
   
--   [Добавление данных о сотруднике в базу данных без использования буферизации](#nonBuffering)  
+-   [Добавление данных о сотруднике в базу данных без буферизации](#nonBuffering)  
   
 -   [Использование буферизации для добавления данных о сотруднике в базу данных](#buffering)  
   
--   [Использование объединения буферизированных для считывания данных о сотруднике из базы данных](#bufferedJoin)  
+-   [Использование объединения буферизированных данных для считывания данных о сотруднике из базы данных](#bufferedJoin)  
   
 -   [Полный пример](#complete)  
   
@@ -60,7 +57,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="creating-the-console-application"></a>Создание консольного приложения  
   
 <a name="consoleApp"></a>   
-1.  В [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], создайте Visual C# или Visual Basic **консольное приложение** проекта. В этом документе проект называется `DataflowBatchDatabase`.  
+1.  В [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] создайте проект **Консольное приложение** Visual C# или Visual Basic. В этом документе проект называется `DataflowBatchDatabase`.  
   
 2.  В проект добавьте ссылку на System.Data.SqlServerCe.dll и ссылку на System.Threading.Tasks.Dataflow.dll.  
   
@@ -108,7 +105,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[TPLDataflow_BatchDatabase#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#6)]
  [!code-vb[TPLDataflow_BatchDatabase#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#6)]  
   
- Этот метод похож на `AddEmployees` за исключением того, что он использует класс <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> для буферизации нескольких объектов `Employee` перед их отправкой объекту <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>. Поскольку класс <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> выдает на выходе несколько элементов в виде коллекции, объект <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> изменяется для работы с массивом объектов `Employee`. Как и в методе `AddEmployees`, `AddEmployeesBatched` вызывает метод `PostRandomEmployees` для отправки нескольких объектов `Employee`; однако `AddEmployeesBatched` отправляет эти объекты объекту <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>. `AddEmployeesBatched` Метод также ожидает, пока все завершения операций вставки.  
+ Этот метод похож на `AddEmployees` за исключением того, что он использует класс <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> для буферизации нескольких объектов `Employee` перед их отправкой объекту <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>. Поскольку класс <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> выдает на выходе несколько элементов в виде коллекции, объект <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> изменяется для работы с массивом объектов `Employee`. Как и в методе `AddEmployees`, `AddEmployeesBatched` вызывает метод `PostRandomEmployees` для отправки нескольких объектов `Employee`; однако `AddEmployeesBatched` отправляет эти объекты объекту <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>. Метод `AddEmployeesBatched` также ожидает завершения всех операций вставки.  
   
 <a name="bufferedJoin"></a>   
 ## <a name="using-buffered-join-to-read-employee-data-from-the-database"></a>Использование объединения буферизированных данных для считывания данных о сотруднике из базы данных  

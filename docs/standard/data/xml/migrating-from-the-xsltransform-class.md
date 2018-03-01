@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b867b2d7eb2f4b1252579bbf1f47430d9a9a48f4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 964e2de7258f4849de01e4fbeae330d009710289
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Миграция с класса XslTransform
-Была переработана архитектура XSLT в [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] выпуска. Класс <xref:System.Xml.Xsl.XslTransform> заменен классом <xref:System.Xml.Xsl.XslCompiledTransform>.  
+В версии [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] была переработана архитектура XSLT. Класс <xref:System.Xml.Xsl.XslTransform> заменен классом <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
  В следующих разделах описаны некоторые основные различия между классами <xref:System.Xml.Xsl.XslCompiledTransform> и <xref:System.Xml.Xsl.XslTransform>.  
   
@@ -33,7 +36,7 @@ ms.lasthandoff: 11/21/2017
  В класс <xref:System.Xml.Xsl.XslCompiledTransform> внесены и другие улучшения, благодаря которым его быстродействие выше, чем у класса <xref:System.Xml.Xsl.XslTransform>.  
   
 > [!NOTE]
->  Хотя класс <xref:System.Xml.Xsl.XslCompiledTransform> имеет более высокий общий уровень производительности, чем класс <xref:System.Xml.Xsl.XslTransform>, метод <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> класса <xref:System.Xml.Xsl.XslCompiledTransform> может выполняться медленнее, чем метод <xref:System.Xml.Xsl.XslTransform.Load%2A> класса <xref:System.Xml.Xsl.XslTransform> при первом вызове преобразования. Причина этого заключается в необходимости компиляции XSLT-файла перед его загрузкой. Дополнительные сведения см. в следующей записи блога: [XslCompiledTransform медленнее, чем XslTransform?](http://go.microsoft.com/fwlink/?LinkId=130590)  
+>  Хотя класс <xref:System.Xml.Xsl.XslCompiledTransform> имеет более высокий общий уровень производительности, чем класс <xref:System.Xml.Xsl.XslTransform>, метод <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> класса <xref:System.Xml.Xsl.XslCompiledTransform> может выполняться медленнее, чем метод <xref:System.Xml.Xsl.XslTransform.Load%2A> класса <xref:System.Xml.Xsl.XslTransform> при первом вызове преобразования. Причина этого заключается в необходимости компиляции XSLT-файла перед его загрузкой. Дополнительные сведения см. в записи блога [XslCompiledTransform Slower than XslTransform?](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/) (Неужели XslCompiledTransform медленнее XslTransform?).  
   
 ## <a name="security"></a>Безопасность  
  По умолчанию класс <xref:System.Xml.Xsl.XslCompiledTransform> отключает поддержку функции XSLT `document()` и внедренных скриптов. Эти возможности можно включить, создав объект <xref:System.Xml.Xsl.XsltSettings> с включенными функциями и передав его в метод <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>. В следующем примере показаны способы включения скриптов и выполнения XSLT-преобразования.  
@@ -41,7 +44,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[XML_Migration#16](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#16)]
  [!code-vb[XML_Migration#16](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#16)]  
   
- Дополнительные сведения см. в разделе [рекомендации по безопасности XSLT](../../../../docs/standard/data/xml/xslt-security-considerations.md).  
+ Дополнительные сведения см. в статье [Рекомендации по безопасности XSLT](../../../../docs/standard/data/xml/xslt-security-considerations.md).  
   
 ## <a name="new-features"></a>Новые функции  
   
@@ -98,7 +101,7 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
 ```  
   
 ### <a name="discretionary-behavior"></a>Поведение, реализуемое по усмотрению разработчика  
- Рекомендация W3C по XSL-преобразованиям (XSLT) версии 1.0 включает в себя такие области, в которых поставщик реализации может решать, как обрабатывать ситуацию. Эти области считаются предоставленными на усмотрение поставщика. Существует несколько областей, в которых поведение класса <xref:System.Xml.Xsl.XslCompiledTransform> отличается от класса <xref:System.Xml.Xsl.XslTransform>. Дополнительные сведения см. в разделе [исправляемые ошибки XSLT](../../../../docs/standard/data/xml/recoverable-xslt-errors.md).  
+ Рекомендация W3C по XSL-преобразованиям (XSLT) версии 1.0 включает в себя такие области, в которых поставщик реализации может решать, как обрабатывать ситуацию. Эти области считаются предоставленными на усмотрение поставщика. Существует несколько областей, в которых поведение класса <xref:System.Xml.Xsl.XslCompiledTransform> отличается от класса <xref:System.Xml.Xsl.XslTransform>. Дополнительные сведения см. в статье [Устранимые ошибки XSLT](../../../../docs/standard/data/xml/recoverable-xslt-errors.md).  
   
 ### <a name="extension-objects-and-script-functions"></a>Объекты расширения и функции скриптов  
  Класс <xref:System.Xml.Xsl.XslCompiledTransform> вводит два новых ограничения на использование функций скриптов.  
@@ -109,18 +112,18 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
   
  В классе <xref:System.Xml.Xsl.XslCompiledTransform> привязка (поиск имени метода) к функциям скриптов выполняется во время компиляции, и таблицы стилей, работающие с объектом XslTranform, могут вызвать исключение при загрузке с классом <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
- Класс <xref:System.Xml.Xsl.XslCompiledTransform> поддерживает дочерние элементы `msxsl:using` и `msxsl:assembly` внутри элемента `msxsl:script`. Чтобы декларировать дополнительные пространства имен и сборок для использования в блоке скриптов, используются элементы `msxsl:using` и `msxsl:assembly`. В разделе [блоки скрипта с использованием msxsl: script](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md) для получения дополнительной информации.  
+ Класс <xref:System.Xml.Xsl.XslCompiledTransform> поддерживает дочерние элементы `msxsl:using` и `msxsl:assembly` внутри элемента `msxsl:script`. Чтобы декларировать дополнительные пространства имен и сборок для использования в блоке скриптов, используются элементы `msxsl:using` и `msxsl:assembly`. В статье [Блоки скриптов с использованием msxsl:script](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md) вы найдете дополнительную информацию об этом.  
   
  Класс <xref:System.Xml.Xsl.XslCompiledTransform> запрещает объекты расширения, которые имеют несколько перегруженных методов с одинаковым количеством аргументов.  
   
 ### <a name="msxml-functions"></a>Функции MSXML  
  Класс <xref:System.Xml.Xsl.XslCompiledTransform> дополнен функциями MSXML. Новые и улучшенные функции описываются в следующем списке.  
   
--   msxsl: node-задать: <xref:System.Xml.Xsl.XslTransform> требуется аргумент [набора узлов функция](http://msdn.microsoft.com/en-us/87b6b3f4-16f4-4fa3-8103-d62a679ac2a7) функцией является фрагментом результирующего дерева. Такое требование отсутствует у класса <xref:System.Xml.Xsl.XslCompiledTransform>.  
+-   msxsl:node-set: класс <xref:System.Xml.Xsl.XslTransform> требует, чтобы аргумент [функции node-set](http://msdn.microsoft.com/library/87b6b3f4-16f4-4fa3-8103-d62a679ac2a7) являлся фрагментом результирующего дерева. Такое требование отсутствует у класса <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
 -   msxsl:version: эта функция поддерживается в классе <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
--   Функции расширения XPath: [ms:string-compare-функция](http://msdn.microsoft.com/en-us/20616b82-9e27-444c-b714-4f1e09b73aee), [ms:utc функция](http://msdn.microsoft.com/en-us/ef26fc88-84c6-4fb9-9c3b-f2f5264b864f), [ms:namespace-uri функция](http://msdn.microsoft.com/en-us/91f9cabf-ab93-4dbe-9c12-e6a75214f4c7), [ms:local-name, функция](http://msdn.microsoft.com/en-us/10ed60a1-17a9-4d74-8b98-7940ac97c0b5), [ms:number функция](http://msdn.microsoft.com/en-us/b94fc08e-1f31-4f48-b1a8-6d78c1b5d954), [ms:format-Дата, функция](http://msdn.microsoft.com/en-us/51f35609-89a9-4098-a166-88bf01300bf5), и [ms:format-время функция](http://msdn.microsoft.com/en-us/e5c2df2d-e8fb-4a8f-bfc0-db84ea12a5d5) теперь поддерживает функции.  
+-   Функции расширения XPath: теперь поддерживаются функции [ms:string-compare](http://msdn.microsoft.com/library/20616b82-9e27-444c-b714-4f1e09b73aee), [ms:utc](http://msdn.microsoft.com/library/ef26fc88-84c6-4fb9-9c3b-f2f5264b864f), [ms:namespace-uri](http://msdn.microsoft.com/library/91f9cabf-ab93-4dbe-9c12-e6a75214f4c7), [ms:local-name](http://msdn.microsoft.com/library/10ed60a1-17a9-4d74-8b98-7940ac97c0b5), [ms:number](http://msdn.microsoft.com/library/b94fc08e-1f31-4f48-b1a8-6d78c1b5d954), [ms:format-date](http://msdn.microsoft.com/library/51f35609-89a9-4098-a166-88bf01300bf5) и [ms:format-time](http://msdn.microsoft.com/library/e5c2df2d-e8fb-4a8f-bfc0-db84ea12a5d5).  
   
 -   Функции расширения XPath, связанные со схемой: <xref:System.Xml.Xsl.XslCompiledTransform> не обеспечивает встроенную поддержку этих функций. Однако их можно реализовать как функции расширения.  
   

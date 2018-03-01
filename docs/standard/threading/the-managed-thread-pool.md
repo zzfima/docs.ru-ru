@@ -18,15 +18,18 @@ helpviewer_keywords:
 - threading [.NET Framework], thread pool
 - threading [.NET Framework], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 38032fccce1a8f6f7cbcb3bbd3d3f9d008a74141
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e50fd66096d6bd58fb7db692449e7f8654b5ca76
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="the-managed-thread-pool"></a>Пул управляемых потоков
 Класс <xref:System.Threading.ThreadPool> обеспечивает приложение пулом рабочих потоков, управляемых системой, позволяя пользователю сосредоточиться на выполнении задач приложения, а не на управлении потоками. Если имеются небольшие задачи, которые требуют фоновой обработки, пул управляемых потоков — это самый простой способ воспользоваться преимуществами нескольких потоков. Например, начиная с версии [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] можно создавать объекты <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>, выполняющие асинхронные задачи в потоках из пула потоков.  
@@ -52,7 +55,7 @@ ms.lasthandoff: 11/21/2017
 -   Необходимо иметь постоянное удостоверение, сопоставленное с потоком, или назначить поток задаче.  
   
 ## <a name="thread-pool-characteristics"></a>Характеристики пула потоков  
- Потоки из пула потоков являются фоновыми. В разделе [основные и фоновые потоки](../../../docs/standard/threading/foreground-and-background-threads.md). Для каждого потока используется размер стека по умолчанию, поток запускается с приоритетом по умолчанию и находится в многопотоковом подразделении.  
+ Потоки из пула потоков являются фоновыми. См. дополнительные сведения об [основных и фоновых потоках](../../../docs/standard/threading/foreground-and-background-threads.md). Для каждого потока используется размер стека по умолчанию, поток запускается с приоритетом по умолчанию и находится в многопотоковом подразделении.  
   
  Для каждого процесса существует только один пул потоков.  
   
@@ -65,7 +68,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Среда CLR или процесс ведущего приложения прерывает выполнение потока.  
   
- Дополнительные сведения см. в разделе [исключения в управляемых потоках](../../../docs/standard/threading/exceptions-in-managed-threads.md).  
+ См. дополнительные сведения об [исключениях в управляемых потоках](../../../docs/standard/threading/exceptions-in-managed-threads.md).  
   
 > [!NOTE]
 >  В .NET Framework версии 1.0 и 1.1 среда CLR перехватывает необработанные исключения в потоках из пула потоков без вывода оповещения. Это может повредить состояние приложения и в итоге привести к его "зависанию", отладить которое может быть очень сложно.  
@@ -90,10 +93,10 @@ ms.lasthandoff: 11/21/2017
 >  Для увеличения минимального количества бездействующих потоков можно использовать метод <xref:System.Threading.ThreadPool.SetMinThreads%2A>. Однако необоснованное увеличение этих значений может привести к снижению производительности. Если одновременно запускается слишком много задач, все они могут выполняться слишком медленно. В большинстве случаев пул потоков работает наилучшим образом, если он использует собственный алгоритм выделения потоков.  
   
 ## <a name="skipping-security-checks"></a>Пропуск проверок безопасности  
- Пул потоков также предоставляет методы <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType> и <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=nameWithType>. Используйте эти методы только в том случае, если вы уверены, что стек вызывающего объекта не важен для проверок безопасности, осуществляемых во время выполнения задачи в очереди. <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>и <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> оба захвата стек вызывающего объекта, который объединяется со стеком потока из пула потоков, когда поток начинает выполнять задачу. Если требуется проверка безопасности, проверяется весь стек. Несмотря на обеспечение безопасности, такая проверка также влияет на производительность.  
+ Пул потоков также предоставляет методы <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType> и <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=nameWithType>. Используйте эти методы только в том случае, если вы уверены, что стек вызывающего объекта не важен для проверок безопасности, осуществляемых во время выполнения задачи в очереди. <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> и <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> перехватывают стек вызывающего объекта, который объединяется со стеком потока из пула потоков, когда поток начинает выполнять задачу. Если требуется проверка безопасности, проверяется весь стек. Несмотря на обеспечение безопасности, такая проверка также влияет на производительность.  
   
 ## <a name="using-the-thread-pool"></a>Использование пула потоков  
- Начиная с версии [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], самым простым способом использования пула потоков является использование [библиотека параллельных задач (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md). По умолчанию такие типы параллельных библиотек, как <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>, используют потоки из пула потоков для выполнения задач. Пул потоков также можно использовать путем вызова <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> из управляемого кода (или `CorQueueUserWorkItem` из неуправляемого кода) и передачи делегата <xref:System.Threading.WaitCallback>, представляющего метод, который выполняет задачу. Другим способом использования пула потоков является помещение в очередь рабочих элементов, которые имеют отношение к операции ожидания, с помощью метода <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> и передача дескриптора <xref:System.Threading.WaitHandle>, который вызывает метод, представленный делегатом <xref:System.Threading.WaitOrTimerCallback>, при получении сигнала или истечении времени ожидания. Потоки из пула потоков используются для вызова методов обратного вызова.  
+ Начиная с [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], самым простым способом использования пула потоков является применение [библиотеки параллельных задач (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md). По умолчанию такие типы параллельных библиотек, как <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>, используют потоки из пула потоков для выполнения задач. Пул потоков также можно использовать путем вызова <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> из управляемого кода (или `CorQueueUserWorkItem` из неуправляемого кода) и передачи делегата <xref:System.Threading.WaitCallback>, представляющего метод, который выполняет задачу. Другим способом использования пула потоков является помещение в очередь рабочих элементов, которые имеют отношение к операции ожидания, с помощью метода <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> и передача дескриптора <xref:System.Threading.WaitHandle>, который вызывает метод, представленный делегатом <xref:System.Threading.WaitOrTimerCallback>, при получении сигнала или истечении времени ожидания. Потоки из пула потоков используются для вызова методов обратного вызова.  
   
 ## <a name="threadpool-examples"></a>Примеры ThreadPool  
  В примерах кода в этом разделе пул потоков демонстрируется путем использования класса <xref:System.Threading.Tasks.Task>, метода <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> и метода <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType>.  
@@ -108,7 +111,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="TaskParallelLibrary"></a>   
 ### <a name="executing-asynchronous-tasks-with-the-task-parallel-library"></a>Выполнение асинхронных задач с помощью библиотеки параллельных задач  
- В примере ниже показан способ создания и использования объекта <xref:System.Threading.Tasks.Task> путем вызова метода <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>. Пример, использующий <xref:System.Threading.Tasks.Task%601> класса для возвращения значения из асинхронной задачи см. в разделе [как: возвращение значения из задачи](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).  
+ В примере ниже показан способ создания и использования объекта <xref:System.Threading.Tasks.Task> путем вызова метода <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>. Пример, в котором для возвращения значения из асинхронной задачи используется класс <xref:System.Threading.Tasks.Task%601>, см. в руководстве по [ возвращению значения из задачи](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).  
   
  [!code-csharp[System.Threading.Tasks.Task#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.task/cs/startnew.cs#01)]
  [!code-vb[System.Threading.Tasks.Task#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.task/vb/startnew.vb#01)]  
@@ -135,7 +138,7 @@ ms.lasthandoff: 11/21/2017
   
 -   помещение задачи в очередь для выполнения с помощью потоков <xref:System.Threading.ThreadPool> с использованием метода <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A>;  
   
--   отправка задаче сигнала о выполнении с помощью <xref:System.Threading.AutoResetEvent>; В разделе [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md).  
+-   отправка задаче сигнала о выполнении с помощью <xref:System.Threading.AutoResetEvent>; См. дополнительные сведения об [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md).  
   
 -   обработка тайм-аутов и сигналов с помощью делегата <xref:System.Threading.WaitOrTimerCallback>;  
   

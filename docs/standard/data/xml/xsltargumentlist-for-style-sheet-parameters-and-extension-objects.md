@@ -12,21 +12,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d4741551b1e6dd2694a0bd65e65a15953f808e59
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b14365266d5a477b32dbbe177d9644596b9e3b38
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList для параметров таблицы стилей и объектов расширения
 Класс <xref:System.Xml.Xsl.XsltArgumentList> содержит параметры языка XSLT и объекты расширения XSLT. При передаче в метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> эти параметры и объекты расширения могут вызываться из таблиц стилей.  
   
 > [!NOTE]
->  Классы <xref:System.Xml.Xsl.XslTransform> и <xref:System.Xml.Xsl.XsltArgumentList> являются устаревшими в [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Преобразования XSLT можно выполнять с помощью класса <xref:System.Xml.Xsl.XslCompiledTransform>. В разделе [использование класса XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) и [Миграция с класса XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) для получения дополнительной информации.  
+>  Классы <xref:System.Xml.Xsl.XslTransform> и <xref:System.Xml.Xsl.XsltArgumentList> являются устаревшими в [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Преобразования XSLT можно выполнять с помощью класса <xref:System.Xml.Xsl.XslCompiledTransform>. См. дополнительные сведения об [использовании класса XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) и [миграции из класса XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
   
  Класс <xref:System.Xml.Xsl.XsltArgumentList> содержит параметры XSLT и объекты расширения XSLT. При передаче в метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> эти параметры и объекты расширения могут вызываться из таблиц стилей.  
   
@@ -45,11 +48,11 @@ ms.lasthandoff: 10/18/2017
   
  Объект параметра должен соответствовать типу W3C. В следующей таблице показано соответствие типов W3C и классов (типов) [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Также показано, является ли тип W3C типом XPath или типом XSLT.  
   
-|Тип W3C|Эквивалентный класс .NET Framework (тип)|Тип XPath или тип XSLT|  
+|Тип W3C|Эквивалентный класс (тип) .NET Framework|Тип XPath или тип XSLT|  
 |--------------|----------------------------------------------|-----------------------------|  
-|Строковое|System.String|XPath|  
+|String|System.String|XPath|  
 |Boolean|System.Boolean|XPath|  
-|Числовой|System.Double|XPath|  
+|Число|System.Double|XPath|  
 |Фрагмент дерева результатов|System.Xml.XPath.XPathNavigator|XSLT|  
 |Набор узлов|System.Xml.XPath.XPathNodeIterator|XPath|  
   
@@ -146,7 +149,7 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a>Ввод  
+### <a name="input"></a>Входные данные  
  order.xml  
   
 ```xml  
@@ -314,7 +317,7 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a>Ввод  
+### <a name="input"></a>Входные данные  
  number.xml  
   
 ```xml  
@@ -372,4 +375,4 @@ public class Sample
  `</circles>`  
   
 ## <a name="see-also"></a>См. также  
- [Реализуемых классом XslTransform XSLT-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [Реализация классом XslTransform XSLT-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

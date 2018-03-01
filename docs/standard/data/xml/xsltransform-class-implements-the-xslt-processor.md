@@ -12,19 +12,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 167cd81ecbc25ca243e3b4a7a6aa7327679528e0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2f1367268920e4b72f29b77a7f2e96f09a1dce37
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>Реализация классом XslTransform XSLT-процессора
 > [!NOTE]
->  Класс <xref:System.Xml.Xsl.XslTransform> в версии [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] устарел. Можно выполнять XSLT-преобразование, используя класс <xref:System.Xml.Xsl.XslCompiledTransform>. В разделе [использование класса XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) и [Миграция с класса XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) для получения дополнительной информации.  
+>  Класс <xref:System.Xml.Xsl.XslTransform> в версии [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] устарел. Можно выполнять XSLT-преобразование, используя класс <xref:System.Xml.Xsl.XslCompiledTransform>. См. дополнительные сведения об [использовании класса XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) и [миграции из класса XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
   
  Класс <xref:System.Xml.Xsl.XslTransform> является XSLT-процессором, реализующим рекомендации по XSL-преобразованиям (XSLT) версии 1.0. Метод <xref:System.Xml.Xsl.XslTransform.Load%2A> находит и считывает таблицы стилей, а метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> преобразует исходный документ. В качестве исходного документа для метода <xref:System.Xml.XPath.IXPathNavigable> может служить любое хранилище, реализующее интерфейс <xref:System.Xml.Xsl.XslTransform>. Платформа [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] в настоящее время реализует интерфейс <xref:System.Xml.XPath.IXPathNavigable> в классах <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument> и <xref:System.Xml.XPath.XPathDocument>, поэтому все они могут использоваться в качестве источника документов для преобразования.  
   
@@ -84,9 +87,9 @@ public void Load(XPathNavigator, XmlResolver, Evidence);
   
  Если URI или свидетельство отсутствуют, то свидетельство таблицы стилей считается полностью доверенным. Не загружайте таблицы стилей из ненадежных источников и не добавляйте ненадежные объекты расширения в объект <xref:System.Xml.Xsl.XsltArgumentList>.  
   
- Дополнительные сведения об уровнях безопасности и свидетельства и его влияние на сценарии см. в разделе [сценариев с помощью XSLT таблицы стилей \<msxsl: script >](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md). Сведения об уровнях безопасности и свидетельства и оценить их влияние на объекты расширения см. в разделе [XsltArgumentList для параметров таблицы стилей и объекты расширения](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md).  
+ Дополнительные сведения об уровнях безопасности и свидетельстве, а также об их влиянии на работу со скриптами, вы найдете в статье [о скриптах для таблиц стилей XSLT с использованием \<msxsl:script>](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md). Сведения об уровнях безопасности и свидетельстве, а также об их влиянии на объекты расширения см. в статье [XsltArgumentList для параметров таблицы стилей и объектов расширения](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md).  
   
- Сведения об уровнях безопасности и свидетельства и оценить их влияние на `document()` см. в разделе [разрешение внешних таблиц стилей XSLT и документов](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md).  
+ Сведения об уровнях безопасности и свидетельстве, а также об их влиянии на функцию `document()` см. в статье [Разрешение внешних таблиц стилей XSLT и документов](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md).  
   
  Таблицу стилей можно предоставить с рядом входных параметров. Таблица стилей может также вызывать функции в объектах расширения. Как параметры, так и объекты расширения предоставляются таблице стилей с помощью объекта <xref:System.Xml.Xsl.XsltArgumentList>. Дополнительные сведения о веб-службе <xref:System.Xml.Xsl.XsltArgumentList> см. в разделе <xref:System.Xml.Xsl.XsltArgumentList>.  
   
@@ -213,7 +216,7 @@ Root node is book.
 ## <a name="migration-of-xslt-from-net-framework-version-10-to-net-framework-version-11"></a>Миграция XSLT с платформы .NET Framework версии 1.0 на платформу .NET Framework версии 1.1  
  В следующей таблице показаны устаревшие методы платформы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 1.0 и новые методы платформы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 1.1 для метода <xref:System.Xml.Xsl.XslTransform.Load%2A>. Новые методы позволяют ограничить разрешения таблицы стилей, указывая свидетельство.  
   
-|Устаревшие методы Load платформы .NET Framework версии 1.0|Методы Load замены .NET Framework версии 1.1|  
+|Устаревшие методы Load платформы .NET Framework версии 1.0|Заменяющие их методы Load платформы .NET Framework версии 1.1|  
 |------------------------------------------------------|---------------------------------------------------------|  
 |Load(XPathNavigator input);<br /><br /> Load(XPathNavigator input, XmlResolver resolver);|Load(XPathNavigator stylesheet, XmlResolver resolver, Evidence evidence);|  
 |Load(IXPathNavigable stylesheet);<br /><br /> Load(IXPathNavigable stylesheet, XmlResolver resolver);|Load(IXPathNavigable stylesheet, XmlResolver resolver, Evidence evidence);|  
@@ -221,7 +224,7 @@ Root node is book.
   
  В следующей таблице показаны устаревшие и новые методы для метода <xref:System.Xml.Xsl.XslTransform.Transform%2A>. Новые методы принимают объект <xref:System.Xml.XmlResolver>.  
   
-|Устаревшие методы Transform платформы .NET Framework версии 1.0|Заменяющие их методы Transform 1.1 версии .NET Framework|  
+|Устаревшие методы Transform платформы .NET Framework версии 1.0|Заменяющие их методы Transform платформы .NET Framework версии 1.1|  
 |-----------------------------------------------------------|--------------------------------------------------------------|  
 |XmlReader Transform(XPathNavigator input, XsltArgumentList args)|XmlReader Transform(XPathNavigator  input, XsltArgumentList args, XmlResolver resolver)|  
 |XmlReader Transform(IXPathNavigable input, XsltArgumentList args)|XmlReader Transform(IXPathNavigable input, XsltArgumentList args, XmlResolver resolver)|  
@@ -233,7 +236,7 @@ Root node is book.
 |Void Transform(IXPathNavigable input, XsltArgumentList args, Stream output)|Void Transform(IXPathNavigable input, XsltArgumentList args, Stream output, XmlResolver resolver)|  
 |Void Transform(String input, String output);|Void Transform(String input, String output, XmlResolver resolver);|  
   
- Свойство <xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> устарело в платформе [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 1.1. Вместо этого используйте новый <xref:System.Xml.Xsl.XslTransform.Transform%2A> перегрузки, принимающие <xref:System.Xml.XmlResolver> объекта.  
+ Свойство <xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> устарело в платформе [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 1.1. Используйте вместо него новые перегрузки <xref:System.Xml.Xsl.XslTransform.Transform%2A>, принимающие объект <xref:System.Xml.XmlResolver>.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Xml.Xsl.XslTransform>  

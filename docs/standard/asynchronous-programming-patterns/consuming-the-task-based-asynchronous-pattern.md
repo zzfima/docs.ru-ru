@@ -15,32 +15,35 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 90b2a36f0e6bf06b0fefe2191d5b17c9c07d1588
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3eddf8899863b7f1c59950c9cd4fa4d42f7acdb7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Использование асинхронного шаблона, основанного на задачах
-При работе асинхронными операциями с использованием асинхронного шаблона, основанного на задачах, можно использовать обратные вызовы для реализации неблокирующего ожидания.  Для выполнения задач, это достигается с помощью методов например <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. Поддержка асинхронных операций на основе языка скрывает обратные вызовы, разрешая асинхронным операциям находиться в режиме ожидания в нормальном потоке управления, а код, созданный компилятором, предоставляет поддержку на том же уровне API.  
+При работе асинхронными операциями с использованием асинхронного шаблона, основанного на задачах, можно использовать обратные вызовы для реализации неблокирующего ожидания.  Для задач это достигается с помощью таких методов, как <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. Поддержка асинхронных операций на основе языка скрывает обратные вызовы, разрешая асинхронным операциям находиться в режиме ожидания в нормальном потоке управления, а код, созданный компилятором, предоставляет поддержку на том же уровне API.  
   
 ## <a name="suspending-execution-with-await"></a>Приостановление выполнения с помощью Await  
- Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], можно использовать [await](~/docs/csharp/language-reference/keywords/await.md) ключевого слова C# и [оператор Await](~/docs/visual-basic/language-reference/operators/await-operator.md) в Visual Basic, чтобы асинхронно ожидать <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601> объектов. Когда ожидает <xref:System.Threading.Tasks.Task>, `await` выражение имеет тип `void`. Когда ожидает <xref:System.Threading.Tasks.Task%601>, `await` выражение имеет тип `TResult`. Выражение `await` должно находиться в теле асинхронного метода. Дополнительные сведения о поддержке языков C# и Visual Basic в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] см. в спецификациях языка C# и Visual Basic.  
+ Начиная с версии [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], для асинхронного ожидания объектов <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601> можно использовать ключевое слово [await](~/docs/csharp/language-reference/keywords/await.md) (в C#) и [оператор Await](~/docs/visual-basic/language-reference/operators/await-operator.md) (в Visual Basic). Когда вы ожидаете <xref:System.Threading.Tasks.Task>, выражение `await` имеет тип `void`. Когда вы ожидаете <xref:System.Threading.Tasks.Task%601>, выражение `await` имеет тип `TResult`. Выражение `await` должно находиться в теле асинхронного метода. Дополнительные сведения о поддержке языков C# и Visual Basic в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] см. в спецификациях языка C# и Visual Basic.  
   
- На самом деле функция ожидания реализуется с помощью установки обратного вызова для задачи с помощью продолжения.  Этот обратный вызов возобновляет асинхронный методы в точке остановки. Когда асинхронного метода возобновляется, если ожидаемая операция успешно завершена и был <xref:System.Threading.Tasks.Task%601>, ее `TResult` возвращается.  Если <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601> инициировав завершился <xref:System.Threading.Tasks.TaskStatus.Canceled> состояние, <xref:System.OperationCanceledException> исключение.  Если <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601> инициировав завершился <xref:System.Threading.Tasks.TaskStatus.Faulted> состоянии, возникает исключение, вызвавшее его сбой. `Task` может завершиться с ошибкой из-за нескольких исключений, но распространяется только одно из этих исключений. Тем не менее <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> возвращает <xref:System.AggregateException> исключение, которое содержит все ошибки.  
+ На самом деле функция ожидания реализуется с помощью установки обратного вызова для задачи с помощью продолжения.  Этот обратный вызов возобновляет асинхронный методы в точке остановки. При возобновлении асинхронного метода, если ожидаемая операция была завершена успешно и имела тип <xref:System.Threading.Tasks.Task%601>, возвращается ее значение `TResult`.  Если ожидаемая операция <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601> завершилась с состоянием <xref:System.Threading.Tasks.TaskStatus.Canceled>, создается исключение <xref:System.OperationCanceledException>.  Если ожидаемая операция <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601> завершилась с состоянием <xref:System.Threading.Tasks.TaskStatus.Faulted>, создается вызвавшее эту проблему исключение. `Task` может завершиться с ошибкой из-за нескольких исключений, но распространяется только одно из этих исключений. Тем не менее, свойство <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> возвращает исключение <xref:System.AggregateException> с полным списком ошибок.  
   
- Если контекст синхронизации (<xref:System.Threading.SynchronizationContext> объекта) связан с потоком, который выполнялся асинхронный метод во время приостановки (например, если <xref:System.Threading.SynchronizationContext.Current%2A?displayProperty=nameWithType> свойство не `null`), продолжается, асинхронный метод же контекст синхронизации, используя контекст <xref:System.Threading.SynchronizationContext.Post%2A> метод. В противном случае он основывается на планировщик задач (<xref:System.Threading.Tasks.TaskScheduler> объекта), являвшиеся текущими во время приостановки выполнения. Как правило, это планировщик по умолчанию (<xref:System.Threading.Tasks.TaskScheduler.Default%2A?displayProperty=nameWithType>), который предназначенный для пула потоков. Этот планировщик задач определяет, следует ли возобновить приостановленную асинхронную операцию в тот момент, в который она была завершена, или следует ли запланировать возобновление. Планировщик по умолчанию обычно разрешает продолжение выполнения в потоке, который был завершен операцией.  
+ Если контекст синхронизации (объект <xref:System.Threading.SynchronizationContext>) связан с потоком, который во время приостановки выполнял асинхронный метод (например, если свойство <xref:System.Threading.SynchronizationContext.Current%2A?displayProperty=nameWithType> имеет значение, отличное от `null`), асинхронный метод возобновляется в том же контексте синхронизации, для чего вызывается метод <xref:System.Threading.SynchronizationContext.Post%2A> этого контекста. В противном случае он полагается на планировщик задач (объект <xref:System.Threading.Tasks.TaskScheduler>), который использовался в момент приостановки. Обычно это планировщик по умолчанию (<xref:System.Threading.Tasks.TaskScheduler.Default%2A?displayProperty=nameWithType>), который нацелен на пул потоков. Этот планировщик задач определяет, следует ли возобновить приостановленную асинхронную операцию в тот момент, в который она была завершена, или следует ли запланировать возобновление. Планировщик по умолчанию обычно разрешает продолжение выполнения в потоке, который был завершен операцией.  
   
- При вызове асинхронного метода он синхронно выполняет тело функции до первого выражения await для ожидаемого экземпляра, которое еще не было завершено, и в этот момент управление передается вызывающему объекту. Если асинхронный метод не возвращает `void`, <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601> объект возвращается для вычисления текущего представления. В асинхронный метод отличным от void, если встречается оператор return или достижении конца тела метода завершения задачи в <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> конечное состояние. Если необработанное исключение в результате управления передано из тела асинхронного метода, задача завершается в <xref:System.Threading.Tasks.TaskStatus.Faulted> состояние. Если это исключение является <xref:System.OperationCanceledException>, задача завершается вместо этого в <xref:System.Threading.Tasks.TaskStatus.Canceled> состояние. Таким образом, результат или исключение в конечном счете будут сформированы.  
+ При вызове асинхронного метода он синхронно выполняет тело функции до первого выражения await для ожидаемого экземпляра, которое еще не было завершено, и в этот момент управление передается вызывающему объекту. Если асинхронный метод не возвращает `void`, в качестве представления текущего вычисления возвращается объект <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>. В асинхронном методе, который возвращает значение, отличное от void, при обнаружении выражения return или при достижении окончания метода задача завершается в конечном состоянии <xref:System.Threading.Tasks.TaskStatus.RanToCompletion>. Если асинхронный метод теряет управление из-за необработанного исключения, задача завершается в состоянии <xref:System.Threading.Tasks.TaskStatus.Faulted>. Если же это исключение является <xref:System.OperationCanceledException>, задача завершается в состоянии <xref:System.Threading.Tasks.TaskStatus.Canceled>. Таким образом, результат или исключение в конечном счете будут сформированы.  
   
  Существует несколько важных вариантов такого поведения.  Для повышения производительности, если к моменту ожидания задачи оказывается, что задача уже завершена, то управление не освобождается и функция продолжает выполнение.  Кроме того, возврат к исходному контексту не всегда желателен, и такое поведение можно изменить. Подробное описание приведено в следующем разделе.  
   
 ### <a name="configuring-suspension-and-resumption-with-yield-and-configureawait"></a>Настройка приостановки и возобновления с помощью Yield и ConfigureAwait  
- Существуют методы, которые позволяют получить больший контроль над выполнением асинхронного метода. Например, можно использовать <xref:System.Threading.Tasks.Task.Yield%2A?displayProperty=nameWithType> метода для внедрения точки yield в асинхронный метод:  
+ Существуют методы, которые позволяют получить больший контроль над выполнением асинхронного метода. Например, вы можете использовать метод <xref:System.Threading.Tasks.Task.Yield%2A?displayProperty=nameWithType> для внедрения точки приостановки в асинхронный метод:  
   
 ```csharp  
 public class Task : …  
@@ -63,16 +66,16 @@ Task.Run(async delegate
 });  
 ```  
   
- Можно также использовать <xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=nameWithType> метод для улучшения контроля над приостановку и возобновление в асинхронном методе.  Как упоминалось ранее, по умолчанию текущий контекст записывается в момент приостановки асинхронного метода и используется для вызова продолжения асинхронного метода при возобновлении.  Во многих случаях это именно то поведение, к которому вы стремитесь.  В других случаях можно не заботиться о контексте продолжения. Для повышения производительности нужно избегать подобного размещения обратно в исходный контекст.  Чтобы включить эту возможность, используйте <xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=nameWithType> метод для информирования операция await не для записи и возобновить от контекста, но продолжить выполнение везде, где завершении асинхронной операции ожидаемое:  
+ Также можно использовать метод <xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=nameWithType> для более точного контроля над приостановкой и возобновлением в асинхронном методе.  Как упоминалось ранее, по умолчанию текущий контекст записывается в момент приостановки асинхронного метода и используется для вызова продолжения асинхронного метода при возобновлении.  Во многих случаях это именно то поведение, к которому вы стремитесь.  В других случаях можно не заботиться о контексте продолжения. Для повышения производительности нужно избегать подобного размещения обратно в исходный контекст.  Для этого воспользуйтесь методом <xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=nameWithType>, чтобы сообщить операции await о том, что перехватывать и возобновлять контекст не нужно, и вместо этого необходимо продолжить выполнение в той точке, в которой завершилась ожидаемая асинхронная операция.  
   
 ```csharp  
 await someTask.ConfigureAwait(continueOnCapturedContext:false);  
 ```  
   
 ## <a name="canceling-an-asynchronous-operation"></a>Отмена асинхронной операции  
- Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], методы TAP, которые поддерживают отмену укажите по крайней мере один перегрузку, которая принимает токен отмены (<xref:System.Threading.CancellationToken> объекта).  
+ Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], методы TAP, которые поддерживают отмену, предоставляют по крайней мере одну перегрузку, которая принимает маркер отмены (объект <xref:System.Threading.CancellationToken>).  
   
- Токен отмены, который создается через источник токена отмены (<xref:System.Threading.CancellationTokenSource> объекта).  Источник <xref:System.Threading.CancellationTokenSource.Token%2A> свойство возвращает токен отмены, который будет оповещаться при источника <xref:System.Threading.CancellationTokenSource.Cancel%2A> вызывается метод.  Например, если требуется загрузить одной веб-страницы, необходимо иметь возможность отменить операцию создания <xref:System.Threading.CancellationTokenSource> объекта, передается методу TAP свой маркер и вызова источника <xref:System.Threading.CancellationTokenSource.Cancel%2A> метод, когда вы будете готовы для отмены операции:  
+ Маркер отмены создается с помощью источника маркеров отмены (объект <xref:System.Threading.CancellationTokenSource>).  Свойство <xref:System.Threading.CancellationTokenSource.Token%2A> источника возвращает маркер отмены, который будет передаваться при вызове метода <xref:System.Threading.CancellationTokenSource.Cancel%2A> источника.  Например, если вы хотите скачать одну веб-страницу и при этом иметь возможность отменить операцию, создайте объект <xref:System.Threading.CancellationTokenSource>, передайте его маркер методу TAP и вызовите метод источника <xref:System.Threading.CancellationTokenSource.Cancel%2A>, когда нужно будет отменить операцию.  
   
 ```csharp  
 var cts = new CancellationTokenSource();  
@@ -103,7 +106,7 @@ var cts = new CancellationTokenSource();
   
  Запрос на отмену может быть запущен из любого потока.  
   
- Можно передать <xref:System.Threading.CancellationToken.None%2A?displayProperty=nameWithType> значение для любой метод, который принимает токен отмены, чтобы указать, что никогда не будет выдан запрос отмены.  В результате <xref:System.Threading.CancellationToken.CanBeCanceled%2A?displayProperty=nameWithType> возвращаемое свойство `false`, и соответствующим образом оптимизировать вызываемого метода.  Для тестирования также можно передать маркер отмены, для которого уже была выполнена отмена. Этот маркер инициализируется с помощью конструктора, который принимает логическое значение, означающее, следует ли запустить маркер в уже отмененном или неотменяемом состоянии.  
+ Значение <xref:System.Threading.CancellationToken.None%2A?displayProperty=nameWithType> можно передать любому методу, который принимает маркер отмены. Это будет означать, что отмена никогда не будет запрашиваться.  В результате свойство <xref:System.Threading.CancellationToken.CanBeCanceled%2A?displayProperty=nameWithType> будет возвращать `false`, и вызываемый метод сможет принять меры для оптимизации.  Для тестирования также можно передать маркер отмены, для которого уже была выполнена отмена. Этот маркер инициализируется с помощью конструктора, который принимает логическое значение, означающее, следует ли запустить маркер в уже отмененном или неотменяемом состоянии.  
   
  У такого подхода к отмене есть несколько преимуществ.  
   
@@ -133,10 +136,10 @@ private async void btnDownload_Click(object sender, RoutedEventArgs e)
   
 <a name="combinators"></a>   
 ## <a name="using-the-built-in-task-based-combinators"></a>Использование внутренних блоков объединения задач  
- <xref:System.Threading.Tasks> Пространство имен включает несколько методов для создания и работы с задачами.  
+ В пространстве имен <xref:System.Threading.Tasks> предусмотрено несколько способов объединять задачи и работать с ними.  
   
 ### <a name="taskrun"></a>Task.Run  
- <xref:System.Threading.Tasks.Task> Класс содержит несколько <xref:System.Threading.Tasks.Task.Run%2A> методы, которые позволяют легко разгрузки work в качестве <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601> в пул потоков, например:  
+ Класс <xref:System.Threading.Tasks.Task> содержит несколько методов <xref:System.Threading.Tasks.Task.Run%2A>, которые позволяют легко разгрузить задачи в формате <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601> в пул потоков, например так:  
   
 ```csharp  
 public async void button1_Click(object sender, EventArgs e)  
@@ -149,7 +152,7 @@ public async void button1_Click(object sender, EventArgs e)
 }  
 ```  
   
- Некоторые из этих <xref:System.Threading.Tasks.Task.Run%2A> методы, такие как <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> перегрузки, существует как сокращение для <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> метод.  Другие перегрузки, такие как <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType>, включить использование ожидать в течение разгруженных работы, например:  
+ Некоторые из этих методов <xref:System.Threading.Tasks.Task.Run%2A>, например перегрузка <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType>, являются ссылкой на метод <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>.  Другие перегрузки, например <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType>, позволяют использовать await в разгруженных задачах, например так:  
   
 ```csharp  
 public async void button1_Click(object sender, EventArgs e)  
@@ -163,10 +166,10 @@ public async void button1_Click(object sender, EventArgs e)
 }  
 ```  
   
- Логически эквивалентно использованию таких перегрузок <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> в сочетании с <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> метод расширения в библиотеке параллельных задач.  
+ Эти перегрузки логически эквивалентны вызову метода <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> в сочетании с методом расширения <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A>из библиотеки параллельных задач.  
   
 ### <a name="taskfromresult"></a>Task.FromResult  
- Используйте <xref:System.Threading.Tasks.Task.FromResult%2A> метод в сценариях, где данные уже могут быть доступны и просто требуется возвратить из метода возвращающий задачу до <xref:System.Threading.Tasks.Task%601>:  
+ Используйте метод <xref:System.Threading.Tasks.Task.FromResult%2A> в ситуациях, когда данные уже могут быть доступны и их достаточно возвратить в <xref:System.Threading.Tasks.Task%601> из метода, возвращающего задачу.  
   
 ```csharp  
 public Task<int> GetValueAsync(string key)  
@@ -184,7 +187,7 @@ private async Task<int> GetValueAsyncInternal(string key)
 ```  
   
 ### <a name="taskwhenall"></a>Task.WhenAll  
- Используйте <xref:System.Threading.Tasks.Task.WhenAll%2A> метод асинхронно ожидание несколько асинхронных операций, которые представлены в виде задачи.  У этого метода есть несколько перегрузок, которые поддерживают набор неуниверсальных задач или неоднородный набор универсальных задач (например, асинхронное ожидание нескольких операций, возвращающих void, или асинхронное ожидание несколько методов, возвращающих значение (при этом эти значения могут быть разных типов)), а также поддерживают единый набор универсальных задач (например, асинхронное ожидание нескольких методов, которые возвращают `TResult`).  
+ Используйте метод <xref:System.Threading.Tasks.Task.WhenAll%2A> для асинхронного ожидания нескольких асинхронных операций, которые представлены в виде задач.  У этого метода есть несколько перегрузок, которые поддерживают набор неуниверсальных задач или неоднородный набор универсальных задач (например, асинхронное ожидание нескольких операций, возвращающих void, или асинхронное ожидание несколько методов, возвращающих значение (при этом эти значения могут быть разных типов)), а также поддерживают единый набор универсальных задач (например, асинхронное ожидание нескольких методов, которые возвращают `TResult`).  
   
  Предположим, что вы хотите отправить сообщения по электронной почте нескольким клиентам. Отправку сообщений можно перекрывать, чтобы не ожидать завершения отправки одного сообщения перед отправкой следующего. Также можно узнать, были ли выполнены операции отправки и возникли ли ошибки.  
   
@@ -193,7 +196,7 @@ IEnumerable<Task> asyncOps = from addr in addrs select SendMailAsync(addr);
 await Task.WhenAll(asyncOps);  
 ```  
   
- Этот код явно не обрабатывает исключения, которые могут возникать, но позволяет распространить из исключения `await` в результирующую задачу из <xref:System.Threading.Tasks.Task.WhenAll%2A>.  Для обработки исключений можно использовать следующий код.  
+ Этот код не обрабатывает возможные исключения явным образом, но позволяет им распространяться из метода `await` на задачу, полученную от <xref:System.Threading.Tasks.Task.WhenAll%2A>.  Для обработки исключений можно использовать следующий код.  
   
 ```csharp  
 IEnumerable<Task> asyncOps = from addr in addrs select SendMailAsync(addr);  
@@ -207,7 +210,7 @@ catch(Exception exc)
 }  
 ```  
   
- В этом случае при сбое любой асинхронной операции, все исключения, будут объединены в <xref:System.AggregateException> исключение, которое хранится в <xref:System.Threading.Tasks.Task> возвращенный <xref:System.Threading.Tasks.Task.WhenAll%2A> метод.  Однако с помощью ключевого слова `await` распространяется только одно из этих исключений.  Если вы хотите изучить все исключения, можно переписать предыдущий код следующим образом.  
+ В этом случае при сбое любой асинхронной операции все исключения объединяются в одно исключение <xref:System.AggregateException>, которое сохраняется в <xref:System.Threading.Tasks.Task>, возвращаемом из метода <xref:System.Threading.Tasks.Task.WhenAll%2A>.  Однако с помощью ключевого слова `await` распространяется только одно из этих исключений.  Если вы хотите изучить все исключения, можно переписать предыдущий код следующим образом.  
   
 ```csharp  
 Task [] asyncOps = (from addr in addrs select SendMailAsync(addr)).ToArray();  
@@ -251,7 +254,7 @@ catch(Exception exc)
 ```  
   
 ### <a name="taskwhenany"></a>Task.WhenAny  
- Можно использовать <xref:System.Threading.Tasks.Task.WhenAny%2A> метод, чтобы асинхронно ожидать только один из нескольких асинхронных операций в виде задачи для выполнения.  Этот метод допускает четыре основных варианта использования.  
+ Используйте метод <xref:System.Threading.Tasks.Task.WhenAny%2A> для асинхронного ожидания завершения одной из нескольких асинхронных операций, которые представлены в виде задач.  Этот метод допускает четыре основных варианта использования.  
   
 -   Избыточность: многократный запуск одной операции и выбор первой завершенной операции (например, обращение к нескольким веб-сервисам котировок акций с целью получить один результат и выбор операции, которая завершилась первой).  
   
@@ -259,10 +262,10 @@ catch(Exception exc)
   
 -   Регулирование: добавление новых операций по мере завершения предыдущих.  Это расширение сценария с чередованием.  
   
--   Ранняя остановка: например, операция, представленная задачей t1, может сгруппироваться в задачу <xref:System.Threading.Tasks.Task.WhenAny%2A> с другой задачей t2, после чего можно ожидать задачу <xref:System.Threading.Tasks.Task.WhenAny%2A>. Задача t2 может представлять собой тайм-аут, или отмену или других сигнала, которое вызывает <xref:System.Threading.Tasks.Task.WhenAny%2A> завершения до t1 завершения задачи.  
+-   Ранняя остановка: например, операция, представленная задачей t1, может сгруппироваться в задачу <xref:System.Threading.Tasks.Task.WhenAny%2A> с другой задачей t2, после чего можно ожидать задачу <xref:System.Threading.Tasks.Task.WhenAny%2A>. Например, задача t2 может представлять завершение ожидания, отмену или другой сигнал, требующий завершения задачи <xref:System.Threading.Tasks.Task.WhenAny%2A> до завершения задачи t1.  
   
 #### <a name="redundancy"></a>Избыточность  
- Рассмотрим случай, когда вам требуется принять решение о необходимости покупки акций.  Существует несколько стандартных веб-служб с рекомендациями по покупке акций, которым вы доверяете, но в зависимости от ежедневной нагрузки каждая из этих служб иногда может работать медленно.  Можно использовать <xref:System.Threading.Tasks.Task.WhenAny%2A> метод, чтобы получать уведомления при завершении выполнения любой операции:  
+ Рассмотрим случай, когда вам требуется принять решение о необходимости покупки акций.  Существует несколько стандартных веб-служб с рекомендациями по покупке акций, которым вы доверяете, но в зависимости от ежедневной нагрузки каждая из этих служб иногда может работать медленно.  Для получения уведомлений о завершении любой операции можно использовать метод <xref:System.Threading.Tasks.Task.WhenAny%2A>:  
   
 ```csharp  
 var recommendations = new List<Task<bool>>()   
@@ -275,9 +278,9 @@ Task<bool> recommendation = await Task.WhenAny(recommendations);
 if (await recommendation) BuyStock(symbol);  
 ```  
   
- В отличие от <xref:System.Threading.Tasks.Task.WhenAll%2A>, возвращающий распаковать результаты всех задач, которые выполнены успешно, <xref:System.Threading.Tasks.Task.WhenAny%2A> Возвращает задачу, которая была завершена. Если задача завершилась сбоем, важно знать, что она завершилась сбоем, а если она завершилась успешно, важно знать, с какой задачей связано возвращаемое значение.  Поэтому необходимо получить доступ к результату, возвращаемому задачей, или продолжить ожидание, как показано в данном примере.  
+ В отличие от <xref:System.Threading.Tasks.Task.WhenAll%2A>, который возвращает распакованные результаты всех успешно выполненных задач, <xref:System.Threading.Tasks.Task.WhenAny%2A> возвращает завершенную задачу. Если задача завершилась сбоем, важно знать, что она завершилась сбоем, а если она завершилась успешно, важно знать, с какой задачей связано возвращаемое значение.  Поэтому необходимо получить доступ к результату, возвращаемому задачей, или продолжить ожидание, как показано в данном примере.  
   
- Как и в <xref:System.Threading.Tasks.Task.WhenAll%2A>, необходимо поддерживать исключения.  Так как вы получаете управление от завершенной задачи, вы можете подождать, пока не будут распространены ошибки для возвращенной задачи и `try/catch` их соответствующим образом.  
+ Как и в случае с <xref:System.Threading.Tasks.Task.WhenAll%2A>, необходимо поддерживать исключения.  Так как вы получаете управление от завершенной задачи, вы можете подождать, пока не будут распространены ошибки для возвращенной задачи и `try/catch` их соответствующим образом.  
   
 ```csharp  
 Task<bool> [] recommendations = …;  
@@ -367,7 +370,7 @@ while(imageTasks.Count > 0)
 }  
 ```  
   
- Можно также применить чередование сценарий, в котором подразумевает обработку с большим объемом вычислений на <xref:System.Threading.ThreadPool> загруженных образов, например:  
+ Также вы можете применить чередование к сценарию, который подразумевает интенсивную вычислительную обработку пула загруженных изображений <xref:System.Threading.ThreadPool>, например так:  
   
 ```csharp  
 List<Task<Bitmap>> imageTasks =   
@@ -482,12 +485,12 @@ public async void btnRun_Click(object sender, EventArgs e)
 }  
 ```  
   
- Еще один пример ранняя остановка предполагает использование <xref:System.Threading.Tasks.Task.WhenAny%2A> в сочетании с <xref:System.Threading.Tasks.Task.Delay%2A> метода, как описано в следующем разделе.  
+ Еще один пример ранней остановки предполагает использование метода <xref:System.Threading.Tasks.Task.WhenAny%2A> в сочетании с методом <xref:System.Threading.Tasks.Task.Delay%2A>, как описано в следующем разделе.  
   
 ### <a name="taskdelay"></a>Task.Delay  
- Можно использовать <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> метод представить приостанавливает выполнения асинхронного метода.  Это удобно для реализации различных функций, включая создание циклов опроса и задержку обработки ввода пользователя на заданный период времени.  <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> Метод также можно использовать в сочетании с <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> для реализации тайм-аутов на ожидание.  
+ Метод <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> позволяет приостановить выполнение асинхронного метода.  Это удобно для реализации различных функций, включая создание циклов опроса и задержку обработки ввода пользователя на заданный период времени.  Метод <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> также можно использовать в сочетании с <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> для ограничения времени ожидания await.  
   
- Если на выполнение задачи, которая является частью большой асинхронной операции (например, веб-служба ASP.NET), требуется слишком много времени, то это может негативно сказаться на всей операции, особенно если это приведет к неудачному завершению операции.  Поэтому важно иметь возможность задавать время ожидания для асинхронных операций.  Синхронный <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType>, и <xref:System.Threading.Tasks.Task.WaitAny%2A?displayProperty=nameWithType> методы принимают значения времени ожидания, но соответствующий <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> / <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> и упомянутых ранее <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> / <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>методы — нет.  Вместо этого можно использовать <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> в сочетании для реализации тайм-аута.  
+ Если на выполнение задачи, которая является частью большой асинхронной операции (например, веб-служба ASP.NET), требуется слишком много времени, то это может негативно сказаться на всей операции, особенно если это приведет к неудачному завершению операции.  Поэтому важно иметь возможность задавать время ожидания для асинхронных операций.  Синхронные методы <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task.WaitAny%2A?displayProperty=nameWithType> принимают значения времени ожидания, а соответствующий метод <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType>/<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> и ранее упомянутый <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>/<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> — нет.  Вместо этого вы можете совместно использовать <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> для ограничения времени ожидания.  
   
  Например, предположим, что вы хотите загрузить приложение и отключить пользовательский интерфейс на время загрузки. Однако если загрузка занимает слишком много времени, вы можете отменить загрузку и вернуться в пользовательский интерфейс.  
   
@@ -516,7 +519,7 @@ public async void btnDownload_Click(object sender, EventArgs e)
 }  
 ```  
   
- То же самое происходит скачать несколько файлов, так как <xref:System.Threading.Tasks.Task.WhenAll%2A> Возвращает задачу:  
+ Это же применимо и скачиванию нескольких файлов, так как <xref:System.Threading.Tasks.Task.WhenAll%2A> возвращает задачу:  
   
 ```csharp  
 public async void btnDownload_Click(object sender, RoutedEventArgs e)  
@@ -639,7 +642,7 @@ double currentPrice = await NeedOnlyOne(
 ```  
   
 ### <a name="interleaved-operations"></a>Операции с чередованием  
- Отсутствует на потенциальную проблему производительности с помощью <xref:System.Threading.Tasks.Task.WhenAny%2A> метод для поддержки чередующихся сценарии при работе с очень большими наборами задач.  Каждый вызов <xref:System.Threading.Tasks.Task.WhenAny%2A> приводит к регистрации в каждой задачи продолжения. Для N задач это приводит к созданию O(N2) продолжений в течение времени существования операции чередования.  При работе с большим набором задач можно использовать комбинатор (`Interleaved` в следующем примере), чтобы решить проблему производительности.  
+ При использовании метода <xref:System.Threading.Tasks.Task.WhenAny%2A> для поддержки сценария чередования при работе с очень большими наборами задач существует потенциальная проблема производительности.  Каждый вызов <xref:System.Threading.Tasks.Task.WhenAny%2A> приводит к регистрации продолжения в каждой задаче. Для N задач это приводит к созданию O(N2) продолжений в течение времени существования операции чередования.  При работе с большим набором задач можно использовать комбинатор (`Interleaved` в следующем примере), чтобы решить проблему производительности.  
   
 ```csharp  
 static IEnumerable<Task<T>> Interleaved<T>(IEnumerable<Task<T>> tasks)  
@@ -703,10 +706,10 @@ public static Task<T[]> WhenAllOrFirstException<T>(IEnumerable<Task<T>> tasks)
 ```  
   
 ## <a name="building-task-based-data-structures"></a>Создание структур данных на основе задач  
- Помимо возможности для построения пользовательских методами объединения на основе задач, имеет структуру данных <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601> , представляющий результаты асинхронной операции и синхронизации, необходимой для соединения с ним делает его очень мощный Введите для построения пользовательских структур данных для использования в скриптах асинхронной.  
+ Кроме возможности создавать блоки объединения на основе задач, <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601> имеют структуру данных, которая представляет результаты асинхронной операции и необходимую синхронизацию для объединения, что делает их очень мощным инструментом для создания пользовательских структур данных для асинхронных сценариев.  
   
 ### <a name="asynccache"></a>AsyncCache  
- Одним важным аспектом задачи является, он может обрабатываться нескольким получателям, каждый из которых может ожидание, продолжений регистра, с ее помощью получить его результат или исключения (в случае использования <xref:System.Threading.Tasks.Task%601>), и т. д.  Это делает <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601> идеально подходит для использования в асинхронной инфраструктура кэширования.  Ниже приведен пример небольшой, но мощные асинхронный кэш построены на основе <xref:System.Threading.Tasks.Task%601>:  
+ Одним из важных аспектов задачи является то, что ее можно передать нескольким потребителям, каждый из которых может ожидать ее, регистрировать продолжения для этой задачи, получать ее результат или исключения (для <xref:System.Threading.Tasks.Task%601>) и т. д.  Благодаря этому <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601> идеально подходят для асинхронной инфраструктуры кэширования.  Ниже приведен пример небольшого, но мощного асинхронного кэша, созданного на основе <xref:System.Threading.Tasks.Task%601>:  
   
 ```csharp  
 public class AsyncCache<TKey, TValue>  
@@ -733,7 +736,7 @@ public class AsyncCache<TKey, TValue>
 }  
 ```  
   
- [AsyncCache\<TKey, TValue >](http://go.microsoft.com/fwlink/p/?LinkId=251941) класса принимает в качестве его конструктору делегат функции, принимающей `TKey` и возвращает <xref:System.Threading.Tasks.Task%601>.  Ранее запрошенные из кэша значения хранятся во внутреннем словаре, и `AsyncCache` гарантирует, что для одного ключа создается только одна задача, даже при одновременном доступе к кэшу.  
+ Класс [AsyncCache\<TKey,TValue](http://go.microsoft.com/fwlink/p/?LinkId=251941) в качестве делегата своего конструктора принимает функцию, которая принимает значение `TKey` и возвращает значение <xref:System.Threading.Tasks.Task%601>.  Ранее запрошенные из кэша значения хранятся во внутреннем словаре, и `AsyncCache` гарантирует, что для одного ключа создается только одна задача, даже при одновременном доступе к кэшу.  
   
  Например, можно создать кэш для загруженных веб-страниц.  
   
@@ -818,7 +821,7 @@ private static void Produce(int data)
 }  
 ```  
   
- <xref:System.Threading.Tasks.Dataflow> Пространство имен включает <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> тип, который можно использовать так же, но без необходимости построения пользовательского типа коллекции:  
+ Пространство имен <xref:System.Threading.Tasks.Dataflow> включает также тип <xref:System.Threading.Tasks.Dataflow.BufferBlock%601>, который можно использовать аналогичным образом, но не создавая пользовательский тип коллекции:  
   
 ```csharp  
 private static BufferBlock<int> m_data = …;  
@@ -839,7 +842,7 @@ private static void Produce(int data)
 ```  
   
 > [!NOTE]
->  <xref:System.Threading.Tasks.Dataflow> Пространство имен доступно в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] через **NuGet**. Чтобы установить сборку, содержащую <xref:System.Threading.Tasks.Dataflow> пространства имен, откройте проект в [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], выберите **управление пакетами NuGet** меню проекта и выполните поиск пакета Microsoft.Tpl.Dataflow.  
+>  Пространство имен <xref:System.Threading.Tasks.Dataflow> доступно в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] через **NuGet**. Чтобы установить сборку, которая содержит пространство имен <xref:System.Threading.Tasks.Dataflow>, откройте проект в [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], в меню "Проект" выберите пункт **Управление пакетами NuGet** и найдите в Интернете пакет Microsoft.Tpl.Dataflow.  
   
 ## <a name="see-also"></a>См. также  
  [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Асинхронный шаблон, основанный на задачах (TAP))  

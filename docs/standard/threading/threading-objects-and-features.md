@@ -12,22 +12,25 @@ helpviewer_keywords:
 - threading [.NET Framework], features
 - managed threading
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2a73e5c60a661c171e9e46e6307484cf5e0e6b80
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0cb36c004c46e22256928b3b2432da59fb3e6fa2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="threading-objects-and-features"></a>Объекты и функциональные возможности работы с потоками
 Платформа .NET Framework предоставляет ряд объектов, которые помогают создавать многопоточные приложения и управлять ими. Управляемые потоки представлены классом <xref:System.Threading.Thread>. Класс <xref:System.Threading.ThreadPool> позволяет легко создавать многопоточные фоновые задачи и управлять ими. Класс <xref:System.ComponentModel.BackgroundWorker> используется в тех же целях для задач, которые взаимодействуют с пользовательским интерфейсом. Класс <xref:System.Threading.Timer> выполняет фоновые задачи через определенные интервалы.  
   
  Кроме того, существует ряд классов, которые синхронизируют действия потоков, включая классы <xref:System.Threading.Semaphore> и <xref:System.Threading.EventWaitHandle>, появившиеся в .NET Framework версии 2.0. Возможности этих классов сравниваются в разделе [Обзор примитивов синхронизации](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Пул управляемых потоков](../../../docs/standard/threading/the-managed-thread-pool.md)  
  Описывается класс **ThreadPool**, который позволяет запросить выполнение задачи потоком без необходимости управлять потоком самостоятельно.  
   
@@ -44,7 +47,7 @@ ms.lasthandoff: 10/18/2017
  Описываются управляемые дескрипторы ожидания событий, которые используются для синхронизации действий потоков путем отправки и ожидания сигналов.  
   
  [Мьютексы](../../../docs/standard/threading/mutexes.md)  
- Описание способов использования <xref:System.Threading.Mutex> для синхронизации доступа к объекту или создания собственных механизмов синхронизации.  
+ Описывается использование объекта <xref:System.Threading.Mutex>для синхронизации доступа к объекту или создания собственных механизмов синхронизации.  
   
  [Блокируемые операции](../../../docs/standard/threading/interlocked-operations.md)  
  Описывается использование класса <xref:System.Threading.Interlocked> для пошагового увеличения или уменьшения значения и сохранения значения в одной атомарной операции.  

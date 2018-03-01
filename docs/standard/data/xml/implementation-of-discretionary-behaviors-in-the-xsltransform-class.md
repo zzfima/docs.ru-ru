@@ -9,19 +9,22 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7b6c81a5737b879b7c1356c4b9c2ab68fbbc4688
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 98ad31039b5351a7dc4aa3cf033ae8cd0f896b7b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>Реализация поведения по выбору в классе XslTransform
 > [!NOTE]
->  Класс <xref:System.Xml.Xsl.XslTransform> в версии [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] устарел. Можно выполнять XSLT-преобразование, используя класс <xref:System.Xml.Xsl.XslCompiledTransform>. В разделе [использование класса XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) и [Миграция с класса XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) для получения дополнительной информации.  
+>  Класс <xref:System.Xml.Xsl.XslTransform> в версии [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] устарел. Можно выполнять XSLT-преобразование, используя класс <xref:System.Xml.Xsl.XslCompiledTransform>. См. дополнительные сведения об [использовании класса XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) и [миграции из класса XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
   
  Поведение, реализуемое по усмотрению разработчика, определяется как один из возможных вариантов поведения, описанных в рекомендации W3C по преобразованиям XSL (XSLT) версии 1.0 (www.w3.org/TR/xslt), для которых поставщик реализации может выбрать один из возможных режимов обработки ситуации. Например, раздел 7.3 рекомендации W3C, «Создание инструкций по обработке», определяет, что, если при создании экземпляра содержимого `xsl:processing-instruction` создаются узлы, отличные от текстовых, это ошибка. В некоторых случаях рекомендации W3C указывают, какое решение следует принять, если обработчик решает провести восстановление после ошибки. Для проблемы, приведенной в разделе 7.3, W3C заявляет, что реализация может устранять эту ошибку, игнорируя узлы и их содержимое.  
   
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 |Атрибут имени `xsl:processing-instruction` не содержит одновременно имени без двоеточий (NCName) и цели инструкции по обработке.|Восстановление|7.3|  
 |При создании экземпляра содержимого `xsl:processing-instruction` создаются узлы, отличные от текстовых.|Восстановление|7.3|  
 |Результаты создания экземпляра содержимого `xsl:processing-instruction` содержат строку «`?>`».|Восстановление|7.3|  
-|Результаты создания экземпляра содержимого `xsl:comment` содержит строку «--», или заканчиваются символом «-».|Восстановление|7.4|  
+|Результаты создания экземпляра содержимого `xsl:comment` содержат строку -- или заканчиваются символом -.|Восстановление|7.4|  
 |При создании экземпляра содержимого `xsl:comment` создаются узлы, отличные от текстовых.|Восстановление|7.4|  
 |Шаблон внутри привязывающегося к переменной элемента возвращает узел атрибута или узел пространства имен.|Восстановление|11.2|  
 |Ошибка при извлечении ресурса по URI-идентификатору, переданного в функцию документа.|Вызов исключения|12.1|  
@@ -68,12 +71,12 @@ ms.lasthandoff: 11/21/2017
   
 -   Что касается языков, различные обработчики могут по-разному проводить обработку для конкретного языка, не указанного в элементе `xsl:sort.`  
   
- В следующей таблице показано поведение при сортировке реализованное для каждого типа данных в реализации .NET Framework преобразования с помощью <xref:System.Xml.Xsl.XslTransform>.  
+ В таблице показано поведение при сортировке, реализованное для каждого типа данных в реализации преобразования платформы .NET Framework с помощью класса <xref:System.Xml.Xsl.XslTransform>.  
   
 |Тип данных|Поведение при сортировке|  
 |---------------|----------------------|  
 |Text|Данные сортируются методом среды CLR String.Compare с учетом языкового стандарта культуры. Для типа данных «text» сортировка, реализованная в классе <xref:System.Xml.Xsl.XslTransform>, идентична сравнению строк в среде CLR.|  
-|Числовой|Числовые значения обрабатываются как числа языка XPath и сортируются в соответствии со структурой, приведенной в разделе 3.5 рекомендаций W3C по XPath версии 1.0 (www.w3.org/TR/xpath.html#numbers).|  
+|Число|Числовые значения обрабатываются как числа языка XPath и сортируются в соответствии со структурой, приведенной в разделе 3.5 рекомендаций W3C по XPath версии 1.0 (www.w3.org/TR/xpath.html#numbers).|  
   
 ## <a name="optional-features-supported"></a>Поддерживаемые дополнительные функции  
  В следующей таблице перечислены дополнительные функции обработчика XSLT, реализованные в классе <xref:System.Xml.Xsl.XslTransform>.  
@@ -84,7 +87,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Xml.Xsl.XslTransform>  
- [Реализуемых классом XslTransform XSLT-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
+ [Реализация классом XslTransform XSLT-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
  [XSLT-преобразования с помощью класса XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
  [XPathNavigator в преобразованиях](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
  [XPathNodeIterator в преобразованиях](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  

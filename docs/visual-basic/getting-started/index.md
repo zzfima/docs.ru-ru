@@ -2,20 +2,21 @@
 title: "Начало работы с Visual Basic"
 ms.date: 08/10/2017
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1593475bf5b4a34f854bc3e89be84d7720cd497b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 291065ae4c42cea741c4631923506076fcbc2f2e
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-visual-basic"></a>Начало работы с Visual Basic
 Этот раздел документации помогает начать разработку приложений на Visual Basic.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
 [Создание библиотеки классов с помощью Visual Basic и .NET Core в Visual Studio 2017](../../core/tutorials/vb-library-with-visual-studio.md) 
 
 ## <a name="see-also"></a>См. также
- [Получить Visual Basic](https://www.visualstudio.com/downloads/)  
+ [Получить Visual Basic](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)  
  Предоставляет ссылки для скачивания версий Visual Studio, включая поддержку Visual Basic и бесплатные версии.  
 
  [Основы программирования на Visual Basic для начинающих](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)  

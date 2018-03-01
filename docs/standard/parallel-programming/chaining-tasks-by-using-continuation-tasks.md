@@ -11,17 +11,21 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, continuations
+helpviewer_keywords:
+- tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7037e0c91ee6ae83b70d6a26e72b87095456063b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b8e21c338648d5925c8576f76dae3aae43a9ca0d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Создание цепочки задач с помощью задач продолжения
 В асинхронном программировании очень распространено при завершении одной асинхронной операции вызывать вторую операцию и передавать в нее данные. В большинстве случаев это делается с помощью методов обратного вызова. В библиотеке параллельных задач эта функциональность обеспечивается *задачами продолжения*. Задача продолжения (также называемая просто продолжением) — это асинхронная задача, вызываемая другой задачей, которая называется *предшествующей*, при завершении этой предшествующей задачи.  
@@ -58,7 +62,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="creating-a-continuation-for-multiple-antecedents"></a>Создание продолжения для нескольких предшествующих задач  
  Можно также создать продолжение, которое будет выполняться после завершения всей группы задач или какой-либо из них. Чтобы выполнить продолжение после завершения всех предшествующих задач, вызовите статический (`Shared` в Visual Basic) метод <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> или экземпляр метода <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType>. Чтобы выполнить продолжение после завершения какой-либо из предшествующих задач, вызовите статический (`Shared` в Visual Basic) метод <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> или экземпляр метода <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType>.  
   
- Обратите внимание, что вызовы <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> перегрузки, не блокируют вызывающий поток.  Однако обычно вызываются все, кроме <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> методы для извлечения возвращенного <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> свойство, которое блокирует вызывающий поток.  
+ Обратите внимание, что вызовы в перегрузки <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> не блокируют вызывающий поток.  Тем не менее обычно вызываются все методы, кроме <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> для извлечения возвращенного свойства <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType>, которое не блокирует вызывающий поток.  
   
  В следующем примере вызывается метод <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> для создания задачи продолжения, которая отражает результаты десяти своих предшествующих задач. Каждой предшествующей задаче соответствует значение индекса в диапазоне от 1 до 10. Если предшествующие задачи завершаются успешно (их свойство <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> имеет значение <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>), то свойство <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> продолжения представляет собой массив значений <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType>, возвращенных каждой предшествующей задачей. В этом примере они добавляются для вычисления суммы квадратов всех чисел от 1 до 10.  
   
@@ -124,7 +128,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="associating-state-with-continuations"></a>Связывание состояния с продолжениями  
  Вы можете связывать произвольное состояние с продолжением задачи. Метод <xref:System.Threading.Tasks.Task.ContinueWith%2A> предоставляет перегруженные версии, каждая из которых принимает значение <xref:System.Object> , представляющее состояние продолжения. Позднее можно получить доступ к этому объекту состояния с помощью свойства <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType>. Если значение не предоставлено, то этот объект состояния имеет значение `null` .  
   
- Состояние продолжения полезно при преобразовании существующего кода, который  использует библиотеку параллельных задач с помощью [асинхронной модели программирования (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) . В APM, то объект состояния обычно предоставляется в  **начать*метод*** метод и впоследствии доступ к этому состоянию получается с помощью <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> свойство. С помощью метода <xref:System.Threading.Tasks.Task.ContinueWith%2A> можно сохранить это состояние при преобразовании кода,  использующего библиотеку параллельных задач с помощью  APM.  
+ Состояние продолжения полезно при преобразовании существующего кода, который  использует библиотеку параллельных задач с помощью [асинхронной модели программирования (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) . В APM объект состояния обычно предоставляется в метод **Begin***Method*, а последующий доступ к этому состоянию осуществляется с помощью свойства <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType>. С помощью метода <xref:System.Threading.Tasks.Task.ContinueWith%2A> можно сохранить это состояние при преобразовании кода,  использующего библиотеку параллельных задач с помощью  APM.  
   
  Состояние продолжения также можно использовать при работе с объектами <xref:System.Threading.Tasks.Task> в отладчике [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] . Например, в окне **Параллельные задачи** столбец **Задачи** отображает строковое представление объекта состояния для каждой задачи. Дополнительные сведения об окне **Параллельные задачи** см. в разделе [Использование окна задач](/visualstudio/debugger/using-the-tasks-window).  
   
@@ -151,7 +155,7 @@ ms.lasthandoff: 10/18/2017
      [!code-csharp[TPL_Continuations#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#11)]
      [!code-vb[TPL_Continuations#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#11)]  
   
-     Дополнительные сведения см. в статьях [Обработка исключений](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) и [NIB. Практическое руководство. Обработка исключений, создаваемых задачами](http://msdn.microsoft.com/en-us/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
+     Дополнительные сведения см. в статьях [Обработка исключений](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) и [NIB. Практическое руководство. Обработка исключений, создаваемых задачами](http://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
   
 -   Если продолжение является присоединенной дочерней задачей, созданной с использованием параметра <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType>, его исключения будут распространяться родительской задачей обратно в вызывающий поток, как и в случае любой другой присоединенной дочерней задачи. Дополнительные сведения см. в разделе [Присоединенные и отсоединенные дочерние задачи](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
   
