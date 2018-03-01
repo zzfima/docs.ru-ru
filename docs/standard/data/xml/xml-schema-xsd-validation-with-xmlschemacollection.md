@@ -12,23 +12,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ebe8a55cd5dd80be10553948c7765f81429c0957
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c7af29acd33ff3909f0d82e3ef7f7027dc5e44aa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a><span data-ttu-id="f92b3-102">Проверка по XML-схеме (XSD) с помощью XmlSchemaCollection</span><span class="sxs-lookup"><span data-stu-id="f92b3-102">XML Schema (XSD) Validation with XmlSchemaCollection</span></span>
-<span data-ttu-id="f92b3-103">Объект <xref:System.Xml.Schema.XmlSchemaCollection> можно использовать для проверки XML-документа по схемам на языке XSD.</span><span class="sxs-lookup"><span data-stu-id="f92b3-103">You can use the <xref:System.Xml.Schema.XmlSchemaCollection> to validate an XML document against XML Schema definition language (XSD) schemas.</span></span> <span data-ttu-id="f92b3-104">Объект <xref:System.Xml.Schema.XmlSchemaCollection> повышает производительность за счет сохранения схем в коллекции, чтобы они не загружались в память при каждой проверке.</span><span class="sxs-lookup"><span data-stu-id="f92b3-104">The <xref:System.Xml.Schema.XmlSchemaCollection> improves performance by storing schemas in the collection so they are not loaded into memory each time validation occurs.</span></span> <span data-ttu-id="f92b3-105">Если схема существует в коллекции схем, для ее поиска в коллекции используется атрибут `schemaLocation`.</span><span class="sxs-lookup"><span data-stu-id="f92b3-105">If the schema exists in the schema collection, the `schemaLocation` attribute is used to look up the schema in the collection.</span></span>  
+# <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a><span data-ttu-id="87328-102">Проверка по XML-схеме (XSD) с помощью XmlSchemaCollection</span><span class="sxs-lookup"><span data-stu-id="87328-102">XML Schema (XSD) Validation with XmlSchemaCollection</span></span>
+<span data-ttu-id="87328-103">Объект <xref:System.Xml.Schema.XmlSchemaCollection> можно использовать для проверки XML-документа по схемам на языке XSD.</span><span class="sxs-lookup"><span data-stu-id="87328-103">You can use the <xref:System.Xml.Schema.XmlSchemaCollection> to validate an XML document against XML Schema definition language (XSD) schemas.</span></span> <span data-ttu-id="87328-104">Объект <xref:System.Xml.Schema.XmlSchemaCollection> повышает производительность за счет сохранения схем в коллекции, чтобы они не загружались в память при каждой проверке.</span><span class="sxs-lookup"><span data-stu-id="87328-104">The <xref:System.Xml.Schema.XmlSchemaCollection> improves performance by storing schemas in the collection so they are not loaded into memory each time validation occurs.</span></span> <span data-ttu-id="87328-105">Если схема существует в коллекции схем, для ее поиска в коллекции используется атрибут `schemaLocation`.</span><span class="sxs-lookup"><span data-stu-id="87328-105">If the schema exists in the schema collection, the `schemaLocation` attribute is used to look up the schema in the collection.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="f92b3-106">Класс <xref:System.Xml.Schema.XmlSchemaCollection> устарел и заменен классом <xref:System.Xml.Schema.XmlSchemaSet>.</span><span class="sxs-lookup"><span data-stu-id="f92b3-106">The <xref:System.Xml.Schema.XmlSchemaCollection> class is now obsolete and has been replaced with the <xref:System.Xml.Schema.XmlSchemaSet> class.</span></span> <span data-ttu-id="f92b3-107">Дополнительные сведения о <xref:System.Xml.Schema.XmlSchemaSet> см. класс, [XmlSchemaSet для компиляции схемы](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).</span><span class="sxs-lookup"><span data-stu-id="f92b3-107">For more information about the <xref:System.Xml.Schema.XmlSchemaSet> class see, [XmlSchemaSet for Schema Compilation](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).</span></span>  
+>  <span data-ttu-id="87328-106">Класс <xref:System.Xml.Schema.XmlSchemaCollection> устарел и заменен классом <xref:System.Xml.Schema.XmlSchemaSet>.</span><span class="sxs-lookup"><span data-stu-id="87328-106">The <xref:System.Xml.Schema.XmlSchemaCollection> class is now obsolete and has been replaced with the <xref:System.Xml.Schema.XmlSchemaSet> class.</span></span> <span data-ttu-id="87328-107">Дополнительные сведения о классе <xref:System.Xml.Schema.XmlSchemaSet> см. в руководстве по [использованию XmlSchemaSet для компиляции схемы](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).</span><span class="sxs-lookup"><span data-stu-id="87328-107">For more information about the <xref:System.Xml.Schema.XmlSchemaSet> class see, [XmlSchemaSet for Schema Compilation](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).</span></span>  
   
- <span data-ttu-id="f92b3-108">В следующем примере показан корневой элемент файла данных.</span><span class="sxs-lookup"><span data-stu-id="f92b3-108">The following example shows the root element of a data file.</span></span>  
+ <span data-ttu-id="87328-108">В следующем примере показан корневой элемент файла данных.</span><span class="sxs-lookup"><span data-stu-id="87328-108">The following example shows the root element of a data file.</span></span>  
   
 ```xml  
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  
@@ -37,9 +40,9 @@ ms.lasthandoff: 11/21/2017
     targetNamespace="urn:bookstore-schema">  
 ```  
   
- <span data-ttu-id="f92b3-109">В этом примере атрибут `targetNamespace` имеет значение `urn:bookstore-schema`, которое является тем же пространством имен, которое используется при добавлении схемы в коллекцию <xref:System.Xml.Schema.XmlSchemaCollection>.</span><span class="sxs-lookup"><span data-stu-id="f92b3-109">For this example, the value of the `targetNamespace` attribute is `urn:bookstore-schema`, which is the same namespace that is used when adding the schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span>  
+ <span data-ttu-id="87328-109">В этом примере атрибут `targetNamespace` имеет значение `urn:bookstore-schema`, которое является тем же пространством имен, которое используется при добавлении схемы в коллекцию <xref:System.Xml.Schema.XmlSchemaCollection>.</span><span class="sxs-lookup"><span data-stu-id="87328-109">For this example, the value of the `targetNamespace` attribute is `urn:bookstore-schema`, which is the same namespace that is used when adding the schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span>  
   
- <span data-ttu-id="f92b3-110">Следующий пример кода добавляет схему XML в коллекцию <xref:System.Xml.Schema.XmlSchemaCollection>.</span><span class="sxs-lookup"><span data-stu-id="f92b3-110">The following code example adds an XML Schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span>  
+ <span data-ttu-id="87328-110">Следующий пример кода добавляет схему XML в коллекцию <xref:System.Xml.Schema.XmlSchemaCollection>.</span><span class="sxs-lookup"><span data-stu-id="87328-110">The following code example adds an XML Schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span>  
   
 ```vb  
 Dim xsc As New XmlSchemaCollection()  
@@ -59,9 +62,9 @@ vreader = new XmlValidatingReader (reader);
 vreader.Schemas.Add(xsc);  
 ```  
   
- <span data-ttu-id="f92b3-111">В основном атрибут `targetNamespace` используется при добавлении свойства `namespaceURI` в методе <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> коллекции <xref:System.Xml.Schema.XmlSchemaCollection>.</span><span class="sxs-lookup"><span data-stu-id="f92b3-111">The `targetNamespace` attribute is generally used when you add the `namespaceURI` property in the <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> method for the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span> <span data-ttu-id="f92b3-112">Перед добавлением схемы в коллекцию <xref:System.Xml.Schema.XmlSchemaCollection> можно указать ссылку со значением NULL.</span><span class="sxs-lookup"><span data-stu-id="f92b3-112">You can specify a null reference before adding the schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span> <span data-ttu-id="f92b3-113">Для схем без пространства имен следует использовать пустую строку ("").</span><span class="sxs-lookup"><span data-stu-id="f92b3-113">An empty string ("") should be used for schemas without a namespace.</span></span> <span data-ttu-id="f92b3-114">В коллекции <xref:System.Xml.Schema.XmlSchemaCollection> может быть только одна схема без пространства имен.</span><span class="sxs-lookup"><span data-stu-id="f92b3-114">The <xref:System.Xml.Schema.XmlSchemaCollection> can have only one schema without a namespace.</span></span>  
+ <span data-ttu-id="87328-111">В основном атрибут `targetNamespace` используется при добавлении свойства `namespaceURI` в методе <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> коллекции <xref:System.Xml.Schema.XmlSchemaCollection>.</span><span class="sxs-lookup"><span data-stu-id="87328-111">The `targetNamespace` attribute is generally used when you add the `namespaceURI` property in the <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> method for the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span> <span data-ttu-id="87328-112">Перед добавлением схемы в коллекцию <xref:System.Xml.Schema.XmlSchemaCollection> можно указать ссылку со значением NULL.</span><span class="sxs-lookup"><span data-stu-id="87328-112">You can specify a null reference before adding the schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span> <span data-ttu-id="87328-113">Для схем без пространства имен следует использовать пустую строку ("").</span><span class="sxs-lookup"><span data-stu-id="87328-113">An empty string ("") should be used for schemas without a namespace.</span></span> <span data-ttu-id="87328-114">В коллекции <xref:System.Xml.Schema.XmlSchemaCollection> может быть только одна схема без пространства имен.</span><span class="sxs-lookup"><span data-stu-id="87328-114">The <xref:System.Xml.Schema.XmlSchemaCollection> can have only one schema without a namespace.</span></span>  
   
- <span data-ttu-id="f92b3-115">Следующий пример кода добавляет схему XML HeadCount.xsd в коллекцию <xref:System.Xml.Schema.XmlSchemaCollection> и проверяет файл HeadCount.xml.</span><span class="sxs-lookup"><span data-stu-id="f92b3-115">The following code example adds an XML Schema, HeadCount.xsd, to the <xref:System.Xml.Schema.XmlSchemaCollection> and validates HeadCount.xml.</span></span>  
+ <span data-ttu-id="87328-115">Следующий пример кода добавляет схему XML HeadCount.xsd в коллекцию <xref:System.Xml.Schema.XmlSchemaCollection> и проверяет файл HeadCount.xml.</span><span class="sxs-lookup"><span data-stu-id="87328-115">The following code example adds an XML Schema, HeadCount.xsd, to the <xref:System.Xml.Schema.XmlSchemaCollection> and validates HeadCount.xml.</span></span>  
   
 ```vb  
 Imports System  
@@ -132,7 +135,7 @@ namespace ValidationSample
 }  
 ```  
   
- <span data-ttu-id="f92b3-116">Ниже описано содержимое проверяемого входного файла HeadCount.xml.</span><span class="sxs-lookup"><span data-stu-id="f92b3-116">The following outlines the contents of the input file, HeadCount.xml, to be validated.</span></span>  
+ <span data-ttu-id="87328-116">Ниже описано содержимое проверяемого входного файла HeadCount.xml.</span><span class="sxs-lookup"><span data-stu-id="87328-116">The following outlines the contents of the input file, HeadCount.xml, to be validated.</span></span>  
   
 ```xml  
 <!--Load HeadCount.xsd in SchemaCollection for Validation-->  
@@ -142,7 +145,7 @@ namespace ValidationSample
 </hc:HeadCount>  
 ```  
   
- <span data-ttu-id="f92b3-117">Ниже описано содержимое проверяемого файла XML-схемы HeadCount.xsd.</span><span class="sxs-lookup"><span data-stu-id="f92b3-117">The following outlines the contents of the XML Schema file, HeadCount.xsd, to be validated against.</span></span>  
+ <span data-ttu-id="87328-117">Ниже описано содержимое проверяемого файла XML-схемы HeadCount.xsd.</span><span class="sxs-lookup"><span data-stu-id="87328-117">The following outlines the contents of the XML Schema file, HeadCount.xsd, to be validated against.</span></span>  
   
 ```xml  
 <xs:schema xmlns="xsdHeadCount" targetNamespace="xsdHeadCount" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
@@ -156,7 +159,7 @@ namespace ValidationSample
 </xs:schema>  
 ```  
   
- <span data-ttu-id="f92b3-118">Следующий пример кода создает <xref:System.Xml.XmlValidatingReader>, принимающий <xref:System.Xml.XmlTextReader>.</span><span class="sxs-lookup"><span data-stu-id="f92b3-118">The following code example creates an <xref:System.Xml.XmlValidatingReader> that takes an <xref:System.Xml.XmlTextReader>.</span></span> <span data-ttu-id="f92b3-119">Входной файл sample4.xml проверяется по схеме XML sample4.xsd.</span><span class="sxs-lookup"><span data-stu-id="f92b3-119">The input file, sample4.xml, is validated against the XML Schema, sample4.xsd.</span></span>  
+ <span data-ttu-id="87328-118">Следующий пример кода создает <xref:System.Xml.XmlValidatingReader>, принимающий <xref:System.Xml.XmlTextReader>.</span><span class="sxs-lookup"><span data-stu-id="87328-118">The following code example creates an <xref:System.Xml.XmlValidatingReader> that takes an <xref:System.Xml.XmlTextReader>.</span></span> <span data-ttu-id="87328-119">Входной файл sample4.xml проверяется по схеме XML sample4.xsd.</span><span class="sxs-lookup"><span data-stu-id="87328-119">The input file, sample4.xml, is validated against the XML Schema, sample4.xsd.</span></span>  
   
 ```vb  
 Dim tr As New XmlTextReader("sample4.xml")  
@@ -180,7 +183,7 @@ while(vr.Read()) {
     }  
 ```  
   
- <span data-ttu-id="f92b3-120">Далее приведено содержимое проверяемого входного файла sample4.xml.</span><span class="sxs-lookup"><span data-stu-id="f92b3-120">The following outlines the contents of the input file, sample4.xml, to be validated.</span></span>  
+ <span data-ttu-id="87328-120">Далее приведено содержимое проверяемого входного файла sample4.xml.</span><span class="sxs-lookup"><span data-stu-id="87328-120">The following outlines the contents of the input file, sample4.xml, to be validated.</span></span>  
   
 ```xml  
 <datatypes xmlns="datatypesTest">  
@@ -190,7 +193,7 @@ while(vr.Read()) {
 </datatypes>  
 ```  
   
- <span data-ttu-id="f92b3-121">Далее приведено содержимое файла схемы XML sample4.xsd, по которому будет выполнена проверка.</span><span class="sxs-lookup"><span data-stu-id="f92b3-121">The following outlines the contents of the XML Schema file, sample4.xsd, to be validated against.</span></span>  
+ <span data-ttu-id="87328-121">Далее приведено содержимое файла схемы XML sample4.xsd, по которому будет выполнена проверка.</span><span class="sxs-lookup"><span data-stu-id="87328-121">The following outlines the contents of the XML Schema file, sample4.xsd, to be validated against.</span></span>  
   
 ```xml  
 <xs:schema   
@@ -215,8 +218,8 @@ while(vr.Read()) {
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f92b3-122">См. также</span><span class="sxs-lookup"><span data-stu-id="f92b3-122">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="87328-122">См. также</span><span class="sxs-lookup"><span data-stu-id="87328-122">See Also</span></span>  
  <xref:System.Xml.XmlParserContext>  
  <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>  
  <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="f92b3-123">Компиляция схемы XmlSchemaCollection</span><span class="sxs-lookup"><span data-stu-id="f92b3-123">XmlSchemaCollection Schema Compilation</span></span>](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)
+ [<span data-ttu-id="87328-123">Компиляция схемы XmlSchemaCollection</span><span class="sxs-lookup"><span data-stu-id="87328-123">XmlSchemaCollection Schema Compilation</span></span>](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)

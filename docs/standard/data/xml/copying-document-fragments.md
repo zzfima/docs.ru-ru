@@ -9,18 +9,21 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf424bbe-81b7-40d2-9978-9b727da94d80
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 22d6f70b3317b67255d51690a6c4e262e29d23f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e90af026db0fc190b2c93e4c751de6600e8fd27a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="copying-document-fragments"></a><span data-ttu-id="c7b67-102">Копирование фрагментов документа</span><span class="sxs-lookup"><span data-stu-id="c7b67-102">Copying Document Fragments</span></span>
-<span data-ttu-id="c7b67-103">Можно создать **XmlDocumentFragment** узел и затем добавлять узлы в нем.</span><span class="sxs-lookup"><span data-stu-id="c7b67-103">You can create an **XmlDocumentFragment** node and then add nodes under it.</span></span> <span data-ttu-id="c7b67-104">При **XmlDocumentFragment** вставляется с **InsertNode** метода **XmlDocumentFragment** узел не копируются, но его дочерние узлы вставляются в XML Модель объектов документов (DOM).</span><span class="sxs-lookup"><span data-stu-id="c7b67-104">When the **XmlDocumentFragment** is inserted with the **InsertNode** method, the **XmlDocumentFragment** node is not copied, but its child nodes are inserted in the XML Document Object Model (DOM).</span></span>  
+# <a name="copying-document-fragments"></a><span data-ttu-id="6f28b-102">Копирование фрагментов документа</span><span class="sxs-lookup"><span data-stu-id="6f28b-102">Copying Document Fragments</span></span>
+<span data-ttu-id="6f28b-103">Можно создать узел **XmlDocumentFragment**, а затем добавлять к нему нижележащие узлы.</span><span class="sxs-lookup"><span data-stu-id="6f28b-103">You can create an **XmlDocumentFragment** node and then add nodes under it.</span></span> <span data-ttu-id="6f28b-104">При вставке узла **XmlDocumentFragment** с помощью метода **InsertNode** узел **XmlDocumentFragment** не копируется, но его дочерние узлы вставляются в модель XML DOM.</span><span class="sxs-lookup"><span data-stu-id="6f28b-104">When the **XmlDocumentFragment** is inserted with the **InsertNode** method, the **XmlDocumentFragment** node is not copied, but its child nodes are inserted in the XML Document Object Model (DOM).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c7b67-105">См. также</span><span class="sxs-lookup"><span data-stu-id="c7b67-105">See Also</span></span>  
- [<span data-ttu-id="c7b67-106">Модель объектов XML-документов (DOM)</span><span class="sxs-lookup"><span data-stu-id="c7b67-106">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="6f28b-105">См. также</span><span class="sxs-lookup"><span data-stu-id="6f28b-105">See Also</span></span>  
+ [<span data-ttu-id="6f28b-106">Модель объектов документов XML (DOM)</span><span class="sxs-lookup"><span data-stu-id="6f28b-106">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
