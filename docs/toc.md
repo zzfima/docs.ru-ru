@@ -9,7 +9,6 @@
 ### [Новые возможности .NET Standard](standard/whats-new/whats-new-in-dotnet-standard.md)
 ## [Целевые платформы](standard/frameworks.md)
 ## [Глоссарий .NET](standard/glossary.md)
-## [Создание документации с помощью mdoc](standard/mdoc/index.md)
 ## [Руководство по архитектуре](standard/guidance-architecture.md)
 ### [Разработка современных веб-приложений с помощью ASP.NET Core и Microsoft Azure](standard/modern-web-apps-azure-architecture/)
 ### [Модернизация существующих приложений .NET с помощью облака Azure и контейнеров Windows](standard/modernize-with-azure-and-containers/)
@@ -25,9 +24,10 @@
 ### [Общие сведения о библиотеке классов](standard/class-library-overview.md)
 ### [Базовые типы](standard/base-types/)
 ## [Библиотеки классов .NET](standard/class-libraries.md)
-## Анализаторы
+## [Анализаторы](standard/analyzers/index.md)
 ### [Анализатор API](standard/analyzers/api-analyzer.md) 
 ### [Анализатор переносимости](standard/analyzers/portability-analyzer.md)
+### [Анализатор Framework](standard/analyzers/framework-analyzer.md)
 ## [Обработка и создание исключений](standard/exceptions/)
 ## [Формат файла сборки .NET](standard/assembly-format.md)
 ## [Сборка мусора](standard/garbage-collection/)
@@ -266,6 +266,7 @@
 ### [Как выполнять синтаксический анализ строк с помощью `String.Split`](csharp/how-to/parse-strings-using-split.md)
 ### [Как выполнять сцепление строк](csharp/how-to/concatenate-multiple-strings.md)
 ### [Практическое руководство преобразование строки в значение типа "DateTime"](standard/base-types/parsing-datetime.md)
+### [Практическое руководство. Поиск по строкам](csharp/how-to/search-strings.md)
 <!-- End of C# Concepts section -->
 ## [Пакет SDK для платформы компилятора .NET (API-интерфейсы Roslyn)](csharp/roslyn-sdk/)
 ## [Руководство по программированию на C#](csharp/programming-guide/)

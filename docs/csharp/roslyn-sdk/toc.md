@@ -1,26 +1,26 @@
 # [Пакет SDK для платформы компилятора .NET (API-интерфейсы Roslyn)](index.md)
 ## [Сведения о модели API компилятора](compiler-api-model.md)
-## [Работа с синтаксисом](work-with-syntax.md)
-## [Работа с семантикой](work-with-semantics.md)
-## [Работа с рабочей областью](work-with-workspace.md)
+## [Work with syntax](work-with-syntax.md) (Работа с синтаксисом)
+## [Work with semantics](work-with-semantics.md) (Работа с семантикой)
+## [Work with a workspace](work-with-workspace.md) (Использование рабочей области)
+
+## Краткие руководства
+### [Анализ синтаксиса](get-started/syntax-analysis.md)
+### [Семантический анализ](get-started/semantic-analysis.md)
+
+<!-- Taken from https://github.com/dotnet/roslyn/wiki/Samples-and-Walkthroughs -->
+<!--
+### Get started with semantic analysis
+### Get started with Syntax transformation
+### Get started writing custom analyzers and code fixes
 
 <!--
-## Quick starts
+## Tutorials
+<!-- Taken from https://github.com/dotnet/roslyn/wiki/Samples-and-Walkthroughs
 ### Build your first analyzer
 ### Build your first code fix
 ### Deploy your analyzer as a VSIX
 ### Deploy your analyzer as a NuGet package
--->
-
-<!--
-## Tutorials
--->
-<!-- Taken from https://github.com/dotnet/roslyn/wiki/Samples-and-Walkthroughs -->
-<!--
-### Get started with syntax analysis
-### Get started with semantic analysis
-### Get started with Syntax transformation
-### Get started writing custom analyzers and code fixes
 -->
 
 <!--
@@ -42,3 +42,4 @@
 -->
 <!-- Look at the samples, and determinine which 
     are "How To" vs. Samples. -->
+    
