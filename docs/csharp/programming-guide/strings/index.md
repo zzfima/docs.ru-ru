@@ -12,11 +12,11 @@ ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 24a030bb43d49615a7487ce10ad2347fdfd8a290
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 6492edae6e4311252dc664236fb43cd373f7c59f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="strings-c-programming-guide"></a>Строки (Руководство по программированию на C#)
 Строка — это объект типа <xref:System.String>, значением которого является текст. Внутри программы текст хранится в виде упорядоченной коллекции объектов <xref:System.Char> только для чтения. В конце строки C# нет нуль-символов. Поэтому строка C# может содержать любое число внедренных нуль-символов ('\0'). Свойство <xref:System.String.Length%2A> строки соответствует числу содержащихся в ней объектов `Char`, но не числу символов Юникода. Для доступа к отдельным кодовым точкам Юникода в строке используйте объект <xref:System.Globalization.StringInfo>.  
@@ -83,7 +83,7 @@ ms.lasthandoff: 02/19/2018
  Одна перегрузка метода <xref:System.Console.WriteLine%2A> принимает в качестве параметра строку формата. Поэтому можно просто внедрить строковый литерал формата без явного вызова метода. Но при использовании метода <xref:System.Diagnostics.Trace.WriteLine%2A> для отображения выходных данных отладки в Visual Studio в окне **Вывод** необходимо явно вызвать метод <xref:System.String.Format%2A>, так как метод <xref:System.Diagnostics.Trace.WriteLine%2A> принимает только строку, а не строку формата. Дополнительные сведения о строках форматах см. в статье [Formatting types](../../../standard/base-types/formatting-types.md) (Типы форматирования).  
   
 ## <a name="substrings"></a>Подстроки  
- Подстрока — это последовательность символов, содержащихся в строке. Используйте метод <xref:System.String.Substring%2A>, чтобы создать новую строку из части исходной строки. Одно вхождение подстроки или несколько можно найти с помощью метода <xref:System.String.IndexOf%2A>. Используйте метод <xref:System.String.Replace%2A>, чтобы заменить все вхождения указанной подстроки новой строкой. Как и метод <xref:System.String.Substring%2A>, метод <xref:System.String.Replace%2A> фактически возвращает новую строку и не изменяет исходную строку. Дополнительные сведения см. в статьях [How to: Search Strings Using String Methods (C# Programming Guide)](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md) (Практическое руководство. Поиск строк с помощью строковых методов (руководство по программированию на C#)) и [How to: Modify String Contents (C# Programming Guide)](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md) (Практическое руководство. Изменение содержимого строки (руководство по программированию на C#)).  
+ Подстрока — это последовательность символов, содержащихся в строке. Используйте метод <xref:System.String.Substring%2A>, чтобы создать новую строку из части исходной строки. Одно вхождение подстроки или несколько можно найти с помощью метода <xref:System.String.IndexOf%2A>. Используйте метод <xref:System.String.Replace%2A>, чтобы заменить все вхождения указанной подстроки новой строкой. Как и метод <xref:System.String.Substring%2A>, метод <xref:System.String.Replace%2A> фактически возвращает новую строку и не изменяет исходную строку. См. дополнительные сведения о [поиске строк](../../how-to/search-strings.md) и [изменении содержимого строк](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md).  
   
  [!code-csharp[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
   
@@ -127,8 +127,7 @@ string s = String.Empty;
 |[Практическое руководство. Сцепка нескольких строк](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|Иллюстрирует использование оператора `+` и класса `Stringbuilder` для соединения строк во время компиляции и во время выполнения.|  
 |[Практическое руководство. Сравнение строк](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|Показывает, как выполнять сравнение строк по порядковому номеру.|  
 |[How to: Parse Strings Using String.Split (C# Programming Guide)](../../how-to/parse-strings-using-split.md) (Практическое руководство. Анализ строк с помощью метода String.Split (руководство по программированию на C#))|Содержит пример кода, демонстрирующий использование метода `String.Split` для анализа строк.|  
-|[Практическое руководство. Поиск строк с помощью строковых методов](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md)|Объясняет, как использовать конкретные методы для поиска строк.|  
-|[Практическое руководство. Поиск строк с помощью регулярных выражений](../../../csharp/programming-guide/strings/how-to-search-strings-using-regular-expressions.md)|Объясняет, как использовать регулярные выражения для поиска строк.|  
+|[Практическое руководство. Поиск по строкам](../../how-to/search-strings.md)|Объясняет, как использовать конкретные методы для поиска строк.|  
 |[Практическое руководство. Определение представления числового значения в строке](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Объясняет, как безопасно проанализировать строку, чтобы проверить, содержит ли она допустимое числовое значение.|  
 |[Практическое руководство. Преобразование строки в значение типа "DateTime"](../../../csharp/programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)|Показывает, как преобразовать строку, например "01/24/2008", в объект <xref:System.DateTime?displayProperty=nameWithType>.|  
 |[Базовые операции со строками в .NET Framework](../../../../docs/standard/base-types/basic-string-operations.md)|Содержит ссылки на статьи, в которых показаны базовые операции над строками с помощью методов <xref:System.String?displayProperty=nameWithType> и <xref:System.Text.StringBuilder?displayProperty=nameWithType>.|  
