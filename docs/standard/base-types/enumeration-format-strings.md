@@ -16,18 +16,21 @@ helpviewer_keywords:
 - enumeration format strings
 - formatting [.NET Framework], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e0992d8591711073f9094c29fad980a8e652e686
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 58004fa19f2ec3b1ca7570d6ca75702510148002
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="enumeration-format-strings"></a>Строки форматов перечисления
-Можно использовать <xref:System.Enum.ToString%2A?displayProperty=nameWithType> метод, чтобы создать новый объект string, представляющее числовое, шестнадцатеричное или строковое значение элемента перечисления. Этот метод принимает строку формата перечисления, чтобы задать возвращаемое значение.  
+Метод <xref:System.Enum.ToString%2A?displayProperty=nameWithType> можно использовать для создания новой строки, представляющей числовое, шестнадцатеричное или строковое значение элемента перечисления. Этот метод принимает строку формата перечисления, чтобы задать возвращаемое значение.  
   
  В следующей таблице приведены строки форматов перечисления и возвращаемые методом значения. Описатели формата не учитывают регистр.  
   
