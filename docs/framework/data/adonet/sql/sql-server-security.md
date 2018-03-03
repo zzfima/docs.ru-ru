@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: abb7c9322a9b7ddfd3e0add4d8b9be6941c5e240
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: c186b25aeaa42b7285316d7bc9de913dd7b89af7
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="sql-server-security"></a>Безопасность SQL Server
-[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] предоставляет много функций для создания безопасных приложений баз данных.  
+[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] имеет множество функций, которые поддерживают создание безопасных приложений баз данных.  
   
  Такие общие угрозы безопасности, как кража данных или вандализм, существуют независимо от используемой версии [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. Целостность данных также следует рассматривать как проблему безопасности. При отсутствии защиты данных они могут стать бесполезными, если разрешено нерегламентированное управление данными и в данные случайно или преднамеренно вносятся неверные значения или они полностью удаляются. Кроме того, зачастую существуют законодательные требования, которые необходимо соблюдать, например, касающиеся правильного хранения конфиденциальной информации. Хранение некоторых личных данных полностью запрещено в зависимости от законодательства, которое применяется в конкретной юрисдикции.  
   
@@ -44,13 +46,12 @@ ms.lasthandoff: 01/17/2018
  Описание вопросов безопасности для [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Express.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Безопасность и защита (компонент Database Engine)](http://msdn2.microsoft.com/library/bb510589\(SQL.100\).aspx.)  
- Разделы электронной документации по [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], посвященные безопасности.  
-  
- [Вопросы безопасности для SQL Server](http://go.microsoft.com/fwlink/?LinkId=98587)  
- Разделы электронной документации по [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], посвященные безопасности.  
-  
+[Центр обеспечения безопасности для ядра СУБД SQL Server и база данных Azure SQL](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
+Вопросы безопасности для SQL Server и базы данных SQL Azure.
+
+[Рекомендации по безопасности для установки SQL Server](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
+Вопросы безопасности, которые следует учитывать перед установкой SQL Server.
+
 ## <a name="see-also"></a>См. также  
  [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
