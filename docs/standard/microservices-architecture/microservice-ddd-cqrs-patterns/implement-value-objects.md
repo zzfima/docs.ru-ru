@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2b7b85d2aa3c563fbd4c7cf89336827d25f22c0e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e6ac6f2d316a94e69c2599acf07aaaf6361b3e5a
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="implementing-value-objects"></a>Реализация объектов значений
 
@@ -136,7 +136,7 @@ public class Address : ValueObject
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>Общие сведения и устаревший подход с использованием EF Core 1.1
 
-Для справки: при использовании EF Core 1.0 и 1.1 было невозможно использовать [сложные типы](https://docs.microsoft.com/dotnet/api/system.componentmodel.dataannotations.schema.complextypeattribute?view=netframework-4.7), как они назывались в EF 6.x в традиционном .NET Framework. Таким образом, при использовании EF Core 1.0 и 1.1 необходимо хранить объект значения в виде сущности EF с полем ID. Затем, чтобы сущность больше походила на объект значения, нужно скрыть поле ID, дав понять таким образом, что удостоверение объекта значения не важно в данной модели домена. Можно скрыть поле ID при помощи [затемнения свойства](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Так как такой вариант скрытия удостоверения в модели задается на уровне инфраструктуры EF, это будет в каком-то смысле прозрачно для модели домена.
+Для справки: при использовании EF Core 1.0 и 1.1 было невозможно использовать [сложные типы](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute), как они назывались в EF 6.x в традиционном .NET Framework. Таким образом, при использовании EF Core 1.0 и 1.1 необходимо хранить объект значения в виде сущности EF с полем ID. Затем, чтобы сущность больше походила на объект значения, нужно скрыть поле ID, дав понять таким образом, что удостоверение объекта значения не важно в данной модели домена. Можно скрыть поле ID при помощи [затемнения свойства](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Так как такой вариант скрытия удостоверения в модели задается на уровне инфраструктуры EF, это будет в каком-то смысле прозрачно для модели домена.
 
 В первоначальной версии eShopOnContainers (.NET Core 1.1) скрытие поля ID, необходимое для инфраструктуры EF Core, было реализовано на уровне DbContext при помощи текучего API в инфраструктуре проекта следующим образом. Таким образом, удостоверение было скрыто с точки зрения модели домена, но все еще присутствует в инфраструктуре.
 
@@ -168,7 +168,7 @@ void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 При взгляде на модель домена принадлежащий тип выглядит так, как будто он не имеет удостоверения.
 На самом деле принадлежащие типы имеют удостоверения, но свойство навигации владельца является частью этого удостоверения.
 
-Удостоверение экземпляров принадлежащих типов не является полностью их собственным. Оно состоит из трех компонентов: 
+Удостоверение экземпляров принадлежащих типов не является полностью их собственным. Оно состоит из трех компонентов:
 
 - Удостоверение владельца
 
@@ -252,8 +252,8 @@ public class Order
 
 public class OrderDetails
 {
-    public StreetAddress BillingAddress { get; set; }
-    public StreetAddress ShippingAddress { get; set; }
+    public Address BillingAddress { get; set; }
+    public Address ShippingAddress { get; set; }
 }
 
 public class Address

@@ -20,14 +20,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4b59b2b59852190bd19a3c1c9536fadb7b40603e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5b55271306abdca95694bd8fb2ebb6e538d060ae
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="post-schema-compilation-infoset"></a>Набор сведений для постсхемной компиляции
-В [документации консорциума W3C по схемам XML](http://go.microsoft.com/fwlink/?linkid=45242) рассматривается информационный набор, который должен предоставляться до и после компиляции схемы. Модель XML SOM просматривает информационные наборы до и после вызова метода <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> объекта <xref:System.Xml.Schema.XmlSchemaSet>.  
+В [документации консорциума W3C по схемам XML](https://www.w3.org/XML/Schema) рассматривается информационный набор, который должен предоставляться до и после компиляции схемы. Модель XML SOM просматривает информационные наборы до и после вызова метода <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> объекта <xref:System.Xml.Schema.XmlSchemaSet>.  
   
  Информационный набор до проверки по схеме строится во время изменения схемы. Информационный набор после компиляции схемы формируется после вызова метода <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> объекта <xref:System.Xml.Schema.XmlSchemaSet> во время компиляции схемы и предоставляется в виде свойств.  
   

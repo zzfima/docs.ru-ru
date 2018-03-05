@@ -14,11 +14,11 @@ ms.custom: mvc
 manager: wpickett
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 2b1a57fe264eda0a4d3186c7be8b0de01bd5f0a9
-ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
+ms.openlocfilehash: d5631bdbc0334640b290c08df17cba0bfe99fe85
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>Создание образов Docker для приложений .NET Core
 
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/24/2018
 
 Помимо образов, оптимизированных для разработки, сборки и рабочей среды, мы предоставляем дополнительные образы.
 
-* `microsoft/dotnet:<version>-runtime-deps`. Образ **runtime-deps** содержит операционную систему со всеми собственными зависимостями, требуемыми платформе .NET Core. Этот образ предназначен для [автономных приложений](https://docs.microsoft.com/dotnet/core/deploying/index).
+* `microsoft/dotnet:<version>-runtime-deps`. Образ **runtime-deps** содержит операционную систему со всеми собственными зависимостями, требуемыми платформе .NET Core. Этот образ предназначен для [автономных приложений](../deploying/index.md).
 
 Последние версии каждого варианта:
 

@@ -31,11 +31,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 57997b00082fd2068638d83cb828b3fa6fbdfb97
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4d42c1d4b58f5e2517ff8d8c504628c7aab6fd0d
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="walkthrough-implementing-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Пошаговое руководство. Реализация компонента, поддерживающего асинхронную модель, основанную на событиях
 Если вы создаете класс и некоторые операции этого класса могут привести к значительным задержкам, подумайте о том, чтобы реализовать для этого класса асинхронные функции с помощью [асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/19/2018
   
  Завершив работу с руководством, вы получите приложение, вычисляющее простые числа в асинхронном режиме. В приложении создается главный поток пользовательского интерфейса и отдельный поток для вычисления каждого простого числа. Несмотря на то что проверка крупных простых чисел может занимать много времени, основной поток пользовательского интерфейса не будет прерываться в результате этой задержки, а форма в ходе вычислений будет нормально реагировать на действия пользователя. Вы сможете запустить любое количество вычислений одновременно, а также избирательно отменять еще не оконченные вычисления.  
   
- В данном пошаговом руководстве представлены следующие задачи:  
+ В данном пошаговом руководстве представлены следующие задачи.  
   
 -   создание компонента;  
   
@@ -60,9 +60,9 @@ ms.lasthandoff: 01/19/2018
   
 -   реализация методов запуска и отмены.  
   
- Чтобы скопировать код из этого раздела единым блоком, см. статью [Практическое руководство. Реализация клиента асинхронной модели, основанной на событиях](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+ Чтобы скопировать код из этого раздела единым блоком, см. [практическое руководство по реализация клиента асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
-## <a name="creating-the-component"></a>Создание компонента  
+## <a name="creating-the-component"></a>создание компонента;  
  На первом шаге мы создадим компонент, который будет реализовать асинхронную модель на основе событий.  
   
 #### <a name="to-create-the-component"></a>Создание компонента  
@@ -202,14 +202,14 @@ ms.lasthandoff: 01/19/2018
      [!code-csharp[System.ComponentModel.AsyncOperationManager#27](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#27)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#27](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#27)]  
   
-3.  Выполните метод `BuildPrimeNumberList`. Он принимает два параметра: число для тестирования и <xref:System.ComponentModel.AsyncOperation>. С помощью <xref:System.ComponentModel.AsyncOperation> он отображает ход выполнения и результаты по мере их получения. Благодаря этому клиентские обработчики событий вызываются в правильном потоке или контексте для модели приложения. Когда метод `BuildPrimeNumberList` находит простое число, он передает его для накопления результатов в клиентский обработчик событий через событие `ProgressChanged`. Для этого нам нужен производный от <xref:System.ComponentModel.ProgressChangedEventArgs> класс с именем `CalculatePrimeProgressChangedEventArgs`, который реализует одно дополнительное свойство с именем `LatestPrimeNumber`.  
+3.  Реализуйте расширение `BuildPrimeNumberList`. Он принимает два параметра: число для тестирования и <xref:System.ComponentModel.AsyncOperation>. С помощью <xref:System.ComponentModel.AsyncOperation> он отображает ход выполнения и результаты по мере их получения. Благодаря этому клиентские обработчики событий вызываются в правильном потоке или контексте для модели приложения. Когда метод `BuildPrimeNumberList` находит простое число, он передает его для накопления результатов в клиентский обработчик событий через событие `ProgressChanged`. Для этого нам нужен производный от <xref:System.ComponentModel.ProgressChangedEventArgs> класс с именем `CalculatePrimeProgressChangedEventArgs`, который реализует одно дополнительное свойство с именем `LatestPrimeNumber`.  
   
      Также метод `BuildPrimeNumberList` периодически вызывает метод `TaskCanceled` и завершает работу, если тот возвращает значение `true`.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#5)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#5)]  
   
-4.  Выполните метод `IsPrime`. Он принимает три параметра: список известных простых чисел, проверяемое число и выходной параметр для первого найденного делителя. Полученный список простых чисел он использует, чтобы определить, является ли проверяемое число простым.  
+4.  Реализуйте расширение `IsPrime`. Он принимает три параметра: список известных простых чисел, проверяемое число и выходной параметр для первого найденного делителя. Полученный список простых чисел он использует, чтобы определить, является ли проверяемое число простым.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#28](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#28)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#28](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#28)]  

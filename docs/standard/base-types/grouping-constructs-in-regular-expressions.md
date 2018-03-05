@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b6e0b9d3482bbfc3dabeee1f6b7fce7a93364dfb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9b9e54d8bbc9ca7cc9172fd83bd15968b3cef8e1
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Конструкции группировки в регулярных выражениях
 Конструкции группирования отображают части выражений регулярных выражений и захватывают части строки входной строки. Конструкции группирования можно использовать в следующих целях.  
@@ -421,7 +421,7 @@ ms.lasthandoff: 12/23/2017
 |`\w+`|Сопоставляется один или несколько словообразующих символов, за которыми следует пробел.|  
 |`\d{1,2},`|Сопоставляется одна или две десятичные цифры, за которыми следует пробел и запятая.|  
 |`\d{4}\b`|Сопоставляются 4 десятичные цифры, сопоставление прекращается на границе слова.|  
-|`(?<!(Saturday&#124;Sunday) )`|Если сопоставлению предшествуют строки, отличные от "Saturday" или "Sunday", за которыми следует пробел, сопоставление выполняется успешно.|  
+|<code>(?<!(Saturday&#124;Sunday) )</code>|Если сопоставлению предшествуют строки, отличные от "Saturday" или "Sunday", за которыми следует пробел, сопоставление выполняется успешно.|  
   
 <a name="nonbacktracking_subexpression"></a>   
 ## <a name="nonbacktracking-subexpressions"></a>Невозвращающиеся части выражения  

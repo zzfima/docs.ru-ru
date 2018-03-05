@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 80b7fa75344f8737baacfba6462a03b436fdf6a8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 596f588aae8c0814e5b40d29c4bf5723f944c5ac
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Тестирование служб и веб-приложений ASP.NET Core
 
@@ -102,12 +102,12 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Стив Смит (Steve Smith). Контроллеры тестирования** (ASP.NET Core) [ *https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
+-   **Стив Смит (Steve Smith). Контроллеры тестирования** (ASP.NET Core) [ *https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
 
--   **Стив Смит (Steve Smith). Интеграционное тестирование** (ASP.NET Core) [ *https://docs.microsoft.com/aspnet/core/testing/integration-testing*](https://docs.microsoft.com/aspnet/core/testing/integration-testing)
+-   **Стив Смит (Steve Smith). Интеграционное тестирование** (ASP.NET Core) [ *https://docs.microsoft.com/aspnet/core/testing/integration-testing*](/aspnet/core/testing/integration-testing)
 
 -   **Модульное тестирование в .NET Core с использованием теста dotnet**
-    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test)
+    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 -   **xUnit.net**. Официальный сайт
     [*https://xunit.github.io/*](https://xunit.github.io/)
@@ -125,7 +125,7 @@ public class PrimeWebDefaultRequestShould
 
 Как уже упоминалось, при тестировании приложения с несколькими контейнерами необходимо, чтобы все микрослужбы были запущены на узле Docker или в кластере контейнера. Для выполнения сквозного тестирования служб, включающего в себя множество операций, затрагивающих несколько микрослужб, требуется развертывание и запуск всего приложения на узле Docker с помощью docker-compose up (или аналогичного механизма, если используется оркестратор). После запуска приложения и всех его служб вы можете выполнять сквозное интеграционное и функциональное тестирование.
 
-Здесь можно использовать несколько методов. В файле docker compose.yml, который используется для развертывания приложения (или аналогичном ему, например, docker-compose.ci.build.yml), на уровне решения можно развернуть точку входа, чтобы можно было использовать [тест dotnet](https://docs.microsoft.com/dotnet/core/tools/dotnet-test). Можно также использовать другой файл Compose, который будет запускать ваши тесты в целевом образе. Используя другой файл Compose для интеграционного тестирования, включающего в себя микрослужбы и базы данных в контейнерах, можно гарантировать, что соответствующие данные будут всегда переведены в исходное состояние перед выполнением тестов.
+Здесь можно использовать несколько методов. В файле docker compose.yml, который используется для развертывания приложения (или аналогичном ему, например, docker-compose.ci.build.yml), на уровне решения можно развернуть точку входа, чтобы можно было использовать [тест dotnet](../../../core/tools/dotnet-test.md). Можно также использовать другой файл Compose, который будет запускать ваши тесты в целевом образе. Используя другой файл Compose для интеграционного тестирования, включающего в себя микрослужбы и базы данных в контейнерах, можно гарантировать, что соответствующие данные будут всегда переведены в исходное состояние перед выполнением тестов.
 
 После того как приложение Compose будет установлено и запущено, вы сможете воспользоваться преимуществами точек останова и исключений, если используется Visual Studio. Интеграционные тесты можно выполнять автоматически в конвейере CI в Visual Studio Team Services или в любой другой системе CI/CD, которая поддерживает контейнеры Docker.
 

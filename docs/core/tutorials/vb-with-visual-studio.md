@@ -8,13 +8,15 @@ ms.date: 08/07/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: devlang-vb
-dev_langs: vb
-ms.workload: dotnetcore
-ms.openlocfilehash: 058e8740ed523d606da0ad46e052f91f31b3b2d9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+dev_langs:
+- vb
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 0e3dbdb5df72963980f459643fcb5f4588e0029f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-net-core-in-visual-studio-2017"></a>Создание приложения Hello World на Visual Basic с помощью .NET Core в Visual Studio 2017
 
@@ -22,7 +24,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-[Visual Studio 2017](https://www.visualstudio.com/downloads/) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core". Приложение можно разработать с помощью .NET Core 2.0.
+[Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core". Приложение можно разработать с помощью .NET Core 2.0.
 
 Дополнительные сведения см. в разделе [Необходимые компоненты для .NET Core в Windows](../../core/windows-prerequisites.md).
 

@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ec6f7df4cc42b71ab9c61e84b71a81f641a1d0b3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 81ccf70482c8b7f4acb0b18381ed4cf07edc06af
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="language-independence-and-language-independent-components"></a>Независимость от языка и независимые от языка компоненты
 Платформа .NET Framework является независимой от языка. Это означает, что код можно разрабатывать на одном из многих языков, ориентированных на .NET Framework, например C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL и Windows PowerShell. Чтобы использовать типы и члены библиотек классов, разработанных для платформы .NET Framework, не требуется знать их исходный язык и следовать его правилам. Если вы разрабатываете компоненты, они будут доступны всем приложениям .NET Framework вне зависимости от используемого вами языка.  

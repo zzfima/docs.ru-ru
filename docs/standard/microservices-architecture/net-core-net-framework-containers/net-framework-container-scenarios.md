@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: fcfb78bf521107b14d7796235f52c836f48f41fe
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: eec258ff01bcfeb834fa7a1138fdf822fd00c996
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Выбор .NET Framework для контейнеров Docker
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 02/01/2018
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Использование сторонних библиотек .NET и пакетов NuGet, недоступных для .NET Core
 
-Сторонние библиотеки [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) позволяют совместно использовать код в различных средах выполнения .NET, в том числе в .NET Core. Использование библиотеки Standard .NET 2.0 и API позволяет существенно улучшить совместимость различных платформ. В .NET Core 2.0 приложения могут напрямую обращаться к существующим библиотекам .NET Framework (см. [Модификатор совместимости](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work)).
+Сторонние библиотеки [.NET Standard](../../net-standard.md) позволяют совместно использовать код в различных средах выполнения .NET, в том числе в .NET Core. Использование библиотеки Standard .NET 2.0 и API позволяет существенно улучшить совместимость различных платформ. В .NET Core 2.0 приложения могут напрямую обращаться к существующим библиотекам .NET Framework (см. [Модификатор совместимости](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work)).
 
 Несмотря на значительный прогресс, достигнутый после выхода .NET Standard 2.0 и .NET Core 2.0, могут возникнуть ситуации, когда для запуска определенных пакетов NuGet требуется Windows и эти пакеты могут не поддерживать .NET Core. Если эти пакеты имеют важное значение для вашего приложения, необходимо использовать .NET Framework в контейнерах Windows.
 
@@ -56,16 +56,16 @@ ms.lasthandoff: 02/01/2018
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
 -   **Руководство по .NET core**
-    [*https://docs.microsoft.com/dotnet/core/index*](https://docs.microsoft.com/dotnet/core/index)
+    [*https://docs.microsoft.com/dotnet/core/index*](../../../core/index.md)
 
 -   **Перенос кода в .NET Core из .NET Framework**
-    [*https://docs.microsoft.com/dotnet/core/porting/index*](https://docs.microsoft.com/dotnet/core/porting/index)
+    [*https://docs.microsoft.com/dotnet/core/porting/index*](../../../core/porting/index.md)
 
 -   **Руководство по Docker в .NET Framework**
-    [*https://docs.microsoft.com/dotnet/framework/docker/*](https://docs.microsoft.com/dotnet/framework/docker/)
+    [*https://docs.microsoft.com/dotnet/framework/docker/*](../../../framework/docker/index.md)
 
 -   **Общие сведения о компонентах .NET**
-    [*https://docs.microsoft.com/dotnet/standard/components*](https://docs.microsoft.com/dotnet/standard/components)
+    [*https://docs.microsoft.com/dotnet/standard/components*](../../components.md)
 
 
 

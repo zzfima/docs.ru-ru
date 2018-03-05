@@ -1,7 +1,7 @@
 ---
-title: "Универсальные коллекции в .NET Framework"
+title: "Универсальные коллекции в .NET"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 02/15/2018
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
@@ -13,27 +13,25 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- generics [.NET Framework], collections
-- generic collections [.NET Framework]
+- generics [.NET], collections
+- generic collections [.NET]
+- generic types [.NET]
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d7e7d11446c14cffbef1e5cade5f082874187636
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 827d5a7edd335769ec5497518cbdf71181aacc2c
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
-# <a name="generic-collections-in-the-net-framework"></a>Универсальные коллекции в .NET Framework
-В этом разделе приводится обзор универсальных классов коллекций и других универсальных типов в составе платформы .NET Framework.  
-  
-## <a name="generic-collections-in-the-net-framework"></a>Универсальные коллекции в .NET Framework  
- Библиотека классов .NET Framework предоставляет ряд универсальных классов коллекций в пространствах имен <xref:System.Collections.Generic> и <xref:System.Collections.ObjectModel>. См. дополнительные сведения о [часто используемых типах коллекций](../../../docs/standard/collections/commonly-used-collection-types.md).  
+# <a name="generic-collections-in-net"></a>Универсальные коллекции в .NET
+
+ Библиотека классов .NET предоставляет ряд универсальных классов коллекций в пространствах имен <xref:System.Collections.Generic> и <xref:System.Collections.ObjectModel>. См. дополнительные сведения о [часто используемых типах коллекций](../../../docs/standard/collections/commonly-used-collection-types.md).  
   
 ### <a name="systemcollectionsgeneric"></a>System.Collections.Generic  
  Многие универсальные типы коллекций являются прямыми аналогами неуниверсальных типов. Интерфейс <xref:System.Collections.Generic.Dictionary%602> — это универсальная версия <xref:System.Collections.Hashtable>; он использует для перечисления универсальную структуру <xref:System.Collections.Generic.KeyValuePair%602> вместо <xref:System.Collections.DictionaryEntry>.  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/23/2017
  Универсальная структура <xref:System.Nullable%601> позволяет использовать типы значений так, как будто им могут быть присвоены значения `null`. Это может быть полезно при работе с запросами к базе данных, где поля, содержащие типы значений, могут опускаться. Параметр универсального типа может принимать значения любого типа.  
   
 > [!NOTE]
->  В C# нет необходимости явно использовать <xref:System.Nullable%601>, так как язык имеет синтаксис для типов, допускающих значение NULL.  
+>  В C# и Visual Basic нет необходимости явно использовать <xref:System.Nullable%601>, так как язык имеет синтаксис для типов, допускающий значение null. См. статьи о [типах, допускающих значение null (руководство по программированию на C#)](../../csharp/programming-guide/nullable-types/index.md) или [типах значений, допускающих значение null (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md). 
   
  Универсальная структура <xref:System.ArraySegment%601> предоставляет способ выделения диапазона элементов в одномерном массиве любого типа, начинающемся с нуля. Параметр универсального типа является типом элементов массива.  
   

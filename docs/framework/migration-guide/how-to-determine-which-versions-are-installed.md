@@ -18,11 +18,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: dd257e7d481a12389f8a47921ab985ca82a157fc
-ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
+ms.openlocfilehash: 0a25ba2d72588dddf0ac1f88d4de59c623e31ff6
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Практическое руководство.Определение установленных версий платформы .NET Framework
 На компьютере можно установить и запустить несколько версий платформы .NET Framework. При разработке или развертывании приложения могут потребоваться сведения о том, какие версии .NET Framework установлены на компьютере пользователя. Учтите, что платформа .NET Framework состоит из основных компонентов, версии которым присваиваются отдельно:  
@@ -133,7 +133,7 @@ ms.lasthandoff: 01/25/2018
 
 2. Проверьте значение ключевого слова `Release`, чтобы определить установленную версию. Для обеспечения совместимости с последующими версиями значение должно быть больше или равно значениям, указанным в таблице. Ниже приведен список версий .NET Framework и соответствующих ключевых слов `Release`.
 
-    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+    [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
 
     |Версия|Значение DWORD "Release"|
     |-------------|--------------------------------|

@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 3cd9fc23dba104f92255b031eef32f80cca915b0
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: b6089b69eb350fce29f86f19f5abeb44acb4b6b4
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="interpolated-strings"></a>Интерполированные строки
 
@@ -144,9 +144,9 @@ public class Example
 Попробуйте удалить знаки "минус" из интерполированных выражений `{"Author",-25}` и `{title.Key,-25}`, а затем снова запустите пример, как показано в следующем коде:
 
 ```csharp
-Console.WriteLine($"\n{"Author",-25}    {"Title",30}\n");
+Console.WriteLine($"\n{"Author",25}    {"Title",30}\n");
 foreach (var title in titles)
-   Console.WriteLine($"{title.Key,-25}     {title.Value,30}");
+   Console.WriteLine($"{title.Key,25}     {title.Value,30}");
 ```
 
 На этот раз сведения об авторе выровнены по правому краю.

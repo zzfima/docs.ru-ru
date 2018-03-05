@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
-ms.workload: dotnetcore
-ms.openlocfilehash: a38c2e5ff5e11cecaa75b8cd678c362a857d7ebc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 0428f93d4044fa0dd65a6f48ee425948fe052697
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-net-core"></a>Начало работы с .NET Core
 
@@ -30,8 +31,8 @@ ms.lasthandoff: 12/23/2017
 * [Создание библиотеки классов с помощью C# и .NET Core в Visual Studio 2017](./tutorials/library-with-visual-studio.md) — сведения о сборке библиотеки классов, написанной на C# с помощью Visual Studio 2017.
 * [Создание приложения Hello World с помощью .NET Core в Visual Studio 2017](./tutorials/vb-with-visual-studio.md) — сведения о сборке, отладке и публикации простого консольного приложения .NET Core с помощью Visual Basic и Visual Studio 2017. 
 * [Создание библиотеки классов с помощью Visual Basic и .NET Core в Visual Studio 2017](./tutorials/vb-library-with-visual-studio.md) — сведения о сборке библиотеки классов, написанной на Visual Basic с помощью Visual Studio 2017.
-* [Начало работы с Visual Studio Code с использованием языка C# и платформы .NET Core в Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core). В этом видеоролике на канале [Channel9](https://channel9.msdn.com) показано, как установить и использовать [Visual Studio Code](https://www.visualstudio.com/products/code-vs), упрощенный кроссплатформенный редактор кода от корпорации Майкрософт, для создания первого консольного приложения в .NET Core.
-* [Начало работы с .NET Core и Visual Studio 2017](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017) — этот видеоролик на канале [Channel9](https://channel9.msdn.com) описывает, как установить и использовать [Visual Studio 2017](https://www.visualstudio.com/) — полнофункциональную интегрированную среду разработки от Майкрософт — для создания первого кроссплатформенного консольного приложения в .NET Core.
+* [Начало работы с Visual Studio Code с использованием языка C# и платформы .NET Core в Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core). В этом видеоролике на канале [Channel9](https://channel9.msdn.com) показано, как установить и использовать [Visual Studio Code](https://code.visualstudio.com/), упрощенный кроссплатформенный редактор кода от корпорации Майкрософт, для создания первого консольного приложения в .NET Core.
+* [Начало работы с .NET Core и Visual Studio 2017](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017) — этот видеоролик на канале [Channel9](https://channel9.msdn.com) описывает, как установить и использовать [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) — полнофункциональную интегрированную среду разработки от Майкрософт — для создания первого кроссплатформенного консольного приложения в .NET Core.
 * [Начало работы с .NET Core с помощью командной строки](tutorials/using-with-xplat-cli.md). Используйте любой редактор кода для работы с [кроссплатформенным интерфейсом командной строки (CLI) .NET Core](tools/index.md).
 
 Список поддерживаемых версий Windows см. в разделе [Предварительные требования для разработки в Windows](windows-prerequisites.md).

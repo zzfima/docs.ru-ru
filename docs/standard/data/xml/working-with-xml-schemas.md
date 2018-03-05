@@ -16,16 +16,16 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1cfac14f934efb22f7cd39faceb232cc819b540e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6cba66a0d8291592b082898d20ca780c8067401e
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="working-with-xml-schemas"></a>Работа с XML-схемами
 Чтобы определить структуру XML-документа, связи его элементов, типы данных, ограничения на содержимое, используется определение типа документа (DTD) или схема XSD. XML-документ имеет правильный формат, если он соответствует всем синтаксическим требованиям Рекомендации консорциума W3C по языку XML 1.0. Однако документ считается допустимым только в том случае, если он одновременно имеет правильный формат и соответствует ограничениям, заданным определением DTD или схемой. Следовательно, хотя все допустимые XML-документы имеют правильный формат, не все XML-документы правильного формата, являются допустимыми.  
   
- Дополнительные сведения о XML см. в [документации консорциума W3C по XML 1.0](http://go.microsoft.com/fwlink/?linkid=7269). Дополнительные сведения о схемах XML см. в документации консорциума W3C по схемам XML по использованию [структур](http://go.microsoft.com/fwlink/?linkid=48881) и [типов данных](http://go.microsoft.com/fwlink/?linkid=17392).  
+ Дополнительные сведения о XML см. в [документации консорциума W3C по XML 1.0](https://www.w3.org/TR/REC-xml/). Дополнительные сведения о схемах XML см. в документации консорциума W3C по схемам XML по использованию [структур](https://www.w3.org/TR/xmlschema-1/) и [типов данных](https://www.w3.org/TR/xmlschema-2/).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Модель объектов схемы XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
