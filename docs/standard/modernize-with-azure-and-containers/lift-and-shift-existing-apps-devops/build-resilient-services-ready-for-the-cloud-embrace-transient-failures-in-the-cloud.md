@@ -7,11 +7,11 @@ ms.date: 10/26/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: aaf1ef968600a56d91267c6c12efa90d99446dd7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: eef0197edb3aba555da63f1ea0b75726a826bd32
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Построение гибких служб готов для облака: принятию временные сбои в облаке 
 
@@ -19,7 +19,7 @@ ms.lasthandoff: 01/19/2018
 
 Приложение будет готово для облака, если по крайней мере, он реализует модель на основе программного обеспечения устойчивости, а не модель на основе оборудования. Облачные приложения должен учесть частичные сбои, которые наверняка возникнет. Необходимо разработать или частично рефакторинг приложения, если требуется добиться устойчивость к отказам ожидаемый частичной. Его необходимо предусмотреть справляться с частичные сбои, как сбои в работе временного сетевого и узлы или виртуальные машины, аварийное завершение работы в облаке. Даже контейнеры перемещается на другой узел в кластере orchestrator может привести к временные короткий неполадки в приложении.
 
-## <a name="handling-partial-failure"></a>Частичный сбой обработки
+## <a name="handling-partial-failure"></a>Обработка частичного сбоя
 
 В приложении облачной нет штат постоянно риск частичных сбоев. Для экземпляра экземпляр одного веб-сайта или контейнер может произойти сбой, или он может быть недоступен или не отвечает в течение некоторого времени. Или одной виртуальной Машины или сервере может завершиться со сбоем.
 
@@ -47,15 +47,13 @@ ms.lasthandoff: 01/19/2018
 
 -   **Реализация гибкой связи для обработки частичный сбой**
 
-    [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies)
+    [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](../../microservices-architecture/implement-resilient-applications/partial-failure-strategies.md)
 
 -   **Entity Framework подключения устойчивости и логика повторных попыток (версия 6 и более поздние версии)**
 
     [https://MSDN.Microsoft.com/library/dn456835 (v=vs.113).aspx](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)
 
 -   **Блок приложения обработки временных сбоев**
-
-<!-- -->
 
 -   [https://MSDN.Microsoft.com/library/hh680934 (v=pandp.50).aspx](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)
 

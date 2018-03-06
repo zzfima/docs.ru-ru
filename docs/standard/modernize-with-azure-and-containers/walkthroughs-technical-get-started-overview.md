@@ -7,11 +7,11 @@ ms.date: 10/26/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ead28fe1ffe1e002af73642a1c3b2e72479520f4
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: bced3bed84d138dbda4f322322213b47c0159016
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Пошаговые руководства и технические получить обзор работы 
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/06/2018
 
 В этом пошаговом руководстве можно исследовать начальной реализацию двух примеров приложений прежних версий. Оба образца приложения монолитные архитектуры и были созданы с помощью классической платформе ASP.NET. Одно приложение на базе ASP.NET 4.x MVC; второе приложение зависит от веб-форм ASP.NET 4.x. Оба приложения находятся в [eShopModernizing в репозитории GitHub](https://github.com/dotnet-architecture/eShopModernizing).
 
-Можно упаковываете оба образца приложения, подобно тому, как можно упаковываете классические [Windows Communication Foundation](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) приложения (WCF) в качестве классического приложения. Пример см. в разделе [eShopModernizingWCFWinForms](https://github.com/dotnet-architecture/eShopModernizingWCFWinForms).
+Можно упаковываете оба образца приложения, подобно тому, как можно упаковываете классические [Windows Communication Foundation](../../framework/wcf/whats-wcf.md) приложения (WCF) в качестве классического приложения. Пример см. в разделе [eShopModernizingWCFWinForms](https://github.com/dotnet-architecture/eShopModernizingWCFWinForms).
 
 ### <a name="goals"></a>Цели
 
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/06/2018
 
 > ![Сценарий простой архитектуры исходного прежних версий приложений](./media/image5-1.png)
 >
-> **Рис. 5-1.** Сценарий простой архитектуры исходного прежних версий приложений
+> **Рис. 5-1**. Сценарий простой архитектуры исходного прежних версий приложений
 
 С точки зрения бизнеса домен оба приложения обеспечивают одного каталога функции управления. Члены команды enterprise eShop будет использовать приложение для просмотра и изменения каталога продуктов. Рис. 5-2 показано на снимках экрана начального приложения.
 
@@ -97,7 +97,7 @@ ms.lasthandoff: 01/06/2018
 
 Цель данного руководства — Показать несколько вариантов containerizing существующего приложения .NET Framework. Можно выполнить следующие действия.
 
--   Упаковываете приложение с помощью [2017 г средств Visual Studio для Docker](https://docs.microsoft.com/dotnet/core/docker/visual-studio-tools-for-docker) (Visual Studio 2017 г. или более поздней версии).
+-   Упаковываете приложение с помощью [2017 г средств Visual Studio для Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (Visual Studio 2017 г. или более поздней версии).
 
 -   Упаковываете приложение, вручную добавив [Dockerfile](https://docs.docker.com/engine/reference/builder/), а затем с помощью [Docker CLI](https://docs.docker.com/engine/reference/commandline/cli/).
 
@@ -163,7 +163,7 @@ ms.lasthandoff: 01/06/2018
 
 ![Развертывание на Виртуальной машине Azure из элемента конфигурации/CD конвейеры в Visual Studio Team Services](./media/image5-6.png)
 
-> **Рис. 5-6.** Развертывание на Виртуальной машине Azure из элемента конфигурации/CD конвейеры в Visual Studio Team Services
+> **Рис. 5-6**. Развертывание на Виртуальной машине Azure из элемента конфигурации/CD конвейеры в Visual Studio Team Services
 
 ### <a name="azure-vms-for-windows-containers"></a>Виртуальные машины Azure для контейнеров Windows
 

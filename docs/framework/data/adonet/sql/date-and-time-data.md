@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a146cf50639351479d42bff684ea7db21ecf5d3b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 904b941a274cdd31485d35cf2d025f869638d448
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="date-and-time-data"></a>Данные даты и времени
 В SQL Server 2008 появились указанные ниже новые типы данных для обработки сведений о дате и времени. Новые типы данных включают отдельные типы для даты и времени, а также расширенные типы данных, обладающие большим диапазоном, большей точностью и учитывающие часовые пояса. Начиная с .NET Framework 3.5 с пакетом обновления 1 (SP1), поставщик данных .NET Framework для SQL Server (<xref:System.Data.SqlClient>) полностью поддерживает все новые возможности ядра СУБД SQL Server 2008. Для использования новых возможностей с SqlClient необходимо установить .NET Framework 3.5 с пакетом обновления 1 (SP1) или более поздней версии.  
@@ -60,7 +62,7 @@ ms.lasthandoff: 01/17/2018
  Дополнительные сведения об интерпретации сервером SQL Server даты и времени см. в разделе [данных с использованием даты и времени](http://go.microsoft.com/fwlink/?LinkID=98361) в электронной документации по SQL Server 2008.  
   
 ## <a name="datetime-data-types-and-parameters"></a>Параметры и типы данных даты-времени  
- Можно указать тип данных <xref:System.Data.SqlClient.SqlParameter> с помощью одного из перечислений <xref:System.Data.SqlDbType>. Для поддержки новых типов данных даты и времени к <xref:System.Data.SqlDbType> были добавлены следующие перечисления.  
+ Для поддержки новых типов данных даты и времени к <xref:System.Data.SqlDbType> были добавлены следующие перечисления.  
   
 -   `SqlDbType.Date`  
   
@@ -69,7 +71,12 @@ ms.lasthandoff: 01/17/2018
 -   `SqlDbType.DateTime2`  
   
 -   `SqlDbType.DateTimeOffSet`  
-  
+
+Можно указать тип данных <xref:System.Data.SqlClient.SqlParameter> с помощью одного из указанных выше <xref:System.Data.SqlDbType> перечисления. 
+
+> [!NOTE]
+> Не удается задать `DbType` свойство `SqlParameter` для `SqlDbType.Date`.
+
  Также можно указать тип объекта <xref:System.Data.SqlClient.SqlParameter> в общей форме, задав для свойства <xref:System.Data.SqlClient.SqlParameter.DbType%2A> объекта `SqlParameter` особое значение перечисления <xref:System.Data.DbType>. Для поддержки типов данных <xref:System.Data.DbType> и `datetime2` к свойству `datetimeoffset` были добавлены следующие значения перечисления.  
   
 -   DbType.DateTime2  

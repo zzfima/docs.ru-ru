@@ -8,11 +8,11 @@ ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3605a6cd53db695de3af015a777e3c1a0e92af58
-ms.sourcegitcommit: 672c9cd122c13c9813f57f022c86ebdf6dd69b4f
+ms.openlocfilehash: 632c04507c1478238a5dc2573542f8c88bae2a51
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Внутренний цикл разработки рабочего процесса для Docker приложений
 
@@ -123,7 +123,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 Существуют другие строки конфигурации, которые можно добавить в файл DockerFile в зависимости от языка и framework, которую вы используете, поэтому Docker знает, как запустить приложение. Для экземпляра, необходимо в строку ENTRYPOINT \[«dotnet», «MyCustomMicroservice.dll»\] для запуска приложения .NET Core, несмотря на то, что у вас есть несколько вариантов в зависимости от подхода для построения и запуска службы. При использовании пакета SDK и dotnet CLI построение и запуск приложения .NET было бы немного отличается. В конечном счете является что ENTRYPOINT строки, а также дополнительные строки будут отличаться в зависимости от языка или платформу, которая выбирается для приложения.
 
-**Дополнительные сведения о** сведения о создании образов Docker для приложений .NET Core, перейдите к <https://docs.microsoft.com/dotnet/articles/core/docker/building-net-docker-images>.
+**Дополнительные сведения о** сведения о создании образов Docker для приложений .NET Core, перейдите к <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
 
 Дополнительные сведения о создании собственных образов, перейдите к [https://docs.docker.com/engine/ \учебники/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
 
@@ -258,7 +258,7 @@ cesardl/netcore-webapi-microservice-docker:first
 
 Также можно отлаживать .NET Core контейнеры Docker при использовании Visual Studio, как описано в следующем разделе.
 
-**Дополнительные сведения:** Дополнительные сведения об отладке контейнеры Node.js Docker, перейдите к <https://blog.docker.com/2016/07/live-debugging-docker/> и [https://blogs.msdn.microsoft.com/ \ пользователь\_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
+**Дополнительные сведения:** Дополнительные сведения об отладке контейнеры Node.js Docker, перейдите к <https://blog.docker.com/2016/07/live-debugging-docker/> и [https://blogs.msdn.microsoft.com/ \ пользователя\_ed/2016-02/27 / Visual-Studio-Code-New-Features-13-Big-Debugging-Updates-Rich-Object-hover-Conditional-Breakpoints-node-js-Mono-More/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
 
 
 >[!div class="step-by-step"]
