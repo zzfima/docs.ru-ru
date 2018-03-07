@@ -16,16 +16,16 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 92d0688b86e6a95af46e09c21c1a8b3cdf66efc3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 63c73fc48d0beaeb3a77acc464734b11410467a0
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="xslt-transformations"></a>Преобразования XSLT
-Язык XSLT позволяет преобразовать содержимое исходного XML-документа в другой документ, отличный по формату или структуре. Например, с помощью XSLT можно преобразовать XML в HTML для использования на веб-узле или преобразовать в документ, в котором будут только поля, необходимые приложению. Этот процесс преобразования описывается в [документации консорциума W3C по преобразованиям XSLT версии 1.0](http://go.microsoft.com/fwlink/?LinkID=49919).  
+Язык XSLT позволяет преобразовать содержимое исходного XML-документа в другой документ, отличный по формату или структуре. Например, с помощью XSLT можно преобразовать XML в HTML для использования на веб-узле или преобразовать в документ, в котором будут только поля, необходимые приложению. Этот процесс преобразования описывается в [документации консорциума W3C по преобразованиям XSLT версии 1.0](https://www.w3.org/TR/xslt-10/).  
   
- Класс <xref:System.Xml.Xsl.XslCompiledTransform> является обработчиком XSLT в платформе .NET Framework. Класс <xref:System.Xml.Xsl.XslCompiledTransform> поддерживает рекомендации W3C XSLT 1.0.  
+ Класс <xref:System.Xml.Xsl.XslCompiledTransform> является обработчиком XSLT в платформе .NET. Класс <xref:System.Xml.Xsl.XslCompiledTransform> поддерживает [рекомендации W3C XSLT 1.0](https://www.w3.org/TR/xslt-10/).  
   
 > [!NOTE]
 >  Класс <xref:System.Xml.Xsl.XslTransform> в платформе .NET Framework версии 2.0 является устаревшим. Класс <xref:System.Xml.Xsl.XslCompiledTransform> является новой реализацией обработчика XSLT. Улучшена его производительность и добавлены новые средства безопасности. XSLT-приложения рекомендуется создавать с помощью класса <xref:System.Xml.Xsl.XslCompiledTransform>  
@@ -43,13 +43,9 @@ ms.lasthandoff: 12/23/2017
  [XSLT-преобразования с помощью класса XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
  Содержит сведения об использовании класса <xref:System.Xml.Xsl.XslTransform>.  
   
- **Примечание**. Класс <xref:System.Xml.Xsl.XslTransform> устарел в версии платформы .NET Framework 2.0.  
-  
 ## <a name="reference"></a>Ссылка  
  <xref:System.Xml.Xsl.XslCompiledTransform>  
-  
  <xref:System.Xml.Xsl.XsltArgumentList>  
-  
  <xref:System.Xml.Xsl.XsltSettings>  
   
 ## <a name="related-sections"></a>Связанные разделы  

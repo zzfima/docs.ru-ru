@@ -9,11 +9,11 @@ ms.assetid: 324f267e-1c61-431a-97ed-852c1530742d
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0569636bde875d2d0d8921a544273f3214d05188
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 03315a2d9a44405ff520a1c333f56311e2657df6
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="interpolated-strings-c-reference"></a>Интерполированные строки (справочник по C#)
 
@@ -47,7 +47,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
  Интерполированную строку можно использовать везде, где допустимо применять строковый литерал.  Интерполированная строка вычисляется каждый раз, когда выполняется код с интерполированной строкой. Это позволяет разделить определение и вычисление интерполированной строки.  
   
- Чтобы включить в интерполированную строку фигурные скобки ("{" или "}"), используйте две фигурные скобки — "{{" или "}}".  Дополнительные сведения см в разделе «Неявные преобразования».  
+ Чтобы включить в интерполированную строку фигурные скобки ("{" или "}"), используйте две фигурные скобки — "{{" или "}}".  Дополнительные сведения см в разделе [Неявные преобразования](#implicit-conversions).  
 
 Если интерполированная строка содержит другие символы со специальным значением в интерполированной строке, например, знак кавычки ("), двоеточие (:) или запятая (,), их необходимо экранировать, если они встречаются в обычном тексте, или они должны быть включены в выражение, разделенное круглыми скобками, если они являются языковыми элементами, включенными в интерполированное выражение. В следующем примере показано экранирование кавычек, чтобы включить их в результирующую строку, и использование скобок для разделения выражения `(age == 1 ? "" : "s")`, чтобы двоеточие не интерпретировалось как начало строки формата.
 
@@ -91,5 +91,8 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 ## <a name="see-also"></a>См. также  
  <xref:System.IFormattable?displayProperty=nameWithType>  
  <xref:System.FormattableString?displayProperty=nameWithType>  
+ <xref:System.String.Format%2A?displayProperty=nameWithType>  
+ [Интерполяция строк в C#](../../../csharp/tutorials/string-interpolation.md)  
+ [Интерполированные строки в C#](../../../csharp/quick-starts/interpolated-strings.yml)  
  [Справочник по C#](../../../csharp/language-reference/index.md)  
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)

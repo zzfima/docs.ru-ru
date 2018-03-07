@@ -2,7 +2,8 @@
 title: "Оператор ?: (справочник по C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - ?:_CSharpKeyword
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9abfe4ca6be29b54edd591b503069c15e02c3532
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bbd434e02ece4843bab4ffded6877f81f622950c
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="-operator-c-reference"></a>Оператор ?: (справочник по C#)
-Условный оператор (`?:`) возвращает одно из двух значений в зависимости от значения логического выражения. Для условного оператора используется следующий синтаксис.  
+Условный оператор (`?:`), известный как тернарный условный оператор, возвращает одно из двух значений в зависимости от значения логического выражения. Для условного оператора используется следующий синтаксис.  
   
 ```  
 condition ? first_expression : second_expression;  
@@ -61,5 +62,5 @@ classify = (input > 0) ? "positive" : "negative";
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
  [Операторы в C#](../../../csharp/language-reference/operators/index.md)  
  [if-else](../../../csharp/language-reference/keywords/if-else.md)  
- [?. и? Операторы](../../../csharp/language-reference/operators/null-conditional-operators.md)  
+ [Операторы ?. и ?](../../../csharp/language-reference/operators/null-conditional-operators.md)  
  [?? Оператор](../../../csharp/language-reference/operators/null-conditional-operator.md)

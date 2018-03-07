@@ -14,11 +14,11 @@ ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 978f631a130f9ec2d450779f2a6296a6ce3af356
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 43b60455762ecd91a790ea5c7dae49d3348794aa
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>Практическое руководство. Сцепка нескольких строк (руководство по C#)
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 02/23/2018
  [!code-csharp-interactive[Combining strings at compile time](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#1)]  
   
 
-Для сцепки строковых переменных вы можете использовать операторы `+` или `+=`, [интерполяцию строк](../tutorials/string-interpolation.md), а также методы <xref:System.String.Concat%2A?displayProperty=nameWithType>, <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.String.Join%2A?displayProperty=nameWithType> или <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>. Оператор `+` прост в использовании и позволяет получить интуитивно понятный код. Даже если в одном выражении используется несколько операторов `+`, содержимое строки копируется только один раз. В следующем коде показаны два примера использования оператора `+` для сцепки строк.
+Для сцепки строковых переменных вы можете использовать операторы `+` или `+=`, [интерполяцию строк](../tutorials/string-interpolation.md), а также методы <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.String.Concat%2A?displayProperty=nameWithType>, <xref:System.String.Join%2A?displayProperty=nameWithType> или <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>. Оператор `+` прост в использовании и позволяет получить интуитивно понятный код. Даже если в одном выражении используется несколько операторов `+`, содержимое строки копируется только один раз. В следующем коде показаны примеры использования операторов `+` и `+=` для сцепки строк:
 
 [!code-csharp-interactive[combining strings using +](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#2)]  
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/23/2018
 > [!NOTE]
 >  В операциях сцепки строк компилятор C# обрабатывает строки NULL так же, как пустые строки.
 
-Другие методы сцепки строк: <xref:System.String.Format%2A?displayProperty=nameWithType>. Этот метод лучше использовать при создании строки из небольшого числа строк-компонентов. Он также отлично подойдет, если вы знаете количество строк, составляющих сцепленную строку.
+Другие методы сцепки строк: <xref:System.String.Format%2A?displayProperty=nameWithType>. Этот метод лучше использовать при создании строки из небольшого числа строк-компонентов.
 
 В других случаях вы можете сцеплять строки во время цикла и не знать, сколько исходных строк вы сцепляете. При этом фактическое число исходных строк может быть довольно большим. Для этих сценариев предназначен класс <xref:System.Text.StringBuilder>. В следующем коде для сцепки строк используется метод <xref:System.Text.StringBuilder.Append%2A> класса <xref:System.Text.StringBuilder>.  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/23/2018
 
 См. дополнительные сведения о [причинах для выбора сцепки строк или класса `StringBuilder`](xref:System.Text.StringBuilder#StringAndSB).
 
-Другой вариант объединения строк из коллекции — использовать метод <xref:System.String.Concat%2A?displayProperty=nameWithType>. Используйте метод <xref:System.String.Join%2A?displayProperty=nameWithType>, если строки должны быть разделены разделителем. Следующий код объединяет массив слов с помощью обоих методов:
+Другой вариант объединения строк из коллекции — использовать метод <xref:System.String.Concat%2A?displayProperty=nameWithType>. Используйте метод <xref:System.String.Join%2A?displayProperty=nameWithType>, если исходные строки должны быть разделены разделителем. Следующий код объединяет массив слов с помощью обоих методов:
 
 [!code-csharp-interactive[concatenation of string collection](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#5)]
 
@@ -58,6 +58,7 @@ ms.lasthandoff: 02/23/2018
 
 [!code-csharp-interactive[string concatenation using LINQ expressions](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#6)]  
 
+Вы можете оценить эти примеры, просмотрев код в нашем [репозитории GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings). Или можете загрузить образцы [в ZIP-файле](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>См. также  
  <xref:System.String>  

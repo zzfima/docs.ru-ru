@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: 35038b3dae80958071a9615f7f131fca73513077
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: d2633bf18fa32adc58dd3f5a2388d11010672da8
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="asynchronous-programming"></a>Асинхронное программирование
 
@@ -269,4 +269,5 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 ## <a name="other-resources"></a>Другие ресурсы
 
 * В статье [Подробный обзор асинхронного программирования](../standard/async-in-depth.md) приводятся дополнительные сведения о принципах работы задач.
+* [Асинхронное программирование с использованием ключевых слов Async и Await (C#)](../csharp/programming-guide/concepts/async/index.md)
 * Эпизод [Six Essential Tips for Async](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async) (Шесть важных советов по асинхронному программированию) с Лусианом Вышиком (Lucian Wischik) — это отличный ресурс по асинхронному программированию.

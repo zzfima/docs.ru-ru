@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: b6b3ce53a08cfacfacb19266b0be216a40633352
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: db062ed2f832ae933941da1c49e84303090f4390
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="string-interpolation-in-c"></a>Интерполяция строк в C# #
 
-Интерполяция строк — это процесс замены заполнителей в строке значениями строковой переменной. До версии C# 6 для этого приходилось применять метод `System.String.Format`. Он работает нормально, но использует только нумерованные заполнители, что порой затрудняет восприятие синтаксических конструкций и усложняет их.
+Интерполяция строк — это процесс замены заполнителей в строке значениями строковой переменной. До версии C# 6 для этого приходилось применять метод <xref:System.String.Format%2A?displayProperty=nameWithType>. Он работает нормально, но использует только нумерованные заполнители, что порой затрудняет восприятие синтаксических конструкций и усложняет их.
 
 В других языках программирования интерполяция строк уже достаточно давно является встроенной возможностью. Например, в PHP можно сделать так:
 
@@ -42,7 +42,7 @@ echo "My name is $name.";
 dotnet new console
 ```
 
-Эта команда создает скелет проекта .NET Core: файл проекта *interpolated.csproj* и файл исходного кода *Program.cs*. Нужно также выполнить команду `dotnet restore`, чтобы восстановить зависимости, необходимые для компиляции проекта.
+Эта команда создает скелет проекта .NET Core: файл проекта *interpolated.csproj* и файл исходного кода *Program.cs*. Нужно также выполнить команду `dotnet restore`, чтобы восстановить зависимости, необходимые для компиляции проекта.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -52,7 +52,7 @@ dotnet new console
 
 ## <a name="intro-to-string-interpolation"></a>Знакомство с интерполяцией строк
 
-При использовании `System.String.Format` в строку включаются специальные местозаполнители, которые заменяются параметрами, переданными вслед за строкой. Например:
+При использовании <xref:System.String.Format%2A?displayProperty=nameWithType> в строку включаются специальные местозаполнители, которые заменяются аргументами, переданными вслед за строкой. Например:
 
 [!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
 
@@ -78,7 +78,7 @@ This is line number 5
 
 ## <a name="how-string-interpolation-works"></a>Как работает интерполяция строк
 
-Компилятор преобразует синтаксис интерполяции в String.Format. Таким образом, вы можете выполнять [все, что раньше можно было сделать со String.Format](https://msdn.microsoft.com/library/dwhawy9k(v=vs.110).aspx).
+Компилятор преобразует синтаксис интерполяции в `String.Format`. Таким образом, вы можете выполнять [все, что раньше можно было сделать со `String.Format`](../../standard/base-types/formatting-types.md).
 
 Например, можно добавить отбивку и форматирование чисел:
 
@@ -96,7 +96,7 @@ This is line number 5
 1004       6,227.77
 ```
 
-Если имя переменной не найдено, создается ошибки времени компиляции.
+Если имя переменной не найдено, создается ошибка времени компиляции.
 
 Например:
 
@@ -107,21 +107,19 @@ var adj = "quick";
 Console.WriteLine(localizeMe);
 ```
 
-При компиляции этого кода, вы получите ошибки:
+При компиляции этого кода вы получите ошибки:
  
 * `Cannot use local variable 'adj' before it is declared` — это значит, что переменная `adj` объявляется *после* интерполируемой строки.
 * `The name 'otheranimal' does not exist in the current context` — это значит, что переменная с именем `otheranimal` вообще никогда не объявляется.
 
 ## <a name="localization-and-internationalization"></a>Локализация и интернационализация
 
-Интерполируемые строки поддерживают `IFormattable` и `FormattableString`, что можно удачно применять в контексте интернационализации.
+Интерполируемые строки поддерживают <xref:System.IFormattable?displayProperty=nameWithType> и <xref:System.FormattableString?displayProperty=nameWithType>, что можно удачно применять в контексте интернационализации.
 
-По умолчанию интерполируемая строка использует текущие настройки языка и региональных параметров. Чтобы использовать другие параметры, можно выполнить приведение строки к типу `IFormattable`.
-
-Например:
+По умолчанию интерполируемая строка использует текущие настройки языка и региональных параметров. Чтобы использовать другие параметры, выполните приведение строки к типу `IFormattable`. Например:
 
 [!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
 
 ## <a name="conclusion"></a>Заключение 
 
-В этом руководстве вы узнали, как использовать функции интерполяции строк в C# 6. По сути это упрощенная запись обычной инструкции `String.Format`, допускающая несколько более сложных вариантов использования.
+В этом руководстве вы узнали, как использовать функции интерполяции строк в C# 6. По сути это упрощенная запись обычной инструкции `String.Format`, допускающая несколько более сложных вариантов использования. Дополнительные сведения см. в разделе [Интерполированные строки](../../csharp//language-reference/keywords/interpolated-strings.md).
