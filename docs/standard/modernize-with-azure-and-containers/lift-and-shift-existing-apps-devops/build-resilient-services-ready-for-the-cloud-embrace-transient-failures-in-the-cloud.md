@@ -4,16 +4,17 @@ description: "Архитектура Микрослужбами .NET для пр
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: eef0197edb3aba555da63f1ea0b75726a826bd32
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: df452c9fbf1c16603efcec40844b55810bd5d2d4
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Построение гибких служб готов для облака: принятию временные сбои в облаке 
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Построение гибких служб готов для облака: принятию временные сбои в облаке
 
 Устойчивость — это возможность восстановления после сбоев и продолжение работы. Устойчивость не о как избежать ошибок, но принимает тот факт, что происходит сбой и затем реакции на них в, позволяющих избежать простою или потере данных. Цель устойчивости — вернуть приложение в полностью функционирующее состояние после сбоя.
 

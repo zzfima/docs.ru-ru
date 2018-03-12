@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - animation [WPF], gradient brush colors
 - brushes [WPF], animating colors of
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c977e8a4a23f9739541cf28d9e34ad9e8db1daf0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 74227ebe815e971087569ff39ac0a3479c1b0d14
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="getting-started-with-ink"></a>Начало работы с рукописными данными
 Включение рукописного ввода в приложения проще, чем когда-либо. Рукописный ввод развивался с дополнения метод COM и Windows Forms программирования для достижения полной интеграции в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Необходимо установить отдельные пакеты SDK или библиотеки времени выполнения.  
@@ -38,9 +40,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="quick-start"></a>Быстрый запуск  
  Этот раздел помогает написать простое [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложение, которое собирает рукописного ввода.  
   
- Если это еще не сделано, установите Microsoft Visual Studio 2005 и [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Обычно приложения должны быть скомпилированы перед просмотром, даже если они состоят только из [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Тем не менее [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] включает в себя приложения, средство XamlPad, позволяющий ускорить процесс реализации [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-на основе пользовательского интерфейса. Это приложение можно использовать для просмотра и ознакомления с несколькими первыми примерами данного документа. Процесс создания компилируемых приложений из [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] рассматривается далее в этом документе.  
+ Если это еще не сделано, установите Microsoft Visual Studio 2005 и [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Обычно приложения должны быть скомпилированы перед просмотром, даже если они состоят только из [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Тем не менее [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] включает в себя приложения, средство XamlPad, позволяющий ускорить процесс реализации [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-на основе пользовательского интерфейса. Это приложение можно использовать для просмотра и ознакомления с несколькими первыми примерами данного документа. Процесс создания компилируемых приложений из [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] рассматривается далее в этом документе.  
   
- Чтобы запустить средство XAMLPad, нажмите **запустить** последовательно выберите пункты **все программы**, пункты **Microsoft Winndows SDK**, пункты **средства**и нажмите кнопку **XAMLPad**. В области отрисовки XAMLPad отображается визуализация кода XAML, написанного в области кода. Можно изменить код XAML, а изменения немедленно отражаются в области отрисовки.  
+ Чтобы запустить средство XAMLPad, нажмите **запустить** последовательно выберите пункты **все программы**, пункты **Microsoft Windows SDK**, пункты **средства**и нажмите кнопку **XAMLPad**. В области отрисовки XAMLPad отображается визуализация кода XAML, написанного в области кода. Можно изменить код XAML, а изменения немедленно отражаются в области отрисовки.  
   
 #### <a name="got-ink"></a>У вас есть рукописного ввода?  
  Чтобы запустить первое [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения с поддержкой рукописного ввода:  

@@ -4,16 +4,18 @@ description: "Модернизация существующих приложен
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 08bf7da36714b2c18d96659814bb11df6d9b26fc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: af9457552a71e4cb5cffe95ce1f33ccfa227268a
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="lift-and-shift-existing-apps-devops"></a>Перенос существующих приложений в DevOps
+
 > Концепция. Перенос существующих приложений .NET Framework в облачные приложения DevOps для значительного повышения гибкости процесса развертывания в целях быстрой и экономичной доставки приложений.
 
 Чтобы воспользоваться преимуществами облачных и новых технологий, таких как контейнеры, следует хотя бы частично модернизировать существующие приложения .NET. В конечном счете обновление корпоративных приложений приведет к снижению общей стоимости владения.

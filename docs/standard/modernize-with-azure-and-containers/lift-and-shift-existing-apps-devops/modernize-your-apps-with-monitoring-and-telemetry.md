@@ -4,14 +4,15 @@ description: "Архитектура Микрослужбами .NET для пр
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1535951eb648deab17cf8c2fe64db6ddf7df4cb5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3caeb60cf0107aaf5413d935f3bde11863561c7d
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Модернизировать приложений с помощью мониторинга и данные телеметрии
 
@@ -37,13 +38,13 @@ ms.lasthandoff: 12/23/2017
 
 [Решения отслеживания контейнера](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers) в аналитика журналов позволяет просматривать и управлять ими узлах Docker и контейнера Windows в одном месте. Объясняется, какие контейнеры — под управлением какой образ контейнера они выполняются, и запущенным контейнеров. Можно просмотреть подробные сведения аудита, включая команды, используемые с контейнерами. Контейнеры также можно устранить путем просмотра и поиска централизованные журналы, без необходимости удаленно просматривать узлы Docker или Windows. Можно найти контейнеры, которые могут быть шум и требующим много огромные ресурсы на узле. Кроме того можно просмотреть централизованного ЦП, памяти, хранилища и использования сети и сведения о производительности для контейнеров. На компьютерах под управлением Windows, можно централизовать и сравнить журналы с сервера Windows Hyper-V и контейнеров Docker. Решение поддерживает следующие orchestrators контейнера:
 
--   Docker группу мелких объектов
+-   Docker Swarm
 
 -   DC/OS
 
 -   Kubernetes
 
--   Service Fabric
+-   Service Fabric.
 
 -   Red Hat OpenShift
 

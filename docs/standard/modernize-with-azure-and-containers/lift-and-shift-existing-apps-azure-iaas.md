@@ -4,14 +4,15 @@ description: "Модернизировать существующие прило
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: eed17ad06c138c3a4eb85f5e023427b681488784
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6811da4b59531e27f2d832c102d37ba1383b15ab
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="lift-and-shift-existing-apps-azure-iaas"></a>Точность прогноза и переместить существующие приложения Azure IaaS
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 12/23/2017
 
 > **Рис. 2-1.** Позиционирование инфраструктуры готовую для облачных приложений
 
-## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>Почему необходимо выполнить миграцию существующих веб-приложений .NET в Azure IaaS 
+## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>Почему необходимо выполнить миграцию существующих веб-приложений .NET в Azure IaaS
 
 Основной причиной для миграции в облако, даже на уровне начальной IaaS, является достижение сокращение расходов. С помощью нескольких управляемая инфраструктура служб, организации могут снизить вложений в обслуживания оборудования, сервера или подготовку виртуальной Машины и развертывания и управления инфраструктурой.
 
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="when-to-migrate-to-iaas-instead-of-to-paas"></a>Когда следует перенести в IaaS, а не в PaaS
 
-В следующих разделах мы рассмотрим DevOps готовую для облачных приложений, которые являются главным образом на основе PaaS платформы и служб. Эти приложения обеспечивает выигрыш в большинстве из миграции в облако.
+Далее разделах DevOps готовую для облачных приложений, которые являются главным образом на основе PaaS платформы и служб. Эти приложения обеспечивает выигрыш в большинстве из миграции в облако.
 
 Если вашей целью является просто переместить существующие приложения в облако, сначала определите существующих приложений, которые требуют значительных изменений для запуска в службе приложений Azure. Эти приложения должны иметь первыми кандидатами.
 
@@ -53,15 +54,15 @@ ms.lasthandoff: 12/23/2017
 
 [Azure миграции](https://aka.ms/azuremigrate) — это новая служба, которая предоставляет рекомендации, советы и механизмы, необходимые для переноса в Azure. Предоставляет Azure миграции:
 
--   Оценка для локальных виртуальных машин и обнаружения
+- Оценка для локальных виртуальных машин и обнаружения
 
--   Сопоставление встроенных зависимостей для высокой надежности обнаружение многоуровневые приложения
+- Сопоставление встроенных зависимостей для высокой надежности обнаружение многоуровневые приложения
 
--   Интеллектуальная оптимизации для виртуальных машин Azure
+- Интеллектуальная оптимизации для виртуальных машин Azure
 
--   Reporting руководствам исправляя потенциальных проблем совместимости
+- Reporting руководствам исправляя потенциальных проблем совместимости
 
--   Интеграция с Azure службой управления базами данных для миграции и обнаружение баз данных
+- Интеграция с Azure службой управления базами данных для миграции и обнаружение баз данных
 
 Миграция Azure уменьшает шансы того, рабочую нагрузку можно перенести с минимальным влиянием на бизнес и непредсказуемые результаты в Azure. С помощью соответствующих средств и руководство можно добиться максимальной окупаемости инвестиций при точки зрения обеспечения безопасности, критические производительность и надежность требованиям.
 
@@ -85,23 +86,23 @@ Site Recovery также созданы специально для гибрид
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Azure переноса таблицы данных**
+- **Azure переноса таблицы данных**
 
     [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
 
--   **Перенос в Azure**
+- **Перенос в Azure**
 
     [http://azuremigrationcenter.com/](http://azuremigrationcenter.com/)
 
--   **Перенос в Azure с Site Recovery**
+- **Перенос в Azure с Site Recovery**
 
     [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure)
 
--   **Общие сведения о службе Azure Site Recovery**
+- **Общие сведения о службе Azure Site Recovery**
 
     [https://docs.microsoft.com/azure/site-recovery/site-recovery-overview](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)
 
--   **Перенос виртуальных машин в AWS на виртуальных машинах Azure**
+- **Перенос виртуальных машин в AWS на виртуальных машинах Azure**
 
     [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure)
 
