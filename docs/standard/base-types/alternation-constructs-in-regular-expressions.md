@@ -27,11 +27,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8e565d029096b88d304b9cfc241807084873e735
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cea67e0309bccac7d21d7e8db659a55d34d4959a
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Конструкции изменения в регулярных выражениях
 <a name="top"></a> Конструкции изменения модифицируют регулярное выражение, включая сопоставление по принципу «либо/или» или условное сопоставление. Платформа .NET поддерживает три указанные далее конструкции изменения.  
@@ -126,18 +126,18 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[RegularExpressions.Language.Alternation#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation4.cs#4)]
  [!code-vb[RegularExpressions.Language.Alternation#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation4.vb#4)]  
   
- Возможные интерпретации шаблона регулярного выражения `\b(?<n2>\d{2}-)*(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` показаны в следующей таблице.  
+ Возможные интерпретации шаблона регулярного выражения `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` показаны в следующей таблице.  
   
 |Шаблон|Описание:|  
 |-------------|-----------------|  
 |`\b`|Начало на границе слова.|  
-|`(?<n2>\d{2}-)*`|Сопоставьте нулевое или единичное вхождение двух цифр с дефисом. Установка для группы имени `n2`.|  
+|`(?<n2>\d{2}-)?`|Сопоставьте нулевое или единичное вхождение двух цифр с дефисом. Установка для группы имени `n2`.|  
 |`(?(n2)`|Проверка наличия сопоставления `n2` во входной строке.|  
 |`)\d{7}`|Если есть сопоставление `n2` , сопоставляются семь десятичных цифр.|  
 |<code>&#124;\d{3}-\d{2}-\d{4}</code>|Если сопоставления нет `n2` , сопоставляются три десятичных цифры, дефис, две десятичных цифры, еще один дефис и четыре десятичных цифры.|  
 |`\b`|Соответствует границе слова.|  
   
- В следующем примере показана вариация этого примера, в котором вместо именованной группы используется нумерованная. Шаблон регулярного выражения выглядит следующим образом: `\b(\d{2}-)*(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`  
+ В следующем примере показана вариация этого примера, в котором вместо именованной группы используется нумерованная. Шаблон регулярного выражения выглядит следующим образом: `\b(\d{2}-)?(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`  
   
  [!code-csharp[RegularExpressions.Language.Alternation#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation5.cs#5)]
  [!code-vb[RegularExpressions.Language.Alternation#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation5.vb#5)]  

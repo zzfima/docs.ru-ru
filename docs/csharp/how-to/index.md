@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 26d4dffa6f6680b193788ee6d90dad01fde7cf51
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 591996c02c55c1f54af94280940e41720684251a
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-c"></a>Практическое руководство (C#)
 
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/28/2018
 Строки являются основным типом данных, используемым для отображения текста или работы с ним. В этих статьях приводятся распространенные варианты использования строк.
 
 - [Сравнение строк](../programming-guide/strings/how-to-compare-strings.md).
-- [Изменение содержимого строки](../programming-guide/strings/how-to-modify-string-contents.md).
+- [Изменение содержимого строки](modify-string-contents.md).
 - [Определение того, представляет ли строка число](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [Использование `String.Split` для разделения строк](parse-strings-using-split.md).
 - [Объединение нескольких строк в одну](concatenate-multiple-strings.md).
