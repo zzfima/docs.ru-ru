@@ -267,6 +267,7 @@
 ### [Как выполнять сцепление строк](csharp/how-to/concatenate-multiple-strings.md)
 ### [Практическое руководство преобразование строки в значение типа "DateTime"](standard/base-types/parsing-datetime.md)
 ### [Практическое руководство. Поиск по строкам](csharp/how-to/search-strings.md)
+### [Практическое руководство. Изменение содержимого строки](csharp/how-to/modify-string-contents.md)
 <!-- End of C# Concepts section -->
 ## [Пакет SDK для платформы компилятора .NET (API-интерфейсы Roslyn)](csharp/roslyn-sdk/)
 ## [Руководство по программированию на C#](csharp/programming-guide/)
