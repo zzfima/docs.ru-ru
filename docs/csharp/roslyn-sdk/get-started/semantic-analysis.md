@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 04bd57dfd32a51bf5d7e3a573e34140b0feec90f
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 94a28d21cfec1894c3ee3b631335043e1d0ec817
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="get-started-with-semantic-analysis"></a>Начало работы с семантическим анализом
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 02/27/2018
 
 В процессе работы с пакетом SDK для компилятора .NET вы узнаете различия между синтаксическим API и семантическим API. **Синтаксический API** позволяет получить представление о _структуре_ программы. Однако часто требуются более полные сведения о семантике или _значении_ программы. Несмотря на то, что синтаксический анализ свободного файла или фрагмента кода VB или C# можно выполнить изолированно, задавать вопросы, к примеру о типе переменной, в отрыве от реальности не имеет смысла. Значение имени типа может зависеть от ссылок на сборки, операций импорта пространств имен или других файлов кода. Ответы на эти вопросы можно получить с помощью **семантического API**, в частности класса <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType>.
 
-Экземпляр <xref:Microsoft.CodeAnalysis.Compilation> является аналогом отдельного проекта с точки зрения компилятора и представляет все необходимое для компиляции программы Visual Basic или C#. **Компиляция** включает в себя набор исходных файлов, подлежащих компиляции, ссылки на сборки, параметры компилятора. О значении кода можно рассуждать, используя в этом контексте все остальные сведения. <xref:Microsoft.CodeAnalysis.Compilation> позволяет находить **символы** — сущности, такие как типы, пространства имен, члены и переменные, на которые указывают имена и другие выражения. Процесс связывания имен и выражений с **символами** называется **привязкой**.
+Экземпляр <xref:Microsoft.CodeAnalysis.Compilation> является аналогом отдельного проекта с точки зрения компилятора и представляет все необходимое для компиляции программы Visual Basic или C#. **Компиляция** включает в себя набор компилируемых исходных файлов, ссылки на сборки и параметры компилятора. О значении кода можно рассуждать, используя в этом контексте все остальные сведения. <xref:Microsoft.CodeAnalysis.Compilation> позволяет находить **символы** — сущности, такие как типы, пространства имен, члены и переменные, на которые указывают имена и другие выражения. Процесс связывания имен и выражений с **символами** называется **привязкой**.
 
 Как <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>, <xref:Microsoft.CodeAnalysis.Compilation> является абстрактным классом с производными, соответствующими конкретному языку. При создании экземпляра компиляции необходимо вызвать фабричный метод в классе <xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation?displayProperty=nameWithType> (или <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicCompilation?displayProperty=nameWithType>).
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 02/27/2018
 > [!IMPORTANT]
 > Для приведенных ниже примеров требуется установить **пакет SDK для компилятора .NET** в составе Visual Studio 2017. Пакет SDK для компилятора .NET является последним необязательным компонентом, указанным в рабочей нагрузке для **разработки расширения Visual Studio**. Без этого компонента невозможно установить шаблоны.
 
-Окончательный код этого примера доступен в [репозитории примеров на сайте GitHub](https://github.com/dotnet/samples/csharp/roslyn-sdk/SemanticQuickStart).
+Окончательный код этого примера доступен в [репозитории на сайте GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SemanticQuickStart).
 
 > [!NOTE]
 > Типы синтаксического дерева используют наследование для описания различных элементов синтаксиса, которые являются допустимыми в разных местах в программе. Применение этих API часто означает приведение свойств или элементов коллекции к конкретным производным типам. В следующих примерах назначения и приведения являются отдельными инструкциями, использующими явно типизированные переменные. Прочитайте код, чтобы увидеть типы возвращаемых значений API и тип среды выполнения возвращаемых объектов. На практике более распространено использование неявно типизированных переменных и имен API для описания типа рассматриваемых объектов.
@@ -49,52 +49,53 @@ ms.lasthandoff: 02/27/2018
 Вы будете анализировать программу "Hello World!", показанную ранее.
 Добавьте текст для программы "Hello World" в качестве константы в класс `Program`:
 
-[!code-csharp[Declare the program test](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/SemanticQuickStart/Program.cs#1 "Declare a constant string for the program text to analyze")]
+[!code-csharp[Declare the program test](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#1 "Declare a constant string for the program text to analyze")]
 
 Затем добавьте в константу `programText` следующий код для создания дерева синтаксиса для текста кода.  Добавьте следующую строку в метод `Main`:
 
-[!code-csharp[Create the tree](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/SemanticQuickStart/Program.cs#2 "Create the syntax tree")]
+[!code-csharp[Create the tree](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#2 "Create the syntax tree")]
 
 Далее постройте <xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation> из уже созданного дерева. В примере "Hello World!" используются типы <xref:System.String> и <xref:System.Console>. Необходимо сослаться на сборку, объявляющую эти два типа при компиляции. Добавьте следующую строку в метод `Main` для создания компиляции дерева синтаксиса, включая ссылку на соответствующую сборку:
 
-[!code-csharp[Create the compilation](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/SemanticQuickStart/Program.cs#3 "Create the compilation for the semantic model")]
+[!code-csharp[Create the compilation](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#3 "Create the compilation for the semantic model")]
 
-Метод <xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.AddReferences%2A?displayProperty=nameWithType> добавит ссылки на компиляцию. Метод <xref:Microsoft.CodeAnalysis.MetadataReference.CreateFromFile(System.String,Microsoft.CodeAnalysis.MetadataReferenceProperties,Microsoft.CodeAnalysis.DocumentationProvider)> загрузит сборку как ссылку. 
+Метод <xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.AddReferences%2A?displayProperty=nameWithType> добавит ссылки на компиляцию. Метод <xref:Microsoft.CodeAnalysis.MetadataReference.CreateFromFile%2A?displayProperty=nameWithType> загрузит сборку как ссылку. 
 
 ## <a name="querying-the-semantic-model"></a>Выполнение запросов к семантической модели
 
-К существующему объекту <xref:Microsoft.CodeAnalysis.Compilation> можно отправить запрос на класс <xref:Microsoft.CodeAnalysis.SemanticModel> для любого класса <xref:Microsoft.CodeAnalysis.SyntaxTree>, содержащегося в этом объекте <xref:Microsoft.CodeAnalysis.Compilation>. Семантическую модель можно представить как источник всей информации, которая обычно доступна из IntelliSense. Класс <xref:Microsoft.CodeAnalysis.SemanticModel> помогает получить ответы на такие вопросы, как "Какие имена находятся в области действия в этом расположении?", "Какие члены доступны из этого метода?", "Какие переменные используются в этом блоке текста?" и "На что ссылается это имя или выражение?" Добавьте этот оператор для создания семантической модели:
+К существующему объекту <xref:Microsoft.CodeAnalysis.Compilation> можно отправить запрос на класс <xref:Microsoft.CodeAnalysis.SemanticModel> для любого класса <xref:Microsoft.CodeAnalysis.SyntaxTree>, содержащегося в этом объекте <xref:Microsoft.CodeAnalysis.Compilation>. Семантическую модель можно представить как источник всей информации, которая обычно доступна из IntelliSense. <xref:Microsoft.CodeAnalysis.SemanticModel> может ответить, какие имена находятся в области в том или ином расположении, какие элементы доступны в определенном методе, какие переменные используются в неком блоке текста, на что ссылается некое имя или выражение, а также на другие подобные вопросы. Добавьте этот оператор для создания семантической модели:
 
-[!code-csharp[Create the semantic model](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/SemanticQuickStart/Program.cs#4 "Create the semantic model")]
+[!code-csharp[Create the semantic model](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#4 "Create the semantic model")]
 
 ## <a name="binding-a-name"></a>Привязка имени
 
 <xref:Microsoft.CodeAnalysis.Compilation> создает <xref:Microsoft.CodeAnalysis.SemanticModel> из <xref:Microsoft.CodeAnalysis.SyntaxTree>. После создания модели можно выполнить запрос на поиск первой директивы `using` и получение сведений о символах для пространства имен `System`. Добавьте следующие две строки в метод `Main` для создания семантической модели и получения символа для первого оператора using:
 
-[!code-csharp[Find the namespace symbol for the first using](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/SemanticQuickStart/Program.cs#5 "Find the namespace symbol for the first using")]
+[!code-csharp[Find the namespace symbol for the first using](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#5 "Find the namespace symbol for the first using")]
 
-В предыдущем коде показано, как получить объект <xref:Microsoft.CodeAnalysis.SemanticModel> для класса <xref:Microsoft.CodeAnalysis.SyntaxTree>HelloWorld. После получения модели имя первой директивы `using` привязывается для получения <xref:Microsoft.CodeAnalysis.SymbolInfo?displayProperty=nameWithType> для пространства имен `System`. В предыдущем коде также демонстрируется, что для поиска структуры кода используется **синтаксическая модель**, а для понимания ее значения — **семантическая модель**. **Синтаксическая модель** находит строку `System` в операторе using. **Семантическая модель** располагает всеми сведениями о типах, определенных в пространстве имен `System`.
+В предыдущем коде показано, как привязать имя в первой директиве `using`, чтобы получить <xref:Microsoft.CodeAnalysis.SymbolInfo?displayProperty=nameWithType> для пространства имен `System`. В предыдущем коде также демонстрируется, что для поиска структуры кода используется **синтаксическая модель**, а для понимания ее значения — **семантическая модель**. **Синтаксическая модель** находит строку `System` в операторе using. **Семантическая модель** располагает всеми сведениями о типах, определенных в пространстве имен `System`.
 
 Из объекта <xref:Microsoft.CodeAnalysis.SymbolInfo> можно получить интерфейс <xref:Microsoft.CodeAnalysis.ISymbol?displayProperty=nameWithType> с помощью свойства <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType>. Это свойство возвращает символ, на который ссылается это выражение. Для выражений, не ссылающихся ни на какие объекты (например, числовые литералы), это свойство имеет значение `null`. Если <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType> не задано значение NULL, <xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> обозначает тип символа. В этом примере свойству <xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> присваивается значение <xref:Microsoft.CodeAnalysis.SymbolKind.Namespace?displayProperty=nameWithType>. Добавьте приведенный ниже код в метод `Main`. Он возвращает символ для пространства имен `System`, а затем отображает все дочерние пространства имен, объявленные в пространстве имен `System`:
 
-[!code-csharp[Display all the child namespaces](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/SemanticQuickStart/Program.cs#6 "Display all the child namespaces from this compilation")]
+[!code-csharp[Display all the child namespaces](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#6 "Display all the child namespaces from this compilation")]
 
 Запустите программу. Вы должны увидеть следующие результаты:
 
 ```
-Collections
-Configuration
-Deployment
-Diagnostics
-Globalization
-IO
-Reflection
-Resources
-Runtime
-Security
-StubHelpers
-Text
-Threading
+System.Collections
+System.Configuration
+System.Deployment
+System.Diagnostics
+System.Globalization
+System.IO
+System.Numerics
+System.Reflection
+System.Resources
+System.Runtime
+System.Security
+System.StubHelpers
+System.Text
+System.Threading
 Press any key to continue . . .
 ```
 
@@ -109,31 +110,31 @@ Press any key to continue . . .
 
 Строку "Hello World" можно найти путем поиска одного строкового литерала в программе. Затем после обнаружения узла синтаксиса получите сведения о типе для этого узла из семантической модели. Добавьте приведенный ниже код в метод `Main`:
 
-[!code-csharp[Find the namespace symbol for the only using](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/SemanticQuickStart/Program.cs#7 "Find the namespace symbol for the only using")]
+[!code-csharp[Find the namespace symbol for the only using](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#7 "Find the namespace symbol for the only using")]
 
 Структура <xref:Microsoft.CodeAnalysis.TypeInfo?displayProperty=nameWithType> содержит свойство <xref:Microsoft.CodeAnalysis.TypeInfo.Type?displayProperty=nameWithType>, которое обеспечивает доступ к семантическим сведениям о типе литерала. В этом примере типом является `string`. Добавьте объявление, которое присваивает это свойство локальной переменной:
 
-[!code-csharp[Find the semantic information about the string type](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/SemanticQuickStart/Program.cs#8 "Use the string literal to access the semantic information in the string type.")]
+[!code-csharp[Find the semantic information about the string type](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#8 "Use the string literal to access the semantic information in the string type.")]
 
 Чтобы завершить действия в этом учебнике, сформируем запрос LINQ, который создает последовательность всех открытых методов, объявленных в типе `string` и возвращающих `string`. Поскольку запрос сложный, мы будем создавать его построчно, а затем перестроим в один запрос. Источником для этого запроса является последовательность всех элементов, объявленных в типе `string`:
 
-[!code-csharp[Access the sequence of members on the string type](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/SemanticQuickStart/Program.cs#9 "Access the sequence of members on the string type.")]
+[!code-csharp[Access the sequence of members on the string type](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#9 "Access the sequence of members on the string type.")]
 
 Эта исходная последовательность содержит все элементы, включая свойства и поля, поэтому ее нужно отфильтровать с помощью метода <xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType>, чтобы найти элементы, которые являются объектами <xref:Microsoft.CodeAnalysis.IMethodSymbol?diplayProperty=nameWithType>:
 
-[!code-csharp[Filter the sequence to only methods](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/SemanticQuickStart/Program.cs#10 "Find the subset of the collection that is the methods.")]
+[!code-csharp[Filter the sequence to only methods](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#10 "Find the subset of the collection that is the methods.")]
 
 Затем добавьте другой фильтр, чтобы вернуть только открытые методы, возвращающие `string`:
 
-[!code-csharp[Filter on return type and accessibility](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/SemanticQuickStart/Program.cs#11 "Find only the public methods that return a string.")]
+[!code-csharp[Filter on return type and accessibility](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#11 "Find only the public methods that return a string.")]
 
 Выберите только свойство имени и только уникальные имена, удаляя все перегрузки:
 
-[!code-csharp[find the distinct names.](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/SemanticQuickStart/Program.cs#12 "Use the string literal to access the semantic information in the string type.")]
+[!code-csharp[find the distinct names.](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#12 "Use the string literal to access the semantic information in the string type.")]
 
 Можно также создать полный запрос с помощью синтаксиса запросов LINQ и затем отобразить имена всех методов в консоли:
 
-[!code-csharp[build and display the results of this query.](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/SemanticQuickStart/Program.cs#12 "Build and display the results of the query.")]
+[!code-csharp[build and display the results of this query.](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#12 "Build and display the results of the query.")]
 
 Постройте и запустите программу. Должны выводиться следующие данные:
 

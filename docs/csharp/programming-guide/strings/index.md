@@ -12,11 +12,11 @@ ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6492edae6e4311252dc664236fb43cd373f7c59f
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 24b3db01047a9f9a47182e0e1ac105f69562c316
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="strings-c-programming-guide"></a>Строки (Руководство по программированию на C#)
 Строка — это объект типа <xref:System.String>, значением которого является текст. Внутри программы текст хранится в виде упорядоченной коллекции объектов <xref:System.Char> только для чтения. В конце строки C# нет нуль-символов. Поэтому строка C# может содержать любое число внедренных нуль-символов ('\0'). Свойство <xref:System.String.Length%2A> строки соответствует числу содержащихся в ней объектов `Char`, но не числу символов Юникода. Для доступа к отдельным кодовым точкам Юникода в строке используйте объект <xref:System.Globalization.StringInfo>.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/28/2018
   
  [!code-csharp[csProgGuideStrings#25](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_3.cs)]  
   
- Инструкции по созданию новых строк, основанных на таких изменениях, как операции поиска и замены исходной строки, см. в статье [How to: Modify String Contents (C# Programming Guide)](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md) (Практическое руководство. Изменение содержимого строки (руководство по программированию на C#)).  
+ Инструкции по созданию новых строк, основанных на таких изменениях, как операции поиска и замены исходной строки, см. в статье [How to: Modify String Contents (C# Programming Guide)](../../how-to/modify-string-contents.md) (Практическое руководство. Изменение содержимого строки (руководство по программированию на C#)).  
   
 ## <a name="regular-and-verbatim-string-literals"></a>Регулярные и буквальные строковые литералы  
  Используйте регулярные строковые литералы, когда вам нужно внедрить escape-символы, доступные в C#, как показано в следующем примере:  
@@ -83,7 +83,7 @@ ms.lasthandoff: 02/28/2018
  Одна перегрузка метода <xref:System.Console.WriteLine%2A> принимает в качестве параметра строку формата. Поэтому можно просто внедрить строковый литерал формата без явного вызова метода. Но при использовании метода <xref:System.Diagnostics.Trace.WriteLine%2A> для отображения выходных данных отладки в Visual Studio в окне **Вывод** необходимо явно вызвать метод <xref:System.String.Format%2A>, так как метод <xref:System.Diagnostics.Trace.WriteLine%2A> принимает только строку, а не строку формата. Дополнительные сведения о строках форматах см. в статье [Formatting types](../../../standard/base-types/formatting-types.md) (Типы форматирования).  
   
 ## <a name="substrings"></a>Подстроки  
- Подстрока — это последовательность символов, содержащихся в строке. Используйте метод <xref:System.String.Substring%2A>, чтобы создать новую строку из части исходной строки. Одно вхождение подстроки или несколько можно найти с помощью метода <xref:System.String.IndexOf%2A>. Используйте метод <xref:System.String.Replace%2A>, чтобы заменить все вхождения указанной подстроки новой строкой. Как и метод <xref:System.String.Substring%2A>, метод <xref:System.String.Replace%2A> фактически возвращает новую строку и не изменяет исходную строку. См. дополнительные сведения о [поиске строк](../../how-to/search-strings.md) и [изменении содержимого строк](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md).  
+ Подстрока — это последовательность символов, содержащихся в строке. Используйте метод <xref:System.String.Substring%2A>, чтобы создать новую строку из части исходной строки. Одно вхождение подстроки или несколько можно найти с помощью метода <xref:System.String.IndexOf%2A>. Используйте метод <xref:System.String.Replace%2A>, чтобы заменить все вхождения указанной подстроки новой строкой. Как и метод <xref:System.String.Substring%2A>, метод <xref:System.String.Replace%2A> фактически возвращает новую строку и не изменяет исходную строку. См. дополнительные сведения о [поиске строк](../../how-to/search-strings.md) и [изменении содержимого строк](../../how-to/modify-string-contents.md).  
   
  [!code-csharp[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
   
@@ -123,11 +123,11 @@ string s = String.Empty;
   
 |Раздел|Описание:|  
 |-----------|-----------------|  
-|[Практическое руководство. Изменение содержимого строки](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)|Содержит пример кода, иллюстрирующий изменение содержимого строк.|  
-|[Практическое руководство. Сцепка нескольких строк](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|Иллюстрирует использование оператора `+` и класса `Stringbuilder` для соединения строк во время компиляции и во время выполнения.|  
+|[Практическое руководство. Изменение содержимого строки](../../how-to/modify-string-contents.md)|Описание методов преобразования строк и изменения их содержимого.|  
+|[Практическое руководство. Сцепка нескольких строк](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|Описание методов объединения нескольких строк в одну во время компиляции и выполнения.|  
 |[Практическое руководство. Сравнение строк](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|Показывает, как выполнять сравнение строк по порядковому номеру.|  
 |[How to: Parse Strings Using String.Split (C# Programming Guide)](../../how-to/parse-strings-using-split.md) (Практическое руководство. Анализ строк с помощью метода String.Split (руководство по программированию на C#))|Содержит пример кода, демонстрирующий использование метода `String.Split` для анализа строк.|  
-|[Практическое руководство. Поиск по строкам](../../how-to/search-strings.md)|Объясняет, как использовать конкретные методы для поиска строк.|  
+|[Практическое руководство. Поиск по строкам](../../how-to/search-strings.md)|Описание использования поиска для нахождения в строках определенных шаблонов или текста.|  
 |[Практическое руководство. Определение представления числового значения в строке](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Объясняет, как безопасно проанализировать строку, чтобы проверить, содержит ли она допустимое числовое значение.|  
 |[Практическое руководство. Преобразование строки в значение типа "DateTime"](../../../csharp/programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)|Показывает, как преобразовать строку, например "01/24/2008", в объект <xref:System.DateTime?displayProperty=nameWithType>.|  
 |[Базовые операции со строками в .NET Framework](../../../../docs/standard/base-types/basic-string-operations.md)|Содержит ссылки на статьи, в которых показаны базовые операции над строками с помощью методов <xref:System.String?displayProperty=nameWithType> и <xref:System.Text.StringBuilder?displayProperty=nameWithType>.|  

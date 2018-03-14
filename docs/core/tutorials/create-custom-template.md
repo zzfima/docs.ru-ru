@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
-ms.workload: dotnetcore
-ms.openlocfilehash: 44b4ff6b870a6515f623c690ad722917c9ea5bd3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: bf523ead40d0e3cc9148b48d5c7a4a84d3d5cb81
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Создание пользовательского шаблона для команды dotnet new
 
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="create-a-template-from-a-project"></a>Создание шаблона на основе проекта
 
-Используйте существующий проект, который компилируется и выполняется, или создайте проект консольного приложения в папке на жестком диске. В этом учебнике предполагается, что папка проекта имеет имя *GarciaSoftware.ConsoleTemplate.CSharp* и хранится в каталоге *Documents/Templates* в профиле пользователя. Имя шаблона проекта в учебнике имеет формат *\<Название организации>.\<Тип шаблона>.\<Язык программирования>*, однако вы можете назвать проект и шаблон, как вам нравится.
+Используйте существующий проект, который компилируется и выполняется, или создайте проект консольного приложения в папке на жестком диске. В этом руководстве предполагается, что папка проекта имеет имя *GarciaSoftware.ConsoleTemplate.CSharp* и хранится в каталоге *Documents\Templates* в профиле пользователя. Имя шаблона проекта в учебнике имеет формат *\<Название организации>.\<Тип шаблона>.\<Язык программирования>*, однако вы можете назвать проект и шаблон, как вам нравится.
 
 1. Добавьте в корневой каталог проекта папку с именем *.template.config*.
 1. В папке *.template.config* создайте файл *template.json* для настройки шаблона. Дополнительные сведения и определения элементов для файла *template.json* см. в статье [Пользовательские шаблоны для команды dotnet new](../tools/custom-templates.md#templatejson) и [схеме *template.json* в хранилище схем JSON](http://json.schemastore.org/template).
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/23/2017
 
 ### <a name="pack-the-template-into-a-nuget-package"></a>Упаковка шаблона в пакет NuGet
 
-1. Создайте папку для пакета NuGet. В этом учебнике используется имя папки *GarciaSoftware.ConsoleTemplate.CSharp*. Папка создается в папке *Documents/NuGetTemplates* в профиле пользователя. В новой папке шаблона создайте папку *content*, в которой будут размещаться файлы проекта.
+1. Создайте папку для пакета NuGet. В этом руководстве используется имя папки *GarciaSoftware.ConsoleTemplate.CSharp*. Папка создается в каталоге *Documents\NuGetTemplates* в профиле пользователя. В новой папке шаблона создайте папку *content*, в которой будут размещаться файлы проекта.
 1. Скопируйте содержимое папки проекта вместе с файлом *.template.config/template.json* помещаются в созданную папку *content*.
 1. Рядом с папкой *content* добавьте [файл *NUSPEC*](/nuget/create-packages/creating-a-package). Файл NUSPEC представляет собой XML-файл манифеста, описывающий содержимое пакета и управляющий процессом создания пакета NuGet.
    
@@ -102,10 +103,10 @@ ms.lasthandoff: 12/23/2017
    </package>
    ```
 
-1. [Создайте пакет](/nuget/create-packages/creating-a-package#creating-the-package) с помощью команды `nuget pack <PATH_TO_NUSPEC_FILE>`. В приведенной ниже команде предполагается, что папка, содержащая ресурсы NuGet, находится в каталоге *C:/Users/\<ПОЛЬЗОВАТЕЛЬ>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp/*. Однако где бы ни находилась эта папка в вашей системе, команда `nuget pack` принимает путь к файлу *NUSPEC*:
+1. [Создайте пакет](/nuget/create-packages/creating-a-package#creating-the-package) с помощью команды `nuget pack <PATH_TO_NUSPEC_FILE>`. В приведенной ниже команде предполагается, что папка, содержащая ресурсы NuGet, находится в каталоге C:\Users\\\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp\*. Однако где бы ни находилась эта папка в вашей системе, команда `nuget pack` принимает путь к файлу *NUSPEC*:
 
    ```console
-   nuget pack C:/Users/<USER>/Documents/NuGetTemplates/GarciaSoftware.ConsoleTemplate.CSharp/GarciaSoftware.ConsoleTemplate.CSharp.nuspec
+   nuget pack C:\Users\<USER>\Documents\NuGetTemplates\GarciaSoftware.ConsoleTemplate.CSharp\GarciaSoftware.ConsoleTemplate.CSharp.nuspec
    ```
 
 ### <a name="publishing-the-package-to-nugetorg"></a>Публикация пакета на сайте nuget.org
@@ -119,7 +120,7 @@ ms.lasthandoff: 12/23/2017
 Чтобы установить шаблон из созданного файла *NUPKG*, используйте команду `dotnet new` с параметром `-i|--install` и укажите путь к файлу *NUPKG*.
 
 ```console
-dotnet new -i C:/Users/<USER>/GarciaSoftware.ConsoleTemplate.CSharp.1.0.0.nupkg
+dotnet new -i C:\Users\<USER>\GarciaSoftware.ConsoleTemplate.CSharp.1.0.0.nupkg
 ```
 
 #### <a name="install-the-template-from-a-nuget-package-stored-at-nugetorg"></a>Установка шаблона из пакета NuGet, хранящегося на сайте nuget.org
@@ -187,14 +188,14 @@ dotnet new -u GarciaSoftware.ConsoleTemplate.CSharp.1.0.0
 В этом учебнике предполагается, что шаблон проекта находится в папке *Documents/Templates* в профиле пользователя. Установите шаблон из этого расположения с помощью следующей команды, заменив \<ПОЛЬЗОВАТЕЛЬ> на имя профиля пользователя:
 
 ```console
-dotnet new -i C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp
+dotnet new -i C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp
 ```
 
 ### <a name="create-a-project-from-the-template"></a>Создание проекта на основе шаблона
 
 После установки шаблона из файловой системы используйте его, выполнив команду `dotnet new <TEMPLATE>` из каталога, в котором должны размещаться выходные данные модуля шаблонов (если вы не применяете параметр `-o|--output` для указания определенного каталога). Дополнительные сведения см. в разделе [Параметры](~/docs/core/tools/dotnet-new.md#options) статьи, посвященной команде `dotnet new`. Укажите короткое имя шаблона непосредственно в команде `dotnet new`.
 
-Из новой папки проекта, созданной в каталоге *C:/Users/\<ПОЛЬЗОВАТЕЛЬ>/Documents/Projects/MyConsoleApp*, создайте проект на основе шаблона `garciaconsole`:
+Из новой папки проекта, созданной в каталоге *C:\Users\\\<USER>\Documents\Projects\MyConsoleApp*, создайте проект на основе шаблона `garciaconsole`:
 
 ```console
 dotnet new garciaconsole
@@ -202,14 +203,14 @@ dotnet new garciaconsole
 
 ### <a name="uninstall-the-template"></a>Удаление шаблона
 
-Если вы создали шаблон в локальной файловой системе в каталоге *C:/Users/\<ПОЛЬЗОВАТЕЛЬ>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp*, для его удаления укажите параметр `-u|--uninstall` и путь к папке шаблона:
+Если вы создали шаблон в локальной файловой системе в каталоге *C:\Users\\\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp*, для его удаления укажите параметр `-u|--uninstall` и путь к папке шаблона:
 
 ```console
-dotnet new -u C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp
+dotnet new -u C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp
 ```
 
 > [!NOTE]
-> Чтобы удалить шаблон из локальной файловой системы, вам необходимо указать полный путь. Например, *C:/Users/\<ПОЛЬЗОВАТЕЛЬ>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* будет работать, а *./GarciaSoftware.ConsoleTemplate.CSharp* — нет.
+> Чтобы удалить шаблон из локальной файловой системы, вам необходимо указать полный путь. Например, *C:\Users\\\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp* будет работать, а *./GarciaSoftware.ConsoleTemplate.CSharp* из содержащей папки — нет.
 > Кроме того, путь к шаблону не должен содержать конечную косую черту закрытия каталога.
 
 ## <a name="see-also"></a>См. также

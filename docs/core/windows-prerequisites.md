@@ -3,16 +3,16 @@ title: "Необходимые компоненты для .NET Core в Windows"
 description: "Узнайте о том, какие зависимости необходимы для разработки и запуска приложений .NET Core на компьютере Windows."
 author: JRAlexander
 ms.author: johalex
-ms.date: 02/28/2018
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: .net-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: e64ecb807fd377458a9998ebbdfe2f6f15b115bb
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 48102f3fb7fa6e93238eefff0e7f1ecbed4d8409
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Необходимые компоненты для .NET Core в Windows
 
@@ -100,5 +100,6 @@ ms.lasthandoff: 03/02/2018
 >
 > * В меню **Справка** выберите пункт **О программе Microsoft Visual Studio**.
 > * В диалоговом окне **О программе Microsoft Visual Studio** проверьте номер версии.
->   * Для приложений .NET Core 2.x требуется среда Visual Studio 2017 версии 15.3 (26730.01) или более поздней.
->   * Для приложений .NET Core 1.x требуется среда Visual Studio 2017 версии 15.0 (26228.04) или более поздней.
+>   * Для приложений .NET Core 2.1, предварительная версия 1 — Visual Studio 2017 версии 15.6, предварительная версия 6 или более поздняя.
+>   * Для приложений .NET Core 2.0 — Visual Studio 2017 версии 15.3 или более поздняя версия.
+>   * Для приложений .NET Core 1.x — Visual Studio 2017 версии 15.0 или более поздняя версия.

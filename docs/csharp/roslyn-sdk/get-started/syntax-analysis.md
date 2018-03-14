@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: c89695379d545ac5b22fc0716f3e0060b6c08f31
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 52f66782086af651517d54105fea6f5533ea05a2
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>Начало работы с функциями синтаксического анализа
 
@@ -73,7 +73,7 @@ namespace HelloWorld
 
 ### <a name="manual-traversal"></a>Обход вручную
 
-Окончательный код этого примера доступен в [репозитории примеров на сайте GitHub](https://github.com/dotnet/samples/csharp/roslyn-sdk/SyntaxQuickStart).
+Окончательный код этого примера доступен в [репозитории на сайте GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart).
 
 > [!NOTE]
 > Типы синтаксического дерева используют наследование для описания различных элементов синтаксиса, которые являются допустимыми в разных местах в программе. Применение этих API часто означает приведение свойств или элементов коллекции к конкретным производным типам. В следующих примерах назначения и приведения являются отдельными инструкциями, использующими явно типизированные переменные. Прочитайте код, чтобы увидеть типы возвращаемых значений API и тип среды выполнения возвращаемых объектов. На практике более распространено использование неявно типизированных переменных и имен API для описания типа рассматриваемых объектов.
@@ -103,7 +103,7 @@ namespace HelloWorld
 
 [!code-csharp[Find the first member](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#4 "Find the first member")]
 
-Этот элемент — <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType>. Он представляет все, что входит в объявление `namespace Hello World`. Добавьте следующий код, чтобы посмотреть, какие узлы объявляются внутри пространства имен `HelloWorld`:
+Этот элемент — <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType>. Он представляет все, что входит в объявление `namespace HelloWorld`. Добавьте следующий код, чтобы посмотреть, какие узлы объявляются внутри пространства имен `HelloWorld`:
 
 [!code-csharp[Find the class declaration](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#5 "Find the class declaration")]
 
@@ -127,14 +127,14 @@ The tree has 4 using statements. They are:
         System.Collections
         System.Linq
         System.Text
-The first member is a NamespaceDeclaration
+The first member is a NamespaceDeclaration.
 There are 1 members declared in this namespace.
-The first member is a ClassDeclaration
-There are 1 members declared in the Program class
-The first member is a MethodDeclaration
-The return type of the Main method is void
-The method has 1 parameters
-The type of the args parameter is string[]
+The first member is a ClassDeclaration.
+There are 1 members declared in the Program class.
+The first member is a MethodDeclaration.
+The return type of the Main method is void.
+The method has 1 parameters.
+The type of the args parameter is string[].
 The body text of the Main method follows:
         {
             Console.WriteLine("Hello, World!");
@@ -143,7 +143,7 @@ The body text of the Main method follows:
 
 ### <a name="query-methods"></a>Методы запросов
 
-Помимо обхода деревьев можно также исследовать деревья синтаксиса с помощью методов запросов, определенных в <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>. Эти методы известны всем, кто знаком с XPath. Эти методы можно использовать совместно с LINQ для быстрого поиска в дереве. <xref:Microsoft.CodeAnalysis.SyntaxNode> содержит такие методы запросов, как <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.AncestorsAndSelf%2A> и <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes>.
+Помимо обхода деревьев можно также исследовать деревья синтаксиса с помощью методов запросов, определенных в <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>. Эти методы известны всем, кто знаком с XPath. Эти методы можно использовать совместно с LINQ для быстрого поиска в дереве. <xref:Microsoft.CodeAnalysis.SyntaxNode> содержит такие методы запросов, как <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.AncestorsAndSelf%2A> и <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes%2A>.
 
 Эти методы запроса можно использовать для поиска аргументов к методу `Main` в качестве альтернативы навигации по дереву. Добавьте следующий код в конец метода `Main`:
 
@@ -163,7 +163,7 @@ The body text of the Main method follows:
 
 Создайте новый проект C# для **автономного средства анализа кода**. Присвойте ему имя "**SyntaxWalker**".
 
-Окончательный код этого примера доступен в [репозитории на сайте GitHub](https://github.com/dotnet/docs/samples/csharp/roslyn-sdk/SyntaxQuickStart). Пример на GitHub содержит оба проекта, описанные в этом учебнике.
+Окончательный код этого примера доступен в [репозитории на сайте GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart). Пример на GitHub содержит оба проекта, описанные в этом учебнике.
 
 Как показано в предыдущем примере, можно определить строковую константу, которая будет содержать текст программы для анализа:
 
@@ -171,7 +171,7 @@ The body text of the Main method follows:
 
 Этот исходный текст содержит директивы `using`, расположенные в четырех разных местах: на уровне файлов, в пространстве имен верхнего уровня и в двух вложенных пространствах имен. В этом примере представлен основной сценарий использования класса <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> для выполнения запросов к коду. Было бы сложно посетить каждый узел в корневом дереве синтаксиса для поиска объявлений using. Вместо этого создается производный класс и переопределяется метод, который вызывается только в том случае, когда текущий узел в дереве является директивой using. Обходчик не работает с узлами других типов. Этот единичный метод проверяет каждую из инструкций `using` и создает коллекцию пространств имен, которые не входят в пространство имен `System`. Создается <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> для проверки всех инструкций `using`, но только инструкций `using`.
 
-Теперь, когда текст программы определен, необходимо создать `SyntaxTree` и получить корень этого дерева:
+Теперь, когда вы определили текст программы, необходимо создать `SyntaxTree` и получить корень этого дерева:
 
 [!code-csharp[Create the Syntax tree and access the root](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
 
@@ -198,23 +198,23 @@ The body text of the Main method follows:
 Скомпилируйте и запустите программу. Должны выводиться следующие данные:
 
 ```console
-        VisitUsingDirective called with System
-        VisitUsingDirective called with System.Collections.Generic
-        VisitUsingDirective called with System.Linq
-        VisitUsingDirective called with System.Text
-        VisitUsingDirective called with Microsoft.CodeAnalysis
-                Success. Adding Microsoft.CodeAnalysis
-        VisitUsingDirective called with Microsoft.CodeAnalysis.CSharp
-                Success. Adding Microsoft.CodeAnalysis.CSharp
-        VisitUsingDirective called with Microsoft
-                Success. Adding Microsoft
-        VisitUsingDirective called with System.ComponentModel
-        VisitUsingDirective called with Microsoft.Win32
-                Success. Adding Microsoft.Win32
-        VisitUsingDirective called with System.Runtime.InteropServices
-        VisitUsingDirective called with System.CodeDom
-        VisitUsingDirective called with Microsoft.CSharp
-                Success. Adding Microsoft.CSharp
+        VisitUsingDirective called with System.
+        VisitUsingDirective called with System.Collections.Generic.
+        VisitUsingDirective called with System.Linq.
+        VisitUsingDirective called with System.Text.
+        VisitUsingDirective called with Microsoft.CodeAnalysis.
+                Success. Adding Microsoft.CodeAnalysis.
+        VisitUsingDirective called with Microsoft.CodeAnalysis.CSharp.
+                Success. Adding Microsoft.CodeAnalysis.CSharp.
+        VisitUsingDirective called with Microsoft.
+                Success. Adding Microsoft.
+        VisitUsingDirective called with System.ComponentModel.
+        VisitUsingDirective called with Microsoft.Win32.
+                Success. Adding Microsoft.Win32.
+        VisitUsingDirective called with System.Runtime.InteropServices.
+        VisitUsingDirective called with System.CodeDom.
+        VisitUsingDirective called with Microsoft.CSharp.
+                Success. Adding Microsoft.CSharp.
 Microsoft.CodeAnalysis
 Microsoft.CodeAnalysis.CSharp
 Microsoft

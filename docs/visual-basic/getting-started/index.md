@@ -12,11 +12,11 @@ ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 291065ae4c42cea741c4631923506076fcbc2f2e
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: e53ba3e1134b09edcc87a0421b7699bcf3bb1d39
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="get-started-with-visual-basic"></a>Начало работы с Visual Basic
 Этот раздел документации помогает начать разработку приложений на Visual Basic.  
@@ -46,9 +46,9 @@ ms.lasthandoff: 02/28/2018
 
 ## <a name="see-also"></a>См. также
  [Получить Visual Basic](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)  
- Предоставляет ссылки для скачивания версий Visual Studio, включая поддержку Visual Basic и бесплатные версии.  
+ Ссылки для скачивания версий Visual Studio с поддержкой Visual Basic, включая бесплатные версии.  
 
- [Основы программирования на Visual Basic для начинающих](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)  
+ [Основы программирования на Visual Basic для начинающих](https://mva.microsoft.com/en-US/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)  
  Курс академии Microsoft Virtual Academy по основам программирования на Visual Basic.
 
  [Объектно-ориентированное программирование](../programming-guide/concepts/object-oriented-programming.md)  
