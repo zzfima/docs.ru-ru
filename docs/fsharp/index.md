@@ -1,62 +1,85 @@
 ---
 title: "Руководство по языку F#"
-description: "Дополнительные сведения о F #, это функциональный язык программирования, работающей на платформе .NET."
-keywords: .NET, .NET Core
+description: "Это руководство предоставляет обзор различных учебных материалов для языка F #, это функциональный язык программирования, работающей на платформе .NET."
 author: jackfoxy
 ms.author: phcart
-ms.date: 12/01/2016
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea27fb37-dad1-4bd4-a3cc-4f5c70767ae9
-ms.openlocfilehash: 45f5d2ca794ccea7a35cf6c0bf9d58a3e6500453
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: b7cf3feb5699f85bf09a47f008fdaf70ac7c8d77
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="f-guide"></a><span data-ttu-id="d40f1-104">Руководство по языку F#</span><span class="sxs-lookup"><span data-stu-id="d40f1-104">F# Guide</span></span>
+# <a name="f-guide"></a><span data-ttu-id="f782d-103">Руководство по языку F#</span><span class="sxs-lookup"><span data-stu-id="f782d-103">F# Guide</span></span>
 
-<span data-ttu-id="d40f1-105">F # является функциональным языком программирования, которая выполняется на платформе .NET.</span><span class="sxs-lookup"><span data-stu-id="d40f1-105">F# is a functional programming language which runs on .NET.</span></span>  <span data-ttu-id="d40f1-106">Помимо поддержки конструкций функционального программирования он также имеет возможности программирования объектов.</span><span class="sxs-lookup"><span data-stu-id="d40f1-106">In addition to supporting functional programming constructs, it also has object programming capabilities.</span></span>  <span data-ttu-id="d40f1-107">Делает этот гибридом функционального программирования с объектно ориентированные возможности F # прагматичное использование языка для выполнения любой задачи.</span><span class="sxs-lookup"><span data-stu-id="d40f1-107">This hybrid of functional programming with object-oriented capabilities makes F# a pragmatic language for accomplishing any task.</span></span>
+<span data-ttu-id="f782d-104">F # — функциональной язык программирования, который выполняется на платформе .NET.</span><span class="sxs-lookup"><span data-stu-id="f782d-104">F# is a functional programming language that runs on .NET.</span></span> <span data-ttu-id="f782d-105">Он также имеет полную поддержку для объектов, позволяя функциональной blend и программирование объекта прагматичное использование решения проблемы.</span><span class="sxs-lookup"><span data-stu-id="f782d-105">It also has full support for objects, letting you blend functional and object programming for pragmatic solutions to any problem.</span></span>
 
-## <a name="if-youre-new-to-f"></a><span data-ttu-id="d40f1-108">Если вы не знакомы с F #</span><span class="sxs-lookup"><span data-stu-id="d40f1-108">If You're New to F#</span></span> #
+```fsharp
+open System // Get access to functionality in System namespace.
 
-<span data-ttu-id="d40f1-109">Если вы не знакомы с F #, начинаются с [обзор языка F #](tour.md) получить общие сведения о языке и некоторые из его принципы программирования.</span><span class="sxs-lookup"><span data-stu-id="d40f1-109">If you're new to F#, begin with the [Tour of F#](tour.md) to get an overview of the language and some of its programming concepts.</span></span>  <span data-ttu-id="d40f1-110">Если вы используете Visual Studio, шаблон учебного проекта содержит то же содержимое.</span><span class="sxs-lookup"><span data-stu-id="d40f1-110">If you're using Visual Studio, the Tutorial project template contains the same content.</span></span>
+// Function: takes a name and produces a greeting.
+let getGreeting name =
+    sprintf "Hello, %s! Isn't F# great?" name
 
-## <a name="if-youre-experienced-with-f"></a><span data-ttu-id="d40f1-111">Если у вас есть опыт работы с F #</span><span class="sxs-lookup"><span data-stu-id="d40f1-111">If You're Experienced with F#</span></span> #
+// Use the EntryPoint attribute to run the program.
+[<EntryPoint>]
+let main args =
+    args                     // Use F# pipe operators to send the args into some functions.
+    |> Array.map getGreeting // Turn each name into a friendly greeting.
+    |> Array.iter printfn    // Print them!
 
-<span data-ttu-id="d40f1-112">Если вы знаете, как F # или хотите узнать больше о конкретных языковой конструкции, см. раздел [Справочник по языку](language-reference/index.md).</span><span class="sxs-lookup"><span data-stu-id="d40f1-112">If you know your way around F#, or want to learn more about a specific language construct, see the [Language Reference](language-reference/index.md).</span></span>  <span data-ttu-id="d40f1-113">Это подробное руководство по всех возможностей языка F #.</span><span class="sxs-lookup"><span data-stu-id="d40f1-113">It's a thorough guide of all F# language capabilities.</span></span>
+    0
+```
 
-<span data-ttu-id="d40f1-114">Кроме того [Справочник по основной библиотеке F #](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) — это отличный ресурс для изучения FSharp.Core основной библиотеки, являющийся частью F #.</span><span class="sxs-lookup"><span data-stu-id="d40f1-114">Additionally, the [F# Core Library Reference](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) is a great resource for learning about FSharp.Core, the core library which is a part of F#.</span></span>
+<span data-ttu-id="f782d-106">F # — о производительности сущность.</span><span class="sxs-lookup"><span data-stu-id="f782d-106">F# is about productivity at its heart.</span></span> <span data-ttu-id="f782d-107">Поддержка инструментами F # является универсальной, так и полного дополнительных возможностей.</span><span class="sxs-lookup"><span data-stu-id="f782d-107">The tooling support for F# is ubiquitous and full of advanced features.</span></span>
 
-## <a name="the-f-software-foundation"></a><span data-ttu-id="d40f1-115">F# Software Foundation</span><span class="sxs-lookup"><span data-stu-id="d40f1-115">The F# Software Foundation</span></span>
+## <a name="learning-f"></a><span data-ttu-id="f782d-108">Изучение F #</span><span class="sxs-lookup"><span data-stu-id="f782d-108">Learning F#</span></span> #
 
-<span data-ttu-id="d40f1-116">Несмотря на то, что корпорация Майкрософт является основным разработчиком языка F # и его инструментарий, F # также поддерживаемый независимых foundation, F # программного обеспечения Foundation (FSSF).</span><span class="sxs-lookup"><span data-stu-id="d40f1-116">Although Microsoft is the primary developer of the F# language and its tooling, F# is also backed by an independent foundation, the F# Software Foundation (FSSF).</span></span>
+<span data-ttu-id="f782d-109">[Учебник по F #](tour.md) предоставляет обзор функций основной язык с большим количеством примеров кода.</span><span class="sxs-lookup"><span data-stu-id="f782d-109">[Tour of F#](tour.md) gives an overview of major language features with lots of code samples.</span></span> <span data-ttu-id="f782d-110">Рекомендуется, если впервые введены в F # и чтобы понять, как работает язык.</span><span class="sxs-lookup"><span data-stu-id="f782d-110">This is recommended if you are new to F# and want to get a feel for how the language works.</span></span>
 
-<span data-ttu-id="d40f1-117">В задачи F# Software Foundation входит продвижение, защита и совершенствование языка программирования F#, а также поддержка и расширение международного сообщества программистов F#.</span><span class="sxs-lookup"><span data-stu-id="d40f1-117">The mission of the F# Software Foundation is to promote, protect, and advance the F# programming language, and to support and facilitate the growth of a diverse and international community of F# programmers.</span></span>
+<span data-ttu-id="f782d-111">[Начало работы с F # в Visual Studio](get-started/get-started-visual-studio.md) Если вы используете Windows и полное взаимодействие IDE Visual Studio (среда разработки Integraded).</span><span class="sxs-lookup"><span data-stu-id="f782d-111">[Get started with F# in Visual Studio](get-started/get-started-visual-studio.md) if you're on Windows and want the full Visual Studio IDE (Integraded Development Environment) experience.</span></span>
 
-<span data-ttu-id="d40f1-118">Узнать дополнительные сведения и принять участие в этой работе можно на сайте [fsharp.org](http://fsharp.org).</span><span class="sxs-lookup"><span data-stu-id="d40f1-118">To learn more and get involved, check out [fsharp.org](http://fsharp.org).</span></span>
+<span data-ttu-id="f782d-112">[Начало работы с F # в Visual Studio для Mac](get-started/get-started-with-visual-studio-for-mac.md) при работе на macOS и хотите использовать Visual Studio IDE.</span><span class="sxs-lookup"><span data-stu-id="f782d-112">[Get started with F# in Visual Studio for Mac](get-started/get-started-with-visual-studio-for-mac.md) if you're on macOS and want to use a Visual Studio IDE.</span></span>
 
-## <a name="documentation"></a><span data-ttu-id="d40f1-119">Документация</span><span class="sxs-lookup"><span data-stu-id="d40f1-119">Documentation</span></span>
+<span data-ttu-id="f782d-113">[Начало работы с F # в Visual Studio Code](get-started/get-started-vscode.md) Если требуется компактное между различными платформами и возникают упакованные функции интегрированной среды разработки.</span><span class="sxs-lookup"><span data-stu-id="f782d-113">[Get Started with F# in Visual Studio Code](get-started/get-started-vscode.md) if you want a lightweight, cross-platform, and feature-packed IDE experience.</span></span>
 
-* [<span data-ttu-id="d40f1-120">Учебники</span><span class="sxs-lookup"><span data-stu-id="d40f1-120">Tutorials</span></span>](tutorials/getting-started/index.md)
-* <span data-ttu-id="d40f1-121">[Функции как значения первого класса](introduction-to-functional-programming/functions-as-first-class-values.md)<!--[Introduction to Functional Programming](introduction-to-functional-programming/index.md)--></span><span class="sxs-lookup"><span data-stu-id="d40f1-121">[Functions as First-Class Values](introduction-to-functional-programming/functions-as-first-class-values.md)<!--[Introduction to Functional Programming](introduction-to-functional-programming/index.md)--></span></span>
-* [<span data-ttu-id="d40f1-122">Справочник по языку</span><span class="sxs-lookup"><span data-stu-id="d40f1-122">Language Reference</span></span>](language-reference/index.md)
-* [<span data-ttu-id="d40f1-123">Справочные материалы по основной библиотеке F#</span><span class="sxs-lookup"><span data-stu-id="d40f1-123">F# Core Library Reference</span></span>](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference)
+<span data-ttu-id="f782d-114">[Начало работы с F # с .NET Core CLI](get-started/get-started-command-line.md) Если требуется использование средств командной строки.</span><span class="sxs-lookup"><span data-stu-id="f782d-114">[Get started with F# with the .NET Core CLI](get-started/get-started-command-line.md) if you want to use command-line tools.</span></span>
 
-## <a name="online-reading-resources"></a><span data-ttu-id="d40f1-124">Ресурсы для ознакомления в Интернете</span><span class="sxs-lookup"><span data-stu-id="d40f1-124">Online Reading Resources</span></span>
+## <a name="references"></a><span data-ttu-id="f782d-115">Ссылки</span><span class="sxs-lookup"><span data-stu-id="f782d-115">References</span></span>
 
-* [<span data-ttu-id="d40f1-125">Gitbook об использовании F# для развлечений и работы</span><span class="sxs-lookup"><span data-stu-id="d40f1-125">F# for Fun and Profit Gitbook</span></span>](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/) 
-* [<span data-ttu-id="d40f1-126">Вики-учебник по программированию на F#</span><span class="sxs-lookup"><span data-stu-id="d40f1-126">F# Programming Wikibook</span></span>](https://en.wikibooks.org/wiki/F_Sharp_Programming)
+<span data-ttu-id="f782d-116">[Справочник по языку F #](language-reference/index.md) является официальным и полную ссылку для всех компонентов языка F #.</span><span class="sxs-lookup"><span data-stu-id="f782d-116">[F# Language Reference](language-reference/index.md) is the official, comprehensive reference for all F# language features.</span></span> <span data-ttu-id="f782d-117">Каждой статьи о синтаксисе и примеры кода.</span><span class="sxs-lookup"><span data-stu-id="f782d-117">Each article explains the syntax and shows code samples.</span></span> <span data-ttu-id="f782d-118">В оглавлении можно использовать панель фильтра для поиска конкретных статей.</span><span class="sxs-lookup"><span data-stu-id="f782d-118">You can use the filter bar in the table of contents to find specific articles.</span></span>
 
-## <a name="video-learning-resources"></a><span data-ttu-id="d40f1-127">Учебные видеоматериалы</span><span class="sxs-lookup"><span data-stu-id="d40f1-127">Video Learning Resources</span></span>
+<span data-ttu-id="f782d-119">[Справочник по основной библиотеке F #](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) является Справочник по API для основной библиотеки F #.</span><span class="sxs-lookup"><span data-stu-id="f782d-119">[F# Core Library Reference](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) is the API reference for the F# Core Library.</span></span>
 
-* [<span data-ttu-id="d40f1-128">Серия выпусков по введению в программирование на языке F# на YouTube</span><span class="sxs-lookup"><span data-stu-id="d40f1-128">Introduction to Programming with F# series on YouTube</span></span>](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC)
-* [<span data-ttu-id="d40f1-129">Серия выпусков по введению F# на FSharpTV</span><span class="sxs-lookup"><span data-stu-id="d40f1-129">Introduction to F# series on FSharpTV</span></span>](https://fsharp.tv/courses/fsharp-programming-intro/)
+## <a name="additional-guides"></a><span data-ttu-id="f782d-120">Дополнительные руководства</span><span class="sxs-lookup"><span data-stu-id="f782d-120">Additional guides</span></span>
 
-## <a name="further-resources"></a><span data-ttu-id="d40f1-130">Дополнительные ресурсы</span><span class="sxs-lookup"><span data-stu-id="d40f1-130">Further Resources</span></span>
+<span data-ttu-id="f782d-121">[F # для удовольствия и прибыли](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/) книга в очень подробные на изучение F #.</span><span class="sxs-lookup"><span data-stu-id="f782d-121">[F# for Fun and Profit](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/) is a comprehensive and very detailed book on learning F#.</span></span> <span data-ttu-id="f782d-122">Его содержимое и автор любимое сообществом F #.</span><span class="sxs-lookup"><span data-stu-id="f782d-122">Its contents and author are beloved by the F# community.</span></span> <span data-ttu-id="f782d-123">Целевая аудитория — в первую очередь разработчики объектно-ориентированного программирования фоне.</span><span class="sxs-lookup"><span data-stu-id="f782d-123">The target audience is primarily developers with an object oriented programming background.</span></span>
 
-* [<span data-ttu-id="d40f1-131">Учебные материалы по F# на сайте fsharp.org</span><span class="sxs-lookup"><span data-stu-id="d40f1-131">F# Learning Resources on fsharp.org</span></span>](http://fsharp.org/learn.html)
-* [<span data-ttu-id="d40f1-132">Веб-сайт с фрагментами кода F#</span><span class="sxs-lookup"><span data-stu-id="d40f1-132">F# Snippets Website</span></span>](http://www.fssnip.net)
-* [<span data-ttu-id="d40f1-133">F# Software Foundation</span><span class="sxs-lookup"><span data-stu-id="d40f1-133">F# Software Foundation</span></span>](http://fsharp.org)
+<span data-ttu-id="f782d-124">[Wikibook программирования F #](https://en.wikibooks.org/wiki/F_Sharp_Programming) является wikibook обучения F #.</span><span class="sxs-lookup"><span data-stu-id="f782d-124">[F# Programming Wikibook](https://en.wikibooks.org/wiki/F_Sharp_Programming) is a wikibook about learning F#.</span></span> <span data-ttu-id="f782d-125">Это также продукта сообщества F #.</span><span class="sxs-lookup"><span data-stu-id="f782d-125">It is also a product of the F# community.</span></span> <span data-ttu-id="f782d-126">Целевая аудитория — людей, которые являются новыми в F #, с небольшим фона объектно-ориентированного программирования.</span><span class="sxs-lookup"><span data-stu-id="f782d-126">The target audience is people who are new to F#, with a little bit of object oriented programming background.</span></span>
+
+## <a name="learn-f-through-videos"></a><span data-ttu-id="f782d-127">Сведения о F # видео</span><span class="sxs-lookup"><span data-stu-id="f782d-127">Learn F# through videos</span></span>
+
+<span data-ttu-id="f782d-128">[Учебник по F # на YouTube](https://www.youtube.com/watch?v=c7eNDJN758U) , отлично сведения о F # с помощью Visual Studio, показывающая большое количество демонстрации в ходе 1,5 часа.</span><span class="sxs-lookup"><span data-stu-id="f782d-128">[F# tutorial on YouTube](https://www.youtube.com/watch?v=c7eNDJN758U) is a great introduction to F# using Visual Studio, showing lots of great examples over the course of 1.5 hours.</span></span> <span data-ttu-id="f782d-129">Целевая аудитория — Visual Studio разработчиков, незнакомых с F #.</span><span class="sxs-lookup"><span data-stu-id="f782d-129">The target audience is Visual Studio developers who are new to F#.</span></span>
+
+<span data-ttu-id="f782d-130">[Введение в программирование на F #](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC) является отличным серии видеороликов, использует в качестве основной редактор кода Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="f782d-130">[Introduction to Programming with F#](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC) is a great video series that uses Visual Studio Code as the main editor.</span></span> <span data-ttu-id="f782d-131">Серия видеоматериалов начинается с nothing и заканчивается Создание текстовых RPG игру.</span><span class="sxs-lookup"><span data-stu-id="f782d-131">The video series starts from nothing and ends with building a text-based RPG video game.</span></span> <span data-ttu-id="f782d-132">Целевая аудитория — разработчиков, которые предпочитают кода Visual Studio (или упрощенных IDE) и не знакомы с F #.</span><span class="sxs-lookup"><span data-stu-id="f782d-132">The target audience is developers who prefer Visual Studio Code (or a lightweight IDE) and are new to F#.</span></span>
+
+<span data-ttu-id="f782d-133">[Новые возможности Visual Studio 2017 г. для F # для разработчиков](https://www.linkedin.com/learning/what-s-new-in-visual-studio-2017-for-f-sharp-for-developers) видео курс, в котором представлены некоторые новые функции для языка F # в Visual Studio 2017 г.</span><span class="sxs-lookup"><span data-stu-id="f782d-133">[What's New in Visual Studio 2017 for F# For Developers](https://www.linkedin.com/learning/what-s-new-in-visual-studio-2017-for-f-sharp-for-developers) is a video course that shows some of the newer features for F# in Visual Studio 2017.</span></span> <span data-ttu-id="f782d-134">Целевая аудитория — Visual Studio разработчиков, незнакомых с F #.</span><span class="sxs-lookup"><span data-stu-id="f782d-134">The target audience is Visual Studio developers who are new to F#.</span></span>
+
+## <a name="other-useful-resources"></a><span data-ttu-id="f782d-135">Другие полезные ресурсы</span><span class="sxs-lookup"><span data-stu-id="f782d-135">Other useful resources</span></span>
+
+<span data-ttu-id="f782d-136">[Веб-сайта для F # фрагменты](http://www.fssnip.net) содержит набор больших фрагментов кода в F #, — от начинающих до высокой Дополнительно фрагменты практически что угодно.</span><span class="sxs-lookup"><span data-stu-id="f782d-136">The [F# Snippets Website](http://www.fssnip.net) contains a massive set of code snippets showing how to do just about anything in F#, ranging from absolute beginner to highly advanced snippets.</span></span>
+
+<span data-ttu-id="f782d-137">[Slack Foundation программного обеспечения F #](http://fsharp.org/guides/slack/) — отличное место для начинающих и экспертов одинаково, высокой активностью и обладает некоторыми мире наиболее F # программистов для разговора.</span><span class="sxs-lookup"><span data-stu-id="f782d-137">The [F# Software Foundation Slack](http://fsharp.org/guides/slack/) is a great place for beginners and experts alike, is highly active, and has some of world's best F# programmers available for a chat.</span></span> <span data-ttu-id="f782d-138">Корпорация Майкрософт рекомендует присоединения.</span><span class="sxs-lookup"><span data-stu-id="f782d-138">We highly recommend joining.</span></span>
+
+## <a name="the-f-software-foundation"></a><span data-ttu-id="f782d-139">F# Software Foundation</span><span class="sxs-lookup"><span data-stu-id="f782d-139">The F# Software Foundation</span></span>
+
+<span data-ttu-id="f782d-140">Несмотря на то, что Майкрософт является основным разработчиком его средства в Visual Studio и языке F #, F # также поддерживаемый независимых foundation, F # программного обеспечения Foundation (FSSF).</span><span class="sxs-lookup"><span data-stu-id="f782d-140">Although Microsoft is the primary developer of the F# language and its tools in Visual Studio, F# is also backed by an independent foundation, the F# Software Foundation (FSSF).</span></span>
+
+<span data-ttu-id="f782d-141">В задачи F# Software Foundation входит продвижение, защита и совершенствование языка программирования F#, а также поддержка и расширение международного сообщества программистов F#.</span><span class="sxs-lookup"><span data-stu-id="f782d-141">The mission of the F# Software Foundation is to promote, protect, and advance the F# programming language, and to support and facilitate the growth of a diverse and international community of F# programmers.</span></span>
+
+<span data-ttu-id="f782d-142">Узнать дополнительные сведения и принять участие в этой работе можно на сайте [fsharp.org](http://fsharp.org). Он распространяется бесплатно присоединить и сеть разработчиков F # в foundation является то, что вы не хотите пропустите!</span><span class="sxs-lookup"><span data-stu-id="f782d-142">To learn more and get involved, check out [fsharp.org](http://fsharp.org). It's free to join, and the network of F# developers in the foundation is something you don't want to miss out on!</span></span>
