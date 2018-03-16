@@ -476,6 +476,9 @@
                 - name: Операторы
                   tocHref: /dotnet/csharp/language-reference/operators/
                   topicHref: /dotnet/csharp/language-reference/operators/index
+                - name: Специальные символы
+                  tocHref: /dotnet/csharp/language-reference/tokens/
+                  topicHref: /dotnet/csharp/language-reference/tokens/index
                 - name: Директивы препроцессора
                   tocHref: /dotnet/csharp/language-reference/preprocessor-directives/
                   topicHref: /dotnet/csharp/language-reference/preprocessor-directives/index
