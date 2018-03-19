@@ -66,6 +66,7 @@
 #### [Практическое руководство. Настройка политики кэша на основе времени](how-to-customize-a-time-based-cache-policy.md)
 #### [Практическое руководство. Задание политики кэширования для запроса](how-to-set-cache-policy-for-a-request.md)
 ## [Безопасность в сетевом программировании](security-in-network-programming.md)
+### [Рекомендации для протокола TLS](tls.md)
 ### [Использование протокола SSL](using-secure-sockets-layer.md)
 #### [Выбор и проверка сертификата](certificate-selection-and-validation.md)
 ### [Проверка подлинности в Интернете](internet-authentication.md)
