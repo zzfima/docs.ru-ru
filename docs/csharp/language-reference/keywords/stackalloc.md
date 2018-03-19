@@ -14,23 +14,23 @@ ms.assetid: adc04c28-3ed2-4326-807a-7545df92b852
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ad4453f889a344fcd44dfad44a30fef07380b6a3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4b9c5328bfa1b0fc9a7751763c7d728096886905
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (Справочник по C#)
 Ключевое слово `stackalloc` используется в контексте небезопасного кода для выделения блока памяти стеку.  
   
-```  
+```csharp  
 int* block = stackalloc int[100];  
 ```  
   
 ## <a name="remarks"></a>Примечания  
  Это ключевое слово допустимо только в инициализаторах локальных переменных. Следующий код вызывает ошибки компилятора.  
   
-```  
+```csharp  
 int* block;  
 // The following assignment statement causes compiler errors. You  
 // can use stackalloc only when declaring and initializing a local   

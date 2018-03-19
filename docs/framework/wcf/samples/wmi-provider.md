@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: c1b1f923b6673ead42c7c702bd50d253ea06c765
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wmi-provider"></a>Поставщик WMI
 В этом образце показано, как собирать данные из служб [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] во время выполнения, используя встроенный в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поставщик инструментария управления Windows (WMI). Кроме того, в образце показано, как добавлять в службу пользовательский объект инструментария WMI. Этот образец активирует поставщик инструментария WMI для [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) и демонстрирует, как собирать данные из `ICalculator` службы во время выполнения.  
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
  Добавление в службу объектов WMI позволяет предоставлять доступ к пользовательским сведениям, а также к сведениям встроенного поставщика WMI. Для этого необходимо опубликовать схему службы в инструментарии WMI с помощью приложения Installutil.exe. Соответствующие инструкции, а также более подробные сведения, см в инструкция по установке в конце этого раздела.  
   
 ## <a name="accessing-wmi-information"></a>Доступ к сведениям WMI  
- Доступ к данным инструментария WMI может осуществляться несколькими различными способами. Корпорация Майкрософт предоставляет интерфейсы API инструментария WMI API для скриптов, приложений [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], приложений C++ и [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (http://msdn.microsoft.com/library/default.asp?url=/library/wmisdk/wmi/using_wmi.asp).  
+ Доступ к данным инструментария WMI может осуществляться несколькими различными способами. Корпорация Майкрософт предоставляет API-интерфейсы WMI для скриптов, [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] приложений, приложений C++ и [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (http://msdn.microsoft.com/library/default.asp?url=/library/wmisdk/wmi/using_wmi.asp).  
   
  В этом образце используется два скрипта Java: один - для перечисления выполняющихся на компьютере служб и некоторых их свойств, а второй - для просмотра пользовательских данных инструментария WMI. Скрипт открывает подключение к поставщику инструментария WMI, анализирует данные и отображает собранные данные.  
   
@@ -136,7 +138,7 @@ cscript EnumerateCustomObjects.js
   
 2.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Опубликуйте схему служб в WMI, запустив программу InstallUtil.exe (по умолчанию файл InstallUtil.exe расположен в папке «%WINDIR%\Microsoft.NET\Framework\v4.0.30319») для файла service.dll в каталоге размещения. Эту операцию нужно выполнять только в том случае, если в файл service.dll были внесены изменения. Дополнительные сведения см. в подразделе "Предоставление данных управления с помощью инструментирования приложений" на странице http://msdn2.microsoft.com/library/ms186147.aspx в разделе "Практическое руководство. Публикация схемы в WMI для инструментированного приложения".  
+3.  Опубликуйте схему служб в WMI, запустив программу InstallUtil.exe (по умолчанию файл InstallUtil.exe расположен в папке «%WINDIR%\Microsoft.NET\Framework\v4.0.30319») для файла service.dll в каталоге размещения. Эту операцию нужно выполнять только в том случае, если в файл service.dll были внесены изменения. Дополнительные сведения см. в разделе Предоставление данных управления с помощью инструментирования приложений во: http://msdn2.microsoft.com/library/ms186147.aspx в разделе «Как для: публикация схемы в WMI для инструментированного приложения».  
   
 4.  Для запуска образца в конфигурации с одним или несколькими компьютерами следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
@@ -150,7 +152,7 @@ cscript EnumerateCustomObjects.js
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) Чтобы загрузить все [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   

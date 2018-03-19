@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 76821e27613335609527b867a6b94dac551f6235
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="health-monitoring"></a>Мониторинг работоспособности
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/23/2017
 
 Вы видите, как библиотека HealthChecks используется в примере приложения eShopOnContainers. Для начала необходимо определить, что входит в состояние работоспособности для каждой микрослужбы. В примере приложения микрослужба находится в работоспособном состоянии, если API микрослужбы доступен через HTTP и соответствующая база данных SQL Server также доступна.
 
-В будущем вы можете установить библиотеку HealthChecks в виде пакета NuGet. Но на момент написания этой статьи необходимо скачать и скомпилировать код как часть решения. Клонируйте код, доступный по ссылке https://github.com/dotnet-architecture/HealthChecks, и скопируйте в свое решение следующие папки:
+В будущем вы можете установить библиотеку HealthChecks в виде пакета NuGet. Но на момент написания этой статьи необходимо скачать и скомпилировать код как часть решения. Клонировать код, найти по адресу https://github.com/dotnet-architecture/HealthChecks и скопируйте следующие папки решения:
 
   - src/common
   - src/Microsoft.AspNetCore.HealthChecks
@@ -190,12 +190,12 @@ checks.AddUrlCheck(Configuration["CatalogUrl"],1); // 1 min as cache duration
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Проверка работоспособности ASP.NET Core** (ранний выпуск) [*https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
+-   **ASP.NET Core HealthChecks** (ранний выпуск) [*https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
 
--   **Общие сведения о мониторинге работоспособности в Service Fabric**
+-   **Введение в мониторинг работоспособности Service Fabric**
     [*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction)
 
--   **Azure Application Insights**
+-   **Приложения Azure Insights**
     [*https://azure.microsoft.com/services/application-insights/*](https://azure.microsoft.com/services/application-insights/)
 
 -   **Microsoft Operations Management Suite**

@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 823edadf7d387d1a509edbdf839ac6eeece5d41f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wcf-service-publishing"></a>Публикация служб WCF
 Публикация служб [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] помогает в реализации от начальной среды разработки, предоставляемой узлом службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] и тестовым клиентом [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], до фактического развертывания приложения в производственной среде в целях его проверки. Перед тем как вводить итоговый план развертывания можно использовать службу публикации [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] для проверки правильности функционирования службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] и ее готовности к опубликованию. Также, в целях проверки, можно провести развертывание библиотек служб [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] в различных целевых размещениях.  

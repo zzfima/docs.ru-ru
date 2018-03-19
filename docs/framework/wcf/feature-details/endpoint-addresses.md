@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,22 +14,23 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="endpoint-addresses"></a>Адреса конечных точек
 С каждой конечной точкой связан адрес, который используется для поиска и идентификации этой конечной точки. Этот адрес в первую очередь включает универсальный код ресурса (URI), задающий расположение конечной точки. Адрес конечной точки представляется в модели программирования [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] классом <xref:System.ServiceModel.EndpointAddress>, который содержит необязательное свойство <xref:System.ServiceModel.EndpointAddress.Identity%2A>, включающее проверку подлинности конечной точки другими конечными точками, с которыми она обменивается сообщениями, а также набор необязательных свойств <xref:System.ServiceModel.EndpointAddress.Headers%2A>, задающих другие заголовки SOAP, необходимые для получения доступа к службе. Необязательные заголовки содержат дополнительную и более подробную информацию для идентификации конечной точки службы и взаимодействия с ней. При передаче данных по каналам связи адрес конечной точки представляется ссылкой на конечную точку WS-Addressing.  
   
 ## <a name="uri-structure-of-an-address"></a>Структура универсального кода ресурса (URI) адреса  
- Универсальный код ресурса (URI) адреса для большинства видов транспорта состоит из четырех частей. Например, код http://www.fabrikam.com:322/mathservice.svc/secureEndpoint можно разбить на части следующим образом.  
+ Универсальный код ресурса (URI) адреса для большинства видов транспорта состоит из четырех частей. Например, четыре части URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint можно разбить на части следующим образом:  
   
 -   Схема: http:  
   
@@ -86,7 +88,7 @@ ms.lasthandoff: 01/19/2018
 </system.serviceModel>  
 ```  
   
- В приведенном выше примере net.tcp://payroll.myorg.com:8000 и http://shipping.myorg.com:8000 являются единственными базовыми адресами для соответствующих схем, которые будут пропущены.  
+ В предыдущем примере NET.TCP://Payroll.MyOrg.com: 8000 и http://shipping.myorg.com:8000 являются единственными базовыми адресами для соответствующих схем, которые передаются через.  
   
  Элемент `baseAddressPrefixFilter` не поддерживает подстановочные знаки.  
   

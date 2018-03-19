@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-bcl
+ms.technology:
+- dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 97f2f03cd55512c29c686759e756a1941f472157
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Общие сведения об объектах TextPattern и Embedded
 > [!NOTE]
@@ -54,7 +56,7 @@ ms.lasthandoff: 01/19/2018
   
  Для обхода содержимого текстового диапазона в фоновом режиме применяется ряд шагов для успешного выполнения метода <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> .  
   
-1.  Текстовый диапазон нормализован, т. е. он свернут до вырожденного диапазона в конечной точке <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> , что делает конечную точку <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> избыточной. Этот шаг необходим для устранения неоднозначности в случаях, когда текстовый диапазон охватывает границы <xref:System.Windows.Automation.Text.TextUnit> , например: "{U}RL-адрес [http://www.microsoft.com](http://www.microsoft.com) внедряется в текст" где "{" и "}" — конечные точки диапазона текста.  
+1.  Текстовый диапазон нормализован, т. е. он свернут до вырожденного диапазона в конечной точке <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> , что делает конечную точку <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> избыточной. Этот шаг необходим для устранения неоднозначности в случаях, когда текстовый диапазон охватывает <xref:System.Windows.Automation.Text.TextUnit> границы: например, «{U} RL [ http://www.microsoft.com ](http://www.microsoft.com) внедряется в текст» где «{» и»}», конечные точки диапазона текста.  
   
 2.  Результирующий диапазон перемещается в <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> в начало запрошенной границы <xref:System.Windows.Automation.Text.TextUnit> .  
   
@@ -79,14 +81,14 @@ ms.lasthandoff: 01/19/2018
 ### <a name="hyperlink"></a>Гиперссылка  
  **Пример 1. Текстовый диапазон, содержащий внедренную текстовую гиперссылку**  
   
- {URL-адрес [http://www.microsoft.com](http://www.microsoft.com) внедряется в текст}.  
+ {URL-адрес [ http://www.microsoft.com ](http://www.microsoft.com) внедряется в текст}.  
   
 |Вызываемый метод|Результат|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Возвращает строку "URL-адрес http://www.microsoft.com внедряется в текст".|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Возвращает строку «URL-адрес http://www.microsoft.com внедряется в текст».|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Возвращает внутренний <xref:System.Windows.Automation.AutomationElement> , который охватывает диапазон текста. В этом случае это <xref:System.Windows.Automation.AutomationElement> , представляющий поставщик текста.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Возвращает <xref:System.Windows.Automation.AutomationElement> , представляющий элемент управления гиперссылки.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , где <xref:System.Windows.Automation.AutomationElement> — это объект, возвращаемый предыдущим методом `GetChildren` .|Возвращает диапазон, представляющий "http://www.microsoft.com".|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , где <xref:System.Windows.Automation.AutomationElement> — это объект, возвращаемый предыдущим методом `GetChildren` .|Возвращает диапазон, представляющий «http://www.microsoft.com».|  
   
  **Пример 2. Текстовый диапазон, частично охватывающий внедренную текстовую гиперссылку**  
   
@@ -100,7 +102,7 @@ ms.lasthandoff: 01/19/2018
   
  **Пример 3. текстовый диапазон, частично охватывающий содержимое контейнера текста. Контейнер текста содержит внедренную текстовую гиперссылку, которая не является частью текстового диапазона.**  
   
- {URL-адрес} [http://www.microsoft.com](http://www.microsoft.com) внедряется в текст.  
+ {URL} [ http://www.microsoft.com ](http://www.microsoft.com) внедряется в текст.  
   
 |Вызываемый метод|Результат|  
 |-------------------|------------|  
