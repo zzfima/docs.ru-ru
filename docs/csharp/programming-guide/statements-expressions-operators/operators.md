@@ -2,21 +2,22 @@
 title: "Операторы (Руководство по программированию на C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8e270b683862502c218ff248de76819ecea83dc8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 267022b8c6b7f8faf301cae1a62f4dfaa8249f96
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="operators-c-programming-guide"></a>Операторы (Руководство по программированию на C#)
 В языке C# *оператор* — это элемент программы, который применяется для одного или нескольких *операндов* в выражении или инструкции. Операторы, в которых используется один операнд, например оператор инкремента (`++`) или `new`, называются *унарными* . Операторы, в которых используются два операнда, например арифметические операторы (`+`,`-`,`*`,`/`), называются *бинарными* . Для одного оператора — условного (`?:`) — используются три операнда, и такой оператор является единственным троичным оператором в C#.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
  **Основные операторы**  
   
-|Выражение|Описание|  
+|Выражение|Описание:|  
 |----------------|-----------------|  
 |x[.](../../../csharp/language-reference/operators/member-access-operator.md)y<br /><br /> x?.y|Доступ к членам<br /><br /> Условный доступ к членам|  
 |f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)|Вызов метода и делегата|  
@@ -61,11 +62,11 @@ ms.lasthandoff: 11/21/2017
   
  **Унарные операторы**  
   
-|Выражение|Описание|  
+|Выражение|Описание:|  
 |----------------|-----------------|  
-|[+](../../../csharp/language-reference/operators/addition-operator.md)x|Удостоверение|  
+|[+](../../../csharp/language-reference/operators/addition-operator.md)x|идентификации|  
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Отрицание|  
-|[!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|Логическое отрицание|  
+|[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|Логическое отрицание|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|Поразрядное отрицание|  
 |[++](../../../csharp/language-reference/operators/increment-operator.md)x|Префиксный инкремент|  
 |[--](../../../csharp/language-reference/operators/decrement-operator.md)x|Префиксный декремент|  
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/21/2017
   
  **Мультипликативные операторы**  
   
-|Выражение|Описание|  
+|Выражение|Описание:|  
 |----------------|-----------------|  
 |[*](../../../csharp/language-reference/operators/multiplication-operator.md)|Умножение|  
 |[/](../../../csharp/language-reference/operators/division-operator.md)|Деление|  
@@ -81,21 +82,21 @@ ms.lasthandoff: 11/21/2017
   
  **Аддитивные операторы**  
   
-|Выражение|Описание|  
+|Выражение|Описание:|  
 |----------------|-----------------|  
 |x [+](../../../csharp/language-reference/operators/addition-operator.md) y|Сложение, объединение строк, объединение делегатов|  
 |x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y|Вычитание, удаление делегатов|  
   
  **Операторы сдвига**  
   
-|Выражение|Описание|  
+|Выражение|Описание:|  
 |----------------|-----------------|  
 |x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|Сдвиг влево|  
 |x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|Сдвиг вправо|  
   
  **Относительные операторы и операторы типов**  
   
-|Выражение|Описание|  
+|Выражение|Описание:|  
 |----------------|-----------------|  
 |x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y|Меньше|  
 |x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y|Больше|  
@@ -106,14 +107,14 @@ ms.lasthandoff: 11/21/2017
   
  **Операторы равенства**  
   
-|Выражение|Описание|  
+|Выражение|Описание:|  
 |----------------|-----------------|  
 |x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y|Равно|  
 |x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y|Не равно|  
   
  **Логические, условные операторы и NULL-операторы**  
   
-|Категория|Выражение|Описание|  
+|Категория|Выражение|Описание:|  
 |--------------|----------------|-----------------|  
 |Логическое И|x [&](../../../csharp/language-reference/operators/and-operator.md) y|Поразрядное И для операндов целочисленного типа, логическое И для операндов логического типа|  
 |Логическое исключающее ИЛИ|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|Поразрядное исключающее ИЛИ для операндов целочисленного типа, логическое исключающее ИЛИ для операндов логического типа|  
@@ -125,13 +126,13 @@ ms.lasthandoff: 11/21/2017
   
  **Операторы присваивания и анонимные операторы**  
   
-|Выражение|Описание|  
+|Выражение|Описание:|  
 |----------------|-----------------|  
 |[=](../../../csharp/language-reference/operators/assignment-operator.md)|Назначение|  
 |x op= y|Составное присваивание. Поддерживает следующие операторы: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [!=](../../../csharp/language-reference/operators/not-equal-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
 |(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|Анонимная функция (лямбда-выражение)|  
   
-## <a name="associativity"></a>ассоциативностью  
+## <a name="associativity"></a>Ассоциативность  
  Когда выражение содержит два или более операторов с одинаковым приоритетом, они вычисляются на основе ассоциативности. Операторы с левой ассоциативностью вычисляются слева направо. Например, выражение `x * y / z` вычисляется как `(x * y) / z`. Операторы с правой ассоциативностью вычисляются справа налево. Например, оператор присваивания имеет правую ассоциативность. Если бы это было не так, следующий код вызвал бы ошибку.  
   
 ```csharp  

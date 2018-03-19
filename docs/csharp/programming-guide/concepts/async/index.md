@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 501a11f1bc6118e647cc414f4b83a14f6b41a37d
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: c9f2699646db17c9358f84f4c5407e7aab8b60cf
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Асинхронное программирование с использованием ключевых слов Async и Await (C#)
 Асинхронное программирование позволяет избежать появления узких мест производительности и увеличить общую скорость реагирования приложения. Однако традиционные методы создания асинхронных приложений могут оказаться сложными, как в плане написания кода, так и в плане отладки и обслуживания.  
@@ -219,7 +219,7 @@ await Task_MethodAsync();
   
 Асинхронный метод, который имеет тип возвращаемого значения `void`, невозможно ожидать методом await. Вызывающий объект не может перехватывать исключения, которые выдает такой метод.  
   
-Асинхронный метод не может объявлять параметры [ref](../../../../csharp/language-reference/keywords/ref.md) или [out](../../../../csharp/language-reference/keywords/out.md), но может вызывать методы, которые имеют такие параметры. Аналогичным образом, асинхронный метод не может возвращать значение по ссылке, несмотря на то, что он может вызывать методы с возвращаемыми значениями ref. 
+Асинхронный метод не может объявлять параметры [in](../../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../../csharp/language-reference/keywords/ref.md) или [out](../../../../csharp/language-reference/keywords/out-parameter-modifier.md), но может вызывать методы с этими параметрами. Аналогичным образом, асинхронный метод не может возвращать значение по ссылке, несмотря на то, что он может вызывать методы с возвращаемыми значениями ref. 
   
 Дополнительные сведения и примеры см. в статье [о типах возвращаемых значений асинхронных операций](../../../../csharp/programming-guide/concepts/async/async-return-types.md). Дополнительные сведения о перехвате исключений в асинхронных методах см. в описании механизма [try-catch](../../../../csharp/language-reference/keywords/try-catch.md). 
   

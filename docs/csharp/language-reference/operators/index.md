@@ -2,9 +2,11 @@
 title: "Операторы C#"
 ms.date: 03/09/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: cs.operators
+f1_keywords:
+- cs.operators
 helpviewer_keywords:
 - boolean operators [C#]
 - expressions [C#], operators
@@ -20,14 +22,14 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0ac5c6bfb129f0367c2d62ebf139e44b8eb60379
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 68da402bde670077e0700ce1ac60e7980c6568ad
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-operators"></a>Операторы C#
 C# предоставляет множество операторов, которые являются символами, указывающими, какие операции (математические операции, индексирование, вызов функции и т. д.) следует выполнять в выражении.  Вы можете [перегрузить](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) многие операторы, то есть изменить их значение при применении к некоторому пользовательскому типу.  
@@ -76,7 +78,7 @@ C# предоставляет множество операторов, кото�
   
  [-x](../../../csharp/language-reference/operators/subtraction-operator.md) — числовое отрицание.  
   
- [!x](../../../csharp/language-reference/operators/logical-negation-operator.md) — логическое отрицание.  
+ [\!x](../../../csharp/language-reference/operators/logical-negation-operator.md) — логическое отрицание.  
   
  [~x](../../../csharp/language-reference/operators/bitwise-complement-operator.md) — поразрядное дополнение.  
   
