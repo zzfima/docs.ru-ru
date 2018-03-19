@@ -1,1 +1,1 @@
-<span data-ttu-id="b7585-101">Модель автоматизации пользовательского интерфейса Майкрософт</span><span class="sxs-lookup"><span data-stu-id="b7585-101">Microsoft UI Automation</span></span>
+<span data-ttu-id="32994-101">Модель автоматизации пользовательского интерфейса Майкрософт</span><span class="sxs-lookup"><span data-stu-id="32994-101">Microsoft UI Automation</span></span>
