@@ -14,16 +14,16 @@ ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b499f9fc5121afe6c2e92bcf8c5d2ac593b4c06c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 175eebf6e49e79db1ff86689599416a10827a792
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="readonly-c-reference"></a>readonly (Справочник по C#)
 Ключевое слово `readonly` — это модификатор, который можно использовать для полей. Если объявление поля содержит модификатор `readonly`, присвоение значений таким полям может происходить только как часть объявления или в конструкторе в том же классе.  
   
-## <a name="example"></a>Пример  
+## <a name="readonly-field-example"></a>Пример поля только для чтения  
  В этом примере значение поля `year` нельзя изменить в методе `ChangeYear`, несмотря на то, что в конструкторе класса ему присваивается значение:  
   
  [!code-csharp[csrefKeywordsModifiers#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/readonly_1.cs)]  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
     public readonly int y = 5;  
     ```  
   
--   Для поля экземпляра — в конструкторах экземпляров класса, содержащего объявление поля, или, для статического поля, — в статическом конструкторе класса, содержащего объявление поля. Это единственно возможные контексты, в которых можно передавать поле `readonly` в качестве параметра [out](../../../csharp/language-reference/keywords/out.md) или [ref](../../../csharp/language-reference/keywords/ref.md).  
+-   Для поля экземпляра — в конструкторах экземпляров класса, содержащего объявление поля, или, для статического поля, — в статическом конструкторе класса, содержащего объявление поля. Это единственно возможные контексты, в которых можно передавать поле `readonly` в качестве параметра [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) или [ref](../../../csharp/language-reference/keywords/ref.md).  
   
 > [!NOTE]
 >  Ключевое слово `readonly` отличается от ключевого слова [const](../../../csharp/language-reference/keywords/const.md). Поле `const` может быть инициализировано только при объявлении поля. Поле `readonly` может быть инициализировано при объявлении или в конструкторе. Таким образом, поля `readonly` могут иметь разные значения в зависимости от использованного конструктора. К тому же, в то время как поле `const` является константой во время компиляции, поле `readonly` можно использовать для констант во время выполнения, как в следующем примере:  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/21/2017
 public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;  
 ```  
   
-## <a name="example"></a>Пример  
+## <a name="comparing-readonly-and-non-readonly-instance-fields"></a>Сравнение полей экземпляров, доступных только для чтения и не только для чтения  
  [!code-csharp[csrefKeywordsModifiers#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/readonly_2.cs)]  
   
  В предыдущем примере при использовании такого оператора:  

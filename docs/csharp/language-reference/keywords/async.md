@@ -15,11 +15,11 @@ ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4a89736822342a9d9a24db6d43435f9795b81b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2ddbd0f7268dd5dae4095d661cf800b5b481cbbd
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="async-c-reference"></a>async (справочник по C#)
 Модификатор `async` позволяет указать, что метод, [лямбда-выражение](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) или [анонимный метод](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) является асинхронным. Если этот модификатор используется в методе или выражении, они называются *асинхронными методами*. Ниже приводится пример асинхронного метода с именем `ExampleMethodAsync`: 
@@ -78,7 +78,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
 - [void](../../../csharp/language-reference/keywords/void.md): следует использовать только для обработчиков событий.
 - Начиная с версии 7, в языке C# поддерживаются любые типы с доступным методом `GetAwaiter`. Одной из таких реализаций является тип `System.Threading.Tasks.ValueTask<TResult>`. Доступ к нему осуществляется посредством пакета NuGet `System.Threading.Tasks.Extensions`. 
 
-Асинхронный метод не может объявлять параметры [ref](../../../csharp/language-reference/keywords/ref.md) или [out](../../../csharp/language-reference/keywords/out.md), а также иметь <!-- [reference return value](../../programming-guide/classes-and-structs/ref-returns.md) -->ссылочное возвращаемое значение, однако он может вызывать методы с такими параметрами.  
+Асинхронный метод не может объявлять параметры [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../csharp/language-reference/keywords/ref.md) или [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md), а также иметь [ссылочное возвращаемое значение](../../programming-guide/classes-and-structs/ref-returns.md), но он может вызывать методы с такими параметрами.  
   
 `Task<TResult>` указывается в качестве возвращаемого типа асинхронного метода, если оператор [return](../../../csharp/language-reference/keywords/return.md) метода задает операнд типа `TResult`. Класс `Task` используется при отсутствии содержательного значения, возвращаемого методом при его завершении. То есть вызов метода возвращает `Task`, однако когда `Task` завершен, любое выражение `await`, которое ожидает `Task`, возвращает значение `void`.  
   

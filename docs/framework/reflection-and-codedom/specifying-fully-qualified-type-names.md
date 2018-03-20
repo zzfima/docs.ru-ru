@@ -1,11 +1,12 @@
 ---
 title: "Указание полных имен типов"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 03/14/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,48 +16,108 @@ helpviewer_keywords:
 - tokens
 - BNF
 - assemblies [.NET Framework], names
-- Backus-Naur form
-- languages, BNF grammar
+- languages, grammar
 - fully qualified type names
 - type names
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e19aebbeee7fd65e27704af49185a1b8d48b9639
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e31e6e0284de44768b2faad7bcf84d5be343e479
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Указание полных имен типов
 Для выполнения различных операций отражения необходимо задавать имена типов. Полное имя типа состоит из спецификации имени сборки, спецификации пространства имен и имени типа. Спецификации имен типов используются такими методами, как <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> и <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.  
   
-## <a name="backus-naur-form-grammar-for-type-names"></a>Форма Бэкуса-Наура для имен типов  
- Форма Бэкуса-Наура (БНФ) определяет синтаксис формальных языков. Приведенная ниже таблица содержит список лексических правил БНФ, описывающих порядок распознавания допустимых входных данных. Терминальные слова (элементы, дальнейшее сокращение которых невозможно) отображаются прописными буквами. Нетерминальные слова (допускающие сокращение) содержат прописные буквы вместе со строчными или заключены в одинарные кавычки, причем одинарные кавычки (') не являются частью синтаксиса. Символ вертикальной черты (&#124;) обозначает правила, у которых есть подправила.  
-  
-|Грамматика БНФ для полных имен типов|  
-|-----------------------------------------------|  
-|TypeSpec                          :=   ReferenceTypeSpec<br /><br /> |     SimpleTypeSpec|  
-|ReferenceTypeSpec            :=   SimpleTypeSpec '&'|  
-|SimpleTypeSpec                :=   PointerTypeSpec<br /><br /> |     ArrayTypeSpec<br /><br /> |     TypeName|  
-|PointerTypeSpec                :=   SimpleTypeSpec '*'|  
-|ArrayTypeSpec                  :=   SimpleTypeSpec '[ReflectionDimension]'<br /><br /> |     SimpleTypeSpec '[ReflectionEmitDimension]'|  
-|ReflectionDimension           :=   '*'<br /><br /> |     ReflectionDimension ',' ReflectionDimension<br /><br /> |     NOTOKEN|  
-|ReflectionEmitDimension    :=   '*'<br /><br /> |     Number '..' Число<br /><br /> |     Number '…'<br /><br /> |     ReflectionDimension ',' ReflectionDimension<br /><br /> |     NOTOKEN|  
-|Number                            :=   [0-9]+|  
-|TypeName                         :=   NamespaceTypeName<br /><br /> |     NamespaceTypeName ',' AssemblyNameSpec|  
-|NamespaceTypeName        :=   NestedTypeName<br /><br /> |    NamespaceSpec '.' NestedTypeName|  
-|NestedTypeName               :=   IDENTIFIER<br /><br /> |     NestedTypeName '+' IDENTIFIER|  
-|NamespaceSpec                 :=   IDENTIFIER<br /><br /> |    NamespaceSpec '.' ИДЕНТИФИКАТОР|  
-|AssemblyNameSpec           :=   IDENTIFIER<br /><br /> |     IDENTIFIER ',' AssemblyProperties|  
-|AssemblyProperties            :=   AssemblyProperty<br /><br /> |     AssemblyProperties ',' AssemblyProperty|  
-|AssemblyProperty              :=   AssemblyPropertyName '=' AssemblyPropertyValue|  
-  
+## <a name="grammar-for-type-names"></a>Грамматика для имен типов  
+ Эта грамматика определяет синтаксис формальных языков. Приведенная ниже таблица содержит список лексических правил, описывающих порядок распознавания допустимых входных данных. Терминальные слова (элементы, дальнейшее сокращение которых невозможно) отображаются прописными буквами. Нетерминальные слова (допускающие сокращение) содержат прописные буквы вместе со строчными или заключены в одинарные кавычки, причем одинарные кавычки (') не являются частью синтаксиса. Символ вертикальной черты (&#124;) обозначает правила, у которых есть подправила.  
+
+```antlr
+TypeSpec
+    : ReferenceTypeSpec
+    | SimpleTypeSpec
+    ;
+
+ReferenceTypeSpec
+    : SimpleTypeSpec '&'
+    ;
+
+SimpleTypeSpec
+    : PointerTypeSpec
+    | ArrayTypeSpec
+    | TypeName
+    ;
+
+PointerTypeSpec
+    : SimpleTypeSpec '*'
+    ;
+
+ArrayTypeSpec
+    : SimpleTypeSpec '[ReflectionDimension]'
+    | SimpleTypeSpec '[ReflectionEmitDimension]'
+    ;
+
+ReflectionDimension
+    : '*'
+    | ReflectionDimension ',' ReflectionDimension
+    | NOTOKEN
+    ;
+
+ReflectionEmitDimension
+    : '*'
+    | Number '..' Number
+    | Number '…'
+    | ReflectionDimension ',' ReflectionDimension
+    | NOTOKEN
+    ;
+
+Number
+    : [0-9]+
+    ;
+
+TypeName
+    : NamespaceTypeName
+    | NamespaceTypeName ',' AssemblyNameSpec
+    ;
+
+NamespaceTypeName
+    : NestedTypeName
+    | NamespaceSpec '.' NestedTypeName
+    ;
+
+NestedTypeName
+    : IDENTIFIER
+    | NestedTypeName '+' IDENTIFIER
+    ;
+
+NamespaceSpec
+    : IDENTIFIER
+    | NamespaceSpec '.' IDENTIFIER
+    ;
+
+AssemblyNameSpec
+    : IDENTIFIER
+    | IDENTIFIER ',' AssemblyProperties
+    ;
+
+AssemblyProperties
+    : AssemblyProperty
+    | AssemblyProperties ',' AssemblyProperty
+    ;
+
+AssemblyProperty
+    : AssemblyPropertyName '=' AssemblyPropertyValue
+    ;
+```
+
 ## <a name="specifying-special-characters"></a>Указание специальных символов  
  В имени типа IDENTIFIER — любое допустимое имя, определяемое правилами языка.  
   

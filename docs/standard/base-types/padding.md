@@ -1,9 +1,8 @@
 ---
 title: "Заполнение строк в .NET"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 03/15/2018
 ms.prod: .net
-ms.reviewer: 
 ms.suite: 
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
@@ -19,21 +18,21 @@ helpviewer_keywords:
 - PadLeft method
 - padding strings
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ea903c1f950e7c226e043c1fa7276a66126b2512
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bf90c841c8fff21dd423fcd19613b5eb46a2c80c
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="padding-strings-in-net"></a>Заполнение строк в .NET
-Перечисленные ниже методы класса <xref:System.String> позволяют создать новую строку, состоящей из исходной строки, и дополнить ее указанными символами с начала или с конца до указанной общей длины. В качестве заполняющего знака, который, соответственно, будет повторяться либо справа, либо слева, может использоваться пробел или знак, заданный в явной форме.  
+
+Перечисленные ниже методы класса <xref:System.String> позволяют создать новую строку, состоящей из исходной строки, и дополнить ее указанными символами с начала или с конца до указанной общей длины. Символом заполнения может быть пробел или указанный знак. Итоговая строка выравнивается по правому или левому краю. Если длина исходной строки уже больше или равна требуемой общей длины, методы заполнения возвращают исходную строку без изменений. Дополнительные сведения см. в разделах **Возвращаемые значения** описания двух перегрузок методов <xref:System.String.PadLeft%2A?displayProperty=nameWithType> и <xref:System.String.PadRight%2A?displayProperty=nameWithType>.
   
 |Имя метода|Использовать|  
 |-----------------|---------|  

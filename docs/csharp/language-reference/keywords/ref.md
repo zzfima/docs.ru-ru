@@ -1,6 +1,6 @@
 ---
 title: "ref (Справочник по C#)"
-ms.date: 05/30/2017
+ms.date: 03/06/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -11,15 +11,13 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.assetid: b8a5e59c-907d-4065-b41d-95bf4273c0bd
-caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9b1e926bd1d9c3a8e0525ed02d102f26e6ec9abd
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 427045317e9d7d0fe3435a486b9f761908ab5e78
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="ref-c-reference"></a>ref (Справочник по C#)
 
@@ -40,35 +38,41 @@ ms.lasthandoff: 02/28/2018
 
 Для использования параметра `ref` и при определении метода, и при вызове метода следует явно использовать ключевое слово `ref`, как показано в следующем примере.  
 
-[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-1.cs)]
+[!code-csharp-interactive[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#1)]
 
-Аргумент, передаваемый в параметр `ref`, перед передачей должен быть инициализирован. В этом заключается отличие от параметров [out](out.md), аргументы которых не требуют явной инициализации перед передачей.
+Аргумент, передаваемый в параметр `ref` или `in`, нужно инициализировать перед передачей. В этом заключается отличие от параметров [out](out-parameter-modifier.md), аргументы которых не требуют явной инициализации перед передачей.
 
-Члены класса не могут иметь сигнатуры, отличие которых заключается только в `ref` и `out`. Если единственное различие между двумя членами типа состоит в том, что один из них имеет параметр `ref`, а второй имеет параметр `out`, возникает ошибка компилятора. Например, следующий код не будет компилироваться.  
+Члены класса не могут иметь сигнатуры, отличающихся только `ref`, `in` или `out`. Если единственное различие между двумя членами типа состоит в том, что один из них имеет параметр `ref`, а второй — параметр `out` или `in`, возникает ошибка компилятора. Например, следующий код не будет компилироваться.  
+
+```csharp
+class CS0663_Example
+{
+    // Compiler error CS0663: "Cannot define overloaded 
+    // methods that differ only on ref and out".
+    public void SampleMethod(out int i) { }
+    public void SampleMethod(ref int i) { }
+}
+```
+Но методы можно перегружать, если один метод имеет параметр `ref`, `in` или `out`, а другой — параметр по значению, как показано в приведенном ниже примере.
   
- [!code-csharp[csrefKeywordsMethodParams#2](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-2.cs)]
+[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#2)]
   
- Однако методы можно перегружать, если один метод принимает параметр `ref` или `out`, а другой — параметр по значению, как показано в следующем примере.
-  
- [!code-csharp[ref-and-overloads](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-3.cs)]
-  
- В других ситуациях, требующих соответствия сигнатур, таких как скрытие или переопределение, `ref` и `out` являются частью сигнатуры и не соответствуют друг другу.  
+ В других ситуациях, требующих соответствия сигнатур, таких как скрытие или переопределение, `in`, `ref` и `out` являются частью сигнатуры и не соответствуют друг другу.  
   
  Свойства не являются переменными. Они являются методами и не могут быть переданы в параметр `ref`.  
   
  Сведения о передаче массивов см. в разделе [Передача массивов при помощи параметров ref и out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md).  
   
- Ключевые слова `ref` и `out` нельзя использовать для следующих типов методов.  
+ Ключевые слова `ref`, `in` и `out` запрещено использовать для следующих типов методов.  
   
--   Асинхронные методы, которые определяются с помощью модификатора [async](../../../csharp/language-reference/keywords/async.md).  
-  
--   Методы итератора, которые включают оператор [yield return](../../../csharp/language-reference/keywords/yield.md) или `yield break`.  
-  
+- Асинхронные методы, которые определяются с помощью модификатора [async](../../../csharp/language-reference/keywords/async.md).  
+- Методы итератора, которые включают оператор [yield return](../../../csharp/language-reference/keywords/yield.md) или `yield break`.  
+
 ## <a name="passing-an-argument-by-reference-an-example"></a>Пример передачи аргументов по ссылке
 
 В предыдущих примерах типы значений передаются по ссылке. Также можно использовать ключевое слово `ref` для передачи ссылочных типов по ссылке. Передача ссылочного типа по ссылке позволяет вызываемому методу заменять объект, на который указывает ссылочный параметр в вызывающем объекте. Место хранения объекта передается методу в качестве значения ссылочного параметра. Если изменить место хранения параметра (с указанием на новый объект), необходимо изменить место хранения, на который ссылается вызывающий объект. В следующем примере экземпляр ссылочного типа передается как параметр `ref`.   
   
- [!code-csharp[ReferencesByRef](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-4.cs)]  
+[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#3)]
 
 Дополнительные сведения о передаче ссылочных типов по значению и по ссылке см. в разделе [Передача параметров ссылочного типа](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md).
   
@@ -111,11 +115,11 @@ ref decimal estValue = ref Building.GetEstimatedValue();
 
 В следующем примере определяется класс `Book`, содержащий два поля <xref:System.String>: `Title` и `Author`. Также определяется класс `BookCollection`, который включает частный массив объектов `Book`. Отдельные объекты книг возвращаются по ссылке путем вызова метода `GetBookByTitle`.
 
-[!code-csharp[csrefreturns](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-5.cs#1)]  
+[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#4)]
 
 Если вызывающий объект сохраняет значение, возвращаемое методом `GetBookByTitle`, в качестве ссылочной локальной переменной, изменения, которые этот объект вносит в возвращаемое значение, отражаются в объекте `BookCollection`, как показано в следующем примере.
 
-[!code-csharp[csrefreturns](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-5.cs#2)]  
+[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
 
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

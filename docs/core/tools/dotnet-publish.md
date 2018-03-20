@@ -3,16 +3,17 @@ title: "Команда dotnet publish — CLI .NET Core"
 description: "Команда dotnet publish публикует проект .NET Core в каталоге."
 author: mairaw
 ms.author: mairaw
-ms.date: 09/01/2017
+ms.date: 03/10/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 46e2f6d485f360660424accbddc2278eaa497a8d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 2aa69217e949b970b632c4fad72838b63c2a8988
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 12/23/2017
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 ```
-dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [no-dependencies] [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
+dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-dependencies] [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
 dotnet publish [-h|--help]
 ```
 
@@ -50,6 +51,8 @@ dotnet publish [-h|--help]
 * Зависимости приложения. Они копируются из кэша NuGet в выходную папку.
 
 Выходных данных команды `dotnet publish` готовы к развертыванию на размещающей системе (например, на сервере, компьютере, ноутбуке Mac) для выполнения и являются единственным официально поддерживаемым способом подготовить приложение к развертыванию. В зависимости от указанного в проекте типа развертывания размещающая система может как иметь, так и не иметь общую среду выполнения .NET Core. Дополнительные сведения см. в разделе [Развертывание приложений .NET Core](../deploying/index.md). Структуру каталогов опубликованного приложения см. в разделе [Структура каталогов](/aspnet/core/hosting/directory-structure).
+
+[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
 ## <a name="arguments"></a>Аргументы
 
@@ -156,14 +159,18 @@ dotnet publish [-h|--help]
 Публикация приложения с использованием указанного файла проекта:
 
 `dotnet publish ~/projects/app1/app1.csproj`
-    
+
 Публикация проекта в текущем каталоге с использованием платформы `netcoreapp1.1`:
 
 `dotnet publish --framework netcoreapp1.1`
-    
+
 Публикация текущего приложения с использованием платформы `netcoreapp1.1` и среды выполнения для `OS X 10.10` (вам нужно указать этот идентификатор RID в файле проекта).
 
 `dotnet publish --framework netcoreapp1.1 --runtime osx.10.11-x64`
+
+Публикация текущего приложения с обработкой только корневого проекта, без восстановления ссылок между проектами (P2P), во время операции восстановления (пакет SDK для .NET Core 2.0 и более поздних версий).
+
+`dotnet publish --no-dependencies`
 
 ## <a name="see-also"></a>См. также
 

@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 67f89b4ee42d896497f462b80d41afff6b347e05
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4acdbde6405af7eb78a8c605562fdb1795fedf4d
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Реализация уровня сохраняемости инфраструктуры с помощью Entity Framework Core
 
@@ -34,7 +34,7 @@ Entity Framework (EF) — это упрощенная, расширяемая �
 -   **Entity Framework Core**
     [*https://docs.microsoft.com/ef/core/*](https://docs.microsoft.com/ef/core/)
 
--   **Начало работы с ASP.NET Core и Entity Framework Core с помощью Visual Studio**
+-   **Начало работы с ASP.NET Core и Entity Framework Core с использованием Visual Studio**
     [*https://docs.microsoft.com/aspnet/core/data/ef-mvc/*](https://docs.microsoft.com/aspnet/core/data/ef-mvc/)
 
 -   **Класс DbContext**
@@ -240,13 +240,13 @@ builder.RegisterType<OrderRepository>()
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Реализация шаблонов репозиториев и единиц работы в приложении MVC ASP.NET**
+-   **Реализация шаблонов репозитория и единиц работы в приложении ASP.NET MVC**
     [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
 -   **Джонатан Аллен (Jonathan Allen). Стратегии реализации для шаблона репозитория в Entity Framework, Dapper и Chain**
     [*https://www.infoq.com/articles/repository-implementation-strategies*](https://www.infoq.com/articles/repository-implementation-strategies)
 
--   **Сезар де ла Торре (Cesar de la Torre). Сравнение времени существования служб контейнеров IoC в ASP.NET Core с областями экземпляров контейнеров IoC в Autofac**
+-   **Сезар де ла Торре (Cesar de la Torre). Сравнение времени существования службы контейнеров IoC ASP.NET Core с областями действия экземпляра контейнера IoC Autofac**
     [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
 ## <a name="table-mapping"></a>Сопоставление таблиц
@@ -330,7 +330,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 
 ### <a name="the-hilo-algorithm-in-ef-core"></a>Алгоритм Hi/Lo в EF Core
 
-Интересным аспектом кода в предыдущем примере является применение [алгоритма Hi/Lo](https://vladmihalcea.com/2014/06/23/the-hilo-algorithm/) в качестве стратегии создания ключей.
+Интересным аспектом кода в предыдущем примере является применение [алгоритма Hi/Lo](https://vladmihalcea.com/the-hilo-algorithm/) в качестве стратегии создания ключей.
 
 Алгоритм Hi/Lo удобно использовать в тех случаях, когда требуются уникальные ключи. Вкратце, алгоритм Hi-Lo присваивает строкам таблицы уникальные идентификаторы, которые не зависят от немедленного сохранения строк в базе данных. Это позволяет начинать использовать идентификаторы сразу, как это происходит с обычными последовательными идентификаторами базы данных.
 
@@ -460,7 +460,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
 -   **Сопоставление таблиц**
     [*https://docs.microsoft.com/ef/core/modeling/relational/tables*](https://docs.microsoft.com/ef/core/modeling/relational/tables)
 
--   **Использование алгоритма HiLo для создания ключей в Entity Framework Core**
+-   **Применение HiLo для создания ключей с использованием Entity Framework Core**
     [*http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/*](http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/)
 
 -   **Резервные поля**
@@ -469,7 +469,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
 -   **Стив Смит (Steve Smith). Инкапсулированные коллекции в Entity Framework Core**
     [*http://ardalis.com/encapsulated-collections-in-entity-framework-core*](http://ardalis.com/encapsulated-collections-in-entity-framework-core)
 
--   **Теневые свойства**
+-   **Свойства тени**
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
 -   **Шаблон спецификации**

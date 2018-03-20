@@ -25,11 +25,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a4a1513840d17f2e7b02acf821b5032eaac6e6fc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cc32a98930c4c1243f53fc9c5d2a10f339b4de11
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="regular-expression-options"></a>Параметры регулярных выражений
 <a name="Top"></a> По умолчанию при сравнении входной строки с любыми литеральными символами в шаблоне регулярного выражения учитывается регистр, пробел в шаблоне интерпретируется как литеральный символ, а захватываемые группы в регулярном выражении именуются как явно, так и неявно. Вы можете изменить эти и некоторые другие аспекты поведения регулярного выражения по умолчанию с помощью параметров регулярного выражения. Эти параметры, которые представлены в следующей таблице, могут быть указаны как часть шаблона регулярного выражения или переданы конструктору класса <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> или статичному методу сопоставления шаблона как значение перечисления <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/23/2017
 |<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|Использовать однострочный режим, где точка (.) соответствует любому символу (а не каждому символу, кроме `\n`). Дополнительные сведения см. в разделе [Однострочный режим](#Singleline).|  
 |<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|Не захватывать неименованные группы. К допустимым захватам относятся только явно именованные или нумерованные группы в формате `(?<`*name*`>` *subexpression*`)`. Дополнительные сведения см. в разделе [Только явные захваты](#Explicit).|  
 |<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|Недоступно|Скомпилировать регулярное выражение в сборку. Дополнительные сведения см. в разделе [Скомпилированные регулярные выражения](#Compiled).|  
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|Исключить неэкранированные пробелы из шаблона и включить комментарии после символа решетки (`#`). Дополнительные сведения см. в разделе [Игнорирование пробела](#Whitespace).|  
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|Исключить неэкранированные пробелы из шаблона и включить комментарии после символа решетки (`#`). Дополнительные сведения см. в статье [Пропуск пробелов](#Whitespace).|  
 |<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|Недоступно|Изменить направление поиска. Поиск идет справа налево, а не слева направо. Дополнительные сведения см. в разделе [Режим "справа налево"](#RightToLeft).|  
 |<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|Недоступно|Включить поведение, совместимое с ECMAScript, для выражения. Дополнительные сведения см. в разделе [Поведение сопоставления ECMAScript](#ECMAScript).|  
 |<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|Недоступно|Игнорировать различия региональных параметров в языке. Дополнительные сведения см. в разделе [Сравнение с использованием инвариантных региональных параметров](#Invariant).|  
@@ -281,7 +281,7 @@ ms.lasthandoff: 12/23/2017
   
 -   Символ решетки (#) интерпретируется как начало комментария, а не литерал. Весь текст в шаблоне регулярного выражения с символа # до конца строки интерпретируется как комментарий.  
   
- Однако в следующих случаях пробелы в регулярном выражении не игнорируются, даже если указан параметр <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>:  
+ Но в следующих случаях пробелы в регулярном выражении не игнорируются, даже если указан параметр <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>.  
   
 -   Пробел в классе символов всегда интерпретируется как литерал. Например, шаблон регулярного выражения `[ .,;:]` сопоставляет любой отдельный символ пробела, точки, запятой, точки с запятой и двоеточия.  
   

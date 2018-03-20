@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6eacc9f6ac815e01c446f7cdea6026904ad2ba90
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c29d4ddbf5f1f9ae80535a8a97651b296f3c1fb3
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="variance-in-delegates-c"></a>Вариативность в делегатах (C#)
 В платформе .NET Framework 3.5 появилась поддержка вариативности при сопоставлении сигнатур методов с типами делегатов во всех делегатах в C#. Это означает, что делегатам можно назначать не только методы, которые обладают соответствующими сигнатурами, но и методы, которые возвращают более производные типы (ковариация), или принимают параметры, которые имеют менее производные типы (контравариативность), чем указано в типе делегата. Это касается не только универсальных методов-делегатов, но и методов-делегатов, не являющихся универсальными.  
@@ -148,7 +149,7 @@ public delegate void DContravariant<in A>(A a);
 ```  
   
 > [!IMPORTANT]
->  Параметры `ref` и `out` в C# нельзя пометить как вариативные.  
+>  Параметры `ref`, `in` и `out` в C# невозможно пометить как вариативные.  
   
  В одном делегате можно реализовать поддержку вариативности и ковариации, но для разных параметров типа. Эти действия показаны в следующем примере.  
   

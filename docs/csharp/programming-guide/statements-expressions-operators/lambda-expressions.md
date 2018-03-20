@@ -15,11 +15,11 @@ ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: df59647b803bff448a801374a325f07e4903a160
-ms.sourcegitcommit: 22a48b64a0150a60b00b4fc4d8c62cde7f1670c4
+ms.openlocfilehash: 14bb60a5009f9a1ae59ed9846ebc868cfdcc05c6
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Лямбда-выражения (Руководство по программированию в C#)
 Лямбда-выражение — это [анонимная функция](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) , с помощью которой можно создавать типы [делегатов](../../../csharp/programming-guide/delegates/using-delegates.md) или [деревьев выражений](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) . С помощью лямбда-выражений можно писать локальные функции, которые можно передавать в качестве аргументов или возвращать в качестве значений из вызовов функций. Лямбда-выражения особенно полезны при написании выражений запросов LINQ.  
@@ -265,7 +265,7 @@ class Test
   
 -   Переменные, вводимые в лямбда-выражении, невидимы во внешнем методе.  
   
--   Лямбда-выражение не может непосредственно захватывать параметры `ref` или `out` из метода, в котором они находятся.  
+-   Лямбда-выражение не может непосредственно захватывать параметры `in`, `ref` или `out` из метода, в котором они находятся.  
   
 -   Оператор return в лямбда-выражении не вызывает возвращение значения внешним методом.  
   

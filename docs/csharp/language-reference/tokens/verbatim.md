@@ -2,7 +2,8 @@
 title: "@ (справочник по C#)"
 ms.date: 02/09/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - '@_CSharpKeyword'
@@ -13,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30f937951557ba65971a752b414cce6b485149be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2b62231afc3014f9fc2b9ac7bd39168f40e12c8d
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="-c-reference"></a>@ (справочник по C#)
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 
    [!code-csharp[verbatim3](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#3)]
 
-1. Чтобы позволить компилятору различать атрибуты в случае конфликта имен. Атрибут — это тип, производный от <xref:System.Attribute>. Имя его типа, как правило, содержит суффикс **Attribute**, несмотря на то, что компилятор не выполняет это соглашение. Затем на атрибут можно ссылаться в коде либо по его полному имени типа (например, `[InfoAttribute]`), либо по сокращенному имени (например, `[Info]`). Однако если два сокращенных имени типов совпадают и одно имя типа содержит суффикс **Attribute**, а другое — нет, возникает конфликт имен. Например, следующий код не может быть скомпилирован, поскольку компилятору не удается определить, какой атрибут — `Info` или `InfoAttribute` — применен к методу `Main`.
+1. Чтобы позволить компилятору различать атрибуты в случае конфликта имен. Атрибут — это тип, производный от <xref:System.Attribute>. Имя его типа, как правило, содержит суффикс **Attribute**, несмотря на то, что компилятор не выполняет это соглашение. Затем на атрибут можно ссылаться в коде либо по его полному имени типа (например, `[InfoAttribute]`), либо по сокращенному имени (например, `[Info]`). Однако если два сокращенных имени типов совпадают и одно имя типа содержит суффикс **Attribute**, а другое — нет, возникает конфликт имен. Например, приведенный ниже код не может быть скомпилирован, так как компилятору не удается определить, какой атрибут — `Info` или `InfoAttribute` — применен к классу `Example`.
 
    ```csharp
    using System;

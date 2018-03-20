@@ -2,7 +2,8 @@
 title: "string (Справочник по C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - string
@@ -13,19 +14,19 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 87df2b158b173072aad5257594e1b1482ae61067
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8899eb75b1b7c556a1e92f173a4d0ca4135014c8
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="string-c-reference"></a>string (Справочник по C#)
-Тип `string` представляет последовательность, состоящую из нуля или более символов в кодировке Юникод. `string` — это псевдоним для <xref:System.String> в .NET Framework.  
+Тип `string` представляет последовательность, состоящую из нуля или более символов в кодировке Юникод. `string` является псевдонимом для <xref:System.String> в .NET.  
   
- Несмотря на то, что `string` представляет собой ссылочный тип, операторы равенства (`==` и`!=`) по определению сравнивают не ссылки, а значения объектов `string`. Это делает проверку равенства строк более интуитивно понятной. Например:  
+ Несмотря на то, что `string` представляет собой ссылочный тип, операторы равенства (`==` и`!=`) по определению сравнивают не ссылки, а значения объектов `string`. Это делает проверку равенства строк более интуитивно понятной. Пример:  
   
 ```csharp  
 string a = "hello";  
@@ -76,7 +77,7 @@ Console.WriteLine(a);
 > [!NOTE]
 >  Escape-код `\udddd` (где `dddd` состоит из четырех цифр) представляет символ Юникода U+`dddd`. Также распознаются восьмизначные escape-коды Юникода: `\Udddddddd`.  
   
- Строковые литералы verbatim начинаются с @ и также заключаются в двойные кавычки. Пример:  
+ Строковые литералы verbatim начинаются с `@` и также заключаются в двойные кавычки. Пример:  
   
 ```csharp  
 @"good morning"  // a string literal  
@@ -94,7 +95,7 @@ Console.WriteLine(a);
 @"""Ahoy!"" cried the captain." // "Ahoy!" cried the captain.  
 ```  
   
- Кроме того, символ @ применяется для использования ссылочных идентификаторов ([/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)), представляющих собой ключевые слова C#.  
+ Другие варианты использования специального символа `@` см. в разделе [@ — буквальный идентификатор](../tokens/verbatim.md).  
   
  Дополнительные сведения о строках в С# см. в разделе [Строки](../../../csharp/programming-guide/strings/index.md).  
   

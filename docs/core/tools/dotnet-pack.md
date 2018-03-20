@@ -3,16 +3,17 @@ title: "Команда dotnet pack — CLI .NET Core"
 description: "Команда dotnet pack создает пакеты NuGet для проекта .NET Core."
 author: mairaw
 ms.author: mairaw
-ms.date: 12/13/2017
+ms.date: 03/10/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 28cd05db0643097a7271fd0488354846598ba493
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 401a4491c27ea10d0fdf1877417f1e2d5da6839f
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -27,7 +28,8 @@ ms.lasthandoff: 12/23/2017
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 ```
-dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies] [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
+    [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
 
@@ -47,6 +49,8 @@ dotnet pack [-h|--help]
 `dotnet pack` по умолчанию сначала выполняет сборку проекта. Чтобы избежать этого, передайте параметр `--no-build`. Это часто бывает полезно, например, в сценариях сборки с непрерывной интеграцией (CI), когда вы знаете, что код был собран недавно.
 
 Может предоставлять свойства MSBuild команде `dotnet pack` для процесса упаковки. Дополнительные сведения см. в разделах [Свойства метаданных NuGet](csproj.md#nuget-metadata-properties) и [Справочник по командной строке MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). В разделе [Примеры](#examples) показано, как использовать параметр MSBuild /p в различных сценариях.
+
+[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
 ## <a name="arguments"></a>Аргументы
 
@@ -157,7 +161,7 @@ dotnet pack [-h|--help]
 Упаковка проекта `app1`:
 
 `dotnet pack ~/projects/app1/project.csproj`
-    
+
 Упаковка проекта в текущем каталоге; полученные пакеты помещаются в папку `nupkgs`:
 
 `dotnet pack --output nupkgs`
@@ -177,3 +181,7 @@ dotnet pack [-h|--help]
 Упакуйте проект для [требуемой версии .NET Framework](../../standard/frameworks.md):
 
 `dotnet pack /p:TargetFrameworks=net45`
+
+Упакуйте проект и используйте определенную среду выполнения (Windows 10) для операции восстановления (пакет SDK для .NET Core 2.0 и более поздних версий).
+
+`dotnet pack --runtime win10-x64`

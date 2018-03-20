@@ -2,21 +2,22 @@
 title: "Разделяемые классы и методы (Руководство по программированию в C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 662b3308c3baa429ed29adca750cbb9b143b79dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 396914e487bee0924c36bb1d7a0f28976f4ad354
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Разделяемые классы и методы (Руководство по программированию в C#)
 Можно разделить определение [класса](../../../csharp/language-reference/keywords/class.md) или [структуры](../../../csharp/language-reference/keywords/struct.md), [интерфейса](../../../csharp/language-reference/keywords/interface.md) или метода между двумя или более исходными файлами. Каждый исходный файл содержит часть определения класса или метода, а во время компиляции приложения все части объединяются.  
@@ -114,7 +115,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="example-1"></a>Пример 1  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В следующем примере поля и конструктор класса `CoOrds` объявлены в одном определении разделяемого класса, а член `PrintCoOrds` — в другом определении разделяемого класса.  
   
 ### <a name="code"></a>Код  
@@ -122,7 +123,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="example-2"></a>Пример 2  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В следующем примере показано, что можно также разработать разделяемые структуры и интерфейсы.  
   
 ### <a name="code"></a>Код  
@@ -150,7 +151,7 @@ partial void onNameChanged()
   
 -   Объявления разделяемого метода должны начинаться с контекстно-зависимого ключевого слова [partial](../../../csharp/language-reference/keywords/partial-type.md), а метод должен возвращать значение типа [void](../../../csharp/language-reference/keywords/void.md).  
   
--   Разделяемые методы могут иметь параметры [ref](../../../csharp/language-reference/keywords/ref.md), но не могут иметь параметры [out](../../../csharp/language-reference/keywords/out.md).  
+-   Разделяемые методы могут иметь параметры [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) или [ref](../../../csharp/language-reference/keywords/ref.md), но не [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md).  
   
 -   Разделяемые методы неявно имеют модификатор [private](../../../csharp/language-reference/keywords/private.md) и поэтому не могут иметь модификатор [virtual](../../../csharp/language-reference/keywords/virtual.md).  
   

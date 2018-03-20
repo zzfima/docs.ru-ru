@@ -1,6 +1,6 @@
 ---
 title: "in (Справочник по C#)"
-ms.date: 07/20/2015
+ms.date: 02/06/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -10,24 +10,23 @@ f1_keywords:
 - in_CSharpKeyword
 helpviewer_keywords:
 - in keyword [C#]
-ms.assetid: 52032838-0a38-476e-b4d5-94b59141952f
-caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 56824b21da416aecb9b00b46f2817b3d0fba2be2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e8c45427a99756006799d1dca42841ef09b9ed8e
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="in-c-reference"></a>in (Справочник по C#)
-Контекстное ключевое слово `in` используется в трех контекстах:  
+
+Контекстное ключевое слово `in` используется в четырех контекстах.  
   
--   Операторы [foreach](../../../csharp/language-reference/keywords/foreach-in.md)  
-  
--   [Предложения join](../../../csharp/language-reference/keywords/join-clause.md) в выражениях запроса  
-  
--   [Параметры универсального типа](../../../csharp/language-reference/keywords/in-generic-modifier.md) в универсальных интерфейсах и делегатах.  
+-   [Параметры универсального типа](in-generic-modifier.md) в универсальных интерфейсах и делегатах.
+-   В качестве [модификатора параметра](in-parameter-modifier.md), который позволяет передавать аргумент в метод по ссылке, а не по значению.
+-   Операторы [foreach](foreach-in.md).
+-   [Предложения join](join-clause.md) в выражениях запроса LINQ.
   
 ## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)
+ [Ключевые слова в C#](index.md)  
+ [Справочник по C#](../index.md)
