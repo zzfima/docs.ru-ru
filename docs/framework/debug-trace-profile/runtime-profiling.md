@@ -1,12 +1,13 @@
 ---
-title: "Профилирование среды выполнения"
-ms.custom: 
+title: Профилирование среды выполнения
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - performance counters
@@ -18,11 +19,12 @@ helpviewer_keywords:
 - profiling applications
 - Performance Console
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
-caps.latest.revision: "22"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 4a8f3af4878e0f6911fcc55ec76b26649d517b3b
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -55,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
      В списке **Экземпляры выбранного объекта** щелкните имя приложения, чтобы отслеживать счетчик производительности для него.  
   
-     Для различения нескольких версий среды выполнения или устранения неоднозначности между несколькими приложениями с одним и тем же именем необходимо также изменить раздел реестра. Для получения дополнительной информации см. [Performance Counters and In-Process Side-By-Side Applications](../../../docs/framework/debug-trace-profile/performance-counters-and-in-process-side-by-side-applications.md).  
+     Для различения нескольких версий среды выполнения или устранения неоднозначности между несколькими приложениями с одним и тем же именем необходимо также изменить раздел реестра. Для получения дополнительной информации см. [Счетчики производительности и внутрипроцессные параллельные приложения](../../../docs/framework/debug-trace-profile/performance-counters-and-in-process-side-by-side-applications.md).  
   
 > [!NOTE]
 >  Если новые счетчики производительности были установлены при работающем системном мониторе, остановите системный монитор и перезапустите его, чтобы новые счетчики стали видны.  
