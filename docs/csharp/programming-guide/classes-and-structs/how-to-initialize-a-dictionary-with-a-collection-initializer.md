@@ -12,16 +12,16 @@ caps.latest.revision:
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 8b8de5fb85a839d52ad00ad552ef823d9817e9b7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a>Практическое руководство. Инициализация словаря с помощью инициализатора коллекции (Руководство по программированию на C#).
-Метод <xref:System.Collections.Generic.Dictionary`2> contains a collection of key/value pairs. Its <xref:System.Collections.Generic.Dictionary`2.Add*> принимает два параметра: один для ключа и один для значения. Для инициализации <xref:System.Collections.Generic.Dictionary`2>, or any collection whose `Add` которой принимает несколько параметров, следует заключить каждый набор параметров в скобки, как показано в приведенном ниже примере.  
+<xref:System.Collections.Generic.Dictionary`2> содержит коллекцию пар "ключ-значение". Ее метод <xref:System.Collections.Generic.Dictionary`2.Add*> принимает два параметра: один для ключа, другой — для значения. Для инициализации <xref:System.Collections.Generic.Dictionary`2> или любой коллекции, метод `Add` которой принимает несколько параметров, следует заключить каждый набор параметров в скобки, как показано в приведенном ниже примере.  
   
 ## <a name="example"></a>Пример  
- В приведенном ниже примере <xref:System.Collections.Generic.Dictionary`2> is initialized with instances of type `StudentName`.  
+ В следующем примере кода <xref:System.Collections.Generic.Dictionary`2> инициализируется экземплярами типа `StudentName`.  
   
  [!code-csharp[csProgGuideLINQ#34](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-a-dictionary-with-a-collection-initializer_1.cs)]  
   
