@@ -1,12 +1,12 @@
 ---
-title: "Создание ключей для шифрования и расшифровки"
-ms.custom: 
+title: Создание ключей для шифрования и расшифровки
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - asymmetric keys [.NET Framework]
 - cryptography [.NET Framework], keys
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
@@ -80,7 +80,7 @@ TDES.GenerateKey();
   
  Оба метода принимают логическое значение, указывающее, следует ли возвращать только сведения об открытом ключе или сведения как об открытом, так и о закрытом ключе. Класс **RSACryptoServiceProvider** можно инициализировать значением структуры **RSAParameters** при помощи метода <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A> .  
   
- Асимметричные закрытые ключи никогда не следует хранить буквальной форме или в формате обычного текста на локальном компьютере. Если необходимо хранить закрытый ключ, следует использовать для этого контейнер ключа. Дополнительные сведения о хранении закрытого ключа в контейнере ключей см. в разделе [How to: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).  
+ Асимметричные закрытые ключи никогда не следует хранить буквальной форме или в формате обычного текста на локальном компьютере. Если необходимо хранить закрытый ключ, следует использовать для этого контейнер ключа. Дополнительные сведения о хранении закрытого ключа в контейнере ключей см. в разделе [Практическое руководство. Хранение асимметричных ключей в контейнере ключей](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).  
   
  Следующий пример кода создает новый экземпляр класса **RSACryptoServiceProvider** посредством создания пары из открытого и закрытого ключей и сохраняет сведения об открытом ключе в структуре **RSAParameters** .  
   
