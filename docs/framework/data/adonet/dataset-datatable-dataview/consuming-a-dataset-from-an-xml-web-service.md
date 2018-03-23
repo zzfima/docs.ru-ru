@@ -1,27 +1,29 @@
 ---
-title: "Потребление набора данных из веб-службы XML"
-ms.custom: 
+title: Потребление набора данных из веб-службы XML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 316bebfec652987351e64368c3b7c0155011fe8e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9bfcd4d8dca38c9438c072c143cf7ba0eafd6ecf
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Потребление набора данных из веб-службы XML
 Объект <xref:System.Data.DataSet> не имеет привязки к каким-либо источникам, что позволяет частично упростить передачу данных через Интернет. **DataSet** сериализуется «» в том, что он может быть указан в качестве входного или выходные данные веб-служб XML без дополнительного кодирования, необходимых для потоковой передачи содержимого **DataSet** из веб-служб XML Клиент и обратно. **DataSet** неявно преобразуется в поток XML с помощью формата DiffGram, отправляемых по сети и затем восстанавливается из потока XML в виде **DataSet** на принимающей стороне. Это обеспечивает очень простой и гибкий метод передачи и получения реляционных данных с помощью веб-служб XML. Дополнительные сведения о формате см. в разделе [дельты](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
@@ -29,7 +31,7 @@ ms.lasthandoff: 01/19/2018
  В следующем примере показано создание XML-веб-службы и клиента, использовать **набора данных** для передачи реляционных данных (включая измененные данные) и внесения всех обновлений к исходному источнику данных.  
   
 > [!NOTE]
->  При создании веб-службы XML следует всегда учитывать возможные вопросы безопасности. Сведения о защите веб-служб XML см. в разделе [защита XML Web Services созданные с помощью ASP.NET](http://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c).  
+>  При создании веб-службы XML следует всегда учитывать возможные вопросы безопасности. Сведения о защите веб-служб XML см. в разделе [защита XML Web Services созданные с помощью ASP.NET](https://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c).  
   
 ### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>Создание веб-службы XML, которая возвращает и потребляет объект DataSet  
   
@@ -176,33 +178,33 @@ ms.lasthandoff: 01/19/2018
   
      Посредник можно создать с помощью средства WSDL. Например, если XML-веб-службы, доступные во http://myserver/data/DataSetSample.asmx URL-адрес, отправить команду, подобную следующей, чтобы создать посредник Visual Basic .NET с пространством имен **WebData.DSSample** и сохранить его в файл Sample.vb.  
   
-    ```  
-    wsdl /l:VB /out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  
+    ```console
+    wsdl /l:VB -out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  
     ```  
   
      Чтобы создать посредник C# в файле sample.cs, выполните следующую команду.  
   
-    ```  
-    wsdl /l:CS /out:sample.cs http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  
+    ```console
+    wsdl -l:CS -out:sample.cs http://myserver/data/DataSetSample.asmx -n:WebData.DSSample  
     ```  
   
      После создания посредник можно будет скомпилировать как библиотеку и импортировать в клиент веб-службы XML. Чтобы скомпилировать код посредника Visual Basic .NET, хранящийся в файле sample.vb, в файл sample.dll, выполните следующую команду.  
   
-    ```  
-    vbc /t:library /out:sample.dll sample.vb /r:System.dll /r:System.Web.Services.dll /r:System.Data.dll /r:System.Xml.dll  
+    ```console  
+    vbc -t:library -out:sample.dll sample.vb -r:System.dll -r:System.Web.Services.dll -r:System.Data.dll -r:System.Xml.dll  
     ```  
   
      Чтобы скомпилировать код посредника C#, хранящийся в файле sample.cs, в файл sample.dll, выполните следующую команду.  
   
-    ```  
-    csc /t:library /out:sample.dll sample.cs /r:System.dll /r:System.Web.Services.dll /r:System.Data.dll /r:System.Xml.dll  
+    ```console
+    csc -t:library -out:sample.dll sample.cs -r:System.dll -r:System.Web.Services.dll -r:System.Data.dll -r:System.Xml.dll  
     ```  
   
 3.  Создайте клиент веб-службы XML.  
   
      Если требуется создать класс прокси-сервера веб-службы для вас Visual Studio, просто создайте проект клиента и, в окне обозревателя решений щелкните правой кнопкой мыши проект, нажмите кнопку **Add Web Reference**и выберите веб-службу из Список доступных веб-служб (может потребоваться предоставление адреса конечной точки веб-службы, если веб-служба недоступна в текущем решении или на текущем компьютере.) Если посредник веб-службы XML создается самостоятельно (как описано в предыдущем шаге), его можно импортировать в код клиента и воспользоваться методами веб-службы XML. В следующем образце кода импортируется библиотека посредника, вызовы **GetCustomers** для возврата списка клиентов, добавляется новый клиент и возвращается **DataSet** с обновлениями для **UpdateCustomers** .  
   
-     Обратите внимание, что в примере передается **DataSet** возвращенных **DataSet.GetChanges** для **UpdateCustomers** так, как только измененные строки должны быть переданы в  **UpdateCustomers**. **UpdateCustomers** возвращает обновленный объект **набора данных**, который затем можно будет **слияния** с существующим **набора данных** внедрить внесенные изменения и все сведения об ошибках строк из обновления. В следующем коде предполагается, что вы использовали Visual Studio для создания веб-ссылки и переименовании веб-ссылки было изменено на DsSample в **Add Web Reference** диалоговое окно.  
+     Обратите внимание, что в примере передается **DataSet** возвращенных **DataSet.GetChanges** для **UpdateCustomers** так, как только измененные строки должны быть переданы в  **UpdateCustomers**. **UpdateCustomers** возвращает обновленный объект **DataSet**, которой затем можно будет **слияния** с существующим **набора данных** внедрить внесенные изменения и все сведения об ошибках строк из обновления. В следующем коде предполагается, что вы использовали Visual Studio для создания веб-ссылки и переименовании веб-ссылки было изменено на DsSample в **Add Web Reference** диалоговое окно.  
   
     ```vb  
     Imports System  
@@ -260,14 +262,14 @@ ms.lasthandoff: 01/19/2018
   
      Если класс посредника создается самостоятельно, следует выполнить следующие дополнительные шаги. Чтобы скомпилировать образец, предоставьте созданную библиотеку посредника (sample.dll) и связанные с ней библиотеки .NET. Чтобы скомпилировать версию Visual Basic .NET образца, которая хранится в файле client.vb, выполните следующую команду.  
   
-    ```  
-    vbc client.vb /r:sample.dll /r:System.dll /r:System.Data.dll /r:System.Xml.dll /r:System.Web.Services.dll  
+    ```console
+    vbc client.vb -r:sample.dll -r:System.dll -r:System.Data.dll -r:System.Xml.dll -r:System.Web.Services.dll  
     ```  
   
      Чтобы скомпилировать версию C# образца, которая хранится в файле client.cs, выполните следующую команду.  
   
-    ```  
-    csc client.cs /r:sample.dll /r:System.dll /r:System.Data.dll /r:System.Xml.dll /r:System.Web.Services.dll  
+    ```console
+    csc client.cs -r:sample.dll -r:System.dll -r:System.Data.dll -r:System.Xml.dll -r:System.Web.Services.dll  
     ```  
   
 ## <a name="see-also"></a>См. также  
@@ -277,5 +279,5 @@ ms.lasthandoff: 01/19/2018
  [Заполнение набора данных с помощью адаптера данных DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  [Обновление источников данных с объектами DataAdapter](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [Параметры DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
- [Инструмент языка описания веб-служб (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)  
+ [Инструмент языка описания веб-служб (Wsdl.exe)](https://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)  
  [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
