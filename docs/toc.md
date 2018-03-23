@@ -47,7 +47,7 @@
 ## [Метаданные и компоненты с самоописанием](standard/metadata-and-self-describing-components.md)
 ## [Построение консольных приложений](standard/building-console-apps.md)
 ## [Параллельная обработка и параллелизм](standard/parallel-processing-and-concurrency.md)
-## [.NET Framework Application Essentials](standard/application-essentials.md) (Основные сведения о приложениях .NET Framework)
+## [Основные сведения о приложениях .NET Framework](standard/application-essentials.md)
 ## [Файловый и потоковый ввод-вывод](standard/io/index.md)
 ## [Глобализация и локализация](standard/globalization-localization/)
 ## [Атрибуты](standard/attributes/)
