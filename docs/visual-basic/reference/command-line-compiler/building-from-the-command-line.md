@@ -1,10 +1,11 @@
 ---
-title: "Построение из командной строки (Visual Basic)"
+title: Построение из командной строки (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - builds [Visual Basic], command-line
@@ -18,30 +19,28 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d982506af2c4f01e80ae5b3862fcbcfff2aa9d99
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: c3f71a84feffce46bafd92ff701a0250c059a82e
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Построение из командной строки (Visual Basic)
 Объект [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] проект состоит из одного или нескольких отдельным файлам исходного кода. В процессе компиляции эти файлы соединяются в один пакет — исполняемый файл, который запускается как приложение.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]предоставляет компилятора командной строки в качестве альтернативы для компиляции программы с [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] интегрированной среды разработки (IDE). Компилятор командной строки разработан для случаев, в которых не требуется полный набор возможностей в Интегрированной среде разработки — например, при использовании или создании программы на компьютере с ограниченными системными ресурсами или дисковым пространством.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] предоставляет компилятора командной строки в качестве альтернативы для компиляции программы с [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] интегрированной среды разработки (IDE). Компилятор командной строки разработан для случаев, в которых не требуется полный набор возможностей в Интегрированной среде разработки — например, при использовании или создании программы на компьютере с ограниченными системными ресурсами или дисковым пространством.  
   
- При компиляции из командной строки, необходимо явно ссылаться Microsoft [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] библиотеку времени выполнения с помощью `/reference` параметр компилятора.  
-  
- Для компиляции исходных файлов из [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] интегрированной среды разработки, выберите **построения** из **построения** меню.  
+  Для компиляции исходных файлов из [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] интегрированной среды разработки, выберите **построения** из **построения** меню.  
   
 > [!TIP]
 >  При создании файлов проекта с помощью интегрированной среды разработки Visual Studio, можно отобразить сведения о связанном **vbc** команду и ее параметры в окне вывода. Чтобы отобразить эти сведения, откройте [диалоговое окно «Параметры», проекты и решения, построения и выполнения](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)и задайте **детализации, выходные данные построения проекта MSBuild** для **обычный** или более высоком уровне детализации. Дополнительные сведения см. в статье [Практическое руководство. Просмотр, сохранение и настройка файлов журнала сборки](http://msdn.microsoft.com/library/75d38b76-26d6-4f43-bbe7-cbacd7cc81e7).  
   
  Файлы проекта (VBPROJ) в командной строке можно скомпилировать с помощью MSBuild. Дополнительные сведения см. в разделе [Справочник по командной строке](/visualstudio/msbuild/msbuild-command-line-reference) и [Пошаговое руководство: использование MSBuild](/visualstudio/msbuild/walkthrough-using-msbuild).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Вызов компилятора командной строки](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)  
  Описывает, как вызвать компилятор командной строки, в командной строке MS-DOS или из определенной папки.  
   

@@ -1,12 +1,13 @@
 ---
-title: "Руководство: Разработка простого элемента управления форм Windows Forms"
-ms.custom: 
+title: 'Руководство: Разработка простого элемента управления форм Windows Forms'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-caps.latest.revision: "17"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da876ec74bf80d4329451a9bf125421731c7f9de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ab7fced9237cad3de30d417770f6f1d7f7e7ed6a
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>Руководство: Разработка простого элемента управления форм Windows Forms
 В этом разделе рассматриваются основные этапы создания пользовательского элемента управления Windows Forms. Простой элемент управления, разработанный в этом примере разрешает выравнивание его <xref:System.Windows.Forms.Control.Text%2A> значение изменяемого свойства. Он не вызывает и не обрабатывает события.  
@@ -50,7 +52,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
   
-     Если задано свойство, которое изменяет визуальное представление элемента управления, необходимо вызвать <xref:System.Windows.Forms.Control.Invalidate%2A> метод необходимости перерисовки элемента управления. <xref:System.Windows.Forms.Control.Invalidate%2A>определен в базовом классе <xref:System.Windows.Forms.Control>.  
+     Если задано свойство, которое изменяет визуальное представление элемента управления, необходимо вызвать <xref:System.Windows.Forms.Control.Invalidate%2A> метод необходимости перерисовки элемента управления. <xref:System.Windows.Forms.Control.Invalidate%2A> определен в базовом классе <xref:System.Windows.Forms.Control>.  
   
 3.  Переопределите защищенный <xref:System.Windows.Forms.Control.OnPaint%2A> метод наследуется от <xref:System.Windows.Forms.Control> для предоставления логики отрисовки для элемента управления. Если не следует переопределять <xref:System.Windows.Forms.Control.OnPaint%2A>, ваш элемент управления не сможет себя нарисовать. В следующем фрагменте кода <xref:System.Windows.Forms.Control.OnPaint%2A> метод выводит <xref:System.Windows.Forms.Control.Text%2A> свойство унаследовано от <xref:System.Windows.Forms.Control> с выравниванием, определяемым значением `alignmentValue` поля.  
   
@@ -70,12 +72,12 @@ ms.lasthandoff: 12/22/2017
   
     2.  Скомпилируйте исходный код в сборку и сохраните его в каталог приложения. Для этого выполните следующую команду из каталога, содержащего исходный файл.  
   
-        ```vb  
-        vbc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.vb  
+        ```console  
+        vbc -t:library -out:[path to your application's directory]/CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll FirstControl.vb  
         ```  
   
-        ```csharp  
-        csc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.cs  
+        ```console 
+        csc -t:library -out:[path to your application's directory]/CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll FirstControl.cs  
         ```  
   
          Параметр компилятора `/t:library` сообщает компилятору, что создаваемая сборка является библиотекой (а не исполняемым файлом). Параметр `/out` определяет путь и имя сборки. Параметр `/r` определяет имена сборок, на которые ссылается код. В этом примере создается закрытая сборка, которую могут использовать только ваши приложения. Это значит, что сохранить ее в каталог приложения нельзя. Дополнительные сведения об упаковке и развертывании элемента управления, который нужно распределить, см. в разделе [Развертывание](../../../../docs/framework/deployment/index.md).  
@@ -94,19 +96,19 @@ ms.lasthandoff: 12/22/2017
   
 2.  Скомпилируйте исходный код в исполняемую сборку, выполнив следующую команду из каталога, содержащего исходный файл.  
   
-    ```vb  
-    vbc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.vb  
+    ```console  
+    vbc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.vb  
     ```  
   
-    ```csharp  
-    csc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.cs  
+    ```console 
+    csc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.cs  
     ```  
   
      CustomWinControls.dll — это сборка, которая содержит класс `FirstControl`. Эта сборка должна находиться в том же каталоге, что и исходный файл для формы, которая к ней обращается (SimpleForm.cs или SimpleForms.vb).  
   
 3.  Выполните файла SimpleForm.exe с помощью следующей команды.  
   
-    ```  
+    ```console
     SimpleForm  
     ```  
   

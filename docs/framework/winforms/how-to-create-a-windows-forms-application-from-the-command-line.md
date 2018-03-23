@@ -1,8 +1,9 @@
 ---
-title: "Как: Создание приложения Windows Forms из командной строки"
-ms.date: 03/30/2017
+title: 'Как: Создание приложения Windows Forms из командной строки'
+ms.date: 03/14/2018
 ms.prod: .net-framework
-ms.technology: dotnet-winforms
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 dev_langs:
 - csharp
@@ -12,16 +13,15 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating basic form
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22acab6ea3912488ae1382ffb42ca5383a7311af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+author: rpetrusha
+ms.author: ronpet
+ms.workload:
+- dotnet
+ms.openlocfilehash: 79fda0f5f455cbac50c0c1b51f0cd3bef4c5bfbc
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Как: Создание приложения Windows Forms из командной строки
 В процедурах ниже описаны основные шаги, которые необходимо выполнить для создания и запуска приложения Windows Forms из командной строки. Visual Studio предлагает расширенную поддержку этих процедур.  См. также [Пошаговое руководство: создание простой формы Windows Forms](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
@@ -49,9 +49,9 @@ ms.lasthandoff: 12/22/2017
   
 4.  Добавьте в класс метод `Main`.  
   
-    1.  Примените <xref:System.STAThreadAttribute> к методу `Main`, чтобы указать, что приложение Windows Forms использует однопотоковое подразделение.  
+    1.  Применить <xref:System.STAThreadAttribute> в C# `Main` метод, чтобы указать приложения Windows Forms является однопотоковое подразделение. (Атрибут необязателен в Visual Basic, так как приложения Windows forms разработанных с использованием Visual Basic модели однопотоковое подразделение по умолчанию.)  
   
-    2.  Вызовите <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> для придания приложению внешнего вида в стиле Windows XP.  
+    2.  Вызовите <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> для применения стиля операционной системы вашего приложения.  
   
     3.  Создайте экземпляр формы и запустите его.  
   
@@ -64,13 +64,13 @@ ms.lasthandoff: 12/22/2017
   
 2.  Скомпилируйте форму.  
   
-    -   Если вы используете C#, введите:`csc form1.cs`  
+    -   Если вы используете C#, введите: `csc form1.cs`  
   
          `-or-`  
   
-    -   Если вы используете Visual Basic, введите:`vbc form1.vb /r:system.dll,system.drawing.dll,system.windows.forms.dll`  
+    -   Если вы используете Visual Basic, введите: `vbc form1.vb`  
   
-3.  В командной строке введите следующую команду:`Form1.exe`  
+3.  В командной строке введите следующую команду: `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>Добавление элемента управления и обработка события  
  В предыдущей процедуре продемонстрировано, как создать простейшую форму Windows Forms, скомпилировать и запустить ее. В следующей процедуре будет показано, как создать и добавить в форму элемент управления и как обрабатывать событие для него. Дополнительные сведения об элементах управления, можно добавить в форму Windows Forms см. в разделе [элементов управления Windows Forms](../../../docs/framework/winforms/controls/index.md).  

@@ -1,32 +1,31 @@
 ---
-title: /errorreport
-ms.date: 07/20/2015
+title: -errorreport
+ms.date: 03/10/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - -errorreport compiler option [Visual Basic]
 - /errorreport compiler option [Visual Basic]
 - errorreport compiler option [Visual Basic]
 ms.assetid: a7fe83a2-a6d8-460c-8dad-79a8f433f501
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0abe276aaacdeb175c3af7067dffa81448450e22
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 59dc833299161eac7b119e654c94534f202b1cb7
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="errorreport"></a>/errorreport
+# <a name="-errorreport"></a>-errorreport
 Указывает, как компилятор [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] должен сообщать о внутренних ошибках.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-/errorreport:{ prompt | queue | send | none }  
+-errorreport:{ prompt | queue | send | none }  
 ```  
   
 ## <a name="remarks"></a>Примечания  
@@ -34,30 +33,30 @@ ms.lasthandoff: 11/21/2017
   
  Возможность отправки отчетов зависит от разрешений политики компьютера и пользователя.  
   
- В следующей таблице перечислены действия `/errorreport` параметр.  
+ В следующей таблице перечислены действия `-errorreport` параметр.  
   
 |Параметр|Поведение|  
 |---|---|  
 |`prompt`|При возникновении внутренней ошибки компилятора, диалоговое окно появится, чтобы можно было просматривать точные данные, собранные компилятором. Можно определить, если любой конфиденциальной информации в отчет об ошибке и принять решение о том, будут ли отправляться в корпорацию Майкрософт. Если вы решили отправить его, и разрешена параметрами политики компьютера и пользователя, компилятор отправляет данные в корпорацию Майкрософт.|  
-|`queue`|Отчет об ошибке помещается в очередь. При входе в систему с правами администратора может обо всех сбоях с момента последнего входа (не будет предлагаться отправлять отчеты об ошибках в более чем один раз каждые три дня). Это поведение по умолчанию при `/errorreport` параметр не указан.|  
-|`send`|Если происходит внутренняя ошибка компилятора разрешена параметрами политики компьютера и пользователя, компилятор отправляет данные в корпорацию Майкрософт.<br /><br /> Параметр `/errorReport:send` пытается автоматически отправлять в корпорацию Майкрософт сведения об ошибке. Этот параметр зависит от реестра. Дополнительные сведения о настройке соответствующие значения в реестре см. в разделе [как включить автоматическое создание отчетов об ошибках в средства командной строки Visual Studio 2008](http://go.microsoft.com/fwlink/?LinkID=184695).|  
+|`queue`|Отчет об ошибке помещается в очередь. При входе в систему с правами администратора может обо всех сбоях с момента последнего входа (не будет предлагаться отправлять отчеты об ошибках в более чем один раз каждые три дня). Это поведение по умолчанию при `-errorreport` параметр не указан.|  
+|`send`|Если происходит внутренняя ошибка компилятора разрешена параметрами политики компьютера и пользователя, компилятор отправляет данные в корпорацию Майкрософт.<br /><br /> Параметр `-errorreport:send` пытается автоматически отправлять в корпорацию Майкрософт сведения об ошибке. Этот параметр зависит от реестра. Дополнительные сведения о настройке соответствующие значения в реестре см. в разделе [как включить автоматическое создание отчетов об ошибках в средства командной строки Visual Studio 2008](http://go.microsoft.com/fwlink/?LinkID=184695).|  
 |`none`|При возникновении внутренней ошибки компилятора, он не быть собираются и отправляются в корпорацию Майкрософт.|  
   
- Компилятор отправляет данные, включая стека во время ошибки, которая обычно также часть исходного кода. Если `/errorreport` используется с [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) параметр отправляться всего исходного файла.  
+ Компилятор отправляет данные, включая стека во время ошибки, которая обычно также часть исходного кода. Если `-errorreport` используется с [- bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) параметр отправляться всего исходного файла.  
   
  Этот вариант лучше всего использовать с [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) вариант, так как она позволяет инженерам корпорации Майкрософт более легко воспроизвести ошибку.  
   
 > [!NOTE]
->  `/errorreport` Параметр недоступен в среде разработки Visual Studio; она доступна только при компиляции из командной строки.  
+>  `-errorreport` Параметр недоступен в среде разработки Visual Studio; она доступна только при компиляции из командной строки.  
   
 ## <a name="example"></a>Пример  
  Следующий код попытается скомпилировать `T2.vb`, и если компилятор обнаруживает Внутренняя ошибка компилятора, предлагается отправить отчет об ошибке в корпорацию Майкрософт.  
   
 ```  
-vbc /errorreport:prompt t2.vb  
+vbc -errorreport:prompt t2.vb  
 ```  
   
 ## <a name="see-also"></a>См. также  
  [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)  
  [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)
+ [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)

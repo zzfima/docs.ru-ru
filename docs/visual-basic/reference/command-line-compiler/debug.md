@@ -1,10 +1,11 @@
 ---
 title: /debug (Visual Basic)
-ms.date: 07/20/2015
+ms.date: 03/10/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - debug compiler switches
@@ -12,24 +13,23 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 07ab386ddb456c059b6390b986ec0a880320973b
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 7430a3ac85a86ed5528af9ea830da530208749eb
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="debug-visual-basic"></a>/debug (Visual Basic)
+# <a name="-debug-visual-basic"></a>-debug (Visual Basic)
 Указывает компилятору создавать отладочную информацию и поместить ее в выходных файлах.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-/debug[+ | -]  
+-debug[+ | -]  
 ' -or-  
-/debug:[full | pdbonly]  
+-debug:[full | pdbonly]  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  Сведения о настройке производительности отладки для приложения см. в разделе [Упрощение отладки образов](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).  
   
-|Задание/Debug в Visual Studio интегрированной среде разработки|  
+|Чтобы задать — отладку в среде разработки Visual Studio|  
 |---|  
 |1.  Выберите проект в **обозревателе решений**, а затем в меню **Проект** щелкните **Свойства**. <br />2.  Откройте вкладку **Компиляция**.<br />3.  Щелкните **Дополнительные параметры компиляции**.<br />4.  Измените значение в **создать отладочную информацию** поле.|  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/21/2017
  Следующий пример демонстрирует размещение отладочной информации в выходной файл `App.exe`.  
   
 ```  
-vbc /debug /out:app.exe test.vb  
+vbc -debug -out:app.exe test.vb  
 ```  
   
 ## <a name="see-also"></a>См. также  

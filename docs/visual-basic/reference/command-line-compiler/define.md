@@ -1,10 +1,10 @@
 ---
-title: /define (Visual Basic)
-ms.date: 07/20/2015
+title: — Определение (Visual Basic)
+ms.date: 03/10/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - -d compiler option [Visual Basic]
@@ -14,24 +14,23 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 62669ec40803170cb623382b09472b82121d26bb
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 136339c84ce80bff790c6683eef76065fb6d71ef
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="define-visual-basic"></a>/define (Visual Basic)
+# <a name="-define-visual-basic"></a>— Определение (Visual Basic)
 Задает константы условной компиляции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-/define:["]symbol[=value][,symbol[=value]]["]  
+-define:["]symbol[=value][,symbol[=value]]["]  
 ' -or-  
-/d:["]symbol[=value][,symbol[=value]]["]  
+-d:["]symbol[=value][,symbol[=value]]["]  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -42,13 +41,13 @@ ms.lasthandoff: 12/21/2017
 |`value`|Необязательно. Значение, которому назначается `symbol`. Если `value` представляет собой строку, оно должно быть заключено в обратная косая черта и кавычка (\\«) кавычки. Если значение не задано, считается, что используется значение True.|  
   
 ## <a name="remarks"></a>Примечания  
- Влияние параметра `/define` похоже на использование директивы препроцессора `#Const` в исходном файле, за исключением того, что определенные с помощью `/define` константы являются общими и применяются ко всем файлам в проекте.  
+ `-define` Параметр действует аналогично использованию `#Const` директива препроцессора в исходном файле, за исключением того, что константы, определенные с `-define` являются открытыми и применяются ко всем файлам в проекте.  
   
  Вы можете использовать символы, созданные этим параметром с помощью директивы `#If`...`Then`...`#Else`, для условной компиляции исходных файлов.  
   
- `/d` является краткой формой `/define`.  
+ `-d` является краткой формой `-define`.  
   
- Вы можете определить несколько символов с помощью `/define`, разделяя их определения запятой.  
+ Вы можете определить несколько символов с помощью `-define`, разделяя их определения запятой.  
   
 |Задание параметра /define в интегрированной среде разработки Visual Studio|  
 |---|  

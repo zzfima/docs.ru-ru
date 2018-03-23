@@ -1,22 +1,21 @@
 ---
-title: "Как: Создание подписанных дружественных сборок (Visual Basic)"
-ms.custom: 
-ms.date: 07/20/2015
+title: 'Как: Создание подписанных дружественных сборок (Visual Basic)'
+ms.custom: ''
+ms.date: 03/14/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d3ffaf30cdcbc075b772a7350984d060e47fddb7
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 4fd9521a87a985cbdeff1616c3070c822892b6e5
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Как: Создание подписанных дружественных сборок (Visual Basic)
 В этом примере демонстрируется использование дружественных сборок со сборками, имеющими строгие имена. Обе сборки должны иметь строгое имя. Хотя обе сборки в этом примере используют одинаковые ключи, вы можете использовать для двух сборок разные ключи.  
@@ -46,7 +45,7 @@ ms.lasthandoff: 12/21/2017
     ```vb  
     ' friend_signed_A.vb  
     ' Compile with:   
-    ' Vbc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.vb  
+    ' Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
     Imports System.Runtime.CompilerServices  
   
     <Assembly: InternalsVisibleTo("friend_signed_B, PublicKey=0024000004800000940000000602000000240000525341310004000001000100e3aedce99b7e10823920206f8e46cd5558b4ec7345bd1a5b201ffe71660625dcb8f9a08687d881c8f65a0dcf042f81475d2e88f3e3e273c8311ee40f952db306c02fbfc5d8bc6ee1e924e6ec8fe8c01932e0648a0d3e5695134af3bb7fab370d3012d083fa6b83179dd3d031053f72fc1f7da8459140b0af5afc4d2804deccb6")>   
@@ -60,8 +59,8 @@ ms.lasthandoff: 12/21/2017
   
 4.  Скомпилируйте и подпишите сборку friend_signed_A с помощью приведенной ниже команды.  
   
-    ```vb  
-    Vbc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.vb  
+    ```console  
+    Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
     ```  
   
 5.  Создать файл Visual Basic, который называется `friend_signed_B` и содержит следующий код. Поскольку сборка friend_signed_A указывает сборку friend_signed_B в качестве дружественной сборки, код в сборке friend_signed_B может обращаться к типам и членам `Friend` в сборке friend_signed_A. Файл содержит следующий код.  
@@ -69,7 +68,7 @@ ms.lasthandoff: 12/21/2017
     ```vb  
     ' friend_signed_B.vb  
     ' Compile with:   
-    ' Vbc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll friend_signed_B.vb  
+    ' Vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
     Module Sample  
         Public Sub Main()  
             Dim inst As New Class1  
@@ -80,15 +79,15 @@ ms.lasthandoff: 12/21/2017
   
 6.  Откомпилируйте и подпишите сборку friend_signed_B с помощью следующей команды.  
   
-    ```vb  
-    Vbc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll friend_signed_B.vb  
+    ```console  
+    vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
     ```  
   
-     Имя сборки, созданной компилятором, должно соответствовать имени дружественной сборки, передаваемой атрибуту <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Можно явно задать сборку с помощью `/out` параметр компилятора. Дополнительные сведения см. в разделе [/out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md).  
+     Имя сборки, созданной компилятором, должно соответствовать имени дружественной сборки, передаваемой атрибуту <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Можно явно задать сборку с помощью `-out` параметр компилятора. Дополнительные сведения см. в разделе [-out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md).  
   
 7.  Запустите файл friend_signed_B.exe.  
   
-     Программа выводит строку "Class1.Test".  
+     Программа отображает строку «Class1.Test».  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Между атрибутом <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> и классом <xref:System.Security.Permissions.StrongNameIdentityPermission> существует определенное сходство. Основное отличие заключается в том, что для выполнения <xref:System.Security.Permissions.StrongNameIdentityPermission> в определенном разделе кода могут потребоваться разрешения системы безопасности, тогда как атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> определяет видимость членов и типов `Friend`.  
@@ -98,7 +97,7 @@ ms.lasthandoff: 12/21/2017
  [Сборки и глобальный кэш сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [Дружественные сборки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  [Как: создание неподписанных дружественных сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
+ [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
  [Sn.exe (средство строгих имен)] [Sn.exe (средство строгих имен)](../../../../framework/tools/sn-exe-strong-name-tool.md))  
  [Создание и использование сборок со строгими именами](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)  
  [Основные понятия программирования](../../../../visual-basic/programming-guide/concepts/index.md)

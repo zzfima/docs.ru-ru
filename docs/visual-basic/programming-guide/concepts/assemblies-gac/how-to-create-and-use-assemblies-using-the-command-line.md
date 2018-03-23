@@ -1,22 +1,21 @@
 ---
-title: "Как: Создание и использование сборок с помощью командной строки (Visual Basic)"
-ms.custom: 
-ms.date: 07/20/2015
+title: 'Как: Создание и использование сборок с помощью командной строки (Visual Basic)'
+ms.custom: ''
+ms.date: 03/14/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 72f3e91f9fb88019f937dcd281aa14ab4e887daf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: b39648107697cdbaa8856705f44df605efda11fa
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Как: Создание и использование сборок с помощью командной строки (Visual Basic)
 Сборка (или библиотека динамической компоновки (DLL)) связывается с программой во время выполнения. Сборка и использование библиотеки DLL рассматривается в следующем сценарии:  
@@ -110,19 +109,19 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2)
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Чтобы выполнить сборку файла `MathLibrary.DLL`, скомпилируйте два файла, `Add` и `Mult`, с помощью следующей командной строки:  
   
-```vb  
-vbc /target:library /out:MathLibrary.DLL Add.vb Mult.vb  
+```console  
+vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb  
 ```  
   
- [/Target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) параметр компилятора сообщает компилятору библиотеку DLL, а не является EXE-файлом. [/Out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) параметр компилятора, за которым следует имя файла используется для указания имени файла DLL. В противном случае компилятор использует первый файл (`Add.vb`) в качестве имени библиотеки DLL.  
+ [-Target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) параметр компилятора сообщает компилятору библиотеку DLL, а не является EXE-файлом. [-Out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) параметр компилятора, за которым следует имя файла используется для указания имени файла DLL. В противном случае компилятор использует первый файл (`Add.vb`) в качестве имени библиотеки DLL.  
   
  Для сборки исполняемого файла `TestCode.exe` служит следующая строка команд:  
   
-```vb  
-vbc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.vb  
+```console  
+vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb  
 ```  
   
- Параметр компилятора **/out** предписывает компилятору создать EXE-файл и задает имя выходного файла (`TestCode.exe`). Этот параметр компилятора является необязательным. [/Reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) указывает параметр компилятора DLL-файл или файлы, используемые этой программой.  
+ **-Out** параметр компилятора указывает компилятору EXE-файл и задает имя выходного файла (`TestCode.exe`). Этот параметр компилятора является необязательным. [-Ссылке (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) указывает параметр компилятора DLL-файл или файлы, используемые этой программой.  
   
  Дополнительные сведения о построении из командной строки см. в разделе и [построение из командной строки](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
