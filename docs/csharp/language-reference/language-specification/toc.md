@@ -1,4 +1,5 @@
 # [Предварительная спецификация C# 6.0](index.md)
+## [Введение](../../../../_csharplang/spec/introduction.md)
 ## [Лексическая структура](../../../../_csharplang/spec/lexical-structure.md)
 ## [Основные понятия](../../../../_csharplang/spec/basic-concepts.md)
 ## [Типы](../../../../_csharplang/spec/types.md)
