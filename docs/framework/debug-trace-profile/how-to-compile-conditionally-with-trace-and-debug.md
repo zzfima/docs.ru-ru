@@ -1,12 +1,13 @@
 ---
-title: "Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug"
-ms.custom: 
+title: Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - trace compiler options
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ccdadc22728c28c8dea80f168a98cb985b2572a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5e590888a56ed4c325e89eb828349f4f289815cd
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug
 При отладке приложения во время разработки выходные данные трассировки и отладки отображаются в окне «Вывод» Visual Studio. Однако чтобы включить возможности трассировки в развернутом приложении, необходимо скомпилировать инструментированные приложения с включенной директивой компилятора **TRACE**. Это позволяет компилировать код трассировки в выпускаемой версии приложения. Если не включить директиву **TRACE**, весь код трассировки игнорируется во время компиляции и не включается в исполняемый код, который будет развернут.  
@@ -59,9 +61,9 @@ ms.lasthandoff: 12/22/2017
   
      Например, следующая инструкция компилятора, введенная в командной строке, включит код трассировки в компилируемый исполняемый файл.  
   
-     Для Visual Basic: **vbc /r:System.dll /d:TRACE=TRUE /d:DEBUG=FALSE MyApplication.vb**  
+     Для Visual Basic: **vbc-r:System.dll -d: TRACE = TRUE -d: DEBUG = FALSE MyApplication.vb**  
   
-     Для C#: **csc /r:System.dll /d:TRACE /d:DEBUG=FALSE MyApplication.cs**  
+     Для C#: **csc-r:System.dll -d: TRACE -d: DEBUG = FALSE MyApplication.cs**  
   
     > [!TIP]
     >  Чтобы скомпилировать несколько файлов приложений, оставьте пробел между именами файлов, например **MyApplication1.vb MyApplication2.vb MyApplication3.vb** или **MyApplication1.cs MyApplication2.cs MyApplication3.cs**.  
@@ -72,8 +74,8 @@ ms.lasthandoff: 12/22/2017
     |---------------|-------------|  
     |`vbc`|компилятор Visual Basic|  
     |`csc`|Компилятор C#|  
-    |`/r:`|Ссылка на внешнюю сборку (EXE или DLL)|  
-    |`/d:`|Определяет символ условной компиляции|  
+    |`-r:`|Ссылка на внешнюю сборку (EXE или DLL)|  
+    |`-d:`|Определяет символ условной компиляции|  
   
     > [!NOTE]
     >  Необходимо ввести команды TRACE или DEBUG буквами верхнего регистра. Для получения дополнительных сведений о командах условной компиляции введите `vbc /?` (для Visual Basic) или `csc /?` (для C#) в командной строке. Дополнительные сведения см. в разделах [Построение из командной строки](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (C#) или [Вызов компилятора командной строки](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Visual Basic).  
@@ -95,14 +97,14 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-disable-tracing-or-debugging"></a>Отключение трассировки или отладки  
   
-1.  Удалите директиву компилятора из исходного кода.  
+Удалите директиву компилятора из исходного кода.  
   
-     \- или -  
+\- или -  
   
-2.  Удалите комментарий к директиве компилятора.  
+Удалите комментарий к директиве компилятора.  
   
-    > [!NOTE]
-    >  Когда все готово для компиляции, можно выбрать команду **Построить** из меню **Сборка** или использовать метод командной строки (но без ввода **d:**), чтобы определить символы условной компиляции.  
+> [!NOTE]
+>  Когда все готово для компиляции, можно выбрать команду **Построить** из меню **Сборка** или использовать метод командной строки (но без ввода **d:**), чтобы определить символы условной компиляции.  
   
 ## <a name="see-also"></a>См. также  
  [Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
