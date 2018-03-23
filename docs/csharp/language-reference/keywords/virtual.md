@@ -1,5 +1,5 @@
 ---
-title: "virtual (Справочник по C#)"
+title: virtual (Справочник по C#)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -11,7 +11,7 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-caps.latest.revision: 
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: dce3333646bca6f558e3760849b6cffdb34a6c0b
@@ -37,7 +37,7 @@ public virtual double Area()
   
  По умолчанию методы не являются виртуальными. Такой метод переопределить невозможно.  
   
- Нельзя использовать модификатор `virtual` с модификаторами `static`, `abstract`, `private`, или `override`. В следующем примере показано виртуальное свойство.  
+ Нельзя использовать модификатор `virtual` с модификаторами `static`, `abstract`, `private`, или `override` модификаторы. В следующем примере показано виртуальное свойство.  
   
  [!code-csharp[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_1.cs)]  
   
