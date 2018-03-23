@@ -1,24 +1,26 @@
 ---
-title: "Сохраняемая дуплексная корреляция"
-ms.custom: 
+title: Сохраняемая дуплексная корреляция
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-caps.latest.revision: "9"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ceb5cbedf30c8ec53bc815f9cd52f7bcb8a6e327
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="durable-duplex-correlation"></a>Сохраняемая дуплексная корреляция
 Сохраняемую дуплексную корреляцию, также называемую корреляцией обратных вызовов, удобно использовать, когда служба рабочего процесса должна отправлять обратный вызов исходному вызывающему объекту. В отличие от дуплекса WCF, обратный вызов может выполняться в любой момент в будущем и не связан с одним и тем же каналом или временем существования канала. Единственное требование - у вызывающего должна быть конечная точка, прослушивающая сообщение обратного вызова. Благодаря этому обеспечивается возможность взаимодействия двух служб рабочего процесса в долговременных диалогах. В данном разделе приведены общие сведения о сохраняемой дуплексной корреляции.  
@@ -27,7 +29,7 @@ ms.lasthandoff: 12/22/2017
  Чтобы использовать сохраняемую дуплексную корреляцию, две службы должны использовать контекстную привязку, которая поддерживает двусторонние операции, такие как <xref:System.ServiceModel.NetTcpContextBinding> или <xref:System.ServiceModel.WSHttpContextBinding>. Вызывающая служба регистрирует <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> с привязкой на их клиентской конечной точке <xref:System.ServiceModel.Endpoint>. Принимающая служба получает эти данные в первоначальном вызове, а затем использует их для собственных <xref:System.ServiceModel.Endpoint> в действии <xref:System.ServiceModel.Activities.Send>, выполняющем обратный вызов вызывающей службы. В этом примере две службы взаимодействуют друг с другом. Первая служба вызывает метод для второй службы, а затем ожидает ответа. Второй службе известно имя метода обратного вызова, но во время разработки конечная точка службы, реализующая этот метод, неизвестна.  
   
 > [!NOTE]
->  Сохраняемая дуплексная корреляция может быть использована только в случае, если параметр <xref:System.ServiceModel.Channels.AddressingVersion> конечной точки установлен в значение <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. Если нет, то <xref:System.InvalidOperationException> исключение со следующим сообщением: «сообщение содержит заголовок контекста обратного вызова со ссылкой на конечную точку для AddressingVersion ' Addressing200408 (гиперссылка «http://schemas.xmlsoap.org/ws/2004/08/ адресация» http://schemas.xmlsoap.org/ws/2004/08/addressing)'. Контекст обратного вызова может быть передан только в случае, если параметр AddressingVersion установлен в значение 'WSAddressing10'».  
+>  Сохраняемая дуплексная корреляция может быть использована только в случае, если параметр <xref:System.ServiceModel.Channels.AddressingVersion> конечной точки установлен в значение <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. Если это не так, то <xref:System.InvalidOperationException> исключение со следующим сообщением: «сообщение содержит заголовок контекста обратного вызова со ссылкой на конечную точку для AddressingVersion ' Addressing200408 (ГИПЕРССЫЛКИ»http://schemas.xmlsoap.org/ws/2004/08/addressing" http://schemas.xmlsoap.org/ws/2004/08/addressing)". Контекст обратного вызова может быть передан только в случае, если параметр AddressingVersion установлен в значение 'WSAddressing10'».  
   
  В следующем примере выполняется размещение службы рабочего процесса, с помощью которой создается обратный вызов <xref:System.ServiceModel.Endpoint> с помощью привязки <xref:System.ServiceModel.WSHttpContextBinding>.  
   
@@ -212,4 +214,4 @@ WF1 - Items Received
  В этом примере оба рабочих процесса явно управляют корреляцией с помощью объекта <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>. Поскольку в этих образцах имеется только одна корреляция, настройки управления <xref:System.ServiceModel.Activities.CorrelationHandle>, заданные по умолчанию, не требуют изменений.  
   
 ## <a name="see-also"></a>См. также  
- [Сохраняемый дуплекс &#91; Образцы WF &#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)
+ [Сохраняемый дуплекс &#91;образцы WF&#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)

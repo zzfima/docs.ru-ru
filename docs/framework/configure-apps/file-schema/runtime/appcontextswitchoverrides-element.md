@@ -1,14 +1,14 @@
 ---
-title: "&lt;AppContextSwitchOverrides&gt; элемент"
-ms.custom: 
+title: '&lt;AppContextSwitchOverrides&gt; Element'
+ms.custom: ''
 ms.date: 01/08/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-bcl
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - AppContextSwitchOverrides
@@ -16,23 +16,24 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 71888febdc42f0ee65bdcd55a761700eda065bc1
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/23/2018
 ---
-# <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; элемент
+# <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; Element
 Определяет один или несколько коммутаторов, используемых классом <xref:System.AppContext> для предоставления механизма отказа от новых функциональных возможностей.  
   
  \<configuration>  
  \<Среда выполнения >  
-\<AppContextSwitchOverrides >  
+\<AppContextSwitchOverrides>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="value-attribute"></a>значение атрибута  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |«имя = значение»|Имя коммутатора предопределенных вместе со значением (`true` или `false`). Несколько пар имя значение коммутатора разделяются точками с запятой («;»). Список стандартных коммутатора имен, поддерживаемых платформой .NET Framework см. в разделе "Примечания".|  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  
@@ -72,7 +73,7 @@ ms.lasthandoff: 01/09/2018
   
  Платформа .NET Framework поддерживает следующие параметры:  
   
-|Имя коммутатора|Описание:|Представленные|  
+|Имя коммутатора|Описание|Представленные|  
 |-----------------|-----------------|----------------|  
 |`Switch.MS.Internal.`<br/>`DoNotApplyLayoutRoundingToMarginsAndBorderThickness`|Определяет, использует ли Windows Presentation Foundation устаревший алгоритм для макета элемента управления. Дополнительные сведения см. в разделе [Устранение рисков. Макет WPF](~/docs/framework/migration-guide/mitigation-wpf-layout.md).|.NET Framework 4.6|  
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|Определяет, является ли используемый по умолчанию алгоритм, используемый для подписи частей пакета с PackageDigitalSignatureManager SHA1 или SHA256.|.NET Framework 4.7.1|

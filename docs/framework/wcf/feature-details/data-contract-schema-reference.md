@@ -1,34 +1,34 @@
 ---
-title: "Справочник по схеме контрактов данных"
-ms.custom: 
+title: Справочник по схеме контрактов данных
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 57ccc812aab5df0a9acd99bdcde327d56e4bad8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="data-contract-schema-reference"></a>Справочник по схеме контрактов данных
 В данном разделе описывается подмножество схемы XML (XSD), используемое <xref:System.Runtime.Serialization.DataContractSerializer> для описания типов среды CLR, применяемых для сериализации XML.  
   
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer - сопоставления  
- `DataContractSerializer` Сопоставляет типы CLR с XSD при экспорте метаданных из [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] службы через конечную точку метаданных или [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Сериализатор контракта данных](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
+ `DataContractSerializer` Сопоставляет типы CLR с XSD при экспорте метаданных из [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] службы через конечную точку метаданных или [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Сериализатор контракта данных](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
   
  `DataContractSerializer` также сопоставляет типы XSD типам среды CLR, когда для доступа к документам WSDL или XSD и создания контрактов данных для служб или клиентов используется Svcutil.exe.  
   
@@ -213,7 +213,7 @@ ms.lasthandoff: 12/22/2017
 |`keyref`|Не обрабатывается.|  
 |(пусто)|Поддерживается.|  
   
- \*При использовании `simpleType` и `complexType,` сопоставление анонимных типов аналогичен-анонимные типы, за исключением того, что анонимные контракты данных отсутствуют, и поэтому создается именованный контракт данных создается с именем, образованным от имени элемента. Ниже перечислены правила для анонимных типов.  
+ \* При использовании `simpleType` и `complexType,` сопоставление анонимных типов аналогичен-анонимные типы, за исключением того, что анонимные контракты данных отсутствуют, и поэтому создается именованный контракт данных создается с именем, образованным от имени элемента. Ниже перечислены правила для анонимных типов.  
   
 -   Сведения о реализации[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] : если имя `xs:element` не содержит точек, анонимный тип сопоставляется внутреннему типу внешнего типа контракта данных. Если имя содержит точки, итоговый тип контракта данных является независимым (не внутренним типом).  
   
@@ -342,7 +342,7 @@ public enum MyEnum
 </xs:simpleType>  
 ```  
   
-### <a name="xslist"></a>\<xs: list >  
+### <a name="xslist"></a>\<xs:list>  
  `DataContractSerializer` сопоставляет типы перечисления, отмеченные `System.FlagsAttribute` , `xs:list` , образованному из `xs:string`. Никакие другие виды `xs:list` не поддерживаются.  
   
 ### <a name="xslist-attributes"></a>\<xs: list >: атрибуты  
@@ -537,7 +537,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>.|  
   
 ## <a name="iserializable-types-mapping"></a>Сопоставление типов ISerializable  
- В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 1.0 интерфейс `ISerializable` использовался как основной механизм сериализации объектов для сохранения или передачи данных. Существует много типов [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , которые реализуют интерфейс `ISerializable` и могут автоматически передаваться между приложениями. `DataContractSerializer` поддерживает классы `ISerializable` . `DataContractSerializer` сопоставляет типы схемы реализации `ISerializable`, отличающиеся только полным именем типа (QName) и фактически являющиеся коллекциями свойств. Например, `DataContractSerializer` сопоставляет <xref:System.Exception> следующему типу XSD в пространстве имен http://schemas.datacontract.org/2004/07/System.  
+ В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 1.0 интерфейс `ISerializable` использовался как основной механизм сериализации объектов для сохранения или передачи данных. Существует много типов [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , которые реализуют интерфейс `ISerializable` и могут автоматически передаваться между приложениями. `DataContractSerializer` поддерживает классы `ISerializable` . `DataContractSerializer` сопоставляет типы схемы реализации `ISerializable` , отличающиеся только полным именем типа (QName) и фактически являющиеся коллекциями свойств. Например `DataContractSerializer` сопоставляет <xref:System.Exception> следующему типу XSD в http://schemas.datacontract.org/2004/07/System пространства имен.  
   
 ```xml  
 <xs:complexType name="Exception">  

@@ -1,26 +1,28 @@
 ---
-title: "Какой &#39; новые возможности ADO.NET"
-ms.custom: 
+title: Что&#39;новые возможности ADO.NET
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-caps.latest.revision: "25"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: fb23f329906e21f3d8558139075c5f575f2f13bd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/23/2018
 ---
-# <a name="what39s-new-in-adonet"></a>Какой &#39; новые возможности ADO.NET
+# <a name="what39s-new-in-adonet"></a>Что&#39;новые возможности ADO.NET
 В [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] предоставляются следующие новые возможности.  
   
 ## <a name="sqlclient-data-provider"></a>Поставщик данных SqlClient  
@@ -54,7 +56,7 @@ ms.lasthandoff: 01/19/2018
   
 -   `Type System Version=SQL Server 2012;` - это новое значение, которое должно быть передано в свойство соединения `Type System Version`. Значение `Type System Version=Latest;` теперь устарело и заменено эквивалентным `Type System Version=SQL Server 2008;`. Для получения дополнительной информации см. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
--   SqlClient обеспечивает дополнительную поддержку разреженных столбцов - средство, которое было добавлено в SQL Server 2008. Если приложение уже имеет доступ к данным в таблице, в которой используется поддержка разреженных столбцов, должно быть обнаружено повышение производительности. Столбец IsColumnSet в <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> указывает, является ли столбец разреженным столбцом, который является элементом набора столбцов. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>Указывает, является ли столбец разреженным столбцом (в разделе [коллекций схем SQL Server](../../../../docs/framework/data/adonet/sql-server-schema-collections.md) для получения дополнительной информации). Дополнительные сведения о разреженных столбцах см. в разделе [Использование разреженных столбцов](http://go.microsoft.com/fwlink/?LinkId=224244).  
+-   SqlClient обеспечивает дополнительную поддержку разреженных столбцов - средство, которое было добавлено в SQL Server 2008. Если приложение уже имеет доступ к данным в таблице, в которой используется поддержка разреженных столбцов, должно быть обнаружено повышение производительности. Столбец IsColumnSet в <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> указывает, является ли столбец разреженным столбцом, который является элементом набора столбцов. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> Указывает, является ли столбец разреженным столбцом (в разделе [коллекций схем SQL Server](../../../../docs/framework/data/adonet/sql-server-schema-collections.md) для получения дополнительной информации). Дополнительные сведения о разреженных столбцах см. в разделе [Использование разреженных столбцов](http://go.microsoft.com/fwlink/?LinkId=224244).  
   
 -   Сборка Microsoft.SqlServer.Types.dll, содержащая типы пространственных данных, была обновлена с переходом от версии 10.0 к версии 11.0. Работа приложений, которые ссылаются на эту сборку, может оканчиваться сбоем. Дополнительные сведения см. в разделе [критические изменения в функциях ядра СУБД](http://go.microsoft.com/fwlink/?LinkId=224367).  
   

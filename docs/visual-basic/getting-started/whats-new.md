@@ -1,5 +1,5 @@
 ---
-title: "Новые возможности Visual Basic"
+title: Новые возможности Visual Basic
 ms.date: 02/15/2018
 ms.prod: .net
 ms.technology:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4df9a34e078de9daeff85c894afbbf4d60501f6b
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
-ms.translationtype: HT
+ms.openlocfilehash: c0452a5dde3a266f5d50f69016eac8144bab9ba6
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Новые возможности Visual Basic
 
@@ -34,6 +34,9 @@ Visual Basic 15.5
 
 Visual Basic 15.3   
 Описание новых функций см. в статье [Visual Basic 15.3](#visual-basic-153)
+
+Visual Basic 2017   
+Описание новых функций см. в статье [Visual Basic 2017](#visual-basic-2017)
 
 Visual Basic/Visual Studio .NET 2015   
 Описание новых функций см. в статье [Visual Basic 14](#visual-basic-14)
@@ -78,7 +81,7 @@ StudentInfo.Display("Mary", age:=19, #9/21/1998#)
 ```vb
 Dim number As Integer = &H_C305_F860
 ``` 
-Чтобы использовать символ подчеркивания в качестве начального разделителя, необходимо добавить в файл проекта Visual Basic (*.vbproj) следующий элемент:
+Для использования в качестве начальных разделителя знак подчеркивания, необходимо добавить следующий элемент в проект Visual Basic (\*.vbproj) файла:
 
 ```xml
 <PropertyGroup>
@@ -88,15 +91,19 @@ Dim number As Integer = &H_C305_F860
 
 ## <a name="visual-basic-153"></a>Visual Basic 15.3
 
-[Вывод именованного кортежа](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
+[**Определение именованных кортежа**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
 
 При присвоении значения элементов кортежа из переменных Visual Basic выводит имя элементов кортежа из соответствующих имен переменных; нет необходимости явно называть элемент кортежа. В следующем примере вывод используется для создания кортежа с тремя именованными элементами: `state`, `stateName` и `capital`.
 
 [!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
+**Дополнительные параметры компилятора**  
+
+Теперь поддерживает компилятора командной строки Visual Basic [ **- refout** ](../reference/command-line-compiler/refout-compiler-option.md) и [ **- refonly** ](../reference/command-line-compiler/refonly-compiler-option.md) параметры компилятора для управления выводом ссылочные сборки. **-refout** определяет выходной каталог сборки ссылок и **- refonly** указывает, что будут выводиться при компиляции ссылочную сборку.
+
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
-[Кортежи](../programming-guide/language-features/data-types/tuples.md)
+[**Кортежи**](../programming-guide/language-features/data-types/tuples.md)
 
 Кортежи представляют собой облегченную структуру данных, которая обычно используется для получения сразу нескольких значений за один вызов метода. Как правило, для получения нескольких значений с помощью одного метода необходимо выполнить одно из следующих действий:
 

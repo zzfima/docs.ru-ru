@@ -1,12 +1,13 @@
 ---
-title: "Как: Изменение поставщика служб шифрования для сертификата X.509 &#39; s закрытого ключа"
-ms.custom: 
+title: 'Как: изменить поставщика служб шифрования для сертификата X.509&#39;s закрытого ключа'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,18 +16,19 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e7dea9834b654be0b86155e18524053efa4b778b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/23/2018
 ---
-# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Как: Изменение поставщика служб шифрования для сертификата X.509 &#39; s закрытого ключа
+# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Как: изменить поставщика служб шифрования для сертификата X.509&#39;s закрытого ключа
 В этом разделе объясняется, как изменить поставщика служб шифрования, предоставляющего закрытый ключ сертификата X.509, и интегрировать поставщика в инфраструктуру безопасности [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Дополнительные сведения об использовании сертификатов см. в разделе [работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Инфраструктурой безопасности позволяет встраивать новые типы маркеров безопасности, как описано в [как: Создание пользовательского токена](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Пользовательский маркер также можно использовать для замены существующих типов маркеров, предоставляемых системой.  

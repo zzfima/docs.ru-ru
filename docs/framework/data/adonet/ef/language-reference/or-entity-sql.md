@@ -17,10 +17,10 @@ manager: craigg
 ms.workload:
 - dotnet
 ms.openlocfilehash: b44934aa0db73f872f0ab27a4c36c5c615855de1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="-or-entity-sql"></a>|| (ИЛИ) (Entity SQL)
 Объединяет два выражения типа `Boolean` .  
@@ -43,7 +43,7 @@ boolean_expression || boolean_expression
 ## <a name="remarks"></a>Примечания  
  OR - это логический оператор [!INCLUDE[esql](../../../../../../includes/esql-md.md)] . Он используется только для объединения двух условий. Если в инструкции используется более одного логического оператора, операторы OR вычисляются после операторов AND. Однако порядок выполнения можно изменить с помощью скобок.  
   
- Двойная вертикальная черта (&#124; &#124;) имеет ту же функциональность, что и оператор OR.  
+ Двойная вертикальная черта (&#124;&#124;) имеют ту же функциональность, что и оператор OR.  
   
  В следующей таблице указаны возможные входные значения и возвращаемые типы.  
   
