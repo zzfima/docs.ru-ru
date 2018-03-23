@@ -1,12 +1,13 @@
 ---
-title: "Практическое руководство. Добавление операторов трассировки в код приложения"
-ms.custom: 
+title: Практическое руководство. Добавление операторов трассировки в код приложения
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,27 +21,28 @@ helpviewer_keywords:
 - trace switches, conditional writes based on switches
 - WriteIf method
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 134e03a1438e4c9399962a245eb44eec9dd02924
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
-# <a name="how-to-add-trace-statements-to-application-code"></a><span data-ttu-id="60802-102">Практическое руководство. Добавление операторов трассировки в код приложения</span><span class="sxs-lookup"><span data-stu-id="60802-102">How to: Add Trace Statements to Application Code</span></span>
-<span data-ttu-id="60802-103">Методы, наиболее часто используемые для отслеживания, — это методы для записи выходных данных в прослушиватели: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert** и **Fail**.</span><span class="sxs-lookup"><span data-stu-id="60802-103">The methods used most often for tracing are the methods for writing output to listeners: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, and **Fail**.</span></span> <span data-ttu-id="60802-104">Эти методы можно разделить на две категории: **Write**, **WriteLine** и **Fail** выдают выходные данные безусловно, в то время как методы **WriteIf**, **WriteLineIf** и **Assert** тестируют условие Boolean и выполняют или не выполняют запись в зависимости от значения условия.</span><span class="sxs-lookup"><span data-stu-id="60802-104">These methods can be divided into two categories: **Write**, **WriteLine**, and **Fail** all emit output unconditionally, whereas **WriteIf**, **WriteLineIf**, and **Assert** test a Boolean condition, and write or do not write based on the value of the condition.</span></span> <span data-ttu-id="60802-105">**WriteIf** и **WriteLineIf** выдают выходные данные, если условие равно `true`, а **Assert** выдает выходные данные, если условие равно `false`.</span><span class="sxs-lookup"><span data-stu-id="60802-105">**WriteIf** and **WriteLineIf** emit output if the condition is `true`, and **Assert** emits output if the condition is `false`.</span></span>  
+# <a name="how-to-add-trace-statements-to-application-code"></a><span data-ttu-id="36a8c-102">Практическое руководство. Добавление операторов трассировки в код приложения</span><span class="sxs-lookup"><span data-stu-id="36a8c-102">How to: Add Trace Statements to Application Code</span></span>
+<span data-ttu-id="36a8c-103">Методы, наиболее часто используемые для отслеживания, — это методы для записи выходных данных в прослушиватели: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert** и **Fail**.</span><span class="sxs-lookup"><span data-stu-id="36a8c-103">The methods used most often for tracing are the methods for writing output to listeners: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, and **Fail**.</span></span> <span data-ttu-id="36a8c-104">Эти методы можно разделить на две категории: **Write**, **WriteLine** и **Fail** выдают выходные данные безусловно, в то время как методы **WriteIf**, **WriteLineIf** и **Assert** тестируют условие Boolean и выполняют или не выполняют запись в зависимости от значения условия.</span><span class="sxs-lookup"><span data-stu-id="36a8c-104">These methods can be divided into two categories: **Write**, **WriteLine**, and **Fail** all emit output unconditionally, whereas **WriteIf**, **WriteLineIf**, and **Assert** test a Boolean condition, and write or do not write based on the value of the condition.</span></span> <span data-ttu-id="36a8c-105">**WriteIf** и **WriteLineIf** выдают выходные данные, если условие равно `true`, а **Assert** выдает выходные данные, если условие равно `false`.</span><span class="sxs-lookup"><span data-stu-id="36a8c-105">**WriteIf** and **WriteLineIf** emit output if the condition is `true`, and **Assert** emits output if the condition is `false`.</span></span>  
   
- <span data-ttu-id="60802-106">При разработке своей стратегии трассировки и отладки следует подумать о способе представления вывода.</span><span class="sxs-lookup"><span data-stu-id="60802-106">When designing your tracing and debugging strategy, you should think about how you want the output to look.</span></span> <span data-ttu-id="60802-107">При наличии нескольких операторов **Write**, заполненных несвязанными данными, получается сложный для чтения журнал.</span><span class="sxs-lookup"><span data-stu-id="60802-107">Multiple **Write** statements filled with unrelated information will create a log that is difficult to read.</span></span> <span data-ttu-id="60802-108">С другой стороны, при использовании метода **WriteLine** для размещения связанных операторов на разных строках может быть сложно понять, какие сведения связаны друг с другом.</span><span class="sxs-lookup"><span data-stu-id="60802-108">On the other hand, using **WriteLine** to put related statements on separate lines may make it difficult to distinguish what information belongs together.</span></span> <span data-ttu-id="60802-109">Как правило, при использовании нескольких операторов **Write** имеет смысл объединить информацию из разных источников для создания единого информационного сообщения и использовать оператор **WriteLine** для создания единого полного сообщения.</span><span class="sxs-lookup"><span data-stu-id="60802-109">In general, use multiple **Write** statements when you want to combine information from multiple sources to create a single informative message, and use the **WriteLine** statement when you want to create a single, complete message.</span></span>  
+ <span data-ttu-id="36a8c-106">При разработке своей стратегии трассировки и отладки следует подумать о способе представления вывода.</span><span class="sxs-lookup"><span data-stu-id="36a8c-106">When designing your tracing and debugging strategy, you should think about how you want the output to look.</span></span> <span data-ttu-id="36a8c-107">При наличии нескольких операторов **Write**, заполненных несвязанными данными, получается сложный для чтения журнал.</span><span class="sxs-lookup"><span data-stu-id="36a8c-107">Multiple **Write** statements filled with unrelated information will create a log that is difficult to read.</span></span> <span data-ttu-id="36a8c-108">С другой стороны, при использовании метода **WriteLine** для размещения связанных операторов на разных строках может быть сложно понять, какие сведения связаны друг с другом.</span><span class="sxs-lookup"><span data-stu-id="36a8c-108">On the other hand, using **WriteLine** to put related statements on separate lines may make it difficult to distinguish what information belongs together.</span></span> <span data-ttu-id="36a8c-109">Как правило, при использовании нескольких операторов **Write** имеет смысл объединить информацию из разных источников для создания единого информационного сообщения и использовать оператор **WriteLine** для создания единого полного сообщения.</span><span class="sxs-lookup"><span data-stu-id="36a8c-109">In general, use multiple **Write** statements when you want to combine information from multiple sources to create a single informative message, and use the **WriteLine** statement when you want to create a single, complete message.</span></span>  
   
-### <a name="to-write-a-complete-line"></a><span data-ttu-id="60802-110">Запись полной строки</span><span class="sxs-lookup"><span data-stu-id="60802-110">To write a complete line</span></span>  
+### <a name="to-write-a-complete-line"></a><span data-ttu-id="36a8c-110">Запись полной строки</span><span class="sxs-lookup"><span data-stu-id="36a8c-110">To write a complete line</span></span>  
   
-1.  <span data-ttu-id="60802-111">Вызовите метод <xref:System.Diagnostics.Trace.WriteLine%2A> или <xref:System.Diagnostics.Trace.WriteLineIf%2A>.</span><span class="sxs-lookup"><span data-stu-id="60802-111">Call the <xref:System.Diagnostics.Trace.WriteLine%2A> or <xref:System.Diagnostics.Trace.WriteLineIf%2A> method.</span></span>  
+1.  <span data-ttu-id="36a8c-111">Вызовите метод <xref:System.Diagnostics.Trace.WriteLine%2A> или <xref:System.Diagnostics.Trace.WriteLineIf%2A>.</span><span class="sxs-lookup"><span data-stu-id="36a8c-111">Call the <xref:System.Diagnostics.Trace.WriteLine%2A> or <xref:System.Diagnostics.Trace.WriteLineIf%2A> method.</span></span>  
   
-     <span data-ttu-id="60802-112">Символ возврата каретки добавляется в конец сообщения, возвращаемого этим методом, чтобы следующее сообщение, возвращаемое методом **Write**, **WriteIf**, **WriteLine** или **WriteLineIf**, начиналось со следующей строки:</span><span class="sxs-lookup"><span data-stu-id="60802-112">A carriage return is appended to the end of the message this method returns, so that the next message returned by **Write**, **WriteIf**, **WriteLine**, or **WriteLineIf** will begin on the following line:</span></span>  
+     <span data-ttu-id="36a8c-112">Символ возврата каретки добавляется в конец сообщения, возвращаемого этим методом, чтобы следующее сообщение, возвращаемое методом **Write**, **WriteIf**, **WriteLine** или **WriteLineIf**, начиналось со следующей строки:</span><span class="sxs-lookup"><span data-stu-id="36a8c-112">A carriage return is appended to the end of the message this method returns, so that the next message returned by **Write**, **WriteIf**, **WriteLine**, or **WriteLineIf** will begin on the following line:</span></span>  
   
     ```vb  
     Dim errorFlag As Boolean = False  
@@ -55,11 +57,11 @@ ms.lasthandoff: 12/22/2017
        "Error in AppendData procedure.");  
     ```  
   
-### <a name="to-write-a-partial-line"></a><span data-ttu-id="60802-113">Запись частичной строки</span><span class="sxs-lookup"><span data-stu-id="60802-113">To write a partial line</span></span>  
+### <a name="to-write-a-partial-line"></a><span data-ttu-id="36a8c-113">Запись частичной строки</span><span class="sxs-lookup"><span data-stu-id="36a8c-113">To write a partial line</span></span>  
   
-1.  <span data-ttu-id="60802-114">Вызовите метод <xref:System.Diagnostics.Trace.Write%2A> или <xref:System.Diagnostics.Trace.WriteIf%2A>.</span><span class="sxs-lookup"><span data-stu-id="60802-114">Call the <xref:System.Diagnostics.Trace.Write%2A> or <xref:System.Diagnostics.Trace.WriteIf%2A> method.</span></span>  
+1.  <span data-ttu-id="36a8c-114">Вызовите метод <xref:System.Diagnostics.Trace.Write%2A> или <xref:System.Diagnostics.Trace.WriteIf%2A>.</span><span class="sxs-lookup"><span data-stu-id="36a8c-114">Call the <xref:System.Diagnostics.Trace.Write%2A> or <xref:System.Diagnostics.Trace.WriteIf%2A> method.</span></span>  
   
-     <span data-ttu-id="60802-115">Следующее сообщение, выдаваемое оператором **Write**, **WriteIf**, **WriteLine** или **WriteLineIf**, начинается на той же строке, что и сообщение, выданное оператором **Write** или **WriteIf**:</span><span class="sxs-lookup"><span data-stu-id="60802-115">The next message put out by a **Write**, **WriteIf**, **WriteLine**, or **WriteLineIf** will begin on the same line as the message put out by the **Write** or **WriteIf** statement:</span></span>  
+     <span data-ttu-id="36a8c-115">Следующее сообщение, выдаваемое оператором **Write**, **WriteIf**, **WriteLine** или **WriteLineIf**, начинается на той же строке, что и сообщение, выданное оператором **Write** или **WriteIf**:</span><span class="sxs-lookup"><span data-stu-id="36a8c-115">The next message put out by a **Write**, **WriteIf**, **WriteLine**, or **WriteLineIf** will begin on the same line as the message put out by the **Write** or **WriteIf** statement:</span></span>  
   
     ```vb  
     Dim errorFlag As Boolean = False  
@@ -76,9 +78,9 @@ ms.lasthandoff: 12/22/2017
     Trace.Write("Invalid value for data request");  
     ```  
   
-### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a><span data-ttu-id="60802-116">Проверка наличия определенного условия до или после выполнения метода</span><span class="sxs-lookup"><span data-stu-id="60802-116">To verify that certain conditions exist either before or after you execute a method</span></span>  
+### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a><span data-ttu-id="36a8c-116">Проверка наличия определенного условия до или после выполнения метода</span><span class="sxs-lookup"><span data-stu-id="36a8c-116">To verify that certain conditions exist either before or after you execute a method</span></span>  
   
-1.  <span data-ttu-id="60802-117">Вызовите метод <xref:System.Diagnostics.Trace.Assert%2A>.</span><span class="sxs-lookup"><span data-stu-id="60802-117">Call the <xref:System.Diagnostics.Trace.Assert%2A> method.</span></span>  
+1.  <span data-ttu-id="36a8c-117">Вызовите метод <xref:System.Diagnostics.Trace.Assert%2A>.</span><span class="sxs-lookup"><span data-stu-id="36a8c-117">Call the <xref:System.Diagnostics.Trace.Assert%2A> method.</span></span>  
   
     ```vb  
     Dim i As Integer = 4  
@@ -91,14 +93,14 @@ ms.lasthandoff: 12/22/2017
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="60802-118">Оператор **Assert** можно использовать и для отладки, и для трассировки.</span><span class="sxs-lookup"><span data-stu-id="60802-118">You can use **Assert** with both tracing and debugging.</span></span> <span data-ttu-id="60802-119">В этом примере стек вызовов выводится в любой прослушиватель в коллекции **Listeners**.</span><span class="sxs-lookup"><span data-stu-id="60802-119">This example outputs the call stack to any listener in the **Listeners** collection.</span></span> <span data-ttu-id="60802-120">Дополнительные сведения см. в разделах [Утверждения в управляемом коде](/visualstudio/debugger/assertions-in-managed-code) и <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="60802-120">For more information, see [Assertions in Managed Code](/visualstudio/debugger/assertions-in-managed-code) and <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.</span></span>  
+    >  <span data-ttu-id="36a8c-118">Оператор **Assert** можно использовать и для отладки, и для трассировки.</span><span class="sxs-lookup"><span data-stu-id="36a8c-118">You can use **Assert** with both tracing and debugging.</span></span> <span data-ttu-id="36a8c-119">В этом примере стек вызовов выводится в любой прослушиватель в коллекции **Listeners**.</span><span class="sxs-lookup"><span data-stu-id="36a8c-119">This example outputs the call stack to any listener in the **Listeners** collection.</span></span> <span data-ttu-id="36a8c-120">Дополнительные сведения см. в разделах [Утверждения в управляемом коде](/visualstudio/debugger/assertions-in-managed-code) и <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="36a8c-120">For more information, see [Assertions in Managed Code](/visualstudio/debugger/assertions-in-managed-code) and <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="60802-121">См. также</span><span class="sxs-lookup"><span data-stu-id="60802-121">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="36a8c-121">См. также</span><span class="sxs-lookup"><span data-stu-id="36a8c-121">See Also</span></span>  
  <xref:System.Diagnostics.Debug.WriteIf%2A?displayProperty=nameWithType>  
  <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>  
  <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>  
  <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="60802-122">Трассировка и инструментирование приложений</span><span class="sxs-lookup"><span data-stu-id="60802-122">Tracing and Instrumenting Applications</span></span>](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [<span data-ttu-id="60802-123">Практическое руководство. Создание, инициализация и настройка переключателей трассировки</span><span class="sxs-lookup"><span data-stu-id="60802-123">How to: Create, Initialize and Configure Trace Switches</span></span>](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
- [<span data-ttu-id="60802-124">Переключатели трассировки</span><span class="sxs-lookup"><span data-stu-id="60802-124">Trace Switches</span></span>](../../../docs/framework/debug-trace-profile/trace-switches.md)  
- [<span data-ttu-id="60802-125">Прослушиватели трассировки</span><span class="sxs-lookup"><span data-stu-id="60802-125">Trace Listeners</span></span>](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+ [<span data-ttu-id="36a8c-122">Трассировка и инструментирование приложений</span><span class="sxs-lookup"><span data-stu-id="36a8c-122">Tracing and Instrumenting Applications</span></span>](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
+ [<span data-ttu-id="36a8c-123">Практическое руководство. Создание, инициализация и настройка переключателей трассировки</span><span class="sxs-lookup"><span data-stu-id="36a8c-123">How to: Create, Initialize and Configure Trace Switches</span></span>](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
+ [<span data-ttu-id="36a8c-124">Переключатели трассировки</span><span class="sxs-lookup"><span data-stu-id="36a8c-124">Trace Switches</span></span>](../../../docs/framework/debug-trace-profile/trace-switches.md)  
+ [<span data-ttu-id="36a8c-125">Прослушиватели трассировки</span><span class="sxs-lookup"><span data-stu-id="36a8c-125">Trace Listeners</span></span>](../../../docs/framework/debug-trace-profile/trace-listeners.md)
