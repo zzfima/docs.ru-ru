@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7c3fac318e05c5e3d6fb9dd7117cac70ead03dc
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: cf20e2916efd2eb10065be22c319e34ddb2bda9a
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>Примеры командных строк компиляции (Visual Basic)
-В качестве альтернативы для компиляции [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] программы изнутри [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], можно скомпилировать из командной строки для создания исполняемых файлов (.exe) или файлы библиотеки динамической компоновки (DLL).  
+В качестве альтернативы для компиляции программы Visual Basic с [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], можно скомпилировать из командной строки для создания исполняемых файлов (.exe) или файлы библиотеки динамической компоновки (DLL).  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Компилятор командной строки поддерживает полный набор параметров, входные и выходные файлы, сборки и отладки элементов управления и параметров препроцессора. Каждый параметр доступен в двух формах: `-option` и `/option`. В данном документе показана только `-option` формы.  
+ Компилятор командной строки Visual Basic поддерживает полный набор параметров для управления входными и выходные файлы, сборки, отладки и параметры препроцессора. Каждый параметр доступен в двух формах: `-option` и `/option`. В данном документе показана только `-option` формы.  
   
  В следующей таблице перечислены некоторые примеры команд командной строки, которые можно изменять для собственного использования.  
   
@@ -34,14 +34,13 @@ ms.lasthandoff: 03/22/2018
 |Скомпилируйте файл VB и создайте File.exe|`vbc -reference:Microsoft.VisualBasic.dll File.vb`|  
 |Скомпилируйте файл VB и создайте File.dll|`vbc -target:library File.vb`|  
 |Скомпилируйте файл VB и создайте My.exe|`vbc -out:My.exe File.vb`|  
-|Скомпилируйте все [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] файлы в текущем каталоге с оптимизацией и `DEBUG` символ определен, формирующего File2.exe|`vbc -define:DEBUG=1 -optimize -out:File2.exe *.vb`|  
-|Скомпилируйте все [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] файлы в текущем каталоге, создание отладочной версии File2.dll без отображения эмблемы или предупреждений|`vbc -target:library -out:File2.dll -nowarn -nologo -debug *.vb`|  
-|Скомпилируйте все [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] файлы в текущем каталоге в Something.dll|`vbc -target:library -out:Something.dll *.vb`|  
-  
- При компиляции из командной строки, необходимо явно ссылаться Microsoft [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] библиотеку времени выполнения с помощью `-reference` параметр компилятора.  
+|Скомпилируйте файл VB и создание библиотеки и ссылочную сборку с именем File.dll|`vbc -target:library -ref:.\debug\bin\ref\file.dll File.vb`|
+|Компилировать все файлы Visual Basic в текущем каталоге с оптимизацией на и `DEBUG` символ определен, формирующего File2.exe|`vbc -define:DEBUG=1 -optimize -out:File2.exe *.vb`|  
+|Компилировать все файлы Visual Basic в текущем каталоге, создание отладочной версии File2.dll без отображения эмблемы или предупреждений|`vbc -target:library -out:File2.dll -nowarn -nologo -debug *.vb`|  
+|Компилировать все файлы Visual Basic в текущем каталоге в Something.dll|`vbc -target:library -out:Something.dll *.vb`|  
   
 > [!TIP]
->  При построении проекта с помощью Visual Studio IDE можно отобразить сведения о связанном **vbc** с его параметры компилятора в окне вывода. Чтобы отобразить эти сведения, откройте [диалоговое окно «Параметры», проекты и решения, построения и выполнения](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)и задайте **детализации, выходные данные построения проекта MSBuild** для **обычный** или более высоком уровне детализации. Дополнительные сведения см. в статье [Практическое руководство. Просмотр, сохранение и настройка файлов журнала сборки](http://msdn.microsoft.com/library/75d38b76-26d6-4f43-bbe7-cbacd7cc81e7).  
+>  При построении проекта с помощью Visual Studio IDE можно отобразить сведения о связанном **vbc** с его параметры компилятора в окне вывода. Чтобы отобразить эти сведения, откройте [диалоговое окно «Параметры», проекты и решения, построения и выполнения](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)и задайте **детализации, выходные данные построения проекта MSBuild** для **обычный** или более высоком уровне детализации.   
   
 ## <a name="see-also"></a>См. также  
  [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)  

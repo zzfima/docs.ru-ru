@@ -12,14 +12,16 @@ helpviewer_keywords:
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 008a1619343874396e22c3606f8a0aeadd81cd7a
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 4c78246a1e9fe14b0ba64ac447293d02e8416079
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Параметры компилятора Visual Basic в алфавитном порядке
-Компилятор командной строки [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] служит альтернативой программам компиляции в составе интегрированной среды разработки [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Ниже приведен список параметров компилятора командной строки [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], отсортированных по алфавиту.  
+Компилятор командной строки Visual Basic служит альтернативой программам компиляции в [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] интегрированной среды разработки (IDE). Ниже приведен список параметров компилятора командной строки Visual Basic, отсортированный в алфавитном порядке.  
+
+[!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 |Параметр|Цель|  
 |------------|-------------|  
@@ -36,9 +38,9 @@ ms.lasthandoff: 03/22/2018
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|Определяет символы условной компиляции.|  
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|Указывает, будет ли сборка полностью или частично подписана.|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Обрабатывает комментарии к документации в XML-файл.|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Указывает, как компилятор [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] должен сообщать о внутренних ошибках.|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Указывает, как компилятор Visual Basic должна сообщать о внутренних ошибках компилятора.|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Задает выравнивание размеров выходного файла.|  
-|[-help](../../../visual-basic-reference/command-line-compiler/help.md)|Отображает параметры компилятора. Эта команда аналогична параметру `-?`. Компиляция не происходит.|  
+|[-help](../../../visual-basic/reference/command-line-compiler/help.md)|Отображает параметры компилятора. Эта команда аналогична параметру `-?`. Компиляция не происходит.|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Определяет, поддерживает ли указанный исполняемый файл технологию Address Space Layout Randomization (ASLR) с высокой энтропией.|  
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|Импортирует пространство имен из указанной сборки.|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|Указывает имя контейнера для пары ключей, чтобы задать для сборки строгое имя.|  
@@ -67,6 +69,8 @@ ms.lasthandoff: 03/22/2018
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|Запрещает компилятору показывать код синтаксических ошибок и предупреждений.|  
 |[-recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|Выполняет поиск в подкаталогах исходных файлов для компиляции.|  
 |[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|Импортирует метаданные из сборки.|  
+|[/refonly](refonly-compiler-option.md)|Выводит ссылочную сборку.|
+|[/refout](refout-compiler-option.md)|Задает выходной путь сборки ссылки.|
 |[-removeintchecks](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|Отключает проверку переполнения для целочисленных значений.|  
 |[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|Внедряет управляемый ресурс в сборку.|  
 |[-rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|Задает пространство имен для всех объявлений типов.|  
