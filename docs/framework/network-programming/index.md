@@ -1,11 +1,11 @@
 ---
-title: "Сетевое программирование в .NET Framework"
-ms.custom: 
+title: Сетевое программирование в .NET Framework
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Networking
@@ -13,21 +13,23 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d702e7c910536566aabfaa7948afb24ae94d2cb1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: e51f4464eb39dc12ea50f4a94e55030895866f08
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="network-programming-in-the-net-framework"></a>Сетевое программирование в .NET Framework
 Microsoft .NET Framework обеспечивает многоуровневую, расширяемую и управляемую реализацию служб Интернета, которую можно легко и быстро интегрировать в приложения. В сетевых приложениях можно использовать подключаемые протоколы, которые позволяют автоматически применять новые протоколы Интернета, или управляемую реализацию интерфейса сокетов Windows, дающую возможность работать с сетью на уровне сокетов.  
   
 ## <a name="in-this-section"></a>В этом разделе  
+
  [Введение в подключаемые протоколы](../../../docs/framework/network-programming/introducing-pluggable-protocols.md)  
  Описание способов доступа к интернет-ресурсу вне зависимости от используемого протокола доступа  
   
@@ -144,6 +146,8 @@ Microsoft .NET Framework обеспечивает многоуровневую, 
  Обеспечивает поддержку настройки аутентификации с помощью расширенной защиты приложений.  
   
 ## <a name="see-also"></a>См. также  
+
+ [Рекомендации по использованию протокола TLS с .NET Framework](../../../docs/framework/network-programming/tls.md)  
  [Практические руководства по сетевому программированию](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
  [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Примеры сетевых приложений для .NET в галерее кода MSDN](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  

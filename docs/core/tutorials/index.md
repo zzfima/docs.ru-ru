@@ -1,6 +1,6 @@
 ---
-title: "Учебники по .NET Core"
-description: "Руководства по .NET Core научат вас создавать приложения и библиотеки на Mac, Linux и в Windows."
+title: Учебники по .NET Core
+description: Руководства по .NET Core научат вас создавать приложения и библиотеки на Mac, Linux и в Windows.
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
-ms.workload: dotnetcore
-ms.openlocfilehash: 8b1e80023139a4ebc3c961c47c06b9afd0370014
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 267cac338263f964006b424bb855d1022990498c
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="net-core-tutorials"></a>Учебники по .NET Core
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 12/23/2017
 - [Тестирование библиотеки классов ](testing-library-with-visual-studio.md)
 - [Использование библиотеки классов ](consuming-library-with-visual-studio.md)
 - [Создание полного решения C# .NET Core в Windows](using-on-windows-full-solution.md)
-- [Учебник по NoSQL: сборка консольного приложения C# DocumentDB в .NET Core](/azure/documentdb/documentdb-dotnetcore-get-started)
+- [Azure Cosmos DB: начало работы с API SQL и .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Разработка приложений с помощью Visual Studio Code
 
