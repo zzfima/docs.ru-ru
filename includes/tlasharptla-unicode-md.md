@@ -1,1 +1,1 @@
-<span data-ttu-id="fc239-101">Юникод</span><span class="sxs-lookup"><span data-stu-id="fc239-101">Unicode</span></span>
+<span data-ttu-id="6f049-101">Юникод</span><span class="sxs-lookup"><span data-stu-id="6f049-101">Unicode</span></span>

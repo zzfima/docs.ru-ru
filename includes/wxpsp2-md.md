@@ -1,1 +1,1 @@
-<span data-ttu-id="711ef-101">Windows XP с пакетом обновления 2 (SP2)</span><span class="sxs-lookup"><span data-stu-id="711ef-101">Windows XP SP2</span></span>
+<span data-ttu-id="a9075-101">Windows XP с пакетом обновления 2 (SP2)</span><span class="sxs-lookup"><span data-stu-id="a9075-101">Windows XP SP2</span></span>

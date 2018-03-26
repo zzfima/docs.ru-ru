@@ -1,1 +1,1 @@
-<span data-ttu-id="25ae9-101">IIS 7.0</span><span class="sxs-lookup"><span data-stu-id="25ae9-101">IIS 7.0</span></span>
+<span data-ttu-id="4bdc1-101">IIS 7.0</span><span class="sxs-lookup"><span data-stu-id="4bdc1-101">IIS 7.0</span></span>
