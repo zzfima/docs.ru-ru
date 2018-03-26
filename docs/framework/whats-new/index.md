@@ -1,5 +1,5 @@
 ---
-title: "Новые возможности .NET Framework"
+title: Новые возможности .NET Framework
 ms.custom: updateeachrelease
 ms.date: 05/02/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 86f1884749b5fdf93254985ab3e163dca0562648
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: 93c08633af1b4bb46afe9e382066f523c9923a9b
+ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>Новые возможности .NET Framework
 <a name="introduction"></a>В этой статье кратко излагаются ключевые новые возможности и усовершенствования в следующих версиях .NET Framework:  
@@ -192,7 +192,7 @@ ASP.NET в .NET Framework 4.7 включает следующие новые ф
 <a name="wcf47" />
 #### <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
 
-В Windows Communication Foundation (WFC) добавлены следующие функции и изменения.
+В Windows Communication Foundation (WCF) добавлены следующие функции и изменения:
 
 **Возможность настраивать параметры безопасности сообщений по умолчанию для TLS 1.1 или TLS 1.2**
 
@@ -1134,7 +1134,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
 - **Изменение размеров элементов управления Windows Forms.** Эта функция была расширена. Теперь системный параметр DPI можно использовать для изменения размера компонентов следующих дополнительных элементов управления (например, стрелки, раскрывающей поле со списком):
 
-     <xref:System.Windows.Forms.ComboBox>    <xref:System.Windows.Forms.ToolStripComboBox>    <xref:System.Windows.Forms.ToolStripMenuItem>    <xref:System.Windows.Forms.Cursor>    <xref:System.Windows.Forms.DataGridView>    <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
+     <xref:System.Windows.Forms.ComboBox> <xref:System.Windows.Forms.ToolStripComboBox> <xref:System.Windows.Forms.ToolStripMenuItem> <xref:System.Windows.Forms.Cursor> <xref:System.Windows.Forms.DataGridView> <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
 
      Это функция, включаемая пользователем. Чтобы ее включить, задайте для элемента `EnableWindowsFormsHighDpiAutoResizing` в файле конфигурации приложения (app.config) значение `true`:
 
@@ -1214,7 +1214,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
 - Изменение размеров элементов управления Windows Forms. Системный параметр DPI можно использовать для изменения размера компонентов элементов управления (например, значков, которые отображаются в сетке свойств) путем явного включения с помощью записи в файле конфигурации приложения (app.config) нужного приложения. Эта функция в настоящее время поддерживается для следующих элементов управления Windows Forms:
 
-     <xref:System.Windows.Forms.PropertyGrid>  <xref:System.Windows.Forms.TreeView>  Поддерживаются некоторые аспекты <xref:System.Windows.Forms.DataGridView> (дополнительные поддерживаемые элементы управления см. в статье о [новых возможностях в версии 4.5.2](#v452)).
+     <xref:System.Windows.Forms.PropertyGrid> <xref:System.Windows.Forms.TreeView> Поддерживаются некоторые аспекты <xref:System.Windows.Forms.DataGridView> (дополнительные поддерживаемые элементы управления см. в статье о [новых возможностях в версии 4.5.2](#v452)).
 
      Чтобы включить эту функцию, добавьте новый элемент \<appSettings> в файл конфигурации (app.config) и задайте для элемента `EnableWindowsFormsHighDpiAutoResizing` значение `true`:
 
@@ -1443,7 +1443,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
 <a name="tailored"></a> 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
- [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] Приложения разрабатываются для конкретных форм-факторов и в полной мере используют возможности операционной системы Windows. Подмножество [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] или 4.5.1 доступно для разработки приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] для Windows с использованием C# или Visual Basic. Это подмножество называется [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] и рассматривается в [обзорной статье](http://go.microsoft.com/fwlink/?LinkId=228491) в Центре разработки для Windows.
+ Приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] разрабатываются для конкретных форм-факторов и в полной мере используют возможности операционной системы Windows. Подмножество [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] или 4.5.1 доступно для разработки приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] для Windows с использованием C# или Visual Basic. Это подмножество называется [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] и рассматривается в [обзорной статье](http://go.microsoft.com/fwlink/?LinkId=228491) в Центре разработки для Windows.
 
 <a name="portable"></a> 
 ### <a name="portable-class-libraries"></a>Переносимые библиотеки классов
