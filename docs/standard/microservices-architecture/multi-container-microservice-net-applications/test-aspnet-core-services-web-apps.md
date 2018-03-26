@@ -1,7 +1,7 @@
 ---
-title: "Тестирование служб и веб-приложений ASP.NET Core"
-description: "Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Тестирование служб и веб-приложений ASP.NET Core"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Тестирование служб и веб-приложений ASP.NET Core
+description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Тестирование служб и веб-приложений ASP.NET Core
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 596f588aae8c0814e5b40d29c4bf5723f944c5ac
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Тестирование служб и веб-приложений ASP.NET Core
 
@@ -102,18 +102,18 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Стив Смит (Steve Smith). Контроллеры тестирования** (ASP.NET Core) [ *https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
+-   **Стив Смит (Steve Smith). Контроллеры тестирования** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
 
--   **Стив Смит (Steve Smith). Интеграционное тестирование** (ASP.NET Core) [ *https://docs.microsoft.com/aspnet/core/testing/integration-testing*](/aspnet/core/testing/integration-testing)
+-   **Стив Смит (Steve Smith). Интеграционного тестирования** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/testing/integration-testing*](/aspnet/core/testing/integration-testing)
 
--   **Модульное тестирование в .NET Core с использованием теста dotnet**
+-   **Модульное тестирование в .NET Core, используя dotnet теста**
     [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 -   **xUnit.net**. Официальный сайт
     [*https://xunit.github.io/*](https://xunit.github.io/)
 
--   **Основные сведения о модульных тестах. ** 
-     [ *https://msdn.microsoft.com/library/hh694602.aspx*](https://msdn.microsoft.com/library/hh694602.aspx)
+-   **О модульных тестах.**
+    [*https://msdn.microsoft.com/library/hh694602.aspx*](https://msdn.microsoft.com/library/hh694602.aspx)
 
 -   **Moq**. Репозиторий GitHub.
     [*https://github.com/moq/moq*](https://github.com/moq/moq)

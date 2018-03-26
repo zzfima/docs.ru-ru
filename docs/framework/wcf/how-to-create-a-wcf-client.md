@@ -1,19 +1,19 @@
 ---
-title: "Практическое руководство. Создание клиента Windows Communication Foundation"
-ms.custom: 
+title: Практическое руководство. Создание клиента Windows Communication Foundation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -48,7 +48,7 @@ ms.lasthandoff: 03/19/2018
   
 3.  Добавление в проект GettingStartedClient ссылку на сборку System.ServiceModel щелкните правой кнопкой мыши **ссылки** папки проекта в обозревателе решений и выберите GettingStartedClient **добавить** Ссылка. В **добавить ссылку** окна выберите **Framework** с левой стороны диалогового окна. В текстовом поле «Поиск сборок» введите `System.ServiceModel`. В центральной части диалогового окна выберите **System.ServiceModel**, нажмите кнопку **добавить** и нажмите кнопку **закрыть** кнопки. Сохраните решение, нажав кнопку **сохранить все** кнопку под главным меню.  
   
-4.  Затем необходимо добавить ссылку на службу калькулятора. Прежде чем это можно будет сделать, следует запустить консольное приложение GettingStartedHost. После запуска основного приложения можно правой кнопкой мыши папку References проекта GettingStartedClient в обозревателе решений и выберите Добавить ссылку на службу и введите следующий URL-адрес в поле "адрес" диалогового окна "Добавление ссылки на службу": «http:/ ГИПЕРССЫЛКИ / localhost:8000/ServiceModelSamples/Service» http://localhost: 8000/ServiceModelSamples/Service и нажмите кнопку **Go** кнопки. Служба CalculatorService должна отображаться в списке служб. Дважды щелкните службу CalculatorService, чтобы развернуть список контрактов, реализованных службой. Оставьте пространство имен по умолчанию и нажмите **ОК** кнопки.  
+4.  Затем необходимо добавить ссылку на службу калькулятора. Прежде чем это можно будет сделать, следует запустить консольное приложение GettingStartedHost. После запуска основного приложения можно правой кнопкой мыши папку References проекта GettingStartedClient в обозревателе решений и выберите Добавить ссылку на службу и введите следующий URL-адрес в поле "адрес" диалогового окна Добавление ссылки на службу: ГИПЕРССЫЛКИ «http://localhost:8000/ServiceModelSamples/Service» http://localhost:8000/ServiceModelSamples/Service и нажмите кнопку **Go** кнопки. Служба CalculatorService должна отображаться в списке служб. Дважды щелкните службу CalculatorService, чтобы развернуть список контрактов, реализованных службой. Оставьте пространство имен по умолчанию и нажмите **ОК** кнопки.  
   
      При добавлении ссылки на службу с помощью Visual Studio в обозревателе решений для проекта GettingStartedClient появится новый элемент в папке «Ссылки на службы».  Если вы используете [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) средство, будет создан файл исходного кода и файл app.config.  
   

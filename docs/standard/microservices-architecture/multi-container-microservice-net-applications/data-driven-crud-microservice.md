@@ -1,7 +1,7 @@
 ---
-title: "Создание простой микрослужбы CRUD на основе данных"
-description: "Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Создание простой микрослужбы CRUD на основе данных"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Создание простой микрослужбы CRUD на основе данных
+description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Создание простой микрослужбы CRUD на основе данных
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: be8644e45be8db88c99332476e74c5c968764c74
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Создание простой микрослужбы CRUD на основе данных
 
@@ -217,7 +217,7 @@ public void ConfigureServices(IServiceCollection services)
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Запросы данных**
+-   **Запрос данных**
     [*https://docs.microsoft.com/ef/core/querying/index*](https://docs.microsoft.com/ef/core/querying/index)
 
 -   **Сохранение данных**
@@ -293,13 +293,13 @@ public class CatalogController : ControllerBase
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Скотт Ханселман (Scott Hanselman). Управление версиями веб-API RESTful ASP.NET Core стало проще**
+-   **Скотт Ханселман (Scott Hanselman). Управление версиями RESTful веб-API ASP.NET Core, стало проще**
     [*http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
--   **Управление версиями веб-API RESTful**
+-   **Управление версиями RESTful веб-API**
     [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
--   **Рой Филдинг (Roy Fielding). Управление версиями, гиперсредства и REST**
+-   **Рой Филдинг (Roy Fielding). Управление версиями, гипермедиа и REST**
     [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Создание метаданных описания Swagger из веб-API ASP.NET Core 
@@ -310,7 +310,7 @@ public class CatalogController : ControllerBase
 
 Спецификация является основой спецификации OpenAPI (OAS) и разрабатывается в открытом, прозрачном, совместно работающем сообществе для стандартизации способа определения интерфейсов RESTful.
 
-Спецификация определяет структуру способа обнаружения службы и понимания ее возможностей. Дополнительные сведения, включая веб-редактор и примеры спецификаций Swagger из таких компаний, как Spotify, Slack и Майкрософт, см. на сайте Swagger (<http://swagger.io>).
+Спецификация определяет структуру способа обнаружения службы и понимания ее возможностей. Дополнительные сведения, включая редактор web и примеры спецификаций Swagger из компании, например Spotify, Slack, полный и Майкрософт, см. на сайте Swagger (<http://swagger.io>).
 
 ### <a name="why-use-swagger"></a>Почему следует использовать Swagger?
 
@@ -415,7 +415,7 @@ public class Startup
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Страницы справки веб-API ASP.NET с помощью Swagger**
+-   **Веб-API справки страниц ASP.NET с помощью Swagger**
     [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
 

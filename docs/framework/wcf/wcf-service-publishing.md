@@ -20,7 +20,7 @@ ms.openlocfilehash: 823edadf7d387d1a509edbdf839ac6eeece5d41f
 ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="wcf-service-publishing"></a>Публикация служб WCF
 Публикация служб [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] помогает в реализации от начальной среды разработки, предоставляемой узлом службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] и тестовым клиентом [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], до фактического развертывания приложения в производственной среде в целях его проверки. Перед тем как вводить итоговый план развертывания можно использовать службу публикации [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] для проверки правильности функционирования службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] и ее готовности к опубликованию. Также, в целях проверки, можно провести развертывание библиотек служб [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] в различных целевых размещениях.  

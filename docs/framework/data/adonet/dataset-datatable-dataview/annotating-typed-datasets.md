@@ -1,27 +1,29 @@
 ---
-title: "Создание примечаний к типизированным наборам данных"
-ms.custom: 
+title: Создание примечаний к типизированным наборам данных
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-caps.latest.revision: "6"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: cc09f3f9b43b70b7f9b302d7a9d75428b5a0e6c7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="annotating-typed-datasets"></a>Создание примечаний к типизированным наборам данных
 Заметки дают возможность изменять имена элементов в типизированных <xref:System.Data.DataSet> без изменения базовой схемы. Изменить имена элементов в базовой схеме, типизированные **набора данных** для ссылки на объекты, которые не существуют в источнике данных, а также потеряют ссылки на объекты, которые существуют в источнике данных.  
@@ -54,7 +56,7 @@ ms.lasthandoff: 01/17/2018
   
  В следующей таблице показаны доступные для использования заметки.  
   
-|Комментарий|Описание:|  
+|Комментарий|Описание|  
 |----------------|-----------------|  
 |**typedName**|Имя объекта.|  
 |**typedPlural**|Имя коллекции объектов.|  
@@ -64,7 +66,7 @@ ms.lasthandoff: 01/17/2018
   
  В следующей таблице показаны значения, которые могут быть указаны для **nullValue** заметки.  
   
-|Значение nullValue|Описание:|  
+|Значение nullValue|Описание|  
 |---------------------|-----------------|  
 |*Заменяющее значение*|Задает возвращаемое значение. Возвращаемое значение должно соответствовать типу элемента. Например, чтобы для целочисленных полей вместо null возвращался 0, используйте `nullValue="0"`.|  
 |**_throw**|Создание исключения. Это значение по умолчанию.|  

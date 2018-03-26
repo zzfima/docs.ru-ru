@@ -1,7 +1,7 @@
 ---
-title: "Разработка приложения на основе микрослужб"
-description: "Архитектура микрослужб .NET для контейнерных приложений .NET | Разработка приложения на основе микрослужб"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Разработка приложения на основе микрослужб
+description: Архитектура микрослужб .NET для контейнерных приложений .NET | Разработка приложения на основе микрослужб
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 116ddb44655f0a9708a6496cbe7fb4fbc608300b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Разработка приложения на основе микрослужб
 
@@ -104,7 +104,7 @@ ms.lasthandoff: 01/19/2018
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   Репозиторий GitHub **eShopOnContainers. Исходный код для эталонного приложения**
+-   Репозиторий GitHub **eShopOnContainers. Исходный код для приложения ссылки**
     *https://aka.ms/eShopOnContainers/*
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Преимущества решения на основе микрослужб

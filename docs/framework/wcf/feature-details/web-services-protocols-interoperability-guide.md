@@ -1,24 +1,26 @@
 ---
-title: "Руководство по взаимодействию по протоколам веб-служб"
-ms.custom: 
+title: Руководство по взаимодействию по протоколам веб-служб
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 6b962452b6127d259733418969f1fb7b5036b1e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Руководство по взаимодействию по протоколам веб-служб
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] реализует ряд протоколов веб-служб. Многие из этих протоколов предусматривают ряд параметров и точек расширяемости, оставляемых на усмотрение реализующего субъекта. В этом подразделе приводится список протоколов веб-служб, реализуемых [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. В остальных подразделах содержатся подробности о реализации каждого поддерживаемого протокола.  
@@ -26,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="web-services-protocols-implemented-by-wcf"></a>Протоколы веб-служб, реализуемые WCF  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обеспечивает поддержку протоколов инфраструктуры веб-служб (Web services, WS), в том числе протоколов каналов и протоколов приложений веб-служб, посредством контрактов. Взаимодействие для протоколов приложений обеспечивается посредством языка описания схемы XML (XSD) 1.0 и языка описания веб-служб (WSDL) 1.1.  
   
- Взаимодействие протоколов инфраструктуры обеспечивается спецификациями WS-*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]каналы обеспечивают поддержку ряда WS-\* протоколов инфраструктуры. Для настройки каналов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используются элементы привязки. В приведенных ниже таблицах содержится полный список WS-\* протоколов инфраструктуры, реализуемых различными [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] элементов привязки.  
+ Взаимодействие протоколов инфраструктуры обеспечивается спецификациями WS-*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] каналы обеспечивают поддержку ряда WS-\* протоколов инфраструктуры. Для настройки каналов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используются элементы привязки. В приведенных ниже таблицах содержится полный список WS-\* протоколов инфраструктуры, реализуемых различными [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] элементов привязки.  
   
  Элемент привязки <xref:System.ServiceModel.Channels.HttpTransportBindingElement> поддерживает спецификации, приведенные в следующей таблице.  
   

@@ -1,27 +1,29 @@
 ---
-title: "Общие сведения о безопасности транспорта"
-ms.custom: 
+title: Общие сведения о безопасности транспорта
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-caps.latest.revision: "23"
+caps.latest.revision: ''
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 71325089f2c72f6f01b2179bd150d21a98b3a8e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="transport-security-overview"></a>Общие сведения о безопасности транспорта
 Механизмы обеспечения безопасности транспорта в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] зависят от привязки и используемого транспорта. Например, при использовании класса <xref:System.ServiceModel.WSHttpBinding> транспортом является протокол HTTP и в качестве основного механизма защиты транспорта применяется протокол SSL через HTTP, обычно называемый HTTPS. В данном разделе рассматриваются основные механизмы обеспечения безопасности транспорта, которые используются в привязках, предусмотренных в системе [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -58,22 +60,22 @@ ms.lasthandoff: 12/22/2017
  В следующих разделах рассматриваются другие типы учетных данных клиентов.  
   
 #### <a name="basic"></a>Basic  
- Соответствует методу обычной проверки подлинности в IIS. При использовании этого режима на сервере IIS должны быть настроены учетные записи пользователей Windows и соответствующие разрешения файловой системы NTFS. [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iis601](../../../../includes/iis601-md.md)], в разделе [Включение обычной проверки подлинности и настройка имени области](http://go.microsoft.com/fwlink/?LinkId=88592). [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iisver](../../../../includes/iisver-md.md)], в разделе [бета-версия IIS 7.0: Настройка обычной проверки подлинности](http://go.microsoft.com/fwlink/?LinkId=88593).  
+ Соответствует методу обычной проверки подлинности в IIS. При использовании этого режима на сервере IIS должны быть настроены учетные записи пользователей Windows и соответствующие разрешения файловой системы NTFS. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iis601](../../../../includes/iis601-md.md)], в разделе [Включение обычной проверки подлинности и настройка имени области](http://go.microsoft.com/fwlink/?LinkId=88592). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iisver](../../../../includes/iisver-md.md)], в разделе [бета-версия IIS 7.0: Настройка обычной проверки подлинности](http://go.microsoft.com/fwlink/?LinkId=88593).  
   
 #### <a name="certificate"></a>Сертификат  
- В IIS предусмотрена функция, требующая, чтобы клиенты входили в систему с использованием сертификата. Эта возможность также позволяет IIS сопоставить сертификат клиента с учетной записью Windows. [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iis601](../../../../includes/iis601-md.md)], в разделе [включение сертификатов клиентов в IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88594). [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iisver](../../../../includes/iisver-md.md)], в разделе [бета-версия IIS 7.0: Настройка сертификатов сервера в IIS 7.0](http://go.microsoft.com/fwlink/?LinkId=88595).  
+ В IIS предусмотрена функция, требующая, чтобы клиенты входили в систему с использованием сертификата. Эта возможность также позволяет IIS сопоставить сертификат клиента с учетной записью Windows. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iis601](../../../../includes/iis601-md.md)], в разделе [включение сертификатов клиентов в IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88594). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iisver](../../../../includes/iisver-md.md)], в разделе [бета-версия IIS 7.0: Настройка сертификатов сервера в IIS 7.0](http://go.microsoft.com/fwlink/?LinkId=88595).  
   
 #### <a name="digest"></a>Digest  
- Дайджест-проверка подлинности подобна обычной проверке подлинности, но имеет преимущество, заключающееся в передаче учетных данных в виде хэша, а не открытого текста. [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iis601](../../../../includes/iis601-md.md)], в разделе [дайджест-проверка подлинности в IIS 6.0](http://go.microsoft.com/fwlink/?LinkID=88443). [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iisver](../../../../includes/iisver-md.md)], в разделе [бета-версия IIS 7.0: Настройка дайджест-проверка подлинности](http://go.microsoft.com/fwlink/?LinkId=88596).  
+ Дайджест-проверка подлинности подобна обычной проверке подлинности, но имеет преимущество, заключающееся в передаче учетных данных в виде хэша, а не открытого текста. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iis601](../../../../includes/iis601-md.md)], в разделе [дайджест-проверка подлинности в IIS 6.0](http://go.microsoft.com/fwlink/?LinkID=88443). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iisver](../../../../includes/iisver-md.md)], в разделе [бета-версия IIS 7.0: Настройка дайджест-проверка подлинности](http://go.microsoft.com/fwlink/?LinkId=88596).  
   
 #### <a name="windows"></a>Windows  
- Соответствует встроенной проверке подлинности Windows в IIS. При задании этого значения также предполагается, что сервер находится в домене Windows, в котором для взаимодействия с контроллером домена используется протокол Kerberos. Если сервер не находится в домене с поддержкой Kerberos или происходит сбой системы Kerberos, можно использовать значение NTLM, описанное в следующем разделе. [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iis601](../../../../includes/iis601-md.md)], в разделе [встроенную проверку подлинности Windows в службах IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88597). [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iisver](../../../../includes/iisver-md.md)], в разделе [бета-версия IIS 7.0: Настройка сертификатов сервера в IIS 7.0](http://go.microsoft.com/fwlink/?LinkId=88595).  
+ Соответствует встроенной проверке подлинности Windows в IIS. При задании этого значения также предполагается, что сервер находится в домене Windows, в котором для взаимодействия с контроллером домена используется протокол Kerberos. Если сервер не находится в домене с поддержкой Kerberos или происходит сбой системы Kerberos, можно использовать значение NTLM, описанное в следующем разделе. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iis601](../../../../includes/iis601-md.md)], в разделе [встроенную проверку подлинности Windows в службах IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88597). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iisver](../../../../includes/iisver-md.md)], в разделе [бета-версия IIS 7.0: Настройка сертификатов сервера в IIS 7.0](http://go.microsoft.com/fwlink/?LinkId=88595).  
   
 #### <a name="ntlm"></a>NTLM  
- Это позволяет серверу использовать NTLM для проверки подлинности в случае сбоя протокола Kerberos. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Настройка служб IIS в [!INCLUDE[iis601](../../../../includes/iis601-md.md)], в разделе [Принудительная проверка подлинности NTLM](http://go.microsoft.com/fwlink/?LinkId=88598). Для [!INCLUDE[iisver](../../../../includes/iisver-md.md)] проверка подлинности Windows включает проверку подлинности NTLM. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][IIS 7.0 бета-версия: Настройка сертификатов сервера в IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=88595).  
+ Это позволяет серверу использовать NTLM для проверки подлинности в случае сбоя протокола Kerberos. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Настройка служб IIS в [!INCLUDE[iis601](../../../../includes/iis601-md.md)], в разделе [Принудительная проверка подлинности NTLM](http://go.microsoft.com/fwlink/?LinkId=88598). Для [!INCLUDE[iisver](../../../../includes/iisver-md.md)] проверка подлинности Windows включает проверку подлинности NTLM. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [IIS 7.0 бета-версия: Настройка сертификатов сервера в IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=88595).  
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- Класс <xref:System.ServiceModel.WSHttpBinding> предназначен для взаимодействия со службами, реализующими спецификации WS-*. Безопасность транспорта для этой привязки обеспечивается посредством протокола SSL по протоколам HTTP или HTTPS. Чтобы создать приложение [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], использующее SSL, для размещения этого приложения используйте IIS. В случае создания резидентного приложения используйте средство HttpCfg.exe для привязки сертификата X.509 к конкретному порту на компьютере. Номер порта указывается в качестве компонента приложения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] как адрес конечной точки. При использовании транспортного режима адрес конечной точки должен включать протокол HTTPS; в противном случае во время выполнения будет вызвано исключение. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Безопасность транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+ Класс <xref:System.ServiceModel.WSHttpBinding> предназначен для взаимодействия со службами, реализующими спецификации WS-*. Безопасность транспорта для этой привязки обеспечивается посредством протокола SSL по протоколам HTTP или HTTPS. Чтобы создать приложение [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], использующее SSL, для размещения этого приложения используйте IIS. В случае создания резидентного приложения используйте средство HttpCfg.exe для привязки сертификата X.509 к конкретному порту на компьютере. Номер порта указывается в качестве компонента приложения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] как адрес конечной точки. При использовании транспортного режима адрес конечной точки должен включать протокол HTTPS; в противном случае во время выполнения будет вызвано исключение. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Безопасность транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Для проверки подлинности клиента присвойте свойству <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> класса <xref:System.ServiceModel.HttpTransportSecurity> одно из значений перечисления <xref:System.ServiceModel.HttpClientCredentialType>. Значения перечисления идентичны типам учетных данных клиентов для класса <xref:System.ServiceModel.BasicHttpBinding> и должны размещаться службами IIS.  
   
@@ -99,7 +101,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  В случае использования безопасности Windows сертификат не требуется.  
   
- В следующем коде используется отпечаток сертификата, который однозначно идентифицирует его. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]сертификаты, в разделе [работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ В следующем коде используется отпечаток сертификата, который однозначно идентифицирует его. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] сертификаты, в разделе [работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
  [!code-csharp[c_ProgrammingSecurity#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#13)]
  [!code-vb[c_ProgrammingSecurity#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#13)]  
@@ -123,10 +125,10 @@ ms.lasthandoff: 12/22/2017
  Класс <xref:System.ServiceModel.NetNamedPipeBinding> предназначен для эффективного взаимодействия внутри компьютера, т. е. для процессов, выполняющихся на одном компьютере, хотя между двумя компьютерами, расположенными в одной сети, могут быть созданы именованные каналы. Эта привязка обеспечивает безопасность только на транспортном уровне. При создании приложений с использованием данной привязки адреса конечных точек должны включать "net.pipe" в качестве протокола адреса конечной точки.  
   
 ## <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
- При использовании безопасности транспорта эта привязка использует протокол SSL по HTTP, известный как HTTPS-протокол с выданным токеном (<xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential>). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]приложения федерации см. [Федерация и выданные маркеры](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ При использовании безопасности транспорта эта привязка использует протокол SSL по HTTP, известный как HTTPS-протокол с выданным токеном (<xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential>). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] приложения федерации см. [Федерация и выданные маркеры](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="netpeertcpbinding"></a>NetPeerTcpBinding  
- Класс <xref:System.ServiceModel.NetPeerTcpBinding> представляет защищенный транспорт, предназначенный для эффективного взаимодействия с использованием функции одноранговой сети. Как указано в имени класса и привязки, применяется протокол TCP. Если для режима безопасности задано значение Transport, данная привязка реализует протокол TLS по TCP. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]функция одноранговая сеть, в разделе [-одноранговые сети](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ Класс <xref:System.ServiceModel.NetPeerTcpBinding> представляет защищенный транспорт, предназначенный для эффективного взаимодействия с использованием функции одноранговой сети. Как указано в имени класса и привязки, применяется протокол TCP. Если для режима безопасности задано значение Transport, данная привязка реализует протокол TLS по TCP. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] функция одноранговая сеть, в разделе [-одноранговые сети](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
 ## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding и NetMsmqBinding  
  Подробное обсуждение транспорта безопасности очередь сообщений (ранее называемой MSMQ). в разделе [защита безопасность транспорта с помощью сообщений](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  

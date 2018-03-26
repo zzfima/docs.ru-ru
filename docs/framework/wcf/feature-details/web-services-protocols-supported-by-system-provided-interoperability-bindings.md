@@ -1,28 +1,30 @@
 ---
-title: "Протоколы веб-служб, поддерживаемые предоставляемыми системой привязками"
-ms.custom: 
+title: Протоколы веб-служб, поддерживаемые предоставляемыми системой привязками
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WS-protocols
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-caps.latest.revision: "39"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 4bfc4342435580796423056889b1c3bd22153740
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Протоколы веб-служб, поддерживаемые предоставляемыми системой привязками
 Платформа [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предназначена для взаимодействия с веб-службами, поддерживающими набор спецификаций, называемых спецификациями веб-служб. Для упрощения настройки служб в соответствии с рекомендациями по взаимодействию в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] введены три предоставляемые системой привязки с возможностью взаимодействия: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> и <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Для обеспечения взаимодействия со стандартами OASIS (Organization for the Advancement of Structured Information Standards - Организация по стандартизации структурированной информации) в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предусмотрена одна предоставляемая системой привязка с возможностью взаимодействия: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Для публикации метаданных [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] включает две привязки с возможностью взаимодействия системных: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) и [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). В этом разделе перечислены спецификации, поддерживаемые предоставляемыми системой привязками с возможностью взаимодействия.  
@@ -58,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
 |Категория|Протокол|Спецификация и использование|  
 |--------------|--------------|-----------------------------|  
-|Обмен сообщениями|SOAP 1.2|[Учебник для начинающих](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Среда обмена сообщениями](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Дополнения (включая привязку HTTP)](http://go.microsoft.com/fwlink/?LinkId=95329)|  
+|Обмен сообщениями|SOAP 1.2|[Primer](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Среда обмена сообщениями](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Дополнения (включая привязку HTTP)](http://go.microsoft.com/fwlink/?LinkId=95329)|  
 |Обмен сообщениями|WS-Addressing 2005/08|[Web Services Addressing 1.0 - Core](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web Services Addressing 1.0 - SOAP](http://go.microsoft.com/fwlink/?LinkId=95330)<br /><br /> Привязки `wsHttpBinding`, `ws2007HttpBinding` и `wsDualHttpBinding` реализуют рекомендацию спецификации WS-Addressing консорциума W3C (включение асинхронного обмена сообщениями, корреляции сообщений и механизмов адресации без привязки к конкретному транспортному протоколу).<br /><br /> WCF не поддерживает шифрование заголовков WS-Addressing, хотя это допускается спецификациями WS-*.|  
 |Обмен сообщениями|WS-Addressing 1.0 ― метаданные|[Метаданные WS-Addressing 1.0](http://www.w3.org/2007/05/addressing/metadata) включена поддержка этого протокола, установив версию политики в поведение ServiceMetadata — с policyversion присвоено 1.2 (по умолчанию), описания wsdl совместим с WS-Addressing wsdl, с policyversion равно 1,5, описания wsdl является совместимым с метаданными ws-addressing.<br /><br /> WCF не поддерживает шифрование заголовков WS-Addressing, хотя это допускается спецификациями WS-*.|  
 |Безопасность|WSS SOAP Message Security 1.0|[WSS SOAP Message Security 1,0](http://go.microsoft.com/fwlink/?LinkId=94684)<br /><br /> Используется, когда атрибуту `securityMode` присвоено значение "wsSecurityOverHttp" (по умолчанию) и параметры настроены с использованием дочернего элемента `wsSecurity`.<br /><br /> `<wsHttpBinding>   <binding name="myBinding">      <security mode="Message" .../>   </binding> </wsHttpBinding>`|  
@@ -69,7 +71,7 @@ ms.lasthandoff: 12/22/2017
 |Безопасность|WS-Trust|[WS-Trust](http://go.microsoft.com/fwlink/?LinkId=95318)<br /><br /> Используется в спецификации WS-SecureConversation (см. выше).|  
 |Надежный обмен сообщениями|WS-ReliableMessaging|[WS-ReliableMessaging](http://go.microsoft.com/fwlink/?LinkId=95322)<br /><br /> Используется, когда привязка настроена на использование свойства `reliableSession`.<br /><br /> `<wsHttpBinding>  <binding name="myBinding">    <reliableSession/>   </binding> </wsHttpBinding>`|  
 |Транзакции|WS-AtomicTransaction|[WS-AtomicTransaction](http://go.microsoft.com/fwlink/?LinkId=95323)<br /><br /> Используется для обмена данными между диспетчерами транзакций. Клиенты и службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] всегда используют локальные диспетчеры транзакций.|  
-|Транзакции|WS-Coordination|[WS-Coordination.](http://go.microsoft.com/fwlink/?LinkId=95324)<br /><br /> Используется для поточной передачи контекста транзакций, когда атрибуту присвоено значение `flowTransactions` "Allowed" или "Required".<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
+|Транзакции|WS-Coordination|[WS-Coordination](http://go.microsoft.com/fwlink/?LinkId=95324)<br /><br /> Используется для поточной передачи контекста транзакций, когда атрибуту присвоено значение `flowTransactions` "Allowed" или "Required".<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
   
 ## <a name="wsfederationhttpbinding-and-ws2007federationhttpbinding"></a>wsFederationHttpBinding и ws2007FederationHttpBinding  
  [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) и [ \<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) элементы, предназначенные для обеспечения поддержки федеративных сценариев, где третий сторона выдает маркер, используемый для проверки подлинности клиента. В дополнение к протоколам, используемым привязкой `wsHttpBinding`, привязка `wsFederationHttpBinding` позволяет использовать следующие спецификации:  
@@ -94,35 +96,35 @@ ms.lasthandoff: 12/22/2017
 </wsFederationHttpBinding>  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Федерации](../../../../docs/framework/wcf/feature-details/federation.md) .  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Федерации](../../../../docs/framework/wcf/feature-details/federation.md) .  
   
 ## <a name="system-provided-metadata-bindings"></a>Предоставляемые системой привязки метаданных  
  В следующих таблицах приведены протоколы, поддерживаемые предоставляемыми системой привязками метаданных, которые предоставляются классом <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>.  
   
 ### <a name="mexhttpbinding"></a>mexHttpBinding  
- [ \<MexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) привязка поддерживает следующие протоколы. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]с помощью этой привязки в разделе [публикация метаданных](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+ [ \<MexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) привязка поддерживает следующие протоколы. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] с помощью этой привязки в разделе [публикация метаданных](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
 |Категория|Протокол|Спецификация и использование|  
 |--------------|--------------|-----------------------------|  
 |Transport|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)|  
-|Обмен сообщениями|SOAP 1.2|[Учебник для начинающих](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Среда обмена сообщениями](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Дополнения (включая привязку HTTP)](http://go.microsoft.com/fwlink/?LinkId=95329)|  
+|Обмен сообщениями|SOAP 1.2|[Primer](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Среда обмена сообщениями](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Дополнения (включая привязку HTTP)](http://go.microsoft.com/fwlink/?LinkId=95329)|  
 |Обмен сообщениями|WS-Addressing 2005/08|[Web Services Addressing 1.0 - Core](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web Services Addressing 1.0 - SOAP](http://go.microsoft.com/fwlink/?LinkId=95330)|  
 |Метаданные|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] реализует спецификацию WS-MetadataExchange для извлечения схемы XML, языка WSDL и спецификации WS-Policy.|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
- [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md) поддерживает следующие протоколы. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]с помощью этой привязки в разделе [публикация метаданных](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+ [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md) поддерживает следующие протоколы. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] с помощью этой привязки в разделе [публикация метаданных](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
 |Категория|Протокол|Спецификация и использование|  
 |--------------|--------------|-----------------------------|  
 |Transport|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> Безопасность транспорта включена.|  
-|Обмен сообщениями|SOAP 1.2|[Учебник для начинающих](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Среда обмена сообщениями](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Дополнения (включая привязку HTTP)](http://go.microsoft.com/fwlink/?LinkId=95329)|  
+|Обмен сообщениями|SOAP 1.2|[Primer](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Среда обмена сообщениями](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Дополнения (включая привязку HTTP)](http://go.microsoft.com/fwlink/?LinkId=95329)|  
 |Обмен сообщениями|WS-Addressing 2005/08|[Web Services Addressing 1.0 - Core](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web Services Addressing 1.0 - SOAP](http://go.microsoft.com/fwlink/?LinkId=95330)|  
 |Метаданные|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] реализует спецификацию WS-MetadataExchange для извлечения схемы XML, языка WSDL и спецификации WS-Policy.|  
   
 ## <a name="see-also"></a>См. также  
  [Привязки, предоставляемые системой](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)  
- [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)  
- [\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)  
- [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)  
- [\<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)
+ [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)  
+ [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)  
+ [\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)  
+ [\<mexHttpsBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)  
+ [\<mexHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)

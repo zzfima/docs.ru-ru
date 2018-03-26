@@ -1,6 +1,6 @@
 ---
-title: "Использование модели синтаксиса пакета SDK для .NET Compiler Platform"
-description: "Данный обзор описывает типы, используемые для получения сведений о синтаксических узлах и управления ими."
+title: Использование модели синтаксиса пакета SDK для .NET Compiler Platform
+description: Данный обзор описывает типы, используемые для получения сведений о синтаксических узлах и управления ими.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/15/2017
@@ -9,10 +9,10 @@ ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
 ms.openlocfilehash: 09d07e6257ad7d32d75328a8c1850888b4d0b937
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="work-with-syntax"></a>Работа с синтаксисом
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 02/05/2018
 
 Каждому узлу, токену или элементу trivia известно его место в тексте исходного кода и число символов, из которых он состоит. Положение в тексте представлено в виде 32-разрядного целого числа, являющегося отсчитываемым от нуля индексом `char`. Объект <xref:Microsoft.CodeAnalysis.Text.TextSpan> обозначает начальное положение и количество символов, представленные в виде целых чисел. Если <xref:Microsoft.CodeAnalysis.Text.TextSpan> имеет нулевую длину, он обозначает расположение между двумя символами.
 
-Каждый узел имеет два свойства <xref:Microsoft.CodeAnalysis.Text.TextSpan>: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> и <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
+Каждый узел имеет два <xref:Microsoft.CodeAnalysis.Text.TextSpan> свойства: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> и <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
 
 Свойство <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> является текстовым диапазоном от начала первого токена в поддереве узла до конца последнего токена. Этот диапазон не включает в себя никакие начальные или конечные элементы trivia.
 
@@ -89,7 +89,7 @@ ms.lasthandoff: 02/05/2018
 
 ## <a name="kinds"></a>Типы
 
-Каждый узел, токен или элемент trivia имеет свойство <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> типа <xref:System.Int32?displayProperty=nameWithType>, определяющее конкретный представленный элемент синтаксиса. Это значение можно привести к перечислению конкретного языка. Каждый язык, C# или VB имеет одно перечисление `SyntaxKind` (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> и <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>, соответственно), содержащее все возможные узлы, токены и элементы trivia в грамматике. Такое преобразование можно выполнить автоматически, обратившись к методам расширения <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> или <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
+Каждый узел, токен или элемент trivia имеет свойство <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> типа <xref:System.Int32?displayProperty=nameWithType>, определяющее конкретный представленный элемент синтаксиса. Это значение можно привести к перечислению конкретного языка. Каждый язык, C# или VB имеет одно перечисление `SyntaxKind` (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> и <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>, соответственно), содержащее все возможные узлы, токены и элементы trivia в грамматике. Это преобразование может выполняться автоматически, обратившись к <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> или <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> методы расширения.
 
 Свойство <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> позволяет легко устранить неоднозначность типов синтаксических узлов, которые используют один класс узлов. Для токенов и элементов trivia это свойство является единственным способом отличить один тип элемента от другого. 
 

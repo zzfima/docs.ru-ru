@@ -1,5 +1,5 @@
 ---
-title: "Типы указателей (Руководство по программированию на C#)"
+title: Типы указателей (Руководство по программированию на C#)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.assetid: 3319faf9-336d-4148-9af2-1da2579cdd1e
-caps.latest.revision: 
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: fe7b926bdf9f662d25f2fe960b51fc8254b7aa3a
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="pointer-types-c-programming-guide"></a>Типы указателей (Руководство по программированию на C#)
 В небезопасном контексте тип может быть типом указателя, типом значения или ссылочным типом. Объявления типа указателя выполняется одним из следующих способов:  
@@ -49,7 +49,7 @@ int *p1, *p2, *p3;   // Invalid in C#
   
  Значением переменной-указателя типа `myType*` является адрес переменной типа `myType`. Ниже приведены примеры объявлений типов указателей.  
   
-|Пример|Описание:|  
+|Пример|Описание|  
 |-------------|-----------------|  
 |`int* p`|`p` — указатель на целое число.|  
 |`int** p`|`p` — указатель на указатель на целое число.|  

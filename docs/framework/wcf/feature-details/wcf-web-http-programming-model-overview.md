@@ -1,24 +1,26 @@
 ---
-title: "Общие сведения о модели программирования WCF Web HTTP"
-ms.custom: 
+title: Общие сведения о модели программирования WCF Web HTTP
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-caps.latest.revision: "45"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 70d1b76108c9eab0280e6499ab2b4d0c70def853
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Общие сведения о модели программирования WCF Web HTTP
 Модель программирования [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WEB HTTP предоставляет основные элементы, необходимые для построения служб WEB HTTP с помощью [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP рассчитаны на доступ со стороны широкого диапазона возможных клиентов, включая веб-браузеры, и обладают следующими уникальными требованиями.  
@@ -29,15 +31,15 @@ ms.lasthandoff: 12/22/2017
   
 -   **Несколько форматов данных** веб-службы обрабатывают много типов данных, помимо сообщений SOAP. Для поддержки нескольких различных форматов данных (включая документы XML, объекты данных JSON и потоки двоичного содержимого, такие как изображения, видеофайлы или обычный текст) модель программирования [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP использует привязку <xref:System.ServiceModel.WebHttpBinding> и поведение <xref:System.ServiceModel.Description.WebHttpBehavior>.  
   
- Модель программирования WEB HTTP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] расширяет возможности [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и делает возможной поддержку веб-сценариев, включающих службы WEB HTTP, AJAX и JSON, а также каналы синдикации (ATOM/RSS). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]В разделе служб AJAX и JSON, [интеграция с AJAX и поддержка JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Синдикации, в разделе [Общие сведения о синдикации WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).  
+ Модель программирования WEB HTTP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] расширяет возможности [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и делает возможной поддержку веб-сценариев, включающих службы WEB HTTP, AJAX и JSON, а также каналы синдикации (ATOM/RSS). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] В разделе служб AJAX и JSON, [интеграция с AJAX и поддержка JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Синдикации, в разделе [Общие сведения о синдикации WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).  
   
  Какие-либо дополнительные ограничения на типы данных, которые могут быть возвращены из веб-службы HTTP, отсутствуют. При работе веб-службы HTTP могут быть возвращены любые сериализуемые данные. Операции веб-службы HTTP могут быть вызваны веб-браузером, поэтому предусмотрены ограничения, касающиеся того, какие типы данных могут указываться в URL-адресах. Дополнительные сведения о какие типы поддерживаются по умолчанию. в разделе **параметров строки запроса UriTemplate и URL-адреса** разделе ниже. Это поведение по умолчанию можно изменить, предоставив собственную реализацию объекта T:System.ServiceModel.Dispatcher.QueryStringConverter, которая определяет, как преобразовывать параметры, заданные в URL-адресе, в фактические типы параметров. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
 > [!CAUTION]
->  Службы, написанные по модели программирования [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP, не используют сообщения SOAP. Поскольку SOAP не используется, то нельзя использовать средства безопасности, предоставляемые [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], Однако можно использовать безопасность уровня транспорта, разместив службу через HTTPS. [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] безопасности, в разделе [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+>  Службы, написанные по модели программирования [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP, не используют сообщения SOAP. Поскольку SOAP не используется, то нельзя использовать средства безопасности, предоставляемые [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], Однако можно использовать безопасность уровня транспорта, разместив службу через HTTPS. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] безопасность, в разделе [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
 > [!WARNING]
->  Установка расширения WebDAV для служб IIS может привести к тому, что веб-службы HTTP будут возвращать ошибку HTTP 405, поскольку расширение WebDAV пытается обрабатывать все запросы PUT. Для решения этой проблемы расширение WebDAV можно удалить либо отключить его для данного веб-узла. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][IIS и WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
+>  Установка расширения WebDAV для служб IIS может привести к тому, что веб-службы HTTP будут возвращать ошибку HTTP 405, поскольку расширение WebDAV пытается обрабатывать все запросы PUT. Для решения этой проблемы расширение WebDAV можно удалить либо отключить его для данного веб-узла. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Службы IIS и WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
   
 ## <a name="uri-processing-with-uritemplate-and-uritemplatetable"></a>Обработка универсального кода ресурса (URI) с помощью UriTemplate и UriTemplateTable  
  Шаблоны URI предоставляют эффективный синтаксис представления больших наборов URI или схожих по структуре URI. Например, следующий шаблон представляет набор всех трехсегментных URI, начинающихся с "a" и заканчивающихся на "c", независимо от значения промежуточного сегмента: a/{segment}/c.  
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
  Очень часто (особенно на стороне сервера, где необходимо направить запрос операции службы на основе URI), бывает необходимо отслеживать набор объектов <xref:System.UriTemplate> в структуре данных, которые могут независимо обращаться к каждому из включенных шаблонов. <xref:System.UriTemplateTable> представляет набор шаблонов URI и выбирает самый подходящий заданный набор шаблонов и потенциальный URI. Этот набор не связан ни с одним конкретным сетевым стеком (включая [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]), поэтому его можно использовать везде, где необходимо.  
   
- Для связывания операций службы с набором URI, который описывается шаблоном [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], модель службы <xref:System.UriTemplate> использует шаблон <xref:System.UriTemplateTable> и таблицу шаблонов <xref:System.UriTemplate>. Операция службы связывается с шаблоном <xref:System.UriTemplate> с помощью атрибута <xref:System.ServiceModel.Web.WebGetAttribute> или <xref:System.ServiceModel.Web.WebInvokeAttribute>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.UriTemplate> и <xref:System.UriTemplateTable>, в разделе [UriTemplate и UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
+ Для связывания операций службы с набором URI, который описывается шаблоном [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], модель службы <xref:System.UriTemplate> использует шаблон <xref:System.UriTemplateTable> и таблицу шаблонов <xref:System.UriTemplate>. Операция службы связывается с шаблоном <xref:System.UriTemplate> с помощью атрибута <xref:System.ServiceModel.Web.WebGetAttribute> или <xref:System.ServiceModel.Web.WebInvokeAttribute>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] <xref:System.UriTemplate> и <xref:System.UriTemplateTable>, в разделе [UriTemplate и UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
   
 ## <a name="webget-and-webinvoke-attributes"></a>Атрибуты WebGet и WebInvoke  
  Службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP используют команды получения (например, HTTP GET), а также различные команды вызова (например, HTTP POST, PUT и DELETE). Модель программирования [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP позволяет разработчикам службы управлять шаблоном URI и командой, связанной с операциями службы, с помощью атрибутов <xref:System.ServiceModel.Web.WebGetAttribute> и <xref:System.ServiceModel.Web.WebInvokeAttribute>. Атрибуты <xref:System.ServiceModel.Web.WebGetAttribute> и <xref:System.ServiceModel.Web.WebInvokeAttribute> позволяют управлять привязкой отдельных операций к URI и методам HTTP, связанным с этими URI. Например, добавление атрибутов <xref:System.ServiceModel.Web.WebGetAttribute> и <xref:System.ServiceModel.Web.WebInvokeAttribute> продемонстрировано в следующем примере кода.  
@@ -128,7 +130,7 @@ interface ICustomer
 |<xref:System.Decimal>|Любое десятичное число в стандартной записи (без экспоненты)|  
 |<xref:System.Boolean>|True или False (с учетом регистра)|  
 |<xref:System.String>|Любая строка (пустая строка не поддерживается, преобразование не производится)|  
-|<xref:System.DateTime>|ММ/ДД/ГГГГ<br /><br /> ММ/ДД/ГГГГ ЧЧ [AM &#124; PM]<br /><br /> Месяц, день, год<br /><br /> Месяц, день года чч [AM &#124; PM]|  
+|<xref:System.DateTime>|ММ/ДД/ГГГГ<br /><br /> ММ/ДД/ГГГГ ЧЧ [AM&AMP;#124;PM]<br /><br /> Месяц, день, год<br /><br /> Месяц, день года чч [AM&#124;PM]|  
 |<xref:System.TimeSpan>|ДД.ЧЧ:ММ:СС,<br /><br /> где ДД = дни, ЧЧ = часы, ММ = минуты, СС = секунды.|  
 |<xref:System.Guid>|Например, идентификатор GUID:<br /><br /> 936DA01F-9ABD-4d9d-80C7-02AF85C822A8|  
 |<xref:System.DateTimeOffset>|ММ/ДД/ГГГГ ЧЧ:ММ:СС ММ:СС,<br /><br /> где ДД = дни, ЧЧ = часы, ММ = минуты, СС = секунды.|  
@@ -146,10 +148,10 @@ interface ICustomer
   
  Это означает, что модель программирования [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP может обрабатывать любой тип данных, но при этом возможно программирование объектов <xref:System.IO.Stream>.  
   
- [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] обеспечивает поддержку данных JSON (AJAX), а также RSS-каналов (включая ATOM и RSS). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Эти функции в разделе [WCF Web HTTP форматирование](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[Общие сведения о синдикации WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) и [интеграция с AJAX и поддержка JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).  
+ [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] обеспечивает поддержку данных JSON (AJAX), а также RSS-каналов (включая ATOM и RSS). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Эти функции в разделе [WCF Web HTTP форматирование](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[Общие сведения о синдикации WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) и [интеграция с AJAX и поддержка JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>Модель программирования WCF WEB HTTP и безопасность  
- Поскольку модель веб-программирования HTTP в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не поддерживает протоколы WS-*, единственным способом защитить веб-службы HTTP в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] является обеспечение доступа к ней через HTTPS с использованием SSL-сертификата. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Настройка SSL в Сочетании с [!INCLUDE[iisver](../../../../includes/iisver-md.md)], в разделе [реализация протокола SSL в IIS](http://go.microsoft.com/fwlink/?LinkId=131613)  
+ Поскольку модель веб-программирования HTTP в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не поддерживает протоколы WS-*, единственным способом защитить веб-службы HTTP в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] является обеспечение доступа к ней через HTTPS с использованием SSL-сертификата. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Настройка SSL в Сочетании с [!INCLUDE[iisver](../../../../includes/iisver-md.md)], в разделе [реализация протокола SSL в IIS](http://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>Устранение неполадок в модели программирования WCF WEB HTTP  
  Когда службы WCF WEB HTTP вызываются с помощью <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> для создания канала, <xref:System.ServiceModel.Description.WebHttpBehavior> использует адрес <xref:System.ServiceModel.EndpointAddress>, заданный в файле конфигурации, даже в случае, когда в <xref:System.ServiceModel.EndpointAddress> передается другой <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>.  

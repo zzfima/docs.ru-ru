@@ -1,12 +1,13 @@
 ---
-title: "Привязки и безопасность"
-ms.custom: 
+title: Привязки и безопасность
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], security
@@ -14,28 +15,29 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: "42"
+caps.latest.revision: ''
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9e44db963a696f22f91569eb3d7c2956289a9c76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="bindings-and-security"></a>Привязки и безопасность
 Предоставляемые системой привязки, включенные в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], обеспечивают быстрый способ программирования приложений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. За одним исключением, во всех привязках включена схема безопасности по умолчанию. Этот раздел поможет выбрать привязку, соответствующую требованиям к безопасности.  
   
- Общие сведения о [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] безопасности, в разделе [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Программирование [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с помощью привязки, в разделе [программирование безопасности WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
+ Общие сведения о [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] безопасности, в разделе [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Программирование [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с помощью привязки, в разделе [программирование безопасности WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
   
  Если привязка уже выбран, можно найти дополнительные сведения о поведение во время выполнения, связанные с безопасностью в [поведения безопасности](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
  Некоторые функции безопасности невозможно запрограммировать с помощью привязок, предоставляемых системой. Для усиления контроля использования пользовательской привязки, в разделе [возможности безопасности при использовании пользовательских привязок](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="security-functions-of-bindings"></a>Функции безопасности привязок  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] содержит ряд предоставляемых системой привязок, удовлетворяющих большей части потребностей. Если определенная привязка не удовлетворяет всем необходимым требованиям, можно также создать пользовательскую привязку. Список привязок, предоставляемых системой см. в разделе [привязка, предоставляемая системой](../../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]пользовательские привязки в разделе [пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] содержит ряд предоставляемых системой привязок, удовлетворяющих большей части потребностей. Если определенная привязка не удовлетворяет всем необходимым требованиям, можно также создать пользовательскую привязку. Список привязок, предоставляемых системой см. в разделе [привязка, предоставляемая системой](../../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] пользовательские привязки в разделе [пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
  Каждая привязка в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] существует в двух видах: в виде API и в виде элемента XML, используемого в файле конфигурации. Например `WSHttpBinding` (API) имеет аналога в [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Базовый профиль безопасности, определенный в спецификации WS-I.  
   
- По умолчанию эта привязка не является безопасной. Она предназначена для взаимодействия со службами ASMX. Если безопасность включена, эта привязка обеспечивает беспрепятственное взаимодействие с механизмами безопасности служб IIS, такими как обычная проверка подлинности, дайджест-проверка и встроенная система безопасности Windows. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Общие сведения о безопасности транспорта](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). Эта привязка поддерживает следующие функции:  
+ По умолчанию эта привязка не является безопасной. Она предназначена для взаимодействия со службами ASMX. Если безопасность включена, эта привязка обеспечивает беспрепятственное взаимодействие с механизмами безопасности служб IIS, такими как обычная проверка подлинности, дайджест-проверка и встроенная система безопасности Windows. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Общие сведения о безопасности транспорта](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). Эта привязка поддерживает следующие функции:  
   
 -   Безопасность транспорта HTTPS.  
   
@@ -100,7 +102,7 @@ ms.lasthandoff: 12/22/2017
   
     -   предоставления учетных данных службы, согласованных со службой в процессе настройки канала.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.WSDualHttpSecurity> и <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.WSDualHttpSecurity> и <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
   
 ### <a name="nettcpbinding"></a>NetTcpBinding  
  В коде используйте <xref:System.ServiceModel.NetTcpBinding> класса; в конфигурации, используйте [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -155,7 +157,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Безопасность транспорта MSMQ (Transport).  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.NetMsmqSecurity> и <xref:System.ServiceModel.NetMsmqSecurityMode>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetMsmqSecurity> и <xref:System.ServiceModel.NetMsmqSecurityMode>.  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  В коде используйте <xref:System.ServiceModel.NetMsmqBinding> класса; в конфигурации, используйте [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).  
@@ -176,17 +178,17 @@ ms.lasthandoff: 12/22/2017
   
  Учетные данные типа <xref:System.ServiceModel.MessageCredentialType.Certificate> поддерживаются только в том случае, если задан режим безопасности <xref:System.ServiceModel.NetMsmqSecurityMode.Both> или <xref:System.ServiceModel.NetMsmqSecurityMode.Message>.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.MessageSecurityOverMsmq> и <xref:System.ServiceModel.MsmqTransportSecurity>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.MessageSecurityOverMsmq> и <xref:System.ServiceModel.MsmqTransportSecurity>.  
   
 ### <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
  В коде используйте <xref:System.ServiceModel.WSFederationHttpBinding> класса; в конфигурации, используйте [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
  По умолчанию в этой привязке используется спецификация WS-Security (безопасность на уровне сообщений).  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Федерации](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity>, и <xref:System.ServiceModel.WSFederationHttpSecurityMode>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Федерации](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity>, и <xref:System.ServiceModel.WSFederationHttpSecurityMode>.  
   
 ## <a name="custom-bindings"></a>Пользовательские привязки  
- Если ни одна из предоставляемых системой привязок не удовлетворяет вашим требованиям, можно создать пользовательскую привязку с пользовательским элементом привязки безопасности. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Возможности безопасности при использовании пользовательских привязок](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
+ Если ни одна из предоставляемых системой привязок не удовлетворяет вашим требованиям, можно создать пользовательскую привязку с пользовательским элементом привязки безопасности. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Возможности безопасности при использовании пользовательских привязок](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="binding-choices"></a>Функции привязок  
  В следующей таблице перечислены функции, обеспечиваемые настройкой режима безопасности; другими словами, перечислены доступные функции, если для режима безопасности задано значение `Transport`, `Message` или `TransportWithMessageCredential`. Эта таблица поможет найти функции безопасности, необходимые для вашего приложения.  
@@ -213,20 +215,20 @@ ms.lasthandoff: 12/22/2017
 ## <a name="transport-credentials-in-bindings"></a>Учетные данные транспорта в привязках  
  В приведенной ниже таблице перечислены типы учетных данных клиента, доступные при использовании привязки `BasicHttpBinding` или `WSHttpBinding` в режиме безопасности транспорта.  
   
-|Тип|Описание:|  
+|Тип|Описание|  
 |----------|-----------------|  
 |Нет|Указывает, что клиенту не требуется предоставлять учетные данные. Это означает, что клиент является анонимным.|  
-|Basic|Обычная проверка подлинности. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]Документе RFC 2617, проверка подлинности HTTP: Basic и дайджест-проверки подлинности, доступных [http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023).|  
-|Digest|Дайджест-проверка подлинности. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]Документе RFC 2617, проверка подлинности HTTP: Basic и дайджест-проверки подлинности, доступных [http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Basic|Обычная проверка подлинности. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] Документе RFC 2617, проверка подлинности HTTP: Basic и дайджест-проверки подлинности, доступных [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Digest|Дайджест-проверка подлинности. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] Документе RFC 2617, проверка подлинности HTTP: Basic и дайджест-проверки подлинности, доступных [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
 |NTLM|Проверка подлинности NTLM (NT LAN Manager).|  
 |Windows|Проверка подлинности Windows.|  
 |Сертификат|Проверка подлинности производится с использованием сертификата.|  
-|IssuedToken|Позволяет службе потребовать, чтобы проверка подлинности клиента производилась с помощью маркера, выданного службой маркеров безопасности или [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Федерация и выданные маркеры](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|IssuedToken|Позволяет службе потребовать, чтобы проверка подлинности клиента производилась с помощью маркера, выданного службой маркеров безопасности или [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Федерация и выданные маркеры](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="message-client-credentials-in-bindings"></a>Учетные данные клиента в привязках в режиме Message  
  В приведенной ниже таблице перечислены типы учетных данных клиента, доступные при использовании привязки в режиме безопасности Message.  
   
-|Тип|Описание:|  
+|Тип|Описание|  
 |----------|-----------------|  
 |Нет|Позволяет службе взаимодействовать с анонимными клиентами.|  
 |Windows|Позволяет проводить обмен сообщениями SOAP, если выполнена проверка подлинности с помощью учетных данных Windows.|  

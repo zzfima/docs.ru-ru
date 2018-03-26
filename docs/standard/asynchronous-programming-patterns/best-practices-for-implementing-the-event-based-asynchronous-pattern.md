@@ -1,12 +1,12 @@
 ---
-title: "Рекомендации по реализации асинхронной модели, основанной на событиях"
-ms.custom: 
+title: Рекомендации по реализации асинхронной модели, основанной на событиях
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
@@ -18,7 +18,7 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -26,10 +26,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 910edb8c79518f63e8b881b8eaecd69060fb6711
-ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Рекомендации по реализации асинхронной модели, основанной на событиях
 Асинхронная модель на основе событий является эффективным средством для обеспечения асинхронной работы в классах на базе привычной семантики делегатов и событий. Чтобы внедрить асинхронную модель на основе событий, необходимо выполнить определенные требования относительно поведения. В следующих разделах описываются требования и рекомендации, которые следует учитывать при реализации класса, поддерживающего асинхронную модель на основе событий.  

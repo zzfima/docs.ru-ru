@@ -1,12 +1,13 @@
 ---
-title: "Расширения разметки и XAML WPF"
-ms.custom: 
+title: Расширения разметки и XAML WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - brace character [WPF]
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-caps.latest.revision: "26"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 5e6dec42d40039f9cc23ba976ecf421f6471888e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Расширения разметки и XAML WPF
 В этом разделе рассматриваются концепции расширений разметки для XAML, включая их синтаксические правила, назначение и формирующую их объектную модель классов. Расширения разметки — это общая функция языка XAML и реализация служб XAML платформы .NET. В этом разделе рассматриваются расширения разметки для использования в XAML WPF.  
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/22/2017
   
 -   `Binding` предоставляет для свойства привязанное к данным значение, используя контекст данных, который применяется к родительскому объекту во время выполнения. Это расширение разметки довольно сложное, поскольку разрешает использовать важный встроенный синтаксис для указания привязки данных. Дополнительные сведения см. в разделе [Привязка расширения разметки](../../../../docs/framework/wpf/advanced/binding-markup-extension.md).  
   
--   `RelativeSource`Предоставляет сведения об источнике <xref:System.Windows.Data.Binding> , можно использовать несколько возможных связей в дереве объектов во время выполнения. Это обеспечивает специализированные источники для привязок, которые создаются в шаблонах для многократного использования или в коде без полных сведений об окружающем дереве объектов. Дополнительные сведения см. в разделе [Расширение разметки RelativeSource](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md).  
+-   `RelativeSource` Предоставляет сведения об источнике <xref:System.Windows.Data.Binding> , можно использовать несколько возможных связей в дереве объектов во время выполнения. Это обеспечивает специализированные источники для привязок, которые создаются в шаблонах для многократного использования или в коде без полных сведений об окружающем дереве объектов. Дополнительные сведения см. в разделе [Расширение разметки RelativeSource](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md).  
   
 -   `TemplateBinding` позволяет шаблону элемента управления использовать значения для шаблонных свойств, получаемых из определенных объектной моделью свойств класса, который будет использовать этот шаблон. Другими словами, свойство в определении шаблона может получить доступ к контексту, который существует только после применения шаблона. Дополнительные сведения см. в разделе [Расширение разметки TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md). Дополнительные сведения о практическом применении `TemplateBinding` см. в разделе [Пример задания стиля с помощью ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
   

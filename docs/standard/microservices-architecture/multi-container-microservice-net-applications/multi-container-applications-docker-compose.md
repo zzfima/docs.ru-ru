@@ -1,7 +1,7 @@
 ---
-title: "Определение многоконтейнерного приложения с помощью docker-compose.yml"
-description: "Архитектура микрослужб .NET для контейнерных приложений .NET | Определение многоконтейнерного приложения с помощью docker-compose.yml"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Определение многоконтейнерного приложения с помощью docker-compose.yml
+description: Архитектура микрослужб .NET для контейнерных приложений .NET | Определение многоконтейнерного приложения с помощью docker-compose.yml
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: c4fed5c7ba5c2048d103f22bd2b463c143013280
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Определение многоконтейнерного приложения с помощью docker-compose.yml 
 
@@ -434,11 +434,11 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=10.121.122.92
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Обзор Docker Compose**
+-   **Общие сведения о Docker составления**
     [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
 
--   **Несколько файлов Compose**
-    [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files)
+-   **Несколько файлов составление**
+    [*https://docs.docker.com/compose/extends/\#составить файлы несколько*](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>Создание оптимизированных образов Docker ASP.NET Core
 
@@ -468,7 +468,7 @@ ENTRYPOINT ["dotnet", "run"]
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Создание оптимизированных образов Docker в ASP.NET Core**
+-   **Создание оптимизированных образов Docker с ASP.NET Core**
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
 ### <a name="building-the-application-from-a-build-ci-container"></a>Сборка приложения из контейнера сборки (CI)
@@ -549,8 +549,8 @@ services:
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Сборка битов из контейнера: настройка решения eShopOnContainers в среде CLI Windows (dotnet CLI, Docker CLI и VS Code)**
-    [*https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code))
+-   **Построение биты в другой контейнер: Настройка eShopOnContainers решение в среде Windows CLI (dotnet CLI, Docker CLI и VS Code)**
+    [*https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI, - Docker - CLI- и -VS-код)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code))
 
 
 >[!div class="step-by-step"]

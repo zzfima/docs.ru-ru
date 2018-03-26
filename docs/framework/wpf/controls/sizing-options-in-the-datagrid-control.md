@@ -1,28 +1,30 @@
 ---
-title: "Параметры изменения размеров элемента управления DataGrid"
-ms.custom: 
+title: Параметры изменения размеров элемента управления DataGrid
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - DataGrid control [WPF], sizing
 - size [WPF], DataGrid
 - automatically size DataGrid [WPF]
 ms.assetid: 96a0e47e-b010-4302-98ef-2daac446d8db
-caps.latest.revision: "6"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 4219dc88a263b73aa89812a2f841a920c804796b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="sizing-options-in-the-datagrid-control"></a>Параметры изменения размеров элемента управления DataGrid
 Различные параметры, доступные для управления как <xref:System.Windows.Controls.DataGrid> изменяет свой размер. <xref:System.Windows.Controls.DataGrid>И отдельных строк и столбцов в <xref:System.Windows.Controls.DataGrid>, можно задать размер автоматически в соответствии с содержимым, или могут быть присвоены определенные значения. По умолчанию <xref:System.Windows.Controls.DataGrid> будет увеличиваться или уменьшаться в соответствии с размером его содержимого.  
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="setting-the-datagrid-size"></a>Задание размера DataGrid  
  <xref:System.Windows.Controls.DataGrid> Можно задать автоматическое изменение размеров в пределах указанных границ или <xref:System.Windows.Controls.DataGrid> можно присвоить значение определенного размера. В следующей таблице показаны свойства, которые могут быть установлены для элемента управления <xref:System.Windows.Controls.DataGrid> размер.  
   
-|Свойство.|Описание:|  
+|Свойство.|Описание|  
 |--------------|-----------------|  
 |<xref:System.Windows.FrameworkElement.Height%2A>|Задает высоту для <xref:System.Windows.Controls.DataGrid>.|  
 |<xref:System.Windows.FrameworkElement.MaxHeight%2A>|Задает верхнюю границу высоты <xref:System.Windows.Controls.DataGrid>. <xref:System.Windows.Controls.DataGrid> Будет увеличиваться по вертикали до достижения этой высоты.|  
@@ -67,7 +69,7 @@ ms.lasthandoff: 12/22/2017
   
  В следующей таблице показаны значения, предоставленные <xref:System.Windows.Controls.DataGridLengthUnitType> структуры.  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |<xref:System.Windows.Controls.DataGridLengthUnitType.Auto>|Значение по умолчанию автоматического изменения размеров размеры режим <xref:System.Windows.Controls.DataGrid> столбцы на основе содержимого ячеек и заголовков столбцов.|  
 |<xref:System.Windows.Controls.DataGridLengthUnitType.SizeToCells>|Автоматическое основе ячеек размеры режим изменения размера <xref:System.Windows.Controls.DataGrid> столбцы на основе содержимого ячеек в столбце, за исключением заголовков столбцов.|  
@@ -81,7 +83,7 @@ ms.lasthandoff: 12/22/2017
   
  Столбцы в <xref:System.Windows.Controls.DataGrid> также можно задать автоматическое изменение размеров только в пределах указанных границ или столбцы, которые можно задать для определенного размера. Ниже приведены свойства, которые могут быть установлены для управления размеры столбцов.  
   
-|Свойство.|Описание:|  
+|Свойство.|Описание|  
 |--------------|-----------------|  
 |<xref:System.Windows.Controls.DataGrid.MaxColumnWidth%2A?displayProperty=nameWithType>|Задает верхнюю границу для всех столбцов в <xref:System.Windows.Controls.DataGrid>.|  
 |<xref:System.Windows.Controls.DataGridColumn.MaxWidth%2A?displayProperty=nameWithType>|Задает верхнюю границу для отдельного столбца. Переопределяет <xref:System.Windows.Controls.DataGrid.MaxColumnWidth%2A?displayProperty=nameWithType>.|  

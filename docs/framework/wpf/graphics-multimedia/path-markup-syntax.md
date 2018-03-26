@@ -1,12 +1,13 @@
 ---
-title: "Синтаксис разметки пути"
-ms.custom: 
+title: Синтаксис разметки пути
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - attribute usage in XAML [WPF]
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-caps.latest.revision: "22"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9cd8f9b14f114060ebec8e336c1212d61fa19c83
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="path-markup-syntax"></a>Синтаксис разметки пути
 Пути рассматриваются в [фигур и базовых средств рисования в общие сведения о WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) и [конфигурациях](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), однако в этом разделе подробно описываются мощное и сложное мини-язык, можно использовать для указания пути более [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="abouthisdocument"></a>   
 ## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>Мини-языки StreamGeometry и PathFigureCollection  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]предоставляет два класса, предоставляющие мини языки для описания геометрических путей: <xref:System.Windows.Media.StreamGeometry> и <xref:System.Windows.Media.PathFigureCollection>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет два класса, предоставляющие мини языки для описания геометрических путей: <xref:System.Windows.Media.StreamGeometry> и <xref:System.Windows.Media.PathFigureCollection>.  
   
 -   Вы используете <xref:System.Windows.Media.StreamGeometry> мини-язык, когда для свойства типа <xref:System.Windows.Media.Geometry>, такие как <xref:System.Windows.UIElement.Clip%2A> свойство <xref:System.Windows.UIElement> или <xref:System.Windows.Shapes.Path.Data%2A> свойство <xref:System.Windows.Shapes.Path> элемента. В следующем примере используется синтаксис атрибутов для создания <xref:System.Windows.Media.StreamGeometry>.  
   
@@ -58,17 +60,17 @@ ms.lasthandoff: 12/22/2017
   
 |Использование атрибута XAML на StreamGeometry|  
 |-----------------------------------------|  
-|`<`*объекта* *свойство* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] *`" ... />`|  
+|`<` *Объект* *свойство* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] * `" ... />`|  
   
  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Использование синтаксиса для атрибутов <xref:System.Windows.Media.PathFigureCollection> состоит из одно или несколько описаний на рис.  
   
 |Использование атрибута XAML на PathFigureCollection|  
 |-----------------------------------------------|  
-|`<`*объекта* *свойство* `="` `figureDescription`[ `figureDescription`] *`" ... />`|  
+|`<` *Объект* *свойство* `="` `figureDescription`[ `figureDescription`] * `" ... />`|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Указывает, является ли <xref:System.Windows.Media.StreamGeometry> использует <xref:System.Windows.Media.FillRule.EvenOdd> или <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0`Указывает <xref:System.Windows.Media.FillRule.EvenOdd> правило заливки.<br />-   `F1`Указывает <xref:System.Windows.Media.FillRule.Nonzero> правило заливки.<br /><br /> Если опустить эту команду, во вложенном пути используется поведение по умолчанию, которое является <xref:System.Windows.Media.FillRule.EvenOdd>. Если эта команда используется, ее необходимо размещать вначале.|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Указывает, является ли <xref:System.Windows.Media.StreamGeometry> использует <xref:System.Windows.Media.FillRule.EvenOdd> или <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Указывает <xref:System.Windows.Media.FillRule.EvenOdd> правило заливки.<br />-   `F1` Указывает <xref:System.Windows.Media.FillRule.Nonzero> правило заливки.<br /><br /> Если опустить эту команду, во вложенном пути используется поведение по умолчанию, которое является <xref:System.Windows.Media.FillRule.EvenOdd>. Если эта команда используется, ее необходимо размещать вначале.|  
 |*figureDescription*|Фигура, состоящая из команды перемещения, команд рисования и необязательной команды закрытия.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
 |*moveCommand*|Команда перемещения, которая указывает начальную точку фигуры. В разделе [команды переместить](#themovecommand) раздела.|  
 |*drawCommands*|Одна или несколько команд рисования, описывающих содержимое фигуры. В разделе [команд рисования](#drawcommands) раздела.|  
@@ -82,7 +84,7 @@ ms.lasthandoff: 12/22/2017
 |------------|  
 |`M` *startPoint*<br /><br /> -или-<br /><br /> `m` *startPoint*|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |*startPoint*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Начальная точка новой фигуры.|  
   
@@ -95,13 +97,13 @@ ms.lasthandoff: 12/22/2017
  Все команды можно вводить как прописными, так и строчными буквами. Прописными буквами определяются абсолютные значения, а строчными —относительные. Контрольная точка для этого сегмента указывается относительно конечной точки в предыдущем примере. При последовательном вводе нескольких команд того же типа, можно опустить ввода повторяющиеся команды; например `L 100,200 300,400` эквивалентно `L 100,200 L 300,400`. В следующей таблице описаны **переместить** и **нарисовать** команд.  
   
 ### <a name="line-command"></a>Команда рисования линии  
- Создает прямую линию между текущей и заданной конечной точками. `l 20 30`и `L 20,30` приведены примеры допустимых **строки** команд.  
+ Создает прямую линию между текущей и заданной конечной точками. `l 20 30` и `L 20,30` приведены примеры допустимых **строки** команд.  
   
 |Синтаксис|  
 |------------|  
 |`L` *endPoint*<br /><br /> -или-<br /><br /> `l` *endPoint*|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |*endPoint*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Конечная точка строки.|  
 
@@ -115,7 +117,7 @@ ms.lasthandoff: 12/22/2017
 |------------|  
 |`H`  *x*<br /><br /> -или-<br /><br /> `h`  *x*|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |*x*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Координата X конечной точки линии.|  
   
@@ -129,7 +131,7 @@ ms.lasthandoff: 12/22/2017
 |------------|  
 |`V`  *y*<br /><br /> -или-<br /><br /> `v`  *y*|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |*y*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Координата Y конечной точки линии.|  
 
@@ -142,7 +144,7 @@ ms.lasthandoff: 12/22/2017
 |------------|  
 |`C` `controlPoint`1`controlPoint`2`endPoint`<br /><br /> -или-<br /><br /> `c` `controlPoint`1`controlPoint`2`endPoint`|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |`controlPoint`1|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Первая контрольная точка кривой, которая определяет начальную касательную к кривой.|  
 |`controlPoint`2|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Вторая контрольная точка кривой, которая определяет конечную касательную к кривой.|  
@@ -155,7 +157,7 @@ ms.lasthandoff: 12/22/2017
 |------------|  
 |`Q` `controlPoint` `endPoint`<br /><br /> -или-<br /><br /> `q` `controlPoint` `endPoint`|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |`controlPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Контрольная точка кривой, которая определяет начальную и конечную касательные к кривой.|  
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Точка для рисования кривой.|  
@@ -167,7 +169,7 @@ ms.lasthandoff: 12/22/2017
 |------------|  
 |`S` `controlPoint`2`endPoint`<br /><br /> -или-<br /><br /> `s` `controlPoint`2`endPoint`|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |`controlPoint`2|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Контрольная точка кривой, которая определяет конечную касательную к кривой.|  
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Точка для рисования кривой.|  
@@ -179,7 +181,7 @@ ms.lasthandoff: 12/22/2017
 |------------|  
 |`T` `controlPoint` `endPoint`<br /><br /> -или-<br /><br /> `t` `controlPoint` `endPoint`|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |`controlPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Контрольная точка кривой, которая определяет начальную касательную к кривой.|  
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Точка для рисования кривой.|  
@@ -191,7 +193,7 @@ ms.lasthandoff: 12/22/2017
 |------------|  
 |`A` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`<br /><br /> -или-<br /><br /> `a` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |`size`|<xref:System.Windows.Size?displayProperty=nameWithType><br /><br /> Радиусы арки X и Y.|  
 |`rotationAngle`|<xref:System.Double?displayProperty=nameWithType><br /><br /> Поворот эллипса в градусах.|  
@@ -215,7 +217,7 @@ ms.lasthandoff: 12/22/2017
 |------------|  
 |`x` `,` `y`<br /><br /> -или-<br /><br /> `x` `y`|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |`x`|<xref:System.Double?displayProperty=nameWithType><br /><br /> Координата X точки.|  
 |`y`|<xref:System.Double?displayProperty=nameWithType><br /><br /> Координата Y точки.|  

@@ -1,7 +1,7 @@
 ---
-title: "Проектирование уровня сохраняемости инфраструктуры"
-description: "Архитектура микрослужб .NET для контейнерных приложений .NET | Проектирование уровня сохраняемости инфраструктуры"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Проектирование уровня сохраняемости инфраструктуры
+description: Архитектура микрослужб .NET для контейнерных приложений .NET | Проектирование уровня сохраняемости инфраструктуры
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/08/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>Проектирование уровня сохраняемости инфраструктуры
 
@@ -144,19 +144,19 @@ public interface ISpecification<T>
 -   **Шаблон репозитория**
     [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
 
--   **Шаблон репозитория: абстракция для сохраняемости данных**
+-   **Шаблон репозитория: Сохраняемости уровень абстракции данных**
     [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
 
--   **Эрик Эванс (Eric Evans). Предметно-ориентированное проектирование (DDD). Структуризация сложных программных систем.** (Книга содержит обсуждение шаблона репозитория) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Эрик Эванс (Eric Evans). Предметно-ориентированное проектирование (DDD). Структуризация сложных программных систем.** (Книга; включает в себя обсуждение шаблон репозитория) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>Шаблон единицы работы
 
--   **Мартин Фоулер (Martin Fowler). Шаблон единицы работы.**
+-   **Мартин Фоулер (Martin Fowler). Единица работы шаблон.**
     [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 
--   **Реализация шаблонов репозиториев и единиц работы в приложении MVC ASP.NET**
+-   **Реализация шаблонов репозитория и единиц работы в приложении ASP.NET MVC**
     [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
 ### <a name="the-specification-pattern"></a>Шаблон спецификации
@@ -166,7 +166,7 @@ public interface ISpecification<T>
 
 -   **Эрик Эванс (2004). Предметно-ориентированное проектирование. Addison-Wesley. стр. 224.**
 
--   **Спецификации. Мартин Фаулер**
+-   **Спецификации. Martin Fowler**
     [*https://www.martinfowler.com/apsupp/spec.pdf/*](https://www.martinfowler.com/apsupp/spec.pdf)
 
 >[!div class="step-by-step"]

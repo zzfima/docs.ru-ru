@@ -1,31 +1,33 @@
 ---
 title: '&lt;httpTransport&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 50cbf6521870a54f4f87c3eeb12030d5d7f2f6bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="lthttptransportgt"></a>&lt;httpTransport&gt;
 Задает транспорт HTTP для передачи сообщений протокола SOAP для пользовательской привязки.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<привязки >  
-\<customBinding >  
+\<customBinding>  
 \<Привязка >  
 \<httpTransport >  
   
@@ -63,17 +65,17 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
 |maxBufferSize|Положительное целое число, указывающее максимальный размер буфера. Значение по умолчанию - 524 288|  
 |proxyAddress|Универсальный код ресурса (URI), задающий адрес прокси-сервера HTTP. Если параметр `useSystemWebProxy` имеет значение `true`, данный параметр должен иметь значение `null`. Значение по умолчанию — `null`.|  
 |proxyAuthenticationScheme|Задает протокол, используемый для проверки подлинности клиентских запросов, обрабатываемых прокси-сервером HTTP. Допустимы следующие значения:<br /><br /> — None: Проверка подлинности не выполняется.<br />-Digest: Задает дайджест-проверки подлинности.<br />— Negotiate: Проводит согласование с клиентом для определения схемы проверки подлинности. Если и клиент, и сервер поддерживают Kerberos, используется именно этот протокол; в противном случае используется NTLM.<br />-Ntlm: Задает проверку подлинности NTLM.<br />-Basic: Задает обычную проверку подлинности.<br />-Anonymous: Задает анонимную проверку подлинности.<br />-IntegratedWindowsAuthentication: Задает проверку подлинности Windows.<br /><br /> Значение по умолчанию - Anonymous. Это атрибут типа <xref:System.Net.AuthenticationSchemes>.|  
-|realm|Строка, задающая область для использования на прокси-сервере. Значение по умолчанию - пустая строка.<br /><br /> Серверы используют области для разделения защищенных ресурсов. Каждый раздел может иметь свою собственную схему проверки подлинности и/или базу данных авторизации. Области используются только для обычной проверки подлинности и дайджест-проверки подлинности. После успешного прохождения клиентом проверки подлинности ее результаты действительны для всех ресурсов в данной области. Подробное описание областей см. в документе RFC 2617 по адресу http://www.ietf.org.|  
+|realm|Строка, задающая область для использования на прокси-сервере. Значение по умолчанию - пустая строка.<br /><br /> Серверы используют области для разделения защищенных ресурсов. Каждый раздел может иметь свою собственную схему проверки подлинности и/или базу данных авторизации. Области используются только для обычной проверки подлинности и дайджест-проверки подлинности. После успешного прохождения клиентом проверки подлинности ее результаты действительны для всех ресурсов в данной области. Подробное описание областей см в документе RFC 2617 по http://www.ietf.org.|  
 |transferMode|Указывает, следует ли буферизировать сообщения или передавать их потоком по запросу или ответу. Допустимы следующие значения:<br /><br /> -Buffered: Сообщения запроса и ответа буферизуются.<br />-Потоковой передачи: Сообщения запроса и ответа передаются потоком.<br />-StreamedRequest: Сообщение запроса передается потоком, а сообщение ответа буферизуется.<br />-StreamedResponse: Сообщение запроса буферизируется, а сообщение ответа передается потоком.<br /><br /> Значение по умолчанию - Buffered. Это атрибут типа <xref:System.ServiceModel.TransferMode>.|  
 |unsafeConnectionNtlmAuthentication|Логическое значение, указывающее, разрешено ли на сервере совместное использование небезопасных подключений. Значение по умолчанию — `false`. Если оно разрешено, проверка подлинности NTLM выполняется один раз для каждого подключения по протоколу TCP.|  
-|useDefaultWebProxy|Логическое значение, указывающее, используются ли настройки прокси-сервера компьютера или пользователя. Значение по умолчанию — `true`.|  
+|useDefaultWebProxy|Логическое значение, указывающее, используются ли настройки прокси-сервера компьютера или пользователя. Значение по умолчанию — `true`.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Нет  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Определяет все возможности пользовательской привязки.|  
   
@@ -90,4 +92,4 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
  [Привязки](../../../../../docs/framework/wcf/bindings.md)  
  [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

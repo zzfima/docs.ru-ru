@@ -1,7 +1,7 @@
 ---
-title: "Проектирование модели предметной области микрослужбы"
-description: "Архитектура микрослужб .NET для контейнерных приложений .NET | Проектирование модели предметной области микрослужбы"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Проектирование модели предметной области микрослужбы
+description: Архитектура микрослужб .NET для контейнерных приложений .NET | Проектирование модели предметной области микрослужбы
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 752c4cceada2bf0649facbfd46c36c26dc666d29
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="designing-a-microservice-domain-model"></a>Проектирование модели предметной области микрослужбы
 
@@ -63,7 +63,7 @@ ms.lasthandoff: 01/19/2018
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **DevIQ. Сущность предметной области**
+-   **DevIQ. Сущность домена**
     [*http://deviq.com/entity/*](http://deviq.com/entity/)
 
 -   **Мартин Фоулер (Martin Fowler). Модель домена**
@@ -87,16 +87,16 @@ ms.lasthandoff: 01/19/2018
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Мартин Фоулер (Martin Fowler). Шаблон ValueObject**
+-   **Мартин Фоулер (Martin Fowler). Value-шаблон объекта**
     [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **Объект значения**
+-   **Значение объекта**
     [*http://deviq.com/value-object/*](http://deviq.com/value-object/)
 
--   **Объекты значений в разработке на основе тестирования**
-    [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
+-   **Значение объектов в методики разработки**
+    [*https://leanpub.com/tdd-ebook/read\#leanpub auto значение объектов*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
--   **Эрик Эванс (Eric Evans). Предметно-ориентированное проектирование (DDD). Структуризация сложных программных систем.** (Книга содержит обсуждение объектов значений) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Эрик Эванс (Eric Evans). Предметно-ориентированное проектирование (DDD). Структуризация сложных программных систем.** (Книга, в которой рассматриваются объекты значений) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="the-aggregate-pattern"></a>Шаблон агрегата
 
@@ -139,22 +139,22 @@ public class Order : Entity, IAggregateRoot
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Вон Вернон (Vaughn Vernon). Эффективная конструкция агрегата. Часть I. Моделирование одного агрегата**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+-   **Вон Вернон (Vaughn Vernon). Эффективной статистические схемы — часть i. единое Агрегированное моделирования**
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_СООБЩЕСТВА\_ЭССЕ\_статистические ВЫРАЖЕНИЯ\_часть \_pdf 1.*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
--   **Вон Вернон (Vaughn Vernon). Эффективная конструкция агрегата. Часть II. Обеспечение совместной работы агрегатов**
+-   **Вон Вернон (Vaughn Vernon). Эффективной статистические схемы — часть II: Совместной работы агрегаты внесения**
     *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf> *
 
--   **Вон Вернон (Vaughn Vernon). Эффективная конструкция агрегата. Часть III. Постижение через открытие**
+-   **Вон Вернон (Vaughn Vernon). Эффективной статистические схемы — часть III: Анализ получения посредством обнаружения**
     *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf> *
 
--   **Сергей Грибняк (Sergey Grybniak). Тактические конструктивные шаблоны DDD**
+-   **Сергей Грибняк (Sergey Grybniak). Шаблоны DDD тактические разработки**
     [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
--   **Крис Ричардсон (Chris Richardson). Разработка транзакционных микрослужб с использованием агрегатов**
+-   **Крис Ричардсон (Chris Richardson). Разработка транзакций Микрослужбами используются агрегатные функции**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
--   **DevIQ. Шаблон агрегата**
+-   **DevIQ. Агрегатные шаблон**
     [*http://deviq.com/aggregate-pattern/*](http://deviq.com/aggregate-pattern/)
 
 

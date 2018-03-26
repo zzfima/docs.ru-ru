@@ -1,24 +1,26 @@
 ---
-title: "Сопоставления типов данных OLE DB"
-ms.custom: 
+title: Сопоставления типов данных OLE DB
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 407f194a8530f9b9e4241a6bdb4d26a4b891aa46
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ole-db-data-type-mappings"></a>Сопоставления типов данных OLE DB
 В приведенной ниже таблице показаны выводимые типы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для типов данных поставщика данных .NET Framework для ADO и OLE DB (<xref:System.Data.OleDb>). Приведены также типизированные методы доступа для <xref:System.Data.OleDb.OleDbDataReader>.  
@@ -58,7 +60,7 @@ ms.lasthandoff: 01/17/2018
 |adUserDefined|DBTYPE_UDT|не поддерживается||  
 |adVarNumeric|DBTYPE_VARNUMERIC|не поддерживается||  
   
- \*Для таких типов OLE DB `DBTYPE_IUNKNOWN` и `DBTYPE_IDISPATCH`, ссылка на объект служит представлением указателя в упакованном виде.  
+ \* Для таких типов OLE DB `DBTYPE_IUNKNOWN` и `DBTYPE_IDISPATCH`, ссылка на объект служит представлением указателя в упакованном виде.  
   
 ## <a name="see-also"></a>См. также  
  [Извлечение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  

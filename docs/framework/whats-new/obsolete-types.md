@@ -1,28 +1,30 @@
 ---
-title: "Устаревшие типы в платформе .NET Framework"
-ms.custom: 
+title: Устаревшие типы в платформе .NET Framework
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4.5, obsolete types
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-caps.latest.revision: "41"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: f30b9e245ad38b0e861590e9b2ca3658a2b5e967
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Устаревшие типы в платформе .NET Framework
 <a name="introduction"></a>В таблицах этой статьи перечислены типы, которые являются устаревшими в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Они сгруппированы по сборкам. Используйте следующие ссылки для просмотра списка устаревших типов и рекомендованных альтернатив в каждой сборке. Поскольку эти типы считаются устаревшими, все их члены также являются устаревшими. Список дополнительных устаревших членов в библиотеке классов платформы .NET Framework см. в разделе [Устаревшие члены](../../../docs/framework/whats-new/obsolete-members.md).  

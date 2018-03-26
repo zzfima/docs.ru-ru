@@ -1,24 +1,26 @@
 ---
-title: "UriTemplate и UriTemplateTable"
-ms.custom: 
+title: UriTemplate и UriTemplateTable
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate и UriTemplateTable
 Веб-разработчикам необходима возможность описания формы и структуры универсальных кодов ресурса (URI), на которые отвечают их службы. В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] появились два новых класса, позволяющие разработчикам контролировать свои URI. Классы <xref:System.UriTemplate> и <xref:System.UriTemplateTable> формируют основу модуля отправки данных на основе URI, который используется в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Эти классы могут также использоваться сами по себе, позволяя разработчиками воспользоваться преимуществами шаблонов и механизма сопоставления универсального кода ресурса (URI) без реализации службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -92,7 +94,7 @@ ms.lasthandoff: 12/22/2017
   
 -   "{shoe}/boat"  
   
--   «{shoe} / {boat} /bed/ {quilt}»  
+-   "{shoe}/{boat}/bed/{quilt}"  
   
 -   «shoe / {boat}»  
   
@@ -140,7 +142,7 @@ ms.lasthandoff: 12/22/2017
 -   /{shoe}{boat} - переменные должны разделяться литералом.  
   
 ### <a name="matching-and-compound-path-segments"></a>Совпадающие и составные сегменты пути  
- Составные сегменты пути позволяют определять UriTemplate, который имеет несколько переменных в одном сегменте пути. Например, в следующую строку шаблона: «адреса / {штат}. {city}» в одном сегменте определены две переменные (штату и городу). Этот шаблон будет соответствовать URL-адрес, как «http://example.com/Washington.Redmond», но он также будет соответствовать URL-адрес как «http://example.com/Washington.Redmond.Microsoft». В последнем случае переменная состояния будет содержать «Вашингтон», а переменная Город» будет содержать «Redmond.Microsoft». В данном случае любой текст (за исключением символа «/») будет соответствовать переменной {город}. Если требуется шаблон, который не будет соответствовать «дополнительному» тексту, поместите переменную в отдельный сегмент шаблона, например: «адреса / {штат} / {city}.  
+ Составные сегменты пути позволяют определять UriTemplate, который имеет несколько переменных в одном сегменте пути. Например, в следующую строку шаблона: «адреса / {штат}. {city}» в одном сегменте определены две переменные (штату и городу). Этот шаблон будет соответствовать URL-адрес "http://example.com/Washington.Redmond«, но он также будет соответствовать URL, например»http://example.com/Washington.Redmond.Microsoft». В последнем случае переменная состояния будет содержать «Вашингтон», а переменная Город» будет содержать «Redmond.Microsoft». В данном случае любой текст (за исключением символа «/») будет соответствовать переменной {город}. Если требуется шаблон, который не будет соответствовать «дополнительному» тексту, поместите переменную в отдельный сегмент шаблона, например: «адреса / {штат} / {city}.  
   
 ### <a name="named-wildcard-segments"></a>Именованные сегменты с подстановочным знаком  
  Именованный сегмент с подстановочным знаком - это любой переменный сегмент, имя переменной которого начинается с символа-шаблона «*». Следующая строка шаблона содержит именованный сегмент с подстановочным знаком, имеющий имя «shoe».  

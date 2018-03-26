@@ -1,7 +1,7 @@
 ---
-title: "Подписка на события"
-description: "Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Подписка на события"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Подписка на события
+description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Подписка на события
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 7538c760d396349fe9b1e93a21839e3e59d7f046
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="subscribing-to-events"></a>Подписка на события
 
@@ -302,7 +302,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Honoring message idempotency** (раздел статьи) [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
+-   **Учитывая идемпотентности сообщение** (подзаголовок на этой странице) [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
 
 ## <a name="deduplicating-integration-event-messages"></a>Дедупликация сообщений о событиях интеграции
 
@@ -322,63 +322,63 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Вилка eShopOnContainers с использованием NServiceBus (Particular Software)**
+-   **Разветвленного eShopOnContainers, с помощью NServiceBus (конкретного программного обеспечения)**
     [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
 
--   **Взаимодействие, управляемое событиями**
-    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
+-   **Событие обмена сообщениями**
+    [*http://soapatterns.org/design\_шаблонов и события\_управляемых\_обмена сообщениями*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Джимми Богард (Jimmy Bogard). Рефакторинг как средство достижения устойчивости. Оценка взаимозависимости**
+-   **Джимми Богард (Jimmy Bogard). Рефакторинг по направлению к устойчивости: Оценка взаимозависимости**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **Канал публикации (подписки)**
+-   **Публикация-подписка на канал**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Взаимодействие между ограниченными контекстами**
+-   **Взаимодействие между контекстами ограниченной**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
 -   **Итоговая согласованность**
-    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
+    [*https://en.wikipedia.org/wiki/Eventual\_согласованности*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Филип Браун (Philip Brown). Стратегии по интеграции ограниченных контекстов**
+-   **Филип Браун (Philip Brown). Стратегии для интеграции ограниченных контексты**
     [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Крис Ричардсон (Chris Richardson). Developing Transactional Microservices Using Aggregates, Event Sourcing and CQRS - Part 2**
+-   **Крис Ричардсон (Chris Richardson). Разработка транзакций Микрослужбами с использованием статистических функций, источники событий и CQRS — часть 2**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
 -   **Крис Ричардсон (Chris Richardson). Использование модели событий**
     [*http://microservices.io/patterns/data/event-sourcing.html*](http://microservices.io/patterns/data/event-sourcing.html)
 
--   **Знакомство с источниками событий**
+-   **Знакомство с источники событий**
     [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
 
 -   **База данных хранилища событий**. Официальный сайт
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Патрик Номменсен (Patrick Nommensen). Основанное на событиях управление данными для микрослужб**
+-   **Патрик Номменсен (Patrick Nommensen). Управление событиями данных для Микрослужбами**
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
 -   **Теорема CAP**
-    [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
+    [*https://en.wikipedia.org/wiki/CAP\_Теорема*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **Что такое теорема CAP?**
+-   **Что такое ограничение Теорема?**
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
 -   **Основные сведения о согласованности данных**
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
--   **Рик Сейлинг (Rick Saling). The CAP Theorem: Why “Everything is Different” with the Cloud and Internet**
+-   **Рик Сейлинг (Rick Saling). Теорема CAP: Почему «Все отличается» с в облаке и в Интернете**
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Эрик Брюер (Eric Brewer). CAP Twelve Years Later: How the "Rules" Have Changed**
+-   **Эрик Брюер (Eric Brewer). Ограничение Двенадцатилетнего позже: как «Правила» были изменены**
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Participating in External (DTC) Transactions** (MSMQ) [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+-   **Участие в транзакции (DTC) внешние** (MSMQ) [  *https://msdn.microsoft.com/library/ms978430.aspx \#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
--   **Служебная шина Azure. Brokered Messaging: Duplicate Detection**
+-   **Служебная шина Azure. Обмен сообщениями через посредника: Обнаружение повторяющихся элементов**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Reliability Guide** (RabbitMQ documentation) [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
+-   **Руководство по надежности** (RabbitMQ документация) [  *https://www.rabbitmq.com/reliability.html \#потребителя*](https://www.rabbitmq.com/reliability.html%23consumer)
 
 
 

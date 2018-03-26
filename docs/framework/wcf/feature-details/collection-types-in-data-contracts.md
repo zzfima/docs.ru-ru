@@ -1,12 +1,13 @@
 ---
-title: "Типы коллекций в контрактах данных"
-ms.custom: 
+title: Типы коллекций в контрактах данных
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e74bd7d90d5653890fd5cf48e76c81d0227c6172
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>Типы коллекций в контрактах данных
 Под *коллекцией* понимается список элементов определенного типа. В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]такие списки могут быть представлены с помощью массивов или других типов (универсальный список, универсальные <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>или <xref:System.Collections.ArrayList>). Например, в коллекции может содержаться список адресов конкретного клиента. Такие коллекции называются *коллекциями списков*, независимо от их фактического типа.  
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
  Дополнительные требования к типам коллекций, такие как наличие метода с названием `Add` и конструктора по умолчанию, подробно обсуждаются в следующих разделах. Этим обеспечивается возможность как сериализации, так и десериализации таких типов коллекций. Это означает, что некоторые коллекции не поддерживаются напрямую, например универсальные коллекции <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> (поскольку у них нет конструктора по умолчанию). Тем не менее, информацию о том, как обойти эти ограничения, см. далее в разделе «Использование типов интерфейса и коллекций только для чтения».  
   
- Типы, содержащиеся в коллекциях, должны быть контрактными данными, либо сериализуемые другим способом. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Типы, поддерживаемые сериализатором контракта данных](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Типы, содержащиеся в коллекциях, должны быть контрактными данными, либо сериализуемые другим способом. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Типы, поддерживаемые сериализатором контракта данных](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] том, что считается, а что не считается действительной коллекцией, а также о том, каким образом сериализуются коллекции, см. информацию о сериализации коллекций в разделе «Расширенные правила коллекций» далее.  
   
@@ -298,8 +300,8 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |Ссылочный тип|Интерфейс, реализованный ссылочным типом|Пример|Тип обрабатывается как|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |Неуниверсальный или закрытый универсальный (любое количество параметров)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> или<br /><br /> `MyType<T> : IDictionary` где T=`int`|Закрытый универсальный тип `IDictionary<object,object>`|  
-|Закрытый универсальный тип (любое количество параметров)|<xref:System.Collections.Generic.IDictionary%602>, закрытый|`MyType<T> : IDictionary<string, bool>`где T =`int`|Закрытый универсальный тип (например, `IDIctionary<string,bool>`)|  
-|Закрытый универсальный тип (любое количество параметров)|Универсальный <xref:System.Collections.Generic.IDictionary%602>, ключ или значение закрыто, другой (ключ или значение) открыт и использует один из параметров типа.|`MyType<T,U,V> : IDictionary<string,V>`где T =`int`, U =`float`, V =`bool`<br /><br /> или<br /><br /> `MyType<Z> : IDictionary<Z,bool>`где Z =`string`|Закрытый универсальный тип (например, `IDictionary<string,bool>`)|  
+|Закрытый универсальный тип (любое количество параметров)|<xref:System.Collections.Generic.IDictionary%602>, закрытый|`MyType<T> : IDictionary<string, bool>` где T =`int`|Закрытый универсальный тип (например, `IDIctionary<string,bool>`)|  
+|Закрытый универсальный тип (любое количество параметров)|Универсальный <xref:System.Collections.Generic.IDictionary%602>, ключ или значение закрыто, другой (ключ или значение) открыт и использует один из параметров типа.|`MyType<T,U,V> : IDictionary<string,V>` где T =`int`, U =`float`, V =`bool`<br /><br /> или<br /><br /> `MyType<Z> : IDictionary<Z,bool>` где Z =`string`|Закрытый универсальный тип (например, `IDictionary<string,bool>`)|  
 |Закрытый универсальный тип (любое количество параметров)|Универсальный <xref:System.Collections.Generic.IDictionary%602>, ключ и значение открыты, и оба используют один из параметров типа|`MyType<T,U,V> : IDictionary<V,U>`, где T=`int`, U=`bool`, V=`string`|Закрытый универсальный тип (например, `IDictionary<string,bool>`)|  
 |Открытый универсальный тип (два параметра)|Универсальный <xref:System.Collections.Generic.IDictionary%602>, открытый, использует оба типа универсальных параметров в порядке их появления|`MyType<K,V> : IDictionary<K,V>`, K и V, оба открыты|Открытый универсальный тип (например, `IDictionary<K,V>`)|  
   
@@ -353,7 +355,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ### <a name="collection-naming"></a>Именование коллекций  
  Далее приводится список правил именования коллекций.  
   
--   Пространство имен по умолчанию для всех контрактов данных коллекций-словарей, а также для контрактов данных коллекций списков, содержащих типы-примитивы, см. http://schemas.microsoft.com/2003/10/Serialization/Arrays, кроме случаев, когда оно переопределено с помощью пространства имен. С этой целью типы, сопоставляемые встроенным типам XSD, а также типы `char`, `Timespan`и `Guid` рассматриваются как примитивы.  
+-   Пространство имен по умолчанию для всех контрактов данных коллекций-словарей, а также для контрактов данных коллекций списков, содержащих типы-примитивы, http://schemas.microsoft.com/2003/10/Serialization/Arrays , если не переопределено с помощью пространства имен. С этой целью типы, сопоставляемые встроенным типам XSD, а также типы `char`, `Timespan`и `Guid` рассматриваются как примитивы.  
   
 -   По умолчанию пространство имен для типов коллекции, содержащей не типы-примитивы, кроме случая, когда оно переопределено с помощью пространства имени, является таким же, как пространство имен контракта данных, содержащегося в коллекции типа.  
   

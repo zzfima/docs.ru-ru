@@ -1,24 +1,26 @@
 ---
-title: "Выбор фильтра"
-ms.custom: 
+title: Выбор фильтра
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-caps.latest.revision: "8"
+caps.latest.revision: ''
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e81af51be3e281faa94bcea17ff75b41341abb33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="choosing-a-filter"></a>Выбор фильтра
 При настройке службы маршрутизации важно выбрать правильные фильтры сообщений и настроить их таким образом, чтобы полученное сообщение всегда определялось одним из них. Если выбранные фильтры допускают избыточные совпадения или неверно настроены, то сообщения будут маршрутизироваться неправильно. Если фильтры слишком строги, то это может привести к тому, что для некоторых сообщений не окажется ни одного допустимого маршрута.  
@@ -142,9 +144,9 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
  Этим фильтром рекомендуется пользоваться в тех случаях, когда точно известно, что получаемое сообщение содержит определенное значение. Например, если размещаются две версии одной службы и известно, что сообщение, которое адресовано более новой версии службы, содержит уникальное значение в пользовательском заголовке, можно создать фильтр, который использует XPath для перехода к этому заголовку и выполняет сравнение значения, которое находится в заголовке, со значением, которое указано в конфигурации фильтра, для определения его соответствия фильтру.  
   
- Поскольку запросы XPath часто содержат уникальные пространства имен, которые часто представлены очень длинными или сложными строковыми значениями, фильтр XPath позволяет использовать таблицу пространств имен, в которой для пространств имен можно определить уникальные префиксы. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]в таблицу пространств имен в разделе [фильтры сообщений](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ Поскольку запросы XPath часто содержат уникальные пространства имен, которые часто представлены очень длинными или сложными строковыми значениями, фильтр XPath позволяет использовать таблицу пространств имен, в которой для пространств имен можно определить уникальные префиксы. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] в таблицу пространств имен в разделе [фильтры сообщений](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Проектирование запросов XPath, в разделе [синтаксис XPath](http://go.microsoft.com/fwlink/?LinkId=164592).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Проектирование запросов XPath, в разделе [синтаксис XPath](http://go.microsoft.com/fwlink/?LinkId=164592).  
   
 ## <a name="see-also"></a>См. также  
  [Фильтры сообщений](../../../../docs/framework/wcf/feature-details/message-filters.md)  

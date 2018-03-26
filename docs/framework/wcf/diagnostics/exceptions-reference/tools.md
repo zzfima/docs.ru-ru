@@ -1,24 +1,26 @@
 ---
-title: "Инструменты"
-ms.custom: 
+title: Инструменты
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="tools"></a>Инструменты
 В этом разделе перечислены все исключения, генерируемые средствами [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
@@ -28,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 |Код ресурса|Строка ресурса|  
 |-------------------|---------------------|  
 |ParametersTarget|\<Перечисление >|  
-|ParametersToolConfig|\<configFile >|  
+|ParametersToolConfig|\<configFile>|  
 |ErrInvalidPath|Указан недопустимый путь. Проверьте указанные аргумент.|  
 |ParametersReference|\<путь к файлу >|  
 |WrnCannotLoadConfigFileForValidation|Ошибка при обработке файла конфигурации, загруженного из указанного расположения. Не удается проверить службы, определенные в этом файле конфигурации.|  
@@ -98,7 +100,7 @@ ms.lasthandoff: 12/22/2017
 |ErrDirectoryNotFound|Не удается найти заданный каталог. Убедитесь, что каталог существует и у вас есть соответствующие разрешения на его чтение.|  
 |ErrUnableToLoadFile|Не удается прочитать указанный файл.|  
 |ErrNoFilesFound|Указанный входной путь не ссылается ни на один существующий файл.|  
-|ParametersConfig|\<configFile >|  
+|ParametersConfig|\<configFile>|  
 |ErrDirectoryInsteadOfFile|Указанный входной путь является каталогом. Он должен быть либо URL-адресом, либо путем к файлу.|  
 |HelpConfig|Предписывает программе создать файл конфигурации с предоставленным именем. По умолчанию: output.config.|  
 |ErrSingleUseSwitch|Указанный параметр нельзя указывать несколько раз.|  
@@ -123,7 +125,7 @@ ms.lasthandoff: 12/22/2017
 |ErrInvalidTarget|Указанный целевой объект недействителен, если он задан с помощью указанного параметра. Указываются поддерживаемые целевые объекты.|  
 |ErrPathTooLong|Результирующий путь слишком длинный. Проверьте указанные аргументы.|  
 |HelpCommonOptionsCategory|-= ОБЩИЕ ПАРАМЕТРЫ =-|  
-|ParametersServiceName|\<serviceConfigName >|  
+|ParametersServiceName|\<serviceConfigName>|  
 |ErrNoValidInputFilesSpecified|Не указаны допустимые входные файлы. Укажите документы метаданных или файлы сборки.|  
 |ParametersLanguage|\<язык >|  
 |ErrUnableToLoadMetadataDocument|Ошибка при чтении метаданных из одного из загруженных документов. Указывается идентификатор документа.|  

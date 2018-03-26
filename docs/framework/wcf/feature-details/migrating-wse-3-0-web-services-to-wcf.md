@@ -1,24 +1,26 @@
 ---
-title: "Миграция веб-служб WSE 3.0 на платформу WCF"
-ms.custom: 
+title: Миграция веб-служб WSE 3.0 на платформу WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: a7e7187eb6ed444ba2c28aa301ce4b3b16129030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>Миграция веб-служб WSE 3.0 на платформу WCF
 К преимуществам переноса веб-служб WSE 3.0 на [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] относятся повышение производительности и поддержка дополнительных транспортов, дополнительных сценариев безопасности и спецификаций WS-*. При переносе веб-службы с WSE 3.0 на [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] можно добиться повышения производительности от 200% до 400%. Дополнительные сведения о поддерживаемых транспортов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], в разделе [выбор транспорта](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Список поддерживаемых сценариев [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], в разделе [типовые сценарии безопасности](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Список спецификаций, которые поддерживаются [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], в разделе [руководство по взаимодействию по протоколам веб служб](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md).  

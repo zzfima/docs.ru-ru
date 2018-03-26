@@ -1,27 +1,29 @@
 ---
-title: "Извлечение идентификации или значений автонумерации"
-ms.custom: 
+title: Извлечение идентификации или значений автонумерации
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 15c435d46d3695f78db27801f54ec9de475b2989
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Извлечение идентификации или значений автонумерации
 Первичным ключом в реляционной базе данных является столбец или сочетание столбцов, которые всегда содержат уникальные значения. Если известно значение первичного ключа, то можно найти строку, которая содержит это значение. Такие СУРБД, как SQL Server, Oracle и Microsoft Access/Jet, поддерживают создание столбцов с автоматически увеличивающимися значениями, которые могут назначаться в качестве первичных ключей. Эти значения формируются сервером по мере добавления строк в таблицу. В SQL Server задается свойство идентификатора столбца, в Oracle создается последовательность Sequence, а в Microsoft Access создается столбец AutoNumber.  

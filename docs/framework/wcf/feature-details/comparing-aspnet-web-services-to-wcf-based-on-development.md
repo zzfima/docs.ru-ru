@@ -1,24 +1,26 @@
 ---
-title: "Сравнение веб-служб ASP.NET с веб-службами на основе WCF по процессу разработки"
-ms.custom: 
+title: Сравнение веб-служб ASP.NET с веб-службами на основе WCF по процессу разработки
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: c12bd11cee62cd769f7dffc142806fa5ab1b0137
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>Сравнение веб-служб ASP.NET с веб-службами на основе WCF по процессу разработки
 В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предусмотрена возможность работы в режиме совместимости с ASP.NET, что позволяет программировать и настраивать приложения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] как веб-службы ASP.NET и имитировать их поведение. В следующих разделах приводится сравнение веб-служб ASP.NET и [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с точки зрения того, что необходимо для разработки приложений с использованием обеих технологий.  
@@ -380,7 +382,7 @@ typeof(Service), //"Service" is the name of the service type baseAdresses))
   
  В этом примере показано задание адресов для одного или нескольких транспортных протоколов при построении объекта <xref:System.ServiceModel.ServiceHost>. Эти адреса называются базовыми адресами.  
   
- Адрес, предоставляемый любой конечной точке службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], является адресом относительно базового адреса узла размещения конечной точки. Узел размещения может иметь по одному базовому адресу для каждого транспортного протокола связи. В приведенном выше примере файла конфигурации выбранная для конечной точки привязка <xref:System.ServiceModel.BasicHttpBinding> предполагает использование в качестве транспорта протокола HTTP, поэтому адрес конечной точки — `EchoService`— рассматривается относительно базового HTTP-адреса узла. В случае узла из предыдущего примера базовый HTTP-адрес - http://www.contoso.com:8000/. Для службы, размещенной в IIS или WAS, базовый адрес - это URL-адрес файла службы для этой службы.  
+ Адрес, предоставляемый любой конечной точке службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], является адресом относительно базового адреса узла размещения конечной точки. Узел размещения может иметь по одному базовому адресу для каждого транспортного протокола связи. В приведенном выше примере файла конфигурации выбранная для конечной точки привязка <xref:System.ServiceModel.BasicHttpBinding> предполагает использование в качестве транспорта протокола HTTP, поэтому адрес конечной точки — `EchoService`— рассматривается относительно базового HTTP-адреса узла. В случае узла в предыдущем примере, базовый адрес HTTP-это http://www.contoso.com:8000/. Для службы, размещенной в IIS или WAS, базовый адрес - это URL-адрес файла службы для этой службы.  
   
  Только службы, которые размещены в IIS или WAS и у которых транспортным протоколом является исключительно HTTP, могут работать в режиме совместимости [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с ASP.NET. Для включения этого режима необходимо выполнить следующие шаги.  
   

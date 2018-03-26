@@ -1,27 +1,29 @@
 ---
-title: "Трансляция стандартных операторов запросов"
-ms.custom: 
+title: Трансляция стандартных операторов запросов
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-caps.latest.revision: "2"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: fc99fea9b722f6c3395f6bade625a09c6e97eb08
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="standard-query-operator-translation"></a>Трансляция стандартных операторов запросов
 Технология [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] преобразует стандартные операторы запросов в команды SQL. Обработчик запросов базы данных определяет семантика выполнения преобразования SQL.  
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/17/2018
  Метод <xref:System.Linq.Enumerable.Union%2A> определен для мультинаборов как неупорядоченное объединение мультинаборов (в действительности, он возвращает результат, аналогичный предложению UNION ALL в SQL).  
   
 ### <a name="take-skip"></a>Take, Skip  
- <xref:System.Linq.Enumerable.Take%2A>и <xref:System.Linq.Enumerable.Skip%2A> методы правильно определяются только для *упорядоченные наборы*. Семантика для неупорядоченных наборов или мультинаборов не определена.  
+ <xref:System.Linq.Enumerable.Take%2A> и <xref:System.Linq.Enumerable.Skip%2A> методы правильно определяются только для *упорядоченные наборы*. Семантика для неупорядоченных наборов или мультинаборов не определена.  
   
 > [!NOTE]
 >  На методы <xref:System.Linq.Enumerable.Take%2A> и <xref:System.Linq.Enumerable.Skip%2A> накладываются некоторые ограничения при их использовании в запросах для SQL Server 2000. Дополнительные сведения см. в записи «Пропустить и принимать исключения в SQL Server 2000» в [Устранение неполадок](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
@@ -105,7 +107,7 @@ ORDER BY [t0].[CustomerID]
  Аналогичным образом преобразование [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] для метода <xref:System.Linq.Enumerable.Average%2A>, вычисляющего среднее значение целых чисел, возвращает тип `integer`, а не `double`.  
   
 ### <a name="entity-arguments"></a>Аргументы сущностей  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]включает типы сущностей для использования в <xref:System.Linq.Enumerable.GroupBy%2A> и <xref:System.Linq.Enumerable.OrderBy%2A> методы. При преобразовании этих операторов использование аргумента типа рассматривается как указание всех членов данного типа. Ниже приведены примеры эквивалентного кода.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] включает типы сущностей для использования в <xref:System.Linq.Enumerable.GroupBy%2A> и <xref:System.Linq.Enumerable.OrderBy%2A> методы. При преобразовании этих операторов использование аргумента типа рассматривается как указание всех членов данного типа. Ниже приведены примеры эквивалентного кода.  
   
  [!code-csharp[DLinqSQOTranslation#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#2)]
  [!code-vb[DLinqSQOTranslation#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#2)]  
@@ -123,7 +125,7 @@ ORDER BY [t0].[CustomerID]
   
  <xref:System.Linq.Enumerable.Except%2A>  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]поддерживает равенство и сравнение *плоский* аргументы, но не для аргументов, которые являются последовательностями или содержат последовательности. Плоский аргумент представляет собой тип, который можно сопоставить со строкой SQL. Проекция одного или нескольких типов сущностей, которые можно статически определить как не содержащие последовательностей, считается плоским аргументом.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает равенство и сравнение *плоский* аргументы, но не для аргументов, которые являются последовательностями или содержат последовательности. Плоский аргумент представляет собой тип, который можно сопоставить со строкой SQL. Проекция одного или нескольких типов сущностей, которые можно статически определить как не содержащие последовательностей, считается плоским аргументом.  
   
  Ниже представлены примеры плоских аргументов.  
   
@@ -206,7 +208,7 @@ ORDER BY [t0].[CustomerID]
  Способов разрешения проблем, связанных с этим ограничением, не существует. В частности, метод `Distinct()` нельзя использовать для результата, который содержит члены, сопоставленные с `text` или `ntext`.  
   
 ### <a name="behavior-triggered-by-nested-queries"></a>Поведение, инициируемое вложенными запросами  
- [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)](SP4)) связыватель обладает некоторыми особенностями поведения, которые инициируются вложенных запросов. Набор запросов SQL, которые инициируют эти особенности, не является правильно определенным. По этой причине невозможно определить набор [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] запросы, которые могут вызывать исключения SQL Server.  
+ [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] (SP4)) связыватель обладает некоторыми особенностями поведения, которые инициируются вложенных запросов. Набор запросов SQL, которые инициируют эти особенности, не является правильно определенным. По этой причине невозможно определить набор [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] запросы, которые могут вызывать исключения SQL Server.  
   
 ### <a name="skip-and-take-operators"></a>Операторы «Skip» и «Take»  
  На методы <xref:System.Linq.Enumerable.Take%2A> и <xref:System.Linq.Enumerable.Skip%2A> накладываются некоторые ограничения при их использовании в запросах для [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. Дополнительные сведения см. в записи «Пропустить и принимать исключения в SQL Server 2000» в [Устранение неполадок](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
