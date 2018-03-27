@@ -17,11 +17,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 93c08633af1b4bb46afe9e382066f523c9923a9b
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: 04696ff346ffab438ce8bef2974fdd1a19d940af
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>Новые возможности .NET Framework
 <a name="introduction"></a>В этой статье кратко излагаются ключевые новые возможности и усовершенствования в следующих версиях .NET Framework:  
@@ -1033,7 +1033,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
         - **С помощью префикса имени группы подключений**
 
-             Пользователи могут указать строку, которую WCF будет использовать как префикс достижения для имени группы подключений. Два сообщения с разными префиксами отправляются с помощью разных базовых HTTP-подключений. Префикс задается путем добавления пары "ключ-значение" в свойство <xref:System.ServiceModel.Channels.Message.Properties%2A?displayProperty=nameWithType> сообщения. Ключ — это "HttpTransportConnectionGroupNamePrefix"; значение — желаемый префикс.
+             Пользователи могут указать строку, которую WCF будет использовать как префикс для имени группы подключений. Два сообщения с разными префиксами отправляются с помощью разных базовых HTTP-подключений. Префикс задается путем добавления пары "ключ-значение" в свойство <xref:System.ServiceModel.Channels.Message.Properties%2A?displayProperty=nameWithType> сообщения. Ключ — это "HttpTransportConnectionGroupNamePrefix"; значение — желаемый префикс.
 
         - **С помощью разных фабрик каналов**
 
