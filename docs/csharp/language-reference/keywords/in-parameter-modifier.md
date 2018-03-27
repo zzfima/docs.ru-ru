@@ -1,5 +1,5 @@
 ---
-title: "Модификатор параметров in (справочник по C#)"
+title: Модификатор параметров in (справочник по C#)
 ms.date: 03/06/2018
 ms.prod: .net
 ms.technology:
@@ -10,11 +10,11 @@ helpviewer_keywords:
 - in parameters [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 035aac3e6b902f607e533b709713eb1d07c9774a
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 9b8b21e2bdc95829c831ee71f24b47986321b7d0
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Модификатор параметров in (справочник по C#)
 
@@ -60,7 +60,10 @@ class InOverloads
   
 - Методы итератора, которые включают оператор [yield return](../../../csharp/language-reference/keywords/yield.md) или `yield break`.  
 
-Аргументы `in` обычно объявляется, чтобы предотвратить операции копирования, необходимые для передачи аргументов по значению. Это особенно удобно, когда аргументы являются структурами и массивами структур.
+Аргументы `in` обычно объявляется, чтобы предотвратить операции копирования, необходимые для передачи аргументов по значению. Это наиболее эффективно в тех случаях, когда аргументы являются такими типами значений, как структуры, где операции копирования требуют больше ресурсов, чем передача по ссылке.
+
+> [!WARNING]
+>  Параметры `in` могут потреблять еще больше ресурсов при неправильном использовании. Компилятор может не знать, изменяют ли методы элемента состояние структуры. Если компилятор не может защитить объект от изменений, он на всякий случай создает копию и с ее помощью вызывает ссылки на члены. Любые возможные изменения будут вноситься в эту защитную копию. Есть два способа избежать копирования: передать параметры `in` в виде аргументов `in` или определить структуры как `readonly struct`.
 
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -69,4 +72,5 @@ class InOverloads
  [Справочник по C#](../../../csharp/language-reference/index.md)  
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
  [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
- [Параметры методов](../../../csharp/language-reference/keywords/method-parameters.md)
+ [Параметры методов](../../../csharp/language-reference/keywords/method-parameters.md)  
+ [Семантика ссылок с типами значений](../../../csharp/reference-semantics-with-value-types.md)

@@ -1,6 +1,6 @@
 ---
-title: "Семантика ссылок с типами значений"
-description: "Сведения о функциях языка, которые безопасно минимизируют копирование структур"
+title: Семантика ссылок с типами значений
+description: Сведения о функциях языка, которые безопасно минимизируют копирование структур
 author: billwagner
 ms.author: wiwagn
 ms.date: 11/10/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 6e40907cab2aabcf8c8321819c99298314bcfbc5
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 8a0cfe83200d50eefa9b01ab51591a5fe0703ec0
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="reference-semantics-with-value-types"></a>Семантика ссылок с типами значений
 
@@ -110,6 +110,22 @@ ms.lasthandoff: 03/15/2018
 - Невозможно захватить переменные `ref struct` в лямбда-выражениях или локальных функциях.
 
 Эти ограничения исключают возможность случайного использования `ref struct` таким образом, который может повысить его уровень до управляемой кучи.
+
+## <a name="readonly-ref-struct-type"></a>Тип `readonly ref struct`
+
+Объявление структуры как `readonly ref` сочетает в себе преимущества и недостатки объявлений `ref struct` и `readonly struct`. 
+
+В следующем примере показано объявление `readonly ref struct`.
+
+```csharp
+readonly ref struct ReadOnlyRefPoint2D
+{
+    public int X { get; }
+    public int Y { get; }
+    
+    ReadOnlyRefPoint2D(int x, int y) => (X, Y) = (x, y);
+}
+```
 
 ## <a name="conclusions"></a>Выводы
 

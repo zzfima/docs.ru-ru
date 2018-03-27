@@ -1,7 +1,7 @@
 ---
-title: "Рабочий процесс разработки для приложений Docker"
-description: "Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Рабочий процесс разработки для приложений Docker"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Рабочий процесс разработки для приложений Docker
+description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Рабочий процесс разработки для приложений Docker
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8537b1db27f512ec0bfc2f23589efe8199ca3287
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 9c3df50430117936fd0b9d4390cb84e02085e48d
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="development-workflow-for-docker-apps"></a>Рабочий процесс разработки для приложений Docker
 
@@ -72,7 +72,7 @@ ms.lasthandoff: 03/05/2018
 -   **Начало работы с Docker CE для Windows**
     [*https://docs.docker.com/docker-for-windows/*](https://docs.docker.com/docker-for-windows/)
 
--   **Visual Studio 2017**
+-   **Visual Studio 2017**
     [*https://www.visualstudio.com/downloads/*](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 ![](./media/image4.png)
@@ -398,7 +398,7 @@ services:
 -   **Стив Ласкер (Steve Lasker). Разработка .NET Docker в Visual Studio 2017**
     [*https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111*](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111)
 
--   **Джеффри Т. Фриц (Jeffrey T. Fritz). Помещение приложения .NET Core в контейнер с помощью новых средств Docker для Visual Studio**
+-   **Джеффри Т. Фриц (Jeffrey T. Fritz). Помещение приложения .NET Core в контейнер с помощью новых инструментов Docker для Visual Studio**
     [*https://blogs.msdn.microsoft.com/webdev/2016/11/16/new-docker-tools-for-visual-studio/*](https://blogs.msdn.microsoft.com/webdev/2016/11/16/new-docker-tools-for-visual-studio/)
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Использование команд PowerShell в DockerFile для настройки контейнеров Windows 

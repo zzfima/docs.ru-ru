@@ -1,12 +1,13 @@
 ---
-title: "Создание вспомогательных сборок для приложений для настольных систем"
-ms.custom: 
+title: Создание вспомогательных сборок для приложений для настольных систем
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -30,16 +31,17 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0d360dc5b95c1cdb8de54bcbd723d0056c81c9c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f75da3332c8172a6a888e6f40c66383866799ea
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Создание вспомогательных сборок для приложений для настольных систем
 Файлы ресурсов играют важную роль в локализованных приложениях. Они позволяют приложению использовать для отображения строк, изображений и других данных текущие региональные настройки пользователя, а также предоставлять альтернативные данных при отсутствии необходимых ресурсов для языка и региональных параметров этого пользователя. Для установления местонахождения локализованных ресурсов и их получения в платформе .NET Framework используется модель "звезда". Центром в этой модели является основная сборка, которая содержит не локализуемый исполняемый код и ресурсы для единственного языка и региональных параметров, называемых нейтральными языком и региональными параметрами, или региональными настройками по умолчанию. Язык и региональные параметры по умолчанию являются резервными параметрами; они используются, когда не доступны локализованные ресурсы. Атрибут <xref:System.Resources.NeutralResourcesLanguageAttribute> используется для указания языка и региональных параметров по умолчанию для приложения. Каждый луч звезды ведет к вспомогательной сборке, которая содержит ресурсы для одного локализованного языка и региональных параметров, но не содержит кода. Так как вспомогательные сборки не являются частью главной сборки, ресурсы, относящиеся к конкретному языку и региональным параметрам, можно легко заменять или обновлять, не заменяя главную сборку приложения.  
@@ -71,25 +73,25 @@ ms.lasthandoff: 12/22/2017
   
  Для создания вспомогательной сборки со строгим именем для приложения `Example` из файла ресурсов региональных настроек Германии strings.de.resources служит следующая команда Al.exe.  
   
-```  
-al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dll  
+```console
+al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll  
 ```  
   
  Для создания вспомогательной сборки для приложения `Example` из файла strings.de.resources служит следующая команда Al.exe. Параметр **/template** служит для наследования вспомогательной сборкой всех метаданных сборки, за исключением сведений о языке и региональных параметров ее родительской сборки (Example.dll).  
   
-```  
-al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dll /template:Example.dll  
+```console
+al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll -template:Example.dll  
 ```  
   
  В приведенной ниже таблице более подробно описываются параметры Al.exe, используемые в этих командах.  
   
 |Параметр|Описание:|  
 |------------|-----------------|  
-|**/target:**lib|Указывает, что вспомогательная сборка компилируется в файл библиотеки (DLL). Так как вспомогательная сборка не содержит исполняемого кода и не является основной сборкой приложения, ее необходимо хранить в виде библиотеки DLL.|  
-|**/embed:**strings.de.resources|Указывает для программы Al.exe имя файла ресурсов, включенного при компиляции сборки. Во вспомогательной сборке можно включить несколько файлов ресурсов, но если следовать модели "звезда", то необходимо компилировать отдельную вспомогательную сборку для каждого языка и региональных параметров. Впрочем, можно создавать и отдельные RESOURCES-файлы для строк и объектов.|  
-|**/culture:**de|Задает язык и региональные параметры компилируемого ресурса. Среда CLR использует эти сведения в процессе поиска ресурсов, относящихся к указанному языку и региональным параметрам. Если этот параметр не задан, программа Al.exe скомпилирует ресурс, но среда выполнения не сможет его найти по запросу пользователя.|  
-|**/out:**Example.resources.dll|Задает имя выходного файла. Имя должно соответствовать шаблону *baseName*.resources.*extension*, где *baseName* — имя основной сборки, а *extension* — допустимое расширение имени файла (например, DLL). Обратите внимание, что среда выполнения не может определить язык и региональные параметры вспомогательной сборки, основываясь на имени выходного файла; необходимо использовать параметр **/culture**, чтобы указать их.|  
-|**/template:**Example.dll|Задает сборку, от которой наследуют все метаданные сборки, кроме поля языка и региональных параметров. Этот параметр влияет на вспомогательные сборки только в том случае, если указана сборка, у которой есть [строгое имя](../../../docs/framework/app-domains/strong-named-assemblies.md).|  
+|**-target:**lib|Указывает, что вспомогательная сборка компилируется в файл библиотеки (DLL). Так как вспомогательная сборка не содержит исполняемого кода и не является основной сборкой приложения, ее необходимо хранить в виде библиотеки DLL.|  
+|**-embed:**strings.de.resources|Указывает для программы Al.exe имя файла ресурсов, включенного при компиляции сборки. Во вспомогательной сборке можно включить несколько файлов ресурсов, но если следовать модели "звезда", то необходимо компилировать отдельную вспомогательную сборку для каждого языка и региональных параметров. Впрочем, можно создавать и отдельные RESOURCES-файлы для строк и объектов.|  
+|**-culture:**de|Задает язык и региональные параметры компилируемого ресурса. Среда CLR использует эти сведения в процессе поиска ресурсов, относящихся к указанному языку и региональным параметрам. Если этот параметр не задан, программа Al.exe скомпилирует ресурс, но среда выполнения не сможет его найти по запросу пользователя.|  
+|**-out:**Example.resources.dll|Задает имя выходного файла. Имя должно соответствовать шаблону *baseName*.resources.*extension*, где *baseName* — имя основной сборки, а *extension* — допустимое расширение имени файла (например, DLL). Обратите внимание, что среда выполнения не может определить язык и региональные параметры вспомогательной сборки, основываясь на имени выходного файла; необходимо использовать параметр **/culture**, чтобы указать их.|  
+|**-template:**Example.dll|Задает сборку, от которой наследуют все метаданные сборки, кроме поля языка и региональных параметров. Этот параметр влияет на вспомогательные сборки только в том случае, если указана сборка, у которой есть [строгое имя](../../../docs/framework/app-domains/strong-named-assemblies.md).|  
   
  Полный список параметров, доступных в программе Al.exe см. в разделе [Компоновщик сборок (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md).  
   
@@ -113,7 +115,7 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
 4.  Используйте [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) для компиляции каждого текстового файла или файла ресурсов XML в двоичный RESOURCES-файл. Выходными данными будет набор файлов, имеющий то же корневое имя файла как и RESX- и TXT-файлы, но с расширением RESOURCES. При создании примера с помощью Visual Studio процесс компиляции отрегулируется автоматически. Если используется среда, отличная от Visual Studio, выполните следующие команды для компиляции RESX-файлов в RESOURCES-файлы.  
   
-    ```  
+    ```console
     resgen Greeting.resx  
     resgen Greeting.en-us.resx  
     resgen Greeting.fr-FR.resx  
@@ -132,22 +134,22 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
      Если приложение называется Example и компилируется из командной строки, то команда для компилятора C# имеет вид:  
   
-    ```  
-    csc Example.cs /res:Greeting.resources  
+    ```console  
+    csc Example.cs -res:Greeting.resources  
     ```  
   
      Соответствующая команда для компилятора Visual Basic имеет вид:  
   
-    ```  
-    vbc Example.vb /res:Greeting.resources  
+    ```console  
+    vbc Example.vb -res:Greeting.resources  
     ```  
   
 6.  Создайте вложенный каталог в каталоге основного приложения для каждого локализованного языка и региональных параметров, поддерживаемых приложением. Необходимо создать вложенные каталоги en-US, fr-FR и ru-RU. Visual Studio автоматически создает эти вложенные каталоги в процессе компиляции.  
   
 7.  Внедрите отдельные RESOURCES-файлы для определенного языка и региональных параметров во вспомогательные сборки и сохраните их в соответствующем каталоге. Для этого можно воспользоваться командой для каждого RESOURCES-файла:  
   
-    ```  
-    al /target:lib /embed:Greeting.culture.resources /culture:culture /out:culture\Example.resources.dll  
+    ```console
+    al -target:lib -embed:Greeting.culture.resources -culture:culture -out:culture\Example.resources.dll  
     ```  
   
      где *culture* — имя языка и региональных параметров, ресурсы которых содержит вспомогательная сборка. Visual Studio автоматически обрабатывает этот процесс.  
@@ -167,13 +169,13 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
  Следующая команда Sn.exe создает тестовые пары открытого и закрытого ключей. Параметр **–k** указывает, что необходимо создать новую пару ключей и сохранить ее в заданном файле с именем TestKeyPair.snk.  
   
-```  
+```console
 sn –k TestKeyPair.snk   
 ```  
   
  Открытый ключ можно извлечь из файла, содержащего тестовую пару ключей. Следующая команда извлекает открытый ключ из TestKeyPair.snk и сохраняет его в PublicKey.snk:  
   
-```  
+```console
 sn –p TestKeyPair.snk PublicKey.snk  
 ```  
   
@@ -182,18 +184,18 @@ sn –p TestKeyPair.snk PublicKey.snk
   
  Для создания вспомогательной сборки со строгим именем для приложения StringLibrary из файла strings.ja.resources служит следующая команда Al.exe:  
   
-```  
-al /target:lib /embed:strings.ja.resources /culture:ja /out:StringLibrary.resources.dll /delay+ /keyfile:PublicKey.snk  
+```console 
+al -target:lib -embed:strings.ja.resources -culture:ja -out:StringLibrary.resources.dll -delay+ -keyfile:PublicKey.snk  
 ```  
   
- Параметр **/delay+** указывает, что компоновщик сборок должен отложить подпись сборки. Параметр **/keyfile** задает имя файла ключа, в котором содержится открытый ключ, применяемый для откладывания подписи сборки.  
+ Параметр **-delay+** указывает, что компоновщик сборок должен отложить подпись сборки. Параметр **-keyfile** задает имя файла ключа, в котором содержится открытый ключ, применяемый для откладывания подписи сборки.  
   
 ### <a name="re-signing-an-assembly"></a>Повторная подпись сборки  
  Прежде чем развертывать приложение, можно заново подписать вспомогательную сборку, подписание которой было отложено, реальной парой ключей. Это можно сделать с помощью программы Sn.exe.  
   
  Для подписи StringLibrary.resources.dll парой ключей, хранящихся в файле RealKeyPair.snk, используется следующая команда Sn.exe. Параметр **–R** указывает, что нужно заново подписать сборку с отложенной подписью или сборку, которая должна быть подписана заново.  
   
-```  
+```console
 sn –R StringLibrary.resources.dll RealKeyPair.snk   
 ```  
   
@@ -202,8 +204,8 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
   
  Следующая команда Gacutil.exe устанавливает StringLibrary.resources.dll в глобальный кэш сборок:  
   
-```  
-gacutil /i:StringLibrary.resources.dll  
+```console
+gacutil -i:StringLibrary.resources.dll  
 ```  
   
  Параметр **/I** указывает программе Gacutil.exe, что данную сборку требуется установить в глобальный кэш сборок. После того, как вспомогательная сборка установлена в кэше, ресурсы, которые она содержит, становятся доступны для всех приложений, которые предназначены для использования вспомогательной сборки.  
@@ -213,7 +215,7 @@ gacutil /i:StringLibrary.resources.dll
   
 1.  Если вы не используете Visual Studio, используйте следующую команду [средства строгих имен (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md), чтобы создать пару открытого и закрытого ключей с именем ResKey.snk:  
   
-    ```  
+    ```console
     sn –k ResKey.snk  
     ```  
   
@@ -221,7 +223,7 @@ gacutil /i:StringLibrary.resources.dll
   
 2.  Используйте следующую команду [средства строгих имен (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md), чтобы создать файл открытого ключа с именем PublicKey.snk:  
   
-    ```  
+    ```console
     sn –p ResKey.snk PublicKey.snk  
     ```  
   
@@ -242,7 +244,7 @@ gacutil /i:StringLibrary.resources.dll
   
 6.  Используйте [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) для компиляции каждого текстового файла или файла ресурсов XML в двоичный RESOURCES-файл. Выходными данными будет набор файлов, имеющий то же корневое имя файла как и RESX- и TXT-файлы, но с расширением RESOURCES. При создании примера с помощью Visual Studio процесс компиляции отрегулируется автоматически. Если используется среда, отличная от Visual Studio, выполните следующую команду для компиляции RESX-файлов в RESOURCES-файлы:  
   
-    ```  
+    ```console
     resgen filename  
     ```  
   
@@ -258,42 +260,42 @@ gacutil /i:StringLibrary.resources.dll
   
      Команда для компилятора C# имеет вид:  
   
-    ```  
-    csc /t:library /resource:Strings.resources /delaysign+ /keyfile:publickey.snk StringLibrary.cs  
+    ```console
+    csc -t:library -resource:Strings.resources -delaysign+ -keyfile:publickey.snk StringLibrary.cs  
     ```  
   
      Соответствующая команда для компилятора Visual Basic имеет вид:  
   
-    ```  
-    vbc /t:library /resource:Strings.resources /delaysign+ /keyfile:publickey.snk StringLibrary.vb  
+    ```console  
+    vbc -t:library -resource:Strings.resources -delaysign+ -keyfile:publickey.snk StringLibrary.vb  
     ```  
   
 8.  Создайте вложенный каталог в каталоге основного приложения для каждого локализованного языка и региональных параметров, поддерживаемых приложением. Необходимо создать вложенные каталоги en-US, fr-FR и ru-RU. Visual Studio автоматически создает эти вложенные каталоги в процессе компиляции. Так как все вспомогательные сборки имеют одно и то же имя файла, вложенные каталоги используются для хранения отдельных вспомогательных сборок для языка и региональных параметров до тех пор, пока они не подписаны парой открытого и закрытого ключей.  
   
 9. Внедрите отдельные RESOURCES-файлы ресурсов для определенного языка и региональных параметров во вспомогательные сборки с отложенной подписью и сохраните в соответствующем каталоге. Для этого можно воспользоваться командой для каждого RESOURCES-файла:  
   
-    ```  
-    al /target:lib /embed:Strings.culture.resources /culture:culture /out:culture\StringLibrary.resources.dll /delay+ /keyfile:publickey.snk  
+    ```console
+    al -target:lib -embed:Strings.culture.resources -culture:culture -out:culture\StringLibrary.resources.dll -delay+ -keyfile:publickey.snk  
     ```  
   
      где *culture* — название языка и региональных параметров. В этом примере имена региональных настроек: en-US, fr-FR, и ru-RU.  
   
 10. Подпишите заново StringLibrary.dll с помощью [средства строгих имен (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) следующим образом:  
   
-    ```  
+    ```console
     sn –R StringLibrary.dll RealKeyPair.snk  
     ```  
   
 11. Подпишите заново отдельные вспомогательные сборки. Для этого используйте [средство строгих имен (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) для каждой вспомогательной сборки, как показано ниже.  
   
-    ```  
+    ```console
     sn –R StringLibrary.resources.dll RealKeyPair.snk  
     ```  
   
 12. Зарегистрируйте StringLibrary.dll и все вспомогательные сборки в глобальном кэше сборок с помощью следующей команды:  
   
-    ```  
-    gacutil /i filename  
+    ```console
+    gacutil -i filename  
     ```  
   
      где *filename* — имя регистрируемого файла.  
@@ -305,14 +307,14 @@ gacutil /i:StringLibrary.resources.dll
   
      Чтобы скомпилировать из командной строки используйте следующую команду для компилятора C#:  
   
-    ```  
-    csc Example.cs /r:StringLibrary.dll   
+    ```console
+    csc Example.cs -r:StringLibrary.dll   
     ```  
   
      Команда компилятора для Visual Basic:  
   
-    ```  
-    vbc Example.vb /r:StringLibrary.dll   
+    ```console
+    vbc Example.vb -r:StringLibrary.dll   
     ```  
   
 14. Запустите Example.exe.  

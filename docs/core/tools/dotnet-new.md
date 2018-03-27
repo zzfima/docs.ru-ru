@@ -1,22 +1,19 @@
 ---
-title: "Команда dotnet new — интерфейс командной строки .NET Core"
-description: "Команда dotnet new создает проекты .NET Core на основе указанного шаблона."
-keywords: "dotnet-new, CLI, команда CLI, .NET Core"
+title: Команда dotnet new — интерфейс командной строки .NET Core
+description: Команда dotnet new создает проекты .NET Core на основе указанного шаблона.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/13/2017
+ms.date: 03/21/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: ea94c875ae6fe82d0e5d35ba8ca3fd47971fbbe6
-ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
+ms.openlocfilehash: 2cbd42195d0ec713d2ccb4af823075ece950ceff
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -28,7 +25,7 @@ ms.lasthandoff: 02/13/2018
 
 ## <a name="synopsis"></a>Краткий обзор
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 ```
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [-o|--output] [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
@@ -55,7 +52,7 @@ dotnet new [-h|--help]
 
 Шаблон для создания экземпляров при вызове команды. Каждый шаблон может иметь отдельные параметры, доступные для передачи. Дополнительные сведения см. в разделе [Параметры шаблона](#template-options).
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 
 Команда содержит список шаблонов по умолчанию. Используйте `dotnet new -l`, чтобы получить список доступных шаблонов. В приведенной ниже таблице представлены шаблоны, которые устанавливаются вместе с пакетом SDK для .NET Core 2.0. Язык по умолчанию для шаблона указан внутри квадратных скобок.
 
@@ -101,7 +98,7 @@ dotnet new [-h|--help]
 
 ## <a name="options"></a>Параметры
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 
 `--force`
 
@@ -113,7 +110,9 @@ dotnet new [-h|--help]
 
 `-i|--install <PATH|NUGET_ID>`
 
-Устанавливает исходный пакет или пакет шаблона из указанного пути `PATH` или по указанному идентификатору `NUGET_ID`. Сведения о создании пользовательских шаблонов см. в статье [Пользовательские шаблоны для команды dotnet new](custom-templates.md).
+Устанавливает исходный пакет или пакет шаблона из указанного пути `PATH` или по указанному идентификатору `NUGET_ID`. Если вы хотите установить предварительную версию пакета шаблонов, необходимо указать версию в формате `<package-name>::<package-version>`. По умолчанию `dotnet new` передает \* для версии, что указывает на последнюю стабильную версию пакета. См. пример в разделе [Примеры](#examples).
+
+Сведения о создании пользовательских шаблонов см. в статье [Пользовательские шаблоны для команды dotnet new](custom-templates.md).
 
 `-l|--list`
 
@@ -175,11 +174,11 @@ dotnet new [-h|--help]
 
 Каждый шаблон проекта может содержать дополнительные доступные параметры. Основные шаблоны имеют следующие дополнительные параметры:
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 
 **console, angular, react, reactredux**
 
-`--no-restore` — во время создания проекта не выполняется неявное восстановление.
+  `--no-restore` — во время создания проекта не выполняется неявное восстановление.
 
 **classlib**
 
@@ -322,6 +321,10 @@ dotnet new [-h|--help]
 Перечислите все шаблоны, доступные для MVC:
 
 `dotnet new mvc -l`
+
+Установите версию 2.0 шаблонов одностраничного приложения для ASP.NET Core (параметр команды доступен в .NET Core SDK 1.1 и более поздних версиях):
+
+`dotnet new -i Microsoft.DotNet.Web.Spa.ProjectTemplates::2.0.0`
 
 ## <a name="see-also"></a>См. также
 

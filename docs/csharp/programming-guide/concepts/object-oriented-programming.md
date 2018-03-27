@@ -1,18 +1,19 @@
 ---
-title: "Объектно ориентированное программирование (C#)"
+title: Объектно ориентированное программирование (C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a7f30293bb2d50981353badfb7e373b60dcfeec
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 6da28e97a33e962d4926a3b65d0fdf388c252d9a
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="object-oriented-programming-c"></a>Объектно ориентированное программирование (C#)
 C# обеспечивает полную поддержку объектно ориентированного программирования, включая инкапсуляцию, наследование и полиморфизм.  
@@ -95,7 +96,7 @@ struct SampleStruct
  Определение поля:  
   
 ```csharp  
-Class SampleClass  
+class SampleClass  
 {  
     public string sampleField;  
 }  
@@ -233,10 +234,10 @@ Container.Nested nestedInstance = new Container.Nested()
 |[private](../../../csharp/language-reference/keywords/private.md)|Доступ к типу или члену можно получить только из кода в том же классе.|  
 |[protected](../../../csharp/language-reference/keywords/protected.md)|Доступ к типу или члену можно получить только из кода в том же классе или в производном классе.|  
 |[internal](../../../csharp/language-reference/keywords/internal.md)|Доступ к типу или члену возможен из любого кода в той же сборке, но не из другой сборки.|  
-|[защищенные внутренние](../../../csharp/language-reference/keywords/protected-internal.md)|Доступ к типу или члену возможен из любого кода в той же сборке, или из производного класса в другой сборке.|  
-|[protected Private](../../../csharp/language-reference/keywords/private-protected.md)|Тип или член может осуществляться из кода в том же классе или в производном классе в сборке базового класса.|  
+|[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)|Доступ к типу или члену возможен из любого кода в той же сборке, или из производного класса в другой сборке.|  
+|[private protected](../../../csharp/language-reference/keywords/private-protected.md)|Доступ к типу или члену можно получить из кода в том же классе или в производном классе в сборке базового класса.|  
   
- Дополнительные сведения см. в разделе [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Дополнительные сведения см. в статье [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
 ###  <a name="InstantiatingClasses"></a> Создание экземпляров классов  
  Чтобы создать объект, необходимо создать экземпляр класса.  
@@ -383,7 +384,7 @@ class SampleClass : ISampleInterface
  Определение универсального класса:  
   
 ```csharp  
-Public class SampleGeneric<T>   
+public class SampleGeneric<T>   
 {  
     public T Field;  
 }  

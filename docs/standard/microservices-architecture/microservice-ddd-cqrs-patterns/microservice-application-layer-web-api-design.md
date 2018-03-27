@@ -1,7 +1,7 @@
 ---
-title: "Разработка веб-API и уровня приложений для микрослужб"
-description: "Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Разработка веб-API и уровня приложений для микрослужб"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Разработка веб-API и уровня приложений для микрослужб
+description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Разработка веб-API и уровня приложений для микрослужб
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c166e0286d0769e24a6361037eb6c4694fb821ae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 87b48624fde8c7cdab097289f1cf56ab56e1173f
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="designing-the-microservice-application-layer-and-web-api"></a>Разработка веб-API и уровня приложений для микрослужб
 
@@ -46,10 +46,10 @@ DI является одним из способов реализации при
 -   **SOLID: фундаментальные принципы ООП**
     [*http://deviq.com/solid/*](http://deviq.com/solid/%20)
 
--   **Инверсия контейнеров управления и шаблон внедрения зависимостей**
+-   **Контейнеры инверсии управления и шаблон внедрения зависимостей**
     [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html)
 
--   **Стив Смит (Steve Smith). Оператор new как клейстер**
+-   **Стив Смит (Steve Smith). Ключевое слово new**
     [*http://ardalis.com/new-is-glue*](http://ardalis.com/new-is-glue)
 
 

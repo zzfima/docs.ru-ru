@@ -1,12 +1,13 @@
 ---
-title: "Работа с RESX-файлами программным способом"
-ms.custom: 
+title: Работа с RESX-файлами программным способом
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17c2cee97c3347a98a015e8526e436815378eed0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 951bd2160baddf100a685af2d78ec49e2146077b
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-resx-files-programmatically"></a>Работа с RESX-файлами программным способом
 Поскольку XML-файлы ресурсов (RESX-файлы) должны иметь четко определенный XML-формат (включая заголовок, который должен соответствовать конкретной схеме и за которым следуют данные в парах "имя-значение"), создание этих файлов вручную может приводить к ошибкам. RESX-файлы можно также создавать программно, используя типы и члены из библиотеки классов .NET Framework. Кроме того, библиотеку классов .NET Framework можно использовать для извлечения ресурсов, хранящихся в RESX-файлах. В этой статье рассматривается использование типов и членов из пространства имен <xref:System.Resources> для работы с RESX-файлами.  
@@ -83,15 +85,15 @@ ms.lasthandoff: 12/22/2017
   
  Результат — двоичный файл ресурсов, который имеет такое же корневое имя файла, что и RESX-файл, и расширение RESOURCES-файла. Затем во время компиляции этот файл может быть компилирован в исполняемый файл или библиотеку. Если применяется компилятор Visual Basic, для внедрения RESOURCES-файла в исполняемый файл приложения используйте следующий синтаксис:  
   
- **vbc** *имя_файла* **.vb /resource:** *имя_RESOURCES_файла*  
+ **vbc** *filename* **.vb -resource:** *.resourcesFilename*  
   
  При использовании C# синтаксис следующий:  
   
- **csc** *имя_файла* **.cs /resource:** *имя_RESOURCES_файла*  
+ **csc** *filename* **.cs -resource:** *.resourcesFilename*  
   
  Затем RESOURCES-файл может быть также внедрен во вспомогательную сборку с помощью [компоновщика сборок (AL.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md), который имеет следующий базовый синтаксис:  
   
- **al** *resourcesFilename* **/out:** *assemblyFilename*  
+ **al** *resourcesFilename* **-out:** *assemblyFilename*  
   
 ## <a name="see-also"></a>См. также  
  [Создание файлов ресурсов](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
