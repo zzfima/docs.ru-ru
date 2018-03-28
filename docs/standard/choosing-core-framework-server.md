@@ -1,19 +1,19 @@
 ---
-title: "Выбор между .NET Core и .NET Framework для серверных приложений"
-description: "Рекомендации по использованию реализации .NET для создания серверных приложений на платформе .NET."
+title: Выбор между .NET Core и .NET Framework для серверных приложений
+description: Рекомендации по использованию реализации .NET для создания серверных приложений на платформе .NET.
 author: cartermp
 ms.author: mairaw
-ms.date: 08/15/2016
+ms.date: 03/15/2018
 ms.topic: article
 ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2108125b9c01a2686d66b0ebd4e43e7ac863e223
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c07b0b760e2a46faea574eef3575409bac773942
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Выбор между .NET Core и .NET Framework для серверных приложений
 
@@ -79,6 +79,7 @@ ms.lasthandoff: 12/23/2017
 ### <a name="a-need-to-use-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Поддержка сторонних библиотек .NET или пакетов NuGet, недоступных для .NET Core
 
 Библиотеки быстро распространяются в .NET Standard. .NET Standard позволяет совместно использовать код во всех реализациях .NET, включая .NET Core. С .NET Standard 2.0 это стало еще проще.
+
 - Значительно расширен API-интерфейс. 
 - Появился режим совместимости .NET Framework. Этот режим совместимости позволяет проектам .NET Standard и .NET Core ссылаться на библиотеки .NET Framework. Дополнительные сведения о режиме совместимости см. в статье [Объявление о выпуске .NET Standard 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/).
 
@@ -92,7 +93,7 @@ ms.lasthandoff: 12/23/2017
 
 * Приложения веб-страниц ASP.NET. Веб-страницы ASP.NET не добавлены в среду ASP.NET Core. [Страницы Razor](/aspnet/core/mvc/razor-pages/) ASP.NET Core имеют много общего с веб-страницами.
 
-* Реализация сервера и клиента ASP.NET SignalR. Сейчас ASP.NET SignalR недоступен (ни клиент, ни сервер) для ASP.NET Core. ASP.NET Core SignalR планируется добавить в ASP.NET Core 2.1. Дополнительные сведения см. [в плане развития ASP.NET Core](https://github.com/aspnet/Home/wiki/Roadmap). Предварительная пробная версия библиотеки для [сервера](https://github.com/aspnet/SignalR-Server) и [клиента](https://github.com/aspnet/SignalR-Client-Net) доступна в репозиториях GitHub.
+* Реализация сервера и клиента ASP.NET SignalR. На данный момент [ASP.NET SignalR](https://github.com/aspnet/SignalR) предлагается в виде предварительной версии с ASP.NET Core 2.1.
 
 * Реализация служб WCF. Хотя в среду .NET Core и добавлена [библиотека клиента WCF](https://github.com/dotnet/wcf), позволяющая использовать службы WCF, сервер WCF можно реализовать только в среде .NET Framework. Этот сценарий не входит в текущий план для .NET Core, но он будет рассмотрен в будущем.
 
