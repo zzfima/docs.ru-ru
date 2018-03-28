@@ -1,43 +1,53 @@
 ---
-title: "Начало работы с хранилищем таблиц Azure, с помощью F #"
-description: "Хранения структурированных данных в облаке, с помощью хранилища таблиц Azure, хранилище данных NoSQL."
-keywords: "Visual f #, f #, функционального программирования, .NET, .NET Core, Azure"
+title: 'Начало работы с хранилищем таблиц Azure, с помощью F #'
+description: Хранения структурированных данных в облаке с использованием хранилища таблиц Azure или Azure Cosmos DB.
+keywords: 'Visual f #, f #, функционального программирования, .NET, .NET Core, Azure'
 author: sylvanc
 ms.author: phcart
-ms.date: 09/20/2016
+ms.date: 03/26/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 9e5d6cea-a98c-461e-a5cc-75f1d154eafd
-ms.openlocfilehash: 905374a60261b0c2a863edb956943d41ae80f04d
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 6d40211e13e8d213aa5a40d585dd384abf49ddfa
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="get-started-with-azure-table-storage-using-f"></a>Начало работы с хранилищем таблиц Azure, с помощью F # #
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Начало работы с хранилищем таблиц Azure и Azure DB Cosmos таблицы, в API с помощью F # # 
 
 Хранилище таблиц Azure — это служба, для сохранения структурированных данных NoSQL в облаке. Хранилище ключей или атрибут с schemaless конструктора будет хранилище таблиц. Так как хранилище таблиц schemaless, можно легко адаптировать данных в соответствии с потребностями вашего приложения evolve. Доступ к данным — это быстрый и экономичный для всех типов приложений. Хранилище таблиц, обычно значительно меньше стоимости традиционные SQL аналогичные объемами данных.
 
 Хранилище таблиц можно использовать для хранения гибкие наборов данных, таких как данные пользователя для веб-приложений, адресные книги, сведения об устройстве и любого другого типа метаданных, необходимых службе. Можно хранить любое число сущностей в таблице, и учетную запись хранилища может содержать любое количество таблиц, вплоть до предела емкости учетной записи хранения.
 
-### <a name="about-this-tutorial"></a>О этого учебника
+Azure Cosmos DB предоставляет API-Интерфейс таблиц для приложения, написанные для табличного хранилища Azure и требующих возможностям расширенного выпуска:
 
-Этот учебник показывает способы написания кода F # для выполнения общих задач с помощью хранилища таблиц Azure, включая создание и удаление таблицы и вставка, обновление, удаление и запрос данных таблицы.
+- Готовое к использованию глобального распространения.
+- Выделенный пропускная способность по всему миру.
+- Миллисекунды десяти задержки процентиля 99.
+- Гарантируется, что высокий уровень доступности.
+- Автоматическое получателей индексирование.
 
-Концептуальный обзор хранилища таблиц, см. в разделе [руководство по .NET для хранилища таблиц](/azure/storage/storage-dotnet-how-to-use-tables)
+Приложения, написанные для табличного хранилища Azure можно перенести на Azure Cosmos DB с помощью API таблицы без изменений кода и воспользоваться преимуществами premium. API таблицы содержит клиентские пакеты SDK для .NET, Java, Python и Node.js.
+
+Дополнительные сведения см. в разделе [введение в Azure Cosmos DB таблицы API](https://docs.microsoft.com/azure/cosmos-db/table-introduction).
+
+## <a name="about-this-tutorial"></a>О этого учебника
+
+Этот учебник показывает способы написания кода F # для выполнения общих задач с помощью хранилища Azure таблицы или таблицы API DB Cosmos Azure, включая создание и удаление таблицы и вставка, обновление, удаление и запрос данных таблицы.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Чтобы использовать это руководство, необходимо сначала [создать учетную запись хранилища Azure](/azure/storage/storage-create-storage-account).
-Кроме того, потребуется ключ доступа хранилища для этой учетной записи.
+Чтобы использовать это руководство, необходимо сначала [создать учетную запись хранилища Azure](/azure/storage/storage-create-storage-account) или [учетная запись Azure Cosmos DB](https://azure.microsoft.com/try/cosmosdb/).
+
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>Создание скрипта F # и начала F #, интерактивный
 
 Примеры в этой статье используется в F # приложения или скрипта F #. Чтобы создать скрипт F #, создайте файл с `.fsx` расширение, например `tables.fsx`, в среде разработки F #.
 
-Затем используйте [диспетчера пакетов](package-management.md) такие как [Paket](https://fsprojects.github.io/Paket/) или [NuGet](https://www.nuget.org/) установка `WindowsAzure.Storage` пакета и ссылка `WindowsAzure.Storage.dll` в скрипте с помощью `#r`директивы. Выполните ее повторное «Microsoft.WindowsAzure.ConfigurationManager», чтобы получить Microsoft.Azure пространства имен.
+Затем используйте [диспетчера пакетов](package-management.md) такие как [Paket](https://fsprojects.github.io/Paket/) или [NuGet](https://www.nuget.org/) установка `WindowsAzure.Storage` пакета и ссылка `WindowsAzure.Storage.dll` в скрипте с помощью `#r`директивы. Сделать его снова, `Microsoft.WindowsAzure.ConfigurationManager` для получения имен Microsoft.Azure.
 
 ### <a name="add-namespace-declarations"></a>Добавьте объявления пространств имен
 
@@ -45,11 +55,15 @@ ms.lasthandoff: 02/28/2018
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L1-L5)]
 
-### <a name="get-your-connection-string"></a>Получение строки подключения
+### <a name="get-your-azure-storage-connection-string"></a>Получение строки подключения хранилища Azure
 
-Для этого учебника потребуется строку подключения хранилища Azure. Дополнительные сведения о строках соединения см. в разделе [Настройка строки подключения хранилища](/azure/storage/storage-configure-connection-string).
+При подключении к службе таблиц хранилища Azure, вам потребуется строки подключения для этого учебника. Можно скопировать строку подключения на портале Azure. Дополнительные сведения о строках соединения см. в разделе [Настройка строки подключения хранилища](/azure/storage/storage-configure-connection-string).
 
-Учебник вы введете строки подключения в скрипте, следующим образом:
+### <a name="get-your-azure-cosmos-db-connection-string"></a>Получить строку подключения к базе данных Azure Cosmos
+
+При подключении к базе данных Azure Cosmos, вам потребуется строки подключения для этого учебника. Можно скопировать строку подключения на портале Azure. На портале Azure в учетной записи Cosmos DB перейдите к **параметры** > **строка подключения**и нажмите кнопку **копирования** кнопку, чтобы скопировать первичный подключение Строка. 
+
+В учебнике введите строку подключения в скрипте, как в следующем примере:
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L11-L11)]
 
@@ -67,25 +81,25 @@ ms.lasthandoff: 02/28/2018
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L21-L22)]
 
-Будет возвращен `CloudStorageAccount`.
+Возвращает `CloudStorageAccount`.
 
 ### <a name="create-the-table-service-client"></a>Создание клиента службы таблиц
 
-`CloudTableClient` Позволяет получить таблиц и сущностей, хранящихся в хранилище таблиц. Вот один из способов создания клиента службы.
+`CloudTableClient` Позволяет получить таблицы и сущности в хранилище таблиц. Вот один из способов создания клиента службы.
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L28-L29)]
 
 Теперь вы готовы написать код, который считывает и записывает данные в хранилище таблиц.
 
-## <a name="create-a-table"></a>Создание таблицы
+### <a name="create-a-table"></a>Создание таблицы
 
 В этом примере показано, как создать таблицу, если он еще не существует:
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L35-L39)]
 
-## <a name="add-an-entity-to-a-table"></a>Добавление сущности в таблицу
+### <a name="add-an-entity-to-a-table"></a>Добавление сущности в таблицу
 
-Сущность должна иметь тип, который наследует от `TableEntity`. Вы можете расширить `TableEntity` в усмотрению, но ваш тип *должен* иметь конструктор без параметров. Только свойства, имеющие и `get` и `set` будут храниться в таблице Azure.
+Сущность должна иметь тип, который наследует от `TableEntity`. Вы можете расширить `TableEntity` в усмотрению, но ваш тип *должен* иметь конструктор без параметров. Только свойства, имеющие и `get` и `set` хранятся в таблице Azure.
 
 Секции и ключом строки однозначно определяют сущность в таблице. Сущности с одинаковым ключом секции могут выполняться быстрее, чем с разными ключами секционирования, но с помощью различных разделов обеспечивает улучшенную масштабируемость параллельных операций.
 
@@ -93,11 +107,11 @@ ms.lasthandoff: 02/28/2018
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L45-L52)]
 
-Теперь мы добавим наш `Customer` в таблицу. Чтобы сделать это, создайте `TableOperation` , будет выполняться в таблице. В этом случае вы создаете `Insert` операции.
+Теперь добавьте `Customer` в таблицу. Чтобы сделать это, создайте `TableOperation` , выполняемый в таблице. В этом случае вы создаете `Insert` операции.
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L54-L55)]
 
-## <a name="insert-a-batch-of-entities"></a>Вставка пакета сущностей
+### <a name="insert-a-batch-of-entities"></a>Вставка пакета сущностей
 
 Пакет сущностей можно вставить в таблицу с помощью одиночную операцию записи. Пакетные операции позволяют объединить операций в за одно выполнение, но они имеют некоторые ограничения:
 
@@ -110,20 +124,20 @@ ms.lasthandoff: 02/28/2018
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L62-L71)]
 
-## <a name="retrieve-all-entities-in-a-partition"></a>Получение всех сущностей в секции
+### <a name="retrieve-all-entities-in-a-partition"></a>Получение всех сущностей в секции
 
-Для запроса к таблице для всех сущностей в секции, использовать `TableQuery` объекта. Здесь можно отфильтровать для сущностей, где ключ раздела «Buster».
+Для запроса к таблице для всех сущностей в секции, использовать `TableQuery` объекта. Здесь можно отфильтровать для сущностей, где ключ раздела «Smith».
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L77-L80)]
+[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L77-L82)]
 
 Теперь можно распечатать результаты:
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L84-L85)]
 
 
-## <a name="retrieve-a-range-of-entities-in-a-partition"></a>Извлечь диапазон сущностей из секции
+### <a name="retrieve-a-range-of-entities-in-a-partition"></a>Извлечь диапазон сущностей из секции
 
-Если вы не хотите запросить все сущности в секции, можно указать диапазон, объединяя фильтр ключа секции с фильтром ключа строк. Здесь используется два фильтра для получения всех сущностей в раздел «Buster» которых ключ строки (имя) начинается с буквы, более ранних, чем «M» в алфавите.
+Если вы не хотите запросить все сущности в секции, можно указать диапазон, объединяя фильтр ключа секции с фильтром ключа строк. Здесь используется два фильтра для получения всех сущностей в раздел «Smith» где ключ строки (имя) начинается с буквы, более ранних, чем «M» в алфавите.
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L91-L100)]
 
@@ -131,9 +145,9 @@ ms.lasthandoff: 02/28/2018
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L102-L103)]
 
-## <a name="retrieve-a-single-entity"></a>Извлечение отдельной сущности
+### <a name="retrieve-a-single-entity"></a>Извлечение отдельной сущности
 
-Можно написать запрос, чтобы получить конкретную сущность. Здесь используется `TableOperation` для указания клиентов «Ларри Buster». Вместо коллекции, будет возвращена `Customer`. Указание ключа секции и ключ строки в запросе является самым быстрым способом извлечения одной сущности из таблицы службы.
+Можно написать запрос, чтобы получить конкретную сущность. Здесь используется `TableOperation` для указания клиентов «Ben Smith». Вместо коллекции, будет возвращена `Customer`. Указание ключа секции и ключ строки в запросе является самым быстрым способом извлечения одной сущности из таблицы службы.
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L109-L111)]
 
@@ -142,52 +156,53 @@ ms.lasthandoff: 02/28/2018
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L113-L115)]
 
 
-## <a name="replace-an-entity"></a>Замените сущности
+### <a name="replace-an-entity"></a>Замените сущности
 
-Чтобы обновить сущность, получить его из службы таблиц, изменять объект сущности, а затем сохраните изменения к службе таблиц через `Replace` операции. В этом случае сущность, которая полностью заменить на сервере, пока не изменят сущностей на сервере, так как он был извлечен, в этом случае операция завершится неудачей. Эта ошибка является приложения будет случайно перезаписать изменения из других источников.
+Чтобы обновить сущность, получить его из службы таблиц, изменять объект сущности, а затем сохраните изменения к службе таблиц через `Replace` операции. В этом случае сущность, которая полностью заменить на сервере, пока не изменят сущностей на сервере, так как он был извлечен, в этом случае операция завершается с ошибкой. Эта ошибка является приложения будет случайно перезаписать изменения из других источников.
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L121-L128)]
 
-## <a name="insert-or-replace-an-entity"></a>INSERT или замены сущности
+### <a name="insert-or-replace-an-entity"></a>INSERT или замены сущности
 
-В некоторых случаях вы не знаете, если сущность существует в таблице или нет. И если да, текущие значения, хранящиеся в нем больше не нужны. Можно использовать `InsertOrReplace` для создания сущности или заменить его, если он существует, независимо от их состояния.
+В некоторых случаях вы не знаете, существует ли сущность в таблице. И если да, текущие значения, хранящиеся в нем больше не нужны. Можно использовать `InsertOrReplace` для создания сущности или заменить его, если он существует, независимо от их состояния.
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L134-L140)]
+[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L134-L141)]
 
-## <a name="query-a-subset-of-entity-properties"></a>Запрос подмножества свойств сущности
+### <a name="query-a-subset-of-entity-properties"></a>Запрос подмножества свойств сущности
 
 Запрос таблицы можно получить только несколько свойств с сущностью, а не все из них. Этот метод вызывается проекции, может повысить производительность запросов, особенно для больших объектов. Здесь, возвращают только по электронной почте адреса, используя `DynamicTableEntity` и `EntityResolver`. Обратите внимание, что проекции не поддерживается на эмулятор локального хранилища, поэтому этот код выполняется только в том случае, если вы используете учетную запись в службе таблиц.
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L146-L157)]
+[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L147-L158)]
 
-## <a name="retrieve-entities-in-pages-asynchronously"></a>Получение сущностей на страницах асинхронно
+### <a name="retrieve-entities-in-pages-asynchronously"></a>Получение сущностей на страницах асинхронно
 
 Если вы читаете большое количество сущностей, и вы хотите их обработка по мере их загрузки, а не ждать их все для возврата, можно использовать сегментированных запрос. Здесь возвращают результаты в страницы с помощью асинхронного рабочего процесса, чтобы выполнение не блокируется во время ожидания для большого набора результатов.
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L163-L177)]
+[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L163-L178)]
 
 Вы теперь можно выполнить это вычисление синхронно:
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L179-L179)]
+[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L180-L180)]
 
-## <a name="delete-an-entity"></a>Удаление сущности
+### <a name="delete-an-entity"></a>Удаление сущности
 
-Сущность можно удалить после его получения. С обновлением сущности, если произойдет сущность была изменена с момента его загрузки.
+Сущность можно удалить после его получения. С обновлением сущности, это не выполняется, если сущность была изменена с момента его загрузки.
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L185-L186)]
+[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L186-L187)]
 
-## <a name="delete-a-table"></a>Удаление таблицы
+### <a name="delete-a-table"></a>Удаление таблицы
 
 Можно удалить таблицу из учетной записи хранилища. Таблицы, которая была удалена, будут недоступны для быть повторно созданы в течение заданного времени после удаления.
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L192-L192)]
+[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L193-L193)]
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Теперь, когда вы узнали основы хранилище таблиц, выполните эти ссылки на дополнительные сведения о более сложных задач хранилища.
+Теперь, когда вы узнали основы хранилище таблиц, приведены по следующим ссылкам, Дополнительные сведения о более сложных задач хранилища и API-Интерфейс таблиц Azure Cosmos DB.
 
-- [API-интерфейсов хранилища Azure для .NET](/dotnet/api/overview/azure/storage)
-- [Тип поставщика хранилища Azure](https://fsprojects.github.io/AzureStorageTypeProvider/)
-- [Блог группы разработчиков хранилища Azure](https://blogs.msdn.microsoft.com/b/windowsazurestorage/)
-- [Настройка строки подключения хранилища Azure](/azure/storage/common/storage-configure-connection-string)
-- [Приступая к работе с хранилищем таблиц Azure в .NET](https://azure.microsoft.com/documentation/samples/storage-table-dotnet-getting-started/)
+- [Введение в Azure Cosmos API DB таблиц](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
+- [Клиентская библиотека хранилища для Справочник по .NET](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
+- [Тип поставщика хранилища Azure](http://fsprojects.github.io/AzureStorageTypeProvider/)
+- [Блог группы разработчиков хранилища Azure](http://blogs.msdn.com/b/windowsazurestorage/)
+- [Настройка строк подключения](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
+- [Приступая к работе с хранилищем таблиц Azure в .NET](https://azure.microsoft.com/resources/samples/storage-table-dotnet-getting-started/)

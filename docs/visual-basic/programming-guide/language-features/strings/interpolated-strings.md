@@ -1,16 +1,17 @@
 ---
-title: "Интерполированные строки (Visual Basic)"
+title: Интерполированные строки (Visual Basic)
 ms.date: 10/31/2017
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f865d5a7167847bf869d70a39570413dac271a2c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9501c052f387a522226e957193a8866083aa4233
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>Интерполированные строки (Справочник по языку Visual Basic)
 
@@ -40,7 +41,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 - *format-string* — это строка формата, соответствующая типу форматируемого объекта. Например, для <xref:System.DateTime> значение, это может быть [стандартных форматов даты и времени строка](~/docs/standard/base-types/standard-date-and-time-format-strings.md) , такие как «D» или «d».
 
 > [!IMPORTANT]
-> Не может иметь любой пробел между `$` и `"` , начинающегося в строке. Это может привести к ошибке компилятора.
+> Между `$` и `"` в начале строки не может быть пробела. Это может привести к ошибке компилятора.
 
  Интерполированную строку можно использовать везде, где допустимо применять строковый литерал.  Интерполированная строка вычисляется каждый раз, когда выполняется код с интерполированной строкой. Это позволяет разделить определение и вычисление интерполированной строки.  
   
@@ -62,11 +63,11 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 2. Преобразование интерполированной строки в переменную <xref:System.IFormattable>, которая позволяет создавать несколько результирующих строк с содержимым для конкретного языка из одного экземпляра <xref:System.IFormattable>. Это полезно для включения правильных форматов чисел и дат для отдельных языков.  Все вхождения двойных фигурных скобок ("{{" и "}}") остаются двойными фигурными скобками до тех пор, пока строка не будет отформатирована путем явного или неявного вызова метода <xref:System.Object.ToString>.  Все заключенные в скобки выражения интерполяции преобразуются в {0}, \{1\} и т. д.  
 
-   В следующем примере используется отражение для отображения членов, а также значений поля и свойства переменной <xref:System.IFormattable>, созданной из интерполированной строки. Он также передает <xref:System.IFormattable> переменной <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> метод.
+   В следующем примере используется отражение для отображения членов, а также значений поля и свойства переменной <xref:System.IFormattable>, созданной из интерполированной строки. Кроме того, переменная <xref:System.IFormattable> передается в метод <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>.
 
    [!code-vb[interpolated-strings2](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings2.vb)]  
 
-   Обратите внимание, что интерполированную строку можно проверить только с помощью отражения. Если оно передается строка форматирования, такие как <xref:System.Console.WriteLine(System.String)>, разрешаются элементами форматирования и возвращаются в результирующую строку. 
+   Обратите внимание, что интерполированную строку можно проверить только с помощью отражения. Если она передается методу форматирования строк, например <xref:System.Console.WriteLine(System.String)>, элементы формата разрешаются и возвращается результирующая строка. 
 
 3. Преобразование интерполированной строки для <xref:System.FormattableString> переменной, которая представляет строку составного формата. Проверка строки составного формата и способа ее отрисовки в виде результирующей строки может, например, обеспечивать защиту от атак путем внедрения кода, если выполнялось построение запроса. Объект <xref:System.FormattableString> также включает в себя:
 
@@ -81,7 +82,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]  
 
 ## <a name="see-also"></a>См. также  
-f<xref:System.IFormattable?displayProperty=nameWithType>   
+ <xref:System.IFormattable?displayProperty=nameWithType>  
  <xref:System.FormattableString?displayProperty=nameWithType>  
  [Справочник по языку Visual Basic](index.md)  
  

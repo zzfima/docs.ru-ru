@@ -1,6 +1,6 @@
 ---
-title: "Руководство по языку F#"
-description: "Это руководство предоставляет обзор различных учебных материалов для языка F #, это функциональный язык программирования, работающей на платформе .NET."
+title: Руководство по языку F#
+description: 'Это руководство предоставляет обзор различных учебных материалов для языка F #, это функциональный язык программирования, работающей на платформе .NET.'
 author: jackfoxy
 ms.author: phcart
 ms.date: 03/19/2018
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea27fb37-dad1-4bd4-a3cc-4f5c70767ae9
-ms.openlocfilehash: 8be5ac5090e10ae9270e7eec529bd9b7c3c663fb
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: a101233f396368c0bc25937c49f77699cb9f8cf2
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="f-guide"></a>Руководство по языку F#
 
@@ -54,11 +54,14 @@ F # — о производительности сущность. Поддерж
 
 [Начало работы с F # с .NET Core CLI](get-started/get-started-command-line.md) Если требуется использование средств командной строки.
 
+[Начало работы с F # и Xamarin](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/) для мобильных устройств программирование на F #.
+
 ## <a name="references"></a>Ссылки
 
 [Справочник по языку F #](language-reference/index.md) является официальным и полную ссылку для всех компонентов языка F #. Каждой статьи о синтаксисе и примеры кода. В оглавлении можно использовать панель фильтра для поиска конкретных статей.
 
 [Справочник по основной библиотеке F #](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) является Справочник по API для основной библиотеки F #.
+
 
 ## <a name="additional-guides"></a>Дополнительные руководства
 
