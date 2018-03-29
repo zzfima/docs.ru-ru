@@ -3,7 +3,7 @@
 ## [Work with syntax](work-with-syntax.md) (Работа с синтаксисом)
 ## [Work with semantics](work-with-semantics.md) (Работа с семантикой)
 ## [Work with a workspace](work-with-workspace.md) (Использование рабочей области)
-
+## [Изучение кода с помощью визуализатора синтаксиса](syntax-visualizer.md)
 ## Краткие руководства
 ### [Анализ синтаксиса](get-started/syntax-analysis.md)
 ### [Семантический анализ](get-started/semantic-analysis.md)

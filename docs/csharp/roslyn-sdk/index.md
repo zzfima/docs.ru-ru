@@ -1,6 +1,6 @@
 ---
-title: "Пакет SDK для платформы компилятора .NET (API-интерфейсы Roslyn)"
-description: "Узнайте, как использовать пакет SDK для .NET Compiler Platform (другое название — API-интерфейсы Roslyn), чтобы анализировать код .NET, находить ошибки и исправлять их."
+title: Пакет SDK для платформы компилятора .NET (API-интерфейсы Roslyn)
+description: Узнайте, как использовать пакет SDK для .NET Compiler Platform (другое название — API-интерфейсы Roslyn), чтобы анализировать код .NET, находить ошибки и исправлять их.
 keywords: roslyn, analyzer, code fix
 author: billwagner
 ms.author: wiwagn
@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 260efa9810e6587224bddb196b4a746d15f785e2
-ms.sourcegitcommit: 3fd4e718d1bac9769fe0c1dd08ca1b2323ae272b
+ms.openlocfilehash: c627903743f8867e05bac9ce835659fc7270b94e
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="the-net-compiler-platform-sdk"></a>Пакет SDK для .NET Compiler Platform
 
@@ -67,10 +67,15 @@ ms.lasthandoff: 01/11/2018
 
 Дополнительные сведения об основных преимуществах пакета SDK для .NET Compiler Platform можно найти в следующих четырех разделах:
 
+ - [Изучение кода с помощью визуализатора синтаксиса](syntax-visualizer.md)
  - [Understand the .NET Compiler Platform SDK model](compiler-api-model.md) (Сведения о модели SDK для .NET Compiler Platform)
  - [Work with syntax](work-with-syntax.md) (Работа с синтаксисом)
  - [Work with semantics](work-with-semantics.md) (Работа с семантикой)
  - [Work with a workspace](work-with-workspace.md) (Использование рабочей области)
+ 
+Чтобы приступить к работе, потребуется установить **пакет SDK для .NET Compiler Platform**:
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
 <!--
 
