@@ -1,17 +1,17 @@
 ---
-title: "Статьи с практическими руководствами (руководств по языку C#)"
-description: "Коллекция советов и кратких конкретных примеров кода"
+title: Статьи с практическими руководствами (руководств по языку C#)
+description: Коллекция советов и кратких конкретных примеров кода
 author: billwagner
 ms.author: wiwagn
 ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 591996c02c55c1f54af94280940e41720684251a
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: dfb90870233acbe3898e8863f060cd15dd22c3c7
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-c"></a>Практическое руководство (C#)
 
@@ -54,7 +54,7 @@ ms.lasthandoff: 03/12/2018
 
 Строки являются основным типом данных, используемым для отображения текста или работы с ним. В этих статьях приводятся распространенные варианты использования строк.
 
-- [Сравнение строк](../programming-guide/strings/how-to-compare-strings.md).
+- [Сравнение строк](compare-strings.md).
 - [Изменение содержимого строки](modify-string-contents.md).
 - [Определение того, представляет ли строка число](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [Использование `String.Split` для разделения строк](parse-strings-using-split.md).
