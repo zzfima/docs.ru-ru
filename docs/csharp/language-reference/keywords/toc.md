@@ -23,7 +23,6 @@
 #### [interface](interface.md)
 #### [object](object.md)
 #### [string](string.md)
-#### [Интерполированные строки](interpolated-strings.md)
 ### [void](void.md)
 ### [var](var.md)
 ### [Справочные таблицы по типам](reference-tables-for-types.md)
