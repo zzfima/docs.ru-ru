@@ -1,12 +1,13 @@
 ---
-title: "Обнаружение сборок в среде выполнения"
-ms.custom: 
+title: Обнаружение сборок в среде выполнения
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - app.config files, assembly locations
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 97a56a095c1b0c080cd3df329fce0085dd01af23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6e154e0658534018ccd1086631cad6d350528b5d
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Обнаружение сборок в среде выполнения
 Для успешного развертывания приложения .NET Framework необходимо понимать, как среда CLR обнаруживает сборки, из которых состоит приложение, и выполняет привязку к ним. По умолчанию среда выполнения пытается выполнить привязку к той самой версии сборки, с помощью которой было создано приложение. Это поведение по умолчанию можно переопределить с помощью параметров файла конфигурации.  
@@ -187,7 +189,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   Имя, то есть имя сборки, на которую задана ссылка.  
   
--   Атрибут `privatePath` элемента [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), который является определяемым пользователем списком подкаталогов в корневой папке. Это расположение может быть задано в файле конфигурации приложения и в управляемом коде с помощью свойства <xref:System.AppDomain.AppendPrivatePath%2A> для домена приложения. При указании в управляемом коде путь `privatePath` управляемого кода проверяется первым. Затем проверяется путь, указанный в файле конфигурации приложения.  
+-   Атрибут `privatePath` элемента [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), который является определяемым пользователем списком подкаталогов в корневой папке. Это расположение может быть задано в файле конфигурации приложения и в управляемом коде с помощью свойства <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> для домена приложения. При указании в управляемом коде путь `privatePath` управляемого кода проверяется первым. Затем проверяется путь, указанный в файле конфигурации приложения.  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>Проверка базовой папки приложения и каталогов языков и региональных параметров  
  Среда выполнения всегда начинает проверку с базовой папки приложения, которая может быть URL-адресом или корневым каталогом приложения на компьютере. Если связанная сборка не найдена в базовой папке приложения и не предоставлены сведения о языке и региональных параметрах, среда выполнения осуществляет поиск во всех подкаталогах с именем сборки. В число проверяемых каталогов входят следующие:  
@@ -254,7 +256,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="other-locations-probed"></a>Другие проверяемые расположения  
  Расположение сборки также может быть установлено с помощью текущего контекста привязки. Это часто происходит при использовании метода <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> и в сценариях COM-взаимодействия. Если сборка использует метод <xref:System.Reflection.Assembly.LoadFrom%2A> для ссылки на другую сборку, расположение вызывающей сборки считается подсказкой для поиска расположения сборки, на которую задана ссылка. Если удается найти совпадение, эта сборка загружается. Если совпадение не найдено, среда выполнения продолжает поиск в соответствии с семантикой, а затем запрашивает установщик Windows о предоставлении сборки. Если не удается предоставить сборку, соответствующую запросу привязки, создается исключение. Это исключение <xref:System.TypeLoadException> в управляемом коде, если была задана ссылка на тип, или <xref:System.IO.FileNotFoundException> , если загружаемая сборка не найдена.  
   
- Например, если сборка Assembly1 ссылается на сборку Assembly2 и сборка Assembly1 была скачана с адреса http://www.code.microsoft.com/utils, это расположение считается подсказкой для поиска Assembly2.dll. Затем среда выполнения проверяет наличие сборки по пути http://www.code.microsoft.com/utils/Assembly2.dll и http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll. Если сборка Assembly2 не обнаружена ни в одном из этих расположений, среда выполнения отправляет запрос установщику Windows.  
+ Например, если сборка Assembly1 ссылается на сборку Assembly2 и сборка Assembly1 была скачана с адреса http://www.code.microsoft.com/utils, это расположение считается подсказкой для поиска Assembly2.dll. После этого среда выполнения проверяет наличие сборки в http://www.code.microsoft.com/utils/Assembly2.dll и http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll. Если сборка Assembly2 не обнаружена ни в одном из этих расположений, среда выполнения отправляет запрос установщику Windows.  
   
 ## <a name="see-also"></a>См. также  
  [Рекомендации для загрузки сборок](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  

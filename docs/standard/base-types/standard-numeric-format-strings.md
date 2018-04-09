@@ -1,5 +1,5 @@
 ---
-title: "Строки стандартных числовых форматов"
+title: Строки стандартных числовых форматов
 ms.date: 09/10/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9416bff21607d8e37f9e7dbc270477539043fe8b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f042d72c76ddbf3b5eaf8923fc747325b701c9a6
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="standard-numeric-format-strings"></a>Строки стандартных числовых форматов
 Строки стандартных числовых форматов служат для форматирования стандартных числовых типов. Строка стандартных числовых форматов использует формат `Axx`, где:  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/23/2017
  
 - [Функция составного форматирования](../../../docs/standard/base-types/composite-formatting.md) .NET, которая используется некоторыми методами `Write` и `WriteLine` классов <xref:System.Console> и <xref:System.IO.StreamWriter>, методом <xref:System.String.Format%2A?displayProperty=nameWithType> и методом <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Композитный формат позволяет включить строковое представление нескольких элементов данных в одну строку, чтобы задать ширину поля и выровнять числа в поле. Дополнительные сведения см. в разделе [Составное форматирование](../../../docs/standard/base-types/composite-formatting.md).  
 
-- [Интерполированные строки](../../csharp/language-reference/keywords/interpolated-strings.md) в C# и Visual Basic, которые предоставляют упрощенный синтаксис по сравнению со строками составного формата.
+- [Интерполированные строки](../../csharp/language-reference/tokens/interpolated.md) в C# и Visual Basic, которые предоставляют упрощенный синтаксис по сравнению со строками составного формата.
  
 > [!TIP]
 >  Вы можете загрузить [служебную программу форматирования](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)— приложение, позволяющее применять строки формата к значениям даты и времени и числовым значениям и отображающее результирующую строку.  
@@ -89,6 +89,8 @@ ms.lasthandoff: 12/23/2017
      [!code-cpp[Formatting.Numeric.Standard#12](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#12)]
      [!code-csharp[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
+  
+-   Его можно предоставить в виде аргумента `formatString` в элементе интерполированного выражения интерполированной строки. Дополнительные сведения см. в разделе [Интерполяция строк](../../csharp/language-reference/tokens/interpolated.md) справочника по C# или разделе [Интерполяция строк](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) справочника по Visual Basic.  
   
  В приведенных ниже разделах содержится подробная информация о всех строках стандартных числовых форматов.  
   

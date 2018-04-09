@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5840c2f7692d81f193c7d659aea6eb42a431369e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: af6a6b73c790577cebf301075f2ff7e90960ea62
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="domain-events-design-and-implementation"></a>События предметной области: проектирование и реализация
 
@@ -76,7 +76,7 @@ ms.lasthandoff: 03/26/2018
 
 **Рис. 9-15**. Обработка нескольких действий для каждой предметной области
 
-Обработчики событий обычно действуют на уровне приложения, так как для поведения микрослужбы будут использоваться такие объекты инфраструктуры, как репозитории или API приложения. В этом смысле обработчики событий аналогичны обработчикам команд, поэтому оба этих типа являются частью уровня приложения. Важное отличие заключается в том, что команды должны обрабатываться только один раз. Событие домена может быть обработано ноль или *n* время ожидания, поскольку если могут быть получены нескольких получателей или обработчики событий с целью разных для каждого обработчика.
+Обработчики событий обычно действуют на уровне приложения, так как для поведения микрослужбы будут использоваться такие объекты инфраструктуры, как репозитории или API приложения. В этом смысле обработчики событий аналогичны обработчикам команд, поэтому оба этих типа являются частью уровня приложения. Важное отличие заключается в том, что команды должны обрабатываться только один раз. Событие предметной области может не обрабатываться или обрабатываться *n* раз, так как его могут получать несколько получателей или обработчиков событий с разными для каждого обработчика целями.
 
 Возможность существования открытого количества обработчиков для каждого события предметной области позволяет добавлять множество дополнительных правил предметной области без влияния на текущий код. Например, реализация следующего бизнес-правила, которое должно происходить сразу после события, может быть такой же простой, как добавление нескольких обработчиков событий (или даже всего одного).
 
@@ -89,13 +89,13 @@ ms.lasthandoff: 03/26/2018
 ```csharp
 public class OrderStartedDomainEvent : INotification
 {
-    public string UserId { get; private set; }
-    public int CardTypeId { get; private set; }
-    public string CardNumber { get; private set; }
-    public string CardSecurityNumber { get; private set; }
-    public string CardHolderName { get; private set; }
-    public DateTime CardExpiration { get; private set; }
-    public Order Order { get; private set; }
+    public string UserId { get; }
+    public int CardTypeId { get; }
+    public string CardNumber { get; }
+    public string CardSecurityNumber { get; }
+    public string CardHolderName { get; }
+    public DateTime CardExpiration { get; }
+    public Order Order { get; }
 
     public OrderStartedDomainEvent(Order order,
                                    int cardTypeId, string cardNumber,
@@ -337,37 +337,37 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Грег Янг (Greg Young). Что такое событие домена?**
+-   **Грег Янг (Greg Young). Что такое событие предметной области?**
     [*http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/*](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
 
--   **Ян Стенберг (Jan Stenberg). События домена и окончательной согласованности**
+-   **Ян Стенберг (Jan Stenberg). События предметной области и итоговая согласованность**
     [*https://www.infoq.com/news/2015/09/domain-events-consistency*](https://www.infoq.com/news/2015/09/domain-events-consistency)
 
--   **Джимми Богард (Jimmy Bogard). Шаблон события лучше домена**
+-   **Джимми Богард (Jimmy Bogard). Улучшенный шаблон событий предметной области**
     [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
--   **Вон Вернон (Vaughn Vernon). Эффективных статистических конструктора, часть II: Внесения рабочих статистические выражения вместе**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_статьи или Vernon\_2011\_pdf 2.*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
+-   **Вон Вернон (Vaughn Vernon). Эффективная разработка агрегатов. Часть II: организация совместной работы агрегатов**
+    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
--   **Джимми Богард (Jimmy Bogard). Усиление домена: события домена**
+-   **Джимми Богард (Jimmy Bogard). Усиление предметной области: события предметной области**
     *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> *
 
--   **Тони Чыонг (Tony Truong). Пример шаблона события домена**
+-   **Тони Чыонг (Tony Truong). Пример шаблона событий предметной области**
     [*http://www.tonytruong.net/domain-events-pattern-example/*](http://www.tonytruong.net/domain-events-pattern-example/)
 
--   **Уди Дахан (Udi Dahan). Как создать полностью инкапсулирован модели домена**
+-   **Уди Дахан (Udi Dahan). Создание полностью инкапсулированных моделей предметной области**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
--   **Уди Дахан (Udi Dahan). События домена — требует 2**
+-   **Уди Дахан (Udi Dahan). События предметной области. Попытка 2**
     [*http://udidahan.com/2008/08/25/domain-events-take-2/*](http://udidahan.com/2008/08/25/domain-events-take-2/%20)
 
--   **Уди Дахан (Udi Dahan). События домена — дать**
+-   **Уди Дахан (Udi Dahan). События предметной области. Спасение**
     [*http://udidahan.com/2009/06/14/domain-events-salvation/*](http://udidahan.com/2009/06/14/domain-events-salvation/)
 
--   **Ян Кронквист (Jan Kronquist). Не публиковать события домена, возвращают их!**
+-   **Ян Кронквист (Jan Kronquist). Не публикуйте события предметной области, а возвращайте их!**
     [*https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/*](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
 
--   **Сезар де ла Торре (Cesar de la Torre). События предметной области События интеграции в архитектурах ддд и микрослужбами**
+-   **Сезар де ла Торре (Cesar de la Torre). События предметной области Интеграция событий в DDD и архитектуры микрослужб**
     [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/)
 
 

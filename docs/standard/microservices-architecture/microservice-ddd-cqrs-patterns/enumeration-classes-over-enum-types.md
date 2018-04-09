@@ -1,7 +1,7 @@
 ---
-title: "Использование классов перечисления вместо типов перечисления"
-description: "Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Использование классов перечисления вместо типов перечисления"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Использование классов перечисления вместо типов перечисления
+description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Использование классов перечисления вместо типов перечисления
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4b190ee9dde5628bf16fe9c483d3636539c29361
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 57ff60ea01421f1a2a0466b7de9716b72b02d2c1
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-enumeration-classes-instead-of-enum-types"></a>Использование классов перечисления вместо типов перечисления
 
@@ -32,8 +32,8 @@ ms.lasthandoff: 12/23/2017
 ```csharp
 public abstract class Enumeration : IComparable
 {
-    public string Name { get; private set; }
-    public int Id { get; private set; }
+    public string Name { get; }
+    public int Id { get; }
 
     protected Enumeration()
     {
@@ -114,19 +114,19 @@ public class CardType : Enumeration
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Enum’s are evil—update**
+-   **Перечисления нам не друзья (обновление)**
     [*http://www.planetgeek.ch/2009/07/01/enums-are-evil/*](http://www.planetgeek.ch/2009/07/01/enums-are-evil/)
 
--   **Дэниэл Хардман (Daniel Hardman). How Enums Spread Disease — And How To Cure It**
+-   **Дэниэл Хардман (Daniel Hardman). Какие болезни переносят перечисления и как их вылечить**
     [*https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/*](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)
 
--   **Джимми Богард (Jimmy Bogard). Enumeration classes**
+-   **Джимми Богард (Jimmy Bogard). Классы перечислений**
     [*https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/*](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)
 
--   **Стив Смит (Steve Smith). Enum Alternatives in C#**
+-   **Стив Смит (Steve Smith). Альтернативы перечислениям в C#**
     [*http://ardalis.com/enum-alternatives-in-c*](http://ardalis.com/enum-alternatives-in-c)
 
--   **Enumeration.cs.** Базовый класс перечисления в eShopOnContainers [ *https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
+-   **Enumeration.cs.** Базовый класс перечисления в eShopOnContainers [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
 
 -   **CardType.cs**. Пример класса перечисления в eShopOnContainers.
     [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)

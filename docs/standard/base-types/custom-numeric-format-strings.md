@@ -1,12 +1,12 @@
 ---
-title: "Строки настраиваемых числовых форматов"
-ms.custom: 
+title: Строки настраиваемых числовых форматов
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,23 +22,23 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-caps.latest.revision: 
+caps.latest.revision: 54
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ec33a093e4f7f8ccda1992f26563bcd63853e634
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b33acfef1cabd3aa53fbe8947bd7adbe52d3b7a4
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="custom-numeric-format-strings"></a>Строки настраиваемых числовых форматов
 Чтобы определить способ форматирования числовых данных, можно создать строку настраиваемого числового формата, состоящую из одного или нескольких описателей настраиваемого формата. Строка настраиваемого числового формата — это любая строка формата, не являющаяся [строкой стандартного числового формата](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
   
- Строки настраиваемых числовых форматов поддерживаются некоторыми перегрузками метода `ToString` всех числовых типов. Например, можно задать строку числового формата для методов <xref:System.Int32.ToString%28System.String%29> и <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> типа <xref:System.Int32> . Строки настраиваемых числовых форматов также поддерживаются [функцией составного форматирования .NET Framework](../../../docs/standard/base-types/composite-formatting.md), используемой некоторыми методами `Write` и `WriteLine` классов <xref:System.Console> и <xref:System.IO.StreamWriter>, а также методами <xref:System.String.Format%2A?displayProperty=nameWithType> и <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>.  
+ Строки настраиваемых числовых форматов поддерживаются некоторыми перегрузками метода `ToString` всех числовых типов. Например, можно задать строку числового формата для методов <xref:System.Int32.ToString%28System.String%29> и <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> типа <xref:System.Int32> . Строки настраиваемых числовых форматов также поддерживаются [функцией составного форматирования .NET Framework](../../../docs/standard/base-types/composite-formatting.md), используемой некоторыми методами `Write` и `WriteLine` классов <xref:System.Console> и <xref:System.IO.StreamWriter>, а также методами <xref:System.String.Format%2A?displayProperty=nameWithType> и <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Функция [интерполяции строк](../../csharp/language-reference/tokens/interpolated.md) также поддерживает строки настраиваемого числового формата.  
   
 > [!TIP]
 >  Вы можете загрузить [служебную программу форматирования](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)— приложение, позволяющее применять строки формата к значениям даты и времени и числовым значениям и отображающее результирующую строку.  

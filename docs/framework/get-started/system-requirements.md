@@ -1,6 +1,6 @@
 ---
-title: "Требования к системе для .NET Framework"
-description: "Определите требования к оборудованию, операционной системе и программному обеспечению для установки .NET Framework 4.5 и более поздних версий."
+title: Требования к системе для .NET Framework
+description: Определите требования к оборудованию, операционной системе и программному обеспечению для установки .NET Framework 4.5 и более поздних версий.
 ms.custom: updateeachrelease
 ms.date: 02/02/2018
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a0cfbcbc4c2c0857c1fe4163484a43f4521444a3
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: e0b6faf42f0fa47f6104454440033a6272efb224
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="net-framework-system-requirements"></a>Требования к системе для .NET Framework
 
@@ -35,13 +35,7 @@ ms.lasthandoff: 02/09/2018
 
 Для сред разработки, позволяющих разрабатывать приложения для платформы .NET Framework, существует отдельный набор требований.
 
-> [!IMPORTANT]
-> В системе может быть только одна версия 4.х, так как все версии .NET Framework, начиная с версии .NET Framework 4, — это локальные обновления.
-> Кроме того, некоторые версии платформы .NET Framework устанавливаются автоматически в некоторые версии операционной системы Windows. Это означает следующее.
->
-> * Если на компьютере установлена более поздняя версия, вы не сможете установить предыдущую версию 4.x.
-> * Если в операционной системе предустановлена определенная версия .NET, вы не сможете установить предыдущие версии 4.x на том же компьютере.
-> * При установке более поздней версии не нужно удалять предыдущую версию.
+[!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
 Сведения о скачивании и ссылки для скачивания см. в разделе [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md).
 
@@ -101,7 +95,7 @@ ms.lasthandoff: 02/09/2018
 
  **Примечания.**
 
-- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] включает [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], поэтому установка не требуется. Аналогично [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] включает [!INCLUDE[net_v451](../../../includes/net-v451-md.md)].
+- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] включает [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], поэтому ее не требуется устанавливать. Аналогично [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] включает [!INCLUDE[net_v451](../../../includes/net-v451-md.md)].
 
 - .NET Framework имеет ограниченную поддержку роли Server Core с Windows Server 2008 R2 с пакетом обновления 1 (SP1) или более поздней версии. Список неподдерживаемых API см. в разделе [Функции Server Core в .NET](https://msdn.microsoft.com/library/ee391632.aspx).
 

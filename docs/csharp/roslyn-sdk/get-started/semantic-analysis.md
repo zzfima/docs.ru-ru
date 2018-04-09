@@ -1,6 +1,6 @@
 ---
-title: "Начало работы с семантическим анализом"
-description: "В этом учебнике содержатся общие сведения о работе с семантическим анализом с помощью пакета SDK для компилятора .NET."
+title: Начало работы с семантическим анализом
+description: В этом учебнике содержатся общие сведения о работе с семантическим анализом с помощью пакета SDK для компилятора .NET.
 author: billwagner
 ms.author: wiwagn
 ms.date: 02/06/2018
@@ -8,17 +8,21 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 94a28d21cfec1894c3ee3b631335043e1d0ec817
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: b9921bc3621d6abfc37b1bf1fc4f481620ccc407
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="get-started-with-semantic-analysis"></a>Начало работы с семантическим анализом
 
 В учебнике предполагается, что вы знакомы с синтаксическим API. Вводные сведения можно найти в статье о [начале работы с синтаксическим анализом](syntax-analysis.md).
 
 В этом учебнике вы изучите **символы** и **API привязки**. Эти API предоставляют сведения о _семантическом значении_ программы. Они позволяют задавать вопросы, касающиеся типов, представленных любыми символами в программе, и получать на них ответы.
+
+Вам нужно установить **пакет SDK для .NET Compiler Platform**:
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
 ## <a name="understanding-compilations-and-symbols"></a>Общие сведения о компиляциях и символах
 
@@ -31,9 +35,6 @@ ms.lasthandoff: 03/12/2018
 ## <a name="querying-symbols"></a>Выполнение запросов к символам
 
 В этом учебнике мы снова обратимся к программе "Hello, World!". На этот раз вы будете запрашивать символы в программе, чтобы понять, какие типы они представляют. Вы будете запрашивать типы в пространстве имен и узнаете, как найти методы, доступные для типа.
-
-> [!IMPORTANT]
-> Для приведенных ниже примеров требуется установить **пакет SDK для компилятора .NET** в составе Visual Studio 2017. Пакет SDK для компилятора .NET является последним необязательным компонентом, указанным в рабочей нагрузке для **разработки расширения Visual Studio**. Без этого компонента невозможно установить шаблоны.
 
 Окончательный код этого примера доступен в [репозитории на сайте GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SemanticQuickStart).
 

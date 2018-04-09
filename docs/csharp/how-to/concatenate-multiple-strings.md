@@ -1,6 +1,6 @@
 ---
-title: "Практическое руководство. Сцепка нескольких строк (руководство по C#)"
-description: "C# поддерживает различные способы сцепки строк. Узнайте, какие доступны варианты и как выбирать между ними."
+title: Практическое руководство. Сцепка нескольких строк (руководство по C#)
+description: C# поддерживает различные способы сцепки строк. Узнайте, какие доступны варианты и как выбирать между ними.
 ms.date: 02/20/2018
 ms.prod: .net
 ms.technology:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-caps.latest.revision: 
+caps.latest.revision: 21
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 43b60455762ecd91a790ea5c7dae49d3348794aa
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 05f4932710870c26256659252fcef3814462d488
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>Практическое руководство. Сцепка нескольких строк (руководство по C#)
 
@@ -31,11 +31,11 @@ ms.lasthandoff: 02/28/2018
  [!code-csharp-interactive[Combining strings at compile time](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#1)]  
   
 
-Для сцепки строковых переменных вы можете использовать операторы `+` или `+=`, [интерполяцию строк](../tutorials/string-interpolation.md), а также методы <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.String.Concat%2A?displayProperty=nameWithType>, <xref:System.String.Join%2A?displayProperty=nameWithType> или <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>. Оператор `+` прост в использовании и позволяет получить интуитивно понятный код. Даже если в одном выражении используется несколько операторов `+`, содержимое строки копируется только один раз. В следующем коде показаны примеры использования операторов `+` и `+=` для сцепки строк:
+Для сцепки строковых переменных вы можете использовать операторы `+` или `+=`, [интерполяцию строк](../language-reference/tokens/interpolated.md), а также методы <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.String.Concat%2A?displayProperty=nameWithType>, <xref:System.String.Join%2A?displayProperty=nameWithType> или <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>. Оператор `+` прост в использовании и позволяет получить интуитивно понятный код. Даже если в одном выражении используется несколько операторов `+`, содержимое строки копируется только один раз. В следующем коде показаны примеры использования операторов `+` и `+=` для сцепки строк:
 
 [!code-csharp-interactive[combining strings using +](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#2)]  
 
-В некоторых выражениях строки проще сцепить с помощью интерполяции, как показано в следующем коде.
+В некоторых выражениях строки проще сцепить с помощью интерполяции, как показано в следующем коде:
   
 [!code-csharp-interactive[building strings using string interpolation](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#3)]  
   

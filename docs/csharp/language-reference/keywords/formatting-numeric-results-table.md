@@ -1,8 +1,9 @@
 ---
-title: "Таблица форматирования числовых результатов (Справочник по C#)"
+title: Таблица форматирования числовых результатов (Справочник по C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - formatting [C#]
@@ -10,21 +11,21 @@ helpviewer_keywords:
 - String.Format method
 - Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cce14d5124ffdf030701ae0fc769278da51f86cc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d389703c2d82d74760b99059201cb634849aa433
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Таблица форматирования числовых результатов (Справочник по C#)
-Для форматирования результатов можно воспользоваться методом <xref:System.String.Format%2A?displayProperty=nameWithType>, а также методом <xref:System.Console.Write%2A?displayProperty=nameWithType> или <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, вызывающим метод `String.Format`. Формат задается с помощью строк формата. В следующей таблице приведены поддерживаемые строки стандартных форматов. Строка формата принимает следующую форму: `Axx`, где `A` — описатель формата, а `xx` — описатель точности. Описатель формата управляет типом форматирования, применяемым к числовому значению, а описатель точности управляет количеством значащих цифр или десятичных знаков форматированного результата. Значение описателя точности находится в диапазоне от 0 до 99.  
+Для форматирования результатов можно воспользоваться методом <xref:System.String.Format%2A?displayProperty=nameWithType>, методами <xref:System.Console.Write%2A?displayProperty=nameWithType> или <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, вызывающими `String.Format`, или [интерполяцией строк](../tokens/interpolated.md). Формат задается с помощью строк формата. В следующей таблице приведены поддерживаемые строки стандартных форматов. Строка формата принимает следующую форму: `Axx`, где `A` — описатель формата, а `xx` — описатель точности. Описатель формата управляет типом форматирования, применяемым к числовому значению, а описатель точности управляет количеством значащих цифр или десятичных знаков форматированного результата. Значение описателя точности находится в диапазоне от 0 до 99.  
   
- Дополнительные сведения о строках стандартных и пользовательских форматов см. в разделе [Типы форматирования](../../../standard/base-types/formatting-types.md). Дополнительные сведения о методе `String.Format` см. в разделе <xref:System.String.Format%2A?displayProperty=nameWithType>.  
+ Дополнительные сведения о строках стандартных и пользовательских форматов см. в разделе [Типы форматирования](../../../standard/base-types/formatting-types.md).
   
-|Описатель формата|Описание|Примеры|Вывод|  
+|Описатель формата|Описание:|Примеры|Вывод|  
 |----------------------|-----------------|--------------|------------|  
 |C или c|Валюта|Console.Write("{0:C}", 2.5);<br /><br /> Console.Write("{0:C}", -2.5);|$2.50<br /><br /> ($2.50)|  
 |D или d|Десятичное число|Console.Write("{0:D5}", 25);|00025|  

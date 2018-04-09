@@ -1,12 +1,12 @@
 ---
-title: "Составное форматирование"
-ms.custom: 
+title: Составное форматирование
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,21 +19,21 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: 
+caps.latest.revision: 36
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: dae73a7ace3aac4e7d89ccba186fceacfe9898ae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 156ef0f063219f5e78084dd664b64699d33e6593
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="composite-formatting"></a>Составное форматирование
-В качестве входных данных для составного форматирования в .NET Framework используется список объектов и строка составного формата. Строка составного формата состоит из фиксированного текста, в который включены индексированные местозаполнители, которые называются элементами форматирования и соответствуют объектам из списка. Операция форматирования создает результирующую строку, состоящую из исходного фиксированного текста, в который включено строковое представление объектов из списка.  
+В качестве входных данных для составного форматирования в .NET используется список объектов и строка составного формата. Строка составного формата состоит из фиксированного текста, в который включены индексированные местозаполнители, которые называются элементами форматирования и соответствуют объектам из списка. Операция форматирования создает результирующую строку, состоящую из исходного фиксированного текста, в который включено строковое представление объектов из списка.  
   
  Функция составного форматирования поддерживается следующими методами:  
   
@@ -169,6 +169,8 @@ ms.lasthandoff: 12/23/2017
 ## <a name="see-also"></a>См. также  
  <xref:System.Console.WriteLine%2A>  
  <xref:System.String.Format%2A?displayProperty=nameWithType>  
+ [Интерполяция строк (C#)](../../csharp/language-reference/tokens/interpolated.md)  
+ [Интерполяция строк (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  [Типы форматирования](../../../docs/standard/base-types/formatting-types.md)  
  [Строки стандартных числовых форматов](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
  [Строки настраиваемых числовых форматов](../../../docs/standard/base-types/custom-numeric-format-strings.md)  

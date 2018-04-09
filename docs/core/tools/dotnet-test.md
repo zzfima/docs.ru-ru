@@ -1,18 +1,19 @@
 ---
-title: "Команда dotnet test — CLI .NET Core"
-description: "Команда dotnet test служит для выполнения модульных тестов в проекте."
+title: Команда dotnet test — CLI .NET Core
+description: Команда dotnet test служит для выполнения модульных тестов в проекте.
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: fac5e3cb602f6dc5c06b1b29e9924ce4be7ae273
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 6102281c4daf149f31e65ef8360831fe9e0ef4f6
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -42,9 +43,9 @@ dotnet test [-h|--help]
 
 ## <a name="description"></a>Описание:
 
-Команда `dotnet test` служит для выполнения модульных тестов в проекте. Модульные тесты — это проекты консольных приложений, у которых есть зависимости от среды модульного тестирования (например, MSTest, NUnit или xUnit) и от средства запуска тестов dotnet для этой среды. Они упаковываются в пакеты NuGet и восстанавливаются как обычные зависимости проекта.
+Команда `dotnet test` служит для выполнения модульных тестов в проекте. Команда `dotnet test` запускает консольное приложение средства выполнения тестов, указанное для проекта. Средство выполнения тестов запускает тесты, определенные для платформы модульного тестирования (например, MSTest, NUnit или xUnit) и сообщает об успешном или неудачном выполнении каждого из них. Средство выполнения тестов и библиотека модульных тестов упаковываются в пакеты NuGet и восстанавливаются как обычные зависимости проекта.
 
-Для тестовых проектов также нужно указать средство выполнения тестов. Для этого используется обычный элемент `<PackageReference>`, как показано в следующем образце файла проекта:
+Тестовый проект указывает средство выполнения тестов с помощью обычного элемента `<PackageReference>`, как показано в следующем примере файла проекта:
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 

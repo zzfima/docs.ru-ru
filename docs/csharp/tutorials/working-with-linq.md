@@ -1,6 +1,6 @@
 ---
-title: "Работа с LINQ"
-description: "В этом руководстве мы научим вас создавать последовательности с помощью LINQ, создавать методы для использования в запросах LINQ, а также различать упреждающее и отложенное вычисление."
+title: Работа с LINQ
+description: В этом руководстве мы научим вас создавать последовательности с помощью LINQ, создавать методы для использования в запросах LINQ, а также различать упреждающее и отложенное вычисление.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 3f0fcfebf37d9e6dad52c69111cc5e374ae27183
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: c5720d5391eec327aa2f885fd65579aeb6260488
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="working-with-linq"></a>Работа с LINQ
 
@@ -313,7 +313,7 @@ public static void Main(string[] args)
 
 [!CODE-csharp[PlayingCard](../../../samples/csharp/getting-started/console-linq/playingcard.cs?name=snippet1)]
 
-Этот тип использует *автоматически реализуемые свойства только для чтения*, которые устанавливаются в конструкторе и более не могут изменяться. Также в нем используется новая функция *интерполяции строк*, которая упрощает форматирование строкового вывода.
+Этот тип использует *автоматически реализуемые свойства только для чтения*, которые устанавливаются в конструкторе и более не могут изменяться. Также в нем используется функция [интерполяции строк](../language-reference/tokens/interpolated.md), которая упрощает форматирование строкового вывода.
 
 Измените запрос, который создает начальную колоду, с учетом нового типа:
 

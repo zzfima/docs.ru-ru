@@ -1,6 +1,6 @@
 ---
-title: "Начало работы с .NET Core в Mac OS"
-description: "В этом документе приводится обзор действий и рабочего процесса для создания решения .NET Core в Visual Studio Code."
+title: Начало работы с .NET Core в Mac OS
+description: В этом документе приводится обзор действий и рабочего процесса для создания решения .NET Core в Visual Studio Code.
 keywords: .NET, .NET Core, Mac, macOS, Visual Studio Code
 author: bleroy
 ms.author: mairaw
@@ -9,12 +9,13 @@ ms.topic: get-started-article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
-ms.workload: dotnetcore
-ms.openlocfilehash: 5a8f1fca7623763d43b977d0cc44396de249c62e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 8c045e5625cee53acc4daa3c9fca524bc953b5a1
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>Начало работы с .NET Core в Mac OS
 
@@ -102,7 +103,7 @@ namespace Library
 }
 ```
 
-Класс `Thing` содержит один открытый метод `Get`, который возвращает сумму двух чисел, но для этого преобразует сумму в строку и затем десериализует ее в целое число. В нем используется ряд современных возможностей C#, таких как [`using static`директивы](../../csharp/language-reference/keywords/using-static.md), [члены, воплощающие выражения](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members) и [интерполированные строки](../../csharp/language-reference/keywords/interpolated-strings.md).
+Класс `Thing` содержит один открытый метод `Get`, который возвращает сумму двух чисел, но для этого преобразует сумму в строку и затем десериализует ее в целое число. В нем используется ряд современных возможностей C#, таких как [директивы `using static`](../../csharp/language-reference/keywords/using-static.md), [члены, воплощающие выражения](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members) и [интерполяция строк](../../csharp/language-reference/tokens/interpolated.md).
 
 Соберите библиотеку, выполнив команду [`dotnet build`](../tools/dotnet-build.md). Эта команда создает файл *library.dll* в каталоге *golden/library/bin/Debug/netstandard1.4*:
 
