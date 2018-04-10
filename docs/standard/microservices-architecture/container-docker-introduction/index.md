@@ -1,7 +1,7 @@
 ---
-title: "Общие сведения о контейнерах и Docker"
-description: "Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Общие сведения о контейнерах и Docker"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Общие сведения о контейнерах и Docker
+description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Общие сведения о контейнерах и Docker
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

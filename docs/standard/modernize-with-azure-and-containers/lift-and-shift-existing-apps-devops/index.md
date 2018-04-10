@@ -1,6 +1,6 @@
 ---
-title: "Перенос существующих приложений в DevOps"
-description: "Модернизация существующих приложений .NET с помощью облака Azure и контейнеров Windows."
+title: Перенос существующих приложений в DevOps
+description: Модернизация существующих приложений .NET с помощью облака Azure и контейнеров Windows.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017

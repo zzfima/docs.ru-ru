@@ -1,6 +1,6 @@
 ---
-title: "Анализаторы на основе Roslyn в .NET"
-description: "Сведения об анализаторах на основе Roslyn, которые находят проблемы и предлагают способы их решения."
+title: Анализаторы на основе Roslyn в .NET
+description: Сведения об анализаторах на основе Roslyn, которые находят проблемы и предлагают способы их решения.
 keywords: .NET, .NET Core
 author: billwagner
 ms.author: billwagner

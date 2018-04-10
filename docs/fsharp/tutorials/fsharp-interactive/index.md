@@ -1,7 +1,7 @@
 ---
-title: "Справочник по F# Interactive (fsi.exe)"
-description: "Узнайте, как F # Interactive (fsi.exe) используется для интерактивного запуска кода F # в консоли или для выполнения скриптов F #."
-keywords: "visual f#, f#, функциональное программирование"
+title: Справочник по F# Interactive (fsi.exe)
+description: 'Узнайте, как F # Interactive (fsi.exe) используется для интерактивного запуска кода F # в консоли или для выполнения скриптов F #.'
+keywords: visual f#, f#, функциональное программирование
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

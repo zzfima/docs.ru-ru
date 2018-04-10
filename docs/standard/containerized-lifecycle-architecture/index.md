@@ -1,7 +1,7 @@
 ---
-title: "Общие сведения о контейнерах и Docker"
-description: "Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Общие сведения о контейнерах и Docker
+description: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017

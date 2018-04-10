@@ -1,5 +1,5 @@
 ---
-title: "Руководство по переходу на .NET Framework 4.7, 4.6 и 4.5 "
+title: 'Руководство по переходу на .NET Framework 4.7, 4.6 и 4.5 '
 ms.custom: updateeachrelease
 ms.date: 10/17/2017
 ms.prod: .net-framework

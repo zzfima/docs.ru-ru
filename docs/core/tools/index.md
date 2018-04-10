@@ -1,6 +1,6 @@
 ---
-title: "Средства интерфейса командной строки (CLI) .NET Core"
-description: "Обзор средств и возможностей интерфейса командной строки (CLI)NET Core."
+title: Средства интерфейса командной строки (CLI) .NET Core
+description: Обзор средств и возможностей интерфейса командной строки (CLI)NET Core.
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017

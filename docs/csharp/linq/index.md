@@ -1,6 +1,6 @@
 ---
-title: "Синтаксис LINQ"
-description: "Знакомство с LINQ для C#"
+title: Синтаксис LINQ
+description: Знакомство с LINQ для C#
 keywords: .NET, .NET Core, LINQ, C#
 author: BillWagner
 ms.author: wiwagn
