@@ -1,13 +1,13 @@
 ---
-title: "Метод ISymUnmanagedENCUpdate::UpdateSymbolStore2"
-ms.custom: 
+title: Метод ISymUnmanagedENCUpdate::UpdateSymbolStore2
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ISymUnmanagedENCUpdate.UpdateSymbolStore2
@@ -23,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: 35588317-6184-485c-ab41-4b15fc1765d9
 topic_type:
 - apiref
-caps.latest.revision: 
+caps.latest.revision: 11
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a366047530f3433ab1bfbb5f30d4b9b54c5bdb08
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9082a05900330be27066b64f2ad0e99b87e04c61
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a>Метод ISymUnmanagedENCUpdate::UpdateSymbolStore2
 Позволяет компилятору пропускать функции, которые не были изменены из потока программы базы данных (PDB), предоставляемых сведений о строке соответствует требованиям. Правильные сведения строки можно определить с помощью старых сведений строки PDB и одного разностного для всех строк в функции.  
@@ -49,7 +49,7 @@ HRESULT UpdateSymbolStore2(
   
 #### <a name="parameters"></a>Параметры  
  `pIStream`  
- [in] Указатель на <xref:IStream> , содержащий сведения о строке.  
+ [in] Указатель на [IStream](https://msdn.microsoft.com/library/aa380034.aspx) , содержащий сведения о строке.  
   
  `pDeltaLines`  
  [in] Указатель на [SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md) структуру, содержащую строки, которые были изменены.  

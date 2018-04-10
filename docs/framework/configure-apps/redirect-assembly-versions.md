@@ -1,12 +1,13 @@
 ---
-title: "Перенаправление версий сборки"
-ms.custom: 
+title: Перенаправление версий сборки
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - assembly binding, redirection
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 26475a543950b4f7161243d72252cc1982adf93f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 24343e1ee2e95cbeb7613d3b22dd7cdac848903b
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="redirecting-assembly-versions"></a>Перенаправление версий сборки
 Вы можете перенаправлять привязанные во время компиляции ссылки на сборки .NET Framework, сторонние сборки или сборки вашего собственного приложения. Вы можете перенаправлять свое приложение, чтобы оно использовало другую версию сборки, несколькими способами: через политику издателя, с помощью файла конфигурации приложения или с помощью файла конфигурации компьютера. В этой статье показывается, как привязка сборок работает в .NET Framework и как ее можно настроить.  
@@ -56,12 +58,11 @@ ms.lasthandoff: 01/19/2018
   
 ```xml  
 <dependentAssembly>  
-        <assemblyIdentity name="someAssembly"  
-          publicKeyToken="32ab4ba45e0a69a1"  
-          culture="en-us" />  
-  
-        <bindingRedirect oldVersion="7.0.0.0" newVersion="8.0.0.0" />  
-      </dependentAssembly>  
+  <assemblyIdentity name="someAssembly"  
+    publicKeyToken="32ab4ba45e0a69a1"  
+    culture="en-us" />  
+  <bindingRedirect oldVersion="7.0.0.0" newVersion="8.0.0.0" />  
+</dependentAssembly>  
 ```  
   
 ### <a name="relying-on-automatic-binding-redirection"></a>Автоматическое перенаправление привязки  

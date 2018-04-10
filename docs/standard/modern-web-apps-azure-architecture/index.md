@@ -1,6 +1,6 @@
 ---
-title: "Разработка современных веб-приложений с помощью ASP.NET Core и Azure"
-description: "Разработка современных веб-приложений с помощью ASP.NET Core и Azure | Введение"
+title: Разработка современных веб-приложений с помощью ASP.NET Core и Azure
+description: Разработка современных веб-приложений с помощью ASP.NET Core и Azure | Введение
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017

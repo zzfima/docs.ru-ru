@@ -1,7 +1,7 @@
 ---
-title: "Начало работы с F #"
-description: "Дополнительные сведения о начале работы с языке в .NET F #."
-keywords: "visual f#, f#, функциональное программирование, .NET, .NET Core"
+title: 'Начало работы с F #'
+description: 'Дополнительные сведения о начале работы с языке в .NET F #.'
+keywords: visual f#, f#, функциональное программирование, .NET, .NET Core
 author: cartermp
 ms.author: phcart
 ms.date: 09/06/2016

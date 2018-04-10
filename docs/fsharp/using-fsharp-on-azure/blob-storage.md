@@ -1,7 +1,7 @@
 ---
-title: "Начало работы с хранилищем больших двоичных объектов Azure с помощью F #"
-description: "Хранить неструктурированные данные в облако с помощью хранилища больших двоичных объектов Azure."
-keywords: "Visual f #, f #, функционального программирования, .NET, .NET Core, Azure"
+title: 'Начало работы с хранилищем больших двоичных объектов Azure с помощью F #'
+description: Хранить неструктурированные данные в облако с помощью хранилища больших двоичных объектов Azure.
+keywords: 'Visual f #, f #, функционального программирования, .NET, .NET Core, Azure'
 author: sylvanc
 ms.author: phcart
 ms.date: 09/20/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c5b74a4f-dcd1-4849-930c-904b6c8a04e1
-ms.openlocfilehash: 5be948e100c496bc6613f1fdfb826ece5de6df8e
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 14ccba36638c724536793a6a589cf1c0a6186eeb
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Начало работы с хранилищем больших двоичных объектов Azure с помощью F # #
 
@@ -247,7 +247,7 @@ Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/
 
 ### <a name="related-guides"></a>Связанные направляющие
 
-- [Приступая к работе с хранилищем BLOB-объектов Azure в C#](https://azure.microsoft.com/documentation/samples/storage-blob-dotnet-getting-started/)
+- [Приступая к работе с хранилищем BLOB-объектов Azure в C#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
 - [Перенесите данные с помощью программы командной строки AzCopy в Windows](/azure/storage/common/storage-use-azcopy)
 - [Перенесите данные с помощью программы командной строки AzCopy в Linux](/azure/storage/common/storage-use-azcopy-linux)
 - [Настройка строки подключения хранилища Azure](/azure/storage/common/storage-configure-connection-string)

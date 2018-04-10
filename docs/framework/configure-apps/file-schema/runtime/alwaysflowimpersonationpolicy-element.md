@@ -1,12 +1,13 @@
 ---
-title: "&lt;alwaysFlowImpersonationPolicy&gt; элемент"
-ms.custom: 
+title: '&lt;alwaysFlowImpersonationPolicy&gt; Element'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/alwaysFlowImpersonationPolicy
@@ -15,23 +16,24 @@ helpviewer_keywords:
 - alwaysFlowImpersonationPolicy element
 - <alwaysFlowImpersonationPolicy> element
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: be1df955f7586848968cb32cd66a4c6889cfffa8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e32274c6371a73b882f5494c7093945a84d67adf
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="ltalwaysflowimpersonationpolicygt-element"></a>&lt;alwaysFlowImpersonationPolicy&gt; элемент
+# <a name="ltalwaysflowimpersonationpolicygt-element"></a>&lt;alwaysFlowImpersonationPolicy&gt; Element
 Указывает, что удостоверение Windows всегда проходит через асинхронные точки, независимо от того, как было выполнено олицетворение.  
   
  \<configuration>  
 \<Среда выполнения >  
-\<alwaysFlowImpersonationPolicy >  
+\<alwaysFlowImpersonationPolicy>  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -51,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`false`|Удостоверение не проходит через асинхронные точки, если олицетворение осуществляется с помощью Windows управляемые методы, такие как <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>. Это значение по умолчанию.|  
 |`true`|Идентификация Windows всегда проходит через асинхронные точки, независимо от того, как было выполнено олицетворение.|  
@@ -86,8 +88,8 @@ ms.lasthandoff: 12/22/2017
   
  ASP.NET по умолчанию отключает поток олицетворения в файле aspnet.config, используя следующие параметры конфигурации:  
   
-```  
-configuration>  
+```xml
+<configuration>  
    <runtime>  
       <legacyImpersonationPolicy enabled="true"/>  
       <alwaysFlowImpersonationPolicy enabled="false"/>  
@@ -120,4 +122,4 @@ configuration>
 ## <a name="see-also"></a>См. также  
  [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<legacyImpersonationPolicy > элемент](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)
+ [\<legacyImpersonationPolicy> Element](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)

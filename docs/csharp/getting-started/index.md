@@ -1,7 +1,7 @@
 ---
-title: "Начало работы — руководство по C#"
-description: "Здесь вы найдете простые и краткие руководства, которые помогут вам быстро познакомиться с базовыми понятиями языка C# и начать писать приложения .NET Core."
-keywords: "C#, начало работы, приобретение, установка"
+title: Начало работы — руководство по C#
+description: Здесь вы найдете простые и краткие руководства, которые помогут вам быстро познакомиться с базовыми понятиями языка C# и начать писать приложения .NET Core.
+keywords: C#, начало работы, приобретение, установка
 helpviewer_keywords:
 - Visual C#, getting started
 - getting started, Visual C#
@@ -12,11 +12,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 002c0e35bc8dfb54fc081fcb70000c9c61eb5fcc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f335ee1412932043b175aa49b29ecd360d447eb9
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-c"></a>Начало работы с C# #
 
@@ -43,10 +43,6 @@ ms.lasthandoff: 10/18/2017
    Visual Studio Code — это бесплатный редактор кода, оптимизированный для сборки и отладки современных веб-приложений и облачных приложений. Он поддерживает технологию IntelliSense и доступен для Linux, macOS и Windows.
 
    В этой статье показано, как создать и выполнить простое приложения Hello World с помощью Visual Studio Code и .NET Core.
-
-* [Дополнительные ресурсы для программистов Visual C#](additional-resources.md)
-
-   Содержит ссылки на веб-сайты и группы новостей, которые помогут найти ответы на общие вопросы.
 
 ## <a name="related-sections"></a>Связанные разделы
 

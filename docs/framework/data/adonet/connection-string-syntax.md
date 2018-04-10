@@ -1,24 +1,26 @@
 ---
-title: "Синтаксис строки подключения"
-ms.custom: 
+title: Синтаксис строки подключения
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9c7edc59ecb71c4b201b77c993fc839f5700abe3
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 76d8765be1dc24f4b8c457644595796680c2f2c3
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="connection-string-syntax"></a>Синтаксис строки подключения
 Каждый поставщик данных платформы .NET Framework имеет объект `Connection`, наследующий из <xref:System.Data.Common.DbConnection>, а также из свойства <xref:System.Data.Common.DbConnection.ConnectionString%2A>, зависящего от поставщика. Конкретный синтаксис строки подключения для каждого поставщика приведен в его свойстве `ConnectionString`. В следующей таблице представлен список четырех поставщиков данных, поставляемых в составе платформы .NET Framework.  
@@ -42,7 +44,7 @@ ms.lasthandoff: 01/17/2018
 -   <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
  Построители строк соединения позволяют создавать во время выполнения синтаксически правильные строки соединения, и поэтому в коде не требуется вручную объединять значения строк соединения. Дополнительные сведения см. в разделе [построители строк соединения](../../../../docs/framework/data/adonet/connection-string-builders.md).  
-  
+
 ## <a name="windows-authentication"></a>Проверка подлинности Windows  
  Рекомендуется использовать проверку подлинности Windows (иногда называют *встроенной безопасности*) для подключения к источникам данных, которые ее поддерживают. Синтаксис строки подключения зависит от поставщика. В следующей таблице показан синтаксис проверки подлинности Windows, который используется с поставщиками данных платформы .NET Framework.  
   
@@ -57,9 +59,13 @@ ms.lasthandoff: 01/17/2018
 >  Значение `Integrated Security=true` вызывает исключение при работе с поставщиком `OleDb`.  
   
 ## <a name="sqlclient-connection-strings"></a>Строки подключения SqlClient  
- Синтаксис для строки подключения <xref:System.Data.SqlClient.SqlConnection> документирован в свойстве <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>. Свойство <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> используется для возврата или задания строки подключения для базы данных SQL Server. Если необходимо подключиться к более ранней версии SQL Server, следует использовать поставщик данных .NET Framework для OleDb (<xref:System.Data.OleDb>). Наиболее распространенные ключевые слова строк соединения также соответствуют свойствам <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
-  
- Каждый из следующих форм синтаксиса будет использовать проверку подлинности Windows для подключения к **AdventureWorks** базы данных на локальном сервере.  
+Синтаксис для строки подключения <xref:System.Data.SqlClient.SqlConnection> документирован в свойстве <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>. Свойство <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> используется для возврата или задания строки подключения для базы данных SQL Server. Если необходимо подключиться к более ранней версии SQL Server, следует использовать поставщик данных .NET Framework для OleDb (<xref:System.Data.OleDb>). Наиболее распространенные ключевые слова строк соединения также соответствуют свойствам <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
+
+> [!IMPORTANT]
+>  Значение по умолчанию для `Persist Security Info` ключевое слово является `false`. Значение `true` или `yes` позволяет получить из строки соединения конфиденциальные данные (в том числе идентификатор пользователя и пароль) после открытия соединения. Сохранить `Persist Security Info` значение `false` для непроверенного источника не имели доступ к конфиденциальным данным строки подключения.  
+
+### <a name="windows-authentication-with-sqlclient"></a>Проверка подлинности Windows с SqlClient 
+ Каждый из следующих форм синтаксиса использует проверку подлинности Windows для подключения к **AdventureWorks** базы данных на локальном сервере.  
   
 ```  
 "Persist Security Info=False;Integrated Security=true;  
@@ -70,26 +76,26 @@ ms.lasthandoff: 01/17/2018
     database=AdventureWorks;server=(local)"  
 ```  
   
-### <a name="sql-server-logins"></a>Имена входа SQL Server  
+### <a name="sql-server-authentication-with-sqlclient"></a>Проверка подлинности SQL Server с SqlClient   
  Для соединения с SQL Server предпочтительно использовать проверку подлинности Windows. Однако если требуется проверка подлинности SQL Server, то имя пользователя и пароль указываются с помощью приведенного ниже синтаксиса. В этом примере символы звездочки представляют допустимое имя пользователя и пароль.  
   
 ```  
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
-  
-> [!IMPORTANT]
->  Значение по умолчанию для `Persist Security Info` ключевое слово является `false`. Значение `true` или `yes` позволяет получить из строки соединения конфиденциальные данные (в том числе идентификатор пользователя и пароль) после открытия соединения. Сохранить `Persist Security Info` значение `false` для непроверенного источника не имели доступ к конфиденциальным данным строки подключения.  
-  
- Чтобы подключиться к именованному экземпляру SQL Server, используйте *имя_сервера\имя_экземпляра* синтаксиса.  
+
+Если подключиться к базе данных SQL Azure или хранилище данных SQL Azure и укажите имя входа в формате `user@servername`, убедитесь, что `servername` значение в процессе входа соответствует значение, указанное для `Server=`.
+
+> [!NOTE]
+>  Проверка подлинности Windows имеет приоритет над именами входа SQL Server. Если указать значение Integrated Security=true, а также ввести имя пользователя и пароль, то имя пользователя и пароль не будут учитываться и будет применяться проверка подлинности Windows.  
+
+### <a name="connect-to-a-named-instance-of-sql-server"></a>Подключиться к именованному экземпляру SQL Server
+Чтобы подключиться к именованному экземпляру SQL Server, используйте *имя_сервера\имя_экземпляра* синтаксиса.  
   
 ```  
 Data Source=MySqlServer\MSSQL1;"  
 ```  
-  
- Кроме того, в свойстве <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> объекта `SqlConnectionStringBuilder` можно задать имя экземпляра при построении строки подключения. Свойство <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> объекта <xref:System.Data.SqlClient.SqlConnection> доступно только для чтения.  
-  
-> [!NOTE]
->  Проверка подлинности Windows имеет приоритет над именами входа SQL Server. Если указать значение Integrated Security=true, а также ввести имя пользователя и пароль, то имя пользователя и пароль не будут учитываться и будет применяться проверка подлинности Windows.  
+ 
+Кроме того, в свойстве <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> объекта `SqlConnectionStringBuilder` можно задать имя экземпляра при построении строки подключения. Свойство <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> объекта <xref:System.Data.SqlClient.SqlConnection> доступно только для чтения.  
   
 ### <a name="type-system-version-changes"></a>Изменения версий системы типов  
  Ключевое слово `Type System Version` в <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> указывает клиентское представление типов [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Дополнительные сведения о ключевом слове <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> см. в разделе `Type System Version`.  

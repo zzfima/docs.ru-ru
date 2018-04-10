@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: FAD4D11E-703A-42D4-9F72-893D9E0F569B
-ms.openlocfilehash: 0849bc77139b4f4383e2c772f5bae62741ee2b8b
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: fdb2378a731a13894cf71356a2713c62a5c2064e
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="using-f-on-azure"></a>Использование языка F# в Azure
 
@@ -121,7 +121,7 @@ Azure Cosmos DB можно использовать с F # двумя спосо
 
 Аналогичным образом из скриптов F# можно развернуть и контролировать и другие ресурсы Azure. Например можно создавать учетные записи хранения, развертывание облачных служб Azure, создавать экземпляры Azure Cosmos DB и программно управлять концентраторы уведомления Azure из скриптов F #.
 
-Использовать скрипты F# для развертывания ресурсов и управления ими в общем случае необязательно. Например, ресурсы Azure также можно развернуть прямо из описаний шаблонов JSON, которые могут быть параметризованы. В статье [Шаблоны Azure Resource Manager](/azure/azure-resource-manager/resource-manager-template-best-practices) приведены примеры, например [шаблоны быстрого запуска Azure](https://azure.microsoft.com/documentation/templates/).
+Использовать скрипты F# для развертывания ресурсов и управления ими в общем случае необязательно. Например, ресурсы Azure также можно развернуть прямо из описаний шаблонов JSON, которые могут быть параметризованы. В статье [Шаблоны Azure Resource Manager](/azure/azure-resource-manager/resource-manager-template-best-practices) приведены примеры, например [шаблоны быстрого запуска Azure](https://azure.microsoft.com/resources/templates/).
 
 ## <a name="other-resources"></a>Другие источники
 

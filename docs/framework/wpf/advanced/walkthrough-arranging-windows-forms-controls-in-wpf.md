@@ -1,12 +1,11 @@
 ---
-title: "Пошаговое руководство. Упорядочение элементов управления Windows Forms в приложении WPF"
-ms.custom: 
-ms.date: 03/30/2017
+title: Пошаговое руководство. Упорядочение элементов управления Windows Forms в приложении WPF
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 480d61f6ca2aa67e0de48030655a6368c70554f4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4f3129b4128444530b1277299f3f95ce49232421
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Пошаговое руководство. Упорядочение элементов управления Windows Forms в приложении WPF
 В этом пошаговом руководстве показано, как использовать [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] возможностей компоновки для размещения [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементов управления в гибридных приложениях.  
@@ -161,26 +160,17 @@ ms.lasthandoff: 01/19/2018
 5.  Нажмите кнопку **Click me** кнопки. `button1_Click` Задает обработчик событий <xref:System.Windows.Forms.Control.Top%2A> и <xref:System.Windows.Forms.Control.Left%2A> свойства размещенным элементом управления. В результате размещенного элемента управления изменять внутри <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемента. Ведущий элемент занимает то же пространство на экране, но размещаемый элемент управления обрезается. Вместо этого размещаемый элемент управления должен всегда заполнять <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемента.  
   
 ## <a name="understanding-z-order-limitations"></a>Описание ограничений z-порядка  
- По умолчанию отображается <xref:System.Windows.Forms.Integration.WindowsFormsHost> элементы всегда рисуются поверх других [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементы и они не подвержены влиянию z порядка. Чтобы включить z порядка, задайте <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> свойство <xref:System.Windows.Forms.Integration.WindowsFormsHost> значение true и <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> свойства <xref:System.Windows.Interop.CompositionMode.Full> или <xref:System.Windows.Interop.CompositionMode.OutputOnly>.  
-  
-#### <a name="to-see-the-default-z-order-behavior"></a>Просмотр ограничений z-порядка  
-  
-1.  Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.  
-  
+ Отображается <xref:System.Windows.Forms.Integration.WindowsFormsHost> элементы всегда рисуются поверх других элементов WPF, и они не затрагиваются с z порядком. Чтобы увидеть это z порядка, выполните следующие действия:
+
+1.  Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.
+
      [!code-xaml[WpfLayoutHostingWfWithXaml#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]  
-  
+ 
 2.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Элемент рисуется через элемент label.  
-  
-#### <a name="to-see-the-z-order-behavior-when-isredirected-is-true"></a>Чтобы увидеть поведение z порядка, когда свойству IsRedirected присвоено значение "true"  
-  
-1.  Замените следующий код XAML в предыдущем примере z порядка.  
-  
-     [!code-xaml[WpfLayoutHostingWfWithXaml#8b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#8b)]  
-  
-     Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. Элемент label рисуется через <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемента.  
-  
+
+
 ## <a name="docking"></a>Закрепление  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>поддерживает элемент [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] закрепления. Задать <xref:System.Windows.Controls.DockPanel.Dock%2A> вложенное свойство, чтобы закрепить размещенного элемента управления в <xref:System.Windows.Controls.DockPanel> элемент.  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost> поддерживает элемент [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] закрепления. Задать <xref:System.Windows.Controls.DockPanel.Dock%2A> вложенное свойство, чтобы закрепить размещенного элемента управления в <xref:System.Windows.Controls.DockPanel> элемент.  
   
 #### <a name="to-dock-a-hosted-control"></a>Закрепление размещаемого элемента управления  
   
@@ -222,7 +212,7 @@ ms.lasthandoff: 01/19/2018
 2.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Элемента выравнивается по центру в строке сетки, но она не растягивается для заполнения всего доступного пространства. Если окно является достаточно большим, можно увидеть два или более месяцев, отображаемых размещаемым <xref:System.Windows.Forms.MonthCalendar> элемента управления, но они выравниваются по центру в строке. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Обработчик макетов Центрирование элементов, которые не меняются для заполнения всего доступного пространства.  
   
 ## <a name="scaling"></a>Масштабирование  
- В отличие от [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементов, большинство [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы управления не являются непрерывно масштабируемыми. По умолчанию <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент масштабирует ее размещенного элемента управления, когда это возможно.  Чтобы включить полноценные масштабирование, задайте <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> свойство <xref:System.Windows.Forms.Integration.WindowsFormsHost> значение true и <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> свойства <xref:System.Windows.Interop.CompositionMode.Full> или <xref:System.Windows.Interop.CompositionMode.OutputOnly>.  
+ В отличие от элементов WPF большинство элементов управления Windows Forms не являются непрерывно масштабируемыми. Для предоставления пользовательского масштабирования, переопределите <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A?displayProperty=nameWithType> метод. 
   
 #### <a name="to-scale-a-hosted-control-by-using-the-default-behavior"></a>Масштабирование размещаемого элемента управления с помощью поведения по умолчанию  
   
@@ -230,19 +220,13 @@ ms.lasthandoff: 01/19/2018
   
      [!code-xaml[WpfLayoutHostingWfWithXaml#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#12)]  
   
-2.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. Размещаемый элемент управления и его окружающие элементы масштабируются с коэффициентом 0,5. Но шрифт размещаемого элемента управления не масштабируется.  
-  
-#### <a name="to-scale-a-hosted-control-by-setting-isredirected-to-true"></a>Масштабирование размещаемого элемента управления с помощью установки для свойства IsRedirected значения "true"  
-  
-1.  Замените следующий код XAML в предыдущем примере масштабирования.  
-  
-     [!code-xaml[WpfLayoutHostingWfWithXaml#12b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#12b)]  
-  
-2.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. Шрифт размещаемого элемента управления, его окружающих элементов и вложенных в него элементов масштабируется с коэффициентом 0,5.  
-  
+2.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. Размещаемый элемент управления и его окружающие элементы масштабируются с коэффициентом 0,5. Но шрифт размещаемого элемента управления не масштабируется.
+
+<!-- This could use an example of custom scaling. -->
+
 ## <a name="rotating"></a>Поворот  
- В отличие от [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементов, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы управления не поддерживают поворот. По умолчанию <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент не поворачивается вместе с другими [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементы, когда применяется преобразование поворота. Значение поворота, отличное от 180 градусов, вызывает <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> событий.  Чтобы включить на любой угол поворота, задайте <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> свойство <xref:System.Windows.Forms.Integration.WindowsFormsHost> значение true и <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> свойства <xref:System.Windows.Interop.CompositionMode.Full> или <xref:System.Windows.Interop.CompositionMode.OutputOnly>.  
-  
+ В отличие от элементов WPF элементы управления Windows Forms не поддерживают поворот. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Элемент не поворот с другими элементами WPF, когда применяется преобразование поворота. Значение поворота, отличное от 180 градусов, вызывает <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> событий.
+ 
 #### <a name="to-see-the-effect-of-rotation-in-a-hybrid-application"></a>Чтобы увидеть эффект от поворота в гибридном приложении  
   
 1.  Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> элемент.  
@@ -250,15 +234,8 @@ ms.lasthandoff: 01/19/2018
      [!code-xaml[WpfLayoutHostingWfWithXaml#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#13)]  
   
 2.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. Размещаемый элемент управления не повернут, но его соседние элементы повернуты на угол в 180 градусов. Для отображения элементов может потребоваться изменить размер окна.  
-  
-#### <a name="to-see-the-effect-of-rotation-in-a-hybrid-application-when-isredirected-is-true"></a>Чтобы увидеть эффект от поворота в гибридном приложении, когда для свойства IsRedirected задано значение "true"  
-  
-1.  Замените следующий код XAML в предыдущем примере поворота.  
-  
-     [!code-xaml[WpfLayoutHostingWfWithXaml#13b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#13b)]  
-  
-2.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. Размещаемый элемент повернут.  Обратите внимание, что <xref:System.Windows.Media.RotateTransform.Angle%2A> свойство может быть присвоено любое значение. Для отображения элементов может потребоваться изменить размер окна.  
-  
+ 
+
 ## <a name="setting-padding-and-margins"></a>Задание отбивки и внутренних полей  
  Заполнение и поля в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] макета аналогичны отступы и рамки, в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Просто установите <xref:System.Windows.Controls.Control.Padding%2A> и <xref:System.Windows.FrameworkElement.Margin%2A> свойства <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемента.  
   
@@ -272,7 +249,7 @@ ms.lasthandoff: 01/19/2018
 2.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его. Параметры поля и заполнение применяются к размещаемым [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементов управления таким же образом, как они будут применяться в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
   
 ## <a name="using-dynamic-layout-containers"></a>Использование динамических контейнеров макета  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]предусмотрены два типа контейнеров динамического макета, <xref:System.Windows.Forms.FlowLayoutPanel> и <xref:System.Windows.Forms.TableLayoutPanel>. Можно также использовать эти контейнеры в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] макеты.  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] предусмотрены два типа контейнеров динамического макета, <xref:System.Windows.Forms.FlowLayoutPanel> и <xref:System.Windows.Forms.TableLayoutPanel>. Можно также использовать эти контейнеры в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] макеты.  
   
 #### <a name="to-use-a-dynamic-layout-container"></a>Использование динамических контейнеров макета  
   

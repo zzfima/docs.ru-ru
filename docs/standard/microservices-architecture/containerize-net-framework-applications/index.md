@@ -1,7 +1,7 @@
 ---
-title: "Перенос устаревших монолитных приложений .NET Framework в контейнеры Windows"
-description: "Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Перенос устаревших монолитных приложений .NET Framework в контейнеры Windows"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Перенос устаревших монолитных приложений .NET Framework в контейнеры Windows
+description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Перенос устаревших монолитных приложений .NET Framework в контейнеры Windows
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

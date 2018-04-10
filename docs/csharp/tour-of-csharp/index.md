@@ -1,7 +1,7 @@
 ---
-title: "Обзор языка C# — руководство по C#"
-description: "Вы еще не знакомы с C#? Изучите основы этого языка."
-keywords: ".NET, .NET Core, C#, первое знакомство с C#, руководство по C#"
+title: Обзор языка C# — руководство по C#
+description: Вы еще не знакомы с C#? Изучите основы этого языка.
+keywords: .NET, .NET Core, C#, первое знакомство с C#, руководство по C#
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/10/2016

@@ -1,7 +1,7 @@
 ---
-title: "Проектирование и разработка контейнерных приложений с помощью Docker и Microsoft Azure"
-description: "Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Проектирование и разработка контейнерных приложений с помощью Docker и Microsoft Azure
+description: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017

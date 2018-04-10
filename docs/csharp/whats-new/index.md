@@ -1,7 +1,7 @@
 ---
-title: "Новые возможности C# — руководство по C#"
-description: "Как развивается язык C#"
-keywords: "C#, последние функции, новые возможности, Roslyn"
+title: Новые возможности C# — руководство по C#
+description: Как развивается язык C#
+keywords: C#, последние функции, новые возможности, Roslyn
 author: BillWagner
 ms.author: wiwagn
 ms.date: 11/13/2017

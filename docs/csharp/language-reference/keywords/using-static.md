@@ -1,5 +1,5 @@
 ---
-title: "Директива using static (справочник по C#)"
+title: Директива using static (справочник по C#)
 ms.date: 03/10/2017
 ms.prod: .net
 ms.technology:

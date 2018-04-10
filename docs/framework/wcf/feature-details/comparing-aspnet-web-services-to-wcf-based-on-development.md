@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-caps.latest.revision: ''
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c12bd11cee62cd769f7dffc142806fa5ab1b0137
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 8e60d28314c47907cc825871b88a0dc771cd0511
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>Сравнение веб-служб ASP.NET с веб-службами на основе WCF по процессу разработки
 В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предусмотрена возможность работы в режиме совместимости с ASP.NET, что позволяет программировать и настраивать приложения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] как веб-службы ASP.NET и имитировать их поведение. В следующих разделах приводится сравнение веб-служб ASP.NET и [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с точки зрения того, что необходимо для разработки приложений с использованием обеих технологий.  
@@ -187,7 +187,7 @@ public class LineItem
   
 -   Вследствие способности сериализовать в XML закрытые члены типов для сериализатора <xref:System.Runtime.Serialization.DataContractSerializer> характерно меньшее количество ограничений на типы .NET, которые он может сериализовать в XML. В частности, он способен преобразовывать в XML такие типы, как <xref:System.Collections.Hashtable>, который реализует интерфейс <xref:System.Collections.IDictionary>. Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> со значительно большей вероятностью сможет сериализовать в XML экземпляры любого уже существующего типа .NET без внесения в тип изменений или разработки для него оболочки.  
   
--   Другим следствием способности сериализатора <xref:System.Runtime.Serialization.DataContractSerializer> получать доступ к закрытым членам типа является то, что ему требуется полное доверие, тогда как сериализатор <xref:System.Xml.Serialization.XmlSerializer> этого не требует. Разрешение доступа кода "полное доверие" обеспечивает полный доступ ко всем ресурсам на компьютере, к которым можно получить доступ с учетными данными, под которыми выполняется код. Это разрешение следует использовать с осторожностью, поскольку полностью доверенный код имеет доступ ко всем ресурсам на компьютере.  
+-   Другим следствием способности сериализатора <xref:System.Runtime.Serialization.DataContractSerializer> получать доступ к закрытым членам типа является то, что ему требуется полное доверие, тогда как сериализатор <xref:System.Xml.Serialization.XmlSerializer> этого не требует. Разрешение доступа кода полное доверие предоставляет полный доступ ко всем ресурсам на компьютере, который может осуществляться с использованием учетных данных, с которыми выполняется код. Этот параметр следует использовать с осторожностью, поскольку полностью доверенный код имеет доступ ко всем ресурсам на компьютере.  
   
 -   Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> предусматривает некоторую поддержку управления версиями.  
   
@@ -195,7 +195,7 @@ public class LineItem
   
     -   Реализуя в контракте данных интерфейс <xref:System.Runtime.Serialization.IExtensibleDataObject>, разработчик может позволить сериализатору <xref:System.Runtime.Serialization.DataContractSerializer> передавать члены, определенные в более новых версиях контракта данных, через приложения с более ранними версиями контракта.  
   
- Несмотря на все различия, XML-данные, в которые <xref:System.Xml.Serialization.XmlSerializer> сериализует тип, по умолчанию семантически идентичны XML-данным, в которые сериализует тип <xref:System.Runtime.Serialization.DataContractSerializer>, при условии, что пространство имен для XML определено явным образом. Следующий класс, имеющий атрибуты для использования с обоими сериализаторами, преобразуется в семантически идентичные XML-данные сериализатором <xref:System.Xml.Serialization.XmlSerializer> и сериализатором <xref:System.Runtime.Serialization.DataContractAttribute>:  
+ Несмотря на все различия, XML-данные, в которые <xref:System.Xml.Serialization.XmlSerializer> сериализует тип, по умолчанию семантически идентичны XML-данным, в которые сериализует тип <xref:System.Runtime.Serialization.DataContractSerializer>, при условии, что пространство имен для XML определено явным образом. Следующий класс, имеющий атрибуты для использования с обоими сериализаторами, преобразуется в семантически идентичные XML-по <xref:System.Xml.Serialization.XmlSerializer> и <xref:System.Runtime.Serialization.DataContractAttribute>:  
   
 ```  
 [Serializable]  
@@ -212,7 +212,7 @@ public class LineItem
 }  
 ```  
   
- Пакет средств разработки программного обеспечения Windows (SDK) включает в себя программу командной строки [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Средство xsd.exe, используемое с веб-служб ASP.NET, например Svcutil.exe может создавать определения типов данных .NET из схемы XML. Типы являются контрактами данных, если сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> способен выдать XML-данные в формате, определенном схемой XML; в противном случае они предназначены для сериализации с помощью <xref:System.Xml.Serialization.XmlSerializer>. С помощью Svcutil.exe также можно формировать схему XML из контрактов данных, используя для этого переключатель `/dataContractOnly`.  
+ Пакет средств разработки программного обеспечения Windows (SDK) включает в себя программу командной строки [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Средство xsd.exe, используемое с веб-служб ASP.NET, например Svcutil.exe может создавать определения типов данных .NET из схемы XML. Типы являются контрактами данных, если сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> способен выдать XML-данные в формате, определенном схемой XML; в противном случае они предназначены для сериализации с помощью <xref:System.Xml.Serialization.XmlSerializer>. Svcutil.exe также можно создавать XML-схемы из контрактов данных с помощью его `dataContractOnly` переключения.  
   
 > [!NOTE]
 >  Хотя веб-службы ASP.NET используют сериализатор <xref:System.Xml.Serialization.XmlSerializer>, а в режиме совместимости [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с ASP.NET службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] имитируют поведение веб-служб ASP.NET, режим совместимости не означает, что можно использовать исключительно сериализатор <xref:System.Xml.Serialization.XmlSerializer>. Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> можно использовать и для служб, выполняемых в режиме совместимости с ASP.NET.  

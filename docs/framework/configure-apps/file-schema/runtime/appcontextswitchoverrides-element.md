@@ -1,10 +1,8 @@
 ---
 title: '&lt;AppContextSwitchOverrides&gt; Element'
 ms.custom: ''
-ms.date: 01/08/2018
+ms.date: 03/28/2018
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-bcl
 - dotnet-clr
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71888febdc42f0ee65bdcd55a761700eda065bc1
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a17d67a1c6143897802bb15b983a9a909fd5949c
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; Element
 Определяет один или несколько коммутаторов, используемых классом <xref:System.AppContext> для предоставления механизма отказа от новых функциональных возможностей.  
@@ -94,6 +91,7 @@ ms.lasthandoff: 03/26/2018
 |`Switch.System.Net.`<br/>`DontEnableSystemDefaultTlsVersions`|Отключает SystemDefault TLS версии, вернитесь к Tls12, Tls11, Tls значение по умолчанию.|.NET Framework 4.7|
 |`Switch.System.Net.`<br/>`DontEnableTlsAlerts`|Отключает предупреждения серверные SslStream TLS.|.NET Framework 4.7|
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |Элементы управления ли [DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer) сериализует некоторые управляющие символы, основанные на стандартах версии ECMAScript 6 и V8. Дополнительные сведения см. в статье [Устранение рисков. Сериализация управляющих символов с помощью DataContractJsonSerializer](Mitigation:%20Serialization%20of%20Control%20Characters%20with%20the%20DataContractJsonSerializer.md)| .NET Framework 4.7 |
+|`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|Элементы управления ли <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> поддерживает несколько корректировки или только одного набора для часового пояса. Если `true`, он использует <xref:System.TimeZoneInfo> тип для сериализации и десериализации данных даты и времени; в противном случае он использует <xref:System.TimeZone> тип, который не поддерживает несколько правил коррекции.|.NET Framework 4.6.2|
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|Элементы управления ли <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> конструктор задает новый объект <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> свойство с существующие ссылки на объект. Дополнительные сведения см. в разделе [Устранение рисков. Конструктор ClaimsIdentity](~/docs/framework/migration-guide/mitigation-claimsidentity-constructor.md).|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|Элементы управления ли при попытке повторного использования <xref:System.Security.Cryptography.AesCryptoServiceProvider> вызывает дешифратор <xref:System.Security.Cryptography.CryptographicException>. Дополнительные сведения см. в разделе AesCryptoServiceProvider дешифратор предоставляет для повторного использования transform](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform).|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Элементы управления ли значение [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) свойство [IntPtr](xref:System.IntPtr) , область памяти окна обработку или это дескриптор окна (HWND). Дополнительные сведения см. в статье [Mitigation: CspParameters.ParentWindowHandle Expects an HWND](Mitigation:%20CspParameters.ParentWindowHandle%20Expects%20an%20HWND.md) (Устранение рисков. CspParameters.ParentWindowHandle ожидает HWND). |.NET Framework 4.7|   
@@ -109,6 +107,7 @@ ms.lasthandoff: 03/26/2018
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|Определяет, распространяются ли исключения, возникшие при запуске службы вызывающему объекту <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> метод.|.NET Framework 4.7.1|
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Определяет, применяется ли Windows Presentation Foundation старый алгоритм (`true`) или новый алгоритм (`false`) в выделение пространства для \*-столбцов. Дополнительные сведения см. в статье [Mitigation: Grid Control's Space Allocation to Star-columns](Mitigation:%20Grid%20Control's%20Space%20Allocation%20to%20Star-columns.md) (Устранение рисков. Выделение пространства элемента управления "сетка" для столбцов со звездочкой). |.NET Framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|Событие изменения ли селектора или вкладку управления всегда обновляет значение свойства выбранное значение перед созданием Выбор элементов управления.|.NET Framework 4.7.1|
+|`Switch.System.Windows.DoNotScaleForDpiChanges`|Определяет, происходят ли изменения DPI в системе (значение `false`) или для каждого монитора (значение `true`).|.NET Framework 4.6.2|
 |`Switch.System.Windows.Forms.`<br />`DontSupportReentrantFilterMessage`|Код, который позволяет использовать настраиваемый отказ <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> реализацию безопасно фильтровать сообщения без создания исключения при <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> вызывается метод. Дополнительные сведения см. в разделе [Устранение рисков: пользовательские реализации IMessageFilter.PreFilterMessage](~/docs/framework/migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md).|.NET Framework 4.6.1|  
 |`Switch.System.Windows.Input.Stylus.`<br/>`EnablePointerSupport`|Определяет необязательный `WM_POINTER`-стека на основе сенсорный ввод и пера реализуется в приложениях WPF. Дополнительные сведения см. в разделе [устранение рисков: на основе указателя касания и поддержку пера](Mitigation:%20Pointer-based%20Touch%20and%20Stylus%20Support.md) | 
 |`Switch.System.Windows.Media.ImageSourceConverter.`<br/>`OverrideExceptionWithNullReferenceException`|Контролирует прежних версий [NullReferenceException](xref:System.NullReferenceException) исключение вместо исключение, указывающее причину исключения, в частности (такие как [DirectoryNotFoundException](xref:System.IO.DirectoryNotFoundException) или [ FileNotFoundException](xref:System.IO.FileNotFoundException). Он предназначен для использования из кода, зависящего от обработки [NullReferenceException](xref:System.NullReferenceException). | .NET Framework 4.7 |

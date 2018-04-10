@@ -1,7 +1,7 @@
 ---
-title: "Члены (F#)"
-description: "Дополнительные сведения о элементы объекта в языке F #."
-keywords: "visual f#, f#, функциональное программирование"
+title: Члены (F#)
+description: 'Дополнительные сведения о элементы объекта в языке F #.'
+keywords: visual f#, f#, функциональное программирование
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

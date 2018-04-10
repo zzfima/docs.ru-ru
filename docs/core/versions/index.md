@@ -1,6 +1,6 @@
 ---
-title: "Управление версиями .NET Core"
-description: "Сведения о принципах работы управления версиями в .NET Core."
+title: Управление версиями .NET Core
+description: Сведения о принципах работы управления версиями в .NET Core.
 author: bleroy
 ms.author: mairaw
 ms.date: 02/13/2018

@@ -1,6 +1,6 @@
 ---
-title: "Массивы в Visual Basic"
-ms.custom: 
+title: Массивы в Visual Basic
+ms.custom: ''
 ms.date: 12/06/2017
 ms.prod: .net
 ms.technology:

@@ -1,7 +1,7 @@
 ---
-title: "Выбор между .NET Core и .NET Framework для контейнеров Docker"
-description: "Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Выбор между .NET Core и .NET Framework для контейнеров Docker"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Выбор между .NET Core и .NET Framework для контейнеров Docker
+description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Выбор между .NET Core и .NET Framework для контейнеров Docker
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

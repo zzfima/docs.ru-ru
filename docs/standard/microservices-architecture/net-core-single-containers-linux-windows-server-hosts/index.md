@@ -1,7 +1,7 @@
 ---
-title: "Развертывание одноконтейнерных веб-приложений .NET Core на узлах Linux или Windows Nano Server"
-description: "Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Развертывание одноконтейнерных веб-приложений .NET Core на узлах Linux или Windows Nano Server"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Развертывание одноконтейнерных веб-приложений .NET Core на узлах Linux или Windows Nano Server
+description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Развертывание одноконтейнерных веб-приложений .NET Core на узлах Linux или Windows Nano Server
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

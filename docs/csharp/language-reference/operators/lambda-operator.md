@@ -1,5 +1,5 @@
 ---
-title: "Оператор =&gt; (справочник по C#)"
+title: Оператор =&gt; (справочник по C#)
 ms.date: 10/02/2017
 ms.prod: .net
 ms.technology:
