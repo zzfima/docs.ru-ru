@@ -1,7 +1,7 @@
 ---
-title: "Атрибуты. Язык C#"
-description: "Узнайте, как работают атрибуты в C#."
-keywords: ".NET .NET Core, C#, атрибуты"
+title: Атрибуты. Язык C#
+description: Узнайте, как работают атрибуты в C#.
+keywords: .NET .NET Core, C#, атрибуты
 author: mgroves
 ms.author: wiwagn
 ms.date: 03/06/2017
