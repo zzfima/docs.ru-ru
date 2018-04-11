@@ -8,7 +8,7 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -130,11 +130,11 @@ ms.lasthandoff: 12/22/2017
  **xmlns:m = «http://schemas.microsoft.com/ado/2007/08/dataservices/metadata»**  
  **xmlns = «http://www.w3.org/2005/Atom» >**  
  **\<Тип Title = «text» > заказы \< /title >**  
- **\<Идентификатор>http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI') заказы\</id>**  
+ **\<id>http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders\</id>**  
  **\<Обновить > 2010-05-19T19:37:07Z\</ обновить >**  
  **\<связать rel = «self» title = «Orders» href = «Orders» / >**  
  **\<запись >**  
- **\<Идентификатор>http://services.odata.org/Northwind/Northwind.svc/Orders (10643)\</id>**  
+ **\<id>http://services.odata.org/Northwind/Northwind.svc/Orders(10643)\</id>**  
  **\<Тип Title = «text» > \< /title >**  
  **\<Обновить > 2010-05-19T19:37:07Z\</ обновить >**  
  **\<Автор >**  
