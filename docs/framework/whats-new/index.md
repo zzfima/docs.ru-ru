@@ -17,11 +17,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 04696ff346ffab438ce8bef2974fdd1a19d940af
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: e8107fb22fcc8afee8723c77868b0c1e5a404e3f
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>Новые возможности .NET Framework
 <a name="introduction"></a>В этой статье кратко излагаются ключевые новые возможности и усовершенствования в следующих версиях .NET Framework:  
@@ -514,7 +514,8 @@ Const DisableCngCertificates As String = "Switch.System.ServiceModel.DisableCngC
 AppContext.SetSwitch(disableCngCertificates, False)
 ```
 
- **Улучшенная поддержка множества правил перехода на летнее время с помощью класса DataContractJsonSerializer**. Клиенты могут использовать специальный параметр конфигурации приложения, чтобы определить, поддерживает ли класс <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> множество правил перевода времени для одного часового пояса. Это функция, включаемая пользователем. Чтобы ее включить, добавьте следующий параметр в файл app.config:
+ **Улучшенная поддержка нескольких правил коррекции летнего времени с помощью класса DataContractJsonSerializer**   
+ Клиенты могут использовать параметр конфигурации приложения для определения того, поддерживает ли класс <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> несколько правил коррекции для одного часового пояса. Это функция, включаемая пользователем. Чтобы ее включить, добавьте следующий параметр в файл app.config:
 
 ```xml
 <runtime>
@@ -526,32 +527,8 @@ AppContext.SetSwitch(disableCngCertificates, False)
 
 Дополнительные сведения о структуре <xref:System.TimeZoneInfo> и коррекциях часового пояса см. в статье [Общие сведения о часовых поясах](../../../docs/standard/datetime/time-zone-overview.md).
 
-**Поддержка сохранения времени в формате UTC при сериализации и десериализации с помощью класса XMLSerializer.** Обычно, когда класс <xref:System.Xml.Serialization.XmlSerializer> используется для сериализации значения <xref:System.DateTime> в формате UTC, он создает строку сериализованного времени, которая сохраняет дату и время, но предполагает, что время является местным.  Например, при создании даты и времени в формате UTC путем вызова следующего кода:
-
-```csharp
-DateTime utc = new DateTime(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc);
-```
-
-```vb
-Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
-```
-
-Результатом является сериализованная строка времени "03:00:00.0000000-08:00" для системных восьми часов с отставанием от времени в формате UTC.  Сериализованные значения всегда десериализуются как значения местной даты и времени.
-
- Параметр конфигурации приложения можно использовать, чтобы определить, сохраняет ли <xref:System.Xml.Serialization.XmlSerializer> данные о часовом поясе UTC при сериализации и десериализации значений <xref:System.DateTime>.
-
-```xml 
-<runtime>
-     <AppContextSwitchOverrides 
-          value="Switch.System.Runtime.Serialization.DisableSerializeUTCDateTimeToTimeAndDeserializeUTCTimeToUTCDateTime=false" />
-</runtime>
-```
-
-Если эта возможность включена, объект <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> использует тип <xref:System.TimeZoneInfo> вместо типа <xref:System.TimeZone> для десериализации данных даты и времени. <xref:System.TimeZoneInfo> поддерживает несколько правил коррекции, что позволяет работать с историческими данными часового пояса, а <xref:System.TimeZone> — не поддерживает.
-
-Дополнительные сведения о структуре <xref:System.TimeZoneInfo> и коррекциях часового пояса см. в статье [Общие сведения о часовых поясах](../../../docs/standard/datetime/time-zone-overview.md).
-
- **Более точный подбор соответствия с помощью NetNamedPipeBinding**. В WCF представлен новый параметр для клиентских приложений, позволяющий им всегда подключаться к ожидающей передачи данных службе с тем URI, который точнее всего соответствует их запросу. Если этот параметр приложения имеет значение `false` (по умолчанию), клиенты могут использовать <xref:System.ServiceModel.NetNamedPipeBinding> для подключения к службе, прослушивающей URI, который является подстрокой запрошенного URI.
+ **Оптимальное подключение с помощью класса NetNamedPipeBinding**   
+ В WCF представлен новый параметр приложения, который может быть задан в клиентских приложениях для их постоянного подключения к службе, прослушивающей URI, наилучшим образом соответствующий запрошенному. Если этот параметр приложения имеет значение `false` (по умолчанию), клиенты могут использовать <xref:System.ServiceModel.NetNamedPipeBinding> для подключения к службе, прослушивающей URI, который является подстрокой запрошенного URI.
 
  Например, клиент пытается подключиться к службе, прослушивающей `net.pipe://localhost/Service1`, но другая служба на этом компьютере, запущенная с правами администратора, прослушивает `net.pipe://localhost`. Если этому параметру приложения задать значение `false`, клиент будет пытаться подключиться не к той службе. После установки значения `true` для параметра приложения клиент будет всегда подключаться к наиболее подходящей службе.
 

@@ -2,6 +2,7 @@
 ## [Оператор []](index-operator.md)
 ## [Оператор ()](invocation-operator.md)
 ## [. Оператор](member-access-operator.md)
+## [Операторы ?. и ?[]](null-conditional-operators.md)
 ## [Оператор ::](namespace-alias-qualifer.md)
 ## [Оператор +](addition-operator.md)
 ## [Оператор -](subtraction-operator.md)
@@ -40,4 +41,3 @@
 ## [Оператор ->](dereference-operator.md)
 ## [?? Оператор](null-conditional-operator.md)
 ## [Оператор =>](lambda-operator.md)
-## [Условные операторы для проверки на NULL](null-conditional-operators.md)

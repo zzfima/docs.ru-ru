@@ -1,12 +1,14 @@
 ---
-title: "Аргумент &#39; &lt;имя_аргумента&gt;&#39; не может быть преобразован в числовое значение"
+title: Аргумент &#39; &lt;имя_аргумента&gt;&#39; не может быть преобразован в числовое значение
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrArgumentNotNumeric1
+f1_keywords:
+- vbrArgumentNotNumeric1
 ms.assetid: 1901c4d4-abbe-462f-a450-5d907d485e94
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 5426dbfce291203c0fda951151ad4b20a3500cd9
