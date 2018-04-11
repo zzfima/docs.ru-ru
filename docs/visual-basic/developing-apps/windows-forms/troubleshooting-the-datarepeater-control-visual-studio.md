@@ -1,23 +1,25 @@
 ---
-title: "Устранение неполадок при использовании элемента управления DataRepeater (Visual Studio)"
+title: Устранение неполадок при использовании элемента управления DataRepeater (Visual Studio)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: DataRepeater, troubleshooting
+helpviewer_keywords:
+- DataRepeater, troubleshooting
 ms.assetid: c0ab9469-eced-4f52-aa18-4bd8dd4f1a9a
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 2d630dbf8601eeddd5ce3ea02696891a1087f71f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="troubleshooting-the-datarepeater-control-visual-studio"></a>Устранение неполадок при использовании элемента управления DataRepeater (Visual Studio)
 В этом разделе перечислены распространенные проблемы, которые могут возникнуть при работе с <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления.  
@@ -61,7 +63,7 @@ dataRepeater1.Top = productsBindingNavigator.Height;
   
 -   Если <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> свойству присвоено значение, которое меньше 11, не будут отображаться значки индикатора в заголовке элементов.  
   
- Можно предоставить собственную символ заголовок "и" Выбор элемента с помощью <xref:System.Windows.Forms.PictureBox> управление и мониторинг <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A> свойство <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> событие <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления. Для получения дополнительной информации см. <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>.  
+ Можно предоставить собственную символ заголовок "и" Выбор элемента с помощью <xref:System.Windows.Forms.PictureBox> управление и мониторинг <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A> свойство <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> событие <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения об элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
