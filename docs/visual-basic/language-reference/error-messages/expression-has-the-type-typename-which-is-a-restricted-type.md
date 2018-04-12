@@ -1,17 +1,19 @@
 ---
-title: "Выражение имеет тип &#39; &lt;typename&gt;&#39; который является ограниченным типом и не может использоваться для доступа к членам, унаследованным от &#39; объект &#39; или &#39; ValueType &#39;"
+title: Выражение имеет тип &#39; &lt;typename&gt;&#39; который является ограниченным типом и не может использоваться для доступа к членам, унаследованным от &#39; объект &#39; или &#39; ValueType &#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc31393
 - vbc31393
-helpviewer_keywords: BC31393
+helpviewer_keywords:
+- BC31393
 ms.assetid: 2963cf3f-c527-4aa7-b67c-ee80b6d23186
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: a30742bd46ccd1a3e5a688ebd2621e2c8a3d50e7

@@ -1,17 +1,19 @@
 ---
-title: "Объявлением оператора должен быть одним из: +,-, *,-, -, ^, &amp;, как и остаток от деления и, Or, Xor, не, &lt; &lt;, &gt; &gt;, =, &lt; &gt;, &lt;, &lt;=, &gt; , &gt;=, CType, IsTrue, IsFalse"
+title: 'Объявлением оператора должен быть одним из: +,-, *,-, -, ^, &amp;, как и остаток от деления и, Or, Xor, не, &lt; &lt;, &gt; &gt;, =, &lt; &gt;, &lt;, &lt;=, &gt; , &gt;=, CType, IsTrue, IsFalse'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc33000
 - vbc33000
-helpviewer_keywords: BC33000
+helpviewer_keywords:
+- BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 80c8358dd13105c18e73e94735a51b02d5bd22c5
@@ -20,7 +22,7 @@ ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not-ltlt-gtgt"></a><span data-ttu-id="08a6f-102">Объявлением оператора должен быть один из: +,-, *,\,/, ^, &amp;, такие как остаток от деления и, Or, Xor, не, &lt; &lt;, &gt; &gt;...</span><span class="sxs-lookup"><span data-stu-id="08a6f-102">Operator declaration must be one of:  +,-,*,\,/,^, &amp;, Like, Mod, And, Or, Xor, Not, &lt;&lt;, &gt;&gt;...</span></span>
+# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not-ltlt-gtgt"></a><span data-ttu-id="08a6f-102">Объявлением оператора должен быть один из: +,-, \*,\,/, ^, &amp;, такие как остаток от деления и, Or, Xor, не, &lt; &lt;, &gt; &gt;...</span><span class="sxs-lookup"><span data-stu-id="08a6f-102">Operator declaration must be one of:  +,-,\*,\,/,^, &amp;, Like, Mod, And, Or, Xor, Not, &lt;&lt;, &gt;&gt;...</span></span>
 <span data-ttu-id="08a6f-103">Можно объявить только оператор, который подходит для перегрузки.</span><span class="sxs-lookup"><span data-stu-id="08a6f-103">You can declare only an operator that is eligible for overloading.</span></span> <span data-ttu-id="08a6f-104">В следующей таблице перечислены операторы, которые могут быть объявлены.</span><span class="sxs-lookup"><span data-stu-id="08a6f-104">The following table lists the operators you can declare.</span></span>  
   
 |<span data-ttu-id="08a6f-105">Тип</span><span class="sxs-lookup"><span data-stu-id="08a6f-105">Type</span></span>|<span data-ttu-id="08a6f-106">Операторы</span><span class="sxs-lookup"><span data-stu-id="08a6f-106">Operators</span></span>|  

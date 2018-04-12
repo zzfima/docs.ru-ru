@@ -1,12 +1,14 @@
 ---
-title: "* Оператор (Visual Basic)"
+title: '* Оператор (Visual Basic)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.*
+f1_keywords:
+- vb.*
 helpviewer_keywords:
 - arithmetic operators [Visual Basic], multiplication
 - operators [Visual Basic], multiplication
@@ -14,7 +16,7 @@ helpviewer_keywords:
 - multiplication operator [Visual Basic], syntax
 - math operators [Visual Basic]
 ms.assetid: 2b210382-99da-4195-89ba-b1d06f5e89ad
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 450d728e44ef5639d75369e05b47cb3009b4d769
@@ -23,7 +25,7 @@ ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="-operator-visual-basic"></a><span data-ttu-id="4c5c3-102">Оператор * (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4c5c3-102">* Operator (Visual Basic)</span></span>
+# <a name="-operator-visual-basic"></a><span data-ttu-id="4c5c3-102">Оператор \* (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4c5c3-102">\* Operator (Visual Basic)</span></span>
 <span data-ttu-id="4c5c3-103">Выполняет умножение двух чисел.</span><span class="sxs-lookup"><span data-stu-id="4c5c3-103">Multiplies two numbers.</span></span>  
   
 ## <a name="syntax"></a><span data-ttu-id="4c5c3-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4c5c3-104">Syntax</span></span>  
@@ -66,7 +68,7 @@ number1 * number2
  [!code-vb[VbVbalrOperators#4](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/multiplication-operator_1.vb)]  
   
 ## <a name="see-also"></a><span data-ttu-id="4c5c3-135">См. также</span><span class="sxs-lookup"><span data-stu-id="4c5c3-135">See Also</span></span>  
- [<span data-ttu-id="4c5c3-136">Оператор *=</span><span class="sxs-lookup"><span data-stu-id="4c5c3-136">*= Operator</span></span>](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)  
+ [<span data-ttu-id="4c5c3-136">Оператор \*=</span><span class="sxs-lookup"><span data-stu-id="4c5c3-136">\*= Operator</span></span>](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)  
  [<span data-ttu-id="4c5c3-137">Арифметические операторы</span><span class="sxs-lookup"><span data-stu-id="4c5c3-137">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
  [<span data-ttu-id="4c5c3-138">Порядок применения операторов в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4c5c3-138">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
  [<span data-ttu-id="4c5c3-139">Список операторов, сгруппированных по функциональному назначению</span><span class="sxs-lookup"><span data-stu-id="4c5c3-139">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  

@@ -1,17 +1,19 @@
 ---
-title: "Копирование значение &#39; ByRef &#39; параметр &#39; &lt;имя_параметра&gt;&#39; обратно в соответствующий аргумент сужает от типа &#39;&lt; Имя_типа1&gt;&#39; ввода &#39;&lt; имя_типа2&gt;&#39;"
+title: Копирование значение &#39; ByRef &#39; параметр &#39; &lt;имя_параметра&gt;&#39; обратно в соответствующий аргумент сужает от типа &#39;&lt; Имя_типа1&gt;&#39; ввода &#39;&lt; имя_типа2&gt;&#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc32053
 - vbc32053
-helpviewer_keywords: BC32053
+helpviewer_keywords:
+- BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 4bf993639007162e2e17d4b8cb9dfe8d5316acaa
