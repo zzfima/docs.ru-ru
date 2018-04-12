@@ -1,7 +1,7 @@
 ---
-title: "Использование баз данных NoSQL в качестве инфраструктуры сохраняемости"
-description: "Архитектура микрослужб .NET для контейнерных приложений .NET | Использование баз данных NoSQL в качестве инфраструктуры сохраняемости"
-keywords: "Docker, микрослужбы, ASP.NET, контейнер"
+title: Использование баз данных NoSQL в качестве инфраструктуры сохраняемости
+description: Архитектура микрослужб .NET для контейнерных приложений .NET | Использование баз данных NoSQL в качестве инфраструктуры сохраняемости
+keywords: Docker, микрослужбы, ASP.NET, контейнер
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: a6f3a991529aea6560eb12f1400ba2750795ebff
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>Использование баз данных NoSQL в качестве инфраструктуры сохраняемости
 
@@ -307,23 +307,23 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Моделирование данных документа для баз данных NoSQL**
-    [*https://docs.microsoft.com/ru-ru/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data)
+-   **Моделирование документальных данных в базах данных NoSQL**
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data)
 
 -   **Вон Вернон (Vaughn Vernon). Идеальное хранилище агрегатов, созданное с помощью предметно-ориентированного проектирования?**
     [*https://vaughnvernon.co/?p=942*](https://vaughnvernon.co/?p=942)
 
 -   **Введение в Azure Cosmos DB: API для MongoDB** 
-    [*https://docs.microsoft.com/ru-ru/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction)
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction)
 
--   **Azure Cosmos DB: создание веб-приложения API MongoDB с использованием .NET и портала Azure** 
-    [*https://docs.microsoft.com/ru-ru/azure/cosmos-db/create-mongodb-dotnet *](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet )
+-   **Azure Cosmos DB: разработка веб-приложения API MongoDB с помощью .NET и портала Azure** 
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet *](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet )
 
--   **Использование эмулятора Azure Cosmos DB локальной разработки и тестирования** 
-    [*https://docs.microsoft.com/ru-ru/azure/cosmos-db/local-emulator*](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator)
+-   **Использование эмулятора Azure Cosmos DB для разработки и тестирования в локальной среде** 
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator*](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator)
 
 -   **Подключение приложения MongoDB к Azure Cosmos DB** 
-    [*https://docs.microsoft.com/ru-ru/azure/cosmos-db/connect-mongodb-account*](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account)
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account*](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account)
 
 -   **Образ Docker эмулятора Cosmos DB (контейнер для Windows)** 
     [*https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/*](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/)
@@ -331,8 +331,8 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 -   **Образ Docker MongoDB (контейнер для Linux и Windows)** 
     [*https://hub.docker.com/r/_/mongo/*](https://hub.docker.com/r/_/mongo/)
 
--   **Использование MongoChef (Studio 3T) с Azure Cosmos DB: API для учетной записи MongoDB** 
-    [*https://docs.microsoft.com/ru-ru/azure/cosmos-db/mongodb-mongochef*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef)
+-   **Использование MongoChef (Studio 3T) с Azure Cosmos DB: API для учетной записи MongoDB** 
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef)
 
 
 >[!div class="step-by-step"]
