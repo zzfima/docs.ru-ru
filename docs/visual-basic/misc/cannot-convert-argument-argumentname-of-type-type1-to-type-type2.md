@@ -1,12 +1,14 @@
 ---
-title: "Не удается преобразовать аргумент &#39; &lt;имя_аргумента&gt;&#39; тип &#39;&lt; Тип 1&gt;&#39; ввода &#39;&lt; тип 2&gt;&#39;"
+title: Не удается преобразовать аргумент &#39; &lt;имя_аргумента&gt;&#39; тип &#39;&lt; Тип 1&gt;&#39; ввода &#39;&lt; тип 2&gt;&#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrForLoop_ConvertToType3
+f1_keywords:
+- vbrForLoop_ConvertToType3
 ms.assetid: fdf6c571-9c6c-4db2-8960-f394720b01e5
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: f5d3dbf62d136eb53897545e6ee473ec57d97686

@@ -1,17 +1,19 @@
 ---
-title: "&#39; Расширение &#39; атрибут может применяться только к &#39; Модуль &#39; &#39; По &#39; или &#39; Функция &#39; объявления"
+title: '&#39; Расширение &#39; атрибут может применяться только к &#39; Модуль &#39; &#39; По &#39; или &#39; Функция &#39; объявления'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc36550
 - vbc36550
-helpviewer_keywords: BC36550
+helpviewer_keywords:
+- BC36550
 ms.assetid: 4387a51f-733c-45d7-abdb-eb64d4f51078
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 9d77933c52484eb934501107d1ddad15f0eca826

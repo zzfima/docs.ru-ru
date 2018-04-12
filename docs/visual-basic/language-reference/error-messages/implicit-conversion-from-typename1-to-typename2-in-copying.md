@@ -1,17 +1,19 @@
 ---
-title: "Неявное преобразование из &#39; &lt;Имя_типа1&gt;&#39; к &#39;&lt; имя_типа2&gt;&#39; при копировании значение &#39; ByRef &#39; параметр &#39; &lt;имя_параметра&gt;&#39; обратно в соответствующий аргумент."
+title: Неявное преобразование из &#39; &lt;Имя_типа1&gt;&#39; к &#39;&lt; имя_типа2&gt;&#39; при копировании значение &#39; ByRef &#39; параметр &#39; &lt;имя_параметра&gt;&#39; обратно в соответствующий аргумент.
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc41999
 - bc41999
-helpviewer_keywords: BC41999
+helpviewer_keywords:
+- BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 9e858b475a816a35d18822643de5a273abe28562

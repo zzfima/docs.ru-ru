@@ -1,17 +1,19 @@
 ---
-title: "Событие &#39; &lt;имя_события1&gt;&#39; не может реализовать событие &#39;&lt; имя_события2&gt;&#39; на интерфейс &#39;&lt; интерфейс&gt;&#39; поскольку их делегируемые типы &#39;&lt; delegate1&gt;&#39; и &#39;&lt; delegate2&gt;&#39; не совпадают"
+title: Событие &#39; &lt;имя_события1&gt;&#39; не может реализовать событие &#39;&lt; имя_события2&gt;&#39; на интерфейс &#39;&lt; интерфейс&gt;&#39; поскольку их делегируемые типы &#39;&lt; delegate1&gt;&#39; и &#39;&lt; delegate2&gt;&#39; не совпадают
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc31423
 - bc31423
-helpviewer_keywords: BC31423
+helpviewer_keywords:
+- BC31423
 ms.assetid: 2e754b66-5836-48ff-9697-b9c0d7085f18
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: b0fcbbf8a6e23270e4dcbf9d813c773e1522a92a
