@@ -1,12 +1,12 @@
 ---
-title: "Типы форматирования в .NET"
-ms.custom: 
+title: Типы форматирования в .NET
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -31,7 +31,7 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-caps.latest.revision: 
+caps.latest.revision: 43
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -323,7 +323,7 @@ ms.lasthandoff: 01/10/2018
   
 -   объекта <xref:System.Globalization.NumberFormatInfo> , определяющего соглашения о форматировании для используемых языка и региональных параметров. Метод <xref:System.Globalization.NumberFormatInfo.GetFormat%2A> этого класса возвращает экземпляр его самого.  
   
- В следующем примере объекты <xref:System.Globalization.NumberFormatInfo> , представляющие "Английский (США)" и "Английский (Великобритания)" язык и региональные параметры, а также "Французский" и "Русский" нейтральные языки и региональные параметры, используются для форматирования числа с плавающей запятой.  
+ В следующем примере объекты <xref:System.Globalization.NumberFormatInfo> , представляющие "Английский (США)" и "Английский (Соединенное Королевство)" язык и региональные параметры, а также "Французский" и "Русский" нейтральные языки и региональные параметры, используются для форматирования числа с плавающей запятой.  
   
  [!code-csharp[Conceptual.Formatting.Overview#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific4.cs#20)]
  [!code-vb[Conceptual.Formatting.Overview#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific4.vb#20)]  
@@ -341,7 +341,7 @@ ms.lasthandoff: 01/10/2018
   
 -   объекта <xref:System.Globalization.DateTimeFormatInfo> , определяющего соглашения о форматировании для используемых языка и региональных параметров. Метод <xref:System.Globalization.DateTimeFormatInfo.GetFormat%2A> этого класса возвращает экземпляр его самого.  
   
- В следующем примере объекты <xref:System.Globalization.DateTimeFormatInfo> , представляющие "Английский (США)" и "Английский (Великобритания)" язык и региональные параметры, а также "Французский" и "Русский" нейтральные языки и региональные параметры, используются для форматирования даты.  
+ В следующем примере объекты <xref:System.Globalization.DateTimeFormatInfo> , представляющие "Английский (США)" и "Английский (Соединенное Королевство)" язык и региональные параметры, а также "Французский" и "Русский" нейтральные языки и региональные параметры, используются для форматирования даты.  
   
  [!code-csharp[Conceptual.Formatting.Overview#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific2.cs#18)]
  [!code-vb[Conceptual.Formatting.Overview#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific2.vb#18)]  
